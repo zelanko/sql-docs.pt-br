@@ -1,5 +1,5 @@
 ---
-title: data warehouse em paralelo do banco de dados tempdb | Microsoft Docs
+title: Banco de dados tempdb
 description: Banco de dados tempdb em paralelo data warehouse.
 author: mzaman1
 ms.prod: sql
@@ -8,12 +8,13 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 6bdba302778224ab2615018d6c5dec0740328d93
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 3772e2b4cabac84c00854eba85f7a0c2a33d48bc
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68810942"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74400146"
 ---
 # <a name="tempdb-database-in-parallel-data-warehouse"></a>banco de dados tempdb em paralelo data warehouse
 **tempdb** é um banco de dados do sistema SQL Server PDW que armazena tabelas temporárias locais para bancos de dados de usuário. As tabelas temporárias são geralmente usadas para melhorar o desempenho da consulta. Por exemplo, você pode usar uma tabela temporária para modularizar um script e reutilizar dados computados.  

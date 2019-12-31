@@ -1,5 +1,5 @@
 ---
-title: Carregador de linha de comando dwloader – Parallel data warehouse | Microsoft Docs
+title: Carregador de linha de comando dwloader
 description: dwloader é uma ferramenta de linha de comando de data warehouse paralelo (PDW) que carrega linhas de tabela em massa em uma tabela existente.
 author: mzaman1
 ms.prod: sql
@@ -8,15 +8,16 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 598a244849f843a2b95e6614d4e676a18ba54f61
-ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 8ea941e45f5125beed0820c5d5242b0f86073f76
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "70212269"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401172"
 ---
 # <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>Carregador de linha de comando dwloader para data warehouse paralelos
-**dwloader** é uma ferramenta de linha de comando de data warehouse paralelo (PDW) que carrega linhas de tabela em massa em uma tabela existente. Ao carregar linhas, você pode adicionar todas as linhas ao final da tabela (modo de*acréscimo* ou *modo de fastappend*), acrescentar novas linhas e atualizar as linhas existentes (*modo Upsert*) ou excluir todas as linhas existentes antes do carregamento e, em seguida, inserir todas as linhas em uma tabela vazia (*modo*de recarregamento).  
+**dwloader** é uma ferramenta de linha de comando de data warehouse paralelo (PDW) que carrega linhas de tabela em massa em uma tabela existente. Ao carregar linhas, você pode adicionar todas as linhas ao final da tabela (modo de*acréscimo* ou *modo fastappend*), acrescentar novas linhas e atualizar as linhas existentes (*modo Upsert*) ou excluir todas as linhas existentes antes do carregamento e, em seguida, inserir todas as linhas em uma tabela vazia (*modo de recarregamento*).  
   
 **Processo para carregar dados**  
   
@@ -122,8 +123,8 @@ Exibe informações de ajuda simples sobre o uso do carregador. A ajuda só ser�
 **-U** *login_name*  
 Um logon de autenticação SQL Server válido com as permissões apropriadas para executar a carga.  
   
-**-P** *password*  
-A senha para um *login_name*de autenticação de SQL Server.  
+**-P** *senha*  
+A senha para um *login_name*de autenticação SQL Server.  
   
 **-W**  
 Use a Autenticação do Windows. (Nenhum *login_name* ou *senha* é necessário.) 
@@ -133,7 +134,7 @@ For information about configuring Windows Authentication, see [Security - Config
 -->
   
 **-f** *parameter_file_name*  
-Use um arquivo de parâmetro, *parameter_file_name*, no lugar de parâmetros de linha de comando. *parameter_file_name* pode conter qualquer parâmetro de linha de comando, exceto *user_name* e *password*. Se um parâmetro for especificado na linha de comando e no arquivo de parâmetro, a linha de comando substituirá o parâmetro file.  
+Use um arquivo de parâmetro, *parameter_file_name*, no lugar de parâmetros de linha de comando. *parameter_file_name* pode conter qualquer parâmetro de linha de comando, exceto *user_name* e *senha*. Se um parâmetro for especificado na linha de comando e no arquivo de parâmetro, a linha de comando substituirá o parâmetro file.  
   
 O arquivo de parâmetro contém um parâmetro, sem **-** o prefixo, por linha.  
   
@@ -146,7 +147,7 @@ Exemplos:
 **-S** *target_appliance*  
 Especifica o dispositivo SQL Server PDW que receberá os dados carregados.  
   
-*Para conexões InfiniBand*, *target_appliance* é especificado como < nome do dispositivo >-SQLCTL01. Para configurar essa conexão nomeada, consulte [configurar adaptadores de rede InfiniBand](configure-infiniband-network-adapters.md).  
+*Para conexões InfiniBand*, *target_appliance* é especificado como <nome-do-dispositivo>-SQLCTL01. Para configurar essa conexão nomeada, consulte [configurar adaptadores de rede InfiniBand](configure-infiniband-network-adapters.md).  
   
 Para conexões Ethernet, *target_appliance* é o endereço IP para o cluster do nó de controle.  
   
@@ -156,7 +157,7 @@ Se omitido, dwloader usa como padrão o valor que foi especificado quando dwload
 For more information about this install option, see [Install dwloader Command-Line Loader](install-dwloader.md).  
 -->
   
-**-T** *target_database_name.* [*schema*].*table_name*  
+**-T** *target_database_name.* [*esquema*]. *table_name*  
 O nome de três partes da tabela de destino.  
   
 **-I** *source_data_location*  
@@ -168,7 +169,7 @@ Para formatar um arquivo de origem:
   
 -   Cada linha em um arquivo de origem contém os dados para uma linha de tabela. Os dados de origem devem corresponder ao esquema da tabela de destino. A ordem das colunas e os tipos de dados também devem corresponder. Cada campo na linha representa uma coluna na tabela de destino.  
   
--   Por padrão, os campos são de comprimento variável e separados por um delimitador. Para especificar o tipo de delimitador, use as opções de linha de comando < variable_length_column_options >. Para especificar campos de comprimento fixo, use as opções de linha de comando < fixed_width_column_options >.  
+-   Por padrão, os campos são de comprimento variável e separados por um delimitador. Para especificar o tipo de delimitador, use o <variable_length_column_options> opções de linha de comando. Para especificar campos de comprimento fixo, use o <fixed_width_column_options> opções de linha de comando.  
   
 Para especificar o local dos dados de origem:  
   
@@ -205,7 +206,7 @@ Exemplos:
 -   -i \\\loadserver\loads\daily\\*  
   
 **-R** *load_failure_file_name*  
-Se houver falhas de carregamento, o **dwloader** armazena a linha que falhou ao carregar e a descrição de falha as informações de falha em um arquivo chamado *load_failure_file_name*. Se esse arquivo já existir, o dwloader substituirá o arquivo existente. *load_failure_file_name* é criado quando a primeira falha ocorre. Se todas as linhas forem carregadas com êxito, o *load_failure_file_name* não será criado.  
+Se houver falhas de carregamento, o **dwloader** armazena a linha que falhou ao carregar e a descrição de falha as informações de falha em um arquivo chamado *load_failure_file_name*. Se esse arquivo já existir, o dwloader substituirá o arquivo existente. *load_failure_file_name* é criado quando a primeira falha ocorre. Se todas as linhas forem carregadas com êxito, *load_failure_file_name* não será criado.  
   
 **-fh** *number_header_rows*  
 O número de linhas (linhas) a serem ignoradas no início de *source_data_file_name*. O padrão é 0.  
@@ -223,13 +224,13 @@ O delimitador para cada campo (coluna) na linha. O delimitador de campo é um ou
   
 |Nome|Caractere de escape|Caractere hex|  
 |--------|--------------------|-----------------|  
-|Tabulação|\t|0x09|  
+|Tab|\t|0x09|  
 |Retorno de carro (CR)|\r|0x0D|  
-|Alimentação de linha (LF)|\n|0x0a|  
+|Alimentação de linha (LF)|\n|0x0A|  
 |CRLF|\r\n|0x0d0x0a|  
-|Pontos|','|0x2c|  
+|Vírgula|','|0x2c|  
 |Aspas duplas|\\"|0x22|  
-|Aspas simples|\\'|0x27|  
+|Aspa simples|\\'|0x27|  
   
 Para especificar o caractere de pipe na linha de comando, coloque-o entre aspas duplas, "|". Isso evitará a interpretação inalterada pelo analisador de linha de comando. Outros caracteres são colocados entre aspas simples.  
   
@@ -295,11 +296,11 @@ Esse arquivo deve residir no servidor de carregamento. O caminho pode ser um cam
   
 Arquivo de configuração de largura fixa de exemplo:  
   
-SalesCode=3  
+SalesCode = 3  
   
-SalesID=10  
+Saleid = 10  
   
-Linhas de exemplo em *source_data_file_name*:  
+Linhas de exemplo no *source_data_file_name*:  
   
 230Shirts0056  
   
@@ -348,8 +349,8 @@ YDM e dmy permitem os mesmos formatos de entrada. Ambos permitem que o ano estej
 YDM  
 Você só pode carregar a entrada formatada como ydm em colunas do tipo de dados DateTime e smalldatetime. Não é possível carregar valores ydm em uma coluna do tipo de dados datetime2, Date ou DateTimeOffset.  
   
-mda  
-MDY permite <month>. <space> <day> <comma> <year>  
+mdy  
+<month> <space> <day>MDY permite <comma>. <year>  
   
 Exemplos de dados de entrada MDY para 1º de janeiro de 1975:  
   
@@ -362,10 +363,10 @@ Exemplos de dados de entrada MDY para 1º de janeiro de 1975:
 -   01011975  
   
 mad  
-Exemplos de arquivo de entrada para 04 de março de 2010: 03-2010-04, 3/2010/4  
+Exemplos de arquivo de entrada para 04 de março de 2010:03-2010-04, 3/2010/4  
   
 dam  
-Exemplos de arquivo de entrada para 04 de março de 2010: 04-2010-03, 4/2010/3  
+Exemplos de arquivo de entrada para 04 de março de 2010:04-2010-03, 4/2010/3  
   
 *custom_date_format*  
 *custom_date_format* é um formato de data personalizado (por exemplo, mm/dd/aaaa) e incluído somente para compatibilidade com versões anteriores. dwloader não impõe o formato de data personalizado. Em vez disso, quando você especificar um formato de data personalizado, o **dwloader** o converterá para a configuração correspondente de ymd, ydm, MDY, MYD, DYM ou dmy.  
@@ -391,13 +392,13 @@ O nome do banco de dados que conterá a tabela de preparo. O padrão é o banco 
 **-M** *load_mode_option*  
 Especifica se os dados devem ser acrescentados, Upsert ou recarregados. O modo padrão é Append.  
   
-anexar  
+acrescentar  
 O carregador insere linhas no final das linhas existentes na tabela de destino.  
   
 fastappend  
 O carregador insere linhas diretamente, sem usar uma tabela temporária, até o final das linhas existentes na tabela de destino. fastappend requer a opção de várias transações (-m). Um banco de dados de preparo não pode ser especificado ao usar fastappend. Não há nenhuma reversão com fastappend, o que significa que a recuperação de uma carga com falha ou anulada deve ser tratada pelo seu próprio processo de carregamento.  
   
-upsert **-K**  *merge_column* [ ,...*n* ]  
+*merge_column* Upsert **-K**[,... *n* ]    
 O carregador usa a instrução SQL Server Merge para atualizar as linhas existentes e inserir novas linhas.  
   
 A opção-K especifica a coluna ou colunas na qual basear a mesclagem. Essas colunas formam uma chave de mesclagem, que deve representar uma linha exclusiva. Se a chave de mesclagem existir na tabela de destino, a linha será atualizada. Se a chave de mesclagem não existir na tabela de destino, a linha será anexada.  
@@ -413,7 +414,7 @@ Se duas linhas na tabela de origem tiverem valores de chave de mesclagem corresp
 recarregar  
 O carregador trunca a tabela de destino antes de inserir os dados de origem.  
   
-**-b** *batchsize*  
+**-b** *BatchSize*  
 Recomendado somente para uso por Suporte da Microsoft, *BatchSize* é o tamanho do lote de SQL Server para a cópia em massa que o DMS realiza em SQL Server instâncias nos nós de computação.  Quando *BatchSize* é especificado, SQL Server PDW substituirá o tamanho de carga do lote que é calculado dinamicamente para cada carga.  
   
 A partir do SQL Server PDW 2012, o nó de controle computa dinamicamente um tamanho de lote para cada carga por padrão. Esse cálculo automático se baseia em vários parâmetros, como o tamanho da memória, o tipo de tabela de destino, o esquema da tabela de destino, o tipo de carga, o tamanho do arquivo e a classe de recurso do usuário.  
@@ -433,7 +434,7 @@ A opção percentual é um cálculo em tempo real que ocorre em intervalos de ac
 Por exemplo, se o carregador tentar carregar 100 linhas e 25 falhas e 75 for bem-sucedida, a taxa de falha será de 25%.  
   
 **-rv** *reject_value*  
-Especifica o número ou o percentual de rejeições de linha a permitir antes de parar a carga. A opção **-RT** determina se *reject_value* refere-se ao número de linhas ou à porcentagem de linhas.  
+Especifica o número ou o percentual de rejeições de linha a permitir antes de parar a carga. A opção **-RT** determina se *reject_value* se refere ao número de linhas ou à porcentagem de linhas.  
   
 O *reject_value* padrão é 0.  
   
@@ -526,21 +527,21 @@ Os dados carregados podem exigir mais ou menos espaço no dispositivo do que no 
   
 Embora **dwloader** seja um processo de transação e seja revertido normalmente em caso de falha, ele não poderá ser revertido depois que o carregamento em massa for concluído com êxito. Para cancelar um processo **dwloader** ativo, digite CTRL + C.  
   
-## <a name="limitations-and-restrictions"></a>Limitações e Restrições  
-O tamanho total de todas as cargas que ocorrem simultaneamente deve ser menor que LOG_SIZE para o banco de dados, e recomendamos que o tamanho total de todas as cargas simultâneas seja inferior a 50% do LOG_SIZE. Para obter essa limitação de tamanho, você pode dividir grandes cargas em vários lotes. Para obter mais informações sobre o LOG_SIZE, consulte [criar banco de dados](../t-sql/statements/create-database-parallel-data-warehouse.md)  
+## <a name="limitations-and-restrictions"></a>Limitações e restrições  
+O tamanho total de todas as cargas que ocorrem simultaneamente deve ser menor que LOG_SIZE para o banco de dados e é recomendável que o tamanho total de todas as cargas simultâneas seja menor que 50% do LOG_SIZE. Para obter essa limitação de tamanho, você pode dividir grandes cargas em vários lotes. Para obter mais informações sobre LOG_SIZE, consulte [criar banco de dados](../t-sql/statements/create-database-parallel-data-warehouse.md)  
   
 Ao carregar vários arquivos com um comando de carregamento, todas as linhas rejeitadas são gravadas no mesmo arquivo de rejeição. O arquivo de rejeição não mostra qual arquivo de entrada contém cada linha rejeitada.  
   
 A cadeia de caracteres vazia não deve ser usada como um delimitador. Quando uma cadeia de caracteres vazia for usada como um delimitador de linha, a carga falhará. Quando usado como delimitador de coluna, a carga ignora o delimitador e continua a usar o padrão "|" como o delimitador de coluna. Quando usado como delimitador de cadeia de caracteres, a cadeia de caracteres vazia é ignorada e o comportamento padrão é aplicado.  
   
 ## <a name="locking-behavior"></a>Comportamento de bloqueio  
-o comportamento de bloqueio de **dwloader** varia de acordo com o *load_mode_option*.  
+o comportamento de bloqueio de **dwloader** varia dependendo do *load_mode_option*.  
   
 -   **Append** – Append é a opção recomendada e mais comum. Append carrega dados em uma tabela de preparo. O bloqueio é descrito em detalhes abaixo.  
   
 -   o **acréscimo rápido** -Fast-Append carrega diretamente na tabela final usando um bloqueio de tabela ExclusiveUpdate e é o único modo que não usa uma tabela de preparo.  
   
--   recarregar-reload carrega dados em uma tabela de preparo e requer um bloqueio exclusivo na tabela de preparo e na tabela final. O recarregamento não é recomendado para operações simultâneas.  
+-   **recarregar-reload carrega** dados em uma tabela de preparo e requer um bloqueio exclusivo na tabela de preparo e na tabela final. O recarregamento não é recomendado para operações simultâneas.  
   
 -   o **Upsert** -Upsert carrega dados em uma tabela de preparo e, em seguida, executa uma operação de mesclagem da tabela de preparo para a tabela final. Upsert não requer bloqueios exclusivos na tabela final. O desempenho pode variar ao usar o Upsert. Teste o comportamento em seu ambiente.  
   
@@ -551,23 +552,23 @@ O acréscimo pode ser executado no modo de várias transacionais (usando o argum
   
 O modo de acréscimo carrega dados em duas fases. A fase 1 carrega os dados do arquivo de origem em uma tabela de preparo simultaneamente (a fragmentação pode ocorrer). A fase dois carrega dados da tabela de preparo para a tabela final. A segunda fase executa uma **inserção em... Selecione WITH (TABLOCK)** operação. A tabela a seguir mostra o comportamento de bloqueio na tabela final e o comportamento de log ao usar o modo de acréscimo:  
   
-|Tipo de tabela|Transações múltiplas<br />Modo (-m)|A tabela está vazia|Simultaneidade com suporte|Registrando em log|  
+|Tipo de tabela|Transações múltiplas<br />Modo (-m)|A tabela está vazia|Simultaneidade com suporte|Registro em log|  
 |--------------|-----------------------------------|------------------|-------------------------|-----------|  
-|Pilha|Sim|Sim|Sim|Muito|  
-|Pilha|Sim|Não|Sim|Muito|  
-|Pilha|Não|Sim|Não|Muito|  
-|Pilha|Não|Não|Não|Muito|  
-|L|Sim|Sim|Não|Muito|  
+|Heap|Sim|Sim|Sim|Mínimo|  
+|Heap|Sim|Não|Sim|Mínimo|  
+|Heap|Não|Sim|Não|Mínimo|  
+|Heap|Não|Não|Não|Mínimo|  
+|L|Sim|Sim|Não|Mínimo|  
 |L|Sim|Não|Sim|Completo|  
-|L|Não|Sim|Não|Muito|  
+|L|Não|Sim|Não|Mínimo|  
 |L|Não|Não|Sim|Completo|  
   
 A tabela acima mostra **dwloader** usando o modo de acréscimo carregando em um heap ou uma tabela de índice clusterizado (CI), com ou sem o sinalizador de várias transacionais e o carregamento em uma tabela vazia ou em uma tabela não vazia. O comportamento de bloqueio e de log de cada combinação de carga é exibido na tabela. Por exemplo, a fase de carregamento (2ª) com o modo Append em um índice clusterizado sem o modo multifuncional e em uma tabela vazia terá o PDW para criar um bloqueio exclusivo na tabela e o registro em log é mínimo. Isso significa que um cliente não será capaz de carregar (2ª) a fase e a consulta simultaneamente em uma tabela vazia. No entanto, ao carregar com a mesma configuração em uma tabela não vazia, o PDW não emitirá um bloqueio exclusivo na tabela e a simultaneidade será possível. Infelizmente, o log completo ocorre, reduzindo o processo.  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-simple-dwloader-example"></a>A. Exemplo de dwloader simples  
-O exemplo a seguir mostra a inicialização do **carregador** apenas com as opções necessárias selecionadas. Outras opções são obtidas do arquivo de configuração global, loadparamfile *. txt*.  
+### <a name="a-simple-dwloader-example"></a>R. Exemplo de dwloader simples  
+O exemplo a seguir mostra a inicialização do **carregador** apenas com as opções necessárias selecionadas. Outras opções são obtidas do arquivo de configuração global, *loadparamfile. txt*.  
   
 Exemplo usando a autenticação SQL Server.  
   
@@ -603,7 +604,7 @@ O exemplo a seguir faz parte de um script em lotes que carrega dados no **Advent
 For more information, see [Install AdventureWorksPDW2012](install-adventureworkspdw2012.md).  
 -->
 
-O trecho de script a seguir usa dwloader para carregar dados nas tabelas DimAccount e DimCurrency. Este script está usando um endereço Ethernet. Se ele estava usando InfiniBand, o servidor seria *< appliance_name >* `-SQLCTL01`.  
+O trecho de script a seguir usa dwloader para carregar dados nas tabelas DimAccount e DimCurrency. Este script está usando um endereço Ethernet. Se ele estava usando InfiniBand, o servidor seria *<appliance_name>* `-SQLCTL01`.  
   
 ```  
 set server=10.193.63.134  
@@ -694,7 +695,7 @@ Descrição dos parâmetros de linha de comando:
   
 -   *-r \r\n* especifica que cada linha em DimAccount. txt termina com um retorno de carro e um caractere de alimentação de linha.  
   
--   *-U < login_name >-P <password>*  especifica o logon e a senha para o logon que tem permissões para executar a carga.  
+-   *-U <login_name>-P <password> * especifica o logon e a senha para o logon que tem permissões para executar a carga.  
   
 
 <!-- MISSING LINK

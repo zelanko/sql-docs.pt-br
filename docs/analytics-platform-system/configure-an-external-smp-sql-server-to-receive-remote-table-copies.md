@@ -1,6 +1,6 @@
 ---
-title: Configurar o SQL Server para receber cópias da tabela remota - Parallel Data Warehouse | Microsoft Docs
-description: Descreve como configurar uma instância do SQL Server do SMP externa para receber cópias da tabela remota do Parallel Data Warehouse.
+title: Configurar SQL Server para receber cópias de tabelas remotas
+description: Descreve como configurar uma instância de SQL Server do SMP externa para receber cópias de tabelas remotas de data warehouse paralelas.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,54 +8,55 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 3ad1ee005f5d28e7477fab7c1abe7ed4074e233d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 3e5475e86582ede2e6fa7ca5a302bba7ee74faa3
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961297"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401322"
 ---
-# <a name="configure-an-external-smp-sql-server-to-receive-remote-table-copies---parallel-data-warehouse"></a>Configurar um servidor de SQL do SMP externo para receber cópias da tabela remota - Parallel Data Warehouse
-Descreve como configurar uma instância externa do SQL Server para receber cópias da tabela remota do Parallel Data Warehouse.  
+# <a name="configure-an-external-smp-sql-server-to-receive-remote-table-copies---parallel-data-warehouse"></a>Configurar um SQL Server SMP externo para receber cópias de tabela remota-data warehouse paralelos
+Descreve como configurar uma instância de SQL Server externa para receber cópias de tabelas remotas de data warehouse paralelas.  
 
-Este tópico descreve uma das etapas de configuração para configurar a cópia de tabela remota. Para obter uma lista de todas as etapas de configuração, consulte [cópia de tabela remota](remote-table-copy.md).  
+Este tópico descreve uma das etapas de configuração para configurar a cópia de tabela remota. Para obter uma lista de todas as etapas de configuração, consulte [cópia da tabela remota](remote-table-copy.md).  
   
 ## <a name="before-you-begin"></a>Antes de começar  
-Antes de configurar o SQL Server externo, faça o seguinte:  
+Para poder configurar o SQL Server externo, você deve:  
   
--   Ter um sistema Windows com o SQL Server 2008 Enterprise Edition ou uma versão posterior pronta para serem instalados ou já instalado. O sistema do Windows já deve estar configurado de acordo com as instruções [configurar um externo Windows System para receber remoto tabela cópias usando InfiniBand](configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband.md).  
+-   Ter um sistema Windows com o SQL Server 2008 Enterprise Edition ou uma versão posterior pronta para ser instalado ou já instalado. O sistema do Windows já deve estar configurado de acordo com as instruções em [configurar um sistema externo do Windows para receber cópias de tabela remota usando InfiniBand](configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband.md).  
   
--   Uma conta de administrador do Windows com a capacidade de configurar a instância do SQL Server e o sistema do Windows.  
+-   Uma conta do administrador do Windows com a capacidade de configurar a instância do SQL Server e o sistema do Windows.  
   
--   Uma conta do SQL Server logon (se o SQL Server já está instalado) com a capacidade de criar logons e conceda permissões para os bancos de dados de destino.  
+-   Uma conta de logon SQL Server (se SQL Server já estiver instalada) com a capacidade de criar logons e conceder permissões nos bancos de dados de destino.  
   
-## <a name="HowToSQLServer"></a>Configurar um servidor SQL do SMP externo para receber cópias da tabela remota  
-O recurso de cópia de tabela remota copia tabelas do dispositivo de PDW do SQL Server para um banco de dados SQL Server do SMP externo está em execução em um sistema Windows. Depois de configurar o sistema Windows externo para receber cópias da tabela remota, a próxima etapa é instalar e configurar o SQL Server no sistema do Windows.  
+## <a name="HowToSQLServer"></a>Configurar um SQL Server SMP externo para receber cópias de tabelas remotas  
+O recurso de cópia de tabela remota copia tabelas do dispositivo SQL Server PDW para um banco de dados SMP SQL Server que está sendo executado em um sistema Windows. Depois de configurar o sistema externo do Windows para receber cópias de tabelas remotas, a próxima etapa é instalar e configurar o SQL Server no sistema Windows.  
   
-Para configurar o SQL Server, use as seguintes etapas:  
+Para configurar SQL Server, use as seguintes etapas:  
   
-1.  Instale o SQL Server 2008 Enterprise Edition ou uma versão posterior do sistema do Windows. Isso é chamado de SMP SQL Server.  
+1.  Instale o SQL Server 2008 Enterprise Edition ou uma versão posterior no sistema Windows. Isso é conhecido como o SQL Server SMP.  
   
-2.  Configure o SQL Server para aceitar conexões TCP/IP em uma porta TCP fixa. Essa configuração é desabilitada por padrão e deve ser habilitada para permitir que o SQL Server PDW para se conectar ao SQL Server do SMP.  
+2.  Configure SQL Server para aceitar conexões TCP/IP em uma porta TCP fixa. Essa configuração é desabilitada por padrão e deve ser habilitada para permitir que SQL Server PDW se conectem ao SQL Server SMP.  
   
-3.  Desabilite o firewall do Windows ou configurar a porta TCP do SQL Server do SMP para que ele funcionará com o firewall do Windows habilitado.  
+3.  Desabilite o Firewall do Windows ou configure a porta TCP do SMP SQL Server para que ela funcione com o Firewall do Windows habilitado.  
   
-4.  Configure o SQL Server para permitir que o modo de autenticação do SQL Server. Os dados em paralelo sempre exportar usa contas do SQL Server para autenticação.  
+4.  Configure SQL Server para permitir SQL Server modo de autenticação. A exportação de dados paralelo sempre usa contas de SQL Server para autenticação.  
   
-5.  Determine uma conta do SQL Server no SMP SQL Server que será usado para autenticação. Conceda à conta o privilégio para criar, remover e inserir dados em tabelas no banco de dados de destino para a operação de exportação de dados em paralelo.  
+5.  Determine uma conta de SQL Server no SQL Server SMP que será usado para autenticação. Conceda a essa conta o privilégio para criar, remover e inserir dados em tabelas no banco de dados de destino para a operação de exportação de dados paralelos.  
   
-## <a name="BPSQLConfig"></a>Práticas recomendadas para configuração do servidor SQL SMP para cópia de tabela remota  
-Ao configurar o SQL Server do SMP para receber cópias da tabela remota, use as seguintes práticas recomendadas para melhorar o desempenho.  
+## <a name="BPSQLConfig"></a>Práticas recomendadas para a configuração de SQL Server SMP para cópia de tabela remota  
+Ao configurar o SQL Server SMP para receber cópias de tabela remota, use as práticas recomendadas a seguir para melhorar o desempenho.  
   
-1.  Siga as práticas recomendadas, conforme documentado na documentação de produto do SQL Server. Por exemplo, habilite a criptografia de dados. Para obter mais informações sobre como proteger o SQL Server, consulte [protegendo o SQL Server](../relational-databases/security/securing-sql-server.md) no MSDN.  
+1.  Siga as práticas recomendadas, conforme documentado em SQL Server documentação do produto. Por exemplo, habilite a criptografia de dados. Para obter mais informações sobre como proteger SQL Server, consulte [protegendo SQL Server](../relational-databases/security/securing-sql-server.md) no msdn.  
   
 2.  Use o modelo de recuperação bulk-logged ou simples.  
   
-    Operações de exportação durante a paralela de dados, dados em massa inserida na tabela de destino recém-criada. Para obter desempenho máximo durante a inserção em massa, defina o banco de dados de destino para usar bulk-logged ou o modelo de recuperação simples.  
+    Durante as operações de exportação de dados paralelos, os dados são inseridos em massa na tabela de destino recém-criada. Para obter o desempenho máximo durante a inserção em massa, defina o banco de dados de destino para usar o modelo de recuperação bulk-logged ou Simple.  
   
-3.  Use a opção de batch_size para recuperar o espaço de log.  
+3.  Use a opção batch_size para recuperar o espaço de log.  
   
-    Embora o uso mínimo de registro em log para os dados em massa inserido de modelos de recuperação bulk-logged ou simple, alguns logs ainda ocorre. Para impedir que os arquivos de log fique muito grande, use a opção de batch_size do SQL Server para recuperar periodicamente o espaço de log.  
+    Embora os modelos de recuperação bulk-logged ou simples usem o log mínimo para os dados inseridos em massa, algum log ainda ocorrerá. Para evitar que os arquivos de log cresçam muito grandes, use a opção SQL Server batch_size para recuperar periodicamente o espaço de log.  
   
 <!-- MISSING LINKS 
 ## See Also  

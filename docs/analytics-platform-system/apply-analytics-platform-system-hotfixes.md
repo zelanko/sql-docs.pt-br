@@ -1,6 +1,6 @@
 ---
-title: Aplicar hotfixes do Analytics Platform System | Microsoft Docs
-description: Este artigo discute como aplicar hotfixes para o software do sistema de plataforma de análise.
+title: Aplicar hotfixes do Analytics Platform System
+description: Este artigo discute como aplicar hotfixes ao software do sistema da plataforma de análise.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,51 +8,52 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: d6af4a1eaf1e9891356fae40a3d3bb7f11e41dc6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: fd62413ec8542aba9f3973d0e8483cb9c5c9128a
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961424"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401370"
 ---
 # <a name="apply-analytics-platform-system-hotfixes"></a>Aplicar hotfixes do Analytics Platform System
-Este artigo discute como aplicar hotfixes para o software do sistema de plataforma de análise.  
+Este artigo discute como aplicar hotfixes ao software do sistema da plataforma de análise.  
   
 ## <a name="before-you-begin"></a>Antes de começar  
   
 > [!WARNING]  
-> Não tente aplicar um hotfix do Analytics Platform System, se seu dispositivo ou qualquer componente do dispositivo estiver inativo ou em uma falha ao longo de estado. Nesse caso, contate o suporte para obter assistência.  
+> Não tente aplicar um hotfix do sistema de plataforma de análise se seu dispositivo ou qualquer componente de dispositivo estiver inoperante ou em um estado de failover. Nesse caso, entre em contato com o suporte para obter assistência.  
   
 > [!WARNING]  
-> Não aplique um hotfix do Analytics Platform System, enquanto o dispositivo está em uso. Aplicar um hotfix, nós de dispositivo a reinicialização pode causar. O hotfix deve ser aplicado durante uma janela de manutenção quando o dispositivo não está sendo usado.  
+> Não aplique um hotfix do sistema de plataforma de análise enquanto o dispositivo estiver em uso. A aplicação de um hotfix pode fazer com que os nós do dispositivo sejam reinicializados. O hotfix deve ser aplicado durante uma janela de manutenção quando o dispositivo não está sendo usado.  
   
 ### <a name="prerequisites"></a>Pré-requisitos  
-Para executar essas etapas, você precisará de:  
+Para executar essas etapas, será necessário:  
   
--   Um logon do Analytics Platform System com permissões para acessar o Console de administração para monitorar o estado do dispositivo. <!-- MISSING LINKS See [Grant Permissions to Use the Admin Console &#40;SQL Server PDW&#41;](../sqlpdw/grant-permissions-to-use-the-admin-console-sql-server-pdw.md).  -->  
+-   Um logon do sistema de plataforma de análise com permissões para acessar o console de administração para monitorar o estado do dispositivo. <!-- MISSING LINKS See [Grant Permissions to Use the Admin Console &#40;SQL Server PDW&#41;](../sqlpdw/grant-permissions-to-use-the-admin-console-sql-server-pdw.md).  -->  
   
--   Dados de Conhecimento da conta de administrador de domínio de malha para conectar-se para o _< nome_do_domínio >_ **-HST01** nó.  
+-   Conhecimento da conta do administrador de domínio da malha para se conectar ao _<domain_name nó>_ **-HST01** .  
   
-## <a name="HowToInstallPDW"></a>Para aplicar um hotfix do Analytics Platform System  
-Ao contrário de atualizações da Microsoft, os hotfixes para o software do Analytics Platform System não são manipulados por meio do WSUS. Eles têm um fluxo de trabalho diferente e são instalados por execução de um pacote de hotfix.  
+## <a name="HowToInstallPDW"></a>Para aplicar um hotfix do sistema de plataforma de análise  
+Ao contrário das atualizações da Microsoft, os hotfixes para o software de sistema da plataforma de análise não são tratados por meio do WSUS. Eles têm um fluxo de trabalho diferente e são instalados executando um pacote de hotfix.  
   
-1.  **Verifique se os indicadores de estado do dispositivo.**  
+1.  **Verifique os indicadores de estado do dispositivo.**  
   
-    1.  Abra o Console do administrador e navegue até a página de estado do dispositivo. Para obter mais informações, consulte [monitorar o dispositivo usando o Console de administração do &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
+    1.  Abra o console do administrador e navegue até a página estado do dispositivo. Para obter mais informações, consulte [monitorar o dispositivo usando o console de administração &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
   
-    2.  Todos os indicadores de vermelhos ou amarelos devem ser resolvidos antes de prosseguir para a próxima etapa. Duas exceções a isso são:  
+    2.  Todos os indicadores vermelhos ou amarelos devem ser resolvidos antes de prosseguir para a próxima etapa. Algumas exceções a isso são:  
   
-        -   Se houver falhas de disco, use a página de alertas do Console de administrador para verificar se não há não mais de uma falha de disco em cada servidor ou uma matriz de SAN. Se houver falha de não mais de um disco em cada servidor ou uma matriz de SAN, você pode prosseguir para a próxima etapa antes de corrigir a falha de disco (s). Certifique-se de entrar em contato com o suporte da Microsoft para corrigir a falha de disco (s) assim que possível.  
+        -   Se houver falhas de disco, use a página de alertas do console de administração para verificar se não há mais de uma falha de disco em cada servidor ou matriz SAN. Se não houver mais de uma falha de disco em cada servidor ou matriz de SAN, você poderá prosseguir para a próxima etapa antes de corrigir as falhas de disco. Lembre-se de entrar em contato com o suporte da Microsoft para corrigir as falhas de disco assim que possível.  
   
-        -   Se houver um erro de volume de disco (amarelo) não críticos que não está na unidade C:\, você pode prosseguir para a próxima etapa antes de resolver o erro de volume de disco.  
+        -   Se houver um erro de volume de disco não crítico (amarelo) que não esteja em C:\ , você pode prosseguir para a próxima etapa antes de resolver o erro de volume de disco.  
   
-2.  **Instale o hotfix do Analytics Platform System**  
+2.  **Instalar o hotfix do sistema da plataforma de análise**  
   
-    1.  Logon para o <*appliance_domain*>-HST01 nó como o administrador de domínio.  
+    1.  Faça logon no <*appliance_domain* nó>-HST01 como administrador de domínio.  
   
-    2.  Use o **executar como administrador** opção para abrir um Prompt de comando.  
+    2.  Use a opção **Executar como administrador** para abrir um prompt de comando.  
   
-    3.  Execute o seguinte comando, substituindo *<HotfixPackageName>* com o nome do pacote executável de hotfix e substituindo os outros itens de espaço reservado *< >* com as informações apropriadas.  
+    3.  Execute o comando a seguir, *<HotfixPackageName>* substituindo pelo nome do pacote executável do hotfix e substituindo os outros itens de espaço reservado *<  >* com as informações apropriadas.  
   
         ```  
         <HotfixPackageName> /DomainAdminPassword="<password>"  
@@ -60,9 +61,9 @@ Ao contrário de atualizações da Microsoft, os hotfixes para o software do Ana
   
     4.  Siga as etapas conforme apresentado pelo pacote de hotfix.  
   
-## <a name="see-also"></a>Consulte também  
-[Baixe e aplique as atualizações da Microsoft &#40;Analytics Platform System&#41;](download-and-apply-microsoft-updates.md)  
-[Desinstalar atualizações da Microsoft &#40;Analytics Platform System&#41;](uninstall-microsoft-updates.md)  
-[Desinstalar Hotfixes do Analytics Platform System &#40;Analytics Platform System&#41;](uninstall-analytics-platform-system-hotfixes.md)  
-[Manutenção de software &#40;Analytics Platform System&#41;](software-servicing.md)  
+## <a name="see-also"></a>Consulte Também  
+[Baixar e aplicar as atualizações da Microsoft &#40;o sistema de plataforma de análise&#41;](download-and-apply-microsoft-updates.md)  
+[Desinstalar o Microsoft Updates &#40;Analytics Platform System&#41;](uninstall-microsoft-updates.md)  
+[Desinstale os hotfixes do Analytics Platform System &#40;o Analytics Platform System&#41;](uninstall-analytics-platform-system-hotfixes.md)  
+[Manutenção de software &#40;o sistema de plataforma de análise&#41;](software-servicing.md)  
   

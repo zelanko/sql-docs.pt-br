@@ -1,5 +1,5 @@
 ---
-title: Restaurar banco de dados mestre-APS (sistema de plataforma de análise) | Microsoft Docs
+title: Restaurar banco de dados mestre
 description: Restaure o banco de dados mestre no sistema de plataforma de análise (APS).
 author: mzaman1
 ms.prod: sql
@@ -8,12 +8,13 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 624e1199fb953945ae6476a1f935dded48508bab
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 6d122881f5283da86f66494ee2f049756d151551
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176140"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74400449"
 ---
 # <a name="restore-the-master-database-in-analytics-platform-system-aps"></a>Restaurar o banco de dados mestre no sistema de plataforma de análise (APS)
 A página **restaurar mestre** do SQL Server PDW Configuration Manager permite que você restaure o banco de dados mestre de um backup.  
@@ -25,7 +26,7 @@ A página **restaurar mestre** do SQL Server PDW Configuration Manager permite q
   
 ## <a name="to-restore-the-master-database"></a>Para restaurar o banco de dados mestre  
   
-1.  Inicie o Configuration Manager. Para obter mais informações, consulte [iniciar o &#40;Configuration Manager Analytics Platform&#41;System](launch-the-configuration-manager.md).  
+1.  Inicie o Configuration Manager. Para obter mais informações, consulte [iniciar o Configuration Manager &#40;&#41;do sistema de plataforma de análise ](launch-the-configuration-manager.md).  
   
 2.  No painel esquerdo da Configuration Manager, clique em **restaurar mestre**.  
   
@@ -35,5 +36,5 @@ A página **restaurar mestre** do SQL Server PDW Configuration Manager permite q
   
 5.  Para executar a restauração, SQL Server PDW desligará todos os serviços do dispositivo e desconectará todos os usuários. Após a conclusão da restauração, SQL Server PDW reiniciará os serviços do dispositivo.  
   
-![Mestre de restauração do PDW do dispositivo DWConfig](./media/restore-the-master-database/SQL_Server_PDW_DWConfig_ApplPDWRestore.png "SQL_Server_PDW_DWConfig_ApplPDWRestore")  
+![Mestre de restauração PDW do dispositivo DWConfig](./media/restore-the-master-database/SQL_Server_PDW_DWConfig_ApplPDWRestore.png "SQL_Server_PDW_DWConfig_ApplPDWRestore")  
   

@@ -1,6 +1,6 @@
 ---
-title: Configurar o PolyBase para acessar dados externos no armazenamento de BLOBs do Azure | Microsoft Docs
-description: Explica como configurar o PolyBase no Parallel Data Warehouse para se conectar ao Hadoop externo.
+title: Usar o polybase para acessar dados externos no armazenamento de BLOBs do Azure
+description: Explica como configurar o polybase em paralelo data warehouse para se conectar ao Hadoop externo.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,30 +8,31 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 82c57ef57a01cabf2786c71fc53aed3660289451
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 4ea61ea7e6983f9601783957eee6776f36eccfb4
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960284"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74400721"
 ---
-# <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>Configurar o PolyBase para acessar dados externos no armazenamento de BLOBs do Azure
+# <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>Configurar o polybase para acessar dados externos no armazenamento de BLOBs do Azure
 
-O artigo explica como usar o PolyBase em uma instância do SQL Server para consultar dados externos no armazenamento de BLOBs do Azure.
+O artigo explica como usar o polybase em uma instância de SQL Server para consultar dados externos no armazenamento de BLOBs do Azure.
 
 > [!NOTE]
-> Pontos de acesso atualmente suporta apenas o armazenamento com redundância (local LRS) o Blob do Azure padrão de uso geral v1.
+> Atualmente, os APS dão suporte apenas ao armazenamento de BLOBs do Azure com redundância local (LRS) padrão de uso geral v1.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
  - Armazenamento de BLOBs do Azure em sua assinatura.
  - Um contêiner criado no armazenamento de BLOBs do Azure.
 
-### <a name="configure-azure-blob-storage-connectivity"></a>Configurar a conectividade de armazenamento de BLOBs do Azure
+### <a name="configure-azure-blob-storage-connectivity"></a>Configurar a conectividade do armazenamento de BLOBs do Azure
 
-Primeiro, configure os pontos de acesso para usar o armazenamento de BLOBs do Azure.
+Primeiro, configure o APS para usar o armazenamento de BLOBs do Azure.
 
-1. Execute [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) com 'conectividade do hadoop' definida como um provedor de armazenamento de BLOBs do Azure. Para encontrar o valor dos provedores, consulte [Configuração de conectividade do PolyBase](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).
+1. Execute [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) com ' conectividade do Hadoop ' definida como um provedor de armazenamento de BLOBs do Azure. Para encontrar o valor dos provedores, consulte [Configuração de conectividade do PolyBase](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).
 
    ```sql  
    -- Values map to various external data sources.  
@@ -44,13 +45,13 @@ Primeiro, configure os pontos de acesso para usar o armazenamento de BLOBs do Az
    GO
    ```  
 
-2. Reiniciar a região de pontos de acesso usando a página Status do serviço no [Gerenciador de configuração de dispositivo](launch-the-configuration-manager.md).
+2. Reinicie a região APS usando a página status do serviço no [Configuration Manager do dispositivo](launch-the-configuration-manager.md).
   
 ## <a name="configure-an-external-table"></a>Configurar uma tabela externa
 
-Para consultar os dados no armazenamento de BLOBs do Azure, você deve definir uma tabela externa para usar em consultas Transact-SQL. As etapas a seguir descrevem como configurar a tabela externa.
+Para consultar os dados em seu armazenamento de BLOBs do Azure, você deve definir uma tabela externa para usar em consultas Transact-SQL. As etapas a seguir descrevem como configurar a tabela externa.
 
-1. Crie uma chave mestra no banco de dados. Ela é necessária para criptografar o segredo da credencial.
+1. Crie uma chave mestra no banco de dados. É necessário criptografar o segredo da credencial.
 
    ```sql
    CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
@@ -65,7 +66,7 @@ Para consultar os dados no armazenamento de BLOBs do Azure, você deve definir u
    WITH IDENTITY = 'user', Secret = '<azure_storage_account_key>';
    ```
 
-1. Crie uma fonte de dados externa, usando [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md).
+1. Crie uma fonte de dados externa com [criar fonte de dados externa](../t-sql/statements/create-external-data-source-transact-sql.md)..
 
    ```sql
    -- LOCATION:  Azure account storage account name and blob container name.  
@@ -123,7 +124,7 @@ As consultas a seguir fornecem exemplo com os dados de sensor de carro fictício
 
 ### <a name="ad-hoc-queries"></a>Consulta ad hoc  
 
-A seguinte consulta ad hoc junções relacionais com dados no armazenamento de BLOBs do Azure. Ele seleciona clientes que conduzem a mais rápido do que 35 km/h ingressando dados estruturados de cliente armazenados no SQL Server com os dados de sensor de carro armazenados no armazenamento de BLOBs do Azure.  
+A consulta ad hoc a seguir une relacional com dados no armazenamento de BLOBs do Azure. Ele seleciona os clientes que impulsionam mais de 35 mph, unindo dados estruturados do cliente armazenados em SQL Server com dados de sensor de carros armazenados no armazenamento de BLOBs do Azure.  
 
 ```sql  
 SELECT DISTINCT Insured_Customers.FirstName,Insured_Customers.LastName,
@@ -133,9 +134,9 @@ WHERE Insured_Customers.CustomerKey = CarSensor_Data.CustomerKey and CarSensor_D
 ORDER BY CarSensor_Data.Speed DESC  
 ```  
 
-### <a name="importing-data"></a>Importando dados  
+### <a name="importing-data"></a>Importação de dados  
 
-A consulta a seguir importa dados externos no APS. Este exemplo importa dados para drivers rápidas para APS para fazer uma análise mais detalhada. Para melhorar o desempenho, ela aproveita a tecnologia de Columnstore no APS.  
+A consulta a seguir importa dados externos para o APS. Este exemplo importa dados para drivers rápidos em APS para fazer uma análise mais detalhada. Para melhorar o desempenho, ele aproveita a tecnologia Columnstore no APS.  
 
 ```sql
 CREATE TABLE Fast_Customers
@@ -154,7 +155,7 @@ ON Insured_Customers.CustomerKey = SensorD.CustomerKey
 
 ### <a name="exporting-data"></a>Exportando dados  
 
-A consulta a seguir exporta dados dos pontos de acesso para o armazenamento de BLOBs do Azure. Ele pode ser usado para arquivar dados relacionais para o Azure Blob storage ainda ser capaz de consultá-lo.
+A consulta a seguir exporta dados de APS para o armazenamento de BLOBs do Azure. Ele pode ser usado para arquivar dados relacionais no armazenamento de BLOBs do Azure e ainda conseguir consultá-los.
 
 ```sql
 -- Export data: Move old data to Azure Blob storage while keeping it query-able via an external table.  
@@ -170,11 +171,11 @@ ON (T1.CustomerKey = T2.CustomerKey)
 WHERE T2.YearMeasured = 2009 and T2.Speed > 40;  
 ```  
 
-## <a name="view-polybase-objects-in-ssdt"></a>Exibir objetos PolyBase no SSDT  
+## <a name="view-polybase-objects-in-ssdt"></a>Exibir objetos polybase no SSDT  
 
-No SQL Server Data Tools, as tabelas externas são exibidas em uma pasta separada **tabelas externas**. As fontes de dados externas e os formatos de arquivo externos estão em subpastas em **Recursos Externos**.  
+Em SQL Server Data Tools, as tabelas externas são exibidas em uma pasta separada **tabelas externas**. As fontes de dados externas e os formatos de arquivo externos estão em subpastas em **Recursos Externos**.  
   
-![Objetos PolyBase no SSDT](media/polybase/external-tables-datasource.png)  
+![Objetos do polybase no SSDT](media/polybase/external-tables-datasource.png)  
 
 ## <a name="next-steps"></a>Próximas etapas
 

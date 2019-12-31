@@ -1,6 +1,6 @@
 ---
-title: Banco de dados mestre - Parallel Data Warehouse | Microsoft Docs
-description: Saiba mais sobre o banco de dados mestre no Parallel Data Warehouse.
+title: Banco de dados mestre
+description: Saiba mais sobre o banco de dados mestre em paralelo data warehouse.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,45 +8,46 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 9f37c7a85baea3b41f6016a57e4f57579b427719
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: cafef8a5b702b6df4475d34e9395bb12bc9461fb
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960659"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74400982"
 ---
-# <a name="master-database---parallel-data-warehouse"></a>Banco de dados mestre - Parallel Data Warehouse
-O banco de dados mestre do SQL Server PDW armazena informações de logon de nível de dispositivo e o catálogo de banco de dados. É um SQL Server banco de dados mestre que reside no nó de controle. Como tal, ele fornece funcionalidade semelhante para o SQL Server PDW como mestre fornece ao SQL Server.  
+# <a name="master-database---parallel-data-warehouse"></a>Banco de dados mestre-data warehouse paralelos
+O banco de dados mestre do SQL Server PDW armazena informações de logon no nível do dispositivo e o catálogo de banco de dados. É um banco de dados mestre SQL Server que reside no nó de controle. Assim, ele fornece uma funcionalidade semelhante à SQL Server PDW como o mestre fornece a SQL Server.  
   
 Para obter mais informações sobre bancos de dados do sistema, consulte [bancos de dados do sistema](system-databases.md).  
   
-## <a name="limitations-and-restrictions"></a>Limitações e Restrições  
-A lista a seguir descreve as operações que você não pode executar no banco de dados mestre do SQL Server PDW.  
+## <a name="limitations-and-restrictions"></a>Limitações e restrições  
+A lista a seguir descreve as operações que você não pode executar no banco de dados do SQL Server PDW mestre.  
   
-Você *não é possível:*  
+Você *não pode:*  
   
 -   Execute um backup diferencial do mestre.  
   
 -   Crie objetos de usuário no mestre.  
   
--   Altere o agrupamento de mestre.  
+-   Alterar o agrupamento do mestre.  
   
 -   Altere o proprietário do mestre.  
   
--   Descarte ou renomeie o mestre.  
+-   Remover ou renomear mestre.  
   
--   Modificar permissões para o mestre.  
+-   Modificar permissões para mestre.  
   
 -   Execute **DBCC SHRINKLOG**.  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Tarefa|Descrição|  
 |--------|---------------|  
-|Crie um backup completo do mestre.|Exemplo:<br /><br />`BACKUP DATABASE master TO backup_directory;`<br /><br />Para obter mais informações, consulte [banco de dados de BACKUP](../t-sql/statements/backup-database-parallel-data-warehouse.md).|  
-|Restaurar o banco de dados mestre|Para restaurar o banco de dados mestre, use o [restaurar o banco de dados mestre](restore-the-master-database.md) página na ferramenta do Configuration Manager.|  
-|Exibir informações de catálogo do banco de dados.|`SELECT * FROM master.sys.databases;`|  
-|Exibir informações de logon e a permissão de todo o sistema.|`SELECT * FROM master.sys.server_permissions;`<br /><br />`SELECT * FROM master.sys.server_principals;`<br /><br />`SELECT * FROM master.sys.sql_logins;`|  
+|Crie um backup completo do mestre.|Exemplo:<br /><br />`BACKUP DATABASE master TO backup_directory;`<br /><br />Para obter mais informações, consulte [backup Database](../t-sql/statements/backup-database-parallel-data-warehouse.md).|  
+|Restaurar o banco de dados mestre|Para restaurar o banco de dados mestre, use a página [restaurar o banco de dados mestre](restore-the-master-database.md) na ferramenta de Configuration Manager.|  
+|Exibir informações do catálogo de banco de dados.|`SELECT * FROM master.sys.databases;`|  
+|Exibir informações de logon e permissão de todo o sistema.|`SELECT * FROM master.sys.server_permissions;`<br /><br />`SELECT * FROM master.sys.server_principals;`<br /><br />`SELECT * FROM master.sys.sql_logins;`|  
   
 <!-- MISSING LINKS 
 ## See Also  

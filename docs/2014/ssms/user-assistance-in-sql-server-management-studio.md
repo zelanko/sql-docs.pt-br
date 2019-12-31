@@ -1,7 +1,7 @@
 ---
 title: Assistência ao usuário no SQL Server Management Studio | Microsoft Docs
 ms.custom: ''
-ms.date: 03/07/2017
+ms.date: 11/25/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: ssms
@@ -13,12 +13,12 @@ ms.assetid: 3c33a474-e507-4712-86fe-ae40e8370319
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9b972a1d2bb1f65a8b8e26005a3af8c10b2dc02f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3d58ac84e394d7b8dfe342430991f2ddefa678be
+ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63016183"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74684454"
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>Assistência ao usuário no SQL Server Management Studio
   A assistência ao usuário está disponível no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] através do menu Ajuda e dos Manuais Online do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. O menu Ajuda do [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] oferece várias rotas diferentes para informações sobre o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Ele também fornece acesso à comunidade [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e aos recursos do MSDN Online não disponíveis anteriormente no ambiente de Ajuda. Além disso, o ambiente de Ajuda agora pode ser configurado para ser executado dentro do ambiente do [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ou em uma janela externa associada a um ambiente próprio.  
@@ -26,11 +26,11 @@ ms.locfileid: "63016183"
 ## <a name="the-help-interface"></a>A interface da Ajuda  
  O **Conteúdo** e o **Índice** fornecem funcionalidade e uma interface já familiar aos usuários do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . As outras opções são:  
   
--   **Como Fazer**  
+-   **Como faço para**  
   
      Fornece um conjunto hierárquico de páginas vinculadas que contêm tópicos úteis relacionados a tarefas comuns do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . O conteúdo é organizado por componente e tarefa, por exemplo, tópicos de replicação etc.  
   
--   **Pesquisar**  
+-   **Search**  
   
      Pesquisa tópicos, com ou sem filtros predefinidos. A pesquisa no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] é feita em uma página separada com guias. Os usuários podem refinar as pesquisas com um ou mais filtros predefinidos de tipo de tópico, linguagem ou tecnologia. Por padrão, a Pesquisa não usa nenhum dos filtros predefinidos, e só os tópicos são pesquisados nas coleções instaladas.  
   
@@ -40,11 +40,11 @@ ms.locfileid: "63016183"
   
      Automaticamente exibe links para informações pertinentes enquanto os usuários trabalham no ambiente do [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] .  
   
--   **Favoritos da Ajuda**  
+-   **Favoritos da ajuda**  
   
      Armazena indicadores de tópico de usuário para facilitar o acesso posterior.  
   
- Ajuda na Ajuda (Ajuda do Gerenciador de Documentos[!INCLUDE[msCoName](../includes/msconame-md.md)] ) vincula os usuários à documentação sobre o Visualizador da Ajuda, mas os tópicos estão em uma coleção separada dos Manuais Online do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Para obter informações sobre o Visualizador da Ajuda, selecione **Ajuda na Ajuda** no menu Ajuda dos Manuais Online do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Para obter informações sobre como adicionar a Ajuda na coleção de tópicos da Ajuda para a coleção de Manuais Online, consulte [adicionar ou remover a documentação de produto do SQL Server](../2014-toc/books-online-for-sql-server-2014.md).  
+ Ajuda na Ajuda (Ajuda do Gerenciador de Documentos[!INCLUDE[msCoName](../includes/msconame-md.md)] ) vincula os usuários à documentação sobre o Visualizador da Ajuda, mas os tópicos estão em uma coleção separada dos Manuais Online do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Para obter informações sobre o Visualizador da Ajuda, selecione **Ajuda na Ajuda** no menu Ajuda dos Manuais Online do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Para obter informações sobre como adicionar a ajuda na coleção de tópicos de ajuda para a coleção de manuais online, consulte [Adicionar ou remover a documentação do produto para SQL Server](../2014-toc/index.yml).  
   
 ## <a name="msdn-online-and-sql-server-communities"></a>MSDN Online e Comunidades do SQL Server  
  A Ajuda do [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] também fornece modos para os usuários entrarem em contato com o MSDN Online e com as comunidades relacionadas ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]na Web para obtenção de informações. Você pode:  
@@ -70,7 +70,7 @@ ms.locfileid: "63016183"
   
 2.  Na área **Ao carregar conteúdo da Ajuda** , selecione uma opção online.  
   
-3.  Na lista **Pesquisar estes provedores** , selecione os provedores que você deseja pesquisar e desmarque aqueles não serão utilizados.  
+3.  Na lista **Pesquisar estes provedores**, selecione os provedores que você deseja pesquisar e desmarque aqueles não serão utilizados.  
   
 4.  Se **Comunidade Codezone** for um de seus provedores de pesquisa selecionados, na lista **Comunidade Codezone** , selecione e desmarque os itens conforme necessário.  
   
@@ -78,9 +78,9 @@ ms.locfileid: "63016183"
   
 #### <a name="to-search-msdn-online-and-sql-server-focused-communities-from-the-search-page"></a>Para pesquisar no MSDN Online e nas comunidades relacionadas ao SQL Server da página de pesquisa  
   
-1.  No menu **Ajuda** , clique em **Pesquisar**.  
+1.  No menu **Ajuda**, clique em **Pesquisar**.  
   
-2.  Insira seus termos de pesquisa na caixa de texto **Pesquisar** e depois clique em **Pesquisar**.  
+2.  Insira seus termos de pesquisa na caixa **Pesquisar** e depois clique em **Pesquisar**.  
   
  Independentemente de você executar ou não uma pesquisa que usa os filtros disponíveis (tecnologia, linguagem e tipo de tópico), sua pesquisa será executada em todos os provedores de pesquisa selecionados.  
   

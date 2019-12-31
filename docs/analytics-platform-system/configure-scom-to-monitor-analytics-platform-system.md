@@ -1,6 +1,6 @@
 ---
-title: Configurar o SCOM para monitorar o Analytics Platform System | Microsoft Docs
-description: Siga estas etapas para configurar os pacotes de gerenciamento do System Center Operations Manager (SCOM) para o Analytics Platform System. Os pacotes de gerenciamento necessários para monitorar o Analytics Platform System do SCOM.
+title: Monitorar com o SCOM
+description: Siga estas etapas para configurar os pacotes de gerenciamento do System Center Operations Manager (SCOM) para o sistema de plataforma de análise. Os pacotes de gerenciamento são necessários para monitorar o sistema de plataforma de análise do SCOM.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,110 +8,111 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 5ec495b3dd321f712aed54fb3b337efe85719be5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 67029d235a1bc65b5ee0ab6f01f51dea42ebcc8b
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961231"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401305"
 ---
-# <a name="configure-system-center-operations-manager-scom-to-monitor-analytics-platform-system"></a>Configurar o System Center Operations Manager (SCOM) para monitorar o Analytics Platform System
-Siga estas etapas para configurar os pacotes de gerenciamento do System Center Operations Manager (SCOM) para o Analytics Platform System. Os pacotes de gerenciamento necessários para monitorar o Analytics Platform System do SCOM.  
+# <a name="configure-system-center-operations-manager-scom-to-monitor-analytics-platform-system"></a>Configurar System Center Operations Manager (SCOM) para monitorar o sistema de plataforma de análise
+Siga estas etapas para configurar os pacotes de gerenciamento do System Center Operations Manager (SCOM) para o sistema de plataforma de análise. Os pacotes de gerenciamento são necessários para monitorar o sistema de plataforma de análise do SCOM.  
   
 ## <a name="BeforeBegin"></a>Antes de começar  
 **Pré-requisitos**  
   
-System Center Operations Manager 2007 R2 deve ser instalado e em execução.  
+System Center Operations Manager 2007 R2 deve estar instalado e em execução.  
   
-Os pacotes de gerenciamento devem ser instalados e configurados. Ver [instalar os pacotes de gerenciamento do SCOM &#40;Analytics Platform System&#41; ](install-the-scom-management-packs.md) e [importar o pacote de gerenciamento do SCOM para PDW &#40;Analytics Platform System&#41;](import-the-scom-management-pack-for-pdw.md).  
+Os pacotes de gerenciamento devem ser instalados e configurados. Consulte [instalar os pacotes de gerenciamento do scom &#40;o sistema de plataforma de análise&#41;](install-the-scom-management-packs.md) e [importar o pacote de gerenciamento do SCOM para o PDW &#40;analytics Platform System&#41;](import-the-scom-management-pack-for-pdw.md).  
   
 ## <a name="ConfigureRunAsProfile"></a>Configurar o perfil executar como no System Center  
-Para configurar o System Center, você deve executar as seguintes etapas:  
+Para configurar o System Center, você precisa executar as seguintes etapas:  
   
--   Criar conta executar como para o **Inspetor de APS** usuário de domínio e mapeá-lo para o **conta da Microsoft APS observador.**  
+-   Crie uma conta Executar como para o usuário de domínio do **Inspetor do APS** e mapeie-a para a conta do Inspetor de **APS da Microsoft.**  
   
--   Criar conta executar como para o **monitoring_user** usuário APS e mapeá-lo para o **conta de ação do Microsoft APS**.  
+-   Crie uma conta Executar como para o usuário **monitoring_user** APS e mapeie-a para a **conta de ação APS da Microsoft**.  
   
-Aqui estão as instruções detalhadas sobre como realizar as tarefas:  
+Aqui estão instruções detalhadas sobre como executar as tarefas:  
   
-1.  Criar o **Inspetor de APS** conta executar como com **Windows** conta de tipo para o **APS observador** usuário de domínio.  
+1.  Crie a conta Executar como do **Inspetor de APS** com o tipo de conta do **Windows** para o usuário de domínio do **Inspetor do APS** .  
   
-    1.  Navegue até a **Administration** painel, clique com botão direito em **configuração Executar como** -> **contas** e selecione **criar conta executar como...**  
+    1.  Navegue até o painel **Administração** , clique com o botão direito do mouse em**contas** de **configuração** -> executar como e selecione **criar conta Executar como...**  
   
         ![ConfigureScomCreateRunAsAccount](./media/configure-scom-to-monitor-analytics-platform-system/ConfigureScomCreateRunAsAccount.png "ConfigureScomCreateRunAsAccount")  
   
-    2.  O **criar Assistente executar como conta** caixa de diálogo será aberta. Sobre o **Introdução** , clique em **próxima**.  
+    2.  A caixa de diálogo **Assistente para criação de conta Executar como** será aberta. Na página **Introdução** clique em **Avançar**.  
   
-    3.  No **propriedades gerais** página, selecione **Windows** da **tipo de conta executar como** e especifique o "Inspetor de APS" como o **nome de exibição**.  
+    3.  Na página **Propriedades gerais** , selecione **Windows** do **tipo de conta Executar como** e especifique "Inspetor de APS" como o **nome de exibição**.  
   
         ![CreateRunAsAccountWizardGeneralProperties](./media/configure-scom-to-monitor-analytics-platform-system/CreateRunAsAccountWizardGeneralProperties.png "CreateRunAsAccountWizardGeneralProperties")  
   
-    4.  Sobre o **credenciais** página, ![CreateRunAsAccountWizardCredentials](./media/configure-scom-to-monitor-analytics-platform-system/CreateRunAsAccountWizardCredentials.png "CreateRunAsAccountWizardCredentials")  
+    4.  Na página **credenciais** , ![CreateRunAsAccountWizardCredentials](./media/configure-scom-to-monitor-analytics-platform-system/CreateRunAsAccountWizardCredentials.png "CreateRunAsAccountWizardCredentials")  
   
-    5.  No **segurança do Distribution** página, selecione **menos seguro** e clique no **criar** botão para concluir.  
+    5.  Na página **segurança de distribuição** , selecione **menos seguro** e clique no botão **criar** para concluir.  
   
         ![CreateRunAsAccountWizardDistributionSecurity](./media/configure-scom-to-monitor-analytics-platform-system/CreateRunAsAccountWizardDistributionSecurity.png "CreateRunAsAccountWizardDistributionSecurity")  
   
-        1.  Se você decidir usar o **mais seguro** opção, você precisa especificar manualmente os computadores para os quais credenciais serão distribuídas. Para fazer isso, depois de criar a conta executar como, clique com botão direito nele e selecione **propriedades**.  
+        1.  Se você decidir usar a opção **mais segura** , será necessário especificar manualmente os computadores nos quais as credenciais serão distribuídas. Para fazer isso, depois de criar a conta Executar como, clique nela com o botão direito do mouse e selecione **Propriedades**.  
   
-        2.  Navegue até a **distribuição** guia e **Add** desejado de computadores.  
+        2.  Navegue até a guia **distribuição** e **adicione** os computadores desejados.  
   
             ![RunAsAccountProperties](./media/configure-scom-to-monitor-analytics-platform-system/RunAsAccountProperties.png "RunAsAccountProperties")  
   
-2.  Defina a **conta da Microsoft APS observador** perfil para usar **APS observador** conta executar como.  
+2.  Defina o perfil da **conta do Inspetor de APS da Microsoft** para usar a conta Executar como do Inspetor de **APS** .  
   
-    1.  Navegue até **Administration** -> **executar como configuração** -> **perfis**.  
+    1.  Navegue até **Administração** -> **Executar como perfis de configuração** -> ****.  
   
         ![AdministrationRunAsConfigurationProfiles](./media/configure-scom-to-monitor-analytics-platform-system/AdministrationRunAsConfigurationProfiles.png "AdministrationRunAsConfigurationProfiles")  
   
-    2.  Clique com botão direito **conta da Microsoft APS observador** na lista e selecione **propriedades**.  
+    2.  Clique com o botão direito do mouse em **conta do Inspetor de APS da Microsoft** na lista e selecione **Propriedades**.  
   
         ![MicrosoftApsWatcherAccountProperties](./media/configure-scom-to-monitor-analytics-platform-system/MicrosoftApsWatcherAccountProperties.png "MicrosoftApsWatcherAccountProperties")  
   
-    3.  O **Assistente executar como perfil** caixa de diálogo será aberta. Ignorar a **Introduction** página clicando **próxima**.  
+    3.  A caixa de diálogo **Assistente de perfil executar como** será aberta. Ignore a página **introdução** clicando em **Avançar**.  
   
-    4.  Sobre o **propriedades gerais** , clique em **próxima**.  
+    4.  Na página **Propriedades gerais** , clique em **Avançar**.  
   
-    5.  Sobre o **contas executar como** , clique no **adicionar...**  botão e selecione criado anteriormente **APS observador** conta executar como.  
+    5.  Na página **contas Executar como** , clique no botão **Adicionar...** e selecione a conta Executar como do **Inspetor de APS** criada anteriormente.  
   
         ![RunAsProfileWizardAdd](./media/configure-scom-to-monitor-analytics-platform-system/RunAsProfileWizardAdd.png "RunAsProfileWizardAdd")  
   
     6.  Clique em **salvar** para concluir a atribuição de perfil.  
   
-3.  Aguarde até que a descoberta de dispositivos de APS estiver concluída.  
+3.  Aguarde até que a descoberta de dispositivos APS seja concluída.  
   
-    1.  Navegue até a **monitoramento** painel e abrir o **SQL Server Appliance** -> **Microsoft Analytics Platform System**  ->   **Dispositivos** exibição de estado.  
+    1.  Navegue até o painel **monitoramento** e abra a exibição de estado**Microsoft Analytics Platform System** -> **appliances** do **dispositivo** -> de SQL Server.  
   
         ![SqlServerApplianceMicrosoftApsAppliances](./media/configure-scom-to-monitor-analytics-platform-system/SqlServerApplianceMicrosoftApsAppliances.png "SqlServerApplianceMicrosoftApsAppliances")  
   
-    2.  Aguarde até que o dispositivo aparece na lista. O nome do dispositivo deve ser igual àquele especificado no registro. Após a descoberta estiver concluída, você deve ver todos os dispositivos listados, mas não monitorado. Para habilitar o monitoramento, siga as próximas etapas.  
+    2.  Aguarde até que o dispositivo seja exibido na lista. O nome do dispositivo deve ser igual a um especificado no registro. Após a conclusão da descoberta, você deverá ver todos os dispositivos listados, mas não monitorados. Para habilitar o monitoramento, siga as próximas etapas.  
   
     > [!NOTE]  
-    > As próximas etapas podem ser concluídas em paralelo, enquanto aguardam a descoberta inicial do dispositivo concluir.  
+    > As próximas etapas podem ser concluídas em paralelo enquanto você aguarda a conclusão da descoberta inicial do dispositivo.  
   
-4.  Crie outra nova conta executar como para consultar APS para recuperação de dados de integridade.  
+4.  Crie outra nova conta Executar como para consultar os APS para a recuperação de dados de integridade.  
   
-    1.  Começar a criar uma nova conta executar como, conforme descrito na etapa 1.  
+    1.  Comece a criar uma nova conta Executar como, conforme descrito na etapa 1.  
   
-    2.  Sobre o **propriedades gerais** página, selecione **autenticação básica** tipo de conta.  
+    2.  Na página **Propriedades gerais** , selecione tipo de conta de **autenticação básica** .  
   
         ![CreateRunAsAccountWizardGeneralProperties2](./media/configure-scom-to-monitor-analytics-platform-system/CreateRunAsAccountWizardGeneralProperties2.png "CreateRunAsAccountWizardGeneralProperties2")  
   
-    3.  Sobre o **credenciais** página, forneça credenciais válidas para acessar o estado de integridade APS DMVs.  
+    3.  Na página **credenciais** , forneça credenciais válidas para acessar DMVs do estado de integridade APS.  
   
         ![CreateRunAsAccountWizardCredentials2](./media/configure-scom-to-monitor-analytics-platform-system/CreateRunAsAccountWizardCredentials2.png "CreateRunAsAccountWizardCredentials2")  
   
-5.  Configurar o **conta de ação do Microsoft APS** perfil para usar a conta executar como criada recentemente para a instância APS.  
+5.  Configure o perfil de **conta de ação do Microsoft APS** para usar a conta Executar como recém-criada para a instância APS.  
   
-    1.  Navegue até a **conta de ação do Microsoft APS** propriedades conforme descrito na etapa 2.  
+    1.  Navegue até as propriedades da **conta de ação do Microsoft APS** conforme descrito na etapa 2.  
   
-    2.  Sobre o **contas executar como** , clique em **adicionar...**  e 
-    3.  Selecione a conta executar como criada recentemente.  
+    2.  Na página **contas Executar como** , clique em **Adicionar...** e 
+    3.  Selecione a conta Executar como recém-criada.  
   
         ![RunAsProfileWizardAdd2](./media/configure-scom-to-monitor-analytics-platform-system/RunAsProfileWizardAdd2.png "RunAsProfileWizardAdd2")  
   
 ## <a name="next-step"></a>Próxima etapa  
-Agora que você configurou os pacotes de gerenciamento, você está pronto para começar a monitorar o dispositivo. Para obter mais informações, consulte [monitorar o dispositivo por usando o System Center Operations Manager &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md).  
+Agora que você configurou os pacotes de gerenciamento, está pronto para começar a monitorar o dispositivo. Para obter mais informações, consulte [monitorar o dispositivo usando System Center Operations Manager &#40;&#41;do sistema de plataforma de análise ](monitor-the-appliance-by-using-system-center-operations-manager.md).  
   
 <!-- MISSING LINKS ## See Also  
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  

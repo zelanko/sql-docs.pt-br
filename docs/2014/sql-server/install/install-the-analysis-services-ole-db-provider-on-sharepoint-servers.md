@@ -10,12 +10,12 @@ ms.assetid: 2c62daf9-1f2d-4508-a497-af62360ee859
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: a8068ae9f1e52b235ebec52bf8499ba8d2d3777e
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
-ms.translationtype: HT
+ms.openlocfilehash: f8dcec71f8b9c90df9f30aa5bfb972fef28fbcd7
+ms.sourcegitcommit: 381595e990f2294dbf324ef31071e2dd2318b8dd
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71952530"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74200443"
 ---
 # <a name="install-the-analysis-services-ole-db-provider-on-sharepoint-servers"></a>Instalar o provedor OLE DB do Analysis Services em SharePoint Servers
   O Provedor OLE DB da Microsoft para Analysis Services (MSOLAP) é uma interface que os aplicativos cliente usam para interagir com dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Em um ambiente do SharePoint que inclui o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], o provedor administra solicitações de conexões para dados [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].  
@@ -49,9 +49,9 @@ ms.locfileid: "71952530"
 ##  <a name="bkmk_why"></a>Por que você precisa instalar o provedor de OLE DB  
  Há dois cenários que requerem a instalação manual do provedor OLE DB em servidores no farm.  
   
- **O cenário mais comum** é quando você tem versões mais antigas e mais recentes de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pastas de trabalho salvas em bibliotecas de documentos no farm. Se os analistas na sua organização estiverem usando a versão [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para Excel e salvarem essas pastas de trabalho em uma instalação [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], a pasta de trabalho mais antiga não funcionará. Sua cadeia de conexão fará referência a uma versão mais antiga do provedor, que não estará no servidor, a menos que você a instale. A instalação de ambas as versões habilitará o acesso a dados para pastas de trabalho PowerPivot criadas em versões mais antigas e mais novas do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para Excel. A Instalação do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] não instala a versão [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] do provedor, portanto, você deverá instalá-la manualmente se estiver usando pastas de trabalho de uma versão anterior.  
+ **O cenário mais comum** é quando você tem versões mais antigas e mais [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] recentes de pastas de trabalho que são salvas em bibliotecas de documentos no farm. Se os analistas na sua organização estiverem usando a versão [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para Excel e salvarem essas pastas de trabalho em uma instalação [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], a pasta de trabalho mais antiga não funcionará. Sua cadeia de conexão fará referência a uma versão mais antiga do provedor, que não estará no servidor, a menos que você a instale. A instalação de ambas as versões habilitará o acesso a dados para pastas de trabalho PowerPivot criadas em versões mais antigas e mais novas do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para Excel. A Instalação do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] não instala a versão [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] do provedor, portanto, você deverá instalá-la manualmente se estiver usando pastas de trabalho de uma versão anterior.  
   
- **O segundo cenário** é quando você tem um servidor em um farm do SharePoint que executa os serviços do Excel, mas não [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. Nesse caso, o servidor de aplicativo que executa os Serviços do Excel deve ser atualizado manualmente para usar uma versão mais nova do provedor. Isso é necessário para conectar-se a uma instância do PowerPivot para SharePoint. Se os Serviços do Excel estiverem usando uma versão anterior do provedor, a solicitação de conexão falhará. Observe que o provedor deve ser instalado com a instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou o pacote de instalação do [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] (spPowerPivot.msi) para se certificar de que todos os componentes que exigirem o suporte a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] serão instalados.  
+ **O segundo cenário** é quando você tem um servidor em um farm do SharePoint que executa os serviços do Excel [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], mas não o. Nesse caso, o servidor de aplicativo que executa os Serviços do Excel deve ser atualizado manualmente para usar uma versão mais nova do provedor. Isso é necessário para conectar-se a uma instância do PowerPivot para SharePoint. Se os Serviços do Excel estiverem usando uma versão anterior do provedor, a solicitação de conexão falhará. Observe que o provedor deve ser instalado com a instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou o pacote de instalação do [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] (spPowerPivot.msi) para se certificar de que todos os componentes que exigirem o suporte a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] serão instalados.  
   
   
 ##  <a name="bkmk_sql11"></a>Instalar o provedor de OLE DB SQL Server 2012 em um servidor de serviços do Excel usando a instalação do SQL Server  
@@ -101,13 +101,13 @@ ms.locfileid: "71952530"
   
 3.  Clique em **Detalhes**.  
   
-4.  Exiba as informações de versão do arquivo. A versão deve incluir 11, 0.\<BuildNumber >.  
+4.  Exiba as informações de versão do arquivo. A versão deve incluir 11, 0. \<BuildNumber>.  
   
 5.  Na pasta Windows\assembly, verifique se Microsoft.AnalysisServices.Xmla.dll, versão 11.0.0.0 está listado.  
   
   
 ##  <a name="bkmk_install2012_from_sppowerpivot_msi"></a>Usar o pacote de instalação do PowerPivot para SharePoint (Compact. msi) para instalar o provedor de OLE DB do SQL Server 2012  
- Instale o provedor de OLE DB de [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] no e no servidor de serviços do Excel usando o pacote de instalação do [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] **(Compact. msi)** .  
+ Instale o [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] provedor de OLE DB no e no servidor de serviços do [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] Excel usando o pacote de instalação **(do PowerPivot. msi)**.  
   
 #### <a name="download-the-msolap5-provider-from-the-includesssql11sp1includessssql11sp1-mdmd-feature-pack"></a>Baixe o provedor MSOLAP.5 do [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] Feature Pack.  
   
@@ -117,9 +117,9 @@ ms.locfileid: "71952530"
   
 3.  Consulte a seção "Provedor Microsoft Analysis Services OLE DB para Microsoft SQL Server 2012 SP1". Baixe o arquivo e inicie a instalação.  
   
-4.  Na página **seleção de recursos** , selecione **provedor Analysis Services OLE DB para SQL Server**. Desmarque os outros componentes e conclua a instalação. Para obter mais informações sobre o prepowerpivot. msi, consulte [instalar ou desinstalar o suplemento PowerPivot para SharePoint &#40;do SharePoint&#41;2013](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013).  
+4.  Na página **seleção de recursos** , selecione **provedor Analysis Services OLE DB para SQL Server**. Desmarque os outros componentes e conclua a instalação. Para obter mais informações sobre o prepowerpivot. msi, consulte [instalar ou desinstalar o suplemento PowerPivot para SharePoint &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013).  
   
-5.  Registre o MSOLAP.5 como um provedor confiável em Serviços do Excel do SharePoint. Para obter mais informações, consulte [Adicionar MSOLAP.5 como um provedor de dados confiável em Serviços do Excel](https://technet.microsoft.com/library/hh758436.aspx).  
+5.  Registre o MSOLAP.5 como um provedor confiável em Serviços do Excel do SharePoint. Para obter mais informações, consulte [Add MSOLAP.5 as a Trusted Data Provider in Excel Services](https://technet.microsoft.com/library/hh758436.aspx).  
   
   
 ##  <a name="bkmk_kj"></a>Instalar o provedor de OLE DB SQL Server 2008 R2 para hospedar pastas de trabalho da versão anterior  
@@ -127,7 +127,7 @@ ms.locfileid: "71952530"
   
 #### <a name="step-1-download-and-install-the-client-library"></a>Etapa 1: baixar e instalar a biblioteca de cliente  
   
-1.  Na [página SQL Server 2008 R2 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=159570), encontre provedor Microsoft Analysis Services OLE DB para Microsoft SQL Server 2008 R2.  
+1.  Na [página SQL Server 2008 R2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=16978), encontre provedor Microsoft Analysis Services OLE DB para Microsoft SQL Server 2008 R2.  
   
 2.  Baixe o Pacote x64 do programa de instalação `SQLServer2008_ASOLEDB10.msi`. Embora o nome do arquivo contenha SQLServer2008, é o arquivo correto para a versão do SQL Server 2008 R2 do provedor.  
   
@@ -137,13 +137,13 @@ ms.locfileid: "71952530"
   
 #### <a name="step-2-register-the-microsoftanalysisserviceschanneltransportdll-file"></a>Etapa 2: registrar o arquivo Microsoft.AnalysisServices.ChannelTransport.dll  
   
-1.  Use o utilitário regasm.exe para registrar o arquivo. Se você não tiver executado o regasm. exe antes, adicione sua pasta pai, C:\Windows\Microsoft.NET\Framework64\v4.0.30319\\, à variável de caminho do sistema.  
+1.  Use o utilitário regasm.exe para registrar o arquivo. Se você não tiver executado o regasm. exe antes, adicione sua pasta pai,\\C:\Windows\Microsoft.NET\Framework64\v4.0.30319, à variável de caminho do sistema.  
   
 2.  Abra um prompt de comando com permissões de administrador.  
   
 3.  Vá para esta pasta C: \Windows\assembly\GAC_MSIL\Microsoft.AnalysisServices.ChannelTransport\10.0.0.0__89845dcd8080cc91  
   
-4.  Insira o seguinte comando: `regasm microsoft.analysisservices.channeltransport.dll`  
+4.  Digite o seguinte comando: `regasm microsoft.analysisservices.channeltransport.dll`  
   
 5.  Repita as etapas anteriores para qualquer computador no qual você instalou a versão 2008 R2 do provedor manualmente.  
   
@@ -153,12 +153,12 @@ ms.locfileid: "71952530"
   
 2.  Além disso você pode verificar a versão de arquivo.  
   
-     Ir para `C:\Program files\Microsoft Analysis Services\AS OLEDB\10`. Clique com o botão direito do mouse em **msolap100. dll** e selecione **Propriedades**. Clique em **Detalhes**.  
+     Vá para `C:\Program files\Microsoft Analysis Services\AS OLEDB\10`. Clique com o botão direito do mouse em **msolap100. dll** e selecione **Propriedades**. Clique em **Detalhes**.  
   
-     Exiba as informações de versão do arquivo. A versão deve incluir 10,50.\<BuildNumber >.  
+     Exiba as informações de versão do arquivo. A versão deve incluir 10,50. \<BuildNumber>.  
   
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Instalação do PowerPivot para SharePoint 2010](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
   
   

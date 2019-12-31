@@ -1,6 +1,6 @@
 ---
-title: Usar um encaminhador DNS no Analytics Platform System | Microsoft Docs"
-description: Use um encaminhador DNS para resolver nomes DNS não seja de dispositivo no Analytics Platform System.
+title: Usar um encaminhador DNS
+description: Use um encaminhador DNS para resolver nomes DNS que não são de dispositivo no Analytics Platform System.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,40 +8,41 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 841d2da521bada840c1298d3fb9cea28c2835b4a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 3d1d0d9428138da615fad7ff5745c758d9fcd3b8
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67959823"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74399430"
 ---
-# <a name="use-a-dns-forwarder-to-resolve-non-appliance-dns-names-in-analytics-platform-system"></a>Usar um encaminhador DNS para resolver nomes DNS não seja de dispositivo no Analytics Platform System
-Um encaminhador DNS pode ser configurado em nós do Active Directory Domain Services ( **_appliance\_domínio_-AD01** e  **_appliance\_ domínio_-AD02**) de seu dispositivo do Analytics Platform System para permitir que scripts e aplicativos de software para acessar servidores externos.  
+# <a name="use-a-dns-forwarder-to-resolve-non-appliance-dns-names-in-analytics-platform-system"></a>Usar um encaminhador DNS para resolver nomes DNS que não são de dispositivo no Analytics Platform System
+Um encaminhador de DNS pode ser configurado nos nós de Active Directory Domain Services (**_domínio de dispositivo\__– AD01** e domínio de ** _dispositivo\__-AD02**) do seu dispositivo de sistema de plataforma de análise para permitir que scripts e aplicativos de software acessem servidores externos.  
   
-## <a name="ResolveDNS"></a>Usando um encaminhador do DNS  
-O dispositivo do Analytics Platform System está configurado para evitar a resolução de nomes DNS dos servidores que não estão no dispositivo. Alguns processos, como o Software Update Services (WSUS) de Windows, serão necessário acessar servidores fora do dispositivo. Para dar suporte a esse cenário de uso, o sistema de plataforma de análise de DNS pode ser configurado para dar suporte a um encaminhador de nome externo que permitirá que os hosts do Analytics Platform System e máquinas virtuais (VMs) para usar servidores DNS externos para resolver nomes fora do dispositivo. Configuração personalizada de sufixos DNS não for compatível, o que significa que você deve usar nomes de domínio totalmente qualificado para resolver um nome de servidor não seja de dispositivo.  
+## <a name="ResolveDNS"></a>Usando um encaminhador DNS  
+O dispositivo Analytics Platform System está configurado para impedir a resolução de nomes DNS de servidores que não estão no dispositivo. Alguns processos, como o WSUS (Windows Software Update Services), precisarão acessar os servidores fora do dispositivo. Para dar suporte a esse cenário de uso, o DNS do sistema da plataforma de análise pode ser configurado para dar suporte a um encaminhador de nome externo que permitirá que os hosts do sistema da plataforma de análise e VMs (máquinas virtuais) usem servidores DNS externos para resolver nomes fora do dispositivo. Não há suporte para a configuração personalizada de sufixos DNS, o que significa que você deve usar nomes de domínio totalmente qualificados para resolver um nome de servidor que não seja de dispositivo.  
   
 **Para criar um encaminhador DNS com a GUI do DNS**  
   
-1.  Faça logon na  **_appliance\_domínio_-AD01** nó.  
+1.  Faça logon no nó ** _domínio\_do dispositivo_– AD01** .  
   
-2.  Abra o Gerenciador de DNS (**Dnsmgmt. msc**).  
+2.  Abra o Gerenciador DNS (**DNSMGMT. msc**).  
   
-3.  Clique no nome do servidor e, em seguida, clique em **propriedades**.  
+3.  Clique com o botão direito do mouse no nome do servidor e clique em **Propriedades**.  
   
-4.  Na **Advanced** guia, desmarque as **desabilitar a recursão (também desabilita encaminhadores)** opção e, em seguida, clique em **aplicar**.)  
+4.  Na guia **avançado** , desmarque a opção **desabilitar recursão (também desabilita encaminhadores)** e clique em **aplicar**.)  
   
-5.  Clique o **encaminhadores** guia e, em seguida, clique em **editar**.  
+5.  Clique na guia **encaminhadores** e clique em **Editar**.  
   
-6.  Insira o endereço IP para o servidor DNS externo que fornecerá a resolução de nome. As VMs e servidores (hosts) no dispositivo se conectará a servidores externos por meio de nomes de domínio totalmente qualificado.  
+6.  Insira o endereço IP para o servidor DNS externo que fornecerá a resolução de nomes. As VMs e os servidores (hosts) no dispositivo serão conectados a servidores externos usando nomes de domínio totalmente qualificados.  
   
-7.  Repita as etapas de 1 a 6 na  **_appliance\_domínio_-AD02** nó  
+7.  Repita as etapas de 1-6 no ** _domínio do dispositivo\__– nó AD02**  
   
 **Para criar um encaminhador DNS usando o Windows PowerShell**  
   
-1.  Faça logon na  **_appliance\_domínio_-AD01**nó.  
+1.  Faça logon no nó ** _domínio\_do dispositivo_– AD01**.  
   
-2.  Execute o seguinte script do Windows PowerShell do  **_appliance\_domínio_-AD01** nó. Antes de executar o script do Windows PowerShell, substitua os endereços IP com os endereços IP dos servidores DNS não seja de dispositivo.  
+2.  Execute o seguinte script do Windows PowerShell no nó ** _domínio do dispositivo\__– AD01** . Antes de executar o script do Windows PowerShell, substitua os endereços IP pelos endereços IP dos servidores DNS que não são do dispositivo.  
   
     ```  
     $DNS=Get-WmiObject -class "MicrosoftDNS_Server"  -Namespace "root\microsoftdns"  
@@ -49,25 +50,25 @@ O dispositivo do Analytics Platform System está configurado para evitar a resol
     $DNS.put()  
     ```  
   
-3.  Executar o mesmo comando sobre o  **_appliance\_domínio_-AD02** nó.  
+3.  Execute o mesmo comando no nó do ** _dispositivo\_domínio_-AD02** .  
   
-## <a name="configuring-dns-resolution-for-wsus"></a>Configurar a resolução de DNS para o WSUS  
-PDW do SQL Server 2012 fornece a funcionalidade de aplicação de patch e manutenção integrado. SQL Server PDW usa o Microsoft Update e outra tecnologias de manutenção da Microsoft. Para habilitar atualizações para que o dispositivo deve ser capaz de se conectar a um repositório corporativo do WSUS ou para o repositório WSUS público do Microsoft.  
+## <a name="configuring-dns-resolution-for-wsus"></a>Configurando a resolução de DNS para o WSUS  
+O SQL Server PDW 2012 fornece manutenção integrada e funcionalidade de aplicação de patches. O SQL Server PDW usa Microsoft Update e outras tecnologias de serviço da Microsoft. Para habilitar atualizações, o dispositivo deve ser capaz de se conectar a um repositório WSUS corporativo ou ao repositório do WSUS público da Microsoft.  
   
-Para clientes que optar por configurar o dispositivo para procurar por atualizações sobre o repositório WSUS pública da Microsoft, as instruções a seguir definem os detalhes de configuração adequada no dispositivo.  
+Para clientes que optam por configurar o dispositivo para procurar atualizações no repositório do WSUS público da Microsoft, as instruções a seguir definem os detalhes de configuração apropriados no dispositivo.  
   
 > [!NOTE]  
 > O administrador de rede do cliente deve fornecer o endereço IP para um servidor DNS corporativo que pode resolver nomes em **Microsoft.com**.  
   
-1.  Usando a área de trabalho remota, faça logon em VM do VMM (<fabric domain>- VMM) usando a conta de administrador de domínio de malha.  
+1.  Usando a área de trabalho remota, faça logon na<fabric domain>VM do VMM (-VMM) usando a conta de administrador de domínio da malha.  
   
-2.  Abra o painel de controle, clique em **rede e Internet**e, em seguida, clique em **Central de rede e compartilhamento**.  
+2.  Abra o painel de controle, clique em **rede e Internet**e, em seguida, clique em **central de rede e compartilhamento**.  
   
-3.  Na lista de conexão, clique em **VMSEthernet**e, em seguida, clique em **propriedades**.  
+3.  Na lista conexão, clique em **VMSEthernet**e em **Propriedades**.  
   
-4.  Selecione **Internet Protocol versão 4 (TCP/IPv4)** e, em seguida, clique em **propriedades**.  
+4.  Selecione **Internet Protocol Version 4 (TCP/IPv4)** e, em seguida, clique em **Propriedades**.  
   
-5.  No **servidor DNS alternativo** caixa, adicione o endereço IP fornecido pelo administrador de rede do cliente.  
+5.  Na caixa **servidor DNS alternativo** , adicione o endereço IP fornecido pelo administrador de rede do cliente.  
   
 <!-- MISSING LINKS ## See Also  
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  

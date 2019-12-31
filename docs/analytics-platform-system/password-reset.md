@@ -1,6 +1,6 @@
 ---
-title: Redefinição de senha - Analytics Platform System | Microsoft Docs
-description: A página de redefinição de senha permite que você altere a senha para as contas de administrador usada pelo sistema de plataforma de análise.
+title: Redefinição de senha
+description: A página de redefinição de senha permite que você altere a senha das contas de administrador usadas pelo sistema de plataforma de análise.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,52 +8,53 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 5fb3bbb5adba5754c220c34503a22656f6da39c5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 952dbda04b4f7132406e3a6de4479afea1be92e7
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960469"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74400902"
 ---
-# <a name="password-reset---analytics-platform-system"></a>Redefinição de senha - Analytics Platform System
-O **redefinição de senha** página permite que você altere a senha para as contas de administrador usada pelo sistema de plataforma de análise.  
+# <a name="password-reset---analytics-platform-system"></a>Redefinição de senha-sistema de plataforma de análise
+A página de **redefinição de senha** permite que você altere a senha das contas de administrador usadas pelo sistema de plataforma de análise.  
   
 > [!WARNING]  
-> Sempre use a **Configuration Manager** para atualizar a senha de administrador de domínio do dispositivo. Outros métodos não poderão ser atualizados para todos os componentes do Analytics Platform System e pode causar problemas de acesso do dispositivo.  
+> Sempre use o **Configuration Manager** para atualizar a senha do administrador de domínio do dispositivo. Outros métodos podem não atualizar todos os componentes do Analytics Platform System e causar problemas de acesso ao dispositivo.  
   
-Você recebe as senhas do Analytics Platform System quando o dispositivo é entregue. Sempre altere as senhas para novos valores quando você assume a responsabilidade para o seu dispositivo. Há três senhas para atualizar. As senhas não precisa ser o mesmo que uns aos outros.  
+Você recebe as senhas do sistema de plataforma de análise quando o dispositivo é entregue. Sempre altere as senhas para novos valores quando você assumir a responsabilidade pelo seu dispositivo. Há três senhas a serem atualizadas. As senhas não precisam ser as mesmas.  
   
-**F <*xxxx*> \administrator.**  
+**F<*xxxx*> \Administrador**  
 O **administrador** do domínio do dispositivo.  
   
 **.\Administrator**  
-O local **administrador** conta nos computadores que hospedam as máquinas virtuais.  
+A conta de **administrador** local nos computadores que hospedam as máquinas virtuais.  
   
 > [!IMPORTANT]  
-> Para o dispositivo de atualização 1, **Configuration Manager** não zerar alterar a senha das contas de administrador local em todo o PDW VM. Se isso for necessário, entre em contato com o CSS para obter instruções adicionais.  
+> Para a atualização 1 do dispositivo, **Configuration Manager** não altera corretamente a senha das contas de administrador local em todas as VMs do PDW. Se isso for necessário, entre em contato com o CSS para obter instruções adicionais.  
   
-**sa**  
-O **sa** logon no SQL Server. **SA** é um membro do **sysadmin** função de servidor fixa e é um administrador do SQL Server. A senha das **sa** logon também pode ser alterado usando o **ALTER LOGIN** instrução.  
+**administrador**  
+O logon do **SA** no SQL Server. **SA** é um membro da função de servidor fixa **sysadmin** e é um administrador de SQL Server. A senha do logon **SA** também pode ser alterada usando a instrução **ALTER LOGIN** .  
   
 ## <a name="password-requirements"></a>Requisitos de senha  
-As credenciais de administrador de domínio e as credenciais de administrador de sistema seguem as políticas de força de senha para cada tipo de credencial. Ao alterar as credenciais de administrador de domínio, a nova senha é atualizada para o domínio onde for necessário em todo o SQL Server PDW.  
+As credenciais de administrador de domínio e as credenciais de administrador do sistema aderem às políticas de força de senha para cada tipo de credencial. Ao alterar as credenciais de administrador de domínio, a nova senha é atualizada para o domínio onde necessário durante SQL Server PDW.  
   
 > [!IMPORTANT]  
-> SQL Server PDW não suporta o caractere de cifrão ( **$** ) no administrador de domínio ou senhas de administrador local. Os caracteres **^ % &** são permitidos em senhas, no entanto, PowerShell considera como caracteres especiais. Se qualquer um desses caracteres são usados em senhas para o administrador do sistema ou do SQL Server**sa** contas (o **AdminPassword** e **PdwSAPassword** parâmetros durante a a instalação), em seguida, a instalação, incluindo instalação, atualização, REPLACENODE e a aplicação de patch, falhará. Para garantir uma atualização bem-sucedida quando senhas atuais contêm caracteres sem suporte, altere essas senhas para que eles não contêm esses caracteres antes de executar a atualização. Após a conclusão da atualização, você pode definir essas senhas de volta para seus valores originais. Para obter mais informações sobre os requisitos de senha, consulte [ALTER LOGIN](../t-sql/statements/alter-login-transact-sql.md).  
+> SQL Server PDW não dá suporte ao caractere de cifrão (**$**) nas senhas de administrador de domínio ou de administrador local. Os caracteres **^% &** são permitidos em senhas, no entanto, o PowerShell considera como caracteres especiais. Se qualquer um desses caracteres for usado em senhas para o administrador do sistema ou SQL Server contas**SA** (os parâmetros **AdminPassword** e **PdwSAPassword** durante a instalação), a instalação, incluindo instalação, atualização, REPLACENODE e aplicação de patches, falhará. Para garantir uma atualização bem-sucedida quando as senhas atuais contiverem caracteres sem suporte, altere essas senhas para que elas não contenham esses caracteres antes de executar a atualização. Após a conclusão da atualização, você pode definir essas senhas de volta para seus valores originais. Para obter mais informações sobre os requisitos de senha, consulte [ALTER LOGIN](../t-sql/statements/alter-login-transact-sql.md).  
   
 ## <a name="to-reset-a-password"></a>Para redefinir uma senha  
   
-1.  Conectar-se no nó de controle e inicie o **Configuration Manager** (**dwconfig.exe**). Para obter mais informações, consulte [iniciar o Configuration Manager &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md).  
+1.  Conecte-se ao nó de controle e inicie o **Configuration Manager** (**dwconfig. exe**). Para obter mais informações, consulte [iniciar o Configuration Manager &#40;&#41;do sistema de plataforma de análise ](launch-the-configuration-manager.md).  
   
-2.  No painel esquerdo do **Configuration Manager**, clique em **de redefinição de senha**.  
+2.  No painel esquerdo da **Configuration Manager**, clique em **redefinição de senha**.  
   
-3.  Selecione o tipo de administrador do **conta** menu suspenso e, em seguida, insira a nova senha na **senha** e **Confirmar senha** caixas. Clique em **aplicar** para salvar suas alterações.  
+3.  Selecione o tipo de administrador no menu suspenso **conta** e, em seguida, insira a nova senha nas caixas **senha** e **Confirmar senha** . Clique em **aplicar** para salvar as alterações.  
   
-    As alterações feitas a essas contas não afetam as sessões ativas no momento, mas serão aplicadas na próxima tentativa de logon para cada usuário.  
+    As alterações feitas nessas contas não afetam as sessões ativas no momento, mas serão aplicadas na próxima tentativa de logon para cada usuário.  
   
-    ![SQL Server DWConfig Password](./media/password-reset/SQL_Server_PDW_DWConfig_TopPW.png "SQL_Server_PDW_DWConfig_TopPW")  
+    ![Senha do SQL Server DWConfig](./media/password-reset/SQL_Server_PDW_DWConfig_TopPW.png "SQL_Server_PDW_DWConfig_TopPW")  
   
-## <a name="see-also"></a>Consulte também  
-[Definir senha de administrador para fazer logon em nós do AD no modo de restauração de serviços de diretório &#40;DSRM&#41; &#40;Analytics Platform System&#41;](set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode.md)  
-[Inicie o Gerenciador de configuração &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md)  
+## <a name="see-also"></a>Consulte Também  
+[Defina a senha de administrador para fazer logon em nós do AD no Modo de Restauração dos Serviços de Diretório &#40;DSRM&#41; &#40;sistema de plataforma de análise&#41;](set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode.md)  
+[Inicie o Configuration Manager &#40;o sistema de plataforma de análise&#41;](launch-the-configuration-manager.md)  
   

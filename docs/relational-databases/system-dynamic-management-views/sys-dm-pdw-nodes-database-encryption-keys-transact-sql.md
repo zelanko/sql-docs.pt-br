@@ -1,6 +1,6 @@
 ---
-title: sys.dm_pdw_nodes_database_encryption_keys (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: sys. dm_pdw_nodes_database_encryption_keys (Transact-SQL)
+ms.custom: seo-dt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.technology: data-warehouse
@@ -12,38 +12,38 @@ ms.assetid: e7fd02b2-5d7e-4816-a0af-b58ae2ac3f7a
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7819be3ffe1f3d3efc5d39c3973d089e3ab7757c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c319259d8997db2ff39d90b408056d03eb008782
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68089138"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401647"
 ---
-# <a name="sysdmpdwnodesdatabaseencryptionkeys-transact-sql"></a>sys.dm_pdw_nodes_database_encryption_keys (Transact-SQL)
+# <a name="sysdm_pdw_nodes_database_encryption_keys-transact-sql"></a>sys. dm_pdw_nodes_database_encryption_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Retorna informações sobre o estado de criptografia de um banco de dados e suas chaves de criptografia de banco de dados associadas. **sys.dm_pdw_nodes_database_encryption_keys** fornece essas informações para cada nó. Para obter mais informações sobre a criptografia de banco de dados, consulte [criptografia transparente de dados (SQL Server PDW)](../../analytics-platform-system/transparent-data-encryption.md).  
+  Retorna informações sobre o estado de criptografia de um banco de dados e suas chaves de criptografia de banco de dados associadas. **Sys. dm_pdw_nodes_database_encryption_keys** fornece essas informações para cada nó. Para obter mais informações sobre criptografia de banco de dados, consulte [Transparent Data Encryption (SQL Server PDW)](../../analytics-platform-system/transparent-data-encryption.md).  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de Dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|database_id|**int**|ID do banco de dados físico em cada nó.|  
-|encryption_state|**int**|Indica se o banco de dados neste nó é criptografado ou não criptografado.<br /><br /> 0 = Nenhuma chave de criptografia de banco de dados presente, nenhuma criptografia<br /><br /> 1 = Sem-criptografia<br /><br /> 2 = Criptografia em andamento<br /><br /> 3 = Criptografado<br /><br /> 4 = Alteração de chave em andamento<br /><br /> 5 = Descriptografia em andamento<br /><br /> 6 = alteração de proteção em andamento (o certificado que está criptografando a chave de criptografia de banco de dados está sendo alterado.)|  
-|create_date|**datetime**|Exibe a data em que a chave de criptografia foi criada.|  
-|regenerate_date|**datetime**|Exibe a data em que a chave de criptografia foi gerada novamente.|  
-|modify_date|**datetime**|Exibe a data em que a chave de criptografia foi modificada.|  
-|set_date|**datetime**|Exibe a data em que a chave de criptografia foi aplicada ao banco de dados.|  
-|opened_date|**datetime**|Mostra quando a chave de banco de dados foi aberta pela última vez.|  
-|key_algorithm|**varchar(?)**|Exibe o algoritmo que é usado para a chave.|  
-|key_length|**int**|Exibe o comprimento da chave.|  
+|database_id|**inteiro**|ID do banco de dados físico em cada nó.|  
+|encryption_state|**inteiro**|Indica se o banco de dados neste nó está criptografado ou não está criptografado.<br /><br /> 0 = Nenhuma chave de criptografia de banco de dados presente, nenhuma criptografia<br /><br /> 1 = Sem-criptografia<br /><br /> 2 = Criptografia em andamento<br /><br /> 3 = Criptografado<br /><br /> 4 = Alteração de chave em andamento<br /><br /> 5 = Descriptografia em andamento<br /><br /> 6 = alteração de proteção em andamento (o certificado que está criptografando a chave de criptografia de banco de dados está sendo alterado).|  
+|create_date|**horário**|Exibe a data em que a chave de criptografia foi criada.|  
+|regenerate_date|**horário**|Exibe a data em que a chave de criptografia foi gerada novamente.|  
+|modify_date|**horário**|Exibe a data em que a chave de criptografia foi modificada.|  
+|set_date|**horário**|Exibe a data em que a chave de criptografia foi aplicada ao banco de dados.|  
+|opened_date|**horário**|Mostra quando a chave de banco de dados foi aberta pela última vez.|  
+|key_algorithm|**varchar (?)**|Exibe o algoritmo que é usado para a chave.|  
+|key_length|**inteiro**|Exibe o comprimento da chave.|  
 |encryptor_thumbprint|**varbin**|Mostra a impressão digital do criptografador.|  
-|percent_complete|**real**|Porcentagem concluída da alteração de estado da criptografia do banco de dados. Será 0 se não houver nenhuma alteração de estado.|  
-|node_id|**int**|Id numérico exclusivo associado ao nó.|  
+|percent_complete|**foto**|Porcentagem concluída da alteração de estado da criptografia do banco de dados. Será 0 se não houver nenhuma alteração de estado.|  
+|node_id|**inteiro**|ID numérica exclusiva associada ao nó.|  
   
 ## <a name="permissions"></a>Permissões  
  Requer a permissão VIEW SERVER STATE no servidor.  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- O exemplo a seguir une `sys.dm_pdw_nodes_database_encryption_keys` a outras tabelas do sistema para indicar o estado de criptografia para bancos de dados protegidos de cada nó da TDE.  
+ O exemplo a seguir une `sys.dm_pdw_nodes_database_encryption_keys` outras tabelas do sistema para indicar o estado de criptografia para cada nó dos bancos de dados protegidos por TDE.  
   
 ```  
 SELECT D.database_id AS DBIDinMaster, D.name AS UserDatabaseName,   
@@ -59,11 +59,11 @@ JOIN sys.databases AS D
 ORDER BY D.database_id, PD.pdw_node_ID;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [SQL Data Warehouse e Parallel Data Warehouse exibições de gerenciamento dinâmico &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)   
- [CREATE DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-encryption-key-transact-sql.md)   
- [ALTER DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-encryption-key-transact-sql.md)   
- [DROP DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-encryption-key-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Exibições de gerenciamento dinâmico de SQL Data Warehouse e paralelo data warehouse &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)   
+ [CRIAR chave de criptografia de banco de dados &#40;&#41;Transact-SQL](../../t-sql/statements/create-database-encryption-key-transact-sql.md)   
+ [A chave de criptografia ALTER DATABASE &#40;&#41;Transact-SQL](../../t-sql/statements/alter-database-encryption-key-transact-sql.md)   
+ [Descartar chave de criptografia de banco de dados &#40;&#41;Transact-SQL](../../t-sql/statements/drop-database-encryption-key-transact-sql.md)  
   
   
 

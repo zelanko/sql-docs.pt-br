@@ -1,7 +1,7 @@
 ---
 title: Acessibilidade para pessoas com deficiências | Microsoft Docs
 ms.custom: ''
-ms.date: 05/25/2017
+ms.date: 11/25/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.topic: conceptual
@@ -21,12 +21,12 @@ ms.assetid: 0f85627e-e9d0-4b17-896a-218c9f31d339
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3df8c5c308502e3e3e50e79c174f1ed96bbeacf9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a653c4b5cd8d6e1bb9b5c826039169a7a5b80278
+ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62842747"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74683595"
 ---
 # <a name="accessibility-for-people-with-disabilities"></a>Acessibilidade para pessoas com deficiências
   A [!INCLUDE[msCoName](../includes/msconame-md.md)] é uma empresa que tem o compromisso de tornar seus produtos e serviços mais fáceis para o uso de todos. Este tópico fornece informações sobre os seguintes recursos, produtos e serviços que tornam os produtos da família [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows Server mais acessíveis a pessoas com deficiências.  
@@ -38,7 +38,7 @@ ms.locfileid: "62842747"
  Além dos recursos e utilitários de acessibilidade do Windows descritos na próxima seção, o visualizador da Ajuda torna o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mais acessível para pessoas com deficiências.  
   
 ### <a name="the-help-viewer"></a>O Visualizador da Ajuda  
- O Microsoft Help Viewer 1.1 é a ferramenta que você usa para ler a documentação do produto. A ferramenta é equipada com recursos de acessibilidade, inclusive teclas de atalho para navegação e comandos incluídos no [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer. Por exemplo, ele permite alterar as cores do monitor em sua tela de computador. Para obter informações sobre acessibilidade de recursos para o Microsoft help Viewer 1.1 ver [acessibilidade recursos do Microsoft Help Viewer 1.1](https://go.microsoft.com/fwlink/?LinkID=220144).  
+ O Microsoft Help Viewer 1.1 é a ferramenta que você usa para ler a documentação do produto. A ferramenta é equipada com recursos de acessibilidade, inclusive teclas de atalho para navegação e comandos incluídos no [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer. Por exemplo, ele permite alterar as cores do monitor em sua tela de computador. Para obter informações sobre os recursos de acessibilidade do Microsoft Help Viewer 1,1, consulte [recursos de acessibilidade do Microsoft Help Viewer 1,1](https://go.microsoft.com/fwlink/?LinkID=220144).  
   
 ## <a name="accessibility-in-includemsconameincludesmsconame-mdmd-windows"></a>Acessibilidade no [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows  
  Muitos recursos de acessibilidade foram criados na família [!INCLUDE[msCoName](../includes/msconame-md.md)] dos sistemas operacionais Windows. Esses recursos são úteis a indivíduos que têm dificuldade em digitar ou em usar um mouse, são cegos ou possuem deficiência visual, surdos ou com deficiência auditiva. Os recursos podem ser instalados durante instalação.  
@@ -53,7 +53,7 @@ ms.locfileid: "62842747"
 ## <a name="assistive-technology-products-for-windows"></a>Produtos de tecnologia assistencial para Windows  
  Uma variedade de produtos de tecnologia assistencial está disponível para facilitar o uso do computador a pessoas com deficiências.  
   
- [!INCLUDE[msCoName](../includes/msconame-md.md)] Fornece um catálogo de produtos de tecnologia assistencial que são executados em sistemas operacionais Windows a [Microsoft Accessibility Web Site](https://go.microsoft.com/fwlink/?LinkID=67166).  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)]fornece um catálogo pesquisável de produtos de tecnologia assistencial que são executados em sistemas operacionais Windows no [site de acessibilidade da Microsoft](https://go.microsoft.com/fwlink/?LinkID=67166).  
   
  Os seguintes tipos de produtos estão disponíveis:  
   
@@ -76,19 +76,19 @@ ms.locfileid: "62842747"
  A documentação de produto da [!INCLUDE[msCoName](../includes/msconame-md.md)] está disponível em formatos alternativos para ajudar nossos clientes com necessidades de acessibilidade.  
   
 ### <a name="obtaining-documentation-for-includessnoversionincludesssnoversion-mdmd"></a>Obtendo a documentação para o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
- A documentação para o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] está disponível online. Para obter mais informações, consulte [documentação de produto de uso do SQL Server](../2014-toc/books-online-for-sql-server-2014.md).  
+ A documentação para o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] está disponível online. Para obter mais informações, consulte [usar a documentação do produto para SQL Server](../2014-toc/index.yml).  
   
 ## <a name="obtaining-documentation-for-additional-includemsconameincludesmsconame-mdmd-products"></a>Obtendo a documentação para produtos adicionais da [!INCLUDE[msCoName](../includes/msconame-md.md)]  
- Você pode obter documentação acessível para [!INCLUDE[msCoName](../includes/msconame-md.md)] produtos da [Microsoft Accessibility Web Site](https://go.microsoft.com/fwlink/?LinkID=67164).  
+ Você pode obter documentação acessível para [!INCLUDE[msCoName](../includes/msconame-md.md)] produtos do [site de acessibilidade da Microsoft](https://go.microsoft.com/fwlink/?LinkID=67164).  
   
 ### <a name="recording-for-the-blind--dyslexic-inc"></a>Recording for the Blind & Dyslexic, Inc.  
- Você pode obter adicionais [!INCLUDE[msCoName](../includes/msconame-md.md)] publicações de gravação para a Blind & Dyslexic, Inc. Esses documentos são distribuídos para membros registrados e qualificados do serviço de distribuição em audiocassettes ou disquetes. A coleção contém mais de 80 mil títulos, incluindo documentação de produtos da [!INCLUDE[msCoName](../includes/msconame-md.md)] e livros da [!INCLUDE[msCoName](../includes/msconame-md.md)] Press. Para obter informações sobre qualificação e disponibilidade de documentação de produtos da [!INCLUDE[msCoName](../includes/msconame-md.md)] e livros da [!INCLUDE[msCoName](../includes/msconame-md.md)] Press, entre em contato com:  
+ Você pode obter publicações [!INCLUDE[msCoName](../includes/msconame-md.md)] adicionais da Recording for the Blind & Dyslexic, Inc. Esses documentos são distribuídos para membros registrados e qualificados do serviço de distribuição em audiocassettes ou disquetes. A coleção contém mais de 80 mil títulos, incluindo documentação de produtos da [!INCLUDE[msCoName](../includes/msconame-md.md)] e livros da [!INCLUDE[msCoName](../includes/msconame-md.md)] Press. Para obter informações sobre qualificação e disponibilidade de documentação de produtos da [!INCLUDE[msCoName](../includes/msconame-md.md)] e livros da [!INCLUDE[msCoName](../includes/msconame-md.md)] Press, entre em contato com:  
   
  Recording for the Blind & Dyslexic, Inc. 20 Roszel Road Princeton, NJ 08540  
   
  Telefone nos Estados Unidos: (800) 221-4792  
   
- Telefone de fora estados, Estados e Canadá: (609) 452-0606  
+ Telefone de fora dos Estados Unidos e Canadá: (609) 452-0606  
   
  Fax: (609) 987-8116 Web: 
 
@@ -98,7 +98,7 @@ ms.locfileid: "62842747"
  Se você é surdo ou possui deficiência auditiva, acesso completo aos produtos e serviços de atendimento ao consumidor da [!INCLUDE[msCoName](../includes/msconame-md.md)] estão disponíveis através de um serviço TTY/TDD (telefone de texto).  
   
 ### <a name="customer-service"></a>Serviço de atendimento ao consumidor  
- Você pode contatar o [!INCLUDE[msCoName](../includes/msconame-md.md)] Sales Information Center em um telefone de texto por discagem (800) 892-5234 entre 6h30 e 17h30. Hora do Pacífico, de segunda-feira a sexta-feira, exceto feriados.  
+ Você pode entrar em [!INCLUDE[msCoName](../includes/msconame-md.md)] contato com o centro de informações de vendas em um telefone de texto discando (800) 892-5234 entre 6:30 A.M. e 17h30. Hora do Pacífico, de segunda-feira a sexta-feira, exceto feriados.  
   
 ### <a name="technical-help"></a>Suporte técnico  
  Para obter suporte técnico nos Estados Unidos, entre em contato com o [!INCLUDE[msCoName](../includes/msconame-md.md)] Product Support Services em um telefone de texto, no número (800) 892-5234 entre 6h e 18h. Hora do Pacífico, de segunda-feira a sexta-feira, exceto feriados. No Canadá, disque (905) 568-9641 entre 8h e 18h. Hora do Leste dos EUA, de segunda a sexta-feira, exceto feriados. Os serviços de suporte da [!INCLUDE[msCoName](../includes/msconame-md.md)] estão sujeitos a preços, prazos e condições em vigor no momento em que o serviço é usado.  
@@ -110,8 +110,8 @@ ms.locfileid: "62842747"
   
  Um boletim eletrônico mensal gratuito é disponibilizado para ajudá-lo a se manter atualizado sobre os tópicos de acessibilidade dos produtos da [!INCLUDE[msCoName](../includes/msconame-md.md)] . Para assinar, consulte o [Site de Acessibilidade da Microsoft](https://go.microsoft.com/fwlink/?LinkID=8287).  
   
-## <a name="see-also"></a>Consulte também  
- [Introdução a documentação do produto do SQL Server](../2014-toc/books-online-for-sql-server-2014.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Introdução à documentação do produto para SQL Server](../2014-toc/index.yml)   
  [Obtendo assistência do SQL Server](getting-sql-server-assistance.md)  
   
   

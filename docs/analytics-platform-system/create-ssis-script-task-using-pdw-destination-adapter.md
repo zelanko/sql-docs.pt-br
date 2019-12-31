@@ -1,5 +1,5 @@
 ---
-title: Crie uma tarefa de script com o adaptador de destino do PDW SSIS | Microsoft Docs
+title: Criar uma tarefa Script com o adaptador de destino do SSIS PDW
 desciption: This Integration Services (SSIS) package script code is a code example for using the SSIS PDW destination adaptor. The Integration Services Script Task allows you to perform virtually any operation that can be accomplished in a .Net application within the context of an SSIS control flow.
 author: mzaman1
 ms.prod: sql
@@ -8,27 +8,28 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: c8781a84bd3a96364930618db83f6900009540be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 4bc719d44d9a19da5706d20f16fa519352a04a6b
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961065"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401226"
 ---
-# <a name="create-a-script-task-that-uses-ssis-parallel-data-warehouse-destination-adapter"></a>Criar uma tarefa de script que usa o adaptador de destino SSIS Parallel Data Warehouse
-Esse código de script de pacote do SSIS é um exemplo de código para usar o adaptador de destino SSIS PDW.  A tarefa de Script do Integration Services permite que você execute praticamente qualquer operação que pode ser feita em um aplicativo .net dentro do contexto de um fluxo de controle do SSIS. 
+# <a name="create-a-script-task-that-uses-ssis-parallel-data-warehouse-destination-adapter"></a>Criar uma tarefa Script que usa o adaptador de destino de data warehouse paralela do SSIS
+Este código de script do pacote SSIS é um exemplo de código para usar o adaptador de destino do SSIS PDW.  A tarefa script de Integration Services permite que você execute praticamente qualquer operação que possa ser realizada em um aplicativo .net dentro do contexto de um fluxo de controle do SSIS. 
   
-## <a name="sample-code"></a>Código de exemplo  
+## <a name="sample-code"></a>Exemplo de código  
   
-1.  Crie uma tarefa de Script em branco no SSIS.  
+1.  Crie uma tarefa Script em branco no SSIS.  
   
-2.  Abra a tarefa de **Editor da tarefa Script**e clique em **Editar Script**.  
+2.  Abra a tarefa no **Editor da tarefa Script**e clique em **Editar script**.  
   
-3.  Edite o script para usar o código fornecido abaixo. Personalizado o script ao seu ambiente, fazendo as seguintes alterações:  
+3.  Edite o script para usar o código fornecido abaixo. Personalize o script para o seu ambiente fazendo as seguintes alterações:  
   
-    -   Você deve reter o namespace do script criado pela tarefa script. Anote o nome do namespace `namespace ST_<GUID>` e edite o script abaixo, alterando *ST_<GUID>*  original *GUID* da tarefa script.  
+    -   Você deve reter o namespace do script criado pela tarefa Script. Anote o nome do namespace `namespace ST_<GUID>` e edite o script abaixo, alterando *ST_<GUID> * para o *GUID* original da tarefa Script.  
   
-    -   Substitua quatro ocorrências do valor de espaço reservado *XXXXXXXX* com os valores apropriados para sua ação pretendido e ambiente.  
+    -   Substitua quatro ocorrências do valor de espaço reservado *xxxxxxxx* pelos valores apropriados ao seu ambiente e à ação pretendida.  
   
     ```c#  
     #region Help:  Introduction to the script task  
@@ -263,8 +264,8 @@ Esse código de script de pacote do SSIS é um exemplo de código para usar o ad
     }  
     ```  
   
-## <a name="see-also"></a>Consulte também  
-[Carregar dados com o Integration Services](load-with-ssis.md)  
+## <a name="see-also"></a>Consulte Também  
+[Carregar dados com Integration Services](load-with-ssis.md)  
 
 <!-- MISSING LINK
 [Install Integration Services Destination Adapters](install-integration-services-destination-adapters-sql-server-pdw.md)

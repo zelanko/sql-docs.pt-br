@@ -1,7 +1,7 @@
 ---
 title: Requisitos de implementação de item de relatório personalizado | Microsoft Docs
 ms.custom: ''
-ms.date: 06/14/2017
+ms.date: 11/25/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: reporting-services
@@ -12,22 +12,22 @@ ms.assetid: cfacd816-00d6-4a3d-be72-1bba6f7f6886
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ce2ecf5e44b18298823240519c99eccb80d016e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0000e0c7a5933003544de22b60a8adc4d9c59c82
+ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63264821"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74684451"
 ---
 # <a name="custom-report-item-implementation-requirements"></a>Requisitos de implementação de item de relatório personalizado
   Este tópico descreverá os pré-requisitos para desenvolver e implantar itens de relatório personalizados.  
   
 ## <a name="development-and-deployment-requirements"></a>Desenvolvimento e implantação de requisitos  
- O desenvolvimento de um item de relatório personalizado para o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] requer o seguinte:  
+ O desenvolvimento de um item de relatório personalizado para o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] exige o seguinte:  
   
--   Acesso administrativo a um servidor que executa o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+-   Acesso administrativo a um servidor que [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executa [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]com o e o.  
   
--   [!INCLUDE[vsprvsext](../../includes/vsprvsext-md.md)] ou superior com o SDK (Software Development Kit) do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] instalado.  
+-   [!INCLUDE[vsprvsext](../../includes/vsprvsext-md.md)]ou superior com o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Software Development Kit (SDK) instalado.  
   
 -   Acesso à documentação do SDK do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
   
@@ -43,12 +43,12 @@ ms.locfileid: "63264821"
 -   Os componentes de tempo de design do item de relatório personalizado precisa implementar interfaces do namespace do <xref:System.ComponentModel> no [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. O <xref:System.ComponentModel> é documentado na documentação do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]SDK.  
   
 > [!IMPORTANT]  
->  Por padrão, o [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] é instalado com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mas não com o SDK de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . A menos que o SDK esteja instalado no computador e a documentação do SDK esteja incluída na coleção de manuais online, os links para o conteúdo do SDK desta seção não funcionarão. Depois de instalar o SDK do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], você pode adicionar a documentação do SDK à coleção de Manuais Online e ao sumário seguindo as instruções fornecidas em [Adicionar ou remover a documentação do produto do SQL Server](../../2014-toc/books-online-for-sql-server-2014.md).  
+>  Por padrão, o [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] é instalado com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mas não com o SDK de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . A menos que o SDK esteja instalado no computador e a documentação do SDK esteja incluída na coleção de manuais online, os links para o conteúdo do SDK desta seção não funcionarão. Depois de instalar o SDK do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], você pode adicionar a documentação do SDK à coleção de Manuais Online e ao sumário seguindo as instruções fornecidas em [Adicionar ou remover a documentação do produto do SQL Server](../../2014-toc/index.yml).  
   
-## <a name="see-also"></a>Consulte também  
- [Criando um componente de item de relatório personalizado em tempo de execução](creating-a-custom-report-item-run-time-component.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Criando um componente de tempo de execução de item de relatório personalizado](creating-a-custom-report-item-run-time-component.md)   
  [Criando um componente de item de relatório personalizado em tempo de design](creating-a-custom-report-item-design-time-component.md)   
- [Como: Implantar um Item de relatório personalizado](how-to-deploy-a-custom-report-item.md)   
- [Bibliotecas de classes de itens de relatório personalizados](custom-report-item-class-libraries.md)  
+ [Como: implantar um item de relatório personalizado](how-to-deploy-a-custom-report-item.md)   
+ [Bibliotecas de classe de item de relatório personalizado](custom-report-item-class-libraries.md)  
   
   

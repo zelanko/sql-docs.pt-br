@@ -1,5 +1,5 @@
 ---
-title: Documentação do Sistema de Plataforma de Análise | Microsoft Docs
+title: Documentação
 description: O Microsoft APS (Analytics Platform System), uma plataforma de dados projetada para data warehouse e análise de Big Data, oferece integração de dados profunda, processamento de consulta de ala velocidade, armazenamento altamente escalonável e manutenção simples para sua solução de business intelligence de ponta a ponta.
 author: mzaman1
 ms.prod: sql
@@ -8,18 +8,19 @@ ms.topic: conceptual
 ms.date: 04/18/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 08f70ff74c5743f202867ae2a57adc1c6b9d677d
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 4285cbe15659bde63655fc61141d4df7abdbba09
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70153365"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401090"
 ---
 # <a name="microsoft-analytics-platform-system"></a>Microsoft Analytics Platform System
 
 O Microsoft APS (Analytics Platform System), uma plataforma de dados projetada para data warehouse e análise de Big Data, oferece integração de dados profunda, processamento de consulta de ala velocidade, armazenamento altamente escalonável e manutenção simples para sua solução de business intelligence de ponta a ponta.
 
-![Arquitetura de dispositivo](media/architecture-high-level.png "arquitetura de dispositivo")
+![Arquitetura do dispositivo](media/architecture-high-level.png "arquitetura do dispositivo")
 
 O Analytics Platform System hospeda o SQL Server PDW (Parallel Data Warehouse), que é o software que executa o data warehouse de MPP (processamento paralelo em massa).
 

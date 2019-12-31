@@ -1,6 +1,6 @@
 ---
 title: Exemplos do Microsoft SQL | Microsoft Docs
-description: Documentação para bancos de dados de exemplo e links para exemplos de produtos do Microsoft SQL.
+description: Documentação para bancos de dados de exemplo e links para exemplos de produtos Microsoft SQL.
 ms.date: 04/04/2018
 ms.reviewer: ''
 ms.prod: sql
@@ -9,50 +9,47 @@ ms.technology: samples
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 05b611f55d30f177ecc6f44f472430203a739d68
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 457cc9b1aa1055992322fb34ccc95b042f167604
+ms.sourcegitcommit: 9e026cfd9f2300f106af929d88a9b43301f5edc2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68104301"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74318979"
 ---
-# <a name="sql-samples"></a>Exemplos do SQL
+# <a name="sql-samples"></a>Exemplos de SQL
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-Locais de bancos de dados de exemplo e exemplos de código para produtos do Microsoft SQL.
+Locais de bancos de dados de exemplo e exemplos de código para produtos Microsoft SQL.
 
 ## <a name="sql-samples-repository"></a>Repositório de exemplos do SQL
 
-Exemplos de código para produtos do SQL estão na [Microsoft SQL Server Samples](https://github.com/microsoft/sql-server-samples) repositório do GitHub. Cada exemplo inclui um arquivo Leiame que explica como executar e usar o exemplo. O Leiame do principal para o repositório de exemplos explica como Contribuir. 
+Exemplos de código para produtos SQL estão no repositório GitHub de [exemplos de Microsoft SQL Server](https://github.com/microsoft/sql-server-samples) . Cada exemplo inclui um arquivo LEIAme que explica como executar e usar o exemplo. O LEIAme principal do repositório de exemplos explica como contribuir. 
 
-Os exemplos e modelos são licenciados sob a licença MIT. Consulte o arquivo License. txt na raiz.
+Os exemplos e modelos são todos licenciados sob a licença MIT. Consulte o arquivo License. txt na raiz.
 
-Enviar perguntas para email: sqlserversamples@microsoft.com.
+Perguntas de email para sqlserversamples@microsoft.com:.
 
 
 ## <a name="wideworldimporters-sample-database"></a>Banco de dados de exemplo WideWorldImporters
 
-WideWorldImporters (WWI) é um banco de dados de exemplo que demonstra o design de banco de dados usando os recursos atuais, ferramentas e técnicas de design. Downloads de WideWorldImporters incluem um OLTP e um banco de dados OLAP que são criados para ser executado no SQL Server 2016 e posterior. 
+WideWorldImporters (WWI) é um banco de dados de exemplo que demonstra o design do banco de dados usando recursos, ferramentas e técnicas de design atuais. Os downloads do WideWorldImporters incluem um OLTP e um banco de dados OLAP que são criados para execução no SQL Server 2016 e posterior. 
 
-Downloads para o banco de dados e os exemplos estarão na [exemplos do SQL Server](https://github.com/Microsoft/sql-server-samples) repositório do GitHub.
+Os downloads e exemplos do banco de dados estão no repositório GitHub de [exemplos de SQL Server](https://github.com/Microsoft/sql-server-samples) .
 
 
-- [Leiame de WideWorldImporters e exemplos](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers) no GitHub.
+- [WideWorldImporters Leiame e exemplos](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers) no github.
 
-- [Tutorial: Carregar WideWorldImportersDW ao Azure SQL Data Warehouse](/azure/sql-data-warehouse/load-data-wideworldimportersdw)
+- [Tutorial: carregar WideWorldImportersDW no Azure SQL Data Warehouse](/azure/sql-data-warehouse/load-data-wideworldimportersdw)
 
 
 ## <a name="adventureworks-sample-database"></a>banco de dados de exemplo AdventureWorks
 
-Bancos de dados AdventureWorks estão disponíveis na [exemplos do SQL Server](https://github.com/Microsoft/sql-server-samples) repositório do GitHub.  Os locais de download a seguir incluem todas as várias versões do AdventureWorks.
+Os bancos de dados AdventureWorks podem ser encontrados na página de [instalação](adventureworks-install-configure.md) ou diretamente no repositório GitHub de [exemplos de SQL Server](https://github.com/Microsoft/sql-server-samples) . 
 
-- [Downloads do AdventureWorks para SQL Server 2014 e versões posteriores](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks). Inclui arquivos. bak para as versões de 2012.
-- [Downloads do AdventureWorks para SQL Server 2012](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks2012).
-- [Downloads do AdventureWorks para SQL Server 2008 R2](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks2008r2).
 
-## <a name="azure-samples-and-templates"></a>Exemplos do Azure e modelos
-Um número de exemplos de código do Microsoft Azure e estão disponíveis no Github no .NET, Java, Python, Node. js, PHP e Ruby. Além disso, o Azure Resource Manager permite que você provisione seus aplicativos usando um modelo declarativo. Em um único modelo, você pode implantar vários serviços, juntamente com suas dependências. Você pode usar o mesmo modelo para implantar repetidamente seu aplicativo durante cada estágio do ciclo de vida do aplicativo.
+## <a name="azure-samples-and-templates"></a>Exemplos e modelos do Azure
+Há uma série de exemplos de código Microsoft Azure e exemplos disponíveis no GitHub no .NET, Java, Python, Node. js, PHP e Ruby. Além disso, Azure Resource Manager permite que você provisione seus aplicativos usando um modelo declarativo. Em um modelo único, você pode implantar vários serviços, juntamente com suas dependências. Use o mesmo modelo para implantar repetidamente seu aplicativo durante cada estágio do ciclo de vida do aplicativo.
 
 - [Exemplos do Azure](https://github.com/Azure-Samples)
 - [Modelos de início rápido do Azure](https://azure.microsoft.com/resources/templates/)

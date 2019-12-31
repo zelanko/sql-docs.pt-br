@@ -1,6 +1,6 @@
 ---
-title: Bancos de dados do sistema - Parallel Data Warehouse | Microsoft Docs
-description: Bancos de dados do sistema no Parallel Data Warehouse (PDW).
+title: Bancos de dados do sistema
+description: Bancos de dados do sistema em paralelo data warehouse (PDW).
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,17 +8,18 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 4bfcd183804a545f5e170548833246bbedd231a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 720dd70896fe4c30d10214b7102bbd77beab5e48
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960001"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74400210"
 ---
-# <a name="system-databases-in-parallel-data-warehouse-pdw"></a>Bancos de dados do sistema no Parallel Data Warehouse (PDW)
-Bancos de dados do sistema são bancos de dados que usa o SQL Server PDW para gerenciar usuários, bancos de dados e dados temporários. SQL Server PDW inclui os seguintes bancos de dados do sistema: mestre e tempdb.  
+# <a name="system-databases-in-parallel-data-warehouse-pdw"></a>Bancos de dados do sistema em data warehouse paralelos (PDW)
+Os bancos de dados do sistema são bancos de dado que SQL Server PDW usa para gerenciar usuários, bancos de dados e temporários. O SQL Server PDW inclui os seguintes bancos de dados do sistema: Master e tempdb.  
   
-## <a name="system-database-topics"></a>Tópicos de banco de dados do sistema  
+## <a name="system-database-topics"></a>Tópicos do banco de dados do sistema  
   
 -   [Banco de dados mestre](master-database.md)  
   

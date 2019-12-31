@@ -41,12 +41,12 @@ ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8cdc2ee8c14e62106775438f932957c69c7c0daa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 70e31ec60f8f47dfbc0a4761357c99a42623c6eb
+ms.sourcegitcommit: ea6603e20c723553c89827a6b8731a9e7b560b9c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68199394"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74479321"
 ---
 # <a name="publish-data-and-database-objects"></a>Publicar dados e objetos de banco de dados
   Ao criar uma publicação, você escolhe as tabelas e outros objetos de banco de dados que deseja publicar. Você pode publicar os objetos de banco de dados a seguir usando replicação.  
@@ -57,7 +57,7 @@ ms.locfileid: "68199394"
 |Tabelas particionadas|X|X|  
 |Procedimentos armazenados – Definição ([!INCLUDE[tsql](../../../includes/tsql-md.md)] e CLR)|X|X|  
 |Procedimentos armazenados – Execução ([!INCLUDE[tsql](../../../includes/tsql-md.md)] e CLR)|X|não|  
-|Exibições|X|X|  
+|Modos de exibição|X|X|  
 |Exibições indexadas|X|X|  
 |Exibições indexadas como tabelas|X|não|  
 |Tipos definidos pelo usuário (CLR)|X|X|  
@@ -89,13 +89,13 @@ ms.locfileid: "68199394"
   
  Para obter informações sobre como trabalhar com publicações, consulte os tópicos a seguir:  
   
--   [Create a Publication](create-a-publication.md)  
+-   [Criar uma publicação](create-a-publication.md)  
   
--   [Defina um Artigo](define-an-article.md)  
+-   [Definir um artigo](define-an-article.md)  
   
--   [Exibir e modificar as propriedades da publicação](view-and-modify-publication-properties.md)  
+-   [Visualizar e modificar as propriedades da publicação](view-and-modify-publication-properties.md)  
   
--   [Exibir e modificar as propriedades do artigo](view-and-modify-article-properties.md)  
+-   [Visualizar e modificar propriedades de artigos](view-and-modify-article-properties.md)  
   
 -   [Excluir uma publicação](delete-a-publication.md)  
   
@@ -107,11 +107,11 @@ ms.locfileid: "68199394"
 ## <a name="publishing-tables"></a>Publicando tabelas  
  O objeto publicado com maior frequência é uma tabela. Os vínculos a seguir fornecem informações adicionais sobre áreas relacionadas a publicação de tabelas:  
   
--   [Filtrar os dados publicados](filter-published-data.md)  
+-   [Filtrar dados publicados](filter-published-data.md)  
   
--   [Article Options for Transactional Replication](../transactional/article-options-for-transactional-replication.md)  
+-   [Opções de artigo para replicação transacional](../transactional/article-options-for-transactional-replication.md)  
   
--   [Article Options for Merge Replication](../merge/article-options-for-merge-replication.md)  
+-   [Opções de artigo para replicação de mesclagem](../merge/article-options-for-merge-replication.md)  
   
 -   [Replicar colunas de identidade](replicate-identity-columns.md)  
   
@@ -125,12 +125,12 @@ ms.locfileid: "68199394"
 ## <a name="publishing-stored-procedures"></a>Publicando procedimentos armazenados  
  Todos os tipos de replicação permitem que você reproduza definições de procedimentos armazenados: o CREATE PROCEDURE é copiado para cada Assinante. No caso de procedimentos armazenados CLR (Common Language Runtime), o assembly associado também é copiado. As alterações a procedimentos são replicadas aos Assinantes; as alterações aos assemblies associados não são.  
   
- Além de replicar a definição de um procedimento armazenado, a replicação transacional permite que você replique a execução dos procedimentos armazenados. Isso é útil ao replicar os resultados de procedimentos armazenados orientados a manutenção que afetam grandes quantidades de dados. Para obter mais informações, consulte [Publicando execução de procedimento armazenado em replicação transacional](../transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
+ Além de replicar a definição de um procedimento armazenado, a replicação transacional permite que você replique a execução dos procedimentos armazenados. Isso é útil ao replicar os resultados de procedimentos armazenados orientados a manutenção que afetam grandes quantidades de dados. Para saber mais, confira [Publishing Stored Procedure Execution in Transactional Replication](../transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
   
 ## <a name="publishing-views"></a>Publicando exibições  
  Todos os tipos de replicação permitem que você reproduza exibições. A exibição (e o índice correspondente, se for uma exibição indexada) pode ser copiada para o Assinante, mas a tabela base também deve ser replicada.  
   
- Para exibições indexadas, a replicação transacional também permite que você replique a exibição indexada como uma tabela em vez de uma exibição, eliminando a necessidade de replicar também a tabela base. Para fazer isso, especifique uma das opções “indexed view logbased” do parâmetro *@type* de [sp_addarticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql). Para obter mais informações sobre como usar **sp_addarticle**, consulte [Definir um artigo](define-an-article.md).  
+ Para exibições indexadas, a replicação transacional também permite que você replique a exibição indexada como uma tabela em vez de uma exibição, eliminando a necessidade de replicar também a tabela base. Para fazer isso, especifique uma das opções "indexed view logbased" para o * \@* parâmetro de tipo de [sp_addarticle &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql). Para obter mais informações sobre como usar **sp_addarticle**, consulte [Definir um artigo](define-an-article.md).  
   
 ## <a name="publishing-user-defined-functions"></a>Publicando funções definidas pelo usuário  
  As instruções CREATE FUNCTION para as funções CLR e [!INCLUDE[tsql](../../../includes/tsql-md.md)] são copiadas para cada Assinante. No caso das funções CLR, o assembly associado também é copiado. As alterações a funções são replicadas aos Assinantes; as alterações aos assemblies associados não são.  
@@ -168,9 +168,9 @@ ms.locfileid: "68199394"
 -   Se você estiver publicando um objeto de banco de dados que depende de outros objetos de banco de dados, terá de publicar todos os objetos referenciados. Por exemplo, se você publicar uma exibição que depende de uma tabela, terá de publicar a tabela também.  
   
     > [!NOTE]  
-    >  Se você adicionar um artigo a uma publicação de mesclagem e o artigo existente depender do artigo novo, será preciso especificar uma ordem de processamento para ambos os artigos usando o parâmetro **@processing_order** de [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) e [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Considere o seguinte cenário: uma tabela é publicada, mas não é publicada a função que é referenciada pela tabela. Se a função não for publicada, a tabela não poderá ser criada no Assinante. Ao adicionar a função à publicação: especifique o valor **1** para o parâmetro **@processing_order** de **sp_addmergearticle**e especifique o valor **2** para o parâmetro **@processing_order** de **sp_changemergearticle**, especificando o nome da tabela para o parâmetro **@article** . Essa ordem de processamento garante a criação da função no Assinante antes da tabela que depende disso. Você pode usar números diferentes para cada artigo desde que o número para a função seja menor do que o número para a tabela.  
+    >  Se você adicionar um artigo a uma publicação de mesclagem e um artigo existente depender do novo artigo, deverá especificar uma ordem de processamento para ambos os artigos ** \@** usando o parâmetro processing_order de [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) e [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Considere o seguinte cenário: uma tabela é publicada, mas não é publicada a função que é referenciada pela tabela. Se a função não for publicada, a tabela não poderá ser criada no Assinante. Ao adicionar a função à publicação: especifique o valor **1** para o parâmetro **\@processing_order** de **sp_addmergearticle** e especifique o valor **2** para o parâmetro **\@processing_order** de **sp_changemergearticle**, especificando o nome da tabela para o parâmetro **\@article**. Essa ordem de processamento garante a criação da função no Assinante antes da tabela que depende disso. Você pode usar números diferentes para cada artigo desde que o número para a função seja menor do que o número para a tabela.  
   
--   Os nomes de publicação não podem incluir nenhum dos seguintes caracteres: % * [ ] | : " ? \ / \< >.  
+-   Os nomes de publicação não podem incluir nenhum dos seguintes caracteres: % * [ ] | : " ? \< >.  
   
 ### <a name="limitations-on-publishing-objects"></a>Limitações na publicação de objetos  
   
@@ -184,7 +184,7 @@ ms.locfileid: "68199394"
   
 -   Padrões associados criados com [sp_bindefault &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-bindefault-transact-sql) não são replicados (padrões associados são preteridos a favor de padrões criados com a palavra-chave DEFAULT de ALTER TABLE ou CREATE TABLE).  
   
--   Funções contendo a dica `NOEXPAND` em exibições indexadas não podem ser publicadas na mesma publicação que as tabelas referenciadas e as exibições indexadas, devido à ordem na qual os agentes e distribuição as entrega. Para solucionar esse problema, coloque a tabela e a criação de exibição indexada em uma primeira publicação e adicione funções contendo a dica `NOEXPAND` nas exibições indexadas para uma segunda publicação, que você publica após a primeira publicação ser concluída. Ou crie scripts para essas funções e entregue o script usando o *@post_snapshot_script* parâmetro do `sp_addpublication`.  
+-   Funções contendo a dica `NOEXPAND` em exibições indexadas não podem ser publicadas na mesma publicação que as tabelas referenciadas e as exibições indexadas, devido à ordem na qual os agentes e distribuição as entrega. Para solucionar esse problema, coloque a tabela e a criação de exibição indexada em uma primeira publicação e adicione funções contendo a dica `NOEXPAND` nas exibições indexadas para uma segunda publicação, que você publica após a primeira publicação ser concluída. Ou crie scripts para essas funções e forneça o script usando o `sp_addpublication` * \@parâmetro post_snapshot_script* de.  
   
 ### <a name="schemas-and-object-ownership"></a>Propriedade de esquemas e objetos  
  A replicação tem o seguinte comportamento padrão no Assistente para Nova Publicação em relação à propriedade de esquemas e objetos:  
@@ -208,9 +208,9 @@ ms.locfileid: "68199394"
 ### <a name="publishing-tables-in-more-than-one-publication"></a>Publicando tabelas em mais de uma publicação  
  A replicação fornece suporte para publicação de artigos em várias publicações (inclusive a republicação de dados) com as seguintes restrições:  
   
--   Se um artigo for publicado em uma publicação transacional e em uma publicação de mesclagem, certifique-se de que a propriedade *@published_in_tran_pub* esteja definida como TRUE para o artigo de mesclagem. Para obter mais informações sobre como definir propriedades, consulte [Exibir e modificar as propriedades da publicação](view-and-modify-publication-properties.md) e [Exibir e modificar as propriedades do artigo](view-and-modify-article-properties.md).  
+-   Se um artigo for publicado em uma publicação transacional e uma publicação de mesclagem, verifique * \@* se a propriedade published_in_tran_pub está definida como true para o artigo de mesclagem. Para obter mais informações sobre como definir propriedades, consulte [Exibir e modificar as propriedades da publicação](view-and-modify-publication-properties.md) e [Exibir e modificar as propriedades do artigo](view-and-modify-article-properties.md).  
   
-     Você também deve definir a propriedade *@published_in_tran_pub* se um artigo for parte de uma assinatura transacional e for incluído em uma publicação de mesclagem. Se esse for o caso, esteja ciente de que, por padrão, a replicação transacional espera que as tabelas no Assinante sejam tratadas como somente leitura; se a replicação de mesclagem alterar dados em uma tabela em uma assinatura transacional, pode haver não convergência de dados. Para evitar essa possibilidade, recomendamos que qualquer tabela desse tipo seja especificada como somente download na publicação de mesclagem. Isso impede que um Assinante de mesclagem carregue alterações de dados na tabela. Para obter mais informações, consulte [Otimizar o desempenho da replicação de mesclagem com artigos somente para download](../merge/optimize-merge-replication-performance-with-download-only-articles.md).  
+     Você também deve definir a * \@Propriedade published_in_tran_pub* se um artigo fizer parte de uma assinatura transacional e estiver incluído em uma publicação de mesclagem. Se esse for o caso, esteja ciente de que, por padrão, a replicação transacional espera que as tabelas no Assinante sejam tratadas como somente leitura; se a replicação de mesclagem alterar dados em uma tabela em uma assinatura transacional, pode haver não convergência de dados. Para evitar essa possibilidade, recomendamos que qualquer tabela desse tipo seja especificada como somente download na publicação de mesclagem. Isso impede que um Assinante de mesclagem carregue alterações de dados na tabela. Para obter mais informações, consulte [Otimizar o desempenho da replicação de mesclagem com artigos somente para download](../merge/optimize-merge-replication-performance-with-download-only-articles.md).  
   
 -   Um artigo não pode ser publicado tanto em uma publicação de mesclagem quanto em uma publicação transacional com assinaturas de atualização enfileirada.  
   
@@ -220,10 +220,10 @@ ms.locfileid: "68199394"
   
     |Propriedade|Parâmetro em sp_addarticle|  
     |--------------|---------------------------------|  
-    |Gerenciamento de intervalo de identidade|**@auto_identity_range** (preterido) e **@identityrangemangementoption**|  
-    |Intervalo de identidade do Publicador|**@pub_identity_range**|  
-    |Intervalo de identidade|**@identity_range**|  
-    |Limite de intervalo de identidade|**@threshold**|  
+    |Gerenciamento de intervalo de identidade|auto_identity_range (preterido) e identityrangemangementoption ** \@** ** \@**|  
+    |Intervalo de identidade do Publicador|**\@pub_identity_range**|  
+    |Intervalo de identidade|**\@identity_range**|  
+    |Limite de intervalo de identidade|**\@os**|  
   
      Para obter mais informações sobre esses parâmetros, consulte [sp_addarticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql).  
   
@@ -231,27 +231,27 @@ ms.locfileid: "68199394"
   
     |Propriedade|Parâmetro em sp_addmergearticle|  
     |--------------|--------------------------------------|  
-    |Rastreamento de coluna|**@column_tracking**|  
-    |Opções de esquema|**@schema_option**|  
-    |Filtragem de coluna|**@vertical_partition**|  
-    |Opções de carregamento do assinante|**@subscriber_upload_options**|  
-    |Controle de exclusão condicional|**@delete_tracking**|  
-    |Compensação de erro|**@compensate_for_errors**|  
-    |Gerenciamento de intervalo de identidade|**@auto_identity_range** (preterido) e **@identityrangemangementoption**|  
-    |Intervalo de identidade do Publicador|**@pub_identity_range**|  
-    |Intervalo de identidade|**@identity_range**|  
-    |Limite de intervalo de identidade|**@threshold**|  
-    |Opções de partição|**@partition_options**|  
-    |Fluxo de coluna de blob|**@stream_blob_columns**|  
-    |Tipo de filtro|**@filter_type** (parâmetro em **sp_addmergefilter**)|  
+    |Rastreamento de coluna|**\@column_tracking**|  
+    |Opções de esquema|**\@schema_option**|  
+    |Filtragem de coluna|**\@vertical_partition**|  
+    |Opções de carregamento do assinante|**\@subscriber_upload_options**|  
+    |Controle de exclusão condicional|**\@delete_tracking**|  
+    |Compensação de erro|**\@compensate_for_errors**|  
+    |Gerenciamento de intervalo de identidade|auto_identity_range (preterido) e identityrangemangementoption ** \@** ** \@**|  
+    |Intervalo de identidade do Publicador|**\@pub_identity_range**|  
+    |Intervalo de identidade|**\@identity_range**|  
+    |Limite de intervalo de identidade|**\@os**|  
+    |Opções de partição|**\@partition_options**|  
+    |Fluxo de coluna de blob|**\@stream_blob_columns**|  
+    |Tipo do filtro|filter_type (parâmetro em **sp_addmergefilter**) ** \@**|  
   
      Para obter mais informações sobre esses parâmetros, consulte [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) e [sp_addmergefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql).  
   
--   A replicação transacional e a replicação de mesclagem não filtrada fornecem suporte à publicação de uma tabela em várias publicações e depois à assinatura dentro de uma única tabela no banco de dados de assinatura (frequentemente chamado de cenário de acúmulo). O acúmulo é usado muitas vezes para agregar subconjuntos de dados de localizações múltiplas em uma única tabela em um Assinante central. As publicações de mesclagem filtradas não fornecem suporte ao cenário de Assinante central. Para replicação de mesclagem, o acúmulo geralmente é implementado por meio de uma única publicação com filtros de linha com parâmetros. Para obter mais informações, consulte [Filtros de linha com parâmetros](../merge/parameterized-filters-parameterized-row-filters.md).  
+-   A replicação transacional e a replicação de mesclagem não filtrada fornecem suporte à publicação de uma tabela em várias publicações e depois à assinatura dentro de uma única tabela no banco de dados de assinatura (frequentemente chamado de cenário de acúmulo). O acúmulo é usado muitas vezes para agregar subconjuntos de dados de localizações múltiplas em uma única tabela em um Assinante central. As publicações de mesclagem filtradas não fornecem suporte ao cenário de Assinante central. Para replicação de mesclagem, o acúmulo geralmente é implementado por meio de uma única publicação com filtros de linha com parâmetros. Para saber mais, confira [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Adicionar e remover artigos de publicações existentes](add-articles-to-and-drop-articles-from-existing-publications.md)   
- [Configurar Distribuição](../configure-distribution.md)   
+ [Configurar a distribuição](../configure-distribution.md)   
  [Inicializar uma assinatura](../initialize-a-subscription.md)   
  [Replicação de script](../scripting-replication.md)   
  [Proteger o Publicador](../security/secure-the-publisher.md)   

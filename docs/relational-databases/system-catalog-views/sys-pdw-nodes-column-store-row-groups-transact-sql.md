@@ -1,6 +1,6 @@
 ---
-title: sys.pdw_nodes_column_store_row_groups (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: sys. pdw_nodes_column_store_row_groups (Transact-SQL)
+ms.custom: seo-dt-2019
 ms.date: 03/03/2017
 ms.prod: sql
 ms.technology: data-warehouse
@@ -12,49 +12,49 @@ ms.assetid: 17a4c925-d4b5-46ee-9cd6-044f714e6f0e
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: e89405e04a06e8171c69b81066be743ee99d4534
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b1cbdc63907933f173c7d32a2dde3151dd4db7af
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68106714"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74399870"
 ---
-# <a name="syspdwnodescolumnstorerowgroups-transact-sql"></a>sys.pdw_nodes_column_store_row_groups (Transact-SQL)
+# <a name="syspdw_nodes_column_store_row_groups-transact-sql"></a>sys. pdw_nodes_column_store_row_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Fornece informações de índice de columnstore clusterizado em uma base por segmento para ajudar o administrador a tomar decisões de gerenciamento de sistema [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. **sys.pdw_nodes_column_store_row_groups** tem uma coluna para o número total de linhas armazenadas fisicamente (inclusive as marcadas como excluídas) e uma coluna para o número de linhas marcadas como excluídas. Use **sys.pdw_nodes_column_store_row_groups** para determinar qual linha grupos têm uma alta porcentagem de linhas excluídas em devem ser recriados.  
+  Fornece informações de índice columnstore clusterizado por segmento para ajudar o administrador a tomar decisões de gerenciamento de sistema no [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. **Sys. pdw_nodes_column_store_row_groups** tem uma coluna para o número total de linhas armazenadas fisicamente (incluindo aquelas marcadas como excluídas) e uma coluna para o número de linhas marcadas como excluídas. Use **Sys. pdw_nodes_column_store_row_groups** para determinar quais grupos de linhas têm uma alta porcentagem de linhas excluídas e devem ser recriados.  
   
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|ID da tabela subjacente. Essa é a tabela física no nó de computação, não o object_id da tabela lógica no nó de controle. Por exemplo, object_id não coincide com o object_id em sys. Tables.<br /><br /> Para ingressar com Sys. Tables, use sys.pdw_index_mappings.|  
-|**index_id**|**int**|ID do índice columnstore clusterizado em *object_id* tabela.|  
-|**partition_number**|**int**|ID da partição de tabela que contém o grupo de linhas *row_group_id*. Você pode usar *partition_number* para adicionar esse DMV a sys. Partitions.|  
-|**row_group_id**|**int**|ID nesse grupo de linhas. Isso é exclusivo dentro da partição.|  
-|**dellta_store_hobt_id**|**bigint**|O hobt_id para grupos de linhas delta ou NULL se o tipo de grupo de linhas não for delta. Um grupo de linhas delta é um grupo de linhas de leitura/gravação que está aceitando novos registros. Um grupo de linhas delta tem o **abrir** status. Um grupo de linhas delta ainda está no formato rowstore e não foi compactado para o formato columnstore.|  
-|**state**|**tinyint**|O número de ID associado a state_description.<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED|  
-|**state_desccription**|**nvarchar(60)**|Descrição do estado persistente do grupo de linhas:<br /><br /> Abra - um grupo de linhas de leitura/gravação que está aceitando novos registros. Um grupo de linhas aberto ainda está no formato rowstore e não foi compactado para o formato columnstore.<br /><br /> FECHADO – um grupo de linhas que foi preenchido, mas ainda não compactado pelo processo de motor de tupla.<br /><br /> COMPACTADOS - um grupo de linhas que foi preenchido e compactado.|  
+|**object_id**|**inteiro**|ID da tabela subjacente. Essa é a tabela física no nó de computação, não o object_id para a tabela lógica no nó de controle. Por exemplo, object_id não corresponde ao object_id em sys. Tables.<br /><br /> Para ingressar com sys. Tables, use sys. pdw_index_mappings.|  
+|**index_id**|**inteiro**|ID do índice columnstore clusterizado na tabela *object_id* .|  
+|**partition_number**|**inteiro**|ID da partição de tabela que mantém o grupo de linhas *row_group_id*. Você pode usar *partition_number* para unir essa DMV a sys. partitions.|  
+|**row_group_id**|**inteiro**|ID deste grupo de linhas. Isso é exclusivo dentro da partição.|  
+|**dellta_store_hobt_id**|**bigint**|O hobt_id para grupos de linhas delta ou NULL se o tipo de grupo de linhas não for delta. Um grupo de linhas delta é um grupo de linhas de leitura/gravação que está aceitando novos registros. Um grupo de linhas Delta tem o status **aberto** . Um grupo de linhas delta ainda está no formato rowstore e não foi compactado para o formato columnstore.|  
+|**status**|**tinyint**|O número de ID associado a state_description.<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED|  
+|**state_desccription**|**nvarchar (60)**|Descrição do estado persistente do grupo de linhas:<br /><br /> ABRIR-um grupo de linhas de leitura/gravação que está aceitando novos registros. Um grupo de linhas aberto ainda está no formato rowstore e não foi compactado para o formato columnstore.<br /><br /> CLOSED-um grupo de linhas que foi preenchido, mas ainda não foi compactado pelo processo de movimentação de tupla.<br /><br /> COMPACTado-um grupo de linhas que foi preenchido e compactado.|  
 |**total_rows**|**bigint**|Total de linhas fisicamente armazenadas no grupo de linhas. Algumas podem ter sido excluídas, mas ainda estão armazenadas. O número máximo de linhas em um grupo de linhas é 1.048.576 (FFFFF hexadecimal).|  
-|**deleted_rows**|**bigint**|Número de linhas fisicamente armazenadas no grupo de linhas que são marcados para exclusão.<br /><br /> Sempre 0 para DELTA grupos de linhas.|  
-|**size_in_bytes**|**int**|Tamanho combinado, em bytes, de todas as páginas nesse grupo de linhas. Esse tamanho não inclui o tamanho necessário para armazenar metadados ou dicionários compartilhados.|  
-|**pdw_node_id**|**int**|Id exclusiva de um [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] nó.|  
-|**distribution_id**|**int**|Id exclusiva da distribuição.|
+|**deleted_rows**|**bigint**|Número de linhas fisicamente armazenadas no grupo de linhas que estão marcadas para exclusão.<br /><br /> Sempre 0 para grupos de linhas DELTA.|  
+|**size_in_bytes**|**inteiro**|Tamanho combinado, em bytes, de todas as páginas deste grupo de linhas. Esse tamanho não inclui o tamanho necessário para armazenar metadados ou dicionários compartilhados.|  
+|**pdw_node_id**|**inteiro**|ID exclusiva de um [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] nó.|  
+|**distribution_id**|**inteiro**|ID exclusiva da distribuição.|
   
 ## <a name="remarks"></a>Comentários  
  Retorna uma linha para cada grupo de linhas columnstore para cada tabela que tem um índice columnstore clusterizado ou não clusterizado.  
   
- Use **sys.pdw_nodes_column_store_row_groups** para determinar o número de linhas incluído no grupo de linhas e o tamanho do grupo de linhas.  
+ Use **Sys. pdw_nodes_column_store_row_groups** para determinar o número de linhas incluídas no grupo de linhas e o tamanho do grupo de linhas.  
   
- Quando o número de linhas excluídas em um grupo de linhas cresce para uma grande porcentagem do total de linhas, a tabela fica menos eficiente. Recrie o índice columnstore para reduzir o tamanho da tabela, reduzindo a E/S de disco necessária para ler a tabela. Para recriar o índice columnstore, use o **recompile** opção do **ALTER INDEX** instrução.  
+ Quando o número de linhas excluídas em um grupo de linhas cresce para uma grande porcentagem do total de linhas, a tabela fica menos eficiente. Recrie o índice columnstore para reduzir o tamanho da tabela, reduzindo a E/S de disco necessária para ler a tabela. Para recriar o índice columnstore, use a opção **Rebuild** da instrução **ALTER INDEX** .  
   
- O columnstore atualizável primeiro insere novos dados em um **abrir** rowgroup, o que está no formato rowstore e, às vezes também é conhecido como uma tabela delta.  Quando um rowgroup aberto está cheio, seu estado é alterado para **fechado**. Um rowgroup fechado é compactado no formato columnstore pelo tuple mover e o estado muda para **COMPRESSED**.  O Tuple Mover é um processo em segundo plano que periodicamente é acionado e verifica se há algum rowgroup fechado que já esteja pronto para compactar em um rowgroup columnstore.  O Tuple Mover também desaloca todos os rowgroups nos quais cada linha foi excluída. Rowgroups desalocados são marcados como **desativado**. Para executar o tuple mover imediatamente, use o **REORGANIZE** opção do **ALTER INDEX** instrução.  
+ O columnstore atualizável primeiro insere novos dados em um rowgroup **aberto** , que está no formato de repositório de colunas e, às vezes, é referido como uma tabela Delta.  Quando um rowgroup aberto estiver cheio, seu estado será alterado para **fechado**. Um rowgroup fechado é compactado no formato columnstore pelo motor de tupla e o estado muda para **compactado**.  O Tuple Mover é um processo em segundo plano que periodicamente é acionado e verifica se há algum rowgroup fechado que já esteja pronto para compactar em um rowgroup columnstore.  O Tuple Mover também desaloca todos os rowgroups nos quais cada linha foi excluída. Os RowGroups desalocados são marcados como **desativados**. Para executar o movimentador de tupla imediatamente, use a opção **reorganizar** da instrução **ALTER INDEX** .  
   
  Quando um grupo de linhas de columnstore tiver sido preenchido, ele é compactado e para de aceitar novas linhas. Quando as linhas são excluídas de um grupo compactado, elas permanecem, mas são marcadas como excluídas. As atualizações para um grupo compactado são implementadas como uma exclusão do grupo compactado, e uma inserção em um grupo aberto.  
   
 ## <a name="permissions"></a>Permissões  
- Requer a permissão **VIEW SERVER STATE**.  
+ Requer a permissão **View Server State** .  
   
 ## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- A exemplo a seguir adiciona o **sys.pdw_nodes_column_store_row_groups** tabela a outras tabelas do sistema para retornar informações sobre tabelas específicas. A coluna calculada `PercentFull` é uma estimativa da eficiência do grupo de linhas. Para obter informações sobre uma única tabela, remova os hífens de comentário na frente da cláusula WHERE e forneça um nome de tabela.  
+ O exemplo a seguir une a tabela **Sys. pdw_nodes_column_store_row_groups** a outras tabelas do sistema para retornar informações sobre tabelas específicas. A coluna calculada `PercentFull` é uma estimativa da eficiência do grupo de linhas. Para localizar informações em uma única tabela, remova os hifens de comentário na frente da cláusula WHERE e forneça um nome de tabela.  
   
 ```  
 SELECT IndexMap.object_id,   
@@ -80,7 +80,7 @@ AND CSRowGroups.index_id = NI.index_id
 ORDER BY object_name(i.object_id), i.name, IndexMap.physical_name, pdw_node_id;  
 ```  
 
-O seguinte [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] exemplo conta as linhas por partição para coluna clusterizada armazena, bem como muitas linhas estiverem em grupos de aberto, fechado ou linha compactada:  
+O exemplo [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] a seguir conta as linhas por partição para armazenamentos de coluna clusterizados, bem como quantas linhas estão em grupos de linhas abertos, fechados ou compactados:  
 
 ```
 SELECT
@@ -104,10 +104,10 @@ GROUP BY s.name, t.name, rg.partition_number
 ORDER BY 1, 2
 ```
   
-## <a name="see-also"></a>Consulte também  
- [Exibições de Catálogo do SQL Data Warehouse e Parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
- [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
- [sys.pdw_nodes_column_store_segments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-segments-transact-sql.md)   
- [sys.pdw_nodes_column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Exibições do catálogo de data warehouse SQL Data Warehouse e paralelas](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
+ [CRIAR índice COLUMNSTORE &#40;&#41;Transact-SQL](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
+ [sys. pdw_nodes_column_store_segments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-segments-transact-sql.md)   
+ [sys. pdw_nodes_column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)  
   
   

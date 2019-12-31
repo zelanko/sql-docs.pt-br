@@ -1,6 +1,6 @@
 ---
-title: Exibir a utilização de capacidade no Analytics Platform System | Microsoft Docs
-description: Exibir a utilização de capacidade no Analytics Platform System.
+title: Exibir a utilização da capacidade
+description: Exibir a utilização da capacidade no Analytics Platform System.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,27 +8,28 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 0ac9347c9f5ec31c5f4f41228b1ef14119257751
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: c2dafa2df09bb8141fca8c30a80c6471ffe1e060
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67959783"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74399448"
 ---
-# <a name="view-capacity-utilization-in-analytics-platform-system"></a>Modo de exibição de utilização de capacidade no Analytics Platform System
-Este tópico explica como exibir a utilização da capacidade no dispositivo de PDW do SQL Server.  
+# <a name="view-capacity-utilization-in-analytics-platform-system"></a>Exibir a utilização da capacidade no Analytics Platform System
+Este tópico explica como exibir a utilização da capacidade no dispositivo SQL Server PDW.  
   
-## <a name="to-view-capacity-utilization-by-using-admin-console"></a>Para exibir a utilização de capacidade por meio do Console do administrador  
-Para exibir o espaço usado, abra o Console de administração e clique no **armazenamento** guia. Há um **armazenamento** guia para a região PDW.  
+## <a name="to-view-capacity-utilization-by-using-admin-console"></a>Para exibir a utilização da capacidade usando o console do administrador  
+Para exibir o espaço usado, abra o console de administração e clique na guia **armazenamento** . Há uma guia **armazenamento** para a região PDW.  
   
-![PDW Admin Console Storage](./media/view-capacity-utilization/SQL_Server_PDW_AdminConsol_StorageV2.png "SQL_Server_PDW_AdminConsol_StorageV2")  
+![Armazenamento do Console do Administrador do PDW](./media/view-capacity-utilization/SQL_Server_PDW_AdminConsol_StorageV2.png "SQL_Server_PDW_AdminConsol_StorageV2")  
   
-## <a name="to-view-capacity-utilization-by-using-queries"></a>Para exibir a utilização de capacidade por meio de consultas  
-Para entender se um nó está com pouco espaço, o sistema de monitoramento de integridade do SQL Server PDW já monitora o espaço livre para todos os volumes dentro de cada nó.  
+## <a name="to-view-capacity-utilization-by-using-queries"></a>Para exibir a utilização da capacidade usando consultas  
+Para entender se um nó está ficando com pouco espaço, o sistema de monitoramento de integridade SQL Server PDW já monitora o espaço livre para todos os volumes em cada nó.  
   
-Se o espaço livre dentro de um volume cair abaixo de 30%, o SQL Server PDW gera uma **aviso** alerta na [sys.dm_pdw_component_health_active_alerts](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-active-alerts-transact-sql.md).  O alerta continuará até que o espaço livre é disponibilizado.  
+Se o espaço livre em um volume cair abaixo de 30%, SQL Server PDW gerará um alerta de **aviso** em [Sys. dm_pdw_component_health_active_alerts](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-active-alerts-transact-sql.md).  O alerta permanece até que o espaço livre seja disponibilizado.  
   
-Se o espaço livre dentro de um volume fique abaixo de 10%, o SQL Server PDW gera uma **críticos** alerta. Isso é considerado crítico porque consultas poderá falhar se eles fazem com que o banco de dados expandir.  
+Se o espaço livre em um volume cair em 10%, SQL Server PDW gerará um alerta **crítico** . Isso é considerado crítico porque as consultas podem falhar se causarem a expansão do banco de dados.  
   
 Para recuperar o uso do volume, consulte o exemplo a seguir.  
   
@@ -102,7 +103,7 @@ GROUP BY [pdw_node_id], [db_name]
 ORDER BY [db_name], [pdw_node_id];  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->
-[Monitoramento de dispositivo &#40;Analytics Platform System&#41;](appliance-monitoring.md)  
+[Monitoramento de dispositivo &#40;o sistema de plataforma de análise&#41;](appliance-monitoring.md)  
   

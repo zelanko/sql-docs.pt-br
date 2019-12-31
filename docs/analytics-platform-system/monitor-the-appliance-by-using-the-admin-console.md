@@ -1,6 +1,6 @@
 ---
-title: Monitorar com o Console de Admin - Analytics Platform System | Microsoft Docs
-description: Para o Analytics Platform System, o Console de administração é um aplicativo web que revela as informações de estado, integridade e desempenho do dispositivo. Os usuários se conectar ao Console do administrador por meio de um navegador da internet.
+title: Monitorar com o console de administração
+description: Para o Analytics Platform System, o console de administração é um aplicativo Web que mostra as informações de estado, integridade e desempenho do dispositivo. Os usuários se conectam ao console de administração por meio de um navegador da Internet.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,88 +8,89 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 7fb3bf769d3145118359af0e33e3cf01a0b6d325
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 977e38016fbb58356d22ccfc5f783539e5f852d5
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960483"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74400939"
 ---
-# <a name="monitor-the-appliance-with-the-admin-console---analytics-platform-system"></a>Monitorar o dispositivo com o Console de administração - Analytics Platform System
-O Console de administração é um aplicativo web do SQL Server PDW que traz à tona as informações de estado, integridade e desempenho do dispositivo. Os usuários se conectar ao Console do administrador por meio do Internet Explorer.  
+# <a name="monitor-the-appliance-with-the-admin-console---analytics-platform-system"></a>Monitorar o dispositivo com o console do administrador-Analytics Platform System
+O console de administração é um aplicativo Web SQL Server PDW que mostra as informações de estado, integridade e desempenho do dispositivo. Os usuários se conectam ao console de administração por meio do Internet Explorer.  
   
-## <a name="About"></a>Sobre o Console de administração  
-![Appliance Console Home](./media/monitor-the-appliance-by-using-the-admin-console/SQL_Server_PDW_AdminConsol_ApplHome.png "SQL_Server_PDW_AdminConsol_ApplHome")  
+## <a name="About"></a>Sobre o console de administração  
+![Início do console de dispositivo](./media/monitor-the-appliance-by-using-the-admin-console/SQL_Server_PDW_AdminConsol_ApplHome.png "SQL_Server_PDW_AdminConsol_ApplHome")  
   
-**Dispositivo**  
-Base  
+**Baseado**  
+Página inicial  
 Fornece um resumo rápido do estado do dispositivo.  
   
 Integridade  
-Exibe a topologia de dispositivo com indicadores mostrando a integridade de cada componente monitorado dentro de cada nó. Permite que você exiba o status atual de nós individuais e as propriedades dos componentes do nó.  
+Exibe a topologia do dispositivo com indicadores que mostram a integridade de cada componente monitorado em cada nó. Permite exibir o status atual de nós individuais e propriedades dos componentes do nó.  
   
-Exibe os alertas de hardware e software.  
+Exibe alertas de hardware e software.  
   
-Monitor de desempenho  
-Exibe gráficos do monitor de desempenho.  
+Monitorar Desempenho  
+Exibe grafos do monitor de desempenho.  
   
 **Parallel Data Warehouse**  
-Base  
+Página inicial  
 Fornece um resumo rápido do estado do PDW.  
   
 Sessões  
-Exibe as sessões de usuário do Active Directory PDW. Isso pode ajudar para monitoramento de contenção de recursos.  
+Exibe sessões de usuário do PDW ativo. Isso pode ajudar a monitorar a contenção de recursos.  
   
 Consultas  
-Exibe uma lista de consultas em execução e concluídos recentemente. Ele exibe erros relacionados, se houver. Também fornece a capacidade de exibir os detalhes das informações de execução de consulta execução plano e o nó.  
+Exibe uma lista de consultas em execução e consultas concluídas recentemente. Ele exibirá erros relacionados, se houver. Também fornece a capacidade de exibir detalhes do plano de execução de consulta e das informações de execução do nó.  
   
 Cargas  
-Exibe carregar planos, o estado atual do PDW cargas e erros relacionados, se houver.  
+Exibe os planos de carga, o estado atual das cargas do PDW e os erros relacionados, se houver.  
   
 Backups/restaurações  
-Exibe um log do PDW backup e restaurar operações.  
+Exibe um log de operações de backup e restauração do PDW.  
   
 Integridade  
-Exibe a topologia do PDW com indicadores mostrando a integridade de cada componente monitorado dentro de cada nó. Permite que você exiba o status atual de nós individuais e as propriedades dos componentes do nó.  
+Exibe a topologia do PDW com indicadores que mostram a integridade de cada componente monitorado em cada nó. Permite exibir o status atual de nós individuais e propriedades dos componentes do nó.  
   
-Exibe os alertas de hardware e software.  
+Exibe alertas de hardware e software.  
   
 Recursos  
 Exibe uma lista de bloqueios de recursos do PDW e seu status atual.  
   
 Armazenamento  
-Resume a utilização de armazenamento do PDW.  
+Resume a utilização do armazenamento do PDW.  
   
-Monitor de desempenho  
-Exibe gráficos de monitor de desempenho do PDW.  
+Monitorar Desempenho  
+Exibe grafos do monitor de desempenho do PDW.  
  
 > [!NOTE]  
-> O console de administração tem uma resolução de tela 1024 x 768. O console de administração exibe melhor com uma resolução de tela de 1280 X 1024 ou superior.  
+> O console de administração tem uma resolução de tela de 1024x768. O console de administração do exibe melhor com uma resolução de tela de 1280 X 1024 ou superior.  
   
-## <a name="Connect"></a>Conectar-se ao Console do administrador  
-Para se conectar ao Console do administrador, requer:  
+## <a name="Connect"></a>Conectar-se ao console de administração  
+Para se conectar ao console de administração, o requer:  
   
 -   Pelo menos o Internet Explorer versão 10.  
   
--   Permissões para acessar o Console de administração. <!-- MISSING LINKS See [Grant Permissions to Use the Admin Console &#40;SQL Server PDW&#41;](../sqlpdw/grant-permissions-to-use-the-admin-console-sql-server-pdw.md).  -->  
+-   Permissões para acessar o console de administração. <!-- MISSING LINKS See [Grant Permissions to Use the Admin Console &#40;SQL Server PDW&#41;](../sqlpdw/grant-permissions-to-use-the-admin-console-sql-server-pdw.md).  -->  
   
--   O endereço IP do cluster de nó de controle.  Para obter isso do administrador do SQL Server PDW.  
+-   O endereço IP do cluster do nó de controle.  Obtenha isso do seu administrador de SQL Server PDW.  
   
-Para se conectar ao Console do administrador, use o Internet Explorer e https para navegar até o endereço IP do cluster de nó de controle. Por exemplo, se o endereço IP do cluster de nó de controle é `10.192.63.102`, insira `https://10.192.63.102` na barra de endereços do navegador. A primeira tela solicitará sua **LOGIN** e **senha**. Forneça um logon de autenticação do SQL Server e senha, ou um logon de autenticação do Windows e senha do Windows. Se usar um logon de autenticação do Windows, o Console de administração usará a representação.  
+Para se conectar ao console de administração, use o Internet Explorer e o HTTPS para navegar até o endereço IP do cluster do nó de controle. Por exemplo, se o endereço IP do cluster do nó de controle `10.192.63.102`for, `https://10.192.63.102` insira na barra de endereços do navegador. A primeira tela solicitará seu **logon** e **senha**. Forneça um logon de autenticação SQL Server e uma senha, ou um logon de autenticação do Windows e uma senha do Windows. Se você estiver usando um logon de autenticação do Windows, o console de administração usará a representação.  
   
-## <a name="RelatedTasks"></a>Tarefas do Console do administrador  
-O Console de administração fornece a capacidade de monitorar o seguinte:  
+## <a name="RelatedTasks"></a>Tarefas do console de administração  
+O console de administração do fornece a capacidade de monitorar o seguinte:  
   
 |||  
 |-|-|  
-|**Tipo de informação**|**Como acessar no Console do administrador**|  
-|Status geral do dispositivo|Clique em **estado de dispositivo** no menu superior, ou **Home**.|  
-|Alertas|Clique em **alertas**. Para obter mais informações, consulte [Noções básicas sobre alertas do Console de administração &#40;Analytics Platform System&#41;](understanding-admin-console-alerts.md).|  
-|Componentes do dispositivo e seu status|Clique em **estado de dispositivo** no menu superior, ou **Home**.|  
-|Solicitações de monitor (incluindo consultas, carrega, backups e restaurações)|Clique em **sessões** para ver as sessões atualmente ativas ou mais recentes.<br /><br />Clique em **consultas** para ver as consultas atualmente ativos ou mais recentes. As informações exibidas para consultas incluem cargas, backups e restaurações.<br /><br />Clique em **bloqueios** para ver os bloqueios ativos.|  
-|Monitorar as informações adicionais de cargas, backups e restaurações.|Clique em **cargas** ou **Backups/restaurações**.|  
+|**Information Type**|**Como acessar no console de administração**|  
+|Status geral do dispositivo|Clique em **estado do dispositivo** no menu superior ou em **página inicial**.|  
+|Alertas|Clique em **Alertas**. Para obter mais informações, consulte [Understanding admin console alerts &#40;Analytics Platform System&#41;](understanding-admin-console-alerts.md).|  
+|Componentes do dispositivo e seu status|Clique em **estado do dispositivo** no menu superior ou em **página inicial**.|  
+|Monitorar solicitações (incluindo consultas, carregamentos, backups e restaurações)|Clique em **sessões** para ver as sessões atualmente ativas ou recentes.<br /><br />Clique em **consultas** para ver as consultas atualmente ativas ou recentes. As informações exibidas para consultas incluem cargas, backups e restaurações.<br /><br />Clique em **bloqueios** para ver os bloqueios ativos.|  
+|Monitore informações adicionais para cargas, backups e restaurações.|Clique em **cargas** ou **backups/restaurações**.|  
 |Informações de desempenho|Clique em **Monitor de desempenho**.|  
   
-## <a name="see-also"></a>Consulte também  
-[Monitoramento de dispositivo &#40;Analytics Platform System&#41;](appliance-monitoring.md)  
+## <a name="see-also"></a>Consulte Também  
+[Monitoramento de dispositivo &#40;o sistema de plataforma de análise&#41;](appliance-monitoring.md)  
   

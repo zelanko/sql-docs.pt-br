@@ -14,26 +14,26 @@ ms.assetid: d651186e-c9ca-4864-a444-2cd6943b8e35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6f361b15458230c62d8710e56164e1c80de5d95a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a5c3b456fa650cff94d0b5809c37f7ceca8b1b71
+ms.sourcegitcommit: 961c56bb78ff46ae6eb1a2cc5d2b1262ddf7a4fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62722359"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74706662"
 ---
 # <a name="configure-iis-for-web-synchronization"></a>Configurar IIS para sincronização da Web
   Os procedimentos neste tópico compõem a segunda etapa para configurar a sincronização da Web para replicação de mesclagem. Esta etapa é executada depois que você habilita uma publicação para sincronização da Web. Para obter uma visão geral do processo de configuração, consulte [Configurar Sincronização da Web](configure-web-synchronization.md). Depois de concluir os procedimentos neste tópico, continue na terceira etapa, configurando uma assinatura para usar a sincronização da Web. A terceira etapa é descrita nos seguintes tópicos:  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Como: Configurar uma assinatura para usar sincronização da Web \(SQL Server Management Studio\)](https://msdn.microsoft.com/library/ms345214.aspx)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Como configurar uma assinatura para usar a sincronização \(da Web SQL Server Management Studio\) ](https://msdn.microsoft.com/library/ms345214.aspx)  
   
--   Programação [!INCLUDE[tsql](../../includes/tsql-md.md)] de replicação: [Como: Configurar uma assinatura para usar sincronização da Web (programação Transact-SQL de replicação)](https://msdn.microsoft.com/library/ms345206.aspx)  
+-   Programação [!INCLUDE[tsql](../../includes/tsql-md.md)] de replicação: [Como configurar uma Assinatura para usar a sincronização da Web (Programação Transact-SQL de replicação)](https://msdn.microsoft.com/library/ms345206.aspx)  
   
--   RMO: [Como: Configurar uma assinatura para usar sincronização da Web (programação RMO)](https://msdn.microsoft.com/library/ms345207.aspx)  
+-   RMO: [Como configurar uma assinatura para usar sincronização da Web (programação RMO)](https://msdn.microsoft.com/library/ms345207.aspx)  
   
  A sincronização da Web usa um computador que esteja executando o IIS (Serviços de Informações da Internet) da [!INCLUDE[msCoName](../../includes/msconame-md.md)] para sincronizar assinaturas pull para publicações de mesclagem. As versões 5.0, 6.0 e 7.0 do IIS são compatíveis. O Assistente para Configurar a Sincronização da Web não tem suporte no IIS versão 7.0.  
   
 > [!IMPORTANT]  
->  Certifique-se de que seu aplicativo use apenas versões [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] ou posteriores e que as versões anteriores do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] não estejam instaladas no servidor IIS. Versões anteriores do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] podem causar erros. Entre elas estão as seguintes: "O formato de uma mensagem durante a sincronização da Web era inválido. Verifique se os componentes de replicação estão adequadamente configurados no servidor Web".  
+>  Certifique-se de que seu aplicativo use apenas versões [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] ou posteriores e que as versões anteriores do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] não estejam instaladas no servidor IIS. Versões anteriores do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] podem causar erros. Esses erros incluem o seguinte: "Formato inválido de uma mensagem durante a sincronização da Web. Verifique se os componentes de replicação estão adequadamente configurados no servidor Web".  
   
 > [!CAUTION]  
 >  Não use WebSync e locais de pasta de instantâneo alternativos ao mesmo tempo.  
@@ -42,7 +42,7 @@ ms.locfileid: "62722359"
   
 1.  Configure o protocolo SSL. O SSL é necessário para a comunicação entre o IIS e todos os Assinantes.  
   
-2.  Instale os componentes de conectividade do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no computador que está executando o IIS usando o Assistente de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instale os componentes de conectividade doation Wizard. Se você planeja usar o Assistente para Configurar Sincronização da Web, mencionado na etapa 3, será preciso instalar o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] no computador que está executando o IIS.  
+2.  Instale [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] os componentes de conectividade no computador que está executando o IIS usando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o assistente de instalação do. Se você planeja usar o Assistente para Configurar Sincronização da Web, mencionado na etapa 3, será preciso instalar o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] no computador que está executando o IIS.  
   
 3.  Configure o computador que está executando o IIS para sincronização da Web. Você pode configurar o computador manualmente ou pode usar o Assistente para Configurar Sincronização da Web. Recomendamos o uso do assistente.  
   
@@ -64,15 +64,15 @@ ms.locfileid: "62722359"
   
 1.  Faça logon no computador que está executando IIS como um administrador.  
   
-2.  Inicie o **Gerenciador dos Serviços de Informações da Internet (IIS)** :  
+2.  Inicie o **Gerenciador dos Serviços de Informações da Internet (IIS)**:  
   
-    1.  Clique em **Iniciar**e em **Executar**.  
+    1.  Clique em **Iniciar** e em **Executar**.  
   
-    2.  No **aberto** , digite `inetmgr`e, em seguida, clique em **Okey**.  
+    2.  Na caixa **abrir** , digite `inetmgr`e clique em **OK**.  
   
 3.  Execute o Assistente de Certificado IIS:  
   
-    1.  No **Gerenciador dos Serviços de Informações da Internet (IIS)** , expanda o nó **computador local** e depois expanda a pasta **Sites da Web** .  
+    1.  No **Gerenciador dos Serviços de Informações da Internet (IIS)**, expanda o nó **computador local** e depois expanda a pasta **Sites da Web** .  
   
     2.  Clique com o botão direito em **Site Padrão da Web**e depois clique em **Propriedades**.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "62722359"
   
 4.  Clique em **OK**.  
   
- Se não puder obter um certificado de servidor de uma CA, você poderá especificar um certificado a ser testado. Para configurar o IIS 6.0 para teste, instale um certificado usando o utilitário SelfSSL. Este utilitário está disponível no IIS 6.0 Resource Kit. Você pode baixar as ferramentas no [Centro de Download da Microsoft](https://go.microsoft.com/fwlink/?LinkId=30958). Para o IIS 5.0, vá para [Ajuda e Suporte da Microsoft](https://go.microsoft.com/fwlink/?LinkId=46229).  
+ Se não puder obter um certificado de servidor de uma CA, você poderá especificar um certificado a ser testado. Para configurar o IIS 6.0 para teste, instale um certificado usando o utilitário SelfSSL. Este utilitário está disponível no IIS 6.0 Resource Kit. Você pode baixar as ferramentas no [Centro de Download da Microsoft](https://www.microsoft.com/download/details.aspx?id=5135). Para o IIS 5.0, vá para [Ajuda e Suporte da Microsoft](https://go.microsoft.com/fwlink/?LinkId=46229).  
   
 > [!NOTE]  
 >  Um certificado deve ser associado a um site da Web antes que esse site possa usar o SSL. O SelfSSL associa o certificado automaticamente com o site da Web padrão. Se já tiver um certificado ou se instalar depois um certificado de uma CA, você deve associar explicitamente esse certificado ao site da Web que é usado para a sincronização da Web. Certifique-se de haver somente um certificado associado ao site da Web utilizado para sincronizar as assinaturas. Se houver vários certificados, o Assinante usará o primeiro site da Web disponível.  
@@ -100,7 +100,7 @@ ms.locfileid: "62722359"
         > [!NOTE]  
         >  Por padrão, o certificado instalado pelo SelfSSL é válido durante sete dias.  
   
-    -   Para especificar valores para um ou mais parâmetros: clique em **Iniciar**e clique em **Executar**. No **aberto** , digite `cmd`e, em seguida, clique em **Okey**. Localize o diretório de instalação do SelfSSL, digite `SelfSSL`e depois especifique valores para um ou mais parâmetros. Para obter uma lista de parâmetros, digite `SelfSSL -?`.  
+    -   Para especificar valores para um ou mais parâmetros: clique em **Iniciar**e clique em **Executar**. Na caixa **abrir** , digite `cmd`e clique em **OK**. Localize o diretório de instalação do SelfSSL, digite `SelfSSL`e depois especifique valores para um ou mais parâmetros. Para obter uma lista de parâmetros, digite `SelfSSL -?`.  
   
 ## <a name="installing-connectivity-components-and-sql-server-management-studio"></a>Instalando os componentes de conectividade e o SQL Server Management Studio  
   
@@ -108,7 +108,7 @@ ms.locfileid: "62722359"
   
 1.  Faça logon como administrador no computador executando IIS.  
   
-2.  No disco de instalação do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , inicie o Assistente de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações sobre como usar esse assistente, consulte [instalar o SQL Server 2014 do Assistente de instalação do &#40;instalação&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).  
+2.  No disco de instalação do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , inicie o Assistente de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações sobre como usar esse assistente, consulte [instalar SQL Server 2014 no assistente de instalação &#40;&#41;de instalação ](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).  
   
 3.  Na página **Seleção de Recursos** , selecione **Conectividade das Ferramentas de Cliente**.  
   
@@ -131,7 +131,7 @@ ms.locfileid: "62722359"
   
 -   Cria um diretório virtual e seu alias associado. O alias é usado ao acessar os componentes de sincronização da Web. Por exemplo, se o endereço de IIS for https://*servidor.domínio.com* e você especificar um alias de 'websync1', o endereço de acesso ao componente replisapi.dll será https://*servidor.domínio.com*/websync1/replisapi.dll.  
   
--   Usa a Autenticação Básica. Recomendamos o uso da Autenticação Básica porque ela torna possível executar o IIS e o Publicador/Distribuidor do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em computadores separados (configuração recomendada) sem exigir delegação Kerberos. Usar o SSL com Autenticação Básica assegura que logons, senhas e todos os dados sejam criptografados em trânsito. (SSL é necessário, independentemente do tipo de autenticação usado.) Para obter mais informações sobre as práticas recomendadas para sincronização da Web, consulte a seção "Práticas recomendadas de segurança para a sincronização da Web" em [Configure a sincronização da Web](configure-web-synchronization.md).  
+-   Usa a Autenticação Básica. Recomendamos o uso da Autenticação Básica porque ela torna possível executar o IIS e o Publicador/Distribuidor do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em computadores separados (configuração recomendada) sem exigir delegação Kerberos. Usar o SSL com Autenticação Básica assegura que logons, senhas e todos os dados sejam criptografados em trânsito. (O SSL é necessário, independentemente do tipo de autenticação usado.) Para obter mais informações sobre as práticas recomendadas para sincronização da Web, consulte a seção "práticas recomendadas de segurança para sincronização da Web" em [Configurar sincronização da Web](configure-web-synchronization.md).  
   
 #### <a name="to-configure-the-computer-that-is-running-iis-by-using-the-configure-web-synchronization-wizard"></a>Para configurar o computador que está executando IIS usando o Assistente para Configuração da Sincronização da Web  
   
@@ -155,7 +155,7 @@ ms.locfileid: "62722359"
   
     1.  Na caixa **Alias** , digite um alias para o diretório virtual.  
   
-    2.  Na caixa **Caminho** , digite um caminho para o diretório virtual. Por exemplo, se você inseriu `websync1` no **Alias** , digite `C:\Inetpub\wwwroot\websync1` no **caminho** caixa. Clique em **Avançar**.  
+    2.  Na caixa **Caminho** , digite um caminho para o diretório virtual. Por exemplo, `websync1` se você inseriu na caixa **alias** , digite `C:\Inetpub\wwwroot\websync1` na caixa **caminho** . Clique em **Avançar**.  
   
     3.  Nas duas caixas de diálogo, clique em **Sim**. Isso especifica que você deseja criar uma nova pasta e deseja copiar o Internet Server API (ISAPI) DLL do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . .  
   
@@ -169,7 +169,7 @@ ms.locfileid: "62722359"
   
 8.  Na página **Acesso ao Diretório** :  
   
-    1.  Clique na caixa de diálogo **Adicionar**e depois em **Selecionar Usuários ou Grupos** , adicione as contas pelas quais os Assinantes farão conexões ao IIS. These are the accounts that you will specify on the **Web Server Information** page of the New Subscription Wizard or as the value for the [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql) *@internet_login* parameter.  
+    1.  Clique na caixa de diálogo **Adicionar**e depois em **Selecionar Usuários ou Grupos** , adicione as contas pelas quais os Assinantes farão conexões ao IIS. Essas são as contas que você especificará na página **Informações do Servidor Web** do Assistente para Nova Assinatura ou como o valor para o parâmetro [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)*@internet_login* .  
   
 9. Na página **Acesso ao Compartilhamento de Instantâneos** , digite o compartilhamento de instantâneo. As permissões apropriadas são definidas nesse compartilhamento de forma que os Assinantes possam acessar os arquivos de instantâneos. Para obter mais informações sobre permissões para compartilhamento, consulte [Proteger uma pasta de instantâneo](security/secure-the-snapshot-folder.md).  
   
@@ -179,11 +179,11 @@ ms.locfileid: "62722359"
   
 11. Se o computador que está executando o IIS estiver executando uma versão de 64 bits do Windows, replisapi.dll deverá ser copiado para o diretório adequado:  
   
-    1.  Clique em **Iniciar**e em **Executar**. No **aberto** , digite `iisreset`e, em seguida, clique em **Okey**.  
+    1.  Clique em **Iniciar** e em **Executar**. Na caixa **abrir** , digite `iisreset`e clique em **OK**.  
   
     2.  Depois de interromper e reiniciar o IIS, copie replisapi.dll de [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]COM\replisapi para o diretório especificado na etapa 6b.  
   
-    3.  Clique em **Iniciar**e em **Executar**. No **aberto** , digite `cmd`e, em seguida, clique em **Okey**.  
+    3.  Clique em **Iniciar** e em **Executar**. Na caixa **abrir** , digite `cmd`e clique em **OK**.  
   
     4.  No diretório que você especificou na etapa 6b, execute o seguinte comando:  
   
@@ -203,7 +203,7 @@ ms.locfileid: "62722359"
   
 3.  Registre replisapi.dll:  
   
-    1.  Clique em **Iniciar**e em **Executar**. No **aberto** , digite `cmd`e, em seguida, clique em **Okey**.  
+    1.  Clique em **Iniciar** e em **Executar**. Na caixa **abrir** , digite `cmd`e clique em **OK**.  
   
     2.  No diretório que você criou na etapa 1, execute o seguinte comando:  
   
@@ -217,14 +217,14 @@ ms.locfileid: "62722359"
   
 #### <a name="to-configure-iis-authentication"></a>Para configurar a autenticação de IIS  
   
--   Quando os Assinantes se conectarem ao IIS, o IIS deve autenticar os Assinantes antes que eles possam acessar recursos e processos. O IIS oferece três tipos de autenticação: Anônima, básica e integrada. A autenticação pode ser aplicada para o site da Web inteiro ou para o diretório virtual que você criou.  
+-   Quando os Assinantes se conectarem ao IIS, o IIS deve autenticar os Assinantes antes que eles possam acessar recursos e processos. IIS oferece três tipos de autenticação: Anônima, Básica e Integrada. A autenticação pode ser aplicada para o site da Web inteiro ou para o diretório virtual que você criou.  
   
      É recomendável usar a Autenticação Básica com SSL. A SSL é necessária, independentemente do tipo de autenticação usado. Para obter mais informações sobre como configurar a autenticação, consulte a documentação de IIS.  
   
 ## <a name="setting-permissions-for-the-sql-server-replication-listener"></a>Definindo permissões para o SQL Server Replication Listener  
  Quando um Assinante se conecta ao computador que está executando o IIS, o Assinante é autenticado usando o tipo de autenticação que foi especificado quando você configurou o IIS. Depois de autenticar o Assinante, o IIS verifica se o Assinante está autorizado a invocar a replicação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Você controla os usuários que podem invocar a replicação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definindo as permissões para replisapi.dll. É necessário configurar corretamente as permissões para impedir acesso não autorizado à replicação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- Para configurar as permissões mínimas para a conta sob a qual o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Listener é executado, realize o procedimento a seguir. As etapas no procedimento se aplicam ao [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] executando o IIS 6.0.  
+ Para configurar as permissões mínimas para a conta sob a qual o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Listener é executado, realize o procedimento a seguir. As etapas no procedimento se aplicam [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] à execução do IIS 6,0.  
   
  Além de realizar as etapas a seguir, certifique-se de que os logons necessários estão na lista de acesso à publicação (PAL). Para obter mais informações sobre a PAL, consulte [Secure the Publisher](security/secure-the-publisher.md) (Proteger o publicador).  
   
@@ -232,7 +232,7 @@ ms.locfileid: "62722359"
   
 1.  Crie uma conta local no computador que está executando o IIS:  
   
-    1.  Clique com o botão direito do mouse em **Meu Computador**e, em seguida, clique em **Gerenciar**.  
+    1.  Clique com o botão direito do mouse em **Meu Computador** e clique em **Gerenciar**.  
   
     2.  Em **Gerenciamento do Computador**, expanda **Usuários e Grupos Locais**.  
   
@@ -240,7 +240,7 @@ ms.locfileid: "62722359"
   
     4.  Digite um nome de usuário e uma senha forte.  
   
-    5.  Clique em **Criar**e depois em **Fechar**.  
+    5.  Clique em **Criar** e, em seguida, clique em **Fechar**.  
   
 2.  Adicione a conta ao grupo IIS_WPG:  
   
@@ -260,7 +260,7 @@ ms.locfileid: "62722359"
   
     1.  Localize a pasta que você criou para replisapi.dll, clique com o botão direito do mouse na pasta e depois clique em **Compartilhamento e Segurança**.  
   
-    2.  Na guia **Segurança** , clique em **Adicionar**.  
+    2.  Na guia **Segurança**, clique em **Adicionar**.  
   
     3.  Na caixa de diálogo **Selecionar Usuários, Computadores ou Grupos** , adicione a conta criada na etapa 1.  
   
@@ -272,13 +272,13 @@ ms.locfileid: "62722359"
   
     7.  Clique em **OK**.  
   
-4.  Crie um pool de aplicativos no **Gerenciador dos Serviços de Informação de Internet (IIS)** :  
+4.  Crie um pool de aplicativos no **Gerenciador dos Serviços de Informação de Internet (IIS)**:  
   
-    1.  Clique em **Iniciar**e em **Executar**.  
+    1.  Clique em **Iniciar** e em **Executar**.  
   
-    2.  No **aberto** , digite `inetmgr`e, em seguida, clique em **Okey**.  
+    2.  Na caixa **abrir** , digite `inetmgr`e clique em **OK**.  
   
-    3.  No **Gerenciador dos Serviços de Informação de Internet (IIS)** , expanda o nó do **computador local** .  
+    3.  No **Gerenciador dos Serviços de Informação de Internet (IIS)**, expanda o nó do **computador local** .  
   
     4.  Clique com o botão direito do mouse em **Pools de Aplicativos**, aponte para **Novo** e clique em **Pool de Aplicativos**.  
   
@@ -286,11 +286,11 @@ ms.locfileid: "62722359"
   
 5.  Associe a conta com o pool de aplicativos:  
   
-    1.  No **Gerenciador dos Serviços de Informação de Internet (IIS)** , expanda o nó do **computador local** e depois expanda **Pools de Aplicativos**.  
+    1.  No **Gerenciador dos Serviços de Informação de Internet (IIS)**, expanda o nó do **computador local** e depois expanda **Pools de Aplicativos**.  
   
     2.  Clique com o botão direito do mouse no pool de aplicativos que você criou e depois clique em **Propriedades**.  
   
-    3.  Na caixa de diálogo **Propriedades de \<ApplicationPoolName>** , na guia **Identidade**, clique em **Configurável**.  
+    3.  Na caixa de diálogo ** \<Propriedades de> do ApplicationPoolName** , na guia **identidade** , clique em **configurável**.  
   
     4.  Nos campos **Nome de usuário** e **senha** , digite a conta e senha que foram criadas na etapa 1.  
   
@@ -298,11 +298,11 @@ ms.locfileid: "62722359"
   
 6.  Associe o pool de aplicativos com o diretório virtual que é usado para a sincronização da Web:  
   
-    1.  No **Gerenciador dos Serviços de Informação de Internet (IIS)** , expanda o nó do **computador local** e depois expanda **Sites da Web**.  
+    1.  No **Gerenciador dos Serviços de Informação de Internet (IIS)**, expanda o nó do **computador local** e depois expanda **Sites da Web**.  
   
     2.  Expanda o site da Web que você está usando para a sincronização da Web, clique com o botão direito do mouse no diretório virtual que você criou para a sincronização da Web e depois clique em **Propriedades**.  
   
-    3.  Na guia **Diretório Virtual** da caixa de diálogo **Propriedades de \<VirtualDirectoryName>** , na lista suspensa **Pool de aplicativos**, selecione o pool de aplicativos criado na etapa 5.  
+    3.  Na guia **Diretório Virtual** da caixa de diálogo **Propriedades de \<VirtualDirectoryName>**, na lista suspensa **Pool de aplicativos**, selecione o pool de aplicativos criado na etapa 5.  
   
     4.  Clique em **OK**.  
   
@@ -313,7 +313,7 @@ ms.locfileid: "62722359"
   
 1.  Certifique-se de que as configurações de rede local (LAN) no Assinante estão corretas:  
   
-    1.  No [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer, no menu **Ferramentas** , clique em **Opções da Internet**.  
+    1.  No [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer, no menu **ferramentas** , clique em **Opções da Internet**.  
   
     2.  Na guia **Conexões** , clique em **Configurações da LAN**.  
   
@@ -347,7 +347,7 @@ ms.locfileid: "62722359"
     > [!NOTE]  
     >  Os certificados serão instalados para os usuários. Esse processo deve ser executado para cada usuário que sincronizará com o IIS.  
   
-4.  Na caixa de diálogo **Conectar a \<ServerName>** , especifique o logon e a senha que o Agente de Mesclagem usará para se conectar ao IIS. Essas credenciais também serão especificadas no Assistente para Nova Assinatura.  
+4.  Na caixa de diálogo **Conectar a \<ServerName>**, especifique o logon e a senha que o Agente de Mesclagem usará para se conectar ao IIS. Essas credenciais também serão especificadas no Assistente para Nova Assinatura.  
   
 5.  Na janela do Internet Explorer chamada **Informação diagnóstica do SQL Websync**, verifique se o valor em cada coluna **Status** na página é **ÊXITO**.  
   
@@ -357,7 +357,7 @@ ms.locfileid: "62722359"
   
     2.  Conecte ao servidor em modo diagnóstico. Se o certificado estiver instalado corretamente, a caixa de diálogo **Alerta de Segurança** não aparecerá. Se a caixa de diálogo aparecer, o Merge Agent apresentará falha quando tentar se conectar ao computador que está executando o IIS. Você deve certificar-se de que o certificado para o servidor que você está acessando foi adicionado ao repositório de certificados no Assinante como um certificado confiável. Para obter mais informações sobre exportação de certificados, consulte a documentação do IIS.  
   
-## <a name="see-also"></a>Consulte também  
- [Configurar Sincronização da Web](configure-web-synchronization.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Configurar sincronização da Web](configure-web-synchronization.md)  
   
   

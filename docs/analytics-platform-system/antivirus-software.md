@@ -1,5 +1,5 @@
 ---
-title: Software antivírus-sistema de plataforma de análise (APS) | Microsoft Docs
+title: Software antivírus
 description: Se seu data center exigir um software antivírus, use estas diretrizes para instalar o software antivírus no Analytics Platform System (APS). Recomendamos não instalar o software antivírus, a menos que seja um requisito de sua data center.
 author: mzaman1
 ms.prod: sql
@@ -8,12 +8,13 @@ ms.topic: conceptual
 ms.date: 04/24/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 92a34405e75c37cd0347b15aa445b98d84ebcc2a
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.custom: seo-dt-2019
+ms.openlocfilehash: c3687b839e52e64350591402c3aa19e9c2c54ac7
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176058"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401468"
 ---
 # <a name="antivirus-software-for-analytics-platform-system-aps"></a>Software antivírus para o Analytics Platform System (APS)
 Se seu data center exigir software antivírus, use estas diretrizes para instalar o software antivírus no Analytics Platform System. Recomendamos não instalar o software antivírus, a menos que seja um requisito de sua data center.  
@@ -51,7 +52,7 @@ Para instalar o software antivírus nas VMs, exclua a lista de diretórios e arq
   
 -   G:\  
   
-**_appliance_domain_-AD01** e  **_appliance_domain_-AD02**  
+**_appliance_domain_-AD01** e ** _appliance_domain_-AD02**  
   
 -   Sem restrições  
   
@@ -73,6 +74,6 @@ Para instalar o software antivírus nas VMs, exclua a lista de diretórios e arq
   
 -   C:\iscsitarget  
   
-## <a name="see-also"></a>Consulte também  
-[Sistema de plataforma &#40;de análise de tarefas de gerenciamento de dispositivo&#41;](appliance-management-tasks.md)  
+## <a name="see-also"></a>Consulte Também  
+[Tarefas de gerenciamento de dispositivo &#40;Analytics Platform System&#41;](appliance-management-tasks.md)  
   

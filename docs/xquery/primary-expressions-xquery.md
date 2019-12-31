@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: d4183c3e-12b5-4ca0-8413-edb0230cb159
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e8704a01d810477fd0359196cb622984da357cf6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7e3504b4f04b1b9842f786eeef3ecf1f105563f5
+ms.sourcegitcommit: 381595e990f2294dbf324ef31071e2dd2318b8dd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67946389"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74200513"
 ---
 # <a name="primary-expressions-xquery"></a>Expressões primárias (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -36,13 +36,13 @@ ms.locfileid: "67946389"
   
 |Referência de entidade|Representa|  
 |----------------------|----------------|  
-|&lt;|\<|  
-|&gt;|>|  
-|&amp;|&|  
-|&quot;|"|  
-|&apos;|'|  
+|`&lt;`|\<|  
+|`&gt;`|>|  
+|`&amp;`|&|  
+|`&quot;`|"|  
+|`&apos;`|'|  
   
- Um literal da cadeia de caracteres também pode conter uma referência de caractere, uma referência de estilo XML para um caractere Unicode, que é identificado por seu ponto de código decimal ou hexadecimal. Por exemplo, o símbolo do Euro pode ser representado pela referência de caractere, "&\#8364".  
+ Um literal da cadeia de caracteres também pode conter uma referência de caractere, uma referência de estilo XML para um caractere Unicode, que é identificado por seu ponto de código decimal ou hexadecimal. Por exemplo, o símbolo de euro pode ser representado pela referência de caractere "&\#8364;".  
   
 > [!NOTE]  
 >  O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa a versão XML 1.0 como a base da análise.  
@@ -64,7 +64,7 @@ GO
 ```  
 DECLARE @var XML  
 SET @var = ''  
-SELECT @var.query(' <SalaryRange>Salary > 50000 and < 100000</SalaryRange>')  
+SELECT @var.query(' <SalaryRange>Salary &gt; 50000 and &lt; 100000</SalaryRange>')  
 GO  
 ```  
   
@@ -93,7 +93,7 @@ Go
   
  `<a>I don't know</a>`  
   
- As funções booleanas internas **True ()** e **False ()** , pode ser usado para representar valores boolianos, conforme mostrado no exemplo a seguir.  
+ As funções booleanas internas, **true ()** e **false ()**, podem ser usadas para representar valores Boolianos, conforme mostrado no exemplo a seguir.  
   
 ```  
 DECLARE @var XML  
@@ -130,7 +130,7 @@ for $x:i in /root return data($x:i)')
 GO  
 ```  
   
- Você pode usar a função de extensão do SQL: Variable para se referir a variáveis SQL, conforme mostrado na consulta a seguir.  
+ Você pode usar a função de extensão SQL: variable () para fazer referência a variáveis SQL, conforme mostrado na consulta a seguir.  
   
 ```  
 DECLARE @price money  
@@ -151,10 +151,10 @@ SELECT @x.query('<value>{sql:variable("@price") }</value>')
   
 -   Não é oferecido suporte à importação de módulo.  
   
--   Não é oferecido suporte a declarações de variáveis externas. Uma solução para isso é usar o [função SQL: Variable](../xquery/xquery-extension-functions-sql-variable.md).  
+-   Não é oferecido suporte a declarações de variáveis externas. Uma solução para isso é usar a [função SQL: variable ()](../xquery/xquery-extension-functions-sql-variable.md).  
   
 ## <a name="context-item-expressions"></a>Expressões de item de contexto  
- O item de contexto é o item sendo processado atualmente no contexto de uma expressão de caminho. Ele é inicializado em uma instância de tipo de dados XML não NULL com o nó de documento. Ele também pode ser alterado pelo método Nodes (), no contexto de expressões XPath ou predicados [].  
+ O item de contexto é o item sendo processado atualmente no contexto de uma expressão de caminho. Ele é inicializado em uma instância de tipo de dados XML não NULL com o nó de documento. Ele também pode ser alterado pelo método Nodes (), no contexto de expressões XPath ou nos predicados [].  
   
  O item de contexto é retornado por uma expressão que contém um ponto (.). Por exemplo, a consulta a seguir avalia cada elemento <`a`> para a presença do atributo `attr`. Se o atributo estiver presente, o elemento será retornado. Observe que a condição no predicado especifica que o nó de contexto é especificado por um único ponto.  
   
@@ -172,7 +172,7 @@ SELECT @var.query('/ROOT[1]/a[./@attr]')
  `<a attr="1">2</a>`  
   
 ## <a name="function-calls"></a>Chamadas de função  
- Você pode chamar funções XQuery internas e a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] funções Variable () e SQL: Column. Para obter uma lista de funções implementadas, consulte [funções XQuery em tipos de dados xml](../xquery/xquery-functions-against-the-xml-data-type.md).  
+ Você pode chamar funções XQuery internas e as [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] funções SQL: variable () e SQL: Column (). Para obter uma lista das funções implementadas, consulte [funções do XQuery em relação ao tipo de dados XML](../xquery/xquery-functions-against-the-xml-data-type.md).  
   
 #### <a name="implementation-limitations"></a>Limitações de implementação  
  Estas são as limitações de implementação:  
@@ -181,7 +181,6 @@ SELECT @var.query('/ROOT[1]/a[./@attr]')
   
 -   Não é oferecido suporte à importação de função.  
   
-## <a name="see-also"></a>Consulte também  
- [Construção XML &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)  
-  
-  
+## <a name="see-also"></a>Consulte Também  
+ [Construção XML &#40;&#41;XQuery](../xquery/xml-construction-xquery.md)
+ 

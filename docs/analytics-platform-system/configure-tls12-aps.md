@@ -1,6 +1,6 @@
 ---
-title: 'Configurando o TLS 1.2 no Analytics Platform System | Microsoft Docs '
-description: Recomendação para configurar o TLS 1.2 no APS
+title: Configurando o TLS 1,2
+description: Recomendação para configurar o TLS 1,2 no APS
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,22 +8,22 @@ ms.topic: conceptual
 ms.date: 10/29/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: e77e1de7ccc3894d9356821a95139835ceb52caa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 988cac765a596b541d128b0b6190f6f228d95ee7
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961185"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401248"
 ---
-# <a name="configure-tls-12-in-aps"></a>Configurar o TLS 1.2 no APS
+# <a name="configure-tls-12-in-aps"></a>Configurar o TLS 1,2 no APS
 
-Para proteger pontos de acesso para usar somente o TLS 1.2, você terá que desabilitar explicitamente o outro protocolo em todos os hosts físicos e virtuais. Desabilitando protocolos exigem alterações de configuração do registro. Alterações no registro exigem uma reinicialização dos hosts físicos e virtuais.
+Para proteger os APS para usar apenas o TLS 1,2, você terá que desabilitar explicitamente outro protocolo em todos os hosts físicos e virtuais. A desabilitação de protocolos requer alterações de configuração do registro. As alterações de registro exigem uma reinicialização dos hosts virtuais e físicos.
 
 > [!WARNING]
-> Esta seção, método ou tarefa contêm as etapas que indicam como modificar o Registro. No entanto, problemas graves podem ocorrer se você modificar o Registro incorretamente que pode causar perda de dados e exigir a reinstalação do sistema operacional. É altamente recomendável fazer backup do registro antes de modificá-lo. Em seguida, restaure o Registro se ocorrer algum problema. Para obter mais informações sobre como fazer backup e restaurar o registro, clique no número abaixo para ler o artigo da Base de dados de Conhecimento Microsoft:<br>
+> Esta seção, método ou tarefa contêm as etapas que indicam como modificar o Registro. No entanto, problemas sérios podem ocorrer se você modificar o registro incorretamente, o que pode causar perda de dados e exigir a reinstalação do sistema operacional. É altamente recomendável fazer backup do registro antes de modificá-lo. Em seguida, restaure o Registro se ocorrer algum problema. Para obter mais informações sobre como fazer backup e restaurar o registro, clique no número de artigo a seguir para exibir o artigo na base de dados de conhecimento Microsoft:<br>
 [322756](https://support.microsoft.com/help/322756) como fazer backup e restaurar o registro no Windows
 
-**Desative:**
+**Desativar**
 ```
 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0]
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0\Client]
@@ -41,7 +41,7 @@ HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\P
 "DisabledByDefault"=dword:00000001
 ```
 
-Também defina as seguintes chaves no seu cliente máquinas em que as ferramentas, como adaptadores de destino SSIS APS estão instaladas.
+Além disso, defina as seguintes chaves em seus computadores cliente onde as ferramentas como os adaptadores de destino do APS SSIS estão instaladas.
 ```
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319]
 "SystemDefaultTlsVersions"=dword:00000001

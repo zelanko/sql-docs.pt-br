@@ -1,5 +1,5 @@
 ---
-title: Instalação de hardware-sistemas de plataforma de análise (APS) | Microsoft Docs
+title: Instalação do hardware
 description: Este artigo descreve como mover, desempacotar e instalar o hardware para seu dispositivo de SQL Server PDW. Este artigo é apenas informativo e destina-se a ajudá-lo a entender o processo. Seu dispositivo deve ser desempacotado, instalado e verificado antes de ser ativado para você. A participação do cliente é necessária para itens como acesso data center, energia elétrica e conexões Ethernet.
 author: mzaman1
 ms.prod: sql
@@ -8,12 +8,13 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: dc57311ae38977643be697eea5fc095ce514b0d2
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 60e27e2251cd2f613ca00266d76d4aaaf3b5c442
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176148"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401121"
 ---
 # <a name="hardware-installation-for-analytics-platform-system-aps-appliance"></a>Instalação de hardware para o dispositivo do Analytics Platform System (APS)
 Este artigo descreve como mover, desempacotar e instalar o hardware para seu dispositivo de SQL Server PDW. Este artigo é apenas informativo e destina-se a ajudá-lo a entender o processo. Seu dispositivo deve ser desempacotado, instalado e verificado antes de ser ativado para você. A participação do cliente é necessária para itens como acesso data center, energia elétrica e conexões Ethernet.  
