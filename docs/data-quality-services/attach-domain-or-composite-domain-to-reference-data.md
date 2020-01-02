@@ -1,5 +1,7 @@
 ---
-title: Anexar domínio ou domínio composto para dados de referência
+title: Anexar domínio ou domínio composto a dados de referência
+description: Descreve como anexar domínios ou domínios compostos em uma base de conhecimento de qualidade de dados com o DQS (Data Quality Services) no SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -12,14 +14,14 @@ f1_keywords:
 ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: dbd64575acaf5ddf2f57e99b010a8a3b1555780e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: df671e83d80175f154a4008270c3b68dc2581b59
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75258870"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557911"
 ---
-# <a name="attach-domain-or-composite-domain-to-reference-data"></a>Anexar domínio ou domínio composto para dados de referência
+# <a name="attach-domain-or-composite-domain-to-reference-data---data-quality-services-dqs"></a>Anexar domínio ou domínio composto a dados de referência-DQS (Data Quality Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 

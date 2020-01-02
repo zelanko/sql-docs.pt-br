@@ -1,5 +1,7 @@
 ---
-title: Atualize o esquema de bancos de dados DQS depois de instalar a atualização do SQL Server
+title: Atualizar o esquema de bancos de dados do DQS depois de instalar SQL Server atualização
+description: Saiba como atualizar a instância do DQS (Data Quality Services) usando o DQSInstaller. exe após a SQL Server ter sido atualizada por um patch, hotfix ou atualização cumulativa.
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -9,14 +11,14 @@ ms.topic: conceptual
 ms.assetid: c8f3fbae-02c4-464d-a35c-7108f48c58cb
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 17151ed7f20070b7db042b0bc7e7af31bc64b80e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: db5009ef7f5c9ff2a57022d30b2eb9f009fb6ab8
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75252807"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558026"
 ---
-# <a name="upgrade-dqs-databases-schema-after-installing-sql-server-update"></a>Atualize o esquema de bancos de dados DQS depois de instalar a atualização do SQL Server
+# <a name="upgrade-dqs-databases-schema-after-installing-sql-server-update"></a>Atualizar o esquema de bancos de dados do DQS depois de instalar SQL Server atualização
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 

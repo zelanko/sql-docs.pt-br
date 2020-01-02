@@ -1,5 +1,7 @@
 ---
-title: O SQL Server com suporte e tipos de dados do SSIS para domínios do DQS
+title: Tipos de dados SQL Server e SSIS com suporte para domínios do DQS
+description: Descreve os quatro tipos de dados para domínios do Data Quality Services (DQS) (dados, Decimal, inteiro e cadeia de caracteres) em SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 11/08/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -9,14 +11,14 @@ ms.topic: conceptual
 ms.assetid: 4931143a-b84d-478b-9b45-174128d36ed3
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 57950290bdf2b7f83463fa6b950db90a4bdbb9f0
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: cff5cf3a2a6095b79537571d63ee428c500789c6
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75257767"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558161"
 ---
-# <a name="supported-sql-server-and-ssis-data-types-for-dqs-domains"></a>O SQL Server com suporte e tipos de dados do SSIS para domínios do DQS
+# <a name="supported-sql-server-and-ssis-data-types-for-dqs-domains"></a>Tipos de dados SQL Server e SSIS com suporte para domínios do DQS
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -25,7 +27,7 @@ ms.locfileid: "75257767"
 > [!NOTE]  
 >  Nos arquivos .xlsx e .xls, o tipo de dados da coluna de origem é determinado pelo tipo de dados mais frequente nas oito primeiras linhas. Se uma célula para não estiver em conformidade com esse tipo de dados, ela receberá um valor nulo. De modo semelhante, em arquivos .csv, o tipo de dados da coluna de origem é determinado pelo tipo de dados mais frequente nas oito primeiras linhas.  
   
-##  <a name="SQLServer"></a>Tipos de dados SQL Server com suporte  
+##  <a name="SQLServer"></a>Tipos de dados SQL Server com suporte 
  A tabela a seguir fornece informações sobre os tipos de dados de SQL Server com suporte para cada tipo de dados de domínio do DQS:  
   
 |Tipo de dados de domínio DQS|Tipo de dados do SQL Server com suporte|  
