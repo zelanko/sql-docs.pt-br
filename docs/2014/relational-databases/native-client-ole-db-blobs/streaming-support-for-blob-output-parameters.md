@@ -1,5 +1,5 @@
 ---
-title: Suporte a streaming para o BLOB de parâmetros de saída | Microsoft Docs
+title: Suporte de streaming para parâmetros de saída de BLOB | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -507,7 +507,7 @@ _Exit:
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [BLOBs e objetos OLE](blobs-and-ole-objects.md)  
   
   
