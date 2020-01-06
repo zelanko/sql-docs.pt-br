@@ -12,12 +12,12 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 98be5f404118ab217ae7700dbf6ec8f02012610f
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 792cb1bcef1097c3eddaa325519b43a229bcccb4
+ms.sourcegitcommit: ba44730f5cc33295ae2ed1f281186dd266bad4ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907096"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74190800"
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>Assistente Importar Arquivo Simples para SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ O PROSE analisa os padrões de dados no arquivo de entrada para inferir os nomes
 
 Para entender melhor a melhoria na experiência do usuário do Assistente Importar Arquivo Simples, confira este vídeo:
 
-> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173/player]
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173/player?WT.mc_id=dataexposed-c9-niner]
 
 ## <a name="prerequisites"></a>Prerequisites
 Esse recurso só está disponível no SSMS (SQL Server Management Studio) v17.3 ou posterior. Verifique se você está usando a versão mais recente. É possível encontrar a versão mais recente [aqui.](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)

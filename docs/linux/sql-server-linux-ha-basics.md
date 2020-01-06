@@ -8,12 +8,12 @@ ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 2f5f14134c0932e44160076a36f5de72cbde5a04
-ms.sourcegitcommit: ac90f8510c1dd38d3a44a45a55d0b0449c2405f5
+ms.openlocfilehash: d597033e6ad09a735e621518883cedda6bef29a2
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72586752"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243594"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Noções básicas de disponibilidade do SQL Server para implantações do Linux
 
@@ -57,7 +57,7 @@ Esta seção aborda as tarefas comuns a todas as implantações do [!INCLUDE[ssn
 Copiar arquivos de um servidor para outro é uma tarefa que qualquer pessoa que use o [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] no Linux deve ser capaz de fazer. Essa tarefa é muito importante para as configurações do AG.
 
 Aspectos como problemas de permissão podem existir no Linux, bem como em instalações baseadas no Windows. No entanto, aqueles familiarizados com a cópia do servidor para o servidor no Windows podem não saber como isso ele é feito no Linux. Um método comum é usar o utilitário `scp` de linha de comando, que representa a cópia segura. Nos bastidores, `scp` o usa o OpenSSH. SSH significa Secure Shell. Dependendo da distribuição do Linux, o OpenSSH pode não estar instalado. Se não estiver, o OpenSSH precisará ser instalado primeiro. Para obter mais informações sobre como configurar o OpenSSH, confira as informações nos links a seguir para cada distribuição:
--   [Red Hat Enterprise Linux (RHEL)](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/deployment_guide/ch-openssh)
+-   [Red Hat Enterprise Linux (RHEL)](https://access.redhat.com/documentation/red_hat_enterprise_linux/6/html/deployment_guide/ch-openssh)
 -   [SUSE Linux Enterprise Server (SLES)](https://en.opensuse.org/SDB:Configure_openSSH)
 -   [Ubuntu](https://help.ubuntu.com/community/SSH/OpenSSH/Configuring)
 
@@ -83,7 +83,7 @@ Por fim, o uso de um compartilhamento NFS (Network File System) é uma opção. 
 ### <a name="configure-the-firewall"></a>Configurar o firewall
 Semelhantes ao Windows, as distribuições do Linux têm um firewall interno. Se a sua empresa estiver usando um firewall externo para os servidores, a desabilitação dos firewalls no Linux poderá ser aceitável. No entanto, independentemente de onde o firewall está habilitado, as portas precisam estar abertas. A tabela a seguir documenta as portas comuns necessárias para implantações do [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] altamente disponíveis no Linux.
 
-| Número da Porta | Tipo     | Descrição                                                                                                                 |
+| Número da porta | Type     | DESCRIÇÃO                                                                                                                 |
 |-------------|----------|-----------------------------------------------------------------------------------------------------------------------------|
 | 111         | TCP/UDP  | NFS – `rpcbind/sunrpc`                                                                                                    |
 | 135         | TCP      | Samba (se usado) – Mapeador de ponto de extremidade                                                                                          |
@@ -116,7 +116,7 @@ sudo firewall-cmd --permanent --add-service=high-availability
 ```
 
 **Documentação do firewall:**
--   [RHEL](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-firewalls-haar)
+-   [RHEL](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-firewalls-haar)
 -   [SLES](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html)
 
 ### <a name="install-includessnoversion-mdincludesssnoversion-mdmd-packages-for-availability"></a>Instalar pacotes do [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] para disponibilidade
@@ -127,7 +127,7 @@ Em uma instalação do [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
 
 Quando AGs ou FCIs são configurados em uma configuração baseada no Windows, eles têm reconhecimento de cluster. O reconhecimento de cluster significa que o [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] tem DLLs de recurso específicas que um WSFC conhece (sqagtres.dll e sqsrvres.dll para FCIs, hadrres.dll para AGs) e são usadas pelo WSFC para garantir que a funcionalidade clusterizada do [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] esteja ativa, em execução e funcionando corretamente. Como o clustering é externo não apenas ao [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] como ao próprio Linux, a Microsoft teve de codificar o equivalente a uma DLL de recurso para implantações de FCI e AG baseadas no Linux. Esse é o pacote *mssql-server-ha*, também conhecido como agente de recurso do [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] para o Pacemaker. Para instalar o pacote *mssql-server-ha*, confira [Instalar os pacotes de HA e do SQL Server Agent](sql-server-linux-deploy-pacemaker-cluster.md#install-the-sql-server-ha-and-sql-server-agent-packages).
 
-Os outros pacotes opcionais para o [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] no Linux, pesquisa de texto completo do [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] (*mssql-server-fts*) e [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Integration Services (*mssql-server-is*), não são necessários para alta disponibilidade, seja para uma FCI ou um AG.
+Os outros pacotes opcionais para o [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] no Linux, Pesquisa de Texto Completo do [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] (*mssql-server-fts*) e [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Integration Services (*mssql-server-is*), não são necessários para alta disponibilidade, seja para uma FCI ou um AG.
 
 ## <a name="pacemaker-for-always-on-availability-groups-and-failover-cluster-instances-on-linux"></a>Pacemaker para Grupos de Disponibilidade Always On e instâncias de cluster de failover no Linux
 Conforme observado anteriormente, o único mecanismo de clustering com suporte no momento pela Microsoft para AGs e FCIs é o Pacemaker com Corosync. Esta seção aborda as informações básicas para entender a solução, bem como planejar e implantá-la em configurações do [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)].

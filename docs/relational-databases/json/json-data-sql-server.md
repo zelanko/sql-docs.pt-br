@@ -13,12 +13,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b74463acd2c202dd0b14167b40a715308f16e787
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.openlocfilehash: 80f6d40fd2c548135595fd96de6de4b967460a90
+ms.sourcegitcommit: ba44730f5cc33295ae2ed1f281186dd266bad4ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74095770"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74190363"
 ---
 # <a name="json-data-in-sql-server"></a>Dados JSON no SQL Server
 
@@ -60,7 +60,7 @@ Usando funções internas e operadores do SQL Server, é possível realizar as a
 As seções a seguir discutem as principais funcionalidades fornecidas pelo SQL Server com seu suporte interno ao JSON. No vídeo a seguir, você verá como usar os operadores e funções JSON:
 
 *SQL Server 2016 e suporte para JSON*
-> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support/player]
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support/player?WT.mc_id=dataexposed-c9-niner]
 
 ### <a name="extract-values-from-json-text-and-use-them-in-queries"></a>Extrair valores do texto JSON e usá-los em consultas
 
@@ -403,7 +403,7 @@ Veja o que você pode fazer com os scripts incluídos no arquivo:
 Para obter uma introdução visual do suporte interno a JSON no SQL Server e no Banco de Dados SQL do Azure, assista ao vídeo a seguir:
 
 *Usando JSON no SQL Server 2016 e no Banco de Dados SQL do Azure*
-> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database/player]
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database/player?WT.mc_id=dataexposed-c9-niner]
 
 *Building REST API with SQL Server using JSON functions* (Criando a API REST com o SQL Server usando funções JSON)
 > [!VIDEO https://www.youtube.com/embed/0m6GXF3-5WI]

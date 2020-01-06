@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6e1a935dcaa605caf9483fadd5707bafbfb6b83b
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 9e6ef9592f980cab3e379fc27083ed34b8e94798
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531296"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243604"
 ---
 # <a name="how-to-configure-persistent-memory-pmem-for-sql-server-on-linux"></a>Como configurar a PMEM (memória persistente) para SQL Server em Linux
 
@@ -79,7 +79,7 @@ ndctl list
 
   Depois que o dispositivo tiver sido configurado com ndctl, formatado e montado, você poderá colocar arquivos de banco de dados nele. Também é possível criar um banco de dados 
 
-1. Já que o uso de O_DIRECT é seguro nos dispositivos PMEM, habilite o sinalizador de rastreamento 3979 para desabilitar o mecanismo de liberação forçada. Esse sinalizador de rastreamento é de inicialização e, como tal, precisa ser habilitado usando o utilitário mssql-conf. Observe que essa é uma alteração de configuração de todo o servidor e você não deverá usar esse sinalizador de rastreamento se tiver qualquer dispositivo em não conformidade com O_DIRECT que precise do mecanismo de liberação forçada para assegurar a integridade dos dados. Para obter mais informações, confira https://support.microsoft.com/en-us/help/4131496/enable-forced-flush-mechanism-in-sql-server-2017-on-linux
+1. Já que o uso de O_DIRECT é seguro nos dispositivos PMEM, habilite o sinalizador de rastreamento 3979 para desabilitar o mecanismo de liberação forçada. Esse sinalizador de rastreamento é de inicialização e, como tal, precisa ser habilitado usando o utilitário mssql-conf. Observe que essa é uma alteração de configuração de todo o servidor e você não deverá usar esse sinalizador de rastreamento se tiver qualquer dispositivo em não conformidade com O_DIRECT que precise do mecanismo de liberação forçada para assegurar a integridade dos dados. Para obter mais informações, confira https://support.microsoft.com/help/4131496/enable-forced-flush-mechanism-in-sql-server-2017-on-linux
 
 1. Reinicie o SQL Server.
 

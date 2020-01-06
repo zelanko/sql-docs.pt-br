@@ -9,12 +9,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a0ad547d26c86c43b0009cdf20acae33ed7e8ab7
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: ee00232a1c1e64d31b7b6360666bdeebba756db9
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69553234"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246948"
 ---
 # <a name="microsoft-connector-for-oracle"></a>Microsoft Connector para Oracle
 
@@ -43,7 +43,7 @@ O Oracle Database tem suporte em todos os sistemas operacionais e plataformas.
 
 ## <a name="installation"></a>Instalação
 
-Se você precisar executar o pacote no SQL Server, obtenha o Microsoft Connector para o programa de instalação do Oracle Database [aqui](https://www.microsoft.com/en-us/download/details.aspx?id=58228). Em seguida, siga as instruções no assistente de instalação.
+Se você precisar executar o pacote no SQL Server, obtenha o Microsoft Connector para o programa de instalação do Oracle Database [aqui](https://www.microsoft.com/download/details.aspx?id=58228). Em seguida, siga as instruções no assistente de instalação.
 
 Depois de instalar o Connector, reinicie o Serviço de Integração do SQL Server para verificar se a origem e o destino Oracle estão funcionando corretamente.
 
@@ -61,10 +61,10 @@ Para criar um pacote do SSIS para o SQL Server 2017 e versões anteriores, é pr
 
 **Links para download:**
 
-- [SQL Server 2017: Microsoft Connector versão 5.0 para Oracle da Attunity](https://www.microsoft.com/en-us/download/details.aspx?id=55179)
-- [SQL Server 2016: Microsoft Connector versão 4.0 para Oracle da Attunity](https://www.microsoft.com/en-us/download/details.aspx?id=52950)
-- [SQL Server 2014: Microsoft Connector versão 3.0 para Oracle da Attunity](https://www.microsoft.com/en-us/download/details.aspx?id=44582)
-- [SQL Server 2012: Microsoft Connector versão 2.0 para Oracle da Attunity](https://www.microsoft.com/en-us/download/details.aspx?id=29283)
+- [SQL Server 2017: Microsoft Connector versão 5.0 para Oracle da Attunity](https://www.microsoft.com/download/details.aspx?id=55179)
+- [SQL Server 2016: Microsoft Connector versão 4.0 para Oracle da Attunity](https://www.microsoft.com/download/details.aspx?id=52950)
+- [SQL Server 2014: Microsoft Connector versão 3.0 para Oracle da Attunity](https://www.microsoft.com/download/details.aspx?id=44582)
+- [SQL Server 2012: Microsoft Connector versão 2.0 para Oracle da Attunity](https://www.microsoft.com/download/details.aspx?id=29283)
 
 ## <a name="next-steps"></a>Próximas etapas
 

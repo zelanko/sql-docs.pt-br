@@ -1,8 +1,8 @@
 ---
-title: Instalar o SQL Server com a Desired State Configuration do PowerShell | Microsoft Docs
+title: 'Instalar: Desired State Configuration do PowerShell'
 description: Saiba como instalar o SQL Server usando a DSC (Desired State Configuration) do PowerShell.
-ms.custom: ''
-ms.date: 10/26/2018
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.devlang: PowerShell
 ms.prod: sql
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: randomnote1
 ms.author: dareist
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c3966d681b9001b2bded09c6c92aa665eec7a2d9
-ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
+ms.openlocfilehash: 7e7b3f2d8673972100e01413e5688353cb7c87a6
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72041063"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258979"
 ---
 # <a name="install-sql-server-with-powershell-desired-state-configuration"></a>Instalar o SQL Server com a Desired State Configuration do PowerShell
 

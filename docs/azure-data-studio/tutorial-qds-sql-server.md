@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Habilitar o widget de exemplo das cinco consultas mais lentas'
+title: Habilitar o widget de exemplo das cinco consultas mais lentas
 titleSuffix: Azure Data Studio
 description: Este tutorial demonstra como habilitar o widget de exemplo das cinco consultas mais lentas no painel do banco de dados.
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
-ms.custom: seodec18
+ms.custom: seodec18; seo-lt-2019
 ms.date: 08/02/2019
-ms.openlocfilehash: 576e175e8135808a4221e96085e39e9c0850190b
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 3f940f0f18df676eae2ca101a2eccaa2be7169e2
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68810884"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957040"
 ---
 # <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>Tutorial: Adicionar o widget de exemplo das *cinco consultas mais lentas* ao painel do banco de dados
 
@@ -127,7 +127,7 @@ Para adicionar o *widget de consultas lentas* ao seu painel, edite a configuraç
 
 2. No *widget de consulta lenta* Para exibir mais informações para um widget de insight, clique nas reticências ( **...** ) no canto superior direito e selecione **Executar Consulta**.
 
-    ![Executar consulta](media/tutorial-qds-sql-server/run-query.png)
+    ![Executar Consulta](media/tutorial-qds-sql-server/run-query.png)
 
 3. Agora você deve ver uma nova janela de consulta com os resultados.
 

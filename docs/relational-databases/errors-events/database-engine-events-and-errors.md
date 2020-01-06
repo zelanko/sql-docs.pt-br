@@ -9,12 +9,12 @@ ms.topic: reference
 ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 78fff1f1a5f1e68989338a9d5b0274899267fd42
-ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
+ms.openlocfilehash: 29f9245fcb3f827c51060834a37fbc3c01aa5e9b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74119435"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75247316"
 ---
 # <a name="database-engine-errors"></a>Erros do mecanismo de banco de dados
 
@@ -22,7 +22,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 
 ## <a name="errors--2-to-999"></a>Erros de -2 a 999
 
-| Erro| Severity | Evento registrado | Descrição|
+| Erro| Severity | Evento registrado | DESCRIÇÃO|
 | :------ | :------| :------| :----------------------------- |
 |   [-2](mssqlserver-neg2-database-engine-error.md) |       |       |   Tempo limite esgotado. O período de tempo limite acabou antes de conclusão da operação ou o servidor não está respondendo. (Microsoft SQL Server, Erro: -2).    |
 |   [-1](mssqlserver-1-database-engine-error.md)    |       |       |   Ocorreu um erro ao estabelecer uma conexão com o servidor. Ao conectar-se ao SQL Server 2005, esta falha pode ser causada pelo fato de que, nas configurações padrão, o SQL Server não permite conexões remotas. (provedor: adaptadores de rede do SQL, erro: 28 – o servidor não dá suporte ao protocolo solicitado) (Microsoft SQL Server, Erro: -1).  |
@@ -578,7 +578,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 
 ## <a name="errors-1000-to-1999"></a>Erros 1000 a 1999
 
-| Erro| Severity | Evento registrado | Descrição|
+| Erro| Severity | Evento registrado | DESCRIÇÃO|
 | :------ | :------| :------| :----------------------------- |
 |   1001    |   16  |   Não  |   Linha %d: especificação de comprimento ou precisão %d inválida.   |
 |   1002    |   16  |   Não  |   Linha %d: escala especificada %d inválida. |
@@ -626,7 +626,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   1047    |   15  |   Não  |   Dicas de bloqueio conflitantes especificadas.    |
 |   1048    |   15  |   Não  |   Opções de cursor %ls e %ls conflitantes. |
 |   1049    |   15  |   Não  |   Não é permitido misturar sintaxe antiga e nova para especificar opções do cursor. |
-|   1050    |   15  |   Não  |   Esta sintaxe somente é permitida para consultas parametrizadas.  |
+|   1\.050    |   15  |   Não  |   Esta sintaxe somente é permitida para consultas parametrizadas.  |
 |   1051    |   15  |   Não  |   Em um procedimento armazenado, os parâmetros do cursor devem ser declarados com as opções OUTPUT e VARYING, na ordem CURSOR VARYING OUTPUT.    |
 |   1052    |   15  |   Não  |   Opções de %ls "%ls" e "%ls" conflitantes.    |
 |   1053    |   15  |   Não  |   Para DROP STATISTICS, é necessário fornecer o nome do objeto (tabela ou exibição) e o nome da estatística, na forma "nomedoobjeto.nomedaestatística".    |
@@ -781,7 +781,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   1467    |   16  |   Não  |   O espelhamento de banco de dados não pode ser habilitado porque o banco de dados "%.*ls" está no modo de emergência ou de suspeição em um dos parceiros.   |
 |   1468    |   16  |   Não  |   A operação não pôde ser executada no banco de dados "%.*ls" porque está envolvida em uma sessão de espelhamento de banco de dados.   |
 |   1469    |   16  |   Não  |   O espelhamento de banco de dados não pode ser habilitado porque o banco de dados "%.*ls" é de fechamento automático em um dos parceiros. |
-|   1470    |   16  |   Não  |   O banco de dados alterado dos valores de configuração deste parceiro só podem ser iniciados no servidor principal atual do banco de dados "%.*ls".   |
+|   1\.470    |   16  |   Não  |   O banco de dados alterado dos valores de configuração deste parceiro só podem ser iniciados no servidor principal atual do banco de dados "%.*ls".   |
 |   1471    |   16  |   Não  |   Conexão de espelhamento de banco de dados terminada. Sem memória para enviar mensagens ao banco de dados "%.*ls".   |
 |   1\.472    |   16  |   Não  |   Conexão de espelhamento de banco de dados terminada. Erro de comunicação ao enviar mensagem ao banco de dados "%.*ls".    |
 |   1473    |   16  |   Não  |   Esta edição do SQL Server não permite alterar o nível de segurança. Falha no comando ALTER DATABASE.    |
@@ -821,7 +821,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   1706    |   16  |   Não  |   A tabela do sistema '%.*ls' só pode ser criada ou alterada durante uma atualização.  |
 |   1707    |   16  |   Não  |   Não é possível especificar o grupo de arquivos TEXTIMAGE_ON de uma tabela particionada.  |
 |   1708    |   10  |   Não  |   Aviso: a tabela "%.*ls" foi criada, mas seu tamanho máximo de linhas excede o máximo permitido de %d bytes. INSERT ou UPDATE nesta tabela falhará se a linha resultante exceder o limite de tamanho.    |
-|   1709    |   16  |   Não  |   Não é possível usar TEXTIMAGE_ON quando uma tabela não tem as colunas text, ntext, image, varchar(max), nvarchar(max), varbinary(max), xml ou colunas de tipo CLR. |
+|   1\.709    |   16  |   Não  |   Não é possível usar TEXTIMAGE_ON quando uma tabela não tem as colunas text, ntext, image, varchar(max), nvarchar(max), varbinary(max), xml ou colunas de tipo CLR. |
 |   1710    |   10  |   Não  |   Não é possível usar o tipo de alias com regra ou padrão associado a ele como um tipo de coluna na variável de tabela ou retornar definição de tabela na função com valor de tabela. O tipo '%.*ls' tem um %S_MSG associado a ele.   |
 |   1711    |   16  |   Não  |   Não é possível definir a restrição PRIMARY KEY na coluna '%.*ls' da tabela '%.* ls'. A coluna computada deve persistir e não ser anulável.  |
 |   1712    |   16  |   Não  |   Só podem ser executadas operações de índice online na edição Enterprise do SQL Server.  |
@@ -837,7 +837,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   1722    |   16  |   Não  |   Não é possível %S_MSG %S_MSG '%.*ls', pois um esquema de partição não está especificado para os dados de FILESTREAM. |
 |   1723    |   16  |   Não  |   Não é possível %S_MSG %S_MSG '%.*ls', pois um esquema de partição foi especificado para os dados de FILESTREAM, mas não para a tabela.  |
 |   1724    |   16  |   Não  |   '%.*ls' não é um grupo de arquivos FILESTREAM ou um esquema de partição de grupos de arquivos FILESTREAM.   |
-|   1725    |   16  |   Não  |   Não é possível adicionar a coluna FILESTREAM a %S_MSG '%.*ls' porque existe um gatilho INSTEAD OF em %S_MSG.  |
+|   1\.725    |   16  |   Não  |   Não é possível adicionar a coluna FILESTREAM a %S_MSG '%.*ls' porque existe um gatilho INSTEAD OF em %S_MSG.  |
 |   1726    |   16  |   Não  |   Não é possível adicionar o grupo de arquivos ou o esquema de partição de FILESTREAM, pois a tabela '%.*ls' já tem um grupo de arquivos ou esquema de partição de FILESTREAM. |
 |   1727    |   16  |   Não  |   Não é possível criar o índice não clusterizado '%.*ls' na tabela '%.* ls' com a cláusula FILESTREAM_ON.    |
 |   1728    |   16  |   Não  |   Não é possível criar o índice '%.*ls' na tabela '%.* ls' porque a coluna computada '%.*ls' usa uma coluna FILESTREAM.  |
@@ -845,7 +845,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   1730    |   16  |   Não  |   Falha na criação ou alteração da tabela compactada '%.*ls' porque o tamanho da linha não compactada seria %d, incluindo %d bytes de sobrecarga interna. Isso excede o tamanho máximo de linha permitido na tabela, que é de %d bytes. |
 |   1731    |   16  |   Não  |   Não é possível criar a coluna esparsa '%.*ls' na tabela '%.* ls' porque uma opção ou um tipo de dados especificado não é válido. Uma coluna esparsa deve permitir valores nulos e não pode ter as propriedades ROWGUIDCOL, IDENTITY ou FILESTREAM. Uma coluna esparsa não pode ser dos seguintes tipos de dados: text, ntext, image, geometry, geography ou um tipo definido pelo usuário.  |
 |   1732    |   16  |   Não  |   Não é possível criar o conjunto de colunas esparsas '%.*ls' na tabela '%.* ls', pois uma tabela não pode ter mais de um conjunto de colunas esparsas. Modifique a instrução de forma que somente uma coluna seja especificada como COLUMN_SET FOR ALL_SPARSE_COLUMNS.   |
-|   1733    |   16  |   Não  |   Não é possível criar o conjunto de colunas esparsas '%.*ls' na tabela '%.* ls', pois um conjunto de colunas esparsas deve ser uma coluna xml que permita valores nulos. Modifique a definição de coluna para permitir valores nulos.  |
+|   1\.733    |   16  |   Não  |   Não é possível criar o conjunto de colunas esparsas '%.*ls' na tabela '%.* ls', pois um conjunto de colunas esparsas deve ser uma coluna xml que permita valores nulos. Modifique a definição de coluna para permitir valores nulos.  |
 |   1734    |   16  |   Não  |   Não é possível criar o conjunto de colunas esparsas '%.*ls' na tabela '%.* ls', pois ela já contém uma ou mais colunas esparsas. Um conjunto de colunas esparsas não poderá ser adicionado a uma tabela se ela contiver uma coluna esparsa.   |
 |   1736    |   16  |   Não  |   A coluna '%.*ls' na tabela '%.* ls' não pode ser referenciada em uma restrição CHECK ou definição de coluna computada, pois a coluna é um conjunto de colunas esparsas. Não é possível referenciar um conjunto de colunas esparsas em uma restrição CHECK ou definição de coluna computada.   |
 |   1738    |   10  |   Não  |   Não é possível criar a tabela '%.*ls' com apenas uma coluna de conjunto de colunas e sem colunas não computadas na tabela.    |
@@ -967,7 +967,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   1956    |   16  |   Não  |   Não é possível criar %S_MSG na exibição '%.*ls' porque ela usa uma função não determinística definida pelo usuário '%.* ls'. Remova a referência à função ou torne-a determinística.    |
 |   1957    |   16  |   Não  |   Não é possível criar %S_MSG na exibição '%.*ls' porque ela usa uma função imprecisa definida pelo usuário '%.* ls'. Considere remover a referência à função ou altere-a, tornando-a precisa.   |
 |   1959    |   16  |   Não  |   Não é possível criar um índice em uma exibição ou coluna computada porque o nível de compatibilidade desse banco de dados é inferior a 80. Use sp_dbcmptlevel para elevar o nível de compatibilidade do banco de dados.  |
-|   1961    |   16  |   Não  |   Não é possível criar %S_MSG na exibição '%.*ls'. A expressão de conversão de ordenação com nome de ordenação '%.* ls' é não determinística porque depende do sistema operacional.   |
+|   1\.961    |   16  |   Não  |   Não é possível criar %S_MSG na exibição '%.*ls'. A expressão de conversão de ordenação com nome de ordenação '%.* ls' é não determinística porque depende do sistema operacional.   |
 |   1962    |   16  |   Não  |   Não é possível criar %S_MSG na exibição '%.*ls' porque a coluna '%.* ls' que é referenciada pela exibição na cláusula WHERE ou GROUP BY é imprecisa. Considere a possibilidade de eliminar a coluna da exibição ou alterá-la para ser precisa.   |
 |   1963    |   16  |   Não  |   Não é possível criar %S_MSG na exibição "%.*ls". A exibição contém uma conversão imprecisa ou não determinística.   |
 |   1964    |   16  |   Não  |   Não é possível criar %S_MSG na exibição "%.*ls". A exibição contém uma constante imprecisa.  |
@@ -1010,7 +1010,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 
 ## <a name="errors-2000-to-2999"></a>Erros de 2000 a 2999
 
-| Erro| Severity | Evento registrado | Descrição|
+| Erro| Severity | Evento registrado | DESCRIÇÃO|
 | :------ | :------| :------| :----------------------------- |
 |   2002    |   16  |   Não  |   Não é possível criar um procedimento para replicação com um número de grupo maior que um.   |
 |   2003    |   16  |   Não  |   Os procedimentos com um número de grupo não podem ter parâmetros de tipos XML ou CLR. O parâmetro '%.*ls' do procedimento '%.* ls' tem o tipo '%ls'.   |
@@ -1383,7 +1383,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 
 ## <a name="errors-3000---3999"></a>Erros 3000 a 3999
 
-| Erro| Severity | Evento registrado | Descrição|
+| Erro| Severity | Evento registrado | DESCRIÇÃO|
 | :------ | :------| :------| :----------------------------- |
 |   3002    |   16  |   Não  |   Não é possível executar BACKUP ou RESTORE em um instantâneo do banco de dados.   |
 |   3003    |   10  |   Não  |   Este BACKUP WITH DIFFERENTIAL será baseado em mais de um backup de arquivo. Todos esses backups de arquivo devem ser restaurados antes da tentativa de restaurar este backup diferencial.    |
@@ -1405,7 +1405,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   3019    |   16  |   Não  |   O arquivo de ponto de verificação de reinicialização '%ls' é de uma operação RESTORE interrompida anteriormente e está inconsistente com o comando RESTORE atual. O comando de reinicialização deve usar a mesma sintaxe do comando interrompido, além da cláusula RESTART. Você também pode emitir novamente a instrução atual sem a cláusula RESTART. |
 |   3021    |   16  |   Não  |   Não é possível executar uma operação de backup ou restauração em uma transação.  |
 |   3022    |   10  |   Não  |   Este backup é um backup de arquivo de dados de leitura/gravação de um banco de dados que usa o modelo de recuperação simples. Isso só é apropriado quando você pretende definir o grupo de arquivos como somente leitura após um backup de arquivo diferencial. Consulte Manuais Online para obter mais informações sobre como gerenciar dados somente leitura para o modelo de recuperação simples. Especificamente, considere a maneira como os backups parciais são usados.   |
-|   3023    |   16  |   Não  |   As operações de backup e manipulação de arquivos (como ALTER DATABASE ADD FILE) e alterações de criptografia em um banco de dados devem ser serializadas. Emita novamente a instrução após a conclusão da operação atual de backup ou de manipulação de arquivo. |
+|   3023    |   16  |   Não  |   O backup e as operações de manipulação de arquivos (como ALTER DATABASE ADD FILE) e alterações de criptografia em um banco de dados devem ser serializadas. Emita novamente a instrução após a conclusão da operação atual de backup ou de manipulação de arquivo. |
 |   3024    |   16  |   Não  |   Só é possível executar um backup completo do banco de dados mestre. Use BACKUP DATABASE para fazer backup de todo o banco de dados mestre.   |
 |   3025    |   16  |   Não  |   Nome do banco de dados ausente. Emita novamente a instrução especificando um nome de banco de dados válido.  |
 |   3027    |   16  |   Não  |   O grupo de arquivos "%.*ls" não faz parte do banco de dados "%.* ls".  |
@@ -1781,7 +1781,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   3958    |   16  |   Não  |   Transação anulada ao acessar a linha com controle de versão na tabela '%.*ls' do banco de dados '%.* ls'. A linha com controle de versão solicitada não foi encontrada. Provavelmente tempdb não tem espaço suficiente. Consulte os Manuais Online para obter informações sobre como configurar o tempdb para controle de versão.  |
 |   3959    |   10  |   Sim |   Repositório de versão cheio. Não foi possível adicionar novas versões. Uma transação que precise acessar o repositório de versão pode ser revertida. Consulte os Manuais Online para obter informações sobre como configurar o tempdb para controle de versão.   |
 |   3960    |   16  |   Não  |   Transação de isolamento de instantâneo anulada devido a conflito de atualização. Não é possível usar o isolamento de instantâneo para acessar a tabela '%.*ls' direta ou indiretamente no banco de dados '%.* ls' para atualizar, excluir ou inserir a linha que foi modificada ou excluída por outra transação. Tente a transação novamente ou altere o nível de isolamento para a instrução update/delete. |
-|   [3961](mssqlserver-3961-database-engine-error.md)   |   16  |   Não  |   Falha na transação de isolamento de instantâneo no banco de dados '%.*ls' porque o objeto acessado pela instrução foi modificado por uma instrução DDL em outra transação simultânea desde o início dessa transação. Isso não é permitido porque os metadados não têm controle de versão. Uma atualização simultânea para metadados poderia gerar inconsistências se misturada com isolamento de instantâneo.  |
+|   [3961](mssqlserver-3961-database-engine-error.md)   |   16  |   Não  |   Falha na transação de isolamento de instantâneo no banco de dados '%.*ls' porque o objeto acessado pela instrução foi modificado por uma instrução DDL em outra transação simultânea desde o início dessa transação. Ela não é permitida porque os metadados não têm controle de versão. Uma atualização simultânea dos metadados poderá gerar inconsistências se for combinada ao isolamento de instantâneo.  |
 |   3962    |   16  |   Não  |   Não há suporte para associação a outra transação ao executar consulta interna do SQL Server. Verifique sua definição de gatilho de logon e remova qualquer uso de sp_bindsession, se houver. Se esse erro não estiver ocorrendo durante a execução do gatilho de logon, contate a equipe de suporte à produção. |
 |   3963    |   16  |   Não  |   Falha na transação no banco de dados '%.*ls' porque as transações distribuídas não têm suporte no isolamento de instantâneo. |
 |   3964    |   16  |   Não  |   Falha na transação porque esta instrução DDL não é permitida em uma transação de isolamento de instantâneo. Como os metadados não têm controle de versão, uma alteração nos metadados pode gerar inconsistência se combinada ao isolamento de instantâneo.  |
@@ -1824,7 +1824,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 
 ## <a name="errors-4000-to-4999"></a>Erros de 4000 a 4999
 
-| Erro| Severity | Evento registrado | Descrição|
+| Erro| Severity | Evento registrado | DESCRIÇÃO|
 | :------ | :------| :------| :----------------------------- |
 |   4001    |   10  |   Não  |   O cliente envia uma sp_reset_connection com solicitações ainda pendentes; o servidor está desconectando.  |
 |   4002    |   16  |   Não  |   O fluxo do protocolo TDS de entrada está incorreto. O fluxo foi encerrado inesperadamente. |
@@ -1996,7 +1996,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   4347    |   16  |   Não  |   A sequência de restauração atual foi interrompida anteriormente durante a transição para o estado online. RESTORE DATABASE WITH RECOVERY pode ser usado para concluir a transição para online. |
 |   4348    |   16  |   Não  |   Falha na restauração online do banco de dados '%ls'. Ele pode ser apropriado para executar uma restauração offline. Uma restauração offline é iniciada com BACKUP LOG WITH NORECOVERY.  |
 |   4349    |   16  |   Não  |   O log deste conjunto de backup começa no LSN %.*ls, que é recente demais para ser aplicado ao banco de dados. Esta sequência de restauração precisa iniciar o log para que comece no LSN %.* ls. Emita novamente a instrução RESTORE LOG usando um backup de log anterior.   |
-|   4350    |   16  |   Não  |   A formatação da lista de páginas fornecida com a instrução RESTORE PAGE está incorreta. Antes do problema, %d páginas foram identificadas corretamente. O problema ocorreu no deslocamento do caractere %d. Verifique se todas as páginas estão identificadas por pares numéricos <file>:<page> com vírgulas entre cada par. Por exemplo: PAGE='1:57,2:31'.   |
+|   4350    |   16  |   Não  |   A formatação da lista de páginas fornecida com a instrução RESTORE PAGE está incorreta. Antes do problema, %d páginas foram identificadas corretamente. O problema ocorreu no deslocamento do caractere %d. Verifique se todas as páginas estão identificadas por pares numéricos <file>:<page> com vírgulas entre cada par. Por exemplo:  PAGE='1:57,2:31'.   |
 |   4351    |   16  |   Não  |   Backups feitos em versões anteriores do SQL Server não são suportados por fn_dump_dblog. |
 |   4352    |   16  |   Não  |   Não há suporte para RESTORE LOG nesse backup de dados porque o arquivo '%ls' é muito antigo. Use um backup de log regular para continuar a sequência de restauração.    |
 |   4353    |   16  |   Não  |   Realocações de arquivos em conflito foram especificadas para o arquivo '%.*ls'. Uma única cláusula WITH MOVE deve ser especificada para qualquer nome de arquivo lógico.    |
@@ -2287,7 +2287,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 
 ## <a name="errors-5000-to-5999"></a>Erros de 5000 a 5999
 
-| Erro| Severity | Evento registrado | Descrição|
+| Erro| Severity | Evento registrado | DESCRIÇÃO|
 | :------ | :------| :------| :----------------------------- |
 |   5001    |   16  |   Não  |   O usuário deve estar no banco de dados mestre.    |
 |   5002    |   16  |   Não  |   O banco de dados '%.*ls' não existe. Verifique o nome em sys.databases e tente a operação novamente.  |
@@ -2663,7 +2663,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 
 ## <a name="errors-6000-to-6999"></a>Erros de 6000 a 6999
 
-| Erro| Severity | Evento registrado | Descrição|
+| Erro| Severity | Evento registrado | DESCRIÇÃO|
 | :------ | :------| :------| :----------------------------- |
 |   6001    |   10  |   Não  |   SHUTDOWN está aguardando que %d processos sejam concluídos. |
 |   6004    |   10  |   Não  |   O usuário não tem permissão para executar esta ação.   |
@@ -3159,7 +3159,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 
 ## <a name="errors-7000-to-7999"></a>Erros de 7000 a 7999
 
-| Erro| Severity | Evento registrado | Descrição|
+| Erro| Severity | Evento registrado | DESCRIÇÃO|
 | :------ | :------| :------| :----------------------------- |
 |   7000    |   16  |   Não  |   O parâmetro identificador de documento OPENXML deve ser do tipo de dados int. |
 |   7001    |   16  |   Não  |   O parâmetro de sinalizadores OPENXML deve ter o tipo de dados int.   |
@@ -3603,7 +3603,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 
 ## <a name="errors-8000-to-8999"></a>Erros de 8000 a 8999
 
-| Erro| Severity | Evento registrado | Descrição|
+| Erro| Severity | Evento registrado | DESCRIÇÃO|
 | :------ | :------| :------| :----------------------------- |
 |   8001    |   16  |   Não  |   O fluxo do protocolo RPC do protocolo TDS de entrada está incorreto. Metainformações inválidas para o parâmetro Sql Variant. |
 |   8002    |   16  |   Não  |   O fluxo do protocolo RPC do protocolo TDS de entrada está incorreto. Parâmetro %d ("%.*ls"): o tipo de dados 0x%02X (XML) tem um esquema ou banco de dados inválido especificado.    |
@@ -4110,7 +4110,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 
 ## <a name="errors-9000-to-9999"></a>Erros de 9000 a 9999
 
-| Erro| Severity | Evento registrado | Descrição|
+| Erro| Severity | Evento registrado | DESCRIÇÃO|
 | :------ | :------| :------| :----------------------------- |
 |   [9001](mssqlserver-9001-database-engine-error.md)   |   10  |   Sim |   O log para o banco de dados '%.*ls' não está disponível. Verifique o log de eventos para obter as mensagens de erro relacionadas. Resolva todos os erros e reinicie o banco de dados. |
 |   [9002](mssqlserver-9002-database-engine-error.md)   |   17  |   Sim |   O log de transações do banco de dados '%.*ls' está cheio. Para saber o motivo pelo qual o espaço no log não pode ser reutilizado, consulte a coluna log_reuse_wait_desc em sys.databases    |
@@ -4278,8 +4278,8 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   9463    |   16  |   Não  |   Análise XML: linha %d, caractere %d, xml:space com valor diferente do legal |
 |   9464    |   16  |   Não  |   Análise XML: linha %d, caractere %d, o prefixo de namespace XML 'xml' só pode ser associado ao URI http://www.w3.org/XML/1998/namespace. Esse URI não pode ser usado com outros prefixos.   |
 |   9465    |   16  |   Não  |   Análise XML: linha %d, caractere %d, o prefixo de namespace XML 'xmlns' está reservado para uso pelo XML.    |
-|   9466    |   16  |   Não  |   Análise XML: linha %d, caractere %d, o URI do namespace XML (http://www.w3.org/XML/1998/namespace) ) deve ser atribuído apenas ao prefixo 'xml'.   |
-|   9467    |   16  |   Não  |   Análise XML: linha %d, caractere %d, o URI de namespace xmlns (http://www.w3.org/2000/xmlns/) ) está reservado e não deve ser usado.   |
+|   9466    |   16  |   Não  |   Análise XML: linha %d, caractere %d, o URI do namespace XML (https://www.w3.org/XML/1998/namespace) ) deve ser atribuído apenas ao prefixo 'xml'.  |
+|   9467    |   16  |   Não  |   Análise XML: linha %d, caractere %d, o URI de namespace xmlns (https://www.w3.org/2000/xmlns/) ) está reservado e não deve ser usado.  |
 |   9480    |   16  |   Não  |   Análise XML: linha %d, caractere %d, xml sem-suporte |
 |   9500    |   16  |   Não  |   O tipo de dados '%.*ls' usado no método VALUE é inválido.  |
 |   9501    |   16  |   Não  |   XQuery: não é possível resolver sql:variable('%.*ls'). A variável deve ser declarada como TSQL escalar.   |
@@ -4598,7 +4598,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 
 ## <a name="errors-10000-to-10999"></a>Erros de 10.000 a 10.999
 
-| Erro| Severity | Evento registrado | Descrição|
+| Erro| Severity | Evento registrado | DESCRIÇÃO|
 | :------ | :------| :------| :----------------------------- |
 |   10000   |   16  |   Não  |   Erro de provedor desconhecido. |
 |   [10001](mssqlserver-10001-database-engine-error.md) |   16  |   Não  |   O provedor reportou uma falha catastrófica inesperada.   |
@@ -4857,7 +4857,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 
 ## <a name="errors-11000-to-12999"></a>Erros de 11.000 a 12.999
 
-| Erro| Severity | Evento registrado | Descrição|
+| Erro| Severity | Evento registrado | DESCRIÇÃO|
 | :------ | :------| :------| :----------------------------- |
 |   11000   |   16  |   Não  |   Código de status dessa coluna desconhecido.    |
 |   11001   |   16  |   Não  |   Valor não NULL retornado com êxito.   |
@@ -5064,7 +5064,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 
 ## <a name="errors-13000-to-13999"></a>Erros de 13.000 a 13.999
 
-| Erro| Severity | Evento registrado | Descrição|
+| Erro| Severity | Evento registrado | DESCRIÇÃO|
 | :------ | :------| :------| :----------------------------- |
 |   13001   |   16  |   Não  |   nome do arquivo   |
 |   13002   |   16  |   Não  |   auditoria   |
@@ -5087,7 +5087,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   13026   |   0   |   Não  |   parâmetro   |
 |   13027   |   0   |   Não  |   converter especificação   |
 |   13028   |   0   |   Não  |   índice   |
-|   13029   |   0   |   Não  |   table   |
+|   13029   |   0   |   Não  |   tabela   |
 |   13030   |   0   |   Não  |   Banco de Dados    |
 |   13031   |   0   |   Não  |   procedimento   |
 |   13032   |   0   |   Não  |   gatilho |
@@ -5097,12 +5097,12 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   13036   |   0   |   Não  |   tabela do sistema    |
 |   13037   |   0   |   Não  |   tipo desconhecido    |
 |   13038   |   0   |   Não  |   Opção SET  |
-|   13039   |   0   |   Não  |   column  |
-|   13040   |   0   |   Não  |   Tipo    |
+|   13039   |   0   |   Não  |   coluna  |
+|   13040   |   0   |   Não  |   type    |
 |   13041   |   0   |   Não  |   cadeia de caracteres    |
 |   13042   |   0   |   Não  |   inteiro |
 |   13043   |   0   |   Não  |   identificador  |
-|   13044   |   0   |   Não  |   number  |
+|   13044   |   0   |   Não  |   número  |
 |   13045   |   0   |   Não  |   índices |
 |   13047   |   0   |   Não  |   objeto  |
 |   13049   |   0   |   Não  |   nome da função interna  |
@@ -5123,7 +5123,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   13080   |   0   |   Não  |   estatísticas  |
 |   13081   |   0   |   Não  |   file    |
 |   13082   |   0   |   Não  |   grupo de arquivos   |
-|   13083   |   0   |   Não  |   servidor  |
+|   13083   |   0   |   Não  |   Servidor  |
 |   13084   |   0   |   Não  |   gravação   |
 |   13085   |   0   |   Não  |   função    |
 |   13086   |   0   |   Não  |   ordenação de banco de dados  |
@@ -5136,7 +5136,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   13094   |   0   |   Não  |   função com valor de tabela   |
 |   13095   |   0   |   Não  |   notificação de eventos  |
 |   13096   |   0   |   Não  |   sinônimo |
-|   13097   |   0   |   Não  |   bloqueio    |
+|   13097   |   0   |   Não  |   lock    |
 |   13098   |   0   |   Não  |   thread  |
 |   13099   |   0   |   Não  |   buffer de comunicação    |
 |   13100   |   0   |   Não  |   seção crítica do Common Language Runtime    |
@@ -5144,7 +5144,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   13102   |   10  |   Não  |   DETACH  |
 |   13103   |   0   |   Não  |   HASH    |
 |   13104   |   0   |   Não  |   RANGE   |
-|   13105   |   0   |   Não  |   criar  |
+|   13105   |   0   |   Não  |   create  |
 |   13106   |   0   |   Não  |   rota   |
 |   13107   |   0   |   Não  |   associação de serviço remoto  |
 |   13108   |   0   |   Não  |   Initiator (iniciador)   |
@@ -5158,7 +5158,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   13116   |   0   |   Não  |   certificado |
 |   13117   |   0   |   Não  |   função    |
 |   13118   |   0   |   Não  |   localizar    |
-|   13119   |   0   |   Não  |   ponto de extremidade    |
+|   13119   |   0   |   Não  |   endpoint    |
 |   13120   |   0   |   Não  |   sql:variable    |
 |   13121   |   0   |   Não  |   sql:column  |
 |   13122   |   0   |   Não  |   namespace XML   |
@@ -5207,7 +5207,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   13165   |   16  |   Não  |   conversa    |
 |   13166   |   16  |   Não  |   grupo de conversação  |
 |   13167   |   16  |   Não  |   sistema  |
-|   13168   |   16  |   Não  |   Service Broker  |
+|   13168   |   16  |   Não  |   Agente de Serviço  |
 |   13169   |   16  |   Não  |   Espelhamento de banco de dados  |
 |   13170   |   0   |   Não  |   tabela ou exibição indexada   |
 |   13171   |   16  |   Não  |   identificador de conversa |
@@ -5266,8 +5266,8 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   13226   |   10  |   Não  |   add |
 |   13227   |   10  |   Não  |   para  |
 |   13228   |   10  |   Não  |   de    |
-|   13229   |   10  |   Não  |   habilitar  |
-|   13230   |   10  |   Não  |   desabilitar |
+|   13229   |   10  |   Não  |   enable  |
+|   13230   |   10  |   Não  |   disable |
 |   13231   |   10  |   Não  |   remapear   |
 |   13232   |   10  |   Não  |   INSERT  |
 |   13233   |   10  |   Não  |   UPDATE  |
@@ -5285,7 +5285,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   13245   |   10  |   Não  |   WHERE   |
 |   13246   |   10  |   Não  |   inesperado  |
 |   13254   |   10  |   Não  |   event   |
-|   13255   |   10  |   Não  |   target  |
+|   13255   |   10  |   Não  |   destino  |
 |   13256   |   10  |   Não  |   ação de evento    |
 |   13257   |   10  |   Não  |   sessão de evento   |
 |   13258   |   10  |   Não  |   pacote de eventos   |
@@ -5328,7 +5328,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   13295   |   10  |   Não  |   comprimento da impressão digital da chave do provedor de criptografia    |
 |   13296   |   10  |   Não  |   comprimento do blob da chave do provedor de criptografia  |
 |   13297   |   16  |   Não  |   marca de algoritmo de criptografia    |
-|   13298   |   16  |   Não  |   NAME    |
+|   13298   |   16  |   Não  |   name    |
 |   13299   |   16  |   Não  |   thumbprint  |
 |   13301   |   16  |   Não  |   Comprimento de IV (Vetor de Inicialização)    |
 |   13302   |   16  |   Não  |   tamanho de bit  |
@@ -5365,7 +5365,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 
 ## <a name="errors-14000-to-14999"></a>Erros de 14.000 a 14.999
 
-| Erro| Severity | Evento registrado | Descrição|
+| Erro| Severity | Evento registrado | DESCRIÇÃO|
 | :------ | :------| :------| :----------------------------- |
 |   14002   |   16  |   Não  |   Não foi possível localizar o subsistema 'Sync' com a ID de tarefa %ld.   |
 |   14003   |   16  |   Não  |   Você deve fornecer um nome de publicação. |
@@ -5387,7 +5387,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   14020   |   16  |   Não  |   Não foi possível obter a ID da coluna especificada. Falha na replicação do esquema. |
 |   14021   |   16  |   Não  |   A coluna não foi adicionada corretamente ao artigo.  |
 |   14022   |   16  |   Não  |   O valor do parâmetro \@property deve ser 'description', 'sync_object', 'type', 'ins_cmd', 'del_cmd', 'upd_cmd', 'filter', 'dest_table', 'dest_object', 'creation_script', 'pre_creation_cmd', 'status', 'schema_option' ou 'destination_owner'.   |
-|   14023   |   16  |   Não  |   O tipo deve ser '[indexed view ]logbased[ (manualview|manualfilter|manualboth)]', '[serializable ]proc exec' ou '(view|exibição indexada|proc|func|agregação|sinônimo) somente esquema'.    |
+|   14023   |   16  |   Não  |   O tipo deve ser '[indexed view ]logbased[ (manualview|manualfilter|manualboth)]', '[serializable ]proc exec' ou '(view|exibição indexada|proc|func|aggregate|sinônimo) somente esquema'.    |
 |   14024   |   16  |   Não  |   O valor da propriedade 'subscriber_provider' não pode ser NULL. |
 |   14025   |   10  |   Não  |   Artigo atualizado com êxito.  |
 |   14026   |   16  |   Não  |   O valor da propriedade 'subscriber_type' não é um tipo de assinante heterogêneo com suporte. O valor deve ser 1 (assinante ODBC) ou 3 (assinante OLEDB).    |
@@ -5530,7 +5530,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   14208   |   10  |   Não  |   1..7 [1 = Email, 2 = Pager, 4 = NetSend]   |
 |   14209   |   10  |   Não  |   0..127 [1 = Domingo . 64 = Sábado]    |
 |   14210   |   10  |   Não  |   notificação    |
-|   14211   |   10  |   Não  |   servidor  |
+|   14211   |   10  |   Não  |   Servidor  |
 |   14212   |   10  |   Não  |   (todos os trabalhos)  |
 |   14213   |   10  |   Não  |   Detalhes do Trabalho Principal:   |
 |   14214   |   10  |   Não  |   Etapas do Trabalho:  |
@@ -5897,7 +5897,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 
 ## <a name="errors-15000-to-15999"></a>Erros de 15.000 a 15.999
 
-| Erro| Severity | Evento registrado | Descrição|
+| Erro| Severity | Evento registrado | DESCRIÇÃO|
 | :------ | :------| :------| :----------------------------- |
 |   15001   |   16  |   Não  |   O objeto '%ls' não existe ou não é um objeto válido para essa operação.    |
 |   15002   |   16  |   Não  |   O procedimento '%s' não pode ser executado em uma transação. |
@@ -6410,7 +6410,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 
 ## <a name="errors-16000-to-17999"></a>Erros de 16.000 a 17.999
 
-| Erro| Severity | Evento registrado | Descrição|
+| Erro| Severity | Evento registrado | DESCRIÇÃO|
 | :------ | :------| :------| :----------------------------- |
 |   16901   |   16  |   Não  |   %hs: este recurso ainda não foi implementado. |
 |   16902   |   16  |   Não  |   %ls: o valor do parâmetro %ls é inválido. |
@@ -6636,7 +6636,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   17805   |   20  |   Sim |   O valor no campo usertype do registro de logon é inválido. O valor 0x01, usado por clientes Sybase, não é mais suportado pelo SQL Server. Contate o fornecedor da biblioteca cliente que está sendo usada na conexão com o SQL Server.%.*ls  |
 |   17806   |   20  |   Sim |   Falha no handshake SSPI com código de erro 0x%x ao estabelecer conexão com segurança integrada; a conexão foi fechada.%.*ls   |
 |   17807   |   20  |   Sim |   O evento '%ld' recebido do cliente não foi reconhecido pelo SQL Server. Contate o fornecedor da biblioteca do cliente que está sendo usada na conexão com o SQL Server e peça que ele corrija o número do evento no protocolo TDS que é enviado.   |
-|   [17809](mssqlserver-17809-database-engine-error.md) |   20  |   Sim |   Não foi possível estabelecer conexão porque o número máximo de '%ld' conexões de usuário já foi atingido. The system administrator can use sp_configure to increase the maximum value. A conexão foi fechada.%.*ls  |
+|   [17809](mssqlserver-17809-database-engine-error.md) |   20  |   Sim |   Não foi possível estabelecer conexão porque o número máximo de '%ld' conexões de usuário já foi atingido. O administrador do sistema pode usar sp_configure para aumentar o valor máximo. A conexão foi fechada.%.*ls  |
 |   17810   |   20  |   Sim |   Impossível conectar porque já foi atingido o número máximo de '%ld' conexões de administrador dedicadas. Para que uma nova conexão seja estabelecida, a conexão de administrador dedicada existente deve ser cancelada, por logoff ou encerramento do processo.%.*ls   |
 |   17812   |   10  |   Sim |   A conexão dedicada de administrador foi desconectada. Essa mensagem é apenas informativa. Não é necessária nenhuma ação do usuário.    |
 |   17813   |   20  |   Sim |   O serviço solicitado foi interrompido ou desabilitado e está indisponível neste momento. A conexão foi fechada.%.*ls    |
@@ -6665,7 +6665,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 
 ## <a name="errors-18000-to-18999"></a>Erros de 18.000 a 18.999
 
-| Erro| Severity | Evento registrado | Descrição|
+| Erro| Severity | Evento registrado | DESCRIÇÃO|
 | :------ | :------| :------| :----------------------------- |
 |   18002   |   20  |   Sim |   Ocorreu uma exceção ao executar o procedimento armazenado estendido '%.*ls' na biblioteca '%.* ls'. O SQL Server está encerrando o processo %d. Tipo de exceção: %ls; Código de exceção: 0x%lx. |
 |   18052   |   16  |   Não  |   Erro: %d, Gravidade: %d, Estado: %d. |
@@ -6886,7 +6886,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 
 ## <a name="errors-19000-to-20999"></a>Erros de 19.000 a 20.999
 
-| Erro| Severity | Evento registrado | Descrição|
+| Erro| Severity | Evento registrado | DESCRIÇÃO|
 | :------ | :------| :------| :----------------------------- |
 |   19030   |   10  |   Sim |   A ID de Rastreamento SQL %d foi iniciada pelo logon "%s".  |
 |   19031   |   10  |   Sim |   Rastreamento SQL interrompido. ID do rastreamento = '%d'. Nome de logon = '%s'.  |
@@ -7314,7 +7314,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 
 ## <a name="errors-21000-to-21999"></a>Erros de 21.000 a 21.999
 
-| Erro| Severity | Evento registrado | Descrição|
+| Erro| Severity | Evento registrado | DESCRIÇÃO|
 | :------ | :------| :------| :----------------------------- |
 |   21000   |   16  |   Não  |   Não é possível assinar uma publicação inativa.    |
 |   21001   |   16  |   Não  |   Não é possível adicionar um Distribution Agent no assinante para uma assinatura push.  |
@@ -8077,7 +8077,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 
 ## <a name="errors-22000-to-22999"></a>Erros de 22.000 a 22.999
 
-| Erro| Severity | Evento registrado | Descrição|
+| Erro| Severity | Evento registrado | DESCRIÇÃO|
 | :------ | :------| :------| :----------------------------- |
 |   22101   |   16  |   Não  |   O valor fornecido para o argumento change_columns da função CHANGE_TRACKING_IS_COLUMN_IN_MASK não é válido. O valor deve ser uma bitmask retornada pela função CHANGETABLE(CHANGES ...).   |
 |   22102   |   16  |   Não  |   Os argumentos fornecidos não são válidos para a opção CHANGES da função CHANGETABLE.    |
@@ -8332,7 +8332,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 
 ## <a name="errors-23000-to-25999"></a>Erros de 23.000 a 25.999
 
-| Erro| Severity | Evento registrado | Descrição|
+| Erro| Severity | Evento registrado | DESCRIÇÃO|
 | :------ | :------| :------| :----------------------------- |
 |   23003   |   17  |   Não  |   As permissões de compartilhamento WinFS ficaram corrompidas {Erro: %ld}. Tente configurar as permissões de compartilhamento novamente. |
 |   23100   |   16  |   Não  |   Parâmetros de entrada inválidos. |
@@ -8521,7 +8521,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 
 ## <a name="errors-26000-to-27999"></a>Erros de 26.000 a 27.999
 
-| Erro| Severity | Evento registrado | Descrição|
+| Erro| Severity | Evento registrado | DESCRIÇÃO|
 | :------ | :------| :------| :----------------------------- |
 |   26010   |   10  |   Sim |   O servidor não pôde carregar o certificado necessário para iniciar uma conexão SSL. Ele retornou o seguinte erro: %#x. Verifique se os certificados são válidos. |
 |   26011   |   16  |   Sim |   O servidor não pôde inicializar a criptografia devido a um problema em uma biblioteca de segurança. Talvez a biblioteca de segurança não exista. Verifique se security.dll existe no sistema.    |
@@ -8636,7 +8636,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 
 ## <a name="errors-28000-to-30999"></a>Erros de 28.000 a 30.999
 
-| Erro| Severity | Evento registrado | Descrição|
+| Erro| Severity | Evento registrado | DESCRIÇÃO|
 | :------ | :------| :------| :----------------------------- |
 |   28000   |   16  |   Não  |   Tamanho inesperado da chave de sessão descriptografada.   |
 |   28001   |   16  |   Não  |   Mensagem corrompida recebida. Contém sinalizadores inválidos. Isso ocorreu na mensagem com ID de conversa '%.*ls', Iniciador: %d e Número de sequência de mensagem: %I64d. |
@@ -8814,7 +8814,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 
 ## <a name="errors-31000-to-41400"></a>Erros de 31.000 a 41.400
 
-| Erro| Severity | Evento registrado | Descrição|
+| Erro| Severity | Evento registrado | DESCRIÇÃO|
 | :------ | :------| :------| :----------------------------- |
 |   31001   |   16  |   Não  |   A sessão '%s' já existe. Use outro nome de sessão.  |
 |   31002   |   16  |   Não  |   Esta operação só pode ser executada pelo proprietário da sessão.   |

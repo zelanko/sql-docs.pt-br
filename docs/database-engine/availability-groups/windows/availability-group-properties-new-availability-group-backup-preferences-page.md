@@ -1,5 +1,5 @@
 ---
-title: 'Propriedades do grupo de disponibilidade: Novo Grupo de Disponibilidade (página Preferências de Backup)'
+title: 'Propriedades do grupo de disponibilidade: Página Preferências de backup'
 description: Uma descrição das várias propriedades encontradas na página 'Preferência de Backup' do assistente 'Novo Grupo de Disponibilidade' no SQL Server Management Studio.
 ms.custom: seodec18
 ms.date: 05/17/2016
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 65fff22d-5963-4a8c-8b31-fe9ab247a03e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5dd782fc153829fcaa1105d37421963a8884bb0d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cebacaf07ca7e678095a661267b02fe04d8513d9
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991477"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822475"
 ---
 # <a name="availability-group-properties-new-availability-group-backup-preferences-page"></a>Propriedades do grupo de disponibilidade: Novo Grupo de Disponibilidade (página Preferências de Backup)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "67991477"
  **Somente Secundário**  
  Especifica que os backups nunca devem ser executados na réplica primária. Se a réplica primária for a única réplica online, o backup não deveria ocorrer.  
   
- **Primária**  
+ **Primário**  
  Especifica que os backups sempre devem ocorrer na réplica primária. Essa opção será útil se você precisar de recursos de backup, como a criação de backups diferenciais, que não têm suporte quando o backup é executado em uma réplica secundária.  
   
  **Qualquer Réplica**  

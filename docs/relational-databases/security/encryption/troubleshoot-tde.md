@@ -5,25 +5,25 @@ helpviewer_keywords:
 - troublshooting, tde akv
 - tde akv configuration, troubleshooting
 - tde troubleshooting
-author: aliceku
+author: jaszymas
 ms.prod: sql
 ms.technology: security
 ms.reviewer: vanto
 ms.topic: conceptual
 ms.date: 11/06/2019
-ms.author: aliceku
+ms.author: jaszymas
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 308cc4189361c795115c061b871238aaba430279
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: cc99c51a2f2ad43ca615be0477970a59cfb75065
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727770"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957290"
 ---
 # <a name="common-errors-for-transparent-data-encryption-with-customer-managed-keys-in-azure-key-vault"></a>Erros comuns de Transparent Data Encryption com chaves gerenciadas pelo cliente no Azure Key Vault
 
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md.md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
-Este artigo descreve como identificar e resolver os problemas de acesso de chave do Azure Key Vault que fizeram com que um banco de dados configurado para usar [TDE (Transparent Data Encryption) com chaves gerenciadas pelo cliente no Azure Key Vault](https://docs.microsoft.com/en-us/azure/sql-database/transparent-data-encryption-byok-azure-sql) se torne inacessível.
+Este artigo descreve como identificar e resolver os problemas de acesso de chave do Azure Key Vault que fizeram com que um banco de dados configurado para usar [TDE (Transparent Data Encryption) com chaves gerenciadas pelo cliente no Azure Key Vault](/azure/sql-database/transparent-data-encryption-byok-azure-sql) se torne inacessível.
 
 ## <a name="introduction"></a>Introdução
 Quando o TDE está configurado para usar uma chave gerenciada pelo cliente no Azure Key Vault, o acesso contínuo a esse Protetor de TDE é necessário para que o banco de dados permaneça online.  Se o servidor SQL lógico perder o acesso ao protetor de TDE gerenciado pelo cliente no Azure Key Vault, um banco de dados começará a negar todas as conexões com a mensagem de erro adequada e alterará seu estado para *Inacessível* no portal do Azure.
@@ -83,7 +83,7 @@ No portal do Azure, vá até o cofre de chaves e depois às **Políticas de aces
  1. Use o botão **Adicionar Novo** para adicionar a AppId ao servidor criado na etapa anterior. 
  1. Atribua as seguintes permissões de chave: Obter, Encapsular e Desencapsular 
 
-Para saber mais, confira [Atribuir uma identidade do Azure AD ao seu servidor](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure?view=sql-server-2017&viewFallbackFrom=azuresqldb-current#step-1-assign-an-azure-ad-identity-to-your-server).
+Para saber mais, confira [Atribuir uma identidade do Azure AD ao seu servidor](/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure#assign-an-azure-ad-identity-to-your-server).
 
 > [!IMPORTANT]
 > Se a instância lógica do SQL Server for movida para um novo locatário após a configuração inicial da TDE com o Key Vault, repita a etapa para configurar a identidade do Azure AD para criar uma AppId. Em seguida, adicione a AppId ao cofre de chaves e atribua as permissões corretas para a chave. 

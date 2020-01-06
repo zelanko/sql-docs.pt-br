@@ -1,7 +1,7 @@
 ---
 title: Definir ou alterar a ordenação do servidor | Microsoft Docs
 ms.custom: ''
-ms.date: 01/22/2019
+ms.date: 12/05/2019
 ms.prod: sql
 ms.reviewer: carlrab
 ms.technology: ''
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3242deef-6f5f-4051-a121-36b3b4da851d
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 81a776a0bece59f98042fec6cbf7b191ec82be1b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 019c62424398b05dfaa6efe2f91ab4c08b333cd2
+ms.sourcegitcommit: 0d34b654f0b3031041959e87f5b4d4f0a1af6a29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140843"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74901911"
 ---
 # <a name="set-or-change-the-server-collation"></a>Definir ou alterar a ordenação do servidor
 
@@ -43,7 +43,7 @@ ms.locfileid: "68140843"
   
 - Reconstrua o banco de dados mestre especificando a nova ordenação na propriedade SQLCOLLATION do comando **setup** . Por exemplo:  
   
-    ```sql  
+    ```  
     Setup /QUIET /ACTION=REBUILDDATABASE /INSTANCENAME=InstanceName
     /SQLSYSADMINACCOUNTS=accounts /[ SAPWD= StrongPassword ]
     /SQLCOLLATION=CollationName  
@@ -59,7 +59,6 @@ ms.locfileid: "68140843"
 > Em vez de alterar a ordenação padrão de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], você pode especificar uma ordenação para cada novo banco de dados que criar.  
   
 ## <a name="setting-the-server-collation-in-managed-instance"></a>Definindo a ordenação do servidor na Instância Gerenciada
-
 A ordenação em nível de servidor na instância gerenciada do SQL do Azure pode ser especificada quando a instância é criada e não pode ser alterada posteriormente. Você pode definir a ordenação no nível de servidor por meio [portal do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started#create-a-managed-instance) ou do [modelo do PowerShell e do Resource Manager](https://docs.microsoft.com/azure/sql-database/scripts/sql-managed-instance-create-powershell-azure-resource-manager-template) enquanto você estiver criando a instância. A ordenação padrão no nível do servidor é **SQL_Latin1_General_CP1_CI_AS**. As ordenações somente Unicode e UTF-8 novas não podem ser especificadas como ordenação em nível do servidor.
 Se estiver migrando bancos de dados do SQL Server para a Instância Gerenciada, verifique a ordenação do servidor no SQL Server de origem usando a função `SERVERPROPERTY(N'Collation')` e crie uma Instância Gerenciada que corresponde à ordenação do SQL Server. A migração de um banco de dados do SQL Server para a Instância Gerenciada com ordenações no nível do servidor que não são correspondentes poderá causar vários erros inesperados nas consultas. Não é possível alterar a ordenação no nível do servidor na Instância Gerenciada existente.
 
@@ -68,5 +67,5 @@ Se estiver migrando bancos de dados do SQL Server para a Instância Gerenciada, 
  [Suporte a ordenações e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md)   
  [Definir ou alterar a ordenação de banco de dados](../../relational-databases/collations/set-or-change-the-database-collation.md)   
  [Definir ou alterar a ordenação de coluna](../../relational-databases/collations/set-or-change-the-column-collation.md)   
- [Recriar bancos de dados do sistema](../../relational-databases/databases/rebuild-system-databases.md)  
+ [Recompilar bancos de dados do sistema](../../relational-databases/databases/rebuild-system-databases.md)  
  
