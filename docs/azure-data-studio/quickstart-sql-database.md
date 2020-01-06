@@ -1,21 +1,21 @@
 ---
-title: 'Início Rápido: Conectar e consultar um Banco de Dados SQL do Azure'
+title: Conectar e consultar um Banco de Dados SQL do Azure
 titleSuffix: Azure Data Studio
 description: Este guia de início rápido mostra como usar o Azure Data Studio para conectar-se a um Banco de Dados SQL e executar uma consulta
-ms.custom: seodec18, sqlfreshmay19
-ms.date: 05/14/2019
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu; maghan; sstein
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: bdb1a9c8efb8ebdf5d2e35c1da00c12578ade7d6
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.custom: seodec18; sqlfreshmay19; seo-lt-2019
+ms.date: 05/14/2019
+ms.openlocfilehash: 2ed7841c3e6205ad0a6df4f232f021aeb24983cd
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959433"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957070"
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-azure-sql-database"></a>Início Rápido: Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] para conectar-se ao Banco de Dados SQL do Azure e consultá-lo
 
@@ -44,13 +44,13 @@ Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] para estabelecer uma con
 
 2. Este artigo usa a entrada do SQL, mas também é compatível com a autenticação do Windows. Preencha os campos a seguir usando o nome do servidor, o nome de usuário e a senha para seu SQL Server do Azure:
 
-   | Configuração       | Valor sugerido | Descrição |
+   | Configuração       | Valor sugerido | DESCRIÇÃO |
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Nome do servidor** | O nome do servidor totalmente qualificado | Algo como: **servername.database.windows.net**. |
    | **Autenticação** | Logon do SQL| Este tutorial usa a autenticação do SQL. |
-   | **User name** | O nome de usuário da conta do administrador do servidor | O nome de usuário da conta usada para criar o servidor. |
-   | **Senha (logon do SQL)** | A senha da conta do administrador do servidor | A senha da conta usada para criar o servidor. |
-   | **Salvar senha?** | Sim ou Não | Selecione **Sim** se você não quiser inserir a senha a cada vez. |
+   | **Nome de usuário** | O nome de usuário da conta do administrador do servidor | O nome de usuário da conta usada para criar o servidor. |
+   | **Senha (Logon do SQL)** | A senha da conta do administrador do servidor | A senha da conta usada para criar o servidor. |
+   | **Salvar senha?** | Sim ou não | Selecione **Sim** se você não quiser inserir a senha a cada vez. |
    | **Nome do banco de dados** | *deixar em branco* | Você está se conectando apenas ao servidor aqui. |
    | **Grupo de Servidores** | Selecione <Default> | Você pode definir esse campo para um grupo de servidores específico que você criou. | 
 

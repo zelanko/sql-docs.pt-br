@@ -1,6 +1,5 @@
 ---
-title: Destino do Rastreamento de Eventos para Windows | Microsoft Docs
-ms.custom: ''
+title: destino do rastreamento de eventos do Windows
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,12 +14,12 @@ ms.assetid: ca2bb295-b7f6-49c3-91ed-0ad4c39f89d5
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ac1191d870d7fe745cdbed0e17892c5c2cf34435
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8923769d3edb35b328c9b0351fd9700ff9168c6c
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021866"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75234659"
 ---
 # <a name="event-tracing-for-windows-target"></a>destino do rastreamento de eventos do Windows
 
@@ -52,13 +51,13 @@ ms.locfileid: "68021866"
   
  A tabela a seguir descreve as opções disponíveis para configuração do destino de ETW.  
   
-|Opção|Valores permitidos|Descrição|  
+|Opção|Valores permitidos|DESCRIÇÃO|  
 |------------|--------------------|-----------------|  
 |default_xe_session_name|Qualquer cadeia de caracteres até 256 caracteres. Esse valor é opcional.|O nome da sessão de Eventos Estendidos. Por padrão, este é XE_DEFAULT_ETW_SESSION.|  
 |default_etw_session_logfile_path|Qualquer cadeia de caracteres até 256 caracteres. Esse valor é opcional.|O caminho para o arquivo de log da sessão de Eventos Estendidos. Por padrão, esse é % TEMP% \ XEEtw.etl.|  
 |default_etw_session_logfile_size_mb|Qualquer inteiro não atribuído. Esse valor é opcional.|O tamanho do arquivo de log, em megabytes (MB), para a sessão de Eventos Estendidos. O padrão é 20 MB.|  
 |default_etw_session_buffer_size_kb|Qualquer inteiro não atribuído. Esse valor é opcional.|O tamanho do buffer na memória, em kilobytes (KB), para a sessão de Eventos Estendidos. O padrão é 128 KB.|  
-|repetições|Qualquer inteiro não atribuído.|O número de vezes para tentar publicar novamente o evento no subsistema ETW antes de descartar o evento. O padrão é 0.|  
+|retries|Qualquer inteiro não atribuído.|O número de vezes para tentar publicar novamente o evento no subsistema ETW antes de descartar o evento. O padrão é 0.|  
 | &nbsp; | &nbsp; | &nbsp; |
 
  A configuração dessas definições precedentes é opcional. O destino ETW usa valores padrão para essas configurações.  

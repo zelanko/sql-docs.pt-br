@@ -13,15 +13,15 @@ helpviewer_keywords:
 - column level encryption
 - cell level encryption
 ms.assetid: 38e9bf58-10c6-46ed-83cb-e2d76cda0adc
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 84a68ecbdd5d48447b17bbfd256aec982614cb3c
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 08899661d3638b03aaf848bd207625e168812e87
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72902978"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957404"
 ---
 # <a name="encrypt-a-column-of-data"></a>Criptografar uma coluna de dados
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "72902978"
   
 - Alguma permissão na chave, e não deve ter a permissão VIEW DEFINITION negada.  
   
-## <a name="using-transact-sql"></a>Usando Transact-SQL  
+## <a name="using-transact-sql"></a>Usando o Transact-SQL  
 
 Para usar os exemplos a seguir, é necessário ter uma chave mestra de banco de dados. Se seu banco de dados ainda não tiver uma chave mestra de banco de dados, crie uma executando a instrução a seguir e fornecendo sua senha:
 
@@ -166,7 +166,7 @@ Sempre faça backup da sua chave mestra de banco de dados. Para obter mais infor
     GO  
     ```  
   
- Para obter mais informações, consulte o seguinte:  
+ Para saber mais, consulte o seguinte:  
   
 -   [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-certificate-transact-sql.md)  
   

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bc9ec10cd88bdaa5536674df78c9b73700575516
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e2116c0a587b82f289f5dba17968f3eb42e47c05
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68020813"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75228248"
 ---
 # <a name="connect-to-an-always-on-availability-group-listener"></a>Conectar-se a um ouvinte do grupo de disponibilidade Always On 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "68020813"
  Para usar um ouvinte de grupo de disponibilidade para conectar-se à réplica de disponibilidade para acesso de leitura/gravação, a cadeia de conexão especifica o nome DNS do ouvinte do grupo de disponibilidade.  Se uma réplica primária de grupo de disponibilidade for alterada para uma nova réplica, as conexões existentes que usam o nome da rede de um ouvinte de grupo de disponibilidade serão desconectadas.  As novas conexões ao ouvinte do grupo de disponibilidade são então direcionadas para a nova réplica primária. Um exemplo de uma cadeia de conexão básica para o provedor ADO.NET (System.Data.SqlClient) é o seguinte:  
   
 ```  
-Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI  
+Server=tcp: AGListener,1433;Database=MyDB;Integrated Security=SSPI  
 ```  
   
  Você ainda pode escolher fazer referência direta à instância de nome do SQL Server das réplicas primárias ou secundárias, em vez de usar o nome do servidor do grupo de disponibilidade, no entanto, se optar por fazer isso, você perderá o benefício de novas conexões que são dirigidas automaticamente para a réplica primária atual.  Você também perderá o benefício de roteamento somente leitura.  
@@ -116,7 +116,7 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
  Um exemplo de uma cadeia de conexão para o provedor de ADO.NET (System.Data.SqlClient) que designa a intenção de aplicativo somente leitura é o seguinte:  
   
 ```  
-Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;ApplicationIntent=ReadOnly  
+Server=tcp:AGListener,1433;Database=AdventureWorks;Integrated Security=SSPI;ApplicationIntent=ReadOnly  
 ```  
   
  Neste exemplo de cadeia de conexão, o cliente está tentando conectar-se ao banco de dados AdventureWorks por meio de um ouvinte de grupo de disponibilidade denominado `AGListener` na porta 1433 (você também pode omitir a porta se o ouvinte do grupo de disponibilidade está escutando na 1433).  A cadeia de conexão tem a propriedade **ApplicationIntent** definida como **ReadOnly**, fazendo dela uma *cadeia de conexão de intenção de leitura*.  Sem essa configuração, o servidor não tentaria um roteamento somente leitura da conexão.  
@@ -163,7 +163,7 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
  Um exemplo de cadeia de conexão do provedor ADO.NET (System.Data.SqlClient) que habilita o failover de várias sub-redes é o seguinte:  
   
 ```  
-Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI; MultiSubnetFailover=True  
+Server=tcp:AGListener,1433;Database=AdventureWorks;Integrated Security=SSPI; MultiSubnetFailover=True  
 ```  
   
  A opção de conexão **MultiSubnetFailover** deve ser definida como **True** mesmo que o grupo de disponibilidade se estenda apenas por uma única sub-rede.  Isso permite pré-configurar novos clientes para dar suporte ao futuro alcance de sub-redes sem necessidade de alterações futuras na cadeia de conexão de cliente e também otimiza o desempenho de failover para failovers de sub-rede única.  Embora a opção de conexão **MultiSubnetFailover** não seja necessária, ela fornece o benefício de um failover de sub-rede mais rápido.  Isso ocorre porque o driver de cliente tentará abrir um soquete TCP para cada endereço IP em paralelo associado ao grupo de disponibilidade.  O driver de cliente esperará que o primeiro IP responda com êxito e quando o fizer, usa-o para a conexão.  

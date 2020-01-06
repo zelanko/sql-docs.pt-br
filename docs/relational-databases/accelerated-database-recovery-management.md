@@ -1,10 +1,8 @@
 ---
 title: Recuperação de banco de dados acelerada | Microsoft Docs
-ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: backup-restore
-ms.reviewer: kfarlee
 ms.technology: backup-restore
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,13 +10,14 @@ helpviewer_keywords:
 - database recovery [SQL Server]
 author: mashamsft
 ms.author: mathoma
+ms.reviewer: kfarlee
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d825c7db4789ec1421cf43acd5897e932c7fa29a
-ms.sourcegitcommit: 183d622fff36a22b882309378892010be3bdcd52
+ms.openlocfilehash: 8fea43ea41bc3e65fa0a6b36c7557322431e95fd
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71130535"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245259"
 ---
 # <a name="manage-accelerated-database-recovery"></a>Gerenciar recuperação acelerada de banco de dados
 
@@ -84,10 +83,10 @@ Alterar o local do PVS é um processo de três etapas.
    Para poder ativar a ADR com um novo local para o repositório de versão persistente, você deve primeiro verificar se todas as informações de versão foram limpas do local do PVS anterior. Para forçar essa limpeza a acontecer, execute o comando:
 
    ```sql
-   EXEC sys.sp_persistent_version_store_cleanup [database name]
+   EXEC sys.sp_persistent_version_cleanup [database name]
    ```
 
-   O procedimento armazenado `sys.sp_persistent_version_store_cleanup` é síncrono, o que significa que ele não será concluído até que todas as informações de versão sejam limpas do PVS atual.  Após a conclusão, você pode verificar se as informações de versão são realmente removidas consultando o DMV `sys.dm_persistent_version_store_stats` e examinando o valor de `persistent_version_store_size_kb`.
+   O procedimento armazenado `sys.sp_persistent_version_cleanup` é síncrono, o que significa que ele não será concluído até que todas as informações de versão sejam limpas do PVS atual.  Após a conclusão, você pode verificar se as informações de versão são realmente removidas consultando o DMV `sys.dm_persistent_version_store_stats` e examinando o valor de `persistent_version_store_size_kb`.
 
    ```sql
    SELECT DB_Name(database_id), persistent_version_store_size_kb 
@@ -103,7 +102,7 @@ Alterar o local do PVS é um processo de três etapas.
    (PERSISTENT_VERSION_STORE_FILEGROUP = [VersionStoreFG])
    ```
 
-## <a name="troubleshooting"></a>Solução de problemas
+## <a name="troubleshooting"></a>solução de problemas
 
 Consulte `sys.dm_tran_persistent_version_store_stats` para verificar os tamanhos de PVS.
 

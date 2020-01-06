@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Extensible Key Management
 - EKM, described
 ms.assetid: 9bfaf500-2d1e-4c02-b041-b8761a9e695b
-author: aliceku
-ms.author: aliceku
-ms.openlocfilehash: 1526a23955a5e39f3f70ebe9a457560514e164fb
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: 9115535ecc2569e035f4831589e53191e2634f61
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70148798"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957390"
 ---
 # <a name="extensible-key-management-ekm"></a>Gerenciamento extensível de chaves (EKM)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ GO
  Para desabilitar o recurso, defina o valor para **0**. Para mais informações sobre como definir opções de servidor, veja [sp_configure &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
 ## <a name="how-to-use-ekm"></a>Como usar EKM  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] O Gerenciamento Extensível de Chaves permite que as chaves de criptografia protejam os arquivos de banco de dados a serem armazenados em um dispositivo pronto para uso, como um smartcard, dispositivo USB ou o módulo EKM/HSM. O que também habilita proteção de dados a partir dos administradores de banco de dados (exceto os membros do grupo sysadmin ). Com o uso de chaves de criptografia, é possível criptografar dados aos quais somente o usuário do banco de dados tem acesso no módulo externo de EKM/HSM.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] O Gerenciamento Extensível de Chaves permite que as chaves de criptografia protejam os arquivos de banco de dados a serem armazenados em um dispositivo pronto para uso, como um smartcard, dispositivo USB ou o módulo EKM/HSM. Isso também permite proteger os dados dos administradores de banco de dados (exceto dos membros do grupo sysadmin). Com o uso de chaves de criptografia, é possível criptografar dados aos quais somente o usuário do banco de dados tem acesso no módulo externo de EKM/HSM.  
   
  O Gerenciador Extensível de Chaves também oferece os seguintes benefícios:  
   

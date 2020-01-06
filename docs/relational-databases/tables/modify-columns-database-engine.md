@@ -15,12 +15,12 @@ ms.assetid: b67b95c5-61ef-4bd8-9a3e-1640eb7583ac
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a7ca99bef5d0f5bf4f94eb02d76adff3109de059
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 822b98221139c9d67dde57cb78f3d969072f96bb
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68139608"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251209"
 ---
 # <a name="modify-columns-database-engine"></a>Modificar colunas (Mecanismo de Banco de Dados)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "68139608"
   
 3.  Na guia **Propriedades da Coluna** , clique na célula de grade da propriedade **Tipo de Dados** e selecione o novo tipo de dados na lista suspensa.  
   
-4.  No menu **Arquivo** , clique em **Salvar**_table name_.  
+4.  No menu **Arquivo**, clique em **Salvar**_nome da tabela_.  
   
 > [!NOTE]  
 >  Quando o tipo de dados de uma coluna é modificado, o Designer de Tabela aplica o comprimento padrão do tipo de dados que foi selecionado, até mesmo quando outro já tiver sido especificado. Defina sempre o comprimento do tipo de dados do valor desejado após especificar o tipo de dados.  
@@ -77,7 +77,7 @@ ms.locfileid: "68139608"
   
 3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**.  
   
-    ```  
+    ```sql  
     CREATE TABLE dbo.doc_exy (column_a INT ) ;  
     GO  
     INSERT INTO dbo.doc_exy (column_a) VALUES (10) ;  

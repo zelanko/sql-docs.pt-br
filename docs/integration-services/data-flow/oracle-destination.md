@@ -9,12 +9,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a175c38fb591dd5805ea3e8890cf9e60392178ce
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: 9ee964e5c1c58ea54da3f3451c0ffdde29e71b23
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69553223"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246935"
 ---
 # <a name="oracle-destination"></a>Destino Oracle
 
@@ -24,7 +24,7 @@ O destino Oracle carrega dados em massa no Oracle Database.
 
 O destino usa o Gerenciador de Conexões do Oracle para se conectar à fonte de dados. Para saber mais, confira o [Gerenciador de Conexões do Oracle](oracle-connection-manager.md).
 
-Um destino Oracle inclui mapeamentos entre as colunas de entrada e as colunas na fonte de dados de destino. Você não precisa mapear as colunas de entrada para todas as colunas de destino, mas, dependendo das propriedades das colunas de destino, podem ocorrer erros se nenhuma das colunas de entrada for mapeada para as colunas de destino. Por exemplo, se uma coluna de destino não permitir valores nulos, uma coluna de entrada deve ser mapeada para aquela coluna de destino. Além disso, se os dados de entrada não forem compatíveis com o tipo de coluna no destino, ocorrerá um erro no tempo de execução. Dependendo da configuração de comportamento do erro, este será ignorado, causará uma falha ou a linha será redirecionada à saída de erro.
+Um destino Oracle inclui mapeamentos entre as colunas de entrada e as colunas na fonte de dados de destino. Você não precisa mapear as colunas de entrada para todas as colunas de destino, mas, dependendo das propriedades das colunas de destino, podem ocorrer erros se nenhuma das colunas de entrada for mapeada para as colunas de destino. Por exemplo, se uma coluna de destino não permitir valores nulos, uma coluna de entrada deve ser mapeada para aquela coluna de destino. Além disso, se os dados de entrada não forem compatíveis com o tipo de coluna no destino, ocorrerá um erro no runtime. Dependendo da configuração de comportamento do erro, este será ignorado, causará uma falha ou a linha será redirecionada à saída de erro.
 
 O destino Oracle tem uma entrada regular e uma saída de erro.
 
@@ -41,13 +41,13 @@ Para obter detalhes sobre como configurar este modo, confira o [Editor de Destin
 - Carregamento rápido usando Direct Path: este modo destina-se ao uso do modo de caminho direto do driver para carregamento da tabela do Oracle. Há restrições de uso deste modo; para obter detalhes, confira a documentação do Oracle.  
 Para obter detalhes sobre como configurar este modo, confira o [Editor de Destino do Oracle (Página do Gerenciador de Conexões)](#oracle-destination-editor-connection-manager-page) e as [Propriedades Personalizadas do Destino Oracle](#oracle-destination-custom-properties).
 
-## <a name="error-handling"></a>Manipulação de erros
+## <a name="error-handling"></a>Tratamento de erros
 
 O destino Oracle tem uma saída de erro. A saída de erro de componente inclui as colunas de saída seguintes:
 
 - **Código do Erro**: um número que representa o tipo de erro do erro atual. O código de erro pode ser do:
     - Servidor Oracle. Confira a descrição detalhada de erros na documentação do banco de dados Oracle.
-    - Tempo de execução SSIS. Para obter uma lista dos códigos de erro SSIS, consulte a Referência de código e mensagem de erro SSIS.
+    - runtime SSIS. Para obter uma lista dos códigos de erro SSIS, consulte a Referência de código e mensagem de erro SSIS.
 - **Coluna de Erro**: o número da coluna de origem que causa os erros de conversão.
 
 - **Colunas de dados do erro**: os dados que causam o erro.
@@ -56,7 +56,7 @@ Os tipos de erros de saída, com suporte, durante o processo de carregamento sã
 
 A propriedade **número máximo de erros (MaxErrors)** define o número máximo de erros que pode ocorrer. Quando o número máximo é atingido, a execução cessa e retorna os erros. E somente os registros de execução antes de o número máximo de erros ser atingido são incluídos na tabela de destino. confira o [Editor de Destino do Oracle (Página do Gerenciador de Conexões)](#oracle-destination-editor-connection-manager-page) para obter detalhes de configuração.
 
-## <a name="parallelism"></a>Parallelism
+## <a name="parallelism"></a>Paralelismo
 
 No modo de carregamento em lote, não há nenhuma restrição na configuração de execução paralela, mas o desempenho pode ser afetado pelo mecanismo padrão de bloqueio de registro. O volume de perda de desempenho dependerá da organização de dados e da tabela.
 
@@ -79,16 +79,16 @@ Você pode registrar as chamadas ODBC que a origem do Oracle faz para as fontes 
 
 A tabela a seguir descreve as propriedades personalizadas do destino Oracle. Todas as propriedades são de leitura/gravação.
 
-|Nome da propriedade|Tipo de Dados|Descrição|Modo de carregamento|
+|Nome da propriedade|Tipo de Dados|DESCRIÇÃO|Modo de carregamento|
 |:-|:-|:-|:-|
 |BatchSize|Integer|O tamanho do lote para carregamento em massa. Esse é o número de linhas carregado como um lote.|Usado somente no modo de lote.|
 |DefaultCodePage|Integer|A página de código a ser usada quando a fonte de dados não tiver informações da página de código. <br>**Observação**: esta propriedade é definida somente pelo **Editor Avançado**.|Uso em ambos os modos.|
-|FastLoad|Booliano|Caso o carregamento rápido seja usado. O valor padrão é **false**. Esse também pode ser definido no [Editor de Destino do Oracle (Página do Gerenciador de Conexões)](#oracle-destination-editor-connection-manager-page). |Uso em ambos os modos.|
+|FastLoad|Boolean|Caso o carregamento rápido seja usado. O valor padrão é **false**. Esse também pode ser definido no [Editor de Destino do Oracle (Página do Gerenciador de Conexões)](#oracle-destination-editor-connection-manager-page). |Uso em ambos os modos.|
 |MaxErrors|Integer|O número de erros que pode ocorrer antes que o fluxo de dados cesse. O valor padrão é **0**, o que significa que não há limite para o número de erros.<br> Se o **Fluxo de redirecionamento** for selecionado na página de **Tratamento de erros**. Antes que o limite de número de erros seja atingido, todos os erros retornam na saída de erro. Para saber mais, confira o [Tratamento de erros](#error-handling).|Usado somente no modo de carregamento rápido.|
-|NoLogging|Booliano|Caso o registro em log do banco de dados esteja desabilitado. O valor padrão é **False**, o que significa que o registro em log está habilitado.|Uso em ambos os modos.|
-|Parallel|Booliano|Se o carregamento paralelo for permitido. **True** indica que outras sessões de carregamento podem ser executadas na mesma tabela de destino.<br> Para saber mais, confira [Paralelismo](#parallelism).|Usado somente no modo de carregamento rápido.|
-|TableName|Cadeia de caracteres|O nome da tabela com os dados que estão sendo usados.|Usado em ambos os modos.|
-|TableSubName|Cadeia de caracteres|O subnome ou a subpartição. Esse valor é opcional.<br> **Observação**: Essa propriedade só pode ser definida no **Editor Avançado**.|Usado somente no modo de carregamento rápido.|
+|NoLogging|Boolean|Caso o registro em log do banco de dados esteja desabilitado. O valor padrão é **False**, o que significa que o registro em log está habilitado.|Uso em ambos os modos.|
+|Paralelo|Boolean|Se o carregamento paralelo for permitido. **True** indica que outras sessões de carregamento podem ser executadas na mesma tabela de destino.<br> Para saber mais, confira [Paralelismo](#parallelism).|Usado somente no modo de carregamento rápido.|
+|TableName|String|O nome da tabela com os dados que estão sendo usados.|Usado em ambos os modos.|
+|TableSubName|String|O subnome ou a subpartição. Esse valor é opcional.<br> **Observação**: Essa propriedade só pode ser definida no **Editor Avançado**.|Usado somente no modo de carregamento rápido.|
 |TransactionSize|Integer|O número de inserções que pode ser feito em uma única transação. O padrão é o **BatchSize**.|Usado somente no modo de lote.|
 |TransferBufferSize|Integer|O tamanho do buffer de transferência. O valor padrão é 64 KB.|Usado somente no modo de carregamento rápido.|
 
@@ -131,7 +131,7 @@ Use a página do **Gerenciador de Conexões** da caixa de diálogo **Editor de D
 
 Selecione um gerenciador de conexões existente na lista ou clique em **Novo** para criar um novo gerenciador de conexões do Oracle.
 
-**Nova**
+**Novo**
 
 Clique em **Nova**. A caixa de diálogo **Editor do Gerenciador de Conexões do Oracle** é aberta, e nela você pode criar um novo gerenciador de conexões.
 
@@ -139,7 +139,7 @@ Clique em **Nova**. A caixa de diálogo **Editor do Gerenciador de Conexões do 
 
 Especifique o método para selecionar dados da origem. As opções são mostradas na tabela a seguir:
 
-|Opção|Descrição|
+|Opção|DESCRIÇÃO|
 |:-|:-|
 |Nome da tabela|Configurar o destino Oracle para funcionar no modo de lote. Opções:<br><br> **Nome da tabela ou da exibição**: selecione uma tabela ou exibição disponível no banco de dados na lista.<br><br> **Tamanho da transação**: insira o número de inserções que podem ser realizadas em uma única transação. O padrão é o **BatchSize**.<br><br> **Tamanho do lote**: digite o tamanho (número de linhas carregadas) do lote para o carregamento em massa.
 |Nome da tabela – Carregamento Rápido|Configurar o destino Oracle para funcionar no modo de carregamento rápido (Direct Path). <br><br>As opções disponíveis são:<br><br> **Nome da tabela ou da exibição**: selecione uma tabela ou exibição disponível no banco de dados na lista.<br><br> **Carregamento paralelo**: Caso o carregamento paralelo esteja habilitado. Para saber mais, confira [Paralelismo](#parallelism).<br><br> **Sem registro em log**: esta caixa de seleção desabilita o registro em log do banco de dados. Esse registro em log é um banco de dados Oracle usado para fins de recuperação, não relacionado ao rastreamento.<br><br> **Número máximo de erros**: o número máximo de erros que pode ocorrer antes que o fluxo de dados cesse. O valor padrão é 0, o que significa que não há limite de número.<br><br> Todos os erros que podem ocorrer retornam na saída de erro.<br><br> **Tamanho do buffer de transferência (KB)** : insira o tamanho do buffer de transferência. O tamanho padrão é 64 KB.|
@@ -199,7 +199,7 @@ Use a página de Saída de Erro da caixa de diálogo Editor de Destino do Oracle
 **Comportamento do erro**
 
 Selecione como a origem do Oracle deve tratar os erros em um fluxo: ignorar a falha, redirecionar a linha ou causar falha no componente.
-**Seção relacionada**: [Tratamento de erro em dados](https://docs.microsoft.com/en-us/sql/integration-services/data-flow/error-handling-in-data?view=sql-server-2017)
+**Seção relacionada**: [Tratamento de erro em dados](https://docs.microsoft.com/sql/integration-services/data-flow/error-handling-in-data?view=sql-server-2017)
 
 **Truncation**
 

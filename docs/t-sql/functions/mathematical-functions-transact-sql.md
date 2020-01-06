@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 46495a2e-81d0-4677-9d72-9db083cd1023
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ccd283aaf10837baa76ad9bbc579e5e3c9860c22
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 328a6e21d32bf5c0eaa029fcb0cf6586533cac19
+ms.sourcegitcommit: c98c6e33d04d4a1888db7dbe89cb0b1bb3a66418
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68130397"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74249780"
 ---
 # <a name="mathematical-functions-transact-sql"></a>Funções matemáticas (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   As funções escalares a seguir executam um cálculo, normalmente com base em valores de entrada fornecidos como argumentos e retornam um valor numérico:  
   

@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - database master key [SQL Server], exporting
 ms.assetid: 7ad9a0a0-6e4f-4f7b-8801-8c1b9d49c4d8
-author: aliceku
-ms.author: aliceku
-ms.openlocfilehash: 0a45b7977d19603387e51b9ed824d9e8a4d759b7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: 55db3923f26acaad667e444afb13ae0d86bcc59e
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67997676"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957493"
 ---
 # <a name="back-up-a-database-master-key"></a>Fazer backup da chave mestra de um banco de dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -1,7 +1,7 @@
 ---
 title: 'Tutorial: Criar e usar índices em colunas habilitadas para enclave com criptografia aleatória | Microsoft Docs'
 ms.custom: ''
-ms.date: 10/15/2019
+ms.date: 12/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -12,12 +12,12 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6ae44a28c5a4c426ffe225d8d80a545f6722c4c1
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 3f5d85128dd242b9499b31ad928a00a17d2b5571
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73592318"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258326"
 ---
 # <a name="tutorial-create-and-use-indexes-on-enclave-enabled-columns-using-randomized-encryption"></a>Tutorial: Criar e usar índices em colunas habilitadas para enclave com criptografia aleatória
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
@@ -33,7 +33,7 @@ Este tutorial é a continuação do [Tutorial: Introdução ao Always Encrypted 
 
 ## <a name="step-1-enable-accelerated-database-recovery-adr-in-your-database"></a>Etapa 1: Habilitar ADR (Recuperação de Banco de Dados Acelerada) no banco de dados
 
-A Microsoft recomenda habilitar a ADR em seu banco de dados antes de criar o primeiro índice em uma coluna habilitada para enclave usando a criptografia aleatória. Confira a seção [Recuperação de banco de dados](./encryption/always-encrypted-enclaves.md##database-recovery) em [Always Encrypted com enclaves seguros](./encryption/always-encrypted-enclaves.md).
+A Microsoft recomenda habilitar a ADR em seu banco de dados antes de criar o primeiro índice em uma coluna habilitada para enclave usando a criptografia aleatória. Confira a seção [Recuperação de banco de dados](./encryption/always-encrypted-enclaves.md#database-recovery) em [Always Encrypted com enclaves seguros](./encryption/always-encrypted-enclaves.md).
 
 1. Feche todas as instâncias SSMS usadas no tutorial anterior. Isso fechará as conexões de banco de dados que você abriu, o que é necessário para habilitar a ADR.
 1. Abra uma nova instância do SSMS e conecte-se à instância do SQL Server como sysadmin **sem** Always Encrypted habilitado para a conexão de banco de dados.
@@ -64,7 +64,7 @@ Nesta etapa, você criará e testará um índice em uma coluna criptografada. Vo
    2. Selecione **Opções...** .
    3. Navegue para **Execução da Consulta** > **SQL Server** > **Avançado**.
    4. A opção **Habilitar Parametrização do Always Encrypted** precisa estar marcada.
-   5. Escolha **OK**.
+   5. Selecione **OK**.
 1. Abra uma janela de consulta e execute as instruções abaixo para criptografar a coluna **LastName** na tabela **Funcionários**. Você criará e usará um índice nessa coluna em etapas posteriores.
 
    ```sql

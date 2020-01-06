@@ -1,21 +1,21 @@
 ---
-title: 'Início Rápido: Conectar e consultar um SQL Data Warehouse do Azure'
+title: Conectar e consultar um SQL Data Warehouse do Azure
 titleSuffix: Azure Data Studio
 description: Este guia de início rápido mostra como usar o Azure Data Studio para conectar-se a um SQL Data Warehouse do Azure e executar uma consulta
-ms.custom: seodec18
-ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 810d03ab97fd584e1ddaab45e06a21377b81685d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.custom: seodec18; seo-lt-2019
+ms.date: 09/24/2018
+ms.openlocfilehash: f07d13bc9110b5b9ec96aa17169687f471aeb197
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959405"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957103"
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>Início Rápido: Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] para conectar-se ao SQL Data Warehouse do Azure e consultá-lo
 
@@ -41,14 +41,14 @@ Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] para estabelecer uma con
 
 2. Este artigo usa o *Logon do SQL*, mas também há suporte para a *Autenticação do Windows*. Preencha os campos da seguinte maneira usando o nome do servidor, o nome de usuário e a *sua* senha para o SQL Server do Azure:
 
-   | Configuração       | Valor sugerido | Descrição |
+   | Configuração       | Valor sugerido | DESCRIÇÃO |
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Nome do servidor** | O nome do servidor totalmente qualificado | O nome deve ser algo assim: **sqldwsample.database.windows.net** |
    | **Autenticação** | Logon do SQL| A autenticação do SQL é usada neste tutorial. |
-   | **User name** | A conta do administrador do servidor | Essa é a conta que você especificou quando criou o servidor. |
-   | **Senha (logon do SQL)** | A senha de sua conta do administrador do servidor | Essa é a senha que você especificou quando criou o servidor. |
-   | **Salvar senha?** | Sim ou Não | Selecione Sim se você não quiser inserir a senha a cada vez. |
-   | **Nome do banco de dados** | *deixar em branco* | O nome do banco de dados ao qual se conectar. |
+   | **Nome de usuário** | A conta do administrador do servidor | Esta é a conta que você especificou quando criou o servidor. |
+   | **Senha (Logon do SQL)** | A senha para sua conta do administrador do servidor | Esta é a senha que você especificou quando criou o servidor. |
+   | **Salvar senha?** | Sim ou não | Selecione Sim se você não quiser inserir a senha a cada vez. |
+   | **Nome do banco de dados** | *deixar em branco* | O nome do banco de dados ao qual conectar. |
    | **Grupo de Servidores** | Selecione <Default> | Se você criou um grupo de servidores, pode definir para um grupo de servidores específico. | 
 
    ![Ícone de Nova Conexão](media/quickstart-sql-dw/new-connection-screen.png) 

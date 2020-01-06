@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f7dbb0c4b512741f97dbce2794c83d3667142324
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: ff31579a425f9e86fed11811c9d0a42c3113ee15
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71296062"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257068"
 ---
 # <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>Lição 1: Criar um projeto e pacote básico com o SSIS
 
@@ -35,7 +35,7 @@ Este tutorial se baseia no Microsoft SQL Server Data Tools, um conjunto de pacot
   
 * Para baixar todos os pacotes de lição para este tutorial:
 
-    1.  Navegue até [Arquivos do tutorial do Integration Services](https://www.microsoft.com/en-us/download/details.aspx?id=56827).
+    1.  Navegue até [Arquivos do tutorial do Integration Services](https://www.microsoft.com/download/details.aspx?id=56827).
 
     2.  Selecione o botão **DOWNLOAD**.
 
@@ -66,21 +66,21 @@ Quando estiver trabalhando com os dados de origem de arquivo simples, é importa
 ## <a name="look-at-the-destination-data"></a>Examinar os dados de destino
 O destino dos dados de origem é uma cópia da tabela de fatos **FactCurrencyRate** no **AdventureWorksDW**. A tabela de fatos **FactCurrencyRate** tem quatro colunas e tem relações com duas tabelas dimensionais, como mostrado na tabela a seguir.  
   
-|Nome da coluna|Tipo de dados|Tabela de pesquisa|Coluna de Pesquisa|  
+|Nome da coluna|Tipo de Dados|Tabela de pesquisa|coluna de pesquisa|  
 |---------------|-------------|----------------|-----------------|  
-|AverageRate|FLOAT|None|None|  
+|AverageRate|FLOAT|Nenhum|Nenhum|  
 |CurrencyKey|int (FK)|DimCurrency|CurrencyKey (PK)|  
 |DateKey|int (FK)|DimDate|DateKey (PK)|  
-|EndOfDayRate|FLOAT|None|None|  
+|EndOfDayRate|FLOAT|Nenhum|Nenhum|  
   
 ## <a name="map-the-source-data-to-the-destination"></a>Mapear os dados de origem para o destino  
 Nossa análise dos formatos de dados de origem e destino indicam que as pesquisas são necessárias para os valores **CurrencyKey** e **DateKey**. As transformações que executam essas pesquisas obtêm esses valores usando as chaves alternativas das tabelas de dimensões **DimCurrency** e **DimDate**.  
   
 |Coluna de arquivo simples|Nome da tabela|Nome da coluna|Tipo de Dados|  
 |--------------------|--------------|---------------|-------------|  
-|0|FactCurrencyRate|AverageRate|float|  
+|0|FactCurrencyRate|AverageRate|FLOAT|  
 |1|DimCurrency|CurrencyAlternateKey|nchar (3)|  
-|2|DimDate|FullDateAlternateKey|Data|  
+|2|DimDate|FullDateAlternateKey|date|  
 |3|FactCurrencyRate|EndOfDayRate|FLOAT|  
   
 ## <a name="lesson-tasks"></a>Tarefas da lição  

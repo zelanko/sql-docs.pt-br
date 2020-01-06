@@ -2,22 +2,23 @@
 title: Extensão de Servidores de Gerenciamento Central do SQL Server
 titleSuffix: Azure Data Studio
 description: Instale e use a extensão de Servidores de Gerenciamento Central do SQL Server (versão prévia) para o Azure Data Studio
-ms.custom: seodec18
-ms.date: 06/06/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 03edfc5b6d95c5cd6497d96d7014641f3032fb84
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.custom: seodec18
+ms.date: 06/06/2019
+ms.openlocfilehash: 6c323c2580e86e560aa1b0df5d131b260d0c1bb5
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959200"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957020"
 ---
 # <a name="sql-server-central-management-servers-extension-preview"></a>Extensão de Servidores de Gerenciamento Central do SQL Server (versão prévia)
+
 A extensão de Servidores de Gerenciamento Central permite que os usuários armazenam uma lista de instâncias do SQL Server que é organizada em um ou mais grupos. As ações executadas usando um grupo de CMS afetarão todos os servidores do grupo.
 
 Atualmente, essa experiência está na versão prévia inicial. Informe problemas e solicite recursos [aqui](https://github.com/microsoft/azuredatastudio/issues).

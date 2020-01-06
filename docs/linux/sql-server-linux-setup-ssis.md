@@ -8,12 +8,12 @@ ms.date: 01/09/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 68f3497e9f3f47d7e43c2bda0083bc25632d8221
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 0ee4c32568a52f5eb7664fa8f22250370f46f033
+ms.sourcegitcommit: a92fa97e7d3132ea201e4d86c76ac39cd564cd3c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032446"
+ms.lasthandoff: 12/21/2019
+ms.locfileid: "75325468"
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>Instalar o SSIS (SQL Server Integration Services) no Linux
 
@@ -36,11 +36,18 @@ Para instalar o pacote `mssql-server-is` no Ubuntu, siga estas etapas:
    ```
 
 2. Registre o repositório do Ubuntu do Microsoft SQL Server.
-
+<!--SQL Server 2017 on Linux-->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
    ```bash
    sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"
    ```
-
+::: moniker-end
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+   ```bash
+   sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019.list)"
+   ```
+::: moniker-end
 3. Execute os comandos a seguir para instalar o SQL Server Integration Services.
 
    ```bash
@@ -78,10 +85,18 @@ Para instalar o pacote `mssql-server-is` no RHEL, siga estas etapas:
 
 1. Baixe o arquivo de configuração do repositório do Red Hat do Microsoft SQL Server.
 
+<!--SQL Server 2017 on Linux-->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
    ```bash
    sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo
    ```
-
+::: moniker-end
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+   ```bash
+   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2019.repo
+   ```
+::: moniker-end
 1. Execute os comandos a seguir para instalar o SQL Server Integration Services.
 
    ```bash
@@ -131,10 +146,10 @@ sudo SSIS_PID=Developer ACCEPT_EULA=Y /opt/ssis/bin/ssis-conf -n setup
 
 ### <a name="environment-variables-for-unattended-installation"></a>Variáveis de ambiente para instalação autônoma
 
-| Variável de ambiente | Descrição |
+| Variável de ambiente | DESCRIÇÃO |
 |---|---|
 | **ACCEPT_EULA** | Aceita o contrato de licença do SQL Server quando definido como qualquer valor (por exemplo, `Y`,).|
-| **SSIS_PID** | Define a edição do SQL Server ou a chave do produto (Product Key). Estes são os valores possíveis:<br/>Evaluation<br/>Desenvolvedor<br/>Express <br/>Web <br/>Standard<br/>Enterprise <br/>Uma chave do produto (Product Key)<br/><br/>Se você especificar uma chave do produto (Product Key), ela deverá estar no formato `#####-#####-#####-#####-#####`, em que `#` é uma letra ou um número.  |
+| **SSIS_PID** | Define a edição do SQL Server ou a chave do produto (Product Key). Estes são os valores possíveis:<br/>Avaliação<br/>Desenvolvedor<br/>Express <br/>Web <br/>Standard<br/>Enterprise <br/>Uma chave do produto (Product Key)<br/><br/>Se você especificar uma chave do produto (Product Key), ela deverá estar no formato `#####-#####-#####-#####-#####`, em que `#` é uma letra ou um número.  |
 | | |
 
 ## <a name="next-steps"></a>Próximas etapas

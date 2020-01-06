@@ -10,12 +10,12 @@ ms.assetid: 854c0b2f-02d2-46a4-a8cc-6b7a5d191cf8
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ad6dc50d1144b0efa13bf4b429a1ca2103fefcd2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f445d1b28c7f76274a2a64e813805f820d005aa6
+ms.sourcegitcommit: 381595e990f2294dbf324ef31071e2dd2318b8dd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991061"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74200471"
 ---
 # <a name="install-sql-server-powershell"></a>Instalar o SQL Server PowerShell
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -34,7 +34,7 @@ Você instala o software que oferece suporte do [!INCLUDE[ssNoVersion](../../inc
  
 - [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] dá suporte à inicialização das sessões do Windows PowerShell por meio da árvore do Pesquisador de Objetos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dá suporte às etapas de trabalho do Windows PowerShell.  
   
-O Windows Server 2012 e posterior e o Windows 8 e posterior são fornecidos com o PowerShell instalado e configurado. Para obter informações sobre como instalar o Windows PowerShell, confira [Instalando o Windows PowerShell](https://docs.microsoft.com/powershell/scripting/setup/installing-windows-powershell).  
+O Windows Server 2012 e posterior e o Windows 8 e posterior são fornecidos com o PowerShell instalado e configurado. Para obter informações sobre como instalar o Windows PowerShell, confira [Instalando o Windows PowerShell](https://docs.microsoft.com/powershell/scripting/install/installing-windows-powershell).  
 
 Para obter mais informações, consulte:   
 

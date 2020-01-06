@@ -9,12 +9,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4898a61b0f64f79b32a9efc81f0a41a025e6d2ad
-ms.sourcegitcommit: c4258a644ac588fc222abee2854f89a81325814c
+ms.openlocfilehash: 4444236d19c9d7c67aba5a36ba079e1dfa9189b0
+ms.sourcegitcommit: 02449abde606892c060ec9e9e9a85a3f49c47c6c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72545063"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74542200"
 ---
 # <a name="oracle-source"></a>Oracle Source
 
@@ -34,7 +34,7 @@ A saída de erro inclui as seguintes colunas:
 
 - **Código do Erro**: um número que representa o tipo de erro do erro atual. O código de erro pode ser do:
     - Servidor Oracle. Confira a descrição detalhada de erros na documentação do banco de dados Oracle.
-    - Tempo de execução SSIS. Para obter uma lista dos códigos de erro SSIS, consulte a Referência de código e mensagem de erro SSIS.
+    - runtime SSIS. Para obter uma lista dos códigos de erro SSIS, consulte a Referência de código e mensagem de erro SSIS.
 - **Coluna de Erro**: o número da coluna de origem que causa os erros de conversão.
 
 - **Colunas de dados do erro**: os dados que causam o erro.
@@ -49,14 +49,14 @@ Você pode registrar as chamadas ODBC que a origem do Oracle faz para as fontes 
 
 As propriedades personalizadas da origem do Oracle estão abaixo. Todas as propriedades são de leitura/gravação.
 
-|Nome da propriedade|Tipo de Dados|Descrição|
+|Nome da propriedade|Tipo de Dados|DESCRIÇÃO|
 |:-|:-|:-|
 |AccessMode|Inteiro (enumeração)|O modo usado para acessar o banco de dados. Os valores possíveis são **Nome da Tabela** e **Comando SQL**. O padrão é **Nome da Tabela**.|
 |BatchSize|Integer|O tamanho do lote para carregamento em massa. Esse é o número de registros extraído como uma matriz. <br>Esta propriedade é definida somente pelo **Editor Avançado**|
 |DefaultCodePage|Integer|A página de código a ser usada quando a fonte de dados não tiver informações da página de código. <br>Esta propriedade é definida somente pelo **Editor Avançado**.|
 |PreFetchCount|Integer|O número de linhas de pré-busca. <br>Esta propriedade é definida somente pelo **Editor Avançado**.|
-|SqlCommand|Cadeia de caracteres|O comando SQL a ser executado quando AccessMode é definido como Comando SQL.|
-|TableName|Cadeia de caracteres|O nome da tabela com os dados a serem usados quando AccessMode for definido como Nome da Tabela.|
+|SqlCommand|String|O comando SQL a ser executado quando AccessMode é definido como Comando SQL.|
+|TableName|String|O nome da tabela com os dados a serem usados quando AccessMode for definido como Nome da Tabela.|
 
 ## <a name="configuring-the-oracle-source"></a>Como configurar o Oracle Source
 
@@ -95,7 +95,7 @@ Na página do **Gerenciador de Conexões**, a caixa de diálogo do **Editor de O
 
 Selecione um gerenciador de conexões existente na lista ou clique em **Novo** para criar um novo gerenciador de conexões do Oracle.
 
-**Nova**
+**Novo**
 
 Clique em **Nova**. A caixa de diálogo **Editor do Gerenciador de Conexões do Oracle** é aberta, e nela você pode criar um novo gerenciador de conexões.
 
@@ -103,7 +103,7 @@ Clique em **Nova**. A caixa de diálogo **Editor do Gerenciador de Conexões do 
 
 Especifique o método para selecionar dados da origem. As opções são mostradas na tabela a seguir:
 
-|Opção|Descrição|
+|Opção|DESCRIÇÃO|
 |:-|:-|
 |Tabela ou exibição|Recupere os dados de uma tabela ou exibição na fonte de dados Oracle. Quando esta opção é selecionada, selecione uma tabela ou exibição disponível no banco de dados da lista para **Nome da tabela ou da exibição**.|
 |Comando SQL|Recupere os dados da fonte de dados Oracle usando uma consulta SQL. Quando esta opção for selecionada, insira uma consulta de uma das seguintes maneiras: <br>Insira o texto da consulta SQL no campo **Texto do comando do SQL** . <br>Clique em **Procurar** para carregar a consulta SQL de um arquivo de texto. <br>Clique em **Analisar consulta** para verificar a sintaxe do texto da consulta.|
@@ -161,7 +161,7 @@ Use a página **Saída de Erro** da caixa de diálogo **Editor do Oracle Source*
 **Comportamento do erro**
 
 Selecione como a origem do Oracle deve tratar os erros em um fluxo: ignorar a falha, redirecionar a linha ou causar falha no componente.
-**Seção relacionada**: [Tratamento de erro em dados](https://docs.microsoft.com/en-us/sql/integration-services/data-flow/error-handling-in-data?view=sql-server-2017)
+**Seção relacionada**: [Tratamento de erro em dados](https://docs.microsoft.com/sql/integration-services/data-flow/error-handling-in-data?view=sql-server-2017)
 
 **Truncation**
 

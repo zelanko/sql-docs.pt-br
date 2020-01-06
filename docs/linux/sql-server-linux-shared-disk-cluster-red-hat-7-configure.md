@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: b76797d6b6bc9b9d2c9f666039595446f975a3aa
-ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
+ms.openlocfilehash: 052bb7455c952600390a0960e9d7618ab0a315fc
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/09/2019
-ms.locfileid: "70809782"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252238"
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Configurar o cluster de disco compartilhado do Red Hat Enterprise Linux para o SQL Server
 
@@ -120,7 +120,7 @@ Há uma variedade de soluções para fornecer armazenamento compartilhado. Este 
 
 No servidor NFS, faça o seguinte:
 
-1. Instale o `nfs-utils`
+1. Instalar `nfs-utils`
 
    ```bash
    sudo yum -y install nfs-utils
@@ -175,7 +175,7 @@ No servidor NFS, faça o seguinte:
 
 Execute as etapas a seguir em todos os nós de cluster.
 
-1.  Instale o `nfs-utils`
+1.  Instalar `nfs-utils`
 
    ```bash
    sudo yum -y install nfs-utils
@@ -202,7 +202,7 @@ Para obter mais informações sobre como usar o NFS, confira os seguintes recurs
 
 * [Servidores NFS e firewall | Stack Exchange](https://unix.stackexchange.com/questions/243756/nfs-servers-and-firewalld)
 * [Como montar um volume do NFS | Guia de Administradores de Rede do Linux](https://www.tldp.org/LDP/nag2/x-087-2-nfs.mountd.html)
-* [Configuração do servidor NFS | Portal do Cliente do Red Hat](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/storage_administration_guide/nfs-serverconfig)
+* [Configuração do servidor NFS | Portal do Cliente do Red Hat](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/storage_administration_guide/nfs-serverconfig)
 
 ### <a name="mount-database-files-directory-to-point-to-the-shared-storage"></a>Montar o diretório de arquivos de banco de dados para que ele aponte para o armazenamento compartilhado
 

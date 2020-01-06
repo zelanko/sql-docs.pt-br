@@ -1,10 +1,8 @@
 ---
 title: Recuperação de banco de dados acelerada | Microsoft Docs
-ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: backup-restore
-ms.reviewer: kfarlee
 ms.technology: backup-restore
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,13 +10,14 @@ helpviewer_keywords:
 - database recovery [SQL Server]
 author: mashamsft
 ms.author: mathoma
+ms.reviewer: kfarlee
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5bfd7d5585e08a643575f0c657c936e6a56b3f0c
-ms.sourcegitcommit: 183d622fff36a22b882309378892010be3bdcd52
+ms.openlocfilehash: c7912e3048021255da0340f19f5d449d1c13a6c7
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71130555"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245291"
 ---
 # <a name="accelerated-database-recovery"></a>Recuperação de banco de dados acelerada
 
@@ -56,7 +55,7 @@ Sem a ADR, a recuperação de banco de dados no SQL Server segue o modelo de rec
 
   Para cada transação que estava ativa no momento da falha, o SQL Server percorre o log em sentido reverso, desfazendo as operações realizadas por essa transação.
 
-Com base nesse design, o tempo necessário para que o mecanismo de banco de dados se recupere de uma reinicialização inesperada é (aproximadamente) proporcional ao tamanho da transação ativa mais longa no sistema no momento da falha. A recuperação requer uma reversão de todas as transações incompletas. O período de tempo necessário é proporcional ao trabalho que a transação realizou e à hora em que ela esteve ativa. Portanto, o processo de recuperação de SQL Server pode levar muito tempo se existirem transações de execução prolongada (como operações de inserção em massa grandes ou operações de build de índice em uma tabela grande).
+Com base nesse design, o tempo necessário para que o mecanismo de banco de dados se recupere de uma reinicialização inesperada é (aproximadamente) proporcional ao tamanho da transação ativa mais longa no sistema no momento da falha. A recuperação requer uma reversão de todas as transações incompletas. O período de tempo necessário é proporcional para o trabalho que a transação foi executado e o tempo ele esteve ativo. Portanto, o processo de recuperação do SQL Server pode levar muito tempo na presença de transações de longa duração (como grandes operações de inserção em massa ou operações de criação de índice em uma tabela grande).
 
 Além disso, cancelar ou reverter uma transação grande baseada nesse design também pode levar muito tempo, pois esse processo está usando a mesma fase desfazer recuperação descrita acima.
 
@@ -66,14 +65,14 @@ Além disso, o mecanismo de banco de dados não pode truncar o log de transaçõ
 
 A ADR aborda os problemas acima remodelando completamente o processo de recuperação do mecanismo de banco de dados para:
 
-- Torná-lo de tempo constante/instantâneo, evitando a necessidade de verificar o log de/para o início da transação ativa mais antiga. Com a ADR, o log de transações só é processado desde o último ponto de verificação bem-sucedido ou do LSN (número de sequência de log) de página suja mais antigo. Como resultado, o tempo de recuperação não é afetado por transações de execução prolongada.
-- Minimize o espaço de log de transações necessário, pois não há mais necessidade de processar o log para toda a transação. Como resultado, o log de transações pode ser truncado agressivamente, pois ocorrem pontos de verificação e backups.
+- Torne constante o tempo / instantâneo, evitando ter que escanear o log de / para o início da transação ativa mais antiga. Com a ADR, o log de transações só é processado desde o último ponto de verificação bem-sucedido ou do LSN (número de sequência de log) de página suja mais antigo. Como resultado, o tempo de recuperação não é afetado por longa execução de transações.
+- Minimize o espaço de log de transações necessário, pois não há mais necessidade de processar o log para toda a transação. Como resultado, o log de transações pode ser truncado de forma agressiva à medida que os pontos de verificação e backups ocorrem.
 
-Em um nível alto, a ADR alcança a recuperação rápida do banco de dados ao realizar o controle de versão de todas as modificações físicas do banco de dados e desfazer apenas operações lógicas, que são limitadas e podem ser desfeitas quase instantaneamente. Todas as transações que estavam ativas no momento de uma falha são marcadas como anuladas e, portanto, todas as versões geradas por essas transações podem ser ignoradas por consultas de usuário simultâneas.
+Em um nível alto, o ADR obtém uma rápida recuperação do banco de dados, modificando todas as modificações físicas do banco de dados e apenas desfazendo as operações lógicas, que são limitadas e podem ser desfeitas quase instantaneamente. Todas as transações que estavam ativas no momento de uma falha são marcadas como anuladas e, portanto, todas as versões geradas por essas transações podem ser ignoradas por consultas de usuário simultâneas.
 
 O processo de recuperação ADR tem as mesmas três fases que o processo de recuperação atual. A forma como essas fases operam com ADR é ilustrada no diagrama a seguir.
 
-![Processo de recuperação de ADR](./media/accelerated-database-recovery-concepts/adr-recovery-process.png)
+![Processo de recuperação ADR](./media/accelerated-database-recovery-concepts/adr-recovery-process.png)
 
 - **Fase de análise**
 
@@ -84,7 +83,7 @@ O processo de recuperação ADR tem as mesmas três fases que o processo de recu
   Dividida em duas subfases
   - Subfase 1
 
-      Refazer de sLog (transação não confirmada mais antiga até o último ponto de verificação). Refazer é uma operação rápida, pois ela só precisa processar alguns registros do sLog.
+      Refazer de sLog (transação não confirmada mais antiga até o último ponto de verificação). O Redo é uma operação rápida, pois precisa apenas processar alguns registros do sLog.
 
   - Subfase 2
 
@@ -96,7 +95,7 @@ O processo de recuperação ADR tem as mesmas três fases que o processo de recu
 
 ## <a name="adr-recovery-components"></a>Componentes de recuperação ADR
 
-Os quatro principais componentes de ADR são:
+Os quatro componentes principais da ADR são:
 
 - **PVS (repositório de versão persistente)**
 
