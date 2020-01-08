@@ -1,11 +1,3 @@
----
-ms.openlocfilehash: 28835571ef6bd3690884ea3e2b916d0c0d237eab
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73057328"
----
 
 Acumulamos e mantemos a documentação de versões muito antigas do Microsoft SQL Server em conjuntos de páginas da Web arquivadas. As páginas da Web arquivadas não são processadas por mecanismos de pesquisa, como Bing.com e Google.com. Ainda assim, é possível ver esses arquivos mortos no nosso endereço _previous-versions/sql/_ de Documentos:
 
