@@ -10,12 +10,12 @@ ms.assetid: 9fb8656b-0e4e-4ada-b404-4db4d3eea995
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b7f3f8ee0d5766214ed7dc111728c37d0d41f071
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.openlocfilehash: c6e19142ab4d447678aedf6c841a74ed435eccea
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73632901"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257022"
 ---
 # <a name="lesson-1-create-and-query-database-objects"></a>Lição 1: Criar e consultar objetos de banco de dados
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,7 +37,7 @@ Para executar [!INCLUDE[tsql](../includes/tsql-md.md)] instruções no [!INCLUDE
 ## <a name="prerequisites"></a>Prerequisites
 Para concluir este tutorial, você precisa de acesso ao SQL Server Management Studio e a uma instância do SQL Server. 
 
-- Instalar o [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Instale o [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
 Se você não tiver acesso a uma instância do SQL Server, selecione sua plataforma nos links a seguir. Se você escolher Autenticação do SQL, use suas credenciais de logon do SQL Server.
 - **Windows**: [Baixe o SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
@@ -62,7 +62,7 @@ Ao criar um banco de dados, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.
 > [!NOTE]  
 > A palavra-chave GO separa instruções quando mais de uma instrução é enviada em um único lote. GO é opcional quando o lote contém somente uma instrução.  
 
-## <a name="create-a-table"></a>Criar uma Tabela
+## <a name="create-a-table"></a>Criar uma tabela
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Para criar uma tabela, você deve fornecer um nome para a tabela e os nomes e tipos de dados de cada coluna na tabela. Também é uma prática recomendada indicar se são permitidos valores nulos em cada coluna. Para criar uma tabela, você deve ter a permissão `CREATE TABLE` , além da permissão `ALTER SCHEMA` no esquema que conterá a tabela. A função de banco de dados fixa [`db_ddladmin`](../relational-databases/security/authentication-access/database-level-roles.md) tem essas permissões.  
@@ -84,14 +84,14 @@ Em uma janela do Editor de Consultas, digite e execute o código a seguir para a
   ```  
   
 ### <a name="create-the-table"></a>Criar a tabela
-Em uma janela do Editor de Consultas, digite e execute o seguinte código para criar uma tabela simples chamada `Products`. As colunas na tabela são nomeadas `ProductID`, `ProductName`, `Price`e `ProductDescription`. A coluna `ProductID` é a chave primária da tabela. `int`, `varchar(25)`, `money`e `text` são todos tipos de dados. Somente as colunas `Price` e `ProductionDescription` podem não ter dados quando uma linha for inserida ou alterada. Essa instrução contém um elemento opcional (`dbo.`) chamado de um esquema. O esquema é o objeto do banco de dados que possui a tabela. Se você for um administrador, `dbo` será o esquema padrão. `dbo` representa o proprietário do banco de dados.  
+Em uma janela do Editor de Consultas, digite e execute o seguinte código para criar uma tabela simples chamada `Products`. As colunas na tabela são nomeadas `ProductID`, `ProductName`, `Price`e `ProductDescription`. A coluna `ProductID` é a chave primária da tabela. `int`, `varchar(25)`, `money`e `varchar(max)` são todos tipos de dados. Somente as colunas `Price` e `ProductionDescription` podem não ter dados quando uma linha for inserida ou alterada. Essa instrução contém um elemento opcional (`dbo.`) chamado de um esquema. O esquema é o objeto do banco de dados que possui a tabela. Se você for um administrador, `dbo` será o esquema padrão. `dbo` representa o proprietário do banco de dados.  
   
   ```sql  
   CREATE TABLE dbo.Products  
      (ProductID int PRIMARY KEY NOT NULL,  
      ProductName varchar(25) NOT NULL,  
      Price money NULL,  
-     ProductDescription text NULL)  
+     ProductDescription varchar(max) NULL)  
   GO  
  ```  
 
@@ -101,7 +101,7 @@ Agora que você criou a tabela **Products** , está pronto para inserir dados na
 |ProductID|ProductName|Price|ProductDescription|  
 |-------------|---------------|---------|----------------------|  
 |1|Clamp|12.48|Workbench clamp|  
-|50|Screwdriver|3.17|Flat head|  
+|50|Screwdriver|3,17|Flat head|  
 |75|Tire Bar||Tool for changing tires.|  
 |3000|3mm Bracket|.52||  
   

@@ -1,11 +1,3 @@
----
-ms.openlocfilehash: 7d392ee6791c120243b304ab24b2f8268499617d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68215575"
----
 ## <a name="prerequisites"></a>Prerequisites
 
 Antes de criar o grupo de disponibilidade, você precisa:
@@ -43,7 +35,7 @@ Antes de criar o grupo de disponibilidade, você precisa:
    sudo ip addr show
    ```
 
-   Atualize `/etc/hosts`. O script a seguir permite que você edite `/etc/hosts` com `vi`:
+   Atualizar `/etc/hosts`. O script a seguir permite que você edite `/etc/hosts` com `vi`:
 
    ```bash
    sudo vi /etc/hosts
@@ -59,7 +51,7 @@ Antes de criar o grupo de disponibilidade, você precisa:
     10.128.15.33 node3
     ```
 
-### <a name="install-sql-server"></a>Instalar o SQL Server
+### <a name="install-sql-server"></a>Instale o SQL Server
 
 Instale o SQL Server. Os links a seguir apontam para instruções de instalação do SQL Server para diversas distribuições: 
 

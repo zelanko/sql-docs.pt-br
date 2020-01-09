@@ -11,12 +11,12 @@ ms.prod: sql
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 14cb6a377e6aeb0fbd24f9808a794d68633f4ce6
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 9f2e5632b073f96faf530db56d052d71f4a143f4
+ms.sourcegitcommit: f9286d02025ee1e15d0f1c124e951e8891fe3cc2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67834420"
+ms.lasthandoff: 12/23/2019
+ms.locfileid: "75329958"
 ---
 # <a name="active-directory-authentication-for-sql-server-on-linux"></a>Autenticação do Active Directory para o SQL Server em Linux
 
@@ -44,8 +44,8 @@ Os detalhes de como configurar a autenticação do AD são fornecidos no tutoria
 1. [Ingressar um host do SQL Server em um domínio do Active Directory](sql-server-linux-active-directory-join-domain.md).
 1. [Criar um usuário do AD para SQL Server e definir ServicePrincipalName](sql-server-linux-active-directory-authentication.md#createuser).
 1. [Configurar keytab do serviço SQL Server](sql-server-linux-active-directory-authentication.md#configurekeytab).
-1. [Proteger o arquivo keytab](sql-server-linux-active-directory-authentication.md#securekeytab).
-1. [Configurar o SQL Server para usar o arquivo keytab para autenticação Kerberos](sql-server-linux-active-directory-authentication.md#keytabkerberos).
+1. [Proteger o arquivo keytab](sql-server-linux-active-directory-authentication.md#configurekeytab).
+1. [Configurar o SQL Server para usar o arquivo keytab para autenticação Kerberos](sql-server-linux-active-directory-authentication.md#configurekeytab).
 1. [Criar logons do SQL Server baseados em AD no Transact-SQL](sql-server-linux-active-directory-authentication.md#createsqllogins).
 1. [Conectar-se ao SQL Server usando a autenticação do AD](sql-server-linux-active-directory-authentication.md#connect).
 
@@ -53,6 +53,6 @@ Os detalhes de como configurar a autenticação do AD são fornecidos no tutoria
 
 - Neste momento, o único método de autenticação com suporte do ponto de extremidade de espelhamento de banco de dados é CERTIFICATE. O método de autenticação WINDOWS será habilitado em uma versão futura.
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Próximas etapas
 
 Para saber mais sobre como implementar a autenticação do Active Directory para SQL Server em Linux, confira [Tutorial: Use a autenticação do Active Directory com o SQL Server em Linux](sql-server-linux-active-directory-authentication.md).

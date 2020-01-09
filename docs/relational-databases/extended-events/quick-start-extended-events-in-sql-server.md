@@ -1,6 +1,5 @@
 ---
-title: 'Início Rápido: Eventos estendidos no SQL Server | Microsoft Docs'
-ms.custom: ''
+title: 'Início Rápido: Eventos estendidos no SQL Server'
 ms.date: 05/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +10,12 @@ ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fe13d14db11b95812217725bb4207ee30b50d62b
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.openlocfilehash: 8e4512400d2f05500f2db9a98a72f57ac50bc3a7
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72798433"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242918"
 ---
 # <a name="quickstart-extended-events-in-sql-server"></a>Início Rápido: Eventos estendidos no SQL Server
 
@@ -80,7 +79,7 @@ Você pode entender as etapas mesmo se optar por não realizá-las. A demonstra�
 
 - Geral
 - Eventos
-- Armazenamento de Dados
+- Armazenamento de dados
 - Avançado
 
 
@@ -424,12 +423,12 @@ Cenários específicos de sessões de evento destinadas à avaliação de bloque
 A tabela a seguir lista os termos usados para eventos estendidos e descreve seus significados.
 
 
-| Termo | Descrição |
+| Termo | DESCRIÇÃO |
 | :--- | :---------- |
 | sessão de evento | Um constructo centrado em torno de um ou mais eventos, além de itens de suporte como ações, são destinos. A instrução CREATE EVENT SESSION constrói cada sessão de evento. Você pode usar ALTER em uma sessão de evento para iniciá-la e interrompê-la quando desejar. <br/> <br/> Às vezes, uma sessão de evento é chamada de apenas uma *sessão*, quando o contexto esclarece que ela indica uma *sessão de evento*. <br/> <br/> Mais detalhes sobre as sessões de evento são descritos em: [Sessões de eventos estendidos do SQL Server](../../relational-databases/extended-events/sql-server-extended-events-sessions.md). |
 | event | Uma ocorrência específica no sistema que é inspecionada por uma sessão de eventos ativos. <br/> <br/> Por exemplo, o evento *sql_statement_completed* representa o momento em que se conclui qualquer instrução T-SQL. O evento pode relatar sua duração e outros dados. |
-| target | Um item que recebe os dados de saída de um evento capturado. O destino exibe os dados para você. <br/> <br/> Alguns exemplos incluem o *event_file*, e sua prima leve e útil, a memória *ring_buffer*. O destino *histogram* mais elaborado executa algum processamento de seus dados antes de exibi-los. <br/> <br/> Qualquer destino pode ser usado para qualquer sessão de evento. Para obter detalhes, consulte [Destinos de eventos estendidos no SQL Server](../../relational-databases/extended-events/targets-for-extended-events-in-sql-server.md). |
-| action | Um campo conhecido para o evento. Os dados do campo são enviados para o destino. O campo de ação está intimamente relacionado ao *filtro de predicado*. |
+| destino | Um item que recebe os dados de saída de um evento capturado. O destino exibe os dados para você. <br/> <br/> Alguns exemplos incluem o *event_file*, e sua prima leve e útil, a memória *ring_buffer*. O destino *histogram* mais elaborado executa algum processamento de seus dados antes de exibi-los. <br/> <br/> Qualquer destino pode ser usado para qualquer sessão de evento. Para obter detalhes, consulte [Destinos de eventos estendidos no SQL Server](../../relational-databases/extended-events/targets-for-extended-events-in-sql-server.md). |
+| ação | Um campo conhecido para o evento. Os dados do campo são enviados para o destino. O campo de ação está intimamente relacionado ao *filtro de predicado*. |
 | filtro de predicado | Um teste de dados em um campo de evento, usado de forma que apenas um subconjunto interessante de ocorrências de eventos sejam enviados para o destino. <br/> <br/> Por exemplo, um filtro pode incluir somente as ocorrências de eventos *sql_statement_completed* em que a instrução T-SQL contém a cadeia de caracteres *HAVING*. |
 | pacote | Um qualificador de nome anexado a cada item em um conjunto de itens centrado em torno de um núcleo de eventos. <br/> <br/> Por exemplo, um pacote pode ter eventos sobre o texto T-SQL. Um evento pode tratar de todo o T-SQL em um lote delimitado por GO. Enquanto isso, outro evento mais estreito designa instruções T-SQL individuais. Além disso, para qualquer instrução T-SQL, há eventos de início e concluídos. <br/> <br/> Os campos apropriados para os eventos também estão no pacote com os eventos. A maioria dos destinos está em *package0* e é usada com eventos de vários outros pacotes. |
 
@@ -494,7 +493,7 @@ Uma descrição de como usar eventos estendidos com colunas e classes de evento 
 
 Descrições de como usar os eventos estendidos com o ETW (Rastreamento de Eventos para Windows) estão disponíveis em:
 
-- [Destino do rastreamento de eventos do Windows](../../relational-databases/extended-events/event-tracing-for-windows-target.md)
+- [Destino do Rastreamento de Eventos para Windows](../../relational-databases/extended-events/event-tracing-for-windows-target.md)
 - [Monitorar a atividade do sistema usando Eventos Estendidos](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)
 
 

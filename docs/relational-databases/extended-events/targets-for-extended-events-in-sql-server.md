@@ -1,6 +1,5 @@
 ---
-title: Destinos para eventos estendidos no SQL Server | Microsoft Docs
-ms.custom: ''
+title: Destinos de eventos estendidos no SQL Server
 ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +10,12 @@ ms.assetid: 47c64144-4432-4778-93b5-00496749665b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: c50fb79383890a2e09cb465c89b459b3bea9a3ca
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 942f69fc92fa06b5131cee2dba9145f4faaae0cc
+ms.sourcegitcommit: 12f529b811d308b169735740b78c6d5439ffefc7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907998"
+ms.lasthandoff: 12/27/2019
+ms.locfileid: "75501980"
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>Destinos de eventos estendidos no SQL Server
 
@@ -61,7 +60,7 @@ No Transact-SQL, a instrução [CREATE EVENT SESSION](~/t-sql/statements/create-
 
 Instruções SELECT que retornam listas desse tipo das exibições do sistema estão disponíveis para cópia no seguinte artigo, seção C:
 
-- [Seleções e junções em exibições do sistema dos Eventos Estendidos no SQL Server](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md)
+- [SELECTs e JOINs de exibições do sistema dos Eventos Estendidos no SQL Server](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md)
     - Campos[C.4](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md#section_C_4_data_fields) SELECT de um evento.
     - Parâmetros[C.6](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md#section_C_6_parameters_targets) SELECT de um destino.
     - Ações[C.3](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md#section_C_3_select_all_available_objects) SELECT.
@@ -78,7 +77,7 @@ Você pode ver os parâmetros, os campos e as ações usadas no contexto de uma 
 
 Os eventos estendidos do SQL Server podem interoperar com o ETW (Rastreamento de Eventos para Windows) para monitorar a atividade do sistema. Para obter mais informações, consulte:
 
-- [Destino do rastreamento de eventos do Windows](../../relational-databases/extended-events/event-tracing-for-windows-target.md)
+- [Destino do Rastreamento de Eventos para Windows](../../relational-databases/extended-events/event-tracing-for-windows-target.md)
 - [Monitorar a atividade do sistema usando Eventos Estendidos](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)
 
 
@@ -676,7 +675,7 @@ Para ver o XML anterior, você pode emitir a instrução SELECT a seguir enquant
 
 ```sql
 SELECT
-        CAST(LocksAcquired.TargetXml AS XML)  AS RBufXml,
+        CAST(LocksAcquired.TargetXml AS XML)  AS RBufXml
     INTO
         #XmlAsTable
     FROM

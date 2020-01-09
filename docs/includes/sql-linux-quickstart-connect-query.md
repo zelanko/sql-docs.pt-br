@@ -1,11 +1,3 @@
----
-ms.openlocfilehash: 549224ae30b710292324a178aa48432bde7d34ca
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68215631"
----
 ## <a name="connect-locally"></a>Conectar-se localmente
 
 As etapas a seguir usam o **sqlcmd** para conectar-se localmente à nova instância do SQL Server.
@@ -129,7 +121,7 @@ Se você tiver um computador Windows que pode se conectar a um computador Linux,
 
 Para outras ferramentas que executam o Windows, mas se conectam ao SQL Server no Linux, consulte:
 
-- [SSMS (SQL Server Management Studio)](../linux/sql-server-linux-manage-ssms.md)
+- [SQL Server Management Studio (SSMS)](../linux/sql-server-linux-manage-ssms.md)
 - [Windows PowerShell](../linux/sql-server-linux-manage-powershell.md)
 - [SSDT (SQL Server Data Tools)](../linux/sql-server-linux-develop-use-ssdt.md)
 
