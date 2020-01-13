@@ -23,12 +23,12 @@ ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f0f45200e32fe61f9a8a19fd2cd3a6ff17fa9cd
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 00f139a5fa608f40f7979f74b187efcb68bcf2ff
+ms.sourcegitcommit: 76fb3ecb79850a8ef2095310aaa61a89d6d93afd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72903028"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75776394"
 ---
 # <a name="create-a-login"></a>Crie um logon
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -75,7 +75,7 @@ ms.locfileid: "72903028"
   
 5.  Para criar um logon salvo em um banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , selecione **Autenticação do SQL Server**.  
   
-    1.  Na caixa **Senha** , digite uma senha para o novo usuário. Digite essa senha novamente na caixa **Confirmar Senha** .  
+    1.  Na caixa **Senha** , digite uma senha para o novo usuário. Insira novamente essa senha na caixa **Confirmar Senha** .  
   
     2.  Ao alterar uma senha existente, selecione **Especificar senha antiga**e digite a senha antiga na caixa **Senha antiga** .  
   
@@ -134,9 +134,9 @@ ms.locfileid: "72903028"
  A página **Mapeamento de Usuário** lista todos os possíveis bancos de dados e associações de função de banco de dados nesses bancos de dados que podem ser se aplicados ao logon. Os bancos de dados selecionados determinam as associações de função que estão disponíveis para o logon. As opções a seguir estão disponíveis nesta página:  
   
  **Usuários mapeados para este logon**  
- Selecione os bancos de dados que este logon pode acessar. Quando você seleciona um banco de dados, suas funções de banco de dados válidas são exibidas no painel **Associação à função de banco de dados para:** _database_name_ .  
+ Selecione os bancos de dados que este logon pode acessar. Quando você seleciona um banco de dados, as funções de banco de dados válidas dele são exibidas no painel **Associação à função de banco de dados para:** _database_name_.  
   
- **Mapeamento**  
+ **Map**  
  Permita que o logon acesse os bancos de dados listados abaixo.  
   
  **Backup de banco de dados**  
@@ -148,10 +148,10 @@ ms.locfileid: "72903028"
  **Esquema Padrão**  
  Especifica o esquema padrão do usuário. Quando um usuário é criado pela primeira vez, seu esquema padrão é **dbo**. É possível especificar um esquema padrão que ainda não existe. Você não pode especificar um esquema padrão para um usuário mapeado para um grupo do Windows, um certificado ou uma chave assimétrica.  
   
- **Guest account enabled for:**  _database_name_  
+ **Conta Convidado habilitada para:** _database_name_  
  Atributo somente leitura que indica se a conta de Convidado está habilitada no banco de dados selecionado. Use a página **Status** da caixa de diálogo **Propriedades de Logon** da conta Convidado para habilitar ou desabilitar a conta Convidado.  
   
- **Database role membership for:**  _database_name_  
+ **Associação à função de banco de dados para:** _database_name_  
  Selecione as funções para o usuário no banco de dados especificado. Todos os usuários são membros da função **pública** em todo banco de dados e não podem ser removidos. Para obter mais informações sobre as funções de banco de dados, veja [Funções no nível de banco de dados](../../../relational-databases/security/authentication-access/database-level-roles.md).  
   
 ### <a name="securables"></a>Protegíveis  
@@ -223,7 +223,7 @@ ms.locfileid: "72903028"
   
  Selecione esta opção para habilitar ou desabilitar o logon. Esta opção usa a instrução ALTER LOGON com a opção ENABLE ou DISABLE.  
   
- **SQL Server Authentication**  
+ **Autenticação do SQL Server**  
  A caixa de seleção **O logon está bloqueado** só estará disponível se o logon selecionado se conectar usando a Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e se estiver bloqueado. Esta configuração é somente leitura. Para desbloquear um logon bloqueado, execute ALTER LOGIN com a opção UNLOCK.  
   
 ##  <a name="TsqlProcedure"></a> Criar um logon usando a Autenticação do Windows e o T-SQL  
@@ -243,7 +243,7 @@ ms.locfileid: "72903028"
   
     ```  
   
-## <a name="create-a-login-using-sql-server-authentication-with-ssms"></a>Criar um logon usando a Autenticação do SQL Server com o SSMS  
+## <a name="create-a-login-using-sql-server-authentication-using-t-sql"></a>Criar um logon usando a Autenticação do SQL Server com o T-SQL
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   

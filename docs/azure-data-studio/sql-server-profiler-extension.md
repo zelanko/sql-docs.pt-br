@@ -10,16 +10,16 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 26a448dc27ae2512256ffb1a2929dd8cacc3e31c
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 4fcb16d2ec3c267dc2927f22a029709a434416c9
+ms.sourcegitcommit: 76fb3ecb79850a8ef2095310aaa61a89d6d93afd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959112"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75776507"
 ---
 # <a name="sql-server-profiler-extension-preview"></a>Extensão do SQL Server Profiler (versão prévia)
 
-A extensão do SQL Server Profiler (versão prévia) fornece uma solução de rastreamento de SQL Server simples semelhante ao SSMS (SQL Server Management Studio) Profiler, porém criada usando o XEvents. O SQL Server Profiler é muito fácil de usar e tem bons valores padrão para as configurações de rastreamento mais comuns. A experiência do usuário é otimizada para navegar por eventos e exibir o texto de Transact-SQL (T-SQL) associado. O SQL Server Profiler para Azure Data Studio também assume bons valores padrão para coletar atividades de execução de T-SQL com uma experiência do usuário fácil de usar. Esta extensão está em versão prévia.
+A extensão do SQL Server Profiler (versão prévia) fornece uma solução de rastreamento de SQL Server simples semelhante ao SSMS (SQL Server Management Studio) Profiler, porém criada usando os Eventos Estendidos. O SQL Server Profiler é muito fácil de usar e tem bons valores padrão para as configurações de rastreamento mais comuns. A experiência do usuário é otimizada para navegar por eventos e exibir o texto de Transact-SQL (T-SQL) associado. O SQL Server Profiler para Azure Data Studio também assume bons valores padrão para coletar atividades de execução de T-SQL com uma experiência do usuário fácil de usar. Esta extensão está em versão prévia.
 
 **Casos de uso comuns do SQL Profiler:**
 

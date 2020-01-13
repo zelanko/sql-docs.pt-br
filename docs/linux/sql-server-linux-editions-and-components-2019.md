@@ -1,6 +1,6 @@
 ---
 title: Edições e recursos com suporte do SQL Server 2019 – Linux
-ms.date: 10/23/2019
+ms.date: 01/08/2020
 ms.prod: sql
 ms.technology: linux
 ms.topic: conceptual
@@ -24,12 +24,12 @@ helpviewer_keywords:
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: mikeray
-ms.openlocfilehash: 18ec5ca6700008bb2b1ebe3709db0c49123f4fec
-ms.sourcegitcommit: 39630fddc69141531eddca2a3c156ccf8536f49c
+ms.openlocfilehash: 7327d63e9c22ab1020c885e9b372c444c485de8d
+ms.sourcegitcommit: 76fb3ecb79850a8ef2095310aaa61a89d6d93afd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72954988"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75776553"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2019-on-linux"></a>Edições e recursos compatíveis do SQL Server 2019 no Linux
 
@@ -37,7 +37,7 @@ ms.locfileid: "72954988"
 
 Este artigo apresenta detalhes de recursos com suporte nas diferentes edições do SQL Server 2019 no Linux. Para edições e recursos compatíveis do SQL Server no Windows, confira [SQL Server 2019 – Windows](../sql-server/editions-and-components-of-sql-server-version-15.md).  
   
-Os requisitos de instalação variam de acordo com as necessidades do aplicativo. As diferentes edições do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] acomodam desempenho, tempo de execução e requisitos de preço exclusivos para organizações e indivíduos. Os componentes do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que você instala dependem também dos seus requisitos específicos. As seções a seguir ajudarão você a entender como fazer a melhor escolha entre as edições e os componentes disponíveis no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+Os requisitos de instalação variam de acordo com as necessidades do aplicativo. As diferentes edições do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] acomodam desempenho, runtime e requisitos de preço exclusivos para organizações e indivíduos. Os componentes do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que você instala dependem também dos seus requisitos específicos. As seções a seguir ajudarão você a entender como fazer a melhor escolha entre as edições e os componentes disponíveis no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
 
 Para notas de versão mais recentes e informações sobre novidades, consulte o seguinte:
 - [Notas de versão do SQL Server 2019 no Linux](sql-server-linux-release-notes-2019.md)
@@ -68,7 +68,7 @@ Você pode instalar apenas os componentes cliente do [!INCLUDE[ssNoVersion](../i
 
 O SQL Server 2019 no Linux é compatível com o mecanismo de banco de dados do SQL Server. A tabela a seguir descreve os recursos no mecanismo de banco de dados.   
   
-|Componentes de servidor|Descrição|  
+|Componentes de servidor|DESCRIÇÃO|  
 |-----------------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|O [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] inclui o [!INCLUDE[ssDE](../includes/ssde-md.md)], o principal serviço para armazenamento, processamento e segurança de dados, replicação, pesquisa de texto completo e ferramentas para gerenciar dados XML e integração de análise de banco de dados.|  
 
@@ -148,7 +148,7 @@ A Developer Edition continua a dar suporte a apenas um cliente para o [SQL Serve
 |Recurso|Enterprise|Standard|Web|Express|
 |-------------|----------------|--------------|---------|------------------------------------| 
 |Segurança em nível de linha|Sim|Sim|Sim|Sim|  
-|Sempre Criptografado|Sim|Sim|Sim|Sim| 
+|Always Encrypted|Sim|Sim|Sim|Sim| 
 |Mascaramento de dados dinâmicos|Sim|Sim|Sim|Sim|   
 |Auditoria básica|Sim|Sim|Sim|Sim| 
 |Auditoria refinada|Sim|Sim|Sim|Sim| 
@@ -192,7 +192,7 @@ A Developer Edition continua a dar suporte a apenas um cliente para o [SQL Serve
 |Especificação de idioma em consulta|Sim|Sim|Sim|Sim|
 |Service Broker (mensagens)|Sim|Sim|Não (Somente cliente)|Não (Somente cliente)|
 |pontos de extremidade Transact-SQL|Sim|Sim|Sim|Não|
-|Gráfico|Sim|Sim|Sim|Sim|  
+|Grafo|Sim|Sim|Sim|Sim|  
 
 
 <sup>1</sup> Expansão com vários nós de computação requer um nó de cabeçalho.
@@ -234,7 +234,7 @@ Os seguintes recursos e serviços não estão disponíveis no SQL Server 2019 no
 | **Serviços** | SQL Server Browser |
 | &nbsp; | SQL Server R services<sup>1</sup> |
 | &nbsp; | StreamInsight |
-| &nbsp; | Analysis Services |
+| &nbsp; | Serviços de análise |
 | &nbsp; | Reporting Services |
 | &nbsp; | Data Quality Services |
 | &nbsp; | Master Data Services |

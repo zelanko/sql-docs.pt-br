@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: abeadfa4-a14d-469a-bacf-75812e48fac1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ea6d737dcb45a1b300b53c0b232b2b6565e6e750
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5d27c61576c3af432acfa6c791d25b1bbe9a51de
+ms.sourcegitcommit: 76fb3ecb79850a8ef2095310aaa61a89d6d93afd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68012535"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75776419"
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>Configurar a opção max worker threads de configuração de servidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "68012535"
     |16 processadores|352|704|  
     |32 processadores|480|960|  
     |64 processadores|736|1\.472|  
-    |128 processadores|4\.224|4\.480|  
+    |128 processadores|4\.224|4480|  
     |256 processadores|8\.320|8\.576| 
     
     Usando a seguinte fórmula:
@@ -72,7 +72,7 @@ ms.locfileid: "68012535"
     |Número de CPUs|Computador de 32 bits|Computador de 64 bits|  
     |------------|------------|------------| 
     |\<= 4 processadores|256|512|
-    |\> 4 processadores e \< 64 processadores|256 + (do (CPU lógica - 4) * 8)|512 + (do (CPUs lógicas – 4) * 16)|
+    |\> 4 processadores e \<= 64 processadores|256 + (do (CPU lógica - 4) * 8)|512 + (do (CPUs lógicas – 4) * 16)|
     |\> 64 processadores|256 + ((CPUs lógicas – 4) * 32)|512 + ((CPUs lógicas – 4) * 32)|
   
     > [!NOTE]  

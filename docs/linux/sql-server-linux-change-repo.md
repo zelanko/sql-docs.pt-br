@@ -3,17 +3,17 @@ title: Configurar repositórios do Linux para o SQL Server 2017 e 2019
 description: Verifique e configure repositórios de origem para o SQL Server 2019 e o SQL Server 2017 no Linux. O repositório de origem afeta a versão do SQL Server que é aplicada durante a instalação e a atualização.
 author: VanMSFT
 ms.author: vanto
-ms.date: 11/04/2019
+ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 zone_pivot_groups: ld2-linux-distribution
-ms.openlocfilehash: b71078e0d1d6af9bd35f248e8bbc324ac5c0e570
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: c1def0c2cfbdc4b3feed191e9eb2673b8e788f82
+ms.sourcegitcommit: 76fb3ecb79850a8ef2095310aaa61a89d6d93afd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531325"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75776380"
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>Configurar repositórios para instalação e atualização do SQL Server em Linux
 
@@ -38,7 +38,7 @@ Este artigo descreve como configurar o repositório correto para instalações e
 
 Ao instalar o SQL Server em Linux, é necessário configurar um repositório da Microsoft. Esse repositório é usado para adquirir o pacote do mecanismo de banco de dados, o **mssql-server** e os pacotes do SQL Server relacionados. Atualmente, há cinco repositórios principais:
 
-| Repositório | Nome | Descrição |
+| Repositório | Nome | DESCRIÇÃO |
 |---|---|---|
 | **2019** | **mssql-server-2019** | Repositório do SQL Server 2019 CU (atualização cumulativa). |
 | **GDR de 2019** | **mssql-server-2019-gdr** | Repositório do SQL Server 2019 GDR apenas para atualizações críticas. |
@@ -173,10 +173,15 @@ Se necessário, remova o repositório antigo. Use um dos comandos a seguir com b
 ::: zone pivot="ld2-rhel"
 Configure o novo repositório a ser usado para instalações e atualizações do SQL Server. Use um dos comandos a seguir para configurar o repositório de sua escolha.
 
+> [!NOTE]
+> Os seguintes comandos do SQL Server 2019 apontam para o repositório do RHEL 8. O RHEL 8 não vem pré-instalado com o Python 2, que é exigido pelo SQL Server. Para obter mais informações, consulte blog a seguir sobre como instalar o Python 2 e configurá-lo como o interpretador padrão: https://www.redhat.com/en/blog/installing-microsoft-sql-server-red-hat-enterprise-linux-8-beta.
+>
+> Se você estiver usando o RHEL 7, altere o caminho abaixo para `/rhel/7` em vez de `/rhel/8`.
+
 | Repositório | Versão | Comando |
 |---|---|---|
-| **CU de 2019** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2019.repo` |
-| **GDR de 2019** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2019-gdr.repo` |
+| **CU de 2019** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2019.repo` |
+| **GDR de 2019** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2019-gdr.repo` |
 | **CU de 2017** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
 | **GDR de 2017** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
 
