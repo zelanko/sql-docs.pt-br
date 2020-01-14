@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: d373298b-f6cf-458a-849d-7083ecb54ef5
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 91f6f88255fb45e101484637f1db823660796475
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 4518428d6dd583e5d9fe2a4da06f052b8b75da70
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68763227"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252867"
 ---
 # <a name="database-engine-service-startup-options"></a>Opções de inicialização do serviço Mecanismo de Banco de Dados
 
@@ -51,7 +51,7 @@ As opções de inicialização designam certos locais de arquivos necessários d
 ## <a name="list-of-startup-options"></a>Lista de opções de inicialização  
 ### <a name="default-startup-options"></a>Opções de inicialização padrão  
 
-|Opções|Descrição|  
+|Opções|DESCRIÇÃO|  
 |-----------------------------|-----------------|  
 |**-d**  *master_file_path*|O caminho totalmente qualificado para o arquivo de banco de dados mestre (geralmente, C:\Arquivos de Programas\Microsoft SQL Server\MSSQL.*n*\MSSQL\Data\master.mdf). Se você não fornecer essa opção, os parâmetros de registro existentes serão usados.|  
 |**-e**  *error_log_path*|O caminho totalmente qualificado para o arquivo de log de erros (normalmente, C:\Arquivos de Programa\Microsoft SQL Server\MSSQL.*n*\MSSQL\LOG\ERRORLOG). Se você não fornecer essa opção, os parâmetros de registro existentes serão usados.|  
@@ -59,11 +59,11 @@ As opções de inicialização designam certos locais de arquivos necessários d
   
 ### <a name="other-startup-options"></a>Outras opções de inicialização   
 
-|Opções |Descrição|   
+|Opções |DESCRIÇÃO|   
 |---------------------------|-----------------|  
 |**-c**|Reduz o tempo de inicialização ao iniciar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no prompt de comando. Normalmente, o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] inicia como um serviço chamando o Gerenciador de Controle de Serviços. Como o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] não é iniciado como um serviço quando o prompt de comando é iniciado, use **-c** para ignorar esta etapa.|  
 |**-f**|Inicia uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com configuração mínima. Isso será útil se a definição de um valor de configuração (por exemplo, sobrecarga de confirmação de memória) impediu o servidor de ser iniciado. Iniciar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no modo de configuração mínima coloca o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no modo de usuário único. Para obter mais informações, veja a descrição de **-m** a seguir.|  
-|**-kDecimalNumber**| Esse parâmetro de inicialização limita o número de solicitações de E/S de ponto de verificação por segundo, em que **DecimalNumber** representa a velocidade do ponto de verificação em MB por segundo.  Alterar esse valor pode afetar a velocidade de fazer backups ou passar pelo processo de recuperação; portanto, continue com cuidado. Para saber mais sobre esse parâmetro de inicialização, confira o hot fix em que o [parâmetro -k](https://support.microsoft.com/en-us/help/929240/fix-i-o-requests-that-are-generated-by-the-checkpoint-process-may-caus) foi introduzido.| 
+|**-kDecimalNumber**| Esse parâmetro de inicialização limita o número de solicitações de E/S de ponto de verificação por segundo, em que **DecimalNumber** representa a velocidade do ponto de verificação em MB por segundo.  Alterar esse valor pode afetar a velocidade de fazer backups ou passar pelo processo de recuperação; portanto, continue com cuidado. Para saber mais sobre esse parâmetro de inicialização, confira o hot fix em que o [parâmetro -k](https://support.microsoft.com/help/929240/fix-i-o-requests-that-are-generated-by-the-checkpoint-process-may-caus) foi introduzido.| 
 |**-m**|Inicia uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em modo de usuário único. Quando você inicia uma instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em modo de usuário único, só um único usuário pode conectar e o processo de CHECKPOINT não é iniciado. CHECKPOINT garante que transações concluídas sejam gravadas regularmente do cache de disco para o dispositivo de banco de dados. (Normalmente, essa opção será usada se você perceber problemas com bancos de dados do sistema que devem ser corrigidos.) Habilita a opção sp_configure allow updates. Por padrão, a permissão de atualizações está desabilitada. Iniciar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no modo de usuário único permite que qualquer membro do grupo de Administradores locais do computador se conecte à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como um membro da função de servidor fixa sysadmin. Para obter mais informações, veja [Conectar-se ao SQL Server quando os administradores do sistema estão bloqueados](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md). Para obter mais informações sobre o modo de usuário único, veja [Iniciar o SQL Server no modo de usuário único](../../database-engine/configure-windows/start-sql-server-in-single-user-mode.md).|  
 |**Nome do Aplicativo -mClient**|Limita as conexões a um aplicativo cliente especificado. Por exemplo, `-mSQLCMD`  limita conexões a uma única conexão, e essa conexão deve se identificar como o programa cliente SQLCMD. Use essa opção quando estiver iniciando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no modo de usuário único e se um aplicativo cliente desconhecido estiver usando a única conexão disponível. Use `"Microsoft SQL Server Management Studio - Query"` para se conectar com o Editor de Consultas do SSMS. A opção Editor de Consultas do SSMS não pode ser configurada com o [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Configuration Manager, pois ele inclui o caractere traço, que é rejeitado pela ferramenta.<br /><br /> O nome do aplicativo cliente diferencia maiúsculas de minúsculas. Serão necessárias aspas duplas se o nome do aplicativo contiver espaços ou caracteres especiais.<br /><br />**Exemplos ao iniciar na linha de comando:**<br /><br />`C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\sqlservr -s MSSQLSERVER -m"Microsoft SQL Server Management Studio - Query"` <br /><br />`C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\sqlservr -s MSSQLSERVER -mSQLCMD` <br /><br /> **Observação de segurança:** Não use essa opção como um recurso de segurança. O aplicativo cliente fornece o nome do aplicativo cliente e pode fornecer um nome falso como parte da cadeia de conexão.|  
 |**-n**|Não usa o log de aplicativo do Windows para registrar eventos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se você iniciar uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com **-n**, recomendamos que você também use a opção de inicialização **-e** . Caso contrário, eventos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não são registrados no log.|  
