@@ -10,18 +10,16 @@ ms.custom: loading
 ms.date: 08/20/2018
 ms.author: chugu
 author: chugugrace
-ms.openlocfilehash: 43e8e235a00465b2f2bd6f30769ac173f620dcf5
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 8d78ab5befe5f95c07b6cb539d2629fdd9d003ae
+ms.sourcegitcommit: 909b69dd1f918f00b9013bb43ea66e76a690400a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71295891"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75924984"
 ---
 # <a name="load-data-into-sql-server-or-azure-sql-database-with-sql-server-integration-services-ssis"></a>Carregar dados no SQL Server ou no Banco de Dados SQL do Azure com o SSIS (SQL Server Integration Services)
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
-
-
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-xxxx-xxx.md)]
 
 Crie um pacote do SSIS (SQL Server Integration Services) para carregar dados no SQL Server ou no [Banco de Dados SQL do Azure](/azure/sql-database/). Opcionalmente, você pode reestruturar, transformar e limpar os dados conforme eles passam pelo fluxo de dados do SSIS.
 
@@ -30,7 +28,6 @@ Este artigo mostra como fazer o seguinte:
 * Criar um projeto do Integration Services no Visual Studio.
 * Criar um pacote do SSIS que carrega dados da fonte para o destino.
 * Executar o pacote do SSIS para carregar os dados.
-
 
 ## <a name="basic-concepts"></a>Conceitos básicos
 
@@ -60,7 +57,7 @@ Para realizar este tutorial, você precisa do seguinte:
 3. **Do SSDT (SQL Server Data Tools) para Visual Studio**. Para obter o SQL Server Data Tools para Visual Studio, confira [Baixar o SSDT (SQL Server Data Tools)][Download SQL Server Data Tools (SSDT)].
 4. Este tutorial mostra como se conectar a um SQL Server ou a uma instância do Banco de Dados SQL e carregar dados nela. Você precisa das permissões para se conectar, criar uma tabela e carregar dados em um dos seguintes:
    - **Um banco de dados do Banco de Dados SQL do Azure**. Para obter mais informações, veja [Banco de Dados SQL do Azure](/azure/sql-database/).  
-      ou em
+      ou
    - **Uma instância do SQL Server**. O SQL Server é executado localmente ou em uma máquina virtual do Azure. Para baixar uma edição do desenvolvedor ou de avaliação gratuita do SQL Server, veja [Downloads do SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads).
 
 5. **De dados de exemplo**. Este tutorial usa como os dados de origem os dados de exemplo armazenados no SQL Server no banco de dados de exemplo AdventureWorks. Para obter o banco de dados de exemplo AdventureWorks, confira [Bancos de dados de exemplo AdventureWorks][AdventureWorks 2014 Sample Databases].
@@ -140,8 +137,8 @@ O Visual Studio é aberto e cria um projeto do SSIS (Integration Services). Em s
    2. Em **Nome do servidor**, insira o nome do SQL Server ou do servidor de Banco de Dados SQL.
    3. Na seção **Fazer logon no servidor**, selecione **Usar autenticação do SQL Server** e insira as informações de autenticação.
    4. Na seção **Conectar a um banco de dados**, selecione um banco de dados existente.
-    A. Clique em **Testar Conexão**.
-    B. Na caixa de diálogo que relata os resultados do teste de conexão, clique em **OK** para retornar para a caixa de diálogo **Gerenciador de Conexões**.
+    a. Clique em **Testar Conexão**.
+    b. Na caixa de diálogo que relata os resultados do teste de conexão, clique em **OK** para retornar para a caixa de diálogo **Gerenciador de Conexões**.
     c. Na caixa de diálogo **Gerenciador de Conexões**, clique em **OK** para retornar para a caixa de diálogo **Configurar Gerenciador de Conexões ADO.NET**.
 5. Na caixa de diálogo **Configurar Gerenciador de Conexões ADO.NET**, clique em **OK** para retornar para o **Editor de Destino ADO.NET**.
 6. No **Editor de Destino ADO.NET**, clique em **Novo**, ao lado da lista **Usar uma tabela ou exibição**, para abrir a caixa de diálogo **Criar Tabela** e criar uma tabela de destino com uma lista de colunas que corresponda à tabela de origem.

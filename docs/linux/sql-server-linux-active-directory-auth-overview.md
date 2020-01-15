@@ -11,18 +11,18 @@ ms.prod: sql
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 9f2e5632b073f96faf530db56d052d71f4a143f4
-ms.sourcegitcommit: f9286d02025ee1e15d0f1c124e951e8891fe3cc2
+ms.openlocfilehash: 32ff23fe1ea7f0a892a19cc6be0eef8439ee907f
+ms.sourcegitcommit: 365a919e3f0b0c14440522e950b57a109c00a249
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/23/2019
-ms.locfileid: "75329958"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75831823"
 ---
 # <a name="active-directory-authentication-for-sql-server-on-linux"></a>Autenticação do Active Directory para o SQL Server em Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Este artigo fornece uma visão geral da autenticação do AD (Active Directory) para o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no Linux. A autenticação do AD também é conhecida como Autenticação integrada no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. 
+Este artigo fornece uma visão geral da autenticação do AD (Active Directory) para o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no Linux. A autenticação do AD também é conhecida como Autenticação integrada no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 ## <a name="ad-authentication-overview"></a>Visão geral da autenticação do AD
 
@@ -30,10 +30,10 @@ A autenticação do AD permite que clientes ingressados em domínio no Windows o
 
 A Autenticação do AD tem as seguintes vantagens em relação à Autenticação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:
 
-- Os usuários autenticam-se por meio de logon único, sem a necessidade de fornecer uma senha.   
+- Os usuários autenticam-se por meio de logon único, sem a necessidade de fornecer uma senha.
 - Ao criar logons para grupos do AD, é possível gerenciar o acesso e permissões no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usando as associações aos grupos do AD.  
 - Cada usuário tem uma única identidade em sua organização; portanto, você não precisa controlar quais logons do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] correspondem a quais pessoas.   
-- O AD permite que você imponha uma política de senha centralizada em sua organização.   
+- O AD permite que você imponha uma política de senha centralizada em sua organização.
 
 ## <a name="configuration-steps"></a>Etapas de configuração
 
