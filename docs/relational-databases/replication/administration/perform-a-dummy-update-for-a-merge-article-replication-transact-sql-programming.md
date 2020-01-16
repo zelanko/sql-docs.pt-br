@@ -1,6 +1,7 @@
 ---
-title: Executar atualização fictícia para o artigo de mesclagem (programação T-SQL de replicação) | Microsoft Docs
-ms.custom: ''
+title: Atualização de um artigo de mesclagem fictícia (SP de replicação)
+description: Use procedimentos armazenados de replicação Transact-SQL para executar uma atualização fictícia de um artigo de mesclagem usado na replicação de mesclagem.
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2f339210-4d85-4843-bd94-e86f7100d3ef
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9696e02e91a28420ce66e21226e322ea7845ab4d
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 05c3a91d647819126261f0637e0de24d0ce3e4fd
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710329"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322024"
 ---
 # <a name="perform-a-dummy-update-for-a-merge-article-replication-transact-sql-programming"></a>Executar uma atualização fictícia para um artigo de mesclagem (Programação Transact-SQL de replicação)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

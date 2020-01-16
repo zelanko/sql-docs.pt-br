@@ -1,7 +1,7 @@
 ---
-title: Restaurar um banco de dados para uma transação marcada (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Restaurar banco de dados para a transação marcada (SSMS)
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8f0ea144-1819-4832-905f-e5d0f49b066b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 066ca4d751e6d5d33f69bf284f5a35fb3aaa27e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1e71815c79e626a1cebb60c7d5d50fda1cce132d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67937582"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245081"
 ---
 # <a name="restore-a-database-to-a-marked-transaction-sql-server-management-studio"></a>Restaurar um banco de dados para uma transação marcada (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "67937582"
   
 ### <a name="to-restore-a-marked-transaction"></a>Para restaurar uma transação marcada  
   
-1.  Depois de se conectar à instância apropriada do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], no Pesquisador de Objetos, clique no nome do servidor para expandir a árvore do servidor.  
+1.  Depois de se conectar à instância apropriada do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], em Pesquisador de Objetos, clique no nome do servidor para expandir a árvore do servidor.  
   
 2.  Expanda **Bancos de Dados**e, dependendo do banco de dados, selecione um banco de dados de usuário ou expanda **Bancos de Dados do Sistema** e selecione um banco de dados do sistema.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "67937582"
     |**Descrição**|Descrição da transação marcada especificada pelo usuário quando a transação foi confirmada (se houver).|  
     |**LSN**|Número de sequência de log da transação marcada.|  
     |**Backup de banco de dados**|Nome do banco de dados em que a transação marcada foi confirmada.|  
-    |**Nome do Usuário**|Nome do usuário do banco de dados que confirmou a transação marcada.|  
+    |**Nome de usuário**|Nome do usuário do banco de dados que confirmou a transação marcada.|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Restore a Database Backup Using SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)   

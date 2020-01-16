@@ -1,7 +1,7 @@
 ---
-title: Diferenças entre os modos de disponibilidade de um grupo de disponibilidade
+title: Modos de disponibilidade para um grupo de disponibilidade
 description: Uma descrição dos diferentes modos de disponibilidade de um Grupo de Disponibilidade AlwaysOn.
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 10/16/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8764ffb829f684b996d22c6ea604fad970a1a30f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: df39ac4151bb5860db970d423edcbe7064178a08
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934841"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75241777"
 ---
 # <a name="differences-between-availability-modes-for-an-always-on-availability-group"></a>Diferenças entre os modos de disponibilidade de um Grupo de Disponibilidade AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "67934841"
   
  A ilustração a seguir mostra um grupo de disponibilidade com cinco réplicas de disponibilidade. A réplica primária e a réplica secundária estão configuradas para modo de confirmação síncrona com failover automático. Outra réplica secundária está configurada para o modo de confirmação síncrona apenas com failover manual planejado e duas réplicas secundárias estão configuradas para o modo de confirmação assíncrona, que dá suporte somente a failover manual forçado (geralmente denominado *failover forçado*).  
   
- ![Disponibilidade e modos de failover de réplicas](../../../database-engine/availability-groups/windows/media/aoag-availabilityandfailovermodes.gif "Availability and failover modes of replicas")  
+ ![Modos de failover e de disponibilidade das réplicas](../../../database-engine/availability-groups/windows/media/aoag-availabilityandfailovermodes.gif "Modos de failover e de disponibilidade das réplicas")  
   
  O comportamento de sincronização e de failover entre duas réplicas de disponibilidade depende do modo de disponibilidade de ambas as réplicas. Por exemplo, para que a confirmação síncrona ocorra, a réplica primária atual e a réplica secundária em questão devem ser configuradas para confirmação síncrona. Da mesma forma, para que o failover automático ocorra, ambas as réplicas precisam ser configuradas para failover automático. Portanto, o comportamento do cenário de implantação ilustrado anteriormente pode ser resumido na tabela a seguir, que explora o comportamento com cada réplica primária potencial:  
   

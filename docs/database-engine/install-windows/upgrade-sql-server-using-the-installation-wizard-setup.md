@@ -1,7 +1,7 @@
 ---
-title: Fazer upgrade do SQL Server usando o Assistente de Instalação (Instalação) | Microsoft Docs
-ms.custom: ''
-ms.date: 07/24/2017
+title: 'Atualização: Assistente de Instalação (Configuração)'
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -13,12 +13,12 @@ ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: bcbc5be852e2eed6b22689c8745210dd840e7e6b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bb468aff505b4b12d2eabd64f9512c5d0a18267e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934691"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258804"
 ---
 # <a name="upgrade-sql-server-using-the-installation-wizard-setup"></a>Fazer upgrade do SQL Server usando o Assistente de Instalação (Instalação)
 
@@ -115,7 +115,7 @@ Você deve executar a Instalação como um administrador. Se você instalar o [!
   
      Para especificar a mesma conta de logon para todas as contas de serviço nessa instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], forneça credenciais nos campos na parte inferior da página.  
   
-     **Observação sobre segurança** [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
+     **Observação de segurança** [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
   
      Depois de concluir a especificação de informações de logon para serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , clique em **Avançar**.  
   
@@ -131,7 +131,7 @@ Você deve executar a Instalação como um administrador. Se você instalar o [!
   
 20. Se você for instruído a reiniciar o computador, faça-o agora. É importante ler a mensagem do Assistente de Instalação ao concluir a Instalação. Para obter mais informações sobre os arquivos de log da Instalação, veja [Exibir e ler arquivos de log da Instalação do SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Próximas etapas  
  Depois de atualizar para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], conclua as seguintes tarefas:  
   
 -   **Registre os servidores** – a atualização remove as configurações do Registro da instância anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Depois de atualizar, você deve registrar os servidores novamente.  

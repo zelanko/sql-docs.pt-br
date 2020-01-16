@@ -1,6 +1,7 @@
 ---
-title: Permissões REVOKE de coleção de esquemas XML (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: Permissões de coleção de esquema XML REVOKE
+description: Use Transact-SQL para REVOGAR permissões da coleção de esquemas XML.
+ms.custom: seo-lt-2019
 ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: pdw, sql-database
@@ -17,19 +18,19 @@ ms.assetid: 8ca0973c-30b2-4633-a165-c09b13cc81ae
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: db84729a448ce1d90c016696aef85d2580ede913
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: df4f6cb9ed29d5efb5c943d140591c5c97bf124d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67913961"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255459"
 ---
 # <a name="revoke-xml-schema-collection-permissions-transact-sql"></a>Permissões de coleção de esquema REVOKE XML (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
   Revoga permissões concedidas ou negadas em uma coleção de esquemas XML.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -101,7 +102,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  *Database_user_with_no_login*  
  Especifica um usuário do banco de dados sem nenhuma entidade de segurança correspondente no nível de servidor.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  As informações sobre coleções de esquema XML são visíveis na exibição do catálogo [sys.xml_schema_collections](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md).  
   
  A instrução falhará se CASCADE não for especificado ao revogar uma permissão de um principal ao qual ela foi concedida com GRANT OPTION especificado.  

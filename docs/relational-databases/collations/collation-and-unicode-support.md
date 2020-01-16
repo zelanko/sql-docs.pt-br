@@ -1,7 +1,7 @@
 ---
 title: Suporte a ordenações e Unicode | Microsoft Docs
 ms.custom: ''
-ms.date: 09/18/2019
+ms.date: 12/05/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ''
@@ -32,12 +32,12 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: pmasl
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b5713ab6b86675b5fbdcd450f1617445ea7bfd2f
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: 862147cfb7620999bf3e56a90fae0e90fbb1be45
+ms.sourcegitcommit: 0d34b654f0b3031041959e87f5b4d4f0a1af6a29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982818"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74901941"
 ---
 # <a name="collation-and-unicode-support"></a>Suporte a ordenações e Unicode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -69,7 +69,7 @@ Especifique essas opções acrescentando-as ao nome da ordenação. Por exemplo,
 
 O comportamento associado a essas várias opções é descrito na seguinte tabela:    
     
-|Opção|Descrição|    
+|Opção|DESCRIÇÃO|    
 |------------|-----------------|    
 |Diferenciar maiúsculas de minúsculas (\_CS)|Faz distinção entre letras maiúscula e minúsculas. Se essa opção for selecionada, as letras minúsculas serão classificadas à frente das versões em letras maiúsculas. Se essa opção não for selecionada, a ordenação não diferenciará maiúsculas de minúsculas. Ou seja, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considera as versões de letras maiúsculas e minúsculas como idênticas para fins de classificação. Você pode selecionar explicitamente a não diferenciação de maiúsculas e minúsculas, especificando \_CI.|   
 |Diferenciar acentos (\_AS)|Faz distinção entre caracteres acentuados e não acentuados. Por exemplo, "a" não é igual a "ấ". Se essa opção não for selecionada, a ordenação não diferenciará acentos. Ou seja, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considera as versões com e sem acentos como idênticas para fins de classificação. Você pode selecionar explicitamente a não diferenciação de acentos, especificando \_AI.|    
@@ -463,7 +463,7 @@ Se você armazenar dados de caractere que refletem várias linguagens no [!INCLU
 > [!NOTE]
 > No caso dos tipos de dados Unicode, o [!INCLUDE[ssde_md](../../includes/ssde_md.md)] poderá representar até 65.535 caracteres usando o UCS-2 ou o intervalo completo de Unicode (1.114.111 caracteres) se caracteres suplementares forem usados. Para obter mais informações sobre como habilitar caracteres suplementares, confira [Caracteres suplementares](#Supplementary_Characters).
 
-Como alternativa, no [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] em diante, se uma ordenação habilitada para UTF-8 (\_UTF8) for usada, os tipos de dados que eram não Unicode (**char** e **varchar**) se tornarão tipos de dados Unicode (UTF-8). O [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] não altera o comportamento dos tipos de dados Unicode que já existiam (UTF-16) (**nchar**, **nvarchar** e **ntext**). Para obter mais informações, confira [Diferenças de armazenamento entre UTF-8 e UTF-16](#storage_differences).
+Como alternativa, no [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] em diante, se uma ordenação habilitada para UTF-8 (\_UTF8) for usada, os tipos de dados que eram não Unicode (**char** e **varchar**) se tornarão tipos de dados Unicode usando codificação UTF-8. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] não altera o comportamento dos tipos de dados Unicode anteriormente existentes (**nchar**, **nvarchar** e **ntext**), que continuam usando a codificação UCS-2 ou UTF-16. Para obter mais informações, confira [Diferenças de armazenamento entre UTF-8 e UTF-16](#storage_differences).
 
 ### <a name="unicode-considerations"></a>Considerações sobre Unicode
 Limitações consideráveis estão associadas a tipos de dados não Unicode. Isso ocorre porque um computador não Unicode fica limitado a usar uma única página de código. Você pode ter um ganho de desempenho com o uso de Unicode, porque ele exige menos conversões de página de código. As ordenações Unicode precisam ser selecionadas individualmente no nível de banco de dados, coluna ou expressão, porque não há suporte para elas no nível de servidor.    
@@ -516,7 +516,7 @@ No entanto, o Consortium Unicode estabeleceu 16 "planos" adicionais de caractere
 
 O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece tipos de dados, como **nchar** e **nvarchar**, para armazenar dados Unicode no intervalo do BMP (000000–00FFFF), que o [!INCLUDE[ssde_md](../../includes/ssde_md.md)] codifica usando UCS-2. 
 
-O [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] introduziu uma nova família de ordenações de caracteres suplementares (\_SC) que podem ser usadas com os tipos de dados **nchar**, **nvarchar** e **sql_variant** para representar o intervalo completo de caracteres Unicode (000000–10FFFF). Por exemplo: **Latin1_General_100_CI_AS_SC** ou, se você estiver usando uma ordenação de japonês, **Japanese_Bushu_Kakusu_100_CI_AS_SC**. 
+O [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] introduziu uma nova família de ordenações de caracteres suplementares (\_SC) que podem ser usadas com os tipos de dados **nchar**, **nvarchar** e **sql_variant** para representar o intervalo completo de caracteres Unicode (000000–10FFFF). Por exemplo:  **Latin1_General_100_CI_AS_SC** ou, se você estiver usando uma ordenação de japonês, **Japanese_Bushu_Kakusu_100_CI_AS_SC**. 
  
 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] estende o suporte a caracteres suplementares aos tipos de dados **char** e **varchar** com as novas ordenações habilitadas para UTF-8 ([\_UTF8](#utf8)). Esses tipos de dados também podem representar o intervalo completo de caracteres Unicode.   
 
@@ -622,12 +622,23 @@ Antes de optar por usar a codificação UTF-8 ou UTF-16 para um banco de dados o
 
 Para ver outras considerações, confira o artigo [Gravar instruções Transact-SQL internacionais](../../relational-databases/collations/write-international-transact-sql-statements.md).
 
+### <a name="converting"></a> Como converter em UTF-8
+Como em [CHAR (*n*) e VARCHAR (*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md) ou em [NCHAR (*n*) e NVARCHAR (*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), o *n* define o tamanho de armazenamento em bytes, não o número de caracteres que podem ser armazenados, é importante determinar o tamanho do tipo de dados para o qual você deve converter para evitar o truncamento de dados. 
+
+Por exemplo, considere uma coluna definida como **NVARCHAR (100)** que armazena 180 bytes de caracteres japoneses. Neste exemplo, os dados da coluna atualmente são codificados usando UCS-2 ou UTF-16, que usa 2 bytes por caractere. A conversão do tipo de coluna para **VARCHAR (200)** não é suficiente para evitar o truncamento de dados, pois o novo tipo de dados só pode armazenar 200 bytes, mas os caracteres japoneses exigem 3 bytes quando codificados em UTF-8. Portanto, a coluna deve ser definida como **VARCHAR (270)** para evitar a perda de dados por truncamento de dados.
+
+Portanto, é necessário saber com antecedência qual é o tamanho do byte projetado para a definição da coluna antes de converter os dados existentes em UTF-8 e ajustar o tamanho do novo tipo de dados de acordo. Confira o script [!INCLUDE[tsql](../../includes/tsql-md.md)] ou o SQL Notebook no [GitHub de exemplos de dados](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/unicode), que usa a função [DATALENGTH](../../t-sql/functions/datalength-transact-sql.md) e a instrução [COLLATE](../../t-sql/statements/collations.md) para determinar os requisitos de comprimento de dados corretos para operações de conversão UTF-8 em um banco de dados existente.
+
+Para alterar a ordenação de colunas e o tipo de dados em uma tabela existente, use um dos métodos descritos em [Definir ou alterar a ordenação de colunas](../../relational-databases/collations/set-or-change-the-column-collation.md).
+
+Para alterar a ordenação do banco de dados, permitindo que novos objetos herdem a ordenação de banco de dados por padrão ou alterem a ordenação do servidor, permitindo que novos bancos de dados herdem a ordenação do sistema por padrão, confira a seção [Tarefas relacionadas](#Related_Tasks) deste artigo. 
+
 ##  <a name="Related_Tasks"></a> Related tasks    
     
 |Tarefa|Tópico|    
 |----------|-----------|    
-|Descreve como definir ou alterar a ordenação da instância do SQL Server|[Definir ou alterar a ordenação do servidor](../../relational-databases/collations/set-or-change-the-server-collation.md)|    
-|Descreve como definir ou alterar a ordenação de um banco de dados de usuário|[Definir ou alterar a ordenação de banco de dados](../../relational-databases/collations/set-or-change-the-database-collation.md)|    
+|Descreve como definir ou alterar a ordenação da instância de SQL Server. Observe que alterar a ordenação do servidor não altera a ordenação dos bancos de dados existentes.|[Definir ou alterar a ordenação do servidor](../../relational-databases/collations/set-or-change-the-server-collation.md)|    
+|Descreve como definir ou alterar a ordenação de um banco de dados de usuário. Observe que a alteração de uma ordenação do banco de dados não altera a ordenação de colunas de tabela existentes.|[Definir ou alterar a ordenação de banco de dados](../../relational-databases/collations/set-or-change-the-database-collation.md)|    
 |Descreve como definir ou alterar a ordenação de uma coluna no banco de dados|[Definir ou alterar a ordenação de coluna](../../relational-databases/collations/set-or-change-the-column-collation.md)|    
 |Descreve como retornar informações de ordenação no nível de servidor, de banco de dados ou de coluna|[Exibir informações de ordenação](../../relational-databases/collations/view-collation-information.md)|    
 |Descreve como escrever instruções Transact-SQL que tenham mais portabilidade de um idioma para outro ou que deem suporte a vários idiomas com mais facilidade|[Gravar instruções Transact-SQL internacionais](../../relational-databases/collations/write-international-transact-sql-statements.md)|    
@@ -649,6 +660,6 @@ Para obter mais informações, confira o seguinte conteúdo relacionado:
 ## <a name="see-also"></a>Confira também    
 [Ordenações de banco de dados independentes](../../relational-databases/databases/contained-database-collations.md)     
 [Escolher um idioma ao criar um índice de texto completo](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md)     
-[sys.fn_helpcollations (Transact-SQL)](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)    
-    
+[sys.fn_helpcollations (Transact-SQL)](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)       
+[Conjuntos de caracteres multibyte e de byte único](https://docs.microsoft.com/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)      
  

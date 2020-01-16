@@ -1,7 +1,7 @@
 ---
-title: Descarregar backups com suporte nas réplicas secundárias de um grupo de disponibilidade
-description: Saiba mais sobre os diferentes tipos de backup com suporte ao descarregamento de backups em uma réplica secundária de um grupo de disponibilidade Always On.
-ms.custom: seodec18
+title: Descarregar backups para réplica de grupo de disponibilidade secundária
+description: Saiba mais sobre os diferentes tipos de backup compatíveis com o descarregamento de backups em uma réplica secundária de um grupo de disponibilidade Always On.
+ms.custom: seo-lt-2019
 ms.date: 09/01/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 82afe51b-71d1-4d5b-b20a-b57afc002405
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a93e00b590dfd6f9dc083f5443e6074894184afd
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.openlocfilehash: 19118cde56109895213a733127b202c49feb23c1
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72807422"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822418"
 ---
 # <a name="offload-supported-backups-to-secondary-replicas-of-an-availability-group"></a>Descarregar backups com suporte nas réplicas secundárias de um grupo de disponibilidade
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  Os recursos secundários ativos do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] incluem suporte para execução de operações de backup em réplicas secundárias. As operações de backup podem colocar tensão significativa na E/S e na CPU (com compactação de backup). O descarregamento de backups em uma réplica secundária sincronizada ou em sincronização permite usar os recursos na instância do servidor que hospeda a réplica primária para suas cargas de trabalho de camada-1.  
+  Os recursos secundários ativos do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] incluem suporte para executar backups em réplicas secundárias. As operações de backup podem colocar tensão significativa na E/S e na CPU (com compactação de backup). O descarregamento de backups em uma réplica secundária sincronizada ou em sincronização permite usar os recursos na instância do servidor que hospeda a réplica primária para suas cargas de trabalho de camada-1.  
 
 > [!NOTE]  
 >  As instruções RESTORE não são permitidas em nenhum dos bancos de dados primários ou secundários de um grupo de disponibilidade.  
@@ -36,7 +36,7 @@ ms.locfileid: "72807422"
  
 ##  <a name="SupportedBuTypes"></a> Tipos de backup com suporte nas réplicas secundárias  
   
--   **BACKUP DATABASE** dá suporte apenas a backups completos somente cópia de bancos de dados, arquivos ou grupos de arquivos quando executado nas réplicas secundárias. Observe que os backups somente cópia não afetam a cadeia de logs nem limpam o bitmap diferencial.  
+-   O **BACKUP DATABASE** é compatível apenas com backups completos somente cópia de bancos de dados, arquivos ou grupos de arquivos quando executado nas réplicas secundárias. Backups somente cópia não afetam a cadeia de logs nem limpam o bitmap diferencial.  
   
 -   Não há suporte para backups diferenciais em réplicas secundárias.
 

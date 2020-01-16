@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 77572a417836683e10ba3c7736fe4cdd0db4e129
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 68a5542d36731e260ab4aeb5a0734bea2a983108
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71708148"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245266"
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>Importar dados do Excel para o SQL Server ou Banco de Dados SQL do Azure
 
@@ -262,7 +262,7 @@ Conforme descrito anteriormente na seção [Pré-requisito](#prereq), você deve
 
 Para obter mais informações sobre como usar essas fontes e coletores do Data Factory, veja os tópicos a seguir:
 
-- [Sistema de arquivos](https://docs.microsoft.com/azure/data-factory/data-factory-onprem-file-system-connector)
+- [Sistema de Arquivos](https://docs.microsoft.com/azure/data-factory/data-factory-onprem-file-system-connector)
 - [SQL Server](https://docs.microsoft.com/azure/data-factory/data-factory-sqlserver-connector)
 - [Banco de Dados SQL do Azure](https://docs.microsoft.com/azure/data-factory/data-factory-azure-sql-connector)
 
@@ -275,7 +275,7 @@ Para aprender a copiar dados com o Azure Data Factory, veja os tópicos a seguir
 
 ### <a name="microsoftaceoledb120-has-not-been-registered"></a>O Microsoft.ACE.OLEDB.12.0" não foi registrado
 
-Esse erro ocorre porque o provedor OLEDB não está instalado. Instale-o com os [Pacotes Redistribuíveis do Mecanismo de Banco de Dados do Microsoft Access 2010](https://www.microsoft.com/en-us/download/details.aspx?id=13255). Instale a versão de 64 bits se o Windows e o SQL Server tiverem 64 bits.
+Esse erro ocorre porque o provedor OLEDB não está instalado. Instale-o com os [Pacotes Redistribuíveis do Mecanismo de Banco de Dados do Microsoft Access 2010](https://www.microsoft.com/download/details.aspx?id=13255). Instale a versão de 64 bits se o Windows e o SQL Server tiverem 64 bits.
 
 O erro completo é:
 
@@ -284,7 +284,7 @@ Msg 7403, Level 16, State 1, Line 3
 The OLE DB provider "Microsoft.ACE.OLEDB.12.0" has not been registered.
 ```
 
-## <a name="cannot-create-an-instance-of-ole-db-provider-microsoftaceoledb120-for-linked-server-null"></a>Não é possível criar uma instância do provedor OLE DB "Microsoft.ACE.OLEDB.12.0" para o servidor vinculado "(null)"
+### <a name="cannot-create-an-instance-of-ole-db-provider-microsoftaceoledb120-for-linked-server-null"></a>Não é possível criar uma instância do provedor OLE DB "Microsoft.ACE.OLEDB.12.0" para o servidor vinculado "(null)"
 
 Isso indica que o OLEDB da Microsoft não foi configurado corretamente. Execute o seguinte código Transact-SQL para solucionar:
 

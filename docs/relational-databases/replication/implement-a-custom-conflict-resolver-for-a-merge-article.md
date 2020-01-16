@@ -1,6 +1,7 @@
 ---
-title: Implementar um resolvedor de conflitos personalizado para um artigo de mesclagem | Microsoft Docs
-ms.custom: ''
+title: Implementar o resolvedor de conflitos personalizado (mesclagem)
+description: Saiba como implementar um resolvedor de conflitos personalizado para uma publicação de mesclagem no SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 76bd8524-ebc1-4d80-b5a2-4169944d6ac0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1b7e530386a2c0a6dae21b370b89d4f5542faa8d
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: a71c7c83afe2fcb8b0192f6dfd12c8072ccdc392
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72905120"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322153"
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>Implementar um resolvedor de conflitos personalizado para um artigo de mesclagem
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,13 +40,13 @@ ms.locfileid: "72905120"
  Você pode gravar seu próprio resolvedor de conflito personalizado como um procedimento armazenado [!INCLUDE[tsql](../../includes/tsql-md.md)] em cada Publicador. Durante a sincronização, este procedimento armazenado é invocado quando são encontrados conflitos em um artigo no qual o resolvedor foi registrado. As informações sobre a linha de conflito são passadas pelo Agente de Mesclagem para os parâmetros necessários do procedimento. Resolvedores de conflito personalizados com base em procedimento armazenado sempre são criados no Publicador.  
   
 > [!NOTE]  
->  Resolvedores de procedimento armazenado do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são invocados apenas para resolver conflitos de linha baseados em alterações. Eles não podem ser usados para tratar outros tipos de conflitos como falhas de inserção acionadas por violações de PRIMARY KEY ou violações de restrições de índice exclusivo.
+>  Os resolvedores de procedimentos armazenados do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são invocados apenas para resolver conflitos de linha baseados em alterações. Eles não podem ser usados para tratar outros tipos de conflitos como falhas de inserção acionadas por violações de PRIMARY KEY ou violações de restrições de índice exclusivo.
   
 #### <a name="to-create-a-stored-procedure-based-custom-conflict-resolver"></a>Para criar um resolvedor de conflitos personalizado com base em procedimentos armazenados  
   
 1.  No Publicador em cada publicação ou banco de dados **msdb** , crie um novo procedimento armazenado de sistema que implementa os seguintes parâmetros requeridos:  
   
-    |Parâmetro|Tipo de dados|Descrição|  
+    |Parâmetro|Tipo de dados|DESCRIÇÃO|  
     |---------------|---------------|-----------------|  
     |**\@tableowner**|**sysname**|Nome do proprietário da tabela para a qual um conflito está estando resolvido. Esse é o proprietário para a tabela no banco de dados de publicação.|  
     |**\@tablename**|**sysname**|Nome da tabela para a qual um conflito está estando resolvido.|  
@@ -63,14 +64,14 @@ ms.locfileid: "72905120"
 #### <a name="use-a-custom-conflict-resolver-with-a-new-table-article"></a>Use um resolvedor de conflito personalizado com um novo artigo de tabela  
   
 1. Execute [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) para definir um artigo. 
-1. Especifique um valor do **Resolvedor de Procedimentos Armazenados no Servidor** **MicrosoftSQL** para o parâmetro **\@article_resolver**. 
+1. Especifique um valor igual a **Resolvedor de Procedimentos Armazenados do** **Microsoft SQL Server** no parâmetro **\@article_resolver**. 
 1. Especifique o nome do procedimento armazenado que implementa a lógica do resolvedor de conflitos para o parâmetro **\@resolver_info**. 
 
    Para saber mais, confira [Definir um artigo](../../relational-databases/replication/publish/define-an-article.md).
   
 #### <a name="to-use-a-custom-conflict-resolver-with-an-existing-table-article"></a>Para usar um resolvedor de conflito personalizado com um artigo de tabela existente  
   
-1.  Execute [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), especificando **\@publication**, **\@article**, um valor de **article_resolver** para **\@property** e um valor de **Resolvedor de Procedimentos Armazenados do Servidor** do **Microsoft SQL Server** para **\@value**.  
+1.  Execute [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), especificando **\@publication**, **\@article**, um valor igual a **article_resolver** em **\@property** e um valor igual a **Resolvedor de Procedimentos Armazenados do** **Microsoft SQL Server** em **\@value**.  
   
 2.  Execute [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), especificando **\@publication**, **\@article**, um valor de **resolver_info** para **\@property** e o nome do procedimento armazenado que implementa a lógica do resolvedor de conflitos para **\@value**.  
   

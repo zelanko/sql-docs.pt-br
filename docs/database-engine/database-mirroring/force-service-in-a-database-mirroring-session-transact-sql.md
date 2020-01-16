@@ -1,6 +1,7 @@
 ---
-title: Forçar o serviço em uma sessão de espelhamento de banco de dados (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: Forçar serviço de espelhamento de banco de dados
+description: Se o servidor principal falhar enquanto o servidor espelho estiver disponível, torne o banco de dados disponível forçando o failover do serviço para o banco de dados espelhado (com possível perda de dados)
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8b6ffe77-35f3-4e2a-a658-8a38a8e1c794
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 8be517127e297fb72e8010cdad953c8a955d8815
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 970f399ab6227fdaf2672bf887c250b6be02de1e
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67997870"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822223"
 ---
 # <a name="force-service-in-a-database-mirroring-session-transact-sql"></a>Forçar serviço em uma sessão de espelhamento de banco de dados (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,6 +48,6 @@ ms.locfileid: "67997870"
   
 ## <a name="see-also"></a>Consulte Também  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [Modos de operação do espelhamento de banco de dados](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)  
+ [Modos de operação de espelhamento de banco de dados](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)  
   
   

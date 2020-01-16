@@ -1,6 +1,7 @@
 ---
-title: Página Selecionar Sincronização de Dados Inicial – Assistente de Grupo de Disponibilidade AlwaysOn | Microsoft Docs
-ms.custom: ''
+title: Selecionar Página de Sincronização de Dados Inicial (Assistente do Grupo de Disponibilidade)
+description: Uma descrição de 'Selecionar Página de Sincronização de Dados Inicial' do assistente do Grupo de Disponibilidade Always On no SSMS (SQL Server Management Studio).
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: 457b1140-4819-4def-8f7c-54a406e6db12
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a9521577c4fd6fac3f683ca69fabd6226944a6bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e8a6a14a6efc6a9d5f96144364f1532c14b0c1c0
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014181"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75235337"
 ---
 # <a name="select-initial-data-synchronization-page-always-on-availability-group-wizards"></a>Selecione a Página de Sincronização de Dados Inicial (Assistentes Grupo de Disponibilidade AlwaysOn)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +84,7 @@ ms.locfileid: "68014181"
  Selecione esta opção se você desejar executar seus próprios backups de banco de dados e de log de cada banco de dados primário e, em seguida, restaurá-los em cada instância de servidor que hospeda uma réplica secundária. Quando sair do assistente, você precisará unir cada banco de dados secundário em cada réplica secundária.  
   
 > [!NOTE]  
->  Para obter mais informações, consulte [Iniciar movimentação de dados em um banco de dados secundário &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
+>  Para obter mais informações, veja [Iniciar movimentação de dados em um banco de dados secundário &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
 ##  <a name="PrepareSecondaryDbs"></a> Para preparar manualmente bancos de dados secundários  
  Para preparar bancos de dados secundários independentemente de qualquer assistente do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , você pode usar uma das seguintes abordagens:  

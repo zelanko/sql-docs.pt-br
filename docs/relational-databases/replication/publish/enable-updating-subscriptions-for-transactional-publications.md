@@ -1,6 +1,7 @@
 ---
-title: Habilitar atualização de assinaturas para publicações transacionais | Microsoft Docs
-ms.custom: ''
+title: Habilitar assinaturas atualizáveis em publicações transacionais
+description: Saiba como habilitar assinaturas atualizáveis em uma publicação transacional no SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 539d5bb0-b808-4d8c-baf4-cb6d32d2c595
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c3b599ac576a71438fb13505521eff24b6c7e3fc
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 8afde3ebd4082df0c1fc0065b2aa058095905ead
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907972"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321241"
 ---
 # <a name="enable-updating-subscriptions-for-transactional-publications"></a>Habilitar atualização de assinaturas para publicações transacionais
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

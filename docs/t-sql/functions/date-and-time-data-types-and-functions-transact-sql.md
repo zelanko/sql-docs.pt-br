@@ -1,6 +1,8 @@
 ---
-title: Tipos de dados e funções de data e hora (Transact-SQL)| Microsoft Docs
-ms.custom: ''
+title: Tipos de dados e funções de data e hora
+description: Links para tipos de dados de Data e Hora e artigos de funções.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 09/01/2017
 ms.prod: sql
 ms.prod_service: sql-database
@@ -21,12 +23,12 @@ ms.assetid: 83e378a2-6e89-4c80-bc4f-644958d9e0a9
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azure-sqldw-latest||= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 5a478288ef82764c5dc6d044132fb66dc7e3f9bf
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: a7beec472b0f4b70662c364081641b6ea91be507
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982964"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75256090"
 ---
 # <a name="date-and-time-data-types-and-functions-transact-sql"></a>tipos de dados e funções de data e hora (Transact-SQL)
 
@@ -47,7 +49,7 @@ As seções neste tópico abrangem todos os tipos e funções de data [!INCLUDE[
 ##  <a name="DateandTimeDataTypes"></a> Tipos de dados de Data e Hora
 Os tipos de dados de data e hora de [!INCLUDE[tsql](../../includes/tsql-md.md)] são listados na seguinte tabela:
   
-|Tipo de dados|Formato|Intervalo|Precisão|Tamanho de armazenamento (bytes)|Precisão de segundo fracionário definida pelo usuário|Deslocamento de fuso horário|  
+|Tipo de dados|Formatar|Intervalo|Precisão|Tamanho de armazenamento (bytes)|Precisão de segundo fracionário definida pelo usuário|Deslocamento de fuso horário|  
 |---|---|---|---|---|---|---|
 |[time](../../t-sql/data-types/time-transact-sql.md)|hh:mm:ss[.nnnnnnn]|00:00:00.0000000 a 23:59:59.9999999|100 nanossegundos|3 a 5|Sim|Não|  
 |[date](../../t-sql/data-types/date-transact-sql.md)|AAAA-MM-DD|0001-01-01 a 9999-12-31|1 dia|3|Não|Não|  
@@ -138,7 +140,7 @@ As tabelas a seguir listam as funções de data e hora do [!INCLUDE[tsql](../../
   
 ##  <a name="DateandTimeRelatedTopics"></a> Tópicos relacionados à data e à hora 
   
-|Tópico|Descrição|  
+|Tópico|DESCRIÇÃO|  
 |-----------|-----------------|  
 |[CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)|Fornece informações sobre a conversão de valores de data e hora para e de literais de cadeia de caracteres, bem como outros formatos de data e hora.|  
 |[Gravar instruções Transact-SQL internacionais](../../relational-databases/collations/write-international-transact-sql-statements.md)|Fornece diretrizes para a portabilidade de bancos de dados e aplicativos de bancos de dados que usam instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] de um idioma a outro, ou que dão suporte a vários idiomas.|  

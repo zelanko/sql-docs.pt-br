@@ -1,6 +1,7 @@
 ---
-title: Remover a testemunha de uma sessão de espelhamento de banco de dados (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Remover testemunha de espelhamento de banco de dados
+description: Descreve como remover uma testemunha de uma sessão de espelhamento de banco de dados com o SSMS (SQL Server Management Studio) ou o T-SQL (Transact-SQL).
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f3ce7afc-8936-4d35-80ce-d0f8fbc318d3
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 75a0363d376a16a19fa0c4a07dd0ed2ad0e71fd2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8d4ecd428d8d9d76ff4e9a543321d461b3983708
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025275"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822525"
 ---
 # <a name="remove-the-witness-from-a-database-mirroring-session-sql-server"></a>Remover a testemunha de uma sessão de espelhamento de banco de dados (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +90,7 @@ ms.locfileid: "68025275"
 -   Se a segurança de transação estiver definida como OFF, a sessão irá operar de modo assíncrono (em modo de alto desempenho) sem exigir quorum. Sempre que a segurança de transação estiver desativada, é recomendável desativar também a testemunha.  
   
 > [!TIP]  
->  A configuração de segurança de transação do banco de dados é registrada em cada parceiro na exibição de catálogo [sys.database_mirroring](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md) nas colunas **mirroring_safety_level** e **mirroring_safety_level_desc** .  
+>  A configuração de segurança de transação do banco de dados é registrada em cada parceiro na exibição de catálogo [sys.database_mirroring](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md) nas colunas **mirroring_safety_level** e **mirroring_safety_level_desc**.  
   
 ##  <a name="RelatedTasks"></a> Tarefas relacionadas  
   

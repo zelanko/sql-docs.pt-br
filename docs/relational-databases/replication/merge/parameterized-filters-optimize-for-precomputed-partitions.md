@@ -1,6 +1,7 @@
 ---
-title: Otimizar o desempenho de filtro com parâmetros com partições pré-computadas | Microsoft Docs
-ms.custom: ''
+title: Otimizar os filtros com parâmetros com partições pré-computadas (mesclagem)
+description: Saiba como usar partições pré-computadas para otimizar o desempenho de filtros com parâmetros em publicações de mesclagem.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 85654bf4-e25f-4f04-8e34-bbbd738d60fa
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9d4c2062662e07e35366d5bdccbf544d893568ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0ab9ed7c6c404f9e8f57dd658f20e9e5b8f0d34f
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68018690"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321448"
 ---
 # <a name="parameterized-filters---optimize-for-precomputed-partitions"></a>Filtros com parâmetros – Otimizar para partições pré-computadas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "68018690"
   
  Quando um Assinante faz a sincronização com um Publicador, este deve avaliar os filtros do Assinante para determinar quais linhas pertencem àquele Assinante ou conjunto de dados. Esse processo de determinação de associação de partição de alterações no Publicador para cada Assinante recebendo um conjunto de dados filtrado é referido como *avaliação de partição*. Sem partições pré-computadas, a avaliação de partição deve ser executada para cada alteração feita em uma coluna filtrada no Publicador desde a última vez que o Agente de Mesclagem foi executado em um Assinante específico e esse processo tem de ser repetido para cada Assinante que sincroniza com o Publicador.  
   
- Entretanto, se o Publicador e o Assinante estiverem sendo executados no [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ou em uma versão posterior e você pode usar partições pré-computadas, a associação de partição de todas as alterações no Publicador será pré-computada e persistirá na hora que as alterações forem feitas. Como resultado, quando um Assinante sincroniza com o Publicador, ele pode começar imediatamente a baixar as alterações relevantes à sua partição sem ter de passar pelo processo de avaliação de partição. Isso pode levar a um ganho significativo de desempenho quando a publicação tem um grande número de alterações, Assinantes ou artigos na publicação.  
+ Entretanto, se o Publicador e o Assinante estiverem sendo executados no [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ou em uma versão posterior e você usar partições pré-computadas, a associação de partição de todas as alterações no Publicador será pré-computada e persistirá no momento em que as alterações forem feitas. Como resultado, quando um Assinante sincroniza com o Publicador, ele pode começar imediatamente a baixar as alterações relevantes à sua partição sem ter de passar pelo processo de avaliação de partição. Isso pode levar a um ganho significativo de desempenho quando a publicação tem um grande número de alterações, Assinantes ou artigos na publicação.  
   
  Além de usar partições pré-computadas, instantâneos pré-gerados e/ou permitir que os Assinantes solicitem geração e aplicação de instantâneos na primeira vez que eles sincronizarem. Use uma, ou ambas as opções, para fornecer instantâneos para publicações que usam filtros com parâmetros. Se você não especificar uma dessas opções, as assinaturas serão inicializadas usando uma série de instruções SELECT e INSERT, ao invés de usar o utilitário **bcp** , esse processo é muito mais lento. Para obter mais informações, consulte [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   

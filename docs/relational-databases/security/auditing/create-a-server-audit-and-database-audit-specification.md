@@ -1,6 +1,7 @@
 ---
-title: Criar uma especificação de auditoria de servidor e de auditoria de banco de dados | Microsoft Docs
-ms.custom: ''
+title: Criar uma auditoria de servidor e uma especificação de auditoria de banco de dados
+description: Saiba como criar uma auditoria do SQL Server e uma especificação de auditoria de banco de dados com o SQL Server Management Studio ou o T-SQL (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: security
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 26ee85de-6e97-4318-b526-900924d96e62
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 06ccedc97905180f75369d89fc7bc1ca49175c59
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: d9ab1fa97653513d18c43b916ca5bfbc2105e8e7
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72903865"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557865"
 ---
 # <a name="create-a-server-audit-and-database-audit-specification"></a>Criar uma especificação de auditoria de banco de dados e de servidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -134,7 +135,7 @@ ms.locfileid: "72903865"
   
 2.  Na barra Padrão, clique em **Nova Consulta**.  
   
-3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. O exemplo a seguir cria uma especificação de auditoria de banco de dados denominada `Audit_Pay_Tables` que audita instruções SELECT e INSERT pelo usuário `dbo`, para a tabela `HumanResources.EmployeePayHistory` baseada na auditoria de servidor definida acima.  
+3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. O exemplo a seguir cria uma especificação de auditoria de banco de dados denominada `Audit_Pay_Tables` que audita instruções SELECT e INSERT pelo usuário `dbo` , para a tabela `HumanResources.EmployeePayHistory` baseada na auditoria de servidor definida acima.  
   
     ```  
     USE AdventureWorks2012 ;   

@@ -1,6 +1,7 @@
 ---
-title: Especificar a URL de ponto de extremidade – adicionando ou modificando uma réplica de disponibilidade | Microsoft Docs
-ms.custom: ''
+title: Especifique a URL do ponto de extremidade para a réplica de disponibilidade
+description: Saiba como especificar a URL do ponto de extremidade ao adicionar ou modificar uma réplica em um grupo de disponibilidade Always On no SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d7520c13-a8ee-4ddc-9e9a-54cd3d27ef1c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 724309ed2b66ee75eb8f223ebd300a2ae941cd2f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 28954a81cac3a5adacd037dbccb2e7584e060e79
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014015"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251282"
 ---
 # <a name="specify-endpoint-url---adding-or-modifying-availability-replica"></a>Especificar a URL de ponto de extremidade – adicionando ou modificando uma réplica de disponibilidade
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +59,7 @@ ms.locfileid: "68014015"
   
      Na URL do ponto de extremidade, somente o número da porta identifica a instância de servidor que está associada ao ponto de extremidade de espelhamento no computador de destino. A figura a seguir ilustra as URL de ponto de extremidade de duas instâncias de servidor em um único computador. A instância padrão usa a porta `7022` e a instância nomeada usa a porta `7033`. As URLs de ponto de extremidade para estas duas instâncias de servidor são, respectivamente: `TCP://MYSYSTEM.Adventure-works.MyDomain.com:7022` e `TCP://MYSYSTEM.Adventure-works.MyDomain.com:7033`. Note que o endereço não contém o nome da instância de servidor.  
   
-     ![Endereços de rede do servidor de uma instância padrão](../../../database-engine/availability-groups/windows/media/dbm-2-instances-ports-1-system.gif "Endereços de rede do servidor de uma instância padrão")  
+     ![Endereços de rede de servidor de uma instância padrão](../../../database-engine/availability-groups/windows/media/dbm-2-instances-ports-1-system.gif "Endereços de rede de servidor de uma instância padrão")  
   
      Para identificar a porta associada atualmente com o ponto de extremidade de espelhamento de banco de dados de uma instância de servidor, use a seguinte instrução do [!INCLUDE[tsql](../../../includes/tsql-md.md)] :  
   
@@ -70,7 +71,7 @@ ms.locfileid: "68014015"
   
 ### <a name="examples"></a>Exemplos  
   
-#### <a name="a-using-a-system-name"></a>A. Usando um nome de sistema  
+#### <a name="a-using-a-system-name"></a>a. Usando um nome de sistema  
  A URL de ponto de extremidade a seguir especifica um nome de sistema, `SYSTEM46`e a porta `7022`.  
   
  `TCP://SYSTEM46:7022`  

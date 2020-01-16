@@ -1,6 +1,5 @@
 ---
-title: Promover valores XML usados frequentemente com colunas computadas | Microsoft Docs
-ms.custom: ''
+title: Promover valores XML frequentes com colunas computadas | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +12,13 @@ helpviewer_keywords:
 ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 66526a14c6057be1c99b8690cd6df0db07c40a81
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 156ed5549daa8129ff17d1b2827d798521c8a88b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72905525"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257632"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>Promover valores XML frequentemente usados com colunas computadas
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

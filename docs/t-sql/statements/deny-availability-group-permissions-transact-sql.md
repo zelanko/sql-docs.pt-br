@@ -1,6 +1,8 @@
 ---
-title: Permissões DENY de grupo de disponibilidade (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: Permissões de grupo de disponibilidade DENY
+description: Negue permissões em um Grupo de Disponibilidade Always On.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 05/15/2017
 ms.prod: sql
 ms.prod_service: sql-database
@@ -17,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: bda60b36-a0b9-4c20-80c1-6a5cb1d638a5
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 043d98195f21a7e0abe6a26734f4534c14070a31
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dc29fadcbe0fe3a3f2eca8616b89e9ec3e45a7a9
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68114979"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258307"
 ---
 # <a name="deny-availability-group-permissions-transact-sql"></a>Permissões de grupo de disponibilidade DENY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +32,7 @@ ms.locfileid: "68114979"
   Nega permissões em um Grupo de Disponibilidade AlwaysOn no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -75,7 +77,7 @@ DENY permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
  AS *SQL_Server_login*  
  Especifica o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do qual o principal que executa esta consulta deriva seu direito de negar a permissão.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  As permissões no escopo de servidor podem ser negadas somente quando o banco de dados atual é **mestre**.  
   
  Informações sobre grupos de disponibilidade são visíveis na exibição do catálogo [sys.availability_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md). As informações sobre permissões de servidor estão visíveis na exibição do catálogo [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) e as informações sobre entidades de segurança do servidor estão visíveis na exibição do catálogo [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
@@ -85,7 +87,7 @@ DENY permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
 |Permissão de grupo de disponibilidade|Implícito na permissão de grupo de disponibilidade|Implícito na permissão de servidor|  
 |-----------------------------------|----------------------------------------------|----------------------------------|  
 |ALTER|CONTROL|ALTER ANY AVAILABILITY GROUP|  
-|CONNECT|CONTROL|CONTROL SERVER|  
+|CONECTAR|CONTROL|CONTROL SERVER|  
 |CONTROL|CONTROL|CONTROL SERVER|  
 |TAKE OWNERSHIP|CONTROL|CONTROL SERVER|  
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
@@ -95,7 +97,7 @@ DENY permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-denying-view-definition-permission-on-an-availability-group"></a>A. Negando a permissão VIEW DEFINITION em um grupo de disponibilidade  
+### <a name="a-denying-view-definition-permission-on-an-availability-group"></a>a. Negando a permissão VIEW DEFINITION em um grupo de disponibilidade  
  O exemplo a seguir nega a permissão `VIEW DEFINITION` no grupo de disponibilidade `MyAg` para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon `ZArifin`.  
   
 ```  
@@ -105,7 +107,7 @@ GO
 ```  
   
 ### <a name="b-denying-take-ownership-permission-with-the-cascade-option"></a>B. Negando a permissão TAKE OWNERSHIP com CASCADE OPTION  
- O exemplo a seguir nega a permissão `TAKE OWNERSHIP` no grupo de disponibilidade `MyAg` para o usuário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `PKomosinski` com a opção `CASCADE`.  
+ O exemplo a seguir nega a permissão `TAKE OWNERSHIP` no grupo de disponibilidade `MyAg` para o usuário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`PKomosinski` com a opção `CASCADE`.  
   
 ```  
 USE master;  

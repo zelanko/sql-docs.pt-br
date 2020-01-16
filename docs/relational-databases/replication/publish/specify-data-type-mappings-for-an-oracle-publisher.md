@@ -1,6 +1,7 @@
 ---
-title: Especificar mapeamentos de tipo de dados para um Publicador Oracle | Microsoft Docs
-ms.custom: ''
+title: Mapeamentos de tipo de dados para um Editor do Oracle
+description: Descreve como especificar mapeamentos de tipo de dados para um Editor Oracle no SQL Server usando o SSMS (SQL Server Management Studio).
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f172d631-3b8c-4912-bd0f-568366cd9870
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1f86c97036c74024c47d71150586135022543588
-ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
+ms.openlocfilehash: 8449d7c6c766824628c3352897c25303f10e3a29
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661313"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75320757"
 ---
 # <a name="specify-data-type-mappings-for-an-oracle-publisher"></a>Especificar mapeamentos de tipo de dados para um Publicador Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -13,12 +13,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cd0efece05be169ce220d6e16a4bebf10b5ca36d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c5e7595b421627266c7f08ca76588f481a19554f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082930"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257664"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>Criar e gerenciar índices de texto completo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ Para obter mais informações, consulte [Popular índices de texto completo](../
 ##  <a name="view"></a> Exibir as propriedades de um índice de texto completo
 ### <a name="view-the-properties-of-a-full-text-index-with-transact-sql"></a>Exibir as propriedades de um índice de texto completo com o Transact-SQL
 
-|Exibição de catálogo ou de gerenciamento dinâmico|Descrição|  
+|Exibição de catálogo ou de gerenciamento dinâmico|DESCRIÇÃO|  
 |----------------------------------------|-----------------|  
 |[sys.fulltext_index_catalog_usages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-catalog-usages-transact-sql.md)|Retorna uma linha para cada catálogo de texto completo para referência de índice de texto completo.|  
 |[sys.fulltext_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md)|Contém uma linha para cada coluna que faz parte de um índice de texto completo.|  
@@ -72,7 +72,7 @@ Para obter mais informações, consulte [Popular índices de texto completo](../
   
 5.  No painel **Selecionar uma página** , você pode selecionar qualquer uma das seguintes páginas:  
   
-    |Página|Descrição|  
+    |Página|DESCRIÇÃO|  
     |----------|-----------------|  
     |**Geral**|Exibe as propriedades básicas do índice de texto completo. Isso inclui várias propriedades modificáveis e uma série de propriedades inalteráveis, como o nome do banco de dados, o nome da tabela e o nome da coluna de chave de texto completo. As propriedades modificáveis são:<br /><br /> **Lista de palavras irrelevantes de índice de texto completo**<br /><br /> **Indexação de texto completo habilitada**<br /><br /> **Controle de alterações**<br /><br /> **Lista de propriedades de pesquisa**|  
     |**Colunas**|Exibe as colunas da tabela que estão disponíveis para indexação de texto completo. A(s) coluna(s) selecionada(s) tem(têm) índice de texto completo. Você pode selecionar tantas colunas disponíveis quantas desejar para incluí-las no índice de texto completo. Para obter mais informações, consulte [Popular índices de texto completo](populate-full-text-indexes.md).|
@@ -85,7 +85,7 @@ Para obter mais informações, consulte [Popular índices de texto completo](../
   
  A tabela a seguir lista as propriedades de texto completo relacionadas a colunas e tabelas indexadas e suas funções [!INCLUDE[tsql](../../includes/tsql-md.md)] relacionadas.  
   
-|Propriedade|Descrição|Função|  
+|Propriedade|DESCRIÇÃO|Função|  
 |--------------|-----------------|--------------|  
 |**FullTextTypeColumn**|TYPE COLUMN na tabela que armazena as informações de tipo de documento da coluna.|[COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md)|  
 |**IsFulltextIndexed**|Se uma coluna foi habilitada para indexação de texto completo.|COLUMNPROPERTY|  

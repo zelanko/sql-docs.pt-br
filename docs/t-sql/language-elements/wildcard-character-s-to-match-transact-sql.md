@@ -1,6 +1,8 @@
 ---
-title: '[ ] (Curinga – caracteres para correspondência) (Transact-SQL) | Microsoft Docs'
-ms.custom: ''
+title: '[ ] Caractere curinga para correspondência de caracteres'
+description: Use um caractere curinga para corresponder a um ou mais caracteres.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 12/06/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -21,12 +23,12 @@ ms.assetid: 57817576-0bf1-49ed-b05d-fac27e8fed7a
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 838777ff87f9d6d7f2584642fcaa82b08a3266b7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2fa9c7a4ea14154315ef30ae8b193360b34ffda9
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68000329"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257039"
 ---
 # <a name="--wildcard---characters-to-match-transact-sql"></a>\[ \] (Curinga – caracteres para correspondência) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

@@ -18,19 +18,19 @@ ms.assetid: b2aa1fc8-e7af-45d2-9f80-737543c8aa95
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 37da86b825ee68be83d0aa653005a1ea12db5ed7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 56e1f566b5ac6addfab3811c8430ce9c19e61636
+ms.sourcegitcommit: ede04340adbf085e668a2536d4f7114abba14a0c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050813"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74762651"
 ---
 # <a name="grant-schema-permissions-transact-sql"></a>Permissões de esquema GRANT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Concede permissões em um esquema.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -75,10 +75,10 @@ AS *granting_principal*
 -   usuário de banco de dados mapeado para uma chave assimétrica  
 -   usuário de banco de dados não mapeado para uma entidade do servidor.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
   
 > [!IMPORTANT]  
->  Uma combinação das permissões ALTER e REFERENCE em alguns casos pode permitir ao usuário autorizado exibir dados ou executar funções não autorizadas. Por exemplo: Um usuário com a permissão ALTER em uma tabela e a permissão REFERENCE em uma função pode criar uma coluna computada em uma função e fazer com que ela seja executada. Nesse caso, o usuário também precisará da permissão SELECT na coluna computada.  
+>  Uma combinação das permissões ALTER e REFERENCE em alguns casos pode permitir ao usuário autorizado exibir dados ou executar funções não autorizadas. Por exemplo:  Um usuário com a permissão ALTER em uma tabela e a permissão REFERENCE em uma função pode criar uma coluna computada em uma função e fazer com que ela seja executada. Nesse caso, o usuário também precisará da permissão SELECT na coluna computada.  
   
  Um esquema é um item protegível em nível de banco de dados contido no banco de dados pai na hierarquia de permissões. As permissões mais específicas e limitadas que podem ser concedidas em um esquema estão listadas abaixo, junto com as permissões mais gerais que as contêm implicitamente.  
   
@@ -106,9 +106,7 @@ AS *granting_principal*
   
  O usuário U1 tem a permissão CREATE SYNONYM no banco de dados e a permissão SELECT no esquema S1. Portanto, o usuário U1 pode criar um sinônimo no esquema S1 para o objeto negado T1 e acessar o objeto negado T1 usando o sinônimo.  
   
- O usuário U1 tem a permissão CREATE VIEW no banco de dados e a permissão SELECT no esquema S1. Portanto, o usuário U1 pode criar uma exibição no esquema S1 para consultar dados do objeto negado T1, e acessar o objeto negado T1 usando a exibição.  
-  
- Para obter mais informações, consulte o Artigo número 914847 da Base de Dados da Microsoft.  
+ O usuário U1 tem a permissão CREATE VIEW no banco de dados e a permissão SELECT no esquema S1. Portanto, o usuário U1 pode criar uma exibição no esquema S1 para consultar dados do objeto negado T1, e acessar o objeto negado T1 usando a exibição.
   
 ## <a name="permissions"></a>Permissões  
  O concessor (ou a entidade de segurança especificada com a opção AS) deve ter a própria permissão com GRANT OPTION ou uma permissão superior que tenha a permissão que está sendo concedida implícita.  
@@ -132,7 +130,7 @@ AS *granting_principal*
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-granting-insert-permission-on-schema-humanresources-to-guest"></a>A. Concedendo a permissão INSERT no esquema HumanResources para convidado  
+### <a name="a-granting-insert-permission-on-schema-humanresources-to-guest"></a>a. Concedendo a permissão INSERT no esquema HumanResources para convidado  
   
 ```  
 GRANT INSERT ON SCHEMA :: HumanResources TO guest;  

@@ -1,6 +1,6 @@
 ---
-title: Tabela temporária e variável de tabela mais rápidas usando a otimização de memória | Microsoft Docs
-ms.custom: ''
+title: Otimização de memória para variáveis de tabela e tabela temporária mais rápidas
+ms.custom: seo-dt-2019
 ms.date: 06/01/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +11,12 @@ ms.assetid: 38512a22-7e63-436f-9c13-dde7cf5c2202
 author: Jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eb1c7dc1571371b12f759e31cfb508f63f05a530
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
+ms.openlocfilehash: 833108cfc5e8a11f72e8b7cb7b628690b0050c58
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71713248"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412682"
 ---
 # <a name="faster-temp-table-and-table-variable-by-using-memory-optimization"></a>Tabela temporária e variável de tabela mais rápidas usando a otimização de memória
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ Este artigo descreve:
 - Um exemplo de código que destaca os benefícios de desempenho de otimização de memória
   
   
-## <a name="a-basics-of-memory-optimized-table-variables"></a>A. Noções básicas de variáveis de tabelas com otimização de memória  
+## <a name="a-basics-of-memory-optimized-table-variables"></a>a. Noções básicas de variáveis de tabelas com otimização de memória  
   
 Uma variável de tabela com otimização de memória fornece excelente eficiência usando o mesmo algoritmo com otimização de memória e estruturas de dados que são usadas por tabelas com otimização de memória. A eficiência é maximizada quando a variável de tabela é acessada de dentro de um módulo compilado nativamente.  
   
@@ -62,7 +62,7 @@ OLTP in-memory fornece os seguintes objetos que podem ser usados para tabelas te
   
 ## <a name="b-scenario-replace-global-tempdb-x23x23table"></a>B. Cenário: Substituir a tabela tempdb global &#x23;&#x23;  
   
-Substituir uma tabela temporária global por uma tabela com otimização memória SCHEMA_ONLY é bastante simples. A maior alteração é criar a tabela no momento da implantação, não em tempo de execução. A criação de tabelas com otimização de memória demora mais do que a criação de tabelas tradicionais, devido a otimizações de tempo de compilação. Criar e descartar as tabelas com otimização de memória como parte da carga de trabalho online afetaria o desempenho da carga de trabalho, bem como o desempenho de restauração em secundários do AlwaysOn e recuperação de banco de dados.
+Substituir uma tabela temporária global por uma tabela com otimização memória SCHEMA_ONLY é bastante simples. A maior alteração é criar a tabela no momento da implantação, não em runtime. A criação de tabelas com otimização de memória demora mais do que a criação de tabelas tradicionais, devido a otimizações de tempo de compilação. Criar e descartar as tabelas com otimização de memória como parte da carga de trabalho online afetaria o desempenho da carga de trabalho, bem como o desempenho de restauração em secundários do AlwaysOn e recuperação de banco de dados.
 
 Suponha que você tenha a seguinte tabela temporária global.  
   
@@ -100,7 +100,7 @@ A conversão de temporário global para SCHEMA_ONLY é o seguinte:
   
   
 1. Crie a tabela **dbo.soGlobalB** uma vez, como faria com qualquer tabela no disco tradicional.  
-2. No Transact-SQL, remova a criação da tabela **&#x23;&#x23;tempGlobalB**.  É importante criar a tabela com otimização de memória no momento da implantação, não em um tempo de execução, para evitar a sobrecarga de compilação que acompanha a criação da tabela.
+2. No Transact-SQL, remova a criação da tabela **&#x23;&#x23;tempGlobalB**.  É importante criar a tabela com otimização de memória no momento da implantação, não em um runtime, para evitar a sobrecarga de compilação que acompanha a criação da tabela.
 3. No seu T-SQL, substitua todos os menções de **&#x23;&#x23;tempGlobalB** com **dbo.soGlobalB**.  
   
   
@@ -108,7 +108,7 @@ A conversão de temporário global para SCHEMA_ONLY é o seguinte:
   
 As preparações para substituir uma tabela temporária de sessão envolvem mais T-SQL que para o cenário anterior da tabela temporária global. Felizmente o T-SQL extra não significa a necessidade de mais esforço para realizar a conversão.  
 
-Assim como no cenário de tabela temporária global, a maior alteração é criar a tabela no momento da implantação, não no tempo de execução, para evitar a sobrecarga de compilação.
+Assim como no cenário de tabela temporária global, a maior alteração é criar a tabela no momento da implantação, não no runtime, para evitar a sobrecarga de compilação.
   
 Suponha que você tem a seguinte tabela temporária de sessão.  
   
@@ -124,7 +124,7 @@ CREATE TABLE #tempSessionC
   
   
   
-Primeiro, crie a seguinte função de valor de tabela para filtrar em **@@spid** . A função poderá ser usada por todas as tabelas SCHEMA_ONLY convertidas de tabelas temporárias de sessão.  
+Primeiro, crie a seguinte função de valor de tabela para filtrar **\@\@spid**. A função poderá ser usada por todas as tabelas SCHEMA_ONLY convertidas de tabelas temporárias de sessão.  
   
   
   
@@ -184,7 +184,7 @@ Em terceiro lugar, seu código geral T-SQL:
 1. Altere todas as referências à tabela temporária em suas instruções Transact-SQL para a nova tabela com otimização de memória:
     - _Antiga:_ &#x23;tempSessionC  
     - _Nova:_ dbo.soSessionC  
-2. Substitua as instruções `CREATE TABLE #tempSessionC` no seu código com `DELETE FROM dbo.soSessionC`, para garantir que uma sessão não seja exposta ao conteúdo da tabela inserido por uma sessão anterior com o mesmo session_id. É importante criar a tabela com otimização de memória no momento da implantação, não em um tempo de execução, para evitar a sobrecarga de compilação que acompanha a criação da tabela.
+2. Substitua as instruções `CREATE TABLE #tempSessionC` no seu código com `DELETE FROM dbo.soSessionC`, para garantir que uma sessão não seja exposta ao conteúdo da tabela inserido por uma sessão anterior com o mesmo session_id. É importante criar a tabela com otimização de memória no momento da implantação, não em um runtime, para evitar a sobrecarga de compilação que acompanha a criação da tabela.
 3. Remova as instruções `DROP TABLE #tempSessionC` do seu código. Opcionalmente, você pode inserir uma instrução `DELETE FROM dbo.soSessionC` caso o tamanho de memória seja um problema potencial
   
   

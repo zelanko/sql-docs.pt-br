@@ -1,6 +1,8 @@
 ---
-title: Permissões GRANT do grupo de disponibilidade (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: Permissões de grupo de disponibilidade GRANT
+description: Concede permissões em um Grupo de Disponibilidade Always On.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 06/12/2017
 ms.prod: sql
 ms.prod_service: sql-database
@@ -17,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 060eb839-666a-4046-9e1d-5edc9ea75a11
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 15f7c220cbf167c91e052c18d61b2c0c579ea63e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0a9954e823ae66017c3a6105f0f0ec27964b7043
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68065555"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246174"
 ---
 # <a name="grant-availability-group-permissions-transact-sql"></a>Permissões de grupo de disponibilidade GRANT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +32,7 @@ ms.locfileid: "68065555"
   Concede permissões em um Grupo de Disponibilidade AlwaysOn.  
   
 
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -75,7 +77,7 @@ GRANT permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
  AS *SQL_Server_login*  
  Especifica o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do qual o principal que executa esta consulta deriva seu direito de conceder a permissão.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  As permissões no escopo de servidor podem ser concedidas somente quando o banco de dados atual for **mestre**.  
   
  Informações sobre grupos de disponibilidade são visíveis na exibição do catálogo [sys.availability_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md). As informações sobre permissões de servidor estão visíveis na exibição do catálogo [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) e as informações sobre entidades de segurança do servidor estão visíveis na exibição do catálogo [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
@@ -85,7 +87,7 @@ GRANT permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
 |Permissão de grupo de disponibilidade|Implícito na permissão de grupo de disponibilidade|Implícito na permissão de servidor|  
 |-----------------------------------|----------------------------------------------|----------------------------------|  
 |ALTER|CONTROL|ALTER ANY AVAILABILITY GROUP|  
-|CONNECT|CONTROL|CONTROL SERVER|  
+|CONECTAR|CONTROL|CONTROL SERVER|  
 |CONTROL|CONTROL|CONTROL SERVER|  
 |TAKE OWNERSHIP|CONTROL|CONTROL SERVER|  
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
@@ -97,7 +99,7 @@ GRANT permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-granting-view-definition-permission-on-an-availability-group"></a>A. Concedendo a permissão VIEW DEFINITION em um grupo de disponibilidade  
+### <a name="a-granting-view-definition-permission-on-an-availability-group"></a>a. Concedendo a permissão VIEW DEFINITION em um grupo de disponibilidade  
  O exemplo a seguir concede a permissão `VIEW DEFINITION` no grupo de disponibilidade `MyAg` para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon `ZArifin`.  
   
 ```  
@@ -107,7 +109,7 @@ GO
 ```  
   
 ### <a name="b-granting-take-ownership-permission-with-the-grant-option"></a>B. Concedendo a permissão TAKE OWNERSHIP com GRANT OPTION  
- O exemplo a seguir concede a permissão `TAKE OWNERSHIP` no grupo de disponibilidade `MyAg` para o usuário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `PKomosinski` com `GRANT OPTION`.  
+ O exemplo a seguir concede a permissão `TAKE OWNERSHIP` no grupo de disponibilidade `MyAg` para o usuário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`PKomosinski` com `GRANT OPTION`.  
   
 ```  
 USE master;  

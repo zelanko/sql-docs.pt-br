@@ -1,6 +1,7 @@
 ---
-title: Definir uma relação de registro lógico entre artigos de tabela de mesclagem | Microsoft Docs
-ms.custom: ''
+title: Definir uma relação de registro lógico entre artigos da tabela de mesclagem
+description: Saiba como definir a relação de registro lógico entre tabelas relacionadas usadas para artigos de replicação de mesclagem.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ff847b3a-c6b0-4eaf-b225-2ffc899c5558
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 74d9d0bec559dbc618e5487fea647461bc967db3
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.openlocfilehash: 8df94f31b6a036677f5d62ae60ffb4cf53a082be
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70846606"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321211"
 ---
 # <a name="define-a-logical-record-relationship-between-merge-table-articles"></a>Definir uma relação de registro lógico entre artigos da tabela de mesclagem
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +106,7 @@ ms.locfileid: "70846606"
   
     -   Para usar a detecção e a resolução de conflitos padrão de linha ou coluna, especifique um valor igual a **false** em **\@logical_record_level_conflict_detection** e **\@logical_record_level_conflict_resolution**, que é o padrão.  
   
-3.  Repita a Etapa 2 para cada artigo que integrará o registro lógico. É preciso usar a mesma opção de detecção e resolução de conflitos para cada artigo no registro lógico. Para obter mais informações, consulte [Detecting and Resolving Conflicts in Logical Records](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md).  
+3.  Repita a Etapa 2 para cada artigo que integrará o registro lógico. É preciso usar a mesma opção de detecção e resolução de conflitos para cada artigo no registro lógico. Para obter mais informações, consulte [Detectando e resolvendo conflitos em registros lógicos](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md).  
   
 4.  No Publicador do banco de dados de publicação, execute [sp_addmergefilter](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md). Especifique **\@publication**, o nome de um artigo na relação em **\@article**, o nome do segundo artigo em **\@join_articlename**, o nome da relação em **\@filtername**, uma cláusula que define a relação entre os dois artigos em **\@join_filterclause**, o tipo de junção em **\@join_unique_key** e um dos seguintes valores em **\@filter_type**:  
   

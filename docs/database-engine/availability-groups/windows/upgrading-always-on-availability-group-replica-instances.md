@@ -1,6 +1,7 @@
 ---
-title: Fazer upgrade das instâncias de réplica do Grupo de Disponibilidade AlwaysOn | Microsoft Docs
-ms.custom: ''
+title: Atualizar réplicas do grupo de disponibilidade
+dsecription: Describes how to upgrade replicas that are participating in an Always On availability group.
+ms.custom: seo-lt-2019
 ms.date: 01/10/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 990d79e60a0be87588604d76786980c2520d6f53
-ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
+ms.openlocfilehash: 77fba513e72982920c399002555e5b96745e8492
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70910781"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822194"
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>Atualizar instâncias de réplica do Grupo de Disponibilidade AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +76,7 @@ Observe as diretrizes a seguir ao realizar atualizações de servidor para minim
 ## <a name="rolling-upgrade-process"></a>Processo de atualização sem interrupção  
  Na prática, o processo exato depende de fatores como a topologia da implantação dos AGs e o modo de confirmação de cada réplica. Mas, no cenário mais simples, a atualização sem interrupção é um processo de vários estágios que, na sua forma mais simples, envolve as seguintes etapas:  
   
- ![Atualização do AG no cenário HADR](../../../database-engine/availability-groups/windows/media/alwaysonupgrade-ag-hadr.gif "Atualização do AG no cenário HADR")  
+ ![Atualização do AG no Cenário de HADR](../../../database-engine/availability-groups/windows/media/alwaysonupgrade-ag-hadr.gif "Atualização do AG no Cenário de HADR")  
   
 1.  Remover o failover automático em todas as réplicas de confirmação síncrona  
   
@@ -100,7 +101,7 @@ Observe as diretrizes a seguir ao realizar atualizações de servidor para minim
 ## <a name="ag-with-one-remote-secondary-replica"></a>AG com uma réplica secundária remota  
  Se você tiver implantado um AG somente para recuperação de desastre, talvez seja necessário fazer failover do AG para uma réplica secundária de confirmação assíncrona. Essa configuração é ilustrada na figura a seguir:  
   
- ![Atualização do AG no cenário DR](../../../database-engine/availability-groups/windows/media/agupgrade-ag-dr.gif "Atualização do AG no cenário DR")  
+ ![Atualização do AG no Cenário de DR](../../../database-engine/availability-groups/windows/media/agupgrade-ag-dr.gif "Atualização do AG no Cenário de DR")  
   
  Nesse caso, você deve fazer failover do AG para uma réplica secundária de confirmação assíncrona durante a atualização sem interrupção. Para evitar a perda de dados, altere o modo de confirmação para confirmação síncrona e aguarde a réplica secundária ser sincronizada para que você possa fazer o failover do AG. Portanto, o processo de atualização sem interrupção possivelmente será o seguinte:  
   

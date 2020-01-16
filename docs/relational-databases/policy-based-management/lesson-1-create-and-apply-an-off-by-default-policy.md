@@ -1,6 +1,7 @@
 ---
-title: 'Lição 1: Criar e aplicar uma política desativada por padrão | Microsoft Docs'
-ms.custom: ''
+title: 'Lição 1: Criar e aplicar uma política desativada por padrão'
+description: Tutorial que ensina a criar e aplicar uma política desativada por padrão para o gerenciamento baseado em políticas do SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.technology: security
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d31367db-b7db-44c4-8df2-f1240474cf78
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d79c212b1bc960f46e816ad6d99ee4ee24722eac
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.openlocfilehash: 1bff30a7270be7b47e5bf718d07d5386951042f1
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72251286"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557992"
 ---
 # <a name="lesson-1-create-and-apply-an-off-by-default-policy"></a>Lição 1: Criar e aplicar uma política desativada por padrão
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -24,7 +25,7 @@ Usando as políticas do Gerenciamento Baseado em Políticas, você pode administ
 ## <a name="prerequisites"></a>Prerequisites
 Para concluir este tutorial, é necessário ter o SQL Server Management Studio e acesso a um servidor que está executando o SQL Server. 
 
-- Instalar o [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Instale o [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 - Instalar o [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
   
 ## <a name="create-the-mail-off-condition"></a>Criar a condição de correio desativado

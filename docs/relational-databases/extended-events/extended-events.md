@@ -1,6 +1,5 @@
 ---
-title: Visão geral de eventos estendidos - SQL Server | Microsoft Docs
-ms.custom: ''
+title: Visão geral de XEvents – SQL Server
 ms.date: 07/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,12 +14,12 @@ ms.assetid: bf3b98a6-51ed-4f2d-9c26-92f07f1fa947
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d829b32941ad1bc64df4e2e86cddb26d7468281
-ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
+ms.openlocfilehash: 34ebcae99f096d095839cb533fb6efe58b113050
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72313701"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75234597"
 ---
 # <a name="extended-events-overview"></a>Visão geral de eventos estendidos
 
@@ -42,7 +41,7 @@ Os Eventos Estendidos são um sistema de monitoramento de desempenho de peso lev
   
  A tabela a seguir descreve os conceitos em Eventos Estendidos.  
   
-|Tópico|Descrição|  
+|Tópico|DESCRIÇÃO|  
 |-----------|-----------------|  
 |[Pacotes de eventos estendidos do SQL Server](../../relational-databases/extended-events/sql-server-extended-events-packages.md)|Descreve os pacotes de Eventos Estendidos que contêm objetos. Esses objetos são usados para obter e processar dados quando uma sessão de Eventos Estendidos está em execução.|  
 |[Destinos de eventos estendidos do SQL Server](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)|Descreve os consumidores de evento que podem receber dados durante uma sessão de evento.|  
@@ -95,7 +94,7 @@ Usando o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou [!INCLUDE[
 |Use o **Pesquisador de Objetos** para gerenciar sessões de eventos.|[Gerenciar sessões de evento no Pesquisador de Objetos](../../relational-databases/extended-events/manage-event-sessions-in-the-object-explorer.md)|  
 |Descreve como criar uma sessão de Eventos Estendidos.|[Criar uma sessão de Eventos Estendidos](https://msdn.microsoft.com/library/34b1e95a-a80e-4aca-9201-abde47f2ca74)|  
 |Descreve como exibir e atualizar dados de destino.| [Exibição avançada de dados de destino dos Eventos Estendidos no SQL Server](../../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md)|  
-|Descreve como usar as ferramentas de Eventos Estendidos para criar e gerenciar suas sessões de Eventos Estendidos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Ferramentas de eventos estendidos](../../relational-databases/extended-events/extended-events-tools.md)|  
+|Descreve como usar as ferramentas de Eventos Estendidos para criar e gerenciar suas sessões de Eventos Estendidos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Ferramentas de Eventos Estendidos](../../relational-databases/extended-events/extended-events-tools.md)|  
 |Descreve como alterar uma sessão de Eventos Estendidos.|[Alterar uma sessão de Eventos Estendidos](../../relational-databases/extended-events/alter-an-extended-events-session.md)|  
 |Descreve como obter informações sobre os campos associados aos eventos.|[Obter os campos de todos os eventos](https://msdn.microsoft.com/library/4e4ee03f-5bca-42ed-a37c-db1c82e3aad2)|  
 |Descreve como descobrir quais eventos estão disponíveis nos pacotes registrados.|[Exibir os eventos de pacotes registrados](https://msdn.microsoft.com/library/9a90b1a2-aa69-43f6-bdeb-cc5f57a26c6f)|  

@@ -1,6 +1,6 @@
 ---
-title: Página Resultado da Avaliação da Política (Painel AlwaysOn) | Microsoft Docs
-description: Uma descrição da 'Página Resultado da Avaliação da Política' encontrada no 'Painel AlwaysOn' do SQL Server Management Studio.
+title: Página Resultado da Avaliação da Política (Painel AlwaysOn)
+description: Uma descrição da 'Página Resultado da Avaliação da Política' encontrada no 'Painel Always On' do SSMS (SQL Server Management Studio).
 ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 703e947f-d345-4506-be21-34bfbfa7bca6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6f13781e0d0820aaccf3a7fdc9e72145c08c6b4c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ff428ab60ad51cfdf2cd19454c34e90644f30b5d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014542"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75235436"
 ---
 # <a name="policy-evaluation-result-page-always-on-dashboard"></a>Página Resultado da Avaliação da Política (Painel AlwaysOn)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,10 +29,10 @@ ms.locfileid: "68014542"
  **Problema detectado**  
  Exibe uma linha para cada problema detectado. O ícone associado a um problema fornece um indicador visual para indicar a severidade do problema, como segue:  
   
-|Ícone|Severity|  
+|ícone|Severity|  
 |----------|--------------|  
-|![Ícone de interface do usuário: erro](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "Ícone de interface do usuário: erro")|Crítico|  
-|![Ícone de interface do usuário: aviso](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Ícone de interface do usuário: aviso")|Aviso|  
+|![Ícone da interface do usuário: erro](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "Ícone da interface do usuário: erro")|Crítico|  
+|![Ícone da interface do usuário: aviso](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Ícone da interface do usuário: aviso")|Aviso|  
   
  **Descrição**  
  Esta grade exibe uma breve descrição do problema selecionado.  

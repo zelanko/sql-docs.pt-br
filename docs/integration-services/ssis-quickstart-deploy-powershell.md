@@ -8,12 +8,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2ba62b4908c73b018ae4cdda1a9b2bda3098f1ad
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 108331bfdff6734b7f5a8d64a4983f2c54490ec5
+ms.sourcegitcommit: ef830f565ee07dc7d4388925cc3c86c5d2cfb4c7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71281763"
+ms.lasthandoff: 12/09/2019
+ms.locfileid: "74947098"
 ---
 # <a name="deploy-an-ssis-project-with-powershell"></a>Implantar um projeto do SSIS com o PowerShell
 
@@ -24,7 +24,7 @@ Este guia de início rápido demonstra como usar um script do PowerShell para se
 
 ## <a name="prerequisites"></a>Prerequisites
 
-Um servidor de Banco de Dados SQL do Azure escuta na porta 1433. Se estiver tentando se conectar a um servidor de Banco de Dados SQL do Azure em um firewall corporativo, essa porta deverá estar aberta no firewall corporativo para que você se conecte com êxito.
+Um servidor do Banco de Dados SQL do Azure escuta na porta 1433. Se estiver tentando se conectar a um servidor de Banco de Dados SQL do Azure em um firewall corporativo, essa porta deverá estar aberta no firewall corporativo para que você se conecte com êxito.
 
 ## <a name="supported-platforms"></a>Plataformas compatíveis
 
@@ -46,6 +46,10 @@ Para implantar o projeto no Banco de Dados SQL do Azure, obtenha as informaçõe
 4. Se você esquecer suas informações de logon do servidor de Banco de Dados SQL do Azure, navegue até a página do servidor de Banco de Dados SQL para exibir o nome do administrador de servidor. Você pode redefinir a senha, se necessário.
 5. Clique em **Mostrar cadeias de conexão de banco de dados**.
 6. Examine a cadeia de conexão **ADO.NET** completa.
+
+## <a name="supported-authentication-method"></a>Método de autenticação compatível
+
+Confira [métodos de autenticação para implantação](ssis-quickstart-deploy-ssms.md#authentication-methods-for-deployment).
 
 ## <a name="ssis-powershell-provider"></a>Provedor do PowerShell do SSIS
 Forneça os valores adequados para as variáveis na parte superior do script a seguir e, em seguida, execute o script para implantar o projeto do SSIS.
@@ -127,7 +131,7 @@ Write-Host "Done."
     - [Implantar um pacote do SSIS com o Transact-SQL (VS Code)](ssis-quickstart-deploy-tsql-vscode.md)
     - [Implantar um pacote do SSIS por meio do prompt de comando](./ssis-quickstart-deploy-cmdline.md)
     - [Implantar um pacote do SSIS com o C#](./ssis-quickstart-deploy-dotnet.md) 
-- Execute um pacote implantado. Para executar um pacote, você pode escolher uma entre várias ferramentas e linguagens. Para saber mais, veja os tópicos a seguir:
+- Execute um pacote implantado. Para executar um pacote, você pode escolher uma entre várias ferramentas e linguagens. Para obter mais informações, confira os seguintes artigos:
     - [Executar um pacote do SSIS com o SSMS](./ssis-quickstart-run-ssms.md)
     - [Executar um pacote do SSIS com o Transact-SQL (SSMS)](./ssis-quickstart-run-tsql-ssms.md)
     - [Executar um pacote do SSIS com o Transact-SQL (VS Code)](ssis-quickstart-run-tsql-vscode.md)

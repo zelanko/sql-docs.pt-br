@@ -1,10 +1,11 @@
 ---
 title: SQL Server Configuration Manager | Microsoft Docs
+description: Como utilizar o cliente do SQL Server Configuration Manager
 ms.custom: ''
-ms.date: 07/13/2017
+ms.date: 12/31/2019
 ms.prod: sql
 ms.prod_service: database-engine
-ms.reviewer: ''
+ms.reviewer: vanto
 ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,21 +22,22 @@ helpviewer_keywords:
 ms.assetid: e6beaea4-164c-4078-95ae-b9e28b0aefe8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8f01b4f4bfc79adfbbc1fb0f183b012d288927ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b447e659b68ced56484296f4763a25e843022b06
+ms.sourcegitcommit: ab7209b5856537bfef0a6e9d0527d9002bd0a528
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68081656"
+ms.lasthandoff: 01/02/2020
+ms.locfileid: "75608015"
 ---
 # <a name="sql-server-configuration-manager"></a>SQL Server Configuration Manager
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager é uma ferramenta para gerenciar os serviços associados ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], configurar os protocolos de rede usados pelo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]e para gerenciar a configuração de conectividade de rede de computadores cliente do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] O Configuration Manager é um snap-in do [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console que está disponível no menu Iniciar ou pode ser adicionado a qualquer outra exibição do Console de Gerenciamento do [!INCLUDE[msCoName](../includes/msconame-md.md)] . O Console de Gerenciamento do [!INCLUDE[msCoName](../includes/msconame-md.md)] (**mmc.exe**) usa o arquivo **SQLServerManager\<versão>.msc** (como **SQLServerManager13.msc** para [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]) para abrir o Configuration Manager. Aqui estão os caminhos para as últimas quatro versões Windows instaladas na unidade C.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager é uma ferramenta para gerenciar os serviços associados ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], configurar os protocolos de rede usados pelo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]e para gerenciar a configuração de conectividade de rede de computadores cliente do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager é instalado com a instalação do SQL Server. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] O Configuration Manager é um snap-in do [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console que está disponível no menu Iniciar ou pode ser adicionado a qualquer outra exibição do Console de Gerenciamento do [!INCLUDE[msCoName](../includes/msconame-md.md)] . O Console de Gerenciamento do [!INCLUDE[msCoName](../includes/msconame-md.md)] (**mmc.exe**) usa o arquivo **SQLServerManager\<versão>.msc** (como **SQLServerManager13.msc** para [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]) para abrir o Configuration Manager. Você precisará da versão correspondente do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager para gerenciar essa versão específica do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Estes são os caminhos para as últimas cinco versões quando o Windows é instalado na unidade C.  
   
 |||  
 |-|-|
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2019|C:\Windows\SysWOW64\SQLServerManager15.msc| 
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2017|C:\Windows\SysWOW64\SQLServerManager14.msc|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2016|C:\Windows\SysWOW64\SQLServerManager13.msc|  
 |[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]|C:\Windows\SysWOW64\SQLServerManager12.msc|  
@@ -45,7 +47,7 @@ ms.locfileid: "68081656"
 >  Como o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager é um snap-in do programa Console de Gerenciamento [!INCLUDE[msCoName](../includes/msconame-md.md)] e não um programa autônomo, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager não aparece como um aplicativo nas versões mais recentes do Windows.  
 > 
 >  -   **Windows 10**:  
->          Para abrir o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager, na **Página Inicial**, digite SQLServerManager13.msc (para [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]). Para versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , substitua 13 por um número menor. Clicar em SQLServerManager13.msc abre o Configuration Manager. Para fixar o Configuration Manager na Página Inicial ou na Barra de Tarefas, clique com o botão direito do mouse em SQLServerManager13.msc e clique em **Abrir local do arquivo**. No Explorador de Arquivos do Windows, clique com o botão direito do mouse em SQLServerManager13.msc e clique em **Fixar na Tela Inicial** ou **Fixar na Barra de Tarefas**.  
+>          Para abrir o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager, na **Página Inicial**, digite SQLServerManager13.msc (para [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]). Para outras versões do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], substitua 13 pelo número correspondente. Clicar em SQLServerManager13.msc abre o Configuration Manager. Para fixar o Configuration Manager na Página Inicial ou na Barra de Tarefas, clique com o botão direito do mouse em SQLServerManager13.msc e clique em **Abrir local do arquivo**. No Explorador de Arquivos do Windows, clique com o botão direito do mouse em SQLServerManager13.msc e clique em **Fixar na Tela Inicial** ou **Fixar na Barra de Tarefas**.  
 > -   **Windows 8**:  
 >          Para abrir o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager, no botão **Pesquisar**, em **Aplicativos**, digite **SQLServerManager\<versão>.msc**, como **SQLServerManager13.msc** e pressione **Enter**.  
   
@@ -71,7 +73,7 @@ ms.locfileid: "68081656"
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] O Configuration Manager permite que você gerencie os protocolos de rede de servidor e cliente, incluindo o recurso de impor a criptografia do protocolo, exibir as propriedades do alias ou habilitar/desabilitar um protocolo.  
   
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager permite que você crie ou remova um alias, altere a ordem em que os protocolos são usados ou exiba as propriedades do alias de um servidor, incluindo:  
+ O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager permite que você crie ou remova um alias, altere a ordem em que os protocolos são usados ou veja as propriedades do alias de um servidor, incluindo:  
   
 -   Alias de servidor: alias do servidor usado para o computador ao qual o cliente está se conectando.  
   
@@ -82,7 +84,7 @@ ms.locfileid: "68081656"
  O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager também permite que você visualize as informações sobre as instâncias de cluster de failover, apesar do Administrador de Cluster dever ser usado para algumas ações como iniciar e interromper os serviços.  
   
 ### <a name="available-network-protocols"></a>Protocolos de rede disponíveis  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dá suporte a protocolos de Memória Compartilhada, TCP/IP e Pipes Nomeados. Para obter informações sobre como escolher protocolos de rede, consulte [Configure Client Protocols](../database-engine/configure-windows/configure-client-protocols.md). [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não dá suporte aos protocolos de rede VIA, Banyan VINES Sequenced Packet Protocol (SPP), Multiprotocol, AppleTalk ou NWLink IPX/SPX. Os clientes que se conectavam anteriormente usando esses protocolos devem selecionar um protocolo diferente para conectar-se com o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Você não pode usar o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager para configurar o proxy de WinSock. Configurar o proxy de WinSock, consulte sua documentação do Servidor ISA.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dá suporte a protocolos de Memória Compartilhada, TCP/IP e Pipes Nomeados. Para obter informações sobre como escolher protocolos de rede, consulte [Configure Client Protocols](../database-engine/configure-windows/configure-client-protocols.md). O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não dá suporte aos protocolos de rede VIA, Banyan VINES SPP (Sequenced Packet Protocol), Multiprotocol, AppleTalk ou NWLink IPX/SPX. Os clientes que se conectavam anteriormente usando esses protocolos devem selecionar um protocolo diferente para conectar-se com o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Você não pode usar o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager para configurar o proxy de WinSock. Configurar o proxy de WinSock, consulte sua documentação do Servidor ISA.  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [Tópicos de instruções sobre gerenciamento de serviços &#40;SQL Server Configuration Manager&#41;](https://msdn.microsoft.com/library/78dee169-df0c-4c95-9af7-bf033bc9fdc6)  

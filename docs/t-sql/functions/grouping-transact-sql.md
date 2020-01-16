@@ -1,7 +1,7 @@
 ---
 title: GROUPING (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/03/2017
+ms.date: 12/03/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,19 +22,19 @@ helpviewer_keywords:
 ms.assetid: 4efa3868-1fc4-4626-8fb1-e863cc03e422
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3f5d3a1e3b6ac5b6e5d8ec46e03de9f757a4651b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a5ecfbcd49712ce22f5e48aa5643d90414f78fae
+ms.sourcegitcommit: 26868c8ac3217176b370d972a26d307598a10328
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048184"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74833778"
 ---
 # <a name="grouping-transact-sql"></a>GROUPING (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   Indica se uma expressão de coluna especificada em uma lista GROUP BY é agregada ou não. GROUPING retorna 1 para agregada ou 0 para não agregada no conjunto de resultados. GROUPING pode ser usado apenas na lista SELECT \<select>, nas cláusulas HAVING e ORDER BY, quando GROUP BY é especificado.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -50,7 +50,7 @@ GROUPING ( <column_expression> )
 ## <a name="return-types"></a>Tipos de retorno  
  **tinyint**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  GROUPING é usado para distinguir os valores nulos retornados por ROLLUP, CUBE ou GROUPING SETS dos valores nulos padrão. O NULL retornado como resultado de uma operação ROLLUP, CUBE ou GROUPING SETS é um uso especial de NULL. Isto atua como um espaço reservado de coluna no conjunto de resultados e significa tudo.  
   
 ## <a name="examples"></a>Exemplos  

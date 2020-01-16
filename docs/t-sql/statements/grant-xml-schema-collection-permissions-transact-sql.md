@@ -1,6 +1,8 @@
 ---
-title: Permissões GRANT de coleção de esquemas XML (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: Permissões de coleção de esquema XML GRANT
+description: Concede permissões em uma coleção de esquemas XML.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: sql-database
@@ -17,19 +19,19 @@ helpviewer_keywords:
 ms.assetid: 57e24465-cd43-45cf-bb52-eea0b49867f9
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 5dbd2c35b360d3b3e1e9f6dabe7d011c20795bc0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a5d79f02237a380a9431e8269875d93a79bd9d04
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68071192"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243353"
 ---
 # <a name="grant-xml-schema-collection-permissions-transact-sql"></a>Permissões de coleção de esquema GRANT XML (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Concede permissões em uma coleção de esquemas XML.   
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -91,7 +93,7 @@ GRANT permission  [ ,...n ] ON
  *Database_user_with_no_login*  
  Especifica um usuário do banco de dados sem nenhuma entidade de segurança correspondente no nível de servidor.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  As informações sobre coleções de esquema XML são visíveis na exibição do catálogo [sys.xml_schema_collections](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md).  
   
  Uma coleção de esquema XML é um protegível em nível de esquema contido pelo esquema pai na hierarquia de permissões. As permissões mais específicas e limitadas que podem ser concedidas em uma coleção de esquemas XML são listadas na tabela a seguir, junto com as permissões mais gerais que as incluem implicitamente.  

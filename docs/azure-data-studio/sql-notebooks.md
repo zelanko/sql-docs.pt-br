@@ -1,21 +1,21 @@
 ---
-title: Como usar Notebooks SQL no Azure Data Studio
+title: Como usar os Notebooks do SQL
 titleSuffix: Azure Data Studio
 description: Saiba como usar Notebooks SQL no Azure Data Studio
-ms.custom: seodec18
-ms.date: 06/28/2019
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.reviewer: achatter; alayu; sstein
+ms.reviewer: achatter; alayu; maghan; sstein
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 9af2e04a3973eddfcd714c7968c35e544302aba9
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.custom: seodec18
+ms.date: 06/28/2019
+ms.openlocfilehash: df1e49af0378b6af4a3d82b5a5ec2a4293be5e35
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959260"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957080"
 ---
 # <a name="how-to-use-notebooks-in-azure-data-studio"></a>Como usar notebooks no Azure Data Studio
 
@@ -82,7 +82,7 @@ Depois que a instalação for realizada com sucesso, você encontrará uma notif
 
 ![image22](media/sql-notebooks/jupyter-backend.png)
 
-|Kernel|Descrição
+|Kernel|DESCRIÇÃO
 |:-----|:-----
 | Kernel do SQL | Escreva o código SQL direcionado ao seu banco de dados relacional.
 |Kernel PySpark3 e PySpark| Escreva o código Python usando a computação do Spark do cluster.

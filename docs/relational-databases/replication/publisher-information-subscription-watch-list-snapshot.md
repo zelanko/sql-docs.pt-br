@@ -1,6 +1,7 @@
 ---
-title: Informações sobre o Publicador, Lista de inspeção de Assinaturas (instantâneo) | Microsoft Docs
-ms.custom: ''
+title: Lista de Inspeção de Assinatura (monitor de replicação – instantâneo)
+description: Descreve a guia 'Lista de Inspeção de Assinatura' do Replication Monitor para uma publicação de instantâneo no SSMS (SQL Server Management Studio).
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ ms.assetid: 2ebeee62-7f54-4c77-9d37-15708bc5cc23
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: bc62259db10a92350aeb24f51b38072339b34921
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 45fec0f9c4d2c5ab7520c2ddfb2a921b771acfcb
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769724"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75320484"
 ---
 # <a name="publisher-information-subscription-watch-list-snapshot"></a>Informações sobre o Publicador, Lista de inspeção de Assinaturas (instantâneo)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "68769724"
   
 -   **Escolher Colunas para Mostrar**: selecione quais colunas devem ser exibidas e a ordem em que devem ser exibidas, na caixa de diálogo **Selecionar Colunas**.  
   
--   **Filtrar**: filtre linhas na grade com base em valores de colunas da caixa de diálogo **Configurações de Filtro**.  
+-   **Filtro**: filtre linhas na grade com base em valores de colunas da caixa de diálogo **Configurações de Filtro**.  
   
 -   **Limpar Filtro**: Limpe todas as configurações de filtro para a grade.  
   
@@ -62,7 +63,7 @@ ms.locfileid: "68769724"
   
  A ordem de classificação também determina qual valor será exibido se uma determinada assinatura estiver em mais de um estado. Por exemplo, se uma assinatura tiver um erro e expirar em breve, a coluna **Status** exibirá **Erro**.  
   
- Os valores de status **Expirando em breve/Expirado** e **Assinatura não inicializada** são avisos. Quando um aviso for exibido, a coluna **Status** também será exibida se um agente estiver em execução. Por exemplo, o status pode ser **Executando, Expirando em breve/Expirado**.  
+ Os valores de status **Expirando em breve/Expirado** e **Assinatura não inicializada** são avisos. Quando um aviso é exibido, a coluna **Status** também exibe se um agente está em execução. Por exemplo, o status pode ser **Executando, Expirando em breve/Expirado**.  
   
  O valor de status **Expirando em breve/Expirado** só será exibido se for definido um limite. Para obter informações sobre como definir limites, consulte [Set Thresholds and Warnings in Replication Monitor](../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md) (Definir limites e avisos no Replication Monitor).  
   

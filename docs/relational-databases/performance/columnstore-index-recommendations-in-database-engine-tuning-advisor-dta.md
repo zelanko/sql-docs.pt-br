@@ -1,6 +1,6 @@
 ---
-title: Recomendações de índice columnstore no DTA (Orientador de Otimização do Mecanismo de Banco de Dados) | Microsoft Docs
-ms.custom: ''
+title: Recomendações de índice columnstore no DTA (Assistente de Otimização do Mecanismo de Banco de Dados)
+ms.custom: seo-dt-2019
 ms.date: 01/09/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9fba1139-82cb-4244-a41f-4337a7d0c132
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 2899945661ca2f0502b9553cc8e78b751570a092
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1d0086a6698c45d5c24d89f8e6a681d14051e11f
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67985013"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74166000"
 ---
 # <a name="columnstore-index-recommendations-in-database-engine-tuning-advisor-dta"></a>Recomendações de índice columnstore no DTA (Orientador de Otimização do Mecanismo de Banco de Dados)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ Para habilitar as recomendações de columnstore ao usar o utilitário de linha 
 Para obter mais informações sobre o utilitário de linha de comando dta.exe, consulte [Utilitário dta](../../tools/dta/dta-utility.md)
 
 ## <a name="see-also"></a>Consulte Também
-[Guia de Índices columnstore](../../relational-databases/indexes/columnstore-indexes-overview.md)       
+[Guia de Índices Columnstore](../../relational-databases/indexes/columnstore-indexes-overview.md)       
 [Orientador de Otimização do Mecanismo de Banco de Dados](../../relational-databases/performance/database-engine-tuning-advisor.md)      
 [Tutorial: Orientador de Otimização do Mecanismo de Banco de Dados](Tutorial:%20Database%20Engine%20Tuning%20Advisor.md)
 

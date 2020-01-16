@@ -1,7 +1,7 @@
 ---
 title: Recompilar um procedimento armazenado | Microsoft Docs
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 10/28/2019
 ms.prod: sql
 ms.technology: stored-procedures
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: b90deb27-0099-4fe7-ba60-726af78f7c18
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 115516dec13c971d774d0848cf39f847f6db0d6c
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 2a701e31e53b1d540c3fd586f10f34543895dfde
+ms.sourcegitcommit: 03884a046aded85c7de67ca82a5b5edbf710be92
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909012"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564789"
 ---
 # <a name="recompile-a-stored-procedure"></a>Recompilar um procedimento armazenado
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "72909012"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece recompilação no nível da instrução de procedimentos. Quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recompila procedimentos armazenados, apenas a instrução que causou a recompilação é compilada, e não o procedimento completo.  
   
--   Se certas consultas em um procedimento usarem valores atípicos ou temporários regularmente, o desempenho do procedimento poderá ser melhorado com o uso da dica de consulta RECOMPILE nessas consultas. Como apenas as consultas que usam a dica de consulta serão recompiladas, em vez de o procedimento completo, o comportamento de recompilação no nível da instrução no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]será imitado. Além de usar os valores de parâmetro atuais do procedimento, a dica de consulta RECOMPILE também usa os valores de todas as variáveis locais no procedimento armazenado quando você compila a instrução. Para obter mais informações, veja [Dica de consulta (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md).  
+-   Se certas consultas em um procedimento usarem valores atípicos ou temporários regularmente, o desempenho do procedimento poderá ser melhorado com o uso da dica de consulta RECOMPILE nessas consultas. Como apenas as consultas que usam a dica de consulta serão recompiladas, em vez de o procedimento completo, o comportamento de recompilação no nível da instrução no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] será imitado. Além de usar os valores de parâmetro atuais do procedimento, a dica de consulta RECOMPILE também usa os valores de todas as variáveis locais no procedimento armazenado quando você compila a instrução. Para obter mais informações, veja [Dica de consulta (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md).  
   
 ###  <a name="Security"></a> Segurança  
   
@@ -60,76 +60,59 @@ ms.locfileid: "72909012"
   
  Se essa opção for usada em uma instrução EXECUTE, as permissões de EXECUTE serão necessárias no procedimento. As permissões não são necessárias na instrução EXECUTE em si, mas permissões de execução são necessárias no procedimento referenciado na instrução EXECUTE. Para obter mais informações, veja [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md).  
   
- Dica de consulta **RECOMPILE**  
+ Dica de consulta**RECOMPILE**  
  Esse recurso é usado quando o procedimento é criado e a dica é incluída em instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] no procedimento. Portanto, isso requer a permissão CREATE PROCEDURE no banco de dados e a permissão ALTER no esquema no qual o procedimento está sendo criado.  
   
  Procedimento armazenado do sistema**sp_recompile**  
  Exige a permissão ALTER no procedimento especificado.  
   
 ##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
-  
-#### <a name="to-recompile-a-stored-procedure-by-using-the-with-recompile-option"></a>Para recompilar um procedimento armazenado usando a opção WITH RECOMPILE  
-  
-1.  Conecte-se ao [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
-  
-2.  Na barra Padrão, clique em **Nova Consulta**.  
-  
-3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Este exemplo cria a definição de procedimento.  
 
-```  
-USE AdventureWorks2012;  
-GO  
-IF OBJECT_ID ( 'dbo.uspProductByVendor', 'P' ) IS NOT NULL   
-    DROP PROCEDURE dbo.uspProductByVendor;  
-GO  
-CREATE PROCEDURE dbo.uspProductByVendor @Name varchar(30) = '%'  
-WITH RECOMPILE  
-AS  
-    SET NOCOUNT ON;  
-    SELECT v.Name AS 'Vendor name', p.Name AS 'Product name'  
-    FROM Purchasing.Vendor AS v   
-    JOIN Purchasing.ProductVendor AS pv   
-      ON v.BusinessEntityID = pv.BusinessEntityID   
-    JOIN Production.Product AS p   
-      ON pv.ProductID = p.ProductID  
-    WHERE v.Name LIKE @Name;  
+1. Conecte-se ao [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-```  
+1. Na barra Padrão, clique em **Nova Consulta**.  
   
-#### <a name="to-recompile-a-stored-procedure-by-using-the-with-recompile-option"></a>Para recompilar um procedimento armazenado usando a opção WITH RECOMPILE  
+1. Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Este exemplo cria a definição de procedimento.  
+
+   ```sql
+   USE AdventureWorks2012;  
+   GO  
+   IF OBJECT_ID ( 'dbo.uspProductByVendor', 'P' ) IS NOT NULL   
+       DROP PROCEDURE dbo.uspProductByVendor;  
+   GO  
+   CREATE PROCEDURE dbo.uspProductByVendor @Name varchar(30) = '%'  
+   WITH RECOMPILE  
+   AS  
+       SET NOCOUNT ON;  
+       SELECT v.Name AS 'Vendor name', p.Name AS 'Product name'  
+       FROM Purchasing.Vendor AS v   
+       JOIN Purchasing.ProductVendor AS pv   
+         ON v.BusinessEntityID = pv.BusinessEntityID   
+       JOIN Production.Product AS p   
+         ON pv.ProductID = p.ProductID  
+       WHERE v.Name LIKE @Name;  
+   ```  
   
-1.  Conecte-se ao [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+### <a name="to-recompile-a-stored-procedure-by-using-the-with-recompile-option"></a>Para recompilar um procedimento armazenado usando a opção WITH RECOMPILE   
   
-2.  Na barra Padrão, clique em **Nova Consulta**.  
-  
-3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Este exemplo cria um procedimento simples que retorna todos os funcionários (com os nomes e sobrenomes fornecidos), os cargos e os nomes de departamento em uma exibição.  
-  
-     E copie e cole o segundo exemplo de código na janela de consulta e clique em **Executar**. Isso executa o procedimento e recompila o plano de consulta do procedimento.  
-  
-```sql  
-USE AdventureWorks2012;  
-GO  
-EXECUTE HumanResources.uspGetAllEmployees WITH RECOMPILE;  
-GO  
-  
-```  
-  
-#### <a name="to-recompile-a-stored-procedure-by-using-sp_recompile"></a>Para recompilar um procedimento armazenado usando sp_recompile  
-  
-1.  Conecte-se ao [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
-  
-2.  Na barra Padrão, clique em **Nova Consulta**.  
-  
-3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Este exemplo cria um procedimento simples que retorna todos os funcionários (com os nomes e sobrenomes fornecidos), os cargos e os nomes de departamento em uma exibição.  
-  
-     Em seguida, copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Isso não executa o procedimento, mas marca-o para recompilação de modo que seu plano de consulta seja atualizada na próxima vez em que o procedimento for executado.  
+Selecione **Nova Consulta**, então copie e cole o código de exemplo a seguir na janela de consulta e clique em **Executar**. Isso executa o procedimento e recompila o plano de consulta do procedimento.  
   
 ```sql  
 USE AdventureWorks2012;  
 GO  
-EXEC sp_recompile N'HumanResources.uspGetAllEmployees';  
-GO  
+EXECUTE HumanResources.uspProductByVendor WITH RECOMPILE;  
+GO
+```  
   
+### <a name="to-recompile-a-stored-procedure-by-using-sp_recompile"></a>Para recompilar um procedimento armazenado usando sp_recompile  
+
+Selecione **Nova Consulta**, então copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Isso não executa o procedimento, mas marca-o para recompilação de modo que seu plano de consulta seja atualizada na próxima vez em que o procedimento for executado.  
+
+```sql  
+USE AdventureWorks2012;  
+GO  
+EXEC sp_recompile N'dbo.uspProductByVendor';   
+GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  

@@ -8,12 +8,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b943d8e169b589f45c612dccc710e174759ca0ca
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 43820f44e789330ed437c104e385090a8179a2b3
+ms.sourcegitcommit: ef830f565ee07dc7d4388925cc3c86c5d2cfb4c7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71295645"
+ms.lasthandoff: 12/09/2019
+ms.locfileid: "74947102"
 ---
 # <a name="deploy-an-ssis-project-with-c-code-in-a-net-app"></a>Implantar um projeto do SSIS com o código C# em um aplicativo .NET
 
@@ -28,7 +28,7 @@ Você pode usar o Visual Studio, o Visual Studio Code ou outra ferramenta de sua
 
 Antes de começar, verifique se você tem o Visual Studio ou Visual Studio Code instalado. Baixe a Community Edition gratuita do Visual Studio ou o Visual Studio Code gratuito de [Downloads do Visual Studio](https://www.visualstudio.com/downloads/).
 
-Um servidor de Banco de Dados SQL do Azure escuta na porta 1433. Se estiver tentando se conectar a um servidor de Banco de Dados SQL do Azure em um firewall corporativo, essa porta deverá estar aberta no firewall corporativo para que você se conecte com êxito.
+Um servidor do Banco de Dados SQL do Azure escuta na porta 1433. Se estiver tentando se conectar a um servidor de Banco de Dados SQL do Azure em um firewall corporativo, essa porta deverá estar aberta no firewall corporativo para que você se conecte com êxito.
 
 ## <a name="supported-platforms"></a>Plataformas compatíveis
 
@@ -44,12 +44,16 @@ Você não pode usar as informações neste guia de início rápido para implant
 
 Para implantar o projeto no Banco de Dados SQL do Azure, obtenha as informações de conexão necessárias para se conectar ao SSISDB (banco de dados de catálogo do SSIS). Você precisa das informações de logon e de nome do servidor totalmente qualificado nos procedimentos a seguir.
 
-1. Faça logon no [portal do Azure](https://portal.azure.com/).
+1. Faça logon no [Portal do Azure](https://portal.azure.com/).
 2. Selecione **Bancos de Dados SQL** no menu à esquerda e selecione o banco de dados do SSISDB na página **Bancos de dados SQL**. 
 3. Na página **Visão geral** do banco de dados, examine o nome totalmente qualificado do servidor. Para ver a opção **Clique para copiar**, passe o mouse sobre o nome do servidor. 
 4. Se você esquecer suas informações de logon do servidor de Banco de Dados SQL do Azure, navegue até a página do servidor de Banco de Dados SQL para exibir o nome do administrador de servidor. Você pode redefinir a senha, se necessário.
 5. Clique em **Mostrar cadeias de conexão de banco de dados**.
 6. Examine a cadeia de conexão **ADO.NET** completa. Opcionalmente, seu código pode usar um `SqlConnectionStringBuilder` para recriar essa cadeia de conexão com os valores de parâmetro individuais que você fornece.
+
+## <a name="supported-authentication-method"></a>Método de autenticação compatível
+
+Confira [métodos de autenticação para implantação](ssis-quickstart-deploy-ssms.md#authentication-methods-for-deployment).
 
 ## <a name="create-a-new-visual-studio-project"></a>Criar um novo projeto do Visual Studio
 
@@ -134,7 +138,7 @@ namespace deploy_ssis_project
     - [Implantar um pacote do SSIS com o Transact-SQL (VS Code)](ssis-quickstart-deploy-tsql-vscode.md)
     - [Implantar um pacote do SSIS por meio do prompt de comando](./ssis-quickstart-deploy-cmdline.md)
     - [Implantar um pacote do SSIS com o PowerShell](ssis-quickstart-deploy-powershell.md)
-- Execute um pacote implantado. Para executar um pacote, você pode escolher uma entre várias ferramentas e linguagens. Para saber mais, veja os tópicos a seguir:
+- Execute um pacote implantado. Para executar um pacote, você pode escolher uma entre várias ferramentas e linguagens. Para obter mais informações, confira os seguintes artigos:
     - [Executar um pacote do SSIS com o SSMS](./ssis-quickstart-run-ssms.md)
     - [Executar um pacote do SSIS com o Transact-SQL (SSMS)](./ssis-quickstart-run-tsql-ssms.md)
     - [Executar um pacote do SSIS com o Transact-SQL (VS Code)](ssis-quickstart-run-tsql-vscode.md)

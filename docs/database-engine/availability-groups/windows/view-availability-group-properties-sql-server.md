@@ -1,6 +1,7 @@
 ---
-title: Exibir propriedades do grupo de disponibilidade (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Exibir propriedades do grupo de disponibilidade
+description: 'Exiba as propriedades de um grupo de disponibilidade Always On com SSMS (SQL Server Management Studio), T-SQL (Transact-SQL) ou SQL PowerShell. '
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 61243c87-bd62-4510-863f-2a8f347caf1f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9fb3f29746df1e88b1d0ae8bdae4e163b654e3df
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 44328d275c962c1f6315e56e763c3a8550318ffb
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013367"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74821815"
 ---
 # <a name="view-availability-group-properties-sql-server"></a>Exibir propriedades do grupo de disponibilidade (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

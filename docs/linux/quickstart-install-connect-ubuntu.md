@@ -1,21 +1,20 @@
 ---
-title: Introdução ao SQL Server no Ubuntu
-titleSuffix: SQL Server
+title: 'Ubuntu: Instalar o SQL Server em Linux'
 description: Este início rápido mostra como instalar o SQL Server 2017 ou o SQL Server 2019 no Ubuntu e criar e consultar um banco de dados com sqlcmd.
 author: VanMSFT
 ms.author: vanto
 ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sqlfreshmay19
+ms.custom: seo-lt-2019
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 17f73e7529fb8e74e9ff83de8d7e0ebd61783909
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: df3609c5bf4f31ee8a32992127681d42609b9528
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531346"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558410"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>Início Rápido: Instalar o SQL Server e criar um banco de dados no Ubuntu
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]

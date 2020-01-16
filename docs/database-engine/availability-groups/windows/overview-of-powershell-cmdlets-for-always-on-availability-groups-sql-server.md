@@ -1,7 +1,7 @@
 ---
-title: Visão geral de cmdlets do PowerShell para grupos de disponibilidade
+title: Cmdlets do PowerShell para grupos de disponibilidade
 description: 'Uma referência para os diferentes cmdlets do PowerShell disponíveis para gerenciar Grupos de Disponibilidade AlwaysOn. '
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 08/30/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b3fef0d5-b6d7-4386-a0f0-d06c165ad4de
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bb6542b5fa2028cf63712e17281b0a120f76f1d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8aac669c8e7b2f43666a43c26a8040c3658c560c
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014635"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75236093"
 ---
 # <a name="overview-of-powershell-cmdlets-for-always-on-availability-groups"></a>Visão geral de cmdlets do PowerShell para grupos de disponibilidade AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68014635"
   
 ##  <a name="ConfiguringServerInstance"></a> Configurando uma instância de servidor para o grupos de disponibilidade AlwaysOn  
   
-|Cmdlets|Descrição|Com suporte em|  
+|Cmdlets|DESCRIÇÃO|Com suporte em|  
 |-------------|-----------------|------------------|
 |[**Disable-SqlAlwaysOn**](/powershell/module/sqlserver/disable-sqlalwayson)|Desabilita o recurso [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] em uma instância de servidor.|A instância de servidor especificada pelo parâmetro **Path**, **InputObject**ou **Name** . (Deve ser uma edição do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que dê suporte ao [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].)|  
 |[**Enable-SqlAlwaysOn**](/powershell/module/sqlserver/enable-sqlalwayson)|Habilita o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] em uma instância do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] que dá suporte ao recurso [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . Para obter informações sobre suporte para o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], veja [Pré-requisitos, restrições e recomendações para os grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).|Qualquer edição do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que dê suporte ao [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].|  
@@ -44,7 +44,7 @@ ms.locfileid: "68014635"
   
 ##  <a name="BnRcmdlets"></a> Backing Up and Restoring Databases and Transaction Logs  
   
-|Cmdlets|Descrição|Com suporte em|  
+|Cmdlets|DESCRIÇÃO|Com suporte em|  
 |-------------|-----------------|------------------|  
 |[**Backup-SqlDatabase**](/powershell/module/sqlserver/backup-sqldatabase)|Cria um backup de dados ou de log.|Qualquer banco de dados online (para o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], um banco de dados na instância do servidor que hospeda a réplica primária).|  
 |[**Restore-SqlDatabase**](/powershell/module/sqlserver/restore-sqldatabase)|Restaura um backup.|Qualquer instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (para o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], uma instância de servidor que hospeda uma réplica secundária)<br /><br />
@@ -56,7 +56,7 @@ ms.locfileid: "68014635"
   
 ##  <a name="DeployManageAGs"></a> Criando e gerenciando um grupo de disponibilidade  
   
-|Cmdlets|Descrição|Com suporte em|  
+|Cmdlets|DESCRIÇÃO|Com suporte em|  
 |-------------|-----------------|------------------|  
 |[**New-SqlAvailabilityGroup**](/powershell/module/sqlserver/new-sqlavailabilitygroup)|Cria um novo grupo de disponibilidade.|Instância de servidor para hospedar a réplica primária|  
 |[**Remove-SqlAvailabilityGroup**](/powershell/module/sqlserver/remove-sqlavailabilitygroup)|Exclui um grupo de disponibilidade.|Instância de servidor habilitada para HADR|  
@@ -65,7 +65,7 @@ ms.locfileid: "68014635"
   
 ##  <a name="AGlisteners"></a> Criando e gerenciando um ouvinte de grupo de disponibilidade  
   
-|Cmdlet|Descrição|Com suporte em|  
+|Cmdlet|DESCRIÇÃO|Com suporte em|  
 |------------|-----------------|------------------|  
 |[**New-SqlAvailabilityGroupListener**](/powershell/module/sqlserver/new-sqlavailabilitygrouplistener)|Cria um novo ouvinte de grupo de disponibilidade e conecta-o a um grupo de disponibilidade existente.|Instância de servidor que hospeda a réplica primária|  
 |[**Set-SqlAvailabilityGroupListener**](/powershell/module/sqlserver/set-sqlavailabilitygrouplistener)|Modifica a configuração de porta em um ouvinte de grupo de disponibilidade existente.|Instância de servidor que hospeda a réplica primária|  
@@ -73,7 +73,7 @@ ms.locfileid: "68014635"
   
 ##  <a name="DeployManageARs"></a> Creating and Managing an Availability Replica  
   
-|Cmdlets|Descrição|Com suporte em|  
+|Cmdlets|DESCRIÇÃO|Com suporte em|  
 |-------------|-----------------|------------------|  
 |[**New-SqlAvailabilityReplica**](/powershell/module/sqlserver/new-sqlavailabilityreplica)|Cria uma nova réplica de disponibilidade. Você pode usar o parâmetro **-AsTemplate** para criar um objeto de réplica de disponibilidade de memória para cada nova réplica de disponibilidade.|Instância de servidor que hospeda a réplica primária|  
 |[**Join-SqlAvailabilityGroup**](/powershell/module/sqlserver/join-sqlavailabilitygroup)|Une uma réplica secundária ao grupo de disponibilidade.|Instância de servidor que hospeda a réplica secundária|  
@@ -82,7 +82,7 @@ ms.locfileid: "68014635"
   
 ##  <a name="DeployManageDbs"></a> Adicionando e gerenciando um banco de dados de disponibilidade  
   
-|Cmdlets|Descrição|Com suporte em|  
+|Cmdlets|DESCRIÇÃO|Com suporte em|  
 |-------------|-----------------|------------------|  
 |[**Add-SqlAvailabilityDatabase**](/powershell/module/sqlserver/add-sqlavailabilitydatabase)|Na réplica primária, adiciona um banco de dados a um grupo de disponibilidade.<br /><br /> Em uma réplica secundária, une um banco de dados secundário a um grupo de disponibilidade.|Qualquer instância de servidor que hospeda uma réplica de disponibilidade (o comportamento difere para réplicas primárias e secundárias)|  
 |[**Remove-SqlAvailabilityDatabase**](/powershell/module/sqlserver/remove-sqlavailabilitydatabase)|Na réplica primária, remove o banco de dados do grupo de disponibilidade.<br /><br /> Em uma réplica secundária, remove o banco de dados secundário da réplica secundária local.|Qualquer instância de servidor que hospeda uma réplica de disponibilidade (o comportamento difere para réplicas primárias e secundárias)|  
@@ -95,7 +95,7 @@ ms.locfileid: "68014635"
 > [!IMPORTANT]  
 >  Você deve ter as permissões CONNECT, VIEW SERVER STATE e VIEW ANY DEFINITION para executar esses cmdlets.  
   
-|Cmdlet|Descrição|Com suporte em|  
+|Cmdlet|DESCRIÇÃO|Com suporte em|  
 |------------|-----------------|------------------|  
 |[**Test-SqlAvailabilityGroup**](/powershell/module/sqlserver/test-sqlavailabilitygroup)|Avalia a integridade de um grupo de disponibilidade avaliando as políticas do PBM (gerenciamento baseado em políticas) do SQL Server.|Qualquer instância de servidor que hospede uma réplica de disponibilidade.*|  
 |[**Test-SqlAvailabilityReplica**](/powershell/module/sqlserver/test-sqlavailabilityreplica)|Avalia a integridade de réplicas de disponibilidade avaliando as políticas do PBM (gerenciamento baseado em políticas) do SQL Server.|Qualquer instância de servidor que hospede uma réplica de disponibilidade.*|  
@@ -107,6 +107,6 @@ ms.locfileid: "68014635"
   
 ## <a name="see-also"></a>Consulte Também  
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Obter Ajuda do SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
+ [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
   
   

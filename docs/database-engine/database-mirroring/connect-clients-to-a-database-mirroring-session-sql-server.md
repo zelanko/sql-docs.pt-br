@@ -1,6 +1,7 @@
 ---
-title: Conectar clientes a uma sessão de espelhamento de banco de dados (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Conectar clientes a um espelho de banco de dados
+description: Configure os clientes para conectarem-se a um espelho de banco de dados usando o cliente nativo ou o provedor do .NET Framework para SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f9916aba4640deab8dcb8764934ddd3d917256e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b43cbcb051a1c6be2d26288a427d7a75e89a7f70
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67952006"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258877"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>Conectar clientes a uma sessão de espelhamento de banco de dados (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "67952006"
   
  A figura a seguir ilustra uma conexão de cliente com o parceiro inicial, **Partner_A**, para um banco de dados espelho denominado **Db_1**. Esta figura mostra um caso em que o nome do parceiro inicial fornecido pelo cliente identifica corretamente o servidor principal atual, **Partner_A**. A tentativa de conexão inicial tem sucesso e o provedor de acesso a dados armazena o nome do servidor espelho (atualmente **Partner_B**) como o nome do parceiro de failover no cache local. Finalmente, o cliente se conecta à cópia principal do banco de dados **Db_1** .  
   
- ![Conexão do cliente se o parceiro inicial é principal](../../database-engine/database-mirroring/media/dbm-initial-connection.gif "Conexão do cliente se o parceiro inicial é principal")  
+ ![Conexão de cliente se o parceiro inicial for o principal](../../database-engine/database-mirroring/media/dbm-initial-connection.gif "Conexão de cliente se o parceiro inicial for o principal")  
   
  A tentativa de conexão inicial pode falhar, por exemplo, por causa de um erro de rede ou uma instância de servidor inativa. Como o parceiro inicial está indisponível, para que o provedor de acesso de dados tente se conectar ao parceiro de failover, o cliente deve ter fornecido o nome do parceiro de failover na cadeia de conexão.  
   
@@ -91,7 +92,7 @@ Network=dbnmpntw;
   
  `Server=Partner_A;`  
   
- ou em  
+ ou  
   
  `Server=Partner_A\Instance_2;`  
   
@@ -174,7 +175,7 @@ Server=123.34.45.56,4724;
   
  Por exemplo, se usar o período de intervalo de logon padrão de 15 segundos, *LoginTimeout* *= 15*. Nesse caso, os tempos de nova tentativa alocados nos primeiros três turnos são os seguintes:  
   
-|Arredondamento|Cálculo de*RetryTime*|Tempo de nova tentativa por tentativa|  
+|Round|Cálculo de*RetryTime*|Tempo de nova tentativa por tentativa|  
 |-----------|-----------------------------|----------------------------|  
 |1|0 **+(** 0,08 **&#42;** 15 **)**|1,2 segundos|  
 |2|1,2 **+(** 0,08 **&#42;** 15 **)**|2,4 segundos|  
@@ -201,7 +202,7 @@ Server=123.34.45.56,4724;
   
  A figura seguinte ilustra como o atraso de nova tentativa afeta as tentativas de conexão durante um failover manual, no qual os parceiros trocam suas funções. O período de tempo limite de logon padrão é de 15 segundos.  
   
- ![Algoritmo de atraso de repetição](../../database-engine/database-mirroring/media/dbm-retry-delay-algorithm.gif "Retry-delay algorithm")  
+ ![Algoritmo de repetição-atraso](../../database-engine/database-mirroring/media/dbm-retry-delay-algorithm.gif "Algoritmo de repetição-atraso")  
   
 ##  <a name="Reconnecting"></a> Reconectando uma sessão de espelhamento de banco de dados  
  Se uma conexão estabelecida com uma sessão de espelhamento de banco de dados falhar por qualquer motivo, por exemplo, devido a um failover de espelhamento de banco de dados, e o aplicativo tentar se reconectar ao servidor inicial, o provedor de acesso de dados poderá tentar se reconectar usando o nome de parceiro de failover armazenado no cache do cliente. Porém, a reconexão não é automática. O aplicativo deve se dar conta do erro. Então, o aplicativo precisa fechar a conexão com falha e abrir uma conexão nova que use os mesmos atributos de cadeia de caracteres de conexão. Neste momento, o provedor de acesso de dados redireciona a conexão ao parceiro de failover. Se a instância de servidor identificada por este nome for atualmente o servidor principal, a tentativa de conexão normalmente terá sucesso. Caso estiver obscuro se uma transação foi confirmada ou revertida, o aplicativo deve inspecionar o estado da transação, da mesma maneira como ao reconectar a uma instância de servidor autônoma.  

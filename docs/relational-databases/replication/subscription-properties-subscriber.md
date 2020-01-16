@@ -1,6 +1,7 @@
 ---
-title: Caixa de diálogo Propriedades da Assinatura de Replicação do SQL Server | Microsoft Docs
-ms.custom: ''
+title: Caixa de diálogo Propriedades da Assinatura
+description: Descreve a caixa de diálogo 'Propriedades da Assinatura' do SSMS (SQL Server Management Studio).
+ms.custom: seo-lt-2019
 ms.date: 11/20/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,12 +15,12 @@ ms.assetid: db2be511-c76e-4f21-8be4-6a8c60a50d30
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7793c64a6c7d5dc404c24f502a45067d2e95fcca
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: fab938acf112a047ed6aeb089093f815a4861a0c
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769459"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321513"
 ---
 # <a name="sql-server-replication-subscription-properties-dialog-box"></a>Caixa de diálogo Propriedades de Assinatura de Replicação do SQL Server 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -121,7 +122,7 @@ A caixa de diálogo **Propriedades da Assinatura** no Assinante permite exibir e
  Se você selecionou um tipo de assinatura de servidor no Assistente para Nova Assinatura, o Assinante receberá uma prioridade que será usada durante resolução de conflito  
   
  **Resolver conflitos interativamente**  
- Determina se o Resolver Interativo deve usar a interface do usuário para resolver conflitos durante a sincronização de mesclagem. Isso requer um valor de **Habilitar** para **Usar Gerenciador de Sincronização do Windows**. Para obter mais informações, consulte [Interactive Conflict Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md).  
+ Determina se o Resolver Interativo deve usar a interface do usuário para resolver conflitos durante a sincronização de mesclagem. Isso requer um valor de **Habilitar** para **Usar Gerenciador de Sincronização do Windows**. Para obter mais informações, consulte [Resolução de conflito interativo](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md).  
   
  **Sincronização da Web**  
  **Usar Sincronização da Web** determina se deve ser feita a conexão com um IIS (Serviços de Informações da Internet) da [!INCLUDE[msCoName](../../includes/msconame-md.md)] para sincronizar a assinatura. Essa opção só estará disponível se a publicação estiver habilitada para sincronização da Web. Para obter mais informações, consulte [Web Synchronization for Merge Replication](../../relational-databases/replication/web-synchronization-for-merge-replication.md).  

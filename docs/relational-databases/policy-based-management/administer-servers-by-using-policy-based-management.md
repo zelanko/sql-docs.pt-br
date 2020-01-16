@@ -1,6 +1,7 @@
 ---
-title: Administrar servidores com Gerenciamento Baseado em Políticas | Microsoft Docs
-ms.custom: ''
+title: Administrar servidores com o gerenciamento baseado em políticas
+description: Saiba como usar o gerenciamento baseado em políticas para gerenciar uma ou mais instâncias do SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 08/12/2016
 ms.prod: sql
 ms.prod_service: database-engine
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: ef2a7b3b-614b-405d-a04a-2464a019df40
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c62c2372b0a61d0a09a0e15998f2340b995fc919
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6e0abb97eddddc65103bfaad7c2e1996423a4919
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68109931"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558661"
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>Administrar servidores com Gerenciamento Baseado em Políticas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -104,13 +105,13 @@ Por exemplo, como o administrador de banco de dados, é recomendável garantir q
 ## <a name="links-to-specific-tasks"></a>Links para tarefas específicas 
 
  - [Armazenar as políticas de Gerenciamento Baseado em Políticas.](policy-based-management-storage.md)|  
- - [Configurar alertas para notificar os administradores de políticas sobre falhas](../../relational-databases/policy-based-management/configure-alerts-to-notify-policy-administrators-of-policy-failures.md)  
- - [Criar uma nova condição de Gerenciamento baseado em Políticas](../../relational-databases/policy-based-management/create-a-new-policy-based-management-condition.md) 
- - [Excluir uma condição de Gerenciamento baseado em Políticas](../../relational-databases/policy-based-management/delete-a-policy-based-management-condition.md)
+ - [Configurar alertas para notificar os administradores sobre falhas de políticas](../../relational-databases/policy-based-management/configure-alerts-to-notify-policy-administrators-of-policy-failures.md)  
+ - [Criar uma nova condição de gerenciamento baseado em políticas](../../relational-databases/policy-based-management/create-a-new-policy-based-management-condition.md) 
+ - [Excluir uma condição de gerenciamento baseado em políticas](../../relational-databases/policy-based-management/delete-a-policy-based-management-condition.md)
  - [Exibir ou modificar as propriedades de uma condição de gerenciamento baseado em políticas](../../relational-databases/policy-based-management/view-or-modify-the-properties-of-a-policy-based-management-condition.md)|  
- - [Exportar uma política do Gerenciamento Baseado em Políticas](../../relational-databases/policy-based-management/export-a-policy-based-management-policy.md)
+ - [Exportar uma política do gerenciamento baseado em políticas](../../relational-databases/policy-based-management/export-a-policy-based-management-policy.md)
  - [Importar política de Gerenciamento Baseado em Políticas](../../relational-databases/policy-based-management/import-a-policy-based-management-policy.md)|  
- - [Avaliar uma política do Gerenciamento Baseado em Políticas de um objeto](../../relational-databases/policy-based-management/evaluate-a-policy-based-management-policy-from-an-object.md)
+ - [Avaliar uma política do gerenciamento baseado em políticas de um objeto](../../relational-databases/policy-based-management/evaluate-a-policy-based-management-policy-from-an-object.md)
  - [Trabalhar com facetas do Gerenciamento Baseado em Políticas](../../relational-databases/policy-based-management/working-with-policy-based-management-facets.md)|  
  - [Monitorar e impor práticas recomendadas usando o Gerenciamento Baseado em Políticas](../../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)
 

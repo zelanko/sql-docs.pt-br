@@ -1,6 +1,7 @@
 ---
-title: Solução de problemas de configuração de espelhamento de banco de dados (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Problemas comuns ao configurar o espelhamento de banco de dados
+description: Fornece informações para ajudá-lo a solucionar problemas ao configurar uma sessão de espelhamento de banco de dados.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 87d3801b-dc52-419e-9316-8b1f1490946c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f469d5afc1dc2f900deaddced2a9931a7bcdf7e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 17eccc8ce90743e49ced2db863bc85e9d297a1a5
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68049759"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822514"
 ---
 # <a name="troubleshoot-database-mirroring-configuration-sql-server"></a>Solução de problemas de configuração de espelhamento de banco de dados (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +53,7 @@ ms.locfileid: "68049759"
   
 2.  Se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estiver executando como um serviço que está usando a conta Sistema Local, você deve usar certificados para autenticação. Para obter mais informações, consulte [Usar certificados para um ponto de extremidade de espelhamento de banco de dados &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
   
-##  <a name="Endpoints"></a> Pontos de extremidade  
+##  <a name="Endpoints"></a> Endpoints  
  Os pontos de extremidade devem ser configurados corretamente.  
   
 1.  Verifique se cada instância do servidor (o servidor principal, servidor espelho e testemunha, se houver) tem um ponto de extremidade de espelhamento de banco de dados. Para obter mais informações, veja [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md) e, dependendo do formato de autenticação, [Criar um ponto de extremidade de espelhamento de banco de dados para a Autenticação do Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md) ou [Usar certificados para um ponto de extremidade de espelhamento de banco de dados &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
@@ -161,13 +162,13 @@ ms.locfileid: "68049759"
   
 -   Uma transação que está atualizando vários bancos de dados na mesma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   Transações que usam MS DTC (Coordenador de Transações Distribuídas da [!INCLUDE[msCoName](../../includes/msconame-md.md)]).  
+-   Transações que usam MS DTC (Coordenador de Transações Distribuídas da [!INCLUDE[msCoName](../../includes/msconame-md.md)] ).  
   
  Para obter mais informações, consulte [Transações entre bancos de dados e transações distribuídas para espelhamento de banco de dados e grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Configurando o espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)   
- [Segurança do transporte para espelhamento de banco de dados e Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)  
+ [Segurança de transporte para espelhamento de banco de dados e grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)  
   
   
 

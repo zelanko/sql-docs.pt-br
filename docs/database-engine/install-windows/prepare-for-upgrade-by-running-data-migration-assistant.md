@@ -1,7 +1,7 @@
 ---
-title: Preparar o upgrade executando o Assistente de Migração de Dados | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 'Preparar a atualização: Assistente de Migração de Dados'
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -10,12 +10,12 @@ ms.assetid: eabcc635-7adf-4e45-b6f1-158d6e024908
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 85846c2e4a9989533d89a4e448d6d31831555ca6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 982ca86d373cde6b37faa8a88ae93cd3cb2d6702
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67990855"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258824"
 ---
 # <a name="prepare-for-upgrade-by-running-data-migration-assistant"></a>Preparar o upgrade executando o Assistente de Migração de Dados
 
@@ -23,7 +23,7 @@ ms.locfileid: "67990855"
   
 Prepare-se para atualizar seus bancos de dados OLTP e adotar novos recursos no [!INCLUDE[ssnover](../../includes/ssnoversion-md.md)] baixando e executando o Assistente de Migração de Dados da Microsoft.  
   
-## <a name="download-and-install-data-migration-assistant"></a>Baixe e instale o Assistente de migração de dados  
+## <a name="download-and-install-data-migration-assistant"></a>Baixar e instalar o Assistente de Migração de Dados  
 Baixe e instale o Assistente de migração de dados [aqui](https://go.microsoft.com/fwlink/?LinkID=613421). Essa ferramenta não está incluída na mídia de instalação do [!INCLUDE[ssnover](../../includes/ssnoversion-md.md)] .  
 
   

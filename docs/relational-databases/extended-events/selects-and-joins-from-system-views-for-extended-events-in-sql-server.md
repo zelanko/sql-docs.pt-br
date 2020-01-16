@@ -1,6 +1,5 @@
 ---
-title: SELECTs e JOINs de exibições do sistema de Eventos Estendidos no SQL Server | Microsoft Docs
-ms.custom: ''
+title: SELECTs e JOINs de exibições do sistema dos Eventos Estendidos
 ms.date: 08/02/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -10,20 +9,21 @@ ms.topic: tutorial
 ms.assetid: 04521d7f-588c-4259-abc2-1a2857eb05ec
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4194c869574812d9035a9b51ed44b6aa62efdbcc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d3bcb7e272c1a5120b65018aab781546ba8d0f2b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67903452"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242897"
 ---
 # <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>Seleções e junções em exibições do sistema dos Eventos Estendidos no SQL Server
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
-Este artigo explica os dois conjuntos de exibições do sistema relacionados a eventos estendidos no Microsoft SQL Server e no serviço de nuvem do Banco de Dados SQL do Azure. O artigo ilustra:
+Este artigo explica os dois conjuntos de exibições do sistema relacionados a eventos estendidos no SQL Server e no Banco de Dados SQL do Azure. O artigo ilustra:
 
 - Como unir com JOIN várias exibições do sistema.
 - Como selecionar com SELECT tipos específicos de informações de exibições do sistema.
@@ -34,7 +34,7 @@ A maioria dos exemplos é gravada para o SQL Server. Mas, com pequenas edições
 
 
 
-## <a name="a-foundational-information"></a>A. Informações básicas
+## <a name="a-foundational-information"></a>a. Informações básicas
 
 
 Há dois conjuntos de exibições do sistema para eventos estendidos:
@@ -644,7 +644,7 @@ sqlserver   lock_deadlock   transaction_id
 
 <a name="section_C_5_map_values_fields"></a>
 
-### <a name="c5-sysdmxemapvalues-and-event-fields"></a>C.5 *sys.dm_xe_map_values* e campos de evento
+### <a name="c5-sysdm_xe_map_values-and-event-fields"></a>C.5 *sys.dm_xe_map_values* e campos de evento
 
 
 A instrução SELECT a seguir inclui um JOIN para a exibição complicada chamada *sys.dm_xe_map_values*.
@@ -786,7 +786,7 @@ package0   event_file   metadatafile         unicode_string_ptr   Not_mandatory 
 
 <a name="section_C_7_dmv_select_target_data_column"></a>
 
-### <a name="c7-dmv-select-casting-targetdata-column-to-xml"></a>C.7 SELECT de DMV convertendo a coluna target_data para XML
+### <a name="c7-dmv-select-casting-target_data-column-to-xml"></a>C.7 SELECT de DMV convertendo a coluna target_data para XML
 
 
 Esse SELECT de DMV retorna linhas de dados do destino de sua sessão de eventos ativa. Os dados são convertidos em XML, o que torna sua célula retornada clicável para a exibição fácil no SSMS.
@@ -854,7 +854,7 @@ Quando a célula XML-CAST é clicada, a seguinte exibição formatada aparece.
 
 <a name="section_C_8_select_function_disk"></a>
 
-### <a name="c8-select-from-a-function-to-retrieve-eventfile-data-from-disk-drive"></a>C.8 SELECT FROM de uma função para recuperar dados de event_file da unidade de disco
+### <a name="c8-select-from-a-function-to-retrieve-event_file-data-from-disk-drive"></a>C.8 SELECT FROM de uma função para recuperar dados de event_file da unidade de disco
 
 
 Suponha que sua sessão de eventos coletou alguns dados e foi parada posteriormente. Se sua sessão tiver sido definida para usar o destino event_file, você ainda poderá recuperar os dados chamando a função *sys.fn_xe_target_read_file*.

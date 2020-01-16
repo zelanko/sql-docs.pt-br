@@ -1,6 +1,7 @@
 ---
-title: Instância do servidor espelho (Assistente para Configurar Segurança de Espelhamento de Banco de Dados) | Microsoft Docs
-ms.custom: ''
+title: 'Assistente para configurar a segurança: Instância do servidor espelho'
+description: Descreve a página 'Espelhar Instância do Servidor' do 'Assistente para Configurar Segurança de Espelhamento de Banco de Dados' no SQL Server Management Studio.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -12,14 +13,14 @@ f1_keywords:
 ms.assetid: 53223432-615e-440f-904d-925d33ec2144
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0d8a311d8792468909fe00f02a051e33326f2483
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d52fa3912bffd084a8f95e79963abcd99158cdd4
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045631"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822390"
 ---
-# <a name="mirror-server-instance-configure-database-mirroring-security-wizard"></a>Instância de servidor espelho (Assistente para Configurar Segurança de Espelhamento de Banco de Dados)
+# <a name="configure-database-mirrroing-security-wizard-mirror-server-instance"></a>Assistente para Configurar Segurança de Espelhamento de Banco de Dados: Instância do servidor espelho
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Use esta página para especificar informações sobre a instância de servidor com o banco de dados espelho.  
   
@@ -46,12 +47,12 @@ ms.locfileid: "68045631"
 > [!NOTE]  
 >  Ao conectar-se à instância de servidor, o Assistente para Configurar Segurança de Espelhamento de Banco de Dados usa as credenciais fornecidas na caixa de diálogo **Conectar ao Servidor** . Essas credenciais são diferentes de uma sessão de espelhamento, que usa as credenciais da conta de inicialização onde a instância de servidor está sendo executada como um serviço.  
   
- **Porta do Ouvinte**  
+ **Porta do ouvinte**  
  O comportamento dessa opção depende de o ponto de extremidade do espelhamento existir nessa instância do servidor, como segue:  
   
 -   Se uma porta do ouvinte não existir para a instância de servidor, o número da porta 5022 será exibido na caixa de texto **Porta** . Você pode usar qualquer número de porta disponível, como 7022.  
   
--   Quando o ponto de extremidade do espelhamento já existir, o número da porta daquele ponto de extremidade é exibido. Se for necessário alterar a porta, use um comando ALTER ENDPOINT. Para obter mais informações, veja [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md).  
+-   Quando o ponto de extremidade do espelhamento já existir, o número da porta daquele ponto de extremidade é exibido. Se for necessário alterar a porta, use um comando ALTER ENDPOINT. Para obter mais informações, consulte [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md).  
   
     > [!NOTE]  
     >  É necessário um número de porta.  

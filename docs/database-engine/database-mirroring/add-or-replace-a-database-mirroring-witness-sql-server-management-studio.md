@@ -1,6 +1,7 @@
 ---
-title: Adicionar ou substituir uma testemunha de espelhamento de banco de dados (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Adicionar ou substituir uma testemunha de espelho (SSMS)
+description: Saiba como adicionar ou substituir uma testemunha de espelhamento de banco de dados usando o SSMS (SQL Server Management Studio).
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4b5ecffd-f025-4ab7-b69d-8958c6477127
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 74bbb2b7b066d106aa82f36669de6b4704537e72
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 61e7be7b4e1f61f243d896d5073ae469bebe6940
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67947968"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75247502"
 ---
 # <a name="add-or-replace-a-database-mirroring-witness-sql-server-management-studio"></a>Adicionar ou substituir uma testemunha de espelhamento de banco de dados (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,15 +42,15 @@ ms.locfileid: "67947968"
   
 6.  Na caixa de diálogo **Incluir Servidor Testemunha** , clique em **Sim**e, em seguida, clique em **Avançar**.  
   
-7.  Na caixa de diálogo **Selecionar Servidores a Serem Configurados** , a caixa de seleção **Instância do servidor testemunha** é marcada automaticamente. Clique em **Avançar**.  
+7.  Na caixa de diálogo **Selecionar Servidores a Serem Configurados** , a caixa de seleção **Instância do servidor testemunha** é marcada automaticamente. Clique em **Próximo**.  
   
-8.  Na caixa de diálogo **Instância do Servidor Principal** mantenha a porta e o ponto de extremidade existentes. Clique em **Avançar**.  
+8.  Na caixa de diálogo **Instância do Servidor Principal** mantenha a porta e o ponto de extremidade existentes. Clique em **Próximo**.  
   
 9. Na caixa de diálogo **Instância do Servidor Testemunha** , clique em **Conectar**.  
   
 10. Na caixa de diálogo **Conectar ao Servidor** , especifique a instância de servidor testemunha no campo **Nome do servidor** e use Autenticação do Windows (o padrão). Clique em **Conectar**.  
   
-11. Quando uma conexão é estabelecida, a porta do ouvinte e o ponto de extremidade do espelhamento de banco de dados da instância do servidor testemunha são exibidos na caixa de diálogo **Instância do Servidor Testemunha** . Clique em **Avançar**.  
+11. Quando uma conexão é estabelecida, a porta do ouvinte e o ponto de extremidade do espelhamento de banco de dados da instância do servidor testemunha são exibidos na caixa de diálogo **Instância do Servidor Testemunha** . Clique em **Próximo**.  
   
 12. A caixa de diálogo **Contas de Serviço** contém campos para as contas de serviço de domínio das instâncias de servidor principal, espelho e testemunha.  
   
@@ -61,7 +62,7 @@ ms.locfileid: "67947968"
   
          O nome de domínio deve estar em maiúscula.  
   
-     Clique em **Avançar**.  
+     Clique em **Próximo**.  
   
 13. Opcionalmente, na tela de resumo **Concluir o Assistente** , verifique a configuração de testemunha e clique em **Concluir**.  
   

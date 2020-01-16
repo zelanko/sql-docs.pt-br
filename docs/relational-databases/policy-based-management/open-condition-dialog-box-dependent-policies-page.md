@@ -1,6 +1,7 @@
 ---
-title: Caixa de diálogo Abrir Condição, página Políticas Dependentes | Microsoft Docs
-ms.custom: ''
+title: Página 'Políticas Dependentes' da caixa de diálogo 'Abrir Condição'
+description: Descreve a página 'Políticas Dependentes' da caixa de diálogo 'Abrir Condição' para o gerenciamento baseado em políticas do SSMS (SQL Server Management Studio).
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 9a715f4b-8f37-4654-85a5-bfb89c09708b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f1f89570284ecee36ea998a82f7b9dbb966d2683
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3d732c555ad470ff01d469f44d27a264abb2f891
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68087037"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557795"
 ---
 # <a name="open-condition-dialog-box-dependent-policies-page"></a>Caixa de diálogo Abrir Condição, página Políticas Dependentes
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

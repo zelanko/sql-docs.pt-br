@@ -14,18 +14,18 @@ ms.assetid: 64514aed-b846-407b-992e-cf813f9a1a91
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 89b3ded4415983548402fa5ab955265b40a94f72
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: f9cf01e13bc1fe278af9d68897a71c99003b37fc
+ms.sourcegitcommit: 381595e990f2294dbf324ef31071e2dd2318b8dd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909881"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74200492"
 ---
 # <a name="specify-default-values-for-columns"></a>Especificar valores padrão para colunas
 
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
-Você pode usar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para especificar um valor padrão que será inserido na coluna da tabela. Você pode usar o Pesquisador de Objetos da interface do usuário ou o controle geral para enviar [!INCLUDE[tsql](../../includes/tsql-md.md)].
+Você pode usar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para especificar um valor padrão que será inserido na coluna da tabela. Você pode definir um padrão usando o Pesquisador de Objetos da interface do usuário ou enviando [!INCLUDE[tsql](../../includes/tsql-md.md)].
 
 Se você não atribuir um valor padrão para a coluna e o usuário deixar a coluna em branco, então:
 

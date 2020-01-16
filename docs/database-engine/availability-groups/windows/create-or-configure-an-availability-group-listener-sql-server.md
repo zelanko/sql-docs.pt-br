@@ -1,7 +1,7 @@
 ---
-title: Configurar um ouvinte para um grupo de disponibilidade
+title: Configurar o ouvinte do grupo de disponibilidade
 description: 'Descreve as etapas a serem seguidas ao configurar um ouvinte para um grupo de disponibilidade Always On usando o PowerShell ou o SQL Server Management Studio. '
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -16,12 +16,12 @@ ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: f97f9814192077dfbe8d361c34b3cf7424f19920
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 918619afd0b07c6d7b8e5d3ccef526da5f4d8fad
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264687"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822124"
 ---
 # <a name="configure-a-listener-for-an-always-on-availability-group"></a>Configurar um ouvinte para um grupo de disponibilidade Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -90,7 +90,7 @@ ms.locfileid: "68264687"
   
 1.  No Pesquisador de Objetos, conecte-se à instância do servidor que hospeda a réplica primária do grupo de disponibilidade e clique no nome do servidor para expandir a árvore de servidores.  
   
-2.  Expanda os nós **Alta Disponibilidade AlwaysOn** e **Grupos de Disponibilidade** .  
+2.  Expanda os nós **Alta Disponibilidade AlwaysOn** e **Grupos de Disponibilidade**.  
   
 3.  Clique no grupo de disponibilidade cujo ouvinte você deseja configurar e escolha uma das alternativas a seguir:  
   
@@ -202,10 +202,10 @@ ms.locfileid: "68264687"
   
 -   [Provedor do SQL Server PowerShell](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-## <a name="troubleshooting"></a>Solução de problemas  
+## <a name="troubleshooting"></a>solução de problemas  
   
 ###  <a name="ADQuotas"></a> Falha ao criar um ouvinte de grupo de disponibilidade devido a cotas do Active Directory  
- Pode haver falha na criação de um novo ouvinte de grupo de disponibilidade porque você atingiu uma cota do Active Directory para a conta da máquina do nó de cluster participante.  Para obter mais informações, consulte os artigos a seguir.  
+ Pode haver falha na criação de um novo ouvinte de grupo de disponibilidade porque você atingiu uma cota do Active Directory para a conta da máquina do nó de cluster participante.  Para obter mais informações, consulte os seguintes artigos:  
   
 -   [Como solucionar problemas da conta do serviço de cluster quando ela modifica objetos de computador](https://support.microsoft.com/kb/307532)  
   

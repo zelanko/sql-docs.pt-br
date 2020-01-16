@@ -1,6 +1,7 @@
 ---
-title: Adicionar e remover publicadores do Replication Monitor | Microsoft Docs
-ms.custom: ''
+title: Adicionar e remover Editores do Replication Monitor (SSMS)
+description: Saiba como adicionar e remover Editores do Replication Monitor no SSMS (SQL Server Management Studio).
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ ms.assetid: fa36c4b4-bfa5-494e-92e3-07a02d7332c3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 28d0a979e6cf4d76dd338f139f5c48887aed988e
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: d46f710bfae73527f414017108954bf4e9129f8f
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770694"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75320753"
 ---
 # <a name="add-and-remove-publishers-from-replication-monitor"></a>Adicionar e remover Publicadores do Replication Monitor
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -48,7 +49,7 @@ ms.locfileid: "68770694"
   
 2.  Na caixa de diálogo **Adicionar Publicador** , clique em **Adicionar**e, então, clique em **Adicionar um Editor Oracle**.  
   
-3.  Na caixa de diálogo **Conectar ao Servidor** , digite o nome do Distribuidor [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] associado ao Editor Oracle, e, então, selecione o tipo de autenticação. Se você selecionar **Autenticação do SQL Server**, digite um logon e senha. As credenciais que você especificar serão salvas pelo Replication Monitor para usar ao conectar-se a esse servidor no futuro. A conta do Windows ou o logon do SQL Server especificado deve ser um membro da função de servidor fixa **sysadmin** ou membro da função de banco de dados fixa **replmonitor** no banco de dados de distribuição.  
+3.  Na caixa de diálogo **Conectar ao Servidor**, digite o nome do Distribuidor [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] associado ao Editor Oracle e então selecione o tipo de autenticação. Se você selecionar **Autenticação do SQL Server**, digite um logon e senha. As credenciais que você especificar serão salvas pelo Replication Monitor para usar ao conectar-se a esse servidor no futuro. A conta do Windows ou o logon do SQL Server especificado deve ser um membro da função de servidor fixa **sysadmin** ou membro da função de banco de dados fixa **replmonitor** no banco de dados de distribuição.  
   
 4.  Clique em **Conectar**.  
   

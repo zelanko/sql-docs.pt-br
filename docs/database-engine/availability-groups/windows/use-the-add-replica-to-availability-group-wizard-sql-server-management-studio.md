@@ -1,7 +1,7 @@
 ---
-title: Adicionar uma réplica a um grupo de disponibilidade usando o assistente no SSMS – SQL Server
+title: Adicionar réplica a um grupo de disponibilidade (SSMS)
 ms.description: Add a replica to an Always On availability group using the wizard found in SQL Server Management Studio.
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 60d962b6-2af4-4394-9190-61939a102bc0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a89678fd2964e528ed09a38184fc295e0c955d98
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: afca5e00f95056fc201f37260088c90004ff3d1f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013558"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244977"
 ---
 # <a name="add-a-replica-to-your-always-on-availability-group-using-the-availability-group-wizard-in-sql-server-management"></a>Adicionar uma réplica ao grupo de disponibilidade Always On usando o Assistente de Grupo de Disponibilidade no SQL Server Management
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68013558"
   
 -   Você deve estar conectado à instância do servidor que hospeda a réplica primária atual.  
   
--   Antes de adicionar uma réplica secundária, verifique se a instância host do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] está no mesmo WSFC (Cluster de Failover do Windows Server) das réplicas existentes, mas reside em um nó de cluster diferente. Verifique também se essa instância de servidor atende a todos os outros pré-requisitos do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . Para obter mais informações, consulte [Pré-requisitos, restrições e recomendações para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
+-   Antes de adicionar uma réplica secundária, verifique se a instância host do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] está no mesmo WSFC (Cluster de Failover do Windows Server) das réplicas existentes, mas reside em um nó de cluster diferente. Verifique também se essa instância de servidor atende a todos os outros pré-requisitos do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . Para obter mais informações, veja [Pré-requisitos, restrições e recomendações para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
 -   Se uma instância de servidor selecionada para hospedar uma réplica de disponibilidade estiver sendo executada em uma conta de usuário de domínio e ainda não tiver um ponto de extremidade de espelhamento de banco de dados, o assistente poderá criar o ponto de extremidade e conceder a permissão CONNECT à conta de serviço da instância de servidor. No entanto, se o serviço [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] estiver sendo executado como uma conta interna, como Sistema Local, Serviço Local ou Serviço de Rede, ou como uma conta que não pertença a um domínio, você deverá usar certificados para autenticação de ponto de extremidade, e o assistente não poderá criar um ponto de extremidade de espelhamento de banco de dados na instância de servidor. Nesse caso, é recomendável criar pontos de extremidade de espelhamento de banco de dados manualmente antes de iniciar o Assistente para Adicionar Réplica ao Grupo de Disponibilidade.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "68013558"
   
 5.  Na página **Especificar Réplicas** , especifique e configure uma ou mais novas réplicas secundárias para o grupo de disponibilidade. Essa página contém três guias. A tabela a seguir apresenta essas guias. Para obter mais informações, confira [Página Especificar Réplicas &#40;Assistente de Novo Grupo de Disponibilidade: Assistente para Adicionar Réplica&#41;](../../../database-engine/availability-groups/windows/specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md).  
   
-    |Tab|Descrição breve|  
+    |Tab|Breve descrição|  
     |---------|-----------------------|  
     |**Réplicas**|Use esta guia para especificar cada instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospedará uma nova réplica secundária.|  
     |**Pontos de extremidade**|Use esta guia para verificar o ponto de extremidade de espelhamento de banco de dados existente, se houver, para cada nova réplica secundária. Se esse ponto de extremidade estiver ausente em uma instância de servidor cujas contas de serviço usam a Autenticação do Windows, o assistente tentará criar o ponto de extremidade automaticamente.<br /><br /> <br /><br /> Observação: Se alguma instância de servidor estiver sendo executada em uma conta de usuário que não pertence a um domínio, você precisará fazer uma alteração manual na instância de servidor para que possa continuar as etapas do assistente. Para obter mais informações, consulte [Pré-requisitos](#Prerequisites)anteriormente neste tópico.|  
@@ -84,7 +84,7 @@ ms.locfileid: "68013558"
   
 7.  Na página **Selecionar Sincronização de Dados Inicial** , escolha como você deseja que seus novos bancos de dados secundários sejam criados e unidos ao grupo de disponibilidade. Escolha uma das seguintes opções:  
   
-    -   **Full (cheio)**  
+    -   **Full**  
   
          Selecione esta opção se seu ambiente atender aos requisitos para iniciar automaticamente a sincronização de dados inicial (para obter mais informações, veja [Pré-requisitos, restrições e recomendações](#Prerequisites), anteriormente neste tópico).  
   

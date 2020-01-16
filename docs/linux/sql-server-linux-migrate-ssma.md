@@ -1,6 +1,7 @@
 ---
-title: Automatizar migrações de banco de dados para SQL Server em Linux
-description: ''
+title: 'SSMA: Automatizar a migração para o SQL Server em Linux'
+description: Automatizar as migrações de banco de dados para o SQL Server em Linux com o SSMA (Assistente de Migração do SQL Server) para Microsoft Access, DB2, MySQL, Oracle e Sybase.
+ms.custom: seo-lt-2019
 author: VanMSFT
 ms.author: vanto
 ms.date: 01/30/2018
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 251bc3af-ebce-4d97-adec-afc0e7fab6cc
-ms.openlocfilehash: 6120229f939fce8686e6414b5fa65141088396c3
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 86e56d998959b4cc425626de249d66597262b50a
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68129336"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558382"
 ---
-# <a name="automate-database-migration-to-linux-with-the-sql-server-migration-assistant"></a>Automatizar a migração de banco de dados para Linux com o Assistente de Migração do SQL Server
+# <a name="automate-database-migration-to-linux-with-the-sql-server-migration-assistant-ssma"></a>Automatizar a migração de banco de dados para o Linux com o SSMA (Assistente de Migração do SQL Server)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 

@@ -1,5 +1,5 @@
 ---
-title: Restaurar arquivos e grupos de arquivos sobre arquivos existentes (SQL Server) | Microsoft Docs
+title: Restaurar arquivos (e grupos de arquivos) em existentes
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 517e07eb-9685-4b06-90af-b1cc496700b7
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9c11cd924d048561cfc2bd75e95b6d9459459a26
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a237383f2bc36aa3e3dd1b74174e5fbdd455920a
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041775"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75241869"
 ---
 # <a name="restore-files-and-filegroups-over-existing-files-sql-server"></a>Restaurar arquivos e grupos de arquivos sobre arquivos existentes (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "68041775"
   
 -   RESTORE não é permitido em uma transação explícita ou implícita.  
   
--   No modelo de recuperação completa ou bulk-logged, antes de poder restaurar arquivos, você deve fazer backup do log de transações ativas (conhecido como a parte final do log). Para obter mais informações, veja [Back Up a Transaction Log &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md).  
+-   No modelo de recuperação completa ou bulk-logged, antes de poder restaurar arquivos, você deve fazer backup do log de transações ativas (conhecido como a parte final do log). Para obter mais informações, veja [Fazer backup de um log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)).  
   
 -   Para restaurar um banco de dados criptografado, é necessário ter acesso ao certificado ou à chave assimétrica usada para criptografar o banco de dados. Sem o certificado ou a chave assimétrica, o banco de dados não pode ser restaurado. Como resultado, o certificado usado para criptografar a chave de criptografia do banco de dados deverá ser retido enquanto o backup for necessário. Para obter mais informações, consulte [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  
   
@@ -99,7 +99,7 @@ ms.locfileid: "68041775"
     |**Data de Início**|A data e hora de início da operação de backup, apresentadas na configuração regional do cliente.|  
     |**Data de Conclusão**|A data e hora da conclusão da operação de backup, apresentadas na configuração regional do cliente.|  
     |**Tamanho**|O tamanho do conjunto de backup em bytes.|  
-    |**Nome do Usuário**|O nome do usuário que realizou a operação de backup.|  
+    |**Nome de usuário**|O nome do usuário que realizou a operação de backup.|  
   
 6.  No painel **Selecionar uma página** , clique na página **Opções** .  
   

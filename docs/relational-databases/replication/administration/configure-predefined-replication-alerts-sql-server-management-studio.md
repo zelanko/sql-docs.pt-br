@@ -1,6 +1,7 @@
 ---
-title: Configurar alertas de replicação predefinidos (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Configurar alertas de replicação predefinidos (SSMS)
+description: Saiba como configurar alertas de replicação predefinidos usando o SSMS (SQL Server Management Studio).
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ ms.assetid: c0414147-7ffe-4f9a-908c-71c1b5201584
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: d5ff652d5817242ad5e77ed42b5839d97389056c
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 9bf49c5892dd22b417df7aeec50f20c0f81b410b
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72906818"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322063"
 ---
 # <a name="configure-predefined-replication-alerts-sql-server-management-studio"></a>Configurar alertas de replicação predefinidos (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -83,7 +84,7 @@ ms.locfileid: "72906818"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  Clique em **Fechar**.  
+5.  Clique em **fechar**  
   
 ## <a name="see-also"></a>Consulte Também  
  [Usar Alertas para eventos do Agente de Replicação](../../../relational-databases/replication/agents/use-alerts-for-replication-agent-events.md)  

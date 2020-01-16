@@ -1,6 +1,6 @@
 ---
-title: Suporte de alta disponibilidade para bancos de dados OLTP in-memory | Microsoft Docs
-ms.custom: ''
+title: Alta disponibilidade – bancos de dados OLTP in-memory
+ms.custom: seo-dt-2019
 ms.date: 08/31/2016
 ms.prod: sql
 ms.prod_service: database-engine
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 2113a916-3b1e-496c-8650-7f495e492510
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 955cef8cf41afffeceb2a342cb4f11e7c2c69557
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dd467c8f6d942f53dade5ec6bb7d46ae9f39bdd9
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092204"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412673"
 ---
 # <a name="high-availability-support-for-in-memory-oltp-databases"></a>Suporte de alta disponibilidade para bancos de dados OLTP na memória
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

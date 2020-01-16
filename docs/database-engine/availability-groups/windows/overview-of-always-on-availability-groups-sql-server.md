@@ -1,7 +1,7 @@
 ---
-title: Visão geral de Grupos de Disponibilidade AlwaysOn
+title: O que é um grupo de disponibilidade Always On?
 description: Uma introdução aos conceitos centrais para configurar e gerenciar grupos de disponibilidade Always On.
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 702b0423e54258f8afe49f5c7a39734d5570f8df
-ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
+ms.openlocfilehash: 994d7f21df09f49329e7547c4330aa95b5745873
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2019
-ms.locfileid: "71974385"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75236296"
 ---
 # <a name="overview-of-always-on-availability-groups-sql-server"></a>Visão geral de Grupos de Disponibilidade AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "71974385"
   
  A ilustração a seguir mostra um grupo de disponibilidade que contém uma réplica primária e quatro réplicas secundárias. Até oito réplicas secundárias têm suporte, incluindo uma réplica primária e duas réplicas secundárias de confirmação síncrona.  
   
- ![Grupo de disponibilidade com cinco réplicas](../../../database-engine/availability-groups/windows/media/aoag-agintrofigure.gif "Availability group with five replicas")  
+ ![Grupo de disponibilidade com cinco réplicas](../../../database-engine/availability-groups/windows/media/aoag-agintrofigure.gif "Grupo de disponibilidade com cinco réplicas")  
   
 ##  <a name="AvDbs"></a> Availability Databases  
  Para adicionar um banco de dados a um grupo de disponibilidade, o banco de dados deve estar online, banco de dados de leitura/gravação que existe na instância do servidor que hospeda a réplica primária. Quando você adiciona um banco de dados, ele se une ao grupo de disponibilidade como um banco de dados primário, permanecendo disponível a clientes. Não existe nenhum banco de dados secundário correspondente até que os backups do novo banco de dados primário sejam restaurados na instância do servidor que hospeda a réplica secundária (usando RESTORE WITH NORECOVERY). O novo banco de dados secundário estará no estado RESTORING até que seja unido ao grupo de disponibilidade. Para obter mais informações, veja [Iniciar movimentação de dados em um banco de dados secundário &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
@@ -128,7 +128,7 @@ ms.locfileid: "71974385"
   
 -   **O acesso somente leitura a uma ou mais réplicas secundárias (réplicas secundárias legíveis)**  
   
-     Todas as réplicas de disponibilidade secundárias podem ser configuradas para permitir apenas acesso somente leitura a seus bancos de dados locais, embora algumas operações não tenham suporte completo. Isso evitará tentativas de conexão de leitura/gravação para a réplica secundária. Também é possível evitar cargas de trabalho somente leitura na réplica _primária_ permitindo acesso de leitura/gravação. Isso impedirá que conexões somente leitura sejam feitas na réplica primária. Para obter mais informações, confira [Secundárias ativas: Réplicas secundárias legíveis &#40;Grupos de Disponibilidade Always On&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+     Todas as réplicas de disponibilidade secundárias podem ser configuradas para permitir apenas acesso somente leitura a seus bancos de dados locais, embora algumas operações não tenham suporte completo. Isso evitará tentativas de conexão de leitura/gravação para a réplica secundária. Também é possível evitar cargas de trabalho somente leitura na réplica _primária_ permitindo acesso de leitura/gravação. Isso impedirá que conexões somente leitura sejam feitas na réplica primária. Para obter mais informações, confira [Secundárias ativas: Réplicas Secundárias Legíveis &#40;Grupos de Disponibilidade Always On&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
      Se um grupo de disponibilidade tiver um ouvinte de grupo de disponibilidade e uma ou mais réplicas secundárias legíveis no momento, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] poderá rotear solicitações de conexão da intenção de leitura para um deles (*roteamento somente leitura*). Para obter mais informações, consulte [Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativo &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).  
   

@@ -1,6 +1,6 @@
 ---
-title: Opções (SQL Server AlwaysOn, página Painel) | Microsoft Docs
-description: Uma descrição da página 'Opções' encontrada no Painel SQL Server Always On.
+title: Painel do grupo de disponibilidade no SSMS
+description: Uma descrição da página 'Opções' encontrada no Painel SQL Server Always On no SQL Server Management Studio.
 ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 4369b588-e982-4b57-80a1-beb2e879ce0b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 887ed12836ca3581e40c6c6831906def6c0d0e5f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ae4c5aae76c41b642d445e92844efa2ddf36fdcc
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014637"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822547"
 ---
 # <a name="options-sql-server-always-on-dashboard-page"></a>Opções (SQL Server AlwaysOn, página Painel)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

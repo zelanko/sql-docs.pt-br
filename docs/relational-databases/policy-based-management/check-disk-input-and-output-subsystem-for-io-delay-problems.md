@@ -1,6 +1,7 @@
 ---
-title: Verificar subsistema de entrada e saída de disco quanto a problemas de atraso de E/S | Microsoft Docs
-ms.custom: ''
+title: Verificar o subsistema de E/S do disco para problemas de atraso de E/S
+description: Saiba como habilitar uma política para verificar o subsistema de E/S de disco em busca de problemas de atraso de E/S verificando o log de eventos para ver se a mensagem de erro 833 é exibida para o gerenciamento baseado em políticas com o SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 23863340-d8e0-48d6-928b-462745885d37
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 269ab9f9028ad1ff4ec4b336e45e9ecbb87bc0f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0cf1dc8196ef8e248da485b01efc4bf192d4248c
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68109895"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558164"
 ---
 # <a name="check-disk-input-and-output-subsystem-for-io-delay-problems"></a>Verificar o subsistema de entrada e saída de disco para problemas de atraso de E/S
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

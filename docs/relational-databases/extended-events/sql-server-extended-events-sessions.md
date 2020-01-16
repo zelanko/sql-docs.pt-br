@@ -1,6 +1,5 @@
 ---
-title: Sessões de eventos estendidos do SQL Server | Microsoft Docs
-ms.custom: ''
+title: Sessões de eventos estendidos do SQL Server
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,12 +14,12 @@ ms.assetid: c3c92544-351a-4bce-a06a-1f2a47e494e9
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1ea63b8d8b417f829bda722297d0c69a0b5c5fef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0352441798ddffc96b057876768f66f0c9d4a10a
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009335"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242908"
 ---
 # <a name="sql-server-extended-events-sessions"></a>Sessões de eventos estendidos do SQL Server
 
@@ -39,12 +38,12 @@ ms.locfileid: "68009335"
   
  Mencionando a figura precedente, observe que o estado da sessão é alterado quando os comandos DDL diferentes são emitidos para uma sessão de evento. Essas alterações de estado são descritas na tabela a seguir.  
   
-|Rótulo de ilustração|instrução DDL|Descrição|  
+|Rótulo de ilustração|instrução DDL|DESCRIÇÃO|  
 |------------------------|-------------------|-----------------|  
 |Criar|CREATE EVENT SESSION|O processo do host cria um objeto de sessão que contém os metadados fornecidos pela CREATE EVENT SESSION. O processo do host valida a definição de sessão, valida o nível de permissão do usuário, e armazena os metadados no banco de dados mestre. Neste momento a sessão não está ativa.|  
-|Alter|ALTER EVENT SESSION, STATE=START|O processo do host inicia a sessão. O processo do host lê os metadados armazenados, valida a definição da sessão, verifica o nível de permissão do usuário e cria a sessão. Objetos de sessão, como eventos e destinos, são carregados e a manipulação de eventos está ativa.|  
-|Alter|ALTER EVENT SESSION, STATE=STOP|O processo do host para a sessão ativa, mas retém os metadados.|  
-|Drop|DROP EVENT SESSION|Dependendo se a sessão está ativa ou não, Descartar (DROP SESSION) excluirá os metadados e fechará a sessão ativa, ou excluirá os metadados da sessão.|  
+|Alterar|ALTER EVENT SESSION, STATE=START|O processo do host inicia a sessão. O processo do host lê os metadados armazenados, valida a definição da sessão, verifica o nível de permissão do usuário e cria a sessão. Objetos de sessão, como eventos e destinos, são carregados e a manipulação de eventos está ativa.|  
+|Alterar|ALTER EVENT SESSION, STATE=STOP|O processo do host para a sessão ativa, mas retém os metadados.|  
+|Remover|DROP EVENT SESSION|Dependendo se a sessão está ativa ou não, Descartar (DROP SESSION) excluirá os metadados e fechará a sessão ativa, ou excluirá os metadados da sessão.|  
   
 > [!NOTE]  
 >  ALTER EVENT SESSION e DROP EVENT SESSION podem ser aplicados aos metadados, ou a uma sessão ativa e aos metadados.  
@@ -54,7 +53,7 @@ ms.locfileid: "68009335"
   
  A ilustração a seguir mostra o conteúdo da sessão e a relação entre pacotes e sessões.  
   
- ![Coexistência do objeto e compartilhamento em sessões.](../../relational-databases/extended-events/media/xesessions.gif "Coexistência do objeto e compartilhamento em sessões.")  
+ ![Coexistência e compartilhamento de objetos em sessões.](../../relational-databases/extended-events/media/xesessions.gif "Coexistência e compartilhamento de objetos em sessões.")  
   
  Em relação à ilustração anterior, observe que:  
   

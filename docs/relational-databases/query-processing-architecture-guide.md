@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b4f0af105de85eded29b7cf4bd58d6c392a7dbd4
-ms.sourcegitcommit: c0fd28306a3b42895c2ab673734fbae2b56f9291
+ms.openlocfilehash: bb6463efe0b4b4f5d7b009eae6f9a4a612cf5e7e
+ms.sourcegitcommit: 722f2ec5a1af334f5bcab8341bc744d16a115273
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71096933"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74866069"
 ---
 # <a name="query-processing-architecture-guide"></a>Guia da Arquitetura de Processamento de Consultas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -483,7 +483,7 @@ Certas alterações em um banco de dados podem fazer com que a execução de um 
 
 A maioria das recompilações é necessária para exatidão da instrução ou para obter planos de execução de consulta potencialmente mais rápidos.
 
-No [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000, sempre que uma instrução dentro de um lote causar recompilação, o lote inteiro será recompilado, seja enviado por um procedimento armazenado, gatilho, lote ad hoc ou instrução preparada. No [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] e posterior, apenas a instrução dentro do lote que causa a recompilação é recompilada. Por causa dessa diferença, as contagens de recompilação das versões [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 e posteriores são incomparáveis. Além disso, há mais tipos de recompilações no [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] e posterior devido ao seu conjunto de recursos expandido.
+Em versões do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] anteriores à 2005, sempre que uma instrução dentro de um lote causar recompilação, o lote inteiro era recompilado, mesmo que enviado por um procedimento armazenado, gatilho, lote ad hoc ou instrução preparada. No [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] e posterior, apenas a instrução dentro do lote que dispara a recompilação é recompilada. Além disso, há mais tipos de recompilações no [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] e posterior devido ao seu conjunto de recursos expandido.
 
 A recompilação em nível de instrução beneficia o desempenho porque, na maioria dos casos, um número pequeno de instruções provoca recompilações e as penalidades associadas, em termos de bloqueios e tempo de CPU. Portanto, essas penalidades são evitadas nas outras instruções do lote que não precisam ser recompiladas.
 
@@ -507,7 +507,7 @@ A coluna `recompile_cause` do xEvent `sql_statement_recompile` contém um códig
 > A coluna *EventSubClass* de `SP:Recompile` e `SQL:StmtRecompile` contém um código inteiro que indica o motivo da recompilação. Os códigos descritos [aqui](../relational-databases/event-classes/sql-stmtrecompile-event-class.md).
 
 > [!NOTE]
-> Quando a opção do banco de dados `AUTO_UPDATE_STATISTICS` for definida como `ON`, as consultas serão recompiladas quando destinadas a tabelas ou exibições indexadas cujas estatísticas foram atualizadas ou cujas cardinalidades foram alteradas significativamente desde a última execução. Esse comportamento se aplica a tabelas padrão definidas pelo usuário, tabelas temporárias e tabelas inseridas e excluídas criadas por disparadores de DML. Se o desempenho de consulta for afetado por recompilações excessivas, considere a alteração dessa configuração para `OFF`. Quando a opção do banco de dados `AUTO_UPDATE_STATISTICS` for definida como `OFF`, não ocorrerá nenhuma recompilação com base em estatísticas ou alterações de cardinalidade, com exceção das tabelas inseridas e excluídas criadas por disparadores de DML `INSTEAD OF`. Como essas tabelas são criadas em tempdb, a recompilação de consultas que as acessam depende da configuração de `AUTO_UPDATE_STATISTICS` em tempdb. Observe que no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000, as consultas continuam a recompilação com base nas alterações de cardinalidade para as tabelas inseridas e excluídas do gatilho DML, mesmo quando essa configuração estiver definida como `OFF`.
+> Quando a opção do banco de dados `AUTO_UPDATE_STATISTICS` for definida como `ON`, as consultas serão recompiladas quando destinadas a tabelas ou exibições indexadas cujas estatísticas foram atualizadas ou cujas cardinalidades foram alteradas significativamente desde a última execução. Esse comportamento se aplica a tabelas padrão definidas pelo usuário, tabelas temporárias e tabelas inseridas e excluídas criadas por disparadores de DML. Se o desempenho de consulta for afetado por recompilações excessivas, considere a alteração dessa configuração para `OFF`. Quando a opção do banco de dados `AUTO_UPDATE_STATISTICS` for definida como `OFF`, não ocorrerá nenhuma recompilação com base em estatísticas ou alterações de cardinalidade, com exceção das tabelas inseridas e excluídas criadas por disparadores de DML `INSTEAD OF`. Como essas tabelas são criadas em tempdb, a recompilação de consultas que as acessam depende da configuração de `AUTO_UPDATE_STATISTICS` em tempdb. Observe que no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] anterior a 2005, as consultas continuam a recompilação com base nas alterações de cardinalidade para as tabelas inseridas e excluídas do gatilho DML, mesmo quando essa configuração estiver definida como `OFF`.
 
 ### <a name="PlanReuse"></a> Reutilização de Parâmetros e Plano de Execução
 
@@ -585,7 +585,7 @@ No [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], o uso de parâmetros 
 > [!WARNING] 
 > O uso de parâmetros ou marcadores de parâmetro para manter valores digitados pelo usuário final é mais seguro que a concatenação dos valores em uma cadeia de caracteres executada posteriormente usando um método API de acesso a dados, a instrução `EXECUTE` ou o procedimento armazenado `sp_executesql` .
 
-Se uma instrução [!INCLUDE[tsql](../includes/tsql-md.md)] for executada sem parâmetros, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] parametrizará a instrução internamente para aumentar a possibilidade de correspondência com um plano de execução existente. Esse processo é chamado de parametrização simples. No [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000, o processo era conhecido como parametrização automática.
+Se uma instrução [!INCLUDE[tsql](../includes/tsql-md.md)] for executada sem parâmetros, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] parametrizará a instrução internamente para aumentar a possibilidade de correspondência com um plano de execução existente. Esse processo é chamado de parametrização simples. Em versões do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] anteriores à 2005, o processo era conhecido como parametrização automática.
 
 Considere esta instrução:
 
@@ -624,7 +624,7 @@ Quando a opção `PARAMETERIZATION` é definida como `FORCED`, qualquer valor li
 * Instruções nos corpos de procedimentos armazenados, gatilhos ou funções definidas pelo usuário. O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] já reutiliza os planos de consulta para essas rotinas.
 * Instruções preparadas que já foram parametrizadas no aplicativo cliente.
 * Instruções que contêm chamadas do método XQuery, onde o método é exibido em um contexto em que seus argumentos normalmente seriam parametrizados, como uma cláusula `WHERE` . Se o método for exibido em um contexto em que seus argumentos não serão parametrizados, o restante da instrução será parametrizado.
-* Instruções dentro de um cursor [!INCLUDE[tsql](../includes/tsql-md.md)]. (As instruções`SELECT` são parametrizadas em cursores de API.)
+* Instruções em um cursor [!INCLUDE[tsql](../includes/tsql-md.md)]. (As instruções`SELECT` são parametrizadas em cursores de API.)
 * Construções da consulta preterida.
 * Qualquer instrução executada no contexto de `ANSI_PADDING` ou `ANSI_NULLS` definida como `OFF`.
 * Instruções que contêm mais de 2.097 literais elegíveis para parametrização.
@@ -798,7 +798,7 @@ Cursores estáticos e controlados por conjunto de chaves podem ser populados por
 
 Você pode usar a opção de configuração de servidor [grau máximo de paralelismo](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) (MAXDOP) ([ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) no [!INCLUDE[ssSDS_md](../includes/sssds-md.md)]) para limitar o número de processadores a serem usados na execução do plano paralelo. O grau máximo da opção paralelismo pode ser substituído por instruções de operação de índice e de consulta individual, especificando a dica de consulta MAXDOP ou a opção de índice MAXDOP. MAXDOP fornece mais controle sobre operações de índice e consultas individuais. Por exemplo, você pode usar a opção MAXDOP para controlar, aumentando ou reduzindo, o número de processadores dedicado a uma operação de índice online. Desse modo, você pode equilibrar os recursos usados por uma operação de índice com aquele dos usuários simultâneos. 
 
-A configuração da opção de grau máximo de paralelismo como 0 (padrão) permite que o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] use todos os processadores disponíveis até um máximo de 64 processadores em uma execução de plano paralelo. Embora [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] defina um destino de tempo de execução de 64 processadores lógicos quando a opção MAXDOP é definida como 0, um valor diferente pode ser definido manualmente se necessário. Configurar MAXDOP como 0 para consultas e índices permite ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usar todos os processadores disponíveis até um máximo de 64 processadores para as consultas ou índices específicos em uma execução de plano paralela. MAXDOP não é um valor de imposto para todas as consultas em paralelo, mas sim um destino provisório para todas as consultas qualificadas para paralelismo. Isso significa que, se não houver threads de trabalho disponíveis suficientes no tempo de execução, uma consulta poderá ser executada com um grau menor de paralelismo que a opção da configuração de servidor MAXDOP.
+A configuração da opção de grau máximo de paralelismo como 0 (padrão) permite que o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] use todos os processadores disponíveis até um máximo de 64 processadores em uma execução de plano paralelo. Embora [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] defina um destino de runtime de 64 processadores lógicos quando a opção MAXDOP é definida como 0, um valor diferente pode ser definido manualmente se necessário. Configurar MAXDOP como 0 para consultas e índices permite ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usar todos os processadores disponíveis até um máximo de 64 processadores para as consultas ou índices específicos em uma execução de plano paralela. MAXDOP não é um valor de imposto para todas as consultas em paralelo, mas sim um destino provisório para todas as consultas qualificadas para paralelismo. Isso significa que, se não houver threads de trabalho disponíveis suficientes no runtime, uma consulta poderá ser executada com um grau menor de paralelismo que a opção da configuração de servidor MAXDOP.
 
 Consulte este [artigo do Suporte da Microsoft](https://support.microsoft.com/help/2806535/recommendations-and-guidelines-for-the-max-degree-of-parallelism-configuration-option-in-sql-server) para ver as práticas recomendadas de configuração do MAXDOP.
 
@@ -1111,7 +1111,7 @@ Vejamos outro exemplo, vamos supor que a tabela possui quatro partições na col
 |Partição de tabela 3: A >= 20 AND A < 30   |B=50, B=100, B=150 |
 |Partição de tabela 4: A >= 30  |B=50, B=100, B=150 |
 
-### <a name="best-practices"></a>Práticas recomendadas
+### <a name="best-practices"></a>Práticas Recomendadas
 
 Para melhorar o desempenho das consultas que acessam uma grande quantidade de dados de grandes tabelas e índices particionados, recomendamos as seguintes práticas:
 

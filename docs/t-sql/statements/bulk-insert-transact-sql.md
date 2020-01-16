@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2c48c045b65b554533a8824ec0ea967ed8fae884
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.openlocfilehash: 6b6534e887f890700b69a11b4515d4cf1af4d86a
+ms.sourcegitcommit: c98c6e33d04d4a1888db7dbe89cb0b1bb3a66418
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72252016"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74249846"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 
@@ -39,7 +39,7 @@ ms.locfileid: "72252016"
 
 Importa um arquivo de dados para uma tabela ou exibição de banco de dados em um formato especificado pelo usuário no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -100,7 +100,7 @@ FROM '\\SystemX\DiskZ\Sales\data\orders.dat';
 Começando com o [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP1.1, o data_file pode estar localizado no Armazenamento de Blobs do Azure. Nesse caso, você precisa especificar a opção **data_source_name**. Para obter um exemplo, confira [Como importar dados de um arquivo no Armazenamento de Blobs do Azure](#f-importing-data-from-a-file-in-azure-blob-storage).
 
 > [!IMPORTANT]
-> O Banco de Dados SQL do Azure não oferece suporte à leitura de arquivos do Windows.
+> O Banco de Dados SQL do Azure é compatível apenas com leitura do Armazenamento de Blobs do Azure.
 
 **'** _data_source_name_ **'** 
 **Aplica-se a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 e Banco de Dados SQL do Azure.
@@ -128,7 +128,7 @@ CODEPAGE **=** { **'** ACP **'**  |  **'** OEM **'**  |  **'** RAW **'**  |  **'
 > [!NOTE]
 > A [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomenda que você especifique um nome de ordenação para cada coluna em um [arquivo de formato](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md).
 
-|Valor de CODEPAGE|Descrição|
+|Valor de CODEPAGE|DESCRIÇÃO|
 |--------------------|-----------------|
 |ACP|Colunas do tipo de dados **char**, **varchar** ou **text** são convertidas da página de código do Windows [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]/[!INCLUDE[msCoName](../../includes/msconame-md.md)] (ISO 1252) na página de código do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|
 |OEM (padrão)|Colunas do tipo de dados **char**, **varchar** ou **text** são convertidas da página de código de OEM do sistema para a página de código [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|
@@ -144,7 +144,7 @@ DATAFILETYPE **=** { **'char'**  |  **'native'**  |  **'widechar'**  |  **'widen
 |------------------------|------------------------------|
 |**char** (padrão)|Formato de caractere.<br /><br /> Para obter mais informações, veja [Usar o formato de caractere para importar ou exportar dados &#40;SQL Server&#41;](../../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md).|
 |**native**|Tipos de dados (banco de dados) nativo. Crie o arquivo de dados nativo importando dados em massa do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o utilitário **bcp**.<br /><br /> O valor nativo oferece uma alternativa de alto desempenho ao valor char. O formato nativo é recomendado quando você transfere dados em massa entre várias instâncias do SQL Server usando um arquivo de dados que não contém caracteres estendidos/DBCS (conjunto de caracteres de byte duplo).<br /><br /> Para obter mais informações, veja [Usar o formato nativo para importar ou exportar dados &#40;SQL Server&#41;](../../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md).|
-|**widechar**|Caracteres unicode.<br /><br /> Para obter mais informações, consulte [Usar o formato de caractere Unicode para importar ou exportar dados &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md).|
+|**widechar**|Caracteres Unicode.<br /><br /> Para obter mais informações, consulte [Usar o formato de caractere Unicode para importar ou exportar dados &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md).|
 |**widenative**|Tipos de dados nativos (banco de dados), exceto nas colunas **char**, **varchar** e **text** colunas, em que os dados são armazenados como Unicode. Crie o arquivo de dados **widenative** importando dados em massa do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o utilitário **bcp**.<br /><br /> O valor **widenative** oferece uma alternativa de alto desempenho para **widechar**. Se o arquivo de dados contiver caracteres [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)] estendidos, especifique **widenative**.<br /><br /> Para obter mais informações, veja [Usar o formato nativo Unicode para importar ou exportar dados &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md).|
 | &nbsp; | &nbsp; |
 
@@ -278,7 +278,7 @@ FROM 'C:\t_float-c.dat' WITH (FORMATFILE='C:\t_floatformat-c-xml.xml');
 ```
 
 > [!IMPORTANT]
-> O Banco de Dados SQL do Azure não dá suporte à leitura de arquivos do Windows, mas pode ler o Armazenamento de Blobs do Azure.
+> O Banco de Dados SQL do Azure é compatível apenas com leitura do Armazenamento de Blobs do Azure.
 
 ### <a name="data-types-for-bulk-exporting-or-importing-sqlxml-documents"></a>Tipos de dados para exportação ou importação em massa de documentos SQLXML
 
@@ -354,7 +354,7 @@ Requer as permissões INSERT e ADMINISTER BULK OPERATIONS. No Banco de Dados SQL
 
 ## <a name="examples"></a>Exemplos
 
-### <a name="a-using-pipes-to-import-data-from-a-file"></a>A. Usando pipes para importar dados de um arquivo
+### <a name="a-using-pipes-to-import-data-from-a-file"></a>a. Usando pipes para importar dados de um arquivo
 
 O exemplo a seguir importa informações sobre detalhes de pedidos para a tabela `AdventureWorks2012.Sales.SalesOrderDetail` do arquivo de dados especificado usando um pipe (`|`) como terminador de campo e `|\n` como terminador de linha.
 
@@ -369,7 +369,7 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
 ```
 
 > [!IMPORTANT]
-> O Banco de Dados SQL do Azure não oferece suporte à leitura de arquivos do Windows.
+> O Banco de Dados SQL do Azure é compatível apenas com leitura do Armazenamento de Blobs do Azure.
 
 ### <a name="b-using-the-fire_triggers-argument"></a>B. Usando o argumento FIRE_TRIGGERS
 
@@ -387,7 +387,7 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
 ```
 
 > [!IMPORTANT]
-> O Banco de Dados SQL do Azure não oferece suporte à leitura de arquivos do Windows.
+> O Banco de Dados SQL do Azure é compatível apenas com leitura do Armazenamento de Blobs do Azure.
 
 ### <a name="c-using-line-feed-as-a-row-terminator"></a>C. Usando alimentação de linha como um terminador de linha
 
@@ -405,7 +405,7 @@ EXEC(@bulk_cmd);
 > Devido ao modo como o Microsoft Windows trata arquivos de texto, **(\n** automaticamente é substituído por **\r\n)** .
 
 > [!IMPORTANT]
-> O Banco de Dados SQL do Azure não oferece suporte à leitura de arquivos do Windows.
+> O Banco de Dados SQL do Azure é compatível apenas com leitura do Armazenamento de Blobs do Azure.
 
 ### <a name="d-specifying-a-code-page"></a>D. Especificando uma página de código
 
@@ -422,7 +422,7 @@ WITH
 ```
 
 > [!IMPORTANT]
-> O Banco de Dados SQL do Azure não oferece suporte à leitura de arquivos do Windows.
+> O Banco de Dados SQL do Azure é compatível apenas com leitura do Armazenamento de Blobs do Azure.
 
 ### <a name="e-importing-data-from-a-csv-file"></a>E. Importando dados de um arquivo CSV
 
@@ -439,7 +439,7 @@ WITH (FORMAT = 'CSV'
 ```
 
 > [!IMPORTANT]
-> O Banco de Dados SQL do Azure não oferece suporte à leitura de arquivos do Windows.
+> O Banco de Dados SQL do Azure é compatível apenas com leitura do Armazenamento de Blobs do Azure.
 
 ### <a name="f-importing-data-from-a-file-in-azure-blob-storage"></a>F. Importando dados de um arquivo no Armazenamento de Blobs do Azure
 
@@ -470,7 +470,7 @@ WITH (DATA_SOURCE = 'MyAzureBlobStorage');
 ```
 
 > [!IMPORTANT]
-> O Banco de Dados SQL do Azure não oferece suporte à leitura de arquivos do Windows.
+> O Banco de Dados SQL do Azure é compatível apenas com leitura do Armazenamento de Blobs do Azure.
 
 ### <a name="g-importing-data-from-a-file-in-azure-blob-storage-and-specifying-an-error-file"></a>G. Importando dados de um arquivo no armazenamento de blobs do Azure e especificando um arquivo de erro
 

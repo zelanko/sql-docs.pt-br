@@ -1,6 +1,7 @@
 ---
-title: Manutenção e solução de problemas &amp; do Conector do SQL Server | Microsoft Docs
-ms.custom: ''
+title: Manutenção e solução de problemas do Conector do SQL Server
+description: Saiba mais sobre as instruções de manutenção e as etapas comuns de solução de problemas para o Conector do SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 07/25/2019
 ms.prod: sql
 ms.reviewer: vanto
@@ -9,16 +10,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Connector, appendix
 ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
-author: aliceku
-ms.author: aliceku
-ms.openlocfilehash: d24f4e86f59e91537886480b26248c683665850a
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: 050b6ba215d9dc4db433ad81dd8fa48bed212803
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70148782"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557921"
 ---
-# <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>Manutenção &amp; solução de problemas do Conector do SQL Server
+# <a name="sql-server-connector-maintenance--troubleshooting"></a>Manutenção e solução de problemas do Conector do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Informações complementares sobre o Conector do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] são fornecidos neste tópico. Para obter mais informações sobre o conector do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], consulte [Extensible Key Management Using Azure Key Vault &#40;SQL Server&#41; (Gerenciamento extensível de chaves usando o Cofre de Chaves do Azure &#40;SQL Server&#41;)](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md), [Setup Steps for Extensible Key Management Using the Azure Key Vault (Etapas de instalação para o gerenciamento extensível de chaves usando o Cofre de Chaves do Azure)](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md) e [Use SQL Server Connector with SQL Encryption Features (Usar o Conector do SQL Server com recursos de criptografia do SQL)](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md).  
@@ -169,7 +170,10 @@ Os backups de chaves podem ser restaurados em todas as regiões do Azure, contan
 **Quais são os pontos de extremidade que o Conector do SQL Server precisa acessar?** O Conector se comunica com dois pontos de extremidade que precisam ser incluídos na lista de permissões. A única porta necessária para comunicação de saída a esses outros serviços é 443 para Https:
 -  login.microsoftonline.com/*:443
 -  *.vault.azure.net/* :443
-  
+
+**Como fazer para se conectar ao Azure Key Vault por meio de um servidor proxy HTTP(S)?**
+O Conector usa as definições de configuração de proxy do Internet Explorer. Essas configurações podem ser controladas por meio da [Política de Grupo](https://blogs.msdn.microsoft.com/askie/2015/10/12/how-to-configure-proxy-settings-for-ie10-and-ie11-as-iem-is-not-available/) ou por meio do Registro, mas é importante observar que elas não são configurações de todo o sistema e precisarão ser direcionadas para a conta de serviço que executa a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Se um administrador de banco de dados exibir ou editar as configurações no Internet Explorer, elas só afetarão a conta do administrador de banco de dados em vez do mecanismo do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Não é recomendável fazer logon no servidor de maneira interativa usando a conta de serviço, e isso é bloqueado em muitos ambientes seguros. As alterações nas configurações de proxy definidas podem exigir a reinicialização da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para entrarem em vigor, pois elas são armazenadas em cache quando o Conector tenta se conectar a um cofre de chaves pela primeira vez.
+
 **Quais são os níveis de permissão mínimos necessários para cada etapa da configuração em [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]?**  
  Embora você possa executar todas as etapas de configuração como um membro da função de servidor fixa sysadmin, o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] incentiva você a minimizar as permissões utilizadas. A lista a seguir define o nível mínimo de permissão para cada ação.  
   
@@ -202,7 +206,7 @@ Para saber mais sobre o Active Directory, leia [Como a assinatura do Azure está
 ##  <a name="AppendixC"></a> C. Explicações de Código de Erro do Conector do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
  **Códigos de erro do provedor:**  
   
-Código do erro  |Símbolo  |Descrição    
+Código do erro  |Símbolo  |DESCRIÇÃO    
 ---------|---------|---------  
 0 | scp_err_Success | Êxito na operação.    
 1 | scp_err_Failure | A operação falhou.    
@@ -211,7 +215,9 @@ Código do erro  |Símbolo  |Descrição
 4 | scp_err_NotFound | O algoritmo ou chave especificada não pôde ser localizado pelo provedor EKM.    
 5 | scp_err_AuthFailure | A autenticação falhou com o provedor EKM.    
 6 | scp_err_InvalidArgument | O argumento fornecido é inválido.    
-7 | scp_err_ProviderError | Há um erro não especificado ocorrendo no provedor EKM detectado pelo mecanismo SQL.    
+7 | scp_err_ProviderError | Há um erro não especificado ocorrendo no provedor EKM detectado pelo mecanismo SQL.   
+401 | acquireToken | O servidor respondeu 401 para a solicitação. Verifique se a ID do cliente e o segredo estão corretos e se a cadeia de caracteres da credencial é uma concatenação da ID do cliente do AAD e do segredo sem hifens.
+404 | getKeyByName | O servidor respondeu 404, pois o nome da chave não foi encontrado. Verifique se o nome da chave existe no cofre.
 2049 | scp_err_KeyNameDoesNotFitThumbprint | O nome da chave é muito longo para caber na impressão digital do mecanismo do SQL. O nome da chave não deve exceder 26 caracteres.    
 2050 | scp_err_PasswordTooShort | A cadeia de caracteres secreta que é a concatenação de ID e do segredo do cliente do AAD é menor que 32 caracteres.    
 2051 | scp_err_OutOfMemory | A memória do mecanismo SQL acabou e não foi possível alocar memória para o provedor EKM.    
@@ -249,6 +255,8 @@ Se você não vir o código de erro nesta tabela, aqui estão algumas outras raz
 -   Você pode ter removido a chave assimétrica do Cofre de Chaves do Azure ou [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Restaure a chave.  
   
 -   Se você receber um erro “Não é possível carregar a biblioteca”, verifique se você tem a versão apropriada do Visual Studio C++ Redistributable instalada com base na versão do SQL Server que está sendo executada. A tabela abaixo especifica qual versão será instalada por meio do Centro de Download da Microsoft.   
+
+O log de eventos do Windows também registra em log os erros associados ao Conector do SQL Server, que pode ajudar com um contexto adicional sobre o motivo real do erro. A origem no Log de Eventos do Aplicativo do Windows será "Conector do SQL Server para Microsoft Azure Key Vault".
   
 Versão do SQL Server  |Link de instalação redistribuível    
 ---------|--------- 
@@ -287,7 +295,7 @@ Versão do SQL Server  |Link de instalação redistribuível
   
  Documentação do Cofre de Chaves do Azure:  
   
--   [O que é o Azure Key Vault?](https://azure.microsoft.com/documentation/articles/key-vault-whatis/)  
+-   [O que é o Cofre da Chave do Azure?](https://azure.microsoft.com/documentation/articles/key-vault-whatis/)  
   
 -   [Introdução ao Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)  
   

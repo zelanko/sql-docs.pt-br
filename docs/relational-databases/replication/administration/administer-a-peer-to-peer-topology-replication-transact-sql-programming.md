@@ -1,6 +1,7 @@
 ---
-title: Administrar uma topologia ponto a ponto (programação Transact-SQL de replicação) | Microsoft Docs
-ms.custom: ''
+title: Administrar uma topologia ponto a ponto (SP de replicação)
+description: Saiba como usar procedimentos armazenados de replicação para administrar uma topologia ponto a ponto, por exemplo, para adicionar um artigo ou fazer uma alteração de esquema.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4d0fa941-f9ea-4a14-aed9-34df593fc6f2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 633e1a3cc6db676065d588c570d75c6b5a376f6d
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 712a0514bf4fb9e4c66e0d6f7b0475ec5a957dde
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908063"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322193"
 ---
 # <a name="administer-a-peer-to-peer-topology-replication-transact-sql-programming"></a>Administrar uma topologia ponto a ponto (Programação Transact-SQL de replicação)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "72908063"
   
 4.  Copie manualmente os dados em massa da nova tabela em todos os nós usando a [utilidade bcp](../../../tools/bcp-utility.md).  
   
-5.  Execute [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) para criar um novo artigo em cada nó na topologia. Para obter mais informações, consulte [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
+5.  Execute [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) para criar o novo artigo em cada nó na topologia. Para obter mais informações, consulte [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
   
     > [!NOTE]  
     >  Depois que [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) é executado, a replicação adiciona automaticamente o artigo às assinaturas na topologia.  
@@ -65,6 +66,6 @@ ms.locfileid: "72908063"
 ## <a name="see-also"></a>Consulte Também  
  [Perguntas Frequentes sobre Administração de Replicação](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
  [Fazer backup e restaurar bancos de dados do SQL Server](../../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
- [Replicação transacional ponto a ponto](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)  
+ [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)  
   
   

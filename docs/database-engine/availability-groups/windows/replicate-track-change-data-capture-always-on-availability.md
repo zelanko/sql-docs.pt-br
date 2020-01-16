@@ -1,6 +1,7 @@
 ---
-title: Replicação, Controle de Alterações e Change Data Capture – grupos de disponibilidade | Microsoft Docs
-ms.custom: ''
+title: Replicação, controle de alterações, captura de dados de alterações e grupos de disponibilidade
+description: Saiba mais sobre a interoperabilidade da replicação, controle de alterações e captura de dados de alterações quando usados com os grupos de disponibilidade Always On do SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 08/21/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2faa46529ea44ce348c382877d39d780cb22572b
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.openlocfilehash: 2e2a794a7e5bdafe4e07b5e7deb9a1007e4a7e73
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72251967"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75235387"
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>Replicação, controle de alterações e Change Data Capture – grupos de disponibilidade AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -201,7 +202,7 @@ Se o Change Data Capture precisar ser desabilitado em um banco de dados que faz 
   
 -   As instâncias do Publicador satisfazem todos os pré-requisitos necessários para participar de um grupo de disponibilidade AlwaysOn. Para obter mais informações consulte [Pré-requisitos, restrições e recomendações para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
-### <a name="restrictions"></a>Restrictions  
+### <a name="restrictions"></a>Restrições  
  Combinações de replicação com suporte no [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]:  
   
 |||||  
@@ -231,7 +232,7 @@ Se o Change Data Capture precisar ser desabilitado em um banco de dados que faz 
   
 -   [Perguntas Frequentes sobre Administração de Replicação](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
   
- **Change data capture**  
+ **Alterar captura de dados**  
   
 -   [Habilitar e desabilitar a captura de dados de alterações &#40;SQL Server&#41;](../../../relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server.md)  
   
@@ -239,7 +240,7 @@ Se o Change Data Capture precisar ser desabilitado em um banco de dados que faz 
   
 -   [Trabalhar com dados de alterações &#40;SQL Server&#41;](../../../relational-databases/track-changes/work-with-change-data-sql-server.md)  
   
- **Change tracking**  
+ **Controle de alterações**  
   
 -   [Habilitar e desabilitar o controle de alterações &#40;SQL Server&#41;](../../../relational-databases/track-changes/enable-and-disable-change-tracking-sql-server.md)  
   

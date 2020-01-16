@@ -1,7 +1,7 @@
 ---
-title: Gerenciamento baseado em políticas para problemas operacionais com grupos de disponibilidade
+title: 'Gerenciamento baseado em política: Grupos de disponibilidade'
 description: O modelo de integridade dos grupos de disponibilidade Always On avalia um conjunto de políticas predefinidas de PBM (gerenciamento baseado em políticas). Você pode usar essas políticas para visualizar a integridade de um grupo de disponibilidade e das réplicas e dos bancos de dados no SQL Server.
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: edb59eacc43d0563c8cd00372d27155f4100703f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ac339e638377778065f158b4cbd20280d5d4bb65
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991547"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244058"
 ---
 # <a name="policy-based-management-for-operational-issues-with-always-on-availability-groups"></a>Gerenciamento baseado em políticas para problemas operacionais com grupos de disponibilidade Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "67991547"
  Políticas predefinidas AlwaysOn  
  Um conjunto de políticas internas que permitem que um administrador de banco de dados verifique um grupo de disponibilidade e suas réplicas de disponibilidade e bancos de dados quanto à conformidade com os estados definidos pelas políticas AlwaysOn.  
   
- [Grupos de Disponibilidade AlwaysOn](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
+ [Grupos de disponibilidade AlwaysOn](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
  Uma solução de alta disponibilidade e de recuperação de desastres que fornece uma alternativa em nível corporativo para espelhamento de banco de dados.  
   
  grupo de disponibilidade  
@@ -57,7 +57,7 @@ ms.locfileid: "67991547"
 |Estado de sincronização de dados de réplicas síncronas|[Algumas réplicas síncronas não são sincronizadas](../../../database-engine/availability-groups/windows/some-synchronous-replicas-are-not-synchronized.md).|Aviso|grupo de disponibilidade|  
 |Estado da Função das Réplica de Disponibilidade|[Algumas réplicas de disponibilidade não têm uma função íntegra](../../../database-engine/availability-groups/windows/some-availability-replicas-do-not-have-a-healthy-role.md).|Aviso|grupo de disponibilidade|  
 |Estado da conexão em réplicas de disponibilidade|[Algumas réplicas de disponibilidade estão desconectadas](../../../database-engine/availability-groups/windows/some-availability-replicas-are-disconnected.md).|Aviso|grupo de disponibilidade|  
-|Estado da função da réplica de disponibilidade|[A réplica de disponibilidade não tem uma função íntegra](../../../database-engine/availability-groups/windows/availability-replica-does-not-have-a-healthy-role.md).|Crítico|réplica de disponibilidade|  
+|Estado da função da réplica de disponibilidade|[A réplica de disponibilidade não tem uma função íntegra](../../../database-engine/availability-groups/windows/availability-replica-does-not-have-a-healthy-role.md).|Crítico|Réplica de disponibilidade|  
 |Estado da Conexão da Réplica de Disponibilidade|[A réplica de disponibilidade está desconectada](../../../database-engine/availability-groups/windows/availability-replica-is-disconnected.md).|Crítico|Réplica de disponibilidade|  
 |Estado da junção da réplica de disponibilidade|[A réplica de disponibilidade não está unida](../../../database-engine/availability-groups/windows/availability-replica-is-not-joined.md).|Aviso|Réplica de disponibilidade|  
 |Estado de Sincronização de Dados de Réplicas de Disponibilidade|[O estado de sincronização de dados de algum banco de dados de disponibilidade não é íntegro](../../../database-engine/availability-groups/windows/data-synchronization-state-of-some-availability-database-is-not-healthy.md).|Aviso|Réplica de disponibilidade|  
@@ -108,7 +108,7 @@ ms.locfileid: "67991547"
   
 -   [The Always On Health Model Part 1 – Health Model Architecture (O modelo de integridade AlwaysOn Parte 1 – Arquitetura do modelo de integridade)](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/08/the-alwayson-health-model-part-1-health-model-architecture/)  
   
--   [The Always On Health Model Part 2 – Extending the Health Model](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/13/the-alwayson-health-model-part-2-extending-the-health-model/)  
+-   [The Always On Health Model Part 2 – Extending the Health Model (O modelo de integridade AlwaysOn Parte 2 – Estendendo o modelo de integridade)](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/13/the-alwayson-health-model-part-2-extending-the-health-model/)  
   
 -   [Guia de soluções AlwaysOn do Microsoft SQL Server para alta disponibilidade e recuperação de desastre](https://go.microsoft.com/fwlink/?LinkId=227600)  
   

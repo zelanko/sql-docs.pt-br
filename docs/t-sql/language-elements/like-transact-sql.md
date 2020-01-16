@@ -31,19 +31,19 @@ ms.assetid: 581fb289-29f9-412b-869c-18d33a9e93d5
 author: juliemsft
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ad327f07e37778a7a3369f8fa3a7ecaa1504e6f2
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.openlocfilehash: 7ff1197307cebb563fbb8cc173b0edbf1ef6aa76
+ms.sourcegitcommit: af078c0cdb42ac385d24496249e9b3609428f013
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816827"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74550213"
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Determina se uma cadeia de caracteres específica corresponde a um padrão especificado. Um padrão pode incluir caracteres normais e curingas. Durante a correspondência de padrões, os caracteres normais devem corresponder exatamente aos caracteres especificados na cadeia de caracteres. No entanto, os caracteres curinga podem ser correspondidos a fragmentos arbitrários da cadeia de caracteres. O uso de caracteres curinga torna o operador LIKE mais flexível que o uso dos operadores de comparação de cadeias de caracteres = e !=. Se qualquer um dos argumentos não for do tipo de dados de cadeia de caracteres, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] o converterá no tipo de dados de cadeia de caracteres, se for possível.  
   
- ![Ícone de link do artigo](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do artigo") [Convenções de sintaxe do Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do artigo](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do artigo") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -66,7 +66,7 @@ match_expression [ NOT ] LIKE pattern
  *pattern*  
  É a cadeia de caracteres específica a ser pesquisada em *match_expression* e pode incluir os caracteres curinga válidos a seguir. *pattern* pode ter um máximo de 8.000 bytes.  
   
-|Caractere curinga|Descrição|Exemplo|  
+|Caractere curinga|DESCRIÇÃO|Exemplo|  
 |------------------------|-----------------|-------------|  
 |%|Qualquer cadeia de zero ou mais caracteres.|WHERE title LIKE '%computer%' localiza todos os títulos de livro com a palavra 'computer' em qualquer lugar no título do livro.|  
 |_ (sublinhado)|Qualquer caractere único.|WHERE au_fname LIKE '_ean' localiza todos os nomes de quatro letras que terminam com ean (Dean, Sean e assim por diante).|  
@@ -82,7 +82,7 @@ match_expression [ NOT ] LIKE pattern
 ## <a name="result-value"></a>Valor do resultado  
  LIKE retorna TRUE se a *match_expression* corresponde ao *pattern* especificado.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Ao realizar comparações de cadeias de caracteres usando LIKE, todos os caracteres na cadeia padrão são significativos. Caracteres significativos incluem espaços à esquerda ou à direita. Se uma comparação em uma consulta deve retornar todas as linhas com uma cadeia de caracteres LIKE 'abc ' (abc seguido de um único espaço), não será retornada uma linha na qual o valor da coluna seja abc (abc sem espaço). Entretanto, os espaços em branco à direita da expressão cujo padrão é correspondido são ignorados. Se uma comparação em uma consulta deve retornar todas as linhas com a cadeia de caracteres LIKE 'abc' (abc sem espaço), serão retornadas todas as linhas que comecem com abc e que tenham zero ou mais espaços em branco à direita.  
   
  Uma comparação de cadeia de caracteres que usa um padrão que contém dados **char** e **varchar** pode não aprovar uma comparação LIKE devido à maneira como os dados são armazenados para cada tipo de dados. O exemplo a seguir aprova uma variável **char** local para um procedimento armazenado e usa a correspondência de padrões para localizar todos os funcionários cujos sobrenomes começam com um conjunto de caracteres especificado.  
@@ -129,7 +129,7 @@ David          Barber               Snohomish
 ```
 
 ## <a name="pattern-matching-by-using-like"></a>Correspondência de padrão com o uso de LIKE  
- LIKE dar suporte à correspondência de padrão ASCII e à correspondência de padrão Unicode. Quando todos os argumentos (*match_expression*, *pattern* e *escape_character*, se presente) são tipos de dados de caractere ASCII, a correspondência de padrões ASCII é executada. Se algum dos argumentos for do tipo de dados Unicode, todos os argumentos serão convertidos em Unicode e será executada a correspondência de padrão Unicode. Ao usar dados Unicode (tipos de dados **nchar** ou **nvarchar**) com LIKE, os espaços em branco à direita são significativos; entretanto, para dados não Unicode, os espaços em branco à direita não são significativos. LIKE Unicode é compatível com o padrão ISO. LIKE ASCII é compatível com versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ LIKE oferece suporte à correspondência de padrão ASCII e à correspondência de padrão Unicode. Quando todos os argumentos (*match_expression*, *pattern* e *escape_character*, se presente) são tipos de dados de caractere ASCII, a correspondência de padrões ASCII é executada. Se algum dos argumentos for do tipo de dados Unicode, todos os argumentos serão convertidos em Unicode e será executada a correspondência de padrão Unicode. Ao usar dados Unicode (tipos de dados **nchar** ou **nvarchar**) com LIKE, os espaços em branco à direita são significativos; entretanto, para dados não Unicode, os espaços em branco à direita não são significativos. LIKE Unicode é compatível com o padrão ISO. LIKE ASCII é compatível com versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  A seguir é apresentada uma série de exemplos que mostram as diferenças em linhas retornadas entre a correspondência de padrão LIKE ASCII e Unicode.  
   
@@ -200,7 +200,7 @@ GO
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-like-with-the--wildcard-character"></a>A. Usando LIKE com o caractere curinga %  
+### <a name="a-using-like-with-the--wildcard-character"></a>a. Usando LIKE com o caractere curinga %  
  O exemplo a seguir localiza todos os números de telefone com o código de área `415` na tabela `PersonPhone`.  
   
 ```sql  
@@ -216,8 +216,8 @@ GO
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
- 
- ```
+
+```
  FirstName             LastName             Phone
  -----------------     -------------------  ------------
  Ruben                 Alonso               415-555-124  
@@ -232,10 +232,10 @@ GO
  Gabrielle              Russell             415-555-0197  
  Dalton                 Simmons             415-555-0115  
  (11 row(s) affected)  
- ``` 
- 
-### B. Using NOT LIKE with the % wildcard character  
- The following example finds all telephone numbers in the `PersonPhone` table that have area codes other than `415`.  
+```
+
+### <a name="b-using-not-like-with-the--wildcard-character"></a>B. Usando NOT LIKE com o caractere curinga %  
+ O exemplo a seguir localiza todos os números de telefone na tabela `PersonPhone` que têm códigos de área diferentes de `415`.  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -250,8 +250,8 @@ GO
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
- 
- ```
+
+```
 FirstName              LastName            Phone
 ---------------------- -------------------- -------------------
 Gail                  Alexander            1 (11) 500 555-0120  
@@ -263,10 +263,10 @@ Gail                  Moore                155-555-0169
 Gail                  Russell              334-555-0170  
 Gail                  Westover             305-555-0100  
 (8 row(s) affected)  
-```  
+```
 
-### C. Using the ESCAPE clause  
- The following example uses the `ESCAPE` clause and the escape character to find the exact character string `10-15%` in column `c1` of the `mytbl2` table.  
+### <a name="c-using-the-escape-clause"></a>C. Como usar a cláusula ESCAPE  
+ O exemplo a seguir usa a cláusula `ESCAPE` e o caractere de escape para localizar a cadeia de caracteres exata `10-15%` na coluna `c1` da tabela `mytbl2`.  
   
 ```sql
 USE tempdb;  

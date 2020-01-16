@@ -1,6 +1,7 @@
 ---
-title: Configurar contas de logon – disponibilidade AlwaysOn do espelhamento de banco de dados | Microsoft Docs
-ms.custom: ''
+title: Configurar contas de logon (espelhamento e grupos de disponibilidade)
+description: Configure contas de logon para acessar o ponto de extremidade de espelhamento do banco de dados de um espelho de banco de dados ou em um grupo de disponibilidade Always On.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e9f5287b-1325-4cda-88a6-19eaaa52a652
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d3612f2ef5a736ed2d676b5336ecdd48bdd10de6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 851b2aa7dfb7a3c492182840d7d57045a5a72e8a
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025217"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252776"
 ---
 # <a name="set-up-login-accounts---database-mirroring-always-on-availability"></a>Configurar contas de logon – disponibilidade AlwaysOn do espelhamento de banco de dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,6 +66,6 @@ ms.locfileid: "68025217"
 ## <a name="see-also"></a>Consulte Também  
  [O ponto de extremidade de espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [Solução de problemas de configuração de espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)   
- [Solução de problemas de configuração de Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
+ [Solucionar problemas de configuração de grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
   
   

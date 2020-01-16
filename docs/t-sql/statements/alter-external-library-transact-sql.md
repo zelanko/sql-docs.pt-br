@@ -17,12 +17,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 13c306c1fbd83b2fde5783daeba4201cf5d862d9
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 9da237047e7b42b83cc8aa039d6bd04aaca9549a
+ms.sourcegitcommit: ba44730f5cc33295ae2ed1f281186dd266bad4ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532848"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74191070"
 ---
 # <a name="alter-external-library-transact-sql"></a>ALTER EXTERNAL LIBRARY (Transact-SQL)  
 
@@ -169,14 +169,14 @@ Essa opção será útil se você tiver a permissão necessária para alterar um
 Nesse caso, você pode passar o conteúdo do pacote como uma variável em formato binário.
 
 ::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
-**PLATFORM = WINDOWS**
+**platform = WINDOWS**
 
 Especifica a plataforma para o conteúdo da biblioteca. Esse valor é necessário ao modificar uma biblioteca existente para adicionar uma plataforma diferente.
 No SQL Server 2017, o Windows é a única plataforma compatível.
 ::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-**PLATAFORMA**
+**platform**
 
 Especifica a plataforma para o conteúdo da biblioteca. Esse valor é necessário ao modificar uma biblioteca existente para adicionar uma plataforma diferente. 
 No SQL Server 2019, o Windows e o Linux são as plataformas compatíveis.
@@ -195,12 +195,12 @@ Especifica a linguagem do pacote. O R tem suporte no Banco de Dados SQL do Azure
 ::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-**language**
+**linguagem**
 
 Especifica a linguagem do pacote. O valor pode ser **R**, **Python** ou o nome de uma linguagem externa (confira [CREATE EXTERNAL LANGUAGE](create-external-language-transact-sql.md)).
 ::: moniker-end
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Comentários
 
 ::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
 Para a linguagem R, os pacotes precisam ser preparados no formato de arquivos compactados com a extensão .ZIP para Windows. No SQL Server 2017, apenas a plataforma Windows é compatível.  

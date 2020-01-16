@@ -1,6 +1,7 @@
 ---
-title: Instruções RESTORE para restaurar, recuperar e gerenciar backups (T-SQL) | Microsoft Docs
-ms.custom: ''
+title: Como restaurar, recuperar e gerenciar backups
+description: Instruções Transact-SQL RESTORE para restaurar, recuperar e gerenciar backups.
+ms.custom: seo-lt-2019
 ms.date: 03/30/2018
 ms.prod: sql
 ms.prod_service: sql-database
@@ -22,12 +23,12 @@ ms.assetid: fb29a151-f312-4f85-b857-5deeca0de8ce
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 62be9d06e64e3ce986da0d96c4d04238d5f9ca3f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a316cb512f3f5e23a7413ab5f5eaa4b15e3d39a7
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082550"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258766"
 ---
 # <a name="restore-statements-for-restoring-recovering-and-managing-backups-transact-sql"></a>instruções RESTORE para restaurar, recuperar e gerenciar backups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md )]
@@ -39,7 +40,7 @@ ms.locfileid: "68082550"
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|de|Descrição|  
+|de|DESCRIÇÃO|  
 |---------------|-----------------|  
 |[RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)|Descreve as instruções de Transact-SQL RESTORE DATABASE e RESTORE LOG usadas para restaurar e recuperar um banco de dados de backups obtidos por meio do comando BACKUP. RESTORE DATABASE é usado para bancos de dados sob modelos de recuperação. RESTORE LOG é usado apenas sob os modelos de recuperação completa e com log de operações em massa. RESTORE DATABASE também pode ser usado para reverter um banco de dados a um instantâneo do banco de dados.|  
 |[Argumentos de RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)|Documenta os argumentos descritos nas seções "Sintaxe" da instrução RESTORE e do conjunto associado de instruções auxiliares: RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY, RESTORE REWINDONLY e RESTORE VERIFYONLY. Há suporte para a maioria dos argumentos apenas por um subconjunto dessas seis instruções. O suporte a cada argumento é indicado na descrição do argumento.|  

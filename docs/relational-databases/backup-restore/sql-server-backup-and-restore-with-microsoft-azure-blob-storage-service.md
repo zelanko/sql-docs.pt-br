@@ -1,7 +1,7 @@
 ---
-title: Backup e restauração do SQL Server com o Serviço de Armazenamento de Blobs do Microsoft Azure | Microsoft Docs
-ms.custom: ''
-ms.date: 03/25/2019
+title: Backup e restauração com o Armazenamento de Blobs do Azure
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -10,23 +10,23 @@ ms.topic: conceptual
 ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 169e437c141d379401b7a3294f0ae852d756374f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ba2574b4468742414d60c1f4e7db4a93380fba0e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041374"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251130"
 ---
 # <a name="sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service"></a>Backup e restauração do SQL Server com o Serviço de Armazenamento de Blobs do Microsoft Azure
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  ![Fazer backup para o gráfico de blobs do Azure](../../relational-databases/backup-restore/media/backup-to-azure-blob-graphic.png "Fazer backup para o gráfico de blobs do Azure")  
+  ![Fazer backup no gráfico de blob do Azure](../../relational-databases/backup-restore/media/backup-to-azure-blob-graphic.png "Fazer backup no gráfico de blob do Azure")  
   
  Este tópico descreve como fazer backups e restaurações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no [serviço de armazenamento de Blobs do Microsoft Azure](https://www.windowsazure.com/develop/net/how-to-guides/blob-storage/). Ele também fornece um resumo dos benefícios do uso do Serviço Blob do Microsoft Azure para armazenar backups do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  O SQL Server dá suporte ao armazenamento de backups no serviço de armazenamento de Blobs do Microsoft Azure, das seguintes maneiras:  
   
--   **Gerencie seus backups para o Microsoft Azure:** Usando os mesmos métodos usados para fazer backup em DISCO e FITA, agora você pode fazer backup do armazenamento do Microsoft Azure especificando a URL como destino do backup. Você pode usar esse recurso para fazer backup ou configurar manualmente sua própria estratégia de backup, como faria em um armazenamento local ou em outras opções fora do local. Esse recurso também é conhecido como **Backup do SQL Server para URL**. Para obter mais informações, consulte [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md). Esse recurso está disponível no SQL Server 2012 SP1 CU2 ou posterior. Esse recurso foi aprimorado no [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] para fornecer melhor desempenho e funcionalidade com o uso de blobs de bloco, assinaturas de acesso compartilhado e distribuição.  
+-   **Gerencie seus backups para o Microsoft Azure:** Usando os mesmos métodos usados para fazer backup em DISCO e FITA, agora você pode fazer backup do armazenamento do Microsoft Azure especificando a URL como destino do backup. Você pode usar esse recurso para fazer backup ou configurar manualmente sua própria estratégia de backup, como faria em um armazenamento local ou em outras opções fora do local. Esse recurso também é conhecido como **Backup do SQL Server para URL**. Para saber mais, confira [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md). Esse recurso está disponível no SQL Server 2012 SP1 CU2 ou posterior. Esse recurso foi aprimorado no [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] para fornecer melhor desempenho e funcionalidade com o uso de blobs de bloco, assinaturas de acesso compartilhado e distribuição.  
   
     > [!NOTE]  
     >  Para as versões do SQL Server anteriores ao SQL Server 2012 SP1 CU2, você pode usar o suplemento Ferramenta de Backup do SQL Server para o Microsoft Azure para criar backups no armazenamento do Microsoft Azure com rapidez e facilidade. Para obter mais informações, consulte [centro de download](https://go.microsoft.com/fwlink/?LinkID=324399).  
@@ -63,7 +63,7 @@ ms.locfileid: "68041374"
   
 ## <a name="see-also"></a>Consulte Também  
 
-[Práticas recomendadas e solução de problemas de backup do SQL Server para URL](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
+[Solução de problemas e melhores práticas de backup do SQL Server para URL](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
 
 [Fazer backup e restaurar bancos de dados do sistema &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)   
 

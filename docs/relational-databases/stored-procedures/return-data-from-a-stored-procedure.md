@@ -13,20 +13,20 @@ ms.assetid: 7a428ffe-cd87-4f42-b3f1-d26aa8312bf7
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 013efa03767302144e7c54967b6aee8b9230d661
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4f9ee8851ce00c429ba277dd6e0be3286284f548
+ms.sourcegitcommit: aaa42f26c68abc2de10eb58444fe6b490c174eab
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136660"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74307989"
 ---
 # <a name="return-data-from-a-stored-procedure"></a>Retornar dados de um procedimento armazenado
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Há três formas de retornar dados de um procedimento para um programa de chamada: conjuntos de resultados, parâmetros de saída e códigos de retorno. Este tópico fornece informações sobre as três abordagens.  
   
-  ## <a name="returning-data-using-result-sets"></a>Retorno de dados usando conjuntos de resultados
- Se você incluir uma instrução SELECT no corpo de um procedimento armazenado (mas não uma SELECT... INTO ou INSERT... SELECT), as linhas especificadas pela instrução SELECT serão enviadas diretamente ao cliente.  Para grandes conjuntos de resultados a execução do procedimento armazenado não continuará na próxima instrução até que o conjunto de resultados seja completamente enviado ao cliente.  Para pequenos conjuntos de resultados, os resultados serão colocados em spool para retornar ao cliente e a execução continuará.  Se várias dessas instruções SELECT forem executadas durante a execução do procedimento armazenado, vários conjuntos de resultados serão enviados ao cliente.  Esse comportamento também se aplica a lotes de TSQL aninhados, procedimentos armazenados aninhados e lotes de TSQL de nível superior.
+## <a name="returning-data-using-result-sets"></a>Retorno de dados usando conjuntos de resultados
+Se você incluir uma instrução SELECT no corpo de um procedimento armazenado (mas não uma SELECT... INTO ou INSERT... SELECT), as linhas especificadas pela instrução SELECT serão enviadas diretamente ao cliente.  Para grandes conjuntos de resultados, a execução do procedimento armazenado não continuará na próxima instrução até que o conjunto de resultados seja completamente enviado ao cliente.  Para pequenos conjuntos de resultados, os resultados serão colocados em spool para retornar ao cliente e a execução continuará.  Se várias dessas instruções SELECT forem executadas durante a execução do procedimento armazenado, vários conjuntos de resultados serão enviados ao cliente.  Esse comportamento também se aplica a lotes de TSQL aninhados, procedimentos armazenados aninhados e lotes de TSQL de nível superior.
  
  
  ### <a name="examples-of-returning-data-using-a-result-set"></a>Exemplos de dados de retorno usando um conjunto de resultados 

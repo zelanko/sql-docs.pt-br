@@ -1,6 +1,7 @@
 ---
-title: Replicação de mesclagem avançada – detecção e resolução de conflito | Microsoft Docs
-ms.custom: ''
+title: Detecção e resolução de conflitos avançadas (mesclagem)
+description: Descubra métodos avançados de detecção e resolução de conflitos com a replicação de mesclagem.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 063d3d9c-ccb5-4fab-9d0c-c675997428b4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 08379ce20bfc58c0d6c17256ff8810421334cf1c
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: f90625c1aa123cf72b93ce815b02cccd7cedc78a
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874864"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321586"
 ---
 # <a name="advanced-merge-replication---conflict-detection-and-resolution"></a>Replicação de mesclagem avançada – detecção e resolução de conflito
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +100,7 @@ Resolver conflitos de replicação de mesclagem
   
 -   Resolvedor personalizado baseado em COM  
   
-     A replicação de mesclagem founece uma API para escrever resolvedoues como objetos COM em linguagens, como [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] ou [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]. Para obter mais informações, consulte [COM-Based Custom Resolvers](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md).  
+     A replicação de mesclagem fornece uma API para escrever resolvedores como objetos COM em linguagens como [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] ou [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]. Para obter mais informações, consulte [COM-Based Custom Resolvers](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md).  
   
 -   Resolvedor baseado em COM fornecido pela [!INCLUDE[msCoName](../../../includes/msconame-md.md)].  
   

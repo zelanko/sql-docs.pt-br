@@ -1,6 +1,7 @@
 ---
-title: Caixa de diálogo Propriedades do Distribuidor de Replicação do SQL Server | Microsoft Docs
-ms.custom: ''
+title: caixa de diálogo Propriedades do Distribuidor
+description: Descreve as diferentes páginas da caixa de diálogo 'Propriedades do Distribuidor' do SSMS (SQL Server Management Studio).
+ms.custom: seo-lt-2019
 ms.date: 11/20/2018
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,12 +16,12 @@ ms.assetid: f643c7c3-f238-4835-b81e-2c2b3b53b23f
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7a14ded4a0d86973b6e267d35b505aa21e5d8629
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 4ab407b34e86cc95f12467230c9bc9e5d7ef4e20
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768581"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321753"
 ---
 # <a name="sql-server-replication-distributor-properties-dialog-box"></a>Caixa de diálogo Propriedades do Distribuidor de Replicação do SQL Server 
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -37,7 +38,7 @@ A página **Geral** da caixa de diálogo **Propriedades do Distribuidor** permit
   
  Clique no botão de propriedades ( **...** ) na grade de propriedades de **Bancos de dados** para iniciar a caixa de diálogo **Propriedades do Banco de Dados de Distribuição** .  
   
- **Nova**  
+ **Novo**  
  Clique para criar um novo banco de dados de distribuição.  
   
  **Delete (excluir)**  
@@ -53,7 +54,7 @@ A página **Publicadores** da caixa de diálogo **Propriedades do Distribuidor**
  Selecione os servidores que têm permissão para usar esse Distribuidor. Clique no botão **(...)** próximo ao Publicador para exibir e definir propriedades adicionais.  
   
  **Adicionar**  
- Se o servidor que você deseja permitir não estiver na lista, clique em **Adicionar** para adicionar um Editor [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou um Editor Oracle à lista de Publicadores disponíveis. Se o servidor que você adicionar for o primeiro a usar esse Distribuidor como remoto, você será solicitado a fornecer uma senha de vínculo administrativo.  
+ Se o servidor que você deseja permitir não estiver listado, clique em **Adicionar** para adicionar um Publicador do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou um Publicador Oracle à lista de Publicadores disponíveis. Se o servidor que você adicionar for o primeiro a usar esse Distribuidor como remoto, você será solicitado a fornecer uma senha de vínculo administrativo.  
   
  **Senha de vínculo administrativo**  
  Use para especificar ou atualizar a senha para a conexão que a replicação faz entre o Publicador e o Distribuidor remoto, usando o logon: **distributor_admin** .  

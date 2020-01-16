@@ -1,6 +1,7 @@
 ---
-title: Adicionar e remover artigos de publicações existentes | Microsoft Docs
-ms.custom: ''
+title: Adicionar e remover artigos (publicação existente)
+description: Saiba como adicionar artigos às publicações existentes do SQL Server e como remover artigos delas.
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -20,12 +21,12 @@ ms.assetid: b148e907-e1f2-483b-bdb2-59ea596efceb
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 5432d4456bf20f73a799726edd53e31f8707a067
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: e996ccfd6f6930b4741f15b3da82c1f2856bd4db
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907796"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321313"
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>Adicionar e remover artigos de publicações existentes
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "72907796"
   
     -   [Adicionar e remover artigos em uma publicação &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-a-publication.md)  
   
-    -   [Definir um Artigo](../../../relational-databases/replication/publish/define-an-article.md)  
+    -   [Defina um Artigo](../../../relational-databases/replication/publish/define-an-article.md)  
   
 2.  Após adicionar um artigo a uma publicação, é necessário criar um novo instantâneo para a publicação (e todas as partições se for uma publicação de mesclagem com filtros com parâmetros). O Agente de Distribuição ou o Agente de Mesclagem então copiará o esquema e os dados para o novo artigo para o Assinante (ele não reinicializa a publicação inteira).  
   
@@ -51,9 +52,9 @@ ms.locfileid: "72907796"
   
 3.  Depois que o instantâneo é criado, sincronize a assinatura para copiar o esquema e os dados para o novo artigo.  
 
-    -   Para sincronizar uma assinatura push, consulte [Sincronizar uma assinatura push](../../../relational-databases/replication/synchronize-a-push-subscription.md).  
+    -   Para sincronizar uma assinatura push, consulte [Synchronize a Push Subscription](../../../relational-databases/replication/synchronize-a-push-subscription.md).  
   
-    -   Para sincronizar uma assinatura pull, consulte [Sincronizar uma assinatura pull](../../../relational-databases/replication/synchronize-a-pull-subscription.md).  
+    -   Para sincronizar uma assinatura pull, consulte [Synchronize a Pull Subscription](../../../relational-databases/replication/synchronize-a-pull-subscription.md).  
   
 ## <a name="dropping-articles"></a>descartando artigos  
  Os artigos podem ser descartados de uma publicação a qualquer hora, mas é necessário levar em conta os seguintes comportamentos:  

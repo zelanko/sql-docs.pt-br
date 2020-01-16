@@ -1,7 +1,9 @@
 ---
-title: CREATE DATABASE AUDIT SPECIFICATION (Transact-SQL) | Microsoft Docs
-ms.custom: ''
-ms.date: 04/04/2017
+title: CREATE DATABASE AUDIT SPECIFICATION
+description: Crie um objeto de especificação de auditoria do banco de dados usando o recurso de auditoria do SQL Server.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
+ms.date: 01/03/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -22,19 +24,19 @@ helpviewer_keywords:
 ms.assetid: 0544da48-0ca3-4a01-ba4c-940e23dc315b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e1340fd34fe452babf96a3bcd7fcd205a0aa85b6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 98dce9206326c51f5ae721903b93ea287afa992a
+ms.sourcegitcommit: 34d28d49e8d0910cf06efda686e2d73059569bf8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68060995"
+ms.lasthandoff: 01/04/2020
+ms.locfileid: "75656643"
 ---
 # <a name="create-database-audit-specification-transact-sql"></a>CREATE DATABASE AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Cria um objeto de especificação de auditoria de banco de dados usando o recurso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit. Para obter mais informações, veja [Auditoria do SQL Server &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -82,7 +84,7 @@ CREATE DATABASE AUDIT SPECIFICATION audit_specification_name
  WITH ( STATE = { ON | OFF } )  
  Habilita ou desabilita a auditoria de registros de coleta para essa especificação de auditoria.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  As especificações de auditoria de banco de dados são objetos não protegidos que residem em um determinado banco de dados. Quando uma especificação de auditoria de banco de dados é criada, ela fica em um estado desabilitado.  
   
 ## <a name="permissions"></a>Permissões  
@@ -92,8 +94,8 @@ CREATE DATABASE AUDIT SPECIFICATION audit_specification_name
   
 ## <a name="examples"></a>Exemplos
 
-### <a name="a-audit-select-and-insert-on-a-table-for-any-database-principal"></a>A. Auditar SELECT e INSERT em uma tabela para qualquer entidade de segurança do banco de dados 
- O exemplo a seguir cria uma auditoria de servidor denominada `Payrole_Security_Audit` e, em seguida, uma especificação de auditoria de banco de dados denominada `Payrole_Security_Audit` que audita as instruções `SELECT` e `INSERT` por qualquer usuário `public`, para a tabela `HumanResources.EmployeePayHistory` no banco de dados `AdventureWorks2012`.  
+### <a name="a-audit-select-and-insert-on-a-table-for-any-database-principal"></a>a. Auditar SELECT e INSERT em uma tabela para qualquer entidade de segurança do banco de dados 
+ O exemplo a seguir cria uma auditoria de servidor chamada `Payrole_Security_Audit` e, em seguida, uma especificação de auditoria de banco de dados chamada `Payrole_Security_Audit` que audita instruções `SELECT` e `INSERT` pelo usuário `dbo`, para a tabela `HumanResources.EmployeePayHistory` no banco de dados `AdventureWorks2012`.  
   
 ```  
 USE master ;  
@@ -119,7 +121,7 @@ WITH (STATE = ON) ;
 GO  
 ``` 
 
-### <a name="b-audit-any-dml-insert-update-or-delete-on-all-objects-in-the-sales-schema-for-a-specific-database-role"></a>B. Faça a auditoria de qualquer DML (INSERT, UPDATE ou DELETE) em _todos_ os objetos no esquema _vendas_ para uma função de banco de dados específica  
+### <a name="b-audit-any-dml-insert-update-or-delete-on-_all_-objects-in-the-_sales_-schema-for-a-specific-database-role"></a>B. Faça a auditoria de qualquer DML (INSERT, UPDATE ou DELETE) em _todos_ os objetos no esquema _vendas_ para uma função de banco de dados específica  
  O exemplo a seguir cria uma auditoria de servidor denominada `DataModification_Security_Audit` e, em seguida, uma especificação de auditoria de banco de dados chamada `Audit_Data_Modification_On_All_Sales_Tables` que audita instruções `INSERT`, `UPDATE` e `DELETE` por usuários em uma nova função de banco de dados `SalesUK`, para todos os objetos no esquema `Sales` no banco de dados `AdventureWorks2012`.  
   
 ```  

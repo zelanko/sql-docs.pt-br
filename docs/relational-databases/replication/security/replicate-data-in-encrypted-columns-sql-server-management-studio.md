@@ -1,6 +1,7 @@
 ---
-title: Replicar dados em colunas criptografadas (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Replicar colunas criptografadas (SSMS)
+description: Saiba como replicar dados em colunas criptografadas usando o SSMS (SQL Server Management Studio).
+ms.custom: seo-lt-2019
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,12 +16,12 @@ ms.assetid: d1f8f586-e5a3-4a71-9391-11198d42bfa3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: cbaf7db0d5c0e4588f22d0048c96e1f7c88d87b0
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 740c66805b7f1e204604f3747882faa843e638b4
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907436"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321643"
 ---
 # <a name="replicate-data-in-encrypted-columns-sql-server-management-studio"></a>Replicar dados em colunas criptografadas (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -62,7 +63,7 @@ ms.locfileid: "72907436"
   
 6.  Assine a publicação. Para obter mais informações, consulte [Criar uma assinatura pull](../../../relational-databases/replication/create-a-pull-subscription.md) ou [Criar uma assinatura push](../../../relational-databases/replication/create-a-push-subscription.md).  
   
-7.  Inicialize a assinatura. Para obter mais informações, consulte [Create and Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
+7.  Inicialize a assinatura. Para obter mais informações, consulte [Criar e aplicar o instantâneo inicial](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
 8.  No Assinante, execute [CREATE SYMMETRIC KEY](../../../t-sql/statements/create-symmetric-key-transact-sql.md) usando os mesmos valores para ALGORITHM, KEY_SOURCE, e IDENTITY_VALUE da etapa 1. Você pode especificar um valor diferente para ENCRYPTION BY.  
   

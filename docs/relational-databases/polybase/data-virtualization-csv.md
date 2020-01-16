@@ -1,20 +1,21 @@
 ---
-title: Virtualizar dados externos no SQL Server 2019 CTP 2.0 | Microsoft Docs
+title: 'Virtualizar dados externos: CSV (valores separados por vírgula)'
 description: Esta página fornece detalhes sobre as etapas para usar o assistente criar tabela externa para um arquivo CSV
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
-ms.date: 06/26/2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6a8ce50e4e359c8ce8dc2b0015300f9a7afb88d1
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.metadata: seo-lt-2019
+ms.openlocfilehash: b1bb5f2e807731e1020729e045c017b6f1524ae1
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710604"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75256174"
 ---
 # <a name="use-the-external-table-wizard-with-csv-files"></a>Usar o Assistente de Tabela Externa com arquivos CSV
 
@@ -22,7 +23,7 @@ O SQL Server 2019 também permite a capacidade de virtualizar os dados de um arq
 
 ## <a name="prerequisite"></a>Pré-requisito
 
-No CTP 2.4 em diante, as fontes de dados externas do pool de dados e do pool de armazenamento não são mais criadas por padrão no cluster de Big Data. Antes de usar o assistente, crie a fonte de dados externa **SqlStoragePool** padrão no banco de dados de destino com a consulta Transact-SQL a seguir. Primeiro altere o contexto da consulta para o banco de dados de destino.
+As fontes de dados externas do pool de dados e do pool de armazenamento não são criadas em um banco de dados por padrão no cluster de Big Data. Antes de usar o assistente, crie a fonte de dados externa **SqlStoragePool** padrão no banco de dados de destino com a consulta Transact-SQL a seguir. Primeiro altere o contexto da consulta para o banco de dados de destino.
 
 ```sql
 -- Create default data sources for SQL Big Data Cluster

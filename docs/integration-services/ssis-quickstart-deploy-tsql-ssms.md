@@ -8,12 +8,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 20285fed8ca477eb95d04ee60b6a3283d2028b97
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: b854e6c7db8bb042ced1c883e17fb4ac6d484fe7
+ms.sourcegitcommit: ef830f565ee07dc7d4388925cc3c86c5d2cfb4c7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71281497"
+ms.lasthandoff: 12/09/2019
+ms.locfileid: "74947088"
 ---
 # <a name="deploy-an-ssis-project-from-ssms-with-transact-sql"></a>Implantar um projeto do SSIS por meio do SSMS com o Transact-SQL
 
@@ -39,13 +39,17 @@ Você não pode usar as informações neste guia de início rápido para implant
 
 Você não pode usar as informações neste guia de início rápido para implantar um pacote do SSIS no SQL Server em Linux. Para obter mais informações sobre como executar pacotes no Linux, veja [Extrair, transformar e carregar dados no Linux com o SSIS](../linux/sql-server-linux-migrate-ssis.md).
 
+## <a name="supported-authentication-method"></a>Método de autenticação compatível
+
+Confira [métodos de autenticação para implantação](ssis-quickstart-deploy-ssms.md#authentication-methods-for-deployment).
+
 ## <a name="connect-to-the-ssis-catalog-database"></a>Conectar-se ao banco de dados de Catálogo do SSIS
 
 Use o SQL Server Management Studio para estabelecer uma conexão com o Catálogo do SSIS. 
 
 1. Abra o SQL Server Management Studio.
 
-2. Na caixa de diálogo **Conectar-se ao Servidor**, insira as seguintes informações:
+2. Na caixa de diálogo **Conectar ao Servidor**, insira as informações a seguir:
 
    | Configuração       | Valor sugerido | Obter mais informações | 
    | ------------ | ------------------ | ------------------------------------------------- | 
@@ -53,11 +57,12 @@ Use o SQL Server Management Studio para estabelecer uma conexão com o Catálogo
    | **Nome do servidor** | O nome do servidor totalmente qualificado |  |
    | **Autenticação** | Autenticação do SQL Server | |
    | **Logon** | A conta do administrador do servidor | Essa é a conta que você especificou quando criou o servidor. |
-   | **Senha** | A senha de sua conta do administrador do servidor | Essa é a senha que você especificou quando criou o servidor. |
+   | **Senha** | A senha para sua conta do administrador do servidor | Essa é a senha que você especificou quando criou o servidor. |
 
 3. Clique em **Conectar**. A janela Pesquisador de Objetos será aberta no SSMS. 
 
 4. No Pesquisador de Objetos, expanda **Catálogos do Integration Services** e, em seguida, expanda **SSISDB** para exibir os objetos no banco de dados do Catálogo do SSIS.
+
 
 ## <a name="run-the-t-sql-code"></a>Executar o código T-SQL
 Execute o seguinte código Transact-SQL para implantar um projeto do SSIS.
@@ -91,7 +96,7 @@ EXEC catalog.deploy_project @folder_name = '<target_folder>',
     - [Implantar um pacote do SSIS por meio do prompt de comando](./ssis-quickstart-deploy-cmdline.md)
     - [Implantar um pacote do SSIS com o PowerShell](ssis-quickstart-deploy-powershell.md)
     - [Implantar um pacote do SSIS com o C#](./ssis-quickstart-deploy-dotnet.md) 
-- Execute um pacote implantado. Para executar um pacote, você pode escolher uma entre várias ferramentas e linguagens. Para saber mais, veja os tópicos a seguir:
+- Execute um pacote implantado. Para executar um pacote, você pode escolher uma entre várias ferramentas e linguagens. Para obter mais informações, confira os seguintes artigos:
     - [Executar um pacote do SSIS com o SSMS](./ssis-quickstart-run-ssms.md)
     - [Executar um pacote do SSIS com o Transact-SQL (SSMS)](./ssis-quickstart-run-tsql-ssms.md)
     - [Executar um pacote do SSIS com o Transact-SQL (VS Code)](ssis-quickstart-run-tsql-vscode.md)

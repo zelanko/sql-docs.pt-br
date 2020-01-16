@@ -1,6 +1,7 @@
 ---
-title: Comparar tabelas replicadas para descobrir diferenças (Programação de replicação) | Microsoft Docs
-ms.custom: ''
+title: Comparar diferenças entre tabelas replicadas (SP de replicação)
+description: Use os procedimentos armazenados de replicação para comparar as diferenças entre as tabelas replicadas no Publicador e no Assinante.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -16,14 +17,14 @@ ms.assetid: cd253a17-0c85-42b4-912c-690169ebe799
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: a36c825a01d9c205732636bbd91e40dc322e546d
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 586b816282fff5586d3058cf9567a7d4c4466e29
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770806"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322122"
 ---
-# <a name="compare-replicated-tables-for-differences-replication-programming"></a>Comparar tabelas replicadas para descobrir diferenças (Programação de replicação)
+# <a name="compare-differences-between-replicated-tables-replication-programming"></a>Comparar diferenças entre tabelas replicadas (programação de replicação)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   A validação de artigo é usada para determinar se os dados publicados em artigos de tabelas no Publicador e no Assinante não são idênticos, pois isso poderia indicar não convergência. Para obter mais informações, consulte [Validar os dados replicados](../../../relational-databases/replication/validate-data-at-the-subscriber.md). Entretanto, a validação apenas retorna informações que passaram ou falharam e não fornece informação sobre qual é a diferença entre as tabelas de origem e de destino. O utilitário de prompt de comando **tablediff** retorna informações detalhadas sobre a diferença entre duas tabelas e pode até gerar um script [!INCLUDE[tsql](../../../includes/tsql-md.md)] para fazer convergir a assinatura com os dados no Publicador.  
   
@@ -45,7 +46,7 @@ ms.locfileid: "68770806"
     -   (Opcional) **-sourceuser** e **-sourcepassword** quando usar a Autenticação do SQL Server para se conectar ao Publicador.  
   
         > [!IMPORTANT]  
-        >  Quando possível, use a Autenticação do Windows. Se você precisa usar Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , solicite aos usuários para entrar com credenciais de segurança em tempo de execução. Se for necessário armazenar credenciais em um arquivo de script, você deverá proteger o arquivo para impedir acesso não autorizado.  
+        >  Quando possível, use a Autenticação do Windows. Se você precisa usar Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , solicite aos usuários para entrar com credenciais de segurança em runtime. Se for necessário armazenar credenciais em um arquivo de script, você deverá proteger o arquivo para impedir acesso não autorizado.  
   
     -   **- destinationserver** - nome do servidor no qual os dados estão sendo comparados, normalmente um Assinante.  
   
@@ -58,7 +59,7 @@ ms.locfileid: "68770806"
     -   (Opcional) **- destinationuser** e **- destinationpassword** ao usar Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para conectar ao Assinante.  
   
         > [!IMPORTANT]  
-        >  Quando possível, use a Autenticação do Windows. Se você precisa usar Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , solicite aos usuários para entrar com credenciais de segurança em tempo de execução. Se for necessário armazenar credenciais em um arquivo de script, você deverá proteger o arquivo para impedir acesso não autorizado.  
+        >  Quando possível, use a Autenticação do Windows. Se você precisa usar Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , solicite aos usuários para entrar com credenciais de segurança em runtime. Se for necessário armazenar credenciais em um arquivo de script, você deverá proteger o arquivo para impedir acesso não autorizado.  
   
     -   (Opcional) Use **- c** para fazer uma comparação no nível de coluna.  
   

@@ -1,6 +1,7 @@
 ---
-title: Verificar o subsistema de entrada e saída de disco quanto a problemas de repetição de leitura | Microsoft Docs
-ms.custom: ''
+title: 'Verificar o subsistema de E/S do disco em busca de problemas de repetição de leitura: gerenciamento baseado em políticas'
+description: Essa regra verifica o log de eventos em busca da mensagem de erro 825 do SQL Server, que indica que o SQL Server não pôde ler os dados do disco na primeira tentativa.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cedf4097-5b73-4964-9935-74a101847019
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1540314e6dfe9370cd11b7638e003b5e230c32d2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0f894452dd056cf0e613100a5d1a7ee2d5e9ae0c
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68109930"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558182"
 ---
 # <a name="check-disk-input-output-subsystem-for-read-retry-problems"></a>Verificar o subsistema de entrada e saída de disco para problemas de repetição de leitura
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

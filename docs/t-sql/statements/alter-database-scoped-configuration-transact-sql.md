@@ -1,6 +1,8 @@
 ---
-title: ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: ALTER DATABASE SCOPED CONFIGURATION
+description: Habilita várias definições de configuração de banco de dados no nível do banco de dados individual.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 10/31/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -21,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a503851bf6e5bac2556560fc9bfd3f120e808aa3
-ms.sourcegitcommit: 27c267bf2a3cfaf2abcb5f3777534803bf4cffe5
+ms.openlocfilehash: 9547eaae31787dc01946b8dfd2d2d43781b5a8af
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73240699"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258129"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -52,7 +54,7 @@ Essa instrução permite várias definições de configuração de banco de dado
 - Habilitar ou desabilitar a coleta do último plano de execução real em [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md).
 - Especifique o número de minutos que uma operação de índice retomável em pausa permanece assim antes de ser anulada automaticamente pelo mecanismo do SQL Server.
 
-![ícone de link](../../database-engine/configure-windows/media/topic-link.gif "ícone de link") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link](../../database-engine/configure-windows/media/topic-link.gif "ícone de link") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -128,7 +130,7 @@ Para definir essa opção no nível da instância, confira [Configurar a opção
 > No [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], a configuração de **grau máximo de paralelismo** em nível de servidor é sempre definida como 0. MAXDOP pode ser configurado para cada banco de dados, conforme descrito no artigo atual. Para obter recomendações sobre como configurar o MAXDOP de forma ideal, consulte a seção [Recursos Adicionais](#additional-resources).
 
 > [!TIP]
-> Para fazer isso no nível da consulta, use a [dica de consulta](../../t-sql/queries/hints-transact-sql-query.md) do **MAXDOP**.    
+> Para fazer isso no nível da consulta, use o **MAXDOP**, [dica de consulta](../../t-sql/queries/hints-transact-sql-query.md).    
 > Para fazer isso no nível do servidor, use o **MAXDOP (grau máximo de paralelismo)** na [opção de configuração do servidor](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).     
 > Para fazer isso no nível de carga de trabalho, use a [opção de configuração de grupo de carga de trabalho do Resource Governor](../../t-sql/statements/create-workload-group-transact-sql.md) **MAX_DOP**.    
 
@@ -141,7 +143,7 @@ LEGACY_CARDINALITY_ESTIMATION **=** { ON | **OFF** | PRIMARY }
 Permite que você defina o modelo de estimativa de cardinalidade do otimizador de consulta para o SQL Server 2012 e versões anteriores independentemente do nível de compatibilidade do banco de dados. O padrão é **OFF**, que define o modelo de estimativa de cardinalidade do otimizador de consulta com base no nível de compatibilidade do banco de dados. Configurar LEGACY_CARDINALITY_ESTIMATION como **ON** equivale a habilitar [Sinalizador de Rastreamento 9481](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 
 > [!TIP]
-> Para fazer isso no nível da consulta, adicione a [dica de consulta](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) **QUERYTRACEON**.
+> Para fazer isso no nível da consulta, adicione a [dica de consulta](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) do **QUERYTRACEON**.
 > Começando com o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, para fazer isso no nível da consulta, adicione a [dica de consulta](../../t-sql/queries/hints-transact-sql-query.md#use_hint) **USE HINT** em vez de usar o sinalizador de rastreamento.
 
 PRIMARY
@@ -165,7 +167,7 @@ Esse valor só é válido nos secundários enquanto o banco de dados está no pr
 Habilita ou desabilita os hotfixes de otimização de consulta, independentemente do nível de compatibilidade do banco de dados. O padrão é **OFF**, que desabilita os hotfixes de otimização de consulta que foram lançados depois que o nível de compatibilidade mais alto disponível foi introduzido para uma versão específica de (pós-RTM). Definir como **ON** equivale a habilitar o [sinalizador de rastreamento 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 
 > [!TIP]
-> Para fazer isso no nível da consulta, adicione a [dica de consulta](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) **QUERYTRACEON**.
+> Para fazer isso no nível da consulta, adicione a [dica de consulta](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) do **QUERYTRACEON**.
 > Começando com o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, para fazer isso no nível da consulta, adicione a [dica de consulta](../../t-sql/queries/hints-transact-sql-query.md#use_hint) USE HINT em vez de usar o sinalizador de rastreamento.
 
 PRIMARY
@@ -430,7 +432,7 @@ O Modo de Exibição do Sistema [sys.database_scoped_configurations &#40;Transac
 
 Esses exemplos demonstram o uso de ALTER DATABASE SCOPED CONFIGURATION
 
-### <a name="a-grant-permission"></a>A. Conceder permissão
+### <a name="a-grant-permission"></a>a. Conceder permissão
 
 Este exemplo concede a permissão necessária para executar ALTER DATABASE SCOPED CONFIGURATION ao usuário José.
 

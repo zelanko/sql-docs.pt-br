@@ -1,6 +1,7 @@
 ---
-title: 'Tutorial: Configurar a replicação entre dois servidores totalmente conectados (Transacional) | Microsoft Docs'
-ms.custom: ''
+title: 'Tutorial: Configurar a replicação transacional'
+description: Este tutorial ensina a configurar a replicação transacional entre dois SQL Servers totalmente conectados.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f85dfc4a05b8affad4ef814c1871f504d619cdb8
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 603846718e4e21c7af8ee81d94210d12242c35c7
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907712"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321923"
 ---
 # <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>Tutorial: Configurar a replicação entre dois servidores totalmente conectados (transacional)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +50,7 @@ Para concluir este tutorial, são necessários o SQL Server, o SSMS (SQL Server 
   
 - No servidor do assinante (destino), instale qualquer edição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], exceto [!INCLUDE[ssEW](../../includes/ssew-md.md)]. [!INCLUDE[ssEW](../../includes/ssew-md.md)] não pode ser um assinante em uma replicação transacional.  
   
-- Instalar o [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Instale o [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 - Instale o [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 - Baixe o [banco de dados de exemplo do AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases). Para obter instruções sobre como restaurar um banco de dados no SSMS, veja [Como restaurar um banco de dados](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
  
@@ -93,7 +94,7 @@ Nesta seção, você criará uma publicação transacional usando o [!INCLUDE[ss
   
    ![Página "Filtrar fluxos de tabela" e caixa de diálogo "Adicionar Filtro"](media/tutorial-replicating-data-between-continuously-connected-servers/filter.png)
   
-8. Selecione **OK**e selecione **Avançar**.  
+8. Selecione **OK** e, em seguida, selecione **Avançar**.  
   
 9. Marque a caixa de seleção **Criar um instantâneo imediatamente e mantê-lo disponível para inicializar assinaturas** e selecione **Avançar**:  
 
@@ -105,7 +106,7 @@ Nesta seção, você criará uma publicação transacional usando o [!INCLUDE[ss
 
     ![Página "Segurança do Agente" e caixa de diálogo "Segurança do Agente de Instantâneo"](media/tutorial-replicating-data-between-continuously-connected-servers/snapshotagentsecurity.png)
   
-12. Repita a etapa anterior para definir <*Nome_do_Computador_do_Editor*> **\repl_logreader** como a conta de processo do Agente de Leitor de Log. Em seguida, selecione **OK**.  
+12. Repita a etapa anterior para definir <*Nome_do_Computador_do_Editor*> **\repl_logreader** como a conta de processo do Agente de Leitor de Log. Depois, selecione **OK**.  
 
     ![Caixa de diálogo "Segurança do Agente de Leitor de Log" e página "Segurança do Agente"](media/tutorial-replicating-data-between-continuously-connected-servers/logreaderagentsecurity.png)   
 
@@ -144,8 +145,8 @@ Se encontrar um erro aqui, confira [Solução de problemas de erro com o Agente 
   
 2. Na pasta **Publicações Locais**, clique com o botão direito do mouse em **AdvWorksProductTrans** e, em seguida, selecione **Propriedades**.  A caixa de diálogo **Propriedades da Publicação** é exibida.    
   
-   A. Selecione a página **Lista de Acesso à Publicação** e **Adicionar**.  
-   B. Na caixa de diálogo **Adicionar Acesso à Publicação**, selecione <*Nome_do_Computador_do_Editor*> **\repl_distribution** e selecione **OK**.
+   a. Selecione a página **Lista de Acesso à Publicação** e **Adicionar**.  
+   b. Na caixa de diálogo **Adicionar Acesso à Publicação**, selecione <*Nome_do_Computador_do_Editor*> **\repl_distribution** e selecione **OK**.
    
    ![Seleções para adicionar o logon à lista de acesso à publicação](media/tutorial-replicating-data-between-continuously-connected-servers/tranreplproperties.png)
 
@@ -191,9 +192,9 @@ Nesta seção, você adicionará um assinante à Publicação criada anteriormen
   
 1. Conecte-se ao assinante no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Expanda **Segurança**, clique com o botão direito do mouse em **Logons** e, em seguida, selecione **Novo Logon**.     
   
-   A. Na página **Geral**, em **Nome de Logon**, selecione **Pesquisar** e adicione o logon a <*Subscriber_Machine_Name*> **\repl_distribution**.
+   a. Na página **Geral**, em **Nome de Logon**, selecione **Pesquisar** e adicione o logon a <*Subscriber_Machine_Name*> **\repl_distribution**.
 
-   B. Na página **Mapeamentos de Usuário**, conceda o logon de associação **db_owner** ao banco de dados **ProductReplica**. 
+   b. Na página **Mapeamentos de Usuário**, conceda o logon de associação **db_owner** ao banco de dados **ProductReplica**. 
 
    ![Seleções para configurar o logon no assinante](media/tutorial-replicating-data-between-continuously-connected-servers/loginforsub.png)
 
@@ -223,8 +224,8 @@ Nesta seção, você usará os tokens de rastreamento para verificar se as alter
 
 2. Expanda um grupo editor no painel esquerdo, expanda a instância de editor e, em seguida, selecione a publicação **AdvWorksProductTrans**.  
   
-   A. Selecione a guia **Tokens de Rastreamento**.  
-   B. Selecione **Inserir Rastreamento**.    
+   a. Selecione a guia **Tokens de Rastreamento**.  
+   b. Selecione **Inserir Rastreamento**.    
    c. Exibição de tempo decorrido para o token de rastreamento nas seguintes colunas: **Editor para Distribuidor**, **Distribuidor para Editor**, **Latência Total**. Um valor de **Pendente** indica que o token não alcançou determinado ponto.
 
    ![Informações para o token de rastreamento](media/tutorial-replicating-data-between-continuously-connected-servers/tracertoken.png)

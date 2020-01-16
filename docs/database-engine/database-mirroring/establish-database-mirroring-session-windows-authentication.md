@@ -1,6 +1,7 @@
 ---
-title: Estabelecer a sessão de espelhamento de banco de dados – Autenticação do Windows | Microsoft Docs
-ms.custom: ''
+title: Configurar o espelhamento de banco de dados (autenticação do Windows)
+description: Saiba como configurar uma sessão de espelhamento de banco de dados com a autenticação do Windows usando o SQL Server Management Studio.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7cb418d6-dce1-4a0d-830e-9c5ccfe3bd72
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6e778d9c02e9cc0a877ef0804b1e95772e5f51cc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f59dc7745f63b208b1a2a55361913a6eb290e08e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67997902"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75253578"
 ---
 # <a name="establish-database-mirroring-session---windows-authentication"></a>Estabelecer a sessão de espelhamento de banco de dados – Autenticação do Windows
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "67997902"
   
 -   O banco de dados espelho deve existir e ser atual.  
   
-     A criação de um banco de dados espelho requer a restauração de um backup recente do banco de dados principal (usando WITH NORECOVERY) na instância do servidor espelho. Requer também que, depois do backup completo, um ou mais backups de log sejam restaurados em sequência para o banco de dados espelho (usando WITH NORECOVERY). Para obter mais informações, consulte [Prepare a Mirror Database for Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
+     A criação de um banco de dados espelho requer a restauração de um backup recente do banco de dados principal (usando WITH NORECOVERY) na instância do servidor espelho. Requer também que, depois do backup completo, um ou mais backups de log sejam restaurados em sequência para o banco de dados espelho (usando WITH NORECOVERY). Para obter mais informações, veja [Preparar um banco de dados espelho para espelhamento &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
   
 -   Se as instâncias do servidor estiverem sendo executadas em contas de usuário de domínio diferentes, cada uma exigirá um logon no banco de dados **mestre** da outra. Se o logon não existir, você deverá criá-lo antes de configurar o espelhamento. Para obter mais informações, consulte [Permitir o acesso à rede a um ponto de extremidade de espelhamento de banco de dados usando a Autenticação do Windows &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-allow-network-access-windows-authentication.md).  
   
@@ -56,7 +57,7 @@ ms.locfileid: "67997902"
     > [!IMPORTANT]  
     >  Ao criar um ponto de extremidade, o Assistente para Configurar Segurança de Espelhamento de Banco de Dados sempre usa a Autenticação do Windows. Antes de você poder usar o assistente com autenticação baseada em certificado, o ponto de extremidade do espelhamento deve ser configurado para usar certificados em cada uma das instâncias do servidor. Além disso, todos os campos da caixa de diálogo **Contas de Serviço** do assistente devem permanecer em branco. Para obter informações sobre como criar um ponto de extremidade de espelhamento de banco de dados para usar certificados, veja [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md).  
   
-6.  Opcionalmente, altere o modo de operação. A disponibilidade de certos modos de operação depende da especificação de um endereço TCP para um servidor testemunha. As opções são as seguintes:  
+6.  Opcionalmente, altere o modo de operação. A disponibilidade de certos modos de operação depende da especificação de um endereço TCP para um servidor testemunha. As opções são as descritas a seguir:  
   
     |Opção|Testemunha?|Explicação|  
     |------------|--------------|-----------------|  

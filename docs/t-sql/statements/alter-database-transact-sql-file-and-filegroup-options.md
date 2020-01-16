@@ -1,6 +1,8 @@
 ---
-title: Opções de arquivo e grupos de arquivos de ALTER DATABASE (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: ALTER DATABASE de arquivo e grupo de arquivos
+description: Atualize os arquivos e grupos de arquivo de um banco de dados usando o Transact-SQL.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 02/21/2019
 ms.prod: sql
 ms.prod_service: sql-database
@@ -42,12 +44,12 @@ ms.assetid: 1f635762-f7aa-4241-9b7a-b51b22292b07
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 9c8c9e59e0234dc81fb9de9ded733d369dbdda4d
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: 0eae7e7f1a0a673138b58440ee9c5c8d0b6f20bc
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982842"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244427"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>Opções de arquivo e grupos de arquivos de ALTER DATABASE (Transact-SQL)
 
@@ -63,7 +65,7 @@ Na linha a seguir, clique em qualquer nome de produto de seu interesse. O clique
 
 |||
 |-|-|-|
-|**\* _SQL Server \*_** &nbsp;|[Instância gerenciada<br />do Banco de Dados SQL](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
+|**_\* SQL Server \*_** &nbsp;|[Instância gerenciada<br />do Banco de Dados SQL](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
 |||
 
 &nbsp;
@@ -137,7 +139,7 @@ REMOVE FILE *logical_file_name* Remove a descrição do arquivo lógico de uma i
 *logical_file_name* É o nome lógico usado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao fazer referência ao arquivo.
 
 > [!WARNING]
-> A remoção de um arquivo de banco de dados que tem backups de `FILE_SNAPSHOT` associados a ele terá êxito, mas os instantâneos associados não serão excluídos para evitar a anulação dos backups que referenciam o arquivo de banco de dados. O arquivo será truncado, mas não será fisicamente excluído para manter os backups de FILE_SNAPSHOT intactos. Para obter mais informações, veja [Backup e restauração do SQL Server com o Serviço de Armazenamento de Blobs do Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior).
+> A remoção de um arquivo de banco de dados que tem backups de `FILE_SNAPSHOT` associados a ele terá êxito, mas os instantâneos associados não serão excluídos para evitar a anulação dos backups que referenciam o arquivo de banco de dados. O arquivo será truncado, mas não será fisicamente excluído para manter os backups de FILE_SNAPSHOT intactos. Para obter mais informações, consulte [Backup e restauração do SQL Server com o serviço de Armazenamento de Blobs do Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior).
 
 MODIFY FILE Especifica o arquivo que deve ser modificado. Apenas uma propriedade \<filespec> pode ser alterada por vez. NAME sempre deve ser especificado em \<filespec> para identificar o arquivo a ser modificado. Se SIZE for especificado, o novo tamanho deverá ser maior que o tamanho do arquivo atual.
 
@@ -310,7 +312,7 @@ Como um banco de dados somente leitura não permite modificações de dados:
 - Não ocorrem bloqueios em bancos de dados somente leitura. Isso pode acelerar o desempenho das consultas.
 
 > [!NOTE]
-> A palavra-chave `READONLY` será removida em uma versão futura do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar `READONLY` em novos projetos de desenvolvimento e planeje modificar os aplicativos que utilizam `READONLY` atualmente. Em vez disso, use `READ_ONLY` .
+> A palavra-chave `READONLY` será removida em uma versão futura do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar `READONLY` em novos projetos de desenvolvimento e planeje modificar os aplicativos que utilizam `READONLY` atualmente. Use `READ_ONLY` em vez disso.
 
 READ_WRITE | READWRITE Especifica o grupo é READ_WRITE. As atualizações são habilitadas para os objetos no grupo de arquivos. Para alterar esse estado, é necessário ter acesso exclusivo ao banco de dados. Para obter mais informações, consulte a cláusula SINGLE_USER.
 
@@ -319,7 +321,7 @@ READ_WRITE | READWRITE Especifica o grupo é READ_WRITE. As atualizações são 
 > [!TIP]
 > O status dessas opções pode ser determinado examinando a coluna **is_read_only** na exibição do catálogo **sys.databases** ou a propriedade **Updateability** da função `DATABASEPROPERTYEX`.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Comentários
 
 Para diminuir o tamanho de um banco de dados, use [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).
 
@@ -336,7 +338,7 @@ Os parâmetros SIZE, MAXSIZE e FILEGROWTH não podem ser definidos quando um cam
 
 Os parâmetros SIZE e FILEGROWTH não podem ser definidos para grupos de arquivos otimizados para memória.
 
-A palavra-chave `READONLY` será removida em uma versão futura do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar `READONLY` em novos projetos de desenvolvimento e planeje modificar os aplicativos que utilizam READONLY no momento. Em vez disso, use `READ_ONLY` .
+A palavra-chave `READONLY` será removida em uma versão futura do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar `READONLY` em novos projetos de desenvolvimento e planeje modificar os aplicativos que utilizam READONLY no momento. Use `READ_ONLY` em vez disso.
 
 A palavra-chave `READWRITE` será removida em uma versão futura do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar `READWRITE` em um novo trabalho de desenvolvimento e planeje modificar os aplicativos que atualmente usam `READWRITE` para usar `READ_WRITE` em seu lugar.
 
@@ -375,7 +377,7 @@ Embora o contêiner FILESTREAM possa ter sido esvaziado por meio da operação "
 
 ## <a name="examples"></a>Exemplos
 
-### <a name="a-adding-a-file-to-a-database"></a>A. Adicionando um arquivo a um banco de dados
+### <a name="a-adding-a-file-to-a-database"></a>a. Adicionando um arquivo a um banco de dados
 
 O exemplo a seguir adiciona um arquivo de dados de 5 MB ao banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].
 
@@ -847,7 +849,7 @@ READ_WRITE | READWRITE Especifica o grupo é READ_WRITE. As atualizações são 
 
 O status dessas opções pode ser determinado examinando a coluna **is_read_only** na exibição do catálogo **sys.databases** ou a propriedade **Updateability** da função `DATABASEPROPERTYEX`.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Comentários
 
 Para diminuir o tamanho de um banco de dados, use [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).
 
@@ -857,7 +859,7 @@ Um máximo de 32.767 arquivos e 32.767 grupos de arquivos pode ser especificado 
 
 ## <a name="examples"></a>Exemplos
 
-### <a name="a-adding-a-file-to-a-database"></a>A. Adicionando um arquivo a um banco de dados
+### <a name="a-adding-a-file-to-a-database"></a>a. Adicionando um arquivo a um banco de dados
 
 O exemplo a seguir adiciona um arquivo de dados de 5 MB ao banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].
 

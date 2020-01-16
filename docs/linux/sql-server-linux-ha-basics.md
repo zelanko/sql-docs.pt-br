@@ -1,6 +1,7 @@
 ---
-title: Noções básicas de disponibilidade do SQL Server para implantações do Linux
-description: ''
+title: Alta disponibilidade do SQL Server para implantações do Linux
+description: Saiba mais sobre as diferentes opções de alta disponibilidade disponíveis para o SQL Server em Linux, como grupos de disponibilidade Always On, FCI (instâncias de cluster de failover) e envio de logs.
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -8,12 +9,12 @@ ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: d597033e6ad09a735e621518883cedda6bef29a2
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 474533a69d74512e3e305f44d96f90009aa64e00
+ms.sourcegitcommit: 34d28d49e8d0910cf06efda686e2d73059569bf8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75243594"
+ms.lasthandoff: 01/04/2020
+ms.locfileid: "75656604"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Noções básicas de disponibilidade do SQL Server para implantações do Linux
 
@@ -57,7 +58,7 @@ Esta seção aborda as tarefas comuns a todas as implantações do [!INCLUDE[ssn
 Copiar arquivos de um servidor para outro é uma tarefa que qualquer pessoa que use o [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] no Linux deve ser capaz de fazer. Essa tarefa é muito importante para as configurações do AG.
 
 Aspectos como problemas de permissão podem existir no Linux, bem como em instalações baseadas no Windows. No entanto, aqueles familiarizados com a cópia do servidor para o servidor no Windows podem não saber como isso ele é feito no Linux. Um método comum é usar o utilitário `scp` de linha de comando, que representa a cópia segura. Nos bastidores, `scp` o usa o OpenSSH. SSH significa Secure Shell. Dependendo da distribuição do Linux, o OpenSSH pode não estar instalado. Se não estiver, o OpenSSH precisará ser instalado primeiro. Para obter mais informações sobre como configurar o OpenSSH, confira as informações nos links a seguir para cada distribuição:
--   [Red Hat Enterprise Linux (RHEL)](https://access.redhat.com/documentation/red_hat_enterprise_linux/6/html/deployment_guide/ch-openssh)
+-   [Red Hat Enterprise Linux (RHEL)](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/deployment_guide/ch-openssh)
 -   [SUSE Linux Enterprise Server (SLES)](https://en.opensuse.org/SDB:Configure_openSSH)
 -   [Ubuntu](https://help.ubuntu.com/community/SSH/OpenSSH/Configuring)
 
@@ -116,7 +117,7 @@ sudo firewall-cmd --permanent --add-service=high-availability
 ```
 
 **Documentação do firewall:**
--   [RHEL](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-firewalls-haar)
+-   [RHEL](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-firewalls-haar)
 -   [SLES](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html)
 
 ### <a name="install-includessnoversion-mdincludesssnoversion-mdmd-packages-for-availability"></a>Instalar pacotes do [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] para disponibilidade

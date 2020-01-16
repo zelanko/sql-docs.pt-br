@@ -1,6 +1,7 @@
 ---
-title: Iniciar e interromper um agente de replicação (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Iniciar ou parar um agente de replicação (SSMS)
+description: Saiba como iniciar e parar um agente de replicação no SQL Server Management Studio e no Replication Monitor.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,16 +15,16 @@ ms.assetid: 97977c4a-8c7c-4a22-9480-69aa812bd1e5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 339da4b5d9112aa10aa52e12c8a39f6a2adaa30b
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 70f876d9152e836e12ad0c28e640362b23197190
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770698"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321615"
 ---
 # <a name="start-and-stop-a-replication-agent-sql-server-management-studio"></a>Iniciar e interromper um Agente de Replicação (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  Inicie e pare os agentes nas pastas **Trabalhos** e **Replicação** no [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] e do Replication Monitor. Inicie e pare os seguintes agentes e trabalhos:  
+  Inicie e pare os agentes nas pastas **Trabalhos** e **Replicação** do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] e do Replication Monitor. Inicie e pare os seguintes agentes e trabalhos:  
   
 -   O Agente de Instantâneo, que é usado por todas as publicações.  
   
@@ -53,7 +54,7 @@ ms.locfileid: "68770698"
   
 ### <a name="to-start-and-stop-a-queue-reader-agent-from-management-studio"></a>Para iniciar e parar um Agente de Leitor de Fila a partir do Management Studio  
   
-1.  Conecte-se ao Distribuidor no [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]e, em seguida, expanda o nó do servidor.  
+1.  Conecte-se ao Distribuidor no [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]e, em seguida, expanda o nó de servidor.  
   
 2.  Expanda a pasta **SQL Server Agent** e, em seguida, a pasta **Trabalhos** .  
   
@@ -70,6 +71,6 @@ ms.locfileid: "68770698"
 ## <a name="see-also"></a>Consulte Também  
  [Monitorando a Replicação](../../../relational-databases/replication/monitor/monitoring-replication.md)   
  [Conceitos dos executáveis do Agente de Replicação](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)   
- [Replication Agents Overview](../../../relational-databases/replication/agents/replication-agents-overview.md)  
+ [Visão geral dos agentes de replicação](../../../relational-databases/replication/agents/replication-agents-overview.md)  
   
   

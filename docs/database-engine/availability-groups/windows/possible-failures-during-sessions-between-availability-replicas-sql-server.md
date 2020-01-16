@@ -1,7 +1,7 @@
 ---
-title: Determinar o possível motivo de falhas de conectividade entre réplicas de disponibilidade
+title: Motivos para falhas de conectividade entre réplicas de disponibilidade
 description: Este tópico descreve os diferentes possíveis motivos de uma falha de conexão entre réplicas que participam de um Grupo de Disponibilidade AlwaysOn.
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: cd613898-82d9-482f-a255-0230a6c7d6fe
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8fe226c5d419d7214fe20968525ec64ce44bbee6
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: 501ec8bc3e7ad039e3864ce8a9a1767c6961848c
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874537"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75235651"
 ---
 # <a name="determine-possible-reason-for-connectivity-failures-between-availability-replicas"></a>"Determinar o possível motivo de falhas de conectividade entre réplicas de disponibilidade"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

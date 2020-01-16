@@ -1,6 +1,7 @@
 ---
-title: 'Tutorial: Preparar o SQL Server para replicação (editor, distribuidor, assinante) | Microsoft Docs'
-ms.custom: ''
+title: 'Tutorial: Preparar a replicação'
+description: Neste tutorial, saiba como preparar seu editor, distribuidor e assinante para replicação criando contas do Windows, preparando a pasta de instantâneo e configurando a distribuição.
+ms.custom: seo-lt-2019
 ms.date: 04/02/2018
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ce30a095-2975-4387-9377-94a461ac78ee
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: beb0c68b86521ce9a5b3463e8c959970297519fe
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 09d68b763d967b6bcea4853f40bfc2ee2694421b
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653827"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75320363"
 ---
 # <a name="tutorial-prepare-sql-server-for-replication-publisher-distributor-subscriber"></a>Tutorial: Preparar o SQL Server para replicação (editor, distribuidor, assinante)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +48,7 @@ Para concluir este tutorial, são necessários o SQL Server, o SSMS (SQL Server 
   
 - No servidor do assinante (destino), instale qualquer edição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], exceto [!INCLUDE[ssEW](../../includes/ssew-md.md)]. [!INCLUDE[ssEW](../../includes/ssew-md.md)] não pode ser um assinante em uma replicação transacional.  
   
-- Instalar o [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Instale o [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 - Instale o [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 - Baixe o [banco de dados de exemplo do AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases). Para obter instruções sobre como restaurar um banco de dados no SSMS, veja [Como restaurar um banco de dados](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
     
@@ -61,7 +62,7 @@ Para concluir este tutorial, são necessários o SQL Server, o SSMS (SQL Server 
 ## <a name="create-windows-accounts-for-replication"></a>Criar contas do Windows para replicação
 Nesta seção, você criará contas do Windows para executar os agentes de replicação. Você criará uma conta de Windows separada no servidor local para os seguintes agentes:  
   
-|Agente|Local|Nome da conta|  
+|Agente|Location|Nome da conta|  
 |---------|------------|----------------|  
 |Snapshot Agent|Publicador|<*machine_name*>\repl_snapshot|  
 |Agente de Leitor de Log|Publicador|<*machine_name*>\repl_logreader|  
@@ -116,9 +117,9 @@ Nesta seção, você configurará a pasta de instantâneos, usada para criar e a
   
 3. Clique com o botão direito do mouse nessa pasta e selecione **Propriedades**.  
   
-   A. Na guia **Compartilhamento** da caixa de diálogo **Propriedades de repldata**, selecione **Compartilhamento Avançado**.  
+   a. Na guia **Compartilhamento** da caixa de diálogo **Propriedades de repldata**, selecione **Compartilhamento Avançado**.  
   
-   B. Na caixa de diálogo **Compartilhamento Avançado**, selecione **Compartilhar esta Pasta** e, em seguida, selecione **Permissões**.  
+   b. Na caixa de diálogo **Compartilhamento Avançado**, selecione **Compartilhar esta Pasta** e, em seguida, selecione **Permissões**.  
 
    ![Seleções para compartilhar a pasta repldata](media/tutorial-preparing-the-server-for-replication/repldata.png)
 
@@ -188,7 +189,7 @@ A configuração de um editor com um distribuidor remoto está fora do escopo de
 
    ![Opção para fazer o servidor agir como seu próprio distribuidor](media/tutorial-preparing-the-server-for-replication/serverdistributor.png)
   
-4. Se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent não estiver em execução, na página Inicial do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Agent**, selecione **Sim[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para configurar o serviço**  Agent para ser iniciado automaticamente. Selecione **Avançar**.  
+4. Se o Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não estiver em execução, na página Inicial do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Agent**, selecione **Sim, configurar o serviço do Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para ser iniciado automaticamente**. Selecione **Avançar**.  
 
      
 5. Insira o caminho \\\\<*Nome_do_Computador_do_Editor*> **\repldata** na caixa de texto **Pasta de instantâneos** e, em seguida, selecione **Avançar**. Esse caminho deve corresponder ao que você viu anteriormente em **Caminho da Rede** para a pasta de propriedades de repldata depois de configurar as propriedades de compartilhamento. 

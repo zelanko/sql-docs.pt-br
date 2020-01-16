@@ -1,6 +1,6 @@
 ---
-title: Solução de problemas dos índices de hash para tabelas com otimização de memória | Microsoft Docs
-ms.custom: ''
+title: Solução de problemas de índices de hash – tabelas com otimização de memória
+ms.custom: seo-dt-2019
 ms.date: 12/01/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +11,12 @@ ms.assetid: e922cc3a-3d6e-453b-8d32-f4b176e98488
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 16e3ab81700ca9fed1870a6a98d0aab704b2c1db
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 6216e8e008bff92ce502aa6dda8025c5ef63f0ba
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909273"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412660"
 ---
 # <a name="troubleshooting-hash-indexes-for-memory-optimized-tables"></a>Solução de problemas dos índices de hash para tabelas com otimização de memória
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -113,8 +113,8 @@ O seguinte bloco de código T-SQL fornece uma maneira fácil de testar um `SELEC
   
 1. Cria uma tabela com otimização de memória com alguns índices de hash.  
 2. Preenche a tabela com milhares de linhas.  
-    A. Um operador de módulo é usado para configurar a taxa de valores duplicados na coluna StatusCode.  
-    B. O loop insere 262.144 linhas em aproximadamente 1 minuto.  
+    a. Um operador de módulo é usado para configurar a taxa de valores duplicados na coluna StatusCode.  
+    b. O loop insere 262.144 linhas em aproximadamente 1 minuto.  
 3. Imprime uma mensagem pedindo para executar o SELECT anterior de **sys.dm_db_xtp_hash_index_stats**.  
 
 ```sql

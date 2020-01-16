@@ -1,7 +1,7 @@
 ---
-title: Configurar o cluster do SLES para o Grupo de Disponibilidade do SQL Server
+title: 'SUSE: Configurar um grupo de disponibilidade para o SQL Server em Linux'
 titleSuffix: SQL Server
-description: Saiba como criar clusters de grupo de disponibilidade para o SQL Server no SLES (SUSE Linux Enterprise Server)
+description: Saiba como criar clusters de grupo de disponibilidade para o SQL Server no SLES (SUSE Linux Enterprise Server).
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -10,28 +10,28 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: a14ad2d77b21dba2fd14ea7856aa7199bc081bbe
-ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
+ms.openlocfilehash: 89f8616b13f80642a62922d9a1e1023f153b23cb
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/09/2019
-ms.locfileid: "70809822"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558435"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>Configurar o cluster do SLES para o Grupo de Disponibilidade do SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Este guia fornece instruções para criar um cluster de três nós para o SQL Server no SLES (SUSE Linux Enterprise Server) 12 SP2. Para alta disponibilidade, um grupo de disponibilidade no Linux exige três nós – confira [Alta disponibilidade e proteção de dados para configurações de grupo de disponibilidade](sql-server-linux-availability-group-ha.md). A camada de clustering baseia-se no [HAE (Extensão de Alta Disponibilidade)](https://www.suse.com/products/highavailability) do SUSE criado com base no [Pacemaker](https://clusterlabs.org/). 
+Este guia fornece instruções para criar um cluster de três nós para o SQL Server no SLES (SUSE Linux Enterprise Server) 12 SP2. Para alta disponibilidade, um grupo de disponibilidade em Linux exige três nós – consulte [Alta disponibilidade e proteção de dados para configurações de grupo de disponibilidade](sql-server-linux-availability-group-ha.md). A camada de clustering baseia-se no [HAE (Extensão de Alta Disponibilidade)](https://www.suse.com/products/highavailability) do SUSE criado com base no [Pacemaker](https://clusterlabs.org/). 
 
 Para obter mais informações sobre configuração de cluster, opções do agente de recursos, gerenciamento, melhores práticas e recomendações, confira a [Extensão de Alta Disponibilidade do SUSE Linux Enterprise 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html).
 
 >[!NOTE]
->Neste ponto, a integração do SQL Server com o Pacemaker no Linux não está tão acoplada quanto a do WSFC no Windows. O serviço SQL Server em Linux não reconhece clusters. O Pacemaker controla toda a orquestração dos recursos de cluster, incluindo o recurso de grupo de disponibilidade. No Linux, você não deve confiar em DMVs (exibições de gerenciamento dinâmico) do Grupo de Disponibilidade Always On que fornecem informações de cluster como sys.dm_hadr_cluster. Além disso, o nome da rede virtual é específico do WSFC; não há equivalente ao mesmo no Pacemaker. Você ainda poderá criar um ouvinte para usá-lo para reconexão transparente após o failover, mas será necessário registrar manualmente o nome do ouvinte no servidor DNS com o IP usado para criar o recurso de IP virtual (conforme explicado nas seções a seguir).
+>Neste ponto, a integração do SQL Server com o Pacemaker em Linux não está tão acoplada quanto a do WSFC em Windows. O serviço SQL Server em Linux não reconhece clusters. O Pacemaker controla toda a orquestração dos recursos de cluster, incluindo o recurso de grupo de disponibilidade. No Linux, você não deve confiar em DMVs (exibições de gerenciamento dinâmico) do Grupo de Disponibilidade Always On que fornecem informações de cluster como sys.dm_hadr_cluster. Além disso, o nome da rede virtual é específico do WSFC; não há equivalente ao mesmo no Pacemaker. Você ainda poderá criar um ouvinte para usá-lo para reconexão transparente após o failover, mas será necessário registrar manualmente o nome do ouvinte no servidor DNS com o IP usado para criar o recurso de IP virtual (conforme explicado nas seções a seguir).
 
 
 ## <a name="roadmap"></a>Roteiro
 
-O procedimento para criação de um grupo de disponibilidade para alta disponibilidade é distinto em servidores Linux e em um cluster de failover do Windows Server. A seguinte lista descreve as etapas de alto nível: 
+O procedimento para criação de um grupo de disponibilidade para alta disponibilidade é distinto em servidores Linux e em um cluster de failover do Windows Server. A lista a seguir descreve as etapas de alto nível: 
 
 1. [Configurar o SQL Server nos nós de cluster](sql-server-linux-setup.md).
 
@@ -46,7 +46,7 @@ O procedimento para criação de um grupo de disponibilidade para alta disponibi
    
    >Um cluster do Pacemaker usa o isolamento para retornar o cluster a um estado conhecido. A maneira de configurar o isolamento depende da distribuição e do ambiente. No momento, o isolamento não está disponível em alguns ambientes de nuvem. Confira [Extensão de Alta Disponibilidade do SUSE Linux Enterprise](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.fencing).
 
-5. [Adicionar o grupo de disponibilidade como um recurso no cluster](sql-server-linux-availability-group-cluster-sles.md#configure-the-cluster-resources-for-sql-server). 
+5. [Adicione o grupo de disponibilidade como um recurso no cluster](sql-server-linux-availability-group-cluster-sles.md#configure-the-cluster-resources-for-sql-server). 
 
 ## <a name="prerequisites"></a>Prerequisites
 
@@ -118,9 +118,9 @@ Em servidores Linux, configure o grupo de disponibilidade e, em seguida, configu
 
 3. Para configurar a camada de comunicação do cluster (Corosync): 
 
-   A. Insira um endereço de rede para associação. Por padrão, o script propõe o endereço de rede eth0. Como alternativa, insira outro endereço de rede, por exemplo, o endereço bond0. 
+   a. Insira um endereço de rede para associação. Por padrão, o script propõe o endereço de rede eth0. Como alternativa, insira outro endereço de rede, por exemplo, o endereço bond0. 
 
-   B. Insira um endereço multicast. O script propõe um endereço aleatório que pode ser usado como padrão. 
+   b. Insira um endereço multicast. O script propõe um endereço aleatório que pode ser usado como padrão. 
 
    c. Insira uma porta multicast. O script propõe 5405 como o padrão. 
 
@@ -185,7 +185,7 @@ Se você tiver configurado os nós de cluster existentes com o módulo de cluste
 
 Depois de adicionar todos os nós, verifique se você precisa ajustar a no-quorum-policy nas opções globais de cluster. Isso é especialmente importante para clusters de dois nós. Para obter mais informações, confira a seção 4.1.2, Opção no-quorum-policy. 
 
-## <a name="set-cluster-property-cluster-recheck-interval"></a>Definir a propriedade de cluster cluster-recheck-interval
+## <a name="set-cluster-property-cluster-recheck-interval"></a>Defina a propriedade de cluster cluster-recheck-interval
 
 `cluster-recheck-interval` indica o intervalo de sondagem segundo o qual o cluster verifica se há alterações nos parâmetros de recurso, restrições ou outras opções de cluster. Se uma réplica ficar inativa, o cluster tentará reiniciar a réplica em um intervalo associado ao valor `failure-timeout` e ao valor `cluster-recheck-interval`. Por exemplo, se `failure-timeout` for definido como 60 segundos e `cluster-recheck-interval` for definido como 120 segundos, será realizada uma tentativa de reinicialização em um intervalo superior a 60 segundos, mas inferior a 120 segundos. Recomendamos que você defina failure-timeout como 60 segundos e cluster-recheck-interval com um valor superior a 60 segundos. Não é recomendável definir cluster-recheck-interval como um valor pequeno.
 
@@ -213,12 +213,12 @@ crm configure property cluster-recheck-interval=2min
 
 Para obter mais informações sobre as propriedades de cluster do Pacemaker, confira [Como configurar recursos de cluster](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_config_crm_resources.html).
 
-## <a name="configure-fencing-stonith"></a>Configurar o isolamento (STONITH)
-Os fornecedores de cluster do Pacemaker exigem que o STONITH seja habilitado e um dispositivo de isolamento definido para uma configuração de cluster compatível. Quando o gerenciador de recursos de cluster não pode determinar o estado de um nó ou de um recurso em um nó, o isolamento é usado para colocar o cluster em um estado conhecido novamente.
+## <a name="configure-fencing-stonith"></a>Configurar isolamento (STONITH)
+Os fornecedores do cluster do Pacemaker exigem que o STONITH esteja habilitado e que um dispositivo de isolamento esteja definido para uma configuração de cluster com suporte. Quando o gerenciador de recursos de cluster não pode determinar o estado de um nó ou de um recurso em um nó, o isolamento é usado para colocar o cluster em um estado conhecido novamente.
 
 O isolamento no nível do recurso garante principalmente que não haja dados corrompidos durante uma interrupção pela configuração de um recurso. Você pode usar o isolamento no nível do recurso, por exemplo, com o DRBD (Dispositivo de Bloco Replicado Distribuído) para marcar o disco em um nó como desatualizado quando o link de comunicação ficar inativo.
 
-O isolamento no nível do nó garante que um nó não execute nenhum recurso. Isso é feito pela redefinição do nó e pela implementação do Pacemaker do que é chamado STONITH (que significa "acertar a cabeça do outro nó"). O Pacemaker dá suporte a uma grande variedade de dispositivos de isolamento, como no-break ou adaptadores de rede de gerenciamento para servidores.
+O isolamento no nível do nó verifica se um nó não executa nenhum recurso. Isso é feito pela redefinição do nó e pela implementação do Pacemaker do que é chamado STONITH (que significa "acertar a cabeça do outro nó"). O Pacemaker dá suporte a uma grande variedade de dispositivos de isolamento, como no-break ou adaptadores de rede de gerenciamento para servidores.
 
 Para obter mais informações, consulte:
 
@@ -233,7 +233,7 @@ sudo crm configure property stonith-enabled=true
 ```
   
 >[!IMPORTANT]
->A desabilitação do STONITH destina-se apenas a fins de teste. Se pretender usar o Pacemaker em um ambiente de produção, você deverá planejar uma implementação do STONITH dependendo do ambiente e mantê-lo habilitado. O SUSE não fornece agentes de isolamento para nenhum ambiente de nuvem (incluindo o Azure) ou o Hyper-V. Consequentemente, o fornecedor do cluster não dá suporte para a execução de clusters de produção nesses ambientes. Estamos trabalhando em uma solução para essa lacuna que estará disponível em versões futuras.
+>A desabilitação do STONITH destina-se apenas a fins de teste. Se você pretende usar o Pacemaker em um ambiente de produção, deve planejar uma implementação do STONITH dependendo do ambiente e mantê-lo habilitado. O SUSE não fornece agentes de isolamento para nenhum ambiente de nuvem (incluindo o Azure) ou o Hyper-V. Consequentemente, o fornecedor do cluster não oferece suporte para a execução de clusters de produção nesses ambientes. Estamos trabalhando em uma solução para essa lacuna que estará disponível em versões futuras.
 
 ## <a name="configure-the-cluster-resources-for-sql-server"></a>Configurar os recursos de cluster para o SQL Server
 
@@ -249,7 +249,7 @@ Execute o comando a seguir em cada nó do cluster.
 systemctl enable pacemaker
 ```
 
-### <a name="create-availability-group-resource"></a>Criar um recurso do grupo de disponibilidade
+### <a name="create-availability-group-resource"></a>Criar recurso do grupo de disponibilidade
 
 O comando a seguir cria e configura o recurso de grupo de disponibilidade para três réplicas do grupo de disponibilidade [ag1]. As operações e os tempos limite do monitor precisam ser especificados explicitamente no SLES com base no fato de que os tempos limite são altamente dependentes da carga de trabalho e precisam ser ajustados cuidadosamente para cada implantação.
 Execute o comando em um dos nós do cluster:
@@ -283,7 +283,7 @@ Execute o comando em um dos nós do cluster:
 
 [!INCLUDE [required-synchronized-secondaries-default](../includes/ss-linux-cluster-required-synchronized-secondaries-default.md)]
 
-### <a name="create-virtual-ip-resource"></a>Criar um recurso de IP virtual
+### <a name="create-virtual-ip-resource"></a>Criar recurso de IP virtual
 
 Caso não tenha criado o recurso de IP virtual quando executou `ha-cluster-init`, crie esse recurso agora. O comando a seguir cria um recurso de IP virtual. Substitua `<**0.0.0.0**>` por um endereço disponível na rede e `<**24**>` pelo número de bits na máscara de sub-rede CIDR. Execução em um nó.
 
@@ -295,7 +295,7 @@ primitive admin_addr \
       cidr_netmask=<**24**>
 ```
 
-### <a name="add-colocation-constraint"></a>Adicionar uma restrição de colocalização
+### <a name="add-colocation-constraint"></a>Adicionar restrição de colocalização
 Quase todas as decisões em um cluster do Pacemaker, como escolher o local em que um recurso deve ser executado, são feitas pela comparação de pontuações. As pontuações são calculadas por recurso e o gerenciador de recursos de cluster escolhe o nó com a pontuação mais alta para um recurso específico. (Se um nó tiver uma pontuação negativa para um recurso, o recurso não poderá ser executado nesse nó.) Podemos manipular as decisões do cluster com restrições. As restrições têm uma pontuação. Se uma restrição tiver uma pontuação menor que INFINITY, ela será apenas uma recomendação. Uma pontuação igual a INFINITY significa que ela é obrigatória. Queremos garantir que o primário do grupo de disponibilidade e o recurso de IP virtual sejam executados no mesmo host e, portanto, definimos uma restrição de colocalização com uma pontuação igual a INFINITY. 
 
 Para definir a restrição de colocalização para o IP virtual ser executado no mesmo nó do mestre, execute o seguinte comando em um nó:
@@ -307,7 +307,7 @@ colocation vip_on_master inf: \
 commit
 ```
 
-### <a name="add-ordering-constraint"></a>Adicionar uma restrição de ordenação
+### <a name="add-ordering-constraint"></a>Adicionar restrição de ordenação
 A restrição de colocalização tem uma restrição de ordenação implícita. Ela move o recurso de IP virtual antes de mover o recurso de grupo de disponibilidade. Por padrão, a sequência de eventos é: 
 
 1. O usuário emite a migração do recurso para o mestre do grupo de disponibilidade de node1 para node2.
@@ -327,7 +327,7 @@ crm crm configure \
 >[!IMPORTANT]
 >Depois de configurar o cluster e adicionar o grupo de disponibilidade como um recurso de cluster, você não poderá usar o Transact-SQL para fazer failover dos recursos de grupo de disponibilidade. Os recursos de cluster do SQL Server em Linux não são acoplados tão firmemente com o sistema operacional como são em um WSFC (cluster de failover do Windows Server). O serviço SQL Server não reconhece a presença do cluster. Toda a orquestração é feita por meio das ferramentas de gerenciamento de cluster. No SLES, use `crm`. 
 
-Faça failover manual de um grupo de disponibilidade com `crm`. Não inicie o failover com o Transact-SQL. Para obter mais informações, confira [Failover](sql-server-linux-availability-group-failover-ha.md#failover).
+Faça failover manualmente do grupo de disponibilidade com `crm`. Não inicie o failover com o Transact-SQL. Para obter mais informações, confira [Failover](sql-server-linux-availability-group-failover-ha.md#failover).
 
 
 Para obter mais informações, consulte:

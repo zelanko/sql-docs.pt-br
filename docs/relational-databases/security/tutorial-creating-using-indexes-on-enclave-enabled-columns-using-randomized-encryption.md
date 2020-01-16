@@ -1,6 +1,7 @@
 ---
-title: 'Tutorial: Criar e usar índices em colunas habilitadas para enclave com criptografia aleatória | Microsoft Docs'
-ms.custom: ''
+title: Índices em colunas habilitadas para enclave com criptografia aleatória (tutorial)
+description: Este tutorial ensina a criar e usar índices em colunas habilitadas para enclave usando a criptografia aleatória com suporte no Always Encrypted com enclaves seguros no SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 12/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -12,12 +13,12 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3f5d85128dd242b9499b31ad928a00a17d2b5571
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 636b304d99ee244ef7a367fb8a474ebe8df312a0
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75258326"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557707"
 ---
 # <a name="tutorial-create-and-use-indexes-on-enclave-enabled-columns-using-randomized-encryption"></a>Tutorial: Criar e usar índices em colunas habilitadas para enclave com criptografia aleatória
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]

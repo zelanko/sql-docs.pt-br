@@ -1,6 +1,7 @@
 ---
-title: Informações da publicação, avisos (publicação transacional) | Microsoft Docs
-ms.custom: ''
+title: Avisos (Informações da Publicação Transacional)
+description: Descreve a guia 'Avisos' da caixa de diálogo Informações da Publicação Transacional.
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ ms.assetid: 4d4baf1d-d0a1-4d09-bec7-137811f43f09
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 886a9066102fd25498b974caca73085b59c8594f
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 6efff6deabc18db61ab8390d912ef6918d42b2e3
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769958"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321293"
 ---
 # <a name="publication-information-warnings-transactional-publication"></a>Informações da publicação, avisos (publicação transacional)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -56,7 +57,7 @@ ms.locfileid: "68769958"
  Além de exibir de um aviso no Replication Monitor, atingir um limite também pode disparar um alerta. Os alertas são definidos clicando em **Configurar Alertas** e fornecendo informações na caixa de diálogo **Configurar Alertas de Replicação** .  
   
 ## <a name="options"></a>Opções  
- **Ativado**  
+ **Enabled**  
  Selecione para habilitar um aviso e especificar um limite.  
   
  **Aviso**  
@@ -82,6 +83,6 @@ ms.locfileid: "68769958"
  [Exibir informações e executar tarefas usando o Replication Monitor](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Monitorar o desempenho com o Replication Monitor](../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md)   
  [Monitorando a Replicação](../../relational-databases/replication/monitor/monitoring-replication.md)   
- [Set Thresholds and Warnings in Replication Monitor](../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
+ [Definir limites e avisos no Replication Monitor](../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
   
   

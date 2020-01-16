@@ -1,6 +1,7 @@
 ---
-title: Operar o cluster compartilhado do Red Hat Enterprise Linux para o SQL Server
-description: Implemente a alta disponibilidade configurando o cluster de disco compartilhado do Red Hat Enterprise Linux para o SQL Server.
+title: Operar a FCI RHEL do SQL Server em Linux
+description: Saiba como operar uma FCI (instância de cluster de failover) de disco compartilhado RHEL (Red Hat Enterprise Linux) do SQL Server para alta disponibilidade, como fazer failover manual da FCI e adicionar nós ao cluster ou removê-los do cluster.
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,14 +10,14 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
-ms.openlocfilehash: e7b81a97ab186ef79f27ee3456a5761157c02f3f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 76c59c6c7b821bfcc9eb76ca3a694a1c69095ce1
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032244"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558521"
 ---
-# <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Operar o cluster de disco compartilhado do Red Hat Enterprise Linux para o SQL Server
+# <a name="operate-rhel-failover-cluster-instance-fci-for-sql-server"></a>Operar a FCI (instância de cluster de failover) RHEL do SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -209,7 +210,7 @@ sudo pcs    resource op monitor interval=2s mssqlha
 
 Na solução de problemas do cluster, talvez seja útil entender como os três daemons funcionam em conjunto para gerenciar os recursos de cluster. 
 
-| Daemon | Descrição 
+| Daemon | DESCRIÇÃO 
 | ----- | -----
 | Corosync | Fornece associação de quorum e mensagens entre os nós de cluster.
 | Pacemaker | Reside na parte superior do Corosync e fornece computadores de estado para recursos. 

@@ -1,6 +1,7 @@
 ---
-title: Pausar ou retomar uma sessão de espelhamento de banco de dados (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Pausar e retomar uma sessão de espelhamento de banco de dados
+description: Saiba como pausar e retomar uma sessão de espelhamento de banco de dados do SQL Server usando o SQL Server Management Studio ou o T-SQL (Transact-SQL).
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 05ede3b4-6abe-4442-abb7-9f5aee1d6bc0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9829ffeb1eaf609ae538fc92054517aa8c9bbf3d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c9d36b4818aa54a6f63b0b38a353cf69840519b9
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67996482"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244163"
 ---
 # <a name="pause-or-resume-a-database-mirroring-session-sql-server"></a>Pausar ou retomar uma sessão de espelhamento de banco de dados (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -1,7 +1,7 @@
 ---
-title: 'Backup e restauração: interoperabilidade e coexistência (SQL Server) | Microsoft Docs'
-ms.custom: ''
-ms.date: 08/05/2016
+title: 'Backup e restauração: interoperabilidade de recurso'
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 69f212b8-edcd-4c5d-8a8a-679ced33c128
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d22aaa5ec3eba14931c5af22f68152bf7b19ad84
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5af79e93104530b3027133ba68026cfd914f5fe5
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67940877"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75247447"
 ---
 # <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>Backup e restauração: Interoperabilidade e coexistência (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "67940877"
  Esta seção é relevante apenas para bancos de dados modelo completo que têm vários grupos de arquivos.  
   
 > [!NOTE]  
->  O recurso de espelhamento de banco de dados será removido em uma versão futura do Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Em vez disso, use [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] .  
+>  O recurso de espelhamento de banco de dados será removido em uma versão futura do Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Use [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] em vez disso.  
   
  O espelhamento de banco de dados é uma solução para aumentar a disponibilidade do banco de dados. O espelhamento é implementado por base de banco de dados e só funciona com bancos de dados que usam o modelo de recuperação completa. Para obter mais informações, consulte [Espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
@@ -73,7 +73,7 @@ ms.locfileid: "67940877"
 >  Para distribuir cópias de um subconjunto dos grupos de arquivos em um banco de dados, use a replicação: replique somente os objetos nos grupos de arquivos que você quer copiar em outros servidores. Para obter mais informações sobre a replicação transacional, veja [SQL Server Replication](../../relational-databases/replication/sql-server-replication.md).  
   
 ### <a name="creating-the-mirror-database"></a>Criando o banco de dados espelho  
- O banco de dados espelho é criado pela restauração, WITH NORECOVERY, de backups do banco de dados principal no servidor espelho. A restauração deve manter o mesmo nome do banco de dados. Para obter mais informações, consulte [Preparar um banco de dados espelho para espelhamento &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
+ O banco de dados espelho é criado pela restauração, WITH NORECOVERY, de backups do banco de dados principal no servidor espelho. A restauração deve manter o mesmo nome do banco de dados. Para obter mais informações, veja [Preparar um banco de dados espelho para espelhamento &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
   
  Você pode criar o banco de dados espelho usando uma sequência de restauração por etapas, onde houver suporte. Porém, você não pode iniciar o espelhamento enquanto não restaurar todos os grupos de arquivos e, normalmente, os backups de log restaurados para trazer o banco de dados espelho o mais próximo possível do banco de dados principal. Para obter mais informações, veja [Restaurações por etapas &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md).  
   
@@ -132,7 +132,7 @@ ms.locfileid: "67940877"
 -   [Fazer backup e restaurar índices e catálogos de texto completo](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Backup e Restauração de bancos de dados do SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
+ [Fazer backup e restaurar bancos de dados do SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Fazer backup e restaurar bancos de dados replicados](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)   
 [Secundárias ativas: Backup em réplicas secundárias \(grupos de disponibilidade Always On\)](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
   

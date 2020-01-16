@@ -1,6 +1,7 @@
 ---
-title: Troca de função durante uma sessão de espelhamento de banco de dados (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Alternar funções de espelho de banco de dados
+description: Saiba mais sobre como alternar funções de espelhamento de banco de dados.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a782d60d-0373-4386-bd77-9ec192553700
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 662510b04b9bc5be9b94a5ffe149bf9eebcbf13a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b310083d3317c9099532b8d08f2482efe193d95c
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025277"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252789"
 ---
 # <a name="role-switching-during-a-database-mirroring-session-sql-server"></a>Troca de função durante uma sessão de espelhamento de banco de dados (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "68025277"
   
  A ilustração a seguir mostra os parceiros de espelhamento, **Partner_A** e **Partner_B**, trocando as funções principal e espelho através de diversos failovers automáticos ou manuais.  
   
- ![Parceiros que trocam de funções duas vezes](../../database-engine/database-mirroring/media/dbm-roleswitching.gif "Partners switching twice between roles")  
+ ![Parceiros que alternam duas vezes entre as funções](../../database-engine/database-mirroring/media/dbm-roleswitching.gif "Parceiros que alternam duas vezes entre as funções")  
   
 > [!IMPORTANT]  
 >  Após a troca de função, os trabalhos executados no antigo banco de dados principal devem ser recriados no servidor principal novo para que lá sejam executados. Para obter mais informações, veja [Administração de logons e trabalhos após a troca de funções &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md).  
@@ -51,7 +52,7 @@ ms.locfileid: "68025277"
   
      O failover manual é fornecido por questões administrativas. Para obter mais informações, veja [Failover Manual](#ManualFailover), mais adiante neste tópico.  
   
--   **Failover automático**  
+-   **Automatic failover**  
   
      Na presença de uma testemunha, o modo de segurança alta oferece suporte ao failover automático. O failover automático somente ocorre no servidor principal, quando a testemunha e o servidor espelho ainda estão conectados entre si e o banco de dados já está sincronizado. Para obter mais informações, veja [Failover Automático](#AutomaticFailover), mais adiante neste tópico.  
   
@@ -69,12 +70,12 @@ ms.locfileid: "68025277"
 ||Alto desempenho|Modo de segurança alta sem testemunha|Modo de segurança alta com testemunha|  
 |-|----------------------|-----------------------------------------|--------------------------------------|  
 |failover automático|Não|Não|Sim|  
-|failover manual|Não|Sim|Sim|  
+|Failover manual|Não|Sim|Sim|  
 |Serviço forçado|Sim|Sim|Não|  
   
  Após a troca de função, metadados específicos precisam estar presentes em ambos os parceiros para garantir que todos os usuários dos bancos de dados possam acessar o novo banco de dados principal. Além disso, os trabalhos de backup precisam ser criados no servidor principal novo, para garantir que o banco de dados continue a ser armazenado no cronograma habitual. Para obter mais informações, veja [Administração de logons e trabalhos após a troca de funções &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md).  
   
- Durante a troca de função, a quantidade de tempo que o espelhamento de banco de dados ficará fora de serviço depende do tipo de troca de função e da causa da troca de função. Para obter mais informações, consulte [Estimar a interrupção do serviço durante troca de função &#40;Espelhamento de Banco de Dados&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md).  
+ Durante a troca de função, a quantidade de tempo que o espelhamento de banco de dados ficará fora de serviço depende do tipo de troca de função e da causa da troca de função. Para obter mais informações, veja [Estime a interrupção do serviço durante troca de função &#40;Espelhamento de Banco de Dados&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md).  
   
 ##  <a name="ManualFailover"></a> Manual Failover  
  O failover manual desconecta os clientes do banco de dados e reverte as funções dos parceiros. Apenas o modo de alta segurança oferece suporte ao failover manual.  
@@ -95,7 +96,7 @@ ms.locfileid: "68025277"
   
  A figura a seguir ilustra uma instância do uso do failover manual para manter a disponibilidade de banco de dados enquanto você atualiza uma instância de servidor de banco de dados. Quando a atualização é concluída, um administrador pode, opcionalmente, fazer failover de volta para a instância de servidor original. Isso é útil quando o administrador deseja interromper a sessão de espelhamento e usar o servidor espelho em outro lugar. Dessa forma, uma única instância de servidor pode ser usada repetidamente ao atualizar uma série de instâncias de servidor de banco de dados.  
   
- ![Failover manual planejado](../../database-engine/database-mirroring/media/dbm-failovmanuplanned.gif "Planned manual failover")  
+ ![Failover manual planejado](../../database-engine/database-mirroring/media/dbm-failovmanuplanned.gif "Failover manual planejado")  
   
 ###  <a name="ConditionsForManualFo"></a> Condições exigidas para um failover manual  
  O failover manual exige que a segurança da transação seja definida como FULL (ou seja, modo de alta segurança). Quando os parceiros estão conectados e o banco de dados já está sincronizado, há suporte ao failover manual.  
@@ -182,7 +183,7 @@ ms.locfileid: "68025277"
   
  A ilustração a seguir mostra uma única instância de failover automático.  
   
- ![Failover automático](../../database-engine/database-mirroring/media/dbm-failovauto1round.gif "Failover automático")  
+ ![Automatic failover](../../database-engine/database-mirroring/media/dbm-failovauto1round.gif "|::ref3::|")  
   
  Inicialmente, todos os três servidores estão conectados (a sessão tem quorum completo). **Partner_A** é o servidor principal e **Partner_B** é o servidor espelho. **Partner_A** (ou o banco de dados principal em **Partner_A**) torna-se indisponível. A testemunha e **Partner_B** reconhecem que o principal não está mais disponível na sessão que retém quorum. **Partner_B** se torna o servidor principal e disponibiliza sua cópia do banco de dados como o novo banco de dados principal. Por fim, o **Partner_A** se reconecta à sessão e descobre que agora o **Partner_B** possui a função principal. **Partner_A** assume a função de espelho.  
   
@@ -241,7 +242,7 @@ ms.locfileid: "68025277"
 ###  <a name="TypicalCaseFS"></a> Casos comuns de serviço forçado  
  A figura a seguir ilustra um caso comum de serviço forçado (com possível perda de dados).  
   
- ![Forçando o serviço com possível perda de dados](../../database-engine/database-mirroring/media/dbm-forced-service.gif "Forcing service with possible data loss")  
+ ![Serviço forçado com possível perda de dados](../../database-engine/database-mirroring/media/dbm-forced-service.gif "Serviço forçado com possível perda de dados")  
   
  Na figura, o servidor principal original, **Partner_A**, torna-se indisponível para o servidor espelho, **Partner_B**, fazendo com que o banco de dados espelho seja desconectado. Depois de garantir que **Partner_A** não está disponível aos clientes, o administrador do banco de dados força o serviço, com possível perda de dados, no **Partner_B**. **Partner_B** se torna o servidor principal e é executado com o banco de dados *exposto* (ou seja, sem estar espelhado). Nesse momento, os clientes podem se reconectar ao **Partner_B**.  
   

@@ -20,19 +20,19 @@ ms.assetid: 8a9e0ffb-28b5-4640-95b2-a54e3e5ad941
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 033756cb65cc217e6c9d915715f5740596694147
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: 91301fcfb0376e1bd256ac60c59c1c0b65dfbbe4
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982170"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75256105"
 ---
 # <a name="databasepropertyex-transact-sql"></a>DATABASEPROPERTYEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Para um banco de dados especificado em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa função retorna a configuração atual da opção ou propriedade de banco de dados especificada.
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,7 +41,7 @@ DATABASEPROPERTYEX ( database , property )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-*banco de dados*  
+*database*  
 É uma expressão que especifica o nome do banco de dados para o qual `DATABASEPROPERTYEX` retorna as informações da propriedade nomeada. *database* tem um tipo de dados **nvarchar (128)** .  
 
 Para [!INCLUDE[ssSDS](../../includes/sssds-md.md)], `DATABASEPROPERTYEX` requer o nome do banco de dados atual. Retornará NULL para todas as propriedades se for fornecido um nome de banco de dados diferente.
@@ -52,11 +52,11 @@ Para [!INCLUDE[ssSDS](../../includes/sssds-md.md)], `DATABASEPROPERTYEX` requer 
 > [!NOTE]  
 >  Se o banco de dados ainda não foi iniciado, chamadas para `DATABASEPROPERTYEX` retornarão NULL se `DATABASEPROPERTYEX` recuperar esses valores por acesso direto de banco de dados, em vez de recuperação de metadados. Um banco de dados com AUTO_CLOSE definida como ON ou, caso contrário, offline, é definido como "não iniciado".  
   
-|Propriedade|Descrição|Valor retornado|  
+|Propriedade|DESCRIÇÃO|Valor retornado|  
 |---|---|---|
 |Collation|O nome da ordenação padrão para o banco de dados.|Nome da ordenação<br /><br /> NULL: O banco de dados não foi iniciado.<br /><br /> Tipo de dados base: **nvarchar(128)**|  
 |ComparisonStyle|O estilo de comparação da ordenação do Windows. Use os seguintes valores de estilo para criar um bitmap para o valor ComparisonStyle concluído:<br /><br /> Ignorar maiúsculas e minúsculas: 1<br /><br /> Ignorar acento: 2<br /><br /> Ignorar Kana: 65536<br /><br /> Ignorar largura: 131072<br /><br /> <br /><br /> Por exemplo, o padrão de 196609 é o resultado de combinar as opções Ignorar maiúsculas e minúsculas, Ignorar Kana e Ignorar largura.|Retorna o estilo de comparação.<br /><br /> Retorna 0 para todas as ordenações primárias.<br /><br /> Tipo de dados base: **int**|  
-|Edition|A camada de edição ou de serviço do banco de dados.|**Aplica-se a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].<br /><br /> <br /><br /> Uso Geral<br /><br /> Comercialmente Crítica<br /><br /> Basic<br /><br /> Standard<br /><br /> Premium<br /><br /> Sistema (para o banco de dados mestre)<br /><br /> NULL: O banco de dados não foi iniciado.<br /><br /> Tipo de dados base: **nvarchar**(64)|  
+|Edition|A camada de edição ou de serviço do banco de dados.|**Aplica-se a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].<br /><br /> <br /><br /> Uso Geral<br /><br /> Comercialmente Crítico<br /><br /> Basic<br /><br /> Standard<br /><br /> Premium<br /><br /> Sistema (para o banco de dados mestre)<br /><br /> NULL: O banco de dados não foi iniciado.<br /><br /> Tipo de dados base: **nvarchar**(64)|  
 |IsAnsiNullDefault|O banco de dados segue regras de ISO por permitir valores nulos.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: Entrada inválida<br /><br /> Tipo de dados base: **int**|  
 |IsAnsiNullsEnabled|Todas as comparações com um nulo são avaliadas como desconhecido.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: Entrada inválida<br /><br /> Tipo de dados base: **int**|  
 |IsAnsiPaddingEnabled|As cadeias de caracteres são convertidas na mesma largura antes da comparação ou inserção.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: Entrada inválida<br /><br /> Tipo de dados base: **int**|  
@@ -92,7 +92,7 @@ Para [!INCLUDE[ssSDS](../../includes/sssds-md.md)], `DATABASEPROPERTYEX` requer 
 |ServiceObjective|Descreve o nível de desempenho do banco de dados no [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ou [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].|Um dos seguintes:<br /><br /> Nulo: banco de dados não iniciado<br /><br /> Compartilhado (para edições Web/Business)<br /><br /> Basic<br /><br /> S0<br /><br /> S1<br /><br /> S2<br /><br /> S3<br /><br /> P1<br /><br /> P2<br /><br /> P3<br /><br /> ElasticPool<br /><br /> Sistema (para o banco de dados mestre)<br /><br /> Tipo de dados base: **nvarchar(32)**|  
 |ServiceObjectiveId|O id do objetivo de serviço em [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].|**uniqueidentifier** que identifica o objetivo de serviço.|  
 |SQLSortOrder|Identificação de ordem de classificação [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com suporte em versões anteriores do SQL Server.|0: o banco de dados usa ordenação do Windows<br /><br /> >0: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ID da ordem de classificação<br /><br /> NULL: entrada inválida ou banco de dados não foi iniciado<br /><br /> Tipo de dados base: **tinyint**|  
-|Status|Status do banco de dados.|ONLINE: o banco de dados está disponível para consulta.<br /><br /> **Observação:** o status ONLINE pode ser retornado enquanto o banco de dados é aberto e ainda não foi recuperado. Para identificar quando um banco de dados pode aceitar conexões, consulte a propriedade **DATABASEPROPERTYEX**. O banco de dados pode aceitar conexões quando a ordenação de banco de dados retorna um valor não nulo. Para bancos de dados Always On, consulte as colunas database_state ou database_state_desc de `sys.dm_hadr_database_replica_states`.<br /><br /> OFFLINE: o banco de dados foi colocado em offline explicitamente.<br /><br /> RESTORING: a restauração de banco de dados foi iniciada.<br /><br /> RECOVERING: a recuperação do banco de dados foi iniciada e o banco de dados ainda não está pronto para consultas.<br /><br /> SUSPECT: o banco de dados não foi recuperado.<br /><br /> EMERGENCY: o banco de dados está em uma emergência, em estado somente leitura. O acesso está restrito a membros sysadmin<br /><br /> Tipo de dados base: **nvarchar(128)**|  
+|Status|Status do banco de dados.|ONLINE: o banco de dados está disponível para consulta.<br /><br /> **Observação:** A função pode retornar um status ONLINE enquanto o banco de dados for aberto e ainda não tiver sido recuperado. Para identificar se um banco de dados ONLINE pode aceitar conexões, consulte a propriedade Ordenação de **DATABASEPROPERTYEX**. O banco de dados ONLINE pode aceitar conexões quando a ordenação de banco de dados retorna um valor não nulo. Para bancos de dados Always On, consulte as colunas database_state ou database_state_desc de `sys.dm_hadr_database_replica_states`.<br /><br /> OFFLINE: o banco de dados foi colocado em offline explicitamente.<br /><br /> RESTORING: a restauração de banco de dados foi iniciada.<br /><br /> RECOVERING: a recuperação do banco de dados foi iniciada e o banco de dados ainda não está pronto para consultas.<br /><br /> SUSPECT: o banco de dados não foi recuperado.<br /><br /> EMERGENCY: o banco de dados está em uma emergência, em estado somente leitura. O acesso está restrito a membros sysadmin<br /><br /> Tipo de dados base: **nvarchar(128)**|  
 |Updateability|Indica se os dados podem ser modificados.|READ_ONLY: o banco de dados dá suporte a leituras de dados, mas não a modificações de dados.<br /><br /> READ_WRITE: o banco de dados dá suporte a leituras e a modificações de dados.<br /><br /> Tipo de dados base: **nvarchar(128)**|  
 |UserAccess|Indica quais usuários podem acessar o banco de dados.|SINGLE_USER: apenas um usuário db_owner, dbcreator ou sysadmin por vez<br /><br /> RESTRICTED_USER: apenas membros das funções db_owner, dbcreator ou sysadmin<br /><br /> MULTI_USER: todos os usuários<br /><br /> Tipo de dados base: **nvarchar(128)**|  
 |Versão|Número de versão interno do código [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com que o banco de dados foi criado. [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|Número de versão: o banco de dados está aberto.<br /><br /> NULL: o banco de dados não foi iniciado.<br /><br /> Tipo de dados base: **int**| 
@@ -110,12 +110,12 @@ Retornará NULL em caso de erro ou se um chamador não tiver permissão para exi
   
 No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], um usuário só pode exibir os metadados de itens protegíveis de sua propriedade ou para os quais ele tenha permissão concedida. Isso significa que as funções internas que emitem metadados, como `OBJECT_ID`, poderão retornar NULL se o usuário não tiver permissões para o objeto. Veja [Configuração de Visibilidade de Metadados](../../relational-databases/security/metadata-visibility-configuration.md) para obter mais informações.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 `DATABASEPROPERTYEX` retorna somente uma configuração de propriedade por vez. Para exibir várias configurações de propriedade, use a exibição do catálogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-retrieving-the-status-of-the-auto_shrink-database-option"></a>A. Recuperando o estado da opção de banco de dados AUTO_SHRINK  
+### <a name="a-retrieving-the-status-of-the-auto_shrink-database-option"></a>a. Recuperando o estado da opção de banco de dados AUTO_SHRINK  
 Este exemplo retorna o status da opção de banco de dados AUTO_SHRINK para o banco de dados `AdventureWorks`.
   
 ```sql

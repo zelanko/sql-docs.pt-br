@@ -1,6 +1,7 @@
 ---
-title: Exibir as propriedades de uma faceta de gerenciamento baseado em políticas | Microsoft Docs
-ms.custom: ''
+title: Exibir as propriedades de uma faceta do gerenciamento baseado em políticas
+description: Saiba como exibir as propriedades de uma faceta do gerenciamento baseado em políticas no SQL Server usando o SSMS (SQL Server Management Studio).
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 022a244c-c2e7-4467-b9a2-c7a27859be22
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 50cdd9031d309a1bbfd6f4229749b5cc5de56125
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 3a5a938928817b8ffb5282b2af7d2a505b442302
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72906881"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558083"
 ---
 # <a name="view-the-properties-of-a-policy-based-management-facet"></a>Exibir as propriedades de uma faceta de gerenciamento baseado em políticas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

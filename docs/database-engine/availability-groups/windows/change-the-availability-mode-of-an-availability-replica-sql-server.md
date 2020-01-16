@@ -1,7 +1,7 @@
 ---
-title: Alterar o modo de disponibilidade de uma réplica dentro de um grupo de disponibilidade
+title: Alterar o modo de disponibilidade de uma réplica para um grupo de disponibilidade
 description: Uma descrição de como alterar o modo de disponibilidade de uma réplica de disponibilidade dentro de um grupo de disponibilidade Always On usando o T-SQL (Transact-SQL), o PowerShell ou o SQL Server Management Studio.
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: c4da8f25-fb1b-45a4-8bf2-195df6df634c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c17beebfd689e5e768450d92353b87f8fcfa1ae2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b1a3b5d1dfdf3a5e8556058cee750a4e2e08476a
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67988593"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822448"
 ---
-# <a name="change-the-availability-mode-of-a-replica-within-an-always-on-availability-group"></a>Alterar o modo de disponibilidade de uma réplica dentro de um grupo de disponibilidade Always On
+# <a name="change-availability-mode-of-a-replica-within-an-always-on-availability-group"></a>Alterar o modo de disponibilidade de uma réplica dentro de um grupo de disponibilidade Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Este tópico descreve como alterar o modo de disponibilidade de uma réplica de disponibilidade em um grupo de disponibilidade AlwaysOn no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou o PowerShell. O modo de disponibilidade é uma propriedade de réplica que controla se a réplica confirma de forma assíncrona ou síncrona. O*modo de confirmação assíncrona* maximiza o desempenho às custas da alta disponibilidade e dá suporte apenas ao failover manual forçado (com possível perda de dados), que costuma ser chamado de *failover forçado*. O*modo de confirmação síncrona* enfatiza a alta disponibilidade sobre o desempenho e, quando a réplica secundária é sincronizada, dá suporte ao failover manual e, opcionalmente, ao failover automático.  
     

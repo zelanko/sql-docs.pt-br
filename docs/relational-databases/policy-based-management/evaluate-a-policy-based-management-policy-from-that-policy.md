@@ -1,6 +1,7 @@
 ---
-title: Avaliar uma política do gerenciamento baseado em políticas dessa política | Microsoft Docs
-ms.custom: ''
+title: Avaliar uma política do gerenciamento baseado em políticas dessa política
+description: Saiba como avaliar uma política usando essa política no SQL Server com o SSMS (SQL Server Management Studio).
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0b3214bd-d0ab-45ab-9281-3d95507abe54
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c68042c58aed428bafaa38f6c468a759b4b55e47
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 514fa5c8d6f4af26bba68698a5d0ef42100be670
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907635"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558241"
 ---
 # <a name="evaluate-a-policy-based-management-policy-from-that-policy"></a>Avaliar uma política do Gerenciamento Baseado em Políticas dessa política
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

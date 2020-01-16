@@ -1,7 +1,7 @@
 ---
-title: Propriedades da réplica de disponibilidade (Página Geral) para grupos de disponibilidade
+title: Página geral (Propriedades da Réplica de Disponibilidade)
 description: Uma descrição das várias propriedades encontradas na página 'Geral' da página 'Propriedades da Réplica de Disponibilidade' no SQL Server Management Studio.
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 8318fefb-e045-4fab-8507-e1951fc7cec6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9c2dceee5ebda0b6039a2614b3ae3d9b0dd356e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1b708c987f1e9d0bbaf069a5d105e6feab57b9b9
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67988666"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75241735"
 ---
 # <a name="availability-replica-properties-general-page-for-always-on-availability-groups"></a>Propriedades da réplica de disponibilidade (Página Geral) para Grupos de Disponibilidade AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "67988666"
  O nome de servidor da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospeda essa réplica e, para uma instância não padrão, seu nome de instância.  
   
  **Função**  
- **Primária**  
+ **Primário**  
  Atualmente a réplica primária.  
   
  **Secundário**  
@@ -88,7 +88,7 @@ ms.locfileid: "67988666"
  **Sim**  
  Todas as conexões são permitidas para os bancos de dados secundários desta réplica, mas somente para acesso de leitura. Os bancos de dados secundários estão disponíveis para acesso de leitura.  
   
- Para obter mais informações, confira [Secundárias ativas: Réplicas secundárias legíveis &#40;Grupos de Disponibilidade Always On&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+ Para obter mais informações, confira [Secundárias ativas: Réplicas Secundárias Legíveis &#40;Grupos de Disponibilidade Always On&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
  **Tempo limite da sessão (segundos)**  
  O período de tempo limite, em segundos. O período de tempo limite é o tempo máximo que a réplica espera para receber uma mensagem de outra réplica antes de considerar que a conexão entre a réplica primária e secundária falhou. O tempo limite da sessão detecta se réplicas secundárias estão conectadas à réplica primária. Ao detectar uma falha de conexão com uma réplica secundária, a réplica primária considera a réplica secundária como NOT_SYNCHRONIZED. Ao detectar uma falha de conexão com a réplica primária, uma réplica secundária simplesmente tenta se conectar outra vez.  

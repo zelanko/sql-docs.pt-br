@@ -1,6 +1,7 @@
 ---
-title: Configurar o armazenamento NFS da instância de cluster de failover – SQL Server em Linux
-description: ''
+title: 'Configurar a FCI no armazenamento NFS: SQL Server em Linux'
+description: Saiba como configurar uma FCI (instância de cluster de failover) usando o armazenamento NFS do SQL Server em Linux.
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -8,12 +9,12 @@ ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 1088060b8f1af418f14210b7e09a6641fc3a62d8
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 35f6dc79756c192419dbe3a8962d5dcdfeea8aef
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032360"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558331"
 ---
 # <a name="configure-failover-cluster-instance---nfs---sql-server-on-linux"></a>Configurar a instância de cluster de failover – NFS – SQL Server em Linux
 

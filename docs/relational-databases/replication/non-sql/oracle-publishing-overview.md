@@ -16,24 +16,25 @@ helpviewer_keywords:
 ms.assetid: 2e013259-0022-4897-a08d-5f8deb880fa8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 02d36b72c949db673bcc2d00918bd7571821d025
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0d9d3a6f0860a8c0aff0a24b1acd6018163d5686
+ms.sourcegitcommit: 4933934fad9f3c3e16406952ed964fbd362ee086
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111079"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75548404"
 ---
 # <a name="oracle-publishing-overview"></a>Oracle Publishing Overview  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Desde o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], você pode incluir Publicadores Oracle em sua topologia de replicação pelo Oracle versão 9i. Os servidores de publicação podem ser implantados em todos os sistemas operacionais e de hardware com suporte pelo Oracle. O recurso é criado sob a base bem-estabelecida da replicação de instantâneo e da replicação transacional do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , fornecendo desempenho e usabilidade similares.  
+No [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] em diante, você pode incluir Publicadores Oracle na topologia de replicação, no Oracle versão 9i em diante. Os servidores de publicação podem ser implantados em todos os sistemas operacionais e de hardware com suporte pelo Oracle. O recurso é criado sob a base bem-estabelecida da replicação de instantâneo e da replicação transacional do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , fornecendo desempenho e usabilidade similares.  
   
 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oferece suporte aos seguintes cenários heterogêneos para replicação transacional e de instantâneo:  
   
 -   Publicando dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para não assinantes do[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
 
 -   A publicação de dados para e do Oracle tem as seguintes restrições:  
-  | |2016 ou anterior |2017 ou posterior |
+
+  |       | 2016 ou anterior |2017 ou posterior |
   |-------|-------|--------|
   |Replicação do Oracle |Dá suporte apenas ao Oracle 10g ou anterior |Dá suporte apenas ao Oracle 10g ou anterior |
   |Replicação para o Oracle |Até Oracle 12c |Sem suporte |

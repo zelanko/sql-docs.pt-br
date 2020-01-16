@@ -7,12 +7,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 8edcbf91c827ea2afafa0830aad5a26423102f17
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: b16c753b5640baacadc9a13b75ebb7a9d48a74fe
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594545"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822139"
 ---
 # <a name="release-notes-for-sql-server-2019-on-linux"></a>Notas sobre a versão do SQL Server 2019 em Linux
 
@@ -30,7 +30,7 @@ As notas sobre a versão a seguir se aplicam ao SQL Server 2019 em execução no
 | Red Hat Enterprise Linux 7.3, 7.4, 7.5 ou 7.6 Server | XFS ou EXT4 | [Guia de instalação](quickstart-install-connect-red-hat.md) | 
 | SUSE Enterprise Linux Server v12 SP2, SP3 ou SP4 | XFS ou EXT4 | [Guia de instalação](quickstart-install-connect-suse.md) |
 | Ubuntu 16.04 LTS | XFS ou EXT4 | [Guia de instalação](quickstart-install-connect-ubuntu.md) | 
-| Docker Engine 1.8+ no Windows, Mac ou Linux | N/A | [Guia de instalação](quickstart-install-connect-docker.md) | 
+| Docker Engine 1.8+ no Windows, Mac ou Linux | N/D | [Guia de instalação](quickstart-install-connect-docker.md) | 
 
 > [!TIP]
 > Para obter mais informações, examine os [requisitos do sistema](sql-server-linux-setup.md#system) para SQL Server em Linux. Para obter a política de suporte mais recente para o SQL Server 2017, confira a [Política de suporte técnico para Microsoft SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server).
@@ -93,7 +93,7 @@ Para instalações de pacotes manuais ou offline, você pode baixar os pacotes R
 
 As seções a seguir descrevem problemas conhecidos com a versão de GA (Disponibilidade geral) do SQL Server 2019 (15.x) no Linux.
 
-#### <a name="general"></a>Geral
+### <a name="general"></a>Geral
 
 - O comprimento do nome do host em que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] é instalado precisa ter 15 caracteres ou menos. 
 
@@ -113,7 +113,11 @@ As seções a seguir descrevem problemas conhecidos com a versão de GA (Disponi
 
     - **Resolução:** Altere o idioma do logon do **sa** usando a instrução **ALTER LOGIN**.
 
-#### <a name="databases"></a>Bancos de dados
+- O provedor OLEDB registra em log o seguinte aviso: `Failed to verify the Authenticode signature of 'C:\binn\msoledbsql.dll'. Signature verification of SQL Server DLLs will be skipped. Genuine copies of SQL Server are signed. Failure to verify the Authenticode signature might indicate that this is not an authentic release of SQL Server. Install a genuine copy of SQL Server or contact customer support.`
+
+   - **Resolução:** Nenhuma ação é necessária. O provedor OLEDB é assinado usando SHA256. O mecanismo de banco de dados do SQL Server não valida o .dll assinado corretamente.
+
+### <a name="databases"></a>Bancos de dados
 
 - O banco de dados mestre não pode ser movido com o utilitário mssql-conf. Outros bancos de dados do sistema podem ser movidos usando mssql-conf.
 
@@ -143,7 +147,7 @@ As seções a seguir descrevem problemas conhecidos com a versão de GA (Disponi
 
 - A permissão de usuário **ADMINISTRAR OPERAÇÕES EM MASSA** não tem suporte no Linux no momento.
 
-#### <a name="networking"></a>Rede
+### <a name="networking"></a>Rede
 
 Recursos que envolvem conexões TCP de saída do processo sqlservr, como servidores vinculados ou Grupos de Disponibilidade, poderão não funcionar se ambas as condições a seguir forem atendidas:
 
@@ -170,7 +174,7 @@ Se você usar compartilhamentos remotos **NFS (Network File System)** em produç
 - Localize somente os diretórios **/var/opt/mssql** na montagem NFS. Não há suporte para outros arquivos, como os binários do sistema [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 - Verifique se os clientes NFS usam a opção 'nolock' ao montar o compartilhamento remoto.
 
-#### <a name="localization"></a>Localização
+### <a name="localization"></a>Localização
 
 - Se a sua localidade não for inglês (en_us) durante a instalação, você precisará usar a codificação UTF-8 em sua sessão/terminal de Bash. Se usar a codificação ASCII, você poderá ver um erro semelhante ao seguinte:
 
@@ -190,7 +194,7 @@ Se você usar compartilhamentos remotos **NFS (Network File System)** em produç
 
 - Nem todos os filtros estão disponíveis nesta versão, incluindo filtros para documentos do Office. Para obter uma lista de filtros com suporte, confira [Instalar a pesquisa de texto completo do SQL Server no Linux](sql-server-linux-setup-full-text-search.md#filters).
 
-#### <a id="ssis"></a> SQL Server Integration Services (SSIS)
+### <a id="ssis"></a> SQL Server Integration Services (SSIS)
 
 - O pacote **mssql-server-is** não tem suporte no SUSE nesta versão. Atualmente, ele tem suporte no Ubuntu e no RHEL (Red Hat Enterprise Linux).
 
@@ -214,7 +218,7 @@ Para saber mais sobre o SSIS no Linux, confira os seguintes artigos:
 -   [Instalar o SSIS (SQL Server Integration Services) no Linux](sql-server-linux-setup-ssis.md)
 -   [Extrair, transformar e carregar dados no Linux com o SSIS](sql-server-linux-migrate-ssis.md)
 
-#### <a id="ssms"></a> SSMS (SQL Server Management Studio)
+### <a id="ssms"></a> SSMS (SQL Server Management Studio)
 
 As seguintes limitações se aplicam ao [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] no Windows conectado ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no Linux.
 

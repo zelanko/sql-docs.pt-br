@@ -1,6 +1,7 @@
 ---
-title: Reporting Services com Grupos de Disponibilidade AlwaysOn (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Reporting Services com grupos de disponibilidade
+description: Saiba mais sobre como configurar o SSRS (SQL Server Reporting Services) com grupos de disponibilidade Always On.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,12 +14,12 @@ ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: f0820f42d95f0320dbdf843ab1715b49994cb613
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 09a19680d9fff6a8d907dd17f3399ff632cba19b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68252111"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243621"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Reporting Services com grupos de disponibilidade AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "68252111"
  Para obter informações gerais sobre o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consulte [Perguntas frequentes sobre o Always On do SQL Server 2012 (https://msdn.microsoft.com/sqlserver/gg508768)](https://msdn.microsoft.com/sqlserver/gg508768)).  
 
 ##  <a name="bkmk_requirements"></a> Requisitos para usar o Reporting Services e os grupos de disponibilidade AlwaysOn  
- [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] e o Servidor de Relatórios do Power BI usa o .Net Framework 4.0 e dá suporte às propriedades de cadeia de conexão do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] para uso com fontes de dados.  
+ [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] e o Servidor de Relatórios do Power BI usa o .Net Framework 4.0 e é compatível com as propriedades de cadeia de conexão do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] para uso com fontes de dados.  
   
  Para usar o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] com o  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 2014 e anteriores, você precisa baixar e instalar um hotfix para .NET 3.5 SP1. O hotfix adiciona suporte a Cliente SQL para os recursos do AG e suporte das propriedades da cadeia de conexão **ApplicationIntent** e **MultiSubnetFailover**. Se o Hotfix não estiver instalado em cada computador que hospeda um servidor de relatório, os usuários que tentarem visualizar relatórios verão uma mensagem de erro semelhante à seguinte, e a mensagem de erro será gravada no log de rastreamento do servidor de relatório:  
   
@@ -93,7 +94,7 @@ ms.locfileid: "68252111"
 ##  <a name="bkmk_reportdesign"></a> Design de relatório e grupos de disponibilidade  
  Ao criar relatórios no [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] ou um projeto de relatório no [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], um usuário poderá configurar uma cadeia de conexão da fonte de dados de relatório para conter novas propriedades de conexão fornecidas pelo [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. O suporte para as novas propriedades de conexão depende de onde o usuário visualiza o relatório.  
   
--   **Visualização local:** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] e o [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] usam o .NET Framework 4.0 e dão suporte às propriedades de cadeia de conexão do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] .  
+-   **Visualização local:** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] e o [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] usam o .NET Framework 4.0 e dão suporte às propriedades de cadeia de conexão do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
   
 -   **Visualização do modo remoto ou de servidor:** se, depois de publicar relatórios no servidor de relatório ou usar a visualização no [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)], você vir um erro semelhante ao seguinte, isso será uma indicação de que você está visualizando relatórios no servidor de relatório e no Hotfix do .Net Framework 3.5 SP1 porque o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] não foi instalado no servidor de relatório.  
   

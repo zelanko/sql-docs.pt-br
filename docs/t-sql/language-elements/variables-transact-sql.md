@@ -13,12 +13,12 @@ ms.assetid: f372ae86-a003-40af-92de-fa52e3eea13f
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0904966eb334b182646818b98449472122741f6c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1d452d0e342d9b8241ee79882970e65c74a26d77
+ms.sourcegitcommit: a92fa97e7d3132ea201e4d86c76ac39cd564cd3c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086135"
+ms.lasthandoff: 12/21/2019
+ms.locfileid: "75325473"
 ---
 # <a name="variables-transact-sql"></a>Variáveis (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -31,6 +31,9 @@ Uma variável local Transact-SQL é um objeto que pode conter um único valor de
 
 > [!NOTE]
 > Os nomes de algumas funções do sistema Transact-SQL começam com dois sinais de *arroba* (\@\@). Embora nas versões anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], as funções \@\@ tenham sido referidas como variáveis globais, elas não são variáveis e não têm os mesmos comportamentos de variáveis. As funções \@\@ são funções de sistema, e o uso de sua sintaxe segue as regras das funções.
+
+> [!NOTE]
+> As variáveis não podem ser usadas em exibições.
 
 O script seguinte cria uma tabela de teste pequena e a popula com 26 linhas. O script usa uma variável para fazer três coisas: 
 

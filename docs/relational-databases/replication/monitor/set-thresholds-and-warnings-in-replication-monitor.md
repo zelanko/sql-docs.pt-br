@@ -1,6 +1,7 @@
 ---
-title: Definir limites e avisos no Replication Monitor | Microsoft Docs
-ms.custom: ''
+title: Definir limites e avisos (Replication Monitor)
+description: Saiba como habilitar avisos para várias condições que podem ocorrer com a replicação usando o Replication Monitor no SSMS (SQL Server Management Studio).
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -18,16 +19,16 @@ ms.assetid: 3a409c2c-b77e-4001-b81a-1dcd918618ec
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: fcc0e1482d3b38a395724f090805767291b609d7
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: bf3d9ba88f433619a79c9f4453823e81589b4ee3
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68767600"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322253"
 ---
 # <a name="set-thresholds-and-warnings-in-replication-monitor"></a>Definir os limites e avisos no Replication Monitor
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  O[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Monitor exibe informações de status para publicações e assinaturas. Por padrão, o Replication Monitor só exibe avisos para assinaturas não inicializadas, mas você pode habilitar os avisos para outras condições. Recomendamos habilitar os avisos para a sua topologia, para que esteja informado sobre o status e o desempenho de maneira oportuna.  
+  O [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Monitor exibe informações de status para publicações e assinaturas. Por padrão, o Replication Monitor só exibe avisos para assinaturas não inicializadas, mas você pode habilitar os avisos para outras condições. Recomendamos habilitar os avisos para a sua topologia, para que esteja informado sobre o status e o desempenho de maneira oportuna.  
   
  Ao habilitar um aviso, você especifica um limite. Quando o limite é atingido ou excedido, um aviso é exibido (a menos que um problema com prioridade superior deva ser exibido). Além de exibir de um aviso no Replication Monitor, atingir um limite também pode disparar um alerta. Você pode habilitar avisos para as seguintes condições:  
   
@@ -87,7 +88,7 @@ ms.locfileid: "68767600"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  Clique em **Fechar**.  
+5.  Clique em **fechar**  
   
 ##  <a name="Merge"></a> Definir limites e avisos para uma publicação de mesclagem  
   
@@ -129,7 +130,7 @@ ms.locfileid: "68767600"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  Clique em **Fechar**.  
+5.  Clique em **fechar**  
   
 ##  <a name="Snapshot"></a> Definir limites e avisos para uma publicação de instantâneo  
   
@@ -161,7 +162,7 @@ ms.locfileid: "68767600"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  Clique em **Fechar**.  
+5.  Clique em **fechar**  
   
 ## <a name="see-also"></a>Consulte Também  
  [Monitorando a Replicação](../../../relational-databases/replication/monitor/monitoring-replication.md)  

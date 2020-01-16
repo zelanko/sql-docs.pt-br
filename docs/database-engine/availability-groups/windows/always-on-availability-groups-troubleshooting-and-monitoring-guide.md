@@ -1,7 +1,7 @@
 ---
-title: Uma referência para o monitoramento e a solução de problemas de grupos de disponibilidade Always On
-description: Este guia funciona como uma página de referência para ajudá-lo a começar a monitorar e solucionar alguns dos problemas comuns encontrados com grupos de disponibilidade Always On.
-ms.custom: ag-guide, seodec18
+title: Guia para monitorar e solucionar problemas de grupos de disponibilidade
+description: Um índice de conteúdo para ajudá-lo a começar a monitorar e solucionar alguns dos problemas comuns encontrados com grupos de disponibilidade Always On.
+ms.custom: seo-lt-2019
 ms.date: 05/10/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 8d6d9954-ff6b-4e58-882e-eff0174f0d07
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 94430d6b32567f7f185f1a515f8391d4ee01b3a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fa4b3ae0ef918b0d7706a7f4e47eceb50d380c0b
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991572"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822039"
 ---
-# <a name="always-on-availability-groups-troubleshooting-and-monitoring-guide"></a>Guia de solução de problemas e monitoramento dos Grupos de Disponibilidade Always On
+# <a name="monitor-and-troubleshoot-availability-groups"></a>Monitorar e solucionar problemas de grupos de disponibilidade
  Este guia ajuda você a começar a monitorar Grupos de Disponibilidade Always On e solucionar alguns dos problemas comuns em grupos de disponibilidade. Ele fornece o conteúdo original, bem como uma página inicial com informações úteis que são publicadas em outros lugares. Embora este guia não aborde completamente todos os problemas que podem ocorrer no vasto campo dos grupos de disponibilidade, ele pode indicar a direção correta para sua análise de causa raiz e para a solução de problemas. 
  
  Como os grupos de disponibilidade são uma tecnologia integrada, muitos problemas encontrados podem ser sintomas de outros problemas do seu sistema de banco de dados. Alguns problemas são causados por configurações em um grupo de disponibilidade, como um banco de dados de disponibilidade que está sendo suspenso. Outros problemas podem estar relacionados com outros aspectos do SQL Server, como configurações do SQL Server, implantações de arquivos de banco de dados e problemas de desempenho sistêmicos não relacionados à disponibilidade. Além disso, pode haver outros problemas fora do SQL Server, como problemas de E/S de rede, de TCP/IP, de Active Directory e de WSFC (Cluster de Failover do Windows Server). Muitas vezes, os problemas que rondam um grupo de disponibilidade, uma réplica ou um banco de dados exigem a solução de problemas de várias tecnologias para identificar a causa raiz.  
@@ -26,21 +26,21 @@ ms.locfileid: "67991572"
 ##  <a name="BKMK_SCENARIOS"></a> Cenários de solução de problemas  
  A tabela a seguir contém links para os cenários de solução de problemas comuns de grupos de disponibilidade. Eles são categorizados por tipo de cenário, como configuração, conectividade de cliente, failover e desempenho.  
   
-|Cenário|Tipo de cenário|Descrição|  
+|Cenário|Tipo de cenário|DESCRIÇÃO|  
 |--------------|-------------------|-----------------|  
 |[Solucionar problemas de configuração de Grupos de Disponibilidade Always On &#40;SQL Server&#41;](troubleshoot-always-on-availability-groups-configuration-sql-server.md)|Configuração|Fornece informações para ajudar a solucionar problemas típicos com a configuração de instâncias de servidor de grupos de disponibilidade. Os problemas de configuração típicos incluem grupos de disponibilidade desabilitados, contas configuradas incorretamente, ponto de extremidade de espelhamento de banco de dados inexistente, ponto de extremidade inacessível (Erro 1418 do SQL Server), acesso à rede inexistente e falha no comando de junção de banco de dados (Erro 35250 do SQL Server).|  
 |[Solução de problemas de uma operação de adição de arquivos com falha &#40;Grupos de Disponibilidade Always On&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)|Configuração|Uma operação de adição de arquivo fez com que o banco de dados secundário fosse suspenso e entrasse no estado NOT SYNCHRONIZING.|  
 |[Não é possível conectar-se ao ouvinte do grupo de disponibilidade em um ambiente de várias sub-redes](https://support.microsoft.com/kb/2792139/en-us)|Conectividade de cliente|Depois de configurar o ouvinte do grupo de disponibilidade, não será possível fazer ping do ouvinte ou se conectar a ele por meio de um aplicativo.|  
 |[Solução de problemas de failovers automáticos com falha](https://support.microsoft.com/kb/2833707)|Failover|Um failover automático não foi concluído com êxito.|  
-|[Solução de problemas: o grupo de disponibilidade excedeu o RTO](troubleshoot-availability-group-exceeded-rto.md)|Desempenho|Após um failover automático ou um failover manual planejado sem perda de dados, o tempo de failover excede o RTO. Ou, quando você calcula o tempo de failover de uma réplica secundária de confirmação síncrona (como um parceiro de failover automático), você descobre que ele excede o RTO.|  
-|[Solução de problemas: o grupo de disponibilidade excedeu o RPO](troubleshoot-availability-group-exceeded-rpo.md)|Desempenho|Depois de executar um failover manual forçado, a perda de dados é maior que o RPO. Ou, ao calcular a possível perda de dados de uma réplica secundária de confirmação assíncrona, você descobre que ela excede o RPO.|  
-|[Solução de problemas: as alterações na réplica primária não são refletidas na réplica secundária](troubleshoot-primary-changes-not-reflected-on-secondary.md)|Desempenho|O aplicativo cliente conclui uma atualização na réplica primária com êxito, mas uma consulta à réplica secundária mostra que a alteração não foi refletida.|  
-|[Solução de problemas: tipo de espera HADR_SYNC_COMMIT alto com Grupos de Disponibilidade Always On](https://blogs.msdn.microsoft.com/sql_server_team/troubleshooting-high-hadr_sync_commit-wait-type-with-always-on-availability-groups/)|Desempenho|Se HADR_SYNC_COMMIT é muito longo, há um problema de desempenho no fluxo de movimentação de dados ou na proteção de logs da réplica secundária.|  
+|[Solucionar problemas: o grupo de disponibilidade excedeu o RTO](troubleshoot-availability-group-exceeded-rto.md)|Desempenho|Após um failover automático ou um failover manual planejado sem perda de dados, o tempo de failover excede o RTO. Ou, quando você calcula o tempo de failover de uma réplica secundária de confirmação síncrona (como um parceiro de failover automático), você descobre que ele excede o RTO.|  
+|[Solucionar problemas: o grupo de disponibilidade excedeu o RPO](troubleshoot-availability-group-exceeded-rpo.md)|Desempenho|Depois de executar um failover manual forçado, a perda de dados é maior que o RPO. Ou, ao calcular a possível perda de dados de uma réplica secundária de confirmação assíncrona, você descobre que ela excede o RPO.|  
+|[Solucionar problemas: as alterações na réplica primária não são refletidas na réplica secundária](troubleshoot-primary-changes-not-reflected-on-secondary.md)|Desempenho|O aplicativo cliente conclui uma atualização na réplica primária com êxito, mas uma consulta à réplica secundária mostra que a alteração não foi refletida.|  
+|[Solucionar problemas: tipo de espera HADR_SYNC_COMMIT alto com Grupos de Disponibilidade Always On](https://blogs.msdn.microsoft.com/sql_server_team/troubleshooting-high-hadr_sync_commit-wait-type-with-always-on-availability-groups/)|Desempenho|Se HADR_SYNC_COMMIT é muito longo, há um problema de desempenho no fluxo de movimentação de dados ou na proteção de logs da réplica secundária.|  
 
 ##  <a name="BKMK_TOOLS"></a> Ferramentas úteis para solução de problemas  
  Ao configurar ou executar grupos de disponibilidade, diversas ferramentas podem ajudá-lo a diagnosticar diferentes tipos de problemas. A tabela a seguir fornece links para informações úteis sobre as ferramentas.  
   
-|Ferramenta|Descrição|  
+|Ferramenta|DESCRIÇÃO|  
 |----------|-----------------|  
 |[Usar o Painel AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)|Oferece relatório em uma exibição resumida da integridade de seu grupo de disponibilidade com uma interface fácil de usar.|  
 |[Políticas Always On](always-on-policies.md)|Usado pelo Painel Always On.|  
@@ -60,7 +60,7 @@ ms.locfileid: "67991572"
   
  A tabela abaixo aponta para tópicos que podem ajudá-lo a monitorar a integridade da solução de grupos de disponibilidade.  
   
-|Tópico|Descrição|  
+|Tópico|DESCRIÇÃO|  
 |-----------|-----------------|  
 |[Monitorar o desempenho de Grupos de Disponibilidade Always On](monitor-performance-for-always-on-availability-groups.md)|Descreve o processo de sincronização de dados para grupos de disponibilidade, os portões de controle de fluxo e as métricas úteis ao monitorar um grupo de disponibilidade; também mostra como coletar métricas de RTO e RPO.|  
 |[Monitoramento de grupos de disponibilidade &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)|Fornece informações sobre ferramentas para monitorar um grupo de disponibilidade.|  

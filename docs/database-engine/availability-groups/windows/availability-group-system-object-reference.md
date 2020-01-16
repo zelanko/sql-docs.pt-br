@@ -1,6 +1,7 @@
 ---
-title: Referência de objeto do sistema de grupo de disponibilidade Always On | Microsoft Docs
-ms.custom: ''
+title: Referência de objeto do sistema do grupo de disponibilidade
+description: Uma referência de vários objetos do sistema que podem ser usados ao trabalhar com grupos de disponibilidade Always On.
+ms.custom: seo-lt-2019
 ms.date: 04/03/2010
 ms.prod: sql
 ms.reviewer: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2014||=sqlallproducts-allversions'
-ms.openlocfilehash: b9bdf352a566917678294c6c63ac52bd0d27de8e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 140953484006d33e7814c19b9eb5bd6abcd29009
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991386"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822461"
 ---
 # <a name="always-on-availability-group-system-object-reference"></a>Referência de objeto do sistema de grupo de disponibilidade Always On
 
@@ -24,7 +25,7 @@ Este tópico serve como uma página de referência para todos os vários objetos
 
 ## <a name="system-catalog-views"></a>Exibições de catálogo do sistema
 
-| Exibição de catálogo do sistema | Descrição|
+| Exibição de catálogo do sistema | DESCRIÇÃO|
 | :------ | :----------------------------- |
 | [sys.availability_databases_cluster](../../../relational-databases/system-catalog-views/sys-availability-databases-cluster-transact-sql.md)   | Contém uma linha para cada banco de dados de disponibilidade na instância do SQL Server que está hospedando uma réplica de disponibilidade para qualquer grupo de disponibilidade Always On no cluster do WSFC (Windows Server Failover Clustering), independentemente de se o banco de dados de cópia local foi unido ao grupo de disponibilidade. |
 | [sys.availability_group_listener_ip_addresses](../../../relational-databases/system-catalog-views/sys-availability-group-listener-ip-addresses-transact-sql.md)  | Retorna uma linha para cada endereço IP associado a qualquer ouvinte de grupo de disponibilidade Always On no cluster do WSFC (Windows Server Failover Clustering). |
@@ -38,7 +39,7 @@ Este tópico serve como uma página de referência para todos os vários objetos
 ## <a name="system-dynamic-management-views"></a>Exibições de gerenciamento dinâmico do sistema
 
 
-| Exibição de gerenciamento dinâmico do sistema | Descrição|
+| Exibição de gerenciamento dinâmico do sistema | DESCRIÇÃO|
 | :------ | :----------------------------- |
 | [sys.dm_hadr_auto_page_repair](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-auto-page-repair-transact-sql.md)   | Retorna uma linha para cada tentativa de reparo automático de página em qualquer banco de dados de disponibilidade em uma réplica de disponibilidade hospedada para qualquer grupo de disponibilidade pela instância do servidor.  |
 | [sys.dm_hadr_availability_group_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-group-states-transact-sql.md)    | Retorna uma linha para cada grupo de disponibilidade Always On que possui uma réplica de disponibilidade na instância local do SQL Server. Cada linha exibe os estados que definem a integridade de um determinado grupo de disponibilidade. |
@@ -58,7 +59,7 @@ Este tópico serve como uma página de referência para todos os vários objetos
 ## <a name="system-functions"></a>Funções do sistema
 
 
-| Função do sistema | Descrição|
+| Função do sistema | DESCRIÇÃO|
 | :------ | :----------------------------- |
 | [sys.fn_hadr_is_primary_replica](../../../relational-databases/system-functions/sys-fn-hadr-is-primary-replica-transact-sql.md)  | Usado para determinar se a réplica atual for a réplica primária. |
 | [sys.fn_hadr_backup_is_preferred_replica](../../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md)    | Usado para determinar se a réplica atual for a réplica de backup preferencial. |

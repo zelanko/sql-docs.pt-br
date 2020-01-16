@@ -1,7 +1,7 @@
 ---
-title: Gerenciar logons para trabalhos usando bancos de dados em um grupo de disponibilidade
+title: Gerenciar logons de trabalho para bancos de dados em um grupo de disponibilidade
 description: Uma descrição de como gerenciar logons para trabalhos que usam bancos de dados participantes de um grupo de disponibilidade Always On.
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d7da14d3-848c-44d4-8e49-d536a1158a61
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 05645d3ce6bcccd006db72fefa9343153e3a0390
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 840e34dcad069ccd6dc2c4102c6a2a85b7e4fbf5
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68022583"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822237"
 ---
 # <a name="manage-logins-for-jobs-using-databases-in-an-always-on-availability-group"></a>Gerenciar logons para trabalhos usando bancos de dados em um grupo de disponibilidade Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "68022583"
   
 ##  <a name="RelatedTasks"></a> Tarefas relacionadas  
   
--   [Crie um logon](../../../relational-databases/security/authentication-access/create-a-login.md)  
+-   [Criar um logon](../../../relational-databases/security/authentication-access/create-a-login.md)  
   
 -   [Criar um usuário de banco de dados](../../../relational-databases/security/authentication-access/create-a-database-user.md).  
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 28c2bbd60b5a1565e2920968e40bb1dc4e75db22
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 2b34fb6b368f042e39776a25628472c336e21392
+ms.sourcegitcommit: 0d5b0aeee2a2b34fd448aec2e72c0fa8be473ebe
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531193"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75721738"
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Restaurar um banco de dados SQL Server em um contêiner do Docker em Linux
 
@@ -84,8 +84,8 @@ Este tutorial demonstra como mover e restaurar um arquivo de backup do SQL Serve
 
    Esse comando cria um contêiner do SQL Server 2017 com a Developer Edition (padrão). A porta do SQL Server **1433** é exposta no host como a porta **1401**. O parâmetro `-v sql1data:/var/opt/mssql` opcional cria um contêiner de volume de dados chamado **sql1ddata**. Isso é usado para persistir os dados criados pelo SQL Server.
 
-   > [!NOTE]
-   > O processo para executar edições de produção do SQL Server em contêineres é um pouco diferente. Para obter mais informações, veja [Executar imagens de contêiner de produção](sql-server-linux-configure-docker.md#production). Se você usar os mesmo nomes e portas de contêiner, o restante deste tutorial ainda funcionará com contêineres de produção.
+   > [!IMPORTANT]
+   > Este exemplo usa um contêiner de volume de dados no Docker. Se, em vez disso, você optar por mapear um diretório de host, observe que haverá limitações para essa abordagem no Docker para Mac e Windows. Para obter mais informações, confira [Configurar imagens de contêiner do SQL Server no Docker](sql-server-linux-configure-docker.md#persist).
 
 1. Para exibir seus contêineres do Docker, use o comando `docker ps`.
 

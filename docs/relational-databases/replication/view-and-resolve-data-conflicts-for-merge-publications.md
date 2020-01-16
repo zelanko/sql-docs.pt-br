@@ -1,6 +1,7 @@
 ---
-title: Exibir e resolver conflitos de dados para publicações de mesclagem | Microsoft Docs
-ms.custom: ''
+title: Exibir e resolver conflitos de dados (mesclagem)
+description: Saiba como exibir e resolver conflitos de dados em uma publicação de mesclagem do SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 11/20/2018
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: aeee9546-4480-49f9-8b1e-c71da1f056c7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: db445d9c80c6a6e2552160dcff721c06d5c107e6
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 79dc4b26ee543aa99b9fc90e29f7bb6c7d571555
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907784"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321883"
 ---
 # <a name="conflict-resolution-for-merge-replication"></a>Resolução de conflitos para replicação de mesclagem
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "72907784"
   
 ## <a name="resolve-conflicts"></a>Resolver conflitos  
   
-1.  Conecte-se ao Publicador (ou Assinante se apropriado) no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]e expanda o nó do servidor.  
+1.  Conecte-se ao Publicador (ou ao Assinante, se apropriado) no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e, em seguida, expanda o nó do servidor.  
   
 2.  Expanda a pasta **Replicação** e, em seguida, a pasta **Publicações Locais** .  
   

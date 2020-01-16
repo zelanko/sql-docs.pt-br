@@ -19,12 +19,12 @@ ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 6babf3d10d6f391d3002e7094d7b8fe6b32b261b
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: 9a665f51aa6fd6bc9b87ac354a26856049004d7e
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74056025"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401581"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>Exemplos de importação e exportação em massa de documentos XML (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -95,7 +95,7 @@ SELECT * FROM OPENROWSET(
    SINGLE_BLOB) AS x;  
 ```  
   
-#### <a name="remarks"></a>Remarks  
+#### <a name="remarks"></a>Comentários  
  Usando SINGLE_BLOB nesse caso, você pode evitar uma desigualdade entre a codificação do documento XML (como especificado pela declaração de codificação XML) e a cadeia de caracteres da página de código implícita pelo servidor.  
   
  Se você usar tipos de dados NCLOB ou CLOB e executar em uma página de código ou conflito de código, você deve adotar um dos seguintes procedimentos:  
@@ -253,7 +253,7 @@ GO
  [&#91;Início&#93;](#top)  
   
 ## <a name="bulk_export_xml_data"></a> Exportação em massa de dados XML  
- O exemplo abaixo usa o `bcp` para exportar dados XML em massa da tabela criada no exemplo anterior usando o mesmo arquivo de formato XML. No comando `bcp` abaixo, `<server_name>` e `<instance_name>` representam espaços reservados que devem ser substituídos com os valores apropriados:  
+ O exemplo abaixo usa o [bcp](../../tools/bcp-utility.md) para exportar dados XML em massa da tabela criada no exemplo anterior usando o mesmo arquivo de formato XML. No comando `bcp` abaixo, `<server_name>` e `<instance_name>` representam espaços reservados que devem ser substituídos com os valores apropriados:  
   
 ```cmd
 bcp bulktest..xTable out a-wn.out -N -T -S<server_name>\<instance_name>  

@@ -1,6 +1,7 @@
 ---
-title: Usar o Conector do SQL Server com recursos de criptografia do SQL | Microsoft Docs
-ms.custom: ''
+title: Usar a criptografia do Conector do SQL Server com o Azure Key Vault
+description: Saiba como usar o Conector do SQL Server com recursos comuns de criptografia, como TDE, criptografia de backups e criptografia em nível de coluna, usando o Azure Key Vault.
+ms.custom: seo-lt-2019
 ms.date: 09/12/2019
 ms.prod: sql
 ms.reviewer: vanto
@@ -10,14 +11,14 @@ helpviewer_keywords:
 - SQL Server Connector, using
 - EKM, with SQL Server Connector
 ms.assetid: 58fc869e-00f1-4d7c-a49b-c0136c9add89
-author: aliceku
-ms.author: aliceku
-ms.openlocfilehash: 76b3d714f1522cfecd5c61eb028b59f3bbeaa09d
-ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: 0fc954228aff75940e66f976f19d1414118e1a8e
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929742"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558497"
 ---
 # <a name="use-sql-server-connector-with-sql-encryption-features"></a>Use SQL Server Connector with SQL Encryption Features (Usar o Conector do SQL Server com recursos de criptografia do SQL)
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -119,7 +120,7 @@ Você precisará criar uma credencial e um logon e criar uma chave de criptograf
   
      Na caixa de diálogo **Gerenciar Criptografia de Banco de Dados** , confirme se a TDE está ativada e se a chave assimétrica está criptografando a DEK.  
   
-     ![ekm&#45;tde&#45;dialog&#45;box](../../../relational-databases/security/encryption/media/ekm-tde-dialog-box.png "ekm-tde-dialog-box")  
+     ![ekm&#45;tde&#45;dialog&#45;box](../../../relational-databases/security/encryption/media/ekm-tde-dialog-box.png "|::ref3::|")  
   
      Como alternativa, você pode executar o seguinte script [!INCLUDE[tsql](../../../includes/tsql-md.md)] . Um estado de criptografia de 3 indica um banco de dados criptografado.  
   
@@ -195,7 +196,7 @@ O [!INCLUDE[ssDE](../../../includes/ssde-md.md)] precisa de credenciais ao acess
   
 3.  **Backup de banco de dados**  
   
-     Faça backup do banco de dados especificando a criptografia com a chave assimétrica armazenada no cofre de chaves.
+     Faça o backup do banco de dados especificando a criptografia com a chave assimétrica armazenada no cofre de chave.
      
      No exemplo abaixo, observe que, se o banco de dados já foi criptografado com TDE e a chave assimétrica `CONTOSO_KEY_BACKUP` é diferente da chave assimétrica TDE, o backup será criptografado tanto pela chave assimétrica TDE quanto por `CONTOSO_KEY_BACKUP`. A instância de destino [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] precisará das duas chaves para descriptografar o backup.
   
@@ -282,6 +283,6 @@ CLOSE SYMMETRIC KEY DATA_ENCRYPTION_KEY;
  [Setup Steps for Extensible Key Management Using the Azure Key Vault](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)   
  [Gerenciamento extensível de chaves usando o Azure Key Vault](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  
  [Opção de configuração de servidor EKM provider enabled](../../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)   
- [Manutenção e solução de problemas do Conector do SQL Server](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)  
+ [Manutenção e solução de problemas do conector do SQL Server](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)  
   
   

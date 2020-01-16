@@ -1,5 +1,5 @@
 ---
-title: 'Exemplo: Restauração online de um arquivo somente leitura (modelo de recuperação simples) | Microsoft Docs'
+title: 'Restauração online: arquivo somente leitura (modelo de recuperação simples)'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0c691fc6-9865-46a7-b055-8097424492d6
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4756dca201870e501645865518115ce6b48267d5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c4a3f311cc870331db030b5caf7191c9b6f91a28
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140184"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243722"
 ---
 # <a name="example-online-restore-of-a-read-only-file-simple-recovery-model"></a>Exemplo: Restauração online de um arquivo somente leitura (modelo de recuperação simples)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

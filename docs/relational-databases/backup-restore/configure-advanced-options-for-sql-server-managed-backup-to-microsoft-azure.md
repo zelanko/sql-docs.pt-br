@@ -1,7 +1,8 @@
 ---
-title: Configurar opções avançadas de backup gerenciado do SQL Server para o Microsoft Azure | Microsoft Docs
-ms.custom: ''
-ms.date: 03/05/2017
+title: Backup gerenciado – configurar opções avançadas
+titleSuffix: to Microsoft Azure
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ffd28159-8de8-4d40-87da-1586bfef3315
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7487f89c6868555c6e3e27a217bce12123b16642
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 4bd21bac561a34e6dab779f1db0656dcc8e3175e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908975"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242566"
 ---
 # <a name="configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure"></a>Configurar opções avançadas de backup gerenciado do SQL Server para o Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -110,10 +111,10 @@ ms.locfileid: "72908975"
   
     ```  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Próximas etapas  
  Depois de configurar opções avançadas e agendas personalizadas, é necessário habilitar o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] no banco de dados de destino ou instância do SQL Server. Para obter mais informações, veja [Habilitar o backup gerenciado do SQL Server no Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Backup gerenciado do SQL Server no Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
+ [Backup Gerenciado do SQL Server para o Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   

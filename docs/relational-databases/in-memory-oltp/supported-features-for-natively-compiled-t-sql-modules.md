@@ -1,6 +1,6 @@
 ---
-title: Recursos com suporte para módulos T-SQL compilados nativamente | Microsoft Docs
-ms.custom: ''
+title: Recursos para módulos T-SQL compilados nativamente
+ms.custom: seo-dt-2019
 ms.date: 10/23/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +11,12 @@ ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a1cf5b6242f5c76abf8dca638a2596eb2cae9641
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 472a654a0bee8b386c6573c8ab1ed8fdb0b4cf8d
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025077"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412523"
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>Recursos com suporte para módulos T-SQL compilados nativamente
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "68025077"
 Há suporte para as seguintes construções de consulta:  
 
 expressão CASE: CASE pode ser usada em qualquer instrução ou cláusula que permita uma expressão válida.
-   - **Aplica-se ao:** [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
+   - **Aplica-se a:** [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
     A partir do [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], agora há suporte para instruções CASE para módulos T-SQL compilados nativamente.
 
 Cláusula SELECT:  
@@ -57,19 +57,19 @@ Cláusula SELECT:
 -   Aliases de nome e colunas (usando a sintaxe = ou então AS).  
 
 -   Subconsultas escalares
-    - **Aplica-se ao:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+    - **Aplica-se a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
       A partir do [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], agora há suporte para subconsultas escalares em módulos compilados nativamente.
 
 -   INÍCIO*  
 
 -   SELECT DISTINCT  
-    - **Aplica-se ao:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+    - **Aplica-se a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
       A partir do [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], há suporte para o operador DISTINCT em módulos compilados nativamente.
 
               DISTINCT aggregates are not supported.  
 
 -   UNION e UNION ALL
-    - **Aplica-se ao:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+    - **Aplica-se a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
       A partir do [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], agora há suporte para os operadores UNION e UNION ALL em módulos compilados nativamente.
 
 -   Atribuições de variável  
@@ -81,11 +81,11 @@ Cláusula FROM:
 -   FROM \<TVF embutida compilada nativamente>  
 
 -   LEFT OUTER JOIN, RIGHT OUTER JOIN, CROSS JOIN e INNER JOIN.
-    - **Aplica-se ao:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+    - **Aplica-se a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
       A partir do [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], agora há suporte para JOINS em módulos compilados nativamente.
 
 -   Subconsultas `[AS] table_alias`. Para obter mais informações, consulte [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md). 
-    - **Aplica-se ao:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+    - **Aplica-se a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
       A partir do [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], agora há suporte para subconsultas em módulos compilados nativamente.
 
 Cláusula WHERE:  
@@ -94,7 +94,7 @@ Cláusula WHERE:
 
 -   AND, BETWEEN  
 -   OR, NOT, IN, EXISTS
-    - **Aplica-se ao:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+    - **Aplica-se a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
       A partir do [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], agora há suporte para operadores OR/NOT/IN/EXISTS em módulos compilados nativamente.
 
 
@@ -191,7 +191,7 @@ Há suporte para as instruções DML a seguir.
 -   Operadores bit a bit ~, &, |, e ^  
 
 -   operador APPLY
-    - **Aplica-se ao:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
+    - **Aplica-se a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
       A partir do [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], há suporte para o operador APPLY em módulos compilados nativamente.
 
 ##  <a name="bfncsp"></a> Funções internas em módulos compilados nativamente  
@@ -202,7 +202,7 @@ Há suporte para as instruções DML a seguir.
 -   Funções de data: CURRENT_TIMESTAMP, DATEADD, DATEDIFF, DATEFROMPARTS, DATEPART, DATETIME2FROMPARTS, DATETIMEFROMPARTS, DAY, EOMONTH, GETDATE, GETUTCDATE, MONTH, SMALLDATETIMEFROMPARTS, SYSDATETIME, SYSUTCDATETIME e YEAR.  
 
 -   Funções de cadeia de caracteres: LEN, LTRIM, RTRIM e SUBSTRING.  
-    - **Aplica-se ao:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
+    - **Aplica-se a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
       A partir do [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], também há suporte para as seguintes funções internas: TRIM, TRANSLATE e CONCAT_WS.  
 
 -   Funções de identidade: SCOPE_IDENTITY  
@@ -212,7 +212,7 @@ Há suporte para as instruções DML a seguir.
 -   Funções uniqueidentifier: NEWID e NEWSEQUENTIALID  
 
 -   Funções JSON  
-    - **Aplica-se ao:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
+    - **Aplica-se a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
       A partir do [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], há suporte para as funções JSON em módulos compilados nativamente.
 
 -   Funções de erro: ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY e ERROR_STATE  

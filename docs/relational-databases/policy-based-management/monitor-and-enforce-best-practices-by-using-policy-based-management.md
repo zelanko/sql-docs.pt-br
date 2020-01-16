@@ -1,6 +1,7 @@
 ---
-title: Monitorar e impor as melhores práticas usando o gerenciamento baseado em políticas | Microsoft Docs
-ms.custom: ''
+title: Monitorar e impor as melhores práticas usando o gerenciamento baseado em políticas
+description: O gerenciamento baseado em políticas fornece um conjunto de arquivos de políticas que você pode importar como políticas de melhores práticas e, em seguida, avaliar essas políticas em um conjunto de destino que inclui instâncias, objetos, bancos de dados ou objetos de banco de dados.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 46788407-187e-4b0b-bfe4-529af8d77c60
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d261f84f23131ab9bce11081e1c9d6d1c8dda8d3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 54fdfe36da0d590fa2225ab7cc99af640727b000
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68087091"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557559"
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>Monitorar e impor práticas recomendadas usando o Gerenciamento Baseado em Políticas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -1,6 +1,7 @@
 ---
-title: Detectando e solucionando conflitos em registros lógicos | Microsoft Docs
-ms.custom: ''
+title: Detectar e resolver conflitos em registros lógicos (mesclagem)
+description: Conheça as várias combinações de detecção de conflitos e abordagens de resolução de conflitos possíveis ao usar registros lógicos com a replicação de mesclagem.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f2e55040-ca69-4ccf-97d1-c362e1633f26
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 62c862fdd67d7b4432595572175d87ae0bd44304
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4d222370b5e5ced1b2157a5f02f8eb4c7f44bb5e
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033323"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321573"
 ---
 # <a name="advanced-merge-replication-conflict---resolving-in-logical-record"></a>Conflito de replicação de mesclagem avançada – resolução em registro lógico
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "68033323"
   
  A propriedade de artigo **logical_record_level_conflict_detection** pode ser definida como TRUE ou FALSE. O valor deve ser definido apenas para o artigo pai de alto nível, sendo ignorado pelos artigos filho. Se esse valor for FALSE, a replicação de mesclagem detectará conflitos como nas versões anteriores do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], com base unicamente no valor da propriedade **column_tracking** do artigo. Se esse valor for TRUE, a replicação de mesclagem ignorará a propriedade **column_tracking** do artigo, e detectará um conflito se alterações forem feitas em qualquer lugar do registro lógico. Por exemplo, considere este cenário:  
   
- ![Três registros lógicos de tabela com valores](../../../relational-databases/replication/merge/media/logical-records-05.gif "Três registros lógicos de tabela com valores")  
+ ![Registro lógico de três tabelas com valores](../../../relational-databases/replication/merge/media/logical-records-05.gif "Registro lógico de três tabelas com valores")  
   
  Um conflito é detectado caso dois usuários alterem quaisquer valores do registro lógico Customer2 nas tabelas **Customers**, **Orders**ou **OrderItems** . Esse exemplo invoca alterações feitas por meio da instrução UPDATE, mas o conflito pode igualmente ser detectado pelas alterações feitas com as instruções INSERT ou DELETE.  
   
@@ -75,7 +76,7 @@ ms.locfileid: "68033323"
   
  Como os conflitos são resolvidos em nível de registro lógico, as alterações vencedoras feitas no Publicador substituem as alterações feitas nas tabelas do Assinante durante o processo de replicação.  
   
- ![Série de tabelas mostrando alterações a linhas relacionadas](../../../relational-databases/replication/merge/media/logical-records-06.gif "Série de tabelas mostrando alterações a linhas relacionadas")  
+ ![Série de tabelas mostrando alterações nas linhas relacionadas](../../../relational-databases/replication/merge/media/logical-records-06.gif "Série de tabelas mostrando alterações nas linhas relacionadas")  
   
 ### <a name="row-level-detection-logical-record-resolution"></a>Detecção em nível de linha, resolução de registro lógico  
  Nesse exemplo, a publicação é configurada com:  
@@ -90,7 +91,7 @@ ms.locfileid: "68033323"
   
  Como os conflitos são resolvidos em nível de registro lógico, as alterações vencedoras feitas no Publicador substituem as alterações feitas nas tabelas do Assinante durante o processamento da replicação.  
   
- ![Série de tabelas mostrando alterações a linhas relacionadas](../../../relational-databases/replication/merge/media/logical-records-07.gif "Série de tabelas mostrando alterações a linhas relacionadas")  
+ ![Série de tabelas mostrando alterações nas linhas relacionadas](../../../relational-databases/replication/merge/media/logical-records-07.gif "Série de tabelas mostrando alterações nas linhas relacionadas")  
   
 ### <a name="logical-record-detection-logical-record-resolution"></a>Detecção de registro lógico, resolução de registro lógico  
  Nesse exemplo, a publicação é configurada com:  
@@ -103,7 +104,7 @@ ms.locfileid: "68033323"
   
  Como os conflitos são também resolvidos no nível do registro lógico, durante a sincronização a alteração vencedora feita no Publicador substitui a alteração feita nas tabelas do Assinante.  
   
- ![Série de tabelas mostrando alterações a linhas relacionadas](../../../relational-databases/replication/merge/media/logical-records-08.gif "Série de tabelas mostrando alterações a linhas relacionadas")  
+ ![Série de tabelas mostrando alterações nas linhas relacionadas](../../../relational-databases/replication/merge/media/logical-records-08.gif "Série de tabelas mostrando alterações nas linhas relacionadas")  
   
 ## <a name="see-also"></a>Consulte Também  
  [Agrupar alterações em linhas relacionadas com registros lógicos](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)  

@@ -1,7 +1,7 @@
 ---
-title: Combinar uma instância de cluster de failover com grupos de disponibilidade
+title: Instância de cluster de failover com grupos de disponibilidade
 description: Aprimore sua alta disponibilidade e capacidade de recuperação de desastre combinando os recursos de uma instância de cluster de failover do SQL Server e um grupo de disponibilidade Always On.
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 07/02/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: 613bfbf1-9958-477b-a6be-c6d4f18785c3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3a1e9f29db3c9aec7dc86520c502cc3fdbea7a86
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 62b5f1d23608ce6337befa1e4888ad2cda543dc9
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67988392"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822256"
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>Clustering de failover e Grupos de Disponibilidade AlwaysOn (SQL Server)
 
@@ -62,12 +62,12 @@ ms.locfileid: "67988392"
 ||Nós dentro de uma FCI|Réplicas dentro de um grupo de disponibilidade|  
 |-|-------------------------|-------------------------------------------|  
 |**Usa o WSFC**|Sim|Sim|  
-|**Nível de proteção**|Instância|banco de dados|  
+|**Nível de proteção**|Instância|Banco de dados|  
 |**Tipo de armazenamento**|Compartilhado|Não compartilhado<br /><br /> Embora as réplicas de um grupo de disponibilidade não compartilhem armazenamento, uma réplica hospedada por uma FCI usa uma solução de armazenamento compartilhado conforme exigido por essa FCI. A solução de armazenamento é compartilhada somente pelos nós dentro da FCI e não entre as réplicas do grupo de disponibilidade.|  
 |**Soluções de armazenamento**|Conexão direta, rede SAN, pontos de montagem, SMB|Depende do tipo de nó|  
 |**Secundários legíveis**|Não*|Sim|  
 |**Configurações de política de failover aplicáveis**|Quorum WSFC<br /><br /> Específica da FCI<br /><br /> Configurações de grupo de disponibilidade**|Quorum WSFC<br /><br /> Configurações de grupo de disponibilidade|  
-|**Recursos que recebem failover**|Servidor, instância e banco de dados|Somente banco de dados|  
+|**Recursos que recebem failover**|Servidor, instância e banco de dados|Apenas banco de dados|  
   
  *Enquanto as réplicas secundárias síncronas em um grupo de disponibilidade sempre estão em execução em suas respectivas instâncias do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , os nós secundários em uma FCI não iniciaram suas respectivas instâncias do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de fato e, portanto, não são legíveis. Em uma FCI, um nó secundário inicia sua instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] somente quando a propriedade do grupo de recursos é transferida a ele durante um failover de FCI. No entanto, no nó FCI ativo, quando um banco de dados hospedado por FCI pertence a um grupo de disponibilidade, se a réplica de disponibilidade local estiver em execução como réplica secundária legível, o banco de dados será legível.  
   
@@ -133,6 +133,6 @@ ms.locfileid: "67988392"
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Habilitar e desabilitar Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)   
  [Monitorar grupos de disponibilidade &#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
- [Instâncias do cluster de failover do AlwaysOn &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)  
+ [Instâncias do cluster de failover AlwaysOn &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)  
   
   

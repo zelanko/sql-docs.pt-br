@@ -1,7 +1,7 @@
 ---
-title: Informações de histórico e cabeçalho de backup (SQL Server) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/17/2017
+title: Cabeçalho e histórico de backup | Microsoft Docs
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -33,12 +33,12 @@ helpviewer_keywords:
 ms.assetid: 799b9934-0ec2-4f43-960b-5c9653f18374
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 9d88540aa6c4d3ada8af6808713405829a3e352e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f2b04fb3c35f810e37e1646446f7ebdfb8915ee1
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68081462"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242587"
 ---
 # <a name="backup-history-and-header-information-sql-server"></a>Informações de histórico e cabeçalho de backup (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "68081462"
 ##  <a name="BnRHistoryTables"></a> Tabelas de histórico de backup e restauração  
  Esta seção apresenta as tabelas de histórico que armazenam backup e restauram metadados no banco de dados do sistema **msdb** .  
   
-|Tabela de histórico|Descrição|  
+|Tabela de histórico|DESCRIÇÃO|  
 |-------------------|-----------------|  
 |[backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md)|Contém uma linha para cada arquivo de dados ou arquivo de log para o qual é feito o backup.|  
 |[backupfilegroup](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)|Contém uma linha para cada grupo de arquivos em um conjunto de backup.|  
@@ -88,7 +88,7 @@ ms.locfileid: "68081462"
 > [!IMPORTANT]  
 >  As instruções Transact-SQL RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY e RESTORE VERIFYONLY exigem a permissão CREATE DATABASE. Com essa exigência, seus arquivos e suas informações de backup estão mais protegidos do que nas versões anteriores. Para obter informações sobre essa permissão, veja [Permissões de banco de dados GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md).  
   
-|Instrução de informações|Tabela de histórico de backup|Descrição|  
+|Instrução de informações|Tabela de histórico de backup|DESCRIÇÃO|  
 |---------------------------|--------------------------|-----------------|  
 |[RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)|[backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md)|Retorna um conjunto de resultados que tem uma lista dos arquivos de log e de banco de dados contidos no backup especificado.<br /><br /> Para obter mais informações, consulte "Listando arquivos de log de transações e de banco de dados", mais adiante neste tópico.|  
 |[RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)|[backupset](../../relational-databases/system-tables/backupset-transact-sql.md)|Recupera todas as informações do cabeçalho de backup de todos os conjuntos de backup em um dispositivo de backup particular. O resultado de executar RESTORE HEADERONLY é um conjunto de resultados.<br /><br /> Para obter mais informações, consulte "Exibindo informações do cabeçalho de backup" mais adiante neste tópico.|  
@@ -124,7 +124,7 @@ ms.locfileid: "68081462"
 ### <a name="which-backup-set-to-restore"></a>Conjunto de backup a ser restaurado  
  Você pode usar informações do cabeçalho de backup para identificar qual conjunto de backup deve ser restaurado. O Mecanismo de Banco de Dados numera cada conjunto de backup na mídia de backup. Isso permite a identificação do conjunto de backup que você deve restaurar usando sua posição na mídia. Por exemplo, a mídia a seguir contêm três conjuntos de backup.  
   
- ![Mídia de backup contendo conjuntos de backup do SQL Server](../../relational-databases/backup-restore/media/bnr-media-backup-sets.gif "Mídia de backup contendo conjuntos de backup do SQL Server")  
+ ![Mídia de backup que contém conjuntos de backup do SQL Server](../../relational-databases/backup-restore/media/bnr-media-backup-sets.gif "Mídia de backup que contém conjuntos de backup do SQL Server")  
   
  Para restaurar um conjunto de backup específico, determine o número da posição do conjunto de backup a ser restaurado. Por exemplo, para restaurar o segundo conjunto de backup, especifique 2 como o conjunto de backup a ser restaurado.  
   

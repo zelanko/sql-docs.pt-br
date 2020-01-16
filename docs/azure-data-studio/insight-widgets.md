@@ -1,8 +1,8 @@
 ---
-title: Usar widgets de Insights no Azure Data Studio para monitorar servidores e bancos de dados
+title: Usar widgets de Insight para monitorar servidores e bancos de dados
 titleSuffix: Azure Data Studio
 description: Saiba mais sobre widgets de insights no Azure Data Studio
-ms.custom: seodec18, sqlfreshmay19
+ms.custom: seodec18, sqlfreshmay19, seo-lt-2019
 ms.date: 05/14/2019
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,12 +10,12 @@ ms.reviewer: alayu; sstein
 ms.topic: conceptual
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: c1ab90efa97878676b1adc2a62579527407d6ba6
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 4edf4003d40da35dcd54b3938e0f318ef8b9440a
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959521"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957050"
 ---
 # <a name="manage-servers-and-databases-with-insight-widgets-in-includename-sosincludesname-sos-shortmd"></a>Gerenciar servidores e bancos de dados com widgets de insights no [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -27,14 +27,12 @@ Você pode criar painéis de gerenciamento de servidor e de banco de dados incr�
 
 ![painel de banco de dados](media/insight-widgets/database-dashboard.png)
 
-
 Para começar a criar diferentes tipos de widgets de insights, confira os seguintes tutoriais:
 
 - [Criar um widget de insight personalizado](tutorial-build-custom-insight-sql-server.md)
 - *Habilitar widgets de insights internos*
   - [Habilitar o insight de monitoramento de desempenho](tutorial-qds-sql-server.md)
   - [Habilitar o insight de uso de espaço de tabela](tutorial-table-space-sql-server.md)
-
 
 ## <a name="sql-queries"></a>Consultas SQL
 

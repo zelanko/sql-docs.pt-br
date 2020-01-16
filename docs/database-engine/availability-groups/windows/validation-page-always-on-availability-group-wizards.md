@@ -1,6 +1,7 @@
 ---
-title: Página Validação (Assistentes do Grupo de Disponibilidade AlwaysOn) | Microsoft Docs
-ms.custom: ''
+title: 'Assistente do grupo de disponibilidade: Página de Validação'
+description: Este tópico descreve as opções encontradas na página Validação do assistente de grupo de disponibilidade Always On.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c8971556-240c-491a-bc86-9cc72f71a3dd
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 243109e2c9d93db71c59a852a594a411c40c47dd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f22ac0e249e693b7bcd102f6d9242c601e14331f
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013448"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74821842"
 ---
 # <a name="validation-page-always-on-availability-group-wizards"></a>Página Validação (Assistentes do Grupo de Disponibilidade AlwaysOn)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "68013448"
  **Resultado**  
  Exibe um dos seguintes textos de hiperlink. Para obter mais informações sobre o resultado de determinada etapa de validação, clique no hiperlink.  
   
-|Resultado|Descrição|  
+|Result|DESCRIÇÃO|  
 |------------|-----------------|  
 |**Erro**|Indica se houve falha na etapa de validação. Clique no link para exibir a mensagem de erro.|  
 |**Ignorado**|Indica que a etapa de validação foi ignorada porque não é necessária por suas seleções. Clique no link para exibir o motivo pelo qual uma etapa foi ignorada.|  

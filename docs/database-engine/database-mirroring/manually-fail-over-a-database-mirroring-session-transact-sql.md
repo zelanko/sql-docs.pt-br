@@ -1,6 +1,7 @@
 ---
-title: Fazer failover manual de uma sessão de espelhamento de banco de dados (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: Fazer failover manual de um espelho de banco de dados para o parceiro
+description: Instruções para fazer failover manual de um espelho de banco de dados principal para um parceiro secundário usando T-SQL (Transact-SQL).
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 36218d61-b5f5-4194-905a-608e0e903db4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ddfaec9f9192af98f8b3580554f8c89d757af566
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 92f9040cdc8181b1546d7a04e9b0eaf265fc7012
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041746"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822100"
 ---
 # <a name="manually-fail-over-a-database-mirroring-session-transact-sql"></a>Executar failover manualmente em uma sessão de espelhamento de banco de dados (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

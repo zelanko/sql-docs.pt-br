@@ -1,6 +1,6 @@
 ---
-title: CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse) | Microsoft Docs
-ms.custom: ''
+title: CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse)
+ms.custom: seo-dt-2019
 ms.date: 08/10/2017
 ms.prod: sql
 ms.technology: data-warehouse
@@ -10,12 +10,12 @@ ms.assetid: 16ef8191-7587-45a3-9ee9-7d99b7088de3
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fbebdf4b35b10e584c023e0d34eb8a652d15c1cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1b6b024507d06149efc0bc2693b5bde2f67d482b
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117324"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401700"
 ---
 # <a name="create-remote-table-as-select-parallel-data-warehouse"></a>CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "68117324"
   
  Para configurar o servidor remoto, consulte "Cópia de tabela remota" no [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "|::ref1::|") [Convenções de sintaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -60,14 +60,14 @@ CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_n
   
  A cadeia de conexão é uma lista delimitada por ponto-e-vírgula de pares de chave e valor. As palavras-chave não diferenciam maiúsculas de minúsculas. Espaços entre pares de chave e valor são ignorados. No entanto, os valores podem diferenciar maiúsculas de minúsculas, dependendo da fonte de dados.  
   
- *Fonte de dados*  
+ *Fonte de Dados*  
  O parâmetro que especifica o nome ou endereço IP e o número da porta TCP do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SMP remoto.  
   
  *hostname* ou *IP_address*  
  Nome do computador do servidor remoto ou o endereço IPv4 do servidor remoto. Não há compatibilidade com endereços IPv6. Você pode especificar uma instância nomeada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no formato **Computer_Name\Instance_Name** ou **IP_address\Instance_Name**. O servidor deve ser remoto e, portanto, não pode ser especificado como (local).  
   
  Número da *porta* TCP  
- O número da porta TCP da conexão. Você pode especificar o número da porta TCP de 0 a 65535 para uma instância do SQL Server que não escuta na porta padrão 1433. Por exemplo: **ServerA,1450** ou **10.192.14.27,1435**  
+ O número da porta TCP da conexão. Você pode especificar o número da porta TCP de 0 a 65535 para uma instância do SQL Server que não escuta na porta padrão 1433. Por exemplo:  **ServerA,1450** ou **10.192.14.27,1435**  
   
 > [!NOTE]  
 >  Recomendamos que você se conecte a um servidor remoto usando o endereço IP. Dependendo da configuração da rede, a conexão com o nome do computador pode exigir etapas adicionais para usar o servidor DNS que não seja de dispositivo para resolver o nome para o servidor correto. Esta etapa não é necessária ao se conectar com um endereço IP. Para obter mais informações, consulte "Usar um encaminhador DNS para resolver nomes DNS que não são de dispositivo (Analytics Platform System)" no [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
@@ -134,7 +134,7 @@ CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_n
   
 ##  <a name="Examples"></a> Exemplos  
   
-### <a name="a-creating-a-remote-table"></a>A. Criando uma tabela remota  
+### <a name="a-creating-a-remote-table"></a>a. Criando uma tabela remota  
  Este exemplo cria uma tabela remota SMP do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] chamada `MyOrdersTable` no banco de dados `OrderReporting` e o esquema `Orders`. O banco de dados `OrderReporting` está em um servidor chamado `SQLA` que escuta na porta padrão 1433. A conexão com o servidor usa as credenciais do usuário `David`, cuja senha é `e4n8@3`.  
   
 ```  
@@ -143,7 +143,7 @@ AT ( 'Data Source = SQLA, 1433; User ID = David; Password = e4n8@3;' )
 AS SELECT <select_criteria>;  
 ```  
   
-### <a name="b-querying-the-sysdmpdwdmsworkers-dmv-for-remote-table-copy-status"></a>B. Consultando a DMV sys.dm_pdw_dms_workers para obter o status da cópia de tabela remota  
+### <a name="b-querying-the-sysdm_pdw_dms_workers-dmv-for-remote-table-copy-status"></a>B. Consultando a DMV sys.dm_pdw_dms_workers para obter o status da cópia de tabela remota  
  Esta consulta mostra como exibir o status da cópia de uma cópia de tabela remota.  
   
 ```  

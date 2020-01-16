@@ -1,7 +1,7 @@
 ---
-title: Gerar e analisar o CLUSTER.LOG para um grupo de disponibilidade
+title: Gerar e analisar CLUSTER.LOG para grupos de disponibilidade
 description: 'Descreve como gerar e analisar o log do cluster de um grupo de disponibilidade Always On. '
-ms.custom: ag-guide, seodec18
+ms.custom: seo-lt-2019
 ms.date: 06/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 01a9e3c1-2a5f-4b98-a424-0ffc15d312cf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a2e2f782673f1f11ad42e7de09f137291e1bfdf3
-ms.sourcegitcommit: 27c267bf2a3cfaf2abcb5f3777534803bf4cffe5
+ms.openlocfilehash: 045444c2141027854e54480483f09ab8eb9a04b6
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73240758"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244380"
 ---
 # <a name="generate-and-analyze-the-clusterlog-for-an-always-on-availability-group"></a>Gerar e analisar o CLUSTER.LOG de um grupo de disponibilidade Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ Get-ClusterLog -TimeSpan 15 -Destination .
   
 3.  No painel de detalhes, clique o com botão direito do mouse no recurso do grupo de disponibilidade e clique em **Propriedades**.  
   
-4.  Clique na guia **Propriedades** .  
+4.  Clique no guia **Propriedades**.  
   
 5.  Modificar a propriedade **VerboseLogging**. Por padrão, a **VerboseLogging** é definida como `0`, que relata informações, avisos e erros. A **VerboseLogging** pode ser definida de `0` para `2`.  
   
@@ -57,7 +57,7 @@ Get-ClusterLog -TimeSpan 15 -Destination .
 ## <a name="availability-group-resource-events"></a>Eventos de recurso do grupo de disponibilidade  
  A tabela abaixo mostra os diferentes tipos de eventos que você pode ver no CLUSTER.LOG e que pertencem ao recurso do grupo de disponibilidade. Para obter mais informações sobre o RHS (Subsistema de Hospedagem de Recursos) e o RCM (Monitor de Controle de Recursos) no WSFC, veja [RHS (Subsistema de Hospedagem de Recursos) nos Clusters de Failover do Windows Server 2008](https://blogs.technet.com/b/askcore/archive/2009/11/23/resource-hosting-subsystem-rhs-in-windows-server-2008-failover-clusters.aspx).  
   
-|Identificador|Origem|Exemplo do CLUSTER.LOG|  
+|Identificador|Fonte|Exemplo do CLUSTER.LOG|  
 |----------------|------------|------------------------------|  
 |Mensagens prefixadas com `[RES]` e `[hadrag]`|hadrres.dll (DLL de recurso do Always On)|00002cc4.00001264::2011/08/05-13:47:42.543 INFO [RES] Grupo de Disponibilidade do SQL Server \<ag>: `[hadrag]` Solicitação offline.<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.558 ERR [RES] Grupo de Disponibilidade do SQL Server \<ag>: `[hadrag]` Thread de Concessão encerrado<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.605 INFO [RES] Grupo de Disponibilidade do SQL Server \<ag>: `[hadrag]` Instrução SQL livre<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.902 INFO [RES] Grupo de Disponibilidade do SQL Server \<ag>: `[hadrag]` Desconectar do SQL Server|  
 |Mensagens prefixadas com `[RHS]`|RHS.EXE (Subsistema de Hospedagem de Recursos, processo de host do hadrres.dll)|00000c40.00000a34::2011/08/10-18:42:29.498 INFO  [RHS] O recurso ag ficou offline. RHS está prestes a relatar o status do recurso para o RCM.|  

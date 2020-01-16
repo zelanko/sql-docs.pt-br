@@ -1,6 +1,7 @@
 ---
-title: Configurar a instância de cluster de failover – SQL Server em Linux (RHEL)
-description: ''
+title: 'Configurar a FCI: SQL Server em Linux (RHEL)'
+description: Saiba como configurar uma FCI (instância de cluster de failover) RHEL (Red Hat Enterprise Linux) no SQL Server.
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 83c25db6f0915aae9cf210d2b749df970da40590
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 61fe5d7ffb5dfc6ec98f6d5350eff396deaa0312
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032302"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558321"
 ---
 # <a name="configure-failover-cluster-instance---sql-server-on-linux-rhel"></a>Configurar a instância de cluster de failover – SQL Server em Linux (RHEL)
 

@@ -1,6 +1,7 @@
 ---
-title: Criar uma assinatura atualizável em uma publicação transacional | Microsoft Docs
-ms.custom: ''
+title: Criar uma assinatura atualizável (transacional)
+description: Saiba como criar uma assinatura atualizável para uma publicação transacional no SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 11/20/2018
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f9ef89ed-36f6-431b-8843-25d445ec137f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 99e605f1ed2a924f504f118dd6d0865fda3229e0
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 5d1a8b0c8f674dd39ece67cb79db0110cfd55994
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908583"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321234"
 ---
 # <a name="create-an-updatable-subscription-to-a-transactional-publication"></a>Criar uma assinatura atualizável em uma publicação transacional
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +45,7 @@ Configurar assinaturas atualizáveis no página **Assinaturas Atualizáveis** do
 
     Para obter informações sobre como alternar os modos de atualização, consulte [Switch Between Update Modes for an Updatable Transactional Subscription](../../../relational-databases/replication/administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md) (Alternar entre modos de atualização para uma assinatura transacional atualizável).
 
-7. A página **Login for Updatable Subscriptions** (Logon para Assinaturas Atualizáveis) é exibida para assinaturas que usam a atualização imediata ou têm **update_mode** definido para **failover em fila**. Na página **Login for Updatable Subscriptions** (Logon para Assinaturas Atualizáveis), especifique um servidor vinculado por meio do qual as conexões com o Publicador serão feitas para atualizações imediatas de assinaturas. Conexões são usadas pelos gatilhos acionados no Assinante e que propagam as alterações no Publicador. Selecione uma das opções a seguir:
+7. A página **Login for Updatable Subscriptions** (Logon para Assinaturas Atualizáveis) é exibida para assinaturas que usam a atualização imediata ou têm **update_mode** definido para **failover em fila**. Na página **Login for Updatable Subscriptions** (Logon para Assinaturas Atualizáveis), especifique um servidor vinculado por meio do qual as conexões com o Publicador serão feitas para atualizações imediatas de assinaturas. Conexões são usadas pelos gatilhos acionados no Assinante e que propagam as alterações no Publicador. Selecione uma das seguintes opções:
 
     * **Criar um servidor vinculado que se conecta usando a Autenticação do SQL Server.** Selecione essa opção se um servidor vinculado ou remoto entre o Assinante e o Publicador ainda não tiver sido definido. A replicação cria um servidor vinculado para você. É necessário que a conta especificada já exista no Publicador.
 
@@ -73,7 +74,7 @@ Configurar assinaturas atualizáveis no página **Assinaturas Atualizáveis** do
 
     Para obter informações sobre como alternar os modos de atualização, consulte [Switch Between Update Modes for an Updatable Transactional Subscription](../../../relational-databases/replication/administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md) (Alternar entre modos de atualização para uma assinatura transacional atualizável).
 
-10. A página **Login for Updatable Subscriptions** (Logon para Assinaturas Atualizáveis) é exibida para assinaturas que usam a atualização imediata ou têm **update_mode** definido para **failover** em fila. Na página **Login for Updatable Subscriptions** (Logon para Assinaturas Atualizáveis), especifique um servidor vinculado por meio do qual as conexões com o Publicador serão feitas para atualizações imediatas de assinaturas. Conexões são usadas pelos gatilhos acionados no Assinante e que propagam as alterações no Publicador. Selecione uma das opções a seguir:
+10. A página **Login for Updatable Subscriptions** (Logon para Assinaturas Atualizáveis) é exibida para assinaturas que usam a atualização imediata ou têm **update_mode** definido para **failover** em fila. Na página **Login for Updatable Subscriptions** (Logon para Assinaturas Atualizáveis), especifique um servidor vinculado por meio do qual as conexões com o Publicador serão feitas para atualizações imediatas de assinaturas. Conexões são usadas pelos gatilhos acionados no Assinante e que propagam as alterações no Publicador. Selecione uma das seguintes opções:
 
     * **Criar um servidor vinculado que se conecta usando a Autenticação do SQL Server.** Selecione essa opção se um servidor vinculado ou remoto entre o Assinante e o Publicador ainda não tiver sido definido. A replicação cria um servidor vinculado para você. É necessário que a conta especificada já exista no Publicador.
 
@@ -239,7 +240,7 @@ Defina as opções de resolução de conflitos para publicações que dão supor
 
 ## <a name="example"></a>Exemplo
 
-Este exemplo cria uma assinatura pull de atualização imediata a uma publicação que tem suporte para assinaturas de atualização imediata. Os valores para o logon e senha são fornecidos no tempo de execução usando as variáveis sqlcmd scripting.
+Este exemplo cria uma assinatura pull de atualização imediata a uma publicação que tem suporte para assinaturas de atualização imediata. Os valores para o logon e senha são fornecidos no runtime usando as variáveis sqlcmd scripting.
 
 > [!NOTE]  
 >  Este script usa as variáveis de script do sqlcmd. Elas estão no formato `$(MyVariable)`. Para obter informações sobre como usar variáveis de script na linha de comando e no SQL Server Management Studio, consulte a seção **Executando scripts de replicação** no tópico [Conceitos dos procedimentos armazenados do sistema de replicação](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md).

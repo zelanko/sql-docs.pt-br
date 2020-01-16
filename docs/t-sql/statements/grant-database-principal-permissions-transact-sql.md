@@ -1,6 +1,8 @@
 ---
-title: Permissões GRANT de entidade de segurança do banco de dados (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: Permissões de entidade de segurança de banco de dados GRANT
+description: Conceda permissões em um usuário de banco de dados, função de banco de dados ou função de aplicativo.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 03/12/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -25,12 +27,12 @@ ms.assetid: 012588a2-cbe1-48f0-a731-b4a2b83203d5
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 34e027d2b4ff16412031c6b00c0aca5a8078c1ba
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: f67acd0d94ed59a45c8e8d2cbeff0b8cfd9bd68d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982242"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246155"
 ---
 # <a name="grant-database-principal-permissions-transact-sql"></a>Permissões de principal do banco de dados GRANT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,7 +40,7 @@ ms.locfileid: "73982242"
   Concede permissões em um usuário de banco de dados, uma função de banco de dados ou uma função de aplicativo no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -113,7 +115,7 @@ GRANT permission [ ,...n ]
  *Database_user_with_no_login*  
  Especifica um usuário do banco de dados sem nenhuma entidade de segurança correspondente no nível de servidor.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Informações sobre as entidades de banco de dados estão visíveis na exibição do catálogo [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md). Informações sobre permissões do nível de banco de dados estão visíveis na exibição do catálogo [sys.database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md).  
   
 ## <a name="database-user-permissions"></a>Permissões do usuário do banco de dados  
@@ -167,7 +169,7 @@ GRANT permission [ ,...n ]
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-granting-control-permission-on-a-user-to-another-user"></a>A. Concessão da permissão CONTROL em um usuário para outro usuário  
+### <a name="a-granting-control-permission-on-a-user-to-another-user"></a>a. Concessão da permissão CONTROL em um usuário para outro usuário  
  O exemplo a seguir concede a permissão `CONTROL` no usuário `AdventureWorks2012``Wanida` para o usuário `RolandX`.  
   
 ```  
@@ -185,7 +187,7 @@ GO
 ```  
   
 ### <a name="c-granting-impersonate-permission-on-a-user-to-an-application-role"></a>C. Concessão da permissão IMPERSONATE em um usuário para uma função de aplicativo  
- O exemplo a seguir concede permissão no usuário `IMPERSONATE` `HamithaL` para `AdventureWorks2012` função de aplicativo `AccountsPayable17`.  
+ O exemplo a seguir concede permissão no usuário `IMPERSONATE``HamithaL` para `AdventureWorks2012` função de aplicativo `AccountsPayable17`.  
   
 **Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   

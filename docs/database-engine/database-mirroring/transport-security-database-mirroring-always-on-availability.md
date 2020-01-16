@@ -1,6 +1,7 @@
 ---
-title: Segurança do transporte – espelhamento de banco de dados – disponibilidade AlwaysOn | Microsoft Docs
-ms.custom: ''
+title: 'Segurança do transporte: grupos de disponibilidade e espelhamento de banco de dados'
+description: Saiba mais sobre como proteger o transporte de mensagens trocadas entre bancos de dados que participam de um grupo de disponibilidade Always On ou uma sessão de espelhamento de banco de dados hospedada no SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 49239d02-964e-47c0-9b7f-2b539151ee1b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f360f60727e91407c1993c18d9548dbefd46a388
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 85ca560e24fac75897d0b65946121e3ca4251e20
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047983"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252746"
 ---
 # <a name="transport-security---database-mirroring---always-on-availability"></a>Segurança do transporte – espelhamento de banco de dados – disponibilidade AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +60,7 @@ ms.locfileid: "68047983"
 ### <a name="certificates"></a>Certificados  
  Em algumas situações, como quando as instâncias de servidor não estão em domínios confiáveis ou quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estiver executando como um serviço local, a Autenticação do Windows é indisponível. Em tais casos, em vez de credenciais de usuário, são exigidos certificados para autenticar solicitações de conexão. O ponto de extremidade do espelhamento de cada instância de servidor deve ser configurado com seu próprio certificado localmente criado.  
   
- O método de criptografia é estabelecido quando o certificado é criado. Para obter mais informações, consulte [Allow a Database Mirroring Endpoint to Use Certificates for Outbound Connections &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md). Administre cuidadosamente os certificados que você usa.  
+ O método de criptografia é estabelecido quando o certificado é criado. Para obter mais informações, consulte [Permitir que um ponto de extremidade de espelhamento de banco de dados use certificados para conexões de saída &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md). Administre cuidadosamente os certificados que você usa.  
   
  Uma instância de servidor usa a chave privada de seu próprio certificado para estabelecer sua identidade ao configurar uma conexão. A instância de servidor que recebe a solicitação de conexão usa a chave pública do certificado do remetente para autenticar a identidade do remetente. Por exemplo, considere duas instâncias de servidor, Server_A e Server_B. Server_A usa sua chave privada para criptografar o cabeçalho da conexão antes de enviar uma solicitação de conexão a Server_B. Server_B usa a chave pública do certificado de Server_A para descriptografar o cabeçalho da conexão. Se o cabeçalho descriptografado estiver correto, Server_B saberá que o cabeçalho foi criptografado por Server_A, e a conexão é autenticada. Se o cabeçalho descriptografado estiver incorreto, Server_B saberá que a solicitação de conexão não é autêntica e recusará a conexão.  
   
@@ -71,7 +72,7 @@ ms.locfileid: "68047983"
   
  Opcionalmente, você pode controlar os algoritmos de criptografia que podem ser usados por um ponto de extremidade, especificando um dos seguintes valores para a opção de ALGORITHM em uma instrução CREATE ENDPOINT ou instrução ALTER ENDPOINT:  
   
-|Valor de ALGORITHM|Descrição|  
+|Valor de ALGORITHM|DESCRIÇÃO|  
 |---------------------|-----------------|  
 |RC4|Especifica que o ponto de extremidade deve usar o algoritmo RC4. Esse é o padrão.<br /><br /> <strong>\*\* Aviso \*\*</strong> O algoritmo RC4 é preterido. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Recomendamos usar AES.|  
 |AES|Especifica que o ponto de extremidade deve usar o algoritmo AES.|  
@@ -108,6 +109,6 @@ ms.locfileid: "68047983"
  [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)   
  [sys.dm_db_mirroring_connections &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections.md)   
  [Solução de problemas de configuração de espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)   
- [Solução de problemas de configuração de Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
+ [Solucionar problemas de configuração de grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
   
   

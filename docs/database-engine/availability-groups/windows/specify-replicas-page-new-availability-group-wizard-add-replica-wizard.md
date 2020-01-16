@@ -1,6 +1,7 @@
 ---
-title: 'Página Especificar réplicas (Assistente de novo grupo de disponibilidade: assistente para adicionar réplica) | Microsoft Docs'
-ms.custom: ''
+title: 'Assistente do Grupo de Disponibilidade: Página Especificar Réplicas'
+description: Descreve as opções da página 'Especificar Réplicas' do "Assistente de Novo Grupo de Disponibilidade Always On no SSMS (SQL Server Management Studio)".
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,18 +14,18 @@ f1_keywords:
 ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 190ff2f2f7fe510722f73c03bdc4beba18273d2b
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: 3bf32d532c2bf10adb1348352c472cd87f0b8413
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176212"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822565"
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>Página Especificar réplicas (Assistente de novo grupo de disponibilidade: assistente para adicionar réplica)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Este tópico descreve as opções da página **Especificar Réplicas** . Essa página aplica-se ao **[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]** e ao **[!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]** . Use a página **Especificar Réplicas** para especificar e configurar uma ou mais réplicas de disponibilidade para adicionar o grupo de disponibilidade. Essa página contém quatro guias que são apresentadas na tabela a seguir. Clique no nome de uma guia na tabela para ir para a seção correspondente, mais adiante neste tópico.  
   
-|Tab|Descrição breve|  
+|Tab|Breve descrição|  
 |---------|-----------------------|  
 |[Réplicas](#ReplicasTab)|Use esta guia para especificar cada instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospedará ou que hospeda uma réplica secundária. Observe que a instância de servidor à qual você está conectado no momento deve hospedar a réplica primária.<br /><br /> Termine de especificar todas as réplicas na guia **Réplicas** antes de iniciar as outras guias.<br/><br/> Observação O **failover automático** será desabilitado se o tipo de cluster for **NONE**. O SQL Server dá suporte apenas ao failover manual quando um grupo de disponibilidade não está em um cluster. <br/><br/> Quando o tipo de cluster é EXTERNAL, o modo de failover é **Externo**. <br/><br/> Ao adicionar uma réplica, todas as novas réplicas devem ser hospedadas no mesmo tipo de sistema operacional das réplicas existentes. <br/><br/>Ao adicionar uma réplica, se a réplica primária estiver em um WSFC, as réplicas secundárias deverão estar no mesmo cluster.|
 |[Pontos de extremidade](#EndpointsTab)|Use esta guia para verificar quaisquer pontos de extremidade de espelhamento de banco de dados existentes e também, se esse ponto de extremidade estiver ausente em uma instância de servidor cujas contas de serviço usam a Autenticação do Windows para criar o ponto de extremidade automaticamente.|  
@@ -115,14 +116,14 @@ ms.locfileid: "70176212"
  **Somente Secundário**  
  Especifica que os backups nunca devem ser executados na réplica primária. Se a réplica primária for a única réplica online, o backup não deveria ocorrer.  
   
- **Primária**  
+ **Primário**  
  Especifica que os backups sempre devem ocorrer na réplica primária. Essa opção será útil se você precisar de recursos de backup, como a criação de backups diferenciais, que não têm suporte quando o backup é executado em uma réplica secundária.  
   
  **Qualquer Réplica**  
  Especifica que você prefere que trabalhos de backup ignorem a função das réplicas de disponibilidade ao escolher a réplica para executar backups. Observe que os trabalhos de backup podem avaliar outros fatores, como prioridade de backup de cada réplica de disponibilidade em combinação com seu estado operacional e estado conectado.  
   
 > [!IMPORTANT]  
->  Não há nenhuma imposição da configuração de preferência de backup. A interpretação dessa preferência depende da lógica, se houver, que você usa para o script em trabalhos de backup para os bancos de dados em um determinado grupo de disponibilidade. Para obter mais informações, confira [Secundárias ativas: Backup em réplicas secundárias &#40;Grupos de Disponibilidade Always On&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
+>  Não há nenhuma imposição da configuração de preferência de backup. A interpretação dessa preferência depende da lógica, se houver, que você usa para o script em trabalhos de backup para os bancos de dados em um determinado grupo de disponibilidade. Para obter mais informações, confira [Secundárias ativas: backup em réplicas secundárias &#40;Grupos de Disponibilidade Always On&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
 ### <a name="replica-backup-priorities-grid"></a>Grade Prioridades de backup de réplica  
  Use a grade **Prioridades de backup de réplica** para especificar suas prioridades de backup para cada uma das réplicas do grupo de disponibilidade. Essa grade contém as seguintes colunas:  
@@ -163,7 +164,7 @@ ms.locfileid: "70176212"
  **IP Estático**  
  Selecione se você deseja que o ouvinte escute em mais de uma sub-rede. Para usar o modo de rede IP estático, um ouvinte de grupo de disponibilidade deve escutar em toda sub-rede que hospeda uma réplica de disponibilidade para o grupo de disponibilidade. Para cada sub-rede, clique em **Adicionar** para selecionar um endereço de sub-rede e especificar um endereço IP.  
   
- Se **IP Estático** for selecionado como o modo de rede (esta é a seleção padrão), uma grade exibirá as colunas **Sub-rede** e **Endereço IP** e os botões **Adicionar** e **Remover** associados serão exibidos. Observe que a grade estará vazia até que você adicione a primeira sub-rede.  
+ Se **IP Estático** for selecionado como o modo de rede (esta é a seleção padrão), uma grade exibirá as colunas **Sub-rede** e **Endereço IP** e os botões **Adicionar** e **Remover** associados serão exibidos. A grade estará vazia até que você adicione a primeira sub-rede.  
   
  Coluna**Sub-rede**  
  Exibe o endereço de sub-rede que você selecionou para cada sub-rede adicionada para o ouvinte.  

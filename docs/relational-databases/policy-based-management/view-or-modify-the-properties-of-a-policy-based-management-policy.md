@@ -1,6 +1,7 @@
 ---
-title: Exibir ou modificar as propriedades de uma política de gerenciamento baseado em políticas | Microsoft Docs
-ms.custom: ''
+title: Exibir ou modificar as propriedades de uma política de gerenciamento baseado em políticas
+description: Saiba como exibir ou modificar as propriedades de uma política de gerenciamento baseado em políticas do SQL Server usando o SSMS (SQL Server Management Studio) ou o T-SQL (Transact-SQL).
+ms.custom: seo-lt-2019
 ms.date: 10/06/2016
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ba805504-5db5-4731-a8da-a0e89cb20c37
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: cadd1acbe5092aee4460a9ffe1d36bfa50a3a9f5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a51ca391fe8cc27ad9447e6b4d18b88787532e34
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67908151"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558011"
 ---
 # <a name="view-or-modify-the-properties-of-a-policy-based-management-policy"></a>Exibir ou modificar as propriedades de uma política de gerenciamento baseado em políticas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

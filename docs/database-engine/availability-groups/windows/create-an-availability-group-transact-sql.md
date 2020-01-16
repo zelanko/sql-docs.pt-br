@@ -1,7 +1,7 @@
 ---
-title: Criar um grupo de disponibilidade usando o T-SQL (Transact-SQL)
+title: Criar um grupo de disponibilidade com o Transact-SQL (T-SQL)
 description: 'Etapas para criar um grupo de disponibilidade Always On usando o T-SQL (Transact-SQL). '
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8b0a6301-8b79-4415-b608-b40876f30066
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 543ef7ec0cefa9a47f88fdc5811961315b33e2b6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1a9f888f651a7c5471014b151d60b0ad3844578b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67988404"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252970"
 ---
 # <a name="create-an-always-on-availability-group-using-transact-sql-t-sql"></a>Criar um grupo de disponibilidade Always On usando o T-SQL (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,14 +46,14 @@ ms.locfileid: "67988404"
 |Tarefa|Instrução(ões) Transact-SQL|Local de execução da tarefa **&#42;**|  
 |----------|----------------------------------|---------------------------------|  
 |Criar ponto de extremidade de espelhamento de banco de dados (uma vez por instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] )|[CREATE ENDPOINT](../../../t-sql/statements/create-endpoint-transact-sql.md) *endpointName* ... FOR DATABASE_MIRRORING|Executar em cada instância de servidor que não tem ponto de extremidade de espelhamento de banco de dados.|  
-|Criar grupo de disponibilidade|[CREATE AVAILABILITY GROUP](../../../t-sql/statements/create-availability-group-transact-sql.md)|Execute na instância de servidor que deve hospedar a réplica primária inicial.|  
+|Criar grupo de disponibilidade|[CRIAR GRUPO DE DISPONIBILIDADE](../../../t-sql/statements/create-availability-group-transact-sql.md)|Execute na instância de servidor que deve hospedar a réplica primária inicial.|  
 |Unir a réplica secundária ao grupo de disponibilidade|[ALTER AVAILABILITY GROUP](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md) *group_name* JOIN|Execute em cada instância de servidor que hospeda uma réplica secundária.|  
 |Preparar os banco de dados secundários|[BACKUP](../../../t-sql/statements/backup-transact-sql.md) e [RESTORE](../../../t-sql/statements/restore-statements-transact-sql.md).|Crie backups na instância de servidor que hospeda a réplica primária.<br /><br /> Restaure backups em cada instância de servidor que hospeda uma réplica secundária, usando RESTORE WITH NORECOVERY.|  
 |Iniciar a sincronização de dados unindo cada banco de dados secundário ao grupo de disponibilidade|[ALTER DATABASE](../../../t-sql/statements/alter-database-transact-sql-set-hadr.md) *database_name* SET HADR AVAILABILITY GROUP = *group_name*|Execute em cada instância de servidor que hospeda uma réplica secundária.|  
   
  *Para executar uma tarefa específica, conecte-se à instância ou instâncias de servidor indicadas.   
  
-### <a name="using-transact-sql"></a>Usando Transact-SQL 
+### <a name="using-transact-sql"></a>Usando o Transact-SQL 
 > [!NOTE]  
 >  Para obter um procedimento de configuração de exemplo que contém exemplos de código de cada uma dessas instruções [!INCLUDE[tsql](../../../includes/tsql-md.md)], confira [Exemplo: configurando um grupo de disponibilidade que usa a autenticação do Windows](#ExampleConfigAGWinAuth).  
   
@@ -293,7 +293,7 @@ ms.locfileid: "67988404"
 ###  <a name="CompleteCodeExample"></a> Concluir o exemplo de código para procedimento de configuração de exemplo  
  O exemplo a seguir mescla os exemplos de código de todas as etapas do procedimento de configuração de exemplo. A tabela a seguir resumiu os valores de espaço reservado usados neste exemplo de código. Para obter mais informações sobre as etapas deste exemplo de código, consulte [Pré-requisitos para usar o procedimento de configuração de exemplo](#PrerequisitesForExample) e [Procedimento de configuração de exemplo](#SampleProcedure), anteriormente neste tópico.  
   
-|Espaço reservado|Descrição|  
+|Espaço reservado|DESCRIÇÃO|  
 |-----------------|-----------------|  
 |\\\\*FILESERVER*\\*SQLbackups*|Compartilhamento de backup ficcional.|  
 |\\\\*FILESERVER*\\*SQLbackups\MyDb1.bak*|Arquivo de backup de MyDb1.|  

@@ -1,6 +1,7 @@
 ---
-title: Estimar a interrupção do serviço para a troca de função (Espelhamento de Banco de Dados) | Microsoft Docs
-ms.custom: ''
+title: Estimar a interrupção do serviço durante o failover de espelho
+description: Estimar a interrupção do serviço ao fazer failover de um espelho de banco de dados da função primária para a secundária.
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 586a6f25-672b-491b-bc2f-deab2ccda6e2
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 44f6a8966ef2da55ffd43830677f52398b356399
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: a0301a6cdfd1381e3fdc6baa8189cc8fbf4739a1
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874183"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75253568"
 ---
 # <a name="estimate-the-interruption-of-service-during-role-switching-database-mirroring"></a>Estime a interrupção do serviço durante troca de função (Espelhamento de Banco de Dados)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +74,7 @@ ms.locfileid: "70874183"
 ## <a name="estimating-interruption-of-service-during-automatic-failover"></a>Estimando a interrupção do serviço durante o failover automático  
  A figura seguinte ilustra como a detecção de erros e o tempo de failover contribuem para o tempo geral necessário para um failover automático ser concluído em **Partner_B**. O failover precisa de tempo para efetuar o roll-forward do banco de dados (a fase Refazer) mais uma quantidade pequena de tempo para tornar o banco de dados online. A fase Desfazer, que envolve a reversão de qualquer transação não confirmada, acontece depois que o novo banco de dados principal estiver online e continuar depois do failover. O banco de dados fica disponível durante a fase Desfazer.  
   
- ![Detecção de erro e tempo de failover](../../database-engine/database-mirroring/media/dbm-failovauto-time.gif "Error detection and failover time")  
+ ![Hora da detecção e failover de erro](../../database-engine/database-mirroring/media/dbm-failovauto-time.gif "Hora da detecção e failover de erro")  
   
 ## <a name="see-also"></a>Consulte Também  
  [Modos de operação de espelhamento de banco de dados](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)   

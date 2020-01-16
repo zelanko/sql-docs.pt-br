@@ -1,5 +1,5 @@
 ---
-title: 'Início Rápido: Backup e restauração do SQL no serviço de Armazenamento de Blobs do Azure'
+title: 'Início Rápido: Backup e restauração do serviço de armazenamento de Blobs do Azure'
 ms.custom: seo-dt-2019
 ms.date: 04/09/2018
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 709aecfba4f73f0ef1d2c805e84d8a2113998e82
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.openlocfilehash: 24847d7b14341e9a1d5a4d874eb0046f53261fea
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74095481"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165517"
 ---
 # <a name="quickstart-sql-backup-and-restore-to-azure-blob-storage-service"></a>Início Rápido: Backup e restauração do SQL no serviço de armazenamento de Blob do Azure
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md](../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ Para concluir este início rápido, você deve estar familiarizado com os concei
 
 - Obtenha uma [conta do Azure](https://azure.microsoft.com/offers/ms-azr-0044p/) gratuita.
 - Crie uma [conta de armazenamento do Azure](https://docs.microsoft.com/azure/storage/common/storage-quickstart-create-account?tabs=portal).
-- Instalar o [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Instale o [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 - Instale o [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads) ou implante uma [instância gerenciada](/azure/sql-database/sql-database-managed-instance-get-started) com conectividade estabelecida por meio de uma [máquina virtual SQL do Azure](/azure/sql-database/sql-database-managed-instance-configure-vm) ou [ponto a site](/azure/sql-database/sql-database-managed-instance-configure-p2s).
 - Atribua a conta de usuário à função [db_backupoperator](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) e conceda permissões para [Alterar qualquer credencial](https://docs.microsoft.com/sql/t-sql/statements/alter-credential-transact-sql). 
 
@@ -40,7 +40,7 @@ Para criar um Contêiner, siga estas etapas:
 1. Selecione a conta de armazenamento e role para baixo até **Serviços de Blob**.
 1. Selecione **Blobs** e, em seguida, selecione **+ Contêiner** para adicionar um novo contêiner. 
 1. Insira o nome do contêiner e anote o nome especificado. Essas informações são usadas na URL (caminho para o arquivo de backup) nas instruções T-SQL mais adiante neste início rápido. 
-1. Escolha **OK**. 
+1. Selecione **OK**. 
     
     ![Novo contêiner](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/new-container.png)
 
@@ -233,5 +233,5 @@ URL = N'https://msftutorialstorage.blob.core.windows.net/sql-backup/sqltestdb_ba
 Estas são algumas leituras que podem ajudar a compreender os conceitos e as práticas recomendadas ao usar o serviço de armazenamento de Blobs do Azure para backups do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 -   [Backup e restauração do SQL Server com o Serviço de Armazenamento de Blobs do Microsoft Azure](../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)   
--   [Práticas recomendadas e solução de problemas de backup do SQL Server para URL](../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
+-   [Solução de problemas e melhores práticas de backup do SQL Server para URL](../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
   

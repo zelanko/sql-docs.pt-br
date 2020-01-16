@@ -1,6 +1,8 @@
 ---
-title: Permissões REVOKE de grupo de disponibilidade (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: Permissões de grupo de disponibilidade REVOKE
+description: Revogue permissões em um Grupo de Disponibilidade Always On.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,19 +19,19 @@ helpviewer_keywords:
 ms.assetid: 02c77378-a36d-4286-9235-d8867a2b92ad
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: adbceb87d5191cd279130ca53209265cdc1c14d4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ceb07117a8842faa35d005dba008d15b3810040a
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082349"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242614"
 ---
 # <a name="revoke-availability-group-permissions-transact-sql"></a>Permissões de grupo de disponibilidade REVOKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Revoga permissões em um Grupo de Disponibilidade AlwaysOn. 
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -84,7 +86,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  AS *SQL_Server_login*  
  Especifica o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a partir do qual o principal que executa esta consulta deriva seu direito de revogar a permissão.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  As permissões no escopo de servidor podem ser revogadas somente quando o banco de dados atual é **master**.  
   
  Informações sobre grupos de disponibilidade são visíveis na exibição do catálogo [sys.availability_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md). As informações sobre permissões de servidor estão visíveis na exibição do catálogo [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) e as informações sobre entidades de segurança do servidor estão visíveis na exibição do catálogo [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
@@ -94,7 +96,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 |Permissão de grupo de disponibilidade|Implícito na permissão de grupo de disponibilidade|Implícito na permissão de servidor|  
 |-----------------------------------|----------------------------------------------|----------------------------------|  
 |ALTER|CONTROL|ALTER ANY AVAILABILITY GROUP|  
-|CONNECT|CONTROL|CONTROL SERVER|  
+|CONECTAR|CONTROL|CONTROL SERVER|  
 |CONTROL|CONTROL|CONTROL SERVER|  
 |TAKE OWNERSHIP|CONTROL|CONTROL SERVER|  
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
@@ -104,7 +106,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-revoking-view-definition-permission-on-an-availability-group"></a>A. Revogando a permissão VIEW DEFINITION em um grupo de disponibilidade  
+### <a name="a-revoking-view-definition-permission-on-an-availability-group"></a>a. Revogando a permissão VIEW DEFINITION em um grupo de disponibilidade  
  O exemplo a seguir revoga a permissão `VIEW DEFINITION` no grupo de disponibilidade `MyAg` para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon `ZArifin`.  
   
 ```  

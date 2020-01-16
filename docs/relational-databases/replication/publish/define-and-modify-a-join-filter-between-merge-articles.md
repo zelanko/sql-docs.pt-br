@@ -1,6 +1,7 @@
 ---
-title: Definir e modificar um filtro de junção entre artigos de mesclagem | Microsoft Docs
-ms.custom: ''
+title: Definir e modificar o filtro de junção entre artigos de mesclagem
+description: Saiba como definir e modificar o filtro de junção usado entre artigos de mesclagem usando o SSMS (SQL Server Management Studio) ou o T-SQL (Transact-SQL).
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f7f23415-43ff-40f5-b3e0-0be1d148ee5b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1c37ddcac8c12b6885c696bea77ef66e5eedd5d5
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 03911ae4b3addb7a3626b6c9bd0a2c195b719cef
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908575"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321554"
 ---
 # <a name="define-and-modify-a-join-filter-between-merge-articles"></a>Definir e modificar um filtro de junção entre artigos de mesclagem
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +85,7 @@ ms.locfileid: "72908575"
         > [!CAUTION]  
         >  A seleção dessa opção indica que a relação entre tabelas pai e filho em um filtro de junção é de um para um ou um para muitos. Só selecione essa opção se houver uma restrição na coluna de junção na tabela filho que garanta a exclusividade. Se a opção for definida incorretamente, poderá ocorrer não convergência de dados.  
   
-    -   Por padrão, os processos de replicação de mesclagem são alterados em uma base de linha por linha durante a sincronização. Para ter alterações relacionadas em linhas de tabelas filtradas e de tabelas unidas processadas como uma unidade, selecione **Registro lógico** ([!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ou versões posteriores). Essa opção só estará disponível se os requisitos de  artigo e publicação para uso de registros lógicos forem atendidos. Para obter mais informações, consulte a seção "Considerações para uso de registros lógicos" em [Agrupar alterações a linhas relacionadas com registros lógicos](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
+    -   Por padrão, os processos de replicação de mesclagem são alterados em uma base de linha por linha durante a sincronização. Para processar as alterações relacionadas em linhas da tabela filtrada e da tabela unida como uma unidade, selecione **Registro lógico** (somente [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] e versões posteriores). Essa opção só estará disponível se os requisitos de  artigo e publicação para uso de registros lógicos forem atendidos. Para obter mais informações, consulte a seção "Considerações para uso de registros lógicos" em [Agrupar alterações a linhas relacionadas com registros lógicos](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -136,13 +137,13 @@ ms.locfileid: "72908575"
  [!code-sql[HowTo#sp_MergeDynamicPub1](../../../relational-databases/replication/codesnippet/tsql/define-and-modify-a-join_2.sql)]  
   
 ## <a name="see-also"></a>Consulte Também  
- [Filtros de junção](../../../relational-databases/replication/merge/join-filters.md)   
- [Filtros de linha com parâmetros](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
+ [Join Filters](../../../relational-databases/replication/merge/join-filters.md)   
+ [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [Alterar propriedades da publicação e do artigo](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [Filtrar dados publicados para a replicação de mesclagem](../../../relational-databases/replication/merge/filter-published-data-for-merge-replication.md)   
  [Como: definir e modificar um filtro de junção entre artigos de mesclagem (SQL Server Management Studio)](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
  [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
- [Definir uma relação de registro lógico entre artigos da tabela de mesclagem](../../../relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md)   
+ [Define a Logical Record Relationship Between Merge Table Articles](../../../relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md)   
  [Definir e modificar um filtro de linha parametrizado para um artigo de mesclagem](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)  
   
   

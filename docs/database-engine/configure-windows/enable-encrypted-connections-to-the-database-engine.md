@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 3572c6f9476fb450e0090e88019412c03af145ac
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 53ca4d2631e41e0a815dbf240fc0a7006ec8ce8b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71708518"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252856"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>Habilitar conexões criptografadas com o Mecanismo de Banco de Dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,14 +47,14 @@ O nível de criptografia usado pelo TLS, 40 ou 128 bits, depende da versão do s
 > O uso do nível de criptografia de 40 bits é considerado inseguro.
 
 > [!WARNING]
-> As conexões TLS criptografadas usando um certificado autoassinado não fornecem alta segurança. Elas são suscetíveis a ataques man-in-the-middle. Não se deve confiar no TLS usando certificados autoassinados em um ambiente de produção ou em servidores conectados à Internet.
+> As conexões TLS criptografadas usando um certificado autoassinado não fornecem alta segurança. Elas são suscetíveis a ataques “man-in-the-middle”. Não se deve confiar no TLS usando certificados autoassinados em um ambiente de produção ou em servidores conectados à Internet.
 
 A habilitação da criptografia TLS aumenta a segurança dos dados transmitidos pelas redes entre instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e aplicativos. No entanto, quando todo o tráfego entre o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e um aplicativo cliente é criptografado usando TLS, o seguinte processamento adicional é necessário:
 -  Idas e voltas extras da rede são necessárias no momento da conexão.
 -  Os pacotes enviados do aplicativo para a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devem ser criptografados pela pilha TLS do cliente e descriptografados pela pilha TLS do servidor.
 -  Os pacotes enviados da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o aplicativo devem ser criptografados pela pilha TLS do servidor e descriptografados pela pilha TLS do cliente.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Comentários
  O certificado deve ser emitido para **Autenticação do Servidor**. O nome do certificado deve ser o FQDN (nome de domínio totalmente qualificado) do computador.  
   
  Os certificados são armazenados localmente para os usuários no computador. Para instalar um certificado para uso do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], é necessário executar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager com uma conta que tem privilégios de administrador local.
@@ -82,7 +82,7 @@ Para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] carregar um cer
 
 - A propriedade **Assunto** do certificado deve indicar que o nome comum (CN) é igual ao nome do host ou ao nome de domínio totalmente qualificado (FQDN) do computador servidor. Ao usar o nome do host, o sufixo DNS precisa ser especificado no certificado. Se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estiver em execução em um cluster de failover, o nome comum deverá corresponder ao nome do host ou ao FQDN do servidor virtual e os certificados deverão ser fornecidos em todos os nós no cluster de failover.
 
-- O [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] e o [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] SNAC (Cliente Nativo) dão suporte a certificados curinga. O SNAC foram preteridos desde então e substituídos pelo [Driver do Microsoft OLE DB para SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) e [Microsoft ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md). Outros clientes podem não dar suporte a certificados curinga. Para obter mais informações, confira a documentação do cliente e o [KB 258858](http://support.microsoft.com/kb/258858).       
+- O [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] e o [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] SNAC (Cliente Nativo) dão suporte a certificados curinga. O SNAC foram preteridos desde então e substituídos pelo [Driver do Microsoft OLE DB para SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) e [Microsoft ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md). Outros clientes podem não dar suporte a certificados curinga. Para obter mais informações, confira a documentação do cliente e o [KB 258858](https://support.microsoft.com/kb/258858).       
   O certificado curinga não pode ser selecionado usando o SQL Server Configuration Manager. Para usar um certificado curinga, é necessário editar a chave do Registro `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQLServer\SuperSocketNetLib` e inserir a impressão digital do certificado, sem espaços, no valor **Certificado**.  
 
   > [!WARNING]  
@@ -120,7 +120,7 @@ Se estiver usando o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] por meio d
 
 ## <a name="to-export-the-server-certificate"></a>Para exportar o certificado de servidor  
   
-1. No snap-in de **Certificados**, localize o certificado na pasta **Certificados** / **Pessoal**, clique com o botão direito do mouse em **Certificado**, aponte para **Todas as Tarefas** e clique em **Exportar**.  
+1. No snap-in de **Certificados** , localize o certificado na pasta **Certificados** / **Pessoal** , clique com o botão direito do mouse em **Certificado**, aponte para **Todas as Tarefas**e clique em **Exportar**.  
   
 2. Complete o **Assistente para Exportação de Certificados**armazenando o arquivo de certificado em um local conveniente.  
   
@@ -129,9 +129,9 @@ Se estiver usando o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] por meio d
 > [!IMPORTANT]
 > A conta de serviço do SQL Server deve ter permissões de leitura no certificado usado para forçar a criptografia no SQL Server. Para uma conta de serviço sem privilégios, as permissões de leitura precisarão ser adicionadas ao certificado. A falha em fazer isso pode fazer com que a reinicialização do serviço do SQL Server falhe.
   
-1. No **SQL Server Configuration Manager**, expanda **Configuração de Rede do SQL Server**, clique com o botão direito do mouse em **Protocolos de** _\<server instance>_ e, depois, selecione **Propriedades**.  
+1. No **SQL Server Configuration Manager**, expanda **Configuração de Rede do SQL Server**, clique com o botão direito do mouse em **Protocolos para** _\<server instance>_ e selecione**Propriedades**.  
   
-2. Na caixa de diálogo **Propriedades** de **Protocolos de**  _\<instance name>_ , na guia **Certificado**, selecione o certificado desejado na lista suspensa da caixa **Certificado** e, depois, clique em **OK**.  
+2. Na caixa de diálogo **Protocolos para** _\<instance name>_ **Propriedades**, na guia **Certificado**, selecione o certificado desejado na lista suspensa da caixa **Certificado** e clique em **OK**.  
   
 3. Na guia **Sinalizadores** , na caixa **ForceEncryption** , selecione **Sim**e clique em **OK** para fechar a caixa de diálogo.  
   
@@ -164,4 +164,3 @@ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode ser criptografa
 ## <a name="see-also"></a>Consulte Também
 [Suporte a TLS 1.2 para o Microsoft SQL Server](https://support.microsoft.com/kb/3135244)     
 [Configurar o Firewall do Windows para permitir acesso ao SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)     
-[Criptografia do SQL Server](../../relational-databases/security/encryption/sql-server-encryption.md)

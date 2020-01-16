@@ -1,6 +1,6 @@
 ---
-title: Padrão de aplicativo para particionamento de tabelas com otimização de memória | Microsoft Docs
-ms.custom: ''
+title: Padrão de aplicativo – particionamento de tabelas com otimização de memória
+ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +11,12 @@ ms.assetid: 3f867763-a8e6-413a-b015-20e9672cc4d1
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e8f23f65299365b0716cd2a94f48e3a050fb18b1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0c871da0fcd20cffc2c6510d7084f79faefa2d50
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67951238"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412803"
 ---
 # <a name="application-pattern-for-partitioning-memory-optimized-tables"></a>Padrão de aplicativo para particionamento de tabelas com otimização de memória
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "67951238"
   
 -   Adicione a partição ativa.  
   
- ![Partition switch.](../../relational-databases/in-memory-oltp/media/hekaton-partitioned-tables.gif "Partition switch.")  
+ ![Opção de partição.](../../relational-databases/in-memory-oltp/media/hekaton-partitioned-tables.gif "|::ref1::|")  
 Manutenção de dados ativos  
   
  As ações que começam com Excluir Ordens Ativas precisam ser executadas durante uma janela de manutenção para evitar consultas com dados ausentes durante o tempo entre a exclusão de dados e a alternância na tabela de preparo.  
@@ -227,6 +227,6 @@ SELECT OBJECT_NAME( object_id) , partition_number , row_count  FROM sys.dm_db_pa
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Tabelas com otimização de memória](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
+ [Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   

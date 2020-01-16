@@ -1,6 +1,6 @@
 ---
-title: 'Tutorial de T-SQL: Configurar permissões em objetos de banco de dados | Microsoft Docs'
-ms.custom: ''
+title: 'Tutorial: Configurar permissões em objetos de BD'
+ms.custom: seo-lt-2019
 ms.date: 07/31/2018
 ms.prod: sql
 ms.technology: t-sql
@@ -12,12 +12,12 @@ ms.assetid: f964b66a-ec32-44c2-a185-6a0f173bfa22
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 791517685f4204f87f9c0cb96f48fe48d6828c53
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 991bdef702b1ed298bb492172ef65c6d25d5d0ab
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68122865"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244752"
 ---
 # <a name="lesson-2-configure-permissions-on-database-objects"></a>Lição 2: Configurar permissões em objetos de banco de dados
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -29,7 +29,7 @@ Conceder um acesso de usuário a um banco de dados envolve três etapas. Primeir
 ## <a name="prerequisites"></a>Prerequisites
 Para concluir este tutorial, você precisa de acesso ao SQL Server Management Studio e a uma instância do SQL Server. 
 
-- Instalar o [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Instale o [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
 Se você não tiver acesso a uma instância do SQL Server, selecione sua plataforma nos links a seguir. Se você escolher Autenticação do SQL, use suas credenciais de logon do SQL Server.
 - **Windows**: [Baixe o SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).

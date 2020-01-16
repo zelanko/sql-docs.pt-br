@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: db961211295a83b61478f0849feb1cd6b3fa6c7c
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 842a6519c1493162d06c853f11a9494d8dc3ca5b
+ms.sourcegitcommit: ba44730f5cc33295ae2ed1f281186dd266bad4ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907883"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74190122"
 ---
 # <a name="deploy-a-data-tier-application"></a>Implantar um aplicativo da camada de dados
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,9 +38,9 @@ ms.locfileid: "72907883"
 ## <a name="deploy-the-same-dac-package-multiple-times"></a>Implantar o mesmo pacote de DAC várias vezes 
  É possível implantar o mesmo pacote de DAC em uma única instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] várias vezes, porém é necessário executar as implantações uma de cada vez. O nome de instância do DAC especificado para cada implantação deve ser exclusivo dentro da instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
- Se você implantar um DAC em uma instância do Mecanismo de Banco de Dados, o DAC implantado será incorporado no **Utilitário do SQL Server** na próxima vez que o conjunto de coleta do utilitário for enviado da instância para o ponto de controle de utilitário. O DAC estará presente no nó **Aplicativos da Camada de Dados Implantados** do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **Aplicativos da Camada de Dados Implantados** details page.  
+ Se você implantar um DAC em uma instância do Mecanismo de Banco de Dados, o DAC implantado será incorporado no **Utilitário do SQL Server** na próxima vez que o conjunto de coleta do utilitário for enviado da instância para o ponto de controle de utilitário. O DAC estará presente no nó **Aplicativos no Nível de Dados Implantados** do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Gerenciador do Utilitário** e é relatado na página de detalhes **Aplicativos no Nível de Dados Implantados**.  
   
-###  <a name="database-options-and-settings"></a>Opções e configurações do banco de dados  
+###  <a name="database-options-and-settings"></a>Opções e configurações de banco de dados  
  Por padrão, o banco de dados criado durante a implantação terá todas as configurações padrão da instrução CREATE DATABASE, exceto:  
   
 -   A ordenação de banco de dados e o nível de compatibilidade são definidos para os valores definidos no pacote de DAC. Um pacote DAC criado a partir de um projeto de banco de dados no SQL Server Developer Tools usa os valores definidos no projeto de banco de dados. Um pacote extraído de um banco de dados existente usa os valores do banco de dados original.  
@@ -145,6 +145,10 @@ Mais informações sobre algumas das páginas de assistente abaixo:
 
 O exemplo a seguir implanta um DAC nomeado MyApplication em uma instância padrão do [!INCLUDE[ssDE](../../includes/ssde-md.md)], usando uma definição de DAC de um pacote de MyApplication.dacpac.  
   
+## <a name="powershell-examples"></a>Exemplos do PowerShell  
+
+O exemplo a seguir implanta um DAC nomeado MyApplication em uma instância padrão do [!INCLUDE[ssDE](../../includes/ssde-md.md)], usando uma definição de DAC de um pacote de MyApplication.dacpac.  
+
 ```powershell
 ## Set a SMO Server object to the default instance on the local computer.  
 CD SQLSERVER:\SQL\localhost\DEFAULT  

@@ -1,7 +1,7 @@
 ---
-title: Restaurações completas de banco de dados (modelo de recuperação simples) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Restaurar banco de dados – modelo de recuperação simples
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 49828927-1727-4d1d-9ef5-3de43f68c026
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: bb6b9d703d98eae5858cc37d865d81455c03f4f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 92e485372bca104ae7c34405f711ced3a6a60a44
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68081378"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242584"
 ---
 # <a name="complete-database-restores-simple-recovery-model"></a>Restaurações completas de banco de dados (modelo de recuperação simples)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "68081378"
   
  Se você também estiver usando um backup de banco de dados diferencial, restaure o backup de banco de dados completo mais recente sem recuperar o banco de dados, e em seguida restaure o backup de banco de dados diferencial mais recente e recupere o banco de dados. A ilustração a seguir mostra este processo.  
   
- ![Backups diferenciais e completos de bancos de dados](../../relational-databases/backup-restore/media/bnrr-rmsimple2-diffdbbu.gif "Backups diferenciais e completos de bancos de dados")  
+ ![Restaurando backups de banco de dados diferenciais e completos](../../relational-databases/backup-restore/media/bnrr-rmsimple2-diffdbbu.gif "Restaurando backups de banco de dados diferenciais e completos")  
   
 > [!NOTE]  
 >  Se você pretende restaurar um backup de banco de dados em uma instância de servidor diferente, consulte [Copiar bancos de dados com Backup e Restauração](../../relational-databases/databases/copy-databases-with-backup-and-restore.md).  

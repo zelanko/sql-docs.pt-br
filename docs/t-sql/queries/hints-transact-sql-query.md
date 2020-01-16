@@ -55,12 +55,12 @@ helpviewer_keywords:
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: pmasl
 ms.author: vanto
-ms.openlocfilehash: c86ace5f903befc27e9348201332274e84877299
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: ca998b57715b874d6bc9b851f4710bb3c3e749d4
+ms.sourcegitcommit: 56fb0b7750ad5967f5d8e43d87922dfa67b2deac
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982286"
+ms.lasthandoff: 12/11/2019
+ms.locfileid: "75002331"
 ---
 # <a name="hints-transact-sql---query"></a>Dicas (Transact-SQL) – consulta
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -92,7 +92,8 @@ As dicas de consulta especificam que as dicas indicadas devem ser usadas em toda
   | EXPAND VIEWS   
   | FAST number_rows   
   | FORCE ORDER   
-  | { FORCE | DISABLE } EXTERNALPUSHDOWN  
+  | { FORCE | DISABLE } EXTERNALPUSHDOWN
+  | { FORCE | DISABLE } SCALEOUTEXECUTION
   | IGNORE_NONCLUSTERED_COLUMNSTORE_INDEX  
   | KEEP PLAN   
   | KEEPFIXED PLAN  
@@ -168,13 +169,15 @@ Especifica que a ordem de junção indicada pela sintaxe de consulta é preserva
   
 { FORCE | DISABLE } EXTERNALPUSHDOWN  
 Forçar ou desabilitar o pushdown da computação de expressões qualificadas no Hadoop. Aplica-se somente a consultas que usam PolyBase. Não se aplicará ao armazenamento do Azure.  
-  
+
+{ FORCE | DISABLE } SCALEOUTEXECUTION Force ou desabilite a expansão da execução de consultas do PolyBase que usam tabelas externas em Clusters de Big Data do SQL Server 2019. Essa dica será seguida apenas por uma consulta que use a instância mestre de um cluster de Big Data do SQL. A expansão ocorrerá em todo o pool de computação do cluster de Big Data. 
+
 KEEP PLAN  
 Força o otimizador de consulta a relaxar o limite de recompilação estimado para uma consulta. O limite de recompilação estimado inicia uma recompilação automática para a consulta quando o número estimado de alterações na coluna indexada é feito em uma tabela com a execução de uma das seguintes instruções:
 
 * UPDATE
 * Delete (excluir)
-* MERGE
+* MESCLAR
 * INSERT
 
 Especificar KEEP PLAN assegura que uma consulta não seja recompilada tão frequentemente como quando há várias atualizações em uma tabela.  
@@ -275,7 +278,7 @@ Os seguintes nomes de dica são compatíveis:
    Desabilita os comentários de concessão de memória do modo de lote. Para obter mais informações, veja [Batch mode memory grant feedback](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-memory-grant-feedback) (Comentários de concessão de memória de modo de lote).     
    **Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
 * 'DISABLE_DEFERRED_COMPILATION_TV'    
-  Desabilita a compilação adiada de variável da tabela. Para saber mais, veja [Compilação adiada de variável da tabela](../../t-sql/data-types/table-transact-sql.md#table-variable-deferred-compilation).     
+  Desabilita a compilação adiada de variável da tabela. Para saber mais, veja [Compilação adiada de variável da tabela](../../relational-databases/performance/intelligent-query-processing.md#table-variable-deferred-compilation).     
   **Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
 *  'DISABLE_INTERLEAVED_EXECUTION_TVF'      
    Desabilita a execução intercalada para funções com valor de tabela de várias instruções. Para saber mais, veja [Execução intercalada para funções com valor de tabela de várias instruções](../../relational-databases/performance/intelligent-query-processing.md#interleaved-execution-for-mstvfs).     
@@ -357,7 +360,7 @@ TABLE HINT **(** _exposed\_object\_name_ [ **,** \<table_hint> [ [ **,** ]..._n_
 > [!CAUTION] 
 > A especificação de FORCESEEK com parâmetros limita o número de planos que podem ser considerados pelo otimizador mais do que a especificação de FORCESEEK sem parâmetros. Isso pode resultar em um erro "Não é possível gerar o plano" em mais casos. Em uma versão futura, as modificações internas no otimizador talvez permitam a consideração de mais planos.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Dicas de consultas não podem ser especificadas em uma instrução INSERT, exceto quando uma cláusula SELECT for usada dentro da instrução.  
   
  Só podem ser especificadas dicas de consulta na consulta de nível superior, e não em subconsultas. Quando uma dica de tabela é especificada como uma dica de consulta, a dica pode ser especificada na consulta de nível superior ou em uma subconsulta. No entanto, o valor especificado para _exposed\_object\_name_ na cláusula TABLE HINT deve corresponder exatamente ao nome exposto na consulta ou subconsulta.  
@@ -382,7 +385,7 @@ O Erro 8072 ocorre em alguns cenários. Um deles é quando você especifica uma 
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-merge-join"></a>A. Usando MERGE JOIN  
+### <a name="a-using-merge-join"></a>a. Usando MERGE JOIN  
  O exemplo a seguir especifica que MERGE JOIN executa a operação JOIN na consulta. O exemplo usa o banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
 ```sql  

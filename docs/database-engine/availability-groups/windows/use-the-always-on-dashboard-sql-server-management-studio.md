@@ -1,6 +1,7 @@
 ---
-title: Usar o painel do grupo de disponibilidade Always On (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Como usar o painel do grupo de disponibilidade no SSMS
+description: Descreve como usar o painel do grupo de disponibilidade Always On para monitorar a integridade do seu grupo de disponibilidade no SSMS (SQL Server Management Studio).
+ms.custom: seo-lt-2019
 ms.date: 08/09/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 802fcd6ad0bead99a56f3bd5f8c71639a42a0cc5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e2083d5f8602c28028da90cf4ecd1ed809115c7f
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013536"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822670"
 ---
 # <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>Usar o painel do grupo de disponibilidade Always On (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -237,7 +238,7 @@ O painel **Réplica de Disponibilidade** exibe as seguintes colunas:
     > [!CAUTION]  
     >  Quando um banco de dados está no estado INITIALIZING, um failover forçado da réplica secundária sempre deixará esse banco de dados em um estado no qual não pode ser iniciado.  
   
- **Failover Readiness**  
+ **Prontidão de Failover**  
  Indica em qual réplica de disponibilidade pode ser feito failover com ou sem perda de dados potencial. Essa coluna é mostrada por padrão. Os valores possíveis são:  
   
 -   **Perda de Dados**   

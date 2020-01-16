@@ -1,6 +1,7 @@
 ---
-title: Definir o método de propagação de alterações de dados para artigos transacionais | Microsoft Docs
-ms.custom: ''
+title: Definir o método de propagação para alterações a artigos (transacional)
+description: Descreve como estimar o método de propagação de alterações de dados para artigos transacionais para Replicação Transacional usando o SSMS (SQL Server Management Studio) ou o T-SQL (Transact-SQL).
+ms.custom: seo-lt-2019
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ ms.assetid: 0a291582-f034-42da-a1a3-29535b607b74
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 446855f89b924cb41462df67d02926f3b7b1ebe9
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 7b3b335a347dea69f7741d348ae3d30dd1ba2c8f
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72904987"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321173"
 ---
 # <a name="set-the-propagation-method-for-data-changes-to-transactional-articles"></a>Definir o método de propagação de alterações de dados para artigos transacionais
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -162,6 +163,6 @@ ms.locfileid: "72904987"
   
 ## <a name="see-also"></a>Consulte Também  
  [Especificar como as alterações são propagadas para artigos transacionais](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)   
- [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)  
+ [Criar uma publicação](../../../relational-databases/replication/publish/create-a-publication.md)  
   
   

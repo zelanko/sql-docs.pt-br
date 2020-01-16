@@ -1,6 +1,8 @@
 ---
-title: Permissões REVOKE de entidade de segurança do servidor (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: Permissões de entidade de segurança do servidor REVOKE
+description: Revogar permissões em um logon do SQL Server.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: sql-database
@@ -19,19 +21,19 @@ helpviewer_keywords:
 ms.assetid: 75409024-f150-4326-af16-9d60e900df18
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 2ee75a4b200850e8762814ddd30dab8c1e60bdb0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 21cb290cb91ca74227db7a3cd16501ddd882ae48
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67914230"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255795"
 ---
 # <a name="revoke-server-principal-permissions-transact-sql"></a>Permissões do principal do servidor REVOKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Revoga as permissões concedidas ou negadas em um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -95,7 +97,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] }
  AS *SQL_Server_login*  
  Especifica o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a partir do qual o principal que executa esta consulta deriva seu direito de revogar a permissão.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Os logons e as funções de servidor do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são protegíveis no nível do servidor. As permissões mais específicas e limitadas que podem ser revogadas em um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou função de servidor são listadas na tabela a seguir, junto com as permissões mais gerais que as contêm implicitamente.  
   
 |Logon do SQL Server ou função de servidor|Sugerido pelo logon do SQL Server ou função de servidor|Implícito na permissão de servidor|  
@@ -112,7 +114,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] }
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-revoking-impersonate-permission-on-a-login"></a>A. Revogando a permissão IMPERSONATE em um logon  
+### <a name="a-revoking-impersonate-permission-on-a-login"></a>a. Revogando a permissão IMPERSONATE em um logon  
  O exemplo a seguir revoga a permissão `IMPERSONATE` no logon `WanidaBenshoof` do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] criado a partir do usuário do Windows `AdvWorks\YoonM`.  
   
 ```  

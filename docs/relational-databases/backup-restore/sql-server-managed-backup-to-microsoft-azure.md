@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 8fb8654f89b11b848028e3b35dd971d80cfd4138
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 49016b1b4ff391c1b1f533a2bf716f39a40b4dbe
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041357"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245426"
 ---
-# <a name="sql-server-managed-backup-to-microsoft-azure"></a>Backup gerenciado do SQL Server no Microsoft Azure
+# <a name="sql-server-managed-backup-to-microsoft-azure"></a>Backup Gerenciado do SQL Server para o Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] gerencia e automatiza os backups do SQL Server no Armazenamento de Blobs do Microsoft Azure. Você pode permitir que o SQL Server determine a agenda de backup com base na carga de trabalho de transação do banco de dados. Ou pode usar as opções avançadas para definir uma agenda. As configurações de retenção determinam por quanto tempo os backups são armazenados no Armazenamento de Blobs do Azure. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] oferece suporte para restauração pontual durante o período de retenção especificado.  
   
- Começando com o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], os procedimentos e o comportamento básico de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] foi alterado. Para saber mais, confira [Migrate SQL Server 2014 Managed Backup Settings to SQL Server 2016](../../relational-databases/backup-restore/migrate-sql-server-2014-managed-backup-settings-to-sql-server-2016.md).  
+ Começando com o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], os procedimentos e o comportamento básico de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] foi alterado. Para saber mais, confira [Migrar configurações de backup gerenciado do SQL Server 2014 para o SQL Server 2016](../../relational-databases/backup-restore/migrate-sql-server-2014-managed-backup-settings-to-sql-server-2016.md).  
   
 > [!TIP]  
 >  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] é recomendado para as instâncias do SQL Server em execução em máquinas virtuais do Microsoft Azure.  
@@ -37,12 +37,12 @@ ms.locfileid: "68041357"
 ##  <a name="Prereqs"></a> Pré-requisitos  
  O Armazenamento do Microsoft Azure é usado pelo [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para armazenar os arquivos de backup. Os seguintes pré-requisitos são necessários:  
   
-|Pré-requisito|Descrição|  
+|Pré-requisito|DESCRIÇÃO|  
 |------------------|-----------------|  
 |**Conta do Microsoft Azure**|Você pode começar a usar o Azure com uma [avaliação gratuita](https://azure.microsoft.com/pricing/free-trial/) antes de explorar as [opções de compra](https://azure.microsoft.com/pricing/purchase-options/).|  
 |**Conta de Armazenamento do Azure**|Os backups são armazenados no Armazenamento de Blobs do Azure associado a uma conta de armazenamento do Azure. Para obter instruções passo a passo para criar uma conta de armazenamento, confira [Sobre as contas de armazenamento do Azure](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/).|  
 |**Contêiner de Blob**|Os blobs são organizados em contêineres. Especifique o contêiner de destino para os arquivos de backup. Você pode criar um contêiner no [Portal de Gerenciamento do Azure](https://manage.windowsazure.com/) ou usar o comando **New-AzureStorageContainer** do [Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/).|  
-|**SAS (Assinatura de Acesso Compartilhado)**|O acesso ao contêiner de destino é controlado por uma SAS (Assinatura de Acesso Compartilhado). Para ter uma visão geral da SAS, confira [Assinaturas de Acesso Compartilhado, Parte 1: Noções básicas sobre o modelo SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/). É possível criar um token SAS no código ou com o comando **New-AzureStorageContainerSASToken** do PowerShell. Para obter um script do PowerShell que simplifica esse processo, confira [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)(Simplificando a criação de credenciais do SQL com tokens SAS [Assinatura de Acesso Compartilhado] no Armazenamento do Azure com o Powershell). O token SAS pode ser armazenado em uma **Credencial do SQL** para uso com o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
+|**SAS (Assinatura de Acesso Compartilhado)**|O acesso ao contêiner de destino é controlado por uma SAS (Assinatura de Acesso Compartilhado). Para ter uma visão geral da SAS, confira [Assinaturas de Acesso Compartilhado, Parte 1: Understanding the SAS Model](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/) (Assinaturas de Acesso Compartilhado, Parte 1: noções básicas sobre o modelo de SAS) É possível criar um token SAS no código ou com o comando **New-AzureStorageContainerSASToken** do PowerShell. Para obter um script do PowerShell que simplifica esse processo, confira [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)(Simplificando a criação de credenciais do SQL com tokens SAS [Assinatura de Acesso Compartilhado] no Armazenamento do Azure com o Powershell). O token SAS pode ser armazenado em uma **Credencial do SQL** para uso com o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
 |**SQL Server Agent**|O SQL Server Agent deve estar em execução para que o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] funcione. Considere a configuração da opção de inicialização como automática.|  
   
 ## <a name="components"></a>Componentes  
@@ -52,7 +52,7 @@ ms.locfileid: "68041357"
   
 |||  
 |-|-|  
-|Objeto do Sistema|Descrição|  
+|Objeto do Sistema|DESCRIÇÃO|  
 |**MSDB**|Armazena os metadados, o histórico de backup de todos os backups criados pelo [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
 |[managed_backup.sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)|Habilita o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
 |[managed_backup.sp_backup_config_advanced &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)|Define as configurações avançadas para [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)], como a criptografia.|  

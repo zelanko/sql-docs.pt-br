@@ -1,7 +1,7 @@
 ---
-title: Descarregar a carga de trabalho somente leitura na réplica secundária de um grupo de disponibilidade
+title: Descarregar a carga de trabalho para réplica de grupo de disponibilidade secundária
 description: Saiba mais sobre o descarregamento de consultas e relatórios somente leitura para uma réplica secundária de um grupo de disponibilidade Always On no SQL Server.
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 06/06/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9608383d132dbb670d8a852101dd074d4f285a79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a6226a080a7d831694e5d5978460c2e6d6016ead
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991662"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822407"
 ---
 # <a name="offload-read-only-workload-to-secondary-replica-of-an-always-on-availability-group"></a>Descarregar a carga de trabalho somente leitura na réplica secundária de um grupo de disponibilidade Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "67991662"
     > [!NOTE]  
     >  Como opção, o administrador de banco de dados pode configurar qualquer réplica de disponibilidade para excluir conexões somente leitura ao executar sob a função primária.  
   
-     Para obter informações, veja [Sobre o acesso de conexão de cliente a réplicas de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md).  
+     Para obter mais informações, consulte [Sobre Acesso de conexão de cliente a réplicas de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md).  
   
 -   **Ouvinte de grupo de disponibilidade**  
   
@@ -82,7 +82,7 @@ ms.locfileid: "67991662"
      Para obter informações, veja [Configurar o roteamento somente leitura para um grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md).  
   
 > [!NOTE]  
->  Para obter informações sobre ouvintes do grupo de disponibilidade e mais informações sobre roteamento somente leitura, veja [Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativos &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).  
+>  Para obter informações sobre ouvintes do grupo de disponibilidade e mais informações sobre roteamento somente leitura, veja [Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativo &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).  
   
 ##  <a name="bkmk_LimitationsRestrictions"></a> Limitações e restrições  
  Algumas operações não têm suporte total, como segue:  
@@ -183,7 +183,7 @@ ms.locfileid: "67991662"
   
 -   Como as estatísticas temporárias são armazenadas em **tempdb**, uma reinicialização do serviço [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] faz com que todas as estatísticas temporárias desapareçam.  
   
--   O sufixo _readonly_database_statistic fica reservado para estatísticas geradas pelo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Você não pode usar esse sufixo na criação de estatísticas em um banco de dados primário. Para obter mais informações, consulte [Statistics](../../../relational-databases/statistics/statistics.md).  
+-   O sufixo _readonly_database_statistic fica reservado para estatísticas geradas pelo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Você não pode usar esse sufixo na criação de estatísticas em um banco de dados primário. Para obter mais informações, consulte [Estatísticas](../../../relational-databases/statistics/statistics.md).  
   
 ##  <a name="bkmk_AccessInMemTables"></a> Acessando tabelas com otimização de memória em uma réplica secundária  
  Os níveis de isolamento de transação que podem ser usados com tabelas com otimização de memória em uma réplica secundária são os mesmos que na réplica primária. A recomendação é definir o nível de isolamento no nível de sessão como READ COMMITTED e definir a opção no nível de banco de dados MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT como ON. Por exemplo:  
@@ -241,7 +241,7 @@ GO
 ## <a name="see-also"></a>Consulte Também  
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Sobre o acesso de conexão de cliente a réplicas de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
- [Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativos &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
+ [Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativo &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [Estatísticas](../../../relational-databases/statistics/statistics.md)  
   
   

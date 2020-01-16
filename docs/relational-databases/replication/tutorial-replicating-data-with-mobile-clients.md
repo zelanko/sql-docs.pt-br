@@ -1,6 +1,7 @@
 ---
-title: 'Tutorial: Configurar a replicação entre um servidor e clientes móveis (mesclagem) | Microsoft Docs'
-ms.custom: ''
+title: 'Tutorial: Configurar a replicação de mesclagem'
+description: Este tutorial ensina a configurar a replicação de mesclagem entre um SQL Server e um cliente móvel.
+ms.custom: seo-lt-2019
 ms.date: 04/03/2018
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ ms.assetid: af673514-30c7-403a-9d18-d01e1a095115
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 062e84a5ff0874353a40236ea6ce56c325dfa6ab
-ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
+ms.openlocfilehash: 84a07ef89bc42538a5043a46ed3bcd23bc588caf
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72517971"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321845"
 ---
 # <a name="tutorial-configure-replication-between-a-server-and-mobile-clients-merge"></a>Tutorial: Configurar a replicação entre um servidor e clientes móveis (mesclagem)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +48,7 @@ Para concluir este tutorial, são necessários o SQL Server, o SSMS (SQL Server 
   
 - No servidor do assinante (destino), instale qualquer edição do SQL Server, exceto o SQL Server Express ou o SQL Server Compact. A publicação criada neste tutorial não dá suporte ao SQL Server Express ou ao SQL Server Compact. 
 
-- Instalar o [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Instale o [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 - Instale o [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 - Baixe o [banco de dados de exemplo do AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases). Para obter instruções sobre como restaurar um banco de dados no SSMS, veja [Como restaurar um banco de dados](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).  
  
@@ -71,7 +72,7 @@ Nesta seção, você criará uma publicação de mesclagem usando o [!INCLUDE[ss
 
    ![Seleções para iniciar o Assistente para Nova Publicação](media/tutorial-replicating-data-between-continuously-connected-servers/newpublication.png)
   
-3. Na página **Banco de dados de publicação**, selecione [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] e, em seguida, selecione **Avançar**. 
+3. Na página **Banco de Dados de Publicação**, selecione [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] e, em seguida, **Avançar**. 
 
       
 4. Na página **Tipo de Publicação**, selecione **Publicação de mesclagem** e, em seguida, **Avançar**.  
@@ -109,21 +110,21 @@ Nesta seção, você criará uma publicação de mesclagem usando o [!INCLUDE[ss
   
 10. Na página **Filtrar Linhas da Tabela**, selecione **Funcionário (Recursos Humanos)** , **Adicionar** e, em seguida, **Adicionar Junção para Estender o Filtro Selecionado**.  
   
-    A. Na caixa de diálogo **Adicionar Junção**, selecione **Sales.SalesOrderHeader** em **Tabela unida**. Selecione **Gravar a instrução de junção manualmente** e conclua a instrução de junção da seguinte maneira:  
+    a. Na caixa de diálogo **Adicionar Junção**, selecione **Sales.SalesOrderHeader** em **Tabela unida**. Selecione **Gravar a instrução de junção manualmente** e conclua a instrução de junção da seguinte maneira:  
   
     ```sql  
     ON [Employee].[BusinessEntityID] =  [SalesOrderHeader].[SalesPersonID] 
     ```  
   
-    B. Em **Especificar opções de junção**, selecione **Chave exclusiva** e, em seguida, selecione **OK**.
+    b. Em **Especificar opções de junção**, selecione **Chave exclusiva** e, em seguida, selecione **OK**.
 
     ![Seleções para adicionar uma junção ao filtro](media/tutorial-replicating-data-with-mobile-clients/mergeaddjoin.png)
 
   
 13. Na página **Filtrar Linhas da Tabela**, selecione **SalesOrderHeader**, **Adicionar** e, em seguida, **Adicionar Junção para Estender o Filtro Selecionado**.  
   
-    A. Na caixa de diálogo **Adicionar Junção** , selecione **Sales.SalesOrderDetail** sob **Tabela unida**.    
-    B. Selecione **Usar o construtor para criar a instrução**.  
+    a. Na caixa de diálogo **Adicionar Junção** , selecione **Sales.SalesOrderDetail** sob **Tabela unida**.    
+    b. Selecione **Usar o construtor para criar a instrução**.  
     c. Na caixa **Visualização**, confirme se a instrução de junção é da seguinte maneira:  
   
     ```sql  
@@ -164,9 +165,9 @@ Nesta seção, você criará uma publicação de mesclagem usando o [!INCLUDE[ss
   
 2. Na pasta **Publicações Locais**, clique com o botão direito do mouse em **AdvWorksSalesOrdersMerge** e, em seguida, selecione **Propriedades**.  
   
-   A. Selecione a página **Lista de Acesso à Publicação** e **Adicionar**. 
+   a. Selecione a página **Lista de Acesso à Publicação** e **Adicionar**. 
   
-   B. Na caixa de diálogo **Adicionar Acesso à Publicação**, selecione <*Nome_do_Computador_do_Publicador*> **\repl_merge** e selecione **OK**. Selecione **OK** novamente. 
+   b. Na caixa de diálogo **Adicionar Acesso à Publicação**, selecione <*Nome_do_Computador_do_Publicador*> **\repl_merge** e selecione **OK**. Selecione **OK** novamente. 
 
    ![Seleções para adicionar o logon do Agente de Mesclagem](media/tutorial-replicating-data-with-mobile-clients/mergepal.png) 
 
@@ -200,7 +201,7 @@ Nesta seção, você adicionará uma assinatura à publicação de mesclagem cri
   
 6. Na página **Assinantes**, selecione o nome da instância do servidor do assinante. Em **Banco de Dados de Assinatura**, selecione **Novo Banco de Dados** na lista.  
   
-   Na caixa de diálogo **Novo Banco de Dados**, insira **SalesOrdersReplica** na caixa **Nome do banco de dados**. Selecione **OK**e selecione **Avançar**. 
+   Na caixa de diálogo **Novo Banco de Dados**, insira **SalesOrdersReplica** na caixa **Nome do banco de dados**. Selecione **OK** e, em seguida, selecione **Avançar**. 
 
    ![Seleções para adicionar um banco de dados ao assinante](media/tutorial-replicating-data-with-mobile-clients/addsubdb.png)
   
@@ -226,11 +227,11 @@ Nesta seção, você adicionará uma assinatura à publicação de mesclagem cri
   
 1. Conecte-se ao assinante no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Expanda **Segurança**, clique com o botão direito do mouse em **Logons** e, em seguida, selecione **Novo Logon**.  
   
-   Na página **Geral**, selecione **Pesquisar** e, em seguida, insira <*Nome_do_Computador_do_Assinante*> **\repl_merge** na caixa **Insira o Nome do Objeto**. Selecione **Verificar Nomes** e, em seguida, selecione **OK**. 
+   Na página **Geral**, selecione **Pesquisar** e, em seguida, insira <*Nome_do_Computador_do_Assinante*> **\repl_merge** na caixa **Insira o Nome do Objeto**. Selecione **Verificar Nomes** e, em seguida, **OK**. 
     
    ![Seleções para configurar o logon](media/tutorial-replicating-data-with-mobile-clients/sublogin.png)
   
-1. Na página **Mapeamento de Usuário**, selecione o banco de dados **SalesOrdersReplica** e a função **db_owner**. Na página **Protegíveis**, conceda a permissão **Explícita** para **Alterar Rastreamento**. Escolha **OK**.
+1. Na página **Mapeamento de Usuário**, selecione o banco de dados **SalesOrdersReplica** e a função **db_owner**. Na página **Protegíveis**, conceda a permissão **Explícita** para **Alterar Rastreamento**. Selecione **OK**.
 
    ![Páginas "Mapeamento de usuário" e "Protegíveis"](media/tutorial-replicating-data-with-mobile-clients/setdbo.png)
   
@@ -240,8 +241,8 @@ Nesta seção, você adicionará uma assinatura à publicação de mesclagem cri
   
 2. Na pasta **Publicações Locais**, clique com o botão direito do mouse na publicação **AdvWorksSalesOrdersMerge** e, em seguida, selecione **Propriedades**.  
    
-   A. Selecione a página **Partições de Dados** e **Adicionar**.   
-   B. Na caixa de diálogo **Adicionar Partição de Dados**, insira **adventure-works\pamela0** na caixa **Valor de HOST_NAME** e, em seguida, selecione **OK**.  
+   a. Selecione a página **Partições de Dados** e **Adicionar**.   
+   b. Na caixa de diálogo **Adicionar Partição de Dados**, insira **adventure-works\pamela0** na caixa **Valor de HOST_NAME** e, em seguida, selecione **OK**.  
    c. Selecione a partição recém-adicionada, selecione **Gerar os instantâneos selecionados agora** e, em seguida, **OK**. 
 
    ![Seleções para adicionar uma partição](media/tutorial-replicating-data-with-mobile-clients/partition.png)

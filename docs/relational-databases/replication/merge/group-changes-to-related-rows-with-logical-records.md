@@ -1,6 +1,7 @@
 ---
-title: Agrupar alterações a linhas relacionadas com registros lógicos | Microsoft Docs
-ms.custom: ''
+title: Agrupar alterações em linhas relacionadas com registros lógicos
+description: Saiba como fazer alterações em linhas relacionadas como uma unidade com a replicação de mesclagem no SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ad76799c-4486-4b98-9705-005433041321
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9be51c4a919549ac356813f3b6ae185b7c5b5c58
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a7752007e36d7dd1a2da8522a531b4f46f3b5571
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033251"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321477"
 ---
 # <a name="group-changes-to-related-rows-with-logical-records"></a>Agrupar alterações a linhas relacionadas com registros lógicos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,13 +35,13 @@ ms.locfileid: "68033251"
   
  Considere estas três tabelas relacionadas:  
   
- ![Três registros lógicos de tabela, apenas com nomes de coluna](../../../relational-databases/replication/merge/media/logical-records-01.gif "Três registros lógicos de tabela, apenas com nomes de coluna")  
+ ![Registro lógico de três tabelas, somente com nomes de coluna](../../../relational-databases/replication/merge/media/logical-records-01.gif "Registro lógico de três tabelas, somente com nomes de coluna")  
   
  A tabela **Customers** é a tabela pai nesta relação e tem uma coluna de chave primária **CustID**. A tabela **Orders** tem uma coluna de chave primária **OrderID**, com uma restrição de chave estrangeira na coluna **CustID** que faz referência à coluna **CustID** na tabela **Customers** . De forma semelhante, a tabela **OrderItems** tem uma coluna de chave primária **OrderItemID**, com uma restrição de chave estrangeira na coluna **OrderID** que faz referência à coluna **OrderID** na tabela **Orders** .  
   
  Neste exemplo, um registro lógico consiste de todas as linhas na tabela **Orders** que são relacionadas a um valor **CustID** único e todas as linhas na tabela **OrderItems** são relacionadas a aquelas linhas na tabela **Orders** . Este diagrama exibe todas as linhas nas três tabelas que estão no registro lógico para Customer2:  
   
- ![Três registros lógicos de tabela com valores](../../../relational-databases/replication/merge/media/logical-records-02.gif "Três registros lógicos de tabela com valores")  
+ ![Registro lógico de três tabelas com valores](../../../relational-databases/replication/merge/media/logical-records-02.gif "Registro lógico de três tabelas com valores")  
   
  Definir uma relação de registro lógico entre artigos, consulte [Definir uma relação de registro lógico entre artigos da tabela de mesclagem](../../../relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md).  
   
@@ -54,7 +55,7 @@ ms.locfileid: "68033251"
 ### <a name="the-application-of-changes-as-a-unit"></a>A aplicação de alterações como uma unidade  
  Se o processamento de mesclagem for interrompido, como no caso de uma conexão descartada, o conjunto parcialmente completado de alterações replicadas relacionadas será revertido se forem usados registros lógicos. Por exemplo, considere o caso onde um Assinante adiciona um novo pedido com **OrderID** = 6 e duas novas linhas na tabela **OrderItems** com **OrderItemID** = 10 e **OrderItemID** = 11 para **OrderID** = 6.  
   
- ![Três registros lógicos de tabela com valores](../../../relational-databases/replication/merge/media/logical-records-04.gif "Três registros lógicos de tabela com valores")  
+ ![Registro lógico de três tabelas com valores](../../../relational-databases/replication/merge/media/logical-records-04.gif "Registro lógico de três tabelas com valores")  
   
  Se o processo de replicação for interrompido depois da linha **Pedidos** , para **OrderID** = 6 está concluído, mas, antes que os **OrderItems** 10 e 11 sejam concluídos e os registros lógicos não sejam usados, o valor de **OrderTotal** para **OrderID** = 6 não será consistente com a soma dos valores **OrderAmount** das linhas **OrderItems** . Se forem usados registros lógicos, a linha **Orders** para **OrderID** = 6 não será confirmada até que as alterações **OrderItems** sejam replicadas.  
   
@@ -114,7 +115,7 @@ ms.locfileid: "68033251"
   
     -   Também devem ser usadas partições pré-computadas. Os requisitos de partições pré-computadas também se aplicam a registros lógicos. Para obter mais informações, consulte [Optimize Parameterized Filter Performance with Precomputed Partitions](../../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md) (Otimizar o desempenho do filtro parametrizado com partições pré-computadas).  
   
-    -   Você não pode usar filtros com parâmetros que não se sobrepõem. Para obter mais informações, consulte a seção "Configurando opções de partição" em [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+    -   Você não pode usar filtros com parâmetros que não se sobrepõem. Para obter mais informações, consulte a seção "Configurando opções de partição" em [Filtros de linha com parâmetros](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
 -   Se a publicação usar filtros de junções, a propriedade **juntar chave exclusiva** deverá ser definida como **verdadeiro** para todos os filtros de junção que são envolvidos em relações de registro lógico. Para obter mais informações, consulte [Join Filters](../../../relational-databases/replication/merge/join-filters.md).  
   

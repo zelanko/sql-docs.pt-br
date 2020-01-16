@@ -1,6 +1,7 @@
 ---
-title: Espelhamento de Banco de Dados – usar certificados para conexões de entrada | Microsoft Docs
-ms.custom: ''
+title: Usar certificados para conexão de entrada
+description: Descreve as etapas para configuração de instâncias de servidor a fim de usar certificados para autenticar conexões de entrada para espelhamento de banco de dados.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5d48bb98-61f0-4b99-8f1a-b53f831d63d0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 274260c382eea20a3adb2fc61c1bde27e02469a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 145c182323d3de702ce1e7d4bfcc4e966c5928c2
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67997907"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822273"
 ---
 # <a name="database-mirroring---use-certificates-for-inbound-connections"></a>Espelhamento de Banco de Dados – usar certificados para conexões de entrada
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "67997907"
   
  O procedimento a seguir descreve em detalhes essas etapas. Para cada etapa, o processo fornece um exemplo para configurar a instância do servidor em um sistema chamado de HOST_A. A seção de exemplo mostra as mesmas etapas para uma outra instância do servidor em um sistema chamado de HOST_B.  
   
-### <a name="to-configure-server-instances-for-inbound-mirroring-connections-on-hosta"></a>Para configurar instâncias de servidor para conexões de espelhamento de entrada (em HOST_A)  
+### <a name="to-configure-server-instances-for-inbound-mirroring-connections-on-host_a"></a>Para configurar instâncias de servidor para conexões de espelhamento de entrada (em HOST_A)  
   
 1.  Crie um logon para o outro sistema.  
   
@@ -132,7 +133,7 @@ ms.locfileid: "67997907"
  O exemplo a seguir demonstra como configurar HOST_B para conexões de entrada.  
   
 > [!NOTE]  
->  Este exemplo usa um arquivo de certificado que contém o certificado HOST_A criado por um snippet de código em [Permitir que um ponto de extremidade de espelhamento de banco de dados use certificados para conexões de saída &#40;Transact-SQL &#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md).  
+>  Este exemplo usa um arquivo de certificado que contém o certificado HOST_A criado por um snippet de código em [Permitir que um ponto de extremidade de espelhamento de banco de dados use certificados para conexões de saída &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md).  
   
 ```  
 USE master;  

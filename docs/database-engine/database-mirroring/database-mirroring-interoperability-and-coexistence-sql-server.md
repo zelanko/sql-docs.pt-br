@@ -1,6 +1,7 @@
 ---
-title: 'Espelhamento de banco de dados: interoperabilidade e coexistência (SQL Server) | Microsoft Docs'
-ms.custom: ''
+title: 'Espelhamento de banco de dados: Interoperabilidade e coexistência'
+description: Saiba mais sobre a interoperabilidade e a coexistência do espelhamento de banco de dados do SQL Server e outros recursos do SQL Server, como catálogos de texto completo, instantâneos de banco de dados, envio de logs, replicação e instâncias do cluster de failover.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 89fef397-e0cf-4e08-b598-25b8d4170523
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2d116624ddea37922e401244c3c669db0a81aa03
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 045aa94292a4633b8d61e95491d603e0d9897d0d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006418"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254164"
 ---
 # <a name="database-mirroring-interoperability-and-coexistence-sql-server"></a>Espelhamento de banco de dados: Interoperabilidade e coexistência (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "68006418"
   
 -   [Change data capture (e controle de alterações)](../../relational-databases/track-changes/change-data-capture-and-other-sql-server-features.md)  
   
--   [Instantâneos do banco de dados](../../database-engine/database-mirroring/database-mirroring-and-database-snapshots-sql-server.md)  
+-   [Instantâneos de banco de dados](../../database-engine/database-mirroring/database-mirroring-and-database-snapshots-sql-server.md)  
   
 -   [Catálogos de texto completo](../../database-engine/database-mirroring/database-mirroring-and-full-text-catalogs-sql-server.md)  
   

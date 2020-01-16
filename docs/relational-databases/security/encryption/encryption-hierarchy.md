@@ -14,15 +14,15 @@ helpviewer_keywords:
 - security [SQL Server], encryption
 - hierarchies [SQL Server], encryption
 ms.assetid: 96c276d5-1bba-4e95-b678-10f059f1fbcf
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e4f8d3f61d3806e44a1e48774d2c216fdb3c83de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 672631b7ef5e6453e49b269d035586949f03ece6
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68049928"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957413"
 ---
 # <a name="encryption-hierarchy"></a>Hierarquia de criptografia
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "68049928"
 -   Criptografia de Dados Transparente  
   
 ### <a name="transact-sql-functions"></a>Funções Transact-SQL  
- Itens individuais podem ser criptografados quando são inseridos ou atualizados usando funções [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Para obter mais informações, veja [ENCRYPTBYPASSPHRASE &#40;Transact-SQL&#41;](../../../t-sql/functions/encryptbypassphrase-transact-sql.md) e [DECRYPTBYPASSPHRASE &#40;Transact-SQL&#41;](../../../t-sql/functions/decryptbypassphrase-transact-sql.md).  
+ Itens individuais podem ser criptografados quando são inseridos ou atualizados usando funções [!INCLUDE[tsql](../../../includes/tsql-md.md)] . Para obter mais informações, veja [ENCRYPTBYPASSPHRASE &#40;Transact-SQL&#41;](../../../t-sql/functions/encryptbypassphrase-transact-sql.md) e [DECRYPTBYPASSPHRASE &#40;Transact-SQL&#41;](../../../t-sql/functions/decryptbypassphrase-transact-sql.md).  
   
 ### <a name="certificates"></a>Certificados  
  Um certificado de chave pública, geralmente chamado apenas de certificado, é uma instrução assinada digitalmente que associa o valor de uma chave pública à identidade da pessoa, dispositivo ou serviço que mantém a chave privada correspondente. Os certificados são emitidos e assinados por uma autoridade de certificação (CA). A entidade que recebe um certificado de uma CA é o assunto desse certificado. Normalmente os certificados contêm as seguintes informações.  
@@ -112,7 +112,7 @@ ms.locfileid: "68049928"
  [Funções de segurança &#40;Transact-SQL&#41;](../../../t-sql/functions/security-functions-transact-sql.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Hierarquia de permissões &#40;Mecanismo de Banco de Dados&#41;](../../../relational-databases/security/permissions-hierarchy-database-engine.md)   
+ [Hierarquia de permissões &#40;Mecanismo de banco de dados&#41;](../../../relational-databases/security/permissions-hierarchy-database-engine.md)   
  [Protegíveis](../../../relational-databases/security/securables.md)  
   
   

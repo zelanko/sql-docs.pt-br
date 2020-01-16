@@ -9,12 +9,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ee00232a1c1e64d31b7b6360666bdeebba756db9
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 92aaf7c04d7a5e176fce4448b9d4f6172b541647
+ms.sourcegitcommit: a02727aab143541794e9cfe923770d019f323116
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75246948"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75755843"
 ---
 # <a name="microsoft-connector-for-oracle"></a>Microsoft Connector para Oracle
 
@@ -27,7 +27,7 @@ O Microsoft Connector para Oracle permite explorar dados e carregar dados da ori
 Os seguintes produtos do Microsoft SQL Server são suportados pelo Microsoft Connector para Oracle:
 
 - A partir do SQL Server 2019
-- SQL Server Data Tools (SSDT)
+- SSDT (SQL Server Data Tools) desde a versão 15.9.3
 
 As seguintes versões do Oracle Database de fontes de dados têm suporte:
 
@@ -39,32 +39,24 @@ As seguintes versões do Oracle Database de fontes de dados têm suporte:
 O Oracle Database tem suporte em todos os sistemas operacionais e plataformas.
 > [!NOTE]
 >
-> O cliente Oracle não é necessário para o Microsoft Connector para o Oracle Database no SQL Server 2019.
+> O cliente Oracle não é necessário para o Microsoft Connector para banco de dados Oracle no SQL Server 2019.
 
 ## <a name="installation"></a>Instalação
 
-Se você precisar executar o pacote no SQL Server, obtenha o Microsoft Connector para o programa de instalação do Oracle Database [aqui](https://www.microsoft.com/download/details.aspx?id=58228). Em seguida, siga as instruções no assistente de instalação.
+Para instalar o conector para o banco de dados Oracle, baixe e execute o instalador da [última versão do Microsoft Connector para Oracle](https://www.microsoft.com/download/details.aspx?id=58228). Em seguida, siga as instruções no assistente de instalação.
 
-Depois de instalar o Connector, reinicie o Serviço de Integração do SQL Server para verificar se a origem e o destino Oracle estão funcionando corretamente.
+Depois de instalar o Conector, reinicie o SQL Server Integration Services para verificar se a origem e o destino Oracle podem funcionar corretamente.
 
-Se você precisar criar um pacote com o Connector, não é preciso baixar o Connector. Ele já está incluso no SQL Server Data Tools (SSDT) desde a versão 15.9.0.
-
-## <a name="uninstallation"></a>Desinstalação
-
-Você pode executar o assistente de desinstalação para remover o Microsoft Connector para Oracle Database do SQL Server.
-
-## <a name="design-ssis-package-with-previous-version"></a>Criar o pacote do SSIS com a versão anterior
-
-Desde a versão 15.9.0, o SSDT já inclui o Microsoft Connector para o Oracle Database, portanto, não é necessário instalar nada ao criar pacotes do SSIS para SQL Server 2019.
-
-Para criar um pacote do SSIS para o SQL Server 2017 e versões anteriores, é preciso instalar o Connector para Oracle da Attunity com a versão correspondente.
-
-**Links para download:**
+Para executar o pacote SSIS com o direcionamento do SQL Server 2017 e anterior, além do **Microsoft Connector para Oracle**, você precisará instalar o **cliente Oracle** e o **Microsoft Connector para Oracle da Attunity** com a versão correspondente usando os links abaixo:
 
 - [SQL Server 2017: Microsoft Connector versão 5.0 para Oracle da Attunity](https://www.microsoft.com/download/details.aspx?id=55179)
 - [SQL Server 2016: Microsoft Connector versão 4.0 para Oracle da Attunity](https://www.microsoft.com/download/details.aspx?id=52950)
 - [SQL Server 2014: Microsoft Connector versão 3.0 para Oracle da Attunity](https://www.microsoft.com/download/details.aspx?id=44582)
 - [SQL Server 2012: Microsoft Connector versão 2.0 para Oracle da Attunity](https://www.microsoft.com/download/details.aspx?id=29283)
+
+## <a name="uninstallation"></a>Desinstalação
+
+Execute o assistente de desinstalação para remover o Microsoft Connector para banco de dados Oracle do SQL Server.
 
 ## <a name="next-steps"></a>Próximas etapas
 

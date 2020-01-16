@@ -1,6 +1,7 @@
 ---
-title: Visualizador de Conflitos de Replicação da Microsoft (replicação transacional) | Microsoft Docs
-ms.custom: ''
+title: Visualizador de Conflitos de Replicação (ponto a ponto)
+description: Saiba mais sobre o Visualizador de Conflitos de Replicação e como usá-lo para ver os conflitos da replicação transacional ponto a ponto e da replicação transacional com assinaturas de atualização na fila.
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -13,14 +14,14 @@ ms.assetid: eec59d8e-cadb-4623-a31f-9f42ec09c97f
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 61d78e20a51d3a2c28af9cb19a845248d73b5a28
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 39be2638f1d85e610e5898f9a4c33c7129764424
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770576"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321516"
 ---
-# <a name="microsoft-replication-conflict-viewer-transactional-replication"></a>Visualizador de Conflitos de Replicação da Microsoft (replicação transacional)
+# <a name="replication-conflict-viewer-transactional-replication"></a>Visualizador de Conflitos de Replicação (replicação transacional)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   O Visualizador de Conflitos de Replicação permite exibir conflitos que ocorreram durante a sincronização para uma replicação transacional ponto a ponto de uma replicação transacional com assinaturas de atualização enfileiradas. Para obter mais informações, consulte [Exibir conflitos de dados em publicações transacionais &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md).  
   
@@ -47,7 +48,7 @@ ms.locfileid: "68770576"
  **Aplicar ou Remover Filtro**  
  Clique para aplicar ou remover um filtro definido na caixa de diálogo **Definir Filtros** .  
   
- **Selecionar Tudo**  
+ **Selecionar tudo**  
  Clique para selecionar todos os conflitos listados na grade.  
   
  **Selecionar Nenhum**  

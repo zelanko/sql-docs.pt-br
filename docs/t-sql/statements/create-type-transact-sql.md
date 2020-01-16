@@ -1,7 +1,7 @@
 ---
 title: CREATE TYPE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/11/2017
+ms.date: 12/05/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 2202236b-e09f-40a1-bbc7-b8cff7488905
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b851fcc4a06567ce013b8bc0d062ccf15587d806
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: e7cf36879a08f50095a158311179b9ae303d4ebc
+ms.sourcegitcommit: 0d34b654f0b3031041959e87f5b4d4f0a1af6a29
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982724"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74901872"
 ---
 # <a name="create-type-transact-sql"></a>CREATE TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "73982724"
 > [!NOTE]  
 >  A integração do CLR do .NET Framework ao SQL Server é discutida neste tópico. A integração CLR não se aplica ao Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -204,7 +204,7 @@ column_name <data_type>
 > [!NOTE]  
 >  EXTERNAL_NAME não está disponível em um banco de dados independente.  
   
- **[.** *class_name* **]**  
+ **[.** *class_name*  **]**  
  **Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.  
   
  Especifica a classe dentro do assembly que implementa o tipo definido pelo usuário. *class_name* deve ser um identificador válido e deve existir como uma classe no assembly com visibilidade do assembly. *class_name* diferencia maiúsculas de minúsculas, independentemente da ordenação de banco de dados, e deve corresponder exatamente ao nome de classe no assembly correspondente. O nome de classe poderá ser um nome qualificado de namespace entre colchetes ( **[ ]** ) se a linguagem de programação usada para gravar a classe usar o conceito de namespaces, como C#. Se *class_name* não for especificado, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assumirá que ele é o mesmo que *type_name*.  
@@ -251,7 +251,7 @@ Especifica a criação de um índice na tabela. Isso pode ser um índice cluster
   
  Indica que um índice de HASH foi criado. Há suporte para índices de hash apenas em tabelas com otimização de memória.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  A classe do assembly que é referenciado em *assembly_name*, incluindo seus métodos, deve atender a todos os requisitos de implementação de um tipo definido pelo usuário no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações sobre esses requisitos, consulte [Tipos CLR definidos pelo usuário](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).  
   
  Considerações adicionais incluem o seguinte:  
@@ -286,10 +286,10 @@ Especifica a criação de um índice na tabela. Isso pode ser um índice cluster
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-creating-an-alias-type-based-on-the-varchar-data-type"></a>A. Criando um tipo de alias com base no tipo de dados varchar  
+### <a name="a-creating-an-alias-type-based-on-the-varchar-data-type"></a>a. Criando um tipo de alias com base no tipo de dados varchar  
  O exemplo a seguir cria um tipo de alias com base no tipo de dados `varchar` fornecido pelo sistema.  
   
-```  
+```sql  
 CREATE TYPE SSN  
 FROM varchar(11) NOT NULL ;  
 ```  
@@ -299,7 +299,7 @@ FROM varchar(11) NOT NULL ;
   
 **Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior.  
   
-```  
+```sql  
 CREATE ASSEMBLY utf8string  
 AUTHORIZATION [dbi]   
 FROM 0x4D... ;  
@@ -312,7 +312,7 @@ GO
 ### <a name="c-creating-a-user-defined-table-type"></a>C. Criando um tipo de tabela definido pelo usuário  
  O exemplo a seguir cria um tipo de tabela definido pelo usuário que tem duas colunas. Para obter mais informações sobre como criar e usar parâmetros com valor de tabela, consulte [Usar parâmetros com valor de tabela &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).  
   
-```  
+```sql  
 CREATE TYPE LocationTableType AS TABLE   
     ( LocationName VARCHAR(50)  
     , CostRate INT );  
@@ -341,6 +341,7 @@ GO
 ## <a name="see-also"></a>Consulte Também  
  [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)   
  [DROP TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-type-transact-sql.md)   
- [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
-  
+ [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)    
+ [Tipos definidos pelo usuário de CLR](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)     
+ [Trabalhando com tipos de dados definidos pelo usuário no SQL Server](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md)     
   

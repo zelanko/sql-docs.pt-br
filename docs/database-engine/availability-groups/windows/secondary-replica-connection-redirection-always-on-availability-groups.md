@@ -1,6 +1,7 @@
 ---
-title: Redirecionamento de conexão de leitura/gravação de réplica secundária para primária do SQL Server | Microsoft Docs
-ms.custom: ''
+title: Redirecionar conexões de leitura/gravação para a réplica primária
+description: Saiba como sempre redirecionar conexões de leitura/gravação para a réplica primária de um grupo de disponibilidade Always On, independentemente do servidor alvo especificado na cadeia de conexão.
+ms.custom: seo-lt-2019
 ms.date: 01/09/2019
 ms.prod: sql
 ms.reviewer: ''
@@ -17,12 +18,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 181dd36096daacc5a1c3787cdd21cb9619d87491
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8bf76e0929dea69758b1f9152af0df8f3170227d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014204"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75235200"
 ---
 # <a name="secondary-to-primary-replica-readwrite-connection-redirection-always-on-availability-groups"></a>Redirecionamento de conexão de leitura/gravação de réplica secundária para primária (Grupos de Disponibilidade Always On)
 
@@ -47,17 +48,17 @@ Para que uma réplica secundária redirecione as solicitações de conexão de l
 * A especificação de réplica `PRIMARY_ROLE` precisa incluir `READ_WRITE_ROUTING_URL`.
 * A cadeia de conexão precisa definir `ApplicationIntent` como `ReadWrite` – que é o padrão.
 
-## <a name="set-readwriteroutingurl-option"></a>Definir a opção READ_WRITE_ROUTING_URL
+## <a name="set-read_write_routing_url-option"></a>Definir a opção READ_WRITE_ROUTING_URL
 
 Para configurar o redirecionamento de conexão de leitura/gravação, defina `READ_WRITE_ROUTING_URL` para a réplica primária ao criar o AG. 
 
 Em [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)], `READ_WRITE_ROUTING_URL` foi adicionado à especificação `<add_replica_option>`. Consulte os seguintes tópicos: 
 
-* [CREATE AVAILABILITY GROUP](../../../t-sql/statements/create-availability-group-transact-sql.md)
-* [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md)
+* [CRIAR GRUPO DE DISPONIBILIDADE](../../../t-sql/statements/create-availability-group-transact-sql.md)
+* [ALTERAR GRUPO DE DISPONIBILIDADE](../../../t-sql/statements/alter-availability-group-transact-sql.md)
 
 
-### <a name="primaryrolereadwriteroutingurl-not-set-default"></a>PRIMARY_ROLE(READ_WRITE_ROUTING_URL) não definido (padrão) 
+### <a name="primary_roleread_write_routing_url-not-set-default"></a>PRIMARY_ROLE(READ_WRITE_ROUTING_URL) não definido (padrão) 
 
 Por padrão, o redirecionamento de conexão de réplica de leitura/gravação não é definido para uma réplica. A forma como uma réplica secundária trata as solicitações de conexão depende se a réplica secundária está definida para permitir conexões ou não e a configuração de `ApplicationIntent` na cadeia de conexão. A tabela a seguir mostra como uma réplica secundária lida com conexões com base em `SECONDARY_ROLE (ALLOW CONNECTIONS = )` e `ApplicationIntent`.
 
@@ -68,7 +69,7 @@ Por padrão, o redirecionamento de conexão de réplica de leitura/gravação n�
 
 A tabela anterior mostra o comportamento padrão, que é o mesmo que as versões do SQL Server antes de [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)]. 
 
-### <a name="primaryrolereadwriteroutingurl-set"></a>PRIMARY_ROLE(READ_WRITE_ROUTING_URL) definido 
+### <a name="primary_roleread_write_routing_url-set"></a>PRIMARY_ROLE(READ_WRITE_ROUTING_URL) definido 
 
 Depois de definir o redirecionamento de conexão de leitura/gravação, a maneira como a réplica trata as solicitações de conexão se comporta de forma diferente. O comportamento de conexão ainda depende da configuração de `SECONDARY_ROLE (ALLOW CONNECTIONS = )` e `ApplicationIntent`. A tabela a seguir mostra como uma réplica secundária com `READ_WRITE_ROUTING` definido lida com conexões com base em `SECONDARY_ROLE (ALLOW CONNECTIONS = )` e `ApplicationIntent`.
 
@@ -84,7 +85,7 @@ A tabela anterior mostra que, quando a réplica primária tem `READ_WRITE_ROUTIN
 Neste exemplo, um grupo de disponibilidade tem três réplicas:
 * Uma réplica primária em COMPUTER01
 * Uma réplica secundária síncrona em COMPUTER02
-* Uma réplica secundária síncrona em COMPUTER03
+* Uma réplica secundária assíncrona em COMPUTER03
 
 A imagem a seguir representa o grupo de disponibilidade.
 
@@ -124,7 +125,7 @@ CREATE AVAILABILITY GROUP MyAg
       'COMPUTER03' WITH   
          (  
          ENDPOINT_URL = 'TCP://COMPUTER03.<domain>.<tld>:5022',  
-         AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,  
+         AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT,  
          FAILOVER_MODE = MANUAL,  
          SECONDARY_ROLE (ALLOW_CONNECTIONS = ALL,   
             READ_ONLY_ROUTING_URL = 'TCP://COMPUTER03.<domain>.<tld>:1433' ),  

@@ -1,6 +1,7 @@
 ---
-title: Considerações administrativas sobre Publicadores Oracle | Microsoft Docs
-ms.custom: ''
+title: Considerações administrativas sobre Publicadores Oracle
+description: Considerações sobre a administração de Publicadores Oracle que publicam alterações em assinantes do SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: cfd81fb5-419b-4a1b-97c4-be7c9d4ee289
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 17e5d46a2737fe47d9ed704ff7e6ae7dc7d6f159
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8f8a436035c18f7bd6e5a1867ebe92433e4e5951
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68020039"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321893"
 ---
 # <a name="administrative-considerations-for-oracle-publishers"></a>Considerações administrativas sobre Oracle Publishers
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -19,12 +19,12 @@ ms.assetid: 338548f4-c4d8-47ca-b597-5c9c0f2fa205
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 46acc1cb21cf27eb2cce60ca6c5a091bdd72d458
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6737a954881a56961b77dcf7d8f0373b0e30e848
+ms.sourcegitcommit: 03884a046aded85c7de67ca82a5b5edbf710be92
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126836"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564749"
 ---
 # <a name="strong-passwords"></a>Senhas fortes
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "68126836"
   
 -   Começa com o caractere $ ou \@.  
   
- Se usados em uma cadeia de conexão OLE DB ou ODBC, um logon ou senha não deve conter os seguintes caracteres: [] {}() , ; ? * ! \@. Esses caracteres são usados para iniciar uma conexão ou valores de conexão separados.  
+ Se usados em uma cadeia de conexão OLE DB ou ODBC, um logon ou senha não deve conter os seguintes caracteres: [] {}() , ; ? * ! \@ =. Esses caracteres são usados para iniciar uma conexão ou valores de conexão separados.  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
  [Política de senha](../../relational-databases/security/password-policy.md)  

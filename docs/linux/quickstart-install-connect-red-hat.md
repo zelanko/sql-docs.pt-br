@@ -1,20 +1,21 @@
 ---
-title: Introdução ao SQL Server no Red Hat Enterprise Linux
+title: 'RHEL: Instalar o SQL Server em Linux'
 titleSuffix: SQL Server
-description: Este início rápido mostra como instalar o SQL Server 2017 ou o SQL Server 2019 no Red Hat Enterprise Linux e criar e consultar um banco de dados com sqlcmd.
+description: Este início rápido mostra como instalar o SQL Server 2017 ou o SQL Server 2019 no RHEL (Red Hat Enterprise Linux) e, em seguida, criar e consultar um banco de dados com sqlcmd.
 author: VanMSFT
+ms.custom: seo-lt-2019
 ms.author: vanto
 ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
-ms.openlocfilehash: b94ea0ef8956e7807f075da548ae817dc6a205df
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: b93ea834e890981d3fd45fd999a05ae5b2b68042
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531368"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558431"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>Início Rápido: Instalar o SQL Server e criar um banco de dados no Red Hat
 
@@ -155,7 +156,7 @@ Para criar um banco de dados, é necessário conectar-se a uma ferramenta que po
    sudo curl -o /etc/yum.repos.d/msprod.repo https://packages.microsoft.com/config/rhel/7/prod.repo
    ```
 
-1. Caso tenha uma versão anterior do **mssql-tools** instalada, remova os pacotes unixODBC mais antigos.
+1. Se você tiver uma versão anterior do **mssql-tools** instalada, remova os pacotes unixODBC mais antigos.
 
    ```bash
    sudo yum remove unixODBC-utf16 unixODBC-utf16-devel

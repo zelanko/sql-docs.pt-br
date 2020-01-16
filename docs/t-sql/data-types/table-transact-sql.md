@@ -1,7 +1,7 @@
 ---
 title: table (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/11/2018
+ms.date: 11/27/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1ef0b60e-a64c-4e97-847b-67930e3973ef
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d4a36b287554332589f11a352233eaffe972ac06
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: a3ff2605e0c872bd5e544d618c88dc179e3c3b43
+ms.sourcegitcommit: 03884a046aded85c7de67ca82a5b5edbf710be92
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73981737"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564805"
 ---
 # <a name="table-transact-sql"></a>tabela (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "73981737"
 
 **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -65,7 +65,7 @@ Para obter mais informações sobre a sintaxe, veja [CREATE TABLE &#40;Transact-
 *collation_definition*  
 É a ordenação da coluna composta de uma localidade do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows e um estilo de comparação, uma localidade do Windows e a notação binária ou uma ordenação do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se *collation_definition* não for especificado, a coluna herdará a ordenação do banco de dados atual. Ou se a coluna estiver definida como um tipo CLR (Common Language Runtime) definido pelo usuário, a coluna herdará a ordenação do tipo definido pelo usuário.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 **table** As variáveis podem ser referenciadas por nome na cláusula FROM de um lote, conforme mostrado no seguinte exemplo:
   
 ```sql
@@ -100,6 +100,10 @@ As variáveis **Table** não têm estatísticas de distribuição. Elas não dis
 Não há suporte para variáveis **table** no modelo de raciocínio baseado no custo do otimizador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Portanto, elas não devem ser usadas quando opções baseadas no custo forem necessárias para obter um plano de consulta eficiente. Tabelas temporárias são preferíveis quando opções baseadas no custo são necessárias. Em geral, esse plano inclui consultas com junções, decisões de paralelismo e opções de seleção de índice.
   
 As consultas que modificam variáveis **table** não geram planos de execução de consulta paralelos. O desempenho pode ser afetado quando variáveis **table** grandes ou variáveis **table** em consultas complexas forem modificadas. Considere o uso de tabelas temporárias em situações em que as variáveis **table** são modificadas. Para obter mais informações, consulte [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md). As consultas que leem variáveis **table** sem modificá-las ainda podem ser colocadas em paralelo.
+
+> [!IMPORTANT]
+> O nível de compatibilidade do banco de dados 150 melhora o desempenho das variáveis de tabela com a introdução da **compilação adiada da variável de tabela**.  Para saber mais, veja [Compilação adiada de variável da tabela](../../relational-databases/performance/intelligent-query-processing.md#table-variable-deferred-compilation).
+>
   
 Índices não podem ser criados explicitamente em variáveis **table** e nenhuma estatística é mantida em variáveis **table**. A partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], uma nova sintaxe foi introduzida, a qual permite que você crie determinados tipos de índice em linha com a definição da tabela.  Usando essa nova sintaxe, você pode criar índices em variáveis de **tabela** como parte da definição de tabela. Em alguns casos, o desempenho pode melhorar com o uso de tabelas temporárias em vez disso, que fornecem suporte de índice completo e estatísticas. Para saber mais sobre tabelas temporárias e criação de índice embutido, confira [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).
 
@@ -110,65 +114,10 @@ Não é dado suporte à operação de atribuição entre variáveis **table**.
 Como as variáveis **table** têm escopo limitado e não fazem parte do banco de dados persistente, elas não são afetadas por reversões de transações.
   
 As variáveis table não podem ser alteradas após a criação.
-
-## <a name="table-variable-deferred-compilation"></a>Compilação adiada de variável da tabela
-**A compilação adiada de variável da tabela** melhora a qualidade do plano e o desempenho geral para consultas que fazem referência a variáveis de tabela. Durante a otimização e a compilação do plano inicial, esse recurso propagará estimativas de cardinalidade com base nas contagens reais de linha de variável de tabela. Essas informações de contagem de linha precisas serão usadas para otimizar operações de plano de downstream.
-
-> [!NOTE]
-> A compilação adiada de variável de tabela é uma versão prévia pública do recurso em [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)].
-
-Com a compilação adiada de variável de tabela, a compilação de uma instrução que faz referência a uma variável de tabela é adiada até a primeira execução real da instrução. Esse comportamento de compilação adiada é idêntico ao das tabelas temporárias. Essa alteração resulta no uso de cardinalidade real em vez da estimativa original de uma linha. 
-
-Para habilitar a versão prévia pública da compilação adiada de variável table, habilite o nível de compatibilidade do banco de dados 150 para o banco de dados ao qual você está conectado ao executar a consulta.
-
-A compilação adiada de variável table **não** altera nenhuma outra característica das variáveis de tabela. Por exemplo, esse recurso não adiciona as estatísticas de coluna às variáveis table.
-
-A compilação adiada de variável table **não aumenta a frequência de recompilação**. Em vez disso, ela alterna onde ocorre a compilação inicial. O plano armazenado em cache resultante é gerado com base na contagem da linha de variável table de compilação adiada inicial. O plano armazenado em cache é reutilizado por consultas consecutivas. Ele é reutilizado até que o plano seja removido ou recompilado. 
-
-A contagem de linha de variável de tabela que é usada para a compilação de plano inicial representa um valor típico que pode ser diferente de uma estimativa de contagem de linha fixa. Se ele for diferente, as operações downstream serão beneficiadas. O desempenho poderá não ser melhorado por esse recurso se a contagem de linha da variável table variar consideravelmente entre as execuções.
-
-### <a name="disabling-table-variable-deferred-compilation-without-changing-the-compatibility-level"></a>Desabilitar a compilação adiada de variável de tabela sem alterar o nível de compatibilidade
-Desabilitar a compilação adiada de variável table no escopo do banco de dados ou da instrução, mantendo o nível de compatibilidade do banco de dados como 150 e superior. Para desabilitar a compilação adiada de variável table para todas as execuções de consulta originadas do banco de dados, execute o seguinte exemplo dentro do contexto do banco de dados aplicável:
-
-```sql
-ALTER DATABASE SCOPED CONFIGURATION SET DEFERRED_COMPILATION_TV = OFF;
-```
-
-Para habilitar novamente a compilação adiada de variável table para todas as execuções de consulta originadas do banco de dados, execute o seguinte exemplo dentro do contexto do banco de dados aplicável:
-
-```sql
-ALTER DATABASE SCOPED CONFIGURATION SET DEFERRED_COMPILATION_TV = ON;
-```
-
-Você também pode desabilitar a compilação adiada de variável table em uma consulta específica atribuindo DISABLE_DEFERRED_COMPILATION_TV como uma dica de consulta USE HINT.  Por exemplo:
-
-```sql
-DECLARE @LINEITEMS TABLE 
-    (L_OrderKey INT NOT NULL,
-     L_Quantity INT NOT NULL
-    );
-
-INSERT @LINEITEMS
-SELECT L_OrderKey, L_Quantity
-FROM dbo.lineitem
-WHERE L_Quantity = 5;
-
-SELECT  O_OrderKey,
-    O_CustKey,
-    O_OrderStatus,
-    L_QUANTITY
-FROM    
-    ORDERS,
-    @LINEITEMS
-WHERE   O_ORDERKEY  =   L_ORDERKEY
-    AND O_OrderStatus = 'O'
-OPTION (USE HINT('DISABLE_DEFERRED_COMPILATION_TV'));
-```
-
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-declaring-a-variable-of-type-table"></a>A. Declarando uma variável de tabela de tipos  
+### <a name="a-declaring-a-variable-of-type-table"></a>a. Declarando uma variável de tabela de tipos  
 O exemplo a seguir cria uma variável `table` que armazena os valores especificados na cláusula OUTPUT da instrução UPDATE. Seguem duas instruções `SELECT` que retornam os valores em `@MyTableVar` e os resultados da operação de atualização na tabela `Employee`. Os resultados na coluna `INSERTED.ModifiedDate` são diferentes dos valores da coluna `ModifiedDate` na tabela `Employee`. Essa diferença é devido ao gatilho `AFTER UPDATE`, que atualiza o valor de `ModifiedDate` com a data atual, e está definido na tabela `Employee`. Porém, as colunas retornadas de `OUTPUT` refletem os dados antes de os gatilhos serem disparados. Para obter mais informações, confira [Cláusula OUTPUT &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).
   
 ```sql

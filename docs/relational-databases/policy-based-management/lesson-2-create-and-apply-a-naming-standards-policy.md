@@ -1,6 +1,7 @@
 ---
-title: 'Lição 2: Criar e aplicar uma política de padrões de nomenclatura | Microsoft Docs'
-ms.custom: ''
+title: 'Lição 2: Criar e aplicar uma política de padrões de nomenclatura'
+description: Este tutorial ensina a criar e aplicar uma política de padrões de nomenclatura para o gerenciamento baseado em políticas no SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.technology: security
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 87e51f4e-156c-4def-8572-76a15075d75e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4bd3b1b4d07b68ae693cd741e471dd5f53efae6e
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: ac5510320783c35c83f84118e9679da4fd351415
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907056"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558691"
 ---
 # <a name="lesson-2-create-and-apply-a-naming-standards-policy"></a>Lição 2: Criar e aplicar uma política de nomeação de padrões
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -25,7 +26,7 @@ Alguns tipos de políticas de Gerenciamento Baseado em Políticas podem criar ga
 ## <a name="prerequisites"></a>Prerequisites
 Para concluir este tutorial, é necessário ter o SQL Server Management Studio e acesso a um servidor que está executando o SQL Server.
 
-- Instalar o [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Instale o [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 - Instalar o [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
   
 ## <a name="create-the-finance-database"></a>Criar o banco de dados Finance  

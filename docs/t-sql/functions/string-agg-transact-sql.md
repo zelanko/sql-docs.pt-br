@@ -16,19 +16,21 @@ ms.assetid: 8860ef3f-142f-4cca-aa64-87a123e91206
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1d7ef8b52e3ee31e688e51454a72c0f359bcb68b
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.openlocfilehash: f7dd020c0ec7f68dbd589b6e07026adfab86c890
+ms.sourcegitcommit: 0d5b0aeee2a2b34fd448aec2e72c0fa8be473ebe
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68632129"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75720754"
 ---
 # <a name="string_agg-transact-sql"></a>STRING_AGG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]
 
-Concatena os valores das expressões de cadeia de caracteres e coloca os valores de separador entre eles. O separador não é adicionado ao final da cadeia de caracteres.
+Concatena os valores das expressões de cadeia de caracteres e coloca os valores de separador entre eles. O separador não é adicionado ao final da cadeia de caracteres. 
+
+Introduzida no SQL Server 2017.
  
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -61,7 +63,7 @@ WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )
 
 O tipo de retorno depende do primeiro argumento (expressão). Se o argumento de entrada for um tipo de cadeia de caracteres (`NVARCHAR`, `VARCHAR`), o tipo de resultado será o mesmo do tipo de entrada. A seguinte tabela lista as conversões automáticas:  
 
-|Tipo de expressão de entrada |Resultado | 
+|Tipo de expressão de entrada |Result | 
 |-------|-------|
 |NVARCHAR(MAX) |NVARCHAR(MAX) |
 |VARCHAR(MAX) |VARCHAR(MAX) |
@@ -69,7 +71,7 @@ O tipo de retorno depende do primeiro argumento (expressão). Se o argumento de 
 |VARCHAR(1...8000) |VARCHAR(8000) |
 |int, bigint, smallint, tinyint, numeric, float, real, bit, decimal, smallmoney, money, datetime e datetime2 |NVARCHAR(4000) |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Comentários
 
 `STRING_AGG` é uma função de agregação que usa todas as expressões de linhas e concatena-as em uma única cadeia de caracteres. Os valores de expressão são convertidos implicitamente em tipos de cadeia de caracteres e depois concatenados. A conversão implícita em cadeias de caracteres segue as regras existentes para conversões de tipo de dados. Para obter mais informações sobre conversões de tipo de dados, consulte [CAST e CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md). 
 
@@ -81,7 +83,7 @@ Valores nulos são ignorados e o separador correspondente não é adicionado. Pa
 
 ## <a name="examples"></a>Exemplos
 
-### <a name="a-generate-list-of-names-separated-in-new-lines"></a>A. Gerar a lista de nomes separados em novas linhas
+### <a name="a-generate-list-of-names-separated-in-new-lines"></a>a. Gerar a lista de nomes separados em novas linhas
 
 O exemplo a seguir gera uma lista de nomes em uma única célula de resultados, separados com retornos de carro.
 ```sql
@@ -144,10 +146,10 @@ GROUP BY a.articleId, title;
 
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
 
-|articleId |title |marcas |
+|articleId |título |marcas |
 |--- |--- |--- |
 |172 |Pesquisas indicam resultados aproximados da eleição |política, pesquisas, câmara municipal |
-|176 |Previsão de construção de nova estrada para reduzir o congestionamento |NULL |
+|176 |Previsão de construção de nova estrada para reduzir o congestionamento |NULO |
 |177 |Cachorros continuam sendo mais populares do que gatos |pesquisas, animais|
 
 > [!NOTE]
@@ -165,7 +167,7 @@ GROUP BY town;
 
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
 
-|cidade |emails |
+|cidade |e-mails |
 |--- |--- |
 |Seattle |syed0@adventure-works.com;catherine0@adventure-works.com;kim2@adventure-works.com |
 |LA |sam1@adventure-works.com;hazem0@adventure-works.com |
@@ -183,7 +185,7 @@ GROUP BY town;
    
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
 
-|cidade |emails |
+|cidade |e-mails |
 |--- |--- |
 |Seattle |catherine0@adventure-works.com;kim2@adventure-works.com;syed0@adventure-works.com |
 |LA |hazem0@adventure-works.com;sam1@adventure-works.com |

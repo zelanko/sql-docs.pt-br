@@ -1,7 +1,7 @@
 ---
-title: Recuperação de bancos de dados relacionados que contêm uma transação marcada | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Recuperar bancos de dados relacionados com transação marcada
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 77a0d9c0-978a-4891-8b0d-a4256c81c3f8
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 31ef04cc1aa02985fe699b0192c25bfbc4e88ca1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 002b5e92c94abece7ea935cb06985a51b78e98c4
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033526"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75238887"
 ---
 # <a name="recovery-of-related--databases-that-contain-marked-transaction"></a>Recuperação de bancos de dados relacionados que contêm transação marcada
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
  Para obter informações sobre como inserir uma marca em uma transação que abrange vários bancos de dados, veja [Usar transações marcadas para recuperar bancos de dados relacionados de forma consistente &#40;Modelo de recuperação completa&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md).  
   
 ## <a name="transact-sql-syntax-for-recovering-to-a-mark"></a>Sintaxe Transact-SQL para recuperar a uma marca  
- Quando você assinala uma transação marcada usando uma instrução [RESTORE LOG](../../t-sql/statements/restore-statements-transact-sql.md), é possível usar uma das seguintes cláusulas para parar na marca ou imediatamente antes dela:  
+ Quando você assinala uma transação marcada usando uma instrução[RESTORE LOG](../../t-sql/statements/restore-statements-transact-sql.md), é possível usar uma das seguintes cláusulas para parar na marca ou imediatamente antes dela:  
   
 -   Use a cláusula WITH STOPATMARK = **'** _<nome_marca>_ **'** para especificar que a transação marcada é o ponto de recuperação.  
   

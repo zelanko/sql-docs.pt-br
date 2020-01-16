@@ -1,6 +1,6 @@
 ---
-title: Chamando procedimentos armazenados compilados nativamente em aplicativos de acesso a dados | Microsoft Docs
-ms.custom: ''
+title: Procedimentos armazenados compilados nativamente – aplicativos de acesso a dados
+ms.custom: seo-dt-2019
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +11,12 @@ ms.assetid: 9cf6c5ff-4548-401a-b3ec-084f47ff0eb8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c05ef1b9807e6786e73c2e772703463adf6818c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: abc9aa1f61d241f3fe24196ad9d8ad4244b951f2
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67951085"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412769"
 ---
 # <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>Chamando procedimentos armazenados compilados nativamente em aplicativos de acesso a dados
 
@@ -44,7 +44,7 @@ Este tópico oferece diretrizes sobre como chamar procedimentos armazenados comp
 - As versões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client anteriores a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] não oferecem suporte à recuperação de informações somente de esquema (descoberta de metadados) sobre os conjuntos de resultados retornados por um procedimento armazenado compilado nativamente.
   - Em vez disso, use [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).
 
-### <a name="odbc"></a>ODBC
+### <a name="odbc"></a>ODBCODBC
 
 As seguintes recomendações se aplicam a chamadas de procedimento armazenado compilado nativamente usando o driver ODBC no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.
 

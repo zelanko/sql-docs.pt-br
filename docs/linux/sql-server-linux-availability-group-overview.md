@@ -1,6 +1,7 @@
 ---
-title: Grupos de Disponibilidade AlwaysOn para o SQL Server em Linux
-description: ''
+title: Grupos de disponibilidade para o SQL Server em Linux
+description: Saiba mais sobre as características de grupos de disponibilidade Always On do SQL Server em Linux.
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
-ms.openlocfilehash: 4da9f5118b77fc389e08ddb3c2b351aaaa0fb3b2
-ms.sourcegitcommit: bcc3b2c7474297aba17b7a63b17c103febdd0af9
+ms.openlocfilehash: e4979fbb4e2dbbccf7ed11b744051373b0750d1f
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68794996"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558621"
 ---
 # <a name="always-on-availability-groups-on-linux"></a>Grupos de Disponibilidade AlwaysOn no Linux
 
@@ -146,7 +147,7 @@ Um AG com um tipo de cluster NENHUM pode ter suas réplicas entre limites do sis
 
 ![Nenhum Híbrido](./media/sql-server-linux-availability-group-overview/image1.png)
 
-Uma AG distribuída também pode cruzar os limites do sistema operacional. Os AGs subjacentes são associados pelas regras de como eles são configurados, como um configurado com Externo sendo somente Linux, mas o AG no qual ele ingressou pode ser configurado usando um WSFC. Considere o seguinte exemplo:
+Uma AG distribuída também pode cruzar os limites do sistema operacional. Os AGs subjacentes são associados pelas regras de como eles são configurados, como um configurado com Externo sendo somente Linux, mas o AG no qual ele ingressou pode ser configurado usando um WSFC. Considere o exemplo a seguir:
 
 ![AG de Dist. Híbrida](./media/sql-server-linux-availability-group-overview/image2.png)
 

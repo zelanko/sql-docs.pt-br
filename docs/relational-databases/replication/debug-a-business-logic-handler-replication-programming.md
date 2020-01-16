@@ -1,6 +1,7 @@
 ---
-title: Depurar um manipulador de lógica de negócios (Programação de replicação) | Microsoft Docs
-ms.custom: ''
+title: Depurar um manipulador de lógica de negócios (programação de replicação)
+description: Saiba como usar um manipulador de lógica de negócios para invocar a lógica de negócios personalizada quando uma assinatura de mesclagem for sincronizada.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: edd0d17a-0e9c-4c28-8395-a7d47e8ce3d6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 01a1e4be7476b2f683345e8bfd23f4fcf0e90642
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b001e9e53c30ba57b2a56b0bd57571668ae2770c
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063080"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321773"
 ---
 # <a name="debug-a-business-logic-handler-replication-programming"></a>Depurar um manipulador de lógica de negócios (Programação de replicação)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "68063080"
   
 1.  Configure a publicação e a distribuição, crie uma publicação e crie uma assinatura para a publicação. Para obter mais informações, confira [Configurar publicação e distribuição](../../relational-databases/replication/configure-publishing-and-distribution.md) e [Criar uma publicação](../../relational-databases/replication/publish/create-a-publication.md).  
   
-2.  Crie e registre um manipulador de lógica de negócios. Para obter mais informações, consulte [implementar um manipulador de lógica de negócios para um artigo de mesclagem](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md).  
+2.  Crie e registre um manipulador de lógica de negócios. Para obter mais informações, consulte [Implementar um manipulador de lógica de negócios para um artigo de mesclagem](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md).  
   
 3.  Crie um projeto RMO (Replication Management Objects) no [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio, que iniciará o Agente de Mesclagem em sincronia, programaticamente. Para obter mais informações, consulte [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md).  
   
@@ -55,7 +56,7 @@ ms.locfileid: "68063080"
   
 1.  Configure a publicação e a distribuição, crie uma publicação e crie uma assinatura pull para a publicação. A publicação deve oferecer suporte para sincronização da Web ou Assinantes [!INCLUDE[ssEW](../../includes/ssew-md.md)] .  
   
-2.  Crie e registre um manipulador de lógica de negócios. Para obter mais informações, consulte [implementar um manipulador de lógica de negócios para um artigo de mesclagem](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md).  
+2.  Crie e registre um manipulador de lógica de negócios. Para obter mais informações, consulte [Implementar um manipulador de lógica de negócios para um artigo de mesclagem](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md).  
   
 3.  Defina um ponto de interrupção no código do manipulador de lógica de negócios, tanto no método sendo depurado como no construtor da classe. Para obter mais informações sobre os métodos que podem ser implementados no manipulador de lógica de negócios, consulte o tópico dos métodos <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> .  
   

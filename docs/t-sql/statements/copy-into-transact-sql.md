@@ -2,7 +2,7 @@
 title: COPY INTO (Transact-SQL) (versão prévia)
 titleSuffix: (SQL Data Warehouse) - SQL Server
 description: Use a instrução COPY no SQL Data Warehouse do Azure para carregar de contas de armazenamento externo.
-ms.date: 11/07/2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
 ms.reviewer: jrasnick
@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 24cfced04b8d2d0366d2058c81bcedfd9b00d2f9
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: 4cdfba4070e8788687c453435b4a6d525aeb44fe
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74055140"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321822"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY (Transact-SQL) (versão prévia)
 
@@ -65,7 +65,7 @@ WITH
 Será opcional se o esquema padrão do usuário que está executando a operação for o esquema da tabela especificada. Se o *esquema* não for especificado e o esquema padrão do usuário que está executando a operação COPY for diferente da tabela especificada, COPY será cancelada e uma mensagem de erro será retornada.  
 
 *table_name*  
-É o nome da tabela para a qual os dados serão copiados por meio da operação COPY. A tabela de destino pode ser uma tabela temporária ou permanente.
+É o nome da tabela para a qual os dados serão copiados por meio da operação COPY. A tabela de destino pode ser uma tabela temporária ou permanente e já deve existir no banco de dados. 
 
 *(column_list)*  
 É uma lista opcional de uma ou mais colunas usadas para mapear campos de dados de origem para colunas da tabela de destino para carregar dados. *column_list* deve ser colocada entre parênteses e separada por vírgulas. A lista de colunas tem o formato a seguir:
@@ -131,7 +131,7 @@ Vários locais de arquivo só podem ser especificados na mesma conta de armazena
 Ao autenticar usando o AAD ou uma conta de armazenamento pública, o valor de CREDENTIAL não precisa ser especificado. 
 
 - Autenticação com SAS (Assinaturas de Acesso Compartilhado) *IDENTITY: Uma constante com um valor de “Assinatura de Acesso Compartilhado”* 
-  *SECRET: A *[*assinatura de acesso compartilhado*](/azure/storage/common/storage-sas-overview)* fornece acesso delegado aos recursos em sua conta de armazenamento.*
+  *SECRET: A* [*Assinatura de Acesso Compartilhado*](/azure/storage/common/storage-sas-overview) *fornece acesso delegado aos recursos da sua conta de armazenamento.*
   Permissões mínimas necessárias: READ e LIST
 
 - Autenticação com [*Entidades de Serviço*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)
@@ -164,7 +164,7 @@ Se ERRORFILE tiver o caminho completo da conta de armazenamento definido, a ERRO
   
 - Autenticação com SAS (Assinaturas de Acesso Compartilhado)
   - *IDENTITY: uma constante com um valor de “Assinatura de Acesso Compartilhado”*
-  - *SECRET: A* [*assinatura de acesso compartilhado*](/azure/storage/common/storage-sas-overview) *fornece acesso delegado aos recursos em sua conta de armazenamento.*
+  - *SECRET: A* [*Assinatura de Acesso Compartilhado*](/azure/storage/common/storage-sas-overview) *fornece acesso delegado aos recursos da sua conta de armazenamento.*
   - Permissões mínimas necessárias: READ, LIST, WRITE, CREATE, DELETE
   
 - Autenticação com [*Entidades de Serviço*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)
@@ -214,13 +214,13 @@ O comando COPY detectará automaticamente o tipo de compactação com base na ex
 > O escape dos caracteres FIELDQUOTE é efetuado em colunas de cadeia de caracteres em que há a presença de um FIELDQUOTE (delimitador) duplo. 
 
 *FIELDTERMINATOR = 'field_terminator’*</br>
-*FIELDTERMINATOR* aplica-se somente ao CSV. Especifica o terminador de campo que será usado no arquivo CSV. O terminador de campo pode ter vários caracteres. O terminador de campo padrão é um (,).
+*FIELDTERMINATOR* aplica-se somente ao CSV. Especifica o terminador de campo que será usado no arquivo CSV. O terminador de campo pode ser especificado usando a notação hexadecimal. O terminador de campo pode ter vários caracteres. O terminador de campo padrão é um (,).
 Para obter mais informações, confira [Especificar terminadores de campo e linha (SQL Server)](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md?view=sql-server-2017).
 
 ROW TERMINATOR = 'row_terminator'</br>
-*ROW TERMINATOR* aplica-se somente ao CSV. Especifica o terminador de linha que será usado no arquivo CSV. O terminador de linha pode ter vários caracteres. Por padrão, o terminador de linha é \r\n. 
+*ROW TERMINATOR* aplica-se somente ao CSV. Especifica o terminador de linha que será usado no arquivo CSV. O terminador de linha pode ser especificado usando a notação hexadecimal. O terminador de linha pode ter vários caracteres. Por padrão, o terminador de linha é \r\n. 
 
-O comando COPY prefixa o caractere \r ao especificar \n (nova linha), resultando em \r\n. Para especificar apenas o caractere \n, use o formato hexadecimal (0x0A). Ao especificar terminadores de linha de vários caracteres em formato hexadecimal, não especifique 0x entre cada caractere.
+O comando COPY prefixa o caractere \r ao especificar \n (nova linha), resultando em \r\n. Para especificar apenas o caractere \n, use a notação hexadecimal (0x0A). Ao especificar terminadores de linha de vários caracteres em formato hexadecimal, não especifique 0x entre cada caractere.
 
 Consulte a [documentação](https://docs.microsoft.com/sql/relational-databases/import-export/specify-field-and-row-terminators-sql-server?view=sql-server-2017#using-row-terminators) a seguir para obter diretrizes adicionais sobre como especificar terminadores de linha.
 
@@ -254,12 +254,12 @@ Requer as permissões INSERT e ADMINISTER BULK OPERATIONS. No SQL Data Warehouse
 
 ## <a name="examples"></a>Exemplos  
 
-### <a name="a-load-from-a-public-storage-account"></a>A. Carregar de uma conta de armazenamento público
+### <a name="a-load-from-a-public-storage-account"></a>a. Carregar de uma conta de armazenamento público
 
 O exemplo a seguir é a forma mais simples do comando COPY, que carrega dados de uma conta de armazenamento público. Para este exemplo, os padrões da instrução COPY correspondem ao formato do arquivo CSV de item de linha.
 
 ```sql
-COPY INTO dbo.[lineitem] FROM 'https://unsecureaccount.blob.core.windows.net/customerdatasets/folder1/lineitem.csv’
+COPY INTO dbo.[lineitem] FROM 'https://unsecureaccount.blob.core.windows.net/customerdatasets/folder1/lineitem.csv'
 ```
 
 Os valores padrão do comando COPY são:
@@ -306,7 +306,7 @@ WITH (
     DATEFORMAT = 'ymd',
     MAXERRORS = 10,
     ERRORFILE = '/errorsfolder/',--path starting from the storage container
-    IDENTITY_INSERT = ‘ON’
+    IDENTITY_INSERT = 'ON'
 )
 ```
 
@@ -357,6 +357,46 @@ WITH (
     FIELDTERMINATOR = '|'
 )
 ```
+
+## <a name="faq"></a>Perguntas frequentes
+
+### <a name="what-is-the-performance-of-the-copy-command-compared-to-polybase"></a>Qual é o desempenho do comando COPY em comparação com o PolyBase?
+O comando COPY terá melhor desempenho quando o recurso estiver em disponibilidade geral. Para obter o melhor desempenho de carregamento durante a versão prévia pública, considere a possibilidade de dividir a entrada em vários arquivos ao carregar o CSV. Atualmente, o comando COPY está no mesmo nível do PolyBase em termos de desempenho durante o uso de INSERT SELECT. 
+
+### <a name="what-is-the-file-splitting-guidance-for-the-copy-command-loading-csv-files"></a>Quais são as diretrizes de divisão de arquivo para o comando COPY que carrega arquivos CSV?
+As diretrizes referentes ao número de arquivos são descritas na tabela abaixo. Depois que o número recomendado de arquivos for atingido, você terá um desempenho melhor quanto maior os arquivos. Você não precisará dividir os arquivos não compactados quando o comando COPY estiver em disponibilidade geral. 
+
+| **DWU** | **Nº de arquivos** |
+| :-----: | :--------: |
+|   100   |     60     |
+|   200   |     60     |
+|   300   |     60     |
+|   400   |     60     |
+|   500   |     60     |
+|  1,000  |    120     |
+|  1\.500  |    180     |
+|  2\.000  |    240     |
+|  2\.500  |    300     |
+|  3\.000  |    360     |
+|  5\.000  |    600     |
+|  6\.000  |    720     |
+|  7\.500  |    900     |
+| 10.000  |    1200    |
+| 15,000  |    1800    |
+| 30,000  |    3600    |
+
+
+### <a name="what-is-the-file-splitting-guidance-for-the-copy-command-loading-parquet-or-orc-files"></a>Quais são as diretrizes de divisão de arquivo para o comando COPY que carrega arquivos Parquet ou ORC?
+Não há necessidade de dividir arquivos Parquet e ORC, porque o comando COPY dividirá os arquivos automaticamente. Os arquivos Parquet e ORC na conta de armazenamento do Azure devem ter 256 MB ou mais para melhor desempenho. 
+
+### <a name="when-will-the-copy-command-be-generally-available"></a>Quando o comando COPY estará em disponibilidade geral?
+O comando COPY estará em disponibilidade geral no início do próximo ano civil (2020). 
+
+### <a name="are-there-any-known-issues-with-the-copy-command"></a>Há algum problema conhecido com o comando COPY?
+
+- O suporte a LOB como (n)varchar(max) não está disponível na instrução COPY. Isso estará disponível no início do próximo ano.
+
+Envie comentários ou problemas para a seguinte lista de distribuição: sqldwcopypreview@service.microsoft.com
 
 ## <a name="see-also"></a>Confira também  
 

@@ -1,6 +1,7 @@
 ---
-title: Implementar um manipulador de lógica de negócios para um artigo de mesclagem | Microsoft Docs
-ms.custom: ''
+title: Configurar um manipulador de lógica de negócios para um artigo de mesclagem
+description: Use a programação de replicação ou Replication Management Objects para configurar um manipulador de lógica de negócios para sincronização da replicação de mesclagem.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ed477595-6d46-4fa2-b0d3-a5358903ec05
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 17a7c0e27dbb6cb80cb0069a2ea76036654280e3
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.openlocfilehash: 8ba12a2dc53b845d52d2a3dcac574bed08865c12
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70846676"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322143"
 ---
 # <a name="implement-a-business-logic-handler-for-a-merge-article"></a>Implementar um manipulador de lógica de negócios para um artigo de mesclagem
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +60,7 @@ ms.locfileid: "70846676"
   
 2.  Adicione referências ao projeto para os seguintes namespaces.  
   
-    |Referência de assembly|Local|  
+    |Referência de assembly|Location|  
     |------------------------|--------------|  
     |<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]COM (instalação padrão)|  
     |<xref:System.Data>|GAC (componente do .NET Framework)|  
@@ -132,7 +133,7 @@ ms.locfileid: "70846676"
   
 2.  Adicione referências ao projeto para os seguintes namespaces.  
   
-    |Referência de assembly|Local|  
+    |Referência de assembly|Location|  
     |------------------------|--------------|  
     |<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]COM (instalação padrão)|  
     |<xref:System.Data>|GAC (componente do .NET Framework)|  
@@ -171,11 +172,11 @@ ms.locfileid: "70846676"
   
 1.  Crie uma conexão com o Distribuidor usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.ReplicationServer> . Passe o <xref:Microsoft.SqlServer.Management.Common.ServerConnection> da etapa 1.  
+2.  Criar uma instância da classe <xref:Microsoft.SqlServer.Replication.ReplicationServer>. Passe o <xref:Microsoft.SqlServer.Management.Common.ServerConnection> da etapa 1.  
   
 3.  Chame <xref:Microsoft.SqlServer.Replication.ReplicationServer.EnumBusinessLogicHandlers%2A> e verifique o objeto <xref:System.Collections.ArrayList> retornado para assegurar que o assembly não tenha sido já registrado como um manipulador de lógica de negócios.  
   
-4.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler> . Especifique as seguintes propriedades:  
+4.  Criar uma instância da classe <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler>. Especifique as seguintes propriedades:  
   
     -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.DotNetAssemblyName%2A> - o nome do assembly .NET. Se o assembly não estiver implantado no mesmo diretório que o executável Merge Agent, no mesmo diretório que o aplicativo que inicia de forma síncrona o Merge Agent ou no GAC, você deve incluir o caminho completo com o nome do assembly. Você deve incluir o caminho completo com o nome do assembly ao usar um manipulador de lógica de negócios com sincronização da Web.  
   
@@ -193,7 +194,7 @@ ms.locfileid: "70846676"
   
 1.  Crie uma conexão com o Publicador usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.MergeArticle> . Defina as seguintes propriedades:  
+2.  Criar uma instância da classe <xref:Microsoft.SqlServer.Replication.MergeArticle>. Defina as seguintes propriedades:  
   
     -   Nome do artigo para <xref:Microsoft.SqlServer.Replication.Article.Name%2A>.  
   
@@ -209,7 +210,7 @@ ms.locfileid: "70846676"
   
 1.  Crie uma conexão com o Publicador usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.MergeArticle> .  
+2.  Criar uma instância da classe <xref:Microsoft.SqlServer.Replication.MergeArticle>.  
   
 3.  Defina as propriedades <xref:Microsoft.SqlServer.Replication.Article.Name%2A>, <xref:Microsoft.SqlServer.Replication.Article.PublicationName%2A>e <xref:Microsoft.SqlServer.Replication.Article.DatabaseName%2A> .  
   

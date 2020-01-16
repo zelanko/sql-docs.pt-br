@@ -1,6 +1,8 @@
 ---
-title: Configurar compartilhamentos de pasta de instantâneo de Replicação do SQL Server em Linux
-description: Este artigo descreve como configurar compartilhamentos de pasta de instantâneo de Replicação do SQL Server em Linux.
+title: Configurar compartilhamentos de pasta de instantâneos
+titleSuffix: SQL Server on Linux
+description: Saiba como configurar a replicação de compartilhamentos de pasta de instantâneos do SQL Server em Linux.
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,12 +11,12 @@ ms.topic: article
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2513511889c4bc22757f0970269fa9ee7b51857d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: c5deaf7fbe62b30140f476a37ad096d080e00c49
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68093126"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558345"
 ---
 # <a name="configure-replication-snapshot-folder-with-shares"></a>Configurar a pasta de instantâneo de replicação com compartilhamentos
 

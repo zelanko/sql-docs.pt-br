@@ -1,6 +1,6 @@
 ---
-title: DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD  (Transact-SQL)
+ms.custom: seo-dt-2019
 ms.date: 07/03/2019
 ms.prod: sql
 ms.technology: data-warehouse
@@ -12,12 +12,12 @@ dev_langs:
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: c2ab2a5ff60abbd098cb93d5c85cd75527f49805
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 669c6274301c09f260badfb354c8add67ae86791
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73729880"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401630"
 ---
 # <a name="dbcc-pdw_showmaterializedviewoverhead-transact-sql"></a>DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD (Transact-SQL)  
 
@@ -25,7 +25,7 @@ ms.locfileid: "73729880"
 
 Exibe o número de alterações incrementais nas tabelas de base mantidas para exibições materializadas em [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. A taxa de sobrecarga é calculada como TOTAL_ROWS / MAX (1, BASE_VIEW_ROWS).
 
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "|::ref1::|") [Convenções de sintaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe
 
@@ -42,7 +42,7 @@ DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ( " [ schema_name .] materialized_view_nam
 *materialized_view_name*   
 É o nome da exibição materializada.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Comentários
 
 Para manter as exibições materializadas atualizadas com as alterações de dados nas tabelas base, o mecanismo do data warehouse adiciona linhas de acompanhamento a cada exibição afetada para refletir as alterações. A seleção de uma exibição materializada inclui a verificação do índice columnstore clusterizado da exibição e a aplicação de alterações incrementais.  As linhas de acompanhamento (TOTAL_ROWS – BASE_VIEW_ROWS) não são eliminadas enquanto os usuários não RECOMPILAREM a exibição materializada.  
 
@@ -54,7 +54,7 @@ Requer a permissão VIEW DATABASE STATE.
 
 ## <a name="examples"></a>Exemplos  
 
-### <a name="a-this-example-returns-the-overhead-ratio-of-a-materialized-view"></a>A. Este exemplo retorna a taxa de sobrecarga de uma exibição materializada.
+### <a name="a-this-example-returns-the-overhead-ratio-of-a-materialized-view"></a>a. Este exemplo retorna a taxa de sobrecarga de uma exibição materializada.
 
 ```sql
 DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ( "dbo.MyIndexedView" )

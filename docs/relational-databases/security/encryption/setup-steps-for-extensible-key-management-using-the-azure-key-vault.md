@@ -1,6 +1,7 @@
 ---
-title: Gerenciamento extensível de chaves do TDE do SQL Server usando o Azure Key Vault – Etapas de Configuração | Microsoft Docs
-ms.custom: ''
+title: Configurar o gerenciamento extensível de chaves da TDE com o Azure Key Vault
+description: Etapas para instalação e configuração do Conector do SQL Server para Azure Key Vault.
+ms.custom: seo-lt-2019
 ms.date: 09/12/2019
 ms.prod: sql
 ms.reviewer: vanto
@@ -11,19 +12,19 @@ helpviewer_keywords:
 - SQL Server Connector, setup
 - SQL Server Connector
 ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
-author: aliceku
-ms.author: aliceku
-ms.openlocfilehash: 5d767f8257395368cf3ceeba45b9b9d7cadcfa80
-ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: 1ccffc653225645de94355707ae2116982d2deb4
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929718"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557391"
 ---
 # <a name="sql-server-tde-extensible-key-management-using-azure-key-vault---setup-steps"></a>Gerenciamento extensível de chaves do TDE do SQL Server usando o Azure Key Vault – Etapas de Configuração
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  As etapas a seguir dão um passo a passo da instalação e configuração do Conector do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para o Azure Key Vault.  
+  As etapas a seguir descrevem a instalação e a configuração do Conector do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para Azure Key Vault.  
   
 ## <a name="before-you-start"></a>Antes de iniciar  
  Para usar o Cofre de Chaves do Azure com o SQL Server, há alguns pré-requisitos:  
@@ -169,13 +170,13 @@ Versão do SQL Server  |Link de instalação redistribuível
       > [!NOTE]
         >  O SQL Server dá suporte apenas a chaves RSA de 2.048 bits.
         
-    ### <a name="best-practice"></a>Prática recomendada:
+    ### <a name="best-practice"></a>Melhor prática:
     
     Para garantir a rápida recuperação da chave e poder acessar os seus dados fora do Azure, recomendamos a seguinte prática recomendada:
  
-    1. Crie sua chave de criptografia localmente em um dispositivo HSM local. (Certifique-se de que ela é uma chave RSA 2048 assimétrica, para que ela seja compatível com o SQL Server.)
+    1. Crie a chave de criptografia localmente em um dispositivo de HSM local. (Certifique-se de que ela é uma chave RSA 2048 assimétrica, para que ela seja compatível com o SQL Server.)
     2. Importe a chave de criptografia no Cofre de Chaves do Azure. Veja as etapas abaixo para saber como fazer isso.
-    3. Antes de usar a chave no Cofre de Chaves do Azure pela primeira vez, faça um backup da chave do Cofre de Chaves do Azure. Saiba mais sobre o comando [Backup-AzureKeyVaultKey](/sql/relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault) .
+    3. Antes de usar a chave no Cofre de Chaves do Azure pela primeira vez, faça um backup da chave do Cofre de Chaves do Azure. Saiba mais sobre o comando [Backup-AzureKeyVaultKey](/sql/relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault).
     4. Sempre que qualquer alteração for feita na chave (por exemplo, adicionar ACLs, adicionar marcas, adicionar atributos da chave), certifique-se de fazer outro backup da chave do Azure Key Vault.
 
         > [!NOTE]  
@@ -360,4 +361,4 @@ Agora que você concluiu a configuração básica, consulte [Use SQL Server Conn
   
 ## <a name="see-also"></a>Consulte Também  
  [Gerenciamento extensível de chaves usando o Azure Key Vault](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)   
-[Manutenção e solução de problemas do Conector do SQL Server](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)
+[Manutenção e solução de problemas do conector do SQL Server](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)

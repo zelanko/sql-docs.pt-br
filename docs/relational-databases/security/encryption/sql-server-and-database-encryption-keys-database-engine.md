@@ -1,6 +1,7 @@
 ---
-title: Chaves de criptografia do SQL Server e banco de dados (Mecanismo de Banco de Dados) | Microsoft Docs
-ms.custom: ''
+title: SQL Server e chaves de criptografia de banco de dados
+description: Saiba mais sobre a chave mestra de serviço e a chave mestra de banco de dados usadas pelo Mecanismo de Banco de Dados do SQL Server para criptografar e proteger os dados.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: vanto
@@ -9,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - keys [SQL Server], database encryption
 ms.assetid: 15c0a5e8-9177-484c-ae75-8c552dc0dac0
-author: aliceku
-ms.author: aliceku
-ms.openlocfilehash: fa61ee1fc916b4ff00a149ea41068e4b0231acd6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: 1c5e618d1116dfc464bcea781cdab8469e735b32
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111568"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558101"
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>Chaves de criptografia do SQL Server e banco de dados (Mecanismo de Banco de Dados)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +58,7 @@ A chave mestra de serviço só pode ser aberta pela conta de serviço do Windows
 -   Adicionar ou remover uma instância do servidor de uma implantação em expansão do servidor em que vários servidores compartilham um único banco de dados e a chave que fornece criptografia reversível para esse banco de dados.  
   
 ## <a name="important-security-information"></a>Informações importantes sobre segurança  
- O acesso a objetos protegidos pela chave mestra de serviço requer ou a conta de Serviço do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que foi usada para criar a chave, ou a conta do computador (máquina). Ou seja, o computador está ligado ao sistema em que a chave foi criada. Você pode alterar a conta de Serviço do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] *ou* a conta do computador, sem perder o acesso à chave. Porém, se alterar ambos, você perderá o acesso à chave mestra de serviço. Se perder o acesso a essa chave sem um desses dois elementos, você não poderá descriptografar dados e objetos criptografados com o uso da chave original.  
+ O acesso a objetos protegidos pela chave mestra de serviço requer ou a conta de Serviço do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que foi usada para criar a chave, ou a conta do computador (máquina). Ou seja, o computador está ligado ao sistema em que a chave foi criada. Você pode alterar a conta de Serviço do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]*ou* a conta do computador, sem perder o acesso à chave. Porém, se alterar ambos, você perderá o acesso à chave mestra de serviço. Se perder o acesso a essa chave sem um desses dois elementos, você não poderá descriptografar dados e objetos criptografados com o uso da chave original.  
   
  As conexões protegidas com a chave mestra de serviço não podem ser restauradas sem essa chave.  
   
@@ -67,7 +68,7 @@ A chave mestra de serviço só pode ser aberta pela conta de serviço do Windows
 >  Se você perder todo o acesso às chaves descritas anteriormente, perderá o acesso a objetos, conexões e dados protegidos por essas chaves. É possível restaurar a chave mestra de serviço, conforme descrito nos links aqui mostrados, ou você pode voltar ao sistema de criptografia original para recuperar o acesso. Não há nenhuma "porta dos fundos" para recuperar o acesso.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Service Master Key](../../../relational-databases/security/encryption/service-master-key.md)  
+ [Chave mestra de serviço](../../../relational-databases/security/encryption/service-master-key.md)  
  Fornece uma breve explicação da chave mestra de serviço e suas práticas recomendadas.  
   
  [Gerenciamento Extensível de Chaves &#40;EKM&#41;](../../../relational-databases/security/encryption/extensible-key-management-ekm.md)  

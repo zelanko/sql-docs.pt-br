@@ -1,5 +1,6 @@
 ---
-title: 'Exemplo de restauração offline: primário e um grupo de arquivos (modelo de recuperação completa) | Microsoft Docs'
+title: 'Restauração offline: grupo de arquivos primário e um outro'
+ms.description: Full recovery model
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 7d6c50eb-dc84-4d66-855a-0b5f1bd89737
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 390db80fc88e3d115bad292e5bf0bf1a4a921639
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8d98eefac2e015aa1648f1afaa56a5676805cf10
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68089791"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245245"
 ---
-# <a name="example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model"></a>Exemplo: Restauração offline do grupo de arquivos primário e mais um (modelo de recuperação completa)
+# <a name="example-offline-restore-of-primary-and-1-other-filegroup-full-recovery-model"></a>Exemplo: Restauração offline do grupo de arquivos primário e um outro (modelo de recuperação completa)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Este tópico é relevante apenas para bancos de dados com modelos de recuperação completa e que contêm vários grupos de arquivos.  

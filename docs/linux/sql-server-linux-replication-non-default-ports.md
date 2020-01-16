@@ -1,22 +1,24 @@
 ---
-title: Configurar compartilhamentos de pasta de instantâneo de Replicação do SQL Server em Linux
-description: Este artigo descreve como configurar compartilhamentos de pasta de instantâneo de Replicação do SQL Server em Linux.
+title: Configurar a pasta de instantâneo de replicação (portas não padrão)
+titleSuffix: SQL Server on Linux
+description: Saiba como configurar compartilhamentos de pasta de instantâneo com portas não padrão para a replicação do SQL Server em Linux.
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
-ms.author: mikeray
+ms.author: mikerayW
 ms.reviewer: vanto
 ms.date: 09/24/2018
 ms.topic: article
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6959b2073871f70fb33823b50419c208a23df2dd
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: cb715e2a0a056c18352361b58ce8ffd67e3da78e
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68093179"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558583"
 ---
-# <a name="configure-replication-with-non-default-ports"></a>Configurar replicação com portas não padrão
+# <a name="configure-replication-with-non-default-ports-sql-server-linux"></a>Configurar a replicação com portas não padrão (SQL Server Linux)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 

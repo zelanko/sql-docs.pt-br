@@ -1,7 +1,7 @@
 ---
-title: Uma referência para a administração de um grupo de disponibilidade
-description: Uma página de referência que vincula às noções básicas da administração de um grupo de disponibilidade Always On, como alteração de propriedades, adição ou remoção de réplicas, adição ou remoção de bancos de dados, failover, configuração de ouvinte, entre outros.
-ms.custom: seodec18
+title: Administração de um grupo de disponibilidade (índice de conteúdo)
+description: Um índice de referência que vincula você a artigos que descrevem às noções básicas da administração de um grupo de disponibilidade Always On, como alteração de propriedades, adição ou remoção de réplicas, adição ou remoção de bancos de dados, failover, configuração de ouvinte, entre outros.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0b7542fa-235e-413d-81bf-3eff9ee07480
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b25b7ae6396c32e3b3698c57010b9d043adb97c5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 515ca03f795901327b59871b1f6d78ef81a17d92
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014856"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75241976"
 ---
 # <a name="administration-of-an-availability-group"></a>Administração de um grupo de disponibilidade
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -128,7 +128,7 @@ ms.locfileid: "68014856"
  [Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativo &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [Políticas AlwaysOn para problemas operacionais com grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)   
  [Monitoramento de grupos de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)   
- [Grupos de disponibilidade Always On: interoperabilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
+ [Grupos de Disponibilidade Always On: interoperabilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
  [Visão geral de instruções Transact-SQL para Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transact-sql-statements-for-always-on-availability-groups.md)   
  [Visão geral de cmdlets do PowerShell para Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
   

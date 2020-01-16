@@ -1,6 +1,7 @@
 ---
-title: Retomar um banco de dados de disponibilidade (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Retomar um banco de dados do grupo de disponibilidade
+description: Etapas para retomar um banco de dados que foi colocado em pausa em um grupo de disponibilidade Always On usando o SSMS (SQL Server Management Studio), o T-SQL (Transact-SQL) ou o SQL PowerShell.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 20e9147b-e985-4caa-910e-fc4b38dbf9a1
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 55fdc5242b43e3aa2f25b601edc1439cbbec3ece
-ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
+ms.openlocfilehash: 64a0bf6fff2869834f30a9e0e7a6694088550c8e
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72517952"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822605"
 ---
 # <a name="resume-an-availability-database-sql-server"></a>Retomar um banco de dados de disponibilidade (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

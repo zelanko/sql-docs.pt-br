@@ -1,6 +1,7 @@
 ---
-title: Caixa de diálogo Avaliar Políticas, página Seleção de Políticas | Microsoft Docs
-ms.custom: ''
+title: Página 'Seleção de Política' da caixa de diálogo 'Avaliar Políticas'
+description: Descreve a página 'Seleção de Política' da caixa de diálogo 'Avaliar Políticas' para o gerenciamento baseado em políticas do SSMS (SQL Server Management Studio).
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 20075fbe-0b48-42c8-b747-690f1aa23dcf
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: cbcedf14cc2046314c28972c3332df42d70c4539
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 84e9e7577f74aa3ea43d99bc6b3c12cd5637c9ec
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67901147"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558211"
 ---
 # <a name="evaluate-policies-dialog-box-policy-selection-page"></a>Caixa de diálogo Avaliar Políticas, página Seleção de Políticas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

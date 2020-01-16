@@ -1,6 +1,6 @@
 ---
-title: Configurar o armazenamento SMB da instância de cluster de failover – SQL Server em Linux
-description: ''
+title: 'Configurar a FCI no armazenamento SMB: SQL Server em Linux'
+description: Saiba como configurar uma FCI (instância de cluster de failover) usando o armazenamento SMB do SQL Server em Linux.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -8,12 +8,12 @@ ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: e93b7fac2f75758a0a95a4053ee0a989e410c70e
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 498518fbc119629d2e7da7717b1f6e41c68984ce
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032318"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558569"
 ---
 # <a name="configure-failover-cluster-instance---smb---sql-server-on-linux"></a>Configurar a instância de cluster de failover – SMB – SQL Server em Linux
 

@@ -1,6 +1,7 @@
 ---
-title: Abrir o Monitor de Atividade (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Abrir o Monitor de Atividade (SSMS)
+description: Como abrir o monitor de atividade no SSMS (SQL Server Management Studio).
+ms.custom: seo-dt-2019
 ms.date: 08/05/2016
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: 0a6eeb16-f02b-479d-9a60-543e40ebf46b
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 9d7bccf89e8f2043413838e9f55fd8bd4e74dc5f
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 0af1ae6d145836a313df8ba6e77f965aa17e0e9a
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907223"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165531"
 ---
-# <a name="open-activity-monitor-sql-server-management-studio"></a>Abrir o Monitor de Atividade (SQL Server Management Studio)
+# <a name="open-activity-monitor-in-sql-server-management-studio-ssms"></a>Abrir o Monitor de Atividade no SSMS (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
    
  O Monitor de Atividade executa consultas na instância monitorada a fim de obter informações para os painéis de exibição do Monitor de Atividade. Quando o intervalo de atualização for definido para menos de 10 segundos, o tempo usado para executar essas consultas poderá afetar o desempenho do servidor.  
@@ -36,12 +37,12 @@ ms.locfileid: "72907223"
   
 ## <a name="open-activity-monitor"></a>Abrir o Monitor de Atividade  
 
-### <a name="keyboard-shortcut"></a>Atalho de teclado  
+### <a name="keyboard-shortcut"></a>Atalho do teclado  
  - Digite **CTRL+ALT+A** para abrir o Monitor de Atividade a qualquer momento.
 
  >**Dica!** Focalize o mouse em um ícone do SSMS para saber o que ele é e o atalho de teclado que ele ativa!
 
-### <a name="toolbar"></a>Barra de Ferramentas
+### <a name="toolbar"></a>Barra de ferramentas
 
 Na barra de ferramentas Padrão, clique no ícone **Monitor de Atividade** . Ele está no meio, logo à direita dos botões Desfazer/Refazer.
 ![Activity_Monitor_icon](../../relational-databases/performance-monitor/media/activity-monitor-icon.png)  

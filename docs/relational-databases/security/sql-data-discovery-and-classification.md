@@ -11,26 +11,27 @@ ms.topic: conceptual
 ms.date: 09/12/2019
 ms.author: mibar
 author: barmichal
-ms.openlocfilehash: ef05b068c016cdea00e813f5dbff174494440a19
-ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
+ms.openlocfilehash: 077a9a6be533ec05f9c062100d04bf02562f6066
+ms.sourcegitcommit: 4933934fad9f3c3e16406952ed964fbd362ee086
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929794"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75548357"
 ---
 # <a name="sql-data-discovery-and-classification"></a>Descoberta e classificação de dados SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-O recurso Descoberta e classificação de dados SQL apresenta uma nova ferramenta interna do SSMS (SQL Server Management Studio) para **descobrir**, **classificar**, **rotular** & **relatar** os dados confidenciais em seus bancos de dados.
+O recurso Descoberta e Classificação de Dados apresenta uma nova ferramenta interna do [SSMS (SQL Server Management Studio)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) para **descobrir**, **classificar**, **rotular** & **e relatar** os dados confidenciais em seus bancos de dados.
 A descoberta e a classificação dos dados mais confidenciais (de negócios, financeiros, de serviços de saúde, etc.) podem desempenhar um papel fundamental na dimensão da proteção de informações organizacionais. Esse recurso pode funcionar como a infraestrutura para:
 * Ajudar a atender aos padrões de privacidade de dados.
 * Controlar o acesso a e fortalecer a segurança de bancos de dados/colunas que contêm dados altamente confidenciais.
 
 > [!NOTE]
-> O recurso de descoberta e classificação de dados é **compatível com o SQL Server 2008 ou versões posteriores e pode ser usado com o SSMS 17.5 ou versões posteriores**. Para o Banco de Dados SQL do Azure, confira [Descoberta e Classificação de Dados do Banco de Dados SQL do Azure](https://go.microsoft.com/fwlink/?linkid=866265).
+> O recurso Descoberta e Classificação de Dados é **compatível com o SQL Server 2012 ou posterior, podendo ser usado com o [SSMS 17.5](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) ou posterior**. Para o Banco de Dados SQL do Azure, confira [Descoberta e Classificação de Dados do Banco de Dados SQL do Azure](/azure/sql-database/sql-database-data-discovery-and-classification/).
 
 ## <a id="subheading-1"></a>Visão geral
 O recurso Descoberta e classificação de dados apresenta um conjunto de serviços avançados, formando um novo paradigma de Proteção de Informações do SQL que visa a proteção dos dados, não apenas do banco de dados:
+
 * **Descoberta e recomendações** – o mecanismo de classificação verifica o banco de dados e identifica colunas que contenham dados possivelmente confidenciais. Em seguida, ele fornece uma maneira fácil de examinar e aplicar as recomendações de classificação apropriada, bem como de classificar as colunas manualmente.
 * **Definição de rótulos** – rótulos de classificação de confidencialidade podem ser marcados com persistência em colunas.
 * **Visibilidade** – o estado de classificação do banco de dados pode ser exibido em um relatório detalhado que pode ser impresso/exportado para ser usado para fins de auditoria e conformidade, bem como para outras necessidades.
@@ -46,9 +47,9 @@ A classificação inclui dois atributos de metadados:
 
 1. No SSMS (SQL Server Management Studio), conecte-se ao SQL Server.
 
-2. No Pesquisador de Objetos do SSMS, clique com botão direito do mouse no banco de dados que você deseja classificar e escolha **Tarefas** > **Classificar Dados...** .
+2. No Pesquisador de Objetos do SSMS, clique com o botão direito do mouse no banco de dados que deseja classificar e escolha **Tarefas** > **Descoberta e Classificação de Dados** > **Classificar Dados...** .
 
-    ![Painel de navegação][1]
+   ![Painel de navegação][0]
 
 3. O mecanismo de classificação verifica o banco de dados em busca de colunas que contenham dados possivelmente confidenciais e fornece uma lista de **classificações de coluna recomendadas**:
 
@@ -84,22 +85,63 @@ A classificação inclui dois atributos de metadados:
     ![Painel de navegação][8]
 
 
-6. Para gerar um relatório com um resumo completo do estado de classificação do banco de dados, clique em **Exibir Relatório** no menu superior da janela.
+6. Para gerar um relatório com um resumo completo do estado de classificação do banco de dados, clique em **Exibir Relatório** no menu superior da janela. (Você também pode gerar um relatório usando o SSMS. Clique com o botão direito do mouse no banco de dados em que deseja gerar o relatório e escolha **Tarefas** > **Descoberta e Classificação de Dados** > **Gerar Relatório...** )
 
     ![Painel de navegação][9]
 
     ![Painel de navegação][10]
 
+## <a id="subheading-3"></a>Gerenciar a política de proteção de informações com o SSMS
 
-## <a id="subheading-3"></a>Acessando os metadados de classificação
+Gerencie a política de proteção de informações usando o [SSMS 18.4](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) ou posterior:
 
-Os metadados de classificação para *Tipos de informação* e *Rótulos de confidencialidade* são armazenados nas seguintes Propriedades estendidas: 
-* sys_information_type_name
-* sys_sensitivity_label_name
+1. No SSMS (SQL Server Management Studio), conecte-se ao SQL Server.
 
-Os metadados podem ser acessados usando a exibição do catálogo das Propriedades estendidas [sys.extended_properties](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties).
+2. No Pesquisador de Objetos do SSMS, clique com o botão direito do mouse em um dos bancos de dados e escolha **Tarefas** > **Descoberta e Classificação de Dados**.
 
-Para o SQL Server 2017, o exemplo de código a seguir retorna todas as colunas classificadas com suas classificações correspondentes:
+   As seguintes opções de menu permitem que você gerencie a política de proteção de informações:
+
+* **Definir o Arquivo da Política de Proteção de Informações**: usa a política de proteção de informações, conforme definido no arquivo JSON selecionado.
+
+* **Exportar a Política de Proteção de Informações**: exporta a política de proteção de informações para um arquivo JSON.
+
+* **Redefinir a Política de Proteção de Informações**: redefine a política de proteção de informações para a política de proteção de informações padrão.
+
+> [!IMPORTANT]
+> O arquivo da política de proteção de informações não é armazenado no SQL Server.
+> O SSMS usa uma política de proteção de informações padrão. Se uma política de proteção de informações personalizada falhar, o SSMS não poderá usar a política padrão. A classificação de dados falha. Para resolver isso, clique em **Redefinir a Política de Proteção de Informações** para usar a política padrão e habilitar a classificação de dados novamente.
+
+## <a id="subheading-4"></a>Acessando os metadados de classificação
+
+O SQL Server 2019 apresenta a exibição do catálogo do sistema [`sys.sensitivity_classifications`](../system-catalog-views/sys-sensitivity-classifications-transact-sql.md). Essa exibição retorna tipos de informações e rótulos de confidencialidade. 
+
+> [!NOTE]
+> Essa exibição exige a permissão **VIEW ANY SENSITIVITY CLASSIFICATION**. Para obter mais informações, consulte [Metadata Visibility Configuration](https://docs.microsoft.com/sql/relational-databases/security/metadata-visibility-configuration?view=sql-server-ver15).
+
+Nas instâncias do SQL Server 2019, consulte `sys.sensitivity_classifications` para examinar todas as colunas classificadas com as classificações correspondentes. Por exemplo: 
+
+```sql
+SELECT 
+    schema_name(O.schema_id) AS schema_name,
+    O.NAME AS table_name,
+    C.NAME AS column_name,
+    information_type,
+    label
+FROM sys.sensitivity_classifications sc
+    JOIN sys.objects O
+    ON  sc.major_id = O.object_id
+    JOIN sys.columns C 
+    ON  sc.major_id = C.object_id  AND sc.minor_id = C.column_id
+```
+
+Antes do SQL Server 2019, os metadados de classificação para tipos de informações e rótulos de confidencialidade estão localizados nas seguintes Propriedades Estendidas: 
+
+* `sys_information_type_name`
+* `sys_sensitivity_label_name`
+
+Os metadados podem ser acessados usando a exibição do catálogo [`sys.extended_properties`](../system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md) das Propriedades Estendidas.
+
+Para as instâncias do SQL Server 2017 e anterior, o seguinte exemplo retorna todas as colunas classificadas com as classificações correspondentes:
 
 ```sql
 SELECT
@@ -141,22 +183,25 @@ FROM
     ON  EP.major_id = C.object_id AND EP.minor_id = C.column_id
 ```
 
-No SQL Server 2019:
-```sql
-SELECT 
-    schema_name(O.schema_id) AS schema_name,
-    O.NAME AS table_name,
-    C.NAME AS column_name,
-    information_type,
-    label
-FROM sys.sensitivity_classifications sc
-    JOIN sys.objects O
-    ON  sc.major_id = O.object_id
-    JOIN sys.columns C 
-    ON  sc.major_id = C.object_id  AND sc.minor_id = C.column_id
-```
+## <a id="subheading-5"></a>Gerenciar classificações
 
-## <a id="subheading-4"></a>Próximas etapas
+# <a name="t-sqltabt-sql"></a>[T-SQL](#tab/t-sql)
+Você pode usar o T-SQL para adicionar/remover classificações de coluna, bem como para recuperar todas as classificações para o banco de dados inteiro.
+
+- Adicione/atualize a classificação de uma ou mais colunas: [ADICIONAR A CLASSIFICAÇÃO DE CONFIDENCIALIDADE](https://docs.microsoft.com/sql/t-sql/statements/add-sensitivity-classification-transact-sql)
+- Remova a classificação de uma ou mais colunas: [REMOVER A CLASSIFICAÇÃO DE CONFIDENCIALIDADE](https://docs.microsoft.com/sql/t-sql/statements/drop-sensitivity-classification-transact-sql)
+
+# <a name="powershell-cmdlettabsql-powelshell"></a>[Cmdlet do PowerShell](#tab/sql-powelshell)
+Use o cmdlet do PowerShell para adicionar/remover classificações de coluna, bem como para recuperar todas as classificações e obter recomendações para todo o banco de dados.
+
+- [Get-SqlSensitivityClassification](https://docs.microsoft.com/powershell/module/sqlserver/Get-SqlSensitivityClassification?view=sqlserver-ps)
+- [Get-SqlSensitivityRecommendations](https://docs.microsoft.com/powershell/module/sqlserver/Get-SqlSensitivityRecommendations?view=sqlserver-ps)
+- [Set-SqlSensitivityClassification](https://docs.microsoft.com/powershell/module/sqlserver/Set-SqlSensitivityClassification?view=sqlserver-ps)
+- [Remove-SqlSensitivityClassification](https://docs.microsoft.com/powershell/module/sqlserver/Remove-SqlSensitivityClassification?view=sqlserver-ps)
+
+---
+
+## <a id="subheading-6"></a>Próximas etapas
 
 Para o Banco de Dados SQL do Azure, confira [Descoberta e Classificação de Dados do Banco de Dados SQL do Azure](https://go.microsoft.com/fwlink/?linkid=866265).
 
@@ -168,17 +213,20 @@ Considere proteger suas colunas confidenciais aplicando mecanismos de segurança
 <!--Anchors-->
 [SQL Data Discovery & Classification overview]: #subheading-1
 [Discovering, classifying & labeling sensitive columns]: #subheading-2
-[Accessing the classification metadata]: #subheading-3
-[Next Steps]: #subheading-4
+[Manage information protection policy with SSMS]: #subheading-3
+[Accessing the classification metadata]: #subheading-4
+[Manage classifications]: #subheading-5
+[Next Steps]: #subheading-6
 
 <!--Image references-->
-[1]: ./media/sql-data-discovery-and-classification/1_data_classification_explorer_menu.png
-[2]: ./media/sql-data-discovery-and-classification/2_recommendations_notification_box.png
-[3]: ./media/sql-data-discovery-and-classification/3_recommendations_panel.png
-[4]: ./media/sql-data-discovery-and-classification/4_recommendations.png
-[5]: ./media/sql-data-discovery-and-classification/5_accept_recommendations_button.png
-[6]: ./media/sql-data-discovery-and-classification/6_add_classification_button.png
-[7]: ./media/sql-data-discovery-and-classification/7_manual_classification.png
-[8]: ./media/sql-data-discovery-and-classification/8_save.png
-[9]: ./media/sql-data-discovery-and-classification/9_view_report.png
-[10]: ./media/sql-data-discovery-and-classification/10_report.png
+
+[0]: ./media/sql-data-discovery-and-classification/0-data-classification-explorer.png
+[2]: ./media/sql-data-discovery-and-classification/2-recommendations-notification-box.png
+[3]: ./media/sql-data-discovery-and-classification/3-recommendations-panel.png
+[4]: ./media/sql-data-discovery-and-classification/4-recommendations.png
+[5]: ./media/sql-data-discovery-and-classification/5-accept-recommendations-button.png
+[6]: ./media/sql-data-discovery-and-classification/6-add-classification-button.png
+[7]: ./media/sql-data-discovery-and-classification/7-manual-classification.png
+[8]: ./media/sql-data-discovery-and-classification/8-save.png
+[9]: ./media/sql-data-discovery-and-classification/9-view-report.png
+[10]: ./media/sql-data-discovery-and-classification/10-report.png

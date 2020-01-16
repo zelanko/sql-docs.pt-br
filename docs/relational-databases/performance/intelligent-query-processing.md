@@ -1,8 +1,8 @@
 ---
-title: Processamento inteligente de consultas em bancos de dados Microsoft SQL | Microsoft Docs
+title: Processamento de consulta inteligente
 description: Recursos de processamento inteligente de consulta para melhorar o desempenho da consulta no SQL Server e no Banco de Dados SQL do Azure.
-ms.custom: ''
-ms.date: 11/12/2019
+ms.custom: seo-dt-2019
+ms.date: 11/27/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -12,12 +12,12 @@ helpviewer_keywords: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f18367446b3d36e4e95373f1789509e08082a403
-ms.sourcegitcommit: eae9efe2a2d3758685e85039ffb8fa698aa47f9b
+ms.openlocfilehash: 65b88c890dc16adf1a1b626dd0ddc91ad359505b
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73962425"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74821970"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>Processamento inteligente de consultas em bancos de dados SQL
 
@@ -26,6 +26,10 @@ ms.locfileid: "73962425"
 A família de recursos de IQP (processamento de consulta inteligente) inclui recursos de amplo impacto que melhoram o desempenho de cargas de trabalho existentes com esforço mínimo de implementação na adoção. 
 
 ![Processamento de consulta inteligente](./media/iqp-feature-family.png)
+
+Assista a este vídeo de seis minutos para obter uma visão geral do processamento inteligente de consultas:
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Overview-Intelligent-Query-processing-in-SQL-Server-2019/player?WT.mc_id=dataexposed-c9-niner]
+
 
 Você pode deixar as cargas de trabalho automaticamente qualificadas para o processamento de consulta inteligente habilitando o nível de compatibilidade do banco de dados aplicável. Você pode definir isso usando [!INCLUDE[tsql](../../includes/tsql-md.md)]. Por exemplo:  
 
@@ -135,7 +139,7 @@ Começando com comentários de concessão de memória no modo de linha, serão e
 
 *LastRequestedMemory* mostra a memória concedida em quilobytes (KB) na execução de consulta anterior. O atributo *IsMemoryGrantFeedbackAdjusted* permite que você verifique o estado dos comentários de concessão de memória para a instrução dentro de um plano de execução de consulta real. Os valores apresentados nesse atributo são os seguintes:
 
-| Valor de IsMemoryGrantFeedbackAdjusted | Descrição |
+| Valor de IsMemoryGrantFeedbackAdjusted | DESCRIÇÃO |
 |---|---|
 | Não: Primeira execução | Os comentários de concessão de memória não ajustam a memória para a primeira compilação e execução associada.  |
 | Não: Concessão precisa | Se não houver despejo no disco, e a instrução usar pelo menos 50% da memória concedida, os comentários de concessão de memória não serão acionados. |
@@ -208,14 +212,14 @@ Depois que um plano de execução intercalada é armazenado em cache, o plano co
 ### <a name="tracking-interleaved-execution-activity"></a>Controlando a atividade de execução intercalada
 Você pode ver os atributos de uso no plano de execução de consulta real:
 
-| Atributo de Plano de execução | Descrição |
+| Atributo de Plano de execução | DESCRIÇÃO |
 | --- | --- |
 | ContainsInterleavedExecutionCandidates | Aplica-se ao nó *QueryPlan*. Quando é *true*, significa que o plano contém candidatos a execução intercalada. |
 | IsInterleavedExecuted | Atributo do elemento *RuntimeInformation* em RelOp para o nó TVF. Quando *true*, significa que a operação foi materializada como parte de uma operação de execução intercalada. |
 
 Você também pode controlar as ocorrências de execução intercalada por meio dos xEvents a seguir:
 
-| xEvent | Descrição |
+| xEvent | DESCRIÇÃO |
 | ---- | --- |
 | interleaved_exec_status | Esse evento é disparado quando a execução intercalada está ocorrendo. |
 | interleaved_exec_stats_update | Esse evento descreve as estimativas de cardinalidade atualizadas por execução intercalada. |
@@ -276,13 +280,55 @@ Uma dica de consulta USE HINT tem precedência sobre uma configuração de escop
 
 **Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (No [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] em diante), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
-A compilação adiada de variável da tabela melhora a qualidade do plano e o desempenho geral para consultas que fazem referência a variáveis de tabela. Durante a otimização e compilação inicial, esse recurso propaga estimativas de cardinalidade com base nas contagens reais de linha de variável de tabela. Essas informações de contagem de linha precisas otimizam as operações de plano de downstream.
+**A compilação adiada de variável da tabela** melhora a qualidade do plano e o desempenho geral para consultas que fazem referência a variáveis de tabela. Durante a otimização e a compilação do plano inicial, esse recurso propagará estimativas de cardinalidade com base nas contagens reais de linha de variável de tabela. Essas informações de contagem de linha precisas serão usadas para otimizar operações de plano de downstream.
 
-A compilação adiada de variável de tabela adia a compilação de uma instrução que faz referência a uma variável de tabela até a primeira execução real da instrução. Esse comportamento de compilação adiada é igual ao das tabelas temporárias. Essa alteração resulta no uso de cardinalidade real em vez da estimativa original de uma linha. 
+Com a compilação adiada de variável de tabela, a compilação de uma instrução que faz referência a uma variável de tabela é adiada até a primeira execução real da instrução. Esse comportamento de compilação adiada é idêntico ao das tabelas temporárias. Essa alteração resulta no uso de cardinalidade real em vez da estimativa original de uma linha. 
 
-Habilite a compilação adiada de variável de tabela no Banco de Dados SQL do Azure. Para isso, habilite o nível de compatibilidade 150 do banco de dados ao qual você está conectado ao executar a consulta.
+Para habilitar a compilação adiada de variável table, habilite o nível de compatibilidade do banco de dados 150 para o banco de dados ao qual você está conectado ao executar a consulta.
 
-Para saber mais, veja [Compilação adiada de variável da tabela](../../t-sql/data-types/table-transact-sql.md#table-variable-deferred-compilation).
+A compilação adiada de variável table **não** altera nenhuma outra característica das variáveis de tabela. Por exemplo, esse recurso não adiciona as estatísticas de coluna às variáveis table.
+
+A compilação adiada de variável table **não aumenta a frequência de recompilação**. Em vez disso, ela alterna onde ocorre a compilação inicial. O plano armazenado em cache resultante é gerado com base na contagem da linha de variável table de compilação adiada inicial. O plano armazenado em cache é reutilizado por consultas consecutivas. Ele é reutilizado até que o plano seja removido ou recompilado. 
+
+A contagem de linha de variável de tabela que é usada para a compilação de plano inicial representa um valor típico que pode ser diferente de uma estimativa de contagem de linha fixa. Se ele for diferente, as operações downstream serão beneficiadas. O desempenho poderá não ser melhorado por esse recurso se a contagem de linha da variável table variar consideravelmente entre as execuções.
+
+### <a name="disabling-table-variable-deferred-compilation-without-changing-the-compatibility-level"></a>Desabilitar a compilação adiada de variável de tabela sem alterar o nível de compatibilidade
+Desabilitar a compilação adiada de variável table no escopo do banco de dados ou da instrução, mantendo o nível de compatibilidade do banco de dados como 150 e superior. Para desabilitar a compilação adiada de variável table para todas as execuções de consulta originadas do banco de dados, execute o seguinte exemplo dentro do contexto do banco de dados aplicável:
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DEFERRED_COMPILATION_TV = OFF;
+```
+
+Para habilitar novamente a compilação adiada de variável table para todas as execuções de consulta originadas do banco de dados, execute o seguinte exemplo dentro do contexto do banco de dados aplicável:
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DEFERRED_COMPILATION_TV = ON;
+```
+
+Você também pode desabilitar a compilação adiada de variável table em uma consulta específica atribuindo DISABLE_DEFERRED_COMPILATION_TV como uma dica de consulta USE HINT.  Por exemplo:
+
+```sql
+DECLARE @LINEITEMS TABLE 
+    (L_OrderKey INT NOT NULL,
+     L_Quantity INT NOT NULL
+    );
+
+INSERT @LINEITEMS
+SELECT L_OrderKey, L_Quantity
+FROM dbo.lineitem
+WHERE L_Quantity = 5;
+
+SELECT  O_OrderKey,
+    O_CustKey,
+    O_OrderStatus,
+    L_QUANTITY
+FROM    
+    ORDERS,
+    @LINEITEMS
+WHERE   O_ORDERKEY  =   L_ORDERKEY
+    AND O_OrderStatus = 'O'
+OPTION (USE HINT('DISABLE_DEFERRED_COMPILATION_TV'));
+```
 
 ## <a name="scalar-udf-inlining"></a>Embutimento de UDF escalar
 
@@ -306,46 +352,50 @@ Para saber mais, confira [APPROX_COUNT_DISTINCT (Transact-SQL)](../../t-sql/func
 
 O modo de lote em rowstore permite que a execução em modo de lote para cargas de trabalho analíticas sem a necessidade de índices columnstore.  Esse recurso dá suporte a filtros de bitmap e à execução do modo de lote para em disco heaps e índices de árvore B. O modo de lote em rowstore habilita o suporte para todos os operadores habilitados para o modo de lote existente.
 
-### <a name="background"></a>Plano de fundo
+### <a name="background"></a>Segundo plano
 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] introduziu um novo recurso para acelerar as cargas de trabalho analíticas: os índices columnstore. Expandimos os casos de uso e melhoramos o desempenho de índices columnstore em todas as versões subsequentes. Até agora, apresentamos e documentamos todos esses recursos como um único recurso. Você pode criar índices columnstore em suas tabelas. E sua carga de trabalho analítica será bem mais rápida. No entanto, há dois conjuntos de tecnologias relacionados mas distintos:
 - Com os índices **columnstore**, as consultas analíticas acessam apenas os dados que elas precisam das colunas. A compactação de página no formato columnstore também é mais eficiente do que a dos índices **rowstore** tradicionais. 
 - Com o processamento em **modo de lote**, os operadores de consulta processam dados com mais eficiência. Eles funcionam em um lote de linhas em vez de uma linha por vez. Diversos outros aprimoramentos de escalabilidade estão ligados ao processamento do modo de lote. Confira mais informações sobre o modo de lote em [Modos de execução](../../relational-databases/query-processing-architecture-guide.md#execution-modes).
 
-Os dois conjuntos de recursos funcionam juntos para melhorar a utilização de CPU e E/S (entrada/saída):
-- ao usar índices columnstore, mais dos seus dados se encaixam na memória. Isso reduz a necessidade de E/S.
+Os dois conjuntos de recursos funcionam juntos para melhorar o uso de CPU e E/S (entrada/saída):
+- ao usar índices columnstore, mais dos seus dados se encaixam na memória. Isso reduz a carga de trabalho de E/S.
 - O processamento de modo de lote usa a CPU com mais eficiência.
 
-As duas tecnologias tiram proveito um do outro sempre que possível. Por exemplo, agregações de modo de lote podem ser avaliadas como parte de uma verificação de índice columnstore. Também processamos os dados de columnstore compactados usando a codificação de tamanho de execução com muito mais eficiência com junções e agregações de modos de lotes. 
+As duas tecnologias tiram proveito um do outro sempre que possível. Por exemplo, agregações de modo de lote podem ser avaliadas como parte de uma verificação de índice columnstore. Os dados de columnstore compactados também são processados usando a codificação de tamanho de execução com muito mais eficiência com junções e agregações de modos de lotes. 
  
-Os dois recursos podem ser utilizados de forma independente:
-* Você obtém planos de modo de linha que usam índices columnstore.
-* Você obtém planos de modo de linha que usam somente índices rowstore. 
+No entanto, é importante entender que os dois recursos são independentes:
+* Você pode obter planos de modo de linha que usam índices columnstore.
+* Você pode obter planos de modo de linha que usam somente índices rowstore. 
 
 Geralmente é possível obter os melhores resultados ao usar os dois recursos juntos. Portanto, até agora, o otimizador de consulta do SQL Server considerou o processamento de modo de lote só para consultas que envolvem pelo menos uma tabela com um índice columnstore.
 
-Os índices columnstore não são uma boa opção para alguns aplicativos. Pode ser que o aplicativo use outro recurso que não tenha suporte com índices columnstore. Por exemplo, as modificações no local não são compatíveis com a compactação de columnstore. Portanto, os gatilhos não têm suporte em tabelas com índices columnstore clusterizados. E mais importante, índices columnstore adicionam uma sobrecarga para as instruções **DELETE** e **UPDATE**. 
+Os índices columnstore podem não ser apropriados para alguns aplicativos. Pode ser que o aplicativo use outro recurso que não tenha suporte com índices columnstore. Por exemplo, as modificações no local não são compatíveis com a compactação de columnstore. Assim, os gatilhos não têm suporte em tabelas com índices columnstore clusterizados. E, mais importante, índices columnstore adicionam uma sobrecarga para as instruções **DELETE** e **UPDATE**. 
 
-Para algumas cargas de trabalho transacionais analíticas híbridas, a sobrecarga relacionada a aspectos transacionais da carga de trabalho superam os benefícios dos índices columnstore. Tais cenários podem melhorar o uso de CPU do processamento de modo de lote. É por isso que o modo de lote no recurso de rowstore considera o modo de lote para todas as consultas. Não importa quais índices estão envolvidos.
+Para algumas cargas de trabalho transacionais analíticas híbridas, a sobrecarga de uma carga de trabalho transacional supera os benefícios obtidos do uso de índices columnstore. Esses cenários podem se beneficiar do uso aprimorado da CPU empregando o processamento do modo de lote sozinho. É por isso que o recurso batch-mode-on-rowstore considera o modo de lote para todas as consultas independentemente de qual tipo de índice está envolvido.
 
 ### <a name="workloads-that-might-benefit-from-batch-mode-on-rowstore"></a>Cargas de trabalho que podem se beneficiar com o modo de lote no rowstore
 As seguintes cargas de trabalho podem se beneficiar do modo de lote no rowstore:
-* Uma parte significativa da carga de trabalho consiste em consultas analíticas. Geralmente essas consultas têm operadores como junções ou agregações que processam centenas de milhares de linhas ou mais.
-* A carga de trabalho está associada à CPU. Se o gargalo for em E/S, ainda assim é recomendável que você considere um índice columnstore, se possível.
+* Uma parte significativa da carga de trabalho consiste em consultas analíticas. Em geral, essas consultas usam operadores como junções ou agregações que processam centenas de milhares de linhas ou mais.
+* A carga de trabalho está associada à CPU. Se o gargalo for em E/S, ainda será recomendável que você considere um índice columnstore, se possível.
 * Criar um índice columnstore adiciona muita sobrecarga à parte transacional da carga de trabalho. Ou a criação de um índice columnstore não é viável porque seu aplicativo depende de um recurso que ainda não tem suporte com índices columnstore.
 
+
 > [!NOTE]
-> O modo de lote em rowstore só pode ajudar a reduzir o consumo de CPU. Se o gargalo for relacionado à E/S e os dados ainda não estiverem armazenados em cache (cache "frio"), o modo de lote em rowstore não melhorará o tempo decorrido. Da mesma forma, se não houver memória suficiente no computador para armazenar em cache todos os dados, será improvável que ocorra uma melhoria de desempenho.
+> O modo de lote em rowstore só pode ajudar a reduzir o consumo de CPU. Se o gargalo for relacionado à E/S e os dados ainda não estiverem armazenados em cache (cache "frio"), o modo de lote em rowstore não vai melhorar o tempo decorrido da consulta. Da mesma forma, se não houver memória o bastante no computador para armazenar em cache todos os dados, será improvável que ocorra uma melhoria de desempenho.
 
 ### <a name="what-changes-with-batch-mode-on-rowstore"></a>O que muda com o modo de lote no rowstore?
-Além de mover para o nível de compatibilidade 150, não é necessário mudar nada no seu lado para habilitar o modo de lote no rowstore para cargas de trabalho candidatas.
 
-Mesmo se uma consulta não envolver nenhuma tabela com um índice columnstore, o processador de consultas já usa heurística para decidir se deve considerar o modo de lote. A heurística consiste destas verificações:
+Defina o banco de dados para o nível de compatibilidade 150. Nenhuma outra alteração é necessária.
+
+Mesmo que uma consulta não acesse nenhuma tabela com índices columnstore, o processador de consultas, usando heurística, decidirá se deve considerar o modo de lote. A heurística consiste destas verificações:
 1. Uma verificação inicial dos tamanhos de tabela, operadores usados e cardinalidades estimadas na consulta de entrada.
 2. Pontos de verificação adicionais à medida que o otimizador descobre planos novos e mais baratos para a consulta. Se esses planos alternativos não usarem o modo de lote de forma significativa, o otimizador parará de explorar as alternativas de modo de lote.
 
+
 Se o modo de lote em rowstore for usado, você verá o modo de execução real como o **modo de lote** no plano de consulta. O operador de verificação usa o modo de lote em heaps em discos e índices de árvore B. Essa verificação do modo de lote pode avaliar os filtros de bitmap do modo de lote. Você também poderá ver outros operadores de modo de lote no plano. Os exemplos são junções hash, agregações baseadas em hash, classificações, agregações de janela, filtros, concatenações e operadores escalares de computação.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Comentários
+
 Planos de consulta nem sempre usam o modo de lote. O otimizador de consulta pode decidir que o modo de lote não é útil para a consulta. 
 
 O espaço de pesquisa do otimizador de consulta está sendo alterado. Portanto, se você receber um plano de modo de linha, poderia não ser o mesmo que o plano que você obtém em um nível de compatibilidade mais baixo. E se você receber um plano de modo de lote, poderia não ser o mesmo que o plano que você obtém com um índice columnstore. 

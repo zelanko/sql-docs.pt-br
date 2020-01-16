@@ -8,12 +8,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bc11ccdee25331ad4d3758e4ebdff2da9e420900
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: befa64e6c79a1f1e4fe0604014dbb7c583bf830e
+ms.sourcegitcommit: ef830f565ee07dc7d4388925cc3c86c5d2cfb4c7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71281542"
+ms.lasthandoff: 12/09/2019
+ms.locfileid: "74947168"
 ---
 # <a name="deploy-an-ssis-project-from-visual-studio-code-with-transact-sql"></a>Implantar um projeto do SSIS por meio do Visual Studio Code com o Transact-SQL
 
@@ -50,6 +50,10 @@ Para habilitar comandos do `mssql` e T-SQL IntelliSense, defina o modo de lingua
  
 3. No menu suspenso **Selecionar modo de linguagem** que é aberto, selecione ou insira **SQL** e, em seguida, pressione **ENTER** para definir o modo de linguagem para SQL. 
 
+## <a name="supported-authentication-method"></a>Método de autenticação compatível
+
+Confira [métodos de autenticação para implantação](ssis-quickstart-deploy-ssms.md#authentication-methods-for-deployment).
+
 ## <a name="connect-to-the-ssis-catalog-database"></a>Conectar-se ao banco de dados de Catálogo do SSIS
 
 Use o Visual Studio Code para estabelecer uma conexão com o Catálogo do SSIS.
@@ -65,16 +69,16 @@ Use o Visual Studio Code para estabelecer uma conexão com o Catálogo do SSIS.
    | Configuração       | Valor sugerido | Obter mais informações |
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Nome do servidor** | O nome do servidor totalmente qualificado |  |
-   | **Nome do banco de dados** | **SSISDB** | O nome do banco de dados ao qual se conectar. |
+   | **Nome do banco de dados** | **SSISDB** | O nome do banco de dados ao qual conectar. |
    | **Autenticação** | Logon do SQL | |
-   | **User name** | A conta do administrador do servidor | Essa é a conta que você especificou quando criou o servidor. |
-   | **Senha (logon do SQL)** | A senha de sua conta do administrador do servidor | Essa é a senha que você especificou quando criou o servidor. |
-   | **Salvar senha?** | Sim ou Não | Se você não deseja inserir a senha a cada vez, selecione Sim. |
+   | **Nome de usuário** | A conta do administrador do servidor | Essa é a conta que você especificou quando criou o servidor. |
+   | **Senha (Logon do SQL)** | A senha para sua conta do administrador do servidor | Essa é a senha que você especificou quando criou o servidor. |
+   | **Salvar senha?** | Sim ou não | Se você não deseja inserir a senha a cada vez, selecione Sim. |
    | **Inserir um nome para este perfil** | Um nome de perfil, assim como **mySSISServer** | Um nome de perfil salvo acelera sua conexão em logons subsequentes. | 
 
-5. Pressione a tecla **ESC** para fechar a mensagem de informações que informa que o perfil está criado e conectado.
+5. Pressione a tecla **ESC** para fechar a mensagem de informações que informa que o perfil foi criado e está conectado.
 
-6. Verifique sua conexão na barra de status.
+6. Verifique se sua conexão na barra de status.
 
 ## <a name="run-the-t-sql-code"></a>Executar o código T-SQL
 Execute o seguinte código Transact-SQL para implantar um projeto do SSIS.
@@ -103,7 +107,7 @@ EXEC catalog.deploy_project @folder_name = '<target_folder>',
     - [Implantar um pacote do SSIS por meio do prompt de comando](./ssis-quickstart-deploy-cmdline.md)
     - [Implantar um pacote do SSIS com o PowerShell](ssis-quickstart-deploy-powershell.md)
     - [Implantar um pacote do SSIS com o C#](./ssis-quickstart-deploy-dotnet.md) 
-- Execute um pacote implantado. Para executar um pacote, você pode escolher uma entre várias ferramentas e linguagens. Para saber mais, veja os tópicos a seguir:
+- Execute um pacote implantado. Para executar um pacote, você pode escolher uma entre várias ferramentas e linguagens. Para obter mais informações, confira os seguintes artigos:
     - [Executar um pacote do SSIS com o SSMS](./ssis-quickstart-run-ssms.md)
     - [Executar um pacote do SSIS com o Transact-SQL (SSMS)](./ssis-quickstart-run-tsql-ssms.md)
     - [Executar um pacote do SSIS com o Transact-SQL (VS Code)](ssis-quickstart-run-tsql-vscode.md)

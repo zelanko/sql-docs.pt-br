@@ -1,6 +1,6 @@
 ---
-title: Implementando a funcionalidade MERGE em um procedimento armazenado compilado de forma nativa | Microsoft Docs
-ms.custom: ''
+title: Função MERGE – procedimento armazenado nativamente compilado
+ms.custom: seo-dt-2019
 ms.date: 11/17/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +11,12 @@ ms.assetid: d4bcdc36-3302-4abc-9b35-64ec2b920986
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bebb334438f911dd061075edf0b338ef4f1c3fff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 811b3dfbd79e60d5fb626f814f7b4bf38272fd19
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050351"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412637"
 ---
 # <a name="implementing-merge-functionality-in-a-natively-compiled-stored-procedure"></a>Implementando a funcionalidade MERGE em um procedimento armazenado compilado de forma nativa
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

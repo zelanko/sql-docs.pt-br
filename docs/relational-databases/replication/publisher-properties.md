@@ -1,6 +1,7 @@
 ---
-title: Caixa de diálogo Propriedades do Editor de Replicação do SQL Server | Microsoft Docs
-ms.custom: ''
+title: Caixa de diálogo Propriedades do Editor (SSMS)
+description: Descreve a caixa de diálogo 'Propriedades do Editor' para uma publicação específica dentro do SSMS (SQL Server Management Studio).
+ms.custom: seo-lt-2019
 ms.date: 11/20/2018
 ms.prod: sql
 ms.prod_service: database-engine
@@ -16,12 +17,12 @@ ms.assetid: 98df1aea-0406-40bf-a917-4bd80464125c
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: f157f541cae6fed5613f95df8d883044f8e09ff5
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 12c7a8482561e6ab608501158a05a275763ab74a
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908312"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75320634"
 ---
 # <a name="sql-server-replication-publisher-properties-dialog-box"></a>Caixa de diálogo Propriedades do Editor de Replicação do SQL Server
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -66,7 +67,7 @@ A caixa de diálogo **Propriedades do Publicador** permite exibir e modificar pr
   
 
 ## <a name="subcribers"></a>Assinantes
-  A página **Publicadores** da caixa de diálogo **Propriedades do Publicador** é usada por Editores que executam versões do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anteriores ao [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. A página permite habilitar Publicadores a receber dados de publicações neste Publicador. Permitir que um Assinante receba dados deste Publicador não cria assinaturas para publicações neste Publicador. Para criar uma assinatura, você deve usar o Assistente para Nova Assinatura.  
+  A página **Assinantes** da caixa de diálogo **Propriedades do Editor** é usada por Editores que executam versões do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anteriores à [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. A página permite habilitar Publicadores a receber dados de publicações neste Publicador. Permitir que um Assinante receba dados deste Publicador não cria assinaturas para publicações neste Publicador. Para criar uma assinatura, você deve usar o Assistente para Nova Assinatura.  
   
 ### <a name="options"></a>Opções  
  **Publicadores**  

@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 026ca5fc-95da-46b6-b882-fa20f765b51d
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: aliceku
-ms.openlocfilehash: af336d2946dbb0b96d3ebdc64c14ce9e1eb6012e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.reviewer: jaszymas
+ms.openlocfilehash: 4d7b428534462779abeb72c65b05f551bfd4b0eb
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127212"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246133"
 ---
 # <a name="security-best-practices-with-contained-databases"></a>Práticas recomendadas de segurança com bancos de dados independentes
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "68127212"
   Bancos de dados independentes têm algumas ameaças exclusivas que devem ser entendidas e mitigadas pelos administradores do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . A maioria das ameaças está relacionada ao processo de autenticação **USER WITH PASSWORD** que move o limite de autenticação do nível do [!INCLUDE[ssDE](../../includes/ssde-md.md)] para o nível do banco de dados.  
   
 ## <a name="threats-related-to-users"></a>Ameaças relacionadas a usuários  
- Usuários em um banco de dados independente que têm a permissão **ALTER ANY USER** , como membros das funções de banco de dados fixas **db_owner** e **db_securityadmin** , podem conceder acesso ao banco de dados sem conhecimento ou permissão ou o administrador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . A concessão de acesso a um banco de dados independente a usuários aumenta a área da superfície de ataque potencial contra toda a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Os administradores devem entender essa delegação de controle de acesso e ter muito cuidado ao conceder permissão **ALTER ANY USER** aos usuários no banco de dados independente. Todos os proprietários de banco de dados têm a permissão **ALTER ANY USER** . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auditar os usuários periodicamente em um banco de dados independente.  
+ Usuários em um banco de dados independente que têm a permissão **ALTER ANY USER**, como membros das funções de banco de dados fixas **db_owner** e **db_accessadmin**, podem permitir acesso ao banco de dados sem conhecimento ou permissão ou o administrador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A concessão de acesso a um banco de dados independente a usuários aumenta a área da superfície de ataque potencial contra toda a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Os administradores devem entender essa delegação de controle de acesso e ter muito cuidado ao conceder permissão **ALTER ANY USER** aos usuários no banco de dados independente. Todos os proprietários de banco de dados têm a permissão **ALTER ANY USER** . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auditar os usuários periodicamente em um banco de dados independente.  
   
 ### <a name="accessing-other-databases-using-the-guest-account"></a>Acessando outros bancos de dados que usam a conta Convidado  
  Os proprietários e os usuários de banco de dados com a permissão **ALTER ANY USER** podem criar usuários de banco de dados independente. Após conectar-se a um banco de dados independente em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], um usuário de banco de dados independente poderá acessar outros bancos de dados no [!INCLUDE[ssDE](../../includes/ssde-md.md)], caso os outros bancos de dados tenham habilitado a conta de **convidado** .  
@@ -65,7 +65,7 @@ ALTER DATABASE DB1 SET TRUSTWORTHY ON;
 -   Quando os bancos de dados independentes estiverem presentes, os usuários de bancos de dados dependentes devem se conectar ao [!INCLUDE[ssDE](../../includes/ssde-md.md)] sem usar um catálogo inicial ou especificando o nome de um banco de dados dependente como catálogo inicial. Isso evita a conexão ao banco de dados independente que está sob controle menos direto pelos administradores do [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
 ### <a name="increasing-access-by-changing-the-containment-status-of-a-database"></a>Aumentando o acesso por meio da alteração do status de contenção de um banco de dados  
- Logons que têm a permissão **ALTER ANY DATABASE** , como membros da função de servidor fixa **dbcreator** , e usuários em um banco de dados dependente que têm a permissão **CONTROL DATABASE** , como membros da função de banco de dados fixa **db_owner** , podem alterar a configuração de contenção de um banco de dados. Se a configuração de contenção de um banco de dados for alterada de **NONE** para **PARTIAL** ou **FULL**, o acesso de usuários poderá ser concedido por meio da criação de usuários de banco de dados independente com senhas. Isso pode fornecer acesso sem o conhecimento ou consentimento dos administradores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para impedir a contenção de qualquer banco de dados, defina a opção **contained database authentication** de [!INCLUDE[ssDE](../../includes/ssde-md.md)] do como 0. Para impedir conexões por usuários de banco de dados independente com senhas em bancos de dados independentes selecionados, use gatilhos de logon para cancelar tentativas de logon por usuários de banco de dados independente com senhas.  
+ Logons que têm a permissão **ALTER ANY DATABASE** , como membros da função de servidor fixa **dbcreator** , e usuários em um banco de dados dependente que têm a permissão **CONTROL DATABASE** , como membros da função de banco de dados fixa **db_owner** , podem alterar a configuração de contenção de um banco de dados. Se a configuração de contenção de um banco de dados for alterada de **NONE** para **PARTIAL** ou **FULL**, o acesso de usuários poderá ser concedido por meio da criação de usuários de banco de dados independente com senhas. Isso pode fornecer acesso sem o conhecimento ou consentimento dos administradores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para impedir a contenção de qualquer banco de dados, defina a opção **contained database authentication** de [!INCLUDE[ssDE](../../includes/ssde-md.md)] do como 0. Para impedir conexões por usuários de banco de dados independente com senhas em bancos de dados independentes selecionados, use gatilhos de logon para cancelar tentativas de logon por usuários de banco de dados independente com senhas.  
   
 ### <a name="attaching-a-contained-database"></a>Anexando um banco de dados independente  
  Por meio da anexação de um banco de dados independente, um administrador pode dar acesso não desejado de usuários à instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Um administrador preocupado com esse risco pode colocar o banco de dados online em modo **RESTRICTED_USER** , o que impede a autenticação para usuários de bancos de dados independentes com senha. Apenas entidades autorizadas por meio de logon poderão acessar o [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
@@ -84,11 +84,11 @@ ALTER DATABASE DB1 SET TRUSTWORTHY ON;
 ## <a name="escaping-a-contained-database"></a>Escape de um banco de dados independente  
  Se um banco de dados for parcialmente contido, os administradores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deverão auditar os recursos dos usuários e módulos periodicamente em bancos de dados independentes.  
   
-## <a name="denial-of-service-through-autoclose"></a>Negação de serviço por meio de AUTO_CLOSE  
+## <a name="denial-of-service-through-auto_close"></a>Negação de serviço por meio de AUTO_CLOSE  
  Não configure bancos de dados independentes como fechamento automático. Se fechado, a abertura do banco de dados para autenticar um usuário consumirá recursos adicionais e poderá contribuir para um ataque de negação de serviço.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Bancos de dados independentes](../../relational-databases/databases/contained-databases.md)   
- [Migrar para um banco de dados independente parcialmente](../../relational-databases/databases/migrate-to-a-partially-contained-database.md)  
+ [Migrar para um banco de dados parcialmente independente](../../relational-databases/databases/migrate-to-a-partially-contained-database.md)  
   
   

@@ -1,7 +1,7 @@
 ---
-title: Migrar as configurações de backup gerenciado do SQL Server 2014 para o SQL Server 2016 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Migrar configurações de backup gerenciado
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: ae937ebb-24ff-4a33-be3c-8f85328dfc75
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7d8945b0e37185f5ec0433a9780aa876d4be526c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 79cbc0a2fcd020cc1e4b59de6d4fc0a2c3320059
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033752"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258669"
 ---
-# <a name="migrate-sql-server-2014-managed-backup-settings-to-sql-server-2016"></a>Migrar as Configurações de Backup Gerenciado do SQL Server 2014 para o SQL Server 2016
+# <a name="migrate-managed-backup-settings"></a>Migrar configurações de backup gerenciado
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Este tópico aborda considerações sobre a migração para o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] durante a atualização do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] para o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
   
@@ -52,6 +52,6 @@ ms.locfileid: "68033752"
 -   Os procedimentos do **smart_admin** não têm suporte para as novas configurações do [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] no [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. É necessário usar os novos procedimentos e a funcionalidade **managed_backup** .  
   
 ## <a name="see-also"></a>Consulte Também  
- [Backup gerenciado do SQL Server no Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
+ [Backup Gerenciado do SQL Server para o Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   

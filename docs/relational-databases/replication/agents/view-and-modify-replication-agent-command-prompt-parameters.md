@@ -1,6 +1,7 @@
 ---
-title: Exibir e modificar parâmetros do prompt de comando de agentes de replicação | Microsoft Docs
-ms.custom: ''
+title: Exibir e modificar parâmetros do prompt de comando do Agent
+description: Saiba como ver e modificar os parâmetros do prompt de comando usados pelos diferentes agentes de replicação no SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,21 +13,21 @@ helpviewer_keywords:
 ms.assetid: 45f2e781-c21d-4b44-8992-89f60fb3d022
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 38d86590da144386077b170433c52dcd1cc18d7c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6c72c58b0a23f8215d303addfbb2ec9fb65c4489
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085915"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321626"
 ---
 # <a name="view-and-modify-replication-agent-command-prompt-parameters"></a>Exibir e modificar parâmetros do prompt de comando de agentes de replicação
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Agentes de replicação são executáveis que aceitam parâmetros de linha de comando. Por padrão, os agentes seguem as etapas de trabalho do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agente, assim sendo, esses parâmetros podem ser exibidos e modificados usando a caixa de diálogo **Propriedades do trabalho – \<Trabalho>** . Essa caixa de diálogo está disponível na pasta **Trabalhos** no [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] e na guia **Agentes** no Replication Monitor. Para obter informações sobre como iniciar o Replication Monitor, consulte [Start the Replication Monitor](../../../relational-databases/replication/monitor/start-the-replication-monitor.md) (Iniciar o Replication Monitor).  
+  Agentes de replicação são executáveis que aceitam parâmetros de linha de comando. Por padrão, os agentes são executados nas etapas de trabalho do Agent [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e, portanto, esses parâmetros podem ser exibidos e modificados usando a caixa de diálogo **Propriedades do Trabalho – \<Trabalho>** . Essa caixa de diálogo está disponível na pasta **Trabalhos** no [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] e na guia **Agentes** no Replication Monitor. Para obter informações sobre como iniciar o Replication Monitor, consulte [Start the Replication Monitor](../../../relational-databases/replication/monitor/start-the-replication-monitor.md) (Iniciar o Replication Monitor).  
   
 > [!NOTE]  
 >  As alterações do parâmetro de agente entrarão em vigor na próxima vez o agente for iniciado. Se o agente ficar executando continuamente, será necessário parar e reiniciar o agente.  
   
- Embora seja possível modificar os parâmetros diretamente, em geral, eles são modificados através de um perfil de agente. Para obter mais informações, consulte [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
+ Embora seja possível modificar os parâmetros diretamente, em geral, eles são modificados através de um perfil de agente. Para saber mais, confira [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
  Ao acessar os trabalhos de agentes na pasta **Trabalhos** use a tabela a seguir, para determinar o nome do trabalho do agente e os parâmetros disponíveis para cada agente.  
   
@@ -38,7 +39,7 @@ ms.locfileid: "68085915"
 |Merge Agent para assinaturas pull|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<SubscriptionDatabase>-\<integer>**|[Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)|  
 |Merge Agent para assinaturas push|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**|[Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)|  
 |Distribution Agent para assinaturas push|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**|[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
-|Distribution Agent para assinaturas pull|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<SubscriptionDatabase>-\<GUID>**|[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
+|Distribution Agent para assinaturas pull|**\<Publicador>-\<PublicationDatabase>-\<Publicação>-\<Assinante>-\<SubscriptionDatabase>-\<GUID>**|[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
 |Distribution Agent para assinaturas push para Assinantes não SQL Server|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**|[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
 |Queue Reader Agent|**[\<Distributor>].\<integer>**|[Agente de Leitor de Fila de Replicação](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)|  
   
@@ -56,7 +57,7 @@ ms.locfileid: "68085915"
   
 2.  Expanda a pasta **SQL Server Agent** e, em seguida, a pasta **Trabalhos** .  
   
-3.  Clique com o botão direito do mouse em um trabalho e, em seguida, clique em **Propriedades**.  
+3.  Clique com o botão direito do mouse em um trabalho e clique em **Propriedades**.  
   
 4.  Na página **Etapas** da caixa de diálogo **Propriedades do Trabalho – \<Trabalho>** , selecione a etapa **Executar agente** e clique em **Editar**.  
   
@@ -97,6 +98,6 @@ ms.locfileid: "68085915"
 ## <a name="see-also"></a>Consulte Também  
  [Administração do agente de replicação](../../../relational-databases/replication/agents/replication-agent-administration.md)   
  [Conceitos dos executáveis do Agente de Replicação](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)   
- [Replication Agents Overview](../../../relational-databases/replication/agents/replication-agents-overview.md)  
+ [Visão geral dos agentes de replicação](../../../relational-databases/replication/agents/replication-agents-overview.md)  
   
   

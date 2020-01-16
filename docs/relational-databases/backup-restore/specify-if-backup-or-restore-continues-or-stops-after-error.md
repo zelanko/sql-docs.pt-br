@@ -1,7 +1,7 @@
 ---
-title: Especificar se o backup ou a restauração continuam ou param depois de um erro | Microsoft Docs
-ms.custom: ''
-ms.date: 03/17/2017
+title: Definir backup ou restauração após o erro
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 042be17a-b9b0-4629-b6bb-b87a8bc6c316
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e40636bc4f76e6963c0c766c36392515f7c200da
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 61e3395939b7faf059a5376674d4f85e3d5c6677
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68216177"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251166"
 ---
-# <a name="specify-if-backup-or-restore-continues-or-stops-after-error"></a>Especificar se o backup ou a restauração continuam ou param depois de um erro
+# <a name="specify-backup-or-restore-to-continue-or-stop-after-error"></a>Especifique backup ou restauração para continuar ou parar após o erro
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Este tópico descreve como especificar se uma operação de backup ou restauração continuará ou será interrompida após encontrar um erro no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  

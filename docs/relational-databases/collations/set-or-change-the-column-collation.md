@@ -1,7 +1,7 @@
 ---
 title: Definir ou alterar a ordenação de coluna | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 12/05/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ''
@@ -13,44 +13,78 @@ ms.assetid: d7a9638b-717c-4680-9b98-8849081e08be
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5d49dbce19b0d2c7ce1fa1337eb6cbdc58da08f7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0880ce366c2db15f7e751c9493bebf5f97d4240a
+ms.sourcegitcommit: 9b8b11961b33e66fc9f433d094fc5c0f9b473772
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140857"
+ms.lasthandoff: 12/07/2019
+ms.locfileid: "74908714"
 ---
 # <a name="set-or-change-the-column-collation"></a>Definir ou alterar a ordenação de coluna
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   É possível substituir a ordenação de banco de dados para dados **char**, **varchar**, **text**, **nchar**, **nvarchar**e **ntext** especificando uma ordenação diferente para uma coluna específica de uma tabela e usando uma das seguintes opções:  
   
--   A cláusula COLLATE de [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) e [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md). Por exemplo:  
+-   A cláusula COLLATE de [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) e [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md), como visto nos exemplos abaixo. 
+
+    -   **Conversão in-loco.** Considere uma das tabelas existentes definidas abaixo:
+
+        ```sql
+        -- NVARCHAR column is encoded in UTF-16 because a supplementary character enabled collation is used
+        CREATE TABLE dbo.MyTable (CharCol NVARCHAR(50) COLLATE Latin1_General_100_CI_AI_SC);
+
+        -- VARCHAR column is encoded the Latin code page and therefore is not Unicode capable
+        CREATE TABLE dbo.MyTable (CharCol VARCHAR(50) COLLATE Latin1_General_100_CI_AI);
+        ```
+
+        Para converter a coluna in-loco para usar UTF-8, execute uma instrução `ALTER COLUMN` que define o tipo de dados necessário e uma ordenação habilitada para UTF-8:
+
+        ```sql 
+        ALTER TABLE dbo.MyTable 
+        ALTER COLUMN CharCol VARCHAR(50) COLLATE Latin1_General_100_CI_AI_SC_UTF8
+        ```
+
+        Esse método é fácil de implementar, mas é uma operação que possivelmente causa bloqueio e pode se tornar um problema para tabelas grandes e aplicativos ocupados.
+
+    -   **Copiar e substituir.** Considere uma das tabelas existentes definidas abaixo:
+
+        ```sql
+        -- NVARCHAR column is encoded in UTF-16 because a supplementary character enabled collation is used
+        CREATE TABLE dbo.MyTable (CharCol NVARCHAR(50) COLLATE Latin1_General_100_CI_AI_SC);
+        GO
+
+        -- VARCHAR column is encoded using the Latin code page and therefore is not Unicode capable
+        CREATE TABLE dbo.MyTable (CharCol VARCHAR(50) COLLATE Latin1_General_100_CI_AI);
+        GO
+        ```
+
+        Para converter a coluna para usar UTF-8, copie os dados para uma nova tabela na qual a coluna alvo já é o tipo de dados necessário e uma ordenação habilitada para UTF-8, então substitua a tabela antiga:
+
+        ```sql
+        CREATE TABLE dbo.MyTableNew (CharCol VARCHAR(50) COLLATE Latin1_General_100_CI_AI_SC_UTF8);
+        GO
+        INSERT INTO dbo.MyTableNew 
+        SELECT * FROM dbo.MyTable;
+        GO
+        DROP TABLE dbo.MyTable;
+        GO
+        EXEC sp_rename 'dbo.MyTableNew', 'dbo.MyTable’;
+        GO
+        ```
+
+        Esse método é muito mais rápido do que a conversão in-loco, mas a manipulação de esquemas complexos com muitas dependências (FKs, PKs, gatilhos, DFs) e a sincronização da parte final da tabela (se o banco de dados estiver em uso) exigem mais planejamento.
+        
+    Para obter mais informações, consulte [Suporte a ordenações e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md).
   
-    ```  
-    CREATE TABLE dbo.MyTable  
-      (PrimaryKey   int PRIMARY KEY,  
-       CharCol      varchar(10) COLLATE French_CI_AS NOT NULL  
-      );  
-    GO  
-    ALTER TABLE dbo.MyTable ALTER COLUMN CharCol  
-                varchar(10)COLLATE Latin1_General_CI_AS NOT NULL;  
-    GO  
-    ```  
-  
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obter mais informações, [Suporte a ordenações e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obter mais informações, confira [Modificar colunas (Mecanismo de Banco de Dados)](../../relational-databases/tables/modify-columns-database-engine.md#SSMSProcedure).  
   
 -   Usando a propriedade **Column.Collation** no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO).  
   
  Você não pode alterar a ordenação de uma coluna atualmente referenciada por qualquer um dos seguintes:  
   
 -   Uma coluna computada  
-  
 -   Um índice  
-  
--   Estatísticas de distribuição geradas automaticamente ou pela instrução CREATE STATISTICS  
-  
+-   Estatísticas de distribuição geradas automaticamente ou pela instrução `CREATE STATISTICS`  
 -   Uma restrição CHECK  
-  
 -   Uma restrição FOREIGN KEY  
   
  Ao trabalhar com **tempdb**, a cláusula [COLLATE](~/t-sql/statements/collations.md) inclui uma opção *database_default* para especificar que a coluna em uma tabela temporária usa a ordenação padrão do banco de dados de usuário atual para a conexão em vez da ordenação de **tempdb**.  
@@ -63,7 +97,7 @@ ms.locfileid: "68140857"
   
  Isso pode levar a problemas com uma desigualdade em ordenações entre bancos de dados definidos pelo usuário e objetos de banco de dados do sistema. Por exemplo, uma instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa a ordenação Latin1_General_CS_AS e você executa as seguintes instruções:  
   
-```  
+```sql  
 CREATE DATABASE TestDB COLLATE Estonian_CS_AS;  
 USE TestDB;  
 CREATE TABLE TestPermTab (PrimaryKey int PRIMARY KEY, Col1 nchar );  
@@ -71,7 +105,7 @@ CREATE TABLE TestPermTab (PrimaryKey int PRIMARY KEY, Col1 nchar );
   
  Nesse sistema, o banco de dados **tempdb** usa a ordenação Latin1_General_CS_AS com a página de código 1252, e `TestDB` e `TestPermTab.Col1` usam a ordenação `Estonian_CS_AS` com a página de código 1257. Por exemplo:  
   
-```  
+```sql  
 USE TestDB;  
 GO  
 -- Create a temporary table with the same column declarations  
@@ -84,7 +118,7 @@ GO
   
  Com o exemplo anterior, o banco de dados **tempdb** usa a ordenação Latin1_General_CS_AS, `TestDB` e `TestTab.Col1` usam a ordenação `Estonian_CS_AS`. Por exemplo:  
   
-```  
+```sql  
 SELECT * FROM TestPermTab AS a INNER JOIN #TestTempTab on a.Col1 = #TestTempTab.Col1;  
 ```  
   
@@ -94,7 +128,7 @@ SELECT * FROM TestPermTab AS a INNER JOIN #TestTempTab on a.Col1 = #TestTempTab.
   
 -   Especifique que a coluna da tabela temporária usa a ordenação padrão do banco de dados de usuário, não **tempdb**. Isso permite que a tabela temporária trabalhe com tabelas formatadas de maneira semelhante em vários bancos de dados, se isso for exigido de seu sistema.  
   
-    ```  
+    ```sql  
     CREATE TABLE #TestTempTab  
        (PrimaryKey int PRIMARY KEY,  
         Col1 nchar COLLATE database_default  
@@ -103,7 +137,7 @@ SELECT * FROM TestPermTab AS a INNER JOIN #TestTempTab on a.Col1 = #TestTempTab.
   
 -   Especifique a ordenação correta para a coluna `#TestTempTab`:  
   
-    ```  
+    ```sql  
     CREATE TABLE #TestTempTab  
        (PrimaryKey int PRIMARY KEY,  
         Col1 nchar COLLATE Estonian_CS_AS  

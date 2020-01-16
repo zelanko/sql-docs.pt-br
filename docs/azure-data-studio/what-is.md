@@ -10,23 +10,22 @@ ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 10/15/2019
-ms.openlocfilehash: 9a82168afd82d4670521e1a84f87ae1bea57281e
-ms.sourcegitcommit: c4258a644ac588fc222abee2854f89a81325814c
+ms.openlocfilehash: 9f6be7cbd673a98f8e8934860b0e26d427acac06
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72545058"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75241753"
 ---
 # <a name="what-is-azure-data-studio"></a>O que é o Azure Data Studio?
 
 O Azure Data Studio é uma ferramenta de banco de dados multiplataforma para profissionais de dados que usam a família Microsoft de plataformas de dados locais e na nuvem em Windows, MacOS e Linux.
 
-Lançado anteriormente com o nome de versão prévia SQL Operations Studio, o Azure Data Studio oferece uma experiência moderna de editor com IntelliSense, snippets de código, integração de controle do código-fonte e um terminal integrado. Ele é projetado pensando no usuário da plataforma de dados, com plotagem de conjuntos de resultados de consulta e painéis personalizáveis internos.
+O Azure Data Studio oferece uma experiência de editor moderna com IntelliSense, snippets de código, integração de controle do código-fonte e um terminal integrado. Ele é projetado pensando no usuário da plataforma de dados, com plotagem de conjuntos de resultados de consulta e painéis personalizáveis internos.
 
 O código-fonte do Azure Data Studio e de seus provedores de dados está disponível no GitHub em um EULA de código-fonte que fornece direitos de modificação e de uso do software, mas não sua redistribuição ou hospedagem em um serviço de nuvem. Para saber mais, confira [Perguntas frequentes sobre o Azure Data Studio](faq.md).
 
 **[Baixar e instalar [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)**
-
 
 ## <a name="sql-code-editor-with-intellisense"></a>Editor de código SQL com IntelliSense
 
@@ -37,7 +36,6 @@ O [!INCLUDE[name-sos](../includes/name-sos-short.md)] oferece uma experiência d
 Os snippets de código SQL geram a sintaxe SQL adequada para criar bancos de dados, tabelas, exibições, procedimentos armazenados, usuários, logons, funções, entre outros, e para atualizar objetos de banco de dados existentes. Use snippets inteligentes para criar rapidamente cópias de seu banco de dados para fins de desenvolvimento ou teste e para gerar e executar scripts CREATE e INSERT.
 
 O [!INCLUDE[name-sos](../includes/name-sos-short.md)] também fornece funcionalidade para criar snippets de código SQL personalizados. Para saber mais, confira [Criar e usar snippets de código](code-snippets.md).
-
 
 ## <a name="customizable-server-and-database-dashboards"></a>Dashboards personalizáveis de servidor e banco de dados
 
@@ -61,16 +59,17 @@ Para saber mais sobre a criação de extensões, confira [Criação de extensõe
 ## <a name="feature-comparison-with-sql-server-management-studio-ssms"></a>Comparação com recursos do SSMS (SQL Server Management Studio)
 
 **Use o Azure Data Studio se você:**
+
 - Precisa executar em macOS ou Linux
 - Está se conectando a um cluster de Big Data do SQL Server 2019
 - Passa a maior parte do tempo editando ou executando consultas
 - Precisa traçar um gráfico e visualizar rapidamente conjuntos de resultados
 - Pode executar a maioria das tarefas administrativas por meio do terminal integrado usando o sqlcmd ou o PowerShell
 - Tem necessidade mínima de experiências com assistente
-- Não precisa fazer uma configuração administrativa profunda
-- Desejo 
+- Não é preciso fazer uma configuração administrativa profunda
 
 **Use o SQL Server Management Studio se você:**
+
 - Passa a maior parte do tempo em tarefas de administração de banco de dados
 - Está fazendo configuração administrativa profunda
 - Está fazendo gerenciamento de segurança, incluindo gerenciamento de usuários, avaliação de vulnerabilidade e configuração de recursos de segurança
@@ -100,7 +99,6 @@ Para saber mais sobre a criação de extensões, confira [Criação de extensõe
 |Importar\Exportar DACPAC||Sim|
 |Propriedades de objeto||Sim|
 |Criador de Tabelas||Sim|
-
 
 ### <a name="query-editor"></a>Editor de Consultas
 
@@ -147,7 +145,7 @@ Para saber mais sobre a criação de extensões, confira [Criação de extensõe
 |SQL Agent|Visualização|Sim|
 |SQL Profiler|Visualização|Sim|
 |Always On||Sim|
-|Sempre Criptografado||Sim|
+|Always Encrypted||Sim|
 |Assistente para Copiar Dados||Sim|
 |Orientador de Otimização de Dados||Sim|
 |Visualizador de Log de Erros||Sim|
@@ -159,7 +157,7 @@ Para saber mais sobre a criação de extensões, confira [Criação de extensõe
 |Servidores Registrados||Sim|
 |Replicação||Sim|
 |Gerenciamento de Segurança||Sim|
-|Service Broker||Sim|
+|Agente de Serviço||Sim|
 |SQL Mail||Sim|
 |Explorador de Modelos||Sim|
 |Avaliação de Vulnerabilidade||Sim|

@@ -18,20 +18,20 @@ ms.assetid: 2163bc7a-3816-4304-9c40-8954804f5465
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: d845257313466caa21976feaf69598e404a03962
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7e9b189d6b06aaf3b85815ed6d889756d466bff8
+ms.sourcegitcommit: a92fa97e7d3132ea201e4d86c76ac39cd564cd3c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906862"
+ms.lasthandoff: 12/21/2019
+ms.locfileid: "75325498"
 ---
-# <a name="stringescape-transact-sql"></a>STRING_ESCAPE (Transact-SQL)
+# <a name="string_escape-transact-sql"></a>STRING_ESCAPE (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Faz o escape dos caracteres especiais em textos e retorna o texto com caracteres com escape. **STRING_ESCAPE** é uma função determinística.  
+Faz o escape dos caracteres especiais em textos e retorna o texto com caracteres com escape. **STRING_ESCAPE** é uma função determinística, introduzida no SQL Server 2016. 
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,7 +44,7 @@ STRING_ESCAPE( text , type )
  *text*  
  É uma expressão **nvarchar**[expression](../../t-sql/language-elements/expressions-transact-sql.md) que representa o objeto que deve ter escape.  
   
- *type*  
+ *tipo*  
  Regras de escape que serão aplicadas. Atualmente, o valor com suporte é `'json'`.  
   
 ## <a name="return-types"></a>Tipos de retorno
@@ -58,7 +58,7 @@ STRING_ESCAPE( text , type )
 |Barra "/"|\\/|  
 |Backspace|\b|  
 |Avanço de formulário|\f|  
-|Linha nova|\n|  
+|Nova linha|\n|  
 |Retorno de carro|\r|  
 |Guia horizontal|\t|  
   
@@ -69,11 +69,11 @@ STRING_ESCAPE( text , type )
 |...|...|  
 |CHAR(31)|\u001f|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a--escape-text-according-to-the-json-formatting-rules"></a>A.  Fazer o escape do texto de acordo com as regras de formatação do JSON
+### <a name="a--escape-text-according-to-the-json-formatting-rules"></a>a.  Fazer o escape do texto de acordo com as regras de formatação do JSON
 
  A consulta a seguir faz o escape de caracteres especiais usando regras do JSON e retorna o texto com escape.  
   

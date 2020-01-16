@@ -1,6 +1,7 @@
 ---
-title: 'Exemplo: configurar o espelhamento de banco de dados com a Autenticação do Windows (T-SQL) | Microsoft Docs'
-ms.custom: ''
+title: Configurar o espelhamento de banco de dados com a autenticação do Windows (T-SQL)
+description: Um exemplo que mostra todas as fases necessárias para criar uma sessão de espelhamento de banco de dados com uma testemunha, usando a Autenticação do Windows com o T-SQL (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
@@ -15,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: 35800769-aede-4aac-b077-0e0e487e302f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b30804974d472f06dc2ab5971d4d3f7674c61e16
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2a263cd161370a4d3f87c673209e82296ec2a28c
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67997884"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822268"
 ---
-# <a name="example-setting-up-database-mirroring-using-windows-authentication-transact-sql"></a>Exemplo: configurar o espelhamento de banco de dados usando a autenticação do Windows (Transact-SQL)
+# <a name="example-configure-database-mirroring-using-windows-authentication-transact-sql"></a>Exemplo: Configurar o espelhamento de banco de dados usando a autenticação do Windows (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Este exemplo mostra todas as fases necessárias para criar uma sessão de espelhamento de banco de dados com uma testemunha, usando a Autenticação do Windows. Os exemplos deste tópico usam o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Note que como uma alternativa para o uso de passos de [!INCLUDE[tsql](../../includes/tsql-md.md)], você pode usar o Assistente para Configurar Segurança de Espelhamento de Banco de Dados para a configuração do espelhamento de banco de dados. Para obter mais informações, veja [Estabelecer uma sessão de espelhamento de banco de dados usando a Autenticação do Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md).  
   

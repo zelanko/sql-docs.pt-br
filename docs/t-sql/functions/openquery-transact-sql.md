@@ -22,19 +22,19 @@ helpviewer_keywords:
 ms.assetid: b805e976-f025-4be1-bcb0-3a57b0c57717
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1276b80c4a668173f5a0b7055e789ab3f521dd9e
-ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
+ms.openlocfilehash: 5c2f1a1b1060ff2ce659ed87db9fabb5c6c5346a
+ms.sourcegitcommit: 02449abde606892c060ec9e9e9a85a3f49c47c6c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72313742"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74542277"
 ---
 # <a name="openquery-transact-sql"></a>OPENQUERY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Executa a consulta passagem especificada no servidor vinculado especificado. Esse servidor é uma fonte de dados OLE DB. OPENQUERY pode ser referenciada na cláusula FROM de uma consulta como se fosse um nome de tabela. OPENQUERY também pode ser referenciada como a tabela de destino de uma instrução INSERT, UPDATE ou DELETE. Isso dependerá dos recursos do provedor OLE DB. Embora a consulta possa retornar vários conjuntos de resultados, OPENQUERY retorna somente o primeiro deles.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -49,7 +49,7 @@ OPENQUERY ( linked_server ,'query' )
  **'** *query* **'**  
  É a cadeia de caracteres de consulta executada no servidor vinculado. O comprimento máximo da cadeia de caracteres é 8 KB.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  OPENQUERY não aceita variáveis para seus argumentos.  
   
  OPENQUERY não pode ser usado para executar procedimentos armazenados estendidos em um servidor vinculado. Porém, um procedimento armazenado estendido pode ser executado em um servidor vinculado usando um nome de quatro partes. Por exemplo:  
@@ -65,7 +65,7 @@ EXEC SeattleSales.master.dbo.xp_msver
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-executing-an-update-pass-through-query"></a>A. Executando uma consulta de passagem UPDATE  
+### <a name="a-executing-an-update-pass-through-query"></a>a. Executando uma consulta de passagem UPDATE  
  O exemplo a seguir usa uma consulta de passagem `UPDATE` no servidor vinculado criado no exemplo A.  
   
 ```sql  
@@ -101,7 +101,6 @@ SELECT * FROM OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE name = ''
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [OPENDATASOURCE &#40;Transact-SQL&#41;](../../t-sql/functions/opendatasource-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
- [Funções de conjunto de linhas &#40;Transact-SQL&#41;](../../t-sql/functions/rowset-functions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   

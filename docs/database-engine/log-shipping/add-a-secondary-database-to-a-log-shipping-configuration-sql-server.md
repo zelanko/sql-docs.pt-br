@@ -1,6 +1,7 @@
 ---
-title: Adicionar um banco de dados secundário a uma configuração de envio de logs (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Adicionar o envio de logs secundário
+description: Descreve como adicionar um banco de dados secundário a uma configuração de envio de logs.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -14,30 +15,17 @@ helpviewer_keywords:
 ms.assetid: b02eba13-f8e6-4684-b7e4-75ea038ea473
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f1a2f3c2149a089b4fe62564fae1278690ba4420
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 66a194a26529834a3d77229a21b7556b03da635e
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057898"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822154"
 ---
 # <a name="add-a-secondary-database-to-a-log-shipping-configuration-sql-server"></a>Adicionar um banco de dados secundário a uma configuração de envio de logs (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Este tópico descreve como adicionar um banco de dados secundário a uma configuração de envio de logs existente no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
- **Neste tópico**  
-  
--   **Antes de começar:**  
-  
-     [Segurança](#Security)  
-  
--   **Para adicionar um banco de dados secundário de envio de logs, usando:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
--   [Tarefas relacionadas](#RelatedTasks)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   

@@ -1,6 +1,7 @@
 ---
-title: Criar uma auditoria de servidor e uma especificação de auditoria de servidor | Microsoft Docs
-ms.custom: ''
+title: Criar uma auditoria de servidor e uma especificação de auditoria de servidor
+description: Saiba como criar uma auditoria e uma especificação de auditoria de servidor do SQL Server usando o SSMS (SQL Server Management Studio) ou o T-SQL (Transact-SQL).
+ms.custom: seo-lt-2019
 ms.date: 10/16/2019
 ms.prod: sql
 ms.prod_service: security
@@ -17,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: 6624b1ab-7ec8-44ce-8292-397edf644394
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b237b2d5511ef1547687289e00b4a695375e3754
-ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
+ms.openlocfilehash: 655adfa8cd08c0594b43d736bd2bf492d29278fc
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72517980"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557851"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>Criar uma auditoria de servidor e uma especificação de auditoria de servidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Este tópico descreve como criar uma especificação de auditoria de servidor no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. *Auditar* uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou um banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] envolve eventos de rastreamento e de log que ocorrem no sistema. O objeto *SQL Server Audit* coleta uma instância única de ações no nível do servidor e/ou do banco de dados e grupos de ações a serem monitoradas. A auditoria está no nível de instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Você pode ter várias auditorias por instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . O objeto *Especificação da Auditoria do Servidor* pertence a uma auditoria. É possível criar uma especificação de auditoria de servidor por auditoria, já que ambas são criadas no escopo da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obter mais informações, veja [Auditoria do SQL Server &#40;Mecanismo de Banco de Dados&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
+  Este tópico descreve como criar uma especificação de auditoria de servidor no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. *Auditar* uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou um banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] envolve eventos de rastreamento e de log que ocorrem no sistema. O objeto *SQL Server Audit* coleta uma instância única de ações no nível do servidor e/ou do banco de dados e grupos de ações a serem monitoradas. A auditoria está no nível de instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Você pode ter várias auditorias por instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . O objeto *Especificação da Auditoria do Servidor* pertence a uma auditoria. É possível criar uma especificação de auditoria de servidor por auditoria, já que ambas são criadas no escopo da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para obter mais informações, veja [Auditoria do SQL Server &#40;Mecanismo de Banco de Dados&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
  **Neste tópico**  
   
@@ -77,7 +78,7 @@ ms.locfileid: "72517980"
      Especifica o período máximo, em milissegundos, que pode decorrer antes de as ações de auditorias serem forçadas a serem processadas.  Um valor 0 indica entrega síncrona. O valor padrão mínimo é **1000** (1 segundo). O máximo é 2.147.483.647 (2.147.483.647 segundos ou 24 dias, 20 horas, 31 minutos, 23.647 segundos).  
   
      **Em caso de falha de log de auditoria:**  
-     **Continue**  
+     **Continuar**  
      [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] As operações continuam. Os registros de auditoria não são retidos. A auditoria retomará tentando registrar eventos em log e será retomada se a condição de falha for resolvida. A seleção da opção **Continuar** pode permitir atividade não auditada, o que pode violar suas políticas de segurança. Selecionar essa opção ao continuar a operação do [!INCLUDE[ssDE](../../../includes/ssde-md.md)] é mais importante do que manter uma auditoria completa. Essa é a seleção padrão.  
   
      **Desligar servidor**  

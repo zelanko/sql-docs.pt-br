@@ -1,7 +1,7 @@
 ---
-title: Remover um banco de dados primário de um grupo de disponibilidade
+title: Remover banco de dados de um grupo de disponibilidade
 description: Etapas para remoção de um banco de dados primário de um grupo de disponibilidade Always On usando o T-SQL (Transact-SQL), o PowerShell ou o SQL Server Management Studio.
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6d4ca31e-ddf0-44bf-be5e-a5da060bf096
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b18d1c8a573a42a8b92deead627783a195bb9e6c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dfba294b5c07fc7053669c5c4ebbbd46217efb18
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014392"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822637"
 ---
 # <a name="remove-a-primary-database-from-an-always-on-availability-group"></a>Remover um banco de dados primário de um grupo de disponibilidade Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

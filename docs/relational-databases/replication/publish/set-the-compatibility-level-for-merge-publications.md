@@ -1,6 +1,7 @@
 ---
-title: Definir o nível de compatibilidade para publicações de mesclagem | Microsoft Docs
-ms.custom: ''
+title: Definir o nível de compatibilidade para publicações de mesclagem
+description: Saiba como definir o nível de compatibilidade para publicações de mesclagem com o SSMS (SQL Server Management Studio) ou o T-SQL (Transact-SQL).
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: db47ac73-948b-4d77-b272-bb3565135ea5
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3506974f6eb1bc22aa6a20833b9205c3507c113c
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: ac82c951c3e65c1d26891f802d19b8522f22a6e9
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72904897"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321202"
 ---
 # <a name="set-the-compatibility-level-for-merge-publications"></a>Definir o nível de compatibilidade para publicações de mesclagem
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +53,7 @@ ms.locfileid: "72904897"
   
 #### <a name="to-set-the-publication-compatibility-level-for-a-merge-publication"></a>Para definir o nível de compatibilidade para uma publicação de mesclagem  
   
-1.  No Publicador, execute [sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md), especificando um valor para `@publication_compatibility_level` para tornar a publicação compatível com versões antigas de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Criar uma assinatura](../../../relational-databases/replication/publish/create-a-publication.md).  
+1.  No Publicador, execute [sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md), especificando um valor para `@publication_compatibility_level` para tornar a publicação compatível com versões antigas do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Criar uma assinatura](../../../relational-databases/replication/publish/create-a-publication.md).  
 
 #### <a name="to-change-the-publication-compatibility-level-of-a-merge-publication"></a>Para definir o nível de compatibilidade da publicação de uma publicação de mesclagem  
   
@@ -130,6 +131,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)  
+ [Criar uma publicação](../../../relational-databases/replication/publish/create-a-publication.md)  
   
   

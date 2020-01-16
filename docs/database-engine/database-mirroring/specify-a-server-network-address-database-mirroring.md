@@ -1,6 +1,7 @@
 ---
-title: Especificar um endereço de rede do servidor (espelhamento de banco de dados) | Microsoft Docs
-ms.custom: ''
+title: Especificar um endereço de rede do servidor (espelhamento de banco de dados)
+description: Especifique o endereço de rede do servidor para um ponto de extremidade de espelhamento de banco de dados.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: a64d4b6b-9016-4f1e-a310-b1df181dd0c6
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1db02ef90af9e014e3481961daf08a1ce10a54c4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1fbb4df1ef746c885bb2bec9d4fe815bef8a693d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048081"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252758"
 ---
 # <a name="specify-a-server-network-address-database-mirroring"></a>Especificar um endereço de rede do servidor (Espelhamento de banco de dados)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   A configuração de uma sessão de espelhamento de banco de dados requer um endereço de rede de servidor para cada uma das instâncias de servidor. O endereço de rede de servidor de uma instância de servidor deve identificar a instância de forma inequívoca fornecendo um endereço de sistema e número de porta na qual a instância está escutando.  
   
- Antes de você poder especificar uma porta em um endereço de rede de servidor, deve existir o ponto de extremidade do espelhamento de banco de dados na instância de servidor. Para obter mais informações, veja [Criar um ponto de extremidade de espelhamento de banco de dados para a Autenticação do Windows &#40;SQL Server&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  
+ Antes de você poder especificar uma porta em um endereço de rede de servidor, deve existir o ponto de extremidade do espelhamento de banco de dados na instância de servidor. Para obter mais informações, veja [Criar um ponto de extremidade de espelhamento de banco de dados para a Autenticação do Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  
   
   
 ##  <a name="Syntax"></a> Sintaxe para um endereço de rede de servidor  
@@ -61,7 +62,7 @@ ms.locfileid: "68048081"
   
      No endereço de rede de servidor de uma instância de servidor, somente o número da porta associado a seu ponto de extremidade de espelhamento distingue essa instância de qualquer outra instância no computador. A figura a seguir ilustra os endereços de rede de servidor de duas instâncias de servidor em um único computador. A instância padrão usa a porta `7022` e a instância nomeada usa a porta `7033`. O endereço de rede de servidor para estas duas instâncias de servidor é, respectivamente: `TCP://MYSYSTEM.Adventure-works.MyDomain.com:7022` e `TCP://MYSYSTEM.Adventure-works.MyDomain.com:7033`. Note que o endereço não contém o nome da instância de servidor.  
   
-     ![Endereços de rede do servidor de uma instância padrão](../../database-engine/availability-groups/windows/media/dbm-2-instances-ports-1-system.gif "Endereços de rede do servidor de uma instância padrão")  
+     ![Endereços de rede de servidor de uma instância padrão](../../database-engine/availability-groups/windows/media/dbm-2-instances-ports-1-system.gif "Endereços de rede de servidor de uma instância padrão")  
   
      Para identificar a porta associada atualmente com o ponto de extremidade de espelhamento de banco de dados de uma instância de servidor, use a seguinte instrução do [!INCLUDE[tsql](../../includes/tsql-md.md)] :  
   
@@ -73,7 +74,7 @@ ms.locfileid: "68048081"
   
 ### <a name="examples"></a>Exemplos  
   
-#### <a name="a-using-a-system-name"></a>A. Usando um nome de sistema  
+#### <a name="a-using-a-system-name"></a>a. Usando um nome de sistema  
  O endereço de rede de servidor a seguir especifica um nome de sistema, `SYSTEM46`e a porta `7022`.  
   
 ```  

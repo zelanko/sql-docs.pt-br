@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 9f38eba6-39b1-4f1d-ba24-ee4f7e2bc969
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 85ebb4419cd81786fcfc58f7c7342e353c90d1f1
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: c42c9501772972c523d5635a159fcdeb54bf107b
+ms.sourcegitcommit: 56fb0b7750ad5967f5d8e43d87922dfa67b2deac
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73981861"
+ms.lasthandoff: 12/11/2019
+ms.locfileid: "75001963"
 ---
 # <a name="server-configuration-options-sql-server"></a>Opções de configuração do servidor (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ As opções de autoconfiguração são aquelas que o [!INCLUDE[ssNoVersion](../.
     |[soft-NUMA automático desabilitado](soft-numa-sql-server.md)|0|1|0|  
     |[padrão de soma de verificação de backup](../../database-engine/configure-windows/backup-checksum-default.md)|0|1|0|  
     |[backup compression default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)|0|1|0| 
-    |[blocked process threshold](../../database-engine/configure-windows/blocked-process-threshold-server-configuration-option.md) (A)|0|86400|0|  
+    |[blocked process threshold](../../database-engine/configure-windows/blocked-process-threshold-server-configuration-option.md) (A)|0|86.400|0|  
     |[c2 audit mode](../../database-engine/configure-windows/c2-audit-mode-server-configuration-option.md) (A, RR)|0|1|0|  
     |[clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)|0|1|0|  
     |[clr strict security](../../database-engine/configure-windows/clr-strict-security.md) (A) <br /> **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] e posterior).|0|1|0|  
@@ -109,12 +109,12 @@ As opções de autoconfiguração são aquelas que o [!INCLUDE[ssNoVersion](../.
     |[index create memory](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md) (A, SC)|704|2147483647|0|  
     |[in-doubt xact resolution](../../database-engine/configure-windows/in-doubt-xact-resolution-server-configuration-option.md) (A)|0|2|0|  
     |[lightweight pooling](../../database-engine/configure-windows/lightweight-pooling-server-configuration-option.md) (A, RR)|0|1|0|  
-    |[locks](../../database-engine/configure-windows/configure-the-locks-server-configuration-option.md) (A, RR, SC)|5000|2147483647|0|  
+    |[locks](../../database-engine/configure-windows/configure-the-locks-server-configuration-option.md) (A, RR, SC)|5\.000|2147483647|0|  
     |[max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) (A)|0|32767|0|  
     |[max full-text crawl range](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md) (A)|0|256|4|  
     |[max server memory](../../database-engine/configure-windows/server-memory-server-configuration-options.md) (A, SC)|16|2147483647|2147483647|  
     |[max text repl size](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md)|0|2147483647|65536|  
-    |[max worker threads](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md) (A)|128|32767<br /><br /> Recomendamos 1024 como o máximo para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de 32 bits e 2048 para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de 64 bits. **Observação:** o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] foi a última versão disponível no sistema operacional de 32 bits.|0<br /><br /> Zero configura automaticamente o número máximo de threads de trabalho de acordo com o número de processadores, usando a fórmula (256 + ( *\<processors>* -4) * 8) para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de 32 bits e (512 + ( *\<processors>* - 4) * 8) para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de 64 bits. **Observação:** o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] foi a última versão disponível no sistema operacional de 32 bits.|  
+    |[max worker threads](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md) (A)|128|32767<br /><br /> Recomendamos 1024 como o máximo para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de 32 bits e 2048 para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de 64 bits. **Observação:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] foi a última versão disponível no sistema operacional de 32 bits.|0<br /><br /> Zero configura automaticamente o número máximo de threads de trabalho de acordo com o número de processadores, usando a fórmula (256 + ( *\<processors>* -4) * 8) para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de 32 bits e (512 + ( *\<processors>* - 4) * 8) para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de 64 bits. **Observação:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] foi a última versão disponível no sistema operacional de 32 bits.|  
     |[media retention](../../database-engine/configure-windows/configure-the-media-retention-server-configuration-option.md) (A, RR)|0|365|0|  
     |[min memory per query](../../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md) (A)|512|2147483647|1024|  
     |[min server memory](../../database-engine/configure-windows/server-memory-server-configuration-options.md) (A, SC)|0|2147483647|0|  
@@ -124,6 +124,7 @@ As opções de autoconfiguração são aquelas que o [!INCLUDE[ssNoVersion](../.
     |[open objects](../../database-engine/configure-windows/open-objects-server-configuration-option.md) (A, RR, obsoleto)|0|2147483647|0|  
     |[optimize for ad hoc workloads](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md) (A)|0|1|0|  
     |[PH_timeout](../../database-engine/configure-windows/ph-timeout-server-configuration-option.md) (A)|1|3600|60|  
+    |[polybase enabled](../../relational-databases/polybase/polybase-installation.md#enable) (RR) **Aplica-se a**: [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)]|0|1|0|
     |[precompute rank](../../database-engine/configure-windows/precompute-rank-server-configuration-option.md) (A)|0|1|0|  
     |[priority boost](../../database-engine/configure-windows/configure-the-priority-boost-server-configuration-option.md) (A, RR)|0|1|0|  
     |[query governor cost limit](../../database-engine/configure-windows/configure-the-query-governor-cost-limit-server-configuration-option.md) (A)|0|2147483647|0|  

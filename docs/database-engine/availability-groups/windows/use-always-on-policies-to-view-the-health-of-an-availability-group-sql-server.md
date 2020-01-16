@@ -1,6 +1,7 @@
 ---
-title: Usar as políticas AlwaysOn para exibir a integridade de um grupo de disponibilidade | Microsoft Docs
-ms.custom: ''
+title: Políticas para exibir a integridade do grupo de disponibilidade
+description: Use as políticas Always On ou do PowerShell para determinar a integridade operacional de um grupo de disponibilidade Always On.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6f1bcbc3-1220-4071-8e53-4b957f5d3089
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a25f06a464fe8ba44347b4f1f117cbde64ceab76
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 13f43e5f66ca7700e9dd4732e9cf45ee1921548d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013640"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244743"
 ---
 # <a name="use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server"></a>Usar as políticas AlwaysOn para exibir a integridade de um grupo de disponibilidade (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +86,7 @@ ms.locfileid: "68013640"
   
      Esses cmdlets aceitam as seguintes opções:  
   
-    |Opção|Descrição|  
+    |Opção|DESCRIÇÃO|  
     |------------|-----------------|  
     |**AllowUserPolicies**|Executa as políticas de usuário localizadas nas categorias de políticas AlwaysOn.|  
     |**InputObject**|Uma coleção de objetos que representam grupos de disponibilidade, réplicas de disponibilidade ou estados de bancos de dados de disponibilidade (dependendo de qual cmdlet que você está usando). O cmdlet computará a integridade dos objetos especificados.|  

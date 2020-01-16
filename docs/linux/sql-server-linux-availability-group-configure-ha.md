@@ -1,8 +1,8 @@
 ---
-title: Configurar o grupo de disponibilidade Always On do SQL Server para alta disponibilidade no Linux
-titleSuffix: SQL Server
+title: Configurar um grupo de disponibilidade para o SQL Server em Linux
 description: Saiba mais sobre como criar um AG (grupo de disponibilidade) Always On do SQL Server para alta disponibilidade no Linux.
 author: MikeRayMSFT
+ms.custom: seo-lt-2019
 ms.author: mikeray
 ms.reviewer: vanto
 ms.date: 08/26/2019
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 364ed5298c83319ab0915ffc04a393c9a9097bf0
-ms.sourcegitcommit: 823d7bdfa01beee3cf984749a8c17888d4c04964
+ms.openlocfilehash: 2e234e0057db852b6b741a0103412bbacd108287
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2019
-ms.locfileid: "70030303"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558384"
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>Configurar o grupo de disponibilidade Always On do SQL Server para alta disponibilidade no Linux
 
@@ -31,7 +31,7 @@ Todos os servidores devem ser físicos ou virtuais e os servidores virtuais deve
 
 ## <a name="roadmap"></a>Roteiro
 
-As etapas para criar um AG em servidores Linux para alta disponibilidade são diferentes das etapas em um cluster de failover do Windows Server. A seguinte lista descreve as etapas de alto nível: 
+As etapas para criar um AG em servidores Linux para alta disponibilidade são diferentes das etapas em um cluster de failover do Windows Server. A lista a seguir descreve as etapas de alto nível: 
 
 1. [Configurar o SQL Server em três servidores de cluster](sql-server-linux-setup.md).
 
@@ -51,7 +51,7 @@ As etapas para criar um AG em servidores Linux para alta disponibilidade são di
    >[!IMPORTANT]
    >Os ambientes de produção exigem um agente de isolamento, como o STONITH para alta disponibilidade. As demonstrações desta documentação não usam agentes de isolamento. As demonstrações se destinam apenas a teste e validação. 
    
-   >Um cluster do Linux usa o isolamento para retornar o cluster a um estado conhecido. A maneira de configurar o isolamento depende da distribuição e do ambiente. Atualmente, o isolamento não está disponível em alguns ambientes de nuvem. Para obter mais informações, confira [Políticas de suporte para clusters de alta disponibilidade do RHEL – plataformas de virtualização](https://access.redhat.com/articles/29440).
+   >Um cluster do Linux usa o isolamento para retornar o cluster a um estado conhecido. A maneira de configurar o isolamento depende da distribuição e do ambiente. Atualmente, o isolamento não está disponível em alguns ambientes de nuvem. Para saber mais, confira [Políticas de suporte para clusters de alta disponibilidade do RHEL – plataformas de virtualização](https://access.redhat.com/articles/29440).
    
    >Para o SLES, confira [Extensão de alta disponibilidade do SUSE Linux Enterprise](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.fencing).
 

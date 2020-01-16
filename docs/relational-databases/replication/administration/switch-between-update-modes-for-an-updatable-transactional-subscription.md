@@ -1,6 +1,7 @@
 ---
-title: Alternar entre modos de atualização para uma assinatura transacional atualizável | Microsoft Docs
-ms.custom: ''
+title: Alternar entre modos (transacional atualizável)
+description: Descreve como alternar entre modos de atualização em uma publicação transacional atualizável com o SSMS (SQL Server Management Studio) ou o T-SQL (Transact-SQL).
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ab5ebab1-7ee4-41f4-999b-b4f0c420c921
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3082edc590aa05326f40f694cbaca3f8060a4b95
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 8f9480787ced42ad66602bb34db98d1c2d53bd35
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909825"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321973"
 ---
 # <a name="switch-between-update-modes-for-an-updatable-transactional-subscription"></a>Alternar entre modos de atualização para uma assinatura transacional atualizável
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

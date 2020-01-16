@@ -1,6 +1,7 @@
 ---
-title: Avaliar uma política do gerenciamento baseado em políticas de um objeto | Microsoft Docs
-ms.custom: ''
+title: Avaliar uma política do gerenciamento baseado em políticas de um objeto
+description: Saiba como avaliar uma política de uma instância, um banco de dados ou um objeto de banco de dados do SQL Server com o SSMS (SQL Server Management Studio).
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b9e9d646-4894-4dee-a02a-0c71a8dc020e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e50d06fcd76950ff885a22af67534b5006b6a1e8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a6d57bbeca2d5393504192683bcf1738374fbc4c
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68137873"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558283"
 ---
 # <a name="evaluate-a-policy-based-management-policy-from-an-object"></a>Avaliar uma política do Gerenciamento Baseado em Políticas de um objeto
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -18,12 +18,12 @@ ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9db1b4b1e08bae56a65a45d6c096f701f4172203
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9c1b80a81aa6c05727b0711e68219d5c0aa32cb9
+ms.sourcegitcommit: a92fa97e7d3132ea201e4d86c76ac39cd564cd3c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68123506"
+ms.lasthandoff: 12/21/2019
+ms.locfileid: "75325508"
 ---
 # <a name="create-indexed-views"></a>Criar exibições indexadas
 
@@ -54,19 +54,19 @@ A avaliação da mesma expressão poderá produzir resultados diferentes no [!IN
 Para verificar se as exibições podem ser mantidas corretamente e retornar resultados consistentes, as exibições indexadas requerem valores fixos para várias opções SET. As opções SET da seguinte tabela devem ser definidas com os valores mostrados na coluna **Valor Obrigatório** sempre que ocorrerem as seguintes condições:
 
 - A exibição e os índices subsequentes são criados na exibição.
-- As tabelas base referenciadas na exibição quando a tabela é criada.
+- As tabelas base referenciadas na exibição quando a exibição é criada.
 - Houver qualquer operação de inserção, atualização ou exclusão executada em qualquer tabela que participe da exibição indexada. Esse requisito inclui operações como cópia em massa, replicação e consultas distribuídas.
 - A exibição indexada for usada pelo otimizador de consulta para produzir o plano de consulta.
 
-|opções SET|Valor Obrigatório|Valor do servidor padrão|Padrão<br /><br /> Valor OLE DB e ODBC|Padrão<br /><br /> Valor da DB-Library|
+|Opções Set|Valor obrigatório|Valor do servidor padrão|Padrão<br /><br /> Valor OLE DB e ODBC|Padrão<br /><br /> Valor da DB-Library|
 |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|
-|ANSI_NULLS|ON|ON|ON|OFF|
-|ANSI_PADDING|ON|ON|ON|OFF|
-|ANSI_WARNINGS<sup>1</sup>|ON|ON|ON|OFF|
-|ARITHABORT|ON|ON|OFF|OFF|
-|CONCAT_NULL_YIELDS_NULL|ON|ON|ON|OFF|
+|ANSI_NULLS|ATIVADO|ATIVADO|ATIVADO|OFF|
+|ANSI_PADDING|ATIVADO|ATIVADO|ATIVADO|OFF|
+|ANSI_WARNINGS<sup>1</sup>|ATIVADO|ATIVADO|ATIVADO|OFF|
+|ARITHABORT|ATIVADO|ATIVADO|OFF|OFF|
+|CONCAT_NULL_YIELDS_NULL|ATIVADO|ATIVADO|ATIVADO|OFF|
 |NUMERIC_ROUNDABORT|OFF|OFF|OFF|OFF|
-|QUOTED_IDENTIFIER|ON|ON|ON|OFF|
+|QUOTED_IDENTIFIER|ATIVADO|ATIVADO|ATIVADO|OFF|
 |&nbsp;|&nbsp;|&nbsp;|&nbsp;|&nbsp;|
 
 <sup>1</sup> Configurar `ANSI_WARNINGS` como ON define implicitamente `ARITHABORT` como ON.

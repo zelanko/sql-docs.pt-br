@@ -14,23 +14,23 @@ helpviewer_keywords:
 - Transparent Data Encryption, about
 - encryption [SQL Server], transparent data encryption
 ms.assetid: c75d0d4b-4008-4e71-9a9d-cee2a566bd3b
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 ms.reviewer: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ef9e0378d3a7ca0b5749788471b4ef97832d179d
-ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
+ms.openlocfilehash: 498fe2391cd3e8109aed3f6e1e02436234ffe6f7
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68670594"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957306"
 ---
 # <a name="transparent-data-encryption-tde"></a>Criptografia de Dados Transparente (TDE)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  *TDE* (Transparent Data Encryption) criptografa os arquivos de dados [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] e [!INCLUDE[ssSDWfull](../../../includes/sssdwfull-md.md)], o que é conhecido como criptografia de dados em repouso. Você pode tomar várias precauções para ajudar a proteger o banco de dados como, por exemplo, projetando um sistema seguro, criptografando ativos confidenciais e criando um firewall em torno dos servidores de banco de dados. No entanto, em um cenário no qual a mídia física (como unidades ou fitas de backup) é roubada, um terceiro mal-intencionado pode restaurar ou anexar o banco de dados e navegar pelos dados. Uma solução é criptografar dados confidenciais no banco de dados e proteger as chaves usadas para criptografar os dados com um certificado. Isso impede que alguém sem as chaves use os dados, mas esse tipo de proteção deve ser planejado antecipadamente.  
+  *TDE* (Transparent Data Encryption) criptografa os arquivos de dados [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)]e [!INCLUDE[ssSDWfull](../../../includes/sssdwfull-md.md)] , o que é conhecido como criptografia de dados em repouso. Você pode adotar várias precauções para ajudar a proteger o banco de dados, como a criação de um sistema seguro, a criptografia de ativos confidenciais e a criação de um firewall em torno de servidores de bancos de dados. No entanto, em um cenário em que a mídia física (como unidades ou fitas de backup) é roubada, uma entidade mal-intencionada pode simplesmente restaurar ou anexar o banco de dados e procurar os dados. Uma solução é criptografar dados confidenciais no banco de dados e proteger as chaves usadas para criptografar os dados com um certificado. Isso impede que alguém sem as chaves use os dados, mas esse tipo de proteção deve ser planejado antecipadamente.  
   
- A TDE realiza a criptografia e a descriptografia de E/S em tempo real dos arquivos de dados e de log. A criptografia usa uma DEK (chave de criptografia do banco de dados), que é armazenada no registro de inicialização do banco de dados para disponibilidade durante a recuperação. A DEK é uma chave simétrica protegida por um certificado armazenado no banco de dados mestre do servidor ou uma chave assimétrica protegida por um módulo EKM. A TDE protege os dados “em repouso”, ou seja, os dados e arquivos de log. Fornece a capacidade de se adequar a muitas leis, regulamentos e diretrizes estabelecidos em vários setores. Isso permite que os desenvolvedores de software criptografem dados usando algoritmos de criptografia AES e 3DES, sem alterar os aplicativos existentes.  
+ A TDE realiza a criptografia e a descriptografia de E/S em tempo real dos arquivos de log e de dados. A criptografia usa uma chave de criptografia de banco de dados (DEK), que é armazenada no registro de inicialização do banco de dados para disponibilidade durante a recuperação. A DEK é uma chave simétrica protegida por um certificado armazenado no banco de dados mestre do servidor ou uma chave assimétrica protegida por um módulo EKM. A TDE protege os dados “em repouso”, ou seja, os dados e arquivos de log. Fornece a capacidade de se adequar a muitas leis, regulamentos e diretrizes estabelecidos em vários setores. Isso permite que os desenvolvedores de software criptografem dados usando algoritmos de criptografia AES e 3DES, sem alterar os aplicativos existentes.  
   
 > [!IMPORTANT]
 >  A TDE não fornece criptografia em canais de comunicação. Para obter mais informações sobre como criptografar dados em canais de comunicação, veja [Habilitar conexões criptografadas no Mecanismo de Banco de Dados &#40;SQL Server Configuration Manager&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
@@ -46,7 +46,7 @@ ms.locfileid: "68670594"
  
   
 ## <a name="about-tde"></a>Sobre a TDE  
- A criptografia do arquivo de banco de dados é executada no nível de página. As páginas em um banco de dados criptografado são criptografadas antes de serem gravadas no disco e descriptografadas quando lidas na memória. A TDE não aumenta o tamanho do banco de dados criptografado.  
+ A criptografia do arquivo de banco de dados é executada em nível de página. As páginas em um banco de dados criptografado são criptografadas antes de serem gravadas no disco e descriptografadas quando lidas na memória. A TDE não aumenta o tamanho do banco de dados criptografado.  
   
  **Informações aplicáveis a [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]**  
   
@@ -146,7 +146,7 @@ GO
 > [!TIP]  
 > Para monitorar alterações no status de TDE do banco de dados, use a Auditoria do SQL Server ou a Auditoria de Banco de Dados SQL. Para o SQL Server, o TDE é controlado no grupo de ação de auditoria DATABASE_CHANGE_GROUP que pode ser encontrado em [Ações e grupos de ações de auditoria do SQL Server](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md).
   
-### <a name="restrictions"></a>Restrictions  
+### <a name="restrictions"></a>Restrições  
  As operações seguintes não são permitidas durante criptografia de banco de dados inicial, alteração de chave ou descriptografia de banco de dados:  
   
 -   Descartando um arquivo de um grupo de arquivos no banco de dados  
@@ -218,7 +218,7 @@ GO
  Depois que uma chave de criptografia de banco de dados foi modificada duas vezes, um backup de log deve ser executado para que a chave de criptografia de banco de dados possa ser modificada novamente.  
   
 ### <a name="transparent-data-encryption-and-the-tempdb-system-database"></a>Transparent Data Encryption e o banco de dados do sistema tempdb  
- O banco de dados do sistema tempdb será criptografado se nenhum outro banco de dados na instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] for criptografado usando TDE. Isso pode ter um efeito de desempenho em bancos de dados não criptografados na mesma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obter mais informações sobre o banco de dados do sistema tempdb, [Banco de dados tempdb](../../../relational-databases/databases/tempdb-database.md).  
+ O banco de dados do sistema tempdb será criptografado se qualquer outro banco de dados da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] for criptografado usando TDE. Isso pode ter um efeito de desempenho em bancos de dados não criptografados na mesma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obter mais informações sobre o banco de dados do sistema tempdb, [Banco de dados tempdb](../../../relational-databases/databases/tempdb-database.md).  
   
 ### <a name="transparent-data-encryption-and-replication"></a>Transparent Data Encryption e replicação  
  A replicação não replica automaticamente os dados de um banco de dados habilitado para TDE em um formulário criptografado. É necessário habilitar separadamente a TDE se você deseja proteger a distribuição e os bancos de dados dos assinantes. A replicação de instantâneo, assim como a distribuição inicial de dados para replicações transacionais e de mesclagem, pode armazenar dados em arquivos intermediários não criptografados, como os arquivos bcp, por exemplo.  Durante replicação transacional ou de mesclagem, a criptografia pode ser habilitada para proteger o canal de comunicação. Para obter mais informações, veja [Habilitar conexões criptografadas no Mecanismo de Banco de Dados &#40;SQL Server Configuration Manager&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  

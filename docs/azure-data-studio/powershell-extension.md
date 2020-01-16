@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: SQLvariant
 ms.author: aanelson
 manager: matthend
-ms.openlocfilehash: c7a2dbdccf92a52d5733a04915acc3f76dc3f033
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 72c4d64cc93ab564b9b8b04a838f8226982890f0
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "65105957"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257584"
 ---
 # <a name="powershell-editor-support-for-azure-data-studio"></a>Suporte do Editor do PowerShell para Azure Data Studio
 
@@ -151,7 +151,7 @@ O módulo `SqlServer` contém um provedor chamado `SQLRegistration` que permite 
 
 + Servidor do Mecanismo de Banco de Dados (Servidores Registrados)
 + CMS (Sistema de Gerenciamento Central)
-+ Analysis Services
++ Serviços de análise
 + Integration Services
 + Reporting Services
 
@@ -259,12 +259,11 @@ Confira a [documentação de desenvolvimento](https://github.com/PowerShell/vsco
 
 Essa extensão está [licenciada nos termos da Licença do MIT](https://github.com/PowerShell/vscode-powershell/blob/master/LICENSE.txt). Para obter detalhes sobre os binários de terceiros que incluímos com as versões deste projeto, confira o arquivo [avisos de terceiros](https://github.com/PowerShell/vscode-powershell/blob/master/Third%20Party%20Notices.txt).
 
-## <a name="code-of-conductconduct-md"></a>[Código de Conduta][conduct-md]
+## <a name="code-of-conductconduct-md"></a>[Code of Conduct][conduct-md]
 
 Este projeto adotou o [Código de Conduta de Software Livre da Microsoft][conduct-code].
 Para saber mais, confira as [Perguntas frequentes sobre o Código de Conduta][conduct-FAQ] ou contate o [opencode@microsoft.com][conduct-email] caso tenha outras dúvidas ou comentários.
 
-[conduct-code]: http://opensource.microsoft.com/codeofconduct/
-[conduct-FAQ]: http://opensource.microsoft.com/codeofconduct/faq/
+[conduct-code]: https://opensource.microsoft.com/codeofconduct/
+[conduct-FAQ]: https://opensource.microsoft.com/codeofconduct/faq/
 [conduct-email]: mailto:opencode@microsoft.com
-[conduct-md]: https://github.com/PowerShell/vscode-powershell/blob/master/CODE_OF_CONDUCT.md

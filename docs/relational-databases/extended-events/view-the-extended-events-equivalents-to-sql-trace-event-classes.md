@@ -1,6 +1,5 @@
 ---
-title: Exibir os Eventos Estendidos equivalentes às classes do Rastreamento do SQL | Microsoft Docs
-ms.custom: ''
+title: Eventos estendidos equivalentes às classes de rastreamento de eventos do SQL
 ms.date: 03/05/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,17 +13,18 @@ helpviewer_keywords:
 ms.assetid: 7f24104c-201d-4361-9759-f78a27936011
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 968dadccedcd2b58a7ff69bd0d098cf5779a4338
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c98eeec91bdc86af8109cd715b5c0fde9d685f44
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67903406"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246118"
 ---
 # <a name="view-the-extended-events-equivalents-to-sql-trace-event-classes"></a>Exibir os Eventos Estendidos equivalentes às classes de evento de Rastreamento do SQL
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Se você desejar usar os Eventos Estendidos para coletar dados de evento equivalentes a colunas e classes de evento do Rastreamento do SQL, será útil entender como os eventos do Rastreamento do SQL são mapeados para os eventos e as ações dos Eventos Estendidos.  
   

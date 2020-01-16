@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: a3d55df7-b4e4-43f3-a14b-056cba36ab98
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6c259066aca1a4302fcd1a0caeb7fb3122c97147
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8266791ae6621dbf81f16b2eb5c83ef8c9a3c1b5
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68084562"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244594"
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "68084562"
 > [!IMPORTANT]  
 >  Execute CREATE AVAILABILITY GROUP na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que você pretende usar como a réplica primária inicial de seu novo grupo de disponibilidade. Essa instância de servidor deve residir em um nó WSFC (Windows Server Failover Clustering).  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -161,7 +161,7 @@ CREATE AVAILABILITY GROUP group_name
   
  Os valores FAILURE_CONDITION_LEVEL e HEALTH_CHECK_TIMEOUT definem uma *política de failover flexível* para determinado grupo. Essa política de failover flexível permite a você um controle granular sobre quais condições devem causar um failover automático. Para obter mais informações, consulte [Política de failover flexível para failover automático de um grupo de disponibilidade &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md).  
   
- HEALTH_CHECK_TIMEOUT **=** *milissegundos*  
+ HEALTH_CHECK_TIMEOUT **=** *milliseconds*  
  Especifica o tempo de espera (em milissegundos) para que o procedimento armazenado do sistema [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) retorne informações da integridade do servidor antes de o cluster WSFC supor que a instância do servidor está lenta ou travou. HEALTH_CHECK_TIMEOUT é definido no nível do grupo, mas é apenas relevante em réplicas de disponibilidade configuradas para o modo de disponibilidade de confirmação síncrona com failover automático (AVAILABILITY_MODE **=** SYNCHRONOUS_COMMIT).  Além disso, o tempo limite da verificação de integridade apenas poderá disparar um failover automático se as réplicas primárias e secundárias estiverem configuradas para o modo de failover automático (FAILOVER_MODE **=** AUTOMATIC) e a réplica secundária estiver sincronizada com a réplica primária no momento.  
   
  O valor HEALTH_CHECK_TIMEOUT padrão é 30.000 milissegundos (30 segundos). O valor mínimo é 15000 milissegundos (15 segundos) e o máximo é 4294967295 milissegundos.  
@@ -220,7 +220,7 @@ CREATE AVAILABILITY GROUP group_name
  É o nome da rede usada para acessar um cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Use-o se a instância de servidor participar como um parceiro de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Executar SELECT [@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md) em uma instância de servidor FCI retorna a cadeia de caracteres '*FCI_network_name*[\\*instance_name*]' inteira (que é o nome completo da réplica).  
   
  *instance_name*  
- É o nome de uma instância de um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que é hospedada por *system_name* ou *FCI_network_name* e que tem o serviço HADR habilitado. Para uma instância de servidor padrão, *instance_name* é opcional. O nome da instância não diferencia maiúsculas de minúsculas. Em uma instância de servidor autônomo, esse nome de valor é igual ao valor retornado pela execução de SELECT [@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md).  
+ É o nome de uma instância de um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que é hospedada por *system_name* ou *FCI_network_name* e que tem o serviço HADR habilitado. Para uma instância de servidor padrão, *instance_name* é opcional. O nome da instância não diferencia maiúsculas de minúsculas. Em uma instância nomeada, esse nome de valor é igual ao valor retornado executando `select ServerProperty(N'InstanceName');`.  
   
  \  
  É um separador usado apenas ao especificar *instance_name* para separá-lo de *system_name* ou de *FCI_network_name*.  
@@ -313,7 +313,7 @@ CREATE AVAILABILITY GROUP group_name
  ALL  
  Todas as conexões são permitidas com os bancos de dados na réplica secundária para acesso somente leitura.  
   
- Para obter mais informações, confira [Secundárias ativas: Réplicas secundárias legíveis &#40;Grupos de Disponibilidade Always On&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+ Para obter mais informações, confira [Secundárias ativas: Réplicas Secundárias Legíveis &#40;Grupos de Disponibilidade Always On&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
  READ_ONLY_ROUTING_URL **='** TCP **://** _system-address_ **:** _port_ **'**  
  Especifica a URL a ser usada para rotear solicitações de conexão de intenção de leitura para esta réplica de disponibilidade. Esta é a URL na qual o Mecanismo de Banco de Dados do SQL Server escuta. Normalmente, a instância padrão do Mecanismo de Banco de Dados do SQL Server escuta na porta TCP 1433.  
@@ -413,7 +413,7 @@ CREATE AVAILABILITY GROUP group_name
  MANUAL  
  Especifica a propagação manual (padrão). Esse método exige que você crie um backup do banco de dados na réplica primária e restaure manualmente esse backup nas réplicas do grupo de disponibilidade secundário.  
   
- LISTENER **‘** _dns\_name_ **’(** \<listener_option\> **)** Define um novo ouvinte do grupo de disponibilidade para esse grupo de disponibilidade. LISTENER é um argumento opcional.  
+ LISTENER **'** _dns\_name_ **'(** \<listener_option\> **)** Define um novo ouvinte do grupo de disponibilidade para esse grupo de disponibilidade. LISTENER é um argumento opcional.  
   
 > [!IMPORTANT]
 >  Antes de criar seu primeiro ouvinte, é altamente recomendável que você leia [Criar ou configurar um ouvinte do grupo de disponibilidade &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
@@ -480,10 +480,10 @@ CREATE AVAILABILITY GROUP group_name
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-configuring-backup-on-secondary-replicas-flexible-failover-policy-and-connection-access"></a>A. Configurando backup em réplicas secundárias, política de failover flexível e acesso de conexão  
+### <a name="a-configuring-backup-on-secondary-replicas-flexible-failover-policy-and-connection-access"></a>a. Configurando backup em réplicas secundárias, política de failover flexível e acesso de conexão  
  O exemplo a seguir cria um grupo de disponibilidade denominado `MyAg` para dois bancos de dados de usuários, `ThisDatabase` e `ThatDatabase`. A tabela a seguir resume os valores especificados para as opções que são definidas como um todo para o grupo de disponibilidade.  
   
-|Opção de grupo|Configuração|Descrição|  
+|Opção de grupo|Configuração|DESCRIÇÃO|  
 |------------------|-------------|-----------------|  
 |AUTOMATED_BACKUP_PREFERENCE|SECONDARY|Essa preferência de backup automatizado indica que os backups devem ocorrer em uma réplica secundária, exceto quando a réplica primária for a única réplica online (comportamento padrão). Para que a configuração AUTOMATED_BACKUP_PREFERENCE tenha efeito, é preciso executar o script dos trabalhos de backup nos bancos de dados de disponibilidade para levar em conta a preferência de backup automatizado.|  
 |FAILURE_CONDITION_LEVEL|3|Essa configuração de nível de condição de falha especifica que um failover automático deve ser iniciado em erros internos críticos do SQL Server, como spinlocks órfãos, violações do acesso de gravação graves ou muito descarte.|  
@@ -491,7 +491,7 @@ CREATE AVAILABILITY GROUP group_name
   
  Três réplicas de disponibilidade devem ser hospedadas pelas instâncias de servidor padrão nos computadores denominados `COMPUTER01`, `COMPUTER02`e `COMPUTER03`. A tabela a seguir resume os valores especificados para as opções de réplica de cada réplica.  
   
-|Opção de réplica|Configuração no `COMPUTER01`|Configuração no `COMPUTER02`|Configuração no `COMPUTER03`|Descrição|  
+|Opção de réplica|Configuração no `COMPUTER01`|Configuração no `COMPUTER02`|Configuração no `COMPUTER03`|DESCRIÇÃO|  
 |--------------------|-----------------------------|-----------------------------|-----------------------------|-----------------|  
 |ENDPOINT_URL|TCP://*COMPUTER01:5022*|TCP://*COMPUTER02:5022*|TCP://*COMPUTER03:5022*|Neste exemplo, os sistemas estão no mesmo domínio e, portanto, as URLs de pontos de extremidade podem usar o nome do sistema de computador como endereço do sistema.|  
 |AVAILABILITY_MODE|SYNCHRONOUS_COMMIT|SYNCHRONOUS_COMMIT|ASYNCHRONOUS_COMMIT|Duas das réplicas usam o modo de confirmação síncrona. Quando sincronizadas, elas oferecem suporte ao failover sem perda de dados. A terceira réplica, que usa o modo de disponibilidade de confirmação assíncrona.|  

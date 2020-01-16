@@ -1,6 +1,7 @@
 ---
-title: Espelhamento de Banco de Dados – estabelecer a sessão – Autenticação do Windows | Microsoft Docs
-ms.custom: ''
+title: Configure o espelhamento do banco de dados
+description: Etapas para configurar uma relação de espelhamento de banco de dados entre uma entidade de segurança e um espelho usando a autenticação do Windows.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
@@ -13,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 143c68a5-589f-4e7f-be59-02707e1a430a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: db81b9dc854a5b753db2b59da35ffcec6d719dd0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cbdf7d05c25aad00e084c15929cce857cb6614d3
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006433"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822295"
 ---
-# <a name="database-mirroring---establish-session---windows-authentication"></a>Espelhamento de Banco de Dados – estabelecer a sessão – Autenticação do Windows
+# <a name="configure-database-mirroring"></a>Configure o espelhamento do banco de dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!NOTE]  
@@ -36,7 +37,7 @@ ms.locfileid: "68006433"
   
 ### <a name="to-establish-a-database-mirroring-session"></a>Para estabelecer uma sessão de espelhamento de banco de dados  
   
-1.  Crie o banco de dados espelho. Para obter mais informações, consulte [Preparar um banco de dados espelho para espelhamento &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
+1.  Crie o banco de dados espelho. Para obter mais informações, veja [Preparar um banco de dados espelho para espelhamento &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
   
 2.  Defina a segurança em cada instância do servidor.  
   
@@ -221,7 +222,7 @@ ms.locfileid: "68006433"
  [Espelhamento e replicação de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)   
  [Configurando o espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)   
  [Especificar um endereço de rede do servidor &#40;espelhamento de banco de dados&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)   
- [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)  
+ [Modos de operação de espelhamento de banco de dados](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)  
   
   
 

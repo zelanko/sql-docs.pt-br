@@ -22,12 +22,12 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 663e4bca1dc607cbdf4b19849701bea24461b600
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4cf6e85cef8d95e2b1bb167d482f36ec540196f6
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68081544"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255928"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>Guia de arquitetura e design de índices do SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ Este guia aborda os seguintes tipos de índices:
 -   Clusterizado
 -   Não clusterizado
 -   Exclusivo
--   Filtrado
+-   Filtered
 -   columnstore
 -   Hash
 -   Não clusterizado com otimização de memória
@@ -53,7 +53,9 @@ Para obter informações sobre índices espaciais, consulte [Visão geral de ín
 Para obter informações sobre índices de texto completo, consulte [Popular índices de texto completo](../relational-databases/search/populate-full-text-indexes.md).
   
 ##  <a name="Basics"></a> Noções básicas sobre criação de índice  
- Um índice é uma estrutura em disco ou in-memory associada a uma tabela ou exibição que acelera a recuperação de linhas de uma tabela ou exibição. Um índice contém chaves criadas de uma ou mais colunas da tabela ou exibição. Para índices em disco, essas chaves são armazenadas em uma estrutura (árvore B) que permite ao SQL Server localizar a linha ou as linhas associadas aos valores de chave de forma rápida e eficaz.  
+ Pense em um livro normal: no final do livro, há um índice que ajuda a localizar rapidamente as informações dentro dele. O índice é uma lista classificada de palavras-chave e, ao lado de cada palavra-chave, está um conjunto de números de página que aponta para as páginas em que cada palavra-chave pode ser encontrada. Um índice do SQL Server não é diferente: é uma lista ordenada de valores e, para cada valor, há ponteiros para as [páginas](../relational-databases/pages-and-extents-architecture-guide.md) de dados em que esses valores estão localizados. O índice em si é armazenado em páginas, compondo as Páginas de Índice no SQL Server. Em um livro normal, se o índice abranger várias páginas e você precisar localizar ponteiros para todas as páginas que contêm a palavra "SQL", por exemplo, você precisará folhear até encontrar a página de índice que contém a palavra-chave "SQL". De lá, você seguirá os ponteiros para todas as páginas do livro.  Isso poderá ser otimizado ainda mais se, no início do índice, você criar uma única página contendo uma lista alfabética do local em que cada letra pode ser encontrada. Por exemplo:  "A a D – página 121", "E a G – página 122" e assim por diante. Essa página adicional eliminaria a etapa de folhear no índice para encontrar o local inicial. Essa página não existe em livros normais, mas existe em um índice do SQL Server. Essa página única é chamada de página raiz do índice. A página raiz é a página inicial da estrutura de árvore usada por um índice do SQL Server. Seguindo a analogia da árvore, as páginas finais que contêm ponteiros para os dados reais são chamadas de "páginas de folha" da árvore. 
+
+ Um índice do SQL Server é uma estrutura em disco ou na memória associada a uma tabela ou exibição que acelera a recuperação de linhas de uma tabela ou exibição. Um índice contém chaves criadas de uma ou mais colunas da tabela ou exibição. Para índices em disco, essas chaves são armazenadas em uma estrutura de árvore (árvore B) que permite ao SQL Server localizar a linha ou as linhas associadas aos valores de chave de forma rápida e eficaz.  
 
  Um índice armazena dados logicamente organizados como uma tabela com linhas e colunas e fisicamente armazenados em um formato de dados de linha chamado *rowstore* <sup>1</sup> ou armazenados em um formato de dados de coluna chamado *[columnstore](#columnstore_index)* .  
     
@@ -79,7 +81,7 @@ Para obter informações sobre índices de texto completo, consulte [Popular ín
 4.  Determine quais opções de índice poderiam aumentar o desempenho na criação ou manutenção do índice. Por exemplo, a criação de um índice clusterizado em uma tabela grande existente se beneficiará da opção de índice `ONLINE`. A opção ONLINE permite que atividade simultânea nos dados subjacentes continue enquanto o índice está sendo criado ou reconstruído. Para obter mais informações sobre opções de índice, consulte [Definir opções de índice](../relational-databases/indexes/set-index-options.md).  
   
 5.  Determine o melhor local de armazenamento para o índice. Um índice não clusterizado pode ser armazenado no mesmo grupo de arquivos que a tabela subjacente ou em um grupo de arquivos diferente. O local de armazenamento de índices pode melhorar o desempenho de consulta aumentando desempenho de E/S do disco. Por exemplo, o armazenamento de um índice não clusterizado em um grupo de arquivos que está em um disco diferente do grupo de arquivos de tabela pode melhorar o desempenho porque vários discos podem ser lidos ao mesmo tempo.  
-     Alternativamente, os índices clusterizados e não clusterizados podem usar um esquema de partição em vários grupos de arquivos. O particionamento facilita o gerenciamento de tabelas ou índices grandes permitindo o acesso ou o gerenciamento de subconjuntos de dados de forma rápida e eficaz, enquanto mantém a integridade geral da coleção. Para obter mais informações, consulte [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md). Quando você pensar em particionamento, determine se o índice deve ser alinhado; isto é, particionado essencialmente da mesma maneira que a tabela ou particionado de forma independente.   
+     Alternativamente, os índices clusterizados e não clusterizados podem usar um esquema de partição em vários grupos de arquivos. O particionamento facilita o gerenciamento de tabelas ou índices grandes permitindo o acesso ou o gerenciamento de subconjuntos de dados de forma rápida e eficaz, enquanto mantém a integridade geral da coleção. Para saber mais, confira [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md). Quando você pensar em particionamento, determine se o índice deve ser alinhado; isto é, particionado essencialmente da mesma maneira que a tabela ou particionado de forma independente.   
 
 ##  <a name="General_Design"></a> Diretrizes para criação de índice geral  
  Administradores de banco de dados experientes podem projetar um bom conjunto de índices, mas essa tarefa é muito complexa, demorada e propensa a erros até mesmo para bancos de dados e cargas de trabalho moderadamente complexos. Compreender as características de seu banco de dados, consultas e colunas de dados pode lhe ajudar a projetar índices melhores.  
@@ -124,7 +126,7 @@ Para obter informações sobre índices de texto completo, consulte [Popular ín
   
 -   Colunas que são dos tipos de dados **ntext**, **text**, **image**, **varchar(max)** , **nvarchar(max)** e **varbinary(max)** não podem ser especificadas como colunas de chave de índice. Entretanto, os tipos de dados **varchar(max)** , **nvarchar(max)** , **varbinary(max)** e **xml** podem participar de um índice não clusterizado, como colunas de índice não chave. Para obter mais informações, consulte a seção ['Índice com colunas incluídas](#Included_Columns)' neste guia.  
   
--   Um tipo de dados **xml** só pode ser uma coluna de chave em um índice XML. Para obter mais informações, consulte [Índices XML &#40;SQL Server&#41;](../relational-databases/xml/xml-indexes-sql-server.md). O SQL Server 2012 SP1 apresenta um novo tipo de índice XML conhecido como um índice XML seletivo. Esse novo índice pode melhorar o desempenho da consulta dos dados armazenados como XML no SQL Server, permitir uma indexação muito mais rápida de cargas de trabalho de dados XML grandes e melhorar a escalabilidade ao reduzir os custos de armazenamento do próprio índice. Para obter mais informações, consulte [Índices XML seletivos &#40;SXI&#41;](../relational-databases/xml/selective-xml-indexes-sxi.md).  
+-   Um tipo de dados **xml** só pode ser uma coluna de chave em um índice XML. Para obter mais informações, veja [Índices XML &#40;SQL Server&#41;](../relational-databases/xml/xml-indexes-sql-server.md). O SQL Server 2012 SP1 apresenta um novo tipo de índice XML conhecido como um índice XML seletivo. Esse novo índice pode melhorar o desempenho da consulta dos dados armazenados como XML no SQL Server, permitir uma indexação muito mais rápida de cargas de trabalho de dados XML grandes e melhorar a escalabilidade ao reduzir os custos de armazenamento do próprio índice. Para obter mais informações, consulte [Índices XML seletivos &#40;SXI&#41;](../relational-databases/xml/selective-xml-indexes-sxi.md).  
   
 -   Examine a singularidade da coluna. Um índice exclusivo em vez de um índice não exclusivo na mesma combinação de colunas, provê informações adicional para o otimizador de consulta, o que torna o índice mais útil. Para obter mais informações, consulte [Diretrizes de design de índice exclusivo](#Unique) neste guia.  
   
@@ -646,9 +648,9 @@ Com estas noções básicas ficará mais fácil entender outros artigos sobre co
 #### <a name="data-storage-uses-columnstore-and-rowstore-compression"></a>O armazenamento de dados usa compactação de columnstore e rowstore
 Em discussões sobre índices columnstore, usamos os termos *rowstore* e *columnstore* para enfatizar o formato do armazenamento de dados. Os índices columnstore usam os dois tipos de armazenamento.
 
- ![Clustered Columnstore Index](../relational-databases/indexes/media/sql-server-pdw-columnstore-physicalstorage.gif "Clustered Columnstore Index")
+ ![Índice columnstore clusterizado](../relational-databases/indexes/media/sql-server-pdw-columnstore-physicalstorage.gif "Índice columnstore clusterizado")
 
-- Um **columnstore** são dados organizados logicamente como uma tabela com linhas e colunas e armazenados fisicamente em um formato de dados com reconhecimento de colunas.
+- Um **columnstore** são dados logicamente organizados como uma tabela com linhas e colunas e fisicamente armazenados em um formato de dados com reconhecimento de coluna.
   
   Um índice columnstore armazena fisicamente a maioria dos dados no formato columnstore. No formato columnstore, os dados são compactados e descompactados como colunas. Não é necessário descompactar outros valores em cada linha que não sejam solicitados pela consulta. Isso acelera a verificação de uma coluna inteira de uma tabela grande. 
 
@@ -673,7 +675,7 @@ O deltastore é composto de um ou mais rowgroups chamados **rowgroups delta**. C
 
 Cada coluna tem alguns de seus valores em cada rowgroup. Esses valores são chamados de **segmentos de coluna**. Cada rowgroup contém um segmento de coluna para cada coluna na tabela. Cada coluna tem um segmento de coluna em cada rowgroup.
 
-![Column segment](../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "Column segment") 
+![Segmento de coluna](../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "|::ref2::|") 
  
 Quando o índice columnstore compacta um rowgroup, ele compacta cada segmento de coluna separadamente. Para descompactar uma coluna inteira, o índice columnstore só precisa descompactar um segmento de coluna de cada rowgroup.   
 
@@ -709,7 +711,7 @@ A partir do [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], é possível criar u
   
 A partir do [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], é possível ter **um ou mais índices rowstore não clusterizados em um índice columnstore**. Fazendo isso, você pode executar buscas de tabela eficientes no columnstore subjacente. Outras opções também são disponibilizadas. Por exemplo, você pode impor uma restrição de chave primária usando uma restrição UNIQUE na tabela rowstore. Como um valor não exclusivo não poderá ser inserido na tabela rowstore, o SQL Server não pode inserir o valor no columnstore.  
  
-### <a name="performance-considerations"></a>Considerações sobre desempenho 
+### <a name="performance-considerations"></a>Considerações sobre o desempenho 
 
 -   A definição do índice columnstore não clusterizado oferece suporte ao uso de uma condição filtrada. Para minimizar o impacto no desempenho da adição de um índice columnstore em uma tabela OLTP, use uma condição filtrada para criar um índice columnstore não clusterizado apenas nos dados inativos da sua carga de trabalho operacional. 
   
@@ -755,7 +757,7 @@ A função de hash usada para índices de hash tem as seguintes características
   
 A interação entre o índice de hash e os buckets é resumida na imagem a seguir.  
   
-![hekaton_tables_23d](../relational-databases/in-memory-oltp/media/hekaton-tables-23d.png "Chaves de índice, inseridos na função de hash, a saída é o endereço de um bucket de hash, que aponta para o início da cadeia.")  
+![hekaton_tables_23d](../relational-databases/in-memory-oltp/media/hekaton-tables-23d.png "Chaves de índice, inseridas na função de hash, a saída é o endereço de um bucket de hash, que aponta para o início da cadeia.")  
 
 ### <a name="configuring_bucket_count"></a> Configurando o número de buckets do índice de hash
 O número de buckets do índice de hash é especificado no momento da criação do índice e pode ser alterado com a sintaxe `ALTER TABLE...ALTER INDEX REBUILD`.  
@@ -779,7 +781,7 @@ Um **número muito grande** de buckets tem as seguintes desvantagens:
 > [!NOTE]
 > A adição de mais buckets não contribui para reduzir o encadeamento de entradas que compartilham um valor duplicado. A taxa de duplicação de valor é usada para decidir se um hash é o tipo de índice apropriado, não para calcular o número de buckets.  
 
-### <a name="performance-considerations"></a>Considerações sobre desempenho  
+### <a name="performance-considerations"></a>Considerações sobre o desempenho  
   
 O desempenho de um índice de hash é:  
   
@@ -846,14 +848,14 @@ Há três operações diferentes que podem ser necessárias para gerenciar a est
 #### <a name="delta-consolidation"></a>Consolidação de delta
 Uma cadeia grande de registros delta pode acabar prejudicando o desempenho de pesquisas, pois isso pode significar que estamos percorrendo cadeias longas durante a pesquisa por meio de um índice. Se um novo registro delta for adicionado a uma cadeia que já tem 16 elementos, as alterações nos registros delta serão consolidadas na página de índice referenciada e, em seguida, a página será recriada, incluindo as alterações indicadas pelo novo registro delta que dispararam a consolidação. A página recém-recriada terá a mesma ID de página, mas um novo endereço de memória. 
 
-![hekaton_tables_23e](../relational-databases/in-memory-oltp/media/HKNCI_Delta.gif "Consolidação de registros delta")
+![hekaton_tables_23e](../relational-databases/in-memory-oltp/media/HKNCI_Delta.gif "Fusão de registros delta")
 
 #### <a name="split-page"></a>Dividir página
 Uma página de índice na Árvore Bw aumenta conforme a necessidade, começando com o armazenamento de uma única linha até um máximo de 8 KB. Depois que a página de índice aumentar para 8 KB, uma nova inserção de uma única linha fará com que a página de índice seja dividida. Para uma página interna, isso significa que quando não há mais nenhum espaço para adição de outro ponteiro e valor de chave, e para uma página de folha, isso significa que a linha será muito grande para se ajustar à página depois que todos os registros delta forem incorporados. As informações de estatísticas no cabeçalho de uma página de folha controlam a quantidade de espaço que será necessário para consolidar os registros delta e essas informações são ajustadas a cada adição de um novo registro delta. 
 
 Uma operação de Divisão é feita em duas etapas atômicas. Na imagem abaixo, suponha que uma página de Folha force uma divisão porque uma chave com o valor 5 está sendo inserida e existe uma página não folha apontando para o final da página atual no nível de folha (valor de chave 4).
 
-![hekaton_tables_23f](../relational-databases/in-memory-oltp/media/HKNCI_Split.gif "Dividindo páginas")
+![hekaton_tables_23f](../relational-databases/in-memory-oltp/media/HKNCI_Split.gif "Como dividir páginas")
 
 **Etapa 1:** alocar duas novas páginas P1 e P2 e dividir as linhas da página P1 antiga nessas novas páginas, incluindo a linha recém-inserida. Um novo slot na Tabela de Mapeamento de Página é usado para armazenar o endereço físico da página P2. Essas páginas, P1 e P2, ainda não são acessíveis a todas as operações simultâneas. Além disso, o ponteiro lógico de P1 para P2 é definido. Em seguida, em uma única etapa atômica, atualize a Tabela de Mapeamento de Página para alterar o ponteiro do P1 antigo para o novo P1. 
 
@@ -866,7 +868,7 @@ Quando uma linha é excluída de uma página, um registro delta para a exclusão
 
 Na imagem abaixo, suponha que uma operação `DELETE` excluirá o valor de chave 10. 
 
-![hekaton_tables_23g](../relational-databases/in-memory-oltp/media/HKNCI_Merge.gif "Mesclando páginas")
+![hekaton_tables_23g](../relational-databases/in-memory-oltp/media/HKNCI_Merge.gif "Como mesclar páginas")
 
 **Etapa 1:** uma página delta que representa o valor da chave 10 (triângulo azul) é criada e seu ponteiro na página não folha Pp1 é definido como a nova página delta. Além disso, uma página especial delta de mesclagem (triângulo verde) é criada e é vinculada para apontar para a página delta. Neste estágio, nenhuma das páginas (página delta e página delta de mesclagem) é visível para transação simultânea. Em uma única etapa atômica, o ponteiro para a página nível Folha P1 na Tabela de Mapeamento de Página é atualizado para apontar para a página delta de mesclagem. Após essa etapa, a entrada do valor de chave 10 em Pp1 agora apontará para a página delta de mesclagem. 
 
@@ -874,7 +876,7 @@ Na imagem abaixo, suponha que uma operação `DELETE` excluirá o valor de chave
 
 **Etapa 3:** as páginas de nível folha P2 e P1 são mescladas e as páginas delta, removidas. Para fazer isso, uma nova página P3 é alocada e as linhas de P2 e P1 são mescladas e as alterações da página delta são incluídas no novo P3. Em seguida, em uma única etapa atômica, a entrada da Tabela de Mapeamento de Página que aponta para a página P1 é atualizada para apontar para a página P3. 
 
-### <a name="performance-considerations"></a>Considerações sobre desempenho
+### <a name="performance-considerations"></a>Considerações sobre o desempenho
 
 O desempenho de um índice não clusterizado é melhor do que o de índices de hash não clusterizados ao consultar uma tabela com otimização de memória com predicados de desigualdade.
 

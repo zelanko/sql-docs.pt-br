@@ -1,6 +1,5 @@
 ---
-title: Mecanismo de eventos estendidos do SQL Server | Microsoft Docs
-ms.custom: ''
+title: Mecanismo de eventos estendidos do SQL Server
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -13,12 +12,12 @@ ms.assetid: d74642a5-42b9-4a15-aa3d-f98bfe695050
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: febe2e0e7964d550f0b154188281f3c7bd3f2281
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: eeaa1cbae803e3f4eedef3231f9ab9bbbe31deba
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009405"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242960"
 ---
 # <a name="sql-server-extended-events-engine"></a>Mecanismo de eventos estendidos do SQL Server
 
@@ -38,7 +37,7 @@ ms.locfileid: "68009405"
   
  A ilustração seguinte mostra uma exibição simplificada de uma sessão de eventos estendidos. Para obter mais informações, consulte [Sessões de eventos estendidos do SQL Server](../../relational-databases/extended-events/sql-server-extended-events-sessions.md).  
   
- ![Arquitetura detalhada de eventos estendidos](../../relational-databases/extended-events/media/xearchitecturedetailed.gif "Arquitetura detalhada de eventos estendidos")  
+ ![Arquitetura de eventos estendidos detalhada](../../relational-databases/extended-events/media/xearchitecturedetailed.gif "Arquitetura de eventos estendidos detalhada")  
   
  Observe o seguinte:  
   

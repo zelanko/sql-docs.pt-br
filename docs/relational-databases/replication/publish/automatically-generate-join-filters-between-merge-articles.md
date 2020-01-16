@@ -1,6 +1,7 @@
 ---
-title: Gerar automaticamente filtros de junção entre artigos de mesclagem | Microsoft Docs
-ms.custom: ''
+title: Gerar filtros de junção automaticamente (mesclagem)
+description: Descreve como gerar automaticamente um conjunto de filtros de junção na página 'Filtrar Linhas de Tabela' do 'Assistente para Nova Publicação' em uma publicação de mesclagem do SSMS (SQL Server Management Studio).
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7ef419f4-c17f-42a5-9068-174a3ec08941
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4b3d21e2dcecf965e82ea5a88a51d6eb64ebfb88
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a8bc0ae6764d96b03088cb05eb72dc5ab4f3a0d6
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67907971"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321273"
 ---
 # <a name="automatically-generate-join-filters-between-merge-articles"></a>Gerar automaticamente filtros de junção entre artigos de mesclagem
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

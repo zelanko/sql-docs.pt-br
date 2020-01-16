@@ -18,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 44c8739327d84999456302bf2a21fd6858658d4c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 1cb9ca9739ca6f50a2424d9d68ee66263edf08f3
+ms.sourcegitcommit: 02449abde606892c060ec9e9e9a85a3f49c47c6c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71294002"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74542298"
 ---
 # <a name="script-task"></a>Tarefa Script
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  A tarefa Script fornece código para execução de funções que não estão disponíveis nas tarefas internas e transformações fornecidas pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . A tarefa Script também pode combinar funções em um script em vez de usar tarefas e transformações múltiplas. A tarefa Script é usada para trabalho que deve ser feito uma vez em um pacote (ou uma vez por objeto enumerado), e não para trabalho a ser feito uma vez por linha de dados.  
+  A tarefa Script fornece código para execução de funções que não estão disponíveis nas tarefas internas e transformações fornecidas pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. A tarefa Script também pode combinar funções em um script em vez de usar tarefas e transformações múltiplas. A tarefa Script é usada para trabalho que deve ser feito uma vez em um pacote (ou uma vez por objeto enumerado), e não para trabalho a ser feito uma vez por linha de dados.  
   
  A tarefa Script pode ser usada para os seguintes propósitos:  
   
@@ -51,7 +51,7 @@ ms.locfileid: "71294002"
   
  O VSTA fornece todos os recursos padrão do ambiente [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] , como o editor [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] codificado por cor, o IntelliSense e o **Pesquisador de Objetos**. O VSTA também usa o mesmo depurador usado por outras ferramentas de desenvolvimento [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Os pontos de interrupção no script funcionam de forma consistente com os pontos de interrupção em tarefas e contêineres do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . O VSTA dá suporte às linguagens de programação [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic e [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#.  
   
- Para executar um script é necessário ter VSTA instalado no computador onde o pacote é executado. Quando o pacote é executado, a tarefa carrega o mecanismo de script e executa o script. Você pode acessar assemblies .NET externos em scripts adicionando referências aos assemblies no projeto.  
+ Para executar um script é necessário ter VSTA instalado no computador onde o pacote é executado. Quando o pacote é executado, a tarefa carrega o mecanismo de script e executa o script. Você pode acessar assemblies .NET externos em scripts adicionando referências aos assemblies no projeto. No momento, não há suporte para referências de assembly do .NET Core e do .NET Standard.  
   
 > [!NOTE]  
 >  Ao contrário das versões anteriores em que você podia indicar se os scripts eram pré-compilados, todos os scripts são pré-compilados no [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] e em versões posteriores. Quando um script é pré-compilado, o mecanismo de linguagem não é carregado no tempo de execução e o pacote é executado mais rapidamente. No entanto, arquivos binários pré-compilados consomem espaço significativo em disco.  
@@ -61,7 +61,7 @@ ms.locfileid: "71294002"
   
 -   Forneça o script personalizado executado pela tarefa.  
   
--   Especifique o método no projeto VSTA que o tempo de execução [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] chama como o ponto de entrada no código da tarefa Script.  
+-   Especifique o método no projeto VSTA que o runtime [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] chama como o ponto de entrada no código da tarefa Script.  
   
 -   Especifique a linguagem do script.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "71294002"
 ### <a name="configuring-the-script-task-in-the-designer"></a>Configurando a tarefa Script no Designer  
  A tabela a seguir descreve o evento **ScriptTaskLogEntry** que pode ser registrado para a tarefa Script. O evento **ScriptTaskLogEntry** é selecionado para registro em log na guia **Detalhes** da caixa de diálogo **Configurar Logs de SSIS** . Para obter mais informações, consulte [Log do SSIS &#40;Integration Services&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
   
-|Entrada de log|Descrição|  
+|Entrada de log|DESCRIÇÃO|  
 |---------------|-----------------|  
 |**ScriptTaskLogEntry**|Informa os resultados da implementação do registro em log no script. A tarefa grava uma entrada de log para cada chamada ao método **Log** do objeto **Dts** . A tarefa grava essas entradas quando o código é executado. Para obter mais informações, consulte [Registro em log na Tarefa Script](../../integration-services/extending-packages-scripting/task/logging-in-the-script-task.md).|  
   
@@ -125,7 +125,7 @@ ms.locfileid: "71294002"
  Para definir a linguagem de criação de scripts padrão para a tarefa Script, use a opção **Idiomas de script** na página **Geral** da caixa de diálogo **Opções** . Para obter mais informações, consulte [General Page](../../integration-services/control-flow/script-task-editor-general-page.md).  
   
  **EntryPoint**  
- Especifique o método a ser chamado pelo tempo de execução do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] como ponto de entrada no código da tarefa Script. O método especificado deve estar na classe ScriptMain do projeto do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA). ScriptMain é a classe padrão gerada pelos modelos de script.  
+ Especifique o método a ser chamado pelo runtime do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] como ponto de entrada no código da tarefa Script. O método especificado deve estar na classe ScriptMain do projeto do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA). ScriptMain é a classe padrão gerada pelos modelos de script.  
   
  Caso altere o nome do método no projeto do VSTA, será preciso alterar o valor da propriedade **EntryPoint** .  
   

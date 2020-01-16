@@ -1,6 +1,7 @@
 ---
-title: Informações da publicação – avisos – publicação de mesclagem – SQL Server 2005+ | Microsoft Docs
-ms.custom: ''
+title: Avisos (Informações da Publicação de Mesclagem)
+description: Descreve a guia 'Avisos' da página Informações da Publicação de Replicação de Mesclagem do SQL Server Management Studio do SQL Server 2005 e posterior.
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 9bef3565-5f13-42ac-8723-ebe55b0c11e6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: fd25636ed1451f51430e889051bef18c8ce1570b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 41e709bcbc533c3cf7ff294dd2b07a6c638a0c52
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68120288"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321326"
 ---
 # <a name="publication-information-warnings-merge-publication-sql-server-2005-and-later"></a>Informações da Publicação, Avisos (publicação de mesclagem, SQL Server 2005 e versões posteriores)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +54,7 @@ ms.locfileid: "68120288"
  Além de exibir de um aviso no Replication Monitor, atingir um limite também pode disparar um alerta. Os alertas são definidos clicando em **Configurar Alertas** e fornecendo informações na caixa de diálogo **Configurar Alertas de Replicação** .  
   
 ## <a name="options"></a>Opções  
- **Ativado**  
+ **Enabled**  
  Selecione para habilitar um aviso e especificar um limite.  
   
  **Alerta**  
@@ -82,6 +83,6 @@ ms.locfileid: "68120288"
  [Exibir informações e executar tarefas usando o Replication Monitor](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Monitorar o desempenho com o Replication Monitor](../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md)   
  [Monitorando a Replicação](../../relational-databases/replication/monitor/monitoring-replication.md)   
- [Set Thresholds and Warnings in Replication Monitor](../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
+ [Definir limites e avisos no Replication Monitor](../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
   
   

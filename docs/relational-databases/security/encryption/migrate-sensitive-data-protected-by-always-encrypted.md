@@ -1,6 +1,7 @@
 ---
-title: Carregar em massa dados criptografados em colunas usando o Always Encrypted | Microsoft Docs
-ms.custom: ''
+title: Carregar em massa dados criptografados em colunas usando o Always Encrypted
+description: Saiba como carregar dados em massa em colunas usando o Always Encrypted com o SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 11/04/2015
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -13,12 +14,12 @@ ms.assetid: b2ca08ed-a927-40fb-9059-09496752595e
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9faa58382c1916d6691c790e955e1dbc409bb119
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 4c76c8896d19bed29bd8e71f6726b05cc0526e91
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594163"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558195"
 ---
 # <a name="bulk-load-encrypted-data-to-columns-using-always-encrypted"></a>Carregar em massa dados criptografados em colunas usando o Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ Para carregar dados criptografados sem realizar verificações de metadados no s
 ## <a name="data-migration-scenarios"></a>Cenários de migração de dados  
 A tabela a seguir mostra as configurações recomendadas apropriadas para vários cenários de migração.  
  
-![always-encrypted-migration](../../../relational-databases/security/encryption/media/always-encrypted-migration.PNG "always-encrypted-migration")  
+![always-encrypted-migration](../../../relational-databases/security/encryption/media/always-encrypted-migration.PNG "|::ref1::|")  
 
 ## <a name="bulk-loading-of-encrypted-data"></a>Carregamento em massa de dados criptografados  
 Use o processo a seguir para carregar dados criptografados.  
@@ -63,7 +64,7 @@ O cenário a seguir demonstra como importar dados incorretamente pode corromper 
  
 4.  O mesmo ou outro aplicativo se conecta ao banco de dados usando o driver habilitado para o Always Encrypted e com **column encryption setting=enabled** na cadeia de conexão e recupera os dados. O aplicativo espera que os dados sejam descriptografados de maneira transparente. No entanto, o driver não descriptografa os dados porque trata-se de texto cifrado incorreto.  
 
-## <a name="best-practice"></a>Prática recomendada  
+## <a name="best-practice"></a>Melhor prática  
  
 Use contas de usuários designadas para execução longa de cargas de trabalho usando essa opção.  
  
@@ -71,7 +72,7 @@ Para aplicativos ou ferramentas de cópia em massa de execução curta que preci
  
 Não use essa opção para o desenvolvimento de novos aplicativos. Em vez disso, use um driver de cliente que ofereça uma API para suprimir verificações de metadados criptográficos para uma única sessão, como a opção He AllowEncryptedValueModifications no Provedor de Dados .NET Framework para SQL Server. Confira [Copiar dados criptografados usando SqlBulkCopy](develop-using-always-encrypted-with-net-framework-data-provider.md#copying-encrypted-data-using-sqlbulkcopy). 
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Próximas etapas
 - [Consultar colunas usando o Always Encrypted com o SQL Server Management Studio](always-encrypted-query-columns-ssms.md)
 - [Desenvolver aplicativos usando o Always Encrypted](always-encrypted-client-development.md)
 

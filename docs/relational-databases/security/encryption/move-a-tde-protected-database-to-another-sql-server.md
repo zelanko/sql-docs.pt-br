@@ -1,6 +1,7 @@
 ---
-title: Mover um banco de dados protegido por TDE para outro SQL Server | Microsoft Docs
-ms.custom: ''
+title: Mover um banco de dados protegido por TDE para outro SQL Server
+description: Descreve como proteger um banco de dados usando a TDE (Transparent Data Encryption) e, em seguida, movê-lo para outra instância do SQL Server usando o SSMS (SQL Server Management Studio) ou o T-SQL (Transact-SQL).
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: vanto
@@ -10,18 +11,18 @@ helpviewer_keywords:
 - Transparent Data Encryption, moving
 - TDE, moving a database
 ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
-author: aliceku
-ms.author: aliceku
-ms.openlocfilehash: 991af6f353fb4862bd66426e7fdeed2664f3d101
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: 21918147a6efdc750ecb56eb44c457fea9d962ac
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594310"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558500"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>Mover um banco de dados protegido por TDE para outro SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Este tópico descreve como proteger um banco de dados usando a TDE (Transparent Data Encryption) e, em seguida, mover o banco de dados para outra instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../../includes/tsql-md.md)]. A TDE realiza a criptografia e a descriptografia de E/S em tempo real dos arquivos de dados e de log. A criptografia usa uma DEK (chave de criptografia do banco de dados), que é armazenada no registro de inicialização do banco de dados para disponibilidade durante a recuperação. A DEK é uma chave simétrica protegida por um certificado armazenado no banco de dados **mestre** do servidor ou uma chave assimétrica protegida por um módulo EKM.   
+  Este tópico descreve como proteger um banco de dados usando a TDE (Transparent Data Encryption) e, em seguida, mover o banco de dados para outra instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../../includes/tsql-md.md)]. A TDE realiza a criptografia e a descriptografia de E/S em tempo real dos arquivos de log e de dados. A criptografia usa uma chave de criptografia de banco de dados (DEK), que é armazenada no registro de inicialização do banco de dados para disponibilidade durante a recuperação. A DEK é uma chave simétrica protegida por um certificado armazenado no banco de dados **mestre** do servidor ou uma chave assimétrica protegida por um módulo EKM.   
    
 ##  <a name="Restrictions"></a> Limitações e restrições  
   
@@ -214,13 +215,13 @@ Os procedimentos a seguir mostram a que você precisa mover um banco de dados pr
      **Status**  
      Exibe o status do banco de dados de acordo com a seguinte tabela.  
   
-    |Ícone|Texto de status|Descrição|  
+    |ícone|Texto de status|DESCRIÇÃO|  
     |----------|-----------------|-----------------|  
     |(No icon)|(Nenhum texto)|A operação de anexação não foi iniciada ou pode estar pendente para esse objeto. Esse é o padrão quando a caixa de diálogo é aberta.|  
     |Triângulo verde apontando para a direita|Em andamento|A operação de anexação foi iniciada mas não está completa.|  
-    |Sinal de verificação verde|Êxito|O objeto foi anexado com êxito.|  
+    |Sinal de verificação verde|Sucesso|O objeto foi anexado com êxito.|  
     |Círculo vermelho contendo uma cruz branca|Erro|A operação de anexação encontrou um erro e não foi concluída com êxito.|  
-    |Círculo que contém dois quadrantes pretos (à esquerda e à direita) e dois quadrantes brancos (em cima e em baixo)|Stopped (parado)|A operação de anexação não foi completada com êxito porque o usuário interrompeu a operação.|  
+    |Círculo que contém dois quadrantes pretos (à esquerda e à direita) e dois quadrantes brancos (em cima e em baixo)|Parado|A operação de anexação não foi completada com êxito porque o usuário interrompeu a operação.|  
     |Círculo que contém uma seta curvada que aponta para o sentido anti-horário|Revertida|A operação de anexação teve êxito, mas foi revertida devido a um erro ao se anexar outro objeto.|  
   
      **Mensagem**  
@@ -232,7 +233,7 @@ Os procedimentos a seguir mostram a que você precisa mover um banco de dados pr
      **Remover**  
      Remove o arquivo selecionado da grade **Bancos de dados a serem anexados** .  
   
-     **"** _<database_name>_ **" detalhes do banco de dados**  
+     **"** _<nome_do_banco_de_dados>_ **" detalhes do banco de dados**  
      Exibe os nomes dos arquivos a serem anexados. Para verificar ou alterar o nome do caminho de um arquivo, clique no botão **Procurar** ( **...** ).  
   
     > [!NOTE]  

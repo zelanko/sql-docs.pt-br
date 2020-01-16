@@ -1,6 +1,7 @@
 ---
-title: Caixas de diálogo de replicação do SQL Server Management Studio | Microsoft Docs
-ms.custom: ''
+title: Caixas de diálogo de replicação do SQL Server Management Studio
+description: Uma referência para artigos que descrevem as várias caixas de diálogo para replicação no SQL Server Management Studio.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -11,16 +12,16 @@ ms.assetid: 7426b605-7749-4134-a7e4-990d0d845694
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 5f932a5729b039436f952aeab8ad78f8d220d22e
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 51ad6849489392483dba8db7c3f7688e939d53c7
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768336"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75320008"
 ---
 # <a name="sql-server-management-studio-replication-dialog-boxes"></a>Caixas de diálogo de replicação do SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  Esta seção inclui informações sobre várias caixas de diálogo de replicação que estão disponíveis no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
+  Esta seção inclui informações sobre o número de caixas de diálogo de replicação disponíveis em [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
   
 -   [Segurança do Snapshot Agent](../../relational-databases/replication/snapshot-agent-security.md)  
   

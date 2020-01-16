@@ -1,8 +1,8 @@
 ---
-title: 'Propriedades do grupo de disponibilidade: Novo Grupo de Disponibilidade (página Geral)'
+title: Página Geral (caixa de diálogo Novo Grupo de Disponibilidade e Propriedades)
 titleSuffix: SQL Server
-description: Uma descrição das várias propriedades encontradas na página 'Geral' do assistente de 'Novo Grupo de Disponibilidade' no SQL Server Management Studio.
-ms.custom: seodec18
+description: Uma descrição das várias propriedades encontradas na página 'Geral' das caixas de diálogo 'Novo Grupo de Disponibilidade' e 'Propriedades do Grupo de Disponibilidade' no SSMS (SQL Server Management Studio).
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 9af5379f-91b8-4729-9f75-4a80242a30e9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a0f5e7c7ad7fe916b2203b2d1815e50602d30e2d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f379d55d2728d19a3321e99b342d8597622a6fc0
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934875"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254077"
 ---
 # <a name="availability-group-properties-new-availability-group-general-page"></a>Propriedades do grupo de disponibilidade: Novo Grupo de Disponibilidade (página Geral)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "67934875"
  O nome de servidor da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospeda essa réplica e, para uma instância não padrão, seu nome de instância.  
   
  **Função**  
- **Primária**  
+ **Primário**  
  Atualmente a réplica primária.  
   
  **Secundário**  

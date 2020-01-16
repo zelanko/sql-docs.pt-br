@@ -1,20 +1,21 @@
 ---
 title: Configurar a coleta de dados de uso e diagnóstico do SQL Server em Linux
 description: Descreve como os dados de uso e diagnóstico do cliente do SQL Server são coletados e configurados em Linux.
+ms.custom: seo-lt-2019
 author: VanMSFT
 ms.author: vanto
 ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: effc3ad0b693752eedc0f5dc478d17fbfdd5b35e
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: d7fc5a14a9da000b69db804a5439fb62985f59b8
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531287"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558531"
 ---
-# <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-on-linux"></a>Configurar a coleta de dados de uso e diagnóstico do SQL Server em Linux
+# <a name="configure-usage--diagnostic-data-collection-for-sql-server-on-linux"></a>Configurar a coleta de dados de uso e diagnóstico do SQL Server em Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -26,7 +27,7 @@ Especificamente, a Microsoft não envia nenhum dos seguintes tipos de informaç�
 
 - Qualquer valor das tabelas de usuário
 - Qualquer credencial de logon ou outras informações de autenticação
-- Informações de Identificação Pessoal (PII)
+- PII (Informações de Identificação Pessoal)
 
 O SQL Server 2017 sempre coleta e envia informações sobre a experiência de instalação do processo de configuração para que possamos localizar e corrigir rapidamente quaisquer problemas de instalação que o cliente esteja enfrentando. O SQL Server 2017 pode ser configurado para não enviar informações (em uma base de instância por servidor) para a Microsoft por meio de **mssql-conf**. mssql-conf é um script de configuração que é instalado com o SQL Server 2017 para Red Hat Enterprise Linux, SUSE Linux Enterprise Server e Ubuntu.
 

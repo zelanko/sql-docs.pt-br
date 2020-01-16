@@ -1,7 +1,7 @@
 ---
-title: Alterar qual cluster gerencia os metadados das réplicas em um grupo de disponibilidade
+title: 'Alterar metadados: Migração do grupo de disponibilidade entre clusters'
 description: Ao fazer uma migração entre clusters, altere qual cluster gerencia os metadados das réplicas de disponibilidade em um grupo de disponibilidade Always On, alterando o contexto do cluster HADR de uma instância do SQL Server.
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: ecd99f91-b9a2-4737-994e-507065a12f80
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 4a83f693905eb5a8b963875ea0e23e46d4e3eb55
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c54c26c93d065f5b9d0beb741d9a7024ff8a2199
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67988567"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75241813"
 ---
 # <a name="change-which-cluster-manages-the-metadata-for-replicas-in-an-always-on-availability-group"></a>Alterar qual cluster gerencia os metadados das réplicas em um grupo de disponibilidade Always On
 
@@ -50,7 +50,7 @@ ms.locfileid: "67988567"
   
      Se existirem réplicas de disponibilidade na instância do servidor, antes de alterar o contexto do cluster HADR, faça o seguinte:  
   
-    |Função da réplica|Ação|Link|  
+    |Função da Réplica|Ação|Link|  
     |------------------|------------|----------|  
     |Primária|Colocar o grupo de disponibilidade offline.|[Colocar um grupo de disponibilidade offline &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/take-an-availability-group-offline-sql-server.md)|  
     |Secundário|Remover a réplica de seu grupo de disponibilidade|[Remover uma réplica secundária de um grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-a-secondary-replica-from-an-availability-group-sql-server.md)|  

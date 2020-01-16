@@ -1,6 +1,8 @@
 ---
-title: Permissões REVOKE da lista de propriedades de pesquisa (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: Permissões da lista de propriedades de pesquisa REVOKE
+description: Revogue permissões em uma lista de propriedades de pesquisa.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: sql-database
@@ -17,19 +19,19 @@ helpviewer_keywords:
 ms.assetid: a6b8b37c-0015-4596-898c-51a567659e2e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f9b69ec02d8f436ccaacf8f9fc75fbb01b429316
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 84d15026a188bd24522195d22e70707a8803fda8
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67914261"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255798"
 ---
 # <a name="revoke-search-property-list-permissions-transact-sql"></a>Permissões de lista de propriedades de pesquisa REVOKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Revoga permissões em uma lista de propriedades de pesquisa.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -99,7 +101,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
   
 -   usuário de banco de dados não mapeado para uma entidade do servidor.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
   
 ## <a name="search-property-list-permissions"></a>Permissões SEARCH PROPERTY LIST  
  Uma lista de propriedades de pesquisa é um protegível em nível de banco de dados contido no banco de dados pai na hierarquia de permissões. As permissões mais específicas e limitadas que podem ser revogadas em uma lista de propriedades de pesquisa são listadas na tabela a seguir, juntamente com as permissões mais gerais que as incluem implicitamente.  

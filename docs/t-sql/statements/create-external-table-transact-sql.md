@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/29/2019
+ms.date: 01/03/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c7db5211191f714b977c8d103328fdb48882df6a
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: 362111a7e0bf74c9732ea79582fdee34019f7536
+ms.sourcegitcommit: 34d28d49e8d0910cf06efda686e2d73059569bf8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74057661"
+ms.lasthandoff: 01/04/2020
+ms.locfileid: "75656633"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 
@@ -109,7 +109,7 @@ Neste exemplo, se 'LOCATION='/webdata/', uma consulta do PolyBase retornará lin
 
 Para alterar o padrão e somente leitura da pasta raiz, defina o atributo \<polybase.recursive.traversal> como 'false' no arquivo de configuração core-site.xml. Esse arquivo está localizado em `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server`. Por exemplo, `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`.
 
-DATA_SOURCE = *external_data_source_name* Especifica o nome da fonte de dados externa que contém o local dos dados externos. Esse local é o Hadoop ou o Armazenamento de Blobs do Azure. Para criar uma fonte de dados externa, use [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
+DATA_SOURCE = *external_data_source_name* Especifica o nome da fonte de dados externa que contém o local dos dados externos. Essa localização é um HDFS (Sistema de Arquivos Hadoop), um contêiner do Azure Storage Blob ou um Azure Data Lake Store. Para criar uma fonte de dados externa, use [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
 FILE_FORMAT = *external_file_format_name* Especifica o nome do objeto de formato de arquivo externo que armazena o tipo de arquivo e o método de compactação dos dados externos. Para criar um formato de arquivo externo, use [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md).
 
@@ -149,8 +149,6 @@ Este exemplo mostra como as três opções REJECT interagem. Por exemplo, se REJ
 - O PolyBase tenta carregar as próximas 100 linhas; dessa vez, 25 são bem-sucedidas e 75 falham.
 - O percentual de linhas com falha é recalculado como 50%. O percentual de linhas com falha excedeu o valor de rejeição de 30%.
 - A consulta do PolyBase falha com 50% de linhas rejeitadas depois de tentar retornar as 200 primeiras linhas. Observe que as linhas correspondentes foram retornadas antes de a consulta do PolyBase detectar que o limite de rejeição foi excedido.
-
-DATA_SOURCE Uma fonte de dados externa, como os dados armazenados em um Sistema de Arquivos Hadoop, no Armazenamento de Blobs do Azure ou em um [gerenciador de mapa de fragmentos](https://azure.microsoft.com/documentation/articles/sql-database-elastic-scale-shard-map-management/).
 
 SCHEMA_NAME A cláusula SCHEMA_NAME fornece a capacidade de mapear a definição da tabela externa para uma tabela em um esquema diferente no banco de dados remoto. Use essa cláusula para remover a ambiguidade entre os esquemas que existem nos bancos de dados locais e remotos.
 
@@ -222,7 +220,7 @@ Os arquivos de dados para uma tabela externa são armazenados no Hadoop ou no Ar
 
 ## <a name="examples"></a>Exemplos
 
-### <a name="a-create-an-external-table-with-data-in-text-delimited-format"></a>A. Criar uma tabela externa com os dados em um formato delimitado por texto
+### <a name="a-create-an-external-table-with-data-in-text-delimited-format"></a>a. Criar uma tabela externa com os dados em um formato delimitado por texto
 
 Este exemplo mostra todas as etapas necessárias para criar uma tabela externa que tem os dados formatados em arquivos delimitados por texto. Ele define uma fonte de dados externa *mydatasource* e um formato de arquivo externo *myfileformat*. Em seguida, esses objetos no nível do banco de dados são referenciados na instrução CREATE EXTERNAL TABLE. Para saber mais, confira [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) e [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md).
 
@@ -367,8 +365,8 @@ WITH
 (
   DATA_SOURCE = MyExtSrc,
   SCHEMA_NAME = 'sys',
-  OBJECT_NAME = 'dm_exec_requests',  
-  DISTRIBUTION=  
+  OBJECT_NAME = 'dm_exec_requests',
+  DISTRIBUTION=ROUND_ROBIN
 );
 ```
 
@@ -578,7 +576,7 @@ WITH
 
 &nbsp;
 
-## <a name="overview-azure-sql-database"></a>Visão geral: Banco de dados SQL do Azure
+## <a name="overview-azure-sql-database"></a>Visão geral: Banco de Dados SQL do Azure
 
 No Banco de Dados SQL do Azure, cria uma tabela externa oara [consultas elásticas (em versão prévia)](/azure/sql-database/sql-database-elastic-query-overview/).
 
@@ -621,30 +619,21 @@ As definições de coluna, incluindo os tipos de dados e o número de colunas, d
 
 Opções de tabela externa fragmentada
 
-Especifica a fonte de dados externa (uma fonte de dados não SQL Server) e um método de distribuição para a [consulta do Banco de Dados Elástico](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/).
+Especifica a fonte de dados externa (uma fonte de dados não SQL Server) e um método de distribuição para a [consulta elástica](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/).
 
-DATA_SOURCE Uma fonte de dados externa, como os dados armazenados em um Sistema de Arquivos Hadoop, no Armazenamento de Blobs do Azure ou em um [gerenciador de mapa de fragmentos](https://azure.microsoft.com/documentation/articles/sql-database-elastic-scale-shard-map-management/).
+DATA_SOURCE A cláusula DATA_SOURCE define a fonte de dados externa (um mapa de fragmentos) que é usada para a tabela externa. Para obter um exemplo, confira [Criar tabelas externas](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-horizontal-partitioning#13-create-external-tables).
 
-SCHEMA_NAME A cláusula SCHEMA_NAME fornece a capacidade de mapear a definição da tabela externa para uma tabela em um esquema diferente no banco de dados remoto. Use essa cláusula para remover a ambiguidade entre os esquemas que existem nos bancos de dados locais e remotos.
+SCHEMA_NAME e OBJECT_NAME As cláusulas SCHEMA_NAME e OBJECT_NAME mapeiam a definição de tabela externa para uma tabela em outro esquema. Se for omitido, o esquema do objeto remoto será considerado “dbo” e seu nome será considerado como sendo idêntico ao nome da tabela externa que está sendo definido. Isso é útil se o nome da tabela remota já existe no banco de dados em que você deseja criar a tabela externa. Por exemplo, você deseja definir uma tabela externa para obter uma exibição agregada de exibições de catálogo ou de DMVs em sua camada de dados expandida. Como as exibições de catálogo e as DMVs já existem localmente, você não pode usar seus nomes para a definição da tabela externa. Em vez disso, use outro nome e a exibição do catálogo ou o nome da DMV nas cláusulas SCHEMA_NAME e/ou OBJECT_NAME. Para obter um exemplo, confira [Criar tabelas externas](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-horizontal-partitioning#13-create-external-tables).
 
-OBJECT_NAME A cláusula OBJECT_NAME fornece a capacidade de mapear a definição da tabela externa para uma tabela com um nome diferente no banco de dados remoto. Use essa cláusula para remover a ambiguidade entre os nomes de objeto que existem nos bancos de dados locais e remotos.
+DISTRIBUTION A cláusula DISTRIBUTION especifica a distribuição de dados usada para essa tabela. O processador de consultas utiliza as informações fornecidas na cláusula DISTRIBUTION para criar planos de consulta mais eficientes.
 
-DISTRIBUIÇÃO Opcional. Esse argumento é necessário para bancos de dados do tipo SHARD_MAP_MANAGER. Esse argumento controla se uma tabela é tratada como uma tabela fragmentada ou uma tabela replicada. Com tabelas **SHARDED** (*column name*), os dados de tabelas diferentes não se sobrepõem. **REPLICATED** especifica que as tabelas têm os mesmos dados em cada fragmento. **ROUND_ROBIN** indica que um método específico ao aplicativo é usado para distribuir os dados.
+- SHARDED significa que os dados são particionados horizontalmente entre os bancos de dados. A chave de particionamento para a distribuição de dados é o parâmetro <sharding_column_name>.
+- REPLICATED significa que cópias idênticas da tabela estão presentes em cada banco de dados. É sua responsabilidade assegurar que as réplicas sejam idênticas entre os bancos de dados.
+- ROUND_ROBIN significa que a tabela é particionada horizontalmente com um método de distribuição dependente do aplicativo.
 
 ## <a name="permissions"></a>Permissões
 
-Exige estas permissões de usuário:
-
-- **CREATE TABLE**
-- **ALTER ANY SCHEMA**
-- **ALTER ANY EXTERNAL DATA SOURCE**
-- **ALTER ANY EXTERNAL FILE FORMAT**
-- **CONTROL DATABASE**
-
-Observe que o logon que cria a fonte de dados externa deve ter a permissão de leitura e gravação na fonte de dados externa, localizada no Hadoop ou no Armazenamento de Blobs do Azure.
-
-> [!IMPORTANT]
-> A permissão ALTER ANY EXTERNAL DATA SOURCE concede a qualquer entidade de segurança a capacidade de criar e modificar qualquer objeto de fonte de dados externa e, portanto, isso também concede a capacidade de acessar todas as credenciais no escopo do banco de dados no banco de dados. Essa permissão precisa ser considerada como altamente privilegiada e, portanto, ser concedida somente para entidades de segurança confiáveis no sistema.
+Usuários com acesso à tabela externa têm acesso automaticamente a tabelas remotas subjacentes com a credencial fornecida na definição de fonte de dados externa. Evite a elevação de privilégios indesejada usando credencial da fonte de dados externa. Use GRANT ou REVOKE para uma tabela externa como se fosse uma tabela normal. Depois de definir a fonte de dados externa e as tabelas externas, agora você poderá usar o T-SQL completo nas tabelas externas.
 
 ## <a name="error-handling"></a>Tratamento de erros
 
@@ -674,7 +663,7 @@ Constructos e operações não compatíveis:
 - A restrição DEFAULT em colunas de tabela externa
 - Operações DML (linguagem de manipulação de dados) de exclusão, inserção e atualização
 
-Somente predicados literais definidos em uma consulta podem ser enviados por push para a fonte de dados externa. Isso é diferente de servidores vinculados e do acesso em que os predicados determinados durante a execução da consulta pode ser usado, ou seja, quando usados em conjunto com um loop aninhado em um plano de consulta. Geralmente, isso fará com que toda a tabela externa seja copiada localmente e, em seguida, unida.    
+Somente predicados literais definidos em uma consulta podem ser enviados por push para a fonte de dados externa. Isso é diferente de servidores vinculados e do acesso em que os predicados determinados durante a execução da consulta podem ser usados, ou seja, quando usados em conjunto com um loop aninhado em um plano de consulta. Geralmente, isso fará com que toda a tabela externa seja copiada localmente e, em seguida, unida.
 
 ```sql
   \\ Assuming External.Orders is an external table and Customer is a local table. 
@@ -698,7 +687,7 @@ Bloqueio compartilhado no objeto SCHEMARESOLUTION.
 
 ## <a name="examples"></a>Exemplos
 
-### <a name="a-create-external-table-for-azure-sql-database"></a>A. Criar tabela externa para o Banco de Dados SQL do Azure
+### <a name="a-create-external-table-for-azure-sql-database"></a>a. Criar tabela externa para o Banco de Dados SQL do Azure
 
 ```sql
 CREATE EXTERNAL TABLE [dbo].[CustomerInformation]
@@ -711,7 +700,9 @@ WITH
 
 ## <a name="see-also"></a>Consulte Também
 
-[CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)
+- [Visão geral da consulta elástica do Banco de Dados SQL do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-overview)
+- [Relatórios entre bancos de dados em nuvem expandidos](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-horizontal-partitioning)
+- [Introdução às consultas entre bancos de dados (particionamento vertical)](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-getting-started-vertical)
 
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
@@ -723,7 +714,7 @@ WITH
 
 &nbsp;
 
-## <a name="overview-azure-sql-data-warehouse"></a>Visão geral: Azure SQL Data Warehouse
+## <a name="overview-azure-sql-data-warehouse"></a>Visão geral: SQL Data Warehouse do Azure
 
 No SQL Data Warehouse do Azure, use uma tabela externa para:
 
@@ -890,7 +881,7 @@ Bloqueio compartilhado no objeto SCHEMARESOLUTION.
 
 ## <a name="examples"></a>Exemplos
 
-### <a name="a-importing-data-from-adls-into-azure-includessdwincludesssdw-mdmd"></a>A. Importando dados do ADLS para o Azure [!INCLUDE[ssDW](../../includes/ssdw-md.md)]
+### <a name="a-importing-data-from-adls-into-azure-includessdwincludesssdw-mdmd"></a>a. Importando dados do ADLS para o Azure [!INCLUDE[ssDW](../../includes/ssdw-md.md)]
 
 ```sql
 
@@ -1114,7 +1105,7 @@ Os arquivos de dados para uma tabela externa são armazenados no Hadoop ou no Ar
 
 ## <a name="examples"></a>Exemplos
 
-### <a name="a-join-hdfs-data-with-analytics-platform-system-data"></a>A. Unir os dados do HDFS com os do Analytics Platform System
+### <a name="a-join-hdfs-data-with-analytics-platform-system-data"></a>a. Unir os dados do HDFS com os do Analytics Platform System
 
 ```sql
 SELECT cs.user_ip FROM ClickStream cs

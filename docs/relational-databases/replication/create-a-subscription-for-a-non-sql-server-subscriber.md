@@ -1,6 +1,7 @@
 ---
-title: Criar uma assinatura para um assinante que não é do SQL Server | Microsoft Docs
-ms.custom: ''
+title: Criar uma assinatura para um Assinante não SQL
+description: Descreve como criar uma assinatura para um Assinante não SQL Server no SQL Server com o SSMS (SQL Server Management Studio) ou o T-SQL (Transact-SQL).
+ms.custom: seo-lt-2019
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3f37431c1d8359eface4a5ad374ed8ba6717708a
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: b64985281c98d15399e7cd561a05746e0634f057
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710437"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321993"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>Criar uma assinatura para um Assinante não SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

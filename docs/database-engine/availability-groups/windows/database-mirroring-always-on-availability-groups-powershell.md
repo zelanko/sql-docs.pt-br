@@ -1,7 +1,7 @@
 ---
-title: Criar um ponto de extremidade de espelhamento de banco de dados para um grupo de disponibilidade usando o PowerShell
+title: 'Powershell: Ponto de extremidade de espelhamento de banco de dados do grupo de disponibilidade'
 description: Descreve como criar um ponto de extremidade de espelhamento de banco de dados para um Grupo de Disponibilidade AlwaysOn usando o PowerShell.
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6197bbe7-67d4-446d-ba5f-cabfa5df77f1
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4d4672d582242347240a0202a430f03f7ebd91b5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d8cc91d628c365d4f9092ca24a8b4df06f17adf2
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67968315"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252903"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-an-availability-group-using-powershell"></a>Criar um ponto de extremidade de espelhamento de banco de dados para um grupo de disponibilidade usando o PowerShell
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

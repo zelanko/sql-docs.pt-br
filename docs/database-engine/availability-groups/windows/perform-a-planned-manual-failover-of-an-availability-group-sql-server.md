@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 419f655d-3f9a-4e7d-90b9-f0bab47b3178
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: daa68b80718903051fdb2cfd9dd8b15b64b68b23
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2346c770c5fec742d7c5805f028bd87bebaf71b1
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014587"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822497"
 ---
 # <a name="perform-a-planned-manual-failover-of-an-always-on-availability-group-sql-server"></a>Executar um failover manual planejado de um grupo de disponibilidade Always On (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ Um failover manual planejado é compatível apenas quando a réplica primária e
 -   Nesse momento, a réplica secundária de destino deve estar sincronizada com a réplica primária. Todos os bancos de dados secundários nessa réplica secundária devem estar unidos no grupo de disponibilidade. Eles também devem estar sincronizados com os bancos de dados primários correspondentes (isto é, os bancos de dados secundários locais devem ser SINCRONIZADOS). 
   
     > [!TIP] 
-    >  Para determinar a prontidão do failover de uma réplica secundária, consulte a coluna **is_failover_ready** na exibição de gerenciamento dinâmico [sys.DM hadr_database_cluster_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql.md). Como alternativa, você pode verificar a coluna **Prontidão de Failover** do [painel do grupo AlwaysOn](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md). 
+    >  Para determinar a prontidão do failover de uma réplica secundária, consulte a coluna **is_failover_ready** na exibição de gerenciamento dinâmico [sys.dm_hadr_database_replica_cluster_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql.md). Como alternativa, você pode verificar a coluna **Prontidão de Failover** do [painel do grupo AlwaysOn](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md). 
 -   Esta tarefa tem suporte apenas na réplica secundária de destino. Você deve estar conectado à instância de servidor que hospeda a réplica secundária de destino. 
   
 ###  <a name="Security"></a> Segurança 

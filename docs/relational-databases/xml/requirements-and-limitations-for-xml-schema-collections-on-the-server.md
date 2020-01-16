@@ -1,6 +1,5 @@
 ---
-title: Requisitos e limitações de uso de coleções de esquema XML no servidor | Microsoft Docs
-ms.custom: ''
+title: Requisitos e limitações (coleções de esquema XML) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -24,18 +23,19 @@ helpviewer_keywords:
 ms.assetid: c2314fd5-4c6d-40cb-a128-07e532b40946
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6514ea6acdb2fee96604656ae8f9179570eab35a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: fe65ba7995dc21b4bb5f5889c8667e9c8dfb6c10
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68093191"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257618"
 ---
 # <a name="requirements-and-limitations-for-xml-schema-collections-on-the-server"></a>Requisitos e limitações de uso de coleções de esquema XML no servidor
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   A validação da linguagem de definição de esquema XML (XSD) apresenta algumas limitações em relação a colunas SQL que usam o tipo de dados **xml** . A tabela a seguir fornece detalhes sobre essas limitações e diretrizes para modificação de seu esquema XSD para que ele possa funcionar com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os tópicos nesta seção fornecem informações adicionais sobre limitações específicas e diretrizes para trabalhar com elas.  
   
-|Item|Limitação|  
+|Item|Limitações|  
 |----------|----------------|  
 |**minOccurs** e **maxOccurs**|Os valores dos atributos **minOccurs** e **maxOccurs** devem ser ajustados em inteiros de 4 bytes. Os esquemas que não estiverem de acordo serão rejeitados pelo servidor.|  
 |**\<xsd:choice>**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rejeita os esquemas que têm uma partícula **\<xsd:choice>** sem filhos, a menos que a partícula seja definida com um atributo **minOccurs** com valor zero.|  
@@ -63,16 +63,16 @@ ms.locfileid: "68093191"
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|Descrição|  
+|Tópico|DESCRIÇÃO|  
 |-----------|-----------------|  
-|[Canonical Forms and Pattern Restrictions](../../relational-databases/xml/canonical-forms-and-pattern-restrictions.md)|Explica formas canônicas e restrições de padrões.|  
+|[Formas canônicas e restrições de padrões](../../relational-databases/xml/canonical-forms-and-pattern-restrictions.md)|Explica formas canônicas e restrições de padrões.|  
 |[Componentes curinga e validação de conteúdo](../../relational-databases/xml/wildcard-components-and-content-validation.md)|Descreve as limitações da utilização de caracteres curingas, a validação incerta e quaisquer Elementos anyType com coleções de esquema XML.|  
 |[O elemento &#60;xsd:redefine&#62; Element](../../relational-databases/xml/the-xsd-redefine-element.md)|Explica a limitação da utilização do elemento \<xsd:redefine> e descreve uma solução alternativa.|  
-|[The xs:QName Type](../../relational-databases/xml/the-xs-qname-type.md)|Descreve a limitação relativa ao tipo xs:QName.|  
+|[O tipo xs:QName](../../relational-databases/xml/the-xs-qname-type.md)|Descreve a limitação relativa ao tipo xs:QName.|  
 |[Valores para declarações &#60;xsd:simpleType&#62;](../../relational-databases/xml/values-for-xsd-simpletype-declarations.md)|Descreve as restrições aplicadas a declarações \<xsd:simpleType>.|  
-|[Enumeration Facets](../../relational-databases/xml/enumeration-facets.md)|Descreve a limitação relativa a aspectos de enumeração.|  
-|[Mixed Type and Simple Content](../../relational-databases/xml/mixed-type-and-simple-content.md)|Descreve a limitação de restringir um tipo misto a um conteúdo simples.|  
-|[Coleções de esquemas XML grandes e condições de memória insuficiente](../../relational-databases/xml/large-xml-schema-collections-and-out-of-memory-conditions.md)|Fornece soluções para a condição de memória insuficiente que às vezes acontece com grandes coleções de esquema.|  
+|[Facetas de enumeração](../../relational-databases/xml/enumeration-facets.md)|Descreve a limitação relativa a aspectos de enumeração.|  
+|[Tipo misto e conteúdo simples](../../relational-databases/xml/mixed-type-and-simple-content.md)|Descreve a limitação de restringir um tipo misto a um conteúdo simples.|  
+|[Grandes coleções de esquemas XML e condições de memória insuficiente](../../relational-databases/xml/large-xml-schema-collections-and-out-of-memory-conditions.md)|Fornece soluções para a condição de memória insuficiente que às vezes acontece com grandes coleções de esquema.|  
 |[Modelos de conteúdo não determinístico](../../relational-databases/xml/non-deterministic-content-models.md)|Descreve as limitações relativas a modelos de conteúdo não determinístico.|  
   
 ## <a name="see-also"></a>Consulte Também  

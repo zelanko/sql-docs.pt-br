@@ -1,6 +1,8 @@
 ---
-title: Permissões DENY de entidade de segurança do banco de dados (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: Permissões de entidade de segurança de banco de dados DENY
+description: Negue permissões em um usuário de banco de dados, função de banco de dados ou função de aplicativo.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 05/15/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -26,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: e2429a5d-e9be-4c05-be20-414d1038a63a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: fddca390aa40d36b126cf113c6b8f56bd42f1131
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: a3e9cb1d12dd65b813ae7cc6139a1d48925ab05f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982521"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244576"
 ---
 # <a name="deny-database-principal-permissions-transact-sql"></a>Permissões de principal do banco de dados DENY  (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +41,7 @@ ms.locfileid: "73982521"
   Nega permissões concedidas em um usuário de banco de dados, uma função de banco de dados ou uma função de aplicativo no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -112,7 +114,7 @@ DENY permission [ ,...n ]
  *Database_user_with_no_login*  
  Especifica um usuário do banco de dados sem nenhuma entidade de segurança correspondente no nível de servidor.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
   
 ## <a name="database-user-permissions"></a>Permissões do usuário do banco de dados  
  Um usuário do banco de dados é um item protegível do nível do banco de dados contido pelo banco de dados que é seu pai na hierarquia de permissões. As permissões mais específicas e limitadas que podem ser negadas em um usuário do banco de dados são listadas na tabela a seguir, junto com as permissões mais gerais que as incluem implicitamente.  
@@ -150,7 +152,7 @@ DENY permission [ ,...n ]
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-denying-control-permission-on-a-user-to-another-user"></a>A. Negando a permissão CONTROL em um usuário para outro usuário  
+### <a name="a-denying-control-permission-on-a-user-to-another-user"></a>a. Negando a permissão CONTROL em um usuário para outro usuário  
  O exemplo a seguir nega a permissão `CONTROL` no usuário [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]`Wanida` para o usuário `RolandX`.  
   
 ```  
@@ -170,7 +172,7 @@ GO
 ```  
   
 ### <a name="c-denying-impersonate-permission-on-a-user-to-an-application-role"></a>C. Negando a permissão IMPERSONATE em um usuário para uma função de aplicativo  
- O exemplo a seguir nega a permissão `IMPERSONATE` para o usuário `HamithaL` na função de aplicativo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] `AccountsPayable17`.  
+ O exemplo a seguir nega a permissão `IMPERSONATE` para o usuário `HamithaL` na função de aplicativo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]`AccountsPayable17`.  
   
 **Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   

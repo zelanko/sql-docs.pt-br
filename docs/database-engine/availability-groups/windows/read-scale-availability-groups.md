@@ -10,17 +10,19 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: edf98113b435cafd9f6552643e6a8a1ba4316982
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2decc7e78b599ebcd0c16e3373a0b62401d09428
+ms.sourcegitcommit: 0d5b0aeee2a2b34fd448aec2e72c0fa8be473ebe
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014462"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75720790"
 ---
 # <a name="use-read-scale-with-always-on-availability-groups"></a>Usar a escala de leitura com Grupos de Disponibilidade AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Um grupo de disponibilidade é uma solução abrangente que oferece funcionalidades de alta disponibilidade para o SQL Server, além de soluções integradas de dimensionamento. Em um aplicativo de banco de dados típico, vários clientes executam diversos tipos de cargas de trabalho. Às vezes, pode ocorrer o desenvolvimento de gargalos devido às restrições de recursos. Você pode liberar recursos e obter uma taxa de transferência maior para a carga de trabalho OLTP. Você também pode fornecer melhor desempenho e escala em cargas de trabalho somente leitura. Aproveite a tecnologia de replicação mais rápida para o SQL Server e crie um grupo de bancos de dados replicados para descarregar cargas de trabalho de relatórios e de análises para réplicas somente leitura.
+Um grupo de disponibilidade é uma solução abrangente que oferece funcionalidades de alta disponibilidade para o SQL Server, além de soluções integradas de dimensionamento. Em um aplicativo de banco de dados típico, vários clientes executam diversos tipos de cargas de trabalho. Às vezes, pode ocorrer o desenvolvimento de gargalos devido às restrições de recursos. 
+
+No contexto de um grupo de disponibilidade, a escala de leitura descarrega cargas de trabalho de leitura para as réplicas secundárias. Você pode liberar recursos e obter uma taxa de transferência maior para a carga de trabalho OLTP. Você também pode fornecer melhor desempenho e escala em cargas de trabalho somente leitura. Aproveite a tecnologia de replicação mais rápida para o SQL Server e crie um grupo de bancos de dados replicados para descarregar cargas de trabalho de relatórios e de análises para réplicas somente leitura.
 
 Com os grupos de disponibilidade, uma ou mais réplicas secundárias podem ser configuradas para dar suporte ao acesso somente leitura aos bancos de dados secundários.
 

@@ -20,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 765fde44-1f95-4015-80a4-45388f18a42c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4af840298c0e17b61dd073c982e6dec440ec67d7
-ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
+ms.openlocfilehash: ae6e3b08b3a29afb9282d28f33ec9406ab418b2c
+ms.sourcegitcommit: 0d5b0aeee2a2b34fd448aec2e72c0fa8be473ebe
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "68419594"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75721921"
 ---
 # <a name="columns_updated-transact-sql"></a>COLUMNS_UPDATED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Essa função retorna um padrão de bit **varbinary** que indica as colunas inseridas ou atualizadas de uma tabela ou exibição. Use [!INCLUDE[tsql](../../includes/tsql-md.md)] em qualquer lugar no corpo de um gatilho INSERT ou UPDATE do `COLUMNS_UPDATED` para testar se o gatilho deve executar determinadas ações.
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,7 +43,7 @@ COLUMNS_UPDATED ( )
 ## <a name="return-types"></a>Tipos de retorno
 **varbinary**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 `COLUMNS_UPDATED` testa para UPDATE ou INSERT as ações executadas em várias colunas. Para testar as tentativas de UPDATE ou INSERT em uma coluna, use [UPDATE()](../../t-sql/functions/update-trigger-functions-transact-sql.md).
   
 `COLUMNS_UPDATED` retorna um ou mais bytes ordenados da esquerda para a direita. O bit mais à direita de cada byte é o bit menos significativo. O mais à direita do byte mais à esquerda representa a primeira coluna na tabela; o próximo bit à esquerda representa a segunda coluna, e assim por diante. `COLUMNS_UPDATED` retornará vários bytes se a tabela na qual o gatilho foi criado contiver mais que oito colunas, ficando o byte menos significativo na extrema esquerda. `COLUMNS_UPDATED` retorna TRUE para todas as colunas em ações INSERT porque as colunas têm valores explícitos ou implícitos (NULL) inseridos.
@@ -74,7 +74,7 @@ Quando um conjunto de coluna é definido em uma tabela, a função `COLUMNS_UPDA
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-columns_updated-to-test-the-first-eight-columns-of-a-table"></a>A. Usando COLUMNS_UPDATED para testar as primeiras oito colunas de uma tabela  
+### <a name="a-using-columns_updated-to-test-the-first-eight-columns-of-a-table"></a>a. Usando COLUMNS_UPDATED para testar as primeiras oito colunas de uma tabela  
 Este exemplo cria duas tabelas: `employeeData` e `auditEmployeeData`. A tabela `employeeData` contém informações de folha de pagamento confidenciais de funcionários, e membros do departamento de recursos humanos podem modificá-las. Se o SSN (número do seguro social), o salário anual ou o número da conta bancária de um funcionário for alterado, um registro de auditoria será gerado e inserido na tabela de auditoria `auditEmployeeData`.
   
 Com a função `COLUMNS_UPDATED()`, podemos rapidamente testar quaisquer alterações feitas a colunas contendo informações confidenciais de funcionários. Usar `COLUMNS_UPDATED()` dessa forma funcionará apenas quando você estiver tentando detectar alterações nas primeiras oito colunas da tabela.
@@ -116,7 +116,7 @@ AFTER UPDATE AS
 /* Check whether columns 2, 3 or 4 have been updated. If any or all  
 columns 2, 3 or 4 have been changed, create an audit record.
 The bitmask is: power(2, (2-1)) + power(2, (3-1)) + power(2, (4-1)) = 14.
-This bitmask translates into base_10 as: 1 + 4 + 9 = 14.
+This bitmask translates into base_10 as: 2 + 4 + 8 = 14.
 To test whether all columns 2, 3, and 4 are updated, use = 14 instead of > 0  
 (below). */
   

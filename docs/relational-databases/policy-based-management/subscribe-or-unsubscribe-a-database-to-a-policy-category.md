@@ -1,6 +1,7 @@
 ---
-title: Assinar ou cancelar a assinatura de um banco de dados a uma categoria de política | Microsoft Docs
-ms.custom: ''
+title: Assinar um banco de dados ou cancelar a assinatura de um banco de dados em uma categoria de política
+description: Descreve como assinar um banco de dados ou cancelar a assinatura de um banco de dados em uma categoria de política para o gerenciamento baseado em políticas com o SQL Server Management Studio e o T-SQL (Transact-SQL).
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,16 +13,16 @@ f1_keywords:
 ms.assetid: d2c31769-7098-428e-ad9c-ef56541b7c52
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d653db8d1fcc6b2344763ed6f3988a33a297fd69
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6425834958f88e86726f1ec2137bc6917a889671
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021553"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558219"
 ---
 # <a name="subscribe-or-unsubscribe-a-database--to-a-policy-category"></a>Assinar ou cancelar a assinatura de um banco de dados a uma categoria de política
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Este tópico descreve como assinar ou cancelar a assinatura de um banco de dados para uma categoria de política no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  Este tópico descreve como assinar um banco de dados ou cancelar a assinatura de um banco de dados em uma categoria de política no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] com o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Neste tópico**  
   

@@ -30,19 +30,19 @@ helpviewer_keywords:
 ms.assetid: 9b9caa3d-e7d0-42e1-b60b-a5572142186c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 17ae607e02838e4598dce82f6f022208238aefaa
-ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
+ms.openlocfilehash: e3d7c9b661a69f4a575a18aae03f9eb5e601b69b
+ms.sourcegitcommit: ba44730f5cc33295ae2ed1f281186dd266bad4ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74119209"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74191082"
 ---
 # <a name="select-examples-transact-sql"></a>Exemplos de SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Este tópico fornece exemplos de uso da instrução [SELECT](../../t-sql/queries/select-transact-sql.md).  
   
-## <a name="a-using-select-to-retrieve-rows-and-columns"></a>A. Usando SELECT para recuperar linhas e colunas  
+## <a name="a-using-select-to-retrieve-rows-and-columns"></a>a. Usando SELECT para recuperar linhas e colunas  
  O exemplo a seguir mostra três exemplos de código. Este primeiro retorna todas as linhas (nenhuma cláusula WHERE foi especificada) e todas as colunas (usando o `*`) da tabela `Product` do banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
  [!code-sql[Select#SelectExamples1](../../t-sql/queries/codesnippet/tsql/select-examples-transact_1.sql)]  
@@ -81,7 +81,7 @@ ms.locfileid: "74119209"
 ## <a name="e-using-correlated-subqueries"></a>E. Usando subconsultas correlacionadas
 Uma subconsulta correlacionada é uma consulta que depende da consulta externa para obter os valores. Essa consulta pode ser executada repetidamente, uma vez para cada linha que possa ser selecionada pela consulta externa.
 
- O exemplo a seguir mostra consultas semanticamente equivalentes e ilustra a diferença entre o uso da palavra-chave `EXISTS` e da palavra-chave `IN`. Ambos são exemplos de uma subconsulta válida que recupera uma instância de cada nome de produto para o qual o modelo do produto é uma camisa de marca de manga longa e os números de `ProductModelID` são correspondentes entre as tabelas `Product` e `ProductModel`.  
+O primeiro exemplo mostra consultas semanticamente equivalentes para ilustrar a diferença entre usar a palavra-chave `EXISTS` e a palavra-chave `IN`. Ambos são exemplos de uma subconsulta válida que recupera uma instância de cada nome de produto para o qual o modelo do produto é uma camisa de marca de manga longa e os números de `ProductModelID` são correspondentes entre as tabelas `Product` e `ProductModel`.  
   
  [!code-sql[Select#SelectExamples9](../../t-sql/queries/codesnippet/tsql/select-examples-transact_9.sql)]  
   
@@ -158,7 +158,7 @@ GO
   
  [!code-sql[Select#SelectExamples23](../../t-sql/queries/codesnippet/tsql/select-examples-transact_21.sql)]  
   
- Para certificar-se de que existam pelo menos mil e quinhentos itens envolvidos nos cálculos para cada produto, use `HAVING COUNT(*) > 1500` para eliminar os produtos que retornam totais para menos que `1500` itens vendidos. A consulta parece com:  
+ Para certificar-se de que existam pelo menos mil e quinhentos itens envolvidos nos cálculos para cada produto, use `HAVING COUNT(*) > 1500` para eliminar os produtos que retornam totais para menos que `1500` itens vendidos. A consulta tem esta aparência:  
   
  [!code-sql[Select#SelectExamples24](../../t-sql/queries/codesnippet/tsql/select-examples-transact_22.sql)]  
   

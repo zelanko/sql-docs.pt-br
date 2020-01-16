@@ -1,6 +1,8 @@
 ---
-title: Usando aliases (SQL Data Warehouse do Azure, Parallel Data Warehouse) | Microsoft Docs
-ms.custom: ''
+title: Atribuição de alias
+description: Alias no SQL Data Warehouse do Azure e do Parallel Data Warehouse.
+titleSuffix: Azure SQL Data Warehouse
+ms.custom: seo-lt-2019
 ms.date: 03/16/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,12 +12,12 @@ ms.assetid: 7b3a5c74-05cf-4385-8ee6-6176d003cb8a
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: c9aee41091d2ca77d4fd23fb4997e49644360392
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3b548dd789bc7e234eb527ffe5766f433a06d77e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68031566"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244757"
 ---
 # <a name="aliasing-azure-sql-data-warehouse-parallel-data-warehouse"></a>Usando aliases (SQL Data Warehouse do Azure, Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]

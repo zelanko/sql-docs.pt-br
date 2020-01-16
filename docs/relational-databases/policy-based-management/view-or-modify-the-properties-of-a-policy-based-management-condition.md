@@ -1,5 +1,6 @@
 ---
-title: Exibir ou modificar as propriedades de uma condição de gerenciamento baseado em políticas | Microsoft Docs
+title: Exibir ou modificar as propriedades de uma condição do gerenciamento baseado em políticas
+description: Saiba como exibir ou modificar as propriedades de uma condição do gerenciamento baseado em políticas usando o SSMS (SQL Server Management Studio) ou o T-SQL (Transact-SQL).
 ms.custom: ''
 ms.date: 10/05/2016
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 890d7384-8444-4767-bb6f-f5debb155747
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c904edf49ca2f07e2cb715821f9858ea25302311
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: e9a628b725222d0e77ed7fcb55b80ec8de153a55
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909811"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558118"
 ---
 # <a name="view-or-modify-the-properties-of-a-policy-based-management-condition"></a>Exibir ou modificar as propriedades de uma condição de gerenciamento baseado em políticas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

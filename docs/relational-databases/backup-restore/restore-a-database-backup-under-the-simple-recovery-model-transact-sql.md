@@ -1,7 +1,7 @@
 ---
-title: Restaurar um backup de banco de dados no modelo de recuperação simples (Transact-SQL) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 'Restaurar banco de dados: modelo de recuperação simples (Transact-SQL)'
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -16,14 +16,15 @@ helpviewer_keywords:
 ms.assetid: a928fa36-e285-476f-9a7b-6840a8bb7283
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e130868d8df6537bef9c969cfa860b95242f185b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 835f5c6a4571359f750862d3487817a7e11f6503
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67937658"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244233"
 ---
 # <a name="restore-a-database-backup-under-the-simple-recovery-model-transact-sql"></a>Restaurar um backup de banco de dados no modelo de recuperação simples (Transact-SQL)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Este tópico explica como restaurar um backup de banco de dados completo.  
@@ -69,7 +70,7 @@ ms.locfileid: "67937658"
   
 ## <a name="example"></a>Exemplo  
   
-### <a name="description"></a>Descrição  
+### <a name="description"></a>DESCRIÇÃO  
  Este exemplo restaura o backup de banco de dados completo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] a partir da fita.  
   
 ### <a name="example"></a>Exemplo  

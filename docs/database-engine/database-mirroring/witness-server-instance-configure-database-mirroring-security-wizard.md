@@ -1,6 +1,7 @@
 ---
-title: Instância de servidor testemunha (Assistente para Configurar Segurança de Espelhamento de Banco de Dados) | Microsoft Docs
-ms.custom: ''
+title: 'Assistente para configurar a segurança: Instância do servidor testemunha'
+description: "Descreve a página 'Instância do Servidor Testemunha' do 'Assistente para Configurar Segurança de Espelhamento de Banco de Dados'. "
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: b5763663-984a-473b-93a3-6cd3322ad41c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e50362e86273f00c6bcfe13a3d6c2120ee36e33d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 56cf4c9c993e088e8e51981399c87a4cb9a56047
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050582"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822504"
 ---
 # <a name="witness-server-instance-configure-database-mirroring-security-wizard"></a>Instância de servidor testemunha (Assistente para Configurar Segurança de Espelhamento de Banco de Dados)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,12 +47,12 @@ ms.locfileid: "68050582"
 > [!NOTE]  
 >  Ao conectar-se à instância de servidor, o Assistente para Configurar Segurança de Espelhamento de Banco de Dados usa as credenciais fornecidas na caixa de diálogo **Conectar ao Servidor** . Essas credenciais são diferentes de uma sessão de espelhamento, que usa as credenciais da conta de inicialização onde a instância de servidor está sendo executada como um serviço.  
   
- **Porta do Ouvinte**  
+ **Porta do ouvinte**  
  O comportamento dessa opção depende de o ponto de extremidade do espelhamento existir nessa instância do servidor, como segue:  
   
 -   Se a porta do ouvinte não existir para a instância de servidor, o número da porta 5022 será exibido na caixa de texto **Porta** . Você pode digitar qualquer número de porta disponível, como 7022.  
   
--   Quando o ponto de extremidade do espelhamento já existir, o número da porta daquele ponto de extremidade será exibido. Se você precisar alterar aquela porta, use uma instrução ALTER ENDPOINT. Para obter mais informações, veja [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md).  
+-   Quando o ponto de extremidade do espelhamento já existir, o número da porta daquele ponto de extremidade será exibido. Se você precisar alterar aquela porta, use uma instrução ALTER ENDPOINT. Para obter mais informações, consulte [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md).  
   
     > [!NOTE]  
     >  É necessário um número de porta.  

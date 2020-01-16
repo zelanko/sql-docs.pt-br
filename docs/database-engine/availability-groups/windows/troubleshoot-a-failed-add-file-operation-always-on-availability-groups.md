@@ -1,6 +1,7 @@
 ---
-title: Solução de problemas de uma operação de adição de arquivos com falha (Grupos de Disponibilidade AlwaysOn) | Microsoft Docs
-ms.custom: ''
+title: Operação de adição de arquivo do grupo de disponibilidade com falha
+decription: Possible resolutions for failing to add a file to an availability group.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 31ceaebf-864b-4dd0-9112-0d047b0316ad
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 07561af07d0a682b4fa99076cc774e0c3fbb2590
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1655992526096035eb109821d8950980921951ad
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013812"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251222"
 ---
 # <a name="troubleshoot-a-failed-add-file-operation-always-on-availability-groups"></a>Solução de problemas de uma operação de adicionar arquivos com falha (grupos de disponibilidade de AlwaysOn)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "68013812"
 > [!NOTE]  
 >  É recomendável que, se possível, o caminho do arquivo (incluindo a letra da unidade) de um determinado banco de dados secundário seja idêntico ao caminho do banco de dados primário correspondente.  
   
-## <a name="problem-resolution"></a>Resolução do problema  
+## <a name="problem-resolution"></a>Resolução de problemas  
  Para resolver esse problema, o proprietário do banco de dados deve concluir as seguintes etapas:  
   
 1.  Remover o banco de dados secundário do grupo de disponibilidade. Para obter mais informações, veja [Remover um banco de dados secundário de um grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-a-secondary-database-from-an-availability-group-sql-server.md).  
@@ -38,7 +39,7 @@ ms.locfileid: "68013812"
   
 4.  Prepare o banco de dados secundário para reingressar no grupo de disponibilidade, restaurando, WITH NO RECOVERY, todos os backups de log pendentes a partir do banco de dados primário.  
   
-5.  Reunindo o banco de dados secundário ao grupo de disponibilidade. Para obter mais informações, veja [Unir um banco de dados secundário a um grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md).  
+5.  Reunindo o banco de dados secundário ao grupo de disponibilidade. Para obter mais informações, consulte [Unir um banco de dados secundário a um grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

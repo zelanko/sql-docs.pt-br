@@ -1,6 +1,7 @@
 ---
-title: Página Selecionar Bancos de Dados (Assistente de Novo Grupo de Disponibilidade e Assistente para Adicionar Banco de Dados) | Microsoft Docs
-ms.custom: ''
+title: Selecionar a página Bancos de Dados (Assistente de Novo Grupo de Disponibilidade/Adicionar Banco de Dados)
+description: Descreve a página "Selecionar Bancos de Dados" para os Assistentes de Novo Grupo de Disponibilidade e Adicionar Banco de Dados encontrados na GUI do SQL Server Management Studio.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 929c5e15-d087-438d-b1f2-aa97c5f8bff8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 04836a29531c1eaab61277891e22e31b669d9ffd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0560e17a7ab582b52b4f0a5db822dbd2ab5fa5f5
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014193"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75235384"
 ---
 # <a name="select-databases-page-new-availability-group-wizard-and-add-database-wizard"></a>Selecionar a página Bancos de Dados (Assistente de Novo Grupo de Disponibilidade e Assistente para Adicionar Banco de Dados)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

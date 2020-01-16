@@ -1,8 +1,7 @@
 ---
-title: Usar a propagação automática para inicializar uma réplica secundária para um grupo de disponibilidade
-description: Use a propagação automática para inicializar as réplicas secundárias como parte de um grupo de disponibilidade Always On com o SQL 2016 e superior.
-services: data-lake-analytics
-ms.custom: seodec18
+title: Propagação automática para réplicas secundárias
+description: Saiba como propagação automática pode inicializar as réplicas secundárias como parte de um grupo de disponibilidade Always On com o SQL 2016 e superior.
+ms.custom: seo-lt-2019
 ms.date: 11/27/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -13,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 53e1651766e653c2444a9e454756017d552ce323
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d76d91b2a083f06ea02951957bdd7e43b9092dea
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934922"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254100"
 ---
 # <a name="use-automatic-seeding-to-initialize-a-secondary-replica-for-an-always-on-availability-group"></a>Usar a propagação automática para inicializar uma réplica secundária para um grupo de disponibilidade Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +71,7 @@ Os cenários em que a localização do banco de dados da réplica primária e da
 
 Se você mesclar os caminhos que estiverem dentro e fora do padrão nas réplicas primária e secundária, o SQL Server 2017 se comportará de forma diferente das versões anteriores. A tabela a seguir mostra o comportamento do SQL Server 2017.
 
-|Instância Primária</br>Caminho de dados padrão |Instância secundária</br>Caminho de dados padrão |Instância Primária</br>Local do arquivo |SQL Server 2016 </br>Instância secundária</br>Local do arquivo |SQL Server 2017 </br>Instância secundária</br>Local do arquivo
+|Instância Primária</br>Caminho de dados padrão |Instância secundária</br>Caminho de dados padrão |Instância Primária</br>Local do arquivo |SQL Server 2016 </br>Instância secundária</br>Local do arquivo |Microsoft SQL Server 2017 </br>Instância secundária</br>Local do arquivo
 |:------|:------|:------|:------|:------
 |c:\\data\\ |d:\\data\\ |c:\\data\\ |c:\\data\\ |d:\\data\\ 
 |c:\\data\\ |d:\\data\\ |c:\\data\\group1\\ |c:\\data\\group1\\ |d:\\data\\group1\\
@@ -180,7 +179,7 @@ Há quatro maneiras de monitorar e solucionar problemas da propagação automát
 * [Tabelas de histórico de backup](#backup-history-tables)
 * [Eventos estendidos](#extended-events)
 
-### <a name="dynamic-management-views"></a>Exibições de gerenciamento dinâmico
+### <a name="dynamic-management-views"></a>Exibições de Gerenciamento Dinâmico
 
 Há dois modos de exibição de gerenciamento dinâmico (DMVs) para monitorar a propagação: `sys.dm_hadr_automatic_seeding` e `sys.dm_hadr_physical_seeding_stats`.
 
@@ -231,7 +230,7 @@ GO
 
 A tabela a seguir lista os eventos estendidos relacionados à propagação automática.
 
-|Nome|Descrição|
+|Nome|DESCRIÇÃO|
 |----|-----------|
 |hadr_db_manager_seeding_request_msg|Mensagem de solicitação de propagação.|
 |hadr_physical_seeding_backup_state_change|Alteração de estado lateral de backup da propagação física.|

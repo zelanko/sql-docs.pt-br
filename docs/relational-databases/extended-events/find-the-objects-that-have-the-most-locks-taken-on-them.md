@@ -1,6 +1,5 @@
 ---
-title: Localizar os objetos que detêm a maioria dos bloqueios | Microsoft Docs
-ms.custom: ''
+title: Localizar objetos com mais bloqueios usando Eventos Estendidos
 ms.date: 10/18/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,13 +14,14 @@ helpviewer_keywords:
 ms.assetid: fcbadbda-c91c-43f0-a1b5-601e40110e07
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1173afdae14e2c68d2aade38c938eecfe3bc25d7
-ms.sourcegitcommit: 49fd567e28bfd6e94efafbab422eaed4ce913eb3
+ms.openlocfilehash: 66a28ef1b0f6dcd683097bcd6b8d38a07fe15204
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72589958"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75234483"
 ---
 # <a name="find-the-objects-that-have-the-most-locks-taken-on-them"></a>Localizar os objetos que detêm a maioria dos bloqueios
 
@@ -110,7 +110,7 @@ Para fazer isso, use o Editor de Consultas em [!INCLUDE[ssManStudioFull](../../i
 
 Depois que as instruções no script Transact-SQL anterior forem concluídas, a guia **Resultados** do Editor de Consulta exibe as seguintes colunas:
   
-- NAME
+- name
 - object_id
 - lock_count
   

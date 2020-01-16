@@ -1,6 +1,8 @@
 ---
-title: Permissões REVOKE de entidade de segurança do banco de dados (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: Permissões de entidade de segurança de banco de dados REVOKE
+description: Revogue permissões em um usuário de banco de dados, função de banco de dados ou função de aplicativo.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -18,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: c45e1086-c25b-48bb-a764-4a893e983db2
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: fe8146758dd8d8571ee86c67c757bb61897f419d
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: 0353ff7b9e0778a7ef59107f5ba2876e72bbdd69
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982913"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243337"
 ---
 # <a name="revoke-database-principal-permissions-transact-sql"></a>Permissões de principal do banco de dados REVOKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Revoga permissões concedidas ou negadas em um usuário de banco de dados, função de banco de dados ou função de aplicativo.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -120,7 +122,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  *Database_user_with_no_login*  
  Especifica um usuário do banco de dados sem nenhuma entidade de segurança correspondente no nível de servidor.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
   
 ## <a name="database-user-permissions"></a>Permissões do usuário do banco de dados  
  Um usuário do banco de dados é um item protegível do nível do banco de dados contido pelo banco de dados que é seu pai na hierarquia de permissões. As permissões mais específicas e limitadas que podem ser revogadas em um usuário de banco de dados são listadas na tabela a seguir, junto com as permissões mais gerais que as incluem implicitamente.  
@@ -158,7 +160,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-revoking-control-permission-on-a-user-from-another-user"></a>A. Revogando a permissão CONTROL em um usuário a partir de outro usuário  
+### <a name="a-revoking-control-permission-on-a-user-from-another-user"></a>a. Revogando a permissão CONTROL em um usuário a partir de outro usuário  
  O exemplo a seguir revoga a permissão `CONTROL` no usuário `Wanida` do [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] a partir do usuário `RolandX`.  
   
 ```  

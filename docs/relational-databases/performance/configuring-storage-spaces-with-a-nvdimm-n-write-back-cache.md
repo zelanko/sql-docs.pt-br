@@ -1,6 +1,6 @@
 ---
-title: Configurar Espaços de Armazenamento com um cache de write-back de NVDIMM-N | Microsoft Docs
-ms.custom: ''
+title: Como configurar o armazenamento – cache de regravação NVDIMM-N
+ms.custom: seo-dt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 861862fa-9900-4ec0-9494-9874ef52ce65
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 050182836ecaa013ffe45ff9d5f78d2cdd60a1a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e19b164b0efe6d92a9bae0e6f7362ac5fd56f202
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68137988"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165988"
 ---
 # <a name="configuring-storage-spaces-with-a-nvdimm-n-write-back-cache"></a>Configurar Espaços de Armazenamento com um cache de write-back de NVDIMM-N
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ $pd =  Get-PhysicalDisk | Select FriendlyName, MediaType, BusType | WHere-Object
 $pd | Select FriendlyName, MediaType, BusType  
 ```  
   
- ![Select FriendlyName](../../relational-databases/performance/media/select-friendlyname.png "Select FriendlyName")  
+ ![Selecionar FriendlyName](../../relational-databases/performance/media/select-friendlyname.png "Selecionar FriendlyName")  
   
 ## <a name="creating-the-storage-pool"></a>Criando o pool de armazenamento  
  Com a variável $pd que contém PhysicalDisks, é fácil criar o pool de armazenamento usando o cmdlet New-StoragePool do PowerShell.  

@@ -1,6 +1,7 @@
 ---
-title: Configurar o armazenamento iSCSI da instância de cluster de failover – SQL Server em Linux
-description: ''
+title: 'Configurar o armazenamento da FCI iSCSI: SQL Server em Linux'
+description: Saiba como configurar uma FCI (instância de cluster de failover) usando o iSCSI no SQL Server em Linux.
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -8,12 +9,12 @@ ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 0d52038d3e556ecc2202fd1066dc2638bfe14183
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: e10f354a8f0af2467a9519a794995043864a4cd6
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032398"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558570"
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>Configurar a instância de cluster de failover – iSCSI – SQL Server em Linux
 
@@ -297,7 +298,7 @@ Para obter mais informações sobre o iniciador iSCSI para as distribuições co
     chown mssql <FolderName>
     ```
 
-    \<FolderName> é o nome da pasta que foi criada. Um exemplo é mostrado a seguir.
+    \<FolderName> é o nome da pasta que foi criada. Um exemplo é mostrado abaixo.
 
     ```bash
     chown mssql /var/opt/mssql/userdata
@@ -309,7 +310,7 @@ Para obter mais informações sobre o iniciador iSCSI para as distribuições co
     chown mssql <FolderName>
     ```
 
-    \<FolderName> é o nome da pasta que foi criada. Um exemplo é mostrado a seguir.
+    \<FolderName> é o nome da pasta que foi criada. Um exemplo é mostrado abaixo.
 
     ```bash
     chown mssql /var/opt/mssql/userdata
@@ -351,7 +352,7 @@ Para obter mais informações sobre o iniciador iSCSI para as distribuições co
     volume_list = [ <ListOfVGsNotUsedByPacemaker> ]
     ```
 
-    \<ListOfVGsNotUsedByPacemaker> é a lista de grupos de volumes da saída da Etapa 20 que não será usada pelo FCI. Coloque cada um entre aspas e separe por uma vírgula. Um exemplo é mostrado a seguir.
+    \<ListOfVGsNotUsedByPacemaker> é a lista de grupos de volumes da saída da Etapa 20 que não será usada pelo FCI. Coloque cada um entre aspas e separe por uma vírgula. Um exemplo é mostrado abaixo.
 
     ![55-ListOfVGs][11]
  

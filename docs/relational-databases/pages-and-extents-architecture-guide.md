@@ -14,12 +14,12 @@ ms.assetid: 83a4aa90-1c10-4de6-956b-7c3cd464c2d2
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9bc8b582effc2ba96a03a2a7b76e33118c0222ee
-ms.sourcegitcommit: ac90f8510c1dd38d3a44a45a55d0b0449c2405f5
+ms.openlocfilehash: 971848a9feddd9cff64bafb5cadf36ab8bdc01e3
+ms.sourcegitcommit: a92fa97e7d3132ea201e4d86c76ac39cd564cd3c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72586775"
+ms.lasthandoff: 12/21/2019
+ms.locfileid: "75325488"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>Guia de arquitetura de página e extensões
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,9 +40,9 @@ Conforme mencionado, em [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], 
 
 A tabela a seguir mostra os tipos de página usados nos arquivos de dados de um banco de dados [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
-|Tipo de página | Sumário |
+|Tipo de página | Conteúdo |
 |-------|-------|
-|Data |Linhas de dados com todos os dados, exceto os dados de texto, ntext, imagem, nvarchar (max), varchar (max), varbinary (max) e xml, quando o texto na linha estiver definido como ON. |
+|data |Linhas de dados com todos os dados, exceto os dados de texto, ntext, imagem, nvarchar (max), varchar (max), varbinary (max) e xml, quando o texto na linha estiver definido como ON. |
 |Índice |Entradas de índice. |
 |Texto/Imagem |Tipos de dados de objeto grandes: (dados de texto, ntext, image, nvarchar(max), varchar(max), varbinary(max) e xml) <br> Colunas de comprimento variável quando a linha de dados exceder 8 KB: (varchar, nvarchar, varbinary e sql_variant) |
 |Global Allocation Map, Shared Global Allocation Map |Informações sobre alocação de extensões. |
@@ -54,7 +54,7 @@ A tabela a seguir mostra os tipos de página usados nos arquivos de dados de um 
 > [!NOTE]
 > Os arquivos de log não contêm páginas; eles contêm uma série de registros de log.
 
-As linhas de dados são colocadas em série na página, iniciando imediatamente após o cabeçalho. Uma tabela de deslocamento da linha tem início no final da página, e cada tabela de deslocamento da linha contém uma entrada para cada linha na página. Cada entrada registra a distância do primeiro byte da linha em relação ao início da página. As entradas na tabela de deslocamento da linha estão em sequência inversa da sequência das linhas na página.
+As linhas de dados são colocadas em série na página, iniciando imediatamente após o cabeçalho. Uma tabela de deslocamento da linha tem início no final da página, e cada tabela de deslocamento da linha contém uma entrada para cada linha na página. Cada entrada de deslocamento de linha registra a distância do primeiro byte da linha em relação ao início da página. Portanto, a função da tabela de deslocamento de linha é ajudar o SQL Server a localizar linhas em uma página muito rapidamente. As entradas na tabela de deslocamento da linha estão em sequência inversa da sequência das linhas na página.
 
 ![page_architecture](../relational-databases/media/page-architecture.gif)
 
@@ -68,7 +68,7 @@ Isso é feito sempre que uma operação de inserção ou atualização aumenta o
 
 ##### <a name="row-overflow-considerations"></a>Considerações sobre dados de estouro de linha 
 
-Quando você combina colunas de tipo de dado CLR definido pelo usuário, varchar, nvarchar, varbinary ou sql_variant que excedem 8.060 bytes por linha, considere o seguinte: 
+Como mencionado anteriormente, uma linha não pode residir em várias páginas e poderá estourar se o tamanho combinado dos campos de tipo de dados de tamanho variável exceder o limite de 8.060 bytes. Para ilustrar isso, uma tabela pode ser criada com duas colunas: uma varchar(7000) e outra varchar(2000). Individualmente, nenhuma coluna excede os 8.060 bytes, mas, combinadas, elas poderão exceder esse limite caso a largura inteira de cada coluna seja preenchida. O SQL Server pode mover dinamicamente a coluna de tamanho variável varchar(7000) para as páginas na unidade de alocação ROW_OVERFLOW_DATA. Quando você combina colunas de tipo de dado CLR definido pelo usuário, varchar, nvarchar, varbinary ou sql_variant que excedem 8.060 bytes por linha, considere o seguinte:
 -  A movimentação de registros volumosos para outra página ocorre dinamicamente à medida que os registros aumentam com base nas operações de atualização. As operações de atualização que diminuem os registros podem fazer com que os registros sejam retornados para a página original na unidade de alocação IN_ROW_DATA. A consulta e execução de outras operações de seleção, como classificações ou junções em grandes registros que contêm tempo de processamento de dados de estouro de linha lento, uma vez que esses registros são processados de forma síncrona em vez de assíncrona.   
    Portanto, quando você cria uma tabela com várias colunas de tipo de dado CLR definido pelo usuário, varchar, nvarchar, varbinary ou sql_variant, considere a porcentagem de linhas com probabilidade de exceder e a frequência com que os dados de estouro devem ser provavelmente consultados. Se houver provavelmente consultas frequentes em várias linhas dos dados de estouro de linha, considere normalizar a tabela de modo que algumas colunas sejam movidas para outra tabela. Em seguida, isso pode ser consultado em uma operação JOIN assíncrona. 
 -  O comprimento de colunas individuais deve ainda se encaixar no limite de 8.000 bytes para colunas varchar, nvarchar, varbinary, sql_variant e colunas tipo de dado CLR definido pelo usuário. Só os comprimentos combinados delas podem exceder o limite de linha de 8.060 bytes de uma tabela.
@@ -98,7 +98,7 @@ Até, e incluindo, o [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], o [!INCLUDE
 
 ## <a name="managing-extent-allocations-and-free-space"></a>Gerenciando alocações de extensão e espaço livre 
 
-As estruturas de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que gerenciam alocações de extensão e controlam o espaço livre têm uma estrutura relativamente simples. Seus benefícios são: 
+As estruturas de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que gerenciam alocações de extensão e controlam o espaço livre têm uma estrutura relativamente simples. Ele oferece as seguintes vantagens: 
 
 * As informações de espaço livre são compactadas, portanto, poucas páginas contêm essas informações.   
   Isso aumenta a velocidade reduzindo a quantidade de leituras de disco exigidas para recuperar as informações de alocação. Além disso, também aumenta a chance de as páginas de alocação permanecerem na memória e não exigirem mais leituras. 
@@ -136,7 +136,7 @@ As páginas **PFS (Page Free Space)** registram o status de alocação de cada p
 
 Após a alocação de uma extensão a um objeto, o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] usa as páginas PFS para registrar quais páginas na extensão são alocadas ou livres. Essas informações são usadas quando o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] precisa alocar uma página nova. A quantidade de espaço livre em uma página é mantida apenas para páginas heap e de Texto/Imagem. Ela é usada quando o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] precisa encontrar uma página com espaço livre disponível para manter uma linha recentemente inserida. Como o ponto em que a linha nova deve ser inserida é definido pelos valores de chave de índice, os índices não exigem que o espaço livre da página seja controlado.
 
-Uma página PFS é a primeira página após a página de cabeçalho do arquivo em um arquivo de dados (ID de página 1). Ela é seguida por uma página GAM (ID de página 2) e uma página SGAM (ID de página 3). Há uma nova página PFS aproximadamente 8.000 páginas após a primeira página PFS, e páginas PFS adicionais em intervalos de 8.000 páginas subsequentes. Há outra página GAM com 64.000 extensões após a primeira página GAM na página 2, outra página SGAM com 64.000 extensões após a primeira página SGAM na página 3, bem como páginas GAM e SGAM em intervalos de 64.000 extensões subsequentes. A ilustração a seguir mostra a sequência de páginas usada pelo [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] para alocar e gerenciar as extensões.
+Uma nova página PFS, GAM ou SGAM é adicionada ao arquivo de dados para cada intervalo adicional que ele acompanha. Portanto, há uma nova página PFS localizada a 8.088 páginas após a primeira página PFS e páginas PFS adicionais em intervalos de 8.088 páginas seguintes. Para ilustrar isso, a ID da página 1 é uma página PFS, a ID da página 8088 é uma página PFS, a ID da página 16176 é uma página PFS etc. Há uma nova página GAM localizada a 64.000 extensões após a primeira página GAM e ela acompanha os intervalos de 64.000 extensões posteriores; a sequência continua em intervalos de 64.000 extensões. Da mesma forma, há uma nova página SGAM localizada a 64.000 extensões após a primeira página SGAM e páginas SGAM adicionais nos intervalos de 64.000 extensões seguintes. A ilustração a seguir mostra a sequência de páginas usada pelo [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] para alocar e gerenciar as extensões.
 
 ![manage_extents](../relational-databases/media/manage-extents.gif)
 

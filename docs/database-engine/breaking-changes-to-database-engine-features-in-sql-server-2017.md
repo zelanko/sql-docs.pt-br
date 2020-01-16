@@ -1,11 +1,12 @@
 ---
-title: Alterações interruptivas em recursos do Mecanismo de Banco de Dados no SQL Server 2017 | Microsoft Docs
+title: 'Mecanismo de Banco de Dados: Alterações mais recentes | Microsoft Docs'
+titleSuffix: SQL Server 2017
 description: Alterações interruptivas em recursos do Mecanismo de Banco de Dados no SQL Server 2017
-ms.date: 11/27/2018
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.custom: ''
 ms.technology: release-landing
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +15,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 5c0c745b6eeda0b3cc85bdff19ede2354c01855e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b41127570a91cd49137955530433c5e2f437aab3
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013334"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244714"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-includesssqlv14-mdincludessssqlv14-mdmd"></a>Alterações interruptivas em recursos do Mecanismo de Banco de Dados no [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)]
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]

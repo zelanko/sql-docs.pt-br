@@ -1,6 +1,7 @@
 ---
-title: Usar o Assistente para Fazer Failover de Grupo de Disponibilidade (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Failover de um grupo de disponibilidade
+description: Descreve como executar um failover manual planejado ou forçado de um grupo de disponibilidade Always On com o SSMS (SQL Server Management Studio), o T-SQL (Transact-SQL) ou o SQL PowerShell.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 4a602584-63e4-4322-aafc-5d715b82b834
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3c4f93fcfb153c2e65f27fc85890382c2e93ae8a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5a98049201636bf521ae7162bd4ac0de71d74725
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013522"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74821940"
 ---
 # <a name="use-the-fail-over-availability-group-wizard-sql-server-management-studio"></a>Usar o Assistente para Grupo de Disponibilidade de Failover (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +106,7 @@ ms.locfileid: "68013522"
  **Status do Quorum**  
  Para o tipo de cluster WSFC, exibe o status do quorum da réplica de disponibilidade:  
   
-   |Valor|Descrição|  
+   |Valor|DESCRIÇÃO|  
    |-----------|-----------------|  
    |**Quorum normal**|O cluster foi iniciado com quorum normal.|  
    |**Quorum forçado**|O cluster foi iniciado com quorum forçado.|  
@@ -127,7 +128,7 @@ ms.locfileid: "68013522"
  **Modo de Disponibilidade**  
  Exibe o modo de disponibilidade da instância de servidor:  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |**Confirmação síncrona**|No modo de confirmação síncrona, antes de confirmar transações, uma réplica primária de confirmação síncrona espera que uma réplica secundária de confirmação síncrona confirme que concluiu a proteção do log. O modo de confirmação síncrona garante que, quando um determinado banco de dados secundário é sincronizado com o banco de dados primário, as transações confirmadas sejam totalmente protegidas.|  
 |**Confirmação assíncrona**|No modo de confirmação assíncrona, a réplica primária confirma as transações sem esperar a confirmação de que uma réplica secundária de confirmação assíncrona protegeu o log. O modo de confirmação assíncrona minimiza a latência de transações nos bancos de dados secundários, mas permite que elas atrasem os bancos de dados primários, possibilitando a perda de dados.|  
@@ -137,9 +138,9 @@ ms.locfileid: "68013522"
  **Modo de Failover**  
  Exibe o modo de failover da instância de servidor:  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
-|**Automatic**|Uma réplica secundária configurada para failover automático também oferece suporte a failover manual planejado sempre que a réplica secundária é sincronizada com a réplica primária.|  
+|**Automático**|Uma réplica secundária configurada para failover automático também oferece suporte a failover manual planejado sempre que a réplica secundária é sincronizada com a réplica primária.|  
 |**Manual**|Existem dois tipos de failover manual: planejado (sem perda de dados) e forçado (com possível perda de dados). Em uma réplica secundária específica, há suporte para somente um desses tipos, dependendo do modo de disponibilidade e, no modo de confirmação síncrono, o estado de sincronização da réplica secundária. Para determinar qual forma de failover manual tem suporte em uma determinada réplica secundária, consulte a coluna **Prontidão de Failover** desta grade.|  
   
  Para obter mais informações, consulte [Failover e modos de failover &#40;grupos de disponibilidade AlwaysOn&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md).  
@@ -147,7 +148,7 @@ ms.locfileid: "68013522"
  **Prontidão de Failover**  
  Exibe a prontidão de failover da réplica secundária:  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |**Sem perda de dados**|Há suporte para esta réplica secundária no failover planejado. Este valor só ocorre quando uma réplica secundária no modo de confirmação síncrona está sincronizada com a réplica primária.|  
 |**Perda de dados, Avisos (** _#_ **)**|Há suporte para esta réplica secundária no failover forçado (com possível perda de dados). Este valor ocorre sempre que a réplica secundária não está sincronizada com a réplica primária. Clique no link de avisos de perda de dados referente às informações sobre a possível perda de dados.|  

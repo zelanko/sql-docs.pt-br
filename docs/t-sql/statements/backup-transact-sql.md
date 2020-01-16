@@ -46,12 +46,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1c6385fc578bfa1f9d688e9819690e72a3090ce4
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: c1065c56e3f07f1381e5056d1b2eca3a20ed0cd2
+ms.sourcegitcommit: c98c6e33d04d4a1888db7dbe89cb0b1bb3a66418
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982846"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74249735"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -416,7 +416,7 @@ FORMAT Especifica que um novo conjunto de mídias deve ser criado. FORMAT faz co
 
 A especificação de FORMAT implica `SKIP`; `SKIP` não precisa ser declarado explicitamente.
 
-MEDIADESCRIPTION **=** { *text* | **@** _text\_variable_ } Especifica a descrição de texto de forma livre do conjunto de mídias, com um máximo de 255 caracteres.
+MEDIADESCRIPTION **=** { *text* | **@** _text\_variable_ } Especifica a descrição em texto de forma livre, máximo de 255 caracteres, do conjunto de mídias.
 
 MEDIANAME **=** { *media_name* |  **@** _media\_name\_variable_ } Especifica o nome da mídia de todo o conjunto de mídias de backup. O nome da mídia não deve ter mais de 128 caracteres. Se `MEDIANAME` for especificado, ele deverá corresponder ao nome da mídia especificado anteriormente já existente nos volumes de backup. Se não estiver especificado ou se a opção SKIP estiver especificada, não haverá nenhuma verificação do nome da mídia.
 
@@ -655,7 +655,7 @@ Para obter mais informações sobre conjuntos de mídia espelhadas, consulte [Co
 
 ### <a name="Restoring_Backups"></a> Restaurando backups do SQL Server
 
-Para restaurar um banco de dados e, opcionalmente, recuperá-lo para fazê-lo ficar online ou restaurar um arquivo ou grupo de arquivos, use a instrução [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) do [!INCLUDE[tsql](../../includes/tsql-md.md)] ou as tarefas **Restore** do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obter mais informações, consulte [Visão geral de restauração e recuperação](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).
+Para restaurar um banco de dados e, opcionalmente, recuperá-lo para fazê-lo ficar online ou restaurar um arquivo ou grupo de arquivos, use a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) ou as tarefas [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Restore**. Para obter mais informações, consulte [Visão geral de restauração e recuperação](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).
 
 ## <a name="Additional_Considerations"></a> Considerações adicionais sobre as opções de BACKUP
 
@@ -741,7 +741,7 @@ Os problemas de propriedade e permissão no arquivo físico do dispositivo de ba
 
 Esta seção contém os seguintes exemplos:
 
-- A. [Fazendo backup de um banco de dados completo](#backing_up_db)
+- a. [Fazendo backup de um banco de dados completo](#backing_up_db)
 - B. [Fazendo backup do banco de dados e do log](#backing_up_db_and_log)
 - C. [Criando um backup completo de arquivos dos grupos de arquivos secundários](#full_file_backup)
 - D. [Criando um backup diferencial de arquivos dos grupos de arquivos secundários](#differential_file_backup)
@@ -932,7 +932,7 @@ WHERE r.command LIKE 'BACKUP%'
 
 > ||||
 > |---|---|---|
-> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|**_\* Instância gerenciada<br />do Banco de Dados SQL \*_** &nbsp;|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
+> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|**_\* Instância gerenciada do<br />Banco de Dados SQL \*_** &nbsp;|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
 
 &nbsp;
 
@@ -1029,7 +1029,7 @@ DESCRIPTION **=** { **'** _text_ **'**  |  **@** _text\_variable_ } Especifica o
 
 NAME **=** { *backup_set_name* |  **@** _backup\_set\_var_ } Especifica o nome do conjunto de backup. Os nomes podem ter no máximo de 128 caracteres. Se NAME não estiver especificado, ele estará em branco.
 
-MEDIADESCRIPTION **=** { *text* | **@** _text\_variable_ } Especifica a descrição de texto de forma livre do conjunto de mídias, com um máximo de 255 caracteres.
+MEDIADESCRIPTION **=** { *text* | **@** _text\_variable_ } Especifica a descrição em texto de forma livre, máximo de 255 caracteres, do conjunto de mídias.
 
 MEDIANAME **=** { *media_name* |  **@** _media\_name\_variable_ } Especifica o nome da mídia de todo o conjunto de mídias de backup. O nome da mídia não deve ter mais de 128 caracteres. Se `MEDIANAME` for especificado, ele deverá corresponder ao nome da mídia especificado anteriormente já existente nos volumes de backup. Se não estiver especificado ou se a opção SKIP estiver especificada, não haverá nenhuma verificação do nome da mídia.
 
@@ -1260,7 +1260,7 @@ Os backups do [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] não são armazenado
 
 **Gerenciar credenciais de rede**
 
-O acesso da rede ao diretório de backup baseia-se na segurança de compartilhamento de arquivos padrão do Windows. Antes de executar um backup, você precisa criar ou designar uma conta do Windows que será usada para autenticar o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] no diretório de backup. Essa conta do Windows precisa ter permissão para acessar, criar e gravar no diretório de backup.
+O acesso da rede ao diretório de backup baseia-se na segurança de compartilhamento de arquivos padrão do sistema operacional. Antes de executar um backup, você precisa criar ou designar uma conta do Windows que será usada para autenticar o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] no diretório de backup. Essa conta do Windows precisa ter permissão para acessar, criar e gravar no diretório de backup.
 
 > [!IMPORTANT]
 > Para reduzir os riscos de segurança para seus dados, é recomendável designar uma conta do Windows exclusivamente para a finalidade de executar operações de backup e restauração. Permita que essa conta tenha permissões para o local de backup e não tenha para nenhum outro lugar.
@@ -1273,7 +1273,7 @@ Para listar todas as credenciais de rede armazenadas no [!INCLUDE[ssPDW](../../i
 
 ## <a name="examples"></a>Exemplos
 
-### <a name="a-add-network-credentials-for-the-backup-location"></a>A. Adicionar as credenciais de rede para o local de backup
+### <a name="a-add-network-credentials-for-the-backup-location"></a>a. Adicionar as credenciais de rede para o local de backup
 
 Para criar um backup, o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] precisa ter permissão de leitura/gravação para o diretório de backup. O exemplo a seguir mostra como adicionar as credenciais para um usuário. O [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] armazenará essas credenciais e as usará para as operações de backup e restauração.
 

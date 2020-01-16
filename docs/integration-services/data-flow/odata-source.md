@@ -15,12 +15,12 @@ f1_keywords:
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3972714722b800cdd4400739f40d8eb8c6c3eff7
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 2177b4d1c4454aca803f11980340407362236c8c
+ms.sourcegitcommit: 94f6a4b506dfda242fc3efb2403847e22a36d340
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71298227"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75546531"
 ---
 # <a name="odata-source"></a>Origem do OData
 
@@ -41,13 +41,15 @@ O componente oferece suporte para os protocolos OData v3 e v4.
 
 O OData Source inclui suporte para as seguintes fontes de dados:
 -   Microsoft Dynamics AX Online e Microsoft Dynamics CRM Online
--   Listas do SharePoint. Para ver todas as listas em um servidor do SharePoint, use a seguinte URL: https://\<server>/_vti_bin/ListData.svc. Para obter mais informações sobre as convenções de URL do SharePoint, consulte [Interface REST do SharePoint Foundation](https://msdn.microsoft.com/library/ff521587.aspx).
+-   Listas do SharePoint. Para ver todas as listas em um servidor do SharePoint, use a seguinte URL: `https://<server>/_vti_bin/ListData.svc`. Para obter mais informações sobre as convenções de URL do SharePoint, consulte [Interface REST do SharePoint Foundation](https://msdn.microsoft.com/library/ff521587.aspx).
 
 ## <a name="supported-data-types"></a>Tipos de dados com suporte
 
 A fonte OData dá suporte aos seguintes tipos de dados simples: int, byte[], bool, byte, DateTime, DateTimeOffset, decimal, double, Guid, Int16, Int32, Int64, sbyte, float, string e TimeSpan.
 
 Para descobrir os tipos de dados das colunas em sua fonte de dados, verifique a página `https://<OData feed endpoint>/$metadata`.
+
+Para o tipo de dados **Decimal**, a precisão e a escala são determinadas pelos metadados de origem. Se os metadados de origem não especificarem as propriedades de **Precisão** e **Escala**, os dados poderão ser truncados.
 
 > [!IMPORTANT]
 > O componente OData Source não é compatível com tipos complexos, como itens de múltipla escolha, nas listas do SharePoint.
@@ -64,7 +66,7 @@ Para descobrir os tipos de dados das colunas em sua fonte de dados, verifique a 
   
 -   [Tutorial: Uso do OData Source](../../integration-services/data-flow/tutorial-using-the-odata-source.md)  
   
--   [Modifique a consulta de origem do OData em tempo de execução](../../integration-services/data-flow/modify-odata-source-query-at-runtime.md)  
+-   [Modifique a consulta de origem do OData em runtime](../../integration-services/data-flow/modify-odata-source-query-at-runtime.md)  
   
 -   [Propriedades da origem do OData](../../integration-services/data-flow/odata-source-properties.md)  
   
@@ -77,13 +79,13 @@ Para descobrir os tipos de dados das colunas em sua fonte de dados, verifique a 
   
  Depois que você selecionar ou criar um gerente de conexões, a caixa de diálogo exibe a versão do protocolo OData que o gerenciador de conexão está usando.  
   
- **Nova**  
+ **Novo**  
  Crie um novo gerenciador de conexões usando a caixa de diálogo **Editor do Gerenciador de Conexões do OData** .  
   
  **Use o caminho de coleção ou de recurso**  
  Especifique o método para selecionar os dados da origem.  
   
-|Opção|Descrição|  
+|Opção|DESCRIÇÃO|  
 |------------|-----------------|  
 |Coleção|Recupere os dados da origem do OData usando um nome de coleção.|  
 |Caminho do recurso|Recupere os dados da origem do OData usando um caminho de recurso.|  
@@ -105,7 +107,7 @@ Para descobrir os tipos de dados das colunas em sua fonte de dados, verifique a 
   
 #### <a name="use-collection-or-resource-path--resource-path"></a>Use o caminho da coleção ou do recurso = Caminho do recurso  
  **Resource path**  
- Digite um caminho de recurso. Por exemplo: funcionários  
+ Digite um caminho de recurso. Por exemplo:  funcionários  
   
 ## <a name="odata-source-editor-columns-page"></a>Editor de Origem do OData (página Colunas)
   Use a página **Colunas** da caixa de diálogo **Editor de Origem OData** para selecionar as colunas externas (origem) a serem incluídas na saída e para mapeá-las para as colunas de saída.  

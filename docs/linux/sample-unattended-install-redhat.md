@@ -1,19 +1,20 @@
 ---
-title: Instalação autônoma para SQL Server no Red Hat Enterprise Linux
+title: Instalação autônoma do SQL Server no RHEL
 titleSuffix: SQL Server
-description: Exemplo de script do SQL Server – Instalação autônoma no Red Hat Enterprise Linux
+description: 'Amostra de script do SQL Server: instalação autônoma no RHEL (Red Hat Enterprise Linux)'
+ms.custom: seo-lt-2019
 author: VanMSFT
 ms.author: vanto
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 696ba88a9f2d5f29de8dc3afb45af8c392f2de68
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.openlocfilehash: dc37a110b82113f2a96bd46be914c06a43c1a0ea
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "67910442"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558628"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-red-hat-enterprise-linux"></a>Exemplo: Script de instalação autônoma do SQL Server para o Red Hat Enterprise Linux
 
@@ -179,7 +180,7 @@ A primeira coisa que o script Bash faz é definir algumas variáveis.  Elas pode
 
 1. Atualizar os repositórios locais
 
-1. Instalar o SQL Server
+1. Instale o SQL Server
 
 1. Configure o SQL Server com o ```MSSQL_SA_PASSWORD``` e aceite automaticamente o Contrato de Licença de Usuário Final.
 

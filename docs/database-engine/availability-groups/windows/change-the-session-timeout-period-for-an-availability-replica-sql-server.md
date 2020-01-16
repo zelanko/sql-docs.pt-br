@@ -1,7 +1,7 @@
 ---
-title: Alterar o período de tempo limite da sessão de uma réplica em um grupo de disponibilidade
+title: Modificar o tempo limite da sessão para uma réplica do grupo de disponibilidade
 description: Descreve como configurar o período de tempo limite da sessão de uma réplica em um Grupo de Disponibilidade AlwaysOn.
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: e23c6e06-1cd1-4d4a-9bc2-e3e06ab2933d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d0c75e9264187ed6a351c162276253ff58be45a0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0dd31433b94cb32cb68c9ff9d1eaa7e2f08ab324
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991313"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822433"
 ---
-# <a name="change-the-session-timeout-period-for-a-replica-within-an-always-on-availability-group"></a>Alterar o período de tempo limite da sessão de uma réplica em um Grupo de Disponibilidade AlwaysOn
+# <a name="modify-the-session-timeout-period-for-an-availability-group-replica"></a>Modificar o período do tempo limite da sessão para uma réplica do grupo de disponibilidade
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Este tópico descreve como configurar o período de tempo limite da sessão de uma réplica de disponibilidade AlwaysOn usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou o PowerShell no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. O período de tempo limite da sessão é uma propriedade de réplica que controla quantos segundos uma réplica de disponibilidade espera por uma resposta de ping de uma réplica conectada antes de considerar que ocorreu uma falha na conexão. Por padrão, uma réplica espera 10 segundos por uma resposta de ping. Esta propriedade de réplica aplica-se apenas à conexão entre uma determinada réplica secundária e a réplica primária do grupo de disponibilidade. Para obter mais informações o período de tempo limite da sessão, confira [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
    
@@ -41,7 +41,7 @@ ms.locfileid: "67991313"
   
 1.  No Pesquisador de Objetos, conecte-se à instância de servidor que hospeda a réplica primária e expanda a árvore de servidores.  
   
-2.  Expanda os nós **Alta Disponibilidade AlwaysOn** e **Grupos de Disponibilidade** .  
+2.  Expanda os nós **Alta Disponibilidade AlwaysOn** e **Grupos de Disponibilidade**.  
   
 3.  Clique no grupo de disponibilidade cuja réplica de disponibilidade você deseja configurar.  
   

@@ -1,6 +1,6 @@
 ---
-title: Planejar a adoção de recursos de OLTP in-memory no SQL Server | Microsoft Docs
-ms.custom: ''
+title: 'Planejar a adoção de OLTP in-memory '
+ms.custom: seo-dt-2019
 ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +11,12 @@ ms.assetid: 041b428f-781d-4628-9f34-4d697894e61e
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d2aaee2db975d9632c1f13a664a6ad2939afe20b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f899a8fc1ad5a316784a83cb13f29acb84a01b2b
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021814"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412549"
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>Planejar a adoção de recursos de OLTP in-memory no SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ Este artigo descreve as formas como a adoção de recursos in-memory afeta outro
 
 
 
-## <a name="a-adoption-of-in-memory-oltp-features"></a>A. Adoção de recursos do OLTP in-memory
+## <a name="a-adoption-of-in-memory-oltp-features"></a>a. Adoção de recursos do OLTP in-memory
 
 
 As subseções a seguir discutem fatores que você deve considerar ao planejar adotar e implementar recursos in-memory. Muitas informações explicativas estão disponíveis em:
@@ -54,7 +54,7 @@ Uma tabela com otimização de memória que contém 200 GB de dados requer mais 
 
 - [Estimar requisitos de memória para tabelas com otimização de memória](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md)
 
-#### <a name="azure-sql-database"></a>Banco de dados SQL do Azure
+#### <a name="azure-sql-database"></a>Banco de Dados SQL do Azure
 
 Para um banco de dados hospedado no serviço de nuvem do Banco de Dados SQL do Azure, a camada de serviço escolhida afeta a quantidade de memória ativa que o banco de dados pode consumir. Você deve se planejar para monitorar o uso de memória do banco de dados usando um alerta. Para obter detalhes, confira:
 

@@ -1,6 +1,7 @@
 ---
-title: 'Tutorial: Administrar servidores com o gerenciamento baseado em políticas | Microsoft Docs'
-ms.custom: ''
+title: 'Tutorial: Como gerenciar servidores usando o gerenciamento baseado em políticas'
+description: Este tutorial ensina a criar e aplicar uma política desativada por padrão e uma política de padrões de nomenclatura.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 7de96e7b-9fb8-4cc8-8d85-61345d68a1e8
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d98e1f1332d75514887858a11087e94bca4caf32
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ed0fc25f704624e740b1c3d1c1a8d2671c692f03
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021494"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558224"
 ---
-# <a name="tutorial-administering-servers-by-using-policy-based-management"></a>Tutorial: administração de servidores com Gerenciamento Baseado em Políticas
+# <a name="tutorial-managing-servers-using-policy-based-management"></a>Tutorial: Como gerenciar servidores usando o gerenciamento baseado em políticas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Bem-vindo ao tutorial Administrando servidores com o uso do Gerenciamento Baseado em Políticas. Este tutorial é dirigido a usuários que estão familiarizado com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mas ainda não conhecem o Gerenciamento Baseado em Políticas.  
   

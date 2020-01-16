@@ -1,5 +1,5 @@
 ---
-title: Habilitar o failover de banco de dados avançado para um grupo de disponibilidade
+title: Failover avançado para um grupo de disponibilidade
 description: Etapas para habilitar o failover avançado de banco de dados, que dispara um failover se um banco de dados em um grupo de disponibilidade Always On não consegue mais gravar transações.
 ms.custom: seodec18
 ms.date: 09/25/2017
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 91246775b917cf7c56218482b5c7b0c86264d612
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9acd444e1ded8ab0530f605280e7aaa5c5dec907
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67947954"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822240"
 ---
 # <a name="enable-enhanced-database-failover-to-a-database-in-an-always-on-availability-group"></a>Habilitar o failover avançado de banco de dados para um banco de dados em um grupo de disponibilidade Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ Isso tem a mesma configuração de grupo de disponibilidade do Cenário 1. Em ve
 
 Um grupo de disponibilidade é configurado entre a Instância A e a Instância B, que contém dois bancos de dados: DB1 e DB2. O modo de disponibilidade é definido como confirmação síncrona com um modo de failover automático e o failover de banco de dados avançado está habilitado. O acesso ao disco que contém dados e os arquivos de log de transações do DB2 é perdido. Quando o problema for detectado, o grupo de disponibilidade fará failover automaticamente para a Instância B.
 
-## <a name="configure-and-view-the-enhanced-database-failover-option"></a>Configurar e exibir a opção de failover de banco de dados avançado
+## <a name="configure-enhanced-failover"></a>Configurar o failover avançado
 
 O failover de banco de dados avançado pode ser configurado com o SQL Server Management Studio ou o Transact-SQL. Atualmente, os cmdlets do PowerShell não têm essa capacidade. Por padrão, o failover de banco de dados avançado está desabilitado.
 
@@ -79,7 +79,7 @@ Para ver se um grupo de disponibilidade foi habilitado para o failover de banco 
 
 - [Configurar a detecção de integridade do banco de dados](sql-server-always-on-database-health-detection-failover-option.md)
 
-- [Usar o Assistente de Grupo de Disponibilidade (SQL Server Management Studio)](use-the-availability-group-wizard-sql-server-management-studio.md)
+- [Usar a caixa de diálogo Assistente de Grupo de Disponibilidade (SQL Server Management Studio)](use-the-availability-group-wizard-sql-server-management-studio.md)
 
 - [Usar a caixa de diálogo Novo Grupo de Disponibilidade (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)
  

@@ -18,16 +18,16 @@ ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: f69d57fd4d81e150df3694386ebe44650a13a9a8
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 3d0d6fd90b9ec4c933da13d2a3780213095de721
+ms.sourcegitcommit: 02449abde606892c060ec9e9e9a85a3f49c47c6c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769869"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74542064"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>Fazer alterações de esquema em bancos de dados de publicação
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  A replicação oferece suporte para um amplo intervalo de alterações de esquema para objetos publicados. Ao fazer qualquer uma das seguintes alterações de esquema no objeto publicado adequado em um Publicador do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , a alteração é propagada por padrão a todos os Assinantes do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
+  A replicação oferece suporte para um amplo intervalo de alterações de esquema para objetos publicados. Ao se fazer qualquer uma das seguintes alterações de esquema no objeto publicado adequado em um Editor do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], essa alteração será propagada por padrão para todos os Assinantes do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
   
 -   ALTER TABLE  
   
@@ -73,7 +73,7 @@ ms.locfileid: "68769869"
   
 -   Todos os objetos no Assinante que são referenciados ao se adicionar uma chave estrangeira devem ter o mesmo nome e proprietário que o objeto correspondente no Publicador.  
   
--   Não há suporte ao se adicionar, descartar ou alterar índices explicitamente. Índices criados implicitamente para restrições (como uma restrição de chave primária) têm suporte.  
+-   Adicionar, descartar ou alterar explicitamente índices não são replicados e qualquer alteração que envolva um índice explícito precisará ser executada em cada conjunto de réplicas individualmente. Índices criados implicitamente para restrições (como uma restrição de chave primária) têm suporte.  
   
 -   Não há suporte ao se alterar ou descartar colunas de identidade gerenciadas por replicação. Para obter mais informações sobre o gerenciamento automático de colunas de identidade, consulte [Replicar colunas de identidade](../../../relational-databases/replication/publish/replicate-identity-columns.md).  
   

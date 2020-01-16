@@ -1,6 +1,8 @@
 ---
-title: Usar o SQL Server Profiler para criar e testar guias de plano | Microsoft Docs
-ms.custom: ''
+title: Criar e testar guias de plano
+titleSuffix: SQL Server Profiler
+description: Como criar e testar guias de plano no SQL Server Profiler.
+ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -21,18 +23,18 @@ helpviewer_keywords:
 ms.assetid: 7018dbf0-1a1a-411a-88af-327bedf9cfbd
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 271e84ccefd43f2ce379a64435a9eb105553f606
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.openlocfilehash: 2879807d7eb64446a26ea5857f33c52fe7b78970
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2019
-ms.locfileid: "72305082"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165931"
 ---
 # <a name="use-sql-server-profiler-to-create-and-test-plan-guides"></a>Usar o SQL Server Profiler para criar e testar guias de plano
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Ao criar um guia de plano, você poderá usar o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para capturar o texto de consulta exato para usar no argumento *statement_text* do procedimento armazenado **sp_create_plan_guide** . Isto ajuda a certificar que o guia de plano será correspondido à consulta no tempo de compilação. Depois que o guia de plano é criado, o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] também pode ser usado para testar se o guia de plano está, de fato, sendo correspondido à consulta. De maneira geral, você deve testar guias de plano usando o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para verificar se a sua consulta está sendo correspondida ao guia de plano.  
   
-## <a name="capturing-query-text-by-using-sql-server-profiler"></a>Capturando texto de consulta usando o SQL Server Profiler  
+## <a name="capturing-query-text-by-using-sql-server-profiler"></a>Como capturar texto de consulta usando o SQL Server Profiler  
  Se você executar uma consulta e capturar o texto exatamente como foi submetido ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], será possível criar um guia de plano do tipo SQL ou TEMPLATE que corresponderá exatamente ao texto de consulta. Isto certifica que o guia de plano seja usado pelo otimizador de consulta.  
   
  Considere a seguinte consulta, que é submetida por um aplicativo como um lote autônomo:  
@@ -80,7 +82,7 @@ EXEC sp_create_plan_guide
     @hints = N'OPTION (MERGE JOIN)';  
 ```  
   
-## <a name="testing-plan-guides-by-using-sql-server-profiler"></a>Testando guias de plano usando o SQL Server Profiler  
+## <a name="testing-plan-guides-by-using-sql-server-profiler"></a>Como testar guias de plano usando o SQL Server Profiler  
  Para verificar se um guia de plano está sendo correspondido a uma consulta, execute as seguintes etapas:  
   
 1.  Inicie um novo rastreamento [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] e verifique se o tipo de evento **Showplan XML** está selecionado (localizado abaixo do nó **Desempenho** ).  

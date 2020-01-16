@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 386cedbb-fae5-45ce-9363-c4a417f80a2f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 903ff234d0e29f6f9c8f6d1acb5c5ce658c59338
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 938a6d8ba779d1cef37b5fab767e609d00b4f022
+ms.sourcegitcommit: aaa42f26c68abc2de10eb58444fe6b490c174eab
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71285701"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74308001"
 ---
 # <a name="connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard"></a>Conectar-se a uma fonte de dados do SQL Server (Assistente de Importação e Exportação do SQL Server)
 
@@ -34,7 +34,8 @@ Depois de selecionar o **Provedor de Dados do .NET Framework para SQL Server** n
 
 |Informações necessárias|Propriedade do Provedor de Dados do .NET Framework para SQL Server|
 |---|---|
-|Nome do servidor|**Fonte de dados**|
+|Autenticação|Use o padrão **NotSpecified** como "Segurança Integrada" ou escolha outro modo de autenticação. Não há suporte para "Autenticação do Active Directory Interativa". |
+|Nome do servidor|**Fonte de Dados**|
 |Informações (logon) de Autenticação|**Segurança Integrada**; ou **ID de Usuário** e **Senha**<br/>Se você desejar ver uma lista suspensa de bancos de dados no servidor, primeiro você precisará fornecer informações de logon válidas.|
 |Nome do banco de dados|**Catálogo Inicial**|
 
@@ -45,7 +46,7 @@ Depois de selecionar o **Provedor de Dados do .NET Framework para SQL Server** n
 > [!NOTE]
 > As opções de conexão para este provedor de dados serão as mesmas se o SQL Server for sua origem ou destino. Ou seja, as opções exibidas nas páginas **Escolher uma Fonte de Dados** e **Escolher um Destino** do assistente são as mesmas.
 
-**Fonte de dados**  
+**Fonte de Dados**  
  Digite o nome ou endereço IP do servidor de origem ou de destino, ou então selecione um servidor na lista suspensa.  
  
  Para especificar uma porta TCP não padrão, digite uma vírgula após o nome do servidor ou endereço IP e, em seguida, digite o número da porta.

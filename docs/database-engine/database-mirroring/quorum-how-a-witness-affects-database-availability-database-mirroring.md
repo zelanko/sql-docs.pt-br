@@ -1,6 +1,7 @@
 ---
-title: 'Quorum: como uma testemunha afeta a disponibilidade do banco de dados (Espelhamento de Banco de Dados) | Microsoft Docs'
-ms.custom: ''
+title: Como uma testemunha afeta a disponibilidade do banco de dados
+description: Descreve como um espelhamento de banco de dados afeta o quorum e a disponibilidade do banco de dados.
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -21,14 +22,14 @@ helpviewer_keywords:
 ms.assetid: a62d9dd7-3667-4751-a294-a61fc9caae7c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 554108909607d7d1cdabb10bb075a9d77b5e7b16
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6bbf98cbd0fc863c8e6ceaf7eeb5a0e9192055c4
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025413"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822688"
 ---
-# <a name="quorum-how-a-witness-affects-database-availability-database-mirroring"></a>Quorum: como uma testemunha afeta a disponibilidade do banco de dados ( Espelhamento de banco de dados)
+# <a name="quorum-how-a-witness-affects-database-availability-database-mirroring"></a>Quorum: Como uma testemunha afeta a disponibilidade do banco de dados ( Espelhamento de banco de dados)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Sempre que uma testemunha é definida para uma sessão de espelhamento de banco de dados, é necessário usar o *quorum* . Quorum é a relação criada quando duas ou mais instâncias do servidor na sessão de espelhamento de banco de dados são conectadas entre si. Normalmente, o quorum envolve três instâncias do servidor interconectadas. Quando uma testemunha é definida, o quorum é exigido para tornar o banco de dados disponível. Desenvolvido para o modo de segurança alta com failover automático, o quorum verifica o banco de dados pertence a somente um parceiro por vez.  
   
@@ -42,7 +43,7 @@ ms.locfileid: "68025413"
   
  A figura a seguir mostra esses tipos de quorum.  
   
- ![Quorums: completo; testemunha e parceiro; ambos os parceiros](../../database-engine/database-mirroring/media/dbm-failovautoquorum.gif "Quorums: full; witness and partner; both partners")  
+ ![Quorums: completo; testemunha e parceiro; ambos os parceiros](../../database-engine/database-mirroring/media/dbm-failovautoquorum.gif "Quorums: completo; testemunha e parceiro; ambos os parceiros")  
   
  Enquanto o servidor principal atual tiver quorum, o servidor deterá a função de principal e continuará a servir o banco de dados, a menos que o proprietário do banco de dados execute um failover manual. Se o servidor principal perder quorum, deixará de atender o banco de dados. O failover automático só será possível se o banco de dados principal perder quorum, garantindo que não está mais servindo o banco de dados.  
   
@@ -96,7 +97,7 @@ ms.locfileid: "68025413"
 ### <a name="how-quorum-affects-database-availability"></a>Como o quorum afeta a disponibilidade do banco de dados  
  A ilustração a seguir mostra como a testemunha e os parceiros cooperam para garantir que, em um determinado momento, somente um parceiro detenha a função de principal e apenas o servidor principal atual possa colocar o seu banco de dados online. Ambos os cenários iniciam com quorum completo, **Partner_A** na função principal e **Partner_B** na função espelho.  
   
- ![Como a testemunha e os parceiros cooperam](../../database-engine/database-mirroring/media/dbm-quorum-scenarios.gif "How the witness and partners cooperate")  
+ ![Como a testemunha e os parceiros cooperam](../../database-engine/database-mirroring/media/dbm-quorum-scenarios.gif "Como a testemunha e os parceiros cooperam")  
   
  O cenário 1 mostra como, depois que o servidor principal (**Partner_A**) falha, a testemunha e o espelho concordam que o principal, **Partner_A**, não está mais disponível e formam quorum. O espelho, **Partner_B** , assume a função principal. O failover automático ocorre e o **Partner_B**coloca sua cópia do banco de dados online. Em seguida, **Partner_B** deixa de funcionar e o banco de dados fica offline. Posteriormente, o antigo servidor principal, **Partner_A**, reconecta-se à testemunha readquirindo quorum. Porém, ao comunicar-se com a testemunha, **Partner_A** toma conhecimento de que não pode colocar a sua cópia do banco de dados online porque **Partner_B** agora detém a função principal. Quando o **Partner_B** reassocia-se à sessão, coloca o banco de dados online novamente.  
   

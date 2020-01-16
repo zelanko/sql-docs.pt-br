@@ -1,6 +1,7 @@
 ---
-title: Contas de serviço (Assistente para Configurar Segurança de Espelhamento de Banco de Dados) | Microsoft Docs
-ms.custom: ''
+title: 'Assistente para configurar a segurança: Contas de serviço'
+description: Descreve a página 'Contas de Serviço' do 'Assistente para Configurar Segurança de Espelhamento de Banco de Dados' no SQL Server Management Studio.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
@@ -12,14 +13,14 @@ f1_keywords:
 ms.assetid: d58d8f93-7888-4d66-af4d-969ef6a2dbee
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9c0fb67d173ed0f4ade469c5233a7fdff59dd1a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8c8a83b68febee5e00a80bd9977713a786b70f9a
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025250"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822454"
 ---
-# <a name="service-accounts-configure-database-mirroring-security-wizard"></a>Contas de Serviço (Assistente para Configurar Segurança de Espelhamento do Banco de Dados)
+# <a name="configure-database-mirroring-security-wizard-service-accounts"></a>Assistente para Configurar Segurança de Espelhamento de Banco de Dados: Contas de serviço
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Ao usar a Autenticação do Windows, se as instâncias de servidor usarem contas diferentes, especifique as contas de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essas contas de serviço devem ser todas contas de domínio (nos mesmos domínios ou domínios confiáveis).  
   

@@ -1,6 +1,7 @@
 ---
-title: Usar DMVs para determinar estatísticas de uso e o desempenho das exibições
+title: DMVs – estatísticas de uso e desempenho de exibições
 description: Usar DMVs para determinar estatísticas de uso e o desempenho das exibições
+ms.custom: seo-dt-2019
 author: julieMSFT
 ms.author: jrasnick
 ms.date: 09/27/2018
@@ -8,17 +9,17 @@ ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
-ms.openlocfilehash: 944ba06bc1ccf590e8d02a4fd6e44e6c57ec9001
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e80ba0a8252881b7447dda721f02fc9c3e545917
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986663"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165889"
 ---
 # <a name="use-dmvs-to-determine-usage-statistics-and-performance-of-views"></a>Usar DMVs para determinar estatísticas de uso e o desempenho das exibições
 Este artigo aborda a metodologia e os scripts usados para obter informações sobre o **desempenho de consultas que usam exibições**. A finalidade desses scripts é fornecer indicadores de uso e desempenho das diferentes exibições encontradas em um banco de dados. 
 
-## <a name="sysdmexecqueryoptimizerinfo"></a>sys.dm_exec_query_optimizer_info
+## <a name="sysdm_exec_query_optimizer_info"></a>sys.dm_exec_query_optimizer_info
 O DMV [sys.dm_exec_query_optimizer_info](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-optimizer-info-transact-sql.md) expõe estatísticas sobre as otimizações realizadas pelo otimizador de consulta do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esses valores são cumulativos e começam a gravar quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é iniciado. Para obter mais informações sobre o otimizador de consulta, confira o [Guia da arquitetura de processamento de consultas](../../relational-databases/query-processing-architecture-guide.md).   
 
 A CTE (common_table_expression) a seguir usa esse DMV para fornecer informações sobre a carga de trabalho, como o percentual de consultas que fazem referência a uma exibição. Os resultados retornados pela consulta não indicam um problema de desempenho por si só, mas podem expor problemas subjacentes quando combinados com reclamações de usuários sobre o desempenho lento de consultas. 
@@ -164,7 +165,7 @@ CROSS APPLY
 GO
 ```
 
-## <a name="sysdmvexeccachedplans"></a>sys.dmv_exec_cached_plans
+## <a name="sysdmv_exec_cached_plans"></a>sys.dmv_exec_cached_plans
 A consulta final fornece informações sobre as exibições não utilizadas, usando o DMV [sys.dmv_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md). No entanto, o cache do plano de execução é dinâmico e os resultados podem variar. Sendo assim, use esta consulta ao longo do tempo para determinar se uma exibição está de fato sendo usada ou não. 
 
 ```sql

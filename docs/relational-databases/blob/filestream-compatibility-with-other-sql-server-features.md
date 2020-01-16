@@ -1,7 +1,8 @@
 ---
-title: Compatibilidade do FILESTREAM com outros recursos do SQL Server | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Compatibilidade do FILESTREAM | Microsoft Docs
+description: Compatibilidade do FILESTREAM com outros recursos do SQL Server
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -13,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: d2c145dc-d49a-4f5b-91e6-89a2b0adb4f3
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: fd160a4149e69a28f27f72876121a9a0552abdd6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c4d32598cfab0cc08ece6721b0ff593c8577394d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085361"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245404"
 ---
 # <a name="filestream-compatibility-with-other-sql-server-features"></a>Compatibilidade do FILESTREAM com outros recursos do SQL Server
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Como dados FILESTREAM estão no sistema de arquivos, este tópico fornece algumas considerações, diretrizes e limitações para o uso de FILESTREAM com os seguintes recursos no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
@@ -66,7 +68,7 @@ ms.locfileid: "68085361"
   
  `Could not continue scan with NOLOCK due to data movement.`  
   
-##  <a name="Replication"></a> Replicação  
+##  <a name="Replication"></a> Replication  
  Uma coluna **varbinary(max)** que tem o atributo FILESTREAM habilitado no Publicador pode ser replicada para um Assinante com ou sem o atributo FILESTREAM. Para especificar o modo de replicação da coluna, use a caixa de diálogo **Propriedades do Artigo – \<Artigo>** ou o parâmetro @schema_option de [sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) ou [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Dados replicados para uma coluna **varbinary(max)** que não tenham o atributo FILESTREAM não devem exceder o limite de 2 GB daquele tipo de dados. Caso contrário, um erro em tempo de execução será gerado. Recomendamos replicar o atributo FILESTREAM, a menos que você esteja replicando dados para o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. A replicação de tabelas com colunas FILESTREAM para Assinantes do [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] não tem suporte, independentemente de como essa opção de esquema é definida.  
   
 > [!NOTE]  

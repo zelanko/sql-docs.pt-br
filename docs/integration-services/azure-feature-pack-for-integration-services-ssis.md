@@ -1,7 +1,7 @@
 ---
 title: Feature Pack do Azure para o SSIS (Integration Services) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/17/2019
+ms.date: 12/24/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0e6531e05a3f800bbd4c1563c53c4b4d18eb0eea
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: 563f984ed5aa401ae67572ad0f915698286f0aa4
+ms.sourcegitcommit: f9286d02025ee1e15d0f1c124e951e8891fe3cc2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73659582"
+ms.lasthandoff: 12/23/2019
+ms.locfileid: "75329948"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Feature Pack do Azure para o Integration Services (SSIS)
 
@@ -100,8 +100,8 @@ Para usar o TLS 1.2, adicione um valor de `REG_DWORD` chamado `SchUseStrongCrypt
 
 ## <a name="dependency-on-java"></a>Dependência do Java
 
-O Java é obrigatório para usar formatos de arquivo ORC/Parquet com conectores de Azure Data Lake Storage/Arquivo simples.  
-A arquitetura (32/64 bits) do build Java deve corresponder àquela do runtime do SSIS para usar.
+O Java é obrigatório para uso de formatos de arquivo ORC/Parquet com os conectores do Azure Data Lake Storage/de Arquivo Flexível.  
+A arquitetura (32/64 bits) do build de Java deve corresponder àquela do runtime do SSIS para uso.
 Os builds Java a seguir foram testados.
 
 - [OpenJDK 8u192 do Zulu](https://www.azul.com/downloads/zulu/zulu-windows/)
@@ -119,6 +119,13 @@ Os builds Java a seguir foram testados.
 7. Selecione **OK** para fechar a caixa de diálogo **Nova Variável do Sistema**.
 8. Selecione **OK** para fechar a caixa de diálogo **Variáveis de Ambiente**.
 9. Selecione **OK** para fechar a caixa de diálogo **Propriedades do Sistema**.
+
+> [!TIP]
+> Se você usar o formato Parquet e receber um erro que indique "Erro ao invocar Java, mensagem: **java.lang.OutOfMemoryError:Java heap space**", adicione uma variável de ambiente *`_JAVA_OPTIONS`* para ajustar o tamanho de heap mínimo/máximo para a JVM.
+>
+>![heap da JVM](media/azure-feature-pack-jvm-heap-size.png)
+>
+> Exemplo: definir a variável *`_JAVA_OPTIONS`* com o valor *`-Xms256m -Xmx16g`* . O sinalizador Xms especifica o pool de alocação de memória inicial para uma JVM (Máquina Virtual Java), enquanto Xmx especifica o pool de alocação de memória máxima. Isso significa que a JVM será iniciada com uma quantidade *`Xms`* de memória e poderá usar uma quantidade máxima de *`Xmx`* de memória. Os valores padrão são 64 MB, mín., e 1 G, máx.
 
 ### <a name="set-up-zulus-openjdk-on-azure-ssis-integration-runtime"></a>Configurar OpenJDK do Zulu no Azure-SSIS Integration Runtime
 
@@ -139,6 +146,13 @@ Como ponto de entrada, `main.cmd` dispara a execução do script `install_openjd
 ~~~
 powershell.exe -file install_openjdk.ps1
 ~~~
+
+> [!TIP]
+> Se você usar o formato Parquet e receber um erro que indique "Erro ao invocar Java, mensagem: **java.lang.OutOfMemoryError:Java heap space**", adicione um comando em *`main.cmd`* para ajustar o tamanho de heap mínimo/máximo para a JVM. Exemplo:
+> ~~~
+> setx /M _JAVA_OPTIONS "-Xms256m -Xmx16g"
+> ~~~
+> O sinalizador Xms especifica o pool de alocação de memória inicial para uma JVM (Máquina Virtual Java), enquanto Xmx especifica o pool de alocação de memória máxima. Isso significa que a JVM será iniciada com uma quantidade *`Xms`* de memória e poderá usar uma quantidade máxima de *`Xmx`* de memória. Os valores padrão são 64 MB, mín., e 1 G, máx.
 
 **install_openjdk.ps1**
 
@@ -178,7 +192,7 @@ Expand-Archive zulu8.33.0.1-jdk8.0.192-win_x64.zip -DestinationPath C:\
 
 ![SSIS-AzureConnector-CloudArchive-3](../integration-services/media/ssis-azureconnector-cloudarchive-3.png)
   
-## <a name="release-notes"></a>Notas de Versão
+## <a name="release-notes"></a>Notas de versão
 
 ### <a name="version-1160"></a>Versão 1.16.0
 

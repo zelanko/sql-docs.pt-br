@@ -1,6 +1,7 @@
 ---
-title: Caixa de diálogo Criar Nova Condição ou Abrir Condição, Página Geral | Microsoft Docs
-ms.custom: ''
+title: "'Página Geral' da caixa de diálogo 'Criar Condição' ou 'Abrir Condição'"
+description: Descreve a 'Página Geral' da caixa de diálogo 'Criar Condição' ou 'Abrir Condição' para o gerenciamento baseado em políticas do SSMS (SQL Server Management Studio).
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 106954bf-e4ba-412b-9c1a-907d06153dcd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 793d49d46e3a26164437fd6db542a7db0704e1cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c16d813af595e3698379026e219440ba0007db12
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68137908"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558131"
 ---
 # <a name="create-new-condition-or-open-condition-dialog-box-general-page"></a>Caixa de diálogo Criar Nova Condição ou Abrir Condição, Página Geral
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "68137908"
  **Operador**  
  Selecione um operador de comparação para esta expressão. Os operadores são os seguintes: =, !=, >, >=, <, <=, [NOT]LIKE, [NOT]IN. Nem todos os operadores estão disponíveis para algumas propriedades.  
   
- **Value**  
+ **Valor**  
  A configuração de valor dessa expressão. Os valores permitidos dependem da faceta. Os valores podem ser TRUE/FALSE, cadeia de caracteres ou numéricos. Os valores da cadeia de caracteres devem ser colocados entre aspas simples, por exemplo: **'AdventureWorks'** . Nem todos os operadores estão disponíveis para algumas propriedades.  
   
 ## <a name="group-clauses"></a>Agrupar Cláusulas  

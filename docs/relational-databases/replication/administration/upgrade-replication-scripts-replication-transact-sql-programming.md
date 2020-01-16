@@ -1,6 +1,7 @@
 ---
-title: Atualizar scripts de replicação (Programação Transact-SQL de replicação) | Microsoft Docs
-ms.custom: ''
+title: Atualizar scripts de replicação (SP de Replicação)
+description: Saiba como usar procedimentos armazenados de replicação para atualizar os scripts usados para configurar uma topologia de replicação de forma programática.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -20,12 +21,12 @@ ms.assetid: 0b8720bd-f339-4842-bc8f-b35a46f6d3ee
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7a7104b2ecf2b74b9ad6a2521d7fff9fe09b500f
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 0d582af912f94fe0e0755340eb4d5ace892e72da
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710368"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75320016"
 ---
 # <a name="upgrade-replication-scripts-replication-transact-sql-programming"></a>Atualizar scripts de replicação (Programação Transact-SQL de replicação)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

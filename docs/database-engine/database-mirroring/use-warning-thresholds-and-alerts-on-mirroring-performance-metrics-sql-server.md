@@ -1,6 +1,7 @@
 ---
-title: Usar os limites de aviso e alertas em métricas de desempenho de espelhamento | Microsoft Docs
-ms.custom: ''
+title: Configurar alertas para métricas de desempenho de espelhamento de banco de dados
+description: 'Diretrizes para configurar limites de aviso e alertas para métricas de desempenho usadas pelo espelhamento de banco de dados. '
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8cdd1515-0bd7-4f8c-a7fc-a33b575e20f6
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5e1ff85e22911cf632ef2a2f6bea9fda85f9ece4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ad44ae43a33a132fc2b5170a8ff4d3e6b3572ded
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050604"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74820908"
 ---
 # <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>Use os limites de aviso e alertas em métricas de desempenho de espelhamento (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,15 +31,6 @@ ms.locfileid: "68050604"
   
  Depois que o monitoramento é definido para um banco de dados espelho, um administrador de sistema pode configurar limites de aviso em várias métricas chave de desempenho. Além disso, um administrador pode configurar alertas nesses e em outros eventos de espelhamento de banco de dados.  
   
- **Neste tópico:**  
-  
--   [Métricas de desempenho e limites de aviso](#PerfMetricsAndWarningThresholds)  
-  
--   [Configurando e gerenciando limites de aviso](#SetUpManageWarningThresholds)  
-  
--   [Usando alertas para um banco de dados espelho](#UseAlerts)  
-  
--   [Tarefas relacionadas](#RelatedTasks)  
   
 ##  <a name="PerfMetricsAndWarningThresholds"></a> Métricas de desempenho e limites de aviso  
  A tabela a seguir lista as métricas de desempenho para as quais os avisos podem ser configurados, descreve o limite de aviso correspondente e lista os rótulos correspondentes do Monitor de Espelhamento de Banco de Dados.  
@@ -67,7 +59,7 @@ ms.locfileid: "68050604"
   
      O conjunto a seguir de procedimentos armazenados do sistema permite que um administrador configure e gerencie limites de aviso em bancos de dados espelhados, um parceiro por vez.  
   
-    |Procedimento|Descrição|  
+    |Procedimento|DESCRIÇÃO|  
     |---------------|-----------------|  
     |[sp_dbmmonitorchangealert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql.md)|Adiciona ou altera limites de aviso para uma métrica especificada de desempenho de espelhamento.|  
     |[sp_dbmmonitorhelpalert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpalert-transact-sql.md)|Retorna informações sobre limites de aviso em uma ou todas as várias métricas de desempenho do monitor de espelhamento de banco de dados principal.|  

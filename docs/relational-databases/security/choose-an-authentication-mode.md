@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: ff7a6a48-3d38-4209-aa0f-7d6c0a8c64ef
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: cfbd77901ab2a8a834fe5a9efc4c272845e02c87
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: caee3b1fab893e456a5a781641b6cf70222b16ff
+ms.sourcegitcommit: 0d5b0aeee2a2b34fd448aec2e72c0fa8be473ebe
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72903139"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75721351"
 ---
 # <a name="choose-an-authentication-mode"></a>Escolher um modo de autenticação
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "72903139"
   
 ### <a name="disadvantages-of-sql-server-authentication"></a>Desvantagens da autenticação do SQL Server  
   
--   Se um usuário for usuário de domínio do Windows com logon e senha para o Windows, ele ainda deverá fornecer outras informações de logon e senha ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) para se conectar. Manter o controle de vários nomes e senhas é difícil para muitos usuários. Fornecer credenciais do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a cada conexão com o banco de dados pode ser um incômodo.  
+-   Se um usuário for um usuário de domínio do Windows com logon e senha para o Windows, ele ainda precisará fornecer outro logon e senha ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) para se conectar. Manter o controle de vários nomes e senhas é difícil para muitos usuários. Fornecer credenciais do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a cada conexão com o banco de dados pode ser um incômodo.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] A Autenticação não pode usar o protocolo de segurança Kerberos.  
   

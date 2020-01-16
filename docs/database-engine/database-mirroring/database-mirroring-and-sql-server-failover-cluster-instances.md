@@ -1,6 +1,7 @@
 ---
-title: Espelhamento de banco de dados e instâncias de cluster de failover do SQL Server | Microsoft Docs
-ms.custom: ''
+title: Espelhamento de banco de dados e instâncias de cluster de failover
+description: Saiba como combinar o espelhamento de banco de dados com instâncias de cluster de failover do SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: f1dd6a79-698b-4e31-b923-6bfc3ea0b617
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 760994c4b8b9ed137e9e0d221e2f473c5fdbdb70
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 04d0864d07eeb741690df26fb9aee02c3f0bc547
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006450"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254169"
 ---
 # <a name="database-mirroring-and-sql-server-failover-cluster-instances"></a>Espelhamento de banco de dados e instâncias de cluster de failover do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Um cluster de failover é uma combinação de um ou mais discos físicos em um grupo de clusters do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Cluster Service (MSCS), conhecido como um grupo de recursos, que são nós participantes do cluster. O grupo de recursos é configurado como uma instância clusterizada de failover que hospeda uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Uma instância clusterizada de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aparece na rede como se fosse um único computador, mas tem funções que fornecerão failover de um nó para outro se um nó se tornar disponível. Para obter mais informações, consulte [Instâncias do cluster de failover do AlwaysOn &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
   
- Os clusters de failover fornecem suporte de alta disponibilidade para toda uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , em contrapartida ao espelhamento de banco de dados, que fornece suporte de alta disponibilidade para um banco de dados individual. O espelhamento de banco de dados funciona entre clusters de failover e também entre um cluster de failover e um host não clusterizado.  
+ Os clusters de failover fornecem suporte de alta disponibilidade para toda uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], em contrapartida ao espelhamento de banco de dados, que fornece suporte de alta disponibilidade para um banco de dados individual. O espelhamento de banco de dados funciona entre clusters de failover e também entre um cluster de failover e um host não clusterizado.  
   
 > [!NOTE]  
 >  Para obter uma introdução ao espelhamento de banco de dados, consulte [Espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
@@ -42,7 +43,7 @@ ms.locfileid: "68006450"
   
  A ilustração a seguir mostra um failover automático entre clusters em uma sessão de espelhamento executada no modo de alta segurança com uma testemunha (que dá suporte ao failover automático).  
   
- ![Um failover em um cluster](../../database-engine/database-mirroring/media/dbm-and-failover-clustering.gif "A failover on a cluster")  
+ ![Um failover em um cluster](../../database-engine/database-mirroring/media/dbm-and-failover-clustering.gif "Um failover em um cluster")  
   
  As três instâncias de servidor na sessão de espelhamento residem em três clusters distintos: **Cluster_A**, **Cluster_B** e **Cluster_C**. Em cada cluster, uma instância padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está sendo executada como uma instância clusterizada de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Quando a sessão de espelhamento é iniciada, a instância clusterizada de failover no **Cluster_A** é o servidor principal, a instância clusterizada de failover no **Cluster_B** é o servidor espelho e a instância clusterizada de failover no **Cluster_C** é a testemunha na sessão de espelhamento. Por fim, o nó ativo no **Cluster_A** falhará, o que fará com que o servidor principal fique indisponível.  
   
@@ -67,6 +68,6 @@ ms.locfileid: "68006450"
 ## <a name="see-also"></a>Consulte Também  
  [Espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [Modos de operação de espelhamento de banco de dados](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)   
- [Instâncias do cluster de failover do AlwaysOn &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)  
+ [Instâncias do cluster de failover AlwaysOn &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)  
   
   

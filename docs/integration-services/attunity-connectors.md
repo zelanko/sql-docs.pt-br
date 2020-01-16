@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 031659b2a5578eea2bb786e42267c92862579db7
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 255c526a1de285dcf23c10fb97a6f6bb75a9ae2c
+ms.sourcegitcommit: 02449abde606892c060ec9e9e9a85a3f49c47c6c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71299110"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74542240"
 ---
 # <a name="microsoft-connectors-for-oracle-and-teradata-by-attunity-for-integration-services-ssis"></a>Microsoft Connectors para Oracle e Teradata da Attunity para SSIS (Integration Services)
 
@@ -24,7 +24,9 @@ ms.locfileid: "71299110"
 > [!NOTE]
 > Os conectores Atunity para Oracle e Teradata dão suporte ao SQL Server 2017 e inferior.
 >
-> Para o SQL Server 2019, obtenha os conectores para o Oracle e Teradata mais recentes aqui: [Microsoft Connector para Oracle](data-flow/oracle-connector.md)
+> Para o SQL Server 2019, obtenha os conectores para o Oracle e Teradata mais recentes aqui:
+> - [Microsoft Connector para Oracle](data-flow/oracle-connector.md)
+> - [Microsoft Connector para Teradata](data-flow/teradata-connector.md)
 
 Você pode baixar os conectores para o Integration Services da Attunity que otimizam o desempenho ao carregar dados de ou para Oracle ou Teradata em um pacote do SSIS.
 
@@ -43,7 +45,7 @@ Verifique a versão instalada do SSDT no Visual Studio de **Ajuda** | **Sobre o 
 
 |Versão do SSDT|Número de build do SSDT|Versão do SQL Server de destino|Versão necessária do Connectors|
 |---------|---------|---------|---------|
-|17|Inicia com 14|SQL Server 2017|[Microsoft Connectors v5.0 para Oracle e Teradata](https://www.microsoft.com/download/details.aspx?id=55179)|
+|17|Inicia com 14|Microsoft SQL Server 2017|[Microsoft Connectors v5.0 para Oracle e Teradata](https://www.microsoft.com/download/details.aspx?id=55179)|
 |16|Inicia com 13|SQL Server 2016|[Microsoft Connectors v4.0 para Oracle e Teradata](https://www.microsoft.com/download/details.aspx?id=52950)|
 ||||
 

@@ -1,6 +1,7 @@
 ---
-title: Instância do servidor principal (Assistente para Configurar Segurança de Espelhamento de Banco de Dados) | Microsoft Docs
-ms.custom: ''
+title: Instância do servidor principal (Assistente para Configurar Segurança de Espelhamento de Banco de Dados)
+description: Uma descrição da página 'Instância do Servidor Principal' do Assistente de 'Configurar Segurança de Espelhamento do Banco de Dados' no SQL Server Management Studio.
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 58af27d7-c5dd-4669-be6b-b472bc2c8ef4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c06c2b5a747855a7b0e5db70a9628c4a443ed121
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8d48c59b06202f898fdf61746aee9f62ca155da6
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025423"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255959"
 ---
 # <a name="principal-server-instance-configure-database-mirroring-security-wizard"></a>Instância do servidor principal (Assistente para Configurar Segurança de Espelhamento de Banco de Dados)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,12 +34,12 @@ ms.locfileid: "68025423"
  **Instância do servidor principal**  
  Como o espelhamento de banco de dados do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] é sempre configurado no servidor principal, a instância do servidor atual é sempre a instância do servidor principal.  
   
- **Porta do Ouvinte**  
+ **Porta do ouvinte**  
  O comportamento dessa opção depende de o ponto de extremidade do espelhamento existir nessa instância do servidor, como segue:  
   
 -   Se não houver porta do ouvinte na instância do servidor, o número da porta 5022 será exibido na caixa de texto **Porta** . Você pode usar qualquer número de porta disponível, como 7022.  
   
--   Quando o ponto de extremidade do espelhamento já existir, o número da porta daquele ponto de extremidade será exibido. Se for necessário alterar a porta, use um comando ALTER ENDPOINT. Para obter mais informações, veja [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md).  
+-   Quando o ponto de extremidade do espelhamento já existir, o número da porta daquele ponto de extremidade será exibido. Se for necessário alterar a porta, use um comando ALTER ENDPOINT. Para obter mais informações, consulte [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md).  
   
 > [!NOTE]  
 >  É necessário um número de porta.  

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d41432f47d39b887e054e17d7596e0c027bc31b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 68232821ac186aa63d113319373b8326dae987a4
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68026058"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165182"
 ---
 # <a name="soft-numa-sql-server"></a>soft-NUMA (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -100,7 +100,7 @@ SET PROCESS AFFINITY CPU=4 TO 7;
   
  No exemplo a seguir, suponha que você tenha um servidor DL580 G9, com 18 núcleos por soquete (em 4 soquetes) e cada soquete esteja em seu próprio grupo K. Uma configuração de soft-NUMA que você poderia criar seria algo semelhante a isto: seis núcleos por nó, três nós por grupo, quatro grupos.  
   
-|Exemplo para um servidor [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] com vários Grupos K|Tipo|Nome do valor|Dados do valor|  
+|Exemplo para um servidor [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] com vários Grupos K|Type|Nome do valor|Dados do valor|  
 |-----------------------------------------------------------------------------------------------------------------|----------|----------------|----------------|  
 |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node0|DWORD|CPUMask|0x3F|  
 |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node0|DWORD|Agrupar|0|  
@@ -132,7 +132,7 @@ SET PROCESS AFFINITY CPU=4 TO 7;
   
 -   [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md): exibe o valor atual (0 ou 1) para SOFTNUMA  
   
--   [sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md): as colunas *softnuma* e *softnuma_desc* exibem os valores de configuração atuais.  
+-   [sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md): As colunas *softnuma_configuration* e *softnuma_configuration_desc* exibem os valores de configuração atuais.  
   
 > [!NOTE]
 > Embora seja possível exibir o valor de execução para o soft-NUMA automático usando [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md), não é possível alterar seu valor usando **sp_configure**. Você deve usar a instrução [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md) com o argumento `SET SOFTNUMA`.  

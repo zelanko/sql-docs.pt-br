@@ -1,6 +1,6 @@
 ---
-title: Suporte ao SQL Server Management Studio para OLTP in-memory | Microsoft Docs
-ms.custom: ''
+title: Suporte a SSMS para OLTP in-memory
+ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +11,12 @@ ms.assetid: ee847b5f-6a1a-448e-a746-d61a023881ff
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a97bac2561b7d022b2e5028d8f18410b206931b6
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: e9bd4cb0c2fff4259814f6e33a65777023a801fd
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907457"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412533"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>Suporte ao SQL Server Management Studio para OLTP na memória
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "72907457"
   
      É exibido um modelo para a criação do tipo de tabela com otimização de memória definido pelo usuário.  
   
-2.  Para substituir os parâmetros de modelo, clique em **Especificar Valores para Parâmetros de Modelo** no menu **Consulta**.  
+2.  Para substituir os parâmetros de modelo, clique em **Especificar Valores para Parâmetros de Modelo** no menu **Consulta** .  
   
      Para obter mais informações sobre como criar e usar um novo procedimento armazenado, veja [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md).  
   
@@ -140,7 +140,7 @@ ms.locfileid: "72907457"
   
         -   Importe e exporte dados. Use a opção **Copiar dados de uma ou mais tabelas ou exibições do Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** . Se a tabela de destino for uma tabela com otimização de memória que não existe no banco de dados de destino:  
   
-            1.  No **Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** , na tela **Especificar Cópia ou Consulta de Tabela**, selecione **Copiar dados de uma ou mais tabelas ou exibições**. Em seguida, clique em **Avançar**.  
+            1.  No **Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** , na tela **Especificar Cópia ou Consulta de Tabela**, selecione **Copiar dados de uma ou mais tabelas ou exibições**. Em seguida, clique em **Próximo**.  
   
             2.  Clique em **Editar Mapeamentos**. Selecione **Criar tabela de destino** e clique **Editar SQL**. Digite a sintaxe CREATE TABLE para criar uma tabela com otimização de memória no banco de dados de destino. Clique em **OK** e conclua as etapas restantes no assistente.  
   

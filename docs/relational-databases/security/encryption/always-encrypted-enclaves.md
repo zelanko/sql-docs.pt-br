@@ -1,6 +1,7 @@
 ---
-title: Always Encrypted com enclaves seguros | Microsoft Docs
-ms.custom: ''
+title: Always Encrypted com enclaves seguros
+description: Saiba mais sobre o Always Encrypted com o recurso de enclaves seguros do SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 10/31/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7d04dcc5aeeafcdc78dcc6dd401afc476fbf6555
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 6e750070f51dc6cba1b035e9426d9814e4fd1b67
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594048"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558021"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>Always Encrypted com enclaves seguros
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
@@ -89,10 +90,10 @@ A tabela a seguir resume a funcionalidade disponível para colunas criptografada
 | **Operação**| **A coluna NÃO é habilitada para enclave** |**A coluna NÃO é habilitada para enclave**| **A coluna é habilitada para enclave**  |**A coluna é habilitada para enclave** |
 |:---|:---|:---|:---|:---|
 | | **Criptografia aleatória**  | **Criptografia determinística**     | **Criptografia aleatória**      | **Criptografia determinística**     |
-| **Criptografia in-loco** | Incompatível  | Sem suporte   | Tem suporte         | Tem suporte    |
-| **Comparação de igualdade**   | Incompatível | Compatível fora do enclave | Compatível (dentro do enclave) | Compatível fora do enclave |
-| **Operadores de comparação além de igualdade** | Incompatível  | Sem suporte   | Tem suporte      | Sem suporte     |
-| **LIKE**    | Sem suporte      | Sem suporte    | Tem suporte     | Sem suporte    |
+| **Criptografia in-loco** | Sem suporte  | Sem suporte   | Suportado         | Suportado    |
+| **Comparação de igualdade**   | Sem suporte | Compatível fora do enclave | Compatível (dentro do enclave) | Compatível fora do enclave |
+| **Operadores de comparação além de igualdade** | Sem suporte  | Sem suporte   | Suportado      | Sem suporte     |
+| **LIKE**    | Sem suporte      | Sem suporte    | Suportado     | Sem suporte    |
 
 A criptografia in-loco é compatível com as seguintes operações dentro do enclave:
 
@@ -130,7 +131,7 @@ Para desfazer uma alteração feita em um índice com o [processo de recuperaç�
 
 Um índice em uma coluna que usa criptografia determinística é classificado com base em texto cifrado (não em texto não criptografado), independentemente de a coluna ser habilitada ou não para enclave.
 
-## <a name="security-considerations"></a>Considerações sobre segurança
+## <a name="security-considerations"></a>Considerações de segurança
 
 As considerações a seguir sobre segurança se aplicam ao Always Encrypted com enclaves seguros.
 

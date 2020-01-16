@@ -1,7 +1,7 @@
 ---
-title: Mecânica do tempo limite de verificação da integridade, da concessão e do grupo de disponibilidade
+title: Tempo limite de verificação da integridade, da concessão e do grupo de disponibilidade
 description: Mecânica e diretrizes para os tempos de verificação da concessão, do cluster e da integridade em Grupos de Disponibilidade AlwaysOn.
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/02/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bd476cbcf375b4c54f7831908e43ea5872da8dcb
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: 78db83e29b7fe8671d1cf048275f379592bd0d95
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874364"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254065"
 ---
 # <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts-for-always-on-availability-groups"></a>Mecânica e diretrizes para os tempos limite de verificação da concessão, do cluster e da integridade em Grupos de Disponibilidade AlwaysOn 
 
@@ -95,7 +95,7 @@ Há quatro valores na configuração WSFC responsáveis por determinar os valore
 
 Os valores de atraso determinam o tempo de espera entre pulsações do serviço de cluster, e os valores limite definem o número de pulsações que não podem receber nenhuma confirmação do nó de destino ou do recurso antes que o objeto seja declarado inativo pelo cluster. Se não houver nenhuma pulsação bem-sucedida entre nós na mesma sub-rede por mais de `SameSubnetDelay \* SameSubnetThreshold` milissegundos, então o nó será determinado inativo. O mesmo é verdadeiro para a comunicação de sub-rede cruzada usando os valores de sub-rede cruzados. 
 
-Para listar todos os valores de cluster atuais, em qualquer nó no cluster de destino, abra um terminal do PowerShell com privilégios elevados. Execute o seguinte comando:
+Para listar todos os valores de cluster atuais, em qualquer nó no cluster de destino, abra um terminal do PowerShell com privilégios elevados. Execute o comando a seguir:
 
 ```PowerShell
  Get-Cluster | fl \

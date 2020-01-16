@@ -1,6 +1,7 @@
 ---
-title: Informações sobre o Publicador, Lista de inspeção de Assinaturas (publicação de mesclagem) | Microsoft Docs
-ms.custom: ''
+title: Lista de inspeção de assinatura (Mesclagem – SSMS)
+description: Descreve a guia 'Lista de Inspeção de Assinatura' no Monitor de Replicação no SSMS (SQL Server Management Studio).
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 4ec956bf-5cef-4377-a1d1-8c7f0107a6cb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0f6caf3862d42d4245e4b2657448b2d5beb22667
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 39c036c354716118fc4df791084f9838c6af5fea
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710792"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75320609"
 ---
 # <a name="publisher-information-subscription-watch-list-merge-publication"></a>Informações sobre o Publicador, Lista de inspeção de Assinaturas (publicação de mesclagem)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "71710792"
   
 -   **Escolher Colunas para Mostrar**: selecione quais colunas devem ser exibidas e a ordem em que devem ser exibidas, na caixa de diálogo **Selecionar Colunas**.  
   
--   **Filtrar**: filtre linhas na grade com base em valores de colunas da caixa de diálogo **Configurações de Filtro**.  
+-   **Filtro**: filtre linhas na grade com base em valores de colunas da caixa de diálogo **Configurações de Filtro**.  
   
 -   **Limpar Filtro**: Limpe todas as configurações de filtro para a grade.  
   

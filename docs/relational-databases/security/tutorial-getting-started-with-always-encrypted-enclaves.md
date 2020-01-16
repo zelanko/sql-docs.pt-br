@@ -1,6 +1,7 @@
 ---
-title: 'Tutorial: Introdução ao Always Encrypted com enclaves seguros usando o SSMS | Microsoft Docs'
-ms.custom: ''
+title: 'Tutorial: Always Encrypted com enclaves seguros usando SSMS'
+description: Este tutorial ensina a criar um Always Encrypted básico com um ambiente de enclaves seguros, criptografar dados in-loco e emitir consultas avançadas em colunas criptografadas usando o SSMS (SQL Server Management Studio).
+ms.custom: seo-lt-2019
 ms.date: 10/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -12,14 +13,14 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: d5912e7cca2ceeba1fe0db95743b4d29e1154a86
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: a01b55cb67332617ea2e326756fb8ad6fc7bcf42
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73592342"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557433"
 ---
-# <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>Tutorial: Introdução ao Always Encrypted com enclaves seguros usando o SSMS
+# <a name="tutorial-always-encrypted-with-secure-enclaves-using-ssms"></a>Tutorial: Always Encrypted com enclaves seguros usando SSMS
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
 
 Este tutorial ensina como começar a usar o [Always Encrypted com enclaves seguros](encryption/always-encrypted-enclaves.md). Ela mostrará a você:
@@ -52,7 +53,7 @@ Como alternativa, é possível instalar o SSMS em outro computador.
 > [!WARNING]
 > Em ambientes de produção, você nunca deve usar SSMS ou outras ferramentas para gerenciar chaves Always Encrypted ou executar consultas em dados criptografados no computador do SQL Server, pois isso pode reduzir ou eliminar completamente a razão para o uso do Always Encrypted. Confira [Considerações de segurança para gerenciamento de chaves](encryption/overview-of-key-management-for-always-encrypted.md#security-considerations-for-key-management) para obter mais detalhes.
 
-### <a name="hgs-computer-requirements"></a>Requisitos do computador do HGS
+### <a name="hgs-computer-requirements"></a>Requisitos do computador de HGS
 
 - Windows Server 2019 edição Standard ou Datacenter
 - 2 CPUs
@@ -186,7 +187,7 @@ Nesta etapa, você habilitará a funcionalidade de Always Encrypted usando encla
 
     A consulta deve retornar o resultado a seguir:  
 
-    | NAME                           | value | value_in_use |
+    | name                           | value | value_in_use |
     | ------------------------------ | ----- | -------------- |
     | column encryption enclave type | 1     | 1              |
 
@@ -265,7 +266,7 @@ Nesta etapa, você criará uma chave mestra da coluna e uma chave de criptografi
     4. Selecione **Permitir computações de enclave**.
     5. Se tiver selecionado o Azure Key Vault, entre no Azure e selecione seu cofre de chaves. Para obter mais informações sobre como criar um cofre de chaves para Always Encrypted, veja [Gerenciar cofres de chaves do portal do Azure](https://blogs.technet.microsoft.com/kv/2016/09/12/manage-your-key-vaults-from-new-azure-portal/).
     6. Selecione seu certificado ou chave do Azure Key Value se ela já existir, ou clique no botão **Gerar Certificado** para criar um novo.
-    7. Escolha **OK**.
+    7. Selecione **OK**.
 
         ![Permitir computações de enclave](encryption/media/always-encrypted-enclaves/allow-enclave-computations.png)
 
@@ -274,7 +275,7 @@ Nesta etapa, você criará uma chave mestra da coluna e uma chave de criptografi
     1. Clique com o botão direito do mouse em **Chaves Always Encrypted** e selecione **Nova chave de criptografia da coluna**.
     2. Insira um nome para a nova chave de criptografia da coluna: **CEK1**.
     3. No menu suspenso **Chave mestra da coluna**, selecione a chave mestra da coluna criada nas etapas anteriores.
-    4. Escolha **OK**.
+    4. Selecione **OK**.
 
 ## <a name="step-6-encrypt-some-columns-in-place"></a>Etapa 6: Criptografar algumas colunas em vigor
 
@@ -327,7 +328,7 @@ Agora você pode executar consultas avançadas nas colunas criptografadas. Algum
     2. Selecione **Opções...** .
     3. Navegue para **Execução da Consulta** > **SQL Server** > **Avançado**.
     4. A opção **Habilitar Parametrização do Always Encrypted** precisa estar marcada.
-    5. Escolha **OK**.
+    5. Selecione **OK**.
 2. Abra uma nova janela de consulta, cole e execute a consulta abaixo. A consulta deve retornar valores de texto sem formatação e linhas que atendem a critérios de pesquisa especificados.
 
     ```sql
@@ -339,7 +340,7 @@ Agora você pode executar consultas avançadas nas colunas criptografadas. Algum
 
 3. Tente fazer a mesma consulta novamente na instância do SSMS que não tem o Always Encrypted habilitado e observe a falha que ocorre.
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Próximas etapas
 Depois de concluir este tutorial, você pode ir para um dos seguintes tutoriais:
 - [Tutorial: Desenvolver um aplicativo .NET Framework usando o Always Encrypted com enclaves seguros](tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)
 - [Tutorial: Como criar e usar índices em colunas habilitadas para enclave com criptografia aleatória](./tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md)

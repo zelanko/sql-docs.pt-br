@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 18401bda78dcf50e4060f053fed604d0dc1bf9be
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 74168c8cd846f48fdaa87568b85c124ff755489a
+ms.sourcegitcommit: 0d5b0aeee2a2b34fd448aec2e72c0fa8be473ebe
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531336"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75721534"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Configurar imagens de contêiner do SQL Server no Docker
 
@@ -35,7 +35,12 @@ Esta imagem consiste no SQL Server em execução no Linux, com base no Ubuntu 16
 > Este artigo concentra-se especificamente no uso da imagem mssql-server-linux. A imagem do Windows não é abordada, mas há mais informações sobre ela na [página do Docker Hub do mssql-server-windows](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/).
 
 > [!IMPORTANT]
-> Antes de escolher executar um contêiner de SQL Server para casos de uso de produção, examine nossa [política de suporte para Contêineres do SQL Server](https://support.microsoft.com/en-us/help/4047326/support-policy-for-microsoft-sql-server) para certificar-se de que você está executando uma configuração com suporte.
+> Antes de escolher executar um contêiner de SQL Server para casos de uso de produção, examine nossa [política de suporte para Contêineres do SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server) para certificar-se de que você está executando uma configuração com suporte.
+
+Este vídeo de 6 minutos fornece uma introdução à execução do SQL Server em contêineres:
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2019-in-Containers/player?WT.mc_id=dataexposed-c9-niner]
+
 
 ## <a name="pull-and-run-the-container-image"></a>Efetuar pull e executar a imagem de contêiner
 
@@ -257,7 +262,10 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 14
 Essa técnica também permite que você compartilhe e exiba os arquivos no host fora do Docker.
 
 > [!IMPORTANT]
-> No momento, não há suporte para o mapeamento de volume do host para o Docker no Mac com a imagem do SQL Server em Linux. Use contêineres de volume de dados em vez disso. Essa restrição é específica do diretório `/var/opt/mssql`. A leitura de um diretório montado funciona bem. Por exemplo, você pode montar um diretório de host usando -v no Mac e restaurar um backup de um arquivo .bak que reside no host.
+> Atualmente, o mapeamento de volume do host para o **Docker no Windows** não dá suporte ao mapeamento do diretório `/var/opt/mssql` completo. No entanto, você pode mapear um subdiretório, como `/var/opt/mssql/data` para o computador host.
+
+> [!IMPORTANT]
+> No momento, não há suporte para o mapeamento de volume do host no **Docker no Mac** com a imagem do SQL Server em Linux. Use contêineres de volume de dados em vez disso. Essa restrição é específica do diretório `/var/opt/mssql`. A leitura de um diretório montado funciona bem. Por exemplo, você pode montar um diretório de host usando -v no Mac e restaurar um backup de um arquivo .bak que reside no host.
 
 ### <a name="use-data-volume-containers"></a>Usar contêineres de volume de dados
 
@@ -615,7 +623,7 @@ Execute um dos comandos a seguir se o SQL Server não tiver acesso aos arquivos 
 Conceda as permissões do grupo raiz aos seguintes diretórios para que o contêiner do SQL Server não raiz tenha acesso aos arquivos de banco de dados.
 
 ```bash
-chgroup -R 0 <database file dir>
+chgrp -R 0 <database file dir>
 chmod -R g=u <database file dir>
 ```
 

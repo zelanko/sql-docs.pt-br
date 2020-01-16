@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a7a1f692abdb5f9ce1b9fd69c494f719b9027c22
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 46807e551052ca6da38fde744d9a1e9dd7c794b0
+ms.sourcegitcommit: ba44730f5cc33295ae2ed1f281186dd266bad4ef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909545"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74190148"
 ---
 # <a name="tempdb-database"></a>Banco de dados TempDB
 
@@ -80,9 +80,9 @@ A tabela a seguir lista o valor padrão de cada opção do banco de dados **Temp
 |ANSI_WARNINGS|OFF|Sim|  
 |ARITHABORT|OFF|Sim|  
 |AUTO_CLOSE|OFF|Não|  
-|AUTO_CREATE_STATISTICS|ON|Sim|  
+|AUTO_CREATE_STATISTICS|ATIVADO|Sim|  
 |AUTO_SHRINK|OFF|Não|  
-|AUTO_UPDATE_STATISTICS|ON|Sim|  
+|AUTO_UPDATE_STATISTICS|ATIVADO|Sim|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|Sim|  
 |CHANGE_TRACKING|OFF|Não|  
 |CONCAT_NULL_YIELDS_NULL|OFF|Sim|  
@@ -90,15 +90,15 @@ A tabela a seguir lista o valor padrão de cada opção do banco de dados **Temp
 |CURSOR_DEFAULT|GLOBAL|Sim|  
 |Opções de disponibilidade de banco de dados|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|Não<br /><br /> Não<br /><br /> Não|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|Sim|  
-|DB_CHAINING|ON|Não|  
+|DB_CHAINING|ATIVADO|Não|  
 |ENCRYPTION|OFF|Não|  
 |MIXED_PAGE_ALLOCATION|OFF|Não|  
 |NUMERIC_ROUNDABORT|OFF|Sim|  
 |PAGE_VERIFY|CHECKSUM para novas instalações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> NONE para atualizações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Sim|  
-|PARAMETERIZATION|SIMPLE|Sim|  
+|PARAMETERIZATION|SIMPLES|Sim|  
 |QUOTED_IDENTIFIER|OFF|Sim|  
 |READ_COMMITTED_SNAPSHOT|OFF|Não|  
-|RECOVERY|SIMPLE|Não|  
+|RECOVERY|SIMPLES|Não|  
 |RECURSIVE_TRIGGERS|OFF|Sim|  
 |Opções do Service Broker|ENABLE_BROKER|Sim|  
 |TRUSTWORTHY|OFF|Não|  
@@ -137,7 +137,7 @@ Para obter uma descrição dessas opções de banco de dados, consulte [Opções
 
 Consulte [Limites de recursos baseados em vCore](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits)
 
-## <a name="restrictions"></a>Restrictions
+## <a name="restrictions"></a>Restrições
 
 As seguintes operações não podem ser executadas no banco de dados **TempDB**:  
   
@@ -214,7 +214,14 @@ Para obter mais informações sobre as melhorias no desempenho em TempDB, confir
 [TEMPDB – Files and Trace Flags and Updates, Oh My!](https://blogs.msdn.microsoft.com/sql_server_team/tempdb-files-and-trace-flags-and-updates-oh-my/) (TEMPDB – arquivos, sinalizadores de rastreamento e atualizações, uau!)
 
 ## <a name="memory-optimized-tempdb-metadata"></a>Metadados do TempDB com otimização de memória
-Historicamente, a contenção de metadados do TempDB tem sido um gargalo para a escalabilidade em muitas cargas de trabalho em execução no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] apresenta um novo recurso que faz parte da família de recursos do [Banco de dados em memória](../in-memory-database.md), os metadados do TempDB com otimização de memória, que efetivamente remove esse gargalo e possibilita um novo nível de escalabilidade para cargas de trabalho com uso intenso do TempDB. No [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], as tabelas do sistema envolvidas no gerenciamento dos metadados da tabela temporária podem ser movidas para tabelas com otimização de memória não duráveis e livres de travas. Para aceitar esse novo recurso, use o seguinte script:
+Historicamente, a contenção de metadados do TempDB tem sido um gargalo para a escalabilidade em muitas cargas de trabalho em execução no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] apresenta um novo recurso que faz parte da família de recursos do [Banco de dados em memória](../in-memory-database.md), os metadados do TempDB com otimização de memória, que efetivamente remove esse gargalo e possibilita um novo nível de escalabilidade para cargas de trabalho com uso intenso do TempDB. No [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], as tabelas do sistema envolvidas no gerenciamento dos metadados da tabela temporária podem ser movidas para tabelas com otimização de memória não duráveis e livres de travas.
+
+Assista a este vídeo de sete minutos para obter uma visão geral de como e quando usar os metadados TempDB otimizados para memória:
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/How-and-When-To-Memory-Optimized-TempDB-Metadata/player?WT.mc_id=dataexposed-c9-niner]
+
+
+Para aceitar esse novo recurso, use o seguinte script:
 
 ```sql
 ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON 

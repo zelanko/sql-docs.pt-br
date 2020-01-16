@@ -13,12 +13,12 @@ f1_keywords:
 - sql13.dts.designer.odataconnectionmanager.f1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a643d35b6f9c31060e2c0404a6042be8b1c87abb
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 39499e36568d64f92d3608f610d64193c93389e6
+ms.sourcegitcommit: 02449abde606892c060ec9e9e9a85a3f49c47c6c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71298454"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74542182"
 ---
 # <a name="odata-connection-manager"></a>Gerenciador de conexões do OData
 
@@ -51,7 +51,7 @@ ms.locfileid: "71298454"
   
 Para o acesso anônimo, selecione a opção de Autenticação do Windows.  
 
-Para se conectar ao Microsoft Dynamics AX Online ou ao Microsoft Dynamics CRM Online, você não pode usar a opção de autenticação **Microsoft Online Services**. Também não é possível usar nenhuma opção que esteja configurada para autenticação multifator.
+Para se conectar ao Microsoft Dynamics AX Online ou ao Microsoft Dynamics CRM Online, você não pode usar a opção de autenticação **Microsoft Online Services**. Também não é possível usar nenhuma opção que esteja configurada para autenticação multifator. No momento, não há suporte para a autenticação moderna. 
   
 ### <a name="specifying-and-securing-credentials"></a>Especificando e protegendo credenciais  
  Se o serviço OData exigir autenticação básica, você poderá especificar um nome de usuário e uma senha no [OData Connection Manager Editor](../../integration-services/connection-manager/odata-connection-manager-editor.md). Os valores que você insere no publicador são persistidos no pacote. O valor de senha é criptografado de acordo com o nível de proteção do pacote.  
@@ -63,7 +63,7 @@ Para se conectar ao Microsoft Dynamics AX Online ou ao Microsoft Dynamics CRM On
   
 |||  
 |-|-|  
-|Propriedade|Descrição|  
+|Propriedade|DESCRIÇÃO|  
 |Url|URL do documento de serviço.|  
 |UserName|O nome de usuário a ser usado para autenticação, se necessário.|  
 |Senha|A senha a ser usada para autenticação, se necessário.|  
@@ -80,9 +80,9 @@ Para se conectar ao Microsoft Dynamics AX Online ou ao Microsoft Dynamics CRM On
  URL do serviço OData. Por exemplo: https://services.odata.org/V3/Northwind/Northwind.svc/.  
   
  **Autenticação**  
-Selecione uma das opções a seguir:
+Selecione uma das seguintes opções:
 -   **Autenticação do Windows**. Para acesso anônimo, selecione essa opção.
--   **Autenticação Básica** 
+-   **Autenticação básica** 
 -   **Microsoft Dynamics AX Online** para Dynamics AX Online
 -   **Microsoft Dynamics CRM Online** para Dynamics CRM Online
 -   **Microsoft Online Services** para Microsoft Online Services

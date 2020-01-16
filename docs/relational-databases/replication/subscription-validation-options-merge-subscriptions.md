@@ -1,6 +1,7 @@
 ---
-title: Opções de validação de assinatura (assinaturas de mesclagem) | Microsoft Docs
-ms.custom: ''
+title: Opções de validação de assinatura (mesclagem)
+description: Descreve a caixa de diálogo 'Opções de Validação da Assinatura' do SSMS (SQL Server Management Studio).
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,12 +16,12 @@ ms.assetid: 4958c4ab-2025-42ce-b836-6fb4e9e6f24d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: e3c49cf0da50879d533fc78dff60253e753ec87b
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 2b21aaec23bfadee55217b7de411aec31c4bf9ab
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769437"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322173"
 ---
 # <a name="subscription-validation-options-merge-subscriptions"></a>Opções de Validação de Assinatura (assinaturas de mesclagem)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

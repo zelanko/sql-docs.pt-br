@@ -1,6 +1,5 @@
 ---
-title: Especificar caminhos e dicas de otimização para índices XML seletivos | Microsoft Docs
-ms.custom: ''
+title: Caminhos e dicas de otimização para índices XML seletivos | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -10,12 +9,13 @@ ms.topic: conceptual
 ms.assetid: 486ee339-165b-4aeb-b760-d2ba023d7d0a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: acea8d44048de35ecbc3214712f699217838e60d
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.custom: seo-lt-2019
+ms.openlocfilehash: e4ffb1cc9a2b63047c6ade58d82001a2e0ebea4c
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72905241"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257610"
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>Especificar caminhos e dicas de otimização para índices XML seletivos
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -23,9 +23,9 @@ ms.locfileid: "72905241"
   
  Especifique caminhos de nós e dicas de otimização ao mesmo tempo em uma das seguintes instruções:  
   
--   Na cláusula **FOR** de uma instrução **CREATE**. Para obter mais informações, veja [CREATE SELECTIVE XML INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-selective-xml-index-transact-sql.md).  
+-   Na cláusula **FOR** de uma instrução **CREATE** . Para obter mais informações, veja [CREATE SELECTIVE XML INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-selective-xml-index-transact-sql.md).  
   
--   Na cláusula **ADD** de uma instrução **ALTER**. Para obter mais informações, veja [ALTER INDEX &#40;Índices XML Seletivos&#41;](../../t-sql/statements/alter-index-selective-xml-indexes.md).  
+-   Na cláusula **ADD** de uma instrução **ALTER** . Para obter mais informações, veja [ALTER INDEX &#40;Índices XML Seletivos&#41;](../../t-sql/statements/alter-index-selective-xml-indexes.md).  
   
  Para obter mais informações sobre índices XML seletivos, veja [Índices XML Seletivos &#40;SXI&#41;](../../relational-databases/xml/selective-xml-indexes-sxi.md).  
   
@@ -58,7 +58,7 @@ ms.locfileid: "72905241"
   
 -   **Modo de mapeamento especificado pelo usuário**. Nesse modo, você especifica o caminho e as dicas de otimização opcionais.  
   
- O modo de mapeamento padrão usa uma opção de armazenamento conservadora, que é sempre segura e geral. Ela pode corresponder a qualquer tipo da expressão. Uma limitação do modo de mapeamento padrão é um desempenho abaixo do ideal, pois é necessário um maior número de conversões de tempo de execução, e os índices secundários não estão disponíveis.  
+ O modo de mapeamento padrão usa uma opção de armazenamento conservadora, que é sempre segura e geral. Ela pode corresponder a qualquer tipo da expressão. Uma limitação do modo de mapeamento padrão é um desempenho abaixo do ideal, pois é necessário um maior número de conversões de runtime, e os índices secundários não estão disponíveis.  
   
  Veja aqui um exemplo de índice XML seletivo criado com mapeamentos padrão. Para todos os três caminhos, o tipo de nó padrão (**xs:untypedAtomic**) e a cardinalidade são usados.  
   
@@ -355,7 +355,7 @@ WHERE T.xmldata.exist('
 ### <a name="benefits-of-optimization-hints"></a>Benefícios de dicas de otimização  
  A tabela a seguir identifica as dicas de otimização que dão suporte a um armazenamento mais eficiente ou a um melhor desempenho.  
   
-|Dica de otimização|Armazenamento mais eficiente|Melhor desempenho|  
+|Dica de otimização|Armazenamento mais eficiente|desempenho aprimorado|  
 |-----------------------|----------------------------|--------------------------|  
 |**node()**|Sim|Não|  
 |**SINGLETON**|Não|Sim|  
@@ -377,7 +377,7 @@ WHERE T.xmldata.exist('
   
  Você pode usar a otimização node() para especificar um nó cujo valor não seja obrigatório para avaliar a consulta típica. Essa dica reduz os requisitos de armazenamento quando a consulta típica só precisa avaliar a existência do nó. (Por padrão, um índice XML seletivo armazena o valor de todos os nós promovidos, exceto de tipos de nós complexos.)  
   
- Considere o seguinte exemplo:  
+ Considere o exemplo a seguir:  
   
 ```sql  
 SELECT T.record FROM myXMLTable T  

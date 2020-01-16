@@ -1,7 +1,8 @@
 ---
-title: Habilitar o Backup Gerenciado do SQL Server no Azure | Microsoft Docs
-ms.custom: ''
-ms.date: 10/03/2016
+title: Usar o backup de gerenciado no Azure"
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
+ms.description: Enable SQL Server managed backup to Azure
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -10,21 +11,22 @@ ms.topic: conceptual
 ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0b778c458852adc2c26d62eb9d7ef8066b9fbb89
-ms.sourcegitcommit: ecb19d0be87c38a283014dbc330adc2f1819a697
+ms.openlocfilehash: 07bb9cf8f0fc697e1d31a80e22a72cd5a0ea484a
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70238731"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257949"
 ---
-# <a name="enable-sql-server-managed-backup-to-azure"></a>Habilitar o Backup Gerenciado do SQL Server no Azure
+# <a name="enable-sql-server-managed-backup-to-azure"></a>Habilitar o backup gerenciado do SQL Server no Azure
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Este tópico descreve como habilitar o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] com as configurações padrão nos níveis de instância e de banco de dados. Também descreve como habilitar as notificações por email e como monitorar a atividade de backup.  
   
  Este tutorial usa o Azure PowerShell. Antes de iniciar o tutorial, [baixe e instale o Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/).  
   
 > [!IMPORTANT]  
->  Se você também quiser habilitar opções avançadas ou usar uma agenda personalizada, defina essas configurações antes de habilitar o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Para obter mais informações, confira [Configurar opções avançadas do Backup Gerenciado do SQL Server no Azure](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md).  
+>  Se você também quiser habilitar opções avançadas ou usar uma agenda personalizada, defina essas configurações antes de habilitar o [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Para saber mais, confira [Configurar opções avançadas de backup gerenciado do SQL Server para o Microsoft Azure](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md).  
   
 ## <a name="create-the-azure-blob-container"></a>Criar o contêiner de blob do Azure
 
@@ -104,9 +106,9 @@ Se a URL for incluída, separe-a do token SAS no ponto de interrogação (não i
 |**Token SAS**|sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl|  
 |||
   
-Registre a URL do contêiner e a SAS para uso na criação de uma CREDENCIAL DO SQL. Para obter mais informações sobre a SAS, confira [Assinaturas de Acesso Compartilhado, parte 1: Noções básicas sobre o modelo SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/).  
+Registre a URL do contêiner e a SAS para uso na criação de uma CREDENCIAL DO SQL. Para saber mais sobre SAS, confira [Shared Access Signatures, Part 1: Understanding the SAS Model](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/) (Assinaturas de Acesso Compartilhado, Parte 1: noções básicas sobre o modelo de SAS)  
   
-## <a name="enable-managed-backup-to-azure"></a>Habilitar o Backup Gerenciado no Azure
+## <a name="enable-managed-backup-to-azure"></a>Habilitar o backup gerenciado no Azure
   
 1.  **Criar uma Credencial do SQL para a URL SAS:** Use o token SAS para criar uma Credencial do SQL para a URL do contêiner de blobs. No SQL Server Management Studio, use a seguinte consulta Transact-SQL a fim de criar a credencial para a URL de seu contêiner de blob, com base no exemplo a seguir:  
   
@@ -209,4 +211,4 @@ Registre a URL do contêiner e a SAS para uso na criação de uma CREDENCIAL DO 
 As etapas descritas nesta seção destinam-se especificamente à configuração do [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pela primeira vez no banco de dados. Você pode modificar as configurações existentes usando o mesmo procedimento armazenado do sistema e fornecer os novos valores.  
   
 ## <a name="see-also"></a>Confira também  
- [Backup Gerenciado do SQL Server no Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
+ [Backup gerenciado do SQL Server no Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  

@@ -1,6 +1,8 @@
 ---
-title: Permissões DENY de lista de propriedades de pesquisa (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: Permissões de lista de propriedades de pesquisa DENY
+description: Negue permissões em uma lista de propriedades de pesquisa.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -18,12 +20,12 @@ ms.assetid: 96513cb4-a9c0-4834-97a4-ddc0777b8415
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ad51052db3f5e86f5d349f8a4fc10fb46a5e311e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8be5b497f3046afb4ed9d56ccde0f6f00ede919a
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68114809"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244554"
 ---
 # <a name="deny-search-property-list-permissions-transact-sql"></a>Permissões de lista de propriedades de pesquisa DENY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -31,7 +33,7 @@ ms.locfileid: "68114809"
   Nega permissões em uma lista de propriedades de pesquisa.  
  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -76,7 +78,7 @@ CASCADE
 -   usuário de banco de dados mapeado para uma chave assimétrica  
 -   usuário de banco de dados não mapeado para uma entidade do servidor.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
   
 ## <a name="search-property-list-permissions"></a>Permissões SEARCH PROPERTY LIST  
  Uma lista de propriedades de pesquisa é um protegível em nível de banco de dados contido no banco de dados pai na hierarquia de permissões. As permissões mais específicas e limitadas que podem ser negadas em uma lista de propriedades de pesquisa são listadas na tabela a seguir, juntamente com as permissões mais gerais que as incluem implicitamente.  

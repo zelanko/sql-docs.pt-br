@@ -1,6 +1,7 @@
 ---
-title: Opção de failover de detecção de integridade do banco de dados | Microsoft Docs
-ms.custom: ''
+title: Detecção do nível de integridade do banco de dados
+description: Saiba mais sobre o recurso de detecção de integridade no nível de banco de dados disponível para grupos de disponibilidade Always On do SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 01/19/2019
 ms.prod: sql
 ms.reviewer: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d74afd28-25c3-48a1-bc3f-e353bee615c2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 357d99a61f226162433f7d5fb1bbdfd41990cc8f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6fa77fa3ac4733d9672b5bc72523d72abe640fc8
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013966"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251261"
 ---
 # <a name="availability-group-database-level-health-detection-failover-option"></a>Opção de failover de detecção de integridade no nível do banco de dados do grupo de disponibilidade
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +85,7 @@ A detecção de integridade no nível do banco de dados implementa uma política
 
 ## <a name="managing-and-monitoring-database-level-health-detection"></a>Gerenciando e monitorando a detecção de integridade no nível do banco de dados
 
-### <a name="dynamic-management-views"></a>Exibições de gerenciamento dinâmico
+### <a name="dynamic-management-views"></a>Exibições de Gerenciamento Dinâmico
 
 A DMV do sistema sys.availability_groups mostra uma coluna db_failover que indica se a opção de detecção de integridade no nível do banco de dados está desativada (0) ou ativada (1).
 
@@ -95,7 +96,7 @@ select name, db_failover from sys.availability_groups
 
 Saída de DMV de exemplo:
 
-|NAME  |  db_failover|
+|name  |  db_failover|
 |---------|---------|
 | Contoso-ag | 1  |
 
@@ -125,7 +126,7 @@ Por exemplo, esse trecho do log de erros mostra que uma gravação do log de tra
 >
 >2016-04-25 12:20:21.21 spid75      O estado da réplica de disponibilidade local no grupo de disponibilidade “ag” foi alterado de “PRIMARY_NORMAL” para “RESOLVING_NORMAL”.  O estado foi alterado porque o grupo de disponibilidade sendo colocado offline.  A réplica está sendo colocada offline porque o grupo de disponibilidade associado foi excluído, porque o usuário colocou o grupo de disponibilidade associado offline no console de gerenciamento do WSFC (Clustering de Failover do Windows Server) ou porque o grupo de disponibilidade está fazendo failover para outra instância do SQL Server.  Para obter mais informações, consulte o log de erros do SQL Server, o console de gerenciamento do WSFC (Clustering de Failover do Windows Server) ou o log do WSFC.
 
-### <a name="extended-event-sqlserveravailabilityreplicadatabasefaultreporting"></a>Evento Estendido sqlserver.availability_replica_database_fault_reporting
+### <a name="extended-event-sqlserveravailability_replica_database_fault_reporting"></a>Evento Estendido sqlserver.availability_replica_database_fault_reporting
 
 Há um novo Evento Estendido definido a partir do SQL Server 2016, que é disparado pela detecção de integridade no nível do banco de dados.  O nome do evento é **sqlserver.availability_replica_database_fault_reporting**
 
@@ -151,7 +152,7 @@ Usando o SQL Server Management Studio, conecte-se ao SQL Server primário, expan
 
 Explicação sobre os campos:
 
-|Dados de coluna | Descrição|
+|Dados de coluna | DESCRIÇÃO|
 |---------|---------|
 |availability_group_id |A ID do grupo de disponibilidade.|
 |availability_group_name |O nome do grupo de disponibilidade.|
@@ -181,9 +182,9 @@ Nesta saída de exemplo, o fault_type mostra que ocorreu um evento crítico no g
 
 ### <a name="related-references"></a>Referências relacionadas
 
-* [CREATE AVAILABILITY GROUP](../../../t-sql/statements/create-availability-group-transact-sql.md)
+* [CRIAR GRUPO DE DISPONIBILIDADE](../../../t-sql/statements/create-availability-group-transact-sql.md)
 
-* [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md)
+* [ALTERAR GRUPO DE DISPONIBILIDADE](../../../t-sql/statements/alter-availability-group-transact-sql.md)
 
 * [Política de failover flexível para failover automático de um grupo de disponibilidade (SQL Server)](../../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md)
 

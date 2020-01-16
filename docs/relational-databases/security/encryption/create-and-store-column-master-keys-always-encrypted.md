@@ -1,6 +1,7 @@
 ---
-title: Criar e armazenar chaves mestras de coluna para o Always Encrypted | Microsoft Docs
-ms.custom: ''
+title: Criar e armazenar chaves mestras de coluna para o Always Encrypted
+description: Saiba como selecionar um repositório de chaves e criar chaves mestras de coluna para o SQL Server Always Encrypted.
+ms.custom: seo-lt-2019
 ms.date: 10/31/2019
 ms.prod: sql
 ms.prod_service: security, sql-database"
@@ -11,12 +12,12 @@ ms.assetid: 856e8061-c604-4ce4-b89f-a11876dd6c88
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a090adbfbaae886ef11e848c1296d1d4e300521a
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 63be7df50b6dd590d0ec90346d27f6601e15cf45
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594433"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557828"
 ---
 # <a name="create-and-store-column-master-keys-for-always-encrypted"></a>Criar e armazenar chaves mestras de coluna para Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -97,9 +98,9 @@ Para conceder a um usuário a permissão *Leitura* para um certificado armazenad
 4.  Na caixa de diálogo **Adicionar Snap-in Autônomo** , clique em **Certificados**e em **Adicionar**.
 5.  Na caixa de diálogo Snap-in de **certificados** , clique em **Conta de computador**e em **Concluir**.
 6.  Na caixa de diálogo **Adicionar Snap-in Autônomo** , clique em **Fechar**.
-7.  Na caixa de diálogo **Adicionar/Remover Snap-in**, clique em **OK**.
+7.  Na caixa de diálogo **Adicionar/Remover Snap-in** , clique em **OK**.
 8.  No snap-in de **Certificados**, localize o certificado na pasta **Certificados > Pessoal**, clique com o botão direito do mouse no Certificado, aponte para **Todas as Tarefas** e clique em **Gerenciar Chaves Privadas**.
-9.  Na caixa de diálogo **Segurança**, adicione permissões de leitura para uma conta de usuário, se necessário.
+9.  Na caixa de diálogo **Segurança** , adicione permissões de leitura para uma conta de usuário, se necessário.
 
 ## <a name="creating-column-master-keys-in-azure-key-vault"></a>Criando chaves mestras de coluna no Cofre de Chaves do Azure
 
@@ -186,7 +187,7 @@ $cngAlgorithm = New-Object System.Security.Cryptography.CngAlgorithm($cngAlgorit
 $cngKey = [System.Security.Cryptography.CngKey]::Create($cngAlgorithm, $cngKeyName, $cngKeyParams)
 ```
 
-#### <a name="using-sql-server-management-studio"></a>Usando o SQL Server Management Studio
+#### <a name="using-sql-server-management-studio"></a>Como usar o SQL Server Management Studio.
 
 Confira [Provisionar chaves Always Encrypted usando o SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md).
 
@@ -220,7 +221,7 @@ Confira [Provisionar chaves Always Encrypted usando o SQL Server Management Stud
 ### <a name="making-cng-keys-available-to-applications-and-users"></a>Disponibilizando chaves do CNG para aplicativos e usuários
 Confira a documentação do HSM e do CSP para saber como configurar o CSP em um computador e conceder acesso ao HSM a aplicativos e usuários.
  
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Próximas etapas  
 - [Provisionar chaves Always Encrypted usando o SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md)
 - [Provisionar chaves do Always Encrypted usando o PowerShell](configure-always-encrypted-keys-using-powershell.md)
   

@@ -1,6 +1,7 @@
 ---
-title: Configurar o cluster compartilhado do Red Hat Enterprise Linux para o SQL Server
-description: Implemente a alta disponibilidade configurando o cluster de disco compartilhado do Red Hat Enterprise Linux para o SQL Server.
+title: Configurar a FCI RHEL no SQL Server em Linux
+description: Saiba como configurar uma FCI (instância de cluster de failover) de disco compartilhado RHEL (Red Hat Enterprise Linux) para alta disponibilidade do SQL Server em Linux.
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,18 +10,18 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: 052bb7455c952600390a0960e9d7618ab0a315fc
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 3ff0c862e93cd3b552b29c4eec8ab91931c809c7
+ms.sourcegitcommit: 34d28d49e8d0910cf06efda686e2d73059569bf8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75252238"
+ms.lasthandoff: 01/04/2020
+ms.locfileid: "75656623"
 ---
-# <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Configurar o cluster de disco compartilhado do Red Hat Enterprise Linux para o SQL Server
+# <a name="configure-rhel-failover-cluster-instance-fci-cluster-for-sql-server"></a>Configurar o cluster de FCI (instância de cluster de failover) RHEL do SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Este guia fornece instruções para criar um cluster de disco compartilhado de dois nós para o SQL Server no Red Hat Enterprise Linux. A camada de clustering baseia-se no [complemento de HA](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) do RHEL (Red Hat Enterprise Linux) criado com base no [Pacemaker](https://clusterlabs.org/). A Instância do SQL Server está ativa em um nó ou no outro.
+Este guia fornece instruções para criar um cluster de failover de disco compartilhado de dois nós para o SQL Server no Red Hat Enterprise Linux. A camada de clustering baseia-se no [complemento de HA](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) do RHEL (Red Hat Enterprise Linux) criado com base no [Pacemaker](https://clusterlabs.org/). A Instância do SQL Server está ativa em um nó ou no outro.
 
 > [!NOTE] 
 > O acesso ao complemento de HA do Red Hat e à documentação exige uma assinatura. 
@@ -202,7 +203,7 @@ Para obter mais informações sobre como usar o NFS, confira os seguintes recurs
 
 * [Servidores NFS e firewall | Stack Exchange](https://unix.stackexchange.com/questions/243756/nfs-servers-and-firewalld)
 * [Como montar um volume do NFS | Guia de Administradores de Rede do Linux](https://www.tldp.org/LDP/nag2/x-087-2-nfs.mountd.html)
-* [Configuração do servidor NFS | Portal do Cliente do Red Hat](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/storage_administration_guide/nfs-serverconfig)
+* [Configuração do servidor NFS | Portal do Cliente do Red Hat](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/storage_administration_guide/nfs-serverconfig)
 
 ### <a name="mount-database-files-directory-to-point-to-the-shared-storage"></a>Montar o diretório de arquivos de banco de dados para que ele aponte para o armazenamento compartilhado
 

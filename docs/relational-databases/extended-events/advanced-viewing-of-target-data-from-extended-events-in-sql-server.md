@@ -1,6 +1,5 @@
 ---
-title: Exibição avançada de dados de destino de Eventos Estendidos no SQL Server | Microsoft Docs
-ms.custom: ''
+title: Exibição avançada de dados alvo de eventos estendidos
 ms.date: 05/24/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -10,13 +9,14 @@ ms.topic: tutorial
 ms.assetid: b2e839d7-1872-46d9-b7b7-6dcb3984829f
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0070948697c7aaed76330da233bdf3739f5b3e3a
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: f5bf55c020e773e8d724a3c84bcee4dd78307a4f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909421"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255757"
 ---
 # <a name="advanced-viewing-of-target-data-from-extended-events-in-sql-server"></a>Exibição avançada de dados de destino dos Eventos Estendidos no SQL Server
 
@@ -69,7 +69,7 @@ Para obter a documentação sobre os eventos estendidos específica ao Banco de 
 
 
 
-## <a name="a-general-options"></a>A. Opções gerais
+## <a name="a-general-options"></a>a. Opções gerais
 
 
 Geralmente, as opções avançadas são acessadas da seguinte maneira:

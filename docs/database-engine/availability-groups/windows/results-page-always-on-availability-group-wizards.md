@@ -1,5 +1,6 @@
 ---
-title: Página Resultados (Assistentes do Grupo de Disponibilidade AlwaysOn) | Microsoft Docs
+title: Página de Resultados (Assistentes Grupo de Disponibilidade AlwaysOn)
+description: Descreve as opções da página "Resultados" do Assistente do Grupo de Disponibilidade Always On na GUI do SQL Server Management Studio.
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
@@ -14,12 +15,12 @@ f1_keywords:
 ms.assetid: d80b14eb-60db-4351-90ad-6c179d235aa3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1d3a91ba05d58c2741d49c96bf108263caf899cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bb4a661110d91f73f45152b84dcfb63f8763d018
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014245"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75235454"
 ---
 # <a name="results-page-always-on-availability-group-wizards"></a>Página de Resultados (Assistentes Grupo de Disponibilidade AlwaysOn)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "68014245"
  **Resultado**  
  Para cada etapa concluída, exibe um dos seguintes textos de hiperlink.  
   
-|Resultado|Descrição|  
+|Result|DESCRIÇÃO|  
 |------------|-----------------|  
 |**Erro**|Indica se houve falha na etapa de validação. Clique no link para exibir a mensagem de erro.|  
 |**Êxito**|Indica que a etapa de validação foi concluída com êxito.|  

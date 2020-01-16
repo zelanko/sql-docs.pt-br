@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5d1bffd38e1c604d5002f00cae0bcda9e4becf21
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 8389d11868108725a676e9196861c7302241a407
+ms.sourcegitcommit: 94f6a4b506dfda242fc3efb2403847e22a36d340
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909707"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75546554"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>Lição 2: conexão usando outro computador
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,13 +49,13 @@ Se você planejar conectar-se ao [!INCLUDE[ssDE](../includes/ssde-md.md)] de out
     > Como o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager é um snap-in do programa Console de Gerenciamento [!INCLUDE[msCoName](../includes/msconame-md.md)] e não um programa autônomo, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager não aparece como um aplicativo nas versões mais recentes do Windows. O nome do arquivo contém um número que representa o número de versão do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para abrir o Gerenciador de Configuração no comando Executar, veja abaixo os caminhos para as últimas quatro versões quando o Windows é instalado na unidade C.  
   
     |||  
-    |-|-|  
-    |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2016|C:\Windows\SysWOW64\SQLServerManager13.msc|  
+    |-|-|
+    |[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]|C:\Windows\SysWOW64\SQLServerManager14.msc|
+    |[!INCLUDE[ssSQL16](../includes/sssql16-md.md)]|C:\Windows\SysWOW64\SQLServerManager13.msc|  
     |[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]|C:\Windows\SysWOW64\SQLServerManager12.msc|  
-    |[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|C:\Windows\SysWOW64\SQLServerManager11.msc|  
-    |[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]|C:\Windows\SysWOW64\SQLServerManager10.msc|  
+    |[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|C:\Windows\SysWOW64\SQLServerManager11.msc|
   
-2.  No **SQL Server Configuration Manager**, expanda **Configuração de Rede do SQL Server**e clique em **Protocolos para** _<InstanceName>_ .  
+2.  No **SQL Server Configuration Manager**, expanda **Configuração de Rede do SQL Server** e, em seguida, clique em **Protocolos para** _<InstanceName>_ .  
   
     A instância padrão (uma instância sem nome) é listada como **MSSQLSERVER**. Se você instalou uma instância nomeada, o nome fornecido será listado. [!INCLUDE[ssExpressEd11](../includes/ssexpressed11-md.md)] é instalado como **SQLEXPRESS**, a menos que o nome seja alterado durante a instalação.  
   
@@ -102,13 +102,13 @@ Após configurar o [!INCLUDE[ssDE](../includes/ssde-md.md)] para usar uma porta 
   
 3.  Na caixa de diálogo **Tipo de Regra** , selecione **Porta**e clique em **Avançar**.  
   
-4.  Na caixa de diálogo **Protocolo e Portas** , selecione **TCP**. Selecione **Portas locais específicas**e digite o número da porta da instância do [!INCLUDE[ssDE](../includes/ssde-md.md)]. Digite 1433 para a instância padrão. Digite **49172** se você estiver configurando uma instância nomeada e tiver configurado uma porta fixa na tarefa anterior. Clique em **Avançar**.  
+4.  Na caixa de diálogo **Protocolo e Portas** , selecione **TCP**. Selecione **Portas locais específicas**e digite o número da porta da instância do [!INCLUDE[ssDE](../includes/ssde-md.md)]. Digite 1433 para a instância padrão. Digite **49172** se você estiver configurando uma instância nomeada e tiver configurado uma porta fixa na tarefa anterior. Clique em **Próximo**.  
   
-5.  Na caixa de diálogo **Ação** , selecione **Permitir a conexão**e clique em **Avançar**.  
+5.  Na caixa de diálogo **Ação**, selecione **Permitir a conexão** e clique em **Avançar**.  
   
 6.  Na caixa de diálogo **Perfil** , selecione quaisquer perfis que descrevam o ambiente de conexão do computador quando você deseja se conectar ao [!INCLUDE[ssDE](../includes/ssde-md.md)]e clique em **Avançar**.  
   
-7.  Na caixa de diálogo **Nome** , digite um nome e a descrição desta e clique em **Concluir**.  
+7.  Na caixa de diálogo **Nome**, digite um nome e uma descrição para essa regra, e clique em **Concluir**.  
   
 Para obter mais informações sobre como configurar o firewall incluindo instruções para o [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)], consulte [Configurar um Firewall do Windows para acesso ao Mecanismo de Banco de Dados](../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md). Para obter mais informações sobre as configurações padrão do Firewall do Windows e uma descrição das portas TCP que afetam o Mecanismo de Banco de Dados, o Analysis Services, o Reporting Services e o Integration Services, veja [Configurar o Firewall do Windows para permitir acesso ao SQL Server](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
@@ -126,7 +126,7 @@ Quando o serviço [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Browser
 3.  Na caixa **Nome do Servidor** , digite **tcp:** para especificar o protocolo, seguido do nome do computador, uma vírgula e o número da porta. Para se conectar à instância padrão, a porta 1433 está implícita e pode ser omitida; portanto, digite **tcp:** _<computer_name>_ . Em nosso exemplo de uma instância nomeada, digite **tcp:** _<computer_name>_ **,49172**.  
   
     > [!NOTE]  
-    > Se você omitir **tcp:** da caixa **Nome do servidor**, o cliente tentará todos os protocolos que estiverem habilitados, na ordem especificada na configuração do cliente.  
+    > Se você omitir **tcp:** da caixa **Nome do servidor** , o cliente tentará todos os protocolos que estiverem habilitados, na ordem especificada na configuração do cliente.  
   
 4.  Na caixa **Autenticação** , confirme **Autenticação do Windows**e clique em **Conectar**.  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c0c0082e-b867-480f-a54b-79f2a94ceb67
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 573ddefa33c1e021c16359f0164f0eda49d329fb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ebaa078fc3be919a6114ad275b0ef5ece6f0d0d7
+ms.sourcegitcommit: ede04340adbf085e668a2536d4f7114abba14a0c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68012107"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761179"
 ---
 # <a name="connect-to-sql-server-when-system-administrators-are-locked-out"></a>Conectar-se ao SQL Server quando os administradores do sistema estão bloqueados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -112,7 +112,7 @@ ms.locfileid: "68012107"
     > [!NOTE]  
     >  Em algumas versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , não há nenhuma guia **Parâmetros de Inicialização** . Nesse caso, na guia **Avançado** , clique duas vezes em **Parâmetros de Inicialização**. Os parâmetros são abertos em uma janela muito pequena. Remova o `;-m` que você adicionou anteriormente e clique em **OK**.  
   
-12. Clique com o botão direito do mouse no nome do servidor e clique em **Reiniciar**.  
+12. Clique com o botão direito do mouse no nome do servidor e clique em **Reiniciar**. Inicie o SQL Server Agent novamente.
   
  Você poderá se conectar normalmente a uma das contas, que agora é membro da função de servidor fixa de **sysadmin** .  
   

@@ -1,20 +1,20 @@
 ---
-title: Implantar um contêiner do SQL Server no Kubernetes com o AKS (Serviços de Kubernetes do Azure)
+title: Implantar um contêiner do SQL Server com o AKS (Serviço de Kubernetes do Azure)
 description: Este tutorial mostra como implantar uma solução de alta disponibilidade do SQL Server com o Kubernetes no Serviço de Kubernetes do Azure.
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
 ms.date: 01/10/2018
 ms.topic: tutorial
 ms.prod: sql
-ms.custom: mvc
 ms.technology: linux
-ms.openlocfilehash: fbf13520696d75ec851949e4b4b0e56272881779
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 91607fd8a7bc7b3b104de6d0ba3e6ce97cab8137
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653703"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558341"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>Implantar um contêiner do SQL Server no Kubernetes com o AKS (Serviços de Kubernetes do Azure)
 
@@ -255,7 +255,7 @@ Nesta etapa, crie um manifesto para descrever o contêiner com base na imagem do
    >[!NOTE]
    >Após a criação da implantação, pode levar alguns minutos antes que o pod fique visível. O atraso ocorre porque o cluster efetua pull da imagem [mssql-server-linux](https://hub.docker.com/_/microsoft-mssql-server) do Docker Hub. Depois o pull da imagem for efetuado pela primeira vez, implantações subsequentes poderão ser mais rápidas se a implantação for para um nó que já tem a imagem armazenada em cache. 
 
-1. Verifique se os serviços estão em execução. Execute o seguinte comando:
+1. Verifique se os serviços estão em execução. Execute o comando a seguir:
 
    ```azurecli
    kubectl get services 

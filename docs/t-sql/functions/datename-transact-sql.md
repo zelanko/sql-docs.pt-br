@@ -25,12 +25,12 @@ ms.assetid: 11855b56-c554-495d-aad4-ba446990153b
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 24d03b268abe381e8a1ad3308f630626f5a3d455
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.openlocfilehash: 6052e7eb0e759b7821ac8d7ad6b213fef188be06
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72278339"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255825"
 ---
 # <a name="datename-transact-sql"></a>DATENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,7 +39,7 @@ Esta função retorna uma cadeia de caracteres que representa o *datepart* espec
 
 Consulte [Tipos de dados e funções de data e hora &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md) para obter uma visão geral de todos os tipos de dados e funções de data e hora do [!INCLUDE[tsql](../../includes/tsql-md.md)].
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -122,7 +122,7 @@ DECLARE @t time = '12:10:30.123';
 SELECT DATENAME(year, @t);  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 
 Use `DATENAME` nas seguintes cláusulas:
 
@@ -156,7 +156,7 @@ Este exemplo retorna as partes da data especificada. Substitua um valor *datepar
 |**millisecond, ms**|123|  
 |**microsecond, mcs**|123456|  
 |**nanosecond, ns**|123456700|  
-|**TZoffset, tz**|310|  
+|**TZoffset, tz**|+05:10|  
 |**ISO_WEEK, ISOWK, ISOWW**|44|  
   
 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
@@ -184,7 +184,7 @@ SELECT DATENAME(datepart,'2007-10-30 12:15:32.1234567 +05:10');
 |**millisecond, ms**|123|  
 |**microsecond, mcs**|123456|  
 |**nanosecond, ns**|123456700|  
-|**TZoffset, tz**|310|  
+|**TZoffset, tz**|+05:10|  
 |**ISO_WEEK, ISOWK, ISOWW**|44|  
   
 ## <a name="see-also"></a>Confira também

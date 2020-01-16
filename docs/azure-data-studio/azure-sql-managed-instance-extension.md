@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jovanpop-msft
 ms.author: jovanpop
 manager: alanyu
-ms.openlocfilehash: e5dc5cb87bcadda9600768d0840699f683492a54
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: a0fdd3c8be7e9cbe128d01736e465ae95a120d0f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594019"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258414"
 ---
 # <a name="azure-sql-database-managed-instance-dashboard-for-azure-data-studio-preview"></a>Painel de instância gerenciada do Banco de Dados SQL do Azure para o Azure Data Studio (versão prévia)
 
@@ -52,7 +52,7 @@ O painel superior mostra os seguintes detalhes:
 
 Ao selecionar o segundo painel na guia **Instância Gerenciada**, você recebe recomendações e alertas para ajudar a otimizar sua instância gerenciada.
 
-[ ![Recomendações para instâncias gerenciadas](media/azure-sql-mi-extension/ads-mi-tab2.png )](media/azure-sql-mi-extension/ads-mi-tab2.png#lightbox)
+[ ![Recomendações para instância gerenciada](media/azure-sql-mi-extension/ads-mi-tab2.png )](media/azure-sql-mi-extension/ads-mi-tab2.png#lightbox)
 
 Você pode ver algumas das seguintes recomendações:
 
@@ -69,7 +69,7 @@ Examine periodicamente essas recomendações, investigue as causas raiz e adote 
 
 O terceiro painel na guia **Instância Gerenciada** mostra o estado das réplicas de banco de dados em sua instância gerenciada.
 
-[ ![Réplicas de instâncias gerenciadas](media/azure-sql-mi-extension/ads-mi-tab3.png )](media/azure-sql-mi-extension/ads-mi-tab3.png#lightbox)
+[ ![Réplicas de instância gerenciada](media/azure-sql-mi-extension/ads-mi-tab3.png )](media/azure-sql-mi-extension/ads-mi-tab3.png#lightbox)
 
 Na camada de serviço de uso geral, cada banco de dados tem uma única réplica (primária). Em uma instância de nível comercialmente crítico, cada banco de dados tem uma réplica primária e três secundárias, uma das quais é usada para cargas de trabalho somente leitura. No painel **Réplicas**, você pode monitorar o processo de sincronização e verificar se todas as réplicas secundárias estão sincronizadas com a réplica primária.
 
@@ -97,7 +97,6 @@ Para saber mais, confira as [Perguntas frequentes sobre o Código de Conduta][co
 
 Para obter mais informações, acesse o [projeto GitHub](https://github.com/JocaPC/AzureDataStudio-Managed-Instance/).
 
-[conduct-code]: http://opensource.microsoft.com/codeofconduct/
-[conduct-FAQ]: http://opensource.microsoft.com/codeofconduct/faq/
+[conduct-code]: https://opensource.microsoft.com/codeofconduct/
+[conduct-FAQ]: https://opensource.microsoft.com/codeofconduct/faq/
 [conduct-email]: mailto:opencode@microsoft.com
-[conduct-md]: https://github.com/PowerShell/vscode-powershell/blob/master/CODE_OF_CONDUCT.md

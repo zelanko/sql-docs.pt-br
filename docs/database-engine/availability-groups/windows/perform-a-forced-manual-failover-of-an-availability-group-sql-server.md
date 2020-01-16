@@ -1,7 +1,7 @@
 ---
-title: Executar um failover manual forçado de um Grupo de Disponibilidade
+title: Forçar manualmente um failover de um grupo de disponibilidade
 description: Este tópico descreve como executar um failover forçado de um grupo de disponibilidade Always On (com possível perda de dados) usando o T-SQL (Transact-SQL), o PowerShell ou o SQL Server Management Studio.
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 167070809d552a40d57761b533fc7954fec76dc1
-ms.sourcegitcommit: d667fa9d6f1c8035f15fdb861882bd514be020d9
+ms.openlocfilehash: 8ff0280b7a3a071a87feb029e6e906eaeace8a2d
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68388363"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822529"
 ---
 # <a name="perform-a-forced-manual-failover-of-an-always-on-availability-group-sql-server"></a>Executar um failover manual forçado de um Grupo de Disponibilidade Always On (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -123,7 +123,7 @@ ms.locfileid: "68388363"
   
 3.  Clique com o botão direito do mouse no grupo de disponibilidade do qual fazer failover e selecione o comando **Failover** .  
   
-4.  Isso inicia o Assistente de Grupo de Disponibilidade de Failover. Para obter mais informações, consulte [Usar o Assistente de Grupo de Disponibilidade de Failover &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-fail-over-availability-group-wizard-sql-server-management-studio.md).  
+4.  Isso inicia o Assistente de Grupo de Disponibilidade de Failover. Para obter mais informações, veja [Usar o Assistente para Executar Failover de Grupo de Disponibilidade &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-fail-over-availability-group-wizard-sql-server-management-studio.md).  
   
 5.  Depois de forçar um failover do grupo de disponibilidade, conclua as etapas de acompanhamento necessárias. Para obter mais informações, confira [Acompanhamento: Tarefas essenciais após um failover forçado](#FollowUp), mais adiante neste tópico.  
   
@@ -253,7 +253,7 @@ ms.locfileid: "68388363"
   
  O data center principal é desligado inesperadamente. Suas três réplicas de disponibilidade ficam offline e os seus bancos de dados ficam indisponíveis. A figura a seguir ilustra o impacto dessa falha na topologia do grupo de disponibilidade.  
   
- ![Topologia após falha do data center principal](../../../database-engine/availability-groups/windows/media/aoag-failurerecovery-catastrophy.gif "Topologia após falha do data center principal")  
+ ![Topologia depois da falha do datacenter principal](../../../database-engine/availability-groups/windows/media/aoag-failurerecovery-catastrophy.gif "Topologia depois da falha do datacenter principal")  
   
  O DBA (administrador de banco de dados) determina que a melhor resposta possível é forçar o failover do grupo de disponibilidade para uma das réplicas secundárias de confirmação assíncrona remotas. Este exemplo ilustra as etapas típicas envolvidas quando você força o failover do grupo de disponibilidade para uma réplica remota e, consequentemente, retorna o grupo de disponibilidade a sua topologia original.  
   
@@ -266,7 +266,7 @@ ms.locfileid: "68388363"
 ###  <a name="FailureResponse"></a> Responding to the Catastrophic Failure of the Main Data Center  
  A figura a seguir ilustra a série de ações realizadas no data center remoto em resposta à falha catastrófica no data center principal.  
   
- ![Etapas para responder à falha do data center principal](../../../database-engine/availability-groups/windows/media/aoag-failurerecovery-actions-part1.gif "Etapas para responder à falha do data center principal")  
+ ![Etapas para responder à falha do datacenter principal](../../../database-engine/availability-groups/windows/media/aoag-failurerecovery-actions-part1.gif "Etapas para responder à falha do datacenter principal")  
   
  As etapas nesta figura indicam as etapas a seguir:  
   
@@ -282,7 +282,7 @@ ms.locfileid: "68388363"
 > [!IMPORTANT]  
 >  Se o quorum do cluster WSFC tiver sido forçado, quando os nós offline reiniciarem, eles poderão formar um novo quorum se as duas condições a seguir existirem: (a) não há nenhuma conectividade de rede entre qualquer nó no conjunto de quorum forçado e (b) os nós de reinicialização são a maioria dos nós de cluster. Isso resulta em uma condição de divisão de dados, na qual o grupo de disponibilidade teria duas réplicas primárias independentes, uma em cada data center. Antes de forçar o quórum para criar um conjunto de quórum minoritário, consulte [Recuperação de desastres do WSFC por meio de quorum forçado &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md).  
   
- ![Etapas para retornar o grupo à sua topologia original](../../../database-engine/availability-groups/windows/media/aoag-failurerecovery-actions-part2.gif "Steps to return the group to its original topology")  
+ ![Etapas para retornar o grupo à sua topologia original](../../../database-engine/availability-groups/windows/media/aoag-failurerecovery-actions-part2.gif "Etapas para retornar o grupo à sua topologia original")  
   
  As etapas nesta figura indicam as etapas a seguir:  
   

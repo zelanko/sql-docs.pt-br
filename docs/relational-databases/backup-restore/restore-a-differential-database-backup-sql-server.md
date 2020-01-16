@@ -1,7 +1,7 @@
 ---
-title: Restaurar um backup diferencial do banco de dados (SQL Server) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 'Restaurar banco de dados: diferencial'
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: 0dd971a4-ee38-4dd3-9f30-ef77fc58dd11
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 14e12715c3722fe3278bf535b50bc749539d57ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d9114879622ea6d856e890a4f248ea1bc9a5d522
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67937502"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75253488"
 ---
-# <a name="restore-a-differential-database-backup-sql-server"></a>Restaurar um backup diferencial de banco de dados (SQL Server)
+# <a name="restore-a-differential-database-backup-sql-server"></a>Restaurar um backup de banco de dados diferencial (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Este tópico descreve como restaurar um backup de banco de dados diferencial no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -77,7 +77,7 @@ ms.locfileid: "67937502"
   
 3.  Clique com o botão direito do mouse no banco de dados, aponte para **Tarefas**, aponte para **Restaurar**e clique em **Banco de Dados**.  
   
-4.  Na página **Geral** , use a seção **Origem** para especificar a origem e o local dos conjuntos de backup a serem restaurados. Selecione uma das opções a seguir:  
+4.  Na página **Geral** , use a seção **Origem** para especificar a origem e o local dos conjuntos de backup a serem restaurados. Selecione uma das seguintes opções:  
   
     -   **Backup de banco de dados**  
   
@@ -103,7 +103,7 @@ ms.locfileid: "67937502"
   
 6.  Na grade **Conjuntos de backup a serem restaurados** , selecione os backups que deseja restaurar através do backup diferencial.  
   
-     Para obter informações sobre as colunas da grade **Selecionar os conjuntos de backup a serem restaurados**, veja [Restaurar banco de dados &#40;Página Geral&#41;](../../relational-databases/backup-restore/restore-database-general-page.md).  
+     Para obter informações sobre as colunas da grade **Conjuntos de backup a serem restaurados** , veja [Restaurar banco de dados &#40;página Geral&#41;](../../relational-databases/backup-restore/restore-database-general-page.md)).  
   
 7.  Na página **Opções** , no painel **Opções de restauração** , você pode selecionar qualquer uma das seguintes opções, de acordo com sua situação:  
   
@@ -153,7 +153,7 @@ ms.locfileid: "67937502"
   
 ###  <a name="TsqlExample"></a> Exemplos (Transact-SQL)  
   
-#### <a name="a-restoring-a-differential-database-backup"></a>A. Restaurando um backup de banco de dados diferencial  
+#### <a name="a-restoring-a-differential-database-backup"></a>a. Restaurando um backup de banco de dados diferencial  
  Este exemplo restaura um banco de dados e um backup de banco de dados diferencial do banco de dados `MyAdvWorks` .  
   
 ```sql  

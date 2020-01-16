@@ -1,6 +1,5 @@
 ---
-title: Coleções de esquemas XML grandes e condições de memória insuficiente | Microsoft Docs
-ms.custom: ''
+title: Falta de memória com coleções de esquema XML grandes | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +12,13 @@ helpviewer_keywords:
 ms.assetid: 29b9d839-aaaf-48fb-be17-840c751f36f1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: ed4c37b0768fa0869209f8795c81a57e76b5b93b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 085a59ce8861c3f38e5c7540d4d56201c896ccea
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68026627"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257650"
 ---
 # <a name="large-xml-schema-collections-and-out-of-memory-conditions"></a>Coleções de esquema XML grandes e condições de memória insuficiente
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -29,6 +29,6 @@ ms.locfileid: "68026627"
 -   Ao chamar XML_SCHEMA_NAMESPACE, você pode tentar recuperar um único namespace do esquema XML. A chamada pode ser tentada quando a carga do sistema estiver mais leve ou em modo de usuário único.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Requisitos e limitações de uso de coleções de esquema XML no servidor](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
+ [Requisitos e limitações para o uso de Coleções de Esquemas XML no servidor](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
   
   

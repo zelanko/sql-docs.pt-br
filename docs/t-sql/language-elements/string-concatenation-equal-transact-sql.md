@@ -1,6 +1,8 @@
 ---
-title: += (Concatenação de cadeia de caracteres e atribuição) (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: += Concatenação de cadeias de caracteres
+description: Concatene duas cadeias de caracteres e defina a cadeia de caracteres como o resultado da operação.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 12/07/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -17,19 +19,19 @@ ms.assetid: 4aaeaab7-9b2b-48e0-8487-04ed672ebcb1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 631fcc8728975d12370d517fb785b7cb832e6758
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dd21fb221076470d0c39194ea4c38d96af0f1056
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68121660"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257050"
 ---
 # <a name="-string-concatenation-assignment-transact-sql"></a>+= (Atribuição de concatenação de cadeia de caracteres) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Concatena duas cadeias de caracteres e define a cadeia de caracteres como o resultado da operação. Por exemplo, se uma variável @x for igual a 'Adventure', @x + = 'Works' usará o valor original de @x, adicionará 'Works' à cadeia de caracteres, e definirá @x com o novo valor 'AdventureWorks'.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,7 +47,7 @@ expression += expression
 ## <a name="result-types"></a>Tipos de resultado  
  Retorna o tipo de dados definido para a variável.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  SET @v1 += 'expression' é equivalente a SET @v1 = @v1 + ('expression'). Além disso, SET @v1 = @v2 + @v3 + @v4 é equivalente a SET @v1 = (@v2 + @v3) + @v4.  
   
  O operador + = não pode ser usado sem uma variável. Por exemplo, o código a seguir provoca um erro:  
@@ -55,7 +57,7 @@ SELECT 'Adventure' += 'Works'
 ```  
   
 ## <a name="examples"></a>Exemplos  
-### <a name="a-concatenation-using--operator"></a>A. Concatenação com o operador +=
+### <a name="a-concatenation-using--operator"></a>a. Concatenação com o operador +=
  O exemplo a seguir concatena o uso do operador `+=`.  
   
 ```  

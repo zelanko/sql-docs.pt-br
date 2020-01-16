@@ -1,5 +1,5 @@
 ---
-title: Recursos do SQL Server sem suporte para OLTP in-memory | Microsoft Docs
+title: Recursos sem suporte – OLTP in-memory
 ms.custom: ''
 ms.date: 05/29/2019
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 720b10e5f4cd7c7ba5676f9dddc2f64e632d64cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7427f7ccc70db68d1403cc1a92c7d7dafef82f5c
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912129"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412506"
 ---
 # <a name="unsupported-sql-server-features-for-in-memory-oltp"></a>Recursos do SQL Server sem suporte para OLTP na Memória
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ Os recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a segui
 Com algumas exceções, as transações entre bancos de dados não têm suporte. A tabela a seguir descreve os casos que têm suporte e as limitações correspondentes. (Veja também [Consultas de bancos de dados](../../relational-databases/in-memory-oltp/cross-database-queries.md).)  
 
 
-|Bancos de dados|Allowed (permitido)|Descrição|  
+|Bancos de dados|Permitido|DESCRIÇÃO|  
 |---------------|-------------|-----------------|  
 | Bancos de dados de usuário, **modelo** e **msdb**. | Não | Na maioria dos casos, *não* há suporte para consultas e transações entre bancos de dados.<br /><br />Uma consulta não poderá acessar outros bancos de dados se utilizar uma tabela com otimização de memória ou um procedimento armazenado compilado nativamente. Essa restrição se aplica a transações e a consultas.<br /><br />As exceções são os bancos de dados do sistema **tempdb** e **mestre**. Aqui, o banco de dados **mestre** está disponível para acesso somente leitura. |
 | Banco de dados de **recursos**, **tempdb** | Sim | Em uma transação com objetos OLTP in-memory, os bancos de dados do sistema **Recurso** e **tempdb** podem ser usados sem restrição adicional.
@@ -63,7 +63,7 @@ Com algumas exceções, as transações entre bancos de dados não têm suporte.
   
 - Cursores dinâmicos e de conjunto de chaves em consultas que acessam tabelas com otimização de memória. Esses cursores são degradados para estático e somente leitura.  
   
-- Usando **MERGE INTO** _target_, em que *target* é uma tabela com otimização de memória, em que não há suporte.
+- Não há suporte para usar **MERGE INTO** _target_, em que *target* é uma tabela com otimização de memória.
     - Há suporte para **MERGE USING** _source_ em tabelas com otimização de memória.  
   
 - Não há suporte para o tipo de dados ROWVERSION (TIMESTAMP). Para obter mais informações, consulte [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md).

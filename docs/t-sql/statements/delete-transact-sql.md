@@ -1,9 +1,8 @@
 ---
 title: DELETE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/10/2017
+ms.date: 12/30/2019
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
@@ -26,19 +25,20 @@ ms.assetid: ed6b2105-0f35-408f-ba51-e36ade7ad5b2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ca3a44c1829cc05eac5a412a2b2292e84d3d1bc1
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: ee54971547e141d06fb2688ab4a69b65bda4c00a
+ms.sourcegitcommit: 4933934fad9f3c3e16406952ed964fbd362ee086
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73983235"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75548279"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Remove uma ou mais linhas de uma tabela ou exibição no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -82,7 +82,8 @@ DELETE
 ```  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
-DELETE FROM [database_name . [ schema ] . | schema. ] table_name    
+DELETE 
+    [ FROM [database_name . [ schema ] . | schema. ] table_name ]   
     [ WHERE <search_condition> ]   
     [ OPTION ( <query_options> [ ,...n ]  ) ]  
 [; ]  
@@ -166,7 +167,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  OPTION **(** \<query_hint> [ **,** ... *n*] **)**  
  Palavras-chave que indicam as dicas de otimização que são usadas para personalizar a forma como o [!INCLUDE[ssDE](../../includes/ssde-md.md)] processa a instrução. Para obter mais informações, veja [Dicas de consulta &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
-## <a name="best-practices"></a>Práticas recomendadas  
+## <a name="best-practices"></a>Práticas Recomendadas  
  Para excluir todas as linhas em uma tabela, use TRUNCATE TABLE. TRUNCATE TABLE é mais rápido que DELETE e usa menos recursos do sistema e do log de transações. TRUNCATE TABLE tem restrições; por exemplo, a tabela não pode participar da replicação. Para obter mais informações, veja [TRUNCATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/truncate-table-transact-sql.md)  
   
  Use a função @@ROWCOUNT para retornar o número de linhas excluídas para o aplicativo cliente. Para obter mais informações, consulte [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md).  
@@ -228,7 +229,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
 ###  <a name="BasicSyntax"></a> Sintaxe básica  
  Os exemplos nesta seção demonstram a funcionalidade básica da instrução DELETE usando a sintaxe mínima necessária.  
   
-#### <a name="a-using-delete-with-no-where-clause"></a>A. Usando DELETE sem a cláusula WHERE  
+#### <a name="a-using-delete-with-no-where-clause"></a>a. Usando DELETE sem a cláusula WHERE  
  O exemplo a seguir exclui todas as linhas de uma tabela `SalesPersonQuotaHistory` no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] porque uma cláusula WHERE não é usada para limitar o número de linhas excluídas.  
   
 ```sql
@@ -258,7 +259,7 @@ PRINT 'Number of rows deleted is ' + CAST(@@ROWCOUNT as char(3));
 ```  
   
 #### <a name="c-using-a-cursor-to-determine-the-row-to-delete"></a>C. Usando um cursor para determinar a linha a ser excluída  
- O exemplo a seguir exclui uma única linha da tabela `EmployeePayHistory` no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] que usa um cursor nomeado `my_cursor`. O operação de exclusão afeta somente a única linha buscada atualmente pelo cursor.  
+ O exemplo a seguir exclui uma única linha da tabela `EmployeePayHistory` no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] que usa um cursor chamado `complex_cursor`. O operação de exclusão afeta somente a única linha buscada atualmente pelo cursor.  
   
 ```sql
 DECLARE complex_cursor CURSOR FOR  
@@ -366,7 +367,7 @@ GO
 ```  
   
 #### <a name="g-deleting-data-from-a-remote-table-by-using-the-openquery-function"></a>G. Excluindo dados de uma tabela remota por meio da função OPENQUERY  
- O exemplo a seguir exclui linhas de uma tabela remota especificando a função do conjunto de linhas [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) . O nome de servidor vinculado criado no exemplo anterior é usado neste exemplo.  
+ O exemplo a seguir exclui linhas de uma tabela remota especificando a função do conjunto de linhas [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md). O nome de servidor vinculado criado no exemplo anterior é usado neste exemplo.  
   
 ```sql
 DELETE OPENQUERY (MyLinkServer, 'SELECT Name, GroupName 
@@ -470,6 +471,16 @@ WHERE ProductKey IN (
     WHERE T2.EnglishProductSubcategoryName = 'Road Bikes' )  
 OPTION ( LABEL = N'CustomJoin', HASH JOIN ) ;  
 ```  
+
+### <a name="o-delete-using-a-where-clause"></a>O. Exclusão com uma cláusula WHERE
+
+Esta consulta mostra como fazer uma exclusão com uma cláusula WHERE e não com uma cláusula FROM.
+
+```sql
+DELETE tableA WHERE EXISTS (
+SELECT TOP 1 1 FROM tableB tb WHERE tb.col1 = tableA.col1
+)
+```
   
 ## <a name="see-also"></a>Consulte Também  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   

@@ -1,7 +1,7 @@
 ---
-title: Exibir ou alterar o modelo de recuperação de um banco de dados (SQL Server) | Microsoft Docs
-ms.custom: ''
-ms.date: 05/10/2019
+title: Definir o modelo de recuperação do banco de dados
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 94918d1d-7c10-4be7-bf9f-27e00b003a0f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bbf6d7f547c0030512a00a46a335a32cfe95f994
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 4af4e8b1d0dacb5e08cdd117a14691b909050b09
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908805"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254048"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>Exibir ou alterar o modelo de recuperação de um banco de dados (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "72908805"
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
 
--   [Back up the transaction log](back-up-a-transaction-log-sql-server.md) **before** switching from the [full recovery or bulk-logged recovery model](recovery-models-sql-server.md).  
+-   [Fazer backup do log de transações](back-up-a-transaction-log-sql-server.md) **antes** de mudar do [mudar de recuperação completa ou recuperação registrada em log em massa](recovery-models-sql-server.md).  
   
 -   A recuperação pontual não é possível com modelo bulk-logged. A execução de transações sob o modelo de recuperação bulk-logged que exigem uma restauração do log de transações, pode sujeitá-las à perda de dados. Para maximizar a recuperabilidade de dados em um cenário de recuperação de desastres, mude para o modelo de recuperação bulk-logged somente nas seguintes condições:  
   
@@ -48,7 +48,7 @@ ms.locfileid: "72908805"
   
      Se você atender a estas duas condições, não será exposto a perda de dados enquanto estiver restaurando um log de transação que teve o backup feito no modelo de recuperação bulk-logged.  
   
-**Observação:** Se você mudar para o modelo de recuperação completa durante uma operação em massa, o log das operações em massa mudará de registro em log mínimo para registro em log completo, e vice-versa.  
+**Observação!** Se você mudar para o modelo de recuperação completa durante uma operação em massa, o log das operações em massa mudará de registro em log mínimo para registro em log completo, e vice-versa.  
   
 ###  <a name="Security"></a> Permissões necessárias  
    Requer a permissão ALTER no banco de dados.  
@@ -136,7 +136,7 @@ ALTER DATABASE [model] SET RECOVERY FULL ;
   
 -   [Criar um trabalho](../../ssms/agent/create-a-job.md)  
   
--   [Desabilitar ou habilitar um trabalho](../../ssms/agent/disable-or-enable-a-job.md)  
+-   [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md)  
   
 ##  <a name="RelatedContent"></a> Conteúdo relacionado  
   

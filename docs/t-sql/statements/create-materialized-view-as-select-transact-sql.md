@@ -37,12 +37,12 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 709a0060d948b4c2979c858a0d51bd9740eb0e28
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: e8acc3ef73c51ccbbf195f9d18dc5f12d661931f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73729842"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75226741"
 ---
 # <a name="create-materialized-view-as-select-transact-sql"></a>CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)  
 
@@ -52,7 +52,7 @@ Este artigo explica a instrução criar CREATE MATERIALIZED VIEW AS SELECT T-SQL
 
 Uma Exibição Materializada persiste os dados retornados da consulta de definição de exibição e é atualizada automaticamente conforme os dados são alterados nas tabelas subjacentes.   Ela melhora o desempenho de consultas complexas (normalmente consultas com junções e agregações) e oferece operações simples de manutenção.   Com seu recurso de correspondência automática do plano de execução, uma exibição materializada não precisa ser referenciada na consulta para o otimizador considerar a exibição na substituição.  Isso permite que os engenheiros de dados implementem as exibições materializadas como um mecanismo para melhorar o tempo de resposta de consulta sem precisar alterar as consultas.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -88,7 +88,7 @@ Somente distribuições de HASH e ROUND_ROBIN são compatíveis.
 *select_statement*   
 A lista SELECT na definição de exibição materializada precisa cumprir ao menos um desses dois critérios:
 - A lista SELECT contém uma função de agregação.
-- GROUP BY é usada na definição da Exibição materializada e todas as colunas em GROUP BY são incluídas na lista SELECT.  
+- GROUP BY é usada na definição da Exibição materializada e todas as colunas em GROUP BY são incluídas na lista SELECT.  Até 32 colunas podem ser usadas na cláusula GROUP BY.
 
 As funções de agregação são necessárias na lista SELECT da definição da exibição materializada.  As agregações com suporte incluem MAX, MIN, AVG, COUNT, COUNT_BIG, SUM, VAR, STDEV.
 
@@ -106,7 +106,7 @@ Quando as agregações MIN/MAX são usadas na lista SELECT da definição da exi
 
 - A exibição materializada será desabilitada quando UPDATE ou DELETE ocorrerem nas tabelas base referenciadas.  Essa restrição não se aplica a INSERTs.  Para habilitar novamente a exibição materializada, execute ALTER MATERIALIZED INDEX com REBUILD.
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Comentários
 
 Uma exibição materializada no data warehouse do Azure é muito semelhante a uma exibição indexada no SQL Server.  Ela compartilha quase as mesmas restrições que a exibição indexada (confira [Criar exibições indexadas](/sql/relational-databases/views/create-indexed-views) para obter detalhes), exceto pelo fato de que uma exibição materializada dá suporte a funções de agregação.   Aqui estão considerações adicionais para a exibição materializada.  
  
