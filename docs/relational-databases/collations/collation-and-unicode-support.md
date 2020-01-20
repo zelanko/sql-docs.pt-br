@@ -32,12 +32,12 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: pmasl
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 862147cfb7620999bf3e56a90fae0e90fbb1be45
-ms.sourcegitcommit: 0d34b654f0b3031041959e87f5b4d4f0a1af6a29
+ms.openlocfilehash: 2d20f0cd4a08e22787caecfb663ef0d2dcd47003
+ms.sourcegitcommit: 365a919e3f0b0c14440522e950b57a109c00a249
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74901941"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75831810"
 ---
 # <a name="collation-and-unicode-support"></a>Suporte a ordenações e Unicode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -69,7 +69,7 @@ Especifique essas opções acrescentando-as ao nome da ordenação. Por exemplo,
 
 O comportamento associado a essas várias opções é descrito na seguinte tabela:    
     
-|Opção|DESCRIÇÃO|    
+|Opção|Descrição|    
 |------------|-----------------|    
 |Diferenciar maiúsculas de minúsculas (\_CS)|Faz distinção entre letras maiúscula e minúsculas. Se essa opção for selecionada, as letras minúsculas serão classificadas à frente das versões em letras maiúsculas. Se essa opção não for selecionada, a ordenação não diferenciará maiúsculas de minúsculas. Ou seja, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considera as versões de letras maiúsculas e minúsculas como idênticas para fins de classificação. Você pode selecionar explicitamente a não diferenciação de maiúsculas e minúsculas, especificando \_CI.|   
 |Diferenciar acentos (\_AS)|Faz distinção entre caracteres acentuados e não acentuados. Por exemplo, "a" não é igual a "ấ". Se essa opção não for selecionada, a ordenação não diferenciará acentos. Ou seja, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considera as versões com e sem acentos como idênticas para fins de classificação. Você pode selecionar explicitamente a não diferenciação de acentos, especificando \_AI.|    
@@ -478,16 +478,12 @@ Quando você move dados de um servidor para um cliente, a ordenação do servido
 Para usar as ordenações UTF-8 disponíveis no [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e melhorar a pesquisa e a classificação de alguns caracteres Unicode (somente ordenações do Windows), você precisará selecionar ordenações habilitadas para codificação UTF-8 (\_UTF8).
  
 -   O sinalizador de UTF8 pode ser aplicado a:    
-    -   Ordenações da versão 90 
-        > [!NOTE]
-        > Somente quando caracteres suplementares (\_SC) ou ordenações com diferenciação de seletor de variação (\_VSS) já existem nesta versão.
-    -   Ordenações da versão 100    
-    -   Ordenações da versão 140   
+    -   Ordenações linguísticas que já têm suporte para \_SC (caracteres suplementares) ou com o reconhecimento de \_VSS (diferenciação de seletor de variação)
     -   Ordenação binária BIN2<sup>1</sup>
     
 -   O sinalizador de UTF-8 não pode ser aplicado a:    
-    -   Ordenações da versão 90 sem suporte a caracteres suplementares (\_SC) ou a diferenciação de seletor de variação (\_VSS)    
-    -   As ordenações primárias BIN ou BIN2<sup>2</sup>    
+    -   Ordenações linguísticas que não têm suporte para \_SC (caracteres suplementares) ou com o reconhecimento de \_VSS (diferenciação de seletor de variação)
+    -   As ordenações primárias BIN ou BIN2<sup>2</sup>
     -   As ordenações do SQL\_*  
     
 <sup>1</sup> No [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3 em diante. O [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 3.0 substituiu a ordenação **UTF8_BIN2** pela **Latin1_General_100_BIN2_UTF8**.        
@@ -528,8 +524,6 @@ Se você usar caracteres suplementares:
 -   Caracteres suplementares podem ser usados apenas em operações de comparação e ordenação em versões de ordenação 90 ou superior.    
 -   Todas as ordenações de versão 100 dão suporte à classificação linguística com caracteres suplementares.    
 -   Os caracteres suplementares não são compatíveis para uso em metadados, como em nomes de objetos de banco de dados.    
--   Os bancos de dados que usam ordenações com caracteres suplementares (\_SC) não podem ser habilitados para a replicação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Isso ocorre porque algumas das tabelas do sistema e alguns dos procedimentos armazenados criados para replicação usam o tipo de dados **ntext** herdado, que não dá suporte a caracteres suplementares.  
-
 -   O sinalizador de SC pode ser aplicado a:    
     -   Ordenações da versão 90    
     -   Ordenações da versão 100    

@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/08/2019
+ms.date: 01/10/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -19,16 +19,16 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ec1bd01ae5f92efbbbe08ebee3da3484ce387e29
-ms.sourcegitcommit: 3511da65d7ebc788e04500bbef3a3b4a4aeeb027
+ms.openlocfilehash: bf7b3f2fc9d0bb8c801bf7f0417a3b79d6d373fb
+ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75681777"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75952367"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
-Cria uma fonte de dados externa para consultas do SQL Server, do Banco de Dados SQL, do SQL Data Warehouse ou do Analytics Platform System (Parallel Data Warehouse ou PDW).
+Cria uma fonte de dados externa para consultas usando o SQL Server, o Banco de Dados SQL, o Azure Synapse Analytics ou o Analytics Platform System (Parallel Data Warehouse ou PDW).
 
 Este artigo fornece a sintaxe, os argumentos, os comentários, as permissões e os exemplos de qualquer produto SQL que você escolher.
 
@@ -42,7 +42,7 @@ Na linha a seguir, clique em qualquer nome de produto de seu interesse. O clique
 
 |                               |                                                              |                                                              |                                                              |      |
 | ----------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- |
-| **_\* SQL Server \*_** &nbsp; | [Banco de Dados SQL](create-external-data-source-transact-sql.md?view=azuresqldb-current) | [SQL Data<br />Warehouse](create-external-data-source-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7) |      |
+| **_\* SQL Server \*_** &nbsp; | [Banco de Dados SQL](create-external-data-source-transact-sql.md?view=azuresqldb-current) | [Azure Synapse<br />Analytics](create-external-data-source-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7) |      |
 |                               |                                                              |                                                              |                                                              |      |
 
 &nbsp;
@@ -59,7 +59,7 @@ Cria uma fonte de dados externa para consultas do PolyBase. Fontes de dados exte
 ## <a name="syntax"></a>Sintaxe
 
 ```sql
-CREATE EXTERNAL DATA SOURCE <data_source_name>  
+CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
 (    LOCATION                  = '<prefix>://<path>[:<port>]'
 [,   CONNECTION_OPTIONS        = '<name_value_pairs>']
@@ -105,7 +105,7 @@ Observações e orientação adicionais ao definir o local:
 
 - O mecanismo do SQL não verifica a existência da fonte de dados externa quando o objeto é criado. Para validar, crie uma tabela externa usando a fonte de dados externa.
 - Use a mesma fonte de dados externa para todas as tabelas ao consultar o Hadoop para garantir semântica de consulta consistente.
-- Você pode usar o prefixo de local `sqlserver` para conectar o SQL Server 2019 ao SQL Server, Banco de Dados SQL ou SQL Data Warehouse.
+- Você pode usar o prefixo de local `sqlserver` para conectar o SQL Server 2019 ao SQL Server, ao Banco de Dados SQL ou ao Azure Synapse Analytics.
 - Especifique o `Driver={<Name of Driver>}` ao se conectar por meio de `ODBC`.
 - `wasb` é o protocolo padrão para o armazenamento de blobs do Azure. `wasbs` é opcional, mas recomendado, pois os dados serão enviados usando uma conexão SSL segura.
 - Para garantir consultas do PolyBase com êxito durante um failover `Namenode` do Hadoop, considere usar um endereço IP virtual para o `Namenode` do cluster do Hadoop. Se você não fizer isso, execute um comando [ALTER EXTERNAL DATA SOURCE][alter_eds] para apontar para o novo local.
@@ -158,7 +158,7 @@ Para obter um exemplo de como usar `TYPE` = `HADOOP` para carregar dados do Arma
 
 Configure esse valor opcional ao se conectar ao Hortonworks ou ao Cloudera.
 
-Quando o `RESOURCE_MANAGER_LOCATION` for definido, o otimizador de consulta tomará uma decisão baseada em custo para melhorar o desempenho. Um trabalho MapReduce pode ser usado para aplicar a computação para o Hadoop. Especificar o `RESOURCE_MANAGER_LOCATION` pode reduzir significativamente o volume de dados transferidos entre o Hadoop e o SQL, o que pode levar a um desempenho de consultas aprimorado.  
+Quando o `RESOURCE_MANAGER_LOCATION` for definido, o otimizador de consulta tomará uma decisão baseada em custo para melhorar o desempenho. Um trabalho MapReduce pode ser usado para aplicar a computação para o Hadoop. Especificar o `RESOURCE_MANAGER_LOCATION` pode reduzir significativamente o volume de dados transferidos entre o Hadoop e o SQL, o que pode levar a um desempenho de consultas aprimorado.
 
 Se o Resource Manager não tiver sido especificado, o envio de computação por push para o Hadoop estará desabilitado para consultas do PolyBase.
 
@@ -187,7 +187,7 @@ Requer a permissão CONTROL no banco de dados no SQL Server.
 
 ## <a name="locking"></a>Bloqueio
 
-Coloca um bloqueio compartilhado no objeto EXTERNAL DATA SOURCE.  
+Coloca um bloqueio compartilhado no objeto EXTERNAL DATA SOURCE.
 
 ## <a name="security"></a>Segurança
 
@@ -233,7 +233,7 @@ Para ver mais exemplos para outras fontes de dados, como o MongoDB, veja [Config
 
 Para criar uma fonte de dados externa para referenciar o cluster do Hadoop do Hortonworks ou do Cloudera, especifique o nome do computador ou o endereço IP do `Namenode` do Hadoop e a porta. <!-- Provide the Nameservice ID as the `LOCATION` for highly available configurations. -->
 
-```sql  
+```sql
 CREATE EXTERNAL DATA SOURCE MyHadoopCluster
 WITH
 (    LOCATION = 'hdfs://10.10.10.10:8050'
@@ -246,7 +246,7 @@ WITH
 
 Especifique a opção `RESOURCE_MANAGER_LOCATION` para habilitar a computação de aplicação para Hadoop em consultas do PolyBase. Uma vez habilitado, o PolyBase toma uma decisão baseada em custo para determinar se a computação de consulta deve ser enviada por push para o Hadoop.
 
-```sql  
+```sql
 CREATE EXTERNAL DATA SOURCE MyHadoopCluster
 WITH
 (    LOCATION                  = 'hdfs://10.10.10.10:8020'
@@ -260,7 +260,7 @@ WITH
 
 Para verificar se o cluster do Hadoop está protegido pelo Kerberos, verifique o valor da propriedade hadoop.security.authentication no core-site.xml do Hadoop. Para referenciar um cluster do Hadoop protegido pelo Kerberos, você precisa especificar uma credencial no escopo do banco de dados contendo o nome de usuário e a senha do Kerberos. A chave mestra do banco de dados é usada para criptografar o segredo da credencial no escopo do banco de dados.
 
-```sql  
+```sql
 -- Create a database master key if one does not already exist, using your own password. This key is used to encrypt the credential secret in next step.
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo'
 ;
@@ -317,18 +317,19 @@ Para criar uma fonte de dados externa que referencie uma instância nomeada do S
 
 ```sql
 CREATE EXTERNAL DATA SOURCE SQLServerInstance2
-WITH ( 
+WITH (
   LOCATION = 'sqlserver://WINSQL2019',
   CONNECTION_OPTIONS = 'Server=%s\SQL2019',
   CREDENTIAL = SQLServerCredentials
 );
 
 ```
+
 Como alternativa, você pode usar uma porta para se conectar a uma instância do SQL Server.
 
 ```sql
 CREATE EXTERNAL DATA SOURCE SQLServerInstance2
-WITH ( 
+WITH (
   LOCATION = 'sqlserver://WINSQL2019:58137',
   CREDENTIAL = SQLServerCredentials
 );
@@ -403,7 +404,7 @@ Para ver esse exemplo em uso, confira [BULK INSERT][bulk_insert_example].
 
 |                                                              |                                 |                                                              |                                                              |      |
 | ------------------------------------------------------------ | ------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- |
-| [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017) | **_\* Banco de Dados SQL \*_** &nbsp; | [SQL Data<br />Warehouse](create-external-data-source-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7) |      |
+| [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017) | **_\* Banco de Dados SQL \*_** &nbsp; | [Azure Synapse<br />Analytics](create-external-data-source-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7) |      |
 |                                                              |                                 |                                                              |                                                              |      |
 
 &nbsp;
@@ -413,13 +414,13 @@ Para ver esse exemplo em uso, confira [BULK INSERT][bulk_insert_example].
 Cria uma fonte de dados externa para consultas elásticas. Fontes de dados externas são usadas para estabelecer a conectividade e dar suporte a estes casos de uso principal:
 
 - Operações de carregamento em massa usando `BULK INSERT` ou `OPENROWSET`
-- Consultar instâncias remotas do Banco de Dados SQL ou do SQL Data Warehouse usando o Banco de Dados SQL com [consulta elástica][remote_eq]
+- Consultar instâncias remotas do Banco de Dados SQL ou do Azure Synapse usando o Banco de Dados SQL com [consulta elástica][remote_eq]
 - Consultar um Banco de Dados SQL do Azure fragmentado usando [consulta elástica][sharded_eq]
 
 ## <a name="syntax"></a>Sintaxe
 
 ```sql
-CREATE EXTERNAL DATA SOURCE <data_source_name>  
+CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
 (    LOCATION                  = '<prefix>://<path>[:<port>]'
 [,   CREDENTIAL                = <credential_name> ]
@@ -434,7 +435,7 @@ WITH
 
 ### <a name="data_source_name"></a>data_source_name
 
-Especifica o nome da fonte de dados definido pelo usuário. O nome deve ser exclusivo no banco de dados no BD SQL (Banco de Dados SQL).
+Especifica o nome da fonte de dados definido pelo usuário. O nome deve ser exclusivo dentro do banco de dados no Banco de Dados SQL.
 
 ### <a name="location--prefixpathport"></a>LOCATION = *`'<prefix>://<path[:port]>'`*
 
@@ -476,7 +477,7 @@ Para criar uma credencial no escopo do banco de dados, veja [CREATE DATABASE SCO
 
 Especifica o tipo de fonte de dados externa que está sendo configurada. Esse parâmetro não é sempre necessário.
 
-- Use o RDBMS para consultas entre bancos de dados usando a consulta elástica do Banco de Dados SQL.  
+- Use o RDBMS para consultas entre bancos de dados usando a consulta elástica do Banco de Dados SQL.
 - Use SHARD_MAP_MANAGER ao criar uma fonte de dados externos ao se conectar a um Banco de Dados SQL fragmentado.
 - Use BLOB_STORAGE ao executar operações em massa com [BULK INSERT][bulk_insert] ou [OPENROWSET][openrowset].
 
@@ -506,7 +507,7 @@ Requer a permissão CONTROL no Banco de Dados SQL.
 
 ## <a name="locking"></a>Bloqueio
 
-Coloca um bloqueio compartilhado no objeto EXTERNAL DATA SOURCE.  
+Coloca um bloqueio compartilhado no objeto EXTERNAL DATA SOURCE.
 
 ## <a name="examples"></a>Exemplos:
 
@@ -545,7 +546,7 @@ Para criar uma fonte de dados externa para referenciar um RDBMS, especifica o no
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>'
 ;
 
-CREATE DATABASE SCOPED CREDENTIAL SQL_Credential  
+CREATE DATABASE SCOPED CREDENTIAL SQL_Credential
 WITH
      IDENTITY  = '<username>'
 ,    SECRET    = '<password>'
@@ -630,22 +631,22 @@ Para ver esse exemplo em uso, confira [BULK INSERT][bulk_insert_example].
 
 |                                                              |                                                              |                                            |                                                              |      |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------ | ------------------------------------------------------------ | ---- |
-| [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017) | [Banco de Dados SQL](create-external-data-source-transact-sql.md?view=azuresqldb-current) | **_\* SQL Data<br />Warehouse \*_** &nbsp; | [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7) |      |
+| [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017) | [Banco de Dados SQL](create-external-data-source-transact-sql.md?view=azuresqldb-current) | **_\* Azure Synapse<br />Analytics \*_** &nbsp; | [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7) |      |
 |                                                              |                                                              |                                            |                                                              |      |
 
 &nbsp;
 
-## <a name="overview-azure-sql-data-warehouse"></a>Visão geral: SQL Data Warehouse do Azure
+## <a name="overview-azure-synapse-analytics"></a>Visão geral: Azure Synapse Analytics
 
 Cria uma fonte de dados externa para o PolyBase. Fontes de dados externas são usadas para estabelecer a conectividade e a compatibilidade com estes casos de uso principal: Virtualização de dados e carregamento dados usando o [PolyBase][intro_pb]
 
 > [!IMPORTANT]  
-> Para criar uma fonte de dados externa para consultar instâncias do SQL Data Warehouse usando o Banco de Dados SQL com [consulta elástica][remote_eq], confira [Banco de Dados SQL](create-external-data-source-transact-sql.md?view=azuresqldb-current).
+> Para criar uma fonte de dados externa para consultar um recurso de Análise de SQL usando o Banco de Dados SQL do Azure com a [consulta elástica][remote_eq], confira [Banco de Dados SQL](create-external-data-source-transact-sql.md?view=azuresqldb-current).
 
 ## <a name="syntax"></a>Sintaxe
 
 ```sql
-CREATE EXTERNAL DATA SOURCE <data_source_name>  
+CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
 (    LOCATION                  = '<prefix>://<path>[:<port>]'
 [,   CREDENTIAL                = <credential_name> ]
@@ -658,7 +659,7 @@ WITH
 
 ### <a name="data_source_name"></a>data_source_name
 
-Especifica o nome da fonte de dados definido pelo usuário. O nome deve ser exclusivo no banco de dados no SQL DW (SQL Data Warehouse).
+Especifica o nome da fonte de dados definido pelo usuário. O nome deve ser exclusivo no banco de dados SQL no Azure Synapse.
 
 ### <a name="location--prefixpathport"></a>LOCATION = *`'<prefix>://<path[:port]>'`*
 
@@ -677,8 +678,8 @@ Caminho de local:
 
 Observações e orientação adicionais ao definir o local:
 
-- A opção padrão é usar `enable secure SSL connections` ao provisionar o Azure Data Lake Storage Gen2. Quando isso estiver habilitado, você deverá usar `abfss` quando uma conexão SSL segura for selecionada. Observe que `abfss`funciona para conexões SSL não seguras também. 
-- O mecanismo do SQL Data Warehouse não verifica a existência da fonte de dados externa quando o objeto é criado. Para validar, crie uma tabela externa usando a fonte de dados externa.
+- A opção padrão é usar `enable secure SSL connections` ao provisionar o Azure Data Lake Storage Gen2. Quando isso estiver habilitado, você deverá usar `abfss` quando uma conexão SSL segura for selecionada. Observe que `abfss`funciona para conexões SSL não seguras também.
+- O Azure Synapse não verifica a existência da fonte de dados externa quando o objeto é criado. . Para validar, crie uma tabela externa usando a fonte de dados externa.
 - Use a mesma fonte de dados externa para todas as tabelas ao consultar o Hadoop para garantir semântica de consulta consistente.
 - `wasb` é o protocolo padrão para o armazenamento de blobs do Azure. `wasbs` é opcional, mas recomendado, pois os dados serão enviados usando uma conexão SSL segura.
 
@@ -706,11 +707,11 @@ Para obter um exemplo de como usar `TYPE` = `HADOOP` para carregar dados do Arma
 
 ## <a name="permissions"></a>Permissões
 
-Requer a permissão CONTROL no banco de dados no SQL Data Warehouse.
+Exige a permissão CONTROL no banco de dados.
 
 ## <a name="locking"></a>Bloqueio
 
-Coloca um bloqueio compartilhado no objeto EXTERNAL DATA SOURCE.  
+Coloca um bloqueio compartilhado no objeto EXTERNAL DATA SOURCE.
 
 ## <a name="security"></a>Segurança
 
@@ -843,8 +844,8 @@ CREATE EXTERNAL DATA SOURCE ext_datasource_with_abfss WITH (TYPE = hadoop, LOCAT
 - [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc]
 - [CREATE EXTERNAL FILE FORMAT (Transact-SQL)][create_eff]
 - [CREATE EXTERNAL TABLE (Transact-SQL)][create_etb]
-- [CREATE EXTERNAL TABLE AS SELECT (SQL Data Warehouse do Azure)][create_etb_as_sel]
-- [CREATE TABLE AS SELECT (SQL Data Warehouse do Azure)][create_tbl_as_sel]
+- [CREATE EXTERNAL TABLE AS SELECT (Azure Synapse Analytics)][create_etb_as_sel]
+- [CREATE TABLE AS SELECT (Azure Synapse Analytics)][create_tbl_as_sel]
 - [sys.external_data_sources (Transact-SQL)][cat_eds]
 - [Usando SAS (Assinatura de Acesso Compartilhado)][sas_token]
 
@@ -885,7 +886,7 @@ CREATE EXTERNAL DATA SOURCE ext_datasource_with_abfss WITH (TYPE = hadoop, LOCAT
 
 |                                                              |                                                              |                                                              |                                                         |      |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------- | ---- |
-| [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017) | [Banco de Dados SQL](create-external-data-source-transact-sql.md?view=azuresqldb-current) | [SQL Data<br />Warehouse](create-external-data-source-transact-sql.md?view=azure-sqldw-latest) | **_\* Analytics<br />Platform System (PDW) \*_** &nbsp; |      |
+| [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017) | [Banco de Dados SQL](create-external-data-source-transact-sql.md?view=azuresqldb-current) | [Azure Synapse<br />Analytics](create-external-data-source-transact-sql.md?view=azure-sqldw-latest) | **_\* Analytics<br />Platform System (PDW) \*_** &nbsp; |      |
 |                                                              |                                                              |                                                              |                                                         |      |
 
 &nbsp;
@@ -897,7 +898,7 @@ Cria uma fonte de dados externa para consultas do PolyBase. Fontes de dados exte
 ## <a name="syntax"></a>Sintaxe
 
 ```sql
-CREATE EXTERNAL DATA SOURCE <data_source_name>  
+CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
 (    LOCATION                  = '<prefix>://<path>[:<port>]'
 [,   CREDENTIAL                = <credential_name> ]
@@ -960,7 +961,7 @@ Para obter um exemplo de como usar `TYPE` = `HADOOP` para carregar dados do Arma
 
 Configure esse valor opcional ao se conectar ao Hortonworks ou ao Cloudera.
 
-Quando o `RESOURCE_MANAGER_LOCATION` for definido, o otimizador de consulta tomará uma decisão baseada em custo para melhorar o desempenho. Um trabalho MapReduce pode ser usado para aplicar a computação para o Hadoop. Especificar o `RESOURCE_MANAGER_LOCATION` pode reduzir significativamente o volume de dados transferidos entre o Hadoop e o SQL, o que pode levar a um desempenho de consultas aprimorado.  
+Quando o `RESOURCE_MANAGER_LOCATION` for definido, o otimizador de consulta tomará uma decisão baseada em custo para melhorar o desempenho. Um trabalho MapReduce pode ser usado para aplicar a computação para o Hadoop. Especificar o `RESOURCE_MANAGER_LOCATION` pode reduzir significativamente o volume de dados transferidos entre o Hadoop e o SQL, o que pode levar a um desempenho de consultas aprimorado.
 
 Se o Resource Manager não tiver sido especificado, o envio de computação por push para o Hadoop estará desabilitado para consultas do PolyBase.
 
@@ -978,7 +979,7 @@ Se a porta não for especificada, o valor padrão será escolhido usando a defin
 
 Para ver uma lista completa de versões do Hadoop compatíveis, veja [Configuração de conectividade do PolyBase (Transact-SQL)][connectivity_pb].
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > O valor de RESOURCE_MANAGER_LOCATION e não é validado quando você cria a fonte de dados externa. Inserir um valor incorreto pode causar falha de consulta em tempo de execução sempre que for feita uma tentativa de aplicação, uma vez que o valor fornecido não poderá ser resolvido.
 
 [Criar fonte de dados externa para referenciar o Hadoop com aplicação habilitada](#b-create-external-data-source-to-reference-hadoop-with-push-down-enabled) apresenta um exemplo concreto e diretrizes adicionais.
@@ -992,7 +993,7 @@ Requer a permissão CONTROL no banco de dados no Analytics Platform System (Para
 
 ## <a name="locking"></a>Bloqueio
 
-Coloca um bloqueio compartilhado no objeto EXTERNAL DATA SOURCE.  
+Coloca um bloqueio compartilhado no objeto EXTERNAL DATA SOURCE.
 
 ## <a name="security"></a>Segurança
 
@@ -1008,7 +1009,7 @@ No momento, não há suporte para um token SAS com o tipo `HADOOP`. Ele só é c
 
 Para criar uma fonte de dados externa para referenciar o cluster do Hadoop do Hortonworks ou do Cloudera, especifique o nome do computador ou o endereço IP do `Namenode` do Hadoop e a porta. <!-- Provide the Nameservice ID as the `LOCATION` for highly available configurations. -->
 
-```sql  
+```sql
 CREATE EXTERNAL DATA SOURCE MyHadoopCluster
 WITH
 (    LOCATION = 'hdfs://10.10.10.10:8050'
@@ -1021,7 +1022,7 @@ WITH
 
 Especifique a opção `RESOURCE_MANAGER_LOCATION` para habilitar a computação de aplicação para Hadoop em consultas do PolyBase. Uma vez habilitado, o PolyBase toma uma decisão baseada em custo para determinar se a computação de consulta deve ser enviada por push para o Hadoop.
 
-```sql  
+```sql
 CREATE EXTERNAL DATA SOURCE MyHadoopCluster
 WITH
 (    LOCATION                  = 'hdfs://10.10.10.10:8020'
@@ -1035,7 +1036,7 @@ WITH
 
 Para verificar se o cluster do Hadoop está protegido pelo Kerberos, verifique o valor da propriedade hadoop.security.authentication no core-site.xml do Hadoop. Para referenciar um cluster do Hadoop protegido pelo Kerberos, você precisa especificar uma credencial no escopo do banco de dados contendo o nome de usuário e a senha do Kerberos. A chave mestra do banco de dados é usada para criptografar o segredo da credencial no escopo do banco de dados.
 
-```sql  
+```sql
 -- Create a database master key if one does not already exist, using your own password. This key is used to encrypt the credential secret in next step.
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo'
 ;

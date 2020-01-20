@@ -9,13 +9,13 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18, sqlfreshmay19
-ms.date: 10/15/2019
-ms.openlocfilehash: 9f6be7cbd673a98f8e8934860b0e26d427acac06
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.date: 01/15/2020
+ms.openlocfilehash: 943ff8fdcf2eadd428d1ec6ceb5d15fe34ad9291
+ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75241753"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75952409"
 ---
 # <a name="what-is-azure-data-studio"></a>O que é o Azure Data Studio?
 
@@ -33,7 +33,7 @@ O [!INCLUDE[name-sos](../includes/name-sos-short.md)] oferece uma experiência d
 
 ## <a name="smart-sql-code-snippets"></a>Snippets de código SQL inteligentes
 
-Os snippets de código SQL geram a sintaxe SQL adequada para criar bancos de dados, tabelas, exibições, procedimentos armazenados, usuários, logons, funções, entre outros, e para atualizar objetos de banco de dados existentes. Use snippets inteligentes para criar rapidamente cópias de seu banco de dados para fins de desenvolvimento ou teste e para gerar e executar scripts CREATE e INSERT.
+Os snippets de código SQL geram a sintaxe SQL adequada para criar bancos de dados, tabelas, exibições, procedimentos armazenados, usuários, logons, funções e para atualizar objetos de banco de dados existentes. Use snippets inteligentes para criar rapidamente cópias de seu banco de dados para fins de desenvolvimento ou teste e para gerar e executar scripts CREATE e INSERT.
 
 O [!INCLUDE[name-sos](../includes/name-sos-short.md)] também fornece funcionalidade para criar snippets de código SQL personalizados. Para saber mais, confira [Criar e usar snippets de código](code-snippets.md).
 
@@ -51,7 +51,7 @@ Use suas ferramentas de linha de comando favoritas (por exemplo, Bash, PowerShel
 
 ## <a name="extensibility-and-extension-authoring"></a>Extensibilidade e criação de extensões
 
-Aprimore a experiência do [!INCLUDE[name-sos](../includes/name-sos-short.md)] estendendo a funcionalidade da instalação básica. O [!INCLUDE[name-sos](../includes/name-sos-short.md)] fornece pontos de extensibilidade para atividades de gerenciamento de dados, bem como suporte para a criação de extensões.
+Aprimore a experiência do [!INCLUDE[name-sos](../includes/name-sos-short.md)] estendendo a funcionalidade da instalação básica. O [!INCLUDE[name-sos](../includes/name-sos-short.md)] fornece pontos de extensibilidade para atividades de gerenciamento de dados e suporte para a criação de extensões.
 
 Para saber mais sobre a extensibilidade no [!INCLUDE[name-sos](../includes/name-sos-short.md)], confira [Extensibilidade](extensibility.md).
 Para saber mais sobre a criação de extensões, confira [Criação de extensões](extension-authoring.md).
@@ -75,7 +75,7 @@ Para saber mais sobre a criação de extensões, confira [Criação de extensõe
 - Está fazendo gerenciamento de segurança, incluindo gerenciamento de usuários, avaliação de vulnerabilidade e configuração de recursos de segurança
 - Usa os Relatórios do Repositório de Consultas do SQL Server
 - Precisa usar painéis e consultores de ajuste de desempenho
-- Está fazendo a importação/exportação de DACPACs
+- Está fazendo a Importação/Exportação de DACPACs
 - Precisa de acesso a Servidores Registrados e deseja controlar os serviços do SQL Server no Windows
 
 ### <a name="shell"></a>Shell
@@ -96,11 +96,11 @@ Para saber mais sobre a criação de extensões, confira [Criação de extensõe
 |Modo Escuro|Sim||
 |Azure Resource Explorer|Visualização||
 |Assistente para Gerar Scripts||Sim|
-|Importar\Exportar DACPAC||Sim|
+|Importação/exportação de DACPAC||Sim|
 |Propriedades de objeto||Sim|
 |Criador de Tabelas||Sim|
 
-### <a name="query-editor"></a>Editor de Consultas
+### <a name="query-editor"></a>Editor de consultas
 
 |Recurso|Azure Data Studio|SSMS|
 |:---|:---|:---|
@@ -127,13 +127,13 @@ Para saber mais sobre a criação de extensões, confira [Criação de extensõe
 |macOS|Sim||
 |Windows|Sim|Sim|
 
-### <a name="data-engineering"></a>Engenharia de Dados
+### <a name="data-engineering"></a>Engenharia de dados
 
 |Recurso|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|Assistente Criar Tabela Externa|Visualização||
-|Integração do HDFS|Visualização||
-|Notebooks|Visualização||
+|Assistente Criar Tabela Externa|Sim||
+|Integração do HDFS|Sim||
+|Notebooks|Sim||
 
 ### <a name="database-administration"></a>Administração de banco de dados
 
@@ -147,7 +147,7 @@ Para saber mais sobre a criação de extensões, confira [Criação de extensõe
 |Always On||Sim|
 |Always Encrypted||Sim|
 |Assistente para Copiar Dados||Sim|
-|Orientador de Otimização de Dados||Sim|
+|Database Engine Tuning Advisor||Sim|
 |Visualizador de Log de Erros||Sim|
 |Planos de manutenção||Sim|
 |Consulta Multisservidor||Sim|

@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 11ed5aa2ddcd675d201fc86abf595055828d7621
-ms.sourcegitcommit: 3511da65d7ebc788e04500bbef3a3b4a4aeeb027
+ms.openlocfilehash: 4cf79aade8e74277ef7b5cbaa6e1bd3ae612e94b
+ms.sourcegitcommit: 909b69dd1f918f00b9013bb43ea66e76a690400a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75681767"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75924917"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools-preview"></a>Ferramentas de DevOps do SSIS (SQL Server Integration Services) (versão prévia)
 
@@ -133,12 +133,19 @@ Atualmente, a tarefa Implantação do SSIS não dá suporte aos seguintes cenár
 
 ## <a name="release-notes"></a>Notas de versão
 
+### <a name="version-012-preview"></a>Versão 0.1.2 Versão prévia
+
+Data de lançamento: 13 de janeiro de 2020
+
+- Foram adicionadas informações de exceção mais detalhadas no log da tarefa de implantação do SSIS quando o tipo de destino é SSISDB.
+- Foi corrigido o caminho de destino de exemplo no texto de ajuda do caminho de destino da propriedade da tarefa de implantação do SSIS.
+
 ### <a name="version-011-preview"></a>Versão 0.1.1 versão prévia
 
 Data de lançamento: 6 de janeiro de 2020
 
-- Adição da restrição de requisito mínimo de versão do agente. Atualmente, a versão mínima do agente deste produto é 2.144.0.
-- Correção de texto de exibição incorreto para a tarefa Implantação do SSIS.
+- Foi adicionada uma restrição do requisito mínimo de versão do agente. Atualmente, a versão mínima do agente deste produto é 2.144.0.
+- Foram corrigidos alguns textos de exibição incorretos para a tarefa de implantação do SSIS.
 - Refinamento de algumas mensagens de erro.
 
 ### <a name="version-010-preview"></a>Versão 0.1.0 Versão prévia

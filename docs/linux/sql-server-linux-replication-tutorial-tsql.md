@@ -1,6 +1,7 @@
 ---
-title: Configurar a Replicação do SQL Server em Linux
-description: Este tutorial mostra como configurar a replicação de instantâneo do SQL Server no Linux.
+title: 'Tutorial: Configurar replicação (T-SQL)'
+description: Este tutorial mostra como configurar a replicação de instantâneo do SQL Server no Linux usando o T-SQL.
+ms.custom: seo-dt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -8,13 +9,14 @@ ms.date: 12/09/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
+titleSuffix: SQL Server on Linux
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: acc3f556371c52d02789a03813a28606435d86cd
-ms.sourcegitcommit: 56fb0b7750ad5967f5d8e43d87922dfa67b2deac
+ms.openlocfilehash: 00ae6ecf66bd52d5415c630dd2b66a1a9ecaebd6
+ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2019
-ms.locfileid: "75001961"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75952507"
 ---
 # <a name="configure-replication-with-t-sql"></a>Configurar a replicação com T-SQL
 
