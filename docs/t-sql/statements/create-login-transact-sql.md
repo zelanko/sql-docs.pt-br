@@ -1,7 +1,7 @@
 ---
 title: CREATE LOGIN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/06/2019
+ms.date: 01/10/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -27,16 +27,16 @@ ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: df02e167ae5014564357d42d7cbbf06a5937845a
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: f91edadf5e33c0938a6af0be0244fec7635dd36d
+ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73983198"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75952349"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
-Cria um logon para bancos de dados SQL Server, Banco de Dados SQL, SQL Data Warehouse ou Analytics Platform System. Clique em uma das guias a seguir para a sintaxe, argumentos, comentários, permissões e exemplos de uma versão específica.
+Cria um logon para bancos de dados SQL Server, Banco de Dados SQL, Azure Synapse Analytics ou Analytics Platform System. Clique em uma das guias a seguir para a sintaxe, argumentos, comentários, permissões e exemplos de uma versão específica.
 
 CREATE LOGIN participa de transações. Se CREATE LOGIN for executado em uma transação e a transação for revertida, criação do logon será revertida. Se executado em uma transação, o logon criado não poderá ser usado até a transação ser confirmada.
 
@@ -50,7 +50,7 @@ Na linha a seguir, clique em qualquer nome de produto de seu interesse. O clique
 
 ||||||
 |-|-|-|-|-|
-|**_\* SQL Server \*_** &nbsp;|[Banco de dados individual/pool elástico<br />do Banco de Dados SQL](create-login-transact-sql.md?view=azuresqldb-current)|[Instância gerenciada<br />do Banco de Dados SQL](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
+|**_\* SQL Server \*_** &nbsp;|[Banco de dados individual/pool elástico<br />do Banco de Dados SQL](create-login-transact-sql.md?view=azuresqldb-current)|[Instância gerenciada<br />do Banco de Dados SQL](create-login-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
 ||||||
 
 &nbsp;
@@ -124,7 +124,7 @@ CERTIFICATE *certname* Especifica o nome de um certificado a ser associado a est
 
 ASYMMETRIC KEY *asym_key_name* Especifica o nome de uma chave assimétrica a ser associada este logon. Esta chave já deve ocorrer no banco de dados mestre.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Comentários
 
 - As senhas diferenciam maiúsculas de minúsculas.
 - O hash prévio de senhas tem suporte somente durante a criação de logons do SQL Server.
@@ -150,14 +150,14 @@ ASYMMETRIC KEY *asym_key_name* Especifica o nome de uma chave assimétrica a ser
 
 Depois de criar um logon, ele poderá se conectar ao SQL Server, mas terá as permissões concedidas apenas à função **pública**. Execute algumas das atividades a seguir.
 
-- Para conectar-se a um banco de dados, crie um usuário de banco de dados para o logon. Para obter mais informações, consulte [CREATE USER](../../t-sql/statements/create-user-transact-sql.md).
+- Para conectar-se a um banco de dados, crie um usuário de banco de dados para o logon. Para obter mais informações, confira [CREATE USER](../../t-sql/statements/create-user-transact-sql.md).
 - Crie uma função de servidor definida pelo usuário usando [CREATE SERVER ROLE](../../t-sql/statements/create-server-role-transact-sql.md). Use **ALTER SERVER ROLE** ... **ADD MEMBER** para adicionar o novo logon á função de servidor definida pelo usuário. Para obter mais informações, consulte [CREATE SERVER ROLE](../../t-sql/statements/create-server-role-transact-sql.md) e [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).
 - Use **sp_addsrvrolemember** para adicionar o logon a uma função de servidor fixa. Para obter mais informações, consulte [Funções de nível de servidor](../../relational-databases/security/authentication-access/server-level-roles.md) e [sp_addsrvrolemember](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md).
 - Use a instrução **GRANT** para conceder permissões do nível de servidor para o novo logon ou para uma função que contém o logon. Para obter mais informações, consulte [GRANT](../../t-sql/statements/grant-transact-sql.md).
 
 ## <a name="examples"></a>Exemplos
 
-### <a name="a-creating-a-login-with-a-password"></a>A. Criando um logon com uma senha
+### <a name="a-creating-a-login-with-a-password"></a>a. Criando um logon com uma senha
 
 O exemplo a seguir cria um logon para um usuário específico e atribui uma senha.
 
@@ -258,7 +258,7 @@ GO
 
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|**_\* Banco de dados individual/pool elástico<br />do Banco de Dados SQL \*_**|[Instância gerenciada<br />do Banco de Dados SQL](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|**_\* Banco de dados individual/pool elástico<br />do Banco de Dados SQL \*_**|[Instância gerenciada<br />do Banco de Dados SQL](create-login-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -278,7 +278,7 @@ CREATE LOGIN login_name
 
 ## <a name="arguments"></a>Argumentos
 
-*login_name* Especifica o nome do logon criado. O banco de dados individual/pool elástico do Banco de Dados SQL do Azure oferece suporte apenas a logins do SQL.
+*login_name* Especifica o nome do logon criado. O banco de dados individual/pool elástico do Banco de Dados SQL do Azure oferece suporte apenas a logins do SQL. Para criar contas para usuários do Azure Active Directory, use a instrução [CREATE USER](create-user-transact-sql.md).
 
 PASSWORD **='** password* *'* Especifica a senha do logon do SQL que está sendo criado. Use uma senha forte. Para obter mais informações, consulte [Senhas fortes](../../relational-databases/security/strong-passwords.md) e [Política de senha](../../relational-databases/security/password-policy.md). Começando com [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]armazenadas, informações de senha armazenadas são calculadas usando SHA-512 da senha com valor de sal.
 
@@ -286,7 +286,7 @@ As senhas diferenciam maiúsculas de minúsculas. As senhas sempre devem ter pel
 
 SID = *sid* Usado para recriar um logon. Aplica-se apenas aos logons de autenticação do SQL Server, e não aos logons de autenticação do Windows. Especifica o SID do novo logon de autenticação do SQL Server. Se essa opção não for usada, o SQL Server atribuirá um SID automaticamente. A estrutura do SID depende da versão do SQL Server. Para o Banco de Dados SQL, trata-se de um literal de 32 bytes (**binary(32)** ) que consiste em `0x01060000000000640000000000000000`, além de 16 bytes que representam um GUID. Por exemplo, `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Comentários
 
 - As senhas diferenciam maiúsculas de minúsculas.
 - Para um script transferir logons, consulte [Como transferir os logons e senhas entre instâncias do SQL Server 2005 e SQL Server 2008](https://support.microsoft.com/kb/918992).
@@ -323,14 +323,14 @@ Somente o logon da entidade de segurança no nível do servidor (criado pelo pro
 
 Depois de criar um logon, ele poderá se conectar ao Banco de Dados SQL, mas terá as permissões concedidas apenas à função **pública**. Execute algumas das atividades a seguir.
 
-- Para conectar-se a um banco de dados, crie um usuário de banco de dados para o logon nesse banco de dados. Para obter mais informações, consulte [CREATE USER](../../t-sql/statements/create-user-transact-sql.md).
+- Para conectar-se a um banco de dados, crie um usuário de banco de dados para o logon nesse banco de dados. Para obter mais informações, confira [CREATE USER](../../t-sql/statements/create-user-transact-sql.md).
 - Para conceder permissões a um usuário em um banco de dados, use o **ALTER SERVER ROLE** ... Instrução **ADD MEMBER** para adicionar o usuário a uma das funções de banco de dados internas ou a uma função personalizada ou conceder permissões ao usuário diretamente usando a instrução [GRANT](../../t-sql/statements/grant-transact-sql.md). Para saber mais, confira [Funções não de administrador](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [Funções administrativas adicionais de nível do servidor](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) e instrução [GRANT](grant-transact-sql.md).
 - Para conceder permissões em todo o servidor, crie um usuário de banco de dados no banco de dados mestre e use **ALTER SERVER ROLE** ... Instrução **ADD MEMBER** para adicionar o usuário a uma das funções administrativas do servidor. Para obter mais informações, consulte [Funções de nível de servidor](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) e [Funções de servidor](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles).
 - Use a instrução **GRANT** para conceder permissões do nível de servidor para o novo logon ou para uma função que contém o logon. Para obter mais informações, consulte [GRANT](../../t-sql/statements/grant-transact-sql.md).
 
 ## <a name="examples"></a>Exemplos
 
-### <a name="a-creating-a-login-with-a-password"></a>A. Criando um logon com uma senha
+### <a name="a-creating-a-login-with-a-password"></a>a. Criando um logon com uma senha
 
 O exemplo a seguir cria um logon para um usuário específico e atribui uma senha.
 
@@ -378,7 +378,7 @@ GO
 
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|[Banco de dados individual/pool elástico<br />do Banco de Dados SQL](create-login-transact-sql.md?view=azuresqldb-current)|**_\* Instância gerenciada<br />do Banco de Dados SQL \*_**|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|[Banco de dados individual/pool elástico<br />do Banco de Dados SQL](create-login-transact-sql.md?view=azuresqldb-current)|**_\* Instância gerenciada<br />do Banco de Dados SQL \*_**|[Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -410,14 +410,14 @@ As senhas diferenciam maiúsculas de minúsculas. As senhas sempre devem ter pel
 
 SID **=** *sid* Usado para recriar um logon. Aplica-se apenas a logons de autenticação do SQL Server. Especifica o SID do novo logon de autenticação do SQL Server. Se essa opção não for usada, o SQL Server atribuirá um SID automaticamente. A estrutura do SID depende da versão do SQL Server. Para o Banco de Dados SQL, trata-se de um literal de 32 bytes (**binary(32)** ) que consiste em `0x01060000000000640000000000000000`, além de 16 bytes que representam um GUID. Por exemplo, `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Comentários
 
 - As senhas diferenciam maiúsculas de minúsculas.
 - A nova sintaxe é introduzida para a criação de entidades de segurança no nível de servidor mapeadas para contas do Azure AD (**FROM EXTERNAL PROVIDER**)
 - Quando **FROM EXTERNAL PROVIDER** é especificado:
 
   - O login_name deve representar uma conta existente do Azure AD (usuário, grupo ou aplicativo) acessível no Azure AD pela atual instância gerenciada do SQL. Para entidades de segurança do Azure Active Directory, a sintaxe de CREATE LOGIN exige:
-    - UserPrincipalName do objeto do Azure Active Directory para usuários do Azure Active Directory.
+    - UserPrincipalName do objeto do Azure AD para usuários do Azure AD.
     - DisplayName do objeto do Azure Active Directory para Grupos e Aplicativos do Azure AD.
   - A opção **PASSWORD** não pode ser usada.
 - Por padrão, quando a cláusula **FROM EXTERNAL PROVIDER** é omitida, um logon SQL regular é criado.
@@ -440,7 +440,7 @@ Por padrão, a permissão padrão concedida para um logon do Azure AD recém-cri
 ## <a name="after-creating-a-login"></a>Após criar um logon
 
 > [!NOTE]
-> O administrador do Azure AD para a funcionalidade de instância gerenciada após a criação ter sido alterada. Para obter mais informações, confira [Nova funcionalidade de Administrador do Azure AD para MI](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi).
+> A funcionalidade de administrador do Azure AD para a instância gerenciada depois que a criação foi alterada. Para obter mais informações, confira [Nova funcionalidade de administrador do Azure AD para MI](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi).
 
 Depois de criar um logon, ele poderá se conectar a uma instância gerenciada do Banco de Dados SQL, mas terá as permissões concedidas apenas à função **pública**. Execute algumas das atividades a seguir.
 
@@ -453,7 +453,7 @@ Depois de criar um logon, ele poderá se conectar a uma instância gerenciada do
 ## <a name="limitations"></a>Limitações
 
 - Não há suporte para definir um logon do Azure AD mapeado para um grupo do Azure AD como o proprietário do banco de dados.
-- Há suporte para a representação de entidades de segurança de nível de servidor do Azure AD usando outras entidades de segurança do Azure AD, como a cláusula [EXECUTE AS](execute-as-transact-sql.md).
+- Não há suporte para a representação de entidades de segurança no nível do servidor do Azure AD usando outras entidades de segurança do Azure AD, como a cláusula [EXECUTE AS](execute-as-transact-sql.md).
 - Somente entidades de segurança no nível do SQL Server (logons) que fazem parte do `sysadmin` podem executar as seguintes operações direcionadas a entidades de segurança do Azure AD:
   - EXECUTE AS USER
   - EXECUTE AS LOGIN
@@ -461,7 +461,7 @@ Depois de criar um logon, ele poderá se conectar a uma instância gerenciada do
 
 ## <a name="examples"></a>Exemplos
 
-### <a name="a-creating-a-login-with-a-password"></a>A. Criando um logon com uma senha
+### <a name="a-creating-a-login-with-a-password"></a>a. Criando um logon com uma senha
 
 O exemplo a seguir cria um logon para um usuário específico e atribui uma senha.
 
@@ -554,16 +554,16 @@ GO
 
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|[Banco de dados individual/pool elástico<br />do Banco de Dados SQL](create-login-transact-sql.md?view=azuresqldb-current)|[Instância gerenciada<br />do Banco de Dados SQL](create-login-transact-sql.md?view=azuresqldb-mi-current)|**_\* SQL Data<br />Warehouse \*_**|[Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|[Banco de dados individual/pool elástico<br />do Banco de Dados SQL](create-login-transact-sql.md?view=azuresqldb-current)|[Instância gerenciada<br />do Banco de Dados SQL](create-login-transact-sql.md?view=azuresqldb-mi-current)|**_\* Azure Synapse<br />Analytics \*_**|[Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
-## <a name="azure-sql-data-warehouse"></a>Azure SQL Data Warehouse
+## <a name="azure-synapse-analytics"></a>Azure Synapse Analytics
 
 ## <a name="syntax"></a>Sintaxe
 
 ```
--- Syntax for Azure SQL Data Warehouse
+-- Syntax for Azure Synapse Analytics
 CREATE LOGIN login_name
  { WITH <option_list> }
 
@@ -574,15 +574,15 @@ CREATE LOGIN login_name
 
 ## <a name="arguments"></a>Argumentos
 
-*login_name* Especifica o nome do logon criado. O Banco de Dados SQL do Azure é compatível apenas com logons do SQL.
+*login_name* Especifica o nome do logon criado. A Análise do SQL no Azure Synapse dá suporte apenas a logons do SQL. Para criar contas para usuários do Azure Active Directory, use a instrução [CREATE USER](create-user-transact-sql.md).
 
 PASSWORD **='** password* *'* Especifica a senha do logon do SQL que está sendo criado. Use uma senha forte. Para obter mais informações, consulte [Senhas fortes](../../relational-databases/security/strong-passwords.md) e [Política de senha](../../relational-databases/security/password-policy.md). Começando com [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]armazenadas, informações de senha armazenadas são calculadas usando SHA-512 da senha com valor de sal.
 
 As senhas diferenciam maiúsculas de minúsculas. As senhas sempre devem ter pelo menos oito caracteres e não podem exceder 128 caracteres. Elas podem incluir caracteres de a-z, A-Z, 0-9, e a maioria dos caracteres não alfanuméricos. As senhas não podem conter aspas simples nem o *login_name*.
 
- SID = *sid* Usado para recriar um logon. Aplica-se apenas aos logons de autenticação do SQL Server, e não aos logons de autenticação do Windows. Especifica o SID do novo logon de autenticação do SQL Server. Se essa opção não for usada, o SQL Server atribuirá um SID automaticamente. A estrutura do SID depende da versão do SQL Server. Para o SQL Data Warehouse, esse é um literal de 32 bytes (**binary(32)** ) composto por `0x01060000000000640000000000000000` mais 16 bytes que representam um GUID. Por exemplo, `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.
+ SID = *sid* Usado para recriar um logon. Aplica-se apenas aos logons de autenticação do SQL Server, e não aos logons de autenticação do Windows. Especifica o SID do novo logon de autenticação do SQL Server. Se essa opção não for usada, o SQL Server atribuirá um SID automaticamente. A estrutura do SID depende da versão do SQL Server. Para Análise de SQL, trata-se de um literal de 32 bytes (**binary(32)** ) que consiste em `0x01060000000000640000000000000000`, além de 16 bytes que representam um GUID. Por exemplo, `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Comentários
 
 - As senhas diferenciam maiúsculas de minúsculas.
 - Para um script transferir logons, consulte [Como transferir os logons e senhas entre instâncias do SQL Server 2005 e SQL Server 2008](https://support.microsoft.com/kb/918992).
@@ -594,15 +594,15 @@ As senhas diferenciam maiúsculas de minúsculas. As senhas sempre devem ter pel
 
 A instrução **CREATE LOGIN** deve ser a única instrução em um lote.
 
-Em alguns métodos de conexão com o SQL Data Warehouse, como **sqlcmd**, é necessário acrescentar o nome do servidor do SQL Data Warehouse ao nome do logon na cadeia de conexão usando a notação *\<logon>* @ *\<servidor>* . Por exemplo, se o seu logon for `login1` e o nome totalmente qualificado do servidor do SQL Data Warehouse for `servername.database.windows.net`, o parâmetro *username* da cadeia de conexão deverá ser `login1@servername`. Como o comprimento total do parâmetro *username* é 128 caracteres, *login_name* é limitado a 127 caracteres menos o comprimento do nome de servidor. No exemplo, `login_name` pode ter apenas 117 caracteres porque `servername` tem 10 caracteres.
+Ao se conectar ao Azure Synapse usando ferramentas, como **sqlcmd**, é necessário acrescentar o nome do servidor da Análise de SQL ao nome do logon na cadeia de conexão usando a notação *\<logon>* @ *\<servidor>* . Por exemplo, se o seu logon for `login1` e o nome totalmente qualificado do servidor da Análise de SQL for `servername.database.windows.net`, o parâmetro *username* da cadeia de conexão deverá ser `login1@servername`. Como o comprimento total do parâmetro *username* é 128 caracteres, *login_name* é limitado a 127 caracteres menos o comprimento do nome de servidor. No exemplo, `login_name` pode ter apenas 117 caracteres porque `servername` tem 10 caracteres.
 
-No SQL Data Warehouse, é necessário estar conectado ao banco de dados mestre para criar um logon.
+Para criar um logon, você deve estar conectado ao banco de dados mestre.
 
 As regras do SQL Server permitem criar um logon de autenticação do SQL Server no formato \<nomedologon>@\<nomedoservidor>. Se seu servidor do [!INCLUDE[ssSDS](../../includes/sssds-md.md)] for **myazureserver** e o logon for **myemail@live.com** , você deverá fornecer seu logon como **myemail@live.com@myazureserver** .
 
-No SQL Data Warehouse, os dados de logon necessários para autenticar uma conexão e as regras de firewall no nível de servidor são armazenados em cache temporariamente em cada banco de dados. Esse cache é atualizado periodicamente. Para forçar uma atualização do cache de autenticação e garantir que um banco de dados tenha a versão mais recente da tabela de logons, execute [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).
+Os dados de logon necessários para autenticar uma conexão e as regras de firewall no nível do servidor são armazenados em cache temporariamente em cada banco de dados. Esse cache é atualizado periodicamente. Para forçar uma atualização do cache de autenticação e garantir que um banco de dados tenha a versão mais recente da tabela de logons, execute [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).
 
-Para obter mais informações sobre logons do SQL Data Warehouse, confira [Gerenciar bancos de dados e logons no Banco de Dados SQL do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins).
+Para saber mais sobre logons, confira [Gerenciar bancos de dados e logons](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins).
 
 ## <a name="permissions"></a>Permissões
 
@@ -610,9 +610,9 @@ Somente o logon da entidade de segurança no nível do servidor (criado pelo pro
 
 ## <a name="after-creating-a-login"></a>Após criar um logon
 
-Após criar um logon, ele poderá se conectar ao SQL Data Warehouse, mas terá as permissões concedidas apenas à função **pública**. Execute algumas das atividades a seguir.
+Depois de criar um logon, ele poderá se conectar ao Azure Synapse, mas terá as permissões concedidas apenas à função **pública**. Execute algumas das atividades a seguir.
 
-- Para conectar-se a um banco de dados, crie um usuário de banco de dados para o logon. Para obter mais informações, consulte [CREATE USER](../../t-sql/statements/create-user-transact-sql.md).
+- Para conectar-se a um banco de dados, crie um usuário de banco de dados para o logon. Para obter mais informações, confira [CREATE USER](../../t-sql/statements/create-user-transact-sql.md).
 - Para conceder permissões a um usuário em um banco de dados, use o **ALTER SERVER ROLE** ... Instrução **ADD MEMBER** para adicionar o usuário a uma das funções de banco de dados internas ou a uma função personalizada ou conceder permissões ao usuário diretamente usando a instrução [GRANT](grant-transact-sql.md). Para saber mais, confira [Funções não de administrador](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [Funções administrativas adicionais de nível do servidor](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) e instrução [GRANT](grant-transact-sql.md).
 - Para conceder permissões em todo o servidor, crie um usuário de banco de dados no banco de dados mestre e use **ALTER SERVER ROLE** ... Instrução **ADD MEMBER** para adicionar o usuário a uma das funções administrativas do servidor. Para obter mais informações, consulte [Funções de nível de servidor](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) e [Funções de servidor](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles).
 
@@ -620,7 +620,7 @@ Após criar um logon, ele poderá se conectar ao SQL Data Warehouse, mas terá a
 
 ## <a name="examples"></a>Exemplos
 
-### <a name="a-creating-a-login-with-a-password"></a>A. Criando um logon com uma senha
+### <a name="a-creating-a-login-with-a-password"></a>a. Criando um logon com uma senha
 
 O exemplo a seguir cria um logon para um usuário específico e atribui uma senha.
 
@@ -668,7 +668,7 @@ GO
 
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|[Banco de dados individual/pool elástico<br />do Banco de Dados SQL](create-login-transact-sql.md?view=azuresqldb-current)|[Instância gerenciada<br />do Banco de Dados SQL](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics<br />Platform System (PDW) \*_**
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|[Banco de dados individual/pool elástico<br />do Banco de Dados SQL](create-login-transact-sql.md?view=azuresqldb-current)|[Instância gerenciada<br />do Banco de Dados SQL](create-login-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics<br />Platform System (PDW) \*_**
 
 &nbsp;
 
@@ -712,7 +712,7 @@ Se a diretiva de Windows exigir senhas fortes, as senhas deverão conter pelo me
 
 WINDOWS Especifica que o logon seja mapeado para um logon do Windows.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Comentários
 
 - As senhas diferenciam maiúsculas de minúsculas.
 - Se MUST_CHANGE for especificado, CHECK_EXPIRATION e CHECK_POLICY deverão ser definidos como ON. Caso contrário, a instrução falhará.
@@ -732,9 +732,9 @@ Apenas usuários com a permissão **ALTER ANY LOGIN** no servidor ou com associa
 
 ## <a name="after-creating-a-login"></a>Após criar um logon
 
-Após criar um logon, ele poderá se conectar ao SQL Data Warehouse, mas terá as permissões concedidas apenas à função **pública**. Execute algumas das atividades a seguir.
+Depois de criar um logon, ele poderá se conectar ao Azure Synapse Analytics, mas terá as permissões concedidas apenas à função **pública**. Execute algumas das atividades a seguir.
 
-- Para conectar-se a um banco de dados, crie um usuário de banco de dados para o logon. Para obter mais informações, consulte [CREATE USER](../../t-sql/statements/create-user-transact-sql.md).
+- Para conectar-se a um banco de dados, crie um usuário de banco de dados para o logon. Para obter mais informações, confira [CREATE USER](../../t-sql/statements/create-user-transact-sql.md).
 - Crie uma função de servidor definida pelo usuário usando [CREATE SERVER ROLE](../../t-sql/statements/create-server-role-transact-sql.md). Use **ALTER SERVER ROLE** ... **ADD MEMBER** para adicionar o novo logon á função de servidor definida pelo usuário. Para obter mais informações, consulte [CREATE SERVER ROLE](../../t-sql/statements/create-server-role-transact-sql.md) e [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).
 - Use **sp_addsrvrolemember** para adicionar o logon a uma função de servidor fixa. Para obter mais informações, consulte [Funções de nível de servidor](../../relational-databases/security/authentication-access/server-level-roles.md) e [sp_addsrvrolemember](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md).
 - Use a instrução **GRANT** para conceder permissões do nível de servidor para o novo logon ou para uma função que contém o logon. Para obter mais informações, consulte [GRANT](../../t-sql/statements/grant-transact-sql.md).

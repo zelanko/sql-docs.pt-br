@@ -17,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: 667419f2-74fb-4b50-b963-9197d1368cda
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 58b73e5bd1f82d619f00e50d554d2043196d7884
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: f9ce3042bedd23c5ee173b1df7669a09cce35351
+ms.sourcegitcommit: 365a919e3f0b0c14440522e950b57a109c00a249
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71298547"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75831759"
 ---
 # <a name="excel-connection-manager"></a>Gerenciador de conexões do Excel
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  Um gerenciador de conexões do Excel permite a conexão de um pacote a um arquivo de pasta de trabalho do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel. A fonte e o destino do Excel que o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui usam o gerenciador de conexões do Excel.  
+  Um gerenciador de conexões do Excel permite a conexão de um pacote a um arquivo de pasta de trabalho do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel. A origem e o destino do Excel que o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui usam o gerenciador de conexões do Excel.  
  
 > [!IMPORTANT]
 > Para obter informações detalhadas sobre como se conectar a arquivos do Excel, e sobre limitações e problemas conhecidos para carregar dados de ou para arquivos do Excel, consulte [Carregar dados do ou para o Excel com o SSIS (SQL Server Integration Services)](../load-data-to-from-excel-with-ssis.md).
@@ -68,7 +68,35 @@ ms.locfileid: "71298547"
   
  **Primeira linha com nomes de coluna**  
  Especifique se a primeira linha de dados na planilha selecionada contém os nomes de coluna. O valor padrão desta opção é **Verdadeiro**.  
+
+## <a name="solution-to-import-data-with-mixed-data-types-from-excel"></a>Solução para importar dados com tipos de dados mistos do Excel
+
+Se você usar dados que contenham tipos de dados mistos, por padrão, o driver do Excel lerá as oito primeiras linhas (configuradas pela chave de registro **TypeGuessRows**). Com base nas oito primeiras linhas de dados, o driver do Excel tenta adivinhar o tipo de dados de cada coluna. Por exemplo, se a fonte de dados do Excel tiver números e texto em uma coluna, se as oito primeiras linhas contiverem números, o driver poderá determinar com base nessas oito primeiras linhas que os dados na coluna são do tipo inteiro. Nesse caso, o SSIS ignora valores de texto e os importa como NULO no destino.
+
+Para resolver esse problema, você pode usar uma das seguintes soluções:
+
+* Altere o tipo de coluna do Excel para **Texto** no arquivo do Excel.
+* Adicione a propriedade estendida IMEX à cadeia de conexão para substituir o comportamento padrão do driver. Ao adicionar a propriedade estendida ";IMEX=1" ao final da cadeia de conexão, o Excel trata todos os dados como texto. Consulte o seguinte exemplo:
+    
+  ```ACE OLEDB connection string:
+  Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\ExcelFileName.xlsx;Extended Properties="EXCEL 12.0 XML;HDR=YES;IMEX=1";
+  ```
+
+   Para que essa solução funcione de forma confiável, talvez seja necessário modificar também as configurações do registro. O arquivo main.cmd é o seguinte:
   
+   ```cmd
+   reg add "HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Office\12.0\Access Connectivity Engine\Engines\Excel" /t REG_DWORD /v TypeGuessRows /d 0 /f
+   reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\12.0\Access Connectivity Engine\Engines\Excel" /t REG_DWORD /v TypeGuessRows /d 0 /f
+   reg add "HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Office\14.0\Access Connectivity Engine\Engines\Excel" /t REG_DWORD /v TypeGuessRows /d 0 /f
+   reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\14.0\Access Connectivity Engine\Engines\Excel" /t REG_DWORD /v TypeGuessRows /d 0 /f
+   reg add "HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Office\15.0\Access Connectivity Engine\Engines\Excel" /t REG_DWORD /v TypeGuessRows /d 0 /f
+   reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\15.0\Access Connectivity Engine\Engines\Excel" /t REG_DWORD /v TypeGuessRows /d 0 /f
+   reg add "HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Office\16.0\Access Connectivity Engine\Engines\Excel" /t REG_DWORD /v TypeGuessRows /d 0 /f
+   reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\16.0\Access Connectivity Engine\Engines\Excel" /t REG_DWORD /v TypeGuessRows /d 0 /f
+   ```
+
+* Salve o arquivo no formato CSV e altere o pacote SSIS para ser compatível com uma importação de CSV.
+
 ## <a name="related-tasks"></a>Related Tasks  
 [Carregar dados do ou para o Excel com o SSIS (SQL Server Integration Services)](../load-data-to-from-excel-with-ssis.md)  
 [Origem do Excel](../data-flow/excel-source.md)  

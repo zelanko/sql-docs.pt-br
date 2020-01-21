@@ -1,6 +1,7 @@
 ---
-title: Configurar a Replicação do SQL Server em Linux
+title: Configurar replicação (SSMS)
 description: Este artigo descreve como configurar a Replicação do SQL Server em Linux.
+ms.custom: seo-dt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,19 +10,20 @@ ms.topic: article
 ms.prod: sql
 ms.prod_service: database-engine
 ms.technology: linux
+titleSuffix: SQL Server on Linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d7e3f4d81b5b40db2be1e45fbf28d27411492f83
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 0979f05808c59336dec7a6e4a664b2e970029dd6
+ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67895932"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75952495"
 ---
 # <a name="configure-sql-server-replication-on-linux"></a>Configurar a Replicação do SQL Server em Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] apresenta a Replicação do SQL Server para instâncias do SQL Server em Linux.
+O [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] apresenta a Replicação do SQL Server para instâncias do SQL Server em Linux.
 
 Para obter informações detalhadas sobre a replicação, confira [Documentação da Replicação do SQL Server](../relational-databases/replication/sql-server-replication.md).
 

@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: 68bd1d04-d20f-4357-a34e-7c9c76457062
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8fd8b9b94d809a304e2f9347edba67d5ff7d9b85
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 6d3912e2b5cbf8051348191cf3efb6ed2d20d551
+ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71294457"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74687199"
 ---
 # <a name="azure-storage-connection-manager"></a>Gerenciador de conexões do Armazenamento do Azure
 
@@ -58,12 +58,15 @@ Em seguida, configure a autenticação de identidade gerenciada do gerenciador d
     > [!NOTE]
     >  Atualmente, essa opção não entra em vigor (indicando que a autenticação de identidade gerenciada não funciona) quando você executa o pacote SSIS no SSIS Designer ou no SQL Server [!INCLUDE[msCoName](../../includes/msconame-md.md)].
     
-- **Configurar no tempo de execução.** Ao executar o pacote via [SSMS (SQL Server Management Studio)](https://docs.microsoft.com/sql/integration-services/ssis-quickstart-run-ssms) ou a [atividade Executar Pacote SSIS do Azure Data Factory](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity), localize o gerenciador de conexões do Armazenamento do Azure. Atualize sua propriedade `ConnectUsingManagedIdentity` para `True`.
+- **Configurar no runtime.** Ao executar o pacote via [SSMS (SQL Server Management Studio)](https://docs.microsoft.com/sql/integration-services/ssis-quickstart-run-ssms) ou a [atividade Executar Pacote SSIS do Azure Data Factory](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity), localize o gerenciador de conexões do Armazenamento do Azure. Atualize sua propriedade `ConnectUsingManagedIdentity` para `True`.
     > [!NOTE]
     >  No Azure-SSIS Integration Runtime, todos os outros métodos de autenticação (por exemplo, chave de acesso e entidade de serviço) pré-configurados no gerenciador de conexões do Armazenamento do Azure serão substituídos quando a autenticação de identidade gerenciada for usada para operações de armazenamento.
 
 > [!NOTE]
->  Para configurar a autenticação de identidade gerenciada em pacotes existentes, a maneira preferencial é recompilar seu projeto SSIS com o [Designer SSIS mais recente](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt) pelo menos uma vez. Reimplante esse projeto SSIS para o Azure-SSIS Integration Runtime, para que a nova propriedade do gerenciador de conexões `ConnectUsingManagedIdentity` seja automaticamente adicionada a todos os gerenciadores de conexões Armazenamento do Azure no projeto SSIS. Como alternativa, pode-se usar diretamente uma substituição de propriedade com o caminho de propriedade **\Package.Connections [{nome do seu gerenciador de conexões}].Properties[ConnectUsingManagedIdentity]** no tempo de execução.
+>  Para configurar a autenticação de identidade gerenciada em pacotes existentes, a maneira preferencial é recompilar seu projeto SSIS com o [Designer SSIS mais recente](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt) pelo menos uma vez. Reimplante esse projeto SSIS para o Azure-SSIS Integration Runtime, para que a nova propriedade do gerenciador de conexões `ConnectUsingManagedIdentity` seja automaticamente adicionada a todos os gerenciadores de conexões Armazenamento do Azure no projeto SSIS. Como alternativa, pode-se usar diretamente uma substituição de propriedade com o caminho de propriedade **\Package.Connections [{nome do seu gerenciador de conexões}].Properties[ConnectUsingManagedIdentity]** no runtime.
+
+## <a name="secure-network-traffic-to-your-storage-account"></a>Proteger o tráfego de rede na sua conta de armazenamento
+O Azure Data Factory agora é um [serviço confiável da Microsoft](https://docs.microsoft.com/azure/storage/common/storage-network-security#trusted-microsoft-services) para armazenamento do Azure. Quando você usa a autenticação de identidade gerenciada, é possível proteger sua conta de armazenamento [limitando o acesso às redes selecionadas](https://docs.microsoft.com/azure/storage/common/storage-network-security#change-the-default-network-access-rule) enquanto ainda permite que o seu data factory acesse sua conta de armazenamento. Para saber mais, confira [Gerenciar exceções](https://docs.microsoft.com/azure/storage/common/storage-network-security#managing-exceptions).
 
 ## <a name="see-also"></a>Confira também  
  [Conexões do SSIS &#40;Integration Services&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md)

@@ -10,12 +10,12 @@ ms.author: alayu
 ms.reviewer: alayu; sstein
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 08/02/2019
-ms.openlocfilehash: a218c2afa89c8798c46b305e80e677693509e7ab
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 7398d918a027b28513b3f12a5101628cf1158e49
+ms.sourcegitcommit: 21e6a0c1c6152e625712a5904fce29effb08a2f9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68810811"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75884058"
 ---
 # <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>Início Rápido: Conectar e consultar o SQL Server usando [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -43,11 +43,11 @@ Se você não tiver acesso a um SQL Server, selecione a plataforma dentre os lin
 
 3. Este artigo usa o *Logon do SQL*, mas há suporte para a *Autenticação do Windows*. Preencha os campos da seguinte maneira:
 
-- **Nome do servidor:** insira o nome do servidor aqui. Por exemplo, localhost.
+- **Nome do Servidor:** insira o nome do servidor aqui. Por exemplo, localhost.
 - **Tipo de Autenticação:** Logon do SQL
 - **Nome de Usuário:** O nome de usuário para o SQL Server
 - **Senha:** Senha do SQL Server
-- **Nome do Banco de Dados:** deixe este campo em branco
+- **Nome do Banco de Dados:** \<Padrão\>
 - **Grupo de Servidores:** \<Padrão\>
 
    ![Nova Tela de Conexão](media/quickstart-sql-server/new-connection-screen.png)

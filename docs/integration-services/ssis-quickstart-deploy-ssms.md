@@ -8,12 +8,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d22df5141535e5ebfdb8120161a1776db616aef1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 04f7231dc4781b3c7194a7a34002b67087c9eaf2
+ms.sourcegitcommit: ef830f565ee07dc7d4388925cc3c86c5d2cfb4c7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71281672"
+ms.lasthandoff: 12/09/2019
+ms.locfileid: "74947099"
 ---
 # <a name="deploy-an-ssis-project-with-sql-server-management-studio-ssms"></a>Implantar um projeto do SSIS com o SSMS (SQL Server Management Studio)
 
@@ -30,7 +30,7 @@ Antes de começar, verifique se você tem a última versão do SQL Server Manage
 
 A validação descrita neste artigo para implantação no Banco de Dados SQL do Azure requer SQL Server Data Tools (SSDT) versão 17.4 ou posterior. Para obter a versão mais recente do SSDT, consulte [Baixar o SSDT (SQL Server Data Tools)](../ssdt/download-sql-server-data-tools-ssdt.md).
 
-Um servidor de Banco de Dados SQL do Azure escuta na porta 1433. Se estiver tentando se conectar a um servidor de Banco de Dados SQL do Azure em um firewall corporativo, essa porta deverá estar aberta no firewall corporativo para que você se conecte com êxito.
+Um servidor do Banco de Dados SQL do Azure escuta na porta 1433. Se estiver tentando se conectar a um servidor de Banco de Dados SQL do Azure em um firewall corporativo, essa porta deverá estar aberta no firewall corporativo para que você se conecte com êxito.
 
 ## <a name="supported-platforms"></a>Plataformas compatíveis
 
@@ -46,12 +46,12 @@ Você não pode usar as informações neste guia de início rápido para implant
 
 Para implantar o projeto no Banco de Dados SQL do Azure, obtenha as informações de conexão necessárias para se conectar ao SSISDB (banco de dados de catálogo do SSIS). Você precisa das informações de logon e de nome do servidor totalmente qualificado nos procedimentos a seguir.
 
-1. Faça logon no [portal do Azure](https://portal.azure.com/).
+1. Faça logon no [Portal do Azure](https://portal.azure.com/).
 2. Selecione **Bancos de Dados SQL** no menu à esquerda e selecione o banco de dados do SSISDB na página **Bancos de dados SQL**. 
 3. Na página **Visão geral** do banco de dados, examine o nome totalmente qualificado do servidor. Para ver a opção **Clique para copiar**, passe o mouse sobre o nome do servidor. 
 4. Se você esquecer suas informações de logon do servidor de Banco de Dados SQL do Azure, navegue até a página do servidor de Banco de Dados SQL para exibir o nome do administrador de servidor. Você pode redefinir a senha, se necessário.
 
-## <a name="wizard_auth"></a> Métodos de autenticação no Assistente de Implantação
+## <a name="authentication-methods-for-deployment"></a>Métodos de autenticação para implantação
 
 Se você estiver implantando em um SQL Server com o Assistente de Implantação, precisará usar a autenticação do Windows; não poderá usar a autenticação do SQL Server.
 
@@ -63,15 +63,15 @@ Use o SQL Server Management Studio para estabelecer uma conexão com o Catálogo
 
 1. Abra o SQL Server Management Studio.
 
-2. Na caixa de diálogo **Conectar-se ao Servidor**, insira as seguintes informações:
+2. Na caixa de diálogo **Conectar ao Servidor**, insira as informações a seguir:
 
    | Configuração       | Valor sugerido | Obter mais informações | 
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Tipo de servidor** | Mecanismo de banco de dados | Esse valor é necessário. |
    | **Nome do servidor** | O nome do servidor totalmente qualificado | Se estiver se conectando a um servidor de Banco de Dados SQL do Azure, o nome estará neste formato: `<server_name>.database.windows.net`. |
-   | **Autenticação** | Autenticação do SQL Server | Com a autenticação do SQL Server, você pode se conectar ao SQL Server ou ao Banco de Dados SQL do Azure. Consulte [Métodos de autenticação no Assistente de implantação](#wizard_auth) neste artigo. |
+   | **Autenticação** | Autenticação do SQL Server | Com a autenticação do SQL Server, você pode se conectar ao SQL Server ou ao Banco de Dados SQL do Azure. Confira os [métodos de autenticação na implantação](#authentication-methods-for-deployment) neste artigo. |
    | **Logon** | A conta do administrador do servidor | Essa é a conta que você especificou quando criou o servidor. |
-   | **Senha** | A senha de sua conta do administrador do servidor | Essa é a senha que você especificou quando criou o servidor. |
+   | **Senha** | A senha para sua conta do administrador do servidor | Essa é a senha que você especificou quando criou o servidor. |
 
 3. Clique em **Conectar**. A janela Pesquisador de Objetos será aberta no SSMS. 
 
@@ -94,7 +94,7 @@ Use o SQL Server Management Studio para estabelecer uma conexão com o Catálogo
   
 3.  Na página **Selecionar Destino**, selecione o destino para o projeto.
     -   Insira o nome do servidor totalmente qualificado. Se o servidor de destino for um servidor de Banco de Dados SQL do Azure, o nome estará neste formato `<server_name>.database.windows.net`.
-    -   Forneça informações de autenticação e selecione **Conectar**. Consulte [Métodos de autenticação no Assistente de implantação](#wizard_auth) neste artigo.
+    -   Forneça informações de autenticação e selecione **Conectar**. Confira os [métodos de autenticação na implantação](#authentication-methods-for-deployment) neste artigo.
     -   Em seguida, selecione **Procurar** para selecionar a pasta de destino no SSISDB.
     -   Selecione **Avançar** para abrir a página **Examinar**. (O botão **Avançar** é habilitado somente depois de selecionar **Conectar**.)
   
@@ -116,7 +116,7 @@ Use o SQL Server Management Studio para estabelecer uma conexão com o Catálogo
     - [Implantar um pacote do SSIS por meio do prompt de comando](./ssis-quickstart-deploy-cmdline.md)
     - [Implantar um pacote do SSIS com o PowerShell](ssis-quickstart-deploy-powershell.md)
     - [Implantar um pacote do SSIS com o C#](./ssis-quickstart-deploy-dotnet.md) 
-- Execute um pacote implantado. Para executar um pacote, você pode escolher uma entre várias ferramentas e linguagens. Para saber mais, veja os tópicos a seguir:
+- Execute um pacote implantado. Para executar um pacote, você pode escolher uma entre várias ferramentas e linguagens. Para obter mais informações, confira os seguintes artigos:
     - [Executar um pacote do SSIS com o SSMS](./ssis-quickstart-run-ssms.md)
     - [Executar um pacote do SSIS com o Transact-SQL (SSMS)](./ssis-quickstart-run-tsql-ssms.md)
     - [Executar um pacote do SSIS com o Transact-SQL (VS Code)](ssis-quickstart-run-tsql-vscode.md)

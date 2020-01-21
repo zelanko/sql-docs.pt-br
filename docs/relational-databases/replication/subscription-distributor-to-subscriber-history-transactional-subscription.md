@@ -1,6 +1,7 @@
 ---
-title: Assinatura, Histórico do Distribuidor para o Assinante (assinatura transacional) | Microsoft Docs
-ms.custom: ''
+title: Histórico do Distribuidor para o Assinante
+description: Descreve as opções encontradas na guia "Histórico do Distribuidor para o Assinante" no SSMS (SQL Server Management Studio).
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -13,12 +14,12 @@ ms.assetid: 1aad5b82-592e-4907-92f7-b90794175be5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 88199fd5a84fbfbc04f4dacf32d5694bb2f9323b
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 56ecf351e60237e099b4c498ba56ae1a956d142a
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769449"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321678"
 ---
 # <a name="subscription-distributor-to-subscriber-history-transactional-subscription"></a>Assinatura , Histórico do Distribuidor para o Assinante (assinatura transacional)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

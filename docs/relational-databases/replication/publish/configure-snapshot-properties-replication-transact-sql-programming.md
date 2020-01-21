@@ -1,6 +1,7 @@
 ---
-title: Configurar propriedades de instantâneo (Programação Transact-SQL de replicação) | Microsoft Docs
-ms.custom: ''
+title: Configurar propriedades de instantâneo (SP de Replicação)
+description: Use procedimentos armazenados de replicação para configurar as propriedades de instantâneo para publicações transacionais ou de instantâneo.
+ms.custom: seo-lt-2019
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,12 +16,12 @@ ms.assetid: 978d150f-8971-458a-ab2b-3beba5937b46
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: ec6f229ded9e9a77b6164ba9c91bee9cf8070fd7
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 0152abb24a1bb94f02ebc3f5a4bc6a7c1092acfa
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710920"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321263"
 ---
 # <a name="configure-snapshot-properties-replication-transact-sql-programming"></a>Configurar propriedades de instantâneo (Programação Transact-SQL de replicação)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -65,7 +66,7 @@ ms.locfileid: "71710920"
     > [!IMPORTANT]  
     >  Quando possível, solicite que os usuários insiram as credenciais de segurança em tempo de execução. Se for necessário armazenar credenciais em um arquivo de script, você deverá proteger o arquivo para impedir acesso não autorizado.  
   
-3.  Execute o [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md) no prompt de comando ou inicie o trabalho do Agente de Instantâneo para gerar um instantâneo novo. Para obter mais informações, consulte [Create and Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
+3.  Execute o [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md) no prompt de comando ou inicie o trabalho do Agente de Instantâneo para gerar um instantâneo novo. Para obter mais informações, consulte [Criar e aplicar o instantâneo inicial](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
 ### <a name="to-modify-snapshot-properties-of-an-existing-merge-publication"></a>Para modificar as propriedades de instantâneo de uma publicação de mesclagem existente  
   
@@ -77,7 +78,7 @@ ms.locfileid: "71710920"
     -   **post_snapshot_script** – também para `@value`, especifique o nome de arquivo e caminho completo de um arquivo **.sql** que será executado no Assinante durante a inicialização depois que o instantâneo inicial for aplicado.    
     -   **@snapshot_in_defaultfolder** - especifique também um valor de **verdadeiro** ou **falso** para indicar se o instantâneo está disponível apenas em um local não padrão.  
   
-2.  Execute o [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md) no prompt de comando ou inicie o trabalho do Agente de Instantâneo para gerar um instantâneo novo. Para obter mais informações, consulte [Create and Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
+2.  Execute o [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md) no prompt de comando ou inicie o trabalho do Agente de Instantâneo para gerar um instantâneo novo. Para obter mais informações, consulte [Criar e aplicar o instantâneo inicial](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
 ## <a name="example"></a>Exemplo  
  Esse exemplo cria uma publicação que usa uma pasta de instantâneo alternativa e um instantâneo compactado.  

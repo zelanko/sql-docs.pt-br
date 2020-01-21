@@ -1,6 +1,7 @@
 ---
-title: Exibir e modificar propriedades de Publicador e Distribuidor | Microsoft Docs
-ms.custom: ''
+title: Exibir e modificar propriedades de Publicador e Distribuidor
+description: Saiba como modificar as propriedades do Distribuidor e do Publicador usando SSMS (SQL Server Management Studio), T-SQL (Transact-SQL) ou RMO (Replication Management Objects).
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -16,12 +17,12 @@ ms.assetid: 5dae1d59-c377-4c6e-adc9-b68c5b328f79
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: a2d9e5b04164b3e8aab8c8d0a2fa50d154b10345
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 5fcc1f21654fedc935a604fac37c7a3ca591b3d5
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769258"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321546"
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>Exibir e modificar propriedades de Publicador e Distribuidor
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "68769258"
   
 ###  <a name="Recommendations"></a> Recomendações  
   
--   Nas versões de Publicadores anteriores ao [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], um usuário na função de servidor fixa **sysadmin** pode registrar Assinantes na página **Assinantes** . A partir do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], não é mais necessário registrar Assinantes explicitamente para replicação.  
+-   Nas versões de Publicadores anteriores ao [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], um usuário na função de servidor fixa **sysadmin** pode registrar Assinantes na página **Assinantes**. A partir do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], não é mais necessário registrar Assinantes explicitamente para replicação.  
   
 ###  <a name="Security"></a> Segurança  
  Quando possível, solicite que os usuários insiram as credenciais de segurança em tempo de execução.  
@@ -66,7 +67,7 @@ ms.locfileid: "68769258"
   
     -   Para exibir e modificar as propriedades do Publicador associado ao Distribuidor, clique no botão de propriedades ( **…** ) para o Publicador na página **Publicadores** da caixa de diálogo.  
   
-    -   Para acessar os perfis para os agentes de replicação, clique no botão **Padrões de Perfil** na página **Geral** da caixa de diálogo. Para obter mais informações, consulte [Replication Agent Profiles](../../relational-databases/replication/agents/replication-agent-profiles.md).  
+    -   Para acessar os perfis para os agentes de replicação, clique no botão **Padrões de Perfil** na página **Geral** da caixa de diálogo. Para saber mais, confira [Replication Agent Profiles](../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
     -   Para alterar a senha da conta usada quando os procedimentos administrativos armazenados são executados no Publicador e para atualizar as informações no Distribuidor, digite uma senha nova nas caixas **Senha** e **Confirmar senha** na página **Publicadores** da caixa de diálogo. Para obter mais informações, consulte [Proteger o Distribuidor](../../relational-databases/replication/security/secure-the-distributor.md).  
   
@@ -130,7 +131,7 @@ ms.locfileid: "68769258"
   
 1.  Crie uma conexão com o Distribuidor usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.ReplicationServer> . Passe o objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> da etapa 1.  
+2.  Criar uma instância da classe <xref:Microsoft.SqlServer.Replication.ReplicationServer>. Passe o objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> da etapa 1.  
   
 3.  (Opcional) Verificar a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationServer.IsDistributor%2A> para verificar se o servidor conectado no momento é um Distribuidor.  
   
@@ -144,7 +145,7 @@ ms.locfileid: "68769258"
   
 1.  Crie uma conexão com o Distribuidor usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.DistributionDatabase> . Especifique o nome da propriedade e passe o objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> da etapa 1.  
+2.  Criar uma instância da classe <xref:Microsoft.SqlServer.Replication.DistributionDatabase>. Especifique o nome da propriedade e passe o objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> da etapa 1.  
   
 3.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obter as propriedades do servidor. Se este método retornar **false**, o banco de dados com o nome especificado não existirá no servidor.  
   
@@ -156,7 +157,7 @@ ms.locfileid: "68769258"
   
 1.  Crie uma conexão com o Publicador usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.DistributionPublisher> . Especifique a propriedade <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A> e passe o objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> da etapa 1.  
+2.  Criar uma instância da classe <xref:Microsoft.SqlServer.Replication.DistributionPublisher>. Especifique a propriedade <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A> e passe o objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> da etapa 1.  
   
 3.  (Opcional) Para alterar propriedades, defina um novo valor para uma das propriedades <xref:Microsoft.SqlServer.Replication.DistributionPublisher> que podem ser definidas.  
   
@@ -166,7 +167,7 @@ ms.locfileid: "68769258"
   
 1.  Crie uma conexão com o Distribuidor usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.ReplicationServer> .  
+2.  Criar uma instância da classe <xref:Microsoft.SqlServer.Replication.ReplicationServer>.  
   
 3.  Defina a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> para a conexão criada na etapa 1.  
   
@@ -181,7 +182,7 @@ ms.locfileid: "68769258"
   
     1.  Crie uma conexão com o Publicador usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-    2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.ReplicationServer> .  
+    2.  Criar uma instância da classe <xref:Microsoft.SqlServer.Replication.ReplicationServer>.  
   
     3.  Defina a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> para a conexão criada na etapa 6a.  
   

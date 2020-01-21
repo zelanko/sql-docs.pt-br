@@ -1,6 +1,7 @@
 ---
-title: 'Solução de problemas: localizar erros com replicação transacional do SQL Server | Microsoft Docs'
-ms.custom: ''
+title: Localizar erros com replicação transacional
+description: Descreve como localizar e identificar erros com a Replicação Transacional, bem como a metodologia de solução de problemas para resolver problemas com a replicação.
+ms.custom: seo-lt-2019
 ms.date: 04/27/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -11,12 +12,12 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7c9924d2062b3c4fa41c8731df17b49fe9a86b07
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: c8b363be7cd8f160cb7317e6a90d109cc1ad3ccb
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907285"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321933"
 ---
 # <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>Solução de problemas: localizar erros com replicação transacional do SQL Server 
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -43,7 +44,7 @@ Erros podem ocorrer em qualquer etapa desse processo. Localizar os erros pode se
 2. Qual agente está sofrendo um erro?
 1. Quando foi a última vez em que a replicação teve êxito? Alguma coisa foi alterada desde então?  
 
-### <a name="steps-to-take"></a>Etapas a serem executadas
+### <a name="steps-to-take"></a>Etapas a realizar
 1. Use o Replication Monitor para identificar o ponto em que a replicação está encontrando o erro (qual agente?):
    - Se os erros estão ocorrendo na seção do **Publicador para o Distribuidor**, o problema é com o Agente de Leitor de Log. 
    - Se os erros estão ocorrendo na seção do **Distribuidor para o Assinante**, o problema é com o Agente de Distribuição.  
@@ -56,17 +57,17 @@ O Agente de Instantâneo gera o instantâneo e grava-o na pasta de instantâneos
 
 1. Exiba o status do Agente de Instantâneo:
 
-    A. No Pesquisador de Objetos, expanda o nó **Publicação Local** em **Replicação**.
+    a. No Pesquisador de Objetos, expanda o nó **Publicação Local** em **Replicação**.
 
-    B. Clique com o botão direito do mouse na publicação **AdvWorksProductTrans** > **Exibir o Status do Agente de Instantâneo**. 
+    b. Clique com o botão direito do mouse na publicação **AdvWorksProductTrans** > **Exibir o Status do Agente de Instantâneo**. 
 
     ![Comando "Exibir o status do Agente de Instantâneo" no menu de atalho](media/troubleshooting-tran-repl-errors/view-snapshot-agent-status.png)
 
 1. Se um erro for relatado no status do Agente de Instantâneo, mais detalhes poderão ser encontrados no histórico de trabalhos do Agente de Instantâneo:
 
-    A. Expanda **SQL Server Agent** no Pesquisador de Objetos e abra o Monitor de Atividade do Trabalho. 
+    a. Expanda **SQL Server Agent** no Pesquisador de Objetos e abra o Monitor de Atividade do Trabalho. 
 
-    B. Classifique por **Categoria** e identifique o Agente de Instantâneo pela categoria **REPL-Snapshot**.
+    b. Classifique por **Categoria** e identifique o Agente de Instantâneo pela categoria **REPL-Snapshot**.
 
     c. Clique com o botão direito do mouse no Agente de Instantâneo e selecione **Exibir Histórico**. 
 
@@ -114,9 +115,9 @@ O Agente de Leitor de Log se conecta ao banco de dados publicador e verifica o l
 
 6. O erro normalmente ocorre quando o proprietário do banco de dados do publicador não está definido corretamente. Isso pode ocorrer quando um banco de dados é restaurado. Para verificar isso:
 
-    A. Expanda **Bancos de Dados** no Pesquisador de Objetos.
+    a. Expanda **Bancos de Dados** no Pesquisador de Objetos.
 
-    B. Clique com o botão direito do mouse em **AdventureWorks2012** > **Propriedades**. 
+    b. Clique com o botão direito do mouse em **AdventureWorks2012** > **Propriedades**. 
 
     c. Verifique se existe um proprietário na página **Arquivos**. Se essa caixa estiver vazia, esta será a causa provável do problema. 
 
@@ -133,9 +134,9 @@ O Agente de Leitor de Log se conecta ao banco de dados publicador e verifica o l
 
 8. Talvez você precise reiniciar o Agente de Leitor de Log:
 
-    A. Expanda o nó do **SQL Server Agent** no Pesquisador de Objetos e abra o Monitor de Atividade do Trabalho.
+    a. Expanda o nó do **SQL Server Agent** no Pesquisador de Objetos e abra o Monitor de Atividade do Trabalho.
 
-    B. Classifique por **Categoria** e identifique o Agente de Leitor de Log pela categoria **REPL-LogReader**. 
+    b. Classifique por **Categoria** e identifique o Agente de Leitor de Log pela categoria **REPL-LogReader**. 
 
     c. Clique com o botão direito do mouse no trabalho do **Agente de Leitor de Log** e selecione **Iniciar Trabalho na Etapa**. 
 
@@ -163,9 +164,9 @@ O Agente de Distribuição localiza os dados no banco de dados de distribuição
 
 3. O erro indica que o Agente de Distribuição está tentando novamente. Para obter mais informações, verifique o histórico de trabalhos do Agente de Distribuição: 
 
-    A. Expanda **SQL Server Agent** em Pesquisador de Objetos > **Monitor de Atividade do Trabalho**. 
+    a. Expanda **SQL Server Agent** em Pesquisador de Objetos > **Monitor de Atividade do Trabalho**. 
     
-    B. Classifique os trabalhos por **Categoria**. 
+    b. Classifique os trabalhos por **Categoria**. 
 
     c. Identifique o Agente de Distribuição pela categoria **REPL-Distribution**. Clique com o botão direito do mouse no agente e selecione **Exibir Histórico**.
 
@@ -180,9 +181,9 @@ O Agente de Distribuição localiza os dados no banco de dados de distribuição
 
 6. Esse erro é uma indicação de que a senha usada pelo Agente de Distribuição está incorreta. Para resolvê-lo:
 
-    A. Expanda o nó **Replicação** no Pesquisador de Objetos.
+    a. Expanda o nó **Replicação** no Pesquisador de Objetos.
     
-    B. Clique com o botão direito do mouse na assinatura > **Propriedades**.
+    b. Clique com o botão direito do mouse na assinatura > **Propriedades**.
     
     c. Selecione as reticências (...) ao lado de **Conta de Processo do Agente** e modifique a senha.
 

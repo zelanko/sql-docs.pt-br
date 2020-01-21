@@ -1,7 +1,7 @@
 ---
-title: Instalar o SQL Server 2016 por meio do Assistente de Instalação (Instalação) | Microsoft Docs
-ms.custom: ''
-ms.date: 07/26/2019
+title: Instalar usando a interface gráfica do usuário
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -14,12 +14,12 @@ ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 32f7c238a08a7da31d455421ca9fc00d0f8d6bdb
-ms.sourcegitcommit: eae9efe2a2d3758685e85039ffb8fa698aa47f9b
+ms.openlocfilehash: c183b1830bc5625171cfbb3372b0dbbb6c99e236
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73962371"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75259017"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>Instalar o SQL Server por meio do Assistente de Instalação (Instalação)
 
@@ -27,7 +27,7 @@ ms.locfileid: "73962371"
 
 Este artigo explica como instalar o SQL Server com o Assistente de Instalação. Aplica-se ao [!INCLUDE[SQLServer2016](../../includes/sssql15-md.md)] e ao [!INCLUDE[SQLServer2017](../../includes/sssqlv14-md.md)].
 
-Este artigo apresenta um procedimento passo a passo sobre como instalar uma nova instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o Assistente de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O Assistente de Instalação fornece uma única árvore de recursos para instalação de todos os componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], para que você não precise instalá-los individualmente. Para instalar os componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] individualmente, confira o tópico [Instalar o SQL Server](../../database-engine/install-windows/install-sql-server.md#how-to-install-individual-components).  
+Este artigo apresenta um procedimento passo a passo sobre como instalar uma nova instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o Assistente de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O Assistente de Instalação fornece uma única árvore de recursos para instalação de todos os componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], para que você não precise instalá-los individualmente. Para instalar os componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] individualmente, confira o tópico [Instalar o SQL Server](../../database-engine/install-windows/install-sql-server.md#individual-component-installation).  
 
 Para ver outras maneiras de instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], confira:  
 
@@ -106,7 +106,7 @@ Isso não se aplica a [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]
   
 1. Na página **Configuração da Instância**, especifique se deseja instalar uma instância padrão ou uma instância nomeada. Para saber mais, veja o tópico [Configuração da instância](../../sql-server/install/instance-configuration.md#instance-configuration-page).  
   
-     * **ID da Instância**: por padrão, o nome da instância é usado como a ID da Instância. Essa ID é usada para identificar os diretórios de instalação e as chaves do Registro de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O mesmo comportamento ocorre com instâncias padrão e instâncias nomeadas. No caso de uma instância padrão, o nome da instância e a ID da Instância é MSSQLSERVER. Para usar uma ID da Instância não padrão, especifique um valor diferente na caixa de texto **ID da Instância**.  
+     * **ID da Instância**: Por padrão, o nome da instância é usado como a ID da Instância. Essa ID é usada para identificar os diretórios de instalação e as chaves do Registro de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O mesmo comportamento ocorre com instâncias padrão e instâncias nomeadas. No caso de uma instância padrão, o nome da instância e a ID da Instância é MSSQLSERVER. Para usar uma ID da Instância não padrão, especifique um valor diferente na caixa de texto **ID da Instância**.  
   
        > [!NOTE]  
        > Instâncias autônomas típicas do [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)], sejam instâncias padrão ou nomeadas, não usam valores não padrão para a ID da Instância.  
@@ -272,7 +272,7 @@ Isso não se aplica a [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]
   
 1. Na página **Configuração da Instância**, especifique se deseja instalar uma instância padrão ou uma instância nomeada. Para saber mais, veja o tópico [Configuração da instância](../../sql-server/install/instance-configuration.md#instance-configuration-page).  
   
-     * **ID da Instância**: por padrão, o nome da instância é usado como a ID da Instância. Essa ID é usada para identificar os diretórios de instalação e as chaves do Registro de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O mesmo comportamento ocorre com instâncias padrão e instâncias nomeadas. No caso de uma instância padrão, o nome da instância e a ID da Instância é MSSQLSERVER. Para usar uma ID da Instância não padrão, especifique um valor diferente na caixa de texto **ID da Instância**.  
+     * **ID da Instância**: Por padrão, o nome da instância é usado como a ID da Instância. Essa ID é usada para identificar os diretórios de instalação e as chaves do Registro de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O mesmo comportamento ocorre com instâncias padrão e instâncias nomeadas. No caso de uma instância padrão, o nome da instância e a ID da Instância é MSSQLSERVER. Para usar uma ID da Instância não padrão, especifique um valor diferente na caixa de texto **ID da Instância**.  
   
        > [!NOTE]  
        > Instâncias autônomas típicas do [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)], sejam instâncias padrão ou nomeadas, não usam valores não padrão para a ID da Instância.  

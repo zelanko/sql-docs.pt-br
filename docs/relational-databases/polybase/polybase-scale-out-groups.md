@@ -13,12 +13,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 06f3568ac1bf3305628583934549d4334c4eedc4
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 8d2e2cc75046d9da6ce3e4c8188136f6b6f03945
+ms.sourcegitcommit: 650a25eb54eeb9ddfe3c8f12b5f8804cc07bf5e5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710469"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75623235"
 ---
 # <a name="polybase-scale-out-groups"></a>Grupos de escala horizontal do PolyBase
 
@@ -28,7 +28,7 @@ Uma instância do SQL Server autônoma com PolyBase pode se tornar um gargalo de
   
 Veja [Introdução ao PolyBase](../../relational-databases/polybase/get-started-with-polybase.md) e [Guia do PolyBase](../../relational-databases/polybase/polybase-guide.md).
   
-![Grupos de escala horizontal do PolyBase](../../relational-databases/polybase/media/polybase-scale-out-groups.png "Grupos de escala horizontal do PolyBase")  
+![grupos de escala horizontal do PolyBase](../../relational-databases/polybase/media/polybase-scale-out-groups.png "|::ref1::|")  
   
 ## <a name="head-node"></a>Nó de cabeçalho  
 
@@ -47,7 +47,7 @@ Por exemplo, digamos que você tenha uma tabela externa do SQL Server com 12 par
 > [!NOTE]
 >  isso é diferente das leituras de expansão no Hadoop. 
 
-![Grupos de escala horizontal do PolyBase](../../relational-databases/polybase/media/polybase-scale-out-groups2.png "Grupos de escala horizontal do PolyBase")
+![grupos de escala horizontal do PolyBase](../../relational-databases/polybase/media/polybase-scale-out-groups2.png "|::ref2::|")
   
 ## <a name="distributed-query-processing"></a>Processamento de consulta distribuída  
 
@@ -66,3 +66,10 @@ Após a instalação do SQL Server, a instância poderá ser designada como um n
 Para configurar um grupo expansão do PolyBase, consulte o guia a seguir:
 
 [Aprimorar grupos expansão do PolyBase no Windows](configure-scale-out-groups-windows.md)
+
+## <a name="see-also"></a>Consulte Também
+
+ [sys-dm-exec-compute-nodes](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)   
+ [sys-dm-exec-compute-node-status](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-status-transact-sql.md)   
+ [sys.dm_exec_compute_node_errors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-errors-transact-sql.md)   
+

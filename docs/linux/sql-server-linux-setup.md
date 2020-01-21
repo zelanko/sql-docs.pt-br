@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
-ms.openlocfilehash: a6cd31b1f67d37f1316db9db5d4356bbb5e31d3b
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 57041b528186bde743abfeec293e696b0155d0e1
+ms.sourcegitcommit: 21e6a0c1c6152e625712a5904fce29effb08a2f9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73593662"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75884015"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Diretrizes de instalação para SQL Server em Linux
 
@@ -59,7 +59,7 @@ O SQL Server é compatível com o Red Hat Enterprise Linux (RHEL), o SUSE Linux 
 
 | Plataforma | Versões compatíveis | Obter
 |-----|-----|-----
-| **Red Hat Enterprise Linux** | 7.3, 7.4, 7.5, 7.6 | [Obter RHEL 7.6](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
+| **Red Hat Enterprise Linux** | 7.3, 7.4, 7.5, 7.6, 8.0 | [Obter o RHEL 8.0](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
 | **SUSE Linux Enterprise Server** | v12 SP2, SP3, SP4 | [Obter o SLES v12](https://www.suse.com/products/server)
 | **Ubuntu** | 16.04 | [Obter o Ubuntu 16.04](http://releases.ubuntu.com/xenial/)
 | **Mecanismo do Docker** | 1.8+ | [Obter o Docker](https://www.docker.com/get-started)
@@ -168,7 +168,7 @@ A remoção do pacote não exclui os arquivos de banco de dados gerados. Se voc�
 sudo rm -rf /var/opt/mssql/
 ```
 
-## Instalação autônoma <a id="unattended"></a>
+## <a id="unattended"></a> Instalação autônoma
 
 Você pode executar uma instalação autônoma da seguinte maneira:
 

@@ -1,6 +1,7 @@
 ---
-title: Medir a latência e validar as conexões para a replicação transacional | Microsoft Docs
-ms.custom: ''
+title: Medir a latência e validar as conexões (Transacional)
+description: Saiba como medir a latência e validar as conexões para uma publicação de transação no SQL Server usando o Replication Monitor no SSMS (SQL Server Management Studio), T-SQL (Transact-SQL) ou RMO (Replication Management Objects).
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +18,12 @@ ms.assetid: 4addd426-7523-4067-8d7d-ca6bae4c9e34
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: eef53dd48e960ac15e68e28e0be7265a8f25ba74
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 355840dee0c7ff327968457a54f55730665d5afe
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71711019"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321843"
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>Medir a latência e validar as conexões para a replicação transacional
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -140,7 +141,7 @@ ms.locfileid: "71711019"
   
 1.  Crie uma conexão com o Publicador usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.TransPublication> .  
+2.  Criar uma instância da classe <xref:Microsoft.SqlServer.Replication.TransPublication>.  
   
 3.  Defina as propriedades <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> e <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> para a publicação, e a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> para a conexão criada na etapa 1.  
   
@@ -152,7 +153,7 @@ ms.locfileid: "71711019"
   
 1.  Crie uma conexão com o Distribuidor usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.PublicationMonitor> .  
+2.  Criar uma instância da classe <xref:Microsoft.SqlServer.Replication.PublicationMonitor>.  
   
 3.  Defina as propriedades <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>e <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A> ; e, defina a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> para a conexão criada na etapa 1.  
   
@@ -166,7 +167,7 @@ ms.locfileid: "71711019"
   
 1.  Crie uma conexão com o Distribuidor usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.PublicationMonitor> .  
+2.  Criar uma instância da classe <xref:Microsoft.SqlServer.Replication.PublicationMonitor>.  
   
 3.  Defina as propriedades <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>e <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A> ; e, defina a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> para a conexão criada na etapa 1.  
   

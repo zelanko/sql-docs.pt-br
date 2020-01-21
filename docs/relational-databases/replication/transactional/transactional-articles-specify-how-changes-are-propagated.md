@@ -1,6 +1,7 @@
 ---
-title: Especificar como as alterações são propagadas para artigos transacionais | Microsoft Docs
-ms.custom: ''
+title: Especificar como as alterações são propagadas (Transacional)
+description: Saiba como especificar como a alteração é propagada para uma Publicação Transacional em SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ ms.assetid: a10c5001-22cc-4667-8f0b-3d0818dca2e9
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: c7f499c813f31717e5932cf0b78b4699b72b2a85
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 0dc3afaa0492bc80b79bf72b695aec880d6808c7
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769339"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321383"
 ---
 # <a name="transactional-articles---specify-how-changes-are-propagated"></a>Artigos transacionais – Especificar como as alterações são propagadas
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

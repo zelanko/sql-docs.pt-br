@@ -1,6 +1,7 @@
 ---
-title: Modificar opções de inicialização de instantâneo para Replicação do SQL | Microsoft Docs
-ms.custom: ''
+title: Modificar as opções de inicialização de instantâneo
+description: Modifique várias opções de inicialização de instantâneo de Replicação, como o formato de instantâneo e o local da pasta de instantâneo no SQL Server Management Studio.
+ms.custom: seo-lt-2019
 ms.date: 11/20/2018
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ ms.assetid: 759fab42-66c7-4541-a7a3-bb6fb868493c
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 3a3dfb5804c49ae3a5c2c78d985aa548f710dab2
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 81816333d8933e91d78c811a43293b5ca2452106
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907065"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321679"
 ---
 # <a name="modify-snapshot-initialization-options-for-sql-replication"></a>Modificar as opções de inicialização de instantâneo para Replicação do SQL 
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -36,7 +37,7 @@ Há várias opções disponíveis para especificar ao [inicializar uma assinatur
     > [!NOTE]  
     >  É recomendável a seleção do formato nativo, a menos que essa publicação deva dar suporte a assinaturas de um banco de dados do SQL Server Compact ou um banco de dados não SQL Server.  
   
-2.  Escolha **OK**.   
+2.  Selecione **OK**.   
 
 ## <a name="snapshot-folder-locations"></a>Locais de pasta de instantâneo
 
@@ -80,7 +81,7 @@ Para especificar um local de pasta de instantâneo padrão ou compactar arquivos
   
      Para compactar arquivos de instantâneo, selecione **Compactar arquivos de instantâneo neste local**. A compactação é usada normalmente para conexões de largura da banda baixa e locais de instantâneo alternativos em mídia removível, como um CD-ROM.  
   
-2.  Escolha **OK**.  
+2.  Selecione **OK**.  
   
 #### <a name="use-transact-sql"></a>Usar o Transact-SQL 
 
@@ -110,7 +111,7 @@ Ao [Configurar Propriedades de Instantâneo &#40;Programação Transact-SQL de R
         >  Se essa caixa de seleção estiver marcada, os arquivos armazenados na pasta padrão não serão compactados. Arquivos compactados só podem ser armazenados no local alternativo especificado na etapa anterior.  
   
 2.  Selecione **Compactar arquivos de instantâneo nesta pasta**.    
-3.  Escolha **OK**.   
+3.  Selecione **OK**.   
 
 ### <a name="use-transact-sql"></a>Usar o Transact-SQL
 

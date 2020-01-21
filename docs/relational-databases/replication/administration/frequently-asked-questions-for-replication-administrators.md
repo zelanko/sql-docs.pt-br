@@ -1,6 +1,7 @@
 ---
-title: Perguntas frequentes para os administradores de replicação | Microsoft Docs
-ms.custom: ''
+title: Perguntas frequentes para administradores de replicação
+description: Uma lista de perguntas frequentes relevantes aos administradores de replicação do SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7ff8009136f95247bc13c213d9b656abfab28ae0
-ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
+ms.openlocfilehash: 99be52de235c676137981021b9e926aba7320f43
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72041202"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322020"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>Perguntas frequentes para os administradores de replicação
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "72041202"
 ## <a name="configuring-replication"></a>Configurando a replicação.  
   
 ### <a name="does-activity-need-to-be-stopped-on-a-database-when-it-is-published"></a>A atividade precisa ser interrompida em um banco de dados quando é publicada?  
- Nenhum. A atividade pode continuar no banco de dados enquanto a publicação está sendo criada. Esteja ciente de que a produção de um instantâneo pode usar muitos recursos, portanto é melhor gerar instantâneos durante o período de pouca atividade no banco de dados (por padrão, um instantâneo é gerado quando o Assistente para Nova Publicação é concluído).  
+ Não. A atividade pode continuar no banco de dados enquanto a publicação está sendo criada. Esteja ciente de que a produção de um instantâneo pode usar muitos recursos, portanto é melhor gerar instantâneos durante o período de pouca atividade no banco de dados (por padrão, um instantâneo é gerado quando o Assistente para Nova Publicação é concluído).  
   
 ### <a name="are-tables-locked-during-snapshot-generation"></a>As tabelas são bloqueadas durante a geração de instantâneos?  
  O tempo dos bloqueios efetuados depende do tipo de replicação usado:  
@@ -96,7 +97,7 @@ ms.locfileid: "72041202"
  Essas informações estão disponíveis por meio do [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]e dos vários procedimentos de replicação armazenados. Para obter mais informações, consulte [Distributor and Publisher Information Script](../../../relational-databases/replication/administration/distributor-and-publisher-information-script.md).  
   
 ### <a name="does-replication-encrypt-data"></a>A replicação criptografa dados?  
- Nenhum. A replicação não criptografa dados armazenados no banco de dados nem transferidos pela rede. Para obter mais informações, confira a seção "Criptografia" do tópico [Exibir e modificar configurações de segurança de replicação](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
+ Não. A replicação não criptografa dados armazenados no banco de dados nem transferidos pela rede. Para obter mais informações, confira a seção "Criptografia" do tópico [Exibir e modificar configurações de segurança de replicação](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   
 ### <a name="how-do-i-replicate-data-over-the-internet"></a>Como posso replicar dados pela Internet?  
  Replique os dados pela Internet, por meio de:  
@@ -105,7 +106,7 @@ ms.locfileid: "72041202"
   
 -   Opção de sincronização da Web para replicação de mesclagem. Para obter mais informações, consulte [Web Synchronization for Merge Replication](../../../relational-databases/replication/web-synchronization-for-merge-replication.md).  
   
- Todos os tipos de replicação do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] podem replicar dados por uma VPN, no entanto, recomenda-se a sincronização da Web quando a replicação de mesclagem for utilizada.  
+ Todos os tipos de replicação de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] podem replicar dados por uma VPN, no entanto, recomenda-se a sincronização da Web quando a replicação de mesclagem for utilizada.  
   
 ### <a name="does-replication-resume-if-a-connection-is-dropped"></a>A replicação será retomada se uma conexão for cancelada  
  Sim. O processamento de replicação é retomado no ponto em que ele foi interrompido quando a conexão foi cancelada. Se estiver usando uma replicação de mesclagem em uma rede não confiável, tente usar os registros lógicos, isto garantirá que as alterações sejam processadas como uma unidade. Para obter mais informações, consulte [Agrupar alterações a linhas relacionadas com registros lógicos](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
@@ -116,10 +117,10 @@ ms.locfileid: "72041202"
 ## <a name="logins-and-object-ownership"></a>Propriedade de logons e de objetos  
   
 ### <a name="are-logins-and-passwords-replicated"></a>Os logons e as senhas são replicados?  
- Nenhum. Você pode criar um pacote SSIS para transferir os logons e as senhas do Publicador para um ou mais Assinantes.  
+ Não. Você pode criar um pacote SSIS para transferir os logons e as senhas do Publicador para um ou mais Assinantes.  
   
 ### <a name="what-are-schemas-and-how-are-they-replicated"></a>O que são os esquemas e como eles são replicados?  
- A começar pelo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], *esquema* tem dois significados:  
+ A começar pelo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], o *esquema* tem dois significados:  
   
 -   A definição de um objeto, como uma instrução `CREATE TABLE`. Por padrão, a replicação copia as definições de todos os objetos replicados para o Assinante.  
   

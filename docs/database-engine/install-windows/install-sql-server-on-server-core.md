@@ -1,5 +1,5 @@
 ---
-title: Instalar o SQL Server 2016 no Server Core | Microsoft Docs
+title: Instalar o SQL Server no Server Core | Microsoft Docs
 ms.custom: ''
 ms.date: 09/05/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.assetid: 1dd294cc-5b69-4d0c-9005-3e307b75678b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 6054c8a7f7fc4c9c6580d2d84f438d376b4bd61b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 19437198d7f65d640ea4501e97e149670a0a95fa
+ms.sourcegitcommit: a92fa97e7d3132ea201e4d86c76ac39cd564cd3c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991085"
+ms.lasthandoff: 12/21/2019
+ms.locfileid: "75325442"
 ---
 # <a name="install-sql-server-on-server-core"></a>Instalar o SQL Server no Server Core
 
@@ -31,15 +31,15 @@ A opção de instalação do Server Core oferece um ambiente mínimo para a exec
   
 |Requisito|Como instalar o|  
 |-----------------|--------------------|  
-|[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.1 |Para todas as edições do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] exceto [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], a Instalação exige o [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.1 Server Core Profile. A Instalação do SQL Server instalará isso automaticamente caso ainda não esteja instalado. A Instalação exige uma reinicialização. Instale o [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] antes de executar a instalação para evitar uma reinicialização.|  
+|[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.1 |Para todas as edições do [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] exceto [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], a Instalação exige o [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.1 Server Core Profile. A Instalação do SQL Server instalará isso automaticamente caso ainda não esteja instalado. A Instalação exige uma reinicialização. Instale o [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] antes de executar a instalação para evitar uma reinicialização.|  
 |Windows Installer 4.5|Fornecido com a instalação do Server Core.|  
 |Windows PowerShell|Fornecido com a instalação do Server Core.|  
-|Tempo de execução Java |Para usar o PolyBase, você precisa instalar o Tempo de Execução Java apropriado. Para obter mais informações, consulte [Instalação do PolyBase](../../relational-databases/polybase/polybase-installation.md).|
+|Runtime Java |Para usar o PolyBase, você precisa instalar o Runtime Java apropriado. Para obter mais informações, consulte [Instalação do PolyBase](../../relational-databases/polybase/polybase-installation.md).|
   
 ##  <a name="BK_SupportedFeatures"></a> Recursos com suporte  
- Use a tabela a seguir para descobrir quais recursos têm suporte no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] em uma instalação do Server Core.  
+ Use a tabela a seguir para descobrir quais recursos têm suporte no [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] em uma instalação do Server Core.  
   
-|Recurso|Tem suporte|Informações adicionais|  
+|Recurso|Suportado|Informações adicionais|  
 |-------------|---------------|----------------------------|  
 |[!INCLUDE[ssDE](../../includes/ssde-md.md)] Serviços|Sim||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replicação|Sim||  
@@ -58,16 +58,16 @@ A opção de instalação do Server Core oferece um ambiente mínimo para a exec
 |Distributed Replay Controller|Não||  
 |Distributed Replay Client|Apenas remoto|Não há suporte para a instalação desses recursos no Server Core. Esses componentes podem ser instalados em um servidor diferente que não seja o Server Core e conectados aos serviços do [!INCLUDE[ssDE](../../includes/ssde-md.md)] instalados no Server Core.|  
 |SDK de Conectividade de Cliente do SQL|Sim||  
-|Microsoft Sync Framework|Sim|O Microsoft Sync Framework não está incluído no pacote de instalação do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Baixe a versão apropriada do Sync Framework nesta página do [Centro de Download da Microsoft](https://go.microsoft.com/fwlink/?LinkId=221788) (https://go.microsoft.com/fwlink/?LinkId=221788) ) e instale-a em um computador que executa o Server Core.|  
+|Microsoft Sync Framework|Sim|O Microsoft Sync Framework não está incluído no pacote de instalação do [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] . Baixe a versão apropriada do Sync Framework nesta página do [Centro de Download da Microsoft](https://go.microsoft.com/fwlink/?LinkId=221788) (https://go.microsoft.com/fwlink/?LinkId=221788) ) e instale-a em um computador que executa o Server Core.|  
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]|Não||  
 |[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]|Não||  
   
 ## <a name="supported-scenarios"></a>Cenários com suporte  
- A tabela a seguir mostra a matriz de cenários com suporte para a instalação do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] em um Server Core.  
+ A tabela a seguir mostra a matriz de cenários com suporte para a instalação do [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] em um Server Core.  
   
 |||  
 |-|-|  
-|Edições do[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Todas as edições de 64 bits do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] |  
+|Edições do[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Todas as edições de 64 bits do [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] |  
 |Idioma do[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Todos os idiomas|  
 |Idioma do[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] na combinação de idioma/localidade do sistema operacional|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em inglês no Windows em japonês<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em inglês no Windows em alemão<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em inglês no Windows em chinês<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em inglês no Windows em árabe<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em inglês no Windows em tailandês<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em inglês no Windows em turco<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em inglês no Windows em português (Portugal)<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em inglês no Windows em inglês|  
 |Windows Edition|[!INCLUDE[winserver2016_datacenter_md](../../includes/winserver2016-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2016_standard_md](../../includes/winserver2016-standard-md.md)]<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Datacenter<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Standard<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Essentials<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Foundation<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Datacenter<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Standard<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Essentials<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Foundation|  
@@ -76,7 +76,7 @@ A opção de instalação do Server Core oferece um ambiente mínimo para a exec
  Em instalações do Server Core, atualizar de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] para [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tem suporte.  
   
 ## <a name="install"></a>Instalar  
- O[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] não tem suporte para a instalação por meio do assistente de instalação no sistema operacional Server Core. Quando você faz a instalação no Server Core, a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte ao modo silencioso completo usando o parâmetro /Q ou o modo Silencioso Simples usando o parâmetro /QS. Para obter mais informações, consulte [Instalar o SQL Server 2016 do prompt de comando](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
+ O[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] não tem suporte para a instalação por meio do assistente de instalação no sistema operacional Server Core. Quando você faz a instalação no Server Core, a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte ao modo silencioso completo usando o parâmetro /Q ou o modo Silencioso Simples usando o parâmetro /QS. Para obter mais informações, consulte [Instalar o SQL Server por meio do prompt de comando](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
   
  Independentemente do método de instalação, é necessário confirmar a aceitação dos termos da licença de software como indivíduo ou em nome de uma entidade, a menos que o uso do software seja governado por um contrato separado, como um contrato de licenciamento por volume da [!INCLUDE[msCoName](../../includes/msconame-md.md)] ou um contrato de terceiros com um ISV ou OEM.  
   
@@ -89,10 +89,10 @@ A opção de instalação do Server Core oferece um ambiente mínimo para a exec
   
 ### <a name="feature-parameters"></a>Parâmetros de recursos  
   
-|Parâmetro de recurso|Descrição|  
+|Parâmetro de recurso|DESCRIÇÃO|  
 |-----------------------|-----------------|  
 |SQLENGINE|Instala apenas o [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
-|Replicação|Instala o componente Replicação juntamente com o [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
+|REPLICAÇÃO|Instala o componente Replicação juntamente com o [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
 |FULLTEXT|Instala o componente FullText com o [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
 |AS|Instala todos os componentes do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 |IS|Instala todos os componentes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .|  
@@ -102,7 +102,7 @@ A opção de instalação do Server Core oferece um ambiente mínimo para a exec
 
  Veja os exemplos a seguir do uso de parâmetros de recurso:  
   
-|Parâmetro e valores|Descrição|  
+|Parâmetro e valores|DESCRIÇÃO|  
 |--------------------------|-----------------|  
 |/FEATURES=SQLEngine|Instala apenas o [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
 |/FEATURES=SQLEngine,FullText|Instala o [!INCLUDE[ssDE](../../includes/ssde-md.md)] e o texto completo.|  
@@ -112,7 +112,7 @@ A opção de instalação do Server Core oferece um ambiente mínimo para a exec
 
   
 ### <a name="installation-options"></a>Opções de instalação  
- A Instalação dá suporte às opções de instalação a seguir enquanto instala o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] em um sistema operacional do Server Core:  
+ A Instalação dá suporte às opções de instalação a seguir enquanto instala o [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] em um sistema operacional do Server Core:  
   
 1.  **Instalação da linha de comando**  
   
@@ -186,7 +186,7 @@ A opção de instalação do Server Core oferece um ambiente mínimo para a exec
   
     -   Instalando todos os recursos com suporte  
   
-        O exemplo a seguir mostra como instalar todos os recursos com suporte do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] no Server Core:  
+        O exemplo a seguir mostra como instalar todos os recursos com suporte do [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] no Server Core:  
   
         ```  
         ; SQL Server Configuration File  
@@ -259,7 +259,7 @@ A opção de instalação do Server Core oferece um ambiente mínimo para a exec
          Se o arquivo DefaultSetup.ini não existir, você poderá criá-lo e copiá-lo nas pastas \x86 e \x64 no nível raiz da mídia de origem do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="configure-remote-access-of-includessnoversionincludesssnoversion-mdmd-on-server-core"></a>Configurar o acesso remoto do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no Server Core  
- Execute as ações descritas abaixo para configurar o acesso remoto de uma instância do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] em execução no Server Core.  
+ Execute as ações descritas abaixo para configurar o acesso remoto de uma instância do [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] em execução no Server Core.  
   
 ### <a name="enable-remote-connections-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Habilitar conexões remotas na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
 
@@ -308,7 +308,7 @@ $Tcp
   
 ## <a name="uninstall"></a>Desinstalar
 
- Depois de fazer logon em um computador que executa o Server Core, você terá um ambiente de área de trabalho limitado com um prompt de comando de Administrador. Use esse prompt de comando para iniciar a desinstalação de um [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para desinstalar uma instância do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], inicie a desinstalação do prompt de comando no modo silencioso completo usando o parâmetro /Q ou no modo silencioso simples usando o parâmetro /QS. O parâmetro /QS mostra o progresso por meio da interface de usuário, mas não aceita nenhuma entrada. /Q é executado no modo silencioso sem nenhuma interface de usuário.  
+ Depois de fazer logon em um computador que executa o Server Core, você terá um ambiente de área de trabalho limitado com um prompt de comando de Administrador. Use esse prompt de comando para iniciar a desinstalação de um [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]. Para desinstalar uma instância do [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)], inicie a desinstalação do prompt de comando no modo silencioso completo usando o parâmetro /Q ou no modo silencioso simples usando o parâmetro /QS. O parâmetro /QS mostra o progresso por meio da interface de usuário, mas não aceita nenhuma entrada. /Q é executado no modo silencioso sem nenhuma interface de usuário.  
   
  Para desinstalar uma instância existente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   

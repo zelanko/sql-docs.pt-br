@@ -1,6 +1,7 @@
 ---
-title: Exibir informações e executar tarefas usando o Replication Monitor | Microsoft Docs
-ms.custom: ''
+title: Exibir informações e executar tarefas (Replication Monitor)
+description: Saiba como exibir informações e executar várias tarefas usando o Replication Monitor no SSMS (SQL Server Management Studio).
+ms.custom: seo-lt-2019
 ms.date: 11/20/2018
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,12 +16,12 @@ ms.assetid: 92e28a07-d6a7-461b-a0b3-bd9bc6afcbe5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 836a286c5852a9822835977c47d9cd204a3724ce
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 1a71ef96c559857e739b074915b219c38f036ff3
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68766897"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322205"
 ---
 # <a name="view-information-and-perform-tasks-using-replication-monitor"></a>Exibir informações e executar tarefas usando o Replication Monitor
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

@@ -1,6 +1,7 @@
 ---
-title: Caixa de diálogo 'Propriedades da Publicação' de Replicação do SQL Server | Microsoft Docs
-ms.custom: ''
+title: Propriedades de Publicação – Caixa de diálogo
+description: Descreve as páginas encontradas na caixa de diálogo "Propriedades de Publicação" no SSMS (SQL Server Management Studio).
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -21,12 +22,12 @@ ms.assetid: 66e845e9-1308-4288-9110-ad2f22f1fc58
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 4edfe83d19a0db5c15c767e5d94cf7de993d1fe8
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 0124efa2f34cc0c329376d7e3dc3f83b3d38cf85
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769979"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321334"
 ---
 # <a name="sql-server-replication-publication-properties--dialog-box"></a>Caixa de diálogo 'Propriedades da Publicação' de Replicação do SQL Server
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -59,7 +60,7 @@ Esta página descreve as páginas encontradas dentro da caixa de diálogo Propri
  Para obter mais informações, consulte [Subscription Expiration and Deactivation](../../relational-databases/replication/subscription-expiration-and-deactivation.md).  
   
  **Nível de compatibilidade**  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions only; merge publications only. Selecione versão mínima requerida do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para Assinantes que sincronizam com essa publicação. Há várias regras associadas com a determinação do nível de compatibilidade.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versões posteriores somente; só publicações de mesclagem. Selecione versão mínima requerida do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para Assinantes que sincronizam com essa publicação. Há várias regras associadas com a determinação do nível de compatibilidade.  
 
 ## <a name="filter-rows"></a>Filtrar Linhas
   A página **Filtrar Linhas** da caixa de diálogo **Propriedades de Publicação** permite adicionar, editar ou excluir e permite também:  
@@ -199,7 +200,7 @@ Instantâneo
  **Formato do instantâneo**  
  Selecione modo nativo ou modo de caractere para o formato do instantâneo.  
   
--   Selecione **Native SQL Server - todos os Assinantes devem ser servidores executando o SQL Server** se todos os Assinantes forem instâncias do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diferentes do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)]. O formato de instantâneo nativo fornece o melhor desempenho.    
+-   Selecione **Native SQL Server – todos os Assinantes devem ser servidores executando o SQL Server** se todos os Assinantes forem instâncias do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diferentes do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)]. O formato de instantâneo nativo fornece o melhor desempenho.    
 -   Selecione **Caractere - necessário se um Publicador ou Assinante não estiver executando o SQL Server** se nenhum Assinante estiver executando o [!INCLUDE[ssEW](../../includes/ssew-md.md)] ou forem Assinantes não[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .    
  **Local dos arquivos de instantâneo**  
  Selecione o local para armazenar arquivos de instantâneo. Eles podem ser armazenados no local padrão; e também, em vez disso, podem ser armazenados em um local alternativo ou em outro local além do local padrão. Arquivos armazenados em um local alternativo podem ser compactados.  

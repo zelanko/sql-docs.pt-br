@@ -1,6 +1,7 @@
 ---
-title: Sincronizar uma assinatura usando o Gerenciador de Sincronização do Windows | Microsoft Docs
-ms.custom: ''
+title: Sincronizar assinatura (Gerenciador de Sincronização do Windows)
+description: Saiba como sincronizar assinaturas usando o Gerenciador de Sincronização do Windows.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ ms.assetid: 80f15dd6-e84d-4f96-9866-5b34ea531f1e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 81899227c470ece81f01338e4e873e2f40cd015c
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: bcdf5cee07666509722a591410431b00f82dc27b
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768299"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321434"
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager"></a>Sincronizar uma assinatura usando o Gerenciador de Sincronização do Windows
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -81,7 +82,7 @@ ms.locfileid: "68768299"
   
     -   **Informações do Servidor Web** (para assinatura de mesclagem em Assinantes que usam SQL Server 2005 ou posterior)  
   
-    -   **Outro**  
+    -   **Outros**  
   
      É recomendável usar a Autenticação do Windows para todas as conexões. Para obter mais informações sobre as permissões que são exigidas pelo Distribution Agent e pelo Merge Agent, consulte [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
@@ -119,6 +120,6 @@ ms.locfileid: "68768299"
 >  As edições serão aplicadas apenas se fizerem parte da linha escolhida para resolução. Por exemplo, se você fizer edições no **Publicador**e, em seguida, clicar em **Aceitar Assinante**, as edições serão descartadas.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Resolução interativa de conflitos](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)  
+ [Interactive Conflict Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)  
   
   

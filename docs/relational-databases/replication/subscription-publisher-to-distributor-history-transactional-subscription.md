@@ -1,6 +1,7 @@
 ---
-title: Assinatura, Histórico do Publicador para o Distribuidor (assinatura transacional) | Microsoft Docs
-ms.custom: ''
+title: Histórico do Publicador para o Distribuidor (Transacional – SSMS)
+description: Descreve a guia "Histórico do Distribuidor para o Publicador" do Replication Monitor para uma publicação transacional no SSMS (SQL Server Management Studio).
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ ms.assetid: d5a4c697-1342-49fd-8b7b-b059af32556a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 30e5a68dcd22b0f73f88ce6151ef46e02bbf81f1
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 350866a6a574469ef87586cd10f932bfcc201859
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768307"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322175"
 ---
 # <a name="subscription-publisher-to-distributor-history-transactional-subscription"></a>Assinatura, Histórico do Publicador para o Distribuidor (assinatura transacional)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

@@ -2,7 +2,7 @@
 title: Embutimento de UDF escalar em bancos de dados Microsoft SQL | Microsoft Docs
 description: Recurso de embutimento de UDF escalar para melhorar o desempenho de consultas que invocam UDFs escalares no SQL Server (começando no SQL Server 2019) e no Banco de Dados SQL do Azure.
 ms.custom: ''
-ms.date: 09/13/2019
+ms.date: 01/09/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 90aa97c7a5dc2f21007c52ac8ebfc6d100e6d178
-ms.sourcegitcommit: b7618a2a7c14478e4785b83c4fb2509a3e23ee68
+ms.openlocfilehash: fa881a12ad04c5613aced89771ebc31e1cdaa5a2
+ms.sourcegitcommit: 365a919e3f0b0c14440522e950b57a109c00a249
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926045"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75831775"
 ---
 # <a name="scalar-udf-inlining"></a>Embutimento de UDF escalar
 
@@ -154,6 +154,7 @@ Dependendo da complexidade da lógica na UDF, o plano de consulta resultante tam
 - A UDF não faz referência a tipos definidos pelo usuário.
 - Não há assinaturas adicionadas à UDF.
 - A UDF não é uma função de partição.
+- O UDF não contém referências a CTEs (expressões de tabela comuns)
 
 <sup>1</sup> `SELECT` com acúmulo/agregação variável (por exemplo, `SELECT @val += col1 FROM table1`) não há suporte para embutimento.
 

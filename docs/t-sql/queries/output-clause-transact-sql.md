@@ -1,7 +1,7 @@
 ---
 title: Cláusula OUTPUT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/09/2017
+ms.date: 01/14/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -30,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 13afbab4c154b39fe7762d39c0d431ce17848213
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2122954c2ce126441eba6d5d05db69e9a8bfa30e
+ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67901867"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75952435"
 ---
 # <a name="output-clause-transact-sql"></a>cláusula OUTPUT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "67901867"
   
  [MERGE](../../t-sql/statements/merge-transact-sql.md)  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -138,7 +138,7 @@ DELETE Sales.ShoppingCartItem
  $action  
  Está disponível apenas para a instrução MERGE. Especifica uma coluna do tipo **nvarchar(10)** na cláusula OUTPUT em uma instrução MERGE que retorna um entre três valores para cada linha: 'INSERT', 'UPDATE' ou 'DELETE', de acordo com a ação que foi executada nessa linha.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  A cláusula OUTPUT \<dml_select_list> e a cláusula OUTPUT \<dml_select_list> INTO { **\@** _table\_variable_ | _output\_table_ } pode ser definida em uma única instrução INSERT, UPDATE, DELETE ou MERGE.  
   
 > [!NOTE]  
@@ -211,7 +211,7 @@ DELETE Sales.ShoppingCartItem
   
 -   Na cláusula \<dml_table_source>, as cláusulas SELECT e WHERE não podem conter subconsultas, funções de agregação, funções de classificação, predicados de texto completo, funções definidas pelo usuário que executam acesso a dados nem a função TEXTPTR.  
 
-## <a name="parallelism"></a>Parallelism
+## <a name="parallelism"></a>Paralelismo
  Uma cláusula OUTPUT que retorna resultados para o cliente sempre usará um plano serial.
 
 No contexto de um banco de dados definido com o nível de compatibilidade 130 ou superior, se uma operação INSERT...SELECT usar uma dica WITH (TABLOCK) para a instrução SELECT e também usar OUTPUT…INTO para inserir em uma tabela temporária ou de usuário, a tabela de destino da instrução INSERT…SELECT será qualificada para o paralelismo, dependendo do custo da subárvore.  A tabela de destino referenciada na cláusula OUTPUT INTO não será qualificada para o paralelismo. 
@@ -313,7 +313,7 @@ DROP TABLE dbo.table1;
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-output-into-with-a-simple-insert-statement"></a>A. Usando OUTPUT INTO com uma instrução INSERT simples  
+### <a name="a-using-output-into-with-a-simple-insert-statement"></a>a. Usando OUTPUT INTO com uma instrução INSERT simples  
  O exemplo a seguir insere uma linha na tabela `ScrapReason` e usa a cláusula `OUTPUT` para retornar os resultados da instrução para a variável `@MyTableVar``table`. Como a coluna `ScrapReasonID` está definida com uma propriedade IDENTITY, não é especificado um valor na instrução `INSERT` dessa coluna. Porém, note que o valor gerado pelo [!INCLUDE[ssDE](../../includes/ssde-md.md)] para a coluna é retornado na cláusula `OUTPUT` na coluna `inserted.ScrapReasonID`.  
   
 ```  
@@ -421,7 +421,7 @@ GO
   
 ```  
   
-### <a name="e-using-output-into-with-fromtablename-in-an-update-statement"></a>E. Usando OUTPUT INTO com from_table_name em uma instrução UPDATE  
+### <a name="e-using-output-into-with-from_table_name-in-an-update-statement"></a>E. Usando OUTPUT INTO com from_table_name em uma instrução UPDATE  
  A exemplo a seguir atualiza a coluna `ScrapReasonID` na tabela `WorkOrder` para todas as ordens de serviço com uma `ProductID` e uma `ScrapReasonID` especificadas. A cláusula `OUTPUT INTO` retorna valores da tabela que está sendo atualizada (`WorkOrder`) e também da tabela `Product`. A tabela `Product` é usada na cláusula `FROM` para especificar as linhas a serem atualizadas. Como a tabela `WorkOrder` tem um gatilho `AFTER UPDATE` definido, é necessária a palavra-chave `INTO`.  
   
 ```  
@@ -455,7 +455,7 @@ GO
   
 ```  
   
-### <a name="f-using-output-into-with-fromtablename-in-a-delete-statement"></a>F. Usando OUTPUT INTO com from_table_name em uma instrução DELETE  
+### <a name="f-using-output-into-with-from_table_name-in-a-delete-statement"></a>F. Usando OUTPUT INTO com from_table_name em uma instrução DELETE  
  O exemplo a seguir exclui linhas da tabela `ProductProductPhoto` com base em critérios de pesquisa definidos na cláusula `FROM` da instrução `DELETE`. A cláusula `OUTPUT` retorna colunas da tabela que está sendo excluída (`deleted.ProductID`, `deleted.ProductPhotoID`) e colunas da tabela `Product`. Essa tabela é usada na cláusula `FROM` para especificar as linhas a serem excluídas.  
   
 ```  
@@ -576,9 +576,11 @@ DECLARE @MyTableVar table(
   );  
   
 INSERT INTO dbo.EmployeeSales (LastName, FirstName, CurrentSales)  
-  OUTPUT INSERTED.LastName,   
+  OUTPUT INSERTED.EmployeeID,
+         INSERTED.LastName,   
          INSERTED.FirstName,   
-         INSERTED.CurrentSales  
+         INSERTED.CurrentSales,
+         INSERTED.ProjectedSales
   INTO @MyTableVar  
     SELECT c.LastName, c.FirstName, sp.SalesYTD  
     FROM Sales.SalesPerson AS sp  

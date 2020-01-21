@@ -1,20 +1,21 @@
 ---
 title: Conectar-se a uma fonte de dados do ODBC (Assistente de Importação e Exportação do SQL Server) | Microsoft Docs
+description: Como configurar um DSN ODBC ou criar uma cadeia de conexão ODBC para usar com o Assistente de Importação e Exportação do SQL Server
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 12/31/2019
 ms.prod: sql
-ms.reviewer: ''
+ms.reviewer: vanto
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e6318776-a188-48a7-995d-9eafd7148ff2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cd4dbec9e08b19a0c06c991a7007b449dff02485
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 2b9979f7d82ef153ed3c447b5d47bf7424ca9443
+ms.sourcegitcommit: ab7209b5856537bfef0a6e9d0527d9002bd0a528
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71285498"
+ms.lasthandoff: 01/02/2020
+ms.locfileid: "75608025"
 ---
 # <a name="connect-to-an-odbc-data-source-sql-server-import-and-export-wizard"></a>Conectar-se a uma fonte de dados do ODBC (Assistente de Importação e Exportação do SQL Server)
 
@@ -28,7 +29,7 @@ Talvez você precise baixar o driver ODBC do qual você precisa da Microsoft ou 
 Você também pode ter que pesquisar as informações de conexão necessárias que você precisa fornecer. Esse site de terceiros – [The Connection Strings Reference](https://www.connectionstrings.com/) (A Referência de Cadeias de Conexão) – contém cadeias de conexão de exemplo e mais informações sobre provedores de dados e as informações de conexão exigidas por eles.
 
 ## <a name="make-sure-the-driver-you-want-is-installed"></a>Verifique se o driver que você deseja está instalado
-1.  Pesquise pelo miniaplicativo **fontes de dados ODBC (64 bits)** ou navegue até ele no Painel de Controle. Se você só tem um driver de 32 bits ou você sabe que precisa usar um driver de 32 bits, em vez disso, pesquise pelas **Fontes de Dados ODBC (32 bits)** ou navegue até elas.
+1.  Pesquise pelo miniaplicativo **fontes de dados ODBC (64 bits)** ou navegue até ele no Menu Iniciar ou Painel de Controle. Se você só tem um driver de 32 bits ou você sabe que precisa usar um driver de 32 bits, em vez disso, pesquise pelas **Fontes de Dados ODBC (32 bits)** ou navegue até elas.
 2.  Inicie o miniaplicativo. A janela **Administrador de Fonte de Dados ODBC** se abre.
 3.  Na guia **Drivers**, você pode encontrar uma lista de todos os drivers ODBC instalados no seu computador. (Os nomes de alguns dos drivers podem estar listados em vários idiomas.)
 
@@ -50,7 +51,7 @@ Esta é a tela genérica que você vê imediatamente depois de selecionar o Prov
 
 ## <a name="step-2---provide-the-connection-info"></a>Etapa 2 – fornecer as informações de conexão
 A próxima etapa é fornecer as informações de conexão para o driver ODBC e sua fonte de dados. Você tem duas opções.
-1.  Forneça um **DSN** (nome de fonte de dados) que já exista ou que você crie com o miniaplicativo **Administrador de fonte de dados ODBC** no Painel de Controle. Um DSN é a coleção salva de configurações necessárias para se conectar a uma fonte de dados ODBC.
+1.  Forneça um **DSN** (nome de fonte de dados) que já exista ou que você crie com o miniaplicativo **Administrador de fonte de dados ODBC**. Um DSN é a coleção salva de configurações necessárias para se conectar a uma fonte de dados ODBC.
 
     Se você já conhece o nome DSN ou sabe como criar um novo DSN agora, você pode ignorar o restante desta página. Digite o nome DSN no campo **Dsn** na página **Escolher uma fonte de dados** ou **Escolher um destino** e continue para a próxima etapa do assistente.
 
@@ -66,7 +67,7 @@ Se você fornecer uma cadeia de conexão, a página **Escolher uma fonte de dado
 
 ## <a name="odbc_dsn"></a> Opção 1 – fornecer um DSN
 Se você quiser fornecer as informações de conexão com um DSN (nome de fonte de dados), use o miniaplicativo **Administrador de Fonte de Dados ODBC** para localizar o DSN existente ou criar um novo.
-1.  Pesquise pelo miniaplicativo **fontes de dados ODBC (64 bits)** ou navegue até ele no Painel de Controle. Se você só tem um driver de 32 bits ou deve usar um driver de 32 bits, em vez disso, pesquise pelas **Fontes de Dados ODBC (32 bits)** ou navegue até elas.
+1.  Pesquise pelo miniaplicativo **fontes de dados ODBC (64 bits)** ou navegue até ele no Menu Iniciar ou Painel de Controle. Se você só tem um driver de 32 bits ou deve usar um driver de 32 bits, em vez disso, pesquise pelas **Fontes de Dados ODBC (32 bits)** ou navegue até elas.
 2.  Inicie o miniaplicativo. A janela **Administrador de Fonte de Dados ODBC** se abre. Eis aqui a aparência desse miniaplicativo.
 
     ![Miniaplicativo de painel de controle do Administrador de ODBC](../../integration-services/import-export-data/media/odbc-administrator-control-panel-applet.png)
@@ -90,7 +91,7 @@ Se você quiser fornecer as informações de conexão com um DSN (nome de fonte 
 ## <a name="odbc_connstring"></a> Opção 2 – fornecer uma cadeia de conexão
 Se você quiser fornecer suas informações de conexão com uma cadeia de conexão, o restante deste tópico lhe ajudará a obter a cadeia de conexão necessária.
 
-Este exemplo usará a cadeia de conexão a seguir, que se conecta ao Microsoft SQL Server.
+Este exemplo usará a cadeia de conexão a seguir, que se conecta ao Microsoft SQL Server. O exemplo de banco de dados usado é **WideWorldImporters** e estamos nos conectando ao SQL Server no computador local.
 
     ```
     Driver={ODBC Driver 13 for SQL Server};server=localhost;database=WideWorldImporters;trusted_connection=Yes;
@@ -111,7 +112,7 @@ Para localizar as cadeias de conexão para o driver ODBC online, consulte [The C
 ## <a name="get-the-connection-string-with-an-app"></a>Obter a cadeia de conexão com um aplicativo
 Para compilar e testar a cadeia de conexão para o driver ODBC no seu próprio computador, você pode usar o miniaplicativo **Administrador de Fonte de Dados ODBC** no Painel de Controle. Crie um DSN de arquivo para a conexão e, em seguida, copie as configurações do DSN de arquivo para montar a cadeia de conexão. Isso requer várias etapas, mas ajuda a verificar se você tem uma cadeia de conexão válida.
 
-1.  Pesquise pelo miniaplicativo **fontes de dados ODBC (64 bits)** ou navegue até ele no Painel de Controle. Se você só tem um driver de 32 bits ou deve usar um driver de 32 bits, em vez disso, pesquise pelas **Fontes de Dados ODBC (32 bits)** ou navegue até elas.
+1.  Pesquise pelo miniaplicativo **fontes de dados ODBC (64 bits)** ou navegue até ele no Menu Iniciar ou Painel de Controle. Se você só tem um driver de 32 bits ou deve usar um driver de 32 bits, em vez disso, pesquise pelas **Fontes de Dados ODBC (32 bits)** ou navegue até elas.
 2.  Inicie o miniaplicativo. A janela **Administrador de Fonte de Dados ODBC** se abre.
 3.  Agora vá para a guia **DSN de Arquivo** do miniaplicativo. Clique em **Adicionar**.
 
@@ -160,7 +161,7 @@ Para compilar e testar a cadeia de conexão para o driver ODBC no seu próprio c
 
     Normalmente, você não precisa de todas as configurações em um DSN criado pelo Administrador de Fonte de Dados do ODBC para criar uma cadeia de conexão que funcione.  
     -   Você sempre precisa especificar o driver ODBC.
-    -   Para uma fonte de dados com base em servidor como o SQL Server, você normalmente precisa de servidor, banco de dados e informações de logon. Assim, no DSN de exemplo, você não precisa de TrustServerCertificate, WSID nem APP.
+    -   Para uma fonte de dados com base em servidor como o SQL Server, você normalmente precisa de servidor, banco de dados e informações de logon. No DSN de exemplo, você não precisa de TrustServerCertificate, WSID nem APP.
     -   Para uma fonte de dados com base em arquivo, você precisa de pelo menos nome e local do arquivo.
     
 12. Cole esta cadeia de conexão no campo **ConnectionString** na página **Escolher uma Fonte de Dados** ou **Escolher um Destino** do assistente. O assistente analisa a cadeia de caracteres e você está pronto para continuar!

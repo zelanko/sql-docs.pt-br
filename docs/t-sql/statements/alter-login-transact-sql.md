@@ -1,7 +1,7 @@
 ---
 title: ALTER LOGIN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/06/2019
+ms.date: 01/10/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -24,18 +24,18 @@ ms.assetid: e247b84e-c99e-4af8-8b50-57586e1cb1c5
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2eeec689116946d99b348cadf0b41bca829848b1
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: 6523da9177f15673461880cbad0fc0a751a4391d
+ms.sourcegitcommit: cc20a148c785ac43832f47d096fe53508a4b1940
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982090"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75871126"
 ---
 # <a name="alter-login-transact-sql"></a>ALTER LOGIN (Transact-SQL)
 
 Altera as propriedades de uma conta de logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="click-a-product"></a>Clique em um produto!
 
@@ -45,7 +45,7 @@ Na linha a seguir, clique em qualquer nome de produto de seu interesse. O clique
 
 ||||||
 |-|-|-|-|-|
-|**_\* SQL Server \*_** &nbsp;|[Banco de dados individual/pool elástico<br />do Banco de Dados SQL](alter-login-transact-sql.md?view=azuresqldb-current)|[Instância gerenciada<br />do Banco de Dados SQL](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-login-transact-sql.md?view=aps-pdw-2016)
+|**_\* SQL Server \*_** &nbsp;|[Banco de dados individual/pool elástico<br />do Banco de Dados SQL](alter-login-transact-sql.md?view=azuresqldb-current)|[Instância gerenciada<br />do Banco de Dados SQL](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-login-transact-sql.md?view=aps-pdw-2016)
 ||||||
 
 &nbsp;
@@ -129,7 +129,7 @@ ADD CREDENTIAL Adiciona uma credencial do provedor EKM (Gerenciamento de chave e
 
 DROP CREDENTIAL Remove uma credencial do provedor de EKM (Gerenciamento de chave extensível) do logon. Para obter mais informações, consulte [EKM (Gerenciamento de chave extensível)] (../.. /relational-databases/security/encryption/extensible-key-management-ekm.md).
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Comentários
 
 Quando CHECK_POLICY estiver definido como ON, o argumento HASHED não poderá ser usado.
 
@@ -174,7 +174,7 @@ Um administrador pode alterar a senha, o idioma padrão e o banco de dados padr�
 
 ## <a name="examples"></a>Exemplos
 
-### <a name="a-enabling-a-disabled-login"></a>A. Habilitando um logon desabilitado
+### <a name="a-enabling-a-disabled-login"></a>a. Habilitando um logon desabilitado
 
 O exemplo seguinte ativa o logon `Mary5`.
 
@@ -266,7 +266,7 @@ GO
 
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2017)|**_\* Banco de dados individual/pool elástico<br />do Banco de Dados SQL \*_**|[Instância gerenciada<br />do Banco de Dados SQL](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2017)|**_\* Banco de dados individual/pool elástico<br />do Banco de Dados SQL \*_**|[Instância gerenciada<br />do Banco de Dados SQL](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -277,7 +277,7 @@ GO
 ## <a name="syntax"></a>Sintaxe
 
 ```
--- Syntax for Azure SQL Database and Azure SQL Data Warehouse
+-- Syntax for Azure SQL Database
 
 ALTER LOGIN login_name
   {
@@ -314,7 +314,7 @@ OLD_PASSWORD **='** _oldpassword_ **'** Aplica-se somente a logons do [!INCLUDE[
 
 NAME = *login_name* O nome novo do logon que está sendo renomeado. Se este for um logon do Windows, o SID do administrador do Windows correspondente ao novo nome deverá corresponder ao SID associado ao logon no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O nome novo de um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não pode conter um caractere de barra invertida (\\).
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Comentários
 
 Em [!INCLUDE[ssSDS](../../includes/sssds-md.md)], dados de logon necessários para autenticar uma conexão e as regras de firewall no nível de servidor são armazenados em cache temporariamente em cada banco de dados. Esse cache é atualizado periodicamente. Para forçar uma atualização do cache de autenticação e garantir que um banco de dados tenha a versão mais recente da tabela de logons, execute [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).
 
@@ -335,7 +335,7 @@ Uma entidade de segurança pode alterar a senha do seu próprio logon.
 
 Esses exemplos também incluem exemplos de uso de outros produtos SQL. Confira quais argumentos são compatíveis acima.
 
-### <a name="a-enabling-a-disabled-login"></a>A. Habilitando um logon desabilitado
+### <a name="a-enabling-a-disabled-login"></a>a. Habilitando um logon desabilitado
 
 O exemplo seguinte ativa o logon `Mary5`.
 
@@ -424,7 +424,7 @@ GO
 
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2017)|[Banco de dados individual/pool elástico<br />do Banco de Dados SQL](alter-login-transact-sql.md?view=azuresqldb-current)|**_\* Instância gerenciada<br />do Banco de Dados SQL \*_**|[SQL Data<br />Warehouse](alter-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2017)|[Banco de dados individual/pool elástico<br />do Banco de Dados SQL](alter-login-transact-sql.md?view=azuresqldb-current)|**_\* Instância gerenciada<br />do Banco de Dados SQL \*_**|[Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -469,7 +469,7 @@ ALTER LOGIN login_name
 ```
 
 > [!NOTE]
-> O administrador do Azure AD para a funcionalidade de instância gerenciada após a criação ter sido alterada. Para obter mais informações, confira [Nova funcionalidade de Administrador do Azure AD para MI](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi).
+> A funcionalidade de administrador do Azure AD para a instância gerenciada depois que a criação foi alterada. Para obter mais informações, confira [Nova funcionalidade de administrador do Azure AD para MI](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi).
 
 ```
 -- Syntax for Azure SQL Database managed instance using Azure AD logins
@@ -532,7 +532,7 @@ ADD CREDENTIAL Adiciona uma credencial do provedor EKM (Gerenciamento de chave e
 
 DROP CREDENTIAL Remove uma credencial do provedor de EKM (Gerenciamento de chave extensível) do logon. Para obter mais informações, consulte [EKM (Gerenciamento extensível de chaves)](../../relational-databases/security/encryption/extensible-key-management-ekm.md).
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Comentários
 
 Quando CHECK_POLICY estiver definido como ON, o argumento HASHED não poderá ser usado.
 
@@ -579,7 +579,7 @@ Apenas uma entidade de segurança do SQL com privilégios `sysadmin` pode execut
 
 Esses exemplos também incluem exemplos de uso de outros produtos SQL. Confira quais argumentos são compatíveis acima.
 
-### <a name="a-enabling-a-disabled-login"></a>A. Habilitando um logon desabilitado
+### <a name="a-enabling-a-disabled-login"></a>a. Habilitando um logon desabilitado
 
 O exemplo seguinte ativa o logon `Mary5`.
 
@@ -675,16 +675,16 @@ ALTER LOGIN [joe@contoso.com] DISABLE
 
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2017)|[Banco de dados individual/pool elástico<br />do Banco de Dados SQL](alter-login-transact-sql.md?view=azuresqldb-current)|[Instância gerenciada<br />do Banco de Dados SQL](alter-login-transact-sql.md?view=azuresqldb-mi-current)|**_\* SQL Data<br />Warehouse \*_**|[Analytics Platform<br />System (PDW)](alter-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2017)|[Banco de dados individual/pool elástico<br />do Banco de Dados SQL](alter-login-transact-sql.md?view=azuresqldb-current)|[Instância gerenciada<br />do Banco de Dados SQL](alter-login-transact-sql.md?view=azuresqldb-mi-current)|**_\* Azure Synapse<br />Analytics \*_**|[Analytics Platform<br />System (PDW)](alter-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
-## <a name="azure-sql-data-warehouse"></a>Azure SQL Data Warehouse
+## <a name="azure-synapse-analytics"></a>Azure Synapse Analytics
 
 ## <a name="syntax"></a>Sintaxe
 
 ```
--- Syntax for Azure SQL Database and Azure SQL Data Warehouse
+-- Syntax for Azure Synapse
 
 ALTER LOGIN login_name
   {
@@ -721,7 +721,7 @@ OLD_PASSWORD **='** _oldpassword_ **'** Aplica-se somente a logons do [!INCLUDE[
 
 NAME = *login_name* O nome novo do logon que está sendo renomeado. Se este for um logon do Windows, o SID do administrador do Windows correspondente ao novo nome deverá corresponder ao SID associado ao logon no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O nome novo de um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não pode conter um caractere de barra invertida (\\).
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Comentários
 
 Em [!INCLUDE[ssSDS](../../includes/sssds-md.md)], dados de logon necessários para autenticar uma conexão e as regras de firewall no nível de servidor são armazenados em cache temporariamente em cada banco de dados. Esse cache é atualizado periodicamente. Para forçar uma atualização do cache de autenticação e garantir que um banco de dados tenha a versão mais recente da tabela de logons, execute [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).
 
@@ -742,7 +742,7 @@ Uma entidade de segurança pode alterar a senha do seu próprio logon.
 
 Esses exemplos também incluem exemplos de uso de outros produtos SQL. Confira quais argumentos são compatíveis acima.
 
-### <a name="a-enabling-a-disabled-login"></a>A. Habilitando um logon desabilitado
+### <a name="a-enabling-a-disabled-login"></a>a. Habilitando um logon desabilitado
 
 O exemplo seguinte ativa o logon `Mary5`.
 
@@ -830,7 +830,7 @@ GO
 
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2017)|[Banco de dados individual/pool elástico<br />do Banco de Dados SQL](alter-login-transact-sql.md?view=azuresqldb-current)|[Instância gerenciada<br />do Banco de Dados SQL](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-login-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics<br />Platform System (PDW) \*_**
+> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2017)|[Banco de dados individual/pool elástico<br />do Banco de Dados SQL](alter-login-transact-sql.md?view=azuresqldb-current)|[Instância gerenciada<br />do Banco de Dados SQL](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics<br />Platform System (PDW) \*_**
 
 &nbsp;
 
@@ -886,7 +886,7 @@ CHECK_POLICY **=** { **ON** | OFF } somente a logons do [!INCLUDE[ssNoVersion](.
 
 UNLOCK Aplica-se somente a logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Especifica que um logon bloqueado deve ser desbloqueado.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Comentários
 
 Quando CHECK_POLICY estiver definido como ON, o argumento HASHED não poderá ser usado.
 
@@ -931,7 +931,7 @@ Um administrador pode alterar a senha, o idioma padrão e o banco de dados padr�
 
 Esses exemplos também incluem exemplos de uso de outros produtos SQL. Confira quais argumentos são compatíveis acima.
 
-### <a name="a-enabling-a-disabled-login"></a>A. Habilitando um logon desabilitado
+### <a name="a-enabling-a-disabled-login"></a>a. Habilitando um logon desabilitado
 
 O exemplo seguinte ativa o logon `Mary5`.
 
