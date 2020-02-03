@@ -44,14 +44,14 @@
           href: secure-my-reports.md
         - name: Criar o RSExecRole
           href: create-the-rsexecrole.md
-        - name: Definições de função
+        - name: Definições de Funções
           href: role-definitions.md
           items:
             - name: 'Criar, excluir ou modificar uma função'
               href: role-definitions-create-delete-or-modify.md
             - name: Funções predefinidas
               href: role-definitions-predefined-roles.md
-        - name: Atribuições de função
+        - name: Atribuições de Funções
           href: role-assignments.md
           items:
             - name: Modificar ou excluir uma atribuição de função

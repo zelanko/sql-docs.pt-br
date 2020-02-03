@@ -1,6 +1,6 @@
 ---
-title: Executar arquivos de script Transact-SQL usando sqlcmd | Microsoft Docs
-ms.custom: ''
+title: Executar arquivos de script Transact-SQL usando sqlcmd
+ms.custom: seo-lt-2019
 ms.date: 07/15/2016
 ms.prod: sql
 ms.technology: scripting
@@ -12,12 +12,12 @@ ms.assetid: 90067eb8-ca3e-44e8-bb1a-bf7d1a359423
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 46f4a1660fd2b33581482025cd5a9cf3bb16f770
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: ed85470d8e054ba60ae0b2525f773f83d70d0da3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267654"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253206"
 ---
 # <a name="sqlcmd---run-transact-sql-script-files"></a>sqlcmd – Executar arquivos de script do Transact-SQL
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "68267654"
   
 ## <a name="run-the-script-file"></a>Executar o arquivo de script  
   
-1.  Abra uma janela do prompt de comando.  
+1.  Abra una janela de prompt de comando.  
   
 2.  Na janela do Prompt de Comando, digite: **sqlcmd -S myServer\nomeInstância -i C:\myScript.sql**  
   
@@ -59,7 +59,7 @@ ms.locfileid: "68267654"
 
 ## <a name="save-the-output-to-a-text-file"></a>Salvar a saída em um arquivo de texto
   
-1.  Abra uma janela do prompt de comando.  
+1.  Abra una janela de prompt de comando.  
   
 2.  Na janela do Prompt de comando, digite: **sqlcmd -S myServer\nomeInstância -i C:\myScript.sql -o C:\EmpAdds.txt**  
   

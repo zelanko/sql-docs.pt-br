@@ -17,13 +17,13 @@ ms.assetid: ef6fe2b7-d267-4379-b948-5626c4684367
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e606d7f5d34225dd690181092c5fdfdfa8d05bb9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68014832"
 ---
-# <a name="sqlsrvserverinfo"></a>sqlsrv_server_info
+# <a name="sqlsrv_server_info"></a>sqlsrv_server_info
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Retorna informações sobre o servidor. É necessário estabelecer uma conexão antes de chamar essa função.  
@@ -35,13 +35,13 @@ Retorna informações sobre o servidor. É necessário estabelecer uma conexão 
 sqlsrv_server_info( resource $conn)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
 *$conn*: o recurso de conexão pelo qual o cliente e o servidor estão conectados.  
   
 ## <a name="return-value"></a>Valor retornado  
 Uma matriz associativa com as seguintes chaves:  
   
-|Chave|Descrição|  
+|Chave|DESCRIÇÃO|  
 |-------|---------------|  
 |CurrentDatabase|O banco de dados de destino no momento.|  
 |SQLServerVersion|A versão do SQL Server.|  

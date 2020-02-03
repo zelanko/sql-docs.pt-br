@@ -27,17 +27,17 @@
 - name: Tópicos de informações práticas do Supervisor de Atualização
   href: upgrade-advisor-how-to-topics.md
   items:
-    - name: 'Como fazer: Para instalar o Supervisor de Atualização'
+    - name: Como instalar o Supervisor de Atualização
       href: how-to-install-upgrade-advisor.md
-    - name: 'Como fazer: Para iniciar o Supervisor de Atualização'
+    - name: Como iniciar o Supervisor de Atualização
       href: how-to-launch-upgrade-advisor.md
-    - name: 'Como fazer: Para executar o Assistente para Análise do Supervisor de Atualização'
+    - name: Como executar o Assistente para Análise do Supervisor de Atualização
       href: how-to-run-the-upgrade-advisor-analysis-wizard.md
-    - name: 'Como fazer: Para exibir um relatório do Supervisor de Atualização'
+    - name: Como exibir um relatório do Supervisor de Atualização
       href: how-to-view-an-upgrade-advisor-report.md
-    - name: 'Como fazer: Para filtrar relatórios'
+    - name: Como filtrar relatórios
       href: how-to-filter-reports.md
-    - name: 'Como fazer: Exportar relatórios'
+    - name: Como exportar relatórios
       href: how-to-export-reports.md
 - name: Referência da Interface do Usuário
   href: upgrade-advisor-user-interface-reference.md
@@ -349,13 +349,13 @@
       href: full-text-search-upgrade-options.md
     - name: Instalação - Concluída
       href: complete-installation.md
-    - name: Pré-requisitos para instalação
+    - name: Pré-requisitos da instalação
       href: installation-prerequisites.md
-    - name: Andamento da Instalação
+    - name: Progresso da Instalação
       href: installation-progress.md
     - name: Tipo de Instalação
       href: installation-type.md
-    - name: Configuração da instância
+    - name: Configuração de Instância
       href: instance-configuration.md
     - name: Seleção de instância (desinstalação)
       href: instance-selection-uninstall.md
@@ -424,11 +424,11 @@
   items:
     - name: Instalando atualizações no prompt de comando
       href: ../../database-engine/install-windows/installing-updates-from-the-command-prompt.md
-    - name: 'Como fazer: Para validar a instalação bem-sucedida de uma atualização do SQL Server'
+    - name: Como validar a instalação bem-sucedida de uma atualização do SQL Server
       href: how-to-validate-successful-installation-of-a-sql-server-update.md
     - name: Visão geral da instalação de manutenção do SQL Server
       href: overview-of-sql-server-servicing-installation.md
-    - name: Bem-vindo
+    - name: Bem-Vindo
       href: welcome.md
     - name: Termos de licença
       href: license-terms.md

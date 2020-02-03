@@ -16,7 +16,7 @@
   items:
     - name: Definindo propriedades para o Suplemento do Master Data Services para Excel
       href: microsoft-excel-add-in/setting-properties-for-master-data-services-add-in-for-excel.md
-- name: Conexões
+- name: conexões
   href: microsoft-excel-add-in/connections-mds-add-in-for-excel.md
   items:
     - name: Conectar-se a um repositório do MDS
@@ -127,7 +127,7 @@
       href: change-an-attribute-group-name-master-data-services.md
     - name: Excluir um grupo de atributos
       href: delete-an-attribute-group-master-data-services.md
-- name: Importação de dados
+- name: Importação de Dados
   href: overview-importing-data-from-tables-master-data-services.md
   items:
     - name: 'Adicionar, Atualizar e Excluir Dados'
@@ -194,7 +194,7 @@
       href: business-rule-conditions-master-data-services.md
     - name: Ações de regras de negócio
       href: business-rule-actions-master-data-services.md
-- name: Controle de alterações
+- name: Controle de Alterações
   href: change-tracking-master-data-services.md
   items:
     - name: Adicionar atributos a um grupo de controle de alterações
@@ -317,10 +317,10 @@
       href: create-a-model-administrator-master-data-services.md
     - name: Alterar a conta de administrador do sistema
       href: change-the-system-administrator-account-master-data-services.md
-- name: Usuários e grupos
+- name: Usuários e Grupos
   href: users-and-groups-master-data-services.md
   items:
-    - name: Adicionar um usuário
+    - name: Adicionar um Usuário
       href: add-a-user-master-data-services.md
     - name: Adicionar um grupo
       href: add-a-group-master-data-services.md

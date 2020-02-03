@@ -1,6 +1,6 @@
 ---
-title: Ajuda de F1 das caixas de diálogo Opções | Microsoft Docs
-ms.custom: ''
+title: Ajuda de F1 das caixas de diálogo opções
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b98d2631-530a-43b4-8491-f724f8e4a23a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b22a11c4538ccdcd353c558d57263c65688ec0a8
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 1d55f1115db836d3fddab4e18e63499c43e5993f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68257260"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245724"
 ---
 # <a name="options-dialog-boxes-f1-help"></a>Ajuda de F1 das caixas de diálogo opções
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

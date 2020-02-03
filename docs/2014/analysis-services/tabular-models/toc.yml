@@ -27,7 +27,7 @@
           href: power-view-configure-default-field-set-for-reports.md
         - name: Configurar propriedades de comportamento de tabela para relatórios de Power View
           href: power-view-configure-table-behavior-properties-for-reports.md
-    - name: Propriedades de projeto
+    - name: Propriedades do Projeto
       href: project-properties-ssas-tabular.md
     - name: Propriedades de modelo
       href: model-properties-ssas-tabular.md

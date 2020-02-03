@@ -18,13 +18,13 @@ ms.assetid: a5a640a1-6e7d-452e-8b66-850a4dc2ce89
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 32b095c37f6a0b039e0836da4508ed8cbfe5fd3b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015018"
 ---
-# <a name="sqlsrvfetch"></a>sqlsrv_fetch
+# <a name="sqlsrv_fetch"></a>sqlsrv_fetch
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Disponibiliza a próxima linha de um conjunto de resultados para leitura. Use [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) para ler os campos da linha.  
@@ -36,7 +36,7 @@ Disponibiliza a próxima linha de um conjunto de resultados para leitura. Use [s
 sqlsrv_fetch( resource $stmt[, row[, ]offset])  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
 *$stmt*: um recurso de instrução correspondente a uma instrução executada.  
   
 > [!NOTE]  

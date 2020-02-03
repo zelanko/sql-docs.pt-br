@@ -1,6 +1,6 @@
 ---
-title: Arrastar e soltar texto | Microsoft Docs
-ms.custom: ''
+title: Arrastar e soltar texto
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,12 +14,12 @@ ms.assetid: 623354b8-fa56-4167-862a-98c468dd8a22
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0edc2a04551b94be1ea50546f6a6d692cc6da543
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 13211d07b1846dd89826e1e1854f76b6c6cd16af
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263489"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253930"
 ---
 # <a name="drag-and-drop-text"></a>Arrastar e soltar texto
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,6 +46,6 @@ ms.locfileid: "68263489"
  Arrastar texto significa movê-lo, isto é, o texto é apagado do local anterior e movido para o novo local. Pressionar a tecla CTRL enquanto você arrasta o texto, significa copiá-lo no local novo. Arrastar um objeto do Pesquisador de Objetos é uma exceção e não exclui o nome do objeto do explorador.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Código e texto de navegação](../../relational-databases/scripting/navigate-code-and-text.md)  
+ [Navegar no código e no texto](../../relational-databases/scripting/navigate-code-and-text.md)  
   
   

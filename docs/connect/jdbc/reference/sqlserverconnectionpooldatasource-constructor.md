@@ -16,10 +16,10 @@ ms.assetid: 0f5d1ee5-7996-4e20-956e-fe72cb64a588
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9799379cc9121511c0927b56d808d27dda0c18c5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67971605"
 ---
 # <a name="sqlserverconnectionpooldatasource-constructor-"></a>Construtor SQLServerConnectionPoolDataSource ()

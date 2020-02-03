@@ -1,10 +1,7 @@
 ---
-title: Elemento de nome para o servidor (DTA) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: Elemento Nome do servidor (DTA)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +11,22 @@ helpviewer_keywords:
 ms.assetid: 4c94754d-6d62-4357-8ce7-f107ebf90c71
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 86a6efb1f088b9ff41e51d74008e53bc7cfb6699
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: b678397b9af9aac55dff61181cd449e119e84d1e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034687"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307970"
 ---
 # <a name="name-element-for-server-dta"></a>Elemento Nome do servidor (DTA)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Contém o nome do servidor em que residem os bancos de dados que você deseja ajustar.  
+
+Contém o nome do servidor em que residem os bancos de dados que você deseja ajustar.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,7 +39,7 @@ ms.locfileid: "68034687"
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Descrição|  
+|Característica|DESCRIÇÃO|  
 |--------------------|-----------------|  
 |**Comprimento e tipo de dados**|**string**, entre 1 e 255 caracteres.|  
 |**Valor padrão**|Nenhum.|  

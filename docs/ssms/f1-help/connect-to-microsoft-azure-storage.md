@@ -1,6 +1,6 @@
 ---
-title: Conectar ao Armazenamento do Microsoft Azure | Microsoft Docs
-ms.custom: ''
+title: Conectar ao Armazenamento do Microsoft Azure
+ms.custom: seo-lt-2019
 ms.date: 07/12/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: ''
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8f4b05cc0ebd3c3d230b5f42bb46b74885e8e1e6
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: eb943430136a1406ea18b9c387c98fbec6fd27cf
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155678"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245019"
 ---
 # <a name="connect-to-microsoft-azure-storage"></a>Conectar ao Armazenamento do Microsoft Azure
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +34,7 @@ Especifique as informações a seguir sobre sua conta do Azure e clique em **Ava
    >
    >  O valor de um dos cabeçalhos HTTP não está no formato correto. (Microsoft.SqlServer.StorageClient).
    >
-   >  O servidor remoto retornou um erro: (400) Solicitação Inválida. (Sistema)
+   >  O servidor remoto retornou um erro: (400) Solicitação Incorreta. (Sistema)
 
 2.  **Chave de Conta** – Especifique a chave de conta para a conta de armazenamento especificada.  
   

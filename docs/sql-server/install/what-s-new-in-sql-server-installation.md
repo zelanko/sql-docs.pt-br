@@ -10,10 +10,10 @@ ms.assetid: 9b136b27-4779-4284-904f-b5a1c12bdcc0
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: c42d536f427bba1e0b1642bcc5068bf3cd2d04f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68045653"
 ---
 # <a name="what39s-new-in-sql-server-installation"></a>Novidades na instalação do SQL Server

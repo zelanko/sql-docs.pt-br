@@ -1,10 +1,9 @@
 ---
-title: Trabalhar com diagramas de banco de dados (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Trabalhar com diagramas de banco de dados
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -17,12 +16,14 @@ helpviewer_keywords:
 ms.assetid: 2dec7e0b-99cd-4185-8334-111795e52f45
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 66f06f8d721dbe6853774b42b294f6caf6d7e104
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: cf2a7c0625a542ca4e4f25e1bb42905595e7d7f2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68258800"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246208"
 ---
 # <a name="work-with-database-diagrams-visual-database-tools"></a>Trabalhar com diagramas de banco de dados (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,8 +46,8 @@ Você pode criar um diagrama visual de seu banco de dados usando o Designer de B
   
 [Mostrar propriedades do diagrama &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/show-diagram-properties-visual-database-tools.md)  
   
-## <a name="related-sections"></a>Seções relacionadas  
+## <a name="related-sections"></a>Seções relacionadas
+
 [Trabalhar com tabelas no diagrama de banco de dados &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-tables-in-database-diagram-visual-database-tools.md)  
   
-[Trabalhar com layout de diagrama &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-diagram-layout-visual-database-tools.md)  
-  
+[Trabalhar com layout de diagrama &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-diagram-layout-visual-database-tools.md)

@@ -387,7 +387,7 @@
       href: ../install-and-uninstall-odata-source-component.md
     - name: 'Tutorial: Usando o OData Source'
       href: tutorial-using-the-odata-source.md
-    - name: Modifique a consulta de origem do OData em tempo de execução
+    - name: Modifique a consulta de origem do OData em runtime
       href: modify-odata-source-query-at-runtime.md
     - name: Editor de Origem do OData (página Conexão)
       href: ../odata-source-editor-connection-page.md

@@ -16,10 +16,10 @@ ms.assetid: cecaaa96-b07e-4038-a760-33164b283e42
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 704b292eb50f5a900cb26f8c6958b0d2c6e618c9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67955954"
 ---
 # <a name="afterlast-method-sqlserverresultset"></a>Método afterLast (SQLServerResultSet)
@@ -37,7 +37,7 @@ public void afterLast()
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse método afterLast é especificado pelo método afterLast na interface java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Consulte Também  

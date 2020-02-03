@@ -12,10 +12,10 @@ ms.assetid: 06941742-2c65-428e-a722-4b4dd59096a5
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2bad756be9bf5431a93ba167cc8ec88fd0802a02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63284415"
 ---
 # <a name="linked-reports-methods"></a>Métodos de relatórios vinculados
@@ -30,7 +30,7 @@ ms.locfileid: "63284415"
   
 ## <a name="see-also"></a>Consulte Também  
  [Criando aplicativos usando o serviço Web e o .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
- [Serviço Web do Servidor de Relatório](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
+ [Serviço Web Servidor de Relatórios](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
  [Métodos do serviço Web Servidor de Relatórios](../../../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md)   
  [Referência técnica &#40;SSRS&#41;](../../../reporting-services/technical-reference-ssrs.md)  
   

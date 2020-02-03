@@ -17,13 +17,13 @@ ms.assetid: 3e2d3679-436a-45d8-8bdc-7c633b65a720
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 861e686d4a64b1030224b8ec35551fade4188ca5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67992832"
 ---
-# <a name="sqlsrvclientinfo"></a>sqlsrv_client_info
+# <a name="sqlsrv_client_info"></a>sqlsrv_client_info
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Retorna informações sobre a conexão e a pilha do cliente.  
@@ -35,7 +35,7 @@ Retorna informações sobre a conexão e a pilha do cliente.
 sqlsrv_client_info( resource $conn)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
 *$conn*: o recurso de conexão pelo qual o cliente está conectado.  
   
 ## <a name="return-value"></a>Valor retornado  
@@ -43,7 +43,7 @@ Uma matriz associativa com chaves descritas na tabela abaixo, ou **false** , se 
   
 **Para versões 3.2 e 3.1 do PHP para SQL Server**:  
   
-|Chave|Descrição|  
+|Chave|DESCRIÇÃO|  
 |-------|---------------|  
 |DriverDllName|MSODBCSQL11.DLL (ODBC Driver 11 for SQL Server)|  
 |DriverODBCVer|Versão do ODBC (xx.yy)|  
@@ -52,7 +52,7 @@ Uma matriz associativa com chaves descritas na tabela abaixo, ou **false** , se 
   
 **Para versões 3.0 e 2.0 do PHP para SQL Server**:  
   
-|Chave|Descrição|  
+|Chave|DESCRIÇÃO|  
 |-------|---------------|  
 |DriverDllName|SQLNCLI10.DLL ([!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] versão 2.0)|  
 |DriverODBCVer|Versão do ODBC (xx.yy)|  

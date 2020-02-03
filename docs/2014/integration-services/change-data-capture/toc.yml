@@ -1,15 +1,15 @@
-- name: Change Data Capture
+- name: Captura de dados de alterações
   href: change-data-capture-ssis.md
   items:
     - name: Especificar um intervalo de dados de alteração
       href: specify-an-interval-of-change-data.md
-    - name: Determinar se os dados de alterações estão protos
+    - name: Determinar se os dados de alteração estão prontos
       href: determine-whether-the-change-data-is-ready.md
     - name: Preparar para consultar os dados de alterações
       href: prepare-to-query-for-the-change-data.md
     - name: Criar a função para recuperar os dados de alteração
       href: create-the-function-to-retrieve-the-change-data.md
-    - name: Recuperar e compreender os dados de alterações
+    - name: Recuperar e compreender os dados de alteração
       href: retrieve-and-understand-the-change-data.md
     - name: 'Processar inserções, atualizações e exclusões'
       href: process-inserts-updates-and-deletes.md
@@ -82,7 +82,7 @@
           href: how-to-manage-a-cdc-service-from-the-cdc-designer-console.md
         - name: Como criar a instância de banco de dados de alteração do SQL Server
           href: how-to-create-the-sql-server-change-database-instance.md
-        - name: Como gerenciar uma instância CDC
+        - name: How to Manage a CDC Instance
           href: how-to-manage-a-cdc-instance.md
         - name: Como editar as propriedades de instância CDC
           href: how-to-edit-the-cdc-instance-properties.md
@@ -124,7 +124,7 @@
           href: connection-to-sql-server-for-delete.md
         - name: Criar e editar um Serviço Oracle CDC
           href: create-and-edit-an-oracle-cdc-service.md
-        - name: Gerenciar um Serviço Oracle CDC
+        - name: Manage an Oracle CDC Service
           href: manage-an-oracle-cdc-service.md
         - name: Preparar SQL Server para CDC
           href: prepare-sql-server-for-cdc.md
@@ -197,7 +197,7 @@
           href: ../data-flow/look-up-infoobject.md
         - name: Criar InfoSource
           href: ../data-flow/create-infosource.md
-        - name: Criar InfoSource para os Dados da Transação
+        - name: Criar InfoSource para os dados da transação
           href: ../data-flow/create-infosource-for-transaction-data.md
         - name: Criar InfoSource para Dados Mestres
           href: ../data-flow/create-infosource-for-master-data.md

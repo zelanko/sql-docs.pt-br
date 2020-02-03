@@ -20,7 +20,7 @@
       href: smo-object-model-namespaces.md
     - name: Diagrama de modelos de objetos SMO
       href: smo-object-model-diagram.md
-- name: Linguagens de programação
+- name: Linguagens de Programação
   href: smo-programming-languages.md
   items:
     - name: Guia de Introdução ao Visual Basic .NET
@@ -96,7 +96,7 @@
       href: tasks/scheduling-automatic-administrative-tasks-in-sql-server-agent.md
     - name: Fazendo backup e restaurando bancos de dados e logs de transações
       href: tasks/backing-up-and-restoring-databases-and-transaction-logs.md
-    - name: Script
+    - name: Scripting
       href: tasks/scripting.md
     - name: Transferindo dados
       href: tasks/transferring-data.md

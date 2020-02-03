@@ -54,7 +54,7 @@
               href: agents/start-and-stop-a-replication-agent-sql-server-management-studio.md
             - name: Parâmetros de prompt de comando
               href: agents/view-and-modify-replication-agent-command-prompt-parameters.md
-    - name: Monitor
+    - name: Monitoramento
       href: monitoring-replication.md
       items:
         - name: Replication Monitor
@@ -217,7 +217,7 @@
           href: security/secure-the-distributor.md
         - name: Publicador
           href: security/secure-the-publisher.md
-        - name: Assinante
+        - name: Subscriber
           href: security/secure-the-subscriber.md
         - name: Pasta do instantâneo
           href: security/secure-the-snapshot-folder.md
@@ -432,7 +432,7 @@
                   href: non-sql/backup-and-restore-for-oracle-publishers.md
                 - name: Objetos criados
                   href: non-sql/objects-created-on-the-oracle-publisher.md
-                - name: Solução de problemas
+                - name: solução de problemas
                   href: non-sql/troubleshooting-oracle-publishers.md
         - name: Assinantes não SQL
           href: non-sql/non-sql-server-subscribers.md

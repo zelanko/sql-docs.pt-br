@@ -1,10 +1,7 @@
 ---
-title: Elemento de recomendação (DTA) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: Elemento de recomendação (DTA)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +11,22 @@ helpviewer_keywords:
 ms.assetid: 679ea535-865a-4633-a4d3-5b3090515158
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4fb9df2d769161213090b33755e1f2ecb018afef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: a6ad8f298dc633959a3da16376c3e2a486ee807c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034574"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306038"
 ---
 # <a name="recommendation-element-dta"></a>Elemento de recomendação (DTA)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Contém informações sobre os índices hipotéticos que integram a configuração especificada pelo usuário.  
+
+Contém informações sobre os índices hipotéticos que integram a configuração especificada pelo usuário.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,7 +43,7 @@ ms.locfileid: "68034574"
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Descrição|  
+|Característica|DESCRIÇÃO|  
 |--------------------|-----------------|  
 |**Comprimento e tipo de dados**|Nenhum.|  
 |**Valor padrão**|Nenhum.|  
@@ -53,7 +56,7 @@ ms.locfileid: "68034574"
 |**Elemento pai**|[Elemento Table para Schema &#40;DTA&#41;](../../tools/dta/table-element-for-schema-dta.md)|  
 |**Elementos filho**|[Elemento Create &#40;DTA&#41;](../../tools/dta/create-element-dta.md)<br /><br /> Elemento **Drop**. Para obter mais informações, consulte o esquema XML do [Orientador de Otimização do Mecanismo de Banco de Dados](https://go.microsoft.com/fwlink/?linkid=43100).|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse elemento tem o nome **RecommendationTypecomplexType** no esquema XML do Orientador de Otimização do Mecanismo de Banco de Dados. É usado para especificar os índices de uma configuração hipotética. Não confunda esse elemento **Recommendation** com os outros tipos que podem ser usados para especificar o particionamento (**RecommendationPType**) ou as exibições (**RecommendationViewType**). Para obter informações sobre esses outros tipos de elemento **Recommendation** , veja o [Esquema XML do Orientador de Otimização do Mecanismo de Banco de Dados](https://go.microsoft.com/fwlink/?linkid=43100).  
   
 ## <a name="example"></a>Exemplo  

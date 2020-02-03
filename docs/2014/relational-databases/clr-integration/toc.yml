@@ -102,7 +102,7 @@
     - name: Conexão de contexto
       href: data-access/context-connection.md
       items:
-        - name: Regular vs. Conexões de contexto
+        - name: Conexões de contexto e normais
           href: data-access/context-connections-vs-regular-connections.md
         - name: Restrições em conexões comuns e de contexto
           href: data-access/context-connections-and-regular-connections-restrictions.md

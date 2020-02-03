@@ -13,10 +13,10 @@ ms.assetid: ebfb4834-5445-480c-9a51-6868c60308af
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a7690e7d703ad5d7973d276741b40c7765d39b3d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63284435"
 ---
 # <a name="report-history-methods"></a>Métodos de histórico de relatório
@@ -34,7 +34,7 @@ ms.locfileid: "63284435"
   
 ## <a name="see-also"></a>Consulte Também  
  [Criando aplicativos usando o serviço Web e o .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
- [Serviço Web do Servidor de Relatório](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
+ [Serviço Web Servidor de Relatórios](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
  [Métodos do serviço Web Servidor de Relatórios](../../../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md)   
  [Referência técnica &#40;SSRS&#41;](../../../reporting-services/technical-reference-ssrs.md)  
   

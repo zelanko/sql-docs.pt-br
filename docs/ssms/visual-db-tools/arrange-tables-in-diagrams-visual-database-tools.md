@@ -1,10 +1,7 @@
 ---
-title: Organizar tabelas em diagramas (Ferramentas de Banco de Dados Visual) | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
+title: Organizar Tabelas em Diagramas
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,23 +11,29 @@ helpviewer_keywords:
 ms.assetid: 25c6f3f5-aaef-42a5-ad00-1786436db2a6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1d2bc7a9d6a50302b48df33acd16bb30033cfe7f
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
+ms.openlocfilehash: c01de70d549df0bcee801aac8fe2d58b11f4a8e1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263687"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245336"
 ---
 # <a name="arrange-tables-in-diagrams-visual-database-tools"></a>Organizar tabelas em diagramas (Visual Database Tools)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
 Você pode organizar as tabelas rapidamente em um diagrama de banco de dados para visualizar claramente cada tabela e relação.  
   
-### <a name="to-arrange-tables-in-diagrams"></a>Para organizar tabelas em diagramas  
+## <a name="to-arrange-tables-in-diagrams"></a>Para organizar tabelas em diagramas
   
-1.  Clique com o botão direito do mouse no espaço vazio da janela Diagrama de Banco de Dados.  
+1. Clique com o botão direito do mouse no espaço vazio da janela Diagrama de Banco de Dados.  
   
-2.  No menu de atalho, clique em **Organizar Tabelas**.  
+2. No menu de atalho, clique em **Organizar Tabelas**.  
   
-## <a name="see-also"></a>Consulte Também  
-[Trabalhar com diagramas de banco de dados &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
-  
+## <a name="see-also"></a>Consulte Também
+
+[Trabalhar com diagramas de banco de dados &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)

@@ -16,10 +16,10 @@ ms.assetid: ffbc4a02-e851-431c-bc1a-7ab381d982bb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 521f44a5a9e33903177d05ae6d2a49d023db013e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978556"
 ---
 # <a name="gettype-method-sqlserverresultset"></a>Método getType (SQLServerResultSet)
@@ -46,7 +46,7 @@ public int getType()
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse método getType é especificado pelo método getType na interface java.sql.ResultSet.  
   
  Esse método pode ser usado para determinar o tipo de curso real. Se o aplicativo selecionou TYPE_FORWARD_ONLY ou usou um tipo de cursor padrão, TYPE_FORWARD_ONLY será retornado.  

@@ -11,10 +11,10 @@ ms.assetid: f6f5e6d4-8ca9-4f06-89ed-de65ad3952a2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fb7131e96277ea05b43f30923dcc64c5be602696
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67936204"
 ---
 # <a name="pdoquery"></a>PDO::query
@@ -29,7 +29,7 @@ Executa uma consulta SQL e retorna um conjunto de resultados como um objeto PDOS
 PDOStatement PDO::query ($statement[, $fetch_style);  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
 *$statement*: a instrução SQL que você quer executar.  
   
 *$fetch_style*: as instruções opcionais sobre como executar a consulta. Para obter mais detalhes, consulte a seção Comentários. $*fetch_style* em PDO::query pode ser substituído por *$fetch_style* em PDO::fetch.  
@@ -40,14 +40,14 @@ Se a chamada for bem-sucedida, o PDO::query retornará um objeto PDOStatement. S
 ## <a name="exceptions"></a>Exceções  
 PDOException.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 Uma consulta executada com PDO::query pode executar uma instrução preparada ou de forma direta, dependendo da configuração de PDO::SQLSRV_ATTR_DIRECT_QUERY. Para obter mais informações, consulte [Execução de instrução direta e execução de instrução preparada no driver PDO_SQLSRV](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md).  
   
 PDO::SQLSRV_ATTR_QUERY_TIMEOUT também afeta o comportamento de PDO::exec, veja [PDO::setAttribute](../../connect/php/pdo-setattribute.md).  
   
 Você pode especificar as seguintes opções para $*fetch_style*.  
   
-|style|Descrição|  
+|Estilo|DESCRIÇÃO|  
 |---------|---------------|  
 |PDO::FETCH_COLUMN, *num*|Consultas de dados na coluna especificada. A primeira coluna na tabela é a coluna 0.|  
 |PDO::FETCH_CLASS, '*classname*', array( *arglist* )|Cria uma instância de uma classe e atribui nomes de coluna a propriedades da classe. Se o construtor de classe aceitar um ou mais parâmetros, você poderá passar também uma *arglist*.|  
@@ -166,7 +166,7 @@ Array
 ```
 
 ## <a name="see-also"></a>Consulte Também  
-[Classe PDO](../../connect/php/pdo-class.md)
+[PDO Class](../../connect/php/pdo-class.md)
 
 [PDO](https://php.net/manual/book.pdo.php)  
   

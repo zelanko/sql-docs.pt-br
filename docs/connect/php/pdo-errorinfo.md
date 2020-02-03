@@ -11,10 +11,10 @@ ms.assetid: 9d5481d5-13bc-4388-b3aa-78676c0fc709
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fe0f0cc2ec15fcdb871f290f03565482a8477995
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67936265"
 ---
 # <a name="pdoerrorinfo"></a>PDO::errorInfo
@@ -40,7 +40,7 @@ Uma matriz de informações de erro sobre a operação mais recente no identific
   
 Se não houver nenhum erro ou se o SQLSTATE não estiver definido, os campos específicos do driver serão NULL.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 PDO::errorInfo recupera somente informações de erro de operações realizadas diretamente no banco de dados. Use PDOStatement::errorInfo quando uma instância de PDOStatement for criada usando PDO::prepare ou PDO::query.  
   
 O suporte para PDO foi adicionado na versão 2.0 dos [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
@@ -61,7 +61,7 @@ print_r ($conn->errorInfo());
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
-[Classe PDO](../../connect/php/pdo-class.md)
+[PDO Class](../../connect/php/pdo-class.md)
 
 [PDO](https://php.net/manual/book.pdo.php)  
   

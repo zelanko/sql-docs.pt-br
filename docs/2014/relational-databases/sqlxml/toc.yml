@@ -19,7 +19,7 @@
       href: formatting/server-side-xml-formatting-sqlxml-4-0.md
     - name: Formatação XML do lado do cliente (SQLXML 4.0)
       href: formatting/client-side-xml-formatting-sqlxml-4-0.md
-    - name: Lado do cliente e Formatação XML do lado do servidor (SQLXML 4.0)
+    - name: Formatação XML no lado cliente e no lado servidor (SQLXML 4.0)
       href: formatting/client-side-vs-server-side-xml-formatting-sqlxml-4-0.md
 - name: Esquemas XSD anotados em SQLXML 4.0
   href: annotated-xsd-schemas/annotated-xsd-schemas-in-sqlxml-4-0.md

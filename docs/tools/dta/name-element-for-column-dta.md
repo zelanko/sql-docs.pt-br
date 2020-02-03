@@ -1,10 +1,7 @@
 ---
-title: Elemento de nome para coluna (DTA) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: Elemento de nome para coluna (DTA)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +11,22 @@ helpviewer_keywords:
 ms.assetid: f93b61de-01fe-4237-ada4-f1e481550564
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a185c94dabf2efdcfa4e29c4a79d0b27f9032b93
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: f80f72f94bff4797c2278b2af32f8c02dfd1e2e2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034747"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307960"
 ---
 # <a name="name-element-for-column-dta"></a>Elemento de nome para coluna (DTA)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Especifica o nome para uma coluna de índice em uma configuração especificada pelo usuário.  
+
+Especifica o nome para uma coluna de índice em uma configuração especificada pelo usuário.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,7 +39,7 @@ ms.locfileid: "68034747"
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Descrição|  
+|Característica|DESCRIÇÃO|  
 |--------------------|-----------------|  
 |**Comprimento e tipo de dados**|**string**, comprimento ilimitado.|  
 |**Valor padrão**|Nenhum.|  

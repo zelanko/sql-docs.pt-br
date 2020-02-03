@@ -1,23 +1,24 @@
 ---
-title: Atalhos de teclado do Designer de Teste de Unidade do SQL Server | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Atalhos de teclado do Designer de Teste de Unidade do SQL Server
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: b1c61454-242f-4948-a9ca-e2cd5df26102
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 424d36ea56d2c47886cd0b1cfc169bee93fb9f7c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: eab27b8ece9e15fddf9f397533d1a272fcd617b5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68037226"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246405"
 ---
 # <a name="keyboard-shortcuts-for-sql-server-unit-test-designer"></a>Atalhos de teclado do Designer de Teste de Unidade do SQL Server
+
 Você pode usar os atalhos de teclado a seguir para navegar no Designer de Teste de Unidade do SQL Server.  
   
 |||  
@@ -26,7 +27,7 @@ Você pode usar os atalhos de teclado a seguir para navegar no Designer de Teste
 |Alterne do editor Transact\-SQL para a barra de navegação.|CTRL + F2|  
 |Mova os elementos da barra de navegação para frente.|TAB|  
 |Mova os elementos da barra de navegação para trás.|SHIFT+TAB|  
-|Percorra os diferentes painéis do Designer de Teste de Unidade de Banco de Dados.<br /><br />**OBSERVAÇÃO:** este atalho não funcionará se você tiver especificado C# no perfil do desenvolvedor na primeira vez que abrir o Visual Studio.|F6/SHIFT+F6|  
+|Percorra os diferentes painéis do Designer de Teste de Unidade de Banco de Dados.<br /><br />**OBSERVAÇÃO:** Este atalho não funcionará se você tiver especificado C# no perfil do desenvolvedor na primeira vez que abrir o Visual Studio.|F6/SHIFT+F6|  
   
 ## <a name="see-also"></a>Consulte Também  
 [Criando e definindo testes de unidade do SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  

@@ -1,10 +1,9 @@
 ---
-title: Modificar consultas (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Modificar consultas
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +12,14 @@ helpviewer_keywords:
 ms.assetid: e2618a89-90fb-43d8-ac4e-cabd2aa3f1dc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 93383453d4c8d76cda5944356ba31e8cd97e1f52
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 9ddbf5e8ff8475abbb9d68c736815893be33ffab
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68258459"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75225453"
 ---
 # <a name="modify-queries-visual-database-tools"></a>Modificar consultas (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

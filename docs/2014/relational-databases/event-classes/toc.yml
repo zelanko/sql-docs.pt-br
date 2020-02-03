@@ -84,13 +84,13 @@
       href: database-suspect-data-page-event-class.md
     - name: classe de evento ErrorLog
       href: errorlog-event-class.md
-    - name: Classe de evento EventLog
+    - name: classe de evento EventLog
       href: eventlog-event-class.md
     - name: classe de evento Exception
       href: exception-event-class.md
     - name: classe de evento Exchange Spill
       href: exchange-spill-event-class.md
-    - name: Classe de evento Execution Warnings
+    - name: classe de evento Execution Warnings
       href: execution-warnings-event-class.md
     - name: Classe de evento Hash Warning
       href: hash-warning-event-class.md
@@ -146,11 +146,11 @@
   items:
     - name: classe de evento OLEDB Call
       href: oledb-call-event-class.md
-    - name: Classe de evento OLEDB DataRead
+    - name: classe de evento OLEDB DataRead
       href: oledb-dataread-event-class.md
-    - name: Classe de evento OLEDB Errors
+    - name: classe de evento OLEDB Errors
       href: oledb-errors-event-class.md
-    - name: Classe de evento OLEDB Provider Information
+    - name: classe de evento OLEDB Provider Information
       href: oledb-provider-information-event-class.md
     - name: classe de evento OLEDB QueryInterface
       href: oledb-queryinterface-event-class.md
@@ -177,7 +177,7 @@
       href: showplan-xml-event-class.md
     - name: classe de eventos Showplan XML For Query Compile
       href: showplan-xml-for-query-compile-event-class.md
-    - name: Classe de evento Showplan XML Statistics Profile
+    - name: classe de evento Showplan XML Statistics Profile
       href: showplan-xml-statistics-profile-event-class.md
     - name: 'classe de evento SQL:FullTextQuery'
       href: sql-fulltextquery-event-class.md
@@ -188,7 +188,7 @@
 - name: Categoria de evento Progress Report
   href: progress-report-event-category.md
   items:
-    - name: 'Relatório de andamento: Classe de evento Operação de Índice Online'
+    - name: 'Classe de evento Progress Report: Online Index Operation'
       href: progress-report-online-index-operation-event-class.md
 - name: Categoria de eventos Query Notifications
   href: query-notifications-event-category.md
@@ -326,7 +326,7 @@
       href: rpc-output-parameter-event-class.md
     - name: 'classe de evento RPC:Starting'
       href: rpc-starting-event-class.md
-    - name: 'Classe de evento SP:CacheHit'
+    - name: 'classe de evento SP:CacheHit'
       href: sp-cachehit-event-class.md
     - name: 'classe de evento SP:CacheInsert'
       href: sp-cacheinsert-event-class.md
@@ -351,25 +351,25 @@
       href: dtctransaction-event-class.md
     - name: classe de evento SQLTransaction
       href: sqltransaction-event-class.md
-    - name: 'TM: Classe de evento Begin Tran Completed'
+    - name: 'classe de evento TM: Begin Tran Completed'
       href: tm-begin-tran-completed-event-class.md
-    - name: 'TM: Classe de evento Begin Tran Starting'
+    - name: 'classe de evento TM: Begin Tran Starting'
       href: tm-begin-tran-starting-event-class.md
-    - name: 'TM: Classe de evento Commit Tran Completed'
+    - name: 'classe de evento TM: Commit Tran Completed'
       href: tm-commit-tran-completed-event-class.md
-    - name: 'TM: Classe de evento Commit Tran Starting'
+    - name: 'Classe de evento TM: Commit Tran Starting'
       href: tm-commit-tran-starting-event-class.md
-    - name: 'TM: Classe de evento Promote Tran Completed'
+    - name: 'classe de evento TM: Promote Tran Completed'
       href: tm-promote-tran-completed-event-class.md
-    - name: 'TM: Classe de evento Promote Tran Starting'
+    - name: 'classe de evento TM: Promote Tran Starting'
       href: tm-promote-tran-starting-event-class.md
-    - name: 'TM: Classe de evento Rollback Tran Completed'
+    - name: 'classe de evento TM: Rollback Tran Completed'
       href: tm-rollback-tran-completed-event-class.md
-    - name: 'TM: Classe de evento Rollback Tran Starting'
+    - name: 'classe de evento TM: Rollback Tran Starting'
       href: tm-rollback-tran-starting-event-class.md
-    - name: 'TM: Classe de evento Save Tran Completed'
+    - name: 'classe de evento TM: Save Tran Completed'
       href: tm-save-tran-completed-event-class.md
-    - name: 'TM: Classe de evento Save Tran Starting'
+    - name: 'classe de evento TM: Save Tran Starting'
       href: tm-save-tran-starting-event-class.md
     - name: classe de evento TransactionLog
       href: transactionlog-event-class.md
@@ -378,9 +378,9 @@
   items:
     - name: classe de evento Exec Prepared SQL
       href: exec-prepared-sql-event-class.md
-    - name: Classe de evento Prepare SQL
+    - name: classe de evento Prepare SQL
       href: prepare-sql-event-class.md
-    - name: 'Classe de evento SQL:BatchCompleted'
+    - name: 'classe de evento SQL:BatchCompleted'
       href: sql-batchcompleted-event-class.md
     - name: 'Classe de evento SQL:BatchStarting'
       href: sql-batchstarting-event-class.md

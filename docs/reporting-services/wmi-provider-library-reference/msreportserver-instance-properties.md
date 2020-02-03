@@ -16,13 +16,13 @@ ms.assetid: b494fd52-22f0-46af-be35-a1de8a138d95
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d1b8de8961ef9001c7ef94356a2b82bb248271af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65569141"
 ---
-# <a name="msreportserverinstance-properties"></a>Propriedades MSReportServer_Instance
+# <a name="msreportserver_instance-properties"></a>Propriedades MSReportServer_Instance
   A classe MSReportServer_Instance fornece informações básicas necessárias para um cliente se conectar a um servidor de relatório instalado.  
   
 ## <a name="public-properties"></a>Propriedades públicas  
@@ -37,6 +37,6 @@ ms.locfileid: "65569141"
 |[Versão](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-version.md)|Retorna a versão do servidor de relatório.|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Membros MSReportServer_Instance](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-members.md)  
+ [Membros de MSReportServer_Instance](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-members.md)  
   
   

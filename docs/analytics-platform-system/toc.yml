@@ -82,7 +82,7 @@
     - name: Permissões do PDW
       href: ../analytics-platform-system/pdw-permissions.md
       items:
-        - name: Conceder Permissões
+        - name: Conceder permissões
           href: ../analytics-platform-system/grant-permissions.md
     - name: Mensagens de erro
       href: ../analytics-platform-system/error-messages.md
@@ -173,7 +173,7 @@
               href: ../analytics-platform-system/polybase-configure-hadoop.md
             - name: Configurar a segurança do Hadoop
               href: ../analytics-platform-system/polybase-configure-hadoop-security.md
-            - name: Armazenamento de blobs do Azure
+            - name: Armazenamento do Blobs do Azure
               href: ../analytics-platform-system/polybase-configure-azure-blob-storage.md
         - name: Configurar o TLS 1.2 no APS
           href: ../analytics-platform-system/configure-tls12-aps.md

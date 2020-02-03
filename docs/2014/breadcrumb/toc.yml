@@ -23,7 +23,7 @@
                 - name: Ordenações
                   tocHref: /sql/relational-databases/collations/
                   topicHref: /sql/relational-databases/collations/collation-and-unicode-support
-                - name: Script
+                - name: Scripting
                   tocHref: /sql/relational-databases/scripting/
                   topicHref: /sql/relational-databases/scripting/database-engine-scripting
                   items:
@@ -45,7 +45,7 @@
                 - name: Rastreamento do SQL
                   tocHref: /sql/relational-databases/sql-trace/
                   topicHref: /sql/relational-databases/sql-trace/sql-trace
-                - name: Profiler
+                - name: Criador de perfil
                   tocHref: /sql/tools/sql-server-profiler/
                   topicHref: /sql/tools/sql-server-profiler/sql-server-profiler
                 - name: Controlar Alterações
@@ -100,7 +100,7 @@
                 - name: Distributed Replay
                   tocHref: /sql/tools/distributed-replay/
                   topicHref: /sql/tools/distributed-replay/sql-server-distributed-replay
-                - name: Coleta de Dados
+                - name: Coleta de dados
                   tocHref: /sql/relational-databases/data-collection/
                   topicHref: /sql/relational-databases/data-collection/data-collection
                 - name: Monitor de desempenho
@@ -138,7 +138,7 @@
                     - name: Classes de evento
                       tocHref: /sql/relational-databases/event-classes/
                       topicHref: /sql/relational-databases/event-classes/sql-server-event-class-reference
-            - name: Analysis Services
+            - name: Serviços de análise
               tocHref: /sql/analysis-services/
               topicHref: /sql/analysis-services/analysis-services
               items:
@@ -184,13 +184,13 @@
                     - name: Transformações
                       tocHref: /sql/integration-services/data-flow/transformations/
                       topicHref: /sql/integration-services/data-flow/transformations/integration-services-transformations
-                - name: Change Data Capture
+                - name: Captura de dados de alterações
                   tocHref: /sql/integration-services/change-data-capture/
                   topicHref: /sql/integration-services/change-data-capture/change-data-capture-ssis
                 - name: Importação e exportação de dados
                   tocHref: /sql/integration-services/import-export-data/
                   topicHref: /sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard
-                - name: Solução de problemas
+                - name: solução de problemas
                   tocHref: /sql/integration-services/troubleshooting/
                   topicHref: /sql/integration-services/troubleshooting/troubleshooting-tools-for-package-development
                 - name: Gerenciador de Conexões
@@ -205,10 +205,10 @@
                 - name: Servidor e catálogo
                   tocHref: /sql/integration-services/catalog/
                   topicHref: /sql/integration-services/catalog/integration-services-ssis-server-and-catalog
-                - name: Packages
+                - name: Pacotes
                   tocHref: /sql/integration-services/packages/
                   topicHref: /sql/integration-services/packages/deploy-integration-services-ssis-projects-and-packages
-                - name: Monitor
+                - name: Monitoramento
                   tocHref: /sql/integration-services/performance/
                   topicHref: /sql/integration-services/performance/monitor-running-packages-and-other-operations
                 - name: Segurança
@@ -245,7 +245,7 @@
                 - name: Procedimentos armazenados e OLE
                   tocHref: /sql/relational-databases/stored-procedures/
                   topicHref: /sql/relational-databases/stored-procedures/stored-procedures-database-engine
-                - name: Pesquisa
+                - name: Search
                   tocHref: /sql/relational-databases/search/
                   topicHref: /sql/relational-databases/search/full-text-search
                 - name: Funções definidas pelo usuário
@@ -300,10 +300,10 @@
                     - name: Erros e eventos
                       tocHref: /sql/relational-databases/replication/errors-events/
                       topicHref: /sql/relational-databases/replication/errors-events/errors-events-replication
-                    - name: Mesclagem
+                    - name: Mesclar
                       tocHref: /sql/relational-databases/replication/merge/
                       topicHref: /sql/relational-databases/replication/merge/merge-replication
-                    - name: Monitor
+                    - name: Monitoramento
                       tocHref: /sql/relational-databases/replication/monitor/
                       topicHref: /sql/relational-databases/replication/monitoring-replication
                     - name: Não SQL
@@ -312,7 +312,7 @@
                     - name: Publicar
                       tocHref: /sql/relational-databases/replication/publish/
                       topicHref: /sql/relational-databases/replication/publish/publish-data-and-database-objects
-                    - name: Transacional.
+                    - name: Transacional
                       tocHref: /sql/relational-databases/replication/transactional/
                       topicHref: /sql/relational-databases/replication/transactional/transactional-replication
                     - name: Segurança
@@ -325,7 +325,7 @@
                     - name: OLE DB
                       tocHref: /sql/relational-databases/native-client/ole-db/
                       topicHref: /sql/relational-databases/native-client/ole-db/sql-server-native-client-ole-db
-                    - name: ODBC
+                    - name: ODBCODBC
                       tocHref: /sql/relational-databases/native-client/odbc/
                       topicHref: /sql/relational-databases/native-client/odbc/sql-server-native-client-odbc
                       items:
@@ -369,7 +369,7 @@
                 - name: Referência do provedor WMI
                   tocHref: /sql/reporting-services/wmi-provider-library-reference/
                   topicHref: /sql/reporting-services/wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs
-                - name: Solução de problemas
+                - name: solução de problemas
                   tocHref: /sql/reporting-services/troubleshooting/
                   topicHref: /sql/reporting-services/troubleshooting/errors-and-events-reference-reporting-services
                 - name: Integração de Aplicativo
@@ -403,7 +403,7 @@
                 - name: Conjuntos de linhas de esquema
                   tocHref: /sql/analysis-services/schema-rowsets/
                   topicHref: /sql/analysis-services/schema-rowsets/analysis-services-schema-rowsets
-                - name: Script
+                - name: Scripting
                   tocHref: /sql/analysis-services/scripting/
                   topicHref: /sql/analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla
                   items:
@@ -422,7 +422,7 @@
                 - name: XMLA
                   tocHref: /sql/analysis-services/xmla/
                   topicHref: /sql/analysis-services/xmla/xml-for-analysis-xmla-reference
-            - name: Instalar o SQL Server
+            - name: Instale o SQL Server
               tocHref: /sql/database-engine/install-windows/
               topicHref: /sql/database-engine/install-windows/installation-for-sql-server
             - name: Tutorial de T-SQL

@@ -33,7 +33,7 @@
   href: monitor-reporting-services-subscriptions.md
 - name: Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription
   href: manage-subscription-owners-and-run-subscription-powershell.md
-- name: Agendamentos
+- name: Agendas
   href: schedules.md
   items:
     - name: 'Create, Modify, and Delete Schedules'
@@ -42,5 +42,5 @@
       href: pause-and-resume-shared-schedules.md
     - name: Alterar configurações de fuso horário e relógio em um servidor de relatório
       href: change-time-zones-and-clock-settings-on-a-report-server.md
-    - name: Gerenciar um processo em execução
+    - name: Manage a Running Process
       href: manage-a-running-process.md

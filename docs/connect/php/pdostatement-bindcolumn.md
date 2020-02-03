@@ -11,10 +11,10 @@ ms.assetid: bbdcea53-d23d-4769-89a0-95c7cf4d5390
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d4b159e57f6f2335e894490f7e34d159bd95b2b6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993138"
 ---
 # <a name="pdostatementbindcolumn"></a>PDOStatement::bindColumn
@@ -29,7 +29,7 @@ Associa uma variável a uma coluna em um conjunto de resultados.
 bool PDOStatement::bindColumn($column, &$param[, $type[, $maxLen[, $driverdata ]]] );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
 $*column*: o número da coluna (misto, índice baseado em 1) ou o nome da coluna no conjunto de resultados.  
   
 &$*param*: o nome (misto) da variável PHP à qual a coluna será associada.  
@@ -43,7 +43,7 @@ $*driverdata*: um ou mais parâmetros mistos opcionais para o driver. Por exempl
 ## <a name="return-value"></a>Valor retornado  
 TRUE se bem-sucedido; caso contrário, FALSE.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 O suporte para PDO foi adicionado na versão 2.0 dos [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
 ## <a name="example"></a>Exemplo  

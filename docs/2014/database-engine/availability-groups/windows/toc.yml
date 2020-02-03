@@ -5,7 +5,7 @@
       href: prereqs-restrictions-recommendations-always-on-availability.md
     - name: Modos de disponibilidade
       href: availability-modes-always-on-availability-groups.md
-- name: Guia de início rápido
+- name: Guia de Início Rápido
   items:
     - name: Introdução
       href: getting-started-with-always-on-availability-groups-sql-server.md
@@ -221,7 +221,7 @@
       items:
         - name: Propriedades de réplica de disponibilidade (página Geral)
           href: availability-replica-properties-general-page.md
-        - name: 'Propriedades do grupo de disponibilidade: Novo Grupo de Disponibilidade (página Preferências de Backup)'
+        - name: 'Propriedades de grupo de disponibilidade: novo grupo de disponibilidade (página Preferências de Backup)'
           href: availability-group-properties-new-availability-group-backup-preferences-page.md
     - name: Assistente para Grupo de Disponibilidade
       items:

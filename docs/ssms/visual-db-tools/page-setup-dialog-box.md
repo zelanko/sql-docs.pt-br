@@ -1,10 +1,9 @@
 ---
-title: Caixa de diálogo Configurar Página | Microsoft Docs
-ms.custom: ''
+title: Caixa de diálogo Configurar Página
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +11,14 @@ f1_keywords:
 ms.assetid: 03deb946-34c6-48b1-b639-5e888f47bddb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2a3354661aa51978bce2381553c978cac9a8fec9
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: bc09dffbff93e45ded3ed3fa4689ad88eb780f46
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263273"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252116"
 ---
 # <a name="page-setup-dialog-box"></a>Caixa de diálogo Configurar Página
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +42,7 @@ Imprime um documento com a borda maior do papel no topo da página.
 Left (à esquerda)  
 Define a distância entre a borda esquerda da página e a borda esquerda das linhas sem-recuo alinhadas à esquerda.  
   
-Right (à direita)  
+Right  
 Define a distância entre a borda direita da página e a borda direita das linhas sem-recuo alinhadas à direita.  
   
 TOP  
@@ -50,7 +51,7 @@ Define a distância entre a parte superior da página e a parte superior da prim
 Inferior  
 Define a distância entre a parte inferior da página e a parte inferior da última linha na página.  
   
-## <a name="other"></a>Outro  
+## <a name="other"></a>Outros  
 **Visualização**  
 O quadro de visualização exibe os efeitos das configurações selecionadas.  
   

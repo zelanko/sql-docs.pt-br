@@ -1,29 +1,28 @@
 ---
-title: Importar um modelo de rastreamento (SQL Server Profiler) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: Importar um modelo de rastreamento
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- templates [SQL Server], traces
-- trace templates [SQL Server]
-- importing trace templates
 ms.assetid: 1dd5391e-dcd5-4ac2-b8dd-0e40922758a8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 03a029abbf9468bbf2164be9e6a09644a2363428
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 309edccd7793e2dbf17105b4bf8f31e976994742
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68074947"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307189"
 ---
 # <a name="import-a-trace-template-sql-server-profiler"></a>Importar um modelo de rastreamento (SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Este tópico descreve como importar um arquivo de modelo de rastreamento (.tdf) usando [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
+
+Este tópico descreve como importar um arquivo de modelo de rastreamento (.tdf) usando [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
 ### <a name="to-import-a-trace-template"></a>Para importar um modelo de rastreamento  
   

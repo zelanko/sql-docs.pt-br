@@ -1,6 +1,6 @@
 ---
-title: Abrir e configurar o Pesquisador de Objetos | Microsoft Docs
-ms.custom: ''
+title: Abrir e configurar o Pesquisador de Objetos
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: a138ba3d-d00b-420c-917e-e586d590d30f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8e09772c895fd2c5008c9d32d777919092bcd72b
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 07a21139575c3eedfddec9f22254fe82a5b5659c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264048"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257129"
 ---
 # <a name="open-and-configure-object-explorer"></a>Abrir e configurar o Pesquisador de Objetos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,6 +31,6 @@ Para definir as configurações do Pesquisador de Objetos, no menu **Ferramentas
 [Pesquisador de Objetos](../../ssms/object/object-explorer.md)  
 [Conectar-se a uma instância do Pesquisador de Objetos](../../ssms/object/connect-to-an-instance-from-object-explorer.md)  
 [Gerenciar objetos usando o Pesquisador de Objetos](../../ssms/object/manage-objects-by-using-object-explorer.md)  
-[Painel Detalhes do Pesquisador de Objetos](../../ssms/object/object-explorer-details-pane.md)  
+[Painel de detalhes do Pesquisador de Objetos](../../ssms/object/object-explorer-details-pane.md)  
 [Relatórios personalizados no Management Studio](../../ssms/object/custom-reports-in-management-studio.md)  
   

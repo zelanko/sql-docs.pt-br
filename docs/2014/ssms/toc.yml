@@ -296,7 +296,7 @@
           href: tutorials/lesson-2-5-other-ways-of-viewing-the-code-window.md
         - name: Gerar script de uma tabela
           href: tutorials/lesson-2-6-script-a-table.md
-    - name: 'Lição 3: Como trabalhar com modelos, soluções e projetos de script'
+    - name: 'Lição 3: Trabalhando com modelos, soluções e projetos de script'
       href: tutorials/lesson-3-working-with-templates-solutions-and-script-projects.md
       items:
         - name: Criar scripts usando modelos

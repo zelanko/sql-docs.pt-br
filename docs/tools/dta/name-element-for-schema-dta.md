@@ -1,10 +1,7 @@
 ---
-title: Elemento de nome para o esquema (DTA) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: Elemento nome para esquema (DTA)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +11,22 @@ helpviewer_keywords:
 ms.assetid: 014e4854-fed2-454b-8557-5f7c5bb6b17a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b92dbbee5762e2e2e5e29a3cc3765369e7c45404
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 436d994836697c683df677816113ce5205490921
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034706"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306352"
 ---
 # <a name="name-element-for-schema-dta"></a>Elemento nome para esquema (DTA)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Contém o nome do esquema.  
+
+Contém o nome do esquema.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,7 +40,7 @@ ms.locfileid: "68034706"
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Descrição|  
+|Característica|DESCRIÇÃO|  
 |--------------------|-----------------|  
 |**Comprimento e tipo de dados**|**string**, entre 1 e 255 caracteres.|  
 |**Valor padrão**|Nenhum.|  

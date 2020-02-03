@@ -9,10 +9,10 @@ ms.assetid: 628c8775-c62d-45ac-b349-23db86fa4e6c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 21de137cefcfc61e91739ff33b2a9f0de4c3a05f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63194379"
 ---
 # <a name="create-drillthrough-rdlc-report-with-parameters---reportviewer"></a>Criar um relatório de detalhamento (RDLC) com parâmetros – ReportViewer
@@ -26,7 +26,7 @@ Este passo a passo pressupõe que você esteja familiarizado com as consultas Tr
 Use o Visual Studio 2015 e o Aplicativo Web ASP .NET para criar uma página da Web ASP.NET com um controle ReportViewer. O controle é configurado para exibir um relatório criado por você. Neste passo a passo, você cria o aplicativo no Microsoft Visual C #.  
   
 ## <a name="tasks"></a>Tarefas  
-[Lição 1: Criar um novo site](../reporting-services/lesson-1-create-a-new-web-site.md)  
+[Lição 1: Criar um novo Site](../reporting-services/lesson-1-create-a-new-web-site.md)  
 [Lição 2: Definir uma conexão de dados e uma tabela de dados para o relatório pai](../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md)  
 [Lição 3: Criar o relatório pai usando o Assistente de Relatório](../reporting-services/lesson-3-design-the-parent-report-using-the-report-wizard.md)  
 [Lição 4: Definir uma conexão de dados e uma tabela de dados para o relatório filho](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md)  
@@ -34,7 +34,7 @@ Use o Visual Studio 2015 e o Aplicativo Web ASP .NET para criar uma página da W
 [Lição 6: Adicionar um controle ReportViewer ao aplicativo](../reporting-services/lesson-6-add-a-reportviewer-control-to-the-application.md)  
 [Lição 7: Adicionar ação de detalhamento ao relatório pai](../reporting-services/lesson-7-add-drillthrough-action-on-parent-report.md)  
 [Lição 8: Criar um filtro de dados](../reporting-services/lesson-8-create-a-data-filter.md)  
-[Lesson 9: Build and Run the Application](../reporting-services/lesson-9-build-and-run-the-application.md)  
+[Lição 9: Criar e executar o aplicativo](../reporting-services/lesson-9-build-and-run-the-application.md)  
   
 ## <a name="see-also"></a>Consulte Também  
 [Tutoriais do Reporting Services &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)  

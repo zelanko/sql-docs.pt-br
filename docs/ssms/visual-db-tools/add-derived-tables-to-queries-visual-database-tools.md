@@ -1,10 +1,7 @@
 ---
-title: Adicionar tabelas derivadas a consultas (Ferramentas de Banco de Dados Visual) | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
+title: Adicionar Tabelas Derivadas a Consultas
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,14 +12,19 @@ helpviewer_keywords:
 ms.assetid: 05f1ba1d-465f-4e36-84bb-21b963c9b8f9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: da76d9e2f82f832e5426522047caa01d76262e39
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
+ms.openlocfilehash: b36b4774386343ee691cfa455787cf093639ce07
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263354"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253437"
 ---
 # <a name="add-derived-tables-to-queries-visual-database-tools"></a>Adicionar tabelas derivadas a consultas (Visual Database Tools)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 As tabelas derivadas são conjuntos de resultados usados como origens de tabela em uma consulta. Você pode adicionar uma tabela derivada a uma consulta no painel **Diagrama**.  
   

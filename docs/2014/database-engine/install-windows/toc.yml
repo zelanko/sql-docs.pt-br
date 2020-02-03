@@ -222,13 +222,13 @@
       items:
         - name: 'Lista de verificação: Reporting Services, Power View e PowerPivot para SharePoint'
           href: ../../sql-server/install/deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md
-        - name: 'Lista de verificação: Expandir adicionando servidores do PowerPivot a um farm do SharePoint 2010'
+        - name: 'Lista de verificação: expansão adicionando servidores do PowerPivot a um farm do SharePoint 2010'
           href: ../../sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md
-        - name: 'Lista de verificação: Instalar o Reporting Services em um farm existente do SharePoint'
+        - name: 'Lista de verificação: instalar o Reporting Services em um farm existente do SharePoint'
           href: ../../sql-server/install/deployment-checklist-install-reporting-services-existing-sharepoint-farm.md
-        - name: 'Lista de verificação: Instalação multisservidor do PowerPivot para SharePoint 2010'
+        - name: 'Lista de verificação: instalação multisservidor do PowerPivot para SharePoint 2010'
           href: ../../sql-server/install/deployment-checklist-multiserver-installation-powerpivot-sharepoint-2010.md
-        - name: 'Lista de verificação: Usar o PowerShell para verificar o PowerPivot para SharePoint'
+        - name: 'Lista de verificação: use o PowerShell para verificar o PowerPivot para SharePoint'
           href: ../../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md
     - name: Instalação do modo do SharePoint do Reporting Services (SharePoint 2010 e SharePoint 2013)
       href: ../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md

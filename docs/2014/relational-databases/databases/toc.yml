@@ -22,7 +22,7 @@
       href: modified-features-contained-database.md
     - name: Ordenações de banco de dados independentes
       href: contained-database-collations.md
-    - name: Security Best Practices with Contained Databases
+    - name: Práticas recomendadas de segurança com bancos de dados independentes
       href: security-best-practices-with-contained-databases.md
     - name: Migrate to a Partially Contained Database
       href: migrate-to-a-partially-contained-database.md

@@ -16,10 +16,10 @@ ms.assetid: 0aa5d372-16aa-4790-a8f6-f8b742798f8f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0c0c718524b8800df02625e6392de1f9d4600291
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953320"
 ---
 # <a name="getcatalogterm-method-sqlserverdatabasemetadata"></a>Método getCatalogTerm (SQLServerDatabaseMetaData)
@@ -40,7 +40,7 @@ public java.lang.String getCatalogTerm()
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O método getCatalogTerm é especificado pelo método getCatalogTerm na interface java.sql.DatabaseMetaData.  
   
  Quando o [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] é usado com um banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], este método retorna o termo "database".  

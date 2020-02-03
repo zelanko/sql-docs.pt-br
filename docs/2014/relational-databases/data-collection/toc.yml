@@ -1,4 +1,4 @@
-- name: Coleta de Dados
+- name: Coleta de dados
   href: data-collection.md
 - name: Gerenciar coleta de dados
   href: manage-data-collection.md

@@ -62,7 +62,7 @@
           href: ../../database-engine/options-text-editor-xml-formatting-page.md
         - name: Opções (página Editor de texto – XML – Diversos)
           href: ../../database-engine/options-text-editor-xml-miscellaneous-page.md
-        - name: 'Opções (página Editor de Texto: Guia Editor e Barra de Status)'
+        - name: 'Opções (Editor de Texto: página Guia Editor e Barra de Status)'
           href: ../../database-engine/options-text-editor-editor-tab-and-status-bar-page.md
         - name: Opções (página Execução da consulta/SQL Server/Geral)
           href: ../../database-engine/options-query-execution-sql-server-general-page.md
@@ -198,7 +198,7 @@
       href: transact-sql-debugger-threads-window.md
     - name: Janela Comando
       href: transact-sql-debugger-command-window.md
-    - name: Janela Saída
+    - name: Janela de saída
       href: transact-sql-debugger-output-window.md
     - name: Janela de Observação
       href: transact-sql-debugger-watch-window.md

@@ -1,6 +1,6 @@
 - name: Ferramentas
   href: reporting-services-tools.md
-- name: 'Tutorial: Como localizar e iniciar as Ferramentas do Reporting Services'
+- name: 'Tutorial: Como localizar e iniciar as ferramentas do Reporting Services'
   href: tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md
 - name: Reporting Services no SQL Server Data Tools
   href: reporting-services-in-sql-server-data-tools-ssdt.md
@@ -55,7 +55,7 @@
       items:
         - name: Estrutura de Tópicos do Documento
           href: document-outline.md
-        - name: Modo Design
+        - name: Modo de exibição de Design
           href: design-view.md
         - name: Modo Visualizar
           href: preview-view.md
@@ -183,13 +183,13 @@
           href: ../new-linked-report-page-report-manager.md
         - name: Página Novo Modelo
           href: ../new-model-page-report-manager.md
-        - name: 'Atribuição de Nova Função: Página Editar Atribuição de Função'
+        - name: 'Página Nova Atribuição de Função: Editar Atribuição de Função'
           href: ../new-role-assignment-edit-role-assignment-page-report-manager.md
-        - name: 'Novo Agendamento: Página Editar Agendamento'
+        - name: 'Página Nova Agenda: Editar Agenda'
           href: ../new-schedule-edit-schedule-page-report-manager.md
         - name: Página Nova Assinatura ou Editar Assinatura
           href: ../new-subscription-or-edit-subscription-page-report-manager.md
-        - name: 'Novas Atribuições de Função do Sistema: Página Editar Atribuições de Função do Sistema'
+        - name: 'Atribuições de nova função do sistema: página Editar Atribuições de função do sistema'
           href: ../new-system-role-assignments-edit-system-role-assignments-page-report-manager.md
         - name: Página Propriedades do Parâmetro
           href: ../parameters-properties-page-report-manager.md
