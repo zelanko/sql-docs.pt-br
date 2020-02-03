@@ -1,10 +1,9 @@
 ---
-title: Abrir diagramas de banco de dados (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Abrir diagramas de banco de dados
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +13,14 @@ helpviewer_keywords:
 ms.assetid: 06d9a7d5-ef04-400c-a340-7a3e5d54f685
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d183f673a2cd00200c90dd81e7f407ee84170bc2
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 7b6a12c3172b029c21ec0145d2dd872dc958c8b8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263339"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251444"
 ---
 # <a name="open-database-diagrams-visual-database-tools"></a>Abrir diagramas de banco de dados (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -1,6 +1,6 @@
 ---
-title: Adicionar snippets de Transact-SQL | Microsoft Docs
-ms.custom: ''
+title: Adicionar snippets de Transact-SQL
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,12 +11,12 @@ ms.assetid: 901c7995-8eb5-4d12-8bb0-de0a922b48f8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 255fb72bea9ac6d967a69576804c2d70748f22d0
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 6f2878a93f241235bb725cd40afd169f4c7d31aa
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68256869"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246467"
 ---
 # <a name="add-transact-sql-snippets"></a>Adicionar snippets de Transact-SQL
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "68256869"
   
 2.  Selecione o menu **Ferramentas** e clique em **Gerenciador de Snippets de Código**.  
   
-3.  Clique no botão **Importar** .  
+3.  Clique no botão **Importar**.  
   
 4.  Navegue até a pasta que contém seu trecho, clique no arquivo .snippet e clique em **Abrir** .  
   
@@ -108,7 +108,7 @@ ms.locfileid: "68256869"
   
 3.  Selecione o menu **Ferramentas** e clique em **Gerenciador de Snippets de Código**.  
   
-4.  Clique no botão **Importar** .  
+4.  Clique no botão **Importar**.  
   
 5.  Navegue até a pasta que contém TryCatch.snippet, clique no arquivo TryCatch.snippet e clique em **Abrir** . Você não deve ter um snippet TryCatch na pasta **Meus Snippets de Código** .  
   

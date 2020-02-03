@@ -16,10 +16,10 @@ ms.assetid: 377746c7-8c9c-41f5-8490-ca0dd56fd57a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ff7355a5d63d5f6335612d2bf5de5131f23cab96
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954381"
 ---
 # <a name="getarray-method-int-sqlserverresultset"></a>Método getArray (int) (SQLServerResultSet)
@@ -34,7 +34,7 @@ ms.locfileid: "67954381"
 public java.sql.Array getArray(int i)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *i*  
   
  Um **int** que indica o índice de coluna.  
@@ -45,7 +45,7 @@ public java.sql.Array getArray(int i)
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse método getArray é especificado pelo método getArray na interface  java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Consulte Também  

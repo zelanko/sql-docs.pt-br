@@ -1,6 +1,6 @@
 ---
-title: Alterar a cor, o tamanho e o estilo da fonte | Microsoft Docs
-ms.custom: ''
+title: Alterar cor, tamanho e estilo da fonte
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -18,12 +18,12 @@ ms.assetid: 5c3061db-23c5-4d9f-a6ab-6b53a1a83f88
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d4f061857b18e8f316404e134a00e0ae040de154
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 3d479991bed66e04a7c42870f0f1ba0c61ca7101
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68256591"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246424"
 ---
 # <a name="change-font-color-size-and-style"></a>Alterar cor, tamanho e estilo da fonte
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,6 +46,6 @@ ms.locfileid: "68256591"
   
 ## <a name="see-also"></a>Consulte Também  
  [Imprimir código e resultados](../../relational-databases/scripting/print-code-and-results.md)   
- [Codificação por cores no Editor de Consultas](../../relational-databases/scripting/color-coding-in-query-editors.md)  
+ [Codificação por cores nos Editores de Consulta](../../relational-databases/scripting/color-coding-in-query-editors.md)  
   
   
