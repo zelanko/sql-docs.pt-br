@@ -16,13 +16,13 @@ ms.assetid: ecccd16b-eba9-4e95-b55d-f15c621e003f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e73ce189b38f3610468993999df172d778f30026
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65578094"
 ---
-# <a name="schedules"></a>Agendamentos
+# <a name="schedules"></a>Agendas
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornece **agendas compartilhadas** e **específicas de relatório** para ajudar a controlar o processamento e a distribuição de relatórios. A diferença entre os dois tipos de agendas é como elas são definidas, armazenadas e administradas. A construção interna dos dois tipos de agendas é a mesma. Todas as agendas especificam um tipo de recorrência: mensal, semanal ou diária. Dentro do tipo de recorrência, você define os intervalos e as faixas para a frequência com que um evento ocorre. O tipo de padrão de recorrência e a forma como ele é especificado são os mesmos para criar uma agenda compartilhada ou uma agenda específica de relatório.
   
   -   São criadas agendas compartilhadas como itens separados. Depois que eles são criados, você faz referência a eles ao definir uma assinatura ou alguma outra operação agendada.  
@@ -81,7 +81,7 @@ ms.locfileid: "65578094"
 ##  <a name="bkmk_credentials"></a> Armazenar credenciais e contas de processamento  
  O modo como você trabalha com uma agenda depende das tarefas que fazem parte de sua atribuição de função. Se você estiver usando funções predefinidas, os usuários que são Gerenciadores de Conteúdo e Administradores de Sistema podem criar e gerenciar qualquer agenda. Se atribuições de função personalizadas forem utilizadas, a atribuição de função deve incluir tarefas que ofereçam suporte para as operações agendadas.  
   
-|Para fazer isso|Inclua esta tarefa|Funções predefinidas do modo nativo|Grupos do modo do SharePoint|  
+|Para fazer isto|Inclua esta tarefa|Funções predefinidas do modo nativo|Grupos do modo do SharePoint|  
 |----------------|-----------------------|----------------------------------|----------------------------|  
 |Criar, modificar ou excluir agendas compartilhadas|Gerenciar agendas compartilhadas|Administrador do Sistema|Proprietários|  
 |Selecionar agendas compartilhadas|Exibir agendas compartilhadas|Usuário do Sistema|Membros|  

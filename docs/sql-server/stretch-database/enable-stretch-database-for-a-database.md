@@ -12,36 +12,36 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: db08d84dd1619d8c9e2e4d8e796abdd0c9d202fc
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73844587"
 ---
 # <a name="enable-stretch-database-for-a-database"></a>Enable Stretch Database for a database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
 
 
-  Para configurar um banco de dados para o Stretch Database, selecione **Tarefas | Stretch | Habilitar** para um banco de dados no SQL Server Management Studio a fim de abrir o assistente **Habilitar Banco de Dados para Stretch**. Você também pode usar o Transact-SQL de modo a habilitar o Stretch Database para um banco de dados.  
+  Para configurar um banco de dados para o Stretch Database, selecione **Tarefas | Stretch | Habilitar** para um banco de dados no SQL Server Management Studio a fim de abrir o assistente **Habilitar Banco de Dados para Stretch** . Você também pode usar o Transact-SQL de modo a habilitar o Stretch Database para um banco de dados.  
   
  Se você selecionar **Tarefas | Stretch | Habilitar** para uma tabela individual e ainda não tiver habilitado o banco de dados para o Stretch Database, o assistente vai configurar o banco de dados para o Stretch Database e permitirá que você selecione tabelas como parte do processo. Siga as etapas deste artigo em vez das etapas em [Habilitar o Stretch Database para uma tabela](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md).  
   
- Habilitar o Stretch Database em um banco de dados ou uma tabela exige permissões db_owner. Habilitar o Stretch Database em um banco de dados também exige permissões CONTROL DATABASE.  
+ Habilitar o Stretch Database em um banco de dados ou uma tabela exige permissões db_owner. Habilitar o Banco de Dados de Stretch em um banco de dados também exige as permissões CONTROLAR BANCO DE DADOS.  
 
 > [!NOTE]
 > Mais tarde, se você desabilitar o Stretch Database, lembre-se de que desabilitar uma tabela ou um banco de dados do Stretch Database não excluirá o objeto remoto. Se você quiser excluir a tabela remota ou o banco de dados remoto, descarte-o(a) usando o Portal de Gerenciamento do Azure. Os objetos remotos continuam incorrendo em custos do Azure até que você os exclua manualmente. 
  
 ## <a name="before-you-get-started"></a>Antes de começar  
   
--   Antes de configurar um banco de dados para o Stretch, é recomendável executar o Supervisor do Stretch Database para identificar bancos de dados e tabelas qualificados para o Stretch. O Supervisor do Stretch Database também identifica problemas de bloqueio. Para obter mais informações, veja [Identificar bancos de dados e tabelas para o Stretch Database executando o supervisor do Stretch Database](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md).  
+-   Antes de configurar um banco de dados para o Stretch, é recomendável executar o Supervisor do Stretch Database para identificar bancos de dados e tabelas qualificados para o Stretch. O Supervisor do Banco de Dados do Stretch também identifica os problemas de bloqueio. Para obter mais informações, veja [Identificar bancos de dados e tabelas para o Stretch Database executando o supervisor do Stretch Database](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md).  
   
 -   Leia [Limitações do Stretch Database](../../sql-server/stretch-database/limitations-for-stretch-database.md).  
   
--   O Stretch Database migra dados para o Azure. Portanto, você precisa ter uma conta do Azure e uma assinatura para cobrança. Para obter uma conta do Azure, [clique aqui](https://azure.microsoft.com/pricing/free-trial/).  
+-   O Banco de Dados de Stretch migra os dados para o Azure. Portanto, você precisa ter uma conta do Azure e uma assinatura para cobrança. Para obter uma conta do Azure, [clique aqui](https://azure.microsoft.com/pricing/free-trial/).  
   
 -   Ter as informações de conexão e o logon necessárias para criar um novo servidor do Azure ou para selecionar um servidor do Azure existente.  
   
-##  <a name="EnableTSQLServer"></a> Pré-requisito: Habilitar o Stretch Database no servidor  
+##  <a name="EnableTSQLServer"></a> Pré-requisito: habilitar Stretch Database no servidor  
  Para que seja possível habilitar o Stretch Database em um banco de dados ou em uma tabela, você precisa habilitá-lo no servidor local. Essa operação requer permissões sysadmin ou serveradmin.  
   
 -   Se você tiver as permissões administrativas necessárias, o assistente **Habilitar o Banco de Dados para Stretch** vai configurar o servidor para o Stretch.  
@@ -66,11 +66,11 @@ GO
 ##  <a name="EnableTSQLDatabase"></a> Usar o Transact-SQL para habilitar o Stretch Database em um banco de dados  
  Para que seja possível habilitar o Stretch Database em tabelas individuais, você precisa habilitá-lo no banco de dados.  
   
- Habilitar o Stretch Database em um banco de dados ou uma tabela exige permissões db_owner. Habilitar o Stretch Database em um banco de dados também exige permissões CONTROL DATABASE.  
+ Habilitar o Stretch Database em um banco de dados ou uma tabela exige permissões db_owner. Habilitar o Banco de Dados de Stretch em um banco de dados também exige as permissões CONTROLAR BANCO DE DADOS.  
   
 1.  Antes de começar, escolha um servidor do Azure existente para os dados que o Stretch Database migra, ou crie um novo servidor do Azure.  
   
-2.  No servidor do Azure, crie uma regra de firewall com o intervalo de endereços IP do SQL Server que permita ao SQL Server se comunicar com o servidor remoto.  
+2.  No servidor do Azure, crie uma regra de firewall com o endereço IP do SQL Server que permita ao SQL Server comunicar-se com o servidor remoto.  
 
     Você pode encontrar facilmente os valores necessários e criar a regra de firewall ao tentar se conectar ao servidor do Azure no Pesquisador de Objetos do SSMS (SQL Server Management Studio). O SSMS o ajuda a criar a regra, abrindo a caixa de diálogo a seguir, que já inclui os valores de endereços IP necessários.
     

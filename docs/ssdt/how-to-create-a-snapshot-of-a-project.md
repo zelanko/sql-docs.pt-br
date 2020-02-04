@@ -1,11 +1,7 @@
 ---
-title: 'Como fazer: criar um instantâneo de um projeto | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Criar um instantâneo de um projeto
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.SqlProjectImportSnapshotSummaryDialog.dialog
@@ -13,14 +9,19 @@ f1_keywords:
 ms.assetid: bed670a3-13bd-4d88-91a1-58d5b9524a97
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3fad9b94c83a314ab252ed52377d6fb332e7029e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 40111c8807c0a0aa6162e8ad6a03d796406d5c1d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67897201"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241527"
 ---
-# <a name="how-to-create-a-snapshot-of-a-project"></a>Como fazer: Criar um instantâneo de um projeto
+# <a name="how-to-create-a-snapshot-of-a-project"></a>Como: Criar um instantâneo de um projeto
+
 Um arquivo de **Aplicativo da camada de dados** fornece uma representação somente leitura do esquema de banco de dados no momento em que ele é criado. Ele está sendo tratado basicamente como um esquema de banco de dados do qual você pode importar os objetos de esquema de volta para um projeto. Você também pode compará-lo com o esquema de um banco de dados ou um projeto e atualizar o banco de dados ou o projeto para refletir o esquema definido no instantâneo.  
   
 No caso de um erro do usuário em um projeto de banco de dados de origem, você poderá reverter projeto de origem ao estado em que estava quando o instantâneo foi criado. Você também pode estabelecer instantâneos em várias fases de seu desenvolvimento para a finalidade de linha de base.  
@@ -64,5 +65,5 @@ No caso de um erro do usuário em um projeto de banco de dados de origem, você 
     Você pode localizar facilmente o delta de instantâneos diferentes usando a Comparação de Esquemas. Neste caso, você pode descobrir como seu projeto evolui durante o processo de desenvolvimento.  
   
 ## <a name="see-also"></a>Consulte Também  
-[Como: Usar comparação de esquema para comparar definições de banco de dados diferentes](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
+[Como usar comparação de esquema para comparar definições de banco de dados diferentes](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
   

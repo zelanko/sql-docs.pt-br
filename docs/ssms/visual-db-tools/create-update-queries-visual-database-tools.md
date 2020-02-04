@@ -1,10 +1,9 @@
 ---
-title: Criar consultas de atualização (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Criar consultas de atualização
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +14,14 @@ helpviewer_keywords:
 ms.assetid: 178b7b75-8078-4e61-b2a8-4719b9d8033d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e6f2f2102008976bd997ffae729907fb0d0e0f58
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: b2b8a39bc08326db3cfe93e885b302b98df3a0ce
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266918"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254218"
 ---
 # <a name="create-update-queries-visual-database-tools"></a>Criar consultas de atualização (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

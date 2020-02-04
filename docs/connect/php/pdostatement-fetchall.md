@@ -11,10 +11,10 @@ ms.assetid: be74188a-77cd-4d19-b16e-77278373c979
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5bd53aedf65bd1e7935c7e51eb90fb78d65d2bed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67936031"
 ---
 # <a name="pdostatementfetchall"></a>PDOStatement::fetchAll
@@ -29,7 +29,7 @@ Retorna as linhas em um conjunto de resultados em uma matriz.
 array PDOStatement::fetchAll([ $fetch_style[, $column_index ][, ctor_args]] );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
 $*fetch_style*: um símbolo (inteiro) especificando o formato dos dados da linha. Consulte [PDOStatement::fetch](../../connect/php/pdostatement-fetch.md) para obter uma lista de valores. PDO::FETCH_COLUMN também é permitido. PDO::FETCH_BOTH é o padrão.  
   
 $*column_index*: um valor inteiro que representa a coluna a ser retornada se $*fetch_style* for PDO::FETCH_COLUMN. 0 é o padrão.  
@@ -39,7 +39,7 @@ $*ctor_args*: uma matriz de parâmetros para um construtor de classe quando $*fe
 ## <a name="return-value"></a>Valor retornado  
 Uma matriz das linhas restantes do conjunto de resultados, ou false em caso de falha na chamada do método.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 O suporte para PDO foi adicionado na versão 2.0 dos [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
 ## <a name="example"></a>Exemplo  

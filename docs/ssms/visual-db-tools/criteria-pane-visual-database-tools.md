@@ -1,10 +1,9 @@
 ---
-title: Painel Critérios (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Painel de Critérios
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +17,14 @@ helpviewer_keywords:
 ms.assetid: 6291affe-580e-482f-a7ff-45ce3837956a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cf5d5f7a306b443fd01f9112b4197485ce3ce2ba
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 2e7bc19ea897e370617aeb8e0e0995e857489464
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263905"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258699"
 ---
 # <a name="criteria-pane-visual-database-tools"></a>Painel de Critérios (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -58,12 +59,12 @@ Se o painel Critérios não estiver visível, clique com o botão direito do mou
   
 |**Coluna**|**Tipo de consulta**|**Descrição**|  
 |--------------|------------------|-------------------|  
-|coluna|Todos|Exibe o nome de uma coluna de dados utilizada para a consulta ou a expressão para uma coluna computada. Essa coluna está bloqueada, portanto, está sempre visível à medida que você rola horizontalmente.|  
+|Coluna|Todos|Exibe o nome de uma coluna de dados utilizada para a consulta ou a expressão para uma coluna computada. Essa coluna está bloqueada, portanto, está sempre visível à medida que você rola horizontalmente.|  
 |Alias|SELECT, INSERT FROM, UPDATE, MAKE TABLE|Especifica um nome alternativo para uma coluna ou o nome que você pode utilizar para uma coluna computada.|  
-|Table|SELECT, INSERT FROM, UPDATE, MAKE TABLE|Especifica o nome da tabela ou objeto estruturado por tabela para a coluna de dados associada. Essa coluna está vazia para colunas computadas.|  
-|Saída|SELECT, INSERT FROM, MAKE TABLE|Especifica se uma coluna de dados é exibida na saída da consulta.<br /><br />Observação: Se o banco de dados permitir, você poderá usar uma coluna de dados para classificar ou pesquisar cláusulas sem exibi-las no conjunto de resultados.|  
+|Tabela|SELECT, INSERT FROM, UPDATE, MAKE TABLE|Especifica o nome da tabela ou objeto estruturado por tabela para a coluna de dados associada. Essa coluna está vazia para colunas computadas.|  
+|Saída|SELECT, INSERT FROM, MAKE TABLE|Especifica se uma coluna de dados é exibida na saída da consulta.<br /><br />Observação: se o banco de dados permitir, você poderá utilizar uma coluna de dados para classificar ou pesquisar cláusulas sem exibi-las no conjunto de resultados.|  
 |Tipo de Classificação|SELECT, INSERT FROM|Especifica que a coluna de dados associada é utilizada para classificar os resultados da consulta e se a classificação é crescente ou decrescente.|  
-|Sort Order|SELECT, INSERT FROM|Especifica a prioridade de classificação das colunas de dados utilizadas para classificar o conjunto de resultados. Quando você altera a ordem de classificação de uma coluna de dados, a ordem de classificação de todas as outras colunas também é atualizada.|  
+|Ordem de classificação|SELECT, INSERT FROM|Especifica a prioridade de classificação das colunas de dados utilizadas para classificar o conjunto de resultados. Quando você altera a ordem de classificação de uma coluna de dados, a ordem de classificação de todas as outras colunas também é atualizada.|  
 |Group By|SELECT, INSERT FROM, MAKE TABLE|Especifica que a coluna de dados associada está sendo utilizada para criar uma consulta de agregação. Essa coluna de grade será exibida somente se você tiver escolhido **Group By** no menu **Ferramentas** ou tiver adicionado uma cláusula GROUP BY no painel SQL.<br /><br />Por padrão, o valor dessa coluna é definido como **Group By**e a coluna se torna parte da cláusula GROUP BY.<br /><br />Quando você se move para uma célula nessa coluna e seleciona uma função de agregação para ser aplicada à coluna de dados associada, por padrão, a expressão resultante é adicionada como uma coluna de saída para o conjunto de resultados.|  
 |Critérios|Todos|Especifica um critério de pesquisa (filtro) para a coluna de dados associada. Insira um operador (o padrão é “=”) e o valor a ser pesquisado. Insira os valores de texto entre aspas simples.<br /><br />Se a coluna de dados associada fizer parte de uma cláusula GROUP BY, a expressão inserida será utilizada para uma cláusula HAVING.<br /><br />Se você inserir valores para mais de uma célula na coluna da grade **Criteria**, os critérios de pesquisa resultantes serão vinculados automaticamente a um AND lógico.<br /><br />Para especificar várias expressões de critério de pesquisa para uma única coluna de banco de dados, por exemplo, (fname > 'A') AND (fname < 'M'), adicione a coluna de dados duas vezes ao painel Critérios e insira valores separados na coluna da grade **Criteria** para cada instância da coluna de dados.|  
 |Or...|Todos|Especifica uma expressão de critério de pesquisa adicional para a coluna de dados, vinculada a expressões anteriores com um OR lógico. Você pode adicionar mais colunas de grade **Or...** pressionando a tecla TAB na coluna **Or...** mais à direita.|  

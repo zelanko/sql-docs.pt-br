@@ -1,6 +1,6 @@
 ---
-title: Opções (página Pesquisador de Objetos do SQL Server – Scripts) | Microsoft Docs
-ms.custom: ''
+title: Opções (página Pesquisador de Objetos do SQL Server – Scripts)
+ms.custom: seo-lt-2019
 ms.date: 08/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 6105aec9-1b72-4cb2-bd24-fc35f6d95240
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0f2d5a92fb3359f1c6d63d9ca1dee0f265a8aee1
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: 0991ab88cb37ab2f4decb67194ae78ed62d2c13d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73844526"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251083"
 ---
 # <a name="options-sql-server-object-explorer---scripting-page"></a>Opções (página Pesquisador de Objetos do SQL Server – Scripts)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ Use esta página para definir opções de script que se aplicam aos seguintes co
   
 -   Esta página também define os padrões da opção de script para o **Assistente para Gerar Scripts do SQL Server**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 Os comandos **Editar** e **Modificar** podem gerar resultados diferentes do comando **Script <object> as** para a mesma configuração de opção. Os comandos **Editar** e **Modificar** destinam-se a modificar objetos no banco de dados atual durante uma sessão do Editor de Consultas. O comando **Script <object> as** destina-se a gerar um script de modo que este possa ser usado mais adiante para criar objetos.  
   
 ## <a name="options"></a>Opções  

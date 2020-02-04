@@ -16,10 +16,10 @@ ms.assetid: 86745aeb-ea0d-42d1-b7d2-141b7b067af9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9a00a79466bb4f53fcef10edb1dd6804542b3eae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982397"
 ---
 # <a name="getlong-method-sqlserverresultset"></a>Método getLong (SQLServerResultSet)
@@ -29,7 +29,7 @@ ms.locfileid: "67982397"
   
 ## <a name="overload-list"></a>Lista de sobrecargas  
   
-|Nome|Descrição|  
+|Nome|DESCRIÇÃO|  
 |----------|-----------------|  
 |[getLong (int)](../../../connect/jdbc/reference/getlong-method-int-sqlserverresultset.md)|Recupera o valor do índice da coluna designada na linha atual do objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) como um **long** na linguagem de programação Java.|  
 |[getLong (java.lang.String)](../../../connect/jdbc/reference/getlong-method-java-lang-string-sqlserverresultset.md)|Recupera o valor do nome da coluna designada na linha atual deste objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) como um **long** na linguagem de programação Java.|  

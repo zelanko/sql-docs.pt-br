@@ -1,23 +1,24 @@
 ---
-title: 'Como fazer: Criar novos objetos de banco de dados usando consultas | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Criar objetos de banco de dados usando consultas
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: ac983ac7-f9c4-495d-8a99-e1ba370fb271
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 778783c61be2d3b9cfac784d271bce584ef37f68
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 38a7165eb1145c6da08902d06a8483b0e26abf5b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67897198"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241488"
 ---
-# <a name="how-to-create-new-database-objects-using-queries"></a>Como fazer: Criar objetos de banco de dados usando consultas
+# <a name="how-to-create-new-database-objects-using-queries"></a>Como: Criar novos objetos de banco de dados usando consultas
+
 Se você preferir usar scripts para criar ou editar modos de exibição, procedimentos armazenados, funções, gatilhos ou tipos definidos pelo usuário, poderá usar o Editor Transact\-SQL. O Editor Transact\-SQL dá suporte a IntelliSense e a outra linguagem. Para saber mais, confira [Usar o Editor Transact-SQL para editar e executar scripts](../ssdt/use-transact-sql-editor-to-edit-and-execute-scripts.md).  
   
 O Editor Transact\-SQL é invocado quando você usa o menu contextual **Exibir Código** para abrir uma entidade de banco de dados em um banco de dados conectado ou em um projeto. Ele também é aberto automaticamente quando você usa o menu contextual **Nova Consulta** no Pesquisador de Objetos do SQL Server ou adiciona um novo objeto de script a um projeto de banco de dados. Se você não estiver conectado a um banco de dados, mas quiser executar uma consulta nele, também poderá usar a caixa de diálogo **Nova Conexão de Consulta** selecionando o menu **Editor Transact-SQL** no menu **SQL** para se conectar a um banco de dados e iniciar o Editor Transact\-SQL.  

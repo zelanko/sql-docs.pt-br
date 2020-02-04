@@ -1,5 +1,5 @@
 ---
-title: Pesquisador de Objetos | Microsoft Docs
+title: Pesquisador de Objetos
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
@@ -24,14 +24,14 @@ ms.assetid: 469ea8e2-79b9-44c8-bb6f-f0e1c5dbf0f2
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: 1ef39a04a9b9ae6997b1cd262db43a79c5b5ff49
-ms.sourcegitcommit: da8bb7abd256b2bebee7852dc0164171eeff11be
+ms.openlocfilehash: 575c8d2ec6e6397f7a3444bcc718988b070e783d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70988146"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257145"
 ---
 # <a name="object-explorer"></a>Pesquisador de Objetos
 
@@ -43,7 +43,7 @@ O Pesquisador de Objetos fornece uma interface de usuário hierárquica e gerenc
   
 ## <a name="object-explorer-tasks"></a>Tarefas do Pesquisador de Objetos  
   
-|Descrição|Tópico|  
+|DESCRIÇÃO|Tópico|  
 |---------------|---------|  
 |Descreve como abrir o Pesquisador de Objetos e configurar as opções que definem o comportamento do pesquisador.|[Abrir e configurar o Pesquisador de Objetos](../../ssms/object/open-and-configure-object-explorer.md)|  
 |Descreve como conectar o Pesquisador de Objetos a uma instância do [!INCLUDE[ssDE](../../includes/ssde_md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]e [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].|[Conectar-se a uma instância do Pesquisador de Objetos](../../ssms/object/connect-to-an-instance-from-object-explorer.md)|  

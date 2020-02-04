@@ -1,6 +1,6 @@
 ---
-title: Argumentos de ferramentas externas | Microsoft Docs
-ms.custom: ''
+title: Arguments for External Tools
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3991c13a-f23f-450b-a2ba-19391c399735
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b1f1cff589dfe005011c025b6083821d259f6e9f
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 80b7d5e3eec617f82cb49b67a80d928cb3df9328
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267058"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252228"
 ---
 # <a name="arguments-for-external-tools"></a>Arguments for External Tools
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -26,7 +26,7 @@ Argumentos são variáveis para as quais o ambiente do Studio fornece valores pa
   
 A tabela a seguir relaciona os argumentos de ferramentas externas.  
   
-|Nome|Argumento|Descrição|  
+|Nome|Argumento|DESCRIÇÃO|  
 |--------|------------|---------------|  
 |**Caminho de item**|$(ItemPath)|O nome completo do arquivo da fonte atual (definido como unidade + caminho + nome de arquivo). Em branco se estiver ativa uma janela que não seja de fonte.|  
 |**Diretório do item**|$(ItemDir)|O diretório da fonte atual (definido como unidade + caminho). Em branco se estiver ativa uma janela que não seja de fonte.|  
@@ -48,5 +48,5 @@ A tabela a seguir relaciona os argumentos de ferramentas externas.
   
 ## <a name="see-also"></a>Consulte Também  
 [Caixa de diálogo Ferramentas Externas](../ssms/external-tools-dialog-box.md)  
-[Elementos gerais da interface de usuário](../ssms/general-user-interface-elements.md)  
+[Elementos gerais da interface do usuário](../ssms/general-user-interface-elements.md)  
   

@@ -1,23 +1,24 @@
 ---
-title: Solucionar problemas de teste de unidade do banco de dados SQL Server | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Solucionando problemas de teste de unidade do banco de dados SQL Server
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: cf4c9cd1-7e73-4c3b-922a-68b9247e7b33
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1b7203572d01ca9f344b96a7008dd78b2e35bcdb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: fd1b41a9744c112fcafc8968bad7abc5ac9aa4c4
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110608"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256315"
 ---
 # <a name="troubleshooting-sql-server-database-unit-testing-issues"></a>Solucionando problemas de teste de unidade do banco de dados SQL Server
+
 Você pode encontrar os problemas neste tópico quando trabalha com as unidades de teste do SQL Server em um banco de dados:  
   
 -   [Teste de unidade e alterações do App.Config ignoradas quando você executa testes de unidade](#UnitTestingAndAppConfigChanges)  
@@ -48,6 +49,6 @@ Se seus testes de unidade de banco de dados estão falhando devido a tempo limit
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
-[Como: Criar testes de unidade do SQL Server para funções, gatilhos e procedimentos armazenados](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md)  
-[Como: configurar a execução do teste de unidade do SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md)  
+[Como criar testes de unidade do SQL Server para funções, gatilhos e procedimentos armazenados](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md)  
+[Como configurar a execução do teste de unidade do SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md)  
   

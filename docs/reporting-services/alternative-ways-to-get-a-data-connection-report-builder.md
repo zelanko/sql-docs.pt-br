@@ -9,10 +9,10 @@ ms.assetid: aebc5f3d-97d5-4d54-b525-753fed073a9a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 887104ff6667844071e44e1933592e8238b124dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62703885"
 ---
 # <a name="alternative-ways-to-get-a-data-connection-report-builder"></a>Formas alternativas de obter uma conexão de dados (Construtor de Relatórios)
@@ -35,7 +35,7 @@ Para usar uma fonte de dados compartilhada, procure um servidor de relatório e 
   
 3.  Para verificar se é possível se conectar à fonte de dados, clique em **Testar Conexão**. A mensagem "Conexão criada com êxito" será exibida. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-4.  Clique em **Avançar**.  
+4.  Clique em **Próximo**.  
   
     Se necessário, insira suas credenciais. Para salvar as credenciais localmente, selecione **Salvar senha com a conexão**. Se você não selecionar essa opção, será solicitado que você insira as credenciais sempre que executar o relatório  
   
@@ -63,7 +63,7 @@ Para usar uma fonte de dados compartilhada, procure um servidor de relatório e 
   
     A mensagem "Conexão criada com êxito" será exibida. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  Clique em **Avançar**.  
+7.  Clique em **Próximo**.  
   
 8.  Se for solicitado que você informe um nome de usuário e uma senha, insira suas credenciais. Para salvar as credenciais localmente, selecione **Salvar senha com a conexão**.  
   

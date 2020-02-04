@@ -16,10 +16,10 @@ ms.assetid: f67371e0-e879-4188-85fc-ecb85f0be2a9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a4ff58d1a2f58e044b49767f8fb2982b669a7b78
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979436"
 ---
 # <a name="getstring-method-javalangstring"></a>Método getString (java.lang.String)
@@ -34,7 +34,7 @@ ms.locfileid: "67979436"
 public java.lang.String getString(java.lang.String sCol)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *sCol*  
   
  Uma **String** que contém o nome do parâmetro.  
@@ -45,7 +45,7 @@ public java.lang.String getString(java.lang.String sCol)
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse método getString é especificado pelo método getString na interface java.sql.CallableStatement.  
   
  Todas as colunas no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] podem ser retornadas como uma cadeia de caracteres. Isso significa que uma representação da cadeia de caracteres de todos os tipos baseados em número e em caractere, e uma representação da cadeia de caracteres hexadecimais de colunas binárias, como binary, varbinary, varbinary(max), image, timestamp e uniqueidentifier, podem ser retornadas.  

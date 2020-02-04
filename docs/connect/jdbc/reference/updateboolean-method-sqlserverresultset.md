@@ -16,10 +16,10 @@ ms.assetid: 524ecc30-1587-47e1-812d-ddbc75163266
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: eb459d663bd48bd5d2a0f6a63667e37fb55e90f5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67996951"
 ---
 # <a name="updateboolean-method-sqlserverresultset"></a>Método updateBoolean (SQLServerResultSet)
@@ -29,7 +29,7 @@ ms.locfileid: "67996951"
   
 ## <a name="overload-list"></a>Lista de sobrecargas  
   
-|Nome|Descrição|  
+|Nome|DESCRIÇÃO|  
 |----------|-----------------|  
 |[updateBoolean (int, boolean)](../../../connect/jdbc/reference/updateboolean-method-int-boolean.md)|Atualiza a coluna designada com um valor **boolean**, considerando o índice da coluna.|  
 |[updateBoolean (java.lang.String, boolean)](../../../connect/jdbc/reference/updateboolean-method-java-lang-string-boolean.md)|Atualiza a coluna designada com um valor **booliano**, considerando o nome da coluna.|  

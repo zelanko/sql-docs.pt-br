@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b39d5f4e33b9ecae8617cb414854d423945637d6
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "71952730"
 ---
 # <a name="uninstall-power-pivot-for-sharepoint"></a>Desinstalar o Power Pivot para SharePoint
@@ -28,17 +28,17 @@ ms.locfileid: "71952730"
   
 -   [Pré-requisitos](#prereq)  
   
--   [Etapa 1: lista de verificação de pré-desinstalação](#bkmk_before)  
+-   [Etapa 1: lista de verificação pré-desinstalação](#bkmk_before)  
   
 -   [Etapa 2: remover recursos e soluções do SharePoint](#bkmk_remove)  
   
 -   [Etapa 3: executar a Instalação do SQL Server para remover programas do computador local](#bkmk_uninstall)  
   
--   [Etapa 4: desinstalar o suplemento Power Pivot para SharePoint](#bkmk_addin)  
+-   [Etapa 4: desinstalar o suplemento do Power Pivot para SharePoint](#bkmk_addin)  
   
 -   [Etapa 5: verificar a desinstalação](#verify)  
   
--   [Etapa 6: lista de verificação de pós-desinstalação](#bkmk_post)  
+-   [Etapa 6: lista de verificação pós-desinstalação](#bkmk_post)  
   
 ##  <a name="prereq"></a> Pré-requisitos  
   
@@ -48,7 +48,7 @@ ms.locfileid: "71952730"
   
 -   Você deve ser um Administrador do Sistema do Analysis Services e membro do grupo administradores local para desinstalar o Analysis Services e o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)].  
   
-##  <a name="bkmk_before"></a> Etapa 1: lista de verificação de pré-desinstalação  
+##  <a name="bkmk_before"></a> Etapa 1: lista de verificação pré-desinstalação  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] O acesso aos dados será desabilitado quando o software que dá suporte ao processamento de consulta e dados for removido do farm. A primeira etapa é excluir preventivamente arquivos e bibliotecas que não funcionarão mais. Isso permite que você solucione dúvidas ou preocupações sobre a 'falta de dados' antes de desinstalar o software.  
   
 1.  Exclua todas as pastas de trabalho, documentos e bibliotecas do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] com associação a uma instalação do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint. Nenhuma das bibliotecas nem os documentos funcionarão depois que o software for desinstalado.  
@@ -74,7 +74,7 @@ ms.locfileid: "71952730"
   
 -   Verifique se o serviço Administração do SharePoint está em execução.  
   
-1.  **Executar a ferramenta Configuração:** Observe que as ferramentas de configuração são listadas somente quando o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] está instalado no servidor local. No menu **Iniciar**, aponte para **Todos os Programas**, clique em [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], em **Ferramentas de Configuração** e clique em uma das seguintes opções:  
+1.  **Executar a ferramenta de configuração:** observe que as ferramentas de configuração são listadas somente quando o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] está instalado no servidor local. No menu **Iniciar** , aponte para **Todos os Programas**, clique em [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], em **Ferramentas de Configuração**e clique em uma das seguintes opções:  
   
     -   **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para configuração do SharePoint 2013**  
   
@@ -100,7 +100,7 @@ ms.locfileid: "71952730"
   
 6.  Clique em **Validar** para verificar se cada ação é válida. Se **Validar** não estiver disponível, isso indicará que todas as ações são válidas para o sistema.  
   
-7.  Clique em **Executar** para executar todas as ações válidas para esta tarefa. **Executar** estará disponível apenas depois que a verificação da validação tiver sido aprovada. Quando você clica em **Executar**, o seguinte aviso é exibido, lembrando a você que as ações são processadas em modo de lote: "Todas as definições de configuração sinalizadas como válidas na ferramenta serão aplicadas ao farm do SharePoint. Deseja continuar?"  
+7.  Clique em **Executar** para executar todas as ações válidas para esta tarefa. **Executar** estará disponível apenas depois que a verificação da validação tiver sido aprovada. Quando você clica em **Executar**, o seguinte aviso é exibido, lembrando a você que as ações são processadas em modo de lote: "Todos os parâmetros da configuração sinalizados como válidos na ferramenta serão aplicados ao farm do SharePoint. Deseja continuar?"  
   
 8.  Clique em **Sim** para continuar.  
   
@@ -122,7 +122,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
     Stsadm -o enumdeployments  
     ```  
   
-3.  Examine as implantações existentes em busca das seguintes informações: **Tipo** é Retração ou Implantação; **Arquivo** é powerpivotwebapp.wsp ou powerpivotfarm.wsp.  
+3.  Reveja as implantações existentes para obter as seguintes informações: **Tipo** é Retração ou Implantação, **Arquivo** é powerpivotwebapp.wsp ou powerpivotfarm.wsp.  
   
 4.  Para implantações ou retrações relacionadas a soluções [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], copie o valor do GUID de **JobId** e cole-o no seguinte comando (use os comandos Marcar, Copiar e Colar no menu Editar do Shell para copiar o GUID):  
   
@@ -147,7 +147,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
      Na Instalação, você pode selecionar a instância do **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** e as opções **Analysis Services** e **Integração com o SharePoint do Analysis Services** para remover apenas esse recurso, deixando os demais itens inalterados.  
   
-##  <a name="bkmk_addin"></a> Etapa 4: desinstalar o suplemento Power Pivot para SharePoint  
+##  <a name="bkmk_addin"></a> Etapa 4: desinstalar o suplemento do Power Pivot para SharePoint  
  Se sua implantação do [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] tem dois ou mais servidores e você instalou o Suplemento do [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] , desinstale o suplemento do [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] de cada servidor em que ele foi instalado para desinstalar completamente todos os arquivos do [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] . Para obter mais informações, consulte [Instalar ou desinstalar o suplemento do Power Pivot para SharePoint &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013).  
   
 ##  <a name="verify"></a> Etapa 5: verificar a desinstalação  
@@ -168,7 +168,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
     4.  Em Configurações Gerais do Aplicativo, verifique se o **Painel de Gerenciamento do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** não está mais na página.  
   
-##  <a name="bkmk_post"></a> Etapa 6: lista de verificação de pós-desinstalação  
+##  <a name="bkmk_post"></a> Etapa 6: lista de verificação pós-desinstalação  
  Use a lista a seguir para remover o software e os arquivos que não foram excluídos durante a desinstalação.  
   
 1.  Exclua todos os arquivos de dados e as subpastas de `C:\Program Files\Microsoft SQL Server\MSAS13.PowerPivot`e depois exclua a pasta. Essa etapa também exclui arquivos armazenados em cache anteriormente no diretório DATA.  

@@ -5,22 +5,22 @@ description: Saiba como implantar Clusters de Big Data do SQL Server com alta di
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 11/04/2019
+ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: fc93fbeb3cf02b205cadba92b6d528701ec53cbe
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: 25a6b733eed0611b43fb1f17ad0fe8a0cc1d690a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73706339"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75720788"
 ---
 # <a name="deploy-hdfs-name-node-and-shared-spark-services-in-a-highly-available-configuration"></a>Implante o nó de nome do HDFS e serviços compartilhados do Spark em uma configuração altamente disponível
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Além de implantar a instância mestre do SQL Server em uma configuração altamente disponível usando grupos de disponibilidade, você pode implantar outros serviços críticos no cluster de Big Data para garantir um nível maior de confiabilidade. Você pode configurar o `HDFS name node` e os serviços compartilhados do Spark agrupados em `SparkHead` com uma réplica adicional. Nesse caso, `Zookeeper` também é implantado no cluster de Big Data para servir como coordenador de clusters e repositório de metadados para os seguintes serviços: 
+Além de implantar a instância mestre do SQL Server em uma configuração altamente disponível usando grupos de disponibilidade, você pode implantar outros serviços críticos no cluster de Big Data para garantir um nível maior de confiabilidade. Você pode configurar o `HDFS name node` e os serviços compartilhados do Spark agrupados em `sparkhead` com uma réplica adicional. Nesse caso, `Zookeeper` também é implantado no cluster de Big Data para servir como coordenador de clusters e repositório de metadados para os seguintes serviços: 
 
 - Nó de nome do HDFS
 - Livy e Yarn Resource Manager. 

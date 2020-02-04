@@ -1,6 +1,6 @@
 ---
-title: Editor XML (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Editor XML (SQL Server Management Studio)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.technology: scripting
@@ -17,12 +17,12 @@ ms.assetid: 0824a5ce-e67b-4b53-98d9-d371faf2d23c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f9b82bec0f3def57ac575b4e338e437c05f0bbd1
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: d9b62b35ee3819edcbfcc0fc41f8fa22747d966b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68252826"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252928"
 ---
 # <a name="xml-editor-sql-server-management-studio"></a>Editor XML (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68252826"
   
  O designer fornece as três exibições (ou modos) a seguir, para se trabalhar em arquivos XML, esquemas XML e conjuntos de dados:  
   
-|Exibição|Descrição|Tipos de arquivos com suporte|  
+|Visualizar|DESCRIÇÃO|Tipos de arquivos com suporte|  
 |----------|-----------------|--------------------------|  
 |**Esquema**|Para criar visualmente e modificar esquemas XML e conjuntos de dados ADO.NET.|.xsd|  
 |**Dados**|Para modificar visualmente arquivos de dados XML em uma grade de dados estruturada.|.xml|  
@@ -82,10 +82,10 @@ ms.locfileid: "68252826"
 ## <a name="data-view"></a>Exibição de dados  
  Exibição de dados fornece uma grade de dados que pode ser usada para modificar arquivos .xml. Somente o conteúdo (mas não as marcas e estrutura) em um arquivo XML pode ser editado em exibição de dados.  
   
- Há duas áreas separadas na exibição de dados: **Tabelas de Dados** e **Dados**. A área **Tabela de Dados** é uma lista de relações definidas no arquivo XML, na ordem de seu aninhamento (do mais externo para o mais interno). A área **Dados** é uma grade de dados que exibe dados com base na seleção na área tabela de dados.  
+ Há duas áreas separadas na Exibição de Dados: **Tabelas de Dados** e **Dados**. A área **Tabela de Dados** é uma lista de relações definidas no arquivo XML, na ordem de seu aninhamento (do mais externo para o mais interno). A área **Dados** é uma grade de dados que exibe dados com base na seleção na área tabela de dados.  
   
 > [!NOTE]  
->  Arquivos XML recentemente criados não contêm nenhum dado e, assim, não podem ser exibidos na exibição de Dados. Há também algumas instâncias de documentos XML nas quais a exibição de dados não pode ser invocada. Embora o XML seja considerado bem formado, se ele não estiver estruturado, os dados que tentarem alternar para a exibição de dados gerarão a seguinte mensagem: "Embora esse documento seja bem formado, ele contém uma estrutura que não é possível exibir na exibição de dados."  
+>  Arquivos XML recentemente criados não contêm nenhum dado e, assim, não podem ser exibidos na exibição de Dados. Há também algumas instâncias de documentos XML nas quais a exibição de dados não pode ser invocada. Embora o XML seja considerado bem formado, se não for estruturado dados tentando mudar para exibição de dados irão gerar a seguinte mensagem: "Embora esse documento seja bem formado, ele contém estrutura que a exibição de dados não pode exibir".  
   
  Na exibição de Dados você pode:  
   

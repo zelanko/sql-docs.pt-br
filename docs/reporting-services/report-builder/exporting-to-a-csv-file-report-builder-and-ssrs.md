@@ -9,10 +9,10 @@ ms.assetid: 68ec746e-8c82-47f5-8c3d-dbe403a441e5
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: eece2e47cee99c1c3716aadc597e8b6e6dd48d79
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581206"
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>Exportando para um arquivo CSV (Construtor de Relatórios e SSRS)
@@ -55,7 +55,7 @@ ms.locfileid: "65581206"
   
 -   Linha  
   
--   image  
+-   Imagem  
   
 -   Retângulo  
   
@@ -68,7 +68,7 @@ ms.locfileid: "65581206"
 |Item|Comportamento da renderização|  
 |----------|------------------------|  
 |Caixa de texto|Renderiza o conteúdo da caixa de texto. No modo padrão, os itens são formatados com base nas propriedades de formatação do item. No modo compatível, a formatação pode ser alterada pelas configurações das informações do dispositivo. Para obter mais informações sobre os modos de renderização de CSV, consulte as informações a seguir.|  
-|Table|Renderiza expandindo a tabela e criando uma linha e uma coluna para cada linha e coluna no nível mais baixo de detalhe. As linhas e colunas de subtotal não têm cabeçalhos de coluna ou de linha. Não há suporte para relatórios detalhados.|  
+|Tabela|Renderiza expandindo a tabela e criando uma linha e uma coluna para cada linha e coluna no nível mais baixo de detalhe. As linhas e colunas de subtotal não têm cabeçalhos de coluna ou de linha. Não há suporte para relatórios detalhados.|  
 |Matriz|Renderiza expandindo a matriz e criando uma linha e uma coluna para cada linha e coluna no nível mais baixo de detalhe. As linhas e colunas de subtotal não têm cabeçalhos de coluna ou de linha.|  
 |Lista|Renderiza um registro para cada linha de detalhes ou instância na lista.|  
 |Sub-relatório|O item pai é repetido para cada instância de conteúdos.|  

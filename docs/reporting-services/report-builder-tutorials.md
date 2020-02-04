@@ -9,10 +9,10 @@ ms.assetid: c99495c3-899b-4c84-af87-76e96d4afa23
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8e9d481e03efdcfb7ff109998eda3f4b2f6f3a3d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "64330638"
 ---
 # <a name="report-builder-tutorials"></a>Tutoriais do Construtor de Relatórios
@@ -65,7 +65,7 @@ Siga as etapas deste tutorial para aprender a personalizar a aparência e o cont
 [Tutorial: Criando relatórios principal e de detalhamento &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-drillthrough-and-main-reports-report-builder.md)  
 Siga as etapas deste tutorial para aprender como criar relatórios para um cenário de detalhamento baseado em um cubo do Analysis Services. Você criará o relatório principal e o habilitará para detalhamento e o relatório que o destino da ação de detalhamento.  
   
-[Tutorial: Apresentando expressões](../reporting-services/tutorial-introducing-expressions.md)  
+[Tutorial: Apresentação de expressões](../reporting-services/tutorial-introducing-expressions.md)  
 Siga as etapas deste tutorial para aprender como usar expressões para concatenar, calcular e pesquisar valores de campo e mostrá-los em um relatório. Você também aprenderá como exibir condicionalmente diferentes imagens e estados de indicador usando expressões.  
 
 ## <a name="next-steps"></a>Próximas etapas
@@ -74,4 +74,4 @@ Siga as etapas deste tutorial para aprender como usar expressões para concatena
 [Construtor de Relatórios no SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 [Tutorial: Criar um relatório de gráfico rápido offline](../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
 
-Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
+Mais perguntas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

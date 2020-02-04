@@ -1,10 +1,9 @@
 ---
-title: Remover colunas de resultados da consulta (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Remover colunas de resultados da consulta
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,14 @@ helpviewer_keywords:
 ms.assetid: a7de7a87-4249-49bd-863d-dc0b40a49e78
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b957fc9e20499b88e6fc116749ac49e20b7b31fa
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: d6de3eef6b6903786a0edf3230f5500032d8cd89
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266216"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255220"
 ---
 # <a name="remove-columns-from-query-results-visual-database-tools"></a>Remover colunas de resultados da consulta (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

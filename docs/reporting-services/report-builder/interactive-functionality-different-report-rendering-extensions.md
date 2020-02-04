@@ -9,10 +9,10 @@ ms.assetid: f0bd1c4c-e8b5-467f-b5a1-541f19c7e3e2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1038958e969a04531cf790a9254816b24d3b5646
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580697"
 ---
 # <a name="interactive-functionality---different-report-rendering-extensions"></a>Funcionalidade interativa – extensões de renderização de relatório diferentes
@@ -44,7 +44,7 @@ ms.locfileid: "65580697"
 |PDF|Links de detalhamento não estão disponíveis em PDF. Considere o uso de hiperlinks para relatórios em PDF vinculados a outras páginas.|  
 |Excel|Os links de detalhamento são renderizados em Excel.<br /><br /> O link se torna um hiperlink que aponta ao relatório referenciado pelo link de detalhamento. Clicando no vínculo abre um relatório em uma janela do navegador.|  
 |Word|Os links de detalhamento são renderizados em Word.<br /><br /> O link se torna um hiperlink que aponta ao relatório referenciado pelo link de detalhamento. Clicando no vínculo abre um relatório em uma janela do navegador.|  
-|Outro|Não disponível em XML, CSV ou Imagem.|  
+|Outros|Não disponível em XML, CSV ou Imagem.|  
   
 ### <a name="toggle-items-within-a-report"></a>Alterne os itens dentro de um relatório  
   
@@ -54,7 +54,7 @@ ms.locfileid: "65580697"
 |PDF|O servidor de relatórios exporta o estado atual de exibição ou ocultação do relatório para o PDF. A alternância interativa não tem suporte|  
 |Excel|Os links de detalhamento que podem ser alternados são renderizados como estruturas recolhíveis no Excel. Você pode expandir e pode recolher as seções do relatório no Excel. Para obter mais informações sobre as limitações impostas pelo Excel, consulte [Exportando para o Microsoft Excel &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).|  
 |Word|O servidor de relatórios exporta o estado atual de exibição ou ocultação do relatório para o PDF. A alternância interativa não tem suporte|  
-|Outro|Não disponível em MHTML, XML, ou CSV. Ao exportar para um formato Imagem, o servidor de relatórios exporta o estado de exibição ou ocultação do relatório para o PDF. Não há suporte para a alternância interativa.|  
+|Outros|Não disponível em MHTML, XML, ou CSV. Ao exportar para um formato Imagem, o servidor de relatórios exporta o estado de exibição ou ocultação do relatório para o PDF. Não há suporte para a alternância interativa.|  
   
 ### <a name="interactive-sorting"></a>Classificação interativa  
   
@@ -64,7 +64,7 @@ ms.locfileid: "65580697"
 |PDF|Não disponível em PDF.|  
 |Excel|Não disponível em Excel.|  
 |Word|Não disponível em Word.|  
-|Outro|Não disponível em MHTML, XML, CSV ou Imagem.|  
+|Outros|Não disponível em MHTML, XML, CSV ou Imagem.|  
   
 ### <a name="hyperlinks-to-external-web-content-or-images"></a>Hiperlinks para conteúdo de Web externo ou imagens  
   
@@ -74,7 +74,7 @@ ms.locfileid: "65580697"
 |PDF|Os hiperlinks são renderizados pela extensão de renderização do PDF. Quando um usuário clicar em um hiperlink, as páginas vinculadas são abertas no navegador.|  
 |Excel|Os hiperlinks são renderizados em Excel.|  
 |Word|Os hiperlinks são renderizados em Word.|  
-|Outro|Hiperlinks não estão disponíveis em MHTML, XML, CSV ou Imagem.<br /><br /> Para MHTML e Imagem, as imagens externas são renderizadas como quadro estático.|  
+|Outros|Hiperlinks não estão disponíveis em MHTML, XML, CSV ou Imagem.<br /><br /> Para MHTML e Imagem, as imagens externas são renderizadas como quadro estático.|  
   
 ### <a name="bookmark-or-anchor"></a>Indicação ou âncora  
   
@@ -84,7 +84,7 @@ ms.locfileid: "65580697"
 |PDF|Não disponível em PDF.|  
 |Excel|As indicações são renderizadas em Excel.<br /><br /> A indicação se torna um hiperlink apontando para o nome do item do relatório.|  
 |Word|Indicações são renderizadas em Word.<br /><br /> Uma indicação se torna um hiperlink que aponta para o item de relatório indicado. Apenas 40 caracteres do nome de uma indicação ou âncora são convertidos quando o relatório é exportado o que pode levar à duplicidade dos nomes da indicação ou da âncora. Os espaços são convertidos em sublinhados (_).|  
-|Outro|Não disponível em XML, CSV ou Imagem.|  
+|Outros|Não disponível em XML, CSV ou Imagem.|  
   
 ### <a name="prompted-parameters-obtained-at-run-time"></a>Parâmetros solicitados obtidos em tempo de execução  
   
@@ -94,7 +94,7 @@ ms.locfileid: "65580697"
 |PDF|O servidor de relatórios exporta o relatório para PDF usando os valores dos parâmetros atualmente em vigor para o relatório.|  
 |Excel|O servidor de relatórios exporta o relatório para Excel usando os valores dos parâmetros atualmente em vigor para o relatório.|  
 |Word|O servidor de relatórios exporta o relatório para Word usando os valores dos parâmetros atualmente em vigor para o relatório.|  
-|Outro|O servidor de relatório exporta o relatório para outros formatos usando os valores dos parâmetros atualmente em vigor para o relatório.|  
+|Outros|O servidor de relatório exporta o relatório para outros formatos usando os valores dos parâmetros atualmente em vigor para o relatório.|  
   
 ### <a name="filters-applied-at-run-time"></a>Filtros aplicados em tempo de execução  
   
@@ -104,7 +104,7 @@ ms.locfileid: "65580697"
 |PDF|O servidor de relatórios exporta o relatório para o PDF usando dados filtrados no relatório atual.|  
 |Excel|O servidor de relatórios exporta o relatório para o Excel usando dados filtrados no relatório atual.|  
 |Word|O servidor de relatórios exporta o relatório para o Word usando dados filtrados no relatório atual.|  
-|Outro|O servidor de relatórios exporta o relatório para outros formatos usando dados filtrados no relatório atual.|  
+|Outros|O servidor de relatórios exporta o relatório para outros formatos usando dados filtrados no relatório atual.|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Exportar relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   

@@ -16,10 +16,10 @@ ms.assetid: d70950e0-53fb-4f85-a74a-c31882d4dfd6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: faddbd582d1bc91ebdd1eeac5fde9d76374c0b3b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982641"
 ---
 # <a name="getint-method-sqlserverresultset"></a>Método getInt (SQLServerResultSet)
@@ -29,7 +29,7 @@ ms.locfileid: "67982641"
   
 ## <a name="overload-list"></a>Lista de sobrecargas  
   
-|Nome|Descrição|  
+|Nome|DESCRIÇÃO|  
 |----------|-----------------|  
 |[getInt (int)](../../../connect/jdbc/reference/getint-method-int-sqlserverresultset.md)|Recupera o valor do índice da coluna designada na linha atual do objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) como um **int** na linguagem de programação Java.|  
 |[getInt (java.lang.String)](../../../connect/jdbc/reference/getint-method-java-lang-string-sqlserverresultset.md)|Recupera o valor do nome da coluna designada na linha atual do objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) como um **int** na linguagem de programação Java.|  

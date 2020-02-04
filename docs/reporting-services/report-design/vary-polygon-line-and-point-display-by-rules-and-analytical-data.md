@@ -19,10 +19,10 @@ ms.assetid: 7f1f5584-37b4-4fa2-ae44-8988c5f0c744
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4c323a03752ea7b9e0c7450dc53446191f3c3315
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65578442"
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data"></a>Vary Polygon, Line, and Point Display by Rules and Analytical Data
@@ -119,7 +119,7 @@ ms.locfileid: "65578442"
   
  As tabelas a seguir mostram exemplos de formatos diferentes que você pode usar.  
   
-|Palavra-chave e formato|Descrição|Exemplo do que é exibido como texto na legenda|  
+|Palavra-chave e formato|DESCRIÇÃO|Exemplo do que é exibido como texto na legenda|  
 |------------------------|-----------------|---------------------------------------------------|  
 |`#FROMVALUE {C0}`|Exibe a moeda do valor total sem casas decimais|$ 400|  
 |`#FROMVALUE {C2}`|Exibe a moeda do valor total com até duas casas decimais.|$ 400,55|  

@@ -11,10 +11,10 @@ ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7fb733325b09c189221729a3edc0dd12cf33b283
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67140459"
 ---
 # <a name="report-server-http-log"></a>Log HTTP do Servidor de Relatório
@@ -29,7 +29,7 @@ ms.locfileid: "67140459"
 |-|-|  
 |Nome do arquivo|Por padrão, o nome do arquivo é ReportServerService_HTTP_\<timestamp>.log. Você pode personalizar o prefixo do nome do arquivo modificando o atributo HttpTraceFileName no arquivo ReportingServicesService.exe.config. O carimbo de data e hora é baseado em UTC (Tempo Universal Coordenado).|  
 |Local do arquivo|O arquivo está localizado em \Microsoft SQL Server\\ *\<SQL Server Instance>* \Reporting Services\LogFiles.|  
-|Formato do arquivo|O arquivo está em formato pt-BR. É um arquivo de texto ASCII.|  
+|Formato de arquivo|O arquivo está em formato pt-BR. É um arquivo de texto ASCII.|  
 |Criação e retenção do arquivo|O log HTTP é criado quando você o habilita no arquivo de configuração, reinicia o serviço e o servidor de relatório manipula uma solicitação HTTP. Se você definir as configurações, mas o arquivo de log não aparecer, abra um relatório ou inicie um aplicativo do servidor de relatório (como o portal da Web) para gerar uma solicitação HTTP e criar o arquivo.<br /><br /> Uma nova instância do arquivo de log será criada após cada reinicialização do serviço e o envio subsequente da solicitação HTTP para o servidor de relatório.<br /><br /> Por padrão, os logs de rastreamento são limitados a 32 megabytes e excluídos depois de 14 dias.|  
   
 ## <a name="configuration-settings-for-report-server-http-log"></a>Configurações do log HTTP do servidor de relatório  
@@ -54,11 +54,11 @@ ms.locfileid: "67140459"
 ## <a name="log-file-fields"></a>Campos do arquivo de log  
  A tabela a seguir descreve os campos disponíveis no log. A lista de campos pode ser configurada; é possível especificar quais campos devem ser incluídos com a configuração **HTTPTraceSwitches** . A coluna **Padrão** especifica se o campo será incluído automaticamente no arquivo de log caso **HTTPTraceSwitches**não seja especificado.  
   
-|Campo|Descrição|Padrão|  
+|Campo|DESCRIÇÃO|Padrão|  
 |-----------|-----------------|-------------|  
 |HttpTraceFileName|Esse valor é opcional. O valor padrão é ReportServerServiceHTTP_. Você pode especificar um valor diferente se desejar usar uma convenção de nomeação de arquivo diferente (por exemplo, para incluir o nome do servidor se estiver salvando arquivos de log em um local central).|Sim|  
 |HTTPTraceSwitches|Esse valor é opcional. Se esse valor for especificado, você poderá configurar os campos usados no arquivo de log em um formato delimitado por vírgula.|Não|  
-|data|A data em que a atividade ocorreu.|Não|  
+|Data|A data em que a atividade ocorreu.|Não|  
 |Hora|A hora em que a atividade ocorreu.|Não|  
 |ClientIp|O endereço IP do cliente que acessa o servidor de relatório.|Sim|  
 |UserName|O nome do usuário que acessou o servidor de relatório.|Não|  
@@ -67,7 +67,7 @@ ms.locfileid: "67140459"
 |Método|A ação ou método SOAP chamado do cliente.|Sim|  
 |UriStem|O recurso acessado.|Sim|  
 |UriQuery|A consulta usada para acessar o recurso.|Não|  
-|ProtocolStatus|O código de status HTTP.|Sim|  
+|ProtocolStatus|O código de status do HTTP.|Sim|  
 |BytesReceived|O número de bytes recebidos pelo servidor.|Não|  
 |TimeTaken|O tempo (em milissegundos) desde o instante em que HTTP.SYS retorna os dados da solicitação até o servidor concluir o último envio, sem contar o tempo de transmissão de rede.|Não|  
 |ProtocolVersion|A versão de protocolo usada pelo cliente.|Não|  

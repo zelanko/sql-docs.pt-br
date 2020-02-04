@@ -11,10 +11,10 @@ ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: fcdb92f92ffb8239a6cf20b0f39dfb8f546b521a
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727683"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>Arquitetura de extensibilidade no Serviços de Machine Learning do SQL Server 
@@ -22,7 +22,7 @@ ms.locfileid: "73727683"
 
 O SQL Server tem uma estrutura de extensibilidade para executar um script externo, como R ou Python, no servidor. O script é executado em um ambiente de runtime de linguagem como uma extensão para o principal mecanismo de banco de dados.
 
-## <a name="background"></a>Plano de fundo
+## <a name="background"></a>Segundo plano
 
 A estrutura de extensibilidade foi introduzida no SQL Server 2016 para dar suporte ao runtime do R. O SQL Server 2017 e posteriores são compatíveis com o Python.
 
@@ -93,7 +93,7 @@ O BxlServer usa o Satélite SQL para estas tarefas:
 + Gravar dados de saída
 + Obter argumentos de entrada
 + Gravar argumentos de saída
-+ Manipulação de erros
++ Tratamento de erros
 + Gravar STDOUT e STDERR de volta para o cliente
 
 O Satélite SQL usa um formato de dados personalizado que é otimizado para a transferência de dados rápida entre o SQL Server e as linguagens de script externo. Ele executa conversões de tipo e define os esquemas dos conjuntos de dados de entrada e de saída durante as comunicações entre o SQL Server e o runtime do script externo.

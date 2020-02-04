@@ -1,11 +1,7 @@
 ---
-title: Extrair, publicar e registrar arquivos .dacpac | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Extrair, publicar e registrar arquivos .dacpac
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.DacTableChooser
@@ -16,14 +12,19 @@ f1_keywords:
 ms.assetid: ed900f93-d3df-40f5-8e62-4d722595e041
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2aee0f145c2ef2b82b929a8f6358a764a10050f5
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 67cb0321ebc1bdfa345b7bb6670ca31a4418d6e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154798"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241647"
 ---
 # <a name="extract-publish-and-register-dacpac-files"></a>Extrair, publicar e registrar arquivos .dacpac
+
 Este tópico descreve quatro procedimentos que você pode realizar clicando com o botão direito do mouse em um banco de dados conectado no Pesquisador de Objetos do SQL Server:  
   
 -   Publicar aplicativo da camada de dados  

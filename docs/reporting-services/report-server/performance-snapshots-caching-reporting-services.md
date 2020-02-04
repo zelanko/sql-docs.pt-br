@@ -12,10 +12,10 @@ ms.assetid: 85afd00f-e8d7-4ef7-9174-2ff84d82f960
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8cab49b0f07caff685bd216ec9090f9e851a1d38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581484"
 ---
 # <a name="performance-snapshots-caching-reporting-services"></a>Desempenho, instantâneos, cache (Reporting Services)
@@ -38,13 +38,13 @@ ms.locfileid: "65581484"
 -   Para obter mais informações sobre como solucionar problemas de desempenho ajustando configurações de gerenciamento de memória, consulte [Configurar memória disponível para aplicativos do Servidor de Relatório](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md).  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Monitorando o desempenho do servidor de relatório](../../reporting-services/report-server/monitoring-report-server-performance.md)  
+ [Monitorar o desempenho do servidor de relatório](../../reporting-services/report-server/monitoring-report-server-performance.md)  
  Descreve os objetos de desempenho que podem ser usados para controlar a carga de processamento no servidor.  
   
  [Definir propriedades de processamento de relatórios](../../reporting-services/report-server/set-report-processing-properties.md)  
  Descreve maneiras de configurar um relatório para ser executado sob demanda, a partir do cache ou em uma agenda como um instantâneo de relatório.  
   
- [Configurar memória disponível para aplicativos do Servidor de Relatório](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)  
+ [Configurar a memória disponível para aplicativos do Servidor de Relatório](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)  
  Descreve como você pode substituir o comportamento padrão de gerenciamento de memória.  
   
  [Armazenando relatórios em cache &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)  
@@ -61,6 +61,6 @@ ms.locfileid: "65581484"
   
 ## <a name="see-also"></a>Consulte Também  
  [Manage a Running Process](../../reporting-services/subscriptions/manage-a-running-process.md)   
- [Verificando uma execução de relatório](../../reporting-services/report-server/verifying-a-report-run.md)  
+ [Verificar a execução de um relatório](../../reporting-services/report-server/verifying-a-report-run.md)  
   
   

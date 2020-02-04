@@ -9,10 +9,10 @@ ms.prod: sql
 ms.custom: ''
 ms.technology: configuration
 ms.openlocfilehash: d5248f97b044cb688174171fdb6ef79943851a92
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028931"
 ---
 # <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-ceip"></a>Configurar a coleta de dados de diagnóstico e uso do SQL Server (Programa de Aperfeiçoamento da Experiência do Usuário)
@@ -26,7 +26,7 @@ Por padrão, o Microsoft SQL Server coleta informações sobre como os clientes 
 Especificamente, a Microsoft não envia nenhum dos seguintes tipos de informações por meio desse mecanismo:
 - Qualquer valor das tabelas de usuário
 - Qualquer credencial de logon ou outras informações de autenticação
-- Informações de Identificação Pessoal (PII)
+- PII (Informações de Identificação Pessoal)
 
 O seguinte exemplo de cenário inclui informações de uso de recursos que ajudam a melhorar o produto.
 
@@ -55,7 +55,7 @@ Para o SQL Server no Linux, confira [Comentários de Clientes para o SQL Server 
 > [!NOTE]
 > Você só pode desabilitar o envio de informações para a Microsoft em versões pagas do SQL Server.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Comentários
  - Não há suporte para remover ou desabilitar o serviço Programa de Aperfeiçoamento da Experiência do Usuário do SQL. 
  - Não há suporte para remover os recursos do Programa de Aperfeiçoamento da Experiência do Usuário do SQL do Grupo de Clusters. 
 
@@ -84,7 +84,7 @@ Clientes corporativos podem definir as configurações de Política de Grupo par
     
     Nome da RegEntry = CustomerFeedback
     
-    Tipo de entrada DWORD: 0 é recusar; 1 é aceitar
+    Tipo de entrada DWORD: 0 significa não usar; 1 significa usar
     
     {InstanceID} refere-se ao tipo de instância e à instância, como nos exemplos a seguir:
 
@@ -98,7 +98,7 @@ Clientes corporativos podem definir as configurações de Política de Grupo par
     
     Nome da RegEntry = CustomerFeedback
     
-    Tipo de entrada DWORD: 0 é recusar; 1 é aceitar
+    Tipo de entrada DWORD: 0 significa não usar; 1 significa usar
 
 > [!NOTE]
 > {Versão Principal} refere-se à versão do SQL Server, por exemplo, 140 para o SQL Server 2017
@@ -115,7 +115,7 @@ Semelhante ao comportamento em uma versão anterior do SQL Server, os clientes d
 
     Nome da RegEntry = EnableErrorReporting
 
-    Tipo de entrada DWORD: 0 é recusar; 1 é aceitar
+    Tipo de entrada DWORD: 0 significa não usar; 1 significa usar
  
     {InstanceID} refere-se ao tipo de instância e à instância, como nos exemplos a seguir: 
 
@@ -130,7 +130,7 @@ Semelhante ao comportamento em uma versão anterior do SQL Server, os clientes d
 
     Nome da RegEntry = EnableErrorReporting
 
-    Tipo de entrada DWORD: 0 é recusar; 1 é aceitar
+    Tipo de entrada DWORD: 0 significa não usar; 1 significa usar
 
 > [!NOTE]
 > {Versão Principal} refere-se à versão do SQL Server. Por exemplo, "140" refere-se ao SQL Server 2017.

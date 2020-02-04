@@ -16,10 +16,10 @@ ms.assetid: a5dbb5d8-41c2-48af-9b71-93a22f6a9b33
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9b46b0c7e4ae412fe925a7397f12e8f84e038e2d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67969611"
 ---
 # <a name="supportsconvert-method-sqlserverdatabasemetadata"></a>Método supportsConvert (SQLServerDatabaseMetaData)
@@ -29,7 +29,7 @@ ms.locfileid: "67969611"
   
 ## <a name="overload-list"></a>Lista de sobrecargas  
   
-|Nome|Descrição|  
+|Nome|DESCRIÇÃO|  
 |----------|-----------------|  
 |[supportsConvert ()](../../../connect/jdbc/reference/supportsconvert-method.md)|Recupera se esse banco de dados oferece suporte à função CONVERT entre tipos de SQL.|  
 |[supportsConvert (int, int)](../../../connect/jdbc/reference/supportsconvert-method-int-int.md)|Recupera se esse banco de dados oferece suporte à função CONVERT para dois tipos de SQL fornecidos.|  

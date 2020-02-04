@@ -11,10 +11,10 @@ ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 3e21dfe719f40165e0e68e7bf6242c526c298eb4
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73707438"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>Novidades dos Serviços de Machine Learning do SQL Server
@@ -59,7 +59,7 @@ As novas funcionalidades do R incluem o [**gerenciamento de pacotes**](r/install
 
 ### <a name="r-libraries"></a>Bibliotecas do R
 
-| Pacote | Descrição |
+| Pacote | DESCRIÇÃO |
 |---------|-------------|
 | [**MicrosoftML**](r/ref-r-microsoftml.md) | Nesta versão, o MicrosoftML está incluído em uma instalação padrão do R, eliminando a etapa de atualização necessária no SQL Server 2016 R Services anterior. O MicrosoftML fornece algoritmos de aprendizado de máquina e transformações de dados de última geração que podem ser dimensionados ou executados em contextos de computação remota. Os algoritmos incluem redes neurais profundas personalizáveis, árvores de decisão rápida e florestas de decisão, regressão linear e regressão logística.  |
 
@@ -75,7 +75,7 @@ Use a função T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md) para ex
 
 ### <a name="python-libraries"></a>Bibliotecas do Python
 
-| Pacote | Descrição |
+| Pacote | DESCRIÇÃO |
 |---------|-------------|
 |[**revoscalepy**](python/ref-py-revoscalepy.md)| Equivalente no Python do RevoScaleR. Crie modelos do Python para regressões lineares e logísticas, árvores de decisão, árvores aumentadas e florestas aleatórias, todas paralelizáveis e com a capacidade de serem executadas em contextos de computação remota. Esse pacote dá suporte ao uso de várias fontes de dados e de contextos de computação remota. O cientista de dados ou o desenvolvedor pode executar o código Python em um SQL Server remoto para explorar os dados ou criar modelos sem mover os dados. |
 |[**microsoftml**](python/ref-py-microsoftml.md) |Equivalente no Python do pacote R MicrosoftML. |

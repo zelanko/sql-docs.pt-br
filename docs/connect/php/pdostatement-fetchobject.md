@@ -11,10 +11,10 @@ ms.assetid: 71ad1932-cab3-4c29-8950-f5e82547d3b5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 118a473e3e1675b81b732eb76f0271bbbe9d2e15
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67936019"
 ---
 # <a name="pdostatementfetchobject"></a>PDOStatement::fetchObject
@@ -29,7 +29,7 @@ Recupera a próxima linha como um objeto.
 mixed PDOStatement::fetchObject([ $class_name[,$ctor_args ]] )  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
 $*class_name*: uma cadeia de caracteres opcional que especifica o nome da classe a ser criada. O padrão é stdClass.  
   
 $*ctor_args*: uma matriz opcional com argumentos para um construtor de classe personalizada.  
@@ -37,7 +37,7 @@ $*ctor_args*: uma matriz opcional com argumentos para um construtor de classe pe
 ## <a name="return-value"></a>Valor retornado  
 Em caso de sucesso, retorna um objeto com uma instância da classe. Propriedades mapeiam para colunas. Retorna falso em caso de falha.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 O suporte para PDO foi adicionado na versão 2.0 dos [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
 ## <a name="example"></a>Exemplo  

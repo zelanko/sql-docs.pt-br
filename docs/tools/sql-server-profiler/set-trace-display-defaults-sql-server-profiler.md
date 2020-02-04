@@ -1,27 +1,28 @@
 ---
-title: Definir padrões de exibição de rastreamento (SQL Server Profiler) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: Definir padrões de exibição de rastreamento
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- traces [SQL Server], defaults
 ms.assetid: d471aaed-c40c-4c55-a993-835e6394b5d2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bc875bf091b2dac6f3bfb393c7a716c3fa49caea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 4a1958ee112b1453a6b86a5e520737b0945147c5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059715"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307929"
 ---
 # <a name="set-trace-display-defaults-sql-server-profiler"></a>Definir padrões de exibição de rastreamento (SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Este tópico descreve como definir opções de ferramentas que especificam tipos, tamanho e estilo da fonte utilizada pelo [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para exibir rastreamentos na janela de rastreamento. Também é possível especificar que o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exiba todas as datas e horas com as configurações regionais definidas para seu sistema operacional.  
+
+Este tópico descreve como definir opções de ferramentas que especificam tipos, tamanho e estilo da fonte utilizada pelo [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para exibir rastreamentos na janela de rastreamento. Também é possível especificar que o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exiba todas as datas e horas com as configurações regionais definidas para seu sistema operacional.  
   
 ### <a name="to-set-trace-display-defaults"></a>Para definir padrões de exibição de rastreamento  
   

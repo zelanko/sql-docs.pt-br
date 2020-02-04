@@ -1,10 +1,7 @@
 ---
-title: Caixa de diálogo Adicionar Tabela (Designer de Banco de Dados) (Ferramentas de Banco de Dados Visual) | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
+title: Adicionar Caixa de Diálogo de Tabela (Designer de Banco de Dados)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -13,14 +10,19 @@ f1_keywords:
 ms.assetid: 3c0b1b30-795c-4240-91d6-890b8348014a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e8d75f91a4373cbaa70521395020794d6976ee30
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
+ms.openlocfilehash: 9fcd2f3dbb1d0eca44a1cc5025239b81de26b24f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263420"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253409"
 ---
 # <a name="add-table-dialog-box-database-designer-visual-database-tools"></a>Caixa de diálogo Adicionar Tabela (Designer de Banco de Dados) (Visual Database Tools)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Permite adicionar tabelas no Designer de Banco de Dados.  
   

@@ -3,19 +3,19 @@ title: Instalar os novos pacotes R
 description: Saiba como usar o sqlmlutils para instalar novos pacotes do R em uma instância de Serviços de Machine Learning do SQL Server ou SQL Server R Services.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/15/2019
+ms.date: 11/20/2019
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 827e83a0d1b363d3b91477b9ae85fec156ee4fc9
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: e9435c52cc0bf318291d38a2511f496c818c2fd6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727500"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74479433"
 ---
 # <a name="install-new-r-packages-with-sqlmlutils"></a>Instalar novos pacotes de R com sqlmlutils
 
@@ -141,7 +141,7 @@ Se o computador cliente que você usa para se conectar ao SQL Server tiver acess
    ```
 
    > [!TIP]
-   > O **escopo** pode ser **PUBLIC** ou **PRIVATE**. O escopo público é útil para o administrador de banco de dados instalar pacotes que todos os usuários podem usar. O escopo privado disponibiliza o pacote somente ao usuário que o instala. Se você não especificar o escopo, o padrão será **PRIVATE**.
+   > O **escopo** pode ser **PÚBLICO** ou **PRIVADO**. O escopo público é útil para o administrador de banco de dados instalar pacotes que todos os usuários podem usar. O escopo privado disponibiliza o pacote apenas para o usuário que o instala. Se você não especificar o escopo, o escopo padrão será **PRIVADO**.
 
 ### <a name="add-the-package-offline"></a>Adicionar o pacote offline
 
@@ -190,7 +190,7 @@ Em um computador com acesso à Internet:
 
 No computador cliente:
 
-1. Abra o RStudio e crie um novo arquivo de **Script R**.
+1. Abra RStudio e crie um arquivo **R Script**.
 
 1. Use o script R a seguir para instalar o pacote **glue** usando **sqlmlutils**. Substitua suas informações de conexão de banco de dados SQL Server (se você não usar a autenticação do Windows, adicione os parâmetros `uid` e `pwd`).
 
@@ -205,7 +205,7 @@ No computador cliente:
    ```
 
    > [!TIP]
-   > O **escopo** pode ser **PUBLIC** ou **PRIVATE**. O escopo público é útil para o administrador de banco de dados instalar pacotes que todos os usuários podem usar. O escopo privado disponibiliza o pacote somente ao usuário que o instala. Se você não especificar o escopo, o padrão será **PRIVATE**.
+   > O **escopo** pode ser **PÚBLICO** ou **PRIVADO**. O escopo público é útil para o administrador de banco de dados instalar pacotes que todos os usuários podem usar. O escopo privado disponibiliza o pacote apenas para o usuário que o instala. Se você não especificar o escopo, o escopo padrão será **PRIVADO**.
 
 ## <a name="use-the-package"></a>Usar o pacote
 
@@ -213,7 +213,7 @@ Depois da instalação do pacote **glue**, você pode usá-lo em um script R no 
 
 1. Abra o Azure Data Studio ou o SSMS e conecte a seu banco de dados do SQL Server.
 
-1. Execute o seguinte comando:
+1. Execute o comando a seguir:
 
    ```sql
    EXECUTE sp_execute_external_script @language = N'R'

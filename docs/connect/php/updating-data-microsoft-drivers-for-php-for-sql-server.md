@@ -11,10 +11,10 @@ ms.assetid: dd323f83-f415-4fa4-8457-89dad6d321d0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 93bad991b56928db0d7b872b13904385d79ae788
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68014846"
 ---
 # <a name="updating-data-microsoft-drivers-for-php-for-sql-server"></a>Atualizando dados (Drivers da Microsoft para PHP para SQL Server)
@@ -32,7 +32,7 @@ As etapas para usar os [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|Descrição|  
+|Tópico|DESCRIÇÃO|  
 |---------|---------------|  
 |[Como executar consultas parametrizadas](../../connect/php/how-to-perform-parameterized-queries.md)|Descreve como executar consultas parametrizadas.|  
 |[Como enviar dados como um fluxo](../../connect/php/how-to-send-data-as-a-stream.md)|Descreve como transmitir dados para o servidor.|  
@@ -41,5 +41,5 @@ As etapas para usar os [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]
 ## <a name="see-also"></a>Consulte Também  
 [Aplicativo de exemplo &#40;driver SQLSRV&#41;](../../connect/php/example-application-sqlsrv-driver.md)
 
-[Guia de programação para o Microsoft Drivers para PHP para SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Guia de programação do Microsoft Drivers para PHP para SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
   

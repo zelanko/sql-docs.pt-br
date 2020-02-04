@@ -1,6 +1,6 @@
 ---
-title: Propriedades de TCP/IP (guia endereços IP) | Microsoft Docs
-ms.custom: ''
+title: Propriedades do TCP/IP (Guia Endereços IP)
+ms.custom: seo-lt-2019
 ms.date: 08/24/2016
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4c17ed45-9da7-4bec-bce6-970109fe7365
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 927f732d4f04c43b5e2973a82509e4da7970a448
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: f1afdb9d25d599f32b2efb9d5339ef4afffd6f31
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68023813"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307561"
 ---
 # <a name="tcpip-properties-ip-addresses-tab"></a>Propriedades do TCP/IP (Guia Endereços IP)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "68023813"
  Na inicialização, quando uma instância do SQL Server é configurada para escutar em portas dinâmicas, ela verifica no sistema operacional se existe uma porta disponível e abre um ponto de extremidade para essa porta. Esse número deve ser especificado pelas conexões de entrada. Como o número da porta pode ser alterado sempre que o SQL Server é iniciado, o SQL Server fornece o Serviço SQL Server Browser para monitorar as portas, e direciona as conexões de entrada para a porta atual dessa instância. O uso de portas dinâmicas complica a conexão do SQL Server por meio de um firewall, pois o número da porta poderá ser alterado quando o SQL Server for reiniciado, o que exige alterações nas configurações do firewall. Para evitar problemas de conexão por meio de um firewall, configure o SQL Server para usar uma porta estática.  
   
 ## <a name="options"></a>Opções  
- **Ativa**  
+ **Ativo**  
  Indica que o endereço IP está ativo no computador. Não disponível para **IP Tudo**.  
   
  **Enabled**  

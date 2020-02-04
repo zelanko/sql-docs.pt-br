@@ -1,23 +1,24 @@
 ---
-title: 'Como fazer: executar testes de unidade do SQL Server | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Executar testes de unidade do SQL Server
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 34fe2d1e-d47b-4808-af56-8cc0fdae6518
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d17120b0c13ab1910d4636a376963f5ec74813eb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 3ee95885dc1696fd7fba80342dc8c582a79056cc
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035024"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244278"
 ---
-# <a name="how-to-run-sql-server-unit-tests"></a>Como fazer: Executar testes de unidade do SQL Server
+# <a name="how-to-run-sql-server-unit-tests"></a>Como: Executar testes de unidade do SQL Server
+
 Você pode executar um teste de unidade do SQL Server de várias maneiras, usando várias janelas e a janela Prompt de Comando.  
   
 > [!NOTE]  
@@ -57,7 +58,7 @@ Essa etapa é executada em todos os testes na execução de teste atual. Assim q
   
 ## <a name="see-also"></a>Consulte Também  
 [Executar testes de unidade do SQL Server](../ssdt/running-sql-server-unit-tests.md)  
-[Como: executar testes automatizados no Microsoft Visual Studio 2010](https://msdn.microsoft.com/library/ms182470(VS.100).aspx)  
+[Como executar testes automatizados no Microsoft Visual Studio 2010](https://msdn.microsoft.com/library/ms182470(VS.100).aspx)  
 [Executar testes automatizados pela linha de comando (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182486(VS.100).aspx)  
 [Testar o aplicativo (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182409.aspx)  
   

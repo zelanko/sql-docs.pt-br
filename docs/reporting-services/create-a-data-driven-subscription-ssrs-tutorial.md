@@ -13,10 +13,10 @@ ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: baff01bd8bc02af409a37c5cc1ce193e69663387
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63194824"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>Criar uma assinatura controlada por dados (Tutorial do SSRS)
@@ -39,7 +39,7 @@ Este tutorial divide-se em três lições:
 
 O diagrama a seguir ilustra o fluxo de trabalho básico do tutorial:
 
-| Etapa    | Descrição |
+| Etapa    | DESCRIÇÃO |
 | --------|------------ |
 | (1)     | A configuração de assinatura anota o relatório de origem, o agendamento e o mapeamento de campo para o Banco de dados do assinante. |
 | (2)     | A tabela OrderInfo contém quatro números de pedido a serem usados para filtragem, um por arquivo. A tabela também contém os formatos de arquivo para os relatórios gerados. |
@@ -67,14 +67,14 @@ Para usar este tutorial, seu computador deve ter os seguintes itens instalados:
   
 -   O banco de dados de exemplo **AdventureWorks2014** , que fornece dados ao relatório de exemplo.  
   
--   Uma atribuição de função [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] que inclui a tarefa Gerenciar todas as assinaturas no relatório de exemplo. Esta tarefa é obrigatória para definir uma assinatura controlada por dados. Se você for administrador no computador, a atribuição de função padrão para administradores locais fornecerá as permissões necessárias para criar assinaturas controladas por dados. Para obter mais informações, consulte [Granting Permissions on a Native Mode Report Server](../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md).  
+-   Uma atribuição de função [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] que inclui a tarefa Gerenciar todas as assinaturas no relatório de exemplo. Esta tarefa é obrigatória para definir uma assinatura controlada por dados. Se você for administrador no computador, a atribuição de função padrão para administradores locais fornecerá as permissões necessárias para criar assinaturas controladas por dados. Para obter mais informações, consulte [Concedendo permissões em um servidor de relatório no modo nativo](../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md).  
   
 -   Uma pasta compartilhada na qual você tenha permissões de gravação. A pasta compartilhada deve ser acessada por uma conexão de rede.  
   
 **Tempo estimado para concluir o tutorial:** 30 minutos. Mais 30 minutos se você não concluiu o tutorial de relatório básico.  
   
 ## <a name="see-also"></a>Consulte Também  
-[Data-Driven Subscriptions](../reporting-services/subscriptions/data-driven-subscriptions.md)  
+[Assinaturas controladas por dados](../reporting-services/subscriptions/data-driven-subscriptions.md)  
 [Criar um relatório de tabela básico &#40;Tutorial do SSRS&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)
  
 

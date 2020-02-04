@@ -1,21 +1,23 @@
 ---
-title: Caixa de diálogo Adicionar referência de banco de dados | Microsoft Docs
+title: Caixa de diálogo Adicionar Referência de Banco de Dados
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ''
-ms.custom: SSDT
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: e8ff16ab27f47cd283c81606a4db9b580db523d3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a43b16b3c45a0f98ca22a4d1e0d3e291cf92f95d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984703"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256140"
 ---
 # <a name="add-database-reference-dialog-box"></a>Caixa de diálogo Adicionar Referência de Banco de Dados
+
 Este tópico descreve os procedimentos que você pode executar na caixa de diálogo **Adicionar Referência de Banco de Dados**.  
   
 As referências de banco de dados permitem que você:  
@@ -28,7 +30,8 @@ Em um projeto composto, as referências de banco de dados particionam um banco d
   
 As referências de bancos de dados podem ser feitas para um projeto de banco de dados na solução atual ou para um DACPAC. A adição de uma referência de banco de dados a um projeto altera as dependências do projeto e a ordem de compilação.  
   
-## <a name="selecting-the-database-to-reference"></a>Selecionando o banco de dados para referência  
+## <a name="selecting-the-database-to-reference"></a>Selecionando o banco de dados para referência
+
 Você pode referenciar outro projeto de banco de dados na mesma solução, um banco de dados do sistema ou um DACPAC.  
   
 Se houver mais de um projeto de banco de dados em sua solução, a opção **Projetos de banco de dados na solução atual** será habilitada. Você pode referenciar outro banco de dados na solução.  
@@ -37,7 +40,8 @@ Selecione **Banco de dados do sistema** se você pretende selecionar um dos banc
   
 Selecione **Aplicativo da Camada de Dados (.dacpac)** para referenciar um banco de dados em um DACPAC, e procure o diretório com o arquivo DACPAC.  
   
-## <a name="selecting-the-databases-relative-location"></a>Selecionando a localização relativa do banco de dados  
+## <a name="selecting-the-databases-relative-location"></a>Selecionando a localização relativa do banco de dados
+
 Depois de selecionar o banco de dados que deseja referenciar, você pode especificar o local esperado de um objeto de banco de dados, relativo ao projeto de referência.  
   
 As referências podem ser resolvidas para objetos em um dos seguintes locais:  
@@ -59,7 +63,8 @@ Se você selecionou a opção **Banco de dados diferente, servidor diferente** u
 > [!IMPORTANT]  
 > Em algumas situações, você pode criar uma referência de banco de dados que tenha o mesmo nome que a referência de banco de dados existente. Duas referências de banco de dados com o mesmo nome podem resultar em comportamento inesperado. Nesse caso, exclua ambas as referências dos bancos de dados.  
   
-## <a name="common-procedures"></a>Procedimentos comuns  
+## <a name="common-procedures"></a>Procedimentos comuns
+
 Veja a seguir os procedimentos comuns:  
   
 ### <a name="to-create-a-reference-to-a-database-on-the-same-server"></a>Para criar uma referência a um banco de dados no mesmo servidor  
@@ -112,6 +117,6 @@ Ao publicar esse projeto, você pode implantar projetos compostos na mesma solu�
   
 3.  Na caixa de diálogo **Configurações de Publicação Avançadas**, verifique se a opção **Incluir objetos compostos** está selecionada na lista **Opções de Implantação Avançadas**.  
   
-## <a name="see-also"></a>Consulte Também  
-[Desenvolvimento de banco de dados offline orientado a projetos](../ssdt/project-oriented-offline-database-development.md)  
-  
+## <a name="see-also"></a>Consulte Também
+
+[Desenvolvimento de banco de dados offline orientado a projetos](../ssdt/project-oriented-offline-database-development.md)

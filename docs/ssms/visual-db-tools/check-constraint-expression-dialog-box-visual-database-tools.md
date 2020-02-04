@@ -1,10 +1,9 @@
 ---
-title: Caixa de diálogo Verificar Expressão de Restrição (Ferramentas de Banco de Dados Visual) | Microsoft Docs
-ms.custom: ''
+title: Caixa de diálogo Expressão de Restrição de Verificação
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +11,14 @@ f1_keywords:
 ms.assetid: beb6ce43-3913-4d66-8826-8e885335b790
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7f1554ee91444462c52dee404d198b35944a7caf
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: fcd0eacf11390947248208310eba3ddec40089ce
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263669"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255498"
 ---
 # <a name="check-constraint-expression-dialog-box-visual-database-tools"></a>Caixa de diálogo Verificar Expressão de Restrição (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,7 +56,7 @@ Na guia Verificar Restrições das páginas de propriedades, digite uma express�
   
 A sintaxe de SQL é criada para os seguintes parâmetros:  
   
-|Parâmetro|Descrição|  
+|Parâmetro|DESCRIÇÃO|  
 |-------------|---------------|  
 |constante|Um valor literal, como numérico ou dados de caractere. Os dados de caractere devem estar entre aspas (').|  
 |column_name|Especifica uma coluna.|  

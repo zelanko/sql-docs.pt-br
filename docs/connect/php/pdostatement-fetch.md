@@ -11,10 +11,10 @@ ms.assetid: 4368e362-5bda-4da1-8462-33714683c39f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a69b1093240112a804504f8d0e636ffbdfe8439e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993063"
 ---
 # <a name="pdostatementfetch"></a>PDOStatement::fetch
@@ -29,7 +29,7 @@ Recupera uma linha de um conjunto de resultados.
 mixed PDOStatement::fetch ([ $fetch_style[, $cursor_orientation[, $cursor_offset]]] );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
 $*fetch_style*: um símbolo (inteiro) opcional especificando o formato dos dados da linha. Consulte a seção Comentários para obter a lista de valores possíveis para $*fetch_style*. O padrão é PDO::FETCH_BOTH. $*fetch_style* no método de busca substituirá o $*fetch_style* especificado no método PDO::query.  
   
 $*cursor_orientation*: um símbolo (inteiro) opcional que indica a linha a ser recuperada quando a instrução prepare especifica `PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL`. Consulte a seção Comentários para obter a lista de valores possíveis para $*cursor_orientation*. Consulte [PDO::prepare](../../connect/php/pdo-prepare.md) para obter um exemplo usando um cursor rolável.  
@@ -39,10 +39,10 @@ $*cursor_offset*: um símbolo (inteiro) opcional que especifica a linha a ser bu
 ## <a name="return-value"></a>Valor retornado  
 Um valor misto que retorna uma linha ou false.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 O cursor é avançado automaticamente quando a busca é chamada. A tabela a seguir contém a lista de possíveis valores de $*fetch_style*.  
   
-|$*fetch_style*|Descrição|  
+|$*fetch_style*|DESCRIÇÃO|  
 |-------------------|---------------|  
 |PDO::FETCH_ASSOC|Especifica uma matriz indexada pelo nome da coluna.|  
 |PDO::FETCH_BOTH|Especifica uma matriz indexada pelo nome da coluna e ordem com base em zero. Esse é o padrão.|  
@@ -57,7 +57,7 @@ Se o cursor estiver no fim do conjunto de resultados (a última linha foi recupe
   
 Se o cursor for rolável (PDO::ATTR_CURSOR = PDO::CURSOR_SCROLL), a busca moverá o cursor dentro do limite do conjunto de resultados. A tabela a seguir contém a lista de possíveis valores de $*cursor_orientation*.  
   
-|$*cursor_orientation*|Descrição|  
+|$*cursor_orientation*|DESCRIÇÃO|  
 |--------------------------|---------------|  
 |PDO::FETCH_ORI_NEXT|Recupera a próxima linha. Esse é o padrão.|  
 |PDO::FETCH_ORI_PRIOR|Recupera a linha anterior.|  

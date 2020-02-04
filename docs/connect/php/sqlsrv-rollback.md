@@ -18,13 +18,13 @@ ms.assetid: 6e6bac39-45af-428c-bc32-f773482562ee
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8475944b4167184a6a2ef4a71d8751b2cd320fe1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68014964"
 ---
-# <a name="sqlsrvrollback"></a>sqlsrv_rollback
+# <a name="sqlsrv_rollback"></a>sqlsrv_rollback
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Reverte a transação atual na conexão especificada e retorna a conexão para o modo de confirmação automática. A transação atual inclui todas as instruções na conexão especificada que foram executadas após a chamada para [sqlsrv_begin_transaction](../../connect/php/sqlsrv-begin-transaction.md) e antes de qualquer chamada para **sqlsrv_rollback** ou [sqlsrv_commit](../../connect/php/sqlsrv-commit.md).  
@@ -42,7 +42,7 @@ Reverte a transação atual na conexão especificada e retorna a conexão para o
 sqlsrv_rollback( resource $conn)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
 *$conn*: a conexão em que a transação está ativa.  
   
 ## <a name="return-value"></a>Valor retornado  

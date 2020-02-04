@@ -1,28 +1,29 @@
 ---
-title: 'Como fazer: criar um teste de unidade do SQL Server vazio | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Criar um teste de unidade do SQL Server vazio
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.unittesting.createtest
 ms.assetid: b6f3cd5a-3389-42d6-a93f-97b3ddf31b95
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2cd7a605fbe9d3075d4d67e1ce824664ef2747c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 5684735fc0bf2aaaa35183933145006d6efe188e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67897142"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241508"
 ---
-# <a name="how-to-create-an-empty-sql-server-unit-test"></a>Como fazer: Criar um teste de unidade do SQL Server vazio
-Inclua os testes de unidade no projeto de banco de dados verificar se as alterações feitas nos objetos de banco de dados não prejudicam a funcionalidade existente. Os procedimentos a seguir explicam como criar testes de unidade SQL Server para qualquer objeto de banco de dados. O SQL Server Data Tools inclui suporte adicional para procedimentos armazenados, gatilhos e funções de banco de dados. Para obter mais informações, confira [Como Criar testes de unidade do SQL Server para funções, gatilhos e procedimentos armazenados](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md).  
+# <a name="how-to-create-an-empty-sql-server-unit-test"></a>Como criar um teste de unidade do SQL Server vazio
+
+Inclua os testes de unidade no projeto de banco de dados verificar se as alterações feitas nos objetos de banco de dados não prejudicam a funcionalidade existente. Os procedimentos a seguir explicam como criar testes de unidade SQL Server para qualquer objeto de banco de dados. O SQL Server Data Tools inclui suporte adicional para procedimentos armazenados, gatilhos e funções de banco de dados. Para saber mais, confira [Como criar testes de unidade do SQL Server para funções, gatilhos e procedimentos armazenados](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md).  
   
-Quando você criar um teste de unidade do SQL Server usando o primeiro procedimento, um projeto de teste será criado automaticamente para você se não houver nenhum projeto de teste. Se os projetos de teste já existirem, você terá a opção de adicionar o novo teste a um desses projetos ou poderá criar um novo projeto de teste. Para obter mais informações sobre os projetos de teste, veja [Como: Criar um projeto de teste para testes de unidade de banco de dados do SQL Server](../ssdt/how-to-create-a-test-project-for-sql-server-database-unit-testing.md).  
+Quando você criar um teste de unidade do SQL Server usando o primeiro procedimento, um projeto de teste será criado automaticamente para você se não houver nenhum projeto de teste. Se os projetos de teste já existirem, você terá a opção de adicionar o novo teste a um desses projetos ou poderá criar um novo projeto de teste. Para saber mais sobre projetos de teste, confira [Como criar um projeto de teste para testes de unidade de banco de dados do SQL Server](../ssdt/how-to-create-a-test-project-for-sql-server-database-unit-testing.md).  
   
 Você tem duas opções para criar um teste de unidade do SQL Server:  
   
@@ -58,7 +59,7 @@ Você tem duas opções para criar um teste de unidade do SQL Server:
   
     -   A implantação automática do projeto de banco de dados e das alterações de esquema associadas a uma configuração de projeto específica antes de você executar os testes de unidade.  
   
-    Para obter mais informações, confira [Como Configurar a execução do teste de unidade do SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md).  
+    Para obter mais informações, consulte [Como: Configurar a execução do teste de unidade do SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md).  
   
 6.  Forneça informações de configuração do projeto e clique em **OK**.  
   
@@ -95,10 +96,10 @@ Depois que você configurar o projeto de teste e criar o teste de unidade, estas
 -   Adicione condições de teste ou outra instrução de asserção para verificar os resultados do script.  
   
 > [!NOTE]  
-> A condição de teste Inconclusivo é a condição padrão adicionada a cada teste. Ela é incluída para indicar que a verificação de teste não foi implementada. Exclua essa condição do teste depois que você tiver adicionado outras condições. Para obter mais informações, confira [Como adicionar condições de teste a testes de unidade de banco de dados](https://msdn.microsoft.com/library/aa833242(VS.100).aspx).  
+> A condição de teste Inconclusivo é a condição padrão adicionada a cada teste. Ela é incluída para indicar que a verificação de teste não foi implementada. Exclua essa condição do teste depois que você tiver adicionado outras condições. Para saber mais, confira [Como adicionar condições de teste a testes de unidade de banco de dados](https://msdn.microsoft.com/library/aa833242(VS.100).aspx).  
   
 ## <a name="see-also"></a>Consulte Também  
-[Como: Executar testes de unidade do SQL Server](../ssdt/how-to-run-sql-server-unit-tests.md)  
+[Como executar testes de unidade do SQL Server](../ssdt/how-to-run-sql-server-unit-tests.md)  
 [Criando e definindo testes de unidade do SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
 [Criar testes de unidade](https://msdn.microsoft.com/library/ms182523(VS.90).aspx)  
   

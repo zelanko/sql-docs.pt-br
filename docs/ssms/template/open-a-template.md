@@ -1,6 +1,6 @@
 ---
-title: Abrir um modelo | Microsoft Docs
-ms.custom: ''
+title: Abrir um modelo
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 605b0f4c-5ba1-4249-ad1c-6341df77cd7a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c52d9b58a3fb738222c78dd57e9d45634963fbde
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: dd59b435c1c0fbd3461333305824aca61c68d296
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266757"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245688"
 ---
 # <a name="open-a-template"></a>Abrir um modelo
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,6 +44,6 @@ Após abrir o modelo, use a caixa de diálogo **Substituir Parâmetros do Modelo
 Se a abertura de um modelo iniciar uma nova janela do editor, a janela será aberta com as credenciais da conexão ativa atual. Por exemplo, se você estiver concentrado em uma instância do [!INCLUDE[ssDE](../../includes/ssde_md.md)] no Pesquisador de Objetos quando você abrir o modelo CREATE DATABASE, uma nova janela do editor será aberta usando uma conexão com essa instância. Se não houver nenhuma conexão ativa, o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] apresentará uma caixa de diálogo de logon.  
   
 ## <a name="see-also"></a>Consulte Também  
-[Gerenciador de Modelos](../../ssms/template/template-explorer.md)  
+[Explorador de Modelos](../../ssms/template/template-explorer.md)  
 [Substituir parâmetros do modelo](../../ssms/template/replace-template-parameters.md)  
   

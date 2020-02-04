@@ -1,25 +1,26 @@
 ---
-title: SQL Server Data Tools | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: SQL Server Data Tools
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.errortask.generichelp
 ms.assetid: 5f08f15a-851d-4026-a557-28b3c6492efe
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7bd026b76a7ce6e891c4267ad2c11b4e869a4d35
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 2049550374569d10631239419cd380c115022ff2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110691"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256340"
 ---
 # <a name="sql-server-data-tools"></a>SQL Server Data Tools
+
 O SSDT (SQL Server Data Tools) transforma o desenvolvimento do banco de dados introduzindo um modelo declarativo ubíquo que abrange todas as fases do desenvolvimento de banco de dados dentro do Visual Studio. Você pode usar os recursos de design de Transact\-SQL do SSDT para compilar, depurar, manter e refatorar bancos de dados. Pode trabalhar com um projeto de banco de dados ou diretamente com uma instância de banco de dados conectada ou externa.  
   
 Os desenvolvedores podem usar as ferramentas familiares do Visual Studio para o desenvolvimento de bancos de dados. Exemplo dessas ferramentas: navegação de códigos, IntelliSense, suporte a idioma comparável ao que está disponível para C# e Visual Basic, validação específica de plataforma, depuração e edição declarativa no editor de Transact\-SQL. O SSDT também fornece um Designer de Tabela visual para criar e editar tabelas em projetos de banco de dados ou instâncias de banco de dados conectadas. Enquanto está trabalhando nos seus projetos de banco de dados em um ambiente de equipe, você pode usar o controle de versão para todos os arquivos. No momento de publicar seu projeto, você poderá fazê-lo em todas as plataformas SQL com suporte, inclusive o Banco de Dados SQL e o SQL Server. O recurso de validação de plataformas SSDT assegura que seus scripts funcionarão no destino especificado.  
@@ -28,7 +29,7 @@ O Pesquisador de Objetos do SQL Server no Visual Studio oferece uma exibição d
   
 Os tópicos e seções a seguir discutem como o SSDT pode ajudar no desenvolvimento de bancos de dados. Tópicos de instruções são incluídos para ajudá-lo no processo de conclusão das tarefas do seu projeto de banco de dados. Essas tarefas, escritas na forma de tutorial e concluídas em ordem, usam a Northwind Traders, uma empresa fictícia que importa e exporta comidas especializadas do mundo todo.  
   
-|Tópicos/Seção|Descrição|  
+|Tópicos/Seção|DESCRIÇÃO|  
 |-------------------|---------------|  
 |[Desenvolvimento de banco de dados offline orientado a projetos](../ssdt/project-oriented-offline-database-development.md)|Os tópicos nesta seção descrevem os recursos do SQL Server Data Tools para autoria, criação, depuração e publicação de um projeto de banco de dados.|  
 |[Desenvolvimento de banco de dados orientado a projetos usando ferramentas de linha de comando](../ssdt/project-oriented-database-development-using-command-line-tools.md)|Os tópicos nesta seção descrevem ferramentas de linha de comando que permitem alguns cenários de desenvolvimento de banco de dados orientados por projeto.|  

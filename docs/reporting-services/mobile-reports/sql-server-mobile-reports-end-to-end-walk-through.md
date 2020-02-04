@@ -11,10 +11,10 @@ ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d5ec94bb96832574cec663d38690bec8078db6ff
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028889"
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Relatórios móveis do SQL Server: Passo a passo completo
@@ -22,7 +22,7 @@ Realize a criação de relatórios móveis para qualquer tamanho de tela com o [
 
 Crie relatórios móveis em uma superfície de design com linhas de grade e colunas ajustáveis e elementos flexíveis de relatório móvel. Conectar-se a várias fontes de dados locais ou carregar pastas de trabalho do Excel para criar relatórios móveis. Salve seus relatórios em um portal da Web do [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] e exiba-os em um navegador ou em aplicativos móveis do Power BI.  
   
-Este artigo orienta você pela:   
+Este artigo orienta você sobre:   
   
 - Criação de uma fonte de dados e conjunto de dados compartilhados no portal da Web do [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] , usando o banco de dados AdventureWorks como uma fonte de dados de exemplo.  
 - Criação de um relatório móvel do Reporting Services no [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]  
@@ -44,7 +44,7 @@ Para acompanhar, você precisa destes produtos:
   
 ## <a name="create-a-shared-data-source"></a>Criar uma fonte de dados compartilhados  
   
-Você pode criar uma fonte de dados compartilhada para seus relatórios móveis a partir de qualquer uma das fontes de dados com suporte do Reporting Services. Veja a [lista de fontes de dados com suporte](../report-data/data-sources-supported-by-reporting-services-ssrs.md).  
+Você pode criar uma fonte de dados compartilhada para seus relatórios móveis a partir de qualquer uma das fontes de dados com suporte do Reporting Services. Consulte a [lista de fontes de dados com suporte](../report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
 1. De seu portal da Web do [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] , clique em **Nova** > **Fonte de Dados**.  
   
@@ -65,7 +65,7 @@ Leia mais sobre as [fontes de dados compartilhadas no Reporting Services](../rep
    
 ## <a name="shared-dataset">Criar um conjunto de dados compartilhado</a>  
   
-Use uma ferramenta de cliente existente do [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] , como o Designer de Relatórios no [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)], para criar o conjunto de dados compartilhado.  Este passo a passo usa [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]. [Instale o Construtor de Relatórios](../install-windows/install-report-builder.md)ou o inicie em seu portal na Web. Você criará três conjuntos de dados, um para: o valor do KPI, a tendência do KPI e outro com mais campos para o relatório móvel do Reporting Services.     
+Use uma ferramenta de cliente existente do [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] , como o Designer de Relatórios no [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)], para criar o conjunto de dados compartilhado.  Este passo a passo usa [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]. [Instale o Construtor de Relatórios](../install-windows/install-report-builder.md) ou o inicie no portal da Web. Você criará três conjuntos de dados, um para: o valor do KPI, a tendência do KPI e outro com mais campos para o relatório móvel do Reporting Services.     
   
 1. De seu portal da Web do [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] , clique em **Novo** > **Relatório Paginado** para começar [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)].  
   
@@ -165,7 +165,7 @@ Ao abrir pela primeira vez o [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilerep
   
    ![PBI_SSMRP_TreeMapDataProps](../../reporting-services/mobile-reports/media/pbi-ssmrp-treemapdataprops.png)  
   
-6. Clique na guia **Layout** .  
+6. Clique na guia **Layout**.  
   
 7. Clique na engrenagem de Opções ![PBI_SSMRP_Cog](../../reporting-services/mobile-reports/media/pbi-ssmrp-cog.png) no canto superior direito do mapa de árvore para ver o menu que ela contém.   
   

@@ -1,23 +1,24 @@
 ---
-title: Usar asserções Transact-SQL nos testes de unidade do SQL Server | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Usando asserções Transact-SQL nos testes de unidade do SQL Server
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 55d8be9c-9282-47d3-be7f-e2c26f00c95e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b4ff76e7d980081208f310dcae2a498f857151df
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: b8feb69dc25d55b279d65904126afd2733160d6f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140957"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243507"
 ---
 # <a name="using-transact-sql-assertions-in-sql-server-unit-tests"></a>Usando asserções Transact-SQL nos testes de unidade do SQL Server
+
 Em um teste de unidade do SQL Server, um script de teste Transact\-SQL executa e retorna um resultado. Muitas vezes, os resultados são retornados como um conjunto de resultados. Você pode validar resultados usando condições de teste. Por exemplo, você pode usar uma condição de teste para verificar quantas linhas foram retornadas em um conjunto de resultados específico ou para verificar quanto tempo um teste específico levou para ser executado. Para saber mais sobre as condições de teste, confira [Usar as condições de teste em Testes de unidade do SQL Server](../ssdt/using-test-conditions-in-sql-server-unit-tests.md).  
   
 Em vez de usar as condições de teste, você também pode usar as asserções Transact\-SQL, que são instruções THROW ou RAISERROR em um script Transact\-SQL. Em determinadas circunstâncias, talvez você prefira usar uma asserção Transact\-SQL, em vez de uma condição de teste.  
@@ -46,7 +47,7 @@ Para marcar um método de teste de unidade do SQL Server com as exceções esper
 [ExpectedSqlException(MessageNumber=nnnnn, Severity=x, MatchFirstError=false, State=y)]  
 ```  
   
-Onde:  
+Em que:  
   
 -   *nnnnn* é o número da mensagem esperada; por exemplo, 14025  
   
@@ -56,7 +57,7 @@ Onde:
   
 Todos os parâmetros não especificados são ignorados. Você passa esses parâmetros para a instrução RAISERROR no código do banco de dados. Se você especificar MatchFirstError = true, o atributo corresponderá a qualquer SqlError na exceção. O comportamento padrão (MatchFirstError = true) é retornar somente o primeiro erro.  
   
-Para obter um exemplo de como usar as exceções esperadas e um teste de unidade negativo do SQL Server, veja [Passo a passo: Criar e Executar um Teste de Unidade do SQL Server](../ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md).  
+Para obter um exemplo de como usar as exceções esperadas e um teste de unidade negativo do SQL Server, consulte [Passo a passo: criar e executar um teste de unidade do SQL Server](../ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md).  
   
 ## <a name="the-raiserror-statement"></a>A instrução RAISERROR  
   
@@ -78,11 +79,11 @@ onde:
   
 @ErrorState é um número inteiro arbitrário de 1 a 127. Você pode usar esse número inteiro para fazer a distinção entre as ocorrências de um único erro gerado em locais diferentes no código.  
   
-Para saber mais, confira [RAISERROR (Transact-SQL)](https://msdn.microsoft.com/library/ms178592.aspx). Um exemplo de como usar RAISERROR em um teste de unidade do SQL Server é apresentado no tópico [Como Gravar um teste de unidade do SQL Server executado no escopo de uma única transação](../ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md).  
+Para saber mais, confira [RAISERROR (Transact-SQL)](https://msdn.microsoft.com/library/ms178592.aspx). Confira um exemplo de como usar RAISERROR em um teste de unidade do SQL Server no tópico [Como gravar um teste de unidade do SQL Server executado no escopo de uma única transação](../ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md).  
   
 ## <a name="see-also"></a>Consulte Também  
 [Criando e definindo testes de unidade do SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
 [Usar condições de teste nos testes de unidade do SQL Server](../ssdt/using-test-conditions-in-sql-server-unit-tests.md)  
 [Verificar o código do banco de dados usando os testes de unidade do SQL Server](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
-[Como: Abrir um teste de unidade do SQL Server a ser editado](../ssdt/how-to-open-a-sql-server-unit-test-to-edit.md)  
+[Como abrir um teste de unidade do SQL Server para edição](../ssdt/how-to-open-a-sql-server-unit-test-to-edit.md)  
   

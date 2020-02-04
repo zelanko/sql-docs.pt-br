@@ -9,10 +9,10 @@ ms.assetid: 194e6679-890d-4a3e-a756-130d32ef7e29
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 20e9e6626bbd08eebfe69a04f63ed882979b34d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580157"
 ---
 # <a name="line-charts-report-builder-and-ssrs"></a>Gráficos de linhas (Construtor de Relatórios e SSRS)
@@ -20,7 +20,7 @@ ms.locfileid: "65580157"
   
  A ilustração a seguir mostra um gráfico de linhas que contém três séries.  
   
- ![Gráfico de linhas](../../reporting-services/report-design/media/rs-linechart.gif "Gráfico de linhas")  
+ ![Gráfico de linhas](../../reporting-services/report-design/media/rs-linechart.gif "Gráfico de Linhas")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

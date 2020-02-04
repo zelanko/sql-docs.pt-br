@@ -1,10 +1,9 @@
 ---
-title: Editar linhas no painel de resultados (Ferramentas de Banco de Dados Visual) | Microsoft Docs
-ms.custom: ''
+title: Editar linhas ao painel de Resultados
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -17,12 +16,14 @@ helpviewer_keywords:
 ms.assetid: de36f636-cfe9-4ae6-a474-06e9c51f9f0c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 12e635f0bf6f4810494d04044cba0d30ace6e631
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 48cd8bc534413fa340da8f74fc1412fb2d3a96df
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68254609"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247218"
 ---
 # <a name="edit-rows-in-the-results-pane-visual-database-tools"></a>Editar linhas no painel de Resultados (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -1,24 +1,25 @@
 ---
-title: 'Como fazer: estruturar tópicos e adicionar snippets a scripts Transact-SQL | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Estruturar tópicos e adicionar snippets a scripts Transact-SQL
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 543e7ce7-8639-4281-8a91-85314755e5de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c8ab757cac0622c5674bb2008b5bafbbc07c182c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: ac322bd8bd53297c4322607819a2ed2ab042a4e1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035122"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241355"
 ---
-# <a name="how-to-outline-and-add-snippets-to-transact-sql-script"></a>Como fazer: Estruturar tópicos e adicionar snippets a scripts Transact-SQL
-O SQL Server Data Tools inclui uma biblioteca de códigos que consiste em snippets de código prontos para serem inseridos no seu aplicativo. Cada snippet executa uma tarefa de script completa, como a criação de uma função, tabela, gatilho, índice, exibição, tipo de dados definido pelo usuário etc. Você pode inserir um snippet em seu código-fonte com alguns cliques do mouse. Estes snippets aumentam sua produtividade reduzindo a quantidade de tempo você gasta digitando.  
+# <a name="how-to-outline-and-add-snippets-to-transact-sql-script"></a>Como estruturar tópicos e adicionar snippets a scripts Transact-SQL
+
+O SQL Server Data Tools inclui uma biblioteca de códigos que consiste em snippets de código prontos para serem inseridos no seu aplicativo. Cada snippet executa uma tarefa de script completa como criar uma função, tabela, gatilho, índice, exibição, tipo de dados definido pelo usuário, etc. Você pode inserir um snippet em seu código-fonte com alguns cliques do mouse. Estes snippets aumentam sua produtividade reduzindo a quantidade de tempo você gasta digitando.  
   
 Quando você precisa navegar para um snippet apropriado, pode usar o selecionador de snippet, que dá a você listas categorizadas de snippets para escolher. Depois de você ter adicionado o snippet a seu código, algumas partes dele podem precisar de personalização, como substituir nomes de variável por nomes mais apropriados, ou adicionar a lógica real de um procedimento armazenado. Você perceberá que o código de snippet inserido tem um ou mais pontos de substituição realçados no código para esta finalidade. Se você passar o ponteiro do mouse sobre o ponto de substituição, uma Dica de Ferramenta aparecerá para explicar como você pode alterar o código.  
   

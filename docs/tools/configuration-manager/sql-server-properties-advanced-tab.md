@@ -1,6 +1,6 @@
 ---
-title: Propriedades do SQL Server (guia Avançado) | Microsoft Docs
-ms.custom: ''
+title: Propriedades do SQL Server (guia Avançado)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,12 +11,12 @@ ms.assetid: 2ffd10fd-bac1-478f-9cff-96ed6c8b787f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b64a1c1b9d40061d5319d1e629d0f2215df72e72
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: a21d6eb31b0edb5ab0cfa56f388b2cf3e3065627
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68023971"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306832"
 ---
 # <a name="sql-server-properties-advanced-tab"></a>Propriedades do SQL Server (guia Avançado)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68023971"
  Exibe o local em que os despejos de memória são colocadas no caso de um erro.  
   
  **Relatório de Erros**  
- Quando definido como **Sim**, o programa Dr. Watson encaminhará informações para a [!INCLUDE[msCoName](../../includes/msconame-md.md)] ou para o servidor de erro, se ocorrer uma falha grave. Para obter mais informações sobre o Relatório de Erros, pesquise "Configurações de relatório de erro e uso" nos Manuais Online. Para alterar esse valor, no Pesquisador de Objetos do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], clique com o botão direito do mouse no seu servidor, clique em **Propriedades** e clique na página **Diversas Configurações de Servidor**. As opções são apresentadas na área **Relatório de Informações** .  
+ Quando definido como **Sim**, o programa Dr. Watson encaminhará informações para a [!INCLUDE[msCoName](../../includes/msconame-md.md)] ou para o servidor de erro, se ocorrer uma falha grave. Para obter mais informações sobre o Relatório de Erros, pesquise "Configurações de relatório de erro e uso" nos Manuais Online. Para alterar esse valor, no Pesquisador de Objetos do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , clique com o botão direito do mouse no seu servidor, clique em **Propriedades**e clique na página **Diversas Configurações de Servidor** . As opções são apresentadas na área **Relatório de Informações** .  
   
  **Versão do Arquivo**  
  Exibe a versão do executável do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

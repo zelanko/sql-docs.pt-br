@@ -1,6 +1,6 @@
 ---
-title: Personalizar menus e teclas de atalho | Microsoft Docs
-ms.custom: ''
+title: Personalizar menus e teclas de atalho
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -20,12 +20,12 @@ ms.assetid: fb4edf3c-71b6-4645-b1d1-ddfdd69f0d7b
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 6492b85430ac29fe690de9c41cd7a1625e409b20
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: e2b398a1acd5e91a55e18f25b2094f9b671c70b8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532878"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243917"
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>Personalizar menus e teclas de atalho
 
@@ -57,7 +57,7 @@ Podem ser criados aceleradores de teclado para procedimentos armazenados usando 
   
 1.  Clique no botão na barra de ferramentas.  
   
-2.  Na caixa de diálogo **Personalizar**, na guia **Comandos**, clique em **Modificar Seleção**.  
+2.  Na caixa de diálogo **Personalizar** , na guia **Comandos** , clique em **Modificar Seleção**.  
   
 3.  Na caixa **Nome** no menu de atalho, digite um nome para o botão de barra de ferramentas usando um E comercial (&) antes da letra que você deseja definir como acelerador de teclado.  
   
@@ -73,7 +73,7 @@ Podem ser criados aceleradores de teclado para procedimentos armazenados usando 
   
 2.  Clique no comando de menu.  
   
-3.  Na caixa de diálogo **Personalizar**, clique em **Modificar Seleção**.  
+3.  Na caixa de diálogo **Personalizar** , clique em **Modificar Seleção**.  
   
 4.  Na caixa **Nome** no menu de atalho, digite um nome para o comando de menu usando um E comercial (&) antes da letra que você deseja definir como acelerador de teclado.  
   
@@ -107,7 +107,7 @@ Podem ser criados aceleradores de teclado para procedimentos armazenados usando 
   
 4.  Alterne para a lista **Controles** e use as teclas de direção para selecionar o botão que você deseja alterar.  
   
-5.  Pressione **ALT+M** para selecionar **Modificar Seleção**.  
+5.  Pressione **ALT+M**para selecionar **Modificar Seleção**.  
   
 6.  Alterne para a caixa **Nome** no menu de atalho, digite um nome para o botão de barra de ferramentas usando um E comercial (&) antes da letra que você deseja definir como acelerador de teclado.  
   

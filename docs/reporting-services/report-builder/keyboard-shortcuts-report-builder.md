@@ -12,10 +12,10 @@ ms.assetid: 2d04f2c9-4e29-4b7a-843f-ce9a7c168aeb
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 963c225d70429a9f1f45902f9edf554753a78c15
-ms.sourcegitcommit: c40f663d4486e574fd749f2c8e84c98d41970352
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67037865"
 ---
 # <a name="keyboard-shortcuts-report-builder"></a>Atalhos de teclado (Construtor de Relatórios)
@@ -30,11 +30,11 @@ ms.locfileid: "67037865"
   
 ## <a name="keyboard-shortcuts-in-report-builder"></a>Atalhos de teclado no Construtor de Relatórios  
   
-|Descrição|Combinação de teclas|  
+|DESCRIÇÃO|Combinação de teclas|  
 |-----------------|---------------------|  
-|Abre o menu Construtor de Relatórios.|ALT+F|  
-|Criar um relatório.|CTRL+N|  
-|Abra um relatório.|CTRL+O|  
+|Abre o menu Construtor de Relatórios.|ALT + F|  
+|Criar um relatório.|Ctrl+N|  
+|Abra um relatório.|Ctrl+O|  
 |Salva um relatório.|CTRL+S, ALT+S|  
 |Move entre áreas do Construtor de Relatórios, como a Faixa de Opções, a superfície de design, o painel Agrupamento, o painel Propriedades e o painel Dados.|F6, SHIFT+F6|  
 |Move para a Faixa de Opções.|ALT|  
@@ -54,11 +54,11 @@ ms.locfileid: "67037865"
 |Alinha as bordas de vários itens selecionados.|ALT+H+A|  
 |Execute o relatório.|F5, ALT+H+R|  
 |Alterna para o modo de design.|F8|  
-|Copiar|CTRL+C, ALT+H+C|  
-|Recorta|CTRL+X, ALT+H+X|  
+|Cópia|CTRL+C, ALT+H+C|  
+|Recortar|CTRL+X, ALT+H+X|  
 |Colar|CTRL+V, ALT+H+V|  
-|Seleciona tudo.|CTRL+A|  
-|Desfaz|CTRL+Z, ALT+Z|  
+|Seleciona tudo.|Ctrl+A|  
+|Desfazer|CTRL+Z, ALT+Z|  
 |Refaz|CTRL+Y, ALT+Y|  
 |Amplia.|CTRL+sinal de adição (+)|  
 |Reduz.|CTRL+sinal de subtração (-)|  

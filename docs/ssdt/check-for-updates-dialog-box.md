@@ -1,25 +1,24 @@
 ---
-title: Caixa de diálogo Verificar atualizações | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Caixa de diálogo Verificar Atualizações
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
-f1_keywords:
-- sql.data.tools.checkforupdates.dialog
 ms.assetid: 40f942cc-8c87-45de-9456-44bd53b519e7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 777a98412ba6a9b18d825d16e8a4b4e911d6d92d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: b3b4a201b18230271848d289d68827aa36b0d6ee
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68132108"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245546"
 ---
 # <a name="check-for-updates-dialog-box"></a>Caixa de diálogo Verificar Atualizações
+
 Com a versão de novembro de 2012 do SQL Server Data Tools, você verá a opção de menu **Verificar Atualizações** no menu **SQL**.  
   
 A caixa de diálogo **Verificar Atualizações** exibe a versão do SQL Server Data Tools instalada no computador, bem como a versão lançada. A opção **Atualizar** mostra se a versão lançada é posterior à versão instalada. Clique no botão **Atualizar** para ver uma descrição das atualizações disponíveis e, se você escolher, instalar a versão mais recente do SQL Server Data Tools em seu computador.  

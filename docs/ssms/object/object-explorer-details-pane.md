@@ -1,6 +1,6 @@
 ---
-title: Painel de detalhes do Pesquisador de Objetos | Microsoft Docs
-ms.custom: ''
+title: Painel Detalhes do Pesquisador de Objetos
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b51309850e4e36083dbbf5fa228746dac18968ef
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: fea000eb9b428c58fa01afdd9724b7b4418789cc
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264077"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257150"
 ---
 # <a name="object-explorer-details-pane"></a>Painel Detalhes do Pesquisador de Objetos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,15 +39,15 @@ Detalhes do Pesquisador de Objetos pode ser usado para navegar por pastas e obje
   
 Detalhes do Pesquisador de Objetos inclui uma barra de ferramentas que contém os ícones descritos na tabela a seguir. Os ícones estão disponíveis apenas quando apropriado.  
   
-|Ícone|Ação|  
+|ícone|Ação|  
 |--------|----------|  
 |**Voltar**|Move para os itens anteriores exibidos em Detalhes do Pesquisador de Objetos. Executa novamente uma pesquisa quando a exibição anterior é o resultado de uma operação de pesquisa.|  
 |**Avançar**|Move para a próxima tela depois que uma operação **Voltar** é selecionada.|  
-|**Para cima**|Move para o objeto ou a pasta pai.|  
+|**Operante**|Move para o objeto ou a pasta pai.|  
 |**Sincronizar**|Define o foco de Pesquisador de Objetos para o objeto selecionado em Detalhes do Pesquisador de Objetos.|  
 |**Filter**|Quando disponível, mostra um subconjunto configurável de objetos.|  
 |**Atualizar**|Atualiza a exibição em Detalhes do Pesquisador de Objetos.|  
-|**Pesquisa**|Fornece uma área para inserir um termo de pesquisa para objetos de banco de dados específicos.|  
+|**Pesquisar**|Fornece uma área para inserir um termo de pesquisa para objetos de banco de dados específicos.|  
   
 ### <a name="column-header-selections"></a>Seleções de cabeçalho de coluna  
 Detalhes do Pesquisador de Objetos possui colunas selecionáveis. Você pode clicar com o botão direito do mouse em qualquer cabeçalho de coluna e pode verificar os itens que deseja exibir. Suas seleções serão persistentes entre os diferentes objetos pelos quais você navega. As seleções de cada usuário são preservadas quando você sai do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]e o reinicia.  
@@ -88,7 +88,7 @@ Detalhes do Pesquisador de Objetos dá suporte à seleção de vários objetos. 
 ## <a name="sql-server-object-search"></a>Pesquisa de objetos do SQL Server  
 Curingas  
   
--   Há suporte para os caracteres curinga padrão. Por exemplo, uma pesquisa por **dm_os%counters** retorna dm_os_memory_cache_counters e dm_os_performance_counters. Para obter mais informações, confira [Como pesquisar com curingas](../../relational-databases/scripting/search-text-with-wildcards.md).  
+-   Há suporte para os caracteres curinga padrão. Por exemplo, uma pesquisa por **dm_os%counters** retorna dm_os_memory_cache_counters e dm_os_performance_counters. Para obter mais informações, consulte [Como pesquisar com curingas](../../relational-databases/scripting/search-text-with-wildcards.md).  
   
 Escopo de pesquisa  
   

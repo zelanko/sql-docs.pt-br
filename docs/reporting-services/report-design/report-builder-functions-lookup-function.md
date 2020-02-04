@@ -9,10 +9,10 @@ ms.assetid: e60e5bab-b286-4897-9685-9ff12703517d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 333c75f3ca10d1ed6ecd738a3dc76a32a53305c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579580"
 ---
 # <a name="report-builder-functions---lookup-function"></a>Funções do Construtor de Relatórios – Função Lookup
@@ -28,7 +28,7 @@ ms.locfileid: "65579580"
 Lookup(source_expression, destination_expression, result_expression, dataset)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *source_expression*  
  (**Variante**) Uma expressão que é avaliada no escopo atual e que especifica o nome ou chave para procurar. Por exemplo, `=Fields!ProdID.Value`.  
   
@@ -44,7 +44,7 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
 ## <a name="return"></a>Retorno  
  Retorna **Variant**ou **Nothing** se não houver correspondência.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Use **Lookup** para recuperar o valor do conjunto de dados especificado para um par de nome/valor no qual há uma relação de um para um. Por exemplo, para um campo de ID em uma tabela, você pode usar **Lookup** para recuperar todos os números de telefone associados àquele cliente de um conjunto de dados que não esteja associado à região de dados.  
   
  **Lookup** faz o seguinte:  
@@ -59,7 +59,7 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
   
  Para recuperar diversos valores para um único nome ou campo de chave em que há uma relação um para muitos, use [Função LookupSet &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookupset-function.md). Para chamar **Lookup** para um conjunto de valores, use [Função Multilookup &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/report-builder-functions-multilookup-function.md).  
   
- As seguintes restrições são aplicadas:  
+ As restrições a seguir se aplicam:  
   
 -   **Lookup** é avaliado depois que todas as expressões de filtro são aplicadas.  
   

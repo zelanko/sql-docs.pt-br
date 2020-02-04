@@ -14,13 +14,13 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 786ebc0529d9af47c34840e0e2cb11bf2a448fec
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73844605"
 ---
-# <a name="manage-and-troubleshoot-stretch-database"></a>Gerenciar e solucionar problemas no Stretch Database
+# <a name="manage-and-troubleshoot-stretch-database"></a>Gerenciar e solucionar problemas do Stretch Database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
 
 
@@ -42,7 +42,7 @@ GO
 ## <a name="manage-data-migration"></a>Gerenciar a migração de dados  
   
 ### <a name="check-the-filter-function-applied-to-a-table"></a>Verificar a função de filtro aplicada a uma tabela  
- Abra a exibição de catálogo **sys.remote_data_archive_tables** e verifique o valor da coluna **filter_predicate** para identificar a função que o Stretch Database está usando para selecionar linhas para migração. Se o valor for nulo, a tabela inteira será qualificada para ser migrada. Para obter mais informações, veja [sys.remote_data_archive_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-tables.md) e [Selecione linhas para migrar usando uma função de filtro](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md).  
+ Abra a exibição de catálogo **sys.remote_data_archive_tables** e verifique o valor da coluna **filter_predicate** para identificar a função que o Stretch Database está usando para selecionar linhas para migração. Se o valor for nulo, a tabela inteira poderá ser migrada. Para obter mais informações, veja [sys.remote_data_archive_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-tables.md) e [Selecione linhas para migrar usando uma função de filtro](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md).  
   
 ###  <a name="Migration"></a> Verificar o status da migração dos dados  
  Para monitorar a migração de dados no Monitor do Stretch Database, selecione **Tarefas | Stretch | Monitorar** para um banco de dados no SQL Server Management Studio. Para obter mais informações, veja [Monitorar e solucionar problemas de migração de dados &#40;Stretch Database&#41;](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md).  

@@ -17,13 +17,13 @@ ms.assetid: 6ac6209c-a134-4f8f-b88b-8eefaa1cbc7f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6b4610cfd971c7de8f729902bc09237b47e19dad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67935810"
 ---
-# <a name="sqlsrvclose"></a>sqlsrv_close
+# <a name="sqlsrv_close"></a>sqlsrv_close
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Fecha a conexão especificada e libera os recursos associados.  
@@ -35,7 +35,7 @@ Fecha a conexão especificada e libera os recursos associados.
 sqlsrv_close( resource $conn )  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
 *$conn*: a conexão a ser fechada.  
   
 ## <a name="return-value"></a>Valor retornado  

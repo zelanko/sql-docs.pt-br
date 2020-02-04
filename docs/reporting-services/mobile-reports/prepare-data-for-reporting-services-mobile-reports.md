@@ -9,10 +9,10 @@ ms.assetid: 8adce9ad-6a08-4d20-b1cf-d3c45544d8de
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9ded496c3509420d54325dc054e018048ede0732
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62499915"
 ---
 # <a name="prepare-data-for-reporting-services-mobile-reports"></a>Preparar dados para relatórios móveis do Reporting Services
@@ -38,7 +38,7 @@ Campos da data nos modelos multidimensionais e tabulares do [!INCLUDE[ssASnovers
 ## <a name="preparing-filter-data"></a>Preparando dados de filtro ##  
 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] pode filtrar dados com base em campos de data/hora e campos de chave. Embora os campos de chave possam ser numéricos, na maioria dos casos eles são uma ID ou um valor de cadeia de caracteres. Para preparar um campo de filtro para uso com um elemento de navegação como a lista de seleção, a chave de filtro deve ser uma única coluna na tabela de dados. Dessa forma, você pode agrupar as linhas da tabela de acordo com o valor na coluna de filtro. Ter várias colunas com chaves de filtro ou critérios de filtro diferentes permite que relatórios móveis com vários navegadores de filtro sejam usados juntos hierarquicamente ou individualmente.  
   
-| Setor  | País   | Região    |  
+| Setor  | País/Região   | Região    |  
 | ------------- | ------------- | ------------- |  
 | Bancos     | AFEGANISTÃO   | ÁSIA      |  
 | Serviços comerciais e profissionais | AFEGANISTÃO | ÁSIA |  

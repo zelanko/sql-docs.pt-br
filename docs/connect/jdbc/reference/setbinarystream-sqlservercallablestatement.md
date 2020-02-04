@@ -11,10 +11,10 @@ ms.assetid: 24866ea9-804a-442f-94e2-475c11dd8b9f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 14a9a0fb47c56427564629bf82ca22d8d7e8bdee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975070"
 ---
 # <a name="setbinarystream-sqlservercallablestatement"></a>setBinaryStream (SQLServerCallableStatement)
@@ -24,7 +24,7 @@ ms.locfileid: "67975070"
   
 ## <a name="overload-list"></a>Lista de sobrecargas  
   
-|Nome|Descrição|  
+|Nome|DESCRIÇÃO|  
 |----------|-----------------|  
 |[Método setBinaryStream &#40;java.lang.String, java.io.InputStream&#41;](../../../connect/jdbc/reference/setbinarystream-method-java-lang-string-java-io-inputstream.md)|Define o parâmetro designado como o fluxo de entrada especificado.|  
 |[Método setBinaryStream &#40;java.lang.String, java.io.InputStream, int&#41;](../../../connect/jdbc/reference/setbinarystream-method-java-lang-string-java-io-inputstream-int.md)|Define o parâmetro designado como o fluxo de entrada especificado, que terá o número de bytes especificado.|  

@@ -13,10 +13,10 @@ ms.assetid: e8d6896d-f886-4390-8b5d-96f0a50c250c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a33b5bae668835ca1dbf52b2e7852c3af731ddfe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65574945"
 ---
 # <a name="use-an-office-data-connection-odc-with-reports"></a>Usar uma conexão de dados do Office (.odc) com relatórios
@@ -56,7 +56,7 @@ ms.locfileid: "65574945"
   
 4.  Selecione **Provedor do Microsoft OLE DB para SQL Server**e clique em **Avançar**.  
   
-5.  Insira o nome do servidor (por padrão, esse é o nome de rede do computador) e uma conta de usuário que possua logon válido e permissões para banco de dados. Clique em **Avançar**.  
+5.  Insira o nome do servidor (por padrão, esse é o nome de rede do computador) e uma conta de usuário que possua logon válido e permissões para banco de dados. Clique em **Próximo**.  
   
 6.  Selecione um banco de dados e clique em **OK** para fechar a caixa de diálogo **Link de Dados** .  
   

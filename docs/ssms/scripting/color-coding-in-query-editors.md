@@ -1,6 +1,6 @@
 ---
-title: Codificação por cores em editores de consultas | Microsoft Docs
-ms.custom: ''
+title: Codificação por cores no Editor de Consultas
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,12 +14,12 @@ ms.assetid: 802882dc-c997-4e3f-8a01-994bb43169ae
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7a562e65b84abc7c952abe992ee2a63c9b0fa22d
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 71801d025b8b761adbcd80b8b3a10be92cd5c5ad
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68256679"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254016"
 ---
 # <a name="color-coding-in-query-editors"></a>Codificação por cores no Editor de Consultas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

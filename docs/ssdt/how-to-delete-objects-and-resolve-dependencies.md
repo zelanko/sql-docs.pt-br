@@ -1,11 +1,7 @@
 ---
-title: 'Como fazer: excluir objetos e resolver dependências | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Excluir objetos e resolver dependências
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - Microsoft.VisualStudio.Data.Tools.Project.HelpKeywords.SqlProjectDropDatabaseConfirmationDialog
@@ -14,14 +10,19 @@ f1_keywords:
 ms.assetid: fb31c2b1-ca4f-4e11-a0b6-5c26430f1c8c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ae25dbc584e564130348507e5aef657823502923
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: c9f2bd6ed462004d76750fb2328d1615a51c2c84
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68026615"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241433"
 ---
-# <a name="how-to-delete-objects-and-resolve-dependencies"></a>Como fazer: Excluir objetos e resolver dependências
+# <a name="how-to-delete-objects-and-resolve-dependencies"></a>Como: Excluir objetos e resolver dependências
+
 Quando você renomear ou excluir um objeto no **Pesquisador de Objetos do SQL Server**, o SQL Server Data Tools detectará automaticamente todos os seus objetos de dependência e preparará um script ALTER para renomear ou remover a dependência conforme necessário.  
   
 > [!WARNING]  
@@ -46,7 +47,7 @@ Quando você renomear ou excluir um objeto no **Pesquisador de Objetos do SQL Se
     > [!WARNING]  
     > Dependências baseadas em script como referências a uma tabela de uma exibição ou procedimentos armazenados não são atualizados automaticamente pelo SSDT. Depois de renomear, você poderá usar o painel **Lista de Erros** para localizar todas as outras dependências e corrigi-las manualmente.  
   
-5.  Aplique a alteração depois das etapas no procedimento anterior [Como atualizar um banco de dados conectado com o Power Buffer](../ssdt/how-to-update-a-connected-database-with-power-buffer.md).  
+5.  Aplique a alteração executando as etapas no procedimento anterior [Como atualizar um banco de dados conectados com o Power Buffer](../ssdt/how-to-update-a-connected-database-with-power-buffer.md).  
   
 6.  Clique com o botão direito do mouse na tabela **Clientes** no **Pesquisador de Objetos do SQL Server** novamente e selecione **Exibir Dados**. Observe que os dados da tabela estão intatos depois da operação de renomeação.  
   

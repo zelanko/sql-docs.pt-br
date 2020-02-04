@@ -1,24 +1,25 @@
 ---
-title: 'Como fazer: compilar e implantar em um banco de dados local | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Criar e implantar em um banco de dados local
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: ebca8ff8-9a09-4207-8979-9d577af7c1d5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 612ed6750946dfa5e77970bf6e3a4859cbb0045b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: c3c079ddc375c1fa252975c419aff587d324dd1b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67911869"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241614"
 ---
-# <a name="how-to-build-and-deploy-to-a-local-database"></a>Como fazer: Criar e implantar em um banco de dados local
-O Microsoft SQL Server 2012 fornece uma instância de servidor local sob demanda, chamada Tempo de Execução de Banco de Dados Local do SQL Server Express, que é ativada quando um projeto de Banco de Dados do SQL Server é depurado. Esta instância de servidor local pode ser usada como uma área restrita para compilar, testar e depurar seu projeto. Isso é independente de qualquer uma de suas instâncias do SQL Server instaladas e não é acessível fora do SQL Server Data Tools (SSDT). Esse tipo de organização é ideal para os desenvolvedores que não têm acesso ou têm acesso limitado a bancos de dados de produção, mas gostariam de testar seus projetos localmente antes que uma equipe autorizada implante-os na produção. Além disso, quando você está desenvolvendo uma solução de banco de dados para o SQL Azure, pode utilizar a conveniência fornecida por este servidor local para desenvolver e testar localmente seu projeto de banco de dados, antes de implantá-lo na nuvem.  
+# <a name="how-to-build-and-deploy-to-a-local-database"></a>Como: Compilar e implantar em um banco de dados local
+
+O Microsoft SQL Server 2012 fornece uma instância de servidor local sob demanda, chamada Runtime de Banco de Dados Local do SQL Server Express, que é ativada quando um projeto de Banco de Dados do SQL Server é depurado. Esta instância de servidor local pode ser usada como uma área restrita para compilar, testar e depurar seu projeto. Isso é independente de qualquer uma de suas instâncias do SQL Server instaladas e não é acessível fora do SQL Server Data Tools (SSDT). Esse tipo de organização é ideal para os desenvolvedores que não têm acesso ou têm acesso limitado a bancos de dados de produção, mas gostariam de testar seus projetos localmente antes que uma equipe autorizada implante-os na produção. Além disso, quando você está desenvolvendo uma solução de banco de dados para o SQL Azure, pode utilizar a conveniência fornecida por este servidor local para desenvolver e testar localmente seu projeto de banco de dados, antes de implantá-lo na nuvem.  
   
 > [!WARNING]  
 > Um banco de dados sob o nó do banco de dados local no Pesquisador de Objetos do SQL Server é um reflexo do projeto de banco de dados correspondente e não está relacionado ao banco de dados de mesmo nome em uma instância de servidor conectada.  

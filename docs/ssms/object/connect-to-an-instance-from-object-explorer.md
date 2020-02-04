@@ -1,6 +1,6 @@
 ---
-title: Conectar ao SQL Server ou ao Banco de Dados SQL do Azure | Microsoft Docs
-ms.custom: ''
+title: Conectar ao SQL Server ou ao Banco de Dados SQL do Azure
+ms.custom: seo-lt-2019
 ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9803a8a0-a8f1-4b65-87b8-989b06850194
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: aeb46551b33f40ba6c42de705559e20d8c7b0315
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 8241bb0edff2a424d42d79ad3e6aa514519e79b3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264610"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257211"
 ---
 # <a name="connect-to-a-sql-server-or-azure-sql-database"></a>Conectar ao SQL Server ou ao Banco de Dados SQL do Azure
 
@@ -28,11 +28,11 @@ O [SSMS (SQL Server Management Studio)](../download-sql-server-management-studio
 
 1. Em **Pesquisador de Objetos**, clique em **Conectar > Mecanismo de Banco de Dados...** .
 
-   ![connect](../media/connect-to-server/connect-db-engine.png)
+   ![conectar](../media/connect-to-server/connect-db-engine.png)
 
 1. Preencha o formulário **Conectar ao Servidor** e clique em **Conectar**:
 
-   ![conectar ao servidor](../media/connect-to-server/connect.png)
+   ![conectar-se ao servidor](../media/connect-to-server/connect.png)
 
 1. Se estiver conectando-se a um Azure SQL Server, talvez será necessário entrar para criar uma regra de firewall. Clique em **Entrar...** (caso contrário, vá para a etapa 6 abaixo)
 
@@ -46,15 +46,15 @@ O [SSMS (SQL Server Management Studio)](../download-sql-server-management-studio
 
 1. Após a conexão ser bem-sucedida, o servidor aparecerá no **Pesquisador de Objetos**:
 
-   ![conectado](../media/connect-to-server/connected.png)
+   ![connected](../media/connect-to-server/connected.png)
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Próximas etapas
 
 [Projetar, criar e atualizar tabelas](../visual-db-tools/design-tables-visual-database-tools.md)
 
 ## <a name="see-also"></a>Consulte Também
 
-[SSMS (SQL Server Management Studio)](../sql-server-management-studio-ssms.md)  
+[SQL Server Management Studio (SSMS)](../sql-server-management-studio-ssms.md)  
 [Baixar o SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md)
 
 [Analysis Services](https://docs.microsoft.com/sql/analysis-services/instances/connect-to-analysis-services)  

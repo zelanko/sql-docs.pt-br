@@ -1,6 +1,6 @@
 ---
-title: Gerenciar objetos usando o Pesquisador de Objetos | Microsoft Docs
-ms.custom: ''
+title: Gerenciar objetos usando o Pesquisador de Objetos
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e60367a7-3fdd-40b8-82bb-9e819d78de5a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bb52261160cc693193e4cc983a4c2e28baa28686
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: d499666f51605e7df90332174c82681f8a386017
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264100"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257225"
 ---
 # <a name="manage-objects-by-using-object-explorer"></a>Gerenciar objetos usando o Pesquisador de Objetos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,12 +52,12 @@ Para executar ações em objetos, clique com o botão direito do mouse no nó do
 Quando o Pesquisador de Objetos estiver conectado a um servidor, você poderá abrir uma nova janela do Editor de Códigos usando as configurações de conexão do Pesquisador de Objetos. Para abrir uma janela nova do Editor de Códigos, clique com o botão direito do mouse no nome do servidor no Pesquisador de Objetos e clique em **Nova Consulta**. Para abrir uma nova janela do Editor de Códigos usando um determinado banco de dados, clique com o botão direito do mouse no nome do banco de dados e clique em **Nova Consulta**. Ao abrir uma nova consulta para um servidor do Analysis Services, você pode selecionar consultas de DMX, MDX ou XMLA.  
   
 ### <a name="start-powershell"></a>Iniciar o PowerShell  
-Você pode iniciar uma sessão do PowerShell clicando com o botão direito do mouse na maioria das pastas e dos objetos na árvore do Pesquisador de Objetos e selecionando **Iniciar PowerShell**. Isso inicia uma sessão do PowerShell que tem o suporte para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell habilitado e o caminho definido até o objeto quando você clicou com o botão direito do mouse no Pesquisador de Objetos. Você pode inserir comandos do PowerShell em um ambiente interativo do PowerShell. Para saber mais, confira [SQL Server PowerShell](https://msdn.microsoft.com/89b70725-bbe7-4ffe-a27d-2a40005a97e7).  
+Você pode iniciar uma sessão do PowerShell clicando com o botão direito do mouse na maioria das pastas e dos objetos na árvore do Pesquisador de Objetos e selecionando **Iniciar PowerShell**. Isso inicia uma sessão do PowerShell que tem o suporte para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell habilitado e o caminho definido até o objeto quando você clicou com o botão direito do mouse no Pesquisador de Objetos. Você pode inserir comandos do PowerShell em um ambiente interativo do PowerShell. Para obter mais informações, confira [SQL Server PowerShell](https://msdn.microsoft.com/89b70725-bbe7-4ffe-a27d-2a40005a97e7).  
   
 ## <a name="see-also"></a>Consulte Também  
 [Pesquisador de Objetos](../../ssms/object/object-explorer.md)  
 [Abrir e configurar o Pesquisador de Objetos](../../ssms/object/open-and-configure-object-explorer.md)  
 [Conectar-se a uma instância do Pesquisador de Objetos](../../ssms/object/connect-to-an-instance-from-object-explorer.md)  
-[Painel Detalhes do Pesquisador de Objetos](../../ssms/object/object-explorer-details-pane.md)  
+[Painel de detalhes do Pesquisador de Objetos](../../ssms/object/object-explorer-details-pane.md)  
 [Relatórios personalizados no Management Studio](../../ssms/object/custom-reports-in-management-studio.md)  
   

@@ -1,51 +1,59 @@
 ---
-title: Janela Pilha de Chamadas| Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Janela Pilha de Chamadas
+titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
-ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Call Stack Window [Transact-SQL]
 ms.assetid: ddb0b19c-87cd-4883-bcb8-ec09ffb30369
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9a2c95b48ce44cbca90932f419585a49248e500d
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 2c15e01a9555ceeacbbd741660cd19baba1f6842
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68253989"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243384"
 ---
 # <a name="transact-sql-debugger---call-stack-window"></a>Depurador do Transact-SQL – Janela Pilha de Chamadas
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  A janela **Pilha de Chamadas** exibe os módulos da pilha de chamadas e os valores e tipos de dados de quaisquer parâmetros que passaram para os módulos. [!INCLUDE[tsql](../../includes/tsql-md.md)] os módulos incluem procedimentos armazenados, funções e gatilhos. Para exibir a pilha de chamadas, você deve estar no modo de depuração.  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+A janela **Pilha de Chamadas** exibe os módulos da pilha de chamadas e os valores e tipos de dados de quaisquer parâmetros que passaram para os módulos. [!INCLUDE[tsql](../../includes/tsql-md.md)] os módulos incluem procedimentos armazenados, funções e gatilhos. Para exibir a pilha de chamadas, você deve estar no modo de depuração.  
+
+[!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
+
+## <a name="task-list"></a>Lista de Tarefas
+
+**Para acessar a janela Pilha de Chamadas**
+
+- No menu **Depurar** , clique em **Janelas**e em **Pilha de Chamadas**.
+
+**Para alterar o quadro atual da Pilha de Chamadas**
+
+Você pode usar qualquer um dos seguintes procedimentos para montar o quadro atual do quadro de pilhas:
+
+- Clique com o botão direito do mouse no registro de ativação e depois clique em **Alternar para Quadro**.
+
+- Clique duas vezes no quadro de pilhas.  
+
+**Para exibir a origem de um quadro diferente do quadro atual**
+
+- Clique com o botão direito do mouse no registro de ativação e depois clique em **Ir para Código-Fonte**.
+
+## <a name="stack-frames"></a>Quadros de pilhas
+
+Cada linha na janela **Pilha de Chamadas** é chamada de um registro de ativação e representa a chamada de um módulo de um arquivo de script [!INCLUDE[tsql](../../includes/tsql-md.md)] ou uma chamada de um módulo a outro. O registro de ativação inferior no vídeo indica a linha da janela do Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] que fez a primeira chamada na pilha. A linha superior indica em qual linha o depurador pausou a depuração e é identificada por uma seta amarela na margem esquerda da janela. Cada linha intermediária indica o módulo e o número de linha do código fonte que chamou o próximo quadro de pilha mais alto.  
+
+Todas as expressões nas janelas **Locais**, **Inspecionar**e **QuickWatch** são avaliadas com base no registro de ativação atual. A janela Editor de Consultas exibe o código para o quadro atual. Por padrão, o registro de ativação atual é o quadro no qual o depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] pausou a execução. Quando você altera o registro de ativação atual para outro quadro, as expressão das janelas **Locais**, **Inspecionar**e **QuickWatch** são reavaliadas no contexto do novo quadro de pilhas e o código-fonte do novo quadro é exibido na janela Editor de Consultas.  
   
-## <a name="task-list"></a>Lista de Tarefas  
- **Para acessar a janela Pilha de Chamadas**  
-  
--   No menu **Depurar** , clique em **Janelas**e em **Pilha de Chamadas**.  
-  
- **Para alterar o quadro atual da Pilha de Chamadas**  
-  
- Você pode usar qualquer um dos seguintes procedimentos para montar o quadro atual do quadro de pilhas:  
-  
--   Clique com o botão direito do mouse no registro de ativação e depois clique em **Alternar para Quadro**.  
-  
--   Clique duas vezes no quadro de pilhas.  
-  
- **Para exibir a origem de um quadro diferente do quadro atual**  
-  
--   Clique com o botão direito do mouse no registro de ativação e depois clique em **Ir para Código-Fonte**.  
-  
-## <a name="stack-frames"></a>Quadros de pilhas  
- Cada linha na janela **Pilha de Chamadas** é chamada de um registro de ativação e representa a chamada de um módulo de um arquivo de script [!INCLUDE[tsql](../../includes/tsql-md.md)] ou uma chamada de um módulo a outro. O registro de ativação inferior no vídeo indica a linha da janela do Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] que fez a primeira chamada na pilha. A linha superior indica em qual linha o depurador pausou a depuração e é identificada por uma seta amarela na margem esquerda da janela. Cada linha intermediária indica o módulo e o número de linha do código fonte que chamou o próximo quadro de pilha mais alto.  
-  
- Todas as expressões nas janelas **Locais**, **Inspecionar**e **QuickWatch** são avaliadas com base no registro de ativação atual. A janela Editor de Consultas exibe o código para o quadro atual. Por padrão, o registro de ativação atual é o quadro no qual o depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] pausou a execução. Quando você altera o registro de ativação atual para outro quadro, as expressão das janelas **Locais**, **Inspecionar**e **QuickWatch** são reavaliadas no contexto do novo quadro de pilhas e o código-fonte do novo quadro é exibido na janela Editor de Consultas.  
-  
-## <a name="columns"></a>Colunas  
+## <a name="columns"></a>Colunas
+
  **Nome**  
  Exibe informações sobre um módulo na pilha de chamadas.  
   
@@ -66,7 +74,8 @@ ms.locfileid: "68253989"
  **Idioma**  
  Exibe **Transact-SQL** para [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-## <a name="see-also"></a>Consulte Também  
- [Depurador do Transact-SQL](../../relational-databases/scripting/transact-sql-debugger.md)   
- [Informações do depurador Transact-SQL](../../relational-databases/scripting/transact-sql-debugger-information.md)   
- [Percorrer código Transact-SQL](../../relational-databases/scripting/step-through-transact-sql-code.md)  
+## <a name="see-also"></a>Consulte Também
+
+- [Depurador do Transact-SQL](../../relational-databases/scripting/transact-sql-debugger.md)
+- [Informações do depurador Transact-SQL](../../relational-databases/scripting/transact-sql-debugger-information.md)
+- [Percorrer o código do Transact-SQL](../../relational-databases/scripting/step-through-transact-sql-code.md)

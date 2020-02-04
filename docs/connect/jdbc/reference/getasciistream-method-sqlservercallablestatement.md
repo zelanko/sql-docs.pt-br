@@ -16,10 +16,10 @@ ms.assetid: 2a3dde54-aace-42b1-97da-4b6a0918a346
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0915de12eddfceff753b045c20400c3670a7500b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954141"
 ---
 # <a name="getasciistream-method-sqlservercallablestatement"></a>Método getAsciiStream (SQLServerCallableStatement)
@@ -29,7 +29,7 @@ ms.locfileid: "67954141"
   
 ## <a name="overload-list"></a>Lista de sobrecargas  
   
-|Nome|Descrição|  
+|Nome|DESCRIÇÃO|  
 |----------|-----------------|  
 |[getAsciiStream &#40;int&#41;](../../../connect/jdbc/reference/getasciistream-int.md)|Recupera o valor do parâmetro designado como um fluxo de caracteres **ASCII**, considerando o índice do parâmetro.|  
 |[getAsciiStream &#40;java.lang.String&#41;](../../../connect/jdbc/reference/getasciistream-java-lang-string.md)|Recupera o valor do parâmetro designado como um fluxo de caracteres **ASCII**, considerando o nome do parâmetro.|  

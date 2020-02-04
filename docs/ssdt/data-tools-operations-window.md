@@ -1,25 +1,26 @@
 ---
-title: Janela Operações de ferramentas de dados | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Janela Operações de Ferramentas de Dados
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.datatoolsoperations
 ms.assetid: afb49faa-321a-42b1-a378-955b586429f2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 61db90f4082d19551d1d7b3227069cd0c9cf835a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: e37dc1f3cf3c78d3c1162c94f835dfab050467f4
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984533"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241669"
 ---
 # <a name="data-tools-operations-window"></a>Janela Operações de Ferramentas de Dados
+
 A janela **Operações de Ferramentas de Dados** mostra o progresso de algumas operações discutidas neste tópico e o notifica caso ocorram erros.  
   
 > [!WARNING]  
@@ -31,11 +32,11 @@ A janela **Operações de Ferramentas de Dados** mostra o progresso quando você
   
 -   Expandir um banco de dados no **Pesquisador de Objetos do SQL Server**. Essa operação inicia uma importação do modelo de banco de dados.  
   
--   Confirmar alterações em um banco de dados ou gerar scripts com o botão **Atualizar Banco de Dados** no Editor Transact\-SQL. Para obter mais informações, confira [Como atualizar um banco de dados conectado com o Power Buffer](../ssdt/how-to-update-a-connected-database-with-power-buffer.md).  
+-   Confirmar alterações em um banco de dados ou gerar scripts com o botão **Atualizar Banco de Dados** no Editor Transact\-SQL. Para saber mais, confira [Como atualizar um banco de dados conectado com o Power Buffer](../ssdt/how-to-update-a-connected-database-with-power-buffer.md).  
   
--   Excluir um objeto do **Pesquisador de Objetos do SQL Server**. Para obter mais informações, confira [Como excluir objetos e resolver dependências](../ssdt/how-to-delete-objects-and-resolve-dependencies.md).  
+-   Excluir um objeto do **Pesquisador de Objetos do SQL Server**. Para saber mais, confira [Como excluir objetos e resolver dependências](../ssdt/how-to-delete-objects-and-resolve-dependencies.md).  
   
--   Publicar resultados. Para obter mais informações, veja [Como Alterar a plataforma de destino e publicar um projeto de banco de dados](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)  
+-   Publicar resultados. Para saber mais, confira [Como alterar a plataforma de destino e publicar um projeto de banco de dados](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)  
   
--   Implantar. Para obter mais informações, confira [Como criar e implantar em um banco de dados local](../ssdt/how-to-build-and-deploy-to-a-local-database.md).  
+-   Implantar. Para saber mais, confira [Como compilar e implantar em um banco de dados local](../ssdt/how-to-build-and-deploy-to-a-local-database.md).  
   

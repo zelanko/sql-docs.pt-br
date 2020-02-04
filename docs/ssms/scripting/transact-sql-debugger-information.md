@@ -1,10 +1,8 @@
 ---
-title: Informações do depurador Transact-SQL | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Informações do depurador Transact-SQL
+titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
-ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, Locals Window
@@ -16,20 +14,28 @@ helpviewer_keywords:
 ms.assetid: b99819cc-f388-41a1-b304-36e78ce24147
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c6329776bd998a8d90cbadd577132a500020515b
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 82f5caaa772ab21ce5e36165fcc46665c99a4ea5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68253555"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253036"
 ---
 # <a name="transact-sql-debugger---information"></a>Depurador do Transact-SQL – Informações
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  Toda vez que o depurador pausa a execução em uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] específica, você pode usar as várias janelas do depurador para exibir o estado de execução atual.  
-  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+Toda vez que o depurador pausa a execução em uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] específica, você pode usar as várias janelas do depurador para exibir o estado de execução atual. 
+
+[!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
+
 ## <a name="debugger-windows"></a>Janelas do depurador  
- Em modo de depurador, o depurador abre duas janelas na parte inferior da janela principal do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . O depurador exibe toda as suas informações nessas duas janelas. Cada uma das janelas de depurador tem guias que você pode selecionar para controlar o conjunto de informações exibido na janela. A janela esquerda do depurador contém as guias **Locais**, **Inspecionar 1**, **Inspecionar 2**, **Inspecionar 3**e **Inspecionar 4** . A janela direita do depurador contém as guias **Pilha de Chamadas**, **Threads**, **Pontos de Interrupção**, **Janela de Comando**e **Saída** .  
+
+Em modo de depurador, o depurador abre duas janelas na parte inferior da janela principal do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . O depurador exibe toda as suas informações nessas duas janelas. Cada uma das janelas de depurador tem guias que você pode selecionar para controlar o conjunto de informações exibido na janela. A janela esquerda do depurador contém as guias **Locais**, **Inspecionar 1**, **Inspecionar 2**, **Inspecionar 3**e **Inspecionar 4** . A janela direita do depurador contém as guias **Pilha de Chamadas**, **Threads**, **Pontos de Interrupção**, **Janela de Comando**e **Saída** .  
   
 > [!NOTE]  
 >  As descrições anteriores aplicam-se aos locais padrões das janelas do depurador. Você pode arrastar uma guia para movê-la de uma janela para outra ou desencaixar uma guia para criar uma nova janela, que você pode colocar onde desejar.  
@@ -41,7 +47,7 @@ ms.locfileid: "68253555"
 -   Na barra de ferramentas de **Depurar** , clique em **Pontos de Interrupção**e selecione a janela desejada.  
   
 ## <a name="transact-sql-expressions"></a>Expressões Transact-SQL  
- Expressões são cláusulas [!INCLUDE[tsql](../../includes/tsql-md.md)] que são avaliadas como um valor escalar simples, como, por exemplo, variáveis ou parâmetros. A janela esquerda do depurador pode exibir os valores dos dados que são atribuídos no momento a expressões em até cinco guias ou janelas: **Locais, Inspecionar 1**, **Inspecionar 2**, **Inspecionar 3** e **Inspecionar 4**.  
+ Expressões são cláusulas [!INCLUDE[tsql](../../includes/tsql-md.md)] que são avaliadas como um valor escalar simples, como, por exemplo, variáveis ou parâmetros. A janela esquerda do depurador pode exibir os valores dos dados que são atribuídos no momento a expressões em até cinco guias ou janelas: **Locais, Inspecionar 1**, **Inspecionar 2**, **Inspecionar 3**e **Inspecionar 4**.  
   
  A janela **Locais** exibe informações sobre os variáveis locais no escopo atual do depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] . O conjunto de expressões listadas na janela **Locais** é alterado à medida que o depurador é executado por meio de partes diferentes do código.  
   

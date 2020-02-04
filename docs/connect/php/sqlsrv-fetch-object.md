@@ -18,13 +18,13 @@ ms.assetid: 4ce2df2c-083a-4a4d-a1e2-e866e63707d5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 36c0ae99e38da83e3d534423b8a09ba9e198ce3e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67992741"
 ---
-# <a name="sqlsrvfetchobject"></a>sqlsrv_fetch_object
+# <a name="sqlsrv_fetch_object"></a>sqlsrv_fetch_object
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Recupera a próxima linha de dados como um objeto do PHP.  
@@ -36,7 +36,7 @@ Recupera a próxima linha de dados como um objeto do PHP.
 sqlsrv_fetch_object( resource $stmt [, string $className [, array $ctorParams[, row[, ]offset]]])  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
 *$stmt*: um recurso de instrução correspondente a uma instrução executada.  
   
 *$className* [OPCIONAL]: uma cadeia de caracteres especificando o nome da classe para criar uma instância. Se um valor para o parâmetro *$className* não for especificado, uma instância do PHP **stdClass** será criada.  
@@ -66,7 +66,7 @@ Um objeto do PHP com propriedades que correspondem aos nomes de campo do conjunt
   
 O tipo de dados de um valor no objeto retornado será o tipo de dados do PHP padrão. Para obter informações sobre tipos de dados padrão do PHP, consulte [Default PHP Data Types](../../connect/php/default-php-data-types.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 Se um nome de classe for especificado com o parâmetro *$className* opcional, será criada uma instância de um objeto desse tipo de classe. Se a classe tiver propriedades cujos nomes correspondam aos nomes de campo do conjunto de resultados, os valores correspondentes do conjunto de resultados serão aplicados às propriedades. Se um nome de campo do conjunto de resultados não corresponder a uma propriedade de classe, uma propriedade com o nome de campo do conjunto de resultados será adicionada ao objeto, e o valor do conjunto de resultados será aplicado à propriedade.  
   
 As seguintes regras se aplicam ao especificar uma classe com o parâmetro *$className* :  

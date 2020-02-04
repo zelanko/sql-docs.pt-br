@@ -1,5 +1,5 @@
 ---
-title: Gerenciador de modelos | Microsoft Docs
+title: Explorador de Modelos
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
@@ -17,14 +17,14 @@ ms.assetid: b9ee55c5-bb44-4f76-90ac-792d8d83b4c8
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: 67a1ba1d5f94703004a4a90d380cf7dd7c795a79
-ms.sourcegitcommit: da8bb7abd256b2bebee7852dc0164171eeff11be
+ms.openlocfilehash: 22864ca365917d295f8111580cb833097fb31c46
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70988083"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247185"
 ---
 # <a name="template-explorer"></a>Explorador de Modelos
 
@@ -45,8 +45,8 @@ O editor de consultas do [!INCLUDE[ssDE](../../includes/ssde_md.md)] também ofe
 ## <a name="related-tasks"></a>Related Tasks  
 Use os tópicos a seguir como introdução rápida a modelos  
   
-|**Description**|**Tópico**|  
+|**Descrição**|**Tópico**|  
 |-------------------|-------------|  
 |Descreve como incorporar o código de um modelo em uma janela de editor de códigos.|[Abrir um modelo](../../ssms/template/open-a-template.md)|  
-|Descreve como substituir valores de parâmetros de modelo depois de abrir um modelo em um editor de códigos.|[Substituir Parâmetros do Modelo](../../ssms/template/replace-template-parameters.md)|  
+|Descreve como substituir valores de parâmetros de modelo depois de abrir um modelo em um editor de códigos.|[Substituir parâmetros do modelo](../../ssms/template/replace-template-parameters.md)|  
   

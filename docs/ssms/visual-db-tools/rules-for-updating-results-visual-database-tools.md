@@ -1,10 +1,9 @@
 ---
-title: Regras para atualização de resultados (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Regras para atualizar resultados
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +14,14 @@ helpviewer_keywords:
 ms.assetid: de131ef0-ccbd-446f-9400-b93c7b8fa537
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bef3b9612b68c253fed032fe63d5d67e61816dff
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 95d22a06194bfd4121eff4ba01cb2788cf095bf8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68255673"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255159"
 ---
 # <a name="rules-for-updating-results-visual-database-tools"></a>Regras para atualização de resultados (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,18 +40,18 @@ A tabela seguinte resume instâncias específicas nas quais você poderá ou nã
 |---------|---------------------------|  
 |Consulta baseada em uma tabela com chave primária na lista de saída|Sim (exceto como listado abaixo).|  
 |Consulta baseada em uma tabela sem índice exclusivo e sem uma chave primária|Depende da consulta e do banco de dados. Alguns bancos de dados permitem atualizações se informações suficiente estiverem disponíveis para identificar registros exclusivamente.|  
-|Consulta baseada em tabelas múltiplas que não estão unidas|Nenhum.|  
-|Consulta baseada em dados marcados como somente de leitura no banco de dados|Nenhum.|  
+|Consulta baseada em tabelas múltiplas que não estão unidas|Não.|  
+|Consulta baseada em dados marcados como somente de leitura no banco de dados|Não.|  
 |Consulta baseada em uma exibição que envolve uma tabela sem restrições|Sim (exceto como listado abaixo).|  
 |Consulta baseada em tabelas unidas com uma relação um-para-um|Sim (exceto como listado abaixo).|  
 |Consulta baseada em tabelas unidas com uma relação um-para-um|Geralmente.|  
-|Consulta baseada em três ou mais tabelas nas quais há uma relação muitos para muitos|Nenhum.|  
+|Consulta baseada em três ou mais tabelas nas quais há uma relação muitos para muitos|Não.|  
 |Consulta baseada em uma tabela para a qual não é concedida a permissão de atualização|Pode excluir mas não atualizar.|  
 |Consulta baseada em uma tabela para a qual não é concedida a permissão de exclusão|Pode atualizar mas não excluir.|  
-|Consulta de agregação|Nenhum.|  
-|Consulta baseada em uma subconsulta que contém funções de agregação ou totais|Nenhum.|  
-|Consulta que inclui a palavra-chave DISTINCT para excluir filas duplicadas|Nenhum.|  
-|Consulta cuja cláusula FROM inclui uma função definida pelo usuário que retorna uma tabela e a função definida pelo usuário contém múltiplas instruções select|Nenhum.|  
+|Consulta de agregação|Não.|  
+|Consulta baseada em uma subconsulta que contém funções de agregação ou totais|Não.|  
+|Consulta que inclui a palavra-chave DISTINCT para excluir filas duplicadas|Não.|  
+|Consulta cuja cláusula FROM inclui uma função definida pelo usuário que retorna uma tabela e a função definida pelo usuário contém múltiplas instruções select|Não.|  
 |Consulta cuja cláusula FROM inclui um função embutida definida pelo usuário|Sim.|  
   
 Além disso, talvez você pode não possa atualizar colunas específicas no resultados de consulta. A lista seguinte resume os tipos específicos de colunas que você não pode atualizar no painel Resultados.  

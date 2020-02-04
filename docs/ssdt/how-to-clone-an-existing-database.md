@@ -1,23 +1,24 @@
 ---
-title: 'Como fazer: clonar um banco de dados existente | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Clonar um banco de dados existente
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: aad3594a-11cf-4e68-a622-071a93d43875
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d32b782c8508952a85f0a9a22b55d32dab096d6b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 79dc8d87ab950336766283be20d79536b31a3cdd
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68017622"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241586"
 ---
-# <a name="how-to-clone-an-existing-database"></a>Como fazer: Clonar um banco de dados existente
+# <a name="how-to-clone-an-existing-database"></a>Como: Clonar um banco de dados existente
+
 Esta tarefa utiliza algumas das etapas que você aprendeu em procedimentos anteriores para criar um novo banco de dados para o qual importar os dados existentes. Além disso, ele usa as etapas abordadas [Como usar comparação de esquema para comparar definições de banco de dados diferentes](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md) para sincronizar o esquema de um banco de dados de origem e de projeto.  
   
 Usando estas etapas, você pode criar um banco de dados de desenvolvimento ou teste facilmente a partir de um banco de dados de produção com esquema e dados idênticos. Você pode continuar desenvolvendo o banco de dados de teste em um modo conectado, ou criar um projeto de banco de dados para desenvolvimento e teste offline, tudo sem interromper a operação do banco de dados de produção.  
@@ -54,5 +55,5 @@ Usando estas etapas, você pode criar um banco de dados de desenvolvimento ou te
 7.  Use o Editor de Dados para verificar se todas as tabelas no novo banco de dados `TradeDev` foram populadas.  
   
 ## <a name="see-also"></a>Consulte Também  
-[Como: Usar comparação de esquema para comparar definições de banco de dados diferentes](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
+[Como usar comparação de esquema para comparar definições de banco de dados diferentes](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
   

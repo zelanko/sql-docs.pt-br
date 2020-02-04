@@ -9,10 +9,10 @@ ms.assetid: 7685acfd-1c8d-420c-993c-903236fbe1ff
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9b4de3e21a214a9894f93b8aa2fcd8fd8c6328eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65577407"
 ---
 # <a name="report-builder-functions---lookupset-function"></a>Funções do Construtor de Relatórios – Função LookupSet
@@ -28,7 +28,7 @@ ms.locfileid: "65577407"
 LookupSet(source_expression, destination_expression, result_expression, dataset)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *source_expression*  
  (**Variante**) Uma expressão que é avaliada no escopo atual e que especifica o nome ou chave para procurar. Por exemplo, `=Fields!ID.Value`.  
   
@@ -44,7 +44,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
 ## <a name="return"></a>Retorno  
  Retorna **VariantArray**ou **Nothing** se não houver correspondência.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Use **LookupSet** para recuperar um conjunto de valores do conjunto de dados especificado para um par de nome/valor no qual há uma relação de 1 para muitos. Por exemplo, para um identificador de cliente em uma tabela, você pode usar **LookupSet** para recuperar todos os números de telefone associados àquele cliente de um conjunto de dados que não esteja associado à região de dados.  
   
  **LookupSet** faz o seguinte:  
@@ -59,7 +59,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
  Para recuperar um único valor de um conjunto de dados com pares nome/valor de um nome especificado em que existe uma relação um-para-um, use [Função Lookup &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookup-function.md). Para chamar **Lookup** para um conjunto de valores, use [Função Multilookup &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/report-builder-functions-multilookup-function.md).  
   
- As seguintes restrições são aplicadas:  
+ As restrições a seguir se aplicam:  
   
 -   **LookupSet** é avaliado depois que todas as expressões de filtro são aplicadas.  
   

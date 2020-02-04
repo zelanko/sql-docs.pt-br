@@ -9,10 +9,10 @@ ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b25a2f955ddd630c7093a1dc82a22c2cd0ba41b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63041218"
 ---
 # <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>Tutorial: Adicionar um gráfico de pizza ao relatório (Construtor de Relatórios)
@@ -75,7 +75,7 @@ Nesta seção, você usa o Assistente de Gráfico para criar um conjunto de dado
   
 8.  (Opcional) Clique no botão Executar ( **!** ) para ver os dados em que o gráfico se baseará.  
   
-9. Clique em **Avançar**.  
+9. Clique em **Próximo**.  
   
 ## <a name="ChartType"></a>2. Escolher o tipo de gráfico  
 Você pode escolher um dos diversos tipos de gráfico predefinidos.  
@@ -113,7 +113,7 @@ Em cada fatia da pizza, é possível exibir uma porcentagem dessa fatia comparad
   
 3.  Clique com o botão direito do mouse em um rótulo e clique em **Propriedades do Rótulo da Série**.  
   
-4.  Na caixa **Rotular dados**, selecione **#PERCENT**.  
+4.  Na caixa **Rotular dados** , selecione **#PERCENT**.  
     
 5.  (Opcional) Para especificar quantas casas decimais o rótulo deve mostrar, na caixa **Rotular dados** após **#PERCENT**, digite **{Pn}** , em que *n* é o número de casas decimais a serem exibidas. Por exemplo, para não exibir nenhuma casa decimal, digite **#PERCENT{P0}** .  
 
@@ -207,11 +207,11 @@ Como o gráfico de pizza é a única visualização do relatório, o gráfico n�
   
 3.  Em **Nome**, digite **Gráfico de Pizza de Vendas**.  
   
-4.  Clique em **Salvar**.  
+4.  Clique em **Save** (Salvar).  
   
 O relatório é salvo no servidor de relatório.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Próximas etapas  
 Você concluiu com êxito o tutorial Adicionando um Gráfico de Pizza ao seu Relatório. Para saber mais sobre gráficos, consulte [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-design/charts-report-builder-and-ssrs.md) e [Minigráficos e barras de dados &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Consulte Também  

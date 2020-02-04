@@ -9,10 +9,10 @@ ms.assetid: dda91d4f-77cc-4898-ad03-810ece5f8e74
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 92c0943b17f22c63481f1dbfb0f76977a4b71381
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66500229"
 ---
 # <a name="register-a-service-principal-name-spn-for-a-report-server"></a>Registrar um SPN (Nome da Entidade de Serviço) para um servidor de relatório
@@ -21,7 +21,7 @@ ms.locfileid: "66500229"
 ## <a name="about-spns"></a>Sobre SPNs  
  Um SPN é um identificador exclusivo para um serviço em uma rede que usa autenticação Kerberos. Ele consiste em uma classe de serviço, um nome do host e, algumas vezes, uma porta. Os SPNs HTTP não exigem uma porta. Em uma rede que usa autenticação Kerberos, deve ser registrado um SPN para o servidor em uma conta interna do computador (como NetworkService ou LocalSystem) ou uma conta de usuário. Os SPNs são automaticamente registrados para contas internas. Entretanto, quando executar um serviço em uma conta de usuário do domínio, você deverá registrar manualmente o SPN para a conta que deseja usar.  
   
- Para criar um SPN, você pode usar o utilitário de linha de comando **SetSPN** . Para obter mais informações, consulte o seguinte:  
+ Para criar um SPN, você pode usar o utilitário de linha de comando **SetSPN** . Para saber mais, consulte o seguinte:  
   
 -   [Setspn](https://technet.microsoft.com/library/cc731241\(WS.10\).aspx) (https://technet.microsoft.com/library/cc731241(WS.10).aspx).  
   
@@ -50,7 +50,7 @@ Setspn -s http/<computername>.<domainname> <domain-user-account>
   
 2.  Faça logon no controlador de domínio como administrador de domínio.  
   
-3.  Abra uma janela do prompt de comando.  
+3.  Abra uma janela de Prompt de Comando.  
   
 4.  Copie o seguinte comando, substituindo os valores de espaço reservado por valores reais que sejam válidos para sua rede:  
   

@@ -1,25 +1,24 @@
 ---
-title: Analisar o desempenho do script | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Analisar o desempenho do script
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
-f1_keywords:
-- sql.data.tools.codeanalysis.configuring
 ms.assetid: f4bbdd31-12a5-4c57-b0fe-1c6683820f11
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 355259372566758c48d6a20451627a51e65c6c09
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 0c762da9cf6bb8a2a66831e4a75c98a4360afc6a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984674"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245558"
 ---
 # <a name="analyze-script-performance"></a>Analisar o desempenho do script
+
 Você pode usar as ferramentas fornecidas pelo SQL Server Data Tools para determinar se pode melhorar o desempenho de sua consulta, procedimentos armazenados ou scripts. Por exemplo, ao monitorar estatísticas de cliente como os tempos de resposta a consultas utilizadas com frequência, é possível determinar se são necessárias alterações na consulta ou nos índices das tabelas. Essas estatísticas podem incluir o tempo de execução do cliente, o perfil de consulta e pacotes/bytes enviados e recebidos.  
   
 Além disso, determinados problemas de desempenho são melhor resolvidos analisando as consultas e atualizações do aplicativo que o aplicativo envia ao banco de dados e como essas consultas e atualizações interagem com os dados contidos no banco de dados e com o esquema de banco de dados. Os planos de execução exibem graficamente os métodos de recuperação de dados escolhidos pelo otimizador de consulta do SQL Server e mostram o custo de execução de instruções e consultas específicas. Assim, eles podem ajudá-lo a entender como o SQL Server processará sua consulta SQL e a determinar o que está causando o atraso do desempenho.  

@@ -18,13 +18,13 @@ ms.assetid: 69270b9e-0791-42f4-856d-412da39dea63
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 02b4311348ebbd52e5e8382048449072c84d2e46
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015028"
 ---
-# <a name="sqlsrvfetcharray"></a>sqlsrv_fetch_array
+# <a name="sqlsrv_fetch_array"></a>sqlsrv_fetch_array
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Recupera a próxima linha de dados como uma matriz indexada numericamente, matriz associativa ou ambas.  
@@ -36,16 +36,16 @@ Recupera a próxima linha de dados como uma matriz indexada numericamente, matri
 sqlsrv_fetch_array( resource $stmt[, int $fetchType [, row[, ]offset]])  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
 *$stmt*: um recurso de instrução correspondente a uma instrução executada.  
   
 *$fetchType* [OPCIONAL]: uma constante predefinida. Esse parâmetro pode assumir um dos valores listados na tabela a seguir:  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |---------|---------------|  
 |SQLSRV_FETCH_NUMERIC|A próxima linha de dados é retornada como uma matriz numérica.|  
 |SQLSRV_FETCH_ASSOC|A próxima linha de dados é retornada como uma matriz associativa. As chaves da matriz são os nomes das colunas no conjunto de resultados.|  
-|SQLSRV_FETCH_BOTH|A próxima linha de dados é retornada tanto como uma matriz numérica quanto como uma matriz associativa. Este é o valor padrão.|  
+|SQLSRV_FETCH_BOTH|A próxima linha de dados é retornada tanto como uma matriz numérica quanto como uma matriz associativa. Esse é o valor padrão.|  
   
 *row* [OPCIONAL]: adicionado na versão 1.1. Um dos valores a seguir, especificando a linha a ser acessada em um conjunto de resultados que usa um cursor rolável. (Quando *row* for especificado, *fetchtype* deverá ser especificado explicitamente, mesmo se você especificar o valor padrão.)  
   
@@ -65,7 +65,7 @@ Se uma linha de dados for recuperada, uma **matriz** será retornada. Se não ho
   
 Com base no valor do parâmetro *$fetchType* retornado, a **matriz** retornada poderá ser uma **matriz**indexada numericamente, uma **matriz**associativa ou ambas. Por padrão, uma **matriz** com chaves numéricas e associativas é retornada. O tipo de dados de um valor na matriz retornada será o tipo de dados do PHP padrão. Para obter informações sobre os tipos de dados padrão do PHP, consulte [Default PHP Data Types](../../connect/php/default-php-data-types.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 Se uma coluna sem nome for retornada, a chave associativa do elemento da matriz será uma cadeia de caracteres vazia (""). Por exemplo, considere esta instrução Transact-SQL que insere um valor em uma tabela de banco de dados e recupera a chave primária gerada pelo servidor:  
   
 ```
@@ -187,5 +187,5 @@ Se um campo sem nome for recuperado, a chave associativa do elemento da matriz s
 
 [Sobre exemplos de código na documentação](../../connect/php/about-code-examples-in-the-documentation.md)
 
-[Guia de programação para o Microsoft Drivers para PHP para SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Guia de programação do Microsoft Drivers para PHP para SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
   

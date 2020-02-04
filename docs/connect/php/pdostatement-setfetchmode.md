@@ -11,10 +11,10 @@ ms.assetid: f132b2af-0433-4fbe-b03f-69a7d631093a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f5a9065123bbacc828c7949aabcb44de6136f62c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67935982"
 ---
 # <a name="pdostatementsetfetchmode"></a>PDOStatement::setFetchMode
@@ -29,13 +29,13 @@ Especifica o modo de busca para o identificador PDOStatement.
 bool PDOStatement::setFetchMode( $mode );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
 $*modo*: quaisquer parâmetros que sejam válidos para passar para [PDOStatement::fetch](../../connect/php/pdostatement-fetch.md).  
   
 ## <a name="return-value"></a>Valor retornado  
 true se for bem-sucedido; caso contrário, false.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 O suporte para PDO foi adicionado na versão 2.0 dos [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
 ## <a name="example"></a>Exemplo  

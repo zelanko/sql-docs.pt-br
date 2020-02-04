@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: e0846442abce6dd598c6318e4ba7cf9e74685066
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727464"
 ---
 # <a name="create-a-stored-procedure-using-sqlrutils"></a>Criar um procedimento armazenado usando sqlrutils
@@ -35,7 +35,7 @@ Entre os parâmetros de entrada pode haver no máximo um quadro de dados.
 
 Os objetos dentro do quadro de dados, bem como todos os outros parâmetros de entrada da função, devem ser dos seguintes tipos de dados R:
 - POSIXct
-- NUMERIC
+- numeric
 - character
 - inteiro
 - logical
@@ -43,7 +43,7 @@ Os objetos dentro do quadro de dados, bem como todos os outros parâmetros de en
 
 Se um tipo de entrada não é de um dos tipos acima, ele precisa ser serializado e transmitido para a função como *raw*. Nesse caso, a função também deve incluir o código para desserializar a entrada.
 
-### <a name="outputs"></a>Saídas
+### <a name="outputs"></a>outputs
 
 A função pode produzir uma das seguintes opções:
 
@@ -66,7 +66,7 @@ Se a função usar entradas, chame as seguintes funções para cada entrada:
 
 Quando você faz cada chamada de função, é criado um objeto R que posteriormente será passado como um argumento para `StoredProcedure` para criar o procedimento armazenado completo.
 
-### <a name="outputs"></a>Saídas
+### <a name="outputs"></a>outputs
 
 **sqlrutils** fornece várias funções para converter objetos do R como listas no data.frame exigido pelo SQL Server.
 Se sua função gera diretamente um quadro de dados, sem primeiro encapsulá-lo em uma lista, você pode ignorar esta etapa.

@@ -9,10 +9,10 @@ ms.assetid: b8ae650b-0f46-4848-b62b-15f8a40751b8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 52b3fd24cf36aebeb87e41885b9e992fca1338a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581594"
 ---
 # <a name="constants-in-expressions-report-builder-and-ssrs"></a>Constantes em expressões (Construtor de Relatórios e SSRS)
@@ -24,7 +24,7 @@ ms.locfileid: "65581594"
 ## <a name="literal-text"></a>Texto literal  
  Em uma expressão, texto literal é o texto que está entre aspas duplas. Você também poderá digitar o texto diretamente em uma caixa de texto sem aspas duplas, se ele não fizer parte de uma expressão. Se o valor da caixa de texto não começar com um sinal de igual (=), o texto será tratado como texto literal. A tabela a seguir mostra vários exemplos de texto literal em uma expressão.  
   
-|Constante|Texto de exibição|Texto de expressão|  
+|Constante|Exibir texto|Texto de expressão|  
 |--------------|------------------|---------------------|  
 |Execução do relatório em:|<\<Expr>>|`="Report run at: " & Globals!ExecutionTime`|  
 |Ciclos da Adventure Works|Ciclos da Adventure Works|Ciclos da Adventure Works|  
@@ -33,7 +33,7 @@ ms.locfileid: "65581594"
 ## <a name="rdl-constants"></a>Constantes RDL  
  É possível usar constantes definidas em linguagem RDL (Report Definition Language) em uma expressão. Na caixa de diálogo **Expressão** , as constantes são exibidas quando você cria uma expressão para uma propriedade de relatório que aceita apenas determinados valores válidos, também conhecidos como tipos enumerados. A tabela a seguir mostra dois exemplos.  
   
-|Propriedade|Descrição|Valores|  
+|Propriedade|DESCRIÇÃO|Valores|  
 |--------------|-----------------|------------|  
 |TextAlign|Valores válidos para alinhamento de texto em uma caixa de texto.|Geral, À Esquerda, Centralizado, À Direita|  
 |BorderStyle|Valores válidos para uma linha adicionada a um relatório.|Padrão, Nenhum, Pontilhado, Tracejado, Sólido, Duplo, TraçoPonto, TraçoPontoPonto|  
@@ -46,7 +46,7 @@ ms.locfileid: "65581594"
 ## <a name="clr-constants"></a>Constantes CLR  
  É possível usar constantes definidas nas classes CLR (Common Language Runtime) [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] em uma expressão. A tabela a seguir mostra um exemplo de uma cor definida pelo sistema.  
   
-|Constante|Descrição|  
+|Constante|DESCRIÇÃO|  
 |--------------|-----------------|  
 |MistyRose|Ao criar uma expressão para uma propriedade do relatório baseada na cor do plano de fundo, é possível especificar uma cor pelo nome. Os nomes válidos são listados na caixa de diálogo **Expressão** .|  
   

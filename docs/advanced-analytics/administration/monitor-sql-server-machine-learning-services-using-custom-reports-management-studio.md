@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: afc90985fc7c0c6d7a04cb575ee9e93a4b7b4c51
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727749"
 ---
 # <a name="monitor-python-and-r-script-execution-using-custom-reports-in-sql-server-management-studio"></a>Monitorar a execução de script do Python e do R usando relatórios personalizados no SQL Server Management Studio
@@ -65,14 +65,14 @@ Para usar esses relatórios, siga estas etapas:
 
 O [Repositório de relatórios personalizados do SSMS no GitHub](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/machine-learning-services/ssms-custom-reports) inclui os seguintes relatórios:
 
-| Relatório | Descrição |
+| Relatório | DESCRIÇÃO |
 |-|-|
 | Sessões ativas | Os usuários que estão conectados à instância do SQL Server e executando um script de Python ou R no momento. |
 | Configuração | Configurações de instalação de Serviços de Machine Learning e propriedades do runtime do Python ou do R. |
 | Configurar instância | Configurar Serviços de Machine Learning. |
 | Estatísticas de execução | Estatísticas de execução dos Serviços de Machine Learning. Por exemplo, você pode obter o número total de execuções de scripts externos e o número de execuções paralelas. |
 | Eventos estendidos | Eventos estendidos que estão disponíveis para obter mais insights sobre a execução de scripts externos. |
-| Packages | Liste os pacotes R ou Python instalados na instância do SQL Server e suas propriedades, como a versão e o nome. |
+| Pacotes | Liste os pacotes R ou Python instalados na instância do SQL Server e suas propriedades, como a versão e o nome. |
 | Uso de recurso | Exiba a CPU, a memória, o consumo de E/S do SQL Server e a execução de scripts externos. Você também pode exibir a configuração de memória para pools de recursos externos. |
 
 ## <a name="next-steps"></a>Próximas etapas

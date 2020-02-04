@@ -6,13 +6,13 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
-ms.date: 07/16/2019
-ms.openlocfilehash: cd8f8e05e9be4bcd7a48c5e2fb800c2ebbc9e308
-ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
-ms.translationtype: MTE75
+ms.date: 12/11/2019
+ms.openlocfilehash: 09ccccf33047bb59d3097ff1bb304d3874335ade
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68329276"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244398"
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>Configurar um servidor de relatório em um cluster com balanceamento de carga de rede
 
@@ -30,7 +30,7 @@ ms.locfileid: "68329276"
 
  Use as seguintes diretrizes para instalar e configurar sua implantação:  
   
-|Etapa|Descrição|Mais informações|  
+|Etapa|DESCRIÇÃO|Mais informações|  
 |----------|-----------------|----------------------|  
 |1|Antes de instalar o Reporting Services em nós de servidor em um cluster NLB, verifique os requisitos de implantação em expansão.|[Configurar uma implantação escalável do servidor de relatório em modo nativo](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)|  
 |2|Configure o cluster NLB e verifique se ele está funcionando corretamente.<br /><br /> Mapeie um nome de cabeçalho de host para o IP de servidor virtual do cluster NLB. O nome de cabeçalho de host é usado na URL do servidor de relatório e é mais fácil de lembrar e digitar do que um endereço IP.|Para obter mais informações, consulte a documentação do produto do Windows Server para a versão do sistema operacional Windows que você executa.|  
@@ -56,21 +56,21 @@ Para executar uma implantação em expansão em um cluster NLB, você deve confi
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 
-1. Gere uma chave de validação e uma chave de descriptografia usando a funcionalidade de geração automática fornecida pelo [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. No final, você precisa ter uma única entrada <`MachineKey`> que possa ser colada no arquivo Web.config de cada instância do servidor de relatório na implantação escalável.  
+1. Gere uma chave de validação e uma chave de descriptografia usando a funcionalidade de geração automática fornecida pelo [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. No final, você precisa ter uma única entrada <`machineKey`> que possa ser colada no arquivo Web.config de cada instância do servidor de relatório na implantação escalável.  
   
     O exemplo a seguir mostra uma ilustração do valor a ser obtido. Não copie o exemplo nos seus arquivos de configuração; os valores de chave não são válidos.  
   
     ```xml
-    <MachineKey ValidationKey="123455555" DecryptionKey="678999999" Validation="SHA1" Decryption="AES"/>  
+    <machineKey ValidationKey="123455555" DecryptionKey="678999999" Validation="SHA1" Decryption="AES"/>  
     ```  
   
-2. Abra o arquivo Web.config do servidor de relatório e, na seção <`system.web`>, cole o elemento <`MachineKey`> gerado por você. Por padrão, o arquivo Web.config do Gerenciador de Relatórios está localizado em \Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\Reportserver\Web.config.  
+2. Abra o arquivo Web.config do servidor de relatório e, na seção <`system.web`>, cole o elemento <`machineKey`> gerado por você. Por padrão, o arquivo Web.config do Gerenciador de Relatórios está localizado em \Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\Reportserver\Web.config.  
   
 3. Salve o arquivo.  
   
 4. Repita a etapa anterior para cada servidor de relatório na implantação em expansão.  
   
-5. Verifique se todos os arquivos Web.config das pastas \Reporting Services\Reportserver contêm elementos <`MachineKey`> idênticos na seção <`system.web`>.  
+5. Verifique se todos os arquivos Web.config das pastas \Reporting Services\Reportserver contêm elementos <`machineKey`> idênticos na seção <`system.web`>.  
 
 ::: moniker-end
 
@@ -144,5 +144,5 @@ Para executar uma implantação em expansão em um cluster NLB, você deve confi
 
  [Reporting Services Configuration Manager &#40;Modo Nativo&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
  [Configurar uma URL &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
- [Configurar uma implantação de expansão do servidor de relatório no modo nativo &#40;Gerenciador de configurações do SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)   
- [Gerenciar um servidor de relatórios de modo nativo do Reporting Services](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)
+ [Configurar uma implantação escalável do servidor de relatório no modo nativo &#40;Gerenciador de configurações do SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)   
+ [Gerenciar um servidor de relatórios de Modo Nativo do Reporting Services](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)

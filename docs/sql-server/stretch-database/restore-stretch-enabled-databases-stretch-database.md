@@ -9,10 +9,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 4b53e333802af9bd70e51ad320300c6f868dea43
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73843767"
 ---
 # <a name="restore-stretch-enabled-databases-stretch-database"></a>Restaurar bancos de dados habilitados para Stretch (Stretch Database)
@@ -38,7 +38,7 @@ O serviço SQL Server Stretch Database no Azure tira instantâneos de todos os d
 
 Para restaurar um banco de dados dinâmico do Azure em um ponto específico anterior por meio do portal do Azure, siga o procedimento a seguir.
 
-1. Faça logon no [portal do Azure][].
+1. Faça logon no [Azure portal][].
 2. No lado esquerdo da tela, selecione **PROCURAR** e **Bancos de Dados SQL**.
 3. Navegue até o banco de dados e selecione-o.
 4. Na parte superior da folha do banco de dados, clique em **Restaurar**.
@@ -50,7 +50,7 @@ O serviço SQL Server Stretch Database no Azure tira um instantâneo de banco de
 
 Para restaurar um banco de dados do Azure excluído no ponto em que ele foi excluído usando o portal do Azure, siga os procedimentos a seguir.
 
-1. Faça logon no [portal do Azure][].
+1. Faça logon no [Azure portal][].
 2. No lado esquerdo da tela, selecione **PROCURAR** e **SQL Servers**.
 3. Navegue até o servidor e selecione-o.
 4. Role para baixo até Operações na folha do servidor e clique no bloco **Bancos de Dados Excluídos** .
@@ -84,5 +84,5 @@ Para restaurar um banco de dados do Azure excluído no ponto em que ele foi excl
  [sys.sp_rda_deauthorize_db](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md)  
  [Fazer backup e restaurar bancos de dados do SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  
  
- [portal do Azure]: https://portal.azure.com/
+ [Azure portal]: https://portal.azure.com/
  

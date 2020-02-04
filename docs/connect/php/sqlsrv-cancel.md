@@ -17,13 +17,13 @@ ms.assetid: 75798c9b-f711-445d-9b8f-ba4d405ca50a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f109a264d394a47164966e602b264f0fcd337e12
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67935840"
 ---
-# <a name="sqlsrvcancel"></a>sqlsrv_cancel
+# <a name="sqlsrv_cancel"></a>sqlsrv_cancel
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Cancela uma instrução. Isso significa que qualquer resultado pendente para a instrução será descartado. Depois que essa função for chamada, a instrução poderá ser executada novamente se ela tiver sido preparada com [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md). Não é necessário chamar essa função se todos os resultados associados à instrução tiverem sido consumidos.  
@@ -35,7 +35,7 @@ Cancela uma instrução. Isso significa que qualquer resultado pendente para a i
 sqlsrv_cancel( resource $stmt)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
 *$stmt*: A instrução a ser cancelada.  
   
 ## <a name="return-value"></a>Valor retornado  
