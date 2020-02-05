@@ -13,21 +13,21 @@ ms.assetid: e1cb3880-cfda-40ac-91fc-d08998287f44
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d5f53246717621e2482a352d25cf2a24fd24f2f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68125169"
 ---
 # <a name="filetable-schema"></a>Esquema da FileTable
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Descreve o esquema predefinido e fixo de uma FileTable.  
   
-|Nome do atributo do arquivo|Tipo|Tamanho|Padrão|Descrição|Acessibilidade do sistema de arquivos|  
+|Nome do atributo do arquivo|type|Tamanho|Padrão|DESCRIÇÃO|Acessibilidade do sistema de arquivos|  
 |-------------------------|----------|----------|-------------|-----------------|-------------------------------|  
 |**path_locator**|**hierarchyid**|variável|Um **hierarchyid** que identifica a posição desse item.|A posição deste nó no FileNamespace hierárquico.<br /><br /> Chave primária da tabela.|Pode ser criada e modificada por meio da definição de valores de caminho do Windows.|  
 |**stream_id**|**[uniqueidentifier] rowguidcol**||Um valor retornado pela função **NEWID()** .|Uma ID exclusiva para os dados FILESTREAM.|Não aplicável.|  
-|**file_stream**|**varbinary(max)**<br /><br /> **fluxo de arquivos**|variável|NULL|Contém os dados de FILESTREAM.|Não aplicável.|  
+|**file_stream**|**varbinary(max)**<br /><br /> **fluxo de arquivos**|variável|NULO|Contém os dados de FILESTREAM.|Não aplicável.|  
 |**file_type**|**nvarchar(255)**|variável|NULL.<br /><br /> Uma operação de criação e renomeação no sistema de arquivos popula o valor da extensão do arquivo a partir do nome.|Representa o tipo do arquivo.<br /><br /> Essa coluna pode ser usada como **COLUNA DE TIPO** para criar um índice de texto completo.<br /><br /> **file_type** é uma coluna computada persistente.|Calculado automaticamente. Não pode ser definido.|  
 |**Nome**|**nvarchar(255)**|variável|Valor do GUID.|O nome do arquivo ou do diretório.|Pode ser criado ou modificado por meio de APIs do Windows.|  
 |**parent_path_locator**|**hierarchyid**|variável|Um **hierarchyid** que identifica o diretório que contém esse item.|O **hierarchyid** do diretório que o contém.<br /><br /> **parent_path_locator** é uma coluna computada persistente.|Calculado automaticamente. Não pode ser definido.|  

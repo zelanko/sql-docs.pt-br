@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: df18a2ca6f79982db41b5188283bf1721b518e31
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73595741"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-with-a-dac-package"></a>Configurar a criptografia de coluna usando o Always Encrypted com um pacote de DAC 
@@ -34,7 +34,7 @@ Este artigo aborda considerações especiais sobre a atualização de um banco d
 
 A implantação de um pacote de DAC também pode resultar na criação ou na remoção de objetos de metadados para chaves mestras de coluna ou chaves de criptografia de coluna do Always Encrypted.
 
-## <a name="performance-considerations"></a>Considerações sobre desempenho
+## <a name="performance-considerations"></a>Considerações sobre o desempenho
 Para executar operações de criptografia, uma ferramenta usada para implantar um DACPAC precisa mover os dados para fora do banco de dados. A ferramenta cria tabelas com a configuração de criptografia desejada no banco de dados, carrega todos os dados das tabelas originais, executa as operações de criptografia solicitadas, carrega os dados nas novas tabelas e, em seguida, troca as tabelas originais pelas novas tabelas. A execução de operações criptográficas pode levar muito tempo. Durante esse tempo, o banco de dados não estará disponível para gravar transações. 
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
@@ -60,7 +60,7 @@ Se a operação de atualização disparar uma operação de criptografia de dado
 Para obter mais informações, consulte [Create and Store Column Master Keys (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)Criar e armazenar chaves mestras de coluna (Always Encrypted). 
 
  
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Próximas etapas
 - [Desenvolver aplicativos usando o Always Encrypted](always-encrypted-client-development.md)
 - [Consultar colunas usando o Always Encrypted com o SQL Server Management Studio](always-encrypted-query-columns-ssms.md)
 

@@ -9,10 +9,10 @@ ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 02defc00e1c65eff7eb624a8d3295082d8d6dc8c
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73637980"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Tutorial: criando relatórios principais e de detalhamento (Construtor de Relatórios)
@@ -94,7 +94,7 @@ Uma conexão de dados contém as informações necessárias para estabelecer con
   
 13. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-14. Clique em **Avançar**.  
+14. Clique em **Próximo**.  
   
 ## <a name="DMDXQuery"></a>1b. Criar uma consulta MDX  
 Em um relatório, é possível usar um conjunto de dados compartilhado que tenha uma consulta predefinida. Se preferir, crie um conjunto de dados inserido para ser usado somente em seu relatório. Neste tutorial, você criará um conjunto de dados inserido.  
@@ -163,7 +163,7 @@ Em um relatório, é possível usar um conjunto de dados compartilhado que tenha
   
 6.  Na barra de ferramentas do designer de consultas, clique em **Executar (!)** .  
   
-7.  Clique em **Avançar**.  
+7.  Clique em **Próximo**.  
   
 ## <a name="DLayout"></a>1c. Organizar dados em grupos  
 Quando você seleciona os campos nos quais agrupar os dados, cria uma matriz com linhas e colunas que exibe dados detalhados e dados agregados.  
@@ -189,7 +189,7 @@ Quando você seleciona os campos nos quais agrupar os dados, cria uma matriz com
   
     As etapas 4 e 5 especificam os dados a serem exibidos na matriz.  
   
-6.  Clique em **Avançar**.  
+6.  Clique em **Próximo**.  
   
 ## <a name="DTotals"></a>1d. Adicionar subtotais e totais  
 Depois de criar grupos, é possível adicionar e formatar linhas onde os valores de agregação dos campos serão exibidos. Também é possível escolher mostrar todos os dados ou permitir que um usuário expanda e recolha dados agrupados de forma interativa.  
@@ -200,7 +200,7 @@ Depois de criar grupos, é possível adicionar e formatar linhas onde os valores
   
     O painel Visualizar do assistente exibe uma matriz com quatro linhas.  
   
-2.  Clique em **Avançar**.  
+2.  Clique em **Próximo**.  
   
 2.  Clique em **Concluir**.  
   
@@ -322,7 +322,7 @@ Por padrão, os parâmetros estão visíveis, o que não é apropriado para este
     Http://<ServerName>/<Sites>/  
     ```  
   
-4.  Clique em **Salvar**.  
+4.  Clique em **Save** (Salvar).  
   
     **Sites e Servidores Recentes** lista as bibliotecas no site do SharePoint.  
   
@@ -333,7 +333,7 @@ Por padrão, os parâmetros estão visíveis, o que não é apropriado para este
     > [!NOTE]  
     > Você salvará o relatório principal no mesmo local. Se desejar salvar os relatórios principal e de detalhamento em sites ou bibliotecas diferentes, você deverá atualizar o caminho da ação **Ir para o relatório** no relatório principal.  
   
-7.  Clique em **Salvar**.  
+7.  Clique em **Save** (Salvar).  
   
 ## <a name="MMatrixAndDataset"></a>1. Criar um novo relatório no Assistente de Tabela ou Matriz  
 Na caixa de diálogo **Introdução** , crie um relatório de matriz por meio do **Assistente de Tabela ou Matriz**.  
@@ -385,7 +385,7 @@ Você adicionará uma fonte de dados inserida ao relatório principal.
   
 13. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-14. Clique em **Avançar**.  
+14. Clique em **Próximo**.  
   
 ## <a name="MMDXQuery"></a>1b. Criar uma consulta MDX  
 Em seguida, crie um conjunto de dados inserido. Para fazer isso, você usará o designer de consulta para criar filtros, parâmetros e membros calculados como também o próprio conjunto de dados.  
@@ -483,7 +483,7 @@ Em seguida, crie um conjunto de dados inserido. Para fazer isso, você usará o 
   
     Revise o conjunto de resultados da consulta.  
   
-6.  Clique em **Avançar**.  
+6.  Clique em **Próximo**.  
   
 ## <a name="MLayout"></a>1c. Organizar dados em grupos  
 Quando seleciona os campos nos quais agrupar os dados, você cria uma matriz com linhas e colunas que exibe dados detalhados e dados agregados.  
@@ -513,7 +513,7 @@ Você pode mostrar subtotais e totais gerais em relatórios. Os dados no relató
   
     O painel Visualizar do assistente exibe uma matriz com quatro linhas.  Quando você executar o relatório, cada linha será exibida da seguinte maneira: a primeira linha é o grupo de colunas, a segunda linha contém os títulos das colunas, a terceira linha contém os dados da categoria do produto (`[Sum(Net_ QTY)]` e `[Sum(Net_Sales)]`) e a quarta linha contém os totais.  
   
-2.  Clique em **Avançar**.  
+2.  Clique em **Próximo**.  
   
 3.  Clique em **Concluir**.  
   
@@ -659,7 +659,7 @@ Salve o relatório principal em uma biblioteca do SharePoint.
     > [!IMPORTANT]  
     > Salve o relatório principal no mesmo local onde você salvou o relatório detalhado. Para salvar os relatórios principal e de detalhamento em sites ou bibliotecas diferentes, confirme se a ação **Ir para o relatório** no relatório principal aponta para o local correto do relatório de detalhamento.  
   
-7.  Clique em **Salvar**.  
+7.  Clique em **Save** (Salvar).  
   
 ## <a name="MRunReports"></a>8. Executar os relatórios principal e de detalhamento  
 Execute o relatório principal e clique nos valores da coluna de categorias de produto para executar o relatório detalhado.  
