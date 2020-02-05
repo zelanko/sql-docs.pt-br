@@ -16,10 +16,10 @@ ms.assetid: 27283ce1-637e-4e2c-91ee-8ad379114ac5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 12645120f543094015f2da03eca224c40e16ab6f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67998463"
 ---
 # <a name="updateobject-method-javalangstring-javalangobject-int"></a>Método updateObject (java.lang.String, java.lang.Object, int)
@@ -36,7 +36,7 @@ public void updateObject(java.lang.String columnName,
                          int scale)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *columnName*  
   
  Uma **Cadeia de Caracteres** que contém o nome da coluna.  
@@ -52,8 +52,8 @@ public void updateObject(java.lang.String columnName,
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Esse método UpdateObject é especificado pelo método UpdateObject na interface java. Sql. ResultSet.  
+## <a name="remarks"></a>Comentários  
+ Esse método updateObject é especificado pelo método updateObject na interface java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Método updateObject &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateobject-method-sqlserverresultset.md)   

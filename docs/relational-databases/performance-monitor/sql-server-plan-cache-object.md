@@ -14,10 +14,10 @@ ms.assetid: 225e2b02-8d2f-4f29-9eba-f5847c36ea99
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: a181919a40ce2e53c9fef9887f5c7ec6ff93fc5b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68130853"
 ---
 # <a name="sql-server-plan-cache-object"></a>SQL Server, objeto Cache de planos
@@ -26,17 +26,17 @@ ms.locfileid: "68130853"
   
  Esta tabela descreve os contadores **SQLServer:Plan Cache**.  
   
-|Contadores SQL Server Plan Cache|Descrição|  
+|Contadores SQL Server Plan Cache|DESCRIÇÃO|  
 |------------------------------------|-----------------|  
 |**Taxa de Acertos do Cache**|Taxa entre acertos e pesquisas do cache.|  
-|**Base do Índice de Ocorrência no Cache**|Somente para uso interno.| 
+|**Base do Índice de Ocorrência no Cache**|Apenas para uso interno.| 
 |**Contagens de Objeto do Cache**|Número de objetos do cache no cache.|  
 |**Páginas do Cache**|Número de páginas de 8 quilobytes (KB) usado por objetos do cache.|  
 |**Objetos do cache em uso**|Número de objetos do cache em uso.|  
   
  Cada contador no objeto contém as seguintes instâncias:  
   
-|Instância do Cache de Plano|Descrição|  
+|Instância do Cache de Plano|DESCRIÇÃO|  
 |-------------------------|-----------------|  
 |**_Total**|Informações para todos os tipos de instâncias do cache.|  
 |**Planos Sql**|Os planos de consulta produzidos de uma consulta [!INCLUDE[tsql](../../includes/tsql-md.md)] ad hoc, inclusive consultas parametrizadas automaticamente ou de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] preparadas usando **sp_prepare** ou **sp_cursorprepare**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] armazenará em cache os planos para instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] ad hoc para reutilização posterior se a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] idêntica for executada mais tarde. Consultas parametrizadas pelo usuário (mesmo se não preparadas explicitamente) também são monitoradas como Planos SQL Preparados.|  

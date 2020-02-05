@@ -11,10 +11,10 @@ ms.assetid: dcbbb714-a051-4805-9e2b-2c2fb647c890
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2ad9b1900c3933b2756d376f152ac714af91cc3d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71281070"
 ---
 # <a name="catalogclear_object_parameter_value-ssisdb-database"></a>catalog.clear_object_parameter_value (Banco de dados SSISDB)
@@ -56,7 +56,7 @@ catalog.clear_object_parameter [ @folder_name = ] folder_name
  0 (êxito)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- None  
+ Nenhum  
   
 ## <a name="permissions"></a>Permissões  
  Este procedimento armazenado exige uma das seguintes permissões:  

@@ -10,10 +10,10 @@ ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 author: craigg-msft
 ms.author: craigg
 ms.openlocfilehash: 6b6870e6b958b2ce7a7c5d050000bd190ef345df
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68893078"
 ---
 # <a name="tutorials-for-sql-server"></a>Tutoriais do SQL Server
@@ -27,13 +27,13 @@ ms.locfileid: "68893078"
  
 ## <a name="current-tutorials"></a>Tutoriais atuais  
   
-|Tecnologia|Descrição|  
+|Tecnologia|DESCRIÇÃO|  
 |--------------|---------------|  
 |[Tutoriais do Analysis Services &#40;SSAS&#41;](https://docs.microsoft.com/analysis-services/analysis-services-tutorials-ssas)|Saiba como desenvolver e implantar modelos de tabela ou multidimensionais do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Saiba também como usar ferramentas como o PowerPivot para analisar os dados nos modelos.|  
 |[Tutoriais do Mecanismo de Banco de Dados](../relational-databases/database-engine-tutorials.md)|Saiba como conectar-se a uma instância do mecanismo de banco de dados e, em seguida compilar e executar instruções Transact-SQL.|  
 |[Tutoriais de Gerenciamento de Informações da Empresa](https://msdn.microsoft.com/library/8745dc80-193d-4de0-9f17-ba648ab1e81c)|Saiba como gerenciar as informações em uma empresa usando tecnologias do Microsoft EIM.|  
 |[Tutoriais do Integration Services](../integration-services/integration-services-tutorials.md)|Aprenda a criar e implantar pacotes do [!INCLUDE[ssIS](../includes/ssis-md.md)] .|  
-|[Tutoriais de Replicação](../relational-databases/replication/replication-tutorials.md)|Saiba como configurar e executar topologias de replicação usando o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
+|[Tutoriais de replicação](../relational-databases/replication/replication-tutorials.md)|Saiba como configurar e executar topologias de replicação usando o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
 |[Tutoriais do Reporting Services &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)|Aprender a criar relatórios e assinaturas básicos.|  
 |[Tutoriais de aprendizado de máquina do SQL Server](../advanced-analytics/tutorials/machine-learning-services-tutorials.md)|Saiba como trabalhar com os dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usando o R ou o Python. Execute scripts do R ou Python no [!INCLUDE[tsql](../includes/tsql-md.md)].|  
   

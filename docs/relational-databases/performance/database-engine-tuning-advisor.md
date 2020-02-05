@@ -12,10 +12,10 @@ ms.assetid: 50dd0a0b-a407-4aeb-bc8b-b02a793aa30a
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 52b3154649a06bfb899e6993eb875a04190c59d2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67946944"
 ---
 # <a name="database-engine-tuning-advisor"></a>Database Engine Tuning Advisor
@@ -111,7 +111,7 @@ O Orientador de Otimização do Mecanismo de Banco de Dados é projetado para tr
   
 -   Especifique só as estruturas de design de banco de dados físico que você quer que o Orientador de Otimização do Mecanismo de Banco de Dados analise. O Orientador de Otimização do Mecanismo de Banco de Dados fornece muitas opções, mas só especifica as que são necessárias.  
   
-## <a name="dependency-on-xpmsver-extended-stored-procedure"></a>Dependência em Procedimento armazenado estendido xp_msver  
+## <a name="dependency-on-xp_msver-extended-stored-procedure"></a>Dependência em Procedimento armazenado estendido xp_msver  
  O Orientador de Otimização do Mecanismo de Banco de Dados depende do procedimento armazenado estendido **xp_msver** para fornecer a funcionalidade completa. Esse procedimento armazenado estendido é ativado por padrão. O Orientador de Otimização do Mecanismo de Banco de Dados usa esse procedimento armazenado estendido para buscar o número de processadores e a memória disponível no computador onde o banco de dados que está sendo ajustado está localizado. Se o **xp_msver** não estiver disponível, o Orientador de Otimização do Mecanismo de Banco de Dados assumirá as características de hardware do computador no qual o Orientador de Otimização do Mecanismo de Banco de Dados está sendo executado. Se as características de hardware do computador onde o Orientador de Otimização do Mecanismo de Banco de Dados está sendo executado não estiverem disponíveis, supõe-se um processador e 1024 megabytes (MBs) de memória.  
   
  Essa dependência afeta as recomendações de particionamento porque o número de partições recomendado depende destes dois valores (número de processadores e memória disponível). A dependência também afeta os resultados de ajustes quando você usar um servidor de teste para ajustar o servidor de produção. Nesse cenário,o Orientador de Otimização do Mecanismo de Banco de Dados usa o **xp_msver** para buscar propriedades de hardware do servidor de produção. Após ajustar a carga de trabalho no servidor de teste, o Orientador de Otimização do Mecanismo de Banco de Dados usa estas propriedades de hardware para gerar uma recomendação. Para obter mais informações, veja [xp_msver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-msver-transact-sql.md).  

@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: f50978c19295f5973e787bdaab46efea6367308a
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 8ed18a3ea7ce4804146d448765d9f18e8b2a7f73
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710385"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288171"
 ---
 # <a name="enhance-transactional-replication-performance"></a>Aprimorar o desempenho da replicação transacional
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "71710385"
   
 -   Replique a execução de procedimento armazenado ao fazer atualizações em lote em tabelas publicadas.  
   
-     Se tiver atualizações em lote que afetem ocasionalmente um grande número de linhas no Assinante, você deve considerar a atualização da tabela publicada usando um procedimento armazenado, e publicar a execução desse procedimento. Ao invés de enviar uma atualização ou excluir cada linha afetada, o Distribution Agent executa o mesmo procedimento no Assinante, com os mesmos valores de parâmetros. Para saber mais, confira [Publishing Stored Procedure Execution in Transactional Replication](../../../relational-databases/replication/transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
+     Se tiver atualizações em lote que afetem ocasionalmente um grande número de linhas no Assinante, você deve considerar a atualização da tabela publicada usando um procedimento armazenado, e publicar a execução desse procedimento. Ao invés de enviar uma atualização ou excluir cada linha afetada, o Distribution Agent executa o mesmo procedimento no Assinante, com os mesmos valores de parâmetros. Para obter mais informações, consulte [Publicando execução de procedimento armazenado em replicação transacional](../../../relational-databases/replication/transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
   
 -   Espalhe os artigos por várias publicações.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "71710385"
   
      Definir que os agentes executem continuamente, em vez de criar agendamentos frequentes (como a cada minuto), melhora o desempenho da replicação, eliminando as interrupções do agente. Quando você define que o Distribution Agent execute continuamente, as alterações são propagadas com uma baixa latência para os demais servidores conectados na topologia. Para obter mais informações, consulte:  
   
-    -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Especificar agendas de sincronização](../../../relational-databases/replication/specify-synchronization-schedules.md)  
+    -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Especificar agendamentos de sincronização](../../../relational-databases/replication/specify-synchronization-schedules.md)  
   
 ## <a name="distribution-agent-and-log-reader-agent-parameters"></a>Parâmetros do Distribution Agent e do Log Reader Agent  
 Parâmetros de perfil de agente geralmente são ajustados para aumentar a produtividade do Leitor de Log e do Agente de Distribuição com sistemas OLTP de alto tráfego. 
@@ -142,11 +142,11 @@ Este exemplo resulta em um estado no qual nenhuma sessão está executando seus 
 
 Você pode observar as seguintes tendências dos contadores de desempenho do Agente de Distribuição durante esse período de tempo limite de consulta: 
 
-- O valor do contador de desempenho **Dist: Cmds entregues/s** é sempre 0.
-- O valor do contador de desempenho **Dist: Trans entregues/s** é sempre 0.
-- O contador de desempenho **Dist: Latência de Entrega** relata um aumento no valor até que o deadlock do thread seja resolvido.
+- O valor do contador de desempenho **Dist: Delivered Cmds/sec** é sempre 0.
+- O valor do contador de desempenho **Dist: Delivered Trans/sec** é sempre 0.
+- O contador de desempenho **Dist: Delivery Latency** reporta um aumento no valor até que o deadlock do thread seja resolvido.
 
-O tópico "Agente de Distribuição de Replicação" nos Manuais Online do SQL Server contém a seguinte descrição do parâmetro *SubscriptionStreams*: "Se uma das conexões falhar ao ser executada ou confirmada, todas as conexões anularão o lote atual e o agente usará um único fluxo para repetir os lotes com falha."
+O tópico "Agente de Distribuição de Replicação" nos Manuais Online do SQL Server contém a seguinte descrição do parâmetro *SubscriptionStreams*: "Se uma das conexões não for executada nem for confirmada, todas as conexões anularão o lote atual, e o agente usará um fluxo único para repetir os lotes com falha."
 
 O Agente de Distribuição usa uma sessão para repetir o lote que não pôde ser aplicado. Depois que o Agente de Distribuição aplicar com êxito o lote, ele retomará o uso de várias sessões sem reiniciar.
 
@@ -159,7 +159,7 @@ A confirmação de um conjunto de transações tem uma sobrecarga fixa. Ao confi
 ## <a name="see-more"></a>Ver mais
   
 [Trabalhar com perfis do Agente de Replicação](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
-[Exibir e modificar parâmetros do prompt de comando do agente de replicação &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
+[Exibir e modificar parâmetros do prompt de comando de agentes de replicação &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
 [Conceitos dos executáveis do Replication Agent](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
   

@@ -28,10 +28,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4661fa1963b120a091953bff883a0510a396345e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68099988"
 ---
 # <a name="set-transaction-isolation-level-transact-sql"></a>SET TRANSACTION ISOLATION LEVEL (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "68099988"
 
 Controla o comportamento de bloqueio e do controle de versão de linha das instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] emitidas por uma conexão com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -100,7 +100,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
  Os bloqueios compartilhados são colocados em todos os dados lidos por cada instrução na transação, sendo mantidos até que a transação seja concluída. Isso impede que outras transações modifiquem qualquer linha que tenha sido lida pela transação atual. Outras transações podem inserir novas linhas que correspondam às condições de pesquisa das instruções emitidas pela transação atual. Então, se a transação atual tentar a instrução novamente, ela recuperará as novas linhas, o que resultará em leituras fantasmas. Como os bloqueios compartilhados são mantidos até o término da transação, em vez de serem liberados ao final de cada instrução, a simultaneidade é menor que o nível de isolamento READ COMMITTED padrão. Use essa opção apenas quando necessário.  
   
  SNAPSHOT  
- Especifica que os dados lidos por qualquer instrução em uma transação serão a versão transacionalmente consistente que existia no início da transação. A transação pode reconhecer apenas modificações de dados que estavam confirmadas antes do início da transação. Modificações de dados efetuadas por outras transações após o início da transação atual não são visíveis para as instruções em execução na transação atual. O efeito será como se as instruções em uma transação obtivessem um instantâneo dos dados confirmados conforme existiam no início da transação.  
+ Especifica que os dados lidos por qualquer instrução em uma transação serão a versão transacionalmente consistente que existia no início da transação. A transação pode reconhecer apenas modificações de dados que estavam confirmadas antes do início da transação. Modificações de dados efetuadas por outras transações após o início da transação atual não são visíveis para as instruções em execução na transação atual. O efeito é como se as instruções em uma transação obtivessem um instantâneo dos dados confirmados conforme existiam no início da transação.  
   
  Exceto quando um banco de dados está sendo recuperado, as transações SNAPSHOT não exigeem bloqueios ao ler dados. Transações SNAPSHOT que leem dados não bloqueiam outras transações de gravar dados. Transações que gravam dados não bloqueiam transações SNAPSHOT de ler dados.  
   
@@ -126,7 +126,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
  Bloqueios de intervalo são colocados no intervalo de valores chave que corresponde às condições de pesquisa de cada instrução executada em uma transação. Isso bloqueia que outras transações atualizem ou insiram qualquer linha que seja qualificada para qualquer uma das instruções executadas pela transação atual. Isto significa que, se qualquer uma das instruções de uma transação for executada uma segunda vez, ela lerá o mesmo conjunto de linhas. Os bloqueios de intervalo são mantidos até que a transação seja concluída. Esse é o mais restritivo dos níveis de isolamento, pois ele bloqueia intervalos de chaves inteiros até que a transação seja concluída. Como a simultaneidade é menor, use essa opção apenas quando necessário. Essa opção tem o mesmo efeito de definir HOLDLOCK em todas as tabelas em todas as instruções SELECT de uma transação.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Apenas uma única opção de nível de isolamento pode ser definida por vez, permanecendo definida para aquela conexão até que seja explicitamente alterada. Todas as operações de leitura executadas na transação operam sob as regras do nível de isolamento especificado, a menos que uma dica de tabela na cláusula FROM de uma instrução especifique comportamento de bloqueio ou controle de versão diferente para uma tabela.  
   
  Os níveis de isolamento da transação definem o tipo de bloqueio adquirido em operações de leitura. Bloqueios compartilhados adquiridos para READ COMMITTED ou REPEATABLE READ geralmente são bloqueios de linha, embora os bloqueios de linha possam ser escalados para bloqueios de página ou de tabela se um número significativo de linhas em uma página ou tabela forem referenciadas pela leitura. Se uma linha for modificada pela transação depois de ter sido lida, a transação irá adquirir um bloqueio exclusivo para proteger essa linha, sendo mantido até que a transação seja concluída. Por exemplo, se uma transação REPEATABLE READ tiver um bloqueio compartilhado em uma linha e a transação modificar essa linha, o bloqueio de linha compartilhado será convertido em bloqueio de linha exclusivo.  

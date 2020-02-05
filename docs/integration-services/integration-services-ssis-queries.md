@@ -18,10 +18,10 @@ ms.assetid: 8822bd29-4575-46c8-92a0-1a39bc2604c1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d24d4e8bdebca82ec0541132b52ac84de6c9c271
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71284491"
 ---
 # <a name="integration-services-ssis-queries"></a>Consultas do SSIS (Integration Services)
@@ -91,10 +91,10 @@ Use a caixa de diálogo **Construtor de Consultas** para criar uma consulta a se
  As transformações Pesquisa e Pesquisa Difusa também podem usar variáveis com parâmetros e códigos de retorno. As informações sobre a origem OLE DB também se aplicam a estas duas transformações.  
   
 ### <a name="options"></a>Opções  
- **Barra de Ferramentas**  
+ **Barra de ferramentas**  
  Use a barra de ferramentas para gerenciar conjuntos de dados, selecionar painéis para exibição e controlar funções de consulta.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |**Painel Mostrar/Ocultar Diagrama**|Exibe ou oculta o painel **Diagrama** .|  
 |**Painel Mostrar/Ocultar Grade**|Exibe ou oculta o painel **Grade** .|  
@@ -111,7 +111,7 @@ Use a caixa de diálogo **Construtor de Consultas** para criar uma consulta a se
  **Definição da Consulta**  
  A definição de consulta fornece uma barra de ferramentas e painéis nos quais definir e testar a consulta.  
   
-|Painel|Descrição|  
+|Painel|DESCRIÇÃO|  
 |----------|-----------------|  
 |Painel**Diagrama**|Exibe a consulta em um diagrama. O diagrama mostra as tabelas incluídas na consulta e como elas estão unidas. Marque ou desmarque a caixa de seleção próxima a uma coluna em uma tabela para adicioná-la ou removê-la da saída da consulta.<br /><br /> Quando você adiciona tabelas à consulta, o Construtor de Consultas cria junções entre tabelas com base em tabelas, dependendo das chaves na tabela. Para adicionar uma junção, arraste um campo de uma tabela sobre um campo em outra tabela. Para gerenciar uma junção, clique com o botão direito do mouse na junção e selecione uma opção de menu.<br /><br /> Clique com o botão direito do mouse no painel **Diagrama** para adicionar ou remover tabelas, selecionar todas as tabelas e mostrar ou ocultar painéis.|  
 |Painel**Grade**|Exibe a consulta em uma grade. Você pode usar esse painel para adicionar e remover colunas da consulta e alterar as configurações de cada coluna.|  

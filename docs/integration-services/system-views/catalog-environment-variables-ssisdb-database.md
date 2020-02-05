@@ -11,10 +11,10 @@ ms.assetid: 45f5aacd-505a-443b-8fc2-c7929e78cff8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: fdb7a7c325a6189feaea690fe2cc22d685ba86e6
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296655"
 ---
 # <a name="catalogenvironment_variables-ssisdb-database"></a>catalog.environment_variables (Banco de Dados SSISDB)
@@ -26,17 +26,17 @@ ms.locfileid: "71296655"
 
   Exibe os detalhes de variável de ambiente para todos os ambientes no catálogo do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |variable_id|**bigint**|O ID (identificador exclusivo) da variável de ambiente.|  
 |environment_id|**bigint**|O ID exclusivo do ambiente ao qual a variável está associada.|  
-|NAME|**sysname**|O nome da variável de ambiente.|  
+|name|**sysname**|O nome da variável de ambiente.|  
 |descrição|**nvarchar(1024)**|A descrição da variável do ambiente.|  
-|Tipo|**nvarchar(128)**|O tipo de dados da variável do ambiente.|  
+|type|**nvarchar(128)**|O tipo de dados da variável do ambiente.|  
 |sensitive|**bit**|Quando o valor for `1`, a variável será confidencial e criptografada quando for armazenada. Quando o valor for `0`, a variável não será confidencial e o valor será armazenado em texto não criptografado.|  
 |value|**sql_variant**|O valor da variável de ambiente. Quando sensitive é `0`, o valor do texto sem formatação é mostrado. Quando sensitive é `1`, o valor **NULL** é exibido.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esta exibição mostra uma linha para cada variável de ambiente no catálogo.  
   
 ## <a name="permissions"></a>Permissões  

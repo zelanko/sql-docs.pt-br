@@ -14,10 +14,10 @@ ms.assetid: a634e94d-f492-4dfd-9611-a35f545106a1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: aea0d3c07482c7c54dc5adb8956b290791f29111
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295174"
 ---
 # <a name="catalogpackages-ssisdb-database"></a>catalog.packages (Banco de dados SSISDB)
@@ -29,10 +29,10 @@ ms.locfileid: "71295174"
 
   Exibe os detalhes de todos os pacotes exibidos no catálogo do **SSISDB**.  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |package_id|**bigint**|O identificador exclusivo (ID) do pacote.|  
-|NAME|**nvarchar(256)**|O nome exclusivo do pacote.|  
+|name|**nvarchar(256)**|O nome exclusivo do pacote.|  
 |package_guid|**uniqueidentifier**|O identificador exclusivo global (GUID) que identifica o pacote.|  
 |descrição|**nvarchar(1024)**|Uma descrição opcional do pacote.|  
 |package_format_version|**int**|A versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usada para desenvolver o pacote.|  
@@ -46,7 +46,7 @@ ms.locfileid: "71295174"
 |validation_status|**char(1)**|O status da validação.|  
 |last_validation_time|**datetimeoffset(7)**|A hora da última validação.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esta exibição mostra uma linha para cada pacote no catálogo.  
   
 ## <a name="permissions"></a>Permissões  

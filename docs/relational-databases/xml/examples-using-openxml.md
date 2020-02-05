@@ -1,5 +1,5 @@
 ---
-title: 'Exemplos: Usando OPENXML | Microsoft Docs'
+title: 'Exemplos: usando OPENXML | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -27,13 +27,13 @@ ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4ea3ad1c2f7cb482888f0cd4d31a91f9975745b7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67943382"
 ---
-# <a name="examples-using-openxml"></a>Exemplos: uso do OPENXML
+# <a name="examples-using-openxml"></a>Exemplos: usando OPENXML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   Os exemplos neste tópico mostram como o OPENXML é usado para criar uma exibição de conjunto de linhas de um documento XML. Para obter informações sobre a sintaxe do OPENXML, veja [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md). Os exemplos mostram todos os aspectos do OPENXML, mas não especificam metapropriedades no OPENXML. Para obter mais informações sobre como especificar metapropriedades no OPENXML, veja [Especificar metapropriedades no OPENXML](../../relational-databases/xml/specify-metaproperties-in-openxml.md).  
   
@@ -42,7 +42,7 @@ ms.locfileid: "67943382"
   
  O valor de *flags* fornece o mapeamento padrão. Se nenhum *ColPattern* for especificado no *SchemaDeclaration*, o mapeamento especificado em *flags* será assumido. O valor de *flags* será ignorado se *ColPattern* estiver especificado em *SchemaDeclaration*. O *ColPattern* especificado determina o mapeamento centrado em atributo ou centrado em elemento e também o comportamento para manipulação de dados não consumidos ou de estouro.  
   
-### <a name="a-executing-a-simple-select-statement-with-openxml"></a>A. Executando uma instrução SELECT simples com OPENXML  
+### <a name="a-executing-a-simple-select-statement-with-openxml"></a>a. Executando uma instrução SELECT simples com OPENXML  
  O documento XML neste exemplo é composto dos elementos <`Customer`>, <`Order`>e <`OrderDetail`>. A instrução OPENXML recupera informações do cliente em um conjunto de linhas de duas colunas, **CustomerID** e **ContactName**, do documento XML.  
   
  Primeiro, o procedimento armazenado **sp_xml_preparedocument** é chamado para obter um identificador de documento. Esse identificador de documento é passado para o OPENXML.  
@@ -144,7 +144,7 @@ LILAS      Carlos Gonzlez
 ### <a name="b-specifying-colpattern-for-mapping-between-rowset-columns-and-the-xml-attributes-and-elements"></a>B. Especificando ColPattern para mapeamento entre colunas do conjunto de linhas e os elementos e atributos XML  
  Este exemplo mostra como o padrão Xpath é especificado no parâmetro *ColPattern* opcional para fornecer mapeamento entre colunas do conjunto de linhas e os elementos e atributos XML.  
   
- O documento XML neste exemplo é composto dos elementos <`Customer`>, <`Order`>e <`OrderDetail`>. A instrução OPENXML recupera informações do cliente e do pedido como um conjunto de linhas (**CustomerID**, **OrderDate**, **ProdID** e **Qty**) do documento XML.  
+ O documento XML neste exemplo é composto dos elementos <`Customer`>, <`Order`>e <`OrderDetail`>. A instrução OPENXML recupera informações do cliente e do pedido como um conjunto de linhas (**CustomerID**, **OrderDate**, **ProdID**e **Qty**) do documento XML.  
   
  Primeiro, o procedimento armazenado **sp_xml_preparedocument** é chamado para obter um identificador de documento. Esse identificador de documento é passado para o OPENXML.  
   
@@ -344,7 +344,7 @@ O4    10000.0       NULL
 ### <a name="e-specifying-tablename-in-the-with-clause"></a>E. Especificando TableName na cláusula WITH  
  Este exemplo especifica *TableName* na cláusula WITH em vez de *SchemaDeclaration*. Isso será útil se você tiver uma tabela que tem a estrutura desejada e nenhum padrão de coluna, parâmetro *ColPattern* , é necessário.  
   
- O documento XML neste exemplo é composto dos elementos <`Customer`> e <`Order`>. A instrução OPENXML recupera informações de pedido em um conjunto de linhas de três colunas (**oid**, **date** e **amount**) do documento XML.  
+ O documento XML neste exemplo é composto dos elementos <`Customer`> e <`Order`>. A instrução OPENXML recupera informações de pedido em um conjunto de linhas de três colunas (**oid**, **date**e **amount**) do documento XML.  
   
  Primeiro, o procedimento armazenado **sp_xml_preparedocument** é chamado para obter um identificador de documento. Esse identificador de documento é passado para o OPENXML.  
   
@@ -463,7 +463,7 @@ EXEC sp_xml_removedocument @docHandle
     ```  
   
 ### <a name="g-specifying-rowpattern-ending-with-an-attribute"></a>G. Especificando rowpattern terminando com um atributo  
- O documento XML neste exemplo é composto dos elementos <`Customer`>, <`Order`>e <`OrderDetail`>. A instrução OPENXML recupera informações sobre os detalhes do pedido em um conjunto de linhas de três colunas (**ProductID**, **Quantity** e **OrderID**) do documento XML.  
+ O documento XML neste exemplo é composto dos elementos <`Customer`>, <`Order`>e <`OrderDetail`>. A instrução OPENXML recupera informações sobre os detalhes do pedido em um conjunto de linhas de três colunas (**ProductID**, **Quantity**e **OrderID**) do documento XML.  
   
  Primeiro, o **sp_xml_preparedocument** é chamado para obter um identificador de documento. Esse identificador de documento é passado para o OPENXML.  
   
@@ -635,7 +635,7 @@ id  lname   xmlname                   OverFlow
   
          Extrai as IDs de estudantes individuais de cada elemento \<Course>. Uma tabela de borda é usada para recuperar esses valores.  
   
- Estas são as etapas:  
+ Siga estas etapas:  
   
 ```  
 -- Create these tables:  

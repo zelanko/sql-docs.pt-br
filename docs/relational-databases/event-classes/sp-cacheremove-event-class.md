@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 92d7ba023176aabd08179638fbccfd37540d345f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68085348"
 ---
 # <a name="spcacheremove-event-class"></a>Classe de evento SP:CacheRemove
@@ -25,7 +25,7 @@ ms.locfileid: "68085348"
   
 ## <a name="spcacheremove-event-class-data-columns"></a>Colunas de dados da classe de evento SP:CacheRemove  
   
-|Nome da coluna de dados|**Data type**|Descrição|ID da coluna|Filtrável|  
+|Nome da coluna de dados|**Data type**|DESCRIÇÃO|ID da coluna|Filtrável|  
 |----------------------|-------------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|Nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |ClientProcessID|**int**|ID atribuída pelo computador host ao processo em que o aplicativo cliente está sendo executado. Essa coluna de dados será populada se o cliente fornecer a ID de processo do cliente.|9|Sim|  
@@ -33,7 +33,7 @@ ms.locfileid: "68085348"
 |DatabaseName|**nvarchar**|Nome do banco de dados no qual o procedimento armazenado está sendo executado.|35|Sim|  
 |EventClass|**int**|Tipo de evento = 36.|27|Não|  
 |EventSequence|**int**|Sequência de um determinado evento na solicitação.|51|Não|  
-|EventSubClass|**int**|Tipo de subclasse de evento.<br /><br /> 1=Compplan Remove: Um plano de consulta compilado foi removido do cache.<br /><br /> 2=Proc Cache Flush: Todas as entradas foram removidas do cache de procedimentos.|21|Sim|  
+|EventSubClass|**int**|Tipo de subclasse de evento.<br /><br /> 1=Compplan Remove: um plano de consulta compilado foi removido do cache.<br /><br /> 2=Proc Cache Flush: todas as entradas foram removidas do cache de procedimentos.|21|Sim|  
 |GroupID|**int**|ID do grupo de carga de trabalho no qual o evento de Rastreamento do SQL dispara.|66|Sim|  
 |HostName|**nvarchar**|Nome do computador no qual o cliente está sendo executado. Essa coluna de dados será populada se o cliente fornecer o nome do host. Para determinar o nome do host, use a função HOST_NAME.|8|Sim|  
 |IsSystem|**int**|Indica se o evento ocorreu em um processo do sistema ou do usuário. 1 = sistema, 0 = usuário.|60|Sim|  

@@ -1,6 +1,6 @@
 ---
-title: Assistente para Gerar e Publicar Scripts | Microsoft Docs
-ms.custom: ''
+title: Assistente para Gerar e Publicar Scripts
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -43,18 +43,18 @@ ms.assetid: 5ee520ba-ec7e-4199-a441-189e9e264b37
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0671a283261a6c0867e4349f8cd0f2baadf0cbd7
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
+ms.openlocfilehash: 401e9a36e6ab93a9701508bc4b587a55b81642e1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70123006"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253898"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>Assistente para Gerar e Publicar Scripts
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   Você pode usar **Assistente para Gerar e Publicar Scripts** para criar scripts para transferir um banco de dados entre instâncias do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ou do [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. É possível gerar scripts para um banco de dados em uma instância do Mecanismo de Banco de Dados em sua rede local ou no [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Os scripts gerados podem ser executados em outra instância do Mecanismo de Banco de Dados ou no [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. É possível usar o assistente para publicar o conteúdo de um banco de dados diretamente em um serviço Web criado usando os Serviços de Publicação de Banco de dados. É possível criar scripts para um banco de dados inteiro ou limitá-lo a objetos específicos.  
 
-Confira mais detalhes sobre como usar o assistente para Gerar e Publicar Scripts no [Tutorial: Assistente para Gerar Scripts](https://docs.microsoft.com/sql/ssms/tutorials/scripting-ssms#script-databases).
+Para obter um Tutorial mais detalhado sobre como usar o assistente para Gerar e Publicar Scripts, consulte [Tutorial: Assistente para Gerar Scripts](https://docs.microsoft.com/sql/ssms/tutorials/scripting-ssms#script-databases).
 
 
   
@@ -144,7 +144,7 @@ Confira mais detalhes sobre como usar o assistente para Gerar e Publicar Scripts
 ###  <a name="AdvScriptOpt"></a> Página Opções de Script Avançadas  
  Use essa página para especificar como você deseja que esse assistente gere scripts. Muitas opções diferentes estão disponíveis. As opções ficarão acinzentadas se não tiverem suporte da versão do SQL Server ou do [!INCLUDE[ssSDS](../../includes/sssds-md.md)] especificado no **Tipo de mecanismo de banco de dados**.  
 
-![Opções Avançadas](media/generate-and-publish-scripts-wizard/advanced.png)
+![Opções avançadas](media/generate-and-publish-scripts-wizard/advanced.png)
   
  **Opções** – Especifique opções avançadas selecionando um valor da lista de configurações disponíveis à direita de cada opção.  
   
@@ -192,7 +192,7 @@ Confira mais detalhes sobre como usar o assistente para Gerar e Publicar Scripts
   
 -   **Gerar script de USE DATABASE** – Adiciona a instrução **USE DATABASE** ao script. Para ter certeza de que os objetos de banco de dados serão criados no banco de dados correto, inclua a instrução **USE DATABASE** . Quando se espera que o script seja usado em um outro banco de dados, selecione **False** para omitir a instrução **USE DATABASE** . O padrão é **True**. Para obter mais informações, veja [USE &#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md).  
   
--   **Tipos de dados para o script** – Seleciona o que deve ser inserido no script: **Somente dados**, **Somente esquema** ou ambos. O padrão é **Esquema somente**.  
+-   **Tipos de dados para script** – Seleciona o que deve ser gerado com script: **Somente dados**, **Somente esquema**ou ambos. O padrão é **Esquema somente**.  
   
  **Opções de tabela/exibição** – As opções a seguir são válidas somente para scripts de tabelas ou exibições.  
   
@@ -262,7 +262,7 @@ Confira mais detalhes sobre como usar o assistente para Gerar e Publicar Scripts
   
 11. **Associação de script** – Inclui associação por padrão e objetos de regra no script enviados ao provedor para publicação. O padrão é **True**. Para obter mais informações, veja [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md) e [CREATE RULE &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md).  
   
-12. **Tipos de dados a publicar** – Seleciona o que deve ser inserido no script: **Somente dados**, **Somente esquema** ou ambos. O padrão é **Esquema e Dados**.  
+12. **Tipos de dados para publicação** – Seleciona o que deve ser gerado com script: **Somente dados**, **Somente esquema**ou ambos. O padrão é **Esquema e Dados**.  
   
  **Publicando Opções** – especifica transações devem ser usadas ao publicar no provedor de host Web.  
   
@@ -348,7 +348,7 @@ Para gerar script para objetos com a sintaxe [!INCLUDE[ssSDW_md](../../includes/
 1. Clique em **Ferramentas** e em **Opções**.  
 2. Em **Opções Gerais de Script** , defina:  
     1. Script para o tipo de mecanismo de banco de dados: **Banco de Dados SQL do Microsoft Azure**.  
-    2. Script da edição do mecanismo de banco de dados: **Edição do SQL Data Warehouse do Microsoft Azure**.  
+    2. Script para a edição do mecanismo de banco de dados: **Edição do SQL Data Warehouse do Microsoft Azure**.  
 3. Clique em **OK**.
 
 ### <a name="how-to-generate-scripts-for-sql-data-warehouse-when-it-is-not-the-default-scripting-option"></a>Como gerar scripts para o SQL Data Warehouse quando esta não for a opção de script padrão  
@@ -360,13 +360,13 @@ Se você definir [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] como a opção
 3. Escolha os Objetos dos quais deseja gerar script.  
 4. Em **Opções de Script**, clique em **Avançado**. Em **Geral** , defina:  
     1. Script para o tipo de mecanismo de banco de dados: **Banco de Dados SQL do Microsoft Azure**.  
-    2. Script da edição do mecanismo de banco de dados: **Edição do SQL Data Warehouse do Microsoft Azure**.  
+    2. Script para a edição do mecanismo de banco de dados: **Edição do SQL Data Warehouse do Microsoft Azure**.  
 5. Clique em **Salvar ou Publicar Scripts** e em **Concluir**.  
 
 As opções definidas na Etapa 4 não serão lembradas. Se você preferir que essas opções sejam lembradas, siga as instruções em **Como definir opções de script padrão para o SQL Data Warehouse**.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Instalando o SMO](../../relational-databases/server-management-objects-smo/installing-smo.md)   
- [Copiar bancos de dados em outros servidores](../../relational-databases/databases/copy-databases-to-other-servers.md)  
+ [Copiar bancos de dados para outros servidores](../../relational-databases/databases/copy-databases-to-other-servers.md)  
   
   

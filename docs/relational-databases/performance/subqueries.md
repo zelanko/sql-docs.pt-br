@@ -17,10 +17,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c2d4bb708142d4471381a1579baa943d11357823
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68113281"
 ---
 # <a name="subqueries-sql-server"></a>Subconsultas (SQL Server)
@@ -486,7 +486,7 @@ WHERE ProductSubcategoryID NOT IN
 GO
 ```
 
-Esta instrução não pode ser convertida em uma junção. A junção análoga não igual tem um significado diferente: encontra os nomes de produtos que estão em alguma subcategoria que não é uma bicicleta pronta.      
+Esta instrução não pode ser convertida em uma junção. A junção análoga não igual tem um significado diferente: acha os nomes de produtos que estão em alguma subcategoria que não é uma bicicleta acabada.      
 
 ### <a name="upsert"></a> Subconsultas nas instruções UPDATE, DELETE e INSERT
 Subconsultas podem ser aninhadas nas instruções `UPDATE`, `DELETE`, `INSERT` e `SELECT` de DML (manipulação de dados).    

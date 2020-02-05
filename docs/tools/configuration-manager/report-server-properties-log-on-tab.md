@@ -1,6 +1,6 @@
 ---
-title: Propriedades do servidor de relatório (guia Logon) | Microsoft Docs
-ms.custom: ''
+title: Propriedades do servidor de relatório (guia Fazer Logon)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,12 +11,12 @@ ms.assetid: f54be594-f290-4db2-bf18-fd2521728a4a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 85b62a07b691492f9980574f1607fbb302071497
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 1dda864021df72f2e45e2db08fec0c66765fb0a4
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058387"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306340"
 ---
 # <a name="report-server-properties-log-on-tab"></a>Propriedades do servidor de relatório (guia Fazer Logon)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

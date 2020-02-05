@@ -26,10 +26,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 160d2e384dec5a0c0f3cc5ff40bcf62e3941d096
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67948282"
 ---
 # <a name="select-transact-sql"></a>SELECT (Transact-SQL)
@@ -51,7 +51,7 @@ ms.locfileid: "67948282"
   
  Os operadores UNION, EXCEPT e INTERSECT podem ser usados entre consultas para combinar ou comparar os resultados em um único conjunto de resultados.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -100,7 +100,7 @@ SELECT <select_criteria>
   
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Devido à complexidade da instrução SELECT, os elementos e argumentos de sintaxe detalhados são mostrados por cláusula:  
   
 |||  
@@ -124,14 +124,14 @@ SELECT <select_criteria>
  As etapas a seguir mostram a ordem de processamento lógico ou a ordem de associação de uma instrução SELECT. Essa ordem determina quando os objetos definidos em uma etapa são disponibilizados para as cláusulas em etapas subsequentes. Por exemplo, se o processador de consulta puder ser associado (acessar) a tabelas ou exibições definidas na cláusula FROM, esses objetos e suas colunas serão disponibilizados para todas as etapas subsequentes. De modo oposto, como a cláusula SELECT é a etapa 8, qualquer alias de coluna ou coluna derivada definida naquela cláusula não poderá ser referenciada por cláusulas precedentes. Porém, poderão ser referenciadas por cláusulas subsequentes, como a cláusula ORDER BY. A execução física real da instrução é determinada pelo processador de consulta e a ordem pode variar com base nesta lista.  
   
 1.  FROM  
-2.  ON  
+2.  ATIVADO  
 3.  JOIN  
 4.  WHERE  
 5.  GROUP BY  
 6.  WITH CUBE ou WITH ROLLUP  
 7.  HAVING  
 8.  SELECT  
-9. DISTINCT  
+9. DISTINTO  
 10. ORDER BY  
 11. INÍCIO  
 
@@ -146,7 +146,7 @@ SELECT <select_criteria>
 ## <a name="examples"></a>Exemplos:   
 O exemplo a seguir usa o banco de dados [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)].
   
-### <a name="a-using-select-to-retrieve-rows-and-columns"></a>A. Usando SELECT para recuperar linhas e colunas  
+### <a name="a-using-select-to-retrieve-rows-and-columns"></a>a. Usando SELECT para recuperar linhas e colunas  
  Esta seção mostra três exemplos de código. Este primeiro exemplo de código retorna todas as linhas (nenhuma cláusula WHERE foi especificada) e todas as colunas (usando o `*`) da tabela `DimEmployee`.  
   
 ```sql  

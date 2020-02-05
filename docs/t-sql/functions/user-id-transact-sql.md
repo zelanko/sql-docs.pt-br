@@ -23,13 +23,13 @@ ms.assetid: 67fd29bc-eda9-4d4d-b148-5d3659181a43
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 1b8b1b0b5a9254382490272bd92405f52ed90a3d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67927603"
 ---
-# <a name="userid-transact-sql"></a>USER_ID (Transact-SQL)
+# <a name="user_id-transact-sql"></a>USER_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Retorna o número de identificação para um usuário de banco de dados.  
@@ -37,7 +37,7 @@ ms.locfileid: "67927603"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [DATABASE_PRINCIPAL_ID](../../t-sql/functions/database-principal-id-transact-sql.md).  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -53,7 +53,7 @@ USER_ID ( [ 'user' ] )
 ## <a name="return-types"></a>Tipos de retorno  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Quando *user* é omitido, considera-se o usuário atual. Se o parâmetro contiver a palavra NULL, retornará NULL. Quando USER_ID é chamado depois de EXECUTE AS, USER_ID retorna a ID do contexto representado.  
   
  Quando uma entidade do Windows não é mapeada para um banco de dados específico, o usuário acessa um banco de dados por meio da associação em um grupo, USER_ID retorna 0 (a ID de público). Se esse principal criar um objeto sem especificar um esquema, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] criará um usuário e esquema implícitos mapeados para a entidade de segurança do Windows. O usuário criado em tais casos não pode ser usado para conectar ao banco de dados. As chamadas a USER_ID de um principal do Windows mapeado para um usuário implícito retornarão a ID do usuário implícito.  

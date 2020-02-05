@@ -21,10 +21,10 @@ ms.assetid: 86415302-1383-4d36-9fc7-f780831a2d37
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: 4141a205028b22bfd627e2660b057879b5982250
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73594302"
 ---
 # <a name="drop-column-encryption-key-transact-sql"></a>DROP COLUMN ENCRYPTION KEY (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "73594302"
 
   Remove uma chave de criptografia de coluna de um banco de dados.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,7 +45,7 @@ DROP COLUMN ENCRYPTION KEY key_name [;]
  *key_name*  
  É o nome pelo qual a criptografia de coluna de chave a ser removida do banco de dados.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Uma chave de criptografia de coluna não pode ser descartada se ela for usada para criptografar qualquer coluna no banco de dados. Todas as colunas que usam a chave de criptografia de coluna devem ser removidas primeiro.  
   
 ## <a name="permissions"></a>Permissões  
@@ -53,7 +53,7 @@ DROP COLUMN ENCRYPTION KEY key_name [;]
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-dropping-a-column-encryption-key"></a>A. Removendo uma chave de criptografia de coluna  
+### <a name="a-dropping-a-column-encryption-key"></a>a. Removendo uma chave de criptografia de coluna  
  O exemplo a seguir remove uma chave de criptografia de coluna chamada `MyCEK`.  
   
 ```  
