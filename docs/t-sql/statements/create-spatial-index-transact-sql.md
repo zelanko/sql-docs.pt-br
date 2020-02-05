@@ -23,10 +23,10 @@ ms.assetid: ee6b9116-a7ff-463a-a9f0-b360804d8678
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 2bc1c2c7951efceca6d50a30098284f2bc3ef132
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982587"
 ---
 # <a name="create-spatial-index-transact-sql"></a>CREATE SPATIAL INDEX (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "73982587"
 
   Cria um índice espacial em uma tabela e coluna especificadas no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Um índice pode ser criado antes que haja dados na tabela. Podem ser criados índices em tabelas ou exibições em outro banco de dados mediante a especificação de um nome de banco de dados qualificado. Índices espaciais exigem que a tabela tenha uma chave primária clusterizada. Para obter informações sobre índices espaciais, veja [Visão geral de índices espaciais](../../relational-databases/spatial/spatial-indexes-overview.md).  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -314,7 +314,7 @@ PAD_INDEX = { ON | **OFF** }
   
 Especifica o preenchimento do índice. O padrão é OFF.  
   
-ON     
+ATIVADO     
 Indica que o percentual de espaço livre especificado por *fillfactor* é aplicado às páginas no nível intermediário do índice.  
   
 OFF ou *fillfactor* não está especificado     
@@ -342,7 +342,7 @@ SORT_IN_TEMPDB = { ON | **OFF** }
   
  Especifica se os resultados de classificação temporários devem ser armazenados em tempdb. O padrão é OFF.  
   
- ON     
+ ATIVADO     
  Os resultados de classificação intermediários usados para criar o índice são armazenados em tempdb. Isso pode reduzir o tempo necessário para criar um índice se tempdb estiver em um conjunto de discos diferente do banco de dados de usuário. Entretanto, isso aumenta o espaço em disco usado durante a criação do índice.  
   
  OFF     
@@ -356,7 +356,7 @@ Não tem nenhum efeito para índices espaciais porque o tipo de índice nunca é
 STATISTICS_NORECOMPUTE = { ON | **OFF**}     
 Especifica se as estatísticas de distribuição são recomputadas. O padrão é OFF.  
   
- ON    
+ ATIVADO    
  As estatísticas desatualizadas não são recalculadas automaticamente.  
   
  OFF    
@@ -372,7 +372,7 @@ DROP_EXISTING = { ON | **OFF** }
   
  Especifica que o índice espacial nomeado preexistente seja removido e recriado. O padrão é OFF.  
   
- ON     
+ ATIVADO     
  O índice existente é removido e recriado. O nome de índice especificado deve ser igual ao índice existente atualmente; no entanto, a definição de índice pode ser modificada. Por exemplo, você pode especificar colunas, ordens de classificação, esquemas de partição ou opções de índice diferentes.  
   
  OFF     
@@ -393,7 +393,7 @@ ALLOW_ROW_LOCKS = { **ON** | OFF }
   
  Especifica se bloqueios de linha são permitidos. O padrão é ON.  
   
- ON     
+ ATIVADO     
  Bloqueios de linha são permitidos ao acessar o índice. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina quando os bloqueios de linha são usados.  
   
  OFF     
@@ -404,7 +404,7 @@ ALLOW_PAGE_LOCKS = { **ON** | OFF }
   
  Especifica se bloqueios de página são permitidos. O padrão é ON.  
   
- ON    
+ ATIVADO    
  Bloqueios de página são permitidos ao acessar o índice. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina quando os bloqueios de página são usados.  
   
  OFF     
@@ -448,7 +448,7 @@ DATA_COMPRESSION = {NONE | ROW | PAGE}
  PAGE    
  Compactação de dados de página usada pelo índice  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Comentários
 Todas as opções só podem ser especificadas uma única vez por instrução CREATE SPATIAL INDEX. A especificação de uma duplicata de qualquer opção gera um erro.  
   
 Você pode criar até 249 índices espaciais em cada coluna espacial em uma tabela. A criação de mais de um índice espacial na coluna espacial especificada pode ser útil, por exemplo, para indexar diferentes parâmetros de mosaico em uma única coluna.  
@@ -491,7 +491,7 @@ O usuário deve ter a permissão `ALTER` na tabela ou exibição ou ser membro d
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-creating-a-spatial-index-on-a-geometry-column"></a>A. Criando um índice espacial em uma coluna de geometria
+### <a name="a-creating-a-spatial-index-on-a-geometry-column"></a>a. Criando um índice espacial em uma coluna de geometria
 O exemplo a seguir cria uma tabela nomeada `SpatialTable` que contém uma coluna do tipo **geometry**, `geometry_col`. Em seguida, o exemplo cria um índice espacial, `SIndx_SpatialTable_geometry_col1`, em `geometry_col`. O exemplo usa o esquema de mosaico padrão e especifica a caixa delimitadora.  
   
 ```sql  

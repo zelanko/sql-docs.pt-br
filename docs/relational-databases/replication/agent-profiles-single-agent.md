@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 22713555-c496-4ce1-8ec7-4ae75cfadca8
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 08a8362ab1cdf55af1c3735ee9ab27fb9991b07e
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 0c0ad89bed910450618c043e7ab5dd2d96fff342
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770827"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288295"
 ---
 # <a name="agent-profiles-single-agent"></a>Perfis de Agente (agente único)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  Use a caixa de diálogo **Perfis de Agente** para gerenciar perfis para um agente. Perfis de agente fornecem um modo conveniente para gerenciar parâmetros em tempo de execução para cada agente. Cada agente tem um perfil padrão e alguns agentes têm perfis adicionais predefinidos. Por exemplo, o Merge Agent tem um perfil de "vínculo lento" projetado para baixas conexões de largura de banda. Perfis predefinidos são suficientes para a maioria dos aplicativos, mas você também pode criar perfis definidos pelo usuário, que permite personalizar o comportamento do agente.  
+  Use a caixa de diálogo **Perfis de Agente** para gerenciar perfis para um agente. Perfis de agente fornecem um modo conveniente para gerenciar parâmetros em runtime para cada agente. Cada agente tem um perfil padrão e alguns agentes têm perfis adicionais predefinidos. Por exemplo, o Merge Agent tem um perfil de "vínculo lento" projetado para baixas conexões de largura de banda. Perfis predefinidos são suficientes para a maioria dos aplicativos, mas você também pode criar perfis definidos pelo usuário, que permite personalizar o comportamento do agente.  
   
 ## <a name="options"></a>Opções  
  **Padrão para Novo**  
@@ -39,7 +39,7 @@ ms.locfileid: "68770827"
  **Propriedades (...)**  
  Clique para exibir os valores usados para cada parâmetro no perfil do agente.  
   
- **Nova**  
+ **Novo**  
  Clique para criar um novo perfil.  
   
  **Delete (excluir)**  

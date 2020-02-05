@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 7337617c8c6bc2e904d5b258fec1d666f63a0ded
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68107202"
 ---
 # <a name="delete-an-index"></a>Excluir um índice
@@ -83,7 +83,7 @@ ms.locfileid: "68107202"
   
 6.  Clique em **Excluir**.  
   
-7.  Clique em **Fechar**.  
+7.  Clique em **fechar**  
   
 8.  No menu **Arquivo** , selecione **Salvar**_table_name_.  
   

@@ -20,10 +20,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 883256cfaad3c23133b5db520f5d9ef92f4546d3
-ms.sourcegitcommit: 2f56848ec422845ee81fb84ed321a716c677aa0e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71271912"
 ---
 # <a name="collate-transact-sql"></a>COLLATE (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "71271912"
 
 Define uma ordenação de uma coluna de banco de dados ou de tabela ou uma operação de conversão de ordenação quando aplicado a uma expressão de cadeia de caracteres. O nome da ordenação pode ser um nome de ordenação do Windows ou um nome de ordenação SQL. Se ele não for especificado durante a criação do banco de dados, a ordenação padrão da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] será atribuída ao banco de dados. Se ele não for especificado durante a criação da coluna de tabela, a ordenação padrão do banco de dados será atribuída à coluna.
 
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -52,7 +52,7 @@ COLLATE { <collation_name> | database_default }
 
 **database_default** Faz com que a cláusula COLLATE herde a ordenação do banco de dados atual.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Comentários
 
 A cláusula COLLATE pode ser especificada em vários níveis. Entre elas estão as seguintes:
 
@@ -103,7 +103,7 @@ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] só pode aceitar pá
 
 ## <a name="examples"></a>Exemplos
 
-### <a name="a-specifying-collation-during-a-select"></a>A. Especificando a ordenação durante uma instrução SELECT
+### <a name="a-specifying-collation-during-a-select"></a>a. Especificando a ordenação durante uma instrução SELECT
 
 O exemplo a seguir cria uma tabela simples e insere 4 linhas. Depois, o exemplo aplica duas ordenações ao selecionar dados da tabela, demonstrando como `Chiapas` é classificado de forma diferente.
 
@@ -148,7 +148,7 @@ Colima
 Chiapas
 ```
 
-### <a name="b-additional-examples"></a>B. Exemplos adicionais
+### <a name="b-additional-examples"></a>B. Mais exemplos
 
 Para obter mais exemplos que usam **COLLATE**, confira [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017#examples), exemplo **G. Criando um banco de dados e especificando um nome de ordenação e opções** e [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md#alter_column), exemplo **V. Alterando uma ordenação de coluna**.
 

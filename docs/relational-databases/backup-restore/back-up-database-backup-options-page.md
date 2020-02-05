@@ -14,10 +14,10 @@ ms.assetid: df0ddcdb-c94e-472b-b786-469ae8117b93
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: f461997fbbbbc7e63256b67b8fecf40381aab788
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67940972"
 ---
 # <a name="back-up-database-backup-options-page"></a>Backup de Banco de Dados (página Opções de Backup)
@@ -54,7 +54,7 @@ ms.locfileid: "67940972"
   
 |||  
 |-|-|  
-|**After (após)**|Especifique o número de dias que devem decorrer antes de o conjunto de backup expirar e poder ser substituído. Esse valor pode ser de 0 a 99999 dias; 0 dia significa que o conjunto de backup nunca vai expirar.<br /><br /> O valor padrão de validade do backup é o valor definido na opção **Retenção de mídia de backup padrão (em dias)** . Para acessá-la, clique com o botão direito do mouse no nome do servidor no Pesquisador de Objetos e selecione **Propriedades**; em seguida, clique na página **Definições de banco de dados** da caixa de diálogo **Propriedades do servidor** .|  
+|**Depois**|Especifique o número de dias que devem decorrer antes de o conjunto de backup expirar e poder ser substituído. Esse valor pode ser de 0 a 99999 dias; 0 dia significa que o conjunto de backup nunca vai expirar.<br /><br /> O valor padrão de validade do backup é o valor definido na opção **Retenção de mídia de backup padrão (em dias)** . Para acessá-la, clique com o botão direito do mouse no nome do servidor no Pesquisador de Objetos e selecione **Propriedades**; em seguida, clique na página **Definições de banco de dados** da caixa de diálogo **Propriedades do servidor** .|  
 |**Em**|Defina uma data específica em que o conjunto de backup deverá expirar e poderá ser substituído.|  
   
 ### <a name="compression"></a>Compactação  
@@ -78,7 +78,7 @@ ms.locfileid: "67940972"
   
 -   AES 256  
   
--   Triple DES  
+-   DES triplo  
   
 > [!TIP]  
 >  A opção de criptografia estará desabilitada se você optou por anexar ao conjunto de backup existente.  

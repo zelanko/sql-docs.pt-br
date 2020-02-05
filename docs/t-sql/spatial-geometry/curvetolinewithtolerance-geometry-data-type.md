@@ -15,10 +15,10 @@ ms.assetid: 96871075-1998-4cd9-86b1-3fc55577aee4
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 95893aac0b6ca62b60b12f9d35daf15e77e565f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67929308"
 ---
 # <a name="curvetolinewithtolerance-geometry-data-type"></a>CurveToLineWithTolerance (tipo de dados geometry)
@@ -43,12 +43,12 @@ Retorna uma aproximação poligonal de uma instância de **geometry** que conté
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Tipo de retorno CLR: **SqlGeometry**  
+ Tipo de retorno do CLR: **SqlGeometry**  
   
 ## <a name="exceptions"></a>Exceções  
  A configuração da tolerância <= 0 gera uma exceção `ArgumentOutOfRange`.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse método pode especificar uma quantidade de tolerância de erro para a **LineString** resultante.  
   
  A tabela a seguir mostra o tipo de instância retornado por `CurveToLineWithTolerance()`para vários tipos.  
@@ -71,7 +71,7 @@ Retorna uma aproximação poligonal de uma instância de **geometry** que conté
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-different-tolerance-values-on-a-circularstring-instance"></a>A. Usando valores de tolerância diferentes em uma instância de CircularString  
+### <a name="a-using-different-tolerance-values-on-a-circularstring-instance"></a>a. Usando valores de tolerância diferentes em uma instância de CircularString  
  O seguinte exemplo mostra como a definição da tolerância afeta a instância de `LineString` retornada de uma instância de `CircularString`:  
   
 ```

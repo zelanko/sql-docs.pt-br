@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 3ca24b23-fdc3-408e-8208-a2ace48fc8e3
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: e0606b6a6895ffd63c219e312a727157d1e2ad86
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 79f24f3115f61b088fce684d0b7ada0bc1d39697
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769399"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287033"
 ---
 # <a name="synchronize-a-pull-subscription"></a>Sincronizar uma assinatura pull
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "68769399"
   
 4.  Na caixa de diálogo **Exibir Status da Sincronização – \<Subscriber>:\<SubscriptionDatabase>** , clique em **Iniciar**. Quando a sincronização estiver concluída, a mensagem **Sincronização concluída** será exibida.  
   
-5.  Clique em **Fechar**.  
+5.  Clique em **fechar**  
   
 ##  <a name="ReplProg"></a> Replication Agents  
  As assinaturas pull podem ser sincronizadas programaticamente e sob demanda chamando o arquivo executável do agente de replicação apropriado do prompt de comando. O arquivo executável do agente de replicação chamado dependerá do tipo de publicação para a qual a assinatura pull pertence. Para obter mais informações, consulte [Replication Agents](../../relational-databases/replication/agents/replication-agents-overview.md).  
@@ -831,7 +831,7 @@ End Try
   
 ## <a name="see-also"></a>Consulte Também  
  [Sincronizar dados](../../relational-databases/replication/synchronize-data.md)   
- [Criar uma assinatura pull](../../relational-databases/replication/create-a-pull-subscription.md)   
+ [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)  
   
   

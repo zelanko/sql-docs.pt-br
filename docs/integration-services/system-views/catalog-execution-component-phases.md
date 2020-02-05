@@ -11,10 +11,10 @@ ms.assetid: 07a9a163-4787-40f7-b371-ac5c6cb4b095
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9c4580c6b6b4dc6ea0d7ab9bb93f9614b90feb1d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295183"
 ---
 # <a name="catalogexecution_component_phases"></a>catalog.execution_component_phases 
@@ -26,7 +26,7 @@ ms.locfileid: "71295183"
 
   Exibe o tempo gasto por um componente de fluxo de dados em cada fase de execução.  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |phase_stats_id|**bigint**|A ID (identificador exclusivo) da fase.|  
 |execution_id|**bigint**|ID exclusivo da instância de execução.|  
@@ -38,7 +38,7 @@ ms.locfileid: "71295183"
 |end_time|**datetimeoffset(7)**|A hora de término da fase.|  
 |execution_path|**nvarchar(max)**|O caminho da execução da tarefa de fluxo de dados.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Essa exibição exibe uma linha para cada fase de execução de um componente de fluxo de dados, como Validate, Pre-Execute, Post-Execute, PrimeOutput e ProcessInput. Cada linha exibe a hora de início e de término de uma fase de execução específica.  
   
 ## <a name="example"></a>Exemplo  

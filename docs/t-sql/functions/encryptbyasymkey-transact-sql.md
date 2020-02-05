@@ -20,10 +20,10 @@ ms.assetid: 86bb2588-ab13-4db2-8f3c-42c9f572a67b
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 1de142260dc0724656ca4cfdf286370d16def4b5
-ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71314599"
 ---
 # <a name="encryptbyasymkey-transact-sql"></a>ENCRYPTBYASYMKEY (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "71314599"
 
 Essa função criptografa dados com uma chave assimétrica.  
   
- ![Ícone de link do artigo](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do artigo") [Convenções de sintaxe do Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do artigo](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do artigo") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -52,7 +52,7 @@ Um cadeia de caracteres de dados que `ENCRYPTBYASYMKEY` criptografará com a cha
 + **nvarchar**
 + **varbinary**
   
-ou em
+ou
   
 + **varchar**
  
@@ -67,7 +67,7 @@ Uma variável que contém um valor que `ENCRYPTBYASYMKEY` criptografará com a c
 + **nvarchar**
 + **varbinary**
   
-ou em
+ou
   
 + **varchar**
  
@@ -76,7 +76,7 @@ tipo de dados.
 ## <a name="return-types"></a>Tipos de retorno  
 **varbinary**, com um tamanho máximo de 8.000 bytes.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 Operações de criptografia e descriptografia que usam chaves assimétricas consomem recursos significativos e, portanto, tornam-se caras quando comparadas à descriptografia e criptografia de chave simétrica. Sugerimos que os desenvolvedores evitem operações de criptografia e de descriptografia de chave assimétrica ao trabalharem com grandes conjuntos de dados, por exemplo, conjuntos de dados do usuário armazenados em tabelas de banco de dados. Em vez disso, sugerimos que os desenvolvedores primeiro criptografem dados com uma chave simétrica forte e, em seguida, criptografem a chave simétrica com uma chave assimétrica.  
   
 Dependendo do algoritmo, `ENCRYPTBYASYMKEY` retorna **NULL** se a entrada excede um certo número de bytes. Os limites específicos:

@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1f2f44a6cf1172b779160d4ee17e584c7a7b2452
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73595801"
 ---
 # <a name="export-and-import-databases-using-always-encrypted"></a>Exportar e importar bancos de dados usando o Always Encrypted 
@@ -43,7 +43,7 @@ Você precisa de *ALTER ANY COLUMN MASTER KEY* e *ALTER ANY COLUMN ENCRYPTION KE
 
 Você não precisa ter acesso às chaves mestras de coluna configuradas para as colunas criptografadas, pois os dados permanecem criptografados durante as operações de exportação e importação.
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Próximas etapas
 - [Desenvolver aplicativos usando o Always Encrypted](always-encrypted-client-development.md)
 
 ## <a name="see-also"></a>Consulte Também

@@ -26,10 +26,10 @@ helpviewer_keywords:
 - rank
 monikerRange: " >= sql-server-linux-ver15 || >= sql-server-ver15 || = azuresqldb-current || = sqlallproducts-allversions"
 ms.openlocfilehash: 93c0511a6d2756c41d80745f0c0d2409f8d494ce
-ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73882406"
 ---
 # <a name="add-sensitivity-classification-transact-sql"></a>ADICIONAR CLASSIFICAÇÃO DE CONFIDENCIALIDADE (Transact-SQL)
@@ -94,7 +94,7 @@ ADD SENSITIVITY CLASSIFICATION TO
 É um identificador baseado em um conjunto de valores predefinidos que definem a classificação de sensibilidade. Usado por outros serviços como a Proteção Avançada contra Ameaças para detectar anomalias com base em sua classificação.
 
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 
 - Apenas uma classificação pode ser adicionada a um único objeto. Adicionar uma classificação a um objeto que já foi classificado sobrescreverá a classificação existente.
 - Vários objetos podem ser classificados usando uma única instrução `ADD SENSITIVITY CLASSIFICATION`.
@@ -108,7 +108,7 @@ Requer a permissão ALTERAR QUALQUER CLASSIFICAÇÃO DE CONFIDENCIALIDADE. A ALT
 
 ## <a name="examples"></a>Exemplos  
 
-### <a name="a-classifying-two-columns"></a>A. Classificação de duas colunas
+### <a name="a-classifying-two-columns"></a>a. Classificação de duas colunas
 
 O exemplo a seguir classifica as colunas **dbo.sales.price** e **dbo.sales.discount** com o rótulo de confidencialidade **Altamente Confidencial** e o Tipo de Informações como **Financeiro**.
 

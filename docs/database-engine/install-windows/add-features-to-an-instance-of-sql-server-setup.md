@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 0b7cdfe016a1010bef5322c3d39b7ee436437aa5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68051205"
 ---
 # <a name="add-features-to-an-instance-of-sql-server-setup"></a>Adicionar recursos a uma instância do SQL Server (Instalação)
@@ -142,7 +142,7 @@ ms.locfileid: "68051205"
   
 26. Se você for instruído a reiniciar o computador, faça-o agora. É importante ler a mensagem do Assistente de Instalação ao concluir a Instalação. Para obter informações sobre os arquivos de log da Instalação, veja [Exibir e ler arquivos de log da Instalação do SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Próximas etapas  
  Configure a instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 -   Para reduzir a área da superfície sujeita a ataques de um sistema, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instala e ativa serviços e recursos principais de maneira seletiva. Para obter mais informações, consulte [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md).  

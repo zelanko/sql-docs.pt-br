@@ -24,10 +24,10 @@ ms.assetid: b1c46159-cc76-4205-a841-8f4a71742f80
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 804f8c1f2f7c59edec2c4e40c7d47f99ac71b5e7
-ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71314548"
 ---
 # <a name="signbyasymkey-transact-sql"></a>SIGNBYASYMKEY (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "71314548"
 
   Assina texto não criptografado com uma chave assimétrica  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -57,7 +57,7 @@ SignByAsymKey( Asym_Key_ID , @plaintext [ , 'password' ] )
 ## <a name="return-types"></a>Tipos de retorno  
  **varbinary** com um tamanho máximo de 8.000 bytes.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Requer a permissão CONTROL na chave assimétrica.  
   
 ## <a name="examples"></a>Exemplos  

@@ -13,10 +13,10 @@ ms.assetid: 9a75d48b-c25f-40f3-8ea1-32cfa8211754
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e5fb68197b4347c3b3c2e9c6c7186d28c9c79efa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68041553"
 ---
 # <a name="restore-database-options-page"></a>Restaurar o banco de dados (página Opções)
@@ -34,7 +34,7 @@ ms.locfileid: "68041553"
   
 ## <a name="options"></a>Opções  
   
-### <a name="restore-options"></a>Opções de restauração  
+### <a name="restore-options"></a>Restaurar opções  
  Para modificar os aspectos do comportamento da operação de restauração, use as opções do painel **Opções de restauração** .  
   
  **Substituir o banco de dados existente [WITH REPLACE]**  
@@ -99,7 +99,7 @@ ms.locfileid: "68041553"
  **Encerre as conexões existentes**  
  As operações de restauração poderão falhar se houver conexões ativas com o banco de dados. Marque a opção **Fechar conexões existentes** para assegurar que todas as conexões ativas entre o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] e o banco de dados sejam fechadas. Essa caixa de seleção define o banco de dados no modo de usuário único antes de executar as operações de restauração e define o banco de dados no modo de vários usuários ao concluir.  
   
-### <a name="prompt"></a>Aviso  
+### <a name="prompt"></a>Prompt  
  **Perguntar antes de restaurar cada backup**  
  Especifica que, após a restauração de cada backup, a caixa de diálogo **Continuar Restauração** será exibida para perguntar se você deseja continuar a sequência de restauração. Esta caixa de diálogo exibe o nome do conjunto de mídia seguinte (se conhecido) e o nome e a descrição do conjunto de backup seguinte.  
   

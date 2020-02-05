@@ -29,10 +29,10 @@ author: pmasl
 ms.author: umajay
 monikerRange: = azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions
 ms.openlocfilehash: 1bda4ebd946bfd8adf31190c36125075d50dc28d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68073159"
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "68073159"
 
 Reduz o tamanho dos arquivos de dados e de log do banco de dados especificado.
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -78,7 +78,7 @@ Suprime todas as mensagens informativas com níveis de severidade de 0 a 10.
 ## <a name="result-sets"></a>Conjuntos de resultados  
 A tabela a seguir descreve as colunas do conjunto de resultados.
   
-|Nome da coluna|Descrição|  
+|Nome da coluna|DESCRIÇÃO|  
 |-----------------|-----------------|  
 |**DbId**|Número de identificação do banco de dados do arquivo que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] tentou reduzir.|  
 |**FileId**|Número de identificação do arquivo que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] tentou reduzir.|  
@@ -90,7 +90,7 @@ A tabela a seguir descreve as colunas do conjunto de resultados.
 >[!NOTE]
 > O [!INCLUDE[ssDE](../../includes/ssde-md.md)] não exibe linhas para esses arquivos não reduzidos.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 
 >[!NOTE]
 > No momento, o SQL Data Warehouse do Azure não é compatível com DBCC SHRINKDATABASE. Não é recomendável executar esse comando, uma vez que esta é uma operação que faz uso intenso de E/S e pode deixar seu data warehouse offline. Além disso, haverá implicações de custo para seus instantâneos de data warehouse depois de executar esse comando. 
@@ -120,7 +120,7 @@ Por exemplo, se você especificar um _target\_percent_ igual a 25 para a reduç�
   
 Considere que o arquivo de dados de **mydb** contém 7 MB de dados. Especificar um _target\_percent_ igual a 30 permite que esse arquivo de dados seja reduzido para um percentual livre igual a 30. No entanto, especificar um_target\_percent_ igual a 40 não reduz o arquivo de dados porque o [!INCLUDE[ssDE](../../includes/ssde-md.md)] não reduzirá um arquivo para um tamanho menor do que aquele que os dados ocuparem no momento. 
 
-Você também pode pensar neste assunto outro modo: um arquivo de dados com 40 por cento de espaço livre desejado + 70 por cento de espaço cheio de dados (7 MB de 10 MB) dá mais que 100 por cento. Qualquer _target\_size_ maior que 30 não reduzirá o arquivo de dados. Ele não será reduzido porque o percentual de espaço que você deseja mais o percentual atual ocupado pelo arquivo de dados soma mais de 100%.
+Você também pode pensar nessa questão de outra forma: um arquivo de dados com 40 por cento de espaço livre desejado + 70 por cento de espaço cheio de dados (7 MB de 10 MB) é igual a mais de 100 por cento. Qualquer _target\_size_ maior que 30 não reduzirá o arquivo de dados. Ele não será reduzido porque o percentual de espaço que você deseja mais o percentual atual ocupado pelo arquivo de dados soma mais de 100%.
   
 Para arquivos de log, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] usa _target\_percent_ para calcular o tamanho de destino do log inteiro. É por isso que _target\_percent_ é a quantidade de espaço livre no log após a operação de redução. O tamanho designado do log inteiro é convertido no tamanho designado de cada arquivo de log.
   
@@ -128,14 +128,14 @@ DBCC SHRINKDATABASE tenta reduzir cada arquivo de log físico imediatamente para
   
 Um arquivo de log só pode ser reduzido para um limite de arquivo de log virtual. Esse é o motivo pelo qual reduzir um arquivo de log para um tamanho menor que o tamanho de um arquivo de log virtual pode não ser possível. Isso pode não ser possível mesmo que ele não esteja sendo usado. O tamanho do arquivo de log virtual é definido dinamicamente pelo [!INCLUDE[ssDE](../../includes/ssde-md.md)] quando os arquivos de log são criados ou estendidos.
   
-## <a name="best-practices"></a>Práticas recomendadas  
+## <a name="best-practices"></a>Práticas Recomendadas  
 Considere as seguintes informações ao planejar reduzir um banco de dados:
 -   Uma operação de redução é mais eficaz depois de uma operação. Essa operação cria espaço não utilizado, assim como uma operação TRUNCATE TABLE ou DROP TABLE.  
 -   A maioria dos bancos de dados exige algum espaço livre disponível para operações comuns rotineiras. Você pode reduzir um banco de dados repetidamente e observar que o tamanho do banco de dados cresce novamente. Esse crescimento indica que o espaço reduzido é necessário para operações regulares. Nesse caso, reduzir repetidamente um banco de dados é uma operação inútil.  
 -   Uma operação de redução não preserva o estado de fragmentação de índices do banco de dados e, em geral, aumenta o nível de fragmentação. Esse resultado é outra razão para não reduzir o banco de dados repetidamente.  
 -   A menos que você tenha um requisito específico, não defina a opção de banco de dados AUTO_SHRINK como ON.  
   
-## <a name="troubleshooting"></a>Solução de problemas  
+## <a name="troubleshooting"></a>solução de problemas  
 É possível bloquear operações de redução por uma transação que está esteja executada em um [nível de isolamento baseado em controle de versão de linha](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md). Por exemplo, se uma grande operação de exclusão estiver sendo executada em um nível de isolamento de controle de versão de linha quando uma operação DBCC SHRINK DATABASE é executada. Quando essa situação ocorrer, a operação de redução aguardará a operação de exclusão ser concluída para então reduzir os arquivos. Quando essa operação de redução aguarda, as operações DBCC SHRINKFILE e DBCC SHRINKDATABASE emitem uma mensagem informativa (5202 para SHRINKDATABASE e 5203 para SHRINKFILE). Essa mensagem é registrada no log de erros [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a cada cinco minutos na primeira hora e, posteriormente, a cada hora. Por exemplo, se o log de erros contiver a seguinte mensagem de erro:  
   
 ```sql
@@ -156,7 +156,7 @@ Exige associação à função de servidor fixa **sysadmin** ou à função de b
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-shrinking-a-database-and-specifying-a-percentage-of-free-space"></a>A. Reduzindo um banco de dados e especificando uma porcentagem de espaço livre  
+### <a name="a-shrinking-a-database-and-specifying-a-percentage-of-free-space"></a>a. Reduzindo um banco de dados e especificando uma porcentagem de espaço livre  
 O exemplo a seguir reduz o tamanho dos arquivos de dados e de log no banco de dados de usuário `UserDB` para permitir 10 por cento de espaço livre no banco de dados.  
   
 ```sql  

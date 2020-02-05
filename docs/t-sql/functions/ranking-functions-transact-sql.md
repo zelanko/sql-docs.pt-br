@@ -18,10 +18,10 @@ ms.assetid: e7f917ba-bf4a-4fe0-b342-a91bcf88a71b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 36c2fd4974bb295516f90f7e8c80635dbcae48eb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67927766"
 ---
 # <a name="ranking-functions-transact-sql"></a>Funções de classificação (Transact-SQL)
@@ -59,7 +59,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|FirstName|LastName|Row Number|Rank|Dense Rank|Quartile|SalesYTD|PostalCode|  
+|Nome|LastName|Row Number|Rank|Dense Rank|Quartile|SalesYTD|PostalCode|  
 |---------------|--------------|----------------|----------|----------------|--------------|--------------|----------------|  
 |Michael|Blythe|1|1|1|1|4557045.0459|98027|  
 |Linda|Mitchell|2|1|1|1|5200475.2313|98027|  
@@ -68,7 +68,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
 |Tsvi|Reiter|5|1|1|2|2811012.7151|98027|  
 |Shu|Ito|6|6|2|2|3018725.4858|98055|  
 |José|Saraiva|7|6|2|2|3189356.2465|98055|  
-|David|Campbell|8|6|2|3|3587378.4257|98055|  
+|Davi|Campbell|8|6|2|3|3587378.4257|98055|  
 |Tete|Mensa-Annan|9|6|2|3|1931620.1835|98055|  
 |Lynn|Tsoflias|10|6|2|3|1758385.926|98055|  
 |Rachel|Valdez|11|6|2|4|2241204.0424|98055|  

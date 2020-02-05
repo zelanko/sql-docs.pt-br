@@ -11,10 +11,10 @@ ms.assetid: 6f51407e-0e4e-4b44-af33-db14c9d40ded
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 97d78f4a96a87b6ffe373335167b796ea5a2de3d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296584"
 ---
 # <a name="catalogexecution_data_statistics"></a>catalog.execution_data_statistics 
@@ -26,7 +26,7 @@ ms.locfileid: "71296584"
 
   Esta exibição exibe uma linha a cada vez que um componente de fluxo de dados envia dados a um componente downstream para determinada execução do pacote. As informações desta exibição podem ser usadas para computar a taxa de transferência de dados para um componente.  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |data_stats_id|**bigint**|A ID (identificador exclusivo) dos dados.|  
 |execution_id|**bigint**|ID exclusivo da instância de execução.|  
@@ -40,7 +40,7 @@ ms.locfileid: "71296584"
 |created_time|**datatimeoffset(7)**|A hora em que os valores foram obtidos.|  
 |execution_path|**nvarchar(max)**|O caminho de execução do componente.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
   
 -   Quando houver várias saídas do componente, uma linha será adicionada para cada uma das saídas.  
   

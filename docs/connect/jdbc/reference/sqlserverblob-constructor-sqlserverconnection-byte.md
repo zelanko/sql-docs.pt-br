@@ -16,10 +16,10 @@ ms.assetid: 9fe573e3-30db-4828-abab-e9346493e931
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c4f3c26ca45da6cba3a86324e970117cde9fcc4b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67971996"
 ---
 # <a name="sqlserverblob-constructor-sqlserverconnection-byte"></a>Construtor SQLServerBlob (SQLServerConnection, byte[])
@@ -38,7 +38,7 @@ public SQLServerBlob(SQLServerConnection connection,
                      byte[] data)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *conexão*  
   
  Um objeto SQLServerConnection.  

@@ -13,10 +13,10 @@ ms.assetid: 1d6e4b10-4a23-47d7-9918-c417992f09d3
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 329eda4ba3c0bdabc355242d626a3d0ac89e6033
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006427"
 ---
 # <a name="database-mirroring-history"></a>Histórico do espelhamento de banco de dados
@@ -66,7 +66,7 @@ ms.locfileid: "68006427"
  **Histórico**  
  Exibe a lista de histórico. Clique em um cabeçalho de coluna para classificar a grade por essa coluna. A lista contém as seguintes colunas:  
   
-|Nome da coluna|Descrição|  
+|Nome da coluna|DESCRIÇÃO|  
 |-----------------|-----------------|  
 |**Hora registrada**|Carimbo de data/hora da linha do histórico.|  
 |**Função**|Função de espelhamento atual da instância de servidor deste banco de dados, Principal ou Espelho.|  

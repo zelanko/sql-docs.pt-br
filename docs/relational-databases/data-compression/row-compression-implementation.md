@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2127b9164537afca99b8bd556458137d6713001c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68030519"
 ---
 # <a name="row-compression-implementation"></a>Implementação da compactação de linha
@@ -40,7 +40,7 @@ ms.locfileid: "68030519"
 ## <a name="how-row-compression-affects-storage"></a>Como a compactação de linha afeta o armazenamento  
  A tabela a seguir descreve como a compactação de linha afeta os tipos existentes no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)]. A tabela não inclui o aumento que pode ser gerado usando a compactação de página.  
   
-|Tipo de dados|O armazenamento é afetado?|Descrição|  
+|Tipo de dados|O armazenamento é afetado?|DESCRIÇÃO|  
 |---------------|--------------------------|-----------------|  
 |**tinyint**|Não|1 byte é o armazenamento mínimo necessário.|  
 |**smallint**|Sim|Se o valor couber em 1 byte, apenas 1 byte será usado.|  

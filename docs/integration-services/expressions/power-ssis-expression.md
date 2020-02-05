@@ -13,10 +13,10 @@ ms.assetid: db48ae65-bfa6-4db1-8d3c-d0d4f8a399bc
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 818f99100150c366c3caf982555f802b2ca6fc68
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297433"
 ---
 # <a name="power-ssis-expression"></a>POWER (Expressão SSIS)
@@ -43,7 +43,7 @@ POWER(numeric_expression,power)
 ## <a name="result-types"></a>Tipos de resultado  
  DT_R8  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Os argumentos *numeric_expression* e *power* são convertidos para o tipo de dados de DT_R8 antes de a potência ser calculada. Para obter mais informações, consulte [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
  Se *numeric_expression* for avaliado como zero e *power* for negativo, o avaliador de expressão retornará um erro e definirá o resultado de retorno como nulo.  

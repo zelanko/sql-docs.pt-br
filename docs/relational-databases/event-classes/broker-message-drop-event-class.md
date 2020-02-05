@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ad62ae2b8e9b62e209900df47dfbba9d30557cb7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67999638"
 ---
 # <a name="brokermessage-undeliverable-event-class"></a>Classe de evento Broker:Message Undeliverable
@@ -27,7 +27,7 @@ ms.locfileid: "67999638"
   
 ## <a name="brokermessage-undeliverable-event-class-data-columns"></a>Colunas de dados da classe de evento Broker:Message Undeliverable  
   
-|Coluna de dados|Tipo|Descrição|Número da coluna|Filtrável|  
+|Coluna de dados|Type|DESCRIÇÃO|Número da coluna|Filtrável|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**Nome do Aplicativo**|**nvarchar**|O nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |**BigintData1**|**bigint**|O número de sequência da mensagem sem possibilidade de entrega.|52|Não|  
@@ -53,7 +53,7 @@ ms.locfileid: "67999638"
 |**Severity**|**int**|Número de severidade do texto no evento.|29|Não|  
 |**SPID**|**int**|A ID de processo do servidor atribuída pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao processo associado ao cliente.|12|Sim|  
 |**StartTime**|**datetime**|O horário no qual o evento foi iniciado, quando disponível.|14|Sim|  
-|**Estado**|**int**|Indica o local, dentro do código-fonte do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , que produziu o evento. Cada local que pode produzir esse evento tem um código de estado diferente. Um engenheiro de suporte Microsoft pode usar esse código de estado para descobrir onde o evento foi produzido.|30|Não|  
+|**State**|**int**|Indica o local, dentro do código-fonte do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , que produziu o evento. Cada local que pode produzir esse evento tem um código de estado diferente. Um engenheiro de suporte Microsoft pode usar esse código de estado para descobrir onde o evento foi produzido.|30|Não|  
 |**TextData**|**ntext**|O motivo pelo qual [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não conseguiu entregar a mensagem.|1|Sim|  
 |**TransactionID**|**bigint**|ID da transação atribuída pelo sistema.|4|Não|  
   

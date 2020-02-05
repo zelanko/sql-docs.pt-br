@@ -23,10 +23,10 @@ ms.assetid: 9f7c6e0b-5ba4-4dbb-994d-5bd59f4908de
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 414c5df86e58472bc1aa3f5df9ee25a54f8bc590
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67927543"
 ---
 # <a name="verifysignedbyasymkey-transact-sql"></a>VERIFYSIGNEDBYASYMKEY (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "67927543"
 
   Testa se dados assinados digitalmente foram alterados desde que foram assinados.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -58,7 +58,7 @@ VerifySignedByAsymKey( Asym_Key_ID , clear_text , signature )
   
  Retorna 1 quando as assinaturas forem correspondentes; caso contrário, retorna 0.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  **VerifySignedByAsymKey** descriptografa a assinatura dos dados usando a chave pública da chave assimétrica especificada e compara o valor descriptografado a um hash de MD5 dos dados computados recentemente. Se os valores corresponderem, a assinatura será confirmada como válida.  
   
 ## <a name="permissions"></a>Permissões  
@@ -66,7 +66,7 @@ VerifySignedByAsymKey( Asym_Key_ID , clear_text , signature )
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-testing-for-data-with-a-valid-signature"></a>A. Testando se os dados têm uma assinatura válida  
+### <a name="a-testing-for-data-with-a-valid-signature"></a>a. Testando se os dados têm uma assinatura válida  
  O exemplo a seguir retornará 1 se os dados selecionados não foram alterados desde a assinatura com a chave assimétrica `WillisKey74`. O exemplo retornará 0 se os dados foram violados.  
   
 ```  

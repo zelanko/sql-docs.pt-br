@@ -18,20 +18,20 @@ ms.assetid: 7dadc40a-1287-4f31-8487-434ee477144d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: dba855440971ba74ce15fb108e1ac88ebeb1cd24
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914571"
 ---
-# <a name="originaldbname-transact-sql"></a>ORIGINAL_DB_NAME (Transact-SQL)
+# <a name="original_db_name-transact-sql"></a>ORIGINAL_DB_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retorna o nome de banco de dados especificado pelo usuário na cadeia de caracteres de conexão do banco de dados. Esse banco de dados é especificado usando a opção **sqlcmd-d** (*banco de dados* USE). Ele também pode ser especificado com a expressão de fonte de dados Open Database Connectivity (ODBC) (catálogo inicial =*databasename*).  
   
  Este banco de dados é diferente do banco de dados do usuário padrão.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,7 +40,7 @@ ms.locfileid: "67914571"
 ORIGINAL_DB_NAME ()  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Se o banco de dados inicial não for especificado, a função retornará uma cadeia de caracteres vazia.  
   
 ## <a name="see-also"></a>Consulte Também  

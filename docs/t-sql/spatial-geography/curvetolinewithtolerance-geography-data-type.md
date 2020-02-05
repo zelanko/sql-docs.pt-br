@@ -18,10 +18,10 @@ ms.assetid: 74369c76-2cf6-42ae-b9cc-e7a051db2767
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 6f81b5ba7ba6de057dd82090775013db55e4275b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066487"
 ---
 # <a name="curvetolinewithtolerance-geography-data-type"></a>CurveToLineWithTolerance (tipo de dados de geografia)
@@ -46,19 +46,19 @@ _relative_
 ## <a name="return-types"></a>Tipos de retorno  
 Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
-Tipo de retorno CLR: **SqlGeography**  
+Tipo de retorno do CLR: **SqlGeography**  
   
 ## <a name="exceptions"></a>Exceções  
 A definição de tolerância <= 0 gera uma exceção **ArgumentOutOfRange**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 Esse método permite uma quantidade de tolerância de erro a ser especificada para a **LineString** resultante.  
   
 O método **CurveToLineWithTolerance** retornará uma instância de **LineString** para uma instância de **CircularString** ou de **CompoundCurve** e uma instância de  **Polígono** para uma instância de **CurvePolygon**.  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-different-tolerance-values-on-a-circularstring-instance"></a>A. Usando valores de tolerância diferentes em uma instância de CircularString  
+### <a name="a-using-different-tolerance-values-on-a-circularstring-instance"></a>a. Usando valores de tolerância diferentes em uma instância de CircularString  
 O seguinte exemplo mostra como a definição da tolerância afeta a instância de `LineString` retornada de uma instância de `CircularString`:  
   
 ```

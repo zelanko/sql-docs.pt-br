@@ -18,10 +18,10 @@ ms.assetid: 7049d37a-3e72-4e93-87a1-c96a6f0e2b99
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 9d8b500415aa5e6812524fff6403735a11cf765a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68017538"
 ---
 # <a name="bufferwithtolerance-geometry-data-type"></a>BufferWithTolerance (tipo de dados geometry)
@@ -53,7 +53,7 @@ Retorna um objeto geométrico que representa a união de todos os valores de pon
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Tipo de retorno CLR: **SqlGeometry**  
+ Tipo de retorno do CLR: **SqlGeometry**  
   
 ## <a name="exceptions"></a>Exceções  
  O parâmetro *tolerância* precisa ser maior que zero. Se *tolerância* <= 0, uma `System.ArgumentOutOfRangeException` será gerada.  
@@ -61,7 +61,7 @@ Retorna um objeto geométrico que representa a união de todos os valores de pon
 > [!NOTE]  
 >  Como *tolerance* é um tipo **float** uma `System.Runtime.InteropServices.COMException` poderá ser gerada se o valor atribuído à tolerância for muito pequeno devido a problemas de arredondamento com tipos de ponto flutuante.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Quando a *distância* for > 0, uma instância de **polígono** ou **MultiPolygon** será retornada.  
   
 > [!NOTE]  

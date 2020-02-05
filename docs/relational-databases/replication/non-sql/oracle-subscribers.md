@@ -17,10 +17,10 @@ ms.assetid: 591c0313-82ce-4689-9fc1-73752ff122cf
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a97acba6af3cb960cf4d98d26d3f8da4805822da
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907983"
 ---
 # <a name="oracle-subscribers"></a>Assinantes Oracle
@@ -32,17 +32,17 @@ ms.locfileid: "72907983"
   
 1.  Instale e configure o software de rede cliente Oracle e o provedor Oracle OLE DB no Distribuidor [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , para que o Distribuidor possa realizar as conexões ao Assinante Oracle. O software de rede cliente Oracle deve ter a versão mais recente disponível. A Oracle recomenda que os usuários instalem as mais recentes versões do software cliente. O software cliente é, portanto, muitas vezes uma versão mais recente do que o software do banco de dados. A maneira mais prática para instalar o software é usar o Instalador Universal Oracle no disco do Oracle Cliente. No Instalador Universal Oracle, você deverá fornecer as seguintes informações:  
   
-    |Informações|Descrição|  
+    |Informações|DESCRIÇÃO|  
     |-----------------|-----------------|  
     |Oracle Home|Esse é o caminho para diretório de instalação do software Oracle. Aceite o padrão (C:\oracle\ora90 ou semelhante) ou digite outro caminho. Para obter mais informações sobre o Oracle Home, consulte a seção "Considerações sobre o Oracle Home" mais adiante neste tópico.|  
     |Nome do Oracle home|Um alias para o caminho do Oracle home.|  
-    |Tipo de instalação|No Oracle 10g, selecione a opção de instalação **Tempo de Execução** ou **Administrador** .|  
+    |Tipo de instalação|No Oracle 10g, selecione a opção de instalação **Runtime** ou **Administrador** .|  
   
 2.  Crie um nome de TNS para o Assinante. O TNS (Substrato Transparente de Rede) é uma camada de comunicação usada pelos bancos de dados Oracle. O nome de serviço do TNS é o nome pelo qual uma instância do banco de dados Oracle é identificada em uma rede. Você atribui um nome de serviço ao TNS quando for configurar a conectividade do banco de dados Oracle. A replicação usa o nome de serviço do TNS para identificar o Assinante e estabelecer conexões.  
   
      Após a conclusão do Instalador Universal Oracle, use o Assistente de Configuração Net para configurar a conectividade da rede. Você deve fornecer quatro informações para configurar a conectividade de rede. O administrador do banco de dados Oracle configura a configuração de rede quando define o banco de dados e o ouvinte e, se você não tiver essas informações, elas deverão ser fornecidas pelo administrador. Você deve fazer o seguinte:  
   
-    |Ação|Descrição|  
+    |Ação|DESCRIÇÃO|  
     |------------|-----------------|  
     |Identificar o banco de dados|Há dois métodos para identificar o banco de dados. O primeiro método usa o Sistema Identificador Oracle (SID) e está disponível em todas as versões do Oracle. O segundo método usa o nome de serviço, que está disponível a partir da versão 8.0 do Oracle. Ambos os métodos usam um valor que é configurado quando o banco de dados é criado, e é importante que a configuração de rede cliente use o mesmo método de nomenclatura que o administrador usou ao configurar o ouvinte para o banco de dados.|  
     |Identificar um alias de rede para o banco de dados|Você deve especificar um alias de rede que será usado para acessar o banco de dados Oracle. O alias de rede é essencialmente um ponteiro para o SID remoto ou o nome de serviço que foi configurado quando o banco de dados foi criado, ele foi referenciado por diversos nomes em diferentes versões e produtos Oracle, incluindo o nome de serviço Net e o alias TNS. O SQL*Plus solicita esse alias como o parâmetro "Cadeia de caracteres de Host" ao efetuar logon.|  
@@ -128,7 +128,7 @@ ms.locfileid: "72907983"
 |**smalldatetime**|DATE|  
 |**smallint**|NUMBER(5,0)|  
 |**smallmoney**|NUMBER(10,4)|  
-|**sql_variant**|N/A|  
+|**sql_variant**|N/D|  
 |**sysname**|VARCHAR2(128)|  
 |**text**|CLOB|  
 |**time(0-7)**|VARCHAR(16)|  

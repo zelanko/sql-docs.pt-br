@@ -20,10 +20,10 @@ ms.assetid: 24b3311d-5ce0-4581-9a05-5c7c726c7b21
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 7cd893c9556b1dd45e2206ce73740e253af98ed3
-ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70278764"
 ---
 # <a name="restore-a-database-backup-using-ssms"></a>Restore a Database Backup Using SSMS
@@ -48,13 +48,13 @@ Para obter informações sobre a restauração do serviço de armazenamento de B
 
 ## <a name="examples"></a>Exemplos
     
-### <a name="a-restore-a-full-database-backup"></a>A. Restaurar um backup de banco de dados completo   
+### <a name="a-restore-a-full-database-backup"></a>a. Restaurar um backup de banco de dados completo   
     
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e expanda-a.  
     
 2.  Clique com o botão direito do mouse em **Bancos de Dados** e selecione **Restaurar Banco de Dados...**    
     
-3.  Na página **Geral** , use a seção **Origem** para especificar a origem e o local dos conjuntos de backup a serem restaurados. Selecione uma das opções a seguir:    
+3.  Na página **Geral** , use a seção **Origem** para especificar a origem e o local dos conjuntos de backup a serem restaurados. Selecione uma das seguintes opções:    
     
     -   **Backup de banco de dados**    
     
@@ -70,15 +70,15 @@ Para obter informações sobre a restauração do serviço de armazenamento de B
         -   Caixa de diálogo**Selecionar dispositivos de backup**  
         
             **Tipo de mídia de backup**  
-         Selecione um tipo de mídia na lista suspensa **Tipo de mídia de backup** .  Observação: A opção **Fita** só aparece se houver uma unidade de fita montada no computador, e a opção **Dispositivo de backup** só aparece se houver, no mínimo, um dispositivo de backup.
+         Selecione um tipo de mídia na lista suspensa **Tipo de mídia de backup** .  Observação: a opção **Fita** só aparecerá se houver uma unidade de fita montada no computador, e a opção **Dispositivo de backup** só aparecerá se houver, no mínimo, um dispositivo de backup.
 
             **Adicionar**  
             Dependendo do tipo de mídia selecionado no campo **Tipo de mídia de backup** , clicar em **Adicionar** abre uma das caixas de diálogo a seguir. (Se a lista na caixa de listagem **Mídia de backup** estiver cheia, o botão **Adicionar** não estará disponível.)
 
-            |Típo de mídia|Caixa de diálogo|Descrição|    
+            |Típo de mídia|Caixa de diálogo|DESCRIÇÃO|    
             |----------------|----------------|-----------------|    
-            |**File**|**Localizar o arquivo de backup**|Nessa caixa de diálogo, você pode selecionar um arquivo local da árvore ou pode especificar um arquivo remoto que use o seu nome totalmente qualificado da UNC (Convenção Universal de Nomenclatura). Para obter mais informações, consulte [Dispositivos de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).|    
-            |**Dispositivo**|**Selecionar Dispositivo de Backup**|Nessa caixa de diálogo você pode selecionar em uma lista de dispositivos lógicos de backup, definida na instância de servidor.|    
+            |**Arquivo**|**Localizar o arquivo de backup**|Nessa caixa de diálogo, você pode selecionar um arquivo local da árvore ou pode especificar um arquivo remoto que use o seu nome totalmente qualificado da UNC (Convenção Universal de Nomenclatura). Para obter mais informações, consulte [Dispositivos de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).|    
+            |**Dispositivo**|**Selecionar dispositivo de backup**|Nessa caixa de diálogo você pode selecionar em uma lista de dispositivos lógicos de backup, definida na instância de servidor.|    
             |**Fita**|**Selecionar fita de backup**|Nessa caixa de diálogo você pode selecionar em uma lista de unidades de fita conectadas fisicamente ao computador que executa a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|    
             |**URL**|**Selecionar um local de arquivo de backup**|Nesta caixa de diálogo, você pode selecionar um contêiner de armazenamento do Azure/credenciais do SQL Server, adicionar um novo contêiner de armazenamento do Azure com uma assinatura de acesso compartilhado ou gerar uma assinatura de acesso compartilhado e uma credencial do SQL Server para um contêiner de armazenamento existente.  Veja também [Conectar-se a uma Assinatura do Microsoft Azure](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md)|  
          
@@ -93,7 +93,7 @@ Para obter informações sobre a restauração do serviço de armazenamento de B
     
              Após adicionar os dispositivos desejados à caixa de listagem **Mídia de backup** , clique em **OK** para voltar à página **Geral** .    
     
-         Na caixa de listagem **Fonte: Dispositivo: Banco de Dados**, selecione o nome do banco de dados que deve ser restaurado.    
+         Na caixa de listagem **Origem: Dispositivo: Banco de Dados** , selecione o nome do banco de dados que deve ser restaurado.    
     
          > [!NOTE]
          > Essa lista estará disponível apenas quando **Dispositivo** for selecionado. Apenas os bancos de dados que têm backups no dispositivo selecionado estarão disponíveis.    
@@ -130,12 +130,12 @@ Para obter informações sobre a restauração do serviço de armazenamento de B
   
    5. Selecione **Perguntar antes de restaurar cada backup** para que você seja solicitado entre cada operação de restauração. Isso normalmente só é necessário quando o banco de dados é grande e você deseja monitorar o status da operação de restauração.    
     
-Para obter mais informações sobre essas opções de restauração, veja [Restaurar banco de dados &#40;Página Opções&#41;](../../relational-databases/backup-restore/restore-database-options-page.md).    
+Para obter mais informações sobre essas opções de restauração, veja [Restaurar banco de dados &#40;página Opções&#41;](../../relational-databases/backup-restore/restore-database-options-page.md)).    
     
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)] 
 
 ### <a name="b-restore-an-earlier-disk-backup-over-an-existing-database"></a>B. Restaurar um backup anterior de disco sobre um banco de dados existente
-O exemplo a seguir restaura um backup anterior de disco do `Sales` e substitui o banco de dados existente `Sales`.
+O exemplo a seguir restaura um backup anterior de disco do `Sales` e substitui o banco de dados existente `Sales` .
 
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e expanda-a.  
 2.  Clique com o botão direito do mouse em **Bancos de Dados** e selecione **Restaurar Banco de Dados...**  
@@ -146,9 +146,9 @@ O exemplo a seguir restaura um backup anterior de disco do `Sales` e substitui o
 7.  Na seção **Opções de restauração** , marque a opção **Substituir o banco de dados existente (WITH REPLACE)** .
 
     > [!NOTE]
-    > Não marcar essa opção poderá resultar na seguinte mensagem de erro: "System.Data.SqlClient.SqlError: O conjunto de backup contém um backup de um banco de dados diferente do banco de dados "`Sales`" existente. (Microsoft.SqlServer.SmoExtended)”
+    > Não marcar essa opção poderá resultar na seguinte mensagem de erro: “System.Data.SqlClient.SqlError: o conjunto de backup mantém um backup de um banco de dados diferente do banco de dados “`Sales`” existente. (Microsoft.SqlServer.SmoExtended)”
 
-8.  Na seção **Backup da parte final do log**, desmarque a opção **Fazer backup da parte final do log antes da restauração**.
+8.  Na seção **Backup da parte final do log** , desmarque a opção **Fazer backup da parte final do log antes da restauração**.
 
     > [!NOTE]
     > Nem todos os cenários de restauração exigem um backup da parte final do log. Você não precisará de um backup da parte final do log se o ponto de recuperação estiver em um backup de log anterior. Além disso, um backup da parte final do log será desnecessário se você estiver movendo ou substituindo um banco de dados e não precisar restaurá-lo para um momento determinado após o seu backup mais recente. Para obter mais informações, veja [Backups da parte final do log (SQL Server)](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).
@@ -158,7 +158,7 @@ O exemplo a seguir restaura um backup anterior de disco do `Sales` e substitui o
 9.  Na seção **Conexões de servidor** , marque a opção **Fechar conexões existentes com o banco de dados de destino**.
 
     > [!NOTE]
-    > Não marcar essa opção poderá resultar na seguinte mensagem de erro: "System.Data.SqlClient.SqlError: Não foi possível obter acesso exclusivo porque o banco de dados está sendo usado. (Microsoft.SqlServer.SmoExtended)”
+    > Não marcar essa opção poderá resultar na seguinte mensagem de erro: “System.Data.SqlClient.SqlError: não foi possível obter acesso exclusivo, pois o banco de dados está em uso”. (Microsoft.SqlServer.SmoExtended)”
     
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)] 
 
@@ -181,7 +181,7 @@ O exemplo a seguir restaura um backup anterior de disco do `Sales` e cria um nov
 
     > [!NOTE]
     > Se você receber a seguinte mensagem de erro:      
-    > "System.Data.SqlClient.SqlError: O backup da parte final do log do banco de dados "`Sales`" não foi feito. Use `BACKUP LOG WITH NORECOVERY` para fazer backup do log se ele contiver trabalho que você não deseja perder. Use a cláusula `WITH REPLACE` ou `WITH STOPAT` da instrução `RESTORE` para simplesmente substituir o conteúdo do log. (Microsoft.SqlServer.SmoExtended)”.      
+    > "System.Data.SqlClient.SqlError: não foi feito backup do final do log do banco de dados "`Sales`". Use `BACKUP LOG WITH NORECOVERY` para fazer backup do log se ele contiver trabalho que você não deseja perder. Use a cláusula `WITH REPLACE` ou `WITH STOPAT` da instrução `RESTORE` para simplesmente substituir o conteúdo do log. (Microsoft.SqlServer.SmoExtended)”.      
     > Em seguida, é provável que você não inseriu o novo nome do banco de dados da Etapa 6 acima. Normalmente a restauração evita a substituição acidental de um banco de dados por um banco de dados diferente. Se o banco de dados especificado em uma instrução `RESTORE` já existir no servidor atual e a GUID de família do banco de dados especificado for diferente da GUID de família do banco de dados registrado no conjunto de backup, o banco de dados não será restaurado. Essa é uma proteção importante.
 
 ### <a name="d--restore-earlier-disk-backups-to-a-point-in-time"></a>D.  Restaurar backups anteriores de disco em um ponto específico
