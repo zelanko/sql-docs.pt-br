@@ -16,10 +16,10 @@ ms.assetid: d2ea7906-2d10-438d-aa51-f576eea923c7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 945033f96b5c8c36ea7b3d4c75aafa382a057164
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67972067"
 ---
 # <a name="setuser-method-sqlserverdatasource"></a>Método setUser (SQLServerDataSource)
@@ -34,12 +34,12 @@ ms.locfileid: "67972067"
 public void setUser(java.lang.String user)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *user*  
   
  Uma **String** que contém o nome do usuário.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O método setUser define o nome do usuário que será usado para se conectar ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Se o valor do nome do usuário não for definido, o método [getUser](../../../connect/jdbc/reference/getuser-method-sqlserverdatasource.md) retornará o valor padrão de nulo.  
   
 ## <a name="see-also"></a>Consulte Também  

@@ -18,10 +18,10 @@ ms.assetid: edc80444-b697-410f-9419-0f63c9b5618d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: f38ee0e89201a1ecc0a8faa145167ad58601c133
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077818"
 ---
 # <a name="isdescendantof-database-engine"></a>IsDescendantOf (Mecanismo de Banco de Dados)
@@ -50,14 +50,14 @@ O nó **hierarchyid** para o qual o teste IsDescendantOf deve ser executado.
   
 **CLR return type:SqlBoolean**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 Retornar true para todos os nós na subárvore com raiz em pai e false para todos os outros nós.
   
 Pai é considerado seu próprio descendente.
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-isdescendantof-in-a-where-clause"></a>A. Usando IsDescendantOf em uma cláusula WHERE  
+### <a name="a-using-isdescendantof-in-a-where-clause"></a>a. Usando IsDescendantOf em uma cláusula WHERE  
 O exemplo a seguir retorna um gerente e os funcionários que pertencem àquele gerente:
   
 ```sql
@@ -90,7 +90,7 @@ ELSE
    END  
 ```  
   
-### <a name="c-calling-a-common-language-runtime-method"></a>C. Chamando um método de tempo de execução de linguagem comum  
+### <a name="c-calling-a-common-language-runtime-method"></a>C. Chamando um método de Common Language runtime  
 O snippet de código a seguir chama o método `IsDescendantOf()`.
   
 ```sql

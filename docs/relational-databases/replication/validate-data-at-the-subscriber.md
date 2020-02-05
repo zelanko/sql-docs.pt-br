@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: 354afb535abb1efab76e005d88b3bdfd464a299c
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71710764"
 ---
 # <a name="validate-replicated-data"></a>Validar os dados replicados
@@ -77,7 +77,7 @@ A replicação transacional e de mesclagem permitem validar os dados no Assinant
   
  Para controlar as falhas de validação, considere o seguinte:  
   
--   Configure o alerta de replicação chamado **Replicação: a validação de dados do assinante falhou** para que você seja notificado da falha. Para mais informações, consulte [Como configurar alertas de replicação predefinidos &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/administration/configure-predefined-replication-alerts-sql-server-management-studio.md).  
+-   Configure o alerta de replicação chamado **Replicação: Falha na validação de dados do assinante** para que você seja notificado da falha. Para mais informações, consulte [Como configurar alertas de replicação predefinidos &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/administration/configure-predefined-replication-alerts-sql-server-management-studio.md).  
   
 -   O fato da validação falhar é um problema para o seu aplicativo? Se a falha de validação é um problema, atualize manualmente os dados para serem sincronizados ou reinicialize a assinatura:  
   
@@ -89,7 +89,7 @@ A replicação transacional e de mesclagem permitem validar os dados no Assinant
   
 ## <a name="articles-in-transactional-replication"></a>Artigos em Replicação Transacional 
 
-### <a name="using-sql-server-management-studio"></a>Usando o SQL Server Management Studio
+### <a name="using-sql-server-management-studio"></a>Como usar o SQL Server Management Studio.
   
 1.  Conecte-se ao Publicador no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]e expanda o nó de servidor.    
 2.  Expanda a pasta **Replicação** e, em seguida, a pasta **Publicações Locais** .    
@@ -104,7 +104,7 @@ A replicação transacional e de mesclagem permitem validar os dados no Assinant
     2.  Se o agente não estiver sendo executado clique em **Iniciar** na caixa de diálogo **Exibir Status da Sincronização** . A caixa de diálogo exibirá mensagens informativas relacionadas à validação.    
      Se você não vir nenhuma mensagem relacionada à validação, o agente já registrou uma mensagem subsequente. Neste caso, exiba os resultados de validação no Replication Monitor. Para obter mais informações, consulte os procedimentos de instruções do Replication Monitor neste tópico.  
 
-### <a name="using-transact-sql"></a>Usando Transact-SQL
+### <a name="using-transact-sql"></a>Usando o Transact-SQL
 
 #### <a name="all-articles"></a>Todos os artigos 
   
@@ -168,7 +168,7 @@ A replicação transacional e de mesclagem permitem validar os dados no Assinant
   
 ## <a name="for-a-single-subscription-to-a-merge-publication"></a>Para uma assinatura única para uma Publicação de Mesclagem
 
-### <a name="using-sql-server-management-studio"></a>Usando o SQL Server Management Studio
+### <a name="using-sql-server-management-studio"></a>Como usar o SQL Server Management Studio.
   
 1.  Conecte-se ao Publicador no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]e expanda o nó de servidor.    
 2.  Expanda a pasta **Replicação** e, em seguida, a pasta **Publicações Locais** .   
@@ -185,7 +185,7 @@ A replicação transacional e de mesclagem permitem validar os dados no Assinant
   
 ## <a name="for-all-subscriptions-to-a-merge-publication"></a>Para todas as assinaturas para uma Publicação de Mesclagem
 
-### <a name="using-sql-server-management-studio"></a>Usando o SQL Server Management Studio  
+### <a name="using-sql-server-management-studio"></a>Como usar o SQL Server Management Studio.  
 1.  Conecte-se ao Publicador no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]e expanda o nó de servidor.    
 2.  Expanda a pasta **Replicação** e, em seguida, a pasta **Publicações Locais** .   
 3.  Clique com o botão direito do mouse na publicação para a qual você quer validar assinaturas e então clique em **Validar Todas as Assinaturas**.    
@@ -213,7 +213,7 @@ A replicação transacional e de mesclagem permitem validar os dados no Assinant
     2.  Clique com o botão direito do mouse na assinatura e, em seguida, clique em **Exibir Detalhes**.    
     3.  Exiba informações na guia **Histórico de Sincronização** na área de texto **Última mensagem da sessão selecionada** .  
 
-### <a name="using-transact-sql"></a>Usando Transact-SQL
+### <a name="using-transact-sql"></a>Usando o Transact-SQL
 1.  No Publicador no banco de dados de publicação, execute [sp_validatemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql.md). Especifique `@publication`, o nome do Assinante para `@subscriber`, o nome do banco de dados de assinatura para `@subscriber_db` e um dos valores seguintes para `@level`:   
     -   **1** - apenas validação de número de linhas.    
     -   **3** - validação de soma de verificação binária de número de linhas.  
@@ -240,7 +240,7 @@ A replicação transacional e de mesclagem permitem validar os dados no Assinant
     2.  Clique com o botão direito do mouse na assinatura e, em seguida, clique em **Exibir Detalhes**.    
     3.  Exiba informações na guia **Histórico de Sincronização** na área de texto **Última mensagem da sessão selecionada** . 
   
-### <a name="using-transact-sql"></a>Usando Transact-SQL
+### <a name="using-transact-sql"></a>Usando o Transact-SQL
 1.  No Publicador do banco de dados de publicação, execute [sp_validatemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql.md). Especifique `@publication` e um dos valores seguintes para `@level`:    
     -   **1** - apenas validação de número de linhas.   
     -   **3** - validação de soma de verificação binária de número de linhas.  
@@ -269,7 +269,7 @@ A replicação transacional e de mesclagem permitem validar os dados no Assinant
   
 1.  Crie uma conexão com o Publicador usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.TransPublication> . Defina as propriedades <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> e <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> para a publicação. Defina a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> para a conexão criada na etapa 1.  
+2.  Criar uma instância da classe <xref:Microsoft.SqlServer.Replication.TransPublication>. Defina as propriedades <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> e <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> para a publicação. Defina a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> para a conexão criada na etapa 1.  
   
 3.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obter as propriedades remanescentes do objeto. Se esse método retornar **false**, as propriedades de publicação na etapa 2 foram definidas incorretamente ou a publicação não existe.  
   
@@ -289,7 +289,7 @@ A replicação transacional e de mesclagem permitem validar os dados no Assinant
   
 1.  Crie uma conexão com o Publicador usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.MergePublication> . Defina as propriedades <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> e <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> para a publicação. Defina a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> para a conexão criada na etapa 1.  
+2.  Criar uma instância da classe <xref:Microsoft.SqlServer.Replication.MergePublication>. Defina as propriedades <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> e <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> para a publicação. Defina a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> para a conexão criada na etapa 1.  
   
 3.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obter as propriedades remanescentes do objeto. Se esse método retornar **false**, as propriedades de publicação na etapa 2 foram definidas incorretamente ou a publicação não existe.  
   
@@ -301,7 +301,7 @@ A replicação transacional e de mesclagem permitem validar os dados no Assinant
   
 1.  Crie uma conexão com o Publicador usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.MergePublication> . Defina as propriedades <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> e <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> para a publicação. Defina a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> para a conexão criada na etapa 1.  
+2.  Criar uma instância da classe <xref:Microsoft.SqlServer.Replication.MergePublication>. Defina as propriedades <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> e <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> para a publicação. Defina a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> para a conexão criada na etapa 1.  
   
 3.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obter as propriedades remanescentes do objeto. Se esse método retornar **false**, as propriedades de publicação na etapa 2 foram definidas incorretamente ou a publicação não existe.  
   

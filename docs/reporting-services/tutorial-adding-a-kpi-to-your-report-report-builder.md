@@ -9,14 +9,14 @@ ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ee2333bc6d369bbc9908198d8cfa2fa18ce23065
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63041741"
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Tutorial: adicionando um KPI ao relatório (Construtor de Relatórios)
-Neste tutorial do [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] , você adiciona um KPI (indicador chave de desempenho) a um relatório paginado do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] .  
+Neste tutorial do [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)], você adiciona um KPI (indicador chave de desempenho) a um relatório paginado do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)].  
 
 Os KPIs são valores mensuráveis com importância comercial. Nesse cenário, o resumo das vendas por subcategorias de produto é o KPI. O estado atual do KPI é mostrado com cores, medidores e indicadores.
   
@@ -49,11 +49,11 @@ Nesta seção, você escolhe uma fonte de dados compartilhada, cria um conjunto 
   
 4.  Na página **Escolher um conjunto de dados** , clique em **Criar um conjunto de dados**.  
   
-5.  Clique em **Avançar**.  
+5.  Clique em **Próximo**.  
   
 6.  Na página **Escolher uma conexão com uma fonte de dados** , selecione uma fonte de dados existente ou procure o servidor de relatório e selecione uma fonte de dados. Se não houver nenhuma fonte de dados disponível ou se você não tiver acesso a um servidor de relatório, será possível usar uma fonte de dados inserida. Para obter mais informações, consulte [Tutorial: Criando um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
-7.  Clique em **Avançar**.  
+7.  Clique em **Próximo**.  
   
 8.  Na página **Crie uma consulta** , clique em **Editar como Texto**.  
   
@@ -97,7 +97,7 @@ Nesta seção, você escolhe uma fonte de dados compartilhada, cria um conjunto 
   
 10. Na barra de ferramentas do designer de consultas, clique em Executar ( **!** ).
 
-11. Clique em **Avançar**.  
+11. Clique em **Próximo**.  
   
 ## <a name="CompleteWizard"></a>2. Organizar dados e escolher o layout no Assistente  
 O Assistente de Tabela ou Matriz fornece um design inicial no qual os dados serão exibidos. O painel de visualização no assistente ajuda a visualizar o resultado do agrupamento de dados antes de concluir o design da tabela ou da matriz.  
@@ -120,7 +120,7 @@ O Assistente de Tabela ou Matriz fornece um design inicial no qual os dados ser�
   
     As etapas 4 e 5 organizam os valores dos campos primeiro por data e depois por todas as vendas nessa data.  
   
-6.  Clique em **Avançar**.  
+6.  Clique em **Próximo**.  
   
     Quando você executar o relatório, a tabela exibirá cada data, todas as ordens de cada data e todos os produtos, quantidades e totais de vendas de cada pedido.  
   
@@ -132,7 +132,7 @@ O Assistente de Tabela ou Matriz fornece um design inicial no qual os dados ser�
   
     Neste tutorial, o relatório criado não usa o recurso de detalhamento que permite a um usuário expandir uma hierarquia de grupo pai para exibir linhas de grupo filho e linhas de detalhes.  
   
-10. Clique em **Avançar**.  
+10. Clique em **Próximo**.  
   
 11. Clique em **Concluir**.  
   
@@ -318,7 +318,7 @@ Salve o relatório em um servidor de relatório ou no computador. Se você não 
   
 4.  Em **Nome**, substitua o nome padrão por **KPI de Vendas de Produtos**.  
   
-5.  Clique em **Salvar**.  
+5.  Clique em **Save** (Salvar).  
   
 O relatório será salvo no servidor de relatório. O nome do servidor de relatório ao qual você está conectado é exibido na barra de status da parte inferior da janela.  
   
@@ -333,9 +333,9 @@ O relatório será salvo no servidor de relatório. O nome do servidor de relat�
   
 1.  Em **Nome**, substitua o nome padrão por **KPI de Vendas de Produtos**.  
   
-2.  Clique em **Salvar**.  
+2.  Clique em **Save** (Salvar).  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Próximas etapas  
 Você completou com êxito o tutorial Adicionando um KPI ao relatório. Para obter mais informações, consulte:
 *  [Medidores](../reporting-services/report-design/gauges-report-builder-and-ssrs.md)
 * [Indicadores](../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  

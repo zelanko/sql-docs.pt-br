@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f624ada102ddc74f1062659a35dd758b5c33ce7a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295853"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>Importar dados do Excel ou exportar dados para o Excel com o SSIS (SQL Server Integration Services)
@@ -55,11 +55,11 @@ Você pode importar dados do Excel ou exportar dados para ele com o SSIS usando 
 
 Antes de poder importar dados do Excel ou exportá-los para o Excel com o SSIS, talvez seja necessário baixar os componentes de conectividade para o Excel, se você ainda não os tiver instalado. Os componentes de conectividade do Excel não são instalados por padrão.
 
-Baixe a última versão dos componentes de conectividade para o Excel aqui: [Pacotes Redistribuíveis do Mecanismo de Banco de Dados do Microsoft Access 2016](https://www.microsoft.com/download/details.aspx?id=54920). A versão mais recente dos componentes podem abrir arquivos criados em versões anteriores do Excel.
+Baixe a versão mais recente dos componentes de conectividade para Excel aqui: [Redistribuível de 2016 do Mecanismo de Banco de Dados do Microsoft Access](https://www.microsoft.com/download/details.aspx?id=54920). A versão mais recente dos componentes podem abrir arquivos criados em versões anteriores do Excel.
 
 ### <a name="notes-about-the-download-and-installation"></a>Observações sobre o download e a instalação
 
--   Verifique se você baixou o *Redistribuível* de 2016 do Mecanismo de Banco de Dados do Access, e não o *Tempo de Execução* do Microsoft Access 2016.
+-   Verifique se você baixou o *Redistribuível* de 2016 do Mecanismo de Banco de Dados do Access, e não o *Runtime* do Microsoft Access 2016.
 
 -   Se o computador já tiver uma versão de 32 bits do Office, então será necessário instalar a versão de 32 bits dos componentes. Também é necessário executar o pacote do SSIS no modo de 32 bits ou executar a versão de 32 bits do Assistente de importação e de exportação.
 
@@ -67,7 +67,7 @@ Baixe a última versão dos componentes de conectividade para o Excel aqui: [Pac
 
     `C:\Users\<user_name>\Downloads\AccessDatabaseEngine.exe /quiet`
 
-    Caso tenha problemas para instalar o pacote redistribuível de 2016, instale o pacote redistribuível de 2010 aqui: [Pacotes Redistribuíveis do Mecanismo de Banco de Dados do Microsoft Access 2010](https://www.microsoft.com/download/details.aspx?id=13255). (Não há redistribuível para o Excel 2013.)
+    Se você tiver problemas para instalar o redistribuível de 2016, instale o redistribuível do 2010, em vez disto aqui: [Redistribuível do Mecanismo de Banco de Dados do Microsoft Access 2010](https://www.microsoft.com/download/details.aspx?id=13255). (Não há redistribuível para o Excel 2013.)
 
 ## <a name="specify-excel"></a>Especifique o Excel como a fonte de dados
 

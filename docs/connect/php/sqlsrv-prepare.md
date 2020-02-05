@@ -18,13 +18,13 @@ ms.assetid: 8c74c697-3296-4f5d-8fb9-e361f53f19a6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b16e58b8535d91fd29281aa986ab5ba26875dc38
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68014993"
 ---
-# <a name="sqlsrvprepare"></a>sqlsrv_prepare
+# <a name="sqlsrv_prepare"></a>sqlsrv_prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Cria um recurso de instrução associado à conexão especificada. Essa função é útil para a execução de várias consultas.  
@@ -36,7 +36,7 @@ Cria um recurso de instrução associado à conexão especificada. Essa função
 sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]])  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
 *$conn*: o recurso de conexão associado à instrução preparada.  
   
 *$tsql*: a expressão Transact-SQL que corresponde à instrução criada.  
@@ -58,7 +58,7 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
   
     A tabela a seguir descreve os elementos dessa matriz:  
   
-    |Elemento|Descrição|  
+    |Elemento|DESCRIÇÃO|  
     |-----------|---------------|  
     |*&$value*|Um valor literal ou uma referência a uma variável do PHP.|  
     |*$direction*[OPCIONAL]|Uma das seguintes constantes **SQLSRV_PARAM_\*** usadas para indicar a direção do parâmetro: **SQLSRV_PARAM_IN**, **SQLSRV_PARAM_OUT**, **SQLSRV_PARAM_INOUT**. O valor padrão é **SQLSRV_PARAM_IN**.<br /><br />Para obter mais informações sobre constantes do PHP, consulte [Constantes &#40;Drivers da Microsoft para PHP para SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
@@ -67,7 +67,7 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
   
 *$options* [OPCIONAL]: uma matriz associativa que define as <a name="properties">propriedades da consulta</a>. A tabela a seguir lista as chaves compatíveis e os valores correspondentes:
 
-|Chave|Valores com suporte|Descrição|  
+|Chave|Valores com suporte|DESCRIÇÃO|  
 |-------|--------------------|---------------|  
 |ClientBufferMaxKBSize|Um número inteiro positivo|Configura o tamanho do buffer que contém o conjunto de resultados de um cursor do lado do cliente.<br /><br />O padrão é 10240 KB. Para saber mais, veja como [especificar um tipo de cursor e selecionar linhas](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md).|
 |DecimalPlaces|Um inteiro entre 0 e 4 (inclusive)|Especifica as casas decimais ao formatar valores monetários buscados.<br /><br />Qualquer inteiro negativo ou um valor maior que 4 será ignorado.<br /><br />Esta opção funcionará somente quando o FormatDecimals for **true**.|
@@ -80,7 +80,7 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
 ## <a name="return-value"></a>Valor retornado  
 Um recurso de instrução. Se não for possível criar o recurso de instrução, **false** será retornado.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 Quando você prepara uma instrução que usa variáveis como parâmetros, as variáveis são associadas à instrução. Isso significa que, se você atualizar os valores das variáveis, da próxima vez que executar a instrução, ela será executada com valores de parâmetros atualizados.  
   
 A combinação de **sqlsrv_prepare** e **sqlsrv_execute** separa a preparação e a execução da instrução em duas chamadas de função e pode ser usada para executar consultas parametrizadas. Essa função é ideal para executar uma instrução várias vezes com valores de parâmetros diferentes para cada execução.  

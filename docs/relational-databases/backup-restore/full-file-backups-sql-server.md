@@ -20,10 +20,10 @@ ms.assetid: a716bf8d-0c5a-490d-aadd-597b3b0fac0c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1d70bf0d8e99d24ee0d7ea9e046090ba4ed32453
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67939618"
 ---
 # <a name="full-file-backups-sql-server"></a>Backups completos de arquivos (SQL Server)
@@ -82,7 +82,7 @@ ms.locfileid: "67939618"
   
  A restauração de um banco de dados com o uso de apenas um arquivo e backups de log pode ser complexa. Por isso, se for possível, é uma prática recomendada executar um backup de banco de dados completo e iniciar os backups de log antes do primeiro backup de arquivo. A ilustração a seguir mostra uma estratégia na qual um backup de banco de dados completo é feito (em t1) logo após o banco de dados ser criado (em t0). Este primeiro backup de banco de dados permite backups de log de transações no início. Os backups de log de transações são programados para ocorrer em intervalos definidos. Os backups de arquivos ocorrem no intervalo que melhor corresponder às necessidades empresariais do banco de dados. Esta ilustração exibe cada um dos quatro grupos de arquivos com backup feito um de cada vez. A ordem na qual é feito backup (A, C, B, A) reflete as necessidades empresariais do banco de dados.  
   
- ![Estratégia que combina backups de banco de dados, arquivo e log](../../relational-databases/backup-restore/media/bnr-rmfull-3-fulldb-filegrps-log-backups.gif "Estratégia que combina backups de banco de dados, arquivo e log")  
+ ![Strategy combining database, file, and log backups](../../relational-databases/backup-restore/media/bnr-rmfull-3-fulldb-filegrps-log-backups.gif "Strategy combining database, file, and log backups")  
   
 > [!NOTE]  
 >  No modelo de recuperação completa, você deve efetuar roll-forward do log de transações ao restaurar um backup de arquivo de leitura/gravação para verificar se o arquivo está consistente com o restante do banco de dados. Para evitar que o roll forward seja efetuado em muitos backups de log de transações, considere o uso de backups de arquivo diferenciais. Para obter mais informações, veja [Backups diferenciais &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md).  
@@ -100,7 +100,7 @@ ms.locfileid: "67939618"
 ## <a name="see-also"></a>Consulte Também  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Visão geral do backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
- [Backup e Restauração: Interoperabilidade e Coexistência &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-and-restore-interoperability-and-coexistence-sql-server.md)   
+ [Backup e restauração: interoperabilidade e coexistência &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-and-restore-interoperability-and-coexistence-sql-server.md)   
  [Backups diferenciais &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)   
  [Restaurações de arquivos &#40;Modelo de recuperação simples&#41;](../../relational-databases/backup-restore/file-restores-simple-recovery-model.md)   
  [Restaurações de arquivo &#40;Modelo de recuperação completa&#41;](../../relational-databases/backup-restore/file-restores-full-recovery-model.md)   

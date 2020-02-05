@@ -9,20 +9,20 @@ ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 36b670ee8485c2e8db58847e9439dfb5fa9920ce
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: f2716a8176124539aa7caf382193359ff5435aa6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531676"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74820997"
 ---
 # <a name="azdata-context"></a>azdata context
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-O artigo a seguir fornece referência para os comandos `sql` na ferramenta `azdata`. Para obter mais informações sobre outros comandos `azdata`, confira [referência de azdata](reference-azdata.md)
+O artigo a seguir fornece referência para os comandos `context` na ferramenta `azdata`. Para obter mais informações sobre outros comandos `azdata`, confira [referência de azdata](reference-azdata.md)
 
-## <a name="commands"></a>Commands
+## <a name="commands"></a>Comandos
 |     |     |
 | --- | --- |
 [azdata context list](#azdata-context-list) | Lista os contextos disponíveis no perfil do usuário.
@@ -66,7 +66,7 @@ Deletes contextNamespace from the user profile.
 ```bash
 azdata context delete -n contextNamespace
 ```
-### <a name="required-parameters"></a>Parâmetros necessários
+### <a name="required-parameters"></a>Parâmetros obrigatórios
 #### `--namespace -n`
 Namespace do contexto que você gostaria de excluir.
 ### <a name="global-arguments"></a>Argumentos globais
@@ -90,7 +90,7 @@ Define contextNamespace como o contexto ativo no perfil do usuário.
 ```bash
 azdata context set -n contextNamespace
 ```
-### <a name="required-parameters"></a>Parâmetros necessários
+### <a name="required-parameters"></a>Parâmetros obrigatórios
 #### `--namespace -n`
 Namespace do contexto que você gostaria de definir.
 ### <a name="global-arguments"></a>Argumentos globais

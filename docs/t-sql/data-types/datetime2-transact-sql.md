@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: dae7d1e29227484e907c45e8062f90873c10892b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68086769"
 ---
 # <a name="datetime2-transact-sql"></a>datetime2 (Transact-SQL)
@@ -43,7 +43,7 @@ Define uma data combinada com uma hora do dia que se baseia em um período de 24
 |Formato literal de cadeia de caracteres padrão<br /><br /> (usado para cliente de nível inferior)|YYYY-MM-DD hh:mm:ss[segundos fracionários]<br /><br /> Para obter mais informações, consulte a seção Compatibilidade com versões anteriores a seguir.|  
 |Intervalo de datas|0001-01-01 a 9999-12-31<br /><br /> 1 de janeiro de 1 CE até 31 de dezembro de 9999 CE|  
 |Intervalo de horas|00:00:00 a 23:59:59.9999999|  
-|Intervalo de deslocamento de fuso horário|None|  
+|Intervalo de deslocamento de fuso horário|Nenhum|  
 |Intervalos de elementos|AAAA é um número de quatro dígitos, variando de 0001 a 9.999, que representa um ano.<br /><br /> MM é um número de dois dígitos, variando de 01 a 12 e representa um mês no ano especificado.<br /><br /> DD é um número de dois dígitos, variando de 01 a 31, dependendo do mês e representa um dia do mês especificado.<br /><br /> hh é um número de dois dígitos, variando de 00 a 23, que representa a hora.<br /><br /> mm é um número de dois dígitos, variando de 00 a 59, que representa o minuto.<br /><br /> ss é um número de dois dígitos, variando de 00 a 59, que representa o segundo.<br /><br /> n* é um número de zero a sete dígitos, variando de 0 a 9999999, que representa as frações de segundo. No Informatica, os segundos fracionários serão truncados quando n > 3.|  
 |Comprimento de caracteres|19 posições no mínimo (YYYY-MM-DD hh:mm:ss ) a 27 no máximo (YYYY-MM-DD hh:mm:ss.0000000)|  
 |Precisão, escala|0 a 7 dígitos, com exatidão de 100ns. A precisão padrão é 7 dígitos.|  
@@ -66,7 +66,7 @@ As tabelas a seguir listam os formatos de literal de cadeia de caracteres ISO 86
 |---|---|
 |AAAA-MM-DDThh:mm:ss[.nnnnnnn]<br /><br /> AAAA-MM-DDThh:mm:ss[.nnnnnnn]|Esse formato não é afetado pelas configurações de localidade da sessão SET LANGUAGE e SET DATEFORMAT. O **T**, os dois pontos (:) e o ponto final (.) são incluídos no literal de cadeia de caracteres; por exemplo, '2007-05-02T19:58:47.1234567'.|  
   
-|ODBC|Descrição|  
+|ODBCODBC|DESCRIÇÃO|  
 |---|---|
 |{ ts 'yyyy-mm-dd hh:mm:ss[.segundos fracionários]' }|Específico de API ODBC:<br /><br /> O número de dígitos à esquerda do ponto decimal, que representa os segundos fracionários, pode ser especificado de 0 até 7 (100 nanossegundos).|  
   
@@ -163,7 +163,7 @@ SELECT @datetime2 AS '@datetime2', @datetime AS '@datetime';
 > No nível de compatibilidade 130 do banco de dados, as conversões implícitas de tipos de dados datetime para datetime2 demonstram precisão aprimorada ao considerar os milissegundos fracionários. Isso resulta em diferentes valores convertidos, conforme visto no exemplo abaixo. Use conversão explícita para o tipo de dados datetime2 sempre que existir um cenário misto de comparação entre os tipos de dados datetime e datetime2. Para obter mais informações, consulte este [Artigo do Suporte da Microsoft](https://support.microsoft.com/help/4010261).
 
 ### <a name="converting-string-literals-to-datetime2"></a>Convertendo literais de cadeia de caracteres em datetime2  
-Serão permitidas conversões de literais de cadeia de caracteres para tipos de data e hora se todas as partes da cadeia de caracteres estiverem em formatos válidos. Caso contrário, será gerado um erro de tempo de execução. As conversões implícitas ou explícitas que não especificam um estilo, de tipos de data e hora em literais de cadeia de caracteres estarão no formato padrão da sessão atual. A tabela a seguir mostra as regras de conversão de uma literal de cadeia de caracteres no tipo de dados **datetime2**.
+Serão permitidas conversões de literais de cadeia de caracteres para tipos de data e hora se todas as partes da cadeia de caracteres estiverem em formatos válidos. Caso contrário, será gerado um erro de runtime. As conversões implícitas ou explícitas que não especificam um estilo, de tipos de data e hora em literais de cadeia de caracteres estarão no formato padrão da sessão atual. A tabela a seguir mostra as regras de conversão de uma literal de cadeia de caracteres no tipo de dados **datetime2**.
   
 |Literal de cadeia de caracteres de entrada|**datetime2(n)**|  
 |---|---|

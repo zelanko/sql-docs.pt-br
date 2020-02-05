@@ -9,10 +9,10 @@ ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7a26065cc1d65e5c187123ead990888aa4de0e60
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63295894"
 ---
 # <a name="tutorial-introducing-expressions"></a>Tutorial: Apresentando expressões
@@ -56,7 +56,7 @@ Nesta seção, você cria um relatório de tabela, uma fonte de dados e um conju
     > [!NOTE]  
     > A fonte de dados escolhida não tem importância, desde que você tenha as permissões adequadas. Você não obterá dados da fonte de dados. Para obter mais informações, consulte [Formas alternativas de obter uma conexão de dados &#40;Construtor de Relatórios&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
-7.  Clique em **Avançar**.  
+7.  Clique em **Próximo**.  
   
 8.  Na página **Crie uma consulta** , clique em **Editar como Texto**.  
   
@@ -93,7 +93,7 @@ Nesta seção, você cria um relatório de tabela, uma fonte de dados e um conju
 
     ![report-builder-expression-tutorial-query-as-text](../reporting-services/media/report-builder-expression-tutorial-query-as-text.png)
   
-11. Clique em **Avançar**.  
+11. Clique em **Próximo**.  
   
 12. Na página **Organizar campos** , arraste os campos a seguir, na ordem especificada, da lista **Campos Disponíveis** para a lista **Valores** .  
   
@@ -114,7 +114,7 @@ Nesta seção, você cria um relatório de tabela, uma fonte de dados e um conju
     
     ![report-builder-expression-not-sum](../reporting-services/media/report-builder-expression-not-sum.png)
   
-15. Clique em **Avançar**.  
+15. Clique em **Próximo**.  
   
 16. Na página **Escolha um layout** , mantenha todas as configurações padrão e clique em **Avançar**.  
 

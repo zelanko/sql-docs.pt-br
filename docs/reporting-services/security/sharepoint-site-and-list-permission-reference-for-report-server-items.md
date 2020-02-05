@@ -14,10 +14,10 @@ ms.assetid: 1fcb27bd-4c4a-43f4-bfff-e42a59c87c49
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ee1a5dcf3d475937ae87a1f3c5282d484b2193a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570690"
 ---
 # <a name="sharepoint-site-and-list-permission-reference-for-report-server-items"></a>Referência à permissão de listas e sites do SharePoint para itens do servidor de relatório
@@ -29,7 +29,7 @@ ms.locfileid: "65570690"
   
 |Nível de permissão|Abreviação|  
 |----------------------|------------------|  
-|Controle total|**F**|  
+|Controle Total|**F**|  
 |Contribuir|**C**|  
 |Visitante|**V**|  
   
@@ -42,7 +42,7 @@ ms.locfileid: "65570690"
 ## <a name="list-permissions"></a>Permissões de lista  
  As permissões que você define na biblioteca que contém os itens de servidor de relatório determinam como os usuários acessam esses itens.  
   
-|Permissão|Descrição|F|C|V|Operação do servidor de relatório|  
+|Permissão|DESCRIÇÃO|F|C|V|Operação do servidor de relatório|  
 |----------------|-----------------|-------|-------|-------|-----------------------------|  
 |Gerenciar Listas|Criar e excluir listas, adicionar ou remover colunas em uma lista e adicionar ou remover exibições públicas de uma lista.|X|||Criar uma pasta em uma biblioteca do SharePoint durante uma operação de publicação usando uma ferramenta de criação. Esta permissão também é exigida para o gerenciamento de históricos de relatórios.|  
 |Adicionar Itens|Adicionar itens a listas e documentos a bibliotecas de documentos, além de adicionar comentários a discussões na Web.|X|X||Adicionar relatórios, modelos de relatórios, fontes de dados compartilhados e recursos (arquivos de imagem externos) às bibliotecas do SharePoint. Crie fontes de dados compartilhados. Gerar modelos de relatórios utilizando fontes de dados compartilhados. Iniciar o Construtor de Relatórios e criar um novo relatório ou carregar um modelo no Construtor de Relatórios.|  
@@ -59,7 +59,7 @@ ms.locfileid: "65570690"
 ## <a name="site-permissions"></a>Permissões de site  
  As permissões de site determinam o acesso a operações de servidor de relatório não diretamente relacionadas a itens armazenados em uma biblioteca específica. Os exemplos incluem a criação e o gerenciamento de agendas compartilhadas, que podem ser usadas por itens em várias bibliotecas, e a configuração da Web Part do Visualizador de Relatórios, que pode ser usada em todo um site.  
   
-|Permissão|Descrição|F|C|V|Operação do servidor de relatório|  
+|Permissão|DESCRIÇÃO|F|C|V|Operação do servidor de relatório|  
 |----------------|-----------------|-------|-------|-------|-----------------------------|  
 |Gerenciar Permissões|Criar e gerenciar níveis de permissão no site e atribuir permissões a usuários e grupos.|X|||Você pode alterar permissões para todos os itens e operações do servidor de relatório. Você pode definir a segurança de itens de modelo.|  
 |Gerenciar Site|Executar todas as tarefas de administração do site, bem como gerenciar conteúdos.|X|||Criar, alterar e excluir agendas compartilhadas.|  
@@ -68,7 +68,7 @@ ms.locfileid: "65570690"
 |Enumerar Permissões|Enumerar permissões no site, na lista, pasta, no documento ou item de lista.|X|||Ler permissões para todos os itens de servidor de relatório. Exibir um relatório de clickthrough que usa um modelo de relatório que contém configurações de segurança de item de modelo.|  
 |Gerenciar Alertas|Gerenciar alertas para todos os usuários do site.|X|||Criar, alterar e excluir qualquer assinatura em um site.|  
 |Usar Interfaces Remotas|Usar as interfaces SOAP, Web DAV ou SharePoint Designer para acessar o site.|X|X|X|Usado para chamar o ponto de extremidade do proxy do URL para o servidor de relatório.|  
-|Abrir|Abrir um site, uma lista ou pasta para acessar itens nesse contêiner.|X|X|X|Ler propriedades de agendas e de itens.|  
+|Aberto|Abrir um site, uma lista ou pasta para acessar itens nesse contêiner.|X|X|X|Ler propriedades de agendas e de itens.|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Comparar funções e tarefas no Reporting Services com grupos e permissões do SharePoint](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   

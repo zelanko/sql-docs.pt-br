@@ -17,10 +17,10 @@ ms.assetid: 1df60fd6-c019-405d-8155-c330dbac2cc1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9d82f3ef27525ad918ef01e9cb2e0600ef85ae0a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293859"
 ---
 # <a name="transfer-logins-task"></a>Tarefa Transferir Logons
@@ -114,7 +114,7 @@ ms.locfileid: "71293859"
  **LoginsToTransfer**  
  Selecione os logons [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para copiar da fonte para o servidor de destino. As opções desta propriedade estão listadas na seguinte tabela:  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |**AllLogins**|Todos os logons [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no servidor de origem serão copiados para o servidor de destino.|  
 |**SelectedLogins**|Apenas os logons especificados com **LoginsList** serão copiados para o servidor de destino.|  
@@ -131,11 +131,11 @@ ms.locfileid: "71293859"
   
  As opções desta propriedade estão listadas na seguinte tabela:  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |**FailTask**|A tarefa irá falhar se já existirem logons com o mesmo nome no servidor de destino.|  
 |**Overwrite**|A tarefa irá substituir logons de mesmo nome no servidor de destino.|  
-|**Skip**|A tarefa irá ignorar os logons de mesmo nome que existem no servidor de destino.|  
+|**Ignorar**|A tarefa irá ignorar os logons de mesmo nome que existem no servidor de destino.|  
   
  **CopySids**  
  Selecione se os identificadores de segurança associados aos logons devem ser copiados para o servidor de destino. Será necessário definir**CopySids** para **True** se a tarefa Transferir Logons for usada junto com a tarefa Transferir Banco de Dados. Caso contrário, os logons copiados não serão reconhecidos pelo banco de dados transferido.  

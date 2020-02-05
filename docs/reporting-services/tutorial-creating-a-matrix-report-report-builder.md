@@ -9,10 +9,10 @@ ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ed53800a1b45dd79548c59aaab57f71bd700d94d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63294704"
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>Tutorial: criando um relatório de matriz (Construtor de Relatórios)
@@ -47,11 +47,11 @@ Nesta seção, você escolhe uma fonte de dados compartilhada, cria um conjunto 
   
 4.  Na página **Escolher um conjunto de dados** , clique em **Criar um conjunto de dados**.  
   
-5.  Clique em **Avançar**.  
+5.  Clique em **Próximo**.  
   
 6.  Na página **Escolher uma conexão com uma fonte de dados** , selecione uma fonte de dados existente ou procure o servidor de relatório e selecione uma fonte de dados. Se não houver nenhuma fonte de dados disponível ou você não tiver acesso a um servidor de relatório, em vez disso, será possível usar uma fonte de dados inserida. Para obter informações sobre como criar uma fonte de dados inserida, consulte [Tutorial: Criando um relatório de tabela básico &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
-7.  Clique em **Avançar**.  
+7.  Clique em **Próximo**.  
   
 8.  Na página **Crie uma consulta** , clique em **Editar como Texto**.  
   
@@ -92,7 +92,7 @@ Nesta seção, você escolhe uma fonte de dados compartilhada, cria um conjunto 
   
 10. (opcional) Clique no ícone Executar (!) para executar a consulta e ver os dados.
 
-11. Clique em **Avançar**.  
+11. Clique em **Próximo**.  
   
 ## <a name="Groups"></a>2. Organizar dados e escolher o layout no Assistente de Nova Tabela ou Matriz  
 Use o assistente para fornecer um design inicial no qual exibir dados. O painel de visualização no assistente ajuda a visualizar o resultado dos dados de agrupamento antes de concluir o design da matriz.  
@@ -121,7 +121,7 @@ Use o assistente para fornecer um design inicial no qual exibir dados. O painel 
     
     ![report-builder-arrange-fields-report-wizard](../reporting-services/media/report-builder-arrange-fields-report-wizard.png)  
   
-7.  Clique em **Avançar**.  
+7.  Clique em **Próximo**.  
   
 8.  Na página Escolher o Layout, em **Opções**, verifique se a opção **Mostrar subtotais e totais gerais** está selecionada.  
   
@@ -129,7 +129,7 @@ Use o assistente para fornecer um design inicial no qual exibir dados. O painel 
   
 10. Verifique se a opção **Expandir/recolher grupos** está selecionada.  
   
-11. Clique em **Avançar**.  
+11. Clique em **Próximo**.  
   
 13. Clique em **Concluir**.  
   
@@ -310,7 +310,7 @@ Neste tutorial, salve o relatório em um servidor de relatório. Se você não t
   
 4.  Em **Nome**, substitua o nome padrão por **SalesByTerritorySubcategory**.  
   
-5.  Clique em **Salvar**.  
+5.  Clique em **Save** (Salvar).  
   
 O relatório será salvo no servidor de relatório. O nome do servidor de relatório ao qual você está conectado é exibido na barra de status da parte inferior da janela.  
   
@@ -322,7 +322,7 @@ O relatório será salvo no servidor de relatório. O nome do servidor de relat�
   
 3.  Em **Nome**, substitua o nome padrão por **SalesByTerritorySubcategory**.  
   
-4.  Clique em **Salvar**.  
+4.  Clique em **Save** (Salvar).  
   
 ## <a name="RotateTextBox"></a>9. (Opcional) Girar caixa de texto em 270 graus  
 Um relatório com matrizes pode se expandir horizontal e verticalmente quando executado. Girando-se caixas de texto verticalmente, ou em 270 graus, é possível economizar espaço horizontal. Em seguida, o relatório renderizado é estreitado e, se exportado para um formato como o Microsoft Word, será mais provável o ajuste em uma página impressa.  
@@ -352,7 +352,7 @@ Uma caixa de texto também pode exibir texto na horizontal, vertical (de cima pa
   
 O nome de território é escrito verticalmente, de baixo para cima. A altura do grupo de linhas Territory varia de acordo com o tamanho do nome do território.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Próximas etapas  
 Isso conclui o tutorial sobre como criar um relatório de matriz. Para obter mais informações sobre matrizes, consulte: 
 -    [Tabelas, matrizes e listas](../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)
 -    [Criar uma matriz](../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)

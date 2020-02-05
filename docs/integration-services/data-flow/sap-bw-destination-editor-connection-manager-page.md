@@ -13,10 +13,10 @@ ms.assetid: 04ae38f8-5287-45a3-826a-8aac5dd15a91
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 66365c942bc3f996d834f0217f29bd82cc911457
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298102"
 ---
 # <a name="sap-bw-destination-editor-connection-manager-page"></a>Editor de Destino SAP BW (página Gerenciador de Conexões)
@@ -47,7 +47,7 @@ ms.locfileid: "71298102"
  **Gerenciador de conexões SAP BW**  
  Selecione um gerenciador de conexões existente na lista ou crie uma nova conexão clicando em **Nova**.  
   
- **Nova**  
+ **Novo**  
  Crie um novo gerenciador de conexões, usando a caixa de diálogo **Gerenciador de Conexões SAP BW** .  
   
  **Testar carga**  
@@ -65,7 +65,7 @@ ms.locfileid: "71298102"
  **Tipo**  
  Digite o caractere único que identifica o tipo do InfoSource. A tabela a seguir lista os valores aceitáveis de caractere único.  
   
-|Value|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |**D**|Dados da transação|  
 |**M**|Dados mestres|  
@@ -108,7 +108,7 @@ ms.locfileid: "71298102"
  **Criar**  
  Crie o tipo selecionado de objeto do SAP Netweaver BW.  
   
-|Tipo de objeto|Resultado|  
+|Tipo de objeto|Result|  
 |-----------------|------------|  
 |**InfoObject**|Crie um novo InfoObject usando a caixa de diálogo **Criar Novo InfoObject** . Para obter mais informações sobre essa caixa de diálogo, consulte [Create New InfoObject](../../integration-services/data-flow/create-new-infoobject.md).|  
 |**InfoCube**|Crie um novo InfoCube usando a caixa de diálogo **Criar InfoCube para os Dados da Transação** . Para obter mais informações sobre essa caixa de diálogo, consulte [Create InfoCube for Transaction Data](../../integration-services/data-flow/create-infocube-for-transaction-data.md).|  

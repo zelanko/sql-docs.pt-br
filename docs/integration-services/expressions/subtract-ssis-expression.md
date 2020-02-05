@@ -14,10 +14,10 @@ ms.assetid: b48da086-37dd-460a-8a4b-912f52c9b158
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e26df3ba35f81fb386cd208e8df207360510254c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297376"
 ---
 # <a name="--subtract-ssis-expression"></a>- (Subtração) (Expressão SSIS)
@@ -42,10 +42,10 @@ numeric_expression1 - numeric_expression2
 ## <a name="result-types"></a>Tipos de resultado  
  Determinado pelos tipos de dados dos dois argumentos. Para obter mais informações, consulte [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Coloque a expressão unária minus em parênteses para assegurar que ela seja avaliada na ordem correta  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Se qualquer operando for nulo, o resultado será nulo.  
   
 ## <a name="expression-examples"></a>Exemplos de expressões  
