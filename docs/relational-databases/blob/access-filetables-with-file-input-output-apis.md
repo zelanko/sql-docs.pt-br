@@ -13,10 +13,10 @@ ms.assetid: fa504c5a-f131-4781-9a90-46e6c2de27bb
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d1cdc6947c97052660dea3be9d6013a8e61a090d
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908780"
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>Acessar FileTables com APIs de entrada e saída de arquivo
@@ -64,7 +64,7 @@ ms.locfileid: "72908780"
 ##  <a name="supported"></a> Operações do sistema de arquivos com suporte  
  As FileTables oferecem suporte a APIs do sistema de arquivos relacionadas às seguintes operações do sistema de arquivos:  
   
--   Gerenciamento de diretório  
+-   Gerenciamento de diretórios  
   
 -   Gerenciamento de arquivos  
   
@@ -103,7 +103,7 @@ ms.locfileid: "72908780"
   
 ##  <a name="funclist"></a> Funcionalidade do sistema de arquivos com suporte em FileTables  
   
-|Recurso|Supported|Comentários|  
+|Recurso|Suportado|Comentários|  
 |----------------|---------------|--------------|  
 |**Oplocks**|Sim|Há suporte para oplocks de Nível 2, Nível 1, Lote e Filtro.|  
 |**Atributos estendidos**|Não||  

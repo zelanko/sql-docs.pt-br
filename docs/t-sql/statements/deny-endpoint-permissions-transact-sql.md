@@ -18,10 +18,10 @@ ms.assetid: 3ac40457-7529-4eda-95a4-5247345cc8cf
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: b7bb0f690305320f5ae0f5d4ecdeb8f59b33cb01
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68114846"
 ---
 # <a name="deny-endpoint-permissions-transact-sql"></a>Permissões de ponto de extremidade DENY (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68114846"
   Nega permissões em um ponto de extremidade.  
 
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -75,7 +75,7 @@ DENY permission  [ ,...n ] ON ENDPOINT :: endpoint_name
  AS *SQL_Server_login*  
  Especifica o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do qual o principal que executa esta consulta deriva seu direito de negar a permissão.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  As permissões no escopo de servidor podem ser negadas somente quando o banco de dados atual é **mestre**.  
   
  As informações sobre pontos de extremidade são visíveis na exibição do catálogo [sys.endpoints](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md). As informações sobre permissões de servidor estão visíveis na exibição do catálogo [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) e as informações sobre entidades de segurança do servidor estão visíveis na exibição do catálogo [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
@@ -85,7 +85,7 @@ DENY permission  [ ,...n ] ON ENDPOINT :: endpoint_name
 |Permissão de ponto de extremidade|Indicado pela permissão de ponto de extremidade|Implícito na permissão de servidor|  
 |-------------------------|------------------------------------|----------------------------------|  
 |ALTER|CONTROL|ALTER ANY ENDPOINT|  
-|CONNECT|CONTROL|CONTROL SERVER|  
+|CONECTAR|CONTROL|CONTROL SERVER|  
 |CONTROL|CONTROL|CONTROL SERVER|  
 |TAKE OWNERSHIP|CONTROL|CONTROL SERVER|  
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
@@ -95,8 +95,8 @@ DENY permission  [ ,...n ] ON ENDPOINT :: endpoint_name
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-denying-view-definition-permission-on-an-endpoint"></a>A. Negando a permissão VIEW DEFINITION em um ponto de extremidade  
- O exemplo a seguir nega permissão `VIEW DEFINITION` no ponto de extremidade `Mirror7` ao logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `ZArifin`.  
+### <a name="a-denying-view-definition-permission-on-an-endpoint"></a>a. Negando a permissão VIEW DEFINITION em um ponto de extremidade  
+ O exemplo a seguir nega permissão `VIEW DEFINITION` no ponto de extremidade `Mirror7` ao logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`ZArifin`.  
   
 ```  
 USE master;  
@@ -105,7 +105,7 @@ GO
 ```  
   
 ### <a name="b-denying-take-ownership-permission-with-cascade-option"></a>B. Negando a permissão TAKE OWNERSHIP com a opção CASCADE  
- O exemplo a seguir nega a permissão `TAKE OWNERSHIP` no ponto de extremidade `Shipping83` ao usuário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `PKomosinski` e às entidades às quais `PKomosinski` concedeu `TAKE OWNERSHIP`.  
+ O exemplo a seguir nega a permissão `TAKE OWNERSHIP` no ponto de extremidade `Shipping83` ao usuário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`PKomosinski` e às entidades às quais `PKomosinski` concedeu `TAKE OWNERSHIP`.  
   
 ```  
 USE master;  

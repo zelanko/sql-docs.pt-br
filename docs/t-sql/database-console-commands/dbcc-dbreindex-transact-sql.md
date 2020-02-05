@@ -23,10 +23,10 @@ ms.assetid: 6e929d09-ccb5-4855-a6af-b616022bc8f6
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 5aa089ac3c8de549e0c2ec33fd413c9cafba24dd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101995"
 ---
 # <a name="dbcc-dbreindex-transact-sql"></a>DBCC DBREINDEX (Transact-SQL)
@@ -38,7 +38,7 @@ Recria um ou mais índices de uma tabela no banco de dados especificado.
   
 **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] até a [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658))
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -66,7 +66,7 @@ DBCC DBREINDEX
  WITH NO_INFOMSGS  
  Suprime todas as mensagens informativas com níveis de severidade de 0 a 10.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 DBCC DBREINDEX recria um índice de uma tabela ou todos os índices definidos para uma tabela. Quando você permite que um índice seja recriado dinamicamente, os índices que impõem a restrição PRIMARY KEY ou UNIQUE podem ser recriados sem a necessidade de descartar e recriar essas restrições. Isso significa que um índice pode ser recriado sem ter conhecimento da estrutura de uma tabela ou suas restrições. Isso pode ocorrer depois de uma cópia em massa de dados na tabela.
 
 DBCC DBREINDEX pode recriar todos os índices de uma tabela em uma instrução. Isso é mais fácil do que codificar várias instruções DROP INDEX e CREATE INDEX. Como o trabalho é feito por uma instrução, DBCC DBREINDEX é automaticamente atômica, considerando que as instruções DROP INDEX e CREATE INDEX, individualmente, devem ser incluídas em uma transação que será atômica. Além disso, DBCC DBREINDEX oferece mais otimizações que as instruções individuais DROP INDEX e CREATE INDEX.
@@ -75,7 +75,7 @@ Ao contrário de DBCC INDEXDEFRAG ou ALTER INDEX com a opção REORGANIZE, DBCC 
 
 Para obter mais informações de como selecionar um método para recompilar ou reorganizar um índice, confira [Reorganizar e recompilar índices](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).
   
-## <a name="restrictions"></a>Restrictions  
+## <a name="restrictions"></a>Restrições  
 Não há suporte para uso de DBCC DBREINDEX nos seguintes objetos:
 -   Tabelas do sistema  
 -   Índices espaciais  
@@ -92,7 +92,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 O chamador precisa ser o proprietário da tabela ou ser membro da função de servidor fixa **sysadmin**, da função de banco de dados fixa **db_owner** ou da função de banco de dados fixa **db_ddladmin**.
   
 ## <a name="examples"></a>Exemplos  
-### <a name="a-rebuilding-an-index"></a>A. Recriando um índice  
+### <a name="a-rebuilding-an-index"></a>a. Recriando um índice  
 O exemplo a seguir recria o índice clusterizado `Employee_EmployeeID` com um fator de preenchimento de `80` na tabela `Employee` no banco de dados `AdventureWorks`.
   
 ```sql  

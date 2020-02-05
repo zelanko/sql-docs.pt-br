@@ -21,10 +21,10 @@ ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3dee5b4c6522afd93591d1e8aa0c94052d41d9bd
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71711063"
 ---
 # <a name="parameterized-filters---parameterized-row-filters"></a>Filtros com parâmetros – Filtros de linha com parâmetros
@@ -38,7 +38,7 @@ ms.locfileid: "71711063"
  Para definir ou modificar um filtro de linha com parâmetros, consulte [Definir e modificar um filtro de linha com parâmetros para um artigo de mesclagem](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
   
 ## <a name="how-parameterized-filters-work"></a>Como funcionam os filtros com parâmetros  
- Um filtro de linha com parâmetros usa uma cláusula WHERE para selecionar os dados apropriados a serem publicados. Em vez de especificar um valor literal na cláusula (como você faria com um filtro de linha estático), você especifica uma das seguintes funções do sistema ou ambas: SUSER_SNAME() e HOST_NAME(). Funções definidas pelo usuário também podem ser usadas, mas devem incluir SUSER_SNAME() ou HOST_NAME() no corpo da função, ou avaliar uma dessas funções de sistema (como `MyUDF(SUSER_SNAME()`). Se uma função definida pelo usuário incluir SUSER_SNAME() ou HOST_NAME() no corpo da função, você não pode passar parâmetros para a função.  
+ Um filtro de linha com parâmetros usa uma cláusula WHERE para selecionar os dados apropriados a serem publicados. Em vez de especificar um valor literal na cláusula (como faria com um filtro de linha estático), você especifica uma das seguintes funções do sistema ou ambas: SUSER_SNAME() e HOST_NAME(). Funções definidas pelo usuário também podem ser usadas, mas devem incluir SUSER_SNAME() ou HOST_NAME() no corpo da função, ou avaliar uma dessas funções de sistema (como `MyUDF(SUSER_SNAME()`). Se uma função definida pelo usuário incluir SUSER_SNAME() ou HOST_NAME() no corpo da função, você não pode passar parâmetros para a função.  
   
  As funções de sistema SUSER_SNAME() e HOST_NAME() não são específicas para replicação de mesclagem, mas são usadas para por replicação de mesclagem para filtragem com parâmetros:  
   
@@ -125,7 +125,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
 ### <a name="setting-partition-options"></a>Definindo 'opções de partição’  
  Você especifica um valor para a propriedade **opções de partição** ao criar um artigo, de acordo com a maneira em que os dados na tabela filtrada serão compartilhados pelos Assinantes. A propriedade pode ser definida com um dentre quatro valores usando [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md), [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)e a caixa de diálogo **Propriedades do Artigo** . A propriedade pode ser definida com um dentre dois valores usando as caixas de diálogo **Adicionar Filtro** ou **Editar Filtro** , que estão disponíveis no Assistente de Nova Publicação e na caixa de diálogo **Propriedades de Publicação** . A tabela a seguir resume os valores disponíveis:  
   
-|Descrição|Valor em Adicionar filtro e Editar Filtro|Valor em Propriedades do Artigo|Valor em procedimentos armazenados|  
+|DESCRIÇÃO|Valor em Adicionar filtro e Editar Filtro|Valor em Propriedades do Artigo|Valor em procedimentos armazenados|  
 |-----------------|-----------------------------------------|---------------------------------|--------------------------------|  
 |Os dados nas partições estão sobrepostos e o Assinante pode atualizar colunas referenciadas em um filtro com parâmetros.|**Uma linha dessa tabela irá para múltiplas assinaturas**|**Com sobreposição**|**0**|  
 |Os dados nas partições estão sobrepostos e o Assinante não pode atualizar colunas referenciadas em um filtro com parâmetros.|N/A*|**Com sobreposição, não permitir alterações de dados fora da partição**|**1**|  
