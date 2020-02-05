@@ -25,10 +25,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8a661006b04f5af7116d03bf736bdabc70cf421c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68075160"
 ---
 # <a name="gt-greater-than-or-equal-to-transact-sql"></a>&gt;= (maior ou igual a) (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68075160"
 
   Compara duas expressões por maior ou igual a (um operador de comparação).  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -49,16 +49,16 @@ expression >= expression
  É qualquer [expressão](../../t-sql/language-elements/expressions-transact-sql.md) válida. Ambas as expressões devem ter tipos de dados implicitamente conversíveis. A conversão depende das regras de [precedência de tipo de dados](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
 ## <a name="result-types"></a>Tipos de resultado  
- Booliano  
+ Boolean  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Ao comparar expressões não nulas, o resultado será TRUE se o operando da esquerda tiver um valor maior ou igual ao do operando da direita; caso contrário, o resultado será FALSE.  
   
  Ao contrário do operador de comparação = (igualdade), o resultado da comparação >= de dois valores NULL não depende da configuração de ANSI_NULLS.  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using--in-a-simple-query"></a>A. Como usar >= em uma consulta simples  
+### <a name="a-using--in-a-simple-query"></a>a. Como usar >= em uma consulta simples  
  O exemplo a seguir retorna todas as linhas da tabela `HumanResources.Department` contendo um valor em `DepartmentID` que seja superior ou igual ao valor 13.  
   
 ```  

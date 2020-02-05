@@ -17,10 +17,10 @@ ms.assetid: 1bf33885-9c5b-47e4-a549-f5920b66a1de
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: eb4812b48c9465659ca8c0739f0411a9e65660bf
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293866"
 ---
 # <a name="transfer-jobs-task"></a>Tarefa Transferir Trabalhos
@@ -113,7 +113,7 @@ ms.locfileid: "71293866"
   
  As opções desta propriedade estão listadas na seguinte tabela:  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |**Verdadeiro**|Copia todas as tarefas.|  
 |**Falso**|Copia apenas os trabalhos especificados.|  
@@ -131,18 +131,18 @@ ms.locfileid: "71293866"
   
  As opções desta propriedade estão listadas na seguinte tabela:  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |**FailTask**|A tarefa irá falhar se já existirem trabalhos com o mesmo nome no servidor de destino.|  
 |**Overwrite**|A tarefa irá substituir trabalhos de mesmo nome no servidor de destino.|  
-|**Skip**|A tarefa irá ignorar os trabalhos de mesmo nome que existem no servidor de destino.|  
+|**Ignorar**|A tarefa irá ignorar os trabalhos de mesmo nome que existem no servidor de destino.|  
   
  **EnableJobsAtDestination**  
  Selecione se os trabalhos copiados para o servidor de destino devem ser habilitados.  
   
  As opções desta propriedade estão listadas na seguinte tabela:  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |**Verdadeiro**|Habilita trabalhos no servidor de destino.|  
 |**Falso**|Desabilita trabalhos no servidor de destino.|  

@@ -23,13 +23,13 @@ ms.assetid: 6a7382cf-a360-4d62-b9d2-5d747f56f076
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 63744a6731e7c57a21a821ce7ab65cb49e095e67
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68071528"
 ---
-# <a name="fileid-transact-sql"></a>FILE_ID (Transact-SQL)
+# <a name="file_id-transact-sql"></a>FILE_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 Para o nome lógico específico para um arquivo de componente do banco de dados atual, essa função retorna o número de identificação (ID) do arquivo.  
@@ -37,7 +37,7 @@ Para o nome lógico específico para um arquivo de componente do banco de dados 
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md).  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -52,7 +52,7 @@ Uma expressão do tipo **sysname**, que representa o nome lógico do arquivo cuj
 ## <a name="return-types"></a>Tipos de retorno  
 **smallint**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 *file_name* corresponde ao nome de arquivo lógico exibido na coluna name nas exibições do catálogo sys.master_files ou sys.database_files.  
 
 O `FILE_ID` retorna `NULL` se *file_name* não corresponde ao nome lógico de um arquivo de componente do banco de dados atual.

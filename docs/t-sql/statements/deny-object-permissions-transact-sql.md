@@ -16,10 +16,10 @@ ms.assetid: 0b8d3ddc-38c0-4241-b7bb-ee654a5081aa
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 05f0d6d99ca4e5274882ec5d4e751ba658b62a1e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68114798"
 ---
 # <a name="deny-object-permissions-transact-sql"></a>Permissões de objeto DENY (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "68114798"
   Nega permissões em um membro da classe OBJECT de protegíveis. Esses são membros da classe OBJECT: tabelas, exibições, funções com valor de tabela, procedimentos armazenados, procedimentos armazenados estendidos, funções escalares, funções de agregação, filas de serviço e sinônimos.  
 
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -111,7 +111,7 @@ PRIVILEGES
  *Database_user_with_no_login*  
  Especifica um usuário do banco de dados sem nenhuma entidade de segurança correspondente no nível de servidor.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  As informações sobre objetos são visível em várias exibições do catálogo. Para obter mais informações, veja [Exibições de catálogo de objeto&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md).  
   
  Um objeto é um protegível em nível de esquema contido pelo esquema que é seu pai na hierarquia de permissões. As permissões mais específicas e limitadas que podem ser negadas em um objeto são listadas na tabela a seguir, junto com as permissões mais gerais que as incluem implicitamente.  
@@ -139,7 +139,7 @@ PRIVILEGES
 ## <a name="examples"></a>Exemplos  
 Os exemplos a seguir usam o banco de dados AdventureWorks.
   
-### <a name="a-denying-select-permission-on-a-table"></a>A. Negação da permissão SELECT em uma tabela  
+### <a name="a-denying-select-permission-on-a-table"></a>a. Negação da permissão SELECT em uma tabela  
  O exemplo a seguir nega a permissão `SELECT` ao usuário `RosaQdM` na tabela `Person.Address`.  
   
 ```  

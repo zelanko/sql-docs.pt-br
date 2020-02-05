@@ -11,10 +11,10 @@ ms.assetid: 66367092-9f6e-40e6-90bd-81efb078ab70
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 77fea02dc933b63fff97b359673ab702e63f50ea
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295560"
 ---
 # <a name="catalogcreate_environment-ssisdb-database"></a>catalog.create_environment (Banco de Dados SSISDB)
@@ -48,7 +48,7 @@ catalog.create_environment [@folder_name =] folder_name
  0 (êxito)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- None  
+ Nenhum  
   
 ## <a name="permissions"></a>Permissões  
  Este procedimento armazenado exige uma das seguintes permissões:  
@@ -68,7 +68,7 @@ catalog.create_environment [@folder_name =] folder_name
   
 -   Um ambiente que tem o mesmo nome já existe na pasta especificada  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O nome do ambiente deve ser exclusivo na pasta.  
   
   

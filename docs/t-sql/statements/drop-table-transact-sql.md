@@ -38,10 +38,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fc10141cc2b6c069894868b2a153abc31c4c250c
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70155825"
 ---
 # <a name="drop-table-transact-sql"></a>DROP TABLE (Transact-SQL)
@@ -49,7 +49,7 @@ ms.locfileid: "70155825"
 
   Remove uma ou mais definições de tabela e todos os dados, índices, gatilhos, restrições e especificações de permissão dessas tabelas. Qualquer exibição ou procedimento armazenado que faça referência à tabela descartada deverá ser descartado explicitamente utilizando [DROP VIEW](../../t-sql/statements/drop-view-transact-sql.md) ou [DROP PROCEDURE](../../t-sql/statements/drop-procedure-transact-sql.md). Para relatar as dependências em uma tabela, use [sys.dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md).  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -74,7 +74,7 @@ DROP TABLE { database_name.schema_name.table_name | schema_name.table_name | tab
  O Banco de Dados SQL do Azure oferece suporte ao formato de nome de três partes database_name.[schema_name].object_name quando o database_name é o banco de dados atual ou o database_name é tempdb e o object_name começa com #. O Banco de Dados SQL do Azure não oferece suporte a nomes de quatro partes.  
   
  *IF EXISTS*  
- **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+ **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
  Remove condicionalmente a tabela somente se ela já existe.  
   
@@ -84,7 +84,7 @@ DROP TABLE { database_name.schema_name.table_name | schema_name.table_name | tab
  *table_name*  
  É o nome da tabela a ser removida.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  DROP TABLE não pode ser usado para descartar uma tabela que é referenciada por uma restrição FOREIGN KEY. A restrição FOREIGN KEY que faz referência ou a tabela de referência deve ser primeiramente descartada. Se a tabela de referência e a tabela que contém a chave primária forem descartadas na mesma instrução DROP TABLE, a tabela de referência deverá ser listada em primeiro lugar.  
   
  Podem ser descartadas várias tabelas em qualquer banco de dados. Se uma tabela que está sendo descartada fizer referência à chave primária de outra tabela que também está sendo descartada, a tabela de referência com a chave estrangeira deverá ser listada antes da tabela que contém a chave primária que está sendo referenciada.  
@@ -105,7 +105,7 @@ DROP TABLE { database_name.schema_name.table_name | schema_name.table_name | tab
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-dropping-a-table-in-the-current-database"></a>A. Descartando uma tabela no banco de dados atual  
+### <a name="a-dropping-a-table-in-the-current-database"></a>a. Descartando uma tabela no banco de dados atual  
  O exemplo a seguir remove a tabela `ProductVendor1` e seus dados e índices do banco de dados atual.  
   
 ```  
@@ -140,7 +140,7 @@ SELECT * FROM #temptable;
   
 ### <a name="d-dropping-a-table-using-if-exists"></a>D. Descartando uma tabela usando IF EXISTS  
   
-**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
  O exemplo a seguir cria uma tabela chamada T1. Em seguida, a segunda instrução remove a tabela. A terceira instrução não realiza nenhuma ação porque a tabela já foi excluída, porém, não causa um erro.  
   

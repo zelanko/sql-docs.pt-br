@@ -1,10 +1,7 @@
 ---
-title: Exportar informações de servidor registrado (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: Exportar informações de servidor registrado
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -16,16 +13,22 @@ helpviewer_keywords:
 ms.assetid: b65e168f-b6bf-489c-b8ad-3b8644acf0b6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bb3b4001453ce7c7c256c101244970ff788310b0
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 673cde844a678e54ccb5622a55e2d546cf7e9bc9
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264738"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246533"
 ---
 # <a name="export-registered-server-information-sql-server-management-studio"></a>Exportar informações de servidor registrado (SQL Server Management Studio)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  Este tópico descreve como salvar e exportar informações de servidor registrado no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]e distribuí-las para outros empregados ou servidores. É possível usar esse recurso de exportação para apresentar uma interface com o usuário consistente em computadores múltiplos.  
+
+Este tópico descreve como salvar e exportar informações de servidor registrado no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]e distribuí-las para outros empregados ou servidores. É possível usar esse recurso de exportação para apresentar uma interface com o usuário consistente em computadores múltiplos.  
   
  Exportar e, depois, importar os arquivos de Servidores Registrados permite que você configure facilmente vários computadores com os mesmos servidores em Servidores Registrados. Isso é útil quando se gerencia um grande número de servidores de computadores em diversos locais ou quando você deseja configurar um usuário menos experiente com configurações de conexão básica.  
   

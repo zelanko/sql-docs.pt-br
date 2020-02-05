@@ -16,10 +16,10 @@ ms.assetid: bea70100-ac98-4625-8748-ef7cc0b111ea
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d42af84c320eadb167126325299fb25cadaed2dd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67972125"
 ---
 # <a name="seturl-method-sqlserverdatasource"></a>Método setURL (SQLServerDataSource)
@@ -34,12 +34,12 @@ ms.locfileid: "67972125"
 public void setURL(java.lang.String url)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *url*  
   
  Uma **String** que contém a URL.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Por motivos de segurança, você não deve incluir a senha na URL fornecida ao método setURL. Isso porque os Servidores de Aplicativos Java de terceiros muito frequentemente exibirão o valor definido para a propriedade URL em suas respectivas interfaces de usuário da configuração da fonte de dados. Em vez disso, use o método [setPassword](../../../connect/jdbc/reference/setpassword-method-sqlserverdatasource.md) para definir o valor da senha. Os Servidores de Aplicativos Java não exibirão uma senha que é definida em suas respectivas fontes de dados na interface de usuário da configuração.  
   
 > [!NOTE]  

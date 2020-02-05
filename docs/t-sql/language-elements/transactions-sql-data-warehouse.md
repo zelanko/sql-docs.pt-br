@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 21e6d25305bd6abf4a3dc4555f2148a2fe385187
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68121594"
 ---
 # <a name="transactions-sql-data-warehouse"></a>Transações (SQL Data Warehouse)
@@ -30,7 +30,7 @@ ms.locfileid: "68121594"
   
 -   *Transações de confirmação automática*: começam automaticamente em uma sessão e não começam com a instrução BEGIN TRANSACTION. Quando a configuração de AUTOCOMMIT for ON, cada instrução será executada em uma transação e não será necessária nenhuma instrução COMMIT ou ROLLBACK explícita. Quando a configuração de AUTOCOMMIT for OFF, uma instrução COMMIT ou ROLLBACK será necessária para determinar o resultado da transação. No [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], as transações de confirmação automática começam imediatamente após uma instrução COMMIT ou ROLLBACK, ou após uma instrução SET AUTOCOMMIT OFF.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -55,7 +55,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
  SET AUTOCOMMIT { **ON** | OFF }  
  Determina como as transações podem ser iniciadas e terminadas.  
   
- ON  
+ ATIVADO  
  Cada instrução é executada em sua própria transação e não é necessária nenhuma instrução COMMIT ou ROLLBACK explícita. As transações explícitas são permitidas quando AUTOCOMMIT é ON.  
   
  OFF  
@@ -78,7 +78,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
   
  Se um erro que não seja de instrução de tempo de execução impedir que uma transação explícita seja concluída com sucesso, o [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] reverterá a transação e liberará todos os recursos mantidos pela transação automaticamente. Por exemplo, se a conexão de rede do cliente com uma instância do [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] for interrompida ou o cliente fizer logoff do aplicativo, todas as transações não confirmadas para a conexão serão revertidas quando a rede notificar a instância sobre a interrupção.  
   
- Se ocorrer um erro de instrução de tempo de execução em um lote, o [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] se comportará de forma consistente com [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **XACT_ABORT** definido como **ON** e a transação inteira será revertida. Para obter mais informações sobre a configuração **XACT_ABORT**, confira [SET XACT_ABORT (Transact-SQL)](https://msdn.microsoft.com/library/ms188792.aspx).  
+ Se ocorrer um erro de instrução de tempo de execução em um lote, o [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] se comportará de forma consistente com [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**XACT_ABORT** definido como **ON** e a transação inteira será revertida. Para obter mais informações sobre a configuração **XACT_ABORT**, confira [SET XACT_ABORT (Transact-SQL)](https://msdn.microsoft.com/library/ms188792.aspx).  
   
 ## <a name="general-remarks"></a>Comentários gerais  
  Uma sessão só pode executar uma única transação em um determinado momento. Não há compatibilidade com pontos de salvamento e transações aninhadas.  
@@ -101,7 +101,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="a-using-an-explicit-transaction"></a>A. Usando uma transação explícita  
+### <a name="a-using-an-explicit-transaction"></a>a. Usando uma transação explícita  
   
 ```  
 BEGIN TRANSACTION;  

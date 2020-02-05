@@ -11,10 +11,10 @@ ms.assetid: eb29b28c-3159-41ec-b3d7-fce5b2f2be55
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 52ce0e96ce131b1ea1a69f2ba9f7466850cbf4cf
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71290940"
 ---
 # <a name="xml-source-custom-properties"></a>Propriedades personalizadas da origem XML
@@ -26,18 +26,18 @@ ms.locfileid: "71290940"
   
  A tabela a seguir descreve as propriedades personalizadas da origem XML. Todas as propriedades são de leitura/gravação.  
   
-|Nome da propriedade|Tipo de Dados|Descrição|  
+|Nome da propriedade|Tipo de Dados|DESCRIÇÃO|  
 |-------------------|---------------|-----------------|  
 |AccessMode|Integer|O modo usado para acessar os dados XML.|  
-|UseInlineSchema|Booliano|Um valor que indica se deve ser usada uma definição de esquema embutido dentro da origem XML. O valor padrão dessa propriedade é **False**.|  
-|XMLData|Cadeia de caracteres|O arquivo ou variáveis dos quais é possível recuperar os dados XML.<br /><br /> O valor dessa propriedade pode ser especificado com uma expressão de propriedades.|  
-|XMLSchemaDefinition|Cadeia de caracteres|O caminho e nome de arquivo do arquivo de definição de esquema (.xsd).<br /><br /> O valor dessa propriedade pode ser especificado com uma expressão de propriedades.|  
+|UseInlineSchema|Boolean|Um valor que indica se deve ser usada uma definição de esquema embutido dentro da origem XML. O valor padrão dessa propriedade é **False**.|  
+|XMLData|String|O arquivo ou variáveis dos quais é possível recuperar os dados XML.<br /><br /> O valor dessa propriedade pode ser especificado com uma expressão de propriedades.|  
+|XMLSchemaDefinition|String|O caminho e nome de arquivo do arquivo de definição de esquema (.xsd).<br /><br /> O valor dessa propriedade pode ser especificado com uma expressão de propriedades.|  
   
  A tabela a seguir descreve as propriedades personalizadas da saída da origem XML. Todas as propriedades são de leitura/gravação.  
   
-|Nome da propriedade|Tipo de Dados|Descrição|  
+|Nome da propriedade|Tipo de Dados|DESCRIÇÃO|  
 |-------------------|---------------|-----------------|  
-|RowsetID|Cadeia de caracteres|Um valor que identifica o conjunto de linhas associado à saída.|  
+|RowsetID|String|Um valor que identifica o conjunto de linhas associado à saída.|  
   
  As colunas de saída da origem XML não têm nenhuma propriedade personalizada.  
   

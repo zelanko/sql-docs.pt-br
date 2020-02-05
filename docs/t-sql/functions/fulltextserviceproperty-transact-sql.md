@@ -21,10 +21,10 @@ ms.assetid: b7dcacb0-af83-4807-9d1e-49148b56b59c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 726b071c222580ec75091477dc68509cdb71e1e3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67940258"
 ---
 # <a name="fulltextserviceproperty-transact-sql"></a>FULLTEXTSERVICEPROPERTY (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "67940258"
 
   Retorna informações relacionadas às propriedades do Mecanismo de Texto Completo. Essas propriedades podem ser definidas e recuperadas usando **sp_fulltext_service**.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,7 +46,7 @@ FULLTEXTSERVICEPROPERTY ('property')
  É uma expressão contendo o nome da propriedade em nível de serviço de texto completo. A tabela lista as propriedades e fornece descrições das informações retornadas.  
   
 > [!NOTE]
->  As seguintes propriedades serão removidas em uma versão futura do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **ConnectTimeout**, **DataTimeout** e **ResourceUsage**. Evite usá-las em um novo projeto de desenvolvimento e planeje a modificação dos aplicativos que as utilizam atualmente.  
+>  As propriedades a seguir serão removidas em uma versão futura de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **ConnectTimeout**, **DataTimeout** e **ResourceUsage**. Evite usá-las em um novo projeto de desenvolvimento e planeje a modificação dos aplicativos que as utilizam atualmente.  
   
 |Propriedade|Valor|  
 |--------------|-----------|  

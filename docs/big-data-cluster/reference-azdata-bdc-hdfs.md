@@ -9,20 +9,20 @@ ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e20e7574109ccce4caa6b4d9fd84a4fef65cf0fa
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 74af88306288adaa584e26c943bd8c6c743fa315
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531783"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74821409"
 ---
 # <a name="azdata-bdc-hdfs"></a>azdata bdc hdfs
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-O artigo a seguir fornece referência para os comandos `sql` na ferramenta `azdata`. Para obter mais informações sobre outros comandos `azdata`, confira [referência de azdata](reference-azdata.md)
+O artigo a seguir fornece referência para os comandos `bdc hdfs` na ferramenta `azdata`. Para obter mais informações sobre outros comandos `azdata`, confira [referência de azdata](reference-azdata.md)
 
-## <a name="commands"></a>Commands
+## <a name="commands"></a>Comandos
 |     |     |
 | --- | --- |
 [azdata bdc hdfs status](reference-azdata-bdc-hdfs-status.md) | Comandos de status do serviço do hdfs.
@@ -70,7 +70,7 @@ Status da lista
 ```bash
 azdata bdc hdfs ls --path '/tmp'
 ```
-### <a name="required-parameters"></a>Parâmetros necessários
+### <a name="required-parameters"></a>Parâmetros obrigatórios
 #### `--path -p`
 O caminho para o status da lista.
 ### <a name="global-arguments"></a>Argumentos globais
@@ -94,7 +94,7 @@ Check for file or directory existance.
 ```bash
 azdata bdc hdfs exists --path '/tmp'
 ```
-### <a name="required-parameters"></a>Parâmetros necessários
+### <a name="required-parameters"></a>Parâmetros obrigatórios
 #### `--path -p`
 Caminho para verificar a existência.
 ### <a name="global-arguments"></a>Argumentos globais
@@ -118,7 +118,7 @@ Make directory.
 ```bash
 azdata bdc hdfs mkdir --path '/tmp'
 ```
-### <a name="required-parameters"></a>Parâmetros necessários
+### <a name="required-parameters"></a>Parâmetros obrigatórios
 #### `--path -p`
 Nome do diretório a ser criado.
 ### <a name="global-arguments"></a>Argumentos globais
@@ -143,7 +143,7 @@ Mover arquivo ou diretório.
 ```bash
 azdata bdc hdfs mv --source-path '/tmp' --target-path '/dest'
 ```
-### <a name="required-parameters"></a>Parâmetros necessários
+### <a name="required-parameters"></a>Parâmetros obrigatórios
 #### `--source-path -s`
 O diretório a ser movido.
 #### `--target-path -t`
@@ -170,7 +170,7 @@ Criar arquivo.
 ```bash
 azdata bdc hdfs create --path '/tmp/test.txt' --data "This is a test."
 ```
-### <a name="required-parameters"></a>Parâmetros necessários
+### <a name="required-parameters"></a>Parâmetros obrigatórios
 #### `--path -p`
 Nome do arquivo que será criado.
 #### `--data -d`
@@ -198,7 +198,7 @@ Ler arquivo.
 ```bash
 azdata bdc hdfs cat --path '/tmp/test.txt'
 ```
-### <a name="required-parameters"></a>Parâmetros necessários
+### <a name="required-parameters"></a>Parâmetros obrigatórios
 #### `--path -p`
 Nome do arquivo a ser lido.
 #### `--offset`
@@ -226,7 +226,7 @@ Remover um arquivo ou diretório.
 ```bash
 azdata bdc hdfs rm --path '/tmp'
 ```
-### <a name="required-parameters"></a>Parâmetros necessários
+### <a name="required-parameters"></a>Parâmetros obrigatórios
 #### `--path -p`
 Nome do arquivo a ser removido.
 ### <a name="global-arguments"></a>Argumentos globais
@@ -250,7 +250,7 @@ Remover diretório recursivamente.
 ```bash
 azdata bdc hdfs rmr --path '/tmp'
 ```
-### <a name="required-parameters"></a>Parâmetros necessários
+### <a name="required-parameters"></a>Parâmetros obrigatórios
 #### `--path -p`
 Nome do arquivo a ser removido recursivamente.
 ### <a name="global-arguments"></a>Argumentos globais
@@ -275,7 +275,7 @@ Alterar a permissão do arquivo ou diretório.
 ```bash
 azdata bdc hdfs chmod --permission 775 --path '/tmp/test.txt'
 ```
-### <a name="required-parameters"></a>Parâmetros necessários
+### <a name="required-parameters"></a>Parâmetros obrigatórios
 #### `--path -p`
 Nome do arquivo ou diretório no qual definir permissões.
 #### `--permission`
@@ -303,7 +303,7 @@ Alterar o proprietário e o grupo.
 ```bash
 azdata bdc hdfs chown --owner hdfs --group superusergroup --path '/tmp/test.txt'
 ```
-### <a name="required-parameters"></a>Parâmetros necessários
+### <a name="required-parameters"></a>Parâmetros obrigatórios
 #### `--path -p`
 Nome do arquivo ou diretório cujo proprietário será alterado.
 #### `--owner`
@@ -332,7 +332,7 @@ Copie um arquivo ou um diretório entre o computador local e o HDFS.
 ```bash
 azdata bdc hdfs cp --from_path '/tmp/test.txt --to-path 'hdfs:/user/me/test.txt'
 ```
-### <a name="required-parameters"></a>Parâmetros necessários
+### <a name="required-parameters"></a>Parâmetros obrigatórios
 #### `--from-path -f`
 Nome do caminho do qual copiar.  Prefixe o caminho com "hdfs:" para indicar um caminho HDFS.
 #### `--to-path -t`

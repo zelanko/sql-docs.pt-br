@@ -11,10 +11,10 @@ ms.assetid: b79e3a06-22c0-40e5-8933-1b3414db3329
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: de1e0cddcee34685e5921b7cc31837a301f44166
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295339"
 ---
 # <a name="catalogset_environment_reference_type-ssisdb-database"></a>catalog.set_environment_reference_type (banco de dados SSISDB)
@@ -48,7 +48,7 @@ catalog.set_environment_reference_location [ @reference_id = reference_id
  0 (êxito)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- None  
+ Nenhum  
   
 ## <a name="permissions"></a>Permissões  
  Este procedimento armazenado exige uma das seguintes permissões:  
@@ -68,7 +68,7 @@ catalog.set_environment_reference_location [ @reference_id = reference_id
   
 -   Uma referência absoluta está especificada usando o caractere `A` no parâmetro *reference_location*, mas o nome da pasta não foi especificado com o parâmetro *environment_folder_name*.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Um projeto pode ter referências de ambiente relativas ou absolutas. As referências relativas fazem referência ao ambiente pelo nome e requerem que ele resida na mesma pasta do projeto. As referências absolutas fazem referência ao ambiente por nome e pasta. Elas podem fazer referência a ambientes que residam em uma pasta diferente da pasta do projeto. Um projeto pode fazer referência a vários ambientes.  
   
 > [!IMPORTANT]  

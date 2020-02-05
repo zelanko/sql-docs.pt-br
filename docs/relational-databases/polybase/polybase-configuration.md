@@ -9,10 +9,10 @@ ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
 ms.openlocfilehash: ef4222b866be7979410f6a3f97dce8a4fc24ecd7
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909426"
 ---
 # <a name="polybase-configuration-and-security-for-hadoop"></a>Configuração e segurança do PolyBase para Hadoop
@@ -171,7 +171,7 @@ Para se conectar a um cluster Hadoop protegido por Kerberos usando MIT KDC:
 
 ## <a name="next-steps"></a>Próximas etapas  
 
-Para obter mais informações, consulte os artigos a seguir.
+Para obter mais informações, consulte os seguintes artigos:
 
 [Configurar o PolyBase para acessar dados externos no Hadoop](polybase-configure-hadoop.md)
 [Visão geral do PolyBase](../../relational-databases/polybase/polybase-guide.md)

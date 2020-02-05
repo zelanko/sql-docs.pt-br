@@ -1,10 +1,9 @@
 ---
-title: Criar um ambiente multisservidor | Microsoft Docs
-ms.custom: ''
+title: Criar um ambiente multisservidor
+ms.custom: seo-lt-2019
 ms.date: 01/30/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,13 +14,15 @@ helpviewer_keywords:
 ms.assetid: edc2b60d-15da-40a1-8ba3-f1d473366ee6
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 27ef7467b0a5877e75f0391c3afe5ea88003c8c4
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 8b01a04dfc4dbf31c08d595de184cd64f635e2c7
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264819"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245905"
 ---
 # <a name="create-a-multiserver-environment"></a>Criar um ambiente multisservidor
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -55,12 +56,12 @@ Considere as seguintes questões ao criar um ambiente multisservidor:
 ## <a name="related-tasks"></a>Related Tasks  
 Os tópicos a seguir documentam tarefas comuns de criação de um ambiente multisservidor.  
   
-|Descrição|Tópico|  
+|DESCRIÇÃO|Tópico|  
 |---------------|---------|  
 |Descreve como criar um servidor mestre.|[Criar um servidor mestre](../../ssms/agent/make-a-master-server.md)|  
 |Descreve como criar um servidor de destino.|[Criar um servidor de destino](../../ssms/agent/make-a-target-server.md)|  
 |Descreve como inscrever um servidor de destino em um servidor mestre.|[Inscrever um servidor de destino em um servidor mestre](../../ssms/agent/enlist-a-target-server-to-a-master-server.md)|  
-|Descreve como cancelar a inscrição de um servidor de destino de um servidor mestre.|[Remover um servidor de destino de um servidor mestre](../../ssms/agent/defect-a-target-server-from-a-master-server.md)|  
+|Descreve como cancelar a inscrição de um servidor de destino de um servidor mestre.|[Defect a Target Server from a Master Server](../../ssms/agent/defect-a-target-server-from-a-master-server.md)|  
 |Descreve como cancelar a inscrição de vários servidores de destino de um servidor mestre.|[Remover vários servidores de destino de um servidor mestre](../../ssms/agent/defect-multiple-target-servers-from-a-master-server.md)|  
 |Descreve como verificar o status de um servidor de destino.|[sp_help_targetserver (Transact-SQL)](https://msdn.microsoft.com/f841d3bd-901a-4980-ad0b-1c6eeba3f717)<br /><br />[sp_help_targetservergroup (Transact-SQL)](https://msdn.microsoft.com/ec3a4a68-b591-431c-9518-053ede522d0c)|  
   

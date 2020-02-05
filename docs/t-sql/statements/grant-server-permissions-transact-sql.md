@@ -18,10 +18,10 @@ ms.assetid: 7e880a5a-3bdc-491f-a167-7a9ed338be7f
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 5eeda80431c403fd1178399b4c2c3500154acd48
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68050796"
 ---
 # <a name="grant-server-permissions-transact-sql"></a>Permissões de servidor GRANT (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "68050796"
 
   Concede permissões em um servidor. 
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -83,7 +83,7 @@ GRANT permission [ ,...n ]
  *server_role*  
  Especifica uma função de servidor definida pelo usuário.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  As permissões no escopo de servidor podem ser concedidas somente quando o banco de dados atual é mestre.  
   
  As informações sobre permissões do servidor podem ser vistas na exibição do catálogo [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) e as informações sobre entidades de segurança do servidor podem ser vistas na exibição do catálogo [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md). As informações sobre a associação de funções de servidor podem ser vistas na exibição do catálogo [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md).  
@@ -127,7 +127,7 @@ GRANT permission [ ,...n ]
 |VIEW ANY DEFINITION|CONTROL SERVER|  
 |VIEW SERVER STATE|ALTER SERVER STATE|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  As três permissões de servidor a seguir foram adicionadas ao [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
   
  Permissão **CONNECT ANY DATABASE**  
@@ -144,7 +144,7 @@ GRANT permission [ ,...n ]
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-granting-a-permission-to-a-login"></a>A. Concedendo uma permissão a um logon  
+### <a name="a-granting-a-permission-to-a-login"></a>a. Concedendo uma permissão a um logon  
  O exemplo a seguir concede a permissão `CONTROL SERVER` o logon no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de `TerryEminhizer`.  
   
 ```  
