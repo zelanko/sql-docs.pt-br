@@ -17,10 +17,10 @@ ms.assetid: 2e55fa98-aa22-4baa-a516-7c233a33e212
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: a6e5a0072db244835238c1b8623c667f03e653ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68127344"
 ---
 # <a name="tostring-geometry-data-type"></a>ToString (tipo de dados geometry)
@@ -38,9 +38,9 @@ Retorna a representação WKT (Well-Known Text) do OGC (Open Geospatial Consorti
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **nvarchar(max)**  
   
- Tipo de retorno CLR: **SqlString**  
+ Tipo de retorno do CLR: **SqlString**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse método retornará a cadeia de caracteres "Nulo" quando chamado em instâncias nulas.  
   
  Em instâncias não nulas, esse método é equivalente a usar `AsTextZM().`  

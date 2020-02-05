@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 0b2e3d4e-03b7-4c31-8f96-48648d750010
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: a0590a339b6357bdc102420c4c68d4a92fc0519c
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 5c7af0d388deef7b0f8249de759b688c4f49124d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68764080"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287484"
 ---
 # <a name="publisher-information-publications"></a>Informações do Publicador, Publicações
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -27,13 +27,13 @@ ms.locfileid: "68764080"
 ## <a name="options"></a>Opções  
  Para alterar a forma como a grade exibe os dados, clique com o botão direito do mouse na grade e clique em uma destas opções:  
   
--   **Classificar**: classifique uma ou mais colunas na caixa de diálogo **Classificar Colunas**.  
+-   **Classificar**: classifique uma ou mais colunas na caixa de diálogo **Classificar Colunas** .  
   
--   **Escolher Colunas para Mostrar**: selecione quais colunas devem ser exibidas e a ordem em que devem ser exibidas, na caixa de diálogo **Selecionar Colunas**.  
+-   **Selecionar Colunas para Mostrar**: selecione quais colunas devem ser exibidas e a ordem em que devem ser exibidas, na caixa de diálogo **Selecionar Colunas** .  
   
--   **Filtrar**: filtre linhas na grade com base em valores de colunas da caixa de diálogo **Configurações de Filtro**.  
+-   **Filtrar**: filtre linhas na grade com base em valores de colunas da caixa de diálogo **Configurações de Filtro** .  
   
--   **Limpar Filtro**: Limpe todas as configurações de filtro para a grade.  
+-   **Limpar Filtro**: limpe as configurações de filtro da grade.  
   
  As configurações de filtro são específicas de cada grade. A seleção e a classificação da coluna são aplicadas a todas as grades do mesmo tipo, como a grade de publicações de cada Publicador.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "68764080"
 -   Na replicação de instantâneo, "sincronizando" significa que o Distribution Agent está sendo executado e que os dados estão sendo replicados no momento.  
   
  **Desempenho Médio Atual** e **Pior Desempenho Atual**  
- Somente[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versões posteriores. A classificação de desempenho médio e do pior desempenho atual, respectivamente, para todas as assinaturas em uma publicação. As classificações têm base nas medidas mais atuais calculadas pelo Replication Monitor e não refletem o desempenho de uma assinatura ao longo de tempo.  
+ Somente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versões posteriores. A classificação de desempenho médio e do pior desempenho atual, respectivamente, para todas as assinaturas em uma publicação. As classificações têm base nas medidas mais atuais calculadas pelo Replication Monitor e não refletem o desempenho de uma assinatura ao longo de tempo.  
   
  Para replicação transacional, o Replication Monitor exibe só um valor para publicações com limites de desempenho definidos. Se os limites de desempenho não estiverem definidos para uma publicação, essa coluna exibirá **Não Habilitado**. Para replicação de mesclagem, o Replication Monitor exibe um valor após a ocorrência de cinco sincronizações com 50 ou mais alterações cada no mesmo tipo de conexão (discada ou LAN). Se houver menos de cinco sincronizações com 50 ou mais alterações ou se a sincronização mais recente tiver menos de 50 alterações, essa coluna ficará em branco.  
   

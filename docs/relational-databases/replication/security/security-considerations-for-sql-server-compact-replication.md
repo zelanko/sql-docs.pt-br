@@ -14,10 +14,10 @@ ms.assetid: 09f591a1-cfae-4a08-b04d-50bd02e7b71a
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: bed264287d4e2aa6bdb8eabb0d846688fbf157c6
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75321653"
 ---
 # <a name="security-considerations-for-sql-server-compact-replication"></a>Considerações de segurança para SQL Server Compact Replication

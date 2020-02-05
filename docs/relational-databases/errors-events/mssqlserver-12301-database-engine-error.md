@@ -12,22 +12,22 @@ ms.assetid: 69455df4-4ce9-4a6f-af5a-8bbc93e21245
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 2aaf59c9981cfdb7ed8be9fca5424a842a8fafe0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115966"
 ---
-# <a name="mssqlserver12301"></a>MSSQLSERVER_12301
+# <a name="mssqlserver_12301"></a>MSSQLSERVER_12301
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|12301|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|HK_UNSUPPORTED_NULLABLE_COLUMNS|  
 |Texto da mensagem|Não há suporte para colunas que permitem valor nulo na chave de índice com '*construct*'.|  

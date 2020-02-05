@@ -24,10 +24,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c4bdf8b5057fcbf405d78872f7329c70c754ff76
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843340"
 ---
 # <a name="session_user-transact-sql"></a>SESSION_USER (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "73843340"
 
   SESSION_USER retorna o nome de usuário do contexto atual no banco de dados atual.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,14 +46,14 @@ SESSION_USER
 ## <a name="return-types"></a>Tipos de retorno  
  **nvarchar(128)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Use SESSION_USER com restrições DEFAULT na instrução CREATE TABLE ou ALTER TABLE, ou use como qualquer função padrão. SESSION_USER pode ser inserida em uma tabela quando nenhum valor padrão é especificado. Essa função não utiliza argumentos. SESSION_USER pode ser usada em consultas.  
   
  Se SESSION_USER for chamada após uma alternância de contexto, retornará o nome de usuário do contexto representado.  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-session_user-to-return-the-user-name-of-the-current-session"></a>A. Usando SESSION_USER para retornar o nome de usuário da sessão atual  
+### <a name="a-using-session_user-to-return-the-user-name-of-the-current-session"></a>a. Usando SESSION_USER para retornar o nome de usuário da sessão atual  
  O exemplo a seguir declara uma variável como `nchar`, atribui o valor atual de `SESSION_USER` à variável e a imprime com uma descrição de texto.  
   
 ```  

@@ -19,16 +19,16 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f600f45241016bc2f5bb59faa89b5f45b317c90d
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72278146"
 ---
 # <a name="spatial-data-sql-server"></a>Dados espaciais (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  Os dados espaciais representam informações sobre o local físico e a forma de objetos geométricos. Esses objetos podem ser locais de pontos ou objetos mais complexos como países, estradas ou lagos.  
+  Os dados espaciais representam informações sobre a localização física e a forma dos objetos geométricos. Esses objetos podem ser localizações de pontos ou objetos mais complexos como países, estradas ou lagos.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte a dois tipos de dados espaciais: **geometria** e **geografia** .  
   
@@ -45,7 +45,7 @@ ms.locfileid: "72278146"
  [Criar, construir e consultar instâncias de geografia](../../relational-databases/spatial/create-construct-and-query-geography-instances.md)  
  Descreve os métodos que você pode usar com instâncias do tipo de dados de geografia.  
   
- [Consultar dados espaciais de vizinho mais próximo](../../relational-databases/spatial/query-spatial-data-for-nearest-neighbor.md)  
+ [Consultar vizinho mais próximo de dados espaciais](../../relational-databases/spatial/query-spatial-data-for-nearest-neighbor.md)  
  Descreve o padrão de consulta comum usado para localizar os objetos espaciais mais próximos a um objeto espacial específico.  
   
  [Criar, modificar e remover índices espaciais](../../relational-databases/spatial/create-modify-and-drop-spatial-indexes.md)  
@@ -63,7 +63,7 @@ ms.locfileid: "72278146"
   
 -   [CompoundCurve](../../relational-databases/spatial/compoundcurve.md)  
   
--   [Polígono](../../relational-databases/spatial/polygon.md)  
+-   [Polygon](../../relational-databases/spatial/polygon.md)  
   
 -   [CurvePolygon](../../relational-databases/spatial/curvepolygon.md)  
   

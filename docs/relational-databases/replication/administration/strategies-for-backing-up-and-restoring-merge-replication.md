@@ -17,10 +17,10 @@ ms.assetid: b8ae31c6-d76f-4dd7-8f46-17d023ca3eca
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 448688a54a245cadffa4c0c916d146e7c3e7e115
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75321983"
 ---
 # <a name="strategies-for-backing-up-and-restoring-merge-replication"></a>Estratégias para fazer backup e restaurar a replicação de mesclagem
@@ -56,7 +56,7 @@ ms.locfileid: "75321983"
   
 -   Se a publicação não for filtrada, você deverá conseguir atualizar o banco de dados de publicação com uma sincronização com o Assinante mais atualizado.  
   
--   Se a publicação for filtrada, talvez você possa atualizar o banco de dados de publicação. Considere uma tabela particionada, de modo que cada assinatura receba os dados do cliente somente de uma região: Norte, Leste, Sul e Oeste. Se existir pelo menos um Assinante para cada partição de dados, a sincronização com um Assinante para cada partição deverá atualizar o banco de dados de publicação. Entretanto, se por exemplo, os dados da partição oeste, não foram replicados para nenhum Assinante, então esses dados no Publicador não poderão ser atualizados.  
+-   Se a publicação for filtrada, talvez você possa atualizar o banco de dados de publicação. Considere uma tabela particionada, de modo que cada assinatura receba os dados de clientes somente de uma região: norte, leste, sul e oeste. Se existir pelo menos um Assinante para cada partição de dados, a sincronização com um Assinante para cada partição deverá atualizar o banco de dados de publicação. Entretanto, se por exemplo, os dados da partição oeste, não foram replicados para nenhum Assinante, então esses dados no Publicador não poderão ser atualizados.  
   
 > [!IMPORTANT]  
 >  Sincronizar um banco de dados de publicação com um banco de dados de assinatura pode resultar em tabelas publicadas restauradas a um point-in-time, que é mais recente que o point-in-time de outras tabelas não publicadas, que foram restaurados a partir do backup.  

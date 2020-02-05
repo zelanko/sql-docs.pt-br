@@ -1,5 +1,5 @@
 ---
-title: 'TM: classe de evento Promote Tran Completed | Microsoft Docs'
+title: 'Classe de evento TM: Promote Tran Completed | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,19 +13,19 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0671936227892a6a1d01e1bb0a7b246996f836be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68125133"
 ---
-# <a name="tm-promote-tran-completed-event-class"></a>TM: Classe de evento Promote Tran Completed
+# <a name="tm-promote-tran-completed-event-class"></a>classe de evento TM: Promote Tran Completed
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  A classe de evento TM: A classe de evento Promote Tran Completed indica que foi concluída uma solicitação PROMOTE TRANSACTION. A solicitação é enviada do cliente pela interface de gerenciamento de transações.  
+  A classe de evento TM: Promote Tran Completed indica que foi concluída uma solicitação PROMOTE TRANSACTION. A solicitação é enviada do cliente pela interface de gerenciamento de transações.  
   
-## <a name="tm-promote-tran-completed-event-class-data-columns"></a>TM: Colunas de dados da classe de evento Promote Tran Completed  
+## <a name="tm-promote-tran-completed-event-class-data-columns"></a>Colunas de dados da classe de evento TM: Promote Tran Completed  
   
-|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|DESCRIÇÃO|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|Nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |BinaryData|**imagem**|Token de DTC Xact.|2|Sim|  
@@ -47,7 +47,7 @@ ms.locfileid: "68125133"
 |SessionLoginName|**nvarchar**|Nome de logon do usuário que originou a sessão. Por exemplo, ao se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o Logon1 e executar uma instrução como Logon2, SessionLoginName mostrará o Logon1 e LoginName mostrará o Logon2. Essa coluna exibe logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do Windows.|64|Sim|  
 |SPID|**int**|Identificação da sessão em que ocorreu o evento.|12|Sim|  
 |StartTime|**datetime**|Hora de início do evento, se disponível.|14|Sim|  
-|Êxito|**int**|1 = êxito. 0 = falha (por exemplo, 1 significa êxito de uma verificação de permissões e 0 significa uma falha dessa verificação).|23|Sim|  
+|Sucesso|**int**|1 = êxito. 0 = falha (por exemplo, 1 significa êxito de uma verificação de permissões e 0 significa uma falha dessa verificação).|23|Sim|  
 |TransactionID|**bigint**|ID da transação atribuída pelo sistema.|4|Sim|  
 |XactSequence|**bigint**|Token que descreve a transação atual.|50|Sim|  
   

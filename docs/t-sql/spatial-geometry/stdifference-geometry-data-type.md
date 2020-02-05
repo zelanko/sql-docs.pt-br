@@ -18,10 +18,10 @@ ms.assetid: 737f39bb-8750-4ffb-8594-23febc2f1075
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: f511c6fa7a0d41b0f072981898216fde050d1742
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68127374"
 ---
 # <a name="stdifference-geometry-data-type"></a>STDifference (tipo de dados geometry)
@@ -43,14 +43,14 @@ Retorna um objeto que representa os conjuntos de pontos de uma instância de **g
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Tipo de retorno CLR: **SqlGeometry**  
+ Tipo de retorno do CLR: **SqlGeometry**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse método sempre retornará nulo se as SRIDs (IDs de referência espacial) das instâncias de **geometry** não forem correspondentes.   O resultado poderá conter segmentos de arco circular apenas se as instâncias de entrada contiverem segmentos de arco circulares.  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-computing-the-difference-between-two-polygon-instances"></a>A. Computando a diferença entre duas instâncias de polígono  
+### <a name="a-computing-the-difference-between-two-polygon-instances"></a>a. Computando a diferença entre duas instâncias de polígono  
  O exemplo a seguir usa `STDifference()` para computar a diferença entre dois polígonos.  
   
 ```  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: bf597d5a9be6a1e2e7fb3f045cd329f861379ad4
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 2b0f576365ef8e6221196eef4a9fca92f54f6318
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908294"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287339"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>Replicação para assinantes de tabela com otimização de memória
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "72908294"
   
 #### <a name="to-configure-a-memory-optimized-table-as-a-subscriber"></a>Para configurar uma tabela com otimização de memória como um assinante  
   
-1.  Crie uma publicação transacional. Para obter mais informações, consulte [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md).  
+1.  Crie uma publicação transacional. Para obter mais informações, consulte [Criar uma assinatura](../../relational-databases/replication/publish/create-a-publication.md).  
   
 2.  Adicione artigos à publicação. Para obter mais informações, consulte [Define an Article](../../relational-databases/replication/publish/define-an-article.md).  
   
@@ -44,7 +44,7 @@ ms.locfileid: "72908294"
   
 3.  Na janela de propriedades do artigo, defina **Habilitar Otimização de memória** como **true**.  
   
-4.  Inicie o trabalho do Agente de Instantâneo para gerar o instantâneo inicial para essa publicação. Para obter mais informações, consulte [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
+4.  Inicie o trabalho do Agente de Instantâneo para gerar o instantâneo inicial para essa publicação. Para obter mais informações, consulte [Criar e aplicar o instantâneo inicial](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
 5.  Agora, crie uma nova assinatura. No **Assistente para Nova Assinatura** , defina a **Assinatura de Otimização de Memória** como **true**.  
 

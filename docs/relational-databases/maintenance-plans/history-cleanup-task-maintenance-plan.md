@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 ms.openlocfilehash: 37841e848aab5ff991741e5d460500834c9185e6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115789"
 ---
 # <a name="history-cleanup-task-maintenance-plan"></a>Tarefa limpeza de histórico (Plano de manutenção)
@@ -30,7 +30,7 @@ ms.locfileid: "68115789"
  **Conexão**  
  Selecione a conexão de servidor a ser usada na execução desta tarefa.  
   
- **Nova**  
+ **Novo**  
  Crie uma nova conexão com o servidor para usar ao executar esta tarefa. A caixa de diálogo **Nova Conexão** é descrita mais abaixo neste tópico.  
   
  **Histórico de backup e restauração**  
@@ -70,7 +70,7 @@ ms.locfileid: "68115789"
  **Usar nome de usuário e senha específicos**  
  Conecte a uma instância do SQL Server [!INCLUDE[ssDE](../../includes/ssde-md.md)] que usa a Autenticação do SQL Server. Essa opção não está disponível.  
   
- **User name**  
+ **Nome de usuário**  
  Forneça um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a ser usado na autenticação. Essa opção não está disponível.  
   
  **Senha**  

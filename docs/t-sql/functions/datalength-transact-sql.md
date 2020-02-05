@@ -23,10 +23,10 @@ author: pmasl
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0ed31eae6817216a694337ed5bc606dcba52fb89
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73844512"
 ---
 # <a name="datalength-transact-sql"></a>DATALENGTH (Transact-SQL)
@@ -37,7 +37,7 @@ Essa função retorna o número de bytes usado para representar qualquer express
 > [!NOTE]
 > Para retornar o número de caracteres em uma expressão de cadeia de caracteres, use a função [LEN](../../t-sql/functions/len-transact-sql.md).
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -52,7 +52,7 @@ DATALENGTH ( expression )
 ## <a name="return-types"></a>Tipos de retorno
 **bigint** se *expression* tiver um tipo de dados **nvarchar(max)** , **varbinary(max)** ou **varchar(max)** ; caso contrário, **int**.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 `DATALENGTH` torna-se muito útil quando usada com tipos de dados que podem armazenar dados de comprimento variável, como:
 - **imagem**
 - **ntext**

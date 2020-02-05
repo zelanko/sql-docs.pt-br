@@ -11,24 +11,24 @@ helpviewer_keywords:
 ms.assetid: 4e98f8de-287c-4090-81ee-dc8f80dfa6a1
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 1de402650df0f3e9181750fb17d74c4329e4ca93
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: d59d9f277c027b0c10f578016348062de32aa47d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770403"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288026"
 ---
-# <a name="mssqleng020574"></a>MSSQL_ENG020574
+# <a name="mssql_eng020574"></a>MSSQL_ENG020574
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
     
 ## <a name="message-details"></a>Detalhes da mensagem  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|20574|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |Nome simbólico||  
 |Texto da mensagem|Falha na validação de dados na assinatura do assinante '%s' para o artigo '%s' na publicação '%s'.|  

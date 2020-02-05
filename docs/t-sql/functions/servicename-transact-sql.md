@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: adae0818964e55bffb71dd415dde9cb74297f3ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67906109"
 ---
 # <a name="x40x40servicename-transact-sql"></a>&#x40;&#x40;SERVICENAME (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "67906109"
 
   Retorna o nome da chave do Registro na qual o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está sendo executado. @@SERVICENAME retornará 'MSSQLSERVER' se a instância atual for a instância padrão; essa função retornará o nome da instância se a atual for uma instância nomeada.  
 
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,7 +43,7 @@ ms.locfileid: "67906109"
 ## <a name="return-types"></a>Tipos de retorno  
  **nvarchar**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é executado como um serviço denominado MSSQLServer.  
   
 ## <a name="examples"></a>Exemplos  

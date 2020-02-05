@@ -1,5 +1,5 @@
 ---
-title: 'TM: Classe de evento Begin Tran Starting | Microsoft Docs'
+title: 'Classe de evento TM: Begin Tran Starting | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,19 +13,19 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4bae04195dff799ccf81fcf3986f8e29e05dafbd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68118163"
 ---
-# <a name="tm-begin-tran-starting-event-class"></a>TM: Classe de evento Begin Tran Starting
+# <a name="tm-begin-tran-starting-event-class"></a>classe de evento TM: Begin Tran Starting
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  A classe de evento TM: A classe de evento Begin Tran Starting indica que uma solicitação BEGIN TRANSACTION está sendo iniciada. A solicitação é enviada do cliente pela interface de gerenciamento de transações.  
+  A classe de evento TM: Promote Tran Starting indica que uma solicitação BEGIN TRANSACTION está sendo iniciada. A solicitação é enviada do cliente pela interface de gerenciamento de transações.  
   
-## <a name="tm-begin-tran-starting-event-class-data-columns"></a>TM: Colunas de dados da classe de evento Begin Tran Starting  
+## <a name="tm-begin-tran-starting-event-class-data-columns"></a>Colunas de dados da classe de evento TM: Begin Tran Starting  
   
-|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|DESCRIÇÃO|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|Nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |ClientProcessID|**int**|ID atribuída pelo computador host ao processo em que o aplicativo cliente está sendo executado. Essa coluna de dados será populada se o cliente fornecer a ID de processo do cliente.|9|Sim|  

@@ -13,10 +13,10 @@ author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 7fd267efe05da089cf72b1b9d1e4a04e6c18b83b
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68809845"
 ---
 # <a name="dbcc-pdw_showexecutionplan-transact-sql"></a>DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)
@@ -26,7 +26,7 @@ Exibe o plano de execução do [!INCLUDE[ssNoVersion](../../includes/ssnoversion
   
 Depois que forem esclarecidos os problemas de desempenho das consultas de SMP do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em execução nos nós de computação, haverá várias maneiras de melhorar o desempenho. Algumas possíveis maneiras de melhorar o desempenho da consulta nos nós de computação incluem a criação de estatísticas de várias colunas, a criação de índices não clusterizados ou o uso de dicas de consulta.
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
 Sintaxe do SQL Data Warehouse do Azure:
@@ -59,7 +59,7 @@ Requer a permissão VIEW-SERVER-STATE no dispositivo.
   
 ## <a name="examples-includesssdwincludessssdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]  
   
-### <a name="a-dbcc-pdw_showexecutionplan-basic-syntax"></a>A. Sintaxe básica do DBCC PDW_SHOWEXECUTIONPLAN  
+### <a name="a-dbcc-pdw_showexecutionplan-basic-syntax"></a>a. Sintaxe básica do DBCC PDW_SHOWEXECUTIONPLAN  
  Quando estiver executando em uma instância do [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], modifique a consulta acima para também selecionar a distribution_id.  
   
 ```sql

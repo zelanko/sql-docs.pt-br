@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 ms.openlocfilehash: 2b34fb6b368f042e39776a25628472c336e21392
-ms.sourcegitcommit: 0d5b0aeee2a2b34fd448aec2e72c0fa8be473ebe
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75721738"
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Restaurar um banco de dados SQL Server em um contêiner do Docker em Linux

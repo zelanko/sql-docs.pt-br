@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: db933c5382049767fcb205b8daa2356a497f3d43
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909482"
 ---
 # <a name="create-views"></a>Criar exibições
@@ -64,7 +64,7 @@ ms.locfileid: "72909482"
   
 2.  Clique com o botão direito do mouse na pasta **Exibições** objeto e clique em **Nova Exibição...** .  
   
-3.  Na caixa de diálogo **Adicionar Tabela**, selecione o elemento ou elementos que você deseja incluir em sua nova exibição de uma destas guias: tabelas, exibições, funções e sinônimos.  
+3.  Na caixa de diálogo **Adicionar Tabela** , selecione o elemento ou elementos que você deseja incluir em sua nova exibição de uma destas guias: Tabelas, Exibições, Funções e Sinônimos.  
   
 4.  Clique em **Adicionar**e em **Fechar**.  
   

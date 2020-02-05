@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 657c3ae6-9e4b-4c60-becc-4caf7435c1dc
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 4384164d7baa79559d8810114494473435894f8c
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 96de733839deb644968303e58bcf069894aae160
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770506"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286323"
 ---
 # <a name="mssql_eng002601"></a>MSSQL_ENG002601
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -27,11 +27,11 @@ ms.locfileid: "68770506"
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|2601|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
-|Nome simbólico|N/A|  
+|Nome simbólico|N/D|  
 |Texto da mensagem|Não é possível inserir uma linha de chave duplicada no objeto '%.*ls' com o índice exclusivo '%.\*ls'.|  
   
 ## <a name="explanation"></a>Explicação  
@@ -43,7 +43,7 @@ ms.locfileid: "68770506"
   
 -   Uma tabela com uma coluna de identidade está sendo usada, mas a coluna não é gerenciada apropriadamente.  
   
--   Na replicação de mesclagem, esse erro também pode ocorrer durante uma inserção em uma tabela do sistema **MSmerge_contents**; o erro gerado é semelhante a: Não foi possível inserir uma linha de chave duplicada no objeto 'MSmerge_contents' com índice exclusivo 'ucl1SycContents.'  
+-   Na replicação de mesclagem, esse erro também pode ocorrer durante uma inserção em uma tabela do sistema **MSmerge_contents**; o erro gerado é semelhante a: Não foi possível inserir uma linha de chave duplicada no objeto 'MSmerge_contents' com índice exclusivo 'ucl1SycContents'.  
   
 ## <a name="user-action"></a>Ação do usuário  
  A ação necessária depende do motivo que levou à ocorrência do erro:  

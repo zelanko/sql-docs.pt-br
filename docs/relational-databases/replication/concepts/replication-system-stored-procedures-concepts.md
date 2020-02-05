@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 816d2bda-ed72-43ec-aa4d-7ee3dc25fd8a
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: f887fdf9aaddf49e5dc2c9f79ed43299f572eb13
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 821a45a08316bfdcf17ab57253b46641568aa4f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768139"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76285675"
 ---
 # <a name="replication-system-stored-procedures-concepts"></a>Replication System Stored Procedures Concepts
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -162,7 +162,7 @@ SET @publisher = $(DistPubServer);
 sqlcmd.exe -E -S sqlserverinstance -i C:\instdistpub.sql -o C:\output.log -v DistPubServer="N'MyDistributorAndPublisher'"  
 ```  
   
- Neste exemplo, a opção `-E` indica que a Autenticação do Windows será usada na conexão ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Quando a Autenticação do Windows for usada, não haverá necessidade de armazenar um nome de usuário e uma senha no arquivo de script. O nome e o caminho do arquivo de script são especificados pela opção `-i` e o nome do arquivo de saída é especificado pela opção `-o` (a saída do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] será gravada nesse arquivo em vez de no console quando essa opção for usada). O utilitário `sqlcmd` permite que você transmita variáveis de script para um script [!INCLUDE[tsql](../../../includes/tsql-md.md)] em tempo de execução por meio da opção `-v`. Neste exemplo, `sqlcmd` substitui todas as instâncias de `$(DistPubServer)` do script pela valor `N'MyDistributorAndPublisher'` antes da execução.  
+ Neste exemplo, a opção `-E` indica que a Autenticação do Windows será usada na conexão ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Quando a Autenticação do Windows for usada, não haverá necessidade de armazenar um nome de usuário e uma senha no arquivo de script. O nome e o caminho do arquivo de script são especificados pela opção `-i` e o nome do arquivo de saída é especificado pela opção `-o` (a saída do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] será gravada nesse arquivo em vez de no console quando essa opção for usada). O utilitário `sqlcmd` permite que você transmita variáveis de script para um script [!INCLUDE[tsql](../../../includes/tsql-md.md)] em runtime por meio da opção `-v`. Neste exemplo, `sqlcmd` substitui todas as instâncias de `$(DistPubServer)` do script pela valor `N'MyDistributorAndPublisher'` antes da execução.  
   
 > [!NOTE]  
 >  A opção `-X` desabilita variáveis de script.  

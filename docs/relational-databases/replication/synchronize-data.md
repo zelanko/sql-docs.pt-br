@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 724802f7-7d69-46d3-a330-bd8aa7f53114
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 84f684484423090430ff8e3fe09051b1e19fd2a6
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: b458b4555276f4e9f6af1ce72e5981e06c984407
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769367"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287001"
 ---
 # <a name="synchronize-data"></a>Sincronizar dados
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

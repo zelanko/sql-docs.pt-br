@@ -20,10 +20,10 @@ ms.assetid: ee620b4a-9375-4eaa-a016-69916c9e1e68
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: b91242524f3edada4de8112558a01f09fb3310cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67927222"
 ---
 # <a name="alter-remote-service-binding-transact-sql"></a>ALTER REMOTE SERVICE BINDING (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "67927222"
 
   Altera o usuário associado a uma associação de serviço remoto ou altera a configuração de autenticação anônima para a associação.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -52,7 +52,7 @@ ALTER REMOTE SERVICE BINDING binding_name
  ANONYMOUS  
  Especifica se a autenticação anônima é usada durante a comunicação com o serviço remoto. Se ANONYMOUS = ON, a autenticação anônima será usada e as credenciais do usuário local não serão transferidas para o serviço remoto. Se ANONYMOUS = OFF, as credenciais de usuário serão tranferidas. Se essa cláusula não for especificada, o padrão será OFF.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  A chave pública no certificado associado a *user_name* é usada para autenticar as mensagens enviadas ao serviço remoto e para criptografar uma chave da sessão que, em seguida, é usada para criptografar a conversa. O certificado para *user_name* deve corresponder ao certificado para um logon no banco de dados que hospeda o serviço remoto.  
   
 ## <a name="permissions"></a>Permissões  

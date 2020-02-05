@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: fceb216b-0b18-4e3b-8ae0-13e35920dcbc
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: b8a72455aafbf31f5a926719e821f3d15393d953
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: bd9a563ffe3b9617bbdba529b67e7270d8b6ee5f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710787"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287294"
 ---
 # <a name="manage-logins-in-the-publication-access-list"></a>Gerenciar logons na lista de acesso à publicação
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
