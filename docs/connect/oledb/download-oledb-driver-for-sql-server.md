@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dc0ee4de32be9cf146b4e185d5e973972dbc0fd2
-ms.sourcegitcommit: 4c75b49599018124f05f91c1df3271d473827e4d
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72381838"
 ---
 # <a name="download-microsoft-ole-db-driver-for-sql-server"></a>Baixar o Driver do Microsoft OLE DB para SQL Server
@@ -27,6 +27,6 @@ A versão a seguir do Driver do Microsoft OLE DB para SQL Server está disponív
 ## <a name="see-also"></a>Confira também
 
 [Notas de versão do Microsoft OLE DB Driver for SQL Server](release-notes-for-oledb-driver-for-sql-server.md)  
-[Requisitos do sistema do OLE DB Driver para SQL Server](system-requirements-for-oledb-driver-for-sql-server.md)  
+[Requisitos do sistema para o OLE DB Driver para SQL Server](system-requirements-for-oledb-driver-for-sql-server.md)  
 [Quando usar o Driver do OLE DB para SQL Server](when-to-use-oledb-driver-for-sql-server.md)  
 [Instalação do Driver do OLE DB para SQL Server](applications/installing-oledb-driver-for-sql-server.md)

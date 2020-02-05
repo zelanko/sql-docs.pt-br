@@ -11,10 +11,10 @@ ms.assetid: 6faaf05b-8b70-4ed2-9b44-eee5897f1cd0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 828f58249f525a7c694b15eb85f051d80ba2211a
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69025767"
 ---
 # <a name="using-the-jdbc-driver"></a>Como usar o JDBC Driver
@@ -210,7 +210,7 @@ Enterprise Java Beans (EJB) são executados em um contêiner EJB. Contêineres E
   
 ## <a name="making-a-simple-connection-to-a-database"></a>Fazendo uma conexão simples a um banco de dados
 
-Como usar a biblioteca de classes sqljdbc.jar, os aplicativos devem primeiro registrar o driver como segue:  
+Usando a biblioteca de classes sqljdbc.jar, os aplicativos devem primeiro registrar o driver como segue:  
   
 `Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");`  
 

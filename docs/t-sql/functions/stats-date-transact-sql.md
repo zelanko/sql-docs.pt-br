@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1d6e0b563d7c75a46c8fd8ea0731c046d3159d94
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843325"
 ---
 # <a name="stats_date-transact-sql"></a>STATS_DATE (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "73843325"
   
  Para obter mais informações sobre como atualizar estatísticas, consulte [Estatísticas](../../relational-databases/statistics/statistics.md).  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -54,7 +54,7 @@ STATS_DATE ( object_id , stats_id )
 ## <a name="return-types"></a>Tipos de retorno  
  Retorna **datetime** em caso de êxito. Retorna **NULL** se um blob de estatísticas não foi criado.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  As funções do sistema podem ser usadas na lista de seleção, na cláusula WHERE e em qualquer local onde uma expressão puder ser usada.  
  
  A data de atualização de estatísticas é armazenada no [objeto de blob de estatísticas](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics), junto com o [histograma](../../relational-databases/statistics/statistics.md#histogram) e o [vetor de densidade](../../relational-databases/statistics/statistics.md#density), não nos metadados. Quando nenhum dado é lido para gerar dados de estatísticas, o blob de estatísticas não é criado e a data não fica disponível. Esse é o caso para estatísticas filtradas para as quais o predicado não retorna nenhuma linha ou para novas tabelas vazias.
@@ -66,7 +66,7 @@ STATS_DATE ( object_id , stats_id )
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-return-the-dates-of-the-most-recent-statistics-for-a-table"></a>A. Retornar as datas das estatísticas mais recentes de uma tabela  
+### <a name="a-return-the-dates-of-the-most-recent-statistics-for-a-table"></a>a. Retornar as datas das estatísticas mais recentes de uma tabela  
  O exemplo a seguir retorna a data da mais recente atualização de cada objeto de estatísticas na tabela `Person.Address`.  
   
 ```sql  

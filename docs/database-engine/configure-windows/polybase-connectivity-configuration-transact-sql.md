@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: d86483245f8a4f06dfcb357d5d105539dd56f3a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67997919"
 ---
 # <a name="polybase-connectivity-configuration-transact-sql"></a>Configuração de conectividade do PolyBase (Transact-SQL)
@@ -25,7 +25,7 @@ ms.locfileid: "67997919"
 
   Exibe ou altera as definições de configurações globais para o PolyBase Hadoop e a conectividade do armazenamento de blobs do Azure.
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -60,25 +60,25 @@ RECONFIGURE
   
 -   Opção 1: Hortonworks HDP 1.3 no Windows Server  
   
--   Opção 1: Armazenamento de Blobs do Azure (WASB[S])  
+-   Opção 1: Armazenamento de blobs do Azure (WASB[S])  
   
 -   Opção 2: Hortonworks HDP 1.3 no Linux  
   
--   Opção 3: Cloudera CDH 4.3 em Linux  
+-   Opção 3: Cloudera CDH 4.3 no Linux  
   
 -   Opção 4: Hortonworks HDP 2.0 no Windows Server  
   
--   Opção 4: Armazenamento de Blobs do Azure (WASB[S])  
+-   Opção 4: armazenamento de blobs do Azure (WASB[S])  
   
 -   Opção 5: Hortonworks HDP 2.0 no Linux  
   
--   Opção 6: Cloudera 5.1, 5.2, 5.3, 5.4, 5.5, 5.9, 5.10, 5.11, 5.12 e 5.13 no Linux  
+-   Opção 6: Cloudera 5.1, 5.2, 5.3, 5.4, 5.5, 5.9, 5.10, 5.11, 5.12 e 5.13 em Linux  
   
--   Opção 7: Hortonworks 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 3.0 no Linux  
+-   Opção 7: Hortonworks 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 3.0 em Linux  
   
 -   Opção 7: Hortonworks 2.1, 2.2 e 2.3 no Windows Server  
   
--   Opção 7: Armazenamento de Blobs do Azure (WASB[S])  
+-   Opção 7: armazenamento de blobs do Azure (WASB[S])  
   
  **RECONFIGURE**  
  Atualiza o valor de execução (run_value) para corresponder ao valor de configuração (config_value). Confira [Result Sets](#ResultSets) para obter as definições de run_value e config_value. O novo valor de configuração definido por sp_configure não entra em vigor até que o valor de execução seja definido pela instrução RECONFIGURE.  
@@ -91,7 +91,7 @@ RECONFIGURE
 ##  <a name="ResultSets"></a> Result Sets  
  Quando é executado sem parâmetros, **sp_configure** retorna um conjunto de resultados com cinco colunas.  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar(35)**|O nome da opção de configuração.|  
 |**minimum**|**int**|Valor mínimo da opção de configuração.|  
@@ -113,7 +113,7 @@ Após a execução de RECONFIGURE no [!INCLUDE[ssPDW](../../includes/sspdw-md.md
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-list-all-available-configuration-settings"></a>A. Listar todas as configurações disponíveis  
+### <a name="a-list-all-available-configuration-settings"></a>a. Listar todas as configurações disponíveis  
  O exemplo a seguir mostra como listar todas as opções de configuração.  
   
 ```  

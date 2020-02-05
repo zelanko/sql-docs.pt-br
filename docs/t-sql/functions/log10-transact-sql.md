@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c84d73c0ee48b75c8f31dda4dc87ecfbac5913f6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68059880"
 ---
 # <a name="log10-transact-sql"></a>LOG10 (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68059880"
 
   Retorna o logaritmo na base 10 da expressão **float** especificada.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -48,12 +48,12 @@ LOG10 ( float_expression )
 ## <a name="return-types"></a>Tipos de retorno  
  **float**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  As funções LOG10 e POWER estão inversamente relacionadas uma à outra. Por exemplo, 10 ^ LOG10(*n*) = *n*.  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-calculating-the-base-10-logarithm-for-a-variable"></a>A. Calculando um logaritmo na base 10 para uma variável.  
+### <a name="a-calculating-the-base-10-logarithm-for-a-variable"></a>a. Calculando um logaritmo na base 10 para uma variável.  
  O exemplo a seguir calcula o `LOG10` da variável especificada.  
   
 ```  
@@ -89,7 +89,7 @@ SELECT POWER (10, LOG10(5));
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-calculating-the-base-10-logarithm-for-a-value"></a>C: como calcular o logaritmo de base 10 para um valor.  
+### <a name="c-calculating-the-base-10-logarithm-for-a-value"></a>C: Calculando um logaritmo na base 10 para um valor.  
  O exemplo a seguir calcula o `LOG10` do valor especificado.  
   
 ```  

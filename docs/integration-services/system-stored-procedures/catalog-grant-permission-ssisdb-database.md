@@ -14,10 +14,10 @@ ms.assetid: e72cfd52-de66-45e9-98b9-b8580ac7b956
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9053a5ab4ac64bea8104ce7d9079bf891ffa887a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296764"
 ---
 # <a name="cataloggrant_permission-ssisdb-database"></a>catalog.grant_permission (Banco de Dados SSISDB)
@@ -65,7 +65,7 @@ catalog.grant_permission [ @object_type = ] object_type
  5 (outro erro)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- None  
+ Nenhum  
   
 ## <a name="permissions"></a>Permissões  
  Este procedimento armazenado exige uma das seguintes permissões:  
@@ -78,14 +78,14 @@ catalog.grant_permission [ @object_type = ] object_type
 
 Esse procedimento não pode ser chamado por logons que foram autenticados pelo SQL Server. Ele não pode ser chamado pelo logon de sa.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Este procedimento armazenado permite que você conceda os tipos de permissão descritos na seguinte tabela:  
   
 |Valor de permission_type|Nome da permissão|Descrição da permissão|Tipos de objeto aplicáveis|  
 |----------------------------|---------------------|----------------------------|-----------------------------|  
 |`1`|READ|Permite que a entidade de segurança leia informações consideradas parte do objeto, como as propriedades. Não permite que a entidade de segurança enumere ou leia o conteúdo de outros objetos contidos no objeto.|Pasta, projeto, ambiente, operação|  
 |`2`|MODIFY|Permite que a entidade de segurança modifique informações consideradas parte do objeto, como as propriedades. Não permite que a entidade de segurança modifique outros objetos contidos no objeto.|Pasta, projeto, ambiente, operação|  
-|`3`|Execute|Permite que a entidade de segurança execute todos os pacotes no projeto.|Projeto|  
+|`3`|Execute|Permite que a entidade de segurança execute todos os pacotes no projeto.|Project|  
 |`4`|MANAGE_PERMISSIONS|Permite que a entidade de segurança atribua permissões a objetos.|Pasta, projeto, ambiente, operação|  
 |`100`|CREATE_OBJECTS|Permite que a entidade de segurança crie objetos na pasta.|Pasta|  
 |`101`|READ_OBJECTS|Permite que a entidade de segurança leia todos os objetos na pasta.|Pasta|  

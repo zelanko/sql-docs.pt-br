@@ -19,10 +19,10 @@ ms.assetid: 0dc6f422-7aae-4016-b7f4-3289fa8f989c
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 665497328238fbaa88d666fb214af336531e93c7
-ms.sourcegitcommit: aece9f7db367098fcc0c508209ba243e05547fe1
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72260165"
 ---
 # <a name="point-geography-data-type"></a>Point (tipo de dados geography)
@@ -50,7 +50,7 @@ Point ( Lat, Long, SRID )
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Tipo de retorno CLR: **SqlGeography**  
+ Tipo de retorno do CLR: **SqlGeography**  
   
 > [!NOTE]  
 >  Argumentos para o método Point (tipo de dados geography) têm coordenadas em ordem inversa se comparados a WKT.  

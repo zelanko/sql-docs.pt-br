@@ -19,10 +19,10 @@ ms.assetid: d56d0521-362f-4361-843a-acf2c897a87c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ca1a0b760f89e581a4e5209960caa76d89cd1350
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73593798"
 ---
 # <a name="charts-report-builder-and-ssrs"></a>Gráficos (Construtor de Relatórios e SSRS)
@@ -111,7 +111,7 @@ Quanto mais tempo você passa preparando cuidadosamente e entendendo seus dados 
  [Tipos de gráficos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)  
  Descreve todos os tipos e subtipos de gráficos disponíveis no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], incluindo considerações e práticas recomendadas para uso de vários tipos de gráficos.  
   
- [Formatando um gráfico &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)  
+ [Formatar um gráfico &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)  
  Use formatação para melhorar a aparência global e realçar pontos de dados importantes de seu gráfico.  
   
  [Pontos de dados vazios e nulos em gráficos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)  

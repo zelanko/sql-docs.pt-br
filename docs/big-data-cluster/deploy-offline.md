@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 15af041e94ac0abfdae13635345de62262a4b086
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73531980"
 ---
 # <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>Executar uma implantação offline de um cluster de Big Data do SQL Server
@@ -124,7 +124,7 @@ As implantações de cluster de Big Data exigem várias ferramentas, incluindo *
 
 1. Em um computador com acesso à Internet, baixe um dos seguintes arquivos compactados que contêm o Python:
 
-   | Sistema operacional | Download |
+   | Sistema operacional | Baixar |
    |---|---|
    | Windows | [https://go.microsoft.com/fwlink/?linkid=2074021](https://go.microsoft.com/fwlink/?linkid=2074021) |
    | Linux   | [https://go.microsoft.com/fwlink/?linkid=2065975](https://go.microsoft.com/fwlink/?linkid=2065975) |

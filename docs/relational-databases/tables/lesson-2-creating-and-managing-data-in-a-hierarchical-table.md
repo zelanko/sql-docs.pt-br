@@ -1,5 +1,5 @@
 ---
-title: 'Lição 2: Criar e gerenciar dados em uma tabela hierárquica | Microsoft Docs'
+title: 'Lição 2: Criando e gerenciando dados em uma tabela hierárquica | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,10 +13,10 @@ ms.assetid: 95f55cff-4abb-4c08-97b3-e3ae5e8b24e2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 657dedcf4944a2540d1237b53fa8ea822c31ae3f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68031638"
 ---
 # <a name="lesson-2-create-and-manage-data-in-a-hierarchical-table"></a>Lição 2: criar e gerenciar dados em uma tabela hierárquica
@@ -26,11 +26,11 @@ Na Lição 1, você modificou uma tabela existente para usar o tipo de dados **h
 ## <a name="prerequisites"></a>Prerequisites  
 Para concluir este tutorial, você precisará do SQL Server Management Studio, bem como acesso a um servidor que executa o SQL Server e um banco de dados do AdventureWorks.
 
-- Instalar o [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Instale o [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 - Instalar o [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 - Baixe o [Bancos de dados de exemplo do AdventureWorks2017](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).
 
-Instruções para restaurar bancos de dados no SSMS são encontradas aqui: [Restaurar um banco de dados](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).   
+As instruções para restaurar bancos de dados no SSMS são encontradas aqui: [Restaurando um banco de dados](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).   
   
 ## <a name="create-a-table-using-the-hierarchyid-data-type"></a>Criar uma tabela por meio de um tipo de dados hierarchyid
 O exemplo a seguir cria uma tabela com o nome EmployeeOrg, que inclui dados de funcionário junto com sua hierarquia de relatórios. O exemplo cria a tabela no banco de dados AdventureWorks2017, mas isso é opcional. Para manter o exemplo simples, essa tabela inclui somente cinco colunas:  

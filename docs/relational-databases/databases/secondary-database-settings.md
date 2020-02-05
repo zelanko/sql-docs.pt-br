@@ -13,10 +13,10 @@ ms.assetid: f992ffc9-ee42-43fe-acec-512032f0ded1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 82a8df3e80a851de5fb09cda3e28620f163a3de7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68127217"
 ---
 # <a name="secondary-database-settings"></a>Configurações do Banco de Dados Secundário.
@@ -36,7 +36,7 @@ ms.locfileid: "68127217"
  Conecte-se a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a ser usada como servidor secundário em uma configuração do envio de logs. A conta usada para conexão precisa ser membro da função de servidor fixa sysadmin na instância de servidor secundário.  
   
  **Guia Inicialização**  
- As opções são as seguintes:  
+ As opções são as descritas a seguir:  
   
  **Sim, gere um backup completo do banco de dados primário e restaure para o banco de dados secundário**  
  Use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para configurar seu banco de dados secundário, fazendo o backup do banco de dados primário e restaurando-o no servidor secundário. Se você digitou um novo nome de banco de dados na caixa **Banco de dados secundário** , o banco de dados será criado com parte da operação de restauração.  
@@ -63,7 +63,7 @@ ms.locfileid: "68127217"
  Especifique se o banco de dados secundário já foi inicializado e se está pronto para aceitar backups de log de transações do banco de dados primário. Essa opção não está disponível se você digitou um nome de banco de dados novo na caixa **Banco de dados secundário** .  
   
  **Guia Copiar Arquivos**  
- As opções são as seguintes:  
+ As opções são as descritas a seguir:  
   
  **Pasta de destino dos arquivos copiados**  
  Digite o caminho para o qual deveriam ser copiados backups de log de transações para restauração para o banco de dados secundário. Normalmente, esse é um caminho local para uma pasta localizada no servidor secundário. Mas se a pasta estiver em outro servidor, você deve especificar um caminho UNC para a pasta. A conta de servidor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da instância do servidor secundário deve ter permissões de leitura nessa pasta. Você deve conceder também permissões de leitura e gravação para esse compartilhamento de rede para as contas proxy nas quais os trabalhos de cópia e restauração serão executados nas instâncias do servidor secundário. Por padrão, essa é a conta do serviço SQLServerAgent da instância do servidor secundário, mas um sysadmin pode escolher outras contas proxy para o trabalho.  
@@ -84,7 +84,7 @@ ms.locfileid: "68127217"
  Suspenda o trabalho de cópia do SQL Server Agent.  
   
  **Guia Restaurar Log de Transações**  
- As opções são as seguintes:  
+ As opções são as descritas a seguir:  
   
  **Desconectar usuários no banco de dados ao restaurar backups**  
  Desconecte usuários automaticamente do banco de dados secundário enquanto estão sendo restaurados os backups de log de transações.  

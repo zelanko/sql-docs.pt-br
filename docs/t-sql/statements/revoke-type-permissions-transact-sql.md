@@ -17,10 +17,10 @@ ms.assetid: 3969c7e9-ca10-4c67-971b-25d2dfccf650
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 29bf592fcc169f112eb938af19077aa59621b843
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982898"
 ---
 # <a name="revoke-type-permissions-transact-sql"></a>Permissões de tipo REVOKE (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "73982898"
 
   Revoga permissões em um tipo.  
   
-  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -108,7 +108,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  *Database_user_with_no_login*  
  Especifica um usuário do banco de dados sem nenhuma entidade de segurança correspondente no nível de servidor.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Um tipo é um protegível no nível de esquema contido no esquema pai na hierarquia de permissões.  
   
 > [!IMPORTANT]  
