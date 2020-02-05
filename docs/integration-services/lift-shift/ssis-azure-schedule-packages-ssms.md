@@ -11,10 +11,10 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
 ms.openlocfilehash: c553e650dcbcfabc8ad2d18ce490221c0d2439ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68054605"
 ---
 # <a name="schedule-the-execution-of-ssis-packages-deployed-in-azure-with-sql-server-management-studio-ssms"></a>Agendar a execução de pacotes SSIS implantados no Azure com o SSMS (SQL Server Management Studio)
@@ -29,7 +29,7 @@ Se estiver usando o Banco de Dados SQL para hospedar o Catálogo do SSIS, o `SSI
 
 Quando você usa o SSMS para agendar um pacote, o SSIS cria automaticamente três novos objetos data factory, com nomes com base no nome do pacote selecionado e no carimbo de data/hora. Por exemplo, se o nome do pacote SSIS for **MyPackage**, o SSMS criará novos objetos data factory semelhantes ao seguinte:
 
-| Object | Nome |
+| Objeto | Nome |
 |---|---|
 | Pipeline | **Pipeline_MyPackage_2018-05-08T09_00_00Z** |
 | Executar a atividade do pacote SSIS | **Activity_MyPackage_2018-05-08T09_00_00Z** |
@@ -76,4 +76,4 @@ Para saber mais sobre outros métodos para agendar um pacote SSIS, veja [Agendar
 
 Para saber mais sobre pipelines do Azure Data Factory, atividades e gatilhos, confira os seguintes artigos:
 -   [Pipelines e atividades no Azure Data Factory](https://docs.microsoft.com/azure/data-factory/concepts-pipelines-activities)
--   [Execução de pipelines e gatilhos no Azure Data Factory](https://docs.microsoft.com/azure/data-factory/concepts-pipeline-execution-triggers)
+-   [Gatilhos e execução de pipeline no Azure Data Factory](https://docs.microsoft.com/azure/data-factory/concepts-pipeline-execution-triggers)

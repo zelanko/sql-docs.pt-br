@@ -26,10 +26,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: be05a8adcf83fdd9f2e26ca5dce38d71a67c70ac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68075264"
 ---
 # <a name="exists-transact-sql"></a>EXISTS (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "68075264"
 
   Especifica uma subconsulta a ser testada quanto à existência de linhas.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -57,7 +57,7 @@ EXISTS ( subquery )
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-null-in-a-subquery-to-still-return-a-result-set"></a>A. Usando NULL em uma subconsulta para ainda a retornar um conjunto de resultados  
+### <a name="a-using-null-in-a-subquery-to-still-return-a-result-set"></a>a. Usando NULL em uma subconsulta para ainda a retornar um conjunto de resultados  
  O exemplo a seguir retorna um conjunto de resultados com `NULL` especificado na subconsulta e ainda é avaliado como TRUE usando `EXISTS`.  
   
 ```  

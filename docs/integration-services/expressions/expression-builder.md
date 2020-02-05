@@ -15,10 +15,10 @@ ms.assetid: 4717ce33-bd4e-44bc-81e0-002de075b4d1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 885e45267e7527a63f04facd630b2ec72f8a00f8
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297603"
 ---
 # <a name="expression-builder"></a>Construtor de Expressões
@@ -45,14 +45,14 @@ ms.locfileid: "71297603"
 |Termo|Definição|  
 |----------|----------------|  
 |**Variáveis**|Expanda a pasta de **Variáveis** e arraste as mesmas para a caixa **Expressão** .|  
-|**Funções Matemáticas**<br /><br /> **Funções de cadeia de caracteres**<br /><br /> **Funções Data/Hora**<br /><br /> **Funções NULL**<br /><br /> **Conversões de Tipos**<br /><br /> **Operadores**|Expanda as pastas e arraste as funções, conversões de tipos e operadores para a caixa **Expressão** .|  
+|**Funções matemáticas**<br /><br /> **Funções de cadeia de caracteres**<br /><br /> **Funções Data/Hora**<br /><br /> **Funções NULL**<br /><br /> **Conversões de Tipos**<br /><br /> **Operadores**|Expanda as pastas e arraste as funções, conversões de tipos e operadores para a caixa **Expressão** .|  
 |**Expression**|Edite ou digite uma expressão.'|  
 |**Valor avaliado**|Lista o resultado da avaliação da expressão.|  
 |**Avaliar Expressão**|Clique em **Avaliar Expressão** para exibir o resultado de avaliação da expressão.|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Página Expressões](../../integration-services/expressions/expressions-page.md)   
- [Editor de Expressões de Propriedades](../../integration-services/expressions/property-expressions-editor.md)   
+ [Editor de expressões de propriedades](../../integration-services/expressions/property-expressions-editor.md)   
  [Variáveis do SSIS &#40;Integration Services&#41;](../../integration-services/integration-services-ssis-variables.md)   
  [Variáveis do sistema](../../integration-services/system-variables.md)  
   

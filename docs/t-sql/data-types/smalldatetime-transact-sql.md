@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f4f4e7ae4f7ba11add01a0612fe9607fcb42104c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000555"
 ---
 # <a name="smalldatetime-transact-sql"></a>smalldatetime (Transact-SQL)
@@ -147,7 +147,7 @@ SELECT @smalldatetime AS '@smalldatetime', @datetime2 AS ' datetime2(4)';
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-casting-string-literals-with-seconds-to-smalldatetime"></a>A. Convertendo literais de cadeia de caracteres com segundos para smalldatetime  
+### <a name="a-casting-string-literals-with-seconds-to-smalldatetime"></a>a. Convertendo literais de cadeia de caracteres com segundos para smalldatetime  
 O exemplo a seguir compara a conversão de segundos em literais de cadeia de caracteres para `smalldatetime`.
   
 ```sql

@@ -13,10 +13,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8dd50c08035690fd932dc717ae08d179b89b4ed2
-ms.sourcegitcommit: a92fa97e7d3132ea201e4d86c76ac39cd564cd3c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/21/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75325408"
 ---
 # <a name="solve-common-issues-with-json-in-sql-server"></a>Solucionar problemas comuns com JSON no SQL Server

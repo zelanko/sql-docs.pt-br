@@ -18,10 +18,10 @@ ms.assetid: 6546ddb0-4a5f-46e5-ba04-8007486c95ec
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 769b48c99e59c8bfcf38fa96cd60d6ef11cd3237
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67950140"
 ---
 # <a name="stgeomfromwkb-geometry-data-type"></a>STGeomFromWKB (tipo de dados geometry)
@@ -46,9 +46,9 @@ STGeomFromWKB ( 'WKB_geometry' , SRID )
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Tipo de retorno CLR: **SqlGeometry**  
+ Tipo de retorno do CLR: **SqlGeometry**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O tipo do OGC da instância de **geometry** retornado por `STGeomFromText()` é definido como a entrada de WKB correspondente.  
   
  Esse método gerará uma **FormatException** se a entrada não for bem formatada.  

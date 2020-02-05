@@ -18,10 +18,10 @@ ms.assetid: 1cde5054-b91a-41bb-812a-08c9308738af
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 7ddc3324099be031fff61c2268094b85e9fab143
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042345"
 ---
 # <a name="stdifference-geography-data-type"></a>STDifference (tipo de dados geography)
@@ -43,19 +43,19 @@ ms.locfileid: "68042345"
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Tipo de retorno CLR: **SqlGeography**  
+ Tipo de retorno do CLR: **SqlGeography**  
   
 ## <a name="exceptions"></a>Exceções  
  Esse método gera uma **ArgumentException** se a instância contém uma borda oposta.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse método sempre retorna nulo se os SRIDs (identificadores de referência espacial) das instâncias de **geography** não são correspondentes.  
   
  No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o conjunto de possíveis resultados retornado no servidor foi estendido para instâncias **FullGlobe**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte a instâncias espaciais maiores do que um hemisfério. O resultado poderá conter segmentos de arco circular apenas se as instâncias de entrada contiverem segmentos de arco circulares. Esse método não é preciso.  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-computing-the-difference-between-two-geography-instances"></a>A. Computando a diferença entre duas instâncias de geografia  
+### <a name="a-computing-the-difference-between-two-geography-instances"></a>a. Computando a diferença entre duas instâncias de geografia  
  O exemplo a seguir usa `STDifference()` para calcular a diferença entre duas instâncias de **geography**.  
   
 ```  

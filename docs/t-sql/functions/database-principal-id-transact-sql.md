@@ -21,18 +21,18 @@ ms.assetid: 908c7dd8-c10b-4658-92f6-0224f9835dd9
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 0fa5615d70542373030e0344d6988d9d2d0a028c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68026264"
 ---
-# <a name="databaseprincipalid-transact-sql"></a>DATABASE_PRINCIPAL_ID (Transact-SQL)
+# <a name="database_principal_id-transact-sql"></a>DATABASE_PRINCIPAL_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
 Essa função retorna o número de ID de uma entidade de segurança no banco de dados atual. Veja [Entidades de segurança &#40;mecanismo de banco de dados&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md) para obter mais informações sobre entidades de segurança.
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -48,12 +48,12 @@ DATABASE_PRINCIPAL_ID ( 'principal_name' )
 **int**  
 NULL quando a entidade de segurança do banco de dados não existe.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 Use `DATABASE_PRINCIPAL_ID` em uma lista selecionada, uma cláusula WHERE ou qualquer lugar que permite que uma expressão. Para saber mais, veja [Expressões &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-retrieving-the-id-of-the-current-user"></a>A. Recuperando a ID do usuário atual  
+### <a name="a-retrieving-the-id-of-the-current-user"></a>a. Recuperando a ID do usuário atual  
 Este exemplo retorna a ID de entidade de segurança do banco de dados do usuário atual.
   
 ```sql

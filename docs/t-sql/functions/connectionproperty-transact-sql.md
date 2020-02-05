@@ -18,10 +18,10 @@ ms.assetid: 6bd9ccae-af77-4a05-b97f-f8ab41cfde42
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 53b447b2a13c68c2c87536bc3c1f14f9efd74cfd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68132093"
 ---
 # <a name="connectionproperty-transact-sql"></a>CONNECTIONPROPERTY (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "68132093"
 
 Para uma solicitação chega ao servidor, essa função retorna informações sobre as propriedades de conexão da conexão exclusiva que dá suporte a essa solicitação.
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,9 +41,9 @@ CONNECTIONPROPERTY ( property )
 *property*  
 A propriedade da conexão. *property* pode ser um destes valores:
   
-|Valor|Tipo de dados|Descrição|  
+|Valor|Tipo de dados|DESCRIÇÃO|  
 |---|---|---|
-|net_transport|**nvarchar(40)**|Retorna o protocolo de transporte físico usado por essa conexão. Esse valor não é anulável. Os valores de retorno possíveis:<br /><br /> **HTTP**<br /> **Pipe nomeado**<br /> **Session**<br /> **Memória compartilhada**<br /> **SSL**<br /> **TCP**<br /><br /> e<br /><br /> **VIA**<br /><br /> Observação: Sempre retorna **Session** quando uma conexão tem o MARS (conjunto de resultados ativos múltiplos) habilitado e o pooling de conexões está habilitado.|  
+|net_transport|**nvarchar(40)**|Retorna o protocolo de transporte físico usado por essa conexão. Esse valor não é anulável. Os valores de retorno possíveis:<br /><br /> **HTTP**<br /> **Pipe nomeado**<br /> **Sessão**<br /> **Memória compartilhada**<br /> **SSL**<br /> **TCP**<br /><br /> e<br /><br /> **VIA**<br /><br /> Observação: sempre retorna **Session** quando uma conexão tem o MARS (conjunto de resultados ativos múltiplos) habilitado e o pooling de conexões está habilitado.|  
 |protocol_type|**nvarchar(40)**|Retorna o tipo de protocolo da carga. Atualmente faz distinção entre TDS (TSQL) e SOAP. Permite valor nulo.|  
 |auth_scheme|**nvarchar(40)**|Retorna o esquema de autenticação [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da conexão. O esquema de autenticação é a Autenticação do Windows (NTLM, KERBEROS, DIGEST, BASIC, NEGOTIATE) ou a autenticação [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Não permite valor nulo.|  
 |local_net_address|**varchar(48)**|Retorna o endereço IP no servidor a que se destina esta conexão específica. Disponível apenas para conexões que usam o provedor de transporte TCP. Permite valor nulo.|  
@@ -52,7 +52,7 @@ A propriedade da conexão. *property* pode ser um destes valores:
 |physical_net_transport|**nvarchar(40)**|Retorna o protocolo de transporte físico usado por essa conexão. Preciso quando uma conexão tem vários conjuntos de resultados ativos (MARS) habilitados.|  
 |\<Qualquer outra cadeia de caracteres>||Retorna NULL para entrada inválida.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 **local_net_address** e **local_tcp_port** retornam NULL no [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
   
 Os valores retornados correspondem às opções mostradas para as colunas correspondentes na exibição de gerenciamento dinâmico [sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md). Por exemplo:

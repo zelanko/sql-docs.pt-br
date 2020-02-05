@@ -18,10 +18,10 @@ ms.assetid: 1d4cf35a-ca89-4aa4-ae30-e61a0ff18b53
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: ea26c364621910d6dd5148a5753bd6709d3e0f07
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066283"
 ---
 # <a name="stsymdifference-geometry-data-type"></a>STSymDifference (tipo de dados geometry)
@@ -43,14 +43,14 @@ ms.locfileid: "68066283"
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Tipo de retorno CLR: **SqlGeometry**  
+ Tipo de retorno do CLR: **SqlGeometry**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse método sempre retornará nulo se as SRIDs (IDs de referência espacial) das instâncias de **geometry** não forem correspondentes. O resultado poderá conter segmentos de arco circular apenas se as instâncias de entrada contiverem segmentos de arco circulares.  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-computing-the-symmetric-difference-of-two-polygon-instances"></a>A. Computando a diferença simétrica de duas instâncias de Polígono  
+### <a name="a-computing-the-symmetric-difference-of-two-polygon-instances"></a>a. Computando a diferença simétrica de duas instâncias de Polígono  
  O exemplo a seguir usa `STSymDifference()` para computar a diferença simétrica entre duas instâncias de `Polygon`.  
   
 ```  

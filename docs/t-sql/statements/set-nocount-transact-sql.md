@@ -25,10 +25,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f3593709dfbae0406e9952392ef82e184f205208
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68034948"
 ---
 # <a name="set-nocount-transact-sql"></a>SET NOCOUNT (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68034948"
 
   Impede que a mensagem que mostra a contagem do número de linhas afetadas por uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] ou por um procedimento armazenado seja retornada como parte do conjunto de resultados.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,7 +45,7 @@ ms.locfileid: "68034948"
 SET NOCOUNT { ON | OFF }   
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Quando SET NOCOUNT é ON, a conta não é retornada. Quando SET NOCOUNT é OFF, a conta é retornada.  
   
  A função @@ROWCOUNT é atualizada mesmo quando SET NOCOUNT está ON.  

@@ -24,10 +24,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f9e0f46e098ec0944577738332a38e08384a2579
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68121770"
 ---
 # <a name="set-operators---except-and-intersect-transact-sql"></a>Operadores de conjunto – EXCEPT e INTERSECT (Transact-SQL)
@@ -45,7 +45,7 @@ Para combinar os conjuntos de resultados de duas consultas que usam EXCEPT ou IN
   
 -   Os tipos de dados devem ser compatíveis.  
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -69,7 +69,7 @@ Retorna qualquer valor distinto da consulta à esquerda do operador EXCEPT. Esse
 INTERSECT  
 Retorna qualquer valor distinto retornado pela consulta à esquerda e à direita do operador INTERSECT.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 Os tipos de dados de colunas comparáveis são retornados pelas consultas à esquerda e à direita dos operadores EXCEPT ou INTERSECT. Esses tipos de dados podem incluir tipos de dados de caractere com ordenações diferentes. Quando isso acontece, a comparação necessária é executada de acordo com as regras de [precedência de ordenação](../../t-sql/statements/collation-precedence-transact-sql.md). Se você não puder executar essa conversão, o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] retornará um erro.  
   
 Ao comparar valores de colunas para determinar linhas DISTINTAS, dois valores NULL são considerados iguais.  

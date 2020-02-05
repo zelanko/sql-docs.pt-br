@@ -21,10 +21,10 @@ ms.assetid: 11bf83f9-0718-4238-a835-83d2eb14ae7b
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 00659f76da827bf5e00df72d966b32ec56e1f7ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072109"
 ---
 # <a name="drop-type-transact-sql"></a>DROP TYPE (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68072109"
 
   Remove do banco de dados atual um tipo de dados de alias ou um tipo CLR (Common Language Runtime) definido pelo usuário.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -52,7 +52,7 @@ DROP TYPE [ IF EXISTS ] [ schema_name. ] type_name [ ; ]
  *type_name*  
  É o nome do tipo de dados de alias ou do tipo definido pelo usuário que você deseja descartar.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  A instrução DROP TYPE não será executada quando qualquer um dos seguintes for verdadeiro:  
   
 -   Há tabelas no banco de dados que contêm colunas do tipo de dados de alias ou do tipo definido pelo usuário. É possível obter informações sobre colunas de alias ou de tipo definido pelo usuário consultando as exibições do catálogo [sys.columns](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) ou [sys.column_type_usages](../../relational-databases/system-catalog-views/sys-column-type-usages-transact-sql.md).  

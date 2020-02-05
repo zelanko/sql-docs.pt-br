@@ -11,10 +11,10 @@ ms.reviewer: dphansen
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 3767bec1807b68df3eb3f82287a5c871d653a286
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68892980"
 ---
 # <a name="drop-external-library-transact-sql"></a>DROP EXTERNAL LIBRARY (Transact-SQL)  
@@ -45,7 +45,7 @@ Para excluir uma linguagem, é necessário ter o privilégio ALTER ANY EXTERNAL 
 
 Uma mensagem informativa é retornada se a instrução foi bem-sucedida.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Comentários
 
 Para que uma linguagem externa possa ser excluída, todas as bibliotecas externas para a linguagem especificada precisam ser excluídas.
 

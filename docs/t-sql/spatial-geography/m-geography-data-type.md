@@ -18,10 +18,10 @@ ms.assetid: cdba04f0-4e17-48f6-bafb-b1f918c5a501
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 1990361b643aee24f34e6b119f61595a450ceab4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68127718"
 ---
 # <a name="m-geography-data-type"></a>M (tipo de dados geography)
@@ -39,12 +39,12 @@ ms.locfileid: "68127718"
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **float**  
   
- Tipo CLR: **SqlDouble**  
+ Tipo do CLR: **SqlDouble**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O valor dessa propriedade será nulo se a instância de **geography** não for um **Point** e também será nulo para as instâncias de **Point** para as quais ele não for definido.  
   
- Esta propriedade é somente leitura.  
+ Essa propriedade é somente leitura.  
   
  Os valores de M não são usados nos cálculos feitos pela biblioteca e não serão usados em nenhum cálculo de biblioteca.  
   

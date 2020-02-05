@@ -14,10 +14,10 @@ ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
 ms.openlocfilehash: 8d2e2cc75046d9da6ce3e4c8188136f6b6f03945
-ms.sourcegitcommit: 650a25eb54eeb9ddfe3c8f12b5f8804cc07bf5e5
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/03/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75623235"
 ---
 # <a name="polybase-scale-out-groups"></a>Grupos de escala horizontal do PolyBase
@@ -28,7 +28,7 @@ Uma instância do SQL Server autônoma com PolyBase pode se tornar um gargalo de
   
 Veja [Introdução ao PolyBase](../../relational-databases/polybase/get-started-with-polybase.md) e [Guia do PolyBase](../../relational-databases/polybase/polybase-guide.md).
   
-![grupos de escala horizontal do PolyBase](../../relational-databases/polybase/media/polybase-scale-out-groups.png "|::ref1::|")  
+![grupos de escala horizontal do PolyBase](../../relational-databases/polybase/media/polybase-scale-out-groups.png "Grupos de escala horizontal do PolyBase")  
   
 ## <a name="head-node"></a>Nó de cabeçalho  
 
@@ -47,7 +47,7 @@ Por exemplo, digamos que você tenha uma tabela externa do SQL Server com 12 par
 > [!NOTE]
 >  isso é diferente das leituras de expansão no Hadoop. 
 
-![grupos de escala horizontal do PolyBase](../../relational-databases/polybase/media/polybase-scale-out-groups2.png "|::ref2::|")
+![grupos de escala horizontal do PolyBase](../../relational-databases/polybase/media/polybase-scale-out-groups2.png "Grupos de escala horizontal do PolyBase")
   
 ## <a name="distributed-query-processing"></a>Processamento de consulta distribuída  
 

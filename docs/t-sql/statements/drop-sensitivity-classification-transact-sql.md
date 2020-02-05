@@ -26,10 +26,10 @@ helpviewer_keywords:
 - data classification
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 871822e57e9109455614e1391a28d87a6d9e6b90
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68223591"
 ---
 # <a name="drop-sensitivity-classification-transact-sql"></a>DESCARTAR CLASSIFICAÇÃO DE CONFIDENCIALIDADE (Transact-SQL)
@@ -58,7 +58,7 @@ DROP SENSITIVITY CLASSIFICATION FROM
     - *table_name* - é o nome da tabela à qual a coluna classificada pertence.
     - *column_name* - é o nome da coluna da qual remover a classificação.
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 
 - Várias classificações de objetos podem ser descartadas usando uma única instrução 'DROP SENSITIVITY CLASSIFICATION'.
 
@@ -70,7 +70,7 @@ Requer a permissão ALTERAR QUALQUER CLASSIFICAÇÃO DE CONFIDENCIALIDADE. A ALT
 ## <a name="examples"></a>Exemplos  
 
 
-### <a name="a-dropping-classification-from-a-single-column"></a>A. Descartar a classificação de uma única coluna
+### <a name="a-dropping-classification-from-a-single-column"></a>a. Descartar a classificação de uma única coluna
 
 O exemplo a seguir remove a classificação da coluna `dbo.sales.price`.  
 

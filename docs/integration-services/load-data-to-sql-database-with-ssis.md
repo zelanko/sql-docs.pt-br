@@ -11,10 +11,10 @@ ms.date: 08/20/2018
 ms.author: chugu
 author: chugugrace
 ms.openlocfilehash: 8d78ab5befe5f95c07b6cb539d2629fdd9d003ae
-ms.sourcegitcommit: 909b69dd1f918f00b9013bb43ea66e76a690400a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75924984"
 ---
 # <a name="load-data-into-sql-server-or-azure-sql-database-with-sql-server-integration-services-ssis"></a>Carregar dados no SQL Server ou no Banco de Dados SQL do Azure com o SSIS (SQL Server Integration Services)
@@ -173,9 +173,9 @@ Parabéns! Você conseguiu usar o SQL Server Integration Services para carregar 
 
 ## <a name="next-steps"></a>Próximas etapas
 
-- Saiba como depurar e solucionar problemas de pacotes diretamente no ambiente de design. Comece aqui: [Ferramentas de solução de problemas para desenvolvimento de pacotes][Troubleshooting Tools for Package Development].
+- Saiba como depurar e solucionar problemas de pacotes diretamente no ambiente de design. Comece aqui: [Solução de problemas de ferramentas para o desenvolvimento de pacotes][Troubleshooting Tools for Package Development].
 
-- Saiba como implantar seus pacotes e projetos do SSIS no servidor do Integration Services ou em outro local de armazenamento. Comece aqui: [Implantação de Projetos e Pacotes][Deployment of Projects and Packages].
+- Saiba como implantar seus pacotes e projetos do SSIS no servidor do Integration Services ou em outro local de armazenamento. Comece por aqui: [Implantação de projetos e pacotes][Deployment of Projects and Packages].
 
 <!-- Image references -->
 [01]:  ./media/load-data-to-sql-database-with-ssis/ssis-designer-01.png

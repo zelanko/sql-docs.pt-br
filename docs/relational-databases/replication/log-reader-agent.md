@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 300a3c46-0e48-4334-99c0-9ee690d2ef4f
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 8877af08b093b81a875b59fc11f4497b5089f680
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 4873d4e4481bb6a845101b5ce2754062bcd7ce10
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68767638"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288486"
 ---
 # <a name="log-reader-agent"></a>Agente de Leitor de Log
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

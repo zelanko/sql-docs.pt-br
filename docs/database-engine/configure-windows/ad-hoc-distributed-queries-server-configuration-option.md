@@ -18,10 +18,10 @@ ms.assetid: 5b982015-e196-44c3-83b8-275fb9d769b2
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8c8387f833fbfb877393fc0180008557509ed8ed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68013273"
 ---
 # <a name="ad-hoc-distributed-queries-server-configuration-option"></a>Opção de configuração de servidor ad hoc distributed queries
@@ -34,8 +34,8 @@ ms.locfileid: "68013273"
 > [!IMPORTANT]  
 >  A habilitação do uso de nomes ad hoc indica que qualquer logon autenticado para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode acessar o provedor. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Os administradores devem habilitar esse recurso para provedores seguros, que podem ser acessados por qualquer logon local.  
   
-## <a name="remarks"></a>Remarks  
- Tentar fazer uma conexão ad hoc com a opção **Ad Hoc Distributed Queries** não habilitada resultará em erro: Msg 7415, Nível 16, Estado 1, Linha 1  
+## <a name="remarks"></a>Comentários  
+ Tentar fazer uma conexão ad hoc com a opção **Ad Hoc Distributed Queries** não habilitada resultará em erro: Msg 7415, Level 16, State 1, Line 1  
   
  Acesso ad hoc negado ao provedor OLE DB 'Microsoft.ACE.OLEDB.12.0'. É necessário acessar esse provedor através de um servidor vinculado.  
   

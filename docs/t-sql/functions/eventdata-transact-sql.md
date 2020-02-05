@@ -25,10 +25,10 @@ ms.assetid: 03a80e63-6f37-4b49-bf13-dc35cfe46c44
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 73e0c8737a65b040552029717bf6848e1fc0cb63
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68094572"
 ---
 # <a name="eventdata-transact-sql"></a>EVENTDATA (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68094572"
 
 Essa função retorna informações sobre eventos do servidor ou do banco de dados. Quando uma notificação de evento é acionada e o agente de serviços especificado recebe os resultados, `EVENTDATA` é chamado. Um gatilho de logon ou DDL também dá suporte ao uso interno de `EVENTDATA`.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,7 +45,7 @@ Essa função retorna informações sobre eventos do servidor ou do banco de dad
 EVENTDATA( )  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 `EVENTDATA` só retorna dados quando referenciado diretamente dentro de um gatilho DDL ou de logon. O `EVENTDATA` retorna null se outras rotinas o chamam, mesmo se um gatilho DDL ou logon chama essas rotinas.
   
 Is dados retornados pelo `EVENTDATA` são inválidos após uma transação que
@@ -73,7 +73,7 @@ Is dados retornados pelo `EVENTDATA` são inválidos após uma transação que
 As senhas não são exibidos quando as instruções `CREATE LOGIN` ou `ALTER LOGIN` são executadas. Isso protege a segurança de logon.  
   
 ## <a name="schemas-returned"></a>Esquemas retornados  
-EVENTDATA retorna um valor do tipo de dados **xml**. Por padrão, a definição de esquema para todos os eventos é instalada neste diretório: [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools\Binn\schemas\sqlserver\2006\11\events\events.xsd.  
+EVENTDATA retorna um valor do tipo de dados **xml**. Por padrão, a definição de esquema de todos os eventos é instalada no seguinte diretório: [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools\Binn\schemas\sqlserver\2006\11\events\events .xsd.  
   
 A página da Web [Esquemas XML do Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=31850) também tem o esquema de eventos.  
   
@@ -81,7 +81,7 @@ Para extrair o esquema de qualquer evento específico, pesquise o esquema pelo T
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-querying-event-data-in-a-ddl-trigger"></a>A. Consultando dados de evento em um gatilho DDL  
+### <a name="a-querying-event-data-in-a-ddl-trigger"></a>a. Consultando dados de evento em um gatilho DDL  
 Este exemplo cria um gatilho DDL que impede a criação de novas tabelas de banco de dados. O uso de XQuery em relação aos dados XML gerados por `EVENTDATA` captura a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] que aciona o gatilho. Confira [Referência da linguagem XQuery &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md) para obter mais informações.  
   
 > [!NOTE]  

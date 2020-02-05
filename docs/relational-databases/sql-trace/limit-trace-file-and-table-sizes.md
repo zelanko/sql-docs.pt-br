@@ -17,10 +17,10 @@ ms.assetid: 88c31b02-f44c-4a14-be8b-437f2097de12
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: b12834eac33fd016279b6f2f3a79cee413c3d23d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072880"
 ---
 # <a name="limit-trace-file-and-table-sizes"></a>Limitar o tamanho de arquivos e tabelas de rastreamento
@@ -30,7 +30,7 @@ ms.locfileid: "68072880"
 > [!NOTE]  
 >  Se os dados do rastreamento forem salvos em um arquivo que já existe, é possível adicionar dados ao arquivo ou substituir os que ele contém. Se optar por acrescentar os dados ao arquivo e o arquivo de rastreamento atingir ou exceder o tamanho máximo especificado, você será notificado e terá a oportunidade de aumentar o tamanho máximo de arquivo ou especificar um novo arquivo. O mesmo vale para tabelas de rastreamento.  
   
-## <a name="maximum-file-size"></a>Tamanho máximo de arquivo  
+## <a name="maximum-file-size"></a>Tamanho máximo do arquivo  
  Um rastreamento que possua tamanho máximo de arquivo parará de salvar informações no arquivo assim que esse tamanho for alcançado. Esta opção permite-lhe agrupar eventos em arquivos menores e mais fáceis de gerenciar. Além disso, limitar o tamanho do arquivo torna mais segura a execução de rastreamentos autônomos, pois o rastreamento é interrompido quando o tamanho máximo de arquivo é alcançado. Você pode definir o tamanho máximo de arquivos para rastreamentos criados por meio de procedimentos armazenados Transact-SQL ou usando o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
  Há um limite de 1 gigabyte (GB) para a opção de tamanho máximo de arquivo. O tamanho máximo de arquivo padrão é de 5 megabytes (MB).  

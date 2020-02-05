@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 6f8e2831-5c45-4e39-8e51-d37e2813cf3d
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 2cc0b1cd3c395a1c603e2e2aa9a94521788f11ab
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 59c70e5732ea8968798f3a54b246befe73d3fcb0
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75321743"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288073"
 ---
 # <a name="enable-a-remote-publisher-at-a-distributor-sql-server-management-studio"></a>Habilitar um Publicador remoto em um Distribuidor (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

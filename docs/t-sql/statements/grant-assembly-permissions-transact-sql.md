@@ -17,10 +17,10 @@ ms.assetid: dce1e027-f859-4967-bdda-16a95ae460d0
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2f375de9db1cce966206402b99d3e54724cbf2bf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68065614"
 ---
 # <a name="grant-assembly-permissions-transact-sql"></a>Permissões de assembly GRANT (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "68065614"
 
   Concede permissões em um assembly.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -73,7 +73,7 @@ AS *granting_principal*
 -   usuário de banco de dados mapeado para uma chave assimétrica  
 -   usuário de banco de dados não mapeado para uma entidade do servidor.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Um assembly é um nível de banco de dados protegível contido no banco de dados que é pai na hierarquia de permissões. As permissões mais específicas e limitadas que podem ser concedidas em um assembly estão listadas abaixo, junto com as permissões mais gerais que as contêm implicitamente.  
   
 |Permissão de assembly|Implícito na permissão de assembly|Implícito na permissão de banco de dados|  

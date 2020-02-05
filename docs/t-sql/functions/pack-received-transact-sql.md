@@ -20,18 +20,18 @@ ms.assetid: 5c0b3d36-bfad-4f0b-abb8-e8f6391b32cd
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: a570e51fb9d46875f47196d2469a3464bee761a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914433"
 ---
-# <a name="x40x40packreceived-transact-sql"></a>&#x40;&#x40;PACK_RECEIVED (Transact-SQL)
+# <a name="x40x40pack_received-transact-sql"></a>&#x40;&#x40;PACK_RECEIVED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retorna o número de pacotes de entrada lidos na rede pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde a última vez em que foi iniciado.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,7 +42,7 @@ ms.locfileid: "67914433"
 ## <a name="return-types"></a>Tipos de retorno  
  **inteiro**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Para exibir um relatório que contém várias estatísticas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], incluindo pacotes enviados e recebidos, execute **sp_monitor**.  
   
 ## <a name="examples"></a>Exemplos  

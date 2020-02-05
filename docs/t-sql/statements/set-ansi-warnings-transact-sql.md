@@ -24,18 +24,18 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d7209914e92854dc301266625a0345336f787e4e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67948014"
 ---
-# <a name="set-ansiwarnings-transact-sql"></a>SET ANSI_WARNINGS (Transact-SQL)
+# <a name="set-ansi_warnings-transact-sql"></a>SET ANSI_WARNINGS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Especifica o comportamento padrão ISO para várias condições de erro.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe
   
@@ -51,7 +51,7 @@ SET ANSI_WARNINGS { ON | OFF }
 SET ANSI_WARNINGS ON
 ```
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  SET ANSI_WARNINGS afeta as seguintes condições:  
   
 -   Quando definida como ON, se forem exibidos valores nulos em funções de agregação, como SUM, AVG, MAX, MIN, STDEV, STDEVP, VAR, VARP ou COUNT, será gerada uma mensagem de aviso. Quando definido como OFF, nenhum aviso é emitido.  
