@@ -12,22 +12,22 @@ ms.assetid: e6d2e716-5263-477c-ad0e-7bcbfef4c1f3
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: aeaf4ccd9d5689009a9e047337ff1bf9d6ba833b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68105210"
 ---
-# <a name="mssqlserver3181"></a>MSSQLSERVER_3181
+# <a name="mssqlserver_3181"></a>MSSQLSERVER_3181
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|Nome do Produto|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |ID do evento|3181|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|LDDB_STORAGE_VERIFY|  
 |Texto da mensagem|A tentativa de restaurar este backup pode encontrar problemas de espaço de armazenamento. As próximas mensagens fornecerão detalhes.|  
@@ -35,7 +35,7 @@ ms.locfileid: "68105210"
 ## <a name="explanation"></a>Explicação  
 A instrução RESTORE VERIFYONLY verifica o espaço de armazenamento disponível no disco onde o banco de dados será restaurado.  
   
-### <a name="possible-causes"></a>Causas possíveis  
+### <a name="possible-causes"></a>Possíveis causas  
 O espaço disponível em disco pode ser insuficiente para restaurar o backup que está sendo verificado.  
   
 ## <a name="user-action"></a>Ação do usuário  

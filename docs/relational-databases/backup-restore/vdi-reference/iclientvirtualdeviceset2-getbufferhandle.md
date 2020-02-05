@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 844ddad21eaf3fb579d6a0981f2a042238e92372
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847327"
 ---
 # <a name="iclientvirtualdeviceset2getbufferhandle-vdi"></a>IClientVirtualDeviceSet2::GetBufferHandle (VDI)
@@ -31,7 +31,7 @@ HRESULT IClientVirtualDeviceSet2::GetBufferHandle (
 );
 ```
 
-## <a name="parameters"></a>Parâmetros
+## <a name="parameters"></a>parâmetros
 
 *pBuffer* Esse é o endereço de um buffer obtido de um comando de Leitura ou Gravação.
 
@@ -45,7 +45,7 @@ HRESULT IClientVirtualDeviceSet2::GetBufferHandle (
 | VD_E_PROTOCOL | O conjunto de dispositivos virtuais não está aberto no momento. |
 | VD_E_INVALID | O pBuffer não é um endereço válido. |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Comentários
 
 O processo que invoca a função GetBufferHandle é responsável por invocar IClientVirtualDevice2::CompleteCommand quando a transferência de dados é concluída.
 

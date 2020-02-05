@@ -15,10 +15,10 @@ author: joesackmsft
 ms.author: josack
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9f5a9846ddc19320b3299893929c7ebf11ca0269
-ms.sourcegitcommit: eae9efe2a2d3758685e85039ffb8fa698aa47f9b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73962337"
 ---
 # <a name="approx_count_distinct-transact-sql"></a>APPROX_COUNT_DISTINCT (Transact-SQL)
@@ -26,7 +26,7 @@ ms.locfileid: "73962337"
 
 Essa função retorna o número aproximado de valores não nulos exclusivos em um grupo. 
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,7 +43,7 @@ Uma [expressão](../../t-sql/language-elements/expressions-transact-sql.md) de q
 ## <a name="return-types"></a>Tipos de retorno
  **bigint**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 `APPROX_COUNT_DISTINCT( expression )` avalia uma expressão de cada linha em um grupo e retorna o número aproximado de valores não nulos exclusivos em um grupo. Essa função foi projetada para fornecer agregações em grandes conjuntos de dados, nos quais a capacidade de resposta é mais importante do que a precisão absoluta.  
 
 `APPROX_COUNT_DISTINCT` foi projetado para uso em cenários de big data e é otimizado para as seguintes condições:
@@ -59,7 +59,7 @@ A implementação da função garante uma taxa de erro de até %2 em uma probabi
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-approx_count_distinct"></a>A. Usar APPROX_COUNT_DISTINCT 
+### <a name="a-using-approx_count_distinct"></a>a. Usar APPROX_COUNT_DISTINCT 
 Este exemplo retorna o número aproximado de chaves de ordem diferentes da tabela ordens.
   
 ```sql

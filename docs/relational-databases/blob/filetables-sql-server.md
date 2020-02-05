@@ -16,10 +16,10 @@ ms.assetid: a57b629c-e9ed-48fd-9a48-ed3787d80c8f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8993c5e9ea1334b5bb8a002f1991041886a9f282
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68125181"
 ---
 # <a name="filetables-sql-server"></a>FileTables (SQL Server)
@@ -29,7 +29,7 @@ ms.locfileid: "68125181"
   
  Em outras palavras, você pode armazenar arquivos e documentos em tabelas especiais no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , denominadas FileTables, mas acessá-los a partir de aplicativos do Windows como se eles estivessem armazenados no sistema de arquivos, sem fazer alterações nos seus aplicativos cliente.  
   
- O recurso FileTable se baseia na tecnologia FILESTREAM do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para saber mais sobre o FILESTREAM, veja [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md).  
+ O recurso FileTable se baseia na tecnologia FILESTREAM do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para saber mais sobre o FILESTREAM, veja [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md).  
   
 ##  <a name="Goals"></a> Benefícios do recurso FileTable  
  Os objetivos do recurso FileTable incluem o seguinte:  

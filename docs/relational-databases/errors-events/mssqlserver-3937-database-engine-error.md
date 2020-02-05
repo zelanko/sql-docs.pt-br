@@ -12,22 +12,22 @@ ms.assetid: 312d5bbe-c8de-42db-af4b-4ccb448ce6ef
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 4289b3e41de0e1652bd9cc033b2fab6ae8f42a60
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68043566"
 ---
-# <a name="mssqlserver3937"></a>MSSQLSERVER_3937
+# <a name="mssqlserver_3937"></a>MSSQLSERVER_3937
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|MSSQLSERVER|  
+|Nome do Produto|MSSQLSERVER|  
 |ID do evento|3937|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|XACT_FILESTREAM_ROLLBACK_ERROR|  
 |Texto da mensagem|Erro ao tentar notificar o driver do filtro FILESTREAM que uma transação foi revertida. Código de erro: 0x%0x.|  

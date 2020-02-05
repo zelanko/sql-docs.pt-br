@@ -12,24 +12,24 @@ helpviewer_keywords:
 ms.assetid: 4b983e76-bb77-43c5-b44b-19919d3da619
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 74cfa4b2d6e4ea21ac6e920d9aaf6a720ec8ec69
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 74fd90cfc88e9ae4903408575c048a46fc288217
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68766159"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287753"
 ---
-# <a name="mssqleng014161"></a>MSSQL_ENG014161
+# <a name="mssql_eng014161"></a>MSSQL_ENG014161
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
     
 ## <a name="message-details"></a>Detalhes da mensagem  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|14161|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |Nome simbólico||  
 |Texto da mensagem|O limite [%s:%s] da publicação [%s] foi definido. Verifique se o leitor de log e os agentes de distribuição estão em execução e atendem ao requisito de latência.|  

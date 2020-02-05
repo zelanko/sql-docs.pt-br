@@ -16,10 +16,10 @@ ms.assetid: 33df3a3d-1f5c-429b-a3b9-52b7d8689089
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b625b23dc45a3a5ed9abc00f0068ed3e7fbfeb58
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297446"
 ---
 # <a name="operators-ssis-expression"></a>Operadores (Expressão SSIS)
@@ -31,7 +31,7 @@ ms.locfileid: "71297446"
   
  A tabela a seguir lista os tópicos sobre os operadores desta seção.  
   
-|Operador|Descrição|  
+|Operador|DESCRIÇÃO|  
 |--------------|-----------------|  
 |[Conversão &#40;Expressão SSIS&#41;](../../integration-services/expressions/cast-ssis-expression.md)|Converte uma expressão de um tipo de dados para um tipo de dados diferente.|  
 |[&#40;&#41; &#40;Parênteses&#41; &#40;Expressão SSIS&#41;](../../integration-services/expressions/parentheses-ssis-expression.md)|Identifica a ordem de avaliação de expressões.|  

@@ -38,10 +38,10 @@ ms.assetid: 4165c404-4d50-4063-9a6e-6e267d309376
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2fc021cec09a7f62d05f5e435db9d6fc2597fce3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68117338"
 ---
 # <a name="create-remote-service-binding-transact-sql"></a>CREATE REMOTE SERVICE BINDING (Transact-SQL)
@@ -49,7 +49,7 @@ ms.locfileid: "68117338"
 
   Cria uma associação que define as credenciais de segurança a serem usadas para iniciar uma conversa com um serviço remoto.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -78,7 +78,7 @@ CREATE REMOTE SERVICE BINDING binding_name
  ANONYMOUS  
  Especifica se a autenticação anônima é usada durante a comunicação com o serviço remoto. Se ANONYMOUS = ON, a autenticação anônima será usada e as operações no banco de dados remoto ocorrerão como um membro da função de banco de dados fixa **public**. Se ANONYMOUS = OFF, as operações no banco de dados remoto ocorrerão como um usuário específico nesse banco de dados. Se essa cláusula não for especificada, o padrão será OFF.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O [!INCLUDE[ssSB](../../includes/sssb-md.md)] usa uma associação de serviço remoto para localizar o certificado a ser usado para uma nova conversa. A chave pública no certificado associado a *user_name* é usada para autenticar as mensagens enviadas ao serviço remoto e para criptografar uma chave da sessão que, em seguida, é usada para criptografar a conversa. O certificado de *owner_name* deve corresponder ao certificado de um usuário no banco de dados que hospeda o serviço remoto.  
   
  A associação de serviço remoto é necessária apenas para serviços iniciadores que se comunicam com serviços de destino fora da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Um banco de dados que hospeda um serviço iniciador deve conter associações de serviço remoto para quaisquer serviços de destino fora da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Um banco de dados que hospeda um serviço de destino deve conter associações de serviço remoto para os serviços iniciadores que se comunicam com o serviço de destino. Quando os serviços iniciador e de destino estão na mesma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], nenhuma associação de serviço remoto é necessária. Entretanto, se uma associação de serviço remoto estiver presente em que o *service_name* especificado para TO SERVICE corresponde ao nome do serviço local, o [!INCLUDE[ssSB](../../includes/sssb-md.md)] usará a associação.  
@@ -96,7 +96,7 @@ CREATE REMOTE SERVICE BINDING binding_name
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-creating-a-remote-service-binding"></a>A. Criando uma associação de serviço remoto  
+### <a name="a-creating-a-remote-service-binding"></a>a. Criando uma associação de serviço remoto  
  O exemplo a seguir cria uma associação para o serviço `//Adventure-Works.com/services/AccountsPayable`. O [!INCLUDE[ssSB](../../includes/sssb-md.md)] usa o certificado de propriedade da entidade de banco de dados `APUser` para se autenticar no serviço remoto e trocar a chave de criptografia de sessão com o serviço remoto.  
   
 ```  

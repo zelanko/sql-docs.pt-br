@@ -12,22 +12,22 @@ ms.assetid: 1cef90ef-9c39-44e6-bc7f-316c8f53c10c
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: bc2b1094a4ea7f8f6c2d2d60c804260286c5f237
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68085988"
 ---
-# <a name="mssqlserver2527"></a>MSSQLSERVER_2527
+# <a name="mssqlserver_2527"></a>MSSQLSERVER_2527
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|2527|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|DBCC_INDEX_FILEGROUP_IS_OFFLINE|  
 |Texto da mensagem|Não foi possível processar o índice I_NAME da tabela O_NAME porque o grupo de arquivos F_NAME está offline.|  

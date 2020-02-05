@@ -11,18 +11,18 @@ ms.assetid: 87bc4d82-39d8-424f-886f-98cf1e4bb07a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 5f325c9322d9194ff9dfb99dcf5bcae902a59faa
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295975"
 ---
-# <a name="lesson-3-install-ssis-packages"></a>Lição 3: instalar os pacotes SSIS
+# <a name="lesson-3-install-ssis-packages"></a>Lição 3: Instalar os pacotes SSIS
 
 [!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-Na [Lição 2: criar o pacote de implantação no SSIS](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md), você compilou um utilitário de implantação e criou o pacote de implantação que contém os itens para os quais é necessário instalar pacotes em outro computador. Você também verificou a lista de arquivos no pacote de implantação e examinou o conteúdo do arquivo de manifesto criado quando você compilou o utilitário de implantação.  
+Na [Lição 2: Criar o pacote de implantação no SSIS](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md), você compilou um utilitário de implantação e criou o pacote de implantação que contém os itens para os quais é necessário instalar pacotes em outro computador. Você também verificou a lista de arquivos no pacote de implantação e examinou o conteúdo do arquivo de manifesto criado quando você compilou o utilitário de implantação.  
   
 Nesta lição, você copiará o pacote de implantação para o computador de destino e executará o Assistente de Instalação de Pacotes para instalar os pacotes, as dependências dos pacotes e os arquivos auxiliares no computador. Os pacotes serão instalados no banco de dados **msdb**[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e os outros itens serão instalados no sistema de arquivos. Depois de concluir a instalação de pacote, você testará a implantação executando os pacotes do [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] usando o Execute o Utilitário de Pacotes.  
   
@@ -31,14 +31,14 @@ Nesta lição, você copiará o pacote de implantação para o computador de des
 ## <a name="lesson-tasks"></a>Tarefas da lição  
 Esta lição contém as seguintes tarefas:  
   
--   [Etapa 1: copiar o pacote de implantação](../integration-services/lesson-3-1-copying-the-deployment-bundle.md)  
+-   [Etapa 1: Copiando o pacote de implantação](../integration-services/lesson-3-1-copying-the-deployment-bundle.md)  
   
--   [Etapa 2: executar o Assistente de Instalação de Pacotes](../integration-services/lesson-3-2-running-the-package-installation-wizard.md)  
+-   [Etapa 2: Executando o Assistente de Instalação de Pacotes](../integration-services/lesson-3-2-running-the-package-installation-wizard.md)  
   
--   [Etapa 3: testar os pacotes implantados](../integration-services/lesson-3-3-testing-the-deployed-packages.md)  
+-   [Etapa 3: Testando os pacotes implantados](../integration-services/lesson-3-3-testing-the-deployed-packages.md)  
   
 ## <a name="start-the-lesson"></a>Iniciar a lição  
-[Etapa 1: copiar o pacote de implantação](../integration-services/lesson-3-1-copying-the-deployment-bundle.md)  
+[Etapa 1: Copiando o pacote de implantação](../integration-services/lesson-3-1-copying-the-deployment-bundle.md)  
   
   
   

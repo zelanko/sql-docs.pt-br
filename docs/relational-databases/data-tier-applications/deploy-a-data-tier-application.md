@@ -22,10 +22,10 @@ ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 842a6519c1493162d06c853f11a9494d8dc3ca5b
-ms.sourcegitcommit: ba44730f5cc33295ae2ed1f281186dd266bad4ef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74190122"
 ---
 # <a name="deploy-a-data-tier-application"></a>Implantar um aplicativo da camada de dados

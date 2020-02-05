@@ -18,10 +18,10 @@ ms.assetid: a3f2c84b-a49f-4ce3-ba25-b903fb0c99b4
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: e48cea62df1e0828a583cfccf35fc4bedf7358cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101267"
 ---
 # <a name="geomfromgml-geometry-data-type"></a>GeomFromGml (tipo de dados geometry)
@@ -50,9 +50,9 @@ GeomFromGml ( GML_input, SRID )
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Tipo de retorno CLR: **SqlGeometry**  
+ Tipo de retorno do CLR: **SqlGeometry**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse método gerará uma **FormatException** se a entrada não for bem formatada.  
   
 ## <a name="examples"></a>Exemplos  

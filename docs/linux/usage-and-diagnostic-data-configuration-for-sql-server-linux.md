@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: d7fc5a14a9da000b69db804a5439fb62985f59b8
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75558531"
 ---
 # <a name="configure-usage--diagnostic-data-collection-for-sql-server-on-linux"></a>Configurar a coleta de dados de uso e diagnóstico do SQL Server em Linux

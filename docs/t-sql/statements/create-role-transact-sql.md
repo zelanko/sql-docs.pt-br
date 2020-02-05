@@ -28,10 +28,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b5a8e03235614ce9ae5b2461154c97a2bb5f67f1
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73064626"
 ---
 # <a name="create-role-transact-sql"></a>CREATE ROLE (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "73064626"
 
   Cria uma nova função de banco de dados no banco de dados atual.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -54,7 +54,7 @@ CREATE ROLE role_name [ AUTHORIZATION owner_name ]
  AUTHORIZATION *owner_name*  
  É o usuário de banco de dados ou função que terá a propriedade da nova função. Se nenhum usuário for especificado, a função será de propriedade do usuário que executar CREATE ROLE. O proprietário da função ou qualquer membro de uma função proprietária pode adicionar ou remover membros da função.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  As funções são protegíveis no nível de banco de dados. Depois de criar uma função, configure as permissões em nível de banco de dados da função usando GRANT, DENY e REVOKE. Para adicionar membros a uma função de banco de dados, use [ALTER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-role-transact-sql.md). Para obter mais informações, veja [Funções em nível de banco de dados](../../relational-databases/security/authentication-access/database-level-roles.md).  
   
  As funções de banco de dados são visíveis nas exibições do catálogo sys.database_role_members e sys.database_principals.  
@@ -76,7 +76,7 @@ CREATE ROLE role_name [ AUTHORIZATION owner_name ]
 ## <a name="examples"></a>Exemplos  
 Os seguintes exemplos usam todos o banco de dados AdventureWorks.   
 
-### <a name="a-creating-a-database-role-that-is-owned-by-a-database-user"></a>A. Criando uma função de banco de dados pertencente a um usuário de banco de dados  
+### <a name="a-creating-a-database-role-that-is-owned-by-a-database-user"></a>a. Criando uma função de banco de dados pertencente a um usuário de banco de dados  
  O exemplo a seguir cria a função de banco de dados `buyers` que pertence ao usuário `BenMiller`.  
   
 ```sql  

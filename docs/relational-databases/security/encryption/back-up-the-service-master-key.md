@@ -12,10 +12,10 @@ ms.assetid: f60b917c-6408-48be-b911-f93b05796904
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: 1fa730e1143516df2fe5f14c04afcbb9292ac67f
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74957477"
 ---
 # <a name="back-up-the-service-master-key"></a>Fazer backup da chave mestra de serviço

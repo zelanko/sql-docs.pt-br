@@ -24,10 +24,10 @@ ms.assetid: 3222a1ed-83eb-421c-b299-a53b67bba740
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 45e97657bf70bdf023388f97497f9c2a8c5dd0f4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294938"
 ---
 # <a name="enabling-logging-programmatically"></a>Habilitando o registro em log programaticamente
@@ -47,7 +47,7 @@ ms.locfileid: "71294938"
   
  A tabela a seguir lista os provedores de log disponíveis, sua descrição e as informações sobre <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider.ConfigString%2A>.  
   
-|Provedor|Descrição|Propriedade ConfigString|  
+|Provedor|DESCRIÇÃO|Propriedade ConfigString|  
 |--------------|-----------------|---------------------------|  
 |SQL Server Profiler|Gera rastreamentos do SQL que podem ser capturados e exibidos no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Profiler. A extensão de nome de arquivo padrão deste provedor é .trc.|Nenhuma configuração é necessária.|  
 |SQL Server|Escreve entradas de log de evento na tabela **sysssislog** em qualquer banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|O provedor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exige a especificação da conexão ao banco de dados e também o nome do banco de dados de destino.|  
@@ -119,6 +119,6 @@ End Module
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Registro em Log do Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md)  
+ [Registro em Log do SSIS &#40;Integration Services&#41;](../../integration-services/performance/integration-services-ssis-logging.md)  
   
   

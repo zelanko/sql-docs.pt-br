@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: af24aff4bbb8f0eefa14363453e962c0a90d610e
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847207"
 ---
 # <a name="iservervirtualdeviceset2opendevice-vdi"></a>IServerVirtualDeviceSet2::OpenDevice (VDI)
@@ -31,7 +31,7 @@ HRESULT IServerVirtualDeviceSet2::OpenDevice (
 );
 ```
 
-## <a name="parameters"></a>Parâmetros
+## <a name="parameters"></a>parâmetros
 
 *lpName* Isso é fornecido pela primeira cláusula VIRTUAL_DEVICE= do comando BACKUP ou RESTORE. Esse nome é usado como a chave para obter acesso ao conjunto de dispositivos virtuais criado pelo cliente.
 
@@ -44,7 +44,7 @@ HRESULT IServerVirtualDeviceSet2::OpenDevice (
 | NOERROR | A função foi bem-sucedida. |
 | VD_E_OPEN |Todos os dispositivos foram abertos. |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Comentários
 
 Cada chamada retorna o próximo dispositivo não aberto. A função pode ser chamada apenas pelo número de vezes igual ao número de dispositivos especificados na configuração do conjunto de dispositivos virtuais.
 

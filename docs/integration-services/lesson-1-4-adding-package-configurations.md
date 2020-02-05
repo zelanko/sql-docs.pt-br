@@ -1,5 +1,5 @@
 ---
-title: 'Etapa 4: Adicionar configurações de pacote | Microsoft Docs'
+title: 'Etapa 4: adicionar configurações de pacote | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: e04a5321-63d5-4ec5-85b9-cb4eaf6c87f6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6ca9674a5bb3128e86d9cceaca4a971066da0fef
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71283677"
 ---
 # <a name="lesson-1-4---adding-package-configurations"></a>Lição 1-4 – adicionar configurações de pacote
@@ -53,7 +53,7 @@ Verifique o modelo de implantação atual do projeto e defina-o como **Modelo de
     > [!NOTE]  
     > Para disponibilizar a variável de ambiente na lista, talvez você precise reiniciar o computador após a adição da variável. Se você não quiser reiniciar o computador, poderá digitar o nome da variável de ambiente.  
   
-7.  Clique em **Avançar**.  
+7.  Clique em **Próximo**.  
   
 8.  Na página Concluindo o Assistente, digite **DataTransfer EV Configuration** na caixa **Nome da Configuração** , revise o conteúdo da configuração no painel **Visualização** e clique em **Concluir**.  
   
@@ -81,7 +81,7 @@ Verifique o modelo de implantação atual do projeto e defina-o como **Modelo de
   
 10. Em Gerenciadores de Conexões, expanda NewCustomers e marque a caixa de seleção **Cadeia de Conexão** .  
   
-11. Clique em **Avançar**.  
+11. Clique em **Próximo**.  
   
 12. Na página Concluindo o Assistente, digite **DataTransfer Configuration** na caixa **Nome da configuração** , revise o conteúdo da configuração e clique em **Concluir**.  
   
@@ -104,7 +104,7 @@ Verifique o modelo de implantação atual do projeto e defina-o como **Modelo de
     > [!NOTE]  
     > Para disponibilizar a variável de ambiente na lista, talvez você precise reiniciar o computador após a adição da variável.  
   
-7.  Clique em **Avançar**.  
+7.  Clique em **Próximo**.  
   
 8.  Na página Concluindo o Assistente, digite **LoadXMLData EV Configuration** na caixa **Nome da configuração** , revise o conteúdo da configuração e clique em **Concluir**.  
   
@@ -128,14 +128,14 @@ Verifique o modelo de implantação atual do projeto e defina-o como **Modelo de
   
 9. Na página Selecionar Propriedades a Serem Exportadas, expanda LoadXMLData, Executáveis, Carregar Dados XML e Propriedades e marque as caixas de seleção **[XMLSource].[XMLData]** e **[XMLSource].[XMLSchemaDefinition]** .  
   
-10. Clique em **Avançar**.  
+10. Clique em **Próximo**.  
   
 11. Na página Concluindo o Assistente, digite **LoadXMLData Configuration** na caixa **Nome da configuração** , revise o conteúdo da configuração e clique em **Concluir**.  
   
 12. Na caixa de diálogo **Organizador de Configurações do Pacote** , verifique se a opção LoadXMLData EV Configuration é a primeira da lista e LoadXMLData Configuration é a segunda da lista e clique em **Fechar**.  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
-[Etapa 5: Testar os pacotes atualizados](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
+[Etapa 5: Testando os pacotes atualizados](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
   
 ## <a name="see-also"></a>Consulte Também  
 [Configurações do Pacote](../integration-services/packages/package-configurations.md)  

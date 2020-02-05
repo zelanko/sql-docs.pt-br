@@ -28,10 +28,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7cedcec468c061d38225ab4cbb24b8f5320a4f13
-ms.sourcegitcommit: 03884a046aded85c7de67ca82a5b5edbf710be92
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74564809"
 ---
 # <a name="with-common_table_expression-transact-sql"></a>WITH common_table_expression (Transact-SQL)
@@ -62,7 +62,7 @@ Especifica um conjunto de resultados nomeado temporário, conhecido como uma CTE
  *CTE_query_definition*  
  Especifica uma instrução SELECT cujo conjunto de resultados popula a expressão de tabela comum. A instrução SELECT de *CTE_query_definition* deve atender aos mesmos requisitos da criação de uma exibição, com a exceção de que uma CTE não pode definir outra CTE. Para obter mais informações, consulte a seção Comentários e [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
- Se mais de uma *CTE_query_definition* for definida, as definições de consulta poderão ser unidas por um destes dois conjuntos de operadores: UNION ALL, UNION, EXCEPT ou INTERSECT.  
+ Se mais de uma *CTE_query_definition* for definida, as definições da consulta deverão ser unidas por um destes operadores de conjunto: UNION ALL, UNION, EXCEPT ou INTERSECT.  
   
 ## <a name="remarks"></a>Comentários  
   

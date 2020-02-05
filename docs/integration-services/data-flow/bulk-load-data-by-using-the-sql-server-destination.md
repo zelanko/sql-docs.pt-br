@@ -17,10 +17,10 @@ ms.assetid: 8f982f85-a82e-4e2d-9cd8-cd2f85402d8e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bf8e8c7bafb72b90edfe108c5702ad330bc3e700
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293466"
 ---
 # <a name="bulk-load-data-by-using-the-sql-server-destination"></a>Carregar dados em massa por meio do destino do SQL Server

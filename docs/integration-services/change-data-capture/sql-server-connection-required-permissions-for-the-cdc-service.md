@@ -11,10 +11,10 @@ ms.assetid: d9e968f9-180c-4fa0-a849-98f2b1942330
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e7528545f2b7cd50e4b612372dc35e65dcc2324a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298645"
 ---
 # <a name="sql-server-connection-required-permissions-for-the-cdc-service"></a>Permissões necessárias para conexão do SQL Server para o Serviço CDC
@@ -38,6 +38,6 @@ ms.locfileid: "71298645"
   
 ## <a name="see-also"></a>Consulte Também  
  [Conexão com o SQL Server](../../integration-services/change-data-capture/connection-to-sql-server.md)   
- [Conexão para o SQL Server para exclusão](../../integration-services/change-data-capture/connection-to-sql-server-for-delete.md)  
+ [Conexão com o SQL Server para exclusão](../../integration-services/change-data-capture/connection-to-sql-server-for-delete.md)  
   
   

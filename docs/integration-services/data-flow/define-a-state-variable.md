@@ -11,10 +11,10 @@ ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 64f1b991d0978e45cbfa9dbf19ba796cc824bf5c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292935"
 ---
 # <a name="define-a-state-variable"></a>Definir uma variável de estado
@@ -30,7 +30,7 @@ ms.locfileid: "71292935"
   
  A tabela a seguir fornece uma descrição de alto nível dos componentes do valor da variável de estado CDC.  
   
-|Componente|Descrição|  
+|Componente|DESCRIÇÃO|  
 |---------------|-----------------|  
 |**\<nome- do-estado>**|Este é o nome do estado CDC atual.|  
 |**CS**|Isso marca o ponto inicial do intervalo de processamento atual (Início atual).|  
@@ -49,7 +49,7 @@ ms.locfileid: "71292935"
   
  A tabela a seguir descreve os valores de estado CDC possíveis.  
   
-|Estado|Descrição|  
+|Estado|DESCRIÇÃO|  
 |-----------|-----------------|  
 |(INITIAL)|Esse é o estado inicial antes de qualquer pacote ter sido executado no grupo de CDC atual. Este também é o estado quando o estado de CDC está vazio.|  
 |ILSTART (Initial Load Started)|Esse é o estado do início do pacote de carga inicial, depois da chamada da operação de **MarkInitialLoadStart** para a tarefa Controle CDC.|  

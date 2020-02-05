@@ -18,10 +18,10 @@ ms.assetid: 132184bf-c4d2-4a27-900d-8373445dce2a
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 5725b95df233f46e9e003f6c2af155ae943ba2b1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101038"
 ---
 # <a name="reduce-geometry-data-type"></a>Reduce (tipo de dados geometry)
@@ -43,9 +43,9 @@ Retorna uma aproximação da instância de **geometria** fornecida. A aproximaç
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Tipo de retorno CLR: **SqlGeometry**  
+ Tipo de retorno do CLR: **SqlGeometry**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Para os tipos de coleção, esse algoritmo opera de forma independente em cada **geometria** contida na instância.  
   
  Esse algoritmo não modifica as instâncias de **Point**.  
@@ -60,7 +60,7 @@ Retorna uma aproximação da instância de **geometria** fornecida. A aproximaç
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-reduce-to-simplify-a-linestring"></a>A. Usando Reduce() para simplificar um LineString  
+### <a name="a-using-reduce-to-simplify-a-linestring"></a>a. Usando Reduce() para simplificar um LineString  
  O exemplo a seguir cria uma instância `LineString` e usa `Reduce()` para simplificar a instância.  
   
 ```  

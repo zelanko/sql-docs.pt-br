@@ -15,10 +15,10 @@ ms.assetid: 298a7361-dc9a-4902-9b1e-49a093cd831d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9224e9050ecf01255151e5ec8e11ecaf282d7387
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68051220"
 ---
 # <a name="value-method-xml-data-type"></a>Método de valor() (Tipo de dados xml)
@@ -49,7 +49,7 @@ value (XQuery, SQLType)
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-the-value-method-against-an-xml-type-variable"></a>A. Usando o método de valor() em relação a uma variável de tipo xml  
+### <a name="a-using-the-value-method-against-an-xml-type-variable"></a>a. Usando o método de valor() em relação a uma variável de tipo xml  
  No exemplo a seguir, uma instância XML é armazenada em uma variável de tipo `xml`. O método `value()` recupera o valor de atributo `ProductID` do XML. O valor é então atribuído a uma variável `int`.  
   
 ```  

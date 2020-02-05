@@ -12,22 +12,22 @@ ms.assetid: 9e2cb199-f077-4d88-8117-1b7550afc696
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 9061845efbbbf3c20b4d079af2c2b00cfeef1dfd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68068320"
 ---
-# <a name="mssqlserver10003"></a>MSSQLSERVER_10003
+# <a name="mssqlserver_10003"></a>MSSQLSERVER_10003
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|10003|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|HR_E_OUTOFMEMORY|  
 |Texto da mensagem|O provedor ficou sem memória.|  

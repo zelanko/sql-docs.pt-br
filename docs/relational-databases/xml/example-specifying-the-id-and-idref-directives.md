@@ -1,5 +1,5 @@
 ---
-title: 'Exemplo: Especificando as diretivas ID e IDREF | Microsoft Docs'
+title: 'Exemplo: especificando as diretivas ID e IDREF | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,17 +14,17 @@ ms.assetid: 7ff1ea73-71ca-4786-bd42-564f1b5de2d9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 76e471b3e6e35e3c6f0568c446b9650466ffa542
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006700"
 ---
 # <a name="example-specifying-the-id-and-idref-directives"></a>Exemplo: Especificando as diretivas ID e IDREF
 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-Este exemplo é quase igual ao exemplo [Especificando a diretiva ELEMENTXSINIL](../../relational-databases/xml/example-specifying-the-elementxsinil-directive.md) . A única diferença é que a consulta especifica as diretivas **ID** e **IDREF**. Essas diretivas substituem os tipos do atributo **SalesPersonID** nos elementos <`OrderHeader`> e <`OrderDetail`>. Isso forma vínculos intradocumento. Você precisa do esquema para ver os tipos substituídos. Portanto, a consulta especifica a opção **XMLDATA** na cláusula FOR XML para recuperar o esquema.  
+Este exemplo é quase igual ao exemplo [Especificando a diretiva ELEMENTXSINIL](../../relational-databases/xml/example-specifying-the-elementxsinil-directive.md) . A única diferença é que a consulta especifica as diretivas **ID** e **IDREF** . Essas diretivas substituem os tipos do atributo **SalesPersonID** nos elementos <`OrderHeader`> e <`OrderDetail`>. Isso forma vínculos intradocumento. Você precisa do esquema para ver os tipos substituídos. Portanto, a consulta especifica a opção **XMLDATA** na cláusula FOR XML para recuperar o esquema.  
   
 ```sql
 USE AdventureWorks2012;  

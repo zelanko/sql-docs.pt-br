@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ce8a48b7e8315a564eaa1338df35a04226e705d4
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72906066"
 ---
 # <a name="send-a-test-email-with-database-mail"></a>Enviar um email de teste com o Database Mail  
@@ -34,8 +34,8 @@ Você deve ser membro da função de servidor fixa sysadmin para usar a caixa de
 1. Usando o Pesquisador de Objetos no [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md), conecte-se a uma instância do Mecanismo de Banco de Dados do SQL Server em que o Database Mail está configurado, expanda Gerenciamento, clique com o botão direito do mouse em Database Mail e, em seguida, selecione Enviar Email de Teste. Se não existir nenhum perfil de Database Mail, uma caixa de diálogo solicitará que o usuário crie um perfil e abra o Assistente para Configuração do Database Mail.
 1. Na caixa de diálogo **Enviar Email de Teste** de <instance name>, na caixa Perfil do Database Mail, selecione o perfil que deseja testar.
 1. Na caixa **Para**, digite o nome do email do destinatário do email de teste.
-1. Na caixa **Assunto**, digite a linha do assunto do email de teste. Altere o assunto padrão para identificar melhor seu email para a solução de problemas.
-1. Na caixa **Corpo**, digite a corpo da mensagem do email de teste. Altere o assunto padrão para identificar melhor seu email para a solução de problemas.
+1. Na caixa **Assunto**, digite a linha do assunto do email de teste. Altere o assunto padrão a fim de identificar melhor seu email para a solução de problemas.
+1. Na caixa **Corpo**, digite a corpo da mensagem do email de teste. Altere o assunto padrão a fim de identificar melhor seu email para a solução de problemas.
 1. Selecione **Enviar Email de Teste** para enviar o email de teste à fila do Database Mail.
 1. O envio do email de teste faz com que se abra a caixa de diálogo Email de Teste do Database Mail. Anote o número exibido na caixa Email enviado. Trata-se da mailitem_id da mensagem de teste. Selecione OK.
 1. Na Barra de Ferramentas, selecione Nova Consulta para abrir a janela do Editor de Consultas. Execute a seguinte instrução T-SQL para determinar o status da mensagem de email de teste:

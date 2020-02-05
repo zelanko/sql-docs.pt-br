@@ -14,10 +14,10 @@ ms.assetid: a84c3c3f-55b6-4a30-9c42-13f082d9281e
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 4f15d4e443f0ffd6df700bff67ed6ba7514e0c90
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68126877"
 ---
 # <a name="resource-governor-workload-group"></a>Grupos de carga de trabalho do Administrador de Recursos
@@ -45,7 +45,7 @@ ms.locfileid: "68126877"
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  
 |Descreve como criar um grupo de cargas de trabalho.|[Criar um grupo de carga de trabalho](../../relational-databases/resource-governor/create-a-workload-group.md)|  
-|Descreve como alterar as configurações de um grupo de cargas de trabalho.|[Alterar as configurações de grupo de carga de trabalho](../../relational-databases/resource-governor/change-workload-group-settings.md)|  
+|Descreve como alterar as configurações de um grupo de cargas de trabalho.|[Alterar as configurações do grupo de carga de trabalho](../../relational-databases/resource-governor/change-workload-group-settings.md)|  
 |Descreve como excluir um grupo de cargas de trabalho.|[Excluir um grupo de carga de trabalho](../../relational-databases/resource-governor/delete-a-workload-group.md)|  
   
 ## <a name="see-also"></a>Consulte Também  

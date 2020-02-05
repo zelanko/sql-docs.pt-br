@@ -13,10 +13,10 @@ ms.assetid: 89cb0055-5262-447f-8464-7203d4caba78
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 2532ca83c063d029015560b22e1a89317b90b5b5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115806"
 ---
 # <a name="job-activity-monitor-filter-settings"></a>Monitor de atividade do trabalho (Configurações de Filtro)
@@ -62,7 +62,7 @@ ms.locfileid: "68115806"
  **Aplicar filtro**  
  Para aplicar o filtro, clique em **Applyfilter** e em **OK**. Para manter as configurações de filtro na caixa de diálogo **FilterSettings** sem aplicá-las, desmarque a opção **Applyfilter** e clique em **OK** para exibir todas as linhas.  
   
- **Liberada**  
+ **Limpar**  
  Retorna as configurações de filtro para as configurações padrão.  
   
 ## <a name="see-also"></a>Consulte Também  

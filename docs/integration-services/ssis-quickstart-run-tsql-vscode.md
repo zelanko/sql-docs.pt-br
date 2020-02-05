@@ -9,10 +9,10 @@ ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: cdd1dc130efb795b957911c51d5d8c2243522d38
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71281614"
 ---
 # <a name="run-an-ssis-package-from-visual-studio-code-with-transact-sql"></a>Executar um pacote do SSIS no Visual Studio Code com o Transact-SQL
@@ -54,7 +54,7 @@ Para habilitar comandos do `mssql` e T-SQL IntelliSense, defina o modo de lingua
 
 Para executar o pacote no Banco de Dados SQL do Azure, obtenha as informações de conexão necessárias para se conectar ao SSISDB (banco de dados de catálogo do SSIS). Você precisa das informações de logon e de nome do servidor totalmente qualificado nos procedimentos a seguir.
 
-1. Faça logon no [portal do Azure](https://portal.azure.com/).
+1. Faça logon no [Portal do Azure](https://portal.azure.com/).
 2. Selecione **Bancos de Dados SQL** no menu à esquerda e selecione o banco de dados do SSISDB na página **Bancos de dados SQL**. 
 3. Na página **Visão geral** do banco de dados, examine o nome totalmente qualificado do servidor. Para ver a opção **Clique para copiar**, passe o mouse sobre o nome do servidor. 
 4. Se você esquecer suas informações de logon do servidor de Banco de Dados SQL do Azure, navegue até a página do servidor de Banco de Dados SQL para exibir o nome do administrador de servidor. Você pode redefinir a senha, se necessário.
@@ -77,16 +77,16 @@ Use o Visual Studio Code para estabelecer uma conexão com o Catálogo do SSIS.
    | Configuração       | Valor sugerido | Obter mais informações |
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Nome do servidor** | O nome do servidor totalmente qualificado | Se estiver se conectando a um servidor de Banco de Dados SQL do Azure, o nome estará neste formato: `<server_name>.database.windows.net`. |
-   | **Nome do banco de dados** | **SSISDB** | O nome do banco de dados ao qual se conectar. |
+   | **Nome do banco de dados** | **SSISDB** | O nome do banco de dados ao qual conectar. |
    | **Autenticação** | Logon do SQL | Com a autenticação do SQL Server, você pode se conectar ao SQL Server ou ao Banco de Dados SQL do Azure. Se você estiver se conectando a um servidor de Banco de Dados SQL do Azure, não poderá usar a autenticação do Windows. |
-   | **User name** | A conta do administrador do servidor | Essa é a conta que você especificou quando criou o servidor. |
-   | **Senha (logon do SQL)** | A senha de sua conta do administrador do servidor | Essa é a senha que você especificou quando criou o servidor. |
-   | **Salvar senha?** | Sim ou Não | Se você não deseja inserir a senha a cada vez, selecione Sim. |
+   | **Nome de usuário** | A conta do administrador do servidor | Essa é a conta que você especificou quando criou o servidor. |
+   | **Senha (Logon do SQL)** | A senha para sua conta do administrador do servidor | Essa é a senha que você especificou quando criou o servidor. |
+   | **Salvar senha?** | Sim ou não | Se você não deseja inserir a senha a cada vez, selecione Sim. |
    | **Inserir um nome para este perfil** | Um nome de perfil, assim como **mySSISServer** | Um nome de perfil salvo acelera sua conexão em logons subsequentes. | 
 
-5. Pressione a tecla **ESC** para fechar a mensagem de informações que informa que o perfil está criado e conectado.
+5. Pressione a tecla **ESC** para fechar a mensagem de informações que informa que o perfil foi criado e está conectado.
 
-6. Verifique sua conexão na barra de status.
+6. Verifique se sua conexão na barra de status.
 
 ## <a name="run-the-t-sql-code"></a>Executar o código T-SQL
 Execute o seguinte código Transact-SQL para executar um pacote do SSIS.

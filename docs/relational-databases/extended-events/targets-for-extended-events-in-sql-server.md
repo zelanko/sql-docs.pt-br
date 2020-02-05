@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 942f69fc92fa06b5131cee2dba9145f4faaae0cc
-ms.sourcegitcommit: 12f529b811d308b169735740b78c6d5439ffefc7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/27/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75501980"
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>Destinos de eventos estendidos no SQL Server
@@ -37,7 +37,7 @@ A [seção ring_buffer](#h2_target_ring_buffer) inclui um exemplo de como usar o
 ### <a name="prerequisites"></a>Prerequisites
 
 
-- Esteja familiarizado com os conceitos básicos dos eventos estendidos, conforme descrito em [Início Rápido: eventos estendidos no SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md).
+- Esteja familiarizado com os conceitos básicos dos eventos estendidos, conforme descrito em [Início Rápido: Eventos estendidos no SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md).
 
 
 - Instalou uma versão recente do utilitário SQL Server Management Studio (SSMS.exe) atualizado com frequência. Para obter detalhes, confira:

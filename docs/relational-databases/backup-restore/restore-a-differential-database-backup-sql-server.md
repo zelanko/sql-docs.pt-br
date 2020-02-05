@@ -17,10 +17,10 @@ ms.assetid: 0dd971a4-ee38-4dd3-9f30-ef77fc58dd11
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d9114879622ea6d856e890a4f248ea1bc9a5d522
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75253488"
 ---
 # <a name="restore-a-differential-database-backup-sql-server"></a>Restaurar um backup de banco de dados diferencial (SQL Server)
@@ -92,7 +92,7 @@ ms.locfileid: "75253488"
   
          Após adicionar os dispositivos desejados à caixa de listagem **Mídia de backup** , clique em **OK** para voltar à página **Geral** .  
   
-         Na caixa de listagem **Fonte: Dispositivo: Banco de Dados**, selecione o nome do banco de dados que deve ser restaurado.  
+         Na caixa de listagem **Origem: Dispositivo: Banco de Dados** , selecione o nome do banco de dados que deve ser restaurado.  
   
          **Observação** Essa lista estará disponível apenas quando **Dispositivo** for selecionado. Apenas os bancos de dados que têm backups no dispositivo selecionado estarão disponíveis.  
   
@@ -139,7 +139,7 @@ ms.locfileid: "75253488"
   
 #### <a name="to-restore-a-differential-database-backup"></a>Para restaurar um backup de banco de dados diferencial  
   
-1.  Execute uma instrução RESTORE DATABASE, especificando a cláusula NORECOVERY, para restaurar o backup de banco de dados completo que vem antes do backup de banco de dados diferencial. Para obter mais informações, confira [Como restaurar um backup completo](../../relational-databases/backup-restore/restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md).  
+1.  Execute uma instrução RESTORE DATABASE, especificando a cláusula NORECOVERY, para restaurar o backup de banco de dados completo que vem antes do backup de banco de dados diferencial. Para obter mais informações, consulte [Como restaurar um backup completo](../../relational-databases/backup-restore/restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md).  
   
 2.  Execute a instrução RESTORE DATABASE para restaurar o backup de banco de dados diferencial, especificando:  
   

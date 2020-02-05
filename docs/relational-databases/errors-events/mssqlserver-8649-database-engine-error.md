@@ -12,22 +12,22 @@ ms.assetid: 992dbc74-7c3a-498b-9f1b-b28387640677
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 39d3edc1b85dba6c223cc4b4e5b3d3250b48d489
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68132287"
 ---
-# <a name="mssqlserver8649"></a>MSSQLSERVER_8649
+# <a name="mssqlserver_8649"></a>MSSQLSERVER_8649
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|8649|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|COST_TOO_HIGH|  
 |Texto da mensagem|A consulta foi cancelada porque seu custo estimado (%d) excede o limite configurado de %d. Contate o administrador do sistema.|  

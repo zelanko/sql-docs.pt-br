@@ -15,10 +15,10 @@ ms.assetid: 78899498-725e-4300-a7af-f983f4ea384b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 235491b5a3595098b42689f77fdc9077efd9b758
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292338"
 ---
 # <a name="load-data-by-using-the-ole-db-destination"></a>Carregar dados por meio do destino OLE DB
@@ -46,7 +46,7 @@ ms.locfileid: "71292338"
   
     -   **Tabela ou exibição** Selecione uma tabela ou exibição no banco de dados que contém os dados.  
   
-    -   **Tabela ou exibição – carregamento rápido** Selecione uma tabela ou exibição no banco de dados que contém os dados, depois defina as opções de carregamento rápido: **Manter identidade**, **Manter nulos**, **Bloqueio de tabela**, **Restrição de verificação**, **Linhas por lote** ou **Tamanho máximo de confirmação de inserção**.  
+    -   **Tabela ou exibição – carregamento rápido** Selecione uma tabela ou exibição no banco de dados que contém os dados, e defina as opções de carregamento rápido: **Manter identidade**, **Manter nulos**, **Bloqueio da tabela**, **Restrição de Verificação**, **Linhas por lote**ou **Tamanho máximo de confirmação de inserção**.  
   
     -   **Variável de nome da tabela ou exibição** Selecione a variável definida pelo usuário que contém o nome da tabela ou da exibição no banco de dados.  
   

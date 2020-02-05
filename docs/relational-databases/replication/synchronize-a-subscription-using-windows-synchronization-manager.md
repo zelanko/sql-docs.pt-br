@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 80f15dd6-e84d-4f96-9866-5b34ea531f1e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: bcdf5cee07666509722a591410431b00f82dc27b
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 43e3c343bc3947e6cfd0be4886e9d369b55758b8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75321434"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287020"
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager"></a>Sincronizar uma assinatura usando o Gerenciador de Sincronização do Windows
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   O Gerenciador de Sincronização[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows só poderá ser usado para sincronizar assinaturas para publicações do Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estiver em execução no mesmo computador que o Gerenciador de Sincronização (ele também pode ser usado para sincronizar arquivos offline e páginas da Web). Para usar o Gerenciador de Sincronização:  
   
-1.  Habilite a sincronização de assinatura pull com o Gerenciador de Sincronização do Windows na caixa de diálogo **Propriedades de Assinatura – \<Assinante>: \<SubscriptionDatabase>** . Para obter mais informações sobre como acessar essa caixa de diálogo, consulte [Exibir e modificar propriedades de assinatura pull](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
+1.  Habilite a sincronização de assinatura pull com o Gerenciador de Sincronização do Windows na caixa de diálogo **Propriedades de Assinatura – \<Subscriber>: \<SubscriptionDatabase>** . Para obter mais informações sobre como acessar essa caixa de diálogo, consulte [Exibir e modificar propriedades de assinatura pull](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
   
 2.  Acesse o Gerenciador de Sincronização através do menu **Iniciar** no Windows.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "75321434"
   
 ### <a name="to-enable-the-synchronization-of-pull-subscriptions-with-windows-synchronization-manager"></a>Para habilitar a sincronização de assinaturas pull com o Gerenciador de Sincronização do Windows  
   
-1.  Na página **Geral** da caixa de diálogo **Propriedades da Assinatura – \<Assinante>: \<SubscriptionDatabase>** , selecione um valor de **Habilitar** para a opção **Usar Gerenciador de Sincronização do Windows**.  
+1.  Na página **Geral** da caixa de diálogo **Propriedades de Assinatura – \<Subscriber>: \<SubscriptionDatabase>** , selecione um valor de **Habilitar** para a opção **Usar Gerenciador de Sincronização do Windows**.  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

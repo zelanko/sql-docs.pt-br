@@ -18,10 +18,10 @@ ms.assetid: 05ca6d65-4799-4b9a-9672-cfebae95f23e
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 59842dc6ee0fa2d0438aeed0620cf7ac04094c59
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67896416"
 ---
 # <a name="stmlinefromwkb-geography-data-type"></a>STMLineFromWKB (Tipo de dados geography)
@@ -46,11 +46,11 @@ STMLineFromWKB ( 'WKB_multilinestring' , SRID )
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Tipo de retorno CLR: **SqlGeography**  
+ Tipo de retorno do CLR: **SqlGeography**  
   
- Tipo OGC: **MultiLineString**  
+ Tipo do OGC: **MultiLineString**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse método gera uma **FormatException** se a entrada não está bem formatada.  
   
 ## <a name="examples"></a>Exemplos  

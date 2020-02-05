@@ -18,10 +18,10 @@ ms.assetid: a62ed736-44df-4591-9109-ce90e1df9bd3
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: e5932235ea8d97f67b17b481cff4e2d39b0c524a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68127327"
 ---
 # <a name="z-geometry-data-type"></a>Z (tipo de dados geometry)
@@ -39,12 +39,12 @@ O valor Z (elevação) da instância. A semântica do valor de elevação é def
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **float**  
   
- Tipo CLR: **SqlDouble**  
+ Tipo do CLR: **SqlDouble**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O valor dessa propriedade será nulo se a instância de geometria não for um ponto, como também para qualquer instância de **Point** para a qual ele não foi definido.  
   
- Esta propriedade é somente leitura.  
+ Essa propriedade é somente leitura.  
   
  As coordenadas Z não são usadas nos cálculos feitos pela biblioteca e não estão presentes em nenhum cálculo de biblioteca.  
   

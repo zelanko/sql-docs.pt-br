@@ -14,10 +14,10 @@ ms.assetid: 8a63bf44-71be-456d-9a5c-be7c31aff065
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: fc83e4d8e39c5521fd897ceeec07755f62b5765d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294323"
 ---
 # <a name="azure-blob-download-task"></a>Tarefa de Download do Blob do Azure
@@ -37,7 +37,7 @@ Para adicionar uma **Tarefa de Download de Blobs do Azure**, arraste-a e solte-a
 |---|---|
 |AzureStorageConnection|Especifique um Gerenciador de Conexão de Armazenamento do Azure existente ou crie um novo referindo-se a uma Conta de Armazenamento do Azure, que aponta para onde os arquivos de blob estão hospedados.|  
 |BlobContainer|Especifica o nome do contêiner de Blob que contém os arquivos de Blob a serem baixados.|  
-|BlobDirectory|Especifica o diretório de Blob que contém os arquivos de Blob a serem baixados. O diretório de Blob é uma estrutura hierárquica virtual.|  
+|BlobDirectory|Especifica o diretório de Blob que contém os arquivos de Blob a serem baixados. O diretório de blob é uma estrutura hierárquica virtual.|  
 |SearchRecursively|Especifica se é necessário pesquisar recursivamente dentro dos subdiretórios.|  
 |LocalDirectory|Especifica o diretório local em que os arquivos de blob baixados são armazenados.|  
 |FileName|Especifica um filtro de nome para selecionar arquivos com o padrão de nome especificado. Por exemplo, `MySheet*.xls\*` inclui arquivos como `MySheet001.xls` e `MySheetABC.xlsx`.|  

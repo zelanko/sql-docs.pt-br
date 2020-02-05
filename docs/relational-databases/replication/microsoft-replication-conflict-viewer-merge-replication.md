@@ -14,10 +14,10 @@ ms.assetid: bfef5e21-ac04-4bc5-a55e-595421e34923
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 0707cfc193d4d3e1e11ecb724d2012aee2d315c4
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75321953"
 ---
 # <a name="microsoft-replication-conflict-viewer-merge-replication"></a>Visualizador de Conflitos de Replicação da Microsoft (replicação de mesclagem)
@@ -73,7 +73,7 @@ ms.locfileid: "75321953"
  Selecione para exibir as primeiras cinco colunas e qualquer coluna com conflitos. Isso é útil quando a tabela tem um grande número de colunas, mas você quer ver apenas as mais relevantes para resolver o conflito. As primeiras cinco colunas sempre são incluídas nessa exibição, como campos que identificam uma linha, como chave primária ou campo de nomes, estão sempre entre as primeiras colunas da tabela.  
   
  **Exibir Informações da Coluna** ( **.** )  
- Clique para exibir informações de coluna: **Nome da Tabela**, **Nome da Coluna**, **Tipo de Dados** e **Valor da Coluna**. **Valor da Coluna** é editável, a menos que o valor seja exibido como somente leitura.  
+ Clique para exibir informações da coluna: **Nome da Tabela**, **Nome da Coluna**, **Tipo de Dados**e **Valor da Coluna**. **Valor da Coluna** é editável, a menos que o valor seja exibido como somente leitura.  
   
  **Enviar Vencedor**  
  Clique para manter a linha que o resolvedor de conflitos determinou como vencedora. O valor de qualquer coluna que não é exibido como somente leitura pode ser alterado antes de clicar nesse botão.  

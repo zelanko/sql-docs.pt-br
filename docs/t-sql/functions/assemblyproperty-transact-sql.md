@@ -19,10 +19,10 @@ ms.assetid: cf03d1b1-724c-48bf-a8df-3fe2586b150a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ac25131e24aa89253abfc13eac69a4a60d0b7aee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68040293"
 ---
 # <a name="assemblyproperty-transact-sql"></a>ASSEMBLYPROPERTY (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68040293"
 
 Essa função retorna informações sobre uma propriedade de um assembly.
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,7 +45,7 @@ O nome do assembly.
 *property_name*  
 O nome de uma propriedade sobre a qual recuperar informações. *property_name* pode ter um dos valores a seguir:
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |---|---|
 |**CultureInfo**|Localidade do assembly.|  
 |**PublicKey**|Chave pública ou token de chave pública do assembly.|  

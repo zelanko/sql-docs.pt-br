@@ -15,10 +15,10 @@ ms.assetid: f48f6f7b-219f-463a-bf36-bc10f21afaeb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a8eb8570d260b1e30d3c0ecafa0f3bfd15065983
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72278165"
 ---
 # <a name="query-method-xml-data-type"></a>Método consulta() (Tipo de dados xml)
@@ -40,7 +40,7 @@ XQuery
 ## <a name="examples"></a>Exemplos  
 Esta seção fornece exemplos de uso do método query() do tipo de dados **xml**.  
   
-### <a name="a-using-the-query-method-against-an-xml-type-variable"></a>A. Usando o método query() em relação a uma variável de tipo xml  
+### <a name="a-using-the-query-method-against-an-xml-type-variable"></a>a. Usando o método query() em relação a uma variável de tipo xml  
 O exemplo a seguir declara uma variável **\@myDoc** do tipo **xml** e atribui uma instância XML a essa variável. O método **query()** é, em seguida, usado para especificar uma consulta XQuery no documento.  
   
 A consulta recupera o elemento filho <`Features`> do elemento <`ProductDescription`>:  

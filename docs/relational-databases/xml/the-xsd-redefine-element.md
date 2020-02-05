@@ -13,10 +13,10 @@ ms.assetid: 5f3e9b65-f10e-4db2-a62c-b270ac11d04e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2f32e6952634e5bd4d376ac06d6c3f067fb75a0c
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907554"
 ---
 # <a name="the-ltxsdredefinegt-element"></a>O elemento &lt;xsd:redefine&gt;
@@ -32,6 +32,6 @@ ms.locfileid: "72907554"
 3.  Descarte a versão antiga da coleção de esquema XML.  
 
 ## <a name="see-also"></a>Consulte Também  
- [Requisitos e limitações de uso de coleções de esquema XML no servidor](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
+ [Requisitos e limitações para o uso de Coleções de Esquemas XML no servidor](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
   
   

@@ -13,10 +13,10 @@ ms.assetid: 979a29ca-956e-4fdd-ab47-f06e84cead7a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7c6c5cdc269c757b8578314d39fd07f9f947a5e7
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71287143"
 ---
 # <a name="coding-a-custom-log-provider"></a>Codificando um provedor de log personalizado
@@ -90,7 +90,7 @@ End Function
 >  Durante a validação e execução de um único pacote, são chamados os métodos <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.OpenLog%2A> e <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.CloseLog%2A> mais de uma vez. Verifique se seu código personalizado não faz com que as entradas de log anteriores sejam substituídas pela próxima abertura e fechamento de log. Se você optou por registrar em log os eventos de validação em seu pacote de teste, o primeiro evento registrado que deverá ver é o OnPreValidate. Se, em vez disso, o primeiro evento registrado que você visualizar for o PackageStart, os eventos de validação iniciais foram substituídos.  
   
 ### <a name="opening-the-log"></a>Abrindo o log  
- A maioria dos provedores de log se conecta a fontes de dados externas, como um arquivo ou banco de dados, para armazenar as informações do evento coletadas durante a execução do pacote. Como com qualquer outro objeto no tempo de execução, a conexão com a fonte de dados externa normalmente é realizada por meio de objetos do gerenciador de conexões.  
+ A maioria dos provedores de log se conecta a fontes de dados externas, como um arquivo ou banco de dados, para armazenar as informações do evento coletadas durante a execução do pacote. Como com qualquer outro objeto no runtime, a conexão com a fonte de dados externa normalmente é realizada por meio de objetos do gerenciador de conexões.  
   
  O método <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.OpenLog%2A> é chamado no início da execução do pacote. Substitua esse método para estabelecer uma conexão com a fonte de dados externa.  
   

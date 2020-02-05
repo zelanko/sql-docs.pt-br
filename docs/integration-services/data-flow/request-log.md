@@ -11,10 +11,10 @@ ms.assetid: 165d3833-0493-490c-9f63-8a134a7fafb8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4a84025efefa397cd1f33a706073faceb0ad70ae
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292124"
 ---
 # <a name="request-log"></a>Log de solicitações
@@ -46,17 +46,17 @@ ms.locfileid: "71292124"
     >  Clicar em **Visualizar** também abre a caixa de diálogo **Visualizar** . Para obter mais informações sobre essa caixa de diálogo, consulte [Preview](../../integration-services/data-flow/preview.md).  
   
 ## <a name="options"></a>Opções  
- **Time**  
+ **Hora**  
  Exibe a hora em que o evento foi registrado em log.  
   
  **Tipo**  
  Exibe o tipo do evento que foi registrado em log. A tabela seguinte lista os possíveis tipos de evento.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
-|P|Mensagem de êxito.|  
+|S|Mensagem de êxito.|  
 |E|Mensagem de erro|  
-|L|Mensagem de aviso.|  
+|W|Mensagem de aviso.|  
 |I|Mensagem informativa.|  
 |Um|A operação foi anulada.|  
   

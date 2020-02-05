@@ -12,10 +12,10 @@ ms.assetid: e9dd5357-ee3d-420a-9a89-d12ab5404e73
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 0cdf2c06311e703b6a07667ba41d1c853c17eb86
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72305890"
 ---
 # <a name="mssqlserver_10509"></a>MSSQLSERVER_10509
@@ -25,9 +25,9 @@ ms.locfileid: "72305890"
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|10509|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|PG_INVALID_STMT|  
 |Texto da mensagem|Não é possível criar o guia de plano '%.\*ls' porque a instrução especificada por **\@stmt** ou **\@statement_start_offset** contém um erro de sintaxe ou é ilegível para uso em um guia de plano. Especifique uma única instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] válida ou uma posição inicial válida da instrução no lote. Para obter uma posição inicial válida, consulte a coluna statement_start_offset na função de gerenciamento dinâmico sys.dm_exec_query_stats.|  

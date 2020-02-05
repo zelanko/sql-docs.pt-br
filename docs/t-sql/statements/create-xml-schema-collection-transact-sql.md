@@ -26,10 +26,10 @@ ms.assetid: 350684e8-b3f6-4b58-9dbc-0f05cc776ebb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 28409675fda41f030e82337b1fcf0f1a6ec5821e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67927721"
 ---
 # <a name="create-xml-schema-collection-transact-sql"></a>CREATE XML SCHEMA COLLECTION (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "67927721"
 
   Importa os componentes do esquema para um banco de dados.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -56,7 +56,7 @@ CREATE XML SCHEMA COLLECTION [ <relational_schema>. ]sql_identifier AS Expressio
  *Expression*  
  É uma constante de cadeia de caracteres ou variável escalar. É do tipo **varchar**, **varbinary**, **nvarchar** ou **xml**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Também é possível adicionar novos namespaces à coleção ou adicionar novos componentes a namespaces existentes usando [ALTER XML SCHEMA COLLECTION](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md).  
   
  Para remover coleções, use [DROP XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md).  
@@ -78,7 +78,7 @@ CREATE XML SCHEMA COLLECTION [ <relational_schema>. ]sql_identifier AS Expressio
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-creating-xml-schema-collection-in-the-database"></a>A. Criando uma coleção de esquema XML no banco de dados  
+### <a name="a-creating-xml-schema-collection-in-the-database"></a>a. Criando uma coleção de esquema XML no banco de dados  
  O exemplo a seguir cria uma coleção de esquema XML `ManuInstructionsSchemaCollection`. A coleção tem apenas um namespace de esquema.  
   
 ```  

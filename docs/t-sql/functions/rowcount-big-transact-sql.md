@@ -22,18 +22,18 @@ ms.assetid: 6e18a0eb-bb36-4348-90d9-8b1ecf095064
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4b354807fedda0f273d5f3822591f7f84912b028
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68127414"
 ---
-# <a name="rowcountbig-transact-sql"></a>ROWCOUNT_BIG (Transact-SQL)
+# <a name="rowcount_big-transact-sql"></a>ROWCOUNT_BIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Retorna o número de linhas afetadas pela última instrução executada. Essa função opera como [@@ROWCOUNT](../../t-sql/functions/rowcount-transact-sql.md), exceto que o tipo de retorno de ROWCOUNT_BIG é **bigint**.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,7 +45,7 @@ ROWCOUNT_BIG ( )
 ## <a name="return-types"></a>Tipos de retorno  
  **bigint**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Seguindo uma instrução SELECT, esta função retorna o número de linhas retornado pela instrução SELECT.  
   
  Seguindo uma instrução INSERT, UPDATE ou DELETE, esta função retorna o número de linhas afetadas pela instrução de modificação de dados.  

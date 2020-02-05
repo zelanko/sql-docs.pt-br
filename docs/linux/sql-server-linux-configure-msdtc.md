@@ -8,10 +8,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: a39e0a743053db694efc2d0e8176e659d7e376d1
-ms.sourcegitcommit: 58f1d5498c87bfe0f6ec4fd9d7bbe723be47896b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68995873"
 ---
 # <a name="how-to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-on-linux"></a>Como configurar o MSDTC (Coordenador de Transações Distribuídas da Microsoft) no Linux
@@ -29,7 +29,7 @@ As transações distribuídas são habilitadas no SQL Server em Linux, introduzi
 
 O MSDTC usa dois parâmetros de configuração para o utilitário mssql-conf:
 
-| configuração mssql-conf | Descrição |
+| configuração mssql-conf | DESCRIÇÃO |
 |---|---|
 | **network.rpcport** | A porta TCP à qual o processo do mapeador de pontos de extremidade RPC é associado. |
 | **distributedtransaction.servertcpport** | A porta em que o servidor MSDTC escuta. Se esse parâmetro não for definido, o serviço MSDTC usará uma porta efêmera aleatória em reinicializações de serviço e as exceções de firewall precisarão ser reconfiguradas para garantir que o serviço MSDTC possa continuar a comunicação. |
@@ -184,7 +184,7 @@ No entanto, após uma reinicialização, o SQL Server não começa a escutar em 
 
 O MSDTC para SQL Server em Linux não usa autenticação na comunicação RPC por padrão. No entanto, quando o computador host é ingressado em um domínio do AD (Active Directory), é possível configurar o MSDTC para usar a comunicação RPC autenticada usando as seguintes configurações de **mssql-conf**:
 
-| Configuração | Descrição |
+| Configuração | DESCRIÇÃO |
 |---|---|
 | **distributedtransaction.allowonlysecurerpccalls**          | Configure chamadas RPC somente seguras para transações distribuídas. O valor padrão é 0. |
 | **distributedtransaction.fallbacktounsecurerpcifnecessary** | Configure chamadas RPC somente de segurança para transações distribuídas. O valor padrão é 0. |

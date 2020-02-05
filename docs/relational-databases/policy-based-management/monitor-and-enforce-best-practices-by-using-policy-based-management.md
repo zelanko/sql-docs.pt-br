@@ -14,10 +14,10 @@ ms.assetid: 46788407-187e-4b0b-bfe4-529af8d77c60
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 54fdfe36da0d590fa2225ab7cc99af640727b000
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75557559"
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>Monitorar e impor práticas recomendadas usando o Gerenciamento Baseado em Políticas

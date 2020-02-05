@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 56e1f566b5ac6addfab3811c8430ce9c19e61636
-ms.sourcegitcommit: ede04340adbf085e668a2536d4f7114abba14a0c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74762651"
 ---
 # <a name="grant-schema-permissions-transact-sql"></a>Permissões de esquema GRANT (Transact-SQL)
@@ -78,7 +78,7 @@ AS *granting_principal*
 ## <a name="remarks"></a>Comentários  
   
 > [!IMPORTANT]  
->  Uma combinação das permissões ALTER e REFERENCE em alguns casos pode permitir ao usuário autorizado exibir dados ou executar funções não autorizadas. Por exemplo:  Um usuário com a permissão ALTER em uma tabela e a permissão REFERENCE em uma função pode criar uma coluna computada em uma função e fazer com que ela seja executada. Nesse caso, o usuário também precisará da permissão SELECT na coluna computada.  
+>  Uma combinação das permissões ALTER e REFERENCE em alguns casos pode permitir ao usuário autorizado exibir dados ou executar funções não autorizadas. Por exemplo: um usuário com permissão ALTER em uma tabela e permissão REFERENCE em uma função pode criar uma coluna computada em uma função e fazer com que seja executada. Nesse caso, o usuário também precisará da permissão SELECT na coluna computada.  
   
  Um esquema é um item protegível em nível de banco de dados contido no banco de dados pai na hierarquia de permissões. As permissões mais específicas e limitadas que podem ser concedidas em um esquema estão listadas abaixo, junto com as permissões mais gerais que as contêm implicitamente.  
   

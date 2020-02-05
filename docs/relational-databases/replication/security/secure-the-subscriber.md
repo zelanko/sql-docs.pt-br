@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: 2ab65d61abb497c1930b94868f0a8b3433b44c95
-ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70212301"
 ---
 # <a name="secure-the-subscriber"></a>Proteger o Assinante
@@ -75,7 +75,7 @@ ms.locfileid: "70212301"
     > [!IMPORTANT]  
     >  Use a Autenticação [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para conexões com os Assinantes e especifique uma conta diferente para a conexão com cada Assinante. Se usar uma assinatura pull, a replicação sempre define a conexão a ser usada com a Autenticação do Windows (em assinaturas pull, a replicação não pode acessar metadados no Assinante com a Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ). Nesse caso, altere a conexão para usar a Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] depois que a assinatura for configurada.  
   
-     Para obter mais informações, confira Como criar uma assinatura de atualização a uma publicação transacional (SQL Server Management Studio) e [Exibir e modificar as configurações de segurança de replicação](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
+     Para obter mais informações, consulte Como criar uma assinatura de atualização a uma publicação transacional (SQL Server Management Studio) e [Exibir e modificar as configurações de segurança de replicação](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Habilitar conexões criptografadas no Mecanismo de Banco de Dados &#40;SQL Server Configuration Manager&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   

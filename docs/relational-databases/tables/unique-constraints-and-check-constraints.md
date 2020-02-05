@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 400b028696666b188760f61c2490a218bc8bd2be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68017664"
 ---
 # <a name="unique-constraints-and-check-constraints"></a>Restrições exclusivas e restrições de verificação
@@ -48,7 +48,7 @@ ms.locfileid: "68017664"
   
  Você pode aplicar várias restrições CHECK a uma única coluna. Você também pode aplicar uma única restrição CHECK a várias colunas criando-as ao nível de tabela. Por exemplo, uma restrição CHECK de várias colunas poderia ser usada para confirmar que qualquer linha com o valor de coluna **country_region** de **USA** também tenha um valor de dois caracteres na coluna **state** . Isto permite que várias condições sejam verificadas em um local.  
   
- Restrições CHECK são semelhantes a restrições FOREIGN KEY pelo fato de controlarem os valores colocados em uma coluna. A diferença está em como eles determinam quais valores são válidos: restrições FOREIGN KEY obtêm a lista de valores válidos de uma outra tabela, enquanto restrições CHECK determinam valores válidos de uma expressão lógica.  
+ Restrições CHECK são semelhantes a restrições FOREIGN KEY pelo fato de controlarem os valores colocados em uma coluna. A diferença está em como elas determinam quais valores são válidos: restrições FOREIGN KEY obtêm uma lista de valores válidos de uma outra tabela, enquanto que restrições CHECK determinam valores válidos de uma expressão lógica.  
   
 > [!CAUTION]  
 >  Restrições que incluem conversão de tipo de dados implícita ou explícita podem causar falhas em certas operações. Por exemplo, tais restrições definidas em tabelas que são fontes de opção de partição podem causar falha na operação ALTER TABLE...SWITCH. Evite a conversão de tipo de dados em definições de restrição.  
@@ -90,7 +90,7 @@ DELETE CheckTbl WHERE col1 = 10;
 ##  <a name="Tasks"></a> Tarefas relacionadas  
   
 > [!NOTE]  
->  Se a tabela for publicada para replicação, você precisará fazer alterações no esquema, usando a instrução Transact-SQL [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) ou o SMO (SQL Server Management Objects). Ao fazer alterações no esquema com o Criador de Tabelas ou com o Criador do Diagrama de Banco de Dados, ele tenta descartar e recriar a tabela. Não é possível descartar objetos publicados, portanto, haverá falha na alteração de esquema.  
+>  Se a tabela for publicada para replicação, você precisará fazer alterações no esquema usando a instrução Transact-SQL [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) ou o SMO (SQL Server Management Objects). Ao fazer alterações no esquema com o Criador de Tabelas ou com o Criador do Diagrama de Banco de Dados, ele tenta descartar e recriar a tabela. Não é possível descartar objetos publicados, portanto, haverá falha na alteração de esquema.  
   
 |Tarefa|Tópico|  
 |----------|-----------|  

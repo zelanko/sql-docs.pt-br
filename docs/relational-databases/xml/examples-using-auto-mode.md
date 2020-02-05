@@ -1,5 +1,5 @@
 ---
-title: 'Exemplos: Usando o modo AUTO | Microsoft Docs'
+title: 'Exemplos: usando o modo AUTO | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,13 +13,13 @@ ms.assetid: 11e8d0e4-df8a-46f8-aa21-9602d4f26cad
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1a280477dbc8a41292ff3ee3519ec74df4d5c7ea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67943411"
 ---
-# <a name="examples-using-auto-mode"></a>Exemplos: uso do modo AUTO
+# <a name="examples-using-auto-mode"></a>Exemplos: Usando modo AUTO
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   Os exemplos a seguir ilustram o uso do modo AUTO. Muitas dessas consultas são especificadas em relação a documentos XML de instruções da fabricação de bicicletas que são armazenados na coluna da tabela ProductModel no banco de dados de exemplo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] .  
   
@@ -114,7 +114,7 @@ FOR XML AUTO;This is the partial result:
   
  `...`  
   
-## <a name="example-specifying-computed-columns-in-auto-mode"></a>Exemplo: Especificando colunas computadas no modo AUTO  
+## <a name="example-specifying-computed-columns-in-auto-mode"></a>Exemplo: Especificando colunas computadas em modo AUTO  
  Essa consulta retorna nomes de clientes individuais concatenados e informações de pedido. Porque a coluna computada é atribuída ao nível interno encontrado naquele ponto, o elemento <`SOH`> neste exemplo. Os nomes concatenados dos clientes são adicionados como atributos do elemento <`SOH`> no resultado.  
   
 ```  

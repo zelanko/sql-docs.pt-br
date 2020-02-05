@@ -1,11 +1,3 @@
----
-ms.openlocfilehash: 1394414db170826fa96ca51a5d35ff8dea199310
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68212258"
----
 Este artigo fornece uma visão geral das soluções de continuidade de negócios para alta disponibilidade e recuperação de desastre no SQL Server. 
 
 Todos que implantam o SQL Server têm uma tarefa comum para levar em consideração, que é certificar-se de que todas as instâncias do SQL Server de missão crítica e os bancos de dados dentro delas estarão disponíveis quando os usuários finais e de negócios precisarem delas, independentemente de ser em horário comercial ou o tempo todo. A meta é manter os negócios em funcionamento com o mínimo ou sem qualquer interrupção. Esse conceito também é conhecido como continuidade de negócios.
@@ -75,8 +67,8 @@ Um WSFC e o Pacemaker são mais semelhantes do que diferentes. Ambos fornecem um
 Por causa da diferença na pilha do cluster, algumas alterações precisam ser feitas para grupos de disponibilidade porque o SQL Server tem que lidar com alguns dos metadados que são nativamente tratados por um WSFC. A alteração mais [!IMPORTANT] é a introdução de um tipo de cluster para um grupo de disponibilidade. Isso é armazenado em sys. availability_groups nas colunas cluster_type e cluster_type_desc. Há três tipos de cluster:
 
 * WSFC 
-* External
-* None
+* Externo
+* Nenhum
 
 Todos os grupos de disponibilidade que exigem disponibilidade devem usar um cluster subjacente, o que no caso do SQL Server 2017 significa um WSFC ou Pacemaker. Para grupos de disponibilidade com base no Windows Server que usam um WSFC subjacente, o tipo de cluster padrão é WSFC e não precisa ser definido. Para grupos de disponibilidade com base em Linux, ao criar o grupo de disponibilidade, o tipo de cluster deve ser definido como Externo. A integração com o Pacemaker é configurada depois que o grupo de disponibilidade for criado, enquanto em um WSFC isso é feito no momento da criação.
 
@@ -91,7 +83,7 @@ A captura de tela abaixo mostra o suporte para os diferentes tipos de cluster no
 
 ![Opções do grupo de disponibilidade do SSMS](media/sql-server-ha-story/image2.png)
  
-##### <a name="requiredsynchronizedsecondariestocommit"></a>REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT
+##### <a name="required_synchronized_secondaries_to_commit"></a>REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT
 
 O SQL Server 2016 aumentou o suporte para o número de réplicas síncronas de duas para três na Enterprise Edition. No entanto, se uma réplica secundária foi sincronizada, mas a outra estava com problema, não havia como controlar o comportamento para informar à primária para aguardar a réplica com comportamento inadequado ou para permitir que ela prossiga. Isso significa que a réplica primária, em algum momento, continuará a receber tráfego de gravação, mesmo que a réplica secundária não esteja em um estado sincronizado, o que significa que há perda de dados na réplica secundária.
 No SQL Server 2017, agora há uma opção para poder controlar o comportamento do que acontece quando há réplicas síncronas denominadas REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT. A opção funciona da seguinte maneira:

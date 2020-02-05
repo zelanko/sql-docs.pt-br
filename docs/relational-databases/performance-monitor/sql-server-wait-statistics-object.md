@@ -14,10 +14,10 @@ ms.assetid: cb7f917d-4291-4115-9b78-ee7692ebbb2d
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: c690c2cd19acae2fb3a6bde8b2dcd6d72b3acf18
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67947885"
 ---
 # <a name="sql-server-wait-statistics-object"></a>SQL Server, Objeto Wait Statistics
@@ -26,7 +26,7 @@ ms.locfileid: "67947885"
   
  A tabela a seguir lista os contadores contidos no objeto Wait Statistics (Estatísticas de Espera).  
   
-|Contadores de Estatísticas de Espera do SQL Server|Descrição|  
+|Contadores de Estatísticas de Espera do SQL Server|DESCRIÇÃO|  
 |-----------------------------------------|-----------------|  
 |**Esperas de bloqueio**|Estatísticas dos processos que esperam por um bloqueio.|  
 |**Esperas de buffer de log**|Estatísticas dos processos que esperam pela disponibilização de buffer de log.|  
@@ -43,7 +43,7 @@ ms.locfileid: "67947885"
   
  Cada contador no objeto contém as seguintes instâncias:  
   
-|Item|Descrição|  
+|Item|DESCRIÇÃO|  
 |----------|-----------------|  
 |**Tempo de espera médio (ms)**|Tempo médio do tipo de espera selecionado.|  
 |**Tempo de espera cumulativo (ms) por segundo**|Tempo de espera agregado, por segundo, do tipo de espera selecionado.|  

@@ -11,10 +11,10 @@ ms.assetid: 64ae91e5-b420-44b4-af1a-f8bca83d7f41
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: ced667fb99f412a4891d3e3e53f788430ee9112d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67947782"
 ---
 # <a name="sql-server-xtp-garbage-collection"></a>Coleta de Lixo de XTP do SQL Server
@@ -24,7 +24,7 @@ ms.locfileid: "67947782"
   
  Esta tabela descreve os contadores de **Coleta de Lixo de XTP do SQL Server** .  
   
-|Contador|Descrição|  
+|Contador|DESCRIÇÃO|  
 |-------------|-----------------|  
 |**Tentativas de verificação de canto sujo/s (emitido pelo GC)**|O número de tentativas de digitalização devido a conflitos de gravação durante as varreduras de canto sujo emitidas pelo coletor de lixo (em média), por segundo. Este é um contador de nível muito baixo, não planejado para uso do cliente.|  
 |**Itens principais do trabalho do GC/s**|O número de itens de trabalho processados pelo thread principal do GC.|  

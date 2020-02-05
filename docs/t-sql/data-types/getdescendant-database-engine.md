@@ -18,10 +18,10 @@ ms.assetid: f5f39596-033e-4243-acbc-caa188b45b03
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 3d015602e944416435c95aba6aaea1ead84b834a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077968"
 ---
 # <a name="getdescendant-database-engine"></a>GetDescendant (Mecanismo de Banco de Dados)
@@ -53,7 +53,7 @@ NULL ou a **hierarchyid** de um filho do nó atual.
   
 **Tipo de retorno do CLR: SqlHierarchyId**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 Retorna um nó filho que é um descendente do pai.
 -   Se o pai for o NULL, retornará NULL.  
 -   Se o pai não for NULL, e child1 e child2 forem NULL, retornará um filho do pai.  
@@ -68,7 +68,7 @@ GetDescendant é determinístico. Portanto, se GetDescendant for chamado com as 
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-inserting-a-row-as-the-least-descendant-node"></a>A. Inserindo uma linha como o nó menos descendente  
+### <a name="a-inserting-a-row-as-the-least-descendant-node"></a>a. Inserindo uma linha como o nó menos descendente  
 Um funcionário novo é contratado, subordinado a um funcionário existente no nó `/3/1/`. Execute o seguinte código para inserir a nova linha usando o método GetDescendant sem argumentos para especificar o nó das novas linhas como `/3/1/1/`:
   
 ```sql

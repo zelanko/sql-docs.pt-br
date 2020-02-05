@@ -11,10 +11,10 @@ ms.assetid: 1c0efed1-c2b3-4f20-a3a1-ad91283b7c0a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0fd9c3a09bf5e901591b2837fcd163534db5f52c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71288148"
 ---
 # <a name="tokencount-ssis-expression"></a>TOKENCOUNT (expressão SSIS)
@@ -40,7 +40,7 @@ TOKENCOUNT(character_expression, delimiter_string)
 ## <a name="result-types"></a>Tipos de resultado  
  DT_I4  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Os comentários a seguir se aplicam à função TOKEN:  
   
 -   A cadeia de caracteres delimitadores pode conter um ou mais caracteres delimitadores.  

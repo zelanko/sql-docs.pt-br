@@ -11,10 +11,10 @@ ms.assetid: faa1eedd-db14-41e5-8e58-8f0f6f561e42
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 204fe65afa6684a3090c226d2fc5a028aa5f4079
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294438"
 ---
 # <a name="dqs-cleansing-connection-manager"></a>Gerenciador de Conexões de Limpeza DQS
@@ -22,7 +22,7 @@ ms.locfileid: "71294438"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  Um gerenciador de conexões de Limpeza DQS permite que um pacote se conecte a um servidor [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]. A transformação de Limpeza DQS usa o gerenciador de conexões de Limpeza DQS.  
+  Um gerenciador de conexões de Limpeza DQS permite que um pacote se conecte a um servidor [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] . A transformação de Limpeza DQS usa o gerenciador de conexões de Limpeza DQS.  
   
  Para obter mais informações sobre o Data Quality Services, consulte [Conceitos do Data Quality Services](../../data-quality-services/data-quality-services-concepts.md).  
   

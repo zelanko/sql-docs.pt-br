@@ -12,25 +12,25 @@ ms.assetid: e2ad218a-3249-4f18-8b32-09f0030765a5
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: c5da5b977426cd1d953f4aad53dd0bfc22f6aeb3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68087569"
 ---
-# <a name="mssqlserver7932"></a>MSSQLSERVER_7932
+# <a name="mssqlserver_7932"></a>MSSQLSERVER_7932
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|7932|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|DBCC2_FS_ROWSET_IN_WRONG_FILEGROUP|  
-|Texto da mensagem|Erro de tabela: a ID de diretório de Fluxo de arquivos F_ID da ID de objeto O_ID, ID de índice I_ID, ID de partição PN_ID está no grupo de arquivos FG_ID1, mas deveria estar no grupo de arquivos FG_ID2.|  
+|Texto da mensagem|Erro de tabela: a ID de diretório de FileStream F_ID da ID de objeto O_ID, ID de índice I_ID, ID de partição PN_ID está no grupo de arquivos FG_ID1, mas deveria estar no grupo de arquivos FG_ID2.|  
   
 ## <a name="explanation"></a>Explicação  
 Durante DBCC CHECKDB, o armazenamento de FILESTREAM para o objeto especificado foi detectado no grupo de arquivos errado. Isso pode indicar que houve danos nos metadados do objeto.  

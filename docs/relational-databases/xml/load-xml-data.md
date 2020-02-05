@@ -14,10 +14,10 @@ ms.assetid: d1741e8d-f44e-49ec-9f14-10208b5468a7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 286513b2c78c87a1a0275b94d3e09ad961c4ff8b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68026622"
 ---
 # <a name="load-xml-data"></a>Carregar dados XML
@@ -44,7 +44,7 @@ FROM    (SELECT *
  AS xCol) AS R(xCol)  
 ```  
   
-## <a name="text-encoding"></a>Codificação de texto  
+## <a name="text-encoding"></a>Codificação de Texto  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] armazena dados XML em Unicode (UTF-16). Os dados XML recuperados do servidor são fornecidos em codificação UTF-16. Para obter uma codificação diferente, você precisa executar a conversão necessária nos dados recuperados. Às vezes, os dados XML podem estar em uma codificação diferente. Nesse caso, você precisará ter cuidado durante o carregamento dos dados. Por exemplo:  
   
 -   Se o texto XML estiver em Unicode (UCS-2, UTF-16), você poderá atribuí-lo a uma coluna, variável ou parâmetro XML sem nenhum problema.  

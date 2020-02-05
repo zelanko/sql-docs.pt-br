@@ -13,10 +13,10 @@ ms.assetid: 764d8f91-957b-4037-997b-a9b6b533c504
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: ff16ec709e8ed3cf7e0d6a4b129641d1e553a11a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072291"
 ---
 # <a name="-scope-resolution-transact-sql"></a>:: (Resolução de escopo) (Transact-SQL)

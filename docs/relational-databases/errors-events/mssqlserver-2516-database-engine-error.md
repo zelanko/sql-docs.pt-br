@@ -12,22 +12,22 @@ ms.assetid: 79ed14b5-f53c-40c6-8334-8a083f732207
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 4a9c6719946842be6d5b3e8484186d57e4b98042
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68138517"
 ---
-# <a name="mssqlserver2516"></a>MSSQLSERVER_2516
+# <a name="mssqlserver_2516"></a>MSSQLSERVER_2516
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|2516|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|DBCC_REPAIR_DIFF_MAP_INVALIDATED|  
 |Texto da mensagem|A correção invalidou o bitmap diferencial do banco de dados NAME. A cadeia de backup diferencial foi quebrada. Execute um backup total de banco de dados antes de executar um backup diferencial.|  

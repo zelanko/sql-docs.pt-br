@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: c0d069601c36ba46be3c1950300c16b8808c264f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68013347"
 ---
 # <a name="wsfc-cluster-service-is-offline"></a>O serviço de cluster WSFC está offline
@@ -34,7 +34,7 @@ ms.locfileid: "68013347"
 |**Categoria**|**Crítico**|  
 |**Faceta**|Instância do SQL Server|  
   
-## <a name="description"></a>Descrição  
+## <a name="description"></a>DESCRIÇÃO  
  Esta política verifica o estado do WSFC (Cluster de failover de Windows Server). O estado da política é não íntegro e um alerta é gerado quando o cluster WSFC está offline ou no estado de quorum forçado. Todos os grupos de disponibilidade dentro deste cluster estão offline ou uma ação de recuperação de desastres é necessária.  
   
  O estado da política é íntegro quando o estado do cluster está no quorum normal.  
@@ -42,7 +42,7 @@ ms.locfileid: "68013347"
 > [!NOTE]  
 >  Para esta versão do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], as informações sobre as possíveis causas e soluções estão localizadas em [O serviço de cluster WSFC está offline](https://go.microsoft.com/fwlink/p/?LinkId=220849) no Wiki do TechNet.  
   
-## <a name="possible-causes"></a>Causas possíveis  
+## <a name="possible-causes"></a>Possíveis causas  
  A causa desse problema pode ser um problema de serviço de cluster ou a perda do quorum no cluster.  
   
 ## <a name="possible-solution"></a>Solução possível  

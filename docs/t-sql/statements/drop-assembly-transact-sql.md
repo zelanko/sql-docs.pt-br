@@ -23,10 +23,10 @@ ms.assetid: 452d181a-a8e6-44a3-975d-29966d01b18d
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 6b5b788ef8978ce88fdb3d8aa0567724023fd5cc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67984285"
 ---
 # <a name="drop-assembly-transact-sql"></a>DROP ASSEMBLY (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "67984285"
 
   Remove um assembly e todos os seus arquivos associados do banco de dados atual. Os assemblies são criados usando [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md) e modificados usando [ALTER ASSEMBLY](../../t-sql/statements/alter-assembly-transact-sql.md).  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -56,7 +56,7 @@ DROP ASSEMBLY [ IF EXISTS ] assembly_name [ ,...n ]
  WITH NO DEPENDENTS  
  Se for especificado, descartará somente o *assembly_name* e nenhum dos assemblies dependentes referenciados pelo assembly. Se não for especificado, DROP ASSEMBLY descartará o *assembly_name* e todos os assemblies dependentes.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O descarte de um assembly remove o mesmo e todos os seus arquivos associados, tais como código fonte e arquivos de depuração, do banco de dados  
   
  Se WITH NO DEPENDENTS não for especificado, DROP ASSEMBLY descartará o *assembly_name* e todos os assemblies dependentes. Se houver falha em uma tentativa de descarte de quaisquer assemblies dependentes, DROP ASSEMBLY retornará um erro.  

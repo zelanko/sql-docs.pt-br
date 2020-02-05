@@ -12,22 +12,22 @@ ms.assetid: 2d0d19b9-947b-4474-9ff8-7e03019ab93d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1a10e03f2dc09bb53078faaaaea36c60e313e0eb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67951569"
 ---
-# <a name="mssqlserver7901"></a>MSSQLSERVER_7901
+# <a name="mssqlserver_7901"></a>MSSQLSERVER_7901
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|7901|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|DBCC2_DATABASE_IN_EMERGENCY_MODE|  
 |Texto da mensagem|A instrução de correção não foi processada. Esse nível de correção não tem suporte quando o banco de dados está no modo de emergência.|  

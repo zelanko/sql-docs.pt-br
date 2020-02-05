@@ -21,10 +21,10 @@ ms.assetid: 063d3d9c-ccb5-4fab-9d0c-c675997428b4
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: f90625c1aa123cf72b93ce815b02cccd7cedc78a
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75321586"
 ---
 # <a name="advanced-merge-replication---conflict-detection-and-resolution"></a>Replicação de mesclagem avançada – detecção e resolução de conflito
@@ -115,7 +115,7 @@ Resolver conflitos de replicação de mesclagem
   
 -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Especificar um tipo de assinatura de mesclagem e a prioridade da resolução de conflitos &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/specify-a-merge-subscription-type-and-conflict-resolution-priority.md)  
   
--   Programação de replicação do [!INCLUDE[tsql](../../../includes/tsql-md.md)] e programação do RMO (Replication Management Objects): [Criar uma assinatura pull](../../../relational-databases/replication/create-a-pull-subscription.md) e [Criar uma assinatura push](../../../relational-databases/replication/create-a-push-subscription.md)  
+-   Programação [!INCLUDE[tsql](../../../includes/tsql-md.md)] de replicação e programação RMO (Replication Management Objects): [Create a Pull Subscription](../../../relational-databases/replication/create-a-pull-subscription.md) e [Create a Push Subscription](../../../relational-databases/replication/create-a-push-subscription.md)  
   
 ### <a name="interactive-resolver"></a>Resolvedor Interativo  
  A replicação fornece uma interface de usuário de Resolvedor Interativo que pode ser usada tanto em conjunto com o resolvedor padrão de conflitos, baseado em prioridade, como com o resolvedor de artigo. Ao realizar a sincronização sob demanda por meio do Gerenciador de Sincronização do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows, o Resolvedor Interativo exibe os dados do conflito em tempo real e permite que se opte pela forma de resolução dos conflitos. Para obter mais informações sobre como ativar resolução interativa e iniciar o Resolvedor Interativo, consulte [Interactive Conflict Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md).  
@@ -148,7 +148,7 @@ Resolver conflitos de replicação de mesclagem
   
 -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Exibir e resolver conflitos de dados em publicações de mesclagem &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/view-and-resolve-data-conflicts-for-merge-publications.md)  
   
--   Programação de replicação do [!INCLUDE[tsql](../../../includes/tsql-md.md)]: [Exibir informações sobre conflitos para publicações de mesclagem &#40;programação Transact-SQL de replicação&#41;](../../../relational-databases/replication/view-conflict-information-for-merge-publications.md)  
+-   Replicando programação do [!INCLUDE[tsql](../../../includes/tsql-md.md)]: [Exibir informações sobre conflitos em publicações de mesclagem &#40;Programação Transact-SQL de replicação&#41;](../../../relational-databases/replication/view-conflict-information-for-merge-publications.md)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Sincronizar dados](../../../relational-databases/replication/synchronize-data.md)  

@@ -18,10 +18,10 @@ ms.assetid: f5f0b753-c825-43ce-987d-98655d8d8702
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: c769b2e5fa5de94770d556264b82c81e28d43363
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930212"
 ---
 # <a name="isvaliddetailed-geography-data-type"></a>IsValidDetailed (tipo de dados geography)
@@ -41,10 +41,10 @@ ms.locfileid: "67930212"
   
  Tipo de retorno do CLR: **string**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  A tabela a seguir contém os valores de retorno possíveis:  
   
-|Valor retornado|Descrição|  
+|Valor retornado|DESCRIÇÃO|  
 |------------------|-----------------|  
 |24400|Válido|  
 |24401|Não válido, motivo desconhecido.|  

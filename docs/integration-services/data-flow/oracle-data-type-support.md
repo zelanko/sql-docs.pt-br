@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c28efd8106056ea900fef0cd57791837cf79e21a
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "69553232"
 ---
 # <a name="microsoft-connector-for-oracle-data-type-support"></a>Suporte a tipo de dados do Microsoft Connector para Oracle
@@ -35,7 +35,7 @@ A tabela a seguir mostra os tipos de dados do banco de dados do Oracle e o mapea
 |NUMBER(P, S)| Quando a escala for 0, de acordo com a precisão (P) <li> DT_I1 <Li> DT_I2 <Li> DT_I4 <Li> DT_NUMBERIC(P,0)||
 ||DT_NUMERIC(P,S)||
 |DATE|DT_DBTIMESTAMP||
-|<li>timestamp <li>TIMESTAMP WITH TIME ZONE <li>INTERVALO DIA PARA MÊS <li>INTERVALO DIA PARA SEGUNDO <li>TIMESTAMP WITH LOCAL TIME ZONE|DT_STR||
+|<li>timestamp <li>TIMESTAMP WITH TIME ZONE <li>INTERVAL YEAR TO MONTH <li>INTERVAL DAY TO SECOND <li>TIMESTAMP WITH LOCAL TIME ZONE|DT_STR||
 |RAW|DT_BYTES||
 |CLOB|DT_TEXT|Os tipos de dados CLOB, NCLOB e BLOB são compatíveis apenas no modo matriz, não no modo de Carregamento Rápido.|
 |NCLOB|DT_NTEXT||

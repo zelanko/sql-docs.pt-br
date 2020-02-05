@@ -13,10 +13,10 @@ ms.assetid: 488f0305-190c-4223-aa5c-e9bd43b520eb
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: bfe32fd730d4c81e2df9275ba2cbcc879978808a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67940475"
 ---
 # <a name="delete-a-policy-based-management-policy"></a>Excluir uma política do Gerenciamento Baseado em Políticas

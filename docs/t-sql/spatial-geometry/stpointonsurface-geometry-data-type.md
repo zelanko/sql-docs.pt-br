@@ -18,10 +18,10 @@ ms.assetid: 23b2b8eb-4176-49fb-ace0-92398928d60e
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: b1a820bc4f951fcbe294060825979d83a34f8969
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066369"
 ---
 # <a name="stpointonsurface-geometry-data-type"></a>STPointOnSurface (tipo de dados geometry)
@@ -39,11 +39,11 @@ Retorna um ponto arbitrário localizado no interior de uma instância de **geome
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Tipo de retorno CLR: **SqlGeometry**  
+ Tipo de retorno do CLR: **SqlGeometry**  
   
- Tipo OGC (Open Geospatial Consortium): **Ponto**  
+ Tipo do OGC (Open Geospatial Consortium): **Point**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse método retornará nulo se a instância estiver vazia.  
   
 ## <a name="examples"></a>Exemplos  

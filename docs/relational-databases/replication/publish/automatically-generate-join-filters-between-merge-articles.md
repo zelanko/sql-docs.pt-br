@@ -15,10 +15,10 @@ ms.assetid: 7ef419f4-c17f-42a5-9068-174a3ec08941
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a8bc0ae6764d96b03088cb05eb72dc5ab4f3a0d6
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75321273"
 ---
 # <a name="automatically-generate-join-filters-between-merge-articles"></a>Gerar automaticamente filtros de junção entre artigos de mesclagem
@@ -59,7 +59,7 @@ ms.locfileid: "75321273"
   
     3.  Especifique as opções de filtro.  
   
-         Selecione a opção que corresponde ao modo em que os dados serão compartilhados entre Assinantes: **Uma linha desta tabela vai para várias assinaturas** ou **Uma linha desta tabela vai para apenas uma assinatura**. Se você selecionar **Uma linha desta tabela irá para apenas uma assinatura**, a replicação de mesclagem pode otimizar o desempenho armazenando e processando uma quantia menor de metadados. No entanto, será necessário certificar-se de que os dados são particionados de forma que uma linha não seja replicada em mais de um Assinante. Para obter mais informações, consulte a seção "Configurando opções de partição" no tópico [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+         Selecione a opção que corresponde a como os dados serão compartilhados entre os Assinantes: **Uma linha desta tabela irá para várias assinaturas** ou **Uma linha desta tabela irá para apenas uma assinatura**. Se você selecionar **Uma linha desta tabela irá para apenas uma assinatura**, a replicação de mesclagem pode otimizar o desempenho armazenando e processando uma quantia menor de metadados. No entanto, será necessário certificar-se de que os dados são particionados de forma que uma linha não seja replicada em mais de um Assinante. Para obter mais informações, consulte a seção "Configurando opções de partição" no tópico [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
 3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   

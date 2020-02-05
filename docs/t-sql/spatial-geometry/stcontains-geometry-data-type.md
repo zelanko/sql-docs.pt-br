@@ -18,10 +18,10 @@ ms.assetid: 865ceca1-9200-45ed-a7d8-e286e2679fdc
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 1a8d85b5823d692343acbc73ffc10e0cb08bc9f9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930151"
 ---
 # <a name="stcontains-geometry-data-type"></a>STContains (tipo de dados geometry)
@@ -43,9 +43,9 @@ Retornará 1 se uma instância de **geometry** contiver completamente outra inst
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
- Tipo de retorno CLR: **SqlBoolean**  
+ Tipo de retorno do CLR: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  `STContains()` sempre retornará nulo se as SRIDs (IDs de referência espacial) das instâncias de **geometry** não forem correspondentes.  
   
 ## <a name="examples"></a>Exemplos  

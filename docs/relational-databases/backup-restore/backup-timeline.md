@@ -16,10 +16,10 @@ ms.assetid: ae3565f2-ddb2-4469-a992-7531d4f9ebb8
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 30bf006998ac543b732b4aecac97280f07d36a99
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68081430"
 ---
 # <a name="backup-timeline"></a>Linha do tempo de backup
@@ -36,7 +36,7 @@ ms.locfileid: "68081430"
  **Data**  
  Insira ou selecione uma data na lista suspensa.  
   
- **Time**  
+ **Hora**  
  Insira ou selecione uma data para designar o ponto específico no tempo para a restauração parar.  
   
  **Intervalo na linha de tempo**  

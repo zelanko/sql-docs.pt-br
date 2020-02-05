@@ -12,22 +12,22 @@ ms.assetid: b727cc2f-c76c-46f8-bbbe-5e7a05a6eabf
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 7d7b080dacab0b3cac77eac962571f7a5deb7a04
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68023043"
 ---
-# <a name="mssqlserver2576"></a>MSSQLSERVER_2576
+# <a name="mssqlserver_2576"></a>MSSQLSERVER_2576
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|2576|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|DBCC_IAM_PARENT_PAGE_WAS_NOT_SEEN|  
 |Texto da mensagem|A página IAM P_ID1 é apontada pelo ponteiro anterior da página IAM P_ID2 na ID de objeto O_ID, ID de índice I_ID, ID de partição PN_ID, ID de unidade de alocação A_ID (tipo TYPE), mas não foi detectada na varredura.|  

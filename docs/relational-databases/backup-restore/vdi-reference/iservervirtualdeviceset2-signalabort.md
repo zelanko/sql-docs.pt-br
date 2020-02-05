@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: b61a972d7b379ff40440124c875d8d49a7af1835
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847167"
 ---
 # <a name="iservervirtualdeviceset2signalabort-vdi"></a>IServerVirtualDeviceSet2::SignalAbort (VDI)
@@ -32,7 +32,7 @@ HRESULT IServerVirtualDeviceSet2::SignalAbort ();
 
 Retorna um *HRESULT* indicando êxito ou falha da chamada do método. Um valor igual a NOERROR indica que a chamada de método teve êxito. Um valor diferente de zero indica que ocorreu um erro.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Comentários
 
 A qualquer momento, o servidor pode optar por anular a operação BACKUP ou RESTORE.
 

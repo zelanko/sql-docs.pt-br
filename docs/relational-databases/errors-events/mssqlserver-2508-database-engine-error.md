@@ -12,22 +12,22 @@ ms.assetid: c37d40e5-c665-4d66-a727-5cb845634fcc
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d59fd7ce3c6de67ed0072d908c4427cc9e2d8957
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68220232"
 ---
-# <a name="mssqlserver2508"></a>MSSQLSERVER_2508
+# <a name="mssqlserver_2508"></a>MSSQLSERVER_2508
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|2508|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|DBCC_OUT_OF_DATE_PAGE_OR_ROW_COUNT|  
 |Texto da mensagem|A contagem %.*ls de objetos "%.\*ls", IDs de índice %d, IDs de partição %I64d e IDs de unidade de alocação %I64d (tipo %.\*ls) está incorreta. Execute DBCC UPDATEUSAGE.|  

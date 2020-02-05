@@ -32,10 +32,10 @@ author: juliemsft
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f13bbee1fdde92c55c98a0c2478d0dec4db5e96a
-ms.sourcegitcommit: 21e6a0c1c6152e625712a5904fce29effb08a2f9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/11/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75884002"
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
@@ -68,7 +68,7 @@ match_expression [ NOT ] LIKE pattern
  *pattern*  
  É a cadeia de caracteres específica a ser pesquisada em *match_expression* e pode incluir os caracteres curinga válidos a seguir. *pattern* pode ter um máximo de 8.000 bytes.  
   
-|Caractere curinga|Descrição|Exemplo|  
+|Caractere curinga|DESCRIÇÃO|Exemplo|  
 |------------------------|-----------------|-------------|  
 |%|Qualquer cadeia de zero ou mais caracteres.|WHERE title LIKE '%computer%' localiza todos os títulos de livro com a palavra 'computer' em qualquer lugar no título do livro.|  
 |_ (sublinhado)|Qualquer caractere único.|WHERE au_fname LIKE '_ean' localiza todos os nomes de quatro letras que terminam com ean (Dean, Sean e assim por diante).|  

@@ -15,10 +15,10 @@ ms.assetid: 3426fd32-cad2-4f2f-8ca9-e0296cc12703
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6bfdee182770e24896796bc3837d5c17d3d73da9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67998051"
 ---
 # <a name="in-doubt-xact-resolution-server-configuration-option"></a>Opção de configuração de servidor in-doubt xact resolution
@@ -28,7 +28,7 @@ ms.locfileid: "67998051"
   
  A tabela seguinte lista os possíveis valores de resultado para resolver uma transação incerta.  
   
-|Valor de resultado|Descrição|  
+|Valor de resultado|DESCRIÇÃO|  
 |-------------------|-----------------|  
 |0|Nenhuma suposição. Recuperação falhará se o MS DTC não puder resolver nenhuma transação incerta.|  
 |1|Suponha confirmação. Supõe-se que qualquer transação incerta de MS DTC esteja confirmada.|  

@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 1601e54f-86f0-49e8-b023-87a5d1def033
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: e2d525600f8c568f9ac4dc3c1c9c489571421054
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 024f76fd4f87f353908fc634ec486f579f2e7e79
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907545"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286923"
 ---
 # <a name="view-and-modify-pull-subscription-properties"></a>Exibir e modificar propriedades de assinatura pull
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -41,11 +41,11 @@ ms.locfileid: "72907545"
      [RMO (Replication Management Objects)](#RMOProcedure)  
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
- Exibir propriedades de assinatura pull do Editor ou do Assinante na caixa de diálogo **Propriedades da Assinatura – \<Publicador>: \<PublicationDatabase>** , disponível em [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Há mais propriedades visíveis no Assinante, e as propriedades podem ser modificadas no Assinante. É igualmente possível exibir propriedades no Publicador, na guia **Todas as Assinaturas** , disponível no Replication Monitor. Para obter informações sobre como iniciar o Replication Monitor, consulte [Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md) (Iniciar o Replication Monitor).  
+ Exibir as propriedades da assinatura pull no Publicador ou Assinante, na caixa de diálogo **Propriedades de Assinatura – \<Publisher>: \<PublicationDatabase>** , disponível em [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Há mais propriedades visíveis no Assinante, e as propriedades podem ser modificadas no Assinante. É igualmente possível exibir propriedades no Publicador, na guia **Todas as Assinaturas** , disponível no Replication Monitor. Para obter informações sobre como iniciar o Replication Monitor, consulte [Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md) (Iniciar o Replication Monitor).  
   
 #### <a name="to-view-pull-subscription-properties-from-the-publisher-in-management-studio"></a>Para exibir propriedades de assinatura pull no Publicador do Management Studio  
   
-1.  Conecte-se ao Publicador no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]e expanda o nó do servidor.  
+1.  Conecte-se ao Publicador no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]e expanda o nó de servidor.  
   
 2.  Expanda a pasta **Replicação** e, em seguida, a pasta **Publicações Locais** .  
   
@@ -128,7 +128,7 @@ ms.locfileid: "72907545"
   
 1.  Crie uma conexão com o Assinante usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.TransPullSubscription> .  
+2.  Criar uma instância da classe <xref:Microsoft.SqlServer.Replication.TransPullSubscription>.  
   
 3.  Defina as propriedades <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>e <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A> .  
   
@@ -146,7 +146,7 @@ ms.locfileid: "72907545"
   
 1.  Crie uma conexão com o Assinante usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.MergePullSubscription> .  
+2.  Criar uma instância da classe <xref:Microsoft.SqlServer.Replication.MergePullSubscription>.  
   
 3.  Defina as propriedades <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>e <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A> .  
   

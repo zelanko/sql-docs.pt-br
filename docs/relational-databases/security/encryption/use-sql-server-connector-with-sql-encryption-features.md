@@ -14,10 +14,10 @@ ms.assetid: 58fc869e-00f1-4d7c-a49b-c0136c9add89
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: 0fc954228aff75940e66f976f19d1414118e1a8e
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75558497"
 ---
 # <a name="use-sql-server-connector-with-sql-encryption-features"></a>Use SQL Server Connector with SQL Encryption Features (Usar o Conector do SQL Server com recursos de criptografia do SQL)
@@ -120,7 +120,7 @@ Você precisará criar uma credencial e um logon e criar uma chave de criptograf
   
      Na caixa de diálogo **Gerenciar Criptografia de Banco de Dados** , confirme se a TDE está ativada e se a chave assimétrica está criptografando a DEK.  
   
-     ![ekm&#45;tde&#45;dialog&#45;box](../../../relational-databases/security/encryption/media/ekm-tde-dialog-box.png "|::ref3::|")  
+     ![ekm&#45;tde&#45;dialog&#45;box](../../../relational-databases/security/encryption/media/ekm-tde-dialog-box.png "ekm-tde-dialog-box")  
   
      Como alternativa, você pode executar o seguinte script [!INCLUDE[tsql](../../../includes/tsql-md.md)] . Um estado de criptografia de 3 indica um banco de dados criptografado.  
   
@@ -215,7 +215,7 @@ O [!INCLUDE[ssDE](../../../includes/ssde-md.md)] precisa de credenciais ao acess
     
     Para restaurar um backup de banco de dados criptografado com TDE, a instância de destino [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] primeiro deve ter uma cópia da chave de cofre de chaves assimétrica usada para criptografia. Isso poderia ser feito assim:  
     
-    - Se a chave assimétrica original usada para TDE não estiver mais no cofre de chaves, restaure o backup da chave de cofre de chaves ou importe novamente a chave de uma HSM local. **Importante:** Para que a impressão digital da chave corresponda à impressão digital registrada no backup do banco de dados, a chave deve ser nomeada com o **mesmo nome de chave do Key Vault** que recebeu originalmente.
+    - Se a chave assimétrica original usada para TDE não estiver mais no cofre de chaves, restaure o backup da chave de cofre de chaves ou importe novamente a chave de uma HSM local. **Importante:** para que a impressão digital da chave corresponda a impressão digital registrada no backup do banco de dados, a chave deve ser nomeada com o **mesmo nome de chave do Key Vault** que recebeu originalmente.
     
     - Aplique as etapas 1 e 2 na instância de destino [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
     

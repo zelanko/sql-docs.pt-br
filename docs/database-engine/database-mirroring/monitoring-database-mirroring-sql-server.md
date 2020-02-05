@@ -14,10 +14,10 @@ ms.assetid: a7b1b9b0-7c19-4acc-9de3-3a7c5e70694d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: bcc63d87bc71fa2497e1282364f87272438bbf97
-ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70212292"
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>Monitorando o espelhamento de banco de dados (SQL Server)
@@ -83,7 +83,7 @@ ms.locfileid: "70212292"
   
      A tabela a seguir apresenta os procedimentos armazenados para administrar e usar o monitoramento de espelhamento de banco de dados independentemente do Monitor de Espelhamento de Banco de Dados.  
   
-    |Procedimento|Descrição|  
+    |Procedimento|DESCRIÇÃO|  
     |---------------|-----------------|  
     |[sp_dbmmonitoraddmonitoring](../../relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql.md)|Cria uma tarefa que atualiza periodicamente as informações de status para cada banco de dados espelho na instância do servidor.|  
     |[sp_dbmmonitorchangemonitoring](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)|Altera o valor de um parâmetro de monitoração de espelhamento de banco de dados.|  
@@ -155,15 +155,15 @@ ms.locfileid: "70212292"
   
 -   Função atual  
   
-     Função atual da instância de servidor. Os estados possíveis são:  
+     Função atual da instância de servidor. Os possíveis estados são:  
   
     -   Principal  
   
     -   Espelho  
   
--   Estado de espelhamento  
+-   estado de espelhamento  
   
-     Os estados possíveis são:  
+     Os possíveis estados são:  
   
     -   Unknown (desconhecido)  
   
@@ -177,7 +177,7 @@ ms.locfileid: "70212292"
   
 -   Conexão de testemunha  
   
-     Status de conexão de testemunha. Os estados possíveis são:  
+     Status de conexão de testemunha. Os possíveis estados são:  
   
     -   Unknown (desconhecido)  
   

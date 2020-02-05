@@ -15,10 +15,10 @@ ms.assetid: 6fc745cc-7976-418a-a89a-c267e64ab3a2
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: ab4a3aee5c1828df80fc89f9fc5c230f41ead295
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68120693"
 ---
 # <a name="stwithin-geography-data-type"></a>STWithin (tipo de dados geography)
@@ -40,9 +40,9 @@ ms.locfileid: "68120693"
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
- Tipo de retorno CLR: **SqlBoolean**  
+ Tipo de retorno do CLR: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse método sempre retornará nulo se as SRIDs (IDs de referência espacial) das instâncias de **geography** não forem correspondentes.  
   
 ## <a name="examples"></a>Exemplos  

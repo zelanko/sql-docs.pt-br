@@ -17,10 +17,10 @@ ms.assetid: 826f513e-9ad0-46b9-87ad-7525713638c8
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: db85df99a2b37e2d92997dce579d77d0f31f7c0e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68082286"
 ---
 # <a name="revoke-endpoint-permissions-transact-sql"></a>Permissões de ponto de extremidade REVOKE (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "68082286"
 
   Revoga permissões concedidas ou negadas em um ponto de extremidade.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -83,7 +83,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  AS *SQL_Server_login*  
  Especifica o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a partir do qual o principal que executa esta consulta deriva seu direito de revogar a permissão.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  As permissões no escopo de servidor podem ser revogadas somente quando o banco de dados atual é **master**.  
   
  As informações sobre pontos de extremidade são visíveis na exibição do catálogo [sys.endpoints](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md). As informações sobre permissões de servidor estão visíveis na exibição do catálogo [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) e as informações sobre entidades de segurança do servidor estão visíveis na exibição do catálogo [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
@@ -93,7 +93,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 |Permissão de ponto de extremidade|Indicado pela permissão de ponto de extremidade|Implícito na permissão de servidor|  
 |-------------------------|------------------------------------|----------------------------------|  
 |ALTER|CONTROL|ALTER ANY ENDPOINT|  
-|CONNECT|CONTROL|CONTROL SERVER|  
+|CONECTAR|CONTROL|CONTROL SERVER|  
 |CONTROL|CONTROL|CONTROL SERVER|  
 |TAKE OWNERSHIP|CONTROL|CONTROL SERVER|  
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
@@ -103,7 +103,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-revoking-view-definition-permission-on-an-endpoint"></a>A. Revogando a permissão VIEW DEFINITION em um ponto de extremidade  
+### <a name="a-revoking-view-definition-permission-on-an-endpoint"></a>a. Revogando a permissão VIEW DEFINITION em um ponto de extremidade  
  O exemplo a seguir revoga a permissão `VIEW DEFINITION` no ponto de extremidade `Mirror7` do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon `ZArifin`.  
   
 ```  
@@ -113,7 +113,7 @@ GO
 ```  
   
 ### <a name="b-revoking-take-ownership-permission-with-the-cascade-option"></a>B. Revogando a permissão TAKE OWNERSHIP com a opção CASCADE  
- O exemplo a seguir revoga a permissão `TAKE OWNERSHIP` no ponto de extremidade `Shipping83` do usuário `PKomosinski` do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e de todas as entidades de segurança às quais `PKomosinski` concedeu `TAKE OWNERSHIP` em `Shipping83`.  
+ O exemplo a seguir revoga a permissão `TAKE OWNERSHIP` no ponto de extremidade `Shipping83` do usuário [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do `PKomosinski` e de todas as entidades de segurança às quais `PKomosinski` concedeu `TAKE OWNERSHIP` em `Shipping83`.  
   
 ```  
 USE master;  

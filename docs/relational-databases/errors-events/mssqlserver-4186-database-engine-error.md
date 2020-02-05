@@ -12,22 +12,22 @@ ms.assetid: 1ae88554-f291-45bc-a186-6f41d9cd0fca
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3efa12b744d331949fc0af18f555e603f18e33ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68123096"
 ---
-# <a name="mssqlserver4186"></a>MSSQLSERVER_4186
+# <a name="mssqlserver_4186"></a>MSSQLSERVER_4186
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|4186|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico||  
 |Texto da mensagem|A coluna '%ls.%.*ls' não pode ser referenciada na cláusula OUTPUT porque a definição da coluna contém uma subconsulta ou faz referência a uma função que executa acesso a dados de sistema ou de usuário. Por padrão, se uma função não estabelece associação com o esquema, supõe-se que ela execute acesso a dados. Considere remover a subconsulta ou a função da definição de coluna ou remover a coluna da cláusula OUTPUT.|  

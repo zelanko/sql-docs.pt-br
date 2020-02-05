@@ -16,10 +16,10 @@ ms.assetid: 539d5bb0-b808-4d8c-baf4-cb6d32d2c595
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8afde3ebd4082df0c1fc0065b2aa058095905ead
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75321241"
 ---
 # <a name="enable-updating-subscriptions-for-transactional-publications"></a>Habilitar atualização de assinaturas para publicações transacionais
@@ -45,7 +45,7 @@ ms.locfileid: "75321241"
   
 2.  Na página **Segurança do Agente** , especifique as definições do Queue Reader Agent além de Snapshot Agent e Log Reader Agent. Para obter mais informações sobre as permissões que são exigidas para a conta sob a qual o Queue Reader Agent executa, consulte [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md).  
 
-    > **OBSERVAÇÃO:** O Agente de Leitor de Fila será configurado mesmo se você usar apenas a assinatura de atualização imediata.  
+    > **OBSERVAÇÃO:** o Queue Reader Agent será configurado mesmo se você usar apenas a assinatura de atualização imediata.  
   
 ##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  Ao criar uma publicação transacional de forma programática usando procedimentos armazenados de replicação, é possível ativar tanto as assinaturas de atualização imediatas como em fila.  

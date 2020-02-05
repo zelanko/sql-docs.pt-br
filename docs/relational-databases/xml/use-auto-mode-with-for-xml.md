@@ -16,10 +16,10 @@ ms.assetid: 7140d656-1d42-4f01-a533-5251429f4450
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5331a474d24d2204ca81e37427fc2615ecede622
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68078008"
 ---
 # <a name="use-auto-mode-with-for-xml"></a>Usar o modo AUTO com FOR XML
@@ -137,7 +137,7 @@ FOR XML AUTO, ELEMENTS
   
 -   [Heurística de modo AUTO na formação do XML retornado](../../relational-databases/xml/auto-mode-heuristics-in-shaping-returned-xml.md)  
   
--   [Exemplos: Usando o modo AUTO](../../relational-databases/xml/examples-using-auto-mode.md)  
+-   [Exemplos: usando o modo AUTO](../../relational-databases/xml/examples-using-auto-mode.md)  
   
 ## <a name="see-also"></a>Consulte Também  
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   

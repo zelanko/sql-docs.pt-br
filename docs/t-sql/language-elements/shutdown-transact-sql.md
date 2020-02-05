@@ -22,10 +22,10 @@ ms.assetid: c8b03ff9-688c-4fe8-86e8-bd6bd401c9a4
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 01cf9fcf7795e8f353565b767bbf79b1da43f4de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68121704"
 ---
 # <a name="shutdown-transact-sql"></a>SHUTDOWN (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68121704"
 
   Para imediatamente o SQL Server.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,7 +46,7 @@ SHUTDOWN [ WITH NOWAIT ]
  WITH NOWAIT  
  Opcional. Desliga o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sem executar pontos de verificação em todo o banco de dados. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sai depois de tentar finalizar todos os processos de usuário. Quando o servidor é reiniciado, ocorre uma operação de reversão para transações incompletas.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  A menos que a opção WITHNOWAIT seja usada, SHUTDOWN desligará o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
 1.  Desabilitando logons (exceto para membros das funções de servidor fixas **sysadmin** e **serveradmin**).  

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e42d7dbfe00ff957511d9853e39febd29b7aab66
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68137327"
 ---
 # <a name="contained-databases"></a>Bancos de dados independentes
@@ -74,7 +74,7 @@ ms.locfileid: "68137327"
  Os usuários baseados em logons no banco de dados **mestre** podem receber acesso a um banco de dados independente, mas isso cria uma dependência na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Portanto, criar usuários com base em logons requer independência parcial.
   
 > [!IMPORTANT]  
->  Habilitar delegados de bancos de dados parcialmente independentes controla o acesso à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para os proprietários do banco de dados. Para saber mais, veja [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
+>  Habilitar delegados de bancos de dados parcialmente independentes controla o acesso à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para os proprietários do banco de dados. Para obter mais informações, consulte [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
   
  Limite de banco de dados  
  Como os bancos de dados parcialmente independentes separam a funcionalidade do banco de dados das funcionalidades da instância, há uma linha claramente definida entre esses dois elementos chamada de *limite de banco de dados*.  
@@ -143,17 +143,17 @@ ms.locfileid: "68137327"
 ##  <a name="Identifying"></a> Identificando a contenção do banco de dados  
  Há duas ferramentas para facilitar a identificação do status de contenção do banco de dados. O [sys.dm_db_uncontained_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md) é uma exibição que mostra todas as entidades potencialmente não contidas no banco de dados. O evento database_uncontained_usage ocorre quando qualquer entidade não contida real é identificada em tempo de execução.  
   
-### <a name="sysdmdbuncontainedentities"></a>sys.dm_db_uncontained_entities  
+### <a name="sysdm_db_uncontained_entities"></a>sys.dm_db_uncontained_entities  
  Esta exibição mostra as entidades do banco de dados que têm potencial para não serem contidas, como aquelas que cruzam o limite de banco de dados. Isso inclui as entidades de usuário que possam usar objetos fora do modelo de banco de dados. Porém, como a contenção de algumas entidades (por exemplo, as que usam SQL dinâmico) não pode ser determinada até o tempo de execução, a exibição poderá mostrar algumas entidades que não estão contidas realmente. Para obter mais informações, consulte [sys.dm_db_uncontained_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md).  
   
-### <a name="databaseuncontainedusage-event"></a>evento database_uncontained_usage  
+### <a name="database_uncontained_usage-event"></a>evento database_uncontained_usage  
  Esse XEvent ocorre sempre que uma entidade não contida é identificada no momento de execução. Isso inclui entidades originadas no código de cliente. Esse XEvent ocorrerá somente para entidades reais não contidas. No entanto, o evento ocorre somente no momento de execução. Portanto, qualquer entidade de usuário não contida não executada não será identificada por esse XEvent.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Recursos modificados &#40;Banco de Dados Contidos&#41;](../../relational-databases/databases/modified-features-contained-database.md)   
  [Ordenações de banco de dados independentes](../../relational-databases/databases/contained-database-collations.md)   
- [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md)   
+ [Práticas recomendadas de segurança com bancos de dados independentes](../../relational-databases/databases/security-best-practices-with-contained-databases.md)   
  [Migrate to a Partially Contained Database](../../relational-databases/databases/migrate-to-a-partially-contained-database.md)   
- [Usuários de bancos de dados independentes – Tornando seu banco de dados portátil](../../relational-databases/security/contained-database-users-making-your-database-portable.md)  
+ [Usuários do Banco de Dados Independente - Tornando seu Banco de Dados Portátil](../../relational-databases/security/contained-database-users-making-your-database-portable.md)  
   
   

@@ -12,22 +12,22 @@ ms.assetid: 709219b1-f8b2-4696-8923-dd2e91492eb8
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8b5a78df53c3841ac84c59c8ef84233a8d7785b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68105149"
 ---
-# <a name="mssqlserver32040"></a>MSSQLSERVER_32040
+# <a name="mssqlserver_32040"></a>MSSQLSERVER_32040
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|32040|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|SQLErrorNum32040|  
 |Texto da mensagem|O alerta de 'transação não enviada mais antiga' foi ativado. O valor atual '%d' ultrapassa o limite '%d'.|  
@@ -42,5 +42,5 @@ Verifique a causa nas cargas das instâncias do servidor principal e espelho, be
   
 ## <a name="see-also"></a>Consulte Também  
 [Espelhamento de banco de dados &#40;SQL Server&#41;](~/database-engine/database-mirroring/database-mirroring-sql-server.md)  
-[Usar limites de aviso e alertas em métricas de desempenho de espelhamento &#40;SQL Server&#41;](~/database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)  
+[Usar os limites de aviso e alertas em métricas de desempenho de espelhamento &#40;SQL Server&#41;](~/database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)  
   

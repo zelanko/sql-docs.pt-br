@@ -38,10 +38,10 @@ author: bluefooted
 ms.author: pamela
 manager: amitban
 ms.openlocfilehash: cd1fc9d36200a571a3dfd0e5367d4e3e01278466
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68262317"
 ---
 # <a name="dbcc-clonedatabase-transact-sql"></a>DBCC CLONEDATABASE (Transact-SQL)
@@ -49,7 +49,7 @@ ms.locfileid: "68262317"
 
 Gera um clone somente de esquema de um banco de dados usando DBCC CLONEDATABASE para investigar problemas de desempenho relacionados ao otimizador de consulta.
 
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -88,7 +88,7 @@ Especifica se os catálogos de sistema relacionados ao Service Broker devem ser 
 BACKUP_CLONEDB  
 Cria e verifica se um backup do banco de dados do clone.  Se usado em combinação com VERIFY_CLONEDB, o banco de dados do clone é verificado antes da realização do backup.  Essa opção está disponível desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP3, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU8.
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Comentários
 As validações a seguir são executadas pelo DBCC CLONEDATABASE. O comando falhará se alguma das validações falhar.
 - O banco de dados de origem deve ser um banco de dados de usuário. Não é permitida a clonagem de bancos de dados do sistema (mestre, modelo, msdb, tempdb, banco de dados de distribuição etc.).
 - O banco de dados de origem deve estar online e legível.
@@ -153,7 +153,7 @@ Somente os seguintes objetos podem ser clonados no banco de dados de destino. Ob
 - Texto completo (desde o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU2)
 - FUNCTION
 - INDEX
-- Logon
+- LOGIN
 - PARTITION FUNCTION
 - PARTITION SCHEME
 - PROCEDURE   
@@ -162,7 +162,7 @@ Somente os seguintes objetos podem ser clonados no banco de dados de destino. Ob
 
 - QUERY STORE (desde o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1)   
 > [!NOTE]   
-> Os dados do repositório de consultas são copiados somente se ele está habilitado no banco de dados de origem. Para copiar as estatísticas de tempo de execução mais recentes como parte do repositório de consultas, execute sp_query_store_flush_db para liberar as estatísticas de tempo de execução para o repositório de consultas antes de executar DBCC CLONEDATABASE.  
+> Os dados do repositório de consultas são copiados somente se ele está habilitado no banco de dados de origem. Para copiar as estatísticas de runtime mais recentes como parte do repositório de consultas, execute sp_query_store_flush_db para liberar as estatísticas de runtime para o repositório de consultas antes de executar DBCC CLONEDATABASE.  
 
 - ROLE
 - RULE
@@ -177,7 +177,7 @@ Somente os seguintes objetos podem ser clonados no banco de dados de destino. Ob
 - TRIGGER
 - TYPE
 - UPGRADED DB
-- Usuário
+- USER
 - VIEW
 - XML INDEX
 - XML SCHEMA COLLECTION  
@@ -211,7 +211,7 @@ As mensagens a seguir são um exemplo de como as mensagens são registradas no l
 
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-creating-a-clone-of-a-database-that-includes-schema-statistics-and-query-store"></a>A. Criação de um clone de um banco de dados que inclui esquema, estatísticas e repositório de consultas 
+### <a name="a-creating-a-clone-of-a-database-that-includes-schema-statistics-and-query-store"></a>a. Criação de um clone de um banco de dados que inclui esquema, estatísticas e repositório de consultas 
 O exemplo a seguir cria um clone do banco de dados AdventureWorks que inclui um esquema, estatísticas e dados do repositório de consultas ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 e versões posteriores)
 
 ```sql  

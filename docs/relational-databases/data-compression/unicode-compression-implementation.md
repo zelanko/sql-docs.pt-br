@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 71f1d8a1c25f099338bbdfcc483ab2e8e8061bc9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68030475"
 ---
 # <a name="unicode-compression-implementation"></a>Implementação da compactação Unicode
@@ -49,10 +49,10 @@ ms.locfileid: "68030475"
   
  O espaço de armazenamento que a compactação economiza depende das características e da localidade dos dados que estão sendo compactados. A tabela a seguir lista a economia de espaço que pode ser obtida para diversas localidades.  
   
-|Localidade|Porcentagem de compactação|  
+|Local|Porcentagem de compactação|  
 |------------|-------------------------|  
 |Inglês|50%|  
-|German|50%|  
+|Alemão|50%|  
 |Híndi|50%|  
 |Turco|48%|  
 |Vietnamita|39%|  

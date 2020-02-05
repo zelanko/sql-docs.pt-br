@@ -30,10 +30,10 @@ ms.assetid: 9f38eba6-39b1-4f1d-ba24-ee4f7e2bc969
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: c42c9501772972c523d5635a159fcdeb54bf107b
-ms.sourcegitcommit: 56fb0b7750ad5967f5d8e43d87922dfa67b2deac
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75001963"
 ---
 # <a name="server-configuration-options-sql-server"></a>Opções de configuração do servidor (SQL Server)

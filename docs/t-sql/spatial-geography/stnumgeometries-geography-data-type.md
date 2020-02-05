@@ -18,10 +18,10 @@ ms.assetid: 6ae7fac2-62f1-420f-9fc9-a09606be9605
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 7a1150128c281be485ca23dab65db3d82b88e1f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68120912"
 ---
 # <a name="stnumgeometries-geography-data-type"></a>STNumGeometries (tipo de dados geography)
@@ -39,9 +39,9 @@ ms.locfileid: "68120912"
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **int**  
   
- Tipo de retorno CLR: **SqlInt32**  
+ Tipo de retorno do CLR: **SqlInt32**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse método retorna 1 se a instância de **geography** não é uma instância de **MultiPoint**, **MultiLineString**, **MultiPolygon** ou **GeometryCollection**, ou 0 se a instância de **geography** está vazia.  
   
 ## <a name="examples"></a>Exemplos  

@@ -14,10 +14,10 @@ ms.assetid: bb46e029-fcf9-4aeb-a066-be41e7668fb9
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 98241060994cd97944db30a777bc23f475b8cb0e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67995694"
 ---
 # <a name="sql-server-resource-pool-stats-object"></a>SQL Server, objeto de estatísticas do pool de recursos
@@ -26,23 +26,23 @@ ms.locfileid: "67995694"
   
  Cada pool de recursos ativo cria uma instância do objeto de desempenho SQLServer:Estatísticas de Pool de Recursos que tem o mesmo nome de instância do pool de recursos do Administrador de Recursos. A tabela a seguir descreve os contadores suportados nesta instância.  
   
-|Nome do contador|Descrição|  
+|Nome do contador|DESCRIÇÃO|  
 |------------------|-----------------|  
 |**Quantidade de memória ativa concedida (KB)**|A quantidade total atual, em kilobytes (KB), de memória concedida. Essas informações também estão disponíveis em [sys.dm_exec_query_resource_semaphores](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md).| 
 |**Contagem de concessões de memória ativa**|A contagem total atual de concessões de memória. Essas informações também estão disponíveis em [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md).|  
 |**Média de E/S de leitura de disco (ms)**|Tempo médio, em milissegundos, de uma operação de leitura do disco.|  
-|**Base média de E/S de leitura de disco (ms)**|Somente para uso interno.|
+|**Base média de E/S de leitura de disco (ms)**|Apenas para uso interno.|
 |**Média de E/S de gravação em disco (ms)**|Tempo médio, em milissegundos, de uma operação de gravação no disco.|  
-|**Base média de E/S de gravação de disco (ms)**|Somente para uso interno.|
+|**Base média de E/S de gravação de disco (ms)**|Apenas para uso interno.|
 |**Meta da memória cache (KB)**|A meta do agente de memória atual, em kilobytes (KB), para cache.|  
 |**Meta da memória de compilação (KB)**|A meta do agente de memória atual, em kilobytes (KB), para compilações de consulta.|  
 |**% de efeito do controle de CPU**|O efeito do Administrador de Recursos no pool de recursos. Calculado como (% de uso de CPU) / (% de uso de CPU sem o Administrador de Recursos).|  
 |**% de CPU atrasada**|CPU do sistema atrasada para todas as solicitações na instância especificada do objeto de desempenho como uma porcentagem do tempo total ativo.|
-|**% base de CPU atrasada**|Somente para uso interno.|
+|**% base de CPU atrasada**|Apenas para uso interno.|
 |**% de CPU efetiva**|Uso de CPU do sistema por todas as solicitações na instância especificada do objeto de desempenho como uma porcentagem do tempo total ativo.|
-|**% base de CPU efetiva**|Somente para uso interno.|
+|**% base de CPU efetiva**|Apenas para uso interno.|
 |**% de uso de CPU**|O uso da largura de banda da CPU por todas as solicitações em todos os grupos de cargas de trabalho pertencentes a este pool. Essa é a medida relativa ao computador e normalizada para todas as CPUs no sistema. Esse valor mudará à medida que a quantidade de CPU disponível para o processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for alterada. Ele não é normalizado de acordo com o que é recebido pelo processo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
-|**% base de uso de CPU**|Somente para uso interno.|
+|**% base de uso de CPU**|Apenas para uso interno.|
 |**% de meta de uso de CPU**|O valor de meta da % de uso da CPU para o pool de recursos com base nas definições de configuração do pool de recursos e na carga do sistema.|  
 |**% de CPU violada**|A diferença entre a reserva de CPU e a porcentagem de agendamento efetiva.|
 |**Leitura do disco/s**|Número de bytes lidos do disco no último segundo.|  

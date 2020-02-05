@@ -26,10 +26,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 67a4a4ad32e1d9471dc9a5b3d2f1c7b067cf480b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68122122"
 ---
 # <a name="-modulus-transact-sql"></a>% (Módulo) (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "68122122"
 
   Retorna o resto de um número dividido por outro.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -55,12 +55,12 @@ dividend % divisor
 ## <a name="result-types"></a>Tipos de resultado  
  Determinado por tipos de dados dos dois argumentos.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Use o operador aritmético de módulo na lista de seleção da instrução SELECT com qualquer combinação de nomes de coluna, constantes numéricas ou qualquer expressão válida das categorias de tipo de dados inteiros ou monetários ou o tipo de dados **numeric**.  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-simple-example"></a>A. Exemplo simples  
+### <a name="a-simple-example"></a>a. Exemplo simples  
  O exemplo a seguir divide o número 38 por 5. Isto resulta em 7 como a parte inteira do resultado e demonstra como o módulo retorna o resto de 3.  
   
 ```  

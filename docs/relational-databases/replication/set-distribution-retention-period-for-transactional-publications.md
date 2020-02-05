@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 9a98c53a-fea5-4235-b23d-6c69587c5676
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: ebbf937388d19b36910bc0d1a029933f500d4715
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: d699eb502d99818926e92ff07a8fc16248aeee3d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75321703"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287203"
 ---
 # <a name="set-distribution-retention-period-for-transactional-publications"></a>Definir o período de retenção de distribuição para publicações transacionais
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

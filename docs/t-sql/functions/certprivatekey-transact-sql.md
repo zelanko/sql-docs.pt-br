@@ -18,10 +18,10 @@ ms.assetid: 33e0f01e-39ac-46da-94ff-fe53b1116df4
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: e409d5064cb0e807d12a76b42055a6a43c9cb7c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "65948830"
 ---
 # <a name="certprivatekey-transact-sql"></a>CERTPRIVATEKEY (Transact-SQL)
@@ -58,7 +58,7 @@ A senha usada para descriptografar o valor binário retornado.
 ## <a name="return-types"></a>Tipos de retorno
 **varbinary**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 Use **CERTENCODED** e **CERTPRIVATEKEY** em conjunto para retornar diferentes partes de um certificado em formato binário.
   
 ## <a name="permissions"></a>Permissões  

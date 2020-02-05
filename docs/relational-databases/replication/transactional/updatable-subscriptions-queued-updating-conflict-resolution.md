@@ -17,10 +17,10 @@ ms.assetid: 084ac587-25e7-4bd0-a385-556bbe07d02f
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: b2bc4cf6348180e52dea28698e90cafda4f32f79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67895487"
 ---
 # <a name="updatable-subscriptions---queued-updating-conflict-resolution"></a>Assinaturas atualizáveis – Resolução de conflitos com atualização em fila
@@ -57,7 +57,7 @@ ms.locfileid: "67895487"
   
 -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Definir opções de resolução de conflitos de atualização na fila &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md)  
   
--   Programação Transact-SQL de replicação:  [Habilitar atualização de assinaturas para publicações transacionais](../../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)  
+-   Programação Transact-SQL de replicação: [Habilitar atualização de assinaturas para publicações transacionais](../../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)  
   
  **Para exibir conflitos de dados**  
   

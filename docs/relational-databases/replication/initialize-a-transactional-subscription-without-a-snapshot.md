@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 75c8c1f8-60bc-44a8-944b-d18d1f6bda11
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: d1f5e9afbc79aa83493507088fe1323b3733058b
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: df4463bf1ebfcc981c2828966c58e7fd0193f19f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75321583"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287960"
 ---
 # <a name="initialize-a-transactional-subscription-without-a-snapshot"></a>Inicializar uma assinatura transacional sem um instantâneo
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "75321583"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Habilitar a inicialização com um backup para publicações transacionais &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/enable-initialization-with-backup-for-transactional-publications.md)  
   
--   Programação Transact-SQL de replicação:  [Inicializar uma assinatura transacional de um backup &#40;Programação de Transact-SQL de Replicação&#41;](../../relational-databases/replication/initialize-a-transactional-subscription-from-a-backup.md)  
+-   Programação Transact-SQL de replicação: [Inicializar uma assinatura transacional de um backup &#40;programação Transact-SQL de replicação&#41;](../../relational-databases/replication/initialize-a-transactional-subscription-from-a-backup.md)  
   
 > [!NOTE]  
 >  Se uma assinatura for inicializada sem usar um instantâneo, a em que o serviço do SQL Server será executado no Publicador deverá ter permissões para gravação na pasta do instantâneo no Distribuidor. Para obter mais informações sobre permissões, consulte [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  

@@ -19,10 +19,10 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 ms.openlocfilehash: f4326901f40c580e869cae11ed184ca70cd7b442
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68892738"
 ---
 # <a name="drop-external-resource-pool-transact-sql"></a>DROP EXTERNAL RESOURCE POOL (Transact-SQL)
@@ -40,7 +40,7 @@ Para [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)
 
 Pools de recursos externos são criados com [CREATE EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md) e modificados com [ALTER EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-external-resource-pool-transact-sql.md).  
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -53,7 +53,7 @@ DROP EXTERNAL RESOURCE POOL pool_name
 *pool_name*  
 O nome do pool de recursos externos a ser excluído.  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Comentários
 
 Não é possível remover um pool de recursos externos se ele contém grupos de carga de trabalho.  
 

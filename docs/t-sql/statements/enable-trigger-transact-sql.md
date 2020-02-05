@@ -23,10 +23,10 @@ ms.assetid: 6e21f0ad-68d0-432f-9c7c-a119dd2d3fc9
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 369dd7ec16ee530d7612222ad7e77dd6faf66e14
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73980942"
 ---
 # <a name="enable-trigger-transact-sql"></a>ENABLE TRIGGER (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "73980942"
 
 Habilita um disparador DML, DDL ou de logon.  
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -67,7 +67,7 @@ Para um gatilho DDL, indica que *trigger_name* foi criado ou modificado para ser
 > [!NOTE]  
 >  Essa opção não está disponível em um banco de dados independente.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 A habilitação de um disparador não recria o mesmo. Um disparador desabilitado ainda existe como um objeto no banco de dados atual, mas não é acionado. A habilitação de um disparador faz com que ele seja acionado quando forem executadas quaisquer instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] nas quais ele foi originalmente programado. Os gatilhos são desabilitados usando [DISABLE TRIGGER](../../t-sql/statements/disable-trigger-transact-sql.md). Os gatilhos DML definidos em tabelas também podem ser desabilitados ou habilitados usando [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
 ## <a name="permissions"></a>Permissões  
@@ -77,7 +77,7 @@ Para habilitar um disparador DDL definido com escopo no servidor (ON ALL SERVER)
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-enabling-a-dml-trigger-on-a-table"></a>A. Habilitando um gatilho DML em uma tabela  
+### <a name="a-enabling-a-dml-trigger-on-a-table"></a>a. Habilitando um gatilho DML em uma tabela  
 O exemplo a seguir desabilita o gatilho `uAddress` que foi criado na tabela `Address` no banco de dados AdventureWorks e, em seguida, habilita-o.  
   
 ```sql  

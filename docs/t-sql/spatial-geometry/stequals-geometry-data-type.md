@@ -18,10 +18,10 @@ ms.assetid: 808f0e25-9e68-4ba7-9329-07ec950698f3
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 8880c5287d65e91ccca3c223d93c7b7b070a8df3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68107755"
 ---
 # <a name="stequals-geometry-data-type"></a>STEquals (tipo de dados geometry)
@@ -43,9 +43,9 @@ Retornará 1 se uma instância de **geometry** representar o mesmo conjunto de p
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
- Tipo de retorno CLR: **SqlBoolean**  
+ Tipo de retorno do CLR: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse método sempre retornará nulo se as SRIDs (IDs de referência espacial) das instâncias de **geometry** não forem correspondentes.  
   
 ## <a name="examples"></a>Exemplos  

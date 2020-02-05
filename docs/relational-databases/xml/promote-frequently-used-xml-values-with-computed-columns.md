@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 156ed5549daa8129ff17d1b2827d798521c8a88b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75257632"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>Promover valores XML frequentemente usados com colunas computadas
@@ -85,14 +85,14 @@ WHERE  ISBN = '0-7356-1588-2'
   
     -   Escreva consultas para acesso do SQL às tabelas de propriedades e para acesso do XML à coluna XML na tabela base, com junções entre as tabelas usando suas chaves primárias.  
   
-### <a name="example-create-a-property-table"></a>Exemplo: Criar uma tabela de propriedades  
+### <a name="example-create-a-property-table"></a>Exemplo: Crie uma tabela de propriedades  
  Para ilustração, assuma que você quer promover o nome dos autores. Os livros têm um ou mais autores, de forma que nome é uma propriedade com vários valores. Cada nome é armazenado em uma linha separada de uma tabela de propriedades. A chave primária da tabela base é duplicada na tabela de propriedades para junção retroativa.  
   
 ```  
 create table tblPropAuthor (propPK int, propAuthor varchar(max))  
 ```  
   
-### <a name="example-create-a-user-defined-function-to-generate-a-rowset-from-an-xml-instance"></a>Exemplo: Criar uma função definida pelo usuário para gerar um conjunto de linhas com base em uma instância XML  
+### <a name="example-create-a-user-defined-function-to-generate-a-rowset-from-an-xml-instance"></a>Exemplo: Crie uma função definida pelo usuário para gerar um conjunto de linhas de uma instância XML  
  A função com valor de tabela a seguir, udf_XML2Table, aceita um valor de chave primária e uma instância XML. Ela recupera o nome de todos os autores dos elementos de <`book`> e retorna um conjunto de linhas de chave primária, primeiros pares de nomes.  
   
 ```  
@@ -108,7 +108,7 @@ begin
 end  
 ```  
   
-### <a name="example-create-triggers-to-populate-a-property-table"></a>Exemplo: Criar gatilhos para popular uma tabela de propriedades  
+### <a name="example-create-triggers-to-populate-a-property-table"></a>Exemplo: Crie gatilhos para popular uma tabela de propriedades  
  O gatilho de inserção insere linhas na tabela de propriedades:  
   
 ```  
@@ -155,7 +155,7 @@ begin
 end  
 ```  
   
-### <a name="example-find-xml-instances-whose-authors-have-the-same-first-name"></a>Exemplo: Localizar instâncias XML cujos autores têm o mesmo nome  
+### <a name="example-find-xml-instances-whose-authors-have-the-same-first-name"></a>Exemplo: Localize instâncias XML cujos autores têm o mesmo nome  
  A consulta pode ser formada na coluna XML. Como alternativa, é possível pesquisar o nome "David" na tabela de propriedades e executar uma junção retroativa com a tabela base para retornar a instância XML. Por exemplo:  
   
 ```  

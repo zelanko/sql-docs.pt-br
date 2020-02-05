@@ -25,10 +25,10 @@ ms.assetid: 0544da48-0ca3-4a01-ba4c-940e23dc315b
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 98dce9206326c51f5ae721903b93ea287afa992a
-ms.sourcegitcommit: 34d28d49e8d0910cf06efda686e2d73059569bf8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/04/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75656643"
 ---
 # <a name="create-database-audit-specification-transact-sql"></a>CREATE DATABASE AUDIT SPECIFICATION (Transact-SQL)

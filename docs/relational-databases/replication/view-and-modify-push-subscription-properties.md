@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: 84e3655fac042e213ad82ac02fb39969b4993026
-ms.sourcegitcommit: 0ea19d8e3bd9d91a416311e00a5fb0267d41949e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71174226"
 ---
 # <a name="view-and-modify-push-subscription-properties"></a>Exibir e modificar propriedades de assinatura push
@@ -35,13 +35,13 @@ ms.locfileid: "71174226"
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
  Exibir e modificar as propriedades de assinatura push do Publicador em:  
   
--   A caixa de diálogo **Propriedades da Assinatura – \<Editor>: \<PublicationDatabase>** , disponível em [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+-   A caixa de diálogo **Propriedades da Assinatura – \<Publisher>: \<PublicationDatabase>** , que está disponível no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 -   A guia **Todas as Assinaturas** que está disponível no Replication Monitor. Para obter informações sobre como iniciar o Replication Monitor, consulte [Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md) (Iniciar o Replication Monitor).  
   
 #### <a name="to-view-and-modify-push-subscription-properties-in-management-studio"></a>Para exibir e modificar propriedades de assinatura push no Management Studio  
   
-1.  Conecte-se ao Publicador no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]e expanda o nó do servidor.  
+1.  Conecte-se ao Publicador no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]e expanda o nó de servidor.  
   
 2.  Expanda a pasta **Replicação** e, em seguida, a pasta **Publicações Locais** .  
   
@@ -106,7 +106,7 @@ ms.locfileid: "71174226"
   
 1.  Crie uma conexão com o Publicador usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.TransSubscription> .  
+2.  Criar uma instância da classe <xref:Microsoft.SqlServer.Replication.TransSubscription>.  
   
 3.  Defina as propriedades <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>e <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A> .  
   
@@ -122,7 +122,7 @@ ms.locfileid: "71174226"
   
 1.  Crie uma conexão com o Assinante usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.MergeSubscription> .  
+2.  Criar uma instância da classe <xref:Microsoft.SqlServer.Replication.MergeSubscription>.  
   
 3.  Defina as propriedades <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>e <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A> .  
   

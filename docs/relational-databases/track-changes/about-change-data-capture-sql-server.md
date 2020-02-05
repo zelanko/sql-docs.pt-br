@@ -15,10 +15,10 @@ ms.assetid: 7d8c4684-9eb1-4791-8c3b-0f0bb15d9634
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7e360df3a5e29aae987b90c97c0c983af6cd0f8a
-ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75952455"
 ---
 # <a name="about-change-data-capture-sql-server"></a>Sobre o change data capture (SQL Server)
@@ -34,7 +34,7 @@ ms.locfileid: "75952455"
 ## <a name="change-data-capture-data-flow"></a>Fluxo de dados do Change Data Capture  
  A ilustração seguinte mostra o fluxo de dados principal para a captura de dados de alteração.  
   
- ![Fluxo de dados da captura de dados de alterações](../../relational-databases/track-changes/media/cdcdataflow.gif "|::ref1::|")  
+ ![Fluxo de dados da captura de dados de alterações](../../relational-databases/track-changes/media/cdcdataflow.gif "Fluxo de dados da captura de dados de alterações")  
   
  A origem de dados de alterações para a captura de dados de alterações é o log de transações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Como inserções, atualizações e exclusões são aplicadas às tabelas de origem rastreadas, as entradas que descrevem essas alterações são adicionadas ao log. O log atua como entrada para o processo de captura. O processo lê o log e adiciona informações sobre alterações à tabela de alteração associada da tabela controlada. As funções são fornecidas para enumerar as alterações exibidas nas tabelas de alteração em um intervalo especificado, retornando informações em um conjunto de resultados filtrados. O conjunto de resultados filtrados é normalmente usado por um processo de aplicativo para atualizar uma representação da origem em algum ambiente externo.  
   

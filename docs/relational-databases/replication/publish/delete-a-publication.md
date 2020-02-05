@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 408a1360-12ee-4896-ac94-482ae839593b
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: ede5586c8ea7fab69360c12394834fa681eb113c
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 6c33925b1a518cb975ebd427c252d0538cfb6ed2
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70846562"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287637"
 ---
 # <a name="delete-a-publication"></a>Excluir uma publicação
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "70846562"
   
 #### <a name="to-delete-a-publication"></a>Para excluir uma publicação  
   
-1.  Conecte-se ao Publicador no [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]e expanda o nó do servidor.  
+1.  Conecte-se ao Publicador no [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]e expanda o nó de servidor.  
   
 2.  Expanda a pasta **Replicação** e, em seguida, a pasta **Publicações Locais** .  
   
@@ -56,7 +56,7 @@ ms.locfileid: "70846562"
   
 #### <a name="to-delete-a-snapshot-or-transactional-publication"></a>Para excluir uma publicação de instantâneo ou transacional  
   
-1.  Siga um destes procedimentos:  
+1.  Realize um dos seguintes procedimentos:  
   
     -   Para excluir uma única publicação, execute [sp_droppublication](../../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md) no Publicador do banco de dados de publicação.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "70846562"
   
 #### <a name="to-delete-a-merge-publication"></a>Para excluir uma publicação de mesclagem  
   
-1.  Siga um destes procedimentos:  
+1.  Realize um dos seguintes procedimentos:  
   
     -   Para excluir uma única publicação, execute [sp_dropmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md) no Publicador do banco de dados de publicação.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "70846562"
   
 1.  Crie uma conexão com o Publicador usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.TransPublication> .  
+2.  Criar uma instância da classe <xref:Microsoft.SqlServer.Replication.TransPublication>.  
   
 3.  Defina as propriedades <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> e <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> para a publicação, e a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> para a conexão criada na etapa 1.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "70846562"
   
 6.  (Opcional) Se nenhuma outra publicação transacional existir para esse banco de dados, ele pode ser desabilitado para a publicação transacional, como se segue:  
   
-    1.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> . Defina a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> para a instância de <xref:Microsoft.SqlServer.Management.Common.ServerConnection> na etapa 1.  
+    1.  Criar uma instância da classe <xref:Microsoft.SqlServer.Replication.ReplicationDatabase>. Defina a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> para a instância de <xref:Microsoft.SqlServer.Management.Common.ServerConnection> na etapa 1.  
   
     2.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Se esse método retorna **false**, confirme que o banco de dados existe.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "70846562"
   
 1.  Crie uma conexão com o Publicador usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.MergePublication> .  
+2.  Criar uma instância da classe <xref:Microsoft.SqlServer.Replication.MergePublication>.  
   
 3.  Defina as propriedades <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> e <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> para a publicação, e a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> para a conexão criada na etapa 1.  
   
@@ -134,7 +134,7 @@ ms.locfileid: "70846562"
   
 6.  (Opcional) Se nenhuma outra publicação de mesclagem existir para esse banco de dados, ele pode ser desabilitado para a publicação de mesclagem, como se segue:  
   
-    1.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> . Defina a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> para a instância de <xref:Microsoft.SqlServer.Management.Common.ServerConnection> na etapa 1.  
+    1.  Criar uma instância da classe <xref:Microsoft.SqlServer.Replication.ReplicationDatabase>. Defina a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> para a instância de <xref:Microsoft.SqlServer.Management.Common.ServerConnection> na etapa 1.  
   
     2.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Se esse método retornar **false**, verifique se o banco de dados existe.  
   

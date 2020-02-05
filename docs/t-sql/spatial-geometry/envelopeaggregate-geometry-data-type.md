@@ -15,10 +15,10 @@ ms.assetid: c4c15abe-0fe9-441d-9d42-6572e264869c
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: aec6618297f0ed38bfea5e730a452d4ccc9fae9b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68081184"
 ---
 # <a name="envelopeaggregate-geometry-data-type"></a>EnvelopeAggregate (tipo de dados geometry)
@@ -43,7 +43,7 @@ EnvelopeAggregate ( geometry_operand )
 ## <a name="exceptions"></a>Exceções  
  Gera uma `FormatException` quando há valores de entrada que não são válidos. Confira [STIsValid &#40;tipo de dados geometry&#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O método retornará **nulo** quando a entrada estiver vazia ou tiver SRIDs diferentes. Confira [SRIDs &#40;Spatial Reference Identifiers&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
   
  O método ignora entradas **nulas**.  

@@ -17,10 +17,10 @@ ms.assetid: d2c48cff-46f4-4c70-b1f3-c88f9b8757f3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 183c95bf39c504c7444f1604206f5acef517a53d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71284164"
 ---
 # <a name="integration-services-user-interface"></a>Interface do usuário do Integration Services
@@ -45,11 +45,11 @@ ms.locfileid: "71284164"
   
 |Caixa de diálogo|Finalidade|Acesso|  
 |----------------|-------------|------------|  
-|**Guia de Introdução**|Acesse exemplos, tutoriais e vídeos.|Na superfície de design da guia **Fluxo de Controle** ou da guia **Fluxo de Dados** , clique com o botão direito do mouse e clique em **Guia de Introdução**.<br /><br /> Para exibir automaticamente a janela **Guia de Introdução** ao criar um novo projeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , selecione **Sempre mostrar no novo projeto** na parte inferior da janela.|  
+|**Introdução**|Acesse exemplos, tutoriais e vídeos.|Na superfície de design da guia **Fluxo de Controle** ou da guia **Fluxo de Dados** , clique com o botão direito do mouse e clique em **Guia de Introdução**.<br /><br /> Para exibir automaticamente a janela **Guia de Introdução** ao criar um novo projeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , selecione **Sempre mostrar no novo projeto** na parte inferior da janela.|  
 |**Configurar Logs de SSIS**|Configure o log de um pacote e suas tarefas com a adição de logs e a definição dos detalhes do log.|No menu **SSIS** , clique em **Registrar em Log**.<br /><br /> -ou-<br /><br /> Clique com o botão direito do mouse na superfície de design da guia **Fluxo de Controle** e clique em **Log**.|  
 |**Organizador de Configurações do Pacote**|Adicionar e editar configurações de pacote. Você executa o Assistente de Configuração de Pacotes nesta caixa de diálogo.|No menu **SSIS** , clique em **Configurações do Pacote**.<br /><br /> -ou-<br /><br /> Clique com o botão direito do mouse em qualquer lugar na superfície de design da guia **Fluxo de Controle** e clique em **Configurações de Pacote**.|  
 |**Assinatura Digital**|Assine um pacote ou remova a assinatura do pacote.|No menu **SSIS** , clique em **Assinatura Digital**.<br /><br /> -ou-<br /><br /> Clique com o botão direito do mouse em qualquer lugar na superfície de design da guia **Fluxo de Controle** e clique em **Assinatura Digital**.|  
-|**Definir Pontos de Interrupção**|Habilite pontos de interrupção em tarefas e defina propriedades do ponto de interrupção.|Na superfície de design da guia **Fluxo de Controle** , clique com o botão direito do mouse em uma tarefa ou um contêiner e clique em **Editar Pontos de Interrupção**. Para definir pontos de interrupção no pacote, clique com o botão direito do mouse em qualquer lugar da superfície de design da guia **Fluxo de Controle** e clique em **Editar Pontos de Interrupção**.|  
+|**Definir pontos de interrupção**|Habilite pontos de interrupção em tarefas e defina propriedades do ponto de interrupção.|Na superfície de design da guia **Fluxo de Controle** , clique com o botão direito do mouse em uma tarefa ou um contêiner e clique em **Editar Pontos de Interrupção**. Para definir pontos de interrupção no pacote, clique com o botão direito do mouse em qualquer lugar da superfície de design da guia **Fluxo de Controle** e clique em **Editar Pontos de Interrupção**.|  
   
  A janela **Guia de Introdução** fornece links para exemplos, tutoriais e vídeos. Para adicionar links para conteúdo adicional, modifique o arquivo SamplesSites.xml fornecido com a versão atual do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. É recomendável não modificar o valor do elemento \<GettingStartedSamples> que especifica a URL do RSS Feed. O arquivo está localizado na pasta *\<unidade>* :\Arquivos de Programas\Microsoft SQL Server\110\DTS\Binn. Em um computador de 64 bits, o arquivo está localizado na pasta *\<unidade>* :\Arquivos de Programas(x86)\Microsoft SQL Server\110\DTS\Binn  
   

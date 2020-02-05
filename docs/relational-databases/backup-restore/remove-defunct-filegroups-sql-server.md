@@ -18,10 +18,10 @@ ms.assetid: 055f9c6a-5c18-4942-98e7-ec918f0ff975
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4314dbd1ab80fe8a26a1c6fa2b2429b68c6645fa
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908896"
 ---
 # <a name="remove-defunct-filegroups-sql-server"></a>Remover grupos de arquivos expirados (SQL Server)
@@ -87,7 +87,7 @@ ms.locfileid: "72908896"
   
 2.  Na barra Padrão, clique em **Nova Consulta**.  
   
-3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. (**Observação:** este exemplo parte do princípio que os arquivos e o grupo de arquivos já existem. Para criar esses objetos, veja o exemplo B no tópico [Opções de arquivos e grupos de arquivos ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).) O primeiro exemplo remove os arquivos `test1dat3` e `test1dat4` do grupo de arquivos expirados usando a instrução `ALTER DATABASE` com a cláusula `REMOVE FILE`. O segundo exemplo remove o grupo de arquivos expirados `Test1FG1` usando a cláusula `REMOVE FILEGROUP`.  
+3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. (**Observação:** este exemplo parte do princípio que os arquivos e o grupo de arquivos já existem. Para criar esses objetos, veja o exemplo B no tópico [Opções de arquivos e grupos de arquivos ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md) .) O primeiro exemplo remove os arquivos `test1dat3` e `test1dat4` do grupo de arquivos expirados usando a instrução `ALTER DATABASE` com a cláusula `REMOVE FILE` . O segundo exemplo remove o grupo de arquivos expirados `Test1FG1`usando a cláusula `REMOVE FILEGROUP` .  
   
 ```sql  
 USE master;  

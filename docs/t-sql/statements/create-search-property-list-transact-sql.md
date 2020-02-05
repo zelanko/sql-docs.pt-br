@@ -24,10 +24,10 @@ ms.assetid: 5440cbb8-3403-4d27-a2f9-8e1f5a1bc12b
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: e838729d064a6101d4efb8fc57c7cd7b9910ad8e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68117278"
 ---
 # <a name="create-search-property-list-transact-sql"></a>CREATE SEARCH PROPERTY LIST (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68117278"
 
   Cria uma nova lista de propriedades de pesquisa. Uma lista de propriedades de pesquisa é usada para especificar uma ou mais propriedades de pesquisa que você queira incluir em um índice de texto completo.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -64,7 +64,7 @@ CREATE SEARCH PROPERTY LIST new_list_name
 > [!NOTE]  
 >  O proprietário pode ser alterado usando a instrução [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
   
 > [!NOTE]  
 >  Para obter informações sobre listas de propriedades em geral, consulte [Pesquisar propriedades do documento com listas de propriedades de pesquisa](../../relational-databases/search/search-document-properties-with-search-property-lists.md).  
@@ -95,7 +95,7 @@ CREATE SEARCH PROPERTY LIST new_list_name
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-creating-an-empty-property-list-and-associating-it-with-an-index"></a>A. Criando uma lista de propriedades vazia e associando-a a um índice  
+### <a name="a-creating-an-empty-property-list-and-associating-it-with-an-index"></a>a. Criando uma lista de propriedades vazia e associando-a a um índice  
  O exemplo a seguir cria uma nova lista de propriedades de pesquisa denominada `DocumentPropertyList`. Em seguida, o exemplo usa uma instrução [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) para associar a nova lista de propriedades ao índice de texto completo da tabela `Production.Document` no banco de dados `AdventureWorks`, sem iniciar uma população.  
   
 > [!NOTE]  

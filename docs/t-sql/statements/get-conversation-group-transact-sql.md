@@ -25,10 +25,10 @@ ms.assetid: 4da8a855-33c0-43b2-a49d-527487cb3b5c
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: d0ede71391f31096191255c5a8fee2051ad6f696
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72252191"
 ---
 # <a name="get-conversation-group-transact-sql"></a>GET CONVERSATION GROUP (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "72252191"
 
   Retorna o identificador de grupo de conversa para a próxima mensagem a ser recebida e bloqueia o grupo para a conversa que contém a mensagem. O identificador de grupo de conversa pode ser usado para recuperar informações de estado da conversa antes de recuperar a própria mensagem.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -74,7 +74,7 @@ ms.locfileid: "72252191"
  TIMEOUT *timeout*  
  Especifica o intervalo de tempo, em milissegundos, que o Service Broker aguarda a chegada de uma mensagem na fila. Essa cláusula só pode ser usada com a cláusula WAITFOR. Se uma instrução que usa WAITFOR não incluir essa cláusula ou se *timeout* for -1, o tempo de espera será ilimitado. Se o intervalo expirar, GET CONVERSATION GROUP definirá a variável *\@conversation_group_id* como NULL.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
   
 > [!IMPORTANT]  
 >  Se a instrução GET CONVERSATION GROUP não for a primeira instrução em um lote ou em um procedimento armazenado, a instrução anterior precisará terminar com ponto e vírgula ( **;** ), o terminador de instrução do [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -100,7 +100,7 @@ ms.locfileid: "72252191"
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-getting-a-conversation-group-waiting-indefinitely"></a>A. Obtendo um grupo de conversa, aguardando indefinidamente  
+### <a name="a-getting-a-conversation-group-waiting-indefinitely"></a>a. Obtendo um grupo de conversa, aguardando indefinidamente  
  O exemplo a seguir define `@conversation_group_id` como o identificador de grupo de conversa para a próxima mensagem disponível em `ExpenseQueue`. O comando aguarda até uma mensagem ficar disponível.  
   
 ```  

@@ -21,10 +21,10 @@ ms.assetid: 2b4608f7-bb2e-4246-aa29-b52c55995b3a
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 3b18eb0d8f848bb57015aa78797d1222b9d92194
-ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70745296"
 ---
 # <a name="alter-service-transact-sql"></a>ALTER SERVICE (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "70745296"
 
   Altera um serviço existente.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -60,7 +60,7 @@ ALTER SERVICE service_name
  DROP CONTRACT *contract_name*  
  Especifica um contrato a ser excluído do conjunto de contratos exposto por este serviço. O [!INCLUDE[ssSB](../../includes/sssb-md.md)] envia uma mensagem de erro em quaisquer conversas existentes com este serviço que usem este contrato.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Quando a instrução ALTER SERVICE exclui um contrato de um serviço, o serviço não pode mais ser um destino das conversas que usam esse contrato. Portanto, [!INCLUDE[ssSB](../../includes/sssb-md.md)] não permite conversas novas ao serviço naquele contrato. As conversas existentes que usam o contrato não são afetadas.  
   
  Para alterar a AUTHORIZATION para um serviço, use a instrução ALTER AUTHORIZATION.  
@@ -70,7 +70,7 @@ ALTER SERVICE service_name
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-changing-the-queue-for-a-service"></a>A. Alterando a fila para um serviço  
+### <a name="a-changing-the-queue-for-a-service"></a>a. Alterando a fila para um serviço  
  O exemplo a seguir altera o serviço `//Adventure-Works.com/Expenses` para usar a fila `NewQueue`.  
   
 ```  

@@ -14,10 +14,10 @@ ms.assetid: 203091e2-043f-4adb-a9de-fd071492c693
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 36ff10e317259547c03e6ee9e939229d68569b2e
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75558245"
 ---
 # <a name="evaluate-policies-dialog-box-evaluation-results-page"></a>Caixa de diálogo Avaliar Políticas, página Resultados da Avaliação

@@ -31,10 +31,10 @@ ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2122954c2ce126441eba6d5d05db69e9a8bfa30e
-ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75952435"
 ---
 # <a name="output-clause-transact-sql"></a>cláusula OUTPUT (Transact-SQL)
@@ -133,10 +133,10 @@ DELETE Sales.ShoppingCartItem
 ```  
   
  *column_name*  
- É uma referência de coluna explícita. Toda referência à tabela que está sendo modificada deve ser corretamente qualificada pelo prefixo INSERTED ou DELETED, conforme apropriado, por exemplo: INSERTED **.** _column\_name_.  
+ É uma referência de coluna explícita. Toda referência à tabela que está sendo modificada precisa ser corretamente qualificada pelo prefixo INSERTED ou DELETED, conforme necessário, por exemplo: INSERTED **.** _column\_name_.  
   
  $action  
- Está disponível apenas para a instrução MERGE. Especifica uma coluna do tipo **nvarchar(10)** na cláusula OUTPUT em uma instrução MERGE que retorna um entre três valores para cada linha: 'INSERT', 'UPDATE' ou 'DELETE', de acordo com a ação que foi executada nessa linha.  
+ Está disponível apenas para a instrução MERGE. Especifica uma coluna do tipo **nvarchar(10)** na cláusula OUTPUT em uma instrução MERGE que retorna um entre três valores para cada linha: 'INSERT', 'UPDATE' ou 'DELETE', de acordo com a ação que foi realizada nessa linha.  
   
 ## <a name="remarks"></a>Comentários  
  A cláusula OUTPUT \<dml_select_list> e a cláusula OUTPUT \<dml_select_list> INTO { **\@** _table\_variable_ | _output\_table_ } pode ser definida em uma única instrução INSERT, UPDATE, DELETE ou MERGE.  

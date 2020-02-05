@@ -14,10 +14,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: f5510d6c75380e48008740ab8a0f5b1c9f500fe5
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73064538"
 ---
 # <a name="create-function-sql-data-warehouse"></a>CREATE FUNCTION (SQL Data Warehouse)
@@ -35,7 +35,7 @@ ms.locfileid: "73064538"
   
 -   Para substituir um procedimento armazenado  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -131,7 +131,7 @@ RETURNS return_data_type
  RETURNS NULL ON NULL INPUT | **CALLED ON NULL INPUT**  
  Especifica o atributo **OnNULLCall** de uma função de valor escalar. Se não for especificado, CALLED ON NULL INPUT será implícito por padrão. Isso significa que o corpo da função será executado mesmo que NULL seja passado como um argumento.  
   
-## <a name="best-practices"></a>Práticas recomendadas  
+## <a name="best-practices"></a>Práticas Recomendadas  
  Se uma função definida pelo usuário não for criada com a cláusula SCHEMABINDING, as alterações feitas nos objetos subjacentes poderão afetar a definição da função e produzir resultados inesperados quando ela for chamada. É recomendável que você implemente um dos seguintes métodos para garantir que a função não se torne desatualizada devido a alterações em seus objetos subjacentes:  
   
 -   Especifique a cláusula WITH SCHEMABINDING quando estiver criando a função. Isso garante que os objetos referenciados na definição da função não possam ser modificados, a menos que a função também seja modificada.  
@@ -153,7 +153,7 @@ RETURNS return_data_type
 ## <a name="metadata"></a>Metadados  
  Esta seção lista as exibições do catálogo do sistema que podem ser usadas para retornar metadados sobre funções definidas pelo usuário.  
   
- [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) : exibe a definição de funções definidas pelo usuário [!INCLUDE[tsql](../../includes/tsql-md.md)]. Por exemplo:  
+ [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md): exibe a definição de funções definidas pelo usuário do [!INCLUDE[tsql](../../includes/tsql-md.md)]. Por exemplo:  
   
 ```sql  
 SELECT definition, type   
@@ -165,16 +165,16 @@ GO
   
 ```  
   
- [sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md) : Exibe informações sobre os parâmetros definidos em funções definidas pelo usuário.  
+ [sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md): exibe informações sobre os parâmetros definidos em funções definidas pelo usuário.  
   
- [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) : Exibe os objetos subjacentes referenciados por uma função.  
+ [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md): exibe os objetos subjacentes referenciados por uma função.  
   
 ## <a name="permissions"></a>Permissões  
  Requer a permissão CREATE FUNCTION no banco de dados e a permissão ALTER no esquema no qual a função está sendo criada.  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="a-using-a-scalar-valued-user-defined-function-to-change-a-data-type"></a>A. Usando uma função com valor escalar definida pelo usuário para alterar um tipo de dados  
+### <a name="a-using-a-scalar-valued-user-defined-function-to-change-a-data-type"></a>a. Usando uma função com valor escalar definida pelo usuário para alterar um tipo de dados  
  Essa função simples usa um tipo de dados **int** como uma entrada e retorna um tipo de dados **decimal(10,2)** como uma saída.  
   
 ```sql  

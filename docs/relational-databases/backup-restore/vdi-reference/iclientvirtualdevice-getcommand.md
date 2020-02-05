@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: a861377924b4bb3cc1c1d2a4b83eba660fbf99e0
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847587"
 ---
 # <a name="iclientvirtualdevicegetcommand-vdi"></a>IClientVirtualDevice::GetCommand (VDI)
@@ -31,7 +31,7 @@ HRESULT IClientVirtualDevice::GetCommand (
 );
 ```
 
-## <a name="parameters"></a>Parâmetros
+## <a name="parameters"></a>parâmetros
 
 *ppCmd* Quando um comando é retornado com êxito, o parâmetro retorna o endereço de um comando a ser executado. A memória retornada é somente leitura. Quando o comando é concluído, esse ponteiro é passado para a rotina CompleteCommand. Para obter mais informações sobre cada comando, confira Comandos.
 
@@ -46,7 +46,7 @@ HRESULT IClientVirtualDevice::GetCommand (
 | VD_E_TIMEOUT | Nenhum comando estava disponível e o tempo limite expirou. |
 | VD_E_ABORT | O cliente ou o servidor usou o SignalAbort para forçar um desligamento. |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Comentários
 
 Quando VD_E_CLOSE é retornado, o SQL Server fecha o dispositivo. Isso faz parte do desligamento normal. Depois que todos os dispositivos forem fechados, o cliente invocará IClientVirtualDeviceSet2::Close para fechar o conjunto de dispositivos virtuais.
 

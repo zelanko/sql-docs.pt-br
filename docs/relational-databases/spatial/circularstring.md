@@ -12,10 +12,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 19ac88cbc9db29dfeb06614a50869adfe8d3cc6b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68048787"
 ---
 # <a name="circularstring"></a>CircularString
@@ -83,7 +83,7 @@ Nos casos a seguir, um segmento de arco circular será tratado como um segmento 
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-instantiating-a-geometry-instance-with-an-empty-circularstring"></a>A. Criando uma instância de geometry com uma CircularString vazia  
+### <a name="a-instantiating-a-geometry-instance-with-an-empty-circularstring"></a>a. Criando uma instância de geometry com uma CircularString vazia  
  Esse exemplo mostra como criar uma instância **CircularString** vazia:  
   
 ```sql  

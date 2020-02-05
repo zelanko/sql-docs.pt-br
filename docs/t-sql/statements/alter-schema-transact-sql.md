@@ -23,10 +23,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 162cccb3bba13d6d72f1af11effd6ceb8f26ff79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68044307"
 ---
 # <a name="alter-schema-transact-sql"></a>ALTER SCHEMA (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68044307"
 
   Transfere um protegível entre esquemas.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -69,7 +69,7 @@ ALTER SCHEMA schema_name
  *securable_name*  
  É o nome de uma ou duas partes de um protegível no escopo do esquema a ser movido para o esquema.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Os usuários e esquemas são completamente separados.  
   
  ALTER SCHEMA só pode ser usado para mover protegíveis entre esquemas no mesmo banco de dados. Para alterar ou descartar um protegível dentro de um esquema, use a instrução ALTER ou DROP específica para esse protegível.  
@@ -96,7 +96,7 @@ ALTER SCHEMA schema_name
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-transferring-ownership-of-a-table"></a>A. Transferindo a propriedade de uma tabela  
+### <a name="a-transferring-ownership-of-a-table"></a>a. Transferindo a propriedade de uma tabela  
  O exemplo a seguir modifica o esquema `HumanResources` por meio da transferência da tabela `Address` do esquema `Person` para o esquema.  
   
 ```  

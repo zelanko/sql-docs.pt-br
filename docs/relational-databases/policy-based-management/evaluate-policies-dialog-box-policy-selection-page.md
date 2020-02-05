@@ -14,10 +14,10 @@ ms.assetid: 20075fbe-0b48-42c8-b747-690f1aa23dcf
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 84e9e7577f74aa3ea43d99bc6b3c12cd5637c9ec
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75558211"
 ---
 # <a name="evaluate-policies-dialog-box-policy-selection-page"></a>Caixa de diálogo Avaliar Políticas, página Seleção de Políticas
@@ -37,10 +37,10 @@ ms.locfileid: "75558211"
  **Políticas: Política**  
  Clique para abrir a caixa de diálogo da política especificada.  
   
- **Políticas: categoria**  
+ **Políticas: Categoria**  
  A categoria da política. Essa caixa é somente leitura.  
   
- **Políticas: faceta**  
+ **Políticas: Faceta**  
  A faceta implementada pela política. Essa caixa é somente leitura.  
   
  **Avaliar**  

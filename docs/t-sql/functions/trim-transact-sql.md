@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azure-sqldw-latest||=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9707f0b23d9461418536c2b9f9015623124d5436
-ms.sourcegitcommit: 2bc15f81d7a238c6fc409440800f1d6c7943a4b5
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70059843"
 ---
 # <a name="trim-transact-sql"></a>TRIM (Transact-SQL)
@@ -53,13 +53,13 @@ string É uma expressão de qualquer tipo de caractere (`nvarchar`, `varchar`, `
 
 Retorna uma expressão de caractere com um tipo de argumento de cadeia de caracteres na qual o caractere de espaço `char(32)` ou outros caracteres especificados são removidos de ambos os lados. Retorna `NULL` se a cadeia de caracteres de entrada é `NULL`.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Comentários
 
 Por padrão, a função `TRIM` remove o caractere de espaço das extremidades inicial e final da cadeia de caracteres. Esse comportamento é equivalente a `LTRIM(RTRIM(@string))`.
 
 ## <a name="examples"></a>Exemplos
 
-### <a name="a--removes-the-space-character-from-both-sides-of-string"></a>A.  Remove o caractere de espaço de ambos os lados da cadeia de caracteres
+### <a name="a--removes-the-space-character-from-both-sides-of-string"></a>a.  Remove o caractere de espaço de ambos os lados da cadeia de caracteres
 
 O exemplo a seguir remove os espaços antes e depois da palavra `test`.
 

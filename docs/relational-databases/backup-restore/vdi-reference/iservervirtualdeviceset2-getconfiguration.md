@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 1d62a2042221bebf04e19a46a21ba81caa7c877b
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847247"
 ---
 # <a name="iservervirtualdeviceset2getconfiguration-vdi"></a>IServerVirtualDeviceSet2::GetConfiguration (VDI)
@@ -30,7 +30,7 @@ HRESULT IServerVirtualDeviceSet2::GetConfiguration (
 );
 ```
 
-## <a name="parameters"></a>Parâmetros
+## <a name="parameters"></a>parâmetros
 
 *pCfg* Essa é a configuração especificada pelo cliente usando IClientVirtualDeviceSet2::Create.
 
@@ -38,7 +38,7 @@ HRESULT IServerVirtualDeviceSet2::GetConfiguration (
 
 Retorna um *HRESULT* indicando êxito ou falha da chamada do método. Um valor igual a NOERROR indica que a chamada de método teve êxito. Um valor diferente de zero indica que ocorreu um erro.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Comentários
 
 Espera-se que o servidor inspecione e responda às configurações fornecidas pelo cliente. Para obter mais informações, confira Configuração. O servidor poderá usar SignalAbort se determinar que ele não funciona corretamente com a configuração fornecida.
 

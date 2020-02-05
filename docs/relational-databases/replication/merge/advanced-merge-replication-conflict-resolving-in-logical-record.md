@@ -15,10 +15,10 @@ ms.assetid: f2e55040-ca69-4ccf-97d1-c362e1633f26
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 4d222370b5e5ced1b2157a5f02f8eb4c7f44bb5e
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75321573"
 ---
 # <a name="advanced-merge-replication-conflict---resolving-in-logical-record"></a>Conflito de replicação de mesclagem avançada – resolução em registro lógico

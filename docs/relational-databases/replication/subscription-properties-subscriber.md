@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: fab938acf112a047ed6aeb089093f815a4861a0c
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75321513"
 ---
 # <a name="sql-server-replication-subscription-properties-dialog-box"></a>Caixa de diálogo Propriedades de Assinatura de Replicação do SQL Server 
@@ -65,7 +65,7 @@ A caixa de diálogo **Propriedades da Assinatura** no Assinante permite exibir e
   
 ## <a name="publisher-options-for-merge-subscriptions"></a>Opções do editor para assinaturas de mesclagem  
  **Definição de partição (HOST_NAME)**  
- Para uma publicação que usa filtros com parâmetros, a replicação de mesclagem avalia uma das duas funções de sistema (ou ambas se as referências de filtro funcionam) durante a sincronização para determinar a data em que um Assinante deve receber: **SUSER_SNAME()** ou **HOST_NAME()** . Por padrão, **HOST_NAME()** retorna o nome do computador no qual o Merge Agent está sendo executado, mas esse valor pode ser substituído no Assistente para Nova Assinatura. Para obter mais informações sobre filtros com parâmetros e substituição de **HOST_NAME ()** , consulte [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+ Para uma publicação que usa filtros com parâmetros, a replicação de mesclagem avalia uma das duas funções de sistema (ou ambas, se as referências de filtro funcionam) durante a sincronização para determinar a data em que um Assinante deve receber: **SUSER_SNAME()** ou **HOST_NAME()** . Por padrão, **HOST_NAME()** retorna o nome do computador no qual o Merge Agent está sendo executado, mas esse valor pode ser substituído no Assistente para Nova Assinatura. Para obter mais informações sobre filtros com parâmetros e substituição de **HOST_NAME ()** , consulte [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
  **Tipo de assinatura** e **Prioridade**  
  Exibe se a assinatura é uma assinatura de cliente ou servidor (isso não pode ser alterado depois que a assinatura tiver sido criada). Assinaturas de Servidor podem republicar dados para outros Assinantes e podem ter atribuição de prioridade para resolução de conflito.  
@@ -114,7 +114,7 @@ A caixa de diálogo **Propriedades da Assinatura** no Assinante permite exibir e
   
 ## <a name="options-for-merge-subscriptions"></a>Opções para assinaturas de mesclagem  
  **Definição de partição (HOST_NAME)**  
- Para uma publicação que usa filtros com parâmetros, a replicação de mesclagem avalia uma das duas funções de sistema (ou ambas se as referências de filtro funcionam) durante a sincronização para determinar a data em que um Assinante deve receber: **SUSER_SNAME()** ou **HOST_NAME()** . Por padrão, **HOST_NAME()** retorna o nome do computador no qual o Merge Agent está sendo executado, mas esse valor pode ser substituído no Assistente para Nova Assinatura. Para obter mais informações sobre filtros com parâmetros e substituição de **HOST_NAME ()** , consulte [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+ Para uma publicação que usa filtros com parâmetros, a replicação de mesclagem avalia uma das duas funções de sistema (ou ambas, se as referências de filtro funcionam) durante a sincronização para determinar a data em que um Assinante deve receber: **SUSER_SNAME()** ou **HOST_NAME()** . Por padrão, **HOST_NAME()** retorna o nome do computador no qual o Merge Agent está sendo executado, mas esse valor pode ser substituído no Assistente para Nova Assinatura. Para obter mais informações sobre filtros com parâmetros e substituição de **HOST_NAME ()** , consulte [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
  **Tipo de assinatura** e **Prioridade**  
  Exibe se a assinatura é uma assinatura de cliente ou servidor (isso não pode ser alterado depois que a assinatura tiver sido criada). Assinaturas de Servidor podem republicar dados para outros Assinantes e podem ter atribuição de prioridade para resolução de conflito.  

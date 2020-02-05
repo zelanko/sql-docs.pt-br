@@ -25,10 +25,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 365abc8df7c64650e3be6c79bcd00725149ec25d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68117295"
 ---
 # <a name="create-schema-transact-sql"></a>CREATE SCHEMA (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68117295"
 
   Cria um esquema no banco de dados atual. A transação CREATE SCHEMA também pode criar tabelas e exibições no novo esquema e definir permissões GRANT, DENY ou REVOKE nesses objetos.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -87,7 +87,7 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
  *deny_statement*  
  Especifica uma instrução DENY que nega permissões em qualquer item protegível, exceto no esquema novo.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
   
 > [!NOTE]  
 >  As instruções que contêm CREATE SCHEMA AUTHORIZATION, mas não especificam um nome, são permitidas somente para compatibilidade com versões anteriores. A instrução não causa um erro, mas não cria uma esquema.  
@@ -112,7 +112,7 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
   
  **Esquema implícito e criação de usuário**  
   
- Em alguns casos, um usuário pode criar um banco de dados sem ter uma conta de usuário de banco de dados (uma entidade de banco de dados no banco de dados). Isso acontece nas seguintes situações:  
+ Em alguns casos, um usuário pode criar um banco de dados sem ter uma conta de usuário de banco de dados (uma entidade de banco de dados no banco de dados). Isso pode ocorrer nas seguintes situações:  
   
 -   Um logon tem privilégios **CONTROL SERVER**.  
   
@@ -123,7 +123,7 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
  Esse comportamento é necessário para permitir que usuários com base em grupos do Windows criem e possuam objetos. No entanto, isso pode resultar na criação não intencional de esquemas e usuários. Para evitar criar usuários e esquemas implicitamente, sempre que possível crie entidades de banco de dados explicitamente e atribua um esquema padrão. Ou declare explicitamente um esquema existente ao criar objetos em um banco de dados usando nomes de objetos de duas ou três partes.  
 
 > [!NOTE]
->  A criação implícita de um usuário do Azure Active Directory não é possível no [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. Como a criação de um usuário do Azure AD de um provedor externo precisa verificar o status de usuários no AAD, a criação do usuário falhará com o erro 2760: **O nome do esquema especificado "\<user_name@domain>" não existe ou você não tem permissão para usá-lo.** E, em seguida, o erro 2759: **Falha em CREATE SCHEMA devido a erros anteriores.** Para resolver esses erros, crie o usuário do Azure AD por meio do provedor externo primeiro e, em seguida, execute novamente a instrução, criando o objeto.
+>  A criação implícita de um usuário do Azure Active Directory não é possível no [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. Como a criação de um usuário do Azure AD por meio de um provedor externo deve verificar o status de usuários no AAD, a criação do usuário falha com o erro 2760: **O nome do esquema especificado "\<user_name@domain>" não existe ou você não tem permissão para usá-lo.** E, em seguida, o erro 2759: **Falha em CREATE SCHEMA devido a erros anteriores.** Para resolver esses erros, crie o usuário do Azure AD por meio do provedor externo primeiro e, em seguida, execute novamente a instrução, criando o objeto.
  
   
 ## <a name="deprecation-notice"></a>Aviso de substituição  
@@ -141,7 +141,7 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-creating-a-schema-and-granting-permissions"></a>A. Criando um esquema e concedendo permissões  
+### <a name="a-creating-a-schema-and-granting-permissions"></a>a. Criando um esquema e concedendo permissões  
  O exemplo a seguir cria o esquema `Sprockets` possuído por `Annik` que contém a tabela `NineProngs`. A instrução concede `SELECT` a `Mandar` e nega `SELECT` a `Prasanna`. `Sprockets` e `NineProngs` são criados em uma única instrução.  
   
 ```  

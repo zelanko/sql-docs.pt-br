@@ -20,10 +20,10 @@ ms.assetid: c9162b37-e5dc-43d1-a3aa-1e9ebc69fecc
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 5e67b62ec00e2dd98ff4289c1f725892592340e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68024763"
 ---
 # <a name="create-charts-alerts-logs-and-reports"></a>Criar gráficos, alertas, logs e relatórios

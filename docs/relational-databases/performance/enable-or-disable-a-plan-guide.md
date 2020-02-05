@@ -15,10 +15,10 @@ ms.assetid: b00ab550-5308-4cb8-8330-483cd1d25654
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 6ebda9e472f2b276b66d393a808aaac3e8b595b1
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907626"
 ---
 # <a name="enable-or-disable-a-plan-guide"></a>Habilitar ou desabilitar um guia de plano

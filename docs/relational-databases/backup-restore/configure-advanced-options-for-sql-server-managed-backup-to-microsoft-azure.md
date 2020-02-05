@@ -12,10 +12,10 @@ ms.assetid: ffd28159-8de8-4d40-87da-1586bfef3315
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4bd21bac561a34e6dab779f1db0656dcc8e3175e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75242566"
 ---
 # <a name="configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure"></a>Configurar opções avançadas de backup gerenciado do SQL Server para o Microsoft Azure
@@ -32,7 +32,7 @@ ms.locfileid: "75242566"
 ## <a name="configure-encryption"></a>Configurar a criptografia  
  As etapas a seguir descrevem como especificar as configurações de criptografia usando o procedimento armazenado [managed_backup.sp_backup_config_advanced &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md).  
 
-1.  **Determine o algoritmo de criptografia:** primeiro determine o nome do algoritmo de criptografia a ser usado. Selecione um dos seguintes algoritmos.  
+1.  **Determinar o algoritmo de criptografia:** primeiro determine o nome do algoritmo de criptografia a ser usado. Selecione um dos seguintes algoritmos.  
   
     -   AES_128  
   
@@ -55,7 +55,7 @@ ms.locfileid: "75242566"
     GO  
     ```  
   
-3.  **Para criar um certificado de backup ou uma chave assimétrica:** você pode usar um certificado ou uma chave assimétrica com a criptografia. O exemplo a seguir cria um certificado de backup a ser usado na criptografia.  
+3.  **Criar um certificado de backup ou uma chave assimétrica:** você pode usar um certificado ou uma chave assimétrica com a criptografia. O exemplo a seguir cria um certificado de backup a ser usado na criptografia.  
   
     ```sql  
     USE Master;  
@@ -84,17 +84,17 @@ ms.locfileid: "75242566"
 ## <a name="configure-a-custom-backup-schedule"></a>Configurar um agendamento de backup personalizado  
  As etapas a seguir descrevem como definir um agendamento personalizado com o procedimento armazenado [managed_backup.sp_backup_config_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md).  
   
-1.  **Determine a frequência de backups completos:** determine a frequência de backups completos do banco de dados. Você pode escolher entre backups completos “Diariamente” e “Semanalmente”.  
+1.  **Determinar a frequência de backups completos:** determine a frequência de backups completos do banco de dados. Você pode escolher entre backups completos “Diariamente” e “Semanalmente”.  
   
-2.  **Determine a frequência de backups de log de transações:** Determine a frequência de backup de log de transações. Esse valor é em minutos ou horas.  
+2.  **Determinar a frequência de backups do log:** determine a frequência de um backup de log. Esse valor é em minutos ou horas.  
   
-3.  **Determine o dia da semana dos backups semanais:** se o backup for semanal, escolha um dia da semana para o backup completo.  
+3.  **Determinar o dia da semana para os backups semanais:** se o backup for semanal, escolha um dia da semana para o backup completo.  
   
-4.  **Determine a hora de início do backup:** usando a notação de 24 horas, escolha um horário para iniciar o backup.  
+4.  **Determinar a hora de início do backup:** usando a notação de 24 horas, escolha um horário para iniciar o backup.  
   
-5.  **Determine o período de tempo para permitir o backup:** Isso especifica a quantidade de tempo que um backup tem para ser concluído.  
+5.  **Determinar o período de tempo do backup:** especifica a quantidade de tempo que um backup tem para ser concluído.  
   
-6.  **Definir o agendamento de backup personalizado:** o procedimento armazenado a seguir define um agendamento personalizada para o banco de dados `MyDB`. Backups completos são realizados semanalmente em `Monday` às `17:30`. Backups de log são executados a cada `5` minutos. Os backups têm duas horas para serem concluídos.  
+6.  **Definir o agendamento de backup personalizada:** o procedimento armazenado a seguir define um agendamento personalizada para o banco de dados `MyDB` . Backups completos são realizados semanalmente em `Monday` às `17:30`. Backups de log são executados a cada `5` minutos. Os backups têm duas horas para serem concluídos.  
   
     ```  
     USE msdb;  

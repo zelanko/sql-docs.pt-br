@@ -10,12 +10,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: c131954cce8e65cd7f309b59f3780bbd214cb228
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: 721347cd8b61497f5ff2c1beeb058a6457c37708
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74055936"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76761860"
 ---
 # <a name="import-and-export-data-from-sql-server-and-azure-sql-database"></a>Importar e exportar dados do SQL Server e do Banco de Dados SQL do Azure
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,10 +29,10 @@ Também importe e exporte dados em uma variedade de formatos. Esses formatos inc
 Importe dados com os comandos `BULK INSERT` ou `OPENROWSET(BULK...)`. Normalmente, você executa esses comandos no SSMS (SQL Server Management Studio). Para obter mais informações, consulte [Importar dados em massa usando BULK INSERT ou OPENROWSET(BULK...)](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).
 
 ### <a name="use-bcp-from-the-command-prompt"></a>Usar o BCP no prompt de comando
-Importe e exporte dados com o utilitário de linha de comando BCP. Para obter mais informações, consulte [Importar e exportar dados em massa usando o utilitário BCP](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).
+Importe e exporte dados com o utilitário de linha de comando BCP. Para obter mais informações, consulte [Importar e exportar dados em massa usando o utilitário BCP](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md).
 
 ### <a name="use-the-import-flat-file-wizard"></a>Usar o Assistente Importar Arquivo Simples
-Caso não precise de todas as opções de configuração disponíveis no Assistente de Importação e Exportação e em outras ferramentas, você pode importar um arquivo de texto para o SQL Server usando o **Assistente Importar Arquivo Simples** no SQL Server Management Studio. Para saber mais, veja os tópicos a seguir:
+Caso não precise de todas as opções de configuração disponíveis no Assistente de Importação e Exportação e em outras ferramentas, você pode importar um arquivo de texto para o SQL Server usando o **Assistente Importar Arquivo Simples** no SQL Server Management Studio. Para obter mais informações, confira os seguintes artigos:
 - [Assistente Importar Arquivo Simples para SQL](import-flat-file-wizard.md)
 - [Novidades do SQL Server Management Studio 17.3 ](https://blogs.technet.microsoft.com/dataplatforminsider/2017/10/10/whats-new-in-sql-server-management-studio-17-3/)
 - [Apresentamos os novo Assistente Importar Arquivo Simples no SQL Server Management Studio 17.3](https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173)

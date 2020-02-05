@@ -12,22 +12,22 @@ ms.assetid: 52dc32d8-97ad-4ef0-834d-2e68f215d007
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 27f6dfb6a41bab31fb716671f431115468d8bd86
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68120588"
 ---
-# <a name="mssqlserver4104"></a>MSSQLSERVER_4104
+# <a name="mssqlserver_4104"></a>MSSQLSERVER_4104
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|4104|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|ALG_MULTI_ID_BAD|  
 |Texto da mensagem|Não foi possível associar o identificador de várias partes "%.*ls".|  
@@ -113,7 +113,7 @@ O erro 4104 indica que o identificador de várias partes especificado não pôde
     SELECT 'X' FROM TableA, TableB WHERE TableB.KeyCol = TableA.KeyCol;  
     ```  
   
-    ou em  
+    ou  
   
     ```  
     SELECT 'X' FROM TableA INNER JOIN TableB ON TableB.KeyCol = TableA.KeyCol;  

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 978d150f-8971-458a-ab2b-3beba5937b46
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 0152abb24a1bb94f02ebc3f5a4bc6a7c1092acfa
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 28aa2dd393fd668c304ddd9e209dc9b01e659a81
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75321263"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286513"
 ---
 # <a name="configure-snapshot-properties-replication-transact-sql-programming"></a>Configurar propriedades de instantâneo (Programação Transact-SQL de replicação)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

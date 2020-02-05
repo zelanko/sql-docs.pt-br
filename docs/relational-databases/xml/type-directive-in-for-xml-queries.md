@@ -14,10 +14,10 @@ ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1948f42f5a572a7a7737b58afab8f407932660d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68078036"
 ---
 # <a name="type-directive-in-for-xml-queries"></a>Diretiva TYPE em consultas FOR XML
@@ -74,7 +74,7 @@ GO
 ### <a name="querying-results-of-a-for-xml-query"></a>Consultando resultados de uma consulta FOR XML  
  As consultas FOR XML retornam XML. Portanto, é possível aplicar métodos de tipo **xml** , como **query()** e **value()** , ao resultado XML retornado por consultas FOR XML.  
   
- Na consulta a seguir, o método `query()` do tipo de dados **xml** é usado para consultar o resultado da consulta `FOR XML`. Para obter mais informações, veja [Método query&#40;&#41; &#40;tipo de dados xml&#41;](../../t-sql/xml/query-method-xml-data-type.md).  
+ Na consulta a seguir, o método `query()` do tipo de dados **xml** é usado para consultar o resultado da consulta `FOR XML` . Para obter mais informações, veja [Método query&#40;&#41; &#40;tipo de dados xml&#41;](../../t-sql/xml/query-method-xml-data-type.md).  
   
 ```  
 USE AdventureWorks2012;  
@@ -88,7 +88,7 @@ FROM Person.Person
 FOR XML AUTO, TYPE).query('/Person.Person[1]');  
 ```  
   
- A consulta interna `SELECT ... FOR XML` retorna um resultado de tipo **xml** para o qual `SELECT` externo aplica o método `query()` ao tipo **xml**. Observe a diretiva `TYPE` especificada.  
+ A consulta interna `SELECT ... FOR XML` retorna um resultado de tipo **xml** para o qual `SELECT` externo aplica o método `query()` ao tipo **xml** . Observe a diretiva `TYPE` especificada.  
   
  Este é o resultado:  
   
@@ -104,7 +104,7 @@ FOR XML AUTO, TYPE).query('/Person.Person[1]');
   
  `</Person.Person>`  
   
- Na consulta a seguir, o método `value()` do tipo de dados **xml** é usado para recuperar um valor do resultado XML retornado pela consulta `SELECT...FOR XML`. Para obter mais informações, veja [Método value&#40;&#41; &#40;tipo de dados XML&#41;](../../t-sql/xml/value-method-xml-data-type.md).  
+ Na consulta a seguir, o método `value()` do tipo de dados **xml** é usado para recuperar um valor do resultado XML retornado pela consulta `SELECT...FOR XML` . Para obter mais informações, veja [Método value&#40;&#41; &#40;tipo de dados XML&#41;](../../t-sql/xml/value-method-xml-data-type.md).  
   
 ```  
 USE AdventureWorks2012;  

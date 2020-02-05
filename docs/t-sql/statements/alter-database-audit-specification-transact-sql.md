@@ -20,10 +20,10 @@ ms.assetid: 85f4e7e6-a330-4de0-9048-64f386ccc314
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: c9229f5bec676f28d92b4ea1aba1ad3aeeb4d6c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68065889"
 ---
 # <a name="alter-database-audit-specification-transact-sql"></a>ALTER DATABASE AUDIT SPECIFICATION (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68065889"
 
   Altera um objeto de especificação de auditoria de banco de dados usando o recurso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit. Para obter mais informações, veja [Auditoria do SQL Server &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -83,7 +83,7 @@ ALTER DATABASE AUDIT SPECIFICATION audit_specification_name
  WITH **(** STATE **=** { ON | OFF } **)**  
  Habilita ou desabilita a auditoria de registros de coleta para essa especificação de auditoria. As alterações no estado da especificação de auditoria devem ser feitas fora de uma transação de usuário e não pode haver outras alterações na mesma instrução quando a transição é de ON para OFF.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  As especificações de auditoria de banco de dados são objetos não protegidos que residem em um determinado banco de dados. É necessário definir o estado de uma especificação de auditoria com a opção OFF para fazer alterações em uma especificação de auditoria de banco de dados. Se ALTER DATABASE AUDIT SPECIFICATION for executada quando uma auditoria estiver habilitada com qualquer opção diferente de STATE=OFF, você receberá uma mensagem de erro. Para obter mais informações, confira [tempdb Database](../../relational-databases/databases/tempdb-database.md).  
   
 ## <a name="permissions"></a>Permissões  

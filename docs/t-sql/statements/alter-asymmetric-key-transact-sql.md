@@ -20,10 +20,10 @@ ms.assetid: 958e95d6-fbe6-43e8-abbd-ccedbac2dbac
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 06263499babe005bca36a982bc863dfa24356b5d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066069"
 ---
 # <a name="alter-asymmetric-key-transact-sql"></a>ALTER ASYMMETRIC KEY (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68066069"
 
   Altera as propriedades de uma chave assimétrica.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -66,7 +66,7 @@ ALTER ASYMMETRIC KEY Asym_Key_Name <alter_option>
  DECRYPTION BY PASSWORD **='***oldPassword***'**  
  Especifica a senha antiga com a qual a chave privada está protegida atualmente. Não será necessária se a chave privada for criptografada com a chave mestra do banco de dados.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Se não houver nenhuma chave mestra do banco de dados a opção ENCRYPTION BY PASSWORD será necessária e a operação falhará se nenhuma senha for fornecida. Para obter mais informações sobre como criar uma chave mestra de banco de dados, consulte [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md).  
   
  É possível usar ALTER ASYMMETRIC KEY para alterar a proteção da chave privada especificando as opções PRIVATE KEY conforme mostrado na tabela a seguir.  
@@ -86,7 +86,7 @@ ALTER ASYMMETRIC KEY Asym_Key_Name <alter_option>
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-changing-the-password-of-the-private-key"></a>A. Alterando a senha da chave privada  
+### <a name="a-changing-the-password-of-the-private-key"></a>a. Alterando a senha da chave privada  
  O exemplo a seguir altera a senha usada para proteger a chave privada da chave assimétrica `PacificSales09`. A senha nova será `<enterStrongPasswordHere>`.  
   
 ```  

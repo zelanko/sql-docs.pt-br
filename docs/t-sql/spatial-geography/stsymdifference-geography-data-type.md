@@ -18,10 +18,10 @@ ms.assetid: 82bbfa2c-a61b-4f41-9bf8-6f720f363bae
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: f1e7824f864d7d764529fb6860496316bf00537d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68120770"
 ---
 # <a name="stsymdifference-geography-data-type"></a>STSymDifference (tipo de dados geography)
@@ -43,9 +43,9 @@ ms.locfileid: "68120770"
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Tipo de retorno CLR: **SqlGeography**  
+ Tipo de retorno do CLR: **SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse método sempre retorna nulo se os SRIDs (identificadores de referência espacial) das instâncias de **geography** não são correspondentes.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte a instâncias espaciais maiores do que um hemisfério. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o conjunto de possíveis resultados no servidor foi estendido para instâncias de **FullGlobe**.  
@@ -54,7 +54,7 @@ ms.locfileid: "68120770"
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-computing-the-symmetric-difference-of-two-polygons"></a>A. Computando a diferença simétrica de dois polígonos  
+### <a name="a-computing-the-symmetric-difference-of-two-polygons"></a>a. Computando a diferença simétrica de dois polígonos  
  O exemplo a seguir usa `STSymDifference()` para computar a diferença simétrica entre duas instâncias de `Polygon`.  
   
 ```  

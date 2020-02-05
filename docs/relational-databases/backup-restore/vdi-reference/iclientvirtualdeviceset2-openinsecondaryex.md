@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: cd89359ecbcc920fe03ed4b2bc7d90fd01592476
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847557"
 ---
 # <a name="iclientvirtualdeviceset2openinsecondaryex-vdi"></a>IClientVirtualDeviceSet2::OpenInSecondaryEx (VDI)
@@ -31,7 +31,7 @@ HRESULT IClientVirtualDeviceSet2::OpenInSecondaryEx (
 );
 ```
 
-## <a name="parameters"></a>Parâmetros
+## <a name="parameters"></a>parâmetros
 
 *lpInstanceName* Essa cadeia de caracteres identifica a Instância do SQL Server à qual o comando SQL será enviado.
 
@@ -45,7 +45,7 @@ HRESULT IClientVirtualDeviceSet2::OpenInSecondaryEx (
 | VD_E_PROTOCOL | O conjunto de dispositivos virtuais foi aberto ou não está pronto para aceitar solicitações abertas de clientes secundários. |
 | VD_E_ABORT | A operação está sendo anulada. |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Comentários
 
 Ao usar um modelo de processo múltiplo, o cliente primário é responsável por detectar o encerramento normal e anormal de clientes secundários.
 

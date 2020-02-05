@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 50c2d3aba84ce537e34b5c2bf5948c6ee84ac359
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74165221"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>Como criar uma tabela temporal com controle de versão do sistema
@@ -52,7 +52,7 @@ WITH (SYSTEM_VERSIONING = ON);
 - Supõe-se que as colunas **PERIOD** sempre são não anuláveis, mesmo se a nulidade não for especificada. Se as colunas **PERIOD** forem definidas explicitamente como anuláveis, a instrução **CREATE TABLE** falhará.
 - A tabela de histórico deve sempre ser alinhada ao esquema com a tabela atual ou temporal, em termos de número de colunas, nomes de coluna, ordenação e tipos de dados.
 - Uma tabela de histórico anônimo é criada automaticamente no mesmo esquema que a tabela temporal ou atual.
-- O nome da tabela de histórico anônimo tem o seguinte formato: *MSSQL_TemporalHistoryFor_<current_temporal_table_object_id>_[sufixo]* . O sufixo é opcional e será adicionado somente se a primeira parte do nome da tabela não for exclusivo.
+- O nome da tabela de histórico anônimo tem o seguinte formato: *MSSQL_TemporalHistoryFor_<current_temporal_table_object_id>_[suffix]* . O sufixo é opcional e será adicionado somente se a primeira parte do nome da tabela não for exclusivo.
 - A tabela de histórico é criada como uma tabela rowstore. Se possível, a compactação de PÁGINA será aplicada, caso contrário, a tabela de histórico será descompactada. Por exemplo, algumas configurações de tabela, como as colunas ESPARSAS, não permitem a compactação.
 - Um índice clusterizado padrão é criado para a tabela de histórico com um nome gerado automaticamente no formato *IX_<history_table_name>* . O índice clusterizado contém as colunas **PERIOD** (início, fim).
 - Para criar a tabela atual como uma tabela com otimização de memória, consulte [Tabelas temporais com controle da versão do sistema com tabelas com otimização de memória](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md).

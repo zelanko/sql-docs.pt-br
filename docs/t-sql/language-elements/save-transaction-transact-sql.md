@@ -26,10 +26,10 @@ ms.assetid: b953c3f1-f96d-42f1-95a2-30e314292b35
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 46a6f7c08b540b6180326350a6e0aadb933a7ef5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68121808"
 ---
 # <a name="save-transaction-transact-sql"></a>SAVE TRANSACTION (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "68121808"
 
   Define um ponto de salvamento em uma transação.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
  ## <a name="syntax"></a>Sintaxe  
   
@@ -54,7 +54,7 @@ SAVE { TRAN | TRANSACTION } { savepoint_name | @savepoint_variable }
  @*savepoint_variable*  
  É o nome de uma variável definida pelo usuário que contém um nome de ponto de salvamento válido. A variável precisa ser declarada com o tipo de dados **char**, **varchar**, **nchar** ou **nvarchar**. Podem ser passados mais de 32 caracteres para a variável; porém, apenas os primeiros 32 caracteres são usados.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Um usuário pode definir um ponto de salvamento, ou marcador, em uma transação. O ponto de salvamento define um local para o qual a transação poderá retornar se parte da transação for cancelada condicionalmente. Se uma transação for revertida a um ponto de salvamento, ela deverá prosseguir para a conclusão com mais instruções [!INCLUDE[tsql](../../includes/tsql-md.md)], se necessário, e uma instrução COMMIT TRANSACTION, ou deverá ser totalmente cancelada pela reversão da transação ao seu início. Para cancelar uma transação inteira, use o formato ROLLBACK TRANSACTION *transaction_name*. Todas as instruções ou procedimentos da transação são desfeitos.  
   
  Nomes de pontos de salvamento duplicados são permitidos em uma transação; porém, uma instrução ROLLBACK TRANSACTION que especifica o nome do ponto de salvamento só reverterá a transação para a SAVE TRANSACTION mais recente, usando esse nome.  

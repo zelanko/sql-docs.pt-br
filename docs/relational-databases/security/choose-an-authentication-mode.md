@@ -26,15 +26,15 @@ ms.assetid: ff7a6a48-3d38-4209-aa0f-7d6c0a8c64ef
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: caee3b1fab893e456a5a781641b6cf70222b16ff
-ms.sourcegitcommit: 0d5b0aeee2a2b34fd448aec2e72c0fa8be473ebe
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75721351"
 ---
 # <a name="choose-an-authentication-mode"></a>Escolher um modo de autenticação
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Durante a instalação, você deve selecionar um modo de autenticação para o [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Há duas soluções possíveis: o modo de autenticação do SQL Server e o modo misto. O modo de Autenticação do Windows habilita a Autenticação do Windows e desabilita a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . O modo misto habilita a Autenticação do Windows e do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . A Autenticação do Windows sempre está disponível e não é possível desabilitá-la.  
+  Durante a instalação, você deve selecionar um modo de autenticação para o [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Há dois modos possíveis: modo de Autenticação do Windows e modo misto. O modo de Autenticação do Windows habilita a Autenticação do Windows e desabilita a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . O modo misto habilita a Autenticação do Windows e do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . A Autenticação do Windows sempre está disponível e não é possível desabilitá-la.  
   
 ## <a name="configuring-the-authentication-mode"></a>Configurando o modo de autenticação  
  Se você selecionar a Autenticação de Modo Misto durante a instalação, deverá fornecer e confirmar uma senha forte para a conta interna do administrador de sistema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] denominada sa. A conta sa se conecta usando a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

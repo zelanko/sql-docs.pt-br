@@ -15,10 +15,10 @@ ms.assetid: ec59b75d-ba09-44ac-9039-9d593bb462d9
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a14ae64026443324f7a5dc3f47dcea15f9907f5f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295726"
 ---
 # <a name="managing-packages-and-folders-programmatically"></a>Gerenciando pacotes e pastas programaticamente
@@ -43,7 +43,7 @@ ms.locfileid: "71295726"
 |Armazenamento de Pacotes SSIS|<xref:Microsoft.SqlServer.Dts.Runtime.Application.FolderExistsOnDtsServer%2A>|    
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.FolderExistsOnSqlServer%2A>|    
     
- [Voltar ao Início](#top)    
+ [Voltar ao início](#top)    
     
 ##  <a name="managing"></a> Gerenciar pacotes e pastas    
  A classe <xref:Microsoft.SqlServer.Dts.Runtime.Application> do namespace <xref:Microsoft.SqlServer.Dts.Runtime> fornece métodos adicionais para gerenciar pacotes e as pastas nas quais eles são armazenados.    
@@ -56,7 +56,7 @@ ms.locfileid: "71295726"
 |Armazenamento de Pacotes SSIS|<xref:Microsoft.SqlServer.Dts.Runtime.Application.RemoveFromDtsServer%2A>|    
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.RemoveFromSqlServer%2A>|    
     
- [Voltar ao Início](#top)    
+ [Voltar ao início](#top)    
     
 ###  <a name="managing_create"></a> Criar uma pasta    
  Para criar uma pasta de armazenamento programaticamente, chame um dos métodos seguintes:    
@@ -66,7 +66,7 @@ ms.locfileid: "71295726"
 |Armazenamento de Pacotes SSIS|<xref:Microsoft.SqlServer.Dts.Runtime.Application.CreateFolderOnDtsServer%2A>|    
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.CreateFolderOnSqlServer%2A>|    
     
- [Voltar ao Início](#top)    
+ [Voltar ao início](#top)    
     
 ###  <a name="managing_remfldr"></a> Remover uma pasta    
  Para remover uma pasta de armazenamento programaticamente, chame um dos métodos seguintes:    
@@ -76,7 +76,7 @@ ms.locfileid: "71295726"
 |Armazenamento de Pacotes SSIS|<xref:Microsoft.SqlServer.Dts.Runtime.Application.RemoveFolderFromDtsServer%2A>|    
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.RemoveFolderFromSqlServer%2A>|    
     
- [Voltar ao Início](#top)    
+ [Voltar ao início](#top)    
     
 ###  <a name="managing_rename"></a> Renomear uma pasta    
  Para renomear uma pasta de armazenamento programaticamente, chame um dos métodos seguintes:    
@@ -86,7 +86,7 @@ ms.locfileid: "71295726"
 |Armazenamento de Pacotes SSIS|<xref:Microsoft.SqlServer.Dts.Runtime.Application.RenameFolderOnDtsServer%2A>|    
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.RenameFolderOnSqlServer%2A>|    
     
- [Voltar ao Início](#top)    
+ [Voltar ao início](#top)    
     
 ## <a name="see-also"></a>Consulte Também    
  [Gerenciamento de Pacotes &#40;Serviço SSIS&#41;](../../integration-services/service/package-management-ssis-service.md)     

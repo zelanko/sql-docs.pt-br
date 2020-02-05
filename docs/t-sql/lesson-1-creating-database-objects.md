@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial de T-SQL: Criar e consultar objetos de banco de dados | Microsoft Docs'
+title: 'Tutorial do T-SQL: criar e consultar objetos de banco de dados | Microsoft Docs'
 ms.custom: ''
 ms.date: 07/30/2018
 ms.prod: sql
@@ -11,13 +11,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c6e19142ab4d447678aedf6c841a74ed435eccea
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75257022"
 ---
-# <a name="lesson-1-create-and-query-database-objects"></a>Lição 1: Criar e consultar objetos de banco de dados
+# <a name="lesson-1-create-and-query-database-objects"></a>Lição 1: criar e consultar objetos de banco de dados
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Esta lição mostra como criar um banco de dados, criar uma tabela no banco de dados e, então, acessar e alterar os dados na tabela. Como esta lição é uma introdução ao uso de [!INCLUDE[tsql](../includes/tsql-md.md)], ela não usa nem descreve as várias opções disponíveis para essas instruções.  
@@ -40,7 +40,7 @@ Para concluir este tutorial, você precisa de acesso ao SQL Server Management St
 - Instale o [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
 Se você não tiver acesso a uma instância do SQL Server, selecione sua plataforma nos links a seguir. Se você escolher Autenticação do SQL, use suas credenciais de logon do SQL Server.
-- **Windows**: [Baixe o SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
+- **Windows**: [baixe o SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 - **macOS**: [baixe o SQL Server 2017 no Docker](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker).
 
 ## <a name="create-a-database"></a>Criar um banco de dados

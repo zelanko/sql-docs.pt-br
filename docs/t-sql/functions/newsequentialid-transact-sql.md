@@ -19,10 +19,10 @@ ms.assetid: e06d2cab-f1ff-42f1-8550-6aaec57be36f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 3edebc2c1a7182e71ec093508adc5755afb22758
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914941"
 ---
 # <a name="newsequentialid-transact-sql"></a>NEWSEQUENTIALID (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "67914941"
 > [!WARNING]  
 >  A função UuidCreateSequential tem dependências de hardware. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], clusters de valores sequenciais podem se desenvolver quando os bancos de dados (como bancos de dados independentes) são movidos para outros computadores. Ao usar o Always On e no [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], clusters de valores sequenciais podem se desenvolver se o banco de dados faz failover para outro computador.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -50,7 +50,7 @@ NEWSEQUENTIALID ( )
 ## <a name="return-type"></a>Tipo de retorno  
  **uniqueidentifier**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  NEWSEQUENTIALID() apenas pode ser usado com restrições DEFAULT em colunas de tabela do tipo **uniqueidentifier**. Por exemplo:  
   
 ```  

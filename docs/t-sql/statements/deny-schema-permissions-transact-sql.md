@@ -18,10 +18,10 @@ ms.assetid: 300a67c4-d226-4653-9e9f-7ae4d53fcf33
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: bd439e528cc30c0971d1b4c824ab2375856d26e3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68114785"
 ---
 # <a name="deny-schema-permissions-transact-sql"></a>Permissões de esquema DENY (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68114785"
 Nega permissões em um esquema.  
   
 
-![Ícone de link do artigo](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do artigo") [Convenções de sintaxe do Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Ícone de link do artigo](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do artigo") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -75,7 +75,7 @@ Especifica uma entidade de segurança da qual a entidade de segurança que execu
 -   Usuário de banco de dados mapeado para uma chave assimétrica  
 -   Usuário do banco de dados não mapeado para um principal de servidor.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 Um esquema é um protegível em nível de banco de dados. Ele é contido no banco de dados pai da hierarquia de permissões. As permissões mais específicas e limitadas que podem ser negadas em um esquema são listadas na tabela a seguir. A tabela mostra as permissões mais gerais que as contêm implicitamente.  
   
 |Permissão de esquema|Implícito na permissão de esquema|Implícito na permissão de banco de dados|  

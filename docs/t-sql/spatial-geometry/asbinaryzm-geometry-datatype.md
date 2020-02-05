@@ -15,10 +15,10 @@ ms.assetid: 5eae2872-adca-4b8f-8b04-4ee91ced98f1
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 83d300b006055a83e823ff509d18ce40e63708c0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68120646"
 ---
 # <a name="asbinaryzm-geometry-datatype"></a>AsBinaryZM (DataType geométrico)
@@ -36,9 +36,9 @@ Retorna a representação WKB (Well-Known Binary) do OGC (Open Geospatial Consor
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **varbinary(max)**  
   
- Tipo de retorno CLR: **SqlBytes**  
+ Tipo de retorno do CLR: **SqlBytes**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
   
 ## <a name="examples"></a>Exemplos  
   

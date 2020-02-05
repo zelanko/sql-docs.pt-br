@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 54d83a1e-43fd-449c-a2b2-fdda2609a534
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: db0911d4af8d8cbd4860a07bc8c48305ffae0648
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 8e269094ddf04da0612e4118ac18552d807d31f7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71711014"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287969"
 ---
 # <a name="mssql_eng021797"></a>MSSQL_ENG021797
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -27,12 +27,12 @@ ms.locfileid: "71711014"
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|21797|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |Nome simbólico||  
-|Texto da mensagem|'%s' deve ser um logon válido do Windows no formato: 'MACHINE\Login' ou 'DOMAIN\Login'. Consulte a documentação de '%s'.|  
+|Texto da mensagem|'%s' deve ser um logon válido do Windows na forma: 'MACHINE\Login' ou 'DOMAIN\Login'. Consulte a documentação de '%s'.|  
   
 ## <a name="explanation"></a>Explicação  
  Esse erro será gerado pelos procedimentos armazenados de replicação a seguir se o valor especificado para o parâmetro `@job_login` for nulo ou inválido. Esse erro poderá ocorrer se um membro da função de banco de dados fixa **db_owner** executar scripts de versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O modelo de segurança foi alterado no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]e esses scripts devem ser atualizados.  

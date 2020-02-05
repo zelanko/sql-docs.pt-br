@@ -16,22 +16,22 @@ helpviewer_keywords:
 ms.assetid: c9fa81b1-6c81-4c11-927b-fab16301a8f5
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: b12d35d27fd4c90603cce6d798d8011ad1e65b81
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 2b66307976381ceb8085f72e553e010ee60e2974
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710831"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287542"
 ---
 # <a name="replicate-partitioned-tables-and-indexes"></a>Replicar tabelas e índices particionados
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  O particionamento facilita o gerenciamento de grandes tabelas ou índices, permitindo o acesso e o gerenciamento de subconjuntos de dados de forma rápida e eficaz, ao mesmo tempo em que mantém a integridade geral da coleção de dados. Para obter mais informações, consulte [Partitioned Tables and Indexes](../../../relational-databases/partitions/partitioned-tables-and-indexes.md). A replicação dá suporte ao particionamento fornecendo um conjunto de propriedades que especificam como tabelas e índices particionados devem ser tratados.  
+  O particionamento facilita o gerenciamento de grandes tabelas ou índices, permitindo o acesso e o gerenciamento de subconjuntos de dados de forma rápida e eficaz, ao mesmo tempo em que mantém a integridade geral da coleção de dados. Para saber mais, confira [Partitioned Tables and Indexes](../../../relational-databases/partitions/partitioned-tables-and-indexes.md). A replicação dá suporte ao particionamento fornecendo um conjunto de propriedades que especificam como tabelas e índices particionados devem ser tratados.  
   
 ## <a name="article-properties-for-transactional-and-merge-replication"></a>Propriedades de artigo para replicação transacional e de mesclagem  
  A tabela a seguir lista os objetos que são usados para particionar dados.  
   
-|Object|Criado com|  
+|Objeto|Criado com|  
 |------------|----------------------|  
 |Tabela ou índice particionado|CREATE TABLE ou CREATE INDEX|  
 |Função de partição|CREATE PARTITION FUNCTION|  
@@ -51,7 +51,7 @@ ms.locfileid: "71710831"
   
  A replicação copia objetos para o Assinante durante a sincronização inicial. Se o esquema de partição usar grupos de arquivo diferentes do grupo de arquivo PRIMARY, esses grupos deverão existir no Assinante antes da sincronização inicial.  
   
- Depois que o Assinante é inicializado, as alterações de dados são propagadas para o Assinante e aplicadas nas partições apropriadas. Porém, as alterações no esquema de partição não são suportadas. A replicação transacional e a de mesclagem não dão suporte para replicar os seguintes comandos: Instrução ALTER PARTITION FUNCTION, ALTER PARTITION SCHEME ou REBUILD WITH PARTITION de ALTER INDEX. As alterações associadas a eles não serão replicadas automaticamente para o Assinante. É responsabilidade do usuário fazer alterações semelhantes manualmente no Assinante.  
+ Depois que o Assinante é inicializado, as alterações de dados são propagadas para o Assinante e aplicadas nas partições apropriadas. Porém, as alterações no esquema de partição não são suportadas. A replicação transacional e de mesclagem não dá suporte à replicação dos seguintes comandos: ALTER PARTITION FUNCTION, ALTER PARTITION SCHEME, ou a instrução REBUILD WITH PARTITION de ALTER INDEX. As alterações associadas a eles não serão replicadas automaticamente para o Assinante. É responsabilidade do usuário fazer alterações semelhantes manualmente no Assinante.  
   
 ## <a name="replication-support-for-partition-switching"></a>Suporte de replicação para alternância de partição  
  Um dos principais benefícios do particionamento de tabela é a possibilidade de mover subconjuntos de dados entre partições com rapidez e eficiência. Os dados são movidos com o comando SWITCH PARTITION. Por padrão, quando uma tabela é habilitada para replicação, as operações SWITCH PARTITION são bloqueadas pelos seguintes motivos:  

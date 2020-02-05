@@ -27,10 +27,10 @@ ms.assetid: 2202236b-e09f-40a1-bbc7-b8cff7488905
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: e7cf36879a08f50095a158311179b9ae303d4ebc
-ms.sourcegitcommit: 0d34b654f0b3031041959e87f5b4d4f0a1af6a29
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74901872"
 ---
 # <a name="create-type-transact-sql"></a>CREATE TYPE (Transact-SQL)

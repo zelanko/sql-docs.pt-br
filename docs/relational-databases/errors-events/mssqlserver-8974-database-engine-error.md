@@ -12,22 +12,22 @@ ms.assetid: 52098678-0858-4a14-ad07-37ebbafca5fc
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1a8170dbda2efa4b5ab9ed91692b9e3ec3a0774f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68120466"
 ---
-# <a name="mssqlserver8974"></a>MSSQLSERVER_8974
+# <a name="mssqlserver_8974"></a>MSSQLSERVER_8974
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|8974|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|DBCC3_OFF_ROW_DATA_NODE_HAS_TWO_PARENTS|  
 |Texto da mensagem|Erro de tabela: ID de objeto O_ID, ID de índice I_ID, ID de partição PN_ID, ID de unidade de alocação A_ID (tipo TYPE). O nó de dados fora da linha na página P_ID1, slot S_ID1, ID de texto ID TEXT_ID é apontado pela página P_ID2, slot S_ID2 e pela página P_ID3, slot P_ID3.|  

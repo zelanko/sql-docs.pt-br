@@ -26,10 +26,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: e08891eb7cb9fb897b48e37d6d8caa0e12620d06
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68768363"
 ---
 # <a name="subscribe-to-publications"></a>Assinar publicações
@@ -38,7 +38,7 @@ ms.locfileid: "68768363"
 
 [!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
   
-|Assinatura|Características|Use quando|  
+|Subscription|Características|Use quando|  
 |------------------|---------------------|--------------|  
 |Assinatura push|Em uma assinatura push, o Publicador propaga alterações para o Assinante sem solicitação do Assinante. As alterações podem ser empurradas para os Assinantes sob demanda continuamente ou com base em agendamento. O Agente de Distribuição ou o Agente de Mesclagem são executados no Distribuidor.|Os dados são sincronizados de forma contínua ou com base em uma agenda que recorre com frequência.<br /><br /> As publicações requerem movimentação de dados tempo quase real.<br /><br /> A sobrecarga do processador superior no Distribuidor não afeta o desempenho.<br /><br /> É usado com mais frequência com replicação transacional e de instantâneo.|  
 |Assinatura pull|Em uma assinatura pull, o Assinante solicita que alterações sejam feitas no Publicador. As assinaturas pull permitem que o usuário, no Assinante, determine quando as alterações de dados serão sincronizadas. O Agente de Distribuição ou o Agente de Mesclagem são executados no Assinante.|Em geral, os dados são sincronizados sob demanda ou com base em uma agenda, em vez de continuamente.<br /><br /> A publicação tem um grande número de Assinantes, e/ou demandaria muitos recursos para executar todos os agentes no Distribuidor.<br /><br /> Os assinantes são autônomos, desconectados, e/ou móveis. Os assinantes determinam quando as alterações são conectadas e sincronizadas.<br /><br /> Usado com mais frequência com replicação de mesclagem.|  
@@ -68,7 +68,7 @@ ms.locfileid: "68768363"
   
  **Para criar uma assinatura push**  
   
- [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)  
+ [Criar uma Assinatura Push](../../relational-databases/replication/create-a-push-subscription.md)  
   
  **Para exibir ou modificar propriedades de assinatura push**  
   

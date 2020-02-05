@@ -12,22 +12,22 @@ ms.assetid: 0418352c-0ab2-4dc7-b8b9-5c3bad94560c
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e87c0983ac7e74b45251bb72c44265f2134aa3b9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68103736"
 ---
-# <a name="mssqlserver2533"></a>MSSQLSERVER_2533
+# <a name="mssqlserver_2533"></a>MSSQLSERVER_2533
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|2533|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|DBCC_PAGE_WAS_NOT_SEEN|  
 |Texto da mensagem|Erro de tabela: a página P_ID alocada à ID de objeto O_ID, ID de índice I_ID, ID de partição PN_ID, ID de unidade de alocação A_ID (tipo TYPE) não foi vista. A página pode ser inválida ou ter uma ID de unidade de alocação incorreta em seu cabeçalho.|  

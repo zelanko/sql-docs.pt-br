@@ -12,10 +12,10 @@ ms.assetid: dcfbd1c5-c001-4fb7-b9ae-916e49ab6a96
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4b4a5b5f27f959f3a04bb3cf5468d198d3ef5267
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295659"
 ---
 # <a name="integration-services-ssis-scale-out"></a>Expansão do Integration Services (SSIS)
@@ -49,4 +49,4 @@ Depois de configurar o Scale Out, você pode fazer o seguinte:
 ## <a name="next-steps"></a>Próximas etapas
 -   [Introdução ao SSIS (Integration Services) Scale Out em um único computador](get-started-with-ssis-scale-out-onebox.md)
 
--   [Passo a passo: Configurar o Integration Services Scale Out](walkthrough-set-up-integration-services-scale-out.md)
+-   [Passo a passo: configurar a Expansão do Integration Services](walkthrough-set-up-integration-services-scale-out.md)

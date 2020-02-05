@@ -20,10 +20,10 @@ ms.assetid: dbd6c06f-db6e-44a7-855a-6a55bf374907
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bbdae019d2b4903bcebb0339df0ef243d6974766
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68112919"
 ---
 # <a name="create-instances-of-xml-data"></a>Criar instâncias de dados XML
@@ -94,7 +94,7 @@ SELECT CONVERT(xml, N'<root>      <child/>     </root>', 1)
   
  Se o parâmetro *style* não for usado ou seu valor estiver definido como 0, espaço em branco insignificante não será preservado para a conversão da instância DT xml. Para obter mais informações sobre como usar o operador CONVERT e seu parâmetro *style* ao converter dados de cadeia de caracteres em instâncias DT xml, consulte [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).  
   
-### <a name="example-cast-a-string-value-to-typed-xml-and-assign-it-to-a-column"></a>Exemplo: Converter um valor de cadeia de caracteres em xml tipado e atribuí-lo a uma coluna  
+### <a name="example-cast-a-string-value-to-typed-xml-and-assign-it-to-a-column"></a>Exemplo: Converter um valor de cadeia de caracteres em xml com tipo e atribuí-lo a uma coluna  
  O exemplo a seguir converte uma variável de cadeia de caracteres que contém um fragmento XML para o tipo de dados **xml** e, em seguida, armazena-a na coluna de tipo **xml** :  
   
 ```  
@@ -122,7 +122,7 @@ INSERT INTO T VALUES (3, cast (@s as xml))
 INSERT INTO T VALUES (3, convert (xml, @s))   
 ```  
   
-### <a name="example-convert-a-string-to-typed-xml-and-assign-it-to-a-variable"></a>Exemplo: Converter uma cadeia de caracteres em xml tipado e atribuí-lo a uma variável  
+### <a name="example-convert-a-string-to-typed-xml-and-assign-it-to-a-variable"></a>Exemplo: Converter uma cadeia de caracteres em xml com tipo e atribuí-la a uma variável  
  No exemplo a seguir, uma cadeia de caracteres é convertida em tipo **xml** e atribuída a uma variável de tipo de dados **xml** :  
   
 ```  
@@ -210,13 +210,13 @@ INSERT INTO T VALUES (3, '<Cust><Fname>Andrew</Fname><Lname>Fuller</Lname></Cust
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|Descrição|  
+|Tópico|DESCRIÇÃO|  
 |-----------|-----------------|  
 |[Recuperar e consultar dados XML](../../relational-databases/xml/retrieve-and-query-xml-data.md)|Descreve as partes de instâncias XML que não são preservadas quando são armazenadas em bancos de dados.|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Comparar XML digitado com XML não digitado](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
- [Métodos de tipo de dados xml](../../t-sql/xml/xml-data-type-methods.md)   
+ [Métodos de tipos de dados xml](../../t-sql/xml/xml-data-type-methods.md)   
  [Linguagem de modificação de dados XML &#40;XML DML&#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)   
  [Dados XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
   

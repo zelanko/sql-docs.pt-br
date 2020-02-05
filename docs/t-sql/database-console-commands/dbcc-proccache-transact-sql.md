@@ -22,10 +22,10 @@ ms.assetid: 7a4f9f8a-13ff-4bf2-ba29-c17012a23659
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 7720324915ea147cf5cac938c196957a6cb04c51
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68116458"
 ---
 # <a name="dbcc-proccache-transact-sql"></a>DBCC PROCCACHE (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68116458"
 
 Exibe informações em um formato de tabela sobre o cache de procedimento.
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,13 +42,13 @@ DBCC PROCCACHE [ WITH NO_INFOMSGS ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- com  
+ WITH  
  Permite que as opções sejam especificadas.  
   
  NO_INFOMSGS  
  Suprime todas as mensagens informativas com níveis de gravidade de 0 a 10.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 O cache de procedimento é usado para armazenar em cache os planos compilados e executáveis a fim de acelerar a execução de lotes. As entradas em um cache de procedimento estão no nível de um lote. O cache de procedimento inclui as seguintes entradas:
 -   Planos compilados  
 -   Planos de execução  
@@ -58,7 +58,7 @@ O cache de procedimento é usado para armazenar em cache os planos compilados e 
 ## <a name="result-sets"></a>Conjuntos de resultados  
 A tabela a seguir descreve as colunas do conjunto de resultados.
   
-|Nome da coluna|Descrição|  
+|Nome da coluna|DESCRIÇÃO|  
 |-----------------|-----------------|  
 |**num proc buffs**|Número total de páginas usadas por todas as entradas no cache de procedimento.|  
 |**num proc buffs used**|Número total de páginas usadas por todas as entradas usadas atualmente.|  

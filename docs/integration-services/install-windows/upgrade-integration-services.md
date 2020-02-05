@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
 ms.openlocfilehash: 0b7fd8a71f2636893f157b18630e2773b2f01951
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68262789"
 ---
 # <a name="upgrade-integration-services"></a>Atualização do Integration Services
@@ -43,7 +43,7 @@ ms.locfileid: "68262789"
 > [!NOTE]
 >  O suporte para a migração ou a execução de pacotes de DTS (Data Transformation Services) foi descontinuado no SQL Server 2012. A seguinte funcionalidade do DTS foi descontinuada:  
 > 
->  -   Tempo de execução DTS  
+>  -   runtime DTS  
 > -   API DTS  
 > -   O Assistente de Migração de Pacotes para migração de pacotes DTS para a próxima versão do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  
 > -   Suporte para manutenção de pacote DTS no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
@@ -57,7 +57,7 @@ ms.locfileid: "68262789"
   
 -   Execute a instalação do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e selecione a opção para **Atualizar do SQL Server 2008, SQL Server 2008 R2, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ou [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** .  
   
--   Execute **setup.exe** no prompt de comando e especifique a opção **/ACTION=upgrade**. Para obter mais informações sobre como instalar no prompt de comando, consulte a seção "Scripts de instalação do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]" em [Instalar o SQL Server 2016 do prompt de comando](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
+-   Execute **setup.exe** no prompt de comando e especifique a opção **/ACTION=upgrade** . Para obter mais informações sobre como instalar no prompt de comando, consulte a seção "Scripts de instalação do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]" em [Instalar o SQL Server 2016 do prompt de comando](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
   
  Você não pode usar a atualização para executar as seguintes ações:  
   

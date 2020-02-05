@@ -33,10 +33,10 @@ ms.assetid: 98e49b3f-a38f-4180-8171-fa9cb30db4cb
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 65fbd94bac320994f9c1917e634210febd2ba878
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70211219"
 ---
 # <a name="begin-conversation-timer-transact-sql"></a>BEGIN CONVERSATION TIMER (Transact-SQL)
@@ -44,7 +44,7 @@ ms.locfileid: "70211219"
 
   Inicia um timer. Quando o tempo limite expirar, o [!INCLUDE[ssSB](../../includes/sssb-md.md)] colocará uma mensagem do tipo `https://schemas.microsoft.com/SQL/ServiceBroker/DialogTimer` na fila local para a conversa.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -62,7 +62,7 @@ BEGIN CONVERSATION TIMER ( conversation_handle )
  TIMEOUT  
  Especifica, em segundos, o tempo de espera antes de colocar a mensagem na fila.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Um timer de conversa fornece uma maneira de um aplicativo receber uma mensagem em uma conversa depois de um período específico. Chamar BEGIN CONVERSATION TIMER em uma conversa antes de o timer expirar define o tempo limite para o novo valor. Diferentemente do tempo de vida da conversa, cada lado da conversa tem um timer de conversa independente. A mensagem **DialogTimer** chega na fila local sem afetar o lado remoto da conversa. Portanto, um aplicativo pode usar uma mensagem de timer para qualquer propósito.  
   
  Por exemplo, você pode usar o timer de conversa para evitar que um aplicativo espere demais por uma resposta atrasada. Se você espera que o aplicativo conclua um diálogo em 30 segundos, poderá definir o timer de conversa para esse diálogo como 60 segundos (30 segundos mais um período de tolerância de 30 segundos). Se o diálogo ainda estiver aberto depois de 60 segundos, o aplicativo receberá uma mensagem de tempo limite na fila para esse diálogo.  

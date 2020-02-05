@@ -29,10 +29,10 @@ ms.assetid: 98fe0fff-1a2e-4ca2-b37f-83a06fdf098e
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: de98dffe77940c6b8a6b66d0ce1a8b3b7565349d
-ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70745467"
 ---
 # <a name="create-message-type-transact-sql"></a>CREATE MESSAGE TYPE (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "70745467"
 
   Cria um novo tipo de mensagem. Um tipo de mensagem define o nome de uma mensagem e a validação que o [!INCLUDE[ssSB](../../includes/sssb-md.md)] executa nas mensagens com esse nome. Os dois lados de uma conversa devem definir os mesmos tipos de mensagem.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -77,7 +77,7 @@ CREATE MESSAGE TYPE message_type_name
  VALID_XML WITH SCHEMA COLLECTION *schema_collection_name*  
  Especifica que o corpo da mensagem deve conter um XML que obedeça a um esquema na coleção de esquemas especificada. O *schema_collection_name* deve ser o nome de uma coleção de esquemas XML existente.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O [!INCLUDE[ssSB](../../includes/sssb-md.md)] valida mensagens de entrada. Quando uma mensagem contém um corpo de mensagem que não obedece ao tipo de validação especificado, o [!INCLUDE[ssSB](../../includes/sssb-md.md)] descarta a mensagem inválida e retorna uma mensagem de erro ao serviço que enviou a mensagem.  
   
  Os dois lados de uma conversa devem definir o mesmo nome para um tipo de mensagem. Para ajudar a solucionar problemas, os dois lados de uma conversa normalmente especificam a mesma validação para o tipo de mensagem, embora o [!INCLUDE[ssSB](../../includes/sssb-md.md)] não exija que os dois lados da conversa usem a mesma validação.  
@@ -93,7 +93,7 @@ CREATE MESSAGE TYPE message_type_name
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-creating-a-message-type-containing-well-formed-xml"></a>A. Criando um tipo de mensagem que contém XML bem formado  
+### <a name="a-creating-a-message-type-containing-well-formed-xml"></a>a. Criando um tipo de mensagem que contém XML bem formado  
  O exemplo a seguir cria um novo tipo de mensagem que contém XML bem formado.  
   
 ```  

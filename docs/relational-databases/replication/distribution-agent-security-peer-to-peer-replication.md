@@ -14,10 +14,10 @@ ms.assetid: def6bf26-c640-4caf-ad30-05d1e649541d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d1329f2b432727731565da796baf021328b9b606
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75321780"
 ---
 # <a name="distribution-agent-security-peer-to-peer-replication"></a>Segurança do Agente de Distribuição (replicação ponto a ponto)
@@ -39,10 +39,10 @@ ms.locfileid: "75321780"
  O banco de dados no mesmo nível que funciona como um banco de dados de publicação e um banco de dados de assinatura.  
   
  **Conexão com o Distribuidor**  
- O contexto no qual a conexão com o Distribuidor é feita. Conexões locais sempre são feitas usando o contexto da conta do Windows na qual o agente é executado. Esse assistente cria assinaturas push (a conexão local é a conexão com o Distribuidor); portanto, esse campo sempre exibirá: **Impersonate '\<Domain>\\<Login\>'** ou **Impersonate '\<Computer>\\<Login\>'** .  
+ O contexto no qual a conexão com o Distribuidor é feita. Conexões locais sempre são feitas usando o contexto da conta do Windows na qual o agente é executado. Esse assistente cria assinaturas push (a conexão local é a conexão com o Distribuidor), portanto, esse campo sempre exibirá: **Representar '\<Domain>\\<Login\>'** ou **Representar '\<Computador>\\<Login\>'** .  
   
  **Conexão com o Assinante**  
- O contexto no qual a conexão com o Assinante é feita. A conexão pode ser feita usando o contexto da conta do Windows na qual o agente é executado ou no contexto de um logon no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . O campo exibe uma das opções a seguir: **Use logon '\<Logon>'** , **Representar '\<Domínio>\\<Logon\>'** ou **Representar '\<Computador>\\<Logon\>'** . A[!INCLUDE[msCoName](../../includes/msconame-md.md)] recomenda que todas as conexões sejam feitas com o uso do contexto da conta do Windows.  
+ O contexto no qual a conexão com o Assinante é feita. A conexão pode ser feita usando o contexto da conta do Windows na qual o agente é executado ou no contexto de um logon no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . O campo exibe uma das seguintes opções: **Usar logon '\<Login>'** , **Representar '\<Domain>\\<Login\>'** ou **Representar '\<Computer>\\<Login\>'** . A[!INCLUDE[msCoName](../../includes/msconame-md.md)] recomenda que todas as conexões sejam feitas com o uso do contexto da conta do Windows.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Administrar uma topologia ponto a ponto &#40;programação Transact-SQL de replicação&#41;](../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   

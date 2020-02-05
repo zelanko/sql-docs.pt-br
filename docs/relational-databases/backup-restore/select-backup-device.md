@@ -13,10 +13,10 @@ ms.assetid: 7887c9fd-15ce-4cc8-b069-845c1d09088c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: c4eb20f4492e3550ffdbfca5a649684e28685c1f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68216188"
 ---
 # <a name="select-backup-device"></a>Selecionar Dispositivo de Backup
@@ -40,7 +40,7 @@ ms.locfileid: "68216188"
   
  Para obter informações sobre como exibir o conteúdo de um dispositivo de backup, veja [Exibir as propriedades e o conteúdo de um dispositivo de backup lógico &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Caso não se observe um dispositivo lógico de backup que contenha um backup procurado na lista, isso indica que o backup pode ter sido gravado diretamente em um ou mais arquivos ou unidades de fita. Nesse caso, cancele a caixa de diálogo **Selecionar Dispositivo de Backup** . Na caixa de diálogo **Especificar Backup** , selecione **Arquivo** ou **Fita** na caixa de listagem **Mídia do backup** .  
   
 ## <a name="see-also"></a>Consulte Também  

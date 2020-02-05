@@ -21,18 +21,18 @@ ms.assetid: 2ac837c7-eca9-4d29-b06e-72e30450c68d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 0ec1dc88832c4a44b3f019bb0e63369ab2d3587a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914889"
 ---
-# <a name="objectdefinition-transact-sql"></a>OBJECT_DEFINITION (Transact-SQL)
+# <a name="object_definition-transact-sql"></a>OBJECT_DEFINITION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Retorna o texto de origem de [!INCLUDE[tsql](../../includes/tsql-md.md)] da definição de um objeto especificado.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -53,7 +53,7 @@ OBJECT_DEFINITION ( object_id )
   
  Um usuário só pode exibir metadados de protegíveis de sua propriedade ou para os quais recebeu permissão. Isso significa que as funções internas emissoras de metadados, como OBJECT_DEFINITION, podem retornar NULL se o usuário não tiver permissão no objeto. Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] supõe que *object_id* esteja no contexto do banco de dados atual. A ordenação da definição de objeto sempre corresponde ao do contexto de banco de dados que está fazendo a chamada.  
   
  OBJECT_DEFINITION se aplica aos tipos de objeto seguintes:  
@@ -79,11 +79,11 @@ OBJECT_DEFINITION ( object_id )
 -   V = Exibição  
   
 ## <a name="permissions"></a>Permissões  
- Definições de objeto de sistema são publicamente visíveis. A definição de objetos de usuário é visível ao proprietário do objeto e às entidades autorizadas que têm uma das seguintes permissões: ALTER, CONTROL, TAKE OWNERSHIP ou VIEW DEFINITION. Estas permissões são mantidas implicitamente por membros das funções fixas de banco de dados **db_owner**, **db_ddladmin**e **db_securityadmin** .  
+ Definições de objeto de sistema são publicamente visíveis. A definição de objetos de usuário é visível ao proprietário do objeto e aos que possuírem qualquer uma das seguintes permissões: ALTER, CONTROL, TAKE OWNERSHIP ou VIEW DEFINITION. Estas permissões são mantidas implicitamente por membros das funções fixas de banco de dados **db_owner**, **db_ddladmin**e **db_securityadmin** .  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-returning-the-source-text-of-a-user-defined-object"></a>A. Retornando o texto de origem de um objeto definido pelo usuário  
+### <a name="a-returning-the-source-text-of-a-user-defined-object"></a>a. Retornando o texto de origem de um objeto definido pelo usuário  
  O exemplo a seguir retorna a definição de um gatilho definido pelo usuário, `uAddress`, no esquema `Person`. A função interna `OBJECT_ID` é usada para retornar a ID do objeto do gatilho à instrução `OBJECT_DEFINITION`.  
   
 ```  

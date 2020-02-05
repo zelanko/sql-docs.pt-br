@@ -12,25 +12,25 @@ ms.assetid: 9638a764-4ac1-40ae-a614-2726ebcc6ba4
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 0320795493df3c4d0283e3d82a2235e9f1f08914
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67951434"
 ---
-# <a name="mssqlserver7906"></a>MSSQLSERVER_7906
+# <a name="mssqlserver_7906"></a>MSSQLSERVER_7906
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|7906|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|DBCC2_FS_INVALID_TOP_LEVEL_FILE|  
-|Texto da mensagem|Erro de banco de dados: O arquivo "FILE" não é um arquivo de fluxo de arquivos válido.|  
+|Texto da mensagem|Erro de banco de dados: o arquivo 'FILE' não é um arquivo válido de Filestream.|  
   
 ## <a name="explanation"></a>Explicação  
 Exceto para alguns arquivos especiais, como 'filestream.hdr', nenhum arquivo deve ser encontrado diretamente no espaço de dados Filestream.  

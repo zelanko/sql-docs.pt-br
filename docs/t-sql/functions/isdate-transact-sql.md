@@ -32,10 +32,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1385a80df97bc02af60cb5c151424dc79bd03913
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109449"
 ---
 # <a name="isdate-transact-sql"></a>ISDATE (Transact-SQL)
@@ -47,7 +47,7 @@ ms.locfileid: "68109449"
   
  Para obter uma visão geral das funções e dos tipos de dados de data e hora de [!INCLUDE[tsql](../../includes/tsql-md.md)], confira [Funções e tipos de dados de data e hora &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md). Observe que o intervalo de dados de data/hora será 1753-01-01 a 9999-12-31, quando o intervalo de dados de data for 0001-01-01 a 9999-12-31.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -62,7 +62,7 @@ ISDATE ( expression )
 ## <a name="return-type"></a>Tipo de retorno  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  ISDATE será determinista apenas se você usá-lo com a função [CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md), se o parâmetro de estilo CONVERT for especificado e o estilo não for igual a 0, 100, 9 ou 109.  
   
  O valor retornado de ISDATE depende das configurações definidas por [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md), [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) e [Configurar idioma padrão da opção de configuração de servidor](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md).  
@@ -74,7 +74,7 @@ ISDATE ( expression )
   
 |Expressão ISDATE|Valor de retorno ISDATE|  
 |-----------------------|-------------------------|  
-|NULL|0|  
+|NULO|0|  
 |Valores de tipos de dados listados em [Tipos de dados](../../t-sql/data-types/data-types-transact-sql.md) em qualquer categoria de tipo de dados que não cadeias de caracteres, cadeias de caracteres Unicode ou data e hora.|0|  
 |Valores de tipos de dados **text**, **ntext** ou **image**.|0|  
 |Qualquer valor que tenha uma escala de precisão de segundos maior que 3 (,0000 a ,0000000... n). ISDATE retornará 0 se a *expressão* for um valor **datetime2**, mas retornará 1 se a *expressão* for um valor **datetime** válido.|0|  
@@ -82,7 +82,7 @@ ISDATE ( expression )
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-isdate-to-test-for-a-valid-datetime-expression"></a>A. Usando ISDATE para testar uma expressão datetime válida  
+### <a name="a-using-isdate-to-test-for-a-valid-datetime-expression"></a>a. Usando ISDATE para testar uma expressão datetime válida  
  O exemplo a seguir mostra como usar `ISDATE` para testar se uma cadeia de caracteres é uma **datatime** válida.  
   
 ```  

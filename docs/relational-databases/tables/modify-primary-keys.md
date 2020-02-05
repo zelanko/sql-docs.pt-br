@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ef278fbdc9fa2599e7612cd9c3b54b909a9bf1f0
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907316"
 ---
 # <a name="modify-primary-keys"></a>Modificar chaves primárias
@@ -62,7 +62,7 @@ ms.locfileid: "72907316"
     |Definir um fator de preenchimento|Expanda a categoria **Especificação de Preenchimento** e digite um inteiro de 0 a 100 na caixa **Fator de Preenchimento** . Para obter mais informações sobre fatores de preenchimento e seus usos, veja [Especificar fator de preenchimento para um índice](../../relational-databases/indexes/specify-fill-factor-for-an-index.md).|  
     |Altere a ordem da coluna|Selecione **Colunas** e clique nas reticências **(...)** à direita da propriedade. Na caixa de diálogo  **Colunas de Índices** , remova as colunas da chave primária. Depois, adicione as colunas de novo na ordem desejada. Para remover uma coluna da chave, simplesmente remova o nome de coluna da lista de nomes **Coluna** .|  
   
-4.  No menu **Arquivo** , clique em **Salvar**_table name_.  
+4.  No menu **Arquivo**, clique em **Salvar**_nome da tabela_.  
 
 ##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  **Para modificar uma chave primária**  

@@ -22,10 +22,10 @@ ms.assetid: 805e8ad5-8a93-49f0-88e5-e6fca8814dd5
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 48c1a96998adf9fddd8ffd8da0e6f6711b9277b0
-ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70745319"
 ---
 # <a name="drop-message-type-transact-sql"></a>DROP MESSAGE TYPE (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "70745319"
 
   Descarta um tipo de mensagem existente.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -50,7 +50,7 @@ DROP MESSAGE TYPE message_type_name
 ## <a name="permissions"></a>Permissões  
  A permissão para descartar um tipo de mensagem assume como padrão o proprietário do tipo de mensagem, os membros das funções de banco de dados fixas db_ddladmin ou db_owner e os membros da função de servidor fixa sysadmin.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Não será possível descartar um tipo de mensagem se qualquer contrato se referir ao tipo de mensagem.  
   
 ## <a name="examples"></a>Exemplos  

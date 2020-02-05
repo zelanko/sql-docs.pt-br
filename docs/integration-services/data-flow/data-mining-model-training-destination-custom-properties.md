@@ -11,10 +11,10 @@ ms.assetid: f0a70216-fdac-44ae-af29-35f65626217c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e603b7e7342ee349b885392c43e42f33009700ae
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293126"
 ---
 # <a name="data-mining-model-training-destination-custom-properties"></a>Propriedades personalizadas do destino Treinamento do Modelo de Mineração de Dados
@@ -26,11 +26,11 @@ ms.locfileid: "71293126"
   
  A tabela a seguir descreve as propriedades personalizadas do destino Treinamento do Modelo de Mineração de Dados. Todas as propriedades são de leitura/gravação.  
   
-|Propriedade|Tipo de Dados|Descrição|  
+|Propriedade|Tipo de Dados|DESCRIÇÃO|  
 |--------------|---------------|-----------------|  
-|ASConnectionId|Cadeia de caracteres|O identificador exclusivo do gerenciador de conexões.|  
-|ASConnectionString|Cadeia de caracteres|A cadeia de caracteres de conexão com uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou com um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
-|ObjectRef|Cadeia de caracteres|Uma marca XML que identifica a estrutura de mineração de dados usada pela transformação.|  
+|ASConnectionId|String|O identificador exclusivo do gerenciador de conexões.|  
+|ASConnectionString|String|A cadeia de caracteres de conexão com uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou com um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
+|ObjectRef|String|Uma marca XML que identifica a estrutura de mineração de dados usada pela transformação.|  
   
  A entrada e as colunas de entrada do destino Treinamento do Modelo de Mineração de Dados não têm nenhuma propriedade personalizada.  
   

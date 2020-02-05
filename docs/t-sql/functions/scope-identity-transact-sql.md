@@ -21,18 +21,18 @@ ms.assetid: eef24670-059b-4f10-91d4-a67bc1ed12ab
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 86afd9bb2036edb77934f6ae622fafe93bd2d5a4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68111332"
 ---
-# <a name="scopeidentity-transact-sql"></a>SCOPE_IDENTITY (Transact-SQL)
+# <a name="scope_identity-transact-sql"></a>SCOPE_IDENTITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Retorna o último valor de identidade inserido em uma coluna de identidade no mesmo escopo. Um escopo é um módulo: um procedimento armazenado, gatilho, função ou lote. Portanto, se duas instruções forem estar no mesmo procedimento armazenado, função ou lote, elas estarão no mesmo escopo.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,7 +43,7 @@ SCOPE_IDENTITY()
 ## <a name="return-types"></a>Tipos de retorno  
  **numeric(38,0)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  SCOPE_IDENTITY, IDENT_CURRENT, e @@IDENTITY são funções semelhantes porque retornam valores inseridos em colunas de identidade.  
   
  IDENT_CURRENT não é limitado por escopo e sessão, mas a uma tabela especificada. IDENT_CURRENT retorna o valor gerado para uma tabela específica em qualquer sessão e escopo. Para obter mais informações, consulte [IDENT_CURRENT &#40;Transact-SQL&#41;](../../t-sql/functions/ident-current-transact-sql.md).  
@@ -58,7 +58,7 @@ SCOPE_IDENTITY()
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-identity-and-scopeidentity-with-triggers"></a>A. Usando @@IDENTITY e SCOPE_IDENTITY com gatilhos  
+### <a name="a-using-identity-and-scope_identity-with-triggers"></a>a. Usando @@IDENTITY e SCOPE_IDENTITY com gatilhos  
  O exemplo a seguir cria duas tabelas, `TZ` e `TY`, e um gatilho INSERT em `TZ`. Quando uma linha é inserida na tabela `TZ`, o gatilho (`Ztrig`) é acionado e insere uma linha em `TY`.  
   
 ```sql  
@@ -92,7 +92,7 @@ INSERT TY (Y_name)
   
 SELECT * FROM TY;  
 ```   
-Conjunto de resultados: esta é a aparência de TY:  
+Conjunto de resultados: esta é a aparência da TY:  
 ```  
 Y_id  Y_name  
 ---------------  
@@ -132,7 +132,7 @@ SCOPE_IDENTITY
 115  
 ```  
   
-### <a name="b-using-identity-and-scopeidentity-with-replication"></a>B. Usando @@IDENTITY e SCOPE_IDENTITY() com replicação  
+### <a name="b-using-identity-and-scope_identity-with-replication"></a>B. Usando @@IDENTITY e SCOPE_IDENTITY() com replicação  
  Os exemplos a seguir mostram como usar `@@IDENTITY` e `SCOPE_IDENTITY()` para inserções em um banco de dados publicado para replicação de mesclagem. As duas tabelas dos exemplos estão no banco de dados de exemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]: `Person.ContactType` não é publicado e `Sales.Customer` é publicado. A replicação de mesclagem adiciona gatilhos a tabelas que são publicadas. Portanto, `@@IDENTITY` pode retornar o valor da inserção em uma tabela do sistema de replicação em vez da inserção em uma tabela de usuário.  
   
  A tabela `Person.ContactType` tem um valor de identidade máximo de 20. Se você inserir uma linha na tabela, `@@IDENTITY` e `SCOPE_IDENTITY()` retornarão o mesmo valor.  

@@ -17,10 +17,10 @@ ms.assetid: 35930826-c870-44c1-a966-a6a4638f62ef
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e49ef1ad379f675ca457f8cd9c82a5e4ecc3fd04
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68107132"
 ---
 # <a name="disk-space-requirements-for-index-ddl-operations"></a>Disk Space Requirements for Index DDL Operations
@@ -80,7 +80,7 @@ ms.locfileid: "68107132"
  As operações de índice online utilizam o controle de versão de linha para isolar a operação de índice dos efeitos das modificações feitas por outras transações. Isso evita a necessidade de solicitar bloqueios de compartilhamento de linhas já lidas. As operações simultâneas de atualização e exclusão de usuários durante operações de índice online precisam de espaço para os registros de versão no **tempdb**. Para obter mais informações, consulte [Executar operações de índice online](../../relational-databases/indexes/perform-index-operations-online.md) .  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Index Disk Space Example](../../relational-databases/indexes/index-disk-space-example.md)  
+ [Exemplo de espaço em disco de índice](../../relational-databases/indexes/index-disk-space-example.md)  
   
  [Espaço em disco de log de transações para operações de índice](../../relational-databases/indexes/transaction-log-disk-space-for-index-operations.md)  
   
@@ -90,7 +90,7 @@ ms.locfileid: "68107132"
   
  [Estimar o tamanho de um índice não clusterizado](../../relational-databases/databases/estimate-the-size-of-a-nonclustered-index.md)  
   
- [Estimando o tamanho de um heap](../../relational-databases/databases/estimate-the-size-of-a-heap.md)  
+ [Estimar o tamanho de um heap](../../relational-databases/databases/estimate-the-size-of-a-heap.md)  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
@@ -99,7 +99,7 @@ ms.locfileid: "68107132"
   
  [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)  
   
- [Especificar fator de preenchimento para um índice](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)  
+ [Especificar o fator de preenchimento para um índice](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)  
   
  [Reorganizar e recompilar índices](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)  
   

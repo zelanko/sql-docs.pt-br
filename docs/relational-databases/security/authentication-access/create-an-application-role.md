@@ -16,10 +16,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 09f90bcf10db6d5a1406aa7a68f90b4704270d95
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72903156"
 ---
 # <a name="create-an-application-role"></a>Criar uma função de aplicativo
@@ -64,14 +64,14 @@ ms.locfileid: "72903156"
   
 6.  Na caixa **Esquema Padrão** , especifique o esquema que possuirá objetos criados por essa função digitando os nomes dos objetos. Como alternativa, clique nas reticências **(…)** para abrir a caixa de diálogo **Localizar Esquema**.  
   
-7.  Na caixa **Senha** , digite uma senha para a nova função. Digite essa senha novamente na caixa **Confirmar Senha** .  
+7.  Na caixa **Senha** , digite uma senha para a nova função. Insira novamente essa senha na caixa **Confirmar Senha** .  
   
 8.  Em **Esquemas de propriedade dessa função**, selecione ou confira os esquemas que serão de propriedade desta função. Um esquema pode ser de propriedade de um só esquema ou função.  
   
 9. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
 
 ### <a name="additional-options"></a>Opções adicionais  
- A caixa de diálogo **Função de aplicativo - Nova** também oferece opções em duas páginas adicionais: **Protegíveis** e **Propriedades Estendidas**.  
+ A caixa de diálogo **Função de Aplicativo – Nova** também oferece opções em duas páginas adicionais: **Protegíveis** e **Propriedades Ampliadas**.  
   
 -   A página **Protegíveis** lista todos os protegíveis e as permissões possíveis nesses protegíveis que podem ser concedidos ao logon.  
   

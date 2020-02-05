@@ -21,10 +21,10 @@ ms.assetid: 03eba220-13e2-49e3-bd9d-ea9df84dc28c
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 47335a2b31b87ca1e74b2605fb62df006eeace07
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981947"
 ---
 # <a name="alter-view-transact-sql"></a>ALTER VIEW (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "73981947"
 
   Modifica uma exibição criada anteriormente. Isto inclui uma exibição indexada. ALTER VIEW não afeta disparadores ou procedimentos armazenados dependentes e não altera permissões.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -92,7 +92,7 @@ AS select_statement
  WITH CHECK OPTION  
  Força que todas as instruções de modificação de dados que são executadas em relação à exibição sigam o conjunto de critérios da *select_statement*.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Para obter mais informações sobre ALTER VIEW, veja comentários em [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
 > [!NOTE]  

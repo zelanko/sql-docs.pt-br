@@ -12,22 +12,22 @@ ms.assetid: 06aac110-a41c-4853-bc8e-a83e8535b8be
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: c09b508b4a8b8a26307df57b82108358d680d4aa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68118388"
 ---
-# <a name="mssqlserver8993"></a>MSSQLSERVER_8993
+# <a name="mssqlserver_8993"></a>MSSQLSERVER_8993
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|8993|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|DBCC3_MISSING_FORWARDED_ROW|  
 |Texto da mensagem|ID do objeto O_ID, página de linha de encaminhamento P_ID1, slot S_ID1 aponta para página P_ID2, slot S_ID2. A linha encaminhada não foi encontrada. Possível erro de alocação.|  

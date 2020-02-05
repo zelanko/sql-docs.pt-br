@@ -15,10 +15,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: feac4a3e00164837373f9b3024c322dbf7c49818
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095821"
 ---
 # <a name="parse-and-transform-json-data-with-openjson-sql-server"></a>Analisar e transformar dados JSON com OPENJSON (SQL Server)
@@ -40,7 +40,7 @@ Ao usar a função **OPENJSON** sem fornecer um esquema explícito para os resul
 
 O **OPENJSON** retorna cada propriedade do objeto JSON ou cada elemento da matriz como uma linha separada.  
 
-Veja um exemplo rápido que usa **OPENJSON** com o esquema padrão ou seja, sem a cláusula opcional **WITH** e retorna uma linha para cada propriedade do objeto JSON.  
+Veja um exemplo rápido que usa **OPENJSON** com o esquema padrão, ou seja, sem a cláusula opcional **WITH**, e retorna uma linha para cada propriedade do objeto JSON.  
 
 **Exemplo**
 
@@ -55,11 +55,11 @@ FROM OPENJSON(@json);
   
 **Resultados**
   
-|chave|value|Tipo|  
+|chave|value|type|  
 |---------|-----------|----------|  
-|NAME|John|1|  
+|name|John|1|  
 |sobrenome|Doe|1|  
-|idade|45|2|  
+|age|45|2|  
 |habilidades|["SQL","C#","MVC"]|4|
 
 ### <a name="more-info-about-openjson-with-the-default-schema"></a>Mais informações sobre OPENJSON com o esquema padrão
@@ -116,7 +116,7 @@ WITH (
   
 **Resultados**
   
-|Número|data|Cliente|Quantidade|  
+|Número|Data|Cliente|Quantidade|  
 |------------|----------|--------------|--------------|  
 |SO43659|2011-05-31T00:00:00|AW29825|1|  
 |SO43661|2011-06-01T00:00:00|AW73565|3|  

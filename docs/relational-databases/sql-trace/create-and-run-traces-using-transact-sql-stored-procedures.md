@@ -11,10 +11,10 @@ ms.assetid: 80347417-338d-4bea-8885-91fae5181cfe
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3d1c5a85072bec1fc304156268680c201ad2245e
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095649"
 ---
 # <a name="create-and-run-traces-using-transact-sql-stored-procedures"></a>Criar e executar rastreamentos usando procedimentos armazenados de Transact-SQL.
@@ -40,11 +40,11 @@ ms.locfileid: "74095649"
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|Descrição|  
+|Tópico|DESCRIÇÃO|  
 |-----------|-----------------|  
-|[Otimizar o Rastreamento do SQL](../../relational-databases/sql-trace/optimize-sql-trace.md)|Contém informações sobre maneiras de reduzir os efeitos do rastreamento sobre o desempenho do sistema.|  
+|[Otimizar o rastreamento do SQL](../../relational-databases/sql-trace/optimize-sql-trace.md)|Contém informações sobre maneiras de reduzir os efeitos do rastreamento sobre o desempenho do sistema.|  
 |[Filtrar um rastreamento](../../relational-databases/sql-trace/filter-a-trace.md)|Contém informações sobre como usar filtros em rastreamentos.|  
-|[Limitar o tamanho de arquivos e tabelas de rastreamento](../../relational-databases/sql-trace/limit-trace-file-and-table-sizes.md)|Contém informações sobre como limitar o tamanho dos arquivos e tabelas nos quais são gravados os dados do rastreamento. Observe que só o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pode gravar informações de rastreamento em tabelas.|  
+|[Limitar o tamanho de arquivos e tabelas do rastreamento](../../relational-databases/sql-trace/limit-trace-file-and-table-sizes.md)|Contém informações sobre como limitar o tamanho dos arquivos e tabelas nos quais são gravados os dados do rastreamento. Observe que só o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pode gravar informações de rastreamento em tabelas.|  
 |[Agendar rastreamentos](../../relational-databases/sql-trace/schedule-traces.md)|Contém informações sobre como definir a hora de início e a hora de término de um rastreamento.|  
   
 ## <a name="see-also"></a>Consulte Também  

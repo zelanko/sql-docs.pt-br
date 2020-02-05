@@ -15,10 +15,10 @@ ms.assetid: 14839cec-6dbf-49c2-aa27-56847b09b4db
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8ae39654a19c73c71c602801b3aa5f594f7d0828
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908155"
 ---
 # <a name="specify-merge-replication-properties"></a>Especificar propriedades de Replicação de Mesclagem
@@ -93,7 +93,7 @@ Na página **Artigos** do Assistente para Nova Publicação, selecione uma tabel
   
 #### <a name="specify-that-a-subscription-should-use-interactive-conflict-resolution"></a>Especificar que uma assinatura deve usar a resolução de conflitos interativa  
   
-1.  Na caixa de diálogo **Propriedades da Assinatura – \<Assinante>: \<SubscriptionDatabase>** , especifique o valor **Verdadeiro** para a opção **Resolver conflitos interativamente**. Para obter mais informações sobre como acessar essa caixa de diálogo, consulte [View and Modify Push Subscription Properties](../../../relational-databases/replication/view-and-modify-push-subscription-properties.md) e [View and Modify Pull Subscription Properties](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).   
+1.  Na caixa de diálogo **Propriedades da Assinatura – \<Subscriber>: \<SubscriptionDatabase>** , especifique o valor **Verdadeiro** para a opção **Resolver os conflitos interativamente**. Para obter mais informações sobre como acessar essa caixa de diálogo, consulte [View and Modify Push Subscription Properties](../../../relational-databases/replication/view-and-modify-push-subscription-properties.md) e [View and Modify Pull Subscription Properties](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ###  <a name="use-transact-sql"></a>Usar o Transact-SQL  
@@ -109,7 +109,7 @@ Na página **Artigos** do Assistente para Nova Publicação, selecione uma tabel
     -   `@publisher`, `@publisher_db` (o banco de dados publicado) e `@publication`.    
     -   Um valor de **true** para `@enabled_for_syncmgr`.    
     -   Um valor de **true** para `@use_interactive_resolver`.    
-    -   As informações da conta de segurança requerida pelo Merge Agent. Para obter mais informações, confira [Create a Pull Subscription](../../../relational-databases/replication/create-a-pull-subscription.md).    
+    -   As informações da conta de segurança requerida pelo Merge Agent. Para obter mais informações, consulte [Create a Pull Subscription](../../../relational-databases/replication/create-a-pull-subscription.md).    
 4.  No Publicador, no banco de dados da publicação, execute [sp_addmergesubscription](../../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md).  
   
 #### <a name="define-an-article-that-supports-the-interactive-resolver"></a>Definir um artigo que tem suporte para o Resolvedor Interativo  
@@ -133,7 +133,7 @@ Este tópico descreve como especificar o nível de rastreamento e resolução de
   
 1.  Na página **Artigos** do Assistente para Nova Publicação ou na caixa de diálogo **Propriedades de Publicação – \<Publicação>** , selecione uma tabela.  
 2.  Clique em **Propriedades de Artigos**e então clique em **Definir Propriedades do Artigo Realçado da Tabela** ou **Definir Propriedades de Todos os Artigos da Tabela**.   
-3.  Na guia **Propriedades** da caixa de diálogo **Propriedade do Artigo \<Artigo>** , selecione um dos seguintes valores para a propriedade **Nível de acompanhamento**: **Acompanhamento de nível de linha** ou **Acompanhamento em nível de coluna**.   
+3.  Na guia **Propriedades** da caixa de diálogo **Propriedade do Artigo \<Artigo>** , selecione um dos seguintes valores para a propriedade **Nível de rastreamento**: **Rastreamento em nível de linha** ou **Rastreamento em nível de coluna**.   
 4.  Se você estiver na caixa de diálogo **Propriedades da Publicação – \<Publicação>** , clique em **OK** para salvar e fechar a caixa de diálogo.  
   
 ### <a name="use-transact-sql"></a>Usar o Transact-SQL  

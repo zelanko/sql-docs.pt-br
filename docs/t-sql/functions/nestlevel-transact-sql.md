@@ -20,10 +20,10 @@ ms.assetid: 8c0b2134-8616-44f6-addc-6583c432fb62
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4d9b391d58d8a55b7486cda447d13246df16093b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68130154"
 ---
 # <a name="x40x40nestlevel-transact-sql"></a>&#x40;&#x40;NESTLEVEL (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68130154"
 
   Retorna o nível aninhando da execução de procedimento armazenado atual (inicialmente 0) no servidor local.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,14 +42,14 @@ ms.locfileid: "68130154"
 ## <a name="return-types"></a>Tipos de retorno  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O nível é incrementado sempre que um procedimento armazenado chama outro procedimento armazenado ou executa código gerenciado fazendo referência a uma rotina, um tipo ou uma agregação CLR (Common Language Runtime). Quando o máximo de 32 for excedido, a transação será terminada.  
   
  Quando @@NESTLEVEL é executado em uma cadeia de caracteres [!INCLUDE[tsql](../../includes/tsql-md.md)], o valor retornado é 1 + o nível de aninhamento atual. Quando @@NESTLEVEL é executado dinamicamente usando sp_executesql, o valor retornado é 2 + o nível de aninhamento atual.  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-nestlevel-in-a-procedure"></a>A. Usando @@NESTLEVEL em um procedimento  
+### <a name="a-using-nestlevel-in-a-procedure"></a>a. Usando @@NESTLEVEL em um procedimento  
  O exemplo a seguir cria dois procedimentos: um que chama o outro e um que exibe a configuração `@@NESTLEVEL` de cada um deles.  
   
 ```  

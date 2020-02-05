@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: a6ebb026-026f-4c39-b6a9-b9998c3babab
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: c1e63f93a26765b63085f19d99d0bba327b69d55
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 2f7874ecabe33f507ca471d13e00d2f48f6f8976
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908545"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287652"
 ---
 # <a name="define-and-modify-a-static-row-filter"></a>Definir e modificar um filtro de linha estático
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -121,7 +121,7 @@ ms.locfileid: "72908545"
   
 2.  No Publicador no banco de dados de publicação, execute [sp_articleview &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md). Especifique o nome da publicação em **\@publication**, o nome do artigo filtrado em **\@article** e a cláusula de filtro especificada na etapa 1 em **\@filter_clause**. Isto recria a exibição que define o artigo filtrado.  
   
-3.  Execute novamente o Snapshot Agent da publicação para gerar um instantâneo atualizado. Para obter mais informações, consulte [Create and Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
+3.  Execute novamente o Snapshot Agent da publicação para gerar um instantâneo atualizado. Para obter mais informações, consulte [Criar e aplicar o instantâneo inicial](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
 4.  Reinicialize as assinaturas. Para obter mais informações, consulte [Reinicializar as assinaturas](../../../relational-databases/replication/reinitialize-subscriptions.md).  
   
@@ -129,7 +129,7 @@ ms.locfileid: "72908545"
   
 1.  No Publicador no banco de dados de publicação, execute o [sp_articlefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md). Especifique o nome do artigo em **\@article**, o nome da publicação em **\@publication**, um valor igual a NULL em **\@filter_name** e um valor igual a NULL em **\@filter_clause**. Como essa alteração invalidará os dados nas assinaturas existentes, especifique um valor igual a **1** em **\@force_reinit_subscription**.  
   
-2.  Execute novamente o Snapshot Agent da publicação para gerar um instantâneo atualizado. Para obter mais informações, consulte [Create and Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
+2.  Execute novamente o Snapshot Agent da publicação para gerar um instantâneo atualizado. Para obter mais informações, consulte [Criar e aplicar o instantâneo inicial](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
 3.  Reinicialize as assinaturas. Para obter mais informações, consulte [Reinicializar as assinaturas](../../../relational-databases/replication/reinitialize-subscriptions.md).  
   
@@ -143,7 +143,7 @@ ms.locfileid: "72908545"
   
 1.  No Publicador no banco de dados de publicação, execute [sp_changemergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Especifique o nome da publicação em **\@publication**, o nome do artigo filtrado em **\@article**, um valor igual a **subset_filterclause** em **\@property** e a nova cláusula de filtragem em **\@value** (não incluindo `WHERE`). Como essa alteração invalidará os dados nas assinaturas existentes, especifique um valor igual a 1 em **\@force_reinit_subscription**.  
   
-2.  Execute novamente o Snapshot Agent da publicação para gerar um instantâneo atualizado. Para obter mais informações, consulte [Create and Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
+2.  Execute novamente o Snapshot Agent da publicação para gerar um instantâneo atualizado. Para obter mais informações, consulte [Criar e aplicar o instantâneo inicial](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
 3.  Reinicialize as assinaturas. Para obter mais informações, consulte [Reinicializar as assinaturas](../../../relational-databases/replication/reinitialize-subscriptions.md).  
   
@@ -157,7 +157,7 @@ ms.locfileid: "72908545"
  [!code-sql[HowTo#sp_AddMergeArticle](../../../relational-databases/replication/codesnippet/tsql/define-and-modify-a-stat_2.sql)]  
   
 ## <a name="see-also"></a>Consulte Também  
- [Definir e modificar um filtro de linha com parâmetros para um artigo de mesclagem](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
+ [Definir e modificar um filtro de linha parametrizado para um artigo de mesclagem](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
  [Alterar propriedades da publicação e do artigo](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [Filtrar os dados publicados](../../../relational-databases/replication/publish/filter-published-data.md)   
  [Filtrar dados publicados para a replicação de mesclagem](../../../relational-databases/replication/merge/filter-published-data-for-merge-replication.md)  

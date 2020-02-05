@@ -16,10 +16,10 @@ ms.assetid: 33e2940b-139f-4563-b0cb-5683f08bd879
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b5eba7d655d0c6ee047d59f3cd14ea39a6ad4ec3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115577"
 ---
 # <a name="rebuild-index-task-maintenance-plan"></a>Tarefa Recriar Índice (Plano de Manutenção)
@@ -32,7 +32,7 @@ ms.locfileid: "68115577"
  **Conexão**  
  Selecione a conexão de servidor a ser usada na execução desta tarefa.  
   
- **Nova**  
+ **Novo**  
  Crie uma nova conexão com o servidor para usar ao executar esta tarefa. A caixa de diálogo **Nova Conexão** é descrita abaixo.  
   
  **Bancos de dados**  
@@ -79,7 +79,7 @@ ms.locfileid: "68115577"
  Use a opção `ONLINE` , que permite o acesso de usuários aos dados da tabela subjacente ou de índice clusterizado e qualquer índice não clusterizado associado durante as operações de índice.  
   
 > [!NOTE]
->  As operações de índice online não estão disponíveis em todas as edições do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+>  As operações de índice online não estão disponíveis em todas as edições de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  **Não recompilar índices | Recompilar índices offline**  
  Especifique o que fazer com os tipos de índice que não podem ser recompilados enquanto estão online.  
@@ -125,7 +125,7 @@ ms.locfileid: "68115577"
  **Usar nome de usuário e senha específicos**  
  Conecte-se com uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] usando a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Essa opção não está disponível.  
   
- **User name**  
+ **Nome de usuário**  
  Forneça um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a ser usado na autenticação. Essa opção não está disponível.  
   
  **Senha**  

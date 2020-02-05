@@ -27,10 +27,10 @@ ms.assetid: d7a8bd93-e2d7-4a40-82ef-39069e65523b
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 1e8fa047a65663f918bfcce4a92692f1c443f77a
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73064657"
 ---
 # <a name="create-fulltext-catalog-transact-sql"></a>CREATE FULLTEXT CATALOG (Transact-SQL)
@@ -43,7 +43,7 @@ ms.locfileid: "73064657"
 > [!IMPORTANT]  
 >  A partir do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], um catálogo de texto completo é um objeto virtual e não pertence a nenhum grupo de arquivos. Um catálogo de texto completo é um conceito lógico que faz referência a um grupo de índices de texto completo.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -97,7 +97,7 @@ CREATE FULLTEXT CATALOG catalog_name
   
  *owner_name* também deve ter a permissão TAKE OWNERSHIP no catálogo de texto completo especificado.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  As IDs de catálogos de texto completo iniciam em 00005 e são incrementadas em um para cada catálogo novo criado.  
   
 ## <a name="permissions"></a>Permissões  
@@ -119,7 +119,7 @@ GO
  [sys.fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
  [ALTER FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)   
  [DROP FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/drop-fulltext-catalog-transact-sql.md)   
- [Pesquisa de Texto Completo](../../relational-databases/search/full-text-search.md)   
+ [Pesquisa de texto completo](../../relational-databases/search/full-text-search.md)   
  
   
   

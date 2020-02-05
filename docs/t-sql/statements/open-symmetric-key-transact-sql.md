@@ -19,10 +19,10 @@ ms.assetid: ff019a7c-c373-46c7-ac43-ffb7e2ee60b3
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 026f801a055bf801b6b1afd2a07a5b4499f9b3da
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68129393"
 ---
 # <a name="open-symmetric-key-transact-sql"></a>OPEN SYMMETRIC KEY (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68129393"
 
   Descriptografa uma chave simétrica e a disponibiliza para uso.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -67,7 +67,7 @@ OPEN SYMMETRIC KEY Key_name DECRYPTION BY <decryption_mechanism>
  PASSWORD ='*password*'  
  É a senha que foi usada para proteger a chave simétrica.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  As chaves simétricas abertas estão associadas à sessão que não está no contexto de segurança. Uma chave aberta continuará disponível até ser explicitamente fechada ou a sessão ser encerrada. Se você abrir uma chave simétrica e alterar o contexto, ela permanecerá aberta e estará disponível no contexto representado. Informações sobre chaves simétricas abertas estão visíveis na exibição do catálogo [sys.openkeys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-openkeys-transact-sql.md).  
   
  Se a chave simétrica tiver sido criptografada com outra chave, essa chave deverá ser aberta primeiro.  
@@ -81,15 +81,15 @@ OPEN SYMMETRIC KEY Key_name DECRYPTION BY <decryption_mechanism>
 ## <a name="permissions"></a>Permissões  
  O chamador deve ter alguma permissão na chave, e a permissão VIEW DEFINITION não deve ter sido negada a ele na chave. Os requisitos adicionais variam, dependendo do mecanismo de descriptografia:  
   
--   DECRYPTION BY CERTIFICATE: permissão CONTROL no certificado e conhecimento da senha que criptografa a chave privada.  
+-   DECRYPTION BY CERTIFICATE: permissão CONTROL no certificado e conhecimento da senha que criptografa sua chave privada.  
   
--   DECRYPTION BY ASYMMETRIC KEY: permissão CONTROL na chave assimétrica e conhecimento da senha que criptografa a chave privada.  
+-   DECRYPTION BY ASYMMETRIC KEY: permissão CONTROL na chave assimétrica e conhecimento da senha que criptografa sua chave privada.  
   
 -   DECRYPTION BY PASSWORD: conhecimento de uma das senhas usadas para criptografar a chave simétrica.  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-opening-a-symmetric-key-by-using-a-certificate"></a>A. Abrindo uma chave simétrica com o uso de um certificado  
+### <a name="a-opening-a-symmetric-key-by-using-a-certificate"></a>a. Abrindo uma chave simétrica com o uso de um certificado  
  O exemplo seguinte abre a chave simétrica `SymKeyMarketing3` e a descriptografa usando a chave privada de certificado `MarketingCert9`.  
   
 ```  

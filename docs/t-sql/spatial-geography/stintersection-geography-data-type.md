@@ -18,10 +18,10 @@ ms.assetid: 7e09468f-499f-4a38-ba4b-bb30b8821e3b
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: a06620641fd69479bba3c3b46ab04e337c2dc18d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042054"
 ---
 # <a name="stintersection-geography-data-type"></a>STIntersection (tipo de dados geography)
@@ -43,9 +43,9 @@ ms.locfileid: "68042054"
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Tipo de retorno CLR: **SqlGeography**  
+ Tipo de retorno do CLR: **SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  A interseção de duas instâncias de geografia é retornada.  
   
  STIntersection() sempre retornará nulo se os SRIDs (identificadores de referência espacial) das instâncias de **geografia** não corresponderem.  
@@ -56,7 +56,7 @@ ms.locfileid: "68042054"
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-computing-the-intersection-of-a-polygon-and-a-linestring"></a>A. Computando a interseção de um polígono e uma LineString  
+### <a name="a-computing-the-intersection-of-a-polygon-and-a-linestring"></a>a. Computando a interseção de um polígono e uma LineString  
  O exemplo a seguir usa `STIntersection()` para computar a interseção de um `Polygon` e uma `LineString`.  
   
 ```  

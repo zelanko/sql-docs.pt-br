@@ -13,10 +13,10 @@ ms.assetid: 2686fe84-1ecc-48b8-9160-e7122274bd84
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4dff74cd1e21ba743fa425bb632c736ee1cce158
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295014"
 ---
 # <a name="working-with-connection-managers-programmatically"></a>Trabalhando programaticamente com gerenciadores de conexões
@@ -48,7 +48,7 @@ ms.locfileid: "71295014"
 |EXCEL|Gerenciador de conexões do Excel|  
 |FTP|Gerenciador de conexões FTP|  
 |HTTP|Gerenciador de conexões HTTP|  
-|ODBC|gerenciador de conexões ODBC|  
+|ODBCODBC|gerenciador de conexões ODBC|  
 |OLEDB|gerenciador de conexões OLE DB|  
   
  Em geral, você pode usar um gerenciador de conexões [!INCLUDE[vstecado](../includes/vstecado-md.md)] de código gerenciado para se conectar a um ADO, Excel, ODBC ou fonte de dados OLE DB.  

@@ -15,10 +15,10 @@ ms.assetid: 2f0ebb2f-de10-482d-9806-1a5de5b312b8
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 1ebc4f10802f7a90dc828bab4b6f2aa1d01d6ccd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68058618"
 ---
 # <a name="logon-triggers"></a>Gatilhos de logon
@@ -69,7 +69,7 @@ END;
 -   Um erro com severidade maior que 20 é emitido dentro do corpo do gatilho.  
   
 ## <a name="disabling-a-logon-trigger"></a>Desabilitando um gatilho de logon  
- Um gatilho de logon pode, efetivamente, impedir conexões com o [!INCLUDE[ssDE](../../includes/ssde-md.md)] para todos os usuários, incluindo membros da função de servidor fixa **sysadmin** . Quando um gatilho de logon está impedindo conexões, os membros da função de servidor fixa **sysadmin** podem se conectar usando a conexão de administrador dedicada ou iniciando o [!INCLUDE[ssDE](../../includes/ssde-md.md)] no modo de configuração mínima (-f). Para obter mais informações, consulte [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md).  
+ Um gatilho de logon pode, efetivamente, impedir conexões com o [!INCLUDE[ssDE](../../includes/ssde-md.md)] para todos os usuários, incluindo membros da função de servidor fixa **sysadmin** . Quando um gatilho de logon está impedindo conexões, os membros da função de servidor fixa **sysadmin** podem se conectar usando a conexão de administrador dedicada ou iniciando o [!INCLUDE[ssDE](../../includes/ssde-md.md)] no modo de configuração mínima (-f). Para obter mais informações, consulte [Opções de inicialização do serviço Mecanismo de Banco de Dados](../../database-engine/configure-windows/database-engine-service-startup-options.md).  
   
 ## <a name="related-tasks"></a>Related Tasks  
   

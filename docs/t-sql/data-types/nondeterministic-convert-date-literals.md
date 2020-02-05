@@ -13,10 +13,10 @@ ms.author: mikeray
 ms.reviewer: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: eba0e28d8f2d5587a07308a4ffcbf5f7eaedf278
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68119848"
 ---
 # <a name="nondeterministic-conversion-of-literal-date-strings-into-date-values"></a>Conversão não determinística de cadeias de caracteres literais de data em valores de DATA
@@ -27,7 +27,7 @@ Você controla essas conversões não determinísticas considerado as configura�
 
 
 
-## <a name="set-language-example-month-name-in-polish"></a>Exemplo de SET LANGUAGE: Nome do mês em polonês
+## <a name="set-language-example-month-name-in-polish"></a>Exemplo de SET LANGUAGE: nome do mês em polonês
 
 - `SET LANGUAGE Polish;`
 
@@ -123,8 +123,8 @@ No exemplo de código anterior, o exemplo final tem uma incompatibilidade entre 
 
 Nosso artigo de documentação CAST e CONVERT lista códigos explícitos que você pode usar com a função CONVERT para controlar de _modo determinístico_ conversões de data. A cada mês, o artigo tem uma de nossas contagens de exibições de página mais altas.
 
-- [CAST e CONVERT (Transact-SQL): Estilos de data e hora](../functions/cast-and-convert-transact-sql.md#date-and-time-styles)
-- [CAST e CONVERT (Transact-SQL): Algumas conversões de datetime não são determinísticas](../functions/cast-and-convert-transact-sql.md#certain-datetime-conversions-are-nondeterministic)
+- [CAST e CONVERT (Transact-SQL): estilos de data e hora](../functions/cast-and-convert-transact-sql.md#date-and-time-styles)
+- [CAST e CONVERT (Transact-SQL): algumas conversões de datetime não são determinísticas](../functions/cast-and-convert-transact-sql.md#certain-datetime-conversions-are-nondeterministic)
 
 
 

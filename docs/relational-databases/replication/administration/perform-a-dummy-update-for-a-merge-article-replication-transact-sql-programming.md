@@ -17,10 +17,10 @@ ms.assetid: 2f339210-4d85-4843-bd94-e86f7100d3ef
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 05c3a91d647819126261f0637e0de24d0ce3e4fd
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75322024"
 ---
 # <a name="perform-a-dummy-update-for-a-merge-article-replication-transact-sql-programming"></a>Executar uma atualização fictícia para um artigo de mesclagem (Programação Transact-SQL de replicação)

@@ -12,22 +12,22 @@ ms.assetid: 99b71a1c-a72d-4ca9-9d00-4230c9042ba5
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 7f4bc66c40cb6940694c1a25c4430ba3cc83e7c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68116211"
 ---
-# <a name="mssqlserver11409"></a>MSSQLSERVER_11409
+# <a name="mssqlserver_11409"></a>MSSQLSERVER_11409
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|11409|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|ALTERCOL_COLSET_DROP|  
 |Texto da mensagem|Não é possível remover o conjunto de colunas '%.*ls' na tabela '%.\*ls' porque ela contém mais de 1.025 colunas.|  

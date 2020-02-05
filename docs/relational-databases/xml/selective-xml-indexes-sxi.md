@@ -11,10 +11,10 @@ ms.assetid: 598ecdcd-084b-4032-81b2-eed6ae9f5d44
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f176ba79cc42610d706bb56896a8ca073ea8185a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000711"
 ---
 # <a name="selective-xml-indexes-sxi"></a>SXI (índices XML seletivos)
@@ -120,7 +120,7 @@ FOR
   
 -   Indexação de nós com tipos XS binários: por exemplo, base64Binary e hexBinary.  
   
--   Especificação dos nós a serem indexados com expressões XPath que contêm o caractere curinga `*` no final: Por exemplo, `/a/b/c/*`, `/a//b/*` ou `/a/b/*:c`.  
+-   Especificação dos nós a serem indexados com expressões XPath que contêm o caractere curinga `*` ao final: por exemplo,  `/a/b/c/*`, `/a//b/*`ou `/a/b/*:c`.  
   
 -   Indexação de qualquer eixo que não seja o filho, o atributo ou o descendente. A ocorrência `//<step>` é permitida como um caso especial.  
   

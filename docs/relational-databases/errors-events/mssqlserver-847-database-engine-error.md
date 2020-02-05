@@ -12,10 +12,10 @@ ms.assetid: 67208b7c-bd8d-48a1-9f70-a6488e0f5f9b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: fc78c62c83530a0e5b7d5ee280addfd67e593fb6
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70874737"
 ---
 # <a name="mssqlserver_847"></a>MSSQLSERVER_847
@@ -25,11 +25,11 @@ ms.locfileid: "70874737"
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|847|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
-|Nome simbólico|N/A|  
+|Nome simbólico|N/D|  
 |Texto da mensagem|Tempo limite esgotado ao aguardar a trava: classe '%ls', id %p, tipo %d, Tarefa 0x%p : %d, tempo de espera %d, sinalizadores 0x%I64x, tarefa proprietária 0x%p. Continuando espera.|  
   
 ## <a name="explanation"></a>Explicação  

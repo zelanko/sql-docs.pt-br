@@ -14,17 +14,17 @@ ms.assetid: 93af982c-b4fe-4be0-8268-11f86dae27e1
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ef64d09c7f99f5081ebd1cbcdd7418614c3b41f1
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908752"
 ---
 # <a name="manage-filetables"></a>Gerenciar FileTables
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Descreve tarefas administrativas comuns para gerenciar FileTables.  
   
-##  <a name="HowToEnumerate"></a> Como Obter uma lista de FileTables e objetos relacionados  
+##  <a name="HowToEnumerate"></a> Como obter uma lista de FileTables e objetos relacionados  
  Para obter uma lista de FileTables, consulte um das exibições do catálogo a seguir:  
   
 -   [sys.filetables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filetables-transact-sql.md)  
@@ -79,7 +79,7 @@ GO
   
 -   Nenhum dos diretórios em nível de banco de dados na instância estará visível se FILESTREAM for desabilitado no nível de instância.  
   
-###  <a name="HowToDisable"></a> Como Desabilitar e reabilitar o acesso não transacional no nível de banco de dados  
+###  <a name="HowToDisable"></a> Como desabilitar e reabilitar o acesso não transacional no nível de banco de dados  
  Para obter mais informações, veja [Opções ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
  **Para desabilitar o acesso não transacional**  

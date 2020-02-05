@@ -26,10 +26,10 @@ author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 48eaf7f49976ed8784973c950887dc92252b08e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101900"
 ---
 # <a name="dbcc-freeproccache-transact-sql"></a>DBCC FREEPROCCACHE (Transact-SQL)
@@ -40,7 +40,7 @@ Remove todos os elementos do cache do plano, remove um plano específico do cach
 >[!NOTE]
 >DBCC FREEPROCCACHE não desmarca as estatísticas de execução para procedimentos armazenados compilados de modo nativo. O cache de procedimento não contém informações sobre procedimentos armazenados compilados de modo nativo. Todas as estatísticas de execução coletadas de execuções de procedimento serão exibidas nas DMVs de estatísticas de execução: [sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md) e [sys.dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md).  
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
 Sintaxe do SQL Server:
@@ -80,7 +80,7 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
  Suprime todas as mensagens informativas.  
   
  COMPUTE  
- Limpe o cache de planos de consulta de cada nó de Computação. Este é o valor padrão.  
+ Limpe o cache de planos de consulta de cada nó de Computação. Esse é o valor padrão.  
   
  ALL  
  Limpe o cache de planos de consulta de cada nó de Computação e do nó de Controle.  
@@ -88,7 +88,7 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
 > [!NOTE]
 > Começando pelo [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], o `ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE` para limpar o cache (plano) de procedimento para o banco de dados no escopo.
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 Use DBCC FREEPROCCACHE para limpar o cache do plano cuidadosamente. A limpeza do cache (plano) de procedimento faz com que todos os planos sejam removidos e as execuções de consulta de entrada compilarão um novo plano, em vez de reutilizar um plano anteriormente armazenado em cache. 
 
 Isso pode causar uma queda repentina e temporária no desempenho da consulta conforme o número de novas compilações aumenta. Para cada armazenamento em cache limpo no cache do plano, o log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conterá a seguinte mensagem informativa: "O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] encontrou %d ocorrências de liberação de armazenamento em cache '% s' (parte do cache do plano) devido às operações 'DBCC FREEPROCCACHE' ou 'DBCC FREESYSTEMCACHE'". Essa mensagem é registrada a cada cinco minutos, contanto que o cache seja liberado dentro desse intervalo de tempo.
@@ -112,7 +112,7 @@ As seguintes operações de reconfiguração também são limpas no cache de pro
 -   opções de usuário  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
-Quando a cláusula WITH NO_INFOMSGS não estiver especificada, DBCC FREEPROCCACHE retornará: "A execução do DBCC foi concluída. Se o DBCC imprimiu mensagens de erro, entre em contato com o administrador do sistema".
+Quando a cláusula WITH NO_INFOMSGS não for especificada, DBCC FREEPROCCACHE retornará: "Execução do DBCC concluída. Se o DBCC imprimiu mensagens de erro, entre em contato com o administrador do sistema".
   
 ## <a name="permissions"></a>Permissões  
 Aplica-se a: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 
@@ -137,7 +137,7 @@ Uma nova linha é adicionada à exibição do sistema sys.pdw_exec_requests quan
 
 ## <a name="examples-includessnoversionincludesssnoversion-mdmd"></a>Exemplos: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
-### <a name="a-clearing-a-query-plan-from-the-plan-cache"></a>A. Apagando um plano de consulta do cache do plano  
+### <a name="a-clearing-a-query-plan-from-the-plan-cache"></a>a. Apagando um plano de consulta do cache do plano  
 O exemplo a seguir apaga um plano de consulta do cache do plano especificando o identificador do plano de consulta. Para assegurar que a consulta de exemplo esteja no cache do plano, a consulta será executada primeiro. As exibições de gerenciamento dinâmico `sys.dm_exec_cached_plans` e `sys.dm_exec_sql_text` são consultadas para retornar o identificador de plano da consulta. 
 
 O valor do identificador do plano do conjunto de resultados é inserido na instrução `DBCC FREEPROCACHE` para remover apenas o plano em questão do cache do plano.

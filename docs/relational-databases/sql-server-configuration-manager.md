@@ -23,10 +23,10 @@ ms.assetid: e6beaea4-164c-4078-95ae-b9e28b0aefe8
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: b447e659b68ced56484296f4763a25e843022b06
-ms.sourcegitcommit: ab7209b5856537bfef0a6e9d0527d9002bd0a528
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75608015"
 ---
 # <a name="sql-server-configuration-manager"></a>SQL Server Configuration Manager

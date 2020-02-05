@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: aff46d7240cf504b02e75d91b75d0ba746a24752
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847567"
 ---
 # <a name="iclientvirtualdeviceset2opendevice-vdi"></a>IClientVirtualDeviceSet2::OpenDevice (VDI)
@@ -32,7 +32,7 @@ HRESULT IClientVirtualDeviceSet2::OpenDevice (
 );
 ```
 
-## <a name="parameters"></a>Parâmetros
+## <a name="parameters"></a>parâmetros
 
 *lpName* Isso identifica o dispositivo virtual.
 
@@ -48,7 +48,7 @@ HRESULT IClientVirtualDeviceSet2::OpenDevice (
 | VD_E_PROTOCOL | O conjunto não está no estado de inicialização ou esse dispositivo específico já está aberto. |
 | VD_E_INVALID | O nome do dispositivo é inválido. Não é um dos nomes considerados integrantes do conjunto. |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Comentários
 
 VD_E_OPEN pode ser retornado sem problemas. O cliente pode chamar OpenDevice por meio de um loop até que esse código seja retornado.
 Se mais de um dispositivo estiver configurado, por exemplo, n dispositivos, o conjunto de dispositivos virtuais retornará n interfaces de dispositivo exclusivas. O primeiro dispositivo tem o mesmo nome que o conjunto de dispositivos virtuais. Outros dispositivos são nomeados conforme especificado com as cláusulas VIRTUAL_DEVICE da instrução BACKUP/RESTORE.

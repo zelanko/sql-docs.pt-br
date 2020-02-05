@@ -13,13 +13,13 @@ ms.assetid: 21548f08-2910-4a55-baac-b911ba9afaf1
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3bcfcf089d8a50f9b94498cc68f12a4d6f0ac97f
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68770619"
 ---
-# <a name="hostname-values"></a>Valores HOST_NAME
+# <a name="host_name-values"></a>Valores HOST_NAME
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Asp ublicações de mesclagem com filtros com parâmetros usam a função SUSER_SNAME() e/ou a função HOST_NAME() para filtrar dados. A função é especificada no Assistente para Nova Publicação ou na caixa de diálogo **Propriedades de Publicação** .  

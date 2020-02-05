@@ -14,10 +14,10 @@ ms.assetid: 24d50fe1-c6ec-49e6-91a3-9791851ba53d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3a579fcf8809c8c05838dad70126421362cd8048
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042685"
 ---
 # <a name="modify-xml-indexes"></a>Modificar índices XML
@@ -51,7 +51,7 @@ ALTER INDEX PIdx_T_XmlCol on T
 SET (ALLOW_ROW_LOCKS = OFF)  
 ```  
   
-## <a name="example-disabling-and-enabling-an-xml-index"></a>Exemplo: Desabilitando e habilitando um índice XML  
+## <a name="example-disabling-and-enabling-an-xml-index"></a>Exemplo: Desabilitando e ativando um índice XML  
  Por padrão, um índice XML está habilitado. Se um índice XML for desabilitado, as consultas executadas na coluna XML não usarão o índice XML. Para habilitar um índice XML, use `ALTER INDEX` com a opção `REBUILD` .  
   
 ```  

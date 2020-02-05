@@ -27,10 +27,10 @@ ms.assetid: 2616d800-4853-4cf1-af77-d32d68d8c2ef
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 51707d97a738df13b7aae3c9e7208af76d440492
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68141061"
 ---
 # <a name="select-clause-transact-sql"></a>Cláusula SELECT (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "68141061"
 
   Especifica as colunas a serem retornadas pela consulta.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -67,7 +67,7 @@ SELECT [ ALL | DISTINCT ]
  **ALL**  
  Especifica que linhas duplicadas podem aparecer no conjunto de resultados. ALL é o padrão.  
   
- DISTINCT  
+ DISTINTO  
  Especifica que só linhas exclusivas podem aparecer no conjunto de resultados. Valores nulos são considerados iguais para os propósitos da palavra-chave DISTINCT.  
   
  TOP (*expression* ) [ PERCENT ] [ WITH TIES ]  
@@ -145,7 +145,7 @@ FROM Cities;
   
  *column_alias* pode ser usado em uma cláusula ORDER BY. Porém, não pode ser usado em uma cláusula WHERE, GROUP BY nem HAVING. Se a expressão de consulta fizer parte de uma instrução DECLARE CURSOR, *column_alias* não poderá ser usado na cláusula FOR UPDATE.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O tamanho dos dados retornados para as colunas **text** ou **ntext**, incluídas na lista de seleção é definido com o menor valor dos seguintes: o tamanho real da coluna **text**, a configuração padrão de sessão de TEXTSIZE ou o limite do aplicativo embutido em código. Para alterar o comprimento do texto retornado para a sessão, use a instrução SET. Por padrão, o limite no comprimento de dados de texto retornados com uma instrução SELECT é 4.000 bytes.  
   
  O [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] gerará a exceção 511 e reverterá a instrução atualmente em execução, se algum dos seguintes comportamentos ocorrer:  

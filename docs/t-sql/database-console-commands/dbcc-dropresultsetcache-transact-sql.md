@@ -13,10 +13,10 @@ author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: e46c70ad39a0f711a81b4ce87450da06ce07c083
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73729892"
 ---
 # <a name="dbcc-dropresultsetcache--transact-sql"></a>DBCC DROPRESULTSETCACHE (Transact-SQL)
@@ -38,7 +38,7 @@ DBCC DROPRESULTSETCACHE
 
 Requer associação à função de servidor fixa DB_OWNER.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Comentários
 
 - Esse comando esvazia o cache do conjunto de resultados para todas as consultas.  
 
@@ -48,7 +48,7 @@ Requer associação à função de servidor fixa DB_OWNER.
 
 ## <a name="see-also"></a>Confira também
 
-[Ajuste de desempenho com armazenamento em cache do conjunto de resultados](/azure/sql-data-warehouse/performance-tuning-result-set-caching)</br>
+[Ajuste de desempenho com cache de conjunto de resultados](/azure/sql-data-warehouse/performance-tuning-result-set-caching)</br>
 [Opções ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options?view=azure-sqldw-latest)</br>
 [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql?view=azure-sqldw-latest)</br>
 [SET RESULT SET CACHING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-result-set-caching-transact-sql)</br>

@@ -30,10 +30,10 @@ author: pmasl
 ms.author: umajay
 monikerRange: = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = azure-sqldw-latest||= sqlallproducts-allversions
 ms.openlocfilehash: 2a3c1885d6796977ea48585858fa5d2a271e6a46
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72798367"
 ---
 # <a name="dbcc-checkident-transact-sql"></a>DBCC CHECKIDENT (Transact-SQL)
@@ -85,14 +85,14 @@ DBCC CHECKIDENT
  WITH NO_INFOMSGS  
  Suprime todas as mensagens informativas.  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Comentários
 
  As correções específicas feitas no valor de identidade atual dependem das especificações de parâmetro.  
   
 |Comando DBCC CHECKIDENT|Correção de Identidade ou correções feitas|  
 |-----------------------------|---------------------------------------------|  
 |DBCC CHECKIDENT ( *table_name*, NORESEED )|Valor de identidade atual não é redefinido. DBCC CHECKIDENT retorna o valor de identidade atual e o valor máximo atual da coluna de identidade. Se os dois valores não coincidirem, redefina o valor de identidade para evitar erros em potencial ou intervalos na sequência de valores.|  
-|DBCC CHECKIDENT ( *table_name* )<br /><br /> ou em<br /><br /> DBCC CHECKIDENT ( *table_name*, RESEED )|Se o valor de identidade atual de uma tabela for menor que o valor de identidade máximo armazenado na coluna de identidade, ele será redefinido por meio do valor máximo na coluna de identidade. Consulte a seção de 'Exceções' a seguir.|  
+|DBCC CHECKIDENT ( *table_name* )<br /><br /> ou<br /><br /> DBCC CHECKIDENT ( *table_name*, RESEED )|Se o valor de identidade atual de uma tabela for menor que o valor de identidade máximo armazenado na coluna de identidade, ele será redefinido por meio do valor máximo na coluna de identidade. Consulte a seção de 'Exceções' a seguir.|  
 |DBCC CHECKIDENT ( *table_name*, RESEED, *new_reseed_value* )|O valor atual da identidade é definido como o *new_reseed_value*. Se nenhuma linha for inserida na tabela desde sua criação, ou se todas as linhas forem removidas usando a instrução TRUNCATE TABLE, a primeira linha inserida após a execução de DBCC CHECKIDENT usará *new_reseed_value* como a identidade. Se houver linhas na tabela ou se todas as linhas foram removidas usando a instrução DELETE, a próxima linha inserida usará *new_reseed_value* + o valor do [incremento atual](../../t-sql/functions/ident-incr-transact-sql.md). Se uma transação inserir uma linha e depois for revertida, a próxima linha inserida usará *new_reseed_value* + o valor do [incremento atual](../../t-sql/functions/ident-incr-transact-sql.md) como se a linha tivesse sido excluída. Se a tabela não estiver vazia, definir o valor de identidade em um número menor que o valor máximo na coluna de identidade poderá resultar em uma das seguintes condições:<br /><br /> Caso exista uma restrição PRIMARY KEY ou UNIQUE na coluna de identidade, a mensagem de erro 2627 será gerada em operações de inserção posteriores na tabela, porque o valor de identidade gerado estará em conflito com os valores existentes.<br /><br /> –Caso não exista uma restrição PRIMARY KEY ou UNIQUE, operações de inserção posteriores resultarão em valores de identidade duplicados.|  
   
 ## <a name="exceptions"></a>Exceções
@@ -101,7 +101,7 @@ DBCC CHECKIDENT
   
 |Condição|Métodos de redefinição|  
 |---------------|-------------------|  
-|O valor de identidade atual é maior do que o valor máximo na tabela.|Execute DBCC CHECKIDENT (*table_name*, NORESEED) para determinar o valor máximo atual na coluna. Em seguida, especifique esse valor como o *new_reseed_value* em um comando DBCC CHECKIDENT (*table_name*, RESEED, *new_reseed_value*).<br /><br /> -ou-<br /><br /> Execute DBCC CHECKIDENT (*table_name*, RESEED,*new_reseed_value*) com *new_reseed_value* definido como um valor muito baixo e, em seguida, execute (*table_name*, RESEED) para corrigir o valor.|  
+|O valor de identidade atual é maior do que o valor máximo na tabela.|Execute DBCC CHECKIDENT (*table_name*, NORESEED) para determinar o valor máximo atual na coluna. Em seguida, especifique esse valor como o *new_reseed_value* em um comando DBCC CHECKIDENT (*table_name*, RESEED, *new_reseed_value*).<br /><br /> -OU-<br /><br /> Execute DBCC CHECKIDENT (*table_name*, RESEED,*new_reseed_value*) com *new_reseed_value* definido como um valor muito baixo e, em seguida, execute (*table_name*, RESEED) para corrigir o valor.|  
 |Todas as linhas são excluídas da tabela.|Execute DBCC CHECKIDENT (*table_name*, RESEED,*new_reseed_value*) com *new_reseed_value* definido como o valor inicial desejado.|  
   
 ## <a name="changing-the-seed-value"></a>Alterando o valor de semente
@@ -134,7 +134,7 @@ O SQL Data Warehouse do Azure exige permissões de **db_owner**.
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-resetting-the-current-identity-value-if-its-needed"></a>A. Redefinindo o valor de identidade atual, se necessário  
+### <a name="a-resetting-the-current-identity-value-if-its-needed"></a>a. Redefinindo o valor de identidade atual, se necessário  
  O exemplo a seguir redefine o valor de identidade atual, quando necessário, da tabela especificada no banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
 ```sql

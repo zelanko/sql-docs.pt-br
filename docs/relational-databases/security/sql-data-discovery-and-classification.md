@@ -12,10 +12,10 @@ ms.date: 09/12/2019
 ms.author: mibar
 author: barmichal
 ms.openlocfilehash: 077a9a6be533ec05f9c062100d04bf02562f6066
-ms.sourcegitcommit: 4933934fad9f3c3e16406952ed964fbd362ee086
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75548357"
 ---
 # <a name="sql-data-discovery-and-classification"></a>Descoberta e classificação de dados SQL
@@ -188,8 +188,8 @@ FROM
 # <a name="t-sqltabt-sql"></a>[T-SQL](#tab/t-sql)
 Você pode usar o T-SQL para adicionar/remover classificações de coluna, bem como para recuperar todas as classificações para o banco de dados inteiro.
 
-- Adicione/atualize a classificação de uma ou mais colunas: [ADICIONAR A CLASSIFICAÇÃO DE CONFIDENCIALIDADE](https://docs.microsoft.com/sql/t-sql/statements/add-sensitivity-classification-transact-sql)
-- Remova a classificação de uma ou mais colunas: [REMOVER A CLASSIFICAÇÃO DE CONFIDENCIALIDADE](https://docs.microsoft.com/sql/t-sql/statements/drop-sensitivity-classification-transact-sql)
+- Adicione/atualize a classificação de uma ou mais colunas: [ADD SENSITIVITY CLASSIFICATION](https://docs.microsoft.com/sql/t-sql/statements/add-sensitivity-classification-transact-sql)
+- Remova a classificação de uma ou mais colunas: [DROP SENSITIVITY CLASSIFICATION](https://docs.microsoft.com/sql/t-sql/statements/drop-sensitivity-classification-transact-sql)
 
 # <a name="powershell-cmdlettabsql-powelshell"></a>[Cmdlet do PowerShell](#tab/sql-powelshell)
 Use o cmdlet do PowerShell para adicionar/remover classificações de coluna, bem como para recuperar todas as classificações e obter recomendações para todo o banco de dados.

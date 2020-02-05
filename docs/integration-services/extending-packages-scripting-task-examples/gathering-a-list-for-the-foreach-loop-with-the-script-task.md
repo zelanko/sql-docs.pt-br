@@ -16,10 +16,10 @@ ms.assetid: 694f0462-d0c5-4191-b64e-821b1bdef055
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0001806e1a8f0cba9a879297b4dab49367dd84a8
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297021"
 ---
 # <a name="gathering-a-list-for-the-foreach-loop-with-the-script-task"></a>Obtendo uma lista para o loop ForEach com a tarefa Script
@@ -32,7 +32,7 @@ ms.locfileid: "71297021"
 > [!NOTE]  
 >  Se desejar criar uma tarefa mais fácil de ser reutilizada em vários pacotes, procure utilizar o código desse exemplo de tarefa Script como o ponto inicial de uma tarefa personalizada. Para obter mais informações, consulte [Desenvolvendo uma tarefa personalizada](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
   
-## <a name="description"></a>Descrição  
+## <a name="description"></a>DESCRIÇÃO  
  O exemplo a seguir usa métodos do namespace **System.IO** para reunir uma lista de pastas de trabalho do Excel no computador, que são anteriores ou posteriores a um número de dias especificado pelo usuário em uma variável. Ele busca diretórios na Unidade C recursivamente para arquivos com a extensão .xls e verifica a data da última modificação em cada arquivo para determinar se o arquivo pertence a essa lista. Ele adiciona arquivos de qualificação a uma **ArrayList** e salva a **ArrayList** em uma variável para uso posterior em um contêiner do Loop de Foreach. O contêiner do Loop de Foreach é configurado para usar o Foreach de enumerador de Variável.  
   
 > [!NOTE]  

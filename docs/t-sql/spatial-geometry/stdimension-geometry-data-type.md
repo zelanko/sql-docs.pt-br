@@ -18,10 +18,10 @@ ms.assetid: 4fbd27dd-317b-4916-a8ae-4df1b8a6f27c
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 1feffb9116294c6dc77af5bae2552362fd8e532b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68107844"
 ---
 # <a name="stdimension-geometry-data-type"></a>STDimension (tipo de dados geometry)
@@ -39,9 +39,9 @@ Retorna a dimensão máxima de uma instância de **geometry**.
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **int**  
   
- Tipo de retorno CLR: **SqlInt32**  
+ Tipo de retorno do CLR: **SqlInt32**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  `STDimension()` retornará -1 se a instância de **geometry** estiver vazia.  
   
 ## <a name="examples"></a>Exemplos  
@@ -58,9 +58,9 @@ FROM @temp;
   
  O exemplo, então, retorna as dimensões de cada instância de `geometry`.  
   
-|NAME|dim|  
+|name|dim|  
 |----------|---------|  
-|Ponto|0|  
+|Point|0|  
 |LineString|1|  
 |Polygon|2|  
   

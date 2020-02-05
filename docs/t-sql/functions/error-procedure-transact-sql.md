@@ -25,18 +25,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 75e3664517ac0ce66f2a56499286303df81513ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68094677"
 ---
-# <a name="errorprocedure-transact-sql"></a>ERROR_PROCEDURE (Transact-SQL)
+# <a name="error_procedure-transact-sql"></a>ERROR_PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Esta função retorna o nome do procedimento armazenado ou gatilho no qual ocorreu um erro, caso esse erro tenha causado a execução do bloco CATCH de um constructo TRY...CATCH.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -54,14 +54,14 @@ Quando chamado em um bloco CATCH, `ERROR_PROCEDURE` retorna o nome do procedimen
   
 `ERROR_PROCEDURE` retorna NULL quando chamado fora do escopo de um bloco CATCH.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 `ERROR_PROCEDURE` dá suporte a chamadas em qualquer lugar dentro do escopo de um bloco CATCH.  
   
 `ERROR_PROCEDURE` retorna o nome do procedimento armazenado ou gatilho em que ocorre um erro, independentemente de quantas vezes ele é executado ou do local em que ele é executado dentro do escopo do bloco `CATCH`. É diferente de uma função como @@ERROR, que retorna apenas um número de erro na instrução imediatamente após àquela que causa um erro.  
    
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
   
-### <a name="a-using-errorprocedure-in-a-catch-block"></a>A. Usando ERROR_PROCEDURE em um bloco CATCH  
+### <a name="a-using-error_procedure-in-a-catch-block"></a>a. Usando ERROR_PROCEDURE em um bloco CATCH  
 Este exemplo mostra um procedimento armazenado que gera um erro de divisão por zero. `ERROR_PROCEDURE` retorna o nome do procedimento armazenado no qual ocorreu o erro.  
   
 ```  
@@ -98,7 +98,7 @@ usp_ExampleProc
 
 ```  
   
-### <a name="b-using-errorprocedure-in-a-catch-block-with-other-error-handling-tools"></a>B. Usando ERROR_PROCEDURE em um bloco CATCH com outras ferramentas de tratamento de erros  
+### <a name="b-using-error_procedure-in-a-catch-block-with-other-error-handling-tools"></a>B. Usando ERROR_PROCEDURE em um bloco CATCH com outras ferramentas de tratamento de erros  
 Este exemplo mostra um procedimento armazenado que gera um erro de divisão por zero. Junto com o nome do procedimento armazenado em que ocorreu o erro, o procedimento armazenado retorna informações sobre o erro.  
   
 ```  

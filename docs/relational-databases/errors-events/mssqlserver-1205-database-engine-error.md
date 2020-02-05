@@ -12,28 +12,28 @@ ms.assetid: 9fe3f67c-df3c-4642-a3a4-ccc0e138b632
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 402d3a3cdb3d1c8eb52feaede9ff1115e745c563
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68116028"
 ---
-# <a name="mssqlserver1205"></a>MSSQLSERVER_1205
+# <a name="mssqlserver_1205"></a>MSSQLSERVER_1205
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|1205|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|LK_VICTIM|  
 |Texto da mensagem|A transação (ID do processo %d) entrou em deadlock em %.*ls recursos com outro processo e foi escolhida como a vítima do deadlock. Execute a transação novamente.|  
   
 ## <a name="explanation"></a>Explicação  
-Os recursos foram acessados em ordem conflitante em transações separadas, causando um deadlock. Por exemplo:  
+Os recursos podem ser acessados em ordem conflitante em transações separadas, causando um deadlock. Por exemplo:  
   
 -   Transaction1 atualiza **Table1.Row1**, enquanto Transaction2 atualiza **Table2.Row2**.  
   
@@ -43,7 +43,7 @@ Os recursos foram acessados em ordem conflitante em transações separadas, caus
   
 -   Um deadlock acontece porque a Transação1 está esperando a conclusão da Transação2, mas a Transação2 está esperando a conclusão da Transação1.  
   
-O sistema detectará esse deadlock, escolherá uma das transações envolvidas como 'vítima', emitirá essa mensagem e reverterá a transação da vítima.  
+O sistema detecta o deadlock, escolhe uma das transações envolvidas como 'vítima' e emite a mensagem, revertendo a transação da vítima.  
   
 ## <a name="user-action"></a>Ação do usuário  
 Execute a transação novamente. Você também pode revisar o aplicativo para evitar deadlocks. A transação escolhida como vítima pode ser testada novamente e, provavelmente, terá êxito, dependendo de quais operações estiverem sendo executadas simultaneamente.  

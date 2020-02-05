@@ -13,10 +13,10 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: c5e5c8256c117ebd3fbb57b5a7c291b539c5a428
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68132249"
 ---
 # <a name="manage-and-monitor-semantic-search"></a>Gerenciar e monitorar a pesquisa semântica
@@ -99,7 +99,7 @@ GO
 ```  
   
 ##  <a name="HowToDisableIndexing"></a> Desabilitar ou reabilitar a indexação semântica  
- Você pode habilitar ou desabilitar a indexação de texto completo ou semântica usando a cláusula ENABLE/DISABLE com a mesma sintaxe e o comportamento descrito para índices de texto completo. Para obter mais informações, veja [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md).  
+ Você pode habilitar ou desabilitar a indexação de texto completo ou semântica usando a cláusula ENABLE/DISABLE com a mesma sintaxe e o comportamento descrito para índices de texto completo. Para obter mais informações, consulte [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md).  
   
  Quando a indexação semântica é desabilitada e suspensa, as consultas em dados semânticos continuam a funcionar com êxito e retornar dados previamente indexados. Esse comportamento não é consistente com o comportamento da Pesquisa de Texto Completo.  
   
@@ -133,7 +133,7 @@ GO
 2.  **Fase 2**. O índice semântico de similaridade de documentos é então populado. Esse índice depende de ambos os índices que foram populados na fase anterior.  
   
 ##  <a name="BestPracticeUnderstand"></a>   
-##  <a name="ProblemNotPopulated"></a> Problema: os índices semânticos não são populados  
+##  <a name="ProblemNotPopulated"></a> Problema: Os índices semânticos não são populados  
 ### <a name="are-the-associated-full-text-indexes-populated"></a>Os índices de texto completo associados estão populados?  
  Como a indexação semântica é dependente da indexação de texto completo, os índices semânticos são populados apenas quando os índices de texto completo associados são populados.  
   

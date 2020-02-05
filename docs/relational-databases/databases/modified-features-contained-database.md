@@ -13,10 +13,10 @@ ms.assetid: a2942509-39a2-4903-b504-ae80a300a9de
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3c85d6e423c63337be4d2eaf2f96c420a4f6ad33
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68067338"
 ---
 # <a name="modified-features-contained-database"></a>Recursos modificados (banco de dados independente)
@@ -45,8 +45,8 @@ ms.locfileid: "68067338"
   
  Tabelas temporárias podem não recorrer a tipos definidos pelo usuário, coleções de esquemas XML ou funções definidas pelo usuário.  
   
-## <a name="collation"></a>Ordenação  
- No modelo de banco de dados dependente, há três tipos de ordenação: Ordenação de banco de dados, ordenação de instância e ordenação de tempdb. Bancos de dados independentes usam apenas duas ordenações, ordenação de banco de dados e a nova ordenação de catálogo. Veja [Ordenações de banco de dados independentes](../../relational-databases/databases/contained-database-collations.md) para obter mais detalhes sobre a ordenação de banco de dados independente.  
+## <a name="collation"></a>Collation  
+ No modelo de banco de dados dependente, há três tipos separados de ordenação: ordenação de banco de dados, ordenação de Instância e ordenação de tempdb. Bancos de dados independentes usam apenas duas ordenações, ordenação de banco de dados e a nova ordenação de catálogo. Veja [Ordenações de banco de dados independentes](../../relational-databases/databases/contained-database-collations.md) para obter mais detalhes sobre a ordenação de banco de dados independente.  
   
 ## <a name="user-options"></a>Opções de usuário  
  Ao habilitar bancos de dados independentes, é preciso definir a [Opção user options](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md) como 0 para a instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

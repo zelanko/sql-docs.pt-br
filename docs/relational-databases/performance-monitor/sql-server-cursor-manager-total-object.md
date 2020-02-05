@@ -14,10 +14,10 @@ ms.assetid: e2c60a6d-be6f-4bb1-aaee-e464a4dc892c
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 6478c1b0f1e453fd10f18a403a00f471309f6f35
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67986687"
 ---
 # <a name="sql-server-cursor-manager-total-object"></a>SQL Server, objeto Cursor Manager Total
@@ -26,7 +26,7 @@ ms.locfileid: "67986687"
   
  Esta tabela descreve os contadores de **Total do Gerenciador de Cursor** do SQL Server.  
   
-|Contadores de Total do Gerenciador de Cursor|Descrição|  
+|Contadores de Total do Gerenciador de Cursor|DESCRIÇÃO|  
 |-----------------------------------|-----------------|  
 |**Contagem de população assíncrona**|Número de cursores sendo populados assincronamente.|  
 |**Taxa de conversão de cursor**|Número de conversões de cursor por segundo.|  

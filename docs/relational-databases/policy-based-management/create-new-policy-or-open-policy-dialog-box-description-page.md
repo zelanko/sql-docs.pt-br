@@ -12,10 +12,10 @@ ms.assetid: 8964399b-ece9-44cd-b7f6-c5f14c295cb2
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: b3d8afca0504f34d2d78794e5fddb0ffbf1a6562
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75558271"
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-description-page"></a>Caixas de diálogo Criar Nova Política ou Abrir Política, página Descrição

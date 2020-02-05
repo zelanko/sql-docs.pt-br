@@ -24,10 +24,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d835e68c767866a130ebb62c26fd315f5448416e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67947768"
 ---
 # <a name="between-transact-sql"></a>BETWEEN (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "67947768"
 
   Especifica um intervalo a ser testado.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -67,12 +67,12 @@ test_expression [ NOT ] BETWEEN begin_expression AND end_expression
   
  NOT BETWEEN retornará **TRUE** se o valor de *test_expression* for menor que o valor de *begin_expression* ou maior que o valor de *end_expression* .  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Para especificar um intervalo exclusivo, use os operadores maior que (>) e menor que (<). Se qualquer entrada para o predicado BETWEEN ou NOT BETWEEN for NULL, o resultado será UNKNOWN.  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-between"></a>A. Usando BETWEEN  
+### <a name="a-using-between"></a>a. Usando BETWEEN  
  O exemplo a seguir retorna informações sobre as funções de banco de dados em um banco de dados. A primeira consulta retorna todas as funções. O segundo exemplo usa a cláusula `BETWEEN` para limitar as funções aos valores `database_id` especificados.  
   
 ```sql  

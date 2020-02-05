@@ -12,10 +12,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 50411ab35801dea8db00dcea6f6d0109be954a02
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73594105"
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>Visão geral do gerenciamento de chaves do Always Encrypted
@@ -58,7 +58,7 @@ Considerando as funções acima, há duas maneiras de executar tarefas de gerenc
 ## <a name="managing-keys-with-role-separation"></a>Gerenciamento de chaves com separação de funções
 Quando chaves Always Encrypted forem gerenciadas com separação de funções, pessoas diferentes em uma organização assumem as funções de Administrador de Segurança e de DBA. Um processo de gerenciamento de chaves com separação de funções garante que DBAs não tenham acesso a chaves ou repositórios de chaves que contém chaves reais e os Administradores de Segurança não tenham acesso ao banco de dados que contêm dados confidenciais. É recomendável gerenciar as chaves com separação de funções se sua meta for garantir que os DBAs na sua organização não possam acessar dados confidenciais. 
 
-**Observação:** Os Administradores de Segurança geram e trabalham com as chaves de texto não criptografado, por isso eles nunca devem executar as respectivas tarefas nos mesmos computadores que hospedam um sistema de banco de dados ou computadores que possam ser acessados por administradores de banco de dados ou por outras pessoas que possam ser potenciais concorrentes. 
+**Observação:** Administradores de Segurança geram e trabalham com as chaves de texto não criptografado, por isso nunca devem executar suas tarefas nos mesmos computadores que hospedam um sistema de banco de dados ou computadores que podem ser acessados por DBAs ou outras pessoas que podem ser possíveis adversários. 
 
 ## <a name="managing-keys-without-role-separation"></a>Gerenciamento de chaves sem separação de funções
 Quando chaves Always Encrypted são gerenciadas sem a separação de funções, uma única pessoa pode assumir ambas as funções de Administrador de Segurança e de DBA, o que significa que a pessoa precisa ser capaz de acessar e gerenciar tanto as chaves/repositório de chaves quanto os metadados de chaves. Gerenciar chaves sem separação de funções pode ser recomendado para organizações que usam o modelo de DevOps ou se o banco de dados estiver hospedado na nuvem e o principal objetivo for impedir que os administradores de nuvem (mas não os DBAs locais) acessem dados confidenciais.
@@ -92,7 +92,7 @@ Para garantir que Always Encrypted seja eficaz na prevenção desses tipos de at
 - Nunca gere chaves mestras de coluna ou as chaves de criptografia de coluna em um computador que hospeda o banco de dados. Em vez disso, gere as chaves em um computador separado, dedicado para o gerenciamento de chaves ou que hospeda aplicativos que também precisarão de acesso às chaves. Isso significa que **você nunca deve executar ferramentas usadas para gerar as chaves no computador que hospeda o banco de dados**, pois se um invasor acessar um computador usado para provisionar ou manter as chaves Always Encrypted, ele terá a chance de poderá obter suas chaves, mesmo se elas aparecerem somente na memória da ferramenta por um curto período.
 - Para garantir que o processo de gerenciamento de chaves não revele inadvertidamente as chaves mestras de coluna ou as chaves de criptografia de coluna, é essencial identificar os possíveis adversários e ameaças de segurança antes de definir e implementar um processo de gerenciamento de chaves. Por exemplo, se sua meta é garantir que os DBAs não tenham acesso a dados confidenciais, um DBA não pode ser o responsável por gerar as chaves. Um DBA, no entanto, *pode* gerenciar metadados de chave no banco de dados, pois os metadados não contêm as chaves de texto não criptografado.
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Próximas etapas
 - [Configurar a criptografia de coluna usando o Assistente do Always Encrypted](always-encrypted-wizard.md)
 - [Criar e armazenar chaves mestras de coluna para Always Encrypted](create-and-store-column-master-keys-always-encrypted.md)
 - [Provisionar chaves Always Encrypted usando o SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md)

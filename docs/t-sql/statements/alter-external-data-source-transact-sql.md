@@ -19,10 +19,10 @@ ms.assetid: a34b9e90-199d-46d0-817a-a7e69387bf5f
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 236749303a05b54f37be5e24f10f56fc6f5bc41d
-ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71227153"
 ---
 # <a name="alter-external-data-source-transact-sql"></a>ALTER EXTERNAL DATA SOURCE (Transact-SQL)
@@ -68,13 +68,13 @@ ALTER EXTERNAL DATA SOURCE data_source_name
  CREDENTIAL = Credential_Name Especifica a credencial nomeada. Confira [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).
 
 TYPE = [HADOOP | BLOB_STORAGE]   
-**Aplica-se ao:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
+**Aplica-se a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
 Somente para operações em massa, `LOCATION` precisa ser a URL válida para o Armazenamento de Blobs do Azure. Não coloque **/** , nome de arquivo ou parâmetros de Assinatura de Acesso Compartilhado no final da URL de `LOCATION`.
 A credencial usada precisa ser criada usando `SHARED ACCESS SIGNATURE` como a identidade. Para mais informações sobre assinaturas de acesso compartilhado, consulte [Usando SAS (Assinatura de Acesso Compartilhado)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1).
 
   
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Comentários
  Somente uma única fonte pode ser modificada de cada vez. Solicitações simultâneas para modificar a mesma fonte fazem com que uma instrução precise esperar. No entanto, fontes diferentes podem ser modificados ao mesmo tempo. Essa instrução pode ser executada simultaneamente com outras instruções.
 
 ## <a name="permissions"></a>Permissões  

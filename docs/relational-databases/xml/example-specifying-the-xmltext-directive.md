@@ -1,5 +1,5 @@
 ---
-title: 'Exemplo: Especificando a diretiva XMLTEXT | Microsoft Docs'
+title: 'Exemplo: especificando a diretiva XMLTEXT | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/05/2017
 ms.prod: sql
@@ -13,10 +13,10 @@ ms.assetid: e78008ec-51e8-4fd1-b86f-1058a781de17
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 52e3d6ea8cff9d1984ee11a510a6c21833034c29
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006679"
 ---
 # <a name="example-specifying-the-xmltext-directive"></a>Exemplo: Especificando a diretiva XMLTEXT
@@ -127,7 +127,7 @@ FOR XML EXPLICIT
  </Parent>
  ```  
   
- Neste elemento de consulta, *directive* está especificada para o atributo `PersonName`. Isso resulta na adição de `PersonName` como um subelemento do elemento <`Parent`> de circunscrição. Os atributos do <`xmltext`> ainda estão anexados ao elemento <`Parent`> de circunscrição. O conteúdo do elemento e subelementos de <`overflow`> são pré-anexados a outros subelementos dos elementos <`Parent`> de circunscrição.  
+ Neste elemento de consulta, *directive* está especificada para o atributo `PersonName` . Isso resulta na adição de `PersonName` como um subelemento do elemento <`Parent`> de circunscrição. Os atributos do <`xmltext`> ainda estão anexados ao elemento <`Parent`> de circunscrição. O conteúdo do elemento e subelementos de <`overflow`> são pré-anexados a outros subelementos dos elementos <`Parent`> de circunscrição.  
   
 ```  
 SELECT 1      AS Tag, NULL as parent,  

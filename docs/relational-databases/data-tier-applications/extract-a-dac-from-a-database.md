@@ -20,10 +20,10 @@ ms.assetid: ae52a723-91c4-43fd-bcc7-f8de1d1f90e5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 86482b666c2ecfc5e9fcc09c1d06df14640386d0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68134789"
 ---
 # <a name="extract-a-dac-from-a-database"></a>Extrair um DAC de um banco de dados
@@ -161,6 +161,6 @@ $extractionunit.Extract($dacpacPath)
 ```  
   
 ## <a name="see-also"></a>Confira também  
- [Aplicativos da Camada de Dados](../../relational-databases/data-tier-applications/data-tier-applications.md)  
+ [Aplicativos da camada de dados](../../relational-databases/data-tier-applications/data-tier-applications.md)  
   
   

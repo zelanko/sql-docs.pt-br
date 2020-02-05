@@ -1,5 +1,5 @@
 ---
-title: 'Etapa 2: Criar o projeto de implantação | Microsoft Docs'
+title: 'Etapa 2: criar o projeto de implantação | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 59990fe2-7036-4e9c-8efc-6ece9e66eda7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 26803904c22953b919c568b2798ecf02ad6a94a7
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71283760"
 ---
 # <a name="lesson-1-2---creating-the-deployment-project"></a>Lição 1-2 – criar o projeto de implantação
@@ -43,7 +43,7 @@ No [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], a unidade que per
 8.  Por padrão, um pacote vazio, chamado Package.dtsx, é criado e adicionado ao seu projeto. Porém, você não usará este pacote; em vez disso, adicionará os pacotes existentes ao projeto. Como todos os pacotes em um projeto serão incluídos na implantação, você deverá excluir o Package.dtsx. Para excluí-lo, clique nele com o botão direito do mouse e clique em **Excluir**.  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
-[Etapa 3: Adicionar pacotes e outros arquivos](../integration-services/lesson-1-3-adding-packages-and-other-files.md)  
+[Etapa 3: Adicionando pacotes e outros arquivos](../integration-services/lesson-1-3-adding-packages-and-other-files.md)  
   
 ## <a name="see-also"></a>Consulte Também  
 [Projetos do Integration Services &#40;SSIS&#41;](~/integration-services/integration-services-ssis-projects-and-solutions.md)  

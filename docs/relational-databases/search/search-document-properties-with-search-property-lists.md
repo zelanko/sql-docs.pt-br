@@ -20,10 +20,10 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: b4251879180966f3e40d2e1d070be04c5f8e5547
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056105"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>Pesquisar propriedades de documento com listas de propriedades de pesquisa
@@ -74,7 +74,7 @@ ms.locfileid: "74056105"
   
 2.  Expanda **Bancos de Dados**e o banco de dados no qual você deseja criar a lista de propriedades de pesquisa.  
   
-3.  Expanda **Armazenamento**e clique com o botão direito do mouse em **Listas de Propriedades de Pesquisa**.  
+3.  Expanda **Armazenamento** e, em seguida, clique com o botão direito do mouse em **Listas de Propriedades de Pesquisa**.  
   
 4.  Selecione **Nova Lista de Propriedades de Pesquisa**.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "74056105"
   
 6.  Opcionalmente, especifique outra pessoa como proprietária da lista de propriedades.  
   
-7.  Selecione uma das opções a seguir:  
+7.  Selecione uma das seguintes opções:  
   
     -   **Criar uma lista de propriedades de pesquisa vazia**  
   
@@ -218,7 +218,7 @@ GO
   
 2.  Expanda **Bancos de Dados**e, em seguida, expanda o banco de dados.  
   
-3.  Expanda **Armazenamento**e o nó **Listas de Propriedades de Pesquisa** .  
+3.  Expanda **Armazenamento** e, em seguida, expanda o nó **Listas de Propriedades de Pesquisa**.  
   
 4.  Clique com o botão direito do mouse na lista de propriedades que você deseja excluir e clique em **Excluir**.  
   

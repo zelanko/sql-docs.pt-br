@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e61f8d9df3cb6dcaf545819d630c70bc18709d15
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68041779"
 ---
 # <a name="database-mirroring-system-object-reference"></a>Referência de objeto do sistema de espelhamento de banco de dados
@@ -21,14 +21,14 @@ ms.locfileid: "68041779"
   
 ## <a name="system-catalog-views"></a>Exibições de catálogo do sistema
 
-| Exibição de catálogo do sistema | Descrição|
+| Exibição de catálogo do sistema | DESCRIÇÃO|
 | :------ | :----------------------------- |
 | [sys.database_mirroring_witnesses](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)   | Contém uma linha para cada função testemunha desempenhada por um servidor em uma parceria de espelhamento de banco de dados. |
 | &nbsp; | &nbsp; |
 
 ## <a name="system-dynamic-management-views"></a>Exibições de gerenciamento dinâmico do sistema
 
-| Exibição de gerenciamento dinâmico do sistema | Descrição|
+| Exibição de gerenciamento dinâmico do sistema | DESCRIÇÃO|
 | :------ | :----------------------------- |
 | [sys.dm_db_mirroring_auto_page_repair](../../relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-auto-page-repair.md)   | Retorna uma linha para cada tentativa de reparo automático de página em qualquer banco de dados espelho na instância de servidor.  |
 | [sys.dm_db_mirroring_connections](../../relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections.md)    | Retorna uma linha para cada conexão estabelecida para espelhamento de banco de dados. |
@@ -36,7 +36,7 @@ ms.locfileid: "68041779"
 
 ## <a name="system-tables"></a>Tabelas do sistema
 
-| Tabela do sistema | Descrição|
+| Tabela do sistema | DESCRIÇÃO|
 | :------ | :----------------------------- |
 | [sysdbmaintplan_databases](../../relational-databases/system-tables/sysdbmaintplan-databases-transact-sql.md)   | Retorna informações sobre planos de manutenção de espelhamento de banco de dados. |
 | [sysdbmaintplan_history](../../relational-databases/system-tables/sysdbmaintplan-history-transact-sql.md)    | Retorna informações sobre o histórico dos planos de manutenção de espelhamento de banco de dados. |

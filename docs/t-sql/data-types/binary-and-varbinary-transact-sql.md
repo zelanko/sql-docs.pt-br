@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f844874da3ba4c7a644331f521293e1c0f94fed5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67940248"
 ---
 # <a name="binary-and-varbinary-transact-sql"></a>binary e varbinary (Transact-SQL)
@@ -38,7 +38,7 @@ Tipos de dados binários de comprimento fixo ou comprimento variável.
   
 **varbinary** [ ( _n_ | **max**) ] Dados binários de tamanho variável. _n_ pode ser um valor de 1 a 8.000. **max** indica que o tamanho de armazenamento máximo é de 2^31-1 bytes. O tamanho do armazenamento é o tamanho real dos dados inseridos + 2 bytes. Os dados inseridos podem ter 0 bytes de comprimento. O sinônimo ANSI SQL para **varbinary** é **binary varying**.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 O tamanho padrão é 1 quando _n_ não é especificado em uma definição de dados ou instrução de declaração de variável. Quando _n_ não é especificado com a função CAST, o tamanho padrão é 30.
 
 | Tipo de dados | Use quando... |

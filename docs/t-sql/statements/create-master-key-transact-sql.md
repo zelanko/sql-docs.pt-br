@@ -25,10 +25,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 64e05a3498a489cfa16d913b953b39c0d0ccb251
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71816841"
 ---
 # <a name="create-master-key-transact-sql"></a>CREATE MASTER KEY (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "71816841"
 
 Cria uma chave mestra de banco de dados no banco de dados mestre.
 
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -50,7 +50,7 @@ CREATE MASTER KEY [ ENCRYPTION BY PASSWORD ='password' ]
 
 PASSWORD ='*password*' É a senha usada para criptografar a chave mestra no banco de dados. A *password* deve atender aos requisitos da política de senha do Windows do computador que executa a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *password* é opcional no [!INCLUDE[ssSDS](../../includes/sssds-md.md)] e [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Comentários
 
 A chave mestra do banco de dados é uma chave simétrica usada para proteger as chaves privadas dos certificados e as chaves assimétricas presentes no banco de dados. Quando é criada, a chave mestra é criptografada com o algoritmo AES_256 e uma senha fornecida pelo usuário. No [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e no [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], o algoritmo DES triplo é usado. Para permitir a descriptografia automática da chave mestra, uma cópia da chave é criptografada usando a chave mestra de serviço e armazenada no banco de dados atual e no mestre. Normalmente, a cópia armazenada em mestre é silenciosamente atualizada sempre que a chave mestra é alterada. Esse padrão pode ser alterado com a opção DROP ENCRYPTION BY SERVICE MASTER KEY de [ALTER MASTER KEY](../../t-sql/statements/alter-master-key-transact-sql.md). Uma chave mestra não criptografada pela chave mestra de serviço deve ser aberta com a instrução [OPEN MASTER KEY](../../t-sql/statements/open-master-key-transact-sql.md) e uma senha.
 

@@ -15,10 +15,10 @@ ms.assetid: eec15906-d757-4079-b2f6-aca4e52b3b4c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 46eb7c7f0834f864aba8e3951f4caf9092f5bb7b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294198"
 ---
 # <a name="data-profiling-task-editor-general-page"></a>Editor da tarefa Criação de Perfil de Dados (página Geral)
@@ -54,10 +54,10 @@ ms.locfileid: "71294198"
  **DestinationType**  
  Especifique se deseja salvar a saída do perfil de dados para um arquivo ou uma variável:  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
-|**FileConnection**|Salve o perfil produzido em um arquivo no local especificado em um gerenciador de conexões do Arquivo.<br /><br /> Observação: Especifique qual gerenciador de conexões do Arquivo deve ser usado na opção **Destino**.|  
-|**Variável**|Salve a saída do perfil em uma variável de pacote.<br /><br /> Observação: Especifique qual variável de pacote deve ser usada na opção **Destino**.|  
+|**FileConnection**|Salve o perfil produzido em um arquivo no local especificado em um gerenciador de conexões do Arquivo.<br /><br /> Observação: especifique qual gerenciador de conexões do Arquivo deve ser usado na opção **Destino** .|  
+|**Variável**|Salve a saída do perfil em uma variável de pacote.<br /><br /> Observação: especifique qual variável de pacote deve ser usada na opção **Destino** .|  
   
  **Destino**  
  Especifique qual gerenciador de conexões do Arquivo ou variável de pacote contém a saída do perfil de dados:  

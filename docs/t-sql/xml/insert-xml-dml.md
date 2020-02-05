@@ -17,10 +17,10 @@ ms.assetid: 0c95c2b3-5cc2-4c38-9e25-86493096c442
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 95cf1eaa68e429d18456d7f0f9490b700efad3db
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68051291"
 ---
 # <a name="insert-xml-dml"></a>inserir (XML DML)
@@ -57,7 +57,7 @@ insert
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-inserting-element-nodes-into-the-document"></a>A. Inserção de nós de elemento no documento  
+### <a name="a-inserting-element-nodes-into-the-document"></a>a. Inserção de nós de elemento no documento  
  O exemplo a seguir ilustra como inserir elementos em um documento. Primeiro, um documento XML é atribuído a uma variável do tipo **XML**. Em seguida, por meio de várias instruções XML DML **insert** , o exemplo ilustra como nós de elemento são inseridos no documento. Depois de cada inserção, a instrução SELECT exibe o resultado.  
   
 ```  

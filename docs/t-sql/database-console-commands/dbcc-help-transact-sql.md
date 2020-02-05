@@ -19,10 +19,10 @@ ms.assetid: 306092c6-4354-4e47-928b-606124fbdc6e
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: eaad7e6f3e66bb39ec43f402c531b7f89bdcf980
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72251387"
 ---
 # <a name="dbcc-help-transact-sql"></a>DBCC HELP (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "72251387"
 
 Retorna informações de sintaxe para o comando especificado DBCC.
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -56,7 +56,7 @@ DBCC HELP retorna um conjunto de resultados que exibe a sintaxe para o comando D
 Exige associação à função de servidor fixa **sysadmin** .
   
 ## <a name="examples"></a>Exemplos  
-### <a name="a-using-dbcc-help-with-a-variable"></a>A. Usando DBCC HELP com uma variável  
+### <a name="a-using-dbcc-help-with-a-variable"></a>a. Usando DBCC HELP com uma variável  
 O exemplo a seguir retorna informações de sintaxe para o DBCC `CHECKDB`.
   
 ```sql  

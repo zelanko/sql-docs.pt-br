@@ -11,10 +11,10 @@ ms.assetid: 7a6c719a-3735-43b7-b3ab-dfadd325eca2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8662905f72262cede8913c2a549cbca0df470875
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294707"
 ---
 # <a name="how-to-edit-the-cdc-instance-properties"></a>Como editar as propriedades de instância CDC
@@ -38,11 +38,11 @@ ms.locfileid: "71294707"
   
 5.  No editor de Properties, edite as propriedades nas guias a seguir:  
   
-    -   **Oracle**: Use a guia **Oracle** no editor de Propriedades para fazer alterações na descrição fornecida na página Create CDC database no assistente de Nova Instância e fazer alterações nas informações de conexão de banco de dados de mineração de logs do Oracle.  
+    -   **Oracle**: use a guia **Oracle** no editor de Propriedades para fazer alterações na descrição fornecida na página Create CDC database no assistente de Nova Instância e fazer alterações nas informações de conexão de banco de dados de mineração de logs do Oracle.  
   
          Para obter mais informações sobre o que você pode editar nessa guia, consulte [Edit the Oracle Database Properties](../../integration-services/change-data-capture/edit-the-oracle-database-properties.md).  
   
-    -   **Tabelas**: Use a guia **Tables** para fazer alterações às tabelas e colunas selecionadas do banco de dados de origem Oracle.  
+    -   **Tables**: use a guia **Tables** para fazer alterações às tabelas e colunas selecionadas do banco de dados de origem Oracle.  
   
          Para obter mais informações sobre o que você pode editar nessa guia, consulte Edit [Edit Tables](../../integration-services/change-data-capture/edit-tables.md).  
   
@@ -50,7 +50,7 @@ ms.locfileid: "71294707"
   
          Para obter mais informações sobre o que você pode fazer nessa guia, consulte [Review and Generate Supplemental Logging Scripts](../../integration-services/change-data-capture/review-and-generate-supplemental-logging-scripts.md).  
   
-    -   **Avançado**: Use a guia **Advanced** para acrescentar propriedades especiais à instância de CDC.  
+    -   **Advanced**: use a guia **Advanced** para acrescentar propriedades especiais à instância de CDC.  
   
          Para obter mais informações sobre o que você pode fazer nessa guia, consulte [Edit the Advanced Properties](../../integration-services/change-data-capture/edit-the-advanced-properties.md).  
   

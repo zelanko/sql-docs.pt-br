@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0c871da0fcd20cffc2c6510d7084f79faefa2d50
-ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74412803"
 ---
 # <a name="application-pattern-for-partitioning-memory-optimized-tables"></a>Padrão de aplicativo para particionamento de tabelas com otimização de memória
@@ -37,7 +37,7 @@ ms.locfileid: "74412803"
   
 -   Adicione a partição ativa.  
   
- ![Opção de partição.](../../relational-databases/in-memory-oltp/media/hekaton-partitioned-tables.gif "|::ref1::|")  
+ ![Opção de partição.](../../relational-databases/in-memory-oltp/media/hekaton-partitioned-tables.gif "Opção de partição.")  
 Manutenção de dados ativos  
   
  As ações que começam com Excluir Ordens Ativas precisam ser executadas durante uma janela de manutenção para evitar consultas com dados ausentes durante o tempo entre a exclusão de dados e a alternância na tabela de preparo.  

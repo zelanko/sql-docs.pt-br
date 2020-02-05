@@ -15,10 +15,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
 ms.openlocfilehash: c54c1774622416adb213b31852941c934be7af24
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056199"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>Configurar e gerenciar arquivos de dicionário de sinônimos para Pesquisa de texto completo
@@ -115,7 +115,7 @@ Um arquivo de dicionário de sinônimos vazio típico contém o seguinte texto X
 </XML>  
 ```
 
-### <a name="expansion"></a> Estrutura XML de um conjunto de expansão  
+### <a name="expansion"></a> XML structure of an expansion set  
   
  Cada conjunto de expansão é incluído em um elemento `<expansion>`. Nesse elemento, você especifica uma ou mais substituições em um elemento `<sub>`. No conjunto de expansão, você pode especificar um grupo de substituições sinônimas umas das outras.  
   
@@ -131,7 +131,7 @@ A seção de conjuntos de expansão do exemplo anterior seria parecida com esta:
 </expansion>  
 ```  
   
-### <a name="replacement"></a> Estrutura XML de um conjunto de substituição  
+### <a name="replacement"></a> XML structure of a replacement set  
   
 Cada conjunto de substituição é incluído em um elemento `<replacement>`. Nesse elemento, é possível especificar um ou mais padrões em um elemento `<pat>` e zero ou mais substituições em elementos `<sub>`, um por sinônimo. Também pode especificar um padrão a ser substituído por um conjunto de substituição. Padrões e substituições podem conter uma palavra ou uma sequência de palavras. Se não houver uma substituição especificada para um padrão, isso será o mesmo que remover o padrão da consulta do usuário.  
   

@@ -18,10 +18,10 @@ ms.assetid: 9df00514-aa9d-4ac6-9766-d226c9958175
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 11670347380a3336068091601e739b28d4d34a39
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75321705"
 ---
 # <a name="enable-initialization-with-backup-for-transactional-publications"></a>Habilitar a inicialização com um backup para publicações transacionais

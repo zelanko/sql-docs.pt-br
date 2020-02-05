@@ -11,10 +11,10 @@ ms.assetid: 7f9be649-cd93-40c1-bc48-0480106f207c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 722db3a272c99ba6733551f4fa1a4131971e2416
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298733"
 ---
 # <a name="how-to-manage-a-local-cdc-service"></a>Como gerenciar um serviço CDC local
@@ -34,7 +34,7 @@ ms.locfileid: "71298733"
   
      Você também pode clicar com o botão direito no serviço CDC com o qual você deseja trabalhar e selecionar a ação desejada.  
   
-     **OU**  
+     **OR**  
   
      Selecione **Serviços Locais CDC** no painel esquerdo no Console de Configuração do Serviço CDC e selecione o serviço com o qual você quer trabalhar na seção do meio.  
   
@@ -61,6 +61,6 @@ ms.locfileid: "71298733"
          Você também pode clicar com o botão direito do mouse no serviço CDC em que deseja editar as propriedades e selecionar **Propriedades**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Manage an Oracle CDC Service](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md)  
+ [Gerenciar um serviço Oracle CDC](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md)  
   
   

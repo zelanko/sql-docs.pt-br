@@ -14,10 +14,10 @@ ms.assetid: edfbcd56-012f-462e-a542-95491394fda9
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 89126793193172dbdc35de2cb059a91173bb6faa
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296230"
 ---
 # <a name="installing-integration-services-versions-side-by-side"></a>Instalando as Versões do Integration Services Lado a Lado
@@ -26,7 +26,7 @@ ms.locfileid: "71296230"
 
 
   Você pode instalar   
-      [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] o Integration Services (SSIS) lado a lado com versões anteriores do SSIS. Este tópico descreve algumas limitações das instalações lado a lado.  
+      [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Integration Services (SSIS) lado a lado com versões anteriores do SSIS. Este tópico descreve algumas limitações das instalações lado a lado.  
   
 ## <a name="designing-and-maintaining-packages"></a>Criação e manutenção de pacotes  
  Para criar e manter pacotes destinados ao SQL Server 2016, SQL Server 2014 ou SQL Server 2012, use o SQL Server Data Tools (SSDT) para Visual Studio 2015. Para obter o SSDT, consulte [Baixar o SQL Server Data Tools mais recente](../../ssdt/download-sql-server-data-tools-ssdt.md).  
@@ -36,8 +36,8 @@ ms.locfileid: "71296230"
 |Versão de destino do SQL Server|Ambiente de desenvolvimento para os pacotes do SSIS|  
 |----------------------------------|-----------------------------------------------|  
 |2016|SQL Server Data Tools para Visual Studio 2015|  
-|2014|SQL Server Data Tools para Visual Studio 2015<br /><br /> ou em<br /><br /> SQL Server Data Tools - Business Intelligence para Visual Studio 2013|  
-|2012|SQL Server Data Tools para Visual Studio 2015<br /><br /> ou em<br /><br /> SQL Server Data Tools – Business Intelligence para Visual Studio 2012|  
+|2014|SQL Server Data Tools para Visual Studio 2015<br /><br /> ou<br /><br /> SQL Server Data Tools - Business Intelligence para Visual Studio 2013|  
+|2012|SQL Server Data Tools para Visual Studio 2015<br /><br /> ou<br /><br /> SQL Server Data Tools – Business Intelligence para Visual Studio 2012|  
 |2008|Business Intelligence Development Studio do SQL Server 2008|  
   
  Quando você adiciona um pacote existente a um projeto existente, o pacote é convertido para o formato de destino do projeto.  

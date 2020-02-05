@@ -9,10 +9,10 @@ ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8fd6ed8e0831c6dc0699ddd1efa13ba1d46a3633
-ms.sourcegitcommit: ef830f565ee07dc7d4388925cc3c86c5d2cfb4c7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/09/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74947153"
 ---
 # <a name="deploy-an-ssis-project-from-the-command-prompt-with-isdeploymentwizardexe"></a>Implantar um projeto do SSIS por meio do prompt de comando com ISDeploymentWizard.exe
@@ -51,7 +51,7 @@ Para implantar o projeto no Banco de Dados SQL do Azure, obtenha as informaçõe
 
 ## <a name="supported-authentication-method"></a>Método de autenticação compatível
 
-Confira os [métodos de autenticação para implantação](ssis-quickstart-deploy-ssms.md#authentication-methods-for-deployment).
+Confira [métodos de autenticação para implantação](ssis-quickstart-deploy-ssms.md#authentication-methods-for-deployment).
 
 ## <a name="start-the-integration-services-deployment-wizard"></a>Iniciar o Assistente de Implantação do Integration Services
 1. Abra uma janela de Prompt de Comando.

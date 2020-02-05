@@ -11,10 +11,10 @@ ms.assetid: 13a8f879-274f-4934-a722-b4677fc9a782
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: cdc58884e65fb243bbb75f257e19ccef3faa2b9f
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908942"
 ---
 # <a name="delete-backup-blob-files-with-active-leases"></a>Excluir arquivos de blob de backup com concessões ativas
@@ -33,14 +33,14 @@ Se houver uma falha na restauração, as próximas restaurações não serão bl
 
 As etapas a seguir descrevem como efetuar a limpeza após uma atividade de restauração ou backup com falha. Você pode realizar todas as etapas usando scripts do PowerShell. A seção a seguir inclui um exemplo de script do PowerShell:  
   
-1. **Identificar blobs com concessões:** Se houver um script ou um processo que execute os processos de backup, você poderá capturar a falha no script ou no processo e usá-la para limpar os blobs.  Você também pode usar o LeaseStats e as propriedades do LeastState para identificar blobs que contêm concessões. Depois de ter identificado os blobs, examine a lista e verifique a validade do arquivo de backup antes de excluir o blob.  
+1. **Identificar os blobs com concessões:** se houver um script ou um processo que execute os processos de backup, você poderá capturar a falha no script ou no processo e usá-la para limpar os blobs.  Você também pode usar o LeaseStats e as propriedades do LeastState para identificar blobs que contêm concessões. Depois de ter identificado os blobs, examine a lista e verifique a validade do arquivo de backup antes de excluir o blob.  
   
-1. **Interromper a concessão:** Uma solicitação autorizada pode interromper a concessão sem fornecer uma ID de concessão. Consulte [aqui](https://go.microsoft.com/fwlink/?LinkID=275664) para obter mais informações.  
+1. **Interromper a concessão:** uma solicitação autorizada pode interromper a concessão sem fornecer uma ID de concessão. Consulte [aqui](https://go.microsoft.com/fwlink/?LinkID=275664) para obter mais informações.  
   
     > [!TIP]  
     > O SQL Server emite uma ID de concessão para estabelecer o acesso exclusivo durante a operação de restauração. A ID de concessão da restauração é BAC2BAC2BAC2BAC2BAC2BAC2BAC2BAC2.  
   
-1. **Excluir o Blob:** Para excluir um blob com uma concessão ativa, primeiro, é necessário interromper a concessão.  
+1. **Excluir o Blob:** para excluir um blob com uma concessão ativa, primeiro você deve interromper a concessão.  
 
 ###  <a name="Code_Example"></a> Exemplo de script do PowerShell  
   
@@ -127,4 +127,4 @@ if($lockedBlobs.Count -gt 0)
   
 ## <a name="see-also"></a>Confira também
 
-[Práticas recomendadas e solução de problemas de backup do SQL Server para URL](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
+[Solução de problemas e melhores práticas de backup do SQL Server para URL](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  

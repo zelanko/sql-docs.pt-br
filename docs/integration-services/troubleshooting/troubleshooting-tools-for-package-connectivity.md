@@ -18,10 +18,10 @@ ms.assetid: 08a019f5-8ba7-4527-97c1-e9846d4022ff
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 70e53f37056357fbaff315d6cd432b2171eb478b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295058"
 ---
 # <a name="troubleshooting-tools-for-package-connectivity"></a>Solucionando problemas de ferramentas para conectividade de pacote
@@ -74,6 +74,6 @@ O [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] contém recursos
   
 ## <a name="see-also"></a>Consulte Também  
  [Solucionando problemas de ferramentas para desenvolvimento de pacotes](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)   
- [Solucionando problemas de ferramentas para execução de pacotes](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
+ [Ferramentas de solução de problemas de execução de pacote](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
   

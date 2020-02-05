@@ -18,10 +18,10 @@ ms.assetid: 4dc5a004-7a53-4cce-81dd-9f5e1dd0db78
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 5663bc7a7236a49b6b97c41ed5c96e53f337c186
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930162"
 ---
 # <a name="stcentroid-geometry-data-type"></a>STCentroid (tipo de dados geometry)
@@ -39,16 +39,16 @@ Retorna o centro geométrico de uma instância de **geometry** que consiste em u
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Tipo de retorno CLR: **SqlGeometry**  
+ Tipo de retorno do CLR: **SqlGeometry**  
   
- Tipo OGC (Open Geospatial Consortium): **Ponto**  
+ Tipo do OGC (Open Geospatial Consortium): **Point**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  `STCentroid()` retorna nulo se a instância de **geometry** não é um tipo **Polygon, CurvePolygon** ou **MultiPolygon**.  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-computing-the-centroid-of-a-polygon-instance"></a>A. Calculando o centroide de uma instância de Polígono  
+### <a name="a-computing-the-centroid-of-a-polygon-instance"></a>a. Calculando o centroide de uma instância de Polígono  
  O seguinte exemplo usa `STCentroid()` para calcular o centroide de uma instância de `polygon``geometry`:  
   
 ```  

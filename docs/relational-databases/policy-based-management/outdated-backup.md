@@ -13,10 +13,10 @@ ms.assetid: 307a4ad0-675a-4f97-9a3c-cedd61bdfae5
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 929262bc559730b99407415a9b907091a479289f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68087030"
 ---
 # <a name="outdated-backup"></a>Backup desatualizado
@@ -47,6 +47,6 @@ ms.locfileid: "68087030"
  [Backups de log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Monitorar e impor práticas recomendadas usando o Gerenciamento Baseado em Políticas](../../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
+ [Monitorar e impor melhores práticas usando o gerenciamento baseado em políticas](../../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
   
   

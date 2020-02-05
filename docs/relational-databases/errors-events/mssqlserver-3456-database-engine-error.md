@@ -12,25 +12,25 @@ ms.assetid: d11b2b2c-3ae4-4023-b82f-05b561bfacce
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 9f60c9b7f02748e4dcd99e214fcbcd12505f203d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68043598"
 ---
-# <a name="mssqlserver3456"></a>MSSQLSERVER_3456
+# <a name="mssqlserver_3456"></a>MSSQLSERVER_3456
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|3456|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|REC_REDOLSNMISMATCH|  
-|Texto da mensagem|Não foi possível refazer o registro de log %S_LSN, para ID de transação %S_XID, na página %S_PGID, banco de dados '%.*ls' (ID de banco de dados %d). Página: LSN = %S_LSN, type = %ld. Log: OpCode = %ld, contexto %ld, PrevPageLSN: %S_LSN. Restaure de um backup do banco de dados ou repare o banco de dados.|  
+|Texto da mensagem|Não foi possível refazer o registro de log %S_LSN, para ID de transação %S_XID, na página %S_PGID, banco de dados '%.*ls' (ID de banco de dados %d). Página: LSN = %S_LSN, tipo = %ld. Log: OpCode = %ld, contexto %ld, PrevPageLSN: %S_LSN. Restaure de um backup do banco de dados ou repare o banco de dados.|  
   
 ## <a name="explanation"></a>Explicação  
 A operação de restauração não pôde refazer o log de transação. Esse erro colocou o banco de dados no estado SUSPECT. O grupo de arquivos primário, e possivelmente outros grupos de arquivos, estão sob suspeita e podem estar danificados. O banco de dados não pode ser recuperado durante a inicialização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e, portanto, não está disponível. Ação do usuário é necessária para resolver o problema.  
@@ -45,7 +45,7 @@ Para obter informações sobre a causa dessa ocorrência do erro 3456, examine o
 ## <a name="see-also"></a>Consulte Também  
 [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql-set-options.md)  
 [DBCC CHECKDB &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  
-[Restaurações completas de banco de dados &#40;modelo de recuperação simples#41;](~/relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md)  
+[Restaurações completas de banco de dados &#40;Modelo de recuperação simples#41;](~/relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md)  
 [MSSQLSERVER_824](~/relational-databases/errors-events/mssqlserver-824-database-engine-error.md)  
 [sys.databases &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
   

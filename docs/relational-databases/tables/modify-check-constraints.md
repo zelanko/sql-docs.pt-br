@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b0aeeeab2e90ebd90068be44f817cd6bd65af061
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907272"
 ---
 # <a name="modify-check-constraints"></a>Modificar restrições de verificação
@@ -70,9 +70,9 @@ ms.locfileid: "72907272"
     > [!NOTE]  
     >  Alguns bancos de dados têm funcionalidade diferente para restrições de verificação.  
   
-5.  Clique em **Fechar**.  
+5.  Clique em **fechar**  
   
-6.  No menu **Arquivo** , clique em **Salvar**_table name_.  
+6.  No menu **Arquivo**, clique em **Salvar**_nome da tabela_.  
 
 ##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  **Para modificar uma restrição de verificação**  

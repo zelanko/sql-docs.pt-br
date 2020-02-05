@@ -12,22 +12,22 @@ ms.assetid: 121cf99d-0722-494c-be24-3369c1a0badc
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 73aa376cc47b649b6c9cba336a61ab734a0ae3a1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68103660"
 ---
-# <a name="mssqlserver2534"></a>MSSQLSERVER_2534
+# <a name="mssqlserver_2534"></a>MSSQLSERVER_2534
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|2534|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|DBCC_PAGE_ALLOCATED_TO_OTHER_OBJECT|  
 |Texto da mensagem|Erro de tabela: a página P_ID, cujo cabeçalho indica que está alocada na ID de objeto O_ID, ID de índice I_ID, ID de partição PN_ID, ID de unidade de alocação A_ID (tipo TYPE), está alocada por outro objeto.|  

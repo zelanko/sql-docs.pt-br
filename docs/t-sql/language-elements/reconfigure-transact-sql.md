@@ -23,10 +23,10 @@ ms.assetid: 2e6e4eeb-b70b-4f45-a253-28ac4e595d75
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 6ee52f585af8930afcba301a5aba12df4eb47173
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072386"
 ---
 # <a name="reconfigure-transact-sql"></a>RECONFIGURE (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68072386"
 
   Atualiza o valor configurado atualmente (a coluna **config_value** no conjunto de resultados **sp_configure**) de uma opção de configuração alterada com o procedimento armazenado do sistema **sp_configure**. Como algumas opções de configuração requerem uma parada e um reinício do servidor para atualizar o valor em execução no momento, RECONFIGURE nem sempre atualiza o valor em execução no momento (a coluna **run_value** do conjunto de resultados **sp_configure**) para um valor de configuração alterado.    
     
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
     
 ## <a name="syntax"></a>Sintaxe    
     
@@ -52,7 +52,7 @@ RECONFIGURE [ WITH OVERRIDE ]
     
  Quase todas as opções de configuração podem ser reconfiguradas usando a opção WITH OVERRIDE, no entanto, alguns erros fatais ainda são evitados. Por exemplo, a opção de configuração **min server memory** não pode ser definida com um valor maior que o especificado na opção de configuração**max server memory**.
       
-## <a name="remarks"></a>Remarks    
+## <a name="remarks"></a>Comentários    
  **sp_configure** não aceita novos valores de opção de configuração fora dos intervalos válidos documentados para cada opção de configuração.    
     
  RECONFIGURE não é permitido em uma transação explícita ou implícita. Ao reconfigurar várias opções ao mesmo tempo, se alguma das operações de reconfiguração falhar, nenhuma delas entrará em vigor.    

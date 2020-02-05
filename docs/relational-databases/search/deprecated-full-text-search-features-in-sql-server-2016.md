@@ -16,10 +16,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: daf20c621f00529313498c4802cd1d7dfce0fd8b
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056219"
 ---
 # <a name="deprecated-full-text-search-features-in-sql-server-2016"></a>Recursos preteridos da pesquisa de texto completo no SQL Server 2016
@@ -38,10 +38,10 @@ Monitore seu uso de recursos preteridos usando o contador de desempenho do objet
 |sp_fulltext_catalog|CREATE FULL CATALOG<br /><br /> ALTER FULLTEXT CATALOG<br /><br /> DROP FULLTEXT CATALOG|sp_fulltext_catalog|84|  
 |sp_fulltext_column<br /><br /> sp_fulltext_database<br /><br /> sp_fulltext_table|CREATE FULL INDEX<br /><br /> ALTER FULLTEXT INDEX<br /><br /> DROP FULLTEXT INDEX|sp_fulltext_column<br /><br /> sp_fulltext_database<br /><br /> sp_fulltext_table|86<br /><br /> 87<br /><br /> 85|  
 |sp_help_fulltext_catalogs<br /><br /> sp_help_fulltext_catalog_components<br /><br /> sp_help_fulltext_catalogs_cursor<br /><br /> sp_help_fulltext_columns<br /><br /> sp_help_fulltext_columns_cursor<br /><br /> sp_help_fulltext_tables<br /><br /> sp_help_fulltext_tables_cursor|sys.fulltext_catalogs<br /><br /> sys.fulltext_index_columns<br /><br /> sys.fulltext_indexes|sp_help_fulltext_catalogs<br /><br /> sp_help_fulltext_catalog_components<br /><br /> sp_help_fulltext_catalogs_cursor<br /><br /> sp_help_fulltext_columns<br /><br /> sp_help_fulltext_columns_cursor<br /><br /> sp_help_fulltext_table<br /><br /> sp_help_fulltext_tables_cursor|88<br /><br /> 203<br /><br /> 90<br /><br /> 92<br /><br /> 93<br /><br /> 91<br /><br /> 89|  
-|Os valores da ação sp_fulltext_service: clean_up, connect_timeout e data_timeout retornam zero|None|sp_fulltext_service @action=clean_up<br /><br /> sp_fulltext_service @action=connect_timeout<br /><br /> sp_fulltext_service @action=data_timeout|116<br /><br /> 117<br /><br /> 118|  
+|Os valores da ação sp_fulltext_service: clean_up, connect_timeout e data_timeout retornam zero|Nenhum|sp_fulltext_service @action=clean_up<br /><br /> sp_fulltext_service @action=connect_timeout<br /><br /> sp_fulltext_service @action=data_timeout|116<br /><br /> 117<br /><br /> 118|  
 |Colunas de sys.dm_fts_active_catalogs:<br /><br /> is_paused<br /><br /> previous_status<br /><br /> previous_status_description<br /><br /> row_count_in_thousands<br /><br /> status<br /><br /> status_description<br /><br /> worker_count|Nenhum.|dm_fts_active_catalogs.is_paused<br /><br /> dm_fts_active_catalogs.previous_status<br /><br /> dm_fts_active_catalogs.previous_status_description<br /><br /> dm_fts_active_catalogs.row_count_in_thousands<br /><br /> dm_fts_active_catalogs.status<br /><br /> dm_fts_active_catalogs.status_description<br /><br /> dm_fts_active_catalogs.worker_count|218<br /><br /> 221<br /><br /> 222<br /><br /> 224<br /><br /> 219<br /><br /> 220<br /><br /> 223|  
 |Coluna de sys.dm_fts_memory_buffers:<br /><br /> row_count|Nenhum.|dm_fts_memory_buffers.row_count|225|  
-|Colunas de sys.fulltext_catalogs:<br /><br /> path<br /><br /> data_space_id<br /><br /> Colunas de file_id|Nenhum.|fulltext_catalogs.path<br /><br /> fulltext_catalogs.data_space_id<br /><br /> fulltext_catalogs.file_id|215<br /><br /> 216<br /><br /> 217|  
+|Colunas de sys.fulltext_catalogs:<br /><br /> caminho<br /><br /> data_space_id<br /><br /> Colunas de file_id|Nenhum.|fulltext_catalogs.path<br /><br /> fulltext_catalogs.data_space_id<br /><br /> fulltext_catalogs.file_id|215<br /><br /> 216<br /><br /> 217|  
   
 ## <a name="features-not-supported-in-a-future-version-of-sql-server"></a>Recursos sem suporte em uma versão futura do SQL Server  
  Os recursos de pesquisa de texto completo a seguir terão suporte na próxima versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mas serão removidos em uma versão posterior. A versão específica do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não foi determinada.  
@@ -54,7 +54,7 @@ Monitore seu uso de recursos preteridos usando o contador de desempenho do objet
 |Opção CREATE FULLTEXT CATALOG:<br /><br /> IN PATH '*rootpath*'<br /><br /> ON FILEGROUP *filegroup*|Nenhum.|CREATE FULLTEXT CATLOG IN PATH<br /><br /> Nenhum.<sup>*</sup>|237<br /><br /> Nenhum.*|  
 |Propriedade DATABASEPROPERTYEX: IsFullTextEnabled|Nenhum.|DATABASEPROPERTYEX **('IsFullTextEnabled')**|202|  
 |Opção sp_detach_db:<br /><br /> [ @keepfulltextindexfile = ] '*KeepFulltextIndexFile*'|Nenhum.|sp_detach_db @keepfulltextindexfile|226|  
-|Os valores da ação sp_fulltext_service: resource_usage não têm nenhuma função.|None|sp_fulltext_service @action=resource_usage|200|  
+|Os valores da ação sp_fulltext_service: resource_usage não têm nenhuma função.|Nenhum|sp_fulltext_service @action=resource_usage|200|  
   
  &#42;O objeto **SQL Server:Deprecated Features** não monitora ocorrências do *grupo de arquivos* CREATE FULLTEXT CATLOG ON FILEGROUP.  
   

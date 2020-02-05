@@ -19,10 +19,10 @@ ms.assetid: abc865d0-57a8-49da-8821-29457c808d2a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 3aa388dd079de10f18abbb39d240f3d57d1e2efd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914382"
 ---
 # <a name="partition-transact-sql"></a>$PARTITION (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "67914382"
 
   Retorna o número da partição na qual um conjunto de valores de coluna de particionamento são mapeados para qualquer função de partição especificada no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -52,14 +52,14 @@ ms.locfileid: "67914382"
 ## <a name="return-types"></a>Tipos de retorno  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  $PARTITION retorna um valor **int** entre 1 e o número de partições da função de partição.  
   
  $PARTITION retorna o número de partição para qualquer valor válido, independentemente de o valor existir atualmente em um índice ou uma tabela particionada que use a função de partição.  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-getting-the-partition-number-for-a-set-of-partitioning-column-values"></a>A. Obtendo o número de partições para um conjunto de valores de coluna de particionamento  
+### <a name="a-getting-the-partition-number-for-a-set-of-partitioning-column-values"></a>a. Obtendo o número de partições para um conjunto de valores de coluna de particionamento  
  O exemplo a seguir cria uma função de partição `RangePF1` que dividirá uma tabela ou índice em quatro partições. $PARTITION é usado para determinar se o valor `10`, representando a coluna de particionamento de `RangePF1`, será colocado na partição 1 da tabela.  
   
 ```  

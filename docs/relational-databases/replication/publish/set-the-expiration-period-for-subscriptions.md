@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 542f0613-5817-42d0-b841-fb2c94010665
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 9f7948fa600f68b23f5279de8a286044c8f6b245
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 6dc18d925e014ccd17303e4e3d2698ad72b3758d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70846547"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287531"
 ---
 # <a name="set-the-expiration-period-for-subscriptions"></a>Definir o período de validade da assinatura
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -101,6 +101,6 @@ ms.locfileid: "70846547"
   
 ## <a name="see-also"></a>Consulte Também  
  [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
- [Subscription Expiration and Deactivation](../../../relational-databases/replication/subscription-expiration-and-deactivation.md)  
+ [Desativação e expiração de assinatura](../../../relational-databases/replication/subscription-expiration-and-deactivation.md)  
   
   

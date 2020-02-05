@@ -18,10 +18,10 @@ ms.assetid: e2a1a4f1-211b-4e82-abed-03fc7140a83c
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 9c4660fa212a85f3bba5812d6cc990f9c02c5539
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101749"
 ---
 # <a name="reorientobject-geography-data-type"></a>ReorientObject (tipo de dados geography)
@@ -45,9 +45,9 @@ _geografia_
 ## <a name="return-value"></a>Valor retornado  
 Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
-Tipo de retorno CLR: **SqlGeography**  
+Tipo de retorno do CLR: **SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 Esse método altera a orientação do anel de todos os **Polygons** em uma **GeometryCollection**, mas não remove nem altera **Points** ou **LineStrings** na coleção especificada.  
   
 Se você passar uma **GeometryCollection** para esse método, cada instância na coleção será orientada novamente como resultado, mas a coleção como um todo não será orientada novamente.  

@@ -12,22 +12,22 @@ ms.assetid: 989b527f-5b02-403c-9b7f-51580f4e7688
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: f0b8a226e1376aa705ec3644aacbbc761cc1014b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68138591"
 ---
-# <a name="mssqlserver2512"></a>MSSQLSERVER_2512
+# <a name="mssqlserver_2512"></a>MSSQLSERVER_2512
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|2512|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|DBCC_DUPLICATE_KEYS|  
 |Texto da mensagem|Erro de tabela: ID de objeto O_ID, ID de índice I_ID, ID de partição PN_ID, ID de unidade de alocação A_ID (tipo TYPE). Chaves duplicadas na página P_ID1 slot SLOT1 e na página P_ID2 slot SLOT2.|  

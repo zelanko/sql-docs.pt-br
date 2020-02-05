@@ -21,10 +21,10 @@ ms.assetid: 5823ba29-a75d-4b3e-ba7b-421c07ab3ac1
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 27f6d8f947dc0ad5e25ddf53ac63e5f40b332c2e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68013215"
 ---
 # <a name="affinity-mask-server-configuration-option"></a>Opção affinity mask de configuração de servidor
@@ -129,7 +129,7 @@ GO
 ### <a name="startup"></a>Inicialização  
  Se uma máscara de afinidade especificada violar a política de licenciamento durante a inicialização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou durante a anexação do banco de dados, a camada do mecanismo concluirá o processo de inicialização ou a operação de anexação/restauração do banco de dados e depois redefinirá o valor de execução de sp_configure da máscara de afinidade como zero, emitindo uma mensagem de erro para o log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-### <a name="reconfigure"></a>Reconfiguração  
+### <a name="reconfigure"></a>Reconfigurar  
  Se uma máscara de afinidade especificada violar a política de licenciamento ao executar o comando RECONFIGURE de [!INCLUDE[tsql](../../includes/tsql-md.md)] , uma mensagem de erro será reportada à sessão do cliente e ao log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o administrador do banco de dados terá que reconfigurar a máscara de afinidade. Nenhum comando RECONFIGURE WITH OVERRIDE é aceito nesse caso.  
   
 ## <a name="see-also"></a>Consulte Também  

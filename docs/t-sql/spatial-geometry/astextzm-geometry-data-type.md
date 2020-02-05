@@ -20,10 +20,10 @@ ms.assetid: 08ac8aa0-aff7-4b22-87e0-1a1d55dcbc04
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 437859afd1f21cba5c47f93c86173d71e3ae89d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68027643"
 ---
 # <a name="astextzm-geometry-data-type"></a>AsTextZM (tipo de dados geometry)
@@ -41,9 +41,9 @@ Retorna a representação WKT (Well-Known Text) do OGC (Open Geospatial Consorti
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **nvarchar(max)**  
   
- Tipo de retorno CLR: **SqlChars**  
+ Tipo de retorno do CLR: **SqlChars**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir cria uma instância de `Point` que contém valores de **Z** (elevação) e **M** (medida). `STAsText()` seleciona os valores WKT, (1 2); `AsTextZM()` seleciona os mesmos valores WKT e também retorna os valores de **Z** e **M**, com um resultado (1 2 3 4).  

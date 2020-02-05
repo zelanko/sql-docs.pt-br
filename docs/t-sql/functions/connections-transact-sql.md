@@ -22,10 +22,10 @@ ms.assetid: c59836a8-443c-4b9a-8b96-8863ada97ac7
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b614ba90bddad592bedbf67e82d250ea8ba51e25
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68132077"
 ---
 # <a name="x40x40connections-transact-sql"></a>&#x40;&#x40;CONNECTIONS (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68132077"
 
 Essa função retorna o número de tentativas de conexão, bem-sucedidas ou não, desde a última inicialização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,7 +44,7 @@ Essa função retorna o número de tentativas de conexão, bem-sucedidas ou não
 ## <a name="return-types"></a>Tipos de retorno
 **inteiro**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 Conexões são diferentes de usuários. Por exemplo, um aplicativo pode abrir várias conexões em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sem que o usuário perceba.
   
 Execute **sp_monitor** para exibir um relatório que contém várias estatísticas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], incluindo tentativas de contagem de conexão.

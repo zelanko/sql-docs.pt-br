@@ -22,10 +22,10 @@ ms.assetid: 7f06e49b-0b60-4e81-97da-d32dc248264a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8f09e1b7bb54e6f694469e406dbf80232569105f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71287008"
 ---
 # <a name="adding-support-for-debugging-in-a-custom-task"></a>Adicionando suporte para depurando em uma tarefa personalizada
@@ -39,7 +39,7 @@ ms.locfileid: "71287008"
   
  Um site ou destino de ponto de interrupção é um ponto na execução da tarefa onde o processamento pode ser suspenso. Usuários selecionam entre os sites de ponto de interrupção disponíveis na caixa de diálogo **Definir Pontos de Interrupção**. Por exemplo, além das opções de ponto de interrupção padrão, o Contêiner do Loop Foreach oferece a opção "Quebra no início de cada iteração do loop".  
   
- Quando uma tarefa alcança um destino de ponto de interrupção durante a execução, ela avalia esse destino para determinar se um ponto de interrupção está habilitado. Isso indica que o usuário deseja parar a execução nesse ponto de interrupção. Se o ponto de interrupção estiver habilitado, a tarefa gerará o evento <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnBreakpointHit%2A> para o mecanismo de tempo de execução. O mecanismo de tempo de execução responde ao evento chamando o método **Suspend** de cada tarefa que está em execução no momento no pacote. A execução da tarefa retoma quando o tempo de execução chama o método **ResumeExecution** da tarefa suspensa.  
+ Quando uma tarefa alcança um destino de ponto de interrupção durante a execução, ela avalia esse destino para determinar se um ponto de interrupção está habilitado. Isso indica que o usuário deseja parar a execução nesse ponto de interrupção. Se o ponto de interrupção estiver habilitado, a tarefa gerará o evento <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnBreakpointHit%2A> para o mecanismo de tempo de execução. O mecanismo de tempo de execução responde ao evento chamando o método **Suspend** de cada tarefa que está em execução no momento no pacote. A execução da tarefa retoma quando o runtime chama o método **ResumeExecution** da tarefa suspensa.  
   
  As tarefas que não usam pontos de interrupção ainda devem implementar as interfaces <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> e <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend>. Isso garante que a tarefa será suspensa corretamente quando outros objetos do pacote gerarem eventos <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnBreakpointHit%2A>.  
   
@@ -345,6 +345,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Depurando o fluxo de controle](../../../integration-services/troubleshooting/debugging-control-flow.md)  
+ [Depurar o fluxo de controle](../../../integration-services/troubleshooting/debugging-control-flow.md)  
   
   

@@ -12,22 +12,22 @@ ms.assetid: e579d104-3307-4edd-8587-b14ecbc02ed9
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 6e18eff965ac406ffd764bbe01bd9bb1aff41437
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68076709"
 ---
-# <a name="mssqlserver17084"></a>MSSQLSERVER_17084
+# <a name="mssqlserver_17084"></a>MSSQLSERVER_17084
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|Nome do Produto|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |ID do evento|17084|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|P3_ATOMIC_WITH_MISSING_OPTION|  
 |Texto da mensagem|A cláusula WITH da instrução BEGIN ATOMIC deve especificar um valor para a opção '%ls'.|  

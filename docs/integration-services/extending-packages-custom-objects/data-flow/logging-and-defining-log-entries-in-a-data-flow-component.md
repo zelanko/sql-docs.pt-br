@@ -16,10 +16,10 @@ ms.assetid: 2190dba9-59b5-480b-b8e9-21d5a54c5917
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 207037818c81f91be0e48b51f00ba30f7f169adc
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297195"
 ---
 # <a name="logging-and-defining-log-entries-in-a-data-flow-component"></a>Registrando em log e definindo entradas de log em um componente de fluxo de dados
@@ -61,7 +61,7 @@ Public  Overrides Sub RegisterLogEntries()
 End Sub  
 ```  
   
- A enumeração <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSLogEntryFrequency> fornece uma dica ao tempo de execução sobre a frequência com que o evento será registrado:  
+ A enumeração <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSLogEntryFrequency> fornece uma dica ao runtime sobre a frequência com que o evento será registrado:  
   
 -   <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSLogEntryFrequency.DTSLEF_OCCASIONAL>: o evento só é registrado às vezes, mas não em toda execução.  
   
@@ -102,6 +102,6 @@ End Sub
  Agora, quando o usuário executar o pacote, depois de selecionar "My Custom Component Log Entry" na caixa de diálogo **Log**, o log conterá uma entrada claramente rotulada como "User::My Custom Component Log Entry". Essa nova entrada de log contém o texto da instrução SQL, o carimbo de data/hora e quaisquer dados adicionais registrados pelo desenvolvedor.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Registro em Log do Integration Services &#40;SSIS&#41;](../../../integration-services/performance/integration-services-ssis-logging.md)  
+ [Registro em Log do SSIS &#40;Integration Services&#41;](../../../integration-services/performance/integration-services-ssis-logging.md)  
   
   

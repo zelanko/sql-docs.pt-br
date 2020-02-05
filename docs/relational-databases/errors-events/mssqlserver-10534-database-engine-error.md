@@ -12,10 +12,10 @@ ms.assetid: e65bb118-99d5-4fdb-b1d5-0ec70f0a677b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: cbce2b5273b73213fda328490081c785e8ccf13d
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72304776"
 ---
 # <a name="mssqlserver_10534"></a>MSSQLSERVER_10534
@@ -25,9 +25,9 @@ ms.locfileid: "72304776"
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|10534|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|PG_INVALID_PARAMS|  
 |Texto da mensagem|Não é possível criar o guia de plano '%.\*ls' porque o valor especificado para **\@params** é inválido. Especifique o valor no formato *parameter_name parameter_type* ou especifique NULL.|  

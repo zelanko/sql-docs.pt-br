@@ -18,10 +18,10 @@ ms.assetid: 14edbb22-df7b-4b8a-b16c-ac477a5d32c1
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 46ed6c4f4d01b6c4ce1851c24a678617967560a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67950059"
 ---
 # <a name="stisclosed-geometry-data-type"></a>STIsClosed (tipo de dados geometry)
@@ -39,9 +39,9 @@ Retornará 1 se os pontos inicial e final da instância de **geometry** fornecid
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
- Tipo de retorno CLR: **SqlBoolean**  
+ Tipo de retorno do CLR: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse método retornará 0 se alguma figura de uma instância de **geometry** for um ponto ou se a instância estiver vazia.  
   
  As instâncias de **polígono** são consideradas fechadas.  

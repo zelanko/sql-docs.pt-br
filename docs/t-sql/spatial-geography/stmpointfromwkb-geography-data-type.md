@@ -18,10 +18,10 @@ ms.assetid: eeb7d806-3cbb-405d-8199-8b82282c53df
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 2e13735c1782c4b2ced2751cbc59d53859516fcb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68117388"
 ---
 # <a name="stmpointfromwkb-geography-data-type"></a>STMPointFromWKB (tipo de dados geography)
@@ -46,11 +46,11 @@ STMPointFromWKB ( 'WKB_multipoint' , SRID )
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Tipo de retorno CLR: **SqlGeography**  
+ Tipo de retorno do CLR: **SqlGeography**  
   
- Tipo OGC: **MultiPoint**  
+ Tipo do OGC: **MultiPoint**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse método gera uma **FormatException** se a entrada não está bem formatada.  
   
 ## <a name="examples"></a>Exemplos  

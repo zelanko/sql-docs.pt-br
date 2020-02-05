@@ -15,10 +15,10 @@ ms.assetid: df393f13-d538-4d94-8155-9c2fdf5f755d
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: d15ca528efb0246d1d05c87420045fcc74918886
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74165574"
 ---
 # <a name="save-showplan-xml-statistics-profile-events-separately-sql-server-profiler"></a>Salvar eventos de perfil de estatísticas do Plano de Execução XML separadamente (SQL Server Profiler)

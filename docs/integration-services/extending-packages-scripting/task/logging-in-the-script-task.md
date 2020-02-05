@@ -22,10 +22,10 @@ ms.assetid: 2e11fc15-df18-4309-bd2d-fc58aa4b9b7a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 84817da83d50edb592ab11dea16b3b21b8d3818d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296432"
 ---
 # <a name="logging-in-the-script-task"></a>Registrando a tarefa Script
@@ -101,6 +101,6 @@ public class ScriptMain
 -   Entrada de blog [Logging custom events for Integration Services tasks](https://go.microsoft.com/fwlink/?LinkId=165644) (Registrando eventos personalizados para tarefas do Integration Services), em dougbert.com  
   
 ## <a name="see-also"></a>Consulte Também  
- [Registro em Log do Integration Services &#40;SSIS&#41;](../../../integration-services/performance/integration-services-ssis-logging.md)  
+ [Registro em Log do SSIS &#40;Integration Services&#41;](../../../integration-services/performance/integration-services-ssis-logging.md)  
   
   

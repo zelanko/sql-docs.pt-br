@@ -27,18 +27,18 @@ ms.assetid: a500b682-bae4-470f-9e00-47de905b851b
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 063c4c94fc457b6b9bb69fa0395398c62bf49516
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67941699"
 ---
-# <a name="set-showplanall-transact-sql"></a>SET SHOWPLAN_ALL (Transact-SQL)
+# <a name="set-showplan_all-transact-sql"></a>SET SHOWPLAN_ALL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Faz com que o Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não execute as instruções [!INCLUDE[tsql](../../includes/tsql-md.md)]. Em vez disso, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retorna informações detalhada sobre como as instruções são executadas e fornece estimativas dos requisitos de recurso para as instruções.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -47,7 +47,7 @@ ms.locfileid: "67941699"
 SET SHOWPLAN_ALL { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  A configuração de SHOWPLAN_ALL é definida durante a execução ou tempo de execução, e não no momento da análise.  
   
  Quando SET SHOWPLAN_ALL for ON, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retornará informações de execução para cada instrução, sem executá-las, e as instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] não serão executadas. Depois que essa opção estiver definida como ON, as informações sobre todas as instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] subsequentes serão retornadas até que a opção seja definida como OFF. Por exemplo, se uma instrução CREATE TABLE for executada que enquanto SET SHOWPLAN_ALL estiver definido como ON, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retornará uma mensagem de erro de uma instrução SELECT subsequente, envolvendo essa mesma tabela, informando os usuários de que a tabela especificada não existe. Portanto, haverá falha nas referências subsequentes para essa tabela. Quando SET SHOWPLAN_ALL for OFF, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executará as instruções sem gerar um relatório.  
@@ -58,7 +58,7 @@ SET SHOWPLAN_ALL { ON | OFF }
   
  SET SHOWPLAN_ALL retorna informações como um conjunto de linhas que formam uma árvore hierárquica que representa as etapas cumpridas pelo processador de consultas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à medida que ele executa cada instrução. Cada instrução refletida na saída contém uma única linha com o texto da instrução, seguida de várias linhas com os detalhes das etapas de execução. A tabela mostra as colunas que a saída contém.  
   
-|Nome da coluna|Descrição|  
+|Nome da coluna|DESCRIÇÃO|  
 |-----------------|-----------------|  
 |**StmtText**|Para linhas que não são do tipo PLAN_ROW, essa coluna contém o texto da instrução [!INCLUDE[tsql](../../includes/tsql-md.md)]. Para linhas do tipo PLAN_ROW, essa coluna contém uma descrição da operação. Essa coluna contém o operador físico e pode também conter, opcionalmente, o operador lógico. Essa coluna também pode ser seguida de uma descrição determinada pelo operador físico. Para obter mais informações, consulte [Referência de operadores lógicos e físicos de plano de execução](../../relational-databases/showplan-logical-and-physical-operators-reference.md).|  
 |**StmtId**|Número da instrução no lote atual.|  

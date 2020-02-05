@@ -13,10 +13,10 @@ ms.assetid: 58dc99f1-ee6b-4508-bb66-2bc589611ff7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e9178a16bf828d585e5f9fd3ae74a905fa6a0428
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298781"
 ---
 # <a name="edit-the-oracle-database-properties"></a>Editar as propriedades do banco de dados Oracle
@@ -40,15 +40,15 @@ ms.locfileid: "71298781"
  **Autenticação de mineração de logs da Oracle**  
  Para inserir as credenciais de autenticação para o banco de dados Oracle que contém o minerador de logs, siga um destes procedimentos em **Autenticação**:  
   
--   **Autenticação do Windows**: Selecione essa opção para usar as credenciais de domínio atuais do Windows. Você só poderá usar esta opção se o banco de dados Oracle estiver configurado para funcionar com autenticação do Windows.  
+-   **Autenticação do Windows**: selecione isto para usar as credenciais de domínio atuais do Windows. Você só poderá usar esta opção se o banco de dados Oracle estiver configurado para funcionar com autenticação do Windows.  
   
--   **Autenticação do Oracle**: Se você selecionar essa opção, precisará digitar o **Nome de Usuário** e a **Senha** do usuário no Oracle Database ao qual você está se conectando.  
+-   **Autenticação do Oracle**: se você selecionou esta opção, deve digitar o **Nome de usuário** e **Senha** para o usuário no banco de dados Oracle ao qual você está se conectando.  
   
  Você pode ver as propriedades do banco de dados Oracle no visualizador. Ao usar o visualizador, as informações serão somente leitura. O visualizador também inclui uma lista das colunas capturadas na tabela. Para obter mais informações sobre como acessar o visualizador, consulte [How to Manage a CDC Instance](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Como gerenciar um serviço CDC no CDC Designer Console](../../integration-services/change-data-capture/how-to-manage-a-cdc-service-from-the-cdc-designer-console.md)   
- [Conectar a um banco de dados de origem Oracle](../../integration-services/change-data-capture/connect-to-an-oracle-source-database.md)   
+ [Conectar-se a um banco de dados de origem Oracle](../../integration-services/change-data-capture/connect-to-an-oracle-source-database.md)   
  [Conectar-se ao Oracle](../../integration-services/change-data-capture/connect-to-oracle.md)  
   
   

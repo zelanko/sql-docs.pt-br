@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 025aaad5c92a448114355c8700aee1b6bc0a7d2f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68098828"
 ---
 # <a name="translate-transact-sql"></a>TRANSLATE (Transact-SQL)
@@ -47,7 +47,7 @@ TRANSLATE ( inputString, characters, translations)
 
 Retorna uma expressão de caractere do mesmo tipo de dados que `inputString`, em que os caracteres do segundo argumento são substituídos pelos caracteres correspondentes do terceiro argumento.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Comentários
 
 `TRANSLATE` retornará um erro se as expressões *characters* e *translations* tiverem tamanhos diferentes. `TRANSLATE` retornará NULL se qualquer um dos argumentos for NULL.  
 
@@ -57,7 +57,7 @@ O comportamento da função `TRANSLATE` é semelhante ao uso de várias funçõe
 
 ## <a name="examples"></a>Exemplos
 
-### <a name="a-replace-square-and-curly-braces-with-regular-braces"></a>A. Substituir chaves e colchetes por chaves normais
+### <a name="a-replace-square-and-curly-braces-with-regular-braces"></a>a. Substituir chaves e colchetes por chaves normais
 
 A seguinte consulta substitui chaves e colchetes na cadeia de entrada por parênteses:
 
@@ -111,7 +111,7 @@ SELECT TRANSLATE('[137.4, 72.3]' , '[,]', '( )') AS Point,
 
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
 
-|Ponto  |Coordenadas |  
+|Point  |Coordenadas |  
 |---------|--------- |
 |(137.4 72.3) |[137.4, 72.3] |
 

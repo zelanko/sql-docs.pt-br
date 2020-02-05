@@ -12,10 +12,10 @@ ms.assetid: 3be393a1-b186-41ae-afb9-a3d07ff354bb
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: efe1822be148cb702e83da9685be52dbee74ff13
-ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72006081"
 ---
 # <a name="mssqlserver_10519"></a>MSSQLSERVER_10519
@@ -25,9 +25,9 @@ ms.locfileid: "72006081"
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|10519|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|PG_INCOMPATIBLE_STMT_AND_HINTS|  
 |Texto da mensagem|Não é possível criar o guia de plano '%.\*ls' porque as dicas especificadas em **\@hints** não podem ser aplicadas à instrução especificada por **\@stmt** ou **\@statement_start_offset**. Verifique se as dicas podem ser aplicadas à instrução.|  

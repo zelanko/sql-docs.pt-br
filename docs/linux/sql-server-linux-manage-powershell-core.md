@@ -9,10 +9,10 @@ author: SQLvariant
 ms.author: aanelson
 ms.reviewer: vanto
 ms.openlocfilehash: e37237224dd9e8a6b44b913914c43d29cbc25d21
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "69028720"
 ---
 # <a name="manage-sql-server-on-linux-with-powershell-core"></a>Gerenciar o SQL Server em Linux com o PowerShell Core
@@ -79,7 +79,7 @@ Script     21.1.18102 SqlServer     {Add-SqlAvailabilityDatabase, Add-SqlAvailab
 As etapas a seguir usam o PowerShell Core para se conectar à sua Instância do SQL Server em Linux e exibir algumas propriedades de servidor.
 
 Copie e cole os comandos a seguir no prompt do PowerShell. Quando você executar esses comandos, o PowerShell:
-- Exibirá uma caixa de diálogo que solicita o nome do host ou o endereço IP de sua instância
+- Exibem uma caixa de diálogo que solicita o nome do host ou o endereço IP de sua instância
 - Exibirá a caixa de diálogo *Solicitação de credenciais do PowerShell*, que solicita as credenciais. É possível usar o *nome de usuário do SQL* e a *senha do SQL* para se conectar à sua instância do SQL Server em Linux
 - Usará o cmdlet **Get-SqlInstance** para se conectar ao **Servidor** e exibir algumas propriedades
 

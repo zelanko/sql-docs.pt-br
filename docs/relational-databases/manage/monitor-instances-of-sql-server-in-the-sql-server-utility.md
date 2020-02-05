@@ -11,10 +11,10 @@ ms.assetid: ca851a07-e4e5-439c-8da5-d8e97aaf4873
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ba3695cffffe5d28af15a94461f60fb207fbe665
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115618"
 ---
 # <a name="monitor-instances-of-sql-server-in-the-sql-server-utility"></a>Monitorar instâncias do SQL Server no Utilitário do SQL Server

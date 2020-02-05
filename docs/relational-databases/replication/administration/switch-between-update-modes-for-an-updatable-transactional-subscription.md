@@ -16,10 +16,10 @@ ms.assetid: ab5ebab1-7ee4-41f4-999b-b4f0c420c921
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8f9480787ced42ad66602bb34db98d1c2d53bd35
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75321973"
 ---
 # <a name="switch-between-update-modes-for-an-updatable-transactional-subscription"></a>Alternar entre modos de atualização para uma assinatura transacional atualizável
@@ -63,17 +63,17 @@ ms.locfileid: "75321973"
   
 3.  Clique com o botão direito na assinatura para a qual se quer definir o modo de atualização e, então, clique em **Configurar Método de Atualização**.  
   
-4.  Na caixa de diálogo **Configurar Método de Atualização – \<Assinante>: \<SubscriptionDatabase>** , selecione **Atualização imediata** ou **Atualização na fila**.  
+4.  Na caixa de diálogo **Configurar Método de Atualização – \<Subscriber>: \<SubscriptionDatabase>** , selecione **Atualização imediata** ou **Atualização na fila**.  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
 
 #### <a name="to-set-the-updating-mode-for-a-pull-subscription"></a>Para definir o modo de atualização para uma assinatura pull  
   
-1.  A caixa de diálogo **Propriedades da Assinatura – \<Editor>: \<PublicationDatabase>** , selecione o valor **Replicar as atualizações imediatamente** ou **Enfileirar alterações** para a opção **Método de atualização do assinante**.  
+1.  Na caixa de diálogo **Propriedades de Assinatura – \<Publisher>: \<PublicationDatabase>** , selecione um valor de **Replicar as atualizações imediatamente** ou **Enfileirar alterações** para a opção **Método de atualização do assinante**.  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
- Para saber mais sobre como acessar a caixa de diálogo **Propriedades da Assinatura – \<Editor>: \<PublicationDatabase >** , confira [Exibir e modificar as propriedades da assinatura Pull](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
+ Para obter mais informações sobre como acessar a caixa de diálogo **Propriedades da Assinatura – \<Publisher>: \<PublicationDatabase>** , consulte [Exibir e modificar propriedades de assinatura pull](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
   
 ##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   

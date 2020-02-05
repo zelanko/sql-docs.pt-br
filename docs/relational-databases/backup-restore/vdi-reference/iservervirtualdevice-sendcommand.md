@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: c75cd206557547f55d47eec0a7aec52cc0069b71
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847507"
 ---
 # <a name="iservervirtualdevicesendcommand-vdi"></a>IServerVirtualDevice::SendCommand (VDI)
@@ -30,7 +30,7 @@ HRESULT IServerVirtualDevice::SendCommand (
 );
 ```
 
-## <a name="parameters"></a>Parâmetros
+## <a name="parameters"></a>parâmetros
 
 *pCmd* Esse é um ponteiro para um bloco de solicitação de comando. Para obter mais informações, confira Comandos. O campo completionFunction deve ser definido para apontar para o endereço de uma função com a seguinte assinatura:
 
@@ -49,7 +49,7 @@ Esse retorno de chamada é feito pelo agente de conclusão quando o cliente indi
 | VD_E_IO_ERROR | O dispositivo está em um estado IO-ERROR. |
 | VD_E_PROTOCOL | O dispositivo não está ativo. |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Comentários
 
 Quando ocorre um erro ao tentar enviar o comando, a função de retorno de chamada é invocada e o completionCode no buffer de comando é definido da seguinte maneira:
 

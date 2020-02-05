@@ -19,10 +19,10 @@ ms.assetid: d86e9a1d-0938-4ec2-a169-2d0564f3642e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c5451cddba8a1719e9672c0d10ffe4a62c960d38
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68114818"
 ---
 # <a name="deny-full-text-permissions-transact-sql"></a>Permissões de texto completo DENY (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68114818"
   Nega permissões em um catálogo de texto completo e uma lista de palavras irrelevantes de texto completo.  
   
 
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   

@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4a6fd6dd25d19e153b4a2623ceaaeaec558a1aad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68064750"
 ---
 # <a name="checksum-transact-sql"></a>CHECKSUM (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68064750"
 
 A função `CHECKSUM` retorna o valor de soma de verificação computado em uma linha da tabela, ou em uma lista de expressões. Use `CHECKSUM` para criar índices de hash.
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -58,7 +58,7 @@ Uma [expression](../../t-sql/language-elements/expressions-transact-sql.md) de q
 ## <a name="return-types"></a>Tipos de retorno
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 `CHECKSUM` calcula um valor de hash, chamado de soma de verificação, em sua lista de argumentos. Use esse valor de hash para criar índices de hash. Um índice de hash ocorrerá se a função `CHECKSUM` tiver argumentos de coluna e um índice for criado com base no valor de `CHECKSUM` calculado. Isso pode ser usado para pesquisas de igualdade em colunas.
   
 A função `CHECKSUM` atende às propriedades da função de hash: `CHECKSUM` aplicado a duas listas de expressões retornarão o mesmo valor se os elementos correspondentes das duas listas tiverem o mesmo tipo de dados e se esses elementos correspondentes tiverem igualdade quando comparados com o operador de igualdade (=). Valores nulos de um tipo especificado são definidos para serem comparados como iguais para fins da função `CHECKSUM`. Se pelo menos um dos valores na lista de expressões for alterado, a soma de verificação de lista provavelmente será alterada. No entanto, isso não é garantido. Portanto, para detectar se os valores foram alterados, recomendamos o uso de `CHECKSUM` somente se o aplicativo puder tolerar uma alteração ausente ocasional. Caso contrário, considere a possibilidade de usar o `HASHBYTES`. Com um algoritmo de hash MD5 especificado, a probabilidade de que `HASHBYTES` retornará o mesmo resultado para duas entradas diferentes é muito menor em comparação com `CHECKSUM`.

@@ -11,10 +11,10 @@ ms.assetid: c1862d8a-5f82-4647-a280-3e588b82a6dc
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: aa9d269333e5c39f12b82d739575652efdd6c2c4
-ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74822075"
 ---
 # <a name="sql-server-resource-dll-health-diagnostic-logs-for-availability-groups"></a>Logs de diagnóstico de integridade de DLL de recurso do SQL Server para grupos de disponibilidade
@@ -25,7 +25,7 @@ ms.locfileid: "74822075"
   
  **Usar os logs de diagnóstico do cluster de failover do SQL Server**
  
- Todos os diagnósticos de integridade que as DLLs de recurso do SQL Server recebem de sp_server_diagnostics são salvas automaticamente no diretório de Log padrão da instância do SQL Server (%PROGRAMFILES%\Microsoft SQL Server\MSSQL11.MSSQLSERVER\MSSQL\Log). Esses logs são conhecidos como logs SQLDIAG e são salvos no formato de arquivo XEL (eventos estendidos). Esses arquivos do diretório Log do SQL Server têm o seguinte formato: \<NOMEDOHOST>_\<NOMEDAINSTÂNCIA>_SQLDIAG_X_XXXXXXXXX.xel. Ao examinar os logs SQLDIAG, você poderá determinar a causa raiz dos eventos de falha ou failover de recurso do grupo de disponibilidade.  
+ Todos os diagnósticos de integridade que as DLLs de recurso do SQL Server recebem de sp_server_diagnostics são salvas automaticamente no diretório de Log padrão da instância do SQL Server (%PROGRAMFILES%\Microsoft SQL Server\MSSQL11.MSSQLSERVER\MSSQL\Log). Esses logs são conhecidos como logs SQLDIAG e são salvos no formato de arquivo XEL (eventos estendidos). Esses arquivos do diretório de log do SQL Server têm o seguinte formato: \<HOSTNAME>_\<INSTANCENAME>_SQLDIAG_X_XXXXXXXXX.xel. Ao examinar os logs SQLDIAG, você poderá determinar a causa raiz dos eventos de falha ou failover de recurso do grupo de disponibilidade.  
   
  Para exibir um log SQLDIAG, arraste o arquivo .xel até o SQL Server Management Studio.  
   

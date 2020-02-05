@@ -12,22 +12,22 @@ ms.assetid: 1ab1195a-fe2a-4e06-b871-b177b6bea1fe
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: fcf093c5560313487be60d854c880de526f7a525
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68056662"
 ---
-# <a name="mssqlserver21893"></a>MSSQLSERVER_21893
+# <a name="mssqlserver_21893"></a>MSSQLSERVER_21893
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|21893|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|SQLErrorNum21893|  
 |Texto da mensagem|Os assinantes (%s) do publicador original '%s' não aparecem como servidores remotos no publicador redirecionado '%s'. Execute **sp_addlinkedserver** no publicador redirecionado para adicionar esses assinantes como servidores remotos.|  

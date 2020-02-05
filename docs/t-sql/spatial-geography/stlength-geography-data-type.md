@@ -18,10 +18,10 @@ ms.assetid: 774560ab-4a4a-4058-b043-1e67cf6fb9eb
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 61487b976322f8725f9398e54f8292919ff0ca58
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68139108"
 ---
 # <a name="stlength-geography-data-type"></a>STLength (tipo de dados geography)
@@ -39,9 +39,9 @@ ms.locfileid: "68139108"
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **float**  
   
- Tipo de retorno CLR: **SqlDouble**  
+ Tipo de retorno do CLR: **SqlDouble**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Se uma instância de **geography** for fechada, seu comprimento será calculado como o comprimento total em torno da instância. O comprimento de qualquer polígono é seu perímetro, e o comprimento de um ponto é 0. O comprimento de uma **GeometryCollection** é encontrado calculando a soma dos comprimentos de todas as instâncias de **geografia** contidas dentro da coleção.  
   
  STLength () funciona em LineStrings válidos e inválidos. Em geral, um LineString é inválido devido aos segmentos sobrepostos, que podem ser causados por anomalias como rastreamentos de GPS imprecisos. STLength () não remove segmentos sobrepostos ou inválidos. Ele inclui segmentos sobrepostos e inválidos no valor de comprimento que ele retorna. O método MakeValid () pode remover segmentos sobrepostos de um LineString.  

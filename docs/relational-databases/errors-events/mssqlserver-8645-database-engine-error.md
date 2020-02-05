@@ -12,10 +12,10 @@ ms.assetid: 63d6d6d7-3850-4061-8e96-b1fa665e3180
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d867839a68e3b6fc595f0753872b8224f3bf51fb
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908313"
 ---
 # <a name="mssqlserver_8645"></a>MSSQLSERVER_8645
@@ -25,9 +25,9 @@ ms.locfileid: "72908313"
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|8645|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|MEMTIMEDOUT_ERR|  
 |Texto da mensagem|O tempo limite expirou enquanto aguardava por recursos de memória para executar a consulta. Execute a consulta novamente.|  
@@ -42,7 +42,7 @@ Esta lista descreve etapas gerais que ajudarão a corrigir erros de memória:
   
 1.  Verifique se outros aplicativos ou serviços estão consumindo memória neste servidor. Reconfigure os aplicativos ou serviços menos críticos de maneira que eles consumam menos memória.  
   
-2.  Comece a coletar contadores do monitor de desempenho para o **SQL Server: Gerenciador de Buffer**, **SQL Server: Gerenciador de Memória**.  
+2.  Comece a coletar contadores do monitor de desempenho relativos a **SQL Server: Gerenciador de Buffer**, **SQL Server: Gerenciador de Memória**.  
   
 3.  Verifique os seguintes parâmetros de configuração da memória do SQL Server:  
   

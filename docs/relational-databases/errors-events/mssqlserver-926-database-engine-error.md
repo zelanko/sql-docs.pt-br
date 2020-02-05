@@ -12,22 +12,22 @@ ms.assetid: 57e01668-883b-4be4-84a8-a111caaf0486
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e915f74e6bd3e686916aeb2de2f78d8d2e9ae439
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67937955"
 ---
-# <a name="mssqlserver926"></a>MSSQLSERVER_926
+# <a name="mssqlserver_926"></a>MSSQLSERVER_926
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|926|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|DB_SUSPECT|  
 |Texto da mensagem|O banco de dados '%.*ls' não pode ser aberto. Ele foi marcado como SUSPECT pela recuperação. Consulte o log de erros do SQL Server para obter mais informações.|  
@@ -49,8 +49,8 @@ Se a recuperação tiver apresentado falha devido a um erro persistente de E/S, 
 Se você não conseguir resolver esse problema, entre em contato com o provedor de suporte. Tenha o log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disponível para revisão.  
   
 ## <a name="see-also"></a>Consulte Também  
-[Back Up and Restore of SQL Server Databases (Backup e restauração de bancos de dados do SQL Server)](~/relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  
+[Fazer backup e restaurar bancos de dados do SQL Server](~/relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  
 [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)  
 [sys.sysdatabases &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/sys-sysdatabases-transact-sql.md)  
-[Database Detach and Attach &#40;SQL Server&#41; [Anexar e desanexar banco de dados (SQL Server)]](~/relational-databases/databases/database-detach-and-attach-sql-server.md)  
+[Anexar e desanexar bancos de dados &#40;SQL Server&#41;](~/relational-databases/databases/database-detach-and-attach-sql-server.md)  
   

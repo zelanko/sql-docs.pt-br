@@ -11,10 +11,10 @@ ms.assetid: a79f1006-54e8-4cbf-96f8-5ed143ebb830
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 62cbd5141dfb6254415657dc3ef03d1402b0f3b4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71281364"
 ---
 # <a name="catalogcleanup_server_execution_keys"></a>catalog.cleanup_server_execution_keys 
@@ -66,10 +66,10 @@ catalog.cleanup_server_execution_keys [ @cleanup_flag = ] cleanup_flag ,
   
 -   O banco de dados SSISDB não está no modo de usuário único.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  SQL Server 2012 Service Pack 2 adicionou a propriedade SERVER_OPERATION_ENCRYPTION_LEVEL à tabela **internal.catalog_properties**. Essa propriedade tem dois valores possíveis:  
   
--   **PER_EXECUTION (1)** – O certificado e a chave simétrica usados para proteger parâmetros de execução e logs de execução confidenciais são criados para cada execução. Este é o valor padrão. Talvez você tenha problemas de desempenho (deadlocks, trabalhos de manutenção com falha, etc.) em um ambiente de produção porque chaves/certificado são gerados para cada execução. No entanto, essa configuração fornece um nível maior de segurança que o outro valor (2).  
+-   **PER_EXECUTION (1)** – O certificado e a chave simétrica usados para proteger parâmetros de execução e logs de execução confidenciais são criados para cada execução. Esse é o valor padrão. Talvez você tenha problemas de desempenho (deadlocks, trabalhos de manutenção com falha, etc.) em um ambiente de produção porque chaves/certificado são gerados para cada execução. No entanto, essa configuração fornece um nível maior de segurança que o outro valor (2).  
   
 -   **PER_PROJECT (2)** – O certificado e a chave simétrica usados para proteger parâmetros confidenciais são criados para cada projeto. Isso oferece um desempenho melhor do que o nível PER_EXECUTION porque a chave e o certificado são gerados uma vez para um projeto em vez de serem gerados para cada execução.  
   
@@ -87,7 +87,7 @@ catalog.cleanup_server_execution_keys [ @cleanup_flag = ] cleanup_flag ,
   
      Você pode especificar o escopo ou o nível (execução versus projeto) e o número de chaves a serem excluídas. O tamanho de lote padrão para exclusão é 1000. Quando você define o nível para 2, as chaves e certificados serão excluídos somente se os projetos associados foram excluídos.  
   
- Para obter mais informações, veja o artigo da Base de Dados de Conhecimento a seguir. [CORREÇÃO: problemas de desempenho ao usar o SSISDB como o repositório de implantação no SQL Server 2012](https://support.microsoft.com/kb/2972285)  
+ Para obter mais informações, veja o artigo da Base de Dados de Conhecimento a seguir. [CORREÇÃO: Problemas de desempenho ao usar o SSISDB como o repositório de implantação no SQL Server 2012](https://support.microsoft.com/kb/2972285)  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir chama o procedimento armazenado cleanup_server_execution_keys.  

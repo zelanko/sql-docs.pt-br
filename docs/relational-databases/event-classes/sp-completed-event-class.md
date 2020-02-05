@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8087a2e3670fdd0c8a5aab7d90d7e8574f9f0490
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68134283"
 ---
 # <a name="spcompleted-event-class"></a>Classe de evento SP:Completed
@@ -25,13 +25,13 @@ ms.locfileid: "68134283"
   
 ## <a name="spcompleted-event-class-data-columns"></a>Colunas de dados da classe de evento SP:Completed  
   
-|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|DESCRIÇÃO|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|Nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |ClientProcessID|**int**|ID atribuída pelo computador host ao processo em que o aplicativo cliente está sendo executado. Essa coluna de dados será populada se o cliente fornecer a ID de processo do cliente.|9|Sim|  
 |DatabaseID|**int**|ID do banco de dados em que o procedimento armazenado está sendo executado. Determine o valor para um banco de dados usando a função DB_ID.|3|Sim|  
 |DatabaseName|**nvarchar**|Nome do banco de dados no qual o procedimento armazenado está sendo executado.|35|Sim|  
-|Duração|**bigint**|Período de tempo (em microssegundos) utilizado pelo evento.|13|Sim|  
+|Duration|**bigint**|Período de tempo (em microssegundos) utilizado pelo evento.|13|Sim|  
 |EndTime|**datetime**|Horário em que o evento foi encerrado. Esta coluna não é populada para classes de eventos iniciais, como SQL:BatchStarting ou SP:Starting.|15|Sim|  
 |EventClass|**int**|Tipo de evento = 43.|27|Não|  
 |EventSequence|**int**|Sequência de um determinado evento na solicitação.|51|Não|  

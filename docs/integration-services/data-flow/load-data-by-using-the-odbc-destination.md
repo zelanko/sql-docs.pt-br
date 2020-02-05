@@ -11,10 +11,10 @@ ms.assetid: 339ec0a8-922e-48c0-97b3-fc5ee34f95e3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 733e6c8000f3a14127b0f3a8704b43af81fa0f85
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292336"
 ---
 # <a name="load-data-by-using-the-odbc-destination"></a>Carregar dados por meio do destino ODBC
@@ -38,9 +38,9 @@ ms.locfileid: "71292336"
   
 6.  Selecione o método de acesso de dados.  
   
-    -   **Nome da Tabela – Lote**: Selecione esta opção para configurar o destino ODBC para trabalhar no modo de lote. Quando você selecionar essa opção, poderá definir o **Tamanho do lote**.  
+    -   **Nome da Tabela – Lote**: selecione esta opção para configurar o destino ODBC para funcionar no modo em lote. Quando você selecionar essa opção, poderá definir o **Tamanho do lote**.  
   
-    -   **Nome da Tabela – Linha a Linha**: Selecione esta opção para configurar o destino ODBC para inserir cada uma das linhas na tabela de destino, uma de cada vez. Quando você selecionar essa opção, os dados serão carregados na tabela uma linha de cada vez.  
+    -   **Nome da Tabela – Linha a Linha**: selecione esta opção para configurar o destino ODBC para inserir cada uma das linhas na tabela de destino, uma de cada vez. Quando você selecionar essa opção, os dados serão carregados na tabela uma linha de cada vez.  
   
 7.  No campo **Nome da tabela ou exibição** , selecione uma tabela ou exibição disponível do banco de dados na lista ou digite uma expressão regular para identificar a tabela. Essa lista contém apenas as primeiras 1.000 tabelas. Se o banco de dados contiver mais de 1.000 tabelas, você poderá digitar o início do nome de uma tabela ou usar o curinga (*) para inserir qualquer parte do nome para exibir a tabela ou tabelas desejadas.  
   

@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 2847ef10bd52d69375fa4f13f1d003eb4159961f
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847467"
 ---
 # <a name="iservervirtualdeviceset2close-vdi"></a>IServerVirtualDeviceSet2::Close (VDI)
@@ -34,7 +34,7 @@ HRESULT IServerVirtualDeviceSet2::Close ();
 |---|---|
 | VD_E_PROTOCOL | Os dispositivos ainda estavam abertos. |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Comentários
 
 Fechar o conjunto de dispositivos virtuais antes de fechar os dispositivos não deve ser executado. Se essa situação ocorrer, VD_E_PROTOCOL será retornado. Essa ação resulta em Close liberando imediatamente seu mapeamento de memória compartilhada. O servidor estará sujeito a violações de acesso se continuar esperando a propriedade de recursos retornados da interface do dispositivo virtual. A interface executa o processamento SignalAbort.
 

@@ -13,10 +13,10 @@ ms.assetid: 6ea1f11d-e64b-4ebb-ab68-4eb6e4027665
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b1a0fb6a72fde7ba871554abf4e3b40d6bb6c9fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68137527"
 ---
 # <a name="mixed-type-and-simple-content"></a>Tipo misto e conteúdo simples
@@ -55,6 +55,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Requisitos e limitações de uso de coleções de esquema XML no servidor](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
+ [Requisitos e limitações para o uso de Coleções de Esquemas XML no servidor](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
   
   

@@ -24,13 +24,13 @@ ms.assetid: 4d284ae9-3f5f-465a-b0dd-1328a4832a03
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 0d94799898517b2d75ce6a1add308f0831b112ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68132818"
 ---
-# <a name="set-remoteproctransactions-transact-sql"></a>SET REMOTE_PROC_TRANSACTIONS (Transact-SQL)
+# <a name="set-remote_proc_transactions-transact-sql"></a>SET REMOTE_PROC_TRANSACTIONS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Especifica que quando uma transação local está ativa, a execução de um procedimento armazenado remoto inicia uma transação distribuída [!INCLUDE[tsql](../../includes/tsql-md.md)], gerenciada pelo MS DTC (Coordenador de Transações Distribuídas da [!INCLUDE[msCoName](../../includes/msconame-md.md)]).  
@@ -38,7 +38,7 @@ ms.locfileid: "68132818"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)] Essa opção é fornecida para compatibilidade com versões anteriores para aplicativos que usam procedimentos armazenados remotos. Em vez de emitir chamadas de procedimento armazenado remotas, use consultas distribuídas, que fazem referência a servidores vinculados. Elas são definidas usando [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -51,7 +51,7 @@ SET REMOTE_PROC_TRANSACTIONS { ON | OFF }
  ON | OFF  
  Quando ON, uma transação [!INCLUDE[tsql](../../includes/tsql-md.md)] distribuída é iniciada quando um procedimento armazenado remoto é executado de uma transação local. Quando OFF, chamar um procedimento armazenado remoto de uma transação local, não origina uma transação distribuída [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Quando REMOTE_PROC_TRANSACTIONS está ON, chamar um procedimento remoto armazenado irá iniciar uma transação distribuída e inscreverá a transação com o MS DTC. A instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que chama o procedimento armazenado remoto é o que origina a transação e controla a conclusão da transação. Quando as instruções subsequentes COMMIT TRANSACTION ou ROLLBACK TRANSACTION são emitidas para a conexão, a instância controladora solicita que o MS DTC gerencie a conclusão da transação distribuída em todas os computadores envolvidos.  
   
  Depois que uma transação distribuída [!INCLUDE[tsql](../../includes/tsql-md.md)] foi iniciada, é possível fazer chamadas de procedimento armazenado remoto a outras instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], que foram definidas como servidores remotos. Os servidores remotos são todos inscritos na transação distribuída do [!INCLUDE[tsql](../../includes/tsql-md.md)], e o MS DTC assegura que a transação seja completada em cada servidor remoto.  

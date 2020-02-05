@@ -17,10 +17,10 @@ ms.assetid: ef617436-1e86-4573-900a-702e27a202b9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1f52dd565f634061468a0eee4fbfbb2855da99c0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68082219"
 ---
 # <a name="revoke-full-text-permissions-transact-sql"></a>Permissões de texto completo REVOKE (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "68082219"
 
   Revoga permissões em um catálogo de texto completo ou em uma lista de palavras irrelevantes de texto completo.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -106,7 +106,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
   
 -   usuário de banco de dados não mapeado para uma entidade do servidor.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
   
 ## <a name="fulltext-catalog-permissions"></a>Permissões FULLTEXT CATALOG  
  Um catálogo de texto completo é um protegível em nível de banco de dados contido no banco de dados que é seu pai na hierarquia de permissões. As permissões mais específicas e limitadas que podem ser revogadas em um catálogo de texto completo estão listadas na tabela a seguir, junto com as permissões mais gerais que as incluem implicitamente.  

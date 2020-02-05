@@ -12,10 +12,10 @@ ms.assetid: 2e51ea06-81cb-4454-b111-da02808468e6
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 48614ea63ab56974e3eafb55b0f43dd83436ec85
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74164922"
 ---
 # <a name="performance-improvements-using-database-engine-tuning-advisor-dta-recommendations"></a>Melhorias de desempenho usando as recomendações do DTA (Orientador de Otimização do Mecanismo de Banco de Dados)
@@ -31,7 +31,7 @@ Para demonstrar os benefícios das recomendações do DTA no desempenho da carga
   
   1. **Somente columnstore**: crie apenas índices columnstore para todas as tabelas sem usar o DTA. 
   2. **DTA (somente rowstore)** : execute o DTA com a opção para recomendar índices somente rowstore.
-  3. **DTA (rowstore + columnstore)** : Execute o DTA com a opção de recomendar índices columnstore e rowstore.  
+  3. **DTA (rowstore + columnstore)** : execute o DTA com a opção para recomendar índices columnstore e rowstore.  
    
 Em cada caso, depois implementamos os índices recomendados. Relatamos o Tempo de CPU (em milissegundos) com a média calculada em várias execuções da consulta ou da carga de trabalho. A figura abaixo plota o tempo de CPU em milissegundos para cargas de trabalho entre dois bancos de dados de cliente diferentes. Observe que o eixo Y (Tempo de CPU) usa uma escala logarítmica.   
 

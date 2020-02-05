@@ -15,10 +15,10 @@ ms.assetid: 64adf1a1-3a41-41fb-b7d1-44390c3e4ea9
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 9b9e958085af5f70d4dedb1f9a44866c04918343
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930138"
 ---
 # <a name="stcurven-geometry-data-type"></a>STCurveN (Tipo de Dados de geometria)
@@ -40,12 +40,12 @@ Retorna a curva especificada de uma instância de **geometry** que é uma **Line
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Tipo de retorno CLR: **SqlGeometry**  
+ Tipo de retorno do CLR: **SqlGeometry**  
   
 ## <a name="exceptions"></a>Exceções  
  Se *curve_index* < 1, uma `ArgumentOutOfRangeException` será gerada.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  **NULL** é retornado quando ocorre uma das seguintes opções:  
   
 -   a instância de **geometry** é declarada, mas não é criada uma instância dela  
@@ -58,7 +58,7 @@ Retorna a curva especificada de uma instância de **geometry** que é uma **Line
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-stcurven-on-a-circularstring-instance"></a>A. Usando STCurveN() em uma instância de CircularString  
+### <a name="a-using-stcurven-on-a-circularstring-instance"></a>a. Usando STCurveN() em uma instância de CircularString  
  O exemplo a seguir retorna a segunda curva em uma instância de `CircularString`:  
   
 ```

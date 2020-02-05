@@ -18,10 +18,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8c4cfba19dc16e043ba6325fb6c9acb1665a597f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68071167"
 ---
 # <a name="insert-sql-graph"></a>INSERT (SQL Graph)
@@ -32,7 +32,7 @@ Adiciona uma ou mais linhas a uma tabela `node` ou `edge` do [!INCLUDE[ssNoVersi
 > [!NOTE]   
 >  Para obter instruções Transact-SQL padrão, consulte [INSERT TABLE (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md).
   
-![Ícone de link do artigo](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do artigo") [Convenções de sintaxe do Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Ícone de link do artigo](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do artigo") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="insert-into-node-table-syntax"></a>Sintaxe de INSERT na tabela Node 
 A sintaxe para inserção em uma tabela Node é a mesma de uma tabela normal. 
@@ -116,7 +116,7 @@ Padrão de pesquisa fornecido para a cláusula `MATCH` como parte do predicado d
 Os usuários devem fornecer valores para `$from_id` e `$to_id` ao fazer uma inserção em uma borda. Um erro será retornado se não um valor não for fornecido ou se valores NULL forem inseridos nessas colunas. 
   
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 A inserção em um nó é igual à inserção em qualquer tabela relacional. Os valores da coluna $node_id são gerados automaticamente.
 
 Ao fazer uma inserção em uma tabela de borda, os usuários devem fornecer valores para as colunas `$from_id` e `$to_id`.   
@@ -136,7 +136,7 @@ Para executar INSERT com a opção BULK da função OPENROWSET, você precisa se
 
 ## <a name="examples"></a>Exemplos  
   
-#### <a name="a--insert-into-node-table"></a>A.  Inserir na tabela de nó  
+#### <a name="a--insert-into-node-table"></a>a.  Inserir na tabela de nó  
 O exemplo a seguir cria uma tabela de nó Person e insere duas linhas nessa tabela.
 
 ```sql

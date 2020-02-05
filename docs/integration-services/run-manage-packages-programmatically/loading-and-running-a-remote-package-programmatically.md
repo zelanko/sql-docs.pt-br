@@ -15,10 +15,10 @@ ms.assetid: 9f6ef376-3408-46bf-b5fa-fc7b18c689c9
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b6382de8778e5f11e76f4481519284d50b7b52e0
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71282165"
 ---
 # <a name="loading-and-running-a-remote-package-programmatically"></a>Carregando e executando um pacote remoto programaticamente
@@ -50,7 +50,7 @@ ms.locfileid: "71282165"
   
  Para obter informações sobre como solucionar problemas de pacotes executados nos trabalhos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, consulte o artigo da Microsoft, [Um pacote do SSIS não é executado quando chamado em uma etapa de trabalho do SQL Server Agent](https://support.microsoft.com/kb/918760).  
   
-### <a name="sample-code"></a>Código de exemplo  
+### <a name="sample-code"></a>Exemplo de código  
   
 ```vb  
 Imports System.Data  
@@ -156,7 +156,7 @@ namespace LaunchSSISPackageAgent_CS
 > [!IMPORTANT]  
 >  Os métodos da classe <xref:Microsoft.SqlServer.Dts.Runtime.Application> para funcionar com o Repositório de Pacotes do SSIS dão suporte apenas a “.”, localhost ou ao nome do servidor local. Você não pode usar "(local)".  
   
-### <a name="sample-code"></a>Código de exemplo  
+### <a name="sample-code"></a>Exemplo de código  
  Os exemplos de código seguintes mostram como criar e testar o serviço Web.  
   
 #### <a name="creating-the-web-service"></a>Criando o serviço Web  
@@ -420,7 +420,7 @@ namespace LaunchSSISPackageSvcTestCS
   
 ## <a name="external-resources"></a>Recursos externos  
   
--   Vídeo, [Como automatizar a execução de pacote do SSIS usando o SQL Server Agent (vídeo do SQL Server)](https://technet.microsoft.com/sqlserver/ff686764.aspx), em technet.microsoft.com  
+-   Vídeo [Como automatizar a execução de pacote do SSIS usando o SQL Server Agent (vídeo do SQL Server)](https://technet.microsoft.com/sqlserver/ff686764.aspx), em technet.microsoft.com  
   
 ## <a name="see-also"></a>Consulte Também  
  [Compreender as diferenças entre execução local e remota](../../integration-services/run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   

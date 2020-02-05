@@ -11,10 +11,10 @@ ms.assetid: 1ff4dcff-89b3-4b99-a725-5f7963e98abf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: edb7f78fd1d1d64980e7874f953a91030e7ecdc9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296035"
 ---
 # <a name="lesson-2-1---building-the-deployment-utility"></a>Lição 2-1 – compilar o utilitário de implantação
@@ -52,7 +52,7 @@ Antes de compilar o utilitário de implantação, você deve modificar as propri
   
 4.  Na janela Saída, verifique as seguintes informações:  
   
-    Compilação iniciada: Projeto do Integration Services do SQL: Incremental ...  
+    Compilação iniciada: Projeto do SQL Integration Services: Incremental ...  
   
     Criando utilitário de implantação...  
   
@@ -65,7 +65,7 @@ Antes de compilar o utilitário de implantação, você deve modificar as propri
 5.  No menu **Arquivo** , clique em **Sair**. Se for solicitado que você salve as alterações dos itens do Tutorial de Implantação, clique em **Sim**.  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
-[Etapa 2: verificar o pacote de implantação](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
+[Etapa 2: Verificando o pacote de implantação](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
   
 ## <a name="see-also"></a>Consulte Também  
 [Criar um utilitário de implantação](../integration-services/packages/create-a-deployment-utility.md)  
