@@ -1,10 +1,9 @@
 ---
-title: Usar objetos de desempenho | Microsoft Docs
-ms.custom: ''
+title: Usar objetos de desempenho
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,13 +19,15 @@ helpviewer_keywords:
 ms.assetid: 830b843a-6b2a-4620-a51b-98358e9fc54b
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 73e36b4d0ee10d42ec7774e20693d217ee274344
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: ee697990c729a28872f8562241cd5dbfdc3225b2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68260905"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257818"
 ---
 # <a name="use-performance-objects"></a>Usar objetos de desempenho
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -43,11 +44,11 @@ A tabela a seguir mostra como os objetos de desempenho do serviço do [!INCLUDE[
 |Tipo de instância|Nome do objeto|  
 |-----------------|---------------|  
 |Padrão|**SQLAgent:** _objeto_:_contador_|  
-|Nomeado|**SQLAgent$**<br /> **&#42;nome_da_instância&#42; :** _objeto_:_contador_|  
+|nomeado|**SQLAgent$**<br /> **&#42;nome_da_instância&#42; :** _objeto_:_contador_|  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contém os objetos de desempenho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent a seguir.  
   
-|Nome do objeto|Descrição|  
+|Nome do objeto|DESCRIÇÃO|  
 |---------------|---------------|  
 |[SQLAgent:Jobs](../../relational-databases/performance-monitor/sql-server-agent-jobs-object.md)|Informações sobre o desempenho de trabalhos que foram iniciados, taxas de êxito e status atual|  
 |[SQLAgent:JobSteps](../../relational-databases/performance-monitor/sql-server-agent-jobsteps-object.md)|Informações sobre o status de etapas de trabalho|  
@@ -56,5 +57,5 @@ A tabela a seguir mostra como os objetos de desempenho do serviço do [!INCLUDE[
   
 ## <a name="see-also"></a>Consulte Também  
 [Monitorar e ajustar o desempenho](../../relational-databases/performance/monitor-and-tune-for-performance.md)  
-[Como: Iniciar o Monitor do Sistema (Windows)](https://msdn.microsoft.com/5e51bb79-5737-470b-9c47-fac330c001c5)  
+[Como iniciar o Monitor do Sistema (Windows)](https://msdn.microsoft.com/5e51bb79-5737-470b-9c47-fac330c001c5)  
   

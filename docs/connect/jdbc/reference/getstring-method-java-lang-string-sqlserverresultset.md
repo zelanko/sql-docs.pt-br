@@ -16,10 +16,10 @@ ms.assetid: 8a98c8a8-61d0-40c9-9335-25a87b732dc3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f8961f6b67a4b22370d6712e44616036631d1935
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979482"
 ---
 # <a name="getstring-method-javalangstring-sqlserverresultset"></a>Método getString (java.lang.String) (SQLServerResultSet)
@@ -34,7 +34,7 @@ ms.locfileid: "67979482"
 public java.lang.String getString(java.lang.String columnName)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *columnName*  
   
  Uma **Cadeia de Caracteres** que contém o nome da coluna.  
@@ -45,7 +45,7 @@ public java.lang.String getString(java.lang.String columnName)
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse método getString é especificado pelo método getString na interface java.sql.ResultSet.  
   
  Todas as colunas no SQL Server podem ser retornadas como uma String. Isso significa que uma representação da **String** de todos os tipos baseados em número e em caractere, e uma representação da cadeia de caracteres hexadecimais de colunas binárias, como binary, varbinary, varbinary(max), image, timestamp e uniqueidentifier, podem ser retornadas.  

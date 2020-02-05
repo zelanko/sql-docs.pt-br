@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1020bb9dff821471f33ba3af9285249a93980133
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68055993"
 ---
 # <a name="specify-first-and-last-triggers"></a>Especificar o primeiro e o último gatilhos
@@ -29,9 +29,9 @@ ms.locfileid: "68055993"
   
  Para especificar a ordem para um gatilho AFTER, use o procedimento armazenado **sp_settriggerorder** . **sp_settriggerorder** tem as opções a seguir.  
   
-|Opção|Descrição|  
+|Opção|DESCRIÇÃO|  
 |------------|-----------------|  
-|**Primeiro**|Especifica que o gatilho DML é o primeiro gatilho AFTER acionado para uma ação de gatilho.|  
+|**First**|Especifica que o gatilho DML é o primeiro gatilho AFTER acionado para uma ação de gatilho.|  
 |**Last**|Especifica que o gatilho DML é o último gatilho AFTER acionado para uma ação de gatilho.|  
 |**Nenhuma**|Especifica que não há nenhuma ordem específica na qual o gatilho DML deva ser acionado. Usado, principalmente, para redefinir um gatilho a ser o primeiro ou o último.|  
   
@@ -52,7 +52,7 @@ sp_settriggerorder @triggername = 'MyTrigger', @order = 'first', @stmttype = 'UP
   
  Se uma instrução ALTER TRIGGER alterar o primeiro ou o último gatilho, os atributos **First** ou **Last** serão removidos e o valor do pedido será definido como **None**. O pedido deve ser redefinido com **sp_settriggerorder**.  
   
- A função OBJECTPROPERTY informa se um gatilho é o primeiro ou o último usando as seguintes propriedades: **ExecIsFirstInsertTrigger**, **ExecIsFirstUpdateTrigger**, **ExecIsFirstDeleteTrigger**, **ExecIsLastInsertTrigger**, **ExecIsLastUpdateTrigger** e **ExecIsLastDeleteTrigger**.  
+ A função OBJECTPROPERTY relata se um gatilho é um primeiro ou último gatilho usando as seguintes propriedades: **ExecIsFirstInsertTrigger**, **ExecIsFirstUpdateTrigger**, **ExecIsFirstDeleteTrigger**, **ExecIsLastInsertTrigger**, **ExecIsLastUpdateTrigger** e **ExecIsLastDeleteTrigger**.  
   
  A replicação gera automaticamente um primeiro disparador para qualquer tabela que esteja incluída em uma atualização imediata ou uma assinatura de atualização em fila. A replicação requer que seu disparador seja o primeiro disparador. A replicação gerará um erro se você tentar incluir uma tabela com um primeiro disparador em uma atualização imediata ou uma assinatura de atualização em fila. Se você tentar fazer com que um gatilho seja o primeiro depois que uma tabela for incluída em uma assinatura, **sp_settriggerorder** retornará um erro. Se você usar ALTER no gatilho de replicação ou usar **sp_settriggerorder** para alterar o gatilho de replicação para o último ou nenhum gatilho, a assinatura não funcionará corretamente.  
   

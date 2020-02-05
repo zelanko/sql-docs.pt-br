@@ -9,10 +9,10 @@ ms.assetid: 2b45a024-398d-43b8-9948-b8b23fb674c9
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8f2b86d4fe54943ccc3f4c0f06243b72af5779ce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65577215"
 ---
 # <a name="report-builder-functions---sum-function"></a>Funções do Construtor de Relatórios – Função Sum
@@ -28,7 +28,7 @@ ms.locfileid: "65577215"
 Sum(expression, scope, recursive)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *expressão*  
  (**Integer** ou **Float**) A expressão na qual executar a agregação.  
   
@@ -41,7 +41,7 @@ Sum(expression, scope, recursive)
 ## <a name="return-type"></a>Tipo de retorno  
  Retorna um **Decimal** para expressões decimais e um **Double** para todas as outras expressões.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O conjunto de dados especificado na expressão deve ter o mesmo tipo de dados. Para converter dados que têm vários tipos de dados numéricos no mesmo tipo de dados, use funções de conversão, como **CInt**, **CDbl** ou **CDec**. Para obter mais informações, consulte [Funções de conversão de tipo](https://go.microsoft.com/fwlink/?LinkId=96142).  
   
  O valor de *scope* deve ser uma constante de cadeia de caracteres e não pode ser uma expressão. Para agregações externas ou que não especificam outras agregações, *scope* deve se referir ao escopo atual ou a um escopo contentor. Para agregações de agregações, as agregações aninhadas podem especificar um escopo filho.  

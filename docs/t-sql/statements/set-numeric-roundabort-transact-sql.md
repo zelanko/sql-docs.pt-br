@@ -25,18 +25,18 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c0852c01f37e8dbf324e18d140bd30a510fd14c4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68008974"
 ---
-# <a name="set-numericroundabort-transact-sql"></a>SET NUMERIC_ROUNDABORT (Transact-SQL)
+# <a name="set-numeric_roundabort-transact-sql"></a>SET NUMERIC_ROUNDABORT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Especifica o nível dos relatórios de erro gerados quando o arredondamento de uma expressão provoca perda de exatidão.  
   
-![Ícone de link do artigo](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do artigo") [Convenções de sintaxe do Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Ícone de link do artigo](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do artigo") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -45,7 +45,7 @@ Especifica o nível dos relatórios de erro gerados quando o arredondamento de u
 SET NUMERIC_ROUNDABORT { ON | OFF }
 ```
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 Quando SET NUMERIC_ROUNDABORT é ON, um erro é gerado depois de ocorrer uma perda de precisão em uma expressão. Se definido como OFF, perdas de precisão não geram mensagens de erro. O resultado é arredondado de acordo com a precisão da coluna ou variável que armazena o resultado.  
   
 A perda de precisão ocorre quando é feita uma tentativa de armazenar um valor com uma precisão fixa em uma coluna ou variável com menos precisão.  

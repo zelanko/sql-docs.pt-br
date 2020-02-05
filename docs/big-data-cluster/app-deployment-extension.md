@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: e05fa19c8453418c22829862801c5044e6c25d2b
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73707148"
 ---
 # <a name="how-to-use-visual-studio-code-to-deploy-applications-to-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Como usar o Visual Studio Code para implantar aplicativos nos [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
@@ -187,7 +187,7 @@ Ao chamar um aplicativo implantado, se algum parâmetro de entrada for inato ao 
 - Matriz
     - `inputs:`
         - `x: [[A,B,C],[1,2,3]]`
-- Object
+- Objeto
     - `inputs:`
         - `x: {A: 1, B: 2, C: 3}`
 

@@ -14,10 +14,10 @@ ms.assetid: ffbb829c-3b8f-4e5d-97d9-ab4059aab0db
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3beb9b01beafcb247372c49d9219550c95fd1b03
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67986439"
 ---
 # <a name="grant-permissions-on-an-xml-schema-collection"></a>Conceder permissões em uma coleção de esquemas XML
@@ -67,7 +67,7 @@ ms.locfileid: "67986439"
 ## <a name="examples"></a>Exemplos  
  Os cenários nos exemplos seguintes ilustram como as permissões de esquema XML funcionam. Cada exemplo cria o banco de dados, os esquemas relacionais e os logons de teste necessários. Esses logons recebem as permissões necessárias na coleção de esquema XML. Cada exemplo faz a limpeza necessária no final.  
   
-### <a name="a-granting-permissions-to-create-an-xml-schema-collection"></a>A. Concedendo permissões para criar uma coleção de esquema XML  
+### <a name="a-granting-permissions-to-create-an-xml-schema-collection"></a>a. Concedendo permissões para criar uma coleção de esquema XML  
  O exemplo a seguir mostra como conceder permissões para que uma entidade de segurança possa criar uma coleção de esquemas XML. O exemplo cria um banco de dados de exemplo e um usuário de teste, `TestLogin1`. `TestLogin1` recebe a permissão `ALTER` no esquema relacional e a permissão `CREATE XML SCHEMA COLLECTION` no banco de dados. Com essas permissões, `TestLogin1` pode criar com êxito uma coleção de esquemas XML de exemplo.  
   
 ```  
@@ -507,6 +507,6 @@ GO
  [Dados XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)   
  [Comparar XML digitado com XML não digitado](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Coleções de esquemas XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md)   
- [Requisitos e limitações de uso de coleções de esquema XML no servidor](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
+ [Requisitos e limitações para o uso de Coleções de Esquemas XML no servidor](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
   
   

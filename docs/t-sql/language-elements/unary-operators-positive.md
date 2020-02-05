@@ -21,10 +21,10 @@ ms.assetid: 0f31c5cc-3078-4f6a-9870-7eb1a98053fb
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: f6c7f0ebb1960c763dead68443ed4ae0c4c397db
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68086152"
 ---
 # <a name="unary-operators---positive"></a>Operadores unários – positivo
@@ -40,7 +40,7 @@ Retorna o valor de uma expressão numérica (um operador unário). Os operadores
   
  Os operadores + (Positivo) e – (Negativo) podem ser usados em qualquer expressão de qualquer um dos tipos de dados da categoria de tipo de dados numérico. O operador ~ (NOT bit a bit) pode ser usado somente nas expressões de qualquer um dos tipos de dados da categoria de tipo de dados inteiros.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -56,12 +56,12 @@ Retorna o valor de uma expressão numérica (um operador unário). Os operadores
 ## <a name="result-types"></a>Tipos de resultado  
  Retorna o tipo de dados de *numeric_expression*.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Embora uma adição unária possa aparecer antes de qualquer expressão numérica, nenhuma operação é executada no valor retornado da expressão. Especificamente, não retornará o valor positivo de uma expressão negativa. Para retornar o valor positivo de uma expressão negativa, use a função [ABS](../../t-sql/functions/abs-transact-sql.md).  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-setting-a-variable-to-a-positive-value"></a>A. Definindo uma variável como um valor positivo  
+### <a name="a-setting-a-variable-to-a-positive-value"></a>a. Definindo uma variável como um valor positivo  
  O exemplo a seguir define uma variável como um valor positivo.  
   
 ```  

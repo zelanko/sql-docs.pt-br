@@ -21,10 +21,10 @@ ms.assetid: 146542c3-8efd-4b89-a8d8-77d22896630e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ba54a5c29245a178fb1b50139d64f1e05bfd92f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66175584"
 ---
 # <a name="caching-reports-ssrs"></a>Armazenando relatórios em cache (SSRS)
@@ -35,7 +35,7 @@ ms.locfileid: "66175584"
  O armazenamento em cache é uma técnica de aprimoramento de desempenho. O conteúdo do cache é volátil e pode mudar à medida que relatórios são adicionados, substituídos ou removidos. Se for necessária uma estratégia mais previsível de armazenamento em cache, você deverá criar um instantâneo de relatório. Para obter mais informações, consulte [Definir as propriedades do processamento de relatórios](../../reporting-services/report-server/set-report-processing-properties.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] armazena arquivos temporários em um banco de dados para oferecer suporte a sessões de usuário e processamento de relatório. Esses arquivos são armazenados em cache para uso interno e para oferecer suporte a uma experiência de visualização consistente durante uma única sessão de navegador. Para obter mais informações sobre como os arquivos temporários de uso interno são armazenados em cache, consulte [Banco de dados do servidor de relatório &#40;modo nativo do SSRS&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md).  
+>  O [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] armazena arquivos temporários em um banco de dados para dar suporte a sessões de usuário e processamento de relatório. Esses arquivos são armazenados em cache para uso interno e para oferecer suporte a uma experiência de visualização consistente durante uma única sessão de navegador. Para obter mais informações sobre como os arquivos temporários de uso interno são armazenados em cache, consulte [Banco de dados do servidor de relatório &#40;modo nativo do SSRS&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md).  
   
 ## <a name="cached-instances"></a>Instâncias armazenadas em cache  
  Uma instância armazenada em cache de um relatório baseia-se no formato intermediário de um relatório. O servidor de relatório geralmente armazena em cache uma instância de um relatório com base no nome de relatório. No entanto, se um relatório puder conter dados diferentes com base nos parâmetros de consulta, várias versões do relatório poderão ser armazenadas em cache em um determinado momento. Por exemplo, suponha que você tem um relatório com parâmetros que assume um código de região como um valor de parâmetro. Se quatro usuários diferentes especificarem quatro códigos de região exclusivos, serão criadas quatro cópias armazenadas em cache.  

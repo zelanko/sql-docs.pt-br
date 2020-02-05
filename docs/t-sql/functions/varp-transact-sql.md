@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 49b699b943041ba3edf91db9e96a6e044826d854
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67927578"
 ---
 # <a name="varp-transact-sql"></a>VARP (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "67927578"
 
   Retorna a variância estatística para o preenchimento de todos os valores da expressão especificada.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -48,7 +48,7 @@ VARP ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
  **ALL**  
  Aplica a função a todos os valores. ALL é o padrão.  
   
- DISTINCT  
+ DISTINTO  
  Especifica que cada valor exclusivo é considerado.  
   
  *expressão*  
@@ -60,14 +60,14 @@ VARP ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
 ## <a name="return-types"></a>Tipos de retorno  
  **float**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Se VARP for usado em todos os itens de uma instrução SELECT, cada valor do conjunto de resultados será incluído no cálculo. VARP pode ser usado exclusivamente com colunas numéricas. Valores nulos são ignorados.  
   
  VARP é uma função determinística quando usada sem as cláusulas OVER e ORDER BY. É não determinística quando especificada com as cláusulas OVER e ORDER BY. Para obter mais informações, veja [Funções determinísticas e não determinísticas](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-varp"></a>A: Como usar VARP  
+### <a name="a-using-varp"></a>A: Usando VARP  
  O exemplo a seguir retorna a variância padrão para a população de todos os valores de gratificação da tabela `SalesPerson` no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```  
@@ -78,7 +78,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="b-using-varp"></a>B: Como usar VARP  
+### <a name="b-using-varp"></a>B: Usando VARP  
  O exemplo a seguir retorna o `VARP` dos valores de cota de vendas na tabela `dbo.FactSalesQuota`. A primeira coluna contém a variação de todos os valores distintos e a segunda coluna contém a variação de todos os valores, incluindo valores duplicados.  
   
 ```  

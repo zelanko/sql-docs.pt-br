@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: ebf59330-a421-45a5-9020-0484a96852bc
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 10ddecc4e3c81d48a2824eb48e48495e4f2dec1d
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: e9175157da22e10b8b4d30d46907481e3747e570
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68764937"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286666"
 ---
 # <a name="new-agent-profile"></a>Novo Perfil de Agente
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -42,14 +42,14 @@ ms.locfileid: "68764937"
   
 -   [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md)  
   
--   [Agente de Mesclagem de Replicação](../../relational-databases/replication/agents/replication-merge-agent.md)  
+-   [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md)  
   
 -   [Agente de Leitor de Fila de Replicação](../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
   
  **Valor padrão**  
  O valor padrão para cada parâmetro de agente.  
   
- **Value**  
+ **Valor**  
  O valor especificado para o parâmetro no perfil no qual o perfil novo é baseado. Edite esse campo para obter qualquer valor de parâmetro que você queira alterar.  
   
  **Mostrar apenas os parâmetros usados neste perfil**  

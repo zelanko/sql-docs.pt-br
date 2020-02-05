@@ -12,24 +12,24 @@ helpviewer_keywords:
 ms.assetid: 612e5c59-ba3e-49c3-a3df-56bac3d850a2
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 20f819b4a4751ca46f3e010954508486827f7ae3
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: fc907238dd294106b4086c7df647acb051dc9d1f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770349"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288029"
 ---
-# <a name="mssqleng021076"></a>MSSQL_ENG021076
+# <a name="mssql_eng021076"></a>MSSQL_ENG021076
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
     
 ## <a name="message-details"></a>Detalhes da mensagem  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|21076|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |Nome simbólico||  
 |Texto da mensagem|O instantâneo inicial do artigo '%s' ainda não está disponível.|  

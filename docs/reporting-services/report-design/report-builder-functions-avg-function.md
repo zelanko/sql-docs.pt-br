@@ -9,10 +9,10 @@ ms.assetid: f1276c4c-bb44-44c0-a1bf-386a0c340003
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 255201c7f24f013becd8230e9329e41a6d6a8d0d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65576409"
 ---
 # <a name="report-builder-functions---avg-function"></a>Funções do Construtor de Relatórios – Função Avg
@@ -28,7 +28,7 @@ Nos relatórios paginados do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversi
 Avg(expression, scope, recursive)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *expressão*  
  (**Float**) A expressão na qual executar a agregação.  
   
@@ -41,7 +41,7 @@ Avg(expression, scope, recursive)
 ## <a name="return-type"></a>Tipo de retorno  
  Retorna um **Decimal** para expressões decimais e um **Double** para todas as outras expressões.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O conjunto de dados especificado na expressão deve ter o mesmo tipo de dados. Para converter dados que têm vários tipos de dados numéricos no mesmo tipo de dados, use funções de conversão, como **CInt**, **CDbl** ou **CDec**. Para obter mais informações, consulte [Funções de conversão de tipo](https://go.microsoft.com/fwlink/?LinkId=96142).  
   
  O valor de *scope* deve ser uma constante de cadeia de caracteres e não pode ser uma expressão. Para agregações externas ou que não especificam outras agregações, *scope* deve se referir ao escopo atual ou a um escopo contentor. Para agregações de agregações, as agregações aninhadas podem especificar um escopo filho.  

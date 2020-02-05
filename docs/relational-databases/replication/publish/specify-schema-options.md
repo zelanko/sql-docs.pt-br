@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 1f85a479-bd6e-4023-abf7-7435a7e5b567
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: e2ac7116c1d7c402ac2b15e4168c64339da34998
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 1ce8df82856f7a6a495fdd026dec0d46eaba4c89
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908121"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287517"
 ---
 # <a name="specify-schema-options-for-sql-server-replication"></a>Especificar opções de esquema para replicação do SQL Server
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -104,7 +104,7 @@ ms.locfileid: "72908121"
   
 4.  No Publicador do banco de dados de publicação, execute [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md). Especifique o nome da publicação à qual o artigo pertence para `@publication`, o nome do artigo para `@article`, um valor de `schema_option` para `@property` e o resultado hexadecimal da etapa 3 para `@value`.  
   
-5.  Execute o Agente de Instantâneo para gerar um novo instantâneo. Para obter mais informações, consulte [Create and Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
+5.  Execute o Agente de Instantâneo para gerar um novo instantâneo. Para obter mais informações, consulte [Criar e aplicar o instantâneo inicial](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
 #### <a name="to-change-schema-options-for-an-existing-article-in-a-merge-publication"></a>Para alterar opções de esquema para um artigo existente em uma publicação de mesclagem  
   
@@ -120,10 +120,10 @@ ms.locfileid: "72908121"
   
 4.  No Publicador do banco de dados de publicação, execute [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Especifique o nome da publicação à qual o artigo pertence para `@publication`, o nome do artigo para `@article`, um valor de `schema_option` para `@property` e o resultado hexadecimal da etapa 3 para `@value`.  
   
-5.  Execute o Agente de Instantâneo para gerar um novo instantâneo. Para obter mais informações, consulte [Create and Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
+5.  Execute o Agente de Instantâneo para gerar um novo instantâneo. Para obter mais informações, consulte [Criar e aplicar o instantâneo inicial](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Publicar dados e objetos de banco de dados](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
- [Opções de artigo para a replicação transacional](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)  
+ [Article Options for Transactional Replication](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)  
   
   

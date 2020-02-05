@@ -1,6 +1,6 @@
 ---
-title: Adicionar um relatório personalizado ao Management Studio | Microsoft Docs
-ms.custom: ''
+title: adicionar um relatório personalizado ao Management Studio
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3cf8d726-0a90-4f80-98d0-352a2a59be0f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 84aee831cb03ebf419849fca8bf653803e5d5ced
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: a7a287cad9b674c55f032a04490a0518f723a797
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263457"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251363"
 ---
 # <a name="add-a-custom-report-to-management-studio"></a>adicionar um relatório personalizado ao Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -72,5 +72,5 @@ Esse tópico descreve como criar um relatório simples do [!INCLUDE[ssRSnoversio
 [Relatórios personalizados no Management Studio](../../ssms/object/custom-reports-in-management-studio.md)  
 [Usar relatórios personalizados com propriedades de nó do Pesquisador de Objetos](../../ssms/object/use-custom-reports-with-object-explorer-node-properties.md)  
 [Cancelar supressão da execução de avisos de relatório personalizado](../../ssms/object/unsuppress-run-custom-report-warnings.md)  
-[SQL Server Reporting Services](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
+[Serviços de Relatório do SQL Server](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
   

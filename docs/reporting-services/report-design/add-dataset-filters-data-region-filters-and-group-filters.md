@@ -9,10 +9,10 @@ ms.assetid: fcca7243-a702-4725-8e6f-cf118e988acf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d3ab6708212ce429f2abacae4353670235a687cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65582061"
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters"></a>Adicionar filtros de conjunto de dados, de região de dados e de grupo
@@ -70,7 +70,7 @@ ms.locfileid: "65582061"
 |--------------------------------------------|-----------------------|  
 |**Booliano**|**Booliano**|  
 |**DateTime**|**DateTime**, **DateTimeOffset**|  
-|**Integer**|**Int16**, **Int32**, **UInt16**, **Byte**, **SByte**|  
+|**Inteiro**|**Int16**, **Int32**, **UInt16**, **Byte**, **SByte**|  
 |**Valor Flutuante**|**Single**, **Double**, **Decimal**|  
 |**Texto**|**String**, **Char**, **GUID**, **Timespan**|  
   
@@ -85,7 +85,7 @@ ms.locfileid: "65582061"
 |**TopN, BottomN**|Compara a expressão com um valor **Integer** .|  
 |**TopPercent, BottomPercent**|Compara a expressão com um valor **Integer** ou **Float** .|  
 |**Entre**|Testa se a expressão está entre dois valores, inclusive.|  
-|**Entrada**|Testa se a expressão está contida em um conjunto de valores.|  
+|**In**|Testa se a expressão está contida em um conjunto de valores.|  
   
 ### <a name="value"></a>Valor  
  A expressão Valor especifica a parte final da equação do filtro. O processador de relatórios converte a expressão avaliada para o tipo de dados especificado e avalia a equação de filtro inteira para determinar se os dados especificados na Expressão são transmitidos pelo filtro.  

@@ -16,10 +16,10 @@ ms.assetid: 52c3f2a3-3d6d-4fee-9c46-83f366919398
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a18ad4fd1d79bc7eae5f45318cece55037c78010
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65574245"
 ---
 # <a name="url-access-ssrs"></a>Acesso à URL (SSRS)
@@ -108,17 +108,17 @@ https://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl
   
 |Descrições das tarefas|Links|  
 |-----------------------|-----------|  
-|Acessar itens do servidor de relatório, como relatórios, fontes de dados compartilhadas e recursos.|[Acessar itens do Servidor de Relatório usando o acesso à URL](../reporting-services/access-report-server-items-using-url-access.md)|  
-|Transmitir parâmetros de relatório a um relatório.|[Pass a Report Parameter Within a URL](../reporting-services/pass-a-report-parameter-within-a-url.md)|  
-|Definir a localidade dos parâmetros de relatório na cadeia de caracteres de acesso à URL, o que define as interpretações de datas, moedas etc. específicas da localidade.|[Definir o idioma dos parâmetros do relatório em uma URL](../reporting-services/set-the-language-for-report-parameters-in-a-url.md)|  
-|Enviar configurações específicas da extensão de renderização que personalizam como o relatório é renderizado.|[Especificar configurações de informações do dispositivo em uma URL](../reporting-services/specify-device-information-settings-in-a-url.md)|  
+|Acessar itens do servidor de relatório, como relatórios, fontes de dados compartilhadas e recursos.|[Acessar itens de servidor de relatório com acesso à URL](../reporting-services/access-report-server-items-using-url-access.md)|  
+|Transmitir parâmetros de relatório a um relatório.|[Passar um parâmetro de relatório em uma URL](../reporting-services/pass-a-report-parameter-within-a-url.md)|  
+|Definir a localidade dos parâmetros de relatório na cadeia de caracteres de acesso à URL, o que define as interpretações de datas, moedas etc. específicas da localidade.|[Definir o idioma para parâmetros de relatório em uma URL](../reporting-services/set-the-language-for-report-parameters-in-a-url.md)|  
+|Enviar configurações específicas da extensão de renderização que personalizam como o relatório é renderizado.|[Especificar configurações de informações de dispositivo em uma URL](../reporting-services/specify-device-information-settings-in-a-url.md)|  
 |Exportar um relatório diretamente para um formato de arquivo sem exibi-lo no navegador.|[Exportar um relatório com acesso à URL](../reporting-services/export-a-report-using-url-access.md)|  
 |Abrir um relatório e navegar diretamente ao local de uma cadeia de caracteres.|[Pesquisar um relatório com acesso à URL](../reporting-services/search-a-report-using-url-access.md)|  
-|Renderizar um instantâneo de histórico de relatório específico.|[Renderizar instantâneo de histórico de relatório com o acesso à URL](../reporting-services/render-a-report-history-snapshot-using-url-access.md)|  
+|Renderizar um instantâneo de histórico de relatório específico.|[Renderizar um instantâneo de histórico de relatório com acesso à URL](../reporting-services/render-a-report-history-snapshot-using-url-access.md)|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Pass a Report Parameter Within a URL](../reporting-services/pass-a-report-parameter-within-a-url.md)   
- [Referência de parâmetro de acesso de URL](../reporting-services/url-access-parameter-reference.md)   
+ [Referência de parâmetro de acesso à URL](../reporting-services/url-access-parameter-reference.md)   
  [Integrando o Reporting Services usando o acesso à URL](../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)   
  [Localizando, exibindo e gerenciando relatórios &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   

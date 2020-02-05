@@ -16,10 +16,10 @@ ms.assetid: 6dd275d3-d9b2-4db7-938a-d4406c940a7a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3e2cf823a6c1cd33d647472a2e709517175ddce7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978161"
 ---
 # <a name="getversioncolumns-method-sqlserverdatabasemetadata"></a>Método getVersionColumns (SQLServerDatabaseMetaData)
@@ -36,7 +36,7 @@ public java.sql.ResultSet getVersionColumns(java.lang.String catalog,
                                             java.lang.String table)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *catalog*  
   
  Uma **String** que contém o nome do catálogo.  
@@ -55,17 +55,17 @@ public java.sql.ResultSet getVersionColumns(java.lang.String catalog,
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse método getVersionColumns é especificado pelo método getVersionColumns na interface java.sql.DatabaseMetaData.  
   
  O conjunto de resultados retornado pelo método getVersionColumns conterá as seguintes informações:  
   
-|Nome|Tipo|Descrição|  
+|Nome|Type|DESCRIÇÃO|  
 |----------|----------|-----------------|  
 |SCOPE|**short**|Não há suporte do JDBC Driver.|  
-|COLUMN_NAME|**String**|O nome da coluna.|  
+|COLUMN_NAME|**Cadeia de caracteres**|O nome da coluna.|  
 |DATA_TYPE|**short**|O tipo de dados SQL de java.sql.Types.|  
-|TYPE_NAME|**String**|O nome do tipo de dados.|  
+|TYPE_NAME|**Cadeia de caracteres**|O nome do tipo de dados.|  
 |COLUMN_SIZE|**int**|A precisão da coluna.|  
 |BUFFER_LENGTH|**int**|O comprimento da coluna em bytes.|  
 |DECIMAL_DIGITS|**short**|A escala da coluna.|  
