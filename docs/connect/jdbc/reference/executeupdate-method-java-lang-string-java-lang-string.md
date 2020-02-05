@@ -16,10 +16,10 @@ ms.assetid: 2f44a689-65c8-4c94-9574-e9c08ea7918e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a5c905c11d76f6f9928cb621ce5a35caa4dd1419
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954743"
 ---
 # <a name="executeupdate-method-javalangstring-javalangstring"></a>Método executeUpdate (java.lang.String, java.lang.String)
@@ -35,7 +35,7 @@ public final int executeUpdate(java.lang.String sql,
                                java.lang.String[] columnNames)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *sql*  
   
  Uma **String** que contém uma instrução SQL.  
@@ -50,7 +50,7 @@ public final int executeUpdate(java.lang.String sql,
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse método executeUpdate é especificado pelo método executeUpdate na interface java.sql.Statement.  
   
  Se a execução de um procedimento armazenado resultar em uma contagem de atualização maior que um, ou que gere mais de um conjunto de resultados, use o método [execute](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md) para executar o procedimento armazenado.  

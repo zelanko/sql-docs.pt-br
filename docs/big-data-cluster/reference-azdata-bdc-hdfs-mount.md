@@ -9,20 +9,20 @@ ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 43796ca3dc02804472298b17f8ddaeed946df5bb
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: b22e5b8427cd7f8033a630c30dabdd09420a44c3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531843"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74820874"
 ---
 # <a name="azdata-bdc-hdfs-mount"></a>azdata bdc hdfs mount
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-O artigo a seguir fornece referência para os comandos `sql` na ferramenta `azdata`. Para obter mais informações sobre outros comandos `azdata`, confira [referência de azdata](reference-azdata.md)
+O artigo a seguir fornece referência para os comandos `bdc hdfs mount` na ferramenta `azdata`. Para obter mais informações sobre outros comandos `azdata`, confira [referência de azdata](reference-azdata.md)
 
-## <a name="commands"></a>Commands
+## <a name="commands"></a>Comandos
 |     |     |
 | --- | --- |
 [azdata bdc hdfs mount create](#azdata-bdc-hdfs-mount-create) | Criar montagens de repositórios remotos no HDFS.
@@ -46,7 +46,7 @@ Para montar um BDC HDFS remoto (hdfs://namenode1:8080/) no caminho do HDFS local
 ```bash
 azdata bdc hdfs mount create --remote-uri hdfs://namenode1:8080/ --mount-path /mounts/hdfs/
 ```
-### <a name="required-parameters"></a>Parâmetros necessários
+### <a name="required-parameters"></a>Parâmetros obrigatórios
 #### `--remote-uri -r`
 URI do repositório remoto que deve ser montado (fonte da montagem).
 #### `--mount-path -m`
@@ -72,7 +72,7 @@ Delete mount created at /mounts/adlsv2/data for a ADLS Gen 2 storage account.
 ```bash
 azdata bdc hdfs mount delete --mount-path /mounts/adlsv2/data
 ```
-### <a name="required-parameters"></a>Parâmetros necessários
+### <a name="required-parameters"></a>Parâmetros obrigatórios
 #### `--mount-path -m`
 O caminho do HDFS correspondente à montagem que deve ser excluída.
 ### <a name="global-arguments"></a>Argumentos globais
@@ -124,7 +124,7 @@ Refresh mount created at /mounts/adlsv2/data.
 ```bash
 azdata bdc hdfs mount refresh --mount-path /mounts/adlsv2/data
 ```
-### <a name="required-parameters"></a>Parâmetros necessários
+### <a name="required-parameters"></a>Parâmetros obrigatórios
 #### `--mount-path -m`
 Caminho do HDFS correspondente à montagem que deve ser atualizada.
 ### <a name="global-arguments"></a>Argumentos globais

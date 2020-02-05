@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ec8df33c7af98889529232bbcd56437745339fba
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73843745"
 ---
 # <a name="identify-databases-and-tables-for-stretch-database-with-data-migration-assistant"></a>Identificar bancos de dados e tabelas do Stretch Database com o Assistente de Migração de Dados
@@ -45,7 +45,7 @@ ms.locfileid: "73843745"
 
 7.  Selecione **Iniciar Avaliação**.
 
-## <a name="review-the-results"></a>Analisar os resultados  
+## <a name="review-the-results"></a>Revise os resultados  
   
 1.  Quando a análise for concluída, na página **Examinar resultados** (etapa 3), selecione a opção **Recomendações de recurso** e, em seguida, selecione a guia **Armazenamento**.
 
@@ -65,7 +65,7 @@ Com o lançamento do Assistente de Migração do Dados, que substitui e estende 
   
 ## <a name="see-also"></a>Consulte Também  
  [Limitações do Stretch Database](../../sql-server/stretch-database/limitations-for-stretch-database.md)   
- [Habilitar o Stretch Database em um banco de dados](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)   
+ [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)   
  [Habilitar o Stretch Database para uma tabela](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)  
   
   

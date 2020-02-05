@@ -14,17 +14,17 @@ ms.assetid: e9e36f01-93f6-4e6e-90c6-c7f3fd121737
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 77a6174931924c30b8d482c0bd5d3f4a358f4a10
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67987015"
 ---
 # <a name="sql-server-broker-statistics-object"></a>SQL Server, objeto Broker Statistics
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   O objeto de desempenho SQLServer:Broker Statistics inclui contadores de desempenho que relatam informações gerais sobre o [!INCLUDE[ssSB](../../includes/sssb-md.md)] para uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. A seguinte tabela lista os contadores incluídos nesse objeto:  
   
-|Contadores do SQL Server Broker Statistics|Descrição|  
+|Contadores do SQL Server Broker Statistics|DESCRIÇÃO|  
 |-------------------------------------------|-----------------|  
 |**Total de Erros de Ativação**|O número de vezes que um procedimento armazenado de ativação do [!INCLUDE[ssSB](../../includes/sssb-md.md)] fechou com um erro.|  
 |**Reversões de Transações do Agente**|O número de transações revertidas que continham instruções DML relacionadas ao [!INCLUDE[ssSB](../../includes/sssb-md.md)], como SEND e RECEIVE.|  

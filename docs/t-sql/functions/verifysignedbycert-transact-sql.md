@@ -24,10 +24,10 @@ ms.assetid: 4e041f33-60c4-4190-91c7-220d51dd6c8f
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 360b597b8cd122ede57426cc879dd041b3414078
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67927552"
 ---
 # <a name="verifysignedbycert-transact-sql"></a>VERIFYSIGNEDBYCERT (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "67927552"
 
   Testa se dados assinados digitalmente foram alterados desde que foram assinados.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -59,7 +59,7 @@ VerifySignedByCert( Cert_ID , signed_data , signature )
   
  Retorna 1 quando os dados assinados estão inalterados, caso contrário, retorna 0.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  **VerifySignedBycert** descriptografa a assinatura dos dados usando a chave pública da chave assimétrica especificada e compara o valor descriptografado a um hash de MD5 dos dados computados recentemente. Se os valores corresponderem, a assinatura será confirmada como válida.  
   
 ## <a name="permissions"></a>Permissões  
@@ -67,7 +67,7 @@ VerifySignedByCert( Cert_ID , signed_data , signature )
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-verifying-that-signed-data-has-not-been-tampered-with"></a>A. Verificando se os dados assinados não foram violados  
+### <a name="a-verifying-that-signed-data-has-not-been-tampered-with"></a>a. Verificando se os dados assinados não foram violados  
  O exemplo a seguir testa se as informações em `Signed_Data` foram alteradas desde que foram assinadas com o certificado chamado `Shipping04`. A assinatura é armazenada em `DataSignature`. O certificado, `Shipping04`, é passado para `Cert_ID`, que retorna a ID do certificado no banco de dados. Se `VerifySignedByCert` retornar 1, a assinatura estará correta. Se `VerifySignedByCert` retornar 0, os dados em `Signed_Data` não serão os que foram usados para gerar `DataSignature`. Neste caso, ou `Signed_Data` foi alterado desde que foi assinado ou `Signed_Data` foi assinado com um certificado diferente.  
   
 ```  

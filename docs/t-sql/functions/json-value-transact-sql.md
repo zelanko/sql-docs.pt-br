@@ -19,13 +19,13 @@ author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: 845c621291331fdf75e257a3f71ec8068df13ffd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109350"
 ---
-# <a name="jsonvalue-transact-sql"></a>JSON_VALUE (Transact-SQL)
+# <a name="json_value-transact-sql"></a>JSON_VALUE (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
@@ -33,7 +33,7 @@ ms.locfileid: "68109350"
   
  Para extrair um objeto ou uma matriz de uma cadeia de caracteres JSON em vez de um valor escalar, confira [JSON_QUERY &#40;Transact-SQL&#41;](../../t-sql/functions/json-query-transact-sql.md). Para obter informações sobre as diferenças entre **JSON_VALUE** e **JSON_QUERY**, confira [Comparar JSON_VALUE e JSON_QUERY](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md#JSONCompare).  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -67,7 +67,7 @@ No [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e no [!INCLUDE[ssSDSfu
   
  Se você precisar retornar valores escalares com mais de 4000 caracteres, use **OPENJSON** em vez de **JSON_VALUE**. Para obter mais informações, veja [OPENJSON &#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md).  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Comentários
 
 ### <a name="lax-mode-and-strict-mode"></a>Modo incerto e modo estrito
 
@@ -94,13 +94,13 @@ SET @jsonInfo=N'{
   
 |Caminho|Valor retornado no modo incerto|Valor retornado no modo estrito|Obter mais informações|  
 |----------|------------------------------|---------------------------------|---------------|  
-|$|NULL|Erro|Não é um valor escalar.<br /><br /> Use **JSON_QUERY** nesse caso.|  
+|$|NULO|Erro|Não é um valor escalar.<br /><br /> Use **JSON_QUERY** nesse caso.|  
 |$.info.type|N'1'|N'1'|N/A|  
 |$.info.address.town|N'Bristol'|N'Bristol'|N/A|  
-|$.info."address"|NULL|Erro|Não é um valor escalar.<br /><br /> Use **JSON_QUERY** nesse caso.|  
-|$.info.tags|NULL|Erro|Não é um valor escalar.<br /><br /> Use **JSON_QUERY** nesse caso.|  
-|$.info.type[0]|NULL|Erro|Não é uma matriz.|  
-|$.info.none|NULL|Erro|A propriedade não existe.|  
+|$.info."address"|NULO|Erro|Não é um valor escalar.<br /><br /> Use **JSON_QUERY** nesse caso.|  
+|$.info.tags|NULO|Erro|Não é um valor escalar.<br /><br /> Use **JSON_QUERY** nesse caso.|  
+|$.info.type[0]|NULO|Erro|Não é uma matriz.|  
+|$.info.none|NULO|Erro|A propriedade não existe.|  
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
   
 ## <a name="examples"></a>Exemplos  

@@ -24,10 +24,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4410c086ed5fdca8fa4812a96c13bac6f692c8ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67942950"
 ---
 # <a name="-bitwise-or-transact-sql"></a>| (OR bit a bit) (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "67942950"
 
   Executa uma operação OR lógica bit a bit entre dois valores inteiros especificados, conforme convertidos em expressões binárias dentro de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -53,7 +53,7 @@ expression | expression
 ## <a name="result-types"></a>Tipos de resultado  
  Retorna um **int** se os valores de entrada são **int**, um **smallint** se os valores de entrada são **smallint** ou um **tinyint** se os valores de entrada são **tinyint**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O operador bit a bit | executa um OR lógico bit a bit entre as duas expressões, usando cada bit correspondente para as duas expressões. Os bits no resultado serão definidos como 1 se um ou os dois bits (para o bit atual a ser resolvido) nas expressões de entrada tiverem o valor 1; se nenhum bit nas expressões de entrada for 1, o bit no resultado será definido como 0.  
   
  Se as expressões à esquerda e à direita tiverem tipos de dados inteiros diferentes (por exemplo, a *expression* à esquerda é **smallint** e a *expression* à direita é **int**), o argumento do tipo de dados menor será convertido no tipo de dados maior. Neste exemplo, a **smallint**_expression_ é convertida em um **int**.  

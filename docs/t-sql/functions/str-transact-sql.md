@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 381eb06e646f98b3ec092cbaa4b6431677be559c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67906878"
 ---
 # <a name="str-transact-sql"></a>STR (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "67906878"
 
   Retorna dados de caractere convertidos de dados numéricos.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -54,7 +54,7 @@ STR ( float_expression [ , length [ , decimal ] ] )
 ## <a name="return-types"></a>Tipos de retorno  
  **varchar**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Se for fornecidos, os valores para os parâmetros *length* e *decimal* para STR devem ser positivos. O número é arredondado para um número inteiro por padrão ou se o parâmetro decimal for 0. O comprimento especificado deve ser maior ou igual à parte do número antes do ponto decimal mais o sinal do número (se houver). Uma *float_expression* breve é justificada à direita no comprimento especificado e uma *float_expression* longa é truncada para o número especificado de casas decimais. Por exemplo, STR(12 **,** 10) gera 12 como resultado. É justificado à direita no conjunto de resultados. Entretanto, STR (1223 **,** 2) trunca o conjunto de resultados com **. As funções de cadeia de caracteres podem ser aninhadas.  
   
 > [!NOTE]  

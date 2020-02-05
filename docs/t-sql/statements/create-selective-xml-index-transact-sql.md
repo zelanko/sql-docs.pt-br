@@ -13,10 +13,10 @@ ms.assetid: 1d769f62-f646-4057-b93a-bf5f90e935ed
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 30b70c57d90f7772368713ac378c809a3dd7c46e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68117195"
 ---
 # <a name="create-selective-xml-index-transact-sql"></a>CREATE SELECTIVE XML INDEX (Transact-SQL)
@@ -24,7 +24,7 @@ ms.locfileid: "68117195"
 
   Cria um novo índice XML seletivo na tabela especificada e na coluna XML. Os índices XML seletivos melhoram o desempenho da indexação e consulta XML indexando somente o subconjunto de nós normalmente consultado. Também é possível criar índices XML seletivos secundários. Para obter informações, confira [Criar, alterar e remover índices XML seletivos secundários](../../relational-databases/xml/create-alter-and-drop-secondary-selective-xml-indexes.md).  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -117,7 +117,7 @@ identifier
   
  WITH *\<index_options>* Para obter informações sobre as opções de índice, confira [CREATE XML INDEX &#40;índices XML seletivos&#41;](../../t-sql/statements/create-xml-index-selective-xml-indexes.md).  
   
-## <a name="best-practices"></a>Práticas recomendadas  
+## <a name="best-practices"></a>Práticas Recomendadas  
  Na maioria das vezes, crie um índice XML seletivo, em vez de um índice XML comum, para obter melhor desempenho e um armazenamento mais eficiente. Entretanto, um índice XML seletivo não é recomendado quando uma das seguintes condições é verdadeira:  
   
 -   É necessário mapear um grande número de caminhos do nó.  

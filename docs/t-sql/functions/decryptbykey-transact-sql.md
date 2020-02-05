@@ -21,10 +21,10 @@ ms.assetid: 6edf121f-ac62-4dae-90e6-6938f32603c9
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 9ca108b3336a77becc605040b12c0361db4ac903
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72251373"
 ---
 # <a name="decryptbykey-transact-sql"></a>DECRYPTBYKEY (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "72251373"
 
 Essa função usa uma chave simétrica para descriptografar dados.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -61,7 +61,7 @@ Uma variável que contém dados dos quais um autenticador é gerado. Deve corres
 ## <a name="return-types"></a>Tipos de retorno  
 **varbinary**, com um tamanho máximo de 8.000 bytes. `DECRYPTBYKEY` retornará NULL se a chave simétrica usada para criptografia de dados não estiver aberta ou se *ciphertext* for NULL.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 `DECRYPTBYKEY` usa uma chave simétrica. O banco de dados deve ter essa chave simétrica já aberta. `DECRYPTBYKEY` permitirá várias chaves abertas ao mesmo tempo. Não é necessário abrir a chave imediatamente antes da descriptografia do texto cifrado.  
   
 Normalmente a criptografia e descriptografia simétricas operam de maneira relativamente rápida e funciona bem para operações que envolvem grandes volumes de dados.  
@@ -73,7 +73,7 @@ A chave simétrica já deve estar aberta na sessão atual. Consulte [OPEN SYMMET
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-decrypting-by-using-a-symmetric-key"></a>A. Descriptografando com o uso de uma chave simétrica  
+### <a name="a-decrypting-by-using-a-symmetric-key"></a>a. Descriptografando com o uso de uma chave simétrica  
 Este exemplo descriptografa o texto cifrado com uma chave simétrica.  
   
 ```sql  

@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 5d730c8e71044154b9844174ac8d21837c9ea05f
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73843799"
 ---
 # <a name="get-started-by-running-the-enable-database-for-stretch-wizard"></a>Comece executando o Assistente para Habilitar o Banco de Dados para Alongamento
@@ -56,15 +56,15 @@ ms.locfileid: "73843799"
  ![Página de introdução do assistente do Stretch Database](../../sql-server/stretch-database/media/stretch-wizard-1.png "Página de introdução do assistente do Stretch Database")  
   
 ##  <a name="Tables"></a> Selecionar tabelas  
- Selecione as tabelas para habilitar o Stretch.  
+ Selecione as tabelas que você deseja habilitar para o Stretch.  
  
 Tabelas com várias linhas aparecem na parte superior da lista classificada. Antes que o Assistente exiba a lista de tabelas, ele analisa os tipos de dados nela para os quais atualmente não há suporte no Stretch Database. 
   
  ![Página de seleção de tabelas do assistente do Stretch Database](../../sql-server/stretch-database/media/stretch-wizard-2.png "Página de seleção de tabelas do assistente do Stretch Database")  
   
-|coluna|Descrição|  
+|Coluna|DESCRIÇÃO|  
 |------------|-----------------|  
-|(sem título)|Marque a caixa de seleção nesta coluna para habilitar a tabela selecionada para o Stretch.|  
+|(sem título)|Marque a caixa de seleção nessa coluna para habilitar a tabela selecionada para Stretch.|  
 |**Nome**|Especifica o nome da coluna no banco de dados.|  
 |(sem título)|Um símbolo nesta coluna pode representar um aviso que não impede a habilitação da tabela selecionada para Stretch. Ele também pode representar um problema de bloqueio que impede a habilitação da tabela selecionada para Stretch – por exemplo, porque a tabela usa um tipo de dados sem suporte. Passe o mouse sobre o símbolo para exibir mais informações em uma dica de ferramenta. Para obter mais informações, veja [Limitações do Stretch Database](../../sql-server/stretch-database/limitations-for-stretch-database.md).|  
 |**Ampliada**|Indica se a tabela já foi está habilitada para Stretch.|  
@@ -108,13 +108,13 @@ Se você desejar usar um tipo diferente de função de filtro para selecionar as
   
      ![Entrar no Azure – assistente do Stretch Database](../../sql-server/stretch-database/media/stretch-wizard-3.png "Entrar no Azure – assistente do Stretch Database")  
   
-2.  Selecione a assinatura do Azure a ser usada para o Stretch Database. 
+2.  Escolha a assinatura do Azure existente para usar o Stretch Database. 
 
 > [!NOTE] 
 > Para habilitar o Stretch em um banco de dados, você deve ter direitos de administrador para a assinatura que você está usando. O assistente do Stretch Database só mostrará assinaturas em que o usuário tem direitos de administrador.
   
 3.  Selecione a região do Azure a ser usada para o Stretch Database.
-    -   Se você criar um novo servidor, o servidor será criado nessa região.  
+    -   Se você criar um novo servidor, ele será criado nessa região.  
     -   Se você houver servidores na região selecionada, o assistente os listará quando você escolher **Servidor existente**.
   
      Para minimizar a latência, escolha a região do Azure onde seu SQL Server está localizado. Para saber mais sobre regiões, confira [Regiões do Azure](https://azure.microsoft.com/regions/).  
@@ -169,7 +169,7 @@ Se você desejar usar um tipo diferente de função de filtro para selecionar as
  ![Página de resumo do assistente do Stretch Database](../../sql-server/stretch-database/media/stretch-wizard-8.png "Página de resumo do assistente do Stretch Database")  
   
 ##  <a name="Results"></a> Resultados  
- Analise os resultados.  
+ Revise os resultados.  
   
  Para monitorar o status da migração de dados, veja [Monitorar e solucionar problemas de migração de dados &#40;Stretch Database&#41;](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md).  
   
@@ -177,10 +177,10 @@ Se você desejar usar um tipo diferente de função de filtro para selecionar as
   
 ##  <a name="KnownIssues"></a> Solução de problemas do assistente  
  **O assistente do Stretch Database falhou.**  
- Se Stretch Database ainda tiver sido habilitado no nível do servidor, e você executar o assistente sem as permissões de administrador do sistema, o assistente falhará. Peça ao administrador do sistema para habilitar o Stretch Database na instância do servidor local e, depois, execute o assistente novamente. Para obter mais informações, confira [Pré-requisito: permissão para habilitar o Stretch Database no servidor.](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer)  
+ Se Stretch Database ainda tiver sido habilitado no nível do servidor, e você executar o assistente sem as permissões de administrador do sistema, o assistente falhará. Peça ao administrador do sistema para habilitar o Stretch Database na instância do servidor local e, depois, execute o assistente novamente. Para obter mais informações, consulte [Pré-requisito: permissão para habilitar o Stretch Database no servidor](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer).  
   
 ## <a name="next-steps"></a>Próximas etapas  
- Habilite outras tabelas para o Stretch Database. Monitore a migração dos dados e gerencie os bancos de dados e tabelas habilitados para o Stretch.  
+ Habilitar outras tabelas para o Banco de Dados de Stretch. Monitore a migração dos dados e gerencie os bancos de dados e tabelas habilitados para o Stretch.  
   
 -   [Enable Stretch Database for a table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) para habilitar outras tabelas.  
   
@@ -195,7 +195,7 @@ Se você desejar usar um tipo diferente de função de filtro para selecionar as
 -   [Restaurar bancos de dados habilitados para Stretch](../../sql-server/stretch-database/restore-stretch-enabled-databases-stretch-database.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Habilitar o Stretch Database para um banco de dados](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)   
+ [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)   
  [Habilitar o Stretch Database para uma tabela](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)  
   
   

@@ -22,10 +22,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3d820e8740740335a576385a7c971d1e0fe5eb5d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67942949"
 ---
 # <a name="grant-database-scoped-credential-permissions-transact-sql"></a>Permissões GRANT de credencial no escopo do banco de dados (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "67942949"
 
   Concede permissões em uma credencial no escopo do banco de dados. 
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -78,7 +78,7 @@ AS *granting_principal*
 -   usuário de banco de dados mapeado para uma chave assimétrica  
 -   usuário de banco de dados não mapeado para uma entidade do servidor.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Uma credencial no escopo do banco de dados é um item protegível no nível do banco de dados contido pelo banco de dados pai na hierarquia de permissões. As permissões mais específicas e limitadas que podem ser concedidas em uma credencial no escopo do banco de dados estão listadas abaixo, junto com as permissões mais gerais que as incluem implicitamente.  
   
 |Permissão de credencial no escopo do banco de dados|Implícito pela permissão de credencial no escopo do banco de dados|Implícito na permissão de banco de dados|  

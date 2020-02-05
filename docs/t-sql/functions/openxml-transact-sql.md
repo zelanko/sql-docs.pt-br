@@ -20,10 +20,10 @@ ms.assetid: 8088b114-7d01-435a-8e0d-b81abacc86d6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d9dacd09604661f9880533fcdcafd2fb7ab9ab12
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914593"
 ---
 # <a name="openxml-transact-sql"></a>OPENXML (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "67914593"
 
   OPENXML fornece uma exibição de conjunto de linhas em um documento XML. Como OPENXML é um provedor de conjunto de linhas, OPENROWSET pode ser usado em instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] nas quais os provedores de conjunto de linhas, como uma tabela, exibição ou a função OPENROWSET, podem aparecer.  
   
- ![Ícone de link do artigo](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do artigo") [Convenções de sintaxe do Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do artigo](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do artigo") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -51,7 +51,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
  *sinalizadores*  
  Indica o mapeamento usado entre os dados XML e o conjunto de linhas relacional, e como a coluna de derramamento é preenchida. *flags* é um parâmetro de entrada opcional e pode ser um dos valores a seguir.  
   
-|Valor do byte|Descrição|  
+|Valor do byte|DESCRIÇÃO|  
 |----------------|-----------------|  
 |**0**|O padrão será o mapeamento **centrado em atributo**.|  
 |**1**|Use o mapeamento **centrado em atributo**. Pode ser combinado com XML_ELEMENTS. Neste caso, o mapeamento **centrado em atributo** é aplicado primeiro. Em seguida, o mapeamento **centrado em elemento** é aplicado às colunas restantes.|  
@@ -59,7 +59,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 |**8**|Pode ser combinado (OR lógico) com XML_ATTRIBUTES ou XML_ELEMENTS. No contexto de recuperação, esse sinalizador indica que os dados consumidos não podem ser copiados para a propriedade de estouro **\@mp:xmltex**.|  
   
  _SchemaDeclaration_  
- É a definição do esquema do formato: _ColName_*ColType* [_ColPattern_ | _MetaProperty_] [ **,** _ColNameColType_ [_ColPattern_ | _MetaProperty_]...]  
+ É a definição de esquema no formato: _ColName_*ColType* [_ColPattern_ | _MetaProperty_] [ **,** _ColNameColType_ [_ColPattern_ | _MetaProperty_]...]  
   
  _ColName_  
  É o nome de coluna no conjunto de linhas.  
@@ -80,12 +80,12 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
  *TableName*  
  É o nome da tabela que poderá ser fornecido (em vez de *SchemaDeclaration*) se já existir uma tabela com o esquema desejado e não for necessário nenhum padrão de coluna.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  A cláusula WITH fornece um formato de conjunto de linhas (e as informações de mapeamento adicionais, conforme o necessário) usando *SchemaDeclaration* ou especificando um *TableName* existente. Se a cláusula WITH opcional não for especificada, os resultados serão retornados em um formato de tabela de **borda**. As tabelas de borda representam a estrutura de documento XML refinada (como nomes de elemento/atributo, a hierarquia de documento, os namespaces e PIS e assim por diante) em uma única tabela.  
   
  A tabela a seguir descreve a estrutura da tabela de **borda**.  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |**id**|**bigint**|É a ID exclusiva do nó do documento.<br /><br /> O elemento raiz tem o valor de ID igual a 0. Os valores negativos da ID são reservados.|  
 |**parentid**|**bigint**|Identifica o pai do nó. O pai identificado por essa ID não é necessariamente o elemento pai, mas depende do NodeType do nó cujo pai é identificado por essa ID. Por exemplo, se o nó for um nó de texto, o pai poderá ser um nó de atributo.<br /><br /> Se o nó estiver no nível superior no documento XML, seu **ParentID** será NULL.|  
@@ -99,7 +99,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-a-simple-select-statement-with-openxml"></a>A. Usando uma instrução SELECT simples com OPENXML  
+### <a name="a-using-a-simple-select-statement-with-openxml"></a>a. Usando uma instrução SELECT simples com OPENXML  
  O exemplo a seguir cria uma representação interna da imagem XML usando `sp_xml_preparedocument`. Uma instrução `SELECT` que usa um provedor de conjunto de linhas `OPENXML` é executada na representação interna do documento XML.  
   
  O valor de *flag* é definido como `1`. Esse valor indica um mapeamento **centrado em atributo**. Portanto, os atributos XML mapeiam para as colunas no conjunto de linhas. O *rowpattern* especificado como `/ROOT/Customer` identifica os nós de `<Customers>` a serem processados.  
@@ -245,5 +245,5 @@ EXEC sp_xml_removedocument @idoc;
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exemplos: Usando OPENXML](../../relational-databases/xml/examples-using-openxml.md)  
+ [Exemplos: usando OPENXML](../../relational-databases/xml/examples-using-openxml.md)  
   

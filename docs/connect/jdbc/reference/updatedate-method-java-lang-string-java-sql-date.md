@@ -16,10 +16,10 @@ ms.assetid: 4fbe9123-7365-4a8f-bbd5-dc2b16f1b231
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2eee4ccb8230ee32398cb75445297950ff89aa94
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67999147"
 ---
 # <a name="updatedate-method-javalangstring-javasqldate"></a>Método updateDate (java.lang.String, java.sql.Date)
@@ -35,7 +35,7 @@ public void updateDate(java.lang.String columnName,
                        java.sql.Date x)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *columnName*  
   
  Uma **Cadeia de Caracteres** que contém o nome da coluna.  
@@ -47,7 +47,7 @@ public void updateDate(java.lang.String columnName,
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse método updateDate é especificado pelo método updateDate na interface java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Consulte Também  

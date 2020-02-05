@@ -20,10 +20,10 @@ ms.assetid: da006ac9-f914-4995-a2fb-25b5d971cd90
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 795ef4c95981636eec2e95bc6f85c24d7da27eb9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68065658"
 ---
 # <a name="alter-event-session-transact-sql"></a>ALTER EVENT SESSION (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68065658"
 
   Inicia ou interrompe uma sessão de evento ou altera uma configuração de sessão de evento.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -141,7 +141,7 @@ ON SERVER
 |TRACK_CAUSALITY = { ON &#124; **OFF** }|Especifica se a causalidade deve ou não ser controlada. Se habilitada, a causalidade permitirá que eventos relacionados em conexões de servidor diferentes sejam correlacionados.|  
 |STARTUP_STATE = { ON &#124; **OFF** }|Especifica se essa sessão de evento deve ser iniciada automaticamente quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicia.<br /><br /> Se STARTUP_STATE = ON, a sessão de evento somente será iniciada se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for parado e, em seguida, reiniciado.<br /><br /> ON= a sessão de evento é iniciada na inicialização.<br /><br /> **OFF** = A sessão de evento NÃO é iniciada na inicialização.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Os argumentos `ADD` e `DROP` não podem ser usados na mesma instrução.  
   
 ## <a name="permissions"></a>Permissões  

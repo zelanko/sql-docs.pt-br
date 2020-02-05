@@ -25,10 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0bb5b030b138fa49f90c77c13e12bf2f64968da3
-ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71341997"
 ---
 # <a name="stuff-transact-sql"></a>STUFF (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "71341997"
 
   A função STUFF insere uma cadeia de caracteres em outra cadeia de caracteres. Ela exclui um comprimento especificado de caracteres da primeira cadeia na posição inicial e, em seguida, insere a segunda cadeia na primeira, na posição inicial.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -60,7 +60,7 @@ STUFF ( character_expression , start , length , replaceWith_expression )
 ## <a name="return-types"></a>Tipos de retorno  
  Retorna dados de caractere se *character_expression* é um dos tipos de dados de caractere compatíveis. Retorna dados binários se *character_expression* é um dos tipos de dados binários compatíveis.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Se a posição inicial ou o comprimento forem negativos, ou se a posição inicial for maior do que o comprimento da primeira cadeia de caracteres, uma cadeia nula será retornada. Se a posição de início for 0, um valor nulo será retornado. Se o comprimento a ser excluído for maior que a primeira cadeia de caracteres, a exclusão ocorrerá no primeiro caractere da primeira cadeia.  
 
 Um erro será gerado se o valor resultante for maior que o máximo suportado pelo tipo de retorno.  

@@ -9,10 +9,10 @@ ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4dbe5d5afdf507f3edfd68135aa8ee14aee5ae08
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63043064"
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Tutorial: Adicionar um minigráfico ao relatório (Construtor de Relatórios)
@@ -69,7 +69,7 @@ Para obter mais informações sobre os requisitos, consulte [Pré-requisitos par
   
 12. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-13. Clique em **Avançar**.  
+13. Clique em **Próximo**.  
   
 ## <a name="Query"></a>2. Criar uma consulta e o layout da tabela no Assistente de Tabela  
 Em um relatório, é possível usar um conjunto de dados compartilhado que tenha uma consulta predefinida. Se preferir, crie um conjunto de dados inserido para ser usado somente em seu relatório. Neste tutorial, você criará um conjunto de dados inserido.  
@@ -122,7 +122,7 @@ Em um relatório, é possível usar um conjunto de dados compartilhado que tenha
   
     A consulta é executada e exibe o conjunto de resultados dos campos **SalesDate**, **Subcategory**, **Product**, **Sales**e **Quantity**.  
   
-5.  Clique em **Avançar**.  
+5.  Clique em **Próximo**.  
   
 6.  Na página **Organizar campos** , arraste **Sales** até **Valores**.  
   
@@ -134,7 +134,7 @@ Em um relatório, é possível usar um conjunto de dados compartilhado que tenha
 
     ![report-builder-sparkline-arrange-fields](../reporting-services/media/report-builder-sparkline-arrange-fields.png)
   
-9. Clique em **Avançar**.  
+9. Clique em **Próximo**.  
   
 10. Na página **Escolher o layout** , em **Opções**, verifique se a opção **Mostrar subtotais e totais gerais** está selecionada.  
   
@@ -148,7 +148,7 @@ Em um relatório, é possível usar um conjunto de dados compartilhado que tenha
     
     ![report-builder-sparkline-choose-layout](../reporting-services/media/report-builder-sparkline-choose-layout.png)
   
-11. Clique em **Avançar**.  
+11. Clique em **Próximo**.  
   
 12. Clique em **Concluir**.  
   
@@ -300,7 +300,7 @@ Salve o relatório em um servidor de relatório ou no computador. Se você não 
   
 4.  Em **Nome**, substitua o nome padrão por **Vendas de Produtos**.  
   
-5.  Clique em **Salvar**.  
+5.  Clique em **Save** (Salvar).  
   
 O relatório será salvo no servidor de relatório. O nome do servidor de relatório ao qual você está conectado é exibido na barra de status da parte inferior da janela.  
   
@@ -312,13 +312,13 @@ O relatório será salvo no servidor de relatório. O nome do servidor de relat�
   
 3.  Em **Nome**, substitua o nome padrão por **Vendas de Produtos**.  
   
-4.  Clique em **Salvar**.  
+4.  Clique em **Save** (Salvar).  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Próximas etapas  
 
 Isso conclui o tutorial para criar um relatório de tabela com minigráficos. Para obter mais informações sobre minigráficos, consulte [Minigráficos e barras de dados](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
 [Tutoriais do Construtor de Relatórios](../reporting-services/report-builder-tutorials.md) 
 [Construtor de Relatórios no SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 
-Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
+Mais perguntas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

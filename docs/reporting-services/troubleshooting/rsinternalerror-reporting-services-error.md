@@ -11,10 +11,10 @@ ms.assetid: 52613d52-fc78-4870-93f0-7d393ab9c335
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e7257e1c7a24786e580ce8d2c2da9bd52ac5b86c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573994"
 ---
 # <a name="rsinternalerror---reporting-services-error"></a>rsInternalError - Erro do Reporting Services
@@ -23,9 +23,9 @@ ms.locfileid: "65573994"
   
 |||  
 |-|-|  
-|Nome do produto|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|Nome do Produto|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |ID do evento|rsInternalError|  
-|Origem do evento|Microsoft.ReportingServices.Diagnostics.Utilities.ErrorStrings|  
+|Origem do Evento|Microsoft.ReportingServices.Diagnostics.Utilities.ErrorStrings|  
 |Componente|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|  
 |Texto da mensagem|Um erro interno ocorreu no servidor de relatório. Consulte o log de erros para obter mais detalhes.|  
   

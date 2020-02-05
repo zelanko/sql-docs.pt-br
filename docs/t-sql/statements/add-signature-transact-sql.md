@@ -18,10 +18,10 @@ ms.assetid: 64d8b682-6ec1-4e5b-8aee-3ba11e72d21f
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: eb6a57ae483b36aba960a2b10423d38e72d32c5d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066097"
 ---
 # <a name="add-signature-transact-sql"></a>ADD SIGNATURE (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68066097"
   Adiciona uma assinatura digital a um procedimento armazenado, função, assembly ou gatilho. Além disso, adiciona uma referenda a um procedimento armazenado, uma função, um assembly ou um gatilho.  
   
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -66,7 +66,7 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
  ASYMMETRIC KEY *Asym_Key_Name*  
  É o nome de uma chave assimétrica com a qual assinar ou referendar o procedimento armazenado, função, assembly ou gatilho.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O módulo que é assinado ou referendado e o certificado ou chave assimétrica usados para assiná-lo já devem existir. Todo caractere no módulo é incluído no cálculo de assinatura. Isso inclui retornos de carro à esquerda e alimentação de linha.  
   
  Um módulo pode ser assinado e referendado por qualquer número de certificados e chaves assimétricas.  
@@ -103,7 +103,7 @@ Porém, ao referendar procSelectT1 com o mesmo certificado usado para assinar Pr
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-signing-a-stored-procedure-by-using-a-certificate"></a>A. Assinando um procedimento armazenado com um certificado  
+### <a name="a-signing-a-stored-procedure-by-using-a-certificate"></a>a. Assinando um procedimento armazenado com um certificado  
  O exemplo a seguir assina o procedimento armazenado `HumanResources.uspUpdateEmployeeLogin` com o certificado `HumanResourcesDP`.  
   
 ```  
