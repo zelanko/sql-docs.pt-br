@@ -20,10 +20,10 @@ ms.assetid: 3d5c7f6e-157b-4231-bbb4-4645a11078b3
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e33ca6d8afdb7aa9245bbdc6b0ad225dcd00dade
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982467"
 ---
 # <a name="x40x40options-transact-sql"></a>&#x40;&#x40;OPTIONS (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "73982467"
 
   Retorna informações sobre as opções SET atuais.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,7 +42,7 @@ ms.locfileid: "73982467"
 ## <a name="return-types"></a>Tipos de retorno  
  **inteiro**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  As opções podem ser obtidas do uso do comando **SET** ou do valor das **opções de usuário de sp_configure**. Os valores de sessão configurados com o comando **SET** substituem as opções de **sp_configure**. Muitas ferramentas (tal como [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]) configuram automaticamente as opções do conjunto. Cada usuário tem uma função @@OPTIONS que representa a configuração.  
   
  Você pode alterar as opções de idioma e de processamento de consulta para uma sessão de usuário específico usando a instrução SET. **\@\@OPTIONS** só pode detectar as opções que estão definidas como ON ou OFF.  
@@ -53,7 +53,7 @@ ms.locfileid: "73982467"
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-demonstration-of-how-changes-affect-behavior"></a>A. Demonstração de como as alterações afetam o comportamento  
+### <a name="a-demonstration-of-how-changes-affect-behavior"></a>a. Demonstração de como as alterações afetam o comportamento  
  O exemplo a seguir demonstra a diferença no comportamento de concatenação com duas configurações diferentes da opção **CONCAT_NULL_YIELDS_NULL**.  
   
 ```  

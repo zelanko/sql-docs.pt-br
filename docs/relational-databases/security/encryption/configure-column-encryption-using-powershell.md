@@ -12,10 +12,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: cc6f86a091f96f3d38bc4db7a5d5d2fde5462dce
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73594381"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-with-powershell"></a>Configurar a criptografia de coluna usando o Always Encrypted com o PowerShell
@@ -57,7 +57,7 @@ Use a abordagem offline:
 Use a abordagem online:
 - Para minimizar o tempo de inatividade/indisponibilidade do banco de dados para seus aplicativos.
 
-## <a name="security-considerations"></a>Considerações sobre segurança
+## <a name="security-considerations"></a>Considerações de segurança
 
 O cmdlet **Set-SqlColumnEncryption** , usado para configurar a criptografia para colunas de banco de dados, gerencia chaves Always Encrypted e os dados armazenados em colunas de banco de dados. Portanto, é importante que você execute o cmdlet em um computador seguro. Se seu banco de dados estive no SQL Server, execute os cmdlets de um computador diferente daquele que hospeda a instância do SQL Server. Como o objetivo principal do Always Encrypted é garantir que os dados confidenciais criptografados estejam seguros mesmo se o sistema do banco de dados for comprometido, a execução de um script do PowerShell que processa chaves e/ou dados confidenciais no computador do SQL Server pode reduzir ou anular os benefícios do recurso.
 
@@ -146,7 +146,7 @@ for($i=0; $i -lt $tables.Count; $i++){
 Set-SqlColumnEncryption -ColumnEncryptionSettings $ces -InputObject $database -LogFileDirectory .
 ```
  
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Próximas etapas
 - [Desenvolver aplicativos usando o Always Encrypted](always-encrypted-client-development.md)
 
 ## <a name="see-also"></a>Consulte Também  

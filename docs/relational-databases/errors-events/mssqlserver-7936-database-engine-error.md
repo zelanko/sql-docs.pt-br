@@ -12,25 +12,25 @@ ms.assetid: d78fc8a9-d173-4801-bb32-ed6a29257f08
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e094c571498c315ec57471f216b65376f76eb2aa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67987742"
 ---
-# <a name="mssqlserver7936"></a>MSSQLSERVER_7936
+# <a name="mssqlserver_7936"></a>MSSQLSERVER_7936
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|7936|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|DBCC2_FS_ORPHANED_COLUMN_DIRECTORY|  
-|Texto da mensagem|Erro de tabela: existe um diretório de Fluxo de arquivos para a ID de coluna C_ID da ID de objeto O_ID, ID de índice I_ID, ID de partição PN_ID, mas essa coluna não é de Filestream.|  
+|Texto da mensagem|Erro de tabela: existe um diretório de Filestream para a ID de coluna C_ID da ID de objeto O_ID, ID de índice I_ID, ID de partição PN_ID, mas essa coluna não é de Filestream.|  
   
 ## <a name="explanation"></a>Explicação  
 Durante o DBCC CHECKDB, um diretório FILESTREAM foi encontrado para a coluna especificada, no entanto, essa não é uma coluna **FILESTREAM**.  

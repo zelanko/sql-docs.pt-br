@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f4ae543590e5985904e44235da89069c06c649ee
-ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74412723"
 ---
 # <a name="create-and-access-tables-in-tempdb-from-stored-procedures"></a>Criar e acessar tabelas no TempDB de procedimentos armazenados
@@ -23,7 +23,7 @@ ms.locfileid: "74412723"
 
   Não há suporte para criar e acessar tabelas em TempDB de procedimentos armazenados nativamente compilados. Em vez disso, use as tabelas com otimização de memória com DURABILITY=SCHEMA_ONLY ou use tipos de tabela e variáveis de tabela. 
 
-Para saber detalhes sobre a otimização de memória da tabela temporária e os cenários de variável de tabela, confira: [Tabela temporária e variável de tabela mais rápidas usando a otimização de memória](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md).
+Para obter mais detalhes sobre a otimização de memória da tabela temporária e cenários de variável de tabela, consulte: [Tabela temporária e variável de tabela mais rápidas usando a otimização de memória](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md).
   
   O seguinte exemplo mostra como o uso de uma tabela temporária com três colunas (id, ProductID e Quantity) pode ser substituído usando uma variável de tabela **\@OrderQuantityByProduct** do tipo **dbo.OrderQuantityByProduct**:  
   

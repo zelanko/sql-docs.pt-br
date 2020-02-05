@@ -16,10 +16,10 @@ ms.assetid: dd78fd8f-56e3-4582-9abd-6bc25c91e075
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 712665d24946c2826e4ab6c5e53bb853b07642b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68033238"
 ---
 # <a name="join-filters"></a>filtros de junção
@@ -44,7 +44,7 @@ ms.locfileid: "68033238"
 LoginID = SUSER_SNAME()  
 ```  
   
- Esse filtro garante que a assinatura de cada funcionário só contenha os dados da tabela **HumanResources.Employee** que sejam relevantes para esse funcionário (que, neste caso, é uma linha simples). Para obter mais informações, consulte [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+ Esse filtro garante que a assinatura de cada funcionário só contenha os dados da tabela **HumanResources.Employee** que sejam relevantes para esse funcionário (que, neste caso, é uma linha simples). Para obter mais informações, consulte [Filtros de linha com parâmetros](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
  A próxima etapa é estender esse filtro a cada tabela relacionada, usando sintaxe similar à que foi usada para especificar uma junção entre as duas tabelas. A primeira cláusula de filtro de junção é:  
   
@@ -89,6 +89,6 @@ SalesOrderHeader.SalesOrderID = SalesOrderDetail.SalesOrderID
   
 ## <a name="see-also"></a>Consulte Também  
  [Filtrar dados publicados para a replicação de mesclagem](../../../relational-databases/replication/merge/filter-published-data-for-merge-replication.md)   
- [Filtros de linha com parâmetros](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
+ [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
   
   

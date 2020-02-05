@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6979d05d29b151a34edfe1c220c9d9a4d3046359
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73983006"
 ---
 # <a name="altering-natively-compiled-t-sql-modules"></a>Altering Natively Compiled T-SQL Modules
@@ -25,7 +25,7 @@ No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15]
   
 Ao executar `ALTER` em um módulo do [!INCLUDE[tsql](../../includes/tsql-md.md)] compilado nativamente, o módulo é recompilado usando uma nova definição. Enquanto a recompilação estiver em andamento, a versão antiga do módulo continuará disponível para execução. Uma vez concluída a compilação, as execuções de módulo serão descarregadas e a nova versão do módulo será instalada. Ao alterar um módulo do [!INCLUDE[tsql](../../includes/tsql-md.md)] compilado nativamente, é possível modificar as opções a seguir.  
   
--   Parâmetros  
+-   parâmetros  
 -   EXECUTE AS  
 -   TRANSACTION ISOLATION LEVEL  
 -   LANGUAGE  

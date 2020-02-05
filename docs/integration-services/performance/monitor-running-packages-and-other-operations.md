@@ -14,10 +14,10 @@ ms.assetid: cbbcd79f-ab9b-46ec-84cb-4821c1d16b99
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d7fd62f4f2f82e6dcc3921db7099b4f052db27b3
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295795"
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>Monitorar a execução de pacotes e outras operações
@@ -84,7 +84,7 @@ ms.locfileid: "71295795"
 |Parar operação (parando uma validação ou execução|202|  
 |Validar projeto|300|  
 |Validar pacote|301|  
-|Configurar catálogo|1\.000|  
+|Configurar catálogo|1000|  
   
  **Parar**  
  Clique para parar uma operação em execução no momento.  
@@ -139,12 +139,12 @@ ms.locfileid: "71295795"
   
  O relatório exibe as seções de informações a seguir.  
   
-|Seção|Descrição|  
+|Seção|DESCRIÇÃO|  
 |-------------|-----------------|  
 |**Informações de Execução**|Mostra o número de execuções que estão em estados diferentes (com falha, executando, teve sucesso, outros) nas últimas 24 horas.|  
 |**Informações do Pacote**|Mostra o número total de pacotes que foram executados nas últimas 24 horas.|  
 |**Informações de Conexão**|Mostra as conexões que foram usadas em execuções com falha nas últimas 24 horas.|  
-|**Informações Detalhadas do Pacote**|Mostra os detalhes das execuções completas ocorridas nas últimas 24 horas. Por exemplo, esta seção mostra o número de execuções com falha em relação ao número total de execuções, a duração de execuções (em segundos) e a duração média de execuções nos últimos três meses.<br /><br /> Você pode exibir informações adicionais para um pacote clicando em **Visão Geral**, **Todas as Mensagens**e **Desempenho de Execução**.<br /><br /> O relatório de **Desempenho de Execução** mostra a duração da última instância de execução, bem como as horas de início e de término, e o ambiente que foi aplicado.<br /><br /> O gráfico e a tabela associada incluídos no relatório de **Desempenho de Execução** mostram a duração das últimas 10 execuções com êxito do pacote. A tabela também mostra a duração média de uma execução em um período de três meses. Os ambientes diferentes e os valores literais diferentes podem ter sido aplicados em tempo de execução dessas 10 execuções com êxito do pacote.<br /><br /> Finalmente, o relatório de **Desempenho de Execução** mostra a hora ativa e o tempo total para os componentes de fluxo de dados do pacote. O Tempo Ativo se refere ao tempo total que o componente gastou na execução em todas as fases, e o Tempo Total representa o tempo total decorrido para um componente. O relatório só exibe essas informações para componentes do pacote quando o nível de log da última execução do pacote foi definido como o desempenho ou detalhado.<br /><br /> O relatório de **Visão Geral** mostra o estado de tarefas do pacote. O relatório de **Mensagens** mostra as mensagens de evento e as mensagens de erro para o pacote e as tarefas, como relatar as horas de início e de término, e o número de linhas gravadas.<br /><br /> Você também pode clicar em **Exibir Mensagens** no relatório de **Visão Geral** para navegar até o relatório **Mensagens** . Você também pode clicar em **Exibir Visão Geral** no relatório **Mensagens** para navegar até o relatório **Visão Geral** .|  
+|**Informações Detalhadas do Pacote**|Mostra os detalhes das execuções completas ocorridas nas últimas 24 horas. Por exemplo, esta seção mostra o número de execuções com falha em relação ao número total de execuções, a duração de execuções (em segundos) e a duração média de execuções nos últimos três meses.<br /><br /> Você pode exibir informações adicionais para um pacote clicando em **Visão Geral**, **Todas as Mensagens**e **Desempenho de Execução**.<br /><br /> O relatório de **Desempenho de Execução** mostra a duração da última instância de execução, bem como as horas de início e de término, e o ambiente que foi aplicado.<br /><br /> O gráfico e a tabela associada incluídos no relatório de **Desempenho de Execução** mostram a duração das últimas 10 execuções com êxito do pacote. A tabela também mostra a duração média de uma execução em um período de três meses. Os ambientes diferentes e os valores literais diferentes podem ter sido aplicados em runtime dessas 10 execuções com êxito do pacote.<br /><br /> Finalmente, o relatório de **Desempenho de Execução** mostra a hora ativa e o tempo total para os componentes de fluxo de dados do pacote. O Tempo Ativo se refere ao tempo total que o componente gastou na execução em todas as fases, e o Tempo Total representa o tempo total decorrido para um componente. O relatório só exibe essas informações para componentes do pacote quando o nível de log da última execução do pacote foi definido como o desempenho ou detalhado.<br /><br /> O relatório de **Visão Geral** mostra o estado de tarefas do pacote. O relatório de **Mensagens** mostra as mensagens de evento e as mensagens de erro para o pacote e as tarefas, como relatar as horas de início e de término, e o número de linhas gravadas.<br /><br /> Você também pode clicar em **Exibir Mensagens** no relatório de **Visão Geral** para navegar até o relatório **Mensagens** . Você também pode clicar em **Exibir Visão Geral** no relatório **Mensagens** para navegar até o relatório **Visão Geral** .|  
   
  Você pode filtrar a tabela exibida em qualquer página clicando em **Filtrar** e, em seguida, selecionando os critérios na caixa de diálogo **Configurações de Filtro** . Os critérios de filtro disponíveis dependem dos dados que estão sendo exibidos. É possível alterar a ordem de classificação do relatório clicando no ícone de classificação na caixa de diálogo **Configurações de Filtro** .  
   
@@ -153,7 +153,7 @@ ms.locfileid: "71295795"
   
  O relatório exibe as seções de informações a seguir.  
   
-|Seção|Descrição|  
+|Seção|DESCRIÇÃO|  
 |-------------|-----------------|  
 |Filtrar|Mostra o filtro atual aplicado ao relatório, como o intervalo de horas de início.|  
 |Informações de Execução|Mostra a hora de início, a hora de término e a duração para cada execução do pacote. Você pode exibir uma lista de valores de parâmetros que foram usados com uma execução de pacote, como valores que foram transmitidos a um pacote filho usando a tarefa Executar Pacote. Para exibir a lista de parâmetros, clique em Visão Geral.|  
@@ -167,7 +167,7 @@ ms.locfileid: "71295795"
   
  O relatório exibe as seções de informações a seguir.  
   
-|Seção|Descrição|  
+|Seção|DESCRIÇÃO|  
 |-------------|-----------------|  
 |Filtrar|Mostra o filtro atual aplicado ao relatório, como conexões com uma cadeia de caracteres especificada e o intervalo de **Hora da Última Falha** .<br /><br /> Você define o intervalo de **Hora da Última Falha** para exibir apenas as falhas de conexão que ocorreram durante um intervalo de datas. O intervalo pode abranger vários dias, meses ou anos.|  
 |Detalhes|Mostra a cadeia de conexão, o número de execuções em que uma conexão falhou, e a data da última falha na conexão.|  
@@ -209,4 +209,4 @@ ms.locfileid: "71295795"
 
 ## <a name="see-also"></a>Consulte Também  
  [Execução de projetos e pacotes](../packages/deploy-integration-services-ssis-projects-and-packages.md)   
- [Solucionando problemas de relatórios para execução de pacotes](../troubleshooting/troubleshooting-reports-for-package-execution.md)  
+ [Relatórios para solução de problemas de execução de pacote](../troubleshooting/troubleshooting-reports-for-package-execution.md)  

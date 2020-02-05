@@ -25,18 +25,18 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fcbc2f6ae35c72f86ccbbc6d34f45384c88c2fd9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68041905"
 ---
-# <a name="set-ansipadding-transact-sql"></a>SET ANSI_PADDING (Transact-SQL)
+# <a name="set-ansi_padding-transact-sql"></a>SET ANSI_PADDING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   Controla como a coluna armazena valores menores que o tamanho definido da coluna e valores com espaços em branco à direita em dados do tipo **char**, **varchar**, **binary**e **varbinary** .  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe
   
@@ -52,7 +52,7 @@ SET ANSI_PADDING { ON | OFF }
 SET ANSI_PADDING ON
 ```
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Colunas definidas com os tipos de dados **char**, **varchar**, **binary** e **varbinary** têm um tamanho definido.  
   
  Essa configuração afeta somente a definição de novas colunas. Depois que a coluna é criada, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] armazena os valores com base na configuração de quando a coluna foi criada. As colunas existentes não são afetadas por uma alteração posterior a essa configuração.  
@@ -64,7 +64,7 @@ SET ANSI_PADDING ON
   
 |Configuração|char(*n*) NOT NULL ou binary(*n*) NOT NULL|char(*n*) NULL ou binary(*n*) NULL|varchar(*n*) ou varbinary(*n*)|  
 |-------------|----------------------------------------------------|--------------------------------------------|----------------------------------------|  
-|ON|Valor original de preenchimento (com espaços em branco à direita para colunas **char** e com zeros à direita para colunas **binary**) até o comprimento da coluna.|Siga as mesmas regras de **char(** _n_ **)** ou **binary(** _n_ **)** NOT NULL quando SET ANSI_PADDING for ON.|Os espaços em branco à direita em valores de caractere inseridos em colunas **varchar** não são cortados. Os zeros à direita em valores binários inseridos em colunas **varbinary** não são cortados. Os valores não são preenchidos com o tamanho da coluna.|  
+|ATIVADO|Valor original de preenchimento (com espaços em branco à direita para colunas **char** e com zeros à direita para colunas **binary**) até o comprimento da coluna.|Siga as mesmas regras de **char(** _n_ **)** ou **binary(** _n_ **)** NOT NULL quando SET ANSI_PADDING for ON.|Os espaços em branco à direita em valores de caractere inseridos em colunas **varchar** não são cortados. Os zeros à direita em valores binários inseridos em colunas **varbinary** não são cortados. Os valores não são preenchidos com o tamanho da coluna.|  
 |OFF|Valor original de preenchimento (com espaços em branco à direita para colunas **char** e com zeros à direita para colunas **binary**) até o comprimento da coluna.|Segue as mesmas regras para **varchar** ou **varbinary** quando SET ANSI_PADDING está OFF.|Os espaços em branco à direita em valores de caractere inseridos em uma coluna **varchar** são cortados. Os zeros à direita em valores binários inseridos em uma coluna **varbinary** são cortados.|  
   
 > [!NOTE]  

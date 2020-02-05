@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f899a8fc1ad5a316784a83cb13f29acb84a01b2b
-ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74412549"
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>Planejar a adoção de recursos de OLTP in-memory no SQL Server
@@ -283,7 +283,7 @@ Quando o plano de consulta para um processo nativo requer uma fase de agregaçã
 
 
 
-## <a name="f-application-design-transactions-and-retry-logic"></a>F. Design de aplicativo: transações e lógica de repetição
+## <a name="f-application-design-transactions-and-retry-logic"></a>F. Design de aplicativos: transações e lógica de repetição
 
 Uma transação que envolve uma tabela com otimização de memória pode se tornar dependente de outra transação que envolve a mesma tabela. Se a contagem de transações dependentes ultrapassar o máximo permitido, todas as transações dependentes falharão.
 

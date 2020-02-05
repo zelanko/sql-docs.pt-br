@@ -16,10 +16,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 3cc48298aadc027509adb9d0abf5f5057e0c4fef
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74055975"
 ---
 # <a name="format-files-to-import-or-export-data-sql-server"></a>Arquivos de formato para importar ou exportar dados (SQL Server)
@@ -27,7 +27,7 @@ ms.locfileid: "74055975"
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Na importação de dados em massa para uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou na exportação em massa de dados de uma tabela, você pode usar um *arquivo de formato* para armazenar todas as informações necessárias para exportar ou importar dados em massa. Isso inclui informações de formato para cada campo em um arquivo de dados relativo para essa tabela.
 
-[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] dá suporte a dois tipos de arquivos de formato: arquivos de formatos XML e de formato não XML. Os arquivos de formato XML e não XML contêm descrições de cada campo de um arquivo de dados, e arquivos de formato XML também contêm descrições das colunas das tabelas correspondentes. Geralmente, arquivos de formato XML e não XML são intercambiáveis. Entretanto, recomendamos que você use a sintaxe XML para novos arquivos de formato porque eles oferecem diversas vantagens em relação aos arquivos de formato não XML. Para obter mais informações, veja [Arquivos de formato XML &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md).
+[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] dá suporte a dois tipos de arquivos de formato: arquivos de formato XML e não XML. Os arquivos de formato XML e não XML contêm descrições de cada campo de um arquivo de dados, e arquivos de formato XML também contêm descrições das colunas das tabelas correspondentes. Geralmente, arquivos de formato XML e não XML são intercambiáveis. Entretanto, recomendamos que você use a sintaxe XML para novos arquivos de formato porque eles oferecem diversas vantagens em relação aos arquivos de formato não XML. Para obter mais informações, veja [Arquivos de formato XML &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md).
 
 ## <a name="Benefits"></a> Benefícios de arquivos de formato
 
@@ -36,12 +36,12 @@ Na importação de dados em massa para uma tabela do [!INCLUDE[ssNoVersion](../.
 
 ## <a name="ExamplesOfFFs"></a> Exemplos de arquivos de formato
 
-Os exemplos abaixo mostram o layout de um arquivo de formato não XML e de um arquivo de formato XML. Esses arquivos de formato correspondem à tabela `HumanResources.myTeam` no banco de dados de exemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Essa tabela contém quatro colunas: `EmployeeID`, `Name`, `Title` e `ModifiedDate`.
+Os exemplos abaixo mostram o layout de um arquivo de formato não XML e de um arquivo de formato XML. Esses arquivos de formato correspondem à tabela `HumanResources.myTeam` no banco de dados de exemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Essa tabela contém quatro colunas: `EmployeeID`, `Name`, `Title`e `ModifiedDate`.
 
 > [!NOTE]
 > Para obter informações sobre essa tabela e como criá-la, veja [Tabela de exemplo HumanResources.myTeam &#40;SQL Server&#41;](../../relational-databases/import-export/humanresources-myteam-sample-table-sql-server.md).
 
-### <a name="a-using-a-non-xml-format-file"></a>A. Usando um arquivo de formato não XML
+### <a name="a-using-a-non-xml-format-file"></a>a. Usando um arquivo de formato não XML
 
 O arquivo de formato não XML seguinte usa o formato de dados nativo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para a tabela `HumanResources.myTeam` . Esse arquivo de formato foi criado usando o comando `bcp` a seguir.
 

@@ -12,25 +12,25 @@ ms.assetid: 7dcc61a3-975d-4662-8a4e-c153e26b36c6
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: f7716083ff9c7963a913bc407dffc3938ef27bb1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68007100"
 ---
-# <a name="mssqlserver7937"></a>MSSQLSERVER_7937
+# <a name="mssqlserver_7937"></a>MSSQLSERVER_7937
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|7937|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|DBCC2_FS_MISSING_COLUMN_DIRECTORY|  
-|Texto da mensagem|Erro de tabela: o diretório de Fluxo de arquivos da ID de coluna C_ID da ID de objeto O_ID, ID de índice I_ID, ID da partição PN_ID não foi localizado.|  
+|Texto da mensagem|Erro de tabela: o diretório Filestream da ID de coluna C_ID da ID de objeto O_ID, ID de índice I_ID, ID da partição PN_ID não foi localizado.|  
   
 ## <a name="explanation"></a>Explicação  
 A coluna especificada existe em uma partição; entretanto, seu diretório FILESTREAM correspondente não foi localizado no espaço de dados FILESTREAM.  

@@ -18,10 +18,10 @@ ms.assetid: 00a8a8e7-11d6-47a0-b971-00e60f7877ce
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 47fd42c05e5d370172ab648b54689f732a7ade34
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67894725"
 ---
 # <a name="stmlinefromwkb-geometry-data-type"></a>STMLineFromWKB (tipo de dados geometry)
@@ -46,11 +46,11 @@ STMLineFromWKB ( 'WKB_multilinestring' , SRID )
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Tipo de retorno CLR: **SqlGeometry**  
+ Tipo de retorno do CLR: **SqlGeometry**  
   
- Tipo OGC: **MultiLineString**  
+ Tipo do OGC: **MultiLineString**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse método gerará uma **FormatException** se a entrada não for bem formatada.  
   
 ## <a name="examples"></a>Exemplos  

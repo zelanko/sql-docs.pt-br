@@ -21,10 +21,10 @@ ms.assetid: 7c7ce52a-6b77-4a1c-9abf-d5feb664bea8
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 746d2f33d780e4eada7accabdd029998c9e61742
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68070179"
 ---
 # <a name="drop-search-property-list-transact-sql"></a>DROP SEARCH PROPERTY LIST (Transact-SQL)
@@ -50,7 +50,7 @@ DROP SEARCH PROPERTY LIST property_list_name
 SELECT name FROM sys.registered_search_property_lists;  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Não é possível cancelar uma lista de propriedades de pesquisa de um banco de dados, enquanto a lista está associada a um índice de texto completo e as tentativas para fazer isso falham. Para remover uma lista de propriedades de pesquisa de um índice de texto completo especificado, use a instrução [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) e especifique a cláusula SET SEARCH PROPERTY LIST com OFF ou o nome de outra lista de propriedades de pesquisa.  
   
  **Para exibir as listas de propriedades em uma instância de servidor**  

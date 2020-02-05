@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3f9bd0669cc8da25a5660462bf8e1ded0ff3e5f7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68064855"
 ---
 # <a name="sqlbatchcompleted-event-class"></a>classe de evento SQL:BatchCompleted
@@ -25,14 +25,14 @@ ms.locfileid: "68064855"
   
 ## <a name="sqlbatchcompleted-event-class-data-columns"></a>Colunas de dados da classe de evento SQL:BatchCompleted  
   
-|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|DESCRIÇÃO|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|Nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |ClientProcessID|**int**|ID atribuída pelo computador host ao processo em que o aplicativo cliente está sendo executado. Essa coluna de dados será populada se o cliente fornecer a ID de processo do cliente.|9|Sim|  
 |CPU|**int**|Período de tempo da CPU (em milissegundos) usado pelo lote.|18|Sim|  
 |DatabaseID|**int**|ID do banco de dados especificado pela instrução USE de *database* ou o banco de dados padrão se nenhuma instrução USE de *database* tiver sido emitida para uma determinada instância. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibirá o nome do banco de dados se a coluna de dados ServerName for capturada no rastreamento e o servidor estiver disponível. Determine o valor para um banco de dados usando a função DB_ID.|3|Sim|  
 |DatabaseName|**nvarchar**|Nome do banco de dados no qual a instrução do usuário está sendo executada.|35|Sim|  
-|Duração|**bigint**|Período de tempo (em microssegundos) utilizado pelo evento.|13|Sim|  
+|Duration|**bigint**|Período de tempo (em microssegundos) utilizado pelo evento.|13|Sim|  
 |EndTime|**datetime**|Horário em que o evento foi encerrado. Esta coluna não é populada para classes de eventos iniciais, como SQL:BatchStarting ou SP:Starting.|15|Sim|  
 |Erro|**int**|Número do erro do evento.<br /><br /> 0=OK<br /><br /> 1=Erro<br /><br /> 2=Anular|31|Sim|  
 |EventClass|**int**|Tipo de evento = 12.|27|Não|  
@@ -44,7 +44,7 @@ ms.locfileid: "68064855"
 |LoginSid|**imagem**|Número SID (identificação de segurança) do usuário que fez logon. Você pode encontrar essas informações na exibição de catálogo sys.server_principals. Cada SID é exclusivo para cada logon no servidor.|41|Sim|  
 |NTDomainName|**nvarchar**|O domínio do Windows ao qual o usuário pertence.|7|Sim|  
 |NTUserName|**nvarchar**|Nome do usuário do Windows.|6|Sim|  
-|Reads|**bigint**|Número de E/Ss de leitura de página causado pelo lote.|16|Sim|  
+|Leituras|**bigint**|Número de E/Ss de leitura de página causado pelo lote.|16|Sim|  
 |RequestID|**int**|ID da solicitação que contém a instrução.|49|Sim|  
 |RowCounts|**bigint**|Número de linhas afetadas por um evento.|48|Sim|  
 |ServerName|**nvarchar**|Nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo rastreada.|26|Não|  
@@ -53,7 +53,7 @@ ms.locfileid: "68064855"
 |StartTime|**datetime**|Hora de início do evento, se disponível.|14|Sim|  
 |TextData|**ntext**|Texto do lote.|1|Sim|  
 |TransactionID|**bigint**|ID da transação atribuída pelo sistema.|4|Sim|  
-|Writes|**bigint**|Número de E/Ss de gravação de página causado pelo lote.|17|Sim|  
+|Gravações|**bigint**|Número de E/Ss de gravação de página causado pelo lote.|17|Sim|  
 |XactSequence|**bigint**|Token que descreve a transação atual.|50|Sim|  
   
 ## <a name="see-also"></a>Consulte Também  

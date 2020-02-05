@@ -18,10 +18,10 @@ ms.assetid: b96a986f-d5e4-4034-8013-de7974594ee9
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: f13f076309cfc1b78ab5b76676cbf7ec3eb82f87
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077981"
 ---
 # <a name="getancestor-database-engine"></a>GetAncestor (Mecanismo do Banco de Dados)
@@ -50,7 +50,7 @@ Um **int**, que representa o número de níveis para elevar na hierarquia.
   
 **Tipo de retorno do CLR: SqlHierarchyId**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 Usado para testar se cada nó da saída possui o nó atual como um ancestral no nível específico.
   
 Se um número maior que [GetLevel()](../../t-sql/data-types/getlevel-database-engine.md) for passado, NULL será retornado.
@@ -59,7 +59,7 @@ Se um número negativo for passado, ocorrerá uma exceção.
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-finding-the-child-nodes-of-a-parent"></a>A. Localizando os nós filho de um pai  
+### <a name="a-finding-the-child-nodes-of-a-parent"></a>a. Localizando os nós filho de um pai  
 `GetAncestor(1)` retorna os funcionários que têm `david0` como o ancestral imediato (seu pai). O exemplo a seguir usa `GetAncestor(1)`.
   
 ```sql
@@ -109,7 +109,7 @@ SELECT @TargetEmployee = @CurrentEmployee.GetAncestor(2) ;
 SELECT @TargetEmployee.ToString(), @TargetEmployee ;  
 ```  
   
-### <a name="e-calling-a-common-language-runtime-method"></a>E. Chamando um método de tempo de execução de linguagem comum  
+### <a name="e-calling-a-common-language-runtime-method"></a>E. Chamando um método de Common Language runtime  
 O snippet de código a seguir chama o método `GetAncestor()`.
   
 ```sql

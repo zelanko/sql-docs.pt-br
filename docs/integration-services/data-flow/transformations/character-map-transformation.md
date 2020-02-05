@@ -19,10 +19,10 @@ ms.assetid: e0f50eb6-b893-400f-bb8c-fb3072cc2620
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8211045a72ae56b04bb93b7be7e83f296f2467e5
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291665"
 ---
 # <a name="character-map-transformation"></a>Transformação Mapas de Caracteres
@@ -41,7 +41,7 @@ ms.locfileid: "71291665"
 ## <a name="mapping-operations"></a>Mapeando operações  
  A tabela a seguir descreve as operações de mapeamento suportadas pela transformação Mapa de Caracteres.  
   
-|Operação|Descrição|  
+|Operação|DESCRIÇÃO|  
 |---------------|-----------------|  
 |Inversão de bytes|Inverte a ordem de bytes.|  
 |Largura inteira|Mapeia caracteres de meia largura para caracteres de largura inteira.|  
@@ -49,7 +49,7 @@ ms.locfileid: "71291665"
 |Hiragana|Mapeia caracteres katakana para caracteres hiragana.|  
 |Katakana|Mapeia caracteres hiragana para caracteres katakana.|  
 |Caixas linguísticas|Aplica caixas linguísticas em vez de regras do sistema. As caixas linguísticas se referem à funcionalidade fornecida pela API do Win32 para mapeamento de maiúsculas/minúsculas simples de Unicode de idiomas turcomanos e de outras localidades.|  
-|Minúscula|Converte caracteres em minúsculas.|  
+|Letras minúsculas|Converte caracteres em minúsculas.|  
 |Chinês simplificado|Mapeia caracteres de chinês tradicional para caracteres de chinês simplificado.|  
 |Chinês tradicional|Mapeia caracteres de chinês simplificado para caracteres de chinês tradicional.|  
 |Letras Maiúsculas|Converte caracteres em maiúsculas.|  
@@ -59,11 +59,11 @@ ms.locfileid: "71291665"
   
 |Operação A|Operação B|  
 |-----------------|-----------------|  
-|Minúscula|Letras Maiúsculas|  
+|Letras minúsculas|Letras Maiúsculas|  
 |Hiragana|Katakana|  
 |Meia largura|Largura inteira|  
 |Chinês tradicional|Chinês simplificado|  
-|Minúscula|Hiragana, katakana, meia largura, largura inteira|  
+|Letras minúsculas|Hiragana, katakana, meia largura, largura inteira|  
 |Letras Maiúsculas|Hiragana, katakana, meia largura, largura inteira|  
   
 ## <a name="configuration-of-the-character-map-transformation"></a>Configuração da transformação Mapa de Caracteres  
@@ -100,7 +100,7 @@ ms.locfileid: "71291665"
  **Destino**  
  Especifique entre salvar os resultados das operações de cadeia de caracteres no local, usando a coluna existente, ou salvar os dados modificados como uma nova coluna.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |Nova coluna|Salve os dados em uma nova coluna. Atribua o nome de coluna em **Alias de Saída**.|  
 |Alteração no local|Salve os dados modificados na coluna existente.|  
@@ -108,9 +108,9 @@ ms.locfileid: "71291665"
  **Operação**  
  Selecione na lista as funções de cadeia de caracteres a aplicar aos dados da coluna.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
-|Minúscula|Converter para letras minúsculas.|  
+|Letras minúsculas|Converter para letras minúsculas.|  
 |Letras Maiúsculas|Converter para letras maiúsculas.|  
 |Inversão de bytes|Converter invertendo a ordem de bytes.|  
 |Hiragana|Converter caracteres japoneses de katakana em hiragana.|  

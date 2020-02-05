@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7129c5feb6bc23a7e72dddfa70a10d4d2bc0811c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67898600"
 ---
 # <a name="create-unique-indexes"></a>Criar índices exclusivos
@@ -125,7 +125,7 @@ ms.locfileid: "67898600"
   
 12. Opcional: na grade principal, em **Designer de Tabela**, selecione **Ignorar Chaves Duplicadas** e escolha **Sim** na lista. Faça isso se você desejar ignorar as tentativas de adição de dados que criariam uma chave duplicada no índice exclusivo.  
   
-13. Clique em **Fechar**.  
+13. Clique em **fechar**  
   
 14. No menu **Arquivo**, clique em **Salvar**_table\_name_.  
   

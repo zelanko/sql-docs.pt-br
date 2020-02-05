@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 29008af0f2584322b180a82b20268c452c603baa
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982927"
 ---
 # <a name="hashbytes-transact-sql"></a>HASHBYTES (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "73982927"
 
   Retorna o hash de MD2, MD4, MD5, SHA, SHA1 ou SHA2 de sua entrada no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -62,7 +62,7 @@ Especifica uma expressão que é avaliada para uma cadeia de caracteres binária
 ## <a name="return-value"></a>Valor retornado  
  **varbinary** (máximo de 8.000 bytes)  
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 Considere o uso de `CHECKSUM` ou `BINARY_CHECKSUM` como alternativas para calcular um valor de hash.
 
 Os algoritmos MD2, MD4, MD5, SHA e SHA1 começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] são preteridos. Use SHA2_256 ou SHA2_512. Os algoritmos mais antigos continuarão funcionando, mas acionarão um evento de reprovação.

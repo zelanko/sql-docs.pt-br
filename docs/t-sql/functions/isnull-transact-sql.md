@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b49310a633c822f8c57f66cc36951dfebe2c0707
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843642"
 ---
 # <a name="isnull-transact-sql"></a>ISNULL (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "73843642"
 
 Substitui NULL pelo valor de substituição especificado.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -52,7 +52,7 @@ ISNULL ( check_expression , replacement_value )
 ## <a name="return-types"></a>Tipos de retorno  
  Retorna o mesmo tipo que *check_expression*. Se um NULL literal for fornecido como *check_expression*, retornará o tipo de dados de *replacement_value*. Se um NULL literal for fornecido como *check_expression* e nenhum *replacement_value* for fornecido, retornará um **int**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O valor de *check_expression* será retornado se não for NULL, caso contrário, *replacement_value* será retornado depois de ser convertido implicitamente no tipo de *check_expression*, se os tipos forem diferentes. *replacement_value* poderá ser truncado se *replacement_value* for maior do que *check_expression*.  
   
 > [!NOTE]  
@@ -60,7 +60,7 @@ ISNULL ( check_expression , replacement_value )
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-isnull-with-avg"></a>A. Usando ISNULL com AVG  
+### <a name="a-using-isnull-with-avg"></a>a. Usando ISNULL com AVG  
  O exemplo a seguir localiza a média do peso de todos os produtos. Substitui o valor `50` para todas as entradas NULL na coluna `Weight` da tabela `Product`.  
   
 ```  
@@ -93,16 +93,16 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|  Descrição       |  DiscountPct    |   MinQty    |   Quantidade Máx.       |
+|  DESCRIÇÃO       |  DiscountPct    |   MinQty    |   Quantidade Máx.       |
 |  ---------------   |  -------------  |   --------  |   ---------------    |
-|  No Discount       |  0.00           |   0         |   0                  |
+|  No Discount       |  0,00           |   0         |   0                  |
 |  Volume Discount   |  0,02           |   11        |   14                 |
-|  Volume Discount   |  0.05           |   15        |   4                  |
-|  Volume Discount   |  0,10           |   25        |   0                  |
+|  Volume Discount   |  0,05           |   15        |   4                  |
+|  Volume Discount   |  0.10           |   25        |   0                  |
 |  Volume Discount   |  0.15           |   41        |   0                  |
 |  Volume Discount   |  0,20           |   61        |   0                  |
 |  Mountain-100 Cl   |  0,35           |   0         |   0                  |
-|  Sport Helmet Di   |  0,10           |   0         |   0                  |
+|  Sport Helmet Di   |  0.10           |   0         |   0                  |
 |  Road-650 Overst   |  0,30           |   0         |   0                  |
 |  Mountain Tire S   |  0.50           |   0         |   0                  |
 |  Sport Helmet Di   |  0.15           |   0         |   0                  |

@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Introdução ao Mecanismo de Banco de Dados'
+title: 'Tutorial: introdução ao Mecanismo de Banco de Dados'
 ms.custom: seo-dt-2019
 ms.date: 06/21/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ff27b763f5bbb658de2d5e762ecdecdaea7fc583
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095714"
 ---
-# <a name="tutorial-getting-started-with-the-database-engine"></a>Tutorial: Introdução ao Mecanismo de Banco de Dados
+# <a name="tutorial-getting-started-with-the-database-engine"></a>Tutorial: introdução ao Mecanismo de Banco de Dados
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Bem-vindo ao Guia de Introdução com o tutorial [!INCLUDE[ssDE](../includes/ssde-md.md)] . Este tutorial é dirigido a usuários não familiarizados com o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e que instalaram o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]. Este tutorial resumido ajuda você a começar a usar o [!INCLUDE[ssDE](../includes/ssde-md.md)].  
@@ -34,7 +34,7 @@ Este tutorial mostra como se conectar ao [!INCLUDE[ssDE](../includes/ssde-md.md)
   
 Este tutorial é dividido em duas lições:  
   
-[Lição 1: Conectando-se ao Mecanismo de Banco de Dados](../relational-databases/lesson-1-connecting-to-the-database-engine.md)  
+[Lição 1: conectando-se ao Mecanismo de Banco de Dados](../relational-databases/lesson-1-connecting-to-the-database-engine.md)  
 Nesta lição, você aprenderá a se conectar ao [!INCLUDE[ssDE](../includes/ssde-md.md)] e permitir que mais pessoas se conectem.  
   
 [Lição 2: Conectando de outro computador](../relational-databases/lesson-2-connecting-from-another-computer.md)  

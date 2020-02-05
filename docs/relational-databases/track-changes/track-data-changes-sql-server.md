@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 94f5ccf6d7983a25bb8cafe084dbca103f966255
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095423"
 ---
 # <a name="track-data-changes-sql-server"></a>Controle de alterações de dados (SQL Server)
@@ -91,7 +91,7 @@ ms.locfileid: "74095423"
 |Colunas esparsas|Sim|Não dão suporte à captura de alterações durante o uso de columnset.|  
 |Colunas computadas|Não|As alterações feitas a colunas computadas não são rastreadas. A coluna aparecerá na tabela de alterações com o tipo apropriado, mas terá um valor de NULL.|  
 |XML|Sim|As alterações a elementos XML individuais não são rastreadas.|  
-|timestamp|Sim|O tipo de dados na tabela de alterações é convertido em binário.|  
+|Timestamp|Sim|O tipo de dados na tabela de alterações é convertido em binário.|  
 |Tipos de dados BLOB|Sim|A imagem anterior da coluna BLOB somente será armazenada se a própria coluna for alterada.|  
   
 ### <a name="change-data-capture-and-other-sql-server-features"></a>Change Data Capture e outros recursos do SQL Server  
@@ -137,7 +137,7 @@ ms.locfileid: "74095423"
   
  Você pode usar [sys.sp_cdc_disable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md) para remover a captura de dados de alterações de um banco de dados restaurado ou anexado.  
   
-##  <a name="Tracking"></a> Change Tracking  
+##  <a name="Tracking"></a> Controle de alterações  
  O controle de alteração captura o motivo pelo qual as linhas em uma tabela foram alteradas, mas não captura o que foi alterado. Isso permite que os aplicativos determinem as linhas que foram alteradas com os últimos dados de linha obtidos diretamente das tabelas de usuários. Então, o controle de alterações é mais limitado nas perguntas de histórico do que pode responder comparado à captura de dados de alterações. Entretanto, para aqueles aplicativos que não exigem informações de histórico, há menos sobrecarga de armazenamento pois os dados alterados não são capturados. Um mecanismo de controle síncrono é usado para controlar as alterações. Isso foi projetado para ter o mínimo de sobrecarga nas operações de DML.  
   
  A ilustração a seguir mostra um cenário de sincronização que se beneficiaria com o uso do controle de alterações. No cenário, um aplicativo requer as seguintes informações: todas as linhas da tabela que foram alteradas desde a última sincronização da tabela e apenas os dados da linha atual. Como um mecanismo síncrono é usado para controlar as alterações, um aplicativo pode executar a sincronização de duas vias e detectar de modo confiável qualquer conflito que possa ocorrer.  

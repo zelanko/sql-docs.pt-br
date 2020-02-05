@@ -27,10 +27,10 @@ ms.assetid: bc1218eb-ffff-44ce-8122-6e4fa7d68a79
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: d1735a107f0510deaf062ce28bdc1a8db2acbae1
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056350"
 ---
 # <a name="dbcc-checkalloc-transact-sql"></a>DBCC CHECKALLOC (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "74056350"
 
 Verifica a consistência de estruturas de alocação de espaço em disco para um banco de dados especificado.
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -82,7 +82,7 @@ Os nomes de banco de dados precisam seguir as regras para [identificadores](../.
  Não aplicável.  
  Use as opções REPAIR apenas como um último recurso. Para reparar erros, recomendamos restaurar de um backup. Operações de reparo não consideram nenhuma das restrições que podem existir em tabelas ou entre tabelas. Se a tabela especificada estiver envolvida em uma ou mais restrições, recomendamos executar DBCC CHECKCONSTRAINTS após uma operação de reparo. Se for necessário usar REPAIR, execute DBCC CHECKDB sem uma opção de reparo para localizar o nível de reparo a ser usado. Se você usar o nível de REPAIR_ALLOW_DATA_LOSS, recomendamos fazer backup do banco de dados antes de executar DBCC CHECKDB com essa opção.
 
- com  
+ WITH  
  Permite que opções sejam especificadas.
 
  ALL_ERRORMSGS  
@@ -97,7 +97,7 @@ Os nomes de banco de dados precisam seguir as regras para [identificadores](../.
  ESTIMATEONLY  
  Exibe a quantidade estimada de espaço no tempdb necessária para executar DBCC CHECKALLOC quando todas as outras opções são especificadas.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 DBCC CHECKALLOC verifica a alocação de todas as páginas no banco de dados, independentemente do tipo de página ou do tipo de objeto ao qual elas pertencem. Isso também valida as diversas estruturas internas usadas para manter o controle dessas páginas e das relações entre elas.
 Se NO_INFOMSGS não for especificado, DBCC CHECKALLOC coletará informações sobre uso de espaço para todos os objetos no banco de dados. Essas informações são impressas juntamente com os erros encontrados.
   
@@ -113,7 +113,7 @@ DBCC CHECKALLOC usa um instantâneo de banco de dados interno para fornecer a co
 ## <a name="understanding-dbcc-error-messages"></a>Compreendendo mensagens de erro DBCC  
 Depois que o comando DBCC CHECKALLOC é encerrado, uma mensagem é gravada no log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se o comando DBCC for executado com êxito, a mensagem indicará uma conclusão bem-sucedida e o tempo de execução do comando. Se o comando DBCC parar antes de concluir a verificação devido a um erro, a mensagem indicará que o comando foi finalizado, um valor de estado e a duração da execução do comando. A tabela a seguir lista e descreve os valores de estado que podem ser incluídos na mensagem.
   
-|Estado|Descrição|  
+|Estado|DESCRIÇÃO|  
 |---|---|  
 |0|O número do erro 8930 foi gerado. Isso indica um dano de metadados que provocou a finalização do comando DBCC.|  
 |1|O erro número 8967 foi gerado. Ocorreu um erro interno de DBCC.|  
@@ -133,7 +133,7 @@ Um reparo pode ser executado em uma transação de usuário. Isso permite que al
 ## <a name="result-sets"></a>Conjuntos de resultados  
 As tabelas a seguir descrevem as informações retornadas por DBCC CHECKALLOC.
   
-|Item|Descrição|  
+|Item|DESCRIÇÃO|  
 |---|---|  
 |FirstIAM|Somente para uso interno.|  
 |Root|Somente para uso interno.|  
@@ -143,7 +143,7 @@ As tabelas a seguir descrevem as informações retornadas por DBCC CHECKALLOC.
   
 DBCC CHECKALLOC também relata um resumo de alocação para cada índice e partição em cada arquivo. Esse resumo descreve a distribuição dos dados.
   
-|Item|Descrição|  
+|Item|DESCRIÇÃO|  
 |---|---|  
 |Reserved pages|As páginas alocadas para o índice e as páginas não usadas em extensões alocadas.|  
 |Used pages|Páginas alocadas e usadas pelo índice.|  

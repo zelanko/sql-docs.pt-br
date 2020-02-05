@@ -11,10 +11,10 @@ ms.assetid: 273a54f8-b107-4f36-9461-2b475644760d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9026edfafeb24eae766e9d42634512a565b6934b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296672"
 ---
 # <a name="catalogevent_message_context"></a>catalog.event_message_context 
@@ -26,7 +26,7 @@ ms.locfileid: "71296672"
 
   Exibe informações sobre as condições que são associadas às mensagens de evento de execução, para execuções no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |Context_id|BIGINT|ID exclusiva do contexto de erro.|  
 |Event_message_id|BIGINT|ID exclusiva da mensagem à qual o contexto está relacionado.|  
@@ -38,12 +38,12 @@ ms.locfileid: "71296672"
 |Property_name|Nvarchar(4000)|O nome da propriedade associada à origem do contexto.|  
 |Property_value|Sql_variant|O valor da propriedade associada à origem do contexto.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  A tabela a seguir lista os tipos de contexto.  
   
 ||||  
 |-|-|-|  
-|Valor do tipo de contexto|Nome do Tipo|Descrição|  
+|Valor do tipo de contexto|Nome do Tipo|DESCRIÇÃO|  
 |10|Tarefa|Estado de uma tarefa quando um erro ocorreu.|  
 |20|Pipeline|Erro de um componente de pipeline: origem, destino ou componente de transformação.|  
 |30|Sequência|Estado de uma sequência.|  

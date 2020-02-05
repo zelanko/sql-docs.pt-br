@@ -10,10 +10,10 @@ ms.assetid: b0bd1f5a-34dd-4be3-9ac8-f9f87727781b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: faa8517c24a3db78ee7e7b53ff0151be93a87ba2
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71285430"
 ---
 # <a name="connect-to-an-oracle-data-source-sql-server-import-and-export-wizard"></a>Conectar-se a uma fonte de dados do Oracle (Assistente de Importação e Exportação do SQL Server)
@@ -34,7 +34,7 @@ Depois de selecionar o **Provedor de dados .NET Framework para Oracle** na pági
 
 |Informações necessárias|Propriedade Provedor de Dados .NET Framework para Oracle|
 |---|---|
-|Nome do servidor|**Fonte de dados**|
+|Nome do servidor|**Fonte de Dados**|
 |Informações (logon) de Autenticação|**ID de Usuário** e **Senha**; ou **Segurança Integrada**|
 
 Você não precisa inserir a cadeia de conexão no campo **ConnectionString** da lista. Depois de inserir valores individuais para o nome do servidor Oracle (**fonte de dados**) e informações de logon, o assistente monta a cadeia de conexão das propriedades individuais e dos respectivos valores. 
@@ -86,7 +86,7 @@ Execute uma das consultas a seguir para obter o nome do servidor Oracle.
 
 `SELECT host_name FROM v$instance`
 
-ou em
+ou
 
 `SELECT sys_context('USERENV','SERVER_HOST') FROM dual`
 

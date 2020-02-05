@@ -18,10 +18,10 @@ ms.assetid: 240b70f1-eeda-44ab-b4bb-9e4af80fa7c0
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 58f5389953c2257c7478ad54665cfdeeb0a805c4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077928"
 ---
 # <a name="getroot-database-engine"></a>GetRoot (Mecanismo de Banco de Dados)
@@ -46,12 +46,12 @@ static SqlHierarchyId GetRoot ( )
   
 **Tipo de retorno do CLR: SqlHierarchyId**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 Usado para determinar o nó raiz em uma árvore hierárquica.
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-transact-sql-example"></a>A. Exemplo de Transact-SQL  
+### <a name="a-transact-sql-example"></a>a. Exemplo de Transact-SQL  
 O seguinte exemplo retorna a raiz da árvore de hierarquia:
   
 ```sql

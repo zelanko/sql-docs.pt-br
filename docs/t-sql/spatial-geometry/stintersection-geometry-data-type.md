@@ -18,10 +18,10 @@ ms.assetid: 354843f5-cc14-478c-974a-04f363f9530f
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: e57a3551660467254a9c291ed78ed41aae30b7c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67950131"
 ---
 # <a name="stintersection-geometry-data-type"></a>STIntersection (tipo de dados geometry)
@@ -43,14 +43,14 @@ Retorna um objeto que representa os pontos em que uma instância de **geometry**
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Tipo de retorno CLR: **SqlGeometry**  
+ Tipo de retorno do CLR: **SqlGeometry**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  `STIntersection()` sempre retornará nulo se as SRIDs (IDs de referência espacial) das instâncias de **geometry** não forem correspondentes. O resultado poderá conter segmentos de arco circulares apenas se as instâncias de entrada os contiverem.  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-stintersection-on-polygon-instances"></a>A. Usando STIntersection() em instâncias de Polygon  
+### <a name="a-using-stintersection-on-polygon-instances"></a>a. Usando STIntersection() em instâncias de Polygon  
  O exemplo a seguir usa `STIntersection()` para computar a interseção de dois polígonos.  
   
 ```  

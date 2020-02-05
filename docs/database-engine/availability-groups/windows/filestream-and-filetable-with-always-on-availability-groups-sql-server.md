@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 6398c949f5cccbd6c437eaddba04ab5bb32aae12
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68008415"
 ---
 # <a name="use-filestream-and-filetable-with-always-on-availability-groups"></a>Usar FILESTREAM e FileTable com grupos de disponibilidade Always On
@@ -71,9 +71,9 @@ ms.locfileid: "68008415"
   
 ##  <a name="RelatedTasks"></a> Tarefas relacionadas  
   
--   [Enable and Configure FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)  
+-   [Habilitar e configurar o FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)  
   
--   [Habilitar os pré-requisitos para FileTable](../../../relational-databases/blob/enable-the-prerequisites-for-filetable.md)  
+-   [Habilitar os pré-requisitos para o FileTable](../../../relational-databases/blob/enable-the-prerequisites-for-filetable.md)  
   
 ##  <a name="RelatedContent"></a> Conteúdo relacionado  
  Nenhum.  

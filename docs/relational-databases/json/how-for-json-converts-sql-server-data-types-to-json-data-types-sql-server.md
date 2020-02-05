@@ -13,10 +13,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 537ad4d796792c7d4fce56eda25adcca8b1fea01
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095794"
 ---
 # <a name="how-for-json-converts-sql-server-data-types-to-json-data-types-sql-server"></a>Como FOR JSON converte tipos de dados do SQL Server para tipos de dados JSON (SQL Server)
@@ -26,13 +26,13 @@ ms.locfileid: "74095794"
   
 |Categoria|Tipo de dados do SQL Server|Tipo de dados JSON|  
 |--------------|--------------|---------------|  
-|Tipos de cadeia de caracteres e caracteres|char, nchar, varchar, nvarchar|cadeia de caracteres|  
-|Tipos numéricos|int, bigint, float, decimal, numeric|number|  
+|Tipos de cadeia de caracteres e caracteres|char, nchar, varchar, nvarchar|string|  
+|Tipos numéricos|int, bigint, float, decimal, numeric|número|  
 |Tipo de Bit|bit|Booliano (verdadeiro ou falso)|  
-|Tipos de data e hora|date, datetime, datetime2, time, datetimeoffset|cadeia de caracteres|  
+|Tipos de data e hora|date, datetime, datetime2, time, datetimeoffset|string|  
 |Tipos binários|varbinary, binary, image, timestamp, rowversion|Cadeia de caracteres codificada em BASE64|  
 |Tipos CLR|geometria, geografia, outros tipos CLR|Sem suporte. Estes tipos retornam um erro.<br /><br /> Na instrução SELECT, use CAST ou CONVERT ou use um método ou propriedade CLR para converter os dados de origem em um tipo de dados do SQL Server que pode ser convertido com êxito em um tipo JSON. Por exemplo, use **STAsText()** para o tipo de geometria ou **ToString()** para qualquer tipo CLR. O tipo do valor de saída JSON é derivado do tipo de retorno da conversão aplicada na instrução SELECT.|  
-|Outros tipos|uniqueidentifier, money|cadeia de caracteres|  
+|Outros tipos|uniqueidentifier, money|string|  
 
 ## <a name="learn-more-about-json-in-sql-server-and-azure-sql-database"></a>Saiba mais sobre JSON no SQL Server e no Banco de Dados SQL do Azure  
   

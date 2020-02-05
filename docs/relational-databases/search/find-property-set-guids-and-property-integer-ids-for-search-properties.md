@@ -15,10 +15,10 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 3b950557c3c5c22968cffa4be0b4565ddedb293c
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056524"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>Localizar GUIDs do conjunto de propriedades e IDs do inteiro de propriedade para propriedades da Pesquisa
@@ -40,11 +40,11 @@ ms.locfileid: "74056524"
 ##  <a name="wellknown"></a> Localizando informações sobre propriedades da Microsoft amplamente usadas e conhecidas  
  A Microsoft define centenas de propriedades de documento para uso em vários contextos, mas somente um pequeno subconjunto das propriedades disponíveis é usado por cada formato de arquivo. Dentre as propriedades frequentemente usadas do Windows está um conjunto pequeno de propriedades genéricas. Alguns exemplos de propriedades genéricas conhecidas são mostrados na tabela seguinte. A tabela mostra o nome conhecido, o nome canônico (da descrição de propriedade publicada pela Microsoft) no Windows, a GUID do conjunto de propriedades, o identificador de inteiro de propriedade e uma descrição sucinta.  
   
-|Nome conhecido|Nome canônico no Windows.|GUID do conjunto de propriedades|ID de inteiro|Descrição|  
+|Nome conhecido|Nome canônico no Windows.|GUID do conjunto de propriedades|ID de inteiro|DESCRIÇÃO|  
 |----------------------|----------------------------|-----------------------|----------------|-----------------|  
 |Autores|**System.Author**|F29F85E0-4FF9-1068-AB91-08002B27B3D9|4|Autor ou autores de um determinado item.|  
 |Marcas|**System.Keywords**|F29F85E0-4FF9-1068-AB91-08002B27B3D9|5|Conjunto de palavras-chave (também conhecidas como marcas) atribuído ao item.|  
-|Tipo|**System.PerceivedType**|28636AA6-953D-11D2-B5D6-00C04FD918D0|9|Tipo de arquivo percebido com base em seu tipo canônico.|  
+|Type|**System.PerceivedType**|28636AA6-953D-11D2-B5D6-00C04FD918D0|9|Tipo de arquivo percebido com base em seu tipo canônico.|  
 |Title|**System.Title**|F29F85E0-4FF9-1068-AB91-08002B27B3D9|2|Título do item. Por exemplo, o título de um documento, o assunto de uma mensagem, a legenda de uma fotografia ou o nome de uma música.|  
   
  Para encorajar a consistência entre formatos de arquivos, a Microsoft identificou subconjuntos de propriedades de documento frequentemente usadas e de alta prioridade para várias categorias de documentos. Estas incluem comunicações, contatos, documentos, arquivos de música, imagens e vídeos. Para obter mais informações sobre as principais propriedades classificadas para cada categoria, veja [Propriedades definidas pelo sistema para formatos de arquivos personalizados](https://go.microsoft.com/fwlink/?LinkId=144336) na documentação do Windows Search.  
@@ -105,6 +105,6 @@ GO
   
 ## <a name="see-also"></a>Consulte Também  
  [Pesquisar propriedades de documento com listas de propriedades de pesquisa](../../relational-databases/search/search-document-properties-with-search-property-lists.md)   
- [Configurar e gerenciar filtros para pesquisa](../../relational-databases/search/configure-and-manage-filters-for-search.md)  
+ [Configurar e gerenciar filtros de pesquisa](../../relational-databases/search/configure-and-manage-filters-for-search.md)  
   
   

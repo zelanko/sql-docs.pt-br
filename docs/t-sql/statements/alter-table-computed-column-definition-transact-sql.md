@@ -15,10 +15,10 @@ ms.assetid: 746eabda-3b4f-4940-b0b5-1c379f5cf7a5
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 7eaa4c35079d8eec49d7197778a01b7bac6cf9c1
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982044"
 ---
 # <a name="alter-table-computed_column_definition-transact-sql"></a>ALTER TABLE computed_column_definition (Transact-SQL)
@@ -26,7 +26,7 @@ ms.locfileid: "73982044"
 
   Especifica as propriedades de uma coluna computada que são adicionadas a uma tabela usando [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -55,7 +55,7 @@ column_name AS computed_column_expression
  É o nome da coluna a ser alterada, adicionada ou removida. *column_name* pode ter de 1 a 128 caracteres. Para novas colunas, *column_name* pode ser omitido para colunas criadas com um tipo de dados **timestamp**. Se nenhum *column_name* é especificado para uma coluna do tipo de dados **timestamp**, o nome **timestamp** é usado.  
   
 *computed_column_expression*  
- É uma expressão que define o valor de uma coluna computada. Uma coluna computada é uma coluna virtual que não está fisicamente armazenada na tabela, mas é computada a partir de uma expressão que usa outras colunas da mesma tabela. Por exemplo, uma coluna computada pode ter a definição: cost AS price * qty. A expressão pode ser o nome de uma coluna não computada, constante, função, variável e qualquer combinação dessas, conectada por um ou mais operadores. A expressão não pode ser uma subconsulta ou incluir um tipo de dados de alias.  
+ É uma expressão que define o valor de uma coluna computada. Uma coluna computada é uma coluna virtual que não está fisicamente armazenada na tabela, mas é computada a partir de uma expressão que usa outras colunas da mesma tabela. Por exemplo, uma coluna computada poderia ter esta definição: cost AS price * qty. A expressão pode ser o nome de uma coluna não computada, constante, função, variável e qualquer combinação desses elementos conectados por um ou mais operadores. A expressão não pode ser uma subconsulta ou incluir um tipo de dados de alias.  
   
  As colunas computadas podem ser usadas em listas de seleção, cláusulas WHERE, cláusulas ORDER BY, ou qualquer outro local no qual expressões regulares podem ser usadas, mas com as seguintes exceções:  
   
@@ -145,7 +145,7 @@ ON { *partition_scheme_name*(*partition_column_name*) | *filegroup*| "default"}
 > [!NOTE]  
 >  Nesse contexto, default não é uma palavra-chave. É um identificador para o grupo de arquivos padrão e deve ser delimitado, como em ON "default" ou ON [default]. Se "padrão" for especificado, a opção QUOTED_IDENTIFIER deverá ser definida como ON para a sessão atual. Essa é a configuração padrão. Para obter mais informações, veja [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Cada restrição PRIMARY KEY e UNIQUE gera um índice. O número de restrições UNIQUE e PRIMARY KEY não pode fazer com que o número de índices na tabela exceda 999 índices não clusterizados e 1 índice clusterizado.  
   
 ## <a name="see-also"></a>Consulte Também  

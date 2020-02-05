@@ -11,10 +11,10 @@ ms.date: 08/09/2018
 ms.author: chugu
 author: chugugrace
 ms.openlocfilehash: 3609de02157637ec30f7e21ad4426c5001f31a6e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71282654"
 ---
 # <a name="load-data-into-azure-sql-data-warehouse-with-sql-server-integration-services-ssis"></a>Carregar dados no SQL Data Warehouse do Azure com o SSIS (SQL Server Integration Services)
@@ -98,7 +98,7 @@ Para obter mais controle, você pode criar manualmente um pacote que emula o tra
 
 1. Use a Tarefa de upload de Blobs do Azure para preparar os dados no Armazenamento de Blobs do Azure. Para obter a tarefa de Upload de Blobs do Azure, baixe o [Feature Pack do Microsoft SQL Server Integration Services para Azure][Microsoft SQL Server 2017 Integration Services Feature Pack for Azure].
 
-2. Depois, use a tarefa Executar SQL do SSIS para inicializar um script do PolyBase que carrega os dados no SQL Data Warehouse. Para obter um exemplo que carrega os dados do armazenamento de BLOBs do Azure no SQL Data Warehouse (mas não com o SSIS), veja [Tutorial: Carregar dados no SQL Data Warehouse do Azure](/azure/sql-data-wAREHOUSE/load-data-wideworldimportersdw).
+2. Depois, use a tarefa Executar SQL do SSIS para inicializar um script do PolyBase que carrega os dados no SQL Data Warehouse. Para obter um exemplo que carrega os dados do Armazenamento de Blobs do Azure no SQL Data Warehouse (mas não com o SSIS), consulte [Tutorial: carregar dados no SQL Data Warehouse do Azure](/azure/sql-data-wAREHOUSE/load-data-wideworldimportersdw).
 
 ## <a name="option-2---use-a-source-and-destination"></a>Opção 2 – Usar uma origem e um destino
 
@@ -215,9 +215,9 @@ Parabéns! Você conseguiu usar o SQL Server Integration Services para carregar 
 
 ## <a name="next-steps"></a>Próximas etapas
 
-- Saiba como depurar e solucionar problemas de pacotes diretamente no ambiente de design. Comece aqui: [Ferramentas de solução de problemas para desenvolvimento de pacotes][Troubleshooting Tools for Package Development].
+- Saiba como depurar e solucionar problemas de pacotes diretamente no ambiente de design. Comece aqui: [Solução de problemas de ferramentas para o desenvolvimento de pacotes][Troubleshooting Tools for Package Development].
 
-- Saiba como implantar seus pacotes e projetos do SSIS no servidor do Integration Services ou em outro local de armazenamento. Comece aqui: [Implantação de Projetos e Pacotes][Deployment of Projects and Packages].
+- Saiba como implantar seus pacotes e projetos do SSIS no servidor do Integration Services ou em outro local de armazenamento. Comece por aqui: [Implantação de projetos e pacotes][Deployment of Projects and Packages].
 
 <!-- Image references -->
 [01]:  ./media/load-data-to-sql-data-warehouse/ssis-designer-01.png

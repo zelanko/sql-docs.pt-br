@@ -14,10 +14,10 @@ ms.assetid: 754a1070-59bc-438d-998b-97fdd77d45ca
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a9e62710d28b9b7e0ad66ff157b841f939d6dfaf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68041092"
 ---
 # <a name="peer-to-peer---conflict-detection-in-peer-to-peer-replication"></a>Ponto a ponto – Detecção de conflitos na replicação ponto a ponto

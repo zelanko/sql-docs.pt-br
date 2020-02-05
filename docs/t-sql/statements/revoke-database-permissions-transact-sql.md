@@ -18,10 +18,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 59536e4f4ba418aef0ee49737a67df43f903435d
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73983275"
 ---
 # <a name="revoke-database-permissions-transact-sql"></a>Permissões de banco de dados REVOKE (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "73983275"
 
   Revoga permissões concedidas e negadas em um banco de dados.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -59,7 +59,7 @@ permission | ALL [ PRIVILEGES ]
  Especifica uma permissão que pode ser negada em um banco de dados. Para obter uma lista de permissões, consulte a seção Comentários mais adiante neste tópico.  
   
  ALL  
- Esta opção não revoga todas as permissões possíveis. A revogação ALL é equivalente a revogar as seguintes permissões: BACKUP DATABASE, BACKUP LOG, CREATE DATABASE, CREATE DEFAULT, CREATE FUNCTION, CREATE PROCEDURE, CREATE RULE, CREATE TABLE e CREATE VIEW.  
+ Esta opção não revoga todas as permissões possíveis. Revogar ALL é equivalente a revogar as seguintes permissões: BACKUP DATABASE, BACKUP LOG, CREATE DATABASE, CREATE DEFAULT, CREATE FUNCTION, CREATE PROCEDURE, CREATE RULE, CREATE TABLE e CREATE VIEW.  
   
  PRIVILEGES  
  Incluído para conformidade com ISO. Não altera o comportamento de ALL.  
@@ -112,14 +112,14 @@ permission | ALL [ PRIVILEGES ]
  *Database_user_with_no_login*  
  Especifica um usuário do banco de dados sem nenhuma entidade de segurança correspondente no nível de servidor.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  A instrução falhará se CASCADE não for especificado na revogação de uma permissão a uma entidade à qual ela foi concedida com GRANT OPTION especificado.  
   
  Um banco de dados é um protegível contido no servidor pai na hierarquia de permissões. As permissões mais específicas e limitadas que podem ser revogadas em um banco de dados são listadas na tabela a seguir, junto com as permissões mais gerais que as incluem implicitamente.  
   
 |Permissão de banco de dados|Implícito na permissão de banco de dados|Implícito na permissão de servidor|  
 |-------------------------|------------------------------------|----------------------------------|  
-|ADMINISTRAR OPERAÇÕES EM LOTE DO BANCO DE DADOS<br/>**Aplica-se ao:** [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].|CONTROL|CONTROL SERVER|
+|ADMINISTRAR OPERAÇÕES EM LOTE DO BANCO DE DADOS<br/>**Aplica-se a:** [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].|CONTROL|CONTROL SERVER|
 |ALTER|CONTROL|ALTER ANY DATABASE|  
 |ALTER ANY APPLICATION ROLE|ALTER|CONTROL SERVER|  
 |ALTER ANY ASSEMBLY|ALTER|CONTROL SERVER|  
@@ -152,7 +152,7 @@ permission | ALL [ PRIVILEGES ]
 |BACKUP DATABASE|CONTROL|CONTROL SERVER|  
 |BACKUP LOG|CONTROL|CONTROL SERVER|  
 |CHECKPOINT|CONTROL|CONTROL SERVER|  
-|CONNECT|CONNECT REPLICATION|CONTROL SERVER|  
+|CONECTAR|CONNECT REPLICATION|CONTROL SERVER|  
 |CONNECT REPLICATION|CONTROL|CONTROL SERVER|  
 |CONTROL|CONTROL|CONTROL SERVER|  
 |CREATE AGGREGATE|ALTER|CONTROL SERVER|  
@@ -204,7 +204,7 @@ permission | ALL [ PRIVILEGES ]
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-revoking-permission-to-create-certificates"></a>A. Revogando a permissão para criar certificados  
+### <a name="a-revoking-permission-to-create-certificates"></a>a. Revogando a permissão para criar certificados  
  O exemplo a seguir revoga a permissão `CREATE CERTIFICATE` no banco de dados `AdventureWorks2012` do usuário `MelanieK`.  
   
 **Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1877f653244100126226b85b29a24ca458c1cf74
-ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71326135"
 ---
 # <a name="use-column-sets"></a>Usar conjuntos de colunas
@@ -142,7 +142,7 @@ GO
 ## <a name="examples"></a>Exemplos  
  Nos exemplos a seguir, uma tabela de documento contém o conjunto comum de colunas `DocID` e `Title`. O grupo de Produção quer uma coluna `ProductionSpecification` e `ProductionLocation` para todos os documentos da produção. O grupo Marketing quer uma coluna `MarketingSurveyGroup` para os documentos de marketing.  
   
-### <a name="a-creating-a-table-that-has-a-column-set"></a>A. Criando uma tabela que possui um conjunto de colunas  
+### <a name="a-creating-a-table-that-has-a-column-set"></a>a. Criando uma tabela que possui um conjunto de colunas  
  O exemplo a seguir cria a tabela que usa colunas esparsas e inclui o conjunto de colunas `SpecialPurposeColumns`. O exemplo insere duas linhas na tabela e, depois, seleciona dados da tabela.  
   
 > [!NOTE]  

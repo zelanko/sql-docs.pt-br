@@ -22,10 +22,10 @@ ms.assetid: b0d8769c-7598-4f97-8162-ace5f182b5bc
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8aaae44a73bc7cd7ccf41bf1c33823664044a2e1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68086730"
 ---
 # <a name="ntext-text-and-image-transact-sql"></a>ntext, text e image (Transact-SQL)
@@ -46,7 +46,7 @@ Dados não Unicode de comprimento variável na página de código do servidor e 
 **imagem**  
 Dados binários do comprimento variável de 0 a 2^31-1 (2.147.483.647) bytes.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 As funções e instruções a seguir podem ser usadas com os dados **ntext**, **text** ou **image**.
   
 |Funções|Instruções|  

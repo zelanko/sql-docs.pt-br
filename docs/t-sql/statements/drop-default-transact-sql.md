@@ -19,10 +19,10 @@ ms.assetid: d2d3af25-8877-46ba-95d9-1844961d97ee
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 885336e48d7b8820ac7c1015be6d770b851978af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67898073"
 ---
 # <a name="drop-default-transact-sql"></a>DROP DEFAULT (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "67898073"
 > [!IMPORTANT]
 >  DROP DEFAULT será removido na próxima versão do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Não use DROP DEFAULT em um novo trabalho de desenvolvimento e planeje modificar os aplicativos que atualmente a utilizam. Em vez disso, use as definições padrão que você pode criar com a palavra-chave DEFAULT de [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) ou [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md).  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -53,7 +53,7 @@ DROP DEFAULT [ IF EXISTS ] { [ schema_name . ] default_name } [ ,...n ] [ ; ]
  *default_name*  
  É o nome de um padrão existente. Para ver uma lista dos padrões existentes, execute **sp_help**. Os padrões devem seguir as regras de [identificadores](../../relational-databases/databases/database-identifiers.md). Especificar o nome do esquema padrão é opcional.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Antes de remover um padrão, desassocie-o executando **sp_unbindefault** se ele estiver atualmente associado a uma coluna ou a um tipo de dados de alias.  
   
  Depois que um padrão é descartado de uma coluna que permite valores nulos, NULL é inserido nessa posição quando as linhas são adicionadas e nenhum valor é explicitamente fornecido. Depois que um padrão é descartado de uma coluna NOT NULL, uma mensagem de erro é retornada quando as linhas são adicionadas e nenhum valor é explicitamente fornecido. Estas linhas são adicionadas posteriormente como parte do comportamento da instrução INSERT típica.  
@@ -63,7 +63,7 @@ DROP DEFAULT [ IF EXISTS ] { [ schema_name . ] default_name } [ ,...n ] [ ; ]
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-dropping-a-default"></a>A. Descartando um padrão  
+### <a name="a-dropping-a-default"></a>a. Descartando um padrão  
  Se um padrão não estiver associado a uma coluna ou a um tipo de dados de alias, ele só poderá ser descartado usando DROP DEFAULT. O exemplo a seguir remove o padrão criado pelo usuário chamado `datedflt`.  
   
 ```  

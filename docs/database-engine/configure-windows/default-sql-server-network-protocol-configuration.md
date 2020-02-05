@@ -14,10 +14,10 @@ ms.assetid: 635ea361-a797-4971-bd05-e3415862bc5c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 218389eaf76336e33d866f16c6b79ef54661be0b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68011954"
 ---
 # <a name="default-sql-server-network-protocol-configuration"></a>Configuração de protocolo de rede padrão do SQL Server
@@ -31,16 +31,16 @@ Use o nó Configuração de Rede do [!INCLUDE[ssNoVersion_md](../../includes/ssn
 
 A tabela a seguir descreve a configuração após a instalação.
 
-|Edição | Nova instalação versus instalação anterior está presente | Memória compartilhada | TCP/IP | Pipes nomeados|
+|Edition | Nova instalação versus instalação anterior está presente | Memória compartilhada | TCP/IP | Pipes nomeados|
 | -------- | -- | -- | -- | --  |  
-|Enterprise | Nova instalação | Habilitado | Habilitado | Desabilitado para conexões de rede.|
-|Standard | Nova instalação | Habilitado | Habilitado | Desabilitado para conexões de rede.|
-|Web | Nova instalação | Habilitado | Habilitado | Desabilitado para conexões de rede.|
-|Desenvolvedor | Nova instalação | Habilitado | Desabilitado | Desabilitado para conexões de rede.|
-|Evaluation | Nova instalação | Habilitado | Habilitado | Desabilitado para conexões de rede.|
-|SQL Server Express | Nova instalação | Habilitado | Desabilitado | Desabilitado para conexões de rede.|
+|Enterprise | Nova instalação | habilitado | habilitado | Desabilitado para conexões de rede.|
+|Standard | Nova instalação | habilitado | habilitado | Desabilitado para conexões de rede.|
+|Web | Nova instalação | habilitado | habilitado | Desabilitado para conexões de rede.|
+|Desenvolvedor | Nova instalação | habilitado | Desabilitado | Desabilitado para conexões de rede.|
+|Avaliação | Nova instalação | habilitado | habilitado | Desabilitado para conexões de rede.|
+|SQL Server Express | Nova instalação | habilitado | Desabilitado | Desabilitado para conexões de rede.|
 |Todas as edições | A instalação anterior está presente, mas não está sendo atualizada. | Igual à nova instalação | Igual à nova instalação | Igual à nova instalação|
-|Todas as edições | Atualizar | Habilitado | As configurações da instalação anterior são preservadas. | As configurações da instalação anterior são preservadas.|
+|Todas as edições | Atualizar | habilitado | As configurações da instalação anterior são preservadas. | As configurações da instalação anterior são preservadas.|
 
 
 >[!NOTE]
@@ -57,7 +57,7 @@ Consulte os seguintes tópicos para obter amostras de cadeias de conexão:
 
 
 
-## <a name="includessnoversionmdincludesssnoversion-mdmd-browser-settings"></a>[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Configurações do navegador
+## <a name="includessnoversion_mdincludesssnoversion-mdmd-browser-settings"></a>[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Configurações do navegador
 
 O serviço Navegador do [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] pode ser configurado para ser iniciado automaticamente durante a instalação. O padrão é para iniciar automaticamente nas seguintes condições:
 

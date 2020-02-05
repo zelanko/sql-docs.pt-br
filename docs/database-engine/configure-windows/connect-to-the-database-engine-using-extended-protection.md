@@ -18,10 +18,10 @@ ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 5216b324477f1af7fb727af3462ccce8d64e6a64
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68012103"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>Conectar-se ao mecanismo de banco de dados usando proteção estendida
@@ -49,7 +49,7 @@ ms.locfileid: "68012103"
  A associação de canal estabelece um canal seguro (Schannel) entre um cliente e uma instância do serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . O serviço verifica a autenticidade do cliente comparando o CBT (token da associação de canal) do cliente específico a esse canal com seu próprio CBT. A associação de canal lida com ataques de atração e falsificação. No entanto, ela incorre em um custo de tempo real maior, porque requer a criptografia TLS de todo o tráfego da sessão. A Associação de Canal ocorre quando um aplicativo cliente usa criptografia para se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], independentemente de a criptografia ser imposta pelo cliente ou pelo servidor.  
   
 > [!WARNING]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[msCoName](../../includes/msconame-md.md)] para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] support TLS 1.0 e SSL 3.0. Se você impor um protocolo diferente (como TLS 1.1 ou TLS 1.2) fazendo alterações na camada de sistema operacional SChannel, suas conexões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] poderão falhar.  
+>  Os provedores de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[msCoName](../../includes/msconame-md.md)] para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dão suporte ao TLS 1.0 e SSL 3.0. Se você impor um protocolo diferente (como TLS 1.1 ou TLS 1.2) fazendo alterações na camada de sistema operacional SChannel, suas conexões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] poderão falhar.  
   
 ### <a name="operating-system-support"></a>Suporte do sistema operacional  
  Os seguintes links fornecem mais informações sobre o modo como o Windows dá suporte à **Proteção Estendida**:  
@@ -103,7 +103,7 @@ ms.locfileid: "68012103"
   
 ## <a name="see-also"></a>Consulte Também  
  [Configuração de rede do servidor](../../database-engine/configure-windows/server-network-configuration.md)   
- [Configuração de rede de cliente](../../database-engine/configure-windows/client-network-configuration.md)   
+ [Configuração de rede do cliente](../../database-engine/configure-windows/client-network-configuration.md)   
  [Visão geral sobre a Proteção Estendida para Autenticação](https://go.microsoft.com/fwlink/?LinkID=177943)   
  [Autenticação Integrada do Windows com Proteção Estendida](https://go.microsoft.com/fwlink/?LinkId=179922)  
   

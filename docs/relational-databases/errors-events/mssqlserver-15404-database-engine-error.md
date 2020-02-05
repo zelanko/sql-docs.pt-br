@@ -12,22 +12,22 @@ ms.assetid: 69677f02-bc81-4e4a-99b8-5c1bd1de36df
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: caa8f9a9de287b5628518c286a1c411d10d7f7fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67908549"
 ---
-# <a name="mssqlserver15404"></a>MSSQLSERVER_15404
+# <a name="mssqlserver_15404"></a>MSSQLSERVER_15404
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|15404|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|SEC_NTGRP_ERROR|  
 |Texto da mensagem|Não foi possível obter informações sobre o grupo/usuário '*user*' do Windows NT, código de erro *code*.|  

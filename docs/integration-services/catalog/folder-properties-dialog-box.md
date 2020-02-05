@@ -15,10 +15,10 @@ ms.assetid: d9a2bfae-fcc8-46be-b588-4a9db03f7e45
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 19f23e57fdb77a88ecf7c7b531c9c837e2c740ce
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298994"
 ---
 # <a name="folder-properties-dialog-box"></a>Caixa de diálogo Propriedades da Pasta
@@ -41,7 +41,7 @@ ms.locfileid: "71298994"
 5.  Clique em **OK** para aceitar as alterações e feche a caixa de diálogo **Propriedades das Pastas** .  
   
 ## <a name="see-also"></a>Consulte Também  
- [Servidor do Integration Services &#40;SSIS&#41;](../integration-services-ssis-packages.md)   
+ [Servidor do SSIS &#40;Integration Services&#41;](../integration-services-ssis-packages.md)   
  [catalog.grant_permission &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md)  
   
   

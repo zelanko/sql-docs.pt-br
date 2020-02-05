@@ -13,10 +13,10 @@ ms.assetid: 0877fb38-f1a2-43d8-86cf-4754be224dc1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3a282e3e9493bb1cfbcc57186a8e1b9f53faf22f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68095458"
 ---
 # <a name="add-business-logic-to-xml-data"></a>Adicionar lógica de negócios a dados XML
@@ -31,7 +31,7 @@ ms.locfileid: "68095458"
   
 -   É possível gravar funções e procedimentos armazenados Transact-SQL que começam o processamento na coluna XML para suas necessidades comerciais.  
   
-## <a name="example-applying-xsl-transformation"></a>Exemplo: Aplicando a transformação XSL  
+## <a name="example-applying-xsl-transformation"></a>Exemplo: Aplicando XSL Transformation  
  Considere uma função CLR **TransformXml()** que aceita uma instância de tipo de dados **xml** e uma transformação XSL armazenada em um arquivo, aplica a transformação nos dados XML e retorna o XML transformado no resultado. O seguinte é um função em esqueleto escrita em C#:  
   
 ```  

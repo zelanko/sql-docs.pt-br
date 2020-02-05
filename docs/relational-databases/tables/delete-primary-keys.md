@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6cd4fecacab3343c5440db44cc2e03f8874b3e86
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67986459"
 ---
 # <a name="delete-primary-keys"></a>Excluir chaves primárias
@@ -65,7 +65,7 @@ ms.locfileid: "67986459"
     > [!NOTE]  
     >  Para desfazer essa ação, feche a tabela sem salvar as alterações. A exclusão de uma chave primária não pode ser desfeita sem perder todas as outras alterações feitas na tabela.  
   
-3.  No menu **Arquivo** , clique em **Salvar**_table name_.  
+3.  No menu **Arquivo**, clique em **Salvar**_nome da tabela_.  
   
 ##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   

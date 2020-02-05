@@ -15,10 +15,10 @@ ms.assetid: a5502814-b281-42dd-b885-5c9368025ae6
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3e7338e9068c1b8c58623cf744022a165ce90eda
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71952708"
 ---
 # <a name="delete-a-trace-transact-sql"></a>Excluir um rastreamento (Transact-SQL)

@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f55027afe2452acd6b9eb3f0dd39f4212fe08081
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67929248"
 ---
 # <a name="drop-server-role-transact-sql"></a>DROP SERVER ROLE (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "67929248"
   
  Funções de servidor definidas pelo usuário são novas no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,7 +45,7 @@ DROP SERVER ROLE role_name
  *role_name*  
  Especifica a função de servidor definida pelo usuário a ser descartada do servidor.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  As funções definidas pelo usuário que possuem protegíveis não podem ser descartadas do servidor. Para descartar uma função de servidor definida pelo usuário que possui protegíveis, é necessário primeiro transferir a propriedade dos protegíveis ou descartá-los.  
   
  As funções de servidor definidas pelo usuário que possuem membros não podem ser descartadas. Para remover uma função de servidor definida pelo usuário que tem membros, você deve, primeiro, remover os membros da função usando [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).  
@@ -59,7 +59,7 @@ DROP SERVER ROLE role_name
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-to-drop-a-server-role"></a>A. Para remover uma função de servidor  
+### <a name="a-to-drop-a-server-role"></a>a. Para remover uma função de servidor  
  O exemplo a seguir descarta a função de servidor `purchasing`.  
   
 ```  

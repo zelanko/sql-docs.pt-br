@@ -12,22 +12,22 @@ ms.assetid: 4a8bf90f-a083-4c53-84f0-d23c711c8081
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 112ba12a568190967a31789ca6cd69d2056d9e8c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67896757"
 ---
-# <a name="mssqlserver2020"></a>MSSQLSERVER_2020
+# <a name="mssqlserver_2020"></a>MSSQLSERVER_2020
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|2020|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico||  
 |Texto da mensagem|As dependências reportadas para a entidade "%.*ls" não incluem referências às colunas. Isso ocorre porque a entidade faz referência a um objeto que não existe ou devido a um erro em uma ou mais instruções na entidade.  Antes de executar novamente a consulta, verifique se não há erros na entidade e se todos os objetos referenciados por ela existem.|  

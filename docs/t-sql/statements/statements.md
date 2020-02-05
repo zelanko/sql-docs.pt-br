@@ -14,10 +14,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 43d4405411005ab43e3f2b2fe9b2136a5793e8a5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68099968"
 ---
 # <a name="transact-sql-statements"></a>instruções Transact-SQL
@@ -46,7 +46,7 @@ A DML (linguagem de manipulação de dados) afeta as informações armazenadas n
 - Delete (excluir)
 - INSERT
 - UPDATE
-- MERGE
+- MESCLAR
 - TRUNCATE TABLE
 
 ## <a name="permissions-statements"></a>Instruções de permissões

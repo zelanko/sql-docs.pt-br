@@ -13,10 +13,10 @@ ms.assetid: d695690a-923b-4036-945e-7621e8651deb
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3651359a836f78c7f962ae571c89d8efc23f574b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71286302"
 ---
 # <a name="general-page-of-integration-services-designers-options"></a>Página geral da opções dos Designers do Integration Services
@@ -59,6 +59,6 @@ ms.locfileid: "71286302"
   
 ## <a name="see-also"></a>Consulte Também  
  [Visão geral de segurança &#40;Integration Services&#41;](../integration-services/security/security-overview-integration-services.md)   
- [Estendendo pacotes com scripts](../integration-services/extending-packages-scripting/extending-packages-with-scripting.md)  
+ [Estender pacotes com scripts](../integration-services/extending-packages-scripting/extending-packages-with-scripting.md)  
   
   

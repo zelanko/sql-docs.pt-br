@@ -15,10 +15,10 @@ ms.assetid: 3426b5eb-6327-4c7f-88aa-37030be69fbf
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 965b6957f9428a2c1d12b307db0a0f2b77ea16e8
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71708732"
 ---
 # <a name="back-up-a-transaction-log"></a>Fazer backup de um log de transações
@@ -42,7 +42,7 @@ As permissões `BACKUP DATABASE` e `BACKUP LOG` necessárias são concedidas por
   
  Os problemas de propriedade e permissão no arquivo físico do dispositivo de backup podem interferir em uma operação de backup. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ser capaz de ler e gravar no dispositivo; a conta sob a qual o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executa deve ter permissões de gravação. No entanto, [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md), que adiciona uma entrada para um dispositivo de backup nas tabelas do sistema, não verifica permissões de acesso a arquivos. Os problemas de permissões no arquivo físico do dispositivo de backup poderão não ser tão claros enquanto você não tentar acessar o [recurso físico](backup-devices-sql-server.md) ao tentar fazer backup ou uma restauração. Portanto, novamente, verifique as permissões antes de começar.
 
-## <a name="using-sql-server-management-studio"></a>Usando o SQL Server Management Studio
+## <a name="using-sql-server-management-studio"></a>Como usar o SQL Server Management Studio.
 
 1. Depois de conectar-se à instância adequada do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], no Pesquisador de Objeto, clique no nome do servidor para expandir a árvore do servidor.  
   
@@ -127,9 +127,9 @@ As permissões `BACKUP DATABASE` e `BACKUP LOG` necessárias são concedidas por
   
    - AES 256  
   
-   - Triple DES  
+   - DES triplo  
 
-## <a name="using-transact-sql"></a>Usando Transact-SQL  
+## <a name="using-transact-sql"></a>Usando o Transact-SQL  
   
 Execute a instrução BACKUP LOG para fazer backup do log de transações, especificando o seguinte:  
   

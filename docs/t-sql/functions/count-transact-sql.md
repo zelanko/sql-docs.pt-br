@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e4cec9afec24b1ef184b9f37795903017c6d3b00
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68026495"
 ---
 # <a name="count-transact-sql"></a>COUNT (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68026495"
 
 Essa função retorna o número de itens encontrados em um grupo. `COUNT` funciona como a função [COUNT_BIG](../../t-sql/functions/count-big-transact-sql.md). Essas funções são diferentes apenas nos tipos de dados de seus valores de retorno. `COUNT` sempre retorna um valor do tipo de dados **int**. `COUNT_BIG` sempre retorna um valor do tipo de dados **bigint**.
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -52,7 +52,7 @@ COUNT ( [ ALL ]  { expression | * } ) OVER ( [ <partition_by_clause> ] )
 **ALL**  
 Aplica a função de agregação a todos os valores. ALL funciona como o padrão.
   
-DISTINCT  
+DISTINTO  
 Especifica que `COUNT` retorna o número de valores não nulos exclusivos.
   
 *expressão*  
@@ -67,7 +67,7 @@ A *partition_by_clause* divide o conjunto de resultados produzido pela cláusula
 ## <a name="return-types"></a>Tipos de retorno
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 COUNT(\*) retorna o número de itens de um grupo. Isso inclui valores NULL e duplicatas.
   
 COUNT(ALL *expression*) avalia a *expression* de cada linha em um grupo e retorna o número de valores não nulos.
@@ -80,7 +80,7 @@ Para retornar valores superiores a 2^31-1, `COUNT` retornará um erro. Nesses ca
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-count-and-distinct"></a>A. Usando COUNT e DISTINCT  
+### <a name="a-using-count-and-distinct"></a>a. Usando COUNT e DISTINCT  
 Este exemplo retorna o número de cargos diferentes que um funcionário [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] pode ter.
   
 ```sql

@@ -15,10 +15,10 @@ ms.assetid: 0fed6334-7a4f-42dc-a611-191fcaa0e443
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 366e307220d08192df04b95201758751cce90112
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297664"
 ---
 # <a name="-concatenate-ssis-expression"></a>+ (Concatenar) (Expressão SSIS)
@@ -43,7 +43,7 @@ character_expression1 + character_expression2
 ## <a name="result-types"></a>Tipos de resultado  
  DT_WSTR  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  A expressão pode usar um ou ambos os tipos de dados DT_STR e DT_WSTR.  
   
  A concatenação dos tipos de dados DT_STR e DT_WSTR retorna um resultado do tipo DT_WSTR. O comprimento da cadeia de caracteres é a soma dos comprimentos das cadeias originais expressas em caracteres.  

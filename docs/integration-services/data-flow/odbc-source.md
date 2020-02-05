@@ -16,10 +16,10 @@ ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 19a234b8c2939730a6c5a815885606dac15d0a0a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298166"
 ---
 # <a name="odbc-source"></a>Origem ODBC
@@ -37,14 +37,14 @@ ms.locfileid: "71298166"
   
  A origem usa um gerenciador de conexões ODBC que especifica o provedor a ser usado.  
   
- Uma origem ODBC inclui as colunas de saída dos dados de origem. Quando colunas de saída são mapeadas no destino ODBC para as colunas de destino, poderão ocorrer erros se nenhuma coluna de saída for mapeada para as colunas de destino. Colunas de tipos diferentes podem ser mapeadas, porém se os dados de saída não forem compatíveis com o destino, um erro ocorrerá em tempo de execução. Dependendo da configuração de comportamento do erro, o erro será ignorado, causará uma falha ou a linha será enviada à saída de erro.  
+ Uma origem ODBC inclui as colunas de saída dos dados de origem. Quando colunas de saída são mapeadas no destino ODBC para as colunas de destino, poderão ocorrer erros se nenhuma coluna de saída for mapeada para as colunas de destino. Colunas de tipos diferentes podem ser mapeadas, porém se os dados de saída não forem compatíveis com o destino, um erro ocorrerá em runtime. Dependendo da configuração de comportamento do erro, o erro será ignorado, causará uma falha ou a linha será enviada à saída de erro.  
   
  A origem ODBC tem uma saída regular e uma saída de erro.  
   
 ## <a name="error-handling"></a>Tratamento de erros  
  A origem ODBC tem uma saída de erro. A saída de erro de componente inclui as colunas de saída seguintes:  
   
--   **Código do Erro**: o número que corresponde ao erro atual. Consulte a documentação do banco de dados com suporte do ODBC que você está usando para obter uma lista de erros. Para obter uma lista dos códigos de erro SSIS, consulte a Referência de código e mensagem de erro SSIS.  
+-   **Código de Erro**: o número que corresponde ao erro atual. Consulte a documentação do banco de dados com suporte do ODBC que você está usando para obter uma lista de erros. Para obter uma lista dos códigos de erro SSIS, consulte a Referência de código e mensagem de erro SSIS.  
   
 -   **Coluna de Erro**: a coluna de origem que causa o erro (para erros de conversão).  
   
@@ -64,7 +64,7 @@ ms.locfileid: "71298166"
   
  Para obter mais informações sobre a propriedade **FetchMethod** , consulte [ODBC Source Custom Properties](../../integration-services/data-flow/odbc-source-custom-properties.md).  
   
-## <a name="parallelism"></a>Parallelism  
+## <a name="parallelism"></a>Paralelismo  
  Não há nenhuma limitação no número de componentes de origem ODBC que podem ser executados em paralelo na mesma tabela ou tabelas diferentes, na mesma máquina ou em máquinas diferentes (diferente de limites de sessão globais normais).  
   
  No entanto, as imitações do provedor ODBC sendo usado podem restringir o número de conexões simultâneas pelo provedor. Essas limitações restringem o número de instâncias paralelas com suporte possível para a fonte ODBC. O desenvolvedor SSIS deve estar consciente das limitações de qualquer provedor ODBC usado e considerá-las ao compilar pacotes SSIS.  
@@ -104,16 +104,16 @@ ms.locfileid: "71298166"
 #### <a name="connection-manager"></a>Gerenciador de conexões  
  Selecione na lista um gerenciador de conexões ODBC existente ou clique em **Novo** para criar uma nova conexão. A conexão pode ser com qualquer banco de dados com suporte ODBC.  
   
-#### <a name="new"></a>Nova  
+#### <a name="new"></a>Novo  
  Clique em **Nova**. É aberta a caixa de diálogo **Configurar Editor do Gerenciador de Conexões ODBC** , na qual você pode criar um novo gerenciador de conexões ODBC.  
   
 #### <a name="data-access-mode"></a>Modo de acesso a dados  
  Especifique o método para selecionar dados da origem. As opções são mostradas na tabela a seguir:  
   
-|Opção|Descrição|  
+|Opção|DESCRIÇÃO|  
 |------------|-----------------|  
 |Nome da tabela|Recupere os dados de uma tabela ou exibição na fonte de dados ODBC. Quando você selecionar esta opção, selecione um valor na lista para o seguinte:|  
-||**Nome da tabela ou da exibição**: selecione uma tabela ou exibição disponível na lista ou digite uma expressão regular para identificar a tabela.|  
+||**Nome da tabela ou exibição**: selecione uma tabela ou exibição disponível na lista ou digite uma expressão regular para identificar a tabela.|  
 ||Essa lista contém apenas as primeiras 1.000 tabelas. Se o banco de dados contiver mais de 1.000 tabelas, você poderá digitar o início do nome de uma tabela ou usar o curinga (*) para inserir qualquer parte do nome para exibir a tabela ou tabelas desejadas.|  
 |Comando SQL|Recupere os dados da fonte de dados ODBC usando uma consulta SQL. Você deve escrever a consulta na sintaxe do banco de dados de origem com o qual está trabalhando. Quando selecionar esta opção, insira uma consulta de uma das seguintes maneiras:|  
 ||Insira o texto da consulta SQL no campo **Texto do comando do SQL** .|  
@@ -165,7 +165,7 @@ ms.locfileid: "71298166"
 #### <a name="inputoutput"></a>Entrada/Saída  
  Exibe o nome da fonte de dados.  
   
-#### <a name="column"></a>coluna  
+#### <a name="column"></a>Coluna  
  Não usado.  
   
 #### <a name="error"></a>Erro  
@@ -174,7 +174,7 @@ ms.locfileid: "71298166"
 #### <a name="truncation"></a>Truncation  
  Selecione como a origem ODBC deve tratar o truncamento em um fluxo: ignorar a falha, redirecionar a linha ou causar falha no componente.  
   
-#### <a name="description"></a>Descrição  
+#### <a name="description"></a>DESCRIÇÃO  
  Não usado.  
   
 #### <a name="set-this-value-to-selected-cells"></a>Definir este valor para células selecionadas  

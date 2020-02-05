@@ -15,10 +15,10 @@ ms.assetid: 1a483aa1-42de-4c88-a4b8-c518def3d496
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6b354f824da86e3bfcc5fb8d6279cb755048046d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68051303"
 ---
 # <a name="guidelines-for-using-xml-data-type-methods"></a>Diretrizes para usar métodos de tipo de dados xml
@@ -71,7 +71,7 @@ XQuery [xmldb_test.xmlcol.query()]: Attribute may not appear outside of an eleme
 
 As etapas de local, os parâmetros de função e os operadores que exigem singletons retornarão um erro se o compilador não puder determinar se um singleton está garantido no momento da execução. Este problema costuma acontecer com dados não digitados. Por exemplo, a pesquisa de um atributo requer um elemento pai de singleton. Um ordinal que selecione um único nó pai é suficiente. A avaliação de uma combinação **node()** -**value()** para extrair valores de atributo pode não exigir a especificação ordinal. Isso é demonstrado no próximo exemplo.
 
-### <a name="example-known-singleton"></a>Exemplo: singleton conhecido
+### <a name="example-known-singleton"></a>Exemplo: Singleton conhecido
 
 Neste exemplo, o método **nodes()** gera uma linha separada para cada elemento `<book>`. O método **value()** , avaliado em um nó `<book>`, extrai o valor de `@genre` e, sendo um atributo, é um singleton.
 
@@ -84,7 +84,7 @@ O esquema de XML é usado para verificação de tipo de XML digitado. Se um nó 
 
 É importante ficar atento à diferença entre `//first-name[1]` e `(//first-name)[1]` para a verificação de tipo. O primeiro retorna uma sequência de nós `<first-name>`, em que cada nó é o nó `<first-name>` na extremidade mais à esquerda entre seus irmãos. O segundo retorna o primeiro nó singleton `<first-name>` em ordem de documento na instância de XML.
 
-### <a name="example-using-value"></a>Exemplo: usando value()
+### <a name="example-using-value"></a>Exemplo: Usando value()
 
 A seguinte consulta em uma coluna XML não tipada resulta em um erro estático e de compilação. Isso ocorre porque **value()** espera um nó singleton como o primeiro argumento e o compilador não pode determinar se apenas um nó de `<last-name>` ocorrerá em tempo de execução:
 

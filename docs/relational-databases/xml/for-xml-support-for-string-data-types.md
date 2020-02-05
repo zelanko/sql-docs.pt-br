@@ -13,10 +13,10 @@ ms.assetid: bf069da8-de1e-44d2-a1fb-ade383076ac1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e0ad8310f5938d757c30732cf6b1a78a9770254e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67943322"
 ---
 # <a name="for-xml-support-for-string-data-types"></a>Suporte a FOR XML para tipos de dados de cadeia de caracteres
@@ -62,6 +62,6 @@ after line feed" />
 -   O caractere de alimentação de linha na terceira linha tem a entidade definida como &#xA.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Suporte a FOR XML para vários tipos de dados SQL Server](../../relational-databases/xml/for-xml-support-for-various-sql-server-data-types.md)  
+ [Suporte a FOR XML para vários tipos de dados de SQL Server](../../relational-databases/xml/for-xml-support-for-various-sql-server-data-types.md)  
   
   

@@ -18,10 +18,10 @@ ms.assetid: 9dcb5f58-35ab-4bb3-86ee-2d29eefba6d3
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 1e50ca09fc8ac7c9c61c17227448deebe8c69bc8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066308"
 ---
 # <a name="strelate-geometry-data-type"></a>STRelate (tipo de dados geometry)
@@ -43,13 +43,13 @@ ms.locfileid: "68066308"
  *intersection_pattern_matrix*  
  É uma cadeia de caracteres do tipo **nchar(9)** que codifica os valores aceitáveis do dispositivo da matriz do padrão DE-9IM entre as duas instâncias de **geometria**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse método sempre retornará nulo se as SRIDs (IDs de referência espacial) das instâncias de **geometry** não forem correspondentes. Esse método vai gerar uma **ArgumentException** se a matriz não estiver bem formada.  
   
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
- Tipo de retorno CLR: **SqlBoolean**  
+ Tipo de retorno do CLR: **SqlBoolean**  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir usa `STRelate()` para testar duas instâncias de **geometria** quanto à separação espacial usando um padrão DE-9IM explícito.  

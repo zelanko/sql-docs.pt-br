@@ -15,10 +15,10 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: 70798b0e967d62b51879cc694c8eb43363d364c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67912953"
 ---
 # <a name="semantic-search-sql-server"></a>Pesquisa semântica (SQL Server)
@@ -101,7 +101,7 @@ SELECT @SourceTitle AS SourceTitle, @MatchedTitle AS MatchedTitle, keyphrase, sc
  [Habilitar a pesquisa semântica em tabelas e colunas](../../relational-databases/search/enable-semantic-search-on-tables-and-columns.md)  
  Descreve como habilitar ou desabilitar a indexação semântica estatística em colunas selecionadas que contêm documentos ou texto.  
   
- [Localizar frases chave em documentos com pesquisa semântica](../../relational-databases/search/find-key-phrases-in-documents-with-semantic-search.md)  
+ [Localizar frases chave em documentos com a pesquisa semântica](../../relational-databases/search/find-key-phrases-in-documents-with-semantic-search.md)  
  Descreve como localizar as frases chave em documentos ou colunas de texto configuradas para indexação semântica estatística.  
   
  [Localizar documentos semelhantes e relacionados com a pesquisa semântica](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md)  
@@ -111,7 +111,7 @@ SELECT @SourceTitle AS SourceTitle, @MatchedTitle AS MatchedTitle, keyphrase, sc
  Descreve o processo de indexação semântica e as tarefas relacionadas a monitoramento e gerenciamento dos índices.  
   
 ##  <a name="relcontent"></a> Related content  
- [Pesquisa de semântica DDL, funções, procedimentos armazenados e exibições](../../relational-databases/search/semantic-search-ddl-functions-stored-procedures-and-views.md)  
+ [DDL, funções, procedimentos armazenados e exibições de pesquisa semântica](../../relational-databases/search/semantic-search-ddl-functions-stored-procedures-and-views.md)  
  Lista as instruções Transact-SQL e os objetos de banco de dados do SQL Server adicionados ou alterados para oferecer suporte à pesquisa semântica estatística.  
   
   

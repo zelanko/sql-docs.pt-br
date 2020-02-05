@@ -13,10 +13,10 @@ ms.assetid: 1d7f042d-508d-4e1a-b83a-86a18e23b85f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 385db632232fabe3639384b4792a621e1023075a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298285"
 ---
 # <a name="expression-task"></a>Tarefa de Expressão
@@ -24,7 +24,7 @@ ms.locfileid: "71298285"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  A Tarefa de Expressão cria e avalia expressões que definem valores de variáveis em tempo de execução, usando o Construtor de Expressões. Quando você edita a tarefa, o [Expression Builder](../../integration-services/expressions/expression-builder.md) é iniciado.  
+  A Tarefa de Expressão cria e avalia expressões que definem valores de variáveis em runtime, usando o Construtor de Expressões. Quando você edita a tarefa, o [Expression Builder](../../integration-services/expressions/expression-builder.md) é iniciado.  
   
 ## <a name="expression-examples"></a>Exemplos de expressões  
  A linguagem de expressão inclui funções e operadores. Para obter exemplos que demonstram como usar as funções e os operadores, consulte as seções de **Exemplos de expressão** nos tópicos de funções e operadores. Os links para os tópicos estão localizados em [Funções &#40;Expressão do SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)e [Operadores &#40;Expressão do SSIS&#41;](../../integration-services/expressions/operators-ssis-expression.md).  

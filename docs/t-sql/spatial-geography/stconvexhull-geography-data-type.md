@@ -15,10 +15,10 @@ ms.assetid: fb435db7-31bb-4243-9d8b-35379184cfb4
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: b3d06da6d6f972c64d4bf196699b55a611b0f992
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042473"
 ---
 # <a name="stconvexhull-geography-data-type"></a>STConvexHull (tipo de dados de geografia)
@@ -36,9 +36,9 @@ ms.locfileid: "68042473"
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Tipo de retorno CLR: **SqlGeography**  
+ Tipo de retorno do CLR: **SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Retorna um objeto `FullGlobe` da instância de **geography** que tem um ângulo de envelope maior que 90 graus.  
   
  Retorna uma coleção de **geography** vazia para uma instância de **geography** vazia.  
@@ -47,7 +47,7 @@ ms.locfileid: "68042473"
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-stconvexhull-on-an-uninitialized-geography-instance"></a>A. Usando STConvexHull() em uma instância de geografia não inicializada  
+### <a name="a-using-stconvexhull-on-an-uninitialized-geography-instance"></a>a. Usando STConvexHull() em uma instância de geografia não inicializada  
  O exemplo a seguir usa `STConvexHull()` em uma instância de **geography** não inicializada.  
   
 ```

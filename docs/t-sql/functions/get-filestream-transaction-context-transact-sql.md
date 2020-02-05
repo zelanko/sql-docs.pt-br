@@ -18,18 +18,18 @@ ms.assetid: 459e6b79-4420-41e6-85bf-89d90f43b4f1
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 7d284cb8c39307a6ee2568bd8e4fa5fa0df2c3e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67940102"
 ---
-# <a name="getfilestreamtransactioncontext-transact-sql"></a>GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL)
+# <a name="get_filestream_transaction_context-transact-sql"></a>GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retorna um token que representa o contexto da transação atual de uma sessão. O token é usado por um aplicativo para associar operações de fluxo contínuo do sistema de arquivos de FILESTREAM à transação. Para obter uma lista de tópicos de FILESTREAM, confira [Dados de blob &#40;objeto binário grande&#41; &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,7 +44,7 @@ GET_FILESTREAM_TRANSACTION_CONTEXT ()
 ## <a name="return-value"></a>Valor retornado  
  NULL será retornado se a transação não tiver sido iniciada, ou tiver sido cancelada ou confirmada.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  A transação deve ser explícita. Use BEGIN TRANSACTION seguido por COMMIT TRANSACTION ou ROLLBACK TRANSACTION.  
   
  Quando você chama GET_FILESTREAM_TRANSACTION_CONTEXT, o chamador recebe acesso de sistema de arquivos à transação durante a sua duração. Para permitir que outro usuário acesse a transação pelo sistema de arquivos, use EXECUTE AS para executar GET_FILESTREAM_TRANSACTION_CONTEXT como outro usuário.  

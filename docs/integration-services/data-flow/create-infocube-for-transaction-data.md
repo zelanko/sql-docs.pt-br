@@ -11,10 +11,10 @@ ms.assetid: 673cea01-a260-4fce-a1a0-f73839289805
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 07e92734aebb13d04d715a727c8b2bbe2e0dc785
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293266"
 ---
 # <a name="create-infocube-for-transaction-data"></a>Criar InfoCube para os dados da transação
@@ -46,7 +46,7 @@ ms.locfileid: "71293266"
  **Descrição longa**  
  Digite uma descrição para o novo InfoCube.  
   
- **Salvar e ativar**  
+ **Salvar e Ativar**  
  Salvar e ativar o novo InfoCube.  
   
 ## <a name="infocube-transfer-structure-options"></a>Opções da estrutura de transferência do InfoCube  
@@ -64,7 +64,7 @@ ms.locfileid: "71293266"
  **Tipo**  
  Exibe o tipo do InfoObject associado à coluna de fluxo de dados. A tabela a seguir lista os valores possíveis do tipo.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |CHA|Características|  
 |UNI|Unidades|  
@@ -72,7 +72,7 @@ ms.locfileid: "71293266"
 |TIM|Características de hora|  
   
  **Iobject - Pesquisa**  
- Associar um InfoObject existente à coluna de fluxo de dados para a linha atual. Para fazer essa associação, clique em **Pesquisar**e use a caixa de diálogo **Pesquisar InfoObject** para selecionar o InfoObject existente. Para obter mais informações sobre essa caixa de diálogo, consulte [Look Up InfoObject](../../integration-services/data-flow/look-up-infoobject.md).  
+ Associar um InfoObject existente à coluna de fluxo de dados para a linha atual. Para fazer essa associação, clique em **Pesquisar** e use a caixa de diálogo **Pesquisar InfoObject** para selecionar o InfoObject existente. Para obter mais informações sobre essa caixa de diálogo, consulte [Look Up InfoObject](../../integration-services/data-flow/look-up-infoobject.md).  
   
  Depois de selecionar um InfoObject existente, o componente preenche as colunas **InfoObject** e **Tipo** com os valores selecionados.  
   
@@ -85,6 +85,6 @@ ms.locfileid: "71293266"
  Remover a associação entre o InfoObject e a coluna de fluxo de dados para a linha atual. Para remover essa associação, clique em **Remover**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Ajuda F1 do Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
+ [Ajuda F1 do Microsoft Connector para SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

@@ -20,18 +20,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d5954a1b090be1749c07c09a83d4c2cfbf441f6a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68071378"
 ---
-# <a name="firstvalue-transact-sql"></a>FIRST_VALUE (Transact-SQL)
+# <a name="first_value-transact-sql"></a>FIRST_VALUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   Retorna o primeiro valor em um conjunto ordenado de valores no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -56,7 +56,7 @@ FIRST_VALUE ( [scalar_expression ] )
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-firstvalue-over-a-query-result-set"></a>A. Usando FIRST_VALUE sobre um conjunto de resultados da consulta  
+### <a name="a-using-first_value-over-a-query-result-set"></a>a. Usando FIRST_VALUE sobre um conjunto de resultados da consulta  
  O exemplo seguinte usa FIRST_VALUE para retornar o nome do produto que é o menos caro em uma determinada categoria de produto.  
   
 ```  
@@ -88,7 +88,7 @@ HL Mountain Tire        35.00                 Patch Kit/8 Patches
   
 ```  
   
-### <a name="b-using-firstvalue-over-partitions"></a>B. Usando FIRST_VALUE sobre partições  
+### <a name="b-using-first_value-over-partitions"></a>B. Usando FIRST_VALUE sobre partições  
  O exemplo a seguir usa FIRST_VALUE para retornar o funcionário com o menor número de horas de férias comparado a outros funcionários com o mesmo cargo. A cláusula PARTITION BY particiona os funcionários por cargo e a função FIRST_VALUE é aplicada independentemente a cada partição. A cláusula ORDER BY especificada na cláusula OVER determina a ordem lógica na qual a função FIRST_VALUE é aplicada às linhas em cada partição. A cláusula ROWS UNBOUNDED PRECEDING especifica que o ponto de partida da janela é a primeira linha de cada partição.  
   
 ```  

@@ -22,10 +22,10 @@ ms.assetid: 1e940cd1-c5f8-4527-b678-e89ba5dc398a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e12088669f56dce1b6dee69202284f3cc044e274
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71286954"
 ---
 # <a name="developing-a-user-interface-for-a-custom-task"></a>Desenvolvendo uma interface do usuário para uma tarefa personalizada
@@ -37,7 +37,7 @@ ms.locfileid: "71286954"
   
  O desenvolvimento de uma interface de usuário personalizada para uma tarefa envolve o uso de duas classes importantes. A tabela a seguir descreve essas classes.  
   
-|Classe|Descrição|  
+|Classe|DESCRIÇÃO|  
 |-----------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>|Um atributo que identifica uma tarefa gerenciada e fornece informações em tempo de design através de suas propriedades para controlar como o Designer [!INCLUDE[ssIS](../../../includes/ssis-md.md)] exibe e interage com o objeto.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI>|Uma interface usada pela tarefa para associar a tarefa com sua interface de usuário personalizada.|  
@@ -53,7 +53,7 @@ ms.locfileid: "71286954"
   
  A tabela a seguir descreve as propriedades do atributo <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>.  
   
-|Propriedade|Descrição|  
+|Propriedade|DESCRIÇÃO|  
 |--------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute.DisplayName%2A>|Exibe o nome da tarefa na caixa de ferramentas Fluxo de Controle.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute.Description%2A>|A descrição da tarefa (herdada do <xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute>). Essa propriedade é mostrada em Dicas de Ferramenta.|  

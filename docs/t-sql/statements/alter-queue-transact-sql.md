@@ -24,10 +24,10 @@ ms.assetid: d54aa325-8761-4cd4-8da7-acf33df12296
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 253828eba55e919d7363bb56896560de1de38b25
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982049"
 ---
 # <a name="alter-queue-transact-sql"></a>ALTER QUEUE (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "73982049"
 
   Altera as propriedades de uma fila.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -157,7 +157,7 @@ Ao contrário de REORGANIZE em tabelas de usuário, REORGANIZE em uma fila sempr
   
  A fila que tiver a manipulação de mensagens suspeitas definida como OFF, não será desabilitada após cinco reversões consecutivas de transações. Isso permite que um sistema personalizado de manipulação de mensagens suspeitas seja definido pelo aplicativo.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Quando uma fila com um procedimento armazenado de ativação especificado tiver mensagens, a alteração do status de ativação de OFF para ON ativa imediatamente o procedimento armazenado de ativação. A alteração do status de ativação de ON para OFF faz o Broker parar de ativar instâncias do procedimento armazenado, mas não interrompe as instâncias do procedimento armazenado em execução atualmente.  
   
  A alteração de uma fila para adicionar um procedimento armazenado de ativação não altera o status de ativação da fila. A alteração do procedimento armazenado de ativação para a fila não afeta as instâncias do procedimento armazenado de ativação em execução atualmente.  
@@ -173,7 +173,7 @@ Ao contrário de REORGANIZE em tabelas de usuário, REORGANIZE em uma fila sempr
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-making-a-queue-unavailable"></a>A. Tornando uma fila não disponível  
+### <a name="a-making-a-queue-unavailable"></a>a. Tornando uma fila não disponível  
  O exemplo a seguir torna a fila `ExpenseQueue` não disponível para receber mensagens.  
   
 ```  

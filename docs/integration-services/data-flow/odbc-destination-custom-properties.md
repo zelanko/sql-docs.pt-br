@@ -11,10 +11,10 @@ ms.assetid: 07508c40-6c08-4359-96cd-8ff17671244d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: efeed5fe9390a9e498e225138522bdc1769a22d6
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292226"
 ---
 # <a name="odbc-destination-custom-properties"></a>Propriedades personalizadas de destino ODBC
@@ -24,7 +24,7 @@ ms.locfileid: "71292226"
 
   A tabela a seguir descreve as propriedades personalizadas do destino ODBC. Todas as propriedades podem ser definidas a partir de expressões de propriedades SSIS.  
   
-|Nome da propriedade|Tipo de Dados|Descrição|  
+|Nome da propriedade|Tipo de Dados|DESCRIÇÃO|  
 |-------------------|---------------|-----------------|  
 |Conexão|Conexão ODBC|Uma conexão ODBC para acessar o banco de dados de destino.|  
 |BatchSize|Integer|O tamanho do lote para carregamento em massa. Esse é o número de linhas carregado como um lote. Isso só será válido se houver suporte para a associação de parâmetro row-wise. Se não houver suporte para a associação de parâmetro row-wise, o tamanho do lote será 1.|  
@@ -33,7 +33,7 @@ ms.locfileid: "71292226"
 |DefaultCodePage|Integer|A página de código a ser usada para colunas de cadeia de caracteres.<br /><br /> **Observação**: essa propriedade não está disponível no **Editor de Destinos ODBC**, mas pode ser definida no **Editor Avançado**.|  
 |InsertMethod|Inteiro (enumeração)|O método usado para inserir os dados. Os valores possíveis são Linha a linha (0) e Lote (1). O valor padrão é Lote (1).<br /><br /> Para obter mais informações sobre essas opções, confira "Opções de carregamento" em [ODBC Destination](../../integration-services/data-flow/odbc-destination.md).|  
 |StatementTimeout|Integer|O número de segundos a aguardar a execução de uma instrução SQL antes de retornar com um erro para o aplicativo. O valor padrão é 120.|  
-|TableName|Cadeia de caracteres|O nome da tabela de destino onde os dados estão sendo inseridos.|  
+|TableName|String|O nome da tabela de destino onde os dados estão sendo inseridos.|  
 |TransactionSize|Integer|O número de inserções em uma única transação. O valor padrão é 0, que significa que o destino ODBC funciona no modo de confirmação automático.<br /><br /> Como o gerenciador de conexões ODBC não oferece suporte a transações distribuídas, é possível definir essa propriedade com um valor diferente de 0. No entanto, se a propriedade **RetainSameConnection** do gerenciador de conexões for definida como **true** , essa propriedade deverá ser definida como 0.<br /><br /> **Observação**: essa propriedade não está disponível no **Editor de Destinos ODBC**, mas pode ser definida no **Editor Avançado**.|  
 |LobChunkSize|Integer|A alocação de tamanho de parte para colunas LOB.|  
   

@@ -31,10 +31,10 @@ ms.assetid: 9b9caa3d-e7d0-42e1-b60b-a5572142186c
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: e3d7c9b661a69f4a575a18aae03f9eb5e601b69b
-ms.sourcegitcommit: ba44730f5cc33295ae2ed1f281186dd266bad4ef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74191082"
 ---
 # <a name="select-examples-transact-sql"></a>Exemplos de SELECT (Transact-SQL)

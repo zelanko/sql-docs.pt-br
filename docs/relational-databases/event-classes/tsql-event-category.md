@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: af5cd09c9c00c0b250f1b51c72ce642be01dc9a5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67996082"
 ---
 # <a name="tsql-event-category"></a>Categoria de evento TSQL
@@ -27,7 +27,7 @@ ms.locfileid: "67996082"
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|Descrição|  
+|Tópico|DESCRIÇÃO|  
 |-----------|-----------------|  
 |[Classe de evento Exec Prepared SQL](../../relational-databases/event-classes/exec-prepared-sql-event-class.md)|Indica que SqlClient, ODBC, OLE DB ou DB-Library executou uma ou mais instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] preparadas.|  
 |[Classe de evento Prepare SQL](../../relational-databases/event-classes/prepare-sql-event-class.md)|Indica que SqlClient, ODBC, OLE DB ou DB-Library preparou uma ou mais instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] para uso.|  

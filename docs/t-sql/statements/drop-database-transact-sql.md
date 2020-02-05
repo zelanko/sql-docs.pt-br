@@ -26,10 +26,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 43a0382495c04a3fa34e00cb4e85d0b7ab04336e
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982197"
 ---
 # <a name="drop-database-transact-sql"></a>DROP DATABASE (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "73982197"
 
 Remove um ou mais bancos de dados de usuário ou instantâneos do banco de dados de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -77,7 +77,7 @@ Quando um banco de dados é removido, o [banco de dados mestre](../../relational
 O descarte de um banco de dados exclui o banco de dados de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e exclui os arquivos de disco físicos usados pelo banco de dados. Se o banco de dados ou qualquer um de seus arquivos estiverem offline quando forem cancelados, os arquivos em disco não serão excluídos. Esses arquivos podem ser excluídos manualmente usando o Windows Explorer. Para remover um banco de dados do servidor atual sem excluir os arquivos do sistema de arquivos, use [sp_detach_db](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md).
 
 > [!WARNING]
-> A remoção de um banco de dados que tem backups de FILE_SNAPSHOT associados a ele terá êxito, mas os arquivos de banco de dados que têm instantâneos associados não serão excluídos, para evitar a anulação dos backups que referenciam esses arquivos de banco de dados. O arquivo será truncado, mas não será fisicamente excluído para manter os backups de FILE_SNAPSHOT intactos. Para obter mais informações, veja [Backup e restauração do SQL Server com o Serviço de Armazenamento de Blobs do Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] à [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658).
+> A remoção de um banco de dados que tem backups de FILE_SNAPSHOT associados a ele terá êxito, mas os arquivos de banco de dados que têm instantâneos associados não serão excluídos, para evitar a anulação dos backups que referenciam esses arquivos de banco de dados. O arquivo será truncado, mas não será fisicamente excluído para manter os backups de FILE_SNAPSHOT intactos. Para obter mais informações, consulte [Backup e restauração do SQL Server com o serviço de Armazenamento de Blobs do Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] à [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658).
 
 ### [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
@@ -136,7 +136,7 @@ Exige a permissão **CONTROL** no banco de dados, a permissão **ALTER ANY DATAB
 
 ## <a name="examples"></a>Exemplos
 
-### <a name="a-dropping-a-single-database"></a>A. Removendo um único banco de dados
+### <a name="a-dropping-a-single-database"></a>a. Removendo um único banco de dados
 
 O exemplo a seguir remove o nome do banco de dados `Sales`:
 

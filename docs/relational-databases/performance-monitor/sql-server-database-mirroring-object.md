@@ -16,17 +16,17 @@ ms.assetid: a27b51ee-7637-4525-9424-bcc16947dc13
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 639d661dd9a7196119bbb34f11f0ed5a9161a978
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67986682"
 ---
 # <a name="sql-server-database-mirroring-object"></a>SQL Server, objeto Database Mirroring
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   O objeto de desempenho **SQLServer:Database Mirroring** contém contadores de desempenho que relatam informações sobre o espelhamento de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . A tabela a seguir lista os contadores contidos nesse objeto.  
   
-|Nome|Descrição|  
+|Nome|DESCRIÇÃO|  
 |----------|-----------------|  
 |**Bytes Recebidos/s**|Número de bytes recebidos por segundo.|  
 |**Bytes Enviados/s**|Número de bytes enviados por segundo.|  
@@ -53,7 +53,7 @@ ms.locfileid: "67986682"
 > [!NOTE]  
 >  Em cada parceiro, alguns dos contadores mostram um valor zero dependendo de qual função o parceiro desempenha atualmente.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Os contadores de desempenho permitem que você monitore o desempenho de espelhamento de banco de dados. Por exemplo, você pode examinar o contador **Atraso na Transação** para verificar se o espelhamento de banco de dados está afetando o desempenho do servidor principal, você pode examinar os contadores **Fila de Restauração** e **Fila de Envio de Log** para verificar como o banco de dados espelho está se comportando em relação ao banco de dados principal. Você pode examinar o contador **Bytes de Log Enviados/s** para monitorar a quantidade de logs enviados por segundo.  
   
 ## <a name="see-also"></a>Consulte Também  

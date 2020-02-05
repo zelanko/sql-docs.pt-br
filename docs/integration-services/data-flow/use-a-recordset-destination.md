@@ -13,10 +13,10 @@ ms.assetid: a7b143dc-8008-404f-83b0-b45ffbca6029
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 94c1d149dd152a9cf83e5464cde2c56ec9b42af7
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71290985"
 ---
 # <a name="use-a-recordset-destination"></a>Usar um destino do conjunto de registros
@@ -26,7 +26,7 @@ ms.locfileid: "71290985"
 
   O destino do Conjunto de Registros não salva dados em uma fonte de dados externa. Em vez disso, o destino do Conjunto de Registros salva dados na memória em um conjunto de registros armazenado em uma variável de pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] do tipo de dados **Objeto** . Depois que o destino do Conjunto de Registros salva os dados, geralmente você usa um contêiner Loop Foreach com o enumerador ADO Foreach para processar uma linha do conjunto de registros de cada vez. O enumerador ADO Foreach salva o valor de cada coluna da linha atual em uma variável de pacote separada. Em seguida, as tarefas que você configura dentro do contêiner Loop Foreach leem esses valores das variáveis e executam alguma ação com eles.  
   
- Você pode usar o destino do Conjunto de Registros em muitos cenários diferentes. Veja alguns exemplos:  
+ Você pode usar o destino do Conjunto de Registros em muitos cenários diferentes. Estes são alguns exemplos:  
   
 -   É possível usar uma tarefa Enviar Email e a linguagem da expressão do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para enviar uma mensagem de email personalizada para cada linha no conjunto de registros.  
   

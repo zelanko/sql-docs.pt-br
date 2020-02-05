@@ -1,5 +1,5 @@
 ---
-title: Fornecer uma consulta de OData Source em tempo de execução | Microsoft Docs
+title: Fornecer uma consulta de OData Source em runtime | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,22 +11,22 @@ ms.assetid: bcbba7f4-6e5d-46e6-a73a-3f17d3ff376a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: aa8a5454fb85c4a6bcfe53088549107f09b9772f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298207"
 ---
-# <a name="provide-an-odata-source-query-at-runtime"></a>Fornecer uma consulta de OData Source em tempo de execução
+# <a name="provide-an-odata-source-query-at-runtime"></a>Fornecer uma consulta de OData Source em runtime
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
- Você pode alterar a consulta de OData Source em tempo de execução adicionando uma *expressão* à propriedade **[Origem OData].[Consulta]** da Tarefa de Fluxo de Dados.  
+ Você pode alterar a consulta de OData Source em runtime adicionando uma *expressão* à propriedade **[Origem OData].[Consulta]** da Tarefa de Fluxo de Dados.  
   
  As colunas retornadas precisarão ser as mesmas colunas retornadas em tempo de design, caso contrário, você obterá um erro quando o pacote for executado. Certifique-se de especificar as mesmas colunas (na mesma ordem) ao usar a opção de consulta de $select. Uma alternativa mais segura para usar a opção de $select é desmarcar as colunas que você não deseja diretamente na interface do usuário do componente de origem.  
   
- Há algumas maneiras diferentes de definir dinamicamente o valor da consulta em tempo de execução. A seguir estão alguns dos métodos mais comuns.  
+ Há algumas maneiras diferentes de definir dinamicamente o valor da consulta em runtime. A seguir estão alguns dos métodos mais comuns.  
   
 ## <a name="provide-the-query-as-a-parameter"></a>Fornecer a consulta como um parâmetro  
  O procedimento a seguir mostra como expor a consulta usada por um componente de OData Source como um parâmetro do pacote.  
@@ -50,7 +50,7 @@ ms.locfileid: "71298207"
 5.  Clique em **OK** para fechar a caixa de diálogo.  
   
 ## <a name="provide-the-query-with-an-expression"></a>Forneça a consulta com uma expressão
- Este método será útil quando você desejar construir dinamicamente a cadeia de consulta em tempo de execução.
+ Este método será útil quando você desejar construir dinamicamente a cadeia de consulta em runtime.
   
 1.  Selecione a **Tarefa de Fluxo de Dados** que contém o **OData Source**.  
   

@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 481faddf2a0a12bcc44a8b4e677101afa68c37a4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67904383"
 ---
 # <a name="eomonth-transact-sql"></a>EOMONTH (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "67904383"
 
 Essa função retorna o último dia do mês que contém uma data especificada com um deslocamento opcional.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -50,12 +50,12 @@ Se o argumento *month_to_add* tiver um valor, `EOMONTH` adicionará o número de
 ## <a name="return-type"></a>Tipo de retorno  
  **date**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 A função `EOMONTH` pode ser remota para servidores [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posteriores. Ela não pode ser remota para servidores com versão anterior a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-eomonth-with-explicit-datetime-type"></a>A. EOMONTH com tipo datetime explícito  
+### <a name="a-eomonth-with-explicit-datetime-type"></a>a. EOMONTH com tipo datetime explícito  
   
 ```  
 DECLARE @date DATETIME = '12/1/2011';  
@@ -90,7 +90,7 @@ Result
 (1 row(s) affected)  
 ```  
   
-### <a name="c-eomonth-with-and-without-the-monthtoadd-parameter"></a>C. EOMONTH com e sem o parâmetro month_to_add  
+### <a name="c-eomonth-with-and-without-the-month_to_add-parameter"></a>C. EOMONTH com e sem o parâmetro month_to_add  
   
 Observação: os valores mostrados nesses conjuntos de resultados refletem uma data de execução entre e incluindo
         

@@ -11,10 +11,10 @@ ms.assetid: 01a9e3c1-2a5f-4b98-a424-0ffc15d312cf
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 045444c2141027854e54480483f09ab8eb9a04b6
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75244380"
 ---
 # <a name="generate-and-analyze-the-clusterlog-for-an-always-on-availability-group"></a>Gerar e analisar o CLUSTER.LOG de um grupo de disponibilidade Always On
@@ -59,9 +59,9 @@ Get-ClusterLog -TimeSpan 15 -Destination .
   
 |Identificador|Fonte|Exemplo do CLUSTER.LOG|  
 |----------------|------------|------------------------------|  
-|Mensagens prefixadas com `[RES]` e `[hadrag]`|hadrres.dll (DLL de recurso do Always On)|00002cc4.00001264::2011/08/05-13:47:42.543 INFO [RES] Grupo de Disponibilidade do SQL Server \<ag>: `[hadrag]` Solicitação offline.<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.558 ERR [RES] Grupo de Disponibilidade do SQL Server \<ag>: `[hadrag]` Thread de Concessão encerrado<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.605 INFO [RES] Grupo de Disponibilidade do SQL Server \<ag>: `[hadrag]` Instrução SQL livre<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.902 INFO [RES] Grupo de Disponibilidade do SQL Server \<ag>: `[hadrag]` Desconectar do SQL Server|  
+|Mensagens prefixadas com `[RES]` e `[hadrag]`|hadrres.dll (DLL de recurso do Always On)|00002cc4.00001264::2011/08/05-13:47:42.543 INFO  [RES] Grupo de disponibilidade SQL Server \<ag>: `[hadrag]` Solicitação offline.<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.558 ERR   [RES] Grupo de disponibilidade SQL Server \<ag>: `[hadrag]` Thread de concessão encerrado<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.605 INFO  [RES] Grupo de disponibilidade SQL Server \<ag>: `[hadrag]` Instrução SQL livre<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.902 INFO  [RES] Grupo de disponibilidade SQL Server \<ag>: `[hadrag]` Desconectar do SQL Server|  
 |Mensagens prefixadas com `[RHS]`|RHS.EXE (Subsistema de Hospedagem de Recursos, processo de host do hadrres.dll)|00000c40.00000a34::2011/08/10-18:42:29.498 INFO  [RHS] O recurso ag ficou offline. RHS está prestes a relatar o status do recurso para o RCM.|  
-|Mensagens prefixadas com `[RCM]`|Monitor de controle de recursos (Serviço de cluster)|000011d0.00000f80::2011/08/05-13:47:42.480 INFO [RCM] rcm::RcmGroup::Move: Colocando o grupo 'ag' offline primeiro...<br /><br /> 000011d0.00000f80::2011/08/05-13:47:42.496 INFO  [RCM] TransitionToState(ag) Online-->OfflineCallIssued.|  
+|Mensagens prefixadas com `[RCM]`|Monitor de controle de recursos (Serviço de cluster)|000011d0.00000f80::2011/08/05-13:47:42.480 INFO  [RCM] rcm::RcmGroup::Move: Colocar primeiro o grupo 'ag' offline...<br /><br /> 000011d0.00000f80::2011/08/05-13:47:42.496 INFO  [RCM] TransitionToState(ag) Online-->OfflineCallIssued.|  
 |RcmApi/ClusAPI|Uma chamada à API, o que significa basicamente que o SQL Server está solicitando a ação|000011d0.00000f80::2011/08/05-13:47:42.465 INFO  [RCM] rcm::RcmApi::MoveGroup: (ag, 2)|  
   
 ## <a name="debug-always-on-resource-dll-in-isolation"></a>Depurar DLL de recurso do Always On em isolamento  
@@ -69,7 +69,7 @@ Get-ClusterLog -TimeSpan 15 -Destination .
   
  Para isolar um grupo de disponibilidade das outras DLLs de recurso de cluster, incluindo outros grupos de disponibilidade, faça o seguinte para executar o hadrres.dll dentro de um processo separado do rhs.exe:  
   
-1.  Abra o **Editor do Registro** e navegue para a seguinte chave: HKEY_LOCAL_MACHINE\Cluster\Resources. Esta chave contém as chaves de todos os recursos, cada um com um GUID diferente.  
+1.  Abra o **Editor do Registro** e navegue até a seguinte chave: HKEY_LOCAL_MACHINE\Cluster\Resources. Esta chave contém as chaves de todos os recursos, cada um com um GUID diferente.  
   
 2.  Localizar a chave do recurso que contém um valor **Name** que corresponde ao nome do grupo de disponibilidade.  
   

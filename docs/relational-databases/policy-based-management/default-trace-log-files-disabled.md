@@ -13,10 +13,10 @@ ms.assetid: c27761e6-75ed-4ee4-a236-0cbc42e500a1
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 1407f55e2edab15768fb10288b78dd59ff93ddd1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67940493"
 ---
 # <a name="default-trace-log-files-disabled"></a>Arquivos de log de rastreamento padrão desabilitados
@@ -30,6 +30,6 @@ ms.locfileid: "67940493"
  [Opções de configuração do servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Monitorar e impor práticas recomendadas usando o Gerenciamento Baseado em Políticas](../../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
+ [Monitorar e impor melhores práticas usando o gerenciamento baseado em políticas](../../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
   
   

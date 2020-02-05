@@ -12,22 +12,22 @@ ms.assetid: 6fe254b4-2926-446f-8b20-0f1d921a4615
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e8fddb4dbc6ef34a4c389ebd1dd164056a1c6f9a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68058175"
 ---
-# <a name="mssqlserver5256"></a>MSSQLSERVER_5256
+# <a name="mssqlserver_5256"></a>MSSQLSERVER_5256
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|5256|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|DBCC4_INCORRECT_PAGE_ID_IN_HEADER_NO_METADATA|  
 |Texto da mensagem|Erro de tabela: ID de unidade de alocação A_ID, página P_ID1 contém uma ID de página incorreta no cabeçalho da página. PageId no cabeçalho da página = P_ID2.|  

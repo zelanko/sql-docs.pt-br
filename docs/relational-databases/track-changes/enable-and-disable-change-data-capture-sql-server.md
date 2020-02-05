@@ -16,10 +16,10 @@ ms.assetid: b741894f-d267-4b10-adfe-cbc14aa6caeb
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 82ff8e58891d07ccbecfef119c05c0cef1bbb06e
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095266"
 ---
 # <a name="enable-and-disable-change-data-capture-sql-server"></a>Habilitar e desabilitar o Change Data Capture (SQL Server)
@@ -27,7 +27,7 @@ ms.locfileid: "74095266"
   Este tópico descreve como habilitar e desabilitar o Change data Capture para um banco de dados e uma tabela.  
   
 ## <a name="enable-change-data-capture-for-a-database"></a>Habilitar o Change Data Capture para um banco de dados  
- Para que uma instância de captura possa ser criada para tabelas individuais, um membro da função fixa de servidor **sysadmin** deve primeiro habilitar o banco de dados para a captura de dados de alteração. Isso é feito usando o procedimento armazenado [sys.sp_cdc_enable_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md) no contexto de banco de dados. Para determinar se um banco de dados está habilitado, consulte a coluna **is_cdc_enabled** na exibição de catálogo **sys.databases**.  
+ Para que uma instância de captura possa ser criada para tabelas individuais, um membro da função fixa de servidor **sysadmin** deve primeiro habilitar o banco de dados para a captura de dados de alteração. Isso é feito usando o procedimento armazenado [sys.sp_cdc_enable_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md) no contexto de banco de dados. Para determinar se um banco de dados está habilitado, consulte a coluna **is_cdc_enabled** na exibição de catálogo **sys.databases** .  
   
  Quando um banco de dados está habilitado para a captura de dados de alteração, o esquema **cdc** , usuário **cdc** , as tabelas de metadados e outros objetos de sistema são criados para o banco de dados. O esquema **cdc** contém as tabelas de metadados da captura de dados de alteração e, depois que as tabelas de origem são habilitadas para a captura de dados de alteração, as tabelas de alterações individuais atuam como repositório para os dados de alteração. O esquema **cdc** também contém funções de sistema associadas usadas para consultar dados de alteração.  
   

@@ -13,10 +13,10 @@ ms.assetid: a4b0f23b-bdc8-425f-b0b9-e0621894f47e
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d6d95dc22b557b24cb2ab3a5b4515a0adfa8c605
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095661"
 ---
 # <a name="tutorial-signing-stored-procedures-with-a-certificate"></a>Tutorial: Assinando procedimentos armazenados com um certificado
@@ -37,7 +37,7 @@ Cada bloco de código neste exemplo é explicado em linha. Para copiar o exemplo
 ## <a name="prerequisites"></a>Prerequisites
 Para concluir este tutorial, você precisará do SQL Server Management Studio, bem como acesso a um servidor que executa o SQL Server e um banco de dados do AdventureWorks.
 
-- Instalar o [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Instale o [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 - Instalar o [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 - Baixe o [Bancos de dados de exemplo do AdventureWorks2017](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).
 
@@ -74,7 +74,7 @@ GO
 ```  
   
 ## <a name="3-create-and-sign-a-stored-procedure-using-the-certificate"></a>3. Criar e assinar um procedimento armazenado usando o certificado  
-Use o código a seguir para criar um procedimento armazenado que seleciona dados da tabela `Vendor` no esquema do banco de dados `Purchasing`, restringindo o acesso apenas a empresas que tenham 1 como classificação de crédito. Observe que a primeira seção do procedimento armazenado exibe o contexto da conta do usuário que executa o procedimento armazenado apenas para demonstração dos conceitos. Não é exigido atender os requisitos.  
+Use o código a seguir para criar um procedimento armazenado que seleciona dados da tabela `Vendor` no esquema do banco de dados `Purchasing` , restringindo o acesso apenas a empresas que tenham 1 como classificação de crédito. Observe que a primeira seção do procedimento armazenado exibe o contexto da conta do usuário que executa o procedimento armazenado apenas para demonstração dos conceitos. Não é exigido atender os requisitos.  
   
 ```sql  
 CREATE PROCEDURE TestCreditRatingSP  
@@ -138,7 +138,7 @@ GO
 Para obter mais informações sobre como conceder permissões a objetos, consulte [GRANT &#40;Transact-SQL&#41;](../t-sql/statements/grant-transact-sql.md).  
   
 ## <a name="6-display-the-access-context"></a>6. Exibir o contexto de acesso  
-Para exibir os direitos associados ao acesso de procedimento armazenado, execute o código a seguir para conceder os direitos de execução do procedimento armazenado ao usuário `TestCreditRatingUser`.  
+Para exibir os direitos associados ao acesso de procedimento armazenado, execute o código a seguir para conceder os direitos de execução do procedimento armazenado ao usuário `TestCreditRatingUser` .  
   
 ```sql  
 GRANT EXECUTE   

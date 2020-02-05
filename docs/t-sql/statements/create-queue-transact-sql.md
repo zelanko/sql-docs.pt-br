@@ -26,10 +26,10 @@ ms.assetid: fce80faf-2bdc-475d-8ca1-31438ed41fb0
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: b1446d4b43524a1e670084812279284d86eb1b0b
-ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71326091"
 ---
 # <a name="create-queue-transact-sql"></a>CREATE QUEUE (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "71326091"
 
 Cria uma fila nova em um banco de dados. Enfileira mensagens de repositório. Quando uma mensagem chega para um serviço, o [!INCLUDE[ssSB](../../includes/sssb-md.md)] coloca a mensagem na fila associada ao serviço.
 
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -110,7 +110,7 @@ A fila que tiver a manipulação de mensagens suspeitas definida como OFF, não 
 
 ON *filegroup |* [**DEFAULT**] Especifica o grupo de arquivos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no qual criar esta fila. Use o parâmetro *filegroup* para identificar um grupo de arquivos ou o identificador DEFAULT para usar o grupo de arquivos padrão para o banco de dados do Service Broker. No contexto desta cláusula, DEFAULT não é uma palavra-chave e deve ser delimitado como um identificador. Quando nenhum grupo de arquivos for especificado, a fila usará o grupo de arquivos padrão para o banco de dados.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Comentários
 
 Uma fila pode ser o destino de uma instrução SELECT. Entretanto, os conteúdos de uma fila só podem ser modificados usando instruções que operam em conversas do [!INCLUDE[ssSB](../../includes/sssb-md.md)], tais como SEND, RECEIVE e END CONVERSATION. Uma fila não pode ser o destino de uma instrução INSERT, UPDATE, DELETE ou TRUNCATE.
 
@@ -128,7 +128,7 @@ Uma fila é um objeto possuído por esquema. As filas aparecem na exibição do 
 
 A tabela a seguir lista as colunas em uma fila.
 
-|Nome da coluna|Tipo de dados|Descrição|
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|
 |-----------------|---------------|-----------------|
 |status|**tinyint**|Status da mensagem. A instrução RECEIVE retorna todas as mensagens que têm um status igual a **1**. Se a retenção de mensagens estiver ativada, o status será definido como 0. Se a retenção de mensagens estiver desativada, a mensagem será excluída da fila. As mensagens na fila podem conter um dos seguintes valores:<br /><br /> **0** = Mensagem recebida retida<br /><br /> **1** = Pronta para receber<br /><br /> **2** = Ainda não concluída<br /><br /> **3** = Mensagem enviada retida|
 |priority|**tinyint**|O nível de prioridade atribuído a essa mensagem.|
@@ -156,7 +156,7 @@ A permissão `RECEIVE` para uma fila assume como padrão o proprietário da fila
 
 ## <a name="examples"></a>Exemplos
 
-### <a name="a-creating-a-queue-with-no-parameters"></a>A. Criando uma fila sem parâmetros
+### <a name="a-creating-a-queue-with-no-parameters"></a>a. Criando uma fila sem parâmetros
 
 O exemplo seguinte cria uma fila que está disponível para receber mensagens. Nenhum procedimento armazenado de ativação é especificado para a fila.
 

@@ -18,10 +18,10 @@ ms.assetid: f8849151-c171-4725-bd25-f2c33a40f4fe
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1fd5584a5c43762c4d732c677de225436e191a7e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297808"
 ---
 # <a name="slowly-changing-dimension-transformation"></a>transformação Dimensão de Alteração Lenta
@@ -50,7 +50,7 @@ ms.locfileid: "71297808"
   
 -   Alterar atributos de alteração substitui registros existentes. Esse tipo de alteração é equivalente a uma alteração do Tipo 1. A transformação Dimensão de Alteração Lenta dirige estas linhas a uma saída nomeada **Saída de Atualizações de Atributos de Alteração**.  
   
--   As alterações de atributos históricos criam registros novos em vez de atualizar registros existentes. A única alteração que é permitida em um registro existente é uma atualização de uma coluna que indica se o registro é atual ou expirado. Esse tipo de alteração é equivalente a uma alteração do Tipo 2. A transformação Dimensão de Alteração Lenta direciona estas linhas para duas saídas: **Saída de Inserções de Atributo de Histórico** e **Nova Saída**.  
+-   As alterações de atributos históricos criam registros novos em vez de atualizar registros existentes. A única alteração que é permitida em um registro existente é uma atualização de uma coluna que indica se o registro é atual ou expirado. Esse tipo de alteração é equivalente a uma alteração do Tipo 2. A transformação Dimensão de Alteração Lenta dirige estas linhas a duas saídas: **Saída de Inserções de Atributos Históricos** e **Nova Saída**.  
   
 -   Alterações de atributo fixo indicam que o valor da coluna não deve ser alterado. A transformação Dimensão de Alteração Lenta detecta as alterações e pode direcionar as linhas com alterações a uma saída nomeada **Saída de Atributos Fixos**.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "71297808"
   
  A tabela a seguir descreve as saídas de transformação e os requisitos de seus fluxos de dados subsequentes. Os requisitos descrevem o fluxo de dados que o Assistente de Dimensão da Alteração Lenta cria.  
   
-|Saída|Descrição|Requisitos de fluxo de dados|  
+|Saída|DESCRIÇÃO|Requisitos de fluxo de dados|  
 |------------|-----------------|----------------------------|  
 |**Saída de Atualizações de Atributos de Alteração**|O registro na tabela de pesquisa é atualizado. Esta saída é usada para linhas de atributos de alteração.|Uma transformação Comando OLE DB atualiza o registro usando uma instrução UPDATE.|  
 |**Saída de Atributos Fixos**|Os valores em linhas que não devem ser alterados não correspondem a valores na tabela de pesquisa. Esta saída é usada para linhas de atributos fixos.|Nenhum fluxo de dados padrão é criado. Se a transformação está configurada para continuar depois de encontrar alterações em colunas de atributo fixo, você deve criar um fluxo de dados que capture essas linhas.|  

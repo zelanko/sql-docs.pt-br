@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d6901afbb6d0faa26c4977c15a3836bdeab68bb4
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73844620"
 ---
 # <a name="current_user-transact-sql"></a>CURRENT_USER (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "73844620"
 
 Essa função retorna o nome do usuário atual. Essa função é equivalente a `USER_NAME()`.
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,14 +45,14 @@ CURRENT_USER
 ## <a name="return-types"></a>Tipos de retorno
 **sysname**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 `CURRENT_USER` retorna o nome do contexto de segurança atual. Se `CURRENT_USER` for executado após uma chamada para o contexto de comutadores `EXECUTE AS`, `CURRENT_USER` retornará o nome do contexto representado. Se uma entidade de segurança do Windows tiver acessado o banco de dados por meio da associação em um grupo, `CURRENT_USER` retornará a entidade de segurança do Windows em vez do nome do grupo.
   
 Veja [SUSER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/suser-name-transact-sql.md) e [SYSTEM_USER &#40;Transact-SQL&#41;](../../t-sql/functions/system-user-transact-sql.md) para saber como retornar o logon do usuário atual.
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-current_user-to-return-the-current-user-name"></a>A. Usando CURRENT_USER para retornar o nome do usuário atual  
+### <a name="a-using-current_user-to-return-the-current-user-name"></a>a. Usando CURRENT_USER para retornar o nome do usuário atual  
 Este exemplo retorna o nome do usuário atual.
   
 ```sql

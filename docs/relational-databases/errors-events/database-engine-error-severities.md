@@ -16,10 +16,10 @@ ms.assetid: 3e7f5925-6edd-42e1-bf17-f7deb03993a7
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d0984d0003f6a20c410b91f99dc6fd1b4ae3f545
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73844327"
 ---
 # <a name="database-engine-error-severities"></a>Severidade dos erros do Mecanismo de Banco de Dados
@@ -29,7 +29,7 @@ ms.locfileid: "73844327"
 ## <a name="levels-of-severity"></a>Níveis de severidade  
  A tabela a seguir lista e descreve os níveis de severidade dos erros gerados pelo [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
-|Nível de severidade|Descrição|  
+|Nível de severidade|DESCRIÇÃO|  
 |--------------------|-----------------|  
 |0-9|Mensagens informativas que retornam informações de status ou reportam erros que não sejam severos. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] não gera erros de sistema com severidades de 0 a 9.|  
 |10|Mensagens informativas que retornam informações de status ou reportam erros que não sejam severos. Por razões de compatibilidade, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] converte a severidade 10 em severidade 0 antes de retornar as informações de erro ao aplicativo de chamada.|  
@@ -63,7 +63,7 @@ ms.locfileid: "73844327"
   
  Erros que encerram a conexão do banco de dados, normalmente com severidade de 20 a 25, não são controlados pelo bloco CATCH porque a execução é anulada quando a conexão é encerrada.  
   
- Para obter mais informações, veja [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md).  
+ Para obter mais informações, consulte [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md).  
   
 ## <a name="retrieving-error-severity"></a>recuperando a severidade dos erros  
  A função do sistema ERROR_SEVERITY pode ser usada para recuperar a gravidade do erro que fez o bloco CATCH de um constructo TRY...CATCH ser executado. ERROR_SEVERITY retorna NULL se chamado de fora do escopo de um bloco CATCH. Para obter mais informações, consulte [ERROR_SEVERITY &#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md).  

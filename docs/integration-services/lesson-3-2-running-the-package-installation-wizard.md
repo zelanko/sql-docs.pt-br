@@ -11,10 +11,10 @@ ms.assetid: f91fbb89-4626-4c47-b96d-56052dc45861
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1b380b56611e72bfd6b0c249792843a6a684813b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71283325"
 ---
 # <a name="lesson-3-2---running-the-package-installation-wizard"></a>Lição 3-2 – executar o Assistente de Instalação de Pacotes
@@ -46,7 +46,7 @@ Em uma lição anterior, você modificou os pacotes no tutorial para usar as con
   
 7.  Verifique se a caixa de seleção **Depender do armazenamento do servidor para criptografia** está desmarcada.  
   
-8.  Clique em **Avançar**.  
+8.  Clique em **Avançar.**  
   
 9. Na página Selecionar Pasta de Instalação, clique em **Procurar**.  
   
@@ -85,11 +85,11 @@ Em uma lição anterior, você modificou os pacotes no tutorial para usar as con
   
     Como os valores das variáveis de ambiente no computador de destino diferem dos valores das variáveis de ambiente no computador de desenvolvimento, várias avisos são exibidos na página Validação de Pacote. Você deve esperar por quatro avisos:  
   
-    -   O arquivo de configuração: "C:\DeploymentTutorial\DataTransferConfig.dtsConfig" não é válido. Verifique o nome do arquivo de configuração.  
+    -   O arquivo de configuração: “C:\DeploymentTutorial\DataTransferConfig.dtsConfig” não é válido. Verifique o nome do arquivo de configuração.  
   
     -   Falha ao carregar pelo menos uma das entradas de configuração no pacote. Verifique as entradas de configuração e os avisos anteriores para ver a descrição da configuração em que houve falha.  
   
-    -   O arquivo de configuração: "C:\DeploymentTutorial\LoadXMLDataConfig.dtsConfig" não é válido. Verifique o nome do arquivo de configuração.  
+    -   O arquivo de configuração: “C:\DeploymentTutorial\LoadXMLDataConfig.dtsConfig” não é válido. Verifique o nome do arquivo de configuração.  
   
     -   Falha ao carregar pelo menos uma das entradas de configuração no pacote. Verifique as entradas de configuração e os avisos anteriores para ver a descrição da configuração em que houve falha.  
   
@@ -103,7 +103,7 @@ Em uma lição anterior, você modificou os pacotes no tutorial para usar as con
     > Um arquivo de log temporário é criado para ser usado na validação do pacote. Esse arquivo não é usado quando o pacote é executado.  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
-[Etapa 3: testar os pacotes implantados](../integration-services/lesson-3-3-testing-the-deployed-packages.md)  
+[Etapa 3: Testando os pacotes implantados](../integration-services/lesson-3-3-testing-the-deployed-packages.md)  
   
 ## <a name="see-also"></a>Consulte Também  
 [Serviço Integration Services &#40;Serviço SSIS&#41;](../integration-services/service/integration-services-service-ssis-service.md)  

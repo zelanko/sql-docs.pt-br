@@ -18,10 +18,10 @@ ms.assetid: cfc0b0e0-7fde-431a-863f-d13f3b1b1bef
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 817a6325b956f5fc4214597b0b8bc46f6aff49f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042511"
 ---
 # <a name="starea-geography-data-type"></a>STArea (tipo de dados geography)
@@ -39,9 +39,9 @@ Retorna a área total da superfície de uma instância de **geography**. Resulta
 ## <a name="return-types"></a>Tipos de retorno  
 Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **float**  
   
-Tipo de retorno CLR: **SqlDouble**  
+Tipo de retorno do CLR: **SqlDouble**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 STArea() retornará 0 se uma instância de **geography** contiver apenas figuras sem dimensões ou unidimensionais, ou se estiver vazia.  
   
 > [!NOTE]  

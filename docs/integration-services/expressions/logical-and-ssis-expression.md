@@ -15,10 +15,10 @@ ms.assetid: a8cb3517-d5d1-4861-9f04-905c719185ff
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: cda41d0db42f72b56c84b184138ade1e345fdaa9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71289062"
 ---
 # <a name="ampamp-logical-and-ssis-expression"></a>&amp;&amp; (AND lógico) (Expressão SSIS)
@@ -42,17 +42,17 @@ boolean_expression1 && boolean_expression2
 ## <a name="result-types"></a>Tipos de resultado  
  DT_BOOL  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  A tabela a seguir mostra o resultado do operador &&.  
   
-|Resultado|Expression|Expression|  
+|Result|Expression|Expression|  
 |------------|----------------|----------------|  
 |TRUE|TRUE|TRUE|  
 |FALSE|TRUE|FALSE|  
 |FALSE|FALSE|FALSE|  
-|NULL|NULL|NULL|  
-|NULL|NULL|TRUE|  
-|FALSE|NULL|FALSE|  
+|NULO|NULO|NULO|  
+|NULO|NULO|TRUE|  
+|FALSE|NULO|FALSE|  
   
 ## <a name="expression-examples"></a>Exemplos de expressões  
  Este exemplo usa **StandardCost** e as colunas **ListPrice** . O exemplo avaliará como TRUE se o valor da coluna **StandardCost** for menor que 300 e a coluna **ListPrice** for maior que 500.  

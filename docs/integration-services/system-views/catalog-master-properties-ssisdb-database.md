@@ -11,10 +11,10 @@ ms.assetid: 00bfa716-5390-48e3-b30c-d954d5e0be47
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3ce06430094825bf3268836657661930fea058e4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296629"
 ---
 # <a name="catalogmaster_properties-ssisdb-database"></a>catalog.master_properties (Banco de dados SSISDB)
@@ -26,15 +26,15 @@ ms.locfileid: "71296629"
 
 Exibe as propriedades do Mestre do Scale Out [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].
 
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |property_name|**nvarchar(256)**|O nome da propriedade mestre de expansão.|  
 |property_value|**nvarchar(max)**|O valor da propriedade mestre de expansão.|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Comentários
 Esta exibição mostra uma linha para cada propriedade mestre de expansão. As propriedades mostradas por esta exibição incluem o seguinte:
 
-|Nome da propriedade|Descrição|  
+|Nome da propriedade|DESCRIÇÃO|  
 |-------------------|-----------------| 
 |**CLUSTER_LOGDB_SERVER**|O SQL Server no qual banco de dados está localizado.|
 |**LAST_ONLINE_TIME**|A última vez em que o Mestre do Scale Out esteve online.|

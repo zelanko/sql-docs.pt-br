@@ -11,10 +11,10 @@ ms.assetid: 1a08c75e-ce8c-45ee-81bd-32248bbdb2b2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6e2af58481babf1ba9e19465a67c530275db0402
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295682"
 ---
 # <a name="running-and-managing-packages-programmatically"></a>Executando e gerenciando pacotes programaticamente
@@ -32,7 +32,7 @@ ms.locfileid: "71295682"
   
  Você pode carregar e executar um pacote existente de um aplicativo cliente com a escrita de apenas algumas linhas de código.  
   
- Esta seção descreve e demonstra como executar um pacote existente programaticamente e como acessar a saída do fluxo de dados de outros aplicativos. Como opção de programação avançada, você pode criar programaticamente um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] linha por linha conforme descrito no tópico [Building Packages Programmatically](../../integration-services/building-packages-programmatically/building-packages-programmatically.md).  
+ Esta seção descreve e demonstra como executar um pacote existente programaticamente e como acessar a saída do fluxo de dados de outros aplicativos. Como opção de programação avançada, você pode criar programaticamente um pacote [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] linha por linha conforme descrito no tópico [Criar pacotes programaticamente](../../integration-services/building-packages-programmatically/building-packages-programmatically.md).  
   
  Esta seção também discute outras tarefas administrativas que você pode executar programaticamente para gerenciar pacotes armazenados, pacotes em execução e funções do pacote.  
   

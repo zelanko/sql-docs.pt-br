@@ -15,10 +15,10 @@ ms.assetid: 7604161a-a958-446d-b102-7dee432979d0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 91ba54ce9141cd0e891e442c5cb89aab02dec1f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68001725"
 ---
 # <a name="use-nested-for-xml-queries"></a>Usar consultas FOR XML aninhadas
@@ -67,7 +67,7 @@ FOR XML RAW, TYPE,ROOT('myRoot');
 </myRoot>  
 ```  
   
- Como o resultado é do tipo **xml**, é possível especificar um dos métodos do tipo de dados **xml** diretamente nesse XML, conforme mostrado na consulta a seguir. Na consulta, o [método query() (tipo de dados xml)](../../t-sql/xml/query-method-xml-data-type.md) é usado para recuperar o primeiro elemento filho <`row`> do elemento <`myRoot`>.  
+ Como o resultado é do tipo **xml** , é possível especificar um dos métodos do tipo de dados **xml** diretamente nesse XML, conforme mostrado na consulta a seguir. Na consulta, o [método query() (tipo de dados xml)](../../t-sql/xml/query-method-xml-data-type.md) é usado para recuperar o primeiro elemento filho <`row`> do elemento <`myRoot`>.  
   
 ```  
 SELECT  (SELECT ProductModelID, Name  
@@ -117,7 +117,7 @@ FOR XML AUTO, TYPE;
 ## <a name="examples"></a>Exemplos  
  Os tópicos a seguir fornecem exemplos de consultas FOR XML aninhadas.  
   
- [Consulta FOR XML comparada com consulta FOR XML aninhada](../../relational-databases/xml/for-xml-query-compared-to-nested-for-xml-query.md)  
+ [Consulta XML FOR comparada com consulta XML FOR aninhada](../../relational-databases/xml/for-xml-query-compared-to-nested-for-xml-query.md)  
  Compara uma consulta FOR XML de nível único com uma consulta FOR XML aninhada. Este exemplo inclui uma demonstração de como especificar XML centrado em atributo e centrado em elemento como o resultado da consulta.  
   
  [Gerar irmãos com uma consulta aninhada em modo AUTO](../../relational-databases/xml/generate-siblings-with-a-nested-auto-mode-query.md)  

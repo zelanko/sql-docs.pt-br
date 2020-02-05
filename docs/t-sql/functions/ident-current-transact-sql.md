@@ -21,10 +21,10 @@ ms.assetid: 21517ced-39f5-4cd8-8d9c-0a0b8aff554a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2271bbdd9a5b61fdfbf4985ca68acbffbc0b0b9d
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843698"
 ---
 # <a name="ident_current-transact-sql"></a>IDENT_CURRENT (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "73843698"
 
 Retorna o valor da última identidade gerado para uma tabela ou exibição especificada. O valor da última identidade gerado pode ser para qualquer sessão e para qualquer escopo.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -52,8 +52,8 @@ Retornará NULL em caso de erro ou se um chamador não tiver permissão para exi
   
 No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], um usuário só pode exibir os metadados de itens protegíveis de sua propriedade ou para os quais ele tenha permissão concedida. Isso significa que as funções internas emissoras de metadados, como IDENT_CURRENT, podem retornar NULL se o usuário não tiver permissão no objeto. Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="remarks"></a>Remarks  
-IDENT_CURRENT é semelhante às funções de identidade SCOPE_IDENTITY e @@IDENTITY do [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. As três funções retornam valores de identidade gerados por último. Entretanto, o escopo e a sessão nas quais o *último* está definido em cada uma dessas funções difere:  
+## <a name="remarks"></a>Comentários  
+IDENT_CURRENT é semelhante às funções de identidade SCOPE_IDENTITY e @[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] do @IDENTITY. As três funções retornam valores de identidade gerados por último. Entretanto, o escopo e a sessão nas quais o *último* está definido em cada uma dessas funções difere:  
 
 -   IDENT_CURRENT retorna o último valor de identidade gerado para uma tabela específica em qualquer sessão e escopo.  
 -   @@IDENTITY retorna o último valor de identidade gerado para qualquer tabela na sessão atual, em todos os escopos.  
@@ -70,7 +70,7 @@ Ao usar IDENT_CURRENT em uma exibição que contém junções, retorna NULL. Iss
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-returning-the-last-identity-value-generated-for-a-specified-table"></a>A. Retornando o último valor de identidade gerado para uma tabela especificada  
+### <a name="a-returning-the-last-identity-value-generated-for-a-specified-table"></a>a. Retornando o último valor de identidade gerado para uma tabela especificada  
  O exemplo a seguir retorna o último valor de identidade gerado para a tabela `Person.Address` no banco de dados `AdventureWorks2012`.  
   
 ```sql  

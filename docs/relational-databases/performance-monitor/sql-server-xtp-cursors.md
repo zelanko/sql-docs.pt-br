@@ -11,10 +11,10 @@ ms.assetid: 84bf4654-3ef7-4d7f-a269-c8bb4ed4acad
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 2920b0f21cca13272b8d8678106d0d231ad56e41
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67947822"
 ---
 # <a name="sql-server-xtp-cursors"></a>Cursores de XTP do SQL Server
@@ -24,7 +24,7 @@ ms.locfileid: "67947822"
   
  Esta tabela descreve os contadores de **Cursores de XTP do SQL Server** .  
   
-|Contador|Descrição|  
+|Contador|DESCRIÇÃO|  
 |-------------|-----------------|  
 |**Exclusões de cursor/s**|O número de exclusões de cursor (em média), por segundo.|  
 |**Inserções de Cursor/s**|O número de inserções de cursor (em média), por segundo.|  

@@ -14,10 +14,10 @@ ms.assetid: 6ea068b0-4cd8-45b5-b89d-09b8f25040c0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e903de279e4373e234dab18401465edd997e7407
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298431"
 ---
 # <a name="azure-blob-upload-task"></a>Tarefa de Carregamento de Blobs do Azure
@@ -37,7 +37,7 @@ Para adicionar uma **Tarefa de Upload de Blobs do Azure**, arraste-a e solte-a n
 |---|---|  
 |AzureStorageConnection|Especifique um Gerenciador de Conexão de Armazenamento do Azure existente ou crie um novo referindo-se a uma Conta de Armazenamento do Azure, que aponta para onde os arquivos de blob estão hospedados.|  
 |BlobContainer|Especifica o nome do contêiner de blobs que contém os arquivos carregados como blobs.|  
-|BlobDirectory|Especifica o diretório de blob em que o arquivo carregado é armazenado como um blob de blocos. O diretório de Blob é uma estrutura hierárquica virtual. Se o blob já existir, ele será substituído.|  
+|BlobDirectory|Especifica o diretório de blob em que o arquivo carregado é armazenado como um blob de blocos. O diretório de blob é uma estrutura hierárquica virtual. Se o blob já existir, ele será substituído.|  
 |LocalDirectory|Especifique o diretório local que contém os arquivos a serem carregados.|  
 |SearchRecursively|Especifique se é necessário pesquisar recursivamente dentro dos subdiretórios.|  
 |FileName|Especifica um filtro de nome para selecionar arquivos com o padrão de nome especificado. Por exemplo, `MySheet*.xls\*` inclui arquivos como `MySheet001.xls` e `MySheetABC.xlsx`.|  

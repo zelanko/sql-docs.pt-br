@@ -11,10 +11,10 @@ ms.assetid: 683e52e5-1c7e-49ab-9ffe-6a450a1c5776
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e90af0ecf9972b7365f42fcc307181c4d657e3c5
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296104"
 ---
 # <a name="lesson-1-5---testing-the-updated-packages"></a>Lição 1-5 – testar os pacotes atualizados
@@ -45,7 +45,7 @@ Se os pacotes não forem executados com sucesso, você precisará corrigi-los an
 3.  Terminada a execução do pacote, no menu **Depurar** , clique em **Parar Depuração**.  
   
 ## <a name="next-lesson"></a>Próxima lição  
-[Lição 2: criar o pacote de implantação no SSIS](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)  
+[Lição 2: Criar o pacote de implantação no SSIS](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)  
   
   
   

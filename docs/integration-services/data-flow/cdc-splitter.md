@@ -13,10 +13,10 @@ ms.assetid: 167bc5c6-fa36-439d-987c-b20acd1a77e2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: beba1f54c4eae683e6b35eb44408d84c5d812b84
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293228"
 ---
 # <a name="cdc-splitter"></a>Separador de CDC
@@ -26,14 +26,14 @@ ms.locfileid: "71293228"
 
   O separador de CDC divide um único fluxo de linhas de alteração de um fluxo de dados de origem CDC em diferentes fluxos de dados para operações de Inserir, Atualizar e Excluir. O fluxo de dados é dividido com base na coluna necessária de `__$operation` e seus valores padrão em tabelas de alterações do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
-|Valor da operação|Saída|Descrição|  
+|Valor da operação|Saída|DESCRIÇÃO|  
 |------------------------|------------|-----------------|  
-|1|DELETE|Linha excluída|  
+|1|Excluir|Linha excluída|  
 |2|Insert|Linha inserida (não disponível durante o uso do modo de CDC **Rede com Mesclagem** )|  
-|3|Update|Linha Before-update (disponível apenas durante o uso do modo de CDC **Tudo com Valores Antigos** )|  
-|4|Update|Linha After-update (após Before-update)|  
-|5|Update|Linha Merge (disponível apenas durante o uso do modo CDC **Rede com Mesclagem** )|  
-|Outro|Erro||  
+|3|Atualizar|Linha Before-update (disponível apenas durante o uso do modo de CDC **Tudo com Valores Antigos** )|  
+|4|Atualizar|Linha After-update (após Before-update)|  
+|5|Atualizar|Linha Merge (disponível apenas durante o uso do modo CDC **Rede com Mesclagem** )|  
+|Outros|Erro||  
   
  Você pode usar o separador para se conectar a saídas INSERT, DELETE e UPDATE predefinidas para processamento adicional.  
   
@@ -44,11 +44,11 @@ ms.locfileid: "71293228"
   
  A saída de erro de componente inclui as colunas de saída seguintes:  
   
--   **Código do Erro**: defina como 1.  
+-   **Código de Erro**: definida como 1.  
   
 -   **Coluna de Erro**: a coluna de origem que causa o erro (para erros de conversão).  
   
--   **Colunas de Linha de Erro**: as colunas de entrada da linha que causou o erro.  
+-   **Colunas de Linha de erro**: as colunas de entrada da linha que causou o erro.  
   
 ## <a name="configuring-the-cdc-splitter"></a>Configurando o Separador de CDC  
  Não há nenhuma propriedade configurável para o separador de CDC.  

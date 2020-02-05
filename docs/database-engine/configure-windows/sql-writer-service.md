@@ -22,10 +22,10 @@ ms.assetid: 0f299867-f499-4c2a-ad6f-b2ef1869381d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 79b0ba2bad207b92e0227ed5c8d3999dab335df6
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71816673"
 ---
 # <a name="sql-writer-service"></a>Serviço do gravador do SQL
@@ -76,6 +76,6 @@ ms.locfileid: "71816673"
   
 -   Restauração de página  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Comentários
 O serviço Gravador do SQL é um serviço separado do mecanismo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], sendo compartilhado entre diferentes versões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e entre diferentes instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no mesmo servidor.  O arquivo do serviço Gravador do SQL é fornecido como parte do pacote de instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e será marcado com o mesmo número de versão que o mecanismo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornecido com ele.  Quando uma nova instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é instalada em um servidor ou uma instância existente é atualizada, se o número de versão da instância que está sendo instalada ou atualizada for maior do que o número de versão do serviço Gravador do SQL que está no servidor no momento, esse arquivo será substituído por um do pacote de instalação.  Se o Serviço Gravador do SQL tiver sido atualizado por um Service Pack ou por Atualização cumulativa e uma versão RTM do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estiver sendo instalada, será possível substituir uma versão mais recente do Serviço Gravador do SQL por uma mais antiga, desde que a instalação tenha um número de versão principal maior.  Por exemplo, o Serviço Gravador do SQL foi atualizado no [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU2.  Se essa instância for atualizada para [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] RTM, o Gravador do SQL atualizado será substituído por uma versão mais antiga.  Nesse caso, você precisaria aplicar a atualização cumulativa mais recente à nova instância para obter a versão mais nova do serviço do Gravador do SQL.
 

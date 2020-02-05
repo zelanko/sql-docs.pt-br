@@ -22,10 +22,10 @@ ms.assetid: 97a47998-81d9-4331-a244-9eb8b6fe4a56
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 5baec7bb0328f6765bc4d4e1a04993074ad62999
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843524"
 ---
 # <a name="x40x40rowcount-transact-sql"></a>&#x40;&#x40;ROWCOUNT (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "73843524"
 
   Retorna o número de linhas afetadas pela última instrução. Se o número de linhas for maior que 2 bilhões, use [ROWCOUNT_BIG](../../t-sql/functions/rowcount-big-transact-sql.md).  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,7 +44,7 @@ ms.locfileid: "73843524"
 ## <a name="return-types"></a>Tipos de retorno  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  As instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] podem definir o valor de @@ROWCOUNT das seguintes maneiras:  
   
 -   Defina @@ROWCOUNT como o número de linhas afetadas ou lidas. As linhas podem ou não ser enviadas ao cliente.  
@@ -53,9 +53,9 @@ ms.locfileid: "73843524"
   
 -   Redefina @@ROWCOUNT como 0, mas não retorne o valor ao cliente.  
   
- Instruções que fazem uma atribuição simples sempre definem o valor de @@ROWCOUNT como 1. Nenhuma linha é enviada ao cliente. Alguns exemplos dessas instruções são: SET @*local_variable*, RETURN, READTEXT e selecione sem instruções de consulta, como SELECT GETDATE() ou SELECT **'***Generic Text***'** .  
+ Instruções que fazem uma atribuição simples sempre definem o valor de @@ROWCOUNT como 1. Nenhuma linha é enviada ao cliente. Exemplos dessas instruções são: SET @*local_variable*, RETURN, READTEXT e select sem instruções de consulta, como SELECT GETDATE() ou SELECT **'***Generic Text***'** .  
   
- As instruções que fazem uma atribuição em uma consulta ou usam RETURN em uma consulta definem o valor de @@ROWCOUNT para o número de linhas afetadas ou lidas pela consulta, por exemplo: SELECT @*local_variable* = c1 FROM t1.  
+ Instruções que fazem uma atribuição em uma consulta ou usam RETURN em uma consulta definem o valor de @@ROWCOUNT como o número de linhas afetadas ou lidas pela consulta, por exemplo: SELECT @*local_variable* = c1 FROM t1.  
   
  As instruções DML (linguagem de manipulação de dados) definem o valor de @@ROWCOUNT como o número de linhas afetadas ou lidas pela consulta e retornam esse valor ao cliente. As instruções DML podem não enviar nenhuma linha ao cliente.  
   

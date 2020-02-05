@@ -23,10 +23,10 @@ ms.assetid: 41313809-e970-449c-bc35-85da2ef96e48
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 3682c9faa66252f4e578fe75b41b010380409fc6
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982579"
 ---
 # <a name="create-synonym-transact-sql"></a>CREATE SYNONYM (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "73982579"
 
   Cria um novo sinônimo.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -84,7 +84,7 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
   
  O Banco de Dados SQL do Azure oferece suporte ao formato de nome de três partes database_name.[schema_name].object_name quando o database_name é o banco de dados atual ou o database_name é tempdb e o object_name começa com #.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O objeto base não precisa existir no momento da criação do sinônimo. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verifica a existência do objeto base em tempo de execução.  
   
  Podem ser criados sinônimos para os seguintes tipos de objetos:  
@@ -96,7 +96,7 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
 |Procedimento de filtro de replicação|Procedimento armazenado estendido|  
 |Função escalar SQL|Função com valor de tabela SQL|  
 |Função com valor de tabela embutida SQL|Procedimento armazenado SQL|  
-|Exibição|Tabela<sup>1</sup> (definida pelo usuário)|  
+|Visualizar|Tabela<sup>1</sup> (definida pelo usuário)|  
   
  <sup>1 Inclui tabelas temporárias locais e globais</sup>  
   
@@ -117,7 +117,7 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-creating-a-synonym-for-a-local-object"></a>A. Criando um sinônimo para um objeto local  
+### <a name="a-creating-a-synonym-for-a-local-object"></a>a. Criando um sinônimo para um objeto local  
  O exemplo a seguir cria primeiro um sinônimo para o objeto base, `Product`, no banco de dados `AdventureWorks2012` e, em seguida, consulta o sinônimo.  
   
 ```  

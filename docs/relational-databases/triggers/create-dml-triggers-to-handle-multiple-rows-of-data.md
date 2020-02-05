@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d5e3c8d9876545e1e68a9795b7c327ac1e47e2d6
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74096017"
 ---
 # <a name="create-dml-triggers-to-handle-multiple-rows-of-data"></a>Crie gatilhos DML para tratar várias linhas de dados
@@ -36,7 +36,7 @@ ms.locfileid: "74096017"
 ## <a name="examples"></a>Exemplos  
  Os gatilhos DML nos exemplos a seguir são projetados para armazenar o total de execução de uma coluna em outra tabela do banco de dados de exemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
-### <a name="a-storing-a-running-total-for-a-single-row-insert"></a>A. Armazenando um total de execução de uma inserção de única linha  
+### <a name="a-storing-a-running-total-for-a-single-row-insert"></a>a. Armazenando um total de execução de uma inserção de única linha  
  A primeira versão do gatilho DML trabalha bem para uma inserção de única linha quando uma linha de dados é carregada na tabela `PurchaseOrderDetail` . Uma instrução INSERT aciona um gatilho DML e uma nova linha é carregada na tabela **inserida** durante o período de duração da execução do gatilho. A instrução `UPDATE` lê o valor da coluna `LineTotal` para a linha e adiciona esse valor ao valor existente na coluna `SubTotal` na tabela `PurchaseOrderHeader` . A cláusula `WHERE` certifica que a linha atualizada na tabela `PurchaseOrderDetail` corresponde à `PurchaseOrderID` da linha na tabela **inserida** .  
   
 ```  

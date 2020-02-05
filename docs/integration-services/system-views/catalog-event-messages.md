@@ -11,10 +11,10 @@ ms.assetid: a31a654f-31e9-4da1-aabf-182b07848e36
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ebd5c1cc320426ea0ae3ff1b0b9832fb2ca76f1b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296644"
 ---
 # <a name="catalogevent_messages"></a>catalog.event_messages 
@@ -26,7 +26,7 @@ ms.locfileid: "71296644"
 
   Exibe informações sobre mensagens que foram registradas em log durante operações.  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |Event_message_ID|BIGINT|A ID exclusiva da mensagem de evento.|  
 |Operation_id|BIGINT|O tipo de operação.<br /><br /> Para ver uma lista completa dos tipos de operação, consulte [catalog.operations &#40;Banco de dados SSISDB&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md).|  
@@ -45,10 +45,10 @@ ms.locfileid: "71296644"
 |threadID|INT|ID do thread que está executando quando a mensagem é registrada em log.|  
 |Message_code|INT|O código associado à mensagem.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esta exibição exibe os tipos de origem de mensagem a seguir.  
   
-|**message_source_type**|Descrição|  
+|**message_source_type**|DESCRIÇÃO|  
 |-------------------------------|-----------------|  
 |10|APIs de entrada, como os procedimentos armazenados T-SQL e CLR|  
 |20|O processo externo usado para executar pacote (ISServerExec.exe)|  

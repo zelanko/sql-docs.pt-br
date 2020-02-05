@@ -18,10 +18,10 @@ ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 38ba2374821505dc3541ea05e76fd8aaecdcb5fc
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297638"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>Constantes enumeradas em expressões de propriedade
@@ -67,7 +67,7 @@ ms.locfileid: "71297638"
 |-----------------------------------------|-------------------|  
 |Never|0|  
 |IfExists|1|  
-|Always|2|  
+|Sempre|2|  
   
  Propriedade **PackagePriorityClass** – definida usando valores da enumeração **DTSPriorityClass**.  
   
@@ -104,8 +104,8 @@ ms.locfileid: "71297638"
   
 |Nome amigável|Valor numérico|  
 |-------------------|-------------------|  
-|Êxito|0|  
-|Failure|1|  
+|Sucesso|0|  
+|Falha|1|  
 |Completion|2|  
 |Canceled|3|  
   
@@ -134,7 +134,7 @@ ms.locfileid: "71297638"
   
 |Nome amigável em EnumerationType|Valor numérico|  
 |--------------------------------------|-------------------|  
-|Navigator|0|  
+|Navegador|0|  
 |Nó|1|  
 |NodeText|2|  
 |ElementCollection|3|  
@@ -143,7 +143,7 @@ ms.locfileid: "71297638"
   
 |Nome amigável em InnerElementType|Valor numérico|  
 |---------------------------------------|-------------------|  
-|Navigator|0|  
+|Navegador|0|  
 |Nó|1|  
 |NodeText|2|  
   
@@ -210,7 +210,7 @@ ms.locfileid: "71297638"
 |Normal|0|  
 |Archive|1|  
 |Hidden|2|  
-|ReadOnly (somente-leitura)|4|  
+|ReadOnly|4|  
 |Sistema|8|  
   
 ### <a name="ftp-task"></a>Tarefa FTP  
@@ -218,8 +218,8 @@ ms.locfileid: "71297638"
   
 |Nome amigável em DTSFTPOp|Valor numérico|  
 |-------------------------------|-------------------|  
-|Send|0|  
-|Receive (receber)|1|  
+|Enviar|0|  
+|Receber|1|  
 |DeleteLocal|2|  
 |DeleteRemote|3|  
 |MakeDirLocal|4|  
@@ -275,7 +275,7 @@ ms.locfileid: "71297638"
   
 |Nome amigável em TransferAction|Valor numérico|  
 |-------------------------------------|-------------------|  
-|Copiar|0|  
+|Cópia|0|  
 |Mover|1|  
   
  Propriedade **Method** – definida usando valores da enumeração **TransferMethod**.  
@@ -334,7 +334,7 @@ ms.locfileid: "71297638"
   
 |Nome amigável em ExistingData|Valor numérico|  
 |-----------------------------------|-------------------|  
-|Substituir|0|  
+|Substitua|0|  
 |Acrescentar|1|  
   
 ### <a name="web-service-task"></a>Tarefa Serviços Web  
@@ -423,7 +423,7 @@ ms.locfileid: "71297638"
 |Validar|0|  
 |XSLT|1|  
 |XPATH|2|  
-|Mesclagem|3|  
+|Mesclar|3|  
 |Diff|4|  
 |Patch|5|  
   
@@ -453,7 +453,7 @@ ms.locfileid: "71297638"
   
 |Nome amigável em DTSXMLXPathOperation|Valor numérico|  
 |-------------------------------------------|-------------------|  
-|Evaluation|0|  
+|Avaliação|0|  
 |Valores|1|  
 |NodeList|2|  
   
@@ -461,7 +461,7 @@ ms.locfileid: "71297638"
   
 |Nome amigável em DTSXMLDiffOptions|Valor numérico|  
 |----------------------------------------|-------------------|  
-|None|0|  
+|Nenhum|0|  
 |IgnoreChildOrder|1|  
 |IgnoreComments|2|  
 |IgnorePI|4|  
@@ -491,26 +491,26 @@ ms.locfileid: "71297638"
   
 |Nome amigável em DatabaseSelection|Valor numérico|  
 |----------------------------------------|-------------------|  
-|None|0|  
+|Nenhum|0|  
 |Todos|1|  
 |Sistema|2|  
 |Usuário|3|  
-|Specific|4|  
+|Específicas|4|  
   
  Propriedade **TableSelectionType** – definida usando valores da enumeração **TableSelection**.  
   
 |Nome amigável em TableSelection|Valor numérico|  
 |-------------------------------------|-------------------|  
-|None|0|  
+|Nenhum|0|  
 |Todos|1|  
-|Specific|2|  
+|Específicas|2|  
   
  Propriedade **ObjectTypeSelection** – definida usando valores da enumeração **ObjectType**.  
   
 |Nome amigável em ObjectType|Valor numérico|  
 |---------------------------------|-------------------|  
-|Table|0|  
-|Exibição|1|  
+|Tabela|0|  
+|Visualizar|1|  
 |TableView|2|  
   
 ### <a name="back-up-database-task"></a>Tarefa de Backup de Banco de Dados  
@@ -532,7 +532,7 @@ ms.locfileid: "71297638"
   
 |Nome amigável em BackupTaskType|Valor numérico|  
 |-------------------------------------|-------------------|  
-|banco de dados|0|  
+|Banco de dados|0|  
 |Arquivos|1|  
 |Log|2|  
   
@@ -558,17 +558,17 @@ ms.locfileid: "71297638"
   
 |Nome amigável em TimeUnitType|Valor numérico|  
 |-----------------------------------|-------------------|  
-|Day|0|  
-|Week|1|  
+|Dia|0|  
+|Semana|1|  
 |Month|2|  
-|Year|3|  
+|Ano|3|  
   
 ### <a name="update-statistics-task"></a>Tarefa Atualizar Estatísticas  
  Propriedade **UpdateType** – definida usando valores de SMO (Gerenciamento de Objetos) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], enumeração **StatisticsTarget**.  
   
 |Nome amigável em StatisticsTarget|Valor numérico|  
 |---------------------------------------|-------------------|  
-|coluna|1|  
+|Coluna|1|  
 |Índice|2|  
 |Todos|3|  
   
@@ -579,9 +579,9 @@ ms.locfileid: "71297638"
   
 |Nome amigável em DTSForcedExecResult|Valor numérico|  
 |------------------------------------------|-------------------|  
-|None|-1|  
-|Êxito|0|  
-|Failure|1|  
+|Nenhum|-1|  
+|Sucesso|0|  
+|Falha|1|  
 |Completion|2|  
   
  Propriedade **IsolationLevel** – definida usando valores da enumeração **IsolationLevel** do .NET Framework. Para obter mais informações, consulte a Biblioteca de Classes do .NET Framework em [Biblioteca MSDN](https://go.microsoft.com/fwlink?LinkId=17313).  
@@ -591,7 +591,7 @@ ms.locfileid: "71297638"
 |Nome amigável em DTSLoggingMode|Valor numérico|  
 |-------------------------------------|-------------------|  
 |UseParentSetting|0|  
-|Habilitado|1|  
+|habilitado|1|  
 |Desabilitado|2|  
   
  Propriedade **TransactionOption** – definida usando valores da enumeração **DTSTransactionOption**.  
@@ -599,7 +599,7 @@ ms.locfileid: "71297638"
 |Nome amigável em DTSTransactionOption|Valor numérico|  
 |-------------------------------------------|-------------------|  
 |NotSupported|0|  
-|Tem suporte|1|  
+|Suportado|1|  
 |Obrigatório|2|  
   
 ## <a name="related-tasks"></a>Related Tasks  

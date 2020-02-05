@@ -22,10 +22,10 @@ ms.assetid: b694d21f-9919-402d-9192-666c6449b0b7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 973b20bbe86e0aaff8cf4732efd95e1f3b10c423
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297296"
 ---
 # <a name="developing-a-custom-transformation-component-with-synchronous-outputs"></a>Desenvolvendo um componente de transformação personalizado com saídas síncronas
@@ -115,7 +115,7 @@ End Class
   
  O <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100.DataType%2A> da coluna determina os valores que são definidos para as outras propriedades. A tabela a seguir mostra os requisitos nas propriedades dependentes para cada <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100.DataType%2A>. Os tipos de dados não listados têm as propriedades dependentes definidas como zero.  
   
-|DataType|Comprimento|Escala|Precisão|CodePage|  
+|Tipo de dados|Comprimento|Escala|Precisão|CodePage|  
 |--------------|------------|-----------|---------------|--------------|  
 |DT_DECIMAL|0|Maior que 0 e menor ou igual a 28.|0|0|  
 |DT_CY|0|0|0|0|  

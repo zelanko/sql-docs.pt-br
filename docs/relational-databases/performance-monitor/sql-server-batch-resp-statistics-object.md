@@ -13,10 +13,10 @@ ms.assetid: a58e8733-6a8d-4b47-b5cb-042e813d808a
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 87045f104bdf183c91c3b60b0d85c4a64929359e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67987197"
 ---
 # <a name="sql-server-batch-resp-statistics-object"></a>SQLServer, Objeto Batch Resp Statistics
@@ -26,7 +26,7 @@ O objeto de desempenho **SQLServer:Batch Resp Statistics** fornece contadores pa
 A tabela a seguir descreve os objetos de desempenho de **Estatística de resposta de lote** do SQL Server.
 
 
-|**Estatísticas de resposta de lote do SQL Server**|Descrição|  
+|**Estatísticas de resposta de lote do SQL Server**|DESCRIÇÃO|  
 |-------------|-----------------|  
 |**Lotes >=000000ms e \<000001ms**|Número de Lotes SQL com tempo de resposta maior ou igual a 0 ms, porém menor que 1 ms|
 |**Lotes >=000001ms e \<000002ms**|Número de Lotes SQL com tempo de resposta maior ou igual a 1 ms, porém menos de 2 ms|
@@ -48,7 +48,7 @@ A tabela a seguir descreve os objetos de desempenho de **Estatística de respost
 
 Cada contador no objeto contém as seguintes instâncias:  
   
-|Item|Descrição|  
+|Item|DESCRIÇÃO|  
 |----------|-----------------|  
 |**Tempo de CPU:Solicitações**|O tempo de CPU gasto na solicitação.|  
 |**Tempo de CPU:Total(ms)**|O tempo total de CPU gasto no lote.|  
@@ -56,5 +56,5 @@ Cada contador no objeto contém as seguintes instâncias:
 |**Tempo Decorrido:Total(ms)**|O tempo decorrido do lote.|  
 
 ## <a name="see-also"></a>Consulte Também
-[SQL Server, objeto Cache de planos](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md)  
+[SQL Server, objeto Plan Cache](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md)  
 [Monitorar o uso de recursos (Monitor do Sistema)](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  

@@ -20,10 +20,10 @@ ms.assetid: f841dc79-2044-4863-aff0-56b8bb61f250
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 2f5a83635d9c608d779631b61859082a6dccadc2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67940216"
 ---
 # <a name="fulltextcatalogproperty-transact-sql"></a>FULLTEXTCATALOGPROPERTY (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "67940216"
 
 Retorna informações sobre propriedades de catálogo de texto completo no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -51,7 +51,7 @@ _catalog\_name_
 _property_  
 É uma expressão que contém o nome da propriedade do catálogo de texto completo. A tabela lista as propriedades e fornece descrições das informações retornadas.  
   
-|Propriedade|Descrição|  
+|Propriedade|DESCRIÇÃO|  
 |--------------|-----------------|  
 |**AccentSensitivity**|Configuração da diferenciação de caracteres com/sem acento.<br /><br /> 0 = não diferencia caracteres com/sem acento<br /><br /> 1 = diferencia caracteres com/sem acento|  
 |**IndexSize**|Tamanho lógico do catálogo de texto completo em MB (megabytes). Inclui o tamanho da frase-chave semântica e índices de semelhança de documento.<br /><br /> Para obter mais informações, consulte "Comentários", mais adiante neste tópico.|  
@@ -71,7 +71,7 @@ Retornará NULL em caso de erro ou se um chamador não tiver permissão para exi
   
 Em [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], um usuário só pode exibir os metadados de protegíveis. Esses protegíveis são os de propriedade do usuário ou para os quais ele recebeu permissão. Assim, as funções internas que emitem metadados, como FULLTEXTCATALOGPROPERTY, poderão retornar NULL se o usuário não tiver permissão no objeto. Para obter mais informações, consulte [sp_help_fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 FULLTEXTCATALOGPROPERTY ('_catalog\_name_','**IndexSize**') examina apenas os fragmentos com status 4 ou 6, conforme mostrado em [sys.fulltext_index_fragments](../../relational-databases/system-catalog-views/sys-fulltext-index-fragments-transact-sql.md). Estes fragmentos fazem parte do índice lógico. Assim, a propriedade **IndexSize** retorna apenas o tamanho de índice lógico. 
 
 Porém, durante uma mesclagem de índice, o tamanho real do índice pode ser o dobro do seu tamanho lógico. Para localizar o tamanho real que está sendo consumido pelo índice de texto completo durante a mesclagem, use o procedimento armazenado do sistema [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md). Esse procedimento analisa todos os fragmentos associados a um índice de texto completo. 

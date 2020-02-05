@@ -31,10 +31,10 @@ ms.assetid: bcd731b1-3c4e-4086-b58a-af7a3af904ad
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 15aa957b25323337f3b76b4f54f89a7121567a24
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982181"
 ---
 # <a name="use-sql-server-objects"></a>Usar objetos do SQL Server
@@ -71,7 +71,7 @@ ms.locfileid: "73982181"
 ##  <a name="SQLServerAgentPOs"></a> Objetos de desempenho do SQL Server Agent  
  A seguinte tabela lista os objetos de desempenho oferecidos para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent:  
   
-|Objeto de desempenho|Descrição|  
+|Objeto de desempenho|DESCRIÇÃO|  
 |------------------------|-----------------|  
 |[SQLAgent:Alerts](../../relational-databases/performance-monitor/sql-server-agent-alerts-object.md)|Fornece informações sobre alertas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|  
 |[SQLAgent:Jobs](../../relational-databases/performance-monitor/sql-server-agent-jobs-object.md)|Fornece informações sobre trabalhos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|  
@@ -81,7 +81,7 @@ ms.locfileid: "73982181"
 ##  <a name="ServiceBrokerPOs"></a> Objetos de desempenho do Service Broker  
  A tabela a seguir lista os objetos de desempenho oferecidos para o [!INCLUDE[ssSB](../../includes/sssb-md.md)].  
   
-|Objeto de desempenho|Descrição|  
+|Objeto de desempenho|DESCRIÇÃO|  
 |------------------------|-----------------|  
 |[SQLServer:Broker Activation](../../relational-databases/performance-monitor/sql-server-broker-activation-object.md)|Fornece informações sobre tarefas ativadas pelo [!INCLUDE[ssSB](../../includes/sssb-md.md)].|  
 |[SQLServer:Broker Statistics](../../relational-databases/performance-monitor/sql-server-broker-statistics-object.md)|Fornece informações gerais sobre o [!INCLUDE[ssSB](../../includes/sssb-md.md)] .|  
@@ -90,7 +90,7 @@ ms.locfileid: "73982181"
 ##  <a name="SQLServerPOs"></a> Objetos de desempenho do SQL Server  
  A tabela a seguir descreve objetos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-|Objeto de desempenho|Descrição|  
+|Objeto de desempenho|DESCRIÇÃO|  
 |------------------------|-----------------|  
 |[SQLServer:Métodos de Acesso](../../relational-databases/performance-monitor/sql-server-access-methods-object.md)|Pesquisa e mede a alocação de objetos de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (por exemplo, o número de pesquisas de índice ou número de páginas alocadas para índices e dados).|  
 |[SQLServer:Backup Device](../../relational-databases/performance-monitor/sql-server-backup-device-object.md)|Fornece informações sobre dispositivos de backup usados para operações de backup e restauração, como a taxa de transferência do dispositivo backup.|  
@@ -118,19 +118,19 @@ ms.locfileid: "73982181"
 |[SQLServer:Administradores do Agente de Memória](../../relational-databases/performance-monitor/sql-server-memory-broker-clerks-object.md)|Estatísticas relacionadas a administradores de agente de memória.|
 |[SQLServer:Memory Manager](../../relational-databases/performance-monitor/sql-server-memory-manager-object.md)|Fornece informações sobre o uso de memória do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , como o número total de estruturas de bloqueio alocadas atualmente.|  
 |[SQLServer:Cache de planos](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md)|Fornece informações sobre o cache do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizado para armazenar objetos, como procedimentos armazenados, gatilhos e planos de consulta.|  
-|[SQLServer: Repositório de Consultas](../../relational-databases/performance-monitor/sql-server-query-store-object.md)|Fornece informações sobre o Repositório de Consultas.|  
-|[SQLServer: Estatísticas do Pool de Recursos](../../relational-databases/performance-monitor/sql-server-resource-pool-stats-object.md)|Contém informações sobre estatísticas de pool de recursos do Administrador de Recursos.|  
+|[SQL Server: Repositório de Consultas](../../relational-databases/performance-monitor/sql-server-query-store-object.md)|Fornece informações sobre o Repositório de Consultas.|  
+|[SQLServer:Estatísticas de Pool de Recursos](../../relational-databases/performance-monitor/sql-server-resource-pool-stats-object.md)|Contém informações sobre estatísticas de pool de recursos do Administrador de Recursos.|  
 |[SQLServer:SQL Errors](../../relational-databases/performance-monitor/sql-server-sql-errors-object.md)|Fornece informações sobre erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[SQLServer:SQL Statistics](../../relational-databases/performance-monitor/sql-server-sql-statistics-object.md)|Fornece informações sobre aspectos de consultas do [!INCLUDE[tsql](../../includes/tsql-md.md)] , como o número de lotes de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] recebidos pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[SQLServer:Transactions](../../relational-databases/performance-monitor/sql-server-transactions-object.md)|Fornece informações sobre as transações ativas no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], como o número global de transações e o número de transações de instantâneo.|  
 |[SQLServer:User Settable](../../relational-databases/performance-monitor/sql-server-user-settable-object.md)|Executa monitoramento personalizado. Cada contador pode ser um procedimento armazenado personalizado ou qualquer instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] que retorne um valor a ser monitorado.|  
 |[SQLServer: Estatísticas de Espera](../../relational-databases/performance-monitor/sql-server-wait-statistics-object.md)|Fornece informações sobre esperas.|  
-|[SQLServer: Estatísticas de Grupo de Carga de Trabalho](../../relational-databases/performance-monitor/sql-server-workload-group-stats-object.md)|Contém informações sobre estatísticas de grupo de cargas de trabalho do Administrador de Recursos.|  
+|[SQLServer: Estatísticas de Grupo de Cargas de Trabalho](../../relational-databases/performance-monitor/sql-server-workload-group-stats-object.md)|Contém informações sobre estatísticas de grupo de cargas de trabalho do Administrador de Recursos.|  
   
 ##  <a name="SQLServerReplicationPOs"></a> Objetos de desempenho de replicação do SQL Server  
  A seguinte tabela lista os objetos de desempenho fornecidos para replicação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
-|Objeto de desempenho|Descrição|  
+|Objeto de desempenho|DESCRIÇÃO|  
 |------------------------|-----------------|  
 |**SQLServer:Replication Agents**<br /><br /> **SQLServer:Replication Snapshot**<br /><br /> **SQLServer:Replication Logreader**<br /><br /> **SQLServer:Replication Dist.**<br /><br /> **SQLServer:Replication Merge**<br /><br /> Para obter mais informações, consulte [Monitoring Replication with System Monitor](../../relational-databases/replication/monitor/monitoring-replication-with-system-monitor.md).|Fornece informações sobre a atividade do agente de replicação.|  
   

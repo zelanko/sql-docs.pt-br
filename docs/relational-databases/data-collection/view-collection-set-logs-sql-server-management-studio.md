@@ -13,10 +13,10 @@ ms.assetid: 428908b8-fb6a-4d0c-8339-ee133e23aad2
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: f2b3ec4e0c7ec6a9335c9e37558123eca77995a3
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056430"
 ---
 # <a name="view-collection-set-logs-sql-server-management-studio"></a>Exibir logs do conjunto de coleta (SQL Server Management Studio)

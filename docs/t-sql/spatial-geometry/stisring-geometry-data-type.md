@@ -18,10 +18,10 @@ ms.assetid: ea0063be-1c74-4cc4-ac6f-b65321ddfa54
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: a9aa9b1b8e97f78887710309019e80ff4276c732
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68030879"
 ---
 # <a name="stisring-geometry-data-type"></a>STIsRing (tipo de dados geometry)
@@ -45,9 +45,9 @@ Retornará 1 se uma instância de **geometry** atender a estes requisitos:
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
- Tipo de retorno CLR: **SqlBoolean**  
+ Tipo de retorno do CLR: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse método retornará nulo se a instância não for uma **LineString**.  
   
 ## <a name="examples"></a>Exemplos  

@@ -12,22 +12,22 @@ ms.assetid: 1f83d927-a215-4e43-98a9-4dab9d6e68bb
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: c1e8aaf2681bf742caeaccc51bcc759ffc6b0708
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68002936"
 ---
-# <a name="mssqlserver12306"></a>MSSQLSERVER_12306
+# <a name="mssqlserver_12306"></a>MSSQLSERVER_12306
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|12306|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|HK_UNSUPPORTED_CURSOR|  
 |Texto da mensagem|Não há suporte para cursores com '*construct*'.|  

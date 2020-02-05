@@ -15,10 +15,10 @@ ms.assetid: 1c846950-0a2d-45df-b0d5-193e455f7cd5
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: dff35ab1603e3fa1d620914d8ac4afbe669a2be5
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75252743"
 ---
 # <a name="start-the-configuring-database-mirroring-security-wizard"></a>Iniciar o Assistente para Configurar Segurança de Espelhamento de Banco de Dados

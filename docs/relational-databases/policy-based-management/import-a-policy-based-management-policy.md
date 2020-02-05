@@ -13,10 +13,10 @@ ms.assetid: 850b7ef9-d2b7-4754-bf04-7cb419ffb776
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: ae1a68e63bd9d83cd80ec04b8ad2801b9f238a7b
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908644"
 ---
 # <a name="import-a-policy-based-management-policy"></a>Importar política de Gerenciamento Baseado em Políticas

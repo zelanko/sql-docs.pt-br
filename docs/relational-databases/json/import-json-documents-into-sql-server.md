@@ -11,17 +11,17 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: de1dc6567603b0b16324aa798527a0b79282fa83
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095748"
 ---
 # <a name="import-json-documents-into-sql-server"></a>Importar documentos JSON para o SQL Server
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-Este artigo descreve como importar arquivos JSON para o SQL Server. No momento, há muitos documentos JSON armazenados em arquivos. Informações de log de aplicativos em arquivos JSON, sensores que geram informações são armazenadas em arquivos JSON e assim por diante. É importante ser capaz de ler os dados JSON armazenados em arquivos, carregar os dados no SQL Server e analisá-los.
+Este artigo descreve como importar arquivos JSON para o SQL Server. No momento, há muitos documentos JSON armazenados em arquivos. Informações de log de aplicativos em arquivos JSON, sensores que geram informações armazenadas em arquivos JSON e assim por diante. É importante ser capaz de ler os dados JSON armazenados em arquivos, carregar os dados no SQL Server e analisá-los.
 
 ## <a name="import-a-json-document-into-a-single-column"></a>Importar um documento JSON em uma única coluna
 
@@ -36,7 +36,7 @@ SELECT BulkColumn
 
 OPENJSON(BULK) lê o conteúdo do arquivo e o retorna em `BulkColumn`.
 
-Também é possível carregar o conteúdo do arquivo para uma variável local ou uma tabela, conforme mostrado no exemplo a seguir:
+Também é possível carregar o conteúdo do arquivo em uma variável local ou uma tabela, conforme mostrado no exemplo a seguir:
 
 ```sql
 -- Load file contents into a variable
@@ -147,9 +147,9 @@ Neste exemplo, OPENROWSET(BULK) lê o conteúdo do arquivo e passa esse conteúd
 
 |ID|Nome|price|pages_i|Autor|
 |---|---|---|---|---|
-|978-0641723445|O ladrão de raios|12,5|384|Rick Riordan| 
+|978-0641723445|O ladrão de raios|12.5|384|Rick Riordan| 
 |978-1423103349|O mar de monstros|6,49|304|Rick Riordan| 
-|978-1857995879|O mundo de Sofia: Os filósofos gregos|3.07|64|Jostein Gaarder| 
+|978-1857995879|Sophie's World: The Greek Philosophers (O mundo de Sofia: os filósofos gregos)|3.07|64|Jostein Gaarder| 
 |978-1933988177|Lucene em ação, Second Edition|30,5|475|Michael McCandless|
 ||||||
 

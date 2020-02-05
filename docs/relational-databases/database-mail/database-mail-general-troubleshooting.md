@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: fb063b3af008ad7e734197a0d4360c9d83535cd3
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74094557"
 ---
 # <a name="general-database-mail-troubleshooting-steps"></a>Etapas de solução de problemas gerais do Database Mail 
@@ -87,7 +87,7 @@ Você deve ser membro da função de servidor fixa sysadmin para solucionar prob
     EXEC msdb.dbo.sysmail_help_principalprofile_sp;
     ```
 
-1. Use o Assistente para Configuração do Database Mail para criar perfis e permitir acesso a eles aos usuários.
+1. Use o Assistente para Configuração do Database Mail para criar perfis e conceder acesso a eles aos usuários.
  
 ## <a name="is-database-mail-started"></a>O database mail é iniciado
 
@@ -96,7 +96,7 @@ Você deve ser membro da função de servidor fixa sysadmin para solucionar prob
     ```sql
     EXEC msdb.dbo.sysmail_help_status_sp;
     ```
-1. Se a ativação do Database Mail não tiver sido iniciada, execute a seguinte instrução para iniciá-la:
+1. Se a ativação do Database Mail tiver sido iniciada, execute a seguinte instrução para iniciá-la:
 
     ```sql
     EXEC msdb.dbo.sysmail_start_sp;
@@ -125,7 +125,7 @@ EXEC msdb.dbo.sysmail_start_sp;
 
 ## <a name="do-problems-affect-some-or-all-accounts"></a>Problemas afetam a algumas ou todas as contas
 
-1. Caso tenha determinado que nem todos os perfis estão conseguindo enviar emails, pode haver algum problema com as contas do Database Mail utilizadas pelos perfis problemáticos. Para determinar quais contas estão conseguindo enviar email, execute a seguinte instrução:
+1. Caso tenha determinado que apenas alguns perfis estão conseguindo enviar emails, pode haver algum problema com as contas do Database Mail utilizadas pelos perfis problemáticos. Para determinar quais contas estão conseguindo enviar email, execute a seguinte instrução:
 
     ```sql
     SELECT sent_account_id, sent_date FROM msdb.dbo.sysmail_sentitems;
@@ -143,7 +143,7 @@ EXEC msdb.dbo.sysmail_start_sp;
 
 ## <a name="retry-mail-delivery"></a>Tentar novamente a entrega de emails
 
-1. Caso tenha determinado que o Database Mail está falhando porque não está sendo possível alcançar confiavelmente o servidor SMTP, você poderá aumentar a taxa de êxito na entrega de emails aumentado o número de vezes que o Database Mail tenta enviar cada mensagem. Inicie o Assistente para Configuração do Database Mail e selecione a opção Exibir ou alterar parâmetros do sistema. Alternativamente, você pode associar mais contas ao perfil, de modo que, diante da ocorrência de failover da conta primária, o Database Mail use a conta de failover para enviar os emails.
+1. Caso tenha determinado que o Database Mail está falhando porque não está sendo possível alcançar confiavelmente o servidor SMTP, você poderá aumentar a taxa de êxito na entrega de emails aumentado o número de vezes que o Database Mail tenta enviar cada mensagem. Inicie o Assistente para Configuração do Database Mail e selecione a opção Exibir ou alterar parâmetros do sistema. Alternativamente, você pode associar mais contas ao perfil, de modo que, diante da ocorrência de falha na conta primária, o Database Mail use a conta de failover para enviar os emails.
 1. Na página Configurar Parâmetros do Sistema, os valores padrão de cinco vezes para Tentativas de Repetição de Conta e de 60 segundos para Atraso na Repetição de Conta significam que a entrega da mensagem falhará se o servidor SMTP não puder ser alcançado em 5 minutos. Aumente esses parâmetros para aumentar o tempo antes de a entrega da mensagem falhar.
 
     > [!NOTE]

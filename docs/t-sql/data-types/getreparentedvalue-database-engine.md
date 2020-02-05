@@ -18,10 +18,10 @@ ms.assetid: f47f8e25-08ef-498b-84f4-a317aca1f358
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8ff469d92165d12bac6d10bed6682d29ea162eb7
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72278363"
 ---
 # <a name="getreparentedvalue-database-engine"></a>GetReparentedValue (Mecanismo de Banco de Dados)
@@ -53,12 +53,12 @@ Um **hierarchyid** que representa o nó. Substitua a seção _oldRoot_ do nó at
   
 **Tipo de retorno do CLR: SqlHierarchyId**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 Usado para modificar a árvore movendo nós de _oldRoot_ para _newRoot_. GetReparentedValue é usado para mover um nó de hierarquia para uma localização nova na hierarquia. O tipo de dados **hierarchyid** representa, mas não impõe a estrutura hierárquica. Os usuários devem assegurar-se de que o hierarchyid está estruturado adequadamente para o local novo. Um índice exclusivo no tipo de dados **hierarchyid** pode ajudar a prevenir entradas duplicadas. Para obter um exemplo de como mover uma subárvore inteira, consulte [Dados hierárquicos &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md).
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-comparing-two-node-locations"></a>A. Comparando dois locais de nó  
+### <a name="a-comparing-two-node-locations"></a>a. Comparando dois locais de nó  
 O exemplo seguinte mostra o hierarchyid atual de um nó. Ele também mostra qual será a **hierarchyid** do nó se o nó for movido para se tornar um descendente do nó **\@NewParent**. Ele usa o método `ToString()` para mostrar as relações hierárquicas.
   
 ```sql

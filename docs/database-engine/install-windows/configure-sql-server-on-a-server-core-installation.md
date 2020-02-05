@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: ce38e546aa77e375d65a9f95f708718d283a53b0
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75251592"
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>Configurar o SQL Server em uma instalação do Server Core
@@ -39,7 +39,7 @@ Para obter mais informações sobre como configurar e gerenciar remotamente uma 
   
 - [Instalar funções de servidor e recursos em um servidor Windows Server 2012 R2 do Server Core](https://technet.microsoft.com/library/jj574158(v=ws.11).aspx)
   
-- [Gerenciando uma instalação Server Core: Visão geral](https://go.microsoft.com/fwlink/?LinkId=245962)  
+- [Gerenciando uma instalação do Server Core: Visão geral](https://go.microsoft.com/fwlink/?LinkId=245962)  
   
 - [Administrando uma instalação do Server Core](https://go.microsoft.com/fwlink/?LinkId=245963)
   
@@ -225,7 +225,7 @@ $Tcp
 ##  <a name="BKMK_troubleshoot"></a> Usar ferramentas de solução de problemas  
  É possível usar o [Utilitário SQLdiag](../../tools/sqldiag-utility.md) para coletar logs e arquivos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e de outros tipos de servidores, e usá-lo para monitorar os servidores ao longo do tempo ou para solucionar problemas específicos com seus servidores. O SQLdiag foi criado para agilizar e simplificar a coleta de informações de diagnóstico para os Serviços de Suporte Técnico da Microsoft.  
   
- Inicie o utilitário no prompt de comando do administrador no Server Core, usando a sintaxe especificada no artigo: [Utilitário SQLdiag](../../tools/sqldiag-utility.md).  
+ Você pode iniciar o utilitário no prompt de comando do administrador no Server Core, usando a sintaxe especificada no artigo: [SQLdiag Utility](../../tools/sqldiag-utility.md).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Instalar o SQL Server no Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md)   

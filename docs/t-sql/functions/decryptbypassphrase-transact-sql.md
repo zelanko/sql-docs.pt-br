@@ -20,10 +20,10 @@ ms.assetid: ca34b5cd-07b3-4dca-b66a-ed8c6a826c95
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 9791a9672965757f5b86cbae60241ef7528ae565
-ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71314518"
 ---
 # <a name="decryptbypassphrase-transact-sql"></a>DECRYPTBYPASSPHRASE (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "71314518"
 
 Essa função descriptografa os dados originalmente criptografados com uma frase secreta.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -54,7 +54,7 @@ Uma variável de tipo
 + **nchar**
 + **nvarchar**
 
-ou em
+ou
 
 + **varchar**
 
@@ -81,7 +81,7 @@ Uma variável contendo dados usados como a base para a geração dos autenticado
 ## <a name="return-types"></a>Tipos de retorno  
 **varbinary**, com um tamanho máximo de 8.000 bytes.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 `DECRYPTBYPASSPHRASE` não requer nenhuma permissão para sua execução. `DECRYPTBYPASSPHRASE` retorna NULL se recebe a frase secreta errada ou as informações do autenticador erradas.  
   
 `DECRYPTBYPASSPHRASE` usa a frase secreta para gerar uma chave de descriptografia. Essa chave de descriptografia não será mantida.  

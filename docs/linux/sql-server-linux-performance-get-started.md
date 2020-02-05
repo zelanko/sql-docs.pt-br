@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 60036d26-4797-4872-9a9e-3552841c61be
 ms.openlocfilehash: fe60b00654d93c6362a8671318a4b7b88ae90a5f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67896159"
 ---
 # <a name="walkthrough-for-the-performance-features-of-sql-server-on-linux"></a>Passo a passo dos recursos de desempenho do SQL Server em Linux
@@ -157,14 +157,14 @@ O SQL Server dá suporte a procedimentos armazenados nativamente compilados que 
 ### <a name="learn-more-about-in-memory-oltp"></a>Saiba mais sobre o OLTP in-memory
 Para saber mais sobre o OLTP in-memory, confira os seguintes tópicos:
 
-- [Início rápido 1: tecnologias do OLTP in-memory para um desempenho mais rápido do Transact-SQL](../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)
+- [Início Rápido 1: tecnologias do OLTP in-memory para um desempenho mais rápido do Transact-SQL](../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)
 - [Migrando para OLTP na memória](../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)
 - [Tabela temporária e variável de tabela mais rápidas usando a otimização de memória](../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md)
 - [Monitorar e solucionar problemas de uso da memória](../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md)
 - [OLTP na memória (otimização na memória)](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)
 
 ## <a name="use-query-store"></a>Usar o Repositório de Consultas
-O Repositório de Consultas coleta informações de desempenho detalhadas sobre consultas, planos de execução e estatísticas de tempo de execução.
+O Repositório de Consultas coleta informações de desempenho detalhadas sobre consultas, planos de execução e estatísticas de runtime.
 
 O Repositório de Consultas não está ativo por padrão e pode ser habilitado com ALTER DATABASE:
 

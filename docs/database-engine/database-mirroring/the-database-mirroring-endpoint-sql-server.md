@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: f8652f227c43354f54e8ec76f9c174f4551dcb2a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68047994"
 ---
 # <a name="the-database-mirroring-endpoint-sql-server"></a>O ponto de extremidade de espelhamento de banco de dados (SQL Server)
@@ -44,7 +44,7 @@ ms.locfileid: "68047994"
   
  A figura seguinte ilustra como duas instâncias de servidor no mesmo servidor são identificadas exclusivamente. Os endereços de rede de servidor de ambas as instâncias de servidor contêm o mesmo nome de sistema, `MYSYSTEM`e nome de domínio, `Adventure-Works.MyDomain.com`. Para permitir o sistema a rotear conexões para uma instância de servidor, um endereço de rede de servidor inclui o número da porta associado ao ponto de extremidade de espelhamento de uma instância de servidor particular.  
   
- ![Endereços de rede do servidor de uma instância padrão](../../database-engine/availability-groups/windows/media/dbm-2-instances-ports-1-system.gif "Endereços de rede do servidor de uma instância padrão")  
+ ![Endereços de rede de servidor de uma instância padrão](../../database-engine/availability-groups/windows/media/dbm-2-instances-ports-1-system.gif "Endereços de rede de servidor de uma instância padrão")  
   
  Por padrão, uma instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não contém um ponto de extremidade de espelhamento de banco de dados. Estes devem ser criados manualmente como parte da configuração de uma sessão de espelhamento de banco de dados. O administrador de sistema deve criar um ponto de extremidade separado em cada instância de servidor que participará em espelhamento de banco de dados. Observe que se mais de uma instância de servidor em um determinado computador exigir um ponto de extremidade de espelhamento de banco de dados, especifique um número de porta diferente para cada ponto de extremidade.  
   

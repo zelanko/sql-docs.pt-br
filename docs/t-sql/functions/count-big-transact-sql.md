@@ -23,18 +23,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 23a3dd70b96aef4c24f3aa405ce428db5c7b2321
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68026512"
 ---
-# <a name="countbig-transact-sql"></a>COUNT_BIG (Transact-SQL)
+# <a name="count_big-transact-sql"></a>COUNT_BIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Essa função retorna o número de itens encontrados em um grupo. `COUNT_BIG` funciona como a função [COUNT](../../t-sql/functions/count-transact-sql.md). Essas funções são diferentes apenas nos tipos de dados de seus valores de retorno. `COUNT_BIG` sempre retorna um valor do tipo de dados **bigint**. `COUNT` sempre retorna um valor do tipo de dados **int**.
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -51,7 +51,7 @@ COUNT_BIG ( [ ALL ] { expression | * } ) OVER ( [ <partition_by_clause> ] )
 ALL  
 Aplica a função de agregação a todos os valores. ALL funciona como o padrão.
   
-DISTINCT  
+DISTINTO  
 Especifica que `COUNT_BIG` retorna o número de valores não nulos exclusivos.
   
 *expressão*  
@@ -66,7 +66,7 @@ A *partition_by_clause* divide o conjunto de resultados produzido pela cláusula
 ## <a name="return-types"></a>Tipos de retorno
 **bigint**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 COUNT_BIG(\*) retorna o número de itens de um grupo. Isso inclui valores NULL e duplicatas.
   
 COUNT_BIG (ALL *expression*) avalia a *expression* de cada linha em um grupo e retorna o número de valores não nulos.

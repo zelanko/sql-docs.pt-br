@@ -11,10 +11,10 @@ ms.assetid: 3dda28d6-10d8-4294-9b5e-a6048c07faf9
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 85f24df15c968aa7a5848519f4c118a96bc3534c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296641"
 ---
 # <a name="catalogexecutable_statistics"></a>catalog.executable_statistics 
@@ -28,7 +28,7 @@ ms.locfileid: "71296641"
   
  Um executável é uma tarefa ou um contêiner que você adiciona ao fluxo de controle de um pacote.  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |Statistics_id|BIGINT|A ID exclusiva dos dados.|  
 |Execution_id|BIGINT|ID exclusiva da instância da execução.<br /><br /> A exibição catalog.executions fornece informações adicionais sobre execuções. Para obter mais informações, consulte [catalog.executions &#40;Banco de Dados SSISDB&#41;](../../integration-services/system-views/catalog-executions-ssisdb-database.md).|  

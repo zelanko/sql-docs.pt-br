@@ -13,10 +13,10 @@ ms.assetid: fea03c62-9361-4b6f-b4ce-8fe0f94b34f2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: dc008fc1f59d8ea6b5f015f2028779aa270d3b2a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71285865"
 ---
 # <a name="hadoop-and-hdfs-support-in-integration-services-ssis"></a>Suporte para Hadoop e HDFS no Integration Services (SSIS)
@@ -30,7 +30,7 @@ ms.locfileid: "71285865"
   
 -   Gerenciador de conexões  
   
-    -   [Gerenciador de conexões do Hadoop](../integration-services/connection-manager/hadoop-connection-manager.md)  
+    -   [Gerenciador de Conexões do Hadoop](../integration-services/connection-manager/hadoop-connection-manager.md)  
   
 -   Fluxo de controle - Tarefas  
   
@@ -38,11 +38,11 @@ ms.locfileid: "71285865"
   
     -   [Tarefa do Hive do Hadoop](../integration-services/control-flow/hadoop-hive-task.md)  
   
-    -   [Tarefa de Pig do Hadoop](../integration-services/control-flow/hadoop-pig-task.md)  
+    -   [Tarefa do Pig do Hadoop](../integration-services/control-flow/hadoop-pig-task.md)  
   
 -   Fluxo de dados - Fonte e destino de dados  
   
-    -   [Origem do arquivo HDFS](../integration-services/data-flow/hdfs-file-source.md)  
+    -   [Origem de arquivo HDFS](../integration-services/data-flow/hdfs-file-source.md)  
   
     -   [Destino de Arquivo HDFS](../integration-services/data-flow/hdfs-file-destination.md)  
   

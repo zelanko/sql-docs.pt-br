@@ -16,10 +16,10 @@ ms.assetid: f88e9da1-2c0b-4bdd-9ec5-44467707cb46
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 898037be3f55692d7c85dbe92d00dc3f305e2ec7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68082380"
 ---
 # <a name="revoke-assembly-permissions-transact-sql"></a>Permissões de assembly REVOKE (Transact-SQL)
@@ -27,7 +27,7 @@ ms.locfileid: "68082380"
 
   Revoga permissões em um assembly.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -97,7 +97,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
   
 -   usuário de banco de dados não mapeado para uma entidade do servidor.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Um assembly é um nível de banco de dados protegível contido no banco de dados que é pai na hierarquia de permissões. As permissões mais específicas e limitadas que podem ser revogadas em um assembly estão listadas abaixo, junto com as permissões mais gerais que as contêm implicitamente.  
   
 |Permissão de assembly|Implícito na permissão de assembly|Implícito na permissão de banco de dados|  

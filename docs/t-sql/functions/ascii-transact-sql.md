@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9b982d357668703a54b06124a8bb3edf0c963463
-ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74119192"
 ---
 # <a name="ascii-transact-sql"></a>ASCII (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "74119192"
 
 Retorna o valor do código ASCII do caractere mais à esquerda de uma expressão de caractere.
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -48,14 +48,14 @@ Uma [expressão](../../t-sql/language-elements/expressions-transact-sql.md) do t
 ## <a name="return-types"></a>Tipos de retorno
  **int**  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Comentários
 ASCII significa **A**merican **S**tandard **C**ode for **I**nformation **I**nterchange. Ela serve como um padrão de codificação de caractere para computadores modernos. Veja a seção **Caracteres imprimíveis** do [ASCII](https://www.wikipedia.org/wiki/ASCII) para obter uma lista de caracteres ASCII.
 
 ASCII é um conjunto de caracteres de 7 bits. ASCII estendido é um conjunto de caracteres de 8 bits que não é tratado pela função `ASCII`. 
 
 ## <a name="examples"></a>Exemplos 
 
-### <a name="a-this-example-assumes-an-ascii-character-set-and-returns-the-ascii-value-for-6-characters"></a>A. Este exemplo pressupõe um conjunto de caracteres ASCII e retorna o valor `ASCII` para 6 caracteres.
+### <a name="a-this-example-assumes-an-ascii-character-set-and-returns-the-ascii-value-for-6-characters"></a>a. Este exemplo pressupõe um conjunto de caracteres ASCII e retorna o valor `ASCII` para 6 caracteres.
   
 ```sql
 SELECT ASCII('A') AS A, ASCII('B') AS B,   
