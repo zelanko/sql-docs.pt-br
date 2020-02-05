@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 786729a6bfcae37e3c2fb1aa9a9e85839ca9c127
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68119113"
 ---
 # <a name="datetimeoffsetfromparts-transact-sql"></a>DATETIMEOFFSETFROMPARTS (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68119113"
 
 Retorna um valor **datetimeoffset** para os argumentos de data e hora especificados. O valor retornado tem uma precisão especificada pelo argumento de precisão e um deslocamento conforme especificado pelos argumentos de deslocamento.  
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -73,7 +73,7 @@ Um valor literal de inteiro que especifica a precisão do valor **datetimeoffset
 ## <a name="return-types"></a>Tipos de retorno
 **datetimeoffset(** *precision* **)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 
 `DATETIMEOFFSETFROMPARTS` retorna um tipo de dados **datetimeoffset** totalmente inicializado. Os argumentos de deslocamento representam o deslocamento de fuso horário. Para argumentos de deslocamento omitidos, `DATETIMEOFFSETFROMPARTS` presume um deslocamento de fuso horário de `00:00` – em outras palavras, nenhum deslocamento de fuso horário. Para argumentos de deslocamento especificados, `DATETIMEOFFSETFROMPARTS` espera valores para os argumentos e os dois valores devem ser positivos ou negativos. Se *minute_offset* tiver um valor e *hour_offset* não tiver um valor, `DATETIMEOFFSETFROMPARTS` gerará um erro. `DATETIMEOFFSETFROMPARTS` gerará um erro se outros argumentos tiverem valores inválidos. Se pelo menos um dos argumentos necessários tiver um valor `NULL`, `DATETIMEOFFSETFROMPARTS` retornará `NULL`. No entanto, se o argumento *precision* tiver um valor `NULL`, `DATETIMEOFFSETFROMPARTS` gerará um erro.  
   
@@ -83,7 +83,7 @@ Essa função dá suporte à comunicação remota para servidores [!INCLUDE[ssCu
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-an-example-without-fractions-of-a-second"></a>A. Um exemplo sem frações de um segundo  
+### <a name="a-an-example-without-fractions-of-a-second"></a>a. Um exemplo sem frações de um segundo  
   
 ```sql
 SELECT DATETIMEOFFSETFROMPARTS ( 2010, 12, 31, 14, 23, 23, 0, 12, 0, 7 ) AS Result;  

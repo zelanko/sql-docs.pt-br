@@ -18,10 +18,10 @@ ms.assetid: b37e28b6-6e2e-470a-945b-ce5252da743a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8f7160513cd23e16f06dbba27851920b66bf72c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68119822"
 ---
 # <a name="parse-database-engine"></a>Parse (Mecanismo de Banco de Dados)
@@ -55,12 +55,12 @@ CLR: o valor String que está sendo avaliado.
   
 **Tipo de retorno do CLR: SqlHierarchyId**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 Se o método Parse receber um valor que não for uma representação de cadeia de caracteres válida de uma **hierarchyid**, será gerada uma exceção. Por exemplo, se tipos de dados **char** contiverem espaços à direita, será gerada uma exceção.
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-converting-transact-sql-values-without-a-table"></a>A. Convertendo valores Transact-SQL sem uma tabela  
+### <a name="a-converting-transact-sql-values-without-a-table"></a>a. Convertendo valores Transact-SQL sem uma tabela  
 O exemplo de código a seguir usa `ToString` para converter um valor **hierarchyid** em uma cadeia de caracteres e `Parse` para converter um valor de cadeia de caracteres em uma **hierarchyid**.
   
 ```sql

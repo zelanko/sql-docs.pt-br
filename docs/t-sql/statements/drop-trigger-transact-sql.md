@@ -25,10 +25,10 @@ ms.assetid: 092d0d71-9f1e-4e38-a1c4-2487adfa5b4e
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 810367b817aec0688a2bc5168be10c7ff073affc
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73980991"
 ---
 # <a name="drop-trigger-transact-sql"></a>DROP TRIGGER (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "73980991"
 
   Remove um ou mais gatilhos DML ou DDL do banco de dados atual.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -81,7 +81,7 @@ ON ALL SERVER
 > [!NOTE]  
 >  Essa opção não está disponível em um banco de dados independente.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Você pode remover um gatilho DML descartando-o ou descartando a tabela do gatilho. Quando uma tabela é descartada, todos os gatilhos associados também são descartados.  
   
  Quando um gatilho é descartado, as informações sobre o gatilho são removidas das exibições de catálogo **sys.objects**, **sys.triggers** e **sys.sql_modules**.  
@@ -103,7 +103,7 @@ ON ALL SERVER
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-dropping-a-dml-trigger"></a>A. Descartando um gatilho DML  
+### <a name="a-dropping-a-dml-trigger"></a>a. Descartando um gatilho DML  
  O exemplo a seguir remove o gatilho `employee_insupd` do banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. (Começando com o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], é possível usar a sintaxe DROP TRIGGER IF EXISTS.)  
   
 ```  

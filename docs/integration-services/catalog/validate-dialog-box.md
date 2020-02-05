@@ -14,10 +14,10 @@ ms.assetid: 134e14ce-4f8d-4a20-889a-918014c841d8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 049bb90dddf4bbfb03b222a675bd4008eb83cc14
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294867"
 ---
 # <a name="validate-dialog-box"></a>Caixa de diálogo Validar
@@ -53,8 +53,8 @@ ms.locfileid: "71294867"
  **Ambiente**  
  Selecione o ambiente que você deseja usar para validar o projeto ou pacote.  
   
- **Tempo de execução de 32 bits**  
- Opte por usar um tempo de execução de 32 bits para executar um pacote.  
+ **runtime de 32 bits**  
+ Opte por usar um runtime de 32 bits para executar um pacote.  
   
  A guia **Parâmetros** lista os valores de parâmetros usados para validar o projeto ou pacote. As opções a seguir constam na guia Parâmetros.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "71294867"
  **Parâmetro**  
  Lista o nome dos parâmetros  
   
- **Value**  
+ **Valor**  
  Lista o valor do parâmetro.  
   
  A guia **Gerenciadores de Conexões** lista os valores de propriedade dos gerenciadores de conexões usados para validar o projeto ou pacote.  
@@ -80,7 +80,7 @@ ms.locfileid: "71294867"
  **Nome da propriedade**  
  Lista o nome da propriedade do gerenciador de conexões.  
   
- **Value**  
+ **Valor**  
  Lista o valor atribuído à propriedade do gerenciador de conexões.  
   
   

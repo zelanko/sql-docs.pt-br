@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 552394db26a1b236a4d6997f6dbfba77d12086ee
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847217"
 ---
 # <a name="iservervirtualdeviceset2open-vdi"></a>IServerVirtualDeviceSet2::Open (VDI)
@@ -31,7 +31,7 @@ HRESULT IServerVirtualDeviceSet2::Open (
 );
 ```
 
-## <a name="parameters"></a>Parâmetros
+## <a name="parameters"></a>parâmetros
 
 *lpInstanceName* Essa cadeia de caracteres identifica a Instância do SQL Server à qual o comando SQL será enviado. NULL pode ser passado para identificar a instância padrão no computador atual.
 
@@ -44,7 +44,7 @@ HRESULT IServerVirtualDeviceSet2::Open (
 | NOERROR | A função foi bem-sucedida. |
 | VD_E_INVALID | O nome fornecido não identificou um conjunto de dispositivos virtuais que é acessível ao servidor. |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Comentários
 
 Depois que essa função for invocada com êxito, o servidor poderá continuar para configurar o conjunto de dispositivos virtuais usando GetConfiguration e SetConfiguration.
 

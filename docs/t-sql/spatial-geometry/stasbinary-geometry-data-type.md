@@ -18,10 +18,10 @@ ms.assetid: 65353777-e3e6-461c-9504-ea4d83312692
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 2b80156459988793ae4733c9617562b5b6120ae5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68100980"
 ---
 # <a name="stasbinary-geometry-data-type"></a>STAsBinary (tipo de dados geometry)
@@ -39,7 +39,7 @@ ms.locfileid: "68100980"
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **varbinary(max)**  
   
- Tipo de retorno CLR: **SqlBytes**  
+ Tipo de retorno do CLR: **SqlBytes**  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir cria uma instância `LineString` de geometria de (0,0) a (2,3) do texto. `STAsBinary()` retorna o resultado em WKB.  

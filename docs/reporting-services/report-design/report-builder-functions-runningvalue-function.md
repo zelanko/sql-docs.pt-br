@@ -9,10 +9,10 @@ ms.assetid: 6bee2f15-0e69-49c8-9689-b04544063b1d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 91447a23f04b05dc27d0ddcc47ba845d3dc313a2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65577181"
 ---
 # <a name="report-builder-functions---runningvalue-function"></a>Funções do Construtor de Relatórios – Função RunningValue
@@ -28,7 +28,7 @@ ms.locfileid: "65577181"
 RunningValue(expression, function, scope)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *expressão*  
  A expressão na qual executar a agregação, por exemplo, `[Quantity]`.  
   
@@ -41,7 +41,7 @@ RunningValue(expression, function, scope)
 ## <a name="return-type"></a>Tipo de retorno  
  Determinado pela função de agregação especificada no parâmetro *function* .  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O valor de **RunningValue** é redefinido como 0 para cada nova instância do escopo. Se um grupo for especificado, o valor em uso será redefinido quando a expressão de grupo for alterada. Se uma região de dados for especificada, o valor em uso será redefinido para cada nova instância da região de dados. Se um conjunto de dados for especificado, o valor em uso não será redefinido em todo o conjunto de dados.  
   
  **RunningValue** não pode ser usado em um filtro ou expressão de classificação.  

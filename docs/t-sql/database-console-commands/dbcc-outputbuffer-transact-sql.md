@@ -22,10 +22,10 @@ ms.assetid: e912a06d-9fde-4e26-b057-801255d79504
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: f35532913a21ed6f90d1e940dd6346137fc3feda
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68039089"
 ---
 # <a name="dbcc-outputbuffer-transact-sql"></a>DBCC OUTPUTBUFFER (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68039089"
 
 Retorna o buffer de saída atual nos formatos hexadecimal e ASCII para a *session_id* especificada.
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
 ```sql
@@ -55,13 +55,13 @@ FROM sys.dm_exec_requests
 WHERE session_id = @@spid;  
 ```  
   
- com  
+ WITH  
  Permite que as opções sejam especificadas.  
   
  NO_INFOMSGS  
  Suprime todas as mensagens informativas com níveis de severidade de 0 a 10.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 DBCC OUTPUTBUFFER exibe os resultados enviados ao cliente especificado (*session_id*). Para processos que não contêm fluxos de saída, é retornada uma mensagem de erro.
   
 Para mostrar a instrução executada que retornou os resultados exibidos por DBCC OUTPUTBUFFER, execute DBCC INPUTBUFFER.

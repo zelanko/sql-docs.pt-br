@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: a1485cf4-b1c4-49e9-ab06-8ccfaad998f3
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: c37a0b953177d0e3d978607982da54c613a3d2a2
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 3006b3258d26f359e5eab98856ca7ffe43d8321a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908236"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287323"
 ---
 # <a name="republish-data"></a>Republicar dados
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "72908236"
   
  ![Republicar dados](../../relational-databases/replication/media/repl-06a.gif "Republicar dados")  
   
- Qualquer servidor pode agir como um Publicador e Assinante. Por exemplo, considere o diagrama a seguir em que uma publicação de uma tabela existe em Londres e deverá ser distribuída a quatro cidades diferentes nos Estados Unidos: Chicago, Nova York, San Diego e Seattle. O servidor em Nova Iorque é escolhido para assinar a tabela publicada originada em Londres, porque o site de Nova Iorque atende às seguintes condições:  
+ Qualquer servidor pode agir como um Publicador e Assinante. Por exemplo, considere o diagrama a seguir em que uma publicação de uma tabela existe em Londres e deverá ser distribuída a quatro cidades diferentes nos Estados Unidos: Chicago, Nova Iorque, San Diego e Seattle. O servidor em Nova Iorque é escolhido para assinar a tabela publicada originada em Londres, porque o site de Nova Iorque atende às seguintes condições:  
   
 -   O link de retorno da rede para Londres é relativamente confiável.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "72908236"
   
  A replicação fornece suporte aos cenários de republicação mostrados na tabela a seguir.  
   
-|Publicador|Assinante de publicação|Assinante|  
+|Publicador|Assinante de publicação|Subscriber|  
 |---------------|---------------------------|----------------|  
 |Publicação transacional|Assinatura transacional/publicação transacional|Assinatura transacional|  
 |Publicação transacional|Assinatura transacional/publicação de mesclagem*|Assinatura de mesclagem|  

@@ -18,10 +18,10 @@ ms.assetid: e98a56c2-8496-4dfd-9b37-7f3c4ca9b2b5
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: f7a525dedd8f5cbfbf881da63b7bb40f461bc802
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68120928"
 ---
 # <a name="stnumcurves-geography-data-type"></a>STNumCurves (tipo de dados geography)
@@ -39,9 +39,9 @@ ms.locfileid: "68120928"
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Tipo de retorno CLR: **SqlGeography**  
+ Tipo de retorno do CLR: **SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Os tipos de dados espaciais unidimensionais incluem **LineString**, **CircularString** e **CompoundCurve**. Uma instância de **geography** unidimensional vazia retorna 0.  
   
  `STNumCurves`() funciona apenas em tipos simples e não funciona com coleções de **geografia** como **MultiLineString**. **NULL** é retornado quando a instância de **geography** não é um tipo de dados unidimensional.  
@@ -50,7 +50,7 @@ ms.locfileid: "68120928"
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-stnumcurves-on-a-circularstring-instance"></a>A. Usando STNumCurves() em uma instância de CircularString  
+### <a name="a-using-stnumcurves-on-a-circularstring-instance"></a>a. Usando STNumCurves() em uma instância de CircularString  
  O exemplo a seguir mostra como obter o número de curvas em uma instância `CircularString`:  
   
 ```

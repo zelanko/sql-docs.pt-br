@@ -29,10 +29,10 @@ ms.assetid: 517fe745-d79b-4aae-99a7-72be45ea6acb
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: 28952359d69fa1fa1c140a8a2a18222ec114cea0
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73593900"
 ---
 # <a name="create-column-encryption-key-transact-sql"></a>CREATE COLUMN ENCRYPTION KEY (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "73593900"
 
 Cria um objeto de metadados de chave de criptografia de coluna para [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) ou [Always Encrypted com enclaves seguros](../../relational-databases/security/encryption/always-encrypted-enclaves.md). Um objeto de metadados de chave de criptografia de coluna contém um ou dois valores criptografados de uma chave de criptografia de coluna usada para criptografar dados em uma coluna. Cada valor é criptografado usando uma chave mestra de coluna. 
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -75,7 +75,7 @@ O BLOB do valor da chave de criptografia de coluna criptografado.
 > [!WARNING]  
 >  Nunca passe valores de chave de criptografia de coluna em texto simples nesta instrução. Fazer isso comprometerá o benefício desse recurso.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 A instrução `CREATE COLUMN ENCRYPTION KEY` deve incluir pelo menos um ou dois valores. Você pode usar [ALTER COLUMN ENCRYPTION KEY (Transact-SQL)](alter-column-encryption-key-transact-sql.md) para adicionar um segundo valor mais tarde. Você também pode usar a instrução `ALTER COLUMN ENCRYPTION KEY` para remover um valor.  
   
 Normalmente, uma chave de criptografia de coluna é criada com apenas um valor criptografado. Às vezes, é preciso alternar uma chave mestra de coluna para substituir a chave mestra de coluna atual pela nova chave mestra de coluna. Quando for necessário alternar a chave, adicione um novo valor de chave de criptografia de coluna, criptografado com a nova chave mestra de coluna. Essa rotação permite garantir que os aplicativos cliente consigam acessar os dados criptografados com a chave de criptografia de coluna enquanto a nova chave mestra de coluna é disponibilizada para os aplicativos cliente. Um driver habilitado para Always Encrypted em um aplicativo cliente que não tem acesso à nova chave mestra usará o valor de chave de criptografia de coluna criptografado com a chave mestra de coluna antiga para acessar dados confidenciais.  
@@ -94,7 +94,7 @@ Requer a permissão **ALTER ANY COLUMN ENCRYPTION KEY**.
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-creating-a-column-encryption-key"></a>A. Criando uma chave de criptografia de coluna  
+### <a name="a-creating-a-column-encryption-key"></a>a. Criando uma chave de criptografia de coluna  
 O exemplo a seguir cria uma chave de criptografia de coluna chamada `MyCEK`.  
   
 ```sql  

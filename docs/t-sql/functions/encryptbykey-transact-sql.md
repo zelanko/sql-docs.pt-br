@@ -21,10 +21,10 @@ ms.assetid: 0e11f8c5-f79d-46c1-ab11-b68ef05d6787
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 94f179d9c1b8342e5c1cdfd7fcb62e6673634e7a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68135849"
 ---
 # <a name="encryptbykey-transact-sql"></a>ENCRYPTBYKEY (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68135849"
 
   Criptografa dados usando uma chave simétrica.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -72,7 +72,7 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
  
  Retorna NULL se o valor *cleartext* é NULL.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  EncryptByKey usa uma chave simétrica. Essa chave deve estar aberta. Se a chave simétrica já estiver aberta na sessão atual, não será necessário abri-la novamente no contexto da consulta.  
   
  O autenticador ajuda a impedir a substituição do valor inteiro de campos criptografados. Por exemplo, considere a tabela de dados de folha de pagamento a seguir.  
@@ -95,9 +95,9 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
 >  O uso das funções de criptografia do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com a configuração ANSI_PADDING OFF pode provocar perda de dados devido a conversões implícitas. Para obter mais informações sobre ANSI_PADDING, veja [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md).  
   
 ## <a name="examples"></a>Exemplos  
- A funcionalidade ilustrada nos seguintes exemplos baseia-se nas chaves e nos certificados criados em [Como: criptografar uma coluna de dados](../../relational-databases/security/encryption/encrypt-a-column-of-data.md).  
+ A funcionalidade ilustrada nos exemplos a seguir se baseia em chaves e certificados criados em [Como criptografar uma coluna de dados](../../relational-databases/security/encryption/encrypt-a-column-of-data.md).  
   
-### <a name="a-encrypting-a-string-with-a-symmetric-key"></a>A. Criptografando uma cadeia de caracteres com uma chave simétrica  
+### <a name="a-encrypting-a-string-with-a-symmetric-key"></a>a. Criptografando uma cadeia de caracteres com uma chave simétrica  
  O exemplo a seguir adiciona uma coluna à tabela `Employee` e, em seguida, criptografa o valor do número de Social Security que é armazenado na coluna `NationalIDNumber`.  
   
 ```  

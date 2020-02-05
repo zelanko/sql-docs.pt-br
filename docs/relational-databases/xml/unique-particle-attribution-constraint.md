@@ -18,10 +18,10 @@ ms.assetid: 6bb879e9-a5ee-402e-94e4-fe8cec5966b0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b09c2392f49bdfb8a86c33ce16679ec02c232310
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68078009"
 ---
 # <a name="unique-particle-attribution-constraint"></a>Restrição de atribuição de partícula exclusiva
@@ -81,11 +81,11 @@ ms.locfileid: "68078009"
 ## <a name="finding-more-information"></a>Descobrindo mais informações  
  O documento a seguir é publicado pelo World Wide Web Consortium (W3C) e contém a descrição técnica da restrição de atribuição de partícula ambígua.  
   
- "Parte 1 do esquema XML: segunda edição das estruturas, recomendação proposta editada do W3C":  
+ "XML Schema Part 1: Structures Second Edition, W3C Proposed Edited Recommendation":  
   
--   Seção 3.8.6: restrições em componentes de esquema do grupo de modelos  
+-   Section 3.8.6: Constraints on Model Group Schema Components  
   
--   Apêndice H: análise da restrição de atribuição de partícula exclusiva (não normativa)  
+-   Appendix H: Analysis of the Unique Particle Attribution Constraint (non-normative)  
   
  Para consultar o documento, visite [http://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?linkid=48881).  
   

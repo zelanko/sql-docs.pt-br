@@ -23,19 +23,19 @@ helpviewer_keywords:
 ms.assetid: e6529f06-e442-437e-a7bf-41790bc092c5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d658b63e8c2b80c277ed9d8c3647717d07c96c48
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: 8e426d6af578cd822befdeab928c522a55f98d7e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982976"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76259404"
 ---
 # <a name="disable-trigger-transact-sql"></a>DISABLE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Desabilita um gatilho.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -71,7 +71,7 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
 > [!NOTE]  
 >  Essa opção não está disponível em um banco de dados independente.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Os gatilhos são habilitados por padrão ao serem criados. Ao desabilitar um gatilho, você não o descarta. O gatilho ainda existe como um objeto no banco de dados atual. Porém, o gatilho não é acionado quando qualquer instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] em que ele tenha sido programado é executada. Os gatilhos podem ser reabilitados usando [ENABLE TRIGGER](../../t-sql/statements/enable-trigger-transact-sql.md). Os gatilhos DML definidos em tabelas também podem ser desabilitados ou habilitados usando [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
  Alterar o gatilho usando a instrução **ALTER TRIGGER** habilita o gatilho.  
@@ -84,8 +84,8 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
 ## <a name="examples"></a>Exemplos  
 Os exemplos a seguir são descritos no banco de dados AdventureWorks2012.
   
-### <a name="a-disabling-a-dml-trigger-on-a-table"></a>A. Desabilitando um gatilho DML em uma tabela  
- O exemplo a seguir desabilita o gatilho `uAddress` que foi criado na tabela `Address`.  
+### <a name="a-disabling-a-dml-trigger-on-a-table"></a>a. Desabilitando um gatilho DML em uma tabela  
+ O exemplo a seguir desabilita o gatilho `uAddress` que foi criado na tabela `Person`.  
   
 ```sql  
 DISABLE TRIGGER Person.uAddress ON Person.Address;  

@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: d1cfd06fd881c4749879365feda14e3cfcb877a9
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727506"
 ---
 # <a name="r-scripting-errors-in-sql-server"></a>Erros de script do R no SQL Server
@@ -65,7 +65,7 @@ Para permitir que suas credenciais do Windows sejam passadas com segurança de u
 
 1. Abra o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] como administrador na instância em que você deseja executar o código R.
 
-2. Execute o script a seguir. Edite o nome do grupo de usuários, caso tenha alterado o padrão e os nomes do computador e da instância.
+2. Execute o seguinte script. Edite o nome do grupo de usuários, caso tenha alterado o padrão e os nomes do computador e da instância.
 
     ```sql
     USE [master]

@@ -18,13 +18,13 @@ ms.assetid: 9fa7c4c8-4da8-4299-9893-f61815055aa3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8ce7a12b3964e3e0c2407521978df03af9d88f63
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68014974"
 ---
-# <a name="sqlsrvquery"></a>sqlsrv_query
+# <a name="sqlsrv_query"></a>sqlsrv_query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Prepara e executa uma instrução.  
@@ -36,7 +36,7 @@ Prepara e executa uma instrução.
 sqlsrv_query(resource $conn, string $tsql [, array $params [, array $options]])  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
 *$conn*: o recurso de conexão associado à instrução preparada.  
   
 *$tsql*: a expressão Transact-SQL que corresponde à instrução preparada.  
@@ -55,7 +55,7 @@ sqlsrv_query(resource $conn, string $tsql [, array $params [, array $options]])
   
     A descrição de cada elemento da matriz está na tabela a seguir:  
   
-    |Elemento|Descrição|  
+    |Elemento|DESCRIÇÃO|  
     |-----------|---------------|  
     |*$value*|Um valor literal, uma variável do PHP ou uma variável do PHP por referência.|  
     |*$direction*[OPCIONAL]|Uma das seguintes constantes **SQLSRV_PARAM_\*** usadas para indicar a direção do parâmetro: **SQLSRV_PARAM_IN**, **SQLSRV_PARAM_OUT**, **SQLSRV_PARAM_INOUT**. O valor padrão é **SQLSRV_PARAM_IN**.<br /><br />Para obter mais informações sobre constantes do PHP, consulte [Constantes &#40;Drivers da Microsoft para PHP para SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
@@ -67,7 +67,7 @@ sqlsrv_query(resource $conn, string $tsql [, array $params [, array $options]])
 ## <a name="return-value"></a>Valor retornado  
 Um recurso de instrução. Se não for possível criar e/ou executar a instrução, **false** será retornado.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 A função **sqlsrv_query** é adequada para consultas únicas e deve ser a opção padrão para executar consultas, a menos que circunstâncias especiais se apliquem. Essa função fornece um método simplificado para executar uma consulta com uma quantidade mínima de código. A função **sqlsrv_query** realiza a preparação e a execução da instrução e pode ser usada para executar consultas parametrizadas.  
   
 Para obter mais informações, consulte [Como recuperar parâmetros de saída usando o driver SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md).  

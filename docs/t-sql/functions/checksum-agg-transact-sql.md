@@ -20,18 +20,18 @@ ms.assetid: cdede70c-4eb5-4c92-98ab-b07787ab7222
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6fa6d6c5736f57338474c17ac41eee55411c865b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68105019"
 ---
-# <a name="checksumagg-transact-sql"></a>CHECKSUM_AGG (Transact-SQL)
+# <a name="checksum_agg-transact-sql"></a>CHECKSUM_AGG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Essa função retorna a soma de verificação dos valores em um grupo. `CHECKSUM_AGG` ignora valores nulos. A [cláusula OVER](../../t-sql/queries/select-over-clause-transact-sql.md) pode seguir `CHECKSUM_AGG`.
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,7 +43,7 @@ CHECKSUM_AGG ( [ ALL | DISTINCT ] expression )
 **ALL**  
 Aplica a função de agregação a todos os valores. ALL é o argumento padrão.
   
-DISTINCT  
+DISTINTO  
 Especifica que `CHECKSUM_AGG` retorna a soma de verificação de valores exclusivos.
   
 *expressão*  
@@ -52,7 +52,7 @@ Uma [expression](../../t-sql/language-elements/expressions-transact-sql.md) de i
 ## <a name="return-types"></a>Tipos de retorno
 Retorna a soma de verificação de todos os valores de *expression* como **int**.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 `CHECKSUM_AGG` pode detectar alterações em uma tabela.
   
 O resultado de `CHECKSUM_AGG` não depende da ordem das linhas na tabela. Além disso, as funções de `CHECKSUM_AGG` permitem o uso da palavra-chave `DISTINCT` e da cláusula `GROUP BY`.

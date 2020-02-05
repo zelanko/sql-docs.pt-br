@@ -1,10 +1,7 @@
 ---
-title: Elemento TuningOptions (DTA) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: Elemento TuningOptions (DTA)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +11,22 @@ helpviewer_keywords:
 ms.assetid: 58a22ba1-8e03-411f-bd46-85e4540f217a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 20b266aa90f9c1a68607468e284fe9e5d8eb9e95
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 92b52745273894cd5c1537e4ae8bbb5a0b476ce0
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105926"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75304848"
 ---
 # <a name="tuningoptions-element-dta"></a>Elemento TuningOptions (DTA)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Contém as opções de ajuste de uma sessão de ajuste específica.  
+
+Contém as opções de ajuste de uma sessão de ajuste específica.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,7 +41,7 @@ ms.locfileid: "68105926"
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Descrição|  
+|Característica|DESCRIÇÃO|  
 |--------------------|-----------------|  
 |**Comprimento e tipo de dados**|Nenhum.|  
 |**Valor padrão**|Nenhum.|  

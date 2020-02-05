@@ -18,10 +18,10 @@ ms.assetid: 2aef77e8-0460-43f9-bad6-2aae6d8c36f9
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 8a6b8896dadf8abc17d2fb3b3836d53815b7d3f8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066164"
 ---
 # <a name="stx-geometry-data-type"></a>STX (tipo de dados geometry)
@@ -39,12 +39,12 @@ A propriedade de coordenada X de uma instância de **Point**.
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **float**  
   
- Tipo CLR: **SqlDouble**  
+ Tipo do CLR: **SqlDouble**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O valor dessa propriedade será nulo se a instância de **geometry** não for um ponto.  
   
- Esta propriedade é somente leitura.  
+ Essa propriedade é somente leitura.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir cria uma instância de `Point` e usa `STX` para recuperar a coordenada X da instância.  

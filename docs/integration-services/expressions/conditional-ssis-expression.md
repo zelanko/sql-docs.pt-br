@@ -14,10 +14,10 @@ ms.assetid: d38e6890-7338-4ce0-a837-2dbb41823a37
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 758cd90c3932d59e725f6a8a9bf829e59ecf5474
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71290169"
 ---
 # <a name="--conditional-ssis-expression"></a>? : (Condicional) (Expressão SSIS)
@@ -48,7 +48,7 @@ boolean_expression?expression1:expression2
 ## <a name="result-types"></a>Tipos de resultado  
  O tipo de dados de *expression1* ou *expression2*.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Se *boolean_expression* for avaliada como NULL, o resultado da expressão será NULL. Se uma expressão selecionada, *expression1* ou *expression2* for NULL, o resultado será NULL. Se uma expressão selecionada não for NULL, mas aquela não selecionada for NULL, o resultado será o valor da expressão selecionada.  
   
  Se *expression1* e *expression2* tiverem o mesmo tipo de dados, o resultado será aquele tipo de dados. As regras adicionais a seguir se aplicam aos tipos de resultado:  
@@ -63,7 +63,7 @@ boolean_expression?expression1:expression2
   
 -   **Cadeia de caracteres** Ambas as *expression1* e *expression2* devem ser um tipo de dados String: DT_STR ou DT_WSTR. As duas expressões podem ser avaliadas como tipos de dados de cadeia diferentes. O resultado tem o tipo de dados DT_WSTR com um comprimento do argumento mais longo.  
   
--   **Date, Time ou Date/Time** Tanto *expression1* quanto *expression2* devem ser avaliadas como um dos seguintes tipos de dados: DT_DBDATE, DT_DATE, DT_DBTIME, DT_DBTIME2, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAPMOFFSET ou DT_FILETIME.  
+-   **Date, Time, ou Date/Time** Tanto *expression1* quanto *expression2* devem ser avaliadas como um dos seguintes tipos de dados: DT_DBDATE, DT_DATE, DT_DBTIME, DT_DBTIME2, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAPMOFFSET ou DT_FILETIME.  
   
     > [!NOTE]  
     >  O sistema não aceita comparações entre uma expressão que avalia um tipo de dados de hora e uma expressão que avalia um tipo de dados de data ou data/hora. O sistema gera um erro.  

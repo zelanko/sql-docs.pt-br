@@ -11,10 +11,10 @@ ms.assetid: 90e48555-ea83-4a90-80a3-51bc685015ec
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 81ce2d655214de3d31eb233deb4de2b1c3ae49f4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67971948"
 ---
 # <a name="sqlserverblob-members"></a>Membros SQLServerBlob
@@ -24,7 +24,7 @@ ms.locfileid: "67971948"
   
 ## <a name="constructors"></a>Construtores  
   
-|Nome|Descrição|  
+|Nome|DESCRIÇÃO|  
 |----------|-----------------|  
 |[SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-constructor-sqlserverconnection-byte.md)|Inicializa uma nova instância da classe SQLServerBlob.|  
   
@@ -36,7 +36,7 @@ ms.locfileid: "67971948"
   
 ## <a name="methods"></a>Métodos  
   
-|Nome|Descrição|  
+|Nome|DESCRIÇÃO|  
 |----------|-----------------|  
 |[gratuito](../../../connect/jdbc/reference/free-method-sqlserverblob.md)|Esse método libera o objeto BLOB e os recursos que ele contém.|  
 |[getBinaryStream](../../../connect/jdbc/reference/getbinarystream-method-sqlserverblob.md)|Retorna um fluxo de entrada para ler dados do BLOB.|  

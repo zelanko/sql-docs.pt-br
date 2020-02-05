@@ -1,10 +1,9 @@
 ---
-title: Monitorar a Atividade de Trabalho | Microsoft Docs
-ms.custom: ''
+title: Monitorar Atividade do Trabalho
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,13 +20,15 @@ helpviewer_keywords:
 ms.assetid: 71cb432b-631d-4b8b-9965-e731b3d8266d
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a227b7ee1723dd8a77d7eb118476969575c5951c
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 0fdb46ddca31f870363385bef70adde37a7a36ef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267498"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252356"
 ---
 # <a name="monitor-job-activity"></a>Monitorar Atividade do Trabalho
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -64,7 +65,7 @@ Você também pode exibir a atividade de trabalhos da sessão atual, usando o pr
 |||  
 |-|-|  
 |**Descrição**|**Tópico**|  
-|Descreve como exibir o estado de tempo de execução de trabalhos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Exibir Atividade do Trabalho](../../ssms/agent/view-job-activity.md)|  
+|Descreve como exibir o estado de runtime de trabalhos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Exibir Atividade do Trabalho](../../ssms/agent/view-job-activity.md)|  
   
 ## <a name="see-also"></a>Consulte Também  
 [Exibir Atividade do Trabalho](../../ssms/agent/view-job-activity.md)  

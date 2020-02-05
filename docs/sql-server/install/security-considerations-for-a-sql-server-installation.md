@@ -1,5 +1,5 @@
 ---
-title: Considerações sobre segurança para uma instalação do SQL Server | Microsoft Docs
+title: Considerações de segurança
 ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: sql
@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: cf96155f-30a8-48b7-8d6b-24ce90dafdc7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 302b29901b9f20c70799704bdf75938270900173
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c11b2a788561af2281a7f0967972e63358c4ab82
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68019813"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258959"
 ---
 # <a name="security-considerations-for-a-sql-server-installation"></a>Considerações sobre segurança para uma instalação do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -121,9 +121,9 @@ ms.locfileid: "68019813"
   
 -   Depois que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for instalado em um computador, você não poderá alterar o computador de um controlador de domínio para um membro do domínio. Você deve desinstalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antes de alterar o computador host para um membro do domínio.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] onde os nós de agrupamento sejam controladores de domínio.  
+-   Não há suporte às instâncias de cluster de failover do[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em que os nós de agrupamento sejam controladores de domínio.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] A Instalação não pode criar grupos de segurança nem provisionar contas de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um controlador de domínio somente leitura. Nesse cenário, haverá falha na Instalação.  
+-   A Instalação do[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não pode criar grupos de segurança ou provisionar contas de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um controlador de domínio somente leitura. Nesse cenário, haverá falha na Instalação.  
   
 ## <a name="during-or-after-installation-of-includessnoversionincludesssnoversion-mdmd"></a>Durante ou após a instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Após a instalação, você pode aprimorar a segurança da instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] seguinte estas práticas recomendadas relativas a contas e modos de autenticação:  
@@ -134,7 +134,7 @@ ms.locfileid: "68019813"
   
 -   Associe os serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a contas de usuário locais do Windows ou contas de usuário do domínio com pouco privilégio.  
   
--   Para obter mais informações, veja [Configurar contas de serviço e permissões do Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+-   Para obter mais informações, consulte [Configurar contas de serviço e permissões do Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
  **Modo de autenticação**  
   
