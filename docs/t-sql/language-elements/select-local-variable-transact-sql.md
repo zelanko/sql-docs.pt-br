@@ -26,20 +26,20 @@ author: rothja
 ms.author: jroth
 monikerRange: = azuresqldb-current ||>= sql-server-2016 ||= azure-sqldw-latest||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: 6a274535d53b7eec57fdf257425f855eded5d046
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68121775"
 ---
-# <a name="select-localvariable-transact-sql"></a>SELECT @local_variable (Transact-SQL)
+# <a name="select-local_variable-transact-sql"></a>SELECT @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   Define uma variável local com o valor de uma expressão.  
   
  Para atribuir variáveis, recomendamos o uso de [SET @local_variable](../../t-sql/language-elements/set-local-variable-transact-sql.md), em vez de SELECT @*local_variable*.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -56,7 +56,7 @@ SELECT { @local_variable { = | += | -= | *= | /= | %= | &= | ^= | |= } expressio
 Atribui o valor à direita à variável da esquerda.  
   
 Operador de atribuição composto:  
-  |operador |action |   
+  |operador |ação |   
   |-----|-----|  
   | = | Atribui a expressão a seguir à variável. |  
   | += | Adicionar e atribuir |   
@@ -71,7 +71,7 @@ Operador de atribuição composto:
  *expressão*  
  É qualquer [expressão](../../t-sql/language-elements/expressions-transact-sql.md) válida. Isso inclui uma subconsulta escalar.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  SELECT @*local_variable* normalmente é usado para retornar um único valor na variável. No entanto, quando *expression* é o nome de uma coluna, ela pode retornar vários valores. Se a instrução SELECT retornar mais de um valor, à variável será atribuído o último valor retornado.  
   
  Se a instrução SELECT não retornar nenhuma linha, a variável reterá seu valor atual. Se *expression* for uma subconsulta escalar que não retorna nenhum valor, a variável será definida como NULL.  
@@ -83,7 +83,7 @@ Operador de atribuição composto:
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-use-select-localvariable-to-return-a-single-value"></a>A. Usar SELECT @local_variable para retornar um único valor  
+### <a name="a-use-select-local_variable-to-return-a-single-value"></a>a. Usar SELECT @local_variable para retornar um único valor  
  No exemplo a seguir, a variável `@var1` recebe `Generic Name` com seu valor. A consulta na tabela `Store` não retorna linhas porque o valor especificado para `CustomerID` não existe na tabela. A variável retém o valor `Generic Name`.  
   
 ```sql  
@@ -105,7 +105,7 @@ SELECT @var1 AS 'Company Name';
  Generic Name  
  ```  
   
-### <a name="b-use-select-localvariable-to-return-null"></a>B. Usar SELECT @local_variable para retornar nulo  
+### <a name="b-use-select-local_variable-to-return-null"></a>B. Usar SELECT @local_variable para retornar nulo  
  No exemplo a seguir, uma subconsulta é usada para atribuir um valor a `@var1`. Como o valor solicitado para `CustomerID` não existe, a subconsulta não retorna valores e a variável é definida como `NULL`.  
   
 ```sql  

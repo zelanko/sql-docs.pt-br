@@ -18,10 +18,10 @@ ms.assetid: 81577d7e-8ff6-4e73-b7f4-94c03d4921e7
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: f05c80a78417a8b5153345466eadcd49fa810228
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077996"
 ---
 # <a name="getlevel-database-engine"></a>GetLevel (Mecanismo de Banco de Dados)
@@ -46,14 +46,14 @@ SqlInt16 GetLevel ( )
   
 **Tipo de retorno do CLR: SqlInt16**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 Usado para determinar o nível de um ou mais nós ou para filtrar os nós de membros de um nível especificado. A raiz da hierarquia é nível 0.
   
 GetLevel é útil para índices de pesquisa de primeira amplitude. Para obter mais informações, consulte [Dados hierárquicos &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md).
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-returning-the-hierarchy-level-as-a-column"></a>A. Retornando o nível de hierarquia como uma coluna  
+### <a name="a-returning-the-hierarchy-level-as-a-column"></a>a. Retornando o nível de hierarquia como uma coluna  
 O seguinte exemplo retorna uma representação de texto da **hierarchyid** e, em seguida, o nível de hierarquia como a coluna **EmpLevel** para todas as linhas na tabela:
   
 ```sql

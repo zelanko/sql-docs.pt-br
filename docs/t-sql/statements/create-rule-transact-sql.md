@@ -30,10 +30,10 @@ ms.assetid: b016a289-3a74-46b1-befc-a13183be51e4
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 0e0a46138b9e6c4ccaff09c1ab5261f739deb6b5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006497"
 ---
 # <a name="create-rule-transact-sql"></a>CREATE RULE (Transact-SQL)
@@ -46,7 +46,7 @@ ms.locfileid: "68006497"
   
  Uma coluna ou tipo de dados de alias só pode ter uma regra associada. No entanto, uma coluna pode ter uma regra e uma ou mais restrições de verificação associadas. Quando isso ocorrer, todas as restrições serão avaliadas.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -72,7 +72,7 @@ AS condition_expression
 > [!NOTE]  
 >  Evite criar regras em expressões que usam tipos de dados de alias. Embora as regras possam ser criadas em expressões que usam tipos de dados de alias, após associar as regras a tipos de dados de colunas ou de alias, as expressões falham ao compilar quando referenciadas.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  CREATE RULE não pode ser combinada com outras instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] em um único lote. As regras não se aplicam a dados já existentes no banco de dados no momento da criação das regras, e as regras não podem ser associadas a tipos de dados do sistema.  
   
  A regra só pode ser criada no banco de dados atual. Depois de criar uma regra, execute **sp_bindrule** para associá-la ao tipo de dados de coluna ou de alias. A regra deve ser compatível com o tipo de dados de coluna. Por exemplo, "\@value LIKE A% " não pode ser usado como regra para uma coluna numérica. Uma regra não pode ser associada a um **text**, **ntext**, **image**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **xml**, tipo de dado CLR definido pelo usuário ou uma coluna **timestamp**. A regra não pode ser associada a uma coluna computada.  
@@ -87,10 +87,10 @@ AS condition_expression
   
  Você pode associar uma nova regra a uma coluna ou tipo de dados sem desassociar a anterior; a nova regra substitui a anterior. As regras associadas a colunas sempre têm precedência a regras associadas a tipos de dados de alias. A associação de uma regra a uma coluna substitui a regra já associada ao tipo de dados de alias daquela coluna. Mas a associação de uma regra a um tipo de dados não substitui a regra associada à coluna daquele tipo de dados de alias. A tabela a seguir mostra a precedência em vigor quando as regras são associadas a colunas e a tipos de dados de alias nos quais já existem regras.  
   
-|Nova regra associada a|Regra antiga associada a<br /><br /> tipo de dados de alias|Regra antiga associada a<br /><br /> coluna|  
+|Nova regra associada a|Regra antiga associada a<br /><br /> tipo de dados de alias|Regra antiga associada a<br /><br /> Coluna|  
 |-----------------------|-------------------------------------------|----------------------------------|  
 |Tipo de dados de alias|Regra antiga substituída|Nenhuma alteração|  
-|coluna|Regra antiga substituída|Regra antiga substituída|  
+|Coluna|Regra antiga substituída|Regra antiga substituída|  
   
  Se uma coluna tiver um padrão e uma regra associados, o padrão deverá se encaixar no domínio definido pela regra. Um padrão em conflito com uma regra nunca é inserido. O Mecanismo de Banco de Dados do SQL Server gera uma mensagem de erro toda vez que tenta inserir um padrão assim.  
   
@@ -99,7 +99,7 @@ AS condition_expression
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-creating-a-rule-with-a-range"></a>A. Criando uma regra com um intervalo  
+### <a name="a-creating-a-rule-with-a-range"></a>a. Criando uma regra com um intervalo  
  O exemplo a seguir cria uma regra que restringe o intervalo de inteiros inserido na coluna ou colunas às quais essa regra está associada.  
   
 ```  

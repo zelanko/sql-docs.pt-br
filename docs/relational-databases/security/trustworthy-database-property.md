@@ -13,10 +13,10 @@ ms.assetid: 64b2a53d-4416-4a19-acc0-664a61b45348
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: ec745810697b325b8f1e1b2d5e67871136b9f089
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68126817"
 ---
 # <a name="trustworthy-database-property"></a>Propriedade de banco de dados TRUSTWORTHY

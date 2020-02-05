@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 00497dfe67c03eab4d9d0bc1798f6d5537628ed7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101938"
 ---
 # <a name="dbcc-flushauthcache-transact-sql"></a>DBCC FLUSHAUTHCACHE (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68101938"
 
 Esvazia o cache de autenticação do banco de dados que contém informações sobre logons e as regras de firewall, para o banco de dados do usuário atual no [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Essa instrução não se aplica ao banco de dados mestre lógico, porque o banco de dados mestre contém o armazenamento físico para as informações sobre logons e regras de firewall. O usuário que executa a instrução e os outros usuários conectados no momento permanecem conectados. (No momento, o DBCC FLUSHAUTHCACHE não é compatível com o [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].)
  
-![Ícone de link do artigo](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do artigo") [Convenções de sintaxe do Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do artigo](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do artigo") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,7 +41,7 @@ DBCC FLUSHAUTHCACHE [ ; ]
 ## <a name="arguments"></a>Argumentos  
 Nenhum.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 O cache de autenticação faz uma cópia dos logons e das regras de firewall do servidor que são armazenados no mestre e os coloca na memória no banco de dados de usuário.  Como as informações sobre os usuários de banco de dados independente já são armazenadas no banco de dados de usuário, os usuários de banco de dados independente não fazem parte do cache de autenticação.
 As conexões com o [!INCLUDE[ssSDS](../../includes/sssds-md.md)] que ficam ativas continuamente exigem uma nova autorização (executada pelo [!INCLUDE[ssDE](../../includes/ssde-md.md)]) pelo menos a cada 10 horas. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] tenta a nova autorização usando a senha enviada originalmente e não é necessária nenhuma entrada do usuário. Por motivos de desempenho, quando uma senha for redefinida no [!INCLUDE[ssSDS](../../includes/sssds-md.md)], a conexão não será autenticada novamente, mesmo se a conexão for redefinida devido ao pooling de conexões. Esse comportamento é diferente do comportamento do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] local. Se a senha for alterada depois que a conexão for autorizada inicialmente, a conexão precisará ser terminada e uma nova conexão deverá ser feita usando a nova senha. Um usuário com a permissão KILL DATABASE CONNECTION pode terminar explicitamente uma conexão com o [!INCLUDE[ssSDS](../../includes/sssds-md.md)] usando o comando [KILL &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-transact-sql.md).
   

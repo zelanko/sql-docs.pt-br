@@ -11,10 +11,10 @@ ms.assetid: 8fc476ac-bd69-434e-9636-70776e0b3b6c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a746df126c3652108217ea3dfedeb37be4f1751e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295087"
 ---
 # <a name="troubleshooting-reports-for-package-execution"></a>Solucionando problemas de relatórios para execução de pacotes
@@ -41,6 +41,6 @@ ms.locfileid: "71295087"
 ## <a name="related-content"></a>Conteúdo relacionado  
  [Relatórios do servidor do Integration Services](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports)  
   
- [Solucionando problemas de ferramentas para execução de pacotes](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
+ [Ferramentas de solução de problemas de execução de pacote](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
   

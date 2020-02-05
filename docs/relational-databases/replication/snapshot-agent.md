@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: b715e621-2cd5-4a15-8f58-a341aa8ef5e4
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: c3eb8c58bc43268356f47946df3ec60e7553ec61
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: b4f8a7c8bb130c7b92446ba3a925566e730737eb
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769535"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287145"
 ---
 # <a name="snapshot-agent"></a>Snapshot Agent
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

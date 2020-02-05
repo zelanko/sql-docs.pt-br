@@ -14,10 +14,10 @@ ms.assetid: 55a0951a-46f3-4f0f-9972-74cec9cc26b7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4ed4722261ca83d95345c8d8fc5024f1076be839
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71282505"
 ---
 # <a name="events-logged-by-an-integration-services-package"></a>Eventos registrados em log por um pacote do Integration Services
@@ -92,7 +92,7 @@ ms.locfileid: "71282505"
   
 3.  No menu **Depurar** , clique em **Iniciar Depuração**.  
   
-     Quando o tempo de execução encontra os eventos e as mensagens personalizadas habilitadas para registro, as entradas de log para cada evento ou mensagem são gravadas na janela **Eventos de Log** .  
+     Quando o runtime encontra os eventos e as mensagens personalizadas habilitadas para registro, as entradas de log para cada evento ou mensagem são gravadas na janela **Eventos de Log** .  
   
 4.  No menu **Depurar** , clique em **Parar Depuração**.  
   

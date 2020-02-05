@@ -25,13 +25,13 @@ helpviewer_keywords:
 ms.assetid: 04588807-21e7-4bbe-9727-b72f692cffa7
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 101c272e51a4a4fdab4456f87aac297c2ac56476
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 0be4de8a2496bfc1c6f08c0207a64d486c9ed9c5
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768818"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286853"
 ---
 # <a name="back-up-and-restore-replicated-databases"></a>Fazer backup e restaurar bancos de dados replicados
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

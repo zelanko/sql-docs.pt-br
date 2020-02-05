@@ -12,22 +12,22 @@ ms.assetid: 4be24c64-2d52-4cb4-b4d7-36efbe4555b6
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: bc01cf250840fb42a8c29525974494a21398e1ff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68105250"
 ---
-# <a name="mssqlserver3176"></a>MSSQLSERVER_3176
+# <a name="mssqlserver_3176"></a>MSSQLSERVER_3176
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|Nome do Produto|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |ID do evento|3176|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|LDDB_FILE_CLAIM|  
 |Texto da mensagem|O arquivo '%ls' foi reivindicado por '%ls' (%d) e '%ls' (%d). A cláusula WITH MOVE pode ser usada para realocar um ou mais arquivos.|  
@@ -35,7 +35,7 @@ ms.locfileid: "68105250"
 ## <a name="explanation"></a>Explicação  
 Tentativa de uso de um arquivo para mais de uma finalidade.  
   
-### <a name="possible-causes"></a>Causas possíveis  
+### <a name="possible-causes"></a>Possíveis causas  
 Outro banco de dados já está usando o nome de arquivo.  
   
 ## <a name="user-action"></a>Ação do usuário  

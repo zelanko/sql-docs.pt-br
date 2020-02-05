@@ -15,10 +15,10 @@ ms.assetid: 9c0d10b1-9e12-430c-83b9-ca2bd0a3afc4
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: da14149b9518a14fa4b7a50072ba35c0b8dcefe2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67991372"
 ---
 # <a name="availability-replica-is-not-joined-to-an-always-on-availability-group"></a>A réplica de disponibilidade não foi ingressada em um Grupo de Disponibilidade AlwaysOn
@@ -33,13 +33,13 @@ ms.locfileid: "67991372"
 |**Categoria**|**Aviso**|  
 |**Faceta**|Réplica de disponibilidade|  
   
-## <a name="description"></a>Descrição  
+## <a name="description"></a>DESCRIÇÃO  
  Esta política verifica o estado da junção da réplica de disponibilidade. A política estará em um estado não íntegro quando a réplica de disponibilidade for adicionada ao grupo de disponibilidade, mas não for unida corretamente. Caso contrário, a política estará em um estado íntegro.  
   
 > [!NOTE]  
 >  Para esta versão do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], as informações sobre as possíveis causas e soluções estão localizadas em [A réplica de disponibilidade não está unida](https://go.microsoft.com/fwlink/p/?LinkId=220859) no Wiki do TechNet.  
   
-## <a name="possible-causes"></a>Causas possíveis  
+## <a name="possible-causes"></a>Possíveis causas  
  A réplica secundária não está unida ao grupo de disponibilidade. Para que uma réplica de disponibilidade seja unida com êxito ao grupo de disponibilidade, o estado da junção deve ser Instância Autônoma Unida (1) ou Cluster de Failover Unido (2).  
   
 ## <a name="possible-solution"></a>Solução possível  

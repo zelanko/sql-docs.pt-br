@@ -18,10 +18,10 @@ ms.assetid: 1d71dfd8-9d80-44c3-b6e1-64e99cde1fa0
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: a198292700fdda1e5dc092afc4a5bb1948e7192a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68075049"
 ---
 # <a name="stpointfromtext-geometry-data-type"></a>STPointFromText (tipo de dados geometry)
@@ -46,11 +46,11 @@ STPointFromText ( 'point_tagged_text' , SRID )
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Tipo de retorno CLR: **SqlGeometry**  
+ Tipo de retorno do CLR: **SqlGeometry**  
   
- Tipo OGC: **Ponto**  
+ Tipo do OGC: **Point**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse método gerará uma **FormatException** se a entrada não for bem formatada.  
   
 ## <a name="examples"></a>Exemplos  

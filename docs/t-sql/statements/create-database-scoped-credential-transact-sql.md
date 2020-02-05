@@ -23,10 +23,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=aps-pdw-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2fff507046ae5a53abbffbd91bb245f52d57a53c
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73594145"
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "73594145"
 
 Cria uma credencial de banco de dados. Uma credencial de banco de dados não é mapeada para um usuário do banco de dados ou logon do servidor. A credencial é usada pelo banco de dados para acessar o local externo sempre que o banco de dados está executando uma operação que requer acesso.
 
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -56,7 +56,7 @@ SECRET **='** _secret_ **'** Especifica o segredo necessário para a autenticaç
 > [!WARNING]
 > O valor da chave SAS pode começar com um '?' (ponto de interrogação). Quando você usa a chave SAS, deve remover o '?' à esquerda. Caso contrário, seus esforços poderão ser bloqueados.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Comentários
 
 Uma credencial no escopo do banco de dados é um registro que contém as informações de autenticação necessárias para conectar-se a um recurso fora do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A maioria das credenciais inclui um usuário e uma senha do Windows.
 
@@ -86,7 +86,7 @@ Exige a permissão **CONTROL** no banco de dados.
 
 ## <a name="examples"></a>Exemplos
 
-### <a name="a-creating-a-database-scoped-credential-for-your-application"></a>A. Como criar uma credencial no escopo do banco de dados para seu aplicativo
+### <a name="a-creating-a-database-scoped-credential-for-your-application"></a>a. Como criar uma credencial no escopo do banco de dados para seu aplicativo
 
 O exemplo a seguir cria a credencial no escopo do banco de dados chamada `AppCred`. A credencial no escopo do banco de dados contém o usuário do Windows `Mary5` e uma senha.
 

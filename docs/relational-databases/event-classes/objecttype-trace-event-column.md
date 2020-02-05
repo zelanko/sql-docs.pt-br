@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 76675cf49ba1ac19e18b3bb4b96980aa30c4f6c3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115894"
 ---
 # <a name="objecttype-trace-event-column"></a>Coluna de evento de rastreamento ObjectType
@@ -38,14 +38,14 @@ ms.locfileid: "68115894"
 |8275|Tabela do sistema|  
 |8276|Gatilho em servidor|  
 |8277|Tabela (definida pelo usuário)|  
-|8278|Exibição|  
+|8278|Visualizar|  
 |8280|Procedimento armazenado estendido|  
 |16724|Gatilho CLR|  
-|16964|banco de dados|  
-|16975|Object|  
+|16964|Banco de dados|  
+|16975|Objeto|  
 |17222|Catálogo de texto completo|  
 |17232|Procedimento armazenado CLR|  
-|17235|esquema|  
+|17235|Esquema|  
 |17475|Credencial|  
 |17491|Evento DDL|  
 |17741|Evento de gerenciamento|  
@@ -60,11 +60,11 @@ ms.locfileid: "68115894"
 |18263|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows|  
 |19265|Chave assimétrica|  
 |19277|Chave mestra|  
-|19280|Chave Primária|  
+|19280|Chave primária|  
 |19283|ObfusKey|  
 |19521|Logon de chave assimétrica|  
 |19523|Logon de certificado|  
-|19538|Role|  
+|19538|Função|  
 |19539|Logon do SQL|  
 |19543|Logon do Windows|  
 |20034|Associação de serviço remoto|  
@@ -100,7 +100,7 @@ ms.locfileid: "68115894"
 |22601|Índice|  
 |22604|Logon de certificado|  
 |22611|Esquema XML|  
-|22868|Tipo|  
+|22868|Type|  
   
 ## <a name="see-also"></a>Consulte Também  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  

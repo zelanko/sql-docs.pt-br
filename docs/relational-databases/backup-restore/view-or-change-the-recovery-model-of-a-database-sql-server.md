@@ -19,10 +19,10 @@ ms.assetid: 94918d1d-7c10-4be7-bf9f-27e00b003a0f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4af4e8b1d0dacb5e08cdd117a14691b909050b09
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75254048"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>Exibir ou alterar o modelo de recuperação de um banco de dados (SQL Server)
@@ -102,7 +102,7 @@ USE [master] ;
 ALTER DATABASE [model] SET RECOVERY FULL ;  
 ```  
   
-##  <a name="FollowUp"></a> Recomendações: após você alterar o modelo de recuperação  
+##  <a name="FollowUp"></a> Recomendações: após a alteração do modelo de recuperação  
   
 -   **Depois de alternar entre os modelos de recuperação completa e bulk-logged**  
   
@@ -110,13 +110,13 @@ ALTER DATABASE [model] SET RECOVERY FULL ;
   
     -   Depois de alternar do modelo de recuperação bulk-logged novamente para o modelo de recuperação completa, faça backup do log.  
   
-        >**OBSERVAÇÃO:** Sua estratégia de backup permanecerá a mesma: continue executando backups periódicos do banco de dados, do log e backups diferenciais.  
+        >**OBSERVAÇÃO:** sua estratégia de backup permanecerá a mesma: continue executando backups periódicos do banco de dados, do log e backups diferenciais.  
   
 -   **Depois de alternar do modelo de recuperação simples**  
   
     -   Imediatamente depois de alternar para a troca para o modelo de recuperação completa ou modelo de recuperação bulk-logged, faça um backup completo ou diferencial de banco de dados para iniciar a cadeia de logs.  
   
-        >**OBSERVAÇÃO:** A alternância para o modelo de recuperação completa ou com log de operações em massa só entrará em vigor depois do primeiro backup de dados.  
+        >**OBSERVAÇÃO:** a alternância para o modelo de recuperação completa ou com log de operações em massa só entrará em vigor depois do primeiro backup de dados.  
   
     -   Agende backups de log regulares e atualize seu plano de restauração adequadamente.  
   

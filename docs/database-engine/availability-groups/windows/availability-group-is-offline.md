@@ -15,10 +15,10 @@ ms.assetid: 093c5208-bf7a-49f4-a546-72b48197cadf
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d2f9c6101be3dba631a9e0cbebdfedc3444c72d5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67991468"
 ---
 # <a name="always-on-availability-group-is-offline"></a>O grupo de disponibilidade Always On está offline
@@ -33,7 +33,7 @@ ms.locfileid: "67991468"
 |**Categoria**|**Crítico**|  
 |**Faceta**|grupo de disponibilidade|  
   
-## <a name="description"></a>Descrição  
+## <a name="description"></a>DESCRIÇÃO  
  Esta política verifica o estado online ou offline do grupo de disponibilidade. A política estará em estado não íntegro e um alerta será emitido quando o recurso de cluster do grupo de disponibilidade estiver offline ou o grupo de disponibilidade não tiver uma réplica primária.  
   
  O estado da política será íntegro quando o recurso de cluster do grupo de disponibilidade estiver online e o grupo de disponibilidade tiver uma réplica primária.  
@@ -41,7 +41,7 @@ ms.locfileid: "67991468"
 > [!NOTE]  
 >  Para esta versão do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], as informações sobre possíveis causas e soluções estão localizadas em [O grupo de disponibilidade está offline](https://go.microsoft.com/fwlink/p/?LinkId=220850) no TechNet Wiki.  
   
-## <a name="possible-causes"></a>Causas possíveis  
+## <a name="possible-causes"></a>Possíveis causas  
  Esse problema pode ser causado por uma falha na instância de servidor que hospeda a réplica primária ou pelo recurso de grupo de disponibilidade WSFC (Windows Server Failover Cluster) que entra offline. Estas são as possíveis causas do grupo de disponibilidade estar offline:  
   
 -   O grupo de disponibilidade não está configurado com o modo de failover automático. A réplica primária torna-se indisponível e a função de todas as réplicas do grupo de disponibilidade torna-se RESOLVING.  

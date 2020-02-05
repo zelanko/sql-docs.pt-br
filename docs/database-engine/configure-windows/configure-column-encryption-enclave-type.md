@@ -11,10 +11,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: 4786c512850d161d9b7ab33f2a12cd0bd077b2bd
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73593828"
 ---
 # <a name="configure-the-enclave-type-for-always-encrypted-server-configuration-option"></a>Configurar o tipo de enclave para a Opção de Configuração de Servidor Always Encrypted
@@ -24,7 +24,7 @@ Este artigo descreve como habilitar ou desabilitar um enclave seguro para Always
 
 A Opção de Configuração do Servidor de **tipo de enclave de criptografia de coluna** controla o tipo de enclave seguro usado para Always Encrypted. A opção pode ser definida como um dos valores a seguir:  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-------------------|-----------------| 
 |0|**Nenhum enclave seguro**. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] não inicializará o enclave seguro para o Always Encrypted. Como resultado, a funcionalidade do Always Encrypted com enclaves seguros não estará disponível.|  
 |1|**VBS (segurança baseada em virtualização)** . O [!INCLUDE[ssDE](../../includes/ssde-md.md)] tentará inicializar um enclave de VBS (segurança baseada em virtualização).
@@ -72,7 +72,7 @@ SELECT
 FROM sys.configurations
 WHERE [name] = 'column encryption enclave type'; 
 ```  
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Próximas etapas
  [Gerenciar chaves para Always Encrypted com enclaves seguros](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)
 
 ## <a name="see-also"></a>Consulte Também  

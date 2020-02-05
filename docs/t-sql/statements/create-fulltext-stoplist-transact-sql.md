@@ -26,10 +26,10 @@ ms.assetid: 0669b1d0-46cc-4fac-8df7-5f7fa7af5db4
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 7d2061479ac8f93dfcdbc4a8039ef3914d897f87
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73064649"
 ---
 # <a name="create-fulltext-stoplist-transact-sql"></a>CREATE FULLTEXT STOPLIST (Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "73064649"
 > [!IMPORTANT]  
 >  Somente há suporte para CREATE FULLTEXT STOPLIST, ALTER FULLTEXT STOPLIST e DROP FULLTEXT STOPLIST no nível de compatibilidade 100. Nos níveis de compatibilidade 80 e 90, essas instruções não têm suporte. No entanto, em todos os níveis de compatibilidade, a lista de palavras irrelevantes (stoplist) do sistema é associada automaticamente a novos índices de texto completo.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -72,7 +72,7 @@ CREATE FULLTEXT STOPLIST stoplist_name
  AUTHORIZATION *owner_name*  
  Especifica o nome de uma entidade do banco de dados que será a proprietária da lista de palavras irrelevantes. *owner_name* deve ser o nome de uma entidade da qual o usuário atual seja membro ou o usuário atual deve ter a permissão IMPERSONATE em *owner_name*. Se não estiver especificada, a propriedade será dada ao usuário atual.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O criador de uma lista de palavras irrelevantes é seu proprietário.  
   
 ## <a name="permissions"></a>Permissões  
@@ -83,7 +83,7 @@ CREATE FULLTEXT STOPLIST stoplist_name
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-creating-a-new-full-text-stoplist"></a>A. Criando uma nova lista de palavras irrelevantes de texto completo  
+### <a name="a-creating-a-new-full-text-stoplist"></a>a. Criando uma nova lista de palavras irrelevantes de texto completo  
  O exemplo a seguir cria uma nova lista de palavras irrelevantes de texto completo denominada `myStoplist`.  
   
 ```sql  

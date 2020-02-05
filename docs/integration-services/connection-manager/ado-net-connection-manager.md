@@ -18,10 +18,10 @@ ms.assetid: fc5daa2f-0159-4bda-9402-c87f1035a96f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d3cf4e302df6e28d898a2790d928cf40085f7915
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74687271"
 ---
 # <a name="adonet-connection-manager"></a>Gerenciador de conexões ADO.NET
@@ -100,7 +100,7 @@ Para usar a autenticação de identidade gerenciada para o Banco de Dados SQL do
     CREATE USER [your data factory name] FROM EXTERNAL PROVIDER;
     ```
 
-1. Conceda à identidade gerenciada do data factory as permissões necessárias como faria normalmente para usuários do SQL e outros. Saiba mais sobre as funções adequadas em [Funções do nível de banco de dados](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles). Execute o código a seguir. Para mais opções, confira [este documento](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql).
+1. Conceda à identidade gerenciada do data factory as permissões necessárias, como faria normalmente para usuários do SQL e outros. Saiba mais sobre as funções adequadas em [Funções do nível de banco de dados](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles). Execute o código a seguir. Para mais opções, confira [este documento](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql).
 
     ```sql
     EXEC sp_addrolemember [role name], [your data factory name];
@@ -122,7 +122,7 @@ Para usar a autenticação de identidade gerenciada para a instância gerenciada
     CREATE USER [your data factory name] FROM EXTERNAL PROVIDER;
     ```
 
-1. Conceda à identidade gerenciada do data factory as permissões necessárias como faria normalmente para usuários do SQL e outros. Execute o código a seguir. Para mais opções, confira [este documento](https://docs.microsoft.com/sql/t-sql/statements/alter-role-transact-sql?view=azuresqldb-mi-current).
+1. Conceda à identidade gerenciada do data factory as permissões necessárias, como faria normalmente para usuários do SQL e outros. Execute o código a seguir. Para mais opções, confira [este documento](https://docs.microsoft.com/sql/t-sql/statements/alter-role-transact-sql?view=azuresqldb-mi-current).
 
     ```sql
     ALTER ROLE [role name e.g., db_owner] ADD MEMBER [your data factory name];

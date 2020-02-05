@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0880ce366c2db15f7e751c9493bebf5f97d4240a
-ms.sourcegitcommit: 9b8b11961b33e66fc9f433d094fc5c0f9b473772
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74908714"
 ---
 # <a name="set-or-change-the-column-collation"></a>Definir ou alterar a ordenação de coluna
@@ -122,7 +122,7 @@ GO
 SELECT * FROM TestPermTab AS a INNER JOIN #TestTempTab on a.Col1 = #TestTempTab.Col1;  
 ```  
   
- Como o **tempdb** usa a ordenação do servidor padrão e `TestPermTab.Col1` usa uma ordenação diferente, o SQL Server retorna esse erro: "Não é possível resolver o conflito de ordenação entre 'Latin1_General_CI_AS_KS_WS' e 'Estonian_CS_AS ' em igual à operação."  
+ Como **tempdb** usa a ordenação do servidor padrão e `TestPermTab.Col1` usa uma ordenação diferente, o SQL Server retorna este erro: "Não é possível resolver o conflito de ordenação entre 'Latin1_General_CI_AS_KS_WS' e 'Estonian_CS_AS' igualmente na operação".  
   
  Para evitar o erro, você pode usar uma das seguintes alternativas:  
   

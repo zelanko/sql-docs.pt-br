@@ -23,10 +23,10 @@ ms.assetid: 84ffc4e7-c451-4f1f-9a67-7fc3a120e53f
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 356d08eaeeb470500ccf39c86872806cf2a9be9e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67984323"
 ---
 # <a name="drop-aggregate-transact-sql"></a>DROP AGGREGATE (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "67984323"
 
   Remove uma função de agregação definida pelo usuário do banco de dados atual. As funções de agregação definidas pelo usuário são criadas usando [CREATE AGGREGATE](../../t-sql/statements/create-aggregate-transact-sql.md).  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -54,7 +54,7 @@ DROP AGGREGATE [ IF EXISTS ] [ schema_name . ] aggregate_name
  *aggregate_name*  
  É o nome da função de agregação definida pelo usuário que você deseja descartar.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  DROP AGGREGATE não será executado se houver alguma exibição, função ou procedimento armazenado criado com uma ligação de esquema que faça referência à função de agregação definida pelo usuário que você deseja descartar.  
   
 ## <a name="permissions"></a>Permissões  

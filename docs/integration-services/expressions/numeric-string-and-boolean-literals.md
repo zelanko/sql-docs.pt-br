@@ -18,10 +18,10 @@ ms.assetid: a980cd52-54ef-4b9c-b00c-e6807cf8e01f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: de9df087cd068ad27029cb17ae553390b054a2f8
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297461"
 ---
 # <a name="numeric-string-and-boolean-literals"></a>Literais boolianos, de cadeia de caracteres e numéricos
@@ -38,7 +38,7 @@ ms.locfileid: "71297461"
   
  A tabela a seguir lista sufixos para literais numéricos.  
   
-|Sufixo|Descrição|  
+|Sufixo|DESCRIÇÃO|  
 |------------|-----------------|  
 |L ou l|Um longo literal numérico.|  
 |U ou u|Um literal numérico não assinado.|  
@@ -46,7 +46,7 @@ ms.locfileid: "71297461"
   
  A tabela a seguir lista elementos de expressão numérica e suas expressões regulares.  
   
-|Elemento Expression|Expressão regular|Descrição|  
+|Elemento Expression|Expressão regular|DESCRIÇÃO|  
 |------------------------|------------------------|-----------------|  
 |Dígitos expressos como D.|[0-9]|Qualquer dígito.|  
 |Notação científica expressa como E.|[Ee][+-]?{D}+|Letras maiúsculas ou minúsculas e, opcionalmente + ou -, e um ou mais dígitos como definido em D.|  
@@ -56,7 +56,7 @@ ms.locfileid: "71297461"
   
  A tabela a seguir descreve literais numéricos válidos que usam a linguagem de expressão regular.  
   
-|Expressão regular|Descrição|  
+|Expressão regular|DESCRIÇÃO|  
 |------------------------|-----------------|  
 |{D}+{IS}|Um literal numérico integral com pelo menos um dígito (D) e, opcionalmente, o sufixo longo e/ou não assinado (IS).  Exemplos: 457, 785u, 986L e 7945ul.|  
 |{D}+{E}{FS}|Um literal numérico não integral com pelo menos um dígito (D), notação científica, e o sufixo flutuante ou longo.  Exemplos: 4E8l, 13e-2f e 5E+L.|  
@@ -80,12 +80,12 @@ ms.locfileid: "71297461"
   
     |Sufixo|Tipo de resultado|  
     |------------|-----------------|  
-    |None|DT_I4|  
+    |Nenhum|DT_I4|  
     |U|DT_UI4|  
     |L|DT_I8|  
     |UL|DT_UI8|  
   
-    > **IMPORTANTE!** Se não houver um sufixo longo (L ou l), a avaliador de expressão mapeará os valores assinados para o tipo de dados DT_I4 e os valores não assinados para o tipo de dados DT_UI4, embora o valor cause estouro no tipo de dados.  
+    > **IMPORTANTE:** Se não houver um sufixo longo (L ou l), a avaliador de expressão mapeará os valores assinados para o tipo de dados DT_I4 e os valores não assinados para o tipo de dados DT_UI4, embora o valor cause estouro no tipo de dados.  
   
 -   Um literal numérico que inclui um expoente é convertido para o tipo de dados DT_R4 ou DT_R8. Se a expressão incluir o sufixo longo, ela será convertida para DT_R8; se ela incluir o sufixo flutuante, ela será convertida para o tipo de dados DT_R4.  
   
@@ -100,12 +100,12 @@ ms.locfileid: "71297461"
   
  As cadeias de caracteres podem incluir outros caracteres que requerem uma sequência de escape. A tabela a seguir lista sequências de escape para literais de cadeia de caracteres.  
   
-|Sequência de escape|Descrição|  
+|Sequência de escape|DESCRIÇÃO|  
 |---------------------|-----------------|  
 |\a|Alerta|  
 |\b|Backspace|  
 |\f|Avanço de formulário|  
-|\n|Linha nova|  
+|\n|Nova linha|  
 |\r|Retorno de carro|  
 |\t|Guia horizontal|  
 |\v|Guia vertical|  
@@ -114,7 +114,7 @@ ms.locfileid: "71297461"
 |\xhhhh|Caractere Unicode em notação hexadecimal|  
   
 ## <a name="boolean-literals"></a>Literais boolianos  
- O avaliador de expressão dá suporte aos literais boolianos usuais: **True** e **False**. O avaliador de expressão não faz distinção entre maiúsculas e minúsculas e qualquer combinação de letras maiúsculas e minúsculas é permitida. Por exemplo, TRUE funciona tão bem quanto True.  
+ O avaliador de expressão aceita os literais boolianos habituais: **True** e **False**. O avaliador de expressão não faz distinção entre maiúsculas e minúsculas e qualquer combinação de letras maiúsculas e minúsculas é permitida. Por exemplo, TRUE funciona tão bem quanto True.  
   
 > **OBSERVAÇÃO:** Em uma expressão, um literal booliano deve ser delimitado por espaços.  
   

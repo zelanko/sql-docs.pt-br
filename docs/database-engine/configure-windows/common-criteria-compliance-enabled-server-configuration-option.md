@@ -18,10 +18,10 @@ ms.assetid: 61766eea-c450-408d-af33-fbe7ef8c9ff2
 author: craigg-msft
 ms.author: craigg
 ms.openlocfilehash: f072ed3e73b7dacd10254c04aaa34e5466b582b8
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68262221"
 ---
 # <a name="common-criteria-compliance-enabled-server-configuration"></a>Configuração de servidor de conformidade de critérios comuns habilitada
@@ -29,7 +29,7 @@ ms.locfileid: "68262221"
 
 A opção de conformidade de critérios comuns habilita os seguintes elementos necessários para os [critérios comuns para avaliação de segurança da tecnologia da informação](https://www.commoncriteriaportal.org/).  
   
-|Critérios|Descrição|  
+|Critérios|DESCRIÇÃO|  
 |--------------|-----------------|  
 |Proteção de Informação Residual (RIP)|O RIP requer alocação de memória para ser substituído por um padrão conhecido de bits antes que a memória seja realocada para um novo recurso. Atender ao padrão RIP pode contribuir para melhorar a segurança; entretanto, a substituição da alocação de memória pode diminuir o desempenho. Depois que a opção conformidade de critérios comuns habilitada estiver habilitada, ocorre a substituição.|  
 |A habilidade para exibir estatísticas de logon|Depois que a opção conformidade de critérios comuns habilitada é ativada, a auditoria de logon é habilitada. Sempre que um usuário fizer um logon bem-sucedido no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], as informações sobre a hora do último logon com êxito e do último logon sem êxito e o número de tentativas entre o último logon bem-sucedido e o logon atual são disponibilizadas. Essas estatísticas de logon podem ser exibidas com uma consulta à exibição de gerenciamento dinâmico [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md) .|  

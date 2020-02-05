@@ -12,22 +12,22 @@ ms.assetid: d8d3a22e-1ff8-48a4-891f-4c8619437e24
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 7657c18708e9b54c33f15142c57782da671037f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67903936"
 ---
-# <a name="mssqlserver605"></a>MSSQLSERVER_605
+# <a name="mssqlserver_605"></a>MSSQLSERVER_605
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|605|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|WRONGPAGE|  
 |Texto da mensagem|Falha na tentativa de buscar a página lógica %S_PGID no banco de dados %d. Ela pertence à unidade de alocação %I64d não a %I64d.|  
@@ -45,7 +45,7 @@ Um nível de gravidade 12 indica um possível erro transitório; ou seja, ele oc
   
 -   O sistema operacional prematuramente notifica o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de que uma operação de E/S foi concluída; a mensagem de erro é exibida mesmo que os dados não estejam corrompidos.  
   
-Executar uma consulta com a dica de otimização NOLOCK ou definir o nível de isolamento da transação como READ UNCOMMITTED. Quando uma consulta que não usa NOLOCK ou READ UNCOMMITTED tenta ler dados que estão sendo movidos ou alterados por outro usuário, ocorre um erro 605. Para verificar se é um erro 605 transitório, reexecute a consulta posteriormente. Para saber mais, confira o artigo [235880](https://support.microsoft.com/kb/235880/en-us) da base de dados: "Você recebe uma mensagem de erro 'Erro 605' quando executa uma consulta com a dica de otimização NOLOCK ou define o nível de isolamento da transação como READ UNCOMMITTED no SQL Server."  
+Executar uma consulta com a dica de otimização NOLOCK ou definir o nível de isolamento da transação como READ UNCOMMITTED. Quando uma consulta que não usa NOLOCK ou READ UNCOMMITTED tenta ler dados que estão sendo movidos ou alterados por outro usuário, ocorre um erro 605. Para verificar se é um erro 605 transitório, reexecute a consulta posteriormente. Para obter mais informações, consulte o artigo [235880](https://support.microsoft.com/kb/235880/en-us) da Base de Dados de Conhecimento: “Você recebe uma mensagem de erro "Erro 605" quando executa uma consulta com a dica de otimização NOLOCK ou define o nível de isolamento da transação como READ UNCOMMITTED no SQL Server”.  
   
 Em geral, se o erro ocorreu durante o acesso aos dados, mas as operações DBCC CHECKDB subsequentes foram concluídas com êxito, provavelmente o erro 605 era transitório.  
   

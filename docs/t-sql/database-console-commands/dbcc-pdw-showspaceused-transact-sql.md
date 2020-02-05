@@ -13,18 +13,18 @@ author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: f8c5d7ac822546d8334f1a174684f35733d9571b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68116490"
 ---
-# <a name="dbcc-pdwshowspaceused-transact-sql"></a>DBCC PDW_SHOWSPACEUSED (Transact-SQL)
+# <a name="dbcc-pdw_showspaceused-transact-sql"></a>DBCC PDW_SHOWSPACEUSED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
 Exibe o número de linhas, o espaço em disco reservado e o espaço em disco usado para uma tabela específica ou para todas as tabelas em um banco de dados [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -48,7 +48,7 @@ Requer a permissão VIEW SERVER STAT.
 ## <a name="result-sets"></a>Conjuntos de resultados  
 Este é o conjunto de resultados de todas as tabelas.
   
-|coluna|Tipo de Dados|Descrição|  
+|Coluna|Tipo de Dados|DESCRIÇÃO|  
 |------------|---------------|-----------------|  
 |reserved_space|BIGINT|Espaço total usado para o banco de dados, em KB.|  
 |data_space|BIGINT|Espaço usado para dados, em KB.|  
@@ -58,7 +58,7 @@ Este é o conjunto de resultados de todas as tabelas.
   
 Este é o conjunto de resultados de uma tabela.
   
-|coluna|Tipo de Dados|Descrição|Intervalo|  
+|Coluna|Tipo de Dados|DESCRIÇÃO|Intervalo|  
 |------------|---------------|-----------------|-----------|  
 |rows|BIGINT|Número de linhas.||  
 |reserved_space|BIGINT|Espaço reservado total para o objeto, em KB.||  
@@ -69,7 +69,7 @@ Este é o conjunto de resultados de uma tabela.
 |distribution_id|INT|A distribuição que é usada para relatar o uso do espaço.|O valor é -1 para tabelas replicadas.|  
   
 ## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-### <a name="a-dbcc-pdwshowspaceused-basic-syntax"></a>A. Sintaxe básica do DBCC PDW_SHOWSPACEUSED  
+### <a name="a-dbcc-pdw_showspaceused-basic-syntax"></a>a. Sintaxe básica do DBCC PDW_SHOWSPACEUSED  
 Os exemplos a seguir mostram várias maneiras de exibir o número de linhas, o espaço em disco reservado e o espaço em disco usado pela tabela FactInternetSales no banco de dados [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)].
   
 ```sql

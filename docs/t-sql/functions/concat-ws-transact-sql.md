@@ -19,13 +19,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fcdbb300bbc9209f284cd5a92d192a219f79052d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68075335"
 ---
-# <a name="concatws-transact-sql"></a>CONCAT_WS (Transact-SQL)
+# <a name="concat_ws-transact-sql"></a>CONCAT_WS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]
 
 Essa função retorna uma cadeia de caracteres resultante de concatenação ou junção de dois ou mais valores de cadeia de caracteres de ponta a ponta. Ele separa esses valores de cadeia de caracteres concatenados com o delimitador especificado no argumento da primeira função. (`CONCAT_WS` indica *concatenar com separador*.)
@@ -45,7 +45,7 @@ Uma expressão de qualquer tipo.
 ## <a name="return-types"></a>Tipos de retorno
 Um valor de cadeia de caracteres cujos comprimento e tipo dependem da entrada.
 
-## <a name="remarks"></a>Remarks   
+## <a name="remarks"></a>Comentários   
 `CONCAT_WS` usa um número variável de argumentos de cadeia de caracteres e os concatena em uma única cadeia de caracteres. Ele separa esses valores de cadeia de caracteres concatenados com o delimitador especificado no argumento da primeira função. `CONCAT_WS` exige um argumento separador e um mínimo de dois outros argumentos de valor de cadeia de caracteres; caso contrário, `CONCAT_WS` gerará um erro. `CONCAT_WS` converte implicitamente todos os argumentos nos tipos de cadeia de caracteres antes da concatenação. 
 
 A conversão implícita em cadeias de caracteres segue as regras existentes para conversões de tipo de dados. Veja [CONCAT (Transact-SQL)](../../t-sql/functions/concat-transact-sql.md) para saber mais sobre conversões de tipo de dados e comportamento.
@@ -62,7 +62,7 @@ Se um cenário envolver valores nulos, separados por um delimitador, considere a
 
 ## <a name="examples"></a>Exemplos   
 
-### <a name="a--concatenating-values-with-separator"></a>A.  Concatenando valores com separador
+### <a name="a--concatenating-values-with-separator"></a>a.  Concatenando valores com separador
 Este exemplo concatena três colunas da tabela sys.databases, separando-os com um `-`.   
 
 ```sql

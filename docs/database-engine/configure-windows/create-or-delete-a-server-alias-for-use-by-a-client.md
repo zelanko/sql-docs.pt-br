@@ -16,10 +16,10 @@ ms.assetid: b687e376-ee33-470d-b65a-87246bfefe6f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a0a678d3b5df450377517bc9c94d3771c45f22e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68012075"
 ---
 # <a name="create-or-delete-a-server-alias-for-use-by-a-client"></a>Criar ou excluir um alias de servidor para uso de um cliente

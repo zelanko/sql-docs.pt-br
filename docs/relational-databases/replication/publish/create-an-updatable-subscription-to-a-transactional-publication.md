@@ -15,10 +15,10 @@ ms.assetid: f9ef89ed-36f6-431b-8843-25d445ec137f
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5d1a8b0c8f674dd39ece67cb79db0110cfd55994
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75321234"
 ---
 # <a name="create-an-updatable-subscription-to-a-transactional-publication"></a>Criar uma assinatura atualizável em uma publicação transacional
@@ -201,7 +201,7 @@ Configurar assinaturas atualizáveis no página **Assinaturas Atualizáveis** do
 1. No Publicador, verifique se a publicação tem suporte para assinaturas de atualização em fila executando [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md). 
 
     * Se o valor de allow_queued_tran no conjunto de resultados for 1, a publicação tem suporte para assinaturas de atualização imediata.
-    * Se o valor de allow_queued_tran no conjunto de resultados for 0, a publicação deverá ser recriada com as assinaturas de atualização em fila habilitadas. Para obter mais informações, confira Como Habilitar atualização de assinaturas para publicações transacionais (Programação Transact-SQL de replicação).
+    * Se o valor de allow_queued_tran no conjunto de resultados for 0, a publicação deverá ser recriada com as assinaturas de atualização em fila habilitadas. Para obter mais informações, consulte Como habilitar a atualização de assinaturas para publicações transacionais (Programação Transact-SQL de replicação).
 
 2. No Publicador, verifique se a publicação tem suporte para assinaturas push executando [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md). 
 

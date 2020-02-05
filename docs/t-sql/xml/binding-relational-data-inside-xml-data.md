@@ -19,10 +19,10 @@ ms.assetid: 03d013a9-b53f-46c3-9628-da77f099c74a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f9a2253165045d74f669c52d0247b716e5576e8b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68051336"
 ---
 # <a name="binding-relational-data-inside-xml-data"></a>Associando dados relacionais dentro de dados XML
@@ -42,7 +42,7 @@ ms.locfileid: "68051336"
   
  Além disso, essa associação destina-se apenas a finalidades somente leitura. Isto é, você não pode gravar dados em colunas que usam essas funções. Por exemplo, sql:variable ("\@x") = "*alguma expressão"* não é permitido.  
   
-## <a name="example-cross-domain-query-using-sqlvariable"></a>Exemplo: Consulta entre domínios que usam sql:variable()  
+## <a name="example-cross-domain-query-using-sqlvariable"></a>Exemplo: Consulta entre domínios que usam sql:variable ()  
  Este exemplo mostra como **sql:variable()** pode permitir que um aplicativo parametrize uma consulta. O ISBN é passado usando uma variável SQL @isbn. Substituindo a constante por **sql:variable()** , a consulta pode ser usada para pesquisar qualquer ISBN e não apenas aquele cujo ISBN é 0-7356-1588-2.  
   
 ```  

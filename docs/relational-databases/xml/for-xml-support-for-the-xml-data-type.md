@@ -14,10 +14,10 @@ ms.assetid: 365de07d-694c-4c8b-b671-8825be27f87c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fa53478ba653961d255ee3a03038d44fcbd15f3e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67943255"
 ---
 # <a name="for-xml-support-for-the-xml-data-type"></a>Suporte a FOR XML para o tipo de dados xml
@@ -205,6 +205,6 @@ select @x;
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Suporte a FOR XML para vários tipos de dados SQL Server](../../relational-databases/xml/for-xml-support-for-various-sql-server-data-types.md)  
+ [Suporte a FOR XML para vários tipos de dados de SQL Server](../../relational-databases/xml/for-xml-support-for-various-sql-server-data-types.md)  
   
   

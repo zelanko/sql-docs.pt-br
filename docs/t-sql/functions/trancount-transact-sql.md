@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 142762514f9bdbd7c7984dff218e5ea665d1d4d4
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843311"
 ---
 # <a name="x40x40trancount-transact-sql"></a>&#x40;&#x40;TRANCOUNT (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "73843311"
 
   Retorna o número de instruções BEGIN TRANSACTION que ocorreram na conexão atual.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,12 +44,12 @@ ms.locfileid: "73843311"
 ## <a name="return-types"></a>Tipos de retorno  
  **inteiro**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  A instrução BEGIN TRANSACTION incrementa @@TRANCOUNT em 1. ROLLBACK TRANSACTION diminui @@TRANCOUNT para 0, com exceção de *savepoint_name* de ROLLBACK TRANSACTION, que não afeta @@TRANCOUNT. COMMIT TRANSACTION ou COMMIT WORK diminui @@TRANCOUNT em 1.  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-showing-the-effects-of-the-begin-and-commit-statements"></a>A. Mostrando os efeitos das instruções BEGIN e COMMIT  
+### <a name="a-showing-the-effects-of-the-begin-and-commit-statements"></a>a. Mostrando os efeitos das instruções BEGIN e COMMIT  
  O exemplo a seguir mostra o efeito das instruções aninhadas `BEGIN` e `COMMIT` sobre a variável `@@TRANCOUNT`.  
   
 ```  

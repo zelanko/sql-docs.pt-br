@@ -21,10 +21,10 @@ ms.assetid: c6cd5d0f-18f4-49be-b161-64d9c5569086
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 7d39f716717fe517fb3274e4c5519606916afb7b
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73064670"
 ---
 # <a name="alter-application-role-transact-sql"></a>ALTER APPLICATION ROLE (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "73064670"
 
   Altera o nome, a senha ou o esquema padrão de uma função de aplicativo.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -60,7 +60,7 @@ ALTER APPLICATION ROLE application_role_name
  DEFAULT_SCHEMA =*schema_name*  
  Especifica o primeiro esquema que será pesquisado pelo servidor quando ele resolver os nomes de objetos. *schema_name* pode ser um esquema que não existe no banco de dados.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Se o novo nome da função de aplicativo já existir no banco de dados, a instrução falhará. Quando o nome, a senha ou o esquema padrão de uma função de aplicativo é alterado, a ID associada à função não é alterada.  
   
 > [!IMPORTANT]  
@@ -69,14 +69,14 @@ ALTER APPLICATION ROLE application_role_name
  As funções de aplicativo são visíveis na exibição do catálogo sys.database_principals.  
   
 > [!CAUTION]  
->  No [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], o comportamento de esquemas mudou em relação ao comportamento em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O código que pressupõe que esquemas são equivalentes a usuários de banco de dados pode não retornar resultados corretos. Exibições antigas do catálogo, incluindo sysobjects, não devem ser usadas em um banco de dados no qual uma das instruções DDL a seguir já tenha sido utilizada: CREATE SCHEMA, ALTER SCHEMA, DROP SCHEMA, CREATE USER, ALTER USER, DROP USER, CREATE ROLE, ALTER ROLE, DROP ROLE, CREATE APPROLE, ALTER APPROLE, DROP APPROLE, ALTER AUTHORIZATION. Em um banco de dados no qual qualquer uma dessas instruções tenha sido usada alguma vez, você deve usar as novas exibições do catálogo. As novas exibições do catálogo levam em conta a separação de entidades e esquemas introduzida no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Para mais informações sobre exibições do catálogo, consulte [Exibições do catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md).  
+>  No [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], o comportamento de esquemas mudou em relação ao comportamento em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O código que pressupõe que esquemas são equivalentes a usuários de banco de dados pode não retornar resultados corretos. Exibições de catálogo antigas, incluindo sysobjects, não devem ser usadas em um banco de dados no qual uma das instruções DDL a seguir já tenha sido utilizada: CREATE SCHEMA, ALTER SCHEMA, DROP SCHEMA, CREATE USER, ALTER USER, DROP USER, CREATE ROLE, ALTER ROLE, DROP ROLE, CREATE APPROLE, ALTER APPROLE, DROP APPROLE, ALTER AUTHORIZATION. Em um banco de dados no qual qualquer uma dessas instruções tenha sido usada alguma vez, você deve usar as novas exibições do catálogo. As novas exibições do catálogo levam em conta a separação de entidades e esquemas introduzida no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Para mais informações sobre exibições do catálogo, consulte [Exibições do catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md).  
   
 ## <a name="permissions"></a>Permissões  
  Requer a permissão ALTER ANY APPLICATION ROLE no banco de dados. Para alterar o esquema padrão, o usuário também precisa da permissão ALTER na função de aplicativo. Uma função de aplicativo pode alterar seu próprio esquema padrão, mas não seu nome ou senha.  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-changing-the-name-of-application-role"></a>A. Alterando o nome da função de aplicativo  
+### <a name="a-changing-the-name-of-application-role"></a>a. Alterando o nome da função de aplicativo  
  O exemplo a seguir altera o nome da função de aplicativo `weekly_receipts` para `receipts_ledger`.  
   
 ```sql  

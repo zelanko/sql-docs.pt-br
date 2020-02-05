@@ -19,10 +19,10 @@ ms.assetid: 41ae67bd-ece9-49ea-8062-c8d658ab4154
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 754b7a4baaff71cf0abe7193e5ba9c9cbd0a943a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68039177"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>Usar resultados de FOR XML no código do aplicativo
@@ -154,19 +154,19 @@ ms.locfileid: "68039177"
   
 ##### <a name="client-side-processing-of-xml-document-mydataisle"></a>Processamento do lado do cliente do documento XML MyDataIsle  
   
--   **AnnualSales:** 1.500.000  
+-   **AnnualSales:** 1500000  
   
--   **AnnualRevenue:** 150.000  
+-   **AnnualRevenue:** 150000  
   
 -   **BankName:** Primary International  
   
--   **BusinessType:** Sistema operacional  
+-   **BusinessType:** OS  
   
 -   **YearOpened:** 1974  
   
 -   **Specialty:** Road  
   
--   **SquareFeet:** 38.000  
+-   **SquareFeet:** 38000  
   
 -   **Brands:** 3  
   

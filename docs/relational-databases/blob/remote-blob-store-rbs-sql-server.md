@@ -14,10 +14,10 @@ ms.assetid: 31c947cf-53e9-4ff4-939b-4c1d034ea5b1
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: fc6bb3164b54f0799073e8b959f68b0dd625c47e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75258180"
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>RBS (Armazenamento de Blob Remoto) [SQL Server]
@@ -80,7 +80,7 @@ ms.locfileid: "75258180"
   
 ### <a name="rotating-the-symmetric-key"></a>Girando a chave simétrica  
  Ao usar o RBS, você deve girar periodicamente a chave simétrica do repositório de credenciais. Essa é uma melhor prática comum de segurança para atender às políticas de segurança organizacional.  Um modo de girar a chave simétrica do repositório de credenciais do RBS é usar o [script abaixo](#Key_rotation) no banco de dados RBS.  Você também pode usar esse script para migrar para propriedades com nível de criptografia mais forte, como o comprimento da chave ou algoritmo. Faça backup de seu banco de dados antes da rotação de chaves.  Na conclusão do seu script, ele tem algumas etapas de verificação.  
-Se suas políticas de segurança exigem diferentes propriedades de chave (por exemplo, comprimento de chave ou algoritmo) daquelas fornecidas, o script pode ser usado como um modelo. Modifique as propriedades de chave em dois locais: 1) a criação da chave temporária 2) a criação da chave permanente.  
+Se suas políticas de segurança exigem diferentes propriedades de chave (por exemplo, comprimento de chave ou algoritmo) daquelas fornecidas, o script pode ser usado como um modelo. Modifique as propriedades de chave em dois locais: 1) a criação da chave temporárias 2) a criação da chave permanente.  
   
 ##  <a name="rbsresources"></a> Recursos do RBS  
   

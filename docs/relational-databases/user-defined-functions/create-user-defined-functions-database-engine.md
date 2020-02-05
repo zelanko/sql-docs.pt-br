@@ -20,10 +20,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 62d63c65ce1fae63fa9453a0dc37ddc134a87012
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68138748"
 ---
 # <a name="create-user-defined-functions-database-engine"></a>Criar funções definidas pelo usuário (Mecanismo de Banco de Dados)
@@ -185,7 +185,7 @@ FROM dbo.ufn_FindReports(1);
 > [!NOTE]  
 > Para obter mais informações e exemplos TVFs embutidas (funções com valor de tabela embutidas) e MSTVFs (funções com valor de tabela de várias instruções), confira [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md). 
 
-## <a name="best-practices"></a>Práticas recomendadas  
+## <a name="best-practices"></a>Práticas Recomendadas  
 Se uma UDF (função definida pelo usuário) não for criada com a cláusula `SCHEMABINDING`, as alterações feitas nos objetos subjacentes poderão afetar a definição da função e produzir resultados inesperados quando ela for chamada. É recomendável que você implemente um dos seguintes métodos para garantir que a função não se torne desatualizada devido a alterações em seus objetos subjacentes:  
   
 -   Especifique a cláusula `WITH SCHEMABINDING` quando você estiver criando a UDF. Isso garante que os objetos referenciados na definição da função não possam ser modificados, a menos que a função também seja modificada.  

@@ -23,10 +23,10 @@ ms.assetid: 4de76f33-399e-4912-a617-6eb6c560a058
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 00a313c6edfc9f8088d8cb19f62b51144fcc159b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68140250"
 ---
 # <a name="commit-work-transact-sql"></a>COMMIT WORK (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68140250"
 
   Marca o final de uma transação.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,7 +44,7 @@ COMMIT [ WORK ]
 [ ; ]  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Essa instrução funciona identicamente a COMMIT TRANSACTION, com exceção de que COMMIT TRANSACTION aceita um nome de transação definido pelo usuário. Esta sintaxe de COMMIT, com ou sem especificar a palavra-chave opcional WORK, é compatível com SQL-92.  
   
 ## <a name="see-also"></a>Consulte Também  

@@ -19,10 +19,10 @@ ms.assetid: 3717987b-77d8-4ccf-a1db-5a8016ac1083
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 90359259bb7ba85377e72c40a8eece79de44cbf2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042126"
 ---
 # <a name="stgeomfromtext-geography-data-type"></a>STGeomFromText (tipo de dados geography)
@@ -49,9 +49,9 @@ STGeomFromText ( 'geography_tagged_text' , SRID )
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Tipo de retorno CLR: **SqlGeography**  
+ Tipo de retorno do CLR: **SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O tipo do OGC da instância de **geography** retornado por STGeomFromText() é definido como a entrada de WKT correspondente.  
   
  Esse método gerará uma **ArgumentException** se a entrada contiver uma borda oposta.  

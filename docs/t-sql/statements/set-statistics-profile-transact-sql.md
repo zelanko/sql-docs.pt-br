@@ -24,10 +24,10 @@ ms.assetid: c635e262-35fa-421a-aa6f-a1c30f351647
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: b3d48de1a5feef4a00b087fded311a2b57169047
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68131925"
 ---
 # <a name="set-statistics-profile-transact-sql"></a>SET STATISTICS PROFILE (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68131925"
 
   Exibe as informações de perfil de uma instrução. O STATISTICS PROFILE funciona com consultas ad hoc, exibições e procedimentos armazenados.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,12 +44,12 @@ ms.locfileid: "68131925"
 SET STATISTICS PROFILE { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Quando STATISTICS PROFILE está como ON, cada consulta executada retorna seu conjunto de resultados regulares, seguido de um conjunto de resultados adicionais que exibem um perfil da execução de consulta.  
   
  O conjunto de resultados adicionais contém as colunas de SHOWPLAN_ALL da consulta e as colunas adicionais.  
   
-|Nome da coluna|Descrição|  
+|Nome da coluna|DESCRIÇÃO|  
 |-----------------|-----------------|  
 |**Linhas**|O número atual de linhas geradas por cada operador.|  
 |**Executes**|Número de vezes que o operador foi executado|  

@@ -15,10 +15,10 @@ author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: aea7470bd5b4d046dd5346e633fb5302ea8e7b9c
-ms.sourcegitcommit: eae9efe2a2d3758685e85039ffb8fa698aa47f9b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73962361"
 ---
 # <a name="set-result-set-caching-transact-sql"></a>SET RESULT SET CACHING (Transact-SQL) 
@@ -29,7 +29,7 @@ Controla o comportamento de cache do conjunto de resultados da sessão do client
 
 Aplica-se ao SQL Data Warehouse do Azure  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe
 
@@ -37,7 +37,7 @@ Aplica-se ao SQL Data Warehouse do Azure
 SET RESULT_SET_CACHING { ON | OFF };
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 
 Execute este comando quando estiver conectado ao banco de dados do usuário para o qual você deseja definir a configuração result_set_caching.
 
@@ -62,7 +62,7 @@ WHERE request_id = 'QID58286'
 Requer associação à função pública
 
 ## <a name="see-also"></a>Confira também
-[Ajuste de desempenho com armazenamento em cache do conjunto de resultados](/azure/sql-data-warehouse/performance-tuning-result-set-caching)</br>
+[Ajuste de desempenho com cache de conjunto de resultados](/azure/sql-data-warehouse/performance-tuning-result-set-caching)</br>
 [Opções ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options?view=azure-sqldw-latest)</br>
 [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql?view=azure-sqldw-latest)</br>
 [DBCC SHOWRESULTCACHESPACEUSED (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-showresultcachespaceused-transact-sql)</br>

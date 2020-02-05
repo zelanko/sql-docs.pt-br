@@ -22,10 +22,10 @@ ms.assetid: fdd0f81e-3c22-4cdf-9416-b4977a6ac3b6
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 479d00aec0cbd4c9cd81359a0a1f633e80bce521
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67898264"
 ---
 # <a name="drop-contract-transact-sql"></a>DROP CONTRACT (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "67898264"
 
   Descarta um contrato existente de um banco de dados.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -47,7 +47,7 @@ DROP CONTRACT contract_name
  *contract_name*  
  O nome do contrato para descartar. Os nomes de servidor, banco de dados e esquema não podem ser especificados.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Você não poderá descartar um contrato se qualquer prioridade de serviço ou de conversa se referir ao contrato.  
   
  Quando você descartar um contrato, o [!INCLUDE[ssSB](../../includes/sssb-md.md)] termina qualquer conversa existente que usa o contrato com um erro.  

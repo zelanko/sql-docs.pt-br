@@ -14,10 +14,10 @@ ms.assetid: ca20e4f6-50ec-4456-900d-87d280fde2b3
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 68d4d824dc95fcbc9c56fe13493c16d0a8f6a0bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67947818"
 ---
 # <a name="sql-server-workload-group-stats-object"></a>SQL Server, objeto de estatísticas de grupo de cargas de trabalho
@@ -26,17 +26,17 @@ ms.locfileid: "67947818"
   
  Cada grupo de cargas de trabalho ativo cria uma instância do objeto de desempenho SQLServer:Estatísticas de Grupo de Cargas de Trabalho que tem o mesmo nome de instância do grupo de cargas de trabalho do Administrador de Recursos. A tabela a seguir descreve os contadores suportados nesta instância.  
   
-|Nome do contador|Descrição|  
+|Nome do contador|DESCRIÇÃO|  
 |------------------|-----------------|  
 |**Threads paralelos ativos**|A contagem atual de uso de threads paralelos.|  
 |**Solicitações ativas**|O número de solicitações que estão sendo executadas neste grupo de cargas de trabalho. Deverá ser equivalente à contagem de linhas de sys.dm_exec_requests filtradas pela ID de grupo.|  
 |**Solicitações bloqueadas**|O número atual de solicitações bloqueadas no grupo de cargas de trabalho. Esse número pode ser usado para determinar características de carga de trabalho.|  
 |**% de CPU atrasada**|CPU do sistema atrasada para todas as solicitações na instância especificada do objeto de desempenho como uma porcentagem do tempo total ativo.| 
-|**% base de CPU atrasada**|Somente para uso interno.| 
+|**% base de CPU atrasada**|Apenas para uso interno.| 
 |**% de CPU efetiva**|Uso de CPU do sistema por todas as solicitações na instância especificada do objeto de desempenho como uma porcentagem do tempo total ativo.| 
-|**% base de CPU efetiva**|Somente para uso interno.| 
+|**% base de CPU efetiva**|Apenas para uso interno.| 
 |**% de uso de CPU**|O uso da largura de banda da CPU por todas as solicitações neste grupo de cargas de trabalho calculado em relação ao computador e normalizado para todas as CPUs do sistema. Esse valor mudará à medida que a quantidade de CPU disponível para o processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for alterada. Ele não é normalizado de acordo com o que é recebido pelo processo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .| 
-|**% base de uso de CPU**|Somente para uso interno.| 
+|**% base de uso de CPU**|Apenas para uso interno.| 
 |**% de CPU violada**|A diferença entre a reserva de CPU e a porcentagem de agendamento efetiva.|  
 |**Tempo máximo de CPU da solicitação (ms)**|O tempo máximo de CPU, em milissegundos, usado por uma solicitação que está sendo executada no grupo de cargas de trabalho.|  
 |**Concessão máxima de memória da solicitação (KB)**|O valor máximo da concessão de memória, em kilobytes (KB), para uma consulta.|  

@@ -18,16 +18,16 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ef8514d7d18478c7fcb78cb5197c5b39602c9610
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75254828"
 ---
 # <a name="always-encrypted"></a>Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  ![Always Encrypted](../../../relational-databases/security/encryption/media/always-encrypted.png "|::ref1::|")  
+  ![Always Encrypted](../../../relational-databases/security/encryption/media/always-encrypted.png "Always Encrypted")  
   
  O Always Encrypted é um recurso criado para proteger dados confidenciais, como números de cartão de crédito ou de identificação nacional (por exemplo, números de previdência social dos EUA), armazenados em bancos de dados do [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] ou [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. O Always Encrypted permite que os clientes criptografem os dados confidenciais em aplicativos de cliente e nunca revelem as chaves de criptografia para o [!INCLUDE[ssDE](../../../includes/ssde-md.md)] ([!INCLUDE[ssSDS](../../../includes/sssds-md.md)] ou [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]). Como resultado, o Always Encrypted fornece uma separação entre aqueles que detêm os dados e podem exibi-lo e aqueles que gerenciam os dados, mas que não devem ter acesso. Ao garantir que os administradores de banco de dados local, operadores de banco de dados em nuvem ou outros usuários não autorizados com privilégios elevados não possam acessar os dados criptografados, o Always Encrypted permite que os clientes armazenem dados confidenciais com segurança fora de seu controle direto. Isso permite às organizações armazenar seus dados no Azure para habilitar a delegação de administração de banco de dados local para terceiros ou para reduzir os requisitos de espaço livre de segurança para sua própria equipe de DBA.
 

@@ -13,10 +13,10 @@ ms.assetid: 8a612f7e-6c70-49db-a4de-48431e097cc5
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 739d706749b24720861b7572bde7e29473f1d406
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67901158"
 ---
 # <a name="create-a-new-policy-based-management-condition"></a>Criar uma nova condição de Gerenciamento baseado em Políticas

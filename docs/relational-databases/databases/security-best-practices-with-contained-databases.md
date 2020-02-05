@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 ms.reviewer: jaszymas
 ms.openlocfilehash: 4d7b428534462779abeb72c65b05f551bfd4b0eb
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75246133"
 ---
 # <a name="security-best-practices-with-contained-databases"></a>Práticas recomendadas de segurança com bancos de dados independentes
@@ -65,7 +65,7 @@ ALTER DATABASE DB1 SET TRUSTWORTHY ON;
 -   Quando os bancos de dados independentes estiverem presentes, os usuários de bancos de dados dependentes devem se conectar ao [!INCLUDE[ssDE](../../includes/ssde-md.md)] sem usar um catálogo inicial ou especificando o nome de um banco de dados dependente como catálogo inicial. Isso evita a conexão ao banco de dados independente que está sob controle menos direto pelos administradores do [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
 ### <a name="increasing-access-by-changing-the-containment-status-of-a-database"></a>Aumentando o acesso por meio da alteração do status de contenção de um banco de dados  
- Logons que têm a permissão **ALTER ANY DATABASE** , como membros da função de servidor fixa **dbcreator** , e usuários em um banco de dados dependente que têm a permissão **CONTROL DATABASE** , como membros da função de banco de dados fixa **db_owner** , podem alterar a configuração de contenção de um banco de dados. Se a configuração de contenção de um banco de dados for alterada de **NONE** para **PARTIAL** ou **FULL**, o acesso de usuários poderá ser concedido por meio da criação de usuários de banco de dados independente com senhas. Isso pode fornecer acesso sem o conhecimento ou consentimento dos administradores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para impedir a contenção de qualquer banco de dados, defina a opção **contained database authentication** de [!INCLUDE[ssDE](../../includes/ssde-md.md)] do como 0. Para impedir conexões por usuários de banco de dados independente com senhas em bancos de dados independentes selecionados, use gatilhos de logon para cancelar tentativas de logon por usuários de banco de dados independente com senhas.  
+ Logons que têm a permissão **ALTER ANY DATABASE** , como membros da função de servidor fixa **dbcreator** , e usuários em um banco de dados dependente que têm a permissão **CONTROL DATABASE** , como membros da função de banco de dados fixa **db_owner** , podem alterar a configuração de contenção de um banco de dados. Se a configuração de contenção de um banco de dados for alterada de **NONE** para **PARTIAL** ou **FULL**, o acesso de usuários poderá ser concedido por meio da criação de usuários de banco de dados independente com senhas. Isso pode fornecer acesso sem o conhecimento ou consentimento dos administradores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para impedir a contenção de qualquer banco de dados, defina a opção [!INCLUDE[ssDE](../../includes/ssde-md.md)]contained database authentication**de** do como 0. Para impedir conexões por usuários de banco de dados independente com senhas em bancos de dados independentes selecionados, use gatilhos de logon para cancelar tentativas de logon por usuários de banco de dados independente com senhas.  
   
 ### <a name="attaching-a-contained-database"></a>Anexando um banco de dados independente  
  Por meio da anexação de um banco de dados independente, um administrador pode dar acesso não desejado de usuários à instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Um administrador preocupado com esse risco pode colocar o banco de dados online em modo **RESTRICTED_USER** , o que impede a autenticação para usuários de bancos de dados independentes com senha. Apenas entidades autorizadas por meio de logon poderão acessar o [!INCLUDE[ssDE](../../includes/ssde-md.md)].  

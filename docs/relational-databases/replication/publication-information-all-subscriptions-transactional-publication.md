@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: 7073350c-f667-4f70-88e9-152c9a1b08dd
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 0ffbbd5f2cef23accfde900543fb07b934bb3730
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: f93f4bb75bf225f7ccf7a3d377ef495a3cb99854
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75321337"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286622"
 ---
 # <a name="publication-information-all-subscriptions-transactional-publication"></a>Informações da Publicação, Todas as Assinaturas (publicação transacional)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -28,13 +28,13 @@ ms.locfileid: "75321337"
 ## <a name="options"></a>Opções  
  Para obter informações mais detalhadas e tarefas relacionadas a uma assinatura, clique com o botão direito do mouse na linha dessa assinatura e clique em uma opção no menu de atalho. Para alterar a forma como a grade exibe os dados, clique com o botão direito do mouse na grade e clique em uma destas opções:  
   
--   **Classificar**: classifique uma ou mais colunas na caixa de diálogo **Classificar Colunas**.  
+-   **Classificar**: classifique uma ou mais colunas na caixa de diálogo **Classificar Colunas** .  
   
--   **Escolher Colunas para Mostrar**: selecione quais colunas devem ser exibidas e a ordem em que devem ser exibidas, na caixa de diálogo **Selecionar Colunas**.  
+-   **Selecionar Colunas para Mostrar**: selecione quais colunas devem ser exibidas e a ordem em que devem ser exibidas, na caixa de diálogo **Selecionar Colunas** .  
   
--   **Filtro**: filtre linhas na grade com base em valores de colunas da caixa de diálogo **Configurações de Filtro**.  
+-   **Filtrar**: filtre linhas na grade com base em valores de colunas da caixa de diálogo **Configurações de Filtro** .  
   
--   **Limpar Filtro**: Limpe todas as configurações de filtro para a grade.  
+-   **Limpar Filtro**: limpe as configurações de filtro da grade.  
   
  As configurações de filtro são específicas de cada grade. A seleção e a classificação da coluna são aplicadas a todas as grades do mesmo tipo, como a grade de publicações de cada Publicador.  
   

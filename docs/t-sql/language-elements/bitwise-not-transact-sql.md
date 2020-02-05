@@ -24,10 +24,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ee403317d9b10733126f462b47dc8d57d7f177d3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67943031"
 ---
 # <a name="-bitwise-not-transact-sql"></a>~ (NOT bit a bit) (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "67943031"
 
   Executa uma operação lógica NOT bit a bit em um valor inteiro.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -59,7 +59,7 @@ ms.locfileid: "67943031"
   
  **bit** se os valores de entrada são **bit**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O operador bit a bit **~** executa uma expressão NOT lógica bit a bit para a *expression*, usando um bit por vez. Se *expression* tiver o valor 0, os bits no conjunto de resultados serão definidos como 1; caso contrário, o bit no resultado será limpo com o valor 0. Em outras palavras, uns são alterados para zeros e zeros são alterados para uns.  
   
 > [!IMPORTANT]  

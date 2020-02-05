@@ -19,10 +19,10 @@ ms.assetid: fdb64e09-222a-47fe-b08b-999264ca261d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 527e59ef18d152b4546619cf67130dc7aecbfe6a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68050827"
 ---
 # <a name="grant-full-text-permissions-transact-sql"></a>Permissões de texto completo GRANT (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68050827"
   
 
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -86,7 +86,7 @@ AS *granting_principal*
 -   usuário de banco de dados mapeado para uma chave assimétrica  
 -   usuário de banco de dados não mapeado para uma entidade do servidor.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
   
 ## <a name="fulltext-catalog-permissions"></a>Permissões FULLTEXT CATALOG  
  Um catálogo de texto completo é um protegível em nível de banco de dados contido no banco de dados que é seu pai na hierarquia de permissões. As permissões mais específicas e limitadas que podem ser concedidas em um catálogo de texto completo estão listadas na tabela a seguir, junto com as permissões mais gerais que as incluem implicitamente.  
@@ -132,7 +132,7 @@ AS *granting_principal*
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-granting-permissions-to-a-full-text-catalog"></a>A. Concedendo permissões a um catálogo de texto completo  
+### <a name="a-granting-permissions-to-a-full-text-catalog"></a>a. Concedendo permissões a um catálogo de texto completo  
  O seguinte exemplo concede a `Ted` a permissão `CONTROL` no catálogo de texto completo `ProductCatalog`.  
   
 ```  

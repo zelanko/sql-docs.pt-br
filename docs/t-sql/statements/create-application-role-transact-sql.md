@@ -24,10 +24,10 @@ ms.assetid: 647386da-ee80-41cf-86c9-dd590f9d66b6
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: dc3caf4c1643405cc7db31e2a9c76cf70456b272
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73064589"
 ---
 # <a name="create-application-role-transact-sql"></a>CREATE APPLICATION ROLE (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "73064589"
 
   Adiciona uma função de aplicativo ao banco de dados atual.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -55,7 +55,7 @@ CREATE APPLICATION ROLE application_role_name
  DEFAULT_SCHEMA **=** _schema\_name_  
  Especifica o primeiro esquema que é pesquisado pelo servidor quando ele resolve os nomes de objetos para essa função. Se DEFAULT_SCHEMA for deixado indefinido, a função de aplicativo usará DBO como seu esquema padrão. *schema_name* pode ser um esquema que não existe no banco de dados.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
   
 > [!IMPORTANT]  
 >  A complexidade de Senha é verificada quando as senhas de função de aplicativo são definidas. Os aplicativos que invocam funções de aplicativo devem armazenar suas senhas. As senhas de função de aplicativo devem sempre ser criptografadas ao serem armazenadas.  

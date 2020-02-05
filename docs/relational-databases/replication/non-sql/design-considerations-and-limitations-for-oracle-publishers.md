@@ -14,10 +14,10 @@ ms.assetid: 8d9dcc59-3de8-4d36-a61f-bc3ca96516b6
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 9b45f787bf590eb3d4b29aa3d02f9ba8a2fd2934
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75321898"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Considerações de design e limitações para Publicadores Oracle
@@ -105,7 +105,7 @@ ms.locfileid: "75321898"
   
  Considere também os seguintes problemas:  
   
--   Oracle e [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tratam o NULL de modo diferente: a Oracle permite várias linhas com valores nulos para colunas que permitem o NULL e são incluídas em restrições ou índices exclusivos. O[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] impõe exclusividade permitindo somente uma única linha com um valor nulo para a mesma coluna. Não é possível publicar uma restrição ou índice exclusivo que permita NULL uma vez que haveria uma violação de restrição no Assinante se a tabela publicada tiver várias linhas com valores NULL para qualquer uma das colunas incluídas no índice ou restrição.  
+-   A Oracle e o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tratam o NULL diferentemente: a Oracle permite várias linhas com valores nulos para colunas que permitem o NULL e são incluídas em restrições ou índices exclusivos. O[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] impõe exclusividade permitindo somente uma única linha com um valor nulo para a mesma coluna. Não é possível publicar uma restrição ou índice exclusivo que permita NULL uma vez que haveria uma violação de restrição no Assinante se a tabela publicada tiver várias linhas com valores NULL para qualquer uma das colunas incluídas no índice ou restrição.  
   
 -   Ao testar exclusividade, espaços em branco em um campo são ignorados por [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mas não pelo Oracle.  
   

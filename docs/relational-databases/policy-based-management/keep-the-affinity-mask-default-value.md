@@ -13,10 +13,10 @@ ms.assetid: 8abdc79b-fc26-42e9-8f73-ec6c98713142
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 57f68bea18cfbe8d5718e8b45d5d4a5b443713f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68087210"
 ---
 # <a name="keep-the-affinity-mask-default-value"></a>Manter o valor padrão da máscara de afinidade
@@ -27,6 +27,6 @@ ms.locfileid: "68087210"
  [Opção affinity mask de configuração de servidor](../../database-engine/configure-windows/affinity-mask-server-configuration-option.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Monitorar e impor práticas recomendadas usando o Gerenciamento Baseado em Políticas](../../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
+ [Monitorar e impor melhores práticas usando o gerenciamento baseado em políticas](../../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
   
   

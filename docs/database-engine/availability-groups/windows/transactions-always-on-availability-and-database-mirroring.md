@@ -17,10 +17,10 @@ ms.assetid: 9f7ed895-ad65-43e3-ba08-00d7bff1456d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 407e477be98f386adc27fc965b1d099d1dec4dfa
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75251228"
 ---
 # <a name="transactions---availability-groups-and-database-mirroring"></a>Transações – grupos de disponibilidade e espelhamento de banco de dados
@@ -45,13 +45,13 @@ Obtenha mais informações em:
 - [Guia de Desenvolvedores do DTC](https://msdn.microsoft.com/library/ms679938.aspx)
 - [Referência de Programadores do DTC](https://msdn.microsoft.com/library/ms686108.aspx)
 
-## <a name="sql-server-2016-sp1-and-before-support-for-cross-database-transactions-within-the-same-sql-server-instance"></a>SQL Server 2016 SP1 e anteriores: Suporte para transações entre bancos de dados na mesma instância do SQL Server  
+## <a name="sql-server-2016-sp1-and-before-support-for-cross-database-transactions-within-the-same-sql-server-instance"></a>SQL Server 2016 SP1 e anteriores: suporte para transações entre bancos de dados na mesma instância do SQL Server  
 
 No SQL Server 2016 SP1 e anteriores, não há suporte para transações entre bancos de dados na mesma instância do SQL Server em grupos de disponibilidade. Não será possível hospedar dois bancos de dados em uma transação entre bancos de dados na mesma instância do SQL Server se um ou ambos os bancos de dados estiverem em um grupo de disponibilidade. Essa limitação também se aplica quando esses bancos de dados fazem parte do mesmo grupo de disponibilidade.  
   
 Também não há suporte para transações entre bancos de dados para espelhamento de banco de dados.  
   
-##  <a name="dtcsupport"></a> SQL Server 2016 SP1 e anteriores: Suporte a transações distribuídas  
+##  <a name="dtcsupport"></a> SQL Server 2016 SP1 e anteriores: suporte para transações distribuídas  
 Transações distribuídas são compatíveis com grupos de disponibilidade quando os bancos de dados são hospedados por diferentes instâncias do SQL Server. Ela também se aplica a transações distribuídas entre instâncias do SQL Server e outro servidor em conformidade com DTC.  
  
 O DTC ou MSDTC (Coordenador de Transações Distribuídas da Microsoft) é um serviço Windows que fornece a infraestrutura de transação para sistemas distribuídos. O MSDTC permite que aplicativos clientes incluam várias fontes de dados em uma transação, que é então confirmada em todos os servidores incluídos na transação. Por exemplo, você pode usar o MSDTC para coordenar transações que abrangem vários bancos de dados em servidores diferentes.
@@ -91,6 +91,6 @@ O SQL Server 2016 introduz a capacidade de usar transações distribuídas em qu
 >  Não há suporte para o uso do Espelhamento de Banco de Dados com o DTC nem para o uso de grupos de disponibilidade com o DTC de maneiras não aprovadas neste artigo.  Isso não significa que os aspectos do produto não relacionados ao DTC não tenham suporte; no entanto, quaisquer problemas decorrentes do uso incorreto de transações distribuídas não são compatíveis.  
   
 ## <a name="next-steps"></a>Próximas etapas  
- [Grupos de disponibilidade Always On: interoperabilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
+ [Always On availability groups: Interoperability &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
   
   

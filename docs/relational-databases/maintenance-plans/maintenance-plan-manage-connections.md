@@ -13,10 +13,10 @@ ms.assetid: 95ad9375-6584-423e-b9de-0e86782f8017
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a388792d24ce033dce0ffb4c6f0120a6ea341ae0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115958"
 ---
 # <a name="maintenance-plan-manage-connections"></a>Plano de manutenção (Gerenciar Conexões)
@@ -34,6 +34,6 @@ ms.locfileid: "68115958"
 > O pacote é armazenado no banco de dados **msdb** com seu **ProtectionLevel** definida como **ServerStorage**, portanto, quando a *Autenticação do SQL Server* é usada, a senha não será criptografada no **msdb**. Você pode usar a *Autenticação do SQL Server* desde que **msdb** esteja protegido, porém é recomendado usar a *Autenticação do Windows*
 
 ## <a name="see-also"></a>Consulte Também  
- [Planos de Manutenção](../../relational-databases/maintenance-plans/maintenance-plans.md)  
+ [Planos de manutenção](../../relational-databases/maintenance-plans/maintenance-plans.md)  
   
   

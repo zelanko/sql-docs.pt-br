@@ -28,10 +28,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2765c7c610bd37e68124d7b45ddd0390cc8777dd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68113695"
 ---
 # <a name="char-transact-sql"></a>CHAR (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "68113695"
 
 Essa função converte um código ASCII **int** em um valor de caractere.
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -57,7 +57,7 @@ Um inteiro de 0 a 255. `CHAR` retorna um valor `NULL` para expressões de inteir
 ## <a name="return-types"></a>Tipos de retorno
 **char(1)**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 Use `CHAR` para inserir caracteres de controle em cadeias de caracteres. Esta tabela mostra alguns caracteres de controle usados com frequência.
   
 |Caractere de controle|Valor|  
@@ -68,7 +68,7 @@ Use `CHAR` para inserir caracteres de controle em cadeias de caracteres. Esta ta
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-ascii-and-char-to-print-ascii-values-from-a-string"></a>A. Usando ASCII e CHAR para imprimir valores ASCII de uma cadeia de caracteres  
+### <a name="a-using-ascii-and-char-to-print-ascii-values-from-a-string"></a>a. Usando ASCII e CHAR para imprimir valores ASCII de uma cadeia de caracteres  
 Este exemplo imprime o valor e o caractere ASCII para cada caractere na cadeia de caracteres `New Moon`.
   
 ```sql

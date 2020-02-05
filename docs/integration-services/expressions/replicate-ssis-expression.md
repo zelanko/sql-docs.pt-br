@@ -13,10 +13,10 @@ ms.assetid: e7a37b93-6d1d-42d5-9a65-de1790abf6a5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 198a1161d6af7f1b57f9480b3d00cd8dec3436d1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297422"
 ---
 # <a name="replicate-ssis-expression"></a>REPLICATE (Expressão SSIS)
@@ -46,7 +46,7 @@ REPLICATE(character_expression,times)
 ## <a name="result-types"></a>Tipos de resultado  
  DT_WSTR  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Se *times* for zero, a função retornará uma cadeia de comprimento zero.  
   
  Se *times* for um número negativo, a função retornará um erro.  

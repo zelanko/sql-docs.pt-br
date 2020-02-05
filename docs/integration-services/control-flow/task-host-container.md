@@ -16,10 +16,10 @@ ms.assetid: 7394a2c2-1b07-427d-b94a-9792e7783d35
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e6286bb35855d0bf775925c93003ae59996ab447
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293891"
 ---
 # <a name="task-host-container"></a>Contêiner Host da Tarefa
@@ -40,7 +40,7 @@ ms.locfileid: "71293891"
   
 ## <a name="related-tasks"></a>Related Tasks  
   
--   [Definir as propriedades de uma tarefa ou de um contêiner](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Definir as propriedades de uma tarefa ou contêiner](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Contêineres do Integration Services](../../integration-services/control-flow/integration-services-containers.md)  

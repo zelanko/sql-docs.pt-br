@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: 85f666f6-14ee-4f19-b385-e5cc508aabe4
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 38570e910994e77084777bcc4245ccbb6033d39b
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: ba656a13c71792a176b7f625a2f561f1f422e4b3
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769433"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287046"
 ---
 # <a name="subscription-synchronization-history"></a>Assinatura, histórico de sincronização
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -82,7 +82,7 @@ ms.locfileid: "68769433"
  **Insere**  
  O número de linhas inserido nesta fase da sessão selecionada.  
   
- **Updates**  
+ **Atualizações**  
  O número de linhas atualizado nesta fase da sessão selecionada.  
   
  **Deletes**  

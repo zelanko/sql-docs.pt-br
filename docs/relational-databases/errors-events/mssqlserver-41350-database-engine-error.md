@@ -12,22 +12,22 @@ ms.assetid: 45e47831-9cbc-406d-9e23-5f1f8569b304
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5c981a4a2bd74fe7cfa374310c4bbe240b4846a5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68123177"
 ---
-# <a name="mssqlserver41350"></a>MSSQLSERVER_41350
+# <a name="mssqlserver_41350"></a>MSSQLSERVER_41350
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|Nome do Produto|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |ID do evento|41350|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|HK_CREATE_TABLE_WITH_ENCRYPTION|  
 |Texto da mensagem|Aviso: uma tabela com otimização de memória com durabilidade SCHEMA_AND_DATA foi criada em um banco de dados que foi habilitado para criptografia. Os dados na tabela com otimização de memória não serão criptografados.|  

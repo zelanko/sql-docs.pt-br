@@ -21,10 +21,10 @@ ms.assetid: a782d60d-0373-4386-bd77-9ec192553700
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b310083d3317c9099532b8d08f2482efe193d95c
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75252789"
 ---
 # <a name="role-switching-during-a-database-mirroring-session-sql-server"></a>Troca de função durante uma sessão de espelhamento de banco de dados (SQL Server)
@@ -159,7 +159,7 @@ ms.locfileid: "75252789"
 -   O servidor principal perdeu comunicação com o restante da configuração de espelhamento de banco de dados, enquanto o espelho e a testemunha retêm quorum. Entretanto, se todas as instâncias de servidor perderem comunicação, e a testemunha e o servidor espelho recuperarem comunicação posteriormente, não ocorrerá failover automático.  
   
     > [!NOTE]  
-    >  Para obter mais informações, confira [Quorum: Como uma testemunha afeta a disponibilidade do banco de dados &#40;Espelhamento de Banco de Dados&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+    >  Para obter mais informações, consulte [Quorum: como uma testemunha afeta a disponibilidade do banco de dados &#40;Espelhamento de Banco de Dados&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
 -   O servidor espelho detectou a perda do servidor principal.  
   
@@ -183,7 +183,7 @@ ms.locfileid: "75252789"
   
  A ilustração a seguir mostra uma única instância de failover automático.  
   
- ![Automatic failover](../../database-engine/database-mirroring/media/dbm-failovauto1round.gif "|::ref3::|")  
+ ![Automatic failover](../../database-engine/database-mirroring/media/dbm-failovauto1round.gif "failover automático")  
   
  Inicialmente, todos os três servidores estão conectados (a sessão tem quorum completo). **Partner_A** é o servidor principal e **Partner_B** é o servidor espelho. **Partner_A** (ou o banco de dados principal em **Partner_A**) torna-se indisponível. A testemunha e **Partner_B** reconhecem que o principal não está mais disponível na sessão que retém quorum. **Partner_B** se torna o servidor principal e disponibiliza sua cópia do banco de dados como o novo banco de dados principal. Por fim, o **Partner_A** se reconecta à sessão e descobre que agora o **Partner_B** possui a função principal. **Partner_A** assume a função de espelho.  
   

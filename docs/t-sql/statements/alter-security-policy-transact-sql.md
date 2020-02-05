@@ -20,10 +20,10 @@ ms.assetid: a8efc37e-113d-489c-babc-b914fea2c316
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 458083fda6382c353af78c7d2b438fdc0d39c826
-ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72173863"
 ---
 # <a name="alter-security-policy-transact-sql"></a>ALTER SECURITY POLICY (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "72173863"
 
 Altera uma política de segurança.  
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -88,7 +88,7 @@ Indica que a política de segurança não deve ser executada quando um agente de
 table_schema_name.table_name  
 É a tabela de destino para o predicado de segurança aplicado. Várias políticas de segurança desabilitadas podem direcionar uma única tabela, mas apenas uma pode ser habilitada em um determinado momento.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 A instrução ALTER SECURITY POLICY está no escopo de uma transação. Se a transação for revertida, a instrução também será revertida.  
   
 Ao usar funções de predicado com tabelas com otimização de memória, as políticas de segurança devem incluir **SCHEMABINDING** e usar a dica de compilação **WITH NATIVE_COMPILATION**. O argumento SCHEMABINDING não pode ser alterado com a instrução ALTER porque ela se aplica a todos os predicados. Para alterar a associação de esquema, você deve remover e recriar a política de segurança.  
@@ -107,7 +107,7 @@ Além disso, as seguintes permissões são necessárias para cada predicado que 
 ## <a name="examples"></a>Exemplos  
 Os exemplos a seguir demonstram o uso da sintaxe **ALTER SECURITY POLICY** . Para obter um exemplo de um cenário de política de segurança completo, consulte [Segurança em nível de linha](../../relational-databases/security/row-level-security.md).  
   
-### <a name="a-adding-an-additional-predicate-to-a-policy"></a>A. Adicionando um predicado extra a uma política  
+### <a name="a-adding-an-additional-predicate-to-a-policy"></a>a. Adicionando um predicado extra a uma política  
 A sintaxe a seguir altera uma política de segurança, adicionando um predicado de filtro na tabela `mytable`.  
   
 ```  

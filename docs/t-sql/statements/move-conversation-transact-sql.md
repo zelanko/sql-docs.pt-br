@@ -24,10 +24,10 @@ ms.assetid: 1da4d2c9-e767-434e-b49b-615711a7f626
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 2e4deadd4f48457557019ac02337133466b3df33
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70211351"
 ---
 # <a name="move-conversation-transact-sql"></a>MOVE CONVERSATION (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "70211351"
 
   Move uma conversa a um grupo de conversa diferente.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -53,7 +53,7 @@ MOVE CONVERSATION conversation_handle
  TO *conversation_group_id*  
  É uma variável ou constante que contém o identificador do grupo de conversa para o qual a conversa será movida. *conversation_group_id* precisa ser do tipo **uniqueidentifier**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  A instrução MOVE CONVERSATION move a conversa especificada por *conversation_handle* para o grupo de conversa identificado por *conversation_group_id*. Os diálogos só podem ser redirecionados entre grupos de conversa que são associados com a mesma fila.  
   
 > [!IMPORTANT]  

@@ -17,10 +17,10 @@ ms.assetid: e66286f8-97b1-4e5a-86b4-e56f1932b7d5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b403f8badbed6abdf0e946244515bc6367018a67
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293918"
 ---
 # <a name="shrink-database-task"></a>Tarefa Reduzir Banco de Dados
@@ -37,7 +37,7 @@ ms.locfileid: "71293918"
 > [!WARNING]  
 >  Os dados movidos para reduzir um arquivo podem ser espalhados para qualquer local disponível no arquivo. Isso provoca uma fragmentação do índice e pode reduzir a velocidade do desempenho de consultas que pesquisam um intervalo do índice. Para eliminar a fragmentação, considere a recompilação dos índices no arquivo após a redução.  
   
-## <a name="commands"></a>Commands  
+## <a name="commands"></a>Comandos  
  A tarefa Reduzir Banco de Dados encapsula um comando DBCC SHRINKDATABASE, inclusive os seguintes argumentos e opções:  
   
 -   *database_name*  
@@ -46,7 +46,7 @@ ms.locfileid: "71293918"
   
 -   NOTRUNCATE ou TRUNCATEONLY.  
   
- Se a tarefa Reduzir Banco de Dados reduzir vários bancos de dados, a tarefa executará vários comandos SHRINKDATABASE, um para cada banco de dados. Todas as instâncias do comando SHRINKDATABASE usam os mesmos valores de argumento, exceto para o argumento *database_name*. Para obter mais informações, consulte [DBCC SHRINKDATABASE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).  
+ Se a tarefa Reduzir Banco de Dados reduzir vários bancos de dados, a tarefa executará vários comandos SHRINKDATABASE, um para cada banco de dados. Todas as instâncias do comando SHRINKDATABASE usam os mesmos valores de argumento, exceto para o argumento *database_name* . Para obter mais informações, consulte [DBCC SHRINKDATABASE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).  
   
 ## <a name="configuration-of-the-shrink-database-task"></a>Configuração da tarefa Reduzir Banco de Dados  
  Você pode definir propriedades por meio do [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer. Esta tarefa está na seção **Tarefas do Plano de Manutenção** da **Caixa de Ferramentas** , no Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  

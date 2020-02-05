@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 4addd426-7523-4067-8d7d-ca6bae4c9e34
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 355840dee0c7ff327968457a54f55730665d5afe
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: cdf335fe061bfd6c7c8646f87b6b4c1798243e9b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75321843"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288137"
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>Medir a latência e validar as conexões para a replicação transacional
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ ms.locfileid: "75321843"
   
 3.  Clique em **Inserir Rastreador**.  
   
-4.  Exibição de tempo decorrido para o token de rastreamento nas seguintes colunas: **Editor para Distribuidor**, **Distribuidor para Editor**, **Latência Total**. Um valor de **Pendente** indica que o token não alcançou um determinado ponto.  
+4.  Exiba o tempo decorrido para o token de rastreamento nas seguintes colunas: **Publicador para Distribuidor**, **Distribuidor para Assinante**, **Latência Total**. Um valor de **Pendente** indica que o token não alcançou um determinado ponto.  
   
 #### <a name="to-view-information-on-a-tracer-token-inserted-previously"></a>Para exibir informações sobre um token de rastreamento previamente inserido  
   
@@ -101,7 +101,7 @@ ms.locfileid: "75321843"
   
 3.  Selecione uma opção de tempo na lista suspensa **Tempo inserido** .  
   
-4.  Exibição de tempo decorrido para o token de rastreamento nas seguintes colunas: **Editor para Distribuidor**, **Distribuidor para Editor**, **Latência Total**. Um valor de **Pendente** indica que o token não alcançou um determinado ponto.  
+4.  Exiba o tempo decorrido para o token de rastreamento nas seguintes colunas: **Publicador para Distribuidor**, **Distribuidor para Assinante**, **Latência Total**. Um valor de **Pendente** indica que o token não alcançou um determinado ponto.  
   
     > [!NOTE]  
     >  Informações de token de rastreamento são retidas para o mesmo período de tempo que outros dados históricos, os quais são governados pelo período de retenção de histórico do banco de dados de distribuição. Para obter informações sobre como alterar as propriedades do banco de dados de distribuição, consulte [Exibir e modificar as propriedades do Distribuidor e do Publicador](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  

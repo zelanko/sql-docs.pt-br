@@ -23,10 +23,10 @@ ms.assetid: 4688b17a-dfd1-4f03-8db4-273a401f879f
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2105b03f64ecc2e0357e5a06f0d7cb2c18fb69b0
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72252178"
 ---
 # <a name="revert-transact-sql"></a>REVERT (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "72252178"
 
   Alterna o contexto de execução de volta para o chamador da última instrução EXECUTE AS.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -48,7 +48,7 @@ REVERT
  WITH COOKIE = @*varbinary_variable*  
  Especifica o cookie que foi criado em uma instrução autônoma [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md) correspondente. *\@varbinary_variable* é **varbinary(100)** .  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  REVERT pode ser especificado dentro de um módulo como um procedimento armazenado ou uma função definida pelo usuário ou como uma instrução autônoma. Quando especificado dentro de um módulo, REVERT só é aplicável às instruções EXECUTE AS definidas no módulo. Por exemplo, o procedimento armazenado a seguir emite uma instrução `EXECUTE AS` seguida por uma instrução `REVERT`.  
   
 ```  
@@ -86,7 +86,7 @@ EXECUTE dbo.usp_myproc;
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-execute-as-and-revert-to-switch-context"></a>A. Usando EXECUTE AS e REVERT para alternar o contexto  
+### <a name="a-using-execute-as-and-revert-to-switch-context"></a>a. Usando EXECUTE AS e REVERT para alternar o contexto  
  O exemplo a seguir cria uma pilha de execução de contexto usando várias entidades de segurança. A instrução REVERT é usada para redefinir o contexto de execução para o chamador anterior. A instrução REVERT é executada várias vezes movendo a pilha para cima até o contexto de execução ser definido como o chamador original.  
   
 ```  

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 431ec504fdcf977af23cf5340e39052ff4416d01
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68043306"
 ---
 # <a name="stored-procedures-event-category"></a>Categoria de evento dos procedimentos armazenados
@@ -27,7 +27,7 @@ ms.locfileid: "68043306"
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|Descrição|  
+|Tópico|DESCRIÇÃO|  
 |-----------|-----------------|  
 |[Classe de evento RPC:Completed](../../relational-databases/event-classes/rpc-completed-event-class.md)|Indica que uma RPC (chamada de procedimento remoto) foi completada.|  
 |[Classe de evento PreConnect:Completed](../../relational-databases/event-classes/preconnect-completed-event-class.md)|Indica quando a função de classificação Administrador de Recursos conclui a execução.|  

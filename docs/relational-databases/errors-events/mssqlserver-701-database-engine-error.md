@@ -12,10 +12,10 @@ ms.assetid: 3b975000-63a1-43c2-a40f-89d0a8a36bef
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: db307d221b8c90f478c21ab1605362e7fdf2ffd6
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907715"
 ---
 # <a name="mssqlserver_701"></a>MSSQLSERVER_701
@@ -25,15 +25,15 @@ ms.locfileid: "72907715"
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|701|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|NOSYSMEM|  
 |Texto da mensagem|Não há memória de sistema suficiente para executar essa consulta.|  
   
 ## <a name="explanation"></a>Explicação  
-O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] falhou ao alocar memória suficiente para executar a consulta. Isso pode ser causado por várias razões, incluindo as configurações do sistema operacional, disponibilidade de memória física ou limites de memória na carga de trabalho atual. Na maioria dos casos, a transação que falhou não é a causa do erro.  
+O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] falhou ao alocar memória suficiente para executar a consulta. A falha pode ser causada por vários motivos, incluindo configurações do sistema operacional, disponibilidade de memória física ou limites de memória impostos à carga de trabalho atual. Na maioria dos casos, a transação com falha não é a causa do erro.  
   
 As consultas de diagnósticos, como instruções DBCC, podem falhar porque o servidor não tem memória suficiente.  
   
@@ -46,7 +46,7 @@ Esta lista descreve etapas gerais que ajudarão a corrigir erros de memória:
   
 1.  Verifique se outros aplicativos ou serviços estão consumindo memória neste servidor. Reconfigure os aplicativos ou serviços menos críticos de maneira que eles consumam menos memória.  
   
-2.  Comece a coletar contadores do monitor de desempenho para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **: Gerenciador de Buffer**, **SQL Server: Gerenciador de Memória**.  
+2.  Comece a coletar contadores do monitor de desempenho relativos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **: Gerenciador de Buffer**, **SQL Server: Gerenciador de Memória**.  
   
 3.  Verifique os seguintes parâmetros de configuração da memória do SQL Server:  
   

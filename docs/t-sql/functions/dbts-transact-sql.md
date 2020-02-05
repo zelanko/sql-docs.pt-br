@@ -19,10 +19,10 @@ ms.assetid: 91842ddd-91c0-4445-a03f-116f6bc991d0
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 61743139f35ed3e8a5dd4bbac9bd1f4660cb2ec2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68136027"
 ---
 # <a name="x40x40dbts-transact-sql"></a>&#x40;&#x40;DBTS (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68136027"
 
 Esta função retorna o valor do tipo de dados **timestamp** atual para o banco de dados atual. O banco de dados atual terá um valor de carimbo do carimbo de data/hora exclusivo garantido.
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,7 +41,7 @@ Esta função retorna o valor do tipo de dados **timestamp** atual para o banco 
 ## <a name="return-types"></a>Tipos de retorno
 **varbinary**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 @@DBTS retorna o valor do carimbo de data/hora do banco de dados atual usado pela última vez. Uma inserção ou atualização de uma linha com uma coluna **timestamp** gera um novo valor de carimbo de data/hora.
   
 Alterações nos níveis de isolamento não afetam a função @@DBTS.

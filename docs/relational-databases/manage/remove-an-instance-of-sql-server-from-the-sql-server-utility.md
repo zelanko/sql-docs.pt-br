@@ -13,10 +13,10 @@ ms.assetid: ae1d126a-46d2-47bf-b339-17c743df6491
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 785c056b50ed3594fe9886eb9c6a9ec79f7895c1
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908653"
 ---
 # <a name="remove-an-instance-of-sql-server-from-the-sql-server-utility"></a>Remover uma instância do SQL Server do Utilitário do SQL Server
@@ -30,7 +30,7 @@ ms.locfileid: "72908653"
   
 2.  Na coluna **Nome de Instância do SQL Server** da exibição de lista, selecione a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a ser removida do Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Clique com o botão direito do mouse na instância a ser removida e selecione **Remover Instância Gerenciada...** .  
   
-3.  Especifique as credenciais com privilégios de administrador para a instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: Clique em **Conectar...** , verifique as informações na caixa de diálogo **Conectar ao Servidor** e clique em **Conectar**. Você verá as informações de logon na caixa de diálogo **Remover Instância Gerenciada** .  
+3.  Especifique as credenciais com privilégios de administrador da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: clique em **Conectar...** , verifique as informações na caixa de diálogo **Conectar ao Servidor** e clique em **Conectar**. Você verá as informações de logon na caixa de diálogo **Remover Instância Gerenciada** .  
   
 4.  Para confirmar a operação, clique em **OK**. Para encerrar a operação, clique em **Cancelar**.  
 

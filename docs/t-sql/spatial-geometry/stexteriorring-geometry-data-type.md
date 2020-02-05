@@ -18,10 +18,10 @@ ms.assetid: b402b36f-05bf-4c6d-8cd6-76c0fff19db2
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 5c79a6aea1042649d688b52d124f9b661d4a5b7f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68107720"
 ---
 # <a name="stexteriorring-geometry-data-type"></a>STExteriorRing (tipo de dados geometry)
@@ -39,11 +39,11 @@ Retorna o anel exterior de uma instância de **geometry**, que é um polígono.
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Tipo de retorno CLR: **SqlGeometry**  
+ Tipo de retorno do CLR: **SqlGeometry**  
   
- Tipo OGC (Open Geospatial Consortium): **LineString**  
+ Tipo do OGC (Open Geospatial Consortium): **LineString**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse método retorna **nulo** se a instância de **geometry** não é um polígono.  
   
 ## <a name="examples"></a>Exemplos  

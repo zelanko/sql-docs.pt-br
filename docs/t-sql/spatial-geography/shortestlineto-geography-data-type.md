@@ -18,10 +18,10 @@ ms.assetid: 9d7c9885-5d1b-49ae-af31-5ef9fb8acaba
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 7844f1d38f5d2e6f36f971eb83d8961596483142
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042612"
 ---
 # <a name="shortestlineto-geography-data-type"></a>ShortestLineTo (tipo de dados geography)
@@ -43,14 +43,14 @@ ms.locfileid: "68042612"
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Tipo de retorno CLR: **SqlGeography**  
+ Tipo de retorno do CLR: **SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O método retorna uma instância de **LineString** com pontos de extremidade nas bordas das duas instâncias de **geografia** sem intersecção que estão sendo comparadas. O comprimento de **LineString** retornado é igual à distância mais curta entre as duas instâncias de **geografia**. Uma instância de **LineString** vazia é retornada quando as duas instâncias de **geografia** se interseccionam.  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-calling-shortestlineto-on-non-intersecting-instances"></a>A. Chamando ShortestLineTo() em instâncias sem interseção  
+### <a name="a-calling-shortestlineto-on-non-intersecting-instances"></a>a. Chamando ShortestLineTo() em instâncias sem interseção  
  Este exemplo localiza a distância mais curta entre uma instância de `CircularString` e uma instância de `LineString` e retorna a instância de `LineString` que conecta os dois pontos:  
   
  ```

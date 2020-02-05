@@ -18,10 +18,10 @@ ms.assetid: 063d8722-e019-4d3d-8fcf-dbf5325823e7
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 45f0b6f9524c4877c669bfec8c5ab7bcfec198bb
-ms.sourcegitcommit: 381595e990f2294dbf324ef31071e2dd2318b8dd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74200503"
 ---
 # <a name="stdistance-geography-data-type"></a>STDistance (Tipo de dados geography)
@@ -46,7 +46,7 @@ ms.locfileid: "74200503"
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **float**  
   
- Tipo de retorno CLR: **SqlDouble**  
+ Tipo de retorno do CLR: **SqlDouble**  
   
 ## <a name="remarks"></a>Comentários  
  O resultado é expresso na unidade de medida definida pelo [Identificador de Referência Espacial &#40;SRID&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md) de dados espaciais.

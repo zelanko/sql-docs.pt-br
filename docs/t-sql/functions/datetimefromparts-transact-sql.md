@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 951ff4d63e2bd2739fda49ceafebf916089be45a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68119115"
 ---
 # <a name="datetimefromparts-transact-sql"></a>DATETIMEFROMPARTS (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68119115"
 
 Essa função retorna um valor **datetime** para os argumentos de data e hora especificados.
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -63,7 +63,7 @@ Uma expressão de inteiro que especifica milissegundos.
 ## <a name="return-types"></a>Tipos de retorno
 **datetime**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 `DATETIMEFROMPARTS` retorna um valor **datetime** completamente inicializado. `DATETIMEFROMPARTS` gerará um erro se pelo menos um argumento necessário tiver um valor inválido. `DATETIMEFROMPARTS` retornará nulo se pelo menos um argumento necessário tiver um valor nulo.
   
 Essa função dá suporte à comunicação remota para servidores [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e acima. Ela não dará suporte a comunicação remota para servidores que têm uma versão anterior a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].

@@ -18,10 +18,10 @@ ms.assetid: 99c7146e-d2e7-4f1a-80ff-21a05bc5e8bb
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 0e374b0042ec4b46b8c64e71b86d45d1f4cd3062
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68140898"
 ---
 # <a name="revoke-object-permissions-transact-sql"></a>permissões de objeto REVOKE (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "68140898"
 
   Revoga permissões em uma tabela, exibição, função com valor de tabela, procedimento armazenado, procedimento armazenado estendido, função escalar, função de agregação, fila de serviço ou sinônimo. 
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -121,7 +121,7 @@ REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ] ON
  *Database_user_with_no_login*  
  Especifica um usuário do banco de dados sem nenhuma entidade de segurança correspondente no nível de servidor.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  As informações sobre objetos são visível em várias exibições do catálogo. Para obter mais informações, veja [Exibições de catálogo de objeto&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md).  
   
  Um objeto é um protegível em nível de esquema contido pelo esquema que é seu pai na hierarquia de permissões. As permissões mais específicas e limitadas que podem ser revogadas em um objeto são listadas na tabela a seguir, junto com as permissões mais gerais que as contêm implicitamente.  
@@ -148,7 +148,7 @@ REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ] ON
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-revoking-select-permission-on-a-table"></a>A. Revogando a permissão SELECT em uma tabela  
+### <a name="a-revoking-select-permission-on-a-table"></a>a. Revogando a permissão SELECT em uma tabela  
  O exemplo a seguir revoga a permissão `SELECT` do usuário `RosaQdM` na tabela `Person.Address` do `AdventureWorks2012` banco de dados.  
   
 ```  

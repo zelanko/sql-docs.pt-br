@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 52f66f1922814f77f93dfdec8725c024c0a129ff
-ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68495467"
 ---
 # <a name="set-operators---union-transact-sql"></a>Set Operators – UNION (Transact-SQL)
@@ -47,7 +47,7 @@ A seguir são apresentadas as regras básicas de combinação dos conjuntos de r
   
 -   Os tipos de dados devem ser compatíveis.  
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](transact-sql-syntax-conventions-transact-sql.md)  
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -71,7 +71,7 @@ Incorpora todas as linhas nos resultados, incluindo duplicatas. Se não for espe
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-a-simple-union"></a>A. Usando uma UNION simples  
+### <a name="a-using-a-simple-union"></a>a. Usando uma UNION simples  
 No exemplo a seguir, o conjunto de resultados inclui o conteúdo das colunas `ProductModelID` e `Name` das tabelas `ProductModel` e `Gloves`.  
  
 ```sql

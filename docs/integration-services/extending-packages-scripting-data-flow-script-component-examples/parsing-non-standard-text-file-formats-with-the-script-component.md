@@ -16,10 +16,10 @@ ms.assetid: 1fda034d-09e4-4647-9a9f-e8d508c2cc8f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 733c3a909629514b55042d21f02cfca563d3c531
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297070"
 ---
 # <a name="parsing-non-standard-text-file-formats-with-the-script-component"></a>Analisando formatos de arquivo de texto fora do padrão com o componente Script
@@ -100,13 +100,13 @@ ms.locfileid: "71297070"
   
 12. Na página **Entradas e Saídas** do **Editor de Transformação Scripts**, selecione Saída 0 e defina seu **SynchronousInputID** como Nenhum. Crie 5 colunas de saída, todas com tipo cadeia de caracteres [DT_STR] com comprimento 32:  
   
-    -   FirstName  
+    -   Nome  
   
     -   LastName  
   
     -   Title  
   
-    -   Cidade  
+    -   City  
   
     -   StateProvince  
   

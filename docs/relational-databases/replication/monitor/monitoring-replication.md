@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: f182f43a-6af8-45bc-a708-08d5f7a6984a
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: b35b7ecc21497e7b8c458b6d0e46c410f96d5d21
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: d884bfe3517fa8b45c19f1d4d286992c2e5453c1
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68767135"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288031"
 ---
 # <a name="monitoring-replication"></a>Monitorando (Replicação)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "68767135"
 As seguintes ferramentas podem ser usadas para monitorar a replicação:  
   
 -   **Monitor de Replicação do SQL Server** – a ferramenta mais importante para monitorar a replicação, apresentando uma exibição do Editor dedicada a toda atividade de replicação. Para obter mais informações, consulte [Monitoring Replication](../../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md). 
--   **SQL Server Management Studio** – fornece acesso ao Replication Monitor. Também permite que você exiba o status atual e a última mensagem registrada pelos seguintes agentes e permite que você inicie e interrompa cada agente: Agente de Leitor de Log, Agente de Instantâneo, Agente de Mesclagem e Agente de Distribuição. Para obter mais informações, consulte [Monitor Replication Agents](../../../relational-databases/replication/monitor/monitor-replication-agents.md).  
+-   **SQL Server Management Studio** – fornece acesso ao Replication Monitor. Também permite exibir o status atual e a última mensagem registrada pelos seguintes agentes e permite iniciar e parar cada agente: Agent de Leitor de Log, Agente de Instantâneo, Agente de Mesclagem e Agente de Distribuição. Para obter mais informações, consulte [Monitor Replication Agents](../../../relational-databases/replication/monitor/monitor-replication-agents.md).  
   
 -   **Transact-SQL (T-SQL) e RMO (Replication Management Objects)** – ambas as interfaces permitem que você monitore todos os tipos de replicação do distribuidor. A replicação de mesclagem fornece também a capacidade de monitorar a replicação a partir do Assinante.  
   

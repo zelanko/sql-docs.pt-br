@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3dba918d0993426111a71785223d0fedd0aba0be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68091782"
 ---
 # <a name="null-and-unknown-transact-sql"></a>NULL e UNKNOWN (Transact-SQL)
@@ -38,19 +38,19 @@ ms.locfileid: "68091782"
   
  A tabela a seguir mostra os resultados da aplicação de um operador AND para duas expressões boolianas, em que uma expressão retorna UNKNOWN.  
   
-|Expressão 1|Expressão 2|Resultado|  
+|Expressão 1|Expressão 2|Result|  
 |---------------|---------------|------------|  
-|TRUE|UNKNOWN|UNKNOWN|  
-|UNKNOWN|UNKNOWN|UNKNOWN|  
-|FALSE|UNKNOWN|FALSE|  
+|TRUE|DESCONHECIDO|DESCONHECIDO|  
+|DESCONHECIDO|DESCONHECIDO|DESCONHECIDO|  
+|FALSE|DESCONHECIDO|FALSE|  
   
  A tabela a seguir mostra os resultados da aplicação de um operador OR para duas expressões boolianas, em que uma expressão retorna UNKNOWN.  
   
-|Expressão 1|Expressão 2|Resultado|  
+|Expressão 1|Expressão 2|Result|  
 |---------------|---------------|------------|  
-|TRUE|UNKNOWN|TRUE|  
-|UNKNOWN|UNKNOWN|UNKNOWN|  
-|FALSE|UNKNOWN|UNKNOWN|  
+|TRUE|DESCONHECIDO|TRUE|  
+|DESCONHECIDO|DESCONHECIDO|DESCONHECIDO|  
+|FALSE|DESCONHECIDO|DESCONHECIDO|  
   
 ## <a name="see-also"></a>Consulte Também  
  [AND &#40;Transact-SQL&#41;](../../t-sql/language-elements/and-transact-sql.md)   

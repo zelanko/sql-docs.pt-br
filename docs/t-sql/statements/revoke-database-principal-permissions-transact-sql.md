@@ -21,10 +21,10 @@ ms.assetid: c45e1086-c25b-48bb-a764-4a893e983db2
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 0353ff7b9e0778a7ef59107f5ba2876e72bbdd69
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75243337"
 ---
 # <a name="revoke-database-principal-permissions-transact-sql"></a>Permissões de principal do banco de dados REVOKE (Transact-SQL)
@@ -161,7 +161,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-revoking-control-permission-on-a-user-from-another-user"></a>a. Revogando a permissão CONTROL em um usuário a partir de outro usuário  
- O exemplo a seguir revoga a permissão `CONTROL` no usuário `Wanida` do [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] a partir do usuário `RolandX`.  
+ O exemplo a seguir revoga a permissão `CONTROL` no usuário [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] do `Wanida` a partir do usuário `RolandX`.  
   
 ```  
 USE AdventureWorks2012;  
@@ -180,7 +180,7 @@ GO
 ```  
   
 ### <a name="c-revoking-impersonate-permission-on-a-user-from-an-application-role"></a>C. Revogando a permissão PERSONATE em um usuário de uma função de aplicativo  
- O exemplo a seguir revoga a permissão `IMPERSONATE` no usuário `HamithaL` da função de aplicativo `AccountsPayable17` do [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+ O exemplo a seguir revoga a permissão `IMPERSONATE` no usuário `HamithaL` da função de aplicativo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] do `AccountsPayable17`.  
   
 **Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   

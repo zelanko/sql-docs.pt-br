@@ -17,10 +17,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 71df93e5e7d628fadf5839e980f42a92138a5e0c
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73594501"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-wizard"></a>Configurar a criptografia de coluna usando o Assistente do Always Encrypted
@@ -48,7 +48,7 @@ Usar o PowerShell é recomendado
     - [Proteger dados confidenciais no Banco de Dados SQL do Azure com Always Encrypted e chaves mestras de coluna no repositório de certificados do Windows](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
     - [Proteger dados confidenciais no Banco de Dados SQL do Azure com Always Encrypted e chaves mestras de coluna no Azure Key Vault](https://docs.microsoft.com/azure/sql-database/sql-database-always-encrypted-azure-key-vault)
 
- - Para obter um vídeo que inclui o uso do assistente, confira [Keeping Sensitive Data Secure with Always Encrypted](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted)(Manter os dados confidenciais seguros com o Sempre Criptografado). Confira também o Blog da Equipe de Segurança do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [SSMS Encryption Wizard - Enabling Always Encrypted in a Few Easy Steps](https://techcommunity.microsoft.com/t5/SQL-Server/SSMS-Encryption-Wizard-Enabling-Always-Encrypted-in-a-Few-Easy/ba-p/384545)(Assistente de Criptografia do SSMS – Habilitando o Sempre Criptografado em algumas etapas simples).  
+ - Para obter um vídeo que inclui o uso do assistente, confira [Keeping Sensitive Data Secure with Always Encrypted](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted)(Manter os dados confidenciais seguros com o Sempre Criptografado). Confira também o Blog da Equipe de Segurança do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][SSMS Encryption Wizard - Enabling Always Encrypted in a Few Easy Steps](https://techcommunity.microsoft.com/t5/SQL-Server/SSMS-Encryption-Wizard-Enabling-Always-Encrypted-in-a-Few-Easy/ba-p/384545)(Assistente de Criptografia do SSMS – Habilitando o Sempre Criptografado em algumas etapas simples).  
  - Para obter informações sobre as chaves do Always Encrypted, confira [Visão geral do gerenciamento de chaves do Always Encrypted](overview-of-key-management-for-always-encrypted.md).
  - Para obter informações sobre os tipos de criptografia com suporte no Always Encrypted, confira [Seleção de criptografia determinística ou aleatória](always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption).
  
@@ -101,7 +101,7 @@ Para obter mais informações sobre como criar e armazenar chaves mestras de col
 > [!TIP]
 > O assistente permite que você procure e crie chaves somente no Repositório de Certificados do Windows e no Azure Key Vault. Ele também gera automaticamente os nomes das novas chaves e dos objetos de metadados do banco de dados que descrevem as chaves. Se precisar ter mais controle sobre como as chaves são provisionadas (e mais opções para um repositório de chaves que contém uma chave mestra de coluna), você poderá usar as caixas de diálogo **Nova Chave Mestra da Coluna** e **Nova Chave de Criptografia da Coluna** para criar as chaves primeiro e, em seguida, executar o assistente e escolher as chaves criadas. Confira [Provisionar chaves mestras de coluna com a caixa de diálogo Nova Chave Mestra da Coluna](configure-always-encrypted-keys-using-ssms.md#provision-column-master-keys-with-the-new-column-master-key-dialog) e [Provisionar chaves de criptografia de coluna com a caixa de diálogo Nova Chave de Criptografia da Coluna](configure-always-encrypted-keys-using-ssms.md#provision-column-encryption-keys-with-the-new-column-encryption-key-dialog). 
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Próximas etapas
 - [Consultar colunas usando o Always Encrypted com o SQL Server Management Studio](always-encrypted-query-columns-ssms.md)
 - [Desenvolver aplicativos usando o Always Encrypted](always-encrypted-client-development.md)
 

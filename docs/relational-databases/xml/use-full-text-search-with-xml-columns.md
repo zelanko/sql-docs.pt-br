@@ -14,10 +14,10 @@ ms.assetid: 8096cfc6-1836-4ed5-a769-a5d63b137171
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f101051d924c1fca0bfbcd131ea8544ea4781e12
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909105"
 ---
 # <a name="use-full-text-search-with-xml-columns"></a>Usar a pesquisa de texto completo com colunas XML
@@ -36,7 +36,7 @@ ms.locfileid: "72909105"
   
 2.  Em seguida, consulte esses valores de XML que usam o índice XML na coluna XML.  
 
-## <a name="example-combining-full-text-search-with-xml-querying"></a>Exemplo: Combinando a pesquisa de texto completo com a Consulta XML  
+## <a name="example-combining-full-text-search-with-xml-querying"></a>Exemplo: Combinando pesquisa de texto completo com consulta XML  
  Após o índice de texto completo ter sido criado na coluna XML, a seguinte consulta verifica se um valor XML contém as palavras "custom" no título de um manual:  
   
 ```sql

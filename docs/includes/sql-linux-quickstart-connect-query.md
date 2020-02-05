@@ -44,7 +44,7 @@ As etapas a seguir criam um novo banco de dados denominado `TestDB`.
    ```
 
 > [!TIP]
-> Para saber mais sobre como escrever consultas e instruções em Transact-SQL, veja [Tutorial: Escrevendo instruções Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md).
+> Para saber mais sobre como escrever consultas e instruções em Transact-SQL, veja [Tutorial: Escrever instruções de Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md).
 
 ### <a name="insert-data"></a>Inserir dados
 

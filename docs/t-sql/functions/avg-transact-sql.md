@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e97480b767e10a27c7e9647c2e6ae7369d4b37f8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68040230"
 ---
 # <a name="avg-transact-sql"></a>AVG (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68040230"
 
 Essa função retorna a média dos valores em um grupo. Ela ignora valores nulos.
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -47,7 +47,7 @@ AVG ( [ ALL | DISTINCT ] expression )
 ALL  
 Aplica a função de agregação a todos os valores. ALL é o padrão.
   
-DISTINCT  
+DISTINTO  
 Especifica que a AVG funciona apenas em uma instância exclusiva de cada valor, independentemente de quantas vezes o valor ocorre.
   
 *expressão*  
@@ -69,7 +69,7 @@ O resultado avaliado da *expressão* determina o tipo de retorno.
 |Categorias **money** e **smallmoney**|**money**|  
 |Categorias **float** e **real**|**float**|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 Se o tipo de dados de *expression* for um tipo de dados de alias, o tipo de retorno também será do tipo de dados de alias. Entretanto, se o tipo de dados base do tipo de dados de alias for promovido, por exemplo, de **tinyint** para **int**, o valor retornado receberá o tipo de dados promovido, e não o tipo de dados de alias.
   
 AVG () computa a média de um conjunto de valores, dividindo a soma desses valores pela contagem de valores não nulos. Se a soma exceder o valor máximo para o tipo de dados do valor retornado, a AVG() retornará um erro.
@@ -78,7 +78,7 @@ AVG é uma função determinística quando usada sem as cláusulas OVER e ORDER 
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-the-sum-and-avg-functions-for-calculations"></a>A. Usando as funções SUM e AVG para cálculos  
+### <a name="a-using-the-sum-and-avg-functions-for-calculations"></a>a. Usando as funções SUM e AVG para cálculos  
 Este exemplo calcula a média de horas de férias e a soma das horas de licença médica que os vice-presidentes da [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] usaram. Cada uma dessas funções de agregação produz um único valor de resumido para todas as linhas recuperadas. O exemplo usa o banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].
   
 ```sql

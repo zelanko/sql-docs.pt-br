@@ -18,10 +18,10 @@ ms.assetid: 48e78948-5b14-41dd-85d1-169bba1c4195
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: a076c8356cb7dedec9759e445c9c80499528437b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68140932"
 ---
 # <a name="stnuminteriorring-geometry-data-type"></a>STNumInteriorRing (tipo de dados geometry)
@@ -39,9 +39,9 @@ Retorna o número de anéis interiores de uma instância de **Polygongeometry**.
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **int**  
   
- Tipo de retorno CLR: **SqlInt32**  
+ Tipo de retorno do CLR: **SqlInt32**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse método retorna nulo se a instância de **geometry** não é um polígono.  
   
 ## <a name="examples"></a>Exemplos  

@@ -18,10 +18,10 @@ ms.assetid: c4d0e649-0abb-4343-a3f0-3a702c8bbbdb
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: bb3ad4cf2da399c32af4ccdcb183ebebc393dbe5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68120942"
 ---
 # <a name="stmpolyfromwkb-geography-data-type"></a>STMPolyFromWKB (tipo de dados geography)
@@ -46,9 +46,9 @@ STMPolyFromWKB ( 'WKB_multipolygon' , SRID )
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Tipo de retorno CLR: **SqlGeography**  
+ Tipo de retorno do CLR: **SqlGeography**  
   
- Tipo OGC: **MultiPolygon**  
+ Tipo do OGC: **MultiPolygon**  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir usa `STMPolyFromWKB()` para criar uma instância `geography`.  

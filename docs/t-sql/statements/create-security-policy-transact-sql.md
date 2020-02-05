@@ -26,10 +26,10 @@ ms.assetid: d6ab70ee-0fa2-469c-96f6-a3c16d673bc8
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 8cf0332d2a82113145e549d9419b855a222f7441
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68117292"
 ---
 # <a name="create-security-policy-transact-sql"></a>CREATE SECURITY POLICY (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "68117292"
 
   Cria uma política de segurança para a segurança em nível de linha.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -88,7 +88,7 @@ CREATE SECURITY POLICY [schema_name. ] security_policy_name
  [*table_schema_name*.] *table_name*  
  É a tabela de destino a qual o predicado de segurança será aplicado. Várias políticas de segurança desabilitadas podem direcionar uma única tabela, mas apenas uma pode ser habilitada em um determinado momento.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Ao usar funções de predicado com tabelas com otimização de memória, é necessário incluir **SCHEMABINDING** e usar a dica de compilação **WITH NATIVE_COMPILATION**.  
   
  Os predicados de bloqueio são avaliados depois que a operação DML correspondente é executada. Portanto, uma consulta READ UNCOMMITTED pode exibir valores transitórios que serão revertidos.  
@@ -107,7 +107,7 @@ CREATE SECURITY POLICY [schema_name. ] security_policy_name
 ## <a name="examples"></a>Exemplos  
  Os exemplos a seguir demonstram o uso da sintaxe **CREATE SECURITY POLICY** . Para obter um exemplo de um cenário de política de segurança completo, consulte [Segurança em nível de linha](../../relational-databases/security/row-level-security.md).  
   
-### <a name="a-creating-a-security-policy"></a>A. Criação de uma política de segurança  
+### <a name="a-creating-a-security-policy"></a>a. Criação de uma política de segurança  
  A sintaxe a seguir cria uma política de segurança com um predicado de filtro para a tabela Customer e deixa a política de segurança desabilitada.  
   
 ```  

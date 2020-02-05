@@ -26,10 +26,10 @@ author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a3b2d2ff81fddaae0b0ae68da9d4477819a61073
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101930"
 ---
 # <a name="dbcc-dropcleanbuffers-transact-sql"></a>DBCC DROPCLEANBUFFERS (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "68101930"
 
 Remove todos os buffers limpos do pool de buffers e os objetos de columnstore do pool de objetos columnstore.
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe
 Sintaxe do SQL Server: 
@@ -61,7 +61,7 @@ DBCC DROPCLEANBUFFERS ( COMPUTE | ALL ) [ WITH NO_INFOMSGS ]
  ALL  
  Limpar o cache de dados na memória de cada nó de computação e do nó de controle. Esse será o padrão se você não especificar um valor.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 Use DBCC DROPCLEANBUFFERS para testar consultas com um cache de buffer a frio sem desligar e reiniciar o servidor.
 Para remover buffers limpos dos objetos de columnstore e do pool de buffers do pool de objetos columnstore, primeiro use CHECKPOINT para produzir um cache de buffer frio. Isso faz com que todas as páginas de alterações para o banco de dados atual sejam gravadas no disco e limpa os buffers. Depois de fazer isso, você pode emitir o comando DBCC DROPCLEANBUFFERS para remover todos os buffers do pool de buffers.
   
@@ -78,7 +78,7 @@ Aplica-se a: SQL Server, Parallel Data Warehouse
 
 - Exige associação à função de servidor fixa **sysadmin** .  
 
-Aplica-se a: Azure SQL Data Warehouse
+Aplica-se a: SQL Data Warehouse do Azure
 
 - Requer associação à função de servidor fixa DB_OWNER.  
   

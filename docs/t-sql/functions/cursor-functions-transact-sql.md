@@ -16,10 +16,10 @@ ms.assetid: 7d9daa10-4c50-4212-9400-42120222b2b8
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4f7e49dc39d95e4d5bcce285040f8a598e6935ef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68026293"
 ---
 # <a name="cursor-functions-transact-sql"></a>funções de cursor (Transact-SQL)

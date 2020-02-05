@@ -15,10 +15,10 @@ ms.assetid: 1322d668-44f4-469e-8fd6-e0d02a81c8f2
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 33a04235580d70567b1de09180b10526255811bf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68011938"
 ---
 # <a name="default-trace-enabled-server-configuration-option"></a>Opção de configuração de servidor default trace enabled

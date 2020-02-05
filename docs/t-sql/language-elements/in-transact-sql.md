@@ -24,10 +24,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 99d179218e52801da593eaba6ef9ff5c7dde5ee0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68075057"
 ---
 # <a name="in-transact-sql"></a>IN (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68075057"
 
   Determina se um valor especificado corresponde a qualquer valor em uma subconsulta ou uma lista.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -66,7 +66,7 @@ test_expression [ NOT ] IN
 > [!CAUTION]  
 >  Os valores nulos retornados por *subquery* ou *expression* que são comparados com *test_expression* usando IN ou NOT IN retornam UNKNOWN. Usar valores nulos junto com IN ou NOT IN pode produzir resultados inesperados.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  A inclusão explícita de um número muito grande de valores (muitos milhares de valores separados por vírgula) dentro dos parênteses, em uma cláusula IN, pode consumir recursos e retornar os erros 8623 ou 8632. Para resolver esse problema, armazene os itens na lista IN em uma tabela e use uma subconsulta SELECT dentro de uma cláusula IN.  
   
  Erro 8623:  
@@ -79,7 +79,7 @@ test_expression [ NOT ] IN
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-comparing-or-and-in"></a>A. Comparando OR e IN  
+### <a name="a-comparing-or-and-in"></a>a. Comparando OR e IN  
  O exemplo a seguir seleciona uma lista de nomes de funcionários que são engenheiros de design, designers de ferramentas ou assistentes de marketing.  
   
 ```  

@@ -18,10 +18,10 @@ ms.assetid: 3e3fc065-555a-4bee-8b71-e92f3dc62a4f
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 0320cbd20242f19bab7c7990f4bad13458e403e4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930142"
 ---
 # <a name="stcrosses-geometry-data-type"></a>STCrosses (tipo de dados geometry)
@@ -43,9 +43,9 @@ Retorna 1 se uma instância de **geometry** cruza outra instância de **geometry
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
- Tipo de retorno CLR: **SqlBoolean**  
+ Tipo de retorno do CLR: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Duas instâncias de **geometry** se cruzarão se as seguintes condições forem verdadeiras:  
   
 -   A interseção de duas instâncias de **geometry** resulta em uma geometria cujas dimensões são menores que a dimensão máxima das instâncias de **geometry** de origem.  

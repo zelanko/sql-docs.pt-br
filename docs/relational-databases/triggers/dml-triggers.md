@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 543b28f5980c8126a9475a54557a05964718c707
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68056130"
 ---
 # <a name="dml-triggers"></a>Gatilhos DML
@@ -60,10 +60,10 @@ ms.locfileid: "68056130"
 |Aplicabilidade|Tabelas|Tabelas e exibições|  
 |Quantidade por tabela ou exibição|Múltiplas ações por ação de gatilho (UPDATE, DELETE e INSERT)|Uma ação por ação de gatilho (UPDATE, DELETE e INSERT)|  
 |Referências em cascata|Nenhuma restrição se aplica|Os gatilhos INSTEAD OF UPDATE e DELETE não são permitidos em tabelas que são destinos de restrições de integridade referencial em cascata.|  
-|Execução|Após:<br /><br /> Processamento da restrição<br /><br /> Ações referenciais declarativas<br /><br /> Criação de tabelas**inserted** e **deleted**<br /><br /> A ação de gatilho|Antes: Processamento da restrição<br /><br /> Em lugar de:  A ação de gatilho<br /><br /> Depois: criação de tabelas  **inserted** e **deleted**|  
+|Execução|Após:<br /><br /> Processamento da restrição<br /><br /> Ações referenciais declarativas<br /><br /> Criação de tabelas**inserted** e **deleted**<br /><br /> A ação de gatilho|Antes: processamento da restrição<br /><br /> Em vez de: a ação de gatilho<br /><br /> Depois: criação de tabelas  **inserted** e **deleted**|  
 |Ordem de execução|A primeira e a última execução podem ser especificadas|Não aplicável|  
-|Referências de coluna**varchar(max)** , **nvarchar(max)** e **varbinary(max)** nas tabelas **inserted** e **deleted**|Allowed (permitido)|Allowed (permitido)|  
-|Referências de coluna**text**, **ntext**e **image** nas tabelas **inserted** e **deleted**|Não permitido|Allowed (permitido)|  
+|Referências de coluna**varchar(max)** , **nvarchar(max)** e **varbinary(max)** nas tabelas **inserted** e **deleted**|Permitido|Permitido|  
+|Referências de coluna**text**, **ntext**e **image** nas tabelas **inserted** e **deleted**|Não permitido|Permitido|  
   
  Gatilhos CLR  
  Um gatilho CLR pode ser um gatilho AFTER ou INSTEAD OF. Um gatilho CLR também pode ser um gatilho DDL. Em vez de executar um procedimento armazenado [!INCLUDE[tsql](../../includes/tsql-md.md)] , um gatilho CLR executa um ou mais métodos gravados em código gerenciado que são membros de um assembly criado no .NET Framework e carregado para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -74,7 +74,7 @@ ms.locfileid: "68056130"
 |----------|-----------|  
 |Descreve como criar um gatilho DML.|[Criar gatilhos DML](../../relational-databases/triggers/create-dml-triggers.md)|  
 |Descreve como criar um gatilho CLR.|[Criar gatilhos CLR](../../relational-databases/triggers/create-clr-triggers.md)|  
-|Descreve como criar um gatilho DML para tratar modificações de dados de linha única e de várias linhas.|[Crie gatilhos DML para tratar várias linhas de dados](../../relational-databases/triggers/create-dml-triggers-to-handle-multiple-rows-of-data.md)|  
+|Descreve como criar um gatilho DML para tratar modificações de dados de linha única e de várias linhas.|[Criar gatilhos DML para manipular várias linhas de dados](../../relational-databases/triggers/create-dml-triggers-to-handle-multiple-rows-of-data.md)|  
 |Descreve como aninhar gatilhos.|[Criar gatilhos aninhados](../../relational-databases/triggers/create-nested-triggers.md)|  
 |Descreve como especificar a ordem na qual são os gatilhos AFTER são disparados.|[Especificar o primeiro e o último gatilhos](../../relational-databases/triggers/specify-first-and-last-triggers.md)|  
 |Descreve como usar as tabelas especiais inseridas e excluídas no código de gatilho.|[Usar as tabelas inseridas e excluídas](../../relational-databases/triggers/use-the-inserted-and-deleted-tables.md)|  

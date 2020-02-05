@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 2ad094794b5115aa4593f918de442798445e2b79
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847287"
 ---
 # <a name="iservervirtualdeviceset2executecompletionagent-vdi"></a>IServerVirtualDeviceSet2::ExecuteCompletionAgent (VDI)
@@ -32,7 +32,7 @@ HRESULT IServerVirtualDeviceSet2::ExecuteCompletionAgent ();
 
 Retorna um *HRESULT* indicando êxito ou falha da chamada do método. Um valor igual a NOERROR indica que a chamada de método teve êxito. Um valor diferente de zero indica que ocorreu um erro.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Comentários
 
 O agente de conclusão fornece um mecanismo pelo qual o SQL Server pode se sincronizar com as conclusões de comando do dispositivo virtual. Ele precisa estar ativo antes que qualquer comando possa ser emitido e deve permanecer ativo até todos os dispositivos serem fechados.
 

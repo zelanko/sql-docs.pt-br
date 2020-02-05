@@ -18,10 +18,10 @@ ms.assetid: f2b8207c-b69f-4327-a874-100b3a1f27d8
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 9fb69a5c4e9d303ab0e3a7a3e2edeeeeed228391
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000608"
 ---
 # <a name="read-database-engine"></a>Read (Mecanismo de Banco de Dados)
@@ -42,7 +42,7 @@ void Read( BinaryReader r )
 ## <a name="return-types"></a>Tipos de retorno
  **Tipo de retorno do CLR: nulo**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O método Read não valida sua entrada. Se uma entrada binária inválida for fornecida, Read poderá gerar uma exceção. Ou poderá ser bem-sucedido e produzir um objeto **SqlHierarchyId** inválido cujos métodos podem gerar resultados imprevisíveis ou uma exceção.  
   
  O método Read pode ser chamado apenas em um objeto **SqlHierarchyId** recém-criado.  

@@ -20,10 +20,10 @@ ms.assetid: ff92a96a-8af6-4532-82cc-c0bbff92401b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3b0833c1c10fb8b4be039466594e2c2025a06b91
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71299054"
 ---
 # <a name="discovering-data-flow-components-programmatically"></a>Descobrindo componentes de fluxo de dados programaticamente

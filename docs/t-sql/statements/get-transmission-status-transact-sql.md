@@ -26,10 +26,10 @@ ms.assetid: 621805d5-49ed-4764-b3cb-2ae4a3bf797e
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: bf05f923a5a7a6333bdca7278efae918aed71f32
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70211413"
 ---
 # <a name="get_transmission_status-transact-sql"></a>GET_TRANSMISSION_STATUS (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "70211413"
 
   Retorna o status da última transmissão para um lado de uma conversa.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -53,7 +53,7 @@ GET_TRANSMISSION_STATUS ( conversation_handle )
 ## <a name="return-types"></a>Tipos de retorno  
  **nchar**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Retorna uma cadeia de caracteres que descreve o status da última tentativa de transmissão para a conversa especificada. Retorna uma cadeia de caracteres vazia se a última tentativa de transmissão tiver êxito, se nenhuma tentativa de transmissão for feita ou se *conversation_handle* não existir.  
   
  As informações retornadas por essa função são as mesmas exibidas na coluna last_transmission_error da exibição de gerenciamento sys.transmission_queue. Entretanto, essa função pode ser usada para localizar o status de transmissão para conversas que atualmente não tenham mensagens na fila de transmissão.  

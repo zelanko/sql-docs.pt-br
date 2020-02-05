@@ -23,10 +23,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a26dbcc45f5c236b6cbe8998b2d12808711ff6ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68044123"
 ---
 # <a name="drop-login-transact-sql"></a>DROP LOGIN (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68044123"
 
   Remove uma conta de logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,7 +46,7 @@ DROP LOGIN login_name
  *login_name*  
  Especifica o nome do logon a ser descartado.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Um logon não pode ser removido enquanto estiver ativo. Um logon que possui qualquer protegível, objeto em nível de servidor ou trabalho do SQL Server Agent não pode ser descartado.  
   
  É possível descartar um logon para o qual usuários de banco de dados são mapeados; porém, isso criará usuários órfãos. Para obter mais informações, consulte [Solução de problemas de usuários órfãos &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md).  
@@ -58,7 +58,7 @@ DROP LOGIN login_name
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-dropping-a-login"></a>A. Removendo um logon  
+### <a name="a-dropping-a-login"></a>a. Removendo um logon  
  O exemplo a seguir descarta o logon `WilliJo`.  
   
 ```  
