@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f8ab23cd0328b2e20d25fc62aad128e4e408c918
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67999818"
 ---
 # <a name="brokeractivation-event-class"></a>classe de evento Broker:Activation
@@ -27,13 +27,13 @@ ms.locfileid: "67999818"
   
 ## <a name="brokeractivation-event-class-data-columns"></a>Colunas de dados da classe de evento Broker:Activation  
   
-|Coluna de dados|Tipo|Descrição|Número da coluna|Filtrável|  
+|Coluna de dados|Type|DESCRIÇÃO|Número da coluna|Filtrável|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ClientProcessID**|**int**|A ID atribuída pelo computador host ao processo em que está sendo executado o aplicativo cliente. Essa coluna de dados será populada se a ID do processo do cliente for fornecida pelo cliente.|9|Sim|  
 |**DatabaseID**|**int**|A ID do banco de dados especificada pela instrução de *banco de dados* USE ou a ID do banco de dados padrão se nenhuma instrução de *banco de dados*USE tiver sido emitida para determinada instância. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibirá o nome do banco de dados se a coluna de dados **ServerName** for capturada no rastreamento e o servidor estiver disponível. Determine o valor para um banco de dados usando a função DB_ID.|3|Sim|  
 |**EventClass**|**int**|O tipo de classe de evento capturado. Sempre **163** para **Broker:Activation**.|27|Não|  
 |**EventSequence**|**int**|Número de sequência para esse evento.|51|Não|  
-|**EventSubClass**|**nvarchar**|A ação específica que este evento informa. Um dos valores seguintes:<br /><br /> **start**: o   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] iniciou um procedimento armazenado de ativação.<br /><br /> **ended**:  o procedimento armazenado de ativação foi encerrado normalmente.<br /><br /> **aborted**:   o procedimento armazenado de ativação foi encerrado com um erro.|21|Não|  
+|**EventSubClass**|**nvarchar**|A ação específica que este evento informa. Um dos seguintes valores:<br /><br /> **start**: o   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] iniciou um procedimento armazenado de ativação.<br /><br /> **ended**: o procedimento armazenado de ativação foi encerrado normalmente.<br /><br /> **aborted**: o procedimento armazenado de ativação foi encerrado com um erro.|21|Não|  
 |**HostName**|**nvarchar**|O nome do computador no qual o cliente está sendo executado. Essa coluna de dados será populada se o nome do host for fornecido pelo cliente. Para determinar o nome do host, use a função HOST_NAME.|8|Sim|  
 |**IntegerData**|**int**|O número de tarefas ativas nesta fila.|25|Não|  
 |**IsSystem**|**int**|Indica se o evento ocorreu em um processo do sistema ou do usuário. 1 = sistema, 0 = usuário.|60|Não|  

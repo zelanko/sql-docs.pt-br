@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions||=azure-sqldw-latest
 ms.openlocfilehash: fd44673ce62d74349e83b09b020c9e20ab6957de
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70155802"
 ---
 # <a name="format-transact-sql"></a>FORMAT (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "70155802"
 
 Retorna um valor formatado com o formato e a cultura opcional especificados. Use a função FORMAT para formatação com reconhecimento de localidade de valores de data/hora e número como cadeias de caracteres. Para conversões de tipos de dados gerais, use CAST ou CONVERT.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -49,7 +49,7 @@ FORMAT ( value, format [, culture ] )
   
  O argumento *format* deve conter uma cadeia de formato válido do .NET Framework, como uma cadeia de formato padrão (por exemplo, "C" ou "D") ou como um padrão de caracteres personalizados para obter datas e valores numéricos (por exemplo, "MMMM DD, aaaa (dddd)"). A formatação composta não tem suporte. Para obter uma explicação completa sobre esses padrões de formatação, veja a documentação do .NET Framework sobre formatação de cadeias de caracteres em geral, formatos personalizados de data e hora e formatos personalizados de número. Um bom ponto de partida é o tópico, "[Formatando tipos](https://go.microsoft.com/fwlink/?LinkId=211776)".  
   
- *culture*  
+ *cultura*  
  Argumento **nvarchar** opcional especificando uma cultura.  
   
  Se o argumento *culture* não for fornecido, o idioma da sessão atual será usado. Esse idioma é definido implícita ou explicitamente com o uso da instrução SET LANGUAGE. *culture* aceita qualquer cultura compatível com .NET Framework como um argumento. Ela não é limitada aos idiomas explicitamente compatíveis com [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se o argumento *culture* não for válido, FORMAT gerará um erro.  
@@ -60,7 +60,7 @@ FORMAT ( value, format [, culture ] )
   
  A extensão do valor retornado é determinada pelo *format*.  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Comentários
 
  FORMAT retorna NULL para erros que não uma *cultura* que não é *valid*. Por exemplo, NULL será retornado se o valor especificado em *format* não for válido.  
 
@@ -74,28 +74,28 @@ FORMAT ( value, format [, culture ] )
   
  A tabela a seguir lista os tipos de dados aceitáveis para o argumento *value*, junto com os tipos equivalentes de mapeamento do .NET Framework.  
   
-|Categoria|Tipo|Tipo .NET|  
+|Categoria|Type|Tipo .NET|  
 |--------------|----------|---------------|  
 |Numérico|BIGINT|Int64|  
 |Numérico|INT|Int32|  
 |Numérico|SMALLINT|Int16|  
 |Numérico|TINYINT|Byte|  
-|Numérico|Decimal|SqlDecimal|  
-|Numérico|NUMERIC|SqlDecimal|  
+|Numérico|decimal|SqlDecimal|  
+|Numérico|numeric|SqlDecimal|  
 |Numérico|FLOAT|Double|  
-|Numérico|REAL|Single|  
+|Numérico|real|Single|  
 |Numérico|SMALLMONEY|Decimal|  
 |Numérico|money|Decimal|  
-|Data e hora|Data|DateTime|  
+|Data e hora|date|Datetime|  
 |Data e hora|time|TimeSpan|  
-|Data e hora|DATETIME|DateTime|  
-|Data e hora|smalldatetime|DateTime|  
-|Data e hora|datetime2|DateTime|  
+|Data e hora|DATETIME|Datetime|  
+|Data e hora|smalldatetime|Datetime|  
+|Data e hora|datetime2|Datetime|  
 |Data e hora|datetimeoffset|DateTimeOffset|  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-simple-format-example"></a>A. Exemplo de FORMAT simples
+### <a name="a-simple-format-example"></a>a. Exemplo de FORMAT simples
 
  O exemplo a seguir retorna uma data simples formatada para culturas diferentes.  
   
