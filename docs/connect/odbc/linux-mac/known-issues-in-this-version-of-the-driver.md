@@ -12,10 +12,10 @@ helpviewer_keywords:
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c3508277502ad7e3eb3b0e7ff048301c8ed1efdd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68008785"
 ---
 # <a name="known-issues-in-this-version-of-the-driver"></a>Problemas conhecidos nesta versão do driver
@@ -36,5 +36,5 @@ Por exemplo, se sua codificação for UTF-8 e você especificar 1 para *BufferLe
 
 ## <a name="see-also"></a>Consulte Também  
 [Diretrizes de programação](../../../connect/odbc/linux-mac/programming-guidelines.md)  
-[Notas de versão](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)  
+[Notas de Versão](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)  
 

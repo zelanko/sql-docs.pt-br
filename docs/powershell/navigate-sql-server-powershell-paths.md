@@ -10,10 +10,10 @@ ms.assetid: d68aca48-d161-45ed-9f4f-14122ed30218
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 4ced679315a8e682a438f2ab99ca610219768172
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68049121"
 ---
 # <a name="navigate-sql-server-powershell-paths"></a>Navegar em caminhos do SQL Server PowerShell
@@ -23,14 +23,14 @@ O provedor do [!INCLUDE[ssDE](../includes/ssde-md.md)] PowerShell expõe o conju
 
 > [!NOTE]
 > Há dois módulos do SQL Server PowerShell; **SqlServer** e **SQLPS**. O módulo **SQLPS** está incluído na instalação do SQL Server (para compatibilidade com versões anteriores), mas não está sendo atualizado. O módulo do PowerShell mais atualizado é o módulo do **SqlServer**. O módulo do **SqlServer** contém versões atualizadas dos cmdlets no **SQLPS** e também inclui novos cmdlets para dar suporte aos recursos mais recentes do SQL.  
-> As versões anteriores do módulo do **SqlServer** *foram* incluídas no SQL Server Management Studio (SSMS), mas apenas nas versões 16.x do SSMS. Para usar o PowerShell com o SSMS 17.0 e versões posteriores, o módulo do **SqlServer** deve ser instalado da Galeria do PowerShell.
+> As versões anteriores do módulo do **SqlServer***foram* incluídas no SQL Server Management Studio (SSMS), mas apenas nas versões 16.x do SSMS. Para usar o PowerShell com o SSMS 17.0 e versões posteriores, o módulo do **SqlServer** deve ser instalado da Galeria do PowerShell.
 > Para instalar o módulo do **SqlServer**, consulte [Instalar o SQL Server PowerShell](download-sql-server-ps-module.md).
   
 O Windows PowerShell implementa cmdlets para navegar na estrutura do caminho que representa a hierarquia de objetos por um provedor do PowerShell. Ao navegar até um nó do caminho, você pode usar outros cmdlets para executar operações básicas no objeto atual. Como os cmdlets são usados com frequência, eles têm aliases pequenos e canônicos. Também existe um conjunto de aliases que mapeia os cmdlets para comandos semelhantes do prompt de comando e outro conjunto para comandos shell do UNIX.  
   
  O provedor do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] implementa um subconjunto de cmdlets do provedor, mostrados na tabela a seguir:  
   
-|cmdlet|Alias canônico|Alias de cmd|Alias de shell do UNIX|Descrição|  
+|cmdlet|Alias canônico|Alias de cmd|Alias de shell do UNIX|DESCRIÇÃO|  
 |------------|---------------------|---------------|----------------------|-----------------|  
 |**Get-Location**|**gl**|**pwd**|**pwd**|Obtém o nó atual.|  
 |**Set-Location**|**sl**|**cd, chdir**|**cd, chdir**|Altera o nó atual.|  

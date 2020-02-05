@@ -13,10 +13,10 @@ ms.assetid: 3b546560-720f-48b8-9d63-cf159290e9d4
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 13c441771044ba6932b35fd59f593b9e635b0afe
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907572"
 ---
 # <a name="add-or-edit-join"></a>Adicionar ou Editar Junção
@@ -59,7 +59,7 @@ ms.locfileid: "72907572"
         > [!CAUTION]  
         >  A seleção dessa opção indica que a relação entre tabelas pai e filho em um filtro de junção é de um para um ou um para muitos. Só selecione essa opção se você tiver uma restrição na coluna de junção na tabela pai que garanta a exclusividade. Se a opção for definida incorretamente, poderá ocorrer não convergência de dados.  
   
-    -   Somente[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versões posteriores. Por padrão, os processos de replicação de mesclagem são alterados em uma base de linha por linha durante a sincronização. Para que as alterações relacionadas sejam processadas como uma unidade, selecione **Registro Lógico**. Essa opção só estará disponível se os requisitos de  artigo e publicação para uso de registros lógicos forem atendidos. Para obter mais informações, consulte a seção "Considerações para uso de registros lógicos" em [Agrupar alterações a linhas relacionadas com registros lógicos](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
+    -   Somente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versões posteriores. Por padrão, os processos de replicação de mesclagem são alterados em uma base de linha por linha durante a sincronização. Para que as alterações relacionadas sejam processadas como uma unidade, selecione **Registro Lógico**. Essa opção só estará disponível se os requisitos de  artigo e publicação para uso de registros lógicos forem atendidos. Para obter mais informações, consulte a seção "Considerações para uso de registros lógicos" em [Agrupar alterações a linhas relacionadas com registros lógicos](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
   
  Depois de adicionar ou editar um filtro, clique em **OK** para salvar as alterações e fechar a caixa de diálogo. O filtro que você especificou é analisado e executado na tabela, na cláusula SELECT. Se a instrução de filtro contiver erros de sintaxe ou outros problemas, você será notificado e poderá editar a instrução do filtro.  
   

@@ -14,10 +14,10 @@ ms.assetid: 9d88dead-ace8-44b9-b8e2-916c1842e155
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c3583baedb1766944a89b9f4491c53a94a17f3fa
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297311"
 ---
 # <a name="year-ssis-expression"></a>YEAR (Expressão SSIS)
@@ -41,7 +41,7 @@ YEAR(date)
 ## <a name="result-types"></a>Tipos de resultado  
  DT_I4  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  YEAR retornará um resultado nulo se o argumento for nulo.  
   
  Um literal de data deve ser convertido explicitamente em um dos tipos de dados de data. Para obter mais informações, consulte [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  

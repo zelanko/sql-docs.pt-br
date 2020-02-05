@@ -11,10 +11,10 @@ ms.assetid: 83cbdd6f-ddde-47bf-abde-36bd24272621
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 5ad38c81101d983f70130bd0df5526ccba785f57
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296561"
 ---
 # <a name="catalogexecution_property_override_values"></a>catalog.execution_property_override_values 
@@ -26,7 +26,7 @@ ms.locfileid: "71296561"
 
   Exibe os valores de substituição de propriedade que foram definidos durante a execução do pacote.  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |property_id|**bigint**|ID exclusiva do valor de substituição de propriedade.|  
 |execution_id|**bigint**|ID exclusivo da instância de execução.|  
@@ -34,7 +34,7 @@ ms.locfileid: "71296561"
 |property_value|**nvarchar(max)**|O valor de substituição da propriedade.|  
 |sensitive|**bit**|Quando o valor for 1, a propriedade será confidencial e criptografada quando for armazenada. Quando o valor for 0, a propriedade não será confidencial e o valor será armazenado em texto não criptografado.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Essa exibição mostra uma linha para cada execução em que os valores de propriedade foram substituídos usando a seção **Substituições de propriedade** na guia **Avançado** da caixa de diálogo **Executar Pacote**. O caminho para a propriedade é derivado da propriedade **Caminho do Pacote** da tarefa de pacote.  
   
 ## <a name="permissions"></a>Permissões  

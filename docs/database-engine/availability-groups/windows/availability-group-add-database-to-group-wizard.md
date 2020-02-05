@@ -16,10 +16,10 @@ ms.assetid: 81e5e36d-735d-4731-8017-2654673abb88
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1dfb6540724cf3dae9b39c4e388b4f2e2aacb734
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67934883"
 ---
 # <a name="add-a-database-to-an-always-on-availability-group-with-the-availability-group-wizard"></a>Adicionar um banco de dados a um Grupo de Disponibilidade Always On com o 'Assistente de Grupo de Disponibilidade'
@@ -70,7 +70,7 @@ ms.locfileid: "67934883"
       
       Selecione esta opção para usar a propagação automática. A propagação automática usa o transporte de fluxo de log para transmitir o backup usando a VDI para a réplica secundária de cada banco de dados do grupo de disponibilidade, usando os pontos de extremidade configurados. Isso restaura o backup do banco de dados na réplica secundária sem a necessidade de fazê-lo manualmente. Para saber mais sobre a propagação automática, confira [Propagação automática](automatic-seeding-secondary-replicas.md).
   
-    -   **Full (cheio)**  
+    -   **Full**  
   
          Selecione esta opção se seu ambiente atender aos requisitos para iniciar automaticamente a sincronização de dados inicial (para obter mais informações, veja [Pré-requisitos, restrições e recomendações](#Prerequisites), anteriormente neste tópico).  
   
@@ -87,13 +87,13 @@ ms.locfileid: "67934883"
   
     -   **Ignorar sincronização de dados inicial**  
   
-         Selecione esta opção se desejar usar seus próprios backups de banco de dados e de log de seus bancos de dados primários. Para obter mais informações, veja [Iniciar movimentação de dados em um banco de dados secundário AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
+         Selecione esta opção se desejar usar seus próprios backups de banco de dados e de log de seus bancos de dados primários. Para obter mais informações, veja [Iniciar movimentação de dados em um banco de dados secundário &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
      Para obter mais informações, veja [Página Selecionar Sincronização de Dados Inicial &#40;Assistentes do Grupo de Disponibilidade AlwaysOn&#41;](../../../database-engine/availability-groups/windows/select-initial-data-synchronization-page-always-on-availability-group-wizards.md).  
   
 6.  Na página **Conectar a Réplicas Secundárias Existentes** , se as instâncias do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospedam réplicas de disponibilidade para esse grupo de disponibilidade estiverem todas executando como um serviço na mesma conta de usuário, clique em **Conectar tudo**. Se qualquer uma das instâncias de servidor estiver executando como um serviço sob conta diferente, clique no **Conectar** individual à direita de cada nome de instância de servidor.  
   
-     Para obter mais informações, confira [Página Conectar-se às Réplicas Secundárias Existentes &#40;Assistente para Adicionar Réplica: Assistente para Adicionar Bancos de Dados&#41;](../../../database-engine/availability-groups/windows/connect-to-existing-secondary-replicas-page.md).  
+     Para obter mais informações, veja [Conectar à página Réplicas Secundárias Existentes &#40;Assistente para Adicionar Réplica: Assistente para Adicionar Bancos de Dados&#41;](../../../database-engine/availability-groups/windows/connect-to-existing-secondary-replicas-page.md).  
   
 7.  A página **Validação** verifica se os valores especificados neste Assistente atendem aos requisitos do Assistente de Novo Grupo de Disponibilidade. Para fazer uma alteração, clique em **Anterior** para retornar a uma página anterior do assistente para alterar um ou mais valores. Clique em **Avançar** para retornar à página **Validação** e clique em **Executar Novamente a Validação**.  
   

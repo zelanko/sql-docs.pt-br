@@ -11,10 +11,10 @@ ms.assetid: 9f2ae91b-06af-4c9a-9d24-062df7bc4662
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9f8e46dd253514329ee486c940a14f8dc48b4e9b
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68702690"
 ---
 # <a name="microsoft-odbc-driver-for-sql-server"></a>Microsoft ODBC Driver for SQL Server
@@ -31,7 +31,7 @@ O exemplo C++ a seguir demonstra como usar as APIs de ODBC para conectar e acess
 
 - [Exemplo de código C++ usando o ODBC](../../odbc/reference/sample-odbc-program.md)
 
-## <a name="download"></a>Download
+## <a name="download"></a>Baixar
 
 - ![Download-DownArrow-Circled](../../ssdt/media/download.png)[Para baixar o driver ODBC](download-odbc-driver-for-sql-server.md)
 
@@ -57,9 +57,9 @@ O exemplo C++ a seguir demonstra como usar as APIs de ODBC para conectar e acess
 - [Rastreamento de Acesso a Dados](../../connect/odbc/linux-mac/data-access-tracing-with-the-odbc-driver-on-linux.md)
 - [Perguntas frequentes](../../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.md)
 - [Instalando o Gerenciador de Driver](../../connect/odbc/linux-mac/installing-the-driver-manager.md)
-- [Problemas conhecidos](../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)
+- [Problemas Conhecidos](../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)
 - [Diretrizes de programação](../../connect/odbc/linux-mac/programming-guidelines.md)
-- [Notas de versão](../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)
+- [Notas de Versão](../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)
 - [Suporte a alta disponibilidade e recuperação de desastre](../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)
 - [Como usar a Autenticação Integrada (Kerberos)](../../connect/odbc/linux-mac/using-integrated-authentication.md)
 

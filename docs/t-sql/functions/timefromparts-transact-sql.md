@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: aab429b0d3705d6ba7867f146fa43aca486cbb02
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68099001"
 ---
 # <a name="timefromparts-transact-sql"></a>TIMEFROMPARTS (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68099001"
 
   Retorna um valor **time** para a hora especificada e com a precisão especificada.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -57,7 +57,7 @@ TIMEFROMPARTS ( hour, minute, seconds, fractions, precision )
 ## <a name="return-types"></a>Tipos de retorno  
  **time(** *precision* **)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  TIMEROMPARTS retorna um valor de hora completamente inicializado. Se os argumentos forem inválidos, um erro será lançado. Se algum parâmetro for nulo, nulo será retornado. Porém, se o argumento *precision* for nulo, um erro será gerado.  
   
  O argumento *fractions* depende do argumento *precision*. Por exemplo, se *precision* for 7, cada fração representará 100 nanosegundos; se *precision* for 3, cada fração representará um milissegundo. Se o valor de *precision* for zero, o valor de *fractions* também deverá ser zero; caso contrário, um erro será gerado.  
@@ -66,7 +66,7 @@ TIMEFROMPARTS ( hour, minute, seconds, fractions, precision )
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-simple-example-without-fractions-of-a-second"></a>A. Exemplo simples sem frações de um segundo  
+### <a name="a-simple-example-without-fractions-of-a-second"></a>a. Exemplo simples sem frações de um segundo  
   
 ```  
 SELECT TIMEFROMPARTS ( 23, 59, 59, 0, 0 ) AS Result;  

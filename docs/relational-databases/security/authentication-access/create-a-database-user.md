@@ -25,10 +25,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d3aa8e127c382d8f7915edbcb81e1272fe522251
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981936"
 ---
 # <a name="create-a-database-user"></a>Criar um usuário de banco de dados
@@ -115,7 +115,7 @@ ms.locfileid: "73981936"
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>Opções adicionais  
- A caixa de diálogo **Usuário de banco de dados – Novo** também oferece opções em quatro páginas adicionais: **Esquemas Proprietários**, **Associação**, **Protegíveis** e **Propriedades Estendidas**.  
+ A caixa de diálogo **Usuário do Banco de Dados – Novo** também oferece opções em quatro páginas adicionais: **Esquemas Proprietários**, **Associação**, **Protegíveis** e **Propriedades Estendidas**.  
   
 -   A página **Esquemas Proprietários** lista todos os possíveis esquemas que podem ser possuídos pelo novo usuário de banco de dados. Para adicionar esquemas a ou removê-los de um usuário de banco de dados, sob **Esquemas possuídos por este usuário**, marque ou desmarque as caixas de seleção ao lado dos esquemas.  
   
@@ -125,7 +125,7 @@ ms.locfileid: "73981936"
   
 -   A página **Propriedades estendidas** permite adicionar propriedades personalizadas a usuários de banco de dados. As opções a seguir estão disponíveis nesta página.  
   
-     **Banco de Dados**  
+     **Backup de banco de dados**  
      Exibe o nome do banco de dados selecionado. Esse campo é somente leitura.  
   
      **Ordenação**  

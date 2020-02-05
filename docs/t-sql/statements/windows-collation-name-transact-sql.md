@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f3fb28ddb5e910c70c8f5e72f34703d18fc4c38c
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70874459"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Nome de ordenação do Windows (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "70874459"
 
 Especifica o nome de ordenação do Windows na cláusula COLLATE em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O nome de ordenação do Windows é composto pelo designador de ordenação e pelos estilos de comparação.
 
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -72,12 +72,12 @@ A omissão dessa opção especifica que não diferencia caracteres kana, **KS** 
 A omissão dessa opção especifica que não diferencia a largura, **WS** especifica que faz distinção de caracteres de largura.
 
 *VariationSelectorSensitivity*  
-- **Aplica-se ao**: A partir do [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 
+- **Aplica-se a:** começando com [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 
 
 - A omissão dessa opção especifica que não diferencia seletor de variação, **VSS** especifica que diferencia seletor de variação.
 
 **UTF8**  
-- **Aplica-se ao**: A partir do [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]   
+- **Aplica-se a:** começando com [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]   
 
 - Especifica a codificação UTF-8 a ser usada para tipos de dados qualificados. Para obter mais informações, consulte [Suporte a ordenações e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md).
 
@@ -87,7 +87,7 @@ Especifica a ordem de classificação binária compatível com versões anterior
 **BIN2**  
 Especifica a ordem de classificação binária que usa semântica de comparação de ponto de código.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Comentários
 De acordo com a versão da ordenação, alguns pontos de código podem não ter pesos de classificação e/ou mapeamentos de maiúsculas/minúsculas definidos. Por exemplo, compare a saída da função `LOWER` quando ela recebe o mesmo caractere, mas em diferentes versões da mesma ordenação:
 
 ```sql
@@ -141,7 +141,7 @@ A tabela a seguir lista todas as ordenações do Windows com suporte no [!INCLUD
 |Assamês (Índia)|Assamese_100_ <sup>1</sup>|Não disponível|
 |Bangla (Bangladesh)|Bengali_100_<sup>1</sup>|Não disponível|
 |Bashkir (Rússia)|Bashkir_100_|Não disponível|
-|Basco (Basco)|Latin1_General_100_|Não disponível|
+|Basco (País Basco)|Latin1_General_100_|Não disponível|
 |Bengali (India)|Bengali_100_<sup>1</sup>|Não disponível|
 |Bósnio (Bósnia e Herzegovina, Cirílico)|Bosnian_Cyrillic_100_|Não disponível|
 |Bósnio (Bósnia e Herzegovina, Latino)|Bosnian_Latin_100_|Não disponível|
@@ -156,7 +156,7 @@ A tabela a seguir lista todas as ordenações do Windows com suporte no [!INCLUD
 |Inglês (Malásia)|Latin1_General_100_|Não disponível|
 |Inglês (Singapura)|Latin1_General_100_|Não disponível|
 |Filipino (Filipinas)|Latin1_General_100_|Não disponível|
-|Frisão (Países Baixos)|Frisian_100_|Não disponível|
+|Frisão (Holanda)|Frisian_100_|Não disponível|
 |Georgiano (Geórgia)|Cyrillic_General_100_|Não disponível|
 |Groenlandês (Groenlândia)|Danish_Greenlandic_100_|Não disponível|
 |Gujarati (Índia)|Indic_General_100_<sup>1</sup>|Indic_General_90_|

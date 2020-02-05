@@ -24,10 +24,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5245df31c2e3b31d95095fbb6770a786d4be6c03
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982813"
 ---
 # <a name="statistics"></a>Estatísticas
@@ -199,7 +199,7 @@ Neste exemplo, o objeto de estatísticas `LastFirst` apresenta densidades para o
 ### <a name="query-selects-from-a-subset-of-data"></a>A consulta faz seleções em um subconjunto de dados  
 Quando o otimizador de consulta cria estatísticas para colunas únicas e índices, as estatísticas são criadas para os valores em todas as linhas. Quando as consultas fazem seleções em um subconjunto de linhas e esse subconjunto tem uma distribuição de dados exclusiva, as estatísticas filtradas podem aprimorar os planos de consulta. É possível criar estatísticas filtradas usando a instrução [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) com a cláusula [WHERE](../../t-sql/queries/where-transact-sql.md) para definir a expressão de predicado de filtro.  
   
-Por exemplo, usando [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)], cada produto na tabela `Production.Product` pertence a uma das quatro categorias na tabela `Production.ProductCategory`: Bicicletas, Componentes, Roupas e Acessórios. Cada categoria possui uma distribuição de dados diferente para peso: as bicicletas pesam de 13,77 a 30, os componentes pesam de 2,12 a 1050,00 com alguns valores NULL, o peso de todas as roupas é NULL e o peso dos acessórios também é NULL.  
+Por exemplo, usando o [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)], cada produto da tabela `Production.Product` pertence a uma das quatro categorias da tabela `Production.ProductCategory`: Bicicletas, Componentes, Roupas e Acessórios. Cada categoria possui uma distribuição de dados diferente para peso: as bicicletas pesam de 13,77 a 30, os componentes pesam de 2,12 a 1050,00 com alguns valores NULL, o peso de todas as roupas é NULL e o peso dos acessórios também é NULL.  
   
 Usando Bicicletas como um exemplo, as estatísticas filtradas em todos os pesos de bicicleta fornecerão estatísticas mais precisas ao otimizador de consulta e podem melhorar a qualidade do plano de consulta comparadas com as estatísticas de tabela completa ou estatísticas inexistentes na coluna Peso. A coluna de peso das bicicletas é uma boa candidata para estatísticas filtradas, mas não necessariamente para um índice filtrado se o número de pesquisas de peso for relativamente pequeno. O ganho de desempenho que um índice filtrado oferece às pesquisas pode não compensar os custos adicionais com a manutenção e o custo de armazenamento exigidos para adicionar um índice filtrado ao banco de dados.  
   

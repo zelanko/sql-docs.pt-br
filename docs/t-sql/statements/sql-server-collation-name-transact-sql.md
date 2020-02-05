@@ -18,10 +18,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e867584c9c9a0e50022d0964a1772ac2c3a1b1e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68099980"
 ---
 # <a name="sql-server-collation-name-transact-sql"></a>Nome de ordenação do SQL Server (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68099980"
 
 O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte a ordenações do Windows. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] também dá suporte a um número limitado (&lt;80) de ordenações chamadas ordenações de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], que foram desenvolvidas antes de o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dar suporte a ordenações do Windows. As ordenações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ainda têm suporte para compatibilidade com versões anteriores, mas não devem ser usados para novos trabalhos de desenvolvimento. Para obter mais informações sobre a ordenação do Windows, consulte [Nome de ordenação do Windows](../../t-sql/statements/windows-collation-name-transact-sql.md).
 
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -60,7 +60,7 @@ _CaseSensitivity_AccentSensitivity | _BIN
 
 **BIN** Especifica a ordem de classificação binária que será usada.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Comentários
 
 Para listar as ordenações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suportados pelo servidor, execute a seguinte consulta.
 

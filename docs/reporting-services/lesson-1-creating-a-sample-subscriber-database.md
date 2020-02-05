@@ -9,10 +9,10 @@ ms.assetid: 47a882b7-efe5-4ee6-bef4-06118eb56903
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2aa2fefb5df874b08a34c4a7091d450afdfd4828
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62513158"
 ---
 # <a name="lesson-1-creating-a-sample-subscriber-database"></a>Lição 1: Criando um banco de dados do assinante de exemplo
@@ -55,11 +55,11 @@ Esta lição pressupõe que você esteja usando o [!INCLUDE[ssManStudioFull_md](
     GO  
     ```  
   
-7.  Clique em **! Execute**  na barra de ferramentas.  
+7.  Clique em **! Execute** na barra de ferramentas.  
   
 8.  Use uma instrução SELECT para verificar se há três linhas de dados. Por exemplo: `select * from OrderInfo`  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Próximas etapas  
 + Você criou com êxito os dados de assinatura que controlarão a distribuição de relatórios e modificarão a saída de relatório para cada assinante. 
 + Em seguida, você modificará as propriedades de fonte de dados do relatório para usar credenciais armazenadas. 
 + Você também modificará o design do relatório para incluir um parâmetro que a assinatura usará com os dados do assinante. [Lição 2: Modificando as propriedades da fonte de dados do relatório](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md).  
@@ -70,4 +70,4 @@ Esta lição pressupõe que você esteja usando o [!INCLUDE[ssManStudioFull_md](
 [Criar um banco de dados](../relational-databases/databases/create-a-database.md)  
 [Criar um relatório de tabela básico](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
 
-Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
+Mais perguntas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

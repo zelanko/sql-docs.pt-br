@@ -11,10 +11,10 @@ ms.assetid: e7f4c132-a5ec-49d8-a964-45775432731f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e77890725659f05d8616156f6e84712dc20323eb
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292310"
 ---
 # <a name="look-up-infoobject"></a>Pesquisar InfoObject
@@ -85,10 +85,10 @@ ms.locfileid: "71292310"
 ## <a name="see-also"></a>Consulte Também  
  [Criar InfoCube para os Dados da Transação](../../integration-services/data-flow/create-infocube-for-transaction-data.md)   
  [Criar InfoSource](../../integration-services/data-flow/create-infosource.md)   
- [Criar InfoSource para os Dados da Transação](../../integration-services/data-flow/create-infosource-for-transaction-data.md)   
+ [Criar InfoSource para os dados da transação](../../integration-services/data-flow/create-infosource-for-transaction-data.md)   
  [Criar InfoSource para dados mestre](../../integration-services/data-flow/create-infosource-for-master-data.md)   
- [Criar Novo InfoObject](../../integration-services/data-flow/create-new-infoobject.md)   
+ [Criar novo InfoObject](../../integration-services/data-flow/create-new-infoobject.md)   
  [Editor de Destino SAP BW &#40;Página Gerenciador de Conexões&#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
- [Ajuda F1 do Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
+ [Ajuda F1 do Microsoft Connector para SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

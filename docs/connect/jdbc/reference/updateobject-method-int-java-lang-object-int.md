@@ -16,10 +16,10 @@ ms.assetid: 9d33571b-4887-49d3-96df-8abda7b5a904
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8da1c92b4687fa743c104d8fd47d1ce33760cd00
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67998481"
 ---
 # <a name="updateobject-method-int-javalangobject-int"></a>Método updateObject (int, java.lang.Object, int)
@@ -36,7 +36,7 @@ public void updateObject(int index,
                          int scale)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *index*  
   
  Um **int** que indica o índice de coluna.  

@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b22210bdcabf1972e7fa76d7871ebd94e1f23ff5
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72452904"
 ---
 # <a name="temporal-table-security"></a>Segurança da tabela temporal
@@ -28,7 +28,7 @@ Para compreender como a segurança se aplica às tabelas temporais, é important
 
  A tabela a seguir descreve os princípios de segurança que se aplicam às tabelas temporais:
 
-|Princípio|Descrição|
+|Princípio|DESCRIÇÃO|
 |---------------|-----------------|
 |Habilitar/desabilitar a determinação de versão do sistema requer privilégios mais altos sobre os objetos afetados|Habilitar e desabilitar SYSTEM_VERSIONING requer a permissão CONTROL na tabela atual e na tabela do histórico|
 |Os dados do histórico não podem ser modificados diretamente|Quando SYSTEM_VERSIONING está ATIVADO, os usuários não podem alterar os dados do histórico, independentemente de suas permissões reais na tabela atual ou na tabela do histórico. Isso inclui as modificações dos dados e do esquema.|
@@ -61,14 +61,14 @@ Quando SYSTEM_VERSIONING é definido como ATIVO, as operações de modificação
 ||Criar nova tabela de histórico|Reutilizar tabela de histórico existente|
 |-|------------------------------|----------------------------------|
 |Permissão necessária|Permissão**CREATE TABLE** no banco de dados<br /><br /> Permissão**ALTER** para os esquemas nos quais a tabela atual e a tabela do histórico são criadas.|Permissão**CREATE TABLE** no banco de dados<br /><br /> Permissão**ALTER** para o esquema no qual a tabela atual será criada.<br /><br /> Permissão**CONTROL** para a tabela de histórico especificada como parte da instrução **CREATE TABLE** que cria a tabela temporal|
-|Auditar o|A auditoria mostra que os usuários tentaram criar dois objetos. A operação pode falhar devido à falta de permissões para criar uma tabela no banco de dados ou devido à falta de permissões para alterar os esquemas dessa tabela.|Auditoria mostra que a tabela temporal foi criada. A operação pode falhar devido à falta de permissão para criar uma tabela no banco de dados, devido à falta de permissões para alterar o esquema da tabela temporal ou à falta de permissões na tabela do histórico.|
+|Audit|A auditoria mostra que os usuários tentaram criar dois objetos. A operação pode falhar devido à falta de permissões para criar uma tabela no banco de dados ou devido à falta de permissões para alterar os esquemas dessa tabela.|Auditoria mostra que a tabela temporal foi criada. A operação pode falhar devido à falta de permissão para criar uma tabela no banco de dados, devido à falta de permissões para alterar o esquema da tabela temporal ou à falta de permissões na tabela do histórico.|
 
 ## <a name="security-of-the-alter-temporal-table-set-system_versioning-onoff-statement"></a>Segurança da instrução ALTER Temporal TABLE SET (SYSTEM_VERSIONING ATIVADO/DESATIVADO)
 
 ||Criar nova tabela de histórico|Reutilizar tabela de histórico existente|
 |-|------------------------------|----------------------------------|
 |Permissão necessária|Permissão**CONTROL** no banco de dados<br /><br /> Permissão**CREATE TABLE** no banco de dados<br /><br /> Permissão**ALTER** para os esquemas nos quais a tabela do histórico é criada|Permissão**CONTROL** para a tabela original que foi alterada<br /><br /> Permissão**CONTROL** para a tabela de histórico especificada como parte da instrução **ALTER TABLE**|
-|Auditar o|A auditoria mostra que a tabela temporal foi alterada e a tabela do histórico foi criada ao mesmo tempo. A operação pode falhar devido à falta de permissões para criar uma tabela no banco de dados, devido à falta de permissões para alterar o esquema da tabela de histórico ou à falta de permissão para modificar a tabela temporal.|A auditoria mostra que a tabela temporal foi alterada, mas a operação requer acesso para a tabela do histórico. A operação pode falhar devido à falta de permissões para a tabela do histórico ou para a tabela atual.|
+|Audit|A auditoria mostra que a tabela temporal foi alterada e a tabela do histórico foi criada ao mesmo tempo. A operação pode falhar devido à falta de permissões para criar uma tabela no banco de dados, devido à falta de permissões para alterar o esquema da tabela de histórico ou à falta de permissão para modificar a tabela temporal.|A auditoria mostra que a tabela temporal foi alterada, mas a operação requer acesso para a tabela do histórico. A operação pode falhar devido à falta de permissões para a tabela do histórico ou para a tabela atual.|
 
 ## <a name="security-of-select-statement"></a>Segurança da instrução SELECT
 

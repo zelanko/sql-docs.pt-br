@@ -22,10 +22,10 @@ ms.assetid: 678d2dfc-e40c-4fbb-b2cc-42fffc44478a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 52acb1db548f6425dcfaf6339d38a4b55e57b76e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297942"
 ---
 # <a name="export-column-transformation"></a>Transformação Exportar Colunas
@@ -38,7 +38,7 @@ ms.locfileid: "71297942"
 ## <a name="append-and-truncate-options"></a>Opções de anexar e truncar  
  A tabela seguinte descreve como as definições das opções anexar e truncar afetam os resultados.  
   
-|Acrescentar|Truncar|O arquivo existe|Resultados|  
+|Acrescentar|Truncate|O arquivo existe|Resultados|  
 |------------|--------------|-----------------|-------------|  
 |Falso|Falso|Não|A transformação cria um novo arquivo e grava os dados nele.|  
 |True|Falso|Não|A transformação cria um novo arquivo e grava os dados nele.|  
@@ -61,7 +61,7 @@ ms.locfileid: "71297942"
     > [!NOTE]  
     >  Uma BOM só é gravada quando os dados não são anexados a um arquivo existente e eles são do tipo DT_NTEXT.  
   
- A transformação usa pares de colunas de entrada: uma coluna contém um nome de arquivo e a outra contém os dados. Cada linha no conjunto de dados pode especificar um arquivo diferente. Como a transformação processa uma linha, os dados são inseridos no arquivo especificado. No tempo de execução, a transformação cria os arquivos caso eles ainda não existam e, posteriormente, grava os dados nos arquivos. Os dados a serem gravados devem ser do tipo DT_TEXT, DT_NTEXT ou DT_IMAGE. Para obter mais informações, consulte [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md).  
+ A transformação usa pares de colunas de entrada; uma coluna contém um nome de arquivo e a outra contém os dados. Cada linha no conjunto de dados pode especificar um arquivo diferente. Como a transformação processa uma linha, os dados são inseridos no arquivo especificado. No tempo de execução, a transformação cria os arquivos caso eles ainda não existam e, posteriormente, grava os dados nos arquivos. Os dados a serem gravados devem ser do tipo DT_TEXT, DT_NTEXT ou DT_IMAGE. Para obter mais informações, consulte [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md).  
   
  Essa transformação tem uma entrada, uma saída e uma saída de erro.  
   

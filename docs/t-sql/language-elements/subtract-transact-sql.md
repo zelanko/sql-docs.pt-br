@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 09d6eb369d7e4dd1678ea2c344686bb5b672a8c0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68121638"
 ---
 # <a name="--subtraction-transact-sql"></a>- (Subtração) (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68121638"
 
   Subtrai dois números (um operador de subtração aritmético). Também pode subtrair um número, em dias, de uma data.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -51,7 +51,7 @@ expression - expression
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-subtraction-in-a-select-statement"></a>A. Usando subtração em uma instrução SELECT  
+### <a name="a-using-subtraction-in-a-select-statement"></a>a. Usando subtração em uma instrução SELECT  
  O exemplo a seguir calcula a diferença de taxas de imposto entre o estado ou o município com a taxa de imposto mais alta e o estado ou o município com a taxa de imposto mais baixa.  
   
  **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
@@ -92,7 +92,7 @@ SELECT @altstartdate - 1.5 AS 'Subtract Date';
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-subtraction-in-a-select-statement"></a>C: Usando subtração em uma instrução SELECT  
+### <a name="c-using-subtraction-in-a-select-statement"></a>C: Usando uma subtração em uma instrução SELECT  
  O exemplo a seguir calcula a diferença em uma taxa base entre o funcionário com a taxa base mais alta e o funcionário com a taxa de imposto mais baixa, por meio da tabela `dimEmployee`.  
   
 ```  

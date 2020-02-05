@@ -9,20 +9,20 @@ ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 59dee7b9c7262233ec6e80097105b1fbd6b4d7ea
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: fdd6e3d9920c2674f9cfe9cd34b5bfa5e071b682
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531746"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74821229"
 ---
 # <a name="azdata-bdc-spark-status"></a>azdata bdc spark status
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-O artigo a seguir fornece referência para os comandos `sql` na ferramenta `azdata`. Para obter mais informações sobre outros comandos `azdata`, confira [referência de azdata](reference-azdata.md)
+O artigo a seguir fornece referência para os comandos `bdc spark status` na ferramenta `azdata`. Para obter mais informações sobre outros comandos `azdata`, confira [referência de azdata](reference-azdata.md)
 
-## <a name="commands"></a>Commands
+## <a name="commands"></a>Comandos
 |     |     |
 | --- | --- |
 [azdata bdc spark status show](#azdata-bdc-spark-status-show) | Status do serviço do Spark.

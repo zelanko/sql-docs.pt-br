@@ -11,10 +11,10 @@ ms.assetid: 74012c90-b42e-4171-b27a-9c30cf69ff98
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d904d16bb54236ee61dd463ca3c7bf829a46c3e3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115317"
 ---
 # <a name="use-utility-explorer-to-manage-the-sql-server-utility"></a>Usar o Gerenciador do Utilitário para gerenciar o Utilitário do SQL Server
@@ -38,7 +38,7 @@ ms.locfileid: "68115317"
 ### <a name="sql-server-utility-navigation-pane"></a>Painel de navegação do Utilitário do SQL Server  
  O painel de navegação do Gerenciador do Utilitário oferece uma exibição de árvore de objetos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility, agrupados por ponto de controle do utilitário. Para expandir pastas, clique no sinal de adição (+) ou clique duas vezes no nome do UCP no painel de navegação do Gerenciador do Utilitário. Clique com o botão direito do mouse em pastas ou objetos para executar tarefas comuns. Os nós na exibição de árvore são como se segue:  
   
--   O nó superior na exibição de árvore é o UCP (ponto de controle do utilitário). O nome do nó é criado como: "Nome_do_utilitário" (Nome_do_computador\Nome_da_instância_UCP). Se você não tiver um UCP, deverá criar um. Se você não estiver conectado a um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility, deverá conectar-se a um. Para obter mais informações, consulte [Recursos e tarefas do utilitário do SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md). Clique no nome do UCP na exibição de árvore para popular o painel de conteúdo do Gerenciador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility com dados na exibição de painel. Para obter mais informações, veja [Painel do Utilitário &#40;Utilitário do SQL Server&#41;](https://msdn.microsoft.com/library/999eb741-4a60-43f6-ab37-2df7dce845c1).  
+-   O nó superior na exibição de árvore é o UCP (ponto de controle do utilitário). O nome do nó é construído da seguinte maneira: "Nome_do_Utilitário" (NomeDoComputador\nome_da_instância_UCP). Se você não tiver um UCP, deverá criar um. Se você não estiver conectado a um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility, deverá conectar-se a um. Para obter mais informações, consulte [Recursos e tarefas do utilitário do SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md). Clique no nome do UCP na exibição de árvore para popular o painel de conteúdo do Gerenciador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility com dados na exibição de painel. Para obter mais informações, veja [Painel do Utilitário &#40;Utilitário do SQL Server&#41;](https://msdn.microsoft.com/library/999eb741-4a60-43f6-ab37-2df7dce845c1).  
   
      Clique com o botão direito do mouse no nó UCP para atualizar dados no painel.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "68115317"
  Quando um nó contém um grande número de objetos, pode ser difícil encontrar o objeto que você está procurando. Nesses casos, use o recurso de filtro do Gerenciador do Utilitário para reduzir a lista para um tamanho menor. Por exemplo, quando você quer localizar uma instância específica do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou somente os computadores com espaço de arquivo subutilizado. Clique com o botão direito do mouse na pasta que deseja filtrar, clique no botão de filtro e clique em **Configurações de Filtro** para abrir a caixa de diálogo Configurações de Filtro do Gerenciador do Utilitário. Você pode filtrar a lista por nome, CPU do computador, CPU da instância, espaço para arquivo, espaço no volume, configurações de substituição de políticas ou último horário reportado. As colunas **Operador** e **Valor** fornecem operadores de filtragem adicionais em uma lista suspensa.  
   
 ### <a name="starting-powershell"></a>Iniciando o PowerShell  
- Você pode iniciar uma sessão do PowerShell clicando com o botão direito do mouse na maioria das pastas e dos objetos na árvore do Pesquisador de Objetos e selecionando **Iniciar PowerShell**. Isso inicia uma sessão do Powershell que tem o suporte para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell habilitado e o caminho definido até o objeto quando você clicou com o botão direito do mouse no Pesquisador de Objetos. Você pode inserir comandos do Powershell em um ambiente interativo do Powershell. Para saber mais, confira [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md).  
+ Você pode iniciar uma sessão do PowerShell clicando com o botão direito do mouse na maioria das pastas e dos objetos na árvore do Pesquisador de Objetos e selecionando **Iniciar PowerShell**. Isso inicia uma sessão do Powershell que tem o suporte para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell habilitado e o caminho definido até o objeto quando você clicou com o botão direito do mouse no Pesquisador de Objetos. Você pode inserir comandos do Powershell em um ambiente interativo do Powershell. Para obter mais informações, confira [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md).  
   
  O PowerShell não tem a ajuda F1, mas inclui um cmdlet **Get-Help** que fornece informações sobre como usá-lo. Para obter mais informações sobre como usar Get-Help, veja [Get Help SQL Server PowerShell](../../relational-databases/scripting/get-help-sql-server-powershell.md).  
   
