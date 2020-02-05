@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f0d3219271483ffbd4d5c51d1f382b3277086521
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67999644"
 ---
 # <a name="brokermessage-classify-event-class"></a>classe de evento Broker:Message Classify
@@ -27,14 +27,14 @@ ms.locfileid: "67999644"
   
 ## <a name="brokermessage-classify-event-class-data-columns"></a>Colunas de dados da classe de evento Broker:Message Classify  
   
-|Coluna de dados|Tipo de dados|Descrição|Número da coluna|Filtrável|  
+|Coluna de dados|Tipo de dados|DESCRIÇÃO|Número da coluna|Filtrável|  
 |-----------------|---------------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|O nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |**ClientProcessID**|**int**|A ID atribuída pelo computador host ao processo em que está sendo executado o aplicativo cliente. Essa coluna de dados será populada se a ID do processo do cliente for fornecida pelo cliente.|9|Sim|  
 |**DatabaseID**|**int**|A ID do banco de dados especificada pela instrução USE *database* ou a ID do banco de dados padrão se nenhuma instrução USE *database* tiver sido emitida para uma determinada instância. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibirá o nome do banco de dados se a coluna de dados **ServerName** for capturada no rastreamento e o servidor estiver disponível. Determine o valor para um banco de dados usando a função DB_ID.|3|Sim|  
 |**EventClass**|**int**|O tipo de classe de evento capturado. Sempre **141** para **Broker:Message Classify**.|27|Não|  
 |**EventSequence**|**int**|Número de sequência para esse evento.|51|Não|  
-|**EventSubClass**|**nvarchar**|O tipo de subclasse de evento, fornecendo mais informações sobre cada classe de evento. Essa coluna pode conter os valores a seguir.<br /><br /> **Local**: a rota escolhida tem o endereço LOCAL.<br /><br /> **Remote**:                 a rota escolhida tem um endereço diferente de LOCAL.<br /><br /> **Delayed**:                 a mensagem está atrasada, porque o encaminhamento está desabilitado ou porque não existe rota correspondente.|21|Sim|  
+|**EventSubClass**|**nvarchar**|O tipo de subclasse de evento, fornecendo mais informações sobre cada classe de evento. Essa coluna pode conter os valores a seguir.<br /><br /> **Local**: a rota escolhida tem o endereço LOCAL.<br /><br /> **Remoto**:                 a rota escolhida tem um endereço diferente de LOCAL.<br /><br /> **Atrasado**:                a mensagem está atrasada porque o encaminhamento está desabilitado ou porque não existe rota correspondente.|21|Sim|  
 |**FileName**|**nvarchar**|O nome do serviço para o qual se destina a mensagem.|36|Não|  
 |**GUID**|**uniqueidentifier**|A ID de conversa da caixa de diálogo. Esse identificador é transmitido como parte da mensagem e é compartilhado por ambos os lados da conversa.|54|Não|  
 |**HostName**|**nvarchar**|O nome do computador no qual o cliente está sendo executado. Essa coluna de dados será populada se o nome do host for fornecido pelo cliente. Para determinar o nome do host, use a função HOST_NAME.|8|Sim|  

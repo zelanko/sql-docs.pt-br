@@ -22,10 +22,10 @@ ms.assetid: 878c6c14-37ab-4b87-9854-7f8f42bac7dd
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: e555a51cc4ab7c628dc75469aa1cfe4d7c01edcc
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70211435"
 ---
 # <a name="receive-transact-sql"></a>RECEIVE (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "70211435"
 
   Recupera uma ou mais mensagens de uma fila. Dependendo da configuração de retenção da fila, essa instrução remove as mensagens da fila ou atualiza o status da mensagem na fila.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -105,7 +105,7 @@ ms.locfileid: "70211435"
  TIMEOUT *timeout*  
  Especifica o período de tempo, em milissegundos, durante o qual a instrução aguarda uma mensagem. Essa cláusula pode ser usada apenas com a cláusula WAITFOR. Se essa cláusula não estiver especificada ou se o tempo limite for -**1**, o tempo de espera será ilimitado. Se o tempo limite expirar, RECEIVE retornará um conjunto de resultados vazio.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
   
 > [!IMPORTANT]  
 >  Se a instrução RECEIVE não for a primeira instrução em um lote ou procedimento armazenado, a instrução anterior deverá ser encerrada com um ponto-e-vírgula (;).  
@@ -155,7 +155,7 @@ ms.locfileid: "70211435"
 ## <a name="queue-columns"></a>Colunas de fila  
  A tabela a seguir lista as colunas em uma fila.  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |**status**|**tinyint**|Status da mensagem. Para mensagens retornadas pelo comando RECEIVE, o status é sempre **0**. Mensagens na fila podem conter um dos seguintes valores:<br /><br /> **0**=Pronto**1**=Mensagem recebida**2**=Ainda não concluído**3**=Mensagem enviada retida|  
 |**priority**|**tinyint**|O nível de prioridade de conversa aplicado à mensagem.|  
@@ -177,7 +177,7 @@ ms.locfileid: "70211435"
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-receiving-all-columns-for-all-messages-in-a-conversation-group"></a>A. Recebendo todas as colunas de todas as mensagens em um grupo de conversa  
+### <a name="a-receiving-all-columns-for-all-messages-in-a-conversation-group"></a>a. Recebendo todas as colunas de todas as mensagens em um grupo de conversa  
  O exemplo a seguir recebe todas as mensagens disponíveis para o próximo grupo de conversa disponível da fila `ExpenseQueue`. A instrução retorna as mensagens como um conjunto de resultados.  
   
 ```  

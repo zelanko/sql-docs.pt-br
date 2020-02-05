@@ -11,10 +11,10 @@ ms.assetid: fa656c5b-a935-40bf-bc20-e517ca5cd0ba
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 08fb8cc6e54fff4b315a0a98ace046a49b2673a3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68008773"
 ---
 # <a name="odbc-driver-on-linux-and-macos-support-for-high-availability-and-disaster-recovery"></a>Driver ODBC no Linux e no macOS – compatibilidade com alta disponibilidade e recuperação de desastre
@@ -59,7 +59,7 @@ Lembre-se do seguinte ao se conectar com um servidor em um grupo de disponibilid
 
 -   Você pode aumentar o valor de **loginTimeout** para acomodar o tempo de failover e reduzir as tentativas de repetição de conexão do aplicativo.
 
--   Não há suporte a transações distribuídas.  
+-   Não há suporte para transações distribuídas.  
   
 Se o roteamento somente leitura não estiver em efeito, conectar-se a um local de réplica secundário em um grupo de disponibilidade apresentará falha nas seguintes situações:  
   
@@ -93,7 +93,7 @@ Para saber mais sobre as propriedades de conexão do ODBC, consulte [SQLSetConne
   
 Um aplicativo no driver ODBC que use os [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)] pode usar uma dessas duas funções para fazer a conexão:  
   
-|Função|Descrição|  
+|Função|DESCRIÇÃO|  
 |------------|---------------|  
 |[Função SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)|O **SQLConnect** é compatível com **ApplicationIntent** e **MultiSubnetFailover** por meio de um DSN (nome de fonte de dados) ou atributo de conexão.|  
 |[Função SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)|O **SQLDriverConnect** é compatível com **ApplicationIntent** e **MultiSubnetFailover** por meio de palavras-chave de cadeia de conexão, atributo de conexão ou DSN.|
@@ -104,4 +104,4 @@ Um aplicativo no driver ODBC que use os [!INCLUDE[ssHADR](../../../includes/ssha
 
 [Diretrizes de programação](../../../connect/odbc/linux-mac/programming-guidelines.md)
 
-[Notas de versão](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)  
+[Notas de Versão](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)  

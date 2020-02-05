@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6fc6da38a122f2397c41232cb1a0ec5ad0831cd5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68098628"
 ---
 # <a name="typeproperty-transact-sql"></a>TYPEPROPERTY (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68098628"
 
   Retorna informações sobre um tipo de dados.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,16 +41,16 @@ TYPEPROPERTY (type , property)
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *type*  
+ *tipo*  
  É o nome do tipo de dados.  
   
  *property*  
  É o tipo das informações a serem retornadas para o tipo de dados. *property* pode ser um dos valores a seguir.  
   
-|Propriedade|Descrição|Valor retornado|  
+|Propriedade|DESCRIÇÃO|Valor retornado|  
 |--------------|-----------------|--------------------|  
 |**AllowsNull**|Tipo de dados permite valores nulos.|1 = True<br /><br /> 0 = False<br /><br /> NULL = Tipo de dados não localizado.|  
-|**OwnerId**|Proprietário do tipo.<br /><br /> Observação: O proprietário do esquema não é necessariamente o proprietário do tipo.|Nonnull = A ID de usuário de banco de dados do proprietário do tipo.<br /><br /> NULL = Tipo sem-suporte ou ID de tipo inválida.|  
+|**OwnerId**|Proprietário do tipo.<br /><br /> Observação: o proprietário do esquema não é necessariamente o proprietário do tipo.|Nonnull = A ID de usuário de banco de dados do proprietário do tipo.<br /><br /> NULL = Tipo sem-suporte ou ID de tipo inválida.|  
 |**Precisão**|Precisão para o tipo de dados.|O número de dígitos ou caracteres.<br /><br /> -1 = **xml** ou um tipo de dados de valor grande<br /><br /> NULL = Tipo de dados não localizado.|  
 |**Escala**|Escala para o tipo de dados.|O número de lugares decimais para o tipo de dados.<br /><br /> NULL = o tipo de dados não é **numeric** ou não foi encontrado.|  
 |**UsesAnsiTrim**|Configuração de preenchimento ANSI era ON quando o tipo de dados foi criado.|1 = True<br /><br /> 0 = False<br /><br /> NULL = Tipo de dados não localizado ou não é um tipo de dados binário ou de cadeia de caracteres.|  
@@ -65,7 +65,7 @@ TYPEPROPERTY (type , property)
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-identifying-the-owner-of-a-data-type"></a>A. Identificando o proprietário de um tipo de dados  
+### <a name="a-identifying-the-owner-of-a-data-type"></a>a. Identificando o proprietário de um tipo de dados  
  O exemplo a seguir retorna o proprietário de um tipo de dados.  
   
 ```  

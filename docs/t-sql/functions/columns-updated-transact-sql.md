@@ -21,16 +21,16 @@ ms.assetid: 765fde44-1f95-4015-80a4-45388f18a42c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ae6e3b08b3a29afb9282d28f33ec9406ab418b2c
-ms.sourcegitcommit: 0d5b0aeee2a2b34fd448aec2e72c0fa8be473ebe
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75721921"
 ---
 # <a name="columns_updated-transact-sql"></a>COLUMNS_UPDATED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Essa função retorna um padrão de bit **varbinary** que indica as colunas inseridas ou atualizadas de uma tabela ou exibição. Use [!INCLUDE[tsql](../../includes/tsql-md.md)] em qualquer lugar no corpo de um gatilho INSERT ou UPDATE do `COLUMNS_UPDATED` para testar se o gatilho deve executar determinadas ações.
+Essa função retorna um padrão de bit **varbinary** que indica as colunas inseridas ou atualizadas de uma tabela ou exibição. Use `COLUMNS_UPDATED` em qualquer lugar no corpo de um gatilho INSERT ou UPDATE do [!INCLUDE[tsql](../../includes/tsql-md.md)] para testar se o gatilho deve executar determinadas ações.
   
 ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   

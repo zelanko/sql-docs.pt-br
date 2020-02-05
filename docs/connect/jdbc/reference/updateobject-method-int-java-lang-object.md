@@ -16,10 +16,10 @@ ms.assetid: 4993dfe1-2232-4b3c-b931-dfdb35dd225a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 796a31238a8340b5604797bbb8e38e7ebd1b4237
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67998728"
 ---
 # <a name="updateobject-method-int-javalangobject"></a>Método updateObject (int, java.lang.Object)
@@ -35,7 +35,7 @@ public void updateObject(int index,
                          java.lang.Object obj)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *index*  
   
  Um **int** que indica o índice de coluna.  
@@ -47,8 +47,8 @@ public void updateObject(int index,
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- Esse método UpdateObject é especificado pelo método UpdateObject na interface java. Sql. ResultSet.  
+## <a name="remarks"></a>Comentários  
+ Esse método updateObject é especificado pelo método updateObject na interface java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Método updateObject &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateobject-method-sqlserverresultset.md)   
