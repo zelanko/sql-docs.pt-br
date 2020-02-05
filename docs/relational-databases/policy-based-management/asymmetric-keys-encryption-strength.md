@@ -13,10 +13,10 @@ ms.assetid: 235ff2ab-1c5a-45c7-a91b-9db69b958b60
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 3c8baf2b846e33d7df51dfef3e24ee2b6028babb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109908"
 ---
 # <a name="asymmetric-keys-encryption-strength"></a>Intensidade da criptografia de chaves assimétricas
@@ -30,6 +30,6 @@ ms.locfileid: "68109908"
  [Escolher um algoritmo de criptografia](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Monitorar e impor práticas recomendadas usando o Gerenciamento Baseado em Políticas](../../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
+ [Monitorar e impor melhores práticas usando o gerenciamento baseado em políticas](../../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
   
   

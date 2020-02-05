@@ -14,10 +14,10 @@ ms.assetid: 820a1e7a-7182-4c7b-ab56-5b4097a7e042
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7ec0d571fe219719a22e841c43dedd0716ef5a4a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293451"
 ---
 # <a name="azure-blob-destination"></a>Destino de Blob do Azure
@@ -25,7 +25,7 @@ ms.locfileid: "71293451"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
- O componente **Destino de Blob do Azure** permite que um pacote SSIS grave dados de um blob do Azure. Os formatos de arquivo compatíveis são: CSV e AVRO. 
+ O componente **Destino de Blob do Azure** permite que um pacote SSIS grave dados de um blob do Azure. Os formatos de arquivo com suporte são: CSV e AVRO. 
    
  Arraste e solte **Destino de Blob do Azure** para o designer de fluxo de dados e clique duas vezes nele para ver o editor).  
   

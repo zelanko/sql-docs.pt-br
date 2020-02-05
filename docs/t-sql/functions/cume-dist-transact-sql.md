@@ -20,18 +20,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 05906cfd0e72531bf332ebca4215df047eb8e3fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68026463"
 ---
-# <a name="cumedist-transact-sql"></a>CUME_DIST (Transact-SQL)
+# <a name="cume_dist-transact-sql"></a>CUME_DIST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
 Para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa função calcula a distribuição cumulativa com um valor em um grupo de valores. Em outras palavras, `CUME_DIST` computa a posição relativa de um valor especificado em um grupo de valores. Supondo a ordenação ascendente, o `CUME_DIST` de um valor na linha _r_ é definido como o número de linhas com valores menores ou iguais ao valor de _r_, dividido pelo número de linhas avaliadas no conjunto de resultados da consulta ou partição. `CUME_DIST` é semelhante à função `PERCENT_RANK`.
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -49,7 +49,7 @@ A _partition\_by\_clause_ divide o conjunto de resultados produzido pela cláusu
 ## <a name="return-types"></a>Tipos de retorno
 **float(53)**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 O `CUME_DIST` retorna um intervalo de valores maior que 0 e menor que ou igual a 1. Valores vinculados são sempre avaliados com o mesmo valor de distribuição cumulativo. O `CUME_DIST` inclui valores NULL por padrão e trata esses valores como os menores valores possíveis.
   
 `CUME_DIST` é não determinístico. Para obter mais informações, veja [Funções determinísticas e não determinísticas](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).

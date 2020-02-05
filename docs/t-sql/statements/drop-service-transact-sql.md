@@ -22,10 +22,10 @@ ms.assetid: 2351bba7-0f2a-4cda-b3b2-6a88b8747c53
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: c23b3895afaae2e474898a617c2fbabee4df2abe
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73791314"
 ---
 # <a name="drop-service-transact-sql"></a>DROP SERVICE (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "73791314"
 
   Descarta um serviço existente.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -47,7 +47,7 @@ DROP SERVICE service_name
  *service_name*  
  O nome do serviço a ser descartado. Os nomes de servidor, banco de dados e esquema não podem ser especificados.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Você não poderá descartar um serviço se houver alguma prioridade de conversa que recorra ao mesmo.  
   
  O descarte de um serviço exclui todas as mensagens da fila utilizada pelo serviço. [!INCLUDE[ssSB](../../includes/sssb-md.md)] envia um erro para o lado remoto de quaisquer conversas abertas que utilizam o serviço.  

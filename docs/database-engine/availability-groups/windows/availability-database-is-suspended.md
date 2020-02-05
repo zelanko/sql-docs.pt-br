@@ -15,10 +15,10 @@ ms.assetid: 6baee70f-848c-4e86-b20d-78875c0f82cb
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a7a0a6d1fa10576eab5e515031e8233af95c2d76
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67934918"
 ---
 # <a name="availability-database-is-suspended-for-an-availability-group"></a>O banco de dados de disponibilidade está suspenso para um grupo de disponibilidade
@@ -33,13 +33,13 @@ ms.locfileid: "67934918"
 |**Categoria**|**Aviso**|  
 |**Faceta**|Banco de dados de disponibilidade|  
   
-## <a name="description"></a>Descrição  
+## <a name="description"></a>DESCRIÇÃO  
  Esta política verifica o estado de movimento de dados do banco de dados secundário (também conhecido como "réplica de banco de dados secundário"). A política ficará em estado não íntegro quando a movimentação de dados for suspensa. Caso contrário, a política estará em um estado íntegro.  
   
 > [!NOTE]  
 >  Para esta versão do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], as informações sobre as possíveis causas e soluções estão localizadas em [O banco de dados de disponibilidade está suspenso](https://go.microsoft.com/fwlink/p/?LinkId=220860) no Wiki do TechNet.  
   
-## <a name="possible-causes"></a>Causas possíveis  
+## <a name="possible-causes"></a>Possíveis causas  
  A sincronização de dados nesse banco de dados de disponibilidade pode ter sido suspensa pelo seguinte:  
   
 -   Devido a um erro, o sistema pode ter suspendido a sincronização de dados.  

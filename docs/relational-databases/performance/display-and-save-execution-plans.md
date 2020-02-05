@@ -19,10 +19,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 11c33865990bd67e62436de3106282f873e5d0fb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67946830"
 ---
 # <a name="display-and-save-execution-plans"></a>Exibir e salvar planos de execução
@@ -32,8 +32,8 @@ Esta seção explica como exibir planos de execução e como salvá-los em um ar
 Os planos de execução exibem graficamente os métodos de recuperação de dados escolhidos pelo Otimizador de Consulta do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os planos de execução representam o custo de execução de instruções e consultas específicas no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando ícones em vez da representação tabular produzida pelas instruções [SET SHOWPLAN_ALL](../../t-sql/statements/set-showplan-all-transact-sql.md) ou [SET SHOWPLAN_TEXT](../../t-sql/statements/set-showplan-text-transact-sql.md). Essa abordagem gráfica é útil para entender as características de desempenho de uma consulta.  
 
 Enquanto o Otimizador de Consulta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] produz apenas um plano de execução, há o conceito de plano de execução **estimado** e de plano de execução **real**.
--  Um [plano de execução estimado](../../relational-databases/performance/display-the-estimated-execution-plan.md) retorna o plano de execução como produzido pelo Otimizador de Consulta no tempo de compilação. A produção do plano de execução estimado não executa a consulta ou o lote de fato e, portanto, não contém nenhuma informação de tempo de execução, como avisos de métrica ou tempo de execução de uso real do recurso. 
--  Um [plano de execução real](../../relational-databases/performance/display-an-actual-execution-plan.md) retorna o plano de execução produzido pelo Otimizador de Consulta e, depois disso, as consultas ou os lotes concluem a execução. Isso inclui informações de tempo de execução sobre as métricas de uso de recursos e os avisos de tempo de execução.  
+-  Um [plano de execução estimado](../../relational-databases/performance/display-the-estimated-execution-plan.md) retorna o plano de execução como produzido pelo Otimizador de Consulta no tempo de compilação. A produção do plano de execução estimado não executa a consulta ou o lote de fato e, portanto, não contém nenhuma informação de runtime, como avisos de métrica ou runtime de uso real do recurso. 
+-  Um [plano de execução real](../../relational-databases/performance/display-an-actual-execution-plan.md) retorna o plano de execução produzido pelo Otimizador de Consulta e, depois disso, as consultas ou os lotes concluem a execução. Isso inclui informações de runtime sobre as métricas de uso de recursos e os avisos de runtime.  
 
 Para obter mais informações sobre planos de execução de consulta, confira [Guia da Arquitetura de Processamento de Consultas](../../relational-databases/query-processing-architecture-guide.md).
   

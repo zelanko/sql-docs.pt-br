@@ -12,22 +12,22 @@ ms.assetid: f25852f9-b91c-4356-b817-78bec9ec8db4
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: f02dafba3f6fbb8742c8b81ded8fccf39f0509f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68098320"
 ---
-# <a name="mssqlserver3414"></a>MSSQLSERVER_3414
+# <a name="mssqlserver_3414"></a>MSSQLSERVER_3414
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|3414|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|REC_GIVEUP|  
 |Texto da mensagem|Erro durante a recuperação, o que impede a reinicialização do banco de dados '%.*ls' (ID do banco de dados %d). Diagnostique os erros de recuperação e corrija-os ou restaure usando um backup válido. Se os erros não forem corrigidos ou se não eram esperados, entre em contato com o Suporte Técnico.|  
@@ -45,7 +45,7 @@ Para obter informações sobre a causa dessa ocorrência do erro 3414, examine o
 ## <a name="see-also"></a>Consulte Também  
 [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql-set-options.md)  
 [DBCC CHECKDB &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  
-[Restaurações completas de banco de dados &#40;modelo de recuperação simples#41;](~/relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md)  
+[Restaurações completas de banco de dados &#40;Modelo de recuperação simples#41;](~/relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md)  
 [MSSQLSERVER_824](~/relational-databases/errors-events/mssqlserver-824-database-engine-error.md)  
 [sys.databases &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
   

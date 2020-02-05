@@ -16,10 +16,10 @@ ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 153cbd447fa84087b50501005d0ea457f47d1eda
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298220"
 ---
 # <a name="odbc-destination"></a>Destino ODBC
@@ -29,7 +29,7 @@ ms.locfileid: "71298220"
 
   O destino ODBC carrega dados em massa em tabelas de bancos de dados com suporte ODBC. O destino ODBC usa um gerenciador de conexões ODBC para se conectar à fonte de dados.  
   
- Um destino ODBC inclui mapeamentos entre as colunas de entrada e as colunas da fonte de dados de destino. Você não precisa mapear as colunas de entrada para todas as colunas de destino, mas, dependendo das propriedades das colunas de destino, poderão ocorrer erros se nenhuma das colunas de entrada for mapeada para as colunas de destino. Por exemplo, se uma coluna de destino não permitir valores nulos, uma coluna de entrada deve ser mapeada para aquela coluna de destino. Além disso, colunas de tipos diferentes podem ser mapeadas, porém se os dados de entrada não forem compatíveis com o tipo de coluna de destino, um erro ocorrerá em tempo de execução. Dependendo da configuração de comportamento do erro, o erro será ignorado, causará uma falha ou a linha será enviada à saída de erro.  
+ Um destino ODBC inclui mapeamentos entre as colunas de entrada e as colunas da fonte de dados de destino. Você não precisa mapear as colunas de entrada para todas as colunas de destino, mas, dependendo das propriedades das colunas de destino, poderão ocorrer erros se nenhuma das colunas de entrada for mapeada para as colunas de destino. Por exemplo, se uma coluna de destino não permitir valores nulos, uma coluna de entrada deve ser mapeada para aquela coluna de destino. Além disso, colunas de tipos diferentes podem ser mapeadas, porém se os dados de entrada não forem compatíveis com o tipo de coluna de destino, um erro ocorrerá em runtime. Dependendo da configuração de comportamento do erro, o erro será ignorado, causará uma falha ou a linha será enviada à saída de erro.  
   
  O destino ODBC tem uma saída regular e uma saída de erro.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "71298220"
 ## <a name="error-handling"></a>Tratamento de erros  
  O destino ODBC tem uma saída de erro. A saída de erro de componente inclui as colunas de saída seguintes:  
   
--   **Código do Erro**: o número que corresponde ao erro atual. Consulte a documentação do seu banco de dados de origem para obter uma lista de erros. Para obter uma lista dos códigos de erro SSIS, consulte a Referência de código e mensagem de erro SSIS.  
+-   **Código de Erro**: o número que corresponde ao erro atual. Consulte a documentação do seu banco de dados de origem para obter uma lista de erros. Para obter uma lista dos códigos de erro SSIS, consulte a Referência de código e mensagem de erro SSIS.  
   
 -   **Coluna de Erro**: a coluna de origem que causa o erro (para erros de conversão).  
   
@@ -104,18 +104,18 @@ ms.locfileid: "71298220"
 #### <a name="connection-manager"></a>Gerenciador de conexões  
  Selecione na lista um gerenciador de conexões ODBC existente ou clique em Novo para criar uma nova conexão. A conexão pode ser com qualquer banco de dados com suporte ODBC.  
   
-#### <a name="new"></a>Nova  
+#### <a name="new"></a>Novo  
  Clique em **Nova**. É aberta a caixa de diálogo **Configurar Editor do Gerenciador de Conexões ODBC** , na qual você pode criar um novo gerenciador de conexões.  
   
 #### <a name="data-access-mode"></a>Modo de acesso a dados  
  Selecione o método de carregamento de dados no destino. As opções são mostradas na tabela a seguir:  
   
-|Opção|Descrição|  
+|Opção|DESCRIÇÃO|  
 |------------|-----------------|  
 |Nome da Tabela - Lote|Selecione esta opção para configurar o destino ODBC para trabalhar no modo de lote. Ao selecionar esta opção, as seguintes opções estão disponíveis:|  
-||**Nome da tabela ou da exibição**: selecione uma tabela ou exibição disponível da lista.<br /><br /> Essa lista contém apenas as primeiras 1.000 tabelas. Se o banco de dados contiver mais de 1000 tabelas, você poderá digitar o início do nome de uma tabela ou usar o curinga (\*) para inserir qualquer parte do nome para exibir a tabela ou tabelas desejadas.<br /><br /> **Tamanho do lote**: digite o tamanho do lote para carregamento em massa. Esse é o número de linhas carregadas como um lote|  
+||**Nome da tabela ou exibição**: selecione uma tabela ou exibição disponível na lista.<br /><br /> Essa lista contém apenas as primeiras 1.000 tabelas. Se o banco de dados contiver mais de 1000 tabelas, você poderá digitar o início do nome de uma tabela ou usar o curinga (\*) para inserir qualquer parte do nome para exibir a tabela ou tabelas desejadas.<br /><br /> **Tamanho do lote**: digite o tamanho do lote para carregamento em massa. Esse é o número de linhas carregadas como um lote|  
 |Nome da Tabela - Linha a Linha|Selecione esta opção para configurar o destino ODBC para inserir cada uma das linhas na tabela de destino, uma de cada vez. Ao selecionar esta opção, a seguinte opção está disponível:|  
-||**Nome da tabela ou da exibição**: selecione uma tabela ou exibição disponível no banco de dados na lista.<br /><br /> Essa lista contém apenas as primeiras 1.000 tabelas. Se o banco de dados contiver mais de 1.000 tabelas, você poderá digitar o início do nome de uma tabela ou usar o curinga (*) para inserir qualquer parte do nome para exibir a tabela ou tabelas desejadas.|  
+||**Nome da tabela ou exibição**: selecione uma tabela ou exibição disponível no banco de dados na lista.<br /><br /> Essa lista contém apenas as primeiras 1.000 tabelas. Se o banco de dados contiver mais de 1.000 tabelas, você poderá digitar o início do nome de uma tabela ou usar o curinga (*) para inserir qualquer parte do nome para exibir a tabela ou tabelas desejadas.|  
   
 #### <a name="preview"></a>Visualização  
  Clique em **Visualizar** para exibir até 200 linhas de dados da tabela selecionada.  
@@ -155,7 +155,7 @@ ms.locfileid: "71298220"
 #### <a name="inputoutput"></a>Entrada/Saída  
  Exibe o nome da fonte de dados.  
   
-#### <a name="column"></a>coluna  
+#### <a name="column"></a>Coluna  
  Não usado.  
   
 #### <a name="error"></a>Erro  
@@ -164,7 +164,7 @@ ms.locfileid: "71298220"
 #### <a name="truncation"></a>Truncation  
  Selecione como o destino ODBC deve tratar truncamento em um fluxo: ignorar a falha, redirecionar a linha ou causar falha no componente.  
   
-#### <a name="description"></a>Descrição  
+#### <a name="description"></a>DESCRIÇÃO  
  Exiba uma descrição do erro.  
   
 #### <a name="set-this-value-to-selected-cells"></a>Definir este valor para células selecionadas  

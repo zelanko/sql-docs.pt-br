@@ -26,10 +26,10 @@ ms.assetid: f2993a28-0b81-46f2-aec0-6877fe990387
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 02d42e48116e893c6bf7d04c2027762555be06f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68091000"
 ---
 # <a name="monitor-resource-usage-system-monitor"></a>Monitorar o uso de recursos (Monitor do Sistema)
@@ -70,7 +70,7 @@ ms.locfileid: "68091000"
   
 -   Atividade de disco  
   
--   Utilização de processador  
+-   Utilização do processador  
   
 -   Uso de memória  
   
@@ -83,8 +83,8 @@ ms.locfileid: "68091000"
 |Descreve quando usar o Monitor do Sistema e discute a sobrecarga de desempenho quando você usa o Monitor do Sistema.|[Executar o Monitor do Sistema](../../relational-databases/performance-monitor/run-system-monitor.md)|  
 |Descreve como monitorar contadores de disco para determinar a atividade de disco e a quantidade de E/S gerada pelos componentes do SQL Server.|[Monitorar o uso do disco](../../relational-databases/performance-monitor/monitor-disk-usage.md)|  
 |Descreve como monitorar uma instância do Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para determinar se as taxas de uso de CPU estão dentro dos intervalos normais.|[Monitorar o uso da CPU](../../relational-databases/performance-monitor/monitor-cpu-usage.md)|  
-|Descreve como monitorar uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para confirmar que o uso de memória está dentro de intervalos normais.|[Monitorar o uso da memória](../../relational-databases/performance-monitor/monitor-memory-usage.md)|  
-|Descreve como criar um alerta a ser emitido quando um valor limite de um contador do Monitor do Sistema for atingido.|[Criar um alerta de banco de dados do SQL Server](../../relational-databases/performance-monitor/create-a-sql-server-database-alert.md)|  
+|Descreve como monitorar uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para confirmar que o uso de memória está dentro de intervalos normais.|[Monitorar o uso de memória](../../relational-databases/performance-monitor/monitor-memory-usage.md)|  
+|Descreve como criar um alerta a ser emitido quando um valor limite de um contador do Monitor do Sistema for atingido.|[Criar um alerta de Banco de Dados do SQL Server](../../relational-databases/performance-monitor/create-a-sql-server-database-alert.md)|  
 |Descreve como criar gráficos, alertas, logs e relatórios para monitorar uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Criar gráficos, alertas, logs e relatórios](../../relational-databases/performance-monitor/create-charts-alerts-logs-and-reports.md)|  
 |Lista os objetos e contadores que o Monitor do Sistema usa para monitorar a atividade em computadores que executem uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Usar objetos do SQL Server](../../relational-databases/performance-monitor/use-sql-server-objects.md)|  
 |Lista os objetos e contadores que o Monitor do Sistema usa para monitorar a atividade de OLTP na memória.|[Contadores de desempenho XTP &#40;OLTP in-memory&#41; do SQL Server](../../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md)|  

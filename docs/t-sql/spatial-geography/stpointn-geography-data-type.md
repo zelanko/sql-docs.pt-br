@@ -18,10 +18,10 @@ ms.assetid: 47670feb-b9e0-4b4b-af83-b9bba7da66ac
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 12ae393f99510df743b5a5ec0bf777f7b982d570
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68120817"
 ---
 # <a name="stpointn-geography-data-type"></a>STPointN (tipo de dados geography)
@@ -43,11 +43,11 @@ ms.locfileid: "68120817"
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Tipo de retorno CLR: **SqlGeography**  
+ Tipo de retorno do CLR: **SqlGeography**  
   
- Tipo OGC (Open Geospatial Consortium): **Ponto**  
+ Tipo do OGC (Open Geospatial Consortium): **Point**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Se uma instância de **geography** for criada pelo usuário, STPointN() retornará o ponto especificado pela *expressão* ordenando os pontos pela ordem de entrada original.  
   
  Se uma instância de **geography** for construída pelo sistema, STPointN() retornará o ponto especificado pela *expressão* ordenando os pontos na mesma ordem em que eles seriam emitidos: primeiro pela instância de **geography**, depois pelo anel na instância (se apropriado) e, em seguida, pelo ponto dentro do anel. Essa ordem é determinística.  

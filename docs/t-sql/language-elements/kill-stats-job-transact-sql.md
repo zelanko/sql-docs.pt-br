@@ -23,10 +23,10 @@ ms.assetid: 55a8f9f1-3259-45c0-8ab9-60b9c088b4b4
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: b0dd587240a56dcdfab4d618255ee838491054af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68122287"
 ---
 # <a name="kill-stats-job-transact-sql"></a>KILL STATS JOB (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68122287"
 
   Encerra um trabalho de atualização de estatísticas assíncrono no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -47,7 +47,7 @@ KILL STATS JOB job_id
  *job_id*  
  É o campo job_id retornado pela exibição de gerenciamento dinâmico sys.dm_exec_background_job_queue para o trabalho.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O job_id não está relacionado ao session_id nem à unidade de trabalho usados em outros formatos da instrução KILL.  
   
 ## <a name="permissions"></a>Permissões  

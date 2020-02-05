@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: e6230ee4efebc4b1af873a61e9f2ebfc191df171
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67943814"
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>Extrair, transformar e carregar dados no Linux com o SSIS
@@ -36,7 +36,7 @@ Você também precisar ter um computador Windows para criar e manter pacotes. As
 Para executar um pacote SSIS em um computador Linux, faça o seguinte:
 
 1.  Copie o pacote SSIS para o computador Linux.
-2.  Execute o seguinte comando:
+2.  Execute o comando a seguir:
     ```
     $ dtexec /F \<package name \> /DE <protection password>
     ```
@@ -71,7 +71,7 @@ Há três maneiras de executar um pacote SSIS criptografado com uma senha:
 
 ## <a name="design-packages"></a>Criar pacotes
 
-**Conectar-se a fontes de dados ODBC**. Com o SSIS na Atualização CTP 2.1 do Linux e posterior, os pacotes SSIS podem usar conexões ODBC no Linux. Essa funcionalidade foi testada com o SQL Server e os drivers ODBC do MySQL, mas também espera-se que ela funcione com qualquer driver ODBC Unicode que observa a especificação ODBC. Em tempo de design, é possível fornecer um DSN ou uma cadeia de conexão para conectar-se aos dados ODBC; também é possível usar a autenticação do Windows. Para obter mais informações, confira a [postagem no blog que anunciou o suporte do ODBC para Linux](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/).
+**Conectar-se a fontes de dados ODBC**. Com o SSIS na Atualização CTP 2.1 do Linux e posterior, os pacotes SSIS podem usar conexões ODBC no Linux. Essa funcionalidade foi testada com o SQL Server e os drivers ODBC do MySQL, mas também espera-se que ela funcione com qualquer driver ODBC Unicode que observa a especificação ODBC. Em tempo de design, é possível fornecer um DSN ou uma cadeia de conexão para conectar-se aos dados ODBC; também é possível usar a autenticação do Windows. Para saber mais, confira a [postagem no blog que anunciou o suporte do ODBC para Linux](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/).
 
 **Caminhos**. Forneça caminhos no estilo do Windows em seus pacotes SSIS. O SSIS no Linux não dá suporte a caminhos no estilo do Linux, mas mapeia os caminhos no estilo do Windows para caminhos no estilo do Linux em tempo de execução. Em seguida, por exemplo, o SSIS no Linux mapeia o caminho `C:\test` no estilo do Windows para o caminho `/test` no estilo do Linux.
 

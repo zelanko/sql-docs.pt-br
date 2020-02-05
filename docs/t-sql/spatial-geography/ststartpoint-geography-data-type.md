@@ -18,10 +18,10 @@ ms.assetid: 7df18a5f-b9ee-4e36-b765-a0790c1dee3d
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: f673860664d6be588479111803c200f2903db0ca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68120785"
 ---
 # <a name="ststartpoint-geography-data-type"></a>STStartPoint (tipo de dados geography)
@@ -39,11 +39,11 @@ ms.locfileid: "68120785"
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Tipo de retorno CLR: **SqlGeography**  
+ Tipo de retorno do CLR: **SqlGeography**  
   
- Tipo OGC (Open Geospatial Consortium): **Ponto**  
+ Tipo do OGC (Open Geospatial Consortium): **Point**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  STStartPoint() é o equivalente a [STPointN](../../t-sql/spatial-geometry/stpointn-geometry-data-type.md)`(1)`.  
   
 ## <a name="examples"></a>Exemplos  

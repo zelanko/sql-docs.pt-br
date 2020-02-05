@@ -12,26 +12,26 @@ helpviewer_keywords:
 ms.assetid: 7f4136ac-3784-4a41-a98c-8a02308e4883
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 2c1939933c87ffe9519b0ca0656c83a02d952ec5
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 9c2e22fb15576e58d56adb79ddad5f9e31f418f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68766555"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287841"
 ---
-# <a name="mssqleng002627"></a>MSSQL_ENG002627
+# <a name="mssql_eng002627"></a>MSSQL_ENG002627
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
     
 ## <a name="message-details"></a>Detalhes da mensagem  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|2627|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
-|Nome simbólico|N/A|  
+|Nome simbólico|N/D|  
 |Texto da mensagem|Violação da restrição %ls '%.*ls'. Não é possível inserir uma chave duplicada no objeto '%.\*ls'.|  
   
 ## <a name="explanation"></a>Explicação  
@@ -62,6 +62,6 @@ ms.locfileid: "68766555"
  [Referência de erros e eventos &#40;Replicação&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)   
  [Replicação de mesclagem](../../relational-databases/replication/merge/merge-replication.md)   
  [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
- [Assinaturas atualizáveis para replicação transacional](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)  
+ [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)  
   
   

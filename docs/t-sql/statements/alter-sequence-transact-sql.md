@@ -19,10 +19,10 @@ ms.assetid: decc0760-029e-4baf-96c9-4a64073df1c2
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 337b2ee6d7edffeb49c2cee6291d30100b4c1df0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68070330"
 ---
 # <a name="alter-sequence-transact-sql"></a>ALTER SEQUENCE (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68070330"
   
  Uma sequência é um objeto associado a um esquema definido pelo usuário que gera uma sequência de valores numéricos de acordo com uma especificação. Novos valores são gerados a partir de uma sequência ao chamar a função NEXT VALUE FOR. Use **sp_sequence_get_range** para obter vários números de sequência de uma vez. Para obter informações e cenários que usam CREATE SEQUENCE, **sp_sequence_get_range** e a função NEXT VALUE FOR, veja [Números de sequência](../../relational-databases/sequence-numbers/sequence-numbers.md).  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -77,7 +77,7 @@ ALTER SEQUENCE [schema_name. ] sequence_name
   
  Para obter mais informações sobre o comportamento do cache, veja [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Para obter informações sobre como as sequências são criadas e como o cache de sequências é gerenciado, veja [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md).  
   
  O MINVALUE de sequências crescentes e o MAXVALUE de sequências decrescentes não podem ser alterados para um valor que não permita o valor START VALUE da sequência. Para alterar o MINVALUE de uma sequência crescente para um número maior que o valor de START WITH ou para alterar o MAXVALUE de uma sequência decrescente para um número menor que o valor de START WITH, inclua o argumento RESTART WITH para reiniciar a sequência em um ponto desejado que esteja dentro do intervalo mínimo e máximo.  
@@ -96,13 +96,13 @@ GRANT ALTER ON OBJECT::Test.TinySeq TO [AdventureWorks\Larry]
   
  A propriedade de um objeto de sequência pode ser transferida com o uso da instrução **ALTER AUTHORIZATION**.  
   
-### <a name="audit"></a>Auditar o  
+### <a name="audit"></a>Audit  
  Para auditar **ALTER SEQUENCE**, monitore o **SCHEMA_OBJECT_CHANGE_GROUP**.  
   
 ## <a name="examples"></a>Exemplos  
  Para obter exemplos de como criar sequências e usar a função **NEXT VALUE FOR** para gerar números de sequência, consulte [Números de sequência](../../relational-databases/sequence-numbers/sequence-numbers.md).  
   
-### <a name="a-altering-a-sequence"></a>A. Alterando uma sequência  
+### <a name="a-altering-a-sequence"></a>a. Alterando uma sequência  
  O exemplo a seguir cria um esquema chamado Test e uma sequência chamada TestSeq usando o tipo de dados **int** com um intervalo de 100 a 200. A sequência começa com 125 e é incrementada em 25 sempre que um número é gerado. Como a sequência é configurada para executar um ciclo, quando o valor excede o valor máximo de 200, a sequência é reiniciada no valor mínimo de 100.  
   
 ```  

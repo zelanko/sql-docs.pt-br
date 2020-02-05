@@ -13,10 +13,10 @@ ms.assetid: 6ebd305f-ffd2-4a1d-b24c-e28c151b94f5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: fce60dd2a2663e23001805621e622b4334126a1e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291537"
 ---
 # <a name="create-relationships"></a>Criar Relações
@@ -35,7 +35,7 @@ ms.locfileid: "71291537"
  **Coluna de Entrada**  
  Selecione na lista de colunas de entrada disponíveis.  
   
- **Coluna de Pesquisa**  
+ **coluna de pesquisa**  
  Selecione na lista de colunas de pesquisa disponíveis.  
   
  **Tipo de Mapeamento**  

@@ -16,10 +16,10 @@ ms.assetid: fe6b6bb1-38d0-46c4-bab8-31df14e8999c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a2c265d3a373eb53b822142fa2955d07b96b88f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68033661"
 ---
 # <a name="partial-backups-sql-server"></a>Backups parciais (SQL Server)
@@ -46,9 +46,9 @@ ms.locfileid: "68033661"
   
  **Para usar um backup parcial em uma sequência de restauração**  
   
--   [Exemplo: Restauração por etapas de banco de dados &#40;Modelo de recuperação simples&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-simple-recovery-model.md)  
+-   [Exemplo: restauração por etapas de banco de dados &#40;Modelo de recuperação simples&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-simple-recovery-model.md)  
   
--   [Exemplo: Restauração por etapas de apenas alguns grupos de arquivos &#40;Modelo de recuperação simples&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
+-   [Exemplo: restauração por etapas de apenas alguns grupos de arquivos &#40;Modelo de recuperação simples&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Visão geral do backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   

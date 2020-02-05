@@ -22,10 +22,10 @@ ms.assetid: 08475db4-7d90-486a-814c-01a99d783d41
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 0d6b786725dfb50fceb1376fd104a4b5e5afbc76
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67902854"
 ---
 # <a name="create-default-transact-sql"></a>CREATE DEFAULT (Transact-SQL)
@@ -36,7 +36,7 @@ Cria um objeto chamado padrão. Quando associado a uma coluna ou a um tipo de da
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Em vez dela, use definições padrão criadas usando a palavra-chave DEFAULT de ALTER TABLE ou CREATE TABLE.  
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -56,7 +56,7 @@ AS constant_expression [ ; ]
 *constant_expression*  
 Uma [expression](../../t-sql/language-elements/expressions-transact-sql.md) que contém somente valores constantes (não pode incluir os nomes de nenhuma coluna ou outros objetos de banco de dados). Você pode usar qualquer constante, função interna ou expressão matemática, menos aquelas que contêm tipos de dados de alias. As funções definidas pelo usuário não podem ser usadas. Coloque as constantes de caractere e de data entre aspas simples ( **'** ); as constantes monetárias, de inteiro e de ponto flutuante não exigem aspas. Dados binários devem ser precedidos por 0x e dados monetários por um sinal de dólar ($). O valor padrão deve ser compatível com o tipo de dados de coluna.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Só é possível criar um nome padrão no banco de dados atual. Dentro de um banco de dados, os nomes padrão devem ser exclusivos por esquema. Quando você criar um padrão, use **sp_bindefault** para associá-lo a uma coluna ou a um tipo de dados de alias.  
   
  Se o padrão não for compatível com a coluna à qual está associado, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gerará uma mensagem de erro ao tentar inserir o valor padrão. Por exemplo, N/D não pode ser usado como padrão para uma coluna **numeric**.  
@@ -79,7 +79,7 @@ Uma [expression](../../t-sql/language-elements/expressions-transact-sql.md) que 
   
 |Definição da coluna|Nenhuma entrada, nenhum padrão|Nenhuma entrada, padrão|Insere NULL, nenhum padrão|Insere NULL, padrão|  
 |-----------------------|--------------------------|-----------------------|----------------------------|-------------------------|  
-|**NULL**|NULL|padrão|NULL|NULL|  
+|**NULL**|NULO|padrão|NULO|NULO|  
 |**NOT NULL**|Erro|padrão|erro|erro|  
   
  Para renomear um padrão, use **sp_rename**. Para obter um relatório sobre um padrão, use **sp_help**.  
@@ -89,7 +89,7 @@ Uma [expression](../../t-sql/language-elements/expressions-transact-sql.md) que 
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-creating-a-simple-character-default"></a>A. Criando um padrão de caractere simples  
+### <a name="a-creating-a-simple-character-default"></a>a. Criando um padrão de caractere simples  
  O exemplo a seguir cria um padrão de caractere chamado `unknown`.  
   
 ```sql  

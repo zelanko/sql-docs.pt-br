@@ -21,18 +21,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 11d5012cadf7bdb028ce921f9039d5502363cbc9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68064688"
 ---
-# <a name="collation-functions---tertiaryweights-transact-sql"></a>Funções de ordenação – TERTIARY_WEIGHTS (Transact-SQL)
+# <a name="collation-functions---tertiary_weights-transact-sql"></a>Funções de ordenação – TERTIARY_WEIGHTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Para cada caractere em uma expressão de cadeia de caracteres não Unicode definida com uma ordenação SQL terciária, essa função retorna uma cadeia de caracteres binária de pesos.
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -47,7 +47,7 @@ Uma [expressão](../../t-sql/language-elements/expressions-transact-sql.md) de c
 ## <a name="return-types"></a>Tipos de retorno
 `TERTIARY_WEIGHTS` retorna **varbinary** quando *non_Unicode_character_string_expression* é **char** ou **varchar** e retorna **varbinary(max)** quando *non_Unicode_character_string_expression* tem um tipo de dados **varchar(max)** .
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 `TERTIARY_WEIGHTS` retorna NULL quando uma coleção SQL terciária não define a *non_Unicode_character_string_expression*. Esta tabela mostra as ordenações SQL terciárias:
   
 |ID da ordem de classificação|Ordenação SQL|  

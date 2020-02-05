@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: bdc25063da64321b0be4cbcbd078e8cf5792c932
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68100248"
 ---
 # <a name="qntemplate-event-class"></a>Classe de evento QN:Template
@@ -25,7 +25,7 @@ ms.locfileid: "68100248"
   
 ## <a name="qntemplate-event-class-data-columns"></a>Coluna de dados de classe de evento QN:Template  
   
-|Coluna de dados|Tipo|Descrição|Número da coluna|Filtrável|  
+|Coluna de dados|Type|DESCRIÇÃO|Número da coluna|Filtrável|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |ApplicationName|**nvarchar**|O nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |ClientProcessID|**int**|A ID atribuída pelo computador host ao processo em que está sendo executado o aplicativo cliente. Essa coluna de dados será populada se a ID do processo do cliente for fornecida pelo cliente.|9|Sim|  

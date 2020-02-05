@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fe01e0d9465495cbf4943ba7867ebf262a1f3dd1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68135926"
 ---
 # <a name="difference-transact-sql"></a>DIFFERENCE (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68135926"
 
 Esta função retorna um valor inteiro que mede a diferença entre os valores [SOUNDEX()](./soundex-transact-sql.md) de duas expressões de caractere distintas.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -47,7 +47,7 @@ Uma [expressão](../../t-sql/language-elements/expressions-transact-sql.md) alfa
 ## <a name="return-types"></a>Tipos de retorno  
 **int**  
  
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 `DIFFERENCE` compara dois diferentes valores `SOUNDEX` e retorna um valor inteiro. Esse valor mede o grau de correspondência entre os valores de `SOUNDEX`, em uma escala de 0 a 4. Um valor de 0 indica pouca ou nenhuma semelhança entre os valores SOUNDEX; 4 indica valores SOUNDEX com forte semelhança ou até mesmo idênticos, apresentando correspondência total.  
   
 `DIFFERENCE` e `SOUNDEX` têm sensibilidade de ordenação.  

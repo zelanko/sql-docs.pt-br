@@ -21,18 +21,18 @@ ms.assetid: 6bf8bf97-60b8-40c1-b89d-8f5a00bcae2e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 767ccc61139886a1e81bbeb390b89676267b0d79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68059901"
 ---
-# <a name="x40x40locktimeout-transact-sql"></a>&#x40;&#x40;LOCK_TIMEOUT (Transact-SQL)
+# <a name="x40x40lock_timeout-transact-sql"></a>&#x40;&#x40;LOCK_TIMEOUT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Retorna a configuração de tempo limite do bloqueio atual em milissegundos para a sessão atual.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,7 +43,7 @@ ms.locfileid: "68059901"
 ## <a name="return-types"></a>Tipos de retorno  
  **inteiro**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  A configuração SET LOCK_TIMEOUT permite que um aplicativo defina o tempo máximo que uma instrução espera em um recurso bloqueado. Quando uma instrução espera por mais tempo do que a configuração LOCK_TIMEOUT, a instrução bloqueada é cancelada automaticamente e uma mensagem de erro é retornada ao aplicativo.  
   
  @@LOCK_TIMEOUT retorna um valor igual a -1 se SET LOCK_TIMEOUT ainda não foi executado na sessão atual.  

@@ -12,22 +12,22 @@ ms.assetid: e04a1934-e57d-420e-ac79-97071745824e
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 19fd1351963a578d83e8cf67a48c6f97dcd96afe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68078865"
 ---
-# <a name="mssqlserver5243"></a>MSSQLSERVER_5243
+# <a name="mssqlserver_5243"></a>MSSQLSERVER_5243
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|5243|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico||  
 |Texto da mensagem|Foi detectada uma inconsistência durante uma operação interna. Contate o suporte técnico. Número de referência %ld.|  
@@ -47,8 +47,8 @@ Restaure do backup. Se o problema não estiver relacionado ao hardware e um back
 Execute DBCC CHECKDB Se nenhum backup limpo estiver disponível, execute DBCC CHECKDB sem a cláusula REPAIR para determinar a extensão do dano. DBCC CHECKDB recomendará uma cláusula REPAIR para ser usada. Execute DBCC CHECKDB com a cláusula REPAIR apropriada para reparar o dano.
 
 > **não há suporte para a marca de alerta!** 
->  **não há suporte para a marca de alerta!** 
->  **não há suporte para a marca de alerta!**
+> **não há suporte para a marca de alerta!** 
+> **não há suporte para a marca de alerta!**
 
 Se a execução de DBCC CHECKDB com uma das cláusulas REPAIR não corrigir o problema, contate seu provedor de suporte.
   

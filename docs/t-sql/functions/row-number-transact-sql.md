@@ -22,13 +22,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e73d13927ff4618f0c0ea0b7246df0d722340a1a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68095378"
 ---
-# <a name="rownumber-transact-sql"></a>ROW_NUMBER (Transact-SQL)
+# <a name="row_number-transact-sql"></a>ROW_NUMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Numera a saída de um conjunto de resultados. Mais especificamente, retorna o número sequencial de uma linha em uma partição de um conjunto de resultados, começando em 1 na primeira linha de cada partição. 
@@ -38,7 +38,7 @@ Numera a saída de um conjunto de resultados. Mais especificamente, retorna o n�
 > [!NOTE]
 > `ROW_NUMBER` é um valor temporário calculado quando a consulta é executada. Para persistir números em uma tabela, consulte [Propriedade IDENTITY](../../t-sql/statements/create-table-transact-sql-identity-property.md) e [SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md). 
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -71,7 +71,7 @@ ROW_NUMBER ( )
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-simple-examples"></a>A. Exemplos simples 
+### <a name="a-simple-examples"></a>a. Exemplos simples 
 
 A consulta a seguir retorna as quatro tabelas do sistema em ordem alfabética.
 
@@ -85,12 +85,12 @@ ORDER BY name ASC;
 
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
    
-|NAME    |recovery_model_desc |  
+|name    |recovery_model_desc |  
 |-----------  |------------ |  
-|master |SIMPLE |
+|master |SIMPLES |
 |modelo |FULL |
-|msdb |SIMPLE |
-|tempdb |SIMPLE |
+|msdb |SIMPLES |
+|tempdb |SIMPLES |
 
 Para adicionar uma coluna de número de linha na frente de cada linha, adicione uma coluna com a função `ROW_NUMBER`, nesse caso, chamada `Row#`. É necessário mover a cláusula `ORDER BY` até a cláusula `OVER`.
 
@@ -104,12 +104,12 @@ WHERE database_id < 5;
 
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
    
-|Row# |NAME    |recovery_model_desc |  
+|Row# |name    |recovery_model_desc |  
 |------- |-----------  |------------ |  
-|1 |master |SIMPLE |
+|1 |master |SIMPLES |
 |2 |modelo |FULL |
-|3 |msdb |SIMPLE |
-|4 |tempdb |SIMPLE |
+|3 |msdb |SIMPLES |
+|4 |tempdb |SIMPLES |
 
 A adição de uma cláusula `PARTITION BY` à coluna `recovery_model_desc` reiniciará a numeração quando o valor `recovery_model_desc` for alterado. 
  
@@ -123,12 +123,12 @@ FROM sys.databases WHERE database_id < 5;
 
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
    
-|Row# |NAME    |recovery_model_desc |  
+|Row# |name    |recovery_model_desc |  
 |------- |-----------  |------------ |  
 |1 |modelo |FULL |
-|1 |master |SIMPLE |
-|2 |msdb |SIMPLE |
-|3 |tempdb |SIMPLE |
+|1 |master |SIMPLES |
+|2 |msdb |SIMPLES |
+|3 |tempdb |SIMPLES |
 
 
 ### <a name="b-returning-the-row-number-for-salespeople"></a>B. Retornando o número de linha para vendedores  
@@ -182,7 +182,7 @@ FROM OrderedOrders
 WHERE RowNumber BETWEEN 50 AND 60;  
 ```  
   
-### <a name="d-using-rownumber-with-partition"></a>D. Usando ROW_NUMBER () com PARTITION  
+### <a name="d-using-row_number-with-partition"></a>D. Usando ROW_NUMBER () com PARTITION  
  O exemplo a seguir usa o argumento `PARTITION BY` para particionar o conjunto de resultados da consulta pela coluna `TerritoryName`. A cláusula `ORDER BY` especificada na cláusula `OVER` ordena as linhas em cada partição pela coluna `SalesYTD`. A cláusula `ORDER BY` na instrução `SELECT` ordena o conjunto de resultados inteiro da consulta por `TerritoryName`.  
   
 ```sql  
@@ -249,7 +249,7 @@ RowNumber  FirstName  LastName            SalesQuota
 4          Jae        Pak                 10,514,000.00  
 ```
 
-### <a name="f-using-rownumber-with-partition"></a>F. Usando ROW_NUMBER () com PARTITION  
+### <a name="f-using-row_number-with-partition"></a>F. Usando ROW_NUMBER () com PARTITION  
  O exemplo a seguir mostra o uso da função `ROW_NUMBER` com o argumento `PARTITION BY`. Isso faz com que a função `ROW_NUMBER` numere as linhas em cada partição.  
   
 ```sql  

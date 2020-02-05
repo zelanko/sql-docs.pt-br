@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b6263035a0094f07264774d7acc29da144c4f419
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68093651"
 ---
 # <a name="cursors-event-category"></a>Categoria de evento Cursors
@@ -27,7 +27,7 @@ ms.locfileid: "68093651"
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|Descrição|  
+|Tópico|DESCRIÇÃO|  
 |-----------|-----------------|  
 |[Classe de evento CursorClose](../../relational-databases/event-classes/cursorclose-event-class.md)|Descreve eventos de fechamento de cursor que ocorrem em cursores de interface de programação de aplicativo (API).|  
 |[Classe de evento CursorExecute](../../relational-databases/event-classes/cursorexecute-event-class.md)|Descreve eventos de execução de cursor que ocorrem em cursores de API.|  

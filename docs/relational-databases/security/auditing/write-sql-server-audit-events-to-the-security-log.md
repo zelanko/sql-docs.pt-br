@@ -16,10 +16,10 @@ ms.assetid: 6fabeea3-7a42-4769-a0f3-7e04daada314
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 0c998b4d5ed5988d5a5e2a01bf0cbd611157f665
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68095097"
 ---
 # <a name="write-sql-server-audit-events-to-the-security-log"></a>Gravar eventos de auditoria do SQL Server no log de segurança  

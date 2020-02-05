@@ -13,10 +13,10 @@ ms.assetid: b08df7be-d8be-4184-a661-38ec0ac85cd1
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: c029883591c49c1be52d23a025ff522b4095a6f5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68069150"
 ---
 # <a name="use-database-mail-instead-of-sql-mail"></a>Usando o Database Mail em vez do SQL Mail
@@ -32,6 +32,6 @@ ms.locfileid: "68069150"
  [Database Mail](../../relational-databases/database-mail/database-mail.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Monitorar e impor práticas recomendadas usando o Gerenciamento Baseado em Políticas](../../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
+ [Monitorar e impor melhores práticas usando o gerenciamento baseado em políticas](../../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
   
   

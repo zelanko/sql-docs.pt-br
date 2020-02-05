@@ -25,10 +25,10 @@ ms.assetid: 4b5c460b-e4ad-404a-b4ca-d65aba38ebbb
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 451743ebafe719b554384edd2d9abadb60e070f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68039136"
 ---
 # <a name="dbcc-freesystemcache-transact-sql"></a>DBCC FREESYSTEMCACHE (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68039136"
 
 Libera todas as entradas não utilizadas de todos os caches. De forma pró-ativa, o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] limpa em segundo plano as entradas de cache para tornar a memória disponível para entradas atuais. Porém, você pode usar este comando para remover manualmente entradas não usadas de todos os caches ou de um cache de pool do Resource Governor especificado.
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
 ```sql
@@ -58,18 +58,18 @@ Libera de forma assíncrona as entradas usadas no momento de seus respectivos ca
 NO_INFOMSGS  
 Suprime todas as mensagens informativas.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 A execução de DBCC FREESYSTEMCACHE limpa o cache de planos da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A limpeza do cache de planos gera uma recompilação de todos os planos de execução subsequentes e pode provocar uma redução repentina e temporária no desempenho de consultas. Para cada armazenamento em cache limpo no cache de planos, o log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conterá a seguinte mensagem informativa: "O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] encontrou %d ocorrências de liberação do armazenamento em cache '%s' (parte do cache de planos) devido às operações 'DBCC FREEPROCCACHE' ou 'DBCC FREESYSTEMCACHE'". Essa mensagem é registrada a cada cinco minutos, contanto que o cache seja liberado dentro desse intervalo de tempo.
 
 ## <a name="result-sets"></a>Conjuntos de resultados  
-DBCC FREESYSTEMCACHE retorna: "A execução do DBCC foi concluída. Se o DBCC imprimiu mensagens de erro, entre em contato com o administrador do sistema".
+DBCC FREESYSTEMCACHE retorna: "execução do DBCC concluída. Se o DBCC imprimiu mensagens de erro, entre em contato com o administrador do sistema".
   
 ## <a name="permissions"></a>Permissões  
 Exige a permissão ALTER SERVER STATE no servidor.
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-releasing-unused-cache-entries-from-a-resource-governor-pool-cache"></a>A. Removendo entradas de cache não utilizadas de um cache do pool do Administrador de Recursos  
+### <a name="a-releasing-unused-cache-entries-from-a-resource-governor-pool-cache"></a>a. Removendo entradas de cache não utilizadas de um cache do pool do Administrador de Recursos  
 O exemplo a seguir ilustra como limpar caches que são específicos de pool de recursos do Administrador de Recursos.
   
 ```sql

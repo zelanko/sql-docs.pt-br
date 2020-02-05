@@ -22,18 +22,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 71e719d816e1afb9457d99049fa69c4749c18c87
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68098738"
 ---
-# <a name="typeid-transact-sql"></a>TYPE_ID (Transact-SQL)
+# <a name="type_id-transact-sql"></a>TYPE_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Retorna o ID de um nome de tipo de dados especificado.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -53,12 +53,12 @@ TYPE_ID ( [ schema_name ] type_name )
   
  No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], um usuário só pode exibir os metadados de itens protegíveis de sua propriedade ou para os quais ele tenha permissão concedida. Isso significa que as funções internas que emitem metadados, como TYPE_ID, poderão retornar NULL se o usuário não tiver nenhuma permissão para o objeto. Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  TYPE_ID retorna NULL se o nome do tipo não for válido ou se o chamador não tiver permissão suficiente para fazer referência ao tipo.  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-looking-up-the-type-id-values-for-single--and-two-part-type-names"></a>A. Pesquisando os valores TYPE ID para nomes de tipo de uma e duas partes  
+### <a name="a-looking-up-the-type-id-values-for-single--and-two-part-type-names"></a>a. Pesquisando os valores TYPE ID para nomes de tipo de uma e duas partes  
  O exemplo a seguir retorna o ID do tipo para nomes de tipo de uma e duas partes.  
   
 ```  
@@ -86,7 +86,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-looking-up-the-type-id-of-a-system-data-type"></a>C: Pesquisando o TYPE ID de um tipo de dados de sistema  
+### <a name="c-looking-up-the-type-id-of-a-system-data-type"></a>C: Pesquisando a TYPE ID de um tipo de dados do sistema  
  O exemplo a seguir retorna o `TYPE ID` do tipo de dados de sistema `datetime`.  
   
 ```  

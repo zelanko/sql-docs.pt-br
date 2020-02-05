@@ -1,5 +1,5 @@
 ---
-title: 'Exemplo: Recuperando informações de funcionários | Microsoft Docs'
+title: 'Exemplo: recuperando informações de funcionários | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,10 +13,10 @@ ms.assetid: 63cd6569-2600-485b-92b4-1f6ba09db219
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d3e123a5195d9eb6a5dd489c635cdd687b42f720
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006780"
 ---
 # <a name="example-retrieving-employee-information"></a>Exemplo: Recuperando informações de funcionários
@@ -96,25 +96,25 @@ FOR XML EXPLICIT;
 ...
 ```
   
- O primeiro `SELECT` especifica nomes para as colunas no conjunto de linhas resultante. Esses nomes formam dois grupos de colunas. O grupo que tem o valor da `Tag` `1` no nome da coluna identifica `Employee` como um elemento e `EmpID` como o atributo. O outro grupo de colunas tem o valor da `Tag` `2` na coluna e identifica <`Name`> como o elemento e `FName` e `LName` como os atributos.  
+ O primeiro `SELECT` especifica nomes para as colunas no conjunto de linhas resultante. Esses nomes formam dois grupos de colunas. O grupo que tem o valor da `Tag``1` no nome da coluna identifica `Employee` como um elemento e `EmpID` como o atributo. O outro grupo de colunas tem o valor da `Tag``2` na coluna e identifica <`Name`> como o elemento e `FName` e `LName` como os atributos.  
   
  Esta tabela mostra o conjunto de linhas parcial gerado pela consulta:  
   
 Marca | Pai | Employee!1!EmpID | Name!2!FName | Name!2!LName
 -|-|-|-|-
-1 | NULL | 1 | NULL | NULL 
+1 | NULO | 1 | NULO | NULO 
 2 | 1 | 1 | Ken | Monte 
-1 | NULL | 2 | NULL | NULL 
+1 | NULO | 2 | NULO | NULO 
 2 | 1 | 2 | Terri | Barros 
-1 | NULL | 3 | NULL | NULL 
+1 | NULO | 3 | NULO | NULO 
 2 | 1 | 3 | Carlos | Pereira 
 ... | ... | ... | ... | ...
   
  É assim que as linhas na tabela universal são processadas para produzir a árvore XML resultante:  
   
- A primeira linha identifica o valor 1 da `Tag` `1`. Portanto, o grupo de colunas que tem o valor da `Tag` `1` é identificado, `Employee!1!EmpID`. Essa coluna identifica `Employee` como o nome do elemento. Em seguida, é criado um elemento <`Employee`> que tem os atributos `EmpID`. Os valores das colunas correspondentes são atribuídos a esses atributos.  
+ A primeira linha identifica o valor 1 da `Tag``1`. Portanto, o grupo de colunas que tem o valor da `Tag``1` é identificado, `Employee!1!EmpID`. Essa coluna identifica `Employee` como o nome do elemento. Em seguida, é criado um elemento <`Employee`> que tem os atributos `EmpID`. Os valores das colunas correspondentes são atribuídos a esses atributos.  
   
- A segunda linha tem o valor da `Tag` `2`. Portanto, o grupo de colunas que tem o valor da `Tag` `2` no nome da coluna, `Name!2!FName`, `Name!2!LName`, é identificado. Esses nomes de colunas identificam `Name` como o nome do elemento. É criado um elemento <`Name`> que tem os atributos `FName` e `LName`. Em seguida, os valores das colunas correspondentes são atribuídos a esses atributos. Essa linha identifica `1` como `Parent`. Esse elemento filho é adicionado ao elemento <`Employee`> anterior.  
+ A segunda linha tem o valor da `Tag``2`. Portanto, o grupo de colunas que tem o valor da `Tag``2` no nome da coluna, `Name!2!FName`, `Name!2!LName`, é identificado. Esses nomes de colunas identificam `Name` como o nome do elemento. É criado um elemento <`Name`> que tem os atributos `FName` e `LName`. Em seguida, os valores das colunas correspondentes são atribuídos a esses atributos. Essa linha identifica `1` como `Parent`. Esse elemento filho é adicionado ao elemento <`Employee`> anterior.  
   
  Esse processo é repetido para o restante das linhas do conjunto de linhas. Observe a importância de ordenar as linhas na tabela universal de forma que FOR XML EXPLICIT possa processar o conjunto de linhas em ordem e gerar o XML desejado.  
   

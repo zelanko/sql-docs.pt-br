@@ -18,10 +18,10 @@ ms.assetid: eba1643f-07c4-4500-8643-b7e90f908147
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: dbc1bd923b0e86acfd0fbae995bd6fdbd16816a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042028"
 ---
 # <a name="stisclosed-geography-data-type"></a>STIsClosed (tipo de dados geography)
@@ -41,9 +41,9 @@ ms.locfileid: "68042028"
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
- Tipo de retorno CLR: **SqlBoolean**  
+ Tipo de retorno do CLR: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse método retornará 0 se alguma figura de uma instância de **geography** for um ponto ou se a instância estiver vazia.  
   
  Esse método retornará true se uma instância de **FullGlobe** for um **polígono** ou outro tipo de instância.  

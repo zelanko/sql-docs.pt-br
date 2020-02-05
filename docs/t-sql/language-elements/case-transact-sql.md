@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 00175ce9c9c9c0f6f83b7661b685063f97ef8c44
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67950355"
 ---
 # <a name="case-transact-sql"></a>CASE (Transact-SQL)
@@ -43,7 +43,7 @@ Avalia uma lista de condições e retorna uma das várias expressões de resulta
   
  CASE pode ser usada em qualquer instrução ou cláusula que permita uma expressão válida. Por exemplo, você pode usar CASE em instruções, como SELECT, UPDATE, DELETE e SET, e em cláusulas, como select_list, IN, WHERE, ORDER BY e HAVING.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -111,7 +111,7 @@ END
   
 -   Se nenhuma *Boolean_expression* for avaliada como TRUE, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] retornará a *else_result_expression*, caso uma cláusula ELSE tenha sido especificada, ou um valor NULL, caso nenhuma cláusula ELSE tenha sido especificada.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite apenas 10 níveis de aninhamento em expressões CASE.  
   
  A expressão CASE não pode ser usada para controlar o fluxo de execução de instruções Transact-SQL, blocos de instruções, funções definidas pelo usuário e procedimentos armazenados. Para obter uma lista dos métodos de controle de fluxo, consulte [Linguagem de controle de fluxo &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md).  
@@ -137,7 +137,7 @@ FROM Data ;
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-a-select-statement-with-a-simple-case-expression"></a>A. Usando uma instrução SELECT com uma expressão CASE simples  
+### <a name="a-using-a-select-statement-with-a-simple-case-expression"></a>a. Usando uma instrução SELECT com uma expressão CASE simples  
  Dentro de uma instrução `SELECT`, uma expressão `CASE` simples é permitida somente para uma verificação de igualdade; nenhuma outra comparação é feita. O exemplo a seguir usa a expressão `CASE` para alterar a exibição de categorias de linhas de produto para torná-las mais compreensíveis.  
   
 ```  

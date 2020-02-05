@@ -18,10 +18,10 @@ ms.assetid: 6c55032c-7f5e-4181-8e67-c0265032db63
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 09e6d37f95832ed2b3e9a51ef351e6f62e464b74
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67950212"
 ---
 # <a name="stgeomcollfromwkb-geometry-data-type"></a>STGeomCollFromWKB (tipo de dados geometry)
@@ -46,9 +46,9 @@ STGeomCollFromWKB ( 'WKB_geometrycollection' , SRID )
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Tipo de retorno CLR: **SqlGeometry**  
+ Tipo de retorno do CLR: **SqlGeometry**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O tipo do OGC da instância de **geometry** retornada por `STGeomCollFromWKB()` é definido como **GeomCollection**, **MultiPolygon**, **MultiLineString** ou **MultiPoint**, dependendo da entrada de WKB correspondente.  
   
  Este método lançará uma exceção FormatException se a entrada não estiver bem formatada.  

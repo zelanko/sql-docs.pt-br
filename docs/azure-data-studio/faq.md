@@ -1,5 +1,5 @@
 ---
-title: PERGUNTAS FREQUENTES
+title: Perguntas frequentes
 titleSuffix: Azure Data Studio
 description: Perguntas frequentes sobre o Azure Data Studio.
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: 1916a10a468fdc44c021e410eb1521cb7c219d58
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67959542"
 ---
 # <a name="includeazure-data-studioincludesname-sosmd-faq"></a>[!INCLUDE[Azure Data Studio](../includes/name-sos.md)] Perguntas frequentes
@@ -48,11 +48,11 @@ O código-fonte para Azure Data Studio e seus provedores de dados estão dispon�
 
 ## <a name="do-we-plan-to-open-source-ssms"></a>Planejamos tornar o SSMS um software livre?
 
-Nenhum. No entanto, as ferramentas de GUI e CLI de vários sistemas operacionais da próxima geração são software livre. Por exemplo, a extensão mssql para VS Code, mssql-scripter e msql-CLI são todas software livre no GitHub. O código-fonte para o Azure Data Studio está disponível no GitHub.  
+Não. No entanto, as ferramentas de GUI e CLI de vários sistemas operacionais da próxima geração são software livre. Por exemplo, a extensão mssql para VS Code, mssql-scripter e msql-CLI são todas software livre no GitHub. O código-fonte para o Azure Data Studio está disponível no GitHub.  
 
 ## <a name="now-that-there-is-azure-data-studio-does-microsoft-plan-to-deprecate-ssms-and-ssdt"></a>Agora que há o Azure Data Studio, a Microsoft planeja preterir o SSMS e o SSDT? 
 
-Nenhum. Os investimentos nas principais ferramentas do Windows (SSMS, SSDT, PowerShell) continuarão de modo adicional à próxima geração de ferramentas de CLI e GUI de vários bancos de dados e vários OS. A meta é oferecer aos clientes a opção de usar as ferramentas que eles desejam nas plataformas que escolherem para seus cenários. O Azure Data Studio concentra-se mais nas experiências relacionadas à edição de consultas e ao desenvolvimento de dados, que pesquisas mostraram ser a funcionalidade mais usada no SQL Server Management Studio. Recursos administrativos de alto valor adicionais, como backup, restauração, gerenciamento de trabalho do agente e criação de perfil de servidor, também estão disponíveis como extensões no Azure Data Studio. O Azure Data Studio também é multiplataforma, permitindo que os usuários trabalhem na plataforma que preferirem. No entanto, o SQL Server Management Studio ainda oferece a mais ampla variedade de funções administrativas e continua sendo a principal ferramenta para tarefas de gerenciamento de plataforma. 
+Não. Os investimentos nas principais ferramentas do Windows (SSMS, SSDT, PowerShell) continuarão de modo adicional à próxima geração de ferramentas de CLI e GUI de vários bancos de dados e vários OS. A meta é oferecer aos clientes a opção de usar as ferramentas que eles desejam nas plataformas que escolherem para seus cenários. O Azure Data Studio concentra-se mais nas experiências relacionadas à edição de consultas e ao desenvolvimento de dados, que pesquisas mostraram ser a funcionalidade mais usada no SQL Server Management Studio. Recursos administrativos de alto valor adicionais, como backup, restauração, gerenciamento de trabalho do agente e criação de perfil de servidor, também estão disponíveis como extensões no Azure Data Studio. O Azure Data Studio também é multiplataforma, permitindo que os usuários trabalhem na plataforma que preferirem. No entanto, o SQL Server Management Studio ainda oferece a mais ampla variedade de funções administrativas e continua sendo a principal ferramenta para tarefas de gerenciamento de plataforma. 
 
 ## <a name="when-should-i-use-azure-data-studio-vs-sql-server-management-studio"></a>Quando devo usar o Azure Data Studio vs. o SQL Server Management Studio?
 
@@ -143,7 +143,7 @@ Nenhum. Os investimentos nas principais ferramentas do Windows (SSMS, SSDT, Powe
 |SQL Agent|Visualização|Sim|
 |SQL Profiler|Visualização|Sim|
 |Always On||Sim|
-|Sempre Criptografado||Sim|
+|Always Encrypted||Sim|
 |Assistente para Copiar Dados||Sim|
 |Orientador de Otimização de Dados||Sim|
 |Diagramas de banco de dados||Sim|
@@ -156,7 +156,7 @@ Nenhum. Os investimentos nas principais ferramentas do Windows (SSMS, SSDT, Powe
 |Servidores Registrados||Sim|
 |Replicação||Sim|
 |Gerenciamento de Segurança||Sim|
-|Service Broker||Sim|
+|Agente de Serviço||Sim|
 |SQL Mail||Sim|
 |Explorador de Modelos||Sim|
 |Avaliação de Vulnerabilidade||Sim|

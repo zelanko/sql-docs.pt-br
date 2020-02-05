@@ -13,10 +13,10 @@ ms.assetid: 220cf555-0db2-443c-8f87-8e413f3ca731
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d49ffcf03fab810eefd190ffea91aa3e5ff38cfe
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298844"
 ---
 # <a name="connect-to-an-oracle-source-database"></a>Conectar a um banco de dados de origem Oracle
@@ -38,9 +38,9 @@ ms.locfileid: "71298844"
  **Autenticação de mineração de logs da Oracle**  
  Para inserir as credenciais para o usuário de banco de dados Oracle que está autorizado para mineração de logs, siga um destes procedimentos:  
   
--   **Autenticação do Windows**: Selecione essa opção para usar as credenciais de domínio atuais do Windows. Você só poderá usar esta opção se o banco de dados Oracle estiver configurado para funcionar com autenticação do Windows.  
+-   **Autenticação do Windows**: selecione isto para usar as credenciais de domínio atuais do Windows. Você só poderá usar esta opção se o banco de dados Oracle estiver configurado para funcionar com autenticação do Windows.  
   
--   **Autenticação do Oracle**: Se você selecionar essa opção, precisará digitar o **Nome de Usuário** e a **Senha** do usuário no Oracle Database ao qual você está se conectando.  
+-   **Autenticação do Oracle**: se você selecionou esta opção, deve digitar o **Nome de usuário** e **Senha** para o usuário no banco de dados Oracle ao qual você está se conectando.  
   
 > [!NOTE]
 >  Um usuário deve ter os privilégios a seguir concedidos no banco de dados Oracle para ser um usuário da mineração de logs.  

@@ -17,10 +17,10 @@ ms.assetid: 53755f69-cd50-475b-b3b8-a1a9157cf03a
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 249639ef13d9200d1d6cedc189044c30ba8ff7ac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042265"
 ---
 # <a name="stgeometryn-geography-data-type"></a>STGeometryN (tipo de dados geography)
@@ -42,9 +42,9 @@ ms.locfileid: "68042265"
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Tipo de retorno CLR: **SqlGeography**  
+ Tipo de retorno do CLR: **SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse método retornará nulo se o parâmetro for maior que o resultado de [STNumGeometries()](../../t-sql/spatial-geography/stnumgeometries-geography-data-type.md) e gerará uma **ArgumentOutOfRangeException** se o parâmetro *expression* for menor que 1.  
   
 ## <a name="examples"></a>Exemplos  

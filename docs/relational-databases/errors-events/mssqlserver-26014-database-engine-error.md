@@ -12,22 +12,22 @@ ms.assetid: e2b0dfc7-0681-4e5d-8875-1d5f63534086
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 44ddcd07bfe284ea5200e585d49a0f17ba3b4839
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68002014"
 ---
-# <a name="mssqlserver26014"></a>MSSQLSERVER_26014
+# <a name="mssqlserver_26014"></a>MSSQLSERVER_26014
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|26014|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|SNI_SSL_USER_CERT_FAILURE|  
 |Texto da mensagem|Não foi possível carregar o certificado especificado pelo usuário [Cert Hash (sha1) "% hs"]. O servidor não aceitará uma conexão. Verifique se o certificado está instalado corretamente. Consulte "Configuring Certificate for Use by SSL" nos Manuais Online (em inglês).|  

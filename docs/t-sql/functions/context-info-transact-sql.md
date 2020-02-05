@@ -22,18 +22,18 @@ ms.assetid: 571320f5-7228-4b0e-9d01-ab732d2d1eab
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b6278faa80721ce500257650db70359dcc740ee8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68132070"
 ---
-# <a name="contextinfo--transact-sql"></a>CONTEXT_INFO (Transact-SQL)
+# <a name="context_info--transact-sql"></a>CONTEXT_INFO (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Essa função retorna o valor **context_info** definido para a sessão ou lote atual ou derivado por meio do uso da instrução [SET CONTEXT_INFO](../../t-sql/statements/set-context-info-transact-sql.md).
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -48,7 +48,7 @@ Se **context_info** não foi definido:
 -   Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], retorna NULL.  
 -   Em [!INCLUDE[ssSDS](../../includes/sssds-md.md)], retorna um GUID exclusivo específico da sessão.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 O recurso MARS (Vários Conjuntos de Resultados Ativos) permite que os aplicativos sejam executados em vários lotes, ou solicitações, ao mesmo tempo na mesma conexão. Quando um dos lotes de conexão MARS executa SET CONTEXT_INFO, a função `CONTEXT_INFO` retorna o valor do novo contexto, quando a função `CONTEXT_INFO` é executada no mesmo lote que a instrução SET. Se a função `CONTEXT_INFO` é executada em um ou mais dos outros lotes de conexão, o `CONTEXT_FUNCTION` não retorna o novo valor, a menos que os lotes iniciados após a conclusão do lote que executou a instrução SET.
   
 ## <a name="permissions"></a>Permissões  

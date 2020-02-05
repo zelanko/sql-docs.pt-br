@@ -22,10 +22,10 @@ ms.assetid: 70f1d938-97e2-48a4-9bc0-8be9f2f2c36d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 4ed6e67bbf6f3fcda872650c2d3394d6311802b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914221"
 ---
 # <a name="revoke-service-broker-permissions-transact-sql"></a>Permissões REVOKE do Service Broker (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "67914221"
 
   Revoga as permissões em contratos, tipos de mensagem, ligações de serviços remotos, rotas ou serviços do [!INCLUDE[ssSB](../../includes/sssb-md.md)].  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -121,7 +121,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
   
 -   Usuário do banco de dados não mapeado para um principal de servidor.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
   
 ## <a name="service-broker-contracts"></a>Contratos do Agente de Serviços  
  Um contrato do [!INCLUDE[ssSB](../../includes/sssb-md.md)] é um protegível no nível do banco de dados contido pelo banco de dados que é seu pai na hierarquia de permissões. As permissões mais específicas e limitadas que podem ser revogadas em um contrato do [!INCLUDE[ssSB](../../includes/sssb-md.md)] são listadas na tabela a seguir, junto com as permissões mais gerais que as incluem implicitamente.  

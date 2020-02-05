@@ -23,10 +23,10 @@ ms.assetid: 09069f4a-f2e3-4717-80e1-c0110058efc4
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: f6f89e973d5f021dbd48a1bc7fc8234f9c9b6a89
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67902011"
 ---
 # <a name="hints-transact-sql---join"></a>Dicas (Transact-SQL) – junção
@@ -45,7 +45,7 @@ ms.locfileid: "67902011"
   
  [UPDATE](../../t-sql/queries/update-transact-sql.md)  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -68,12 +68,12 @@ ms.locfileid: "67902011"
   
  REMOTE poderá ser usado somente para operações de INNER JOIN.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Dicas de junção são especificadas na cláusula FROM de uma consulta. Dicas de Junção forçam uma estratégia de junção entre duas tabelas. Se uma dica de junção for especificada para qualquer uma das duas tabelas, o otimizador de consulta forçará a ordem de junção automaticamente para todas as tabelas associadas na consulta, com base na posição das palavras-chave ON. Quando CROSS JOIN for usado sem a cláusula ON, poderão ser usados parênteses para indicar a ordem da junção.  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-hash"></a>A. Usando HASH  
+### <a name="a-using-hash"></a>a. Usando HASH  
  O exemplo a seguir especifica que a operação `JOIN` na consulta é executada por uma junção `HASH`. O exemplo usa o banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```  

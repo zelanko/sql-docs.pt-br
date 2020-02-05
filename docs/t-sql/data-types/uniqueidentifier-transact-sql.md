@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5471791b3f75130bc2fb262a05683aa953f7f3a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000443"
 ---
 # <a name="uniqueidentifier-transact-sql"></a>uniqueidentifier (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68000443"
 
 É um GUID de 16 bytes.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 Uma coluna ou variável local de tipo de dados **uniqueidentifier** podem ser inicializadas com um valor das seguintes maneiras:
 -   Usando as funções [NEWID](../../t-sql/functions/newid-transact-sql.md) ou [NEWSEQUENTIALID](../../t-sql/functions/newsequentialid-transact-sql.md).    
 -   Ao converter de uma constante de cadeia de caracteres no formato *xxxxxxxx*-*xxxx*-*xxxx*-*xxxx*-*xxxxxxxxxxxx*, em que cada *x* é um dígito hexadecimal no intervalo 0–9 ou a–f. Por exemplo, 6F9619FF-8B86-D011-B42D-00C04FC964FF é um valor **uniqueidentifier** válido.  

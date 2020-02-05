@@ -16,10 +16,10 @@ ms.assetid: 21c402fa-fd0f-4d09-a097-49cee0316d4e
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 209186cf3756c0bfb9b572a33ba470a83e0cd493
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68051443"
 ---
 # <a name="parse-geography-data-type"></a>Parse (tipo de dados geography)
@@ -43,9 +43,9 @@ Parse ( 'geography_tagged_text' )
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Tipo de retorno CLR: **SqlGeography**  
+ Tipo de retorno do CLR: **SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O tipo do OGC da instância de **geography** retornado por `Parse()` é definido como a entrada de WKT correspondente.  
   
  A cadeia de caracteres 'Null' será interpretada como uma instância de **geography** nula.  

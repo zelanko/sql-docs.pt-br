@@ -22,10 +22,10 @@ ms.assetid: fd1c5e3b-6045-4a42-b646-3fca76e874c1
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 70f3b23244095b79dc8340d3060e6d30d5009a2a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68121932"
 ---
 # <a name="open-transact-sql"></a>OPEN (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68121932"
 
   Abre um cursor de servidor [!INCLUDE[tsql](../../includes/tsql-md.md)] e popula o cursor executando a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] especificada na instrução DECLARE CURSOR ou SET *cursor_variable*.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -52,7 +52,7 @@ OPEN { { [ GLOBAL ] cursor_name } | cursor_variable_name }
  *cursor_variable_name*  
  É o nome de uma variável de cursor que faz referência a um cursor.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Se o cursor for declarado com a opção INSENSITIVE ou STATIC, OPEN criará uma tabela temporária para manter o conjunto de resultados. OPEN falha quando o tamanho de qualquer linha no conjunto de resultados excede o tamanho máximo de linha para tabelas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se o cursor for declarado com a opção KEYSET, OPEN criará uma tabela temporária para manter o conjunto de chaves. As tabelas temporárias são armazenadas em tempdb.  
   
  Depois que um cursor for aberto, use a função @@CURSOR_ROWS para receber o número de linhas qualificadas no último cursor aberto.  

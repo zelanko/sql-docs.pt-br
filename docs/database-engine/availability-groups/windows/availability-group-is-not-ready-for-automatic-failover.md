@@ -15,10 +15,10 @@ ms.assetid: 28261014-342c-442a-bd89-6d04b8d4e8b7
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 78f61b21ae2399a3aa5d0b5432a4047c3f4fd4b6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67991493"
 ---
 # <a name="always-on-availability-group-is-not-ready-for-automatic-failover"></a>O Grupo de Disponibilidade AlwaysOn não está pronto para o failover automático
@@ -33,7 +33,7 @@ ms.locfileid: "67991493"
 |**Categoria**|**Crítico**|  
 |**Faceta**|grupo de disponibilidade|  
   
-## <a name="description"></a>Descrição  
+## <a name="description"></a>DESCRIÇÃO  
  Esta política verifica se o grupo de disponibilidade tem ao menos uma réplica secundária pronta para failover. A política estará em estado não íntegro e um alerta será emitido quando o modo de failover da réplica primária for automático, mas nenhuma das réplicas secundárias do grupo de disponibilidade está pronta para failover.  
   
  A política estará em estado íntegro quando pelo menos uma réplica secundária estiver pronta para failover automático.  
@@ -41,7 +41,7 @@ ms.locfileid: "67991493"
 > [!NOTE]  
 >  Para esta versão do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], as informações sobre as possíveis causas e soluções estão localizadas em [O grupo de disponibilidade não está pronto para failover automático](https://go.microsoft.com/fwlink/p/?LinkId=220851) no Wiki do TechNet.  
   
-## <a name="possible-causes"></a>Causas possíveis  
+## <a name="possible-causes"></a>Possíveis causas  
  O grupo de disponibilidade não está pronto para o failover automático. A réplica primária está configurada para failover automático; porém, a réplica secundária não está pronta para failover automático. A réplica secundária que está configurada para failover automático pode estar indisponível ou seu estado de sincronização de dados não é atualmente SYNCHRONIZED.  
   
 ## <a name="possible-solutions"></a>Soluções possíveis  

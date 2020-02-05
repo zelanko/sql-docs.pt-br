@@ -11,10 +11,10 @@ ms.assetid: 1568ed6a-022c-4839-b73e-4eb49558bbc2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a8c4908e3a2269733a71dc8fe5c6d6a9e697a576
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292046"
 ---
 # <a name="recordset-destination-custom-properties"></a>Propriedades personalizadas do destino Conjunto de Registros
@@ -26,9 +26,9 @@ ms.locfileid: "71292046"
   
  A tabela a seguir descreve as propriedades personalizadas do destino Conjunto de Registros. Todas as propriedades são de leitura/gravação.  
   
-|Nome da propriedade|Tipo de Dados|Descrição|  
+|Nome da propriedade|Tipo de Dados|DESCRIÇÃO|  
 |-------------------|---------------|-----------------|  
-|VariableName|Cadeia de caracteres|O nome da variável que mantém o conjunto de registros ADO.|  
+|VariableName|String|O nome da variável que mantém o conjunto de registros ADO.|  
   
  A entrada e as colunas de entrada do destino Conjunto de Registros não têm nenhuma propriedade personalizada.  
   

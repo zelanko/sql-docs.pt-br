@@ -14,10 +14,10 @@ ms.assetid: 85240267-78fd-476a-9ef6-010d6cf32dd8
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 80c62c0048f40ba945d3204c414180be9f8e0d7b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67995648"
 ---
 # <a name="sql-server-transactions-object"></a>SQL Server, objeto Transactions
@@ -30,15 +30,15 @@ ms.locfileid: "67995648"
   
  Esta tabela descreve os contadores **SQLServer:Transactions** .  
   
-|Contadores de transações do SQL Server|Descrição|  
+|Contadores de transações do SQL Server|DESCRIÇÃO|  
 |--------------------------------------|-----------------|  
 |**Espaço livre em tempdb (KB)**|A quantidade de espaço (em quilobytes) disponível em **tempdb**. Deve haver espaço livre suficiente para manter o repositório de versão de nível de isolamento do instantâneo e todos os novos objetos temporários criados nesta instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
 |**Tempo de execução da transação mais longa**|A quantidade de tempo (em segundos) desde o início da transação que está ativada por mais tempo que qualquer outra transação atual. Este contador somente mostra a atividade quando o banco de dados está no nível de isolamento do instantâneo de leitura confirmada. Ele não registra nenhuma atividade se o banco de dados estiver em qualquer outro nível de isolamento.|  
 |**Transações da versão de não instantâneo**|O número de transações atualmente ativas que não estão usando o nível de isolamento do instantâneo e que fizeram modificações de dados que geraram versões de linhas no armazenamento de versão de **tempdb** .|  
-|**Transações de instantâneo**|O número de transações atualmente ativas que usam o nível de isolamento do instantâneo.<br /><br /> Observação: O contador do objeto **Transações de Instantâneo** responde quando ocorre o primeiro acesso a dados, não quando a instrução `BEGIN TRANSACTION` é emitida.|  
-|**Transactions**|O número de transações atualmente ativas de todos os tipos.|  
+|**Transações de instantâneo**|O número de transações atualmente ativas que usam o nível de isolamento do instantâneo.<br /><br /> Observação: os contadores do objeto **Transações de Instantâneo** respondem quando ocorre o primeiro acesso a dados, não quando a instrução `BEGIN TRANSACTION` é emitida.|  
+|**Transações**|O número de transações atualmente ativas de todos os tipos.|  
 |**Taxa de conflito de atualização**|A porcentagem dessas transações que usam o nível de isolamento do instantâneo que encontrou conflitos de atualização no último segundo. Um conflito de atualização ocorre quando uma transação de nível de isolamento do instantâneo tenta modificar uma linha que foi modificada pela última vez por outra transação que não estava confirmada quando a transação de nível de isolamento do instantâneo foi iniciada.|  
-|**Taxa base de conflito de atualização**|Somente para uso interno.|
+|**Taxa base de conflito de atualização**|Apenas para uso interno.|
 |**Transações de instantâneo de atualização**|O número de transações atualmente ativas que usam o nível de isolamento do instantâneo e que modificaram dados.|  
 |**Taxa de limpeza de versão (KB/s)**|A taxa (em quilobytes por segundo) na qual as versões de linha são removidas do repositório de versão de isolamento de instantâneo em **tempdb**.|  
 |**Taxa de geração de versão (KB/s)**|A taxa (em quilobytes por segundo) na qual novas versões de linha são adicionadas ao repositório de versão de isolamento de instantâneo em **tempdb**.|  

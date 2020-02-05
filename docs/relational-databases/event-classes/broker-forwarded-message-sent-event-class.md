@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f5170ec3b8efd987e0a55a624c6e2b5d6f81ab40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67999689"
 ---
 # <a name="brokerforwarded-message-sent-event-class"></a>classe de evento Broker:Forwarded Message Sent
@@ -27,7 +27,7 @@ ms.locfileid: "67999689"
   
 ## <a name="brokerforwarded-message-sent-event-class-data-columns"></a>Colunas de dados da classe de evento Broker:Forwarded Message Sent  
   
-|Coluna de dados|Tipo|Descrição|Número da coluna|Filtrável|  
+|Coluna de dados|Type|DESCRIÇÃO|Número da coluna|Filtrável|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |ApplicationName|**nvarchar**|O nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |BigintData1|**bigint**|Número de sequência da mensagem.|52|Não|  
@@ -52,7 +52,7 @@ ms.locfileid: "67999689"
 |ServerName|**nvarchar**|O nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo rastreada.|26|Não|  
 |SPID|**int**|A ID de processo do servidor atribuída pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao processo associado ao cliente.|12|Sim|  
 |StartTime|**datetime**|O horário no qual o evento foi iniciado, quando disponível.|14|Sim|  
-|Êxito|**int**|O tempo gasto pelo processo de encaminhamento.|23|Não|  
+|Sucesso|**int**|O tempo gasto pelo processo de encaminhamento.|23|Não|  
 |TargetLoginName|**nvarchar**|O endereço de rede para o qual a instância enviou a mensagem. Note que pode diferir do destino final da mensagem.|42|Não|  
 |TargetUserName|**nvarchar**|O nome do serviço que iniciou a mensagem.|39|Não|  
 |TransactionID|**bigint**|ID da transação atribuída pelo sistema.|4|Não|  

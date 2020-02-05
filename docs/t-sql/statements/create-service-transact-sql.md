@@ -22,10 +22,10 @@ ms.assetid: fb804fa2-48eb-4878-a12f-4e0d5f4bc9e3
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 761a04baca38ee1301c8f51d8b69564f409fac1e
-ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70745394"
 ---
 # <a name="create-service-transact-sql"></a>CREATE SERVICE (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "70745394"
 
   Cria um serviço novo. Um serviço [!INCLUDE[ssSB](../../includes/sssb-md.md)] é um nome de uma tarefa específica ou conjunto de tarefas. O [!INCLUDE[ssSB](../../includes/sssb-md.md)] usa o nome do serviço para rotear mensagens, entregar mensagens para a fila correta dentro de um banco de dados e impor o contrato para uma conversa.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -64,7 +64,7 @@ CREATE SERVICE service_name
  **[** DEFAULT **]**  
  Especifica que o serviço pode ser um destino para as conversas que seguem o contrato DEFAULT. No contexto desta cláusula, DEFAULT não é uma palavra-chave e deve ser delimitado como um identificador. O contrato DEFAULT permite que ambos os lados da conversa enviem mensagens de tipo de mensagem DEFAULT. Mensagem tipo DEFAULT usa validação NONE.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Um serviço expõe a funcionalidade fornecida pelos contratos com os quais está associado, de forma que eles possam ser usados por outros serviços. A instrução `CREATE SERVICE` especifica os contratos para os quais este serviço é o destino. Um serviço só pode ser um destino para conversas que usam os contratos especificados pelo serviço. Um serviço que não especifica nenhum contrato, não expõe nenhuma funcionalidade a outros serviços.  
   
  As conversas iniciadas deste serviço podem usar qualquer contrato. Você criará um serviço sem especificar contratos quando o serviço só for iniciar conversas.  
@@ -80,7 +80,7 @@ CREATE SERVICE service_name
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-creating-a-service-with-one-contract"></a>A. Criando um serviço com um contrato  
+### <a name="a-creating-a-service-with-one-contract"></a>a. Criando um serviço com um contrato  
  O exemplo seguinte cria o serviço `//Adventure-Works.com/Expenses` na fila `ExpenseQueue` no esquema `dbo`. Diálogos que tenham esse serviço como destino devem seguir o contrato `//Adventure-Works.com/Expenses/ExpenseSubmission`.  
   
 ```sql  

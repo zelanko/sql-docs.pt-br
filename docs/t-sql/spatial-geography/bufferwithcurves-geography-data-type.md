@@ -18,10 +18,10 @@ ms.assetid: abf0a11c-c99c-4faa-bf80-3ae8e04d7bfb
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 6f0e5927216d6bc0ff1acbb2146d7f23c31012ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066547"
 ---
 # <a name="bufferwithcurves-geography-data-type"></a>BufferWithCurves (tipo de dados geography)
@@ -43,7 +43,7 @@ ms.locfileid: "68066547"
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Tipo de retorno CLR: **SqlGeography**  
+ Tipo de retorno do CLR: **SqlGeography**  
   
 ## <a name="exceptions"></a>Exceções  
  Os critérios a seguir gerarão uma **ArgumentException**.  
@@ -54,13 +54,13 @@ ms.locfileid: "68066547"
   
 -   **NULL** é passado ao método, como `@g.BufferWithCurves(NULL)`  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  A tabela a seguir mostra os resultados retornados para obter valores de distância diferentes.  
   
 |Valor de distância|Dimensões do tipo|Tipo espacial retornado|  
 |--------------------|---------------------|---------------------------|  
 |distância < 0|Zero ou um|Instância de **GeometryCollection** vazia|  
-|distância \< 0|Dois ou mais|Uma instância de **CurvePolygon** ou **GeometryCollection** com um buffer negativo.<br /><br /> Observação: Um buffer negativo pode criar uma **GeometryCollection** vazia|
+|distância \< 0|Dois ou mais|Uma instância de **CurvePolygon** ou **GeometryCollection** com um buffer negativo.<br /><br /> Observação: um buffer negativo pode criar uma **GeometryCollection** vazia|
 |distância = 0|Todas as dimensões|Cópia da instância de **geography** de invocação|  
 |distância > 0|Todas as dimensões|Instância de **CurvePolygon** ou **GeometryCollection**|  
   
@@ -71,7 +71,7 @@ ms.locfileid: "68066547"
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-calling-bufferwithcurves-with-a-parameter-value--0-on-one-dimensional-geography-instance"></a>A. Como chamar BufferWithCurves() com um valor de parâmetro < 0 em instância de geografia unidimensional  
+### <a name="a-calling-bufferwithcurves-with-a-parameter-value--0-on-one-dimensional-geography-instance"></a>a. Como chamar BufferWithCurves() com um valor de parâmetro < 0 em instância de geografia unidimensional  
  O exemplo a seguir retorna uma instância `GeometryCollection` vazia:  
   
  ```sql

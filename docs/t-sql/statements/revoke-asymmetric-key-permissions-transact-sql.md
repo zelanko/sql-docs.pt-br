@@ -17,10 +17,10 @@ ms.assetid: 1a1063e8-ffc7-4775-a40d-e155740ad7b2
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: baf3fd0a03beb185a43180599352b6f64f8044cc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68082365"
 ---
 # <a name="revoke-asymmetric-key-permissions-transact-sql"></a>Permissões de chave assimétrica REVOKE (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "68082365"
 
   Revoga permissões em uma chave assimétrica.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -98,7 +98,7 @@ REVOKE [ GRANT OPTION FOR ] { permission  [ ,...n ] }
   
 -   Usuário de banco de dados não mapeado para um principal do servidor.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Uma chave assimétrica é um item protegível do nível do banco de dados contido pelo banco de dados que é seu pai na hierarquia de permissões. As permissões mais específicas e limitadas que podem ser revogadas em uma chave assimétrica estão listadas abaixo, junto com as permissões mais gerais que as contêm implicitamente.  
   
 |Permissão de chave assimétrica|Indicado pela permissão de chave assimétrica|Implícito na permissão de banco de dados|  

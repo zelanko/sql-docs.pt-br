@@ -11,10 +11,10 @@ ms.assetid: 00db8f21-7d4b-4347-ae43-3a7c314d2fa1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2293f8cf40bcd5b3d104f63df80abacf282686ed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68096889"
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>Tipos e colunas de dados XML (SQL Server)
@@ -144,7 +144,7 @@ ms.locfileid: "68096889"
   
  Os exemplos incluem dados relacionais expostos como XML para troca de dados e serviços da Web e dados XML com esquema fixo. Para obter mais informações, consulte [MSDN Online Library](https://go.microsoft.com/fwlink/?linkid=31174).  
   
-#### <a name="example-modeling-data-using-an-annotated-xml-schema-axsd"></a>Exemplo: Modelando dados usando um AXSD (Esquema XML Anotado)  
+#### <a name="example-modeling-data-using-an-annotated-xml-schema-axsd"></a>Exemplo: Modelando dados usando um AXSD (Annotated XML Schema)  
  Para ilustrar, assuma que você tem dados relacionais existentes, como clientes, pedidos e itens de linha que deseja tratar como XML. Defina uma exibição XML usando AXSD sobre dados relacionais. A exibição XML permite carregar dados XML em massa em suas tabelas e consultar e atualizar os dados relacionais usando a exibição XML. Esse modelo é útil se você precisar trocar dados que contêm marcação XML com outros aplicativos enquanto seus aplicativos SQL funcionam sem interrupção.  
   
 ### <a name="hybrid-model"></a>Modelo híbrido  

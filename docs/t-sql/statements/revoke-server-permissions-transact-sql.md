@@ -17,10 +17,10 @@ ms.assetid: 7b9a56b3-face-452e-a655-147dac306ba1
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: eada4b2dbd5a76418ec8de9f988a6291e175da5f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914269"
 ---
 # <a name="revoke-server-permissions-transact-sql"></a>Permissões de servidor REVOKE (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "67914269"
 
   Remove as permissões em nível de servidor GRANT e DENY.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -92,7 +92,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  *server_role*  
  Especifica uma função de servidor definida pelo usuário.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  As permissões no escopo de servidor podem ser revogadas somente quando o banco de dados atual é mestre.  
   
  REVOKE remove as permissões GRANT e DENY.  
@@ -145,7 +145,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-revoking-a-permission-from-a-login"></a>A. Revogando uma permissão de um logon  
+### <a name="a-revoking-a-permission-from-a-login"></a>a. Revogando uma permissão de um logon  
  O exemplo a seguir revoga a permissão `VIEW SERVER STATE` de logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para `WanidaBenshoof`.  
   
 ```  

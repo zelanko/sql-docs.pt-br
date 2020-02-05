@@ -20,10 +20,10 @@ ms.assetid: b2ca6791-3a07-4209-ba8e-2248a92dd738
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 48bca691f10822176c5169cf6bf9a052d7675478
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072306"
 ---
 # <a name="sql-server-utilities-statements---go"></a>Instruções de utilitários do SQL Server – GO
@@ -33,7 +33,7 @@ ms.locfileid: "68072306"
   
   O GO sinaliza o término de um lote de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] para os utilitários do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,7 +45,7 @@ GO [count]
  *contagem*  
  É um número inteiro positivo. O lote que precede GO será executado pelo número de vezes especificado.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O GO não é uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)], ele é um comando reconhecido pelos utilitários **sqlcmd** e **osql** e pelo Editor de Códigos [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  Os utilitários [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interpretam GO como um sinal de que eles devem enviar o lote atual de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] para uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O lote atual de instruções é composto de todas as instruções digitadas desde o último GO, ou desde o início da sessão ad hoc ou script, se esse for o primeiro GO.  

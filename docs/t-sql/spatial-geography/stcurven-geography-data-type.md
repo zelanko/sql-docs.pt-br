@@ -18,10 +18,10 @@ ms.assetid: 99ef7100-2c4b-4f07-8d66-b343da94b023
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 19aec9ae5a0253e74ff8816fadcfdbb7a2a74001
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042453"
 ---
 # <a name="stcurven-geography-data-type"></a>STCurveN (tipo de dados geography)
@@ -43,12 +43,12 @@ ms.locfileid: "68042453"
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Tipo de retorno CLR: **SqlGeography**  
+ Tipo de retorno do CLR: **SqlGeography**  
   
 ## <a name="exceptions"></a>Exceções  
  Se n < 1, uma **ArgumentOutOfRangeException** será gerada.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  **NULL** será retornado quando o seguinte critério ocorrer.  
   
 -   A instância de **geography** for declarada, mas não for criada uma instância dela  
@@ -61,7 +61,7 @@ ms.locfileid: "68042453"
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-stcurven-on-a-circularstring"></a>A. Usando STCurveN() em uma CircularString  
+### <a name="a-using-stcurven-on-a-circularstring"></a>a. Usando STCurveN() em uma CircularString  
  O exemplo a seguir retorna a segunda curva em uma instância de **CircularString**:  
   
 ```

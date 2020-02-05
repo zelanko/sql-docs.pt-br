@@ -13,10 +13,10 @@ author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: 4a701a56ba5a71037317f6c404fa394a466febba
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73729888"
 ---
 # <a name="dbcc-showresultcachespaceused-transact-sql"></a>DBCC SHOWRESULTCACHESPACEUSED (Transact-SQL)
@@ -33,7 +33,7 @@ Mostra o espaço de armazenamento usado no cache do conjunto de resultados de um
 DBCC SHOWRESULTCACHESPACEUSED  
 [;]  
 ```  
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Comentários
 
 O comando `DBCC SHOWRESULTCACHESPACEUSED` não usa nenhum parâmetro e retorna o espaço usado pelo banco de dados no qual o comando é executado.
 
@@ -43,7 +43,7 @@ Requer a permissão VIEW SERVER STAT.
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|coluna|Tipo de Dados|Descrição|  
+|Coluna|Tipo de Dados|DESCRIÇÃO|  
 |------------|---------------|-----------------|  
 |reserved_space|BIGINT|Espaço total usado para o banco de dados, em KB. Esse número será alterado conforme o conjunto de resultados armazenado em cache aumentar.|  
 |data_space|BIGINT|Espaço usado para dados, em KB.|  
@@ -53,7 +53,7 @@ Requer a permissão VIEW SERVER STAT.
 
 ## <a name="see-also"></a>Confira também
 
-[Ajuste de desempenho com armazenamento em cache do conjunto de resultados](/azure/sql-data-warehouse/performance-tuning-result-set-caching)</br>
+[Ajuste de desempenho com cache de conjunto de resultados](/azure/sql-data-warehouse/performance-tuning-result-set-caching)</br>
 [Opções ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options?view=azure-sqldw-latest)</br>
 [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql?view=azure-sqldw-latest)</br>
 [SET RESULT SET CACHING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-result-set-caching-transact-sql)</br>

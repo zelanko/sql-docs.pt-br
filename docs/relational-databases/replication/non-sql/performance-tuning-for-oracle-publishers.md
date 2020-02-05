@@ -13,10 +13,10 @@ ms.assetid: 32c0b4ec-c166-45a3-b41e-38a30fd56813
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 31ee9136f4c2b0f0864db0ecd3931e2e45ea4fdb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67942747"
 ---
 # <a name="performance-tuning-for-oracle-publishers"></a>Ajuste de desempenho para Editores Oracle
@@ -25,7 +25,7 @@ ms.locfileid: "67942747"
   
  Além disso há duas opções para Editores Oracle que estão relacionadas ao desempenho:  
   
--   Especificar a opção de publicação apropriada: Oracle ou Oracle Gateway.  
+-   Especificando a opção de publicação apropriada: Oracle ou Oracle Gateway.  
   
 -   Configurando o trabalho de conjunto da transação para processar alterações no Publicador em um intervalo apropriado.  
   

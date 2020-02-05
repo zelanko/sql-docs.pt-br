@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 1ce63521989edfccc1fc9fc085b0a9c476cde2ee
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75558386"
 ---
 # <a name="configure-a-sql-server-availability-group-for-read-scale-on-linux"></a>Configurar um grupo de disponibilidade do SQL Server para escala de leitura no Linux

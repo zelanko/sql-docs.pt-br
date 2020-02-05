@@ -19,10 +19,10 @@ ms.assetid: 69b756e0-a1df-45b3-8a24-6ded8658aefe
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 122630048b7e4ff9cef34c49bfde68177020630f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077909"
 ---
 # <a name="hierarchyid-data-type-method-reference"></a>referência de método do tipo de dados hierarchyid
@@ -42,7 +42,7 @@ Um valor do tipo de dados **hierarchyid** representa uma posição em uma hierar
   
 O tipo **hierarchyid** está disponível para clientes CLR como o tipo de dados **SqlHierarchyId**.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 O tipo **hierarchyid** logicamente codifica informações sobre um único nó em uma árvore hierárquica codificando o caminho da raiz da árvore ao nó. Esse caminho é representado logicamente como uma sequência de rótulos de nós de todos os filhos visitados depois da raiz. Uma barra inicia a representação e um caminho que visita apenas a raiz é representado por uma barra única. Para níveis abaixo da raiz, cada rótulo é codificado como uma sequência de inteiros separados por pontos. A comparação entre filhos é executada comparando-se as sequências de inteiros separados por pontos na ordem alfabética. Cada nível é seguido por uma barra. Portanto, uma barra separa os pais de seus filhos. Por exemplo, são caminhos de **hierarchyid** válidos, respectivamente, de tamanhos 1, 2, 2, 3 e 3 níveis:
   
 -   /  

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2f457c1a3d5699adf92f50e212bb8e3cd83200cc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67940520"
 ---
 # <a name="qnsubscription-event-class"></a>Classe de evento QN:Subscription
@@ -25,7 +25,7 @@ ms.locfileid: "67940520"
   
 ## <a name="qnsubscription-event-class-data-columns"></a>Coluna de dados de classe de evento QN:Subscription  
   
-|Coluna de dados|Tipo|Descrição|Número da coluna|Filtrável|  
+|Coluna de dados|Type|DESCRIÇÃO|Número da coluna|Filtrável|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |ApplicationName|**nvarchar**|O nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |ClientProcessID|**int**|A ID atribuída pelo computador host ao processo em que está sendo executado o aplicativo cliente. Essa coluna de dados será populada se a ID do processo do cliente for fornecida pelo cliente.|9|Sim|  
@@ -33,7 +33,7 @@ ms.locfileid: "67940520"
 |DatabaseName|**nvarchar**|O nome do banco de dados no qual a instrução do usuário está sendo executada.|35|Sim|  
 |EventClass|**int**|Tipo de evento = 199.|27|Não|  
 |EventSequence|**int**|Número de sequência para esse evento.|51|Não|  
-|EventSubClass|**nvarchar**|O tipo de subclasse de evento, fornecendo mais informações sobre cada classe de evento. Essa coluna pode conter os seguintes valores:<br /><br /> **Assinatura registrada**: indica quando a assinatura de notificação de consulta for registrada com êxito no banco de dados.<br /><br /> **Assinatura rebobinada**: indica quando [!INCLUDE[ssDE](../../includes/ssde-md.md)] recebe uma solicitação de assinatura que corresponda exatamente a uma assinatura existente. Nesse caso, [!INCLUDE[ssDE](../../includes/ssde-md.md)] define o valor do tempo-limite da assinatura existente para o tempo-limite especificado na nova solicitação de assinatura.<br /><br /> **Assinatura disparada**: indica quando uma assinatura de notificação produz uma mensagem de notificação.<br /><br /> **Falha do acionamento com erro do agente**: indica quando uma mensagem de notificação falha devido a um erro do [!INCLUDE[ssSB](../../includes/sssb-md.md)].<br /><br /> **Falha do acionamento sem erro do agente**: indica quando uma mensagem de notificação falha, mas não devido a um erro do [!INCLUDE[ssSB](../../includes/sssb-md.md)].<br /><br /> **Erro do agente interceptado**: indica que [!INCLUDE[ssSB](../../includes/sssb-md.md)] gerou um erro na conversa usada pela notificação de consulta.<br /><br /> **Tentativa de exclusão de assinatura**: indica que [!INCLUDE[ssDE](../../includes/ssde-md.md)] tentou excluir uma assinatura expirada para liberar recursos.<br /><br /> **Falha na exclusão de assinatura**: indica falha na tentativa de exclusão de uma assinatura expirada. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] irá reagendar automaticamente a assinatura para exclusão, a fim de liberar recursos.<br /><br /> **Assinatura destruída**: indica que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] excluiu com êxito uma assinatura expirada.|21|Sim|  
+|EventSubClass|**nvarchar**|O tipo de subclasse de evento, fornecendo mais informações sobre cada classe de evento. Essa coluna pode conter os seguintes valores:<br /><br /> **Assinatura registrada**: indica quando a assinatura de notificação da consulta é registrada com êxito no banco de dados.<br /><br /> **Assinatura rebobinada**: indica quando o [!INCLUDE[ssDE](../../includes/ssde-md.md)] recebe uma solicitação de assinatura que corresponde exatamente a uma assinatura existente. Nesse caso, [!INCLUDE[ssDE](../../includes/ssde-md.md)] define o valor do tempo-limite da assinatura existente para o tempo-limite especificado na nova solicitação de assinatura.<br /><br /> **Assinatura acionada**: indica quando uma assinatura de notificação produz uma mensagem de notificação.<br /><br /> **Acionamento falhou com erro do agente**: indica quando uma mensagem de notificação falha devido a um erro [!INCLUDE[ssSB](../../includes/sssb-md.md)] .<br /><br /> **Acionamento falhou sem erro do agente**: indica quando uma mensagem de notificação falha, mas não devido a um erro [!INCLUDE[ssSB](../../includes/sssb-md.md)] .<br /><br /> **Erro interceptado do agente**: indica que [!INCLUDE[ssSB](../../includes/sssb-md.md)] gerou um erro na conversa que a notificação de consulta usa.<br /><br /> **Tentativa de exclusão da assinatura**: indica que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] tentou excluir uma assinatura expirada para liberar recursos.<br /><br /> **Falha na exclusão da assinatura**: indica que a tentativa de excluir uma assinatura expirada falhou. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] irá reagendar automaticamente a assinatura para exclusão, a fim de liberar recursos.<br /><br /> **Assinatura destruída**: indica que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] excluiu com êxito uma assinatura expirada.|21|Sim|  
 |GroupID|**int**|ID do grupo de carga de trabalho no qual o evento de Rastreamento do SQL dispara.|66|Sim|  
 |HostName|**nvarchar**|O nome do computador no qual o cliente está sendo executado. Essa coluna de dados será populada se o nome do host for fornecido pelo cliente. Para determinar o nome do host, use a função HOST_NAME.|8|Sim|  
 |IsSystem|**int**|Indica se o evento ocorreu em um processo do sistema ou do usuário.<br /><br /> 0 = usuário<br /><br /> 1 = sistema|60|Não|  

@@ -22,10 +22,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8cf672f9aefc4b9fa0444c73596d2fac67089474
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67938937"
 ---
 # <a name="create-table-transact-sql-identity-property"></a>CREATE TABLE (Transact-SQL) IDENTITY (Propriedade)
@@ -36,7 +36,7 @@ ms.locfileid: "67938937"
 > [!NOTE]  
 >  A propriedade IDENTITY é diferente da propriedade**Identity** de SQL-DMO que expõe a propriedade de identidade de linha de uma coluna.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -54,7 +54,7 @@ IDENTITY [ (seed , increment) ]
   
  Você deve especificar seed e increment, ou nenhum dos dois. Se nenhum for especificado, o padrão será (1,1).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  As colunas de identidade podem ser usadas para gerar valores de chave. A propriedade de identidade em uma coluna garante o seguinte:  
   
 -   Cada novo valor é gerado com base nos valores de semente e incremento atuais.  
@@ -77,11 +77,11 @@ IDENTITY [ (seed , increment) ]
   
  Apenas uma coluna de identidade pode ser criada por tabela.  
   
- Em tabelas com otimização de memória, a semente e o incremento devem ser definidos para 1.1. Definir a semente ou o incremento para um valor diferente de 1 resulta no seguinte erro: Não há suporte para o uso de valores de semente e incremento diferentes de 1 com tabelas otimizadas para memória.  
+ Em tabelas com otimização de memória, a semente e o incremento devem ser definidos para 1.1. Configurar seed ou increment como um valor diferente de 1 resulta no seguinte erro: o uso de valores seed e increment diferentes de 1 não é compatível com tabelas com otimização de memória.  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-the-identity-property-with-create-table"></a>A. Usando a propriedade IDENTITY com CREATE TABLE  
+### <a name="a-using-the-identity-property-with-create-table"></a>a. Usando a propriedade IDENTITY com CREATE TABLE  
  O exemplo a seguir cria uma nova tabela que usa a propriedade `IDENTITY` para um número de identificação automaticamente incrementando.  
   
 ```  

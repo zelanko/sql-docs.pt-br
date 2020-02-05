@@ -18,10 +18,10 @@ ms.assetid: c310f6df-7adf-493b-b56b-8e3143b13ae7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6b7bfc41b827cdfc2584c50a44e4e1f1e7c60be4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68051233"
 ---
 # <a name="replace-value-of-xml-dml"></a>substituir o valor de (XML DML)
@@ -46,7 +46,7 @@ Identifica o novo valor do nó. Pode ser uma expressão que retorna um nó tipo 
 ## <a name="examples"></a>Exemplos  
 Os exemplos a seguir da instrução XML DML **replace value of** ilustra como atualizar nós em um documento XML.  
   
-### <a name="a-replacing-values-in-an-xml-instance"></a>A. Substituindo valores em uma instância XML  
+### <a name="a-replacing-values-in-an-xml-instance"></a>a. Substituindo valores em uma instância XML  
 No exemplo a seguir, uma instância de documento é atribuída primeiro a uma variável do tipo **XML**. Em seguida, as instruções XML DML **replace value of** atualizam os valores no documento.  
   
 ```sql

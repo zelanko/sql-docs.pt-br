@@ -18,10 +18,10 @@ ms.assetid: 7c554334-d2d9-4eae-a4ae-097aa4020e1a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d026e01ee6675d0af462492469913d280124cc31
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000361"
 ---
 # <a name="write-database-engine"></a>Write (Mecanismo de Banco de Dados)
@@ -42,7 +42,7 @@ Um objeto **BinaryWriter** no qual a representação binária deste nó **hierar
 ## <a name="return-types"></a>Tipos de retorno  
 **Tipo de retorno do CLR: nulo**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 Write é usado internamente por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quando necessário, como ao carregar dados de uma coluna **hierarchyid**. Write também é chamado internamente quando é feita uma conversão entre **hierarchyid** e **varbinary**.
   
 ## <a name="examples"></a>Exemplos  

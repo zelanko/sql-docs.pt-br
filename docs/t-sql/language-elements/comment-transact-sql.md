@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3177a33d8560e9e66a610a39e555bf1dbf3cc44a
-ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68495477"
 ---
 # <a name="---comment-transact-sql"></a>-- (Comentário) (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68495477"
 
   Indica texto fornecido pelo usuário. Os comentários podem ser inseridos em uma linha separada, aninhados no final de uma linha de comandos [!INCLUDE[tsql](../../includes/tsql-md.md)] ou em uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)]. O servidor não avalia o comentário.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -47,7 +47,7 @@ ms.locfileid: "68495477"
  *text_of_comment*  
  É a cadeia de caracteres que contém o texto do comentário.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 Use dois hifens ( **--** ) para comentários de uma linha ou aninhados. Os comentários inseridos com **--** são encerrados por uma nova linha, que é especificada com um caractere de retorno de carro (U + 000A), caractere de alimentação de linha (U + 000D) ou uma combinação dos dois. Não há comprimento máximo para comentários. A tabela a seguir lista os atalhos do teclado que podem ser usados para comentar ou remover comentários do texto.
   
 |Ação|Standard|  

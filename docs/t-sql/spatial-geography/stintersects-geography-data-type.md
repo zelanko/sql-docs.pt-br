@@ -19,10 +19,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3185634a4370ccb86fdb2f0199dc3af452d77558
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042083"
 ---
 # <a name="stintersects-geography-data-type"></a>STIntersects (tipo de dados geography)
@@ -44,9 +44,9 @@ ms.locfileid: "68042083"
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
- Tipo de retorno CLR: **SqlBoolean**  
+ Tipo de retorno do CLR: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse método sempre retornará **NULL** se as SRIDs (IDs de referência espacial) das instâncias de **geography** não forem correspondentes.  
   
 ## <a name="examples"></a>Exemplos  

@@ -19,10 +19,10 @@ ms.assetid: 37246adb-814d-4113-9983-4d336de8182c
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: c617d4303593588b6e86a5b9b7662a5ec690c577
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67948071"
 ---
 # <a name="asbinaryzm-geography-data-type"></a>AsBinaryZM (tipo de dados geography)
@@ -40,9 +40,9 @@ ms.locfileid: "67948071"
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **varbinary(max)**  
   
- Tipo de retorno CLR: **SqlBytes**  
+ Tipo de retorno do CLR: **SqlBytes**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
   
 ## <a name="examples"></a>Exemplos  
   

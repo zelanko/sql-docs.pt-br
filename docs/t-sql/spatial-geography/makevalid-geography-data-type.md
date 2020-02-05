@@ -15,10 +15,10 @@ ms.assetid: f67038e3-4f62-4465-994e-e95ac27d8ada
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: d913a0e7bbe29ab6f6f303519c73304238afd7df
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68127399"
 ---
 # <a name="makevalid-geography-data-type"></a>MakeValid (tipos de dados de geografia)
@@ -40,9 +40,9 @@ ms.locfileid: "68127399"
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Tipo de retorno CLR: **SqlGeography**  
+ Tipo de retorno do CLR: **SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse método pode alterar o tipo de instância de **geography**. Além disso, os pontos de uma instância de **geography** podem mudar um pouco. Os resultados de alguns métodos como NumPoint() podem ser alterados.  
   
  Nos casos em que a instância espacial inválida interseccionar o equador e tiver um EnvelopeAngle() = 180, uma instância de **FullGlobe** será retornada. O método do tipo de dados de `MakeValid()`**geography** fará a melhor tentativa possível de retornar instâncias válidas, mas não há garantias de que os resultados serão precisos.  

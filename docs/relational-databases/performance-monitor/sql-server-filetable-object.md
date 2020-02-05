@@ -13,10 +13,10 @@ ms.assetid: 325f5e58-1095-450f-9321-dfacfe6fd55f
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: f2110726db47cf76adffca4b10f153ce941565cc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68093501"
 ---
 # <a name="sql-server-filetable-object"></a>SQL Server, objeto FileTable
@@ -25,7 +25,7 @@ O objeto de desempenho **SQLServer:FileTable** fornece contadores para estatíst
 
 A tabela a seguir descreve os objetos de desempenho **FileTable** do SQL Server.
 
-|**Contadores de FileTable do SQL Server**|Descrição|  
+|**Contadores de FileTable do SQL Server**|DESCRIÇÃO|  
 |-------------|-----------------|  
 |**Tempo médio para excluir um item FileTable**|Tempo médio (em milissegundos) para excluir um item FileTable.|
 |**Tempo médio de enumeração de FileTable**|Tempo médio (em milissegundos) de uma solicitação de enumeração FileTable.|
@@ -47,15 +47,15 @@ A tabela a seguir descreve os objetos de desempenho **FileTable** do SQL Server.
 |**Solicitações de atualização de item FileTable/s**|Número total de solicitações de atualização de item FileTable por segundo.|
 |**Ops. de encerramento de identificador FileTable/s**|Número total de operações de encerramento de identificador FileTable por segundo.|
 |**Operações de tabela FileTable/s**|Número total de eventos operacionais de tabela processados pelo componente de repositório FileTable por segundo.|
-|**Tempo para excluir um item FileTable BASE**|Somente para uso interno.|
-|**Tempo de enumeração de FileTable BASE**|Somente para uso interno.|
-|**Tempo de encerramento de identificador FileTable BASE**|Somente para uso interno.|
-|**Tempo para mover um item FileTable BASE**|Somente para uso interno.|
-|**Tempo por solicitação de E/S de arquivo BASE**|Somente para uso interno.|
-|**Tempo por resposta de E/S de arquivo BASE**|Somente para uso interno.|
-|**Tempo para renomear um item FileTable BASE**|Somente para uso interno.|
-|**Tempo para obter um item FileTable BASE**|Somente para uso interno.|
-|**Tempo para atualizar um item FileTable BASE**|Somente para uso interno.| 
+|**Tempo para excluir um item FileTable BASE**|Apenas para uso interno.|
+|**Tempo de enumeração de FileTable BASE**|Apenas para uso interno.|
+|**Tempo de encerramento de identificador FileTable BASE**|Apenas para uso interno.|
+|**Tempo para mover um item FileTable BASE**|Apenas para uso interno.|
+|**Tempo por solicitação de E/S de arquivo BASE**|Apenas para uso interno.|
+|**Tempo por resposta de E/S de arquivo BASE**|Apenas para uso interno.|
+|**Tempo para renomear um item FileTable BASE**|Apenas para uso interno.|
+|**Tempo para obter um item FileTable BASE**|Apenas para uso interno.|
+|**Tempo para atualizar um item FileTable BASE**|Apenas para uso interno.| 
  
 ## <a name="see-also"></a>Consulte Também  
 [Monitorar o uso de recursos (Monitor do Sistema)](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)

@@ -23,18 +23,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 085832fdb8d0918c76dbbcadb759c2fdf1169b5f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68094712"
 ---
-# <a name="errornumber-transact-sql"></a>ERROR_NUMBER (Transact-SQL)
+# <a name="error_number-transact-sql"></a>ERROR_NUMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Essa função retorna o número do erro que fez com que o bloco CATCH de um constructo TRY…CATCH fosse executado.  
 
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -50,7 +50,7 @@ Quando chamado em um bloco CATCH, `ERROR_NUMBER` retorna o número do erro que f
 
 `ERROR_NUMBER` retorna NULL quando chamado fora do escopo de um bloco CATCH.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 `ERROR_NUMBER` dá suporte a chamadas em qualquer lugar dentro do escopo de um bloco CATCH.  
   
 `ERROR_NUMBER` retorna um número de erro relevante, independentemente de quantas vezes ou de em que local ele é executado dentro do escopo do bloco `CATCH`. É diferente de uma função como @@ERROR, que retorna apenas um número de erro na instrução imediatamente após àquela que causa um erro.  
@@ -59,7 +59,7 @@ Em um bloco `CATCH` aninhado, `ERROR_NUMBER` retorna o número do erro específi
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-errornumber-in-a-catch-block"></a>A. Usando ERROR_NUMBER em um bloco CATCH  
+### <a name="a-using-error_number-in-a-catch-block"></a>a. Usando ERROR_NUMBER em um bloco CATCH  
 Este exemplo a seguir mostra uma instrução `SELECT` que gera um erro de divisão por zero. O bloco `CATCH` retorna o número do erro.  
   
 ```sql  
@@ -86,7 +86,7 @@ ErrorNumber
 
 ```  
   
-### <a name="b-using-errornumber-in-a-catch-block-with-other-error-handling-tools"></a>B. Usando ERROR_NUMBER em um bloco CATCH com outras ferramentas de tratamento de erros  
+### <a name="b-using-error_number-in-a-catch-block-with-other-error-handling-tools"></a>B. Usando ERROR_NUMBER em um bloco CATCH com outras ferramentas de tratamento de erros  
 Este exemplo a seguir mostra uma instrução `SELECT` que gera um erro de divisão por zero. Juntamente com o número do erro, o bloco `CATCH` retorna informações sobre esse erro.  
 
 ```sql  

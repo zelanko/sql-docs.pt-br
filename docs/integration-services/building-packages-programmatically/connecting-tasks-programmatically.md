@@ -18,10 +18,10 @@ ms.assetid: 23668e88-cef4-4009-a9cf-38e607eab7a2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 51cce76a41cfcc513e633a20b16ca5e861fa492a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71299034"
 ---
 # <a name="connecting-tasks-programmatically"></a>Conectando tarefas programaticamente
@@ -33,7 +33,7 @@ ms.locfileid: "71299034"
   
  Você pode usar uma restrição e uma expressão em uma única restrição de precedência, dependendo do valor especificado para a propriedade <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.EvalOp%2A>, conforme descrito na seguinte tabela:  
   
-|Valor da propriedade EvalOp|Descrição|  
+|Valor da propriedade EvalOp|DESCRIÇÃO|  
 |----------------------------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DTSPrecedenceEvalOp.Constraint>|Especifica que o resultado de execução determina se o contêiner ou tarefa restrita é executada. Defina a propriedade <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Value%2A> do <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint> com o valor desejado da enumeração <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult>.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DTSPrecedenceEvalOp.Expression>|Especifica que o valor de uma expressão determina se o contêiner ou tarefa restrita é executada. Defina a propriedade <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Expression%2A> do <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint>.|  

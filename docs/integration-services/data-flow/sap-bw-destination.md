@@ -11,10 +11,10 @@ ms.assetid: a612ed91-b89b-4173-a0b1-0bce381e1e28
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 62b781351b406aadc1b7516cd70dc0d11e7c5a16
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291889"
 ---
 # <a name="sap-bw-destination"></a>Destino SAP BW
@@ -83,7 +83,7 @@ ms.locfileid: "71291889"
   
 -   Teste o carregamento de dados com as opções que você selecionou.  
   
- Você também pode habilitar o log das chamadas de função de RFC pelo destino. (Esse log é separado do log opcional que você pode habilitar em pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].) Você habilita o log das chamadas de função de RFC quando configura o gerenciador de conexões do SAP BW que o destino usará. Para obter mais informações sobre como configurar o gerenciador de conexões do SAP BW, consulte [SAP BW Connection Manager](../../integration-services/connection-manager/sap-bw-connection-manager.md).  
+ Você também pode habilitar o log das chamadas de função de RFC pelo destino. (Esse log é separado do log opcional que você pode habilitar em pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .) Você habilita o log das chamadas de função de RFC quando configura o gerenciador de conexões do SAP BW que o destino usará. Para obter mais informações sobre como configurar o gerenciador de conexões do SAP BW, consulte [SAP BW Connection Manager](../../integration-services/connection-manager/sap-bw-connection-manager.md).  
   
  Se você não souber todos os valores necessários para configurar o destino, talvez precise perguntar ao administrador do SAP.  
   
@@ -119,6 +119,6 @@ ms.locfileid: "71291889"
 -   [Criar InfoPackage](../../integration-services/data-flow/create-infopackage.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Componentes do Microsoft Connector 1.1 para SAP BW](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
+ [Componentes do Microsoft Connector para SAP BW](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
   
   

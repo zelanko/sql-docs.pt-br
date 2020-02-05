@@ -12,22 +12,22 @@ ms.assetid: 14129cc4-be80-4772-9e3f-0e5da4d0696b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 183354ddbf62c09d23987c6179eea33951983f96
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68129238"
 ---
-# <a name="mssqlserver833"></a>MSSQLSERVER_833
+# <a name="mssqlserver_833"></a>MSSQLSERVER_833
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|833|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|BUF_LONG_IO|  
 |Texto da mensagem|O SQL Server encontrou %d ocorrências de solicitações de E/S demorando mais do que %d segundos para serem concluídas no arquivo [%ls] no banco de dados `[%ls] (%d)`.  O identificador de arquivo do SO é 0x%p.  O deslocamento da E/S mais demorada é: %#016I64x.|  
@@ -35,7 +35,7 @@ ms.locfileid: "68129238"
 ## <a name="explanation"></a>Explicação  
 Esta mensagem indica que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] emitiu uma solicitação de leitura ou gravação de disco, e que a solicitação demorou mais de 15 segundos para retornar. Esse erro é informado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e indica um problema com o subsistema de E/S.  
   
-### <a name="possible-causes"></a>Causas possíveis  
+### <a name="possible-causes"></a>Possíveis causas  
 Esse problema pode ser causado por problemas de desempenho do sistema, erros de hardware, erros de firmware, problemas de driver de dispositivo ou intervenção de driver de filtro no processo de E/S.  
   
 ## <a name="user-action"></a>Ação do usuário  

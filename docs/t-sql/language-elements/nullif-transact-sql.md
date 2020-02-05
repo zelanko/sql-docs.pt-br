@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 28c331cd810e905a14fa17d6e212fee331da74f9
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73844383"
 ---
 # <a name="nullif-transact-sql"></a>NULLIF (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "73844383"
 
   Retorna um valor nulo se as duas expressões especificadas forem iguais. Por exemplo, `SELECT NULLIF(4,4) AS Same, NULLIF(5,7) AS Different;` retorna NULL para a primeira coluna (4 e 4), pois os dois valores de entrada são os mesmos. A segunda coluna retorna o primeiro valor (5), porque os dois valores de entrada são diferentes. 
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -50,14 +50,14 @@ NULLIF ( expression , expression )
   
  NULLIF retorna a primeira *expression* se as duas expressões não são iguais. Se as expressões forem iguais, NULLIF retornará um valor nulo do tipo da primeira *expression*.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  NULLIF é equivalente a uma expressão CASE pesquisada em que as duas expressões são iguais e a expressão resultante é NULL.  
   
  É recomendável não usar funções dependentes de tempo, como RAND(), dentro de uma função NULLIF. Isto pode fazer com que a função seja avaliada duas vezes e retorne resultados diferentes nas duas invocações.  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-returning-budget-amounts-that-have-not-changed"></a>A. Retornando valores de orçamento que não foram alterados  
+### <a name="a-returning-budget-amounts-that-have-not-changed"></a>a. Retornando valores de orçamento que não foram alterados  
  O exemplo a seguir cria uma tabela `budgets` para mostrar a um departamento (`dept`) seu orçamento atual (`current_year`) e seu orçamento anterior (`previous_year`). Para o ano atual, `NULL` é usado para departamentos com orçamentos que não foram alterados em relação ao ano anterior, e `0` é usado para orçamentos que ainda não foram determinados. Para descobrir a média somente dos departamentos que receberam um orçamento e para incluir o valor do orçamento do ano anterior (use o valor `previous_year`, em que o `current_year` é `NULL`), combine as funções `NULLIF` e `COALESCE`.  
   
 ```sql  
@@ -111,7 +111,7 @@ WHERE ProductID < 10;
 GO  
 ```  
 
-### <a name="c-returning-budget-amounts-that-contain-no-data"></a>C: Como retornar valores de orçamento que não contêm dados  
+### <a name="c-returning-budget-amounts-that-contain-no-data"></a>C: Retornando valores de orçamento que não contêm dados  
  O exemplo a seguir cria uma tabela `budgets`, carrega dados e usa `NULLIF` para retornar um valor nulo se `current_year` nem `previous_year` contém dados.  
   
 ```sql  

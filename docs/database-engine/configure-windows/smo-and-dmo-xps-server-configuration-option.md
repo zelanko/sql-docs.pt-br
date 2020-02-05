@@ -11,10 +11,10 @@ ms.assetid: bcd945ba-5d81-4124-9a2b-d87491c2a369
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a0c867d9acba6542d90f72595fa0f71ab6d62e64
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68026054"
 ---
 # <a name="smo-and-dmo-xps-server-configuration-option"></a>Opção de configuração de servidor XPs SMO e DMO
@@ -31,7 +31,7 @@ ms.locfileid: "68026054"
 |0|Os SMO XPs não estão disponíveis.|  
 |1|Os SMO XPs estão disponíveis. Esse é o padrão.|  
   
- A configuração é efetuada imediatamente.  
+ A configuração entra em vigor imediatamente.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir habilita os procedimentos armazenados estendidos do SMO.  

@@ -11,10 +11,10 @@ ms.assetid: 7f5dfdc1-6693-4b0d-8691-2d6f06913ed9
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 6fc55d4d0e68d83db7c7684d9c0d5cee3982a6c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68086907"
 ---
 # <a name="policy-management-node-object-explorer"></a>Nó de gerenciamento de política (Pesquisador de Objetos)
@@ -23,13 +23,13 @@ ms.locfileid: "68086907"
   
 -   [Caixa de diálogo Criar Nova Condição ou Abrir Condição, Página Geral](../../relational-databases/policy-based-management/create-new-condition-or-open-condition-dialog-box-general-page.md)  
   
--   [Caixa de diálogo Abrir Condição, página Políticas Dependentes](../../relational-databases/policy-based-management/open-condition-dialog-box-dependent-policies-page.md)  
+-   [Caixa de diálogo Abrir Condição, página de Políticas Dependentes](../../relational-databases/policy-based-management/open-condition-dialog-box-dependent-policies-page.md)  
   
 -   [Caixa de diálogo Edição Avançada &#40;Condição&#41;](../../relational-databases/policy-based-management/advanced-edit-condition-dialog-box.md)  
   
--   [Caixas de diálogo Criar Nova Política ou Abrir política, Página geral](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-general-page.md)  
+-   [Caixa de diálogo Criar Nova Política ou Abrir Política, página Geral](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-general-page.md)  
   
--   [Caixas de diálogo Criar Nova Política ou Abrir Política, página Descrição](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-description-page.md)  
+-   [Caixa de diálogo Criar Nova Política ou Abrir Política, página Descrição](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-description-page.md)  
   
 -   [Caixa de diálogo Criar Nova Condição ou Abrir Condição, página de Descrição](../../relational-databases/policy-based-management/create-new-condition-or-open-condition-dialog-box-description-page.md)  
   

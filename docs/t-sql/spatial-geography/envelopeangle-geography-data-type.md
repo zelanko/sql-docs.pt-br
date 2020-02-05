@@ -18,10 +18,10 @@ ms.assetid: 14a7ba15-168c-4b08-ba3d-951d73092ac7
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: e3289956dd79c852eef6534ad1f72623ad4dcaa6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066459"
 ---
 # <a name="envelopeangle-geography-data-type"></a>EnvelopeAngle (tipo de dados geography)
@@ -41,9 +41,9 @@ EnvelopeAngle( )
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **float**  
   
- Tipo de retorno CLR: **SqlDouble**  
+ Tipo de retorno do CLR: **SqlDouble**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse método retorna um ponto na instância de **geography** em graus. Quando usado com EnvelopeCenter(), `EnvelopeAngle()` retorna um círculo delimitador de uma instância de **geography**.  
   
  No [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], esse método foi estendido para as instâncias de **FullGlobe**.  

@@ -13,10 +13,10 @@ ms.assetid: d664c2e5-dd0c-4da8-b27d-aa4ee4fc0ffd
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: dc505c0fe87a298ba4a9015f467119c1b7d6d3f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68021718"
 ---
 # <a name="select-source-dialog-box"></a>Caixa de diálogo Selecionar Origem
@@ -58,7 +58,7 @@ ms.locfileid: "68021718"
 > [!IMPORTANT]  
 >  Quando possível, use a Autenticação do Windows.  
   
- **User name**  
+ **Nome de usuário**  
  Digite o nome do usuário com o qual se conectar. Essa opção só estará disponível se você tiver optado por conectar-se usando a Autenticação do Windows.  
   
  **Logon**  

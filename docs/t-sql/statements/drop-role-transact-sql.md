@@ -24,10 +24,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3b3227fa8aa15b2254e6f4a38caa0e5ac60163a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68043923"
 ---
 # <a name="drop-role-transact-sql"></a>DROP ROLE (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68043923"
 
   Remove uma função do banco de dados.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -60,7 +60,7 @@ DROP ROLE role_name
  *role_name*  
  Especifica a função a ser descartada do banco de dados.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  As funções que possuem itens protegíveis não podem ser descartadas do banco de dados. Para descartar uma função de banco de dados que possui protegíveis, é necessário primeiro transferir a propriedade dos protegíveis ou descartá-los do banco de dados. As funções que possuem membros não podem ser descartadas do banco de dados. Para descartar uma função que possui membros, você deve primeiro remover os membros da função.  
   
  Para remover membros de uma função de banco de dados, use [ALTER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-role-transact-sql.md).  

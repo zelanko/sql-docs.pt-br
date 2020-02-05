@@ -11,10 +11,10 @@ ms.assetid: 443d67e4-1c7f-41d7-b18d-2d657f58c22a
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: c00e408454b4bf5b4b907e517fa430212739734e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006987"
 ---
 # <a name="sql-server-xtp-transactions"></a>Transações XTP do SQL Server
@@ -24,7 +24,7 @@ ms.locfileid: "68006987"
   
  Esta tabela descreve os contadores **Transações de XTP do SQL Server** .  
   
-|Contador|Descrição|  
+|Contador|DESCRIÇÃO|  
 |-------------|-----------------|  
 |**Anulações em cascata/s**|O número de transações que foram revertidas devido a uma reversão de dependência de confirmação (em média), por segundo.|  
 |**Dependências de confirmação realizadas/s**|O número de dependências de confirmação realizadas por transações (em média), por segundo.|  

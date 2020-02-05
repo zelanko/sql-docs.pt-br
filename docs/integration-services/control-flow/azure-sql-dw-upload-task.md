@@ -14,10 +14,10 @@ ms.assetid: eef82c89-228a-4dc7-9bd0-ea00f57692f5
 author: Lingxi-Li
 ms.author: lingxl
 ms.openlocfilehash: 584bd3a22c24dfccf8fab562202d66ce8689b55b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67947192"
 ---
 # <a name="azure-sql-dw-upload-task"></a>Tarefa de Upload do SQL DW do Azure
@@ -40,13 +40,13 @@ Na página **Geral** , defina as propriedades a seguir.
 **SourceType** especifica o tipo de armazenamento de dados de origem. Selecione um dos seguintes tipos:
 
 * **FileSystem:** dados de origem residem no sistema de arquivos local.
-* **BlobStorage:** dados de origem residem no Armazenamento de Blobs do Azure.
+* **BlobStorage:** Dados de origem residem no Armazenamento de Blobs do Azure.
 
 A seguir, as propriedades para cada tipo de fonte.
 
 ### <a name="filesystem"></a>FileSystem
 
-Campo|Descrição
+Campo|DESCRIÇÃO
 -----|-----------
 LocalDirectory|Especifica o diretório local que contém os arquivos de dados a serem carregados.
 Recursivamente|Especifica se os subdiretórios devem ser pesquisados recursivamente.
@@ -67,7 +67,7 @@ HashColumnName|Especifica a coluna usada para a distribuição da tabela de hash
 
 ### <a name="blobstorage"></a>BlobStorage
 
-Campo|Descrição
+Campo|DESCRIÇÃO
 -----|-----------
 AzureStorageConnection|Especifica um gerenciador de conexões do Armazenamento do Azure.
 BlobContainer|Especifica o nome do contêiner de blob em que os dados de origem residem.

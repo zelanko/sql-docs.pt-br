@@ -10,12 +10,12 @@ ms.author: maghan
 ms.custom: seodec18
 ms.date: 12/26/2019
 ms.reviewer: alayu; sstein
-ms.openlocfilehash: e0094ffaaa1be646b470547277026385c9dae24e
-ms.sourcegitcommit: 0d5b0aeee2a2b34fd448aec2e72c0fa8be473ebe
+ms.openlocfilehash: c5c75b2fda96d970b243161636d791029e311330
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75727023"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76516487"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Baixar e instalar o Azure Data Studio
 
@@ -43,12 +43,12 @@ O *instalador do usuário* é recomendado porque não exige privilégios de admi
 
 **Instalador do usuário** (recomendado)
 
-1. Baixe e execute o [instalador do *usuário* do [!INCLUDE[name-sos](../includes/name-sos-short.md)] para Windows](https://go.microsoft.com/fwlink/?linkid=2113530).
+1. Baixe e execute o [instalador do [!INCLUDE[name-sos](../includes/name-sos-short.md)]usuário*do* para Windows](https://go.microsoft.com/fwlink/?linkid=2113530).
 2. Inicie o aplicativo [!INCLUDE[name-sos-short](../includes/name-sos-short.md)].
 
 **Instalador do sistema**
 
-1. Baixe e execute o [instalador do *sistema* do [!INCLUDE[name-sos](../includes/name-sos-short.md)] para Windows](https://go.microsoft.com/fwlink/?linkid=2113628).
+1. Baixe e execute o [instalador do [!INCLUDE[name-sos](../includes/name-sos-short.md)]sistema*do* para Windows](https://go.microsoft.com/fwlink/?linkid=2113628).
 2. Inicie o aplicativo [!INCLUDE[name-sos-short](../includes/name-sos-short.md)].
 
 **arquivo zip**
@@ -57,13 +57,11 @@ O *instalador do usuário* é recomendado porque não exige privilégios de admi
 2. Procure o arquivo baixado e extraia-o.
 3. Execute `\azuredatastudio-windows\azuredatastudio.exe`
 
-
 ## <a name="get-azure-data-studio-for-macos"></a>Obter o Azure Data Studio para macOS
 
 1. Baixe o [[!INCLUDE[name-sos](../includes/name-sos-short.md)] para macOS](https://go.microsoft.com/fwlink/?linkid=2113528).
 2. Para expandir o conteúdo do zip, clique duas vezes nele.
 3. Para disponibilizar o [!INCLUDE[name-sos](../includes/name-sos-short.md)] no *Launchpad*, arraste *Azure Data Studio.app* para a pasta *Aplicativos*.
-
 
 ## <a name="get-azure-data-studio-for-linux"></a>Obter o Azure Data Studio para Linux
 
@@ -146,10 +144,12 @@ O [!INCLUDE[name-sos](../includes/name-sos-short.md)] é executado no Windows, n
 - Windows Server 2008 R2 (64 bits)
 
 ### <a name="macos"></a>macOS
+
 - macOS 10.13 High Sierra
 - macOS 10.12 Sierra
 
 ### <a name="linux"></a>Linux
+
 - Red Hat Enterprise Linux 7.4
 - Red Hat Enterprise Linux 7.3
 - SUSE Linux Enterprise Server v12 SP2
@@ -164,6 +164,7 @@ O [!INCLUDE[name-sos](../includes/name-sos-short.md)] é executado no Windows, n
 |             |           |            |
 
 ## <a name="check-for-updates"></a>Verificar atualizações
+
 Para verificar se há atualizações mais recentes, clique no ícone de engrenagem na parte inferior esquerda da janela e clique em **Verificar se há atualizações**
 
 ## <a name="supported-sql-offerings"></a>Ofertas de SQL com suporte
@@ -173,9 +174,8 @@ Para verificar se há atualizações mais recentes, clique no ícone de engrenag
 ## <a name="upgrade-from-sql-operations-studio"></a>Atualização do SQL Operations Studio
 
 Caso você ainda esteja usando o SQL Operations Studio, precisará fazer a atualização para o Azure Data Studio. O SQL Operations Studio era o nome da versão prévia e a versão prévia do Azure Data Studio. Em setembro de 2018, [alteramos o nome para Azure Data Studio](https://cloudblogs.microsoft.com/sqlserver/2018/09/25/azure-data-studio-for-sql-server/) e liberamos a versão GA (Disponibilidade Geral). Como o SQL Operations Studio deixou de ser atualizado ou ter suporte, solicitamos que todos os usuários do SQL Operations Studio baixem a última versão do Azure Data Studio para obter os recursos, as atualizações de segurança e as correções mais recentes.
- 
-Ao fazer a atualização da versão prévia antiga para o Azure Data Studio mais recente, você perderá as configurações e as extensões atuais. Para mover as configurações, siga as instruções da seguinte seção *Mover as configurações de usuário*:
 
+Ao fazer a atualização da versão prévia antiga para o Azure Data Studio mais recente, você perderá as configurações e as extensões atuais. Para mover as configurações, siga as instruções da seguinte seção *Mover as configurações de usuário*:
 
 ## <a name="move-user-settings"></a>Mover as configurações de usuário
 
@@ -203,6 +203,7 @@ Caso deseje mover as configurações personalizadas, os atalhos de teclado ou os
 ## <a name="next-steps"></a>Próximas etapas
 
 Confira um dos seguintes inícios rápidos para começar:
+
 - [Conectar-se ao SQL Server e consultá-lo](quickstart-sql-server.md)
 - [Conectar-se a um Banco de Dados SQL do Azure e consultá-lo](quickstart-sql-database.md)
 - [Conectar-se ao Data Warehouse do Azure e consultá-lo](quickstart-sql-dw.md)

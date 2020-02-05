@@ -52,12 +52,12 @@ ms.assetid: a0df1ac2-6699-4ac0-8f79-f362f23496f1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0a58f211c1a838cb0089cbc2f3e5e156936d1c7e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5fd8173f0c29855fc4553dedcd9ac47ddc909f57
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67914747"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76909826"
 ---
 # <a name="odbc-scalar-functions-transact-sql"></a>Funções escalares ODBC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -70,9 +70,9 @@ ms.locfileid: "67914747"
 ## <a name="functions"></a>Funções  
  As tabelas a seguir listam funções escalares ODBC que não são duplicadas no [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-### <a name="string-functions"></a>Funções de cadeia de caracteres  
+### <a name="string-functions"></a>Funções de Cadeia de Caracteres  
   
-|Função|Descrição|  
+|Função|DESCRIÇÃO|  
 |--------------|-----------------|  
 |BIT_LENGTH( string_exp ) (ODBC 3.0)|Retorna o comprimento em bits da expressão de cadeia de caracteres.<br /><br /> Retorna o tamanho interno do tipo de dados fornecido, sem converter string_exp em cadeia de caracteres.|  
 |CONCAT( string_exp1,string_exp2) (ODBC 1.0)|Retorna uma cadeia de caracteres que é o resultado da concatenação de string_exp2 com string_exp1. A cadeia de caracteres resultante é dependente de DBMS. Por exemplo, se a coluna representada por string_exp1 tivesse um valor NULL, DB2 retornaria NULL, mas o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retornaria a cadeia de caracteres non-NULL.|  
@@ -80,13 +80,13 @@ ms.locfileid: "67914747"
   
 ### <a name="numeric-function"></a>Função numérica  
   
-|Função|Descrição|  
+|Função|DESCRIÇÃO|  
 |--------------|-----------------|  
 |TRUNCATE( numeric_exp, integer_exp) (ODBC 2.0)|Retorna numeric_exp truncado com posições integer_exp à direita da casa decimal. Se integer_exp for negativo, numeric_exp será truncado com as posições &#124;integer_exp&#124; à esquerda da vírgula decimal.|  
   
 ### <a name="time-date-and-interval-functions"></a>Funções de hora, data e intervalo  
   
-|Função|Descrição|  
+|Função|DESCRIÇÃO|  
 |--------------|-----------------|  
 |CURRENT_DATE( ) (ODBC 3.0)|Retorna a data atual.|  
 |CURDATE( ) (ODBC 3.0)|Retorna a data atual.|  
@@ -104,7 +104,7 @@ ms.locfileid: "67914747"
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-an-odbc-function-in-a-stored-procedure"></a>A. Usando uma função ODBC em um procedimento armazenado  
+### <a name="a-using-an-odbc-function-in-a-stored-procedure"></a>a. Usando uma função ODBC em um procedimento armazenado  
  O seguinte exemplo usa uma função ODBC em um procedimento armazenado:  
   
 ```  
@@ -223,7 +223,7 @@ SELECT {fn BIT_LENGTH( @string_exp )};
 SELECT {fn CONCAT( 'CONCAT ','returns a character string')};  
 -- Returns CONCAT returns a character string  
 SELECT {fn CURRENT_DATE( )};  
--- Returns todays date  
+-- Returns today's date  
 SELECT {fn CURRENT_TIME(6)};  
 -- Returns the time  
   

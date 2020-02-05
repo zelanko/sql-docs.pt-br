@@ -17,10 +17,10 @@ ms.assetid: d2ec1b1a-c745-4741-b57c-6fdb524a154c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1c3ccadbe443ca555e5386ea3d3434405ae97461
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291476"
 ---
 # <a name="dqs-cleansing-transformation"></a>Transformação de Limpeza DQS
@@ -47,9 +47,9 @@ ms.locfileid: "71291476"
   
 ## <a name="related-tasks"></a>Related Tasks  
   
--   [Abrir projetos do Integration Services no cliente Data Quality](../../../data-quality-services/open-integration-services-projects-in-data-quality-client.md)  
+-   [Abrir projetos do Integration Services no Data Quality Client](../../../data-quality-services/open-integration-services-projects-in-data-quality-client.md)  
   
--   [Import Cleansing Project Values into a Domain](../../../data-quality-services/import-cleansing-project-values-into-a-domain.md)  
+-   [Importar valores de projeto de limpeza para um domínio](../../../data-quality-services/import-cleansing-project-values-into-a-domain.md)  
   
 -   [Aplicar regras de qualidade de dados à fonte de dados](../../../integration-services/data-flow/transformations/apply-data-quality-rules-to-data-source.md)  
   
@@ -105,7 +105,7 @@ ms.locfileid: "71291476"
   
  Os valores válidos são os seguintes:  
   
--   **Falha no Componente**, que indica que houve falha na transformação e os dados de entrada não são inseridos no banco de dados do Data Quality Services. Este é o valor padrão.  
+-   **Falha no Componente**, que indica que houve falha na transformação e os dados de entrada não são inseridos no banco de dados do Data Quality Services. Esse é o valor padrão.  
   
 -   **Redirecionar Linha**, que indica que os dados de entrada não estão inseridos no banco de dados do Data Quality Services e são redirecionados para a saída do erro.  
   

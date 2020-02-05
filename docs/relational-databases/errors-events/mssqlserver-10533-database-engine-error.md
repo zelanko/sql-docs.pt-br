@@ -12,22 +12,22 @@ ms.assetid: cc2fbdab-7b90-415f-a1f9-066824344283
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 061afedceeafdaf2660bf46180a80105d85e2a39
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68060742"
 ---
-# <a name="mssqlserver10533"></a>MSSQLSERVER_10533
+# <a name="mssqlserver_10533"></a>MSSQLSERVER_10533
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|10533|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|PG_NAME_TOO_BIG|  
 |Texto da mensagem|Não é possível criar o guia de plano '%.*ls' porque seu nome tem mais de 124 caracteres, o número máximo permitido. Especifique um nome com menos de 125 caracteres.|  

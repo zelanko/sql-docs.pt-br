@@ -13,10 +13,10 @@ ms.assetid: da47d75e-291a-4305-acef-4b0aaf5215da
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 592fa533d6c6d6c518f1dcaaa3e70da2808b93b9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67947022"
 ---
 # <a name="database-properties-query-store-page"></a>Propriedades do banco de dados (página Repositório de Consultas)
@@ -29,7 +29,7 @@ ms.locfileid: "67947022"
   
 ## <a name="options"></a>Opções  
  Modo de Operação  
- Os valores válidos são OFF, READ_ONLY e READ_WRITE. OFF desabilita o Repositório de Consultas. No modo READ_WRITE, o repositório de consultas coleta e persiste as informações das estatísticas de execução do plano de consulta e do tempo de execução. No modo READ_ONLY, as informações podem ser lidas do repositório de consultas, mas novas informações não são adicionadas. Se o espaço máximo alocado do repositório de consultas tiver se esgotado, o repositório de consultas alterará o modo de operação para READ_ONLY.  
+ Os valores válidos são OFF, READ_ONLY e READ_WRITE. OFF desabilita o Repositório de Consultas. No modo READ_WRITE, o repositório de consultas coleta e persiste as informações das estatísticas de execução do plano de consulta e do runtime. No modo READ_ONLY, as informações podem ser lidas do repositório de consultas, mas novas informações não são adicionadas. Se o espaço máximo alocado do repositório de consultas tiver se esgotado, o repositório de consultas alterará o modo de operação para READ_ONLY.  
   
  Modo de Operação (Real)  
  Descreve o modo de operação do repositório de consultas.  
@@ -64,9 +64,9 @@ ms.locfileid: "67947022"
   
  O gráfico à direita mostra a parte da cota do repositório de consultas usada no momento. Observe que a cota não é mostrada no gráfico à esquerda. A cota pode exceder o tamanho atual do banco de dados.  
   
-## <a name="remarks"></a>Remarks  
- O recurso repositório de consultas fornece aos DBAs insights sobre escolha e desempenho do plano de consulta. Ele simplifica a solução de problemas, permitindo que você localize rapidamente diferenças de desempenho causadas por alterações nos planos de consulta. O recurso captura automaticamente um histórico de consultas, planos e estatísticas de tempo de execução e os mantém para sua análise. Ele separa os dados por janelas de tempo, permitindo que você veja os padrões de uso do banco de dados e entenda quando as alterações aos planos de consulta ocorreram no servidor. O repositório de consultas pode ser configurado usando essa página de propriedades do banco de dados do repositório de consultas, ou usando a opção [ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) . O repositório de consultas apresenta informações usando uma caixa de diálogo do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] . Para obter mais informações sobre o repositório de consultas, veja [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md).  
+## <a name="remarks"></a>Comentários  
+ O recurso repositório de consultas fornece aos DBAs insights sobre escolha e desempenho do plano de consulta. Ele simplifica a solução de problemas, permitindo que você localize rapidamente diferenças de desempenho causadas por alterações nos planos de consulta. O recurso captura automaticamente um histórico de consultas, planos e estatísticas de runtime e os mantém para sua análise. Ele separa os dados por janelas de tempo, permitindo que você veja os padrões de uso do banco de dados e entenda quando as alterações aos planos de consulta ocorreram no servidor. O repositório de consultas pode ser configurado usando essa página de propriedades do banco de dados do repositório de consultas, ou usando a opção [ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) . O repositório de consultas apresenta informações usando uma caixa de diálogo do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] . Para obter mais informações sobre o repositório de consultas, veja [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Procedimentos armazenados do repositório de consultas &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
+ [Procedimentos armazenados do Repositório de Consultas &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
  [Exibições de catálogo do repositório de consultas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)  

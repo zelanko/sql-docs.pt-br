@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d4bd1270c0dde3031054dd4e0aa3e0719a77dfad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914901"
 ---
 # <a name="ntile-transact-sql"></a>NTILE (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "67914901"
 
   Distribui as linhas de uma partição ordenada em um número de grupos especificado. Os grupos são numerados, iniciando em um. Para cada linha, NTILE retorna o número do grupo ao qual a linha pertence.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -54,14 +54,14 @@ NTILE (integer_expression) OVER ( [ <partition_by_clause> ] < order_by_clause > 
 ## <a name="return-types"></a>Tipos de retorno  
  **bigint**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Se o número de linhas em uma partição não for divisível por *integer_expression*, isso causará grupos de dois tamanhos que diferem por um membro. Grupos maiores aparecem antes de grupos menores na ordem especificada pela cláusula OVER. Por exemplo, se o número total de linhas for 53 e o número de grupos for cinco, os três primeiros grupos terão 11 linhas e os dois grupos restantes terão 10 linhas cada. Por outro lado, se o número total de linhas for divisível pelo número de grupos, as linhas serão igualmente distribuídas entre os grupos. Por exemplo, se o número total de linhas for 50 e houver cinco grupos, cada bucket conterá 10 linhas.  
   
  NTILE é não determinística. Para obter mais informações, veja [Funções determinísticas e não determinísticas](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-dividing-rows-into-groups"></a>A. Dividindo linhas em grupos  
+### <a name="a-dividing-rows-into-groups"></a>a. Dividindo linhas em grupos  
  O exemplo a seguir divide linhas em quatro grupos de funcionários com base nas vendas no ano até o momento. Como o número total de linhas não é divisível pelo número de grupos, os dois primeiros grupos terão quatro linhas e os grupos restantes terão três linhas cada.  
   
 ```  

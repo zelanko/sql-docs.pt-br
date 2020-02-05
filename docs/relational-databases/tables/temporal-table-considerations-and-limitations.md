@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 516159955d7e4d69d52f1f462c818e3c005f30b3
-ms.sourcegitcommit: d1bc0dd1ac626ee7034a36b81554258994d72c15
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70958334"
 ---
 # <a name="temporal-table-considerations-and-limitations"></a>Considerações e limitações da tabela temporal
@@ -49,8 +49,8 @@ Considere o seguinte ao trabalhar com tabelas temporais:
 - Os gatilhos**INSTEAD OF** não são permitidos na tabela atual ou de histórico para evitar a anulação da lógica de DML. Os gatilhos**AFTER** são permitidos somente na tabela atual. Eles são bloqueados na tabela de histórico para evitar a anulação da lógica de DML.
 - O uso de tecnologias de replicação é limitado:
 
-  - **Always On:** suporte completo
-  - **Captura de dados de alterações e Acompanhamento de dados de alterações:** suporte apenas na tabela atual
+  - **Sempre ativo:** com suporte total
+  - **Captura de Dados de Alteração e Controle de Dados de Alteração:** com suporte apenas na tabela atual
   - **Instantâneo e replicação transacional**: com suporte apenas para um único publicador sem o temporal habilitado e um assinante com o temporal habilitado. Nesse caso, o editor é usado para uma carga de trabalho OLTP, enquanto o assinante serve para o descarregamento de relatórios (incluindo consulta 'AS OF'). Não há suporte para o uso de vários assinantes porque esse cenário pode levar a dados temporais inconsistentes e cada um deles depende do relógio do sistema local.
   - **Replicação de mesclagem:** não tem suporte para tabelas temporais
 

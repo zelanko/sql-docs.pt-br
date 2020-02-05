@@ -33,10 +33,10 @@ ms.assetid: b34df777-79b0-49a5-88db-b99998479a5d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 7fb31db6e9b438fbab74a8b23462d8c7dc897d46
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68059760"
 ---
 # <a name="loginproperty-transact-sql"></a>LOGINPROPERTY (Transact-SQL)
@@ -44,7 +44,7 @@ ms.locfileid: "68059760"
 
   Retorna informações sobre configurações de política de logon.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -60,7 +60,7 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
  *propertyname*  
  É uma expressão que contém as informações de propriedade a serem retornadas para o logon. *propertyname* pode ser um dos valores a seguir.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |**BadPasswordCount**|Retorna o número de tentativas consecutivas de fazer logon com uma senha incorreta.|  
 |**BadPasswordTime**|Retorna a hora da última tentativa de fazer logon com uma senha incorreta.|  
@@ -76,7 +76,7 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
 |**PasswordLastSetTime**|Retorna a data em que a senha atual foi definida.|  
 |**PasswordHashAlgorithm**|Retorna o algoritmo usado para o hash da senha.|  
   
-## <a name="returns"></a>Retorna  
+## <a name="returns"></a>Retornos  
  O tipo de dado depende do valor solicitado.  
   
  **IsLocked**, **IsExpired** e **IsMustChange** são do tipo **int**.  
@@ -111,7 +111,7 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
   
 -   NULL se o logon não for um logon válido do SQL Server  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Essa função interna retorna informações sobre as configurações de política de senha de um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os nomes das propriedades não diferenciam maiúsculas e minúsculas; assim, nomes de propriedades como **BadPasswordCount** e **badpasswordcount** são equivalentes. Os valores das propriedades **PasswordHash, PasswordHashAlgorithm** e **PasswordLastSetTime** estão disponíveis em todas as configurações compatíveis do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mas as outras propriedades estarão disponíveis apenas se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for executado no [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] e tanto CHECK_POLICY como CHECK_EXPIRATION estiverem habilitadas. Para obter mais informações, consulte [Password Policy](../../relational-databases/security/password-policy.md).  
   
 ## <a name="permissions"></a>Permissões  
@@ -119,8 +119,8 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-checking-whether-a-login-must-change-its-password"></a>A. Verificando se um logon deve alterar sua senha  
- O exemplo a seguir verifica se o logon `John3` do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve alterar sua senha na próxima vez que se conectar a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+### <a name="a-checking-whether-a-login-must-change-its-password"></a>a. Verificando se um logon deve alterar sua senha  
+ O exemplo a seguir verifica se o logon [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do `John3` deve alterar sua senha na próxima vez que se conectar a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ```  
 SELECT LOGINPROPERTY('John3', 'IsMustChange');  
@@ -128,7 +128,7 @@ GO
 ```  
   
 ### <a name="b-checking-whether-a-login-is-locked-out"></a>B. Verificando se um logon está bloqueado  
- O exemplo a seguir verifica se o logon `John3` do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está bloqueado.  
+ O exemplo a seguir verifica se o logon [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do `John3` está bloqueado.  
   
 ```  
 SELECT LOGINPROPERTY('John3', 'IsLocked');  

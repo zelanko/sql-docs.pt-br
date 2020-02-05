@@ -18,10 +18,10 @@ ms.assetid: faace8a3-daa9-4208-a2cd-4249eb32175c
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: f0bb90a3dd13ffd245c1cac5a9ee1610055aae55
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67929280"
 ---
 # <a name="drop-server-audit--transact-sql"></a>DROP SERVER AUDIT (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "67929280"
 
   Descarta um objeto de auditoria de servidor usando o recurso SQL Server Audit. Para obter mais informações sobre o SQL Server Audit, consulte [SQL Server Audit &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,7 +39,7 @@ DROP SERVER AUDIT audit_name
     [ ; ]  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Você deve definir o estado de uma auditoria para a opção OFF para efetuar alterações em uma auditoria. Se DROP AUDIT for executada quando uma auditoria estiver habilitada com qualquer opção diferente de STATE=OFF, você receberá uma mensagem de erro MSG_NEED_AUDIT_DISABLED.  
   
  Uma DROP SERVER AUDIT remove os metadados da auditoria, mas não os dados de auditoria que foram coletados antes da emissão do comando.  

@@ -18,10 +18,10 @@ ms.assetid: da8f45d4-4f9c-405d-b883-760eb5344a71
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 0b91fdde3c6940ffa0a7f2e77591e05578e005c4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67894912"
 ---
 # <a name="stissimple-geometry-data-type"></a>STIsSimple (tipo de dados geometry)
@@ -39,9 +39,9 @@ Retorna 1 se uma instância de **geometry** é simples, conforme definido pelo O
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
- Tipo de retorno CLR: **SqlBoolean**  
+ Tipo de retorno do CLR: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Para ser simples, uma instância de **geometry** deve atender aos seguintes requisitos:  
   
 -   Não deve haver interseção de nenhuma figura da instância consigo mesma, exceto em seus pontos de extremidade.  

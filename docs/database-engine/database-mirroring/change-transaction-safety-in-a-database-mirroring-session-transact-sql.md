@@ -14,10 +14,10 @@ ms.assetid: 8b03bb82-8589-4558-8545-9942fe008391
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 3ba0b574fea1974ab93c5cecf4346942df6c4a2c
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75247488"
 ---
 # <a name="change-transaction-safety-in-a-database-mirroring-session-transact-sql"></a>Alterar a segurança da transação em uma sessão de espelhamento de banco de dados (Transact-SQL)

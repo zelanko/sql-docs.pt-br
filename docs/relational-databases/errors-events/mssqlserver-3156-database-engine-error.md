@@ -12,22 +12,22 @@ ms.assetid: 345d8ed4-177e-4ec3-bab3-25d30000e323
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e8d2c9a265e89ad6c09d89da2e813f9fffbd3379
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68001854"
 ---
-# <a name="mssqlserver3156"></a>MSSQLSERVER_3156
+# <a name="mssqlserver_3156"></a>MSSQLSERVER_3156
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|Nome do Produto|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |ID do evento|3156|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|LDDB_CANT_WRITE|  
 |Texto da mensagem|O arquivo '%ls' não pode ser restaurado para '%ls'. Use WITH MOVE para identificar um local válido para o arquivo.|  
@@ -35,7 +35,7 @@ ms.locfileid: "68001854"
 ## <a name="explanation"></a>Explicação  
 Esta mensagem geral identifica os nomes de arquivo lógicos ou físicos dos arquivos que não puderam ser restaurados devido a um problema com o local especificado.  
   
-### <a name="possible-causes"></a>Causas possíveis  
+### <a name="possible-causes"></a>Possíveis causas  
 As causas possíveis incluem as seguintes:  
   
 -   Talvez seja preciso acessar o diretório especificado do Windows.  

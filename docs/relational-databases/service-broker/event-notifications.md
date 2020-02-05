@@ -14,10 +14,10 @@ ms.assetid: 4da73ca1-6c06-4e96-8ab8-2ecba30b6c86
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: f5433d6082f2860805368f636383eb2e17959e77
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68048864"
 ---
 # <a name="event-notifications"></a>Notificações de eventos
@@ -69,7 +69,7 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
 |Gatilhos DML são de propriedade do mesmo proprietário das tabelas a que se aplicam.|O proprietário de uma notificação de eventos em uma fila pode ser diferente do proprietário do objeto a que se aplica.|  
 |Gatilhos têm suporte à cláusula EXECUTE AS.|Notificações de eventos não têm suporte à cláusula EXECUTE AS.|  
 |Informações de eventos de gatilhos DDL podem ser capturadas por meio da função EVENTDATA, que retorna um tipo de dados **xml** .|Notificações de eventos enviam informações **xml** sobre o evento para um serviço de Service Broker. As informações são formatadas no mesmo esquema da função EVENTDATA.|  
-|Metadados sobre gatilhos localizam-se nas exibições de catálogo **sys.triggers** e **sys.server_triggers** .|Os metadados sobre notificações de evento localizam-se nas exibições de catálogo **sys.event_notifications** e **sys.server_event_notifications**.|  
+|Metadados sobre gatilhos localizam-se nas exibições de catálogo **sys.triggers** e **sys.server_triggers** .|Os metadados sobre notificações de evento localizam-se nas exibições de catálogo **sys.event_notifications** e **sys.server_event_notifications** .|  
   
 ### <a name="event-notifications-vs-sql-trace"></a>Notificações de evento x Rastreamento do SQL  
  A tabela a seguir compara e contrasta o uso de notificações de evento e do Rastreamento do SQL para monitorar eventos de servidor.  

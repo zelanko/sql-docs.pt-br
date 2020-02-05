@@ -16,10 +16,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 608b6cc3ee887a8d17b30a027a7669d51c8822ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67929315"
 ---
 # <a name="bufferwithcurves-geometry-data-type"></a>BufferWithCurves (tipo de dados geometria)
@@ -41,7 +41,7 @@ ms.locfileid: "67929315"
 ## <a name="return-types"></a>Tipos de retorno  
 Tipo de retorno do SQL Server: **geometry**  
   
- Tipo de retorno CLR: **SqlGeometry**  
+ Tipo de retorno do CLR: **SqlGeometry**  
   
 ## <a name="exceptions"></a>Exceções  
  Os critérios a seguir gerarão uma **ArgumentException**.  
@@ -52,7 +52,7 @@ Tipo de retorno do SQL Server: **geometry**
   
 -   **NULL** é passado ao método, como `@g.BufferWithCurves(NULL)`  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  A ilustração a seguir mostra um exemplo de uma instância de geometria retornado por este método.  
   
  ![BufferedCurve](../../t-sql/spatial-geometry/media/bufferedcurve.gif)
@@ -62,7 +62,7 @@ Tipo de retorno do SQL Server: **geometry**
 |Valor de distância|Dimensões do tipo|Tipo espacial retornado|  
 |--------------------|---------------------|---------------------------|  
 |distância < 0|Zero ou um|Instância de **GeometryCollection** vazia|  
-|distância < 0|Dois ou mais|Uma instância de **CurvePolygon** ou **GeometryCollection** com um buffer negativo. **Observação:** Um buffer negativo pode criar uma **GeometryCollection** vazia|  
+|distância < 0|Dois ou mais|Uma instância de **CurvePolygon** ou **GeometryCollection** com um buffer negativo. **Observação:** um buffer negativo pode criar uma **GeometryCollection** vazia|  
 |distância = 0|Todas as dimensões|Cópia da instância de **geometry** de invocação|  
 |distância > 0|Todas as dimensões|Instância de **CurvePolygon** ou **GeometryCollection**|  
   
@@ -75,7 +75,7 @@ Tipo de retorno do SQL Server: **geometry**
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-calling-bufferwithcurves-with-a-parameter-value--0-on-one-dimensional-geometry-instance"></a>A. Como chamar BufferWithCurves() com um valor de parâmetro < 0 em uma instância de geometria unidimensional  
+### <a name="a-calling-bufferwithcurves-with-a-parameter-value--0-on-one-dimensional-geometry-instance"></a>a. Como chamar BufferWithCurves() com um valor de parâmetro < 0 em uma instância de geometria unidimensional  
  O exemplo a seguir retorna uma instância `GeometryCollection` vazia:  
   
 ```

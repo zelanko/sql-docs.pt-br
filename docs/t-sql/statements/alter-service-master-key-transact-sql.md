@@ -25,10 +25,10 @@ ms.assetid: a1e9be0e-4115-47d8-9d3a-3316d876a35e
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 29a30f6b8d65cf1b821c93de0f051925b3cb6626
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68112865"
 ---
 # <a name="alter-service-master-key-transact-sql"></a>ALTER SERVICE MASTER KEY (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68112865"
 
   Altera a chave mestra de serviço de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -85,7 +85,7 @@ ALTER SERVICE MASTER KEY
 > [!WARNING]  
 >  Essa opção está obsoleta. Não use. Use o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  A chave mestra de serviço é gerada automaticamente na primeira vez que é necessária para criptografar a senha, as credenciais ou a chave mestra de banco de dados de um servidor vinculado. A chave mestra de serviço que usa a chave da máquina local ou a API de Proteção de Dados do Windows é criptografada. Essa API usa uma chave que é derivada das credenciais do Windows da conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] usa o algoritmo de criptografia AES para proteger a SMK (chave mestra de serviço) e a DMK (chave mestra de banco de dados). O AES é um algoritmo de criptografia mais novo que o 3DES usado em versões anteriores. Depois de atualizar uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] para [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , o SMK e o DMK devem ser regenerados para atualizar as chave mestras para AES. Para obter mais informações sobre como regenerar a DMK, veja [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md).  

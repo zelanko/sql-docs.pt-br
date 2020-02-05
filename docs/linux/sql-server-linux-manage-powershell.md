@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: a3492ce1-5d55-4505-983c-d6da8d1a94ad
 ms.openlocfilehash: 52db0986bb6af34e1dc034d95146a96d3fdcf246
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000122"
 ---
 # <a name="use-powershell-on-windows-to-manage-sql-server-on-linux"></a>Usar o PowerShell no Windows para gerenciar o SQL Server em Linux
@@ -64,8 +64,8 @@ Script     21.1.18102 SqlServer     {Add-SqlAvailabilityDatabase, Add-SqlAvailab
 Vamos usar o PowerShell no Windows para se conectar à sua Instância do SQL Server em Linux e exibir algumas propriedades de servidor.
 
 Copie e cole os comandos a seguir no prompt do PowerShell. Quando você executar esses comandos, o PowerShell:
-- Exibirá uma caixa de diálogo que solicita o nome do host ou o endereço IP de sua instância
-- Exibirá a caixa de diálogo *Solicitação de credenciais do Windows PowerShell*, que solicitará as credenciais. É possível usar o *nome de usuário do SQL* e a *senha do SQL* para se conectar à sua instância do SQL Server em Linux
+- Exibem uma caixa de diálogo que solicita o nome do host ou o endereço IP de sua instância
+- Exibem a caixa de diálogo de *solicitação de credenciais do Windows PowerShell*, que solicitará as credenciais. É possível usar o *nome de usuário do SQL* e a *senha do SQL* para se conectar à sua instância do SQL Server em Linux
 - Usará o cmdlet **Get-SqlInstance** para se conectar ao **Servidor** e exibir algumas propriedades
 
 Opcionalmente, você pode simplesmente substituir a variável `$serverInstance` pelo endereço IP ou pelo nome do host da Instância do SQL Server.
@@ -90,7 +90,7 @@ your_server_instance            14.0.3048  RTM          CU13         Linux      
 > [!NOTE]
 > Se nada for exibido para esses valores, a conexão com a Instância do SQL Server de destino provavelmente terá falhado. Verifique se você pode usar as mesmas informações de conexão para se conectar no SQL Server Management Studio. Em seguida, examine as [recomendações de solução de problemas de conexão](sql-server-linux-troubleshooting-guide.md#connection).
 
-## <a name="using-the-sql-server-powershell-provider"></a>Como usar o provedor SQL Server PowerShell
+## <a name="using-the-sql-server-powershell-provider"></a>Usar o provedor do SQL Server PowerShell
 
 Outra opção para se conectar à Instância do SQL Server é usar o [Provedor do SQL Server PowerShell](https://docs.microsoft.com/sql/powershell/sql-server-powershell-provider).  Esse provedor permite que você navegue pela Instância do SQL Server de forma semelhante a como se estivesse navegando pela estrutura de árvore do Pesquisador de Objetos, mas na cmdline.  Por padrão, esse provedor é apresentado como um PSDrive chamado `SQLSERVER:\`, que você poderá usar para se conectar às Instâncias do SQL Server às quais sua conta de domínio tem acesso e navegar por elas.  Confira [Etapas de configuração](https://docs.microsoft.com/sql/linux/sql-server-linux-active-directory-auth-overview#configuration-steps) para obter informações sobre como configurar a autenticação do Active Directory para o SQL Server em Linux.
 

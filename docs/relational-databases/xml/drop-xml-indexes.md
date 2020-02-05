@@ -15,10 +15,10 @@ ms.assetid: 7591ebea-34af-4925-8553-b2adb5b487c2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7d8162a8eef652a14993f67e4e3931be7362e6f4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67929660"
 ---
 # <a name="drop-xml-indexes"></a>Descartar índices XML
@@ -69,7 +69,7 @@ ON TestTable(Col2)
 GO  
 ```  
   
-## <a name="example-creating-an-xml-index-by-using-the-dropexisting-index-option"></a>Exemplo: Criando um índice XML usando a opção de índice DROP_EXISTING  
+## <a name="example-creating-an-xml-index-by-using-the-drop_existing-index-option"></a>Exemplo: Criando um índice XML usando a opção de índice DROP_EXISTING  
  No exemplo a seguir, um índice XML é criado em uma coluna (`XmlColx`). Em seguida, outro índice XML com o mesmo nome é criado em uma coluna diferente (`XmlColy`). Como a opção `DROP_EXISTING` está especificada, o índice XML existente em (`XmlColx)` ) é descartado e um novo índice XML em (`XmlColy`) é criado.  
   
 ```  

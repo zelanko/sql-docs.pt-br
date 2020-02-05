@@ -16,17 +16,17 @@ ms.assetid: e402f996-c1fb-484a-b804-45c49972f2e0
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 6dfb020026ba431669a0e551d5cb3aa85fbea637
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68095318"
 ---
 # <a name="sql-server-availability-replica"></a>SQL Server, Réplica de Disponibilidade
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   O objeto de desempenho **SQLServer:Availability Replica** contém contadores de desempenho que relatam informações sobre as réplicas de disponibilidade em grupos de disponibilidade AlwaysOn no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Todos os contadores de desempenho de réplica de disponibilidade aplicam-se às réplicas primária e secundárias, com contadores de envio/recebimento refletindo a réplica local. Para a maior parte, a réplica primária envia a maioria dos dados e as réplicas secundárias recebem os dados. Porém, as réplicas secundárias enviam ACKs e algum outro tráfego em segundo plano para as réplicas primárias. Observe que, em uma determinada réplica de disponibilidade, alguns contadores mostrarão um valor igual a zero, dependendo da função atual, primária ou secundária, da réplica local.  
   
-|Nome do contador|Descrição|  
+|Nome do contador|DESCRIÇÃO|  
 |------------------|-----------------|  
 |**Bytes Recebidos da Réplica/s**|O número de bytes recebidos da réplica de disponibilidade por segundo. Pings e atualizações de status gerarão tráfego de rede mesmo em bancos de dados sem atualizações de usuário.|  
 |**Bytes Enviados à Réplica/s**|O número de bytes enviados à réplica de disponibilidade remota por segundo. Na réplica primária, esse é o número de bytes enviados à réplica secundária. Na réplica secundária, esse é o número de bytes enviados à réplica primária.|  

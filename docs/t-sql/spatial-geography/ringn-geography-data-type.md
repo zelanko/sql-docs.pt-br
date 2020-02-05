@@ -18,10 +18,10 @@ ms.assetid: 30f47275-2727-4d22-bbec-c0c54bcb3ac2
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 8de2f7c47572e8f25fdc38ce6bb537dadfc38d7d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042664"
 ---
 # <a name="ringn-geography-data-type"></a>RingN (tipo de dados geography)
@@ -43,9 +43,9 @@ ms.locfileid: "68042664"
 ## <a name="return-value"></a>Valor retornado  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Tipo de retorno CLR: **SqlGeography**  
+ Tipo de retorno do CLR: **SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Se o valor do índice de anéis **n** é menor que 1, esse método gera uma **ArgumentOutOfRangeException.** O valor do índice de anéis deve ser maior ou igual a 1 e deve ser menor ou igual ao número retornado por `NumRings()`.  
   
 ## <a name="examples"></a>Exemplos  

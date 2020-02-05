@@ -33,10 +33,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 37e374d44fc6013c1cdf6b9594d709ff4282f7aa
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70846716"
 ---
 # <a name="create-table-sql-graph"></a>CREATE TABLE (SQL Graph)
@@ -47,7 +47,7 @@ Cria uma nova tabela do SQL Graph como uma tabela de `NODE` ou de `EDGE`.
 > [!NOTE]   
 >  Para obter as instruções Transact-SQL padrão, confira [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md).
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -122,7 +122,7 @@ Este documento lista apenas os argumentos que pertencem ao SQL Graph. Para obter
  ON {partition_scheme | filegroup | "default"}    
  Também pode ser especificado em uma restrição PRIMARY KEY ou UNIQUE. Essas restrições criam índices. Se filegroup for especificado, o índice será armazenado no grupo de arquivos nomeado. Se "default" é especificado ou se ON não é especificado, o índice é armazenado no mesmo grupo de arquivos da tabela. Se a restrição PRIMARY KEY ou UNIQUE criar um índice clusterizado, as páginas de dados da tabela serão armazenadas no mesmo grupo de arquivos que o índice. Se CLUSTERED for especificado ou se a restrição, de outro modo, criar um índice clusterizado e for especificado um partition_scheme diferente do partition_scheme ou do filegroup da definição da tabela ou vice-versa, somente a definição da restrição será respeitada, sendo as demais ignoradas.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 Não há suporte para a criação de uma tabela temporária como uma tabela de nó ou de borda.  
 
 Não há suporte para a criação de uma tabela de borda ou de nó como uma tabela temporal.
@@ -136,7 +136,7 @@ Uma tabela de borda/nó de grafo não particionada não pode ser alterada para u
  
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-create-a-node-table"></a>A. Criar uma tabela de `NODE`
+### <a name="a-create-a-node-table"></a>a. Criar uma tabela de `NODE`
  O exemplo a seguir mostra como criar uma tabela de `NODE`
 
 ```

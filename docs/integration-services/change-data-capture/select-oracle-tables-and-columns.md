@@ -13,10 +13,10 @@ ms.assetid: bf73f80e-a954-4c5f-874e-17fdd4082715
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 62297d0a947b77288db843f0c16bd0799c90bca1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298661"
 ---
 # <a name="select-oracle-tables-and-columns"></a>Selecionar tabelas e colunas Oracle
@@ -27,18 +27,18 @@ ms.locfileid: "71298661"
   Use a página Selecione tabelas e colunas Oracle para selecionar as tabelas do banco de dados de origem Oracle onde as alterações são capturadas. Esta página tem os seguintes elementos:  
   
 ## <a name="options"></a>Opções  
- **Lista de tabelas**  
+ **Lista Tabela**  
  A lista de tabelas tem três colunas:  
   
--   **Nome da tabela Oracle**: o nome da tabela, incluindo o esquema de tabela.  
+-   **Nome da tabela Oracle**: o nome da tabela, incluindo esquema de tabela.  
   
--   **Instância de captura**: o nome da instância de captura usada para nomear objetos do Change Data Capture específicos. A instância de captura não pode ser NULL.  
+-   **Instância de Captura**: é o nome da instância de captura usada para nomear objetos do Change Data Capture específicos. A instância de captura não pode ser NULL.  
   
      Se não for especificado, o nome será derivado do nome do esquema de origem mais o nome da tabela de origem, no formato `<schema-name>_<table-name>`. O nome da instância de captura não pode exceder 100 caracteres e deve ser exclusivo no banco de dados.  
   
      Você pode clicar em qualquer célula nesta coluna para editar manualmente **capture_instance**.  
   
--   **Função de segurança**: o nome da função de banco de dados de associação usada para controlar o acesso aos dados de alteração.  
+-   **Security Role**: o nome da função de banco de dados de associação usada para controlar o acesso aos dados de alteração.  
   
      Você pode clicar em qualquer célula nesta coluna para editar manualmente **security_role**.  
   

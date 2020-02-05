@@ -13,10 +13,10 @@ ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: 050b6ba215d9dc4db433ad81dd8fa48bed212803
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75557921"
 ---
 # <a name="sql-server-connector-maintenance--troubleshooting"></a>Manutenção e solução de problemas do Conector do SQL Server
@@ -37,14 +37,14 @@ ms.locfileid: "75557921"
   
  Eis o modo como isso seria feito para TDE:  
   
--   **No PowerShell:** crie uma chave assimétrica (com um nome diferente da sua chave assimétrica de TDE atual) no Key Vault.  
+-   **No PowerShell:** crie uma chave assimétrica (com um nome diferente da sua chave assimétrica de TDE atual) no Cofre de Chaves.  
   
     ```powershell  
     Add-AzKeyVaultKey -VaultName 'ContosoDevKeyVault' `  
       -Name 'Key2' -Destination 'Software'  
     ```  
   
--   **Usando [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] ou sqlcmd.exe:** use as instruções a seguir, conforme mostrado na etapa 3, seção 3.  
+-   **Usando [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] ou sqlcmd.exe:** Use as instruções a seguir, conforme mostrado na etapa 3, seção 3.  
   
      Importe a nova chave assimétrica.  
   
@@ -153,7 +153,7 @@ Resumindo, estas são as etapas:
 * Conceder permissões para a entidade de serviço do SQL Server usar esse novo cofre.  
 * Modificar a credencial do SQL Server usada pelo Mecanismo de Banco de Dados para refletir o nome do novo cofre (se necessário).  
   
-Os backups de chaves podem ser restaurados em todas as regiões do Azure, contanto que permaneçam na mesma região geográfica ou nuvem nacional: Alemanha, APAC, Austrália, Brasil, Canadá, China, EUA, Europa, Governo dos EUA, Índia ou Japão.  
+Backups de chaves podem ser restaurados em regiões do Azure, desde que eles permaneçam na mesma região geográfica ou nuvem nacional: EUA, Canadá, Japão, Austrália, Índia, APAC, Europa, Brasil, China, Governo dos EUA ou Alemanha.  
   
   
 ##  <a name="AppendixB"></a> B. Perguntas frequentes  

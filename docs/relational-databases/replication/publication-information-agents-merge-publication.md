@@ -13,10 +13,10 @@ ms.assetid: 73ff590a-20da-4f10-b592-c60b7226d22b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ba0a80db010c3f0b575cbfbf4cead6d5bc4a7943
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68100011"
 ---
 # <a name="publication-information-agents-merge-publication"></a>Informações da Publicação, Agentes (publicação de mesclagem)
@@ -26,13 +26,13 @@ ms.locfileid: "68100011"
 ## <a name="options"></a>Opções  
  Para obter informações mais detalhadas e tarefas relacionadas ao Snapshot Agent, clique com o botão direito do mouse na linha do agente e clique em uma opção no menu de atalho. Para alterar a forma como a grade exibe os dados, clique com o botão direito do mouse na grade e clique em uma destas opções:  
   
--   **Classificar**: classifique uma ou mais colunas na caixa de diálogo **Classificar Colunas**.  
+-   **Classificar**: classifique uma ou mais colunas na caixa de diálogo **Classificar Colunas** .  
   
--   **Escolher Colunas para Mostrar**: selecione quais colunas devem ser exibidas e a ordem em que devem ser exibidas, na caixa de diálogo **Selecionar Colunas**.  
+-   **Selecionar Colunas para Mostrar**: selecione quais colunas devem ser exibidas e a ordem em que devem ser exibidas, na caixa de diálogo **Selecionar Colunas** .  
   
--   **Filtrar**: filtre linhas na grade com base em valores de colunas da caixa de diálogo **Configurações de Filtro**.  
+-   **Filtrar**: filtre linhas na grade com base em valores de colunas da caixa de diálogo **Configurações de Filtro** .  
   
--   **Limpar Filtro**: Limpe todas as configurações de filtro para a grade.  
+-   **Limpar Filtro**: limpe as configurações de filtro da grade.  
   
  As configurações de filtro são específicas de cada grade. A seleção e a classificação da coluna são aplicadas a todas as grades do mesmo tipo, como a grade de publicações de cada Publicador.  
   

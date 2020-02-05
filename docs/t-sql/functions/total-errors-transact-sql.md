@@ -24,18 +24,18 @@ ms.assetid: 09e62428-ee0e-4ef5-b969-da9d255f1199
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a07518edbdfce618fa8bfcff15a49df70f029ee3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68098961"
 ---
-# <a name="x40x40totalerrors-transact-sql"></a>&#x40;&#x40;TOTAL_ERRORS (Transact-SQL)
+# <a name="x40x40total_errors-transact-sql"></a>&#x40;&#x40;TOTAL_ERRORS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retorna o número de erros de gravação de disco encontrados pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] foi iniciado pela última vez.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,7 +46,7 @@ ms.locfileid: "68098961"
 ## <a name="return-types"></a>Tipos de retorno  
  **inteiro**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Nem todos os erros de gravação encontrados pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são considerados por esta função. Os erros de gravação não fatais ocasionais são controlados pelo próprio servidor e não são considerados como erros. Para exibir um relatório que contém várias estatísticas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], incluindo o número total de erros, execute **sp_monitor**.  
   
 ## <a name="examples"></a>Exemplos  

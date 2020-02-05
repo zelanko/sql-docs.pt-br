@@ -12,22 +12,22 @@ ms.assetid: 12da7931-e124-4466-889c-046f1b7b7bfd
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 40c707873679d2e5d166f2c1319f971404deabe5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67903842"
 ---
-# <a name="mssqlserver9524"></a>MSSQLSERVER_9524
+# <a name="mssqlserver_9524"></a>MSSQLSERVER_9524
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|9254|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|XMLERR_INVALID_COLUMNSET_XML|  
 |Texto da mensagem|O conteúdo XML fornecido não se adapta ao formato XML exigido para conjuntos de colunas esparsos.|  

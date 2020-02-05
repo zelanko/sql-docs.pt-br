@@ -34,10 +34,10 @@ ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b9cfd2d1e81d3778653a59b697dc740680169071
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68096912"
 ---
 # <a name="xml-indexes-sql-server"></a>Índices XML (SQL Server)
@@ -54,7 +54,7 @@ ms.locfileid: "68096912"
   
 -   Índice XML secundário  
   
- O primeiro índice na coluna de tipo **xml** deve ser o índice XML primário. Usando o índice XML primário, os seguintes tipos de índices secundários são compatíveis: PATH, VALUE e PROPERTY. Dependendo do tipo de consulta, esses índices secundários podem ajudar a melhorar o desempenho de consultas.  
+ O primeiro índice na coluna de tipo **xml** deve ser o índice XML primário. Usando o índice de XML primário, os seguintes tipos de índices secundários têm suporte: PATH, VALUE e PROPERTY. Dependendo do tipo de consulta, esses índices secundários podem ajudar a melhorar o desempenho de consultas.  
   
 > [!NOTE]  
 >  Não é possível criar ou modificar um índice XML a menos que as opções do banco de dados estejam definidas corretamente para trabalhar com o tipo de dados **xml** . Para obter mais informações, veja [Usar a pesquisa de texto completo com colunas XML](../../relational-databases/xml/use-full-text-search-with-xml-columns.md).  
@@ -104,13 +104,13 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
  O processador de consultas usa índice XML primário para consultas que envolvem [Métodos de tipo de dados xml](../../t-sql/xml/xml-data-type-methods.md) e retorna valores escalares ou as subárvores XML do próprio índice primário. (Esse índice armazena todas as informações necessárias para reconstruir a instância XML.)  
   
- Por exemplo, a consulta a seguir retorna informações resumidas armazenadas na coluna de tipo `CatalogDescription`**xml** na tabela `ProductModel`. A consulta retorna informações de <`Summary`> apenas para modelos de produto cuja descrição de catálogo também armazena a descrição de <`Features`>.  
+ Por exemplo, a consulta a seguir retorna informações resumidas armazenadas na coluna de tipo `CatalogDescription`**xml** na tabela `ProductModel` . A consulta retorna informações de <`Summary`> apenas para modelos de produto cuja descrição de catálogo também armazena a descrição de <`Features`>.  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")SELECT CatalogDescription.query('  /PD:ProductDescription/PD:Summary') as ResultFROM Production.ProductModelWHERE CatalogDescription.exist ('/PD:ProductDescription/PD:Features') = 1  
 ```  
   
- Com relação ao índice XML primário, em vez de fragmentar cada instância de objeto binário grande XML na tabela base, as linhas no índice que correspondem a cada objeto binário grande XML são pesquisadas sequencialmente para a expressão especificada no método `exist()`. Se o caminho for encontrado na coluna Path no índice, o elemento <`Summary`> juntamente com suas subárvores será recuperado do índice XML primário e convertido em um objeto binário grande XML como o resultado do método `query()`.  
+ Com relação ao índice XML primário, em vez de fragmentar cada instância de objeto binário grande XML na tabela base, as linhas no índice que correspondem a cada objeto binário grande XML são pesquisadas sequencialmente para a expressão especificada no método `exist()` . Se o caminho for encontrado na coluna Path no índice, o elemento <`Summary`> juntamente com suas subárvores será recuperado do índice XML primário e convertido em um objeto binário grande XML como o resultado do método `query()`.  
   
  Observe que o índice XML primário não é usado ao recuperar uma instância XML completa. Por exemplo, a consulta a seguir recupera da tabela toda a instância XML que descreve as instruções de fabricação para um modelo de produto específico.  
   

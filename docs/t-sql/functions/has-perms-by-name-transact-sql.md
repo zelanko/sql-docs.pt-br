@@ -23,10 +23,10 @@ ms.assetid: eaf8cc82-1047-4144-9e77-0e1095df6143
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 1420c5f8a1a16dc7430af0b445a8464c16d1b763
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982947"
 ---
 # <a name="has_perms_by_name-transact-sql"></a>HAS_PERMS_BY_NAME (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "73982947"
 
   Avalia a permissão efetiva do usuário atual em um protegível. Uma função relacionada é [fn_my_permissions](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md).  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -51,7 +51,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
  *securable_class*  
  É o nome da classe do protegível na qual a permissão é testada. *securable_class* é uma expressão escalar do tipo **nvarchar(60)** .  
   
- No [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], o argumento securable_class precisa ser definido com uma das seguintes opções: **DATABASE**, **OBJECT**, **ROLE**, **SCHEMA** ou **USER**.  
+ No [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], o argumento securable_class deve ser definido com um dos seguintes valores: **DATABASE**, **OBJECT**, **ROLE**, **SCHEMA** ou **USER**.  
   
  *permission*  
  Uma expressão escalar não nula do tipo **sysname** que representa o nome da permissão a ser verificado. Não há nenhum padrão. O nome da permissão ANY é um curinga.  
@@ -72,7 +72,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
   
  Retorna NULL quando a consulta falha.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esta função interna testa se a entidade de segurança atual tem uma permissão efetiva específica em um protegível especificado. HAS_PERMS_BY_NAME retorna 1 quando o usuário tem permissão efetiva no protegível, 0 quando o usuário não tem nenhuma permissão efetiva no protegível e NULL quando a classe protegível ou permissão não é válida. Uma permissão efetiva é qualquer uma das permissões a seguir:  
   
 -   Uma permissão concedida diretamente à entidade de segurança, e não negada.  
@@ -95,15 +95,15 @@ SELECT class_desc FROM sys.fn_builtin_permissions(default);
   
  As ordenações a seguir são usadas:  
   
--   Ordenação do banco de dados atual: Os protegíveis no nível de banco de dados que incluem os protegíveis não contidos por um esquema, os protegíveis no escopo do esquema de uma ou duas partes e o banco de dados de destino quando um nome de três partes é usado.  
+-   Ordenação do banco de dados atual: protegíveis em nível de banco de dados, incluindo protegíveis não contidos por um esquema, protegíveis com escopo no esquema de uma ou duas partes; banco de dados de destino quando um nome de três partes é usado.  
   
--   ordenação do banco de dados mestre: Protegíveis em nível de servidor.  
+-   Ordenação do banco de dadosmaster: itens protegíveis do nível de servidor.  
   
 -   Não há suporte para ‘ANY’ em verificações em nível de coluna. Você deve especificar a permissão apropriada.  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-do-i-have-the-server-level-view-server-state-permission"></a>A. Tenho a permissão VIEW SERVER STATE em nível de servidor?  
+### <a name="a-do-i-have-the-server-level-view-server-state-permission"></a>a. Tenho a permissão VIEW SERVER STATE em nível de servidor?  
   
 **Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior
   

@@ -14,10 +14,10 @@ ms.assetid: 859373db-c744-4a4b-8479-45163f61e8cb
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 817bfeccb29de6b1531b83a48da4d78f8397b4ca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68058254"
 ---
 # <a name="remove-log-shipping-sql-server"></a>Remover envio de log (SQL Server)

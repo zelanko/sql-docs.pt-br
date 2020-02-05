@@ -22,10 +22,10 @@ ms.assetid: 1f717ad6-f67b-4980-9397-577ecb0e5789
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: a5b722f37fb6a5e30a50307a5d7828868ecd1fba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072258"
 ---
 # <a name="some--any-transact-sql"></a>SOME | ANY (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68072258"
 
   Compara um valor escalar com um conjunto de valores de uma única coluna. SOME e ANY são equivalentes.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -62,12 +62,12 @@ scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
 ## <a name="result-value"></a>Valor do resultado  
  SOME ou ANY retornará **TRUE** quando a comparação especificada for TRUE para todos os pares (_scalar_expression_ **,** _x_) e quando *x* for um valor no conjunto de uma única coluna, caso contrário retornará **FALSE**.  
   
-## <a name="remarks"></a>Remarks  
- SOME exige que a *scalar_expression* seja comparada positivamente com, pelo menos, um valor retornado pela subconsulta. Para obter instruções que exigem que *scalar_expression* seja comparada positivamente com todo valor retornado pela subconsulta, consulte [ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md). Por exemplo, se a subconsulta retornar os valores 2 e 3, *scalar_expression* = SOME (subconsulta) será avaliada como TRUE para um *scalar_express* igual a 2. Se a subconsulta retornar os valores 2 e 3, *scalar_expression* = ALL (subconsulta) será avaliada como FALSE, porque alguns dos valores da subconsulta (o valor 3) não atenderão aos critérios da expressão.  
+## <a name="remarks"></a>Comentários  
+ SOME exige que a *scalar_expression* seja comparada positivamente com, pelo menos, um valor retornado pela subconsulta. Para obter instruções que exigem que *scalar_expression* seja comparada positivamente com todo valor retornado pela subconsulta, consulte [ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md). Por exemplo, se a subconsulta retornar os valores 2 e 3, *scalar_expression* = SOME (subconsulta) será avaliada como TRUE para um *scalar_express* igual a 2. Se a consulta aninhada retornar os valores 2 e 3, *scalar_expression* = ALL (consulta aninhada) será avaliada como FALSE, porque alguns dos valores da consulta aninhada (o valor 3) não atenderão aos critérios da expressão.  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-running-a-simple-example"></a>A. Executando um exemplo simples  
+### <a name="a-running-a-simple-example"></a>a. Executando um exemplo simples  
  As instruções a seguir criam uma tabela simples e adicionam os valores `1`, `2`, `3` e `4` à coluna `ID`.  
   
 ```  

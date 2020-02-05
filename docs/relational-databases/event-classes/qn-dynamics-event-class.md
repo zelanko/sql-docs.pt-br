@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 575ca341e19d36055d7780fd1deec8d05e370111
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67940610"
 ---
 # <a name="qndynamics-event-class"></a>Classe de evento QN:Dynamics
@@ -25,7 +25,7 @@ ms.locfileid: "67940610"
   
 ## <a name="qndynamics-event-class-data-columns"></a>Coluna de dados de classe de evento QN:Dynamics  
   
-|Coluna de dados|Tipo|Descrição|Número da coluna|Filtrável|  
+|Coluna de dados|Type|DESCRIÇÃO|Número da coluna|Filtrável|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |ApplicationName|**nvarchar**|O nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |ClientProcessID|**int**|A ID atribuída pelo computador host ao processo em que está sendo executado o aplicativo cliente. Essa coluna de dados será populada se a ID do processo do cliente for fornecida pelo cliente.|9|Sim|  
@@ -33,7 +33,7 @@ ms.locfileid: "67940610"
 |DatabaseName|**nvarchar**|O nome do banco de dados no qual a instrução do usuário está sendo executada.|35|Sim|  
 |EventClass|**int**|Tipo de evento = 202|27|Não|  
 |EventSequence|**int**|Número de sequência para esse evento.|51|Não|  
-|EventSubClass|**nvarchar**|O tipo de subclasse de evento, fornecendo mais informações sobre cada classe de evento. Essa coluna pode conter os seguintes valores:<br /><br /> **Execução do relógio iniciada**: indica que o thread em segundo plano no [!INCLUDE[ssDE](../../includes/ssde-md.md)] que programa tabelas de parâmetro expiradas para limpeza foi iniciado.<br /><br /> **Execução do relógio concluída**: indica que o thread em segundo plano no [!INCLUDE[ssDE](../../includes/ssde-md.md)] que programa tabelas de parâmetro expiradas para limpeza foi concluído.<br /><br /> **Tarefa mestre de limpeza iniciada**: indica quando a limpeza (coleta de lixo) para a remoção de dados expirados de assinatura de notificação de consulta é iniciada.<br /><br /> **Tarefa mestre de limpeza concluída**: indica quando a limpeza (coleta de lixo) para a remoção de dados expirados de assinatura de notificação de consulta é concluída.<br /><br /> **Tarefa mestre de limpeza ignorada**: indica que [!INCLUDE[ssDE](../../includes/ssde-md.md)] não executou limpeza (coleta de lixo) para remoção de dados expirados de assinatura de notificação de consulta.|21|Sim|  
+|EventSubClass|**nvarchar**|O tipo de subclasse de evento, fornecendo mais informações sobre cada classe de evento. Essa coluna pode conter os seguintes valores:<br /><br /> **Execução do relógio iniciada**: indica que o thread em segundo plano no [!INCLUDE[ssDE](../../includes/ssde-md.md)] que programa tabelas de parâmetro expiradas para limpeza foi iniciado.<br /><br /> **Execução do relógio concluída**: indica que o thread em segundo plano no [!INCLUDE[ssDE](../../includes/ssde-md.md)] que programa tabelas de parâmetro expiradas para limpeza foi concluído.<br /><br /> **Tarefa mestre de limpeza iniciada**: indica quando a limpeza (coleta de lixo) para a remoção de dados expirados de assinatura de notificação de consulta é iniciada.<br /><br /> **Tarefa mestre de limpeza concluída**: indica quando a limpeza (coleta de lixo) para a remoção de dados expirados de assinatura de notificação de consulta é concluída.<br /><br /> **Tarefa mestre de limpeza ignorada**: indica que [!INCLUDE[ssDE](../../includes/ssde-md.md)] não executou a limpeza (coleta de lixo) para remoção de dados expirados de assinatura de notificação de consulta.|21|Sim|  
 |GroupID|**int**|ID do grupo de carga de trabalho no qual o evento de Rastreamento do SQL dispara.|66|Sim|  
 |HostName|**nvarchar**|O nome do computador no qual o cliente está sendo executado. Essa coluna de dados será populada se o nome do host for fornecido pelo cliente. Para determinar o nome do host, use a função HOST_NAME.|8|Sim|  
 |IsSystem|**int**|Indica se o evento ocorreu em um processo do sistema ou do usuário.<br /><br /> 0 = usuário<br /><br /> 1 = sistema|60|Não|  

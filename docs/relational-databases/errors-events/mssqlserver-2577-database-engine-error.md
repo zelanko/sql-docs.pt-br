@@ -12,22 +12,22 @@ ms.assetid: f53256a2-2fb0-47fd-9ed9-c45389104145
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 7fb2c67a1d2e0ea80f0fb54c0136831109a9c3f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68023064"
 ---
-# <a name="mssqlserver2577"></a>MSSQLSERVER_2577
+# <a name="mssqlserver_2577"></a>MSSQLSERVER_2577
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|2577|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|DBCC_IAM_CHAIN_SEQUENCE_OUT_OF_ORDER|  
 |Texto da mensagem|Os números de sequência de cadeia estão fora de ordem na cadeia de página IAM para a ID de objeto O_ID, ID de índice I_ID, ID de partição PN_ID, ID de unidade de alocação A_ID (tipo TYPE). A página P_ID1 com número de sequência SEQUENCE1 aponta para a página P_ID2 com número de sequência SEQUENCE2.|  

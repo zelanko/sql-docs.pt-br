@@ -29,10 +29,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c61ca9f853f851bb531abdbcba66773f9e9d9e1e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077906"
 ---
 # <a name="int-bigint-smallint-and-tinyint-transact-sql"></a>int, bigint, smallint e tinyint (Transact-SQL)
@@ -47,7 +47,7 @@ Tipos de dados numéricos exatos que usam dados inteiros. Para economizar espaç
 |**smallint**|-2^15 (-32.768) a 2^15-1 (32.767)|2 bytes|  
 |**tinyint**|0 a 255|1 byte|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 O tipo de dados **int** é o tipo de dados inteiros primário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O tipo de dados **bigint** deve ser usado quando valores inteiros podem exceder o intervalo ao qual tipo de dados **int** dá suporte.
   
 **bigint** se ajusta entre **smallmoney** e **int** no gráfico de precedência de tipo de dados.

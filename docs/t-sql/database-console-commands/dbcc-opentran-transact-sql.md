@@ -26,10 +26,10 @@ ms.assetid: 63163843-226f-42d3-9e2c-b634fbf06943
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 7075de83b3f2d13d80d0eb08db1d780827eddeec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68039085"
 ---
 # <a name="dbcc-opentran-transact-sql"></a>DBCC OPENTRAN (Transact-SQL)
@@ -40,7 +40,7 @@ DBCC OPENTRAN ajuda a identificar as transações ativas que podem impedir o tru
 > [!NOTE]
 >  Não há suporte para DBCC OPENTRAN em Publicadores não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -64,7 +64,7 @@ DBCC OPENTRAN
  NO_INFOMSGS  
  Suprime todas as mensagens informativas.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 Use DBCC OPENTRAN para determinar se uma transação aberta existe no log de transações. Quando você usa a instrução BACKUP LOG, só a parte inativa do log pode ser truncada; uma transação aberta pode impedir que o log seja truncado completamente. Para identificar uma transação aberta, use sp_who para obter a ID de processo do sistema.
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
@@ -79,7 +79,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 Exige associação à função de servidor fixa **sysadmin** ou à função de banco de dados fixa **db_owner** .
   
 ## <a name="examples"></a>Exemplos  
-### <a name="a-returning-the-oldest-active-transaction"></a>A. Retornando a transação ativa mais antiga  
+### <a name="a-returning-the-oldest-active-transaction"></a>a. Retornando a transação ativa mais antiga  
 O exemplo a seguir obtém informações de transação para o banco de dados atual. Os resultados podem variar.
   
 ```sql  

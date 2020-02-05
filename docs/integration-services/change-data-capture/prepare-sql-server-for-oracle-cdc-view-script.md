@@ -11,10 +11,10 @@ ms.assetid: d0c8f942-4c96-456f-ad10-577577c0f74e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 77f3575375ec991119462a5933e85df13de80795
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298684"
 ---
 # <a name="prepare-sql-server-for-oracle-cdc-view-script"></a>Preparar o script de visualização do SQL Server para Oracle CDC
@@ -29,10 +29,10 @@ ms.locfileid: "71298684"
  **Salvar como**  
  Salva o script em um arquivo de texto que você pode salvar em qualquer local desejado. Você pode executar os scripts posteriormente colando o script no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
- **Copiar**  
+ **Copy**  
  Copiar o script para a área de transferência. Você pode colar o script no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para executá-lo e criar o banco de dados MSXDBCDC.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Preparar SQL Server para CDC](../../integration-services/change-data-capture/prepare-sql-server-for-cdc.md)  
+ [Preparar o SQL Server para CDC](../../integration-services/change-data-capture/prepare-sql-server-for-cdc.md)  
   
   

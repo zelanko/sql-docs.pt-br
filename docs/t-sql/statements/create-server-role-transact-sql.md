@@ -25,10 +25,10 @@ ms.assetid: 30c92f80-f7f6-4a84-ae89-16e69add0de6
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 89f1338f2e127742a3e76b4b2dbc2f2ae5e8b8ef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68117125"
 ---
 # <a name="create-server-role-transact-sql"></a>CREATE SERVER ROLE (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68117125"
 
   Cria uma função de servidor definida pelo usuário.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -51,7 +51,7 @@ CREATE SERVER ROLE role_name [ AUTHORIZATION server_principal ]
  AUTHORIZATION *server_principal*  
  É o logon que possuirá a função de servidor. Se nenhum logon for especificado, a função de servidor será de propriedade do logon que executa CREATE SERVER ROLE.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  As funções de servidor são protegíveis no nível do servidor. Depois de criar uma função de servidor, configure as permissões no nível de servidor da função por meio de GRANT, DENY e REVOKE. Para adicionar logons ou remover logons de uma função de servidor, use [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md). Para remover uma função de servidor, use [DROP SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-role-transact-sql.md). Para obter mais informações, veja [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
  É possível exibir as funções de servidor consultando as exibições do catálogo [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md) e [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
@@ -75,7 +75,7 @@ CREATE SERVER ROLE role_name [ AUTHORIZATION server_principal ]
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-creating-a-server-role-that-is-owned-by-a-login"></a>A. Criando uma função de servidor que é de propriedade de um logon  
+### <a name="a-creating-a-server-role-that-is-owned-by-a-login"></a>a. Criando uma função de servidor que é de propriedade de um logon  
  O exemplo a seguir cria a função de servidor `buyers` que é de propriedade do logon `BenMiller`.  
   
 ```  

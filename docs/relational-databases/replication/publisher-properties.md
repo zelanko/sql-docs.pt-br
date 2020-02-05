@@ -16,13 +16,13 @@ f1_keywords:
 ms.assetid: 98df1aea-0406-40bf-a917-4bd80464125c
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 12c7a8482561e6ab608501158a05a275763ab74a
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 35ad6f4ab64f308fed55e328a1ddcae223ca4a79
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75320634"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287455"
 ---
 # <a name="sql-server-replication-publisher-properties-dialog-box"></a>Caixa de diálogo Propriedades do Editor de Replicação do SQL Server
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

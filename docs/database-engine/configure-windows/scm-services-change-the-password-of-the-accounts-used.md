@@ -20,10 +20,10 @@ ms.assetid: 5b6dcc03-6cae-45d3-acef-6f85ca6d615f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 37fd90d37f989fb496b6d9fe1ea1153de25db0d7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68024734"
 ---
 # <a name="scm-services---change-the-password-of-the-accounts-used"></a>Serviços SCM – alterar a senha das contas utilizadas

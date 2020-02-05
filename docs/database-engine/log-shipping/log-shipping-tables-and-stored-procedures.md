@@ -16,10 +16,10 @@ ms.assetid: 03420810-4c38-4c0c-adf0-913eb044c50a
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 25424e7e41a2d1fdf1efb88f01c53f24902e7072
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68030717"
 ---
 # <a name="log-shipping-tables-and-stored-procedures"></a>Log Shipping Tables and Stored Procedures
@@ -28,7 +28,7 @@ ms.locfileid: "68030717"
   
 ## <a name="primary-server-tables"></a>Tabelas de servidor primário  
   
-|Table|Descrição|  
+|Tabela|DESCRIÇÃO|  
 |-----------|-----------------|  
 |[log_shipping_monitor_alert](../../relational-databases/system-tables/log-shipping-monitor-alert-transact-sql.md)|Armazena ID de trabalho de alerta. Esta tabela só será usada no servidor primário se um servidor monitor remoto não tiver sido configurado.|  
 |[log_shipping_monitor_error_detail](../../relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql.md)|Armazena detalhe de erro para trabalhos de envio de logs associados a este servidor primário.|  
@@ -39,7 +39,7 @@ ms.locfileid: "68030717"
   
 ## <a name="primary-server-stored-procedures"></a>Procedimentos armazenados em servidor primário  
   
-|Procedimento armazenado|Descrição|  
+|Procedimento armazenado|DESCRIÇÃO|  
 |----------------------|-----------------|  
 |[sp_add_log_shipping_primary_database](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-database-transact-sql.md)|Instala o banco de dados primário para uma configuração de envio de log, incluindo o trabalho de backup, registro de monitor local e registro de monitor remoto.|  
 |[sp_add_log_shipping_primary_secondary](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-secondary-transact-sql.md)|Adiciona um nome de banco de dados secundário a um banco de dados primário existente.|  
@@ -53,7 +53,7 @@ ms.locfileid: "68030717"
   
 ## <a name="secondary-server-tables"></a>Tabelas de servidor secundário  
   
-|Table|Descrição|  
+|Tabela|DESCRIÇÃO|  
 |-----------|-----------------|  
 |[log_shipping_monitor_alert](../../relational-databases/system-tables/log-shipping-monitor-alert-transact-sql.md)|Armazena ID de trabalho de alerta. Essa tabela só será usada no servidor secundário se um servidor monitor remoto não tiver sido configurado.|  
 |[log_shipping_monitor_error_detail](../../relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql.md)|Armazena detalhe de erro para trabalhos de envio de logs associados a este servidor secundário.|  
@@ -67,7 +67,7 @@ ms.locfileid: "68030717"
   
 ## <a name="secondary-server-stored-procedures"></a>Procedimentos armazenados em servidor secundário  
   
-|Procedimento armazenado|Descrição|  
+|Procedimento armazenado|DESCRIÇÃO|  
 |----------------------|-----------------|  
 |[sp_add_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-database-transact-sql.md)|Define um banco de dados secundário para envio de logs.|  
 |[sp_add_log_shipping_secondary_primary](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-primary-transact-sql.md)|Configura as informações primárias, adiciona links de monitor local e remoto e cria trabalhos de cópia e restauração no servidor secundário para o banco de dados primário especificado.|  
@@ -82,7 +82,7 @@ ms.locfileid: "68030717"
   
 ## <a name="monitor-server-tables"></a>Tabelas de Servidor Monitor  
   
-|Table|Descrição|  
+|Tabela|DESCRIÇÃO|  
 |-----------|-----------------|  
 |[log_shipping_monitor_alert](../../relational-databases/system-tables/log-shipping-monitor-alert-transact-sql.md)|Armazena ID de trabalho de alerta.|  
 |[log_shipping_monitor_error_detail](../../relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql.md)|Armazena detalhes de erros para trabalhos de envio de logs.|  
@@ -92,7 +92,7 @@ ms.locfileid: "68030717"
   
 ## <a name="monitor-server-stored-procedures"></a>Procedimentos armazenados em Servidor Monitor  
   
-|Procedimento armazenado|Descrição|  
+|Procedimento armazenado|DESCRIÇÃO|  
 |----------------------|-----------------|  
 |[sp_add_log_shipping_alert_job](../../relational-databases/system-stored-procedures/sp-add-log-shipping-alert-job-transact-sql.md)|Criará um trabalho de alerta de envio de logs se já não foi criado um.|  
 |[sp_delete_log_shipping_alert_job](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-alert-job-transact-sql.md)|Removerá um trabalho de alerta de envio de logs se não houver nenhum banco de dados primário associado.|  

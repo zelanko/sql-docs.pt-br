@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 13263d1f35d930b3bab81fc9cec099f1a96a6510
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68050254"
 ---
 # <a name="in-memory-oltp-garbage-collection"></a>Coleta de lixo de OLTP na memória
@@ -45,6 +45,6 @@ ms.locfileid: "68050254"
  Após a confirmação de uma transação de usuário, ele identifica todos os itens enfileirados associados ao agendador que ele executou e libera a memória. Se a fila de coleta de lixo no agendador estiver vazia, ele procurará uma fila não vazia no nó NUMA atual. Se houver baixa atividade transacional e pressão de memória, o thread principal da coleta de lixo poderá acessar linhas da coleta de lixo de qualquer fila. Se não houver atividade transacional (por exemplo) após a exclusão de um grande número de linhas e não houver pressão de memória, as linhas excluídas não passarão por coleta de lixo até a atividade transacional ser retomada ou haver pressão de memória.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Gerenciando memória para OLTP na memória](https://msdn.microsoft.com/library/d82f21fa-6be1-4723-a72e-f2526fafd1b6)  
+ [Gerenciando memória para OLTP in-memory](https://msdn.microsoft.com/library/d82f21fa-6be1-4723-a72e-f2526fafd1b6)  
   
   

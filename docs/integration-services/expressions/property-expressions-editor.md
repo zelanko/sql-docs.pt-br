@@ -15,10 +15,10 @@ ms.assetid: 4c8b1681-d8fe-4f92-b76f-a396eb921c0c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8b1f4f85fbd4806c164faef0c8bcac7a982cc4fe
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71288490"
 ---
 # <a name="property-expressions-editor"></a>Editor de Expressões de Propriedades
@@ -47,7 +47,7 @@ ms.locfileid: "71288490"
 ## <a name="see-also"></a>Consulte Também  
  [Página Expressões](../../integration-services/expressions/expressions-page.md)   
  [Variáveis do SSIS &#40;Integration Services&#41;](../../integration-services/integration-services-ssis-variables.md)   
- [Variáveis do sistema](../../integration-services/system-variables.md)   
+ [Variáveis do Sistema](../../integration-services/system-variables.md)   
  [Expressões do SSIS &#40;Integration Services&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md)   
  [Usar expressões de propriedade em pacotes](../../integration-services/expressions/use-property-expressions-in-packages.md)  
   

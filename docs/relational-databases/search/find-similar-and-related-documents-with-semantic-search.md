@@ -13,10 +13,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 3ee3baa843aee101e5cbea425582a96e32bcd92b
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056510"
 ---
 # <a name="find-similar-and-related-documents-with-semantic-search"></a>Localizar documentos semelhantes e relacionados com a pesquisa semântica
@@ -28,14 +28,14 @@ ms.locfileid: "74056510"
   
  **SEMANTICSIMILARITYTABLE** retorna uma tabela de zero, uma ou mais linhas cujo conteúdo na coluna especificada é semanticamente semelhante ao documento especificado. Essa função de conjunto de linhas pode ser referenciada na cláusula FROM de uma instrução SELECT como um nome de tabela normal.  
   
- Não é possível consultar documentos similares em colunas. A função **SEMANTICSIMILARITYTABLE** apenas recupera resultados da mesma coluna que a coluna de origem, identificada pelo argumento **source_key**.  
+ Não é possível consultar documentos similares em colunas. A função **SEMANTICSIMILARITYTABLE** apenas recupera resultados da mesma coluna que a coluna de origem, identificada pelo argumento **source_key** .  
   
  Para obter informações detalhadas sobre os parâmetros exigidos pela função **SEMANTICSIMILARITYTABLE**, e sobre a tabela de resultados que ela retorna, veja [semanticsimilaritytable &#40;Transact-SQL&#41;](../../relational-databases/system-functions/semanticsimilaritytable-transact-sql.md).  
   
 > [!IMPORTANT]  
 >  As colunas de destino devem ter a indexação de texto completo e semântica habilitada.  
   
-###  <a name="HowToIdentifySimilar"></a> Exemplo: localize os principais documentos semelhantes a outro documento  
+###  <a name="HowToIdentifySimilar"></a> Example: Find the top documents that are similar to another document  
  O exemplo a seguir recuperar os 10 principais candidatos que são semelhantes ao candidato especificado por *\@CandidateID* da tabela HumanResources.JobCandidate no banco de dados de exemplo AdventureWorks2012.  
   
 ```scr  
@@ -60,7 +60,7 @@ GO
 > [!IMPORTANT]  
 >  As colunas de destino devem ter a indexação de texto completo e semântica habilitada.  
   
-###  <a name="HowToSimilarPhrases"></a> Exemplo: localize as principais frases-chave semelhantes entre documentos  
+###  <a name="HowToSimilarPhrases"></a> Example: Find the top key phrases that are similar between documents  
  O exemplo a seguir recupera as cinco frases-chave com a pontuação de similaridade mais alta entre os candidatos especificados na tabela **HumanResources.JobCandidate** do banco de dados de exemplo AdventureWorks2012.  
   
 ```sql  

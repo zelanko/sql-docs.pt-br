@@ -13,10 +13,10 @@ ms.assetid: 6f1bcbc3-1220-4071-8e53-4b957f5d3089
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 13f43e5f66ca7700e9dd4732e9cf45ee1921548d
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75244743"
 ---
 # <a name="use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server"></a>Usar as políticas AlwaysOn para exibir a integridade de um grupo de disponibilidade (SQL Server)
@@ -115,13 +115,13 @@ ms.locfileid: "75244743"
 ##  <a name="RelatedContent"></a> Conteúdo relacionado  
  **Blogs da equipe de Always On do SQL Server – Monitorando a integridade de Always On com o PowerShell:**  
   
--   [Parte 1: Basic cmdlet overview](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/13/monitoring-alwayson-health-with-powershell-part-1-basic-cmdlet-overview/) (Monitoramento de integridade do Always On com o PowerShell, parte 1: visão geral básica de cmdlet)  
+-   [Parte 1: Visão geral básica de cmdlet](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/13/monitoring-alwayson-health-with-powershell-part-1-basic-cmdlet-overview/)  
   
--   [Parte 2: Advanced cmdlet usage](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/13/monitoring-alwayson-health-with-powershell-part-2-advanced-cmdlet-usage/) (Monitoramento de integridade do Always On com o PowerShell, parte 2: uso avançado de cmdlet)  
+-   [Parte 2: Uso avançado de cmdlet](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/13/monitoring-alwayson-health-with-powershell-part-2-advanced-cmdlet-usage/)  
   
--   [Parte 3: A simple monitoring application](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/14/monitoring-alwayson-health-with-powershell-part-3-a-simple-monitoring-application/) (Monitoramento de integridade do Always On com o PowerShell, parte 3: um aplicativo de monitoramento simples)  
+-   [Parte 3: Um simples aplicativo de monitoramento](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/14/monitoring-alwayson-health-with-powershell-part-3-a-simple-monitoring-application/)  
   
--   [Parte 4: Integration with SQL Server Agent](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/15/monitoring-alwayson-health-with-powershell-part-4-integration-with-sql-server-agent/) (Monitoramento de integridade do Always On com o PowerShell, parte 4: integração ao SQL Server Agent)  
+-   [Parte 4: Integração com o SQL Server Agent](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/15/monitoring-alwayson-health-with-powershell-part-4-integration-with-sql-server-agent/)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](~/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

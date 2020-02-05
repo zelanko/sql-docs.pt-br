@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: fdc744d5-530e-48c4-9420-cca032fd482b
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 0853bc504655b5fe97bab28b300134c0f5aab289
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: c43395fffe934756bb69e0d094a3e6637adcedad
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908620"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286494"
 ---
 # <a name="mssql_eng014144"></a>MSSQL_ENG014144
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -27,9 +27,9 @@ ms.locfileid: "72908620"
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|14144|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |Nome simbólico||  
 |Texto da mensagem|Não é possível descartar o Assinante '%s'. Existem assinaturas para ele no banco de dados de publicação '%s'.|  

@@ -18,10 +18,10 @@ ms.assetid: 99602a62-265d-4aa4-a8dc-92992ca55ba4
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 559a358e0a95af870a716001abb3935523d86248
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042537"
 ---
 # <a name="stasbinary-geography-data-type"></a>STAsBinary (tipo de dados geography)
@@ -41,9 +41,9 @@ ms.locfileid: "68042537"
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **varbinary(max)**  
   
- Tipo de retorno CLR: **SqlBytes**  
+ Tipo de retorno do CLR: **SqlBytes**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O tipo OGC de uma instância de **geography** pode ser determinado com a invocação de [STGeometryType()](../../t-sql/spatial-geography/stgeometrytype-geography-data-type.md).  
   
 ## <a name="examples"></a>Exemplos  

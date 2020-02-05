@@ -12,25 +12,25 @@ ms.assetid: 722bd2c6-0fb9-4838-954a-439744c6ac4b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: b7cc3e42abfdb31da50b7db329f9c61c2a195111
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68087605"
 ---
-# <a name="mssqlserver7933"></a>MSSQLSERVER_7933
+# <a name="mssqlserver_7933"></a>MSSQLSERVER_7933
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|7933|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|DBCC2_FS_ORPHANED_ROWSET_DIRECTORY|  
-|Texto da mensagem|Erro de tabela: existe uma ID de diretório de Fluxo de arquivos F_ID para uma partição, mas a partição correspondente não existe no banco de dados.|  
+|Texto da mensagem|Erro de tabela: existe uma ID de diretório de Filestream F_ID para uma partição, mas a partição correspondente não existe no banco de dados.|  
   
 ## <a name="explanation"></a>Explicação  
 Durante DBCC CHECKDB, foi encontrado um diretório de conjunto de linhas no espaço de dados FILESTREAM; entretanto, a partição correspondente não foi localizada no banco de dados.  

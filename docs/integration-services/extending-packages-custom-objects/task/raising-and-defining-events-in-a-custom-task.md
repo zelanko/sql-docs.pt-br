@@ -25,10 +25,10 @@ ms.assetid: e0898aa1-e90c-4c4e-99d4-708a76efddfd
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 461750eee78c631adef9b012b971c9bab60bf29f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71286894"
 ---
 # <a name="raising-and-defining-events-in-a-custom-task"></a>Gerando e definindo eventos em uma tarefa personalizada

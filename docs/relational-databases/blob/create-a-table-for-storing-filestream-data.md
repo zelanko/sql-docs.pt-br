@@ -13,10 +13,10 @@ ms.assetid: 029c3059-5c83-43e2-a859-9027031b7de1
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 54c3acef29036c8178b9103e31c7e01e7a02595b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68085416"
 ---
 # <a name="create-a-table-for-storing-filestream-data"></a>Criar uma tabela para armazenar dados FILESTREAM

@@ -24,10 +24,10 @@ ms.assetid: 1aee3933-a11c-4b87-91b7-32f5ea38c87f
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: b7ec7d6142bae4a6a0ad21a7f68413b257764e06
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68091015"
 ---
 # <a name="monitor-memory-usage"></a>Monitorar o uso da memória
@@ -36,15 +36,15 @@ ms.locfileid: "68091015"
   
  Para monitorar uma condição da memória baixa, use os seguintes contadores de objetos:  
   
--   **Memória: Bytes Disponíveis**  
+-   **Memória: Bytes disponíveis**  
   
 -   **Memória: Páginas/segundo**  
   
  O contador **Bytes disponíveis** indica quantos bytes de memória estão atualmente disponíveis para uso dos processos. O contador **Páginas/s** indica o número de páginas que foram recuperadas do disco devido a falhas de página física ou gravadas no disco para liberar espaço no conjunto de trabalho devido a falhas de página.  
   
- Baixos valores no contador **Bytes disponíveis** podem indicar a existência de uma escassez global de memória no computador ou que um aplicativo não está liberando a memória. Uma taxa alta no contador **Páginas/s** pode indicar paginação excessiva. Monitore o contador **Memória: Falhas de página/segundo** para ter certeza de que a atividade no disco não é provocada por paginação.  
+ Baixos valores no contador **Bytes disponíveis** podem indicar a existência de uma escassez global de memória no computador ou que um aplicativo não está liberando a memória. Uma taxa alta no contador **Páginas/s** pode indicar paginação excessiva. Monitore o contador **Memory: Page Faults/sec (Memória: Falhas de Páginas/s)** para ter certeza de que a atividade no disco não é provocada por paginação.  
   
- Uma taxa baixa de paginação (e, logo, de falhas de página) é normal, mesmo que o computador tenha muita memória disponível. O Gerenciador de Memória Virtual (VMM) do Microsoft Windows conta as páginas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e de outros processos, organizando os tamanhos de conjunto de trabalho desses processos. Essa atividade do VMM tende a causar falhas de página. Para determinar se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou outro processo é a causa da paginação excessiva, monitore o contador **Processo: Falhas de página/segundo** para a instância de processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Uma taxa baixa de paginação (e, logo, de falhas de página) é normal, mesmo que o computador tenha muita memória disponível. O Gerenciador de Memória Virtual (VMM) do Microsoft Windows conta as páginas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e de outros processos, organizando os tamanhos de conjunto de trabalho desses processos. Essa atividade do VMM tende a causar falhas de página. Para determinar se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou outro processo é a causa da paginação excessiva, monitore o contador **Process: Page Faults/sec (Processo: Falhas de Página/s)** da instância do processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Para obter mais informações sobre como solucionar a paginação excessiva, consulte a documentação do sistema operacional Windows.  
   
@@ -55,11 +55,11 @@ ms.locfileid: "68091015"
   
 -   **Processo: Conjunto de trabalho**  
   
--   **SQL Server: Gerenciador de buffer: Índice de Ocorrências no Cache do Buffer**  
+-   **SQL Server: Gerenciador de Buffer: Taxa de acertos do cache do buffer**  
   
--   **SQL Server: Gerenciador de buffer: Páginas do Banco de Dados**  
+-   **SQL Server: Gerenciador de Buffer: Páginas de Banco de Dados**  
   
--   **SQL Server: Gerenciador de memória: Memória Total do Servidor (KB)**  
+-   **SQL Server: Gerenciador de Memória: Memória total do servidor (KB)**  
   
  O contador **WorkingSet** mostra a quantidade de memória utilizada por um processo. Se esse número estiver consistentemente abaixo da quantidade de memória definida pelas opções de servidor **min server memory** e **max server memory** , o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está configurado para usar memória demais.  
   

@@ -11,10 +11,10 @@ ms.technology: linux
 ms.assetid: ''
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: f6758760d8ea73d9ec0ac95a0e824a0fd46a6dbb
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68045192"
 ---
 # <a name="configure-sql-server-always-on-availability-group-on-windows-and-linux-cross-platform"></a>Configurar o Grupo de Disponibilidade Always On do SQL Server no Windows e no Linux (multiplataforma)

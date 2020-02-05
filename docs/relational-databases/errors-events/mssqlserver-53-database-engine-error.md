@@ -14,25 +14,25 @@ ms.assetid: 1234f5a2-b3d1-425a-b29f-480fa792305f
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 42b33ba09ee5ba1eb924b38fe0aa8a665fd88adb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109620"
 ---
-# <a name="mssqlserver53"></a>MSSQLSERVER_53
+# <a name="mssqlserver_53"></a>MSSQLSERVER_53
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|53|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico||  
-|Texto da mensagem|Ocorreu um erro ao estabelecer uma conexão com o servidor.  Ao conectar-se ao SQL Server, essa falha pode ser provocada porque, sob as configurações padrão, o SQL Server não permite conexões remotas. (provedor: Provedor de Pipes Nomeados, erro: 40 – não foi possível abrir uma conexão com o SQL Server) (Provedor de Dados SqlClient do .Net)|  
+|Texto da mensagem|Ocorreu um erro ao estabelecer uma conexão com o servidor.  Ao conectar-se ao SQL Server, essa falha pode ser provocada porque, sob as configurações padrão, o SQL Server não permite conexões remotas. (provedor: Provedor de Pipes Nomeados, erro: 40 – Não foi possível abrir uma conexão com o SQL Server) (Provedor de Dados do .Net SqlClient)|  
   
 ## <a name="explanation"></a>Explicação  
 O cliente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não pode se conectar com o servidor. Esse erro pode ocorrer porque o cliente não pode resolver o nome do servidor ou porque o nome do servidor está incorreto.  

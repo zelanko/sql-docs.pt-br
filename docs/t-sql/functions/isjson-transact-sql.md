@@ -18,10 +18,10 @@ author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: 0d3060af2114f62c1c21b25e79abf4714acfbe4b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109438"
 ---
 # <a name="isjson-transact-sql"></a>ISJSON (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "68109438"
 
   Testa se uma cadeia de caracteres contém um JSON válido.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,7 +46,7 @@ ISJSON ( expression )
   
  Não retorna erros.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  **ISJSON** não verifica a exclusividade das chaves no mesmo nível.  
   
 ## <a name="examples"></a>Exemplos  

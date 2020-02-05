@@ -27,10 +27,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 293976660f66f60803e64c492ef868fd38e7c9dd
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981780"
 ---
 # <a name="suser_sname-transact-sql"></a>SUSER_SNAME (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "73981780"
 
   Retorna o nome de logon associado a um número de identificação de segurança (SID).  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -55,7 +55,7 @@ SUSER_SNAME ( [ server_user_sid ] )
 ## <a name="return-types"></a>Tipos de retorno  
  **nvarchar(128)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  SUSER_SNAME pode ser usado como uma restrição DEFAULT em ALTER TABLE ou CREATE TABLE. SUSER_SNAME pode ser usado em uma lista de seleção, em uma cláusula WHERE e em qualquer lugar em que uma expressão for permitida. SUSER_SNAME sempre deve ser seguido de parênteses, ainda que nenhum parâmetro seja especificado.  
   
  Quando chamado sem um argumento, SUSER_SNAME retorna o nome do contexto de segurança atual. Quando chamado sem um argumento em um lote que alternou o contexto usando EXECUTE AS, SUSER_SNAME retorna o nome do contexto representado. Quando chamado de um contexto representado, ORIGINAL_LOGIN retorna o nome do contexto original.  
@@ -67,7 +67,7 @@ SUSER_SNAME ( [ server_user_sid ] )
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-suser_sname"></a>A. Usando SUSER_SNAME  
+### <a name="a-using-suser_sname"></a>a. Usando SUSER_SNAME  
  O exemplo a seguir retorna o nome de logon para o contexto de segurança atual.  
   
 ```  

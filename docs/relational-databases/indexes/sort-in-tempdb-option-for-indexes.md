@@ -19,13 +19,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 03dbb54a41ef319b7a44185cee00d5de7d46b126
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67909539"
 ---
-# <a name="sortintempdb-option-for-indexes"></a>Opção SORT_IN_TEMPDB para índices
+# <a name="sort_in_tempdb-option-for-indexes"></a>Opção SORT_IN_TEMPDB para índices
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Quando você cria ou recria um índice, definindo a opção SORT_IN_TEMPDB como ON, você pode direcionar [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] para usar **tempdb** para armazenar os resultados intermediários de classificação utilizados para criar o índice. Embora essa opção aumente a quantidade de espaço temporário em disco usada para criar um índice, a opção pode reduzir o tempo necessário à criação ou recriação de um índice quando **tempdb** estiver em um conjunto de discos diferente do banco de dados do usuário. Para obter mais informações sobre **tempdb**, veja [Configurar a opção index create memory de configuração de servidor](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md).  
@@ -39,7 +39,7 @@ ms.locfileid: "67909539"
   
 -   O [!INCLUDE[ssDE](../../includes/ssde-md.md)] mescla as execuções classificadas de linhas de folha de índice em um único fluxo classificado. O componente de mescla de classificação do [!INCLUDE[ssDE](../../includes/ssde-md.md)] inicia com a primeira página de cada execução de classificação, encontra a menor chave em todas as páginas, e transmite aquela linha de folha ao componente de criação do índice. A próxima chave menor é processada, depois a próxima, e assim por diante. Quando a última linha de índice de folha é extraída de uma página de execução de classificação, o processo alterna para próxima página daquela execução de classificação. Quando forem processadas todas as páginas em uma extensão de execução de classificação, a extensão será liberada. Conforme cada linha de índice de folha é transmitida ao componente de criação de índice, é incluída em uma página de índice de folha no buffer. Cada página de folha é gravada conforme é preenchida. Conforme as páginas de folha são gravadas, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] também constrói os níveis superiores do índice. Cada página de índice de nível superior é gravada conforme é preenchida.  
   
-## <a name="sortintempdb-option"></a>opção SORT_IN_TEMPDB  
+## <a name="sort_in_tempdb-option"></a>opção SORT_IN_TEMPDB  
  Quando SORT_IN_TEMPDB é definido como OFF, o padrão, as execuções da classificação são armazenadas no grupo de arquivos de destino. Durante a primeira fase de criação do índice, as leituras alternadas das páginas da tabela base e gravação das execuções de classificação movem os cabeçalhos de leitura/gravação de disco de uma área do disco para outra. Os cabeçalhos estão na área da página de dados conforme as páginas de dados são verificadas. Eles se mudam para uma área de espaço livre quando os buffers de classificação forem preenchidos e a execução atual de classificação estiver gravada no disco e, em seguida, voltam para a área da página de dados conforme retoma a verificação da página da tabela. O movimento do cabeçalho de leitura/gravação é maior na segunda fase. Neste momento, o processo de classificação está normalmente alternando leituras de cada área de execução de classificação. Ambas as execuções de classificação e as novas páginas de índice são criadas no grupo de arquivos de destino. Isto significa que ao mesmo tempo em que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] está propagando leituras entre as execuções de classificação, ele precisa ir periodicamente até as extensões do índice para gravar novas páginas de índice conforme forem preenchidas.  
   
  Se a opção SORT_IN_TEMPDB for definida como ON e **tempdb** estiver em um conjunto separado de discos do grupo de arquivos de destino, durante a primeira fase, as leituras das páginas de dados ocorrerão em um disco diferente da gravação na área de trabalho de classificação em **tempdb**. Isto significa que as leituras de disco das chaves de dados geralmente continuam mais em série pelo disco, e a gravação no disco **tempdb** também é geralmente em série, conforme a gravação faz para criar o índice final. Mesmo se outros usuários estiverem usando o banco de dados e acessando endereços de disco separados, o padrão geral de leituras e gravações é mais eficiente quando SORT_IN_TEMPDB é especificado, do que quando não é.  
@@ -77,13 +77,13 @@ Quando você criar um índice clusterizado em uma tabela que tem índices não c
 ## <a name="related-tasks"></a>Related Tasks  
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
   
- [Reorganizar e recriar índices](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)  
+ [Reorganizar e recompilar índices](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
  [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)  
   
  [Configurar a opção index create memory de configuração de servidor](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md)  
   
- [Requisitos de espaço em disco para operações de índice DDL](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)  
+ [Requisitos de espaço em disco para operações de DDL de índice](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)  
   
   

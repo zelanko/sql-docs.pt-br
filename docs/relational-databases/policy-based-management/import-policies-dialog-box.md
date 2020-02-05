@@ -13,10 +13,10 @@ ms.assetid: 78ab5f6e-2f13-4788-937e-8892ef4e2345
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 807eec350627d64a642abc1043977d67069cc0d4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68087229"
 ---
 # <a name="import-policies-dialog-box"></a>Caixa de diálogo Importar Políticas
@@ -42,6 +42,6 @@ ms.locfileid: "68087229"
 ## <a name="see-also"></a>Consulte Também  
  [Administrar servidores com Gerenciamento Baseado em Políticas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
  [Importar política de Gerenciamento Baseado em Políticas](../../relational-databases/policy-based-management/import-a-policy-based-management-policy.md)   
- [Exportar uma política do Gerenciamento Baseado em Políticas](../../relational-databases/policy-based-management/export-a-policy-based-management-policy.md)  
+ [Exportar uma política do gerenciamento baseado em políticas](../../relational-databases/policy-based-management/export-a-policy-based-management-policy.md)  
   
   

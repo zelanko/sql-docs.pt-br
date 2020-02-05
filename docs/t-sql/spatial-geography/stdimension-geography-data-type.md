@@ -18,10 +18,10 @@ ms.assetid: 4368b0f6-0678-4ade-87dc-b43d8b2e8d92
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: ac39de3b0fe0d85aa65ef59661a512988acd4a36
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042334"
 ---
 # <a name="stdimension-geography-data-type"></a>STDimension (tipo de dados geography)
@@ -39,9 +39,9 @@ ms.locfileid: "68042334"
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **int**  
   
- Tipo de retorno CLR: **SqlInt32**  
+ Tipo de retorno do CLR: **SqlInt32**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  STDimension() retorna -1 se a instância de **geography** está vazia.  
   
 ## <a name="examples"></a>Exemplos  
@@ -60,9 +60,9 @@ FROM @temp;
   
  Em seguida, o exemplo retorna as dimensões de cada instância de `geography`.  
   
-|NAME|dim|  
+|name|dim|  
 |----------|---------|  
-|Ponto|0|  
+|Point|0|  
 |LineString|1|  
 |Polygon|2|  
   

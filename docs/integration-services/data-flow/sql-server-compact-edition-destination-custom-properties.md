@@ -11,10 +11,10 @@ ms.assetid: b66e93fe-ce62-401b-a31f-619c7b8b1f3e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 75c34c5993204e4ee2331eea5bfde0014e355f19
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291796"
 ---
 # <a name="sql-server-compact-edition-destination-custom-properties"></a>Propriedades personalizadas do destino SQL Server Compact Edition
@@ -26,9 +26,9 @@ ms.locfileid: "71291796"
   
  A tabela a seguir descreve as propriedades personalizadas do destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact. Todas as propriedades são de leitura/gravação.  
   
-|Nome da propriedade|Tipo de Dados|Descrição|  
+|Nome da propriedade|Tipo de Dados|DESCRIÇÃO|  
 |-------------------|---------------|-----------------|  
-|TableName|Cadeia de caracteres|O nome da tabela de destino em um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact.<br /><br /> O valor dessa propriedade pode ser especificado com uma expressão de propriedades.|  
+|TableName|String|O nome da tabela de destino em um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact.<br /><br /> O valor dessa propriedade pode ser especificado com uma expressão de propriedades.|  
   
  A entrada e as colunas de entrada do destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact não têm nenhuma propriedade personalizada.  
   

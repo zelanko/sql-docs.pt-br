@@ -19,10 +19,10 @@ ms.assetid: 4d93489e-e9bb-45b3-8354-21f58209965d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 473c12211ada579c3ceb441792788a1e975a85e0
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68892492"
 ---
 # <a name="securing-sql-server"></a>Protegendo o SQL Server

@@ -24,10 +24,10 @@ ms.assetid: 5d68dac2-f91b-4342-bb4e-209ee132665f
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 8fd770d8f1af098d4328df12a11cdcff609f2328
-ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71974401"
 ---
 # <a name="fetch-transact-sql"></a>FETCH (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "71974401"
 
   Recupera uma linha específica de um cursor de servidor [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -82,7 +82,7 @@ FETCH
  INTO \@*variable_name*[ ,...*n*]  
  Permite que os dados das colunas de uma busca sejam colocados em variáveis locais. Cada variável na lista, da esquerda para a direita, está associada à coluna correspondente no conjunto de resultados do cursor. O tipo de dados de cada variável deve corresponder ou ser uma conversão implícita com suporte do tipo de dados da coluna do conjunto de resultados correspondente. O número de variáveis deve corresponder ao número de colunas na lista de seleção do cursor.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Se a opção `SCROLL` não for especificada em uma instrução de estilo ISO `DECLARE CURSOR`, `NEXT` será a única opção `FETCH` com suporte. Se `SCROLL` for especificado em um estilo ISO `DECLARE CURSOR`, todas as opções `FETCH` terão suporte.  
   
  Quando as extensões de cursor DECLARE do [!INCLUDE[tsql](../../includes/tsql-md.md)] forem usadas, estas regras se aplicarão:  
@@ -100,7 +100,7 @@ FETCH
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-fetch-in-a-simple-cursor"></a>A. Usando FETCH em um cursor simples  
+### <a name="a-using-fetch-in-a-simple-cursor"></a>a. Usando FETCH em um cursor simples  
  O exemplo a seguir declara um cursor simples para as linhas da tabela `Person.Person` com um sobrenome que inicia com `B` e usa `FETCH NEXT` para percorrer as linhas. As instruções `FETCH` retornam o valor da coluna especificada em `DECLARE CURSOR` como um conjunto de resultados de uma linha.  
   
 ```sql  

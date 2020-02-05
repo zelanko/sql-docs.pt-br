@@ -18,10 +18,10 @@ ms.assetid: a7dd6083-c649-4ac3-885d-1234e0db62f1
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: fcaad3c2fb8337c64612d5ef5532bcbc4ed4b91d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68100989"
 ---
 # <a name="starea-geometry-data-type"></a>STArea (tipo de dados geometry)
@@ -39,14 +39,14 @@ ms.locfileid: "68100989"
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **float**  
   
- Tipo de retorno CLR: **SqlDouble**  
+ Tipo de retorno do CLR: **SqlDouble**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  `STArea()` retorna 0 se uma instância de **geometry** contém apenas valores dimensionais 0- e 1- ou se ela está vazia. `STArea()` retorna **NULL** se a instância de **geometry** não foi inicializada.  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-computing-the-area-of-a-polygon-instance"></a>A. Computando a área de uma instância de Polígono  
+### <a name="a-computing-the-area-of-a-polygon-instance"></a>a. Computando a área de uma instância de Polígono  
  O exemplo a seguir cria uma instância de `Polygon``geometry` e calcula a área do polígono.  
   
 ```  

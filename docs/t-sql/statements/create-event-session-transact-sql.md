@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 67683027-2b0f-47aa-b223-604731af8b4d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5033bbb939c2c6237e82683fba4e32defef69281
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 089725c52c2f65a9e1edb45a6afadd01ff2ace79
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902796"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76910189"
 ---
 # <a name="create-event-session-transact-sql"></a>CREATE EVENT SESSION (Transact-SQL)
 
@@ -35,7 +35,7 @@ ms.locfileid: "67902796"
 
 Cria uma sessão de Eventos Estendidos que identifica a origem dos eventos, os destinos da sessão de evento e as opções da sessão de evento.
 
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -166,7 +166,7 @@ EVENT_RETENTION_MODE = { **ALLOW_SINGLE_EVENT_LOSS** | ALLOW_MULTIPLE_EVENT_LOSS
 
 **ALLOW_SINGLE_EVENT_LOSS** Um evento pode ser perdido da sessão. Um único evento será descartado somente quando todos os buffers de evento estiverem cheios. A perda de um único evento quando os buffers de evento estão cheios permite características de desempenho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aceitáveis, enquanto minimiza a perda de dados no fluxo de evento processado.
 
-ALLOW_MULTIPLE_EVENT_LOSS Buffers de evento cheios que contêm vários eventos podem ser perdidos da sessão. A quantidade de eventos perdidos depende do tamanho de memória alocado à sessão, do particionamento da memória e do tamanho dos eventos no buffer. Essa opção minimiza o impacto do desempenho no servidor quando buffers de evento são rapidamente enchidos, mas grandes números de eventos podem ser perdidos da sessão.
+ALLOW_MULTIPLE_EVENT_LOSS Buffers de evento cheios que contêm vários eventos podem ser perdidos da sessão. O número de eventos perdidos depende do tamanho de memória alocado à sessão, do particionamento da memória e do tamanho dos eventos no buffer. Essa opção minimiza o impacto do desempenho no servidor quando buffers de evento são rapidamente enchidos, mas grandes números de eventos podem ser perdidos da sessão.
 
 NO_EVENT_LOSS Nenhuma perda de evento é permitida. Essa opção assegura que todos os eventos gerados sejam retidos. O uso dessa opção força todas as tarefas que acionam eventos a esperar até que haja espaço disponível em um buffer de evento. Isso pode causar problemas de desempenho detectáveis enquanto a sessão de evento está ativa. As conexões de usuário poderão parar enquanto esperam a liberação de eventos do buffer.
 
@@ -200,7 +200,7 @@ ON a sessão de evento é iniciada na inicialização.
 
 **OFF** a sessão de evento não é iniciada na inicialização.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Comentários
 
 A ordem de precedência para operadores lógicos é `NOT` (mais alto), seguido por `AND`, seguido por `OR`.
 

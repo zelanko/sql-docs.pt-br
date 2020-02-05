@@ -18,10 +18,10 @@ ms.assetid: 4cbc66e3-9035-4ecf-8f5a-6301f168c26c
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 5cd0e37ddf47e80ff524d02688d5764d93717a67
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042066"
 ---
 # <a name="stisempty-geography-data-type"></a>STIsEmpty (tipo de dados geography)
@@ -39,7 +39,7 @@ ms.locfileid: "68042066"
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
- Tipo de retorno CLR: **SqlBoolean**  
+ Tipo de retorno do CLR: **SqlBoolean**  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir cria uma instância de `geography` vazia e usa `STIsEmpty()` para verificar se a instância está vazia.  

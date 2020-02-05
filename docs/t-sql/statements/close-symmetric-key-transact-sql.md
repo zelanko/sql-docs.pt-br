@@ -22,10 +22,10 @@ ms.assetid: 3b083cbb-3c6a-4f59-8d34-601db1efcc83
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 8d0f9c50b5d89926f370f9059a1cbce6c246e216
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68141159"
 ---
 # <a name="close-symmetric-key-transact-sql"></a>CLOSE SYMMETRIC KEY (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68141159"
   Fecha uma chave simétrica ou fecha todas as chaves simétricas abertas na sessão atual.  
   
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,7 +46,7 @@ CLOSE { SYMMETRIC KEY key_name | ALL SYMMETRIC KEYS }
  *Key_name*  
  É o nome da chave simétrica a ser fechada.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  As chaves simétricas abertas estão associadas à sessão que não está no contexto de segurança. Uma chave aberta continuará disponível até ser explicitamente fechada ou a sessão ser encerrada. CLOSE ALL SYMMETRIC KEYS fechará qualquer chave mestra do banco de dados que tenha sido aberta na sessão atual usando a instrução [OPEN MASTER KEY](../../t-sql/statements/open-master-key-transact-sql.md).  Informações sobre chaves abertas estão visíveis na exibição do catálogo [sys.openkeys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-openkeys-transact-sql.md).  
   
 ## <a name="permissions"></a>Permissões  
@@ -54,7 +54,7 @@ CLOSE { SYMMETRIC KEY key_name | ALL SYMMETRIC KEYS }
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-closing-a-symmetric-key"></a>A. Fechando uma chave simétrica  
+### <a name="a-closing-a-symmetric-key"></a>a. Fechando uma chave simétrica  
  O exemplo a seguir fecha a chave simétrica `ShippingSymKey04`.  
   
 ```  

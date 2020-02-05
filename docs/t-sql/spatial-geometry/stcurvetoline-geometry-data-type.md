@@ -15,10 +15,10 @@ ms.assetid: abc80b32-4152-4e10-b816-798b901e0ac5
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 5bc1bdb1ece65113422af1e9a8ebe09de0db1fa1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930303"
 ---
 # <a name="stcurvetoline-geometry-data-type"></a>STCurveToLine (tipo de dados geometry)
@@ -36,9 +36,9 @@ Retorna uma aproximação poligonal de uma instância de **geometry** que conté
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Tipo de retorno CLR: **SqlGeometry**  
+ Tipo de retorno do CLR: **SqlGeometry**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Retorna uma instância de **GeometryCollection** vazia para variáveis da instância de **geometry** vazia e retorna **NULL** para variáveis de **geometry** não inicializadas.  
   
  A aproximação poligonal que o método retorna depende da instância de **geometry** que você usa para chamar o método:  
@@ -53,7 +53,7 @@ Retorna uma aproximação poligonal de uma instância de **geometry** que conté
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-an-uninitialized-geometry-variable-and-empty-instance"></a>A. Usando uma variável de geometria não inicializada e instância vazia  
+### <a name="a-using-an-uninitialized-geometry-variable-and-empty-instance"></a>a. Usando uma variável de geometria não inicializada e instância vazia  
  No exemplo a seguir, a primeira instrução **SELECT** usa uma instância de **geometry** não inicializada para chamar o método `STCurveToLine` e a segunda instrução **SELECT** usa uma instância de **geometry** vazia. Portanto, o método retorna **NULL** para a primeira instrução e uma coleção **GeometryCollection** para a segunda.  
   
 ```

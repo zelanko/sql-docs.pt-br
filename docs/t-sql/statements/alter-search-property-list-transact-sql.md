@@ -24,10 +24,10 @@ ms.assetid: 0436e4a8-ca26-4d23-93f1-e31e2a1c8bfb
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: f9caf29596f3a5cf610e02ffcf4f27bfacbce668
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68001639"
 ---
 # <a name="alter-search-property-list-transact-sql"></a>ALTER SEARCH PROPERTY LIST (Transact-SQL)
@@ -106,7 +106,7 @@ SELECT property_int_id FROM sys.registered_search_properties;
  DROP  
  Remove a propriedade especificada da lista de propriedades especificada por *list_name*. O cancelamento de uma propriedade cancela seu registro, portanto, ela não será mais pesquisável.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Cada índice de texto completo pode ter apenas uma lista de propriedades de pesquisa.  
   
  Para habilitar consultas em uma determinada propriedade de pesquisa, você deve adicioná-la à lista de propriedades de pesquisa do índice de texto completo e, em seguida, popular o índice novamente.  
@@ -174,7 +174,7 @@ GO
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-adding-a-property"></a>A. Adicionando uma propriedade  
+### <a name="a-adding-a-property"></a>a. Adicionando uma propriedade  
  O exemplo a seguir adiciona várias propriedades, `Title`, `Author` e `Tags`, à lista de propriedades denominada `DocumentPropertyList`.  
   
 > [!NOTE]  

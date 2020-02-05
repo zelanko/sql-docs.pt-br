@@ -21,10 +21,10 @@ ms.assetid: 15fda1b2-e4dd-4f9d-935a-2e38926075b2
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 06ab8c327709fa6bfb504217bdd083aaed98f870
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066006"
 ---
 # <a name="alter-broker-priority-transact-sql"></a>ALTER BROKER PRIORITY (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68066006"
 
   Altera as propriedades de uma prioridade de conversa do [!INCLUDE[ssSB](../../includes/sssb-md.md)].  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -55,7 +55,7 @@ FOR CONVERSATION
  Especifica o nome da prioridade de conversa a ser alterado. O nome deve recorrer a uma prioridade de conversa no banco de dados atual.  
   
  SET  
- Especifica os critérios para determinar se a prioridade de conversa é aplicável a uma conversa. SET é obrigatório e deve conter pelo menos um critério: CONTRACT_NAME, LOCAL_SERVICE_NAME, REMOTE_SERVICE_NAME ou PRIORITY_LEVEL.  
+ Especifica os critérios para determinar se a prioridade de conversa é aplicável a uma conversa. SET é necessário e deve conter pelo menos um critério: CONTRACT_NAME, LOCAL_SERVICE_NAME, REMOTE_SERVICE_NAME ou PRIORITY_LEVEL.  
   
  CONTRACT_NAME = {*ContractName* | **ANY**}  
  Especifica o nome de um contrato a ser usado como critério para determinar se a prioridade de conversa se aplica a uma conversa. *ContractName* é um identificador [!INCLUDE[ssDE](../../includes/ssde-md.md)] e precisa especificar o nome de um contrato no banco de dados atual.  
@@ -107,7 +107,7 @@ FOR CONVERSATION
   
  Se PRIORITY_LEVEL não for especificado, a propriedade do nível de prioridade da prioridade de conversa não será alterada.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Nenhuma propriedade alterada por ALTER BROKER PRIORITY se aplica a conversas existentes. As conversas existentes continuam com a prioridade que foi atribuída quando elas foram iniciadas.  
   
  Para obter mais informações, confira [CREATE BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/create-broker-priority-transact-sql.md).  
@@ -117,7 +117,7 @@ FOR CONVERSATION
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-changing-only-the-priority-level-of-an-existing-conversation-priority"></a>A. Alterando apenas o nível de prioridade de uma prioridade de conversa existente.  
+### <a name="a-changing-only-the-priority-level-of-an-existing-conversation-priority"></a>a. Alterando apenas o nível de prioridade de uma prioridade de conversa existente.  
  Altera o nível de prioridade, mas não altera o contrato, o serviço local ou as propriedades de serviço remoto.  
   
 ```  

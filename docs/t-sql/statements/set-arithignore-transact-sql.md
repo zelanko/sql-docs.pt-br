@@ -24,10 +24,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6d2cfda829d014f85f933aaa476507252ca056e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67929105"
 ---
 # <a name="set-arithignore-transact-sql"></a>SET ARITHIGNORE (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "67929105"
 
   Controla se são retornadas mensagens de erro de estouro ou erros de divisão por zero durante uma consulta.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -51,7 +51,7 @@ SET ARITHIGNORE { ON | OFF }
 SET ARITHIGNORE OFF
 ```
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  A configuração SET ARITHIGNORE apenas controla se uma mensagem de erro é retornada. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retorna um NULL em um cálculo que envolve um erro de estouro ou divisão por zero, independentemente dessa configuração. A configuração SET ARITHABORT pode ser usada para determinar se a consulta foi terminada. Essa configuração não afeta erros que ocorrem durante instruções INSERT, UPDATE e DELETE.  
   
  Se SET ARITHABORT ou SET ARITHIGNORE estiver definida como OFF e SET ANSI_WARNINGS como ON, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ainda retornará uma mensagem de erro quando encontrar erros de divisão por zero ou de estouro.  
