@@ -23,10 +23,10 @@ ms.assetid: b82244ed-d623-431f-aa06-8017349d847f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 79be8af32c13b9e910b94b40bd3c1bf9b2c0e2c5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68071406"
 ---
 # <a name="fileproperty-transact-sql"></a>FILEPROPERTY (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68071406"
 
   Retorna o valor de propriedade de nome de arquivo especificado quando são especificados um nome de arquivo no banco de dados atual e um nome de propriedade. Retorna NULL para arquivos que não estão no banco de dados atual.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -50,7 +50,7 @@ FILEPROPERTY ( file_name , property )
  *property*  
  É uma expressão que contém o nome da propriedade do arquivo a ser retornada. *property* é **varchar(128)** e pode ser um dos valores a seguir.  
   
-|Valor|Descrição|Valor retornado|  
+|Valor|DESCRIÇÃO|Valor retornado|  
 |-----------|-----------------|--------------------|  
 |**IsReadOnly**|O grupo de arquivos é somente leitura.|1 = True<br /><br /> 0 = False<br /><br /> NULL = A entrada não é válida.|  
 |**IsPrimaryFile**|Arquivo é o arquivo primário.|1 = True<br /><br /> 0 = False<br /><br /> NULL = A entrada não é válida.|  
@@ -60,7 +60,7 @@ FILEPROPERTY ( file_name , property )
 ## <a name="return-types"></a>Tipos de retorno  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  *file_name* corresponde à coluna **name** da exibição do catálogo **sys.master_files** ou **sys.database_files**.  
   
 ## <a name="examples"></a>Exemplos  

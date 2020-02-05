@@ -33,10 +33,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 90a62fed8292a5d5cbb1945cdfe8b2cee2502235
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67901946"
 ---
 # <a name="is-null-transact-sql"></a>IS NULL (Transact-SQL)
@@ -44,7 +44,7 @@ ms.locfileid: "67901946"
 
   Determina se uma expressão especificada é NULL.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -67,7 +67,7 @@ expression IS [ NOT ] NULL
   
  Se o valor de *expression* for NULL, IS NOT NULL retornará FALSE; caso contrário, retornará TRUE.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Para determinar se uma expressão é NULL, use IS NULL ou IS NOT NULL em vez de operadores de comparação (como = ou !=). Operadores de comparação retornam UNKOWN quando um ou os dois argumentos são NULL.  
   
 ## <a name="examples"></a>Exemplos  

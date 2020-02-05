@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: babd96ee665a589456d3fda7ed7e2a5a13366d36
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67903522"
 ---
 # <a name="audit-broker-login-event-class"></a>Classe de evento Audit Broker Login
@@ -25,7 +25,7 @@ ms.locfileid: "67903522"
   
 ## <a name="audit-broker-login-event-class-data-columns"></a>Colunas de dados da classe de evento Audit Broker Login  
   
-|Coluna de dados|Tipo|Descrição|Número da coluna|Filtrável|  
+|Coluna de dados|Type|DESCRIÇÃO|Número da coluna|Filtrável|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|Não usado nessa classe de evento.|10|Sim|  
 |**ClientProcessID**|**int**|Não usado nessa classe de evento.|9|Sim|  
@@ -46,20 +46,20 @@ ms.locfileid: "67903522"
 |**ServerName**|**nvarchar**|O nome da instância do SQL Server que está sendo rastreada.|26|Não|  
 |**SPID**|**int**|A ID de processo do servidor atribuída pelo SQL Server ao processo associado ao cliente.|12|Sim|  
 |**StartTime**|**datetime**|O horário no qual o evento foi iniciado, quando disponível.|14|Sim|  
-|**Estado**|**int**|Indica o local no código-fonte do SQL Server que produziu o evento. Cada local que pode produzir esse evento tem um código de estado diferente. Um engenheiro de suporte da Microsoft pode usar esse código de estado para descobrir onde o evento foi produzido.|30|Não|  
-|**TargetUserName**|**nvarchar**|Estado do logon. Um dos seguintes:<br /><br /> INITIAL<br /><br /> WAIT LOGIN NEGOTIATE<br /><br /> ONE ISC<br /><br /> ONE ASC<br /><br /> TWO ISC<br /><br /> TWO ASC<br /><br /> Confirmação WAIT ISC<br /><br /> Confirmação WAIT ASC<br /><br /> WAIT REJECT<br /><br /> WAIT PRE-MASTER SECRET<br /><br /> WAIT VALIDATION<br /><br /> WAIT ARBITRATION<br /><br /> ONLINE<br /><br /> erro<br /><br /> <br /><br /> **Observação**: ISC = Iniciar Contexto de Segurança. ASC = Aceitar Contexto de Segurança|39|Não|  
+|**State**|**int**|Indica o local no código-fonte do SQL Server que produziu o evento. Cada local que pode produzir esse evento tem um código de estado diferente. Um engenheiro de suporte da Microsoft pode usar esse código de estado para descobrir onde o evento foi produzido.|30|Não|  
+|**TargetUserName**|**nvarchar**|Estado do logon. Um destes:<br /><br /> INITIAL<br /><br /> WAIT LOGIN NEGOTIATE<br /><br /> ONE ISC<br /><br /> ONE ASC<br /><br /> TWO ISC<br /><br /> TWO ASC<br /><br /> Confirmação WAIT ISC<br /><br /> Confirmação WAIT ASC<br /><br /> WAIT REJECT<br /><br /> WAIT PRE-MASTER SECRET<br /><br /> WAIT VALIDATION<br /><br /> WAIT ARBITRATION<br /><br /> ONLINE<br /><br /> ERROR<br /><br /> <br /><br /> **Observação**: ISC = Iniciar Contexto de Segurança. ASC = Aceitar Contexto de Segurança|39|Não|  
 |**TransactionID**|**bigint**|ID da transação atribuída pelo sistema.|4|Não|  
   
  A tabela abaixo lista os valores de subclasse para essa classe de evento.  
   
-|ID|Subclasse|Descrição|  
+|ID|Subclasse|DESCRIÇÃO|  
 |--------|--------------|-----------------|  
 |1|Login Success|Um evento Login Success informa que o processo de logon do agente adjacente foi concluído com êxito.|  
 |2|Login Protocol Error|Um evento Login Protocol Error informa que o agente recebe uma mensagem bem formada, mas não válida para o estado atual do processo de logon. A mensagem pode ter sido perdida ou enviada fora de sequência.|  
 |3|Message Format Error|Um evento Message Format Error evento informa que o agente recebeu uma mensagem que não corresponde ao formato esperado. A mensagem pode ter sido corrompida ou um programa diferente do SQL Server pode estar enviando mensagens para a porta usada pelo Agente de Serviços.|  
 |4|Negotiate Failure|Um evento Negotiate Failure informa que o agente local e o agente remoto oferecem suporte a níveis de autenticação mutuamente exclusivos.|  
 |5|Authentication Failure|Um evento Authentication Failure informa que o Agente de Serviços não pode executar autenticação para a conexão devido a um erro. Para Autenticação do Windows, esse evento informa que o Service Broker não pode usar a Autenticação do Windows. Para autenticação com base em certificado, esse evento informa que o Service Broker não pode acessar o certificado.|  
-|6|Authorization Failure|Um evento Authorization Failure informa que o Agente de Serviços negou autorização para a conexão. Para Autenticação do Windows, esse evento informa que o identificador de segurança para a conexão não corresponde a um usuário de banco de dados. Para autenticação com base em certificado, esse evento informa que a chave pública fornecida na mensagem não corresponde a um certificado no banco de dados.|  
+|6|Falha de autorização|Um evento Authorization Failure informa que o Agente de Serviços negou autorização para a conexão. Para Autenticação do Windows, esse evento informa que o identificador de segurança para a conexão não corresponde a um usuário de banco de dados. Para autenticação com base em certificado, esse evento informa que a chave pública fornecida na mensagem não corresponde a um certificado no banco de dados.|  
   
 ## <a name="see-also"></a>Consulte Também  
  [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md)   

@@ -20,10 +20,10 @@ helpviewer_keywords:
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 955cfe87f93bedc41c6aeb29951ee1c81d0a4d6e
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68425928"
 ---
 # <a name="filepropertyex-transact-sql"></a>FILEPROPERTYEX (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68425928"
 
   Retorna o valor da propriedade do arquivo estendido especificado quando são especificados um nome de arquivo no banco de dados atual e um nome de propriedade. Retorna NULL para arquivos que não estão no banco de dados atual ou para propriedades de arquivo estendido que não existem. Atualmente, as propriedades de arquivo estendido se aplicam somente a bancos de dados que estão no Armazenamento de Blobs do Azure.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -48,7 +48,7 @@ FILEPROPERTYEX ( name , property )
 
 
   
-|Valor|Descrição|
+|Valor|DESCRIÇÃO|
 |-----------|-----------------|  
 |**BlobTier**|O nível do blob de páginas do Azure de destino. Aplica-se somente aos bancos de dados Standard e GeneralPurpose que usam o Armazenamento de Blobs de páginas do Azure.|
 |**AccountType**|O tipo de conta de armazenamento que indica se o Armazenamento é de Blobs ou de arquivos e se é um armazenamento Premium ou Standard.|
@@ -58,7 +58,7 @@ FILEPROPERTYEX ( name , property )
 ## <a name="return-types"></a>Tipos de retorno  
  **sql_variant**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  *file_name* corresponde à coluna **name** da exibição do catálogo **sys.master_files** ou **sys.database_files**.  
   
 ## <a name="examples"></a>Exemplos  

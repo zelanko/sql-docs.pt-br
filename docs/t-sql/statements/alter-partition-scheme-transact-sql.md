@@ -22,10 +22,10 @@ ms.assetid: f01d6880-9800-4cfb-8d11-d4be21efc8ca
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 593c2d8bf9cff3e10aaafc339aa82ef16c4bc09f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68071239"
 ---
 # <a name="alter-partition-scheme-transact-sql"></a>ALTER PARTITION SCHEME (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "68071239"
 >[!NOTE]
 >No Banco de Dados SQL do Azure, há suporte apenas para grupos de arquivos primários.  
   
- ![Ícone de link do artigo](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do artigo") [Convenções de sintaxe do Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do artigo](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do artigo") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -60,7 +60,7 @@ NEXT USED [ filegroup_name ] [ ; ]
   
  Se *filegroup_name* não for especificado e houver nenhum grupo de arquivos marcado como NEXT USED, ALTER PARTITION SCHEME retornará um aviso.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Qualquer grupo de arquivos afetado por ALTER PARTITION SCHEME deve estar online.  
   
 ## <a name="permissions"></a>Permissões  

@@ -20,10 +20,10 @@ ms.assetid: f8dbb9e6-94d6-40d7-8b38-6833a409d597
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 8aefacd470b045caafc73474126468fc01658276
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67904360"
 ---
 # <a name="encryptbypassphrase-transact-sql"></a>ENCRYPTBYPASSPHRASE (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "67904360"
 
   Criptografe os dados com uma senha com o uso do algoritmo TRIPLE DES com um comprimento de chave de 128 bits.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -71,7 +71,7 @@ EncryptByPassPhrase ( { 'passphrase' | @passphrase }
 ## <a name="return-types"></a>Tipos de retorno  
  **varbinary** com no máximo 8.000 bytes.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Uma frase secreta é uma senha que inclui espaços. A vantagem de usar uma frase secreta é o fato de ser mais fácil lembrar uma frase ou sentença significativa do que uma cadeia de caracteres comparavelmente longa.  
   
  Esta função não verifica a complexidade da senha.  

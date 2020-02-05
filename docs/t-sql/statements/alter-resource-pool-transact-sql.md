@@ -18,10 +18,10 @@ ms.assetid: 9c1c4cfb-0e3b-4f01-bf57-3fce94c7d1d4
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 57849c8d99700f61c251177c3c3195b2277163ae
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982082"
 ---
 # <a name="alter-resource-pool-transact-sql"></a>ALTER RESOURCE POOL (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "73982082"
 
   Altera uma configuração do pool de recursos do Administrador de Recursos existente no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -116,7 +116,7 @@ INNER JOIN sys.dm_os_schedulers AS sc
   
  Se o MAX_IOPS_PER_VOLUME para um pool for definido como 0, o pool não será controlado e pode utilizar todos os IOPS no sistema mesmo se outros pools tiverem MIN_IOPS_PER_VOLUME definido. Para esses casos, é recomendável definir o valor de MAX_IOPS_PER_VOLUME para esse pool para um número alto (por exemplo, o valor máximo 2^31-1) se você quiser que esse pool seja controlado para E/S.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  MAX_CPU_PERCENT e MAX_MEMORY_PERCENT devem ser maior que ou igual a MIN_CPU_PERCENT e MIN_MEMORY_PERCENT, respectivamente.  
   
  MAX_CPU_PERCENT poderá usar a capacidade da CPU acima do valor de MAX_CPU_PERCENT, se essa capacidade estiver disponível. Embora possa haver picos periódicos acima de CAP_CPU_PERCENT, as cargas de trabalho não devem exceder CAP_CPU_PERCENT por longos períodos de tempo, mesmo quando a capacidade de CPU adicional está disponível.  

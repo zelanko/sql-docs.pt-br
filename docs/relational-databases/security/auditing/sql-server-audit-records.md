@@ -13,10 +13,10 @@ ms.assetid: 7a291015-df15-44fe-8d53-c6d90a157118
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2681d021099e8b10150efd255e27cf436c665a90
-ms.sourcegitcommit: b7618a2a7c14478e4785b83c4fb2509a3e23ee68
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73926032"
 ---
 # <a name="sql-server-audit-records"></a>SQL Server Audit Records
@@ -25,11 +25,11 @@ ms.locfileid: "73926032"
   
  Auditorias consistem em zero ou mais itens de ação de auditoria registrados em um *destino*de auditoria. O destino de auditoria pode ser um arquivo binário, o log de eventos de Aplicativo do Windows ou o log de eventos de Segurança do Windows. Os registros enviados ao destino podem conter os elementos descritos na tabela a seguir:  
   
-|Nome da coluna|Descrição|Tipo|Sempre disponível|  
+|Nome da coluna|DESCRIÇÃO|Type|Sempre disponível|  
 |-----------------|-----------------|----------|----------------------|  
 |**event_time**|Data/hora em que a ação auditável é acionada.|**datetime2**|Sim|  
 |**sequence_no**|Rastreia a sequência de registros dentro de um único registro de auditoria que é muito grande para se ajustar no buffer de gravação das auditorias.|**int**|Sim|  
-|**action_id**|ID da ação<br /><br /> Dica: Para usar **action_id** como um predicado, ele deve ser convertido de uma cadeia de caracteres em um valor numérico. Para obter mais informações, veja [Filter SQL Server Audit on action_id / class_type predicate](https://blogs.msdn.com/b/sqlsecurity/archive/2012/10/03/filter-sql-server-audit-on-action-id-class-type-predicate.aspx)(Filtrar a Auditoria do SQL Server no predicado action_id / class_type).|**varchar(4)**|Sim|  
+|**action_id**|ID da ação<br /><br /> Dica: para usar **action_id** como um predicado, ele deve ser convertido de uma cadeia de caracteres para um valor numérico. Para obter mais informações, veja [Filter SQL Server Audit on action_id / class_type predicate](https://blogs.msdn.com/b/sqlsecurity/archive/2012/10/03/filter-sql-server-audit-on-action-id-class-type-predicate.aspx)(Filtrar a Auditoria do SQL Server no predicado action_id / class_type).|**varchar(4)**|Sim|  
 |**succeeded**|Indica se a verificação de permissão da ação que aciona o evento de auditoria teve êxito ou falhou. |**bit**<br /> - 1 = êxito, <br />0 = Falha|Sim|  
 |**permission_bitmask**|Quando aplicável, mostra as permissões concedidas, negadas ou revogadas|**bigint**|Não|  
 |**is_column_permission**|Sinalizador que indica uma permissão no nível da coluna|**bit** <br />-1 = True, <br />0 = False|Não|  
@@ -54,7 +54,7 @@ ms.locfileid: "73926032"
 |**instrução**|instrução TSQL (se houver)|**nvarchar(4000)**|Não|  
 |**additional_information**|Qualquer informação adicional sobre o evento, armazenado em XML.|**nvarchar(4000)**|Não|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Algumas ações não populam o valor de uma coluna porque pode não ser aplicável à ação.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] armazena 4000 caracteres de dados para campos de caractere em um registro de auditoria. Quando os valores **additional_information** e **statement** obtidos de uma ação auditável retornam mais de 4000 caracteres, a coluna **sequence_no** é usada para gravar vários registros no relatório de auditoria para uma única ação de auditoria gravar esses dados. O processo é o seguinte:  

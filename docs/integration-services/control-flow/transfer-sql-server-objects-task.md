@@ -17,10 +17,10 @@ ms.assetid: fe86d6e5-e415-406c-88f3-dc3ef71bd5f0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4f1a2e2122c4d141d8d702d027bf30d65db93f9c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293838"
 ---
 # <a name="transfer-sql-server-objects-task"></a>Tarefa Transferir Objetos do SQL Server
@@ -35,7 +35,7 @@ ms.locfileid: "71293838"
   
  A tabela a seguir lista os tipos de objetos que podem ser copiados.  
   
-|Object|  
+|Objeto|  
 |------------|  
 |Tabelas|  
 |Exibições|  
@@ -171,7 +171,7 @@ ms.locfileid: "71293838"
  **ExistingData**  
  Especifique como os dados serão copiados para o servidor de destino. As opções desta propriedade estão listadas na seguinte tabela:  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |**Substituir**|Os dados no servidor de destino serão substituídos.|  
 |**Acrescentar**|Os dados copiados do servidor de origem serão anexados aos dados existentes no servidor de destino.|  
@@ -330,7 +330,7 @@ ms.locfileid: "71293838"
 ## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
  [Tarefas do Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
- [Editor da Tarefa Transferir Objetos do SQL Server &#40;Página Geral&#41;](../../integration-services/control-flow/transfer-sql-server-objects-task-editor-general-page.md)   
+ [Editor da Tarefa Transferir Objetos SQL Server &#40;Página Geral&#41;](../../integration-services/control-flow/transfer-sql-server-objects-task-editor-general-page.md)   
  [Página Expressões](../../integration-services/expressions/expressions-page.md)   
  [Formatos de dados para importação ou exportação em massa &#40;SQL Server&#41;](../../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md)   
  [Considerações sobre segurança para uma instalação do SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  

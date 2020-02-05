@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 6dd601a4-1233-43d9-a9f0-bc8d84e5d188
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 081802afb9f66380da93f46bf75011b0f4ddb811
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 22410fd71e91084c99823ceba020ed43f54ed75e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768199"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288241"
 ---
 # <a name="article-properties---ltarticlegt"></a>Propriedades do Artigo – &lt;Artigo&gt;
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -90,7 +90,7 @@ ms.locfileid: "68768199"
  Essa opção só se aplica a procedimentos armazenados. Determina se a definição do procedimento armazenado (a instrução CREATE PROCEDURE) ou sua execução devem ser replicadas ou não. Se você replicar a execução do procedimento, a definição do procedimento será replicada para o Assinante quando a assinatura for inicializada; quando o procedimento armazenado for executado no Publicador, a replicação executará o procedimento correspondente no Assinante. Isso pode fornecer um desempenho significativamente melhor em casos onde são executadas grandes operações em lote. Para obter mais informações, consulte [Publicando execução de procedimento armazenado em replicação transacional](../../relational-databases/replication/transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
   
 ## <a name="options-for-merge-publications"></a>Opções para publicações de mesclagem  
- A caixa de diálogo **Propriedades do Artigo** para publicações de mesclagem tem duas guias: **Propriedades** e **Resolver**.  
+ A caixa de diálogo **Propriedades do Artigo** para publicações de mesclagem tem duas guias: **Propriedades** e **Resolvedor**.  
   
 ### <a name="properties-tab"></a>Guia Propriedades  
  **Direção de sincronização**  
@@ -126,7 +126,7 @@ ms.locfileid: "68768199"
  Se você selecionar o resolvedor padrão, os conflitos serão resolvidos com base na prioridade atribuída a cada Assinante ou na primeira alteração gravada no Publicador, dependendo do tipo de assinatura usado. Para obter mais informações, consulte [Detectar e resolver conflitos de replicação de mesclagem](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
  **Usar um resolvedor personalizado (registrado no Distribuidor)**  
- Se você escolher usar um resolvedor de artigo (um fornecido pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] ou um que você gravou), deve selecionar um resolvedor na caixa de listagem. Para obter mais informações, consulte [Detecção e resolução de conflito de replicação de mesclagem avançada ](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
+ Se você escolher usar um resolvedor de artigo (um fornecido pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] ou um que você gravou), deve selecionar um resolvedor na caixa de listagem. Para obter mais informações, consulte [Replicação de mesclagem avançada – detecção e resolução de conflito](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
  Se o resolvedor requerer uma entrada, especifique-a na caixa de texto **Insira as informações necessárias para o desenvolvedor** . Para obter mais informações sobre entrada requerida por resolvedores personalizados [!INCLUDE[msCoName](../../includes/msconame-md.md)] , consulte [Resolvedores Microsoft baseados em COM](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md).  
   

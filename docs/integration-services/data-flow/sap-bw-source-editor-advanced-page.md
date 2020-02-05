@@ -13,10 +13,10 @@ ms.assetid: 44f3c991-9e8f-4126-a9a2-2d9da779fb11
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a8eaed6e70ad457f33dc9587e3004e433da43ae1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298084"
 ---
 # <a name="sap-bw-source-editor-advanced-page"></a>Editor de Origem de SAP BW (página Avançado)
@@ -50,7 +50,7 @@ ms.locfileid: "71298084"
  **Conversão da cadeia de caracteres**  
  Especifique a regra para aplicar à conversão de cadeia de caracteres.  
   
-|Opção|Descrição|  
+|Opção|DESCRIÇÃO|  
 |------------|-----------------|  
 |**Conversão automática de cadeia de caracteres**|Converta todas as cadeias de caracteres para **nvarchar** quando o sistema SAP Netweaver BW for um sistema Unicode. Caso contrário, converta todas as cadeias de caracteres para **varchar**.|  
 |**Converter cadeias de caracteres em varchar**|Converta todas as cadeias de caracteres para **varchar**.|  

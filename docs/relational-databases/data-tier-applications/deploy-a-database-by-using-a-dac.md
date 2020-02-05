@@ -20,10 +20,10 @@ ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1fae39a6cd0fcd61b18419f8e46786067a4a69dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68134806"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>Implantar um banco de dados usando um DAC
@@ -78,7 +78,7 @@ ms.locfileid: "68134806"
   
     -   [Página de Resumo](#Summary)  
   
-    -   [Andamento](#Progress)  
+    -   [Progresso](#Progress)  
     
     -   [Resultados](#Results)  
   
@@ -141,7 +141,7 @@ ms.locfileid: "68134806"
 6.  Use o método **Import** do tipo **Microsoft.SqlServer.Management.Dac.DacStore** para importar o banco de dados para um arquivo BACPAC. Especifique o arquivo BACPAC criado pela exportação.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Aplicativos da camada de dados](../../relational-databases/data-tier-applications/data-tier-applications.md)   
+ [Aplicativos da Camada de Dados](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Exportar um aplicativo da camada de dados](../../relational-databases/data-tier-applications/export-a-data-tier-application.md)   
  [Importar um arquivo BACPAC para criar um novo banco de dados de usuário](../../relational-databases/data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database.md)  
   

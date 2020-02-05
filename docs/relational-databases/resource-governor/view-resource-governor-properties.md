@@ -14,10 +14,10 @@ ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 2250030405a0c6bb2512e3b8446cb76e11a7080e
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72903906"
 ---
 # <a name="view-resource-governor-properties"></a>View Resource Governor Properties
@@ -26,11 +26,11 @@ ms.locfileid: "72903906"
   Você pode criar ou configurar entidades do Administrador de Recursos, como pools de recursos e grupos de cargas de trabalho, usando a página de Propriedades do Administrador de Recursos no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  ##  <a name="BeforeYouBegin"></a> Tópicos relacionados 
- Além de exibir as propriedades de entidades do Administrador de Recursos, você pode executar várias tarefas de configuração usando a página **Propriedades do Administrador de Recursos** . Para obter mais informações, consulte estes tópicos:  
+ Além de exibir as propriedades de entidades do Administrador de Recursos, você pode executar várias tarefas de configuração usando a página **Propriedades do Administrador de Recursos** . Para saber mais, consulte esses tópicos:  
   
--   [Habilitar Administrador de Recursos](../../relational-databases/resource-governor/enable-resource-governor.md)  
+-   [Habilitar o Resource Governor](../../relational-databases/resource-governor/enable-resource-governor.md)  
   
--   [Desabilitar Administrador de Recursos](../../relational-databases/resource-governor/disable-resource-governor.md)  
+-   [Desabilitar o Resource Governor](../../relational-databases/resource-governor/disable-resource-governor.md)  
   
 -   [Criar um pool de recursos](../../relational-databases/resource-governor/create-a-resource-pool.md)  
   
@@ -38,9 +38,9 @@ ms.locfileid: "72903906"
   
 -   [Alterar configurações do pool de recursos](../../relational-databases/resource-governor/change-resource-pool-settings.md)  
   
--   [Alterar as configurações de grupo de carga de trabalho](../../relational-databases/resource-governor/change-workload-group-settings.md)  
+-   [Alterar as configurações do grupo de carga de trabalho](../../relational-databases/resource-governor/change-workload-group-settings.md)  
   
--   [Mover um Grupo de Cargas de Trabalho](../../relational-databases/resource-governor/move-a-workload-group.md)  
+-   [Mover um grupo de carga de trabalho](../../relational-databases/resource-governor/move-a-workload-group.md)  
   
  Quando você clicar em **OK** depois de adicionar, excluir ou mover um grupo de cargas de trabalho ou pool de recursos, a instrução ALTER RESOURCE GOVERNOR RECONFIGURE será executada.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "72903906"
  **Nome da função de classificação**  
  Especifique a função de classificação selecionando-a na lista.  
   
- **Habilitar Administrador de Recursos**  
+ **Habilitar o Resource Governor**  
  Habilite ou desabilite o Administrador de Recursos selecionando ou desmarcando a caixa de seleção.  
   
  **Pools de recursos**  
