@@ -20,18 +20,18 @@ ms.assetid: 93659193-e4ff-4dfb-9043-0c4114921b91
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d07892e1a47025107205f590d6a41aebebbb571a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68071561"
 ---
-# <a name="x40x40fetchstatus-transact-sql"></a>&#x40;&#x40;FETCH_STATUS (Transact-SQL)
+# <a name="x40x40fetch_status-transact-sql"></a>&#x40;&#x40;FETCH_STATUS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Essa função retorna o status do último cursor que a instrução FETCH emitiu em relação a qualquer cursor atualmente aberto pela conexão.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,14 +44,14 @@ Essa função retorna o status do último cursor que a instrução FETCH emitiu 
   
 ## <a name="return-value"></a>Valor retornado  
   
-|Valor retornado|Descrição|  
+|Valor retornado|DESCRIÇÃO|  
 |------------------|-----------------|  
 |&nbsp;0|A instrução FETCH foi bem-sucedida.|  
 |-1|A instrução FETCH falhou ou a linha estava além do conjunto de resultados.|  
 |-2|A linha buscada está ausente.|
 |-9|O cursor não está executando uma operação de busca.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 Como `@@FETCH_STATUS` é global para todos os cursores em uma conexão, use-o com cuidado. Depois que uma instrução FETCH é executada, o teste para `@@FETCH_STATUS` deve ocorrer antes que qualquer outra instrução FETCH seja executada com relação a outro cursor. `@@FETCH_STATUS` é indefinido antes de ocorrer qualquer busca na conexão.  
   
 Por exemplo, um usuário executa uma instrução FETCH a partir de um cursor e, depois, chama um procedimento armazenado que abre e processa os resultados de outro cursor. Quando o controle retorna desse procedimento armazenado chamado, `@@FETCH_STATUS` reflete o último FETCH executado no procedimento armazenado, não a instrução FETCH executada antes de chamar o procedimento armazenado.  

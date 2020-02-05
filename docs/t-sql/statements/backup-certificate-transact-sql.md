@@ -29,10 +29,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: 7b2559ca1eee0f2787fbf74adba97b03671d6faf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68091761"
 ---
 # <a name="backup-certificate-transact-sql"></a>BACKUP CERTIFICATE (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "68091761"
 
   Exporta um certificado para um arquivo.  
   
- ![Ícone de link](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link](../../database-engine/configure-windows/media/topic-link.gif "ícone de link") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -86,7 +86,7 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
  DECRYPTION BY PASSWORD = '*decryption_password*'  
  É a senha usada para descriptografar a chave privada antes do backup da chave. Esse argumento não será necessário se o certificado for criptografado pela chave mestra. 
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Se a chave privada estiver criptografada com uma senha no banco de dados, a senha de descriptografia deverá ser especificada.  
   
  Quando você faz backup da chave privada em um arquivo, a criptografia é necessária. A senha usada para proteger a chave privada no arquivo não é a mesma senha usada para criptografar a chave privada do certificado no banco de dados.  
@@ -104,7 +104,7 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-exporting-a-certificate-to-a-file"></a>A. Exportando um certificado para um arquivo  
+### <a name="a-exporting-a-certificate-to-a-file"></a>a. Exportando um certificado para um arquivo  
  O exemplo a seguir exporta um certificado para um arquivo.  
   
 ```  

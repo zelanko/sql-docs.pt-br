@@ -1,11 +1,3 @@
----
-ms.openlocfilehash: 336162ea06533901107c83dd47f062fc94fdd869
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68213313"
----
 ## <a name="prerequisites"></a>Prerequisites
 
 Antes de criar o grupo de disponibilidade, você precisa:
@@ -24,7 +16,7 @@ Habilite grupos de disponibilidade Always On em cada réplica que hospeda uma in
 Enable-SqlAlwaysOn -ServerInstance <server\instance> -Force
 ```
 
-## <a name="enable-an-alwaysonhealth-event-session"></a>Habilitar uma sessão de evento AlwaysOn_health
+## <a name="enable-an-alwayson_health-event-session"></a>Habilitar uma sessão de evento AlwaysOn_health
 
  Para ajudar com o diagnóstico da causa raiz ao solucionar problemas de um grupo de disponibilidade, é possível opcionalmente habilitar uma sessão de eventos estendidos (XEvents) de grupos de disponibilidade Always On. Para fazê-lo, execute o seguinte comando em cada instância do SQL Server:
 

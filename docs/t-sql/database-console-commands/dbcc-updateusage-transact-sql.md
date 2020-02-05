@@ -34,10 +34,10 @@ ms.assetid: b8752ecc-db45-4e23-aee7-13b8bc3cbae2
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 7d983f2e7e370ec9fe385e6d46602c4703ca6d1e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68040458"
 ---
 # <a name="dbcc-updateusage-transact-sql"></a>DBCC UPDATEUSAGE (Transact-SQL)
@@ -45,7 +45,7 @@ ms.locfileid: "68040458"
 
 Relata e corrige inexatidões de contagem de páginas e linhas nas exibições do catálogo. Essas inexatidões podem provocar relatórios de uso incorreto de espaço retornados pelo procedimento armazenado do sistema sp_spaceused.
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -67,7 +67,7 @@ DBCC UPDATEUSAGE
 *index_id* | *index_name*  
 É a ID ou o nome do índice a ser usado. Se não for especificado, a instrução processará todos os índices da tabela ou a exibição especificada.  
   
-com  
+WITH  
 Permite que opções sejam especificadas.  
   
 NO_INFOMSGS  
@@ -76,12 +76,12 @@ Suprime todas as mensagens informativas.
 COUNT_ROWS  
 Especifica que a coluna de contagem de linhas seja atualizada com a contagem atual do número de linhas na tabela ou na exibição.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 DBCC UPDATEUSAGE corrige as contagens das linhas, páginas usadas, páginas reservadas, páginas de folha e páginas de dados de cada partição em uma tabela ou índice. Se não houver nenhuma inexatidão nas tabelas do sistema, DBCC UPDATEUSAGE não retornará dados. Se inexatidões forem encontradas e corrigidas, e WITH NO_INFOMSGS não for usado, DBCC UPDATEUSAGE retornará as linhas e as colunas que foram atualizadas nas tabelas do sistema.
   
 O DBCC CHECKDB foi aprimorado para detectar quando as contagens de páginas ou de linhas se tornam negativas. Quando detectada, a saída do DBCC CHECKDB contém um aviso e uma recomendação para executar DBCC UPDATEUSAGE para resolver o problema.
   
-## <a name="best-practices"></a>Práticas recomendadas  
+## <a name="best-practices"></a>Práticas Recomendadas  
 Recomendamos o uso do seguinte:
 -   Não execute DBCC UPDATEUSAGE rotineiramente. Como DBCC UPDATEUSAGE pode levar algum tempo para ser executado em tabelas ou bancos de dados grandes, não deve ser usado, a não ser que você suspeite que valores incorretos estão sendo retornados por sp_spaceused.
 -   Considere a execução de DBCC UPDATEUSAGE rotineiramente (por exemplo, semanalmente) somente se o banco de dados passar por modificações de DDL (Linguagem de definição de dados) frequentes, como instruções CREATE, ALTER ou DROP.  
@@ -96,7 +96,7 @@ Exige associação à função de servidor fixa **sysadmin** ou à função de b
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-updating-page-or-row-counts-or-both-for-all-objects-in-the-current-database"></a>A. Atualizando as contagens de páginas ou de linhas ou de ambas para todos os objetos do banco de dados atual  
+### <a name="a-updating-page-or-row-counts-or-both-for-all-objects-in-the-current-database"></a>a. Atualizando as contagens de páginas ou de linhas ou de ambas para todos os objetos do banco de dados atual  
 O exemplo a seguir especifica `0` para o nome do banco de dados, e `DBCC UPDATEUSAGE` relata informações sobre contagem de páginas ou de linhas atualizadas para o banco de dados atual.
   
 ```sql

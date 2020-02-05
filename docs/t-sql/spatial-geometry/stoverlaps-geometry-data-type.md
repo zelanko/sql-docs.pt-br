@@ -18,10 +18,10 @@ ms.assetid: 1813cba1-5780-456a-9489-6b40a79569b3
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 392b39ae14819aa645e4714189f17e6d4604bf44
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68140924"
 ---
 # <a name="stoverlaps-geometry-data-type"></a>STOverlaps (tipo de dados geometry)
@@ -43,9 +43,9 @@ Retornará 1 se uma instância de **geometry** se sobrepuser a outra instância 
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
- Tipo de retorno CLR: **SqlBoolean**  
+ Tipo de retorno do CLR: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Duas instâncias de **geometria** serão sobrepostas se a região que representa a interseção entre elas tiver a mesma dimensão que as instâncias têm e se região não for igual a nenhuma das instâncias.  
   
  `STOverlaps()` sempre retornará 0 se os pontos em que as instâncias de **geometria** interseccionam não forem da mesma dimensão.  

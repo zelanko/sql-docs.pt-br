@@ -23,10 +23,10 @@ ms.assetid: ba56fba1-af9b-4459-b6e4-5d7e71a7630b
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 7c74a19dc498e3551b1e8bdc2018c10392e803f6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68034945"
 ---
 # <a name="set-noexec-transact-sql"></a>SET NOEXEC (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68034945"
 
   Compila cada consulta mas não a executa.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,7 +43,7 @@ ms.locfileid: "68034945"
 SET NOEXEC { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Quando SET NOEXEC é ON, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compila cada lote de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)], mas não as executa. Quando SET NOEXEC é OFF, todos os lotes são executados depois de compilação.  
   
  A execução de instruções no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tem duas fases: compilação e execução. Esta configuração é útil para que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valide a sintaxe e os nomes de objeto no código [!INCLUDE[tsql](../../includes/tsql-md.md)] durante a execução. Também é útil para depurar instruções que geralmente fariam parte de um lote maior de instruções.  

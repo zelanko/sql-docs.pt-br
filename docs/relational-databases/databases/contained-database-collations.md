@@ -13,10 +13,10 @@ ms.assetid: 4b44f6b9-2359-452f-8bb1-5520f2528483
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1850f5d85baf418e0ce872f641a920514156101f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68137378"
 ---
 # <a name="contained-database-collations"></a>Ordenações de banco de dados independentes
@@ -132,7 +132,7 @@ END;
 |Dados temp (padrão)|Ordenação TempDB|DATABASE_DEFAULT|  
 |Metadados|DATABASE_DEFAULT / CATALOG_DEFAULT|CATALOG_DEFAULT|  
 |Metadados temporários|Ordenação tempdb|CATALOG_DEFAULT|  
-|Variáveis|Ordenação de instância|CATALOG_DEFAULT|  
+|variáveis|Ordenação de instância|CATALOG_DEFAULT|  
 |Rótulos Goto|Ordenação de instância|CATALOG_DEFAULT|  
 |Nomes de cursor|Ordenação de instância|CATALOG_DEFAULT|  
   

@@ -14,10 +14,10 @@ ms.assetid: 9874a8b2-7ccd-494a-944c-ad33b30b5499
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8723d9750eb03eda14a7983cba8919ea8e92eb81
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68133617"
 ---
 # <a name="management-data-warehouse"></a>data warehouse de gerenciamento
@@ -39,7 +39,7 @@ ms.locfileid: "68133617"
   
  A tabela a seguir descreve as tabelas de banco de dados no esquema principal. Essas tabelas de banco de dados permitem que o coletor de dados rastreie o local de origem dos dados, quem os inseriu e quando foram carregados no data warehouse.  
   
-|Nome da tabela|Descrição|  
+|Nome da tabela|DESCRIÇÃO|  
 |----------------|-----------------|  
 |core.performance_counter_report_group_items|Armazena informações sobre como os relatórios do data warehouse de gerenciamento devem agrupar e agregar contadores de desempenho.|  
 |core.snapshots_internal|Identifica cada novo instantâneo. Uma nova linha é inserida nessa tabela sempre que um pacote de carregamento inicia o carregamento de um novo lote de dados.|  
@@ -109,7 +109,7 @@ ms.locfileid: "68133617"
   
  Você pode obter informações detalhadas sobre o tipo de dados e o conteúdo de colunas de tabelas do banco de dados lendo a documentação do procedimento armazenado do coletor de dados adequado para cada uma das tabelas.  
   
-### <a name="best-practices"></a>Práticas recomendadas  
+### <a name="best-practices"></a>Práticas Recomendadas  
  Ao trabalhar com o data warehouse de gerenciamento, recomendamos que você siga estas práticas recomendadas:  
   
 -   Não modifique o metadados de tabelas de data warehouse de gerenciamento a menos que você esteja adicionando um tipo de coletor novo.  
@@ -128,7 +128,7 @@ ms.locfileid: "68133617"
 ## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados do data warehouse de gerenciamento &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql.md)   
  [Procedimentos armazenados de coletor de dados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
- [Coleta de dados](../../relational-databases/data-collection/data-collection.md)   
+ [Coleta de Dados](../../relational-databases/data-collection/data-collection.md)   
  [Exibir um relatório de conjuntos de coleta &#40;SQL Server Management Studio&#41;](../../relational-databases/data-collection/view-a-collection-set-report-sql-server-management-studio.md)  
   
   

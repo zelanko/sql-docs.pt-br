@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8c35227dd4593d4d682caea51cc69c6b5dffd3a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68119174"
 ---
 # <a name="datefromparts-transact-sql"></a>DATEFROMPARTS (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68119174"
 
 Essa função retorna um valor **date** que é mapeado para os valores de dia, mês e ano especificados.
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -51,7 +51,7 @@ Uma expressão de inteiro que especifica um dia.
 ## <a name="return-types"></a>Tipos de retorno
 **date**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 `DATEFROMPARTS` retorna um valor **date** com a parte de data definida como o ano, mês e dia especificados e a parte de hora definida como o padrão. Para argumentos inválidos, `DATEFROMPARTS` gerará um erro. `DATEFROMPARTS` retornará nulo se pelo menos um argumento necessário tiver um valor nulo.
   
 Essa função pode operar comunicação remota para servidores [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posteriores. Ela não pode operar comunicação remota para servidores com uma versão inferior a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].

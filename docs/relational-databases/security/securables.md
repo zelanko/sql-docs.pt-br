@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 30688490a06c784a2149e53f7e175b6350d3d891
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67986569"
 ---
 # <a name="securables"></a>Protegíveis
@@ -31,7 +31,7 @@ ms.locfileid: "67986569"
 
   Protegíveis são os recursos cujo acesso é regulado pelo sistema de autorização do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Por exemplo, uma tabela é um protegível. Alguns protegíveis podem ser contidos dentro de outros, criando hierarquias aninhadas chamadas "escopos" que podem ser protegidos. Os escopos protegíveis são **servidor**, **banco de dados**e **esquema**.  
   
-## <a name="securable-scope-server"></a>Escopo protegível: Servidor  
+## <a name="securable-scope-server"></a>Escopo protegível: servidor  
  O escopo protegível **servidor** contém os seguintes protegíveis:  
   
 -   grupo de disponibilidade  
@@ -42,7 +42,7 @@ ms.locfileid: "67986569"
   
 -   Função de servidor  
   
--   banco de dados  
+-   Banco de dados  
   
 ## <a name="securable-scope-database"></a>Escopo protegível: banco de dados  
  O escopo protegível **banco de dados** contém os seguintes protegíveis:  
@@ -69,7 +69,7 @@ ms.locfileid: "67986569"
   
 -   Rota  
   
--   esquema  
+-   Esquema  
   
 -   Lista de propriedades de pesquisa  
   
@@ -82,7 +82,7 @@ ms.locfileid: "67986569"
 ## <a name="securable-scope-schema"></a>Escopo protegível: esquema  
  O escopo protegível **esquema** contém os seguintes protegíveis:  
   
--   Tipo  
+-   Type  
   
 -   Coleção de esquemas XML  
   
@@ -98,9 +98,9 @@ ms.locfileid: "67986569"
   
     -   Sinônimo  
   
-    -   Table  
+    -   Tabela  
   
-    -   Exibição 
+    -   Visualizar 
     
     -   Tabela externa 
   

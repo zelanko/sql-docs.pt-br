@@ -22,10 +22,10 @@ ms.assetid: 4d9ab1b2-4bbb-4c16-beb1-cafc1af7417c
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: c1bee651b2dd74564ebaff47add5acd4b62c5018
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68121676"
 ---
 # <a name="slash-star-block-comment-transact-sql"></a>Barra estrela (comentário de bloco) (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68121676"
 
   Indica texto fornecido pelo usuário. O texto entre /* e \*/ não é avaliado pelo servidor.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -49,7 +49,7 @@ text_of_comment
  *text_of_comment*  
  É o texto do comentário. É composto de uma ou mais cadeias de caracteres.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Os comentários podem ser inseridos em uma linha separada ou dentro de uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)]. Os comentários de várias linhas precisam ser indicados por /* e \*/. Uma convenção de estilo geralmente usada para comentários de várias linhas é começar a primeira linha com /\*, as próximas linhas com \*\* e terminar com \*/.  
   
  Não há comprimento máximo para comentários.  

@@ -20,18 +20,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 53053b4f2176a01970f433072634a49ec0d21eb3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109188"
 ---
-# <a name="lastvalue-transact-sql"></a>LAST_VALUE (Transact-SQL)
+# <a name="last_value-transact-sql"></a>LAST_VALUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
   Retorna o último valor em um conjunto ordenado de valores no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -58,7 +58,7 @@ LAST_VALUE ( [ scalar_expression ] )
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-lastvalue-over-partitions"></a>A. Usando LAST_VALUE em partições  
+### <a name="a-using-last_value-over-partitions"></a>a. Usando LAST_VALUE em partições  
  O exemplo a seguir retorna a data de admissão do último funcionário em cada departamento para o determinado salário (Taxa). A cláusula PARTITION BY divide os funcionários por departamento e a função LAST_VALUE é aplicada independentemente a cada partição. A cláusula ORDER BY especificada na cláusula OVER determina a ordem lógica na qual a função LAST_VALUE é aplicada às linhas em cada partição.  
   
 ```  
@@ -99,7 +99,7 @@ Information Services        Trenary                 50.4808      2003-01-12   20
   
 ```  
   
-### <a name="b-using-firstvalue-and-lastvalue-in-a-computed-expression"></a>B. Usando FIRST_VALUE e LAST_VALUE em uma expressão computada  
+### <a name="b-using-first_value-and-last_value-in-a-computed-expression"></a>B. Usando FIRST_VALUE e LAST_VALUE em uma expressão computada  
  O exemplo a seguir usa as funções FIRST_VALUE e LAST_VALUE em expressões computadas para mostrar a diferença entre os valores de cota de vendas para o trimestre atual e o primeiro e último trimestre do ano respectivamente para um determinado número de funcionários. A função FIRST_VALUE retorna o valor da cota de vendas do primeiro trimestre do ano e subtrai do valor da cota de vendas do trimestre atual. Ele é retornado na coluna derivada intitulada DifferenceFromFirstQuarter. Durante o primeiro trimestre de um ano, o valor da coluna de DifferenceFromFirstQuarter é 0. A função LAST_VALUE retorna o valor da cota de vendas do último trimestre do ano, e o subtrai do valor da cota de vendas para o trimestre atual. Ele é retornado na coluna derivada intitulada DifferenceFromLastQuarter. Para o último trimestre do ano, o valor da coluna de DifferenceFromLastQuarter é 0.  
   
  A cláusula "RANGE BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING" é necessária neste exemplo para os valores diferentes de zero a serem retornados na coluna DifferenceFromLastQuarter, conforme mostrado abaixo. O intervalo padrão é "RANGE BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW". Neste exemplo, usar aquele intervalo padrão (ou não incluir um intervalo, resultando no padrão que está sendo usado) resultaria em zeros retornados na coluna de DifferenceFromLastQuarter. Para obter mais informações, consulte [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  

@@ -18,10 +18,10 @@ ms.assetid: 9abc79c5-43c9-4cc2-b37f-d2ecdec7c234
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: c4c798c431b2eb71354dd803bd5701df0b6f9cad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68120664"
 ---
 # <a name="z-geography-data-type"></a>Z (tipo de dados geography)
@@ -39,12 +39,12 @@ ms.locfileid: "68120664"
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **float**  
   
- Tipo CLR: **SqlDouble**  
+ Tipo do CLR: **SqlDouble**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O valor dessa propriedade será nulo se a instância de **geography** não for um Point e também será nulo para as instâncias de **Point** para as quais ele não for definido.  
   
- Esta propriedade é somente leitura.  
+ Essa propriedade é somente leitura.  
   
  As coordenadas Z não são usadas nos cálculos feitos pela biblioteca e não serão executadas em nenhum cálculo de biblioteca.  
   

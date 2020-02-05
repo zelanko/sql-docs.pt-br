@@ -19,10 +19,10 @@ ms.assetid: 55f5db6e-6777-435f-8a06-b68c129f8437
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 68f0f1ea718d867b2fb26f08bb5b6c30e49dd739
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291219"
 ---
 # <a name="pivot-transformation"></a>transformação Dinâmica
@@ -97,7 +97,7 @@ ms.locfileid: "71291219"
   
  A tabela a seguir mostra um conjunto de dados após a dinamização dos dados na coluna **Ano** .  
   
-|Ano|Nome do produto|Total|  
+|Ano|Nome do Produto|Total|  
 |----------|------------------|-----------|  
 |2004|HL Mountain Tire|1504884.15|  
 |2003|Tubo de pneu de estrada|35920.50|  

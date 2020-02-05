@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8488462e75a6f836a1b77c49052a9cfdd0c82d2e
-ms.sourcegitcommit: 58f1d5498c87bfe0f6ec4fd9d7bbe723be47896b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68995849"
 ---
 # <a name="permissions-database-engine"></a>Permissões (Mecanismo de Banco de Dados)
@@ -183,7 +183,7 @@ Para obter dicas sobre como planejar um sistema de permissões, confira [Introdu
 |DATABASE|BACKUP DATABASE|BADB|SERVER|CONTROL SERVER|  
 |DATABASE|BACKUP LOG|BALO|SERVER|CONTROL SERVER|  
 |DATABASE|CHECKPOINT|CP|SERVER|CONTROL SERVER|  
-|DATABASE|CONNECT|CO|SERVER|CONTROL SERVER|  
+|DATABASE|CONECTAR|CO|SERVER|CONTROL SERVER|  
 |DATABASE|CONNECT REPLICATION|CORP|SERVER|CONTROL SERVER|  
 |DATABASE|CONTROL|CL|SERVER|CONTROL SERVER|  
 |DATABASE|CREATE AGGREGATE|CRAG|SERVER|CONTROL SERVER|  
@@ -233,7 +233,7 @@ Para obter dicas sobre como planejar um sistema de permissões, confira [Introdu
 |CREDENCIAL NO ESCOPO DO BANCO DE DADOS|TAKE OWNERSHIP|TO|DATABASE|CONTROL|
 |CREDENCIAL NO ESCOPO DO BANCO DE DADOS|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|
 |ENDPOINT|ALTER|AL|SERVER|ALTER ANY ENDPOINT|  
-|ENDPOINT|CONNECT|CO|SERVER|CONTROL SERVER|  
+|ENDPOINT|CONECTAR|CO|SERVER|CONTROL SERVER|  
 |ENDPOINT|CONTROL|CL|SERVER|CONTROL SERVER|  
 |ENDPOINT|TAKE OWNERSHIP|TO|SERVER|CONTROL SERVER|  
 |ENDPOINT|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
@@ -247,10 +247,10 @@ Para obter dicas sobre como planejar um sistema de permissões, confira [Introdu
 |FULLTEXT STOPLIST|REFERENCES|RF|DATABASE|REFERENCES|  
 |FULLTEXT STOPLIST|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
 |FULLTEXT STOPLIST|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
-|Logon|ALTER|AL|SERVER|ALTER ANY LOGIN|  
-|Logon|CONTROL|CL|SERVER|CONTROL SERVER|  
-|Logon|IMPERSONATE|IM|SERVER|CONTROL SERVER|  
-|Logon|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
+|LOGIN|ALTER|AL|SERVER|ALTER ANY LOGIN|  
+|LOGIN|CONTROL|CL|SERVER|CONTROL SERVER|  
+|LOGIN|IMPERSONATE|IM|SERVER|CONTROL SERVER|  
+|LOGIN|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
 |MESSAGE TYPE|ALTER|AL|DATABASE|ALTER ANY MESSAGE TYPE|  
 |MESSAGE TYPE|CONTROL|CL|DATABASE|CONTROL|  
 |MESSAGE TYPE|REFERENCES|RF|DATABASE|REFERENCES|  
@@ -350,10 +350,10 @@ Para obter dicas sobre como planejar um sistema de permissões, confira [Introdu
 |TYPE|REFERENCES|RF|SCHEMA|REFERENCES|  
 |TYPE|TAKE OWNERSHIP|TO|SCHEMA|CONTROL|  
 |TYPE|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
-|Usuário|ALTER|AL|DATABASE|ALTER ANY USER|  
-|Usuário|CONTROL|CL|DATABASE|CONTROL|  
-|Usuário|IMPERSONATE|IM|DATABASE|CONTROL|  
-|Usuário|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
+|USER|ALTER|AL|DATABASE|ALTER ANY USER|  
+|USER|CONTROL|CL|DATABASE|CONTROL|  
+|USER|IMPERSONATE|IM|DATABASE|CONTROL|  
+|USER|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |XML SCHEMA COLLECTION|ALTER|AL|SCHEMA|ALTER|  
 |XML SCHEMA COLLECTION|CONTROL|CL|SCHEMA|CONTROL|  
 |XML SCHEMA COLLECTION|Execute|EX|SCHEMA|Execute|  
@@ -426,7 +426,7 @@ DENY na tabela é substituído por GRANT em uma coluna. No entanto, um DENY post
 ##  <a name="_examples"></a> Exemplos  
  Os exemplos nesta seção mostram como recuperar informações sobre permissões.  
   
-### <a name="a-returning-the-complete-list-of-grantable-permissions"></a>A. Retornando a lista completa de permissões que podem ser concedidas  
+### <a name="a-returning-the-complete-list-of-grantable-permissions"></a>a. Retornando a lista completa de permissões que podem ser concedidas  
  A instrução a seguir retorna todas as permissões de [!INCLUDE[ssDE](../../includes/ssde-md.md)] usando a função `fn_builtin_permissions` . Para obter mais informações, veja [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md).  
   
 ```sql  
