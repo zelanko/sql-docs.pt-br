@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e31898c8252084a34ed645e5b3f5113f9893ee48
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68055455"
 ---
 # <a name="data-compression"></a>Data Compression
@@ -168,7 +168,7 @@ O procedimento [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](../
      Descartar um índice clusterizado OFFLINE é uma operação rápida porque apenas os níveis superiores dos índices clusterizados são removidos. Quando um índice clusterizado é descartado ONLINE, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve recriar o heap duas vezes, uma para a etapa 1 e outra para a etapa 2.  
   
 ## <a name="how-compression-affects-replication"></a>Como a compactação afeta a replicação 
-**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] até a [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)).   
+**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] até a [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)).   
 Ao usar a compactação de dados com replicação, esteja atento às seguintes considerações:  
 -   Quando o Agente de Instantâneo gera o script de esquema inicial, o novo esquema usa as mesmas configurações de compactação para a tabela e seus índices. A compactação não pode ser habilitada apenas na tabela e não no índice.  
 -   Para replicação transacional, a opção de esquema de artigo determina quais objetos e propriedades dependentes devem ser incluídos no script. Para obter mais informações, veja [sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md).  
@@ -186,7 +186,7 @@ A tabela a seguir mostra as configurações de replicação que controlam a comp
 |Para compactar a tabela no Assinante, se todas as partições forem compactadas no Publicador, mas não replicar o esquema de partição.|Falso|True|Verifica se todas as partições estão habilitadas para compactação.<br /><br /> Gera scripts para a compactação em nível de tabela.|  
   
 ## <a name="how-compression-affects-other-sql-server-components"></a>Como a compactação afeta outros componentes do SQL Server 
-**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] até a [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] até a [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
    
  A compactação ocorre no mecanismo de armazenamento e os dados são apresentados à maioria dos outros componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um estado não compactado. Isso limita os efeitos da compactação nos outros componentes para:  
 -   Operações de importação e exportação em massa  

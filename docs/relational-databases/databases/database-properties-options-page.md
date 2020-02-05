@@ -13,10 +13,10 @@ ms.assetid: a3447987-5507-4630-ac35-58821b72354d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9ea3a23299c15a2d473b68f691345d69afaaf1eb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68049027"
 ---
 # <a name="database-properties-options-page"></a>Propriedades do banco de dados (página Opções)
@@ -29,7 +29,7 @@ ms.locfileid: "68049027"
  Especifique a ordenação do banco de dados selecionando na lista. Para saber mais, veja [Definir ou alterar a ordenação de banco de dados](../../relational-databases/collations/set-or-change-the-database-collation.md).  
   
  **Modelo de recuperação**  
- Especifique um dos seguintes modelos para recuperar o banco de dados: **Completo**, **Bulk-Logged**ou **Simples**. Para obter mais informações sobre modelos de recuperação, veja [Modelos de recuperação &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
+ Especifique um dos seguintes modelos para recuperar o banco de dados: **Full**, **Bulk-Logged**ou **simples**. Para obter mais informações sobre modelos de recuperação, veja [Modelos de recuperação &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
   
  **Nível de compatibilidade**  
  Especifique a última versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aceita pelo banco de dados. Para obter os valores possíveis, consulte [Nível de compatibilidade ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md). Quando um banco de dados do SQL Server é atualizado, o nível de compatibilidade de banco de dados é mantido se possível ou alterado para o nível mínimo com suporte para o novo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
@@ -40,7 +40,7 @@ ms.locfileid: "68049027"
 > [!IMPORTANT]  
 >  Habilitar delegados de bancos de dados parcialmente independentes controla o acesso à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para os proprietários do banco de dados. Para obter mais informações, consulte [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
   
-## <a name="automatic"></a>Automatic  
+## <a name="automatic"></a>Automático  
  **Fechamento Automático**  
  Especifique se o banco de dados é fechado corretamente e libera recursos depois da saída do último usuário. Os valores possíveis são **True** e **False**. Quando **True**, o banco de dados é desligado corretamente e seus recursos são liberados depois do logoff do último usuário.  
 
@@ -72,7 +72,7 @@ Quando conectado ao Banco de Dados SQL do Azure, esta seção tem configuraçõe
   
   **Max Size** O tamanho máximo do banco de dados. Se o valor do tamanho desejado não estiver na lista, você poderá digitá-lo. Deixe em branco para o tamanho padrão do SLO e da edição informados.
   
-## <a name="containment"></a>Containment  
+## <a name="containment"></a>Contenção  
  Nos bancos de dados independentes, algumas configurações geralmente definidas no nível de servidor podem ser configuradas no nível de banco de dados.  
   
  **LCID do Idioma de Texto Completo Padrão**  
@@ -131,7 +131,7 @@ Quando conectado ao Banco de Dados SQL do Azure, esta seção tem configuraçõe
  Especifique o nome de diretório para obter os dados FILESTREAM associados ao banco de dados selecionado.  
   
  **Acesso Não Transacionado a FILESTREAM**  
- Especifique uma das seguintes opções para acesso não transacional através do sistema de arquivos aos dados FILESTREAM armazenados em FileTables: **OFF**, **READ_ONLY** ou **FULL**. Se FILESTREAM não estiver habilitado no servidor, esse valor será definido como OFF e será desabilitado. Para obter mais informações, veja [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md).  
+ Especifique uma das seguintes opções para acesso não transacional através do sistema de arquivos aos dados FILESTREAM armazenados em FileTables: **OFF**, **READ_ONLY**ou **FULL**. Se FILESTREAM não estiver habilitado no servidor, esse valor será definido como OFF e será desabilitado. Para obter mais informações, veja [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md).  
   
 ## <a name="miscellaneous"></a>Diversos  
 **Permitir o isolamento de instantâneo**  
@@ -206,7 +206,7 @@ Habilita esse recurso.
  **Tempo de Recuperação de Destino (Segundos)**  
  Especifica o salto máximo no tempo, expresso em segundos, para recuperar o banco de dados especificado no caso de uma falha. Para obter mais informações, consulte [Pontos de verificação de banco de dados &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md).  
 
-## <a name="service-broker"></a>Service Broker  
+## <a name="service-broker"></a>Agente de Serviço  
 **Agente Habilitado**  
 Habilita ou desabilita o Service Broker.  
 
@@ -221,7 +221,7 @@ Identificador somente leitura.
  Especifique se o banco de dados é somente leitura. Os valores possíveis são **True** e **False**. Quando **True**, os usuários podem apenas ler dados no banco de dados. Os usuários não podem modificar os dados ou objetos de banco de dados. No entanto, o próprio banco de dados pode ser excluído usando a instrução `DROP DATABASE`. O banco de dados não pode estar em uso quando um novo valor para a opção **Banco de Dados Somente Leitura** estiver especificado. O banco de dados mestre é a exceção e só o administrador do sistema pode usar o mestre enquanto a opção estiver sendo definida.  
   
  **Estado do Banco de Dados**  
- Exiba o estado atual do banco de dados. Não é editável. Para obter mais informações sobre o **Estado do Banco de Dados**, consulte [Database States](../../relational-databases/databases/database-states.md)  
+ Exiba o estado atual do banco de dados. Ela não é editável. Para obter mais informações sobre o **Estado do Banco de Dados**, consulte [Database States](../../relational-databases/databases/database-states.md)  
 
  **Criptografia Habilitada**  
  Quando definido como **True**, esse banco de dados está habilitado para criptografia de banco de dados. Uma Chave de Criptografia do Banco de Dados é necessária para criptografia. Para obter mais informações, veja [TDE &#40;Transparent Data Encryption&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  

@@ -22,18 +22,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 89cfdcb49734897dbc41552158c9faad850f331a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68135919"
 ---
-# <a name="denserank-transact-sql"></a>DENSE_RANK (Transact-SQL)
+# <a name="dense_rank-transact-sql"></a>DENSE_RANK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Esta função retorna a posição de cada linha dentro de uma partição do conjunto de resultados, sem nenhum intervalo nos valores de classificação. A classificação de uma linha é um mais o número de valores de classificação distintos que vêm antes da linha em questão.  
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -51,7 +51,7 @@ Determina a ordem na qual a função `DENSE_RANK` é aplicada às linhas em uma 
 ## <a name="return-types"></a>Tipos de retorno  
  **bigint**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 Se duas ou mais linhas tiverem o mesmo valor de classificação na mesma partição, cada uma dessas linhas receberá a mesma classificação. Por exemplo, se os dois melhores vendedores tiverem o mesmo valor de SalesYTD, ambos terão um valor de classificação igual a um. O vendedor com o próximo SalesYTD mais alto terá um valor de classificação igual a dois. Isso excede o número de linhas distintas que vêm antes da linha em questão por um. Portanto, os números retornados pela função `DENSE_RANK` não têm lacunas e sempre têm valores de classificação consecutivos.  
   
 A ordem de classificação usada para a consulta inteira determina a ordem das linhas no conjunto de resultados. Isso significa que uma linha classificada com o número um não precisa ser a primeira linha da partição.  
@@ -60,7 +60,7 @@ A ordem de classificação usada para a consulta inteira determina a ordem das l
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-ranking-rows-within-a-partition"></a>A. Classificando linhas dentro de uma partição  
+### <a name="a-ranking-rows-within-a-partition"></a>a. Classificando linhas dentro de uma partição  
 Este exemplo classifica os produtos em inventário pelos locais de inventário especificados, de acordo com suas quantidades. `DENSE_RANK` particiona o conjunto de resultados por `LocationID` e ordena logicamente o conjunto de resultados por `Quantity`. Observe que produtos 494 e 495 têm a mesma quantidade. Como ambos têm o mesmo valor de quantidade, ambos têm um valor de classificação igual a um.  
   
 ```  
@@ -155,7 +155,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|FirstName|LastName|Row Number|Rank|Dense Rank|Quartile|SalesYTD|PostalCode|  
+|Nome|LastName|Row Number|Rank|Dense Rank|Quartile|SalesYTD|PostalCode|  
 |---------------|--------------|----------------|----------|----------------|--------------|--------------|----------------|  
 |Michael|Blythe|1|1|1|1|4557045.0459|98027|  
 |Linda|Mitchell|2|1|1|1|5200475.2313|98027|  
@@ -164,7 +164,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
 |Tsvi|Reiter|5|1|1|2|2811012.7151|98027|  
 |Shu|Ito|6|6|2|2|3018725.4858|98055|  
 |José|Saraiva|7|6|2|2|3189356.2465|98055|  
-|David|Campbell|8|6|2|3|3587378.4257|98055|  
+|Davi|Campbell|8|6|2|3|3587378.4257|98055|  
 |Tete|Mensa-Annan|9|6|2|3|1931620.1835|98055|  
 |Lynn|Tsoflias|10|6|2|3|1758385.926|98055|  
 |Rachel|Valdez|11|6|2|4|2241204.0424|98055|  

@@ -20,10 +20,10 @@ ms.assetid: ce5c8798-c039-4ab2-81e7-90a8d688b893
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3adf38c1908e17dbac530cab0cc47658e9241559
-ms.sourcegitcommit: 5d9ce5c98c23301c5914f142671516b2195f9018
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71961927"
 ---
 # <a name="shrink-a-file"></a>Reduzir um arquivo
@@ -85,7 +85,7 @@ ms.locfileid: "71961927"
      **Nome do arquivo**  
      Selecione um arquivo da lista de arquivos disponíveis do grupo de arquivos e tipo de arquivos selecionados.  
   
-     **Local**  
+     **Localidade**  
      Exibe o caminho completo para o arquivo atualmente selecionado. O caminho não é editável, mas pode ser copiado para a área de transferência.  
   
      **Espaço alocado no momento**  

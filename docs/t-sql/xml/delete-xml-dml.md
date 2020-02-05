@@ -17,10 +17,10 @@ ms.assetid: b22c93a4-b84d-4356-af4c-6013322a4b71
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8cf804f934a08db335c55b15ab23b9e42a7ee9c5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68051324"
 ---
 # <a name="delete-xml-dml"></a>excluir (XML DML)
@@ -41,7 +41,7 @@ delete Expression
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-deleting-nodes-from-a-document-stored-in-an-untyped-xml-variable"></a>A. Excluindo nós de um documento armazenado em uma variável xml sem tipo  
+### <a name="a-deleting-nodes-from-a-document-stored-in-an-untyped-xml-variable"></a>a. Excluindo nós de um documento armazenado em uma variável xml sem tipo  
  O exemplo a seguir ilustra como excluir vários nós de um documento. Primeiro, uma instância de XML é atribuída à variável do tipo **xml**. Depois, as instruções delete XML DML subsequentes excluem vários nós do documento.  
   
 ```  

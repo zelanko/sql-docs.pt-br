@@ -17,10 +17,10 @@ ms.assetid: 9198f671-8e61-4ca4-9c3a-859f84020e62
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d8d863a6ca6a44a323c05f26298c68de774dfc3b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67948032"
 ---
 # <a name="xml-transact-sql"></a>xml (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "67948032"
 
   É o tipo de dados que armazena dados XML. É possível armazenar instâncias de **XML** em uma coluna ou em uma variável do tipo **XML**.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -49,7 +49,7 @@ xml ( [ CONTENT | DOCUMENT ] xml_schema_collection )
  *xml_schema_collection*  
  É o nome de uma coleção de esquema XML. Para criar uma coluna ou variável **XML** tipada, opcionalmente, é possível especificar o nome da coleção de esquemas XML. Para obter mais informações sobre XML tipado e não tipado, confira [Comparar XML tipado com XML não tipado](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  A representação armazenada de instâncias do tipo de dados **XML** não pode exceder 2 gigabytes (GB) de tamanho.  
   
  As facetas CONTENT e DOCUMENT se aplicam apenas a XML com tipo. Para obter mais informações, confira [Comparar XML tipado com XML não tipado](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  

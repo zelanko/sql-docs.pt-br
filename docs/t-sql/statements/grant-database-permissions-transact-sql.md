@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7a73c0554c878aea4fa89ffb7170547d55271f15
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982209"
 ---
 # <a name="grant-database-permissions-transact-sql"></a>Permissões de banco de dados GRANT (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "73982209"
 
 Concede permissões em um banco de dados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -61,7 +61,7 @@ permission | ALL [ PRIVILEGES ]
 
 *permission* Especifica uma permissão que pode ser concedida em um banco de dados. Para obter uma lista de permissões, consulte a seção Comentários mais adiante neste tópico.
 
-ALL Esta opção não concede todas as permissões possíveis. A concessão ALL é equivalente a conceder as seguintes permissões: BACKUP DATABASE, BACKUP LOG, CREATE DATABASE, CREATE DEFAULT, CREATE FUNCTION, CREATE PROCEDURE, CREATE RULE, CREATE TABLE e CREATE VIEW.
+ALL Esta opção não concede todas as permissões possíveis. Conceder ALL é equivalente a conceder as seguintes permissões: BACKUP DATABASE, BACKUP LOG, CREATE DATABASE, CREATE DEFAULT, CREATE FUNCTION, CREATE PROCEDURE, CREATE RULE, CREATE TABLE e CREATE VIEW.
 
 PRIVILEGES Incluídos para conformidade com ISO. Não altera o comportamento de ALL.
 
@@ -100,16 +100,16 @@ Especifica um usuário do banco de dados mapeado para uma chave assimétrica.
 
 *Database_user_with_no_login* Especifica um usuário de banco de dados sem entidade de segurança no nível do servidor correspondente.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Comentários
 
 > [!IMPORTANT]
-> Uma combinação das permissões ALTER e REFERENCE em alguns casos pode permitir ao usuário autorizado exibir dados ou executar funções não autorizadas. Por exemplo: Um usuário com a permissão ALTER em uma tabela e a permissão REFERENCE em uma função pode criar uma coluna computada em uma função e fazer com que ela seja executada. Nesse caso, o usuário também precisará da permissão SELECT na coluna computada.
+> Uma combinação das permissões ALTER e REFERENCE em alguns casos pode permitir ao usuário autorizado exibir dados ou executar funções não autorizadas. Por exemplo: um usuário com permissão ALTER em uma tabela e permissão REFERENCE em uma função pode criar uma coluna computada em uma função e fazer com que seja executada. Nesse caso, o usuário também precisará da permissão SELECT na coluna computada.
 
 Um banco de dados é um protegível contido no servidor pai na hierarquia de permissões. As permissões mais específicas e limitadas que podem ser concedidas em um banco de dados são listadas na tabela a seguir, junto com as permissões mais gerais que as incluem implicitamente.
 
 |Permissão de banco de dados|Implícito na permissão de banco de dados|Implícito na permissão de servidor|
 |-------------------------|------------------------------------|----------------------------------|
-|ADMINISTRAR OPERAÇÕES EM LOTE DO BANCO DE DADOS<br/>**Aplica-se ao:** [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].|CONTROL|CONTROL SERVER|
+|ADMINISTRAR OPERAÇÕES EM LOTE DO BANCO DE DADOS<br/>**Aplica-se a:** [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].|CONTROL|CONTROL SERVER|
 |ALTER|CONTROL|ALTER ANY DATABASE|
 |ALTER ANY APPLICATION ROLE|ALTER|CONTROL SERVER|
 |ALTER ANY ASSEMBLY|ALTER|CONTROL SERVER|
@@ -142,7 +142,7 @@ Um banco de dados é um protegível contido no servidor pai na hierarquia de per
 |BACKUP DATABASE|CONTROL|CONTROL SERVER|
 |BACKUP LOG|CONTROL|CONTROL SERVER|
 |CHECKPOINT|CONTROL|CONTROL SERVER|
-|CONNECT|CONNECT REPLICATION|CONTROL SERVER|
+|CONECTAR|CONNECT REPLICATION|CONTROL SERVER|
 |CONNECT REPLICATION|CONTROL|CONTROL SERVER|
 |CONTROL|CONTROL|CONTROL SERVER|
 |CREATE AGGREGATE|ALTER|CONTROL SERVER|
@@ -212,7 +212,7 @@ Os usuários autorizados da permissão CONTROL SERVER, como os membros da funç�
 
 ## <a name="examples"></a>Exemplos
 
-### <a name="a-granting-permission-to-create-tables"></a>A. Concedendo permissão para criar tabelas
+### <a name="a-granting-permission-to-create-tables"></a>a. Concedendo permissão para criar tabelas
 
 O exemplo a seguir concede a permissão `CREATE TABLE` no banco de dados `AdventureWorks` ao usuário `MelanieK`.
 

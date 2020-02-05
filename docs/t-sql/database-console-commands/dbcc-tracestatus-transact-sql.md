@@ -25,10 +25,10 @@ ms.assetid: 9be51199-78b4-4b87-ae6e-557246b7e29a
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 3d353a6c11d19f96f590e11aa5ebe48677c3cd84
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70211241"
 ---
 # <a name="dbcc-tracestatus-transact-sql"></a>DBCC TRACESTATUS (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "70211241"
 
 Exibe o status de sinalizadores de rastreamento.
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -61,16 +61,16 @@ Suprime todas as mensagens informativas com níveis de severidade de 0 a 10.
 ## <a name="result-sets"></a>Conjuntos de resultados  
 A tabela a seguir descreve as informações do conjunto de resultados.
   
-|Nome da coluna|Descrição|  
+|Nome da coluna|DESCRIÇÃO|  
 |---|---|
 |**TraceFlag**|Nome do sinalizador de rastreamento|  
 |**Status**|Indica se o sinalizador de rastreamento está definido como ON ou OFF, globalmente ou para a sessão.<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
 |**Global**|Indica se o sinalizador de rastreamento está definido globalmente<br /><br /> 1 = True<br /><br /> 0 = False|  
-|**Session**|Indica se o sinalizador de rastreamento está definido para a sessão<br /><br /> 1 = True<br /><br /> 0 = False|  
+|**Sessão**|Indica se o sinalizador de rastreamento está definido para a sessão<br /><br /> 1 = True<br /><br /> 0 = False|  
   
 DBCC TRACESTATUS retorna uma coluna para o número de sinalizador de rastreamento e uma coluna para o status. Isso indica se o sinalizador de rastreamento é ON (1) ou OFF (0). O cabeçalho da coluna do número do sinalizador de rastreamento é **Global Trace Flag** ou **Session Trace Flag**, dependendo se você está verificando o status do sinalizador de rastreamento global ou de sessão.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], há dois tipos de sinalizadores de rastreamento: sessão e global. Os sinalizadores de rastreamento de sessão são ativos para uma conexão e são visíveis apenas para essa conexão. Sinalizadores de rastreamento globais são definidos no nível do servidor e são visíveis em todas as conexões no servidor.
   
 ## <a name="permissions"></a>Permissões  

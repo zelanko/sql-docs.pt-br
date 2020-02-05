@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1b78ebdd157afe35a78900e8ceb3c2bad40bb04d
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73983233"
 ---
 # <a name="deny-database-permissions-transact-sql"></a>Permissões de banco de dados DENY (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "73983233"
 
 Nega permissões em um banco de dados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -58,7 +58,7 @@ DENY <permission> [ ,...n ]
 
 *permission* Especifica uma permissão que pode ser negada em um banco de dados. Para obter uma lista de permissões, consulte a seção Comentários mais adiante neste tópico.
 
-ALL Esta opção não nega todas as permissões possíveis. Negar ALL é equivalente a negar as permissões a seguir: BACKUP DATABASE, BACKUP LOG, CREATE DATABASE, CREATE DEFAULT, CREATE FUNCTION, CREATE PROCEDURE, CREATE RULE, CREATE TABLE e CREATE VIEW.
+ALL Esta opção não nega todas as permissões possíveis. Negar ALL é equivalente a negar as seguintes permissões: BACKUP DATABASE, BACKUP LOG, CREATE DATABASE, CREATE DEFAULT, CREATE FUNCTION, CREATE PROCEDURE, CREATE RULE, CREATE TABLE e CREATE VIEW.
 
 PRIVILEGES Incluídos para conformidade com ISO. Não altera o comportamento de ALL.
 
@@ -85,13 +85,13 @@ Especifica uma função de aplicativo.
 
 *Database_user_with_no_login* Especifica um usuário de banco de dados sem entidade de segurança no nível do servidor correspondente.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Comentários
 
 Um banco de dados é um protegível contido no servidor pai na hierarquia de permissões. As permissões mais específicas e limitadas que podem ser negadas em um banco de dados são listadas na tabela a seguir, junto com as permissões mais gerais que as incluem implicitamente.
 
 |Permissão de banco de dados|Implícito na permissão de banco de dados|Implícito na permissão de servidor|
 |-------------------------|------------------------------------|----------------------------------|
-|ADMINISTRAR OPERAÇÕES EM LOTE DO BANCO DE DADOS<br/>**Aplica-se ao:** [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].|CONTROL|CONTROL SERVER|
+|ADMINISTRAR OPERAÇÕES EM LOTE DO BANCO DE DADOS<br/>**Aplica-se a:** [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].|CONTROL|CONTROL SERVER|
 |ALTER|CONTROL|ALTER ANY DATABASE|
 |ALTER ANY APPLICATION ROLE|ALTER|CONTROL SERVER|
 |ALTER ANY ASSEMBLY|ALTER|CONTROL SERVER|
@@ -124,7 +124,7 @@ Um banco de dados é um protegível contido no servidor pai na hierarquia de per
 |BACKUP DATABASE|CONTROL|CONTROL SERVER|
 |BACKUP LOG|CONTROL|CONTROL SERVER|
 |CHECKPOINT|CONTROL|CONTROL SERVER|
-|CONNECT|CONNECT REPLICATION|CONTROL SERVER|
+|CONECTAR|CONNECT REPLICATION|CONTROL SERVER|
 |CONNECT REPLICATION|CONTROL|CONTROL SERVER|
 |CONTROL|CONTROL|CONTROL SERVER|
 |CREATE AGGREGATE|ALTER|CONTROL SERVER|
@@ -177,7 +177,7 @@ Se você estiver usando a opção AS, a entidade especificada deverá ser propri
 
 ## <a name="examples"></a>Exemplos
 
-### <a name="a-denying-permission-to-create-certificates"></a>A. Negando a permissão para criar certificados
+### <a name="a-denying-permission-to-create-certificates"></a>a. Negando a permissão para criar certificados
 
 O exemplo a seguir nega a permissão `CREATE CERTIFICATE` no banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] ao usuário `MelanieK`.
 
