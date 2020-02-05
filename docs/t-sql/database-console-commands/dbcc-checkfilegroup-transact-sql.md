@@ -26,16 +26,16 @@ ms.assetid: 8c70bf34-7570-4eb6-877a-e35064a1380a
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: c3b8061b49d0acacedae323645cd8822beaa016e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68102030"
 ---
 # <a name="dbcc-checkfilegroup-transact-sql"></a>DBCC CHECKFILEGROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 Verifica a alocação e a integridade estrutural de todas as tabelas e exibições indexadas no grupo de arquivos especificado do banco de dados atual.
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -92,14 +92,14 @@ DBCC CHECKFILEGROUP
 >  A especificação de PHYSICAL_ONLY faz com que DBCC CHECKFILEGROUP ignore todas as verificações de dados FILESTREAM.  
   
  MAXDOP  
- **Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SP2 2014 até a [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658).  
+ **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 SP2 até a [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658).  
   
  Substitui a opção de configuração **max degree of parallelism** de **sp_configure** da instrução. O MAXDOP pode exceder o valor configurado com sp_configure. Se MAXDOP exceder o valor configurado com o Resource Governor, o Mecanismo de Banco de Dados usará o valor de MAXDOP do Resource Governor, descrito em ALTER WORKLOAD GROUP (Transact-SQL). Todas as regras semânticas usadas com a opção de configuração grau máximo de paralelismo são aplicáveis ao usar a dica de consulta MAXDOP. Para obter mais informações, veja [Configurar a opção max degree of parallelism de configuração de servidor](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
   
 > [!CAUTION]  
 >  Se MAXDOP estiver definido como 0, o servidor escolherá o max degree of parallelism.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 DBCC CHECKFILEGROUP e DBCC CHECKDB são comandos DBCC semelhantes. A principal diferença é que DBCC CHECKFILEGROUP é limitado ao único grupo de arquivos especificado e às tabelas necessárias.
 DBCC CHECKFILEGROUP executa os seguintes comandos:
 -   [DBCC CHECKALLOC](../../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md) do grupo de arquivos.  
@@ -131,7 +131,7 @@ Quando uma tabela particionada existe em vários grupos de arquivos, o DBCC CHEC
 ## <a name="understanding-dbcc-error-messages"></a>Compreendendo mensagens de erro DBCC  
 Depois que o comando DBCC CHECKFILEGROUP é concluído, uma mensagem é gravada no log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se o comando DBCC for executado com êxito, a mensagem indicará uma conclusão bem-sucedida e o tempo de execução do comando. Se o comando DBCC parar antes de concluir a verificação devido a um erro, a mensagem indicará que o comando foi finalizado, um valor de estado e a duração da execução do comando. A tabela a seguir lista e descreve os valores de estado que podem ser incluídos na mensagem.
   
-|Estado|Descrição|  
+|Estado|DESCRIÇÃO|  
 |-----------|-----------------|  
 |0|O número do erro 8930 foi gerado. Isso indica um dano de metadados que provocou a finalização do comando DBCC.|  
 |1|O erro número 8967 foi gerado. Ocorreu um erro interno de DBCC.|  
@@ -196,7 +196,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 Exige associação à função de servidor fixa **sysadmin** ou à função de banco de dados fixa **db_owner** .
   
 ## <a name="examples"></a>Exemplos  
-### <a name="a-checking-the-primary-filegroup-in-the-a-database"></a>A. Verificando o grupo de arquivos PRIMARY de um banco de dados  
+### <a name="a-checking-the-primary-filegroup-in-the-a-database"></a>a. Verificando o grupo de arquivos PRIMARY de um banco de dados  
 O exemplo a seguir verifica o grupo de arquivos primário do banco de dados atual.
   
 ```sql  

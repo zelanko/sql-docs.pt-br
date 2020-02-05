@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 12bcff24be2bf0a722375fa6f7c06444ba818e9d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68140364"
 ---
 # <a name="use-sparse-columns"></a>Usar colunas esparsas
@@ -64,7 +64,7 @@ ms.locfileid: "68140364"
 |-|-|  
 |**geografia**|**text**|  
 |**geometria**|**timestamp**|  
-|**image**|**tipos de dados definidos pelo usuário**|  
+|**imagem**|**tipos de dados definidos pelo usuário**|  
 |**ntext**||  
   
 ## <a name="estimated-space-savings-by-data-type"></a>Aumento de espaço estimado por tipo de dados  
@@ -74,7 +74,7 @@ ms.locfileid: "68140364"
   
 |Tipo de dados|Bytes não esparsos|Bytes esparsos|Percentual de NULL|  
 |---------------|---------------------|------------------|---------------------|  
-|**bit**|0.125|5|98%|  
+|**bit**|0,125|5|98%|  
 |**tinyint**|1|5|86%|  
 |**smallint**|2|6|76%|  
 |**int**|4|8|64%|  

@@ -19,13 +19,13 @@ author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: 09b1f1036f298179033c9ab1ba2e7c3ffed1ce06
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109368"
 ---
-# <a name="jsonquery-transact-sql"></a>JSON_QUERY (Transact-SQL)
+# <a name="json_query-transact-sql"></a>JSON_QUERY (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
@@ -33,7 +33,7 @@ ms.locfileid: "68109368"
   
  Para extrair um valor escalar de uma cadeia de caracteres JSON em vez de um objeto ou uma matriz, confira [JSON_VALUE &#40;Transact-SQL&#41;](../../t-sql/functions/json-value-transact-sql.md). Para obter informações sobre as diferenças entre **JSON_VALUE** e **JSON_QUERY**, confira [Comparar JSON_VALUE e JSON_QUERY](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md#JSONCompare).  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -69,7 +69,7 @@ Se o formato de *path* não for válido, **JSON_QUERY** retornará um erro.
   
 - No modo estrito, **JSON_QUERY** retornará um erro.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 
 ### <a name="lax-mode-and-strict-mode"></a>Modo incerto e modo estrito
 
@@ -95,14 +95,14 @@ Se o formato de *path* não for válido, **JSON_QUERY** retornará um erro.
 |Caminho|Valor retornado no modo incerto|Valor retornado no modo estrito|Obter mais informações|  
 |----------|------------------------------|---------------------------------|---------------|  
 |$|Retorna o texto JSON inteiro.|Retorna o texto JSON inteiro.|N/A|  
-|$.info.type|NULL|Erro|Não é um objeto nem uma matriz.<br /><br /> Use **JSON_VALUE** nesse caso.|  
-|$.info.address.town|NULL|Erro|Não é um objeto nem uma matriz.<br /><br /> Use **JSON_VALUE** nesse caso.|  
+|$.info.type|NULO|Erro|Não é um objeto nem uma matriz.<br /><br /> Use **JSON_VALUE** nesse caso.|  
+|$.info.address.town|NULO|Erro|Não é um objeto nem uma matriz.<br /><br /> Use **JSON_VALUE** nesse caso.|  
 |$.info."address"|N'{ "town":"Bristol", "county":"Avon", "country":"England" }'|N'{ "town":"Bristol", "county":"Avon", "country":"England" }'|N/A|  
 |$.info.tags|N'[ "Sport", "Water polo"]'|N'[ "Sport", "Water polo"]'|N/A|  
-|$.info.type[0]|NULL|Erro|Não é uma matriz.|  
-|$.info.none|NULL|Erro|A propriedade não existe.|  
+|$.info.type[0]|NULO|Erro|Não é uma matriz.|  
+|$.info.none|NULO|Erro|A propriedade não existe.|  
 
-### <a name="using-jsonquery-with-for-json"></a>Usando JSON_QUERY com FOR JSON
+### <a name="using-json_query-with-for-json"></a>Usando JSON_QUERY com FOR JSON
 
 **JSON_QUERY** retorna um fragmento JSON válido. Como resultado, **FOR JSON** não usa escape para caracteres especiais no valor retornado de **JSON_QUERY**.
 

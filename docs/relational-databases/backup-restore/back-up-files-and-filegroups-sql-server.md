@@ -17,10 +17,10 @@ ms.assetid: a0d3a567-7d8b-4cfe-a505-d197b9a51f70
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: cf87d09eed5b955c1773c46270f25cb0a2d57eaa
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71708681"
 ---
 # <a name="back-up-files-and-filegroups"></a>Arquivos de backup e grupos de arquivos
@@ -49,7 +49,7 @@ As permissões `BACKUP DATABASE` e `BACKUP LOG` usam como padrão os membros da 
   
  Os problemas de propriedade e permissão no arquivo físico do dispositivo de backup podem interferir em uma operação de backup. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ser capaz de ler e gravar no dispositivo; a conta sob a qual o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executa deve ter permissões de gravação. No entanto, [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md), que adiciona uma entrada para um dispositivo de backup nas tabelas do sistema, não verifica permissões de acesso a arquivos. Esses problemas no arquivo físico do dispositivo de backup podem não aparecer até que o recurso físico seja acessado quando o backup ou restauração é tentado.
 
-## <a name="using-sql-server-management-studio"></a>Usando o SQL Server Management Studio   
+## <a name="using-sql-server-management-studio"></a>Como usar o SQL Server Management Studio.   
   
 1. Depois de conectar-se à instância adequada do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], no Pesquisador de Objeto, clique no nome do servidor para expandir a árvore do servidor.  
   
@@ -121,7 +121,7 @@ As permissões `BACKUP DATABASE` e `BACKUP LOG` usam como padrão os membros da 
   
      Para exibir o padrão de compactação de backup atual, confira [Exibir ou configurar a opção de configuração de servidor backup compression default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)  
 
-## <a name="using-transact-sql"></a>Usando Transact-SQL
+## <a name="using-transact-sql"></a>Usando o Transact-SQL
   
 Para criar um backup de arquivo ou grupo de arquivos, use a instrução [BACKUP DATABASE <file_or_filegroup>](../../t-sql/statements/backup-transact-sql.md). Minimamente, essa instrução deve especificar o seguinte:  
   
@@ -141,7 +141,7 @@ A sintaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] básica para um backup de 
   
   [ WITH *com_opções* [ **,** ...*o* ] ] ;  
   
-|Opção|Descrição|  
+|Opção|DESCRIÇÃO|  
 |------------|-----------------|  
 |*database*|É o banco de dados do qual é feito o backup do log de transações, do banco de dados parcial ou do banco de dados completo.|  
 |FILE _=_ *logical_file_name*|Especifica o nome lógico de um arquivo a ser incluído no backup de arquivos.|  
@@ -161,7 +161,7 @@ Os exemplos seguintes fazem backup de um ou mais arquivos dos grupos de arquivos
   
 - Um grupo de arquivo nomeado `SalesGroup2` que tem os arquivos `SGrp2Fi1` e `SGrp2Fi2`.  
   
-#### <a name="a-create-a-file-backup-of-two-files"></a>A. Criar um backup de arquivo de dois arquivos  
+#### <a name="a-create-a-file-backup-of-two-files"></a>a. Criar um backup de arquivo de dois arquivos  
 O exemplo a seguir cria um backup diferencial de arquivo só do arquivo `SGrp1Fi2` do `SalesGroup1` e o arquivo `SGrp2Fi2` do grupo de arquivos `SalesGroup2` .  
   
 ```sql  

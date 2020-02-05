@@ -11,10 +11,10 @@ ms.assetid: dbafe110-b480-48f3-b45f-31d71ca68f62
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 086b4503289c01f8b0022633361e7ce72dff73e1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295248"
 ---
 # <a name="catalogvalidations-ssisdb-database"></a>catalog.validations (banco de dados SSISDB)
@@ -26,7 +26,7 @@ ms.locfileid: "71295248"
 
   Exibe os detalhes de todas as validações de projeto e pacote no catálogo do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |validation_id|**bigint**|O identificador exclusivo (ID) da validação.|  
 |environment_scope|**Char(1)**|Indica as referências de ambiente que são consideradas pela validação. Quando o valor for `A`, todas as referências de ambiente associadas ao projeto serão incluídas na validação. Quando o valor for `S`, apenas uma única referência de ambiente será incluída. Quando o valor for `D`, nenhuma referência de ambiente será incluída e cada parâmetro deverá ter um valor padrão literal a fim de ser aprovado na validação.|  
@@ -34,7 +34,7 @@ ms.locfileid: "71295248"
 |folder_name|**nvarchar(128)**|O nome da pasta que contém o projeto correspondente.|  
 |project_name|**nvarchar(128)**|O nome do projeto.|  
 |project_lsn|**bigint**|A versão do projeto contra a qual é feita a validação.|  
-|use32bitruntime|**bit**|Indica se o tempo de execução de 32 bits é usado para executar o pacote em um sistema operacional de 64 bits. Quando o valor é `1`, a execução é realizada com o tempo de execução de 32 bits. Quando o valor é `0`, a execução é realizada com o tempo de execução de 64 bits.|  
+|use32bitruntime|**bit**|Indica se o runtime de 32 bits é usado para executar o pacote em um sistema operacional de 64 bits. Quando o valor é `1`, a execução é realizada com o runtime de 32 bits. Quando o valor é `0`, a execução é realizada com o runtime de 64 bits.|  
 |reference_id|**bigint**|A ID exclusiva da referência de ambiente do projeto que é usada pelo projeto para fazer referência a um ambiente.|  
 |operation_type|**smallint**|O tipo de operação. As operações mostradas nessa exibição incluem a validação de projeto (`300`) e a validação de pacote (`301`).|  
 |object_name|**nvarhcar(260)**|O nome do objeto.|  
@@ -52,7 +52,7 @@ ms.locfileid: "71295248"
 |machine_name|**nvarchar(128)**|O nome do computador no qual a instância de servidor está sendo executada.|  
 |dump_id|**uniqueidentifier**|A ID do despejo de execução.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Essa exibição mostra uma linha para cada validação no catálogo do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
 ## <a name="permissions"></a>Permissões  

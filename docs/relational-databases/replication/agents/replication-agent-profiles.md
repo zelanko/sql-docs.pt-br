@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 0e980725-e42f-4283-94cb-d8a6dba5df62
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 3a329c8d8564e92319be773250761085f34643df
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: a752b21460c2dd337d12ee43acdd981dadd4335b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770793"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288257"
 ---
 # <a name="replication-agent-profiles"></a>Perfis do Agente de Replicação
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -70,29 +70,29 @@ ms.locfileid: "68770793"
   
 ||padrão|histórico detalhado|Gerenciador de Sincronização do Windows|Continuar em erros de consistência de dados|Perfil de distribuição para fluxo contínuo do banco de dados OLE|  
 |-|-------------|---------------------|-------------------------------------|-----------------------------------------|----------------------------------------------|  
-|**-BcpBatchSize**|100000|100000|1\.000|100000|2147473647|  
+|**-BcpBatchSize**|100000|100000|1000|100000|2147473647|  
 |**-CommitBatchSize**|100|100|100|100|100|  
-|**-CommitBatchThreshold**|1\.000|1\.000|1\.000|1\.000|1\.000|  
+|**-CommitBatchThreshold**|1000|1000|1000|1000|1000|  
 |**-HistoryVerboseLevel**|1|2|1|1|1|  
 |**-KeepAliveMessageInterval**|300|300|300|300|300|  
 |**-LoginTimeout**|15|15|15|15|15|  
 |**-MaxBcpThreads**|1|1|1|1|1|  
 |**-MaxDeliveredTransactions**|0|0|0|0|0|  
-|**-OledbStreamThreshold**|NULL|NULL|NULL|NULL|32768|  
-|**-PacketSize**|NULL|NULL|NULL|NULL|32768|  
+|**-OledbStreamThreshold**|NULO|NULO|NULO|NULO|32768|  
+|**-PacketSize**|NULO|NULO|NULO|NULO|32768|  
 |**-PollingInterval**|5|5|5|5|5|  
 |**-QueryTimeout**|1800|1800|1800|1800|1800|  
-|**-SkipErrors**|NULL|NULL|NULL|**-SkipErrors** 2601:2627:20598|NULL|  
+|**-SkipErrors**|NULO|NULO|NULO|**-SkipErrors** 2601:2627:20598|NULO|  
 |**-TransactionsPerHistory**|100|100|100|100|100|  
-|**-UseOledbStreaming**|NULL|NULL|NULL|NULL|**-UseOledbStreaming**|  
+|**-UseOledbStreaming**|NULO|NULO|NULO|NULO|**-UseOledbStreaming**|  
   
 ## <a name="merge-agent-profiles"></a>Perfis do Merge Agent  
  A tabela abaixo mostra os parâmetros definidos nos perfis para o Merge Agent. Cada coluna na tabela representa um perfil nomeado. Para obter mais informações sobre esses parâmetros, consulte [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md).  
   
 ||padrão|histórico detalhado|Gerenciador de Sincronização do Windows|validação do número de linhas.|validação do número de linhas e da soma de verificação|vínculo lento|servidor a servidor de alto volume|  
 |-|-------------|---------------------|-------------------------------------|-------------------------|--------------------------------------|---------------|------------------------------------|  
-|**-BcpBatchSize**|100000|100000|1\.000|100000|100000|100000|100000|  
-|**-ChangesPerHistory**|100|50|50|100|100|100|1\.000|  
+|**-BcpBatchSize**|100000|100000|1000|100000|100000|100000|100000|  
+|**-ChangesPerHistory**|100|50|50|100|100|100|1000|  
 |**-DestThreads**|2|1|1|1|1|1|4|  
 |**-DownloadGenerationsPerBatch**|50|50|50|50|50|1|500|  
 |**-DownloadReadChangesPerBatch**|100|100|100|100|100|100|100|  
@@ -105,10 +105,10 @@ ms.locfileid: "68770793"
 |**-MaxUploadChanges**|0|0|0|0|0|0|0|  
 |**-MetadataRetentionCleanup**|1|1|1|1|1|1|1|  
 |**-NumDeadlockRetries**|5|5|5|5|5|5|5|  
-|**-ParallelUploadDownload**|NULL|NULL|NULL|NULL|NULL|NULL|1|  
+|**-ParallelUploadDownload**|NULO|NULO|NULO|NULO|NULO|NULO|1|  
 |**-PollingInterval**|60|60|60|60|60|60|60|  
 |**-QueryTimeout**|300|300|300|300|300|300|600|  
-|**-QueueSizeMultiplier**|NULL|NULL|NULL|NULL|NULL|NULL|5|  
+|**-QueueSizeMultiplier**|NULO|NULO|NULO|NULO|NULO|NULO|5|  
 |**-SrcThreads**|2|2|2|2|2|1|3|  
 |**-StartQueueTimeout**|0|0|0|0|0|0|0|  
 |**-UploadGenerationsPerBatch**|50|50|50|50|50|1|500|  
@@ -130,6 +130,6 @@ ms.locfileid: "68770793"
 ## <a name="see-also"></a>Consulte Também  
  [Administração do agente de replicação](../../../relational-databases/replication/agents/replication-agent-administration.md)   
  [Exibir e modificar parâmetros do prompt de comando do agente de replicação &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)   
- [Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
+ [Conceitos dos executáveis do Replication Agent](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
   

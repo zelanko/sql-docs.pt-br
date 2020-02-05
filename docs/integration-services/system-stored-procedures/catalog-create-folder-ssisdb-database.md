@@ -11,10 +11,10 @@ ms.assetid: 06fb3549-e970-4ca2-a61f-59affb9c6dcc
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d2533c09f530b0fc3fcebdfbd4a50a460534a42f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295514"
 ---
 # <a name="catalogcreate_folder-ssisdb-database"></a>catalog.create_folder (Banco de dados SSISDB)
@@ -43,7 +43,7 @@ catalog.create_folder [@folder_name =] folder_name, [@folder_id =] folder_id OUT
  O identificador da pasta é retornado.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- None  
+ Nenhum  
   
 ## <a name="permissions"></a>Permissões  
  Este procedimento armazenado exige uma das seguintes permissões:  

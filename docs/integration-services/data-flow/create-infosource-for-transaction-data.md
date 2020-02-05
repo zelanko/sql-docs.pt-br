@@ -11,10 +11,10 @@ ms.assetid: ab5f23e2-cd4e-4507-83d9-ac5ef721c171
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 19c8384a389db2032c36291e669d5dd2885ac8dd
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293303"
 ---
 # <a name="create-infosource-for-transaction-data"></a>Criar InfoSource para os dados da transação
@@ -67,7 +67,7 @@ ms.locfileid: "71293303"
  Exibe o tipo de dados [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] da coluna de fluxo de dados.  
   
  **Iobject - Pesquisa**  
- Associar um InfoObject existente à coluna de fluxo de dados na linha atual. Para fazer essa associação, clique em **Pesquisar**e use a caixa de diálogo **Pesquisar InfoObject** para selecionar o InfoObject existente. Para obter mais informações sobre essa caixa de diálogo, consulte [Look Up InfoObject](../../integration-services/data-flow/look-up-infoobject.md).  
+ Associar um InfoObject existente à coluna de fluxo de dados na linha atual. Para fazer essa associação, clique em **Pesquisar** e use a caixa de diálogo **Pesquisar InfoObject** para selecionar o InfoObject existente. Para obter mais informações sobre essa caixa de diálogo, consulte [Look Up InfoObject](../../integration-services/data-flow/look-up-infoobject.md).  
   
  Depois de selecionar um InfoObject existente, o componente preenche as colunas **InfoObject** e **Tipo** com os valores selecionados.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "71293303"
  **Tipo**  
  Exibe o tipo do InfoObject associado à coluna de fluxo de dados. A tabela a seguir lista os valores possíveis do tipo.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |CHA|Características|  
 |UNI|Unidades|  

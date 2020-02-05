@@ -13,10 +13,10 @@ ms.assetid: 20a0d9ac-3393-4ab3-a296-862926b9b5e3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9d6933f45d70636b2c7ea8b2ca20f71e1ab2fd02
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298882"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity"></a>Change Data Capture Designer para Oracle da Attunity
@@ -26,11 +26,11 @@ ms.locfileid: "71298882"
 
   O CDC Designer Console é usado para desenvolver e manter Instâncias Oracle CDC. O CDC Designer Console é um snap-in do Console de Gerenciamento Microsoft que contém os seguintes elementos:  
   
--   Assistente de Nova Instância: este assistente cria uma nova Instância Oracle CDC. Para obter informações sobre o uso do New Instance Wizard, consulte [Use the New Instance Wizard](../../integration-services/change-data-capture/use-the-new-instance-wizard.md).  
+-   New Instance Wizard: este assistente cria uma nova Instância Oracle CDC. Para obter informações sobre o uso do New Instance Wizard, consulte [Use the New Instance Wizard](../../integration-services/change-data-capture/use-the-new-instance-wizard.md).  
   
--   Visualizador de Propriedades de Instância CDC: esta é uma exibição encaixada que mostra o status e a configuração da instância CDC selecionada. Para obter informações sobre o visualizador de propriedades, consulte [Como gerenciar uma instância CDC](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md).  
+-   CDC Instance Properties Viewer: esta é uma exibição encaixada que mostra o status e a configuração da instância CDC selecionada. Para obter informações sobre o visualizador de propriedades, consulte [Como gerenciar uma instância CDC](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md).  
   
--   Editor de Propriedades de Instância CDC: esta caixa de diálogo é usada para editar qualquer instância de Serviço Oracle CDC existente. Para obter informações sobre as propriedades da instância CDC, consulte [Edit Instance Properties](../../integration-services/change-data-capture/edit-instance-properties.md).  
+-   CDC Instance Properties Editor: esta caixa de diálogo é usada para editar qualquer instância de Serviço Oracle CDC existente. Para obter informações sobre as propriedades da instância CDC, consulte [Edit Instance Properties](../../integration-services/change-data-capture/edit-instance-properties.md).  
   
  O Microsoft® Change Data Capture Designer e Service para Oracle da Attunity para o Microsoft SQL Server® 2016 são parte do SQL Server 2016 Feature Pack. Baixe componentes do Feature Pack da [página da Web do SQL Server 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=746297).  
   
@@ -46,11 +46,11 @@ ms.locfileid: "71298882"
   
 -   [Os bancos de dados Oracle CDC](../../integration-services/change-data-capture/the-oracle-cdc-databases.md)  
   
--   [Referência da Ajuda F1 Change Data Capture Designer para Oracle da Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity-f1-help-reference.md)  
+-   [Referência da Ajuda F1 do Change Data Capture Designer para Oracle da Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity-f1-help-reference.md)  
   
 -   [Guia de instruções do Change Data Capture Designer para Oracle da Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity-how-to-guide.md)  
   
--   [Conexão de SQL Server para a criação de instância](../../integration-services/change-data-capture/sql-server-connection-for-instance-creation.md)  
+-   [Conexão do SQL Server para a criação de instância](../../integration-services/change-data-capture/sql-server-connection-for-instance-creation.md)  
   
 -   [Propriedades avançadas de conexão](../../integration-services/change-data-capture/advanced-connection-properties.md)  
   

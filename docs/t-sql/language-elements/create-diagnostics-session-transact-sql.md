@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 0d4148e002ba84677e13e101a4830f0b6da10915
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68088969"
 ---
 # <a name="create-diagnostics-session-transact-sql"></a>CREATE DIAGNOSTICS SESSION (Transact-SQL)
@@ -77,7 +77,7 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
  *property_name*  
  Uma propriedade relacionada ao evento.  Os nomes de propriedade podem fazer parte da marca de captura ou ser usados como parte dos critérios de filtragem.  
   
-|Nome da propriedade|Descrição|  
+|Nome da propriedade|DESCRIÇÃO|  
 |-------------------|-----------------|  
 |UserName|Um nome de usuário (logon).|  
 |SessionId|Uma ID de sessão.|  
@@ -85,10 +85,10 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
 |CommandType|Um tipo de comando.|  
 |CommandText|Texto dentro de um comando processado.|  
 |OperationType|O tipo de operação para o evento.|  
-|Duração|A duração do evento.|  
+|Duration|A duração do evento.|  
 |SPID|A ID de processo do serviço.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Cada usuário tem permissão para no máximo 10 sessões de diagnóstico simultâneas. Consulte [sys.pdw_diag_sessions](../../relational-databases/system-catalog-views/sys-pdw-diag-sessions-transact-sql.md) para obter uma lista das sessões atuais e descarte as sessões desnecessárias usando `DROP DIAGNOSTICS SESSION`.  
   
  As sessões de diagnóstico continuarão a coletar metadados até serem descartadas.  
@@ -101,7 +101,7 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-creating-a-diagnostics-session"></a>A. Criando uma sessão de diagnóstico  
+### <a name="a-creating-a-diagnostics-session"></a>a. Criando uma sessão de diagnóstico  
  Este exemplo cria uma sessão de diagnóstico para registrar as métricas de desempenho do mecanismo de banco de dados. O exemplo cria uma sessão de diagnóstico que escuta os eventos de execução/término da consulta do mecanismo e um evento de bloqueio do DMS. O que é retornado é o texto do comando, o nome do computador, a ID de solicitação (ID da consulta) e a sessão na qual o evento foi criado.  
   
 ```  

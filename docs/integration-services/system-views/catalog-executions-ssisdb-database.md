@@ -14,10 +14,10 @@ ms.assetid: 879f13b0-331d-4dee-a079-edfaca11ae5b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9daa6cf4c788c4ca63a9cc394c9a814a8c27cb5b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295206"
 ---
 # <a name="catalogexecutions-ssisdb-database"></a>catalog.executions (Banco de Dados SSISDB)
@@ -29,7 +29,7 @@ ms.locfileid: "71295206"
 
   Exibe as instâncias de execução de pacote no catálogo do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Pacotes que são executados com a tarefa Executar Pacote na mesma instância de execução que o pacote pai.  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |execution_id|**bigint**|O identificador global (ID) exclusivo da instância de execução.|  
 |folder_name|**sysname(nvarchar(128))**|O nome da pasta que contém o projeto.|  
@@ -42,7 +42,7 @@ ms.locfileid: "71295206"
 |project_lsn|**bigint**|A versão do projeto que corresponde à instância da execução. Não há garantia de que este número seja sequencial.|  
 |executed_as_sid|**varbinary(85)**|A SID do usuário que iniciou a instância da execução.|  
 |executed_as_name|**nvarchar(128)**|O nome da entidade do banco de dados que foi usada para iniciar a instância de execução.|  
-|use32bitruntime|**bit**|Indica se o tempo de execução de 32 bits é usado para executar o pacote em um sistema operacional de 64 bits. Quando o valor é `1`, a execução é realizada com o tempo de execução de 32 bits. Quando o valor é `0`, a execução é realizada com o tempo de execução de 64 bits.|  
+|use32bitruntime|**bit**|Indica se o runtime de 32 bits é usado para executar o pacote em um sistema operacional de 64 bits. Quando o valor é `1`, a execução é realizada com o runtime de 32 bits. Quando o valor é `0`, a execução é realizada com o runtime de 64 bits.|  
 |object_type|**smallint**|O tipo do objeto. O objeto pode ser um projeto (`20`) ou um pacote (`30`).|  
 |object_id|**bigint**|A ID do objeto afetado pela operação.|  
 |status|**int**|O status da operação. Os possíveis valores são criado (`1`), em execução (`2`), cancelado (`3`), com falha (`4`), pendente (`5`), encerrado inesperadamente (`6`), êxito (`7`), parando (`8`) e concluído (`9`).|  
@@ -62,7 +62,7 @@ ms.locfileid: "71295206"
 |machine_name|**nvarchar(128)**|O nome do computador no qual a instância de servidor está sendo executada.|  
 |dump_id|**uniqueidentifier**|A ID de um despejo de execução.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esta exibição mostra uma linha para cada instância de execução no catálogo.  
   
 ## <a name="permissions"></a>Permissões  

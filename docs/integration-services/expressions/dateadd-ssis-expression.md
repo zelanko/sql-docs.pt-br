@@ -15,10 +15,10 @@ ms.assetid: fa5c37b1-2ddc-4857-8f8e-f6d5643b654f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 66733b12bbf3b4723449eb09f93182efb1f6462c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71290173"
 ---
 # <a name="dateadd-ssis-expression"></a>DATEADD (Expressão SSIS)
@@ -48,18 +48,18 @@ DATEADD(datepart, number, date)
 ## <a name="result-types"></a>Tipos de resultado  
  DT_DBTIMESTAMP  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  A tabela a seguir lista as partes de data e as abreviações reconhecidas pelo avaliador de expressão. Os nomes das partes da data não diferenciam maiúsculas de minúsculas.  
   
 |datepart|Abreviações|  
 |--------------|-------------------|  
-|Year|aa, aaaa|  
+|Ano|aa, aaaa|  
 |Quarter|qq, q|  
 |Month|mm, m|  
 |Dia do ano|dy, y|  
-|Day|dd, d|  
-|Week|wk, ww|  
-|Dia de semana|dw, w|  
+|Dia|dd, d|  
+|Semana|wk, ww|  
+|Weekday|dw, w|  
 |Hora|Hh|  
 |Minuto|mi, n|  
 |Segundo|ss, s|  

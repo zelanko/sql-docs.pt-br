@@ -12,19 +12,19 @@ author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: d340d362301698f7dfaef28476ea659b948163bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109377"
 ---
-# <a name="jsonmodify-transact-sql"></a>JSON_MODIFY (Transact-SQL)
+# <a name="json_modify-transact-sql"></a>JSON_MODIFY (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Atualiza o valor de uma propriedade em uma cadeia de caracteres JSON e retorna a cadeia de caracteres JSON atualizada.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -73,7 +73,7 @@ JSON_MODIFY faz o escape de todos os caracteres especiais no novo valor se o tip
 
  Retorna o valor atualizado de *expression* como um texto JSON formatado corretamente.  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Comentários
 
  A função JSON_MODIFY permite atualizar o valor de uma propriedade existente, inserir um novo par de chave/valor ou excluir uma chave com base em uma combinação de modos e valores fornecidos.  
   
@@ -83,8 +83,8 @@ JSON_MODIFY faz o escape de todos os caracteres especiais no novo valor se o tip
 |--------------------|-----------------|--------------|-----------------|  
 |Não NULL|Sim|Atualize o valor existente.|Atualize o valor existente.|  
 |Não NULL|Não|Tente criar um novo par de chave/valor no caminho especificado.<br /><br /> Isso poderá falhar. Por exemplo, se você especificar o caminho `$.user.setting.theme`, JSON_MODIFY não inserirá a chave `theme`, caso os objetos `$.user` ou `$.user.settings` não existam ou caso as configurações sejam uma matriz ou um valor escalar.|Erro – INVALID_PROPERTY|  
-|NULL|Sim|Exclua a propriedade existente.|Defina o valor existente como nulo.|  
-|NULL|Não|Nenhuma ação. O primeiro argumento é retornado como o resultado.|Erro – INVALID_PROPERTY|  
+|NULO|Sim|Exclua a propriedade existente.|Defina o valor existente como nulo.|  
+|NULO|Não|Nenhuma ação. O primeiro argumento é retornado como o resultado.|Erro – INVALID_PROPERTY|  
   
  No modo incerto, JSON_MODIFY tenta criar um novo par de chave/valor, mas em alguns casos, ele pode falhar.  
   
