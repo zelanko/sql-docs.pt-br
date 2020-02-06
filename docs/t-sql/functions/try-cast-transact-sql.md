@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current||>= sql-server-2016 ||>= sql-server-linux-2017||= sqlallproducts-allversions||>= aps-pdw-2016||= azure-sqldw-latest
 ms.openlocfilehash: 915ea023442ab9d787a481cab44259b1fc4a3857
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70151950"
 ---
 # <a name="try_cast-transact-sql"></a>TRY_CAST (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "70151950"
 
   Retorna uma conversão de valor ao tipo de dados especificado se a conversão for bem-sucedida; caso contrário, retorna nulo.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -54,14 +54,14 @@ TRY_CAST ( expression AS data_type [ ( length ) ] )
 ## <a name="return-types"></a>Tipos de retorno  
  Retorna uma conversão de valor ao tipo de dados especificado se a conversão for bem-sucedida; caso contrário, retorna nulo.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  **TRY_CAST** usa o valor passado para ele e tenta convertê-lo no *data_type* especificado. Se a conversão for bem-sucedida, **TRY_CAST** retornará o valor como o *data_type* especificado; se um erro ocorrer, será retornado um valor nulo. Porém, se você solicitar uma conversão que não é permitida explicitamente, **TRY_CAST** falhará com um erro.  
   
  **TRY_CAST** não é uma nova palavra-chave reservada e está disponível em todos os níveis de compatibilidade. **TRY_CAST** tem a mesma semântica de **TRY_CONVERT** ao se conectar a servidores remotos.  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-try_cast-returns-null"></a>A. TRY_CAST retorna nulo  
+### <a name="a-try_cast-returns-null"></a>a. TRY_CAST retorna nulo  
  O exemplo a seguir demonstra que TRY_CAST retorna nulo quando a conversão falha.  
   
 ```sql  

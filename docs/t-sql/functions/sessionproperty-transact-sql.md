@@ -20,10 +20,10 @@ ms.assetid: 1f3730b4-1495-4d3a-af43-e57952812df9
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: e22d0c36c3a5ce614357566079ec81dc54b7c70e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68022205"
 ---
 # <a name="sessionproperty-transact-sql"></a>SESSIONPROPERTY (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68022205"
 
   Retorna as configurações de opções SET de uma sessão.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,7 +44,7 @@ SESSIONPROPERTY (option)
  *opção*  
  É a configuração de opção atual durante esta sessão. *option* pode ter qualquer um dos valores a seguir.  
   
-|Opção|Descrição|  
+|Opção|DESCRIÇÃO|  
 |------------|-----------------|  
 |ANSI_NULLS|Especifica se o comportamento da ISO de igual a (=) e não igual a (<>) em relação a valores nulos se aplica.<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
 |ANSI_PADDING|Controla como a coluna armazena valores menores que o tamanho definido da coluna e o modo como a coluna armazena valores com espaços em branco à direita em caracteres e dados binários.<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
@@ -58,7 +58,7 @@ SESSIONPROPERTY (option)
 ## <a name="return-types"></a>Tipos de retorno  
  **sql_variant**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  As opções SET são figuradas combinando as opções de nível de servidor, nível de banco de dados e as opções especificadas pelo usuário.  
   
 ## <a name="examples"></a>Exemplos  

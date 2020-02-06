@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 638e9960af007710b7c9a891109597db14227092
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68071588"
 ---
 # <a name="exp-transact-sql"></a>EXP (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68071588"
 
   Retorna o valor exponencial da expressão **float** especificada.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,16 +46,16 @@ EXP ( float_expression )
 ## <a name="return-types"></a>Tipos de retorno  
  **float**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  A constante **e** (2,718281...) é a base dos logaritmos naturais.  
   
  O expoente de um número é a constante **e** elevada à potência do número. Por exemplo, EXP(1,0) = e^1,0 = 2,71828182845905 e EXP(10) = e^10 = 22026,4657948067.  
   
- O exponencial do logaritmo natural de um número é o próprio número: EXP (LOG (*n*)) = *n*. E o logaritmo natural do exponencial de um número é o próprio número: LOG (EXP (*n*)) = *n*.  
+ O exponencial do logaritmo natural de um número é o próprio número: EXP (LOG (*n*)) = *n*. Além disso, o logaritmo natural do exponencial de um número é o próprio número: LOG (EXP (*n*)) = *n*.  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-finding-the-exponent-of-a-number"></a>A. Localizando o expoente de um número  
+### <a name="a-finding-the-exponent-of-a-number"></a>a. Localizando o expoente de um número  
  O exemplo a seguir declara uma variável e retorna o valor exponencial da variável especificada (`10`) com uma descrição de texto.  
   
 ```  

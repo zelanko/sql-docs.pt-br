@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 361059daeb60402f564caa09837046117804ba6c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68059919"
 ---
 # <a name="left-transact-sql"></a>LEFT (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68059919"
 
   Retorna a parte da esquerda de uma cadeia de caracteres com o número de caracteres especificado.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -55,12 +55,12 @@ LEFT ( character_expression , integer_expression )
   
  Retorna **nvarchar** quando *character_expression* é um tipo de dados de caractere Unicode.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Durante o uso de ordenações SC, o parâmetro *integer_expression* conta um par alternativo UTF-16 como um caractere. Para obter mais informações, consulte [Suporte a ordenações e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-left-with-a-column"></a>A. Usando LEFT com uma coluna  
+### <a name="a-using-left-with-a-column"></a>a. Usando LEFT com uma coluna  
  O exemplo a seguir retorna os cinco caracteres mais à esquerda do nome de cada produto na tabela `Product` do banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```  

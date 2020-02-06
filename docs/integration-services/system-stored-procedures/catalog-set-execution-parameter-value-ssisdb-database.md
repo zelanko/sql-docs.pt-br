@@ -11,10 +11,10 @@ ms.assetid: 055d86c9-befd-4e63-acb1-6dfe833549d2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f75065f38d47964ab3bbc07f22bb809061fb22d4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295306"
 ---
 # <a name="catalogset_execution_parameter_value-ssisdb-database"></a>catalog.set_execution_parameter_value (Banco de Dados SSISDB)
@@ -70,20 +70,20 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
  [ @parameter_value = ] *parameter_value*  
  O valor do parâmetro. O *parameter_value* é **sql_variant**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Para descobrir os valores de parâmetros que foram usados para uma determinada execução, consulte a exibição catalog.execution_parameter_values.  
   
  Para especificar o escopo das informações registradas em log durante uma execução de pacote, defina *parameter_name* como LOGGING_LEVEL e *parameter_value* como um dos valores a seguir.  
   
  Defina o parâmetro *object_type* como 50.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
-|0|None<br /><br /> O log está desativado. Apenas o status da execução do pacote é registrado em log.|  
-|1|Basic<br /><br /> Todos os eventos são registrados em log, menos personalizados e de diagnóstico. Este é o valor padrão.|  
+|0|Nenhum<br /><br /> O log está desativado. Apenas o status da execução do pacote é registrado em log.|  
+|1|Basic<br /><br /> Todos os eventos são registrados em log, menos personalizados e de diagnóstico. Esse é o valor padrão.|  
 |2|Desempenho<br /><br /> Apenas estatísticas de desempenho e eventos OnError e OnWarning são registrados em log.|  
 |3|Detalhado<br /><br /> Todos os eventos são registrados em log, inclusive eventos personalizados e de diagnóstico. <br />Eventos personalizados incluem os que são registrados em log por meio de tarefas do Integration Services. Para obter mais informações, consulte [Custom Messages for Logging](../../integration-services/performance/integration-services-ssis-logging.md#custom_messages) (Mensagens personalizadas para criação de log)|  
-|4|Linhagem de tempo de execução<br /><br /> Coleta os dados necessários para rastrear a linhagem no fluxo de dados.|  
+|4|Linhagem de runtime<br /><br /> Coleta os dados necessários para rastrear a linhagem no fluxo de dados.|  
 |100|Nível de registro em log personalizado<br /><br /> Especifique as configurações no parâmetro CUSTOMIZED_LOGGING_LEVEL. Para obter mais informações sobre os valores que você pode especificar, consulte [catalog.create_customized_logging_level](../../integration-services/system-stored-procedures/catalog-create-customized-logging-level.md).<br /><br /> Para obter mais informações sobre níveis de log personalizados, veja [Habilitar o log para a execução do pacote no servidor SSIS](../../integration-services/performance/integration-services-ssis-logging.md#server_logging).|  
   
  Para especificar que o servidor do Integration Services gera arquivos de despejo quando ocorre qualquer erro durante a execução de um pacote, defina os valores dos parâmetros a seguir para uma instância de execução que não foi executada.  
@@ -137,7 +137,7 @@ exec catalog.set_execution_parameter_value  @execution_id, 50, 'DUMP_EVENT_CODE'
  0 (êxito)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- None  
+ Nenhum  
   
 ## <a name="permissions"></a>Permissões  
  Este procedimento armazenado exige uma das seguintes permissões:  

@@ -14,10 +14,10 @@ ms.assetid: f7fccace-c178-4e13-bde9-7dc4ef1d98fa
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a2a44d6e7245108c16442e30a67aaea13aae8293
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297505"
 ---
 # <a name="log-ssis-expression"></a>LOG (Expressão SSIS)
@@ -41,7 +41,7 @@ LOG(numeric_expression)
 ## <a name="result-types"></a>Tipos de resultado  
  DT_R8  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  A *expressão numérica* é convertida para o tipo de dados DT_R8 antes de o logaritmo ser computado. Para obter mais informações, consulte [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
  Se *numeric_expression* for avaliado como zero ou um valor negativo, o resultado de retorno será nulo.  

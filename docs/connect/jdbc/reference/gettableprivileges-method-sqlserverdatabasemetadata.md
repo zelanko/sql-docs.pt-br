@@ -16,10 +16,10 @@ ms.assetid: 0610d667-a16d-4201-a14b-0a40048911e1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d0fe3b01fd02bf48fb5f38707530e3b3344133e6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979222"
 ---
 # <a name="gettableprivileges-method-sqlserverdatabasemetadata"></a>Método getTablePrivileges (SQLServerDatabaseMetaData)
@@ -36,7 +36,7 @@ public java.sql.ResultSet getTablePrivileges(java.lang.String catalog,
                                              java.lang.String table)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *catalog*  
   
  Uma **String** que contém o nome do catálogo. Fornecer um nulo a esse parâmetro indica que o nome do catálogo não precisa ser usado.  
@@ -55,20 +55,20 @@ public java.sql.ResultSet getTablePrivileges(java.lang.String catalog,
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse método getTablePrivileges é especificado pelo método getTablePrivileges na interface java.sql.DatabaseMetaData.  
   
  O conjunto de resultados retornado pelo método getTablePrivileges conterá as seguintes informações:  
   
-|Nome|Tipo|Descrição|  
+|Nome|Type|DESCRIÇÃO|  
 |----------|----------|-----------------|  
-|TABLE_CAT|**String**|O nome do catálogo.|  
-|TABLE_SCHEM|**String**|O nome do esquema da tabela.|  
-|TABLE_NAME|**String**|O nome da tabela.|  
-|GRANTOR|**String**|O objeto que concede o acesso.|  
-|GRANTEE|**String**|O objeto que recebe o acesso.|  
-|PRIVILEGE|**String**|O tipo de acesso concedido.|  
-|IS_GRANTABLE|**String**|Indica se o usuário autorizado tem permissão para conceder acesso a outros usuários.|  
+|TABLE_CAT|**Cadeia de caracteres**|O nome do catálogo.|  
+|TABLE_SCHEM|**Cadeia de caracteres**|O nome do esquema da tabela.|  
+|TABLE_NAME|**Cadeia de caracteres**|O nome da tabela.|  
+|GRANTOR|**Cadeia de caracteres**|O objeto que concede o acesso.|  
+|GRANTEE|**Cadeia de caracteres**|O objeto que recebe o acesso.|  
+|PRIVILEGE|**Cadeia de caracteres**|O tipo de acesso concedido.|  
+|IS_GRANTABLE|**Cadeia de caracteres**|Indica se o usuário autorizado tem permissão para conceder acesso a outros usuários.|  
   
 > [!NOTE]  
 >  Para saber mais sobre os dados retornados pelo método getTablePrivileges, consulte "sp_table_privileges (Transact-SQL)" nos Manuais Online do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  

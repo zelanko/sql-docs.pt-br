@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bf46cd6f2ce89553d846c0322d0f8866f05921f6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68086143"
 ---
 # <a name="use-transact-sql"></a>USE (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68086143"
 
   Altera o contexto de banco de dados para o banco de dados ou instantâneo de banco de dados especificado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -48,7 +48,7 @@ USE { database_name }
   
  Em [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], o parâmetro de banco de dados só pode se referir ao banco de dados atual. Se um banco de dados que não seja o banco de dados atual é fornecido, a instrução `USE` não alterna entre bancos de dados e o código de erro 40508 é retornado. Para alterar os bancos de dados, você deve conectar-se diretamente ao banco de dados. A instrução USE é marcada como não aplicável ao Banco de Dados SQL na parte superior desta página, porque, embora você possa ter a instrução `USE` em um lote, ela não executa nenhuma ação.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Quando um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se conecta ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ele é automaticamente conectado ao seu banco de dados padrão e adquire o contexto de segurança de um usuário de banco de dados. Se nenhum usuário de banco de dados foi criado para o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o logon se conectará como convidado. Se o usuário de banco de dados não tiver permissão CONNECT no banco de dados, a instrução USE falhará. Se nenhum banco de dados padrão foi atribuído ao logon, seu banco de dados padrão será definido como mestre.  
   
  USE é executado em tempo de compilação e de execução e entra em vigor imediatamente. Portanto, as instruções exibidas em um lote depois da instrução USE são executadas no banco de dados especificado.  

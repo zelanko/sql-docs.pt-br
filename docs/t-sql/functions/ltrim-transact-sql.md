@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0f3e52b291c9a91e1135d41ab6843ef97f53d17d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68130382"
 ---
 # <a name="ltrim-transact-sql"></a>LTRIM (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68130382"
 
   Retorna uma expressão de caractere depois de remover espaços em branco à esquerda.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -52,7 +52,7 @@ LTRIM ( character_expression )
   
 ## <a name="examples"></a>Exemplos  
 
-### <a name="a-simple-example"></a>A. Exemplo simples   
+### <a name="a-simple-example"></a>a. Exemplo simples   
 
  O exemplo a seguir usa LTRIM para remover espaços à esquerda de uma expressão de caractere.  
   
@@ -67,7 +67,7 @@ SELECT LTRIM('     Five spaces are at the beginning of this string.') FROM sys.d
   Five spaces are at the beginning of this string.
   ```  
 
-### <a name="b-example-using-a-variable"></a>B: Exemplo usando uma variável   
+### <a name="b-example-using-a-variable"></a>B: Exemplo que usa uma variável   
   
  O exemplo a seguir usa `LTRIM` para remover espaços à esquerda de uma variável de caractere.  
   

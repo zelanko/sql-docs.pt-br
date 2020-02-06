@@ -15,10 +15,10 @@ ms.assetid: 9370bfb5-5993-4ad8-a9cd-2de53f320f34
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: dc0df82879f835428640b403a5d9b2befa66e34a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294504"
 ---
 # <a name="add-file-connection-manager-dialog-box-ui-reference"></a>Referência da interface do usuário da caixa de diálogo Adicionar Gerenciador de Conexões de Arquivos
@@ -37,7 +37,7 @@ ms.locfileid: "71294504"
  **Tipo de uso**  
  Especifique os tipos de arquivos a serem usados para o gerenciador de conexões de vários arquivos.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |**Criar arquivos**|O gerenciador de conexões criará os arquivos.|  
 |**Arquivos existentes**|O gerenciador de conexões utilizará arquivos existentes.|  

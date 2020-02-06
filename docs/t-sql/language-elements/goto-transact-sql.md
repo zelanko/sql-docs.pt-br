@@ -22,10 +22,10 @@ ms.assetid: 589b6f8e-dc80-416f-9e74-48bed5337f58
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 9964745ede5eb49dd56fbcf2a8d75aee3633fc3b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68075200"
 ---
 # <a name="goto-transact-sql"></a>GOTO (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68075200"
 
   Altera o fluxo de execução para um rótulo. A instrução ou as instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] que seguem GOTO são ignoradas e o processamento continua no rótulo. As instruções GOTO e os rótulos podem ser usados em qualquer lugar em um procedimento, lote ou bloco de instruções. As instruções GOTO podem ser aninhadas.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -49,7 +49,7 @@ GOTO label
  *label*  
  É o ponto após o qual o processamento inicia se o destino de um GOTO for esse rótulo. Os rótulos devem seguir as regras para [identificadores](../../relational-databases/databases/database-identifiers.md). Um rótulo pode ser usado como um método de comentário se GOTO for usado.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  GOTO pode existir em instruções de controle de fluxo condicional, blocos de instruções ou procedimentos, mas não pode ir para um rótulo fora do lote. A ramificação de GOTO pode ir para um rótulo definido antes ou depois de GOTO.  
   
 ## <a name="permissions"></a>Permissões  

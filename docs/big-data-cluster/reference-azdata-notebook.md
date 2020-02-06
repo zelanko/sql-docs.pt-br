@@ -9,20 +9,20 @@ ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 3d9b5538170e57b09a1cf8bc4360a68187595ac2
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 0a866dcca1debba47abf2e2e241d00151b8641ff
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531669"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74820965"
 ---
 # <a name="azdata-notebook"></a>azdata notebook
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-O artigo a seguir fornece referência para os comandos `sql` na ferramenta `azdata`. Para obter mais informações sobre outros comandos `azdata`, confira [referência de azdata](reference-azdata.md)
+O artigo a seguir fornece referência para os comandos `notebook` na ferramenta `azdata`. Para obter mais informações sobre outros comandos `azdata`, confira [referência de azdata](reference-azdata.md)
 
-## <a name="commands"></a>Commands
+## <a name="commands"></a>Comandos
 |     |     |
 | --- | --- |
 [azdata notebook view](#azdata-notebook-view) | Exibir um notebook.  Opção para parar no primeiro erro de execução de célula.
@@ -42,7 +42,7 @@ Exibir notebook.  Isso mostra todas as células, a menos que uma célula com err
 ```bash
 azdata notebook view --path '/home/me/notebooks/demo_notebook.ipynb' --stop-on-error
 ```
-### <a name="required-parameters"></a>Parâmetros necessários
+### <a name="required-parameters"></a>Parâmetros obrigatórios
 #### `--path -p`
 O caminho para o notebook a ser exibido.
 ### <a name="optional-parameters"></a>Parâmetros opcionais
@@ -75,7 +75,7 @@ Executar notebook.
 ```bash
 azdata notebook run --path '/home/me/notebooks/demo_notebook.ipynb'
 ```
-### <a name="required-parameters"></a>Parâmetros necessários
+### <a name="required-parameters"></a>Parâmetros obrigatórios
 #### `--path -p`
 O caminho de arquivo para o notebook a ser executado.
 ### <a name="optional-parameters"></a>Parâmetros opcionais

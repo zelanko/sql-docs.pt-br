@@ -17,10 +17,10 @@ ms.assetid: 9d4e89f4-478f-419a-8b50-b096771e3880
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: cd783ac6f5f6d8c7a9e561614dbe2c06053f758a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68050674"
 ---
 # <a name="grant-system-object-permissions-transact-sql"></a>Permissões de objeto do sistema GRANT (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "68050674"
 
   Concede permissões em objetos do sistema como procedimentos armazenados do sistema, procedimentos armazenados estendidos, funções e exibições.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -47,7 +47,7 @@ GRANT { SELECT | EXECUTE } ON [ sys.]system_object TO principal
  *principal*  
  Especifica a entidade de segurança para o qual a permissão está sendo concedida.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Essa instrução pode ser usada para conceder permissões em determinados procedimentos armazenados, procedimentos armazenados estendidos, funções com valor de tabela, funções escalares, exibições, exibições do catálogo, exibições de compatibilidade, exibições INFORMATION_SCHEMA, exibições de gerenciamento dinâmico e tabelas do sistema instaladas pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ara cada um desses objetos do sistema existe como um registro exclusivo no banco de dados de recursos do servidor (mssqlsystemresource). O banco de dados de recursos é somente leitura. Um link para o objeto é exposto como um registro no esquema sys de todo banco de dados. A permissão para executar ou selecionar um objeto do sistema pode ser concedida, negada e revogada.  
   
  A concessão de permissão para executar ou selecionar um objeto não transmite necessariamente todas as permissões necessárias para usar o objeto. A maioria dos objetos executa operações para as quais são necessárias permissões adicionais. Por exemplo, um usuário ao qual é concedida a permissão EXECUTE no sp_addlinkedserver não pode criar um servidor vinculado a menos que o usuário também seja membro da função de servidor fixa sysadmin.  
@@ -75,8 +75,8 @@ GO
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-granting-select-permission-on-a-view"></a>A. Concedendo a permissão SELECT em uma exibição  
- O exemplo a seguir concede a permissão de logon [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `Sylvester1` para selecionar uma exibição que lista logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Depois, o exemplo concede a permissão adicional necessária para exibir metadados nos logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que não sejam de propriedade do usuário.  
+### <a name="a-granting-select-permission-on-a-view"></a>a. Concedendo a permissão SELECT em uma exibição  
+ O exemplo a seguir concede a permissão de logon [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`Sylvester1` para selecionar uma exibição que lista logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Depois, o exemplo concede a permissão adicional necessária para exibir metadados nos logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que não sejam de propriedade do usuário.  
   
 ```  
 USE AdventureWorks2012;  

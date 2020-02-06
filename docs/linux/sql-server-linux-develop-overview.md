@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 758cb738-b018-465b-9ab0-59a24b892e66
 ms.openlocfilehash: 584bf33201cab5d0f57205de0fed181725187d52
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077413"
 ---
 # <a name="how-to-get-started-developing-applications-for-sql-server-on-linux"></a>Como começar a desenvolver aplicativos para SQL Server em Linux
@@ -51,7 +51,7 @@ As ferramentas que atualmente são executadas no Windows, como SSMS, SSDT e Powe
 
 Para obter mais informações, confira os tópicos a seguir:
 
-- [SSMS (SQL Server Management Studio)](sql-server-linux-manage-ssms.md)
+- [SQL Server Management Studio (SSMS)](sql-server-linux-manage-ssms.md)
 - [SSDT (SQL Server Data Tools)](sql-server-linux-develop-use-ssdt.md)
 - [SQL PowerShell](sql-server-linux-manage-powershell.md)
 

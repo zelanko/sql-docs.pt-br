@@ -25,10 +25,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ca0183f72823073d36181c63273972928ab7aee4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67929162"
 ---
 # <a name="drop-statistics-transact-sql"></a>DROP STATISTICS (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "67929162"
 
   Cancela estatísticas de várias coleções dentro das tabelas especificadas no banco de dados atual.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -60,7 +60,7 @@ DROP STATISTICS [ schema_name . ] table_name.statistics_name
  *statistics_name*  
  É o nome do grupo de estatísticas a cancelar. Nomes de estatísticas devem obedecer às regras para identificadores.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Tenha cuidado ao cancelar estatísticas. Essa ação pode afetar o plano de execução escolhido pelo otimizador de consulta.  
   
  Estatísticas em índices não podem ser canceladas usando DROP STATISTICS. As estatísticas permanecerão enquanto o índice existir.  
@@ -72,7 +72,7 @@ DROP STATISTICS [ schema_name . ] table_name.statistics_name
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-dropping-statistics-from-a-table"></a>A. Cancelando estatísticas de uma tabela  
+### <a name="a-dropping-statistics-from-a-table"></a>a. Cancelando estatísticas de uma tabela  
  O exemplo a seguir cancela os grupos de estatísticas (coleções) de duas tabelas. O grupo de estatísticas (coleção) `VendorCredit` da tabela `Vendor` e as estatísticas (coleção) `CustomerTotal` da tabela `SalesOrderHeader` são cancelados.  
   
 ```  

@@ -24,10 +24,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d9908d99f81094b8b8d3c2afd5c82ad870c2de22
-ms.sourcegitcommit: 58f1d5498c87bfe0f6ec4fd9d7bbe723be47896b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68995746"
 ---
 # <a name="db_id-transact-sql"></a>DB_ID (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68995746"
 
 Esta função retorna o número da ID (identificação) de um banco de dados especificado.
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -50,7 +50,7 @@ O nome do banco de dados cujo número de identificação retornará `DB_ID`. Se 
 ## <a name="return-types"></a>Tipos de retorno
 **int**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Comentários
 O `DB_ID` só pode ser usado para retornar o identificador do banco de dados atual no Banco de Dados SQL. NULL será retornado se o nome do banco de dados especificado for diferente do atual.
 
 > [!NOTE]
@@ -64,7 +64,7 @@ Se o chamador de `DB_ID` não é proprietário de um banco de dados específico 
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-returning-the-database-id-of-the-current-database"></a>A. Retornando a ID do banco de dados atual  
+### <a name="a-returning-the-database-id-of-the-current-database"></a>a. Retornando a ID do banco de dados atual  
 Este exemplo retorna a ID do banco de dados atual.
   
 ```sql

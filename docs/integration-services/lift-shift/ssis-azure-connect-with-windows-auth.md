@@ -1,6 +1,6 @@
 ---
 title: Acessar armazenamentos de dados e compartilhamentos de arquivos com a autenticação do Windows | Microsoft Docs
-description: Saiba como configurar o Catálogo do SSIS no Banco de Dados SQL e o Tempo de Execução de Integração do Azure-SSIS no Azure Data Factory para executar pacotes que se acessam armazenamento de dados e compartilhamentos de arquivos com a Autenticação do Windows.
+description: Saiba como configurar o Catálogo do SSIS no Banco de Dados SQL e o Azure-SSIS Integration Runtime no Azure Data Factory para executar pacotes que se acessam armazenamento de dados e compartilhamentos de arquivos com a Autenticação do Windows.
 ms.date: 3/22/2018
 ms.topic: conceptual
 ms.prod: sql
@@ -11,10 +11,10 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
 ms.openlocfilehash: 009a65c7c4381440dd7af6bb627fe2db70a16918
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68007956"
 ---
 # <a name="access-data-stores-and-file-shares-with-windows-authentication-from-ssis-packages-in-azure"></a>Acessar armazenamentos de dados e compartilhamentos de arquivos com a Autenticação do Windows de pacotes SSIS no Azure

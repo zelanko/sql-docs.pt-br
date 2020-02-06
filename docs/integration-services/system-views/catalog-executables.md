@@ -11,10 +11,10 @@ ms.assetid: bae22d0c-e190-426f-a074-c1d1170e8dd8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 687e6940b9674cdff852d8aff3e0f6c05423cc70
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296612"
 ---
 # <a name="catalogexecutables"></a>catalog.executables 
@@ -28,7 +28,7 @@ ms.locfileid: "71296612"
   
  Um executável é uma tarefa ou um contêiner que você adiciona ao fluxo de controle de um pacote.  
   
-|Nome da coluna|**Data type**|Descrição|  
+|Nome da coluna|**Data type**|DESCRIÇÃO|  
 |-----------------|-------------------|-----------------|  
 |executable_id|**bigint**|O identificador exclusivo do executável.|  
 |execution_id|**bigint**|O identificador exclusivo da instância de execução.|  
@@ -49,5 +49,5 @@ ms.locfileid: "71296612"
 > [!NOTE]  
 >  Quando você tem permissão para executar uma operação no servidor, também tem permissão para exibir informações sobre a operação. A segurança em nível de linha é imposta; somente as linhas para as quais você tem permissão de exibição são exibidas.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
   

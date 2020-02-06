@@ -9,10 +9,10 @@ ms.assetid: 41235402-bb9e-4cb7-b91e-431e77db19cf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9dbecce71d9464267da63dcebb7388cd947a168f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579492"
 ---
 # <a name="report-builder-functions---level-function"></a>Funções do Construtor de Relatórios – Função Level
@@ -28,14 +28,14 @@ ms.locfileid: "65579492"
 Level(scope)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *escopo*  
  (**String**) (Opcional). O nome de um conjunto de dados, um grupo ou uma região de dados que contém os itens de relatório aos quais a função de agregação deve ser aplicada. Se *scope* não estiver especificado, será usado o escopo atual.  
   
 ## <a name="return-type"></a>Tipo de retorno  
  Retorna um **Integer**. Se *scope* especificar um conjunto de dados ou uma região de dados ou especificar um agrupamento não recursivo (ou seja, um agrupamento sem nenhum elemento **Parent** ), **Level** retornará 0. Se o *scope* for omitido, ele retornará o nível do escopo atual.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O valor retornado pela função **Level** é baseado em zero; isto é, o primeiro nível em uma hierarquia é 0.  
   
  A função **Level** pode ser usada para fornecer recuo em uma hierarquia recursiva, como uma lista de funcionários.  

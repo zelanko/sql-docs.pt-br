@@ -16,10 +16,10 @@ ms.assetid: f405e5ce-ef69-4c58-8c7d-a3d44dfe9ab0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ef2e4b408dabf7b054465149b2489e07fbdefef8
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295025"
 ---
 # <a name="variables-window"></a>Janela Variáveis
@@ -51,7 +51,7 @@ ms.locfileid: "71295025"
  **Opções de grade**  
  Clique para abrir a caixa de diálogo **Opções de Grade Variáveis** em que é possível alterar a seleção de colunas e aplique filtros à janela **Variáveis** . Para obter mais informações, consulte [Opções de Grade Variáveis](../integration-services/variable-grid-options.md).  
   
- **Name**  
+ **Nome**  
  Exiba o nome da variável. Você pode atualizar o nome para as variáveis definidas pelo usuário.  
   
  **Escopo**  
@@ -65,7 +65,7 @@ ms.locfileid: "71295025"
 > [!NOTE]  
 >  Se você atribuir uma expressão à variável, não poderá alterar o tipo de dados.  
   
- **Value**  
+ **Valor**  
  Exiba o valor da variável. Você pode atualizar o valor da variável para as variáveis definidas pelo usuário. Este valor pode ser literal ou uma expressão e pode ser uma cadeia de caracteres com várias linhas. Para atribuir uma expressão à variável, clique no botão de reticências ao lado da coluna **Expressão** na janela **Variáveis** .  
   
  **Namespace**  
@@ -103,7 +103,7 @@ ms.locfileid: "71295025"
   
 -   **Data type**  
   
--   **Value**  
+-   **Valor**  
   
 -   **Namespace**  
   
@@ -116,7 +116,7 @@ ms.locfileid: "71295025"
 ## <a name="see-also"></a>Consulte Também  
  [Variáveis do SSIS &#40;Integration Services&#41;](../integration-services/integration-services-ssis-variables.md)   
  [Usar variáveis em pacotes](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)   
- [Expressões do Integration Services &#40;SSIS&#41;](../integration-services/expressions/integration-services-ssis-expressions.md)   
- [Gerando arquivos de despejo para execução de pacote](../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)  
+ [Expressões do SSIS &#40;Integration Services&#41;](../integration-services/expressions/integration-services-ssis-expressions.md)   
+ [Gerar arquivos de despejo para execução de pacote](../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)  
   
   

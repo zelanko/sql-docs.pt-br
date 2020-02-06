@@ -33,10 +33,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 327992369ca07d77eb349cb83fb74c4ecd4e622e
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982221"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
@@ -45,7 +45,7 @@ ms.locfileid: "73982221"
 
 Adiciona uma ou mais linhas a uma tabela ou exibição no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter exemplos, confira [Exemplos](#InsertExamples).  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -295,10 +295,10 @@ Cláusula OUTPUT
 > [!NOTE]
 >  Um erro de sintaxe é gerado se uma lista de colunas não é fornecida.  
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 Para obter informações específicas à inserção de dados em tabelas de grafo do SQL, consulte [INSERT (SQL Graph)](../../t-sql/statements/insert-sql-graph.md). 
 
-## <a name="best-practices"></a>Práticas recomendadas  
+## <a name="best-practices"></a>Práticas Recomendadas  
  Use a função @@ROWCOUNT para retornar o número de linhas inseridas no aplicativo cliente. Para obter mais informações, consulte [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md).  
   
 ### <a name="best-practices-for-bulk-importing-data"></a>Práticas recomendadas para importar dados em massa  
@@ -427,7 +427,7 @@ No Parallel Data Warehouse, a cláusula ORDER BY será inválida em VIEWS, CREAT
 ###  <a name="BasicSyntax"></a> Sintaxe básica  
  Os exemplos nesta seção demonstram a funcionalidade básica da instrução INSERT usando a sintaxe mínima necessária.  
   
-#### <a name="a-inserting-a-single-row-of-data"></a>A. Inserindo uma única linha de dados  
+#### <a name="a-inserting-a-single-row-of-data"></a>a. Inserindo uma única linha de dados  
  O exemplo a seguir insere uma linha na tabela `Production.UnitMeasure` do banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. As colunas nesta tabela são `UnitMeasureCode`, `Name` e `ModifiedDate`. Como os valores de todas as colunas são fornecidos e listados na mesma ordem que as colunas da tabela, os nomes das colunas não precisam ser especificados na lista de colunas *.*  
   
 ```sql

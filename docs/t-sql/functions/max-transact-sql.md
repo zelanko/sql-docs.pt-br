@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c6a0c3acfaafd2e079901f52d1dd925a604a4c23
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68130297"
 ---
 # <a name="max-transact-sql"></a>MAX (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68130297"
 
   Retorna o valor máximo na expressão.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -48,7 +48,7 @@ MAX ([ ALL ] expression) OVER ( [ <partition_by_clause> ] [ <order_by_clause> ] 
  **ALL**  
  Aplica a função de agregação a todos os valores. ALL é o padrão.  
   
- DISTINCT  
+ DISTINTO  
  Especifica que cada valor exclusivo é considerado. DISTINCT não é significativo com MAX e está disponível somente para compatibilidade com ISO.  
   
  *expressão*  
@@ -62,7 +62,7 @@ MAX ([ ALL ] expression) OVER ( [ <partition_by_clause> ] [ <order_by_clause> ] 
 ## <a name="return-types"></a>Tipos de retorno  
  Retorna um valor igual a *expression*.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  MAX ignora quaisquer valores nulos.  
  
  MAX retornará NULL quando não houver linha a ser selecionada.  
@@ -73,7 +73,7 @@ MAX ([ ALL ] expression) OVER ( [ <partition_by_clause> ] [ <order_by_clause> ] 
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-simple-example"></a>A. Exemplo simples  
+### <a name="a-simple-example"></a>a. Exemplo simples  
  O exemplo a seguir retorna a taxa de imposto mais alta (máxima) no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```sql  

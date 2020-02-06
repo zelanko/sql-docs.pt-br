@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2c83006aab69b7d72a2c3006dab48811eeda8495
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909117"
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>Criar um alias de tipo de dados definido pelo usuário
@@ -84,7 +84,7 @@ ms.locfileid: "72909117"
      **Esquema**  
      Selecione um esquema de uma lista de todos os esquemas disponíveis para o usuário atual. A seleção padrão é o esquema padrão do usuário atual.  
   
-     **Armazenamento**  
+     **Storage**  
      Exibe o tamanho de armazenamento máximo para o alias de tipo de dados definido pelo usuário. Os tamanhos máximos de armazenamento variam com base na precisão.  
   
     |||  
