@@ -1,10 +1,9 @@
 ---
-title: Caixa de diálogo Abrir Arquivo | Microsoft Docs
-ms.custom: ''
+title: Caixa de diálogo Abrir Arquivo
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +11,14 @@ f1_keywords:
 ms.assetid: 3e01b9f5-2b0a-4fb3-9da8-984d27d17b8a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 869af839389aec533f132f6e2174d8495ffe1f20
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 61a0a699c7d754d3b21b671da5cd29ea0ec0f240
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263320"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251460"
 ---
 # <a name="open-file-dialog-box"></a>Caixa de diálogo Abrir Arquivo
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,7 +53,7 @@ Use esta opção para filtrar o conteúdo da pasta ou diretório selecionado em 
 **Opções de codificação e Abrir com**  
 Para usar a caixa de diálogo **Abrir com** para especificar um editor para o arquivo de destino, selecione o retângulo pequeno à direita do botão **Abrir** e escolha **Abrir com**. Se necessário, você também pode especificar um esquema de codificação de linguagem para aplicar ao abrir o arquivo selecionado. Para isso, selecione um programa na lista que contém "**com Codificação**" e escolha **Abrir** para exibir a **caixa de diálogo Codificação**. Esse botão nem sempre está disponível.  
   
-## <a name="toolbar"></a>Barra de Ferramentas  
+## <a name="toolbar"></a>Barra de ferramentas  
 **Navegação Regressiva**  
 Retorna a pasta, unidade ou local de Internet exibido por último.  
   
@@ -62,7 +63,7 @@ Navega na árvore até a próxima pasta mais alta na exibição em árvore.
 **Pesquisar na Web**  
 Esse botão não está disponível.  
   
-**Delete (excluir) (excluir)**  
+**Delete (excluir)**  
 Exclui os arquivos ou pastas selecionadas do armazenamento.  
   
 **Nova Pasta**  
@@ -86,7 +87,7 @@ Exibe arquivos e pastas em formato de lista.
 **Detalhes**  
 Exibe o nome, tamanho, tipo e data da última modificação de arquivos e pastas em formato de lista. Para ordenar por um detalhe específico, clique no cabeçalho da sua coluna.  
   
-**Exibição da Web**  
+**WebView**  
 Esse comando não está disponível.  
   
 ## <a name="tools"></a>Ferramentas  

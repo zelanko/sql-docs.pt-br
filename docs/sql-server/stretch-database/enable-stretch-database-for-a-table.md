@@ -1,5 +1,5 @@
 ---
-title: Habilitar o Stretch Database para uma tabela
+title: Habilitar o Banco de Dados de Stretch para uma tabela
 ms.date: 08/05/2016
 ms.service: sql-server-stretch-database
 ms.reviewer: ''
@@ -12,17 +12,17 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 49d3f7fa266be69c767b0fb0450cc6898351f39b
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73843813"
 ---
-# <a name="enable-stretch-database-for-a-table"></a>Habilitar o Stretch Database para uma tabela
+# <a name="enable-stretch-database-for-a-table"></a>Habilitar o Banco de Dados de Stretch para uma tabela
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
 
 
-  Para configurar uma tabela para o Stretch Database, selecione **Stretch | Habilitar** para uma tabela no SQL Server Management Studio a fim de abrir o assistente **Habilitar Tabela para Stretch**. Você também pode usar o Transact-SQL para habilitar o Stretch Database em uma tabela existente ou para criar uma nova tabela com o Stretch Database habilitado.  
+  Para configurar uma tabela para o Stretch Database, selecione **Stretch | Habilitar** para uma tabela no SQL Server Management Studio a fim de abrir o assistente **Habilitar Tabela para Stretch** . Você também pode usar o Transact-SQL para habilitar o Stretch Database em uma tabela existente ou para criar uma nova tabela com o Stretch Database habilitado.  
   
 -   Se você armazenar dados frios em uma tabela separada, poderá migrar a tabela inteira.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "73843813"
  Examine os valores que você inseriu e as opções selecionadas no assistente. Em seguida, escolha **Concluir** para habilitar o Stretch.  
   
  **Resultados**  
- Analise os resultados.  
+ Revise os resultados.  
   
 ##  <a name="EnableTSQLTable"></a> Usar o Transact-SQL para habilitar o Stretch Database em uma tabela  
  Você pode habilitar o Stretch Database para uma tabela existente ou criar uma nova tabela com o Stretch Database habilitado usando Transact-SQL.  
