@@ -11,10 +11,10 @@ ms.assetid: 802416f6-5177-4db5-bca5-976dec5faf53
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e10877f562c8ffbe7da7da3de96e5a94299843ec
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295293"
 ---
 # <a name="catalogset_folder_description-ssisdb-database"></a>catalog.set_folder_description (Banco de Dados SSISDB)
@@ -41,10 +41,10 @@ catalog.set_folder_description [ @folder_name = ] folder_name
  A descrição da pasta. O *folder_description* é **nvarchar(MAX)** .  
   
 ## <a name="return-code-value"></a>Valor do código de retorno  
- None  
+ Nenhum  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- None  
+ Nenhum  
   
 ## <a name="permissions"></a>Permissões  
  Este procedimento armazenado exige uma das seguintes permissões:  

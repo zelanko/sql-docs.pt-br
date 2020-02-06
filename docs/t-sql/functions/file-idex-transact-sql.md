@@ -23,18 +23,18 @@ ms.assetid: 7532fea5-ee5e-4edd-b98b-111a7ba56c8e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 59b44b3356a0f71074543eb35107040ff8c47982
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68071499"
 ---
-# <a name="fileidex-transact-sql"></a>FILE_IDEX (Transact-SQL)
+# <a name="file_idex-transact-sql"></a>FILE_IDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 Esta função retorna o número de identificação (ID) do arquivo para o nome lógico especificado de um dado, log ou arquivo de texto completo do banco de dados atual. 
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -51,14 +51,14 @@ Uma expressão do tipo **sysname** que retorna o valor da ID do arquivo “FILE_
   
 **NULL** em caso de erro  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 *file_name* corresponde ao nome de arquivo lógico exibido na coluna **name** nas exibições do catálogo [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) ou [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).  
   
 Use `FILE_IDEX` em uma lista SELECT, uma cláusula WHERE ou qualquer lugar com suporte ao uso de uma expressão. Para obter mais informações, veja [Expressões &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-retrieving-the-file-id-of-a-specified-file"></a>A. Recuperando a ID de um arquivo especificado  
+### <a name="a-retrieving-the-file-id-of-a-specified-file"></a>a. Recuperando a ID de um arquivo especificado  
 Este exemplo retorna a ID de arquivo para o arquivo `AdventureWorks_Data`.  
   
 ```sql  

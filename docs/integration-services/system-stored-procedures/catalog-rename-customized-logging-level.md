@@ -11,10 +11,10 @@ ms.assetid: b1a57d5e-3f03-4901-8b2b-bb8b371b595b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c73937dcd201e65578f2d5738ae3706273300476
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295409"
 ---
 # <a name="catalogrename_customized_logging_level"></a>catalog.rename_customized_logging_level 
@@ -44,7 +44,7 @@ catalog.rename_customized_logging_level [ @old_name = ] old_name
   
  O *new_name* é **nvarchar(128)** .  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
   
 ## <a name="return-codes"></a>Códigos de retorno  
  0 (êxito)  
@@ -52,7 +52,7 @@ catalog.rename_customized_logging_level [ @old_name = ] old_name
  Quando há falha no procedimento armazenado, ele gera um erro.  
   
 ## <a name="result-set"></a>Conjunto de resultados  
- None  
+ Nenhum  
   
 ## <a name="permissions"></a>Permissões  
  Este procedimento armazenado exige uma das seguintes permissões:  

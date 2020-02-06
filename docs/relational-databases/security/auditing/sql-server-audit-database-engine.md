@@ -17,10 +17,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 4d9319ef90263e6513661c4d9a24be7f530b917f
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72903844"
 ---
 # <a name="sql-server-audit-database-engine"></a>Auditoria do SQL Server (Mecanismo de Banco de Dados)
@@ -142,14 +142,14 @@ ms.locfileid: "72903844"
 ### <a name="data-definition-language-statements"></a>Instruções de linguagem de definição de dados  
  É possível usar as seguintes instruções DDL para criar, alterar e remover especificações de auditoria:  
   
-|Instruções DDL|Descrição| 
+|Instruções DDL|DESCRIÇÃO| 
 |-|-|  
 |[ALTER AUTHORIZATION](../../../t-sql/statements/alter-authorization-transact-sql.md)|Altera a propriedade de um protegível.|  
 |[ALTER DATABASE AUDIT SPECIFICATION](../../../t-sql/statements/alter-database-audit-specification-transact-sql.md)|Altera o objeto de especificação de auditoria do banco de dados usando o recurso Auditoria do SQL Server.|  
-|[ALTER SERVER AUDIT](../../../t-sql/statements/alter-server-audit-transact-sql.md)|Altera um objeto de auditoria do servidor usando o recurso Auditoria do SQL Server.|  
+|[ALTERAR AUDITORIA DE SERVIDOR](../../../t-sql/statements/alter-server-audit-transact-sql.md)|Altera um objeto de auditoria do servidor usando o recurso Auditoria do SQL Server.|  
 |[ALTER SERVER AUDIT SPECIFICATION](../../../t-sql/statements/alter-server-audit-specification-transact-sql.md)|Altera o objeto de especificação de auditoria do servidor usando o recurso Auditoria do SQL Server.|  
 |[CREATE DATABASE AUDIT SPECIFICATION](../../../t-sql/statements/create-database-audit-specification-transact-sql.md)|Cria um objeto de especificação de auditoria do banco de dados usando o recurso de auditoria do SQL Server.|  
-|[CREATE SERVER AUDIT](../../../t-sql/statements/create-server-audit-transact-sql.md)|Cria um objeto de auditoria do servidor usando a Auditoria do SQL Server.|  
+|[CRIAR AUDITORIA DE SERVIDOR](../../../t-sql/statements/create-server-audit-transact-sql.md)|Cria um objeto de auditoria do servidor usando a Auditoria do SQL Server.|  
 |[CREATE SERVER AUDIT SPECIFICATION](../../../t-sql/statements/create-server-audit-specification-transact-sql.md)|Cria um objeto de especificação de auditoria do servidor usando o recurso Auditoria do SQL Server.|  
 |[DROP DATABASE AUDIT SPECIFICATION](../../../t-sql/statements/drop-database-audit-specification-transact-sql.md)|Descarta o objeto de especificação de auditoria do banco de dados usando o recurso Auditoria do SQL Server.|  
 |[DROP SERVER AUDIT](../../../t-sql/statements/drop-server-audit-transact-sql.md)|Descarta um objeto de auditoria de servidor usando o recurso SQL Server Audit.|  
@@ -158,7 +158,7 @@ ms.locfileid: "72903844"
 ### <a name="dynamic-views-and-functions"></a>Exibições e funções dinâmicas  
  A tabela a seguir lista as exibições e funções dinâmicas que podem ser usadas na auditoria do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-|Exibições e funções dinâmicas|Descrição|  
+|Exibições e funções dinâmicas|DESCRIÇÃO|  
 |---------------------------------|-----------------|  
 |[sys.dm_audit_actions](../../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)|Retorna uma linha para cada ação de auditoria que pode ser reportada no log de auditoria e para cada grupo de ação de auditoria que pode ser configurado como parte do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit.|  
 |[sys.dm_server_audit_status](../../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)|Fornece informações sobre o estado atual da auditoria.|  
@@ -168,7 +168,7 @@ ms.locfileid: "72903844"
 ### <a name="catalog-views"></a>Exibições do catálogo  
  A tabela a seguir lista as exibições do catálogo que podem ser usadas para auditoria do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-|Exibições do catálogo|Descrição|  
+|Exibições do catálogo|DESCRIÇÃO|  
 |-------------------|-----------------|  
 |[sys.database_audit_specifications](../../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)|Contém informações sobre as especificações de auditoria do banco de dados de uma auditoria do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em uma instância de servidor.|  
 |[sys.database_audit_specification_details](../../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)|Contém informações sobre as especificações de auditoria de banco de dados em uma auditoria do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em uma instância de servidor para todos os bancos de dados.|  
@@ -214,7 +214,7 @@ ms.locfileid: "72903844"
  [Gatilhos DDL](../../../relational-databases/triggers/ddl-triggers.md)  
  Explica como os gatilhos DDL (linguagem de definição de dados) podem ser usados para controlar alterações nos bancos de dados.  
   
- [Microsoft TechNet: SQL Server TechCenter: Proteção e Segurança do SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=101152)  
+ [Microsoft TechNet: TechCenter do SQL Server: Segurança e proteção do SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=101152)  
  Fornece informações atualizadas sobre a segurança do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a>Consulte Também  

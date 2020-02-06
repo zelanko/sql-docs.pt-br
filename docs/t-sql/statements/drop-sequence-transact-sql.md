@@ -19,10 +19,10 @@ ms.assetid: c25772d3-61af-4aa7-b58b-a6f67a793e3d
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 740c8bff60f56b94304b789e901ec3b1d945fd17
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077721"
 ---
 # <a name="drop-sequence-transact-sql"></a>DROP SEQUENCE (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68077721"
 
   Remove um objeto de sequência do banco de dados atual.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -54,7 +54,7 @@ DROP SEQUENCE [ IF EXISTS ] { database_name.schema_name.sequence_name | schema_n
  *sequence_name*  
  É o nome da sequência a ser removida. O tipo é **sysname**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Depois de gerar um número, um objeto de sequência não tem nenhuma relação contínua com o número que gerou; portanto, o objeto de sequência pode ser removido, embora o número gerado ainda esteja em uso.  
   
  Um objeto de sequência pode ser removido enquanto é referenciado por um procedimento armazenado, ou pode ser disparado, pois não é associado ao esquema. Um objeto de sequência não poderá ser removido se for referenciado como um valor padrão em uma tabela. A mensagem de erro listará o objeto que referencia a sequência.  
@@ -74,7 +74,7 @@ GO
 ### <a name="permissions"></a>Permissões  
  Requer a permissão ALTER ou CONTROL no esquema.  
   
-### <a name="audit"></a>Auditar o  
+### <a name="audit"></a>Audit  
  Para auditar **DROP SEQUENCE**, monitore **SCHEMA_OBJECT_CHANGE_GROUP**.  
   
 ## <a name="examples"></a>Exemplos  

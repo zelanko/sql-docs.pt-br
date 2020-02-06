@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1c0dea1eff86506021907b184c80b3f28f74ab5a
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72905946"
 ---
 # <a name="table-properties---ssms"></a>Table Properties - SSMS
@@ -155,7 +155,7 @@ ms.locfileid: "72905946"
  A quantidade de espaço em megabytes que os dados ocupam na tabela.  
   
 ### <a name="partitioning"></a>Particionamento  
- Esta seção estará disponível somente se a tabela estiver particionada. Para obter mais informações, consulte [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
+ Esta seção estará disponível somente se a tabela estiver particionada. Para saber mais, confira [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
  **Coluna de partição**  
  O nome da coluna na qual a tabela é particionada.  

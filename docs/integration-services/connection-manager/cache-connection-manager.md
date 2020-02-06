@@ -15,10 +15,10 @@ ms.assetid: bdc92038-3720-4795-8a5c-79b963f2c952
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ac44546e0f74e8cdee7e004f33a515b94e16aeb2
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294454"
 ---
 # <a name="cache-connection-manager"></a>Gerenciador de conexões do cache
@@ -51,7 +51,7 @@ ms.locfileid: "71294454"
   
 -   Altere os metadados para as colunas armazenadas no cache.  
   
--   Atualize o nome do arquivo de cache no tempo de execução usando uma expressão para definir a propriedade ConnectionString. Para obter mais informações, consulte [Usar expressões de propriedade em pacotes](../../integration-services/expressions/use-property-expressions-in-packages.md).  
+-   Atualize o nome do arquivo de cache no runtime usando uma expressão para definir a propriedade ConnectionString. Para obter mais informações, consulte [Usar expressões de propriedade em pacotes](../../integration-services/expressions/use-property-expressions-in-packages.md).  
   
  Você pode definir propriedades pelo Designer do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ou programaticamente.  
   
@@ -131,6 +131,6 @@ ms.locfileid: "71294454"
  Especifica a página de código para o tipo de coluna. Se aplicável ao tipo de dados, você pode atualizar a **Página de Código**.  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Implementar uma Transformação Pesquisa em modo cache cheio usando o Gerenciador de Conexões do Cache](lookup-transformation-full-cache-mode-cache-connection-manager.md)  
+ [Implementar uma Transformação Pesquisa em modo de Cache cheio usando o Gerenciador de Conexões do Cache](lookup-transformation-full-cache-mode-cache-connection-manager.md)  
   
   

@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 95fe64603a08d4531d43e45c0b6d76c191fe7d34
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843708"
 ---
 # <a name="what-are-the-sql-database-functions"></a>Quais são as funções do banco de dados SQL?
@@ -34,7 +34,7 @@ Saiba mais sobre as categorias de funções internas que podem ser usadas com ba
   
 ## <a name="aggregate-functions"></a>Funções de agregação
 
-As funções de agregação executam um cálculo em um conjunto de valores e retornam um único valor. Elas são permitidas na lista de seleção ou na cláusula HAVING de uma instrução SELECT. Use uma agregação em combinação com a cláusula GROUP BY para calcular a agregação em categorias de linhas. Use a cláusula OVER para calcular a agregação em um intervalo específico de valores. A cláusula OVER não pode seguir as agregações GROUPING ou GROUPING_ID.
+Funções agregadas executam um cálculo em um conjunto de valores e retornam um único valor. Elas são permitidas na lista de seleção ou na cláusula HAVING de uma instrução SELECT. Use uma agregação em combinação com a cláusula GROUP BY para calcular a agregação em categorias de linhas. Use a cláusula OVER para calcular a agregação em um intervalo específico de valores. A cláusula OVER não pode seguir as agregações GROUPING ou GROUPING_ID.
 
 Todas as funções de agregação são determinísticas, o que significa que elas sempre retornam o mesmo valor quando são executadas nos mesmos valores de entrada. Para obter mais informações, consulte [Funções determinísticas e não determinísticas](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).|
 
@@ -52,7 +52,7 @@ Funcionam em um valor único e retornam um valor único. As funções escalares 
 
 ### <a name="categories-of-scalar-functions"></a>Categorias de funções escalares
   
-|Categoria da função|Descrição|  
+|Categoria da função|DESCRIÇÃO|  
 |-----------------------|-----------------|  
 |[Funções de configuração](configuration-functions-transact-sql.md)|Retornam informações sobre a configuração atual.|  
 |[Funções de conversão](conversion-functions-transact-sql.md)|Suporte para conversão de tipos de dados.|  

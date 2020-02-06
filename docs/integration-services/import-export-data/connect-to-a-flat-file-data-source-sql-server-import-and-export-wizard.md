@@ -10,10 +10,10 @@ ms.assetid: d7e7067b-f5a5-482f-b97e-9d82fe8e9f76
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bef4e8032ad605382b3312cac11840ed959a7571
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296354"
 ---
 # <a name="connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard"></a>Conectar-se a uma fonte de dados de arquivo simples (Assistente de Importação e Exportação do SQL Server)
@@ -24,7 +24,7 @@ ms.locfileid: "71296354"
 Este tópico mostra como se conectar a uma fonte de dados de **arquivo simples** (arquivo de texto) por meio da página **Escolher uma Fonte de Dados** ou **Escolher um Destino** do Assistente de Importação e Exportação do SQL Server. Para arquivos simples, essas duas páginas do assistente apresentam conjuntos diferentes de opções e, portanto, este tópico descreve a origem de arquivo simples e o destino de arquivo simples separadamente.
 
 ## <a name="an-alternative-for-simple-text-import"></a>Uma alternativa para a importação de texto simples
-Se precisar importar um arquivo de texto para o SQL Server e não precisar de todas as opções de configuração disponíveis no Assistente de Importação e Exportação, considere a possibilidade de usar o **Assistente Importar Arquivo Simples** no SSMS (SQL Server Management Studio). Para saber mais, veja os tópicos a seguir:
+Se precisar importar um arquivo de texto para o SQL Server e não precisar de todas as opções de configuração disponíveis no Assistente de Importação e Exportação, considere a possibilidade de usar o **Assistente Importar Arquivo Simples** no SSMS (SQL Server Management Studio). Para obter mais informações, confira os seguintes artigos:
 - [Novidades do SQL Server Management Studio 17.3 ](https://blogs.technet.microsoft.com/dataplatforminsider/2017/10/10/whats-new-in-sql-server-management-studio-17-3/)
 - [Apresentamos os novo Assistente Importar Arquivo Simples no SQL Server Management Studio 17.3](https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173)
 
@@ -32,10 +32,10 @@ Se precisar importar um arquivo de texto para o SQL Server e não precisar de to
  
  Há quatro páginas de opções para fontes de dados de arquivo simples. São muitas páginas! Mas você não precisa gastar muito tempo em cada página. Veja abaixo as tarefas a serem consideradas.
  
-Página|Recomendação  |Tipo  
+Página|Recomendação  |Type  
 ----|---------|---------
-**Geral**|Atualize as opções na seção **Formato**.|Recomendado    
-**Colunas**|Marque os delimitadores de coluna e linha (para um arquivo Delimitado) ou marque as colunas (para um arquivo de Largura Fixa).|Recomendado
+**Geral**|Atualize as opções na seção **Formato**.|Recomendadas    
+**Colunas**|Marque os delimitadores de coluna e linha (para um arquivo Delimitado) ou marque as colunas (para um arquivo de Largura Fixa).|Recomendadas
 **Avançado**|Opcionalmente, marque os tipos de dados e outras propriedades atribuídas por padrão às colunas.|Opcional
 **Visualização**|Opcionalmente, visualize uma amostra dos dados, usando as configurações especificadas.|Opcional
 
@@ -64,7 +64,7 @@ Página|Recomendação  |Tipo
  **Formato**  
  Selecione se o arquivo usa formatação delimitada, de largura fixa ou irregular à direita.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |Delimitado|As colunas são separadas por delimitadores. Especifique o delimitador na página **Colunas**.|  
 |Largura fixa|As colunas têm uma largura fixa.|  
@@ -79,7 +79,7 @@ Página|Recomendação  |Tipo
  **Delimitador de linha de cabeçalho**  
  Selecione na lista de delimitadores de linhas de cabeçalho ou digite o texto do delimitador.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |**{CR}{LF}**|A linha do cabeçalho é delimitada por uma combinação de retorno de carro e avanço de linha.|  
 |**{CR}**|A linha do cabeçalho é delimitada por um retorno de carro.|  
@@ -106,7 +106,7 @@ Página|Recomendação  |Tipo
  **Delimitador de linha**  
  Selecione na lista de delimitadores de linha disponíveis ou digite o texto delimitador.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |**{CR}{LF}**|As linhas são delimitadas por uma combinação de retorno de carro e avanço de linha.|  
 |**{CR}**|As linhas são delimitadas por um retorno de carro.|  
@@ -120,7 +120,7 @@ Página|Recomendação  |Tipo
  **Delimitador de coluna**  
  Selecione na lista de delimitadores de coluna disponíveis ou digite o texto delimitador.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |**{CR}{LF}**|As colunas são delimitadas por uma combinação de retorno de carro e alimentação de linha.|  
 |**{CR}**|As colunas são delimitadas por um retorno de carro.|  
@@ -178,7 +178,7 @@ Na página **Colunas**, verifique se a lista de colunas e os delimitadores que o
  **Delimitador de linha**  
  Selecione na lista de delimitadores de linha disponíveis ou digite o texto delimitador.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |**{CR}{LF}**|As linhas são delimitadas por uma combinação de retorno de carro e avanço de linha.|  
 |**{CR}**|As linhas são delimitadas por um retorno de carro.|  
@@ -204,22 +204,22 @@ Na captura de tela, observe que a coluna **id**, que contém números, inicialme
  **Configurar as propriedades de cada coluna**  
  Selecione uma coluna no painel esquerdo para exibir suas propriedades no painel direito. Consulte a tabela a seguir para obter uma descrição das propriedades de coluna. Algumas das propriedades listadas são configuráveis apenas em determinados formatos de arquivo simples e em colunas de determinados tipos de dados.  
   
-|Propriedade|Descrição|  
+|Propriedade|DESCRIÇÃO|  
 |--------------|-----------------|  
 |**Nome**|Forneça um nome de coluna descritivo. Se você não inserir um nome, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] criará um nome automaticamente no formato Coluna 0, Coluna 1 e assim por diante.|
 |**ColumnDelimiter**|Seleciona na lista de delimitadores de coluna disponíveis. Escolha delimitadores com pouca probabilidade de ocorrer no texto. Esse valor é ignorado para colunas de largura fixa.<br /><br /> **{CR}{LF}** . As colunas são delimitadas por uma combinação de retorno de carro e alimentação de linha.<br /><br /> **{CR}** . As colunas são delimitadas por um retorno de carro.<br /><br /> **{LF}** . As colunas são delimitadas por uma alimentação de linha.<br /><br /> **Porto e vírgula {;}** . As colunas são delimitadas por um ponto-e-vírgula.<br /><br /> **Dois pontos {:}** . As colunas são delimitadas por dois-pontos.<br /><br /> **Vírgula {,}** . As colunas são delimitadas por uma vírgula.<br /><br /> **Tabulação {t}** . As colunas são delimitadas por uma tabulação.<br /><br /> **Barra vertical {&#124;}** . As colunas são delimitadas por uma barra vertical.|
-|**ColumnType**|Denota se a coluna é delimitada, de largura fixa ou com imperfeição à direita. Esta propriedade é somente leitura. Arquivos irregulares à direita são arquivos em que toda coluna tem uma largura fixa, à exceção da última coluna. Ela é delimitada pelo delimitador de linha.|  
+|**ColumnType**|Denota se a coluna é delimitada, de largura fixa ou com imperfeição à direita. Essa propriedade é somente leitura. Arquivos irregulares à direita são arquivos em que toda coluna tem uma largura fixa, à exceção da última coluna. Ela é delimitada pelo delimitador de linha.|  
 |**InputColumnWidth**|Especifique um valor a ser armazenado como uma contagem de bytes; para arquivos Unicode, esse valor é uma contagem de caracteres. Este valor é ignorado nas colunas delimitadas.<br /><br /> **Observação** No modelo de objeto, o nome desta propriedade é ColumnWidth.|
 |**DataPrecision**|Especifica a precisão de dados numéricos. A precisão se refere ao número de dígitos.|
 |**DataScale**|Especifica a escala de dados numéricos. A escala se refere ao número de casas decimais.|
 |**DataType**|Seleciona na lista de tipos de dados disponíveis.<br/>Para obter mais informações, consulte [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).|
 |**OutputColumnWidth**|Especifique um valor a ser armazenado como contagem de bytes; para arquivos Unicode, esse valor corresponde a uma contagem de caracteres. Na tarefa Fluxo de Dados, esse valor é usado para definir a largura de coluna de saída para a fonte de Arquivo Simples. No modelo de objeto, o nome desta propriedade é MaximumWidth.|  
-|**TextQualified**|Indique se os dados de texto são delimitados por caracteres qualificadores de texto, como aspas.<br /><br /> True: os dados de texto no arquivo simples são qualificados. False: Os dados de texto no arquivo simples NÃO são qualificados.|  
+|**TextQualified**|Indique se os dados de texto são delimitados por caracteres qualificadores de texto, como aspas.<br /><br /> True: os dados de texto no arquivo simples são qualificados. False: os dados de texto no arquivo simples NÃO são qualificados.|  
   
-**Nova**  
+**Novo**  
  Adicione uma nova coluna, clicando em **Nova**. Por padrão, o botão **Nova** adiciona uma nova coluna ao final da lista. O botão também tem as opções a seguir, disponíveis na lista suspensa.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |**Adicionar Coluna**|Adiciona uma nova coluna fim da lista.|  
 |**Insert Before**|Insere uma nova coluna antes da coluna selecionada.|  
@@ -287,7 +287,7 @@ Para um destino de arquivo simples, há apenas uma única página de opções, c
  **Formato**  
  Selecione se o arquivo usa formatação delimitada, de largura fixa ou irregular à direita.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |Delimitado|As colunas são separadas por delimitadores. Especifique o delimitador na página **Colunas**.|  
 |Largura fixa|As colunas têm uma largura fixa.|  

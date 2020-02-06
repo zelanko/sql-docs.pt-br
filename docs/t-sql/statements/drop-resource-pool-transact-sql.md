@@ -18,10 +18,10 @@ ms.assetid: 18cd6dd9-7a6d-4a08-b9d5-649af23583d5
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: ab6a901d2c1eafc2469f0e1307e5d2db71186fb1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68043869"
 ---
 # <a name="drop-resource-pool-transact-sql"></a>DROP RESOURCE POOL (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "68043869"
 
   Descarta um pool de recursos do Administrador de recursos definido pelo usuário.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,7 +43,7 @@ DROP RESOURCE POOL pool_name
  *pool_name*  
  É o nome de um pool de recursos existente definido pelo usuário.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Não será possível descartar um pool de recursos se ele contiver grupos de carga de trabalho.  
   
  Você não pode descartar os pools internos ou padrão do Administrador de recursos.  

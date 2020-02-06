@@ -38,10 +38,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c7d18395321a6ea4c077b251b1a838646af9b2a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68027654"
 ---
 # <a name="search-condition-transact-sql"></a>Critério de pesquisa (Transact-SQL)
@@ -49,7 +49,7 @@ ms.locfileid: "68027654"
 
   É uma combinação de um ou mais predicados que usam os operadores lógicos AND, OR e NOT.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -115,7 +115,7 @@ ms.locfileid: "68027654"
  Especifica as condições para as linhas retornadas no conjunto de resultados para uma instrução SELECT, expressão de consulta ou subconsulta. Para uma instrução UPDATE, especifica as linhas a serem atualizadas. Para uma instrução DELETE, especifica as linhas a serem excluídas. Não há nenhum limite para o número de predicados que podem ser incluídos em um critério de pesquisa da instrução [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  \<graph_search_pattern>  
- Especifica o padrão de correspondência de grafo. Para obter mais informações sobre os argumentos dessa cláusula, consulte [MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)
+ Especifica o padrão de correspondência do grafo. Para obter mais informações sobre os argumentos dessa cláusula, consulte [MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)
  
  NOT  
  Nega a expressão booliana especificada pelo predicado. Para obter mais informações, consulte [NOT &#40;Transact-SQL&#41;](../../t-sql/language-elements/not-transact-sql.md).  
@@ -200,12 +200,12 @@ ms.locfileid: "68027654"
  EXISTS  
  Usada com uma subconsulta para testar para a existência de linhas retornadas pela subconsulta. Para obter mais informações, consulte [EXISTS &#40;Transact-SQL&#41;](../../t-sql/language-elements/exists-transact-sql.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  A ordem de precedência para operadores lógicos é NOT (mais alto), seguido por AND, seguido por OR. Podem ser usados parênteses para substituir essa precedência em uma condição de pesquisa. A ordem de avaliação de operadores lógicos pode variar, dependendo das escolhas feitas pelo otimizador de consultas. Para obter mais informações sobre como os operadores lógicos funcionam em valores lógicos, consulte [AND &#40;Transact-SQL&#41;](../../t-sql/language-elements/and-transact-sql.md), [OR &#40;Transact-SQL&#41;](../../t-sql/language-elements/or-transact-sql.md) e [NOT &#40;Transact-SQL&#41;](../../t-sql/language-elements/not-transact-sql.md).  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-where-with-like-and-escape-syntax"></a>A. Usando a sintaxe WHERE com LIKE e ESCAPE  
+### <a name="a-using-where-with-like-and-escape-syntax"></a>a. Usando a sintaxe WHERE com LIKE e ESCAPE  
  O exemplo a seguir pesquisa as linhas nas quais a coluna `LargePhotoFileName` tem os caracteres `green_` e usa a opção `ESCAPE` porque _ é um caractere curinga. Sem especificar a opção `ESCAPE`, a consulta pesquisará quaisquer valores de descrição que contêm a palavra `green` seguida de qualquer caractere único diferente do caractere _.  
   
 ```  

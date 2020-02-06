@@ -25,10 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fda203cc50956c5aad76d998a663cfb61710871e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68117477"
 ---
 # <a name="sysutcdatetime-transact-sql"></a>SYSUTCDATETIME (Transact-SQL)
@@ -41,7 +41,7 @@ ms.locfileid: "68117477"
   
  Para obter uma visão geral de todos os tipos de dados e funções de data e hora do [!INCLUDE[tsql](../../includes/tsql-md.md)], consulte [Tipos de dados e funções de data e hora](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -52,7 +52,7 @@ SYSUTCDATETIME ( )
 ## <a name="return-type"></a>Tipo de retorno  
  **datetime2**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  As instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] podem fazer referência a SYSUTCDATETIME em qualquer lugar em que possam fazer referência a uma expressão **datetime2**.  
   
  SYSUTCDATETIME é uma função não determinística. Exibições e expressões que fazem referência a essa função em uma coluna não podem ser indexadas.  
@@ -63,7 +63,7 @@ SYSUTCDATETIME ( )
 ## <a name="examples"></a>Exemplos  
  Os exemplos a seguir usam as seis funções de sistema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que retornam a data e a hora atuais para retornar a data, a hora ou ambas. Os valores são retornados em série; portanto, seus segundos fracionários podem ser diferentes.  
   
-### <a name="a-showing-the-formats-that-are-returned-by-the-date-and-time-functions"></a>A. Mostrando os formatos que são retornados pelas funções de data e hora  
+### <a name="a-showing-the-formats-that-are-returned-by-the-date-and-time-functions"></a>a. Mostrando os formatos que são retornados pelas funções de data e hora  
  O exemplo a seguir mostra os diferentes formatos que são retornados pelas funções de data e hora.  
   
 ```  

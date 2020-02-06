@@ -18,10 +18,10 @@ ms.assetid: afbc4f7f-8266-4ee6-9802-14a2dbe69ef6
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 274e6128ba57a92f6f2e1e84e160424571742787
-ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71314609"
 ---
 # <a name="is_objectsigned-transact-sql"></a>IS_OBJECTSIGNED (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "71314609"
 
   Indica se um objeto foi assinado por um determinado certificado ou chave assimétrica.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -62,12 +62,12 @@ IS_OBJECTSIGNED (
 ## <a name="returned-types"></a>Tipos retornados  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  IS_OBJECTSIGNED retorna os seguintes valores:  
   
-|Valor retornado|Descrição|  
+|Valor retornado|DESCRIÇÃO|  
 |------------------|-----------------|  
-|NULL|O objeto não está assinado ou não é válido.|  
+|NULO|O objeto não está assinado ou não é válido.|  
 |0|O objeto foi assinado, mas a assinatura não é válida.|  
 |1|O objeto foi assinado.|  
   
@@ -76,7 +76,7 @@ IS_OBJECTSIGNED (
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-displaying-extended-properties-on-a-database"></a>A. Exibindo propriedades estendidas em um banco de dados  
+### <a name="a-displaying-extended-properties-on-a-database"></a>a. Exibindo propriedades estendidas em um banco de dados  
  O exemplo a seguir testa se a tabela spt_fallback_db do banco de dados **mestre** foi assinada pelo certificado de autenticação do esquema.  
   
 ```  

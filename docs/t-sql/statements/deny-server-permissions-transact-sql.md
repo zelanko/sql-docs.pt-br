@@ -18,10 +18,10 @@ ms.assetid: 68d6b2a9-c36f-465a-9cd2-01d43a667e99
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: de59423c368bc966fab3958fbeb4b04888f4e2a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68114775"
 ---
 # <a name="deny-server-permissions-transact-sql"></a>Permissões de servidor DENY (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "68114775"
 
   Nega permissões em um servidor.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -88,7 +88,7 @@ O uso de AS nessa instrução não implica a capacidade de representar outro usu
  *server_role*  
  Especifica uma função de servidor.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  As permissões no escopo de servidor podem ser negadas somente quando o banco de dados atual é mestre.  
   
  As informações sobre permissões do servidor podem ser vistas na exibição do catálogo [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) e as informações sobre entidades de segurança do servidor podem ser vistas na exibição do catálogo [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md). As informações sobre a associação de funções de servidor podem ser vistas na exibição do catálogo [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md).  
@@ -132,7 +132,7 @@ O uso de AS nessa instrução não implica a capacidade de representar outro usu
 |VIEW ANY DEFINITION|CONTROL SERVER|  
 |VIEW SERVER STATE|ALTER SERVER STATE|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  As três permissões de servidor a seguir foram adicionadas ao [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
   
  Permissão **CONNECT ANY DATABASE**  
@@ -149,8 +149,8 @@ O uso de AS nessa instrução não implica a capacidade de representar outro usu
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-denying-connect-sql-permission-to-a-sql-server-login-and-principals-to-which-the-login-has-regranted-it"></a>A. Negando a permissão CONNECT SQL a um logon do SQL Server e a entidades de segurança aos quais o logon a concedeu novamente  
- O exemplo a seguir nega a permissão `CONNECT SQL` para o logon de `Annika` no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e para os principais aos quais ela concedeu a permissão.  
+### <a name="a-denying-connect-sql-permission-to-a-sql-server-login-and-principals-to-which-the-login-has-regranted-it"></a>a. Negando a permissão CONNECT SQL a um logon do SQL Server e a entidades de segurança aos quais o logon a concedeu novamente  
+ O exemplo a seguir nega a permissão `CONNECT SQL` para o logon de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no `Annika` e para os principais aos quais ela concedeu a permissão.  
   
 ```  
 USE master;  

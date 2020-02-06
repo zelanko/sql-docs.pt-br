@@ -14,10 +14,10 @@ ms.assetid: d5c4d1e1-7be4-4d25-bcd9-5b6ddb53b3b3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7ce0a8e44a89dbac275b8c2df320a20e7bc14f14
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297492"
 ---
 # <a name="-logical-not-ssis-expression"></a>! (Não lógico) (Expressão do SSIS)
@@ -45,13 +45,13 @@ ms.locfileid: "71297492"
 ## <a name="result-types"></a>Tipos de resultado  
  DT_BOOL  
   
-## <a name="remarks"></a>Remarks  
- A tabela a seguir mostra o resultado da operação publicação.  
+## <a name="remarks"></a>Comentários  
+ A tabela a seguir mostra o resultado da operação operação.  
   
 |Expressão booliana original|Depois de aplicar o operador|  
 |---------------------------------|------------------------------------|  
 |TRUE|FALSE|  
-|NULL|NULL|  
+|NULO|NULO|  
 |FALSE|TRUE|  
   
 ## <a name="expression-examples"></a>Exemplos de expressões  

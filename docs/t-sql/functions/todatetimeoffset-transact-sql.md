@@ -25,10 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7f6978a8344b7a1c9100a701d582193295f34c12
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68098970"
 ---
 # <a name="todatetimeoffset-transact-sql"></a>TODATETIMEOFFSET (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68098970"
 
   Retorna um valor de **datetimeoffset** que é convertido de uma expressão **datetime2**.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -62,7 +62,7 @@ TODATETIMEOFFSET ( expression , time_zone )
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-changing-the-time-zone-offset-of-the-current-date-and-time"></a>A. Alterando o deslocamento de fuso horário da data e da hora atuais  
+### <a name="a-changing-the-time-zone-offset-of-the-current-date-and-time"></a>a. Alterando o deslocamento de fuso horário da data e da hora atuais  
  O exemplo seguinte altera o deslocamento de fuso horário da data e da hora atuais para o fuso horário `-07:00`.  
   
 ```sql  
