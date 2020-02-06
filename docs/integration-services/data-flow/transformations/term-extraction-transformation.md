@@ -29,10 +29,10 @@ ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 23ae71eff12e7155580eff8238a459c47211c5de
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297752"
 ---
 # <a name="term-extraction-transformation"></a>Transformação Extração de Termos
@@ -212,7 +212,7 @@ ms.locfileid: "71297752"
  **Gerenciador de conexões OLE DB**  
  Selecione um gerenciador de conexões OLE DB existente ou crie uma nova conexão clicando em **Novo**.  
   
- **Nova**  
+ **Novo**  
  Crie uma nova conexão com um banco de dados usando a caixa de diálogo **Configurar Gerenciador de Conexões OLE DB** .  
   
  **Tabela ou exibição**  
@@ -241,7 +241,7 @@ ms.locfileid: "71297752"
  Especifique que a pontuação é a frequência do termo.  
   
  **TFIDF**  
- Especifique que a pontuação é o valor TFIDF do termo. A pontuação TFIDF é o produto da Frequência do Termo e da Frequência de Documento Inversa, definido como: TFIDF de um termo T = (frequência de T) * log( (nº de linhas na Entrada) / (nº de linhas com T) ).  
+ Especifique que a pontuação é o valor TFIDF do termo. A pontuação TFIDF é o produto da Frequência do Termo e da Frequência de Documento Inversa, definido como: TFIDF de um termo T = (frequência de T) * log ((nºs de linhas na Entrada) / (nº de linhas com T))  
   
  **Limite de frequência**  
  Especifique o número de vezes que uma palavra ou frase deve aparecer antes de ser extraída. O valor padrão é 2.  

@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 42fc593c953df13800a0ba49177f5fa71347acd9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68089896"
 ---
 # <a name="rtrim-transact-sql"></a>RTRIM (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68089896"
 
   Retorna uma cadeia de caracteres depois de truncar todos os espaços à direita.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -52,7 +52,7 @@ RTRIM ( character_expression )
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-simple-example"></a>A. Exemplo simples  
+### <a name="a-simple-example"></a>a. Exemplo simples  
  O exemplo a seguir usa uma cadeia de caracteres com espaços no final da frase e retorna o texto sem os espaços no final da frase.  
   
 ```  

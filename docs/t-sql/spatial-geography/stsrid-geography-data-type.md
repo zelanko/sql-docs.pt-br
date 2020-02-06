@@ -18,10 +18,10 @@ ms.assetid: 6b04f5a7-2e69-4d34-901e-b61ba6ca9c14
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 4561b52049da9c051b7e8eda3835545f600c0e70
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68120784"
 ---
 # <a name="stsrid-geography-data-type"></a>STSrid (tipo de dados geography)
@@ -39,9 +39,9 @@ ms.locfileid: "68120784"
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **int**  
   
- Tipo CLR: **SqlInt32**  
+ Tipo do CLR: **SqlInt32**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Essa propriedade pode ser modificada.  
   
 ## <a name="examples"></a>Exemplos  

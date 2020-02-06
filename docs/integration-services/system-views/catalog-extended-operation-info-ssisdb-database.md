@@ -11,10 +11,10 @@ ms.assetid: db299b45-557d-4c62-8e14-355cdb051f63
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ca82bdc8a04ffee4426ffb934a9e9a4ddaf4654f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296605"
 ---
 # <a name="catalogextended_operation_info-ssisdb-database"></a>catalog.extended_operation_info (Banco de Dados SSISDB)
@@ -26,7 +26,7 @@ ms.locfileid: "71296605"
 
   Exibe informações estendidas de todas as operações no catálogo do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |info_id|**bigint**|O identificador exclusivo (ID) da informação estendida.|  
 |operation_id|**bigint**|A ID exclusiva da operação que corresponde à informação estendida.|  
@@ -37,7 +37,7 @@ ms.locfileid: "71296605"
 |start_time|**datetimeoffset(7)**|A data e a hora de início da operação.|  
 |end_time|**datetimeoffset(7)**|A data e a hora de término da operação.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Uma única operação pode ter várias linhas de informações estendidas.  
   
 ## <a name="permissions"></a>Permissões  

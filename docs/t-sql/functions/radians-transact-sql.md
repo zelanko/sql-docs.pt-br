@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 05093c47ea7e05845f237e0e7c9c3df2c7d59fd6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914239"
 ---
 # <a name="radians-transact-sql"></a>RADIANS (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "67914239"
 
   Retorna radianos quando uma expressão numérica, em graus, é inserida.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -47,7 +47,7 @@ RADIANS ( numeric_expression )
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-radians-to-show-00"></a>A. Usando RADIANS para mostrar 0,0  
+### <a name="a-using-radians-to-show-00"></a>a. Usando RADIANS para mostrar 0,0  
  O exemplo a seguir retorna um resultado de `0.0` porque a expressão numérica a ser convertida em radianos é muito pequena para a função `RADIANS`.  
   
 ```  

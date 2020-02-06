@@ -16,10 +16,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 13bb5944c5907f3bebc9f01eb969b4b8979f8c97
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73595751"
 ---
 # <a name="provision-always-encrypted-keys-using-sql-server-management-studio"></a>Provisionar chaves Always Encrypted usando o SQL Server Management Studio
@@ -103,7 +103,7 @@ Para obter mais informações, confira [Criar e armazenar chaves mestras de colu
 
 O [Assistente do Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-wizard.md) é uma ferramenta usada para criptografar, descriptografar e criptografar novamente colunas de banco de dados selecionadas. Embora ele possa usar chaves já configuradas, também permite que você gere uma nova chave mestra de coluna e uma nova criptografia de coluna. 
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Próximas etapas
 - [Configurar a criptografia de coluna usando o Assistente do Always Encrypted](always-encrypted-wizard.md)
 - [Configurar a criptografia de coluna usando o Always Encrypted com um pacote de DAC](configure-always-encrypted-using-dacpac.md)
 - [Girar chaves do Always Encrypted usando o SQL Server Management Studio](rotate-always-encrypted-keys-using-ssms.md)

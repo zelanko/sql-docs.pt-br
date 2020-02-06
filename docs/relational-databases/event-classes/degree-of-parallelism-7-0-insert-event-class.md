@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d81c5865b062e0817c41cef504994f1d6a5c437c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68009522"
 ---
 # <a name="degree-of-parallelism-70-insert-event-class"></a>Classe de evento Degree of Parallelism (7.0 Insert)
@@ -27,7 +27,7 @@ ms.locfileid: "68009522"
   
 ## <a name="degree-of-parallelism-70-insert-event-class-data-columns"></a>Colunas de dados de classe de evento Degree of Parallelism (7.0 Insert)  
   
-|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|DESCRIÇÃO|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|Nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |**BinaryData**|**imagem**|Número de CPUs usadas para completar o processo com base nos seguintes valores:<br /><br /> 0x00000000, indica um plano em série sendo executado em série.<br /><br /> 0x01000000, indica um plano paralelo sendo executado em série.<br /><br /> >= 0x02000000 indica um plano paralelo sendo executado em paralelo.|2|Não|  

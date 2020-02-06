@@ -14,10 +14,10 @@ ms.assetid: 449b327f-47c7-4709-8bc6-4ee9a35cc330
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 86bf6dc67143ea539ea0329fc1783629b26aa802
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297660"
 ---
 # <a name="datediff-ssis-expression"></a>DATEDIFF (Expressão SSIS)
@@ -47,18 +47,18 @@ DATEDIFF(datepart, startdate, endate)
 ## <a name="result-types"></a>Tipos de resultado  
  DT_I4  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  A tabela a seguir lista as partes de data e as abreviações reconhecidas pelo avaliador de expressão.  
   
 |datepart|Abreviações|  
 |--------------|-------------------|  
-|Year|aa, aaaa|  
+|Ano|aa, aaaa|  
 |Quarter|qq, q|  
 |Month|mm, m|  
 |Dia do ano|dy, y|  
-|Day|dd, d|  
-|Week|wk, ww|  
-|Dia de semana|dw, w|  
+|Dia|dd, d|  
+|Semana|wk, ww|  
+|Weekday|dw, w|  
 |Hora|Hh|  
 |Minuto|mi, n|  
 |Segundo|ss, s|  

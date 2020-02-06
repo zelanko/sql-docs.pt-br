@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2307a80d3a40599aed4762077b188baac0533967
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68070272"
 ---
 # <a name="alter-server-role-transact-sql"></a>ALTER SERVER ROLE (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68070272"
 
 Altera a associação de uma função de servidor ou altera nome de uma função de servidor definida pelo usuário. As funções de servidor fixas não podem ser renomeadas.  
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -67,7 +67,7 @@ Remove a entidade de segurança de servidor especificada da função de servidor
 WITH NAME **=** _new_server_role_name_  
 Especifica o novo nome da função de servidor definida pelo usuário. Esse nome ainda não pode existir no servidor.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 A alteração do nome de uma função de servidor definida pelo usuário não altera o número da ID, o proprietário ou as permissões da função.  
   
 Para alterar a associação de função, `ALTER SERVER ROLE` substitui sp_addsrvrolemember e sp_dropsrvrolemember. Esses procedimentos armazenados foram preteridos.  
@@ -95,7 +95,7 @@ Para adicionar um membro a uma função de servidor definida pelo usuário, voc�
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-changing-the-name-of-a-server-role"></a>A. Alterando o nome de uma função de servidor  
+### <a name="a-changing-the-name-of-a-server-role"></a>a. Alterando o nome de uma função de servidor  
 O exemplo seguinte cria uma função de servidor chamada `Product` e, em seguida, altera o nome da função de servidor para `Production`.  
   
 ```  

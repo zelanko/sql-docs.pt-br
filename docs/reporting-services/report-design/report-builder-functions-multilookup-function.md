@@ -9,10 +9,10 @@ ms.assetid: 1fec079e-33b3-4e4d-92b3-6b4d06a49a77
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1631f5f07c26e8b57cf8bc977ef6d6ccf4b3ae48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65577156"
 ---
 # <a name="report-builder-functions---multilookup-function"></a>Funções do Construtor de Relatórios – Função Multilookup
@@ -28,7 +28,7 @@ ms.locfileid: "65577156"
 Multilookup(source_expression, destination_expression, result_expression, dataset)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *source_expression*  
  (**VariantArray**) Uma expressão avaliada no escopo atual e que especifica o conjunto de nomes ou chaves a serem procurados. Por exemplo, para um parâmetro de vários valores, `=Parameters!IDs.value`.  
   
@@ -44,7 +44,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
 ## <a name="return"></a>Retorno  
  Retorna **VariantArray**ou **Nothing** se não houver correspondência.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Use **Multilookup** para recuperar um conjunto de valores de um conjunto de dados para os pares nome/valor em que cada par tem uma relação de um para um. **MultiLookup** é o equivalente a chamar **Lookup** para um conjunto de nomes ou chaves. Por exemplo, para um parâmetro de vários valores que é baseado em identificadores de chave primária, você pode usar **Multilookup** em uma expressão em uma caixa de texto de uma tabela para recuperar valores associados de um conjunto de dados que não está associado ao parâmetro ou à tabela.  
   
  **Multilookup** faz o seguinte:  
@@ -57,7 +57,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
  Para recuperar um único valor de um conjunto de dados com pares nome-valor de um nome especificado em que existe uma relação um-para-um, use [Função Lookup &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookup-function.md). Para recuperar vários valores de um conjunto de dados com pares nome-valor de um nome em que existe uma relação um para muitos, use [Função LookupSet &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookupset-function.md).  
   
- As seguintes restrições são aplicadas:  
+ As restrições a seguir se aplicam:  
   
 -   **Multilookup** é avaliado depois que todas as expressões de filtro são aplicadas  
   

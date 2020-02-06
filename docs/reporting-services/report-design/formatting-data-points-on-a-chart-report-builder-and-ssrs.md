@@ -12,10 +12,10 @@ ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0481f39c0c047f401914e2c710a1f52c393bc335
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580333"
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>Formatando pontos de dados em um gráfico (Construtor de Relatórios e SSRS)
@@ -56,19 +56,19 @@ Em um relatório paginado do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversi
 ## <a name="adding-keywords-for-data-point-labels-tooltips-and-legend-text"></a>Adicionando palavras-chave a rótulos de ponto de dados, dicas de ferramenta e texto de legenda  
  É possível usar palavras-chave específicas do gráfico, diferenciando maiúsculas de minúsculas, para representar um item existente no gráfico. Essas palavras-chave só são aplicáveis a dicas de ferramenta, texto de legenda personalizado e propriedades de rótulo de ponto de dados. Em muitos casos, uma palavra-chave de gráfico tem uma expressão simples equivalente, mas a palavra-chave é mais rápida e mais fácil de digitar. A seguir, uma lista de palavras-chave de gráfico.  
   
-|Palavra-chave de gráfico|Descrição|Aplicável ao tipo de gráfico|Exemplo de uma expressão simples equivalente|  
+|Palavra-chave de gráfico|DESCRIÇÃO|Aplicável ao tipo de gráfico|Exemplo de uma expressão simples equivalente|  
 |-------------------|-----------------|------------------------------|------------------------------------------------|  
 |#VALY|Valor Y do ponto de dados.|Todos|`=Fields!MyDataField.Value`|  
-|#VALY2|Valor Y número 2 do ponto de dados.|Intervalo, bolha|None|  
-|#VALY3|Valor Y número 3 do ponto de dados.|Ações, velas|None|  
-|#VALY4|Valor Y número 4 do ponto de dados.|Ações, velas|None|  
-|#SERIESNAME|Nome da série.|Todos|None|  
-|#LABEL|Rótulo do ponto de dados.|Todos|None|  
+|#VALY2|Valor Y número 2 do ponto de dados.|Intervalo, bolha|Nenhum|  
+|#VALY3|Valor Y número 3 do ponto de dados.|Ações, velas|Nenhum|  
+|#VALY4|Valor Y número 4 do ponto de dados.|Ações, velas|Nenhum|  
+|#SERIESNAME|Nome da série.|Todos|Nenhum|  
+|#LABEL|Rótulo do ponto de dados.|Todos|Nenhum|  
 |#AXISLABEL|Rótulo do ponto de dados de eixo.|Forma|`=Fields!MyDataField.Value`|  
-|#INDEX|Índice do ponto de dados.|Todos|None|  
+|#INDEX|Índice do ponto de dados.|Todos|Nenhum|  
 |#PERCENT|Porcentagem do valor Y do ponto de dados.|Todos|`=FormatPercent(Fields!MyDataField.Value/Sum(Fields!MyDataField.Value, "MyDataSet"),2)`|  
 |#TOTAL|Total de todos os valores Y na série.|Todos|`=Sum(Fields!MyDataField.Value)`|  
-|#LEGENDTEXT|O texto correspondente ao texto do item de legenda.|Todos|None|  
+|#LEGENDTEXT|O texto correspondente ao texto do item de legenda.|Todos|Nenhum|  
 |#AVG|Média de todos os valores Y na série.|Todos|`=Avg(Fields!MyDataField.Value)`|  
 |#MIN|Mínimo de todos os valores Y na série.|Todos|`=Min(Fields!MyDataField.Value)`|  
 |#MAX|Máximo de todos os valores Y na série.|Todos|`=Max(Fields!MyDataField.Value)`|  

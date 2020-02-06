@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 0b1d78acdaee97c38536969481c79fc3a94d6c9e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67990931"
 ---
 # <a name="install-sql-server-with-smb-fileshare-storage"></a>Instalar o SQL Server com o armazenamento de compartilhamento de arquivo SMB
@@ -85,12 +85,12 @@ A partir do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], os bancos de dado
   
 |Sistema operacional|versão do protocolo SMB2|Benefícios do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |----------------------|---------------------------|-------------------------------------------|  
-|[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP 2|2.0|Desempenho aprimorado em relação a versões de SMB anteriores.<br /><br /> Durabilidade, que ajuda a recuperar de pequenos problemas de rede temporários.|  
+|[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP 2|2,0|Desempenho aprimorado em relação a versões de SMB anteriores.<br /><br /> Durabilidade, que ajuda a recuperar de pequenos problemas de rede temporários.|  
 |[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1, incluindo o Server Core|2.1|Suporte para MTU grande, que beneficia transferências de dados grandes, como backup e restauração de SQL. Este recurso deve ser habilitado pelo usuário. Para obter mais detalhes sobre como habilitar essa funcionalidade, confira [Novidades do SMB](https://go.microsoft.com/fwlink/?LinkID=237319) (https://go.microsoft.com/fwlink/?LinkID=237319) ).<br /><br /> Melhorias de desempenho significativas, especificamente para cargas de trabalho de estilo OLTP do SQL. Estas melhorias de desempenho exigem a aplicação de um hotfix. Para obter mais informações sobre o hotfix, clique [aqui](https://go.microsoft.com/fwlink/?LinkId=237320) (https://go.microsoft.com/fwlink/?LinkId=237320) ).|  
 |[!INCLUDE[win8srv](../../includes/win8srv-md.md)]incluindo o Server Core|3.0|O suporte para failover transparente de compartilhamentos de arquivos fornece zero tempo de inatividade sem a intervenção de administrador exigida para DBA do SQL ou administrador de servidor de arquivos em configurações do cluster de servidor de arquivos.<br /><br /> Suporte para ES usando diversas interfaces de rede simultaneamente, assim como tolerância para falhas de interface de rede.<br /><br /> Suporte para interfaces de rede com recursos de RDMA.<br /><br /> Para obter mais informações sobre esses recursos e o protocolo SMB, consulte [Visão geral do protocolo SMB](https://go.microsoft.com/fwlink/?LinkId=253174) (https://go.microsoft.com/fwlink/?LinkId=253174) ).<br /><br /> Suporte SoFS (Servidor de arquivo de expansão) com disponibilidade contínua.|  
 |[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2, incluindo o Server Core|3.2|O suporte para failover transparente de compartilhamentos de arquivos fornece zero tempo de inatividade sem a intervenção de administrador exigida para DBA do SQL ou administrador de servidor de arquivos em configurações do cluster de servidor de arquivos.<br /><br /> Suporte para IO usando diversas interfaces de rede simultaneamente, assim como tolerância para falhas de interface de rede, usando SMB Multichannel.<br /><br /> Suporte para interfaces de rede com recursos de RDMA usando SMB Direct.<br /><br /> Para obter mais informações sobre esses recursos e o protocolo SMB, consulte [Visão geral do protocolo SMB](https://go.microsoft.com/fwlink/?LinkId=253174) (https://go.microsoft.com/fwlink/?LinkId=253174) ).<br /><br /> Suporte SoFS (Servidor de arquivo de expansão) com disponibilidade contínua.<br /><br /> Otimizado para leitura/gravação aleatória pequena de E/S comum para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLTP.<br /><br /> O MTU (Unidade de transmissão máxima) é ativado por padrão, o que melhora significativamente o desempenho em grandes transferências sequenciais como data warehouse do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o backup de banco de dados ou restauração.|  
   
-## <a name="security-considerations"></a>Considerações sobre segurança  
+## <a name="security-considerations"></a>Considerações de segurança  
   
 -   A conta de serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e a conta de serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent devem ter as permissões de compartilhamento FULL CONTROL e permissões NTFS nas pastas de compartilhamento SMB. A conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem ser uma conta de domínio ou uma conta de sistema se for usado um servidor de arquivos SMB. Para obter mais informações sobre permissões de compartilhamento e NTFS, consulte [Permissões de compartilhamento e NTFS em um servidor de arquivos](https://go.microsoft.com/fwlink/?LinkId=245535) (https://go.microsoft.com/fwlink/?LinkId=245535) ).  
   
