@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 68f9d07a2129424a59890f50b884b4fe5f4f70e3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68130239"
 ---
 # <a name="min-transact-sql"></a>MIN (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68130239"
 
   Retorna o valor mínimo na expressão. Pode ser seguido pela [cláusula OVER](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -49,7 +49,7 @@ MIN ( [ ALL ] expression ) OVER ( [ <partition_by_clause> ] [ <order_by_clause> 
  **ALL**  
  Aplica a função de agregação a todos os valores. ALL é o padrão.  
   
- DISTINCT  
+ DISTINTO  
  Especifica que cada valor exclusivo é considerado. DISTINCT não é significativo com MIN e está disponível somente para compatibilidade com ISO.  
   
  *expressão*  
@@ -63,7 +63,7 @@ MIN ( [ ALL ] expression ) OVER ( [ <partition_by_clause> ] [ <order_by_clause> 
 ## <a name="return-types"></a>Tipos de retorno  
  Retorna um valor igual a *expression*.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  MIN ignora quaisquer valores nulos.  
   
  Com colunas de dados de caractere, MIN localiza o valor mais baixo na sequência de classificação.  
@@ -72,7 +72,7 @@ MIN ( [ ALL ] expression ) OVER ( [ <partition_by_clause> ] [ <order_by_clause> 
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-simple-example"></a>A. Exemplo simples  
+### <a name="a-simple-example"></a>a. Exemplo simples  
  O exemplo a seguir retorna a taxa de imposto mais baixa (mínima). O exemplo usa o banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]  
   
 ```  

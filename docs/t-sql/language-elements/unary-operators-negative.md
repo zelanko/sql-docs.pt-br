@@ -20,10 +20,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 992d0b8d0a2b3781af732aaa83983882a9938112
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072141"
 ---
 # <a name="unary-operators---negative"></a>Operadores unários – Negative
@@ -39,7 +39,7 @@ ms.locfileid: "68072141"
   
  Os operadores + (Positivo) e – (Negativo) podem ser usados em qualquer expressão de qualquer um dos tipos de dados da categoria de tipo de dados numérico. O operador ~ (NOT bit a bit) pode ser usado somente nas expressões de qualquer um dos tipos de dados da categoria de tipo de dados inteiros. 
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -56,7 +56,7 @@ ms.locfileid: "68072141"
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-setting-a-variable-to-a-negative-value"></a>A. Definindo uma variável como um valor negativo  
+### <a name="a-setting-a-variable-to-a-negative-value"></a>a. Definindo uma variável como um valor negativo  
  O exemplo a seguir define uma variável como um valor negativo.  
   
 ```  
@@ -114,7 +114,7 @@ USE ssawPDW;
 SELECT TOP (1) - 17 FROM DimEmployee;  
 ```  
   
- Retorna  
+ Retornos  
   
 ```  
 -17  
@@ -129,7 +129,7 @@ USE ssawPDW;
 SELECT TOP (1) - ( - 17) FROM DimEmployee;  
 ```  
   
- Retorna  
+ Retornos  
   
 ```  
 17  

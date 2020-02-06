@@ -21,12 +21,12 @@ ms.assetid: 919158f2-38d0-4f68-82ab-e1633bd0d308
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c7727d197e8a0ecb1009ea33c04311f3b63e5ff4
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: ca8f97c98ec94ca021f025ffc5b67152e8253ad6
+ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982559"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76971456"
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -35,7 +35,7 @@ Atualiza estatísticas de otimização de consulta de uma tabela ou exibição i
   
 A atualização de estatísticas assegura que as consultas sejam compiladas com estatísticas atualizadas. Porém, a atualização de estatísticas faz com que as consultas sejam recompiladas. É recomendável não atualizar estatísticas com muita frequência porque existe uma compensação de desempenho entre o aprimoramento dos planos de consulta e o tempo necessário para recompilar consultas. As compensações específicas dependem do seu aplicativo. `UPDATE STATISTICS` pode usar tempdb para classificar o exemplo de linhas para compilação de estatísticas.  
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -111,7 +111,7 @@ Começando pelo [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], a amostragem 
   
  Para a maioria das cargas de trabalho, uma verificação completa não é necessária e a amostragem padrão é adequada.  
 No entanto, algumas cargas de trabalho que são sensíveis a distribuições de dados com ampla variação podem exigir um tamanho maior de amostra ou até mesmo uma verificação completa.  
-Para obter mais informações, confira o [blog CSS SQL Escalation Services](https://blogs.msdn.com/b/psssql/archive/2010/07/09/sampling-can-produce-less-accurate-statistics-if-the-data-is-not-evenly-distributed.aspx) (Serviços de escalonamento do CSS SQL).  
+Para obter mais informações, confira o [blog CSS SQL Escalation Services](https://docs.microsoft.com/archive/blogs/psssql/sampling-can-produce-less-accurate-statistics-if-the-data-is-not-evenly-distributed) (Serviços de escalonamento do CSS SQL).  
   
  RESAMPLE  
  Atualiza cada estatística usando sua taxa de amostragem mais recente.  
@@ -166,7 +166,7 @@ Quando for **ON**, as estatísticas reterão o percentual de amostragem definido
 **Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior
 
 MAXDOP = *max_degree_of_parallelism*  
-**Aplica-se ao**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando pelo [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3).  
+**Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 até [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3).  
   
  Substitui a opção de configuração **max degree of parallelism** enquanto durar a operação estatística. Para obter mais informações, veja [Configurar a opção max degree of parallelism de configuração de servidor](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Use MAXDOP para limitar o número de processadores usados em uma execução de plano paralelo. O máximo é de 64 processadores.  
   
@@ -183,7 +183,7 @@ MAXDOP = *max_degree_of_parallelism*
   
  \<update_stats_stream_option> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
   
 ### <a name="when-to-use-update-statistics"></a>Quando usar UPDATE STATISTICS  
  Para obter mais informações sobre quando usar `UPDATE STATISTICS`, confira [Estatísticas](../../relational-databases/statistics/statistics.md).  
@@ -234,7 +234,7 @@ update statistics t1 (a) with stats_stream = 0x01;
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-update-all-statistics-on-a-table"></a>A. Atualizar todas as estatísticas de uma tabela  
+### <a name="a-update-all-statistics-on-a-table"></a>a. Atualizar todas as estatísticas de uma tabela  
  O exemplo a seguir atualiza as estatísticas de todos os índices na tabela `SalesOrderDetail`.  
   
 ```sql  

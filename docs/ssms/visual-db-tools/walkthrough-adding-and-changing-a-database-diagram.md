@@ -1,10 +1,9 @@
 ---
-title: 'Passo a passo: adicionando e alterando um diagrama de banco de dados | Microsoft Docs'
-ms.custom: ''
+title: Adicionando e alterando um diagrama de banco de dados
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +13,14 @@ helpviewer_keywords:
 ms.assetid: 228caa0d-8f24-46ab-86d1-b6d8631322bc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 30177e5dc9061fb66bffda6203f0740bcac3b5af
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 8333c2120868f8d929d937faa155b7d595abff20
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68258918"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246252"
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>Passo a passo: Adicionando e alterando um diagrama de banco de dados
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +46,7 @@ Para concluir este passo a passo, você precisará de:
   
 3.  Clique com o botão direito do mouse no nó Diagramas de Banco de Dados e escolha **Novo Diagrama de Banco de Dados**.  
   
-    Se o banco de dados não tiver os objetos necessários para criar diagramas, a seguinte mensagem será exibida: **Este banco de dados não tem um ou mais dos objetos de suporte necessários para usar a diagramação de banco de dados. Deseja criá-los?** Escolha **Sim**.  
+    Se o banco de dados não tiver os objetos necessários para criar diagramas, a mensagem a seguir será exibida: **Este banco de dados não tem um ou mais dos objetos de suporte necessários para usar a diagramação de banco de dados. Deseja criá-los?** Escolha **Sim**.  
   
     A caixa de diálogo **Adicionar Tabela** será exibida.  
   
@@ -59,7 +60,7 @@ Para concluir este passo a passo, você precisará de:
   
 1.  Clique com o botão direito do mouse na tabela `Address` . No menu de atalho, aponte para **Exibição de Tabela**e clique em **Padrão**.  
   
-    A grade da tabela mostra três colunas: **Nome da Coluna**, **Tipo de Dados** e **Permitir Nulos**.  
+    A grade da tabela mostra três colunas: **Nome da Coluna**, **Tipo de Dados**e **Permitir Nulos**.  
   
 2.  Clique com o botão direito do mouse na tabela `Address` , clique em **Exibir Tabela** e selecione **Chaves**.  
   
@@ -73,7 +74,7 @@ Para concluir este passo a passo, você precisará de:
   
 2.  Na caixa de diálogo **Escolher Nome** , clique em **OK** para aceitar o nome padrão **Tabela1**.  
   
-    Uma nova grade de tabela aparece com três colunas: **Nome da Coluna**, **Tipo de Dados** e **Permitir Nulos**.  
+    Uma nova grade de tabela aparece com três colunas: **Nome da Coluna**, **Tipo de Dados**e **Permitir Nulos**.  
   
 3.  Adicione as seguintes informações na **Tabela1**:  
   
@@ -114,13 +115,13 @@ Você pode adicionar restrições de verificação e fazer relações entre tabe
   
     `Table1` agora tem uma restrição que todos os valores inseridos em `T1col3` devem ser maior que 5.  
   
-5.  Clique em **Fechar**.  
+5.  Clique em **fechar**  
   
 #### <a name="to-create-relationships-between-tables"></a>Para criar relações entre tabelas  
   
 1.  Crie uma nova tabela no Designer de Diagrama denominada `Table2` com as seguintes colunas:  
   
-    |**Nome da coluna**|**Tipo de Dados**|**Permitir Nulos**|  
+    |**Nome da Coluna**|**Tipo de Dados**|**Permitir Nulos**|  
     |-------------------|-----------------|-------------------|  
     |**T2col1**|**int**|não verificado|  
     |**T2col2**|**varchar(50)**|verificado|  
@@ -131,7 +132,7 @@ Você pode adicionar restrições de verificação e fazer relações entre tabe
   
 2.  Arraste `T2col1` para `T1col1`.  
   
-    Duas caixas de diálogo são exibidas: **Relação de Chave Estrangeira** na tela de fundo e **Tabelas e Colunas** em primeiro plano.  
+    Duas caixas de diálogo são exibidas: **Relação de Chaves Estrangeiras** na tela de fundo e **Tabelas e Colunas** em primeiro plano.  
   
 3.  Clique em **OK** para salvar a nova relação.  
   
@@ -178,7 +179,7 @@ Você pode criar índices na maioria dos tipos de dados, incluindo XML.
   
     Um índice XML com valores padrão será adicionado à lista **Índice XML Selecionado** .  
   
-4.  Clique em **Fechar**.  
+4.  Clique em **fechar**  
   
     > [!NOTE]  
     > Os índices XML são criados por coluna. O primeiro índice XML é primário; qualquer índice adicional é secundário.  
@@ -196,7 +197,7 @@ Todas as alterações feitas em um diagrama não são postadas ao banco de dados
   
 3.  Na ocorrência de qualquer erro, a caixa de diálogo **Notificações Pós-salvamento** é exibida com os erros e respectivas causas. Corrija os erros e salve o diagrama novamente.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Próximas etapas  
 Esse é um diagrama básico somente com duas tabelas existentes e duas tabelas novas, mas ilustra o potencial de diagramação de um banco de dados existente ou de criação de um novo esquema visualmente. Sugestões para exploração adicional incluem:  
   
 -   Criar novos diagramas contendo grupos de tabelas relacionadas  

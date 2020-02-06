@@ -9,20 +9,20 @@ ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 37c9fedd0a33ff65767b0635208ef936aa7c7715
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 8a2c87a374be247e4b31f2e34736de95d9edc319
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531810"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74822359"
 ---
 # <a name="azdata-bdc-config"></a>azdata bdc config
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-O artigo a seguir fornece referência para os comandos `sql` na ferramenta `azdata`. Para obter mais informações sobre outros comandos `azdata`, confira [referência de azdata](reference-azdata.md)
+O artigo a seguir fornece referência para os comandos `bdc config` na ferramenta `azdata`. Para obter mais informações sobre outros comandos `azdata`, confira [referência de azdata](reference-azdata.md)
 
-## <a name="commands"></a>Commands
+## <a name="commands"></a>Comandos
 |     |     |
 | --- | --- |
 [azdata bdc config init](#azdata-bdc-config-init) | Inicializa um perfil de configuração do cluster de Big Data que pode ser usado com cluster create.
@@ -156,7 +156,7 @@ Exemplo 1 – Adicionar armazenamento de plano de controle.
 ```bash
 azdata bdc config add --config-file custom/control.json --json-values 'spec.storage={"accessMode":"ReadWriteOnce","className":"managed-premium","size":"10Gi"}'
 ```
-### <a name="required-parameters"></a>Parâmetros necessários
+### <a name="required-parameters"></a>Parâmetros obrigatórios
 #### `--config-file -c`
 Caminho do arquivo de configuração do cluster de Big Data da configuração que você gostaria de definir, ou seja, custom/bdc.json
 #### `--json-values -j`
@@ -183,7 +183,7 @@ Exemplo 1 – Remover armazenamento de plano de controle.
 ```bash
 azdata bdc config remove --config-file custom/control.json --json-path '.spec.storage'
 ```
-### <a name="required-parameters"></a>Parâmetros necessários
+### <a name="required-parameters"></a>Parâmetros obrigatórios
 #### `--config-file -c`
 Caminho do arquivo de configuração do cluster de Big Data da configuração que você gostaria de definir, ou seja, custom/bdc.json
 #### `--json-path -j`
@@ -218,7 +218,7 @@ Ex 3 – Substituir storage-0 resource spec, incluindo réplicas.
 ```bash
 azdata bdc config replace --config-file custom/bdc.json --json-values '$.spec.resources.storage-0.spec={"replicas": 2,"storage": {"className": "managed-premium","size": "10Gi","accessMode": "ReadWriteOnce"},"type": "Storage"}'
 ```
-### <a name="required-parameters"></a>Parâmetros necessários
+### <a name="required-parameters"></a>Parâmetros obrigatórios
 #### `--config-file -c`
 Caminho do arquivo de configuração do cluster de Big Data da configuração que você gostaria de definir, ou seja, custom/bdc.json
 #### `--json-values -j`
@@ -262,7 +262,7 @@ azdata bdc config patch --config-file custom/bdc.json --patch ./patch.json
     Patch File Example (patch.json):
         {"patch":[{"op":"replace","path":"$.spec.resources.storage-0.spec","value":{"replicas": 2,"storage": {"className": "managed-premium","size": "10Gi","accessMode": "ReadWriteOnce"},"type": "Storage"}}]}
 ```
-### <a name="required-parameters"></a>Parâmetros necessários
+### <a name="required-parameters"></a>Parâmetros obrigatórios
 #### `--config-file -c`
 Caminho do arquivo de configuração do cluster de Big Data da configuração que você gostaria de definir, ou seja, custom/bdc.json
 #### `--patch-file -p`

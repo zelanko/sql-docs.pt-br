@@ -9,12 +9,12 @@ ms.technology: ''
 ms.prod_service: database-engine
 ms.author: mikeray
 author: MikeRayMSFT
-ms.openlocfilehash: c865464022ba18e03be5baa5b66b4b4a87ce2799
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.openlocfilehash: 769c421c087de366ec262c3e5b8744ffb78f3ba6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74095858"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75656745"
 ---
 # <a name="sql-server-development-partners"></a>Parceiros de desenvolvimento do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -22,7 +22,7 @@ Para obter suporte sobre como desenvolver soluções de banco de dados do SQL Se
 
 ## <a name="our-development-partners"></a>Nossos parceiros de desenvolvimento
 
-| Partner (parceiro) | Descrição | Links |
+| Partner (parceiro) | DESCRIÇÃO | Links |
 | --- | --- | --- |
 |![idera][1] |**IDERA**<br>Rapid SQL é um ambiente de desenvolvimento integrado inteligente de SQL que permite aos desenvolvedores de banco de dados e administradores de banco de dados a criação de código SQL de alto desempenho em todas as plataformas de banco de dados principais, incluindo o SQL Server, de uma única interface.<br><br>[Requisitos do sistema][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[Site][idera_website]<br>[Twitter][idera_twitter]<br>[Vídeo][idera_youtube] |
 |![click2cloud][2] |**Click2Cloud Inc.**<br>A Click2Cloud Inc. permite que a comunidade de desenvolvedores tenha flexibilidade na escolha de linguagens de programação, estruturas e serviços com o uso do conjunto de ferramentas adequado. Com o uso do kit de ferramentas da Click2Cloud, os desenvolvedores podem criar contêineres de 'SQL no Linux' e anexá-los a um aplicativo, enquanto ainda permitem a arquitetura segura e multilocatário. Os contêineres podem ser implantados de forma independente em qualquer plataforma de contêiner baseada em nuvem.|[Marketplace][click2cloud_marketplace]<br>[Site][click2cloud_website]<br>[Twitter][click2cloud_twitter]<br>[Vídeo][click2cloud_youtube] |
@@ -31,8 +31,8 @@ Para obter suporte sobre como desenvolver soluções de banco de dados do SQL Se
 Para saber mais sobre alguns dos nossos outros parceiros, confira os [parceiros para alta disponibilidade e recuperação de desastre][hadr_partners], [parceiros de gerenciamento][management_partners] e [parceiros de monitoramento][monitor_partners].
 
 <!--Image references-->
-[1]: ./media/partner-hadr-sql-server/idera_logo.png
-[2]: ./media/partner-hadr-sql-server/click2cloud_logo.png
+[1]: ./media/partner-hadr-sql-server/idera-logo.png
+[2]: ./media/partner-hadr-sql-server/click2cloud-logo.png
 
 <!--Article links-->
 [hadr_partners]: ./partner-hadr-sql-server.md
@@ -42,7 +42,7 @@ Para saber mais sobre alguns dos nossos outros parceiros, confira os [parceiros 
 <!--Website links -->
 
 [idera_website]:https://www.idera.com/rapid-sql-ide
-[click2cloud_website]:https://www.click2cloud.net
+[click2cloud_website]:https://www.click2cloud.com/
 <!--Get Started Links-->
 
 <!--Datasheet Links-->

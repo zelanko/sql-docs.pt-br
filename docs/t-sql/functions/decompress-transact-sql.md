@@ -16,10 +16,10 @@ ms.assetid: 738d56be-3870-4774-b112-3dce27becc11
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6d94ffd0182bfad3ed95f52640a2aed01ceeaa54
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68118968"
 ---
 # <a name="decompress-transact-sql"></a>DECOMPRESS (Transact-SQL)
@@ -27,7 +27,7 @@ ms.locfileid: "68118968"
 
 Esta função descompactará um valor de expressão de entrada usando o algoritmo GZIP. `DECOMPRESS` retornará uma matriz de bytes (tipo VARBINARY(MAX)).  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,11 +42,11 @@ Um valor **varbinary(** _n_ **)** , **varbinary(max)** ou **binary(** _n_ **)** 
 ## <a name="return-types"></a>Tipos de retorno  
 Um valor de tipo de dados **varbinary (max)** . `DECOMPRESS` usará o algoritmo ZIP para descompactar o argumento de entrada. O usuário deve converter explicitamente o resultado em um tipo de destino, se necessário.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-decompress-data-at-query-time"></a>A. Descompactar os dados no momento da consulta  
+### <a name="a-decompress-data-at-query-time"></a>a. Descompactar os dados no momento da consulta  
 Este exemplo mostra como retornar dados de tabela compactados:  
   
 ```  

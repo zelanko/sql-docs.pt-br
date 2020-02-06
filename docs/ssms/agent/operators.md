@@ -1,10 +1,9 @@
 ---
-title: Operadores | Microsoft Docs
-ms.custom: ''
+title: Operadores
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -23,13 +22,15 @@ helpviewer_keywords:
 ms.assetid: 38e8488f-2669-4cea-b9c3-5f394a663678
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c4059bda6f761171292f2977f7d8e6a3f6896451
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 3e5ecdc830550570f43484c61a87e315e9fc7661
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68260077"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247627"
 ---
 # <a name="operators"></a>Operadores
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -77,7 +78,7 @@ As informações de contato de um operador definem como ele é notificado. Os op
   
         Se todos os operadores compartilharem um provedor de pager, você poderá usar o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para especificar qualquer formatação de email especial necessária ao sistema de pager-para-email. A formatação especial pode ser um prefixo ou um sufixo e estar contida nas seguintes linhas do email:  
   
-        **Assunto:**  
+        **Entidade:**  
   
         **Cc**:  
   

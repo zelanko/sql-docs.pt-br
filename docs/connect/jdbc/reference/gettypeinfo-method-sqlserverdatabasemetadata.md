@@ -16,10 +16,10 @@ ms.assetid: 23208f01-c1bf-4235-b29c-9051d3df59a3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cb9b1b632d5a17b7c8f497e30a4f033932f09b33
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978509"
 ---
 # <a name="gettypeinfo-method-sqlserverdatabasemetadata"></a>Método getTypeInfo (SQLServerDatabaseMetaData)
@@ -40,26 +40,26 @@ public java.sql.ResultSet getTypeInfo()
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse método getTypeInfo é especificado pelo método getTypeInfo na interface java.sql.DatabaseMetaData.  
   
  O conjunto de resultados retornado pelo método getTypeInfo conterá as seguintes informações:  
   
-|Nome|Tipo|Descrição|  
+|Nome|Type|DESCRIÇÃO|  
 |----------|----------|-----------------|  
-|TYPE_NAME|**String**|O nome do tipo de dados.|  
+|TYPE_NAME|**Cadeia de caracteres**|O nome do tipo de dados.|  
 |DATA_TYPE|**short**|O tipo de dados SQL de java.sql.Types.|  
 |PRECISION|**int**|O número total de dígitos significativos.|  
-|LITERAL_PREFIX|**String**|Um ou mais caracteres usados antes de uma constante.|  
-|LITERAL_SUFFIX|**String**|Um ou mais caracteres usados para terminar uma constante.|  
-|CREATE_PARAMS|**String**|A descrição dos parâmetros de criação do tipo de dados.|  
+|LITERAL_PREFIX|**Cadeia de caracteres**|Um ou mais caracteres usados antes de uma constante.|  
+|LITERAL_SUFFIX|**Cadeia de caracteres**|Um ou mais caracteres usados para terminar uma constante.|  
+|CREATE_PARAMS|**Cadeia de caracteres**|A descrição dos parâmetros de criação do tipo de dados.|  
 |NULLABLE|**short**|Indica se a coluna pode conter um valor nulo. Pode ser um dos seguintes valores:<br /><br /> typeNoNulls (0)<br /><br /> typeNullable (1)<br /><br /> typeNullableUnknown (2)|  
 |CASE_SENSITIVE|**booleano**|Indica se o tipo de dados diferencia maiúsculas de minúsculas. "**true**" se o tipo diferenciar maiúsculas de minúsculas; caso contrário, "**false**".|  
 |SEARCHABLE|**short**|Indica se a coluna pode ser usada em uma cláusula SQL WHERE. Pode ser um dos seguintes valores:<br /><br /> typePredNone (0)<br /><br /> typePredChar (1)<br /><br /> typePredBasic (2)<br /><br /> typeSeachable (3)|  
 |UNSIGNED_ATTRIBUTE|**booleano**|Indica o sinal do tipo de dados. "**true**" se o tipo não tiver sinal; caso contrário, "**false**".|  
 |FIXED_PREC_SCALE|**booleano**|Indica que o tipo de dados pode ser um valor money. "**true**" se o tipo de dados for money; caso contrário, "**false**".|  
 |AUTO_INCREMENT|**booleano**|Indica que o tipo de dados pode ser incrementado automaticamente. "**true**" se o tipo puder ser incrementado automaticamente; caso contrário, "**false**".|  
-|LOCAL_TYPE_NAME|**String**|O nome localizado do tipo de dados.|  
+|LOCAL_TYPE_NAME|**Cadeia de caracteres**|O nome localizado do tipo de dados.|  
 |MINIMUM_SCALE|**short**|O número máximo de dígitos à direita da vírgula decimal.|  
 |MAXIMUM_SCALE|**short**|O número mínimo de dígitos à direita da vírgula decimal.|  
 |SQL_DATA_TYPE|**int**|Não há suporte do JDBC Driver.|  

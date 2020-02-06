@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4e3560501061819b3911d7dd628d29e5dda09f79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67999863"
 ---
 # <a name="background-job-error-event-class"></a>classe de evento Background Job Error
@@ -25,7 +25,7 @@ ms.locfileid: "67999863"
   
 ## <a name="background-job-error-event-class-data-columns"></a>Colunas de dados da classe de evento Background Job Error  
   
-|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|DESCRIÇÃO|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**DatabaseID**|**int**|ID do banco de dados especificado pelo trabalho. Determine o valor para um banco de dados usando a função DB_ID.|3|Sim|  
 |**DatabaseName**|**nvarchar**|Nome do banco de dados no qual a instrução do usuário está sendo executada.|35|Sim|  
@@ -40,7 +40,7 @@ ms.locfileid: "67999863"
 |**SessionLoginName**|**nvarchar**|Nome de logon do usuário que originou a sessão. Por exemplo, para se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o Logon1 e executar uma instrução como Logon2, o **SessionLoginName** mostrará o Logon1 e o **LoginName** mostrará o Logon2. Esta coluna exibe os logons do Windows [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[msCoName](../../includes/msconame-md.md)] .|64|Sim|  
 |**Severity**|**int**|Nível de severidade do erro na última tentativa (**EventSubClass** 1, apenas).|20|Sim|  
 |**StartTime**|**datetime**|Hora em que o trabalho foi criado.|14|Sim|  
-|**Estado**|**int**|Estado do erro na última tentativa (**EventSubClass** 1, apenas).|30|Sim|  
+|**State**|**int**|Estado do erro na última tentativa (**EventSubClass** 1, apenas).|30|Sim|  
 |**TextData**|**ntext**|Texto descritivo do valor de subclasse do evento.|1|Sim|  
 |**Tipo**|**int**|Tipo de trabalho.|57|Sim|  
   

@@ -19,15 +19,15 @@ ms.assetid: 386f6d09-dbec-4dc7-9e8a-cd9a4a50168c
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 01ac569b82d382850343af0a35b16c676720097c
-ms.sourcegitcommit: 0c40843c13f67ba7d975f4fedb9d20d70747f66d
+ms.openlocfilehash: 471a69f76a9cb663267e6d1b8c5e8c10614912bf
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74097887"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253788"
 ---
 # <a name="run-the-transact-sql-debugger"></a>Executar o depurador Transact-SQL
 
@@ -83,7 +83,7 @@ Os requisitos para iniciar o depurador [!INCLUDE[tsql](../../includes/tsql-md.md
   
  A tabela a seguir mostra os comandos de menu, botões da barra de ferramentas e atalhos de teclado do depurador.  
   
-|Comando do menu Depurar|Comando de atalho do Editor|Botão da barra de ferramentas|Atalho de teclado|Ação|  
+|Comando do menu Depurar|Comando de atalho do Editor|Botão da barra de ferramentas|Atalho do teclado|Ação|  
 |------------------------|-----------------------------|--------------------|-----------------------|------------|  
 |**Janelas/Pontos de Interrupção**|Não disponível|**Pontos de Interrupção**|CTRL+ALT+B|Exibir a janela **Pontos de Interrupção** , que permite exibir e gerenciar pontos de interrupção.|  
 |**Janelas/Inspeção/Inspeção1**|Não disponível|**Pontos de Interrupção/Inspeção/Inspeção1**|CTRL+ALT+W, 1|Exibir a janela **Inspeção1** .|  
@@ -93,21 +93,21 @@ Os requisitos para iniciar o depurador [!INCLUDE[tsql](../../includes/tsql-md.md
 |**Janelas/Locais**|Não disponível|**Pontos de Interrupção/Locais**|CTRL+ALT+V, L|Exibir a janela **Locais** .|  
 |**Janelas/Pilha de Chamadas**|Não disponível|**Pontos de Interrupção/Pilha de Chamadas**|CTRL+ALT+C|Exibir a janela **Pilha de Chamadas** .|  
 |**Janelas/Threads**|Não disponível|**Pontos de Interrupção/Threads**|CTRL+ALT+H|Exibir a janela **Threads** .|  
-|**Continue**|Não disponível|**Continue**|ALT+F5|Executar até o próximo ponto de interrupção. **Continuar** permanece inativo até que o foco esteja em uma janela do Editor de Consultas que esteja em modo de depuração.|  
+|**Continuar**|Não disponível|**Continuar**|ALT+F5|Executar até o próximo ponto de interrupção. **Continuar** permanece inativo até que o foco esteja em uma janela do Editor de Consultas que esteja em modo de depuração.|  
 |**Iniciar Depuração**|Não disponível|**Iniciar Depuração**|ALT+F5|Colocar uma janela do Editor de Consultas em modo de depuração e executar até o primeiro ponto de interrupção. Se o foco estiver em uma janela do Editor de Consulta que esteja em modo de depuração, **Iniciar Depuração** é substituído por **Continuar**.|  
 |**Interromper Tudo**|Não disponível|**Interromper Tudo**|CTRL+ALT+BREAK|Esse recurso não é usado pelo depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] .|  
-|**Parar Depuração**|Não disponível|**Parar Depuração**|SHIFT+F5|Tirar uma janela do Editor de Consultas do modo de depuração e retorná-la para o modo normal.|  
+|**Parar depuração**|Não disponível|**Parar depuração**|SHIFT+F5|Tirar uma janela do Editor de Consultas do modo de depuração e retorná-la para o modo normal.|  
 |**Desanexar Tudo**|Não disponível|Não disponível|Não disponível|Para o modo de depuração, mas executa as instruções restantes na janela do Editor de Consultas.|  
-|**Depuração Completa**|Não disponível|**Depuração Completa**|F11|Executar a próxima instrução e também abrir uma nova janela do Editor de Consultas em modo de depuração se a próxima instrução executar um procedimento armazenado, gatilho, ou função.|  
-|**Depuração Parcial**|Não disponível|**Depuração Parcial**|F10|O mesmo que **Intervir**, mas nenhuma função, procedimento armazenado ou gatilho é depurado.|  
-|**Depuração Circular**|Não disponível|**Depuração Circular**|SHIFT+F11|Executar o código restante de um gatilho, função ou procedimento armazenado sem fazer uma pausa em qualquer ponto de interrupção. O modo de depuração normal é retomado quando o controle é retornado ao código que chamou o módulo.|  
+|**Intervir**|Não disponível|**Intervir**|F11|Executar a próxima instrução e também abrir uma nova janela do Editor de Consultas em modo de depuração se a próxima instrução executar um procedimento armazenado, gatilho, ou função.|  
+|**Contornar**|Não disponível|**Contornar**|F10|O mesmo que **Intervir**, mas nenhuma função, procedimento armazenado ou gatilho é depurado.|  
+|**Sair**|Não disponível|**Sair**|Shift+F11|Executar o código restante de um gatilho, função ou procedimento armazenado sem fazer uma pausa em qualquer ponto de interrupção. O modo de depuração normal é retomado quando o controle é retornado ao código que chamou o módulo.|  
 |Não disponível|**Executar Até** o Cursor|Não disponível|CTRL+F10|Executar todo o código desde o último local de parada até o local atual do cursor sem parar em qualquer ponto de interrupção.|  
 |**QuickWatch**|**QuickWatch**|Não disponível|CTRL+ALT+Q|Exibir a janela **QuickWatch** .|  
-|**Alternar Ponto de Interrupção**|**Ponto de Interrupção/Inserir Ponto de Interrupção**|Não disponível|F9|Posicionar um ponto de interrupção na instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] atual ou selecionada.|  
+|**Alternar ponto de interrupção**|**Ponto de Interrupção/Inserir Ponto de Interrupção**|Não disponível|F9|Posicionar um ponto de interrupção na instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] atual ou selecionada.|  
 |Não disponível|**Ponto de Interrupção/Excluir Ponto de Interrupção**|Não disponível|Não disponível|Excluir o ponto de interrupção da linha selecionada.|  
 |Não disponível|**Ponto de Interrupção/Desabilitar Ponto de Interrupção**|Não disponível|Não disponível|Desabilitar o ponto de interrupção na linha selecionada. O ponto de interrupção permanecerá na linha de código, mas não parará a execução até ser reativado.|  
 |Não disponível|**Ponto de Interrupção/Habilitar Ponto de Interrupção**|Não disponível|Não disponível|Habilitar o ponto de interrupção na linha selecionada.|  
-|**Excluir Todos os Pontos de Interrupção**|Não disponível|Não disponível|CTRL+SHIFT+F9|Excluir todos os pontos de interrupção.|  
+|**Excluir Todos os Pontos de Interrupção**|Não disponível|Não disponível|Ctrl+Shift+F9|Excluir todos os pontos de interrupção.|  
 |**Desabilitar Todos os Pontos de Interrupção**|Não disponível|Não disponível|Não disponível|Desabilitar todos os pontos de interrupção.|  
 |Não disponível|**Adicionar Inspeção**|Não disponível|Não disponível|Adicionar a expressão selecionada à janela **Inspeção** .|  
   

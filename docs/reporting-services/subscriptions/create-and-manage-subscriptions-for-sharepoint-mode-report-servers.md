@@ -13,10 +13,10 @@ ms.assetid: 44be7ee2-33ce-46e4-9d1a-a20aaf43a227
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5d4ffc3930003a4035211a4a63a54bc4f8196948
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65578343"
 ---
 # <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>Criar e gerenciar assinaturas de servidores de relatório no modo SharePoint
@@ -70,7 +70,7 @@ ms.locfileid: "65578343"
   
 2.  Clique na seta para baixo ao lado do relatório e, sem seguida, selecione **Gerenciar Assinaturas**.  
   
-3.  Clique em **Adicionar Assinatura**.  
+3.  Clique em **Adicionar assinatura**.  
   
 4.  Em **Extensão de Entrega**, selecione **Bibliotecas de Documentos SharePoint**.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "65578343"
   
 2.  Clique na seta para baixo ao lado do relatório e, sem seguida, selecione **Gerenciar Assinaturas**.  
   
-3.  Clique em **Adicionar Assinatura**.  
+3.  Clique em **Adicionar assinatura**.  
   
 4.  Em **Extensão de Entrega**, selecione **Compartilhamento de Arquivos do Windows**.  
   
@@ -120,7 +120,7 @@ ms.locfileid: "65578343"
   
 2.  Clique na seta para baixo ao lado do relatório e, sem seguida, selecione **Gerenciar Assinaturas**.  
   
-3.  Clique em **Adicionar Assinatura**.  
+3.  Clique em **Adicionar assinatura**.  
   
 4.  Em **Extensão de Entrega**, selecione **Email**.  
   
@@ -158,7 +158,7 @@ ms.locfileid: "65578343"
  [Assinaturas e entrega &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Entrega de email no Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)   
  [Entrega de compartilhamento de arquivos no Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)   
- [Entrega de biblioteca do SharePoint no Reporting Services](../../reporting-services/subscriptions/sharepoint-library-delivery-in-reporting-services.md)   
+ [Entrega da biblioteca do SharePoint no Reporting Services](../../reporting-services/subscriptions/sharepoint-library-delivery-in-reporting-services.md)   
  [Configurar um servidor de relatório para entrega de email (Configuration Manager do SSRS)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83)  
   
   

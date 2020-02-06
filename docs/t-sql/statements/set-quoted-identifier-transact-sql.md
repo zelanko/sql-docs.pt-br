@@ -26,19 +26,19 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b080efcb7af0f813f798c7f572f464d4718fdd75
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68008880"
 ---
-# <a name="set-quotedidentifier-transact-sql"></a>SET QUOTED_IDENTIFIER (Transact-SQL)
+# <a name="set-quoted_identifier-transact-sql"></a>SET QUOTED_IDENTIFIER (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Faz com que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] siga as regras ISO relativas às aspas que delimitam identificadores e cadeias de caracteres literais. Identificadores delimitados por aspas duplas podem ser palavras-chave reservadas [!INCLUDE[tsql](../../includes/tsql-md.md)] ou podem conter caracteres que nem sempre são permitidos pelas regras da sintaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] para identificadores.
 
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -54,7 +54,7 @@ SET QUOTED_IDENTIFIER { ON | OFF }
 SET QUOTED_IDENTIFIER ON
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Comentários
 
 Quando SET QUOTED_IDENTIFIER está ON, os identificadores podem ser delimitados por aspas duplas e literais devem ser delimitadas por aspas simples. Quando SET QUOTED_IDENTIFIER está OFF, os identificadores não podem estar entre aspas e devem seguir todas as regras [!INCLUDE[tsql](../../includes/tsql-md.md)] para identificadores. Para obter mais informações, consulte [Database Identifiers](../../relational-databases/databases/database-identifiers.md). Literais podem ser delimitados por aspas simples ou duplas.
 
@@ -105,7 +105,7 @@ Requer associação à função public.
 
 ## <a name="examples"></a>Exemplos
 
-### <a name="a-using-the-quoted-identifier-setting-and-reserved-word-object-names"></a>A. Usando uma configuração de identificador entre aspas e nomes de objetos de palavra reservada
+### <a name="a-using-the-quoted-identifier-setting-and-reserved-word-object-names"></a>a. Usando uma configuração de identificador entre aspas e nomes de objetos de palavra reservada
 
 O exemplo a seguir mostra que a configuração de `SET QUOTED_IDENTIFIER` deve estar `ON`, e as palavras-chave em nomes de tabelas devem estar entre aspas duplas para criar e usar objetos que têm nomes de palavras-chave reservados.
 
@@ -205,7 +205,7 @@ GO
 - [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)
 - [CREATE TRIGGER](../../t-sql/statements/create-trigger-transact-sql.md)
 - [CREATE VIEW](../../t-sql/statements/create-view-transact-sql.md)
-- [Tipos de Dados](../../t-sql/data-types/data-types-transact-sql.md)
+- [Data Types](../../t-sql/data-types/data-types-transact-sql.md)
 - [EXECUTE](../../t-sql/language-elements/execute-transact-sql.md)
 - [SELECT](../../t-sql/queries/select-transact-sql.md)
 - [Instruções SET](../../t-sql/statements/set-statements-transact-sql.md)

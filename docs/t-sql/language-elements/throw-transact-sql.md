@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bfedebc32722f860fb0c84f385742c441023140d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072208"
 ---
 # <a name="throw-transact-sql"></a>THROW (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68072208"
 
   Gera uma exceção e transfere a execução a um bloco CATCH de um constructo TRY…CATCH no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -51,7 +51,7 @@ THROW [ { error_number | @local_variable },
  *state*  
  É uma constante ou variável entre 0 e 255 que indica o estado a ser associado à mensagem. *state* é **tinyint**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  A instrução antes de THROW deve ser seguida pelo terminador de instrução ponto-e-vírgula (;).  
   
  Se não houver um constructo TRY…CATCH disponível, o lote de instruções será terminado. O número da linha e o procedimento em que a exceção foi gerada estão definidos. A severidade é definida como 16.  
@@ -71,7 +71,7 @@ THROW [ { error_number | @local_variable },
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-throw-to-raise-an-exception"></a>A. Usando THROW para gerar uma exceção  
+### <a name="a-using-throw-to-raise-an-exception"></a>a. Usando THROW para gerar uma exceção  
  O exemplo a seguir mostra como usar a instrução `THROW` para gerar uma exceção.  
   
 ```sql  

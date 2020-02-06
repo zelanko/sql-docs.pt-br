@@ -9,20 +9,20 @@ ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: dd6f6b81f7cd42e666459460a0f11c23b07d4b27
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: cccdc543a572df19849afec16d0a2a71413ed19e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531863"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74820890"
 ---
 # <a name="azdata-bdc-debug"></a>azdata bdc debug
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-O artigo a seguir fornece referência para os comandos `sql` na ferramenta `azdata`. Para obter mais informações sobre outros comandos `azdata`, confira [referência de azdata](reference-azdata.md)
+O artigo a seguir fornece referência para os comandos `bdc debug` na ferramenta `azdata`. Para obter mais informações sobre outros comandos `azdata`, confira [referência de azdata](reference-azdata.md)
 
-## <a name="commands"></a>Commands
+## <a name="commands"></a>Comandos
 |     |     |
 | --- | --- |
 [azdata bdc debug copy-logs](#azdata-bdc-debug-copy-logs) | Copiar logs.
@@ -38,7 +38,7 @@ azdata bdc debug copy-logs --namespace -n
                            [--skip-compress -sc]  
                            [--exclude-dumps -ed]
 ```
-### <a name="required-parameters"></a>Parâmetros necessários
+### <a name="required-parameters"></a>Parâmetros obrigatórios
 #### `--namespace -n`
 Nome do cluster de Big Data, usado para namespaces de Kubernetes.
 ### <a name="optional-parameters"></a>Parâmetros opcionais
@@ -72,7 +72,7 @@ azdata bdc debug dump --namespace -n
                       --container -c  
                       [--target-folder -d]
 ```
-### <a name="required-parameters"></a>Parâmetros necessários
+### <a name="required-parameters"></a>Parâmetros obrigatórios
 #### `--namespace -n`
 Nome do cluster de Big Data, usado para namespaces de Kubernetes.
 #### `--container -c`
