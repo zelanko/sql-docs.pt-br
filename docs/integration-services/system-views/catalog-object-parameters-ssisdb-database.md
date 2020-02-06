@@ -11,10 +11,10 @@ ms.assetid: d7b04903-2d61-4159-9456-475942d1f732
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c462eb1957f1c8014dd9220f86cb9ae3e32ea65f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295189"
 ---
 # <a name="catalogobject_parameters-ssisdb-database"></a>catalog.object_parameters (Banco de Dados SSISDB)
@@ -26,7 +26,7 @@ ms.locfileid: "71295189"
 
   Exibe os parâmetros para todos os pacotes e projetos no catálogo do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |parameter_id|**bigint**|O ID (identificador exclusivo) do parâmetro.|  
 |project_id|**bigint**|O ID exclusivo do projeto.|  
@@ -34,7 +34,7 @@ ms.locfileid: "71295189"
 |object_name|**sysname**|O nome do projeto ou pacote correspondente.|  
 |parameter_name|**sysname(nvarchar(128))**|O nome do parâmetro.|  
 |data_type|**nvarchar(128)**|O tipo de dados do parâmetro.|  
-|required|**bit**|Quando o valor é `1`, o valor do parâmetro é necessário para iniciar a execução. Quando o valor é `0`, o valor de parâmetro não é necessário para iniciar a execução.|  
+|obrigatório|**bit**|Quando o valor é `1`, o valor do parâmetro é necessário para iniciar a execução. Quando o valor é `0`, o valor de parâmetro não é necessário para iniciar a execução.|  
 |sensitive|**bit**|Quando o valor é `1`, o valor do parâmetro é confidencial. Quando o valor é `0`, o valor do parâmetro não é confidencial.|  
 |descrição|**nvarchar(1024)**|Uma descrição opcional do pacote.|  
 |design_default_value|**sql_variant**|O valor padrão para o parâmetro que foi atribuído durante o design do projeto ou pacote.|  

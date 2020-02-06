@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: cb89f83f0a916a9d56443e7494ce5e8284350bb8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67940624"
 ---
 # <a name="qnparameter-table-event-class"></a>Classe de evento QN:Parameter Table
@@ -25,7 +25,7 @@ ms.locfileid: "67940624"
   
 ## <a name="qnparameter-table-event-class-data-columns"></a>Colunas de dados da classe de evento QN:Parameter Table  
   
-|Coluna de dados|Tipo|Descrição|Número da coluna|Filtrável|  
+|Coluna de dados|Type|DESCRIÇÃO|Número da coluna|Filtrável|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |ApplicationName|**nvarchar**|O nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |ClientProcessID|**int**|A ID atribuída pelo computador host ao processo em que está sendo executado o aplicativo cliente. Essa coluna de dados será populada se a ID do processo do cliente for fornecida pelo cliente.|9|Sim|  
@@ -33,7 +33,7 @@ ms.locfileid: "67940624"
 |DatabaseName|**nvarchar**|O nome do banco de dados no qual a instrução do usuário está sendo executada.|35|Sim|  
 |EventClass|**Int**|Tipo de evento = 200.|27|Não|  
 |EventSequence|**int**|Número de sequência para esse evento.|51|Não|  
-|EventSubClass|**nvarchar**|O tipo de subclasse de evento, fornecendo mais informações sobre cada classe de evento. Essa coluna pode conter os seguintes valores:<br /><br /> **Tabela criada**: indica que uma tabela de parâmetros criada no banco de dados.<br /><br /> **Tentativa de remoção de tabela**: indica que o banco de dados tentou remover automaticamente uma tabela de parâmetros não usada para liberar recursos.<br /><br /> **Falha na tentativa de remoção de tabela**: indica que o banco de dados tentou remover uma tabela de parâmetros não usada e falhou. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] irá reagendar automaticamente a exclusão da tabela de parâmetros para liberar recursos.<br /><br /> **Tabela descartada**: indica que o banco de dados descartou com sucesso uma tabela de parâmetros.<br /><br /> **Tabela fixada**: indica que a tabela de parâmetros está marcada para uso atual pelo processamento interno.<br /><br /> **Tabela desafixada**: indica que a tabela de parâmetros foi desafixada. Processamento interno terminou de usar a tabela.<br /><br /> **Número de usuários aumentou**: indica que o número de assinaturas de notificação de consulta referente a uma tabela de parâmetros aumentou.<br /><br /> **Número de usuários diminuiu**: indica que o número de assinaturas de notificação de consulta referente a uma tabela de parâmetros diminuiu.<br /><br /> **Redefinição do contador LRU**: Indica que a contagem de uso para a tabela de parâmetros foi redefinida.<br /><br /> **Tarefa de limpeza iniciada**: indica quando a limpeza para todas as assinaturas nesta tabela de parâmetros foi iniciada. Isto ocorre quando o banco de dados é iniciado ou quando uma tabela subjacente às assinaturas desta tabela de parâmetros é descartada.<br /><br /> **Tarefa de limpeza concluída**: indica quando a limpeza para todas as assinaturas nesta tabela de parâmetros foi concluída.|21|Sim|  
+|EventSubClass|**nvarchar**|O tipo de subclasse de evento, fornecendo mais informações sobre cada classe de evento. Essa coluna pode conter os seguintes valores:<br /><br /> **Tabela criada**: indica uma tabela de parâmetros criada no banco de dados.<br /><br /> **Tentativa de descarte de tabela**: indica que o banco de dados tentou descartar automaticamente uma tabela de parâmetros não usada, para liberar recursos.<br /><br /> **Falha na tentativa de descarte de tabela**: indica que o banco de dados tentou descartar uma tabela de parâmetros não usada e falhou. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] irá reagendar automaticamente a exclusão da tabela de parâmetros para liberar recursos.<br /><br /> **Tabela descartada**: indica que o banco de dados descartou com sucesso uma tabela de parâmetros.<br /><br /> **Tabela fixada**: indica que a tabela de parâmetros está marcada para uso atual pelo processamento interno.<br /><br /> **Tabela desafixada**: indica que a tabela de parâmetros foi desafixada. Processamento interno terminou de usar a tabela.<br /><br /> **Número de usuários aumentou**: indica que o número de assinaturas de notificação de consulta referente a uma tabela de parâmetros aumentou.<br /><br /> **Número de usuários diminuiu**: indica que o número de assinaturas de notificação de consulta referente a uma tabela de parâmetros diminuiu.<br /><br /> **Reinicialização do contador LRU**: indica que a conta de uso para a tabela de parâmetros foi reinicializada.<br /><br /> **Tarefa de limpeza iniciada**: indica quando a limpeza para todas as assinaturas nesta tabela de parâmetros foi iniciada. Isto ocorre quando o banco de dados é iniciado ou quando uma tabela subjacente às assinaturas desta tabela de parâmetros é descartada.<br /><br /> **Tarefa de limpeza concluída**: indica quando a limpeza para todas as assinaturas nesta tabela de parâmetros foi concluída.|21|Sim|  
 |GroupID|**int**|ID do grupo de carga de trabalho no qual o evento de Rastreamento do SQL dispara.|66|Sim|  
 |HostName|**nvarchar**|O nome do computador no qual o cliente está sendo executado. Essa coluna de dados será populada se o nome do host for fornecido pelo cliente. Para determinar o nome do host, use a função HOST_NAME.|8|Sim|  
 |IsSystem|**int**|Indica se o evento ocorreu em um processo do sistema ou do usuário.<br /><br /> 0 = usuário<br /><br /> 1 = sistema|60|Não|  

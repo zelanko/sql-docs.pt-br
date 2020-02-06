@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7006843d30698fcdbc957222caa7be7a10cab11d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67910967"
 ---
 # <a name="spcachehit-event-class"></a>classe de evento SP:CacheHit
@@ -25,7 +25,7 @@ ms.locfileid: "67910967"
   
 ## <a name="spcachehit-event-class-data-columns"></a>Colunas de dados da classe de evento SP:CacheHit  
   
-|Nome da coluna de dados|**Data type**|Descrição|ID da coluna|Filtrável|  
+|Nome da coluna de dados|**Data type**|DESCRIÇÃO|ID da coluna|Filtrável|  
 |----------------------|-------------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|Nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |ClientProcessID|**int**|ID atribuída pelo computador host ao processo em que o aplicativo cliente está sendo executado. Essa coluna de dados será populada se o cliente fornecer a ID de processo do cliente.|9|Sim|  
@@ -33,7 +33,7 @@ ms.locfileid: "67910967"
 |DatabaseName|**nvarchar**|Nome do banco de dados no qual o procedimento armazenado está sendo executado.|35|Sim|  
 |EventClass|**int**|Tipo de evento = 38.|27|Não|  
 |EventSequence|**int**|A sequência de determinado evento dentro da solicitação.|51|Não|  
-|EventSubClass|**int**|1=Ocorrência de contexto de execução: um plano de execução livre foi localizado no cache de plano.<br /><br /> 2=Ocorrência de Compplan: um plano compilado foi localizado no cache de plano.|21|Sim|  
+|EventSubClass|**int**|1 = Ocorrência de contexto de execução: um plano de execução livre foi localizado no cache de plano.<br /><br /> 2 = Ocorrência de compplan: um plano compilado foi localizado no cache de plano.|21|Sim|  
 |GroupID|**int**|ID do grupo de carga de trabalho no qual o evento de Rastreamento do SQL dispara.|66|Sim|  
 |HostName|**nvarchar**|Nome do computador no qual o cliente está sendo executado. Essa coluna de dados será populada se o cliente fornecer o nome do host. Para determinar o nome do host, use a função HOST_NAME.|8|Sim|  
 |IsSystem|**int**|Indica se o evento ocorreu em um processo do sistema ou do usuário. 1 = sistema, 0 = usuário.|60|Sim|  

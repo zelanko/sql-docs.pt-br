@@ -17,10 +17,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 689206ce4462b4befeded788fc6e679af6215a59
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056367"
 ---
 # <a name="specify-prefix-length-in-data-files-using-bcp-sql-server"></a>Especificar o tamanho do prefixo em arquivos de dados usando o bcp (SQL Server)
@@ -52,7 +52,7 @@ ms.locfileid: "74056367"
   
  Quando você exportar dados em massa e armazená-los em tipos de dados nativos ou formato de caractere, use os comprimentos do prefixo mostrados na tabela a seguir.  
   
-|SQL Server<br /><br /> tipo de dados|Formato nativo<br /><br /> NOT NULL|Formato nativo<br /><br /> NULL|Formato de caractere<br /><br /> NOT NULL|Formato de caractere<br /><br /> NULL|  
+|SQL Server<br /><br /> tipo de dados|Formato nativo<br /><br /> NOT NULL|Formato nativo<br /><br /> NULO|Formato de caractere<br /><br /> NOT NULL|Formato de caractere<br /><br /> NULO|  
 |------------------------------|--------------------------------|----------------------------|-----------------------------------|-------------------------------|  
 |**char**|2|2|2|2|  
 |**varchar**|2|2|2|2|  

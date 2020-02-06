@@ -30,10 +30,10 @@ ms.assetid: e02b2318-bee9-4d84-a61f-2fddcf268c9f
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: ac274000ffdb1bcd29ebad2a2e0d0395b8daba0c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930322"
 ---
 # <a name="dbcc-shrinkfile-transact-sql"></a>DBCC SHRINKFILE (Transact-SQL)
@@ -41,7 +41,7 @@ ms.locfileid: "67930322"
 
 Reduz o tamanho do arquivo de log ou dos dados especificados do banco de dados atual. Você pode usá-lo para mover os dados de um arquivo para outros no mesmo grupo de arquivos, o que esvazia o arquivo e permite a remoção do banco de dados dele. Você pode reduzir um arquivo a menos da metade do tamanho de criação dele, definindo um novo valor para o tamanho mínimo do arquivo.
   
-![Ícone do link do artigo](../../database-engine/configure-windows/media/topic-link.gif "Ícone do link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do artigo](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -96,7 +96,7 @@ Suprime todas as mensagens informativas.
 ## <a name="result-sets"></a>Conjuntos de resultados  
 A tabela a seguir descreve as colunas do conjunto de resultados.
   
-|Nome da coluna|Descrição|  
+|Nome da coluna|DESCRIÇÃO|  
 |---|---|
 |**DbId**|Número de identificação do banco de dados do arquivo que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] tentou reduzir.|  
 |**FileId**|O número de identificação do arquivo que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] tentou reduzir.|  
@@ -105,7 +105,7 @@ A tabela a seguir descreve as colunas do conjunto de resultados.
 |**UsedPages**|Número de páginas de 8 KB usado atualmente pelo arquivo.|  
 |**EstimatedPages**|Número de páginas de 8 KB a que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] calcula que o arquivo poderia ser reduzido.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 DBCC SHRINKFILE aplica-se aos arquivos do banco de dados atual. Para obter mais informações sobre como alterar o banco de dados atual, consulte [USE &#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md).
   
 Você pode interromper as operações DBCC SHRINKFILE a qualquer momento e todo o trabalho concluído será preservado. Se você usar o parâmetro EMPTYFILE e cancelar a operação, o arquivo não será marcado para impedir que dados adicionais sejam adicionados.
@@ -131,7 +131,7 @@ Considere as seguintes informações ao planejar a redução de arquivos:
 
 -   Reduza vários arquivos no mesmo banco de dados sequencialmente, e não simultaneamente. A contenção em tabelas do sistema pode causar o bloqueio e gerar atrasos.  
   
-## <a name="troubleshooting"></a>Solução de problemas  
+## <a name="troubleshooting"></a>solução de problemas  
 Esta seção descreve como diagnosticar e corrigir problemas que podem ocorrer ao executar o comando DBCC SHRINKFILE.
   
 ### <a name="the-file-doesnt-shrink"></a>O arquivo não é reduzido

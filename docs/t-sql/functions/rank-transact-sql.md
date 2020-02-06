@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 631ef62034027217e8893f2fab42ce299157c1ba
-ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68661442"
 ---
 # <a name="rank-transact-sql"></a>RANK (Transact-SQL)
@@ -38,7 +38,7 @@ ROW_NUMBER e RANK são similares. ROW_NUMBER numera todas as linhas em sequênci
 > [!NOTE]
 > RANK é um valor temporário calculado quando a consulta é executada. Para persistir números em uma tabela, consulte [Propriedade IDENTITY](../../t-sql/statements/create-table-transact-sql-identity-property.md) e [SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md). 
    
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -53,7 +53,7 @@ RANK ( ) OVER ( [ partition_by_clause ] order_by_clause )
 ## <a name="return-types"></a>Tipos de retorno  
  **bigint**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Se duas ou mais linhas empatarem em uma classificação, cada linha empatada receberá a mesma classificação. Por exemplo, se os dois melhores vendedores tiverem o mesmo valor SalesYTD, ambos serão classificados com o número um. O vendedor com o próximo SalesYTD maior será classificado com o número três, porque há duas linhas com classificação mais alta. Portanto, a função RANK nem sempre retorna inteiros consecutivos.  
   
  A ordem de classificação usada para a consulta inteira determina a ordem na qual as linhas aparecem em um conjunto de resultados.  
@@ -62,7 +62,7 @@ RANK ( ) OVER ( [ partition_by_clause ] order_by_clause )
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-ranking-rows-within-a-partition"></a>A. Classificando linhas dentro de uma partição  
+### <a name="a-ranking-rows-within-a-partition"></a>a. Classificando linhas dentro de uma partição  
  O exemplo a seguir classifica os produtos em inventário nos locais de inventário especificados de acordo com suas quantidades. O conjunto de resultados é particionado por `LocationID` e ordenado logicamente por `Quantity`. Observe que produtos 494 e 495 têm a mesma quantidade. Como eles estão vinculados, ambos são classificados como um.  
   
 ```sql  
@@ -131,7 +131,7 @@ BusinessEntityID Rate                  RankBySalary
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-ranking-rows-within-a-partition"></a>C: Classificando linhas dentro de uma partição  
+### <a name="c-ranking-rows-within-a-partition"></a>C. Classificando linhas dentro de uma partição  
  O exemplo a seguir classifica os representantes de vendas em cada região de vendas de acordo com seu total de vendas. O conjunto de linhas é particionado por `SalesTerritoryGroup` e ordenado por `SalesAmountQuota`.  
   
 ```sql  

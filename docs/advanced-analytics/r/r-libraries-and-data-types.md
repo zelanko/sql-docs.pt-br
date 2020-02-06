@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 11354683f94b5805255ddd5b2b5c73ec2c1aa5ba
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727419"
 ---
 # <a name="data-type-mappings-between-r-and-sql-server"></a>Mapeamentos de tipo de dados entre o R e o SQL Server
@@ -106,7 +106,7 @@ Se R não der suporte para um determinado tipo de dados [!INCLUDE[ssNoVersion](.
 
 ## <a name="examples"></a>Exemplos
 
-### <a name="example-1-implicit-conversion"></a>Exemplo 1: Conversão implícita
+### <a name="example-1-implicit-conversion"></a>Exemplo 1: conversão implícita
 
 O exemplo a seguir demonstra como os dados são transformados ao fazer a viagem de ida e volta entre SQL Server e R.
 
@@ -140,7 +140,7 @@ outputDataSet <- inputDataSet'
 ||||||
 |-|-|-|-|-|
 ||C1|C2|C3|C4|
-|1|1|Hello|6e225611-4b58-4995-a0a5-554d19012ef1|4|
+|1|1|Olá|6e225611-4b58-4995-a0a5-554d19012ef1|4|
 |1|-11|world|6732ea46-2d5d-430b-8ao1-86e7f3351c3e|2|
 
 Observe o uso da função `str` em R para obter o esquema dos dados de saída. A função retorna as seguintes informações:
@@ -168,7 +168,7 @@ A partir disso, você pode ver que as seguintes conversões de tipo de dados for
 -   **Coluna C4**. A coluna contém valores gerados pelo script de R e não presentes nos dados originais.
 
 
-## <a name="example-2-dynamic-column-selection-using-r"></a>Exemplo 2: seleção de coluna dinâmica usando R
+## <a name="example-2-dynamic-column-selection-using-r"></a>Exemplo 2: Seleção de coluna dinâmica usando R
 
 O exemplo a seguir mostra como você pode usar o código R para verificar tipos de coluna inválidos. Obtém o esquema de uma tabela especificada usando o sistema do SQL Server exibe e remove quaisquer colunas que tenham um tipo inválido especificado.
 

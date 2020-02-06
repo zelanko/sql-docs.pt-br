@@ -9,10 +9,10 @@ ms.assetid: 123b78a0-d6c9-4f78-b0e7-73b21854a250
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6f6a30101e4ee1472845d11dc1ab6b7cb3d70bc5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579535"
 ---
 # <a name="report-builder-functions---last-function"></a>Funções do Construtor de Relatórios – Função Last
@@ -28,7 +28,7 @@ ms.locfileid: "65579535"
 Last(expression, scope)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *expressão*  
  (**Variant** ou **Binary**) A expressão na qual a agregação será executada, por exemplo, `=Fields!Fieldname.Value`.  
   
@@ -38,7 +38,7 @@ Last(expression, scope)
 ## <a name="return-type"></a>Tipo de retorno  
  Determinado pelo tipo de expressão.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  A função **Last** retorna o valor final em um conjunto de dados depois que toda a classificação e filtragem tiverem sido aplicadas no escopo especificado.  
   
  A função **Last** não pode ser usada em expressões de filtro de grupo com qualquer coisa, exceto o escopo atual (padrão).  

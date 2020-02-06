@@ -1,29 +1,28 @@
 ---
-title: Iniciar um rastreamento automaticamente após a conexão com um servidor (SQL Server Profiler) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Iniciar automaticamente um rastreamento após a conexão com um servidor
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- automatic trace start
-- traces [SQL Server], starting
-- starting trace automatically
 ms.assetid: d74b848d-e796-49af-a8c5-dd69230f3a78
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0cda5aeb04517b0879a8139432f58bdbc08fe553
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 0e1999897413531366d207b7b5df587030c02647
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059717"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307809"
 ---
 # <a name="start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler"></a>Iniciar um rastreamento automaticamente após a conexão com um servidor (SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Este tópico descreve como iniciar rastreamentos automaticamente após o estabelecimento de conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , usando o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
+
+Este tópico descreve como iniciar rastreamentos automaticamente após o estabelecimento de conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , usando o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
 ### <a name="to-start-a-trace-automatically-after-connecting-to-a-server-with-sql-server-profiler"></a>Para iniciar um rastreamento automaticamente após a conexão com um servidor de SQL Server Profiler  
   

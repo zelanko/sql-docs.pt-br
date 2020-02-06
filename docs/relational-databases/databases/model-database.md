@@ -15,10 +15,10 @@ ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 81f96fac7ea9021c1f5eb39ad186dcdd35c92127
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68067368"
 ---
 # <a name="model-database"></a>Banco de dados modelo
@@ -59,9 +59,9 @@ Para o SQL Server 2014, confira [modelo de Banco de Dados](https://docs.microsof
 |ANSI_WARNINGS|OFF|Sim|  
 |ARITHABORT|OFF|Sim|  
 |AUTO_CLOSE|OFF|Sim|  
-|AUTO_CREATE_STATISTICS|ON|Sim|  
+|AUTO_CREATE_STATISTICS|ATIVADO|Sim|  
 |AUTO_SHRINK|OFF|Sim|  
-|AUTO_UPDATE_STATISTICS|ON|Sim|  
+|AUTO_UPDATE_STATISTICS|ATIVADO|Sim|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|Sim|  
 |CHANGE_TRACKING|OFF|Não|  
 |CONCAT_NULL_YIELDS_NULL|OFF|Sim|  
@@ -71,10 +71,10 @@ Para o SQL Server 2014, confira [modelo de Banco de Dados](https://docs.microsof
 |DATE_CORRELATION_OPTIMIZATION|OFF|Sim|  
 |DB_CHAINING|OFF|Não|  
 |ENCRYPTION|OFF|Não|  
-|MIXED_PAGE_ALLOCATION|ON|Não|  
+|MIXED_PAGE_ALLOCATION|ATIVADO|Não|  
 |NUMERIC_ROUNDABORT|OFF|Sim|  
 |PAGE_VERIFY|CHECKSUM|Sim|  
-|PARAMETERIZATION|SIMPLE|Sim|  
+|PARAMETERIZATION|SIMPLES|Sim|  
 |QUOTED_IDENTIFIER|OFF|Sim|  
 |READ_COMMITTED_SNAPSHOT|OFF|Sim|  
 |RECOVERY|Depende da edição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *|Sim|  
@@ -86,7 +86,7 @@ Para o SQL Server 2014, confira [modelo de Banco de Dados](https://docs.microsof
   
  Para obter uma descrição dessas opções de banco de dados, veja [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
-## <a name="restrictions"></a>Restrictions  
+## <a name="restrictions"></a>Restrições  
  As operações a seguir não podem ser executadas no banco de dados **modelo** :  
   
 -   Adicionando arquivos ou grupos de arquivos.  

@@ -16,10 +16,10 @@ ms.assetid: 610205c2-6bcd-426c-ad6f-9682551efdec
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 38e5a31ccaf493a8800f0e15abd1c21424db07c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954817"
 ---
 # <a name="executequery-method-javalangstring"></a>Método executeQuery (java.lang.String)
@@ -34,7 +34,7 @@ ms.locfileid: "67954817"
 public final java.sql.ResultSet executeQuery(java.lang.String sql)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *sql*  
   
  Uma **String** que contém uma instrução SQL.  
@@ -45,7 +45,7 @@ public final java.sql.ResultSet executeQuery(java.lang.String sql)
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse método executeQuery é especificado pelo método executeQuery na interface java.sql.Statement.  
   
  Esse método substitui o método [executeQuery](../../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) que é localizado na classe [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).  

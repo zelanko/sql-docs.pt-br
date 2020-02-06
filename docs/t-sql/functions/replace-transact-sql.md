@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 59cbaf203b8e877f9476e807008345b9af05b0fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67944533"
 ---
 # <a name="replace-transact-sql"></a>REPLACE (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "67944533"
 
 Substitui todas as ocorrências de um valor da cadeia de caracteres especificado por outro valor de cadeia de caracteres.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -59,7 +59,7 @@ REPLACE ( string_expression , string_pattern , string_replacement )
   
  Se *string_expression* não for do tipo **varchar(max)** ou **nvarchar(max), REPLACE** truncará o valor retornado em 8.000 bytes. Para retornar valores com mais de 8.000 bytes, *string_expression* deve ser convertida explicitamente em um tipo de dados de valor grande.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  REPLACE efetua comparações com base na ordenação da entrada. Para fazer uma comparação em uma ordenação especificada, use [COLLATE](~/t-sql/statements/collations.md) para aplicar uma ordenação explícita à entrada.  
   
  0x0000 (**char(0)** ) é um caractere indefinido em ordenações do Windows e não pode ser incluído em REPLACE.  

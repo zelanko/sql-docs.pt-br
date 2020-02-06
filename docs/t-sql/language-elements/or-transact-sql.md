@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 78e19aa69d5d5141be7b142074a1c4d120ea8519
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68121865"
 ---
 # <a name="or-transact-sql"></a>OR (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68121865"
 
   Combina duas condições. Quando mais de um operador lógico é usado em uma instrução, operadores OR são avaliados depois de operadores AND. Entretanto, é possível alterar a ordem de avaliação usando parênteses.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -50,14 +50,14 @@ boolean_expression OR boolean_expression
 ## <a name="result-value"></a>Valor do resultado  
  OR retorna TRUE quando qualquer uma das condições é TRUE.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  A tabela a seguir mostra o resultado do operador OR.  
   
-||TRUE|FALSE|UNKNOWN|  
+||TRUE|FALSE|DESCONHECIDO|  
 |------|----------|-----------|-------------|  
 |**TRUE**|TRUE|TRUE|TRUE|  
-|**FALSE**|TRUE|FALSE|UNKNOWN|  
-|**UNKNOWN**|TRUE|UNKNOWN|UNKNOWN|  
+|**FALSE**|TRUE|FALSE|DESCONHECIDO|  
+|**UNKNOWN**|TRUE|DESCONHECIDO|DESCONHECIDO|  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir usa a exibição `vEmployeeDepartmentHistory` para recuperar os nomes dos funcionários de `Quality Assurance` que trabalham no turno da tarde ou da noite. Se os parênteses forem omitidos, a consulta retornará funcionários de `Quality Assurance` que trabalham no turno da tarde e todos os funcionários que trabalham no turno da noite.  

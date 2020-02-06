@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1d3cbf58a3a85d84daf5b0f83006a7cdcb24b589
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982254"
 ---
 # <a name="log-transact-sql"></a>LOG (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "73982254"
 
   Retorna o logaritmo natural da expressão **float** especificada no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -60,16 +60,16 @@ LOG ( float_expression )
 ## <a name="return-types"></a>Tipos de retorno  
  **float**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Por padrão, **LOG()** retorna o logaritmo natural. Começando com o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], é possível alterar a base do logaritmo para outro valor usando o parâmetro *base* opcional.  
   
  O logaritmo natural é o logaritmo na base **e**, em que **e** é uma constante irracional aproximadamente igual a 2,718281828.  
   
- O logaritmo natural do exponencial de um número é o próprio número: LOG( EXP( *n* ) ) = *n*. E o exponencial do logaritmo natural de um número é o próprio número: EXP( LOG( *n* ) ) = *n*.  
+ O logaritmo natural do exponencial de um número é o próprio número: LOG( EXP( *n* ) ) = *n*. Além disso, o exponencial do logaritmo natural de um número é o próprio número: EXP( LOG( *n* ) ) = *n*.  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-calculating-the-logarithm-for-a-number"></a>A. Calculando o logaritmo de um número.  
+### <a name="a-calculating-the-logarithm-for-a-number"></a>a. Calculando o logaritmo de um número.  
  O exemplo a seguir calcula o `LOG` para a expressão **float** especificada.  
   
 ```  

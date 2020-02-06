@@ -18,10 +18,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8808dc2befdcb2c31218e7dc155921bb10947e14
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68419592"
 ---
 # <a name="joins-sql-server"></a>Joins (SQL Server)
@@ -178,7 +178,7 @@ As Junções adaptáveis de [Modo de lote](../../relational-databases/query-proc
 > [!TIP]
 > As cargas de trabalho com oscilações frequentes entre verificações de entradas de junção pequenas e grandes terão mais benefícios com esse recurso.
 
-A decisão de tempo de execução se baseia nas seguintes etapas:
+A decisão de runtime se baseia nas seguintes etapas:
 -  Se a contagem de linhas da entrada de junção de build for pequena o suficiente para que uma Junção de loops aninhados seja mais ideal do que uma Junção Hash, o plano será alternado para um algoritmo de Loops Aninhados.
 -  Se a entrada de junção de build exceder um limite de contagem de linhas específico, o plano não mudará e continuará com uma Junção hash.
 
@@ -222,14 +222,14 @@ No plano, observe o seguinte:
 ### <a name="adaptive-join-remarks"></a>Comentários de junção adaptável
 As junções adaptáveis apresentam um requisito de memória maior do que um plano equivalente de Junção de Loops Aninhados indexados. A memória adicional é solicitada como se os Loops Aninhados fossem uma Junção hash. Também há sobrecarga para a fase de build como uma operação de “parar e ir” em vez de uma junção equivalente de fluxo de Loops Aninhados. Com esse custo adicional vem a flexibilidade para cenários em que as contagens de linhas podem flutuar na entrada de build.
 
-As Junções adaptáveis de modo de lote funcionam para a execução inicial de uma instrução. Depois que são compiladas, as próximas execuções permanecem adaptáveis com base no limite de Junção Adaptável compilada e nas linhas de tempo de execução que passam pela fase de build da entrada externa.
+As Junções adaptáveis de modo de lote funcionam para a execução inicial de uma instrução. Depois que são compiladas, as próximas execuções permanecem adaptáveis com base no limite de Junção Adaptável compilada e nas linhas de runtime que passam pela fase de build da entrada externa.
 
 Se uma Junção Adaptável alterna para uma operação de Loops Aninhados, ela usa as linhas já lidas pelo build de Junção Hash. O operador **não** lê novamente as linhas de referência externa novamente.
 
 ### <a name="tracking-adaptive-join-activity"></a>Controlando a atividade da Junção adaptável
 O operador de Junção Adaptável tem os seguintes atributos de operador de plano:
 
-|Atributo de plano|Descrição|
+|Atributo de plano|DESCRIÇÃO|
 |---|---|
 |AdaptiveThresholdRows|Mostra o uso de limite para alternar de uma junção hash para uma junção de loops aninhados.|
 |EstimatedJoinType|Qual é o provável tipo de junção.|

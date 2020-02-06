@@ -16,10 +16,10 @@ ms.assetid: 91ecb1cd-001d-4ac9-9ae8-5db05c3c2959
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 04b3bdcd2b495513500d07583fadc910fe9c13a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954680"
 ---
 # <a name="executeupdate-method-javalangstring"></a>Método executeUpdate (java.lang.String)
@@ -32,7 +32,7 @@ Executa a instrução SQL fornecida, que pode ser INSERT, UPDATE, MERGE ou DELET
 public final int executeUpdate(java.lang.String sql)
 ```
 
-#### <a name="parameters"></a>Parâmetros
+#### <a name="parameters"></a>parâmetros
 *sql*
 
 Uma **String** que contém a instrução SQL.
@@ -43,7 +43,7 @@ Um **int** que indica o número de linhas afetadas ou 0 se uma instrução DDL e
 ## <a name="exceptions"></a>Exceções
 [SQLServerException](./sqlserverexception-class.md)
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Comentários
 Esse método executeUpdate é especificado pelo método executeUpdate na interface java.sql.PreparedStatement.
 
 Chamar esse método resultará em uma exceção, uma vez que a instrução SQL para o objeto SQLServerPreparedStatement é especificada quando o objeto é criado.

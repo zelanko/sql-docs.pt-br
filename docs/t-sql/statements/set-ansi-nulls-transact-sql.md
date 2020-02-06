@@ -26,13 +26,13 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 651af5040782bc729d5bca48fa2285e14e709e10
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67929173"
 ---
-# <a name="set-ansinulls-transact-sql"></a>SET ANSI_NULLS (Transact-SQL)
+# <a name="set-ansi_nulls-transact-sql"></a>SET ANSI_NULLS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   Especifica o comportamento compatível com ISO dos operadores de comparação Igual a (=) e Diferente de (<>) quando usados com valores nulos na [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -40,7 +40,7 @@ ms.locfileid: "67929173"
 > [!IMPORTANT]  
 > Em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ANSI_NULLS estará ON e quaisquer aplicativos que definam explicitamente a opção como OFF gerarão um erro. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam.
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -56,7 +56,7 @@ SET ANSI_NULLS { ON | OFF }
 SET ANSI_NULLS ON
 ```
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 Quando ANSI_NULLS é definido como ON, uma instrução SELECT que usa WHERE *column_name* = **NULL** retornará zero linha, mesmo que haja valores nulos em *column_name*. Uma instrução SELECT usando WHERE *column_name* <> **NULL** retorna zero linha mesmo que haja valores não nulos em *column_name*.  
   
 Quando ANSI_NULLS for OFF, os operadores de comparação Igual a (=) e Não Igual a (<>) não seguem o padrão ISO. Uma instrução SELECT que usa WHERE *column_name* = **NULL** retorna as linhas que têm valores nulos em *column_name*. Uma instrução SELECT que usa WHERE *column_name* <> **NULL** retorna as linhas que têm valores não nulos na coluna. Além disso, uma instrução SELECT que usa WHERE *column_name* <> *XYZ_value* retorna todas as linhas que não são *XYZ_value* e que não são nulas.  
@@ -67,12 +67,12 @@ A tabela a seguir mostra como a configuração de ANSI_NULLS afeta os resultados
   
 |Expressão booliana|SET ANSI_NULLS ON|SET ANSI_NULLS OFF|  
 |---------------|---------------|------------|  
-|NULL = NULL|UNKNOWN|TRUE|  
-|1 = NULL|UNKNOWN|FALSE|  
-|NULL <> NULL|UNKNOWN|FALSE|  
-|1 <> NULL|UNKNOWN|TRUE|  
-|NULL > NULL|UNKNOWN|UNKNOWN|  
-|1 > NULL|UNKNOWN|UNKNOWN|  
+|NULL = NULL|DESCONHECIDO|TRUE|  
+|1 = NULL|DESCONHECIDO|FALSE|  
+|NULL <> NULL|DESCONHECIDO|FALSE|  
+|1 <> NULL|DESCONHECIDO|TRUE|  
+|NULL > NULL|DESCONHECIDO|DESCONHECIDO|  
+|1 > NULL|DESCONHECIDO|DESCONHECIDO|  
 |NULL IS NULL|TRUE|TRUE|  
 |1 IS NULL|FALSE|FALSE|  
 |NULL IS NOT NULL|FALSE|FALSE|  

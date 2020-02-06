@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 30977ed0baff058c838403b436a4da497c5ac4c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68121990"
 ---
 # <a name="not-transact-sql"></a>NOT (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68121990"
 
   Nega uma entrada booliana.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -51,7 +51,7 @@ ms.locfileid: "68121990"
 ## <a name="result-value"></a>Valor do resultado  
  NOT inverte o valor de qualquer expressão booliana.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Usar NOT nega uma expressão.  
   
  A tabela a seguir mostra os resultados ao comparar valores TRUE e FALSE que usam o operador NOT.  
@@ -60,7 +60,7 @@ ms.locfileid: "68121990"
 |------|---------|  
 |**TRUE**|FALSE|  
 |**FALSE**|TRUE|  
-|**UNKNOWN**|UNKNOWN|  
+|**UNKNOWN**|DESCONHECIDO|  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir localiza todas as bicicletas coloridas prateadas que não têm um preço padrão acima de $ 400.  

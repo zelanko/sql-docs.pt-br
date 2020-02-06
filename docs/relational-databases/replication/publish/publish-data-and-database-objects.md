@@ -41,13 +41,13 @@ helpviewer_keywords:
 ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7c0e87750bb408e617a94185ad85b101e8893711
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 5db7d4d73c4d6c03ce31935a9eb874bdd605fa99
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769899"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287600"
 ---
 # <a name="publish-data-and-database-objects"></a>Publicar dados e objetos de banco de dados
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -82,7 +82,7 @@ ms.locfileid: "68769899"
 -   Um nome e descrição para a publicação.  
   
  Para obter informações sobre como trabalhar com publicações, consulte os tópicos a seguir:    
--   [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)    
+-   [Criar uma publicação](../../../relational-databases/replication/publish/create-a-publication.md)    
 -   [Defina um Artigo](../../../relational-databases/replication/publish/define-an-article.md)    
 -   [Exibir e modificar as propriedades da publicação](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)    
 -   [Exibir e modificar as propriedades do artigo](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)    
@@ -97,7 +97,7 @@ ms.locfileid: "68769899"
   
 -   [Filtrar os dados publicados](../../../relational-databases/replication/publish/filter-published-data.md)    
 -   [Article Options for Transactional Replication](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)
--   [Article Options for Merge Replication](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)    
+-   [Opções de artigos para a replicação de mesclagem](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)    
 -   [Replicar colunas de identidade](../../../relational-databases/replication/publish/replicate-identity-columns.md)  
   
  Ao publicar uma tabela para replicação, você pode especificar quais objetos de esquema devem ser copiados para o Assinante, como integridade referencial declarada (restrições de chave primária, restrições de referência, restrições exclusivas), índices, gatilhos DML de usuário (os disparadores DDL não podem ser replicados), propriedades estendidas e ordenação. As propriedades estendidas são replicadas apenas na sincronização inicial entre o Editor e o Assinante. Se você adicionar ou modificar uma propriedade estendida depois da sincronização inicial, a alteração não será replicada.  
@@ -228,7 +228,7 @@ ms.locfileid: "68769899"
     |Limite de intervalo de identidade|**\@threshold**|  
     |Opções de partição|**\@partition_options**|  
     |Fluxo de coluna de blob|**\@stream_blob_columns**|  
-    |Tipo de filtro|**\@filter_type** (parâmetro em **sp_addmergefilter**)|  
+    |Tipo do filtro|**\@filter_type** (parâmetro em **sp_addmergefilter**)|  
   
      Para obter mais informações sobre esses parâmetros, consulte [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) e [sp_addmergefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md).  
   

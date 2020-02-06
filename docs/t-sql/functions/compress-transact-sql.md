@@ -16,10 +16,10 @@ ms.assetid: c2bfe9b8-57a4-48b4-b028-e1a3ed5ece88
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6fd94c5062e0f268e902c69c154834430bf9e6f4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67943128"
 ---
 # <a name="compress-transact-sql"></a>COMPRESS (Transact-SQL)
@@ -27,7 +27,7 @@ ms.locfileid: "67943128"
 
 Esta função compacta a expressão de entrada usando o algoritmo GZIP. A função retorna uma matriz de bytes do tipo **varbinary(max)** .
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -48,7 +48,7 @@ Um
 * **varbinary(***n***)**
 * **varchar(max)**
 
-ou em
+ou
 
 * **varchar(***n***)**
 
@@ -57,14 +57,14 @@ expressão. Para saber mais, veja [Expressões &#40;Transact-SQL&#41;](../../t-s
 ## <a name="return-types"></a>Tipos de retorno
 **varbinary(max)** representa o conteúdo compactado da entrada.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 Dados compactados não podem ser indexados.
   
 A função `COMPRESS` compacta os dados de expressão de entrada. É necessário invocar essa função para cada seção de dados a ser compactada. Veja [Compactação de dados](../../relational-databases/data-compression/data-compression.md) para saber mais sobre a compactação de dados automática durante o armazenamento no nível de linha ou página.
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-compress-data-during-the-table-insert"></a>A. Compactar dados durante a inserção de tabela  
+### <a name="a-compress-data-during-the-table-insert"></a>a. Compactar dados durante a inserção de tabela  
 O seguinte exemplo mostra como compactar dados inseridos em uma tabela:
   
 ```sql

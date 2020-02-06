@@ -24,10 +24,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e82b1b58fb4ed880f288ae98148f6c16da1907fd
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72903816"
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>Usar o Assistente para Indexação de Texto Completo
@@ -47,7 +47,7 @@ ms.locfileid: "72903816"
   
 5.  **Coluna de Tipo.** Selecione o nome da coluna que possui o tipo de documento de coluna que está sendo indexado com texto completo.  
 
-> **OBSERVAÇÃO:** a **Coluna de Tipo** só será habilitada quando a coluna nomeada na coluna **Colunas Disponíveis** for do tipo **varbinary(max)** ou **image**.  
+> **OBSERVAÇÃO:** a  **Coluna de Tipo** só será habilitada quando a coluna nomeada na coluna **Colunas Disponíveis** for do tipo **varbinary(max)** ou **image**.  
   
 6. **Semântica Estatística.** Especifique se habilitará a indexação semântica da coluna selecionada. Para obter mais informações, veja [Pesquisa semântica &#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md).  
   
@@ -78,17 +78,17 @@ ms.locfileid: "72903816"
   
 9.  **Selecione o catálogo de texto completo**  
 
-     **Selecionar um catálogo:** Selecione um catálogo de texto completo na lista. O catálogo padrão para o banco de dados será o item selecionado por padrão na lista. Se não houver catálogos disponíveis, a lista permanecerá desabilitada e a caixa de seleção **Criar um novo catálogo** estará marcada e desabilitada.  
+     **Selecionar um catálogo:** selecione um catálogo de texto completo na lista. O catálogo padrão para o banco de dados será o item selecionado por padrão na lista. Se não houver catálogos disponíveis, a lista permanecerá desabilitada e a caixa de seleção **Criar um novo catálogo** estará marcada e desabilitada.  
   
   OU
   
  10. **Criar um novo catálogo**
  - Selecione o catálogo de texto completo.  
   
-    A. **Nome**  
+    a. **Nome**  
      Insira um nome para o novo catálogo de texto completo.  
   
-     B. **Definir como catálogo padrão**  
+     b. **Definir como catálogo padrão**  
      Marque para tornar este o catálogo padrão do banco de dados.  
   
      c. **Distinção de acentos**  
@@ -98,7 +98,7 @@ ms.locfileid: "72903816"
      Especifique o grupo de arquivos no qual criar o índice de texto completo.  
   
      e. Selecione um valor:  
-      |Valor|Descrição|  
+      |Valor|DESCRIÇÃO|  
       |-----------|-----------------|
       |**<default>**| Se a tabela ou exibição não for particionada, selecione para usar o mesmo grupo de arquivos da tabela ou exibição subjacente. Se a tabela ou a exibição for particionada, o grupo de arquivos primário será utilizado|
       |**PRIMARY**|Selecione para usar o grupo de arquivos primário para o novo índice de texto completo.|
@@ -112,7 +112,7 @@ ms.locfileid: "72903816"
   
      Selecione um destes valores:  
   
-   |Valor|Descrição|  
+   |Valor|DESCRIÇÃO|  
     |-----------|-----------------|  
     |**<system>**|Selecione para usar a lista de palavras irrelevantes do sistema no novo índice de texto completo. Esse é o padrão.|  
     |**<off>**|Selecione para desabilitar as listas de palavras irrelevantes para o novo índice de texto completo.|  

@@ -16,10 +16,10 @@ ms.assetid: 4ab6a671-9573-4b95-8c23-364306c60d25
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ae80a8c33f68ad2f3d2c85b1343a5cc0f2b423c5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67952873"
 ---
 # <a name="getcolumnprivileges-method-sqlserverdatabasemetadata"></a>Método getColumnPrivileges (SQLServerDatabaseMetaData)
@@ -37,7 +37,7 @@ public java.sql.ResultSet getColumnPrivileges(java.lang.String catalog,
                                               java.lang.String col)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *catalog*  
   
  Uma **String** que contém o nome do catálogo.  
@@ -60,21 +60,21 @@ public java.sql.ResultSet getColumnPrivileges(java.lang.String catalog,
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse método getColumnPrivileges é especificado pelo método getColumnPrivileges na interface java.sql.DatabaseMetaData.  
   
  O conjunto de resultados retornado pelo método getColumnPrivileges conterá as seguintes informações:  
   
-|Nome|Tipo|Descrição|  
+|Nome|Type|DESCRIÇÃO|  
 |----------|----------|-----------------|  
-|TABLE_CAT|**String**|O nome do catálogo.|  
-|TABLE_SCHEM|**String**|O nome do esquema da tabela.|  
-|TABLE_NAME|**String**|O nome da tabela.|  
-|COLUMN_NAME|**String**|O nome da coluna.|  
-|GRANTOR|**String**|O objeto que concede o acesso.|  
-|GRANTEE|**String**|O objeto que recebe o acesso.|  
-|PRIVILEGE|**String**|O tipo de acesso concedido.|  
-|IS_GRANTABLE|**String**|Indica se o usuário autorizado tem permissão para conceder acesso a outros usuários.|  
+|TABLE_CAT|**Cadeia de caracteres**|O nome do catálogo.|  
+|TABLE_SCHEM|**Cadeia de caracteres**|O nome do esquema da tabela.|  
+|TABLE_NAME|**Cadeia de caracteres**|O nome da tabela.|  
+|COLUMN_NAME|**Cadeia de caracteres**|O nome da coluna.|  
+|GRANTOR|**Cadeia de caracteres**|O objeto que concede o acesso.|  
+|GRANTEE|**Cadeia de caracteres**|O objeto que recebe o acesso.|  
+|PRIVILEGE|**Cadeia de caracteres**|O tipo de acesso concedido.|  
+|IS_GRANTABLE|**Cadeia de caracteres**|Indica se o usuário autorizado tem permissão para conceder acesso a outros usuários.|  
   
 > [!NOTE]  
 >  Para saber mais sobre os dados retornados pelo método getColumnPrivileges, consulte "sp_column_privileges (Transact-SQL)" nos Manuais Online do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  

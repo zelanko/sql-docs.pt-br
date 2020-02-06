@@ -11,10 +11,10 @@ ms.assetid: 91ed017b-6567-4bf2-b9f1-e2b5c70a5343
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8f7474200fa8156ab0663540611803276375ad6b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71281188"
 ---
 # <a name="catalogcreate_environment_variable-ssisdb-database"></a>catalog.create_environment_variable (Banco de Dados SSISDB)
@@ -64,7 +64,7 @@ catalog.create_environment_variable [@folder_name =] folder_name
  0 (êxito)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- None  
+ Nenhum  
   
 ## <a name="permissions"></a>Permissões  
  Este procedimento armazenado exige uma das seguintes permissões:  
@@ -84,7 +84,7 @@ catalog.create_environment_variable [@folder_name =] folder_name
   
 -   O usuário não tem as permissões apropriadas  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Uma variável de ambiente pode ser usada para atribuir um valor com eficiência a um parâmetro de projeto ou parâmetro de pacote para uso na execução de um pacote. As variáveis de ambiente habilitam a organização de valores de parâmetros. Os nomes de variável devem ser exclusivos dentro de um ambiente.  
   
  O procedimento armazenado valida o tipo de dados da variável para ter certeza de que tem suporte pelo catálogo do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
@@ -104,7 +104,7 @@ catalog.create_environment_variable [@folder_name =] folder_name
 |**Int32**|**int**|  
 |**Int64**|**bigint**|  
 |**Single**|Numérico exato: **decimal**, **numeric**; Numérico aproximado: **float**, **real**|  
-|**String**|**varchar**, **nvarchar**, **char**|  
+|**Cadeia de caracteres**|**varchar**, **nvarchar**, **char**|  
 |**UInt32**|**int** (**int** é o mapeamento disponível mais próximo para **Uint32**.)|  
 |**UInt64**|**bigint** (**int** é o mapeamento disponível mais próximo para **Uint64**.)|  
   

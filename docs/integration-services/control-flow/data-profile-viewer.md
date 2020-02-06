@@ -16,10 +16,10 @@ ms.assetid: b9043428-ce26-45bb-910c-588d07579565
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4c4924ee6dd1c053119f7ceaf97cd1dbd4d7e95f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294224"
 ---
 # <a name="data-profile-viewer"></a>Visualizador de Perfil de Dados
@@ -117,7 +117,7 @@ ms.locfileid: "71294224"
  **Count**  
  Exibe o número de linhas nas quais o valor da coluna cujo perfil está sendo criado tem o tamanho mostrado na coluna **Tamanho** .  
   
- **Porcentagem**  
+ **Percentual**  
  Exibe o percentual de linhas nas quais o valor da coluna cujo perfil está sendo criado tem o tamanho exibido na coluna **Tamanho** .  
   
 #### <a name="profile-type--column-null-ratio-profile"></a>Tipo de Perfil = Perfil de Razão Nula de Coluna  
@@ -142,7 +142,7 @@ ms.locfileid: "71294224"
  **Padrão**  
  Exibe os padrões computados para a coluna cujo perfil está sendo criado.  
   
- **Porcentagem**  
+ **Percentual**  
  Exibe o percentual de linhas cujos valores correspondem ao padrão exibido na coluna **Padrão** .  
   
 #### <a name="profile-type--column-statistics-profile"></a>Tipo de Perfil = Perfil de Estatísticas da Coluna  
@@ -170,13 +170,13 @@ ms.locfileid: "71294224"
  Exibe o número de linhas na tabela ou exibição.  
   
 ##### <a name="detailed-value-distribution-pane"></a>Painel Distribuição de Valor Detalhado  
- **Value**  
+ **Valor**  
  Exibe os valores distintos encontrados na coluna cujo perfil está sendo criado.  
   
  **Count**  
  Exibe o número de linhas nas quais a coluna cujo perfil está sendo criado tem o valor exibido na coluna **Valor** .  
   
- **Porcentagem**  
+ **Percentual**  
  Exibe o percentual de linhas nas quais a coluna cujo perfil está sendo criado tem o valor exibido na coluna **Valor** .  
   
 #### <a name="profile-type--candidate-key-profile"></a>Tipo de Perfil = Perfil-Chave de Candidato  
@@ -230,7 +230,7 @@ ms.locfileid: "71294224"
 #### <a name="profile-type--value-inclusion-profile"></a>Tipo de Perfil = Perfil de Inclusão de Valor  
   
 ##### <a name="value-inclusion-profile-pane"></a>Painel do Perfil de Inclusão de Valor  
- **Colunas Laterais do Subconjunto**  
+ **Colunas Laterais de Subconjunto**  
  Exibe a coluna ou combinação de colunas cujo perfil foi criado para determinar se elas estão nas colunas do superconjunto.  
   
  **Colunas Laterais de Superconjunto**  

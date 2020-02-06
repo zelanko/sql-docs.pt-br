@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fb5211a2d45ef1a5495d1df57143190f1d5f6419
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67927377"
 ---
 # <a name="and-transact-sql"></a>AND (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "67927377"
 
   Combina duas expressões boolianas e retorna **TRUE** quando ambas as expressões são **TRUE**. Quando mais de um operador lógico é usado em uma instrução, os operadores **AND** são avaliados primeiro. É possível alterar a ordem de avaliação usando parênteses.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -52,18 +52,18 @@ boolean_expression AND boolean_expression
 ## <a name="result-value"></a>Valor do resultado  
  Retorna TRUE quando as duas expressões são TRUE.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O gráfico a seguir mostra os resultados ao comparar valores TRUE e FALSE usando o operador AND.  
   
-||TRUE|FALSE|UNKNOWN|  
+||TRUE|FALSE|DESCONHECIDO|  
 |------|----------|-----------|-------------|  
-|**TRUE**|TRUE|FALSE|UNKNOWN|  
+|**TRUE**|TRUE|FALSE|DESCONHECIDO|  
 |**FALSE**|FALSE|FALSE|FALSE|  
-|**UNKNOWN**|UNKNOWN|FALSE|UNKNOWN|  
+|**UNKNOWN**|DESCONHECIDO|FALSE|DESCONHECIDO|  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-the-and-operator"></a>A. Usando o operador AND  
+### <a name="a-using-the-and-operator"></a>a. Usando o operador AND  
  O exemplo seguinte seleciona informações sobre funcionários que têm o título de `Marketing Assistant` e mais de `41` horas de férias disponíveis.  
   
 ```  

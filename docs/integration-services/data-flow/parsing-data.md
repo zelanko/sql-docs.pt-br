@@ -14,10 +14,10 @@ ms.assetid: 8893ea9d-634c-4309-b52c-6337222dcb39
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 71582dbdccc331ec4b43d87071952879f304395c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292270"
 ---
 # <a name="parsing-data"></a>Análise de dados
@@ -51,7 +51,7 @@ A análise rápida fornece um conjunto de rotinas simples e rápidas para analis
 ## <a name="numeric-data-formats-fast-parse"></a>Formatos de dados numéricos (análise rápida)
 A análise rápida fornece uma análise de dados rápida e simples a um conjunto de rotinas sem diferenciação de localidade. A análise rápida suporta apenas um conjunto limitado de formatos para tipos de dados de números inteiros.  
   
-### <a name="integer-data-type"></a>Tipo de dados Integer
+### <a name="integer-data-type"></a>Tipo de dados inteiros
  Os tipos de dados de números inteiros que o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornece são DT_I1, DT_UI1, DT_I2, DT_UI2, DT_I4, DT_UI4, DT_I8 e DT_UI8. Para obter mais informações, consulte [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
  A análise rápida suporta os seguintes formatos para tipos de dados de números inteiros:  
@@ -90,7 +90,7 @@ A análise rápida fornece um conjunto de rotinas simples e rápidas para analis
   
 -   Os formatos ISO 8601, como listados na seguinte tabela:  
   
-    |Formato|Descrição|  
+    |Formatar|DESCRIÇÃO|  
     |------------|-----------------|  
     |AAAAMMDD<br /><br /> AAAA-MM-DD|Os formatos básico e estendido para um ano de quatro dígitos, um mês de dois dígitos e um dia de dois dígitos. No formato estendido, as datas são separadas por um hífen (-).|  
     |AAAA-MM|Os formatos básico e estendido de precisão reduzida para um ano de quatro dígitos e um mês de dois dígitos. No formato estendido, as datas são separadas por um hífen (-).|  
@@ -112,7 +112,7 @@ A análise rápida fornece um conjunto de rotinas simples e rápidas para analis
   
  Para obter mais informações, consulte [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
-### <a name="time-data-type"></a>Tipo de dados de hora
+### <a name="time-data-type"></a>Tipos de dados de tempo
  A análise rápida oferece suporte aos seguintes formatos de cadeia de caracteres para dados de hora:  
   
 -   Formatos de hora que incluem espaços em branco à esquerda. Por exemplo, o valor " 10:24" é válido.  
@@ -121,7 +121,7 @@ A análise rápida fornece um conjunto de rotinas simples e rápidas para analis
   
 -   Os formatos de hora ISO 8601, como listados na seguinte tabela:  
   
-    |Formato|Descrição|  
+    |Formatar|DESCRIÇÃO|  
     |------------|-----------------|  
     |HHMISS<br /><br /> HH:MI:SS|Os formatos básico e estendido para uma hora de dois dígitos, um minuto de dois dígitos e um segundo de dois dígitos. No formato estendido, a hora é separada por dois pontos (:).|  
     |HHMI<br /><br /> HH:MI|Os formatos básico e estendido truncados para uma hora de dois dígitos e um minuto de dois dígitos. No formato estendido, a hora é separada por dois pontos (:).|  
@@ -130,7 +130,7 @@ A análise rápida fornece um conjunto de rotinas simples e rápidas para analis
   
 -   Os formatos de hora que especificam um fuso horário, como listados na seguinte tabela:  
   
-    |Formato|Descrição|  
+    |Formatar|DESCRIÇÃO|  
     |------------|-----------------|  
     |+HH:MI<br /><br /> +HHMI|Os formatos básico e estendido que indicam o número de horas e minutos que são adicionados ao tempo universal coordenado (UTC) para obter a hora local.|  
     |-HH:MI<br /><br /> -HHMI|Os formatos básico e estendido que indicam o número de horas e minutos que são subtraídos do UTC para obter a hora local.|  
@@ -148,7 +148,7 @@ A análise rápida fornece um conjunto de rotinas simples e rápidas para analis
   
 -   Os formatos de hora que incluem uma fração decimal, como listados na seguinte tabela:  
   
-    |Formato|Descrição|  
+    |Formatar|DESCRIÇÃO|  
     |------------|-----------------|  
     |HH [.nnnnnnn]|n é um valor entre 0 e 9999999 que representa uma fração de horas. As chaves indicam que esse valor é opcional.<br /><br /> Por exemplo, o valor 12.750 indica 12:45.|  
     |HHMI [.nnnnnnn]<br /><br /> HH:MI [.nnnnnnn]|n é um valor entre 0 e 9999999 que representa uma fração de minutos. As chaves indicam que esse valor é opcional.<br /><br /> Por exemplo, o valor 1220.500 indica 12:20:30.|  
@@ -180,10 +180,10 @@ A análise rápida fornece um conjunto de rotinas simples e rápidas para analis
   
 |Parte de data e hora|Preenchimento|  
 |---------------------|-------------|  
-|Seconds (segundos)|Adicione 00.|  
-|Minutes (minutos)|Adicionar 00:00.|  
+|Segundos|Adicione 00.|  
+|minutos|Adicionar 00:00.|  
 |Hora|Adicione 00:00:00.|  
-|Day|Adicione 01 para o dia do mês.|  
+|Dia|Adicione 01 para o dia do mês.|  
 |Month|Adicione 01 para o mês do ano.|  
   
  Para obter mais informações, consulte [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  

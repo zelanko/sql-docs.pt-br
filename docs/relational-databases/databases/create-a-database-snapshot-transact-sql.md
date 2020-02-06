@@ -13,10 +13,10 @@ ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 652ef86f26f92068465668cadeccf8e193db1f90
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71708283"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>Criar um instantâneo do banco de dados (Transact-SQL)
@@ -45,13 +45,13 @@ ms.locfileid: "71708283"
 ##  <a name="Recommendations"></a> Recomendações  
  Esta seção aborda as seguintes práticas recomendadas:  
   
--   [Melhor prática: Nomeando instantâneos do banco de dados](#Naming)  
+-   [Prática recomendada: Nomeando instantâneos de bancos de dados](#Naming)  
   
--   [Melhor prática: Limitando o número de instantâneos do banco de dados](#Limiting_Number)  
+-   [Prática recomendada: Limitando o número de instantâneos de banco de dados](#Limiting_Number)  
   
--   [Melhor prática: Conexões de cliente com um instantâneo do banco de dados](#Client_Connections)  
+-   [Prática recomendada: Conexões do cliente a um instantâneo de banco de dados](#Client_Connections)  
   
-####  <a name="Naming"></a> Melhor prática: Nomeando instantâneos de banco de dados  
+####  <a name="Naming"></a> Prática recomendada: Nomeando instantâneos de bancos de dados  
  Antes de criar instantâneos, é importante considerar como serão nomeados. Cada instantâneo de banco de dados requer um nome exclusivo de banco de dados. Para facilidade administrativa, o nome de um instantâneo pode inserir informações que identifiquem o banco de dados, como:  
   
 -   O nome do banco de dados de origem.  
@@ -76,13 +76,13 @@ AdventureWorks_snapshot_noon
 AdventureWorks_snapshot_evening  
 ```  
   
-#### <a name="Limiting_Number"></a> Melhor prática: Limitando o número de instantâneos de banco de dados  
+#### <a name="Limiting_Number"></a> Prática recomendada: Limitando o número de instantâneos de banco de dados  
  Criar uma série de instantâneos do longo do tempo captura instantâneos sequenciais do banco de dados de origem. Cada instantâneo persiste até que seja explicitamente descartado. Como cada instantâneo continuará crescendo à medida que as páginas originais forem atualizadas, você pode preferir conservar espaço de disco excluindo um instantâneo mais antigo depois de criar um instantâneo novo.  
   
 
 **Observação!** Para reverter a um instantâneo de banco de dados, você precisa excluir qualquer outro instantâneo desse banco de dados.  
   
-####  <a name="Client_Connections"></a> Melhor prática: Conexões do cliente a um instantâneo de banco de dados  
+####  <a name="Client_Connections"></a> Prática recomendada: Conexões do cliente a um instantâneo de banco de dados  
  Para usar um instantâneo de banco de dados, os clientes precisam saber onde encontrá-lo. Os usuários podem ler de um instantâneo de banco de dados enquanto outro está sendo criado ou excluído. Porém, quando você substituir um instantâneo novo por um já existente, será necessário redirecionar os clientes ao novo instantâneo. Os usuários podem se conectar manualmente a um instantâneo de banco de dados por meio do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. No entanto, para dar suporte a um ambiente de produção, você deverá criar uma solução programática que direcione de maneira transparente os clientes de gravação de relatório ao último instantâneo de banco de dados do banco de dados.  
   
 
@@ -97,11 +97,11 @@ AdventureWorks_snapshot_evening
   
 1.  Com base no tamanho atual do banco de dados de origem, verifique se você tem espaço em disco suficiente para suportar o instantâneo do banco de dados. O tamanho máximo de um instantâneo do banco de dados é o tamanho do banco de dados de origem no momento da criação do instantâneo. Para obter mais informações, consulte [Exibir o tamanho do arquivo esparso de um instantâneo de banco de dados &#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md).  
   
-2.  Emita uma instrução CREATE DATABASE nos arquivos usando a cláusula AS SNAPSHOT OF. Criar um instantâneo requer especificar o nome lógico de cada arquivo de banco de dados do banco de dados de origem. A sintaxe é a seguinte:  
+2.  Emita uma instrução CREATE DATABASE nos arquivos usando a cláusula AS SNAPSHOT OF. Criar um instantâneo requer especificar o nome lógico de cada arquivo de banco de dados do banco de dados de origem. A sintaxe é mostrada a seguir:  
 
      CREATE DATABASE *database_snapshot_name*  
   
-     ON  
+     ATIVADO  
   
      (  
   
@@ -127,7 +127,7 @@ AdventureWorks_snapshot_evening
   
  Esta seção contém os seguintes exemplos:  
   
--   A. [Criando um instantâneo no banco de dados AdventureWorks](#Creating_on_AW)  
+-   a. [Criando um instantâneo no banco de dados AdventureWorks](#Creating_on_AW)  
   
 -   B. [Criando um instantâneo no banco de dados Vendas](#Creating_on_Sales)
   

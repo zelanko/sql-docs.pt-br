@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 4badf632e87404b0c3496564abec6ca9a56e3747
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67909520"
 ---
 # <a name="specify-fill-factor-for-an-index"></a>Especificar fator de preenchimento para um índice
@@ -80,7 +80,7 @@ ms.locfileid: "67909520"
   
 6.  Expanda **Especificação de Preenchimento**, selecione a linha **Fator de Preenchimento** e digite o fator de preenchimento que você deseja na linha.  
   
-7.  Clique em **Fechar**.  
+7.  Clique em **fechar**  
   
 8.  No menu **Arquivo** , selecione **Salvar**_table_name_.  
   
