@@ -24,10 +24,10 @@ ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0c5c86d90536d1ba7c8acd5402317ff364ffdc67
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73637953"
 ---
 # <a name="data-flow-performance-features"></a>Recursos de desempenho de fluxo de dados
@@ -98,7 +98,7 @@ ms.locfileid: "73637953"
 ## <a name="configuring-individual-data-flow-components"></a>Configurando componentes individuais de Fluxo de Dados  
  Para configurar componentes individuais de fluxo de dados para um melhor desempenho, existem algumas instruções gerais que podem ser consideradas. Também há instruções específicas para cada tipo de componente de fluxo de dados: origem, transformação e destino.  
   
-### <a name="general-guidelines"></a>Instruções gerais  
+### <a name="general-guidelines"></a>Diretrizes gerais  
  Independente do componente de fluxo de dados, existem duas instruções gerais que devem ser seguidas para melhorar o desempenho: otimizar consultas e evitar cadeias de caracteres desnecessárias.  
   
 #### <a name="optimize-queries"></a>Otimizar Consultas  
@@ -151,7 +151,7 @@ ms.locfileid: "73637953"
   
  Normalmente, os componentes mais lentos na transformação Dimensão Alteração Lenta são as transformações Comando de OLE DB que executam UPDATEs (atualizações) em apenas uma linha por vez. Portanto, a forma mais eficaz de melhorar o desempenho da transformação Dimensão Alteração Lenta é substituir as transformações Comando de OLE DB. Essas transformações podem ser substituídas por componentes de destino que salvam todas as linhas que serão atualizadas para uma tabela de preparação. Por isso, é possível adicionar uma tarefa Executar SQL que desenvolva uma única instrução UPDATE Transact-SQL com base no conjunto em todas as linhas ao mesmo tempo.  
   
- Usuários avançados podem criar um fluxo de dados personalizado para alterar o processamento da dimensão que é otimizada lentamente em dimensões maiores. Para ver uma discussão e um exemplo desta abordagem, confira a seção "Cenário de dimensão exclusivo", no white paper, [Projeto REAL: Práticas de design ETL de Business Intelligence](https://www.microsoft.com/download/details.aspx?id=14582).  
+ Usuários avançados podem criar um fluxo de dados personalizado para alterar o processamento da dimensão que é otimizada lentamente em dimensões maiores. Para obter exemplos e informações a respeito desse procedimento, consulte a seção "Cenário de dimensão exclusiva" no white paper [Projeto REAL: Práticas recomendadas ETL de criação no Business Intelligence](https://www.microsoft.com/download/details.aspx?id=14582).  
   
 ### <a name="destinations"></a>Destinos  
  Para atingir um melhor desempenho com destinos, considere o uso de um destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e teste o desempenho do destino.  
@@ -174,9 +174,9 @@ ms.locfileid: "73637953"
 ## <a name="related-content"></a>Conteúdo relacionado  
  **Artigos e postagens de blog**  
   
--   Artigo técnico, [SQL Server 2005 Integration Services: A Strategy for Performance](https://go.microsoft.com/fwlink/?LinkId=98899), no technet.microsoft.com  
+-   Artigo técnico sobre [SQL Server 2005 Integration Services: uma estratégia para o desempenho](https://go.microsoft.com/fwlink/?LinkId=98899)no site technet.microsoft.com  
   
--   Artigo técnico, [Integration Services: Performance Tuning Techniques](https://go.microsoft.com/fwlink/?LinkId=98900), no technet.microsoft.com  
+-   Artigo técnico, [Integration Services: técnicas de ajuste de desempenho](https://go.microsoft.com/fwlink/?LinkId=98900), em technet.microsoft.com  
   
 -   Artigo técnico sobre como [aumentar a taxa de transferência dos pipelines dividindo transformações síncronas em várias tarefas](https://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/SQLCAT's%20Guide%20to%20BI%20and%20Analytics.pdf), no _Guia do SQLCAT para BI e Análise_
   
@@ -206,6 +206,6 @@ ms.locfileid: "73637953"
   
 ## <a name="see-also"></a>Consulte Também  
  [Solucionando problemas de ferramentas para desenvolvimento de pacotes](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)   
- [Solucionando problemas de ferramentas para execução de pacotes](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
+ [Ferramentas de solução de problemas de execução de pacote](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
   
