@@ -23,10 +23,10 @@ ms.assetid: 059a39a6-9d32-4d3f-965b-0a1ce75229c7
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: d17e61de477b896a8fcdaead01d12674d3b9fddc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68061017"
 ---
 # <a name="create-cryptographic-provider-transact-sql"></a>CREATE CRYPTOGRAPHIC PROVIDER (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68061017"
 
   Cria um provedor criptográfico no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a partir de um provedor EKM (Gerenciamento Extensível de Chaves).  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -51,7 +51,7 @@ CREATE CRYPTOGRAPHIC PROVIDER provider_name
  *path_of_DLL*  
  É o caminho do arquivo .dll que implementa o Gerenciamento Extensível de Chaves do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ao usar o **Conector do SQL Server para Microsoft Azure Key Vault**, a localização padrão é **'C:\Program Files\Microsoft SQL Server Connector for Microsoft Azure Key Vault\Microsoft.AzureKeyVaultService.EKM.dll'** .  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Todas as chaves criadas por um provedor farão referência ao provedor por meio de seu GUID. O GUID é retido em todas as versões da DLL.  
   
  A DLL que implementa a interface SQLEKM deve ser assinada digitalmente usando qualquer certificado. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verificará a assinatura. Isso inclui sua cadeia de certificados, que deve ter sua raiz instalada no local **Autoridades de Certificação Raiz Confiáveis** em um sistema Windows. Se a assinatura não for verificada corretamente, a instrução CREATE CRYPTOGRAPHIC PROVIDER falhará. Para obter mais informações sobre certificados e cadeias de certificados, consulte [Certificados e chaves assimétricas do SQL Server](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  

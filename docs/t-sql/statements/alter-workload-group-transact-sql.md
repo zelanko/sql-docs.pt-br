@@ -18,10 +18,10 @@ ms.assetid: 957addce-feb0-4e54-893e-5faca3cd184c
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 47b924754f221b93e8f9e661a1b12afb5f07fcd4
-ms.sourcegitcommit: 8c1c6232a4f592f6bf81910a49375f7488f069c4
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70026227"
 ---
 # <a name="alter-workload-group-transact-sql"></a>ALTER WORKLOAD GROUP (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "70026227"
 
   Altera uma configuração existente de grupo de cargas de trabalho do Resource Governor e a atribui opcionalmente a um pool de recursos do Resource Governor.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -142,7 +142,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 > [!NOTE]  
 > A opção "default" diferencia maiúsculas de minúsculas.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  ALTER WORKLOAD GROUP é permitido no grupo padrão.  
   
  As alterações na configuração do grupo de cargas de trabalho não entrarão em vigor enquanto ALTER RESOURCE GOVERNOR RECONFIGURE não for executado. Ao alterar um plano que afeta a configuração, a nova configuração apenas terá efeito nos planos anteriormente armazenados em cache após a execução de DBCC FREEPROCCACHE (*pool_name*), em que *pool_name* é o nome de um pool de recursos do Resource Governor ao qual o grupo de carga de trabalho está associado.  
@@ -156,7 +156,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
   
  Ao executar instruções DDL, é recomendável estar familiarizado com os estados do Resource Governor. Para obter mais informações, consulte [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).  
   
- REQUEST_MEMORY_GRANT_PERCENT: Em [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], a criação de índice tem permissão para usar mais memória do workspace do que a concedida inicialmente para melhorar o desempenho. Esse tratamento especial tem suporte do Administrador de Recursos em versões posteriores. No entanto, a concessão inicial e qualquer concessão de memória adicional estão limitadas pelas configurações de pool de recursos e de grupo de cargas de trabalho.  
+ REQUEST_MEMORY_GRANT_PERCENT: no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], a criação de índice pode usar mais memória do workspace do que aquela inicialmente concedida a fim de melhorar o desempenho. Esse tratamento especial tem suporte do Administrador de Recursos em versões posteriores. No entanto, a concessão inicial e qualquer concessão de memória adicional estão limitadas pelas configurações de pool de recursos e de grupo de cargas de trabalho.  
   
  **Criação de índice em uma tabela particionada**  
   

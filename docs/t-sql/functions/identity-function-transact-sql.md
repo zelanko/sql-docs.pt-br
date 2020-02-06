@@ -22,10 +22,10 @@ ms.assetid: ebec77eb-fc02-4feb-b6c5-f0098d43ccb6
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: a4711f9673ba5acf7a4a7398588c6e27f80a9179
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68024496"
 ---
 # <a name="identity-function-transact-sql"></a>IDENTITY (função) (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68024496"
 > [!NOTE]  
 >  Para criar um número incrementado automaticamente, que possa ser usado em várias tabelas ou ser chamado de aplicativos, sem referenciar tabelas, consulte [Números de Sequência](../../relational-databases/sequence-numbers/sequence-numbers.md).  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -61,7 +61,7 @@ IDENTITY (data_type [ , seed , increment ] ) AS column_name
 ## <a name="return-types"></a>Tipos de retorno  
  Retorna o mesmo que *data_type*.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Como essa função cria uma coluna em uma tabela, um nome para a coluna deve ser especificado na lista de seleção de uma destas maneiras:  
   
 ```  

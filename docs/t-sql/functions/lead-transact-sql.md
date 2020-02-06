@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1eaed4b8cc26cd1705aacb74e102be2e33b443e6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68059945"
 ---
 # <a name="lead-transact-sql"></a>LEAD (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68059945"
 
   Acessa os dados de uma linha seguinte no mesmo conjunto de resultados sem o uso de uma autojunção começando pelo [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. LEAD fornece acesso a uma linha a um determinado deslocamento físico que segue a linha atual. Use essa função analítica em uma instrução SELECT para comparar valores na linha atual com valores em uma linha seguinte.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -60,7 +60,7 @@ LEAD ( scalar_expression [ ,offset ] , [ default ] )
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-compare-values-between-years"></a>A. Comparar valores entre anos  
+### <a name="a-compare-values-between-years"></a>a. Comparar valores entre anos  
  A consulta usa a função LEAD para retornar a diferença em cotas de vendas para um funcionário específico nos anos subsequentes. Observe que, como não há um valor inicial disponível para a última linha, o padrão de zero (0) é retornado.  
   
 ```sql  

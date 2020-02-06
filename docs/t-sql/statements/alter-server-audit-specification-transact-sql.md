@@ -19,19 +19,19 @@ helpviewer_keywords:
 ms.assetid: 9cac288b-940e-4c16-88d6-de06aeed2b47
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7bc8d1e1a84ddacbffe5b830e1b5931eb94a5f14
-ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
+ms.openlocfilehash: 497cf728ab104f706de0fbd8fd6946c481dd4c55
+ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70745325"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77004685"
 ---
 # <a name="alter-server-audit-specification-transact-sql"></a>ALTER SERVER AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Altera um objeto de especificação de auditoria de servidor usando o recurso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit. Para obter mais informações, veja [Auditoria do SQL Server &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -59,7 +59,7 @@ ALTER SERVER AUDIT SPECIFICATION audit_specification_name
  WITH **(** STATE **=** { ON | OFF } **)**  
  Habilita ou desabilita a auditoria de registros de coleta para essa especificação de auditoria.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Defina o estado de uma especificação de auditoria com a opção OFF para fazer alterações em uma especificação de auditoria. Se ALTER SERVER AUDIT SPECIFICATION for executada quando uma especificação de auditoria estiver habilitada com quaisquer opções diferentes de STATE=OFF, você receberá uma mensagem de erro.  
   
 ## <a name="permissions"></a>Permissões  
@@ -73,8 +73,9 @@ ALTER SERVER AUDIT SPECIFICATION audit_specification_name
 ```  
 ALTER SERVER AUDIT SPECIFICATION HIPAA_Audit_Specification  
 FOR SERVER AUDIT HIPAA_Audit  
-    DROP (FAILED_LOGIN_GROUP)  
-    ADD (DATABASE_OBJECT_ACCESS_GROUP);  
+    DROP (FAILED_LOGIN_GROUP),  
+    ADD (DATABASE_OBJECT_ACCESS_GROUP)  
+    WITH (STATE=ON);  
 GO  
 ```  
   

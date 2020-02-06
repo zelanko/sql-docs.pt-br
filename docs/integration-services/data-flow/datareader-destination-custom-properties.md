@@ -11,10 +11,10 @@ ms.assetid: f151c3e8-3811-457d-a3d3-6158ca65a646
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 5b2e9ebcf8464b17712d36fc43c86b7785de9ae7
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293002"
 ---
 # <a name="datareader-destination-custom-properties"></a>Propriedades personalizadas do destino DataReader
@@ -26,10 +26,10 @@ ms.locfileid: "71293002"
   
  A tabela a seguir descreve as propriedades personalizadas do destino DataReader. Todas as propriedades, exceto **DataReader** , são de leitura/gravação.  
   
-|Nome da propriedade|Tipo de Dados|Descrição|  
+|Nome da propriedade|Tipo de Dados|DESCRIÇÃO|  
 |-------------------|---------------|-----------------|  
-|DataReader|Cadeia de caracteres|O nome da classe do destino DataReader.|  
-|FailOnTimeout|Booliano|Indica se deve haver falha na ocorrência de **ReadTimeout** . O valor padrão dessa propriedade é **False**.|  
+|DataReader|String|O nome da classe do destino DataReader.|  
+|FailOnTimeout|Boolean|Indica se deve haver falha na ocorrência de **ReadTimeout** . O valor padrão dessa propriedade é **False**.|  
 |ReadTimeout|Integer|O número de milissegundos antes de um tempo limite. O valor padrão dessa propriedade é 30000 (30 segundos).|  
   
  A entrada e as colunas de entrada do destino DataReader não têm nenhuma propriedade personalizada.  

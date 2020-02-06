@@ -22,10 +22,10 @@ ms.assetid: 44121ee7-ef40-405d-b03b-f8ddb4e3c559
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 02f5056aae7eb7691be3842481ee8381198ddaeb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67984294"
 ---
 # <a name="drop-application-role-transact-sql"></a>DROP APPLICATION ROLE (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "67984294"
 
   Remove uma função de aplicativo do banco de dados atual.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,7 +46,7 @@ DROP APPLICATION ROLE rolename
  *rolename*  
  Especifica o nome da função de aplicativo a ser descartada.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Se a função de aplicativo possuir protegíveis, não poderá ser descartada. Antes de descartar uma função de aplicativo que possui itens protegíveis, é necessário transferir a propriedade dos itens protegíveis primeiro ou descartá-los.  
   
 > [!CAUTION]  
