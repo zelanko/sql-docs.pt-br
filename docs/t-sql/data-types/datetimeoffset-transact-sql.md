@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 699d7779c3409a69d4389a96b93feab1cae3f9e0
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70148836"
 ---
 # <a name="datetimeoffset-transact-sql"></a>datetimeoffset (Transact-SQL)
@@ -71,7 +71,7 @@ Define a data combinada com uma hora de um dia que possui reconhecimento de fuso
 ## <a name="supported-string-literal-formats-for-datetimeoffset"></a>Formatos de literal de cadeia de caracteres compatíveis com datetimeoffset
 A tabela a seguir lista os formatos de literal de cadeia de caracteres ISO 8601 compatíveis com **datetimeoffset**. Para obter informações sobre os formatos alfabéticos, numéricos, não separados e de hora para as partes de data e hora de **datetimeoffset**, consulte [date &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md) e [time &#40;Transact-SQL&#41;](../../t-sql/data-types/time-transact-sql.md).
   
-|ISO 8601|Descrição|  
+|ISO 8601|DESCRIÇÃO|  
 |---|---|
 |YYYY-MM-DDThh:mm:ss[.nnnnnnn][{+&#124;-}hh:mm]|Esses dois formatos não são afetados pelas configurações de localidade de sessão SET LANGUAGE e SET DATEFORMAT. Não são permitidos espaços entre as partes **datetimeoffset** e **datetime**.|  
 |AAAA-MM-DDThh:mm:ss[.nnnnnnn]Z (UTC)|Esse formato, pela definição ISO, indica que a parte de **datetime** deve ser expressa em UTC (Tempo Universal Coordenado). Por exemplo, 1999-12-12 12:30:30.12345 -07:00 deve ser representado como 1999-12-12 19:30:30.12345Z.|  
@@ -197,7 +197,7 @@ SELECT @datetimeoffset AS '@datetimeoffset', @datetime2 AS '@datetime2';
 ```  
   
 ### <a name="converting-string-literals-to-datetimeoffset"></a>Convertendo literais de cadeia de caracteres em datetimeoffset
-Serão permitidas conversões de literais de cadeia de caracteres para tipos de data e hora se todas as partes da cadeia de caracteres estiverem em formatos válidos. Caso contrário, será gerado um erro de tempo de execução. As conversões implícitas ou explícitas que não especificam um estilo, de tipos de data e hora em literais de cadeia de caracteres estarão no formato padrão da sessão atual. A tabela a seguir mostra as regras de conversão de uma literal de cadeia de caracteres no tipo de dados **datetimeoffset**.
+Serão permitidas conversões de literais de cadeia de caracteres para tipos de data e hora se todas as partes da cadeia de caracteres estiverem em formatos válidos. Caso contrário, será gerado um erro de runtime. As conversões implícitas ou explícitas que não especificam um estilo, de tipos de data e hora em literais de cadeia de caracteres estarão no formato padrão da sessão atual. A tabela a seguir mostra as regras de conversão de uma literal de cadeia de caracteres no tipo de dados **datetimeoffset**.
   
 |Literal de cadeia de caracteres de entrada|**datetimeoffset(n)**|  
 |---|---|
@@ -234,7 +234,7 @@ SELECT
   
 |Tipo de dados|Saída|  
 |---|---|
-|**Time**|12:35:29. 1234567|  
+|**Hora**|12:35:29. 1234567|  
 |**Data**|2007-05-08|  
 |**Smalldatetime**|2007-05-08 12:35:00|  
 |**Datetime**|2007-05-08 12:35:29.123|  

@@ -40,10 +40,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7ccced8b93b5f657d8fd0afe96f95d7b9f8a98a6
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981716"
 ---
 # <a name="select---order-by-clause-transact-sql"></a>SELECT – Cláusula ORDER BY (Transact-SQL)
@@ -56,7 +56,7 @@ ms.locfileid: "73981716"
   
 -   Determine a ordem na qual os valores da [função de classificação](../../t-sql/functions/ranking-functions-transact-sql.md) serão aplicados ao conjunto de resultados.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 > [!NOTE]  
 >  ORDER BY não é compatível com as instruções SELECT/INTO ou CREATE TABLE AS SELECT (CTAS) no [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] nem no [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
@@ -137,7 +137,7 @@ ORDER BY SchemaName + ''; -- wrong
   
  Nos planos de execução de consulta, o valor da contagem de linhas de deslocamento é exibido no atributo **Rows** ou **Top** do operador de consulta TOP.  
   
-## <a name="best-practices"></a>Práticas recomendadas  
+## <a name="best-practices"></a>Práticas Recomendadas  
  Evite especificar inteiros na cláusula ORDER BY como representações de posição das colunas na lista de seleção. Por exemplo, embora uma instrução como `SELECT ProductID, Name FROM Production.Production ORDER BY 2` seja válida, ela não é entendida por outros com tanta facilidade quanto com a especificação do nome de coluna real. Além disso, as alterações na lista de seleção, como a alteração da ordem das colunas ou a adição de novas colunas, exigirão a modificação da cláusula ORDER BY para evitar resultados inesperados.  
   
  Em uma instrução SELECT TOP (*N*), sempre use uma cláusula ORDER BY. Essa é a única forma de indicar de maneira previsível as linhas que são afetadas por TOP. Para obter mais informações, confira [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md).  
@@ -212,7 +212,7 @@ ORDER BY SchemaName + ''; -- wrong
 ###  <a name="BasicSyntax"></a> Sintaxe básica  
  Os exemplos nesta seção demonstram a funcionalidade básica da cláusula ORDER BY usando a sintaxe mínima necessária.  
   
-#### <a name="a-specifying-a-single-column-defined-in-the-select-list"></a>A. Especificando uma única coluna definida na lista de seleção  
+#### <a name="a-specifying-a-single-column-defined-in-the-select-list"></a>a. Especificando uma única coluna definida na lista de seleção  
  O exemplo a seguir classifica o conjunto de resultados pela coluna numérica `ProductID`. Como não foi especificada nenhuma ordem de classificação específica, o padrão (ordem crescente) é usado.  
   
 ```sql
@@ -262,7 +262,7 @@ ORDER BY DATEPART(year, HireDate);
   
 ###  <a name="SortOrder"></a> Especificando a ordem de classificação crescente e decrescente  
   
-#### <a name="a-specifying-a-descending-order"></a>A. Especificando uma ordem decrescente  
+#### <a name="a-specifying-a-descending-order"></a>a. Especificando uma ordem decrescente  
  O exemplo a seguir classifica o conjunto de resultados pela coluna numérica `ProductID` na ordem decrescente.  
   
 ```sql
@@ -366,7 +366,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
   
 **Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
-#### <a name="a-specifying-integer-constants-for-offset-and-fetch-values"></a>A. Especificando constantes inteiras para valores de OFFSET e FETCH  
+#### <a name="a-specifying-integer-constants-for-offset-and-fetch-values"></a>a. Especificando constantes inteiras para valores de OFFSET e FETCH  
  O exemplo a seguir especifica uma constante inteira como o valor das cláusulas OFFSET e FETCH. A primeira consulta retorna todas as linhas classificadas pela coluna `DepartmentID`. Compare os resultados retornados por essa consulta com os resultados das duas consultas seguintes. A próxima consulta usa a cláusula `OFFSET 5 ROWS` para ignorar as cinco primeiras linhas e retornar todas as linhas restantes. A consulta final usa a cláusula `OFFSET 0 ROWS` para iniciar com a primeira linha e depois usa `FETCH NEXT 10 ROWS ONLY` para limitar as linhas retornadas a 10 linhas do conjunto de resultados classificado.  
   
 ```sql

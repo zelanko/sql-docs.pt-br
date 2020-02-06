@@ -20,11 +20,11 @@ ms.assetid: fa20fee4-884d-4301-891a-c03e901345ae
 author: pmasl
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c7fa3d9db220dcacf425399600166858300489dc
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.openlocfilehash: 0b6f470a08c3605f9ea5afa5fff1f7b6cbd17f1b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72798420"
 ---
 # <a name="len-transact-sql"></a>LEN (Transact-SQL)
@@ -35,7 +35,7 @@ Retorna o número de caracteres da expressão de cadeia de caracteres especifica
 > [!NOTE]  
 > Para retornar o número de bytes usado para representar uma expressão, use a função [DATALENGTH](../../t-sql/functions/datalength-transact-sql.md).  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -52,7 +52,7 @@ LEN ( string_expression )
   
  Se você estiver usando ordenações de caracteres suplementares, o valor inteiro retornado contará os pares alternativos UTF-16 como um único caractere. Para obter mais informações, consulte [Suporte a ordenações e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 LEN exclui os espaços à direita. Se isso for um problema, considere usar a função [DATALENGTH &#40;Transact-SQL&#41;](../../t-sql/functions/datalength-transact-sql.md), que não corta a cadeia de caracteres. Se estiver processando uma cadeia de caracteres unicode, DATALENGTH retornará um número que pode não ser igual ao número de caracteres. O exemplo a seguir demonstra LEN e DATALENGTH com um espaço à direita.  
   
 ```sql  
@@ -66,7 +66,7 @@ SELECT LEN(@v2) AS [nvarchar LEN], DATALENGTH(@v2) AS [nvarchar DATALENGTH];
 ```  
 
 > [!NOTE]
-> Ao usar [LEN](../../t-sql/functions/len-transact-sql.md) a fim de retornar o número de caracteres codificados para determinada expressão da cadeia de caracteres ou [DATALENGTH](../../t-sql/functions/datalength-transact-sql.md) para retornar o tamanho em bytes de determinada expressão de cadeia de caracteres, as saídas podem diferir, dependendo do tipo de dado e do tipo de codificação usado na coluna. Para obter mais informações sobre as diferenças de armazenamento entre diferentes tipos de codificação, confira [Suporte a agrupamentos e Unicode](../../relational-databases/collations/collation-and-unicode-support.md).
+> Use [LEN](../../t-sql/functions/len-transact-sql.md) para retornar o número de caracteres codificados em determinada expressão de cadeia de caracteres e [DATALENGTH](../../t-sql/functions/datalength-transact-sql.md) para retornar o tamanho em bytes de determinada expressão de cadeia de caracteres. Essas saídas podem ser diferentes dependendo do tipo de dados e do tipo de codificação usado na coluna. Para obter mais informações sobre as diferenças de armazenamento entre diferentes tipos de codificação, confira [Suporte a agrupamentos e Unicode](../../relational-databases/collations/collation-and-unicode-support.md).
 
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir seleciona o número de caracteres e os dados de `FirstName` para pessoas localizadas na `Australia`. Este exemplo usa o banco de dados AdventureWorks.  
