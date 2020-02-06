@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3bfdfb5c3579b43ada97c9ef72b72dbaf3d29308
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982943"
 ---
 # <a name="indexproperty-transact-sql"></a>INDEXPROPERTY (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "73982943"
 
   Retorna o índice nomeado ou valor de propriedade de estatísticas de um número de identificação de tabela, índice ou nome de estatísticas e nome de propriedade especificados. Retorna NULL para índices XML.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -53,7 +53,7 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
 > [!NOTE]  
 >  A menos que indicado o contrário, NULL é retornado quando *property* não é um nome de propriedade válido, *object_ID* não é uma ID de objeto válida, *object_ID* é um tipo de objeto sem suporte para a propriedade especificada ou o chamador não tem permissão para exibir os metadados do objeto.  
   
-|Propriedade|Descrição|Valor|  
+|Propriedade|DESCRIÇÃO|Valor|  
 |--------------|-----------------|-----------|  
 |**IndexDepth**|Profundidade do índice.|Número de níveis de índice.<br /><br /> NULL = O índice XML ou saída não é válido.|  
 |**IndexFillFactor**|Valor do fator de preenchimento usado quando o índice foi criado ou reconstruído pela última vez.|Fator de preenchimento|  

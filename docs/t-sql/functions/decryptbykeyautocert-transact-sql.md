@@ -18,10 +18,10 @@ ms.assetid: 6b45fa2e-ffaa-46f7-86ff-5624596eda4a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: a8772e2e1ecb001b26db02750ae134f545180113
-ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71314561"
 ---
 # <a name="decryptbykeyautocert-transact-sql"></a>DECRYPTBYKEYAUTOCERT (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "71314561"
 
 Essa função descriptografa dados com uma chave simétrica. Essa chave simétrica descriptografa automaticamente com um certificado.  
 
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -69,7 +69,7 @@ Uma variável que contém dados dos quais um autenticador é gerado. Deve corres
 ## <a name="return-types"></a>Tipos de retorno  
 **varbinary**, com um tamanho máximo de 8.000 bytes.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 `DECRYPTBYKEYAUTOCERT` combina a funcionalidade de `OPEN SYMMETRIC KEY` e de `DECRYPTBYKEY`. Em uma única operação, ele primeiro descriptografa uma chave simétrica e depois descriptografa o texto cifrado com ela.  
   
 ## <a name="permissions"></a>Permissões  

@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9a26c03eaef6eecf0cee442d2b5b55f599c58065
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68123752"
 ---
 # <a name="create-foreign-key-relationships"></a>Criar relações de chaves estrangeiras
@@ -52,7 +52,7 @@ Criar uma chave estrangeira em uma tabela existente requer a permissão ALTER na
 
 ## <a name="create-a-foreign-key-relationship-in-table-designer"></a>Criar uma relação de chave estrangeira no Designer de Tabela
 
-### <a name="using-sql-server-management-studio"></a>Usando o SQL Server Management Studio
+### <a name="using-sql-server-management-studio"></a>Como usar o SQL Server Management Studio.
 
 1. No Pesquisador de Objetos, clique com o botão direito do mouse na tabela que estará ao lado da chave estrangeira da relação e clique em **Design**.
 
@@ -71,7 +71,7 @@ Criar uma chave estrangeira em uma tabela existente requer a permissão ALTER na
 
 ## <a name="create-a-foreign-key-in-a-new-table"></a>Criar uma chave estrangeira em uma nova tabela
 
-### <a name="using-transact-sql"></a>Usando Transact-SQL
+### <a name="using-transact-sql"></a>Usando o Transact-SQL
 
 O exemplo a seguir cria uma tabela e define uma restrição de chave estrangeira na coluna `TempID` que referencia a coluna `SalesReasonID` na tabela `Sales.SalesReason` do banco de dados do AdventureWorks. As cláusulas ON DELETE CASCADE e ON UPDATE CASCADE são usadas para assegurar a propagação das alterações feitas na tabela `Sales.SalesReason` automaticamente para a tabela `Sales.TempSalesReason` .    
 
@@ -90,7 +90,7 @@ CREATE TABLE Sales.TempSalesReason
 
 ## <a name="create-a-foreign-key-in-an-existing-table"></a>Criar uma chave estrangeira em uma tabela existente
 
-### <a name="using-transact-sql"></a>Usando Transact-SQL
+### <a name="using-transact-sql"></a>Usando o Transact-SQL
 O exemplo a seguir cria uma chave estrangeira na coluna `TempID` que referencia a coluna `SalesReasonID` na tabela `Sales.SalesReason` do banco de dados do AdventureWorks.
 
 ```sql

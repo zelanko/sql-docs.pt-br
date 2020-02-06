@@ -11,10 +11,10 @@ ms.assetid: 414ee58a-8251-4367-9a8e-10c068d17280
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 684f2ec1878e7918f9aa43017feb4b4f8d32cfa1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573818"
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Erro do Reporting Services
@@ -23,16 +23,16 @@ ms.locfileid: "65573818"
   
 |||  
 |-|-|  
-|Nome do produto|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|Nome do Produto|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |ID do evento|rsProcessingError|  
-|Origem do evento|Microsoft.ReportingServices.Diagnostics.Utilities.ErrorStrings.resources|  
+|Origem do Evento|Microsoft.ReportingServices.Diagnostics.Utilities.ErrorStrings.resources|  
 |Componente|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|  
 |Texto da mensagem|Ocorreram erros em processamento de relatório.|  
   
 ## <a name="explanation"></a>Explicação  
  Um ou mais erros foram encontrados durante a publicação, o processamento, a visualização local, a exibição a partir do servidor de relatórios ou a criação de uma assinatura para um relatório. Essa mensagem de erro indica que pelo menos um erro foi detectado.  
   
-### <a name="possible-causes"></a>Causas possíveis  
+### <a name="possible-causes"></a>Possíveis causas  
  As possíveis causas incluem:  
   
 -   Erro de processamento no servidor de relatórios.  

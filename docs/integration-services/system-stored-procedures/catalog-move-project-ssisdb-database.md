@@ -11,10 +11,10 @@ ms.assetid: ef3b0325-d8e9-472b-bf11-7d3efa6312ff
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bcab50f0e1082ecbff8f19a9261a1d7694616b26
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296760"
 ---
 # <a name="catalogmove_project---ssisdb-database"></a>catalog.move_project – Banco de Dados SSISDB
@@ -48,7 +48,7 @@ catalog.move_project [ @source_folder = ] source_folder
  0 (êxito)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- None  
+ Nenhum  
   
 ## <a name="permissions"></a>Permissões  
  Este procedimento armazenado exige uma das seguintes permissões:  
@@ -70,7 +70,7 @@ catalog.move_project [ @source_folder = ] source_folder
   
 -   O usuário não tem as permissões apropriadas  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Quando um projeto é movido de uma pasta de origem para uma pasta de destino, o projeto na pasta de origem e as referências de ambiente correspondentes são excluídos. Na pasta de destino, um projeto idêntico e referências de ambiente são criados. As referências de ambiente serão resolvidas como uma pasta diferente depois da movimentação. As referências absolutas serão resolvidas como a mesma pasta após a movimentação.  
   
 > [!NOTE]  

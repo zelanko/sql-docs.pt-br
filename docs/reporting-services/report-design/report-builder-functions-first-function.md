@@ -9,10 +9,10 @@ ms.assetid: d0914520-30c5-4d63-9b59-8d9342ed63b9
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8d7f2db5b2b212dd529ac800819c5aa58b5d121a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579526"
 ---
 # <a name="report-builder-functions---first-function"></a>Funções do Construtor de Relatórios – Função First
@@ -28,7 +28,7 @@ ms.locfileid: "65579526"
 First(expression, scope)  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *expressão*  
  (**Variant** ou **Binary**) A expressão na qual a agregação será executada, por exemplo, `=Fields!FieldName.Value`.  
   
@@ -38,7 +38,7 @@ First(expression, scope)
 ## <a name="return-type"></a>Tipo de retorno  
  Determinado pelo tipo de expressão.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  A função **First** retorna o primeiro valor em um conjunto de dados depois que toda a classificação e filtragem tiverem sido aplicadas no escopo especificado.  
   
  A função **First** não pode ser usada em expressões de filtro de grupo com qualquer coisa, exceto o escopo atual (padrão).  

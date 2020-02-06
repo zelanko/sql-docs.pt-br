@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ee5e7fd6511a624b05b4d6c7d03c1f2dcd288054
-ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70228438"
 ---
 # <a name="common-errors-with-database-mail"></a>Erros comuns com o Database Mail 
@@ -109,7 +109,7 @@ Para iniciar o Database Mail em um banco de dados host de correio, execute o seg
 EXECUTE dbo.sysmail_start_sp;
 ```
 
-O Service Broker examina o tempo de vida da caixa de diálogo das mensagens quando se encontra ativado; portanto, toda mensagem que estiver na fila de transmissão do Service Broker por mais tempo que o tempo de vida configurado para a caixa de diálogo falhará imediatamente. O Database Mail atualiza o status de mensagens que falharam em [sysmail_allitems](../system-catalog-views/sysmail-allitems-transact-sql.md) e em exibições relacionadas. Você deve decidir se as mensagens de email devem ser enviadas novamente. Para obter mais informações sobre como configurar o tempo de vida do diálogo utilizado pelo Database Mail, veja [sysmail_configure_sp (Transact-SQL)](../system-stored-procedures/sysmail-configure-sp-transact-sql.md).
+O Service Broker examina o tempo de vida da caixa de diálogo das mensagens quando se encontra ativado; portanto, toda mensagem que estiver na fila de transmissão do Service Broker por mais tempo que o tempo de vida configurado para a caixa de diálogo falhará imediatamente. O Database Mail atualiza o status de mensagens que falharam em [sysmail_allitems](../system-catalog-views/sysmail-allitems-transact-sql.md) e em exibições relacionadas. Você deve decidir se as mensagens devem ou não ser enviadas novamente. Para obter mais informações sobre como configurar o tempo de vida do diálogo utilizado pelo Database Mail, veja [sysmail_configure_sp (Transact-SQL)](../system-stored-procedures/sysmail-configure-sp-transact-sql.md).
 
 
 

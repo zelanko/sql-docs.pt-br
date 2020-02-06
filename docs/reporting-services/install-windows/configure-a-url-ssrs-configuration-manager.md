@@ -10,10 +10,10 @@ ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 616d04205fdf079435bf7810a3c6957f0cf8b32f
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73594113"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>Configurar uma URL (Gerenciador de Configurações do SSRS)
@@ -90,7 +90,7 @@ ms.locfileid: "73594113"
   
 9. Clique em **Aplicar** para criar a URL.  
   
-10. Teste a URL clicando no link na seção **URLs** da página. Observe que o banco de dados do servidor de relatório deve ser criado e configurado antes que você possa testar a URL. Para obter instruções, veja [Criar um banco de dados de servidor de relatório do modo nativo &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
+10. Teste a URL clicando no link na seção **URLs** da página. Observe que o banco de dados do servidor de relatório deve ser criado e configurado antes que você possa testar a URL. Para obter instruções, consulte [Criar um banco de dados de servidor de relatório no modo nativo &#40;Gerenciador de Configurações do SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
 
 > [!NOTE]
 >  Se você tiver Associações SSL existentes e Reservas de URL e desejar alterar a Associação de SSL, por exemplo usar um certificado diferente ou cabeçalho de host, é recomendado concluir as etapas a seguir na ordem:  

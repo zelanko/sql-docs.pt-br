@@ -19,10 +19,10 @@ ms.assetid: 651099b0-33b4-453a-a864-b067f21eb8b9
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: f2f37cc56a0d485abc89909e4d02a076b4474c63
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67912231"
 ---
 # <a name="sql-server-identifiers-in-powershell"></a>Identificadores do SQL Server no PowerShell
@@ -32,7 +32,7 @@ O provedor [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para Windows P
   
 > [!NOTE]
 > Há dois módulos do SQL Server PowerShell; **SqlServer** e **SQLPS**. O módulo **SQLPS** está incluído na instalação do SQL Server (para compatibilidade com versões anteriores), mas não está sendo atualizado. O módulo do PowerShell mais atualizado é o módulo do **SqlServer**. O módulo do **SqlServer** contém versões atualizadas dos cmdlets no **SQLPS** e também inclui novos cmdlets para dar suporte aos recursos mais recentes do SQL.  
-> As versões anteriores do módulo do **SqlServer** *foram* incluídas no SQL Server Management Studio (SSMS), mas apenas nas versões 16.x do SSMS. Para usar o PowerShell com o SSMS 17.0 e versões posteriores, o módulo do **SqlServer** deve ser instalado da Galeria do PowerShell.
+> As versões anteriores do módulo do **SqlServer***foram* incluídas no SQL Server Management Studio (SSMS), mas apenas nas versões 16.x do SSMS. Para usar o PowerShell com o SSMS 17.0 e versões posteriores, o módulo do **SqlServer** deve ser instalado da Galeria do PowerShell.
 > Para instalar o módulo do **SqlServer**, consulte [Instalar o SQL Server PowerShell](download-sql-server-ps-module.md).
 
 
@@ -58,7 +58,7 @@ SQLSERVER:\SQL\MyComputer\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing
 |----------------------|-----------|  
 |Descreve como especificar um nome de instância, inclusive o nome do computador no qual a instância está sendo executada.|[Especificar instâncias no provedor do SQL Server PowerShell](specify-instances-in-the-sql-server-powershell-provider.md)|  
 |Descreve como especificar a codificação hexadecimal para caracteres em identificadores delimitados sem suporte em caminhos do Windows PowerShell. Também descreve como decodificar os caracteres hexadecimais.|[Codificar e decodificar identificadores do SQL Server](encode-and-decode-sql-server-identifiers.md)|  
-|Descreve como usar o caractere de escape do Windows PowerShell para caracteres sem suporte em caminhos do PowerShell.|[Retirar identificadores do SQL Server](escape-sql-server-identifiers.md)|  
+|Descreve como usar o caractere de escape do Windows PowerShell para caracteres sem suporte em caminhos do PowerShell.|[Escapar identificadores do SQL Server](escape-sql-server-identifiers.md)|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Provedor do SQL Server PowerShell](sql-server-powershell-provider.md)   

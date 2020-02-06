@@ -16,10 +16,10 @@ ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 668b7343ae893d302a27c0a68aec58e536cffcc9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293275"
 ---
 # <a name="cdc-source"></a>Origem CDC
@@ -45,14 +45,14 @@ ms.locfileid: "71293275"
   
 -   O nome da variável de pacote do estado CDC com base no qual o intervalo de Processamento CDC é determinado. A origem CDC não modifica essa variável.  
   
- Os dados retornados pela Origem CDC são iguais aos retornados pelas funções do CDC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **cdc.fn_cdc_get_all_changes_\<capture-instance-name>** ou **cdc.fn_cdc_get_net_changes_\<capture-instance-name>** (quando disponível). A única adição opcional é a coluna, **__$initial_processing** , que indica se o intervalo de processamento atual pode se sobrepor a uma carga inicial da tabela. Para obter mais informações sobre o processamento inicial, consulte [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md).  
+ Os dados retornados pela Origem CDC são iguais aos retornados pelas funções do CDC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**cdc.fn_cdc_get_all_changes_\<capture-instance-name>** ou **cdc.fn_cdc_get_net_changes_\<capture-instance-name>** (quando disponível). A única adição opcional é a coluna, **__$initial_processing** , que indica se o intervalo de processamento atual pode se sobrepor a uma carga inicial da tabela. Para obter mais informações sobre o processamento inicial, consulte [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md).  
   
  A origem CDC tem uma saída regular e uma saída de erro.  
   
 ## <a name="error-handling"></a>Tratamento de erros  
  A origem CDC tem uma saída de erro. A saída de erro de componente inclui as colunas de saída seguintes:  
   
--   **Código do Erro**: O valor padrão é sempre -1.  
+-   **Código de Erro**: o valor sempre é -1.  
   
 -   **Coluna de Erro**: a coluna de origem que causa o erro (para erros de conversão).  
   
@@ -142,7 +142,7 @@ use <cdc-enabled-database-name>
  **Gerenciador de conexões ADO.NET**  
  Selecione na lista um gerenciador de conexões existente ou clique em **Novo** para criar uma nova conexão. A conexão deve ser a um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está habilitado para CDC e onde a tabela de alteração selecionada está localizada.  
   
- **Nova**  
+ **Novo**  
  Clique em **Nova**. A caixa de diálogo **Configurar Editor do Gerenciador de Conexões ADO.NET** é aberta, na qual você pode criar um novo gerenciador de conexões  
   
  **Tabela CDC**  
@@ -156,7 +156,7 @@ use <cdc-enabled-database-name>
  **Modo de processamento CDC**  
  Selecione o modo de processamento que melhor trata suas necessidades de processamento. As opções possíveis são:  
   
--   **Tudo**: retorna as alterações no intervalo CDC atual sem os valores **Antes da Atualização**.  
+-   **Tudo**: retorna as alterações no intervalo CDC atual sem os valores **Antes da Atualização** .  
   
 -   **Todos com valores antigos**: retorna as alterações no intervalo de processamento CDC atual, incluindo os valores antigos (**Antes da Atualização**). Para cada operação de atualização, haverá duas linhas, uma com os valores antes da atualização e outra com o valor depois da atualização.  
   

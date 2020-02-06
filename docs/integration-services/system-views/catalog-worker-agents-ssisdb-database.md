@@ -11,10 +11,10 @@ ms.assetid: 0bd0d827-e2f1-44fe-aa90-6bf922d68d16
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f2678853d13436811b53b40473a04191625535db
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295139"
 ---
 # <a name="catalogworker_agents-ssisdb-database"></a>catalog.worker_agents (Banco de Dados SSISDB)
@@ -26,18 +26,18 @@ ms.locfileid: "71295139"
 
 Exibe as informações do Trabalho do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out.
 
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |WorkerAgentId|**uniqueidentifier**|A ID do agente de trabalho do Trabalhador do Scale Out.|
 |IsEnabled|**bit**|Se o Trabalho do Scale Out está habilitado.|
 |DisplayName|**nvarchar(256)**|O nome de exibição do Trabalho do Scale Out.|
-|Descrição|**nvarchar(256)**|A descrição do Trabalho do Scale Out.|
+|DESCRIÇÃO|**nvarchar(256)**|A descrição do Trabalho do Scale Out.|
 |MachineName|**nvarchar(256)**|O nome do computador do Trabalho do Scale Out.|
 |Marcas|**nvarchar(max)**|As marcas do Trabalho do Scale Out.|
 |UserAccount|**nvarchar(256)**|A conta de usuário que executa o serviço Trabalho do Scale Out.|
 |LastOnlineTime|**datetimeoffset(7)**|A última vez em que o Trabalho do Scale Out esteve online.|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Comentários
 Essa exibição mostra uma linha para cada Trabalho do Scale Out se conectando ao Mestre do Scale Out trabalhando com o catálogo do SSISDB.
 
 ## <a name="permissions"></a>Permissões

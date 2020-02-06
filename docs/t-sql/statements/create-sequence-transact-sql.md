@@ -23,10 +23,10 @@ ms.assetid: 419f907b-8a72-4d6c-80cb-301df44c24c1
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 2772440c98d103790808564b5cdddcde4c2dfd42
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68117178"
 ---
 # <a name="create-sequence-transact-sql"></a>CREATE SEQUENCE (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "68117178"
   
  Para obter informações e cenários que usam **CREATE SEQUENCE** e a função **NEXT VALUE FOR** , consulte [Números de sequência](../../relational-databases/sequence-numbers/sequence-numbers.md).  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -170,7 +170,7 @@ GRANT CREATE SEQUENCE ON SCHEMA::Test TO [AdventureWorks\Larry]
   
  Se uma sequência utilizar um tipo de dados definido pelo usuário, o autor da sequência deverá ter a permissão REFERENCES nesse tipo.  
   
-### <a name="audit"></a>Auditar o  
+### <a name="audit"></a>Audit  
  Para auditar **CREATE SEQUENCE**, monitore o **SCHEMA_OBJECT_CHANGE_GROUP**.  
   
 ## <a name="examples"></a>Exemplos  
@@ -185,7 +185,7 @@ CREATE SCHEMA Test ;
 GO  
 ```  
   
-### <a name="a-creating-a-sequence-that-increases-by-1"></a>A. Criando uma sequência que aumenta em 1  
+### <a name="a-creating-a-sequence-that-increases-by-1"></a>a. Criando uma sequência que aumenta em 1  
  No exemplo a seguir, Thierry cria uma sequência chamada CountBy1, que aumenta em incrementos de um cada vez que é utilizada.  
   
 ```sql  

@@ -17,10 +17,10 @@ ms.assetid: 5d4652d5-228c-4238-905c-346dd8503fdf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7357e1508172e5b4debbdea99967314c45d53bf4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71299067"
 ---
 # <a name="adding-tasks-programmatically"></a>Adicionando tarefas programaticamente
@@ -40,7 +40,7 @@ ms.locfileid: "71299067"
   
 -   <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>  
   
- Essas classes são consideradas contêineres e todas herdam a propriedade <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSequence.Executables%2A>. Os contêineres podem conter uma coleção de tarefas, que são objetos executáveis processados pelo tempo de execução durante a execução do contêiner. A ordem de execução dos objetos na coleção é determinada em qualquer conjunto <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint> em cada tarefa dos contêineres. Restrições de precedência habilitam a ramificação da execução com base no êxito, falha ou conclusão de um <xref:Microsoft.SqlServer.Dts.Runtime.Executable> na coleção.  
+ Essas classes são consideradas contêineres e todas herdam a propriedade <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSequence.Executables%2A>. Os contêineres podem conter uma coleção de tarefas, que são objetos executáveis processados pelo runtime durante a execução do contêiner. A ordem de execução dos objetos na coleção é determinada em qualquer conjunto <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint> em cada tarefa dos contêineres. Restrições de precedência habilitam a ramificação da execução com base no êxito, falha ou conclusão de um <xref:Microsoft.SqlServer.Dts.Runtime.Executable> na coleção.  
   
  Cada contêiner tem uma coleção <xref:Microsoft.SqlServer.Dts.Runtime.Executables> que contém os objetos individuais <xref:Microsoft.SqlServer.Dts.Runtime.Executable>. Cada tarefa executável herda e implementa os métodos <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Execute%2A> e <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Validate%2A>. Esses dois métodos são chamados pelo mecanismo de tempo de execução para processar cada <xref:Microsoft.SqlServer.Dts.Runtime.Executable>.  
   

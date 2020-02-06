@@ -11,10 +11,10 @@ ms.assetid: b3fb5242-3c4c-4a87-b3e5-beb22fbab053
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bc0bc77fda49e715879dceec60d616143952c265
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296832"
 ---
 # <a name="catalogmove_environment-ssisdb-database"></a>catalog.move_environment (Banco de Dados SSISDB)
@@ -48,7 +48,7 @@ catalog.move_environment [ @source_folder = ] source_folder
  0 (êxito)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- None  
+ Nenhum  
   
 ## <a name="permissions"></a>Permissões  
  Este procedimento armazenado exige uma das seguintes permissões:  
@@ -68,7 +68,7 @@ catalog.move_environment [ @source_folder = ] source_folder
   
 -   O usuário não tem as permissões apropriadas  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  As referências de ambiente de projetos não seguem o ambiente durante a movimentação. As referências de ambiente devem ser atualizadas de forma correspondente. Esse procedimento armazenado terá êxito mesmo que as referências de ambiente sejam desfeitas pela movimentação de um ambiente. As referências de ambiente devem ser atualizadas depois da conclusão desse procedimento armazenado.  
   
 > [!NOTE]  

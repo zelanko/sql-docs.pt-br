@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 329fb8644219d750595ff8a9cb2ddb5a6b804e4d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67951229"
 ---
 # <a name="atomic-blocks-in-native-procedures"></a>Blocos atômicos nos procedimentos nativos
@@ -133,14 +133,14 @@ GO
   
  As seguintes opções são necessárias com **BEGIN ATOMIC**:  
   
-|Configuração necessária|Descrição|  
+|Configuração necessária|DESCRIÇÃO|  
 |----------------------|-----------------|  
 |**TRANSACTION ISOLATION LEVEL**|Os valores com suporte são **SNAPSHOT**, **REPEATABLEREAD**e **SERIALIZABLE**.|  
 |**LANGUAGE**|Determina os formatos de data e hora, e as mensagens do sistema. Todos os idiomas e alias em [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) têm suporte.|  
   
  As seguintes configurações são opcionais:  
   
-|Configuração opcional|Descrição|  
+|Configuração opcional|DESCRIÇÃO|  
 |----------------------|-----------------|  
 |**DATEFORMAT**|Há suporte para todos os formatos de data do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Quando especificado, **DATEFORMAT** substitui o formato de data padrão associado a **LANGUAGE**.|  
 |**DATEFIRST**|Quando especificado, **DATEFIRST** substitui o padrão associado a **LANGUAGE**.|  
@@ -150,16 +150,16 @@ GO
   
 |Opção Set|Padrão do sistema para blocos atômicos|  
 |----------------|--------------------------------------|  
-|ANSI_NULLS|ON|  
-|ANSI_PADDING|ON|  
-|ANSI_WARNING|ON|  
-|ARITHABORT|ON|  
+|ANSI_NULLS|ATIVADO|  
+|ANSI_PADDING|ATIVADO|  
+|ANSI_WARNING|ATIVADO|  
+|ARITHABORT|ATIVADO|  
 |ARITHIGNORE|OFF|  
-|CONCAT_NULL_YIELDS_NULL|ON|  
+|CONCAT_NULL_YIELDS_NULL|ATIVADO|  
 |IDENTITY_INSERT|OFF|  
-|NOCOUNT|ON|  
-|NUMERIC_ROUNDABORT|DESATIVADO|  
-|QUOTED_IDENTIFIER|ON|  
+|NOCOUNT|ATIVADO|  
+|NUMERIC_ROUNDABORT|OFF|  
+|QUOTED_IDENTIFIER|ATIVADO|  
 |ROWCOUNT|0|  
 |TEXTSIZE|0|  
 |XACT_ABORT|OFF<br /><br /> As exceções não capturadas fazem com que o bloco atômico seja revertido, mas não fazem com que a transação seja anulada, a menos que o erro seja decretado por transação.|  

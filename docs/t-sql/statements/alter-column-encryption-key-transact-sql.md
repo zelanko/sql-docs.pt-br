@@ -21,10 +21,10 @@ ms.assetid: c79a220d-e178-4091-a330-c924cc0f0ae0
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: c06fb5b28e1c3ec5bd50b8922bcdf1e5d1b27ff7
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73594397"
 ---
 # <a name="alter-column-encryption-key-transact-sql"></a>ALTER COLUMN ENCRYPTION KEY (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "73594397"
 
   Altera uma chave de criptografia de coluna em um banco de dados, adicionando ou removendo um valor criptografado. Uma chave de criptografia de chave pode ter até dois valores, o que permite a rotação da chave mestra de coluna correspondente. Uma chave de criptografia de coluna é usada ao criptografar colunas usando [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) ou [Always Encrypted com enclaves seguros](../../relational-databases/security/encryption/always-encrypted-enclaves.md). Antes de adicionar um valor de chave de criptografia de coluna, é necessário definir a chave mestra de coluna que foi usada para criptografar o valor usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou a instrução [CREATE MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md).  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -61,7 +61,7 @@ ALTER COLUMN ENCRYPTION KEY key_name
 > [!WARNING]  
 >  Nunca passe valores de CEK de texto não criptografado nesta instrução. Fazer isso comprometerá o benefício desse recurso.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 Normalmente, uma chave de criptografia de coluna é criada com apenas um valor criptografado. Quando uma chave mestra de coluna precisar ser girada (a chave mestra de coluna atual precisa ser substituída pela nova chave mestra de coluna), adicione um novo valor da chave de criptografia de coluna, criptografado com a nova chave mestra de coluna. Esse fluxo de trabalho permitirá que você garanta que os aplicativos cliente possam acessar dados criptografados com a chave de criptografia de coluna enquanto a nova chave mestra de coluna está sendo disponibilizada para os aplicativos cliente. Um driver habilitado para Always Encrypted em um aplicativo cliente que não tem acesso à nova chave mestra poderá usar o valor de chave de criptografia de coluna criptografado com a chave mestra de coluna antiga para acessar dados confidenciais. Os algoritmos de criptografia, compatíveis com o Always Encrypted, exigem que o valor de texto sem formatação tenha 256 bits. 
  
 É recomendável usar ferramentas, como o SSMS (SQL Server Management Studio) ou o PowerShell para alternar chaves mestras de coluna. Confira [Alternar chaves do Always Encrypted usando o SQL Server Management Studio](../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-ssms.md) e [Alternar chaves do Always Encrypted usando o PowerShell](../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md).
@@ -80,7 +80,7 @@ Use [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catal
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-adding-a-column-encryption-key-value"></a>A. Adicionando um valor de chave de criptografia de coluna  
+### <a name="a-adding-a-column-encryption-key-value"></a>a. Adicionando um valor de chave de criptografia de coluna  
  O exemplo a seguir altera uma chave de criptografia de coluna chamada `MyCEK`.  
   
 ```sql  
