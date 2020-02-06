@@ -1,7 +1,6 @@
 ---
-title: Instalar Distributed Replay | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Instalar o Distributed Replay
+titleSuffix: SQL Server Distributed Replay
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -9,20 +8,24 @@ ms.topic: conceptual
 ms.assetid: ea1171da-f50e-4f16-bedc-5e468a46477f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4aa2cc0859972f980e26d67e054dba3c955527c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 4679b1f2ca6de3a358528a7ef24af8f118aa5f45
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67950033"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74992175"
 ---
 # <a name="install-distributed-replay"></a>Instalar o Distributed Replay
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Você pode instalar o Distributed Replay de uma destas três maneiras:  
+
+Você pode instalar o Distributed Replay de uma destas três maneiras:  
   
 -   [Instalar o Distributed Replay por meio do Assistente de Instalação](#bkmk_wizard)  
   
--   [Instalar o Distributed Replay a partir do prompt de comando](#bkmk_command_prompt)  
+-   [Instalar o Distributed Replay usando o prompt de comando](#bkmk_command_prompt)  
   
 -   [Instalar o Distributed Replay usando um arquivo de configuração](#bkmk_configuration_file)  
   
@@ -61,7 +64,7 @@ ms.locfileid: "67950033"
   
      [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Ferramentas  
   
-     \- OU –  
+     \- OU -  
   
      \<Diretório de Recursos Compartilhados>\Tools\\(diretório de recursos compartilhados alternativo fornecido pelo usuário)  
   
@@ -69,7 +72,7 @@ ms.locfileid: "67950033"
   
      C:\Arquivos de Programas\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (x86)\130\Tools  
   
-     \- OU –  
+     \- OU -  
   
      \<Diretório de Recursos Compartilhados (x86)>\Tools\\(diretório de recursos compartilhados [x86] alternativo fornecido pelo usuário)  
   
@@ -83,11 +86,11 @@ ms.locfileid: "67950033"
   
 4.  Na página **Termos de Licença** , leia o contrato de licença e marque a caixa de seleção para aceitar os termos e as condições da licença. Para ajudar a aperfeiçoar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], você também pode habilitar a opção de uso de recursos e enviar relatórios à [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
-5.  Na página **Arquivos de Suporte à Instalação**, clique em **Instalar** para instalar ou atualizar os arquivos de Suporte à Instalação do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+5.  Na página **Arquivos de Suporte à Instalação** , clique em **Instalar** para instalar ou atualizar os arquivos de Suporte à Instalação do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 6.  Na página **Função de Instalação**, selecione **Instalação de Recurso do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** e clique em **Avançar** para continuar para a página **Seleção de Recursos**.  
   
-7.  Na página **Seleção de Recursos**, configure quais recursos você deseja instalar.  
+7.  Na página **Seleção de Recursos** , configure quais recursos você deseja instalar.  
   
     -   Para instalar a ferramenta de administração, selecione **Ferramentas de Gerenciamento – Básicas**.  
   
@@ -115,7 +118,7 @@ ms.locfileid: "67950033"
   
     2.  Em computadores de 64 bits, o caminho de instalação padrão é **C:\Arquivos de Programas (x86)\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\**  
   
-9. Ao concluir, clique em **Avançar**.  
+9. Quando tiver terminado, clique em **Avançar**.  
   
 10. Na página **Regras de Instalação** , a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valida sua configuração de computador. Quando o processo de validação for concluído, clique em **Avançar**.  
   
@@ -153,15 +156,15 @@ ms.locfileid: "67950033"
   
  Use os parâmetros listados na tabela a seguir para desenvolver scripts de linha de comando para a instalação.  
   
-|Parâmetro|Descrição|Valores com suporte|  
+|Parâmetro|DESCRIÇÃO|Valores com suporte|  
 |---------------|-----------------|----------------------|  
 |/CTLRSVCACCOUNT<br /><br /> **Opcional**|Conta de serviço para o serviço do controlador do Distributed Replay Utility.|Verifica a conta e a senha|  
 |/CTLRSVCPASSWORD<br /><br /> **Opcional**|Senha da conta de serviço do controlador do Distributed Replay Controller.|Verifica a conta e a senha|  
-|/CTLRSTARTUPTYPE<br /><br /> **Opcional**|Tipo de inicialização do serviço do controlador do Distributed Replay.|Automatic<br /><br /> Desabilitado<br /><br /> Manual|  
+|/CTLRSTARTUPTYPE<br /><br /> **Opcional**|Tipo de inicialização do serviço do controlador do Distributed Replay.|Automático<br /><br /> Desabilitado<br /><br /> Manual|  
 |/CTLRUSERS<br /><br /> **Opcional**|Especifique os usuários que têm permissões para o serviço do Distributed Replay Controller.|Conjunto de cadeias de contas de usuário que usam " " (espaço) para delimitador<br /><br /> **Importante**: quando você configura o serviço do controlador Distributed Replay, é possível especificar uma ou mais contas de usuário que serão usadas para executar os serviços de cliente do Distributed Replay. Esta é a lista das contas com suporte:<br /><br /> Conta de usuário do domínio<br /><br /> Conta de usuário local criada pelo usuário<br /><br /> Administrador<br /><br /> Administrador<br /><br /> Conta virtual e MSA (Conta de Serviço Gerenciada)<br /><br /> Serviços de rede, serviços locais e sistema<br /><br /> <br /><br /> Observação: não são aceitas contas de grupo (local ou domínio) e outras contas internas (como Todos).|  
 |/CLTSVCACCOUNT<br /><br /> **Opcional**|Conta de serviço para o serviço do cliente do Distributed Replay.|Verifica a conta e a senha|  
 |/CLTSVCPASSWORD<br /><br /> **Opcional**|Senha da conta de serviço do cliente Distributed Replay.|Verifica a conta e a senha|  
-|/CLTSTARTUPTYPE<br /><br /> **Opcional**|Tipo de inicialização do serviço do cliente Distributed Replay.|Automatic<br /><br /> Desabilitado<br /><br /> Manual|  
+|/CLTSTARTUPTYPE<br /><br /> **Opcional**|Tipo de inicialização do serviço do cliente Distributed Replay.|Automático<br /><br /> Desabilitado<br /><br /> Manual|  
 |/CLTCTLRNAME<br /><br /> **Opcional**|O nome do computador com o qual o cliente se comunica para o serviço do controlador do Distributed Replay.||  
 |/CLTWORKINGDIR<br /><br /> **Opcional**|O diretório de trabalho para o serviço do cliente do Distributed Replay.|Caminho válido|  
 |/CLTRESULTDIR<br /><br /> **Opcional**|O diretório de resultado para o serviço do cliente do Distributed Replay.|Caminho válido|  
@@ -217,8 +220,8 @@ Setup.exe /CTLRSVCPASSWORD="ctlrsvcpswd" /CLTSVCPASSWORD="cltsvcpswd" / Configur
 ## <a name="see-also"></a>Consulte Também  
  [Recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [Requisitos do Distributed Replay](../../tools/distributed-replay/distributed-replay-requirements.md)   
+ [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)   
  [Opções de linha de comando da ferramenta de administração &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
- [Configurar Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
+ [Configurar o Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   
