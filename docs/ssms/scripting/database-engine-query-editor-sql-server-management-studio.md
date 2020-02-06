@@ -1,6 +1,6 @@
 ---
-title: Editor de Consultas do Mecanismo de Banco de Dados (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Editor de Consultas do Mecanismo de Banco de Dados (SQL Server Management Studio)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -23,12 +23,12 @@ ms.assetid: 05cfae9b-96d5-4a35-a098-0bc3a548bcfc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 26a6e67287c7a2effdd62604fa492a532ed636bf
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 1a21b567232bf24b561e014de231268632cc4b32
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263500"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253939"
 ---
 # <a name="database-engine-query-editor-sql-server-management-studio"></a>Editor de Consultas do Mecanismo de Banco de Dados (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -70,10 +70,10 @@ ms.locfileid: "68263500"
  **Bancos de Dados Disponíveis**  
  Alteram a conexão com um banco de dados diferente do mesmo servidor.  
   
- **Execute (executar)**  
+ **Executar**  
  Executa o código selecionado ou, se nenhum código estiver selecionado, executa todo o código no Editor de Consultas.  
   
- **Depurador**  
+ **Depurar**  
  Habilita o depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] . Este depurador dá suporte a ações de depuração, como definir pontos de interrupção, detectar variáveis e depurar através de código.  
   
  **Cancelar Consulta de Execução**  
@@ -126,25 +126,25 @@ ms.locfileid: "68263500"
 ## <a name="sql-editor-toolbar"></a>Barra de ferramentas do Editor SQL  
  Quando uma janela do Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] está aberta, você também pode adicionar a barra de ferramentas Depurar selecionando o menu **Exibir** , **Barras de Ferramentas**e, em seguida, **Depurar**. Se você adicionar a barra de ferramentas Depurar quando nenhuma janela do Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] estiver aberta, todos os botões ficarão indisponíveis.  
   
- **Continue**  
+ **Continuar**  
  Executa o código na janela do Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] até encontrar um ponto de interrupção.  
   
  **Interromper Tudo**  
  Define o depurador para interromper todos os processos aos quais o depurador está anexado quando ocorrer uma interrupção.  
   
- **Parar Depuração**  
+ **Parar depuração**  
  Retira a janela selecionada do Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] do modo de depuração e restaura o modo de execução padrão.  
   
  **Mostrar Próxima Instrução**  
  Move o cursor para a próxima instrução a ser executada.  
   
- **Depuração Completa**  
+ **Intervir**  
  A próxima instrução é executada. Se a próxima instrução chamar um procedimento armazenado, uma função ou um gatilho Transact-SQL, o depurador exibirá uma nova janela do **Editor de Consultas** que contém o código do módulo. A janela está no modo de depuração e a execução pausa na primeira instrução do módulo. Você pode mover-se pelo módulo, por exemplo, definindo pontos de interrupção ou percorrendo o código.  
   
- **Depuração Parcial**  
+ **Contornar**  
  A próxima instrução é executada. Se a instrução chamar um procedimento armazenado, uma função ou um gatilho Transact-SQL, o módulo será executado até o fim, e os resultados serão retornados ao código de chamada. Se você tiver certeza de que não há erros no módulo, poderá passar por ele. A execução pausa na instrução que segue a chamada para o módulo.  
   
- **Depuração Circular**  
+ **Sair**  
  Retorna para o próximo nível de chamada mais alto (função, procedimento armazenado ou gatilho). A execução pausa na instrução que segue a chamada do procedimento armazenado, da função ou do gatilho.  
   
  **Windows**  
