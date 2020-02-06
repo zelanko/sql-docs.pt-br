@@ -11,13 +11,13 @@ author: haoqian
 ms.author: haoqian
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 4a1717afb32a5763c6fc73a86151b041069b467c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68038606"
 ---
-# <a name="catalogupdatelogdbinfo-ssisdb-database"></a>catalog.update_logdb_info (Banco de Dados SSISDB)
+# <a name="catalogupdate_logdb_info-ssisdb-database"></a>catalog.update_logdb_info (Banco de Dados SSISDB)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -43,7 +43,7 @@ catalog.update_logdb_info [@server_name = ] server_name, [@connection_string = ]
  0 (êxito)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- None  
+ Nenhum  
 
 ## <a name="permissions"></a>Permissões  
  Este procedimento armazenado exige uma das seguintes permissões:  

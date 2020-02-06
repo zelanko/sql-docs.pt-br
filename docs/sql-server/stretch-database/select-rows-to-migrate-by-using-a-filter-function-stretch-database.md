@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: f744dbde25bf5f7b307ccb44e03de70c1b60cc66
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73844546"
 ---
 # <a name="select-rows-to-migrate-by-using-a-filter-function-stretch-database"></a>Selecionar linhas para migrar usando uma função de filtro (Stretch Database)
@@ -51,11 +51,11 @@ RETURN  SELECT 1 AS is_eligible
         WHERE <predicate>  
 ```  
   
- Os parâmetros da função precisam ser identificadores para colunas da tabela.  
+ Os parâmetros da função precisam ser identificadores para as colunas provenientes da tabela.  
   
  A associação do esquema é necessária para impedir que as colunas usadas pela função de filtro sejam descartadas ou alteradas.  
   
-### <a name="return-value"></a>Valor de retorno  
+### <a name="return-value"></a>Valor retornado  
  Se a função retornar um resultado não vazio, a linha será qualificada para ser migrada. Caso contrário, isto é, se a função não retornar um resultado, a linha não será qualificada para ser migrada.  
   
 ### <a name="conditions"></a>Condições  
@@ -65,7 +65,7 @@ RETURN  SELECT 1 AS is_eligible
 <predicate> ::= <condition> [ AND <condition> ] [ ...n ]  
 ```  
   
- Por sua vez, cada condição pode consistir em uma condição primitiva ou em várias condições primitivas associadas ao operador lógico OR.  
+ Cada condição pode ser formada por uma condição primitiva ou por várias condições primitivas unidas pelo operador lógico OR.  
   
 ```  
 <condition> ::= <primitive_condition> [ OR <primitive_condition> ] [ ...n ]  
@@ -106,7 +106,7 @@ RETURN  SELECT 1 AS is_eligible
   
 -   Aplique o operador IS NULL ou IS NOT NULL a um parâmetro de função.  
   
--   Use o operador IN para comparar um parâmetro de função com uma lista de valores constantes.  
+-   Use o operador IN para comparar um parâmetro de função a uma lista de valores constantes.  
   
      Veja um exemplo que verifica se o valor de uma coluna *shipment_status*  é `IN (N'Completed', N'Returned', N'Cancelled')`.  
   
@@ -136,7 +136,7 @@ RETURN  SELECT 1 AS is_eligible
 ```  
   
 ### <a name="constant-expressions"></a>Expressões de constante  
- As constantes que você usa em uma função de filtro podem ser qualquer expressão determinística que pode ser avaliada ao definir a função. As expressões de constante podem conter os itens a seguir.  
+ As constantes que você usa em uma função de filtro podem ser qualquer expressão determinística que pode ser avaliada ao definir a função. As expressões constantes podem conter o seguinte.  
   
 -   Literais Por exemplo, `N'abc', 123`.  
   
@@ -259,7 +259,7 @@ GO
   
 -   A função deve ser determinística. Portanto, você não pode criar uma função que recalcule automaticamente a janela deslizante com o passar do tempo.  
   
--   A função usa associação do esquema. Portanto, não é possível simplesmente atualizar a função "in-loco" todos os dias chamando **ALTER FUNCTION** para mover a janela deslizante.  
+-   A função usa a associação do esquema. Portanto, não é possível simplesmente atualizar a função "in-loco" todos os dias chamando **ALTER FUNCTION** para mover a janela deslizante.  
   
  Comece com uma função de filtro como o exemplo a seguir, que migra linhas onde a coluna **systemEndTime** contém um valor anterior a 1º de janeiro de 2016.  
   
@@ -288,7 +288,7 @@ SET (
   
 ```  
   
- Quando você quiser atualizar a janela deslizante, siga estas etapas.  
+ Quando você deseja atualizar a janela deslizante, faça o seguinte.  
   
 1.  Crie uma nova função que especifique a nova janela deslizante. O exemplo a seguir seleciona datas anteriores a 2 de janeiro de 2016, em vez de 1º de janeiro de 2016.  
   
@@ -382,7 +382,7 @@ COMMIT ;
   
     ```  
   
-     A função anterior é equivalente à função a seguir depois que você substitui os operadores BETWEEN e NOT BETWEEN pelas expressões equivalentes AND e OR.  
+     A função anterior é equivalente à função a seguir depois de substituir os operadores BETWEEN e NOT BETWEEN pelas expressões equivalentes AND e OR.  
   
     ```sql  
     CREATE FUNCTION dbo.fn_stretchpredicate_example4(@column1 int, @column2 int)  
@@ -436,7 +436,7 @@ COMMIT ;
   
     ```  
   
--   As funções a seguir não são válidas porque expressões que usam operadores algébricos ou funções internas devem ser avaliadas para uma constante quando você define a função. Não é possível incluir referências de coluna em expressões algébricas ou chamadas de função.  
+-   As funções a seguir não são válidas porque expressões que usam operadores algébricos ou funções internas devem ser avaliadas para uma constante quando você define a função. Você não pode incluir referências da coluna em expressões algébricas ou em chamadas de função.  
   
     ```sql  
     CREATE FUNCTION dbo.fn_example8(@column1 int)  
@@ -510,7 +510,7 @@ ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (
   
 -   A nova função não pode conter operadores que não existam na função antiga.  
   
--   A ordem dos argumentos do operador não pode mudar.  
+-   Não é possível alterar a ordem dos argumentos do operador.  
   
 -   Somente valores constantes que fazem parte de uma comparação `<, <=, >, >=`  podem ser alterados de uma maneira que torne a função menos restritiva.  
   

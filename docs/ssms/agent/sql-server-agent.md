@@ -1,8 +1,7 @@
 ---
-title: SQL Server Agent | Microsoft Docs
+title: SQL Server Agent
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,15 +10,17 @@ helpviewer_keywords:
 ms.assetid: 8d1dc600-aabb-416f-b3af-fbc9fccfd0ec
 author: markingmyname
 ms.author: maghan
-ms.custom: ''
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: af9045220d860efdf60a4df37c138ac81bf3c05d
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: e62d4502feb6985717e9aad1bf2f6da63100e60c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69552661"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257930"
 ---
 # <a name="sql-server-agent"></a>SQL Server Agent
 
@@ -42,7 +43,7 @@ ms.locfileid: "69552661"
 ## <a name="Components"></a>Componentes do SQL Server Agent  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent usa os componentes a seguir para definir as tarefas a serem executadas, quando executá-las e como relatar seus êxitos ou falhas.  
   
-### <a name="jobs"></a>trabalhos  
+### <a name="jobs"></a>Trabalhos  
 Um *trabalho* é uma série especificada de ações que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent executa. Use trabalhos para definir uma tarefa administrativa que pode ser executada uma ou mais vezes e monitorada quanto a êxito ou falha. Um trabalho pode ser executado em um servidor local ou em vários servidores remotos.  
   
 > [!IMPORTANT]  
@@ -60,8 +61,8 @@ Cada ação em um trabalho é uma *etapa de trabalho*. Por exemplo, uma etapa de
   
 Cada etapa de trabalho é executada em um contexto de segurança específico. Para etapas de trabalho que usam [!INCLUDE[tsql](../../includes/tsql-md.md)], use uma instrução EXECUTE AS para definir o contexto de segurança para essa etapa. Para outros tipos de etapas de trabalho, use uma conta proxy para definir o contexto de segurança para a etapa de trabalho.  
   
-### <a name="schedules"></a>Agendamentos  
-Uma *agenda* especifica quando executar um trabalho. Mais de um trabalho pode ser executado na mesma agenda, assim como mais de uma agenda pode aplicar o mesmo trabalho. Uma agenda pode definir as seguintes condições para acionar a execução de um trabalho:  
+### <a name="schedules"></a>Agendas  
+Uma *agenda* especifica quando executar um trabalho. Mais de um trabalho pode ser executado na mesma agenda e mais de uma agenda pode ser aplicada ao mesmo trabalho. Uma agenda pode definir as condições a seguir para a hora em que um trabalho é executado:  
   
 -   Sempre que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent for iniciado.  
   
@@ -93,7 +94,7 @@ Um alerta pode executar as seguintes ações:
 Para obter mais informações, consulte [Alertas](../../ssms/agent/alerts.md).  
   
 ### <a name="operators"></a>Operadores  
-Um *operador* define as informações de contato de um indivíduo responsável pela manutenção de uma ou mais instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Em algumas empresas, as responsabilidades de operador são atribuídas a um indivíduo. Em empresas com vários servidores, vários indivíduos podem dividir as responsabilidades de operador. Um operador não contém informações de segurança e não define uma entidade de segurança.  
+Um *operador* define as informações de contato de um indivíduo responsável pela manutenção de uma ou mais instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Em algumas empresas, as responsabilidades de operador são atribuídas a um indivíduo. Em empresas com vários servidores, vários indivíduos podem dividir as responsabilidades de operador. Um operador não contém informações de segurança nem define uma entidade de segurança.  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode notificar os operadores de alertas por uma ou mais destas formas:  
   
@@ -124,7 +125,7 @@ Um subsistema é um objeto predefinido que representa a funcionalidade disponív
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] define os subsistemas que estão listados nesta tabela:  
   
-|Nome do subsistema|Descrição|  
+|Nome do subsistema|DESCRIÇÃO|  
 |--------------|-----------|  
 |Script do Microsoft ActiveX|Execução de uma etapa de trabalho de script ActiveX.<br /><br />**Aviso** O subsistema de script do ActiveX será removido do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent em uma futura versão do [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam.|  
 |Sistema Operacional (**CmdExec**)|Execução de um programa executável.|  
@@ -164,7 +165,7 @@ Se estiver executando várias instâncias do [!INCLUDE[ssNoVersion](../../includ
   
 Use as seguintes tarefas como introdução rápida ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent:  
   
-|Descrição|Tópico|  
+|DESCRIÇÃO|Tópico|  
 |-----------|-----|  
 |Descreve como configurar o SQL Server Agent.|[Configurar o SQL Server Agent](../../ssms/agent/configure-sql-server-agent.md)|  
 |Descreve como iniciar, parar e pausar o serviço do SQL Server Agent.|[Iniciar, parar ou pausar o serviço do SQL Server Agent](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)|  
