@@ -35,10 +35,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 23c27d4d8eafac26b33af45f95377ced5dd0f7ec
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981919"
 ---
 # <a name="kill-transact-sql"></a>KILL (Transact-SQL)
@@ -48,7 +48,7 @@ Encerra um processo de usuário baseado na ID da sessão ou na UOW (unidade de t
   
 KILL encerra uma conexão normal que, internamente, interrompe as transações que estão associadas à ID de sessão especificada. Às vezes, o Coordenador de Transações Distribuídas da [!INCLUDE[msCoName](../../includes/msconame-md.md)] (MS DTC) pode estar em uso. Se o MS DTC estiver em uso, você também poderá usar a instrução para encerrar transações distribuídas órfãs e incertas.  
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -87,7 +87,7 @@ Use KILL _UOW_ para interromper transações distribuídas órfãs. Essas transa
 WITH STATUSONLY  
 Gera um relatório de progresso sobre uma _ID de sessão_ ou _UOW_ especificada que está sendo revertida devido a uma instrução KILL anterior. KILL WITH STATUSONLY não encerra nem reverte a _ID de sessão_ ou _UOW_. O comando exibe somente o progresso atual da reversão.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 KILL normalmente é usado para encerrar um processo que está bloqueando outros processos importantes com bloqueios. KILL também pode ser usada para interromper um processo que está executando uma consulta que está usando recursos necessários do sistema. Os processos do sistema e os processos executando um procedimento armazenado estendido não podem ser encerrados.  
   
 Use KILL com cuidado, especialmente quando processos críticos estiverem em execução. Você não pode encerrar o seu próprio processo. Assim como não deve encerrar os seguintes processos:  
@@ -123,13 +123,13 @@ Esse erro também ocorrerá se nenhuma ID de sessão ou UOW estiver sendo revert
 O mesmo relatório de status pode ser obtido pela repetição da mesma instrução KILL _session ID_|_UOW_ sem usar a opção WITH STATUSONLY. No entanto, não é recomendável repetir a opção dessa maneira. Se você repetir a instrução KILL _session ID_, o novo processo poderá ser interrompido se a reversão for concluída e a ID de sessão for reatribuída a uma nova tarefa antes que a nova instrução KILL seja executada. Evite que o novo processo seja interrompido especificando WITH STATUSONLY.  
   
 ## <a name="permissions"></a>Permissões  
-**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:** Exige a permissão ALTER ANY CONNECTION. ALTER ANY CONNECTION é incluída com associação nas funções de servidor fixas sysadmin ou processadmin.  
+**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:** exige a permissão ALTER ANY CONNECTION. ALTER ANY CONNECTION é incluída com associação nas funções de servidor fixas sysadmin ou processadmin.  
   
-**[!INCLUDE[ssSDS](../../includes/sssds-md.md)]:** Exige a permissão KILL DATABASE CONNECTION. O logon da entidade de segurança no nível do servidor tem a permissão KILL DATABASE CONNECTION.  
+**[!INCLUDE[ssSDS](../../includes/sssds-md.md)]:** exige a permissão KILL DATABASE CONNECTION. O logon da entidade de segurança no nível do servidor tem a permissão KILL DATABASE CONNECTION.  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-kill-to-stop-a-session"></a>A. Usar KILL para interromper uma sessão  
+### <a name="a-using-kill-to-stop-a-session"></a>a. Usar KILL para interromper uma sessão  
  O exemplo a seguir mostra como interromper a ID de sessão `53`.  
   
 ```sql  

@@ -1,10 +1,7 @@
 ---
-title: Alertas | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
+title: Alertas
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,15 +19,20 @@ helpviewer_keywords:
 ms.assetid: 3f57d0f0-4781-46ec-82cd-b751dc5affef
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c29706e1bf94f8717b90964f8edc3a8fff4bc474
-ms.sourcegitcommit: 949e55b32eff6610087819a93160a35af0c5f1c9
+ms.openlocfilehash: b88680cb965ff44384d54b09e0c7244a074bd0db
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70383792"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252692"
 ---
 # <a name="alerts"></a>Alertas
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -71,7 +73,7 @@ O tipo do evento determina os parâmetros utilizados para especificar o evento p
   
     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Agent dispara um alerta quando ocorre qualquer erro de uma severidade específica. Por exemplo, você pode especificar um nível de severidade 15 como resposta a erros de sintaxe em instruções Transact-SQL.  
   
--   **Banco de dados**  
+-   **Backup de banco de dados**  
   
     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Agent só dispara um alerta quando o evento ocorre em um banco de dados específico. Esta opção pode ser aplicada em conjunto com o número de erro ou o nível de severidade. Por exemplo, se uma instância contiver um banco de dados utilizado para produção e outro utilizado para relatórios, você poderá definir um alerta como resposta a erros de sintaxe apenas do banco de dados de produção.  
   

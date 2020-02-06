@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3f9324ee324188fd8cf70f97280b5e613ffd1178
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843649"
 ---
 # <a name="newid-transact-sql"></a>NEWID (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "73843649"
 
   Cria um valor exclusivo do tipo **uniqueidentifier**.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,12 +43,12 @@ NEWID ( )
 ## <a name="return-types"></a>Tipos de retorno  
  **uniqueidentifier**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  `NEWID()` é compatível com RFC4122.  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-the-newid-function-with-a-variable"></a>A. Usando uma função NEWID com uma variável  
+### <a name="a-using-the-newid-function-with-a-variable"></a>a. Usando uma função NEWID com uma variável  
  O exemplo a seguir usa `NEWID()` para atribuir um valor a uma variável declarada como o tipo de dados **uniqueidentifier**. O valor da variável de tipo de dados **uniqueidentifier** é impresso antes de o valor ser testado.  
   
 ```  

@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 46ce5f22f38b9854be8161aa3d104a60e41886ab
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73844345"
 ---
 # <a name="transact-sql-reference-database-engine"></a>Referência do Transact-SQL (Mecanismo de Banco de Dados)
@@ -31,7 +31,7 @@ Este tópico fornece as noções básicas sobre como encontrar e utilizar os tó
 
 Algumas das ferramentas da Microsoft que emitem comandos do T-SQL são:
 
-- [SSMS (SQL Server Management Studio)](../ssms/download-sql-server-management-studio-ssms.md)
+- [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
 - [SSDT (SQL Server Data Tools)](../ssdt/download-sql-server-data-tools-ssdt.md)
 - [sqlcmd](../tools/sqlcmd-utility.md)
 - [Azure Data Studio](../azure-data-studio/what-is.md)
@@ -87,7 +87,7 @@ Os documentos do SQL incluem essas outras referências de linguagem:
 
 Agora que já sabe como encontrar os tópicos de referência do T-SQL, você está pronto para:
 
-- Trabalho por meio de um breve tutorial sobre como gravar o T-SQL, confira [Tutorial: Escrevendo instruções Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md). 
+- Trabalhar utilizando um breve tutorial sobre como gravar o T-SQL. Consulte [Tutorial: Writing Transact-SQL Statements](../t-sql/tutorial-writing-transact-sql-statements.md) (Tutorial: gravando instruções do Transact-SQL). 
 - Exibir as [Convenções de sintaxe&#40;Transact-SQL&#41;](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
 
   
