@@ -1,6 +1,6 @@
 ---
-title: Localizar e substituir | Microsoft Docs
-ms.custom: ''
+title: Localizar e Substituir
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ ms.assetid: 09297893-d80b-4c88-86b4-52bfb639e521
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f8ddfadb13d2c1882b0c489f8e0567ea26dd2165
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 7e9af0cfad0823af262595d54242fe65575253c4
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265507"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253894"
 ---
 # <a name="find-and-replace"></a>Localizar e Substituir
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "68265507"
  Fica disponível quando o valor especificado para **Examinar** incluir vários arquivos. Clique nesse botão se você não quiser pesquisar ou modificar o arquivo atual. A pesquisa continuará no arquivo seguinte na lista em **Examinar**.  
   
 ## <a name="look-in"></a>Examinar  
- **Examinar**  
+ **Look in**  
  Selecione o local para procurar o texto especificou em **Localizar**. As opções são **Documento Atual**, que pesquisa a janela do documento em foco quando a caixa de diálogo estava aberta, e **Todos os Documentos Abertos**, que pesquisa todas as janelas de documentos abertas no momento no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="find-options"></a>Opções de Busca  
@@ -86,7 +86,7 @@ ms.locfileid: "68265507"
  **Pesquisar texto oculto**  
  Localize instâncias do texto que sejam texto oculto e recolhido.  
   
- **Usar**  
+ **Uso**  
  Indica como interpretar caracteres especiais digitados nas caixas de texto **Localizar** ou **Substituir por** . As opções incluem **Curingas** e **Expressões Regulares**.  
   
  **Regular Expressions**  
@@ -113,13 +113,13 @@ ms.locfileid: "68265507"
  **Localização Rápida**  
  Essa barra de ferramentas altera a caixa de diálogo para uma caixa de diálogo **Localização Rápida** .  
   
- **Localizar em Arquivos**  
+ **Localizar em arquivos**  
  Essa barra de ferramentas altera a caixa de diálogo para uma caixa de diálogo **Localizar nos Arquivos** .  
   
  **Substituição Rápida**  
  Essa barra de ferramentas altera a caixa de diálogo para uma caixa de diálogo **Substituição Rápida**  
   
- **Substituir em Arquivos**  
+ **Substituir em arquivos**  
  Essa barra de ferramentas altera a caixa de diálogo para uma caixa de diálogo **Substituir nos Arquivos**  
   
 ## <a name="see-also"></a>Consulte Também  

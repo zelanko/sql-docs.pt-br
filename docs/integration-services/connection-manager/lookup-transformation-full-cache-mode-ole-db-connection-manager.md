@@ -13,10 +13,10 @@ ms.assetid: c4150e1b-bdff-4f7a-af4c-3401c34def83
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f9e3a8be595188b0eef11a78826c7447af40bec4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294389"
 ---
 # <a name="lookup-transformation-full-cache-mode---ole-db-connection-manager"></a>Transformação Pesquisa em modo de cache cheio – Gerenciador de conexões OLE DB
@@ -86,8 +86,8 @@ ms.locfileid: "71294389"
 13. Clique em **OK** para salvar suas alterações na transformação Pesquisa e, então, execute o pacote.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Implementar uma Transformação Pesquisa em modo cache cheio usando o Gerenciador de Conexões do Cache](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)   
- [Implementar uma pesquisa no modo Sem Cache ou Cache Parcial](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
+ [Implementar uma Transformação Pesquisa em modo de Cache cheio usando o Gerenciador de Conexões do Cache](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)   
+ [Implementar uma pesquisa no modo Sem cache ou Cache parcial](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [Transformações do Integration Services](../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   

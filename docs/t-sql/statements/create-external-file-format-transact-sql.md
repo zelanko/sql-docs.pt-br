@@ -21,10 +21,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: dd632c012e6859da004e105d2311c9c21d3dec02
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67902698"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
@@ -44,7 +44,7 @@ ms.locfileid: "67902698"
   
 Para criar uma tabela externa, confira [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md).
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe
   
@@ -170,7 +170,7 @@ O PolyBase só usa o formato de data personalizado para importar os dados. Ele n
   
 -   DateTimeOffset: 'aaaa-MM-dd HH:mm:ss'  
   
--   Time: 'HH:mm:ss'  
+-   Hora: 'HH:mm:ss'  
   
 **Há exemplos de formatos de data** na tabela a seguir:
   
@@ -182,23 +182,23 @@ Observações sobre a tabela:
   
 -   Am, pm (tt) não são necessários. O padrão é AM.
   
-|Tipo de data|Exemplo|Descrição|  
+|Tipo de data|Exemplo|DESCRIÇÃO|  
 |---------------|-------------|-----------------|  
-|DateTime|DATE_FORMAT = 'aaaa-MM-dd HH:mm:ss.fff'|Além de ano, mês e dia, esse formato de data inclui 00 a 24 horas, 00 a 59 minutos, 00 a 59 segundos e 3 dígitos para milissegundos.|  
-|DateTime|DATE_FORMAT = 'aaaa-MM-dd hh:mm:ss.ffftt'|Além de ano, mês e dia, esse formato de data inclui 00 a 12 horas, 00 a 59 minutos, 00 a 59 segundos, 3 dígitos para milissegundos e AM, am, PM ou pm. |  
+|Datetime|DATE_FORMAT = 'aaaa-MM-dd HH:mm:ss.fff'|Além de ano, mês e dia, esse formato de data inclui 00 a 24 horas, 00 a 59 minutos, 00 a 59 segundos e 3 dígitos para milissegundos.|  
+|Datetime|DATE_FORMAT = 'aaaa-MM-dd hh:mm:ss.ffftt'|Além de ano, mês e dia, esse formato de data inclui 00 a 12 horas, 00 a 59 minutos, 00 a 59 segundos, 3 dígitos para milissegundos e AM, am, PM ou pm. |  
 |SmallDateTime|DATE_FORMAT = 'aaaa-MM-dd HH:mm'|Além de ano, mês e dia, esse formato de data inclui 00 a 23 horas e 00 a 59 minutos.|  
 |SmallDateTime|DATE_FORMAT = 'aaaa-MM-dd hh:mmtt'|Além de ano, mês e dia, esse formato de data inclui 00 a 11 horas, 00 a 59 minutos, não inclui segundos e inclui AM, am, PM ou pm.|  
-|data|DATE_FORMAT = 'aaaa-MM-dd'|Ano, mês e dia. Não é incluído nenhum elemento de hora.|  
-|data|DATE_FORMAT = 'aaaa-MMM-dd'|Ano, mês e dia. Quando o mês é especificado com 3 Ms, o valor de entrada é uma das cadeias de caracteres Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov ou Dec.|  
-|datetime2|DATE_FORMAT = 'aaaa-MM-dd HH:mm:ss.fffffff'|Além de ano, mês e dia, esse formato de data inclui 00 a 23 horas, 00 a 59 minutos, 00 a 59 segundos e 7 dígitos para milissegundos.|  
-|datetime2|DATE_FORMAT = 'aaaa-MM-dd hh:mm:ss.ffffffftt'|Além de ano, mês e dia, esse formato de data inclui 00 a 11 horas, 00 a 59 minutos, 00 a 59 segundos, 7 dígitos para milissegundos e AM, am, PM ou pm.|  
+|Data|DATE_FORMAT = 'aaaa-MM-dd'|Ano, mês e dia. Não é incluído nenhum elemento de hora.|  
+|Data|DATE_FORMAT = 'aaaa-MMM-dd'|Ano, mês e dia. Quando o mês é especificado com 3 Ms, o valor de entrada é uma das cadeias de caracteres Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov ou Dec.|  
+|DateTime2|DATE_FORMAT = 'aaaa-MM-dd HH:mm:ss.fffffff'|Além de ano, mês e dia, esse formato de data inclui 00 a 23 horas, 00 a 59 minutos, 00 a 59 segundos e 7 dígitos para milissegundos.|  
+|DateTime2|DATE_FORMAT = 'aaaa-MM-dd hh:mm:ss.ffffffftt'|Além de ano, mês e dia, esse formato de data inclui 00 a 11 horas, 00 a 59 minutos, 00 a 59 segundos, 7 dígitos para milissegundos e AM, am, PM ou pm.|  
 |DateTimeOffset|DATE_FORMAT = 'aaaa-MM-dd HH:mm:ss.fffffff zzz'|Além de ano, mês e dia, esse formato de data inclui 00 a 23 horas, 00 a 59 minutos, 00 a 59 segundos, 7 dígitos para milissegundos e a diferença de fuso horário que você coloca no arquivo de entrada como `{+&#124;-}HH:ss`. Por exemplo, com o horário de Los Angeles sem horário de verão está 8 horas atrás do UTC, o valor -08:00 no arquivo de entrada especifica o fuso horário de Los Angeles.|  
 |DateTimeOffset|DATE_FORMAT = 'aaaa-MM-dd hh:mm:ss.ffffffftt zzz'|Além de ano, mês e dia, esse formato de data inclui 00 a 11 horas, 00 a 59 minutos, 00 a 59 segundos, 7 dígitos para milissegundos, (AM, am, PM ou pm) e a diferença de fuso horário. Veja a descrição na linha anterior.|  
 |Hora|DATE_FORMAT = 'HH:mm:ss'|Não há nenhum valor de data, apenas de 00 a 23 horas, 00 a 59 minutos e 00 a 59 segundos.|  
   
  Todos os formatos de data compatíveis:
   
-|DATETIME|smalldatetime|Data|datetime2|datetimeoffset|  
+|DATETIME|smalldatetime|date|datetime2|datetimeoffset|  
 |--------------|-------------------|----------|---------------|--------------------|  
 |[M[M]]M-[d]d-[yy]yy HH:mm:ss[.fff]|[M[M]]M-[d]d-[aa]aa HH:mm[:00]|[M[M]]M-[d]d-[aa]aa|[M[M]]M-[d]d-[aa]aa HH:mm:ss[.fffffff]|[M[M]]M-[d]d-[aa]aa HH:mm:ss[.fffffff] zzz|  
 |[M[M]]M-[d]d-[aa]aa hh:mm:ss[.fff][tt]|[M[M]]M-[d]d-[aa]aa hh:mm[:00][tt]||[M[M]]M-[d]d-[aa]aa hh:mm:ss[.fffffff][tt]|[M[M]]M-[d]d-[aa]aa hh:mm:ss[.fffffff][tt] zzz|  
@@ -303,7 +303,7 @@ Observações sobre a tabela:
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-create-a-delimitedtext-external-file-format"></a>A. Criar um formato de arquivo externo DELIMITEDTEXT  
+### <a name="a-create-a-delimitedtext-external-file-format"></a>a. Criar um formato de arquivo externo DELIMITEDTEXT  
  Este exemplo cria um formato de arquivo externo denominado *textdelimited1* para um arquivo de texto delimitado. As opções listadas para FORMAT\_OPTIONS especificam que os campos no arquivo devem ser separados usando um caractere de barra vertical '|'. O arquivo de texto também é compactado com o codec Gzip. Se DATA\_COMPRESSION não for especificado, o arquivo de texto será descompactado.
   
  Para um arquivo de texto delimitado, o método de compactação de dados pode ser o Codec padrão, 'org.apache.hadoop.io.compress.DefaultCodec' ou o Codec do Gzip, 'org.apache.hadoop.io.compress.GzipCodec'.

@@ -11,10 +11,10 @@ ms.assetid: 0913afc2-34b4-4713-b570-cfd5718975ac
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4291245b101799238412115ced8b114de5a551be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65572139"
 ---
 # <a name="rsserverconfigurationerror---reporting-services-error"></a>rsServerConfigurationError - Erro do Reporting Services
@@ -23,9 +23,9 @@ ms.locfileid: "65572139"
   
 |||  
 |-|-|  
-|Nome do produto|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|Nome do Produto|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |ID do evento|rsServerConfiguration|  
-|Origem do evento|Microsoft.ReportingServices.Diagnostics.Utilities.ErrorStrings|  
+|Origem do Evento|Microsoft.ReportingServices.Diagnostics.Utilities.ErrorStrings|  
 |Componente|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|  
 |Texto da mensagem|O servidor de relatório encontrou um erro de configuração.|  
   

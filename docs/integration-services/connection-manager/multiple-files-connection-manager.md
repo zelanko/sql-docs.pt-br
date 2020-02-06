@@ -18,10 +18,10 @@ ms.assetid: 10bdc56e-c5cd-4ddb-b2f7-375fe57fe8b2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1bee1c469ca7febfa114a3143d5842db74356ed9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294367"
 ---
 # <a name="multiple-files-connection-manager"></a>Gerenciador de conexões de vários arquivos
@@ -39,7 +39,7 @@ ms.locfileid: "71294367"
   
  A tabela a seguir lista os valores de **FileUsageType**.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |**0**|O gerenciador de conexões de vários arquivos utiliza um arquivo existente.|  
 |**1**|O gerenciador de conexões de vários arquivos cria um arquivo.|  
@@ -63,7 +63,7 @@ ms.locfileid: "71294367"
   
  \<*path*>|\<*path*>  
   
- Você também pode especificar vários arquivos ou pastas usando caracteres curingas. Por exemplo, para fazer referência a todos os arquivos de texto na unidade C, o valor da propriedade **ConnectionString** pode ser definido como C:\\*.txt.  
+ Você também pode especificar vários arquivos ou pastas usando caracteres curingas. Por exemplo, para fazer referência a todos os arquivos de texto na unidade C, o valor da propriedade **ConnectionString** pode ser definido como C:\\\*.txt.  
   
  Você pode definir propriedades pelo Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou programaticamente.  
   

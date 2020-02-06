@@ -11,10 +11,10 @@ ms.assetid: de310bac-2ddc-4ef9-8783-43dcb02a94f1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b6fe8a8e0fa76201ad4f363f0a91440d1c62958e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71281036"
 ---
 # <a name="catalogdeny_permission-ssisdb-database"></a>catalog.deny_permission (Banco de Dados SSISDB)
@@ -62,7 +62,7 @@ catalog.deny_permission [ @object_type = ] object_type
  5 (outro erro)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- None  
+ Nenhum  
   
 ## <a name="permissions"></a>Permissões  
  Este procedimento armazenado exige uma das seguintes permissões:  
@@ -73,14 +73,14 @@ catalog.deny_permission [ @object_type = ] object_type
   
 -   Associação à função de servidor **sysadmin**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse procedimento armazenado permite que você negue os tipos de permissão descritos na seguinte tabela:  
   
 |Valor de permission_type|Nome da permissão|Descrição da permissão|Tipos de objeto aplicáveis|  
 |----------------------------|---------------------|----------------------------|-----------------------------|  
 |`1`|READ|Permite que a entidade de segurança leia informações consideradas parte do objeto, como as propriedades. Não permite que a entidade de segurança enumere ou leia o conteúdo de outros objetos contidos no objeto.|Pasta, projeto, ambiente, operação|  
 |`2`|MODIFY|Permite que a entidade de segurança modifique informações consideradas parte do objeto, como as propriedades. Não permite que a entidade de segurança modifique outros objetos contidos no objeto.|Pasta, projeto, ambiente, operação|  
-|`3`|Execute|Permite que a entidade de segurança execute todos os pacotes no projeto.|Projeto|  
+|`3`|Execute|Permite que a entidade de segurança execute todos os pacotes no projeto.|Project|  
 |`4`|MANAGE_PERMISSIONS|Permite que a entidade de segurança atribua permissões a objetos.|Pasta, projeto, ambiente, operação|  
 |`100`|CREATE_OBJECTS|Permite que a entidade de segurança crie objetos na pasta.|Pasta|  
 |`101`|READ_OBJECTS|Permite que a entidade de segurança leia todos os objetos na pasta.|Pasta|  

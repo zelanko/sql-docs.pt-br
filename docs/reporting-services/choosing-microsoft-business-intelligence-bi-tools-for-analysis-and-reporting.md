@@ -9,12 +9,12 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: c6294e6313178c17edce2b85aab947a52aaa3fbc
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.openlocfilehash: 1189098b494eb0de48c00f1a37b282a4f5395edf
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892568"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242559"
 ---
 # <a name="analysis-and-reporting-with-microsoft-business-intelligence-bi-tools"></a>Análise e relatório com ferramentas de BI (business intelligence) da Microsoft
 
@@ -36,7 +36,7 @@ A tabela a seguir mapeia as cargas de trabalho para análise de dados e emissão
 |Execute análise de previsão de autoatendimento||||||[Suplementos de Mineração de Dados para Excel](https://docs.microsoft.com/sql/analysis-services/data-mining-client-for-excel-sql-server-data-mining-add-ins?view=sql-server-2014&viewFallbackFrom=sql-server-ver15) |  
 |Visualize e explore dados||[Power View](https://support.office.com/article/Power-View-Explore-visualize-and-present-your-data-98268d31-97e2-42aa-a52b-a68cf460472e)<br /><br /> [Mapas 3D](https://support.office.com/article/Visualize-your-data-in-3D-Maps-ce6b1d5c-4602-4dae-b487-91ec0268e75d)|||[Power BI Desktop](https://powerbi.microsoft.com/documentation/powerbi-desktop-get-the-desktop/)||  
 |Faça perguntas usando a consulta de linguagem natural|||||[P & R](https://docs.microsoft.com/power-bi/consumer/end-user-q-and-a)|
-|Acesse relatórios usando dispositivos móveis||||[HTML 5 (dá suporte à visualização de arquivos <10 MB)](create-deploy-and-manage-mobile-and-paginated-reports.md)<br /><br /> | [HTML 5 (dá suporte à visualização de <250 MB)](http://go.microsoft.com/fwlink/p/?LinkId=391854)<br /><br /> [Aplicativo móvel do Power BI em dispositivos iOS](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-iphone-app-get-started)<br /><br /> [Aplicativo móvel do Power BI em dispositivos Android](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-android-app-get-started) <br /><br /> [Aplicativo móvel do Power BI para Windows 10](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-windows-10-phone-app-get-started)|  
+|Acesse relatórios usando dispositivos móveis||||[HTML 5 (dá suporte à visualização de arquivos <10 MB)](create-deploy-and-manage-mobile-and-paginated-reports.md)<br /><br /> | [HTML 5 (dá suporte à visualização de <250 MB)](https://go.microsoft.com/fwlink/p/?LinkId=391854)<br /><br /> [Aplicativo móvel do Power BI em dispositivos iOS](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-iphone-app-get-started)<br /><br /> [Aplicativo móvel do Power BI em dispositivos Android](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-android-app-get-started) <br /><br /> [Aplicativo móvel do Power BI para Windows 10](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-windows-10-phone-app-get-started)|  
 |Colabore e compartilhe|||[Sites do SharePoint](https://docs.microsoft.com/sharepoint/getting-started)|[Sites da equipe do SharePoint](https://go.microsoft.com/fwlink/?LinkId=391850)|[Sites do Power BI](https://docs.microsoft.com/power-bi/service-how-to-collaborate-distribute-dashboards-reports)||  
 |**BI corporativo**|Profissional de TI||||||  
 |Crie modelos corporativos multidimensionais e tabulares||||||[Analysis Services](https://docs.microsoft.com/analysis-services/analysis-services-overview)|  
@@ -49,4 +49,3 @@ A tabela a seguir mapeia as cargas de trabalho para análise de dados e emissão
 |Use os algoritmos de mineração de dados||||||[Mineração de dados no Analysis Services](https://docs.microsoft.com/analysis-services/data-mining/data-mining-ssas)<br/><br/>[SQL Server R Services](https://msdn.microsoft.com/library/mt604845.aspx)|  
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
   
- *O Reporting Services tem vários recursos que dão suporte para a entrega de relatórios operacionais e relatórios personalizados, como a entrega de relatórios paginados modernos.

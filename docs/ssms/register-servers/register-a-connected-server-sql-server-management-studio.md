@@ -1,10 +1,7 @@
 ---
-title: Registrar um servidor conectado (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
-ms.date: 07/28/2016
+title: Registrar um servidor conectado
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -15,16 +12,22 @@ helpviewer_keywords:
 ms.assetid: 77deb5f5-0f80-484f-8b8b-29afa67ec18f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 24751639dcd0484bb31f1783ca936dddd3e9240c
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 07/28/2016
+ms.openlocfilehash: 2487dff89a32c4a5b62bcbb7a610e88f58ed2f78
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68256299"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256276"
 ---
 # <a name="register-a-connected-server-sql-server-management-studio"></a>Registrar-se a um servidor conectado (SQL Server Management Studio)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  Este tópico descreve como registrar um servidor conectado no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o SSMS ( [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ). Registrando o servidor, você pode salvar a informação de conexão para os servidores que você acessa frequentemente. Um servidor pode ser registrado antes de ser conectado, ou na hora da conexão no Pesquisador de Objetos.  Você pode exibir os servidores registrados no SSMS procurando **Exibir**\\**Servidores Registrados** no menu.
+
+Este tópico descreve como registrar um servidor conectado no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o SSMS ( [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ). Registrando o servidor, você pode salvar a informação de conexão para os servidores que você acessa frequentemente. Um servidor pode ser registrado antes de ser conectado, ou na hora da conexão no Pesquisador de Objetos.  Você pode exibir os servidores registrados no SSMS procurando **Exibir**\\**Servidores Registrados** no menu.
   
  **Neste tópico**  
   
@@ -53,7 +56,7 @@ Quando um usuário se conecta com um nome de logon e senha especificados em uma 
      > [!IMPORTANT]  
      > [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)] Para obter mais informações, veja [Escolher um modo de autenticação](../../relational-databases/security/choose-an-authentication-mode.md).  
 
-     -    **User name**  
+     -    **Nome de usuário**  
 Mostra o nome de usuário atual com o que você está se conectando. Essa opção somente leitura só estará disponível se você tiver optado por conectar-se usando a Autenticação do Windows. Para alterar **Nomes de usuários**, faça logon no computador como um usuário diferente. 
 
      -    **Logon**  
@@ -74,13 +77,12 @@ O nome que você deseja exibir em Servidores Registrados. Esse nome não precisa
 **Descrição do servidor registrado**  
 Digite uma descrição opcional do servidor.  
   
-**Teste**  
+**Test**  
 Clique para testar a conexão com o servidor selecionado em **Nome do servidor**.  
   
 **Salvar**  
 Clique para salvar as configurações do servidor registrado. 
 
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte Também
+
 [Criar um novo servidor registrado (SQL Server Management Studio)](../../tools/sql-server-management-studio/create-a-new-registered-server-sql-server-management-studio.md)
-  
-  

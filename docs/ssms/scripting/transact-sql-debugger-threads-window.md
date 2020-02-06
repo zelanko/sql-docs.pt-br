@@ -1,6 +1,6 @@
 ---
 title: Janela Threads
-titleSuffix: T-SQL Debugger
+titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
 ms.topic: conceptual
@@ -10,15 +10,15 @@ ms.assetid: e153f619-0049-4162-9076-c24a454f3278
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.custom: ''
-ms.date: 03/14/2017
+ms.custom: seo-lt-2019
+ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ba4f72bc5848f14e2bfd9821c43f024a129092e1
-ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
+ms.openlocfilehash: 057178568ef12c6de42cde518c02db1ae137a0ae
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74119237"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253014"
 ---
 # <a name="transact-sql-debugger---threads-window"></a>Depurador do Transact-SQL – janela Threads
 
@@ -52,7 +52,7 @@ A janela **Threads** exibe informações sobre o thread do [!INCLUDE[ssDE](../..
  **[SPID]**  
  A sessão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] processa a ID que identifica com exclusividade esta sessão. Você pode obter mais informações sobre a sessão selecionando a linha da exibição sys.sysprocesses que tem o mesmo valor na coluna spid.  
   
- **Local**  
+ **Localidade**  
  Exibe o nome do arquivo de script usado pela sessão em depuração do Editor de Consultas.  
   
  **Prioridade**  

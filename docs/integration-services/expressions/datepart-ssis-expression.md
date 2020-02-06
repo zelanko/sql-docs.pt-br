@@ -14,10 +14,10 @@ ms.assetid: 3e590094-fc49-4144-805f-fdc1bf2fe509
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e85eb7e41a3211f132ea32858bf859c153f15de7
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71290279"
 ---
 # <a name="datepart-ssis-expression"></a>DATEPART (Expressão SSIS)
@@ -44,7 +44,7 @@ DATEPART(datepart, date)
 ## <a name="result-types"></a>Tipos de resultado  
  DT_I4  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  DATEPART retorna um resultado nulo se o argumento for nulo.  
   
  Um literal de data deve ser convertido explicitamente em um dos tipos de dados de data. Para obter mais informações, consulte [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
@@ -53,13 +53,13 @@ DATEPART(datepart, date)
   
 |datepart|Abreviações|  
 |--------------|-------------------|  
-|Year|aa, aaaa|  
+|Ano|aa, aaaa|  
 |Quarter|qq, q|  
 |Month|mm, m|  
 |Dia do ano|dy, y|  
-|Day|dd, d|  
-|Week|wk, ww|  
-|Dia de semana|dw|  
+|Dia|dd, d|  
+|Semana|wk, ww|  
+|Weekday|dw|  
 |Hora|Hh|  
 |Minuto|mi, n|  
 |Segundo|ss, s|  
