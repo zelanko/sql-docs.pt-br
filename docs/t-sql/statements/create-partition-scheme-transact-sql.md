@@ -29,10 +29,10 @@ ms.assetid: 5b21c53a-b4f4-4988-89a2-801f512126e4
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 6ee0ca48835d87c379008c1894ed63596d23ac9b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68048151"
 ---
 # <a name="create-partition-scheme-transact-sql"></a>CREATE PARTITION SCHEME (Transact-SQL)
@@ -43,7 +43,7 @@ ms.locfileid: "68048151"
 >[!NOTE]
 >No Banco de Dados SQL do Azure, há suporte apenas para grupos de arquivos primários.  
 
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -86,7 +86,7 @@ AS PARTITION partition_function_name
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-creating-a-partition-scheme-that-maps-each-partition-to-a-different-filegroup"></a>A. Criando um esquema de partição que mapeia cada partição para um grupo de arquivos diferente  
+### <a name="a-creating-a-partition-scheme-that-maps-each-partition-to-a-different-filegroup"></a>a. Criando um esquema de partição que mapeia cada partição para um grupo de arquivos diferente  
  O exemplo a seguir cria uma função de partição para dividir uma tabela ou índice em quatro partições. Então, será criado um esquema de partição que especifica os grupos de arquivos que conterão cada uma das quatro partições. Este exemplo supõe que os grupos de arquivos já existam no banco de dados.  
   
 ```  

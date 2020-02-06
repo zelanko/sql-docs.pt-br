@@ -19,10 +19,10 @@ ms.assetid: 04b35145-1cca-45f4-9eb7-990abf2e647d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a0902765a96f68acf811bd3583a41a8e8198d5ca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67943154"
 ---
 # <a name="generate-an-inline-xsd-schema"></a>Gerar um esquema XSD embutido
@@ -465,7 +465,7 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
   
 -   Como Col2 e Col3 podem ser NULL, a declaração do elemento <`Col`> especifica minOccurs como 0 e maxOccurs como 2.  
   
--   Como os dois elementos <`Col`> são irmãos, há uma declaração de elemento no esquema. Além disso, como os dois elementos também são de tipos diferentes, embora ambos sejam de tipos simples, o tipo do elemento no esquema é `xsd:anySimpleType`. No resultado, cada tipo de instância é identificado pelo atributo `xsi:type`.  
+-   Como os dois elementos <`Col`> são irmãos, há uma declaração de elemento no esquema. Além disso, como os dois elementos também são de tipos diferentes, embora ambos sejam de tipos simples, o tipo do elemento no esquema é `xsd:anySimpleType`. No resultado, cada tipo de instância é identificado pelo atributo `xsi:type` .  
   
 -   No resultado, cada instância do elemento <`Col`> faz referência ao seu tipo de instância usando o atributo `xsi:type`.  
   

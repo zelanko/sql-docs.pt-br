@@ -13,10 +13,10 @@ ms.assetid: c42aa04a-4945-4417-b4c7-50589d727e9c
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 4a262ba4daf1a54e4a57a71baa0b97308d473720
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68057894"
 ---
 # <a name="configure-log-shipping-sql-server"></a>Configurar o envio de logs (SQL Server)
@@ -78,7 +78,7 @@ ms.locfileid: "68057894"
   
 8.  Observe a agenda de backup listada na caixa **Agenda** em **Trabalho de backup**. Se quiser personalizar a agenda para sua instalação, clique em **Agenda** e, em seguida, ajuste a Agenda do agente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , conforme necessário.  
   
-9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] dá suporte à [compactação de backup](../../relational-databases/backup-restore/backup-compression-sql-server.md). Ao criar uma configuração de envio de logs, é possível controlar o comportamento de compactação de backup dos backups de log escolhendo uma das opções a seguir: **Usar a configuração de servidor padrão**, **Compactar backup** ou **Não compactar o backup**. Para obter mais informações, consulte [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md).  
+9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] dá suporte à [compactação de backup](../../relational-databases/backup-restore/backup-compression-sql-server.md). Ao criar a configuração de envio de logs, é possível controlar o comportamento da compactação de backup de logs escolhendo uma das seguintes opções: **Usar a configuração padrão do servidor**, **Compactar o backup**ou **Não compactar o backup**. Para obter mais informações, consulte [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md).  
   
 10. Clique em **OK**.  
   

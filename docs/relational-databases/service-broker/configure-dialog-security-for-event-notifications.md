@@ -13,10 +13,10 @@ ms.assetid: 12afbc84-2d2a-4452-935e-e1c70e8c53c1
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 488b1efd533f038914f2d0186e29e28622531f02
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68048897"
 ---
 # <a name="configure-dialog-security-for-event-notifications"></a>Configurar segurança de caixa de diálogo para notificações de evento
@@ -29,11 +29,11 @@ ms.locfileid: "68048897"
 > [!IMPORTANT]  
 >  Todos os certificados devem ser criados com datas válidas de início e de validade.  
   
- **Etapa 1: Estabeleça um número da porta TCP e o nome do serviço de destino.**  
+ **Etapa 1: Estabeleça um número da porta de TCP e o nome do serviço de destino.**  
   
  Estabeleça a porta de TCP pela qual o servidor de origem e o servidor de destino receberão mensagens. Você também deve determinar o nome do serviço de destino.  
   
- **Etapa 2: Configure a criptografia e o compartilhamento de certificados para autenticação em nível de banco de dados.**  
+ **Etapa 2: Configure criptografia e compartilhamento de certificados para autenticação em nível de banco de dados.**  
   
  Efetue as ações abaixo nos servidores de origem e de destino.  
   

@@ -20,18 +20,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 506f3f0e79501b16ea5455ab1ff4d4ee83a7abff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68040213"
 ---
-# <a name="binarychecksum--transact-sql"></a>BINARY_CHECKSUM (Transact-SQL)
+# <a name="binary_checksum--transact-sql"></a>BINARY_CHECKSUM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
 Retorna o valor binário da soma de verificação calculado em uma linha de tabela ou em uma lista de expressões.
   
-![Ícone de link do artigo](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do artigo") [Convenções de sintaxe do Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do artigo](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do artigo") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -56,7 +56,7 @@ Uma [expression](../../t-sql/language-elements/expressions-transact-sql.md) de q
 ## <a name="return-types"></a>Tipos de retorno  
  **int**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 `BINARY_CHECKSUM(*)`, calculado em qualquer linha de uma tabela, retorna o mesmo valor contanto que a linha não seja modificada posteriormente. `BINARY_CHECKSUM` satisfaz as propriedades de uma função de hash: quando aplicado em quaisquer duas listas de expressões retorna o mesmo valor se os elementos correspondentes das duas listas tiverem o mesmo tipo e forem iguais quando comparados com o operador de igualdade (=). Para essa definição, dizemos que valores nulos, de um tipo especificado, são comparados como valores iguais. Se, pelo menos, um dos valores na lista de expressões for alterado, a soma de verificação da expressão também poderá ser alterada. Entretanto, essa alteração não é garantida e, para detectar se os valores foram alterados, recomendamos o uso de `BINARY_CHECKSUM` somente se o aplicativo pode tolerar uma alteração ausente ocasional. Caso contrário, considere a possibilidade de usar o `HASHBYTES`. Com um algoritmo de hash MD5 especificado, a probabilidade de que `HASHBYTES` retornará o mesmo resultado para duas entradas diferentes é muito menor que `BINARY_CHECKSUM`.
   
 `BINARY_CHECKSUM` pode operar sobre uma lista de expressões e retorna o mesmo valor para uma lista especificada. `BINARY_CHECKSUM` aplicado sobre duas listas de expressões retorna o mesmo valor se os elementos correspondentes das duas listas tiverem o mesmo tipo e representação de byte. Nessa definição, os valores nulos de um tipo especificado são considerados como possuidores da mesma representação de byte.
@@ -70,7 +70,7 @@ Uma [expression](../../t-sql/language-elements/expressions-transact-sql.md) de q
 * **nvarchar**  
 * **varchar**  
 
-ou em  
+ou  
 
 * **sql_variant** (se o tipo base de **sql_variant** for um tipo de dados string).  
   

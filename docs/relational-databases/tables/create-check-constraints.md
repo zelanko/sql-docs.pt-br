@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7da76d948774ecbedfc363bdcff3404698d5cf43
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68085732"
 ---
 # <a name="create-check-constraints"></a>Criar restrições de verificação
@@ -83,7 +83,7 @@ ms.locfileid: "68085732"
     |Impor a restrição sempre que uma operação de replicação ocorrer nesta tabela|**Impor para Replicação**|  
     |Impor a restrição sempre que uma linha desta tabela for inserida ou atualizada|**Impor para INSERTs e UPDATEs**|  
   
-7.  Clique em **Fechar**.  
+7.  Clique em **fechar**  
   
 ##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
