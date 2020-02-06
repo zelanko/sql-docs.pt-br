@@ -11,10 +11,10 @@ ms.assetid: 04be5896-2301-45f5-a8ce-5f4ef2b69aa5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 95f2fc808723fa3a69222ead3f362007585231f1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294517"
 ---
 # <a name="working-with-the-oracle-cdc-service"></a>Trabalhando com o Serviço Oracle CDC
@@ -74,15 +74,15 @@ ms.locfileid: "71294517"
   
  A tabela a seguir descreve os itens incluídos na tabela **dbo.xdbcdc_trace** .  
   
-|Item|Descrição|  
+|Item|DESCRIÇÃO|  
 |----------|-----------------|  
 |timestamp|O carimbo de data/hora UTC exato quando o registro de rastreamento foi gravado.|  
-|tipo|Contém um dos seguintes valores.<br /><br /> erro<br /><br /> INFO<br /><br /> rastreamento|  
+|type|Contém um dos seguintes valores.<br /><br /> ERROR<br /><br /> INFO<br /><br /> RASTREAMENTO|  
 |nó|O nome do nó no qual o registro foi gravado.|  
 |status|O código de status que é usado pela tabela de estado.|  
 |sub_status|O código de substatus que é usado pela tabela de estado.|  
 |status_message|A mensagem de status que é usada pela tabela de estado.|  
-|origem|O nome do componente do Oracle CDC que produziu o registro de rastreamento.|  
+|source|O nome do componente do Oracle CDC que produziu o registro de rastreamento.|  
 |text_data|Os dados de texto adicionais para casos em que o erro ou registro de rastreamento contém uma carga textual.|  
 |binary_data|Os dados binários adicionais para casos em que o erro ou registro de rastreamento contém uma carga binária.|  
   
@@ -93,19 +93,19 @@ ms.locfileid: "71294517"
   
  A tabela a seguir descreve os itens incluídos na tabela **dbo.xdbcdc_databases** .  
   
-|Item|Descrição|  
+|Item|DESCRIÇÃO|  
 |----------|-----------------|  
-|NAME|O nome do banco de dados Oracle na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|name|O nome do banco de dados Oracle na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |config_version|O carimbo de data/hora (UTC) para a última alteração na tabela **xdbcdc_config** correspondente do banco de dados CDC ou o carimbo de data/hora (UTC) para a linha atual nesta tabela.<br /><br /> O gatilho UPDATE impõe um valor de GETUTCDATE() para este item. **config_version** deixa o serviço CDC identificar a instância CDC que precisa ser verificada para alteração de configuração ou para habilitar/desabilitar.|  
 |cdc_service_name|Este item determina qual Serviço Oracle CDC trata o banco de dados Oracle selecionado.|  
-|enabled|Indica se a instância do Oracle CDC está ativa (1) ou desabilitada (0). Quando o Serviço Oracle CDC inicia, somente as instâncias marcadas como habilitadas (1) são iniciadas.<br /><br /> **Observação**: uma instância do Oracle CDC pode ser desabilitada devido a um erro não reproduzível. Neste caso, a instância deverá ser reiniciada manualmente depois que o erro for resolvido.|  
+|Habilitado|Indica se a instância do Oracle CDC está ativa (1) ou desabilitada (0). Quando o Serviço Oracle CDC inicia, somente as instâncias marcadas como habilitadas (1) são iniciadas.<br /><br /> **Observação**: uma instância do Oracle CDC pode ser desabilitada devido a um erro não reproduzível. Neste caso, a instância deverá ser reiniciada manualmente depois que o erro for resolvido.|  
   
 ###  <a name="BKMK_dboxdbcdc_services"></a> dbo.xdbcdc_services  
  Esta tabela lista os serviços CDC associados com a instância de host do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Esta tabela é usada pelo CDC Designer Console para determinar a lista de serviços CDC que são configurados para a instância local do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ela também é usada pelo serviço CDC para garantir que somente um serviço em execução do Windows trate um determinado nome de serviço do Oracle CDC.  
   
  A tabela a seguir descreve os itens do estado de captura incluídos na tabela **dbo.xdbcdc_databases** .  
   
-|Item|Descrição|  
+|Item|DESCRIÇÃO|  
 |----------|-----------------|  
 |cdc_service_name|O nome do Serviço Oracle CDC (o nome de serviço do Windows).|  
 |cdc_service_sql_login|O nome do logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usado pelo Serviço Oracle CDC para conectar-se à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Um novo usuário de SQL chamado cdc_service é criado e associado com este nome de logon e é, em seguida, adicionado como membro das funções de banco de dados fixas db_ddladmin, db_datareader e db_datawriter para cada banco de dados CDC tratado pelo serviço.|  
@@ -209,7 +209,7 @@ ms.locfileid: "71294517"
   
 ```  
   
- Onde:  
+ Em que:  
   
  **cdc-service-name** é o nome do serviço CDC a ser atualizado. Esse é um parâmetro necessário.  
   
@@ -235,7 +235,7 @@ ms.locfileid: "71294517"
      [sqlacct <sql-username> <sql-password>]  
 ```  
   
- Onde:  
+ Em que:  
   
  **cdc-service-name** é o nome do serviço recém-criado. Se já houver um serviço com este nome, o programa retornará um erro. Você não deve usar nomes longos ou nomes com espaços. Os caracteres "/" e "\\" não são válidos em um nome de serviço. Esse é um parâmetro necessário.  
   
@@ -258,7 +258,7 @@ ms.locfileid: "71294517"
   
 ```  
   
- Onde:  
+ Em que:  
   
  **cdc-service-name** é o nome do serviço CDC a ser excluído.  
   

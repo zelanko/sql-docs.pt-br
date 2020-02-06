@@ -10,10 +10,10 @@ ms.assetid: b44c159a-c33d-4f3c-bdb8-9832f35317c8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 67a361446c69425f6b05bef913ded568a7dcfd75
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296300"
 ---
 # <a name="connect-to-an-access-data-source-sql-server-import-and-export-wizard"></a>Conectar-se a uma fonte de dados do Access (Assistente de Importação e Exportação do SQL Server)
@@ -54,7 +54,7 @@ Especifique o nome do arquivo e o caminho completo para o arquivo do Access. Por
  **Procurar**  
  Localize o arquivo de banco de dados usando a caixa de diálogo **Abrir**.  
   
- **User name**  
+ **Nome de usuário**  
 Se um arquivo de informações do grupo de trabalho estiver associado ao banco de dados, forneça um nome de usuário válido.  
   
  **Senha**  
@@ -72,13 +72,13 @@ Se você não vê o Access na lista de fontes de dados, você está executando o
 > Para usar a versão de 64 bits do Assistente de Importação e Exportação do SQL Server, você precisa instalar o SQL Server. O SSDT (SQL Server Data Tools) e o SSMS (SQL Server Management Studio) são aplicativos de 32 bits e somente instalam arquivos de 32 bits, incluindo a versão de 32 bits do assistente.
 
 ## <a name="officeDownloads"></a>Obter os arquivos necessários para se conectar ao Access  
-Talvez seja preciso baixar os componentes de conectividade para as fontes de dados do Microsoft Office, incluindo Excel e Access, se eles ainda não estiverem instalados. Baixe a última versão dos componentes de conectividade para arquivos do Excel e do Access aqui: [Pacotes Redistribuíveis do Mecanismo de Banco de Dados do Microsoft Access 2016](https://www.microsoft.com/download/details.aspx?id=54920).
+Talvez seja preciso baixar os componentes de conectividade para as fontes de dados do Microsoft Office, incluindo Excel e Access, se eles ainda não estiverem instalados. Baixe a versão mais recente dos componentes de conectividade para arquivos do Excel e do Access aqui: [Mecanismo de Banco de Dados do Microsoft Access 2016](https://www.microsoft.com/download/details.aspx?id=54920).
   
 A versão mais recente dos componentes podem abrir arquivos criados em versões anteriores do Access.
 
 Se o computador tiver uma versão de 32 bits do Office, você precisará instalar a versão de 32 bits dos componentes e precisará também certificar-se de executar o pacote no modo de 32 bits.
 
-Se você tem uma assinatura do Office 365, verifique se você baixou o Mecanismo de Banco de Dados do Access 2016 Redistribuível e não o Tempo de Execução do Microsoft Access 2016. Quando você executar o instalador, você verá uma mensagem de erro dizendo que você não pode instalar o download lado a lado com componentes do tipo clique para executar do Office. Para ignorar essa mensagem de erro, execute a instalação no modo silencioso abrindo uma janela de Prompt de Comando e executando o arquivo .EXE baixado com a opção `/quiet`. Por exemplo:
+Se você tem uma assinatura do Office 365, verifique se você baixou o Mecanismo de Banco de Dados do Access 2016 Redistribuível e não o Runtime do Microsoft Access 2016. Quando você executar o instalador, você verá uma mensagem de erro dizendo que você não pode instalar o download lado a lado com componentes do tipo clique para executar do Office. Para ignorar essa mensagem de erro, execute a instalação no modo silencioso abrindo uma janela de Prompt de Comando e executando o arquivo .EXE baixado com a opção `/quiet`. Por exemplo:
 
 `C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
 

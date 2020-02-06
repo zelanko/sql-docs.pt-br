@@ -22,10 +22,10 @@ ms.assetid: 8370b730-7fd5-43fe-a7f6-8300b3caa16d
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: cce8533a1ac74feb95577d28f73cb6f87c15aa31
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68223607"
 ---
 # <a name="drop-rule-transact-sql"></a>DROP RULE (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68223607"
 > [!IMPORTANT]
 >  DROP RULE será removida na próxima versão do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Não use DROP RULE em um novo trabalho de desenvolvimento e planeje modificar os aplicativos que atualmente a utilizam. Em vez dela, use restrições CHECK que podem ser criadas usando a palavra-chave CHECK de [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) ou [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md). Para obter mais informações, consulte [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md).  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -56,7 +56,7 @@ DROP RULE [ IF EXISTS ] { [ schema_name . ] rule_name } [ ,...n ] [ ; ]
  *rule*  
  É a regra a ser removida. Nomes de regras precisam ser compatíveis com as regras para [identificadores](../../relational-databases/databases/database-identifiers.md). A especificação do esquema da regra é opcional.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Para descartar uma regra, primeiro, desvincule-a se ela estiver atualmente vinculada a uma coluna ou a um tipo de dados de alias. Para desvincular a regra, use **sp_unbindrule**. Se a regra estiver vinculada quando você tentar descartá-la, uma mensagem de erro será exibida e a instrução DROP RUL será cancelada.  
   
  Depois que a regra é descartada, os novos dados inseridos nas colunas anteriormente controladas pela regra não são afetados por suas restrições. Os dados existentes não sofrem nenhuma alteração.  

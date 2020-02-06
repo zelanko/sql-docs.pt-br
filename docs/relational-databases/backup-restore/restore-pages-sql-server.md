@@ -20,10 +20,10 @@ ms.assetid: 07e40950-384e-4d84-9ac5-84da6dd27a91
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 2bb7f9186ba44c094a54c4e44e7d54b29bc30ed0
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908823"
 ---
 # <a name="restore-pages-sql-server"></a>Restaurar páginas (SQL Server)
@@ -135,8 +135,8 @@ ms.locfileid: "72908823"
     |Cabeçalho|Valores|  
     |------------|------------|  
     |**Nome**|O nome do conjunto de backup.|  
-    |**Componente**|O componente de backup: **Banco de Dados**, **Arquivo** ou **\<em branco>** (para logs de transação).|  
-    |**Tipo**|O tipo de backup realizado: **Total**, **Diferencial** ou **Log de Transações**.|  
+    |**Componente**|O componente com backup: **Banco de Dados**, **Arquivo** ou **\<blank>** (para logs de transações).|  
+    |**Tipo**|Tipo de backup realizado: **Completo**, **Diferencial**ou **Log de Transações**.|  
     |**Servidor**|O nome da instância [!INCLUDE[ssDE](../../includes/ssde-md.md)] que executou a operação de backup.|  
     |**Backup de banco de dados**|Nome do banco de dados envolvido na operação de backup.|  
     |**Posição**|A posição do conjunto de backup no volume.|  
@@ -147,7 +147,7 @@ ms.locfileid: "72908823"
     |**Data de Início**|A data e hora de início da operação de backup, apresentadas na configuração regional do cliente.|  
     |**Data de Conclusão**|A data e hora da conclusão da operação de backup, apresentadas na configuração regional do cliente.|  
     |**Tamanho**|O tamanho do conjunto de backup em bytes.|  
-    |**Nome do Usuário**|O nome do usuário que realizou a operação de backup.|  
+    |**Nome de usuário**|O nome do usuário que realizou a operação de backup.|  
     |**Validade**|A data e hora de validade do conjunto de backup.|  
   
      Clique em **Verificar** para verificar a integridade dos arquivos de backup necessários para executar a operação de restauração de página.  

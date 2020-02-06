@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 899bd7aada6364449fa71e9f87839447de73dedd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67909660"
 ---
 # <a name="indexes"></a>Índices
@@ -26,7 +26,7 @@ ms.locfileid: "67909660"
 ## <a name="available-index-types"></a>Tipos de índice disponíveis
 A tabela a seguir lista os tipos de índices disponíveis no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e fornece links para informações adicionais.  
   
-|Tipo de índice|Descrição|Informações adicionais|  
+|Tipo de índice|DESCRIÇÃO|Informações adicionais|  
 |----------------|-----------------|----------------------------|  
 |Hash|Com um índice de hash, os dados são acessados por meio de uma tabela de hash na memória. Os índices de hash consomem uma quantidade fixa de memória, que é uma função do número de buckets.|[Diretrizes para usar índices em tabelas com otimização de memória](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)<br /><br /> [Diretrizes de design de índice de hash](../../relational-databases/sql-server-index-design-guide.md#hash_index)|  
 |Não clusterizado com otimização de memória|Para índices não clusterizados com otimização de memória, o consumo de memória é uma função da contagem de linhas e do tamanho das colunas de chave de índice.|[Diretrizes para usar índices em tabelas com otimização de memória](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)<br /><br /> [Diretrizes de design de índice não clusterizado com otimização de memória](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index)|  
@@ -36,7 +36,7 @@ A tabela a seguir lista os tipos de índices disponíveis no [!INCLUDE[ssNoVersi
 |columnstore|Um índice columnstore na memória armazena e gerencia dados usando o armazenamento de dados baseado em coluna e o processamento de consulta baseado em coluna.<br /><br /> Os índices columnstore funcionam bem para as cargas de trabalho de data warehouse que executam principalmente carregamentos em massa e consultas somente leitura. Use o índice columnstore para obter um ganho de **desempenho de consulta até 10 vezes maior** sobre o armazenamento tradicional orientado por linha e de **compactação de dados até 7 vezes maior** sobre o tamanho dos dados não compactados.|[Guia de Índices columnstore](../../relational-databases/indexes/columnstore-indexes-overview.md)<br /><br /> [Diretrizes de design de índice columnstore](../../relational-databases/sql-server-index-design-guide.md#columnstore_index)|  
 |Índice com colunas incluídas|Um índice não clusterizado que é estendido para incluir colunas que não são de chave, além das colunas de chave.|[Criar índices com colunas incluídas](../../relational-databases/indexes/create-indexes-with-included-columns.md)|  
 |Índice em colunas computadas.|Um índice em uma coluna que é derivada do valor de uma ou mais colunas ou certas entradas deterministas.|[Índices em colunas computadas](../../relational-databases/indexes/indexes-on-computed-columns.md)|  
-|Filtrado|Um índice não clusterizado aperfeiçoado, especialmente indicado para abranger consultas que selecionam de um subconjunto bem definido de dados. Ele usa um predicado de filtro para indexar uma parte das linhas da tabela. Um índice filtrado bem projetado pode melhorar o desempenho da consulta e reduzir os custos de manutenção e armazenamento do índice em comparação com os índices de tabela completa.|[Criar índices filtrados](../../relational-databases/indexes/create-filtered-indexes.md)<br /><br /> [Diretrizes de design de índice filtrado](../../relational-databases/sql-server-index-design-guide.md#Filtered)|  
+|Filtered|Um índice não clusterizado aperfeiçoado, especialmente indicado para abranger consultas que selecionam de um subconjunto bem definido de dados. Ele usa um predicado de filtro para indexar uma parte das linhas da tabela. Um índice filtrado bem projetado pode melhorar o desempenho da consulta e reduzir os custos de manutenção e armazenamento do índice em comparação com os índices de tabela completa.|[Criar índices filtrados](../../relational-databases/indexes/create-filtered-indexes.md)<br /><br /> [Diretrizes de design de índice filtrado](../../relational-databases/sql-server-index-design-guide.md#Filtered)|  
 |Espacial|Um índice espacial permite a execução de determinadas operações de forma mais eficiente em objetos espaciais (*dados espaciais*) em uma coluna do tipo de dados **geometry** . O índice espacial reduz o número de objetos nos quais operações espaciais relativamente dispendiosas precisam ser aplicadas.|[Visão geral de índices espaciais](../../relational-databases/spatial/spatial-indexes-overview.md)|  
 |XML|Uma representação fragmentada e persistente de BLOBS (objetos binários grandes) XML na coluna de tipo de dados **xml**.|[Índices XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)|  
 |Texto completo|Um tipo especial de índice funcional com base em token que é criado e mantido pelo Mecanismo de Texto Completo da Microsoft para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ele fornece suporte eficiente para pesquisas sofisticadas de palavras em dados de cadeias de caracteres.|[Popular índices de texto completo](../../relational-databases/search/populate-full-text-indexes.md)|  

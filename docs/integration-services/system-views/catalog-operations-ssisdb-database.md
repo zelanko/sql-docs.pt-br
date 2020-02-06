@@ -14,10 +14,10 @@ ms.assetid: 9455c5b1-60ff-45fc-8599-cc3abbd6daf5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d2cae61482de6b3269122249b310166987cfb44b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296542"
 ---
 # <a name="catalogoperations-ssisdb-database"></a>catalog.operations (Banco de Dados SSISDB)
@@ -29,7 +29,7 @@ ms.locfileid: "71296542"
 
   Exibe os detalhes de todas as operações no catálogo do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |operation_id|**bigint**|O ID (identificador exclusivo) da operação.|  
 |operation_type|**smallint**|O tipo de operação.|  
@@ -48,7 +48,7 @@ ms.locfileid: "71296542"
 |server_name|**nvarchar(128)**|As informações do servidor e da instância do Windows de uma instância especificada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |machine_name|**nvarchar(128)**|O nome do computador no qual a instância de servidor está sendo executada.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Essa exibição mostra uma linha para cada operação no catálogo do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Permite que o administrador enumere todas as operações lógicas que foram executadas no servidor, como implantar um projeto ou executar um pacote.  
   
  Essa exibição mostra os seguintes tipos de operação, conforme listado na coluna **operation_type**:  
