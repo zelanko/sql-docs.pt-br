@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
 ms.openlocfilehash: c2dafa8f1c0811771cbbc684b24d2c92e989dff5
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68810970"
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>Especificação do SDK do cliente de VDI do SQL Server em Linux
@@ -65,7 +65,7 @@ Este capítulo contém descrições de cada uma das funções de cliente. As des
 - Sintaxe da função
 - Lista de parâmetros
 - Valores retornados
-- Remarks
+- Comentários
 
 ## <a name="clientvirtualdevicesetcreate"></a>ClientVirtualDeviceSet::Create
 
@@ -79,7 +79,7 @@ Este capítulo contém descrições de cada uma das funções de cliente. As des
    );
    ```
 
-| Parâmetros | Argumento | Explicação
+| parâmetros | Argumento | Explicação
 | ----- | ----- | ------ |
 | | **name** | Isso identifica o conjunto de dispositivos virtuais. As regras para nomes usados por CreateFileMapping() precisam ser seguidas. Qualquer caractere, exceto barra invertida (\) pode ser usado). Essa é uma cadeia de caracteres. É recomendável prefixar a cadeia de caracteres com o nome do produto ou da empresa do usuário e o nome do banco de dados. |
 | |**cfg** | Essa é a configuração do conjunto de dispositivos virtuais. Para obter mais informações, confira "Configuração" mais adiante neste documento.
@@ -103,7 +103,7 @@ Este capítulo contém descrições de cada uma das funções de cliente. As des
    );
    ```
 
-| Parâmetros | Argumento | Explicação
+| parâmetros | Argumento | Explicação
 | ----- | ----- | ------ |
 | | **timeout** | Esse é o tempo limite em milissegundos. Use INFINITE ou qualquer inteiro negativo para impedir o tempo limite.
 | | **cfg** | Após a execução bem-sucedida, isso conterá a configuração selecionada pelo servidor. Para obter mais informações, confira "Configuração" mais adiante neste documento.
@@ -127,7 +127,7 @@ Este capítulo contém descrições de cada uma das funções de cliente. As des
    );
    ```
 
-| Parâmetros | Argumento | Explicação
+| parâmetros | Argumento | Explicação
 | ----- | ----- | ------ |
 | | **name** |Isso identifica o conjunto de dispositivos virtuais.
 | | **ppVirtualDevice** |Quando a função é bem-sucedida, um ponteiro para o dispositivo virtual é retornado. Esse dispositivo é usado para GetCommand e CompleteCommand.
@@ -158,7 +158,7 @@ Se essa função não for bem-sucedida, um valor nulo será retornado por meio d
    );
    ```
 
-| Parâmetros | Argumento | Explicação
+| parâmetros | Argumento | Explicação
 | ----- | ----- | ------ |
 | |**timeout** |Esse é o tempo de espera, em milissegundos. Use INFINITE para aguardar indefinidamente. Use 0 para sondar um comando. VD_E_TIMEOUT será retornado se nenhum comando estiver disponível no momento. Se o tempo limite esgotar, o cliente decidirá a próxima ação.
 | |**Tempo Limite** |Esse é o tempo de espera, em milissegundos. Use INFINITE ou um valor negativo para aguardar indefinidamente. Use 0 para sondar um comando. VD_E_TIMEOUT será retornado se nenhum comando estiver disponível antes que o tempo limite expire. Se o tempo limite esgotar, o cliente decidirá a próxima ação.
@@ -189,7 +189,7 @@ Quando essa rotina precisa ser bloqueada para aguardar um comando, o thread é d
    );
    ```
 
-| Parâmetros | Argumento | Explicação
+| parâmetros | Argumento | Explicação
 | ----- | ----- | ------ |
 | |**pCmd** |Esse é o endereço de um comando retornado anteriormente de ClientVirtualDevice::GetCommand.
 | |**completionCode** |Esse é um código de status que indica o status da conclusão. Esse parâmetro precisa ser retornado para todos os comandos. O código retornado deve ser apropriado para o comando que está sendo executado. ERROR_SUCCESS é usado em todos os casos para indicar um comando executado com êxito. Para obter a lista completa de códigos possíveis, confira o arquivo vdierror.h. Uma lista de códigos de status típicos para cada comando será exibida em "Comandos" mais adiante neste documento.
@@ -215,9 +215,9 @@ Quando essa rotina precisa ser bloqueada para aguardar um comando, o thread é d
    int ClientVirtualDeviceSet::SignalAbort ();
    ```
 
-| Parâmetros | Argumento | Explicação
+| parâmetros | Argumento | Explicação
 | ----- | ----- | ------ |
-| |None | Não aplicável
+| |Nenhum | Não aplicável
         
 | Valores de retorno | Argumento | Explicação
 | ----- | ----- | ------ |
@@ -235,9 +235,9 @@ Quando essa rotina precisa ser bloqueada para aguardar um comando, o thread é d
    int ClientVirtualDeviceSet::Close ();
    ```
 
-| Parâmetros | Argumento | Explicação
+| parâmetros | Argumento | Explicação
 | ----- | ----- | ------ |
-| |None |Não aplicável
+| |Nenhum |Não aplicável
         
 | Valores de retorno | Argumento | Explicação
 | ----- | ----- | ------ |
@@ -262,7 +262,7 @@ Para obter mais informações, confira "Encerramento anormal" anteriormente nest
    );
    ```
 
-| Parâmetros | Argumento | Explicação
+| parâmetros | Argumento | Explicação
 | ----- | ----- | ------ |
 | |**setName** |Isso identifica o conjunto. Esse nome diferencia maiúsculas de minúsculas e precisa corresponder ao nome usado pelo cliente primário quando ele invoca ClientVirtualDeviceSet::Create.
 
@@ -287,7 +287,7 @@ Para obter mais informações, confira "Encerramento anormal" anteriormente nest
    );
    ```
 
-| Parâmetros | Argumento | Explicação
+| parâmetros | Argumento | Explicação
 | ----- | ----- | ------ |
 | |**pBuffer** |Esse é o endereço de um buffer obtido de um comando de Leitura ou Gravação.
 | |**BufferHandle** |Um identificador exclusivo para o buffer é retornado.
@@ -313,7 +313,7 @@ Comentários O processo que invoca a função GetBufferHandle é responsável po
    );
    ```
 
-| Parâmetros | Argumento | Explicação
+| parâmetros | Argumento | Explicação
 | ----- | ----- | ------ |
 | |**dwBuffer** |Esse é o identificador retornado por ClientVirtualDeviceSet::GetBufferHandle.
 | |**ppBuffer** |Esse é o endereço do buffer que é válido no processo atual.

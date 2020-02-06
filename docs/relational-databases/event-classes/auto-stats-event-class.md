@@ -12,10 +12,10 @@ ms.assetid: cd613fce-01e1-4d8f-86cc-7ffbf0759f9e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0c4060aa1508da72d9b0bd0eb23977074ecac067
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67913250"
 ---
 # <a name="auto-stats-event-class"></a>Classe de evento Auto Stats
@@ -24,7 +24,7 @@ ms.locfileid: "67913250"
   
 ## <a name="auto-stats-event-class-data-columns"></a>Colunas de dados da classe de evento Auto Stats  
   
-|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|DESCRIÇÃO|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|Nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |**ClientProcessID**|**int**|ID atribuída pelo computador host ao processo em que o aplicativo cliente está sendo executado. Essa coluna de dados será populada se o cliente fornecer a ID de processo do cliente.|9|Sim|  
@@ -35,7 +35,7 @@ ms.locfileid: "67913250"
 |**Erro**|**int**|Número de erro de um determinado evento. Geralmente é o número do erro armazenado na exibição de catálogo **sys.messages** .|31|Sim|  
 |**EventClass**|**int**|Tipo de evento = 58.|27|Não|  
 |**EventSequence**|**int**|Sequência de um determinado evento na solicitação.|51|Não|  
-|**EventSubClass**|**int**|Tipo de subclasse de eventos:<br /><br /> 1: Estatísticas criadas/atualizadas de forma síncrona; a coluna **TextData** indica as estatísticas e se foram criadas ou atualizadas<br /><br /> 2: Atualização de estatísticas assíncronas; trabalho enfileirado.<br /><br /> 3: Atualização de estatísticas assíncronas; trabalho iniciando.<br /><br /> 4: Atualização de estatísticas assíncronas; trabalho concluído.|21|Sim|  
+|**EventSubClass**|**int**|Tipo de subclasse de eventos:<br /><br /> 1: estatísticas criadas/atualizadas de forma síncrona; a coluna **TextData** indica as estatísticas e se foram criadas ou atualizadas<br /><br /> 2: atualização de estatísticas assíncronas; trabalho enfileirado.<br /><br /> 3: atualização de estatísticas assíncronas; trabalho iniciando.<br /><br /> 4: atualização de estatísticas assíncronas; trabalho concluído.|21|Sim|  
 |**GroupID**|**int**|ID do grupo de carga de trabalho no qual o evento de Rastreamento do SQL dispara.|66|Sim|  
 |**HostName**|**nvarchar**|Nome do computador no qual o cliente está sendo executado. Essa coluna de dados será populada se o nome do host for fornecido pelo cliente. Para determinar o nome do host, use a função HOST_NAME.|8|Sim|  
 |**IndexID**|**int**|ID da entrada de índice/estatísticas do objeto afetado pelo evento. Para determinar a ID de índice de um objeto, utilize a coluna **index_id** da exibição do catálogo **sys.indexes** .|24|Sim|  
@@ -53,7 +53,7 @@ ms.locfileid: "67913250"
 |**SPID**|**int**|Identificação da sessão em que ocorreu o evento.|12|Sim|  
 |**StartTime**|**datetime**|Hora de início do evento, se disponível.|14|Sim|  
 |**Êxito**|**int**|0 = erro.<br /><br /> 1 = êxito.<br /><br /> 2 = ignorado devido a estrangulamento do servidor (MSDE).|23|Sim|  
-|**TextData**|**ntext**|O conteúdo dessa coluna depende se as estatísticas são atualizadas de forma síncrona (**EventSubClass** 1) ou assíncrona (**EventSubClass** 2, 3 ou 4):<br /><br /> 1: Lista as estatísticas que foram atualizadas/criadas<br /><br /> 2, 3 ou 4: NULL; a coluna **IndexID** é preenchida com a ID de índice/estatísticas das estatísticas atualizadas.|1|Sim|  
+|**TextData**|**ntext**|O conteúdo dessa coluna depende se as estatísticas são atualizadas de forma síncrona (**EventSubClass** 1) ou assíncrona (**EventSubClass** 2, 3 ou 4):<br /><br /> 1: lista as estatísticas que foram atualizadas/criadas<br /><br /> 2, 3 ou 4: NULL; a coluna **IndexID** é populada com a ID de índice/estatísticas das estatísticas atualizadas.|1|Sim|  
 |**TransactionID**|**bigint**|ID da transação atribuída pelo sistema.|4|Sim|  
 |**Tipo**|**int**|Tipo de trabalho.|57|Sim|  
   

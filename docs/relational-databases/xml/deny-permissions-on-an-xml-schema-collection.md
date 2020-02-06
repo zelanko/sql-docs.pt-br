@@ -13,10 +13,10 @@ ms.assetid: e2b300b0-e734-4c43-a4da-c78e6e5d4fba
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 068701e16d192ca5edfb45267ebee0cece3619a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68052286"
 ---
 # <a name="deny-permissions-on-an-xml-schema-collection"></a>Recusar permissões em uma coleção de esquemas XML
@@ -48,7 +48,7 @@ ms.locfileid: "68052286"
 ## <a name="examples"></a>Exemplos  
  Os cenários nos exemplos a seguir mostram como as permissões de esquema XML funcionam. Cada exemplo cria o banco de dados, os esquemas relacionais e os logons de teste necessários. Esses logons recebem as permissões necessárias na coleção de esquema XML. Cada exemplo faz a limpeza necessária no final.  
   
-### <a name="a-preventing-a-user-from-creating-an-xml-schema-collection"></a>A. Impedindo que um usuário crie uma coleção de esquema XML  
+### <a name="a-preventing-a-user-from-creating-an-xml-schema-collection"></a>a. Impedindo que um usuário crie uma coleção de esquema XML  
  Uma das maneiras de impedir que um usuário crie uma coleção de esquema XML é negar a permissão ALTER em um esquema relacional. Isso é mostrado no exemplo a seguir.  
   
  O exemplo cria um usuário, `TestLogin1`, e um banco de dados. Ele também cria um esquema relacional, além do esquema `dbo` , no banco de dados. Inicialmente, a permissão `CREATE XML SCHEMA` permite que o usuário crie uma coleção de esquema em qualquer lugar no banco de dados. Em seguida, o exemplo nega permissão `ALTER` ao usuário em um dos esquemas relacionais. Isto impede que o usuário crie uma coleção de esquema XML naquele esquema relacional.  

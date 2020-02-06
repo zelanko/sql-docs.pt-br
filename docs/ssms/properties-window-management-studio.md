@@ -1,6 +1,6 @@
 ---
-title: Janela Propriedades (Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Janela de Propriedades (Management Studio)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6a9a1389-df8d-4cfc-928b-eccbf884a22d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 51aff80cb84f5ff066917f5ba35d966c0f49d08d
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 44110ee4d46cbd0ef25544b3cf410a1c8312d460
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262018"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257590"
 ---
 # <a name="properties-window-management-studio"></a>Janela de Propriedades (Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ A janela Propriedades exibe tipos diferentes de campos de edição, dependendo d
   
 ## <a name="options"></a>Opções  
   
-|Elemento|Descrição|  
+|Elemento|DESCRIÇÃO|  
 |-----------|---------------|  
 |**Nome do objeto**|Relaciona o objeto ou os objetos atuais selecionados. Somente objetos do editor ou designer ativo ficam visíveis.|  
 |**Categorizado**|Relaciona todas as propriedades e os valores de propriedade do objeto selecionado, por categoria. Você pode recolher uma categoria para reduzir o número de propriedades visíveis. Ao expandir ou recolher uma categoria, você vê um sinal de mais (+) ou de menos (-) à esquerda do nome da categoria. As categorias são listadas em ordem alfabética.|  

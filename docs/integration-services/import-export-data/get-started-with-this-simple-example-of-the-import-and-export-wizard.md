@@ -10,10 +10,10 @@ ms.assetid: ea3db39b-698b-4a74-8eb8-21dc7252dc1a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 40b71d77727435316c2595abba6db70119d4b152
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71285213"
 ---
 # <a name="get-started-with-this-simple-example-of-the-import-and-export-wizard"></a>Introdução a este exemplo simples do Assistente de Importação e Exportação
@@ -24,7 +24,7 @@ ms.locfileid: "71285213"
 Saiba o que esperar do Assistente de Importação e Exportação do SQL Server examinando um cenário comum – a importação de dados de uma planilha do Excel para um banco de dados do SQL Server. Mesmo se você pretende usar uma fonte e um destino diferentes, este tópico mostra mais do que você precisa saber sobre como executar o assistente.
 
 ## <a name="prerequisite---is-the-wizard-installed-on-your-computer"></a>Pré-requisito – O assistente está instalado no computador?
-Se você deseja executar o assistente, mas não tem o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalado no computador, é possível instalar o Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalando o SSDT (SQL Server Data Tools). Para obter mais informações, consulte [Baixar o SSDT (SQL Server Data Tools)](https://msdn.microsoft.com/library/mt204009.aspx).
+Se você desejar executar o assistente, mas não tiver o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalado no computador, será possível instalar o Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalando o SSDT (SQL Server Data Tools). Para obter mais informações, consulte [Baixar o SSDT (SQL Server Data Tools)](https://msdn.microsoft.com/library/mt204009.aspx).
 
 ## <a name="heres-the-excel-source-data-for-this-example"></a>Estes são os dados de origem do Excel para este exemplo
 Estes são os dados de origem que você vai copiar – uma tabela pequena de duas colunas na planilha WizardWalkthrough da pasta de trabalho WizardWalkthrough.xlsx do Excel.
@@ -72,7 +72,7 @@ A página exibe uma lista de propriedades do provedor. Muitas delas são nomes n
 
 |Informações necessárias|Propriedade do Provedor de Dados do .NET Framework para SQL Server|
 |---|---|
-|Nome do servidor|**Fonte de dados**|
+|Nome do servidor|**Fonte de Dados**|
 |Informações (logon) de Autenticação|**Segurança Integrada**; ou **ID de Usuário** e **Senha**<br/>Se desejar ver uma lista suspensa de bancos de dados no servidor, primeiro precisará fornecer informações de logon válidas.|
 |Nome do banco de dados|**Catálogo Inicial**|
 

@@ -25,10 +25,10 @@ ms.assetid: 1d9c8247-fd89-4544-be9c-01c95b745db0
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7e16193e0bf6a9596a17f767b157fc825ff3e0a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072367"
 ---
 # <a name="return-transact-sql"></a>RETURN (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68072367"
 
   Sai incondicionalmente de uma consulta ou procedimento. RETURN é imediato e completo e pode ser usado em qualquer ponto para sair de um procedimento, lote ou bloco de instruções. As instruções posteriores a RETURN não são executadas.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -55,14 +55,14 @@ RETURN [ integer_expression ]
 > [!NOTE]  
 >  A menos que seja documentado o contrário, todos os procedimentos armazenados de sistema retornam o valor 0. Isto indica sucesso e um valor diferente de zero indica falha.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Quando usado com um procedimento armazenado, RETURN não pode retornar um valor nulo. Se um procedimento tentar retornar um valor nulo (por exemplo, usando @status quando @status for NULL), será gerada uma mensagem de aviso, e o valor 0 será retornado.  
   
  O valor do status de retorno pode ser incluído em instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] subsequentes no lote ou no procedimento que executou o procedimento atual, mas ele deve ser inserido no seguinte formato: `EXECUTE @return_status = <procedure_name>`.  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-returning-from-a-procedure"></a>A. Retornando de um procedimento  
+### <a name="a-returning-from-a-procedure"></a>a. Retornando de um procedimento  
  O exemplo a seguir mostra que se nenhum nome de usuário estiver especificado como um parâmetro quando `findjobs` for executado, `RETURN` fará com que o procedimento seja encerrado depois que uma mensagem for enviada à tela do usuário. Se um nome de usuário for especificado, os nomes de todos os objetos criados por esse usuário no banco de dados atual serão recuperados das tabelas do sistema apropriadas.  
   
 ```  

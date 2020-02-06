@@ -28,10 +28,10 @@ ms.assetid: c510cfbc-68be-4736-b3cc-dc5b7aa51f14
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 93571a71662f8d24044b77c2c65dec01778096d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67948063"
 ---
 # <a name="create-xml-index-transact-sql"></a>CREATE XML INDEX (Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "67948063"
 > [!NOTE]  
 >  Para criar um índice relacional, consulte [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md). Para obter informações sobre como criar um índice espacial, consulte [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-spatial-index-transact-sql.md).  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -110,7 +110,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  FOR { VALUE | PATH | PROPERTY }  
  Especifica o tipo de índice XML secundário.  
   
- Value  
+ VALUE  
  Cria um índice XML secundário em colunas nas quais as colunas de chave são (valor do nó e caminho) do índice XML primário.  
   
  PATH  
@@ -139,7 +139,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  PAD_INDEX **=** { ON | **OFF** }  
  Especifica o preenchimento do índice. O padrão é OFF.  
   
- ON  
+ ATIVADO  
  O percentual de espaço livre especificado por *fillfactor* é aplicado às páginas de nível intermediário do índice.  
   
  OFF ou *fillfactor* não está especificado  
@@ -163,7 +163,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  SORT_IN_TEMPDB **=** { ON | **OFF** }  
  Especifica se os resultados de classificação temporários devem ser armazenados no **tempdb**. O padrão é OFF.  
   
- ON  
+ ATIVADO  
  Os resultados de classificação intermediários usados para criar o índice são armazenados no **tempdb**. Isso poderá reduzir o tempo necessário para criar um índice se **tempdb** estiver em um conjunto de discos diferente do banco de dados de usuário. Entretanto, isso aumenta o espaço em disco usado durante a criação do índice.  
   
  OFF  
@@ -177,7 +177,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  DROP_EXISTING **=** { ON | **OFF** }  
  Especifica que o índice XML nomeado preexistente deve ser removido e recriado. O padrão é OFF.  
   
- ON  
+ ATIVADO  
  O índice existente é removido e recriado. O nome de índice especificado deve ser igual ao índice existente atualmente; no entanto, a definição de índice pode ser modificada. Por exemplo, você pode especificar colunas, ordens de classificação, esquemas de partição ou opções de índice diferentes.  
   
  OFF  
@@ -191,12 +191,12 @@ CREATE [ PRIMARY ] XML INDEX index_name
  Uma operação de índice offline que cria, recria ou remove um índice XML adquire um bloqueio de Modificação de esquema (Sch-M) na tabela. Isso evita o acesso de todos os usuários à tabela subjacente enquanto durar a operação.  
   
 > [!NOTE]
->  As operações de índice online não estão disponíveis em todas as edições do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Edições e recursos com suporte no SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+>  As operações de índice online não estão disponíveis em todas as edições de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Edições e recursos com suporte no SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  ALLOW_ROW_LOCKS **=** { **ON** | OFF }  
  Especifica se bloqueios de linha são permitidos. O padrão é ON.  
   
- ON  
+ ATIVADO  
  Bloqueios de linha são permitidos ao acessar o índice. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina quando os bloqueios de linha são usados.  
   
  OFF  
@@ -205,7 +205,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  ALLOW_PAGE_LOCKS **=** { **ON** | OFF }  
  Especifica se bloqueios de página são permitidos. O padrão é ON.  
   
- ON  
+ ATIVADO  
  Bloqueios de página são permitidos ao acessar o índice. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina quando os bloqueios de página são usados.  
   
  OFF  
@@ -233,7 +233,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
 > [!NOTE]
 >  As operações de índice paralelas não estão disponíveis em todas as edições do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Edições e recursos com suporte no SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  As colunas computadas derivadas de tipos de dados **xml** podem ser indexadas como uma coluna de chave ou como uma coluna não chave incluída, desde que o tipo de dados da coluna computada seja permitido como uma coluna de chave de índice ou coluna não chave. Não é possível criar um índice XML primário em uma coluna **xml** computada.  
   
  Para exibir informações sobre índices XML, use a exibição do catálogo [sys.xml_indexes](../../relational-databases/system-catalog-views/sys-xml-indexes-transact-sql.md).  
@@ -245,7 +245,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-creating-a-primary-xml-index"></a>A. Criando um índice XML primário  
+### <a name="a-creating-a-primary-xml-index"></a>a. Criando um índice XML primário  
  O exemplo a seguir cria um índice XML primário na coluna `CatalogDescription` da tabela `Production.ProductModel`.  
   
 ```sql  
