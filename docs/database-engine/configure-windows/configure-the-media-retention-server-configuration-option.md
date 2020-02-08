@@ -15,10 +15,10 @@ ms.assetid: 12e9fe6a-20a5-4c6e-9cc9-d500c003b70a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4009241922196894100c362fe3787fdd40d4f7dd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68012524"
 ---
 # <a name="configure-the-media-retention-server-configuration-option"></a>Configurar a opção de configuração de servidor media retention

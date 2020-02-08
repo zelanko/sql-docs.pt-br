@@ -1,7 +1,7 @@
 ---
-title: Configurar o Firewall do Windows para permitir acesso ao SQL Server | Microsoft Docs
-ms.custom: sqlfreshmay19
-ms.date: 05/15/2019
+title: Configurar o firewall do Windows
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: abae05ff73ff1da46bda029b32320a9deccfbf51
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: 5e88b1543490bd0c44abbbdea12bf361ddf43419
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73637974"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253472"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -250,7 +250,7 @@ A tabela a seguir lista portas e serviços dos quais o [!INCLUDE[ssNoVersion](..
     -   **Lista personalizada**: somente computadores que têm os endereços IP na lista podem se conectar. Esta configuração pode ser mais segura do que **Somente minha rede (sub-rede)** , mas os computadores cliente que usam DHCP podem alterar o endereço IP ocasionalmente. Por isso o computador desejado não poderá se conectar. Outro computador, que você não pretendia autorizar, pode aceitar o endereço IP listado e se conectar. A opção **Lista personalizada** pode ser apropriada para listar outros servidores configurados para usar um endereço IP fixo, mas os endereços IP podem ser falsificados por um invasor. Restringir regras de firewall é um procedimento apenas tão seguro quanto sua infraestrutura de rede.  
   
 ##  <a name="BKMK_WF_msc"></a> Usando o snap-in Firewall do Windows com Segurança Avançada  
- Outras configurações avançadas do firewall podem ser definidas usando o snap-in do MMC Firewall do Windows com Segurança Avançada. O snap-in inclui um assistente de regra e expõe configurações adicionais que não estão disponível no item **Firewall do Windows** do Painel de Controle. Essas configurações incluem:  
+ Outras configurações avançadas do firewall podem ser definidas usando o snap-in do MMC Firewall do Windows com Segurança Avançada. O snap-in inclui um assistente de regra e expõe configurações adicionais que não estão disponível no item **Firewall do Windows** do Painel de Controle. Essas configurações incluem o seguinte:  
   
 -   Configurações de criptografia  
 -   Restrições de serviços   

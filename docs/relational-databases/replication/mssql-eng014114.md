@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: f5f04590-e1c6-40d8-ab2b-98c791a0fc44
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 3c2a2777ca1679cbc8fe0748c4c5ec1cdfa92f1d
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 89b1af5d49fbcd3223e6ed0e4a8aea56a0308465
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811480"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286059"
 ---
 # <a name="mssql_eng014114"></a>MSSQL_ENG014114
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -27,9 +27,9 @@ ms.locfileid: "68811480"
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|14114|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |Nome simbólico||  
 |Texto da mensagem|'%s' não está configurado como um Distributor.|  
@@ -42,7 +42,7 @@ ms.locfileid: "68811480"
  Não haverá suporte para replicação se você tiver registrado qualquer uma das instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pelo endereço IP ou FQDN (nome de domínio totalmente qualificado). Se você tinha qualquer das instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registrada pelo endereço IP ou FQDN no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] quando configurou a replicação, esse erro pode ocorrer.  
   
 ## <a name="user-action"></a>Ação do usuário  
- Se a mensagem de erro especificar uma instância em particular, configure o servidor como um Distribuidor. Para obter mais informações, consulte [Configurar distribuição](../../relational-databases/replication/configure-distribution.md).  
+ Se a mensagem de erro especificar uma instância em particular, configure o servidor como um Distribuidor. Para obter mais informações, consulte [Configure Distribution](../../relational-databases/replication/configure-distribution.md).  
   
  Se a mensagem não especificar uma instância em particular ('null'), certifique-se de que a instância do Distribuidor esteja registrada corretamente. Se o nome de rede do computador e o nome da instância do SQL Server forem diferentes:  
   

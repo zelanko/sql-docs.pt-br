@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: 36f4dce1559df59a61ee25d26b76d0ddd4dda3c1
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "69028747"
 ---
 # <a name="scale-out-support-for-high-availability"></a>Suporte do Scale Out para alta disponibilidade
@@ -114,6 +114,6 @@ Agora, você pode adicionar Trabalhos do Scale Out com a ajuda do [Gerenciador d
 Para atualizar o Scale Out em um ambiente de alta disponibilidade, execute as [etapas de atualização do Always On para catálogo do SSIS](../catalog/ssis-catalog.md#Upgrade), atualize o Mestre do Scale Out e Trabalho do Scale Out em cada máquina e recrie a função do cluster de failover do Windows Server na etapa 7 acima com a nova versão do serviço Mestre do Scale Out.
 
 ## <a name="next-steps"></a>Próximas etapas
-Para saber mais, veja os tópicos a seguir:
+Para obter mais informações, confira os seguintes artigos:
 -   [Mestre do SSIS (Integration Services) Scale Out](integration-services-ssis-scale-out-master.md)
 -   [Trabalho do SSIS (Integration Services) Scale Out](integration-services-ssis-scale-out-worker.md)

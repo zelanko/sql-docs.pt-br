@@ -11,10 +11,10 @@ ms.assetid: 442c841d-d528-4bf0-8724-7156f909ee50
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7c4a51bfb9da9abe3e50c85896f32269e3fee5ff
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296093"
 ---
 # <a name="lesson-1-7-add-and-configure-the-ole-db-destination"></a>Lição 1-7: Adicionar e configurar o destino OLE DB
@@ -43,7 +43,7 @@ Nesta tarefa, você adiciona e configura um destino OLE DB para usar o gerenciad
   
 7.  Na caixa **Nome da tabela ou da exibição**, insira ou selecione **[dbo].[FactCurrencyRate]** .  
   
-8.  Selecione o botão **Novo** para criar uma nova tabela.  Altere o nome da tabela no script de **Destino OLE DB de Exemplo** para **NewFactCurrencyRate**.  Escolha **OK**.  
+8.  Selecione o botão **Novo** para criar uma nova tabela.  Altere o nome da tabela no script de **Destino OLE DB de Exemplo** para **NewFactCurrencyRate**.  Selecione **OK**.  
   
 9. Ao selecionar **OK**, a caixa de diálogo é fechada e o **nome da tabela ou exibição** muda automaticamente para **NewFactCurrencyRate**.  
   
@@ -51,7 +51,7 @@ Nesta tarefa, você adiciona e configura um destino OLE DB para usar o gerenciad
   
 11. Verifique se as colunas de entrada **AverageRate**, **CurrencyKey**, **EndOfDayRate**e **DateKey** estão mapeadas corretamente para as colunas de destino. Se forem mapeadas colunas com o mesmo nome, o mapeamento estará correto.  
   
-12. Escolha **OK**.  
+12. Selecione **OK**.  
   
 13. Clique com o botão direito do mouse no **Destino OLE DB de Exemplo** e selecione **Propriedades**.  
   

@@ -11,10 +11,10 @@ ms.assetid: 56105f3f-e500-4669-8c8e-acf434527727
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e2b43837de8617af559e2a810c89115e5a3963d3
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71283265"
 ---
 # <a name="lesson-3-2-add-and-configure-logging"></a>Lição 3-2: Adicionar e configurar o registro em log
@@ -60,7 +60,7 @@ Nesta tarefa, você habilita o log do fluxo de dados no pacote Lesson 3.dtsx. En
   
 13. Na guia **Provedor e Logs** , na coluna **Nome** , selecione **Arquivo de Log da Lição 3**. Depois de ter criado um provedor de log para seu pacote, você poderá, como opção, retirar a seleção para desligar o registro em log, sem ter que excluir e recriar o provedor de log.  
   
-14. Escolha **OK**.  
+14. Selecione **OK**.  
   
 ## <a name="go-to-next-task"></a>Ir para a próxima tarefa  
 [Etapa 3: Testar o pacote da Lição 3](../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md)  

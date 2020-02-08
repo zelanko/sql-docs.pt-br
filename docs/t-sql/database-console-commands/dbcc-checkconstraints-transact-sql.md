@@ -24,10 +24,10 @@ ms.assetid: da6c9cee-6687-46e8-b504-738551f9068b
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 4fb6bc14742d4aa25c47af59bc1be72ebfffa5a4
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982402"
 ---
 # <a name="dbcc-checkconstraints-transact-sql"></a>DBCC CHECKCONSTRAINTS (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "73982402"
 
 Inspeciona a integridade de uma restrição especificada ou de todas as restrições em uma tabela especificada no banco de dados atual.
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -57,7 +57,7 @@ DBCC CHECKCONSTRAINTS
  É a tabela ou restrição que será verificada. Quando *table_name* ou *table_id* for especificado, todas as restrições habilitadas na tabela serão verificadas. Quando *constraint_name* ou *constraint_id* for especificado, somente essa restrição será verificada. Se nem um identificador de tabela ou um identificador de restrição for especificado, todas as restrições habilitadas em todas as tabelas no banco de dados atual serão verificadas.  
  Um nome de restrição identifica exclusivamente a tabela à qual ela pertence. Para obter mais informações, consulte [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
   
- com  
+ WITH  
  Permite que opções sejam especificadas.  
   
  ALL_CONSTRAINTS  
@@ -69,7 +69,7 @@ DBCC CHECKCONSTRAINTS
  NO_INFOMSGS  
  Suprime todas as mensagens informativas.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 DBCC CHECKCONSTRAINTS constrói e executa uma consulta para todas as restrições FOREIGN KEY e CHECK de uma tabela.
   
 Por exemplo, uma consulta de chave estrangeira tem o seguinte formato:
@@ -92,7 +92,7 @@ DBCC CHECKCONSTRAINTS verifica a integridade das restrições FOREIGN KEY e CHEC
   
 Se *table_name* ou *table_id* for especificado e estiver habilitado para controle de versão do sistema, DBCC CHECKCONSTRAINTS também executará as verificações de consistência de dados temporais na tabela especificada. Quando *NO_INFOMSGS* não for especificado, esse comando retornará cada violação de consistência na saída em uma linha separada. O formato da saída será ([pkcol1], [pkcol2]..) = (\<pkcol1_value>, \<pkcol2_value>...) AND \<o que há de errado com o registro da tabela temporal>.
   
-|Verificar|Informações adicionais na saída se a verificação falhar|  
+|Verificação|Informações adicionais na saída se a verificação falhar|  
 |-----------|-----------------------------------------------|  
 |PeriodEndColumn ≥ PeriodStartColumn (current)|[sys_end] = '{0}' AND MAX(DATETIME2) = '9999-12-31 23:59:59.99999'|  
 |PeriodEndColumn ≥ PeriodStartColumn (current, history)|[sys_start] = '{0}' AND [sys_end] = '{1}'|  
@@ -116,7 +116,7 @@ Exige associação à função de servidor fixa **sysadmin** ou à função de b
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-checking-a-table"></a>A. Verificando uma tabela  
+### <a name="a-checking-a-table"></a>a. Verificando uma tabela  
 O exemplo a seguir verifica a integridade de restrição da tabela `Table1` do banco de dados `AdventureWorks`.
   
 ```sql  

@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: a184a6e19154d0e8534fe843cf65c1afc9d2f547
-ms.sourcegitcommit: 76fb3ecb79850a8ef2095310aaa61a89d6d93afd
+ms.openlocfilehash: e97f535dedd2b6ee25abfc886d1f08272697c549
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75776407"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76162627"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Configurar imagens de contêiner do SQL Server no Docker
 
@@ -96,7 +96,7 @@ docker run --name sqlenterprise `
       -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
       -e "MSSQL_PID=Enterprise" -p 1433:1433 `
       -d "mcr.microsoft.com/mssql/server:2017-latest"
- ```
+```
 
 > [!IMPORTANT]
 > Ao passar o valor **Y** para a variável de ambiente **ACCEPT_EULA** e um valor de edição para **MSSQL_PID**, você está expressando que tem uma licença válida e existente para a edição e a versão do SQL Server que você pretende usar. Você também concorda que o uso do software SQL Server em execução em uma imagem de contêiner do Docker será regido pelos termos de sua licença do SQL Server.
@@ -235,11 +235,11 @@ A primeira opção é montar um diretório em seu host como um volume de dados e
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
 ```bash
-docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2017-latest
+docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>/data:/var/opt/mssql/data -v <host directory>/log:/var/opt/mssql/log -v <host directory>/secrets:/var/opt/mssql/secrets -d mcr.microsoft.com/mssql/server:2017-latest
 ```
 
 ```PowerShell
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2017-latest
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>/data:/var/opt/mssql/data -v <host directory>/log:/var/opt/mssql/log -v <host directory>/secrets:/var/opt/mssql/secrets -d mcr.microsoft.com/mssql/server:2017-latest
 ```
 
 ::: moniker-end
@@ -247,11 +247,11 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 14
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
 ```bash
-docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
+docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>/data:/var/opt/mssql/data -v <host directory>/log:/var/opt/mssql/log -v <host directory>/secrets:/var/opt/mssql/secrets -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
 ```
 
 ```PowerShell
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>/data:/var/opt/mssql/data -v <host directory>/log:/var/opt/mssql/log -v <host directory>/secrets:/var/opt/mssql/secrets -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
 ```
 
 ::: moniker-end
@@ -536,14 +536,14 @@ Siga as etapas abaixo para criar um contêiner do SQL Server 2017 que é iniciad
 > Os contêineres do SQL Server 2019 são iniciados automaticamente como não raiz, portanto, as etapas a seguir se aplicam somente a contêineres SQL Server 2017, que iniciam como raiz por padrão.
 
 1. Baixe o [Dockerfile de exemplo para o Contêiner do SQL Server não raiz](https://raw.githubusercontent.com/microsoft/mssql-docker/master/linux/preview/examples/mssql-server-linux-non-root/Dockerfile) e salve-o como `dockerfile`.
- 
+
 2. Execute o seguinte comando no contexto do diretório do Dockerfile para criar o contêiner de SQL Server não raiz:
 
 ```bash
 cd <path to dockerfile>
 docker build -t 2017-latest-non-root .
 ```
- 
+
 3. Inicie o contêiner.
 
 ```bash
@@ -552,16 +552,16 @@ docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword@" --cap-add SYS_P
 
 > [!NOTE]
 > O sinalizador `--cap-add SYS_PTRACE` é necessário para contêineres de SQL Server não raiz para gerar despejos para fins de solução de problemas.
- 
+
 4. Verifique se o contêiner está sendo executado como um usuário não raiz:
 
 docker exec no contêiner.
 ```bash
 docker exec -it sql1 bash
 ```
- 
+
 Execute `whoami`, que retornará o usuário em execução dentro do contêiner.
- 
+
 ```bash
 whoami
 ```
@@ -569,14 +569,14 @@ whoami
 ## <a id="nonrootuser"></a> Executar o contêiner como um usuário não raiz diferente no host
 
 Para executar o contêiner do SQL Server como um usuário não raiz diferente, adicione o sinalizador -u ao comando de execução do docker. O contêiner não raiz tem a restrição de que ele deve ser executado como parte do grupo raiz a menos que um volume seja montado para '/var/opt/mssql' que o usuário não raiz pode acessar. O grupo raiz não concede permissões de raiz extras ao usuário não raiz.
- 
+
 **Executar como um usuário com UID 4000**
- 
+
 Você pode iniciar o SQL Server com uma UID personalizada. Por exemplo, o comando a seguir inicia o SQL Server com UID 4000:
 ```bash
 docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" --cap-add SYS_PTRACE -u 4000:0 -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
 ```
- 
+
 > [!Warning]
 > Verifique se o contêiner do SQL Server tem um usuário nomeado como 'mssql' ou 'root' ou o SQLCMD não poderá ser executado no contêiner. Você pode verificar se o contêiner do SQL Server está sendo executado como um usuário nomeado executando `whoami` dentro do contêiner.
 
@@ -587,34 +587,34 @@ Você pode executar o contêiner não raiz como o usuário raiz, se necessário.
 ```bash
 docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" -u 0:0 -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
 ```
- 
+
 **Executar como um usuário em seu computador host**
- 
+
 Você pode iniciar o SQL Server com um usuário existente no computador host com o seguinte comando:
 ```bash
 docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" --cap-add SYS_PTRACE -u $(id -u myusername):0 -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
 ```
- 
+
 **Executar como um usuário e grupo diferentes**
- 
+
 Você pode iniciar o SQL Server com um usuário e um grupo personalizados. Neste exemplo, o volume montado tem permissões configuradas para o usuário ou o grupo no computador host.
- 
+
 ```bash
 docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" --cap-add SYS_PTRACE -u (id -u myusername):(id -g myusername) -v /path/to/mssql:/var/opt/mssql -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
 ```
- 
+
 ## <a id="storagepermissions"></a> Configurar permissões de armazenamento persistente para contêineres não raiz
 
 Para permitir que o usuário não raiz acesse arquivos de banco de dados que estão em volumes montados, verifique se o usuário/grupo no qual você executa o contêiner pode tocar no armazenamento de arquivos persistente.  
 
 Você pode obter a propriedade atual dos arquivos de banco de dados com este comando.
- 
+
 ```bash
 ls -ll <database file dir>
 ```
 
 Execute um dos comandos a seguir se o SQL Server não tiver acesso aos arquivos de banco de dados persistentes.
- 
+
 **Conceder ao grupo raiz acesso de leitura/gravação aos arquivos de banco de dados**
 
 Conceda as permissões do grupo raiz aos seguintes diretórios para que o contêiner do SQL Server não raiz tenha acesso aos arquivos de banco de dados.
@@ -698,7 +698,7 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 14
 
    ```bash
     usermod -aG docker $USER
-    ```
+   ```
 - Verifique se há alguma mensagem de erro do contêiner.
 
     ```bash

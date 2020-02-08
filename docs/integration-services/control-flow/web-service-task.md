@@ -18,10 +18,10 @@ ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 343d3d0d16a19e6d7e1610eff84f6e1aa8ff860a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293796"
 ---
 # <a name="web-service-task"></a>Tarefa Serviços Web
@@ -154,7 +154,7 @@ ms.locfileid: "71293796"
  **Variável**  
  Marque as caixas de seleção para usar variáveis para fornecer entradas.  
   
- **Value**  
+ **Valor**  
  Se as caixas de seleção Variável forem marcadas, selecione as variáveis na lista para fornecer as entradas; caso contrário, digite os valores a serem usados nas entradas.  
   
 ## <a name="web-service-task-editor-output-page"></a>Editor da Tarefa Serviço da Web (página Saída)
@@ -172,7 +172,7 @@ ms.locfileid: "71293796"
 ### <a name="outputtype-dynamic-options"></a>Opções dinâmicas de OutputType  
   
 #### <a name="outputtype--file-connection"></a>OutputType = File Connection  
- **File**  
+ **Arquivo**  
  Selecione um gerenciador de conexões de arquivos na lista ou clique em \<**Nova conexão…** > para criar um novo gerenciador de conexões.  
   
  **Tópicos relacionados:** [Gerenciador de conexões de arquivos](../../integration-services/connection-manager/file-connection-manager.md), [Editor do Gerenciador de conexões de Arquivos](../../integration-services/connection-manager/file-connection-manager-editor.md)  

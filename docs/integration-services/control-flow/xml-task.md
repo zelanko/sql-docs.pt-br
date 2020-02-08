@@ -17,10 +17,10 @@ ms.assetid: 9f761846-390e-46d5-9db7-858943d40849
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ca59166f994a0bd982c2f00c5c60c39207e9e02a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293656"
 ---
 # <a name="xml-task"></a>XML Task
@@ -61,7 +61,7 @@ ms.locfileid: "71293656"
 |Operação|Descrição|  
 |---------------|-----------------|  
 |Diff|Compara dois documentos XML. Usando o documento XML de origem como documento base, a operação Diff o compara a um segundo documento XML, detecta as suas diferenças e as grava em um documento Diffgram XML. Essa operação inclui propriedades para personalizar a comparação.|  
-|Mesclagem|Mescla dois documentos XML. Usando o documento XML de origem como o documento base, a operação Merge adiciona o conteúdo de um segundo documento ao documento base. A operação pode especificar um local de mesclagem dentro do documento base.|  
+|Mesclar|Mescla dois documentos XML. Usando o documento XML de origem como o documento base, a operação Merge adiciona o conteúdo de um segundo documento ao documento base. A operação pode especificar um local de mesclagem dentro do documento base.|  
 |Patch|Aplica a saída da operação Diff, conhecida como documento Diffgram, a um documento XML para criar um novo documento pai que inclua o conteúdo do documento Diffgram.|  
 |Validar|Valida o documento XML com base em um esquema de definição de tipo de documento (DTD) ou definição de esquema XML (XSD).|  
 |XPath|Executa consultas e avaliações de XPath.|  

@@ -9,10 +9,10 @@ ms.topic: reference
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ee1e8f3ae65b4a906d42a4b00644456d89f9b900
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71713421"
 ---
 # <a name="known-errors-and-resolutions-with-change-data-capture-for-oracle-by-attunity"></a>Erros conhecidos e soluções com o Change Data Capture para Oracle da Attunity
@@ -20,10 +20,10 @@ ms.locfileid: "71713421"
 
 Este tópico lista os principais problemas e as soluções conhecidas ao exibir uma instância da CDA (captura de dados de alterações) na ferramenta de configuração do Oracle CDC Designer. Essa ferramenta faz parte do Change Data Capture para Oracle da Attunity que está incluída do SQL Server 2012 em diante. 
 
-## <a name="bug-fixes"></a>Correções de bugs
+## <a name="bug-fixes"></a>Correções de bug
 Antes de gastar muito tempo Solucionando problemas, é importante usar os builds mais recentes da CDA para Oracle da Attunity para evitar problemas conhecidos, tais como estes:
 
-### <a name="sql-server-2017"></a>SQL Server 2017
+### <a name="sql-server-2017"></a>Microsoft SQL Server 2017
 
 A **versão 5.0.0.111** contém estas correções:
 - Correção de bug – o Oracle CDC Designer falha com "Sintaxe incorreta próxima à palavra-chave 'KEY'" ao adicionar uma tabela do Oracle. 

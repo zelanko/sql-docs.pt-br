@@ -11,10 +11,10 @@ ms.assetid: f14521b5-941e-443b-8f5e-385f98e37fbf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 74e56788741b36e68884db823fa46eb24856081e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296122"
 ---
 # <a name="lesson-1-1-create-a-new-integration-services-project"></a>Lição 1-1: Criar um novo projeto do Integration Services
@@ -44,7 +44,7 @@ Os pacotes que você usará nas lições de 2 a 6 serão copiados dos pacotes qu
   
 5.  Aceite o local padrão ou selecione **Procurar** para procurar a pasta que deseja usar. Na caixa de diálogo **Local do Projeto**, selecione a pasta e **Selecionar Pasta**.  
   
-6.  Escolha **OK**.  
+6.  Selecione **OK**.  
   
     Por padrão, um pacote vazio chamado **Package.dtsx** é criado e adicionado ao projeto nos **Pacotes do SSIS**.  
   

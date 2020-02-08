@@ -20,10 +20,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 40ce8094d651ee9ae1423b9c3feb636c33befca9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67901949"
 ---
 # <a name="match-transact-sql"></a>MATCH (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "67901949"
 
   Especifica um critério de pesquisa para um gráfico. MATCH pode ser usado apenas com tabelas de nó de gráfico e borda, na instrução SELECT como parte da cláusula WHERE. 
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -134,14 +134,14 @@ O padrão de comprimento arbitrário considera quantificadores padrão de estilo
 * **+** : Repete o padrão por 1 ou mais vezes. É encerrado assim que encontra um caminho mais curto.    
 * **{1,n}** : repete o padrão 1 por “n” horas. É encerrado assim que encontra um caminho mais curto.     
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 Os nomes de nó dentro de MATCH podem ser repetidos.  Em outras palavras, um nó pode ser percorrido um número arbitrário de vezes na mesma consulta.  
 Um nome de borda não pode ser repetido dentro de MATCH.  
 Uma borda pode apontar para qualquer direção, mas deve ter uma direção explícita.  
 Os operadores OR ou NOT não são compatíveis com o padrão MATCH. MATCH pode ser combinado com outras expressões usando AND na cláusula WHERE. No entanto, não há suporte para a combinação dele com outras expressões usando OR ou NOT. 
 
 ## <a name="examples"></a>Exemplos  
-### <a name="a--find-a-friend"></a>A.  Encontrar um amigo 
+### <a name="a--find-a-friend"></a>a.  Encontrar um amigo 
  O exemplo a seguir cria uma tabela de nó Person e a tabela de Borda friends, insere alguns dados e, em seguida, usa MATCH para encontrar amigos de Alice, uma pessoa no gráfico.
 
  ```

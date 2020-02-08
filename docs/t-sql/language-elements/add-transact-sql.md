@@ -25,10 +25,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: dd94844a068ee9c91a4976ac2aec5cbd3d432c56
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67927391"
 ---
 # <a name="-addition-transact-sql"></a>+ (Adição) (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "67927391"
 
   Soma dois números. Este operador aritmético de adição também pode adicionar um número, em dias, a uma data.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -53,7 +53,7 @@ expression + expression
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-the-addition-operator-to-calculate-the-total-number-of-hours-away-from-work-for-each-employee"></a>A. Usando o operador de adição para calcular o número total de horas de ausência do trabalho para cada funcionário.  
+### <a name="a-using-the-addition-operator-to-calculate-the-total-number-of-hours-away-from-work-for-each-employee"></a>a. Usando o operador de adição para calcular o número total de horas de ausência do trabalho para cada funcionário.  
  Este exemplo encontra o número total de horas de ausência do trabalho para cada funcionário, adicionando o número de horas usadas para férias e o número de horas usadas como ausência por motivo de doença.  
   
 ```  

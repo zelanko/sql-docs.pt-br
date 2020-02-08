@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.openlocfilehash: 13a0e3c17f45e0ba136d83f832d3531bc8059884
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67959532"
 ---
 # <a name="integrated-terminal"></a>Terminal Integrado
@@ -107,7 +107,7 @@ Abaixo estão os atalhos de teclado para navegar rapidamente dentro do terminal 
 
 Outros comandos de terminal estão disponíveis e podem ser vinculados aos seus atalhos de teclado preferenciais.
 
-São eles:
+Eles são:
 
 * `workbench.action.terminal.focus`: focar o terminal. É como alternar, mas foca o terminal, em vez de ocultá-lo, se estiver visível.
 * `workbench.action.terminal.focusNext`: focar a próxima instância de terminal.

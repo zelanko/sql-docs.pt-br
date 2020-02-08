@@ -38,10 +38,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: afca0210d61e23af7578e6805c5052c00c72f88a
-ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75952395"
 ---
 # <a name="create-database"></a>CREATE DATABASE
@@ -201,7 +201,7 @@ NON_TRANSACTED_ACCESS = { **OFF** | READ_ONLY | FULL } **Aplica-se a**: [!INCLUD
 
 Especifica o nível de acesso não transacional de FILESTREAM ao banco de dados.
 
-|Valor|DESCRIÇÃO|
+|Valor|Descrição|
 |-----------|-----------------|
 |OFF|O acesso não transacional está desabilitado.|
 |READONLY|Os dados FILESTREAM deste banco de dados podem ser lidos por processos não transacionais.|

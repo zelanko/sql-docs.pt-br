@@ -27,10 +27,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: af69908f78c5f6a0958c87d315c0ba20da25cfb3
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982877"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "73982877"
 
   Altera a propriedade de um protegível.    
     
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
     
 ## <a name="syntax"></a>Sintaxe    
     
@@ -154,7 +154,7 @@ ALTER AUTHORIZATION ON
  *principal_name* | SCHEMA OWNER    
  É o nome da entidade de segurança que possuirá a entidade. Os objetos de banco de dados devem ser de propriedade de um banco de dados principal; um usuário de banco de dados ou função. Os objetos de servidor (como bancos de dados) devem ser de propriedade de uma entidade de servidor (um logon). Especifique **SCHEMA OWNER** como o *principal_name* para indicar que o objeto deve ser de propriedade de uma entidade de segurança que tenha o esquema do objeto.    
     
-## <a name="remarks"></a>Remarks    
+## <a name="remarks"></a>Comentários    
  ALTER AUTHORIZATION pode ser usado para alterar a propriedade de qualquer entidade que tenha um proprietário. A propriedade de entidades contidas no banco de dados pode ser transferida a qualquer entidade em nível de banco de dados. A propriedade de entidades em nível de servidor pode ser transferida apenas a entidades em nível de servidor.    
     
 > [!IMPORTANT]    
@@ -227,12 +227,12 @@ Os seguintes tipos de contas podem alterar o proprietário de um banco de dados.
   
 A tabela a seguir resume os requisitos:  
   
-Executor  |Destino  |Resultado    
+Executor  |Destino  |Result    
 ---------|---------|---------  
-Logon de Autenticação do SQL Server     |Logon de Autenticação do SQL Server         |Êxito  
+Logon de Autenticação do SQL Server     |Logon de Autenticação do SQL Server         |Sucesso  
 Logon de Autenticação do SQL Server     |Usuário do Azure AD         |Falha           
-Usuário do Azure AD     |Logon de Autenticação do SQL Server         |Êxito           
-Usuário do Azure AD     |Usuário do Azure AD         |Êxito           
+Usuário do Azure AD     |Logon de Autenticação do SQL Server         |Sucesso           
+Usuário do Azure AD     |Usuário do Azure AD         |Sucesso           
   
 Para verificar um proprietário do banco de dados do Azure AD, execute o seguinte comando do Transact-SQL em um banco de dados de usuário (neste exemplo `testdb`).  
     
@@ -253,7 +253,7 @@ ON d.owner_sid = sl.sid;
     
 ```    
   
-### <a name="best-practice"></a>Prática recomendada  
+### <a name="best-practice"></a>Melhor prática  
   
 Em vez de usar os usuários do Azure AD como proprietários individuais do banco de dados, use um grupo do Azure AD como um membro da função fixa de banco de dados **db_owner**. As etapas a seguir mostram como configurar um logon desabilitado como o proprietário do banco de dados e tornar um grupo do Azure Active Directory (`mydbogroup`) um membro da função **db_owner**. 
 1.  Faça logon no SQL Server como administrador do Azure AD e altere o proprietário do banco de dados para um logon de autenticação do SQL Server desabilitado. Por exemplo, do banco de dados de usuário, execute:  
@@ -287,7 +287,7 @@ Um valor retornado de 1 indica que o usuário é um membro da função.
     
 ## <a name="examples"></a>Exemplos    
     
-### <a name="a-transfer-ownership-of-a-table"></a>A. Transferir a propriedade de uma tabela    
+### <a name="a-transfer-ownership-of-a-table"></a>a. Transferir a propriedade de uma tabela    
  O exemplo a seguir transfere a propriedade da tabela `Sprockets` ao usuário `MichikoOsada`. A tabela está localizada dentro do esquema `Parts`.    
     
 ```    

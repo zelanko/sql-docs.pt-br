@@ -15,10 +15,10 @@ ms.assetid: 0fc4aa01-65a3-4a33-9ef4-caca41add238
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: bcba6def4229175c46a981dd03037006bfba2aa2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68012375"
 ---
 # <a name="configure-the-query-wait-server-configuration-option"></a>Configurar a opção de configuração de servidor query wait

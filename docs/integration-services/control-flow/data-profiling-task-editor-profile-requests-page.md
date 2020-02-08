@@ -15,10 +15,10 @@ ms.assetid: c72acb3d-380e-436e-8041-ed364eddfabd
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a13799d353fcf1e1dff1999009cc2f1e8dcedc76
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294176"
 ---
 # <a name="data-profiling-task-editor-profile-requests-page"></a>Data Profiling Task Editor (Profile Requests Page)
@@ -86,7 +86,7 @@ ms.locfileid: "71294176"
  **Gerenciador de Conexões**  
  Exibe o gerenciador de conexões [!INCLUDE[vstecado](../../includes/vstecado-md.md)] que se conecta ao banco de dados de origem.  
   
- **ID da Solicitação**  
+ **Request ID**  
  Exibe um identificador da solicitação. Normalmente, não é necessário alterar o valor gerado automaticamente.  
   
 #### <a name="columns-common-to-the-five-individual-column-profiles"></a>Colunas comuns aos cinco perfis de colunas individuais  

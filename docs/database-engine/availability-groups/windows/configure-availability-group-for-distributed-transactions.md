@@ -17,10 +17,10 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: c163c54bb6ee6276ce39286c1b7743587f94f695
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71713275"
 ---
 # <a name="configure-distributed-transactions-for-an-always-on-availability-group"></a>Configurar transações distribuídas para um grupo de disponibilidade Always On
@@ -195,7 +195,7 @@ Depois de confirmar ou reverter a transação, use `ALTER DATABASE` para definir
 
 Para obter mais informações sobre como resolver transações incertas, consulte [Resolver transações manualmente](https://technet.microsoft.com/library/cc754134.aspx).
 
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Próximas etapas  
 
 [Transações distribuídas](https://docs.microsoft.com/dotnet/framework/data/adonet/distributed-transactions)
 

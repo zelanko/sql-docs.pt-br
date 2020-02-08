@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: b71bad98aa6e9172b69efa67ce8708f1479fa691
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67910478"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>Exemplo: Script de instalação autônoma do SQL Server para Ubuntu
@@ -182,7 +182,7 @@ A primeira coisa que o script Bash faz é definir algumas variáveis. Elas podem
 
 1. Atualizar os repositórios locais
 
-1. Instalar o SQL Server
+1. Instale o SQL Server
 
 1. Configure o SQL Server com o ```MSSQL_SA_PASSWORD``` e aceite automaticamente o Contrato de Licença de Usuário Final.
 

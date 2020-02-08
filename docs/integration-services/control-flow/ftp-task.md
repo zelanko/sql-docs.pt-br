@@ -17,10 +17,10 @@ ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d606e66c3ad7a78edf3808578fe3021d2933b22d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294138"
 ---
 # <a name="ftp-task"></a>Tarefa FTP
@@ -45,7 +45,7 @@ ms.locfileid: "71294138"
   
  Isso significa que a tarefa FTP pode receber vários arquivos e excluir diversos arquivos remotos, mas a tarefa só poderá enviar um arquivo e só poderá excluir um arquivo local se usar um gerenciador de conexões, porque um gerenciador de conexões de arquivos pode acessar só um arquivo. Para acessar vários arquivos locais, a tarefa FTP deve usar uma variável para fornecer as informações de caminho. Por exemplo, uma variável que contém "C:\Test\&#42;.txt" fornece um caminho que dá suporte à exclusão ou envio de todos os arquivos com uma extensão .txt no diretório Test.  
   
- Para enviar vários arquivos e acessar diversos arquivos locais e diretórios, você também pode executar diversas vezes a tarefa FTP incluindo a tarefa em um Loop Foreach. O Loop Foreach pode enumerar arquivos em um diretório usando o enumerador For Each File. Para obter mais informações, consulte [Foreach Loop Container](../../integration-services/control-flow/foreach-loop-container.md).  
+ Para enviar vários arquivos e acessar diversos arquivos locais e diretórios, você também pode executar diversas vezes a tarefa FTP incluindo a tarefa em um Loop Foreach. O Loop Foreach pode enumerar arquivos em um diretório usando o enumerador For Each File. Para obter mais informações, consulte [Contêiner Loop Foreach](../../integration-services/control-flow/foreach-loop-container.md).  
   
  A tarefa de FTP dá suporte para os caracteres curinga *?* e *\** nos caminhos. Isso permite que a tarefa acesse vários arquivos. Porém, você só pode usar caracteres curinga na parte do caminho que especifica o nome de arquivo. Por exemplo, C:\MyDirectory\\*.txt é um caminho válido, mas C:\\\*\MyText.txt não é.  
   

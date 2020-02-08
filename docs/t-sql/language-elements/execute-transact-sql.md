@@ -32,10 +32,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4c305cf11073c6903c75a9ce8b987cc041aa9fa7
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981950"
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
@@ -46,7 +46,7 @@ Executa uma cadeia de caracteres de comando, uma cadeia de caracteres em um lote
 > [!IMPORTANT]  
 >  Antes de chamar EXECUTE com uma cadeia de caracteres, valide a cadeia de caracteres. Nunca execute um comando construído por uma entrada de usuário que não foi validada.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -266,12 +266,12 @@ Se você passar uma única palavra que não começa com `@` e que não está ent
  AS \<context_specification>  
  Especifica o contexto no qual a instrução é executada.  
   
- Logon  
+ LOGIN  
 **Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e posterior
   
  Especifica que o contexto para ser representado é um logon. O escopo de personificação é o servidor.  
   
- Usuário  
+ USER  
  Especifica que o contexto a ser representado é um usuário no banco de dados atual. O escopo de representação é restrito ao banco de dados atual. Uma opção de contexto para um usuário de banco de dados não herda as permissões em nível de servidor desse usuário.  
   
 > [!IMPORTANT]  
@@ -327,7 +327,7 @@ Se você passar uma única palavra que não começa com `@` e que não está ent
   
  O conjunto de resultados real retornado durante execução pode diferir do resultado definido usando a cláusula WITH RESULT SETS de uma das seguintes maneiras: número de conjuntos de resultados, número de colunas, nome de coluna, nulidade e tipo de dados. Se o número de conjuntos de resultados for diferente, ocorrerá um erro e o lote será anulado.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Os parâmetros podem ser fornecidos com *value* ou @*parameter_name*=*value*. . Um parâmetro não faz parte de uma transação; portanto, se um parâmetro for alterado em uma transação que for posteriormente revertida, o parâmetro não será revertido para seu valor anterior. O valor retornado ao chamador será sempre o valor no momento do retorno do módulo.  
   
  O aninhamento ocorre quando um módulo chama outro ou executa código gerenciado, fazendo referência a um módulo CLR (Common Language Runtime) a um tipo definido pelo usuário ou agregação. O nível de aninhamento é aumentado quando o módulo chamado ou a referência de código gerenciado inicia a execução e diminuído quando ela termina. Exceder o máximo de 32 níveis de aninhamento faz com que toda a cadeia de chamada falhe. O nível de aninhamento atual é armazenado na função do sistema @@NESTLEVEL.  
@@ -370,7 +370,7 @@ USE master; EXEC ('USE AdventureWorks2012; SELECT BusinessEntityID, JobTitle FRO
   
  Embora CompanyDomain\SqlUser1 tenha acesso ao banco de dados por meio da associação ao grupo SQLUsers, a instrução `EXECUTE @string_variable AS USER = 'CompanyDomain\SqlUser1'` falhará porque `CompanyDomain\SqlUser1` não existe como uma entidade de segurança no banco de dados.  
   
-### <a name="best-practices"></a>Práticas recomendadas  
+### <a name="best-practices"></a>Práticas Recomendadas  
  Especifique um logon ou um usuário que tenha os privilégios mínimos necessários para executar as operações definidas na instrução ou módulo. Por exemplo, não especifique um nome de logon que tenha permissões em nível de servidor se apenas as permissões em nível de banco de dados forem necessárias; ou não especifique uma conta de proprietário de banco de dados, a menos que essas permissões sejam solicitadas.  
   
 ## <a name="permissions"></a>Permissões  
@@ -391,7 +391,7 @@ USE master; EXEC ('USE AdventureWorks2012; SELECT BusinessEntityID, JobTitle FRO
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-execute-to-pass-a-single-parameter"></a>A. Usando EXECUTE para passar um único parâmetro  
+### <a name="a-using-execute-to-pass-a-single-parameter"></a>a. Usando EXECUTE para passar um único parâmetro  
  O procedimento armazenado `uspGetEmployeeManagers` no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] espera um parâmetro (`@EmployeeID`). Os exemplos a seguir executam o procedimento armazenado `uspGetEmployeeManagers` com `Employee ID 6` como seu valor de parâmetro.  
   
 ```  

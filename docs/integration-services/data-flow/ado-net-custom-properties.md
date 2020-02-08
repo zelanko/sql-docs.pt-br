@@ -11,10 +11,10 @@ ms.assetid: e062a9ab-1e6b-4061-845a-4f8a0552b09d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a4e670cf37550734d672047f2d7cf4a9f8045473
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293492"
 ---
 # <a name="ado-net-custom-properties"></a>Propriedades personalizadas do ADO NET
@@ -30,9 +30,9 @@ ms.locfileid: "71293492"
   
 |Nome da propriedade|Tipo de Dados|Descrição|  
 |-------------------|---------------|-----------------|  
-|CommandTimeOut|Cadeia de caracteres|Um valor que especifica quanto segundos faltam para que o comando SQL expire. Um valor de 0 indica que o comando nunca expirará.|  
-|SqlCommand|Cadeia de caracteres|A instrução SQL usada pela origem do ADO NET para extrair dados.<br /><br /> Quando o pacote é carregado, é possível atualizar esta propriedade de forma dinâmica com a instrução SQL que será usada pela origem do ADO NET. Para obter mais informações, consulte [Expressões do Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md) e [Usar expressões de propriedade em pacotes](../../integration-services/expressions/use-property-expressions-in-packages.md).|  
-|AllowImplicitStringConversion|Booliano|Um valor que indica se o seguinte acontece:<br /><br /> -Nenhuma geração de erro de validação se não houver correspondência entre tipos de metadados externos e tipos de coluna de saída que são cadeias de caracteres (DT_WSTR ou DT_NTEXT).<br /><br /> -Conversão implícita de tipos de metadados externos para o tipo de dados String usado pela coluna de saída.<br /><br /> <br /><br /> O valor padrão é TRUE.<br /><br /> Para obter mais informações, consulte [ADO NET Source](../../integration-services/data-flow/ado-net-source.md).|  
+|CommandTimeOut|String|Um valor que especifica quanto segundos faltam para que o comando SQL expire. Um valor de 0 indica que o comando nunca expirará.|  
+|SqlCommand|String|A instrução SQL usada pela origem do ADO NET para extrair dados.<br /><br /> Quando o pacote é carregado, é possível atualizar esta propriedade de forma dinâmica com a instrução SQL que será usada pela origem do ADO NET. Para obter mais informações, consulte [Expressões do Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md) e [Usar expressões de propriedade em pacotes](../../integration-services/expressions/use-property-expressions-in-packages.md).|  
+|AllowImplicitStringConversion|Boolean|Um valor que indica se o seguinte acontece:<br /><br /> -Nenhuma geração de erro de validação se não houver correspondência entre tipos de metadados externos e tipos de coluna de saída que são cadeias de caracteres (DT_WSTR ou DT_NTEXT).<br /><br /> -Conversão implícita de tipos de metadados externos para o tipo de dados String usado pela coluna de saída.<br /><br /> <br /><br /> O valor padrão é TRUE.<br /><br /> Para obter mais informações, consulte [ADO NET Source](../../integration-services/data-flow/ado-net-source.md).|  
   
  A saída e as colunas de saída da origem do ADO NET não têm nenhuma propriedade personalizada.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "71293492"
 |--------------|---------------|-----------------|  
 |BatchSize|Integer|O número de linhas em um lote enviado ao servidor. O valor **0** indica que o tamanho do lote corresponde ao tamanho do buffer interno. O valor padrão dessa propriedade é **0**.|  
 |CommandTimeOut|Integer|O número máximo de segundos em que o comando SQL pode ser executado antes que o tempo limite seja excedido. O valor **0** indica que não há limite de tempo. O valor padrão dessa propriedade é **0**.|  
-|TableOrViewName|Cadeia de caracteres|O nome da tabela ou exibição de destino.|  
+|TableOrViewName|String|O nome da tabela ou exibição de destino.|  
   
  Para obter mais informações, consulte [ADO NET Destination](../../integration-services/data-flow/ado-net-destination.md).  
   

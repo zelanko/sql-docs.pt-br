@@ -11,10 +11,10 @@ ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 95dceade62e487db05a66df6b7986f23723b1303
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297765"
 ---
 # <a name="tutorial-using-the-odata-source"></a>Tutorial: Usando o OData Source
@@ -28,7 +28,7 @@ ms.locfileid: "71297765"
   
 1.  Inicie o **SQL Server Data Tools** ou o [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
   
-2.  Clique em **Arquivo**, aponte para **Novo**e clique em **Projeto**.  
+2.  Clique em **Arquivo**, aponte para **Novo** e clique em **Projeto**.  
   
 3.  Na caixa de diálogo **Novo Projeto** , expanda **Instalado**, **Modelos**, **Business Intelligence**e clique em **Integration Services**.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "71297765"
   
 14. Selecione **EmployeeID**, **FirstName**e **LastName** em **Colunas Externas Disponíveis** marcando as caixas de seleção.  
   
-15. Clique em **OK** para fechar a caixa de diálogo **Editor do OData Source**.  
+15. Clique em **OK** para fechar a caixa de diálogo **Editor do OData Source** .  
   
 ## <a name="3-add-and-configure-a-flat-file-destination"></a>3. Adicionar e configurar um destino de arquivo simples
   

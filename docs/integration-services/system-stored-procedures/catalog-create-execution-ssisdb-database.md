@@ -11,10 +11,10 @@ ms.assetid: 45d0c2f6-1f38-445f-ac06-e2a01f6ac600
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8076434e550f27ac292eec1b7385fce93d60e3ec
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295553"
 ---
 # <a name="catalogcreate_execution-ssisdb-database"></a>catalog.create_execution (Banco de dados SSISDB)
@@ -55,7 +55,7 @@ catalog.create_execution [@folder_name = folder_name
  Um identificador exclusivo para uma referência do ambiente. Esse parâmetro é opcional. O *reference_id* é **bigint**.  
   
  [@use32bitruntime =] *use32bitruntime*  
- Indica se o tempo de execução de 32 bits deve ser usado para executar o pacote em um sistema operacional de 64 bits. Use o valor 1 para executar o pacote com o tempo de execução de 32 bits ao executar em um sistema operacional de 64 bits. Use o valor 0 para executar o pacote com o tempo de execução de 64 bits ao executar em um sistema operacional de 64 bits. Esse parâmetro é opcional. O *Use32bitruntime* é **bit**.  
+ Indica se o runtime de 32 bits deve ser usado para executar o pacote em um sistema operacional de 64 bits. Use o valor 1 para executar o pacote com o runtime de 32 bits ao executar em um sistema operacional de 64 bits. Use o valor 0 para executar o pacote com o runtime de 64 bits ao executar em um sistema operacional de 64 bits. Esse parâmetro é opcional. O *Use32bitruntime* é **bit**.  
  
  [@runinscaleout =] *runinscaleout*  
  Indique se a execução está no Scale Out. Use o valor 1 para executar o pacote no Scale Out. Use o valor 0 para executar o pacote sem o Scale Out. Esse parâmetro é opcional. Se o valor não for especificado, ele será definido como DEFAULT_EXECUTION_MODE em [SSISDB].[catalog].[catalog_properties]. O *runinscaleout* é **bit**. 
@@ -73,7 +73,7 @@ Esse parâmetro é opcional. Se o valor não for especificado, ele será definid
  Retorna o identificador exclusivo de uma instância de execução. O *execution_id* é **bigint**.  
 
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Uma execução é usada para especificar os valores de parâmetro que um pacote usa durante uma única instância de execução do pacote.  
   
  Se uma referência de ambiente for especificada com o parâmetro *reference_id*, o procedimento armazenado populará os parâmetros de projeto e pacote com valores literais ou valores referenciados das variáveis de ambiente correspondentes. Se referência de ambiente for especificada, valores de parâmetro padrão serão usados durante a execução do pacote. Para determinar exatamente quais valores são usados para uma determinada instância de execução, use o valor de parâmetro de saída *execution_id* desse procedimento armazenado e consulte a exibição [execution_parameter_values](../../integration-services/system-views/catalog-execution-parameter-values-ssisdb-database.md).  
@@ -101,7 +101,7 @@ GO
  0 (êxito)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- None  
+ Nenhum  
   
 ## <a name="permissions"></a>Permissões  
  Este procedimento armazenado exige uma das seguintes permissões:  

@@ -16,10 +16,10 @@ ms.assetid: 676094e9-ec18-4524-9b21-1f9c5b16dd52
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f9c94e0c69bd528f1c579f41319a4db18b7d4d3c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982565"
 ---
 # <a name="getlocktimeout-method-sqlserverdatasource"></a>Método getLockTimeout (SQLServerDataSource)
@@ -37,7 +37,7 @@ public int getLockTimeout()
 ## <a name="return-value"></a>Valor retornado  
  Um valor **int** que contém o número de milissegundos que o banco de dados esperará.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O tempo limite de bloqueio é o número de milissegundos de espera antes de o banco de dados informar um tempo limite de bloqueio. O valor padrão de -1 significa que ele aguardará por tempo indefinido. Se for especificado, esse valor será o padrão para todas as instruções na conexão.  
   
 > [!NOTE]  

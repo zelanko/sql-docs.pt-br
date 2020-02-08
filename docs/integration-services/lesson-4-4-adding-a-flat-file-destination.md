@@ -11,10 +11,10 @@ ms.assetid: f4088de3-16d8-419c-96a1-a2cd005d0a5b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ae02b9188ecc9917d26532633e4d5a253d4f326b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295942"
 ---
 # <a name="lesson-4-4-add-a-flat-file-destination"></a>Lição 4-4: Adicionar um destino de Arquivo Simples
@@ -53,7 +53,7 @@ Nesta tarefa, você salva todas essas informações sobre as linhas com falha em
   
     Além das colunas do arquivo de dados de origem, há três colunas novas: ErrorCode, ErrorColumn e ErrorDescription. Essas colunas são a saída de erro da transformação Pesquisar Chave de Moeda e o script na transformação Obter Descrição do Erro. Você pode usar essas colunas para solucionar problemas e detectar a causa da linha com falha.  
   
-12. Escolha **OK**.  
+12. Selecione **OK**.  
   
 13. No **Editor de Destino de Arquivo Simples**, desmarque a caixa de seleção **Substituir dados no arquivo** .  
   
@@ -61,7 +61,7 @@ Nesta tarefa, você salva todas essas informações sobre as linhas com falha em
   
 14. No **Editor de Destino de Arquivo Simples**, selecione **Mapeamentos** para verificar se todas as colunas estão corretas. Como alternativa, você pode renomear as colunas no destino.  
   
-15. Escolha **OK**.  
+15. Selecione **OK**.  
   
 ## <a name="go-to-next-task"></a>Ir para a próxima tarefa
 [Etapa 5: Testar o pacote de tutorial da Lição 4](../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md)  

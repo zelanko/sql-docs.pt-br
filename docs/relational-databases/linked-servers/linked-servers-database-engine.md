@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
 ms.openlocfilehash: f63e94b8a9ca93d6a1403e17d4a8fa7205938066
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74165345"
 ---
 # <a name="linked-servers-database-engine"></a>Servidores vinculados (Mecanismo de Banco de Dados)
@@ -64,7 +64,7 @@ O provedor OLE DB do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLU
 ## <a name="linked-server-details"></a>Detalhes sobre servidores vinculados  
  A ilustração a seguir mostra os fundamentos básicos de uma configuração de servidores vinculados.  
   
- ![Camadas de cliente, de servidor e de servidor de banco de dados](../../relational-databases/linked-servers/media/lsvr.gif "|::ref1::|")  
+ ![Camadas de cliente, de servidor e de servidor de banco de dados](../../relational-databases/linked-servers/media/lsvr.gif "Camadas de cliente, de servidor e de servidor de banco de dados")  
   
 Normalmente, servidores vinculados são usados para manipular consultas distribuídas. Quando um aplicativo cliente executa uma consulta distribuída através de um servidor vinculado, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] analisa o comando e envia solicitações ao OLE DB. Essa solicitação de conjunto de linhas pode ser a execução de uma consulta em relação ao provedor ou a abertura de uma tabela base do provedor.  
 

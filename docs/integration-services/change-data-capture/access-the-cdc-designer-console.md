@@ -13,10 +13,10 @@ ms.assetid: b168c64e-c1b5-42d4-a92a-84de1dd0324e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 92f6384d099a6f29ec43387283a1e52a3e600076
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298927"
 ---
 # <a name="access-the-cdc-designer-console"></a>Acessar o CDC Designer Console
@@ -36,7 +36,7 @@ ms.locfileid: "71298927"
  Digite o nome do servidor em que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está localizado.  
   
 ### <a name="authentication"></a>Autenticação  
- Selecione uma destas opções:  
+ Selecione uma das seguintes:  
   
 -   **Autenticação do Windows**  
   
@@ -62,6 +62,6 @@ ms.locfileid: "71298927"
  Para obter informações sobre a caixa de diálogo Propriedades Avançadas de Conexão, consulte [Propriedades Avançadas de Conexão](../../integration-services/change-data-capture/advanced-connection-properties.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Permissões necessárias para conexão do SQL Server para o Designer CDC](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-designer.md)  
+ [Permissões necessárias para conexão do SQL Server para o CDC Designer](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-designer.md)  
   
   

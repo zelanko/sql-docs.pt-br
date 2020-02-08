@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: 06708cc6770779f22bea45eddacba5a5d29f9092
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68082134"
 ---
 # <a name="integration-services-scale-out-manager"></a>Gerenciador do Integration Services Scale Out
@@ -103,6 +103,6 @@ Para editar a descrição de um Trabalho do Scale Out, selecione o Trabalho do S
 ![Portal Salvar o Trabalho](media/portal-save-worker-new.PNG)
 
 ## <a name="next-steps"></a>Próximas etapas
-Para saber mais, veja os tópicos a seguir:
+Para obter mais informações, confira os seguintes artigos:
 -   [Mestre do SSIS (Integration Services) Scale Out](integration-services-ssis-scale-out-master.md)
 -   [Trabalho do SSIS (Integration Services) Scale Out](integration-services-ssis-scale-out-worker.md)

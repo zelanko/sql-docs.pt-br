@@ -11,10 +11,10 @@ ms.author: alayu
 ms.custom: seodec18
 ms.date: 06/28/2019
 ms.openlocfilehash: df1e49af0378b6af4a3d82b5a5ec2a4293be5e35
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74957080"
 ---
 # <a name="how-to-use-notebooks-in-azure-data-studio"></a>Como usar notebooks no Azure Data Studio
@@ -82,7 +82,7 @@ Depois que a instalação for realizada com sucesso, você encontrará uma notif
 
 ![image22](media/sql-notebooks/jupyter-backend.png)
 
-|Kernel|DESCRIÇÃO
+|Kernel|Descrição
 |:-----|:-----
 | Kernel do SQL | Escreva o código SQL direcionado ao seu banco de dados relacional.
 |Kernel PySpark3 e PySpark| Escreva o código Python usando a computação do Spark do cluster.

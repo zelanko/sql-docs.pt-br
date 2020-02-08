@@ -25,10 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
 ms.openlocfilehash: a652bc56a826469017ba4de643c9d3e1822d4c22
-ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75952527"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Edições e recursos compatíveis do SQL Server 2017 no Linux
@@ -68,7 +68,7 @@ Você pode instalar apenas os componentes cliente do [!INCLUDE[ssNoVersion](../i
 
 O SQL Server 2017 no Linux é compatível com o mecanismo de banco de dados do SQL Server. A tabela a seguir descreve os recursos no mecanismo de banco de dados.   
   
-|Componentes de servidor|DESCRIÇÃO|  
+|Componentes de servidor|Descrição|  
 |-----------------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|O [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] inclui o [!INCLUDE[ssDE](../includes/ssde-md.md)], o principal serviço para armazenamento, processamento e segurança de dados, replicação, pesquisa de texto completo e ferramentas para gerenciar dados XML e integração de análise de banco de dados.|  
 

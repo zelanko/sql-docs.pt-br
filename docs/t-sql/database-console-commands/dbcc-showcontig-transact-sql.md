@@ -24,10 +24,10 @@ ms.assetid: 1df2123a-1197-4fff-91a3-25e3d8848aaa
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 0e1fff3c60dab7e8fe055753c125fddf70abb1df
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68039066"
 ---
 # <a name="dbcc-showcontig-transact-sql"></a>DBCC SHOWCONTIG (Transact-SQL)
@@ -40,7 +40,7 @@ Exibe informações de fragmentação para os dados e índices da tabela ou exib
   
 **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] até a [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658))
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -68,7 +68,7 @@ DBCC SHOWCONTIG
  *index_name* | *index_id*  
  É o índice de verificação das informações de fragmentação. Se não for especificado, a instrução processará o índice base da tabela ou exibição especificada. Para obter a ID de índice, use a exibição de catálogo [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).  
   
- com  
+ WITH  
  Especifica opções para o tipo de informações retornado pela instrução DBCC.  
   
  FAST  
@@ -142,10 +142,10 @@ Quando WITH TABLERESULTS e FAST forem especificados, o conjunto de resultados se
 |**AverageRecordSize**|**ExtentFragmentation**|  
 |**ForwardedRecords**||  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 A instrução DBCC SHOWCONTIG atravessa a cadeia de páginas no nível da folha do índice especificado quando *index_id* é especificado. Se apenas *table_id* for especificado ou se *index_id* for 0, as páginas de dados da tabela especificada serão verificadas. A operação somente requer um bloqueio de tabela de tentativa compartilhada (IS). Desse modo, podem ser executadas todas as atualizações e inserções, exceto as que exigirem um bloqueio de tabela exclusivo (X). Isso permite um equilíbrio entre a velocidade da execução e nenhuma redução da simultaneidade em relação ao número de estatísticas retornadas. Entretanto, se o comando estiver sendo usado apenas para medir a fragmentação, recomendamos o uso da opção WITH FAST para obter um desempenho melhor. Uma verificação rápida não lê as páginas em nível de dados ou folha do índice. A opção WITH FAST não se aplica a um heap.
   
-## <a name="restrictions"></a>Restrictions  
+## <a name="restrictions"></a>Restrições  
 DBCC SHOWCONTIG não exibe dados com os tipos de dados **ntext**, **text** e **image**. Isso ocorre porque os índices de texto que armazenam dados de texto e imagem já não existem mais.
   
 Da mesma forma, DBCC SHOWCONTIG não oferece suporte a alguns recursos novos. Por exemplo:
@@ -188,7 +188,7 @@ O nível de fragmentação de um índice pode ser determinado dos seguintes modo
 O usuário precisa ser o proprietário da tabela ou ser membro da função de servidor fixa **sysadmin**, da função de banco de dados fixa **db_owner** ou da função de banco de dados fixa **db_ddladmin**.
   
 ## <a name="examples"></a>Exemplos  
-### <a name="a-displaying-fragmentation-information-for-a-table"></a>A. Exibindo informações de fragmentação de uma tabela  
+### <a name="a-displaying-fragmentation-information-for-a-table"></a>a. Exibindo informações de fragmentação de uma tabela  
 O exemplo a seguir exibe informações de fragmentação da tabela `Employee`.
   
 ```sql  
@@ -198,7 +198,7 @@ DBCC SHOWCONTIG ('HumanResources.Employee');
 GO  
 ```  
   
-### <a name="b-using-objectid-to-obtain-the-table-id-and-sysindexes-to-obtain-the-index-id"></a>B. Usando OBJECT_ID para obter a ID de tabela e sys.indexes para obter a ID de índice  
+### <a name="b-using-object_id-to-obtain-the-table-id-and-sysindexes-to-obtain-the-index-id"></a>B. Usando OBJECT_ID para obter a ID de tabela e sys.indexes para obter a ID de índice  
 O exemplo a seguir usa `OBJECT_ID` e a exibição de catálogo `sys.indexes` para obter a ID da tabela e a ID do índice para o índice `AK_Product_Name` da tabela `Production.Product` no banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].
   
 ```sql  

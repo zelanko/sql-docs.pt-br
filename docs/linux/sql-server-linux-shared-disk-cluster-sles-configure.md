@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
 ms.openlocfilehash: 70701d5c0103da089444177db1143066d0c862cd
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68032227"
 ---
 # <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>Configurar o cluster de disco compartilhado SLES para o SQL Server
@@ -249,7 +249,7 @@ Full list of resources:
 
 Para gerenciar os recursos de cluster, confira o seguinte tópico sobre o SUSE: [Como gerenciar recursos de cluster](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.config.crm )
 
-### <a name="manual-failover"></a>failover manual
+### <a name="manual-failover"></a>Failover manual
 
 Embora os recursos sejam configurados para fazer failover (ou migrar) automaticamente para outros nós do cluster no caso de uma falha de hardware ou de software, você também poderá mover manualmente um recurso para outro nó no cluster usando a GUI do Pacemaker ou a linha de comando. 
 

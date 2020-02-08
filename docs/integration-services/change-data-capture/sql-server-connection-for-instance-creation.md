@@ -11,10 +11,10 @@ ms.assetid: 81d0e7e2-d8f0-4bd9-9565-218ce996f28e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e3eee4812124b44a679762d42931b7fa7048b92a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294555"
 ---
 # <a name="sql-server-connection-for-instance-creation"></a>Conexão de SQL Server para a criação de instância
@@ -33,7 +33,7 @@ ms.locfileid: "71294555"
  Digite o nome do servidor em que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está localizado.  
   
  **Autenticação**  
- Selecione uma destas opções:  
+ Selecione uma das seguintes:  
   
 -   **Autenticação do Windows**  
   
@@ -56,6 +56,6 @@ ms.locfileid: "71294555"
   
 ## <a name="see-also"></a>Consulte Também  
  [Criar o banco de dados de alteração do SQL Server](../../integration-services/change-data-capture/create-the-sql-server-change-database.md)   
- [Permissões necessárias para conexão do SQL Server para o Designer CDC](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-designer.md)  
+ [Permissões necessárias para conexão do SQL Server para o CDC Designer](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-designer.md)  
   
   

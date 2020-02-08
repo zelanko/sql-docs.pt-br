@@ -13,10 +13,10 @@ ms.assetid: 13a84d21-2623-4efe-b442-4125a7a2d690
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 035c31286e0594763c1063b606ad56473c41fbf5
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294605"
 ---
 # <a name="process-inserts-updates-and-deletes"></a>Processar inserções, atualizações e exclusões
@@ -74,7 +74,7 @@ select
  **Próximo tópico:** [Aplicar as alterações ao destino](../../integration-services/change-data-capture/apply-the-changes-to-the-destination.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Transformação Divisão Condicional](../../integration-services/data-flow/transformations/conditional-split-transformation.md)   
+ [Conditional Split Transformation](../../integration-services/data-flow/transformations/conditional-split-transformation.md)   
  [Dividir um conjunto de dados por meio da transformação Divisão Condicional](../../integration-services/data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
   
   

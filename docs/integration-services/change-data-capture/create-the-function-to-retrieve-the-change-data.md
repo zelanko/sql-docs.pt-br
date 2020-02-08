@@ -13,10 +13,10 @@ ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 43809c2be4dca62d150be31f62b833b08a2569b7
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72251978"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>Criar a função para recuperar os dados de alteração
@@ -143,7 +143,7 @@ deallocate #hfunctions
  Se o pacote chamar uma função de wrapper que consulte todas as alterações, essa função também retornará as colunas __CDC_STARTLSN e \__CDC_SEQVAL. Essas duas colunas se tornam a primeira e a segunda colunas, respectivamente, do conjunto de resultados. A função de invólucro também classifica o conjunto de resultados com base nessas duas colunas.  
   
 ## <a name="writing-your-own-table-value-function"></a>Escrevendo sua própria função do valor de tabela  
- Também é possível usar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para escrever sua própria função de wrapper com valor de tabela que chama a função de consulta de captura dos dados de alteração e armazena a função de wrapper com valor de tabela no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações sobre como criar uma função Transact-SQL, consulte [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md).  
+ Também é possível usar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para escrever sua própria função de wrapper com valor de tabela que chama a função de consulta de captura dos dados de alteração e armazena a função de wrapper com valor de tabela no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações sobre como criar uma função Transact-SQL, consulte [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md).  
   
  O seguinte exemplo define uma função com valor de tabela que recupera alterações de uma tabela Cliente para o intervalo de alteração especificado. Essa função usa funções de captura de dados de alteração para mapear os valores **datetime** para os valores LSN (número de sequência de log) binários usados pelas tabelas de alteração internamente. Esta função também controla diversas condições especiais:  
   
@@ -214,7 +214,7 @@ go
 |-----------------|---------------|-----------------|  
 |**__$start_lsn**|**binary(10)**|LSN associado à transação de confirmação da alteração.<br /><br /> Todas as alterações confirmadas na mesma transação compartilham o mesmo LSN de confirmação. Por exemplo, se uma operação de atualização na tabela de origem modificar duas linhas diferentes, a tabela de alteração conterá quatro linhas (duas com os valores antigos e duas com os valores novos), cada uma com o mesmo valor de **__$start_lsn** .|  
 |**__$seqval**|**binary(10)**|Valor de sequência usado para organizar as alterações de linha em uma transação.|  
-|**__$operation**|**int**|A operação DML (linguagem de manipulação de dados) associada à alteração. Pode ser uma destas opções:<br /><br /> 1 = excluir<br /><br /> 2 = inserir<br /><br /> 3 = atualizar (valores anteriores à operação de atualização).<br /><br /> 4 = atualizar (valores posteriores à operação de atualização).|  
+|**__$operation**|**int**|A operação DML (linguagem de manipulação de dados) associada à alteração. Um dos seguintes pode ser feito:<br /><br /> 1 = excluir<br /><br /> 2 = inserir<br /><br /> 3 = atualizar (valores anteriores à operação de atualização).<br /><br /> 4 = atualizar (valores posteriores à operação de atualização).|  
 |**__$update_mask**|**varbinary(128)**|Uma máscara de bits com base nos ordinais de coluna da tabela de alteração identificando as colunas que foram alteradas. Você poderia examinar este valor se você tivesse que determinar quais colunas foram alteradas.|  
 |**\<colunas da tabela de origem capturada>**|varia|As colunas restantes retornadas pela função são as colunas da tabela de origem que foram identificadas como colunas capturadas quando a instância de captura foi criada. Se nenhuma coluna tiver sido especificada originalmente na lista de colunas capturadas, todas as colunas da tabela de origem serão retornadas.|  
   

@@ -8,10 +8,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 4fe5ea36b2e60a3a0531e247acc303b70e0db801
-ms.sourcegitcommit: 39630fddc69141531eddca2a3c156ccf8536f49c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72929902"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>Perguntas frequentes sobre o SQL Server em Linux
@@ -46,7 +46,7 @@ As seções a seguir fornecem perguntas e respostas comuns sobre o SQL Server em
 
 1. **Como funciona o licenciamento no Linux?**
 
-   O SQL Server é licenciado da mesma forma para Windows e Linux. Na verdade, você licencia o SQL Server e, em seguida, pode optar por usar essa licença na plataforma de sua escolha. Para obter mais informações, confira [Como licenciar o SQL Server](https://www.microsoft.com/sql-server/sql-server-2017-pricing).
+   O SQL Server é licenciado da mesma forma para Windows e Linux. Na verdade, você licencia o SQL Server e, em seguida, pode optar por usar essa licença na plataforma de sua escolha. Para saber mais, confira [Como licenciar o SQL Server](https://www.microsoft.com/sql-server/sql-server-2017-pricing).
 
 1. **Qual edição do SQL Server devo escolher quando já o comprei?**
 
@@ -83,7 +83,7 @@ As seções a seguir fornecem perguntas e respostas comuns sobre o SQL Server em
 
 1. **Posso instalar o SQL Server no subsistema Linux para Windows 10?**
 
-   Nenhum. O Linux em execução no Windows 10 não é uma plataforma com suporte no momento para o SQL Server e ferramentas relacionadas.
+   Não. O Linux em execução no Windows 10 não é uma plataforma com suporte no momento para o SQL Server e ferramentas relacionadas.
 
 1. **Quais sistemas de arquivos do Linux o SQL Server pode usar para arquivos de dados?**
 

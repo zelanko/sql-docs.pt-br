@@ -11,10 +11,10 @@ ms.assetid: f8663ff3-aa98-4dd8-b850-b21efada0b87
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 341d48d35404cd8d18c3f1474693305b7fadb3cf
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296718"
 ---
 # <a name="catalogstart_execution-ssisdb-database"></a>catalog.start_execution (Banco de dados SSISDB)
@@ -39,7 +39,7 @@ catalog.start_execution [@execution_id =] execution_id [, [@retry_count =] retry
  [@retry_count =] *retry_count*  
  A contagem de repetições se a execução falhar. Ele entra em vigor somente se a execução estiver no Scale Out. Esse parâmetro é opcional. Se o valor não for especificado, ele será definido como 0. O *retry_count* é **int**.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Uma execução é usada para especificar os valores de parâmetro que são usados por um pacote durante uma única instância de execução do pacote. Depois que uma instância de execução tiver sido criada e antes que ela tenha sido iniciada, o projeto correspondente deve ser reimplantado. Nesse caso, a instância de execução faz referência a um projeto que está desatualizado. Essa referência inválida faz com que o procedimento armazenado falhe.  
   
 > [!NOTE]  
@@ -66,7 +66,7 @@ GO
  0 (êxito)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- None  
+ Nenhum  
   
 ## <a name="permissions"></a>Permissões  
  Este procedimento armazenado exige uma das seguintes permissões:  

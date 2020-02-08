@@ -15,10 +15,10 @@ ms.assetid: a5393c1a-cc37-491a-a260-7aad84dbff68
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 5c636138358dda82c758ab2db70fab8d315f9b9d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294027"
 ---
 # <a name="loop-through-excel-files-and-tables-by-using-a-foreach-loop-container"></a>Loop por meio de arquivos do Excel e tabelas usando um contêiner de Loop Foreach
@@ -104,6 +104,6 @@ ms.locfileid: "71294027"
  [Gerenciador de Conexões do Excel](../../integration-services/connection-manager/excel-connection-manager.md)   
  [Origem do Excel](../../integration-services/data-flow/excel-source.md)   
  [Destino do Excel](../../integration-services/data-flow/excel-destination.md)   
- [Trabalhando com arquivos do Excel com a tarefa Script](../../integration-services/extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)  
+ [Trabalhar com arquivos do Excel com a tarefa Script](../../integration-services/extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)  
   
   

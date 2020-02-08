@@ -12,10 +12,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2a242b02d14536036b53ee265413e28f5aeab231
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908032"
 ---
 # <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>Introdução ao Columnstore para análise operacional em tempo real
@@ -28,7 +28,7 @@ ms.locfileid: "72908032"
   
 -   **Complexidade.** Implementar o ETL pode exigir codificação considerável especialmente para carregar apenas as linhas modificadas. Pode haver complexidade na identificação de quais linhas foram modificadas.  
   
--   **Custo** Implementar o ETL exige o custo da compra de licenças adicionais de hardware e software.  
+-   **Custo.** Implementar o ETL exige o custo da compra de licenças adicionais de hardware e software.  
   
 -   **Latência de dados.** Implementar o ETL adiciona um atraso para execução da análise. Por exemplo, se o trabalho ETL for executado no final de cada dia útil, as consultas analíticas serão executadas nos dados com pelo menos um dia. Para muitas empresas, esse atraso é inaceitável porque a empresa depende da análise de dados em tempo real. Por exemplo, a detecção de fraudes requer análise em tempo real em dados operacionais.  
   
@@ -220,7 +220,7 @@ ORDER BY created_time DESC
 ## <a name="see-also"></a>Consulte Também  
  [Guia de Índices Columnstore](../../relational-databases/indexes/columnstore-indexes-overview.md)   
  [Carregamento de dados dos índices columnstore](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
- [Desempenho de consultas de índices ColumnStore](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
+ [Desempenho de consultas de Índices columnstore](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
  [Índices columnstore para Data Warehouse](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)   
  [Reorganizar e recompilar índices](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)
   

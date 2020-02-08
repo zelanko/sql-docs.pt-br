@@ -8,10 +8,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 ms.openlocfilehash: 34f6b61160b687fa6864a2660b632524188b922c
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71710462"
 ---
 # <a name="type-mapping-with-polybase"></a>Mapeamento de tipo com o PolyBase
@@ -37,23 +37,23 @@ Para tabelas externas que referenciam arquivos em fontes de dados externas, as d
 | SMALLINT      | Int16                     | SMALLINT       | ShortWritable         |
 | INT           | Int32                     | INT            | IntWritable           |
 | BIGINT        | Int64                     | BIGINT         | LongWritable          |
-| bit           | Booliano                   | booleano        | BooleanWritable       |
+| bit           | Boolean                   | booleano        | BooleanWritable       |
 | FLOAT         | Double                    | double         | DoubleWritable        |
-| REAL          | Single                    | FLOAT          | FloatWritable         |
+| real          | Single                    | FLOAT          | FloatWritable         |
 | money         | Decimal                   | double         | DoubleWritable        |
 | SMALLMONEY    | Decimal                   | double         | DoubleWritable        |
-| NCHAR         | Cadeia de caracteres<br /><br /> Char[] | cadeia de caracteres         | Varchar               |
-| NVARCHAR      | Cadeia de caracteres<br /><br /> Char[] | cadeia de caracteres         | Varchar               |
-| char          | Cadeia de caracteres<br /><br /> Char[] | cadeia de caracteres         | Varchar               |
-| varchar       | Cadeia de caracteres<br /><br /> Char[] | cadeia de caracteres         | Varchar               |
-| BINARY        | Byte[]                    | BINARY         | BytesWritable         | Aplica-se ao Hive 0.8 e posterior. |
-| varbinary     | Byte[]                    | BINARY         | BytesWritable         | Aplica-se ao Hive 0.8 e posterior. |
-| Data          | DateTime                  | timestamp      | TimestampWritable     |
-| smalldatetime | DateTime                  | timestamp      | TimestampWritable     |
-| datetime2     | DateTime                  | timestamp      | TimestampWritable     |
-| DATETIME      | DateTime                  | timestamp      | TimestampWritable     |
+| NCHAR         | String<br /><br /> Char[] | string         | Varchar               |
+| NVARCHAR      | String<br /><br /> Char[] | string         | Varchar               |
+| char          | String<br /><br /> Char[] | string         | Varchar               |
+| varchar       | String<br /><br /> Char[] | string         | Varchar               |
+| binary        | Byte[]                    | binary         | BytesWritable         | Aplica-se ao Hive 0.8 e posterior. |
+| varbinary     | Byte[]                    | binary         | BytesWritable         | Aplica-se ao Hive 0.8 e posterior. |
+| date          | Datetime                  | timestamp      | TimestampWritable     |
+| smalldatetime | Datetime                  | timestamp      | TimestampWritable     |
+| datetime2     | Datetime                  | timestamp      | TimestampWritable     |
+| DATETIME      | Datetime                  | timestamp      | TimestampWritable     |
 | time          | TimeSpan                  | timestamp      | TimestampWritable     |
-| Decimal       | Decimal                   | Decimal        | BigDecimalWritable    | Aplica-se ao Hive 0.11 e posterior. |
+| decimal       | Decimal                   | decimal        | BigDecimalWritable    | Aplica-se ao Hive 0.11 e posterior. |
 
 <!--SQL Server 2019-->
 ::: moniker range=">= sql-server-ver15 || =sqlallproducts-allversions"
@@ -62,11 +62,11 @@ Para tabelas externas que referenciam arquivos em fontes de dados externas, as d
 
 | Tipo de dados de Oracle | Tipo de SQL Server | 
 | -------------    | --------------- |
-|float             |float            |
+|Float             |Float            |
 |NUMBER            |Decimal          |
 |LONG              |nvarchar         |
 |BINARY_FLOAT      |Real             | 
-|BINARY_DOUBLE     |float            | 
+|BINARY_DOUBLE     |Float            | 
 |CHAR              |Char             |
 |VARCHAR2          |Varchar          | 
 |NVARCHAR2         |nvarchar         | 
@@ -93,12 +93,12 @@ Para tabelas externas que referenciam arquivos em fontes de dados externas, as d
 
 | Tipo de dados BSON     | Tipo de SQL Server |
 | ------------------ | --------------- |
-| Double             | float           |
-| Cadeia de caracteres             | nvarchar        |
+| Double             | Float           |
+| String             | nvarchar        |
 | Dados binários        | nvarchar        |
 | ID de objeto          | nvarchar        |
-| Booliano            | bit             |
-| data               | Datetime2       |
+| Boolean            | bit             |
+| Data               | Datetime2       |
 | Inteiro de 32 bits     | Int             |
 | Timestamp          | nvarchar        |
 | Inteiro de 64 bits     | BigInt          |
@@ -125,7 +125,7 @@ O MongoDB usa documentos BSON para armazenar os registros de dados. Diferentemen
 |BYTEINT             |SmallInt         |
 |DECIMAL             |Decimal          |
 |FLOAT               |Decimal          |
-|BYTE                |Binary           |
+|BYTE                |Binário           |
 |VARBYTE             |Varbinary        |
 |BLOB                |varbinary        |
 |CHAR                |Nchar            |
@@ -134,7 +134,7 @@ O MongoDB usa documentos BSON para armazenar os registros de dados. Diferentemen
 |Graphic             |Nchar            |
 |JSON                |nvarchar         |
 |VARGRAPHIC          |nvarchar         |
-|DATE                |data             |
+|DATE                |Data             |
 |timestamp           |Datetime2        |
 |TIME                |Hora             |
 |TIME WITH TIME ZONE |Hora             |

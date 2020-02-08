@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f8eba07362ac5780d1d7790d5553aaa397b7847e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75245094"
 ---
 # <a name="connect-to-the-teradata-source"></a>Conectar-se à origem do Teradata
@@ -40,7 +40,7 @@ A origem do Teradata dá suporte ao paralelismo, no qual os trabalhos de exporta
 
 As propriedades personalizadas da origem do Teradata são listadas na tabela a seguir. Todas as propriedades são de leitura/gravação.
 
-|Nome da propriedade|Tipo de dados|DESCRIÇÃO|
+|Nome da propriedade|Tipo de dados|Descrição|
 |:-|:-|:-|
 |AccessMode|Inteiro (enumeração)|O modo usado para acessar o banco de dados. Os valores possíveis são *Nome da Tabela* e *Comando SQL*. O valor padrão é *Nome da Tabela*.|
 |BlockSize|Integer|O tamanho do bloco, em bytes, usado ao retornar dados para o cliente. O valor padrão é 1.048.576 (1 MB). O valor mínimo é 256 bytes. O valor máximo é 16.775.168 bytes.<br> Essa propriedade está no painel **Editor Avançado**.|
@@ -104,7 +104,7 @@ Use o painel **Gerenciador de Conexões** para selecionar a instância do Gerenc
 
 * Escolha o método para selecionar dados da origem. As opções são mostradas na tabela a seguir:
 
-    |Opção|DESCRIÇÃO|
+    |Opção|Descrição|
     |:-|:-|
     |Nome da tabela – Exportação de TPT|Recupere os dados de uma tabela ou exibição na fonte de dados do Teradata. Quando esta opção é selecionada, selecione uma tabela ou exibição disponível no banco de dados da lista para **Nome da tabela ou da exibição**.|
     |Comando SQL – Exportação de TPT|Recupere os dados da fonte de dados do Teradata usando uma consulta SQL. Quando esta opção for selecionada, insira uma consulta de uma das seguintes maneiras: <ul><li>Insira o texto da consulta SQL no campo **Texto do comando do SQL** .</li><li>Selecione **Procurar** para carregar a consulta SQL de um arquivo de texto.</li><li>Selecione **Analisar consulta** para verificar a sintaxe do texto da consulta.</li></ul>|

@@ -24,10 +24,10 @@ ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a81d65cfd0716ba386db98b3d9973fb4e57876a7
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298185"
 ---
 # <a name="ole-db-destination"></a>Destino OLE DB
@@ -134,7 +134,7 @@ ms.locfileid: "71298185"
  **Gerenciador de conexões OLE DB**  
  Selecione um gerenciador de conexões existente na lista ou crie uma nova conexão clicando em **Nova**.  
   
- **Nova**  
+ **Novo**  
  Crie um novo gerenciador de conexões usando a caixa de diálogo **Configurar Gerenciador de Conexões OLE DB** .  
   
  **Modo de acesso aos dados**  
@@ -158,7 +158,7 @@ ms.locfileid: "71298185"
  **Nome da tabela ou da exibição**  
  Selecione o nome da tabela ou da exibição na lista de tabelas ou exibições disponíveis na fonte de dados.  
   
- **Nova**  
+ **Novo**  
  Crie uma nova tabela usando a caixa de diálogo **Criar Tabela** .  
   
 > [!NOTE]  
@@ -168,7 +168,7 @@ ms.locfileid: "71298185"
  **Nome da tabela ou exibição**  
  Selecione uma tabela ou exibição do banco de dados nessa lista ou crie uma nova tabela clicando em **Nova**.  
   
- **Nova**  
+ **Novo**  
  Crie uma nova tabela usando a caixa de diálogo **Criar Tabela** .  
   
 > [!NOTE]  
@@ -211,7 +211,7 @@ ms.locfileid: "71298185"
  **Nome da variável**  
  Selecione a variável que contém o nome da tabela ou da exibição.  
   
- **Nova**  
+ **Novo**  
  Crie uma nova tabela usando a caixa de diálogo **Criar Tabela** .  
   
 > [!NOTE]  
@@ -301,7 +301,7 @@ ms.locfileid: "71298185"
  Aplique a opção de tratamento de erros às células selecionadas.  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
- [Origem de OLE DB](../../integration-services/data-flow/ole-db-source.md)  
+ [Origem OLE DB](../../integration-services/data-flow/ole-db-source.md)  
   
  [Variáveis do SSIS &#40;Integration Services&#41;](../../integration-services/integration-services-ssis-variables.md)  
   

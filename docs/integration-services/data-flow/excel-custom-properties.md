@@ -11,10 +11,10 @@ ms.assetid: bdcc72b8-8950-47bd-88bf-5db6d48cc6bf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8ced076a2f8985e1734b36d4795cf81ffe538278
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292797"
 ---
 # <a name="excel-custom-properties"></a>Propriedades personalizadas do Excel
@@ -32,11 +32,11 @@ ms.locfileid: "71292797"
 |-------------------|---------------|-----------------|  
 |AccessMode|Integer|O modo usado para acessar o banco de dados. Os valores possíveis são **Abrir Conjunto de Linhas**, **Abrir Conjunto de Linhas da Variável**, **Comando do SQL**e **Comando SQL da Variável**. O valor padrão é **Abrir Conjunto de Linhas**.|  
 |CommandTimeOut|Integer|O número de segundos antes de um comando expirar.  Um valor de 0 indica que nunca expirará.<br /><br /> **Observação** : esta propriedade não está disponível no **Editor de Origem do Excel**, mas pode ser definida usando o **Editor Avançado**.|  
-|OpenRowset|Cadeia de caracteres|O nome do objeto de banco de dados usado para abrir um conjunto de linhas.|  
-|OpenRowsetVariable|Cadeia de caracteres|A variável que contém o nome do objeto de banco de dados usado para abrir um conjunto de linhas.|  
-|ParameterMapping|Cadeia de caracteres|O mapeamento de parâmetros no comando SQL para variáveis.|  
-|SqlCommand|Cadeia de caracteres|O comando SQL a ser executado.|  
-|SqlCommandVariable|Cadeia de caracteres|A variável que contém o comando do SQL a ser executado.|  
+|OpenRowset|String|O nome do objeto de banco de dados usado para abrir um conjunto de linhas.|  
+|OpenRowsetVariable|String|A variável que contém o nome do objeto de banco de dados usado para abrir um conjunto de linhas.|  
+|ParameterMapping|String|O mapeamento de parâmetros no comando SQL para variáveis.|  
+|SqlCommand|String|O comando SQL a ser executado.|  
+|SqlCommandVariable|String|A variável que contém o comando do SQL a ser executado.|  
   
  A saída e as colunas de saída da origem do Excel não têm nenhuma propriedade personalizada.  
   
@@ -52,13 +52,13 @@ ms.locfileid: "71292797"
 |-------------------|---------------|-----------------|  
 |AccessMode|Inteiro (enumeração)|Um valor que especifica como o destino acessa o seu banco de dados de destino.<br /><br /> Essa propriedade pode ter um dos seguintes valores:<br /><br /> **OpenRowset** (0) – Forneça o nome de uma tabela ou exibição.<br /><br /> **OpenRowset from Variable** (1) – Forneça o nome de uma variável que contém o nome de uma tabela ou exibição.<br /><br /> **OpenRowset Using Fastload** (3) – Forneça o nome de uma tabela ou exibição.<br /><br /> **OpenRowset Using Fastload from Variable** (4) – Forneça o nome de uma variável que contém o nome de uma tabela ou exibição.<br /><br /> **Comando SQL** (2) – Forneça uma instrução SQL.|  
 |CommandTimeOut|Integer|O número máximo de segundos em que o comando SQL pode ser executado antes que o tempo limite seja excedido. O valor **0** indica que não há limite de tempo. O valor padrão dessa propriedade é **0**.<br /><br /> Observação: Essa propriedade não está disponível no **Editor de Destinos Excel**, mas pode ser definida no **Editor Avançado**.|  
-|FastLoadKeepIdentity|Booliano|Um valor que especifica se os valores de identidade devem ser copiados quando os dados são carregados. Essa propriedade só está disponível quando uma das opções de carregamento rápido é usada. O valor padrão dessa propriedade é **False**.|  
-|FastLoadKeepNulls|Booliano|Um valor que especifica se os valores Nulos devem ser copiados quando os dados são carregados. Essa propriedade só está disponível com uma das opções de carregamento rápido. O valor padrão dessa propriedade é **False**.|  
+|FastLoadKeepIdentity|Boolean|Um valor que especifica se os valores de identidade devem ser copiados quando os dados são carregados. Essa propriedade só está disponível quando uma das opções de carregamento rápido é usada. O valor padrão dessa propriedade é **False**.|  
+|FastLoadKeepNulls|Boolean|Um valor que especifica se os valores Nulos devem ser copiados quando os dados são carregados. Essa propriedade só está disponível com uma das opções de carregamento rápido. O valor padrão dessa propriedade é **False**.|  
 |FastLoadMaxInsertCommitSize|Integer|Um valor que especifica o tamanho do lote que o destino Excel tenta confirmar durante as operações de carregamento rápido. O valor padrão é **2147483647**. Um valor de **0** indica uma única operação de confirmação após o processamento de todas as linhas.|  
-|FastLoadOptions|Cadeia de caracteres|Uma coleção de opções de carregamento rápido. As opções de carregamento rápido incluem o bloqueio de tabelas e a verificação de restrições. É possível especificar uma, ambas ou nenhuma.<br /><br /> Observação: Algumas opções dessa propriedade não estão disponíveis no **Editor de Destinos Excel**, mas podem ser definidas no **Editor Avançado**.|  
-|OpenRowset|Cadeia de caracteres|Quando AccessMode é **OpenRowset**, o nome da tabela ou exibição acessada pelo destino Excel.|  
-|OpenRowsetVariable|Cadeia de caracteres|Quando AccessMode é **OpenRowset from Variable**, o nome da variável que contém o nome da tabela ou exibição acessada pelo destino Excel.|  
-|SqlCommand|Cadeia de caracteres|Quando AccessMode é **Comando SQL**, a instrução Transact-SQL usada pelo destino Excel para especificar as colunas de destino dos dados.|  
+|FastLoadOptions|String|Uma coleção de opções de carregamento rápido. As opções de carregamento rápido incluem o bloqueio de tabelas e a verificação de restrições. É possível especificar uma, ambas ou nenhuma.<br /><br /> Observação: Algumas opções dessa propriedade não estão disponíveis no **Editor de Destinos Excel**, mas podem ser definidas no **Editor Avançado**.|  
+|OpenRowset|String|Quando AccessMode é **OpenRowset**, o nome da tabela ou exibição acessada pelo destino Excel.|  
+|OpenRowsetVariable|String|Quando AccessMode é **OpenRowset from Variable**, o nome da variável que contém o nome da tabela ou exibição acessada pelo destino Excel.|  
+|SqlCommand|String|Quando AccessMode é **Comando SQL**, a instrução Transact-SQL usada pelo destino Excel para especificar as colunas de destino dos dados.|  
   
  A entrada e as colunas de entrada do destino Excel não têm nenhuma propriedade personalizada.  
   

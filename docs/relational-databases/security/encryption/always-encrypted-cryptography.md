@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b0fe0e861e8139416250ffc2677230dbc2aeab6d
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73594400"
 ---
 # <a name="always-encrypted-cryptography"></a>Criptografia Always Encrypted
@@ -92,14 +92,14 @@ enc_key = HMAC-SHA-256(CEK, "Microsoft SQL Server cell encryption key" + algorit
 MAC = HMAC-SHA-256(mac_key, versionbyte + IV + Ciphertext + versionbyte_length)  
 ```  
   
- Onde:  
+ Em que:  
   
 ```  
 versionbyte = 0x01 and versionbyte_length = 1
 mac_key = HMAC-SHA-256(CEK, "Microsoft SQL Server cell MAC key" + algorithm + CEK_length)  
 ```  
   
-### <a name="step-4-concatenation"></a>Etapa 4: Concatenation  
+### <a name="step-4-concatenation"></a>Etapa 4: Concatenação  
  Por fim, o valor criptografado é produzido com a concatenação do byte da versão do algoritmo, do MAC, do IV e do texto cifrado AES_256_CBC:  
   
 ```  

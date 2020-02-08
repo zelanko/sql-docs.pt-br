@@ -22,10 +22,10 @@ ms.assetid: 494cbfa6-8e93-4161-a64d-90d681915211
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 2e7dbdb8ea5a422b91f290478eeca4dfc9b21cbc
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73064644"
 ---
 # <a name="create-contract-transact-sql"></a>CREATE CONTRACT (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "73064644"
 
   Cria um novo contrato. Um contrato define os tipos de mensagem que são usados em uma conversa do [!INCLUDE[ssSB](../../includes/sssb-md.md)] e também determina qual lado da conversa pode enviar mensagens daquele tipo. Cada conversa segue um contrato. O serviço iniciador especifica o contrato para a conversa quando esta inicia. O serviço de destino especifica os contratos para os quais o serviço de destino aceita conversas.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -75,7 +75,7 @@ CREATE CONTRACT contract_name
  [ DEFAULT ]  
  Indica que este contrato dá suporte a mensagens do tipo padrão. Por padrão, todos os bancos de dados contêm um tipo de mensagem denominado DEFAULT. Esse tipo de mensagem usa uma validação de NONE. No contexto desta cláusula, DEFAULT não é uma palavra-chave e deve ser delimitado como um identificador. O Microsoft SQL Server também fornece um contrato DEFAULT que especifica o tipo de mensagem DEFAULT.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  A ordem de tipos de mensagem no contrato não é significativa. Depois que o destino recebe a primeira mensagem, o [!INCLUDE[ssSB](../../includes/sssb-md.md)] permite que cada lado da conversa envie qualquer mensagem permitida para aquele lado a qualquer hora. Por exemplo, se o iniciador da conversa puder enviar o tipo de mensagem **//Adventure-Works.com/Expenses/SubmitExpense**, o [!INCLUDE[ssSB](../../includes/sssb-md.md)] permitirá que o iniciador envie qualquer quantidade de mensagens **SubmitExpense** durante a conversa.  
   
  Os tipos e as direções de mensagens não podem ser alterados em um contrato. Para alterar a AUTHORIZATION para um contrato, use a instrução ALTER AUTHORIZATION.  

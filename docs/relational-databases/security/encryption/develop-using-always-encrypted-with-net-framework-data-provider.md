@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3c442568ad7764ba0f9031a02a8080499555d26f
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75558031"
 ---
 # <a name="using-always-encrypted-with-the-net-framework-data-provider-for-sql-server"></a>Usando o Always Encrypted com o Provedor de Dados .NET Framework para SQL Server
@@ -295,7 +295,7 @@ O processo para obter uma chave de criptografia de coluna:
 O Provedor de Dados do .NET Framework para SQL Server é fornecido com os provedores internos de repositórios de chaves mestras de coluna a seguir, que são pré-registrados com os nomes do provedor específico (usados para pesquisar o provedor).
 
 
-| Classe | DESCRIÇÃO | Nome (de pesquisa) do provedor |
+| Classe | Descrição | Nome (de pesquisa) do provedor |
 |:---|:---|:---|
 |Classe SqlColumnEncryptionCertificateStoreProvider| Um provedor do Repositório de Certificados do Windows. | MSSQL_CERTIFICATE_STORE |
 |[Classe SqlColumnEncryptionCngProvider](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx) <br><br>**Observação:** esse provedor está disponível no .NET Framework 4.6.1 e versões posteriores. |Um provedor de um repositório de chaves que dá suporte à [API de Criptografia da Microsoft: API Next Generation (CNG)](https://msdn.microsoft.com/library/windows/desktop/aa376210.aspx). Normalmente, um repositório desse tipo é um módulo de segurança de hardware – um dispositivo físico que protege e gerencia chaves digitais e fornece processamento de criptografia.  | MSSQL_CNG_STORE|
@@ -565,7 +565,7 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 
 
 
-|Nome|DESCRIÇÃO|Introduzido na versão do .NET
+|Nome|Descrição|Introduzido na versão do .NET
 |:---|:---|:---
 |[Classe SqlColumnEncryptionCertificateStoreProvider](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncertificatestoreprovider.aspx)|Um provedor de repositório de chaves para o Repositório de Certificados do Windows.|  4.6
 |[Classe SqlColumnEncryptionCngProvider](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx)|Um provedor de repositório de chaves para A API de Criptografia da Microsoft: Next Generation (CNG).|  4.6.1
