@@ -14,10 +14,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ed7e7f31da9cacaf4862c29ada9c98df9559f9c9
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72903857"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>Criar e gerenciar catálogos de texto completo
@@ -45,7 +45,7 @@ GO
   
 3.  Selecione **Novo Catálogo de Texto Completo**.  
   
-4.  Na caixa de diálogo **Novo Catálogo de Texto Completo**, especifique as informações do catálogo que você está recriando. Para obter mais informações, veja [Catálogo de texto completo novo &#40;Página Geral&#41;](/sql/database-engine/new-full-text-catalog-general-page).  
+4.  Na caixa de diálogo **Novo Catálogo de Texto Completo** , especifique as informações do catálogo que você está recriando. Para obter mais informações, veja [Catálogo de texto completo novo &#40;Página Geral&#41;](/sql/database-engine/new-full-text-catalog-general-page).  
   
     > [!NOTE]  
     >  Os identificadores de catálogos de texto completo começam em 00005 e são incrementados em um para cada novo catálogo criado.  
@@ -53,7 +53,7 @@ GO
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 
 ##  <a name="props"></a> Obter as propriedades de um catálogo de texto completo  
-Use a função [!INCLUDE[tsql](../../includes/tsql-md.md)] **FULLTEXTCATALOGPROPERTY** para obter o valor de várias propriedades relacionadas a catálogos de texto completo. Para obter mais informações, consulte [FULLTEXTCATALOGPROPERTY](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md).
+Use a função [!INCLUDE[tsql](../../includes/tsql-md.md)]**FULLTEXTCATALOGPROPERTY** para obter o valor de várias propriedades relacionadas a catálogos de texto completo. Para obter mais informações, consulte [FULLTEXTCATALOGPROPERTY](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md).
 
 Por exemplo, execute a consulta a seguir para obter a contagem de índices no catálogo de texto completo `Catalog1`.
 

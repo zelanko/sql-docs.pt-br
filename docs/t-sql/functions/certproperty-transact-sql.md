@@ -20,10 +20,10 @@ ms.assetid: 966c09aa-bc4e-45b0-ba53-c8381871f638
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 6a0f2fc8c2af69832150ab5ab229ffc50c84e831
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68010478"
 ---
 # <a name="certproperty-transact-sql"></a>CERTPROPERTY (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68010478"
 
 Retorna o valor de uma propriedade de certificado especificada.
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -76,7 +76,7 @@ O tipo de retorno depende da propriedade especificada na chamada de função. O 
 -   *Cert_Serial_Number*, *Issuer_Name*, *String_SID* e *Subject* retornam **nvarchar**.  
 -   *SID* retorna **varbinary**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 Consulte as informações de certificado na exibição de catálogo [sys.certificates](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md).
   
 ## <a name="permissions"></a>Permissões  

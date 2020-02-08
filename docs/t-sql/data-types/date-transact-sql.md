@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ae7ab885ced505ccf7da03d388e8063c276fc0d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68113707"
 ---
 # <a name="date-transact-sql"></a>data (Transact-SQL)
@@ -73,7 +73,7 @@ A tabela a seguir mostra os formatos de literais de cadeia de caracteres válido
 |-----------------|-----------------|  
 |[aa]aammdd<br /><br /> aaaa[mm][dd]|Os dados de **date** podem ser especificados com quatro, seis ou oito dígitos. Uma cadeia de caracteres de seis ou oito dígitos é sempre interpretada como **ymd**. O mês e o dia sempre devem ser de dois dígitos. Uma cadeia de caracteres de quatro dígitos é interpretada como um ano.|  
   
-|ODBC|Descrição|  
+|ODBCODBC|Descrição|  
 |----------|-----------------|  
 |{ d 'aaaa-mm-dd' }|Específico à API ODBC.|  
   
@@ -173,7 +173,7 @@ SELECT @date AS '@date', @datetime2 AS '@datetime2(3)';
 ```  
   
 ### <a name="converting-string-literals-to-date"></a>Convertendo literais de cadeias de caracteres em data
-Se todas as partes das cadeias de caracteres estiverem em formatos válidos, as conversões de literais de cadeia de caracteres em tipos de data e hora serão permitidas. Caso contrário, será gerado um erro de tempo de execução. As conversões implícitas ou explícitas que não especificam um estilo, mas são de tipos de data e hora em literais de cadeia de caracteres, estarão no formato padrão da sessão atual. A tabela a seguir mostra as regras de conversão de uma literal de cadeia de caracteres no tipo de dados **date**.
+Se todas as partes das cadeias de caracteres estiverem em formatos válidos, as conversões de literais de cadeia de caracteres em tipos de data e hora serão permitidas. Caso contrário, será gerado um erro de runtime. As conversões implícitas ou explícitas que não especificam um estilo, mas são de tipos de data e hora em literais de cadeia de caracteres, estarão no formato padrão da sessão atual. A tabela a seguir mostra as regras de conversão de uma literal de cadeia de caracteres no tipo de dados **date**.
   
 |Literal de cadeia de caracteres de entrada|**date**|  
 |---|---|

@@ -11,10 +11,10 @@ ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a5a0b804cb1e5bf130179c7a91ec04fa0d064f12
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296044"
 ---
 # <a name="lesson-2-2-add-and-configure-the-foreach-loop-container"></a>Lição 2-2: Adicionar e configurar o contêiner Loop Foreach
@@ -48,7 +48,7 @@ Após essas modificações no pacote, quando ele for executado, o contêiner Loo
   
 3.  Clique com o botão direito do mouse no novo **Contêiner Loop Foreach** e selecione **Editar**.  
   
-4.  Na caixa de diálogo **Editor de Loop Foreach**, na página **Geral**, em **Nome**, insira **Arquivo Foreach na Pasta**. Escolha **OK**.  
+4.  Na caixa de diálogo **Editor de Loop Foreach**, na página **Geral**, em **Nome**, insira **Arquivo Foreach na Pasta**. Selecione **OK**.  
   
 5.  Clique com o botão direito do mouse no contêiner Loop Foreach, selecione **Propriedades** e, na janela **Propriedades**, verifique se a propriedade **LocaleID** está definida como **Inglês (Estados Unidos)** .  
   
@@ -77,7 +77,7 @@ Após essas modificações no pacote, quando ele for executado, o contêiner Loo
     > [!NOTE]  
     > Nomes de variáveis diferenciam maiúsculas e minúsculas.  
   
-4.  Escolha **OK**.  
+4.  Selecione **OK**.  
   
 5.  Selecione **OK** novamente para sair da caixa de diálogo **Editor de Loop Foreach**.  
   

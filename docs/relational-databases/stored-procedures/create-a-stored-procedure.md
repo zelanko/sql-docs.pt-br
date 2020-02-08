@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 73aee045b57ca7fde08c24adca4a3d4267d06c61
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67934079"
 ---
 # <a name="create-a-stored-procedure"></a>Criar um procedimento armazenado
@@ -63,10 +63,10 @@ Este tópico descreve como criar um procedimento armazenado [!INCLUDE[tsql](../.
     |Procedure_name|HumanResources.uspGetEmployeesTest|  
     |@Param1|@LastName|  
     |@Datatype_For_Param1|**nvarchar**(50)|  
-    |Default_Value_For_Param1|NULL|  
+    |Default_Value_For_Param1|NULO|  
     |@Param2|@FirstName|  
     |@Datatype_For_Param2|**nvarchar**(50)|  
-    |Default_Value_For_Param2|NULL|  
+    |Default_Value_For_Param2|NULO|  
   
 6.  Clique em **OK**.  
   

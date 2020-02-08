@@ -12,12 +12,12 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c97d3ae0dd6b334e129134ba391124d8de3e8260
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 221c5c0fa216b8d5fba7f133b717a3d102aea963
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73595791"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76910229"
 ---
 # <a name="query-columns-using-always-encrypted-with-sql-server-management-studio"></a>Consultar colunas usando o Always Encrypted com o SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -162,7 +162,7 @@ DECLARE @Salary money = $30000;
 E aqui estão alguns exemplos de variáveis que o SQL Server Management Studio não tentará parametrizar:
 
 ```sql
-DECLARE @Name nvarchar(50); --Initialization seperate from declaration
+DECLARE @Name nvarchar(50); --Initialization separate from declaration
 SET @Name = 'Abel';
 
 DECLARE @StartDate date = GETDATE(); -- a function used instead of a literal
@@ -214,7 +214,7 @@ WHERE [SSN] = @SSN;
 > [!NOTE]
 > Sem parametrização, a consulta inteira, incluindo as conversões de tipo, é processada dentro do SQL Server/Banco de Dados SQL do Azure. Com a parametrização habilitada, algumas conversões de tipo são realizadas pelo .NET Framework no SQL Server Management Studio. Devido às diferenças entre o sistema de tipos do .NET Framework e o sistema de tipos do SQL Server (por exemplo, diferente precisão de alguns tipos, como float), uma consulta executada com parametrização habilitada pode produzir resultados diferentes da consulta executada sem parametrização habilitada. 
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Próximas etapas
 - [Desenvolver aplicativos usando o Always Encrypted](always-encrypted-client-development.md)
 
 

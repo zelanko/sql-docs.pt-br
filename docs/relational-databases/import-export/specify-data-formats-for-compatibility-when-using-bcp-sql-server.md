@@ -18,10 +18,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: d16b152bed2a0ed774ea443ada13201e4416f173
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74055930"
 ---
 # <a name="specify-compatibility-data-formats-when-using-bcp-sql-server"></a>Especificar formatos de dados para compatibilidade usando o bcp (SQL Server)
@@ -35,7 +35,7 @@ ms.locfileid: "74055930"
 ##  <a name="bcpDataFormatAttr"></a> Atributos bcp Data-Format  
  O comando **bcp** permite especificar a estrutura de cada campo em um arquivo de dados quanto aos seguintes atributos de formato de dados:  
   
--   Tipo de armazenamento de arquivo  
+-   tipo de armazenamento de arquivo  
   
      O *tipo de armazenamento de arquivo* descreve como são armazenados os dados no arquivo de dados. Dados podem ser exportados para um arquivo de dados como seu tipo de tabela de banco de dados (formato nativo), em sua representação de caractere (formato de caractere) ou como qualquer tipo de dados em que há suporte para conversão implícita; por exemplo, copiando um **smallint** como um **int**. Os tipos de dados definidos pelo usuário como tipos básicos são exportados. Para obter mais informações, veja [Especificar tipo de armazenamento de arquivo usando bcp &#40;SQL Server&#41;](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md).  
   

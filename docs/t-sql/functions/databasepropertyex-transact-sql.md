@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 91301fcfb0376e1bd256ac60c59c1c0b65dfbbe4
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75256105"
 ---
 # <a name="databasepropertyex-transact-sql"></a>DATABASEPROPERTYEX (Transact-SQL)
@@ -52,7 +52,7 @@ Para [!INCLUDE[ssSDS](../../includes/sssds-md.md)], `DATABASEPROPERTYEX` requer 
 > [!NOTE]  
 >  Se o banco de dados ainda não foi iniciado, chamadas para `DATABASEPROPERTYEX` retornarão NULL se `DATABASEPROPERTYEX` recuperar esses valores por acesso direto de banco de dados, em vez de recuperação de metadados. Um banco de dados com AUTO_CLOSE definida como ON ou, caso contrário, offline, é definido como "não iniciado".  
   
-|Propriedade|DESCRIÇÃO|Valor retornado|  
+|Propriedade|Descrição|Valor retornado|  
 |---|---|---|
 |Collation|O nome da ordenação padrão para o banco de dados.|Nome da ordenação<br /><br /> NULL: O banco de dados não foi iniciado.<br /><br /> Tipo de dados base: **nvarchar(128)**|  
 |ComparisonStyle|O estilo de comparação da ordenação do Windows. Use os seguintes valores de estilo para criar um bitmap para o valor ComparisonStyle concluído:<br /><br /> Ignorar maiúsculas e minúsculas: 1<br /><br /> Ignorar acento: 2<br /><br /> Ignorar Kana: 65536<br /><br /> Ignorar largura: 131072<br /><br /> <br /><br /> Por exemplo, o padrão de 196609 é o resultado de combinar as opções Ignorar maiúsculas e minúsculas, Ignorar Kana e Ignorar largura.|Retorna o estilo de comparação.<br /><br /> Retorna 0 para todas as ordenações primárias.<br /><br /> Tipo de dados base: **int**|  

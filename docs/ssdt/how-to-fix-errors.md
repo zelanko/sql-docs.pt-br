@@ -1,23 +1,24 @@
 ---
-title: 'Como fazer: corrigir erros | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Corrigir erros
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 0d504e00-4ff0-4fdf-b874-85280bbd8668
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ba41850e214de60da9a7e64f328939e4660a9367
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: e7cc581bc721f3174b5526ecf44941ee2d455634
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035175"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241392"
 ---
 # <a name="how-to-fix-errors"></a>Como fazer: Corrigir erros
+
 O painel Lista de Erros exibe os erros de implantação ou compilação. Os erros de sintaxe e semântica causados ao editar no Editor de Transact\-SQL ou no Designer de Tabela também são exibidos na lista quando você estiver editando entidades de bancos de dados e suas definições. A Lista de Erros é atualizada dinamicamente conforme você edita scripts em guias diferentes. Você pode seguir os erros identificados para solucionar problemas no futuro.  
   
 > [!WARNING]  

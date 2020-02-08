@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 392d8d477a2e136d54e6f0f06608eb0ebeda12a5
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73593513"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-suse-linux-enterprise-server"></a>Exemplo: Script de instalação autônoma do SQL Server para SUSE Linux Enterprise Server
@@ -184,7 +184,7 @@ A primeira coisa que o script Bash faz é definir algumas variáveis. Elas podem
 
 1. Atualizar os repositórios locais
 
-1. Instalar o SQL Server
+1. Instale o SQL Server
 
 1. Configure o SQL Server com o ```MSSQL_SA_PASSWORD``` e aceite automaticamente o Contrato de Licença de Usuário Final.
 

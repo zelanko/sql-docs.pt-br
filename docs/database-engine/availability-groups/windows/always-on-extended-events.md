@@ -11,10 +11,10 @@ ms.assetid: 5950f98a-3950-473d-95fd-cde3557b8fc2
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: d6fdf58703d448e07c9be063b616f90c72f2411d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67991557"
 ---
 # <a name="configure-extended-events-for-always-on-availability-groups"></a>Configurar eventos estendidos para Grupos de Disponibilidade AlwaysOn
@@ -81,7 +81,7 @@ Para obter informações sobre alguns dos eventos cobertos pelo alwayson_health,
   
 #### <a name="event-information"></a>Informações de evento  
   
-|coluna|Descrição|  
+|Coluna|Descrição|  
 |------------|-----------------|  
 |Nome|availability_replica_state_change|  
 |Categoria|always on|  
@@ -112,7 +112,7 @@ GO
   
 #### <a name="event-information"></a>Informações de evento  
   
-|coluna|Descrição|  
+|Coluna|Descrição|  
 |------------|-----------------|  
 |Nome|availability_group_lease_expired|  
 |Categoria|always on|  
@@ -177,7 +177,7 @@ GO
 ###  <a name="BKMK_error_reported"></a> error_reported (vários números de erro): para problemas de conexão ou transporte  
  Cada evento filtrado indica que um problema de conectividade ocorreu no transporte ou no ponto de extremidade de espelhamento de banco de dados do qual esse grupo de disponibilidade depende.  
   
-|coluna|Descrição|  
+|Coluna|Descrição|  
 |------------|-----------------|  
 |Nome|error_reported<br /><br /> números a serem filtrados: 35201, 35202, 35206, 35204, 35207, 9642, 9666, 9691, 9692, 9693, 28034, 28036, 28080, 28091, 33309|  
 |Categoria|erros|  
@@ -240,10 +240,10 @@ GO
   
 #### <a name="event-information"></a>Informações de evento  
   
-|coluna|Descrição|  
+|Coluna|Descrição|  
 |------------|-----------------|  
 |Nome|data_movement_suspend_resume|  
-|Categoria|Always On|  
+|Categoria|Sempre ativo|  
 |Canal|Operacional|  
   
 #### <a name="event-fields"></a>Campos de evento  
@@ -279,11 +279,11 @@ GO
 ```  
   
 ###  <a name="BKMK_alwayson_ddl_executed"></a> alwayson_ddl_executed  
- Ocorre quando uma instrução DDL (linguagem de definição de dados) do grupo de disponibilidade está sendo executada, incluindo CREATE, ALTER ou DROP. O principal objetivo do evento é indicar um problema com uma ação do usuário em uma réplica de disponibilidade ou para indicar o ponto de partida de uma ação operacional, que é seguida por um problema de tempo de execução, como um failover manual, um failover forçado, a movimentação de dados suspensa ou a movimentação de dados retomada.  
+ Ocorre quando uma instrução DDL (linguagem de definição de dados) do grupo de disponibilidade está sendo executada, incluindo CREATE, ALTER ou DROP. O principal objetivo do evento é indicar um problema com uma ação do usuário em uma réplica de disponibilidade ou para indicar o ponto de partida de uma ação operacional, que é seguida por um problema de runtime, como um failover manual, um failover forçado, a movimentação de dados suspensa ou a movimentação de dados retomada.  
   
 #### <a name="event-information"></a>Informações de evento  
   
-|coluna|Descrição|  
+|Coluna|Descrição|  
 |------------|-----------------|  
 |Nome|alwayson_ddl_execution|  
 |Categoria|always on|  
@@ -316,7 +316,7 @@ GO
   
 #### <a name="event-information"></a>Informações de evento  
   
-|coluna|Descrição|  
+|Coluna|Descrição|  
 |------------|-----------------|  
 |Nome|availability_replica_manager_state_change|  
 |Categoria|always on|  
@@ -347,7 +347,7 @@ GO
   
 #### <a name="event-information"></a>Informações de evento  
   
-|coluna|Descrição|  
+|Coluna|Descrição|  
 |------------|-----------------|  
 |Nome|error_reported<br /><br /> Erro número 1480: O banco de dados REPLICATION_TYPE_MSG "DATABASE_NAME" está alterando funções de "OLD_ROLE" para "NEW_ROLE" devido a REASON_MSG|  
 |Categoria|erros|  

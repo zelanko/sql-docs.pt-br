@@ -19,10 +19,10 @@ ms.assetid: 55f3ac04-5626-4ad2-96bd-a1f1b079659d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a604ee89ed33f30d15e5402cba8d04668c7528f6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67945762"
 ---
 # <a name="view-or-change-server-properties-sql-server"></a>Exibir ou alterar propriedades de servidor (SQL Server)
@@ -122,7 +122,7 @@ ms.locfileid: "67945762"
   
     ```  
   
-#### <a name="to-change-a-server-property-by-using-spconfigure"></a>Para alterar uma propriedade de servidor usando sp_configure  
+#### <a name="to-change-a-server-property-by-using-sp_configure"></a>Para alterar uma propriedade de servidor usando sp_configure  
   
 1.  Conecte-se ao [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

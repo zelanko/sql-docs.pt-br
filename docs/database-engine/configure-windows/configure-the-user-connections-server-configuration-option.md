@@ -17,10 +17,10 @@ ms.assetid: 53beee6e-59fe-4276-9abb-8f1cec2a3508
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 09062541d167be92c40877033e46eec6ebd1c98f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68012173"
 ---
 # <a name="configure-the-user-connections-server-configuration-option"></a>Configurar a opção de configuração de servidor user connections

@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: 6c90b71ed61deeadbc0af2592f137893fa676a05
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67896960"
 ---
 # <a name="manage-certificates-for-sql-server-integration-services-scale-out"></a>Gerenciar certificados do SQL Server Integration Services Scale Out
@@ -88,9 +88,9 @@ Atualize o arquivo de configuração de serviço do Mestre do Scale Out, `\<driv
 #### <a name="5-reconnect-scale-out-workers-to-scale-out-master"></a>5. Reconectar os Trabalhos do Scale Out ao Mestre do Scale Out
 Para cada Trabalho do Scale Out, exclua o Trabalho e, em seguida, adicione-o novamente com o [Gerenciador do Scale Out](integration-services-ssis-scale-out-manager.md) ou faça o seguinte:
 
-A.  Instale o certificado SSL do cliente no repositório Raiz do computador local no nó de Trabalho.
+a.  Instale o certificado SSL do cliente no repositório Raiz do computador local no nó de Trabalho.
 
-B.  Atualize o arquivo de configuração de serviço do Trabalho do Scale Out.
+b.  Atualize o arquivo de configuração de serviço do Trabalho do Scale Out.
 
 Atualize o arquivo de configuração de serviço do Trabalho do Scale Out, `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config`, no nó de Trabalho. Atualize **MasterHttpsCertThumbprint** para a impressão digital do novo certificado SSL.
 
@@ -142,6 +142,6 @@ Atualize o arquivo de configuração de serviço do Trabalho do Scale Out, `\<dr
 #### <a name="6-restart-the-scale-out-worker-service"></a>6. Reiniciar o serviço Trabalho do Scale Out
 
 ## <a name="next-steps"></a>Próximas etapas
-Para saber mais, veja os tópicos a seguir:
+Para obter mais informações, confira os seguintes artigos:
 -   [Mestre do SSIS (Integration Services) Scale Out](integration-services-ssis-scale-out-master.md)
 -   [Trabalho do SSIS (Integration Services) Scale Out](integration-services-ssis-scale-out-worker.md)

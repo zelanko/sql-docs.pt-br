@@ -15,10 +15,10 @@ ms.assetid: 10183c8d-b1be-420f-972a-96ea97d4f4d8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 63d4507a2ad81a1167444acca111865460662904
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71299005"
 ---
 # <a name="configure-dialog-box"></a>Caixa de diálogo Configurar
@@ -63,7 +63,7 @@ ms.locfileid: "71299005"
  **Nome**  
  Lista o nome do parâmetro.  
   
- **Value**  
+ **Valor**  
  Lista o valor do parâmetro. Clique no botão de reticências para alterar o valor na caixa de diálogo **Definir Valor do Parâmetro** .  
   
  Esta é uma lista das opções na guia **Gerenciadores de Conexões** . Use essa guia para alterar valores de propriedades do gerenciador de conexões. Os parâmetros são gerados automaticamente no servidor do SSIS para as propriedades.  
@@ -77,13 +77,13 @@ ms.locfileid: "71299005"
  **Nome da propriedade**  
  Lista o nome da propriedade do gerenciador de conexões.  
   
- **Value**  
+ **Valor**  
  Lista o valor atribuído à propriedade do gerenciador de conexões. Clique no botão de reticências para alterar o valor na caixa de diálogo **Definir Valor do Parâmetro** . Você pode inserir um valor literal, mapear uma variável de ambiente que contém o valor a ser usado, ou usar o valor padrão do pacote.  
   
 ##  <a name="references"></a> Definir as opções na página Referências  
  Use a página **Referências** para adicionar e remover referências a ambientes, e para acessar propriedades de ambiente.  
   
- Um ambiente especificar valores de tempo de execução para pacotes contidos nos projetos que você implantou no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
+ Um ambiente especificar valores de runtime para pacotes contidos nos projetos que você implantou no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
  **Ambiente**  
  Lista o ambiente.  

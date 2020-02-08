@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6968766b2d7d447f21fccc6425935017a6943778
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70122952"
 ---
 # <a name="concat-transact-sql"></a>CONCAT (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "70122952"
 
 Essa função retorna uma cadeia de caracteres resultante de concatenação ou junção de dois ou mais valores de cadeia de caracteres de ponta a ponta. (Para adicionar um valor de separação durante a concatenação, consulte [CONCAT_WS](../../t-sql/functions/concat-ws-transact-sql.md).)
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,15 +46,15 @@ Um valor de cadeia de caracteres para concatenação com outros valores. A funç
 *string_value*  
 Um valor de cadeia de caracteres cujos comprimento e tipo dependem da entrada.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 `CONCAT` usa um número variável de argumentos de cadeia de caracteres e os concatena em uma única cadeia de caracteres. Exige um mínimo de dois valores de entrada; caso contrário, `CONCAT` gerará um erro. `CONCAT` converte implicitamente todos os argumentos nos tipos de cadeia de caracteres antes da concatenação. `CONCAT` converte implicitamente os valores nulos em cadeias de caracteres vazias. Se `CONCAT` receber argumentos com todos os valores **nulo**, retornará uma cadeia de caracteres vazia do tipo **varchar**(1). A conversão implícita em cadeias de caracteres segue as regras existentes para conversões de tipo de dados. Veja [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md) para obter mais informações sobre conversões de tipo de dados.
   
 O tipo de retorno depende do tipo dos argumentos. Esta tabela ilustra o mapeamento:
   
 |Tipo de entrada|Tipo e comprimento da saída|  
 |---|---|
-|1. Qualquer argumento de<br><br />um tipo de sistema do SQL-CLR<br><br />a UDT SQL-CLR<br><br />ou em<br><br />`nvarchar(max)`|**nvarchar(max)**|  
-|2. Caso contrário, qualquer argumento de tipo<br><br />**varbinary(max)**<br><br />ou em<br><br />**varchar(max)**|**varchar(max)** , a menos que um dos parâmetros seja um **nvarchar** de qualquer comprimento. Nesse caso, `CONCAT` retorna um resultado do tipo **nvarchar(max)** .|  
+|1. Qualquer argumento de<br><br />um tipo de sistema do SQL-CLR<br><br />a UDT SQL-CLR<br><br />ou<br><br />`nvarchar(max)`|**nvarchar(max)**|  
+|2. Caso contrário, qualquer argumento de tipo<br><br />**varbinary(max)**<br><br />ou<br><br />**varchar(max)**|**varchar(max)** , a menos que um dos parâmetros seja um **nvarchar** de qualquer comprimento. Nesse caso, `CONCAT` retorna um resultado do tipo **nvarchar(max)** .|  
 |3. Caso contrário, qualquer argumento de tipo **nvarchar** de no máximo 4.000 caracteres<br><br />( **nvarchar**(<= 4000) )|**nvarchar**(<= 4000)|  
 |4. Em todos os outros casos|**varchar**(<=8.000) (um **varchar** de no máximo 8.000 caracteres), a menos que um dos parâmetros seja um nvarchar de qualquer comprimento. Naquele caso, `CONCAT` retorna um resultado do tipo **nvarchar(max)** .|  
   
@@ -66,7 +66,7 @@ A função CONCAT pode ser executada remotamente em um servidor vinculado da ver
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-concat"></a>A. Usando CONCAT  
+### <a name="a-using-concat"></a>a. Usando CONCAT  
   
 ```sql
 SELECT CONCAT ( 'Happy ', 'Birthday ', 11, '/', '25' ) AS Result;  

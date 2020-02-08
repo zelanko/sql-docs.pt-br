@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 9c290a88-4e9f-4a7e-aab5-4442137a9918
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 93ee480a595178627f65613b502c10e44dffc8e3
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 7b0a47ff73186642e0b0b48aec06e5320fc44d15
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907804"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288233"
 ---
 # <a name="work-with-replication-agent-profiles"></a>Trabalhar com perfis do agente de replicação
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ ms.locfileid: "72907804"
   
     -   Para exibir todos os parâmetros de um agente, desmarque a caixa de seleção **Mostrar apenas os parâmetros usados neste perfil** . Para obter informações sobre parâmetros de agente, consulte os links no final deste tópico.  
   
-4.  Clique em **Fechar**.  
+4.  Clique em **fechar**  
   
 ###  <a name="Create_SSMS"></a> Para criar um perfil definido pelo usuário  
   
@@ -234,7 +234,7 @@ ms.locfileid: "72907804"
   
 1.  Crie uma conexão para o Distribuidor usando uma instância da classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.AgentProfile> .  
+2.  Criar uma instância da classe <xref:Microsoft.SqlServer.Replication.AgentProfile>.  
   
 3.  Defina as seguintes propriedades no objeto:  
   
@@ -258,7 +258,7 @@ ms.locfileid: "72907804"
   
 1.  Crie uma conexão para o Distribuidor usando uma instância da classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.ReplicationServer> . Passe o objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> criado na etapa 1.  
+2.  Criar uma instância da classe <xref:Microsoft.SqlServer.Replication.ReplicationServer>. Passe o objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> criado na etapa 1.  
   
 3.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Se esse método retornar **false**, verifique se o Distribuidor existe.  
   
@@ -278,7 +278,7 @@ ms.locfileid: "72907804"
   
 1.  Crie uma conexão para o Distribuidor usando uma instância da classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.AgentProfile> . Defina o nome do perfil para <xref:Microsoft.SqlServer.Replication.AgentProfile.Name%2A> e o <xref:Microsoft.SqlServer.Management.Common.ServerConnection> da etapa 1 para <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
+2.  Criar uma instância da classe <xref:Microsoft.SqlServer.Replication.AgentProfile>. Defina o nome do perfil para <xref:Microsoft.SqlServer.Replication.AgentProfile.Name%2A> e o <xref:Microsoft.SqlServer.Management.Common.ServerConnection> da etapa 1 para <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
 3.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Se este método retornar **false**, o banco de dados com o nome especificado estava incorreto ou o perfil não existe no servidor.  
   
@@ -295,6 +295,6 @@ As alterações do parâmetro de agente entrarão em vigor na próxima vez o age
  [Replication Log Reader Agent](../../../relational-databases/replication/agents/replication-log-reader-agent.md)   
  [Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)   
  [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)   
- [Replication Queue Reader Agent](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
+ [Agente de Leitor de Fila de Replicação](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
   
   

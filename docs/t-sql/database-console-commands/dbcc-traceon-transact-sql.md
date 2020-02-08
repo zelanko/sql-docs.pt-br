@@ -21,10 +21,10 @@ ms.assetid: 93085324-ebaa-4e38-aac8-5e57b4b0d36d
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 3831a9244b3e946dcba01b7d8c31825a75f7b39f
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "69553263"
 ---
 # <a name="dbcc-traceon-transact-sql"></a>DBCC TRACEON (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "69553263"
 
 Habilita os sinalizadores de rastreamento especificados.
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -53,7 +53,7 @@ Ativa globalmente os sinalizadores de rastreamento especificados. Este argumento
 WITH NO_INFOMSGS  
 Suprime todas as mensagens informativas.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 Em um servidor de produção, para evitar comportamento imprevisível, recomendamos que você habilite sinalizadores de rastreamento no servidor usando somente um dos seguintes métodos:
 -   Use a opção de inicialização de linha de comando **-T** do Sqlservr.exe. Essa é a prática mais recomendada, porque assegura que todas as instruções sejam executadas com o sinalizador de rastreamento habilitado. Isso inclui comandos em scripts de inicialização. Para obter mais informações, consulte [sqlservr Application](../../tools/sqlservr-application.md).  
 -   Use DBCC TRACEON **(** _trace#_ [ **,** ... *.n*] **,-1)** somente enquanto usuários ou aplicativos não estiverem executando instruções simultaneamente no sistema.  

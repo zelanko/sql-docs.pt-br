@@ -20,10 +20,10 @@ ms.assetid: 1de2b888-78a6-4fb2-a647-ba4bf097caf3
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 852c7f2c8f9f25903ee575d8e3b85df1d0009b1d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68111186"
 ---
 # <a name="restore-a-transaction-log-backup-sql-server"></a>Restaurar um backup de log de transações (SQL Server)
@@ -71,7 +71,7 @@ ms.locfileid: "68111186"
   
 #### <a name="to-restore-a-transaction-log-backup"></a>Para restaurar um backup de log de transações  
   
-1.  Depois de se conectar à instância apropriada do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], no Pesquisador de Objetos, clique no nome do servidor para expandir a árvore do servidor.  
+1.  Depois de se conectar à instância apropriada do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], em Pesquisador de Objetos, clique no nome do servidor para expandir a árvore do servidor.  
   
 2.  Expanda **Bancos de Dados**e, dependendo do banco de dados, selecione um banco de dados de usuário ou expanda **Bancos de Dados do Sistema** e selecione um banco de dados do sistema.  
   
@@ -111,12 +111,12 @@ ms.locfileid: "68111186"
     |**LSN do Ponto de Verificação**|Número de sequência de log do ponto de verificação mais recente no momento em que o backup foi criado.|  
     |**LSN Completo**|Número de sequência de log do backup de banco de dados completo mais recente.|  
     |**Servidor**|Nome da instância do Mecanismo de Banco de Dados que executou a operação de backup.|  
-    |**Nome do Usuário**|Nome do usuário que realizou a operação de backup.|  
+    |**Nome de usuário**|Nome do usuário que realizou a operação de backup.|  
     |**Tamanho**|Tamanho do conjunto de backup em bytes.|  
     |**Posição**|Posição do conjunto de backup no volume.|  
     |**Validade**|Data e hora de vencimento do conjunto de backup.|  
   
-7.  Selecione uma destas opções:  
+7.  Selecione uma das seguintes:  
   
     -   **Point-in-time**  
   
@@ -138,7 +138,7 @@ ms.locfileid: "68111186"
         |**Descrição**|Descrição da transação marcada especificada pelo usuário quando a transação foi confirmada (se houver).|  
         |**LSN**|Número de sequência de log da transação marcada.|  
         |**Backup de banco de dados**|Nome do banco de dados em que a transação marcada foi confirmada.|  
-        |**Nome do Usuário**|Nome do usuário do banco de dados que confirmou a transação marcada.|  
+        |**Nome de usuário**|Nome do usuário do banco de dados que confirmou a transação marcada.|  
   
 8.  Para exibir ou selecionar as opções avançadas, clique em **Opções** no painel **Selecionar uma página** .  
   
@@ -243,7 +243,7 @@ ms.locfileid: "68111186"
 ALTER DATABASE AdventureWorks2012 SET RECOVERY FULL;  
 ```  
   
-#### <a name="a-applying-a-single-transaction-log-backup"></a>A. Aplicando um único backup de log de transações  
+#### <a name="a-applying-a-single-transaction-log-backup"></a>a. Aplicando um único backup de log de transações  
  O exemplo seguinte inicia restaurando o banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] usando um backup de banco de dados completo que reside em um dispositivo de backup chamado `AdventureWorks2012_1`. O exemplo aplica então o primeiro backup de log de transações que reside em um dispositivo de backup chamado `AdventureWorks2012_log`. Por fim, o exemplo recupera o banco de dados.  
   
 ```sql  

@@ -12,10 +12,10 @@ ms.assetid: fdcc9c58-3bad-45b3-ba8e-c7816d64f14c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a24b1a2f008c23adc5445ec5ed36c51ade181486
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581336"
 ---
 # <a name="rsreportdesigner-configuration-file"></a>arquivo de configuração RSReportDesigner
@@ -61,7 +61,7 @@ ms.locfileid: "65581336"
 |**PolicyLevel**|Especifica o arquivo de configuração de política de segurança. O valor válido é Rspreviewpolicy.config. Para obter mais informações, consulte [Using Reporting Services Security Policy Files](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md).|  
 |**CacheDataForPreview**|Quando definido como **True**, o Designer de Relatórios armazena dados em um arquivo de cache no computador local. Os valores válidos são **True** (padrão) e **False**. Para obter mais informações, consulte [Visualizando relatórios](../../reporting-services/reports/previewing-reports.md).|  
 |**Render**|Enumera as extensões de renderização disponíveis ao Designer de Relatórios para propósitos de visualização prévia. O conjunto de extensões de renderização usado para a visualização prévia deve ser idêntico ao instalado com o servidor de relatório.<br /><br /> **Nome** especifica a extensão de renderização. Se você estiver invocando uma extensão de renderização por código, use este valor para chamar uma extensão específica.<br /><br /> **Tipo** especifica o nome de classe totalmente qualificado da classe de extensão, além do nome de biblioteca, separado por vírgula.<br /><br /> **Visível** especifica se o nome será exibido em qualquer interface do usuário. Esse valor pode ser **True** (padrão) ou **False**. Se **True**, será exibido em interfaces de usuário.|  
-|**Data**|Enumera as extensões de processamento de dados disponíveis para o Designer de Relatórios para propósitos de conexão com fontes de dados que fornecem dados aos relatórios. O conjunto de extensões de processamento de dados usado no Designer de Relatórios pode ser idêntico ao instalado com o servidor de relatório. Se você estiver adicionando ou removendo extensões personalizadas, consulte [Implantando uma extensão de processamento de dados](../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md).<br /><br /> **Nome** especifica a extensão de processamento de dados.<br /><br /> **Tipo** especifica o nome de classe totalmente qualificado da classe de extensão, além do nome de biblioteca, separado por vírgula.|  
+|**Dados**|Enumera as extensões de processamento de dados disponíveis para o Designer de Relatórios para propósitos de conexão com fontes de dados que fornecem dados aos relatórios. O conjunto de extensões de processamento de dados usado no Designer de Relatórios pode ser idêntico ao instalado com o servidor de relatório. Se você estiver adicionando ou removendo extensões personalizadas, consulte [Implantando uma extensão de processamento de dados](../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md).<br /><br /> **Nome** especifica a extensão de processamento de dados.<br /><br /> **Tipo** especifica o nome de classe totalmente qualificado da classe de extensão, além do nome de biblioteca, separado por vírgula.|  
 |**Designer**|Enumera os construtores de consulta disponíveis para o Designer de Relatórios. Construtores de consulta fornecem uma interface de usuário para construir consultas que recuperam dados usados em relatórios. Construtores de consulta podem variar de acordo com extensões de processamento de dados diferentes. Por padrão, o Reporting Services fornece uma interface de usuário de ferramenta de dados visuais para todas as extensões de processamento de dados incluídas no produto. Entretanto, se você estiver construindo ou usando extensões de processamento de dados de terceiros, outras interfaces de construtor de consulta poderão ser aplicáveis.|  
 |**PreviewProcessingServiceStartupTimeoutSeconds**|Especifica o período para esperar pelo serviço de processamento de visualização para começar antes de mostrar uma mensagem de erro. O padrão é 15 segundos.|  
   

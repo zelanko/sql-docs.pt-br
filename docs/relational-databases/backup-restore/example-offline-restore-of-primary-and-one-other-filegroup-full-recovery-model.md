@@ -16,10 +16,10 @@ ms.assetid: 7d6c50eb-dc84-4d66-855a-0b5f1bd89737
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8d98eefac2e015aa1648f1afaa56a5676805cf10
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75245245"
 ---
 # <a name="example-offline-restore-of-primary-and-1-other-filegroup-full-recovery-model"></a>Exemplo: Restauração offline do grupo de arquivos primário e um outro (modelo de recuperação completa)

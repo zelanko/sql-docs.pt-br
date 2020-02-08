@@ -19,10 +19,10 @@ ms.assetid: 9f2feb3c-ea9b-4992-8202-2aeed4f9a6dd
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 19d9171278bac69eb8b092d6bc7ec69dcbcb71ff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68023714"
 ---
 # <a name="prepare-a-secondary-database-for-an-always-on-availability-group"></a>Preparar um banco de dados secundário manualmente para um Grupo de Disponibilidade AlwaysOn

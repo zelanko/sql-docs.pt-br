@@ -25,10 +25,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d2f8a3f4dbdbaa9cbd2cf1c99a86ad6f3573ab11
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73844344"
 ---
 # <a name="user_name-transact-sql"></a>USER_NAME (Transact-SQL)
@@ -51,12 +51,12 @@ USER_NAME ( [ id ] )
 ## <a name="return-types"></a>Tipos de retorno  
  **nvarchar(128)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Quando *id* é omitido, o usuário atual no contexto atual é assumido. Se o parâmetro contiver a palavra NULL, retornará NULL. Quando USER_NAME é chamado sem especificar uma *id* depois de uma instrução EXECUTE AS, USER_NAME retorna o nome do usuário representado. Se um principal do Windows acessar o banco de dados por meio da associação em um grupo, USER_NAME retornará o principal do Windows em vez do grupo.  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-user_name"></a>A. Usando USER_NAME  
+### <a name="a-using-user_name"></a>a. Usando USER_NAME  
  O exemplo a seguir retorna o nome de usuário para o usuário `13`.  
   
 ```  

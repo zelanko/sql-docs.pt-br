@@ -22,10 +22,10 @@ ms.assetid: 859affa7-0567-47d1-9490-57c1abbd619b
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2fc90354abf3c18a5eba7a92b7a5ffa54a84ce3b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67984504"
 ---
 # <a name="deny-server-principal-permissions-transact-sql"></a>Permissões de principal do servidor DENY (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "67984504"
   Nega permissões concedidas em um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -92,7 +92,7 @@ DENY permission [ ,...n ] }
  AS *SQL_Server_login*  
  Especifica o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do qual o principal que executa esta consulta deriva seu direito de negar a permissão.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  As permissões no escopo de servidor podem ser negadas somente quando o banco de dados atual é mestre.  
   
  As informações sobre permissões de servidor estão visíveis na exibição do catálogo [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md). As informações sobre principais de servidor estão disponíveis na exibição do catálogo [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
@@ -115,7 +115,7 @@ DENY permission [ ,...n ] }
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-denying-impersonate-permission-on-a-login"></a>A. Negando a permissão IMPERSONATE em um logon  
+### <a name="a-denying-impersonate-permission-on-a-login"></a>a. Negando a permissão IMPERSONATE em um logon  
  O exemplo a seguir nega a permissão `IMPERSONATE` no logon `WanidaBenshoof` do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] criado a partir do usuário do Windows `AdvWorks\YoonM`.  
   
 ```  

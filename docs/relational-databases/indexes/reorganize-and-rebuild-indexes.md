@@ -32,10 +32,10 @@ author: pmasl
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cd844947b93e17684643fe95b5c51335af81b473
-ms.sourcegitcommit: c98c6e33d04d4a1888db7dbe89cb0b1bb3a66418
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74249749"
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>Reorganizar e recompilar índices
@@ -67,7 +67,7 @@ Usando a função de sistema [sys.dm_db_index_physical_stats](../../relational-d
 
 O conjunto de resultados retornado pela função **sys.dm_db_index_physical_stats** inclui as colunas a seguir:
 
-|Coluna|DESCRIÇÃO|
+|Coluna|Descrição|
 |------------|-----------------|
 |**avg_fragmentation_in_percent**|Porcentagem de fragmentação lógica (páginas fora de ordem no índice).|
 |**fragment_count**|Número de fragmentos (páginas folha fisicamente consecutivas) do índice.|
@@ -96,7 +96,7 @@ Usando o DMV [sys.dm_db_column_store_row_group_physical_stats](../../relational-
 
 O conjunto de resultados retornado pelo DMV **sys.dm_db_column_store_row_group_physical_stats** inclui as seguintes colunas:
 
-|Coluna|DESCRIÇÃO|
+|Coluna|Descrição|
 |------------|-----------------|
 |**total_rows**|Número de linhas armazenadas fisicamente no grupo de linhas. Para grupos de linhas compactados, isso inclui as linhas marcadas como excluídas.|
 |**deleted_rows**|Número de linhas fisicamente armazenadas em um grupo de linhas compactado que são marcadas para exclusão. 0 para grupos de linhas que estão no repositório Delta.|
@@ -209,7 +209,7 @@ Requer a permissão `ALTER` na tabela ou exibição. O usuário deve ser um memb
 
 As informações a seguir estão disponíveis na página **Fragmentação** :
 
-|Valor|DESCRIÇÃO|
+|Valor|Descrição|
 |---|---|
 |**Preenchimento da página**|Indica o preenchimento médio das páginas do índice, como uma porcentagem. 100% significa que as páginas de índice estão completamente preenchidas. 50% significa que, em média, cada página do índice está preenchida pela metade.|
 |**Fragmentação total**|A porcentagem de fragmentação lógica. Isso indica o número de páginas em um índice que não estão armazenadas em ordem.|

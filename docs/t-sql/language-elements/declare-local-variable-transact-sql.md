@@ -22,18 +22,18 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ed6848494d9d9673905dadbff036ad97f3be834c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67894890"
 ---
-# <a name="declare-localvariable-transact-sql"></a>DECLARE @local_variable (Transact-SQL)
+# <a name="declare-local_variable-transact-sql"></a>DECLARE @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   As variáveis são declaradas no corpo de um lote ou procedimento com a instrução DECLARE e valores são atribuídos com uma instrução SET ou SELECT. As variáveis de cursor podem ser declaradas com essa instrução e usadas com outras instruções relacionadas ao cursor. Depois da declaração, todas as variáveis são inicializadas como NULL, a menos que um valor seja fornecido como parte da declaração.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -158,7 +158,7 @@ Define o tipo de dados **table**. A declaração de tabela inclui definições d
  *logical_expression*  
  É uma expressão lógica que retorna TRUE ou FALSE.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  As variáveis geralmente são usadas em um lote ou procedimento como contadores para WHILE, LOOP ou para um bloco IF...ELSE.  
   
  As variáveis podem ser usadas somente em expressões, não no lugar de nomes de objeto ou palavras-chave. Para construir instruções SQL dinâmicas, use EXECUTE.  
@@ -193,7 +193,7 @@ Define o tipo de dados **table**. A declaração de tabela inclui definições d
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-declare"></a>A. Usando DECLARE  
+### <a name="a-using-declare"></a>a. Usando DECLARE  
  O exemplo a seguir usa uma variável local chamada `@find` para recuperar informações de contato para todos os sobrenomes que começam com `Man`.  
   
 ```  

@@ -12,22 +12,22 @@ ms.assetid: 03e76d4a-d463-4673-8843-08e4ecaefe27
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 495150983eefbd40515bbd35985d31f9ae3f3769
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68033534"
 ---
-# <a name="mssqlserver14421"></a>MSSQLSERVER_14421
+# <a name="mssqlserver_14421"></a>MSSQLSERVER_14421
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|14421|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|SQLErrorNum14421|  
 |Texto da mensagem|O banco de dados secundário de envio de logs %s.%s tem um limite de restauração de %d minutos e está fora de sincronização. Nenhuma restauração foi executada há %d minutos. A latência restaurada é de %d minutos. Verifique as informações de monitoração de log do agente e de envio de logs.|  
@@ -35,7 +35,7 @@ ms.locfileid: "68033534"
 ## <a name="explanation"></a>Explicação  
 Essa mensagem indica que o envio de logs está fora de sincronia além do limite de restauração. O limite de restauração é o número de minutos entre as operações de restauração antes de uma mensagem ser gerada.  
   
-### <a name="possible-causes"></a>Causas possíveis  
+### <a name="possible-causes"></a>Possíveis causas  
 Essa mensagem não indica necessariamente um problema com o envio de logs. Em vez disso, ela pode indicar um dos seguintes problemas:  
   
 -   O trabalho de restauração não está sendo executado.  

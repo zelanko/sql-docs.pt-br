@@ -11,10 +11,10 @@ ms.assetid: 9a77dd32-d8c2-4961-ad37-2a971f9d6043
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2a412235a3eaeb18f32e820460b82ab238c7c0e8
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296113"
 ---
 # <a name="lesson-1-2-add-and-configure-a-flat-file-connection-manager"></a>Lição 1-2: Adicionar e configurar um gerenciador de conexões de Arquivo Simples
@@ -85,7 +85,7 @@ Por padrão, as quatro colunas são definidas inicialmente como um tipo de dados
     |--------------------|------------------|----------------------|--------------------|  
     |AverageRate|float [DT_R4]|FactCurrencyRate.AverageRate|FLOAT|  
     |CurrencyID|string [DT_STR]|DimCurrency.CurrencyAlternateKey|nchar(3)|  
-    |CurrencyDate|date [DT_DATE]|DimDate.FullDateAlternateKey|Data|  
+    |CurrencyDate|date [DT_DATE]|DimDate.FullDateAlternateKey|date|  
     |EndOfDayRate|float [DT_R4]|FactCurrencyRate.EndOfDayRate|FLOAT|  
   
     O tipo de dados sugerido para a coluna **CurrencyID** não é compatível com o tipo de dados do campo na tabela de destino. Como o tipo de dados de `DimCurrency.CurrencyAlternateKey` é nchar (3), **CurrencyID** deve ser alterado de cadeia de caracteres [DT_STR] para a cadeia de caracteres Unicode [DT_WSTR]. Além disso, o campo `DimDate.FullDateAlternateKey` é definido como um tipo de dados de data; assim, o tipo para **CurrencyDate** deve ser alterado da data [DT_Date] para a data do banco de dados [DT_DBDATE].  
@@ -94,7 +94,7 @@ Por padrão, as quatro colunas são definidas inicialmente como um tipo de dados
   
 3.  No painel Propriedade, altere o tipo de dados de coluna **CurrencyDate** da data [DT_DATE] para a data do banco de dados [DT_DBDATE].  
   
-4.  Escolha **OK**.  
+4.  Selecione **OK**.  
   
 ## <a name="go-to-next-task"></a>Ir para a próxima tarefa
 [Etapa 3: Adicionar e configurar um gerenciador de conexões OLE DB](../integration-services/lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  

@@ -12,10 +12,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: 6e750070f51dc6cba1b035e9426d9814e4fd1b67
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75558021"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>Always Encrypted com enclaves seguros
@@ -90,10 +90,10 @@ A tabela a seguir resume a funcionalidade disponível para colunas criptografada
 | **Operação**| **A coluna NÃO é habilitada para enclave** |**A coluna NÃO é habilitada para enclave**| **A coluna é habilitada para enclave**  |**A coluna é habilitada para enclave** |
 |:---|:---|:---|:---|:---|
 | | **Criptografia aleatória**  | **Criptografia determinística**     | **Criptografia aleatória**      | **Criptografia determinística**     |
-| **Criptografia in-loco** | Sem suporte  | Sem suporte   | Suportado         | Suportado    |
+| **Criptografia in-loco** | Sem suporte  | Sem suporte   | Com suporte         | Com suporte    |
 | **Comparação de igualdade**   | Sem suporte | Compatível fora do enclave | Compatível (dentro do enclave) | Compatível fora do enclave |
-| **Operadores de comparação além de igualdade** | Sem suporte  | Sem suporte   | Suportado      | Sem suporte     |
-| **LIKE**    | Sem suporte      | Sem suporte    | Suportado     | Sem suporte    |
+| **Operadores de comparação além de igualdade** | Sem suporte  | Sem suporte   | Com suporte      | Sem suporte     |
+| **LIKE**    | Sem suporte      | Sem suporte    | Com suporte     | Sem suporte    |
 
 A criptografia in-loco é compatível com as seguintes operações dentro do enclave:
 

@@ -27,10 +27,10 @@ ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: cd6148499c6e9d906d0077632001d3fe32ce9cc3
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73593890"
 ---
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "73593890"
 
 Cria um objeto de metadados de chave mestra de coluna em um banco de dados. Uma entrada de metadados de chave mestra de coluna representa uma chave, armazenada em um repositório de chave externa. A chave protege (criptografa) chaves de criptografia de coluna quando você está usando [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) ou [Always Encrypted com enclaves seguros](../../relational-databases/security/encryption/always-encrypted-enclaves.md). Múltiplas chaves mestras de coluna permitem a rotação periódica de chaves para aumentar a segurança. Crie uma chave mestra de coluna em um repositório de chaves e seu objeto de metadados relacionado no banco de dados usando o Pesquisador de Objetos no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou no PowerShell. Para obter detalhes, veja [Visão geral do gerenciamento de chaves para Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md).  
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
  
 
 > [!IMPORTANT]
@@ -96,7 +96,7 @@ O caminho da chave no repositório de chave mestra de coluna. O caminho da chave
   
     **Formato do caminho da chave:** *CertificateStoreName*/*CertificateStoreLocation*/*CertificateThumbprint*  
   
-     Onde:  
+     Em que:  
   
     *CertificateStoreLocation*  
     Local do repositório de certificados, que deve ser o Usuário Atual ou o Computador Local. Para obter mais informações, veja [Computador local e repositórios de certificados do usuário atual](https://msdn.microsoft.com/library/windows/hardware/ff548653.aspx).  
@@ -119,7 +119,7 @@ O caminho da chave no repositório de chave mestra de coluna. O caminho da chave
   
     **Formato do caminho da chave:** *ProviderName*/*KeyIdentifier*  
   
-    Onde:  
+    Em que:  
   
     *ProviderName*  
     O nome de um CSP (Provedor de Serviço de Criptografia), que implementa a CAPI, para o repositório de chave mestra de coluna. Se você usar um HSM como um repositório de chaves, o nome do provedor deverá ser o nome do CSP dado pelo seu fornecedor HSM. O provedor deve ser instalado em um computador cliente.  
@@ -137,7 +137,7 @@ O caminho da chave no repositório de chave mestra de coluna. O caminho da chave
   
     **Formato do caminho da chave:** *ProviderName*/*KeyIdentifier*  
   
-    Onde:  
+    Em que:  
   
     *ProviderName*  
     Nome do KSP (Provedor de Armazenamento de Chaves), que implementa a API CNG (Cryptography Next Generation) para o repositório de chave mestra de coluna. Se você usar um HSM como um repositório de chaves, o nome do provedor deverá ser o nome do KSP dado pelo seu fornecedor HSM. O provedor deve ser instalado em um computador cliente.  
@@ -155,7 +155,7 @@ O caminho da chave no repositório de chave mestra de coluna. O caminho da chave
   
     **Formato do caminho da chave:** *KeyUrl*  
   
-    Onde:  
+    Em que:  
   
     *KeyUrl*  
     A URL da chave no Azure Key Vault
@@ -167,7 +167,7 @@ Especifica se a chave mestra da coluna está habilitada para enclave. Você pode
 Um literal binário que é um resultado de assinar digitalmente o *caminho da chave* e a configuração ENCLAVE_COMPUTATIONS com a chave mestra de coluna. A assinatura reflete se ENCLAVE_COMPUTATIONS for especificado ou não. A assinatura protege os valores assinados de serem alterados por usuários não autorizados. Um driver de cliente habilitado para Always Encrypted verificará a assinatura e retornará um erro para o aplicativo se a assinatura for inválida. A assinatura deve ser gerada usando ferramentas do lado do cliente. Para obter mais informações, consulte [Always Encrypted com enclaves seguros](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 
 Crie uma entrada de metadados de chave mestra de coluna antes de uma entrada de metadados de chave de criptografia de coluna ser criada no banco de dados e antes de qualquer coluna no banco de dados poder ser criptografada usando Always Encrypted. Uma entrada de chave mestra de coluna nos metadados não contém a chave mestra de coluna real. A chave mestra de coluna deve ser armazenada em um repositório de chaves de coluna externo (fora do SQL Server). O nome do provedor de repositório de chaves e o caminho da chave mestra de coluna nos metadados devem ser válidos para um aplicativo cliente. O aplicativo cliente precisa usar a chave mestra de coluna para descriptografar uma chave de criptografia de coluna. A chave de criptografia de coluna é criptografada com a chave mestra de coluna. O aplicativo cliente também precisa consultar colunas criptografadas.
 
@@ -179,7 +179,7 @@ Requer a permissão **ALTER ANY COLUMN MASTER KEY**.
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-creating-a-column-master-key"></a>A. Criando uma chave mestra de coluna  
+### <a name="a-creating-a-column-master-key"></a>a. Criando uma chave mestra de coluna  
 O exemplo a seguir cria uma entrada de metadados de chave mestra de coluna para uma chave mestra de coluna. A chave mestra de coluna é armazenada no Repositório de Certificados para aplicativos cliente que usam o provedor MSSQL_CERTIFICATE_STORE para acessar a chave mestra de coluna:  
   
 ```sql  

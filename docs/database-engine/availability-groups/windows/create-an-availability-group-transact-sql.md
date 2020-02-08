@@ -13,10 +13,10 @@ ms.assetid: 8b0a6301-8b79-4415-b608-b40876f30066
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1a9f888f651a7c5471014b151d60b0ad3844578b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75252970"
 ---
 # <a name="create-an-always-on-availability-group-using-transact-sql-t-sql"></a>Criar um grupo de disponibilidade Always On usando o T-SQL (Transact-SQL)
@@ -293,7 +293,7 @@ ms.locfileid: "75252970"
 ###  <a name="CompleteCodeExample"></a> Concluir o exemplo de código para procedimento de configuração de exemplo  
  O exemplo a seguir mescla os exemplos de código de todas as etapas do procedimento de configuração de exemplo. A tabela a seguir resumiu os valores de espaço reservado usados neste exemplo de código. Para obter mais informações sobre as etapas deste exemplo de código, consulte [Pré-requisitos para usar o procedimento de configuração de exemplo](#PrerequisitesForExample) e [Procedimento de configuração de exemplo](#SampleProcedure), anteriormente neste tópico.  
   
-|Espaço reservado|DESCRIÇÃO|  
+|Espaço reservado|Descrição|  
 |-----------------|-----------------|  
 |\\\\*FILESERVER*\\*SQLbackups*|Compartilhamento de backup ficcional.|  
 |\\\\*FILESERVER*\\*SQLbackups\MyDb1.bak*|Arquivo de backup de MyDb1.|  

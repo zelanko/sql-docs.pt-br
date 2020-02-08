@@ -12,10 +12,10 @@ ms.assetid: f7008339-e69d-4e20-9265-d649da670460
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a3e89a3dc9cff58b5ab610f0454217cc3b658dc4
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75247463"
 ---
 # <a name="back-up-multiple-databases-to-azure-blob-storage---powershell"></a>Fazer backup de vários bancos de dados para o Armazenamento de Blobs do Azure – PowerShell

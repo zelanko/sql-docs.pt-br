@@ -16,10 +16,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5d0a96f061f01749194cd3f0d1be1aae5443ff8a
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73595701"
 ---
 # <a name="rotate-always-encrypted-keys-using-sql-server-management-studio"></a>Girar chaves do Always Encrypted usando o SQL Server Management Studio
@@ -141,7 +141,7 @@ Você também precisa ser capaz de acessar as chaves mestras de coluna das chave
 
 Para obter mais informações, confira [Criar e armazenar chaves mestras de coluna do Always Encrypted](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Próximas etapas
 - [Consultar colunas usando o Always Encrypted com o SQL Server Management Studio](always-encrypted-query-columns-ssms.md)
 - [Desenvolver aplicativos usando o Always Encrypted](always-encrypted-client-development.md)
 

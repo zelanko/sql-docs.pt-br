@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: b73d24edb139e36f11e05c854c9d10d885994e18
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73595481"
 ---
 # <a name="tutorial-develop-a-net-framework-application-using-always-encrypted-with-secure-enclaves"></a>Tutorial: Desenvolver um aplicativo .NET Framework usando o Always Encrypted com enclaves seguros
@@ -56,14 +56,14 @@ Para usar o Always Encrypted com enclaves seguros em um aplicativo .NET Framewor
 
 8. Localize a seção de \<configuração\> e adicione ou atualize as seções \<configSections\>.
 
-   A. Se a seção de \<configuração\> **não** contiver a seção \<configSections\>, adicione o conteúdo a seguir imediatamente abaixo da \<configuração\>.
+   a. Se a seção de \<configuração\>**não** contiver a seção \<configSections\>, adicione o conteúdo a seguir imediatamente abaixo da \<configuração\>.
    
       ```xml
       <configSections>
          <section name="SqlColumnEncryptionEnclaveProviders" type="System.Data.SqlClient.SqlColumnEncryptionEnclaveProviderConfigurationSection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
       </configSections>
       ```
-   B. Se a seção de \<configuração\> já contiver a seção \<configSections\>, adicione a seguinte linha dentro de \<configSections\>:
+   b. Se a seção de \<configuração\> já contiver a seção \<configSections\>, adicione a seguinte linha dentro de \<configSections\>:
 
    ```xml
    <section name="SqlColumnEncryptionEnclaveProviders"  type="System.Data.SqlClient.SqlColumnEncryptionEnclaveProviderConfigurationSection, System.Data,  Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" /\>

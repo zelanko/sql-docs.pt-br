@@ -21,10 +21,10 @@ ms.assetid: 49239d02-964e-47c0-9b7f-2b539151ee1b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 85ca560e24fac75897d0b65946121e3ca4251e20
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75252746"
 ---
 # <a name="transport-security---database-mirroring---always-on-availability"></a>Segurança do transporte – espelhamento de banco de dados – disponibilidade AlwaysOn
@@ -72,7 +72,7 @@ ms.locfileid: "75252746"
   
  Opcionalmente, você pode controlar os algoritmos de criptografia que podem ser usados por um ponto de extremidade, especificando um dos seguintes valores para a opção de ALGORITHM em uma instrução CREATE ENDPOINT ou instrução ALTER ENDPOINT:  
   
-|Valor de ALGORITHM|DESCRIÇÃO|  
+|Valor de ALGORITHM|Descrição|  
 |---------------------|-----------------|  
 |RC4|Especifica que o ponto de extremidade deve usar o algoritmo RC4. Esse é o padrão.<br /><br /> <strong>\*\* Aviso \*\*</strong> O algoritmo RC4 é preterido. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Recomendamos usar AES.|  
 |AES|Especifica que o ponto de extremidade deve usar o algoritmo AES.|  

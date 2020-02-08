@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6b6534e887f890700b69a11b4515d4cf1af4d86a
-ms.sourcegitcommit: c98c6e33d04d4a1888db7dbe89cb0b1bb3a66418
+ms.openlocfilehash: d6802e2f93c4f171797198eda2132e8b0353621f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74249846"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76910129"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 
@@ -128,7 +128,7 @@ CODEPAGE **=** { **'** ACP **'**  |  **'** OEM **'**  |  **'** RAW **'**  |  **'
 > [!NOTE]
 > A [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomenda que você especifique um nome de ordenação para cada coluna em um [arquivo de formato](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md).
 
-|Valor de CODEPAGE|DESCRIÇÃO|
+|Valor de CODEPAGE|Descrição|
 |--------------------|-----------------|
 |ACP|Colunas do tipo de dados **char**, **varchar** ou **text** são convertidas da página de código do Windows [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]/[!INCLUDE[msCoName](../../includes/msconame-md.md)] (ISO 1252) na página de código do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|
 |OEM (padrão)|Colunas do tipo de dados **char**, **varchar** ou **text** são convertidas da página de código de OEM do sistema para a página de código [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|
@@ -446,7 +446,7 @@ WITH (FORMAT = 'CSV'
 O exemplo a seguir mostra como carregar dados de um arquivo CSV em um local do Armazenamento de Blobs do Azure no qual você criou uma chave SAS. A localização do Armazenamento de Blobs do Azure é configurada como uma fonte de dados externa. Isso exige uma credencial no escopo do banco de dados usando uma assinatura de acesso compartilhado que é criptografada com uma chave mestra no banco de dados de usuário.
 
 ```sql
---> Optional - a MASTER KEY is not requred if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
+--> Optional - a MASTER KEY is not required if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'YourStrongPassword1';
 GO
 --> Optional - a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!

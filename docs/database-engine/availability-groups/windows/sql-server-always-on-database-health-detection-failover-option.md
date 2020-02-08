@@ -17,10 +17,10 @@ ms.assetid: d74afd28-25c3-48a1-bc3f-e353bee615c2
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 6fa77fa3ac4733d9672b5bc72523d72abe640fc8
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75251261"
 ---
 # <a name="availability-group-database-level-health-detection-failover-option"></a>Opção de failover de detecção de integridade no nível do banco de dados do grupo de disponibilidade
@@ -152,7 +152,7 @@ Usando o SQL Server Management Studio, conecte-se ao SQL Server primário, expan
 
 Explicação sobre os campos:
 
-|Dados de coluna | DESCRIÇÃO|
+|Dados de coluna | Descrição|
 |---------|---------|
 |availability_group_id |A ID do grupo de disponibilidade.|
 |availability_group_name |O nome do grupo de disponibilidade.|

@@ -13,10 +13,10 @@ ms.assetid: 44dd0567-a4c8-4c72-89ff-e76f6ddef344
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 07c1743107d3edce7012740a3f1600d2157bf001
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68136893"
 ---
 # <a name="create-a-resource-pool"></a>Criar um pool de recursos
@@ -74,7 +74,7 @@ GO
 ## <a name="see-also"></a>Consulte Também  
  [Administrador de Recursos](../../relational-databases/resource-governor/resource-governor.md)   
  [Habilitar Administrador de Recursos](../../relational-databases/resource-governor/enable-resource-governor.md)   
- [Resource Governor Resource Pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
+ [Pool de recursos do Administrador de Recursos](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
  [Alterar configurações do pool de recursos](../../relational-databases/resource-governor/change-resource-pool-settings.md)   
  [Excluir um pool de recursos](../../relational-databases/resource-governor/delete-a-resource-pool.md)   
  [Configurar o administrador de recursos usando um modelo](../../relational-databases/resource-governor/configure-resource-governor-using-a-template.md)   

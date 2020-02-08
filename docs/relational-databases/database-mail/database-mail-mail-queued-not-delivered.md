@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 92ff867d98b83f1934972a576df8295c3f9ca79d
-ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70228415"
 ---
 # <a name="database-mail-mail-queued-not-delivered"></a>Database Mail: Email na fila, não entregue 

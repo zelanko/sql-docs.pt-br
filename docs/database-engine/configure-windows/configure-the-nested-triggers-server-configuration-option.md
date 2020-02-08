@@ -13,10 +13,10 @@ ms.assetid: 29d7372b-d406-4a5b-80c6-a2d231d25211
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 2ac59b4fb2923aacd377bb974e49dd8edebf5587
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68012498"
 ---
 # <a name="configure-the-nested-triggers-server-configuration-option"></a>Configurar a opção de configuração de servidor nested triggers

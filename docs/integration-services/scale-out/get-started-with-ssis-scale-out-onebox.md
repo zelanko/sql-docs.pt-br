@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: a2d6929277b7d024e45daaefd5cb41dccd495c63
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68082160"
 ---
 # <a name="get-started-with-integration-services-ssis-scale-out-on-a-single-computer"></a>Introdução ao SSIS (Integration Services) Scale Out em um único computador
@@ -45,7 +45,7 @@ Nas páginas **Configuração do Integration Services Scale Out – Nó Mestre**
 
 Conclua o Assistente de instalação do SQL Server.
 
-## <a name="2-install-sql-server-management-studio"></a>2. Instalar o SQL Server Management Studio
+## <a name="2-install-sql-server-management-studio"></a>2. Instale o SQL Server Management Studio
 
 Baixe e instale o [SSMS (SQL Server Management Studio)](../../ssms/download-sql-server-management-studio-ssms.md).
 

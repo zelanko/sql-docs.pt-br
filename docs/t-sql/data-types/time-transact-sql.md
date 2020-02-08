@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 239d7ee532f4052caa067be7a20022720740ff3d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000460"
 ---
 # <a name="time-transact-sql"></a>hora (Transact-SQL)
@@ -79,7 +79,7 @@ ms.locfileid: "68000460"
 |--------------|-----------|  
 |hh:mm:ss<br /><br /> hh:mm[:ss][.segundos fracionários]|hh equivale a dois dígitos, variando de 0 a 23, que representam o número de horas no deslocamento de fuso horário.<br /><br /> mm são dois dígitos, variando de 0 a 59, que representam o número de minutos adicionais no deslocamento de fuso horário.|  
   
-|ODBC|Observações|  
+|ODBCODBC|Observações|  
 |----------|-----------|  
 |{t 'hh:mm:ss[.segundos fracionários]'}|Específico à API ODBC.|  
   
@@ -199,7 +199,7 @@ SELECT @datetime2 AS '@datetime2', @time AS '@time';
 ```  
   
 ### <a name="converting-string-literals-to-timen"></a>Convertendo literais de cadeia de caracteres em time(n)  
- Serão permitidas conversões de literais de cadeia de caracteres para tipos de data e hora se todas as partes da cadeia de caracteres estiverem em formatos válidos. Caso contrário, será gerado um erro de tempo de execução. As conversões implícitas ou explícitas que não especificam um estilo, de tipos de data e hora em literais de cadeia de caracteres estarão no formato padrão da sessão atual. A tabela a seguir mostra as regras de conversão de uma literal de cadeia de caracteres no tipo de dados **time**.  
+ Serão permitidas conversões de literais de cadeia de caracteres para tipos de data e hora se todas as partes da cadeia de caracteres estiverem em formatos válidos. Caso contrário, será gerado um erro de runtime. As conversões implícitas ou explícitas que não especificam um estilo, de tipos de data e hora em literais de cadeia de caracteres estarão no formato padrão da sessão atual. A tabela a seguir mostra as regras de conversão de uma literal de cadeia de caracteres no tipo de dados **time**.  
   
 |Literal de cadeia de caracteres de entrada|Regra de conversão|  
 |--------------------------|---------------------|  
@@ -216,7 +216,7 @@ SELECT @datetime2 AS '@datetime2', @time AS '@time';
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-comparing-date-and-time-data-types"></a>A. Comparando tipos de dados de data e hora  
+### <a name="a-comparing-date-and-time-data-types"></a>a. Comparando tipos de dados de data e hora  
  O exemplo a seguir compara os resultados da conversão de uma cadeia de caracteres em cada tipo de dados **date** e **time**.  
   
 ```  
@@ -259,10 +259,10 @@ SELECT
 ### <a name="c-inserting-time-string-literal-into-columns-of-each-date-and-time-date-type"></a>C. Inserindo o literal de cadeia de caracteres nas colunas de cada tipo de data e hora  
  Na tabela a seguir, a primeira coluna mostra um literal de cadeia de caracteres de hora a ser inserido em uma coluna da tabela do banco de dados do tipo de dados de data e hora exibido na segunda coluna. A terceira coluna mostra o valor que será armazenado na coluna da tabela do banco de dados.  
   
-|Literal de cadeia de caracteres inserido|Tipo de dados da coluna|Valor que é armazenado na coluna|Descrição|  
+|Literal de cadeia de caracteres inserido|Tipo de dados de coluna|Valor que é armazenado na coluna|Descrição|  
 |-----------------------------|----------------------|------------------------------------|-----------------|  
 |'12:12:12.1234567'|**time(7)**|12:12:12.1234567|Se a precisão das frações de segundo exceder o valor especificado para a coluna, a cadeia de caracteres será truncada sem erro.|  
-|'2007-05-07'|**date**|NULL|Qualquer valor de hora fará a instrução INSERT falhar.|  
+|'2007-05-07'|**date**|NULO|Qualquer valor de hora fará a instrução INSERT falhar.|  
 |'12:12:12'|**smalldatetime**|1900-01-01 12:12:00|Qualquer valor de precisão de fração de segundo fará a instrução INSERT falhar.|  
 |'12:12:12.123'|**datetime**|1900-01-01 12:12:12.123|Qualquer precisão de segundo mais extensa do que três posições fará a instrução INSERT falhar.|  
 |'12:12:12.1234567'|**datetime2(7)**|1900-01-01 12:12:12.1234567|Se a precisão das frações de segundo exceder o valor especificado para a coluna, a cadeia de caracteres será truncada sem erro.|  

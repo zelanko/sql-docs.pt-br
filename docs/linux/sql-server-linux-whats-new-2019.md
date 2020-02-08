@@ -8,10 +8,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 5183efa51afd89ad82d0cdcb6448996429b81d28
-ms.sourcegitcommit: bb56808dd81890df4f45636b600aaf3269c374f2
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72890555"
 ---
 # <a name="whats-new-for-sql-server-2019-on-linux"></a>Novidades do SQL Server 2019 no Linux
@@ -20,7 +20,7 @@ ms.locfileid: "72890555"
 
 Este artigo descreve os principais recursos e serviços disponíveis para o SQL Server 2019 em execução no Linux. Para saber mais sobre os downloads de pacotes e problemas conhecidos, confira as [Notas sobre a versão](sql-server-linux-release-notes-2019.md?view=sql-server-linux-ver15).
 
-## <a name="updates"></a>Updates
+## <a name="updates"></a>Atualizações
 
 As atualizações foram feitas no SQL Server 2019 no Linux:
 

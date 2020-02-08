@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/10/2020
+ms.date: 01/27/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 123b395fe54000b34b509637e5a0568340598edb
-ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
+ms.openlocfilehash: 61c8728fede661a91090d5cb15ee4feed5816e7c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75952382"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76831971"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 
@@ -416,7 +416,7 @@ WITH
       LOCATION='tpch_10.dbo.customer',
       DATA_SOURCE=SqlServerInstance
      );
- ```
+```
 
 ### <a name="i-create-an-external-table-for-oracle"></a>I. Criar uma tabela externa para Oracle
 
@@ -444,7 +444,7 @@ WITH
      CREDENTIAL = credential_name)
 
    /*
-   * LOCATION: Oracle table/view in '<database_name>.<schema_name>.<object_name>' format
+   * LOCATION: Oracle table/view in '.<schema_name>.<object_name>' format
    * DATA_SOURCE: the external data source, created above.
    */
    CREATE EXTERNAL TABLE customers(
@@ -459,10 +459,10 @@ WITH
    [O_COMMENT] VARCHAR(79) COLLATE Latin1_General_BIN NOT NULL
    )
    WITH (
-    LOCATION='customer',
+    LOCATION='.mySchema.customer',
     DATA_SOURCE= external_data_source_name
    );
-   ```
+```
 
 ### <a name="j-create-an-external-table-for-teradata"></a>J. Criar uma tabela externa para Teradata
 
@@ -604,7 +604,7 @@ column_name <data_type>
         [DISTRIBUTION  = SHARDED(sharding_column_name) | REPLICATED | ROUND_ROBIN]]  
     )  
 [;]  
-```  
+```
 
 ## <a name="arguments"></a>Argumentos
 
@@ -750,7 +750,7 @@ column_name <data_type>
     | REJECTED_ROW_LOCATION = '/REJECT_Directory'
   
 }  
-```  
+```
 
 ## <a name="arguments"></a>Argumentos
 
@@ -817,7 +817,7 @@ Este exemplo mostra como as três opções REJECT interagem. Por exemplo, se REJ
 REJECTED_ROW_LOCATION = *Local do diretório*
 
 Especifica o diretório na fonte de dados externos em que as linhas rejeitadas e o arquivo de erro correspondente devem ser gravados.
-Se o caminho especificado não existir, PolyBase criará um em seu nome. Um diretório filho é criado com o nome "_rejectedrows". O caractere "_ " garante que o diretório tenha escape para outro processamento de dados, a menos que explicitamente nomeado no parâmetro de localização. Dentro desse diretório, há uma pasta criada com base na hora do envio do carregamento no formato YearMonthDay – HourMinuteSecond (por exemplo, 20180330-173205). Nessa pasta, dois tipos de arquivos são gravados, o arquivo _reason e o arquivo de dados.
+Se o caminho especificado não existir, PolyBase criará um em seu nome. Um diretório filho é criado com o nome "\_rejectedrows". O caractere "\_" garante que o diretório tenha escape para outro processamento de dados, a menos que explicitamente nomeado no parâmetro de localização. Dentro desse diretório, há uma pasta criada com base na hora do envio do carregamento no formato YearMonthDay – HourMinuteSecond (por exemplo, 20180330-173205). Nessa pasta, dois tipos de arquivos são gravados, o arquivo _reason e o arquivo de dados.
 
 Os arquivos de motivo e os arquivos de dados têm o queryID associado à instrução CTAS. Já que os dados e o motivo estão em arquivos separados, arquivos correspondentes têm um sufixo correspondente.
 
@@ -945,7 +945,7 @@ AS SELECT * FROM
 ## <a name="overview-analytics-platform-system"></a>Visão geral: Sistema de plataforma de análise
 
 Use uma tabela externa para:
-  
+
 - Consulte dados do Hadoop ou do Armazenamento de Blobs do Azure com instruções [!INCLUDE[tsql](../../includes/tsql-md.md)].
 - Importar e armazenar dados do Hadoop ou do Armazenamento de Blobs do Azure no Analytics Platform System.
 
@@ -976,7 +976,7 @@ column_name <data_type>
     | REJECT_SAMPLE_VALUE = reject_sample_value,
   
 }  
-```  
+```
 
 ## <a name="arguments"></a>Argumentos
 

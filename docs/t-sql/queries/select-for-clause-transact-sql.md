@@ -22,10 +22,10 @@ ms.assetid: 08a6f084-8f73-4f2a-bae4-3c7513dc99b9
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: ad3852f0bb935371fd141cc4ceb98f90c7aa9c19
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67904348"
 ---
 # <a name="select---for-clause-transact-sql"></a>SELECT – Cláusula FOR (Transact-SQL)
@@ -40,7 +40,7 @@ Use a cláusula FOR para especificar uma das opções a seguir para os resultado
   
 -   Formate os resultados da consulta como JSON, especificando **FOR JSON**.  
 
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -164,9 +164,9 @@ JSON
   
      ---\-  
   
-     NULL  
+     NULO  
   
-     NULL  
+     NULO  
   
  Depois que você executar a consulta SELECT para acessar as tabelas no modo de busca, o conjunto de resultados da consulta SELECT conterá dois valores nulos da coluna c1 na tabela tleft devido à definição da instrução de junção externa direita. Assim, no conjunto de resultados, não é possível distinguir entre os valores nulos provenientes da tabela e os valores nulos introduzidos pela instrução de junção externa. Talvez você receba resultados incorretos se ignorar os valores nulos do conjunto de resultados.  
   

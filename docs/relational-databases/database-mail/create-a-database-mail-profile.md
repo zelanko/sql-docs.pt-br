@@ -15,10 +15,10 @@ ms.assetid: 58ae749d-6ada-4f9c-bf00-de7c7a992a2d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 09b3759af6fc956d83daee464b5120fa80462dcf
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72278315"
 ---
 # <a name="create-a-database-mail-profile"></a>Criar um perfil do Database Mail
@@ -83,7 +83,7 @@ ms.locfileid: "72278315"
   
     -   Na página **Concluir o Assistente** , examine as ações a serem executadas e clique em **Concluir** para concluir a configuração do perfil.  
   
-## <a name="using-transact-sql"></a>Usando Transact-SQL  
+## <a name="using-transact-sql"></a>Usando o Transact-SQL  
   
 ###  <a name="PrivateProfile"></a> Para criar um perfil privado do Database Mail  
   

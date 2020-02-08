@@ -19,10 +19,10 @@ ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 38af7d056eab840a5cf83eefa96ec2731e58bc67
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292768"
 ---
 # <a name="excel-source"></a>Origem do Excel
@@ -71,7 +71,7 @@ ms.locfileid: "71292768"
  **Gerenciador de conexões OLE DB**  
  Selecione um gerenciador de conexões do Excel existente na lista ou crie uma nova conexão clicando em **Nova**.  
   
- **Nova**  
+ **Novo**  
  Crie um novo gerenciador de conexões usando a caixa de diálogo **Gerenciador de Conexões do Excel** .  
   
  **Modo de acesso aos dados**  
@@ -104,7 +104,7 @@ ms.locfileid: "71292768"
  **Parâmetros**  
  Se você inseriu uma consulta parametrizada usando ? como um espaço reservado para o parâmetro no texto da consulta, use a caixa de diálogo **Definir Parâmetros da Consulta** para mapear os parâmetros de entrada da consulta para as variáveis do pacote.  
   
- **Build query**  
+ **Construir consulta**  
  Use a caixa de diálogo **Construtor de Consultas** para construir a consulta SQL visualmente.  
   
  **Procurar**  

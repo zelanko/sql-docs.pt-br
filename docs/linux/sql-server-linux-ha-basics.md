@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 474533a69d74512e3e305f44d96f90009aa64e00
-ms.sourcegitcommit: 34d28d49e8d0910cf06efda686e2d73059569bf8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/04/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75656604"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Noções básicas de disponibilidade do SQL Server para implantações do Linux
@@ -84,7 +84,7 @@ Por fim, o uso de um compartilhamento NFS (Network File System) é uma opção. 
 ### <a name="configure-the-firewall"></a>Configurar o firewall
 Semelhantes ao Windows, as distribuições do Linux têm um firewall interno. Se a sua empresa estiver usando um firewall externo para os servidores, a desabilitação dos firewalls no Linux poderá ser aceitável. No entanto, independentemente de onde o firewall está habilitado, as portas precisam estar abertas. A tabela a seguir documenta as portas comuns necessárias para implantações do [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] altamente disponíveis no Linux.
 
-| Número da porta | Type     | DESCRIÇÃO                                                                                                                 |
+| Número da porta | Type     | Descrição                                                                                                                 |
 |-------------|----------|-----------------------------------------------------------------------------------------------------------------------------|
 | 111         | TCP/UDP  | NFS – `rpcbind/sunrpc`                                                                                                    |
 | 135         | TCP      | Samba (se usado) – Mapeador de ponto de extremidade                                                                                          |

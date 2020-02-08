@@ -22,10 +22,10 @@ ms.assetid: 83f18102-2035-4a87-acd0-8d96d03efad5
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: c9048efd86a7a4a993a9fff6bcab7f9058144f7e
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843762"
 ---
 # <a name="formatmessage-transact-sql"></a>FORMATMESSAGE (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "73843762"
 
   Constrói uma mensagem com base em uma mensagem existente em sys.messages ou em uma cadeia de caracteres fornecida. A funcionalidade de FORMATMESSAGE se assemelha à da instrução RAISERROR. Entretanto, RAISERROR imprime a mensagem imediatamente, enquanto FORMATMESSAGE retorna a mensagem formatada para processamento posterior.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,7 +46,7 @@ FORMATMESSAGE ( { msg_number  | ' msg_string ' } , [ param_value [ ,...n ] ] )
  É a ID da mensagem armazenada em sys.messages. Se *msg_number* for <= 13.000 ou se a mensagem não existir em sys.messages, NULL será retornado.  
   
  *msg_string*  
- **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+ **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
  É uma cadeia de caracteres entre aspas simples e que contém espaços reservados de valor do parâmetro. A mensagem de erro pode ter no máximo 2.047 caracteres. Se a mensagem tiver 2.048 caracteres ou mais, somente os primeiros 2.044 serão exibidos e um sinal de reticências será adicionado para indicar que a mensagem foi truncada. Observe que os parâmetros de substituição consomem mais caracteres que a saída mostra por causa de comportamento de armazenamento interno.  Para obter informações sobre a estrutura de uma cadeia de caracteres de mensagem e o uso de parâmetros na cadeia de caracteres, consulte a descrição do argumento *msg_str* em [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md).  
   
@@ -56,7 +56,7 @@ FORMATMESSAGE ( { msg_number  | ' msg_string ' } , [ param_value [ ,...n ] ] )
 ## <a name="return-types"></a>Tipos de retorno  
  **nvarchar**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Da mesma forma que a instrução RAISERROR, FORMATMESSAGE edita a mensagem substituindo os valores de parâmetros fornecidos nas variáveis de espaço reservado da mensagem. Para obter mais informações sobre os espaços reservados permitidos em mensagens de erro e o processo de edição, consulte [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md).  
   
  FORMATMESSAGE pesquisa a mensagem no idioma atual do usuário. Se não houver nenhuma versão localizada da mensagem, a versão em inglês dos EUA será usada.  
@@ -65,7 +65,7 @@ FORMATMESSAGE ( { msg_number  | ' msg_string ' } , [ param_value [ ,...n ] ] )
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-example-with-a-message-number"></a>A. Exemplo com um número de mensagem  
+### <a name="a-example-with-a-message-number"></a>a. Exemplo com um número de mensagem  
  O exemplo a seguir usa uma mensagem de replicação `20009` armazenada em sys.messages como "Não foi possível adicionar o artigo '%s' à publicação '%s'". FORMATMESSAGE substitui os valores `First Variable` e `Second Variable` para os espaços reservados de parâmetro. A cadeia de caracteres resultante, "Não foi possível adicionar o artigo 'First Variable' à publicação 'Second Variable'", é armazenada na variável local `@var1`.  
   
 ```  
@@ -77,7 +77,7 @@ SELECT @var1;
   
 ### <a name="b-example-with-a-message-string"></a>B. Exemplo com uma cadeia de caracteres de mensagem  
   
-**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
  O exemplo a seguir usa uma cadeia de caracteres como entrada.  
   

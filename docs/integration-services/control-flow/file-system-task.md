@@ -16,10 +16,10 @@ ms.assetid: 7dd79a6a-e066-4028-a385-1d40f31056f8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f170a279f591b496b4c69cbb80b4c719954c30ba
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294134"
 ---
 # <a name="file-system-task"></a>Tarefa Sistema de Arquivos
@@ -123,7 +123,7 @@ ms.locfileid: "71294134"
 |-----------|-----------------|  
 |**Copiar diretório**|Copiar um diretório. A seleção desse valor exibe as opções dinâmicas para origem e destino.|  
 |**Copiar arquivo**|Copia um arquivo. A seleção desse valor exibe as opções dinâmicas para origem e destino.|  
-|**Criar diretório**|Cria um diretório. A seleção deste valor exibe as opções dinâmicas para um diretório de origem e destino.|  
+|**Criar diretório**|Criar um diretório. A seleção deste valor exibe as opções dinâmicas para um diretório de origem e destino.|  
 |**Excluir diretório**|Exclui um diretório. A seleção desse valor exibe as opções dinâmicas para a origem.|  
 |**Excluir conteúdo do diretório**|Exclui o conteúdo de um diretório. A seleção desse valor exibe as opções dinâmicas para a origem.|  
 |**Excluir arquivo**|Exclui um arquivo. A seleção desse valor exibe as opções dinâmicas para a origem.|  
@@ -137,7 +137,7 @@ ms.locfileid: "71294134"
   
 |Valor||  
 |-----------|-|  
-|**True**|O caminho de destino é armazenado em uma variável. Selecionando esse valor, a opção dinâmica **SourceVariable**é exibida.|  
+|**Verdadeiro**|O caminho de destino é armazenado em uma variável. Selecionando esse valor, a opção dinâmica **SourceVariable**é exibida.|  
 |**Falso**|O caminho de destino é especificado em um gerenciador de conexões de Arquivo. Ao selecionar esse valor, a opção dinâmica **DestinationVariable**será exibida.|  
   
 ### <a name="isdestinationpathvariable-dynamic-options"></a>Opções dinâmicas de IsDestinationPathVariable  
@@ -177,7 +177,7 @@ ms.locfileid: "71294134"
  **ReadOnly (somente-leitura)**  
  Indique se o arquivo é somente leitura.  
   
- **Archive**  
+ **Arquivar**  
  Indique se o arquivo ou diretório está pronto para ser arquivado.  
   
  **Sistema**  

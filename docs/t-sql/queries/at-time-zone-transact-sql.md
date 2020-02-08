@@ -17,10 +17,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: ff3d3db1ab4fc3d02e8710cf482225523285c0a0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68031519"
 ---
 # <a name="at-time-zone-transact-sql"></a>AT TIME ZONE (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68031519"
   
  A implementação de **AT TIME ZONE** depende de um mecanismo do Windows para converter os valores de **datetime** entre fusos horários.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -51,7 +51,7 @@ inputdate AT TIME ZONE timezone
 ## <a name="return-value"></a>Valor retornado  
  O valor de **datetimeoffset** no fuso horário de destino.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  **AT TIME ZONE** aplica regras específicas para converter os valores de entrada nos tipos de dados **smalldatetime**, **datetime** e **datetime2**, que caem em um intervalo afetado por uma alteração de horário de verão:  
   
 -   Quando o relógio está adiantado, há uma lacuna na hora local igual à duração do ajuste do relógio. Esta duração é geralmente de 1 hora, mas pode ser de 30 ou 45 minutos, dependendo do fuso horário. Os pontos no tempo que pertencem a essa diferença são convertidos com a diferença *depois* da alteração do horário de verão.  
@@ -121,7 +121,7 @@ Como algumas informações (como as regras de fuso horário) são mantidas fora 
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-add-target-time-zone-offset-to-datetime-without-offset-information"></a>A. Adicionar uma diferença de fuso horário de destino para datetime sem informação de diferença  
+### <a name="a-add-target-time-zone-offset-to-datetime-without-offset-information"></a>a. Adicionar uma diferença de fuso horário de destino para datetime sem informação de diferença  
  Use **AT TIME ZONE** para adicionar uma diferença com base nas regras de fuso horário quando você souber que os valores de **datetime** originais são fornecidos no mesmo fuso horário:  
   
 ```sql

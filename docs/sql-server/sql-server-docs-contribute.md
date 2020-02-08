@@ -9,10 +9,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 5b63711b537358db7cbf3fa34dcbfdf7444d4b7a
-ms.sourcegitcommit: 182ed49fa5a463147273b58ab99dc228413975b6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/31/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68693185"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>Como contribuir para a documentação do SQL Server
@@ -123,4 +123,4 @@ Explore o [repositório sql-docs](https://github.com/MicrosoftDocs/sql-docs) no 
 
 Localize um artigo, envie uma alteração e ajude a comunidade do SQL Server. 
 
-Obrigado.
+Obrigado!

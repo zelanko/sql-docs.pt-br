@@ -1,23 +1,24 @@
 ---
-title: 'Como fazer: depurar objetos de banco de dados | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Depurar objetos de banco de dados
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: f5d4584f-e85f-4558-b056-83681c365978
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 57854937595ba57dee8c36bd4877fd05362f2e40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: ba04eba5107968f1be11c62fbac0f57ca5733b3f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035198"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241458"
 ---
-# <a name="how-to-debug-database-objects"></a>Como fazer: Depurar objetos de banco de dados
+# <a name="how-to--debug-database-objects"></a>Como fazer:  Depurar objetos de banco de dados
+
 Um teste de unidade do SQL Server consiste no seguinte:  
   
 -   Código de teste de unidade escrito em Visual C\# ou Visual Basic. Este código, que é gerado pelo Designer de Teste de Unidade do SQL Server, é responsável por enviar o script Transact\-SQL que forma o corpo do teste.  
@@ -48,7 +49,7 @@ Os procedimentos deste tópico descrevem como depurar objetos de banco de dados 
   
 4.  Em **Habilitar depuradores**, clique em **Ativar depuração do SQL Server**.  
   
-5.  Salve as alterações.  
+5.  Salve suas alterações.  
   
 ### <a name="to-set-an-increased-execution-context-timeout-to-enable-debugging-for-your-test-project"></a>Para definir o tempo limite maior do contexto de execução para habilitar a depuração do projeto de teste  
   
@@ -64,7 +65,7 @@ Os procedimentos deste tópico descrevem como depurar objetos de banco de dados 
     <ExecutionContext CommandTimeout ="300" Provider="System.Data.SqlClient" ConnectionString="Data Source=TargetServerName\TargetInstanceName;Initial Catalog=TargetDatabaseName;Integrated Security=True;Pooling=False" />  
     ```  
   
-4.  Salve as alterações.  
+4.  Salve suas alterações.  
   
 5.  Recompilar o projeto de teste de unidade.  
   

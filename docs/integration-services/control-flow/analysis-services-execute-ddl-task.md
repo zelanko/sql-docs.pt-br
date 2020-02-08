@@ -18,10 +18,10 @@ ms.assetid: 7f25c8c6-b601-41f2-9553-be0a2ee0751a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a160e61e390f58dc640a5d1da265cdb77d5d9be1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294340"
 ---
 # <a name="analysis-services-execute-ddl-task"></a>Tarefa Executar DDL do Analysis Services

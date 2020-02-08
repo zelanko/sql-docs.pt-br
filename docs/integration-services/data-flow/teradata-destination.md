@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d016a1fed3a60df78a02242a2f42e46cf7184553
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75245098"
 ---
 # <a name="teradata-destination"></a>Destino do Teradata
@@ -79,7 +79,7 @@ Você pode registrar as chamadas ODBC que a origem do Teradada faz para o driver
 
 A tabela a seguir descreve as propriedades personalizadas do destino do Teradata. Todas as propriedades são de leitura/gravação.
 
-|Nome da propriedade|Tipo de Dados|DESCRIÇÃO|
+|Nome da propriedade|Tipo de Dados|Descrição|
 |:-|:-|:-|
 |AlwaysDropErrorTable|Boolean|O padrão é **False**. Remova todas as tabelas de erro se for **True**, mesmo que o destino do Teradata falhe na leitura.|
 |ArraySupport|Boolean|O padrão é **True**. Os grupos DML usam ArraySupport se for **True**. Aplicável somente ao Fluxo de TPT. Essa propriedade está no **Editor Avançado**.|
@@ -88,7 +88,7 @@ A tabela a seguir descreve as propriedades personalizadas do destino do Teradata
 |BufferSize|Integer|O tamanho do buffer de saída (em KB) usado para enviar os totais de carregamento. O valor padrão é 1.024. Aplicável somente para o Carregamento do TPT. Essa propriedade está no **Editor Avançado**.|
 |DataEncryption|Boolean|O padrão é **False**. A criptografia de segurança completa será usada se for **True**.|
 |DefaultCodePage|Integer|A página de código a ser usada quando a fonte de dados não tiver informações da página de código. <br>**Observação**: Essa propriedade está no **Editor Avançado**.|
-|DetailedTracingLevel|Inteiro (Enumeração)|Selecione uma das seguintes opções para o rastreamento avançado: <br> **Off**: sem registro em log avançado. <br> **Geral**: o rastreamento geral de atividades específicas do driver é registrado. <br> **CLI**: o rastreamento de atividades relacionadas ao CLIv2 é registrado. <br> **Notificar Método**: o rastreamento de atividades relacionadas ao recurso de notificação é registrado. <br> **Biblioteca comum**: o rastreamento de atividades da biblioteca opcommon é registrado. <br> **Tudo**: o rastreamento de todas as atividades acima é registrado. <br> O arquivo de log de rastreamento avançado é definido na propriedade **DetailedTracingFile**. <br> A propriedade **DetailedTracingFile** deve ser definida se a opção não estiver desativada. <br> Essa propriedade está no **Editor Avançado**.|
+|DetailedTracingLevel|Inteiro (Enumeração)|Selecione uma das seguintes opções para o rastreamento avançado: <br> **Off**: sem registro em log avançado. <br> **Geral**: o rastreamento geral de atividades específicas do driver é registrado. <br> **CLI**: o rastreamento de atividades relacionadas ao CLIv2 é registrado. <br> **Notificar Método**: o rastreamento de atividades relacionadas ao recurso de notificação é registrado. <br> **Biblioteca Comum**: o rastreamento de atividades da biblioteca opcommon é registrado. <br> **Tudo**: o rastreamento de todas as atividades acima é registrado. <br> O arquivo de log de rastreamento avançado é definido na propriedade **DetailedTracingFile**. <br> A propriedade **DetailedTracingFile** deve ser definida se a opção não estiver desativada. <br> Essa propriedade está no **Editor Avançado**.|
 |DetailedTracingFile|String|O caminho do arquivo de log gerado automaticamente quando **DetailedTracingLevel** não está **desativado**. Essa propriedade está no **Editor Avançado**.|
 |DiscardLargeRow|Boolean|O padrão é **False**. Remover linhas grandes (maiores que 64K) se for **True**|
 |ErrorTableName|String|Nome da tabela de erros. O padrão é o nome da tabela de destino|
@@ -154,7 +154,7 @@ Clique em **Nova**. A caixa de diálogo **Editor do Gerenciador de Conexões do 
 
 Especifique o método para selecionar dados da origem. As opções são mostradas na tabela a seguir:
 
-|Opção|DESCRIÇÃO|
+|Opção|Descrição|
 |:-|:-|
 |Nome da Tabela – Fluxo de TPT|Modo incremental usando o operador de Fluxo de TPT. <br>**Nome da tabela ou da exibição**: selecione uma tabela ou exibição existente na lista. Esta lista mostra apenas as primeiras 1.000 tabelas. Você pode digitar o prefixo do nome da tabela ou usar qualquer parte do nome com o curinga (*) para listar a tabela ou as tabelas que deseja usar.|
 |Nome da Tabela – Carregamento de TPL|Modo de carregamento rápido (Caminho Direto) usando o operador de carregamento da API TPT (protocolo Teradata FastLoad), que requer que a tabela de destino esteja vazia. <br>**Nome da tabela ou da exibição**: selecione uma tabela ou exibição existente na lista. Esta lista mostra apenas as primeiras 1.000 tabelas. Você pode digitar o prefixo do nome da tabela ou usar qualquer parte do nome com o curinga (*) para listar a tabela ou as tabelas que deseja usar.|

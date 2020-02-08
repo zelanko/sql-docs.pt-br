@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ca25b7425ce74cea820e295a6a99bc3a3c1e2817
-ms.sourcegitcommit: a02727aab143541794e9cfe923770d019f323116
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75755847"
 ---
 # <a name="microsoft-connector-for-teradata-preview"></a>Microsoft Connector para Teradata (versão prévia)
@@ -76,6 +76,6 @@ Execute o assistente de desinstalação para remover o **Microsoft Connector par
 ## <a name="next-steps"></a>Próximas etapas
 
 - Configurar o [gerenciador de conexões do Teradata](teradata-connection-manager.md)
-- Configurar a [fonte do Teradata](teradata-source.md)
+- Configurar a [origem do Teradata](teradata-source.md)
 - Configurar o [destino do Teradata](teradata-destination.md)
 - Em caso de dúvidas, acesse a [Tech Community](https://aka.ms/AA6iwdw).

@@ -13,10 +13,10 @@ ms.assetid: b1b78ded-16c0-4d69-8657-ec57925e68fd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c0e0f85e21898ccf61d7c205305fc9179edc2af4
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68810580"
 ---
 # <a name="dac-support-for-sql-server-objects-and-versions"></a>Suporte de DAC para objetos e versões do SQL Server
@@ -51,16 +51,16 @@ ms.locfileid: "68810580"
 |FUNCTION: Com valor de tabela de várias instruções|FUNCTION: Escalar|  
 |INDEX: Clusterizado|INDEX: Não clusterizado|  
 |INDEX: Espacial|INDEX: Exclusivo|  
-|Logon|Permissões|  
+|LOGIN|Permissões|  
 |Associações de função|SCHEMA|  
 |Estatísticas|STORED PROCEDURE: Transact-SQL|  
 |Sinônimos|TABLE: Restrição CHECK|  
-|TABLE: Ordenação|TABLE: Coluna, incluindo colunas computadas|  
+|TABLE: Collation|TABLE: Coluna, incluindo colunas computadas|  
 |TABLE: Restrição, Padrão|TABLE: Restrição, Chave Estrangeira|  
 |TABLE: Restrição, Índice|TABLE: Restrição, Chave Primária|  
 |TABLE: Restrição, Exclusiva|TRIGGER: DML|  
 |TYPE: HIERARCHYID, GEOMETRY, GEOGRAPHY|TYPE: Tipo de Dados definido pelo usuário|  
-|TYPE: Tipo de Tabela definido pelo usuário|Usuário|  
+|TYPE: Tipo de Tabela definido pelo usuário|USER|  
 |VIEW||  
   
 ##  <a name="SupportByVersion"></a> Suporte a aplicativo da camada de dados das versões do SQL Server  
@@ -116,7 +116,7 @@ ms.locfileid: "68810580"
 ##  <a name="Considerations"></a> Considerações adicionais para ações de implantação  
  Observe as seguintes considerações para ações da implantação de dados da Estrutura DAC:  
   
--   **Extrair/Exportar** – Nas ações que usam a Estrutura DAC para criar um pacote de um banco de dados – por exemplo, extrair um arquivo .dacpac, exportar um arquivo .bacpac – essas restrições não se aplicam. Os dados no pacote são uma representação de fidelidade total dos dados no banco de dados de origem. Se alguma dessas condições estiver presente no pacote, o log de extração/exportação conterá um resumo dos problemas através das mensagens observadas anteriormente. Esse é um aviso ao usuário sobre problemas potenciais de implantação de dados com o pacote criado. O usuário também verá a seguinte mensagem de resumo no log:  **Essas limitações não afetam a fidelidade dos tipos de dados e valores armazenados no pacote DAC que tenha sido criado pela Estrutura DAC; elas se aplicam apenas aos tipos de dados e valores resultantes da implantação de um pacote DAC em um banco de dados. Para obter mais informações sobre os dados afetados e como solucionar essa limitação, confira** [este tópico](https://go.microsoft.com/fwlink/?LinkId=267086).  
+-   **Extrair/Exportar** – Nas ações que usam a Estrutura DAC para criar um pacote de um banco de dados – por exemplo, extrair um arquivo .dacpac, exportar um arquivo .bacpac – essas restrições não se aplicam. Os dados no pacote são uma representação de fidelidade total dos dados no banco de dados de origem. Se alguma dessas condições estiver presente no pacote, o log de extração/exportação conterá um resumo dos problemas através das mensagens observadas anteriormente. Esse é um aviso ao usuário sobre problemas potenciais de implantação de dados com o pacote criado. O usuário também verá a seguinte mensagem de resumo no log:  **Essas limitações não afetam a fidelidade dos tipos de dados e valores armazenados no pacote DAC que tenha sido criado pela Estrutura DAC; elas se aplicam apenas aos tipos de dados e valores resultantes da implantação de um pacote DAC em um banco de dados. Para obter mais informações sobre os dados afetados e como solucionar essa limitação, confira**[este tópico](https://go.microsoft.com/fwlink/?LinkId=267086).  
   
 -   **Implantar/Publicar/Importar** – Nas ações que usam a Estrutura DAC para implantar um pacote em um banco de dados, como implantar ou publicar um arquivo .dacpac, e importar um arquivo .bacpac, essas limitações se aplicam. Os dados que resultam no banco de dados de destino não podem conter uma representação de fidelidade total dos dados no pacote. O log Implantar/Importar conterá uma mensagem, observada acima, para cada instância em que o problema for encontrado. A operação será bloqueada por erros (consulte a categoria 3 anterior), mas continuará com os outros avisos.  
   

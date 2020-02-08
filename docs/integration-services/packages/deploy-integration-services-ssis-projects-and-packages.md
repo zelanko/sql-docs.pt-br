@@ -19,10 +19,10 @@ ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b0c755208a5443e4606bdb41a0cbdfdf26a1fa1c
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71680959"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Implantar projetos e pacotes do Integration Services (SSIS)
@@ -65,7 +65,7 @@ Para obter mais informações sobre o modelo de implantação de pacote herdado,
   
 |Recurso|Descrição|  
 |-------------|-----------------|  
-|Parâmetros|Um parâmetro especifica os dados que serão usados por um pacote. Você pode definir o escopo dos parâmetros no nível do pacote ou do projeto com parâmetros de pacote e de projeto, respectivamente. Os parâmetros podem ser usados em expressões ou tarefas. Quando o projeto é implantado no catálogo, você pode atribuir um valor literal para cada parâmetro ou usar o valor padrão que foi atribuído em tempo de design. Em lugar de um valor literal, você também pode fazer referência a uma variável de ambiente. Os valores de variáveis de ambiente são resolvidos na hora da execução do pacote.|  
+|parâmetros|Um parâmetro especifica os dados que serão usados por um pacote. Você pode definir o escopo dos parâmetros no nível do pacote ou do projeto com parâmetros de pacote e de projeto, respectivamente. Os parâmetros podem ser usados em expressões ou tarefas. Quando o projeto é implantado no catálogo, você pode atribuir um valor literal para cada parâmetro ou usar o valor padrão que foi atribuído em tempo de design. Em lugar de um valor literal, você também pode fazer referência a uma variável de ambiente. Os valores de variáveis de ambiente são resolvidos na hora da execução do pacote.|  
 |Ambientes|Um ambiente é um contêiner de variáveis que podem ser referenciadas por projetos do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Cada projeto pode ter várias referências de ambiente, mas uma única instância de execução de pacote pode fazer referência apenas a variáveis de um único ambiente. Os ambientes permitem organizar os valores que você atribui a um pacote. Por exemplo, você pode ter ambientes denominados "Desenvolvimento", "Teste" e "Produção".|  
 |Variáveis de ambiente|Uma variável de ambiente define um valor literal que pode ser atribuído a um parâmetro durante a execução do pacote. Para usar uma variável de ambiente, crie uma referência de ambiente (no projeto que corresponde ao ambiente que tem o parâmetro), atribua um valor de parâmetro ao nome da variável de ambiente e especifique a referência de ambiente correspondente ao configurar uma instância de execução.|  
 |Catálogo do SSISDB|Todos os objetos do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] são armazenados e gerenciados em uma instância do SQL Server em um banco de dados chamado de catálogo do SSISDB. O catálogo permite usar pastas para organizar seus projetos e ambientes. Cada instância do SQL Server pode ter um catálogo. Cada catálogo pode ter zero ou mais pastas. Cada pasta pode ter zero ou mais projetos e zero ou mais ambientes. Uma pasta do catálogo também pode ser usada como um limite para permissões para objetos do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .|  
@@ -97,7 +97,7 @@ Para obter mais informações sobre o erro descrito nesta seção e sobre as per
 - [System.ComponentModel.Win32Exception: O cliente não tem um privilégio obrigatório durante a Implantação de Projeto do SSIS](https://blogs.msdn.microsoft.com/dataaccesstechnologies/2013/08/20/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project/)
 
 ## <a name="deploy-projects-to-integration-services-server"></a>Implantar projetos no servidor do Integration Services
-  Na versão atual do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], você pode implantar seus projetos no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . O servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] permite gerenciar pacotes, executar pacotes, e configura valores de tempo de execução para pacotes por meio de ambientes.  
+  Na versão atual do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], você pode implantar seus projetos no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . O servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] permite gerenciar pacotes, executar pacotes, e configura valores de runtime para pacotes por meio de ambientes.  
   
 > [!NOTE]  
 >  Como nas versões anteriores do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], na versão atual você também pode implantar seus pacotes em uma instância do SQL Server e usar o serviço do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para executar e gerenciar os pacotes. Você usa o modelo de implantação de pacote. Para obter mais informações, consulte [Implantação de pacote herdado &#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md).  
@@ -145,17 +145,17 @@ Para obter mais informações sobre o erro descrito nesta seção e sobre as per
   
 1.  Abra o projeto no [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]e, em seguida, no menu **Projeto** , selecione **Implantar** para implantar o **Assistente de Implantação do Integration Services**.  
   
-     ou em  
+     ou  
   
      No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda o nó [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] > **SSISDB** no Pesquisador de Objetos e localize a pasta Projetos do projeto que você deseja implantar. Clique com o botão direito do mouse na pasta **Projetos** e clique em **Implantar Projeto**.  
   
-     ou em  
+     ou  
   
      No prompt de comando, execute **isdeploymentwizard.exe** de **%ProgramFiles%\Microsoft SQL Server\130\DTS\Binn**. Em computadores de 64 bits, há também uma versão de 32 bits da ferramenta em **%ProgramFiles(x86)%\Microsoft SQL Server\130\DTS\Binn**.  
   
 2.  Na página **Selecionar Origem** , clique em **Arquivo de implantação de projeto** para selecionar o arquivo de implantação do projeto.  
   
-     ou em  
+     ou  
   
      Clique em **Catálogo do Integration Services** para selecionar um projeto que já foi implantado no catálogo do SSISDB.  
   
@@ -296,7 +296,7 @@ Inicie o assistente:
 
  - Digitando **“Assistente de Implantação do SQL Server”** no Windows Search 
 
- ou em
+ ou
 
  - Pesquise o arquivo executável **ISDeploymentWizard.exe** na pasta de instalação do SQL Server; por exemplo: "C:\Arquivos de Programas (x86)\Microsoft SQL Server\130\DTS\Binn". 
  
@@ -306,7 +306,7 @@ Inicie o assistente:
   
 ###  <a name="ProjectModel"></a> Project Deployment Model  
   
-#### <a name="select-source"></a>Selecionar Fonte
+#### <a name="select-source"></a>Selecionar fonte
 
  Para implantar um arquivo de implantação do projeto que você criou, selecione **Arquivo de implantação do projeto** e insira o caminho para o arquivo .ispac. Para implantar um projeto residente no catálogo [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , selecione **Catálogo do Integration Services**e insira o nome do servidor e o caminho para o projeto no catálogo. Clique em **Avançar** para ver a página **Selecionar Destino** .  
   
@@ -324,7 +324,7 @@ Inicie o assistente:
   
 ###  <a name="PackageModel"></a> Package Deployment Model  
   
-#### <a name="select-source"></a>Selecionar Fonte
+#### <a name="select-source"></a>Selecionar fonte
 
  A página **Selecionar Origem** no **Assistente de Implantação do Integration Services** mostra configurações específicas ao modelo de implantação do pacote quando você selecionou a opção **Implantação do Pacote** para o **modelo de implantação**.  
   
@@ -350,7 +350,7 @@ Inicie o assistente:
 
 ## <a name="create-and-map-a-server-environment"></a>Criar e mapear um ambiente de servidor
 
-  Você cria um ambiente de servidor para especificar valores de tempo de execução para pacotes contidos em um projeto que você implantou no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Você pode mapear as variáveis de ambiente para parâmetros, para um pacote específico, para pacotes de ponto de entrada ou para todos os pacotes em um projeto específico. Um pacote de ponto de entrada é geralmente um pacote pai que executa um pacote filho.  
+  Você cria um ambiente de servidor para especificar valores de runtime para pacotes contidos em um projeto que você implantou no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Você pode mapear as variáveis de ambiente para parâmetros, para um pacote específico, para pacotes de ponto de entrada ou para todos os pacotes em um projeto específico. Um pacote de ponto de entrada é geralmente um pacote pai que executa um pacote filho.  
   
 > [!IMPORTANT]  
 >  Para uma execução específica, um pacote pode ser executado somente com os valores contidos em um único ambiente de servidor.  
@@ -451,7 +451,7 @@ Inicie o assistente:
   
     ```  
   
-2.  Chame [catalog.create_execution &#40;Banco de Dados SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md) para criar uma instância da execução do pacote e, opcionalmente, chame [catalog.set_execution_parameter_value &#40;Banco de Dados SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md) Para definir valores de parâmetro de tempo de execução.  
+2.  Chame [catalog.create_execution &amp;#40;Banco de Dados SSISDB&amp;#41;](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md) para criar uma instância da execução do pacote e, opcionalmente, chame [catalog.set_execution_parameter_value &amp;#40;Banco de Dados SSISDB&amp;#41;](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md) Para definir valores de parâmetro de runtime.  
   
      No exemplo a seguir, catalog.create_execution cria uma instância de execução para package.dtsx que está contida no projeto SSISPackage_ProjectDeployment. O projeto está localizado na pasta Pacotes SSIS. A execution_id retornada pelo procedimento armazenado é usado na chamada para catalog.set_execution_parameter_value. Esse segundo procedimento armazenado define o parâmetro LOGGING_LEVEL como 3 (log detalhado) e define um parâmetro de pacote denominado Parameter1 com um valor de 1.  
   
@@ -500,7 +500,7 @@ Inicie o assistente:
   
 -   Crie um objeto de servidor vinculado. Para obter mais informações, consulte [Criar servidores vinculados &#40;Mecanismo de Banco de Dados do SQL Server&#41;](../../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md).  
   
-     Na página **Opções do Servidor** da caixa de diálogo **Propriedades do Servidor Vinculado**, defina **RPC** e **RPC Out** como **True**. Além disso, defina **Habilitar Promoção de Transações Distribuídas para RPC** como **False**.  
+     Na página **Opções do Servidor** da caixa de diálogo **Propriedades do Servidor Vinculado** , defina **RPC** e **RPC Out** como **True**. Além disso, defina **Habilitar Promoção de Transações Distribuídas para RPC** como **False**.  
   
 -   Habilite parâmetros dinâmicos para o provedor selecionado para o servidor vinculado expandindo o nó **Provedores** sob **Servidores Vinculados** no Pesquisador de Objetos, clicando com o botão direito do mouse no provedor e clicando em **Propriedades**. Selecione **Habilitar** ao lado de **Parâmetro dinâmico**.  
   
@@ -593,7 +593,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **Usar Autenticação do SQL Server**  
  Quando um usuário se conecta com um nome de logon e senha especificados em uma conexão não confiável, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autentica a conexão verificando se foi definida uma conta de logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e se a senha especificada corresponde a uma senha registrada previamente. Se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não tiver uma conta de logon definida, ocorrerá falha na autenticação e o usuário receberá uma mensagem de erro.  
   
- **User name**  
+ **Nome de usuário**  
  Especifique um nome de usuário quando você estiver usando a Autenticação do SQL Server.  
   
  **Senha**  
@@ -713,7 +713,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **Escopo**  
  Lista o escopo do parâmetro.  
   
- **Value**  
+ **Valor**  
  Lista o valor do parâmetro.  
   
  Clique no botão de reticências ao lado do campo de valor para configurar as propriedades do parâmetro.  

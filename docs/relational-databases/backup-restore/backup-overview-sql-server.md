@@ -23,10 +23,10 @@ ms.assetid: 09a6e0c2-d8fd-453f-9aac-4ff24a97dc1f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: bfda79efac4e64fbb735e424cad4b8bb9ba93851
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70176269"
 ---
 # <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
@@ -79,7 +79,7 @@ ms.locfileid: "70176269"
 ## <a name="backup-media-terms-and-definitions"></a>Termos e definições de mídia de backup  
   
  **[dispositivo de backup](../../relational-databases/backup-restore/backup-devices-sql-server.md)**  
- Um disco ou dispositivo de fita no qual são gravados backups do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e nos quais eles podem ser restaurados. Os backups do SQL Server também podem ser gravados em um serviço de Armazenamento de Blobs do Azure. O formato de **URL** é usado para especificar o destino e o nome do arquivo de backup. Para obter mais informações, veja [Backup e restauração do SQL Server com o Serviço de Armazenamento de Blobs do Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+ Um disco ou dispositivo de fita no qual são gravados backups do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e nos quais eles podem ser restaurados. Os backups do SQL Server também podem ser gravados em um serviço de Armazenamento de Blobs do Azure. O formato de **URL** é usado para especificar o destino e o nome do arquivo de backup. Para obter mais informações, consulte [Backup e restauração do SQL Server com o serviço de Armazenamento de Blobs do Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
  **[mídia de backup](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)**  
  Uma ou mais fitas ou arquivos de disco nos quais um ou mais backups foram gravados.  
@@ -128,7 +128,7 @@ ms.locfileid: "70176269"
   
  Se uma operação de backup for sobreposta por uma operação de gerenciamento de arquivos ou de redução, ocorrerá um conflito. Independentemente de qual operação conflitante começou primeiro, a segunda operação aguardará até que o bloqueio definido para a primeira operação seja esgotado. (O tempo limite é controlado por uma configuração de tempo limite da sessão.) Se o bloqueio for liberado durante o período de tempo limite, a segunda operação continuará. Se o tempo limite do bloqueio for esgotado, a segunda operação falhará.  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="RelatedTasks"></a> Related tasks  
  **Dispositivos e mídia de backup**  
   
 -   [Definir um dispositivo de backup lógico para um arquivo de disco &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)  

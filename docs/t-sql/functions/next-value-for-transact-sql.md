@@ -23,10 +23,10 @@ ms.assetid: 92632ed5-9f32-48eb-be28-a5e477ef9076
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e37586d17a7b99d3dd191f63ed858805ef497a03
-ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68670532"
 ---
 # <a name="next-value-for-transact-sql"></a>NEXT VALUE FOR (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68670532"
   
  Para obter uma discussão completa sobre a criação e o uso de sequências, consulte [Números de sequência](../../relational-databases/sequence-numbers/sequence-numbers.md). Use [sp_sequence_get_range](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md) para gerar e reservar um intervalo de números de sequência.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -62,7 +62,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
 ## <a name="return-types"></a>Tipos de retorno  
  Retorna um número usando o tipo da sequência.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  A função **NEXT VALUE FOR** pode ser usada em procedimentos armazenados e gatilhos.  
   
  Quando a função **NEXT VALUE FOR** for usada em uma consulta ou restrição padrão, se o mesmo objeto de sequência for usado mais de uma vez ou se o mesmo objeto de sequência for usado na instrução que fornece os valores e em uma restrição padrão em execução, o mesmo valor será retornado para todas as colunas que referenciam a mesma sequência em uma linha no conjunto de resultados.  
@@ -163,7 +163,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
   
 -   Se a restrição padrão e o objeto de sequência não tiverem o mesmo proprietário, as permissões serão exigidas no objeto de sequência mesmo que seja chamada através de uma restrição padrão.  
   
-### <a name="audit"></a>Auditar o  
+### <a name="audit"></a>Audit  
  Para auditar a função **NEXT VALUE FOR**, monitore o SCHEMA_OBJECT_ACCESS_GROUP.  
   
 ## <a name="examples"></a>Exemplos  
@@ -184,7 +184,7 @@ CREATE SEQUENCE Test.CountBy1
 GO  
 ```  
   
-### <a name="a-using-a-sequence-in-a-select-statement"></a>A. Usando uma sequência em uma instrução select  
+### <a name="a-using-a-sequence-in-a-select-statement"></a>a. Usando uma sequência em uma instrução select  
  O exemplo a seguir cria uma sequência chamada `CountBy1`, que aumenta em incrementos de um cada vez que é utilizada.  
   
 ```  

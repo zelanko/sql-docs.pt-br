@@ -13,10 +13,10 @@ ms.assetid: 75432318-0b00-4797-917c-0a2e74f9d951
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e05ae59d963bd9b165d2f6f825955ee276683328
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66500450"
 ---
 # <a name="dataset-properties-dialog-box-query-report-builder"></a>Caixa de diálogo Propriedades do Conjunto de Dados, Consulta (Construtor de Relatórios)
@@ -36,7 +36,7 @@ Selecione **Consulta** na caixa de diálogo **Propriedades do Banco de Dados** p
  **Usar um conjunto de dados inserido em meu relatório**  
  Selecione essa opção para criar um conjunto de dados a ser usado apenas por esse relatório.  
   
- **Fonte de dados**  
+ **Fonte de Dados**  
  Selecione a fonte de dados na qual deseja basear o conjunto de dados. Para criar uma nova fonte de dados, clique em **Novo**.  
   
  **Tipo de consulta**  

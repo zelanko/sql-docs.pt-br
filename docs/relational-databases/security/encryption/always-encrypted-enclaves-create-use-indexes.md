@@ -11,10 +11,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: e370af38481593404629fb3367deb3b9f54bb869
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73595671"
 ---
 # <a name="create-and-use-indexes-on-columns-using-always-encrypted-with-secure-enclaves"></a>Criar e usar índices em colunas usando o Always Encrypted com enclaves seguros
@@ -84,7 +84,7 @@ Esse método é útil para:
 
 Para obter instruções passo a passo sobre como usar esse método, confira o [Tutorial: Criando e usando índices em colunas habilitadas para enclave com criptografia aleatória](../tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md). 
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Próximas etapas
 - [Consultar colunas usando o Always Encrypted com enclaves seguros](always-encrypted-enclaves-query-columns.md).
 
 ## <a name="see-also"></a>Consulte Também  

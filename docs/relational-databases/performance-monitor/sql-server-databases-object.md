@@ -16,10 +16,10 @@ ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: a8114722ac95c1404a45d8c85bf1736e541fa0ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68093597"
 ---
 # <a name="sql-server-databases-object"></a>SQL Server, objeto Databases
@@ -43,7 +43,7 @@ ms.locfileid: "68093597"
 |**Hora da Confirmação do Grupo/s**|Tempo de parada do grupo (em microssegundos) por segundo.|
 |**Bytes de Log Liberados/s**|Número total de bytes de log liberados.|  
 |**Base da Taxa de Acertos do Cache de Log**|Porcentagem de leituras de cache de log satisfeita do cache de log.|  
-|**Base da Taxa de Acertos do Cache de Log**|Somente para uso interno.| 
+|**Base da Taxa de Acertos do Cache de Log**|Apenas para uso interno.| 
 |**Log Cache Reads/sec**|Faz leituras efetuadas por segundo pelo cache do gerenciador de log.|  
 |**Log File(s) Size (KB)**|Tamanho cumulativo (em kilobytes) de todos os arquivos de log de transações do banco de dados.|  
 |**Log File(s) Used Size (KB)**|Tamanho cumulativo usado de todos os arquivos de log do banco de dados.|  
@@ -63,7 +63,7 @@ ms.locfileid: "68093597"
 |**Memória baixa por push no Pool de Logs/s**|A taxa de push de bloco de Logs falha devido a estar com memória insuficiente.|
 |**Push do Pool de Logs não tem Buffer Livre/s**|Taxa de push de bloco de Logs falha devido à indisponibilidade do buffer livre.|
 |**Registrar Pool de Logs Por trás do Trunc/seg**|Registrar falhas no cache do pool devido ao bloco solicitado estar por trás da truncagem LSN.|
-|**Base de Solicitações do Pool de Logs**|Somente para uso interno.| 
+|**Base de Solicitações do Pool de Logs**|Apenas para uso interno.| 
 |**Solicitações de VLF Antigo do pool de Logs/seg**|Solicitações do Pool de Logs que não estavam no último VLF do log.|  
 |**Solicitações do Pool de Logs/s**|O número de solicitações do bloco de log processadas pelo pool de log.|  
 |**Tamanho de Logs ativos totais no Pool de Logs**|Logs ativos atuais totais armazenados no gerenciador de buffer em cache compartilhado em bytes.|
@@ -77,7 +77,7 @@ ms.locfileid: "68093597"
 |**Transações acompanhadas/s**|O número de transações confirmadas registradas na tabela de confirmação do banco de dados.|  
 |**Transações/s**|Número de transações iniciadas para o banco de dados por segundo.<br /><br /> **Transações/s** não conta transações somente XTP (transações iniciadas por um procedimento armazenado compilado de modo nativo).|  
 |**Write Transactions/sec**|Número de transações gravadas e confirmadas ao banco de dados, no último segundo.|  
-|**Base de Latência de DLC do Controlador de XTP**|Somente para uso interno.| 
+|**Base de Latência de DLC do Controlador de XTP**|Apenas para uso interno.| 
 |**Latência de DLC do Controlador de XTP/Busca**|Latência média em microssegundos entre blocos de log sendo inseridos no Consumidor de Log Direto e sendo recuperados pelo controlador de XTP, por segundo.|
 |**Latência de Pico de DLC do Controlador de XTP**|A maior latência registrada, em microssegundos, de uma busca desde um Consumidor de Log Direto e feita por um controlador de XTP.|
 |**Log do Controlador de XTP Processado/seg**|A quantidade de bytes de log processados pelo thread do controlador de XTP, por segundo.|
@@ -85,6 +85,6 @@ ms.locfileid: "68093597"
   
 ## <a name="see-also"></a>Consulte Também  
  [Monitorar o uso de recursos &#40;Monitor do Sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
- [SQL Server, Réplica de banco de dados](../../relational-databases/performance-monitor/sql-server-database-replica.md)  
+ [SQL Server, Réplica de Banco de Dados](../../relational-databases/performance-monitor/sql-server-database-replica.md)  
   
   

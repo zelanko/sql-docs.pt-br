@@ -16,10 +16,10 @@ ms.assetid: 7c326958-5ae9-4761-9c57-905972276a8f
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 77e07cd5493220f14b177292e9065c355fca866f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000175"
 ---
 # <a name="enable-or-disable-always-on-availability-group-feature"></a>Habilitar ou desabilitar o recurso de grupo de disponibilidade Always On
@@ -67,7 +67,7 @@ ms.locfileid: "68000175"
   
     -   **False**, se os Grupos de Disponibilidade AlwaysOn estiverem desabilitados.  
   
-###  <a name="Tsql1Procedure"></a> Usando Transact-SQL  
+###  <a name="Tsql1Procedure"></a> Usando o Transact-SQL  
  **Para determinar se os Grupos de Disponibilidade AlwaysOn estão habilitados**  
   
 1.  Use a seguinte instrução [SERVERPROPERTY](../../../t-sql/functions/serverproperty-transact-sql.md) :  

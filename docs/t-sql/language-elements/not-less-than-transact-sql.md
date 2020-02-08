@@ -22,10 +22,10 @@ ms.assetid: ecbb598e-58a2-4b6c-90b4-3ad5bdfcae39
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 80e34fe713d44993d3d0349485e9e05783980fa4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68121997"
 ---
 # <a name="lt-not-less-than-transact-sql"></a>!&lt; (Não é menor que) (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68121997"
 
   Compara duas expressões (um operador de comparação). Ao comparar expressões não nulas, o resultado será TRUE se o operando da esquerda não tiver um valor menor que o operando da direita; caso contrário, o resultado será FALSE. Se um ou ambos os operandos forem NULL, consulte o tópico [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md).  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   

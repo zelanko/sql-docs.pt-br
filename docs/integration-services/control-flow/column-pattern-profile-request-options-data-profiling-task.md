@@ -13,10 +13,10 @@ ms.assetid: 9ccb8fc5-f65e-41a2-9511-7fa55586eb8b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 85f02243a8b331ac96dce55ed39813b39fa697b0
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294252"
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>Opções da solicitação de perfil Padrão de Coluna (tarefa Criação de Perfil de Dados)
@@ -58,10 +58,10 @@ ms.locfileid: "71294252"
   
 |Marca|Termo|  
 |---------|----------|  
-|Logradouro|Logradouro|  
-|Logradouro|Avenida|  
-|Logradouro|Vila|  
-|Logradouro|Travessa|  
+|Street|Street|  
+|Street|Avenida|  
+|Street|Posicionar|  
+|Street|Travessa|  
   
  Com base nessa combinação de marcas, o padrão resultante para um endereço poderia se assemelhar ao seguinte padrão:  
   
@@ -90,7 +90,7 @@ ms.locfileid: "71294252"
   
  Para obter mais informações, consulte a seção "Opções TableOrView" neste tópico.  
   
- **Column**  
+ **Coluna**  
  Selecione a coluna existente para a qual um perfil será criado. Selecione **(\*)** para analisar todas as colunas.  
   
  Para obter mais informações, consulte a seção “Opções Column” neste tópico.  

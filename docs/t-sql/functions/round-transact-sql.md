@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6c1f1fe588447ba4fdbac3cdc66fcc17ea5a6508
-ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72041233"
 ---
 # <a name="round-transact-sql"></a>ROUND (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "72041233"
 
 Retorna um valor numérico, arredondado, para o comprimento ou precisão especificados.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -63,16 +63,16 @@ ROUND ( numeric_expression , length [ ,function ] )
 |Categorias **money** e **smallmoney**|**money**|  
 |Categorias **float** e **real**|**float**|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  ROUND sempre retorna um valor. Se *length* for negativo e maior que o número de dígitos antes do ponto decimal, ROUND retornará 0.  
   
-|Exemplo|Resultado|  
+|Exemplo|Result|  
 |-------------|------------|  
 |ROUND(748.58, -4)|0|  
   
  ROUND retornará uma *numeric_expression* arredondada, seja qual for o tipo de dados, quando *length* for um número negativo.  
   
-|Exemplos|Resultado|  
+|Exemplos|Result|  
 |--------------|------------|  
 |ROUND(748.58, -1)|750.00|  
 |ROUND(748.58, -2)|700.00|  
@@ -81,7 +81,7 @@ ROUND ( numeric_expression , length [ ,function ] )
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-round-and-estimates"></a>A. Usando ROUND e estimativas  
+### <a name="a-using-round-and-estimates"></a>a. Usando ROUND e estimativas  
  O exemplo a seguir apresenta duas expressões que, usando `ROUND`, demonstram que o último dígito sempre é uma estimativa.  
   
 ```  

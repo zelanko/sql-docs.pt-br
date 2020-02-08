@@ -12,10 +12,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b5b5246dabbe205554b45cee91be93c4485a60f6
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73594129"
 ---
 # <a name="rotate-always-encrypted-keys-using-powershell"></a>Alternar chaves do Always Encrypted usando o PowerShell
@@ -37,7 +37,7 @@ O método de girar uma chave mestra de coluna descrito nesta seção não dá su
 
 | Tarefa | Artigo | Acessa chaves de texto não criptografado/repositório de chaves| Acessar banco de dados
 |:---|:---|:---|:---
-|Etapa 1. Crie uma nova chave mestra de coluna em um repositório de chaves.<br><br>**Observação:** o módulo do SqlServer PowerShell não dá suporte a essa etapa. Para realizar essa tarefa da linha de comando, você precisa usar ferramentas especificas para o seu repositório de chaves. | [Criar e armazenar chaves mestras de coluna para Always Encrypted](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)| Sim | Não
+|Etapa 1. Crie uma nova chave mestra de coluna em um repositório de chaves.<br><br>**Observação:** O módulo do SqlServer PowerShell não dá suporte a essa etapa. Para realizar essa tarefa da linha de comando, você precisa usar ferramentas especificas para o seu repositório de chaves. | [Criar e armazenar chaves mestras de coluna para Always Encrypted](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)| Sim | Não
 |Etapa 2. Inicie um ambiente do PowerShell e importe o módulo do SqlServer | [Importar o módulo do SqlServer](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | Não | Não
 |Etapa 3. Conecte-se ao servidor e banco de dados. | [Conectando-se a um banco de dados](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | Não | Sim
 |Etapa 4. Crie um objeto SqlColumnMasterKeySettings contendo informações sobre o local da sua nova chave mestra de coluna. SqlColumnMasterKeySettings é um objeto que existe na memória (no PowerShell). Para criá-lo, você precisa usar o cmdlet específico para o repositório de chaves. |[New-SqlAzureKeyVaultColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlazurekeyvaultcolumnmasterkeysettings)<br><br>[New-SqlCertificateStoreColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcertificatestorecolumnmasterkeysettings)<br><br>[New-SqlCngColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcngcolumnmasterkeysettings)<br><br>[New-SqlCspColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcspcolumnmasterkeysettings)<br> | Não | Não
@@ -101,26 +101,26 @@ Um DBA recupera metadados da chave mestra de coluna a ser girada e das chaves de
 
 | Tarefa | Artigo | Acessa chaves de texto não criptografado/repositório de chaves| Acessar banco de dados
 |:---|:---|:---|:---
-|Etapa 1. Inicie um ambiente do PowerShell e importe o módulo do SqlServer. | [Importar o módulo do SqlServer](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | Não | None
+|Etapa 1. Inicie um ambiente do PowerShell e importe o módulo do SqlServer. | [Importar o módulo do SqlServer](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | Não | Nenhum
 |Etapa 2. Conecte-se ao seu servidor e um banco de dados. | [Conectar a um banco de dados](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | Não | Sim
 |Etapa 3. Recupere os metadados da chave mestra de coluna antiga.| [Get-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/get-sqlcolumnmasterkey) | Não | Sim
 |Etapa 4. Recupere os metadados das chaves de criptografia de coluna, protegidas pela antiga chave mestra de coluna, incluindo seus valores criptografados. | [Get-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/get-sqlcolumnencryptionkey) | Não | Sim
-|Etapa 5. Compartilhe o local da chave mestra de coluna (o nome do provedor e o caminho principal da chave mestra de coluna) e dos valores criptografados das chaves de criptografia de coluna correspondentes, protegidas pela chave mestra de coluna antiga.| Veja os exemplos abaixo. | Não | Não
+|Etapa 5. Compartilhe o local da chave mestra de coluna (o nome do provedor e o caminho principal da chave mestra de coluna) e dos valores criptografados das chaves de criptografia de coluna correspondentes, protegidas pela chave mestra de coluna antiga.| Confira os exemplos abaixo. | Não | Não
 
-### <a name="part-2-security-administrator"></a>Parte 2: Administrador de Segurança
+### <a name="part-2-security-administrator"></a>Parte 2: Administrador de segurança
 
 O Administrador de Segurança gera uma nova chave mestra de coluna, criptografa novamente as chaves de criptografia de coluna afetadas com a nova chave mestra de coluna e compartilha as informações da nova chave mestra de coluna, bem como o conjunto de novos valores criptografados para as chaves de criptografia de coluna afetadas, com o DBA.
 
 | Tarefa | Artigo | Acessar chaves de texto não criptografado/repositório de chaves| Acessar banco de dados
 |:---|:---|:---|:---
-|Etapa 1. Obtenha com o DBA o local da chave mestra de coluna antiga e dos valores criptografados das chaves de criptografia de coluna correspondentes, protegidas pela chave mestra de coluna antiga.|N/A<br>Veja os exemplos abaixo.|Não| Não
+|Etapa 1. Obtenha com o DBA o local da chave mestra de coluna antiga e dos valores criptografados das chaves de criptografia de coluna correspondentes, protegidas pela chave mestra de coluna antiga.|N/D<br>Confira os exemplos abaixo.|Não| Não
 |Etapa 2. Crie uma nova chave mestra de coluna em um repositório de chaves.<br><br>**Observação:** O módulo do SqlServer não dá suporte a essa etapa. Para realizar essa tarefa da linha de comando, você precisa usar ferramentas especificas para o tipo do seu repositório de chaves.|[Criar e armazenar chaves mestras de coluna para Always Encrypted](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)| Sim | Não
 |Etapa 3. Inicie um ambiente do PowerShell e importe o módulo do SqlServer. | [Importar o módulo do SqlServer](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | Não | Não
 |Etapa 4. Crie um objeto SqlColumnMasterKeySettings contendo informações sobre o local da sua chave mestra de coluna **antiga** . SqlColumnMasterKeySettings é um objeto que existe na memória (no PowerShell). |New-SqlColumnMasterKeySettings| Não | Não
 |Etapa 5. Crie um objeto SqlColumnMasterKeySettings contendo informações sobre o local da sua **nova** chave mestra de coluna. SqlColumnMasterKeySettings é um objeto que existe na memória (no PowerShell). Para criá-lo, você precisa usar o cmdlet específico para o repositório de chaves. | [New-SqlAzureKeyVaultColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlazurekeyvaultcolumnmasterkeysettings)<br><br>[New-SqlCertificateStoreColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcertificatestorecolumnmasterkeysettings)<br><br>[New-SqlCngColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcngcolumnmasterkeysettings)<br><br>[New-SqlCspColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcspcolumnmasterkeysettings)| Não | Não
 |Etapa 6. Autentique no Azure se a chave mestra de coluna antiga (atual) ou nova estiverem armazenadas no Cofre de Chaves do Azure. | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext) | Sim | Não
 |Etapa 7. Criptografe novamente cada valor das chaves de criptografia de coluna, que atualmente está protegida pela chave mestra de coluna antiga, usando a nova chave mestra de coluna. | [New-SqlColumnEncryptionKeyEncryptedValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkeyencryptedvalue)<br><br>**Observação:** ao chamar esse cmdlet, passe os objetos SqlColumnMasterKeySettings para ambas as chaves mestras de coluna antiga e nova, juntamente com um valor da chave de criptografia de coluna a ser recriptografada.|Sim|Não
-|Etapa 8. Compartilhe o local da nova chave mestra de coluna (o nome do provedor e o caminho principal da chave mestra de coluna) e do conjunto de novos valores criptografados das chaves de criptografia de coluna, com seu DBA.| Veja os exemplos abaixo. | Não | Não
+|Etapa 8. Compartilhe o local da nova chave mestra de coluna (o nome do provedor e o caminho principal da chave mestra de coluna) e do conjunto de novos valores criptografados das chaves de criptografia de coluna, com seu DBA.| Confira os exemplos abaixo. | Não | Não
 
 > [!NOTE]
 > É altamente recomendável não excluir a chave mestra de coluna antiga permanentemente após a rotação. Em vez disso, você deve manter a chave mestra de coluna antiga em seu repositório de chaves atual ou arquivá-la em outro local seguro. Se você restaurar seu banco de dados de um arquivo de backup para um ponto *anterior à* configuração da nova chave mestra de coluna, precisará da chave antiga para acessar os dados.
@@ -131,7 +131,7 @@ O DBA cria metadados para a nova chave mestra de coluna e atualiza os metadados 
 
 | Tarefa | Artigo | Acessar chaves de texto não criptografado/repositório de chaves| Acessar banco de dados
 |:---|:---|:---|:---
-|Etapa 1. Obtenha do Administrador de Segurança o local da nova chave mestra de coluna e o novo conjunto de valores criptografados das chaves de criptografia de coluna correspondentes, protegidas pela chave mestra de coluna antiga.| Veja os exemplos abaixo. | Não | Não
+|Etapa 1. Obtenha do Administrador de Segurança o local da nova chave mestra de coluna e o novo conjunto de valores criptografados das chaves de criptografia de coluna correspondentes, protegidas pela chave mestra de coluna antiga.| Confira os exemplos abaixo. | Não | Não
 |Etapa 2. Inicie um ambiente do PowerShell e importe o módulo do SqlServer. | [Importar o módulo do SqlServer](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | Não | Não
 |Etapa 3. Conecte-se ao seu servidor e um banco de dados. | [Conectando-se a um banco de dados](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | Não | Sim
 |Etapa 4. Crie um objeto SqlColumnMasterKeySettings contendo informações sobre o local da sua nova chave mestra de coluna. SqlColumnMasterKeySettings é um objeto que existe na memória (no PowerShell). |New-SqlColumnMasterKeySettings| Não| Não
@@ -191,7 +191,7 @@ for($i=0; $i -lt $ceks.Length; $i++){
 ```
 
 
-Parte 2: Administrador de Segurança
+Parte 2: Administrador de segurança
 
 ```powershell
 # Obtain the location of the old column master key and the encrypted values of the corresponding column encryption keys, from your DBA, via a CSV file on a share drive.
@@ -344,7 +344,7 @@ Set-SqlColumnEncryption -ColumnEncryptionSettings $ces -InputObject $database -U
 Remove-SqlColumnEncryptionKey -Name $oldCekName -InputObject $database
 ```
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Próximas etapas
 - [Consultar colunas usando o Always Encrypted com o SQL Server Management Studio](always-encrypted-query-columns-ssms.md)
 - [Desenvolver aplicativos usando o Always Encrypted](always-encrypted-client-development.md)
   

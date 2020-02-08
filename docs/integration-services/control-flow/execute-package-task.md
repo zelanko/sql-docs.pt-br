@@ -20,10 +20,10 @@ ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: dcd1e0912f1bf0adcbae79da1f1d34f92233f467
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294189"
 ---
 # <a name="execute-package-task"></a>Tarefa Executar Pacote
@@ -82,7 +82,7 @@ ms.locfileid: "71294189"
   
  Você pode usar os métodos a seguir para transmitir valores a um pacote filho:  
   
--   **Configurações de pacote**  
+-   **Configurações do Pacote**  
   
      [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornece um tipo de configuração, a configuração de Variável do Pacote Pai, para transmitir valores de pacotes pai para pacotes filho. A configuração é construída no pacote filho e usa uma variável no pacote pai. A configuração é mapeada para uma variável no pacote filho ou para a propriedade de um objeto no pacote filho. A variável também pode ser usada nos scripts usados pela tarefa Script ou pelo componente Script.  
   
@@ -169,13 +169,13 @@ ms.locfileid: "71294189"
 #### <a name="referencetype-dynamic-options"></a>Opções dinâmicas ReferenceType  
   
 ##### <a name="referencetype--external-reference"></a>ReferenceType = referência externa  
- **Local**  
+ **Localidade**  
  Selecione o local de armazenamento do pacote filho. As opções dessa propriedade são listadas na tabela a seguir.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
 |**SQL Server**|Defina o local como uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**Sistema de arquivos**|Defina o local para o sistema de arquivos.|  
+|**Sistema de Arquivos**|Defina o local para o sistema de arquivos.|  
   
  **Conexão**  
  Selecione o tipo de local de armazenamento para o pacote filho.  

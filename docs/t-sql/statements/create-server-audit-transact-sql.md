@@ -23,10 +23,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: cc6f7c3ad9dc10e46a7abd1b044bcf70ff86f92d
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982998"
 ---
 # <a name="create-server-audit-transact-sql"></a>CREATE SERVER AUDIT (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "73982998"
 
   Cria um objeto de auditoria de servidor por meio do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit. Para obter mais informações, veja [Auditoria do SQL Server &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
 
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -135,7 +135,7 @@ Força a instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 > ```
 
 
- number  
+ número  
  **Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior.  
   
  É qualquer tipo numérico, incluindo **decimal**. Limitações são a falta de memória física disponível ou um número que é muito grande para ser representado como um inteiro de 64 bits.  
@@ -145,7 +145,7 @@ Força a instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
   
  Uma cadeia de caracteres ANSI ou Unicode, conforme requerido pela comparação de predicado. Nenhuma conversão de tipo de cadeia de caracteres implícita é executada para as funções de comparação de predicado. A transferência do tipo incorreto resulta em um erro.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Quando uma auditoria de servidor é criada, ela permanece em um estado desabilitado.  
   
  A instrução CREATE SERVER AUDIT está no escopo de uma transação. Se a transação for revertida, a instrução também será revertida.  
@@ -157,7 +157,7 @@ Força a instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-creating-a-server-audit-with-a-file-target"></a>A. Criando uma auditoria de servidor com um arquivo de destino  
+### <a name="a-creating-a-server-audit-with-a-file-target"></a>a. Criando uma auditoria de servidor com um arquivo de destino  
  O exemplo a seguir cria uma auditoria de servidor denominada `HIPAA_Audit` com um arquivo binário como o destino e nenhuma opção.  
   
 ```sql  

@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 5d341d7bbda403b405268fe253cff7d60cea4d0d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077440"
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>Criar e configurar um grupo de disponibilidade para SQL Server em Linux
@@ -324,11 +324,11 @@ Esta seção mostra como criar um AG com um tipo de cluster Externo usando o SSM
 
 2.  Na caixa de diálogo Introdução, clique em **Avançar**.
 
-3.  Na caixa de diálogo Especificar Opções do Grupo de Disponibilidade, insira um nome para o grupo de disponibilidade e selecione um tipo de cluster EXTERNO ou NENHUM no menu suspenso. Externo deve ser usado quando o Pacemaker for ser implantado. Nenhum é para cenários especializados, como expansão de leitura. Selecionar a opção de detecção de integridade no nível do banco de dados é opcional. Para obter mais informações sobre essa opção, confira [Opção de failover de detecção de integridade no nível do banco de dados do grupo de disponibilidade](../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md). Clique em **Avançar**.
+3.  Na caixa de diálogo Especificar Opções do Grupo de Disponibilidade, insira um nome para o grupo de disponibilidade e selecione um tipo de cluster EXTERNO ou NENHUM no menu suspenso. Externo deve ser usado quando o Pacemaker for ser implantado. Nenhum é para cenários especializados, como expansão de leitura. Selecionar a opção de detecção de integridade no nível do banco de dados é opcional. Para obter mais informações sobre essa opção, confira [Opção de failover de detecção de integridade no nível do banco de dados do grupo de disponibilidade](../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md). Clique em **Próximo**.
 
     ![](./media/sql-server-linux-create-availability-group/image3.png)
 
-4.  Na caixa de diálogo Selecionar Bancos de Dados, selecione os bancos de dados que participarão do AG. Cada banco de dados deve ter um backup completo antes que possa ser adicionado a um AG. Clique em **Avançar**.
+4.  Na caixa de diálogo Selecionar Bancos de Dados, selecione os bancos de dados que participarão do AG. Cada banco de dados deve ter um backup completo antes que possa ser adicionado a um AG. Clique em **Próximo**.
 
 5.  Na caixa de diálogo Especificar Réplicas, clique em **Adicionar Réplica**.
 
@@ -354,17 +354,17 @@ Esta seção mostra como criar um AG com um tipo de cluster Externo usando o SSM
 
 11. Se um ouvinte for criado para cenários legíveis, o SSMS 17.3 ou posterior permitirá a criação do roteamento somente leitura no assistente. Ele também pode ser adicionado posteriormente por meio de SSMS ou Transact-SQL. Para adicionar o roteamento somente leitura agora:
 
-    A.  Selecione a guia Roteamento Somente Leitura.
+    a.  Selecione a guia Roteamento Somente Leitura.
 
-    B.  Insira as URLs para as réplicas somente leitura. Essas URLs são semelhantes aos pontos de extremidade, exceto pelo fato de usarem a porta da instância, e não o ponto de extremidade.
+    b.  Insira as URLs para as réplicas somente leitura. Essas URLs são semelhantes aos pontos de extremidade, exceto pelo fato de usarem a porta da instância, e não o ponto de extremidade.
 
     c.  Selecione cada URL e, na parte inferior, selecione as réplicas legíveis. Para seleção múltipla, mantenha pressionada a tecla SHIFT ou clique e arraste.
 
-12. Clique em **Avançar**.
+12. Clique em **Próximo**.
 
-13. Escolha como as réplicas secundárias serão inicializadas. O padrão é usar a [propagação automática](../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md), que requer o mesmo caminho em todos os servidores que participam do AG. Você também pode fazer com que o assistente faça a ação de backup, cópia e restauração (a segunda opção); fazer com que ele ingresse se você tiver feito a ação de backup, cópia e restauração manualmente do banco de dados nas réplicas (terceira opção); ou adicionar o banco de dados mais tarde (última opção). Assim como ocorre com os certificados, se você estiver fazendo backups e copiando-os manualmente, as permissões nos arquivos de backup precisarão ser definidas em outras réplicas. Clique em **Avançar**.
+13. Escolha como as réplicas secundárias serão inicializadas. O padrão é usar a [propagação automática](../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md), que requer o mesmo caminho em todos os servidores que participam do AG. Você também pode fazer com que o assistente faça a ação de backup, cópia e restauração (a segunda opção); fazer com que ele ingresse se você tiver feito a ação de backup, cópia e restauração manualmente do banco de dados nas réplicas (terceira opção); ou adicionar o banco de dados mais tarde (última opção). Assim como ocorre com os certificados, se você estiver fazendo backups e copiando-os manualmente, as permissões nos arquivos de backup precisarão ser definidas em outras réplicas. Clique em **Próximo**.
 
-14. Na caixa de diálogo Validação, se tudo não voltar como Sucesso, investigue. Alguns avisos são aceitáveis e não fatais, como se você não criar um ouvinte. Clique em **Avançar**.
+14. Na caixa de diálogo Validação, se tudo não voltar como Sucesso, investigue. Alguns avisos são aceitáveis e não fatais, como se você não criar um ouvinte. Clique em **Próximo**.
 
 15. Na caixa de diálogo Resumo, clique em **Concluir**. O processo para criar o AG será iniciado agora.
 

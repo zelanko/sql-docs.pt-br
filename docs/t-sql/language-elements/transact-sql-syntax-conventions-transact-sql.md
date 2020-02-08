@@ -29,10 +29,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b7b42f9f9db95954509c6e47c28b317eab0626c4
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981907"
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Convenções da sintaxe Transact-SQL (Transact-SQL)
@@ -42,7 +42,7 @@ A tabela a seguir lista e descreve as convenções usadas nos diagramas de sinta
   
 |Convenção|Usado para|  
 |----------------|--------------|  
-|UPPERCASE|Palavras-chave [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
+|LETRAS MAIÚSCULAS|Palavras-chave [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
 |_italic_|Parâmetros de sintaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] fornecidos pelo usuário.|  
 |**bold**|Digite os nomes dos bancos de dados, nomes de tabela, nomes de coluna, nomes de índices, procedimentos armazenados, utilitários, nomes de tipo de dados e texto exatamente como exibidos.|  
 |underline|Indica o valor padrão aplicado quando a cláusula que contém o valor sublinhado é omitida da instrução.|  

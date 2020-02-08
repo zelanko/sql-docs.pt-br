@@ -35,10 +35,10 @@ ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 54b6353b789f837f45759c34b0dbbbd591cf5dbf
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982418"
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
@@ -60,7 +60,7 @@ Isso significa que os comandos DBCC CHECKALLOC, DBCC CHECKTABLE ou DBCC CHECKCAT
 >     
 > Como as opções de reparo de DBCC não estão disponíveis para tabelas com otimização de memória, você deverá fazer o backup de seus bancos de dados regularmente e testar os backups. Se ocorrerem problemas de integridade de dados em uma tabela com otimização de memória, você deverá restaurar o último backup válido.    
 
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
     
 ## <a name="syntax"></a>Sintaxe    
     
@@ -168,7 +168,7 @@ DATA_PURITY
 > [!WARNING] 
 > Se MAXDOP estiver definido como zero, o SQL Server escolherá o grau máximo de paralelismo a ser usado.    
 
-## <a name="remarks"></a>Remarks    
+## <a name="remarks"></a>Comentários    
 O DBCC CHECKDB não examina índices desabilitados. Para obter mais informações sobre índices desabilitados, confira [Desabilitar índices e restrições](../../relational-databases/indexes/disable-indexes-and-constraints.md).    
 
 Se um tipo definido pelo usuário estiver marcado como sendo ordenado por byte, deverá existir apenas uma serialização do tipo definido pelo usuário. Se não houver uma serialização consistente de tipos definidos pelo usuário ordenados por byte, o erro 2537 ocorrerá quando DBCC CHECKDB for executado. Para obter mais informações, confira [Requisitos do tipo definido pelo usuário](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-requirements.md).    
@@ -201,7 +201,7 @@ No Microsoft SQL Server 2012 ou uma versão anterior do SQL Server, você pode e
 Quando FILESTREAM está habilitado para um banco de dados e uma tabela, é possível armazenar opcionalmente BLOBs (objetos binários grandes) **varbinary(max)** no sistema de arquivos. Ao usar DBCC CHECKDB em um banco de dados que armazena BLOBs no sistema de arquivos, DBCC verifica a consistência em nível de vinculação entre o sistema de arquivos e o banco de dados.
 Por exemplo, se uma tabela contiver uma coluna **varbinary(max)** que use o atributo FILESTREAM, o DBCC CHECKDB verificará se existe um mapeamento de um-para-um entre os diretórios e os arquivos do sistema de arquivos e entre as linhas e colunas da tabela e os valores das colunas. DBCC CHECKDB poderá reparar dano se você especificar a opção REPAIR_ALLOW_DATA_LOSS. Para reparar dano de FILESTREAM, o DBCC excluirá quaisquer linhas de tabela que não tiverem dados do sistema de arquivos.
     
-## <a name="best-practices"></a>Práticas recomendadas    
+## <a name="best-practices"></a>Práticas Recomendadas    
 É recomendável usar a opção `PHYSICAL_ONLY` para uso frequente em sistemas de produção. O uso de PHYSICAL_ONLY pode reduzir significativamente o tempo de execução do DBCC CHECKDB em bancos de dados grandes. Também é recomendável executar DBCC CHECKDB periodicamente sem opções. A frequência dessas execuções depende das execuções de negócios individuais e de seus ambientes de produção.
     
 ## <a name="checking-objects-in-parallel"></a>Verificando objetos em paralelo    
@@ -369,7 +369,7 @@ Requer associação à função de servidor fixa sysadmin ou à função de banc
     
 ## <a name="examples"></a>Exemplos    
     
-### <a name="a-checking-both-the-current-and-another-database"></a>A. Verificando os bancos de dados atual e outro banco de dados    
+### <a name="a-checking-both-the-current-and-another-database"></a>a. Verificando os bancos de dados atual e outro banco de dados    
 O exemplo a seguir executa `DBCC CHECKDB` para o banco de dados atual e o banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].
     
 ```sql    

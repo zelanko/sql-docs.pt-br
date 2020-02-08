@@ -11,10 +11,10 @@ ms.author: negust
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 1b831047e4c2b8bad166e5ddf5ce3bdc7f8b6165
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73532855"
 ---
 # <a name="create-external-language-transact-sql"></a>CREATE EXTERNAL LANGUAGE (Transact-SQL)
@@ -100,13 +100,13 @@ Isso fornece uma possibilidade de fornecer um conjunto de parâmetros para o run
 
 **external_lang_env_variables**
 
-Isso permite uma possibilidade de fornecer um conjunto de variáveis de ambiente ao runtime da linguagem externa antes da inicialização do processo externo. Um exemplo de uma variável de ambiente é, por exemplo, o diretório base do próprio runtime. Por exemplo: JRE_HOME.
+Isso permite uma possibilidade de fornecer um conjunto de variáveis de ambiente ao runtime da linguagem externa antes da inicialização do processo externo. Um exemplo de uma variável de ambiente é, por exemplo, o diretório base do próprio runtime. Por exemplo:  JRE_HOME.
 
 **platform**
 
 Esse parâmetro é necessário para cenários de sistema operacional híbrido. Em uma arquitetura híbrida, a linguagem precisa ser registrada uma vez por plataforma. O nome da plataforma e da linguagem será a chave exclusiva por linguagem externa. Se nenhuma plataforma for especificada, o sistema operacional atual será considerado.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Comentários
 
 Atualmente, não há suporte para **PARAMETERS** e **ENVIRONMENT_VARIABLES**.
 

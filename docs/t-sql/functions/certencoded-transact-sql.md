@@ -18,10 +18,10 @@ ms.assetid: 677a0719-7b9a-4f0b-bc61-41634563f924
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: e81c4101d03fd6f8426b1a15a29b206a0c2be7a5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68040097"
 ---
 # <a name="certencoded-transact-sql"></a>CERTENCODED (Transact-SQL)
@@ -42,7 +42,7 @@ A **certificate_id** do certificado. Encontre esse valor em sys.certificates; a 
 ## <a name="return-types"></a>Tipos de retorno
 **varbinary**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 Use **CERTENCODED** e **CERTPRIVATEKEY** em conjunto para retornar, em formato binário, diferentes partes de um certificado.
   
 ## <a name="permissions"></a>Permissões  

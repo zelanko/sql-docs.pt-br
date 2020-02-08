@@ -13,10 +13,10 @@ author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 65b88c890dc16adf1a1b626dd0ddc91ad359505b
-ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74821970"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>Processamento inteligente de consultas em bancos de dados SQL
@@ -139,7 +139,7 @@ Começando com comentários de concessão de memória no modo de linha, serão e
 
 *LastRequestedMemory* mostra a memória concedida em quilobytes (KB) na execução de consulta anterior. O atributo *IsMemoryGrantFeedbackAdjusted* permite que você verifique o estado dos comentários de concessão de memória para a instrução dentro de um plano de execução de consulta real. Os valores apresentados nesse atributo são os seguintes:
 
-| Valor de IsMemoryGrantFeedbackAdjusted | DESCRIÇÃO |
+| Valor de IsMemoryGrantFeedbackAdjusted | Descrição |
 |---|---|
 | Não: Primeira execução | Os comentários de concessão de memória não ajustam a memória para a primeira compilação e execução associada.  |
 | Não: Concessão precisa | Se não houver despejo no disco, e a instrução usar pelo menos 50% da memória concedida, os comentários de concessão de memória não serão acionados. |
@@ -212,14 +212,14 @@ Depois que um plano de execução intercalada é armazenado em cache, o plano co
 ### <a name="tracking-interleaved-execution-activity"></a>Controlando a atividade de execução intercalada
 Você pode ver os atributos de uso no plano de execução de consulta real:
 
-| Atributo de Plano de execução | DESCRIÇÃO |
+| Atributo de Plano de execução | Descrição |
 | --- | --- |
 | ContainsInterleavedExecutionCandidates | Aplica-se ao nó *QueryPlan*. Quando é *true*, significa que o plano contém candidatos a execução intercalada. |
 | IsInterleavedExecuted | Atributo do elemento *RuntimeInformation* em RelOp para o nó TVF. Quando *true*, significa que a operação foi materializada como parte de uma operação de execução intercalada. |
 
 Você também pode controlar as ocorrências de execução intercalada por meio dos xEvents a seguir:
 
-| xEvent | DESCRIÇÃO |
+| xEvent | Descrição |
 | ---- | --- |
 | interleaved_exec_status | Esse evento é disparado quando a execução intercalada está ocorrendo. |
 | interleaved_exec_stats_update | Esse evento descreve as estimativas de cardinalidade atualizadas por execução intercalada. |

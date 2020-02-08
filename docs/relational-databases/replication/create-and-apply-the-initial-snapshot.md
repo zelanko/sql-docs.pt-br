@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 742727a1-5189-44ec-b3ae-6fd7aa1f5347
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 11628e5b490c30ef64329f6b9d06aee1b6c10fa9
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 6f5bb78720f864a5fddcbe957f36290e097984ea
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908288"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76284866"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>Criar e aplicar o instantâneo inicial
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ Para exibir ou modificar o local padrão de pasta de instantâneo, consulte
 ## <a name="create-snapshot"></a>Criar instantâneo
 Por padrão, se o SQL Server Agent estiver sendo executado, um instantâneo será gerado imediatamente pelo Agente de Instantâneo depois que a publicação seja criada com o Assistente para Nova Publicação. Por padrão, isso é então aplicado pelo Distribution Agent (para replicações transacionais e instantâneas) ou o Merge Agent (para assinaturas de mesclagem) para todas as assinaturas. Um instantâneo também pode ser gerado usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e o Replication Monitor. Para obter informações sobre como iniciar o Replication Monitor, consulte [Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md) (Iniciar o Replication Monitor).  
 
-### <a name="using-sql-server-management-studio"></a>Usando o SQL Server Management Studio
+### <a name="using-sql-server-management-studio"></a>Como usar o SQL Server Management Studio.
 
 1.  Conecte-se ao Publicador no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]e expanda o nó de servidor.    
 2.  Expanda a pasta **Replicação** e, em seguida, a pasta **Publicações Locais** .    
@@ -80,7 +80,7 @@ Por padrão, se o SQL Server Agent estiver sendo executado, um instantâneo ser�
 2.  Clique com o botão direito do mouse na publicação para a qual você quer gerar um instantâneo e, então, clique em **Gerar Instantâneo**.    
 3.  Para exibir o status do Snapshot Agent, clique na guia **Agentes** . Para obter informações mais detalhadas, clique com o botão direito do mouse no Snapshot Agent na grade e, então, clique em **Exibir Detalhes**.  
 
-## <a name="using-transact-sql"></a>Usando Transact-SQL
+## <a name="using-transact-sql"></a>Usando o Transact-SQL
 Instantâneos iniciais podem ser criados de forma programada criando e executando um trabalho do Agente de Instantâneo ou executando o arquivo executável do Agente de Instantâneo de um arquivo em lote. Depois da geração de um instantâneo inicial, ele é transferido para e aplicado no Assinante quando a assinatura é sincronizada pela primeira vez. Se o Agente de Instantâneo for executado de um prompt de comando ou um arquivo em lote, será preciso executar novamente o agente sempre que o instantâneo existente se tornar inválido.  
   
 > [!IMPORTANT]  
@@ -107,7 +107,7 @@ Instantâneos iniciais podem ser criados de forma programada criando e executand
   
 ## <a name="apply-a-snapshot"></a>Aplicar um instantâneo  
 
-### <a name="using-sql-server-management-studio"></a>Usando o SQL Server Management Studio
+### <a name="using-sql-server-management-studio"></a>Como usar o SQL Server Management Studio.
   
 1.  Depois que um instantâneo for gerado, ele é aplicado pela sincronização da assinatura com o Distribution Agent ou Merge Agent:   
     -   Se o agente é definido para ser executado continuamente (o padrão para replicação transacional), o instantâneo é automaticamente aplicado após ser gerado.   
@@ -177,7 +177,7 @@ REM --Start the Snapshot Agent to generate the snapshot for AdvWorksSalesOrdersM
   
 1.  Crie uma conexão com o Publicador usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.TransPublication> . Defina as propriedades <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> e <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> para a publicação, e a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> para a conexão criada na etapa 1.  
+2.  Criar uma instância da classe <xref:Microsoft.SqlServer.Replication.TransPublication>. Defina as propriedades <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> e <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> para a publicação, e a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> para a conexão criada na etapa 1.  
   
 3.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para carregar as propriedades remanescentes do objeto. Se esse método retornar **false**, as propriedades de publicação na etapa 2 foram definidas incorretamente ou a publicação não existe.  
   
@@ -211,7 +211,7 @@ REM --Start the Snapshot Agent to generate the snapshot for AdvWorksSalesOrdersM
   
 1.  Crie uma conexão com o Publicador usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.MergePublication> . Defina as propriedades <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> e <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> para a publicação, e a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> para a conexão criada na etapa 1.  
+2.  Criar uma instância da classe <xref:Microsoft.SqlServer.Replication.MergePublication>. Defina as propriedades <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> e <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> para a publicação, e a propriedade <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> para a conexão criada na etapa 1.  
   
 3.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para carregar as propriedades remanescentes do objeto. Se esse método retornar **false**, as propriedades de publicação na etapa 2 foram definidas incorretamente ou a publicação não existe.  
   

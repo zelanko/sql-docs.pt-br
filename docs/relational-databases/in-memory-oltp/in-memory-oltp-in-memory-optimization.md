@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 87ad093d5be6f4fa394e934e6c0d88796a22e196
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74401649"
 ---
 # <a name="in-memory-oltp-and-memory-optimization"></a>OLTP in-memory e otimização de memória
@@ -47,7 +47,7 @@ Para obter uma visão geral mais detalhada do OLTP in-memory e uma análise de c
 ## <a name="in-this-section"></a>Nesta seção  
  Esta seção inclui os seguintes tópicos:  
   
-|Tópico|DESCRIÇÃO|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Início rápido 1: tecnologias do OLTP in-memory para um desempenho mais rápido do Transact-SQL](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)|Delve diretamente no OLTP in-memory|
 |[Visão geral e cenários de uso](../../relational-databases/in-memory-oltp/overview-and-usage-scenarios.md)|Visão geral do que é o OLTP in-memory e quais são os cenários que desfrutam dos benefícios de desempenho.|

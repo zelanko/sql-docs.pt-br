@@ -1,11 +1,7 @@
 ---
-title: 'Como fazer: usar comparação de esquema para comparar definições de banco de dados diferentes | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Usar comparação de esquema para comparar definições de banco de dados diferentes
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.schemacompare.SchemaCompareOptionsDialog
@@ -16,14 +12,19 @@ f1_keywords:
 ms.assetid: 7f0905a4-081c-46e2-bd7d-325b63e5c675
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ce83808ac5953902f8f655c619f87feeffa4e8c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: f31d543906e4bfedb16e412be703ebc8cd797a04
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097510"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75226847"
 ---
 # <a name="how-to-use-schema-compare-to-compare-different-database-definitions"></a>Como fazer: Usar comparação de esquema para comparar definições de banco de dados diferentes
+
 O SQL Server Data Tools (SSDT) inclui um utilitário de Comparação de Esquemas que você poderá usar para comparar duas definições de banco de dados.  A origem e o destino da comparação podem ser qualquer combinação do banco de dados conectado, do projeto de banco de dados do SQL Server, do instantâneo ou do arquivo .dacpac.  Os resultados da comparação aparecem como um conjunto de ações que devem ser executadas com o destino para torná-lo igual à origem.  Uma vez que a comparação esteja concluída, você poderá atualizar o destino diretamente (se o destino for um projeto ou um banco de dados) ou gerar um script de atualização que tenha o mesmo efeito.  
   
 As diferenças entre a origem e o destino aparecem em uma grade para facilitar a revisão.  Você poderá analisar e revisar cada diferença na grade de resultados ou no formulário de script.  Em seguida, poderá excluir diferenças específicas seletivamente.  

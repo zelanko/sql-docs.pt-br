@@ -33,10 +33,10 @@ author: pmasl
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2d20f0cd4a08e22787caecfb663ef0d2dcd47003
-ms.sourcegitcommit: 365a919e3f0b0c14440522e950b57a109c00a249
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75831810"
 ---
 # <a name="collation-and-unicode-support"></a>Suporte a ordenações e Unicode
@@ -611,7 +611,7 @@ Como você acabou de ver, a escolha do tipo de dados e da codificação Unicode 
 Antes de optar por usar a codificação UTF-8 ou UTF-16 para um banco de dados ou uma coluna, considere a distribuição dos dados de cadeia de caracteres que serão armazenados:
 -  Se a maioria estiver no intervalo 0–127 do ASCII (como o inglês), cada caractere exigirá 1 byte com UTF-8 e 2 bytes com UTF-16. O uso de UTF-8 proporciona vantagens de armazenamento. A alteração de um tipo de dados de coluna existente com caracteres ASCII no intervalo 0–127 de `NCHAR(10)` para `CHAR(10)` e o uso de uma ordenação habilitada para UTF-8 representam 50% de redução nos requisitos de armazenamento. Essa redução ocorre porque `NCHAR(10)` exige 20 bytes para armazenamento, em comparação com `CHAR(10)`, que exige 10 bytes para a mesma representação de cadeia de caracteres Unicode.    
 -  Acima do intervalo do ASCII, quase todos os scripts com base latina, além do grego, cirílico, copta, armênio, hebraico, árabe, siríaco, tāna e n'ko, exigem 2 bytes por caractere em UTF-8 e UTF-16. Nesses casos, não há diferenças significativas de armazenamento para tipos de dados comparáveis (por exemplo, entre o uso de **char** ou **nchar**).
--  Se a maioria for de scripts do Leste Asiático (como coreano, chinês e japonês), cada caractere exigirá 3 bytes com UTF-8 e 2 bytes com UTF-16. O uso de UTF-16 proporciona vantagens de armazenamento. 
+-  Se a maioria for de scripts do Leste da Ásia (como coreano, chinês e japonês), cada caractere exigirá 3 bytes com UTF-8 e 2 bytes com UTF-16. O uso de UTF-16 proporciona vantagens de armazenamento. 
 -  Os caracteres no intervalo de 010000–10FFFF exigem 4 bytes tanto em UTF-8 quanto em UTF-16. Nesses casos, não há diferenças de armazenamento para tipos de dados comparáveis (por exemplo, entre o uso de **char** ou **nchar**).
 
 Para ver outras considerações, confira o artigo [Gravar instruções Transact-SQL internacionais](../../relational-databases/collations/write-international-transact-sql-statements.md).

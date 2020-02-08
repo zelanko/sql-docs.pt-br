@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 zone_pivot_groups: ld2-linux-distribution
 ms.openlocfilehash: c1def0c2cfbdc4b3feed191e9eb2673b8e788f82
-ms.sourcegitcommit: 76fb3ecb79850a8ef2095310aaa61a89d6d93afd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75776380"
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>Configurar repositórios para instalação e atualização do SQL Server em Linux
@@ -38,7 +38,7 @@ Este artigo descreve como configurar o repositório correto para instalações e
 
 Ao instalar o SQL Server em Linux, é necessário configurar um repositório da Microsoft. Esse repositório é usado para adquirir o pacote do mecanismo de banco de dados, o **mssql-server** e os pacotes do SQL Server relacionados. Atualmente, há cinco repositórios principais:
 
-| Repositório | Nome | DESCRIÇÃO |
+| Repositório | Nome | Descrição |
 |---|---|---|
 | **2019** | **mssql-server-2019** | Repositório do SQL Server 2019 CU (atualização cumulativa). |
 | **GDR de 2019** | **mssql-server-2019-gdr** | Repositório do SQL Server 2019 GDR apenas para atualizações críticas. |

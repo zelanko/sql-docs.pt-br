@@ -40,10 +40,10 @@ ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fb7ea877ba1a3beaabb6cbab8854b4f37a5f6558
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095709"
 ---
 # <a name="configure-database-mail"></a>Configurar o Database Mail
@@ -147,7 +147,7 @@ ms.locfileid: "74095709"
  **Endereço de email**  
  Digite o nome do endereço de email da conta. Este é o endereço de email da conta que o enviou. Por exemplo, uma conta do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent pode enviar emails do endereço SqlAgent@Adventure-Works.com.  
   
- **Nome para exibição**  
+ **Nome de exibição**  
  Digite o nome que será exibido nas mensagens de email enviadas por essa conta. O nome para exibição é opcional. Este é o nome exibido em mensagens enviadas desta conta. Por exemplo, uma conta do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent pode exibir o nome “SQL Server Agent Automated Mailer” em mensagens de email.  
   
  **Email de resposta**  
@@ -165,7 +165,7 @@ ms.locfileid: "74095709"
  **Autenticação do Windows usando as credenciais do serviço Mecanismo de Banco de Dados**  
  A conexão é feita com o servidor SMTP usando as credenciais configuradas para o serviço do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] .  
   
- **Autenticação Básica**  
+ **Autenticação básica**  
  Especifique o nome do usuário e a senha exibidos pelo servidor SMTP.  
   
  **Nome de usuário**  
@@ -197,7 +197,7 @@ ms.locfileid: "74095709"
  **Endereço de email**  
  Exiba ou atualize o nome do endereço de email da conta. Este é o endereço de email da conta que o enviou. Por exemplo, uma conta do Microsoft SQL Server Agent pode enviar emails do endereço **SqlAgent\@Adventure-Works.com**.  
   
- **Nome para exibição**  
+ **Nome de exibição**  
  Exiba ou atualize o nome a ser exibido em mensagens de email enviadas desta conta. O nome para exibição é opcional. Este é o nome exibido em mensagens enviadas desta conta. Por exemplo, uma conta do SQL Server Agent pode exibir o nome **SQL Server Agent Automated Mailer** em mensagens de email.  
   
  **Email de resposta**  
@@ -215,10 +215,10 @@ ms.locfileid: "74095709"
  **Autenticação do Windows usando as credenciais do serviço Mecanismo de Banco de Dados**  
  A conexão é feita com o servidor SMTP usando as credenciais configuradas para o serviço do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] .  
   
- **Autenticação Básica**  
+ **Autenticação básica**  
  Especifique o nome do usuário e a senha exibidos pelo servidor SMTP.  
   
- **User name**  
+ **Nome de usuário**  
  Exiba ou atualize o nome do usuário que o Database Mail usa para fazer logon no servidor SMTP. O nome do usuário será necessário se o servidor SMTP exigir autenticação básica.  
   
  **Senha**  
@@ -341,7 +341,7 @@ ms.locfileid: "74095709"
   
  Um perfil pode ser um perfil padrão. Nesse caso, usuários ou funções podem enviar e-mails por meio do perfil sem especificá-lo explicitamente. Se o usuário ou função que envia a mensagem de e-mail tiver um perfil privado padrão, o Database Mail irá utilizá-lo. Se o usuário ou função não tiver nenhum perfil privado padrão, **sp_send_dbmail** usará o perfil público padrão para o banco de dados **msdb** . Se não houver nenhum perfil privado padrão para o usuário ou função e nenhum perfil público padrão para o banco de dados, **sp_send_dbmail** retornará um erro. Somente um perfil pode ser marcado como o perfil padrão.  
   
- **Público**  
+ **Pública**  
  Selecione essa opção para tornar público o perfil especificado.  
   
  **Profile Name**  
@@ -362,10 +362,10 @@ ms.locfileid: "74095709"
   
  Um perfil pode ser um perfil padrão. Nesse caso, usuários ou funções podem enviar e-mails por meio do perfil sem especificá-lo explicitamente. Se o usuário ou função que envia a mensagem de e-mail tiver um perfil privado padrão, o Database Mail irá utilizá-lo. Se o usuário ou função não tiver nenhum perfil privado padrão, **sp_send_dbmail** usará o perfil público padrão para o banco de dados **msdb** . Se não houver nenhum perfil privado padrão para o usuário ou função e nenhum perfil público padrão para o banco de dados, **sp_send_dbmail** retornará um erro.  
   
- **User name**  
+ **Nome de usuário**  
  Selecione o nome de um usuário ou função no banco de dados **msdb** .  
   
- **Acesso**  
+ **Access**  
  Selecione se o usuário ou função tem acesso ao perfil especificado.  
   
  **Nome do perfil**  
@@ -458,6 +458,6 @@ ms.locfileid: "74095709"
   
 6.  Execute o script para criar a configuração.  
   
-7.  O script não concede nenhum acesso de usuário de banco de dados ao perfil. Portanto, por padrão, o perfil pode ser usado apenas por membros da função de segurança fixa **sysadmin**. Para obter mais informações sobre como conceder acesso a perfis, veja [sysmail_add_principalprofile_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql.md)  
+7.  O script não concede nenhum acesso de usuário de banco de dados ao perfil. Portanto, por padrão, o perfil pode ser usado apenas por membros da função de segurança fixa **sysadmin** . Para obter mais informações sobre como conceder acesso a perfis, veja [sysmail_add_principalprofile_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql.md)  
   
   

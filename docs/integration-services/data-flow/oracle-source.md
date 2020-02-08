@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4444236d19c9d7c67aba5a36ba079e1dfa9189b0
-ms.sourcegitcommit: 02449abde606892c060ec9e9e9a85a3f49c47c6c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74542200"
 ---
 # <a name="oracle-source"></a>Oracle Source
@@ -49,7 +49,7 @@ Você pode registrar as chamadas ODBC que a origem do Oracle faz para as fontes 
 
 As propriedades personalizadas da origem do Oracle estão abaixo. Todas as propriedades são de leitura/gravação.
 
-|Nome da propriedade|Tipo de Dados|DESCRIÇÃO|
+|Nome da propriedade|Tipo de Dados|Descrição|
 |:-|:-|:-|
 |AccessMode|Inteiro (enumeração)|O modo usado para acessar o banco de dados. Os valores possíveis são **Nome da Tabela** e **Comando SQL**. O padrão é **Nome da Tabela**.|
 |BatchSize|Integer|O tamanho do lote para carregamento em massa. Esse é o número de registros extraído como uma matriz. <br>Esta propriedade é definida somente pelo **Editor Avançado**|
@@ -103,7 +103,7 @@ Clique em **Nova**. A caixa de diálogo **Editor do Gerenciador de Conexões do 
 
 Especifique o método para selecionar dados da origem. As opções são mostradas na tabela a seguir:
 
-|Opção|DESCRIÇÃO|
+|Opção|Descrição|
 |:-|:-|
 |Tabela ou exibição|Recupere os dados de uma tabela ou exibição na fonte de dados Oracle. Quando esta opção é selecionada, selecione uma tabela ou exibição disponível no banco de dados da lista para **Nome da tabela ou da exibição**.|
 |Comando SQL|Recupere os dados da fonte de dados Oracle usando uma consulta SQL. Quando esta opção for selecionada, insira uma consulta de uma das seguintes maneiras: <br>Insira o texto da consulta SQL no campo **Texto do comando do SQL** . <br>Clique em **Procurar** para carregar a consulta SQL de um arquivo de texto. <br>Clique em **Analisar consulta** para verificar a sintaxe do texto da consulta.|

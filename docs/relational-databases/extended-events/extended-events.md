@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 34ebcae99f096d095839cb533fb6efe58b113050
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75234597"
 ---
 # <a name="extended-events-overview"></a>Visão geral de eventos estendidos
@@ -41,7 +41,7 @@ Os Eventos Estendidos são um sistema de monitoramento de desempenho de peso lev
   
  A tabela a seguir descreve os conceitos em Eventos Estendidos.  
   
-|Tópico|DESCRIÇÃO|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Pacotes de eventos estendidos do SQL Server](../../relational-databases/extended-events/sql-server-extended-events-packages.md)|Descreve os pacotes de Eventos Estendidos que contêm objetos. Esses objetos são usados para obter e processar dados quando uma sessão de Eventos Estendidos está em execução.|  
 |[Destinos de eventos estendidos do SQL Server](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)|Descreve os consumidores de evento que podem receber dados durante uma sessão de evento.|  

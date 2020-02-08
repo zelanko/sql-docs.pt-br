@@ -25,10 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: efc2d749f3963f0828a70bc1506581f5bd2a35a3
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75246225"
 ---
 # <a name="char-and-varchar-transact-sql"></a>char e varchar (Transact-SQL)
@@ -54,7 +54,7 @@ Os objetos que usam **char** ou **varchar** são atribuídos à ordenação padr
 
 As codificações multibyte no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incluem:
 
-- Conjuntos de caracteres de byte duplo (DBCS) para alguns idiomas do Leste Asiático que usam páginas de código 936 e 950 (chinês), 932 (japonês) ou 949 (coreano).
+- Conjuntos de caracteres de byte duplo (DBCS) para alguns idiomas do Leste da Ásia que usam páginas de código 936 e 950 (chinês), 932 (japonês) ou 949 (coreano).
 - UTF-8 com página de código 65001. **Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Começando com [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]))
 
 Se você tiver sites compatíveis com vários idiomas:

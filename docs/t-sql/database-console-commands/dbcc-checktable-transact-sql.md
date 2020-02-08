@@ -27,10 +27,10 @@ ms.assetid: 0d6cb620-eb58-4745-8587-4133a1b16994
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: a4c68ce8ca6174f036b2b893a664b758745369d0
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982324"
 ---
 # <a name="dbcc-checktable-transact-sql"></a>DBCC CHECKTABLE (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "73982324"
 
 Verifica a integridade de todas as páginas e estruturas que compõem a tabela ou a exibição indexada.
 
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
     
 ## <a name="syntax"></a>Sintaxe    
     
@@ -93,7 +93,7 @@ ALL_ERRORMSGS
  Exibe um número ilimitado de erros. Todas as mensagens de erro são exibidas por padrão. Especificar ou omitir esta opção não têm nenhum efeito.  
     
 EXTENDED_LOGICAL_CHECKS  
- Se o nível de compatibilidade é 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) ou superior, executa verificações de consistência lógica em uma exibição indexada, índices XML e índices espaciais, quando presentes.  
+ Se o nível de compatibilidade for 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) ou superior, executará verificações de consistência lógica em uma exibição indexada, em índices XML e em índices espaciais, quando presentes.  
  Para obter mais informações, confira *Executando verificações de consistência lógica em índices* na seção [Comentários](#remarks) mais adiante neste tópico.  
     
 NO_INFOMSGS  
@@ -119,7 +119,7 @@ O uso da opção PHYSICAL_ONLY pode provocar um tempo de execução muito mais c
 DATA_PURITY  
  Faz com que o DBCC CHECKTABLE verifique valores de colunas na tabela que não são válidos ou estão fora do intervalo. Por exemplo, o DBCC CHECKDB detecta colunas com valores de data e hora que são maiores ou menores do que o intervalo aceitável para o tipo de dados **datetime** ou **decimal** ou colunas de tipo de dados numérico aproximado com valores de escala ou de precisão que não são válidos.  
  Verificações de integridade de valor de coluna são habilitadas por padrão e não exigem a opção DATA_PURITY. Para bancos de dados atualizados de versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], é possível usar DBCC CHECKTABLE WITH DATA_PURITY para localizar e corrigir erros em uma tabela específica. No entanto verificações de valores de colunas na tabela não são habilitadas por padrão até que o DBCC CHECKDB WITH DATA_PURITY tenha sido executado sem erros no banco de dados. Depois disto, por padrão, DBCC CHECKDB e DBCC CHECKTABLE verificam a integridade de valores de colunas.  
- Erros de validação relatados por essa opção não podem ser corrigidos usando opções de reparo de DBCC. Para obter informações sobre como corrigir esses erros manualmente, confira o artigo 923247 da Base de Dados de Conhecimento: [Solução de problemas do erro 2570 do DBCC no SQL Server 2005 e versões posteriores](https://support.microsoft.com/kb/923247).  
+ Erros de validação relatados por essa opção não podem ser corrigidos usando opções de reparo de DBCC. Para obter informações sobre como corrigir esses erros manualmente, confira o artigo 923247 da Base de Dados de Conhecimento: [Solução de problemas do erro 2570 do DBCC no SQL Server 2005 e em versões posteriores](https://support.microsoft.com/kb/923247).  
  Se PHYSICAL_ONLY estiver especificado, não serão executadas verificações de integridade de colunas.  
     
 MAXDOP  
@@ -130,7 +130,7 @@ MAXDOP
  > [!NOTE]  
  > Se MAXDOP estiver definido como 0, o servidor escolherá o max degree of parallelism.  
     
-## <a name="remarks"></a>Remarks    
+## <a name="remarks"></a>Comentários    
     
 > [!NOTE]    
 > Para executar DBCC CHECKTABLE em cada tabela no banco de dados, use [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md).    
@@ -221,7 +221,7 @@ O usuário precisa ser o proprietário da tabela ou ser membro da função de se
     
 ## <a name="examples"></a>Exemplos    
     
-### <a name="a-checking-a-specific-table"></a>A. Verificando uma tabela específica    
+### <a name="a-checking-a-specific-table"></a>a. Verificando uma tabela específica    
 O exemplo a seguir verifica a integridade da página de dados da tabela `HumanResources.Employee` no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].
     
 ```sql    

@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: f279be39a9edc91dd9d8cd6b72183988a607ce31
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73723750"
 ---
 # <a name="view-and-summarize-sql-server-data-using-r-walkthrough"></a>Exibir e resumir dados do SQL Server usando o R (passo a passo)
@@ -116,7 +116,7 @@ Antes, você definiu uma cadeia de conexão e salvou essas informações em uma 
       )
     ```
     
-    + O argumento  *colClasses* especifica os tipos de coluna a serem usados ao mover os dados entre o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o R. Isso é importante porque o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa tipos de dados diferentes do R e mais tipos de dados. Para obter mais informações, confira [Tipos de Dados e Bibliotecas do R](../r/r-libraries-and-data-types.md).
+    + O argumento  *colClasses* especifica os tipos de coluna a serem usados ao mover os dados entre o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o R. Isso é importante porque o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa tipos de dados diferentes do R e mais tipos de dados. Para obter mais informações, confira [Tipos de dados e bibliotecas do R](../r/r-libraries-and-data-types.md).
   
     + O argumento *rowsPerRead* é importante para gerenciar o uso de memória e cálculos eficientes.  A maioria das funções analíticas avançadas no[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] processa dados em partes e acumula resultados intermediários, retornando os cálculos finais após a leitura de todos os dados.  Ao adicionar o parâmetro *rowsPerRead*, você pode controlar a quantidade de linhas de dados lidas em cada bloco de processamento.  Caso o valor desse parâmetro seja muito grande, o acesso a dados pode ser lento, pois você não tem memória suficiente para processar com eficiência um bloco de dados grande.  Em alguns sistemas, definir *rowsPerRead* para um valor excessivamente pequeno também pode causar um desempenho mais lento.
 

@@ -11,10 +11,10 @@ ms.assetid: 5c95ce51-e0fe-4fc5-95eb-2945929f2b13
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e95b86d2d29bb3883f6fd76db29f17e5936d1b53
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71283684"
 ---
 # <a name="lesson-1-5-add-and-configure-the-flat-file-source"></a>Lição 1-5: Adicionar e configurar a fonte de Arquivo Simples
@@ -40,7 +40,7 @@ Para esta tarefa, configure a fonte de arquivo simples para usar o gerenciador d
   
 6.  Selecione **Colunas** e verifique se os nomes das colunas estão corretos.  
   
-7.  Escolha **OK**.  
+7.  Selecione **OK**.  
   
 8.  Clique com o botão direito do mouse na fonte de Arquivo Simples e selecione **Propriedades**.  
   

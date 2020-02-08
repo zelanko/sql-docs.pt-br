@@ -41,10 +41,10 @@ ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 35cf1b37a7c10992e17a52e4a44a473127ffb586
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982791"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
@@ -74,7 +74,7 @@ Cria uma função definida pelo usuário no [!INCLUDE[ssNoVersion](../../include
 > [!NOTE]  
 > Para [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], confira [CREATE FUNCTION (SQL Data Warehouse)](../../t-sql/statements/create-function-sql-data-warehouse.md).
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -333,7 +333,7 @@ Se *type_schema_name* não for especificado, o [!INCLUDE[ssDE](../../includes/ss
   
  Em TVFs embutidas, o valor retornado TABLE é definido por meio de uma única instrução SELECT. As funções embutidas não têm variáveis de retorno associadas.  
   
- <a name="mstvf"></a> Em MSTVFs, \@*return_variable* é uma variável TABLE usada para armazenar e acumular as linhas que devem ser retornadas como o valor da função. \@ *return_variable* pode ser especificado somente para funções [!INCLUDE[tsql](../../includes/tsql-md.md)] e não para funções CLR.  
+ <a name="mstvf"></a> Em MSTVFs, \@*return_variable* é uma variável TABLE usada para armazenar e acumular as linhas que devem ser retornadas como o valor da função. \@*return_variable* pode ser especificado somente para funções [!INCLUDE[tsql](../../includes/tsql-md.md)] e não para funções CLR.  
   
  *select_stmt*  
  É a única instrução SELECT que define o valor retornado de uma TVF (função com valor de tabela) embutida.  
@@ -450,7 +450,7 @@ Especifica se este UDF escalar deve ser embutido ou não. Essa cláusula só se 
  Especifica o valor fornecido para a coluna quando um valor não for fornecido explicitamente durante uma inserção. *constant_expression* é uma constante, NULL ou um valor de função do sistema. Podem ser aplicadas definições DEFAULT a qualquer coluna, com exceção das que têm a propriedade IDENTITY. DEFAULT não pode ser especificado para funções CLR com valor de tabela.  
   
  COLLATE *collation_name*  
- Especifica a ordenação da coluna. Se não for especificado, à coluna será atribuída a ordenação padrão do banco de dados. O nome da ordenação pode ser um nome de ordenação do Windows ou um nome de ordenação SQL. Para obter uma lista e mais informações sobre ordenações, consulte [Nome de ordenação do Windows &#40;Transact-SQL &#41;](../../t-sql/statements/windows-collation-name-transact-sql.md) e [Nome de ordenação do SQL Server &#40;Transact-SQL &#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md).  
+ Especifica a ordenação da coluna. Se não for especificado, à coluna será atribuída a ordenação padrão do banco de dados. O nome da ordenação pode ser um nome de ordenação do Windows ou um nome de ordenação SQL. Para obter uma lista e mais informações sobre ordenações, consulte [Nome de ordenação do Windows &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md) e [Nome de ordenação do SQL Server &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md).  
   
  A cláusula COLLATE pode ser usada para alterar as ordenações somente de colunas dos tipos de dados **char**, **varchar**, **nchar** e **nvarchar**.  
   
@@ -531,7 +531,7 @@ Especifica se este UDF escalar deve ser embutido ou não. Essa cláusula só se 
  ALLOW_PAGE_LOCKS = { **ON** | OFF }  
  Especifica se bloqueios de página são permitidos. O padrão é ON.  
   
-## <a name="best-practices"></a>Práticas recomendadas  
+## <a name="best-practices"></a>Práticas Recomendadas  
 Se uma função definida pelo usuário não for criada com a cláusula `SCHEMABINDING`, as alterações feitas nos objetos subjacentes poderão afetar a definição da função e produzir resultados inesperados quando ela for chamada. É recomendável que você implemente um dos seguintes métodos para garantir que a função não se torne desatualizada devido a alterações em seus objetos subjacentes:  
   
 -   Especifique a cláusula `WITH SCHEMABINDING` quando você estiver criando a função. Isso garante que os objetos referenciados na definição da função não possam ser modificados, a menos que a função também seja modificada.  
@@ -670,7 +670,7 @@ A cláusula `ORDER` não garante resultados ordenados quando uma consulta SELECT
 > [!NOTE]
 > Para obter mais exemplos e considerações de desempenho sobre UDFs, confira [Criar funções definidas pelo usuário &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md). 
 
-### <a name="a-using-a-scalar-valued-user-defined-function-that-calculates-the-iso-week"></a>A. Usando uma função definida pelo usuário com valor escalar que calcula a semana ISO  
+### <a name="a-using-a-scalar-valued-user-defined-function-that-calculates-the-iso-week"></a>a. Usando uma função definida pelo usuário com valor escalar que calcula a semana ISO  
  O exemplo a seguir cria a função definida pelo usuário `ISOweek`. Essa função usa um argumento de data e calcula o número da semana ISO. Para que essa função calcule corretamente, `SET DATEFIRST 1` deve ser invocado antes da função ser chamada.  
   
  O exemplo também mostra como usar a cláusula [EXECUTE AS](../../t-sql/statements/execute-as-clause-transact-sql.md) para especificar o contexto de segurança no qual um procedimento armazenado pode ser executado. No exemplo, a opção `CALLER` especifica que o procedimento será executado no contexto do usuário que o chama. As outras opções que podem ser especificadas são `SELF`, `OWNER` e *user_name*.  

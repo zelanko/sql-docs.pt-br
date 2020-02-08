@@ -14,10 +14,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8ddc5fb198a62374fc43ebacb5fa7423ac9fadd5
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74096061"
 ---
 # <a name="validate-query-and-change-json-data-with-built-in-functions-sql-server"></a>Validar, consultar e alterar dados JSON com funções internas (SQL Server)
@@ -103,9 +103,9 @@ ORDER BY JSON_VALUE(f.doc, '$.address.city') DESC, JSON_VALUE(f.doc, '$.address.
 
 Os resultados dessa consulta são mostrados na seguinte tabela:
 
-| Nome | Cidade | Região |
+| Nome | City | Município |
 | --- | --- | --- |
-| AndersenFamily | NY | Manhattan |
+| AndersenFamily | NOVA IORQUE | Manhattan |
 
 Para obter mais informações, veja [JSON_VALUE &#40;Transact-SQL&#41;](../../t-sql/functions/json-value-transact-sql.md).  
   
@@ -143,10 +143,10 @@ FROM Families f
 
 Os resultados dessa consulta são mostrados na seguinte tabela:
 
-| Nome | Cidade | givenName | grade |
+| Nome | City | givenName | grade |
 | --- | --- | --- | --- |
-| AndersenFamily | NY | Jesse | 1 |
-| AndersenFamily | NY | Lisa | 8 |
+| AndersenFamily | NOVA IORQUE | Jesse | 1 |
+| AndersenFamily | NOVA IORQUE | Lisa | 8 |
 
 Estamos obtendo duas linhas como um resultado, porque uma linha pai é ingressada com duas linhas filho produzidas analisando dois elementos da submatriz filho. A função `OPENJSON` analisa o fragmento `children` da coluna `doc` e retorna `grade` e `givenName` de cada elemento como um conjunto de linhas. Esse conjunto de linhas pode ser ingressado com o documento pai.
  

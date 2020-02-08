@@ -19,10 +19,10 @@ author: pmasl
 ms.author: pelopes
 manager: amitban
 ms.openlocfilehash: 958445b0f07dc9624e7d284f408210c386ecfa9e
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74165679"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>Atualizando bancos de dados usando o Assistente de Ajuste de Consulta
@@ -89,7 +89,7 @@ O QTA é um recurso baseado em sessão que armazena o estado de sessão no esque
         -  Defina o nível de compatibilidade do banco de dados de destino pretendido para o banco de dados de usuário, depois que o fluxo de trabalho do QTA for concluído.
         Após a conclusão, clique em **Avançar**.
     
-       ![Janela configuração da sessão de atualização do novo banco de dados](../../relational-databases/performance/media/qta-new-session-setup.png "|::ref3::|")  
+       ![Janela configuração da sessão de atualização do novo banco de dados](../../relational-databases/performance/media/qta-new-session-setup.png "Janela configuração da atualização do novo banco de dados")  
   
     2.  Na janela **Configurações**, duas colunas mostram o estado **Atual** do Repositório de Consultas no banco de dados de destino, bem como as configurações **Recomendadas**. 
         -  As configurações Recomendadas são selecionadas por padrão, mas o clique no botão de opção na coluna Atual aceita as configurações atuais e também permite ajustar melhor a configuração atual do Repositório de Consultas. 
@@ -153,7 +153,7 @@ O QTA é um recurso baseado em sessão que armazena o estado de sessão no esque
 
         A página a seguir confirma que o nível de compatibilidade do banco de dados foi atualizado com êxito.
 
-        ![Subetapa 2 da Etapa 2 do QTA](../../relational-databases/performance/media/qta-step2-substep2.png "|::ref9::|")
+        ![Subetapa 2 da Etapa 2 do QTA](../../relational-databases/performance/media/qta-step2-substep2.png "Subetapa 2 da Etapa 2 do QTA")
 
     3.  A **Coleta de Dados Observados** solicita que o usuário execute o ciclo de carga de trabalho representativo mais uma vez para que o Repositório de Consultas possa coletar uma linha de base de comparação que será usada para pesquisar oportunidades de otimização. Conforme a carga de trabalho é executada, use o botão **Atualizar** para continuar atualizando a lista de consultas regredidas, caso alguma seja encontrada. Altere o valor de **Consultas a serem mostradas** para limitar o número de consultas exibidas. A ordem da lista é afetada pela **Métrica** (Duração ou CpuTime) e pela **Agregação** (Média é o padrão). Também selecione quantas **Consultas a serem mostradas**. Quando essa carga de trabalho for concluída, marque **Execução de carga de trabalho concluída** e clique em **Avançar**.
 

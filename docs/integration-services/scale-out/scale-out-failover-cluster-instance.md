@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: 5c4d5cc303d297a21b730abc30e10b85c65cc3d2
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68811202"
 ---
 # <a name="scale-out-support-for-high-availability-via-sql-server-failover-cluster-instance"></a>Suporte do Scale Out para alta disponibilidade por meio da instância de cluster de failover do SQL Server
@@ -76,6 +76,6 @@ Instale o certificado do trabalho em todos os nós no cluster de failover do SQL
 > O Gerenciador do Scale Out não dá suporte ao cluster de failover do SQL Server. Se você usar o Gerenciador do Scale Out para adicionar o Trabalho do Scale Out, você ainda precisará instalar o certificado do trabalho em todos os nós mestres manualmente.
 
 ## <a name="next-steps"></a>Próximas etapas
-Para saber mais, veja os tópicos a seguir:
+Para obter mais informações, confira os seguintes artigos:
 -   [Mestre do SSIS (Integration Services) Scale Out](integration-services-ssis-scale-out-master.md)
 -   [Trabalho do SSIS (Integration Services) Scale Out](integration-services-ssis-scale-out-worker.md)

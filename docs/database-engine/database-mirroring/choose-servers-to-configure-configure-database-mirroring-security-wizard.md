@@ -14,10 +14,10 @@ ms.assetid: 59e23ff3-d7ee-4e32-9629-0b54d3a258f7
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: cfb2396e97c4cceee534472c07c285aa2a8a371e
-ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74822316"
 ---
 # <a name="configure-database-mirroring-wizard-choose-servers-to-configure"></a>Configurar o assistente para espelhamento do banco de dados: Escolher servidores a serem configurados 

@@ -11,10 +11,10 @@ ms.assetid: ae849f79-c581-42a5-a5cc-0a9ebea171b9
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 6ce8040b37ec08c82b11c9ff572c13125064523b
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70155777"
 ---
 # <a name="sql-server-http-storage"></a>SQL Server, Armazenamento HTTP

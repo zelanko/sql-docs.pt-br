@@ -18,10 +18,10 @@ ms.assetid: 430508ad-207b-4dee-a4d1-4ddf25e6b4a9
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: a0a912e4ab228617537e9c28e9a5cecc4a0278fe
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72278133"
 ---
 # <a name="stlinefromtext-geometry-data-type"></a>STLineFromText (tipo de dados geometry)
@@ -50,7 +50,7 @@ STLineFromText ( 'linestring_tagged_text' , SRID )
   
  Tipo OGC: **LineString**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 Esse método gerará uma **FormatException** se a entrada não estiver bem formatada. Não há suporte para a notação de WKT de geometria calculada e de três dimensões dos recursos simples do OGC (Open Geospatial Consortium) para a Especificação do SQL versão 1.2.1. Veja exemplos da representação de valores Z (elevação) e M (medida) com suporte.
   
 ## <a name="examples"></a>Exemplos  

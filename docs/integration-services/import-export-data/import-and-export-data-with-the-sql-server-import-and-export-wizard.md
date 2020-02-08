@@ -23,10 +23,10 @@ ms.assetid: c0e4d867-b2a9-4b2a-844b-2fe45be88f81
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2e8838c92e2af7ca79ad1aa69972e46be0a1f64c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296273"
 ---
 # <a name="import-and-export-data-with-the-sql-server-import-and-export-wizard"></a>Importar e exportar dados com o Assistente de Importação e Exportação do SQL Server
@@ -38,7 +38,7 @@ ms.locfileid: "71296273"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Assistente de Importação e Exportação é uma maneira simples de copiar dados de uma origem para um destino. Esta visão geral descreve as fontes de dados que o assistente pode usar como origens e destinos, bem como as permissões necessárias para executar o assistente.
 
 ## <a name="get-the-wizard"></a>Obter o assistente
-Se você deseja executar o assistente, mas não tem o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalado no computador, é possível instalar o Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalando o SSDT (SQL Server Data Tools). Para obter mais informações, consulte [Baixar o SSDT (SQL Server Data Tools)](https://msdn.microsoft.com/library/mt204009.aspx).
+Se você desejar executar o assistente, mas não tiver o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalado no computador, será possível instalar o Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalando o SSDT (SQL Server Data Tools). Para obter mais informações, consulte [Baixar o SSDT (SQL Server Data Tools)](https://msdn.microsoft.com/library/mt204009.aspx).
 
 ## <a name="what-happens-when-i-run-the-wizard"></a>O que acontece quando eu executo o assistente?
 -    **Consulte a lista de etapas.** Para obter uma descrição das etapas do assistente, consulte [Etapas do Assistente de Importação e Exportação do SQL Server](../../integration-services/import-export-data/steps-in-the-sql-server-import-and-export-wizard.md). Há também uma página separada da documentação para cada página do assistente.  

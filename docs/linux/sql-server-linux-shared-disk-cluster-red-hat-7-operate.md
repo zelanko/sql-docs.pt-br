@@ -11,10 +11,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
 ms.openlocfilehash: 76c59c6c7b821bfcc9eb76ca3a694a1c69095ce1
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75558521"
 ---
 # <a name="operate-rhel-failover-cluster-instance-fci-for-sql-server"></a>Operar a FCI (instância de cluster de failover) RHEL do SQL Server
@@ -210,7 +210,7 @@ sudo pcs    resource op monitor interval=2s mssqlha
 
 Na solução de problemas do cluster, talvez seja útil entender como os três daemons funcionam em conjunto para gerenciar os recursos de cluster. 
 
-| Daemon | DESCRIÇÃO 
+| Daemon | Descrição 
 | ----- | -----
 | Corosync | Fornece associação de quorum e mensagens entre os nós de cluster.
 | Pacemaker | Reside na parte superior do Corosync e fornece computadores de estado para recursos. 

@@ -9,10 +9,10 @@ ms.assetid: 2fdf670a-5237-48fe-813d-97657c5c77d2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 780cda075d8280d71f3438c79359c58ad1ac3133
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65575641"
 ---
 # <a name="formatting-pointers-on-a-gauge-report-builder-and-ssrs"></a>Formatando ponteiros de um medidor (Construtor de Relatórios e SSRS)
@@ -48,7 +48,7 @@ ms.locfileid: "65575641"
 ##  <a name="SpecifyingImage"></a> Especificando uma imagem como um ponteiro em um medidor radial  
  Além da lista interna dos estilos de ponteiro, é possível especificar uma imagem como um ponteiro. Isso é muito efetivo quando você usa uma imagem para substituir um estilo de ponteiro de agulha existente. A imagem é sobreposta no ponteiro, mas toda a funcionalidade de ponteiro é aplicável. As opções de cor e de gradação não são aplicáveis quando uma imagem é usada no ponteiro.  
   
- Caso a forma da imagem do ponteiro seja irregular, você deve definir a cor como transparente para ocultar as áreas da imagem que não devem ser exibidas no medidor. Quando você define uma cor transparente, o medidor transpõe a imagem no ponteiro existente e corta a imagem para que apenas a forma do ponteiro seja exibida. O medidor redimensiona a imagem para ajustar o tamanho do ponteiro. Quando você especificar uma imagem de um ponteiro, todos os ponteiros subsequentes adicionados acima do medidor serão desenhados abaixo da imagem. Por esse motivo, é melhor não especificar uma imagem para o ponteiro caso haja vários ponteiros no medidor. Para obter mais informações, consulte [Especificar uma imagem como um ponteiro em um medidor (Construtor de Relatórios e SSRS)](https://msdn.microsoft.com/9d73b3c3-a068-4868-a2be-0cd261b6e92b).  
+ Caso a forma da imagem do ponteiro seja irregular, você deve definir a cor como transparente para ocultar as áreas da imagem que não devem ser exibidas no medidor. Quando você define uma cor transparente, o medidor transpõe a imagem no ponteiro existente e corta a imagem para que apenas a forma do ponteiro seja exibida. O medidor redimensiona a imagem para ajustar o tamanho do ponteiro. Quando você especificar uma imagem de um ponteiro, todos os ponteiros subsequentes adicionados acima do medidor serão desenhados abaixo da imagem. Por esse motivo, é melhor não especificar uma imagem para o ponteiro caso haja vários ponteiros no medidor. Para saber mais, confira [Especificar uma imagem como um ponteiro em um medidor (Construtor de Relatórios e SSRS)](https://msdn.microsoft.com/9d73b3c3-a068-4868-a2be-0cd261b6e92b).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Formatando escalas em um medidor &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   

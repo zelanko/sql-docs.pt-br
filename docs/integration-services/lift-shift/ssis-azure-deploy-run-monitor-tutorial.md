@@ -11,10 +11,10 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
 ms.openlocfilehash: 42250d8edbd646f9bd89f3663f2591b3404fe05f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68007945"
 ---
 # <a name="tutorial-deploy-and-run-a-sql-server-integration-services-ssis-package-in-azure"></a>Tutorial: Implantar e executar um pacote SSIS (SQL Server Integration Services) no Azure
@@ -34,7 +34,7 @@ Verifique também se você configurou o banco de dados do SSISDB no Azure e prov
 
 Para executar o pacote no Banco de Dados SQL do Azure, obtenha as informações de conexão necessárias para se conectar ao SSISDB (banco de dados de catálogo do SSIS). Você precisa das informações de logon e de nome do servidor totalmente qualificado nos procedimentos a seguir.
 
-1. Faça logon no [portal do Azure](https://portal.azure.com/).
+1. Faça logon no [Portal do Azure](https://portal.azure.com/).
 2. Selecione **Bancos de Dados SQL** no menu à esquerda e selecione o banco de dados do SSISDB na página **Bancos de dados SQL**. 
 3. Na página **Visão geral** do banco de dados, examine o nome totalmente qualificado do servidor. Para ver a opção **Clique para copiar**, passe o mouse sobre o nome do servidor. 
 4. Se você esquecer suas informações de logon do servidor de Banco de Dados SQL do Azure, navegue até a página do servidor de Banco de Dados SQL para exibir o nome do administrador de servidor. Você pode redefinir a senha, se necessário.
@@ -48,11 +48,11 @@ Aqui estão as duas coisas mais importantes para lembrar. Essas etapas estão de
 -   Selecione o `SSISDB` como o banco de dados da conexão.
 
 > [!IMPORTANT]
-> Um servidor de Banco de Dados SQL do Azure escuta na porta 1433. Se você estiver tentando se conectar a um servidor de Banco de Dados SQL do Azure em um firewall corporativo, essa porta deverá estar aberta no firewall corporativo para que você se conecte com êxito.
+> Um servidor do Banco de Dados SQL do Azure escuta na porta 1433. Se você estiver tentando se conectar a um servidor de Banco de Dados SQL do Azure em um firewall corporativo, essa porta deverá estar aberta no firewall corporativo para que você se conecte com êxito.
 
 1. Abra o SQL Server Management Studio.
 
-2. **Conecte-se ao servidor**. Na caixa de diálogo **Conectar-se ao Servidor**, insira as seguintes informações:
+2. **Conecte-se ao servidor**. Na caixa de diálogo **Conectar ao Servidor**, insira as informações a seguir:
 
    | Configuração       | Valor sugerido | Descrição | 
    | ------------ | ------------------ | ------------------------------------------------- | 
@@ -60,7 +60,7 @@ Aqui estão as duas coisas mais importantes para lembrar. Essas etapas estão de
    | **Nome do servidor** | O nome do servidor totalmente qualificado | O nome deve estar neste formato: **mysqldbserver.database.windows.net**. Se você precisar do nome do servidor, consulte [Conectar-se ao banco de dados do Catálogo do SSISDB no Azure](ssis-azure-connect-to-catalog-database.md). |
    | **Autenticação** | Autenticação do SQL Server | Você não pode se conectar ao Banco de Dados SQL do Azure com a Autenticação do Windows. |
    | **Logon** | A conta do administrador do servidor | A conta que você especificou quando criou o servidor. |
-   | **Senha** | A senha de sua conta do administrador do servidor | A senha que você especificou quando criou o servidor. |
+   | **Senha** | A senha para sua conta do administrador do servidor | A senha que você especificou quando criou o servidor. |
 
 3. **Conecte-se ao banco de dados SSISDB**. Selecione **Opções** para expandir a caixa de diálogo **Conectar ao Servidor**. Na caixa de diálogo **conectar ao servidor**, selecione a guia **Propriedades de Conexão**. No campo **Conectar-se ao banco de dados**, selecione ou insira `SSISDB`.
 
@@ -102,7 +102,7 @@ Para saber mais sobre como implantar pacotes e conhecer o Assistente de Implanta
   
 4.  Na página **Examinar**, examine as configurações selecionadas.
     -   Você pode alterar suas seleções selecionando **Anterior** ou selecionando qualquer uma das etapas no painel esquerdo.
-    -   Selecione **Implantar** para começar o processo de implantação.
+    -   Selecione **Implantar** para iniciar o processo de implantação.
 
     > [!NOTE]
     > Se você receber a mensagem de erro **Não há nenhum agente de trabalho ativo. (Provedor de dados do .Net SqlClient)** , verifique se o Azure-SSIS Integration Runtime está em execução. Esse erro ocorre se você tenta implantar enquanto o tempo de execução de integração do Azure-SSIS está em um estado parado.

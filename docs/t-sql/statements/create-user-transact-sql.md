@@ -30,10 +30,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6fbcdfc0142d448c8ef02898dd8d5610954423c3
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056808"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
@@ -68,7 +68,7 @@ ms.locfileid: "74056808"
 -   Usuário baseado em um certificado. Não pode fazer logon, mas pode receber permissões e assinar módulos. `CREATE USER TestProcess FOR CERTIFICATE CarnationProduction50;`  
 -   Usuário baseado em uma chave assimétrica. Não pode fazer logon, mas pode receber permissões e assinar módulos. `CREATE User TestProcess FROM ASYMMETRIC KEY PacificSales09;`   
  
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -140,7 +140,7 @@ CREATE USER user_name
 ```
 
 > [!NOTE]
-> O administrador do Azure AD para a funcionalidade de instância gerenciada após a criação ter sido alterada. Para obter mais informações, confira [Nova funcionalidade de Administrador do Azure AD para MI](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi).
+> A funcionalidade de administrador do Azure AD para a instância gerenciada depois que a criação foi alterada. Para obter mais informações, confira [Nova funcionalidade de administrador do Azure AD para MI](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi).
 
 ```  
 -- Syntax for Azure SQL Data Warehouse  
@@ -202,7 +202,7 @@ CREATE USER user_name
   
   - `CREATE USER [Nurses] FROM EXTERNAL PROVIDER;`  
   
- Para obter mais informações, veja [Conectar-se ao Banco de Dados SQL usando a Autenticação do Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication).  
+ Para saber mais, confira [Connecting to SQL Database By Using Azure Active Directory Authentication](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication) (Conectando-se ao Banco de Dados SQL usando a Autenticação do Azure Active Directory).  
   
 WITH PASSWORD = '*password*'  
  **Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
@@ -243,7 +243,7 @@ ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]
 > [!WARNING]  
 >  O uso inadequado dessa opção pode resultar em dados corrompidos. Para obter mais informações, veja [Migrar dados confidenciais protegidos por Always Encrypted](../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Se FOR LOGIN for omitido, o novo usuário de banco de dados será mapeado para o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com o mesmo nome.  
   
  O esquema padrão será o primeiro esquema que será pesquisado pelo servidor ao resolver os nomes dos objetos para esse usuário de banco de dados. A não ser quando especificado de outra forma, o esquema padrão será o proprietário dos objetos criados pelo usuário de banco de dados.  
@@ -340,14 +340,14 @@ Ao criar o usuário no banco de dados da instância gerenciada do Banco de Dados
   
  Ao usar os usuários do banco de dados independente em [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], configure o acesso usando uma regra de firewall no nível de banco de dados, em vez de uma regra de firewall de nível de servidor. Para obter mais informações, veja [sp_set_database_firewall_rule &#40;Banco de Dados SQL do Azure&#41;](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md).
  
-Para os usuários de banco de dados independente [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] e [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)], o SSMS é compatível com a Autenticação Multifator. Para obter mais informações, consulte [Suporte ao SSMS para MFA do Azure AD com o banco de dados SQL e o SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/).  
+Para os usuários de banco de dados independente [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] e [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)], o SSMS é compatível com a Autenticação Multifator. Para saber mais, confira [Suporte do SSMS para MFA do Azure AD com o Banco de Dados SQL e o SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/).  
   
 ### <a name="permissions"></a>Permissões  
  Requer a permissão ALTER ANY USER no banco de dados.  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-creating-a-database-user-based-on-a-sql-server-login"></a>A. Criando um usuário de banco de dados baseado em um logon do SQL Server  
+### <a name="a-creating-a-database-user-based-on-a-sql-server-login"></a>a. Criando um usuário de banco de dados baseado em um logon do SQL Server  
  O exemplo a seguir cria primeiro um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] denominado `AbolrousHazem` e, em seguida, cria um usuário de banco de dados correspondente `AbolrousHazem` no `AdventureWorks2012`.  
   
 ```  

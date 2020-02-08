@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 092760fdd99a6840e77278fce96e2d321ea4edc9
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "69553249"
 ---
 # <a name="oracle-connection-manager"></a>Gerenciador de Conexões do Oracle
@@ -26,7 +26,7 @@ A propriedade **ConnectionManagerType** do Gerenciador de Conexões do Oracle es
 
 ## <a name="configuring-the-oracle-connection-manager"></a>Configurando o Gerenciador de Conexões do Oracle
 
-As alterações de configuração do Gerenciador de Conexões do Oracle serão resolvidas por Integration Services no tempo de execução. Use a caixa de diálogo **Editor do Gerenciador de Conexões do Oracle** para adicionar uma conexão com uma fonte de dados do Oracle.
+As alterações de configuração do Gerenciador de Conexões do Oracle serão resolvidas por Integration Services no runtime. Use a caixa de diálogo **Editor do Gerenciador de Conexões do Oracle** para adicionar uma conexão com uma fonte de dados do Oracle.
 
 ![Gerenciador de Conexões](media/oracle-connection-manager.png)
 
@@ -78,9 +78,9 @@ Há as seguintes propriedades personalizadas do gerenciador de conexões no gere
 
 - **EnableDetailedTracing**: não usado.
 
-- **OracleHome**: especifique o nome ou pasta de 32-bit do Oracle Home a ser usado pelo conector. (opcional)
+- **OracleHome**: especifique o nome ou pasta de 32-bit do Oracle Home a ser usado pelo conector. (Opcional)
 
-- **OracleHome64**: especifique o nome ou pasta do Oracle Home de 64 bits a ser usado pelo conector durante a execução no modo 64 bits. (opcional)
+- **OracleHome64**: especifique o nome ou pasta do Oracle Home de 64 bits a ser usado pelo conector durante a execução no modo 64 bits. (Opcional)
 
 As propriedades personalizadas não são listadas no Editor do Gerenciador de Conexões do Oracle. Para definir as propriedades **OracleHome** e **OracleHome64**:
 

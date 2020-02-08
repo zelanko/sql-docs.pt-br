@@ -22,10 +22,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 51bb7288f620e479d818598cf28d357b6e4e479d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67948244"
 ---
 # <a name="top-transact-sql"></a>TOP (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "67948244"
 
 Limita as linhas retornadas em um conjunto de resultados de consulta a um número ou percentual de linhas no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Quando você usa TOP com a cláusula ORDER BY, o conjunto de resultados é limitado ao primeiro número *N* de linhas ordenadas. Caso contrário, TOP retorna o primeiro número *N* de linhas em uma ordem indefinida. Use esta cláusula para especificar o número de linhas retornadas de uma instrução SELECT. Ou então, use TOP para especificar as linhas afetadas por uma instrução INSERT, UPDATE, MERGE ou DELETE.  
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
  
@@ -67,7 +67,7 @@ Retorna duas ou mais linhas associadas ao último lugar do conjunto de resultado
   
 Você poderá especificar a cláusula TOP com o argumento WITH TIES somente em instruções SELECT e somente se você também tiver especificado a cláusula ORDER BY. A ordem retornada de registros vinculados é arbitrária. ORDER BY não afeta essa regra.  
   
-## <a name="best-practices"></a>Práticas recomendadas  
+## <a name="best-practices"></a>Práticas Recomendadas  
 Em uma instrução SELECT, sempre use uma cláusula ORDER BY com a cláusula TOP. Porque essa é a única forma de indicar de maneira previsível as linhas que são afetadas por TOP.  
   
 Use OFFSET e FETCH na cláusula ORDER BY em vez da cláusula TOP implementar uma solução de paginação de consulta. Uma solução de página (ou seja, enviar partes ou "páginas" de dados ao cliente) é mais fácil de implementar com as cláusulas OFFSET e FETCH. Para obter mais informações, consulte [Cláusula ORDER BY &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md).  
@@ -137,7 +137,7 @@ GO
   
 Usando TOP e ORDER BY em uma operação de subseleção, você assegura que os resultados da cláusula ORDER BY sejam aplicados à cláusula TOP e não à classificação do resultado da operação UNION.  
   
- Aqui está o conjunto de resultados.  
+ Este é o conjunto de resultados.  
   
  ```
  Model         Color      Price  
@@ -164,7 +164,7 @@ Não é possível combinar TOP com OFFSET e FETCH na mesma expressão de consult
 ###  <a name="BasicSyntax"></a> Sintaxe básica  
 Os exemplos nesta seção demonstram a funcionalidade básica da cláusula ORDER BY usando a sintaxe mínima necessária.  
   
-#### <a name="a-using-top-with-a-constant-value"></a>A. Usando TOP com um valor constante  
+#### <a name="a-using-top-with-a-constant-value"></a>a. Usando TOP com um valor constante  
 Os exemplos a seguir usam um valor constante para especificar o número de funcionários que são retornados no conjunto de resultados da consulta. No primeiro exemplo, as primeiras 10 linhas indefinidas são retornadas porque uma cláusula ORDER BY não é usada. No segundo exemplo, uma cláusula ORDER BY é usada para retornar os 10 funcionários contratados mais recentemente.  
   
 ```sql  
@@ -208,7 +208,7 @@ GO
   
 ###  <a name="tie"></a> Incluindo valores de empate  
   
-#### <a name="a-using-with-ties-to-include-rows-that-match-the-values-in-the-last-row"></a>A. Usando WITH TIES para incluir linhas que correspondam aos valores da última linha  
+#### <a name="a-using-with-ties-to-include-rows-that-match-the-values-in-the-last-row"></a>a. Usando WITH TIES para incluir linhas que correspondam aos valores da última linha  
 O exemplo a seguir obtém os primeiros `10` por cento de todos os funcionários com o salário mais alto e os retorna em ordem descendente, de acordo com seu salário. Especificar `WITH TIES` assegura que todos os funcionários que recebem salários iguais ao salário mais baixo retornado (a última linha) também serão incluídos no conjunto de resultados, mesmo que isso exceda `10` por cento dos funcionários.  
   
 ```sql  
@@ -227,7 +227,7 @@ GO
   
 ###  <a name="DML"></a> Limitando as linhas afetadas por DELETE, INSERT ou UPDATE  
   
-#### <a name="a-using-top-to-limit-the-number-of-rows-deleted"></a>A. Usando TOP para limitar o número de linhas excluídas  
+#### <a name="a-using-top-to-limit-the-number-of-rows-deleted"></a>a. Usando TOP para limitar o número de linhas excluídas  
 Quando uma cláusula TOP (*n*) é usada com DELETE, a operação de exclusão é executada em uma seleção indefinida de um número *n* de linhas. Ou seja, a instrução DELETE escolhe qualquer número (*n*) de linhas que atendem aos critérios definidos na cláusula WHERE. O exemplo a seguir exclui `20` linhas da tabela `PurchaseOrderDetail` que têm datas de conclusão anteriores a 1º de julho de 2002.  
   
 ```sql  

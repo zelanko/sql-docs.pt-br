@@ -11,10 +11,10 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
 ms.openlocfilehash: 436d65965fa0fa114f1891293972141f1373a696
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68037174"
 ---
 # <a name="connect-to-the-ssis-catalog-ssisdb-in-azure"></a>Conectar-se ao SSISDB (Catálogo do SSIS) no Azure
@@ -29,13 +29,13 @@ Encontre as informações de conexão necessárias para se conectar ao SSISDB (C
 - informações de logon 
 
 > [!IMPORTANT]
-> No momento, não é possível criar o banco de dados do Catálogo do SSISDB no Banco de Dados SQL do Azure, independentemente da criação do Azure-SSIS Integration Runtime no Azure Data Factory. O Azure-SSIS IR é o ambiente de tempo de execução que executa pacotes SSIS no Azure. Para obter uma explicação passo a passo do processo, consulte [Implantar e executar um pacote SSIS no Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal). 
+> No momento, não é possível criar o banco de dados do Catálogo do SSISDB no Banco de Dados SQL do Azure, independentemente da criação do Azure-SSIS Integration Runtime no Azure Data Factory. O Azure-SSIS IR é o ambiente de runtime que executa pacotes SSIS no Azure. Para obter uma explicação passo a passo do processo, consulte [Implantar e executar um pacote SSIS no Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal). 
 
 ## <a name="prerequisites"></a>Prerequisites
 Antes de começar, verifique se você tem a versão 17.2 ou posterior do SSMS (SQL Server Management Studio). Se o banco de dados de catálogo do SSISDB estiver hospedado na Instância Gerenciada do Banco de Dados SQL, certifique-se de ter a versão 17.6 ou posterior do SSMS. Para baixar a versão mais recente do SSMS, veja [Baixar o SSMS (SQL Server Management Studio)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
 ## <a name="get-the-connection-info-from-the-azure-portal"></a>Obter as informações de conexão do Portal do Azure
-1. Faça logon no [portal do Azure](https://portal.azure.com/).
+1. Faça logon no [Portal do Azure](https://portal.azure.com/).
 2. No Portal do Azure, selecione **Bancos de Dados SQL** no menu à esquerda e selecione o banco de dados `SSISDB` na página **Bancos de dados SQL**. 
 3. Na página **Visão geral** do banco de dados `SSISDB`, examine o nome totalmente qualificado do servidor conforme mostrado na imagem a seguir. Para mostrar a opção **Clique para copiar**, passe o mouse sobre o nome do servidor.
 
@@ -46,15 +46,15 @@ Antes de começar, verifique se você tem a versão 17.2 ou posterior do SSMS (S
 ## <a name="connect-with-ssms"></a>Conectar-se ao SSMS
 1. Abra o SQL Server Management Studio.
 
-2. **Conecte-se ao servidor**. Na caixa de diálogo **Conectar-se ao Servidor**, insira as seguintes informações:
+2. **Conecte-se ao servidor**. Na caixa de diálogo **Conectar ao Servidor**, insira as informações a seguir:
 
    | Configuração       | Valor sugerido | Descrição | 
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Tipo de servidor** | Mecanismo de Banco de Dados | Esse valor é necessário. |
    | **Nome do servidor** | O nome do servidor totalmente qualificado | O nome deve estar neste formato: **mysqldbserver.database.windows.net**. |
    | **Autenticação** | Autenticação do SQL Server | |
-   | **Logon** | A conta do administrador do servidor | Essa é a conta que você especificou quando criou o servidor. |
-   | **Senha** | A senha de sua conta do administrador do servidor | Essa é a senha que você especificou quando criou o servidor. |
+   | **Logon** | A conta do administrador do servidor | Esta é a conta que você especificou quando criou o servidor. |
+   | **Senha** | A senha para sua conta do administrador do servidor | Esta é a senha que você especificou quando criou o servidor. |
 
     ![Conectar-se ao servidor com o SSMS](media/ssis-azure-connect-to-catalog-database/ssisdb-connect-1.png)
 

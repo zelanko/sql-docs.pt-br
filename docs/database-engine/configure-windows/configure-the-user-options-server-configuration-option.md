@@ -15,10 +15,10 @@ ms.assetid: cfed8f86-6bcf-4b90-88eb-9656e22d5dc5
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d06cb92287537293739fa9bd7b1a86ea7ffd767a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68012158"
 ---
 # <a name="configure-the-user-options-server-configuration-option"></a>Configurar as opções de configuração de servidor user connections
@@ -63,7 +63,7 @@ ms.locfileid: "68012158"
     |256|QUOTED_IDENTIFIER|Faz a diferenciação entre aspas simples e duplas ao avaliar uma expressão.|  
     |512|NOCOUNT|Desativa a mensagem retornada ao término de cada instrução que declara quantas linhas foram afetadas.|  
     |1024|ANSI_NULL_DFLT_ON|Altera o comportamento da sessão para usar a compatibilidade ANSI para nulidade. Novas colunas definidas sem a nulidade explícita são definidas para permitir nulos.|  
-    |2048|ANSI_NULL_DFLT_OFF|Altera o comportamento da sessão, para não usar a compatibilidade ANSI para nulidade. Novas colunas definidas sem a nulidade explícita são definidas para não permitir nulos.|  
+    |2\.048|ANSI_NULL_DFLT_OFF|Altera o comportamento da sessão, para não usar a compatibilidade ANSI para nulidade. Novas colunas definidas sem a nulidade explícita são definidas para não permitir nulos.|  
     |4096|CONCAT_NULL_YIELDS_NULL|Retorna NULL ao concatenar um valor NULL com uma cadeia de caracteres.|  
     |8192|NUMERIC_ROUNDABORT|Gera um erro quando ocorre perda de precisão em uma expressão.|  
     |16384|XACT_ABORT|Reverte uma transação se uma instrução Transact-SQL ativar um erro em tempo de execução.|  

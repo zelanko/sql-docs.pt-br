@@ -13,10 +13,10 @@ ms.assetid: cc5e65c2-448e-4f37-9ad4-2dfb1cc84ebe
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1672b245f061f521c9114bca71f723fe75553c96
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68025596"
 ---
 # <a name="server-properties---advanced-page"></a>Propriedades do servidor – página Avançado
@@ -27,7 +27,7 @@ ms.locfileid: "68025596"
   
 -   [Exibir ou alterar as propriedades de servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/view-or-change-server-properties-sql-server.md)  
   
-## <a name="containment"></a>Containment  
+## <a name="containment"></a>Contenção  
  Habilitar bancos de dados independentes  
  Indica se esta instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite bancos de dados independentes. Quando definido como **True**, um banco de dados independente poderá ser criado, restaurado ou anexado. Quando definido como **False**, um banco de dados independente não pode ser criado, restaurado nem anexado a essa instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Alterar a propriedade de contenção pode ter um impacto na segurança do banco de dados. Habilitar bancos de dados independentes permite que proprietários de banco de dados concedam acesso a esse [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Desabilitar bancos de dados independentes pode impedir que os usuários se conectem. Para entender o impacto da propriedade de contenção, veja [Bancos de dados independentes](../../relational-databases/databases/contained-databases.md) e [Práticas recomendadas de segurança com bancos de dados independentes](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
   
@@ -36,7 +36,7 @@ ms.locfileid: "68025596"
  Mostra o nível de suporte de FILESTREAM atual configurado na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para alterar o nível de acesso configurado, selecione um dos seguintes valores:  
   
  **Desabilitado**  
- Os dados BLOB (objeto grande binário) não podem ser armazenados em um sistema de arquivos. Este é o valor padrão.  
+ Os dados BLOB (objeto grande binário) não podem ser armazenados em um sistema de arquivos. Esse é o valor padrão.  
   
  **Acesso ao Transact-SQL habilitado**  
  Os dados de FILESTREAM podem ser acessados através do [!INCLUDE[tsql](../../includes/tsql-md.md)], mas não pelo sistema de arquivos.  
@@ -72,7 +72,7 @@ ms.locfileid: "68025596"
   
  As alternativas são como segue:  
   
- **Importar**  
+ **Importaçãoação**  
  Os catálogos de texto completo são importados. Essa operação é significativamente mais rápida que **Recriar**. No entanto, um catálogo de texto completo importado não usará os separadores de palavras novos e aprimorados introduzidos no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Sendo assim, no final, talvez você deseje recriar os catálogos de texto completo.  
   
  Se um catálogo de texto completo não estiver disponível, os índices de texto completo associados serão recompilados. Essa opção está disponível apenas para bancos de dados do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
@@ -117,7 +117,7 @@ ms.locfileid: "68025596"
  **Limite de Custo Para Paralelismo**  
  Especifica o limite sobre o qual o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cria e executa planos paralelos para consultas. O custo faz referência a um tempo decorrido estimado em segundos, exigido para a execução do plano serial em uma configuração de hardware específica. Só defina esta opção em multiprocessadores simétricos. Para obter mais informações, veja [Configurar a opção cost threshold for parallelism de configuração de servidor](../../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md).  
   
- **Locks**  
+ **Bloqueios**  
  Define o número máximo de bloqueios disponíveis, limitando assim a quantidade de memória que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa para eles. A configuração padrão é 0, a qual permite que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aloque e desaloque os bloqueios de forma dinâmica, baseado nas alterações de requisitos do sistema.  
   
  Recomenda-se permitir que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] use bloqueios dinamicamente. Para obter mais informações, veja [Configurar a opção locks de configuração de servidor](../../database-engine/configure-windows/configure-the-locks-server-configuration-option.md).  

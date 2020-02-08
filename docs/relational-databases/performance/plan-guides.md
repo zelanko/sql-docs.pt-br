@@ -20,10 +20,10 @@ ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f6b2bd
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 595ef410a631da1eb1d71e7b2d20c75fd09e4bb2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68113477"
 ---
 # <a name="plan-guides"></a>Guias de plano
@@ -164,8 +164,8 @@ where SalesOrderID =  @so_id',
 |Descreve como criar uma guia de plano para consultas parametrizadas.|[Criar um guia de plano para consultas parametrizadas](../../relational-databases/performance/create-a-plan-guide-for-parameterized-queries.md)|  
 |Descreve como controlar o comportamento de parametrização da consulta usando guias de plano.|[Especificar comportamento de parametrização de consulta usando guias de plano](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md)|  
 |Descreve como incluir um plano de consulta fixo em um guia de plano.|[Aplicar um plano de consulta fixo a um guia de plano](../../relational-databases/performance/apply-a-fixed-query-plan-to-a-plan-guide.md)|  
-|Descreve como especificar dicas de consulta em um guia de plano.|[Anexar dicas de consulta para um guia de plano](../../relational-databases/performance/attach-query-hints-to-a-plan-guide.md)|  
-|Descreve como exibir propriedades do guia de plano.|[Exibir propriedades de guia de plano](../../relational-databases/performance/view-plan-guide-properties.md)|  
+|Descreve como especificar dicas de consulta em um guia de plano.|[Anexar dicas de consulta a um guia de plano](../../relational-databases/performance/attach-query-hints-to-a-plan-guide.md)|  
+|Descreve como exibir propriedades do guia de plano.|[Exibir propriedades do guia de plano](../../relational-databases/performance/view-plan-guide-properties.md)|  
 |Descreve como usar o SQL Server Profiler para criar e testar guias de plano.|[Usar o SQL Server Profiler para criar e testar guias de plano](../../relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md)|  
 |Descreve como validar guias de plano.|[Validar guias de plano depois da atualização](../../relational-databases/performance/validate-plan-guides-after-upgrade.md)|  
   

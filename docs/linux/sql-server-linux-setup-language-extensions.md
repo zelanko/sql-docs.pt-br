@@ -6,17 +6,17 @@ author: dphansen
 ms.author: davidph
 ms.reviewer: vanto
 manager: cgronlun
-ms.date: 11/05/2019
+ms.date: 02/03/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2b5a8c83f827f574698d2e9b37a19cdb29e1ba80
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: 561a683f6b4c9489121c8fe9910ca798c50ecd82
+ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73660776"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76971219"
 ---
 # <a name="install-sql-server-language-extensions-on-linux"></a>Instalar Extensões de Linguagem do SQL Server no Linux
 
@@ -262,19 +262,19 @@ Você pode baixar pacotes de [https://packages.microsoft.com/](https://packages.
 
 |||
 |--|----|
-| Pacotes mssql/extensibility-java | [https://packages.microsoft.com/rhel/7/mssql-server-preview/](https://packages.microsoft.com/rhel/7/mssql-server-preview/) |
+| Pacotes mssql/extensibility-java | [https://packages.microsoft.com/rhel/7/mssql-server-2019/](https://packages.microsoft.com/rhel/7/mssql-server-2019/) |
 
 #### <a name="ubuntu1604-paths"></a>Caminhos do Ubuntu/16.04
 
 |||
 |--|----|
-| Pacotes mssql/extensibility-java | [https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/) |
+| Pacotes mssql/extensibility-java | [https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/) |
 
 #### <a name="suse12-paths"></a>Caminhos do SUSE/12
 
 |||
 |--|----|
-| Pacotes mssql/extensibility-java | [https://packages.microsoft.com/sles/12/mssql-server-preview/](https://packages.microsoft.com/sles/12/mssql-server-preview/) |
+| Pacotes mssql/extensibility-java | [https://packages.microsoft.com/sles/12/mssql-server-2019/](https://packages.microsoft.com/sles/12/mssql-server-2019/) |
 
 #### <a name="package-list"></a>Lista de pacotes
 

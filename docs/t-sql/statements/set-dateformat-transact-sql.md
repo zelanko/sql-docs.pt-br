@@ -28,10 +28,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 81bdd9f2077a3fb773e36399aedc9c2323169f2f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67929064"
 ---
 # <a name="set-dateformat-transact-sql"></a>SET DATEFORMAT (Transact-SQL)
@@ -41,7 +41,7 @@ ms.locfileid: "67929064"
   
  Para obter uma visão geral das funções e dos tipos de dados de data e hora de [!INCLUDE[tsql](../../includes/tsql-md.md)], confira [Funções e tipos de dados de data e hora &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -53,7 +53,7 @@ SET DATEFORMAT { format | @format_var }
  *format* |  **@** _format_var_  
  É a ordem das partes de data. Os parâmetros válidos são **mdy**, **dmy**, **ymd**, **ydm**, **myd** e **dym**. Este argumento ou pode ser Unicode ou conjuntos de caracteres de dois bytes (DBCS) convertidos para Unicode. O padrão do inglês dos EUA O padrão em inglês é **mdy**. Para o DATEFORMAT padrão de todos os idiomas com suporte, consulte [sp_helplanguage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O DATEFORMAT **ydm** não é compatível com os tipos de dados **date**, **datetime2** e **datetimeoffset**.  
   
  A configuração de DATEFORMAT pode interpretar cadeias de caracteres diferentes para tipos de dados de data, dependendo do formato da cadeia de caracteres desses dados. Por exemplo, interpretações de **datetime** e **smalldatetime** talvez não correspondam a **date**, **datetime2** ou **datetimeoffset**. DATEFORMAT afeta a interpretação de cadeias de caracteres conforme elas são convertidas em valores de data para o banco de dados. Ele não afeta a exibição de valores de tipo de dados de data, nem ao formato de armazenamento desses valores no banco de dados.  

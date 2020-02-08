@@ -23,12 +23,12 @@ manager: jroth
 ms.custom: seo-lt-2019
 ms.date: 09/25/2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: deaaa783f465c5cfecb940df4b9dd56e10590bc5
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: 0fb3a05f08cdf3481b9e2957c35bf6ee48bce6b0
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74056392"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76909959"
 ---
 # <a name="use-bulk-insert-or-openrowsetbulk-to-import-data-to-sql-server"></a>Usar BULK INSERT ou OPENROWSET(BULK...) para importar dados para o SQL Server
 
@@ -81,7 +81,7 @@ Para obter informações sobre usos adicionais da opção de BULK, consulte [OPE
 - [Usar um arquivo de formato para ignorar um campo de dados &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)
 - [Usar um arquivo de formato para mapear colunas de uma tabela para campos de arquivo de dados &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)
 
-## <a name="security-considerations"></a>Considerações sobre segurança
+## <a name="security-considerations"></a>Considerações de segurança
 
 Se um usuário usar um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o perfil de segurança da conta de processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] será usado. Um logon que usa a autenticação do SQL Server não pode ser autenticado fora do Mecanismo de Banco de Dados. Assim, quando um comando BULK INSERT é iniciado por um logon que usa a autenticação do SQL Server, a conexão aos dados é feita por meio do contexto de segurança da conta de processo do SQL Server (a conta usada pelo serviço de Mecanismo de Banco de Dados do SQL Server). 
 
@@ -114,7 +114,7 @@ Ao fazer uma importação do Armazenamento de Blobs do Azure e quando os dados n
 O exemplo a seguir mostra como usar o comando BULK INSERT para carregar dados de um arquivo CSV em um local do Armazenamento de Blobs do Azure no qual você criou uma chave SAS. A localização do Armazenamento de Blobs do Azure é configurada como uma fonte de dados externa. Isso exige uma credencial no escopo do banco de dados usando uma assinatura de acesso compartilhado que é criptografada com uma chave mestra no banco de dados de usuário.
 
 ```sql
---> Optional - a MASTER KEY is not requred if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
+--> Optional - a MASTER KEY is not required if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'YourStrongPassword1';
 GO
 --> Optional - a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
@@ -145,7 +145,7 @@ WITH (DATA_SOURCE = 'MyAzureBlobStorage');
 O exemplo a seguir mostra como usar o comando OPENROWSET para carregar dados de um arquivo csv em um local de Armazenamento de Blobs do Azure no qual você criou uma chave SAS. A localização do Armazenamento de Blobs do Azure é configurada como uma fonte de dados externa. Isso exige uma credencial no escopo do banco de dados usando uma assinatura de acesso compartilhado que é criptografada com uma chave mestra no banco de dados de usuário.
 
 ```sql
---> Optional - a MASTER KEY is not requred if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
+--> Optional - a MASTER KEY is not required if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'YourStrongPassword1';
 GO
 --> Optional - a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!

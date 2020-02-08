@@ -25,12 +25,12 @@ ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: d50c8c83ebba970a847c5a2db70ca0268637d3e8
-ms.sourcegitcommit: 02449abde606892c060ec9e9e9a85a3f49c47c6c
+ms.openlocfilehash: a20b058d187f7c1ddade6b609b0002f7bbcbdb60
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74542281"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76910139"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 
@@ -124,7 +124,7 @@ CODEPAGE = { 'ACP'| 'OEM'| 'RAW'| '*code_page*' } Especifica a página de códig
 > [!NOTE]
 > Recomendamos a especificação de um nome de ordenação para cada coluna em um arquivo de formato, exceto quando você desejar que a opção 65001 tenha prioridade sobre a especificação de ordenação/página de código.
 
-|Valor de CODEPAGE|DESCRIÇÃO|
+|Valor de CODEPAGE|Descrição|
 |--------------------|-----------------|
 |ACP|Converte colunas do tipo de dados **char**, **varchar** ou **text** da página de código do ANSI/[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows (ISO 1252) na página de código do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|
 |OEM (padrão)|Converte colunas do tipo de dados **char**, **varchar** ou **text** da página de código de OEM do sistema na página de código do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|
@@ -422,7 +422,7 @@ Para obter exemplos de `OPENROWSET` completos, incluindo a configuração da cre
 O exemplo a seguir mostra como usar o comando OPENROWSET para carregar dados de um arquivo csv em um local de Armazenamento de Blobs do Azure no qual você criou uma chave SAS. A localização do Armazenamento de Blobs do Azure é configurada como uma fonte de dados externa. Isso exige uma credencial no escopo do banco de dados usando uma assinatura de acesso compartilhado que é criptografada com uma chave mestra no banco de dados de usuário.
 
 ```sql
---> Optional - a MASTER KEY is not requred if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
+--> Optional - a MASTER KEY is not required if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'YourStrongPassword1';
 GO
 --> Optional - a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!

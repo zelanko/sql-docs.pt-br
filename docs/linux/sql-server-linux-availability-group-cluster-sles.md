@@ -11,10 +11,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
 ms.openlocfilehash: 89f8616b13f80642a62922d9a1e1023f153b23cb
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75558435"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>Configurar o cluster do SLES para o Grupo de Disponibilidade do SQL Server

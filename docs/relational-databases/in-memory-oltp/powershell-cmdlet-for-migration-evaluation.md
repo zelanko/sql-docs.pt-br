@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5272203fb1a1c0ac2f755a4da99c654b2595a7f0
-ms.sourcegitcommit: 182ed49fa5a463147273b58ab99dc228413975b6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68698311"
 ---
 # <a name="powershell-cmdlet-for-migration-evaluation"></a>Cmdlet do PowerShell para Avaliação da Migração
@@ -44,7 +44,7 @@ Save-SqlMigrationReport
 ;
 ```
 
-## <a name="parameters"></a>Parâmetros
+## <a name="parameters"></a>parâmetros
 
 A tabela a seguir descreve os parâmetros.
 
@@ -59,15 +59,15 @@ Por outro lado, se _não_ especificar `-InputObject`, você deverá especificar 
 
 | Nome do parâmetro | Descrição |
 | :------------- | :---------- |
-| banco de dados | O nome do banco de dados do SQL Server de destino. Obrigatório quando `-Server` é obrigatório.<br/><br/> Opcional no SQLPS. |
+| Banco de dados | O nome do banco de dados do SQL Server de destino. Obrigatório quando `-Server` é obrigatório.<br/><br/> Opcional no SQLPS. |
 | FolderPath | A pasta em que o cmdlet deve armazenar os relatórios gerados.<br/><br/> Obrigatórios. |
 | InputObject | O objeto SMO que o cmdlet deve ter como destino.<br/><br/> Obrigatório no ambiente do Windows Powershell se o parâmetro `-Server` não for fornecido.<br/><br/> Opcional no SQLPS. |
 | MigrationType | O tipo de cenário de migração que o cmdlet tem como destino. Atualmente, o único valor é o **'OLTP'** padrão.<br/><br/> Opcional. |
-| Object | O nome do objeto sobre o qual o relatório será feito. Pode ser uma tabela ou um procedimento armazenado. |
+| Objeto | O nome do objeto sobre o qual o relatório será feito. Pode ser uma tabela ou um procedimento armazenado. |
 | Senha | Obrigatório quando o `-Username` for obrigatório. |
-| esquema | O nome do esquema que tem o objeto sobre o qual o relatório será feito.<br/><br/> Opcional. |
+| Esquema | O nome do esquema que tem o objeto sobre o qual o relatório será feito.<br/><br/> Opcional. |
 | Servidor | O nome da instância do SQL Server de destino. Obrigatório no ambiente do Windows Powershell se o parâmetro `-InputObject` não for fornecido.<br/><br/> Opcional no SQLPS. |
-| Nome de usuário | Obrigatório ao se conectar usando a Autenticação do SQL Server em vez da Autenticação do Windows. Caso contrário, omita. |
+| Nome de Usuário | Obrigatório ao se conectar usando a Autenticação do SQL Server em vez da Autenticação do Windows. Caso contrário, omita. |
 | &nbsp; | &nbsp; |
 
 ## <a name="prerequisites"></a>Prerequisites

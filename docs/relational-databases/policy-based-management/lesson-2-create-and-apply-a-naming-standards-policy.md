@@ -12,10 +12,10 @@ ms.assetid: 87e51f4e-156c-4def-8572-76a15075d75e
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: ac5510320783c35c83f84118e9679da4fd351415
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75558691"
 ---
 # <a name="lesson-2-create-and-apply-a-naming-standards-policy"></a>Lição 2: Criar e aplicar uma política de nomeação de padrões

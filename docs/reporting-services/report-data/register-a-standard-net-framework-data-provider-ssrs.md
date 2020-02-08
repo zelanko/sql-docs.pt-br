@@ -16,10 +16,10 @@ ms.assetid: d92add64-e93c-4598-8508-55d1bc46acf6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: badeb4de20aa885a77fa61ec3a261a8c09c79506
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571246"
 ---
 # <a name="register-a-standard-net-framework-data-provider-ssrs"></a>Registrar um provedor de dados padrão do .NET Framework (SSRS)
@@ -56,7 +56,7 @@ ms.locfileid: "65571246"
   
 4.  Adicione uma entrada para o provedor de dados do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
   
-    |attribute|Descrição|  
+    |Atributo|Descrição|  
     |---------------|-----------------|  
     |**Nome**|Forneça um nome exclusivo para o provedor de dados, como, por exemplo, **MeuProvedorDadosNET**. O comprimento máximo do atributo **Name** é de 255 caracteres. O nome deve ser exclusivo entre todas as entradas dento do elemento **Extension** de um arquivo de configuração. O valor incluído aqui será exibido na lista suspensa dos tipos de fonte de dados quando você criar uma nova fonte de dados.|  
     |**Tipo**|Insira uma lista separada por vírgulas que inclua o namespace totalmente qualificado da classe que implementa a interface <xref:System.Data.IDbConnection> , seguida pelo nome do assembly do provedor de dados do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] (sem incluir a extensão de nome de arquivo .dll).|  
@@ -129,7 +129,7 @@ ms.locfileid: "65571246"
   
 4.  Adicione uma entrada para o provedor de dados.  
   
-    |attribute|Descrição|  
+    |Atributo|Descrição|  
     |---------------|-----------------|  
     |**Nome**|Forneça um nome exclusivo para o provedor de dados, como, por exemplo, **MeuProvedorDadosNET**. O comprimento máximo do atributo **Name** é de 255 caracteres. O nome deve ser exclusivo entre todas as entradas dento do elemento **Extension** de um arquivo de configuração. O valor incluído aqui será exibido na lista suspensa dos tipos de fonte de dados quando você criar uma nova fonte de dados.|  
     |**Tipo**|Insira uma lista separada por vírgulas que inclua o namespace totalmente qualificado da classe que implementa a interface <xref:System.Data.IDbConnection> , seguida pelo nome do assembly do provedor de dados do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] (sem incluir a extensão de nome de arquivo .dll).|  

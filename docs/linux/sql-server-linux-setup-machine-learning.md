@@ -5,17 +5,17 @@ author: dphansen
 ms.author: davidph
 ms.reviewer: vanto
 manager: cgronlun
-ms.date: 11/04/2019
+ms.date: 02/03/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4f32f4219e438a3f6dc390d11b50e6487c47ee49
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 71ab699e99a3d22b6b04299b8de1ccb18e5f0708
+ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531245"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76971370"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-linux"></a>Instalar Serviços do Machine Learning do SQL Server (R e Python) em Linux
 
@@ -426,7 +426,7 @@ Você pode baixar pacotes de [https://packages.microsoft.com/](https://packages.
 
 |||
 |--|----|
-| Pacotes mssql/mlservices | [https://packages.microsoft.com/rhel/7/mssql-server-preview/](https://packages.microsoft.com/rhel/7/mssql-server-preview/) |
+| Pacotes mssql/mlservices | [https://packages.microsoft.com/rhel/7/mssql-server-2019/](https://packages.microsoft.com/rhel/7/mssql-server-2019/) |
 | Pacotes microsoft-r-open | [https://packages.microsoft.com/rhel/7/prod/](https://packages.microsoft.com/rhel/7/prod/) | 
 
 
@@ -434,14 +434,14 @@ Você pode baixar pacotes de [https://packages.microsoft.com/](https://packages.
 
 |||
 |--|----|
-| Pacotes mssql/mlservices | [https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/) |
+| Pacotes mssql/mlservices | [https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/) |
 | Pacotes microsoft-r-open | [https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/) | 
 
 #### <a name="sles12-paths"></a>Caminhos SLES/12
 
 |||
 |--|----|
-| Pacotes mssql/mlservices | [https://packages.microsoft.com/sles/12/mssql-server-preview/](https://packages.microsoft.com/sles/12/mssql-server-preview/) |
+| Pacotes mssql/mlservices | [https://packages.microsoft.com/sles/12/mssql-server-2019/](https://packages.microsoft.com/sles/12/mssql-server-2019/) |
 | Pacotes microsoft-r-open | [https://packages.microsoft.com/sles/12/prod/](https://packages.microsoft.com/sles/12/prod/) | 
 
 #### <a name="package-list"></a>Lista de pacotes
@@ -472,7 +472,7 @@ mssql-mlservices-mlm-py-9.4.7.64
  
 Você pode instalar outros pacotes do R e do Python e usá-los no script que é executado no SQL Server 2019.
 
-### <a name="r-packages"></a>Pacotes do R 
+### <a name="r-packages"></a>Pacotes R 
  
 1. Inicie uma sessão do R.
 

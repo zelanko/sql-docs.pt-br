@@ -26,10 +26,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6e8c8f90dbd07af646700a738dcf265785b79475
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981702"
 ---
 # <a name="select---over-clause-transact-sql"></a>SELECT – Cláusula OVER (Transact-SQL)
@@ -45,7 +45,7 @@ ms.locfileid: "73981702"
   
 -   [Função NEXT VALUE FOR](../../t-sql/functions/next-value-for-transact-sql.md)  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -188,7 +188,7 @@ Se ROWS/RANGE for especificado e \<window frame preceding> for usado para \<wind
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-the-over-clause-with-the-row_number-function"></a>A. Usando a cláusula OVER com a função ROW_NUMBER  
+### <a name="a-using-the-over-clause-with-the-row_number-function"></a>a. Usando a cláusula OVER com a função ROW_NUMBER  
  O exemplo a seguir mostra como usar a cláusula OVER com a função ROW_NUMBER para exibir um número de linha para cada linha em uma partição. A cláusula ORDER BY especificada na cláusula OVER ordena as linhas em cada partição pela coluna `SalesYTD`. A cláusula ORDER BY na instrução SELECT determina a ordem na qual todo o conjunto de resultados da consulta é retornado.  
   
 ```sql  

@@ -25,10 +25,10 @@ author: VanMSFT
 ms.author: vanto
 ms.reviewer: mikeray
 ms.openlocfilehash: 7327d63e9c22ab1020c885e9b372c444c485de8d
-ms.sourcegitcommit: 76fb3ecb79850a8ef2095310aaa61a89d6d93afd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75776553"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2019-on-linux"></a>Edições e recursos compatíveis do SQL Server 2019 no Linux
@@ -68,7 +68,7 @@ Você pode instalar apenas os componentes cliente do [!INCLUDE[ssNoVersion](../i
 
 O SQL Server 2019 no Linux é compatível com o mecanismo de banco de dados do SQL Server. A tabela a seguir descreve os recursos no mecanismo de banco de dados.   
   
-|Componentes de servidor|DESCRIÇÃO|  
+|Componentes de servidor|Descrição|  
 |-----------------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|O [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] inclui o [!INCLUDE[ssDE](../includes/ssde-md.md)], o principal serviço para armazenamento, processamento e segurança de dados, replicação, pesquisa de texto completo e ferramentas para gerenciar dados XML e integração de análise de banco de dados.|  
 

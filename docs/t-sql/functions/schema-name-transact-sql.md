@@ -20,18 +20,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ee0119ccd051912551c1274860265d48750ac969
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68111345"
 ---
-# <a name="schemaname-transact-sql"></a>SCHEMA_NAME (Transact-SQL)
+# <a name="schema_name-transact-sql"></a>SCHEMA_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Retorna o nome do esquema associado a um ID de esquema.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -50,12 +50,12 @@ SCHEMA_NAME ( [ schema_id ] )
   
  Retorna NULL quando *schema_id* não é uma ID válida.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  SCHEMA_NAME retorna nomes de esquemas de sistema e esquemas definidos pelo usuário. SCHEMA_NAME pode ser chamado em uma lista de seleção, em uma cláusula WHERE e em qualquer local que permita uma expressão.  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-returning-the-name-of-the-default-schema-of-the-caller"></a>A. Retornando o nome do esquema padrão do chamador  
+### <a name="a-returning-the-name-of-the-default-schema-of-the-caller"></a>a. Retornando o nome do esquema padrão do chamador  
   
 ```  
 SELECT SCHEMA_NAME();  

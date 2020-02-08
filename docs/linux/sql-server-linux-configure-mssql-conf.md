@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 ms.openlocfilehash: 8e36eb9bccd183c8c38ebbfeafcc4ace7e025960
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72783399"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Configurar o SQL Server em Linux com a ferramenta mssql-conf
@@ -26,7 +26,7 @@ ms.locfileid: "72783399"
 
 |||
 |---|---|
-| [Agente](#agent) | Habilitar o SQL Server Agent. |
+| [Agente](#agent) | Habilite o SQL Server Agent. |
 | [Ordenação](#collation) | Definir uma nova ordenação para o SQL Server em Linux. |
 | [Comentários do cliente](#customerfeedback) | Escolher se o SQL Server envia ou não comentários à Microsoft. |
 | [Perfil do Database Mail](#dbmail) | Definir o perfil padrão do Database Mail para o SQL Server em Linux. |
@@ -393,7 +393,7 @@ A primeira fase da captura é controlada pela configuração **coredump.coredump
 
     A tabela a seguir lista os possíveis valores **coredump.coredumptype**.
 
-    | Tipo | Descrição |
+    | Type | Descrição |
     |-----|-----|
     | **mini** | Mini é o menor tipo de arquivo de despejo. Ele usa as informações do sistema Linux para determinar threads e módulos no processo. O despejo contém apenas os módulos e pilhas de thread do ambiente de host. Ele não contém referências de memória indiretas nem globais. |
     | **miniplus** | O MiniPlus é semelhante ao mini, mas inclui memória adicional. Ele entende os mecanismos internos do SQLPAL e o ambiente de host, adicionando as seguintes regiões de memória ao despejo:</br></br> – Vários globais</br> – Toda a memória acima de 64 TB</br> – Todas as regiões nomeadas encontradas em **/proc/$pid/maps**</br> – Memória indireta de threads e pilhas</br> – Informações de threads</br> –Tebs e Pebs associados</br> – Informações do módulo</br> – Árvore de VMM e de VAD |
@@ -426,7 +426,7 @@ Para obter informações sobre como isso é usado com grupos de disponibilidade,
 
 A configuração **telemetry.userrequestedlocalauditdirectory** habilita a auditoria local e permite que você defina o diretório em que os logs de auditoria local são criados.
 
-1. Crie um diretório de destino para novos logs de auditoria local. O exemplo a seguir cria um diretório **/tmp/audit**:
+1. Crie um diretório de destino para novos logs de Auditoria Local. O exemplo a seguir cria um diretório **/tmp/audit**:
 
    ```bash
    sudo mkdir /tmp/audit
@@ -564,7 +564,7 @@ accepteulaml = Y
 
 O acesso à rede de saída para extensões R, Python e Java no recurso de [Serviços de Machine Learning do SQL Server](sql-server-linux-setup-machine-learning.md) está desabilitado por padrão. Para habilitar as solicitações de saída, defina a propriedade booliana "outboundnetworkaccess" usando mssql-conf.
 
-Depois de definir a propriedade, reinicie o serviço SQL Server Launchpad para ler os valores atualizados do arquivo INI. Uma mensagem de reinicialização lembra você sempre que uma configuração relacionada à extensibilidade é modificada.
+Depois de definir a propriedade, reinicie o serviço SQL Server Launchpad para ler os valores atualizados do arquivo INI. Uma mensagem de reinicialização lembrará você sempre que uma configuração relacionada à extensibilidade for modificada.
 
 ```bash
 # Adds the extensibility section and property.

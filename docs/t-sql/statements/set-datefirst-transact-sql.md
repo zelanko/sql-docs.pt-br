@@ -26,10 +26,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 19019a0493ef20aac9ab51090d64646d5d626185
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68041799"
 ---
 # <a name="set-datefirst-transact-sql"></a>SET DATEFIRST (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "68041799"
   
  Para obter uma visão geral das funções e dos tipos de dados de data e hora de [!INCLUDE[tsql](../../includes/tsql-md.md)], confira [Funções e tipos de dados de data e hora &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -61,15 +61,15 @@ SET DATEFIRST 7 ;
   
 |Valor|O primeiro dia da semana é|  
 |-----------|------------------------------|  
-|**1**|Segunda-feira|  
+|**1**|Monday|  
 |**2**|Terça-feira|  
 |**3**|Quarta-feira|  
 |**4**|Quinta-feira|  
-|**5**|Sexta-feira|  
+|**5**|Friday|  
 |**6**|Sábado|  
-|**7** (padrão, EUA inglês)|Domingo|  
+|**7** (padrão, EUA inglês)|Sunday|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Para visualizar a configuração atual de SET DATEFIRST, use a função [@@DATEFIRST](../../t-sql/functions/datefirst-transact-sql.md).  
   
  A configuração de SET DATEFIRST é definida no momento da execução e não no momento da análise.  

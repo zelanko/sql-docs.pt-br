@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 81e51dfca5692882ec75841f9be1244ef3479c33
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74401577"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>Gerenciar a retenção de dados históricos em tabelas temporais com versão do sistema
@@ -180,7 +180,7 @@ A primeira e a última partição são "abertas" em limites superiores e inferio
 
 A figura a seguir ilustra as tarefas de manutenção de partição recorrentes (confira as etapas detalhadas abaixo).
 
-![Particionamento2](../../relational-databases/tables/media/partitioning2.png "|::ref6::|")
+![Particionamento2](../../relational-databases/tables/media/partitioning2.png "Particionamento2")
 
 As etapas detalhadas para as tarefas de manutenção de partição recorrentes são:
 
@@ -314,7 +314,7 @@ No entanto, a solução ideal seria executar regularmente um script Transact-SQL
 
 Vamos primeiro explicar visualmente o significado das opções RANGE LEFT e RANGE RIGHT:
 
-![Particionamento3](../../relational-databases/tables/media/partitioning3.png "|::ref7::|")
+![Particionamento3](../../relational-databases/tables/media/partitioning3.png "Particionamento3")
 
 Quando você define uma função de partição como RANGE LEFT, os valores especificados são os limites superiores das partições. Quando você usa RANGE RIGHT, os valores especificados são os limites inferiores das partições. Quando você usa a operação MERGE RANGE para remover um limite da definição de função da partição, a implementação subjacente também remove a partição que contém o limite. Se essa partição não estiver vazia, os dados serão movidos para a partição que é o resultado da operação MERGE RANGE.
 

@@ -21,10 +21,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 24668748b97c44e825baee2dee95d9442aa1e11f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68073140"
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68073140"
 
   Cria uma tabela externa e, em seguida, exporta, em paralelo, os resultados de uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT para o Hadoop ou o Azure Storage Blob.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenções da sintaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -191,7 +191,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
   
 ##  <a name="Examples"></a> Exemplos  
   
-### <a name="a-create-a-hadoop-table-using-create-external-table-as-select-cetas"></a>A. Criar uma tabela do Hadoop usando CETAS (CREATE EXTERNAL TABLE AS SELECT)  
+### <a name="a-create-a-hadoop-table-using-create-external-table-as-select-cetas"></a>a. Criar uma tabela do Hadoop usando CETAS (CREATE EXTERNAL TABLE AS SELECT)  
  O exemplo a seguir cria uma nova tabela externa chamada `hdfsCustomer`, usando as definições de coluna e os dados da tabela de origem `dimCustomer`.  
   
  A definição de tabela é armazenada no banco de dados e os resultados da instrução SELECT são exportados para o arquivo '/pdwdata/customer.tbl' na fonte de dados externa do Hadoop *customer_ds*. O arquivo é formatado de acordo com o formato de arquivo externo *customer_ff*.  

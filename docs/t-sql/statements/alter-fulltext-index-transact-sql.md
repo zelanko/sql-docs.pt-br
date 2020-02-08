@@ -22,10 +22,10 @@ ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: f9799b747883f876b413bf540516f5c2a1cbed11
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981811"
 ---
 # <a name="alter-fulltext-index-transact-sql"></a>ALTER FULLTEXT INDEX (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "73981811"
 
   Altera as propriedades de um índice de texto completo no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -208,12 +208,12 @@ ALTER FULLTEXT INDEX ON table_name
 ## <a name="change-tracking-no-population"></a> Interações do Controle de Alterações com o parâmetro NO POPULATION  
  O fato de o índice de texto completo ser populado depende de o controle de alterações estar habilitado e de WITH NO POPULATION ter sido especificado na instrução ALTER FULLTEXT INDEX. A tabela a seguir resume o resultado da interação.  
   
-|Controle de Alterações|WITH NO POPULATION|Resultado|  
+|Controle de Alterações|WITH NO POPULATION|Result|  
 |---------------------|------------------------|------------|  
 |Não habilitado|Não especificado|Uma população completa é executada no índice.|  
 |Não habilitado|Especificado|Não ocorre nenhuma população do índice até que uma instrução ALTER FULLTEXT INDEX...START POPULATION seja emitida.|  
-|Habilitado|Specified|É gerado um erro e o índice não é alterado.|  
-|Habilitado|Não especificado|Uma população completa é executada no índice.|  
+|habilitado|Especificado|É gerado um erro e o índice não é alterado.|  
+|habilitado|Não especificado|Uma população completa é executada no índice.|  
   
  Para obter mais informações sobre o preenchimento de índices de texto completo, veja [Preencher índices de texto completo](../../relational-databases/search/populate-full-text-indexes.md).  
   
@@ -294,7 +294,7 @@ ALTER FULLTEXT INDEX ON table_name
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-setting-manual-change-tracking"></a>A. Definindo rastreamento manual de alterações  
+### <a name="a-setting-manual-change-tracking"></a>a. Definindo rastreamento manual de alterações  
  O exemplo a seguir define o controle de alterações manual no índice de texto completo na tabela `JobCandidate`.  
   
 ```  

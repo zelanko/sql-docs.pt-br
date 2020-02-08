@@ -13,10 +13,10 @@ ms.assetid: 04935f35-96cc-4d70-a250-0fd326f8daff
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 025961e39a4f0b1beb0588f0dc7ef2c668bd09a2
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294765"
 ---
 # <a name="determine-whether-the-change-data-is-ready"></a>Determinar se os dados de alteração estão prontos
@@ -179,7 +179,7 @@ ms.locfileid: "71294765"
   
     4.  Selecione **E Lógico. Todas as restrições deverão avaliar como True**, se ainda não estiver selecionado.  
   
-4.  Em **Editor da Tarefa Script**, na página **Script**, para **ReadOnlyVariables**, selecione a variável de número inteiro **User::DelaySeconds** da lista.  
+4.  Em **Editor da Tarefa Script**, na página **Script** , para **ReadOnlyVariables**, selecione a variável de número inteiro **User::DelaySeconds** da lista.  
   
 5.  No **Editor da Tarefa Script**, na página **Script** , clique em **Editar Script** para abrir o ambiente de desenvolvimento de script.  
   

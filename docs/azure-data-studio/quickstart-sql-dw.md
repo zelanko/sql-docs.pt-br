@@ -11,10 +11,10 @@ ms.author: alayu
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/24/2018
 ms.openlocfilehash: f07d13bc9110b5b9ec96aa17169687f471aeb197
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74957103"
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>Início Rápido: Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] para conectar-se ao SQL Data Warehouse do Azure e consultá-lo
@@ -41,7 +41,7 @@ Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] para estabelecer uma con
 
 2. Este artigo usa o *Logon do SQL*, mas também há suporte para a *Autenticação do Windows*. Preencha os campos da seguinte maneira usando o nome do servidor, o nome de usuário e a *sua* senha para o SQL Server do Azure:
 
-   | Configuração       | Valor sugerido | DESCRIÇÃO |
+   | Configuração       | Valor sugerido | Descrição |
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Nome do servidor** | O nome do servidor totalmente qualificado | O nome deve ser algo assim: **sqldwsample.database.windows.net** |
    | **Autenticação** | Logon do SQL| A autenticação do SQL é usada neste tutorial. |

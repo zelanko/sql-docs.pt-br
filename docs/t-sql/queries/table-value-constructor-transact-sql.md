@@ -18,10 +18,10 @@ ms.assetid: e57cd31d-140e-422f-8178-2761c27b9deb
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: b12ad1dcc054f7c59f52b3aee23d5d6368f1459b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67948254"
 ---
 # <a name="table-value-constructor-transact-sql"></a>Construtor de valor de tabela (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "67948254"
 
   Especifica um conjunto de expressões de valores de linha a ser construído em uma tabela. O construtor de valor de tabela [!INCLUDE[tsql](../../includes/tsql-md.md)] permite especificar várias linhas de dados em uma única instrução DML. O construtor de valor de tabela pode ser especificado como a cláusula VALUES de uma instrução INSERT ... VALUES ou como uma tabela derivada na cláusula USING da instrução MERGE ou na cláusula FROM.
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -59,7 +59,7 @@ VALUES ( <row value expression list> ) [ ,...n ]
 ## <a name="limitations-and-restrictions"></a>Limitações e Restrições  
  Quando usado como uma tabela derivada, não há nenhum limite no número de linhas.  
  
- Quando usado como a cláusula VALUES de uma instrução INSERT ... VALUES, há um limite de 1.000 linhas. O erro 10738 será retornado se o número de linhas exceder o máximo. Para inserir mais de 1.000 linhas, use um dos seguintes métodos:  
+ Quando usado como a cláusula VALUES de uma instrução INSERT ... VALUES, há um limite de 1.000 linhas. O erro 10738 será retornado se o número de linhas exceder o máximo. Para inserir mais de 1000 linhas, use um dos métodos a seguir:  
   
 - Crie várias instruções INSERT  
   
@@ -111,7 +111,7 @@ INSERT INTO dbo.t VALUES (1,'a'), (2, CONVERT(CHAR,1));
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-inserting-multiple-rows-of-data"></a>A. Inserindo várias linhas de dados  
+### <a name="a-inserting-multiple-rows-of-data"></a>a. Inserindo várias linhas de dados  
  O exemplo a seguir cria a tabela `dbo.Departments` e usa o construtor de valor de tabela para inserir cinco linhas na tabela. Como os valores de todas as colunas são fornecidos e listados na mesma ordem que as colunas da tabela, os nomes das colunas não precisam ser especificados na lista de colunas.  
   
 ```sql

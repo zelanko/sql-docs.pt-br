@@ -38,10 +38,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 50ae26a445faa8f8bcd811ed7834868417fc27b4
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982666"
 ---
 # <a name="create-view-transact-sql"></a>CREATE VIEW (Transact-SQL)
@@ -55,7 +55,7 @@ ms.locfileid: "73982666"
   
 -   Para fornecer uma interface compatível com versões anteriores para emular uma tabela cujo esquema foi alterado.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -158,7 +158,7 @@ OR ALTER
   
  Quando uma exibição é criada usando WITH VIEW_METADATA, todas as suas colunas, com exceção de uma coluna **timestamp**, serão atualizáveis se a exibição tiver gatilhos INSTEAD OF INSERT ou INSTEAD OF UPDATE. Para obter mais informações sobre exibições atualizáveis, consulte Comentários.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  A exibição só pode ser criada no banco de dados atual. O CREATE VIEW deve ser a primeira instrução em um lote de consulta. Uma exibição pode ter, no máximo, 1.024 partições.  
   
  Ao fazer uma consulta através de uma exibição, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] verifica se todos os objetos de banco de dados referenciados em algum lugar da instrução existem, se são válidos no contexto da instrução e se as instruções de modificação de dados não violam nenhuma regra de integridade de dados. Uma verificação que falha retorna uma mensagem de erro. Uma verificação com êxito traduz a ação em uma ação na tabela ou tabelas subjacentes.  
@@ -353,7 +353,7 @@ FROM Tn;
 
 Os exemplos a seguir usam o banco de dados AdventureWorks 2012 ou AdventureWorksDW.  
 
-### <a name="a-using-a-simple-create-view"></a>A. Usando uma CREATE VIEW simples  
+### <a name="a-using-a-simple-create-view"></a>a. Usando uma CREATE VIEW simples  
  O exemplo a seguir cria uma exibição usando uma instrução `SELECT` simples. Uma exibição simples é útil quando uma combinação de colunas é consultada com frequência. Os dados dessa exibição vêm das tabelas `HumanResources.Employee` e `Person.Person` do banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Os dados fornecem o nome e informações de data de contratação dos funcionários da [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]. A exibição pode ser criada para a pessoa que cuida do controle de aniversários de trabalho, mas sem dar a essa pessoa acesso a todos os dados nessas tabelas.  
   
 ```  

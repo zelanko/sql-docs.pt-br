@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 725dbc3306f9ad9616b5cbeca2d96249dca1c4a8
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74165785"
 ---
 # <a name="getting-started-with-system-versioned-temporal-tables"></a>Introdução a tabelas temporais com controle da versão do sistema
@@ -26,7 +26,7 @@ Dependendo do cenário, você pode criar novas tabelas temporais com controle da
 
 Além do DML e das consultas regulares, a tabela temporal também oferece maneiras fáceis e convenientes de obter informações do histórico de dados por meio da sintaxe estendida do Transact-SQL. Todas as tabelas com controle da versão do sistema têm uma tabela de histórico atribuída, mas isso é completamente transparente para os usuários, a menos que eles queiram otimizar o desempenho de carga de trabalho ou o volume de armazenamento criando índices adicionais ou escolhendo opções diferentes de armazenamento.
 
-O seguinte diagrama ilustra um fluxo de trabalho típico com tabelas temporais com controle de versão do sistema: ![Introdução ao Temporal](../../relational-databases/tables/media/getting-started-with-temporal.png "|::ref1::|")
+O seguinte diagrama ilustra um fluxo de trabalho típico com tabelas temporais com controle de versão do sistema: ![Introdução ao Temporal](../../relational-databases/tables/media/getting-started-with-temporal.png "Introdução ao Temporal")
 
 Este tópico foi dividido em cinco subtópicos:
 

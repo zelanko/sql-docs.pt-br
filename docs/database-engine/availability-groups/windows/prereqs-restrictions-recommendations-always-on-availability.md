@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f918fea905451aed787416aff0e2c22cae9e2bf5
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 31a443e7a3a1e7dedf9efb0742cfad5862804945
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75258079"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76831931"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Pré-requisitos, restrições e recomendações para Grupos de Disponibilidade AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -157,17 +157,14 @@ ms.locfileid: "75258079"
     -   Se um determinado thread ficar ocioso por um tempo, ele será liberado novamente no pool de threads geral do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Normalmente, um thread inativa é liberado após ~15 segundos de inatividade. No entanto, dependendo da última atividade, um thread ocioso pode ser retido por mais tempo.  
 
     -   Uma instância do SQL Server usa até 100 threads de restauração paralela para réplicas secundárias. Cada banco de dados usa até metade do número total de núcleos de CPU, mas não mais de 16 threads por banco de dados. Se o número total de threads necessários para uma única instância exceder 100, o SQL Server usará um único thread de restauração para cada banco de dados restante. Os threads de restauração serial são liberados após aproximadamente 15 segundos de inatividade. 
-    
-    > [!NOTE]
-    > Os bancos de dados são escolhidos para seguir em thread único com base na ID de banco de dados em ordem crescente. Como tal, a ordem de criação do banco de dados deve ser considerada para instâncias do SQL Server que hospedam mais bancos de dados de grupo de disponibilidade do que threads de trabalho disponíveis. Por exemplo, em um sistema com 32 ou mais núcleos de CPU, os seis primeiros bancos de dados (ordenados por ID de banco de dados) em um grupo ou grupos de disponibilidade usarão o modo de restauração paralela e todos os bancos de dados subsequentes usarão o modo de restauração individual.
-  
+     
 -   Além disso, os grupos de disponibilidade usam threads não compartilhados, da seguinte maneira:  
   
     -   Cada réplica primária usa 1 thread de captura de log para cada banco de dados primário. Além de isso, ela usa 1 thread de envio de log para cada banco de dados secundário. Os threads de envio de log são liberados após ~15 segundos de inatividade.    
   
     -   Um backup em uma réplica secundária mantém um thread na réplica primária durante a operação de backup.  
   
- Para obter mais informações, confira [Always On – HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx) (AlwaysOn – Série de Aprendizado do HADRON: Uso do pool de trabalho para bancos de dados habilitados para HADRON) (blog dos Engenheiros do CSS [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]).  
+ Para obter mais informações, confira [Always On – HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.microsoft.com/psssql/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases/) (AlwaysOn – Série de Aprendizado do HADRON: Uso do pool de trabalho para bancos de dados habilitados para HADRON) (blog dos Engenheiros do CSS [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]).  
   
 ###  <a name="PermissionsSI"></a> Permissões (instância de servidor)  
   
@@ -186,7 +183,7 @@ ms.locfileid: "75258079"
   
 ###  <a name="RelatedContentSI"></a> Conteúdo relacionado (instância de servidor)  
   
--   [Always On – HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx) (Always On – série de aprendizagem do HADRON: uso do pool de trabalho para bancos de dados habilitados para HADRON)  
+-   [Always On – HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.microsoft.com/psssql/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases/) (Always On – série de aprendizagem do HADRON: uso do pool de trabalho para bancos de dados habilitados para HADRON)  
   
 ##  <a name="NetworkConnect"></a> Recomendações de conectividade de rede  
  É altamente recomendável usar os mesmos links de rede para a comunicação entre nós do WSFC e a comunicação entre réplicas de disponibilidade.  Usar links de rede separados pode causar comportamentos inesperados se algum dos links falhar (até mesmo com intermitência).  
@@ -279,7 +276,7 @@ ms.locfileid: "75258079"
 ###  <a name="RequirementsAG"></a> Pré-requisitos (grupos de disponibilidade)  
  Ao criar ou reconfigurar uma configuração de grupo de disponibilidade, cumpra os requisitos a seguir.  
   
-||Pré-requisito|DESCRIÇÃO|  
+||Pré-requisito|Descrição|  
 |-|------------------|-----------------|  
 |![Caixa de seleção](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Caixa de seleção")|Se você pretende usar uma instância de cluster de failover (FCI) do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para hospedar uma réplica de disponibilidade, verifique se compreende as restrições de FCI e se os requisitos de FCI são atendidos.|[Pré-requisitos e restrições do uso de uma FCI (instância de cluster de failover) do SQL Server para hospedar uma réplica de disponibilidade](#FciArLimitations) (anteriormente neste artigo)|  
   
@@ -386,7 +383,7 @@ ms.locfileid: "75258079"
   
 -   [Blog da equipe do Always On do SQL Server: o blog oficial da equipe do Always On do SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
--   [Always On – HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx) (Always On – série de aprendizagem do HADRON: uso do pool de trabalho para bancos de dados habilitados para HADRON)  
+-   [Always On – HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.microsoft.com/psssql/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases/) (Always On – série de aprendizagem do HADRON: uso do pool de trabalho para bancos de dados habilitados para HADRON)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
