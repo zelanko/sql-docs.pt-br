@@ -1,5 +1,5 @@
 ---
-title: Guia de andamento | Microsoft Docs
+title: Guia progresso | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3e1c4e5ac4bf399a2c839c7e8cc71b2d378e268a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056633"
 ---
 # <a name="progress-tab"></a>Guia Progresso
@@ -26,7 +26,7 @@ ms.locfileid: "66056633"
   
  Após o término da execução do pacote, a guia **Progresso** se transforma na guia **Resultados da Execução** .  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Designer SSIS](ssis-designer.md)  
   
   

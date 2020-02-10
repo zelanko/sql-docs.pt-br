@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c52fa04c46ff41ce67094599a6a2f3f5074e8f03
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62873552"
 ---
 # <a name="data-compression"></a>Data Compression
@@ -63,7 +63,7 @@ ms.locfileid: "62873552"
   
 -   A compactação pode permitir que mais linhas sejam armazenadas em uma página, mas não altera o tamanho máximo de linha de uma tabela ou de um índice.  
   
--   Uma tabela não pode ser habilitada para compactação quando o tamanho máximo da linha mais a sobrecarga de compactação exceder o tamanho máximo de linha de 8060 bytes. Por exemplo, uma tabela que tem as colunas c1`char(8000)` e c2`char(53)` não pode ser compactada devido à sobrecarga de compactação adicional. Quando o formato de armazenamento vardecimal é usado, a verificação do tamanho da linha é executada quando o formato é habilitado. Para a compactação de linha e de página, a verificação do tamanho da linha é executada quando o objeto é inicialmente compactado e, depois, verificado à medida que cada linha é inserida ou modificada. A compactação impõe as duas regras seguintes:  
+-   Uma tabela não pode ser habilitada para compactação quando o tamanho máximo da linha mais a sobrecarga de compactação exceder o tamanho máximo de linha de 8060 bytes. Por exemplo, uma tabela que tem as colunas C1`char(8000)` e C2`char(53)` não pode ser compactada devido à sobrecarga de compactação adicional. Quando o formato de armazenamento vardecimal é usado, a verificação do tamanho da linha é executada quando o formato é habilitado. Para a compactação de linha e de página, a verificação do tamanho da linha é executada quando o objeto é inicialmente compactado e, depois, verificado à medida que cada linha é inserida ou modificada. A compactação impõe as duas regras seguintes:  
   
     -   Uma atualização para um tipo de comprimento fixo sempre deve ter êxito.  
   
@@ -167,9 +167,9 @@ REBUILD PARTITION = ALL WITH (
 ### <a name="metadata"></a>Metadados  
  As seguintes exibições do sistema contêm informações sobre compactação de dados para índices clusterizados:  
   
--   [sys. Indexes &#40;Transact-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql) - o `type` e `type_desc` colunas incluem CLUSTERED COLUMNSTORE e NONCLUSTERED COLUMNSTORE.  
+-   [Sys. indexes &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql) - `type` as `type_desc` colunas e incluem columnstore clusterizado e não clusterizado.  
   
--   [sys. Partitions &#40;Transact-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql) - o `data_compression` e `data_compression_desc` colunas incluem COLUMNSTORE e COLUMNSTORE_ARCHIVE.  
+-   [Sys. partitions &#40;&#41;Transact-SQL](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql) - `data_compression` as `data_compression_desc` colunas e incluem COLUMNSTORE e COLUMNSTORE_ARCHIVE.  
   
  O procedimento [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql) não se aplica a índices columnstore.  
   
@@ -251,12 +251,12 @@ REBUILD PARTITION = ALL WITH (
   
 -   A habilitação da compactação pode fazer com que os planos de consulta sejam alterados, porque os dados são armazenados usando um número diferente de páginas e um número de linhas por página.  
   
-## <a name="see-also"></a>Consulte também  
- [Implementação da compactação de linha](row-compression-implementation.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Implementação de compactação de linha](row-compression-implementation.md)   
  [Implementação da compactação de página](page-compression-implementation.md)   
- [Implementação da compactação Unicode](unicode-compression-implementation.md)   
- [CREATE PARTITION SCHEME &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-partition-scheme-transact-sql)   
- [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-partition-function-transact-sql)   
+ [Implementação de compactação Unicode](unicode-compression-implementation.md)   
+ [CRIAR esquema de partição &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-partition-scheme-transact-sql)   
+ [CRIAR função de partição &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-partition-function-transact-sql)   
  [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)   
  [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)   
  [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)   

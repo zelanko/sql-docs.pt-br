@@ -1,5 +1,5 @@
 ---
-title: Transferir o Editor da tarefa de banco de dados (página geral) | Microsoft Docs
+title: Editor da tarefa Transferir Banco de dados (página Geral) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4a78fb3dd052a7e275b91073ccf2089510b97e44
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055102"
 ---
 # <a name="transfer-database-task-editor-general-page"></a>Editor da Tarefa Transferir Banco de Dados (página Geral)
@@ -34,10 +34,10 @@ ms.locfileid: "66055102"
  **Descrição**  
  Digite uma descrição para a tarefa Transferir Banco de Dados.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Tarefas do Integration Services](control-flow/integration-services-tasks.md)   
- [Editor da Tarefa Transferir Banco de Dados &#40;Página Bancos de Dados&#41;](../../2014/integration-services/transfer-database-task-editor-databases-page.md)   
+ [Editor da tarefa Transferir Banco de dados &#40;página bancos de dados&#41;](../../2014/integration-services/transfer-database-task-editor-databases-page.md)   
  [Página Expressões](expressions/expressions-page.md)  
   
   

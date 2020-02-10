@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b13ddc498962ca23e6bc1f5e7a10d88af47ff7d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058865"
 ---
 # <a name="fast-parse"></a>Fast Parse
@@ -29,7 +29,7 @@ ms.locfileid: "66058865"
   
  Se o fluxo de dados no pacote requer análise sensível a localidade, a análise padrão é recomendada em lugar da análise rápida. Por exemplo, a análise rápida não reconhece dados sensíveis ao local, que incluem símbolos decimais como a vírgula, formatos de data que não sejam ano-mês-dia e símbolos de moeda.  
   
- Representações truncadas que implicam em uma ou mais partes da data, como um século, um ano ou um mês, não são reconhecidas pela análise rápida. Por exemplo, a análise rápida não reconhece o formato ' **-YYMM**', que especifica um ano e um mês em um século implícito, nem ' **--MM**', que especifica um mês em um ano implícito. Porém, algumas representações com precisão reduzida são reconhecidas. Por exemplo, a análise rápida reconhece o formato 'hhmm;', que indica somente hora e minuto e '**YYYY**', que indica somente o ano.  
+ Representações truncadas que implicam em uma ou mais partes da data, como um século, um ano ou um mês, não são reconhecidas pela análise rápida. Por exemplo, a análise rápida não reconhece o formato '**-YYMM**', que especifica um ano e um mês em um século implícito, nem '**--MM**', que especifica um mês em um ano implícito. Porém, algumas representações com precisão reduzida são reconhecidas. Por exemplo, a análise rápida reconhece o formato 'hhmm;', que indica somente hora e minuto e '**YYYY**', que indica somente o ano.  
   
  A análise rápida é especificada ao nível de coluna. Na fonte Flat File e na transformação de Conversão de Dados, você pode especificar a Análise rápida nas colunas de saída. Entradas e saídas podem incluir colunas sensíveis a local e colunas não sensíveis a local.  
   

@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f1635358fc136c9faba3ce18b1d278ee1e407411
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012507"
 ---
 # <a name="executing-template-files-by-using-the-commandtext-property"></a>Executando os arquivos de modelo usando a propriedade CommandText
-  Este exemplo ilustra como os arquivos de modelo que consistem em consultas SQL ou XPath podem ser especificados usando o CommandTextproperty. Em vez de especificar a consulta SQL ou XPath como o valor de CommandText, você pode especificar um nome de arquivo como o valor. No exemplo a seguir, a propriedade CommandType é especificada como SqlXmlCommandType.TemplateFile.  
+  Este exemplo ilustra como os arquivos de modelo que consistem em consultas SQL ou XPath podem ser especificados usando o CommandTextproperty. Em vez de especificar a consulta SQL ou XPath como o valor de CommandText, você pode especificar um nome de arquivo como o valor. No exemplo a seguir, a propriedade CommandType é especificada como SqlXmlCommandType. TemplateFile.  
   
  O aplicativo de exemplo executa este modelo:  
   
@@ -91,7 +91,7 @@ class Test
   
 5.  No prompt de comando, execute DocSample.exe.  
   
- Se você passar um parâmetro para um modelo, o nome do parâmetro deve começar com sinal de arroba (@); Por exemplo, p.Name= "@ContactID", onde p é um objeto SqlXmlParameter.  
+ Se você passar um parâmetro para um modelo, o nome do parâmetro deverá começar com arroba (@); por exemplo, p.Name = "@ContactID", onde p é um objeto SqlXmlParameter.  
   
  Este é o modelo atualizado que utiliza um parâmetro.  
   

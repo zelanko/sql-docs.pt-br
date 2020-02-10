@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 49032dd9c8f57f1bb822720ae431098e911fbed1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483882"
 ---
 # <a name="change-an-entity-name-master-data-services"></a>Alterar o nome de uma entidade (Master Data Services)
@@ -28,7 +28,7 @@ ms.locfileid: "65483882"
 ## <a name="prerequisites"></a>Prerequisites  
  Para executar esse procedimento:  
   
--   Você deve ter permissão para acessar a área funcional **Administração do Sistema** .  
+-   Você deve ter permissão para acessar a área funcional **Administração do sistema** .  
   
 -   Você deve ser um administrador de modelo. Para obter mais informações, veja [Administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
@@ -44,11 +44,11 @@ ms.locfileid: "65483882"
   
 5.  Clique em **Editar entidade selecionada**.  
   
-6.  No **nome da entidade** , digite o nome atualizado da entidade.  
+6.  Na caixa **nome da entidade** , digite o nome atualizado da entidade.  
   
 7.  Clique em **Salvar entidade**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar uma entidade &#40;Master Data Services&#41;](create-an-entity-master-data-services.md)   
  [Excluir uma entidade &#40;Master Data Services&#41;](delete-an-entity-master-data-services.md)   
  [Entidades &#40;Master Data Services&#41;](entities-master-data-services.md)  

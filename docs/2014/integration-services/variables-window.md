@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 62dd9af9ea66678c2cc69a016b83e907025a4294
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62877869"
 ---
 # <a name="variables-window"></a>Janela Variáveis
@@ -54,19 +54,19 @@ ms.locfileid: "62877869"
   
  Você pode alterar o escopo clicando na variável e, em seguida, clicando em **Mover Variável** na janela **Variáveis** .  
   
- **Tipo de Dados**  
+ **Tipo de dados**  
  Exiba o tipo de dados da variável. Você pode selecionar um tipo de dados na lista para as variáveis definidas pelo usuário.  
   
 > [!NOTE]  
 >  Se você atribuir uma expressão à variável, não poderá alterar o tipo de dados.  
   
- **Value**  
+ **Valor**  
  Exiba o valor da variável. Você pode atualizar o valor da variável para as variáveis definidas pelo usuário. Este valor pode ser literal ou uma expressão e pode ser uma cadeia de caracteres com várias linhas. Para atribuir uma expressão à variável, clique no botão de reticências ao lado da coluna **Expressão** na janela **Variáveis** .  
   
  `Namespace`  
- Exiba o nome do namespace. As variáveis definidas pelo usuário são inicialmente criadas na **usuário** namespace, mas você pode alterar o nome do namespace no `Namespace` campo. Para exibir esta coluna, clique em **Opções de Grade**.  
+ Exiba o nome do namespace. As variáveis definidas pelo usuário são inicialmente criadas no namespace do **usuário** , mas você pode alterar o nome do namespace `Namespace` no campo. Para exibir esta coluna, clique em **Opções de Grade**.  
   
- **Elevar Evento de Alteração**  
+ **Gerar evento de alteração**  
  Indique se precisa gerar um evento `OnVariableValueChanged` quando o valor é alterado. Você pode atualizar o valor para as variáveis do sistema e as definidas pelo usuário. Por padrão, a janela **Variáveis** não lista esta coluna. Para exibir esta coluna, clique em **Opções de Grade**.  
   
  **Descrição**  
@@ -77,10 +77,10 @@ ms.locfileid: "62877869"
   
  Se você atribui uma expressão a uma variável, um marcador de ícone especial é exibido ao lado da variável. Esse marcador de ícone especial também é exibido ao lado de gerenciadores de conexões e tarefas que têm expressões definidas neles.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Variáveis do SSIS &#40;Integration Services&#41;](integration-services-ssis-variables.md)   
  [Usar variáveis em pacotes](../../2014/integration-services/use-variables-in-packages.md)   
- [Expressões do Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md)   
- [Gerando arquivos de despejo para execução de pacote](troubleshooting/generating-dump-files-for-package-execution.md)  
+ [Expressões do SSIS &#40;Integration Services&#41;](expressions/integration-services-ssis-expressions.md)   
+ [Gerar arquivos de despejo para execução de pacote](troubleshooting/generating-dump-files-for-package-execution.md)  
   
   

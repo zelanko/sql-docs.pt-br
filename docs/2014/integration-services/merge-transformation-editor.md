@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c7ff5b4488eaa4563a2415d754853bc8e33803bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057676"
 ---
 # <a name="merge-transformation-editor"></a>Editor de Transformação Mesclagem
@@ -39,9 +39,9 @@ ms.locfileid: "66057676"
  **Mesclar Entrada 2**  
  Selecione a coluna a mesclar como Mesclar Entrada 2.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Classificar dados para as transformações Mesclagem e Junção de Mesclagem](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)   
+ [Classificar dados para as transformações mesclagem e junção de mesclagem](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)   
  [Transformação Junção de Mesclagem](data-flow/transformations/merge-join-transformation.md)   
  [Transformação Unir Tudo](data-flow/transformations/union-all-transformation.md)  
   

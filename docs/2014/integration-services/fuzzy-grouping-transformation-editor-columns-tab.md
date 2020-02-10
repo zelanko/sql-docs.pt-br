@@ -1,5 +1,5 @@
 ---
-title: Editor de transformação agrupamento difuso (guia colunas) | Microsoft Docs
+title: Editor de transformação Agrupamento Difuso (guia colunas) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a97225797380294968f1af595f1299e478d548d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058362"
 ---
 # <a name="fuzzy-grouping-transformation-editor-columns-tab"></a>Editor de Transformação Agrupamento Difuso (guia Colunas)
@@ -42,10 +42,10 @@ ms.locfileid: "66058362"
  **Alias de Saída**  
  Digite um nome descritivo para a coluna de saída correspondente. Por padrão, o nome da coluna de saída é idêntico ao nome da coluna de entrada.  
   
- **Alias de Saída de Grupo**  
+ **Alias de saída do grupo**  
  Digite um nome descritivo para a coluna que conterá o valor canônico para as duplicatas agrupadas. O nome padrão dessa coluna de saída é o nome da coluna de entrada acrescido de _clean.  
   
- **Associar Tipo**  
+ **Tipo de correspondência**  
  Selecione correspondência difusa ou exata. As linhas serão consideradas duplicatas se forem suficientemente semelhantes em todas as colunas que têm tipo de correspondência difusa. Se você também especificar correspondência exata em certas colunas, apenas as linhas que contiverem valores idênticos nessas colunas serão consideradas possíveis duplicatas. Portanto, se souber que certa coluna não contém nenhum erro ou inconsistência, você poderá especificar correspondência exata nessa coluna para aumentar a exatidão da correspondência difusa nas outras colunas.  
   
  **Similaridade Mínima**  
@@ -57,17 +57,17 @@ ms.locfileid: "66058362"
  **Numerais**  
  Especifique a significância dos numerais à esquerda e à direita na comparação dos dados da coluna. Por exemplo, se os numerais à esquerda forem significativos, "123 Main Street" não será grupado com "456 Main Street".  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
-|**Nenhum**|Numerais à esquerda e à direita não são significativos.|  
-|**À Esquerda**|Apenas numerais à esquerda são significativos.|  
-|**À Direita**|Apenas numerais à direita são significativos.|  
-|**À Esquerda e À Direita**|Numerais tanto à esquerda, quanto à direita são significativos.|  
+|**Delas**|Numerais à esquerda e à direita não são significativos.|  
+|**Conceitua**|Apenas numerais à esquerda são significativos.|  
+|**À direita**|Apenas numerais à direita são significativos.|  
+|**LeadingAndTrailing**|Numerais tanto à esquerda, quanto à direita são significativos.|  
   
  **Sinalizadores de Comparação**  
  Para obter mais informações sobre as opções de comparação de cadeias de caracteres, consulte [Comparando dados de cadeia de caracteres](data-flow/comparing-string-data.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Identificar linhas de dados semelhantes por meio da transformação Agrupamento Difuso](data-flow/transformations/identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md)  
   

@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8f327cefbb916bf83f695db40a1d3c3025b7a5d2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010944"
 ---
 # <a name="set-the-service-account-for-the-full-text-filter-daemon-launcher"></a>Definir a conta de serviço do Iniciador do Daemon de Filtro de Texto Completo
@@ -26,20 +26,20 @@ ms.locfileid: "66010944"
  O Iniciador do Daemon de Filtro de Texto Completo do SQL é um serviço de reconhecimento de instâncias associado a uma instância específica do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O serviço Iniciador do Daemon de Filtro de Texto Completo do SQL propaga as informações da conta de serviço para cada processo do host do daemon de filtro.  
   
   
-##  <a name="setting"></a> Configurar a conta de serviço  
+##  <a name="setting"></a>Configurando a conta de serviço  
   
 #### <a name="to-set-the-sql-full-text-filter-daemon-launcher-service-account-for-full-text-search"></a>Para definir a conta do serviço Iniciador do Daemon de Filtro de Texto Completo do SQL para pesquisa de texto completo  
   
 1.  No menu **Iniciar** , aponte para **Todos os Programas**, aponte para [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], aponte para **Ferramentas de Configuração**e clique em **SQL Server Configuration Manager**.  
   
-2.  Na **SQL Server Configuration Manager**, clique em **SQL Server Services**, clique com botão direito **iniciador do Daemon de filtro de texto completo SQL ( *`instance name`* )** e, em seguida, clique em **propriedades**.  
+2.  Em **SQL Server Configuration Manager**, clique em **serviços SQL Server**, clique com o botão direito do mouse em ***`instance name`* iniciador do daemon de filtro de texto completo do SQL ()** e clique em **Propriedades**.  
   
 3.  Clique na guia **Fazer Logon** da caixa de diálogo e selecione ou digite a conta em que será executado cada processo criado pelo serviço Iniciador do Daemon de Filtro de Texto Completo do SQL.  
   
 4.  Depois que você fechar a caixa de diálogo, clique em **Reiniciar** para reiniciar o serviço Iniciador do Daemon de Filtro de Texto Completo do SQL.  
   
   
-##  <a name="error"></a> Se o filtro de texto completo do SQL não iniciar o serviço iniciador do Daemon  
+##  <a name="error"></a>Se o serviço de Iniciador do Daemon de Filtro de Texto Completo do SQL não iniciar  
  Se o serviço Iniciador do Daemon de Filtro de Texto Completo do SQL não for iniciado, o motivo poderá ser uma ou mais das seguintes condições:  
   
 -   A senha associada à conta do serviço Iniciador do Daemon de Filtro de Texto Completo do SQL expirou.  
@@ -70,10 +70,10 @@ ms.locfileid: "66010944"
   
 -   O grupo de serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não tem permissão para iniciar o serviço Iniciador do Daemon de Filtro de Texto Completo do SQL.  
   
-     Durante a instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], é concedido ao grupo de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permissão padrão para gerenciar, consultar e iniciar o serviço Iniciador do Daemon de Filtro de Texto Completo do SQL. Se as permissões do grupo de serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para a conta de serviço Iniciador do Daemon de Filtro de Texto Completo do SQL tiverem sido removidas após a instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o serviço Iniciador do Daemon de Filtro de Texto Completo do SQL não será iniciado e a pesquisa de texto completo será desabilitada. Certifique-se de que o grupo de serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenha permissões na conta de serviço Iniciador do Daemon de Filtro de Texto Completo do SQL.  
+     Durante a instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], é concedido ao grupo de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permissão padrão para gerenciar, consultar e iniciar o serviço Iniciador do Daemon de Filtro de Texto Completo do SQL. Se as permissões do grupo de serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para a conta de serviço Iniciador do Daemon de Filtro de Texto Completo do SQL tiverem sido removidas após a instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o serviço Iniciador do Daemon de Filtro de Texto Completo do SQL não será iniciado e a pesquisa de texto completo será desabilitada. Certifique-se de que o grupo de serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenha permissões na conta de serviço Iniciador do Daemon de Filtro de Texto Completo do SQL.  
   
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tópicos de instruções sobre gerenciamento de serviços &#40;SQL Server Configuration Manager&#41;](../../database-engine/managing-services-how-to-topics-sql-server-configuration-manager.md)  
  [Atualizar pesquisa de texto completo](upgrade-full-text-search.md)  
   

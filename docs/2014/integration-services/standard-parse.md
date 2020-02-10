@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9837eb1c58facb76eef5885012920b294674f7fc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055293"
 ---
 # <a name="standard-parse"></a>Standard Parse
@@ -25,7 +25,7 @@ ms.locfileid: "66055293"
   
  Ela oferece suporte para a conversão de tipo de dados de dados internacionais e pode ser usada caso o formato de dados não seja suportado pela análise rápida. Para obter mais informações sobre a API de conversão de tipo de dados de Automação, consulte "APIs de conversão de tipos de sados" na [Biblioteca MSDN](https://go.microsoft.com/fwlink/?LinkId=79427).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Análise rápida](../../2014/integration-services/fast-parse.md)  
   
   

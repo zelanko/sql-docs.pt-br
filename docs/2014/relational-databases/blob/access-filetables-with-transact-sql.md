@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b56bba0567a96b7bdd7b75ad191d553ffa019930
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010424"
 ---
 # <a name="access-filetables-with-transact-sql"></a>Acessar FileTables com Transact-SQL
@@ -36,7 +36,7 @@ ms.locfileid: "66010424"
   
 -   São permitidas atualizações em quaisquer dados definidos pelo usuário.  
   
--   Serão impostas restrições definidas pelo sistema se a instrução INSERT definir **name**, **path_locator**, **parent_path_locator**ou atributos de arquivos.  
+-   Serão impostas restrições definidas pelo sistema se a instrução INSERT definir **name**, **path_locator**, **parent_path_locator** ou atributos de arquivos.  
   
 -   Podem ser feitas atualizações nos dados FILESTREAM da coluna **file_stream** sem afetar nenhuma outra coluna, incluindo os carimbos de data/hora.  
   
@@ -68,9 +68,9 @@ ms.locfileid: "66010424"
   
 -   O valor de **last_access_time** não pode ser anterior a **last_write_time** e **creation_time**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Carregar arquivos em FileTables](load-files-into-filetables.md)   
- [Trabalhar com diretórios e caminhos em FileTables](work-with-directories-and-paths-in-filetables.md)   
+ [Work with Directories and Paths in FileTables](work-with-directories-and-paths-in-filetables.md)   
  [Acessar FileTables com APIs de entrada e saída de arquivo](access-filetables-with-file-input-output-apis.md)   
  [DDL, funções, procedimentos armazenados e exibições de FileTable](../views/views.md)  
   

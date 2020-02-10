@@ -1,5 +1,5 @@
 ---
-title: 'Tarefa 8: Adicionando um novo valor à entidade State do Excel | Microsoft Docs'
+title: 'Tarefa 8: adicionando um novo valor para a entidade de estado no Excel | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -11,46 +11,46 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 831d0b504a65d485413772ee3711e689e29ee2a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65489704"
 ---
-# <a name="task-8-adding-a-new-value-for-state-entity-in-excel"></a>Tarefa 8: Adicionar um novo valor à entidade State do Excel
+# <a name="task-8-adding-a-new-value-for-state-entity-in-excel"></a>Tarefa 8: Adicionando um novo valor à entidade State do Excel
   Nesta tarefa, você adicionará um valor para a entidade State no Excel e publicará a alteração no servidor MDS.  
   
-1.  Adicionar um **folha de trabalho** no Excel clicando na nova guia na parte inferior.  
+1.  Adicione uma **folha de trabalho** no Excel clicando na guia novo na parte inferior.  
   
-     ![Excel - nova guia de planilha](../../2014/tutorials/media/et-addinganewvalueforstateentityinexcel-01.jpg "Excel - nova guia de planilha")  
+     ![Excel - Nova guia Pasta de Trabalho](../../2014/tutorials/media/et-addinganewvalueforstateentityinexcel-01.jpg "Excel - Nova guia Pasta de Trabalho")  
   
-2.  Na **Excel**, clique no **dados mestres** guia no menu e, em seguida, clique em **Mostrar Gerenciador** na faixa de opções.  
+2.  No **Excel**, clique na guia **dados mestres** no menu e, em seguida, clique em **Mostrar Explorer** na faixa de faixas.  
   
-3.  No **Master Data Explorer**, selecione **fornecedores** para **modelo**. Você deverá ver duas entidades: **Supplier** e **estado** na lista de entidades.  
+3.  No **Data Explorer mestre**, selecione **fornecedores** para **modelo**. Você deve ver duas entidades: **fornecedor** e **estado** na lista de entidades.  
   
-4.  Clique duas vezes em **estado** na lista. Todos os membros de **estado** entidade do MDS deve ser exibida na planilha.  
+4.  Clique duas vezes em **estado** na lista. Todos os membros da entidade de **estado** do MDS devem ser exibidos na planilha.  
   
 5.  Agora, adicione uma linha no final com os seguintes valores: **Carolina do Norte** para **nome** e **NC** para **código**. A codificação por cores diferencia qualquer registro novo/atualizado dos outros registros.  
   
-     ![Excel - adicionar Carolina do Norte a estados](../../2014/tutorials/media/et-addinganewvalueforstateentityinexcel-02.jpg "Excel - adicionar Carolina do Norte a estados")  
+     ![Excel - Adicionar Carolina do Norte a Estados](../../2014/tutorials/media/et-addinganewvalueforstateentityinexcel-02.jpg "Excel - Adicionar Carolina do Norte a Estados")  
   
-6.  Clique em **publicar** na faixa de opções para publicar a alteração no MDS.  
+6.  Clique em **publicar** na faixa de faixas para publicar a alteração no MDS.  
   
-     ![Excel - botão Publicar na guia dados mestre](../../2014/tutorials/media/et-addinganewvalueforstateentityinexcel-03.jpg "Excel - botão Publicar na guia dados mestre")  
+     ![Excel - Botão Publicar na guia Dados Mestre](../../2014/tutorials/media/et-addinganewvalueforstateentityinexcel-03.jpg "Excel - Botão Publicar na guia Dados Mestre")  
   
-7.  Sobre o **publicar e anotar** caixa de diálogo caixa, observe que o **usar a mesma anotação para todas as alterações** está selecionado. Você pode inserir uma anotação única de todas as alterações aqui.  
+7.  Na caixa de diálogo **publicar e anotar** , observe que o **uso da mesma anotação para todas as alterações** está selecionado. Você pode inserir uma anotação única de todas as alterações aqui.  
   
-8.  Selecione **examinar as alterações e fornecer anotações individualmente** opção para fornecer a anotação para cada alteração (nesse caso, apenas um).  
+8.  Selecione a opção **revisar alterações e fornecer anotações individualmente** para fornecer anotação para cada alteração (neste caso, apenas uma).  
   
-     ![Excel - publicar e anotar a caixa de diálogo](../../2014/tutorials/media/et-addinganewvalueforstateentityinexcel-04.jpg "do Excel - publicar e anotar a caixa de diálogo")  
+     ![Excel - Caixa de diálogo Publicar e Anotar](../../2014/tutorials/media/et-addinganewvalueforstateentityinexcel-04.jpg "Excel - Caixa de diálogo Publicar e Anotar")  
   
 9. Clique em **publicar** para publicar dados no MDS.  
   
-10. Observe que **codificação de cores** para a linha com **Carolina do Norte** como o **estado** é o mesmo que outros registros agora.  
+10. Observe que a **codificação por cores** para a linha com a Carolina do **norte** como o **estado** é igual a outros registros agora.  
   
-11. **Opcional:** Verificar se o novo membro (NC) foi adicionado para o **estado** entidade usando o **Explorer** na **Master Data Manager**.  
+11. **Opcional:** Verifique se o novo membro (NC) foi adicionado à entidade de **estado** usando o **Gerenciador** no **Master Data Manager**.  
   
-12. No Excel, clique com botão direito do **estado** planilha na parte inferior e clique em **excluir** para excluir a planilha. Excluir a planilha não exclui os dados do servidor MDS.  
+12. No Excel, clique com o botão direito do mouse na planilha de **estado** na parte inferior e clique em **excluir** para excluir a planilha. Excluir a planilha não exclui os dados do servidor MDS.  
   
 ## <a name="next-step"></a>Próxima etapa  
  [Tarefa 9: Criando uma hierarquia derivada usando o Master Data Manager](../../2014/tutorials/task-9-creating-a-derived-hierarchy-using-master-data-manager.md)  

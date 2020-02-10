@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 5a8bec1ab4bd19fdf11310fb467035eab1ac34b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483616"
 ---
 # <a name="change-a-derived-hierarchy-name-master-data-services"></a>Alterar o nome de uma hierarquia derivada (Master Data Services)
@@ -25,7 +25,7 @@ ms.locfileid: "65483616"
 ## <a name="prerequisites"></a>Prerequisites  
  Para executar esse procedimento:  
   
--   Você deve ter permissão para acessar a área funcional **Administração do Sistema** .  
+-   Você deve ter permissão para acessar a área funcional **Administração do sistema** .  
   
 -   Você deve ser um administrador de modelo. Para obter mais informações, veja [Administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
@@ -33,21 +33,21 @@ ms.locfileid: "65483616"
   
 1.  No [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], clique em **Administração do Sistema**.  
   
-2.  Sobre o **exibição de modelo** página, na barra de menus, aponte para **gerenciar** e clique em **hierarquias derivadas**.  
+2.  Na página **exibição de modelo** , na barra de menus, aponte para **gerenciar** e clique em **hierarquias derivadas**.  
   
 3.  Na página **Manutenção da Hierarquia Derivada** , na lista **Modelo** , selecione um modelo.  
   
 4.  Selecione a linha da hierarquia derivada cujo nome você deseja alterar.  
   
-5.  Clique em **selecionada de editar hierarquia derivada**.  
+5.  Clique em **Editar hierarquia derivada selecionada**.  
   
-6.  Sobre o **Editar hierarquia derivada** , clique em **Editar derivada nome da hierarquia**.  
+6.  Na página **Editar hierarquia derivada** , clique em **Editar nome da hierarquia derivada**.  
   
 7.  Na caixa **Nome da hierarquia derivada** , digite o nome atualizado da hierarquia.  
   
 8.  Clique em **Salvar hierarquia derivada**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Hierarquias derivadas &#40;Master Data Services&#41;](../../2014/master-data-services/derived-hierarchies-master-data-services.md)   
  [Criar uma hierarquia derivada &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-derived-hierarchy-master-data-services.md)   
  [Excluir uma hierarquia derivada &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-derived-hierarchy-master-data-services.md)  

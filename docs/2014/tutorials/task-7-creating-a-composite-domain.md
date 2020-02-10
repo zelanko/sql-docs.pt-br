@@ -1,5 +1,5 @@
 ---
-title: 'Tarefa 7: Criar um domínio composto | Microsoft Docs'
+title: 'Tarefa 7: Criando um domínio composto | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,24 +11,24 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: bbc00117e10e48adbde37b9f0561610feff8f87e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65488961"
 ---
-# <a name="task-7-creating-a-composite-domain"></a>Tarefa 7: Criar um domínio composto
-  Nesta tarefa, você criará um domínio composto, **Address Validation**, que inclui **Address Line**, **Cidade**, **estado**e  **ZIP** domínios. Um domínio composto permite definir uma regra entre domínios que envolve vários domínios em uma regra. Há outras vantagens para um domínio composto, como analisar um valor de campo em vários domínios.  Por exemplo, um valor para um campo Nome Completo pode ser analisado em domínios separados de Nome, Nome do Meio e Sobrenome. Neste tutorial, você define apenas uma regra entre domínios. Ver [Gerenciando um domínio composto](https://msdn.microsoft.com/library/hh510399.aspx) para obter mais detalhes.  
+# <a name="task-7-creating-a-composite-domain"></a>Tarefa 7: Criando uma regra de domínio composto
+  Nesta tarefa, você cria um domínio composto, uma **validação de endereço**, que abrange os domínios de **linha de endereço**, **cidade**, **estado**e **zip** . Um domínio composto permite definir uma regra entre domínios que envolve vários domínios em uma regra. Há outras vantagens para um domínio composto, como analisar um valor de campo em vários domínios.  Por exemplo, um valor para um campo Nome Completo pode ser analisado em domínios separados de Nome, Nome do Meio e Sobrenome. Neste tutorial, você define apenas uma regra entre domínios. Consulte [Gerenciando um domínio de composição](https://msdn.microsoft.com/library/hh510399.aspx) para obter mais detalhes.  
   
-1.  No painel esquerdo, clique em **criar um domínio composto** na barra de ferramentas.  
+1.  No painel esquerdo, clique no botão **criar um domínio composto** na barra de ferramentas.  
   
-     ![Criar um botão de barra de ferramentas do domínio composto](../../2014/tutorials/media/et-creatingacompositedomain-01.jpg "criar um botão de barra de ferramentas do domínio composto")  
+     ![Botão de barra de ferramentas Criar um Domínio Composto](../../2014/tutorials/media/et-creatingacompositedomain-01.jpg "Botão de barra de ferramentas Criar um Domínio Composto")  
   
-2.  Insira **validação de endereço** para o **nome de domínio composto**.  
+2.  Insira a **validação de endereço** para o nome de **domínio composto**.  
   
-     ![Validação de domínio composto de endereço](../../2014/tutorials/media/et-creatingacompositedomain-02.jpg "domínio composto de validação de endereço")  
+     ![Domínio Composto de Validação de Endereço](../../2014/tutorials/media/et-creatingacompositedomain-02.jpg "Domínio Composto de Validação de Endereço")  
   
-3.  Selecione a lista de domínio **Address Line**, **City**, **estado**, e **Zip** e clique em **seta para a direita** para adicioná-los para o **domínios no domínio composto** lista.  
+3.  Na lista de domínios, **selecione linha de endereço**, **cidade**, **estado**e **CEP** e clique na seta para a **direita** para adicioná-los aos **domínios na lista domínio composto** .  
   
 4.  Clique em **OK** para fechar a caixa de diálogo.  
   

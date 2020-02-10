@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d682257669753665ac397133fcdec0f52e46dedd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010346"
 ---
 # <a name="compare-options-for-storing-blobs-sql-server"></a>Comparar opções de armazenamento de Blobs (SQL Server)
@@ -38,7 +38,8 @@ ms.locfileid: "66010346"
 -   Aplicativos do Windows requerem compatibilidade com APIs do sistema de arquivos para dados de arquivos e diretórios.  
   
 ##  <a name="Filestream"></a> FILESTREAM  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] já inclui o recurso de FILESTREAM, que fornece armazenamento eficiente, gerenciamento e streaming de dados não estruturados armazenados como arquivos no sistema de arquivos. Entretanto, uma solução FILESTREAM exige a programação personalizada e não satisfaz o requisito de compatibilidade total de aplicativos do Windows, descrito anteriormente.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] já inclui o recurso de FILESTREAM, que fornece armazenamento eficiente, gerenciamento e streaming de dados não estruturados armazenados como arquivos no sistema de arquivos. Entretanto, uma solução FILESTREAM exige a programação personalizada e não satisfaz o requisito de compatibilidade total de aplicativos do Windows, descrito anteriormente.  
   
 ##  <a name="FileTables"></a> Tabelas de arquivos  
  O recurso FileTable se baseia nos recursos de FILESTREAM existentes para permitir que os clientes corporativos armazenem dados de arquivos não estruturados e hierarquias de diretório em um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , atendendo aos requisitos de acesso não transacional e compatibilidade de aplicativos do Windows para obter dados baseados em arquivos.  
@@ -47,16 +48,16 @@ ms.locfileid: "66010346"
   
 |Recurso|Servidor de arquivos e solução de banco de dados|Solução FILESTREAM|Solução FileTable|  
 |-------------|---------------------------------------|-------------------------|------------------------|  
-|**Armazenamento único para tarefas de gerenciamento**|Não |Sim|**Sim**|  
+|**Armazenamento único para tarefas de gerenciamento**|Não|Sim|**Sim**|  
 |**Conjunto único de serviços**: pesquisa, relatório, consulta etc.|Não|Sim|**Sim**|  
-|**Modelo de segurança integrada**|Não |Sim|**Sim**|  
+|**Modelo de segurança integrada**|Não|Sim|**Sim**|  
 |**Atualizações in loco de dados FILESTREAM**|Sim|Não|**Sim**|  
-|**Hierarquia de arquivos e diretórios mantida no banco de dados**|Não|Não |**Sim**|  
-|**Compatibilidade de aplicativos do Windows**|Sim|Não |**Sim**|  
+|**Hierarquia de arquivos e diretórios mantida no banco de dados**|Não|Não|**Sim**|  
+|**Compatibilidade de aplicativos do Windows**|Sim|Não|**Sim**|  
 |**Acesso relacional a atributos de arquivo**|Não|Não|**Sim**|  
   
 ##  <a name="CompareRBS"></a> Comparando FILESTREAM e repositório de BLOB remoto (RBS)  
- Para uma comparação destes dois recursos, confira essa postagem da equipe de RBS: [Comparação de recursos do SQL Server Remote BLOB Store e FILESTREAM](https://go.microsoft.com/fwlink/?LinkId=210317).  
+ Para uma comparação destes dois recursos, consulte esta postagem de blog da equipe de RBS: [Comparação de recursos do Repositório de BLOB Remoto do SQL Server e do FILESTREAM](https://go.microsoft.com/fwlink/?LinkId=210317).  
   
 ##  <a name="more"></a> Mais informações  
  [FILESTREAM &#40;SQL Server&#41;](filestream-sql-server.md)  

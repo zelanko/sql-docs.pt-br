@@ -19,19 +19,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d60518f64bd44b9b2498c9d27711d47753b04cf9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011966"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>Exemplos de importação e exportação em massa de documentos XML (SQL Server)
     
-##  <a name="top"></a> Você pode importar documentos XML em massa em uma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] banco de dados ou em massa exportá-los de um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] banco de dados. Este tópico fornece exemplos de ambas as operações.  
+##  <a name="top"></a>Você pode importar documentos XML em massa em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] um banco de dados ou exportá-los em massa de um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] banco de dados. Este tópico fornece exemplos de ambas as operações.  
   
  Para importar dados em massa de em arquivo de dados para uma tabela ou exibição não particionada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , você pode usar o seguinte:  
   
--   utilitário**bcp**   
+-   utilitário**bcp**  
   
      Você também pode usar o utilitário **bcp** para exportar dados de qualquer lugar de um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em que a instrução SELECT funcionar, incluindo exibições particionadas.  
   
@@ -39,20 +39,20 @@ ms.locfileid: "66011966"
   
 -   INSERT ... SELECT * FROM OPENROWSET(BULK...)  
   
- Para obter mais informações, consulte [importar e exportar em massa dados usando o utilitário bcp &#40;SQL Server&#41; ](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md) e [importar dados em massa usando BULK INSERT ou OPENROWSET&#40;BULK... &#41; &#40;Do SQL Server&#41;](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
+ Para obter mais informações, consulte [importar e exportar dados em massa usando o utilitário bcp &#40;SQL Server&#41;](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md) e [importar dados em massa usando BULK INSERT ou OPENROWSET&#40;BULK... &#41; &#40;](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)SQL Server&#41;.  
   
 ## <a name="examples"></a>Exemplos  
  Os exemplos são:  
   
--   A. [IMPORTAÇÃO de dados XML como um fluxo de bytes binários](#binary_byte_stream)  
+-   a. [Importação em massa de dados XML como um fluxo de bytes binários](#binary_byte_stream)  
   
--   B. [Importação de dados XML em uma linha existente](#existing_row)  
+-   B. [Importação em massa de dados XML em uma linha existente](#existing_row)  
   
--   C. [Importação em massa dados XML de um arquivo que contém um DTD](#file_contains_dtd)  
+-   C. [Importação em massa de dados XML de um arquivo que contém um DTD](#file_contains_dtd)  
   
--   D. [Especificação do terminador de campo explicitamente usando um arquivo de formato](#field_terminator_in_format_file)  
+-   D. [Especificando o terminador de campo explicitamente usando um arquivo de formato](#field_terminator_in_format_file)  
   
--   E. [Exportar dados XML em massa](#bulk_export_xml_data)  
+-   E. [Exportação em massa de dados XML](#bulk_export_xml_data)  
   
 ###  <a name="binary_byte_stream"></a> A. Importação em massa de dados XML como um fluxo de bytes binários  
  Ao importar dados XML em massa de um arquivo que contém uma declaração de codificação que você deseja aplicar, especifique a opção SINGLE_BLOB na cláusula OPENROWSET (BULK…). A opção SINGLE_BLOB assegura que o analisador XML no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] importe os dados de acordo com o esquema de codificação especificado na declaração XML.  
@@ -257,7 +257,7 @@ bcp bulktest..xTable out a-wn.out -N -T -S<server_name>\<instance_name>
   
  [&#91;Início&#93;](#top)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql)   
  [Cláusula SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-clause-transact-sql)   
  [Utilitário bcp](../../tools/bcp-utility.md)   

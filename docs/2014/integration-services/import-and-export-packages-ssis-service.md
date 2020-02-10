@@ -16,16 +16,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9a1d50afde56843942c470017a8534ffa797eb69
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058147"
 ---
 # <a name="import-and-export-packages-ssis-service"></a>Importar e exportar pacotes (serviço SSIS)
     
 > [!IMPORTANT]  
->  Esse tópico discute o serviço [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , um serviço do Windows para o gerenciamento de pacotes do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] dá suporte ao serviço para compatibilidade de versões anteriores com versões anteriores do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. A partir do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], você pode gerenciar objetos como pacotes no servidor do Integration Services.  
+>  Esse tópico discute o serviço [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , um serviço do Windows para o gerenciamento de pacotes do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]dá suporte ao serviço para compatibilidade com versões anteriores do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. A partir do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], você pode gerenciar objetos como pacotes no servidor do Integration Services.  
   
  Os pacotes podem ser salvos na tabela sysssispackages no banco de dados msdb do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou no sistema de arquivos.  
   
@@ -37,20 +37,20 @@ ms.locfileid: "66058147"
   
 -   Pastas no repositório de pacotes SSIS. As duas pastas padrão são nomeadas Sistema de Arquivos e MSDB.  
   
--   O banco de dados msdb [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+-   O banco de dados msdb [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] permite importar e exportar pacotes e, ao fazer isso, alterar o formato de armazenamento e o local de pacotes. Usando os recursos de importação e exportação, você pode adicionar pacotes ao sistema de arquivos, ao repositório de pacotes ou ao banco de dados msdb e copiar pacotes de um formato de armazenamento para outro. Por exemplo, os pacotes salvos no msdb podem ser copiados para o sistema de arquivos e vice-versa.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]oferece a capacidade de importar e exportar pacotes e, ao fazer isso, alterar o formato de armazenamento e o local dos pacotes. Usando os recursos de importação e exportação, você pode adicionar pacotes ao sistema de arquivos, ao repositório de pacotes ou ao banco de dados msdb e copiar pacotes de um formato de armazenamento para outro. Por exemplo, os pacotes salvos no msdb podem ser copiados para o sistema de arquivos e vice-versa.  
   
  Você também pode copiar um pacote em um formato diferente por meio do utilitário do prompt de comando **dtutil** (dtutil.exe). Para obter mais informações, consulte [dtutil Utility](dtutil-utility.md).  
   
 ## <a name="to-import-or-export-a-package"></a>Para importar ou exportar um pacote  
   
 > [!IMPORTANT]  
->  Este tópico discute o serviço [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que faz parte do [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] dá suporte ao serviço [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] para compatibilidade de versões anteriores com o [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. Para obter mais informações sobre o gerenciamento de pacotes no [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], consulte [Servidor do Integration Services &#40;SSIS&#41;](catalog/integration-services-ssis-server-and-catalog.md).  
+>  Este tópico discute o serviço [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que faz parte do [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]dá suporte [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ao serviço para compatibilidade com [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]versões anteriores do. Para obter mais informações sobre o gerenciamento de pacotes no [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], consulte [Servidor do Integration Services &#40;SSIS&#41;](catalog/integration-services-ssis-server-and-catalog.md).  
   
  Você pode importar ou exportar um pacote do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] de ou para os seguintes locais:  
   
--   É possível importar um pacote armazenado em uma instância do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], no sistema de arquivos ou no repositório de pacotes [!INCLUDE[ssIS](../includes/ssis-md.md)]. O pacote importado é salvo no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou em uma pasta do armazenamento de pacotes [!INCLUDE[ssIS](../includes/ssis-md.md)].  
+-   Você pode importar um pacote armazenado em uma instância do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], no sistema de arquivos ou no repositório de [!INCLUDE[ssIS](../includes/ssis-md.md)] pacotes. O pacote importado é salvo no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou em uma pasta do armazenamento de pacotes [!INCLUDE[ssIS](../includes/ssis-md.md)].  
   
 -   É possível exportar um pacote armazenado em uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], no sistema de arquivos ou no Repositório de Pacotes [!INCLUDE[ssIS](../includes/ssis-md.md)] para outro formato e outro local de armazenamento.  
   
@@ -66,31 +66,31 @@ ms.locfileid: "66058147"
   
 1.  Clique em **Iniciar**, aponte para **Microsoft** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]e clique em **SQL Server Management Studio**.  
   
-2.  Na caixa de diálogo **Conectar ao Servidor**, defina as seguintes opções:  
+2.  Na caixa de diálogo **conectar ao servidor** , defina as seguintes opções:  
   
-    -   Na caixa **Tipo de servidor** , selecione **Integration Services**.  
+    -   Na caixa **Tipo de servidor**, selecione **Integration Services**.  
   
     -   Na caixa **Nome do servidor**, forneça um nome do servidor ou clique em **\<Procurar mais...>** e localize o servidor a ser usado.  
   
 3.  Se o Pesquisador de Objetos não estiver aberto, clique em **Pesquisador de Objetos** no menu **Exibir**.  
   
-4.  No Pesquisador de Objetos, expanda a pasta **Pacotes Armazenados** .  
+4.  No Pesquisador de objetos, expanda a pasta **pacotes armazenados** .  
   
 5.  Expanda as subpastas para localizar a pasta para a qual você deseja importar um pacote.  
   
 6.  Clique com o botão direito do mouse na pasta e clique em **Importar Pacote**. Em seguida, proceda de uma das seguintes maneiras:  
   
-    -   Para importar de uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], selecione a opção **SQL Server** e depois especifique o servidor e selecione o modo de autenticação. Se você selecionar a Autenticação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , forneça um nome de usuário e uma senha.  
+    -   Para importar de uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], selecione a opção **SQL Server** e depois especifique o servidor e selecione o modo de autenticação. Se você selecionar a Autenticação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], forneça um nome de usuário e uma senha.  
   
-         Clique no botão Procurar **(...)** , selecione o pacote para importar e clique em **OK.**  
+         Clique no botão Procurar **(...)**, selecione o pacote para importar e clique em **OK.**  
   
-    -   Para importar do sistema de arquivos, selecione a opção **Sistema de arquivos** .  
+    -   Para importar do sistema de arquivos, selecione a opção **Sistema de arquivos**.  
   
-         Clique no botão Procurar **(...)** , selecione o pacote para importar e então clique em **Abrir.**  
+         Clique no botão Procurar **(...)**, selecione o pacote para importar e então clique em **Abrir.**  
   
-    -   Para importar usando o Repositório de Pacotes [!INCLUDE[ssIS](../includes/ssis-md.md)] , selecione a opção **Repositório de Pacotes SSIS** e especifique o servidor.  
+    -   Para importar usando o Repositório de Pacotes [!INCLUDE[ssIS](../includes/ssis-md.md)], selecione a opção **Repositório de Pacotes SSIS** e especifique o servidor.  
   
-         Clique no botão Procurar **(...)** , selecione o pacote para importar e clique em **OK.**  
+         Clique no botão Procurar **(...)**, selecione o pacote para importar e clique em **OK.**  
   
 7.  Opcionalmente, atualize o nome de pacote.  
   
@@ -102,37 +102,37 @@ ms.locfileid: "66058147"
   
 1.  Clique em **Iniciar**, aponte para **Microsoft** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]e clique em **SQL Server Management Studio**.  
   
-2.  Na caixa de diálogo **Conectar ao Servidor** , defina as seguintes opções:  
+2.  Na caixa de diálogo **Conectar ao Servidor**, defina as seguintes opções:  
   
-    -   Na caixa **Tipo de servidor** , selecione **Integration Services**.  
+    -   Na caixa **Tipo de servidor**, selecione **Integration Services**.  
   
     -   Na caixa **Nome do servidor**, forneça um nome do servidor ou clique em **\<Procurar mais...>** e localize o servidor a ser usado.  
   
 3.  Se o Pesquisador de Objetos não estiver aberto, clique em **Pesquisador de Objetos** no menu **Exibir**.  
   
-4.  No Pesquisador de Objetos, expanda a pasta **Pacotes Armazenados**.  
+4.  No Pesquisador de objetos, expanda a pasta **pacotes armazenados** .  
   
 5.  Expanda as subpastas para localizar o pacote que deseja exportar.  
   
-6.  Clique com o botão direito do mouse no pacote, clique em **Exportar**e depois execute uma das seguintes tarefas:  
+6.  Clique com o botão direito do mouse no pacote, clique em **Exportar** e depois execute uma das seguintes tarefas:  
   
-    -   Para exportar para uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], selecione a opção **SQL Server** e depois especifique o servidor e selecione o modo de autenticação. Se você selecionar a Autenticação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , forneça um nome de usuário e uma senha.  
+    -   Para exportar para uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], selecione a opção **SQL Server** e depois especifique o servidor e selecione o modo de autenticação. Se você selecionar a Autenticação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], forneça um nome de usuário e uma senha.  
   
          Clique no botão Procurar **(...)** e expanda a pasta do **Pacotes SSIS** para localizar a pasta na qual deseja salvar o pacote. Opcionalmente, atualize o nome padrão do pacote e então clique em **OK**.  
   
-    -   Para exportar para o sistema de arquivos, selecione a opção **Sistema de Arquivos** .  
+    -   Para exportar para o sistema de arquivos, selecione a opção **Sistema de Arquivos**.  
   
          Clique no botão Procurar **(...)** para localizar a pasta para a qual deseja exportar o pacote, digite o nome do arquivo do pacote e clique em **Salvar**.  
   
-    -   Para exportar para o repositório de pacotes [!INCLUDE[ssIS](../includes/ssis-md.md)] , selecione a opção **Repositório de Pacotes SISS** e especifique o servidor.  
+    -   Para exportar para o repositório de pacotes [!INCLUDE[ssIS](../includes/ssis-md.md)], selecione a opção **Repositório de Pacotes SISS** e especifique o servidor.  
   
-         Clique no botão Procurar **(...)** , expanda a pasta dos **Pacotes SSIS** e selecione a pasta na qual deseja salvar o pacote. Opcionalmente, digite um novo nome para o pacote na caixa de texto **Nome do Pacote** . [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+         Clique no botão Procurar **(...)**, expanda a pasta dos **Pacotes SSIS** e selecione a pasta na qual deseja salvar o pacote. Opcionalmente, digite um novo nome para o pacote na caixa de texto **Nome do Pacote**. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 7.  Para atualizar o nível de proteção do pacote, clique no botão Procurar **(...)** e, na caixa de diálogo **Nível de Proteção do Pacote**, escolha um nível de proteção diferente. Se a opção **Criptografar dados confidenciais com senhas** ou **Criptografar todos os dados com senhas** for selecionada, digite e confirme uma senha.  
   
 8.  Clique em **OK** para completar a exportação.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Gerenciamento de pacotes &#40;Serviço SSIS&#41;](service/package-management-ssis-service.md)  
   
   

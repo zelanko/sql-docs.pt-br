@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cd43f430f43f31435df6fff71687136f4bd5f9e7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010355"
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>Acessar FileTables com APIs de entrada e saída de arquivo
@@ -63,7 +63,7 @@ ms.locfileid: "66010355"
 ##  <a name="supported"></a> Operações do sistema de arquivos com suporte  
  As FileTables oferecem suporte a APIs do sistema de arquivos relacionadas às seguintes operações do sistema de arquivos:  
   
--   Gerenciamento de diretório  
+-   Gerenciamento de diretórios  
   
 -   Gerenciamento de arquivos  
   
@@ -77,7 +77,7 @@ ms.locfileid: "66010355"
   
 ##  <a name="considerations"></a> Considerações adicionais sobre acesso de E/S a arquivos para FileTables  
   
-###  <a name="vnn"></a> Usando VNNs (nomes de rede virtual) com grupos de disponibilidade AlwaysOn  
+###  <a name="vnn"></a>Usando VNNs (nomes de rede virtual) com Grupos de Disponibilidade AlwaysOn  
  Quando o banco de dados que contém dados FILESTREAM ou FileTable pertence a um grupo de disponibilidade AlwaysOn, todo o acesso a dados FILESTREAM ou FileTable por meio das APIs do sistema de arquivos deve usar VNNs em vez de nomes de computadores. Para obter mais informações, veja [FILESTREAM e FileTable com grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/filestream-and-filetable-with-always-on-availability-groups-sql-server.md).  
   
 ###  <a name="partial"></a> Atualizações parciais  
@@ -102,7 +102,7 @@ ms.locfileid: "66010355"
   
 ##  <a name="funclist"></a> Funcionalidade do sistema de arquivos com suporte em FileTables  
   
-|Recurso|Supported|Comentários|  
+|Recurso|Suportado|Comentários|  
 |----------------|---------------|--------------|  
 |**Oplocks**|Sim|Há suporte para oplocks de Nível 2, Nível 1, Lote e Filtro.|  
 |**Atributos estendidos**|Não||  
@@ -111,7 +111,7 @@ ms.locfileid: "66010355"
 |**Fluxos nomeados**|Não||  
 |**Arquivos esparsos**|Sim|A dispersão pode ser definida somente em arquivos e afeta o armazenamento do fluxo de dados. Como os dados FILESTREAM são armazenados em volumes NTFS, o recurso FileTable oferece suporte a arquivos esparsos encaminhando as solicitações ao sistema de arquivos NTFS.|  
 |**Compactação**|Sim||  
-|**Criptografia**|Sim||  
+|**Encryptiion**|Sim||  
 |**TxF**|Não||  
 |**Ids de arquivo**|Não||  
 |**Ids de objeto**|Não||  
@@ -125,7 +125,7 @@ ms.locfileid: "66010355"
 |**Segurança**|Não|A segurança em nível de compartilhamento do Windows e a segurança em nível de tabela e coluna do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são impostas.|  
 |**Diário USN**|Não|As alterações de metadados em arquivos e diretórios de uma FileTable são operações DML em um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Portanto, elas são registradas em log no arquivo de log de banco de dados correspondente. Entretanto, não são registradas no diário NTFS USN (com exceção de alterações de tamanho).<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem ser usados para capturar informações semelhantes.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Carregar arquivos em FileTables](load-files-into-filetables.md)   
  [Work with Directories and Paths in FileTables](work-with-directories-and-paths-in-filetables.md)   
  [Acessar FileTables com Transact-SQL](access-filetables-with-transact-sql.md)   

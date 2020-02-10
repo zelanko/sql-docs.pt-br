@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 81c87a7990c6c7125cbccbe99050cd5ee477e6d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483069"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-mdsmodeldeploy"></a>Implantar um pacote de implantação de modelo usando MDSModelDeploy
@@ -46,7 +46,7 @@ ms.locfileid: "65483069"
   
 2.  Abra um prompt de comando e navegue para MDSModelDeploy.exe.  
   
-    -   Se o MDS estiver instalado no local padrão, a ferramenta está disponível em *unidade*: \Program Files\Microsoft SQL Server\120\Master Data Services\Configuration\MDSModelDeploy.exe  
+    -   Se o MDS estiver instalado no local padrão, a ferramenta estará disponível em *unidade*: \Program Files\Microsoft SQL Server\120\Master data Services\Configuration\MDSModelDeploy.exe  
   
     -   Se o MDS não estiver instalado no local padrão, pesquise MDSModelDeploy.exe no comutador local.  
   
@@ -91,9 +91,9 @@ ms.locfileid: "65483069"
   
 6.  Quando o pacote é implantado com êxito, uma mensagem é exibida informando que "A operação MDSModelDeploy foi concluída com êxito".  
   
- **Observações:**  
+ **Registra**  
   
--   Se uma exibição de assinatura no pacote tiver o mesmo nome de uma exibição de assinatura em um modelo existente, a exibição é criada como *subscriptionviewname*. Se esse nome já estiver em uso, a exibição de assinatura não será criada.  
+-   Se uma exibição de assinatura no pacote tiver o mesmo nome que uma exibição de assinatura em um modelo existente, a exibição será criada como *ModelName. subscriptionviewname*. Se esse nome já estiver em uso, a exibição de assinatura não será criada.  
   
 -   O processo de implantação tem quatro etapas:  
   
@@ -116,7 +116,7 @@ ms.locfileid: "65483069"
   
 -   [Atribuir permissões de objeto de modelo &#40;Master Data Services&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Implantando modelos &#40;Master Data Services&#41;](../../2014/master-data-services/deploying-models-master-data-services.md)  
   
   

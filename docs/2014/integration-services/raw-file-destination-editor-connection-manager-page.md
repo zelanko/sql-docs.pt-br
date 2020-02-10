@@ -1,5 +1,5 @@
 ---
-title: Editor de destino arquivo bruto (página Gerenciador de Conexão) | Microsoft Docs
+title: Editor de destino de arquivo bruto (página Gerenciador de conexões) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2677d0dd1f4697177171ba0edd4641ec02110310
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056571"
 ---
 # <a name="raw-file-destination-editor-connection-manager-page"></a>Editor de destino Arquivo Bruto (página Gerenciador de Conexões)
@@ -61,7 +61,7 @@ ms.locfileid: "66056571"
  **Alias de Saída**  
  Especifique um nome alternativo a ser usado para a coluna de saída.  
   
-## <a name="see-also"></a>Consulte também  
- [Destino do arquivo bruto](data-flow/raw-file-destination.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Destino do Arquivo Bruto](data-flow/raw-file-destination.md)  
   
   

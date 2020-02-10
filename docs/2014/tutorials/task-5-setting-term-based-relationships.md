@@ -1,5 +1,5 @@
 ---
-title: 'Tarefa 5: Definindo o termo relações baseadas em | Microsoft Docs'
+title: 'Tarefa 5: Configurando relações baseadas em termos | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -11,22 +11,22 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 0e9a6a1a96d208077e70c0cf1835cff6e34650dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65489116"
 ---
-# <a name="task-5-setting-term-based-relationships"></a>Tarefa 5: Definir relações baseadas em termos
-  Nesta tarefa, você define algumas relações baseadas em termos para obter valores para o **Supplier Name** domínio. Uma relação baseada em termo permite que você faça uma correção para um termo que faz parte de um valor em um domínio. Elas permitem que diversos valores idênticos, exceto pela ortografia de uma parte comum deles, sejam considerados como sinônimos idênticos. Por exemplo, **Inc** pode ser corrigido para **Incorporated**. O DQS usa essas relações nos processos de descoberta de conhecimento, limpeza ou correspondência. Ver [criar relações baseadas em termos](https://msdn.microsoft.com/library/hh510404.aspx) para obter mais detalhes.  
+# <a name="task-5-setting-term-based-relationships"></a>Tarefa 5: Definindo relações baseadas em termos
+  Nesta tarefa, você define algumas relações baseadas em termos para valores para o domínio **nome do fornecedor** . Uma relação baseada em termos permite que você faça uma correção em um termo que faz parte de um valor em um domínio. Elas permitem que diversos valores idênticos, exceto pela ortografia de uma parte comum deles, sejam considerados como sinônimos idênticos. Por exemplo, **Inc.** pode ser corrigido para **incorporado**. O DQS usa essas relações nos processos de descoberta de conhecimento, limpeza ou correspondência. Consulte [criar relações baseadas em termos](https://msdn.microsoft.com/library/hh510404.aspx) para obter mais detalhes.  
   
-1.  Selecione **Supplier Name** na **lista de domínios**.  
+1.  Selecione **nome do fornecedor** na **lista de domínios**.  
   
-2.  Alterne para o **relações baseadas em** guia no painel à direita.  
+2.  Alterne para a guia **relações baseadas em termos** no painel direito.  
   
-3.  Clique em **adicionar nova relação** na barra de ferramentas para adicionar uma relação à tabela.  
+3.  Clique no botão **Adicionar nova relação** na barra de ferramentas para adicionar uma relação à tabela.  
   
-4.  Tipo **co** para o **valor** campo e **empresa** para o **correto para** campo.  
+4.  Digite **co.** para o campo de **valor** e a **empresa** para o campo **corrigir para** .  
   
 5.  Repita as duas etapas anteriores para os seguintes valores:  
   
@@ -35,7 +35,7 @@ ms.locfileid: "65489116"
     |Corp.|Corporation|  
     |Inc.|Incorporated|  
   
-     ![Relações baseadas em termos](../../2014/tutorials/media/et-settingtermbasedrelations.jpg "relações baseadas em termos")  
+     ![Relações baseadas em termos](../../2014/tutorials/media/et-settingtermbasedrelations.jpg "Relações baseadas em termos")  
   
 ## <a name="next-step"></a>Próxima etapa  
  [Tarefa 6: Definindo sinônimos](../../2014/tutorials/task-6-setting-synonyms.md)  

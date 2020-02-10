@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 87e5446d4d6c9c0997dadbd2d3f9964b8d4271ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483903"
 ---
 # <a name="entities-master-data-services"></a>Entidades (Master Data Services)
@@ -31,7 +31,7 @@ ms.locfileid: "65483903"
 ## <a name="how-entities-relate-to-other-model-objects"></a>Como as entidades se relacionam com outros objetos modelo  
  Você pode pensar em uma entidade como uma tabela que contém dados mestre, onde as linhas representam os membros, e as colunas representam atributos.  
   
- ![Entidade do Master Data Services representada como tabela](../../2014/master-data-services/media/mds-conc-entity-table.gif "Entidade do Master Data Services representada como tabela")  
+ ![Entidade de Master Data Services representada como tabela](../../2014/master-data-services/media/mds-conc-entity-table.gif "Entidade de Master Data Services representada como tabela")  
   
  Você popula a entidade com uma lista de dados mestre que você deseja gerenciar.  
   
@@ -49,9 +49,9 @@ ms.locfileid: "65483903"
  Você pode dar permissão para uma entidade a usuários, o que inclui objetos de modelo relacionados. Para obter mais informações, consulte [Permissões de entidade &#40;Master Data Services&#41;](../../2014/master-data-services/entity-permissions-master-data-services.md).  
   
 ## <a name="entity-examples"></a>Exemplo de entidades  
- O seguinte exemplo mostra uma entidade que tem estes atributos: Name, Code, Subcategory, StandardCost, ListPrice e FilePhoto. Esses atributos descrevem os membros, Cada membro é representado por uma única linha de valores de atributo.  
+ O exemplo a seguir, mostra uma entidade que tem estes atributos: Name, Code, Subcategory, StandardCost, ListPrice e FilePhoto. Esses atributos descrevem os membros, Cada membro é representado por uma única linha de valores de atributo.  
   
- ![Tabela de entidade de produto de bicicleta](../../2014/master-data-services/media/mds-conc-entity-table-w-data.gif "Tabela de entidade de produto de bicicleta")  
+ ![Tabela da entidade de produto bicicleta](../../2014/master-data-services/media/mds-conc-entity-table-w-data.gif "Tabela da entidade de produto bicicleta")  
   
  No exemplo a seguir, a entidade Product é a entidade central. A entidade Subcategory é um atributo baseado em domínio da entidade Product. A entidade Category é um atributo baseado em domínio da entidade Subcategory. StandardCost e ListPrice são atributos de forma livre e FilePhoto é um atributo de arquivo da entidade Product.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "65483903"
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  
 |Criar uma nova entidade.|[Criar uma entidade &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-entity-master-data-services.md)|  
-|Especificar que uma entidade pode conter hierarquias explícitas e coleções.|[Habilitar uma entidade para hierarquias explícitas e coleções &#40;Master Data Services&#41;](../../2014/master-data-services/enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|  
+|Especificar que uma entidade pode conter hierarquias explícitas e coleções.|[Habilite uma entidade para hierarquias explícitas e coleções &#40;Master Data Services&#41;](../../2014/master-data-services/enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|  
 |Alterar o nome de uma entidade existente.|[Alterar um nome de entidade &#40;Master Data Services&#41;](edit-an-entity-master-data-services.md)|  
 |Excluir uma entidade existente.|[Excluir uma entidade &#40;Master Data Services&#41;](../../2014/master-data-services/delete-an-entity-master-data-services.md)|  
 |Atribuir permissão para entidades.|[Atribuir permissões de objeto de modelo &#40;Master Data Services&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)|  

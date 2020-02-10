@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ebb1f67a981396f1f7bb2026f66a528052b0e4df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011153"
 ---
 # <a name="limit-search-results-with-rank"></a>Limite resultados de pesquisa com RANK
@@ -37,7 +37,7 @@ ms.locfileid: "66011153"
   
 ##  <a name="examples"></a> Exemplos do uso de RANK para limitar os resultados da pesquisa  
   
-### <a name="example-a-searching-for-only-the-top-three-matches"></a>Exemplo a: pesquisando apenas as três primeiras correspondências  
+### <a name="example-a-searching-for-only-the-top-three-matches"></a>Exemplo A: Pesquisando apenas as três primeiras correspondências  
  O exemplo a seguir usa CONTAINSTABLE para retornar apenas as três primeiras correspondências.  
   
 ```  
@@ -68,7 +68,7 @@ RANK        Address                          City
 ```  
   
   
-### <a name="example-b-searching-for-the-top-ten-matches"></a>Exemplo b: pesquisando as dez primeiras correspondências  
+### <a name="example-b-searching-for-the-top-ten-matches"></a>Exemplo B: Pesquisando apenas as dez primeiras correspondências  
  O exemplo a seguir usa CONTAINSTABLE para retornar a descrição dos 5 produtos principais onde a coluna `Description` contém a palavra "aluminum" próxima à palavra "light" ou "lightweight".  
   
 ```  
@@ -143,7 +143,7 @@ GO
   
  Estatísticas como `IndexRowCount` podem variar muito. Por exemplo, se um catálogo tem 2 bilhões de linhas no índice mestre, um novo documento será indexado no índice intermediário da memória, e a classificação daquele documento será com base no número de documentos no índice da memória que poderão ser inclinados quando comparados às classificações dos documentos do índice mestre. Por esta razão, recomenda-se que, após qualquer população que resulte em um grande número de linhas, os índices indexados ou reindexados sejam mesclados em um índice mestre usando a função ALTER FULLTEXT CATALOG... Instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] REORGANIZE. O Mecanismo de Texto Completo também mesclará automaticamente os índices com base em parâmetros como o número e o tamanho dos índices intermediários.  
   
- Os valores `MaxOccurrence` são normalizados em 1 de 32 intervalos. Isto significa, por exemplo, que um documento de 50 palavras é tratado da mesma forma que um documento de 100 palavras. Abaixo está a tabela usada para normalização. Como os tamanhos dos documentos estão no intervalo entre valores de tabela adjacentes 32 e 128, eles são tratados como tendo o mesmo tamanho, 128 (32 < `docLength` < = 128).  
+ Os valores `MaxOccurrence` são normalizados em 1 de 32 intervalos. Isto significa, por exemplo, que um documento de 50 palavras é tratado da mesma forma que um documento de 100 palavras. Abaixo está a tabela usada para normalização. Como os comprimentos do documento estão no intervalo entre os valores de tabela adjacentes 32 e 128, eles são efetivamente tratados como tendo o mesmo comprimento, 128 `docLength` (32 < <= 128).  
   
 ```  
 { 16, 32, 128, 256, 512, 725, 1024, 1450, 2048, 2896, 4096, 5792, 8192, 11585,   
@@ -203,7 +203,7 @@ qtf is the frequency of the term in the query.
 ```  
   
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Consulta com pesquisa de texto completo](query-with-full-text-search.md)  
   
   

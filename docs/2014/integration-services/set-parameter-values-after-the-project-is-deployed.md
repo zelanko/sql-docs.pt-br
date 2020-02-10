@@ -1,5 +1,5 @@
 ---
-title: Definir valores de parâmetro depois que o projeto é implantado | Microsoft Docs
+title: Definir valores de parâmetro depois que o projeto for implantado | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 910de9d388e60ae3664153e2f6cb3bb5203b289c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055774"
 ---
 # <a name="set-parameter-values-after-the-project-is-deployed"></a>Definir valores de parâmetros depois que o projeto foi implantado
@@ -28,13 +28,13 @@ ms.locfileid: "66055774"
   
 3.  Abra a página de parâmetros com um clique em **Parâmetros** sob **Selecionar uma página**.  
   
-4.  Selecione o parâmetro desejado na lista **Parâmetros**. Observação: a coluna **Contêiner** ajuda a diferenciar os parâmetros de projeto dos parâmetros de pacote.  
+4.  Selecione o parâmetro desejado na lista **Parâmetros**. Observação: a coluna **Contêiner** ajuda a distinguir os parâmetros de projeto dos parâmetros de pacote.  
   
 5.  Na coluna **Valor**, especifique o valor do parâmetro padrão de servidor desejado.  
   
  Para definir padrões de servidor com Transact-SQL, use o procedimento armazenado [catalog.set_object_parameter_value &#40;Banco de Dados SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-set-object-parameter-value-ssisdb-database). Para exibir os padrões atuais de servidor, consulte a exibição [catalog.object_parameters &#40;Banco de Dados SSISDB&#41;](/sql/integration-services/system-views/catalog-object-parameters-ssisdb-database). Para apagar um valor padrão de servidor, use o procedimento armazenado [catalog.clear_object_parameter_value &#40;Banco de Dados SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-clear-object-parameter-value-ssisdb-database).  
   
-## <a name="see-also"></a>Consulte também  
- [Serviços de integração &#40;SSIS&#41; parâmetros](integration-services-ssis-package-and-project-parameters.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Integration Services parâmetros&#41; &#40;SSIS](integration-services-ssis-package-and-project-parameters.md)  
   
   

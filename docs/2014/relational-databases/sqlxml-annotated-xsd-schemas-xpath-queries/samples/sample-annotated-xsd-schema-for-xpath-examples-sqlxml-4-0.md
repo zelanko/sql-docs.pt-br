@@ -1,5 +1,5 @@
 ---
-title: Esquema XSD anotado de exemplo para exemplos de XPath (SQLXML 4.0) | Microsoft Docs
+title: Exemplo de esquema XSD anotado para exemplos de XPath (SQLXML 4,0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,20 +15,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f0464b11906d08b22c100efa6d142b16fb8fa679
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010724"
 ---
 # <a name="sample-annotated-xsd-schema-for-xpath-examples-sqlxml-40"></a>Esquema XSD anotado de exemplo para exemplos de XPath (SQLXML 4.0)
-  As consultas XPath de exemplo desta seção se referem a um esquema de mapeamento. O esquema de mapeamento é um arquivo XSD (Esquema XML) anotado. Para obter mais informações sobre esquemas de mapeamento, consulte [Introdução a esquemas de XSD anotados &#40;SQLXML 4.0&#41;](../../sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md).  
+  As consultas XPath de exemplo desta seção se referem a um esquema de mapeamento. O esquema de mapeamento é um arquivo XSD (Esquema XML) anotado. Para obter mais informações sobre esquemas de mapeamento, consulte [introdução aos esquemas XSD anotados &#40;SQLXML 4,0&#41;](../../sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md).  
   
  Você precisa dos itens a seguir para executar consultas XPath no esquema XSD anotado:  
   
 -   Crie um modelo com uma consulta de XPath. No modelo, você especifica o esquema de mapeamento em que a consulta XPath será executada. Nesse caso, o esquema de mapeamento deverá estar armazenado no diretório (ou um de seus subdiretórios, caso em que um caminho relativo será especificado como valor do atributo `mapping-schema` no modelo) associado ao arquivo de modelo.  
   
--   Crie um aplicativo de teste que use extensões de SQLXML para o ADO executar consultas. Para obter mais informações, consulte [usando o ADO para executar consultas do SQLXML 4.0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+-   Crie um aplicativo de teste que use extensões de SQLXML para o ADO executar consultas. Para obter mais informações, consulte [usando o ADO para executar consultas do SQLXML 4,0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Em todos os exemplos desta seção, para fins de ilustração, as consultas XPath serão especificadas em um modelo e o modelo será executado usando ADO. Portanto, você deverá usar o arquivo de mapeamento de esquema a seguir, SampleSchema1.xml. Salve este arquivo no diretório onde seus modelos estão armazenados.  
   

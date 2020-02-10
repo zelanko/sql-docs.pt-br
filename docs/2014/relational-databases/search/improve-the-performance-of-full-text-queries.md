@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 96a37b1b59043079f52ca922f1ab3e7dfc9cc0ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011271"
 ---
 # <a name="improve-the-performance-of-full-text-queries"></a>Melhorar o desempenho de consultas de texto completo
@@ -26,7 +26,8 @@ ms.locfileid: "66011271"
   
 -   Reorganize o catálogo de texto completo usando [ALTER FULLTEXT CATALOG REORGANIZE](/sql/t-sql/statements/alter-fulltext-catalog-transact-sql). Faça isso antes de testar o desempenho, pois a execução dessa instrução provoca uma mesclagem mestra dos índices de texto completo desse catálogo.  
   
--   Restrinja suas opções de colunas de chave de texto completo a uma coluna pequena. Embora haja suporte para uma coluna de 900 bytes, é recomendável usar uma coluna de chave menor em um índice de texto completo. `int` e `bigint` fornecem o melhor desempenho.  
+-   Restrinja suas opções de colunas de chave de texto completo a uma coluna pequena. Embora haja suporte para uma coluna de 900 bytes, é recomendável usar uma coluna de chave menor em um índice de texto completo. 
+  `int` e `bigint` fornecem o melhor desempenho.  
   
 -   O uso de uma chave de texto completo de inteiro evita uma junção com a tabela de mapeamento **docid** . Portanto, uma chave de texto completo de inteiro melhora o desempenho de consultas consideravelmente e aprimora o desempenho de rastreamento. Outros benefícios de desempenho poderão ser obtidos se a chave de texto completo também for a chave de índice clusterizado.  
   
@@ -48,9 +49,9 @@ ms.locfileid: "66011271"
 -   Para aplicativos que contêm afirmações de relação seletiva, as consultas que usam predicados relacionais seletivos e predicados de texto completo não seletivos podem ter melhor desempenho quando escritas para usar o otimizador de consulta. Dessa forma, o otimizador de consulta pode decidir se poderá explorar o predicado ou a aplicação de intervalo para gerar um plano de consulta eficaz. Esta abordagem é mais simples e geralmente mais eficiente do que a indexação de dados relacionais como dados de texto completo.  
   
 ## <a name="related-resources"></a>Recursos relacionados  
- [Pesquisa de texto completo do SQL Server 2008: recursos internos e aprimoramentos](https://go.microsoft.com/fwlink/?LinkId=129544)  
+ [Pesquisa de Texto Completo do SQL Server 2008: Operações internas e aprimoramentos](https://go.microsoft.com/fwlink/?LinkId=129544)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [sys.dm_fts_memory_buffers &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql)   
  [sys.dm_fts_memory_pools &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-pools-transact-sql)  
   

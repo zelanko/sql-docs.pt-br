@@ -1,5 +1,5 @@
 ---
-title: Especificando operadores relacionais em consultas XPath (SQLXML 4.0) | Microsoft Docs
+title: Especificando operadores relacionais em consultas XPath (SQLXML 4,0) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,25 +16,25 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1597893c203f1223ad916f5c7acecb66ff554c76
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012436"
 ---
 # <a name="specifying-relational-operators-in-xpath-queries-sqlxml-40"></a>Especificando operadores relacionais em consultas XPath (SQLXML 4.0)
-  Os seguintes exemplos mostram como operadores relacionais são especificados em consultas XPath. As consultas XPath nesses exemplos são especificadas com relação ao esquema de mapeamento contido em SampleSchema1.xml. Para obter informações sobre esse esquema de exemplo, consulte [anotado de exemplo de esquema XSD para exemplos de XPath &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+  Os seguintes exemplos mostram como operadores relacionais são especificados em consultas XPath. As consultas XPath nesses exemplos são especificadas com relação ao esquema de mapeamento contido em SampleSchema1.xml. Para obter informações sobre este esquema de exemplo, consulte [exemplo de esquema XSD anotado para exemplos de XPath &#40;SQLXML 4,0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-specify-relational-operator"></a>A. Especifique operador relacional  
- Essa consulta XPath retorna os elementos filho do  **\<cliente >** elemento no qual o **CustomerID** valor do atributo é "1" e onde qualquer filho  **\<ordem >** elementos contêm uma  **\<OrderDetail >** filho com um **OrderQty** atributo com um valor maior que 3:  
+### <a name="a-specify-relational-operator"></a>a. Especifique operador relacional  
+ Essa consulta XPath retorna os elementos filho do elemento de ** \<>do cliente** , em que o valor do atributo **CustomerID** é "1" e onde qualquer ** \<ordem filho>** elementos contêm um ** \<OrderDetail>** filho com um atributo **OrderQty** com um valor maior que 3:  
   
 ```  
 /child::Customer[@CustomerID="1"]/Order/OrderDetail[@OrderQty > 3]  
 ```  
   
- O predicado especificado nos filtros de colchetes a  **\<cliente >** elementos. Somente o  **\<cliente >** elementos que têm pelo menos um  **\<OrderDetail >** neto com um valor de atributo OrderQty maior que 3 são retornados.  
+ O predicado especificado nos colchetes filtra os elementos de ** \<>do cliente** . Somente os elementos de ** \<>do cliente** que têm pelo menos um ** \<OrderDetail>** neto com um valor de atributo OrderQty maior que 3 são retornados.  
   
  O eixo `child` é o padrão. Assim, a consulta pode ser especificada como:  
   
@@ -44,7 +44,7 @@ ms.locfileid: "66012436"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Para testar a consulta XPath com relação ao esquema de mapeamento  
   
-1.  Cópia de [exemplos de código de esquema](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) e cole-o em um arquivo de texto. Salve o arquivo como SampleSchema1.xml.  
+1.  Copie o [código do esquema de exemplo](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) e cole-o em um arquivo de texto. Salve o arquivo como SampleSchema1.xml.  
   
 2.  Crie o modelo a seguir (SpecifyRelationalA.xml) e salve-o no diretório em que SampleSchema1.xml foi salvo.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "66012436"
   
 3.  Crie e use o script de teste SQLXML 4.0 (Sqlxml4test.vbs) para executar o modelo.  
   
-     Para obter mais informações, consulte [usando o ADO para executar consultas do SQLXML 4.0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Para obter mais informações, consulte [usando o ADO para executar consultas do SQLXML 4,0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Aqui está o conjunto de resultados da execução do modelo:  
   
@@ -79,24 +79,24 @@ ms.locfileid: "66012436"
 ```  
   
 ### <a name="b-specify-relational-operator-in-the-xpath-query-and-use-boolean-function-to-compare-the-result"></a>B. Especifique o operador relacional na consulta XPath e use a função Booliano para comparar o resultado  
- Esta consulta retorna todos os  **\<ordem >** filhos do elemento do nó de contexto que tenham um **SalesPersonID** valor inferior a 270 do atributo:  
+ Essa consulta retorna todos os ** \<** elementos de>de ordem dos filhos do nó de contexto que têm um valor de atributo **vendedorid** inferior a 270:  
   
 ```  
 /child::Customer/child::Order[(attribute::SalesPersonID < 270)=true()]  
 ```  
   
- Um atalho para o `attribute` eixo (@) podem ser especificados e porque o `child` eixo é o padrão, ele pode ser omitido da consulta:  
+ Um atalho para o `attribute` eixo (@) pode ser especificado e, como o `child` eixo é o padrão, ele pode ser omitido da consulta:  
   
 ```  
 /Customer/Order[(@SalesPersonID < 270)=true()]  
 ```  
   
 > [!NOTE]  
->  Quando essa consulta é especificada em um modelo, o < caractere deve ser a entidade codificada porque o < caractere tem um significado especial em um documento XML. Em um modelo, use `<` para especificar o < caractere.  
+>  Quando essa consulta é especificada em um modelo, o caractere de < deve ser codificado de entidade porque o caractere de < tem um significado especial em um documento XML. Em um modelo, use `<` para especificar o caractere de <.  
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Para testar a consulta XPath com relação ao esquema de mapeamento  
   
-1.  Cópia de [exemplos de código de esquema](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) e cole-o em um arquivo de texto. Salve o arquivo como SampleSchema1.xml.  
+1.  Copie o [código do esquema de exemplo](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) e cole-o em um arquivo de texto. Salve o arquivo como SampleSchema1.xml.  
   
 2.  Crie o modelo a seguir (SpecifyRelationalB.xml) e salve-o no diretório em que SampleSchema1.xml foi salvo.  
   
@@ -116,7 +116,7 @@ ms.locfileid: "66012436"
   
 3.  Crie e use o script de teste SQLXML 4.0 (Sqlxml4test.vbs) para executar o modelo.  
   
-     Para obter mais informações, consulte [usando o ADO para executar consultas do SQLXML 4.0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Para obter mais informações, consulte [usando o ADO para executar consultas do SQLXML 4,0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Aqui está o conjunto de resultados parcial da execução do modelo:  
   

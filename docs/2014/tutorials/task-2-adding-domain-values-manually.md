@@ -11,26 +11,26 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 459d0160e9977ed58ebafe5feb9e58eaa5939f72
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65488382"
 ---
-# <a name="task-2-adding-domain-values-manually"></a>Tarefa 2: Adicionar valores de domínio manualmente
-  Nesta tarefa, você adiciona um valor para o **país** domínio manualmente. Ver [Change Domain Values](https://msdn.microsoft.com/library/hh510408.aspx) tópico para obter mais detalhes sobre os campos nessa página.  
+# <a name="task-2-adding-domain-values-manually"></a>Tarefa 2: Adicionando valores de domínio manualmente
+  Nesta tarefa, você adicionará um valor para o domínio do **país** manualmente. Consulte o tópico [alterar valores de domínio](https://msdn.microsoft.com/library/hh510408.aspx) para obter mais detalhes sobre os campos nesta página.  
   
-1.  Clique em **país** domínio na **lista de domínios**.  
+1.  Clique em domínio **país** na **lista domínio**.  
   
-2.  No painel direito, alterne para o **valores de domínio** guia.  
+2.  No painel direito, alterne para a guia **valores de domínio** .  
   
-3.  Clique em **adicionar novo valor de domínio** na barra de ferramentas no painel direito.  
+3.  Clique no botão **Adicionar novo valor de domínio** na barra de ferramentas no painel direito.  
   
-     ![Adicionar novo valor de domínio - botão de barra de ferramentas](../../2014/tutorials/media/et-addingdomainvaluesmanually-01.jpg "adicionar novo valor de domínio - botão de barra de ferramentas")  
+     ![Adicionar Novo Valor de Domínio - Botão da Barra de Ferramentas](../../2014/tutorials/media/et-addingdomainvaluesmanually-01.jpg "Adicionar Novo Valor de Domínio - Botão da Barra de Ferramentas")  
   
-4.  Tipo de **dos Estados Unidos** para o **valor** campo e pressione **ENTER**. Você pode ver que, por padrão, o **tipo** é definido como **correto** (marca de seleção verde). O tipo pode ser definido como **erro** (cruz vermelha) ou **inválido** (triângulo laranja) e um valor correto pode ser inserido no **correto para** campo.  
+4.  Digite **Estados Unidos** para o campo **valor** e pressione **Enter**. Você pode ver que, por padrão, o **tipo** está definido como **correto** (marca de seleção verde). O tipo pode ser definido como **erro** (cruz vermelha) ou **inválido** (triângulo laranja) e um valor correto pode ser inserido no campo **corrigir para** .  
   
-     ![Estados Unidos para valor de domínio](../../2014/tutorials/media/et-addingdomainvaluesmanually-02.jpg "dos Estados Unidos para valor de domínio")  
+     ![Estados Unidos para Valor de Domínio](../../2014/tutorials/media/et-addingdomainvaluesmanually-02.jpg "Estados Unidos para Valor de Domínio")  
   
 ## <a name="next-step"></a>Próxima etapa  
  [Tarefa 3: Importando valores de domínio de um arquivo do Excel](../../2014/tutorials/task-3-importing-domain-values-from-an-excel-file.md)  

@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 43e5a9a6adcca7504aa90825ecd10e53e669c7e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010006"
 ---
 # <a name="load-files-into-filetables"></a>Carregar arquivos em FileTables
@@ -30,7 +30,7 @@ ms.locfileid: "66010006"
 |Localização atual dos arquivos|Opções de migração|  
 |-------------------------------|---------------------------|  
 |Os arquivos estão atualmente armazenados no sistema de arquivos.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não tem conhecimento dos arquivos.|Como uma FileTable é semelhante a uma pasta no sistema de arquivos do Windows, você pode carregar arquivos com facilidade em uma nova FileTable usando qualquer um dos métodos disponíveis para mover ou copiar arquivos. Esses métodos incluem o Windows Explorer, opções de linha de comando, inclusive xcopy e robocopy, e scripts ou aplicativos personalizados.<br /><br /> Você não pode converter uma pasta existente em uma FileTable.|  
-|Os arquivos estão atualmente armazenados no sistema de arquivos.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contém uma tabela de metadados que possui ponteiros para os arquivos.|A primeira etapa é mover ou copiar os arquivos usando um dos métodos mencionados acima.<br /><br /> A segunda etapa é atualizar a tabela existente de metadados para apontar para o novo local dos arquivos.<br /><br /> Para obter mais informações, confira [Exemplo: Migrando arquivos do sistema de arquivos em uma FileTable](#HowToMigrateFiles) neste tópico.|  
+|Os arquivos estão atualmente armazenados no sistema de arquivos.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contém uma tabela de metadados que possui ponteiros para os arquivos.|A primeira etapa é mover ou copiar os arquivos usando um dos métodos mencionados acima.<br /><br /> A segunda etapa é atualizar a tabela existente de metadados para apontar para o novo local dos arquivos.<br /><br /> Para obter mais informações, consulte [Exemplo: migrando arquivos do sistema de arquivos para uma FileTable](#HowToMigrateFiles) neste tópico.|  
   
 ###  <a name="HowToLoadNew"></a> Como Carregar arquivos em uma nova FileTable  
  Os métodos que você pode usar para carregar arquivos em uma FileTable incluem os seguintes:  
@@ -41,10 +41,10 @@ ms.locfileid: "66010006"
   
 -   Escrever um aplicativo personalizado em C# ou Visual Basic.NET que use métodos do namespace **System.IO** para mover ou copiar os arquivos.  
   
-###  <a name="HowToMigrateFiles"></a> Exemplo: migrando arquivos do sistema de arquivos para uma FileTable  
+###  <a name="HowToMigrateFiles"></a>Exemplo: migrar arquivos do sistema de arquivos para uma Filetable  
  Neste cenário, seus arquivos são armazenados no sistema de arquivos, e você tem uma tabela de metadados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que contém ponteiros para os arquivos. Você deseja mover os arquivos para uma FileTable e, em seguida, substituir o caminho UNC original de cada arquivo dos metadados pelo caminho UNC da FileTable. A função [GetPathLocator & #40. O Transact-SQL e 41;](/sql/relational-databases/system-functions/getpathlocator-transact-sql) ajuda você a atingir esse objetivo.  
   
- Neste exemplo, suponha que há uma tabela de banco de dados existente, `PhotoMetadata`, que contém dados sobre fotografias. Esta tabela tem um coluna `UNCPath` do tipo `varchar`(512) que contém o caminho UNC real para um arquivo .jpg.  
+ Para este exemplo, suponha que exista uma tabela de banco de `PhotoMetadata`dados existente,, que contém informações sobre fotografias. Esta tabela tem um coluna `UNCPath` do tipo `varchar`(512) que contém o caminho UNC real para um arquivo .jpg.  
   
  Para migrar os arquivos de imagem do sistema de arquivos para uma FileTable, você deve fazer o seguinte:  
   
@@ -76,7 +76,7 @@ UPDATE PhotoMetadata
     SET pathlocator = GetPathLocator(UNCPath);  
 ```  
   
-##  <a name="BasicsBulkLoad"></a> Carregando arquivos em massa em uma FileTable  
+##  <a name="BasicsBulkLoad"></a>Carregando arquivos em massa em uma Filetable  
  Um FileTable tem o comportamento semelhante ao de uma tabela normal para operações em massa, com as qualificações a seguir.  
   
  Uma FileTable possui restrições definidas pelo sistema que assegura que a integridade do namespace de arquivo e diretório seja mantida. Essas restrições têm de ser verificadas nos dados carregados em massa na FileTable. Algumas operações de inserção em massa permitem ignorar as restrições de tabela. Os requisitos a seguir são impostos.  
@@ -87,7 +87,7 @@ UPDATE PhotoMetadata
   
     -   BULK INSERT com a cláusula CHECK_CONSTRAINTS.  
   
-    -   INSERT INTO... SELECT * FROM OPENROWSET(BULK ...) sem a cláusula IGNORE_CONSTRAINTS.  
+    -   INSERIR EM... Selecione * de OPENROWSET (BULK...) sem IGNORE_CONSTRAINTS cláusula.  
   
 -   Operações de carregamento de tamanho que não impõem restrições falham a menos que as restrições definidas pelo sistema da FileTable sejam desabilitadas. Essa categoria inclui as seguintes operações:  
   
@@ -95,12 +95,12 @@ UPDATE PhotoMetadata
   
     -   BULK INSERT sem a cláusula CHECK_CONSTRAINTS.  
   
-    -   INSERT INTO... SELECT * FROM OPENROWSET(BULK ...) com a cláusula IGNORE_CONSTRAINTS.  
+    -   INSERIR EM... Selecione * de OPENROWSET (BULK...) com a cláusula IGNORE_CONSTRAINTS.  
   
-###  <a name="HowToBulkLoad"></a> Como Carregar arquivos em massa em uma nova FileTable  
+###  <a name="HowToBulkLoad"></a>Como: carregar arquivos em massa em uma Filetable  
  Você pode usar vários métodos para carregar arquivos em massa em uma FileTable:  
   
--   **bcp**  
+-   **BCP**  
   
     -   Chame com a cláusula **CHECK_CONSTRAINTS** .  
   
@@ -112,7 +112,7 @@ UPDATE PhotoMetadata
   
     -   Desabilite o namespace da FileTable e chame sem a cláusula **CHECK_CONSTRAINTS** . Em seguida, reabilite o namespace da FileTable.  
   
--   **INSERT INTO ... SELECT \* FROM OPENROWSET(BULK ...)**  
+-   **INSERIR EM... SELECIONAR \* de OPENROWSET (bulk...)**  
   
     -   Chame com a cláusula **IGNORE_CONSTRAINTS** .  
   
@@ -120,11 +120,11 @@ UPDATE PhotoMetadata
   
  Para obter informações sobre como desabilitar as restrições de FileTable, consulte [Gerenciar FileTables](manage-filetables.md).  
   
-###  <a name="disabling"></a> Como Desabilitar restrições de FileTable para carregamento em massa  
+###  <a name="disabling"></a>Como desabilitar as restrições de Filetable para carregamento em massa  
  Para carregar os arquivos em massa em uma FileTable sem a sobrecarga de impor as restrições definidas pelo sistema, você pode desabilitar temporariamente as restrições. Para obter mais informações, consulte [Gerenciar FileTables](manage-filetables.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Acessar FileTables com Transact-SQL](access-filetables-with-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Acessar filetables com o Transact-SQL](access-filetables-with-transact-sql.md)   
  [Acessar FileTables com APIs de entrada e saída de arquivo](access-filetables-with-file-input-output-apis.md)  
   
   

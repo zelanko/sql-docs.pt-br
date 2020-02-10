@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a41f11b200ffe5dfc91479ea54095fd24c90699a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011553"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>Criar e gerenciar índices de texto completo
@@ -31,7 +31,7 @@ ms.locfileid: "66011553"
   
  O processo de criar e manter um índice de texto completo é chamado de *população* (também conhecido como *rastreamento*). Existem três tipos de população de índice de texto completo: população completa, população com base em controle de alterações e população incremental com base em carimbo de data e hora. Para obter mais informações, veja [Popular índices de texto completo](populate-full-text-indexes.md).  
   
-##  <a name="tasks"></a> Tarefas comuns  
+##  <a name="tasks"></a>Tarefas comuns  
  **Para criar um índice de texto completo**  
   
 -   [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql)  
@@ -46,7 +46,7 @@ ms.locfileid: "66011553"
   
  [Neste tópico](#top)  
   
-##  <a name="structure"></a> Estrutura de índice de texto completo  
+##  <a name="structure"></a>Estrutura do índice de texto completo  
  Um bom conhecimento da estrutura do índice de texto completo ajudará você a entender como funciona o Mecanismo de Texto Completo. Este tópico usa o trecho a seguir da tabela **Document** em [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] como tabela de exemplo. Esse trecho mostra apenas duas colunas, **DocumentID** e **Title** , e três linhas da tabela.  
   
  Para este exemplo, assumiremos que um índice de texto completo foi criado na coluna **Title** .  
@@ -70,7 +70,7 @@ ms.locfileid: "66011553"
 |Crank|1|1|1|  
 |Arm|1|1|2|  
 |Tire|1|1|4|  
-|Manutenção|1|1|5|  
+|Manutenção |1|1|5|  
 |Front|1|2|1|  
 |Front|1|3|1|  
 |Reflector|1|2|2|  
@@ -86,13 +86,13 @@ ms.locfileid: "66011553"
   
  A coluna **ColId** contém um valor que corresponde a uma coluna específica indexada com texto completo.  
   
- O `DocId` coluna contém valores para um inteiro de oito bytes que é mapeado para um determinado valor de chave de texto completo em uma tabela indexada de texto completo. Esse mapeamento é necessário quando a chave de texto completo não é um tipo de dados integer. Nesses casos, valores de chave de mapeamentos entre o texto completo e `DocId` valores são mantidos em uma tabela separada chamada tabela de mapeamento DocId. Para examinar esses mapeamentos, use o procedimento armazenado do sistema [sp_fulltext_keymappings](/sql/relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql) . Para atender a um critério de pesquisa, os valores de DocId da tabela acima precisam ser unidos à tabela de mapeamento DocId para recuperar linhas da tabela base que está sendo consultada. Se o valor da chave de texto completo da tabela base for do tipo inteiro, o valor funcionará diretamente como DocId, e nenhum mapeamento será necessário. Por isso, o uso de valores de chave de texto completo pode ajudar a otimizar consultas de texto completo.  
+ A `DocId` coluna contém valores para um inteiro de oito bytes que mapeia para um valor de chave de texto completo específico em uma tabela indexada de texto completo. Esse mapeamento é necessário quando a chave de texto completo não é um tipo de dados integer. Nesses casos, os mapeamentos entre valores de chave de texto completo `DocId` e valores são mantidos em uma tabela separada chamada de tabela de mapeamento DocId. Para examinar esses mapeamentos, use o procedimento armazenado do sistema [sp_fulltext_keymappings](/sql/relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql) . Para atender a um critério de pesquisa, os valores de DocId da tabela acima precisam ser unidos à tabela de mapeamento DocId para recuperar linhas da tabela base que está sendo consultada. Se o valor da chave de texto completo da tabela base for do tipo inteiro, o valor funcionará diretamente como DocId, e nenhum mapeamento será necessário. Por isso, o uso de valores de chave de texto completo pode ajudar a otimizar consultas de texto completo.  
   
  A coluna **Occurrence** contém um valor inteiro. Para cada valor de DocId, há uma lista de valores de ocorrência que correspondem aos deslocamentos relativos de palavras de uma palavra-chave específica dentro de DocId. Os valores de ocorrência são úteis para definir as correspondências de frase ou de proximidade, por exemplo, as frases têm valores de ocorrência numericamente adjacentes. Eles também são úteis para calcular pontuações de relevância; por exemplo, o número de ocorrências de uma palavra-chave em DocId pode ser usado na pontuação.  
   
  [Neste tópico](#top)  
   
-##  <a name="fragments"></a> Fragmentos de índice de texto completo  
+##  <a name="fragments"></a>Fragmentos de índice de texto completo  
  O índice de texto completo lógico normalmente é dividido entre várias tabelas internas. Cada tabela interna é chamada de fragmento de índice de texto completo. Alguns desses fragmentos podem conter dados mais novos do que outros. Por exemplo, se um usuário atualiza a linha a seguir cujo DocId é 3 e a tabela tem controle de alterações automático, é criado um novo fragmento.  
   
 |DocumentID|Title|  
@@ -108,7 +108,7 @@ ms.locfileid: "66011553"
 |Traseiro|1|3|1|  
 |Reflector|1|3|2|  
   
- Como pode ser visto no Fragmento 2, as consultas de texto completo precisam examinar cada fragmento internamente e descartar entradas mais antigas. Por isso, um número excessivo de fragmentos de índice de texto completo no índice de texto completo pode levar a uma diminuição considerável do desempenho de consulta. Para reduzir o número de fragmentos, reorganize o catálogo de texto completo usando a opção REORGANIZE da instrução [ALTER FULLTEXT CATALOG](/sql/t-sql/statements/alter-fulltext-catalog-transact-sql)[!INCLUDE[tsql](../../includes/tsql-md.md)] . Essa instrução executa uma *mesclagem mestra*que mescla os fragmentos em um único fragmento maior e remove todas as entradas obsoletas do índice de texto completo.  
+ Como pode ser visto no Fragmento 2, as consultas de texto completo precisam examinar cada fragmento internamente e descartar entradas mais antigas. Por isso, um número excessivo de fragmentos de índice de texto completo no índice de texto completo pode levar a uma diminuição considerável do desempenho de consulta. Para reduzir o número de fragmentos, reorganize o catálogo de texto completo usando a opção reorganizar da instrução [ALTER FULLTEXT CATALOG](/sql/t-sql/statements/alter-fulltext-catalog-transact-sql) [!INCLUDE[tsql](../../includes/tsql-md.md)] . Essa instrução executa uma *mesclagem mestra*que mescla os fragmentos em um único fragmento maior e remove todas as entradas obsoletas do índice de texto completo.  
   
  Depois de reorganizado, o índice de exemplo conterá as linhas seguintes:  
   
@@ -117,7 +117,7 @@ ms.locfileid: "66011553"
 |Crank|1|1|1|  
 |Arm|1|1|2|  
 |Tire|1|1|4|  
-|Manutenção|1|1|5|  
+|Manutenção |1|1|5|  
 |Front|1|2|1|  
 |Traseiro|1|3|1|  
 |Reflector|1|2|2|  

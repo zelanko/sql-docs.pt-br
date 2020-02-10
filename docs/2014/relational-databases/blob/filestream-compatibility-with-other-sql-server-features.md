@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: aba8bdc3182cd0e3784908a8af32b6f2fbebd6e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010190"
 ---
 # <a name="filestream-compatibility-with-other-sql-server-features"></a>Compatibilidade do FILESTREAM com outros recursos do SQL Server
@@ -51,7 +51,7 @@ ms.locfileid: "66010190"
  Você pode usar a transformação Importar Coluna para carregar arquivos do sistema de arquivos em uma coluna FILESTREAM. Você também pode usar a transformação Exportar Coluna para extrair arquivos de uma coluna FILESTREAM para outro local do sistema de arquivos.  
   
 ##  <a name="distqueries"></a> Consultas distribuídas e servidores vinculados  
- Você pode trabalhar com dados FILESTREAM em consultas distribuídas e servidores vinculados, tratando-os `varbinary(max)` dados. Não é possível usar a função **PathName()** de FILESTREAM em consultas distribuídas que usam um nome de quatro partes, mesmo quando o nome referencia o servidor local. Entretanto, você pode usar **PathName()** na consulta interna de uma consulta passagem que usa **OPENQUERY()** .  
+ Você pode trabalhar com dados de FILESTREAM por meio de consultas distribuídas e servidores vinculados tratando-os como `varbinary(max)` dados. Não é possível usar a função **PathName()** de FILESTREAM em consultas distribuídas que usam um nome de quatro partes, mesmo quando o nome referencia o servidor local. Entretanto, você pode usar **PathName()** na consulta interna de uma consulta passagem que usa **OPENQUERY()** .  
   
 ##  <a name="encryption"></a> Criptografia  
  Os dados de FILESTREAM não são criptografados mesmo quando a criptografia transparente de dados está habilitada.  
@@ -66,7 +66,7 @@ ms.locfileid: "66010190"
  `Could not continue scan with NOLOCK due to data movement.`  
   
 ##  <a name="Replication"></a> Replication  
- Uma coluna `varbinary(max)` que tenha o atributo FILESTREAM ativado no Publicador pode ser replicada para um Assinante com ou sem o atributo FILESTREAM. Para especificar o modo de replicação da coluna, use a caixa de diálogo **Propriedades do Artigo – \<Artigo>** ou o parâmetro @schema_option de [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) ou [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Dados replicados para uma coluna `varbinary(max)` que não tenham o atributo FILESTREAM não devem exceder o limite de 2 GB daquele tipo de dados. Caso contrário, um erro em tempo de execução será gerado. Recomendamos que você replicar o atributo FILESTREAM, a menos que você esteja replicando dados para [!INCLUDE[ssVersion2005](../../includes/ssversion2000-md.md)] assinantes não é suportada, independentemente da opção de esquema especificado.  
+ Uma coluna `varbinary(max)` que tenha o atributo FILESTREAM ativado no Publicador pode ser replicada para um Assinante com ou sem o atributo FILESTREAM. Para especificar o modo de replicação da coluna, use a caixa de diálogo **Propriedades do Artigo – \<Artigo>** ou o parâmetro @schema_option de [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) ou [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Dados replicados para uma coluna `varbinary(max)` que não tenham o atributo FILESTREAM não devem exceder o limite de 2 GB daquele tipo de dados. Caso contrário, um erro em tempo de execução será gerado. É recomendável replicar o atributo FILESTREAM, a menos que você esteja replicando dados [!INCLUDE[ssVersion2005](../../includes/ssversion2000-md.md)] para assinantes não tem suporte, independentemente da opção de esquema especificada.  
   
 > [!NOTE]  
 >  A replicação de valores de dados grandes do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] para Assinantes do [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] é limitada a um máximo de 256 MB de valores de dados. Para obter mais informações, consulte [Especificações de capacidade máxima](https://go.microsoft.com/fwlink/?LinkId=103810).  
@@ -104,7 +104,7 @@ ms.locfileid: "66010190"
  O espelhamento de banco de dados não oferece suporte a FILESTREAM. Um grupo de arquivos FILESTREAM não pode ser criado no servidor principal. O espelhamento de banco de dados não pode ser configurado para um banco de dados que contenha grupos de arquivos FILESTREAM.  
   
 ##  <a name="FullText"></a> Indexação de texto completo  
- [Indexação de texto completo](../indexes/indexes.md) funciona com uma coluna FILESTREAM da mesma maneira que faz com um `varbinary(max)` coluna. A tabela FILESTREAM deve ter uma coluna que contenha a extensão do nome do arquivo para cada BLOB FILESTREAM. Para obter mais informações, veja [Consultar com a pesquisa de texto completo](../search/query-with-full-text-search.md), [Configurar e gerenciar filtros para pesquisa](../search/configure-and-manage-filters-for-search.md), e [sys.fulltext_document_types &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql).  
+ A [indexação de texto completo](../indexes/indexes.md) funciona com uma coluna FILESTREAM da mesma maneira que faz com uma `varbinary(max)` coluna. A tabela FILESTREAM deve ter uma coluna que contenha a extensão do nome do arquivo para cada BLOB FILESTREAM. Para obter mais informações, veja [Consultar com a pesquisa de texto completo](../search/query-with-full-text-search.md), [Configurar e gerenciar filtros para pesquisa](../search/configure-and-manage-filters-for-search.md), e [sys.fulltext_document_types &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql).  
   
  O mecanismo de texto completo indexa o conteúdo dos BLOBs FILESTREAM. Arquivos de indexação como imagens podem não ser úteis. Quando um BLOB FILESTREAM é atualizado, ele é reindexado.  
   
@@ -119,7 +119,7 @@ ms.locfileid: "66010190"
   
  Você poderá definir a retenção de banco de dados como PARTIAL se desejar usar determinados recursos de bancos de dados contidos, como usuários contidos. Neste caso, no entanto, você deve estar atento que algumas das configurações de banco de dados não estão contidas no banco de dados e não são movidos automaticamente quando o banco de dados é movido.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Objeto binário grande &#40;Blob&#41; Dados &#40;SQL Server&#41;](binary-large-object-blob-data-sql-server.md)  
   
   

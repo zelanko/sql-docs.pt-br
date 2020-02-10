@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4379e0ff3ca534acd6ae130cbdf0f8acd2b6a81f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66009846"
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>RBS (Armazenamento de Blob Remoto) [SQL Server]
@@ -55,7 +55,7 @@ ms.locfileid: "66009846"
 ## <a name="rbs-security"></a>Segurança do RBS  
  Quando você usar um provedor personalizado para armazenar BLOBs fora do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], talvez eles estejam disponíveis para outros processos que ignorem o sistema de segurança do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Proteja os BLOBs armazenados com permissões e opções de criptografia apropriadas para a mídia de armazenamento usada pelo provedor personalizado.  
   
-##  <a name="rbsresources"></a> Recursos do RBS  
+##  <a name="rbsresources"></a>Recursos do RBS  
  **Documentação do RBS**  
  A documentação do RBS está incluída no pacote do Windows Installer. Se você desejar revisar a documentação do RBS sem instalar o RBS, poderá exibir a versão [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] da documentação [online na Biblioteca do MSDN](https://go.microsoft.com/fwlink/?LinkId=210192).  
   

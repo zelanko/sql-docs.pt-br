@@ -1,5 +1,5 @@
 ---
-title: Editor de transformação de pesquisa de termos (guia pesquisa de termos) | Microsoft Docs
+title: Editor de transformação pesquisa de termos (guia pesquisa de termos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2939d160773d60944a2e8a786e5495cea366edb1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055127"
 ---
 # <a name="term-lookup-transformation-editor-term-lookup-tab"></a>Editor de Transformação Pesquisa de Termos (guia Pesquisa de Termos)
@@ -30,22 +30,22 @@ ms.locfileid: "66055127"
  **Colunas de Entrada Disponíveis**  
  Usando as caixas de seleção, selecione colunas de entrada para passar para a saída inalteradas. Arraste uma coluna de entrada para a lista **Colunas de Referência Disponíveis** para mapeá-la para uma coluna de pesquisa na tabela de referência. As colunas de entrada e de pesquisa devem ter tipos de dados correspondentes e que tenham suporte no DT_NTEXT ou DT_WSTR. Selecione uma linha de mapeamento e clique com o botão direito do mouse para editar os mapeamentos na caixa de diálogo [Criar Relações](data-flow/transformations/create-relationships.md) .  
   
- **Colunas de Referência Disponíveis**  
+ **Colunas de referência disponíveis**  
  Exiba as colunas disponíveis na tabela de referência. Escolha a coluna que contém a lista de termos a corresponder.  
   
- **Coluna de Passagem**  
+ **Coluna de passagem**  
  Selecione na lista de colunas de entrada disponíveis. As seleções se refletem naquelas da caixa de seleção da tabela **Colunas de Entrada Disponíveis** .  
   
- **Alias de Coluna de Saída**  
+ **Alias da coluna de saída**  
  Digite um alias para cada coluna de saída. O padrão é o nome da coluna; no entanto, é possível escolher qualquer nome descritivo exclusivo.  
   
  **Configurar Saída de Erro**  
  Use a caixa de diálogo [Configurar Saída de Erro](../../2014/integration-services/configure-error-output.md) para especificar as opções de tratamento de erro em linhas que causam erros.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de Transformação Pesquisa de Termos &#40;Guia Tabela de Referência&#41;](../../2014/integration-services/term-lookup-transformation-editor-reference-table-tab.md)   
- [Editor de Transformação Pesquisa de Termos &#40;Guia Avançado&#41;](../../2014/integration-services/term-lookup-transformation-editor-advanced-tab.md)   
+ [Editor de transformação pesquisa de termos &#40;guia tabela de referência&#41;](../../2014/integration-services/term-lookup-transformation-editor-reference-table-tab.md)   
+ [Editor de transformação pesquisa de termos &#40;guia Avançado&#41;](../../2014/integration-services/term-lookup-transformation-editor-advanced-tab.md)   
  [Transformação Extração de Termos](data-flow/transformations/term-extraction-transformation.md)  
   
   

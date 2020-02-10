@@ -1,5 +1,5 @@
 ---
-title: 'Tarefa 12: Descoberta de Conhecimento (descoberta de Conhecimento) | Microsoft Docs'
+title: 'Tarefa 12: descobrindo o conhecimento (descoberta de conhecimento) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,62 +11,62 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6dd54475ee63b2f6ef5e1b56b94c11aafd5996ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65484679"
 ---
-# <a name="task-12-discovering-knowledge-knowledge-discovery"></a>Tarefa 12: Descobrir a base de dados de conhecimento (descoberta da base de dados de conhecimento)
-  Nesta tarefa, você deve executar o **descoberta de Conhecimento** atividade nos **Supplier ID** e **Supplier Name** domínios. Neste cenário, o processo de descoberta da base de dados de conhecimento importa basicamente valores desses dois domínios.  
+# <a name="task-12-discovering-knowledge-knowledge-discovery"></a>Tarefa 12: Descobrindo a base de dados de conhecimento (descoberta da base de dados de conhecimento)
+  Nesta tarefa, você executa a atividade de **descoberta de conhecimento** nos domínios ID do **fornecedor** e nome do **fornecedor** . Neste cenário, o processo de descoberta da base de dados de conhecimento importa basicamente valores desses dois domínios.  
   
- Neste tutorial, você começou a criar a base de dados de conhecimento do zero. Você também pode começar a criar uma base de dados de conhecimento executando uma atividade de descoberta de conhecimento. Quando você clica em **criar uma Base de dados de Conhecimento** na página principal, cliente DQS levará você para uma página com **gerenciamento de domínio** atividade selecionada para a atividade. Você pode alterar o **atividade** à **descoberta de Conhecimento** e, em seguida, na próxima página você pode criar domínios como parte do processo de descoberta de Conhecimento. Ver [Perform Knowledge Discovery](https://msdn.microsoft.com/library/hh510398.aspx) para obter mais detalhes.  
+ Neste tutorial, você começou a criar a base de dados de conhecimento do zero. Você também pode começar a criar uma base de dados de conhecimento executando uma atividade de descoberta de conhecimento. Quando você clica em **criar uma base de dados de conhecimento** na página principal, o cliente do DQS leva você para uma página com atividade de gerenciamento de **domínio** selecionada para a atividade. Você pode alterar a **atividade** para **descoberta de conhecimento** e, em seguida, na próxima página, você pode criar domínios como parte do processo de descoberta da base de dados de conhecimento. Consulte [executar descoberta da](https://msdn.microsoft.com/library/hh510398.aspx) base de dados de conhecimento para obter mais detalhes.  
   
-1.  Na página principal do cliente do DQS no **Base de dados de conhecimento recente** seção, clique em **seta para a direita** lado a **fornecedores** da Base de dados de conhecimento e clique em **dados de Conhecimento Descoberta**. Como alternativa, você pode clicar **abrir Base de dados de Conhecimento**, selecione **fornecedores** do **lista de bases de dados de Conhecimento**, selecione **descoberta de Conhecimento**como **atividade** e clique em **próxima**.  
+1.  Na página principal do cliente do DQS, na seção **base de dados de conhecimento recente** , clique na seta para a **direita** ao lado da base de dados de conhecimento **fornecedores** e clique em descoberta de **conhecimento**. Como alternativa, você pode clicar em **abrir base de dados de conhecimento**, selecionar **fornecedores** na **lista de bases de dados de conhecimento**, selecionar descoberta de **conhecimento** como **atividade** e clicar em **Avançar**.  
   
-     ![Menu de descoberta de Conhecimento na principal página](../../2014/tutorials/media/et-discoveringknowledge-01.jpg "Menu de descoberta de Conhecimento na principal página")  
+     ![Menu Descoberta da Base de Dados de Conhecimento na página principal](../../2014/tutorials/media/et-discoveringknowledge-01.jpg "Menu Descoberta da Base de Dados de Conhecimento na página principal")  
   
-2.  Selecione **arquivo do Excel** para **fonte de dados**.  
+2.  Selecione o **arquivo do Excel** para a fonte de **dados**.  
   
-3.  Clique em **navegue**, navegue e selecione **Suppliers**e clique em **abrir**.  
+3.  Clique em **procurar**, navegue e selecione **suppliers. xls**e clique em **abrir**.  
   
-4.  Selecione **fornecedores para descoberta** para **planilha**.  
+4.  Selecione **fornecedores para descoberta** da **planilha**.  
   
-5.  No **mapeamentos** seção, mapeie **SupplierID** coluna a partir o **Excel** o arquivo para o **Supplier ID** domínio e  **Nome do fornecedor** coluna para o **Supplier Name** domínio usando **listas suspensas**. O arquivo do Excel tem dados de exemplo para o **Supplier ID** e **Supplier Name** domínios. No processo de descoberta, você pode selecionar os domínios cujos valores você deseja descobrir. Você pode criar domínios nesta página e, depois, mapear as colunas de origem para esses domínios. É comum criar domínios durante a atividade de descoberta da base de dados de conhecimento, em vez de criar domínios durante a atividade de gerenciamento de domínio.  
+5.  Na seção **mapeamentos** , mapeie a coluna **CódigoDoFornecedor** do arquivo do **Excel** para a coluna **nome** do fornecedor e domínio da **ID** do fornecedor para o domínio **nome do fornecedor** usando **listas suspensas**. O arquivo do Excel tem dados de exemplo para os domínios **ID do fornecedor** e **nome do fornecedor** . No processo de descoberta, você pode selecionar os domínios cujos valores você deseja descobrir. Você pode criar domínios nesta página e, depois, mapear as colunas de origem para esses domínios. É comum criar domínios durante a atividade de descoberta da base de dados de conhecimento, em vez de criar domínios durante a atividade de gerenciamento de domínio.  
   
-     ![Página do processo de descoberta de mapa](../../2014/tutorials/media/et-discoveringknowledge-02.jpg "mapear a página do processo de descoberta")  
+     ![Página Mapa do Processo de Descoberta](../../2014/tutorials/media/et-discoveringknowledge-02.jpg "Página Mapa do Processo de Descoberta")  
   
-6.  Clique em **próxima** para alternar para o **Discover** página.  
+6.  Clique em **Avançar** para alternar para a página de **descoberta** .  
   
-7.  Sobre o **Discover** , clique em **iniciar** para iniciar o processo de descoberta. Descoberta é executada nas colunas **SupplierID** e **Supplier Name** no **Suppliers** arquivo. O **Supplier ID** e **Supplier Name** domínios devem ser preenchidos com o conhecimento extraído da descoberta.  
+7.  Na página **descobrir** , clique em **Iniciar** para iniciar o processo de descoberta. A descoberta é executada nas colunas **CódigoDoFornecedor** e **nome do fornecedor** no arquivo **suppliers. xls** . Os domínios **ID do fornecedor** e nome do **fornecedor** devem ser preenchidos com o conhecimento desenhado da descoberta.  
   
-     ![Descobrir a página do processo de descoberta](../../2014/tutorials/media/et-discoveringknowledge-03.jpg "descobrir a página do processo de descoberta")  
+     ![Página Descoberta do Processo de Descoberta](../../2014/tutorials/media/et-discoveringknowledge-03.jpg "Página Descoberta do Processo de Descoberta")  
   
-8.  Depois que a análise for concluída, examine os **estatísticas de origem** na **guia Profiler** na parte inferior da página. Observe que 10 novos registros com total de 20 valores (**SupplierID** e **Supplier Name** os valores do **planilha do Excel**) foram descobertos. Você também verá quantos valores são: novos; exclusivos; novos e exclusivos; e válidos. Na caixa de listagem à direita, você poderá ver mais detalhes de cada domínio envolvido no processo de descoberta. Se você passar o mouse sobre a barra de status na coluna Integridade, poderá ver se há algum valor ausente nas colunas na fonte.  
+8.  Após a conclusão da análise, examine as **Estatísticas de origem** na **guia criador de perfil** na parte inferior da página. Observe que foram descobertos 10 novos registros com o total de 20 valores (**CódigoDoFornecedor** e valores de **nome de fornecedor** da **planilha do Excel**). Você também verá quantos valores são: novos; exclusivos; novos e exclusivos; e válidos. Na caixa de listagem à direita, você poderá ver mais detalhes de cada domínio envolvido no processo de descoberta. Se você passar o mouse sobre a barra de status na coluna Integridade, poderá ver se há algum valor ausente nas colunas na fonte.  
   
-     ![Os resultados de descoberta de Conhecimento](../../2014/tutorials/media/et-discoveringknowledge-04.jpg "os resultados de descoberta de Conhecimento")  
+     ![Resultados da Descoberta da Base de Dados de Conhecimento](../../2014/tutorials/media/et-discoveringknowledge-04.jpg "Resultados da Descoberta da Base de Dados de Conhecimento")  
   
-9. Clique em **próxima** para alternar para o **gerenciar valores de domínio** página.  
+9. Clique em **Avançar** para alternar para a página **gerenciar valores de domínio** .  
   
-10. No **gerenciar valores de domínio** , clique em **Supplier Name** domínio na lista de domínios.  
+10. Na página **gerenciar valores de domínio** , clique em domínio **nome do fornecedor** na lista de domínios.  
   
-11. No painel direito, clique com botão direito **Lazy Country Storex** (Observe o 'x' no final) e selecione **Lazy Country Store**. O DQS sugere essa alteração após a execução do verificador ortográfico no domínio. Por padrão, o verificador ortográfico é habilitado nos domínios que você cria.  
+11. No painel direito, clique com o botão direito do mouse em **país lento Storex** (Observe ' x ' no final) e selecione **loja de país lento**. O DQS sugere essa alteração após a execução do verificador ortográfico no domínio. Por padrão, o verificador ortográfico é habilitado nos domínios que você cria.  
   
-     ![Nome correto do fornecedor - Lazy Store de país](../../2014/tutorials/media/et-discoveringknowledge-05.jpg "nome correto do fornecedor - Lazy Store do país")  
+     ![Nome correto do fornecedor - Lazy Country Store](../../2014/tutorials/media/et-discoveringknowledge-05.jpg "Nome correto do fornecedor - Lazy Country Store")  
   
-12. Na lista de valores de domínio, confirme se o valor **Lazy Country Storex** é definido como um erro (vermelho **X** marcar) com **Lazy Country Store** como a correção e também o **Lazy Country Store** também é adicionado como um valor válido.  
+12. Na lista valores de domínio, confirme se o valor **Storex de país lento** está definido como um erro (marca **X** vermelha) com o **repositório de país lento** como a correção e também o **repositório de país lento** também é adicionado como um valor válido.  
   
-     ![Domínio de valor e corrigir para valor](../../2014/tutorials/media/et-discoveringknowledge-06.jpg "domínio valor e corrigir para valor")  
+     ![Valor do Domínio e Corrigir para Valor](../../2014/tutorials/media/et-discoveringknowledge-06.jpg "Valor do Domínio e Corrigir para Valor")  
   
 13. Clique em **Concluir**.  
   
-14. Na **SQL Server Data Quality Services** caixa de diálogo, clique em **publicar**.  
+14. Na caixa de diálogo **SQL Server Data Quality Services** , clique em **publicar**.  
   
-15. Clique em **Okey** na caixa de mensagem de êxito.  
+15. Clique em **OK** na caixa de mensagem de êxito.  
   
      Você concluiu a primeira lição do tutorial.  
   
 ## <a name="next-step"></a>Próxima etapa  
- [Lição 2: Limpeza de dados do fornecedor usando a Base de dados de Conhecimento fornecedores](../../2014/tutorials/lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base.md)  
+ [Lição 2: Limpando dados de fornecedor usando a base de dados de conhecimento de fornecedores](../../2014/tutorials/lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base.md)  
   
   

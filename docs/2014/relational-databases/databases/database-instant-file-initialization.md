@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 491c8a63c7ee3ed06c90356c58820f34ed3c0bf9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62872084"
 ---
 # <a name="database-instant-file-initialization"></a>Inicialização imediata de arquivo do banco de dados
@@ -55,9 +55,9 @@ ms.locfileid: "62872084"
   
 4.  Clique em **Adicionar Usuário ou Grupo** e adicione as contas de usuário que são usadas ​​para backups.  
   
-5.  Clique em **Apply**e, em seguida, feche todas as `Local Security Policy` caixas de diálogo.  
+5.  Clique em **aplicar**e feche todas as `Local Security Policy` caixas de diálogo.  
   
-### <a name="security-considerations"></a>Considerações sobre segurança  
+### <a name="security-considerations"></a>Considerações de segurança  
  Como o conteúdo excluído do disco é substituído somente à medida que novos dados são gravados nos arquivos, o conteúdo excluído poderá ser acessado por uma entidade de segurança não autorizada. Embora o arquivo de banco de dados esteja associado à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa ameaça de divulgação de informações é reduzida pela lista de controle de acesso discricionário (DACL) no arquivo. Essa DACL permite acesso de arquivo somente à conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e ao administrador local. Porém, quando o arquivo é desassociado, ele pode ser acessado por um usuário ou serviço que não tenha SE_MANAGE_VOLUME_NAME. Existe uma ameaça semelhante ao se fazer backup do banco de dados. O conteúdo excluído pode ficar disponível para um usuário ou serviço não autorizado se o arquivo de backup não for protegido com uma DACL adequada.  
   
  Se o potencial de divulgação do conteúdo excluído for uma preocupação, você deve tomar uma ou ambas as providências seguintes:  
@@ -69,7 +69,7 @@ ms.locfileid: "62872084"
 > [!NOTE]  
 >  Desabilitar a inicialização de arquivos imediata afeta somente os arquivos que forem criados ou tiverem seu tamanho aumentado após ser revogado o direito do usuário.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)  
   
   

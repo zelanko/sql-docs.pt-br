@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ec94803e0d95c5757d57cdb2e19f3100a2ad4513
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62870213"
 ---
-# <a name="mssqlserver10794"></a>MSSQLSERVER_10794
+# <a name="mssqlserver_10794"></a>MSSQLSERVER_10794
     
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|MSSQLSERVER|  
+|Nome do Produto|MSSQLSERVER|  
 |ID do evento|10794|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|P3_HEKATON_INDEX|  
 |Texto da mensagem|Não há suporte para o '*feature*' *construct* com *construct*.|  

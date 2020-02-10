@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 063248c6b91aebf6198323487aa30ddd1c9cb6ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058330"
 ---
 # <a name="fuzzy-lookup-transformation-editor-columns-tab"></a>Editor de Transformação Pesquisa Difusa (guia Colunas)
@@ -36,7 +36,7 @@ ms.locfileid: "66058330"
  **Passagem**  
  Especifique se as colunas de entrada devem ser incluídas na saída da transformação.  
   
- **Colunas de Pesquisa Disponíveis**  
+ **Colunas de pesquisa disponíveis**  
  Use as caixas de seleção para selecionar colunas nas quais executar operações de pesquisa difusa.  
   
  **coluna de pesquisa**  
@@ -45,9 +45,9 @@ ms.locfileid: "66058330"
  **Alias de Saída**  
  Digite um alias para a saída de cada coluna de pesquisa. O padrão é o nome da coluna de pesquisa com um valor de índice numérico anexado; contudo, é possível escolher qualquer nome descritivo exclusivo.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de Transformação Pesquisa Difusa &#40;Guia Tabela de Referência&#41;](../../2014/integration-services/fuzzy-lookup-transformation-editor-reference-table-tab.md)   
- [Editor de Transformação Pesquisa Difusa &#40;Guia Avançado&#41;](../../2014/integration-services/fuzzy-lookup-transformation-editor-advanced-tab.md)  
+ [Editor de transformação pesquisa difusa &#40;guia tabela de referência&#41;](../../2014/integration-services/fuzzy-lookup-transformation-editor-reference-table-tab.md)   
+ [Editor de transformação pesquisa difusa &#40;guia Avançado&#41;](../../2014/integration-services/fuzzy-lookup-transformation-editor-advanced-tab.md)  
   
   

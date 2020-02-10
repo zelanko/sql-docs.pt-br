@@ -1,5 +1,5 @@
 ---
-title: Enviar o Editor da tarefa email (página geral) | Microsoft Docs
+title: Editor da tarefa Enviar email (página Geral) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 50a054bbe83c7873d1da93909bc57331fcf4a635
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055854"
 ---
 # <a name="send-mail-task-editor-general-page"></a>Editor da Tarefa Enviar Email (página Geral)
@@ -30,14 +30,14 @@ ms.locfileid: "66055854"
  **Nome**  
  Forneça um nome exclusivo para a tarefa Enviar Email. Esse nome é usado como rótulo no ícone de tarefa.  
   
- **Nota** Nomes de tarefa devem ser exclusivos no pacote.  
+ **Observação** Os nomes de tarefas devem ser exclusivos em um pacote.  
   
  **Descrição**  
  Digite uma descrição para a tarefa Enviar Email.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor da Tarefa Enviar Email &#40;Página Email&#41;](../../2014/integration-services/send-mail-task-editor-mail-page.md)   
+ [Editor da tarefa Enviar email &#40;página de email&#41;](../../2014/integration-services/send-mail-task-editor-mail-page.md)   
  [Página Expressões](expressions/expressions-page.md)  
   
   

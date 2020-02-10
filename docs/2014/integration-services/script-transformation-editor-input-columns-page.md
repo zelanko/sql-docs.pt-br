@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9e321507e8531f9732ae1096ebfc9c0d31031ec8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056087"
 ---
 # <a name="script-transformation-editor-input-columns-page"></a>Editor de Transformação Scripts (página Colunas de Entrada)
@@ -27,7 +27,7 @@ ms.locfileid: "66056087"
 > [!NOTE]  
 >  A página **Colunas de Entrada** não é exibida para componentes de Origem que têm saídas mas não têm entradas.  
   
- Para saber mais sobre o componente Script, consulte [componente de Script](data-flow/transformations/script-component.md) e [Configurando o componente Script no Editor de componente de Script](extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Para obter informações sobre a programação do componente Script, consulte [Estender o fluxo de dados com o componente de Script](extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
+ Para obter mais informações sobre o componente Script, consulte [Script Component](data-flow/transformations/script-component.md) e [Configuring the Script Component in the Script Component Editor](extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Para obter informações sobre a programação do componente Script, consulte [Estender o fluxo de dados com o componente de Script](extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
   
 ## <a name="options"></a>Opções  
  **Nome de entrada**  
@@ -42,15 +42,15 @@ ms.locfileid: "66056087"
  **Alias de Saída**  
  Digite um alias para cada coluna de saída. O padrão é o nome da coluna de entrada; no entanto, é possível escolher qualquer nome descritivo exclusivo.  
   
- **Tipo de Uso**  
+ **Tipo de uso**  
  Especifique se a Transformação Scripts tratará cada coluna como `ReadOnly` ou `ReadWrite`.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Selecionar Tipo de Componente do Script](../../2014/integration-services/select-script-component-type.md)   
- [Editor de Transformação Scripts &#40;Página Entradas e Saídas&#41;](../../2014/integration-services/script-transformation-editor-inputs-and-outputs-page.md)   
- [Editor de Transformação Scripts &#40;Página Script&#41;](../../2014/integration-services/script-transformation-editor-script-page.md)   
- [Editor de Transformação Scripts &#40;Página Gerenciadores de Conexões&#41;](../../2014/integration-services/script-transformation-editor-connection-managers-page.md)   
+ [Selecionar tipo de componente de script](../../2014/integration-services/select-script-component-type.md)   
+ [Editor de transformação scripts &#40;página entradas e saídas&#41;](../../2014/integration-services/script-transformation-editor-inputs-and-outputs-page.md)   
+ [Editor de transformação scripts &#40;página script&#41;](../../2014/integration-services/script-transformation-editor-script-page.md)   
+ [Editor de transformação scripts &#40;página gerenciadores de conexões&#41;](../../2014/integration-services/script-transformation-editor-connection-managers-page.md)   
  [Exemplos de componentes Script adicionais](extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)  
   
   

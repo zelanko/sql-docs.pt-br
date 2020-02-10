@@ -1,5 +1,5 @@
 ---
-title: 'Tarefa 11: Publicando a Base de dados de Conhecimento | Microsoft Docs'
+title: 'Tarefa 11: publicando a base de dados de conhecimento | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,22 +11,22 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: fb3fa69a552dc00c85e1053cb230ba56ae840ac8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65484062"
 ---
-# <a name="task-11-publishing-the-knowledge-base"></a>Tarefa 11: Publicar a base de dados de conhecimento
+# <a name="task-11-publishing-the-knowledge-base"></a>Tarefa 11: Publicando a base de dados de conhecimento
   Nesta tarefa, você publicará a base de dados de conhecimento. Uma base de dados de conhecimento publicada pode ser usada para a atividade de limpeza ou correspondência no projeto de qualidade de dados.  
   
-1.  Clique em **concluir** botão na parte inferior da janela.  
+1.  Clique no botão **concluir** na parte inferior da janela.  
   
-2.  Clique em **Publish** na **SQL Server Data Quality Services** caixa de diálogo.  
+2.  Clique em **publicar** na caixa de diálogo **SQL Server Data Quality Services** .  
   
 3.  Clique em **OK** para fechar a caixa de mensagens.  
   
 ## <a name="next-step"></a>Próxima etapa  
- [Tarefa 12: Descoberta de Conhecimento &#40;descoberta de Conhecimento&#41;](../../2014/tutorials/task-12-discovering-knowledge-knowledge-discovery.md)  
+ [Tarefa 12: descobrindo conhecimento &#40;descoberta de conhecimento&#41;](../../2014/tutorials/task-12-discovering-knowledge-knowledge-discovery.md)  
   
   

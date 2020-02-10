@@ -1,5 +1,5 @@
 ---
-title: Atributos personalizados para rotinas de CLR | Microsoft Docs
+title: Atributos personalizados para rotinas CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -23,14 +23,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 817591cec64a4210c4cc573588be1b8ac6dfb8a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62873804"
 ---
 # <a name="custom-attributes-for-clr-routines"></a>Atributos personalizados para rotinas de CLR
-  Os atributos listados podem ser aplicados para rotinas de tempo de execução (CLR) de linguagem comum, tipos definidos pelo usuário e agregações definidas pelo usuário que são registradas no [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)]. Se o atributo não for aplicado, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] assumirá o valor padrão. Os atributos listados são definidos no namespace `Microsoft.SqlServer.Server`.  
+  Os atributos listados podem ser aplicados a rotinas de Common Language Runtime (CLR), tipos definidos pelo usuário e agregações definidas pelo usuário que são registradas no [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)]. Se o atributo não for aplicado, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] assumirá o valor padrão. Os atributos listados são definidos no namespace `Microsoft.SqlServer.Server`.  
   
 ## <a name="the-sqluserdefinedaggregate-attribute"></a>O atributo SqlUserDefinedAggregate  
  O atributo `SqlUserDefinedAggregate` indica que o método deve ser registrado como uma agregação definida pelo usuário. Todas as agregações definidas pelo usuário devem ser anotadas com esse atributo.  
@@ -67,10 +67,10 @@ ms.locfileid: "62873804"
   
  Para obter mais informações, consulte [SqlMethodAttribute](https://go.microsoft.com/fwlink/?LinkId=128025).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Agregações CLR definidas pelo usuário](../../clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)   
  [Funções CLR definidas pelo usuário](../../clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)   
- [Tipos CLR definidos pelo usuário](../../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)   
+ [Tipos definidos pelo usuário de CLR](../../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)   
  [Procedimentos armazenados CLR](../../../database-engine/dev-guide/clr-stored-procedures.md)   
  [Gatilhos CLR](../../../database-engine/dev-guide/clr-triggers.md)  
   

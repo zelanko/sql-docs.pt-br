@@ -1,5 +1,5 @@
 ---
-title: Transferir o Editor de tarefa de objetos do SQL Server (página geral) | Microsoft Docs
+title: Editor da tarefa transferir objetos do SQL Server (página Geral) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5fba4bafe61090e3b7bb89129e5ecefd0befc7d9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054889"
 ---
 # <a name="transfer-sql-server-objects-task-editor-general-page"></a>Editor da Tarefa Transferir Objetos do SQL Server (página Geral)
@@ -37,7 +37,7 @@ ms.locfileid: "66054889"
  **Descrição**  
  Digite uma descrição da tarefa Transferir Objetos [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Tarefas do Integration Services](control-flow/integration-services-tasks.md)   
  [Editor da Tarefa Transferir Objetos do SQL Server &#40;Página Objetos&#41;](../../2014/integration-services/transfer-sql-server-objects-task-editor-objects-page.md)   

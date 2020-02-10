@@ -1,5 +1,5 @@
 ---
-title: Editor de origem OLE DB (página colunas) | Microsoft Docs
+title: Editor de origem de OLE DB (página colunas) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 453bed2f366c4b2bd51fd706d5d56ea6ccf01f01
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057026"
 ---
 # <a name="ole-db-source-editor-columns-page"></a>Editor de Origem de OLE DB (página Colunas)
@@ -36,11 +36,11 @@ ms.locfileid: "66057026"
  **Coluna de Saída**  
  Forneça um nome exclusivo para cada coluna de saída. O padrão é o nome da coluna externa (origem) selecionada; porém, é possível escolher qualquer nome descritivo exclusivo. O nome fornecido será exibido no Designer SSIS.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de origem de OLE DB &#40;Página Gerenciador de Conexões&#41;](../../2014/integration-services/ole-db-source-editor-connection-manager-page.md)   
- [Editor de Origem OLE DB &#40;Página Saída de Erro&#41;](../../2014/integration-services/ole-db-source-editor-error-output-page.md)   
- [Extrair dados por meio da origem OLE DB](data-flow/extract-data-by-using-the-ole-db-source.md)   
- [Gerenciador de conexões OLE DB](connection-manager/ole-db-connection-manager.md)  
+ [Editor de origem OLE DB &#40;página do Gerenciador de conexões&#41;](../../2014/integration-services/ole-db-source-editor-connection-manager-page.md)   
+ [Editor de origem OLE DB &#40;página saída de erro&#41;](../../2014/integration-services/ole-db-source-editor-error-output-page.md)   
+ [Extrair dados usando a fonte de OLE DB](data-flow/extract-data-by-using-the-ole-db-source.md)   
+ [gerenciador de conexões OLE DB](connection-manager/ole-db-connection-manager.md)  
   
   

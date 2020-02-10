@@ -16,23 +16,23 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 651705426b52b822c3eb8c7cf9d341968bbc088f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010988"
 ---
 # <a name="semantic-search-sql-server"></a>Pesquisa semântica (SQL Server)
-  A Pesquisa Semântica Estatística fornece uma profunda compreensão de documentos não estruturados armazenados em bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] extraindo e indexando *frases-chave* estatisticamente relevantes. Portanto, essas frases-chave também são usadas para identificar e indexar *documentos semelhantes ou relacionados*.  
+  A Pesquisa Semântica Estatística fornece uma profunda compreensão de documentos não estruturados armazenados em bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] extraindo e indexando *frases-chave*estatisticamente relevantes. Portanto, essas frases-chave também são usadas para identificar e indexar *documentos semelhantes ou relacionados*.  
   
  Você consulta esses índices semânticos usando três funções de conjunto de linhas do Transact-SQL para recuperar os resultados como dados estruturados.  
   
-##  <a name="whatcanido"></a> O que pode fazer com a pesquisa semântica?  
+##  <a name="whatcanido"></a>O que posso fazer com a pesquisa semântica?  
  A pesquisa semântica tem como base o recurso de pesquisa de texto completo existente no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mas habilita novos cenários que ampliam as pesquisas de palavra-chave. Enquanto a pesquisa de texto completo permite que você consulte as *palavras* em um documento, a pesquisa semântica permite a consulta do *significado* do documento. Agora, as soluções possíveis incluem a extração automática de marcas, a descoberta de conteúdo relacionado e a navegação hierárquica por conteúdo semelhante. Por exemplo, você pode consultar o índice de frases-chave para criar a taxonomia para uma organização ou para um corpo de documentos. Ou, você pode consultar o índice de similaridade do documento para identificar os currículos que correspondem a uma descrição do trabalho.  
   
  Os exemplos a seguir demonstram os recursos da Pesquisa Semântica.  
   
-###  <a name="find1"></a> Localizar as frases-chave em um documento  
+###  <a name="find1"></a>Localizar as frases-chave em um documento  
  A consulta a seguir obtém as frases-chave que foram identificadas no documento de exemplo. Apresenta os resultados em ordem decrescente pela contagem que classifica a significância estatística de cada frase-chave. Essa consulta chama a função [semantickeyphrasetable &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semantickeyphrasetable-transact-sql).  
   
 ```sql  
@@ -50,7 +50,7 @@ SELECT @Title AS Title, keyphrase, score
   
   
   
-###  <a name="find2"></a> Localizar documentos semelhantes ou relacionados  
+###  <a name="find2"></a>Localizar documentos semelhantes ou relacionados  
  A consulta a seguir obtém os documentos que foram identificados como semelhantes ou relacionados ao documento de exemplo. Apresenta os resultados em ordem decrescente pela contagem que classifica a semelhança dos 2 documentos. Essa consulta chama a função [semanticsimilaritytable &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semanticsimilaritytable-transact-sql).  
   
 ```vb  
@@ -70,7 +70,7 @@ SELECT @Title AS SourceTitle, DocumentTitle AS MatchedTitle,
   
   
   
-###  <a name="find3"></a> Localizar as frases-chave que tornam documentos semelhantes ou relacionados  
+###  <a name="find3"></a>Localizar as frases-chave que tornam os documentos semelhantes ou relacionados  
  A consulta a seguir obtém as frases-chave que tornam os 2 documentos de exemplo semelhantes ou relacionados a outro documento. Apresenta os resultados em ordem decrescente pela contagem que classifica o peso de cada frase-chave. Essa consulta chama a função [semanticsimilaritydetailstable &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql).  
   
 ```sql  
@@ -89,7 +89,7 @@ SELECT @SourceTitle AS SourceTitle, @MatchedTitle AS MatchedTitle, keyphrase, sc
   
   
   
-##  <a name="store"></a> Armazenar documentos no SQL Server  
+##  <a name="store"></a>Armazenando documentos no SQL Server  
  Antes de você poder indexar documentos com Pesquisa Semântica, é preciso armazenar os documentos em um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  O recurso FileTable no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] torna arquivos e documentos não estruturados objetos de primeira classe do banco de dados relacional. Como resultado, os desenvolvedores de banco de dados podem manipular documentos junto com dados estruturados em operações baseadas em conjuntos Transact-SQL.  
@@ -105,7 +105,7 @@ SELECT @SourceTitle AS SourceTitle, @MatchedTitle AS MatchedTitle, keyphrase, sc
  [Habilitar a pesquisa semântica em tabelas e colunas](enable-semantic-search-on-tables-and-columns.md)  
  Descreve como habilitar ou desabilitar a indexação semântica estatística em colunas selecionadas que contêm documentos ou texto.  
   
- [Localizar frases chave em documentos com pesquisa semântica](find-key-phrases-in-documents-with-semantic-search.md)  
+ [Localizar frases chave em documentos com a pesquisa semântica](find-key-phrases-in-documents-with-semantic-search.md)  
  Descreve como localizar as frases chave em documentos ou colunas de texto configuradas para indexação semântica estatística.  
   
  [Localizar documentos semelhantes e relacionados com a pesquisa semântica](find-similar-and-related-documents-with-semantic-search.md)  

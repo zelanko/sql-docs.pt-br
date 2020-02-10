@@ -14,24 +14,24 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b6e66a3465c543879b2ff6115e9ea45a53f97312
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055277"
 ---
 # <a name="technical-reference-integration-services"></a>Referência técnica (Integration Services)
-  Localize a documentação de ferramentas, lnoguagens e referências para programação do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] no [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
+  Encontre as ferramentas, os idiomas e a documentação de referência [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]programação para o no.  
   
- ![Small File Folder Icon](media/filefolder-small.gif "Small File Folder Icon") **serviço Change Data Capture e Designer**  
+ ![Ícone de pasta de arquivos pequena](media/filefolder-small.gif "Ícone de pasta de arquivos pequeno") **alterar serviço e designer de captura de dados**  
  [Serviço Change Data Capture para Oracle da Attunity](change-data-capture/change-data-capture-service-for-oracle-by-attunity.md)  
   
  [Change Data Capture Designer para Oracle da Attunity](change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)  
   
- ![Ícone da pasta de arquivos pequenos](media/filefolder-small.gif "Ícone da pasta de arquivos pequenos") **Erros e eventos**  
+ **Erros e eventos de ícone de pasta de** ![arquivos pequenos](media/filefolder-small.gif "Ícone de pasta de arquivos pequeno")  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
- ![Small File Folder Icon](media/filefolder-small.gif "Small File Folder Icon") **referência Transact-SQL**  
+ ![Ícone de pasta de arquivos pequena](media/filefolder-small.gif "Ícone de pasta de arquivos pequeno") **referência de Transact-SQL**  
  [Exibições &#40;catálogo do Integration Services&#41;](/sql/integration-services/system-views/views-integration-services-catalog)  
   
  [Procedimentos armazenados &#40;catálogo do Integration Services&#41;](/sql/integration-services/system-stored-procedures/stored-procedures-integration-services-catalog)  

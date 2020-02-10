@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b5bfbff70d29e2b7b18c82b323d3ab34a3c6c60e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62835471"
 ---
 # <a name="generate-and-run-the-supplemental-logging-script"></a>Gerar e executar scripts de log suplementares
@@ -36,8 +36,8 @@ ms.locfileid: "62835471"
   
  Clique em **Avançar** para [Generate Mirror Tables and CDC Capture Instances](generate-mirror-tables-and-cdc-capture-instances.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Como criar a instância de banco de dados de alteração do SQL Server](how-to-create-the-sql-server-change-database-instance.md)   
- [Revisar e gerar scripts de log suplementares](review-and-generate-supplemental-logging-scripts.md)  
+ [Examinar e gerar scripts de log suplementares](review-and-generate-supplemental-logging-scripts.md)  
   
   

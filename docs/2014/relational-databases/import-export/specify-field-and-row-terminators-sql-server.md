@@ -17,14 +17,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5f00a8330673dc15eed57f770635a251d5aa97e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011852"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>Especificar terminadores de campo e linha (SQL Server)
-  Para campos de dados de caracteres, caracteres de terminação opcionais permitem marcar o término de cada campo em um arquivo de dados com um *terminador de campo* e o término de cada linha com um *terminador de linha*. Os caracteres terminadores são um modo de indicar aos programas que leem o arquivo de dados onde um campo ou uma linha termina, e onde outro campo ou outra linha começa.  
+  Para campos de dados de caractere, os caracteres de terminação opcionais permitem marcar o final de cada campo em um arquivo de dados com um *terminador de campo* e o final de cada linha com um *terminador de linha*. Os caracteres terminadores são um modo de indicar aos programas que leem o arquivo de dados onde um campo ou uma linha termina, e onde outro campo ou outra linha começa.  
   
 > [!IMPORTANT]  
 >  Quando você usa formato nativo ou nativo Unicode, usa prefixos de comprimento em vez de terminadores de campo. Dados de formato nativo podem conflituar com terminadores, pois um arquivo de dados de formato nativo é armazenado no formato de dados binário interno do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -38,13 +38,13 @@ ms.locfileid: "66011852"
 |Caractere de nova linha|\n<br /><br /> Esse é o terminador de linha padrão.|  
 |Retorno de carro/avanço de linha|\r|  
 |Barra invertida<sup>1</sup>|\\\|  
-|Terminador nulo (terminador invisível)<sup>2</sup>|\0|  
+|Terminador nulo (terminador não visível)<sup>2</sup>|\0|  
 |Qualquer caractere imprimível (caracteres de controle não são imprimíveis, exceto nulo, tabulação, nova linha e retorno de carro)|(*, A, t, l, etc.)|  
 |Cadeia de caracteres de até 10 caracteres imprimíveis, incluindo alguns ou todos os terminadores listados anteriormente|(**\t\*\*, end, !!!!!!!!!!, \t-\n e assim por diante)|  
   
- <sup>1</sup> apenas o t, n, r, os caracteres de 0 e '\0' funcionam com o caractere de escape de barra invertida para produzir um caractere de controle.  
+ <sup>1</sup> somente os caracteres t, n, r, 0 e ' \ 0 ' funcionam com o caractere de escape de barra invertida para produzir um caractere de controle.  
   
- <sup>2</sup> mesmo que o caractere de controle nulo (\0) não é visível quando impresso, é um caractere distinto no arquivo de dados. Isso significa que usar o caractere de controle nulo como um terminador de campo ou de linha é diferente de não ter nenhum terminador de campo ou de linha.  
+ <sup>2</sup> embora o caractere de controle nulo (\ 0) não esteja visível quando impresso, ele é um caractere distinto no arquivo de dados. Isso significa que usar o caractere de controle nulo como um terminador de campo ou de linha é diferente de não ter nenhum terminador de campo ou de linha.  
   
 > [!IMPORTANT]  
 >  Se um caractere terminador ocorrer dentro dos dados, ele será interpretado como um terminador, não como dados, e os dados depois daquele caractere serão interpretados como sendo parte do próximo campo ou registro. Portanto, escolha seus terminadores cuidadosamente para ter certeza de que eles nunca aparecerão em seus dados. Por exemplo, um terminador de campo de alternativo baixo não seria uma boa escolha para um terminador de campo se os dados contiverem esse alternativo baixo.  
@@ -56,7 +56,7 @@ ms.locfileid: "66011852"
 >  Quando você usa **bcp** de forma interativa e especifica \n (nova linha) como terminador de linha, o **bcp** automaticamente o prefixa com um caractere \r (retorno de carro), o que resulta em um terminador de linha \r\n.  
   
 ## <a name="specifying-terminators-for-bulk-export"></a>Especificando terminadores para exportação em massa  
- Quando você exporta em massa `char` ou `nchar` dados e quer usar um terminador não padrão, você deve especificar o terminador para o **bcp** comando. Você pode especificar terminadores em qualquer uma das seguintes formas:  
+ Quando você exporta `char` ou `nchar` dados em massa e deseja usar um terminador não padrão, deve especificar o terminador para o comando **bcp** . Você pode especificar terminadores em qualquer uma das seguintes formas:  
   
 -   Com um arquivo de formato que especifica o terminador campo por campo.  
   
@@ -67,12 +67,12 @@ ms.locfileid: "66011852"
   
     -   Usar a opção **-t** para especificar o terminador de linha para todos os campos, exceto para o último campo na linha, e usar a opção **-r** para especificar um terminador de linha.  
   
-    -   Usar uma opção de formato de caractere ( **-c** ou **-w**) sem a opção **-t**, o que define o terminador de campo como o caractere de tabulação, \t. Isso é o mesmo que especificar **-t**\t.  
+    -   Usar uma opção de formato de caractere (**-c** ou **-w**) sem a opção **-t** , o que define o terminador de campo como o caractere de tabulação, \t. Isso é o mesmo que especificar **-t**\t.  
   
         > [!NOTE]  
         >  Se você especificar a opção **-n** (dados nativos) ou **-N** (dados nativos Unicode), os terminadores não serão inseridos.  
   
-    -   Se um comando interativo **bcp** contiver a opção **in** ou **out** sem a opção de arquivo de formato ( **-f**) ou uma opção de formato de dados ( **-n**, **-c**, **-w**ou **-N**) e você tiver escolhido não identificar os tamanhos de prefixo e de campo, o comando solicitará o terminador de campo de cada campo com um padrão nenhum:  
+    -   Se um comando interativo **bcp** contiver a opção **in** ou **out** sem a opção de arquivo de formato (**-f**) ou uma opção de formato de dados (**-n**, **-c**, **-w**ou **-N**) e você tiver escolhido não identificar os tamanhos de prefixo e de campo, o comando solicitará o terminador de campo de cada campo com um padrão nenhum:  
   
          `Enter field terminator [none]:`  
   
@@ -97,10 +97,10 @@ ms.locfileid: "66011852"
   
  O comando **bcp** contém as opções a seguir.  
   
-|Alternar|Descrição|  
+|Opção|DESCRIÇÃO|  
 |------------|-----------------|  
 |**-c**|Especifica que os campos de dados sejam carregados como dados de caracteres.|  
-|**-t** `,`|Especifica uma vírgula (,) como terminador de campo.|  
+|**-t**`,`|Especifica uma vírgula (,) como terminador de campo.|  
 |**-r** \n|Especifica o terminador de linha como um caractere de nova linha. Esse é o terminador de linha padrão, portanto especificá-lo é opcional.|  
 |**-T**|Especifica que o utilitário **bcp** se conecta ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com uma conexão confiável usando segurança integrada. Se **-T** não for especificado, será necessário especificar **-U** e **-P** para que o logon tenha êxito.|  
   
@@ -117,7 +117,7 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
 ## <a name="specifying-terminators-for-bulk-import"></a>Especificando terminadores para importação em massa  
  Quando você importa em massa dados `char` ou `nchar`, o comando de importação em massa deve reconhecer os terminadores usados no arquivo de dados. A especificação dos terminadores depende do comando de importação em massa, como segue:  
   
--   **bcp**  
+-   **BCP**  
   
      A especificação de terminadores para uma operação de importação usa a mesma sintaxe que uma operação de exportação. Para obter mais informações, consulte "Especificando terminadores para exportação em massa", anteriormente neste tópico.  
   
@@ -125,10 +125,10 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
   
      Os terminadores podem ser especificados para campos individuais em um arquivo de formato ou para o arquivo de dados inteiro usando os qualificadores mostrados na tabela a seguir.  
   
-    |Qualificador|Descrição|  
+    |Qualificador|DESCRIÇÃO|  
     |---------------|-----------------|  
-    |FIELDTERMINATOR **=' *`field_terminator`* '**|Especifica o terminador de campo a ser usado em arquivos de dados de caracteres e caracteres Unicode.<br /><br /> O padrão é \t (caractere de tabulação).|  
-    |ROWTERMINATOR **=' *`row_terminator`* '**|Especifica o terminador de linha a ser usado em arquivos de dados de caracteres e caracteres Unicode.<br /><br /> O padrão é \n (caractere de nova linha).|  
+    |FIELDTERMINATOR **='*`field_terminator`*'**|Especifica o terminador de campo a ser usado em arquivos de dados de caracteres e caracteres Unicode.<br /><br /> O padrão é \t (caractere de tabulação).|  
+    |ROWTERMINATOR **='*`row_terminator`*'**|Especifica o terminador de linha a ser usado em arquivos de dados de caracteres e caracteres Unicode.<br /><br /> O padrão é \n (caractere de nova linha).|  
   
      Para obter mais informações, veja [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql).  
   
@@ -155,7 +155,7 @@ GO
   
 ```  
   
-#### <a name="a-using-bcp-to-interactively-specify-terminators"></a>A. Usando bcp para especificar terminadores interativamente  
+#### <a name="a-using-bcp-to-interactively-specify-terminators"></a>a. Usando bcp para especificar terminadores interativamente  
  O exemplo a seguir importa em massa o arquivo de dados `Department-c-t.txt` usando um comando `bcp` . Esse comando usa as mesmas opções de comando que o comando de exportação em massa. Para obter mais informações, consulte "Especificando terminadores para exportação em massa", anteriormente neste tópico.  
   
  No prompt de comando do Windows, insira:  
@@ -167,11 +167,11 @@ bcp AdventureWorks..myDepartment in C:\myDepartment-c-t.txt -c -t , -r \n -T
 #### <a name="b-using-bulk-insert-to-interactively-specify-terminators"></a>B. Usando BULK INSERT para especificar terminadores interativamente  
  O exemplo a seguir importa em massa o arquivo de dados `Department-c-t.txt` usando uma instrução `BULK INSERT` que usa os qualificadores mostrados na tabela a seguir.  
   
-|Opção|attribute|  
+|Opção|Atributo|  
 |------------|---------------|  
-|DATAFILETYPE **='`char`'**|Especifica que os campos de dados sejam carregados como dados de caracteres.|  
-|FIELDTERMINATOR **='** `,` **'**|Especifica uma vírgula (`,`) como terminador de campo.|  
-|ROWTERMINATOR **='** `\n` **'**|Especifica o terminador de linha como um caractere de nova linha.|  
+|DataFileType **= '`char`'**|Especifica que os campos de dados sejam carregados como dados de caracteres.|  
+|FIELDTERMINATOR **= '**`,`**'**|Especifica uma vírgula (`,`) como terminador de campo.|  
+|Objectterminador **= '**`\n`**'**|Especifica o terminador de linha como um caractere de nova linha.|  
   
  No Editor de Consultas do [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] , execute o seguinte código:  
   
@@ -187,12 +187,12 @@ BULK INSERT myDepartment FROM 'C:\myDepartment-c-t.txt'
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [bcp Utility](../../tools/bcp-utility.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Utilitário bcp](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
- [Especificar tamanho do campo usando bcp &#40;SQL Server&#41;](specify-field-length-by-using-bcp-sql-server.md)   
- [Especificar o tamanho de prefixo em arquivos de dados usando bcp &#40;SQL Server&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)   
- [Especificar tipo de armazenamento de arquivo usando bcp &#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
+ [Especifique o tamanho do campo usando bcp &#40;SQL Server&#41;](specify-field-length-by-using-bcp-sql-server.md)   
+ [Especifique o tamanho do prefixo em arquivos de dados usando o bcp &#40;SQL Server&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)   
+ [Especifique o tipo de armazenamento de arquivo usando bcp &#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
   
   

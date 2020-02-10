@@ -17,14 +17,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2f105a7f30d2d1c42bfb31f1555bb976745bbbe4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055799"
 ---
 # <a name="set-the-properties-of-a-package"></a>Definir as propriedades de um pacote
-  Este procedimento descreve como configurar as propriedades do pacote na janela **Propriedades**.  
+  Este procedimento descreve como configurar as propriedades do pacote na janela **Propriedades** .  
   
 > [!NOTE]  
 >  O pacote deve ser aberto no SSIS Designer antes que a janela Propriedades relacione as propriedades que você definiu para configurar o pacote.  
@@ -45,7 +45,7 @@ ms.locfileid: "66055799"
   
 5.  No menu **Arquivo** , clique em **Salvar Itens Selecionados** para salvar o pacote atualizado.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Pacotes do Integration Services &#40;SSIS&#41;](../../2014/integration-services/integration-services-ssis-packages.md)   
  [Definir as propriedades do pacote](set-package-properties.md)  
   

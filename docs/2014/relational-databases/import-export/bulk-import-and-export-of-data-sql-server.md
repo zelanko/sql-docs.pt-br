@@ -25,48 +25,50 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e90afe2092623fa1dd356e51af5fff7a19e9a2ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012116"
 ---
 # <a name="bulk-import-and-export-of-data-sql-server"></a>Importação e exportação em massa de dados (SQL Server)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte à exportação de dados em massa (*dados em massa*) de uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e à importação dos dados em massa para uma exibição não particionada ou uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . A importação e a exportação em massa são essenciais para transferir os dados de maneira eficiente entre o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e as fontes de dados heterogêneos. *Exportação em massa* se refere à copia de dados de uma tabela [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para um arquivo de dados. *Importação em massa* refere-se ao carregamento de dados de um arquivo de dados em uma tabela [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Por exemplo, você pode exportar dados de um aplicativo Excel do [!INCLUDE[msCoName](../../includes/msconame-md.md)] para um arquivo de dados e então importar em massa dados em uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte à exportação de dados em massa (*dados em massa*) de uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e à importação dos dados em massa para uma exibição não particionada ou uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . A importação e a exportação em massa são essenciais para transferir os dados de maneira eficiente entre o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e as fontes de dados heterogêneos. A *exportação em massa* refere-se à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cópia de dados de uma tabela para um arquivo de dados. A *importação em massa* refere-se ao carregamento de dados de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] um arquivo de dados em uma tabela. Por exemplo, você pode exportar dados de um aplicativo Excel do [!INCLUDE[msCoName](../../includes/msconame-md.md)] para um arquivo de dados e então importar em massa dados em uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **Neste tópico:**  
   
--   [Introdução à importação em massa e operações de exportação em massa](#Intro)  
+-   [Introdução às operações de importação e exportação em massa](#Intro)  
   
 -   [Tarefas relacionadas](#RelatedTasks)  
   
-##  <a name="Intro"></a> Importação em massa e visão geral de exportação em massa  
+##  <a name="Intro"></a>Visão geral da importação e exportação em massa  
  Esta seção lista e compara brevemente os vários métodos disponíveis para a importação e exportação em massa dos dados. A seção também apresenta arquivos de formato.  
   
  **Neste tópico:**  
   
--   [Métodos para importação e exportação de dados em massa](#MethodsForBuliIE)  
+-   [Métodos para importar e exportar dados em massa](#MethodsForBuliIE)  
   
 -   [Arquivos de formato](#FFs)  
   
-###  <a name="MethodsForBuliIE"></a> Métodos para importação e exportação de dados em massa  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte à exportação de dados em massa de uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e à importação de dados em massa em uma tabela ou exibição não particionada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Os métodos básicos a seguir estão disponíveis.  
+###  <a name="MethodsForBuliIE"></a>Métodos para importar e exportar dados em massa  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte à exportação de dados em massa de uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e à importação de dados em massa em uma tabela ou exibição não particionada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Os métodos básicos a seguir estão disponíveis.  
   
-|Método|Descrição|Importa dados|Exporta dados|  
+|Método|DESCRIÇÃO|Importa dados|Exporta dados|  
 |------------|-----------------|------------------|------------------|  
 |[utilitário bcp](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)|Um utilitário de linha de comando (Bcp.exe) que exporta e importa dados em massa e gera arquivos de formato.|Sim|Sim|  
-|[instrução BULK INSERT](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|Uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] que importa dados diretamente de um arquivo de dados para uma tabela de banco de dados ou exibição não particionada.|Sim|Não |  
-|[Instrução INSERT ... Instrução SELECT * FROM OPENROWSET(BULK...)](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|Uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] que usa o provedor de conjunto de linhas em massa OPENROWSET para importação em massa dos dados para uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especificando a função OPENROWSET(BULK…) para selecionar dados em uma instrução INSERT.|Sim|Não|  
+|[Instrução BULK INSERT](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|Uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] que importa dados diretamente de um arquivo de dados para uma tabela de banco de dados ou exibição não particionada.|Sim|Não|  
+|[INSERIR... Instrução SELECT * FROM OPENROWSET (BULK...)](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|Uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] que usa o provedor de conjunto de linhas em massa OPENROWSET para importação em massa dos dados para uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especificando a função OPENROWSET(BULK…) para selecionar dados em uma instrução INSERT.|Sim|Não|  
   
 > [!IMPORTANT]  
 >  Os arquivos CSV (valores separados por vírgula) não têm suporte nas operações de importação em massa do SQL Server. No entanto, em alguns casos, um arquivo CSV pode ser usado como arquivo de dados para uma importação em massa de dados no SQL Server. Observe que o terminador de campo de um arquivo CSV não tem que ser uma vírgula. Para obter mais informações, consulte [Preparar dados para exportar ou importar em massa &#40;SQL Server&#41;](prepare-data-for-bulk-export-or-import-sql-server.md).  
   
-###  <a name="FFs"></a> Arquivos de formato  
- O utilitário **bcp**, BULK INSERT e INSERT... SELECT \* FROM OPENROWSET(BULK...) dão suporte ao uso de um *arquivo de formato* especializado que armazena informações de formato para cada campo em um arquivo de dados. Um arquivo de formato também pode conter informações sobre a tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] correspondente. O arquivo de formato pode ser usado para fornecer todas as informações de formato necessárias para exportar e importar dados em massa para uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+###  <a name="FFs"></a>Arquivos de formato  
+ O utilitário **bcp** , BULK INSERT e INSERT... A \* seleção de OPENROWSET (bulk...) dá suporte ao uso de um *arquivo de formato* especializado que armazena informações de formato para cada campo em um arquivo de dados. Um arquivo de formato também pode conter informações sobre a tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] correspondente. O arquivo de formato pode ser usado para fornecer todas as informações de formato necessárias para exportar e importar dados em massa para uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Os arquivos de formato fornecem um modo flexível para interpretar dados como eles são no arquivo de dados durante a importação, e também formatar dados no arquivo de dados durante a exportação. Essa flexibilidade elimina a necessidade de gravar um código com finalidade especial para interpretar os dados ou reformatar os dados segundo requisitos específicos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou o aplicativo externo. Por exemplo, se você estiver exportando dados em massa para serem carregados em um aplicativo que exige valores separados por vírgula, use um arquivo de formato para inserir vírgulas como terminadores de campo nos dados exportados.  
   
- O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte a dois tipos de arquivos de formato: arquivos de formatos XML e arquivos não no formato XML.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte a dois tipos de arquivos de formato: arquivos de formato XML e não XML.  
   
  O utilitário **bcp** é a única ferramenta que pode gerar um arquivo de formato. Para obter mais informações, consulte [Criar um arquivo de formato &#40;SQL Server&#41;](create-a-format-file-sql-server.md). Para obter mais informações sobre os arquivos de formato, consulte [Arquivos de formato para importação ou exportação de dados &#40;SQL Server&#41;](format-files-for-importing-or-exporting-data-sql-server.md).  
   
@@ -75,9 +77,9 @@ ms.locfileid: "66012116"
   
 ##  <a name="RelatedTasks"></a> Tarefas relacionadas  
   
--   [Importar e exportar em massa dados usando o utilitário bcp &#40;SQL Server&#41;](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)  
+-   [Importe e exporte dados em massa usando o utilitário bcp &#40;SQL Server&#41;](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)  
   
--   [Importar dados em massa usando BULK INSERT ou OPENROWSET&#40;BULK... &#41; &#40;Do SQL Server&#41;](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)  
+-   [Importar dados em massa usando BULK INSERT ou OPENROWSET&#40;BULK... &#41; &#40;SQL Server&#41;](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)  
   
 -   [Manter valores de identidade ao importar dados em massa &#40;SQL Server&#41;](keep-identity-values-when-bulk-importing-data-sql-server.md)  
   
@@ -109,25 +111,25 @@ ms.locfileid: "66012116"
   
 -   [Usar o formato nativo Unicode para importar ou exportar dados &#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
- **Para especificar formatos de dados para compatibilidade usando bcp**  
+ **Para especificar formatos de dados para compatibilidade ao usar bcp**  
   
 1.  [Especificar terminadores de campo e linha &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)  
   
-2.  [Especificar o tamanho de prefixo em arquivos de dados usando bcp &#40;SQL Server&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
+2.  [Especifique o tamanho do prefixo em arquivos de dados usando o bcp &#40;SQL Server&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
   
-3.  [Especificar tipo de armazenamento de arquivo usando bcp &#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
+3.  [Especifique o tipo de armazenamento de arquivo usando bcp &#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Pré-requisitos para log mínimo em importação em massa](prerequisites-for-minimal-logging-in-bulk-import.md)   
- [Arquivos de formato para importação ou exportação de dados &#40;SQL Server&#41;](format-files-for-importing-or-exporting-data-sql-server.md)   
+ [Arquivos de formato para importação ou exportação de &#40;de dados SQL Server&#41;](format-files-for-importing-or-exporting-data-sql-server.md)   
  [Exemplos de importação e exportação em massa de documentos XML &#40;SQL Server&#41;](examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)   
  [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)   
  [Copiar bancos de dados em outros servidores](../databases/copy-databases-to-other-servers.md)   
- [Executando o carregamento em massa de dados XML &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)   
+ [Executando o carregamento em massa de dados XML &#40;SQLXML 4,0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)   
  [Executando operações de cópia em massa](../native-client/features/performing-bulk-copy-operations.md)   
  [Utilitário bcp](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
- [Arquivos de formato para importação ou exportação de dados &#40;SQL Server&#41;](format-files-for-importing-or-exporting-data-sql-server.md)   
+ [Arquivos de formato para importação ou exportação de &#40;de dados SQL Server&#41;](format-files-for-importing-or-exporting-data-sql-server.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)  
   
   

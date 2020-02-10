@@ -1,5 +1,5 @@
 ---
-title: Mapeamento explícito de atributos e elementos XSD para tabelas e colunas (SQLXML 4.0) | Microsoft Docs
+title: Mapeamento explícito de elementos e atributos XSD para tabelas e colunas (SQLXML 4,0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -29,10 +29,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 72dfbcbd1ff264e596eecfecb5ebf759c2cbf5e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013840"
 ---
 # <a name="explicit-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>Mapeamento explícito de atributos e elementos XSD em tabelas e colunas (SQLXML 4.0)
@@ -45,7 +45,7 @@ ms.locfileid: "66013840"
   
  Quando `sql:relation` é especificado em um elemento, o escopo dessa anotação se aplica a todos os atributos e elementos filho que são descritos na definição de tipo complexo desse elemento, fornecendo assim um atalho ao escrever anotações.  
   
- O `sql:relation` anotação também é útil quando identificadores que são válidos no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não são válidos em XML. Por exemplo, "Pedido de Vendas" é um nome de tabela válido no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mas não no XML. Nesses casos, a anotação `sql:relation` pode ser usada para especificar o mapeamento, por exemplo:  
+ A `sql:relation` anotação também é útil quando os identificadores válidos no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não são válidos em XML. Por exemplo, "Pedido de Vendas" é um nome de tabela válido no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mas não no XML. Nesses casos, a anotação `sql:relation` pode ser usada para especificar o mapeamento, por exemplo:  
   
 ```  
 <xsd:element name="OD" sql:relation="[Order Details]">  
@@ -55,14 +55,14 @@ ms.locfileid: "66013840"
  A anotação `sql-field` mapeia um elemento ou atributo em uma coluna do banco de dados. A anotação `sql:field` é adicionada para mapear um nó XML do esquema em uma coluna do banco de dados. Não é possível especificar `sql:field` em um elemento com conteúdo vazio.  
   
 ## <a name="examples"></a>Exemplos  
- Para criar exemplos de funcionamento usando os exemplos a seguir, é necessário atender a determinados requisitos. Para obter mais informações, consulte [requisitos para executar exemplos do SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
+ Para criar exemplos de funcionamento usando os exemplos a seguir, é necessário atender a determinados requisitos. Para obter mais informações, consulte [Requirements for running SQLXML examples](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-the-sqlrelation-and-sqlfield-annotations"></a>A. Especificando as anotações sql:relation e sql:field  
- Neste exemplo, o esquema XSD consiste em uma  **\<contato >** elemento do tipo complexo com  **\<FName >** e  **\<LName >** elementos filho e o **ContactID** atributo.  
+### <a name="a-specifying-the-sqlrelation-and-sqlfield-annotations"></a>a. Especificando as anotações sql:relation e sql:field  
+ Neste exemplo, o esquema XSD consiste em um ** \<elemento Contact>** de tipo complexo com ** \<fname>** e ** \<lname>** elementos filho e o atributo **ContactID** .  
   
- O `sql:relation` anotação mapeia o  **\<contato >** elemento para a tabela Person. Contact no banco de dados AdventureWorks. O `sql:field` anotação mapeia o  **\<FName >** elemento para a coluna FirstName e o  **\<LName >** elemento na coluna LastName.  
+ A `sql:relation` anotação mapeia o ** \<elemento Contact>** para a tabela Person. Contact no banco de dados AdventureWorks. A `sql:field` anotação mapeia o ** \<elemento fname>** para a coluna FirstName e o ** \<elemento lname>** para a coluna LastName.  
   
- Nenhuma anotação é especificada para o **ContactID** atributo. Isso resulta em um mapeamento padrão do atributo na coluna com o mesmo nome.  
+ Nenhuma anotação foi especificada para o atributo **ContactID** . Isso resulta em um mapeamento padrão do atributo na coluna com o mesmo nome.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -106,7 +106,7 @@ ms.locfileid: "66013840"
   
 3.  Crie e use o script de teste SQLXML 4.0 (Sqlxml4test.vbs) para executar o modelo.  
   
-     Para obter mais informações, consulte [usando o ADO para executar consultas SQLXML](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Para obter mais informações, consulte [usando o ADO para executar consultas do SQLXML](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Este é o conjunto de resultados parcial:  
   

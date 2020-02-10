@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 51f45290847444a1400f1d708755c6737a3b3f84
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65574785"
 ---
 # <a name="add-sql-server-reporting-services-report-viewer-web-part-to-a-sharepoint-page"></a>Adicionar a web part do Visualizador de Relatórios do SQL Server Reporting Services a uma página do SharePoint
@@ -42,7 +42,7 @@ Exiba um relatório, no SQL Server Reporting Services ou no Servidor de Relatór
 
     ![Insira uma web part por meio da faixa de opções do Office.](media/sharepoint-insert-web-part.png)
 
-4. Em **Categorias**, selecione **SQL Server Reporting Services (modo Nativo). Em **Partes**, selecione **Visualizador de Relatórios**. Em seguida, selecione **Adicionar**.
+4. Em **Categorias**, selecione **SQL Server Reporting Services (modo Nativo). Em **Partes**, selecione **Visualizador de Relatórios**. Em seguida, selecione**Adicionar**.
 
     ![Adicione a web part do Visualizador de Relatórios.](media/sharepoint-report-viewer-web-part.png)
 
@@ -74,4 +74,4 @@ Para configurar a Web part para que ela aponte para o relatório específico, re
 * Os relatórios do Power BI não podem ser usados com a web part do Visualizador de Relatórios.
 * Se a web part do Visualizador de Relatórios não estiver visível, para adicioná-la à página, verifique se você [implantou a web part do Visualizador de Relatórios](deploy-report-viewer-web-part.md).
 
-Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
+Mais perguntas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

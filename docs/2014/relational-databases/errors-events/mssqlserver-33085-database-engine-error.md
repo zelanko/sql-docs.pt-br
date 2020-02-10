@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6f3692ab986f3648bd1ab5b411207fe4948ca216
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62868510"
 ---
-# <a name="mssqlserver33085"></a>MSSQLSERVER_33085
+# <a name="mssqlserver_33085"></a>MSSQLSERVER_33085
     
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|33085|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|SEC_CRYPTOPROVE_METHOD_CANNOT_FOUND|  
 |Texto da mensagem|Não é possível encontrar um ou mais métodos na biblioteca de provedor criptográfica '%. * ls.'|  
@@ -35,7 +35,7 @@ ms.locfileid: "62868510"
 ## <a name="explanation"></a>Explicação  
  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não pôde usar o provedor criptográfico listado na mensagem de erro. O provedor criptográfico não deu suporte a um método exigido. O estado do erro indica qual método não foi encontrado.  
   
-|Estado|Descrição|  
+|Estado|DESCRIÇÃO|  
 |-----------|-----------------|  
 |1|SqlCryptInitializeProvider|  
 |2|SqlCryptFreeProvider|  

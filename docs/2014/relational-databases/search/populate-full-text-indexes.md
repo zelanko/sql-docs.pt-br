@@ -25,22 +25,22 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d6f871fabba547268736dca990215b89ae84e9eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011175"
 ---
 # <a name="populate-full-text-indexes"></a>Popular índices de texto completo
   A criação e a manutenção de um índice de texto completo envolvem popular o índice usando um processo chamado *população* (também conhecido como *rastreamento*).  
   
-##  <a name="types"></a> Tipos de população  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suporta os seguintes tipos de população: população completa, com base em controle de alterações automático ou manual população e população incremental baseada em carimbo de hora.  
+##  <a name="types"></a>Tipos de população  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o dá suporte aos seguintes tipos de população: população completa, população automática baseada em controle de alterações ou preenchimento manual e população incremental baseada em carimbo de data/hora.  
   
 ### <a name="full-population"></a>População completa  
  Durante uma população completa, entradas de índice são criadas para todas as linhas de uma tabela ou exibição indexada. Uma população completa de um índice de texto completo cria entradas de índice para todas as linhas da tabela base ou da exibição indexada.  
   
- Por padrão, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] popula totalmente um novo índice de texto completo assim que ele é criado. No entanto, uma população completa pode consumir recursos consideráveis. Portanto, quando você criar um índice de texto completo durante períodos de pico, uma prática recomendada será atrasar a população completa até uma hora fora do horário de pico, principalmente se a tabela base de um índice de texto completo for grande. Todavia, o catálogo de texto completo ao qual o índice pertence não poderá ser utilizado até que todos os índices de texto completo estejam populados. Para criar um índice de texto completo sem populá-lo imediatamente, especifique a cláusula CHANGE_TRACKING OFF, NO POPULATION na instrução CREATE FULLTEXT INDEX. Se você especificar CHANGE_TRACKING MANUAL, o Mecanismo de Texto Completo usará a instrução. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não populará o novo índice de texto completo até que você execute uma instrução ALTER FULLTEXT INDEX usando a cláusula START INCREMENTAL POPULATION ou START FULL POPULATION. Para obter mais informações, consulte os exemplos “A. Criando um índice de texto completo sem executar uma população completa" e "B. Executando uma população completa em tabela", mais adiante neste tópico.  
+ Por padrão, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] popula totalmente um novo índice de texto completo assim que ele é criado. No entanto, uma população completa pode consumir recursos consideráveis. Portanto, quando você criar um índice de texto completo durante períodos de pico, uma prática recomendada será atrasar a população completa até uma hora fora do horário de pico, principalmente se a tabela base de um índice de texto completo for grande. Todavia, o catálogo de texto completo ao qual o índice pertence não poderá ser utilizado até que todos os índices de texto completo estejam populados. Para criar um índice de texto completo sem populá-lo imediatamente, especifique a cláusula CHANGE_TRACKING OFF, NO POPULATION na instrução CREATE FULLTEXT INDEX. Se você especificar CHANGE_TRACKING MANUAL, o Mecanismo de Texto Completo usará a instrução. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o não preencherá o novo índice de texto completo até que você execute uma instrução ALTER FULLTEXT INDEX usando a cláusula iniciar população completa ou iniciar população INCREMENTAL. Para obter mais informações, consulte os exemplos “A. Criando um índice de texto completo sem executar uma população completa" e "B. Executando uma população completa em tabela", mais adiante neste tópico.  
   
 
   
@@ -60,29 +60,29 @@ ms.locfileid: "66011175"
   
      **Para configurar o controle de alterações com população automática**  
   
-    -   [CREATE FULLTEXT INDEX](/sql/t-sql/statements/create-fulltext-index-transact-sql)... WITH CHANGE_TRACKING AUTO  
+    -   [criar índice de texto completo](/sql/t-sql/statements/create-fulltext-index-transact-sql) ... COM CHANGE_TRACKING AUTOMÁTICO  
   
-    -   [ALTER FULLTEXT INDEX](/sql/t-sql/statements/alter-fulltext-index-transact-sql)... SET CHANGE_TRACKING AUTO  
+    -   [alterar índice de texto completo](/sql/t-sql/statements/alter-fulltext-index-transact-sql) ... DEFINIR CHANGE_TRACKING AUTOMATICAMENTE  
   
      Para obter mais informações, consulte o exemplo “E. Alterando um índice de texto completo para usar o controle de alterações automáticas”, mais adiante neste tópico.  
   
 -   População manual  
   
-     Se você especificar CHANGE_TRACKING MANUAL, o Mecanismo de Texto Completo usará população manual no índice de texto completo. Depois que a população completa inicial é concluída, as alterações são controladas à medida que os dados são modificados na tabela base. Porém, eles não serão propagados para o índice de texto completo até que você execute uma instrução ALTER FULLTEXT INDEX... Instrução START UPDATE POPULATION . É possível usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para chamar essa instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] periodicamente.  
+     Se você especificar CHANGE_TRACKING MANUAL, o Mecanismo de Texto Completo usará população manual no índice de texto completo. Depois que a população completa inicial é concluída, as alterações são controladas à medida que os dados são modificados na tabela base. No entanto, eles não são propagados para o índice de texto completo até que você execute um ALTER FULLTEXT INDEX... Instrução START UPDATE population. É possível usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para chamar essa instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] periodicamente.  
   
-     **Para começar a controlar alterações com população manual**  
+     **Para iniciar o controle de alterações com a população manual**  
   
-    -   [CREATE FULLTEXT INDEX](/sql/t-sql/statements/create-fulltext-index-transact-sql)... WITH CHANGE_TRACKING MANUAL  
+    -   [criar índice de texto completo](/sql/t-sql/statements/create-fulltext-index-transact-sql) ... COM CHANGE_TRACKING MANUAL  
   
-    -   [ALTER FULLTEXT INDEX](/sql/t-sql/statements/alter-fulltext-index-transact-sql)... SET CHANGE_TRACKING MANUAL  
+    -   [alterar índice de texto completo](/sql/t-sql/statements/alter-fulltext-index-transact-sql) ... DEFINIR CHANGE_TRACKING MANUAL  
   
      Para obter mais informações, consulte o exemplo “C. Criando um índice de texto completo com controle de alterações manual" e "D. Executando uma população manual", posteriormente neste tópico.  
   
- **Para desativar o controle de alterações**  
+ **Para desativar o rastreamento de alterações**  
   
--   [CREATE FULLTEXT INDEX](/sql/t-sql/statements/create-fulltext-index-transact-sql)... WITH CHANGE_TRACKING OFF  
+-   [criar índice de texto completo](/sql/t-sql/statements/create-fulltext-index-transact-sql) ... COM CHANGE_TRACKING DESATIVADO  
   
--   [ALTER FULLTEXT INDEX](/sql/t-sql/statements/alter-fulltext-index-transact-sql)... SET CHANGE_TRACKING OFF  
+-   [alterar índice de texto completo](/sql/t-sql/statements/alter-fulltext-index-transact-sql) ... DEFINIR CHANGE_TRACKING DESATIVADO  
   
 
   
@@ -99,12 +99,12 @@ ms.locfileid: "66011175"
   
 
   
-##  <a name="examples"></a> Exemplos de preenchimento de índices de texto completo  
+##  <a name="examples"></a>Exemplos de preenchimento de índices de texto completo  
   
 > [!NOTE]  
 >  Os exemplos desta seção usam a tabela `Production.Document` ou `HumanResources.JobCandidate` do banco de dados de exemplo `AdventureWorks` .  
   
-### <a name="a-creating-a-full-text-index-without-running-a-full-population"></a>A. Criando um índice de texto completo sem executar uma população completa  
+### <a name="a-creating-a-full-text-index-without-running-a-full-population"></a>a. Criando um índice de texto completo sem executar uma população completa  
  O exemplo a seguir cria um índice de texto completo na tabela `Production.Document` do banco de dados de exemplo `AdventureWorks` . Este exemplo usa WITH CHANGE_TRACKING OFF, NO POPULATION para atrasar a população completa inicial.  
   
 ```  
@@ -167,7 +167,7 @@ GO
   
 
   
-##  <a name="create"></a> Criando ou alterando uma agenda para população Incremental  
+##  <a name="create"></a>Criando ou alterando uma agenda para população incremental  
   
 #### <a name="to-create-or-change-a-schedule-for-incremental-population-in-management-studio"></a>Para criar ou alterar uma agenda para população incremental no Management Studio  
   
@@ -179,16 +179,16 @@ GO
   
  Clique com o botão direito do mouse na tabela em que o índice de texto completo está definido, selecione **Índice de Texto Completo**e, no menu de contexto **Índice de Texto Completo** , clique em **Propriedades**. Este procedimento abre a caixa de diálogo **Propriedades do Índice de Texto Completo** .  
   
-1.  No painel **Selecionar uma página** , selecione Agendamentos.  
+1.  No painel **selecionar uma página** , selecione agendas.  
   
      Use esta página para criar ou gerenciar agendas para um trabalho do SQL Server Agent que inicia uma população incremental de tabela na tabela base ou na exibição indexada do índice de texto completo.  
   
     > [!IMPORTANT]  
     >  Se a tabela base ou a exibição não contiver uma coluna do tipo de dados `timestamp`, uma população completa será executada.  
   
-     As opções são as seguintes:  
+     As opções são as descritas a seguir:  
   
-    -   Para criar um novo agendamento, clique em **Novo**.  
+    -   Para criar uma nova agenda, clique em **Novo**.  
   
          Este procedimento abre a caixa de diálogo **Novo Agendamento da Tabela de Indexação de Texto Completo** , em que é possível criar um agendamento. Para salvar o agendamento, clique em **OK**.  
   
@@ -208,16 +208,16 @@ GO
   
 
   
-##  <a name="crawl"></a> Solucionando problemas de erros em uma população de texto completo (rastreamento)  
- Quando um erro ocorrer durante um rastreamento, o recurso de registro de rastreamento de pesquisa de texto completo cria e mantém um log de rastreamento, que é um texto sem-formatação. Cada log de rastreamento corresponde a um catálogo de texto completo específico. Por logs de rastreamento padrão para uma determinada instância, neste caso, a primeira instância, estão localizados em %ProgramFiles%\Microsoft SQL Server\MSSQL12. Pasta MSSQLSERVER\MSSQL\LOG. O arquivo de log de rastreamento segue o seguinte esquema de nomeação:  
+##  <a name="crawl"></a>Solucionando problemas de erros em uma população de texto completo (rastreamento)  
+ Quando um erro ocorrer durante um rastreamento, o recurso de registro de rastreamento de pesquisa de texto completo cria e mantém um log de rastreamento, que é um texto sem-formatação. Cada log de rastreamento corresponde a um catálogo de texto completo específico. Por padrão, os logs de rastreamento para uma determinada instância, neste caso, a primeira instância, estão localizados na pasta %Arquivos de programas%\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\LOG. O arquivo de log de rastreamento segue o seguinte esquema de nomeação:  
   
- SQLFT\<DatabaseID>\<FullTextCatalogID>.LOG[\<n>]  
+ SQLFT\<databaseid>\<FullTextCatalogID>. LOG [\<n>]  
   
  <`DatabaseID`>  
- A ID de um banco de dados. <`dbid`> é um dígito cinco número com zeros à esquerda.  
+ A ID de um banco de dados. <`dbid`> é um número de cinco dígitos com zeros à esquerda.  
   
  <`FullTextCatalogID`>  
- ID do catálogo de texto completo. <`catid`> é um dígito cinco número com zeros à esquerda.  
+ ID do catálogo de texto completo. <`catid`> é um número de cinco dígitos com zeros à esquerda.  
   
  <`n`>  
  É um inteiro que indica um ou mais logs de rastreamento que existem do mesmo catálogo de texto completo.  
@@ -226,9 +226,9 @@ GO
   
 
   
-## <a name="see-also"></a>Consulte também  
- [sys.dm_fts_index_population &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql)   
- [Iniciar a pesquisa de texto completo](get-started-with-full-text-search.md)   
+## <a name="see-also"></a>Consulte Também  
+ [sys. dm_fts_index_population &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql)   
+ [Introdução à pesquisa de texto completo](get-started-with-full-text-search.md)   
  [Criar e gerenciar índices de texto completo](create-and-manage-full-text-indexes.md)   
  [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql)   
  [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-index-transact-sql)  

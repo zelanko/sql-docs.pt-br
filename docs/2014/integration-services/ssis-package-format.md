@@ -1,5 +1,5 @@
 ---
-title: Formato de pacote do SSIS | Microsoft Docs
+title: Formato de pacote SSIS | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f59ed0eee86f17fdda568caa5c1a1dc7252c6d9c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055346"
 ---
 # <a name="ssis-package-format"></a>Formato do pacote SSIS
-  Na versão atual do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], alterações significativas foram feitas no formato do pacote (arquivo .dtsx) para facilitar a leitura do formato e a comparação dos pacotes. Você também pode mesclar com mais confiança pacotes que não contêm alterações conflitantes ou alterações armazenadas em formato binário.  
+  Na versão atual do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], alterações significativas foram feitas no formato do pacote (arquivo .dtsx) para facilitar a leitura do formato e a comparação dos pacotes. Você também pode mesclar com mais confiança os pacotes que não contêm alterações conflitantes ou alterações armazenadas em formato binário.  
   
- Para exibir o formato de arquivo de pacote DTSX atual, consulte [ \[MS-DTSX\]: Especificação de formato de arquivo XML do pacote Data Transformation Services](https://go.microsoft.com/fwlink/?LinkId=233251).  
+ Para exibir o formato de arquivo de pacote dtsx atual, consulte [ \[especificação\]de formato de arquivo XML de MS-dtsx: Data Transformation Services Package](https://go.microsoft.com/fwlink/?LinkId=233251).  
   
  A lista a seguir detalha as alterações no formato de arquivo: Para exibir exemplos de códigos dessas alterações, consulte [Alterações do formato de pacote no SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=233255).  
   
@@ -28,7 +28,7 @@ ms.locfileid: "66055346"
   
 -   O formato é mais conciso. Elementos separados para cada propriedade foram mantidos como atributos, com exceção de PackageFormatVersion. Os atributos são listados alfabeticamente e as propriedades que têm valores padrão não são mais mantidas. Por fim, os elementos que aparecem várias vezes agora estão contidos em um elemento pai.  
   
--   A maioria dos objetos em um pacote que pode ser referenciada por outros objetos agora tem um atributo `refId` definido no XML do pacote. Em vez de manter as IDs de linhagem, a `refID` é mantida agora. IDs de linhagem ainda são usadas no tempo de execução e geradas novamente quando o pacote é carregado.  
+-   A maioria dos objetos em um pacote que pode ser referenciada por outros objetos agora tem um atributo `refId` definido no XML do pacote. Em vez de manter as IDs de linhagem, a `refID` é mantida agora. IDs de linhagem ainda são usadas no runtime e geradas novamente quando o pacote é carregado.  
   
      O valor `refId` é uma cadeia de caracteres exclusiva legível e compreensível, em comparação com GUIDs ou valores inteiros. A cadeia de caracteres é semelhante aos valores de caminho usados para configurações de pacote nas versões anteriores do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   

@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8ad75e136c4bef59f24b451b84f03e06d71a32ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62912540"
 ---
-# <a name="mssqlserver8992"></a>MSSQLSERVER_8992
+# <a name="mssqlserver_8992"></a>MSSQLSERVER_8992
     
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|8992|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|DBCC3_CHECK_CATALOG|  
-|Texto da mensagem|Verificação de catálogo Msg erro nível LEVEL estado STATE: MENSAGEM.|  
+|Texto da mensagem|Verifique a mensagem do catálogo ERROR nível LEVEL Estado STATE: MESSAGE.|  
   
 ## <a name="explanation"></a>Explicação  
  DBCC CHECKCATALOG ou DBCC CHECKDB localizou uma inconsistência nas tabelas de metadados do sistema para o objeto especificado. Isto é, há uma inconsistência entre a ID do objeto registrado e o objeto especificado na mensagem de erro.  
@@ -74,7 +74,7 @@ ms.locfileid: "62912540"
 ### <a name="do-not-manually-update-system-tables"></a>Não atualizar manualmente tabelas do sistema  
  Não faça atualizações manuais em tabelas do sistema. O SQL Server não oferece suporte a alterações manuais em bancos de dados do sistema. Se você atualizar uma tabela do sistema em um banco de dados do SQL Server, dois eventos (ID de evento 17659 e ID de evento 3859) serão registrados em log. Para obter mais informações, consulte o artigo KB 2688307, "ID de evento 17659 e ID de evento 3859 são registrados em log quando você atualiza tabelas do sistema em um banco de dados do SQL Server".  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [A ID de evento 17659 e a ID de evento 3859 são registradas em log quando você atualiza tabelas do sistema em um banco de dados do SQL Server](https://support.microsoft.com/kb/2688307/EN-US)  
   
   

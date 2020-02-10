@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: e08f11f924cb74743c1317f4fa1548af62ddb5d8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65484034"
 ---
 # <a name="change-an-explicit-hierarchy-name-master-data-services"></a>Alterar o nome de uma hierarquia explícita (Master Data Services)
@@ -25,7 +25,7 @@ ms.locfileid: "65484034"
 ## <a name="prerequisites"></a>Prerequisites  
  Para executar esse procedimento:  
   
--   Você deve ter permissão para acessar a área funcional **Administração do Sistema** .  
+-   Você deve ter permissão para acessar a área funcional **Administração do sistema** .  
   
 -   Você deve ser um administrador de modelo. Para obter mais informações, veja [Administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
@@ -41,15 +41,15 @@ ms.locfileid: "65484034"
   
 5.  Clique em **Editar entidade selecionada**.  
   
-6.  Sobre o **Editar entidade** de página, clique na hierarquia explícita que você deseja renomear.  
+6.  Na página **Editar entidade** , clique na hierarquia explícita que você deseja renomear.  
   
 7.  Clique em **Editar hierarquia selecionada**.  
   
-8.  No **nome da hierarquia explícita** caixa, digite o nome atualizado da hierarquia.  
+8.  Na caixa **nome da hierarquia explícita** , digite o nome atualizado da hierarquia.  
   
 9. Clique em **salvar hierarquia**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Hierarquias explícitas &#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)   
  [Criar uma hierarquia explícita &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)   
  [Excluir uma hierarquia explícita &#40;Master Data Services&#41;](../../2014/master-data-services/delete-an-explicit-hierarchy-master-data-services.md)  

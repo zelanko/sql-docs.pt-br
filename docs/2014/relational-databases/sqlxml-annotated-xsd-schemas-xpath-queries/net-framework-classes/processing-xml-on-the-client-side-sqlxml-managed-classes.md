@@ -1,5 +1,5 @@
 ---
-title: Processando XML no lado do cliente (Classes gerenciadas SQLXML) | Microsoft Docs
+title: Processando XML no lado do cliente (classes gerenciadas SQLXML) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a75d9fb1d4f77cb41cfdc3578af675533fbb6bca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010805"
 ---
 # <a name="processing-xml-on-the-client-side-sqlxml-managed-classes"></a>Processando XML no cliente (classes gerenciadas SQLXML)
   Este exemplo ilustra o uso da propriedade ClientSideXml. O aplicativo executa um procedimento armazenado no servidor. O resultado do procedimento armazenado (um conjunto de linhas de duas colunas) é processado no cliente para gerar um documento XML.  
   
- GetContacts o seguinte procedimento armazenado retorna **FirstName** e **Sobrenome** dos funcionários na tabela Person. Contact no banco de dados AdventureWorks.  
+ O procedimento armazenado GetContacts a seguir retorna **FirstName** e **LastName** de employees na tabela Person. Contact no banco de dados AdventureWorks.  
   
 ```  
 USE AdventureWorks  
@@ -38,7 +38,7 @@ WHERE LastName = @LastName
 Go  
 ```  
   
- Este aplicativo c# executa o procedimento armazenado e especifica a opção de FOR XML AUTO ao especificar o valor de CommandText. No aplicativo, a propriedade ClientSideXml do objeto SqlXmlCommand é definida como true. Isto permite executar procedimentos armazenados pré-existentes que retornam um conjunto de linhas e aplicam uma transformação XML a ele no cliente.  
+ Este aplicativo C# executa o procedimento armazenado e especifica a opção FOR XML AUTO ao especificar o valor CommandText. No aplicativo, a propriedade ClientSideXml do objeto SqlXmlCommand é definida como true. Isto permite executar procedimentos armazenados pré-existentes que retornam um conjunto de linhas e aplicam uma transformação XML a ele no cliente.  
   
 > [!NOTE]  
 >  No código, é necessário fornecer o nome da instância do Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] na cadeia de conexão.  

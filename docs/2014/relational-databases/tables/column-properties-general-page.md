@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 741c8633a9b7eed9fcd253918c34a27119e51ee4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62854906"
 ---
 # <a name="column-properties-general-page"></a>Propriedades da coluna (página Geral)
@@ -28,19 +28,19 @@ ms.locfileid: "62854906"
  **Nome**  
  O nome da coluna.  
   
- **Tipo de Dados**  
+ **Tipo de dados**  
  O tipo de dados que a coluna pode conter. Se o tipo de dados for um tipo definido pelo usuário, o tipo de dados definido pelo usuário será exibido. Se o tipo de dados não for um tipo definido pelo usuário, então o tipo de dados de sistema será exibido. Para obter mais informações, veja [Tipos de dados &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql).  
   
- **Tipo do Sistema**  
+ **Tipo de sistema**  
  O tipo de dados que a coluna pode conter. Se o tipo de dados for um tipo de dados de sistema, então o tipo de dados de sistema será exibido. Se o tipo de dados for um tipo definido pelo usuário, o tipo de dados de sistema que corresponde ao tipo de dados definido pelo usuário será exibido.  
   
- **Chave Primária**  
+ **Chave primária**  
  Indica se a coluna é uma chave primária. Os valores possíveis são **True**e **False**.  
   
  **Permitir Nulos**  
  Indica se a coluna aceita valores nulos. Os valores possíveis são **True** e **False**.  
   
- **Computado**  
+ **É computado**  
  Indica se o valor de coluna é o resultado de uma expressão computada.  
   
  **Texto computado**  
@@ -49,22 +49,22 @@ ms.locfileid: "62854906"
  **Identidade**  
  Indica se a coluna é a coluna de identidade da tabela. Os valores possíveis são **True** e **False**.  
   
- **Propagação de Identidade**  
+ **Semente de identidade**  
  Indica o valor de linha inicial para uma coluna de identidade.  
   
- **Incremento de Identidade**  
+ **Incremento de identidade**  
  A propriedade **Incremento de Identidade** especifica o valor que o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] adiciona ao maior valor existente de linha de identidade ao gerar um valor de identidade para uma linha que esteja sendo inserida.  
   
- **Associação Padrão**  
+ **Associação padrão**  
  O padrão [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] associado à coluna. Essa opção estará em branco se nenhum padrão estiver associado.  
   
  **Esquema Padrão**  
  Identifica o esquema de banco de dados que possui o padrão associado à coluna referenciada. Essa opção estará em branco se nenhum padrão estiver associado.  
   
- **Regra**  
+ **Régua**  
  Identifica a restrição de integridade de dados que está associada à coluna. Essa opção estará em branco se nenhuma regra estiver associada.  
   
- **Esquema de Regra**  
+ **Esquema de regra**  
  Exibe o esquema do banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que possui a regra associada à coluna referenciada. Essa opção estará em branco se nenhuma regra estiver associada.  
   
  **Comprimento**  
@@ -73,34 +73,35 @@ ms.locfileid: "62854906"
  **Ordenação**  
  Exibe a ordenação atual para a coluna. Se estiver em branco, a propriedade de ordenação é herdada do objeto.  
   
- **Precisão Numérica**  
+ **Precisão numérica**  
  Indica o número máximo de dígitos em um tipo de dados numérico de precisão fixa.  
   
- **Escala Numérica**  
+ **Escala numérica**  
  Indica o número de dígitos à direita da vírgula decimal em um tipo de dados numérico de precisão fixa.  
   
- **Namespace de Esquema XML**  
+ **Namespace de esquema XML**  
  Define o tipo da coluna de XML por meio da validação da Linguagem de Definição de Esquema XML (XSD).  
   
- **Esquema do Namespace de Esquema XML**  
+ **Esquema de namespace de esquema XML**  
  O esquema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que possui o Namespace de Esquema XML.  
   
 > [!NOTE]  
->  Há vários significados comuns, mas diferentes, da palavra esquema. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa o esquema para organizar os objetos de bancos de dados. É semelhante à propriedade. A XML usa o esquema para definir a organização de informações de XML em uma série de namespaces. É um modo de agrupar códigos XML relacionados.  
+>  Há vários significados comuns, mas diferentes, da palavra esquema. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa o esquema para organizar os objetos de bancos de dados. É semelhante à propriedade. A XML usa o esquema para definir a organização de informações de XML em uma série de namespaces. É um modo de agrupar códigos XML relacionados.  
   
- **É Esparso**  
+ **É esparso**  
  Indica se a coluna é uma coluna esparsa. Os valores possíveis são **True** e **False**. Para obter mais informações, veja [Usar colunas esparsas](use-sparse-columns.md).  
   
- **É Conjunto de Colunas**  
+ **É conjunto de colunas**  
  Indica se a coluna é um conjunto de colunas. Os valores possíveis são **True** e **False**. Para obter mais informações, veja [Usar conjuntos de colunas](use-column-sets.md).  
   
- **Status do Preenchimento ANSI**  
+ **Status de preenchimento ANSI**  
  Indica se o preenchimento ANSI está ativado ou desativado. Para obter mais informações, veja [SET ANSI_PADDING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-padding-transact-sql).  
   
- **Texto Completo**  
+ **Texto completo**  
  Especifica se a coluna participa de consultas de texto completo.  
   
- **Semântica Estatística**  
+ **Semântica estatística**  
  Indica se a pesquisa de semântica estatística está habilitada para a coluna. Para obter mais informações, veja [Pesquisa semântica &#40;SQL Server&#41;](../search/semantic-search-sql-server.md).  
   
  **Não para replicação**  

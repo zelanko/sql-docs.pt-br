@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6eb278610a8e50effb9c14fd76a13d453c2fb348
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483080"
 ---
 # <a name="delete-an-attribute-master-data-services"></a>Excluir um atributo (Master Data Services)
@@ -26,7 +26,7 @@ ms.locfileid: "65483080"
 ## <a name="prerequisites"></a>Prerequisites  
  Para executar esse procedimento:  
   
--   Você deve ter permissão para acessar a área funcional **Administração do Sistema** .  
+-   Você deve ter permissão para acessar a área funcional **Administração do sistema** .  
   
 -   Você deve ser um administrador de modelo. Para obter mais informações, veja [Administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
@@ -42,18 +42,18 @@ ms.locfileid: "65483080"
   
 5.  Clique em **Editar entidade selecionada**.  
   
-6.  Sobre o **Editar entidade** página, clique no atributo que deseja excluir.  
+6.  Na página **Editar entidade** , clique no atributo que você deseja excluir.  
   
     > [!NOTE]  
     >  Não é possível excluir os atributos Name e Code.  
   
-7.  Clique em **exclusão de atributo selecionado**.  
+7.  Clique em **excluir atributo selecionado**.  
   
 8.  Na caixa de diálogo de confirmação, clique em **OK**.  
   
 9. Na caixa de diálogo de confirmação adicional, clique em **OK**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Atributos &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)   
  [Atributos baseados em domínio &#40;Master Data Services&#41;](../../2014/master-data-services/domain-based-attributes-master-data-services.md)   
  [Criar um atributo de texto &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)   

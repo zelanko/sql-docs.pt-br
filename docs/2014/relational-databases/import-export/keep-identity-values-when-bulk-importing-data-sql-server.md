@@ -15,14 +15,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5bb2fbd3129475c5d712cd4d1fce8bbe29ea096f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011912"
 ---
 # <a name="keep-identity-values-when-bulk-importing-data-sql-server"></a>Manter valores de identidade ao importar dados em massa (SQL Server)
-  Os dados de arquivo que contêm valores de identidade podem ser importados em massa para uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Por padrão, os valores da coluna de identidade do arquivo de dados que é importado são ignorados e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] atribui valores exclusivos automaticamente. Os valores exclusivos são baseados nos valores de semente e incremento que são especificados durante a criação da tabela.  
+  Os arquivos de dados que contêm valores de identidade podem ser importados [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]em massa para uma instância do. Por padrão, os valores da coluna de identidade do arquivo de dados que é importado são ignorados e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] atribui valores exclusivos automaticamente. Os valores exclusivos são baseados nos valores de semente e incremento que são especificados durante a criação da tabela.  
   
  Se o arquivo de dados não contiver valores para a coluna de identificador na tabela, use um arquivo de formato para especificar que a coluna de identificador na tabela deve ser ignorada durante a importação dos dados. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] atribui automaticamente valores exclusivos para a coluna.  
   
@@ -30,7 +30,7 @@ ms.locfileid: "66011912"
   
 |Comando|Qualificador manter identidade|Tipo de qualificador|  
 |-------------|------------------------------|--------------------|  
-|`bcp`|**-E**|Alternar|  
+|`bcp`|**-E**|Opção|  
 |BULK INSERT|KEEPIDENTITY|Argumento|  
 |INSERT ... SELECT * FROM OPENROWSET(BULK...)|KEEPIDENTITY|Dica de tabela|  
   
@@ -40,7 +40,7 @@ ms.locfileid: "66011912"
 >  Para criar um número incrementado automaticamente, que possa ser usado em várias tabelas ou ser chamado de aplicativos, sem referenciar tabelas, consulte [Números de Sequência](../sequence-numbers/sequence-numbers.md).  
   
 ## <a name="examples"></a>Exemplos  
- Os exemplos neste tópico importam em massa dados usando INSERT ... SELECT * FROM OPENROWSET(BULK...) e mantendo os valores padrão.  
+ Os exemplos neste tópico importam dados em massa usando INSERT... Selecione * de OPENROWSET (BULK...) e mantendo valores padrão.  
   
 ### <a name="sample-table"></a>Tabela de exemplo  
  Os exemplos de importação em massa requerem que uma tabela denominada tabela **myTestKeepNulls** seja criada no banco de dados do exemplo **AdventureWorks** no esquema **dbo**. Para criar essa tabela. No Editor de Consultas do [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], execute:  
@@ -55,7 +55,7 @@ GO
 SELECT * FROM HumanResources.myDepartment;  
 ```  
   
- A tabela **Departamento`myDepartment` na qual o** é baseado tem IDENTITY_INSERT definido como OFF. Portanto, para importar dados para uma coluna de identidade, você deve especificar KEEPIDENTITY ou **-E**.  
+ A tabela **Departamento** na qual o`myDepartment` é baseado tem IDENTITY_INSERT definido como OFF. Portanto, para importar dados para uma coluna de identidade, você deve especificar KEEPIDENTITY ou **-E**.  
   
 ### <a name="sample-data-file"></a>Arquivo de dados de exemplo  
  O arquivo de dados usado nos exemplos da importação em massa contém massa de dados exportada da tabela `HumanResources.Department` em formato nativo. Para criar esse arquivo de dados, no prompt de comando do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, digite:  
@@ -73,13 +73,13 @@ bcp AdventureWorks.HumanResources.Department format nul -n -x -f myDepartment-f-
   
  Para obter mais informações sobre como criar um arquivo de formato, consulte [Criar um arquivo de formato &#40;SQL Server&#41;](create-a-format-file-sql-server.md).  
   
-### <a name="a-using-bcp-and-keeping-identity-values"></a>A. Usando bcp e mantendo valores de identidade  
+### <a name="a-using-bcp-and-keeping-identity-values"></a>a. Usando bcp e mantendo valores de identidade  
  O exemplo a seguir demonstra como manter valores de identidade ao usar o `bcp` para realizar a importação em massa dos dados. O comando `bcp` usa o arquivo de formato `myDepartment-f-n-x.Xml` e contém as seguintes opções:  
   
-|Qualificadores|Descrição|  
+|Qualificadores|DESCRIÇÃO|  
 |----------------|-----------------|  
 |**-E**|Especifica que o valor ou valores de identidade no arquivo de dados serão usados para a coluna de identidade.|  
-|**-T**|Especifica que o `bcp` utilitário se conecta ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com uma conexão confiável.|  
+|**-T**|Especifica que o `bcp` utilitário se conecta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao com uma conexão confiável.|  
   
  No prompt de comando do Windows, digite:  
   
@@ -160,19 +160,19 @@ GO
   
 -   [Usar o formato nativo Unicode para importar ou exportar dados &#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
- **Para especificar formatos de dados para compatibilidade usando bcp**  
+ **Para especificar formatos de dados para compatibilidade ao usar bcp**  
   
 1.  [Especificar terminadores de campo e linha &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)  
   
-2.  [Especificar o tamanho de prefixo em arquivos de dados usando bcp &#40;SQL Server&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
+2.  [Especifique o tamanho do prefixo em arquivos de dados usando o bcp &#40;SQL Server&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
   
-3.  [Especificar tipo de armazenamento de arquivo usando bcp &#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
+3.  [Especifique o tipo de armazenamento de arquivo usando bcp &#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [Utilitário bcp](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
- [Dicas de tabela &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table)  
+ [Dicas de tabela &#40;&#41;Transact-SQL](/sql/t-sql/queries/hints-transact-sql-table)  
   
   

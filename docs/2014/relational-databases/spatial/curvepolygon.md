@@ -10,19 +10,20 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: ddd07c68d5549ed4cfc7cc3f421168ad968dadda
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014246"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
+  
   `CurvePolygon` é uma superfície topologicamente fechada definida por um anel delimitador exterior e zero ou mais anéis interiores  
   
 > [!IMPORTANT]  
->  Para obter uma descrição detalhada e exemplos dos recursos espaciais introduzidos no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], incluindo o `CurvePolygon` subtipo, baixe o white paper [novos recursos espaciais no SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407).  
+>  Para obter uma descrição detalhada e exemplos de recursos espaciais [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]introduzidos no `CurvePolygon` , incluindo o subtipo, baixe o White Paper, [novos recursos espaciais no SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407).  
   
- Os critérios a seguir definem os atributos de um `CurvePolygon` instância:  
+ Os critérios a seguir definem atributos `CurvePolygon` de uma instância do:  
   
 -   O limite da instância `CurvePolygon` é definido pelo anel exterior e por todos os anéis interiores.  
   
@@ -55,7 +56,8 @@ DECLARE @g4 geometry = 'CURVEPOLYGON(CIRCULARSTRING(1 3, 3 5, 4 7, 7 3, 1 3))';
 DECLARE @g5 geography = 'CURVEPOLYGON((-122.3 47, 122.3 -47, 125.7 -49, 121 -38, -122.3 47))';  
 ```  
   
- `@g3` é aceito, embora os pontos inicial e de extremidade tenham valores de Z diferentes, pois esses valores são ignorados. `@g5` é aceito, embora a instância de tipo `geography` não seja válida.  
+ `@g3` é aceito, embora os pontos inicial e de extremidade tenham valores de Z diferentes, pois esses valores são ignorados. 
+  `@g5` é aceito, embora a instância de tipo `geography` não seja válida.  
   
  Os exemplos a seguir geram um `System.FormatException`.  
   
@@ -122,7 +124,7 @@ SELECT @g.STIsValid();
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-instantiating-a-geometry-instance-with-an-empty-curvepolygon"></a>A. Criando uma instância geométrica com um CurvePolygon vazio  
+### <a name="a-instantiating-a-geometry-instance-with-an-empty-curvepolygon"></a>a. Criando uma instância geométrica com um CurvePolygon vazio  
  Esse exemplo mostra como criar uma instância `CurvePolygon` vazia:  
   
 ```sql  
@@ -181,7 +183,7 @@ SELECT @g1.STIsValid() AS G1, @g2.STIsValid() AS G2;
   
  Tanto o @g1 quanto o @g2 usam o mesmo anel delimitador exterior: um círculo com um raio de 5 e ambos usam um quadrado para um anel interior.  Entretanto, a instância @g1 é válida, mas a instância @g2 é inválida.  A razão pela qual @g2 é inválida é que o anel interior divide o espaço interno limitado pelo anel exterior em quatro regiões separadas.  O desenho a seguir mostra o que ocorreu:  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Polygon](polygon.md)   
  [CircularString](circularstring.md)   
  [CompoundCurve](compoundcurve.md)   

@@ -11,10 +11,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 410f3a317a9d3ad2f8cab52d9f57fd4a63c1c36c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62865095"
 ---
 # <a name="import-the-policies-to-a-single-instance"></a>Importar as políticas para uma única instância
@@ -31,11 +31,11 @@ ms.locfileid: "62865095"
   
 3.  Clique com o botão direito do mouse em **Políticas**e clique em **Importar Política**.  
   
-4.  No **importação** caixa de diálogo, em seguida o **arquivos a importar** , clique no botão de reticências ( **...** ) botão.  
+4.  Na caixa de diálogo **importar** , ao lado da caixa **arquivos a serem importados** , clique no botão de reticências (**...**).  
   
 5.  Na lista **Examinar** , navegue até a pasta a seguir, que contém as políticas de práticas recomendadas:  
   
-     **C:\Program arquivos (x86) \Microsoft SQL Server\110\Tools\Policies\DatabaseEngine\1033**  
+     **C:\Arquivos de Programas (x86)\Microsoft SQL Server\110\Tools\Policies\DatabaseEngine\1033**  
   
     > [!NOTE]  
     >  O caminho do arquivo pode variar, dependendo de onde você instalou os arquivos de programa do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , do sistema operacional em execução (32 bits ou 64 bits) e do identificador de idioma.  

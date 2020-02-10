@@ -1,5 +1,5 @@
 ---
-title: Editor da tarefa script (página Script) | Microsoft Docs
+title: Editor da tarefa Script (página script) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 037b176dfacd9420fba64a405d8c851c558e93e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056185"
 ---
 # <a name="script-task-editor-script-page"></a>Editor da Tarefa Script (página Script)
@@ -38,7 +38,7 @@ ms.locfileid: "66056185"
  Para definir a linguagem de criação de scripts padrão para a tarefa Script, use a opção **Idiomas de script** na página **Geral** da caixa de diálogo **Opções** . Para obter mais informações, consulte [General Page](general-page-of-integration-services-designers-options.md).  
   
  **EntryPoint**  
- Especifique o método a ser chamado pelo tempo de execução do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] como ponto de entrada no código da tarefa Script. O método especificado deve estar na classe ScriptMain do projeto do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications (VSTA). ScriptMain é a classe padrão gerada pelos modelos de script.  
+ Especifique o método a ser chamado pelo runtime do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] como ponto de entrada no código da tarefa Script. O método especificado deve estar na classe ScriptMain do projeto do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications (VSTA). ScriptMain é a classe padrão gerada pelos modelos de script.  
   
  Caso altere o nome do método no projeto do VSTA, será preciso alterar o valor da propriedade **EntryPoint** .  
   
@@ -57,12 +57,12 @@ ms.locfileid: "66056185"
  **Editar Script**  
  Abre o VSTA IDE, onde você pode criar ou modificar o script.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [General Page](general-page-of-integration-services-designers-options.md)   
- [Editor da Tarefa Script &#40;Página Geral&#41;](../../2014/integration-services/script-task-editor-general-page.md)   
+ [Página geral](general-page-of-integration-services-designers-options.md)   
+ [Editor da tarefa Script &#40;página Geral&#41;](../../2014/integration-services/script-task-editor-general-page.md)   
  [Página Expressões](expressions/expressions-page.md)   
- [Exemplos de tarefa Script](extending-packages-scripting-task-examples/script-task-examples.md)   
+ [Exemplos de tarefas de script](extending-packages-scripting-task-examples/script-task-examples.md)   
  [Variáveis do SSIS &#40;Integration Services&#41;](integration-services-ssis-variables.md)   
  [Adicionar, excluir, alterar o escopo de uma variável definida pelo usuário em um pacote](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)  
   

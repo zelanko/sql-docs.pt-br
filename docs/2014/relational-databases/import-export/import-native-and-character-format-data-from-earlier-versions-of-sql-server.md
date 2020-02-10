@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8f41e323faeb898be1f44159760bb1c28b7ab024
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011922"
 ---
 # <a name="import-native-and-character-format-data-from-earlier-versions-of-sql-server"></a>Importar dados de formato de caractere e nativo de versões anteriores do SQL Server
@@ -47,20 +47,20 @@ ms.locfileid: "66011922"
 |XML|`ntext`|`ntext`|`ntext`|  
 |UDT<sup>1</sup>|`image`|`image`|`image`|  
   
- \* Esse tipo tem suporte nativo.  
+ \*Esse tipo tem suporte nativo.  
   
  <sup>1</sup> UDT indica um tipo definido pelo usuário.  
   
 ## <a name="exporting-using--v-80"></a>Exportar usando – V 80  
- Quando você exporta dados em massa usando o **-V80** alternar, `nvarchar(max)`, `varchar(max)`, `varbinary(max)`, XML, e dados UDT no modo nativo são armazenados com um prefixo de 4 bytes, como `text`, `image`e `ntext`dados, em vez de um prefixo de 8 bytes, que é o padrão para [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versões posteriores.  
+ Quando você exporta dados em massa usando a **opção-V80** , `nvarchar(max)`, `varchar(max)` `varbinary(max)`,, XML e dados UDT no modo nativo são armazenados com um prefixo de 4 bytes, como `text`, `image`e `ntext` dados, em vez de um prefixo de 8 bytes, que é o padrão para [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o e versões posteriores.  
   
 ## <a name="copying-date-values"></a>Copiando valores de dados  
- O**bcp** usa a API de cópia em massa do ODBC. Portanto, para importar valores de data para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o **bcp** usa o formato de data do ODBC (*yyyy-mm-dd hh:mm:ss*[ *.f...* ]).  
+ o **bcp** usa a API de cópia em massa ODBC. Portanto, para importar valores de data para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o **bcp** usa o formato de data do ODBC (*yyyy-mm-dd hh:mm:ss*[*.f...*]).  
   
- O **bcp** comando exporta arquivos de formato de caractere usando o formato de padrão ODBC para `datetime` e `smalldatetime` valores. Por exemplo, uma coluna `datetime` que contém a data `12 Aug 1998` é copiada em massa em um arquivo de dados como a cadeia de caracteres `1998-08-12 00:00:00.000`.  
+ O comando **bcp** exporta arquivos de dados de formato de caractere usando o formato `datetime` padrão `smalldatetime` ODBC para valores e. Por exemplo, uma coluna `datetime` que contém a data `12 Aug 1998` é copiada em massa em um arquivo de dados como a cadeia de caracteres `1998-08-12 00:00:00.000`.  
   
 > [!IMPORTANT]  
->  Ao importar dados para um `smalldatetime` campo usando **bcp**, certifique-se de que o valor por segundo é 00.000; caso contrário, a operação falhará. O tipo de dados `smalldatetime` só mantém valores do minuto mais próximo. BULK INSERT e INSERT ... SELECT * FROM OPENROWSET(BULK...) não falharão nesta instância, mas truncarão o valor de segundos.  
+>  Ao importar dados para um `smalldatetime` campo usando **bcp**, certifique-se de que o valor de segundos seja 0, 0; caso contrário, a operação falhará. O tipo de dados `smalldatetime` só mantém valores do minuto mais próximo. BULK INSERT e INSERT ... SELECT * FROM OPENROWSET(BULK...) não falharão nesta instância, mas truncarão o valor de segundos.  
   
 ##  <a name="RelatedTasks"></a> Tarefas relacionadas  
  **Para usar formatos de dados para importação ou exportação em massa**  
@@ -75,11 +75,11 @@ ms.locfileid: "66011922"
   
  
   
-## <a name="see-also"></a>Consulte também  
- [bcp Utility](../../tools/bcp-utility.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Utilitário bcp](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
- [Tipos de dados &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql)   
+ [Tipos de dados &#40;&#41;Transact-SQL](/sql/t-sql/data-types/data-types-transact-sql)   
  [Compatibilidade com versões anteriores do Mecanismo de Banco de Dados do SQL Server](../../database-engine/sql-server-database-engine-backward-compatibility.md)   
  [CAST e CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql)  
   

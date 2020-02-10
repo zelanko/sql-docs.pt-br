@@ -1,5 +1,5 @@
 ---
-title: Especificando operadores boolianos em consultas XPath (SQLXML 4.0) | Microsoft Docs
+title: Especificando operadores boolianos em consultas XPath (SQLXML 4,0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,19 +17,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 29404c4a3dc7b4b10106e7a3a8cb170ffe1e7a3e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010625"
 ---
 # <a name="specifying-boolean-operators-in-xpath-queries-sqlxml-40"></a>Especificando operadores boolianos em consultas XPath (SQLXML 4.0)
-  O exemplo a seguir mostra como os operadores Boolianos são especificados em consultas XPath. A consulta XPath deste exemplo é especificada com relação ao esquema de mapeamento contido em SampleSchema1.xml. Para obter informações sobre esse esquema de exemplo, consulte [anotado de exemplo de esquema XSD para exemplos de XPath &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+  O exemplo a seguir mostra como os operadores Boolianos são especificados em consultas XPath. A consulta XPath deste exemplo é especificada com relação ao esquema de mapeamento contido em SampleSchema1.xml. Para obter informações sobre este esquema de exemplo, consulte [exemplo de esquema XSD anotado para exemplos de XPath &#40;SQLXML 4,0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-specify-the-or-boolean-operator"></a>A. Especificar o operador booliano OR  
- Essa consulta XPath retorna os  **\<cliente >** filhos do elemento do nó de contexto com o **CustomerID** valor de 13 ou 31 do atributo:  
+### <a name="a-specify-the-or-boolean-operator"></a>a. Especificar o operador booliano OR  
+ Essa consulta XPath retorna o ** \<** elemento de>do cliente filho do nó de contexto com o valor do atributo **CustomerID** de 13 ou 31:  
   
 ```  
 /child::Customer[attribute::CustomerID="13" or attribute::CustomerID="31"]  
@@ -41,11 +41,11 @@ ms.locfileid: "66010625"
 /Customer[@CustomerID="13" or @CustomerID="31"]  
 ```  
   
- No predicado, `attribute` é o eixo e `CustomerID` é o teste de nó (TRUE se **CustomerID** é um  **\<atributo >** nó, pois o  **\<atributo >** nó é o nó principal para o `attribute` eixo). Os filtros de predicado a  **\<cliente >** elementos e retorna apenas aqueles que atendem à condição especificadas no predicado.  
+ No predicado `attribute` , é o eixo `CustomerID` e é o teste de nó (true se **CustomerID** é um ** \<atributo>** nó, porque o ** \<atributo>** nó é o nó primário `attribute` do eixo). O predicado filtra os elementos de ** \<>do cliente** e retorna apenas aqueles que atendem à condição especificada no predicado.  
   
 ##### <a name="to-test-the-xpath-queries-against-the-mapping-schema"></a>Para testar as consultas XPath com relação ao esquema de mapeamento  
   
-1.  Cópia de [exemplos de código de esquema](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) e cole-o em um arquivo de texto. Salve o arquivo como SampleSchema1.xml.  
+1.  Copie o [código do esquema de exemplo](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) e cole-o em um arquivo de texto. Salve o arquivo como SampleSchema1.xml.  
   
 2.  Crie o modelo a seguir (BooleanOperatorsA.xml) e salve-o no diretório em que SampleSchema1.xml foi salvo.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "66010625"
   
 3.  Crie e use o script de teste SQLXML 4.0 (Sqlxml4test.vbs) para executar o modelo.  
   
-     Para obter mais informações, consulte [usando o ADO para executar consultas do SQLXML 4.0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Para obter mais informações, consulte [usando o ADO para executar consultas do SQLXML 4,0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Aqui está o conjunto de resultados da execução do modelo:  
   

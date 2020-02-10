@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4be1c196adbe21635c1339da3d5ec7ca519001fc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62876594"
 ---
 # <a name="create-a-differential-database-backup-sql-server"></a>Criar um backup diferencial de banco de dados (SQL Server)
@@ -68,7 +68,7 @@ ms.locfileid: "62876594"
   
 #### <a name="to-create-a-differential-database-backup"></a>Para criar um backup de banco de dados diferencial  
   
-1.  Depois de se conectar à instância apropriada do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], no Pesquisador de Objetos, clique no nome do servidor para expandir a árvore do servidor.  
+1.  Depois de se conectar à instância apropriada do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], em Pesquisador de Objetos, clique no nome do servidor para expandir a árvore do servidor.  
   
 2.  Expanda **Bancos de Dados**e, dependendo do banco de dados, selecione um banco de usuário ou expanda **Bancos de Dados do Sistema** e selecione um banco do sistema.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "62876594"
 5.  Na caixa de listagem **Tipo de backup** , selecione **Diferencial**.  
   
     > [!IMPORTANT]  
-    >  Quando **diferencial** está selecionada, verifique se que o **copiar somente Backup** caixa de seleção está desmarcada.  
+    >  Quando **diferencial** estiver selecionado, verifique se a caixa de seleção **copiar somente backup** está desmarcada.  
   
 6.  Para **Componente de backup**, clique em **Banco de Dados**.  
   
@@ -169,7 +169,7 @@ BACKUP DATABASE MyAdvWorks
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Backups diferenciais &#40;SQL Server&#41;](differential-backups-sql-server.md)   
  [Criar um backup completo de banco de dados &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)   
  [Fazer backup de arquivos e de grupos de arquivos &#40;SQL Server&#41;](back-up-files-and-filegroups-sql-server.md)   

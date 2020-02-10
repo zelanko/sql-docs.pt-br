@@ -1,5 +1,5 @@
 ---
-title: 'Criando elementos constantes usando sql: for-constant (SQLXML 4.0) | Microsoft Docs'
+title: 'Criando elementos constantes usando SQL: is-constant (SQLXML 4,0) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,30 +19,30 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bc100446eb6dff17125b0df7a60b8c2c82e46277
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013941"
 ---
 # <a name="creating-constant-elements-using-sqlis-constant-sqlxml-40"></a>Criando elementos constantes usando sql:is-constant (SQLXML 4.0)
-  Para especificar um elemento constante-ou seja, um elemento no esquema XSD que não é mapeado para nenhuma tabela de banco de dados ou coluna-você pode usar o `sql:is-constant` anotação. Essa anotação usa um valor Booliano (0 = false, 1 = true). Os valores aceitáveis são 0, 1, true e false. A anotação `sql:is-constant` pode ser especificada em um elemento que não tem nenhum atributo. Se ela for especificada em um elemento com o valor true (ou 1), esse elemento não será mapeado para o banco de dados, mas ainda aparecerá no documento XML.  
+  Para especificar um elemento Constant, ou seja, um elemento no esquema XSD que não é mapeado para nenhuma tabela ou coluna de banco de dados, você pode `sql:is-constant` usar a anotação. Essa anotação usa um valor Booliano (0 = false, 1 = true). Os valores aceitáveis são 0, 1, true e false. A anotação `sql:is-constant` pode ser especificada em um elemento que não tem nenhum atributo. Se ela for especificada em um elemento com o valor true (ou 1), esse elemento não será mapeado para o banco de dados, mas ainda aparecerá no documento XML.  
   
  A anotação `sql:is-constant` pode ser usada para:  
   
 -   Adicionar um elemento de nível superior ao documento XML. XML requer um único elemento de nível superior (elemento root) para o documento.  
   
--   Criar elementos de contêiner, como um  **\<pedidos >** elemento que envolva todos os pedidos.  
+-   Criar elementos de contêiner, como um ** \<elemento Orders>** que encapsula todos os pedidos.  
   
- O `sql:is-constant` anotação pode ser adicionada a uma  **\<complexType >** elemento.  
+ A `sql:is-constant` anotação pode ser adicionada a um ** \<elemento>complexo** .  
   
 ## <a name="examples"></a>Exemplos  
- Para criar exemplos de funcionamento usando os exemplos a seguir, é necessário atender a determinados requisitos. Para obter mais informações, consulte [requisitos para executar exemplos do SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
+ Para criar exemplos de funcionamento usando os exemplos a seguir, é necessário atender a determinados requisitos. Para obter mais informações, consulte [Requirements for running SQLXML examples](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-sqlis-constant-to-add-a-container-element"></a>A. Especificando sql:is-constant para adicionar um elemento do contêiner  
- Neste esquema XSD, anotado  **\<CustomerOrders >** é definido como um elemento constante especificando o `sql:is-constant` atributo com um valor de 1. Portanto,  **\<CustomerOrders >** não está mapeado para nenhuma tabela de banco de dados ou coluna. Esse elemento constante consiste as  **\<ordem >** elementos filho.  
+### <a name="a-specifying-sqlis-constant-to-add-a-container-element"></a>a. Especificando sql:is-constant para adicionar um elemento do contêiner  
+ Neste esquema XSD anotado, ** \<CustomerOrders>** é definido como um elemento constante, especificando o `sql:is-constant` atributo com um valor de 1. Portanto, ** \<o CustomerOrders>** não está mapeado para nenhuma tabela ou coluna de banco de dados. Esse elemento Constant consiste na ** \<ordem>** elementos filho.  
   
- Embora  **\<CustomerOrders >** não é mapeado para nenhuma tabela de banco de dados ou coluna, ele ainda aparece no XML resultante como um elemento de contêiner que contém o  **\<Order >** elementos filho.  
+ Embora ** \<CustomerOrders>** não seja mapeado para nenhuma tabela ou coluna de banco de dados, ele ainda aparece no XML resultante como um elemento de contêiner que contém a ** \<ordem>** elementos filho.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -104,7 +104,7 @@ ms.locfileid: "66013941"
   
 3.  Crie e use o script de teste SQLXML 4.0 (Sqlxml4test.vbs) para executar o modelo.  
   
-     Para obter mais informações, consulte [usando o ADO para executar consultas SQLXML](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Para obter mais informações, consulte [usando o ADO para executar consultas do SQLXML](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Este é o conjunto de resultados parcial:  
   

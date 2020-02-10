@@ -18,16 +18,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fe48b26960db591ce803b1f110e9293fd22d6554
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011523"
 ---
 # <a name="configure-and-manage-stopwords-and-stoplists-for-full-text-search"></a>Configurar e gerenciar palavras irrelevantes e listas de palavras irrelevantes (stoplists) para pesquisa de texto completo
   Para evitar que os índices de texto completo fiquem lotados, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dispõe de um mecanismo que descarta cadeias de caracteres que ocorrem com frequência e que não auxiliam nas pesquisas. Essas cadeias de caracteres descartadas são chamadas de *palavras irrelevantes*(stopwords). Durante a criação do índice, o Mecanismo de Texto Completo omite as palavras irrelevantes do índice de texto completo. Em outras palavras, as consultas de texto completo não pesquisarão palavras irrelevantes.  
   
-##  <a name="understand"></a> Listas de palavras irrelevantes e palavras irrelevantes de Noções básicas sobre  
+##  <a name="understand"></a>Entendendo palavras irrelevantes e palavras irrelevantes  
  Uma palavra irrelevante pode ser uma palavra com significado em um determinado idioma ou um *token* sem significado linguístico. Por exemplo, em inglês, palavras como "a", "and", "is" e "the" não são incluídas no índice de texto completo porque são consideradas inúteis em uma pesquisa.  
   
  Embora as palavras irrelevantes sejam ignoradas, o índice de texto completo leva em conta sua posição. Por exemplo, considere a frase "Instructions are applicable to these Adventure Works Cycles models". A tabela a seguir descreve a posição das palavras na frase:  
@@ -49,7 +49,7 @@ ms.locfileid: "66011523"
  As palavras irrelevantes são gerenciadas nos bancos de dados por meio de objetos denominados listas de palavras irrelevantes (stoplists). Uma *lista de palavras irrelevantes (stoplist)* é uma lista que, quando associada a um índice de texto completo, é aplicada às consultas de texto completo desse índice.  
   
   
-##  <a name="creating"></a> Criando uma lista de palavras irrelevantes  
+##  <a name="creating"></a>Criando uma STOPLIST  
  Você pode criar uma lista de palavras irrelevantes (stoplist) de qualquer uma destas formas:  
   
 -   Usando a lista de palavras irrelevantes (stoplist) fornecida pelo sistema no banco de dados. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é fornecido com uma lista de palavras irrelevantes do sistema que contém as palavras irrelevantes mais usadas em cada idioma com suporte, ou seja, em cada idioma associado a determinados separadores de palavra por padrão. A lista de palavras irrelevantes do sistema contém palavras irrelevantes comuns para todos os idiomas com suporte.  Você pode copiar essa lista e personalizar sua cópia adicionando e removendo palavras irrelevantes.  
@@ -60,7 +60,7 @@ ms.locfileid: "66011523"
   
 -   Usando uma lista de palavras irrelevantes personalizada existente de outro banco de dados na instância de servidor atual e, em seguida, adicionando ou descartando palavras irrelevantes conforme necessário.  
   
- **Para criar uma lista de palavras irrelevantes**  
+ **Par criar uma lista de palavras irrelevantes (stoplist)**  
   
 -   [CREATE FULLTEXT STOPLIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql)  
   
@@ -90,45 +90,45 @@ ms.locfileid: "66011523"
   
 8.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
- **Para remover uma lista de palavras irrelevantes**  
+ **Para remover uma lista de palavras irrelevantes (stoplist)**  
   
 -   [DROP FULLTEXT STOPLIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-fulltext-stoplist-transact-sql)  
   
   
-##  <a name="queries"></a> Usando uma lista de palavras irrelevantes em consultas de texto completo  
+##  <a name="queries"></a>Usando uma STOPLIST em consultas de texto completo  
  Para usar uma lista de palavras irrelevantes (stoplist) em consultas, é preciso associá-la a um índice de texto completo. Você pode anexar uma lista de palavras irrelevantes a um índice de texto completo ao criá-lo ou pode alterá-lo posteriormente para adicionar uma lista de palavras irrelevantes.  
   
- **Para criar um índice de texto completo e associar uma lista de palavras irrelevantes ele**  
+ **Para criar um índice de texto completo e associar uma lista de palavras irrelevantes a ele**  
   
 -   [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql)  
   
- **Para associar ou desassociar uma lista de palavras irrelevantes com um índice de texto completo existente**  
+ **Para associar uma lista de palavras irrelevantes a um índice de texto completo ou desassociá-la dele**  
   
 -   [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-index-transact-sql)  
   
- **Para suprimir uma mensagem de erro se palavras irrelevantes causarem uma operação booliana em uma consulta de texto completo falha**  
+ **Para suprimir uma mensagem de erro se palavras irrelevantes causarem falha em uma operação booliana em uma consulta de texto completo**  
   
--   [Opção de configuração do servidor transform noise words](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md)  
+-   [Opção de configuração de servidor para transformar palavras de ruído](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md)  
   
   
-##  <a name="viewing"></a> Exibindo metadados de lista de palavras irrelevantes e listas de palavras irrelevantes  
- **Para exibir todas as palavras irrelevantes de uma lista de palavras irrelevantes**  
+##  <a name="viewing"></a>Exibindo os metadados palavras irrelevantes e STOPLIST  
+ **Para exibir todas as palavras irrelevantes de uma lista de palavras irrelevantes (stoplist)**  
   
 -   [sys.fulltext_stopwords &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql)  
   
- **Para obter informações sobre todas as listas de palavras irrelevantes no banco de dados atual**  
+ **Para obter informações sobre todas as listas de palavras irrelevantes do banco de dados atual**  
   
 -   [sys.fulltext_stoplists &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql)  
   
 -   [sys.fulltext_stopwords &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql)  
   
- **Para exibir o resultado da geração de tokens de uma combinação de separador, dicionário de sinônimos e lista de palavras irrelevantes do word**  
+ **Para exibir o resultado da geração de tokens de um separador de palavras, dicionário de sinônimos e combinação de lista de palavras irrelevantes (stoplist)**  
   
 -   [sys.dm_fts_parser &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql)  
   
   
-##  <a name="change"></a> Alterando as palavras irrelevantes em uma lista de palavras irrelevantes  
- **Para adicionar ou remover palavras irrelevantes em uma lista de palavras irrelevantes**  
+##  <a name="change"></a>Alterando o palavras irrelevantes em umalist de parada  
+ **Para adicionar ou remover palavras irrelevantes em uma lista de palavras irrelevantes (stoplist)**  
   
 -   [ALTER FULLTEXT STOPLIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql)  
   
@@ -144,7 +144,7 @@ ms.locfileid: "66011523"
   
 5.  Na caixa de diálogo [Propriedades da lista de palavras irrelevantes de texto completo](../../database-engine/full-text-stoplist-properties.md) :  
   
-    1.  Na caixa de listagem **Ação**, selecione uma das seguintes ações: **Adicionar palavra irrelevante (stop word)** , **Excluir palavra irrelevante (stop word)** , **Excluir todas as palavras irrelevantes** ou **Limpar lista de palavras irrelevantes**.  
+    1.  Na caixa de listagem **Ação** , selecione uma das seguintes ações: **Adicionar palavra irrelevante**, **Excluir palavra irrelevante**, **Excluir todas as palavras irrelevantes**ou **Limpar lista de palavras irrelevantes**.  
   
     2.  Se a caixa de texto **Palavra irrelevante** estiver habilitada para a ação selecionada, insira uma única palavra irrelevante. Essa palavra irrelevante deve ser exclusiva; ou seja, ainda não deve estar na lista de palavras irrelevantes para o idioma selecionado.  
   
@@ -153,7 +153,7 @@ ms.locfileid: "66011523"
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
   
-##  <a name="upgrade"></a> Atualizando palavras de ruído do SQL Server 2005  
+##  <a name="upgrade"></a>Atualizando palavras de ruído do SQL Server 2005  
  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] foram substituídas por palavras irrelevantes. Quando um banco de dados é atualizado no [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], os arquivos de palavras de ruído não são mais usados. No entanto, os arquivos de palavras de ruído são armazenados na pasta FTDATA\ FTNoiseThesaurusBak e você pode usá-los ao atualizar ou compilar as listas de palavras irrelevantes (stoplists) correspondentes. Para obter informações sobre como atualizar arquivos de palavras de ruído para listas de palavras irrelevantes, consulte [Atualizar pesquisa de texto completo](upgrade-full-text-search.md).  
   
   

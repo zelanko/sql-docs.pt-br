@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7a4dbc20442181ce97b060118094dfa0667803db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011076"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>Pesquisar propriedades de documento com listas de propriedades de pesquisa
@@ -39,7 +39,7 @@ ms.locfileid: "66011076"
   
  A ilustração a seguir mostra uma exibição lógica de uma lista de propriedades de pesquisa que especifica duas propriedades, Title e Keywords. O nome da lista de propriedades para Keywords é "Tags". Essas propriedades pertencem ao mesmo conjunto de propriedades, cujo GUID é F29F85E0-4FF9-1068-AB91-08002B27B3D9. Os identificadores de inteiro da propriedade são 2 para Title e 5 para Tags (Keywords). O Mecanismo de Texto Completo mapeia arbitrariamente cada propriedade para uma ID de propriedade interna que é exclusiva à lista de propriedades de pesquisa. A ID de propriedade interna para a propriedade Title é 1 e a ID de propriedade interna para a propriedade Tags é 2.  
   
- ![Mapeamento da lista de propriedades de pesquisa para tabela interna](../../database-engine/media/ifts-spl-w-title-and-keywords.gif "Mapeamento da lista de propriedades de pesquisa para tabela interna")  
+ ![Mapeamento da lista de propriedades de pesquisa para uma tabela interna](../../database-engine/media/ifts-spl-w-title-and-keywords.gif "Mapeamento da lista de propriedades de pesquisa para uma tabela interna")  
   
  A ID de propriedade interna provavelmente será diferente do identificador de inteiro da propriedade. Se uma determinada propriedade for registrada para várias listas de propriedades de pesquisa, uma ID de propriedade interna diferente poderá ser atribuída para cada lista de propriedades de pesquisa. Por exemplo, a ID de propriedade interna poderia ser 4 em uma lista de propriedades de pesquisa, 1 em outra, 3 em outra, e assim por diante. Em contrapartida, o identificador de inteiro de propriedade é intrínseco à propriedade e permanece o mesmo onde quer que a propriedade seja usada.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "66011076"
 ##  <a name="impact"></a> Impacto de habilitar a pesquisa de propriedade  
  Configurar um índice de texto completo para oferecer suporte à pesquisa em uma ou mais propriedades aumenta um pouco o tamanho do índice, dependendo do número de propriedades que você especifica na sua lista de propriedades de pesquisa e do conteúdo de cada propriedade.  
   
- No teste de arquivos típicos do Microsoft Word<sup>?? </sup>, Excel<sup>?? </sup>e o PowerPoint<sup>??</sup> documentos, configuramos um propriedades comuns de pesquisa de índice ao índice de texto completo. Indexar essas propriedades aumentou o tamanho do índice de texto completo em, aproximadamente, 5%. Estimamos que esse aumento aproximado de tamanho será típico para a maioria dos arquivos de documentos. No entanto, o aumento de tamanho dependerá, basicamente, da quantidade de dados de propriedade de um determinado documento em relação à quantidade de dados geral.  
+ No teste do documentos típico do Microsoft Word<sup>??</sup>, Excel<sup>??</sup>e PowerPoint<sup>??</sup> documentos, configuramos um índice de texto completo para indexar Propriedades de pesquisa típicas. Indexar essas propriedades aumentou o tamanho do índice de texto completo em, aproximadamente, 5%. Estimamos que esse aumento aproximado de tamanho será típico para a maioria dos arquivos de documentos. No entanto, o aumento de tamanho dependerá, basicamente, da quantidade de dados de propriedade de um determinado documento em relação à quantidade de dados geral.  
   
   
   
@@ -78,7 +78,7 @@ ms.locfileid: "66011076"
   
 2.  Expanda **Bancos de Dados**e o banco de dados no qual você deseja criar a lista de propriedades de pesquisa.  
   
-3.  Expanda **Armazenamento**e clique com o botão direito do mouse em **Listas de Propriedades de Pesquisa**.  
+3.  Expanda **Armazenamento** e, em seguida, clique com o botão direito do mouse em **Listas de Propriedades de Pesquisa**.  
   
 4.  Selecione **Nova Lista de Propriedades de Pesquisa**.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "66011076"
   
 6.  Opcionalmente, especifique outra pessoa como proprietária da lista de propriedades.  
   
-7.  Selecione uma das opções a seguir:  
+7.  Selecione uma das seguintes opções:  
   
     -   **Criar uma lista de propriedades de pesquisa vazia**  
   
@@ -232,15 +232,15 @@ GO
   
 2.  Expanda **Bancos de Dados**e, em seguida, expanda o banco de dados.  
   
-3.  Expanda **Armazenamento**e o nó **Listas de Propriedades de Pesquisa** .  
+3.  Expanda **Armazenamento** e, em seguida, expanda o nó **Listas de Propriedades de Pesquisa**.  
   
 4.  Clique com o botão direito do mouse na lista de propriedades que você deseja excluir e clique em **Excluir**.  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
 
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Localizar GUIDs do conjunto de propriedades e IDs de inteiro de propriedade para propriedades de pesquisa](find-property-set-guids-and-property-integer-ids-for-search-properties.md)   
- [Configurar e gerenciar filtros para pesquisa](configure-and-manage-filters-for-search.md)  
+ [Configurar e gerenciar filtros de pesquisa](configure-and-manage-filters-for-search.md)  
   
   

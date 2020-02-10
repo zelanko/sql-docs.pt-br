@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c88e5ac59730eede7c252261d7509ee77de9cd6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483598"
 ---
 # <a name="create-a-model-deployment-package-by-using-the-wizard"></a>Criar um pacote de implantação de modelo usando o Assistente
@@ -43,7 +43,7 @@ ms.locfileid: "65483598"
   
 4.  Na página **Criar Pacote** , selecione um modelo da lista **Modelo** .  
   
-5.  Clique em **Avançar**.  
+5.  Clique em **Próximo**.  
   
 6.  Clique em **Baixar**.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "65483598"
   
 -   [Implantar um pacote de implantação de modelo usando o Assistente](../../2014/master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Implantando modelos &#40;Master Data Services&#41;](../../2014/master-data-services/deploying-models-master-data-services.md)  
   
   

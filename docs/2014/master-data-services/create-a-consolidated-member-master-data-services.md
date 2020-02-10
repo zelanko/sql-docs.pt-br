@@ -15,16 +15,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f96ab2cb9c2076d36ae36d3aa3358ae4886a1b23
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483429"
 ---
 # <a name="create-a-consolidated-member-master-data-services"></a>Criar um membro consolidado (Master Data Services)
   No [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], crie um membro consolidado quando você desejar um nó pai para uma hierarquia explícita. Os membros consolidados podem ter seus próprios atributos. Eles são usados para agrupamento. Conforme mostrado no exemplo a seguir, os membros consolidados podem ser usados para grupos de contas que têm contas neles.  
   
- ![Membros consolidados de MDS](../../2014/master-data-services/media/mds-consolidated-members.png "membros consolidados do MDS")  
+ ![Membros consolidados do MDS](../../2014/master-data-services/media/mds-consolidated-members.png "Membros consolidados do MDS")  
   
 ## <a name="prerequisites"></a>Prerequisites  
  Para executar esse procedimento:  
@@ -55,12 +55,12 @@ ms.locfileid: "65483429"
   
 ## <a name="next-steps"></a>Próximas etapas  
   
--   [Mover membros dentro de uma hierarquia de &#40;Master Data Services&#41;](move-members-within-a-hierarchy-master-data-services.md)  
+-   [Mover membros dentro de uma hierarquia &#40;Master Data Services&#41;](move-members-within-a-hierarchy-master-data-services.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar uma hierarquia explícita &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)   
  [Criar um membro folha &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-leaf-member-master-data-services.md)   
- [Carregar ou atualizar membros no Master Data Services por meio do processo de preparo](add-update-and-delete-data-master-data-services.md)   
+ [Carregar ou atualizar Membros no Master Data Services usando o processo de preparo](add-update-and-delete-data-master-data-services.md)   
  [Membros &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)   
  [Hierarquias explícitas &#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)  
   

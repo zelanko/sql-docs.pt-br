@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 548fac7dbc7d1f2750a130da9847be406361d8bf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62843652"
 ---
 # <a name="retrieve-files"></a>Recuperar arquivos
@@ -26,19 +26,19 @@ ms.locfileid: "62843652"
   
  Você pode usar o controle do código-fonte integrado para recuperar arquivos de acordo com um dos modos a seguir:  
   
--   **Obter a versão mais recente (recursivo)** comando  
+-   **Obter o comando de versão mais recente (recursivo)**  
   
      Recupera a última versão registrada dos arquivos selecionados. Se uma solução ou um projeto for selecionado, esse comando recuperará a versão mais recente de todos os arquivos da solução e do projeto.  
   
--   **Obter** comando  
+-   Comando **Get**  
   
-     Exibe a **obter** caixa de diálogo que você pode usar para recuperar a versão mais recente de um arquivo selecionado, ou para recuperar um subconjunto dos arquivos no projeto ou solução selecionada.  
+     Exibe a caixa de diálogo **obter** , que pode ser usada para recuperar a versão mais recente de um arquivo selecionado ou para recuperar um subconjunto dos arquivos na solução ou projeto selecionado.  
   
 ### <a name="to-retrieve-the-latest-version-of-all-the-files-in-a-project"></a>Para recuperar a versão mais recente registrada de todos os arquivos em um projeto  
   
 1.  No Gerenciador de Soluções, selecione o projeto.  
   
-2.  Sobre o **arquivo** , aponte para **controle do código-fonte**e, em seguida, clique em **obter versão mais recente (recursivo)** .  
+2.  No menu **arquivo** , aponte para **controle do código-fonte**e clique em **obter versão mais recente (recursivo)**.  
   
  As versões mais recentes dos arquivos do projeto são recuperadas no local do projeto no disco local.  
   
@@ -46,14 +46,14 @@ ms.locfileid: "62843652"
   
 1.  No Gerenciador de Soluções, selecione o item que você deseja recuperar.  
   
-2.  Sobre o **arquivo** , aponte para **controle do código-fonte**e, em seguida, clique em **obter**.  
+2.  No menu **arquivo** , aponte para **controle do código-fonte**e clique em **obter**.  
   
-3.  No **Obtenha** caixa de diálogo, clique em **Okey**. Como alternativa, se você tiver selecionado uma solução ou um projeto no Gerenciador de Soluções, desmarque as caixas de seleção que aparecem próximas aos itens que não deseja recuperar.  
+3.  Na caixa de diálogo **obter** , clique em **OK**. Como alternativa, se você tiver selecionado uma solução ou um projeto no Gerenciador de Soluções, desmarque as caixas de seleção que aparecem próximas aos itens que não deseja recuperar.  
   
-## <a name="see-also"></a>Consulte também  
- [Obtém uma caixa de diálogo &#40;controle de origem&#41;](../../2014/database-engine/get-dialog-box-source-control.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Caixa de diálogo Get &#40;controle do código-fonte&#41;](../../2014/database-engine/get-dialog-box-source-control.md)   
  [Definir e recuperar informações de versão](../../2014/database-engine/set-and-retrieve-version-information.md)   
- [Exibir histórico de projetos](../../2014/database-engine/view-project-history.md)   
+ [Exibir histórico do projeto](../../2014/database-engine/view-project-history.md)   
  [Exibir status de arquivos](../../2014/database-engine/view-file-status.md)  
   
   

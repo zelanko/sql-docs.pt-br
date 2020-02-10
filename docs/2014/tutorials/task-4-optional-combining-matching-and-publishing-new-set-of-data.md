@@ -1,5 +1,5 @@
 ---
-title: 'Tarefa 4 (opcional): Combinando, correspondendo e publicando o novo conjunto de dados | Microsoft Docs'
+title: 'Tarefa 4 (opcional): combinação, correspondência e publicação de novo conjunto de dados | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,70 +11,70 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2d27a5bcd87ffd84b33de229d955dc9494846a72
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65489278"
 ---
-# <a name="task-4-optional-combining-matching-and-publishing-new-set-of-data"></a>Tarefa 4 (opcional): Combinar, corresponder e publicar o novo conjunto de dados
-  Com o tempo, você desejará adicionar mais dados ao repositório do MDS. Antes de adicionar dados, ele pode ser útil comparar os novos dados aos dados que já são gerenciados no MDS, para garantir que você não está adicionando dados duplicados ou inexatos. No Suplemento Master Data Services para Excel, você pode combinar dados de duas planilhas e comparar esses dados para identificar e remover duplicatas antes de publicar os dados no MDS. O recurso de correspondência do Suplemento MDS do Excel usa a funcionalidade correspondente do DQS para identificar correspondências nos dados. Nesta tarefa, você combinará dados de duas planilhas em uma e executará a atividade de correspondência para identificar e remover duplicatas antes de publicar no MDS. Ver [correspondência de qualidade de dados em que o suplemento do MDS para Excel](https://msdn.microsoft.com/library/hh548681.aspx) e [combinar dados](https://msdn.microsoft.com/library/hh548680.aspx) tópicos para obter mais detalhes.  
+# <a name="task-4-optional-combining-matching-and-publishing-new-set-of-data"></a>Tarefa 4 (Opcional): Combinando, correspondendo e publicando o novo conjunto de dados
+  Com o tempo, você desejará adicionar mais dados ao repositório do MDS. Antes de adicionar dados, pode ser útil comparar os novos dados com os dados que já são gerenciados no MDS, para garantir que você não esteja adicionando dados duplicados ou imprecisos. No Suplemento Master Data Services para Excel, você pode combinar dados de duas planilhas e comparar esses dados para identificar e remover duplicatas antes de publicar os dados no MDS. O recurso de correspondência do Suplemento MDS do Excel usa a funcionalidade correspondente do DQS para identificar correspondências nos dados. Nesta tarefa, você combinará dados de duas planilhas em uma e executará a atividade de correspondência para identificar e remover duplicatas antes de publicar no MDS. Consulte [correspondência de qualidade de dados nos tópicos suplemento MDS para Excel](https://msdn.microsoft.com/library/hh548681.aspx) e [combinar dados](https://msdn.microsoft.com/library/hh548680.aspx) para obter mais detalhes.  
   
-1.  Iniciar nova instância do **Excel**. Clique em **começar**, aponte para **execute**, digite **Excel**e clique em **Okey**.  
+1.  Inicie a nova instância do **Excel**. Clique em **Iniciar**, aponte para **executar**, digite **Excel**e clique em **OK**.  
   
-2.  Alterne para o **dados mestres** guia clicando **Master Data** na barra de menus.  
+2.  Alterne para a guia **dados mestres** clicando em **dados mestres** na barra de menus.  
   
-3.  Clique em **Connect** na faixa de opções na **conectar e carregar** grupo para se conectar ao **servidor MDS**. Você configurou essa conexão anteriormente nesta lição.  
+3.  Clique em **conectar** na faixa de **-se no grupo conectar e carregar** para se conectar ao **servidor MDS**. Você configurou essa conexão anteriormente nesta lição.  
   
-     ![Excel - Mostrar botão Gerenciador em dados mestre](../../2014/tutorials/media/et-combinematchandpublishnewsod-01.jpg "Excel - Mostrar botão Gerenciador em dados mestre")  
+     ![Excel - Mostrar Botão do Explorer na guia Dados Mestre](../../2014/tutorials/media/et-combinematchandpublishnewsod-01.jpg "Excel - Mostrar Botão do Explorer na guia Dados Mestre")  
   
-4.  Você deve ver a **Master Data Explorer** painel à direita. Se você não vir o Master Data Explorer, clique em **Mostrar Gerenciador** botão na faixa de opções.  
+4.  Você deve ver o painel de **Data Explorer mestre** à direita. Se você não vir o Data Explorer mestre, clique no botão **Mostrar Explorer** na faixa de faixas.  
   
-5.  No **Master Data Explorer** janela, selecione **fornecedores** na lista suspensa para o **modelo**. Você verá que o modelo tem uma entidade: **Fornecedor**.  
+5.  Na janela de **Data Explorer mestre** , selecione **fornecedores** na lista suspensa para o **modelo**. Você verá que o modelo tem uma entidade: **fornecedor**.  
   
-     ![Excel - janela Master Data Explorer](../../2014/tutorials/media/et-combinematchandpublishnewsod-02.jpg "Excel - janela Master Data Explorer")  
+     ![Excel - Janela Master Data Explorer](../../2014/tutorials/media/et-combinematchandpublishnewsod-02.jpg "Excel - Janela Master Data Explorer")  
   
-6.  Clique duas vezes em **Supplier** na lista de entidades para carregar os membros da entidade na planilha do Excel.  
+6.  Clique duas vezes em **fornecedor** na lista de entidades para carregar os membros da entidade na planilha do Excel.  
   
-7.  Clique em **Planilha2** na parte inferior para alternar para o **Planilha2** guia. Se você não vir **Planilha2**, adicione uma nova planilha.  
+7.  Clique em **Planilha2** na parte inferior para alternar para a guia **Planilha2** . Se você não vir a **Planilha2**, adicione uma nova planilha.  
   
-8.  Abra **Suppliers** (o arquivo de entrada original que está incluído nos arquivos do tutorial) de arquivos e copie todas as linhas (três) da **CombineAndCleanse** planilha para **Planilha2**.  
+8.  Abra o arquivo **suppliers. xls** (o arquivo de entrada original que está incluído nos arquivos do tutorial) e copie todas as (três) linhas da planilha **CombineAndCleanse** para **Planilha2**.  
   
-9. Volte para o **Supplier** folha na **livro 1 – Microsoft Excel** (não o **Cleansed and Matched Supplier List** Excel) que esteja conectado ao **MDS**.  
+9. Volte para a planilha de **fornecedores** no **livro 1-Microsoft Excel** (não o Excel de lista de fornecedores com **limpeza e correspondência** ) que está conectado ao **MDS**.  
   
 10. Clique em **Dados Mestres** na barra de menus.  
   
-11. Clique em **combinar dados** na faixa de opções. Você verá a **combinar dados** caixa de diálogo.  
+11. Clique em **combinar dados** na faixa de faixas. Você verá a caixa de diálogo **combinar dados** .  
   
-12. No **combinar dados** diálogo caixa, clique no botão próximo a **intervalo a ser combinado com dados do MDS** caixa de texto, conforme mostrado na imagem a seguir.  
+12. Na caixa de diálogo **combinar dados** , clique no botão ao lado da caixa **de texto intervalo a ser combinado com dados do MDS** , conforme mostrado na imagem a seguir.  
   
-     ![Excel - combinar dados caixa de diálogo](../../2014/tutorials/media/et-combinematchandpublishnewsod-03.jpg "Excel - combinar caixa de diálogo de dados")  
+     ![Excel - Caixa de diálogo Combinar Dados](../../2014/tutorials/media/et-combinematchandpublishnewsod-03.jpg "Excel - Caixa de diálogo Combinar Dados")  
   
-13. Você deverá ver a caixa de diálogo reduzida agora. Agora, clique em **Planilha2** para alternar para o **Planilha2** guia que tem os novos dados do fornecedor com 4 linhas (incluindo uma linha de cabeçalho).  
+13. Você deverá ver a caixa de diálogo reduzida agora. Agora, clique em **Planilha2** para alternar para a guia **Planilha2** que tem os novos dados de fornecedor com 4 linhas (incluindo uma linha de cabeçalho).  
   
-14. No **Planilha2**, selecione **todas as linhas, incluindo a linha de cabeçalho** (mesmo se eles parecem já estar selecionada). Você deve ver a **intervalo a ser combinado com dados do MDS** é atualizada automaticamente.  
+14. Na **Planilha2**, selecione **todas as linhas, incluindo a linha de cabeçalho** (mesmo que pareçam já estar selecionadas). Você deve ver o **intervalo a combinar com dados do MDS** é atualizado automaticamente.  
   
-     ![Excel - caixa de diálogo de dados - minimizada de combinar](../../2014/tutorials/media/et-combinematchandpublishnewsod-04.jpg "Excel - caixa de diálogo de dados - minimizada de combinar")  
+     ![Excel - Caixa de diálogo Combinar Dados - minimizada](../../2014/tutorials/media/et-combinematchandpublishnewsod-04.jpg "Excel - Caixa de diálogo Combinar Dados - minimizada")  
   
-15. Volte para o **fornecedores** guia sem fechar o **combinar dados** caixa de diálogo.  
+15. Volte para a guia **fornecedores** sem fechar a caixa de diálogo **combinar dados** .  
   
-16. Clique o **botão** ao lado de **caixa de texto**. Você deverá ver a caixa de diálogo expandida agora. Você deve ver todos os mapeamentos entre colunas do **Supplier** MDS **entidade** para **Excel** colunas são preenchidas automaticamente.  
+16. Clique no **botão** ao lado da **caixa de texto**. Você deverá ver a caixa de diálogo expandida agora. Você deve ver que todos os mapeamentos entre colunas da **entidade** do **fornecedor** MDS para colunas do **Excel** são populados automaticamente.  
   
-     ![Excel - preenchida com dados de caixa de diálogo dados de combinar](../../2014/tutorials/media/et-combinematchandpublishnewsod-05.jpg "Excel - combinar preenchida com dados de caixa de diálogo de dados")  
+     ![Excel - Caixa de diálogo Combinar Dados - preenchida com dados](../../2014/tutorials/media/et-combinematchandpublishnewsod-05.jpg "Excel - Caixa de diálogo Combinar Dados - preenchida com dados")  
   
-17. Certifique-se de que **código** entidade é mapeada para o **SupplierID** coluna na planilha e **CEP** entidade é mapeada para o **CEP** coluna na planilha.  
+17. Verifique se a coluna de entidade de **código** está mapeada para a coluna **CódigoDoFornecedor** na planilha e a coluna de entidade **CEP** está mapeada para a coluna **CEP** na planilha.  
   
-18. Sobre o **combinar dados** caixa de diálogo, clique em **combinar**.  
+18. Na caixa de diálogo **combinar dados** , clique em **combinar**.  
   
 19. Confirme se as três linhas de dados foram adicionadas à parte inferior da planilha e devem estar codificadas por cores.  
   
-     ![Excel - novos elementos após combinação](../../2014/tutorials/media/et-combinematchandpublishnewsod-06.jpg "Excel - novos elementos após combinação")  
+     ![Excel - Novos elementos após combinação](../../2014/tutorials/media/et-combinematchandpublishnewsod-06.jpg "Excel - Novos elementos após combinação")  
   
-20. Clique em **matemática dados** na faixa de opções para identificar duplicatas. Esse recurso usa a funcionalidade de correspondência do DQS.  
+20. Clique em **dados matemáticos** na faixa de faixas para identificar duplicatas. Esse recurso usa a funcionalidade de correspondência do DQS.  
   
-21. No **corresponder dados** caixa de diálogo, selecione **fornecedores** para **da Base de dados de conhecimento do DQS**.  
+21. Na caixa de diálogo **corresponder dados** , selecione **fornecedores** para a **base de dados de conhecimento do DQS**.  
   
-     ![Excel - caixa de diálogo de dados de correspondência](../../2014/tutorials/media/et-combinematchandpublishnewsod-07.jpg "Excel - caixa de diálogo de dados de correspondência")  
+     ![Excel - Caixa de diálogo Corresponder Dados](../../2014/tutorials/media/et-combinematchandpublishnewsod-07.jpg "Excel - Caixa de diálogo Corresponder Dados")  
   
 22. Mapeie as colunas da planilha para domínios, conforme mostrado na tabela a seguir.  
   
@@ -84,31 +84,31 @@ ms.locfileid: "65489278"
     |Name (você carregou o Supplier Name como o Name da entidade Supplier para o MDS)|Supplier Name|  
     |ContactEmailAddress|ContactEmail|  
   
-23. Selecione **pré-requisito** para o **código** mapeamento de coluna.  
+23. Selecione **pré-requisito** para o mapeamento de coluna de **código** .  
   
-24. Insira **70%** como o **peso** para **Supplier Name** e **30%** como o **peso** para **Contact Email** conforme mostrado na imagem.  
+24. Insira **70%** como o **peso** do **nome do fornecedor** e **30%** como o **peso** do **email de contato** , conforme mostrado na imagem.  
   
 25. Clique em **OK**.  
   
 26. O processo de correspondência deve identificar uma duplicata para o fornecedor com **código: S1**.  
   
-     ![Excel - resultados correspondentes](../../2014/tutorials/media/et-combinematchandpublishnewsod-08.jpg "Excel - resultados correspondentes")  
+     ![Excel - Resultados de Correspondência](../../2014/tutorials/media/et-combinematchandpublishnewsod-08.jpg "Excel - Resultados de Correspondência")  
   
-27. Selecione o **linha duplicada (laranja)** , clique com botão direito e clique em **excluir** para excluir a linha.  
+27. Selecione a **linha duplicada (laranja)**, clique com o botão direito do mouse e clique em **excluir** para excluir a linha.  
   
-28. Excluir o **CLUSTER_ID** coluna, pois você não precisa mais.  
+28. Exclua a coluna **CLUSTER_ID** , pois você não precisa mais dela.  
   
-29. Clique em **Publish** para publicar os outros dois novos registros com **códigos S66** e **S57** no MDS.  
+29. Clique em **publicar** para publicar os outros dois novos registros com os **códigos S66** e **s57** para MDS.  
   
-30. No **publicar e anotar** diálogo caixa, adicione um **anotação**e clique em **publicar**.  
+30. Na caixa de diálogo **publicar e anotar** , adicione uma **anotação**e clique em **publicar**.  
   
 31. Alterne para o **aplicativo Web Master Data Manager**.  
   
-32. Na home page, certifique-se de que **fornecedores** está selecionado para o **modelo**e clique em **Explorer**. Se você já tiver o **Explorer** aberto, atualize o navegador da internet.  
+32. Na home page, verifique se **fornecedores** está selecionado para o **modelo**e clique em **Gerenciador**. Se você já tiver o **Gerenciador** aberto, atualize o navegador da Internet.  
   
-33. **Classificar** a lista por **código** e procure registros com **S57** e **S66** como códigos. Você também pode usar o **filtro** na barra de ferramentas para procurar um registro específico na lista.  
+33. **Classifique** a lista por **código** e procure por registros com **s57** e **S66** como códigos. Você também pode usar o botão **Filtrar** na barra de ferramentas para procurar um registro específico na lista.  
   
-34. Agora, feche **Book1 - Microsoft Excel** janela sem salvar o arquivo.  
+34. Agora, feche a janela **book1-Microsoft Excel** sem salvar o arquivo.  
   
 ## <a name="next-step"></a>Próxima etapa  
  [Tarefa 5: Criando um atributo baseado em domínio no Excel](../../2014/tutorials/task-5-creating-a-domain-based-attribute-from-excel.md)  

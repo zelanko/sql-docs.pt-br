@@ -1,5 +1,5 @@
 ---
-title: Tutoriais de gerenciamento de informações empresariais | Microsoft Docs
+title: Tutoriais de gerenciamento de informações da empresa | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 60becb35980b896aa2c44bbc8ff0a78a81210f48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65485574"
 ---
 # <a name="enterprise-information-management-tutorials"></a>Tutoriais de Gerenciamento de Informações da Empresa
@@ -26,10 +26,10 @@ ms.locfileid: "65485574"
   
 -   SQL Server Master Data Services (MDS). O MDS fornece um hub de dados central que assegura a constante integridade das informações e consistência dos dados entre diferentes aplicativos.  
   
- [Gerenciamento de informações da empresa usando SSIS, MDS e DQS em conjunto &#91;Tutorial&#93;](../../2014/tutorials/enterprise-information-management-using-ssis-mds-and-dqs-together-[tutorial].md)  
+ [O gerenciamento de informações corporativas usando o SSIS, o MDS e o DQS juntos &#91;tutorial&#93;](../../2014/tutorials/enterprise-information-management-using-ssis-mds-and-dqs-together-[tutorial].md)  
  Neste tutorial, você aprenderá a usar o SSIS, o MDS e o DQS em conjunto para implementar um exemplo de solução de Gerenciamento de informações da empresa (EIM). Primeiro, use o DQS para criar uma base de dados de conhecimento com informações sobre os dados do fornecedor (metadados), limpar os dados em um arquivo do Excel usando a base de dados de conhecimento e faça a correspondência dos dados para identificar e remover duplicatas. Em seguida, use o Suplemento MDS para Excel a fim de carregar os dados limpos e correspondentes no MDS. Depois, automatize todo o processo usando uma solução SSIS.  
   
-## <a name="see-also"></a>Consulte também  
- [Gerenciamento de informações - Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkId=270871)  
+## <a name="see-also"></a>Consulte Também  
+ [Gerenciamento de informações da empresa-Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkId=270871)  
   
   

@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 029ba9e05a422648d75487e85f367b3b4f698ebd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013182"
 ---
 # <a name="executing-sql-queries-sqlxmloledb-provider"></a>Executando consultas SQL (provedor SQLXMLOLEDB)
@@ -29,12 +29,12 @@ ms.locfileid: "66013182"
   
 -   xml root  
   
- Neste aplicativo de exemplo ADO do lado do cliente, uma consulta SQL simples é executada no cliente. Como a propriedade ClientSideXML é definida como True, a instrução SELECT sem a cláusula FOR XML é enviada ao servidor. O servidor executa a consulta e retorna um conjunto de linhas para o cliente. O cliente aplica a transformação de FOR XML ao conjunto de linhas e produz um documento XML.  
+ Neste aplicativo de exemplo ADO do lado do cliente, uma consulta SQL simples é executada no cliente. Como a propriedade ClientSideXML é definida como true, a instrução SELECT sem a cláusula FOR XML é enviada ao servidor. O servidor executa a consulta e retorna um conjunto de linhas para o cliente. O cliente aplica a transformação de FOR XML ao conjunto de linhas e produz um documento XML.  
   
- A propriedade de raiz de xml fornece o elemento de nível superior de raiz única para o documento XML que é gerado.  
+ A propriedade raiz XML fornece o único elemento raiz de nível superior para o documento XML gerado.  
   
 > [!NOTE]  
->  No código, é necessário fornecer o nome da instância do Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] na cadeia de conexão. Este exemplo também especifica o uso do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) para o provedor de dados, o que requer a instalação adicional do software cliente da rede. Para obter mais informações, consulte [requisitos de sistema do SQL Server Native Client](../../native-client/system-requirements-for-sql-server-native-client.md).  
+>  No código, é necessário fornecer o nome da instância do Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] na cadeia de conexão. Este exemplo também especifica o uso do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) para o provedor de dados, o que requer a instalação adicional do software cliente da rede. Para obter mais informações, consulte [requisitos do sistema para SQL Server Native Client](../../native-client/system-requirements-for-sql-server-native-client.md).  
   
 ```  
 Option Explicit  

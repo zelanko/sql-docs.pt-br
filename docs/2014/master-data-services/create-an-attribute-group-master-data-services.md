@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c832fe601eb7151e438d7f93c3e39e9b249ea246
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483320"
 ---
 # <a name="create-an-attribute-group-master-data-services"></a>Criar um grupo de atributo (Master Data Services)
@@ -29,17 +29,17 @@ ms.locfileid: "65483320"
 ## <a name="prerequisites"></a>Prerequisites  
  Para executar esse procedimento:  
   
--   Você deve ter permissão para acessar a área funcional **Administração do Sistema** .  
+-   Você deve ter permissão para acessar a área funcional **Administração do sistema** .  
   
 -   Você deve ser um administrador de modelo. Para obter mais informações, veja [Administradores &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md).  
   
--   Pelo menos um atributo deve existir. Para obter mais informações, consulte [Criar um atributo de texto &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-text-attribute-master-data-services.md).  
+-   Pelo menos um atributo deve existir. Para obter mais informações, veja [Criar um atributo de texto &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-text-attribute-master-data-services.md).  
   
 ### <a name="to-create-an-attribute-group"></a>Para criar um grupo de atributo  
   
 1.  No [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], clique em **Administração do Sistema**.  
   
-2.  Sobre o **exibição de modelo** página, na barra de menus, aponte para **gerenciar** e clique em **grupos de atributos**.  
+2.  Na página **exibição de modelo** , na barra de menus, aponte para **gerenciar** e clique em **grupos de atributos**.  
   
 3.  Na lista **Modelo** , selecione um modelo.  
   
@@ -47,12 +47,12 @@ ms.locfileid: "65483320"
   
 5.  Clique em **Grupos de Folha**, **Grupos Consolidados**ou **Grupos de Coleção** para criar um grupo de atributos de membros folha, membros consolidados ou coleções, respectivamente.  
   
-6.  Clique em **adicionar grupo de atributos**.  
+6.  Clique em **Adicionar grupo de atributos**.  
   
-7.  No **nome do grupo folha** , digite um nome para o grupo. Esse é o nome exibido na guia **Explorer**.  
+7.  Na caixa **nome do grupo folha** , digite um nome para o grupo. Esse é o nome exibido na guia no **Explorer**.  
   
     > [!NOTE]  
-    >  Se você selecionou **grupos consolidados** ou **grupos de coleção** na etapa 5, essa caixa está **nome do grupo consolidado** ou **nomedogrupodecoleção**, respectivamente.  
+    >  Se você selecionou **grupos consolidados** ou **grupos de coleta** na etapa 5, essa caixa será o **nome do grupo consolidado** ou o nome do grupo de **coleta**, respectivamente.  
   
 8.  Clique em **Salvar grupo**.  
   
@@ -60,24 +60,24 @@ ms.locfileid: "65483320"
   
 10. Clique em **Atributos**.  
   
-11. Clique em **Editar item selecionado**.  
+11. Clique em **editar item selecionado**.  
   
-12. Clique nos atributos na **disponível** caixa e clique no **Add** seta. Para adicionar tudo, clique na seta **Adicionar Tudo** .  
+12. Clique em atributos na caixa **disponível** e clique na seta **Adicionar** . Para adicionar tudo, clique na seta **Adicionar Tudo** .  
   
-13. Opcionalmente, clique no **para cima** e **para baixo** setas para alterar a ordem da esquerda para a direita dos atributos.  
+13. Opcionalmente, clique nas setas para **cima** e para **baixo** para alterar a ordem da esquerda para a direita dos atributos.  
   
-14. Clique em **Salvar**.  
+14. Clique em **Save** (Salvar).  
   
 ## <a name="next-steps"></a>Próximas etapas  
   
 -   [Tornar um grupo de atributos visível para os usuários &#40;Master Data Services&#41;](make-an-attribute-group-visible-to-users-master-data-services.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Grupos de atributos &#40;Master Data Services&#41;](../../2014/master-data-services/attribute-groups-master-data-services.md)   
  [Atributos &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)   
- [Alterar o nome de um grupo de atributos &#40;Master Data Services&#41;](../../2014/master-data-services/change-an-attribute-group-name-master-data-services.md)   
+ [Alterar um nome de grupo de atributos &#40;Master Data Services&#41;](../../2014/master-data-services/change-an-attribute-group-name-master-data-services.md)   
  [Excluir um grupo de atributos &#40;Master Data Services&#41;](../../2014/master-data-services/delete-an-attribute-group-master-data-services.md)   
  [Permissões de folha &#40;Master Data Services&#41;](../../2014/master-data-services/leaf-permissions-master-data-services.md)   
- [Consolidados permissões &#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-permissions-master-data-services.md)  
+ [Permissões consolidadas &#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-permissions-master-data-services.md)  
   
   

@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a6ed18416eadf1c2cc664029588bf0201038c261
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011164"
 ---
 # <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>Gerenciar e monitorar a pesquisa de texto completo em uma instância do servidor
@@ -48,7 +48,7 @@ ms.locfileid: "66011164"
   
          As alternativas são como segue:  
   
-         **Importar**  
+         **Importaçãoação**  
          Os catálogos de texto completo são importados. A importação costuma ser consideravelmente mais rápida do que a recompilação. Por exemplo, quando é usada apenas uma CPU, a importação é executada cerca de 10 vezes mais rápido do que a recompilação. Contudo, um catálogo de texto completo importado não usa os separadores de palavras novos e aprimorados introduzidos no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], por isso pode ser necessário recompilar o catálogo de texto completo no futuro.  
   
         > [!NOTE]  
@@ -62,7 +62,7 @@ ms.locfileid: "66011164"
          **Redefinir**  
          Os catálogos de texto completo são redefinidos. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] os arquivos de catálogos de texto completo são removidos, mas os metadados dos catálogos e dos índices de texto completo são preservados. Depois de serem atualizados, todos os índices de texto completo são desabilitados para o controle de alteração e os rastreamentos não são iniciados automaticamente. O catálogo permanecerá vazio até você executar uma população completa manualmente, depois que a atualização for concluída.  
   
-         Para obter informações sobre como escolher uma opção de atualização de texto completo, consulte [atualizar pesquisa de texto completo](upgrade-full-text-search.md).  
+         Para obter informações sobre como escolher uma opção de atualização de texto completo, consulte [Atualizar pesquisa de texto completo](upgrade-full-text-search.md).  
   
         > [!NOTE]  
         >  A opção de atualização de texto completo também pode ser definida com o uso da ação [sp_fulltext_service](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql)**upgrade_option** .  
@@ -72,13 +72,13 @@ ms.locfileid: "66011164"
   
  A tabela a seguir lista propriedades de texto completo de uma instância de servidor do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e suas funções [!INCLUDE[tsql](../../../includes/tsql-md.md)] relacionadas.  
   
-|Propriedade|Descrição|Função|  
+|Propriedade|DESCRIÇÃO|Função|  
 |--------------|-----------------|--------------|  
 |`IsFullTextInstalled`|Se o componente de texto completo está instalado com a instância atual do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[FULLTEXTSERVICEPROPERTY](/sql/t-sql/functions/fulltextserviceproperty-transact-sql)<br /><br /> [SERVERPROPERTY](/sql/t-sql/functions/serverproperty-transact-sql)|  
 |`LoadOSResources`|Se os separadores de palavras e os filtros do sistema operacional estão registrados e são usados com essa instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|FULLTEXTSERVICEPROPERTY|  
 |`VerifySignature`|Especifica se apenas binários assinados são carregados pelo Mecanismo de Texto Completo.|FULLTEXTSERVICEPROPERTY|  
   
-##  <a name="monitor"></a> Monitorando a atividade de pesquisa de texto completo  
+##  <a name="monitor"></a>Monitorando a atividade de pesquisa de texto completo  
  Existem diversas exibições e funções de gerenciamento dinâmico que são úteis para monitorar a atividade de pesquisa de texto completo em uma instância do servidor.  
   
  **Para exibir informações sobre os catálogos de texto completo com atividade de população em andamento**  
@@ -93,11 +93,11 @@ ms.locfileid: "66011164"
   
 -   [sys.dm_fts_index_population &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql)  
   
- **Para exibir buffers de memória de um pool de memórias que são usados como parte de um rastreamento ou de um intervalo de rastreamento.**  
+ **Para exibir os buffers de memória em um pool de memória que são usados como parte de um rastreamento ou intervalo de rastreamento.**  
   
 -   [sys.dm_fts_memory_buffers &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql)  
   
- **Para exibir os pools de memórias compartilhadas disponíveis para o componente gatherer de texto completo em um rastreamento de texto completo ou em um intervalo de rastreamento de texto completo**  
+ **Para exibir os pools de memória compartilhada disponíveis para o componente gatherer de texto completo para um rastreamento de texto completo ou um intervalo de rastreamento de texto completo**  
   
 -   [sys.dm_fts_memory_pools &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-pools-transact-sql)  
   

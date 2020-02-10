@@ -1,5 +1,5 @@
 ---
-title: 'Tarefa 3 (opcional): Examinando exibições de assinatura | Microsoft Docs'
+title: 'Tarefa 3 (opcional): revisando as exibições de assinatura | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -11,24 +11,24 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 5fa153b16e8fd978cab74838c9e0cee8a17cf72f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65489242"
 ---
-# <a name="task-3-optional-reviewing-the-subscription-views"></a>Tarefa 3 (opcional): Examinar as exibições de assinatura
+# <a name="task-3-optional-reviewing-the-subscription-views"></a>Tarefa 3 (Opcional): Examinando exibições de assinatura
   Nesta tarefa, você confirmará que as exibições SQL foram criadas usando o SQL Server Management Studio.  
   
-1.  Inicie **SQL Server Management Studio**. Clique o **inicie** , clique em **todos os programas**, clique em **Microsoft SQL Server 2012**e, em seguida, clique em **SQL Server Management Studio**.  
+1.  Iniciar **SQL Server Management Studio**. Clique no botão **Iniciar** , clique em **todos os programas**, clique em **Microsoft SQL Server 2012**e, em seguida, clique em **SQL Server Management Studio**.  
   
-2.  No **conectar ao servidor** janela, defina **tipo de servidor** para **mecanismo de banco de dados**, tipo de **nome do servidor** (ou selecione **( local)** e selecione apropriado **autenticação**e clique em **Connect**.  
+2.  Na janela **conectar ao servidor** , defina o **tipo de servidor** como **mecanismo de banco de dados**, digite o **nome do servidor** (ou selecione **(local)** e selecione **autenticação**apropriada e clique em **conectar**.  
   
-3.  No **Pesquisador de objetos** painel, expanda **bancos de dados**, expanda **MDS**e, em seguida, expanda **exibições**.  
+3.  No painel Pesquisador de **objetos** , expanda **bancos de dados**, expanda **MDS**e, em seguida, expanda **exibições**.  
   
-4.  Confirme que você vê o **MDM. Fornecedores** exibição na lista.  
+4.  Confirme que você vê o **MDM. **Exibição de fornecedores na lista.  
   
-     ![SQL Server Management Studio - MDM. Modo de exibição de fornecedores](../../2014/tutorials/media/et-reviewingthesubscriptionviews.jpg "SQL Server Management Studio - MDM. Modo de exibição de fornecedores")  
+     ![SQL Server Management Studio - Exibição mdm.Suppliers](../../2014/tutorials/media/et-reviewingthesubscriptionviews.jpg "SQL Server Management Studio - Exibição mdm.Suppliers")  
   
 ## <a name="next-step"></a>Próxima etapa  
  [Tarefa 4: Criando um projeto SSIS usando o SQL Server Data Tools](../../2014/tutorials/task-4-creating-an-ssis-project-using-sql-server-data-tools.md)

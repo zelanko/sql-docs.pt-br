@@ -1,5 +1,5 @@
 ---
-title: Guia Explorador de pacotes do SSIS | Microsoft Docs
+title: Guia Gerenciador de pacotes SSIS | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ab5c3112bfeddd41c9c877365e36780e32b4241e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055384"
 ---
 # <a name="ssis-package-explorer-tab"></a>Guia Explorador de Pacotes do SSIS
@@ -24,8 +24,8 @@ ms.locfileid: "66055384"
   
  Clique com o botão direito do mouse em um elemento do pacote e clique em **Propriedades** para mostrar as propriedades do elemento na janela **Propriedades** ou clique em **Excluir** para excluir o elemento.  
   
-## <a name="see-also"></a>Consulte também  
- [Exibir objetos do pacote](view-package-objects.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Exibir objetos de pacote](view-package-objects.md)   
  [Designer SSIS](ssis-designer.md)  
   
   

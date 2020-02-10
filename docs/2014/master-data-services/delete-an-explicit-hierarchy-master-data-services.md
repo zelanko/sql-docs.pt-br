@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 048d0c4bc88f28274dc7efd686ad075242e926ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483091"
 ---
 # <a name="delete-an-explicit-hierarchy-master-data-services"></a>Excluir uma hierarquia explícita (Master Data Services)
@@ -29,7 +29,7 @@ ms.locfileid: "65483091"
 ## <a name="prerequisites"></a>Prerequisites  
  Para executar esse procedimento:  
   
--   Você deve ter permissão para acessar a área funcional **Administração do Sistema** .  
+-   Você deve ter permissão para acessar a área funcional **Administração do sistema** .  
   
 -   Você deve ser um administrador de modelo. Para obter mais informações, veja [Administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
@@ -45,7 +45,7 @@ ms.locfileid: "65483091"
   
 5.  Clique em **Editar entidade selecionada**.  
   
-6.  Sobre o **Editar entidade** página, o **hierarquias explícitas** painel, clique na hierarquia explícita que você deseja excluir.  
+6.  Na página **Editar entidade** , no painel **hierarquias explícitas** , clique na hierarquia explícita que você deseja excluir.  
   
 7.  Clique em **excluir hierarquia selecionada**.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "65483091"
   
 9. Na caixa de diálogo de confirmação adicional, clique em **OK**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar uma hierarquia explícita &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)   
  [Hierarquias explícitas &#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)  
   

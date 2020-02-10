@@ -1,5 +1,5 @@
 ---
-title: Consolidados permissões (Master Data Services) | Microsoft Docs
+title: Permissões consolidadas (Master Data Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 66224262c88176fe0d0ddd1f4291b12213aed928
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054105"
 ---
 # <a name="consolidated-permissions-master-data-services"></a>Permissões consolidadas (Serviços de Dados Mestre)
@@ -27,28 +27,28 @@ ms.locfileid: "66054105"
   
  As permissões consolidadas se aplicam apenas a entidades habilitadas para hierarquias explícitas e coleções.  
   
- **Observações:**  
+ **Registra**  
   
 -   As permissões de folha aplicam-se apenas à área funcional **Gerenciador** da interface do usuário.  
   
 -   As permissões atribuídas aos atributos **Name** e **Code** não são impostas.  
   
-|Permissão|Descrição|  
+|Permissão|DESCRIÇÃO|  
 |----------------|-----------------|  
 |**Somente leitura**|Os membros consolidados são exibidos, mas o usuário não pode adicionar, remover ou alterá-los.|  
-|**Update (atualizar)**|Os membros consolidados são exibidos e o usuário pode adicionar, remover ou alterá-los.|  
+|**Cumulativo**|Os membros consolidados são exibidos e o usuário pode adicionar, remover ou alterá-los.|  
 |**Deny**|Os membros consolidados da entidade não são exibidos.|  
   
 ## <a name="attribute-permissions"></a>Permissões de atributo  
  As permissões de atributo se aplicam aos valores de atributo da entidade específica. Os usuários com permissões somente de atributo não podem adicionar ou remover membros.  
   
-|Permissão|Descrição|  
+|Permissão|DESCRIÇÃO|  
 |----------------|-----------------|  
 |**Somente leitura**|O atributo é exibido, mas o usuário não pode alterar valores de atributo.|  
-|**Update (atualizar)**|O atributo é exibido e o usuário pode alterar valores de atributo.|  
-|**Deny**|O atributo não é exibido.<br /><br /> Observação: Você não pode negar acesso explicitamente para atributos Name e Code.|  
+|**Cumulativo**|O atributo é exibido e o usuário pode alterar valores de atributo.|  
+|**Deny**|O atributo não é exibido.<br /><br /> Observação: você não pode negar acesso explicitamente para os atributos Name e Code.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Atribuir permissões de objeto de modelo &#40;Master Data Services&#41;](assign-model-object-permissions-master-data-services.md)   
  [Permissões de folha &#40;Master Data Services&#41;](../../2014/master-data-services/leaf-permissions-master-data-services.md)   
  [Permissões de objeto de modelo &#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)   

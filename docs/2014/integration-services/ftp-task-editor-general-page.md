@@ -1,5 +1,5 @@
 ---
-title: Editor da tarefa FTP (página geral) | Microsoft Docs
+title: Editor da tarefa FTP (página Geral) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ad2605902cb523c0147888e4aedee0df3c9f936e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058428"
 ---
 # <a name="ftp-task-editor-general-page"></a>Editor da Tarefa FTP (página Geral)
@@ -33,7 +33,7 @@ ms.locfileid: "66058428"
 > [!IMPORTANT]  
 >  O gerenciador de conexões de FTP dá suporte apenas para autenticação anônima e autenticação básica. Ele não suporta a Autenticação do Windows.  
   
- **Tópicos relacionados**: [Gerenciador de Conexões de FTP](connection-manager/ftp-connection-manager.md), [Editor do Gerenciador de Conexões de FTP](../../2014/integration-services/ftp-connection-manager-editor.md)  
+ **Tópicos relacionados**: [Gerenciador de conexões de FTP](connection-manager/ftp-connection-manager.md), [Editor de Gerenciador de conexões de FTP](../../2014/integration-services/ftp-connection-manager-editor.md)  
   
  **StopOnFailure**  
  Indique se a tarefa FTP deve ser encerrada se a operação FTP falhar.  
@@ -47,9 +47,9 @@ ms.locfileid: "66058428"
  **Descrição**  
  Digite uma descrição para a tarefa FTP.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor da Tarefa FTP &#40;página Transferência de Arquivos&#41;](../../2014/integration-services/ftp-task-editor-file-transfer-page.md)   
+ [Editor da tarefa FTP &#40;página transferência de arquivos&#41;](../../2014/integration-services/ftp-task-editor-file-transfer-page.md)   
  [Página Expressões](expressions/expressions-page.md)  
   
   

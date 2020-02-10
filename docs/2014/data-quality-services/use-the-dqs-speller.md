@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 9a14059e72dfb7ba2c2e0740969ee3ea30618e35
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65484098"
 ---
 # <a name="use-the-dqs-speller"></a>Usar o verificador ortográfico DQS
@@ -38,13 +38,13 @@ ms.locfileid: "65484098"
 ####  <a name="Permissions"></a> Permissões  
  É necessário ter a função dqs_kb_editor ou dqs_administrator no banco de dados DQS_MAIN para executar o verificador ortográfico.  
   
-##  <a name="Enable"></a> Habilitar o verificador ortográfico  
+##  <a name="Enable"></a>Habilitar o verificador ortográfico  
   
 1.  Para habilitar o verificador ortográfico no [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)], abra a base de dados de conhecimento na atividade **Gerenciamento de Domínio** , selecione o domínio desejado e clique em **Habilitar Verificador Ortográfico** na página **Propriedades de Domínio** . Em **Idioma**, selecione o idioma a ser usado com o verificador ortográfico.  
   
 2.  Quando o verificador ortográfico está habilitado nas propriedades de domínio, ele está habilitado na página **Gerenciar de Valores de Domínio** , na página **Valores de Domínio** ou na página **Relações Baseadas em Termos** , e na página **Gerenciar e Exibir resultados** . Para desabilitar o verificador ortográfico nestes páginas, clique no ícone **Habilitar/Desabilitar o Verificador Ortográfico** . Quando você clica no ícone, altera o status do verificador ortográfico na página. Da mesma forma, se a propriedade **Habilitar Verificador Ortográfico** para o domínio estiver desabilitada, ao clicar no ícone **Habilitar/Desabilitar o Verificador Ortográfico** , você habilitará o verificador ortográfico na página. Se você sair da página e retornar a ela, o status de botão será determinado novamente pela propriedade de domínio **Habilitar Verificador Ortográfico** .  
   
-##  <a name="Use"></a> Usar o verificador ortográfico  
+##  <a name="Use"></a>Usar o verificador ortográfico  
   
 1.  Mova para uma das seguintes páginas:  
   
@@ -64,10 +64,10 @@ ms.locfileid: "65484098"
   
 6.  Se você desejar adicionar o valor ao dicionário, clique em **Adicionar ao Dicionário**. O sublinhado vermelho desaparecerá do valor.  
   
-##  <a name="FollowUp"></a> Acompanhamento: Após usar o verificador ortográfico  
+##  <a name="FollowUp"></a>Acompanhamento: depois de usar o verificador ortográfico  
  Após executar o verificador ortográfico, conclua a atividade do domínio para usar as correções sugeridas pelo verificador ortográfico. Se estiver na atividade de descoberta da base de dados de conhecimento, gerenciamento de domínio ou política de correspondência, publique a base de dados de conhecimento para disponibilizar os resultados da análise do verificador ortográfico para uso na base de dados de conhecimento. Para obter mais informações, consulte [Executar a descoberta de conhecimento](../../2014/data-quality-services/perform-knowledge-discovery.md), [Gerenciando um domínio](../../2014/data-quality-services/managing-a-domain.md) ou [Criar uma política de conciliação](../../2014/data-quality-services/create-a-matching-policy.md).  
   
-##  <a name="How"></a> Como o verificador ortográfico funciona  
+##  <a name="How"></a>Como o verificador ortográfico funciona  
  O verificador ortográfico do DQS marca qualquer erro em potencial de valor da cadeia de caracteres com um sublinhado vermelho que é exibido para o valor inteiro. Por exemplo, se "New York" estivesse escrito incorretamente como "Neu York", o verificador ortográfico exibiria um sublinhado vermelho em "Neu York", e não apenas em "Neu". Se você clicar com o botão direito do mouse no valor, verá as correções sugeridas para o valor inteiro. Você também pode clicar em **Mais sugestões** quando há mais de cinco sugestões. Você pode escolher uma das sugestões ou adicionar um valor ao dicionário (em nível de conta de usuário) a ser exibido para o valor original. Valores adicionados ao dicionário se aplicam a todos os domínios. Somente se você designar explicitamente uma sugestão, a correção será feita no domínio. Quando você seleciona uma sugestão no menu de contexto do verificador ortográfico, o tipo de valor se torna (ou permanece como) um erro. A sugestão selecionada será adicionada à coluna de correção. Observe que o **Tipo** de um valor pode ser **Correto** e ele ainda ser marcado como um erro potencial pelo verificador ortográfico.  
   
  O DQS fornecerá sugestões para valores nas colunas **Valor** e **Corrigir para** da tabela **Valor** . Quando você seleciona uma sugestão na coluna **Valor** , o tipo de valor é definido como **Erro**e a sugestão é copiada para a coluna **Corrigir para** , como se ela tivesse sido inserida manualmente. Caso exista uma correção, ela se tornará uma sugestão. Na página **Gerenciar e Exibir resultados** da atividade de **Limpeza** , quando você seleciona uma sugestão na coluna **Corrigir para** , o DQS substitui o valor selecionado no momento pela seleção, e o valor selecionado no momento se torna uma sugestão. Na página **Gerenciar e Exibir resultados** da atividade de **Limpeza** , não há sugestões no nível de registro (a grade inferior).  

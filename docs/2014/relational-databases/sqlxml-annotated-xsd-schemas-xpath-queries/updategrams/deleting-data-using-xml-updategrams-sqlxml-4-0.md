@@ -1,5 +1,5 @@
 ---
-title: Excluindo dados usando diagramas de atualização XML (SQLXML 4.0) | Microsoft Docs
+title: Excluindo dados usando Updategrams XML (SQLXML 4,0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 444ef7d8c95b0cbd41ba3fbb55a6fbeb30870462
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014864"
 ---
 # <a name="deleting-data-using-xml-updategrams-sqlxml-40"></a>Excluindo dados usando diagramas de atualização XML (SQLXML 4.0)
-  Um diagrama de atualização indica uma operação de exclusão quando uma instância de registro aparece na  **\<antes de >** bloco sem registros correspondentes no  **\<depois >** bloco. Nesse caso, o diagrama de atualização exclui o registro na  **\<antes de >** bloco do banco de dados.  
+  Um updategram indica uma operação de exclusão quando uma instância de registro é exibida no bloco ** \<before>** sem registros correspondentes no bloco ** \<After>** . Nesse caso, o updategram exclui o registro no bloco ** \<before>** do banco de dados.  
   
  Este é o formato do diagrama de atualização em uma operação de exclusão:  
   
@@ -41,21 +41,21 @@ ms.locfileid: "66014864"
 </ROOT>  
 ```  
   
- Você pode omitir as  **\<depois >** marcar se o diagrama estiver executando apenas uma operação de exclusão. Se você não especificar opcional `mapping-schema` atributo, o  **\<ElementName >** especificado no diagrama de atualização mapeará para uma tabela de banco de dados e o mapa de elementos ou atributos filho para colunas na tabela.  
+ Você pode omitir a marca de ** \<>após** se o updategram estiver executando apenas uma operação de exclusão. Se você não especificar o atributo opcional `mapping-schema` , o ** \<ElementName>** especificado no updategram mapeia para uma tabela de banco de dados e os elementos filho ou atributos são mapeados para colunas na tabela.  
   
- Se um elemento especificado no diagrama corresponde a mais de uma linha na tabela ou não corresponde a nenhuma linha, o diagrama de atualização retornará um erro e cancelará todo o  **\<sincronização >** bloco. Só um registro de cada vez pode ser excluído por um elemento no diagrama.  
+ Se um elemento especificado no updategram corresponder a mais de uma linha na tabela ou não corresponder a nenhuma linha, o updategram retornará um erro e cancelará todo ** \<** o bloco de>de sincronização. Só um registro de cada vez pode ser excluído por um elemento no diagrama.  
   
 ## <a name="examples"></a>Exemplos  
- Os exemplos desta seção usam o mapeamento padrão (ou seja, nenhum esquema de mapeamento é especificado no diagrama de atualização). Para obter mais exemplos de diagramas de atualização que usam esquemas de mapeamento, consulte [especificando um esquema de mapeamento anotado em um diagrama de atualização &#40;SQLXML 4.0&#41;](specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
+ Os exemplos desta seção usam o mapeamento padrão (ou seja, nenhum esquema de mapeamento é especificado no diagrama de atualização). Para obter mais exemplos de Updategrams que usam esquemas de mapeamento, consulte [especificando um esquema de mapeamento anotado em um Updategram &#40;SQLXML 4,0&#41;](specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
   
- Para criar exemplos de funcionamento usando os exemplos a seguir, você deve atender aos requisitos especificados em [requisitos para executar exemplos do SQLXML](../../sqlxml/requirements-for-running-sqlxml-examples.md).  
+ Para criar exemplos de trabalho usando os exemplos a seguir, você deve atender aos requisitos especificados em [requisitos para executar exemplos do SQLXML](../../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-deleting-a-record-by-using-an-updategram"></a>A. Excluindo um registro usando um diagrama de atualização  
+### <a name="a-deleting-a-record-by-using-an-updategram"></a>a. Excluindo um registro usando um diagrama de atualização  
  Os diagramas a seguir excluem dois registros da tabela HumanResources.Shift.  
   
  Nestes exemplos, o diagrama não especifica um esquema de mapeamento. Portanto, o diagrama usa o mapeamento padrão no qual o nome de elemento é mapeado para o nome de tabela e os atributos ou subelementos para as colunas.  
   
- Este primeiro diagrama é centrado em atributo e identifica dois turnos (dia-tarde e tarde-noite) na  **\<antes de >** bloco. Porque não há nenhum registro correspondente a  **\<depois >** bloco, essa é uma operação de exclusão.  
+ Esse primeiro updategram é centrado em atributo e identifica dois turnos (dia-noite e noite-noturna) no bloco ** \<antes de>** . Como não há registro correspondente no bloco ** \<After>** , essa é uma operação de exclusão.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -80,15 +80,15 @@ ms.locfileid: "66014864"
   
 ##### <a name="to-test-the-updategram"></a>Para testar o diagrama de atualização  
   
-1.  Conclua o exemplo B ("Inserindo vários registros usando um diagrama de atualização") no [inserindo dados usando diagramas de atualização XML &#40;SQLXML 4.0&#41;](inserting-data-using-xml-updategrams-sqlxml-4-0.md).  
+1.  Conclua o exemplo B ("inserindo vários registros usando um updategram") em [inserindo dados usando os UPDATEGRAMS XML &#40;SQLXML 4,0&#41;](inserting-data-using-xml-updategrams-sqlxml-4-0.md).  
   
-2.  Copie o updategram acima no bloco de notas e salve-o como Updategram-Removeshifts na mesma pasta que foi usada para concluir ("Inserindo vários registros usando um diagrama de atualização") no [inserindo dados usando diagramas de atualização XML &#40;SQLXML 4.0&#41; ](inserting-data-using-xml-updategrams-sqlxml-4-0.md).  
+2.  Copie o updategram acima para o bloco de notas e salve-o como Updategram-RemoveShifts. xml na mesma pasta usada para concluir ("inserindo vários registros usando um updategram") em [inserindo dados usando os UPDATEGRAMS xml &#40;SQLXML 4,0&#41;](inserting-data-using-xml-updategrams-sqlxml-4-0.md).  
   
 3.  Crie e use o Script de teste SQLXML 4.0 (Sqlxml4test.vbs) para executar o diagrama de atualização.  
   
-     Para obter mais informações, consulte [usando o ADO para executar consultas do SQLXML 4.0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Para obter mais informações, consulte [usando o ADO para executar consultas do SQLXML 4,0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Considerações de segurança do diagrama de atualização &#40;SQLXML 4.0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Considerações de segurança do updategram &#40;SQLXML 4,0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

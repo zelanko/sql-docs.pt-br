@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d88b7524874156d219dbb2529c260d8ce3e203bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62913733"
 ---
-# <a name="mssqlserver7904"></a>MSSQLSERVER_7904
+# <a name="mssqlserver_7904"></a>MSSQLSERVER_7904
     
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|7904|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|DBCC2_FS_MISSING_FILE|  
-|Texto da mensagem|Erro de tabela: O arquivo de filestream para a ID de coluna C_ID, ROWGUID RG_ID na ID de objeto O_ID, ID de índice I_ID, ID de partição PN_ID não foi encontrado.|  
+|Texto da mensagem|Erro de tabela: o arquivo de Filestream da ID de coluna C_ID, ROWGUID RG_ID na ID de objeto O_ID, ID de índice I_ID, ID de partição PN_ID não foi localizado.|  
   
 ## <a name="explanation"></a>Explicação  
  Um valor de coluna de uma partição não tem um arquivo de FILESTREAM correspondente no diretório de coluna FILESTREAM correspondente.  

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 19ebeac45f7596de42add894922838864f62546e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054306"
 ---
 # <a name="xml-source-editor-error-output-page"></a>Editor de Origem XML (página Saída de Erro)
@@ -50,10 +50,10 @@ ms.locfileid: "66054306"
  **Aplicar**  
  Aplique a opção de tratamento de erros às células selecionadas.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de Origem XML &#40;Página Gerenciador de Conexões&#41;](../../2014/integration-services/xml-source-editor-connection-manager-page.md)   
- [Editor de Origem XML &#40;Página Colunas&#41;](../../2014/integration-services/xml-source-editor-columns-page.md)   
+ [Editor de origem XML &#40;página do Gerenciador de conexões&#41;](../../2014/integration-services/xml-source-editor-connection-manager-page.md)   
+ [Editor de origem XML &#40;página colunas&#41;](../../2014/integration-services/xml-source-editor-columns-page.md)   
  [Extrair dados por meio da origem XML](data-flow/extract-data-by-using-the-xml-source.md)  
   
   

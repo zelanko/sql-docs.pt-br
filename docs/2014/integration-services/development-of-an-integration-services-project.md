@@ -1,5 +1,5 @@
 ---
-title: Projeto de serviços de desenvolvimento de uma integração | Microsoft Docs
+title: Desenvolvimento de um projeto de Integration Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3211a79c21f4c180590b53e869f9a19939b0dd19
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059463"
 ---
 # <a name="development-of-an-integration-services-project"></a>Implantação de um projeto do Integration Services
@@ -35,7 +35,7 @@ ms.locfileid: "66059463"
   
 ## <a name="related-tasks"></a>Related Tasks  
   
--   [Criar um novo projeto do Integration Services](../../2014/integration-services/create-a-new-integration-services-project.md)  
+-   [Criar um novo projeto de Integration Services](../../2014/integration-services/create-a-new-integration-services-project.md)  
   
 -   [Adicionar um item a um projeto do Integration Services](../../2014/integration-services/add-an-item-to-an-integration-services-project.md)  
   

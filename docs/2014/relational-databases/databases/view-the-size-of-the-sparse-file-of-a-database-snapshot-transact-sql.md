@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c2a7e507e45d8429312834911b7bef5ae1e784c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62870875"
 ---
 # <a name="view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql"></a>Exibir o tamanho do arquivo esparso de um instantâneo de banco de dados (Transact-SQL)
@@ -46,9 +46,9 @@ ms.locfileid: "62870875"
 > [!NOTE]  
 >  Arquivos esparsos crescem em incrementos de 64 KB (quilobyte); portanto, o tamanho de um arquivo esparso no disco sempre é um múltiplo de 64 KB.  
   
- Para exibir o número de bytes que cada arquivo esparso de um instantâneo está usando no disco no momento, consulte a coluna **size_on_disk_bytes** da exibição de gerenciamento dinâmico [sys.dm_io_virtual_file_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Para exibir o número de bytes que cada arquivo esparso de um instantâneo está usando no disco no momento, confira a coluna **size_on_disk_bytes** da exibição de gerenciamento dinâmico do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [sys.dm_io_virtual_file_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql).  
   
- Para exibir o espaço em disco usado por um arquivo esparso, clique com o botão direito do mouse no Microsoft Windows, clique em **Propriedades** e examine o valor de **Tamanho em disco**.  
+ Para exibir o espaço em disco usado por um arquivo esparso, clique com o botão direito do mouse no Microsoft Windows, clique em **Propriedades**e examine o valor de **Tamanho em disco** .  
   
 ## <a name="find-out-the-maximum-size-of-a-sparse-file"></a>Descobrir o tamanho máximo de um arquivo esparso  
  O tamanho máximo de crescimento de um arquivo esparso é o tamanho do arquivo de banco de dados de origem correspondente, no momento da criação do instantâneo. Para saber qual é este tamanho, você pode usar uma das alternativas seguintes:  
@@ -63,12 +63,12 @@ ms.locfileid: "62870875"
   
      Selecione a coluna **size** em **sys.database_files** no instantâneo do banco de dados ou em **sys.master_files**. O valor da coluna **size** reflete o espaço máximo, em páginas SQL, que o instantâneo pode vir a usar; esse valor é equivalente ao campo **Tamanho** do Windows, a não ser que seja representado em número de páginas SQL no arquivo; o tamanho em bytes é:  
   
-     (*number_of_pages* * 8192)  
+     ( *number_of_pages* * 8192)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Instantâneos de banco de dados &#40;SQL Server&#41;](database-snapshots-sql-server.md)   
- [sys.fn_virtualfilestats &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-virtualfilestats-transact-sql)   
- [sys.database_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)   
+ [sys. fn_virtualfilestats &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-virtualfilestats-transact-sql)   
+ [sys. database_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)   
  [sys.master_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql)  
   
   

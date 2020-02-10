@@ -1,5 +1,5 @@
 ---
-title: Executando consultas XPath com Namespaces (provedor SQLXMLOLEDB) | Microsoft Docs
+title: Executando consultas XPath com namespaces (provedor SQLXMLOLEDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,18 +18,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f72c5841989eb12f89eda34fbfb310e125612d1d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013075"
 ---
 # <a name="executing-xpath-queries-with-namespaces-sqlxmloledb-provider"></a>Executando consultas XPath com namespaces (provedor SQLXMLOLEDB)
   As consultas XPath podem incluir namespaces. Se os elementos de esquema forem qualificados por namespace (ou seja, se incluírem um namespace de destino), as consultas XPath com relação ao esquema precisarão especificar esse namespace.  
   
- Como não há suporte ao uso do caractere curinga (*) no SQLXML 4.0, você precisa especificar a consulta XPath usando um prefixo de namespace. Para resolver esse prefixo, use a propriedade de namespaces para especificar a associação de namespace.  
+ Como não há suporte ao uso do caractere curinga (*) no SQLXML 4.0, você precisa especificar a consulta XPath usando um prefixo de namespace. Para resolver esse prefixo, use a propriedade namespaces para especificar a associação de namespace.  
   
- No exemplo a seguir, a consulta XPath especifica namespaces usando o caractere curinga (\*) e as funções XPath example e namespace-uri(). Essa consulta XPath retorna todos os elementos em que o nome local é `Contact` e o URI de namespace é `urn:myschema:Contacts`.  
+ No exemplo a seguir, a consulta XPath especifica namespaces usando o caractere curinga (\*) e as funções XPath de nome local () e namespace-URI (). Essa consulta XPath retorna todos os elementos em que o nome local é `Contact` e o URI de namespace é `urn:myschema:Contacts`.  
   
 ```  
 /*[local-name() = 'Contact' and namespace-uri() = 'urn:myschema:Contacts']  
@@ -53,10 +53,10 @@ ms.locfileid: "66013075"
   
  Como esse esquema define o namespace de destino, uma consulta XPath (como "Employee") com relação ao esquema precisa incluir o namespace.  
   
- Este é um aplicativo de exemplo do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic que executa uma consulta XPath (x:Employee) no esquema XSD anterior. Para resolver o prefixo, a associação de namespace é especificada usando a propriedade de namespaces.  
+ Este é um aplicativo de exemplo do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic que executa uma consulta XPath (x:Employee) no esquema XSD anterior. Para resolver o prefixo, a associação de namespace é especificada usando a propriedade namespaces.  
   
 > [!NOTE]  
->  No código, é necessário fornecer o nome da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] na cadeia de conexão. Este exemplo também especifica o uso do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) para o provedor de dados, o que requer a instalação adicional do software cliente da rede. Para obter mais informações, consulte [requisitos de sistema do SQL Server Native Client](../../native-client/system-requirements-for-sql-server-native-client.md).  
+>  No código, é necessário fornecer o nome da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] na cadeia de conexão. Este exemplo também especifica o uso do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) para o provedor de dados, o que requer a instalação adicional do software cliente da rede. Para obter mais informações, consulte [requisitos do sistema para SQL Server Native Client](../../native-client/system-requirements-for-sql-server-native-client.md).  
   
 ```  
 Option Explicit  

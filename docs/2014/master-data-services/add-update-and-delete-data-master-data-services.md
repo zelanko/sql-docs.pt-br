@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2212e7424f22ecca2619ef7215bf94b0dbb62875
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054269"
 ---
 # <a name="add-update-and-delete-data-master-data-services"></a>Adicionar, Atualizar e Excluir Dados (Master Data Services)
@@ -28,9 +28,9 @@ ms.locfileid: "66054269"
   
 -   O modelo não deve ter um status de **Confirmado**.  
   
- **Para adicionar, atualizar e excluir dados no banco de dados do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]**  
+ **Para adicionar, atualizar e excluir dados no banco de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] dado**  
   
-1.  Prepare os membros para importação na tabela de preparo adequada no banco de dados do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , incluindo fornecer valores para os campos requisitados. Para obter uma visão geral de tabelas de preparo, consulte [importação de dados &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)  
+1.  Prepare os membros para importação na tabela de preparo adequada no banco de dados do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , incluindo fornecer valores para os campos requisitados. Para obter uma visão geral das tabelas de preparo, consulte [importação de dados &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)  
   
     -   Para membros folha, a tabela é stg.\<name>_Leaf, em que \<name> refere-se à entidade correspondente. Para obter informações sobre os campos obrigatórios, consulte [Tabela de preparo de membros folha &#40;Master Data Services&#41;](../../2014/master-data-services/leaf-member-staging-table-master-data-services.md)  
   
@@ -42,7 +42,7 @@ ms.locfileid: "66054269"
   
     -   Use o valor do campo **ImportType** para especificar que você está criando novos membros, desativando membros ou excluindo membros. Para obter mais informações sobre os valores, consulte [Tabela de preparo de membros folha &#40;Master Data Services&#41;](../../2014/master-data-services/leaf-member-staging-table-master-data-services.md) e [Tabela de preparo de membros consolidados &#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-member-staging-table-master-data-services.md).  
   
-         Para uma visão geral de como desativar e excluir membros, consulte [importação de dados &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md).  
+         Para obter uma visão geral da desativação e exclusão de membros, consulte [importação de dados &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md).  
   
 2.  Abra o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] e conecte-se à instância do mecanismo de banco de dados do seu banco de dados do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
@@ -56,17 +56,17 @@ ms.locfileid: "66054269"
   
     -   Execute o procedimento armazenado de preparo que corresponde à tabela de preparo para a qual você deseja mover os dados.  
   
-         Para obter uma visão geral de procedimentos armazenados de preparo e tabelas de preparo, consulte [importação de dados &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md). Para obter mais informações sobre os parâmetros de preparo de procedimentos armazenados e um exemplo de código, consulte [Preparando um procedimento armazenado &#40;Master Data Services&#41;](../../2014/master-data-services/staging-stored-procedure-master-data-services.md).  
+         Para obter uma visão geral dos procedimentos armazenados de preparo e das tabelas de preparo, consulte [importação de dados &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md). Para obter mais informações sobre os parâmetros de preparo de procedimentos armazenados e um exemplo de código, consulte [Preparando um procedimento armazenado &#40;Master Data Services&#41;](../../2014/master-data-services/staging-stored-procedure-master-data-services.md).  
   
     -   Use a área funcional **Gerenciamento de Integração** do Gerenciamento de Dados Mestre.  
   
          Na página **Lotes de Preparo** , selecione o modelo ao qual você está adicionando dados na lista suspensa e clique em **Iniciar Lotes**. O status do processamento em lotes é indicado no campo **Status** . Para obter mais informações sobre os status, consulte [Status de importação &#40;Master Data Services&#41;](../../2014/master-data-services/import-statuses-master-data-services.md).  
   
-         ![Página de lotes de preparo no Master Data Manager](../../2014/master-data-services/media/mds-staging-batches.png "Página de lotes de preparo no Master Data Manager")  
+         ![Página de lotes de preparação no Master Data Manager](../../2014/master-data-services/media/mds-staging-batches.png "Página de lotes de preparação no Master Data Manager")  
   
          O processo de preparo é iniciado em intervalos determinados pela configuração de **Intervalo de lotes de preparo** no [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]. Para obter mais informações, veja [Configurações do sistema &#40;Master Data Services&#41;](../../2014/master-data-services/system-settings-master-data-services.md).  
   
-5.  Exiba os erros ocorridos durante o preparo. Para obter mais informações, consulte [exibir erros que ocorrem durante o processo de preparo &#40;Master Data Services&#41; ](view-errors-that-occur-during-staging-master-data-services.md) e [erros de processo de preparo &#40;Master Data Services&#41;](../../2014/master-data-services/staging-process-errors-master-data-services.md).  
+5.  Exiba os erros ocorridos durante o preparo. Para obter mais informações, consulte [exibir erros que ocorrem durante o processo de preparo &#40;Master Data Services&#41;](view-errors-that-occur-during-staging-master-data-services.md) e os [erros do processo de preparo &#40;Master Data Services&#41;](../../2014/master-data-services/staging-process-errors-master-data-services.md).  
   
 6.  Valide os dados em relação às regras de negócio.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "66054269"
   
      Quando você carrega dados com as tabelas de preparo, os dados não são validados automaticamente em relação às regras de negócio. Para obter mais informações sobre o que é a validação e quando ela ocorre, consulte [Validação &#40;Master Data Services&#41;](../../2014/master-data-services/validation-master-data-services.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Importação de dados &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Master Data Services de importação de dados &#40;&#41;](overview-importing-data-from-tables-master-data-services.md)  
   
   

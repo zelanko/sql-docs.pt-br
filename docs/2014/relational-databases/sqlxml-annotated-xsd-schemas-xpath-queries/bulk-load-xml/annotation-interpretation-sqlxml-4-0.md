@@ -1,5 +1,5 @@
 ---
-title: Interpretação de anotação (SQLXML 4.0) | Microsoft Docs
+title: Interpretação de anotação (SQLXML 4,0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,32 +17,32 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2db54a2bec501c3422cf19b1efab7cdb581420e0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013436"
 ---
 # <a name="annotation-interpretation-sqlxml-40"></a>Interpretação de anotação (SQLXML 4.0)
   Os tópicos desta seção descrevem como o Carregamento em Massa de XML interpreta as anotações no esquema XSD. O comportamento descrito aqui também se aplica às anotações no esquema XDR.  
   
 > [!NOTE]  
->  As informações nesses tópicos descrevem apenas as anotações usadas pelo Carregamento em Massa de XML em seu processamento. Para obter uma lista completa de anotações para o esquema XSD que têm suporte no SQLXML 4.0, consulte [usando anotações em esquemas XSD &#40;SQLXML 4.0&#41;](../../sqlxml-annotated-xsd-schemas-using/using-annotations-in-xsd-schemas-sqlxml-4-0.md). Para obter uma lista de anotações com suporte para esquemas XDR, consulte [os esquemas XDR anotados &#40;substituídos no SQLXML 4.0&#41;](../../sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
+>  As informações nesses tópicos descrevem apenas as anotações usadas pelo Carregamento em Massa de XML em seu processamento. Para obter uma lista completa de anotações para o esquema XSD que têm suporte do SQLXML 4,0, consulte [usando anotações em esquemas xsd &#40;sqlxml 4,0&#41;](../../sqlxml-annotated-xsd-schemas-using/using-annotations-in-xsd-schemas-sqlxml-4-0.md). Para obter uma lista de anotações com suporte para esquemas XDR, consulte [esquemas XDR anotados &#40;preteridos no SQLXML 4,0&#41;](../../sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [SQL: Relationship e regra de ordenação de chave &#40;SQLXML 4.0&#41;](annotation-interpretation-sql-relationship-and-key-ordering-rule.md)  
+ [SQL: relação e a regra de ordenação de chave &#40;SQLXML 4,0&#41;](annotation-interpretation-sql-relationship-and-key-ordering-rule.md)  
  Descreve como a anotação `sql:relationship` é interpretada no Carregamento em Massa de XML.  
   
- [sql:mapped &#40;SQLXML 4.0&#41;](annotation-interpretation-sql-mapped.md)  
+ [SQL: mapeado &#40;SQLXML 4,0&#41;](annotation-interpretation-sql-mapped.md)  
  Descreve como a anotação `sql:mapped` é interpretada no Carregamento em Massa de XML.  
   
- [SQL: limit-campo e SQL: limit-valor &#40;SQLXML 4.0&#41;](annotation-interpretation-sql-limit-field-and-sql-limit-value.md)  
+ [SQL: limit-field e SQL: limit-value &#40;SQLXML 4,0&#41;](annotation-interpretation-sql-limit-field-and-sql-limit-value.md)  
  Descreve como as anotações `sql:limit-field` e `sql:limit-value` são interpretadas no Carregamento em Massa de XML.  
   
- [sql:overflow-field &#40;SQLXML 4.0&#41;](annotation-interpretation-sql-overflow-field.md)  
+ [SQL: overflow-field &#40;SQLXML 4,0&#41;](annotation-interpretation-sql-overflow-field.md)  
  Descreve como a anotação `sql:overflow` é interpretada no Carregamento em Massa de XML.  
   
- [Outras anotações &#40;SQLXML 4.0&#41;](annotation-interpretation-other-annotations.md)  
+ [Outras anotações &#40;SQLXML 4,0&#41;](annotation-interpretation-other-annotations.md)  
  Descreve como as anotações a seguir são interpretadas no Carregamento em Massa de XML: `sql:id-prefix`, `sql:use-cdata`, `sql:url-encode`, `sql:is-mapping-schema`, `sql:key-fields`.  
   
   

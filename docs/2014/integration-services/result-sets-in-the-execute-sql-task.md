@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8efb049292caecf21f38ef5bc5a7392138bdcf5a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056424"
 ---
 # <a name="result-sets-in-the-execute-sql-task"></a>Conjuntos de resultados na tarefa Executar SQL
@@ -29,11 +29,11 @@ ms.locfileid: "66056424"
   
 -   [Especificando um tipo de conjunto de resultados](#Result_set_type)  
   
--   [Popular uma variável com um conjunto de resultados](#Populate_variable_with_result_set)  
+-   [Populando uma variável com um conjunto de resultados](#Populate_variable_with_result_set)  
   
--   [Configurando resultados conjuntos no Execute SQL Editor da tarefa](#Configure_result_sets)  
+-   [Configurando resultados conjuntos de resultados no Editor da Tarefa Executar SQL](#Configure_result_sets)  
   
-##  <a name="Result_set_type"></a> Especificando um conjunto de resultados tipo  
+##  <a name="Result_set_type"></a>Especificando um tipo de conjunto de resultados  
  O a tarefa Executar SQL dá suporte aos seguintes tipos de conjuntos de resultados:  
   
 -   O conjunto de resultados **Nenhum** é usado quando a consulta não retorna nenhum resultado. Por exemplo, esse conjunto de resultados é usado para consultas que adicionam, alteram e excluem registros em uma tabela.  
@@ -46,7 +46,7 @@ ms.locfileid: "66056424"
   
  Se a tarefa Executar SQL usar o **Conjunto de resultados completo** e a consulta retornar vários conjuntos de linhas, a tarefa retornará apenas o primeiro. Se este conjunto de linhas gerar um erro, a tarefa informará o erro. Se outros conjuntos de linhas gerarem erros, a tarefa não os informará.  
   
-##  <a name="Populate_variable_with_result_set"></a> Populando uma variável com um conjunto de resultados  
+##  <a name="Populate_variable_with_result_set"></a>Populando uma variável com um conjunto de resultados  
  Você poderá associar o conjunto de resultados retornado por uma consulta a uma variável definida pelo usuário se o tipo de conjunto de resultados for uma única linha, um conjunto de linhas ou XML.  
   
  Se o tipo de conjunto resultante for **Linha simples**, você poderá associar uma coluna no resultado de retorno a uma variável usando o nome da coluna como o nome do conjunto de resultados ou pode usar a posição ordinal da coluna na lista de colunas como o nome do conjunto de resultados. Por exemplo, o nome do conjunto de resultados da consulta `SELECT Color FROM Production.Product WHERE ProductID = ?` pode ser **Color** ou **0**. Se a consulta retornar várias colunas e você quiser acessar os valores em todas elas, associe cada coluna a uma variável diferente. Se você mapear as colunas para variáveis usando números como nomes do conjunto de resultados, os números refletirão a ordem em que as colunas aparecerão na lista de colunas da consulta. Por exemplo, na consulta `SELECT Color, ListPrice, FROM Production.Product WHERE ProductID = ?`, você usa 0 para a coluna **Color** e 1 para a coluna **ListPrice** . A capacidade de usar um nome de coluna como o nome do conjunto de resultados depende do provedor que a tarefa está configurada para usar. Nem todos os provedores tornam os nomes das colunas disponíveis.  
@@ -55,11 +55,11 @@ ms.locfileid: "66056424"
   
  Se o tipo de conjunto de resultados for **Conjunto de resultados completo** ou **XML**, será necessário usar 0 como o nome de conjunto de resultados.  
   
- Quando você mapeia uma variável para um conjunto de resultados com o tipo de conjunto de resultados **Linha simples** , a variável deve ter um tipo de dados compatível com o tipo de dados da coluna que o conjunto de resultados contém. Por exemplo, um conjunto de resultados que contém uma coluna com um tipo de dados `String` não pode ser mapeado para uma variável com um tipo de dados numérico. Quando você define o **TypeConversionMode** propriedade `Allowed`, a tarefa Executar SQL tentará converter o parâmetro de saída e resultados para os dados de tipo da variável os resultados da consulta são atribuídos.  
+ Quando você mapeia uma variável para um conjunto de resultados com o tipo de conjunto de resultados **Linha simples** , a variável deve ter um tipo de dados compatível com o tipo de dados da coluna que o conjunto de resultados contém. Por exemplo, um conjunto de resultados que contém uma coluna com um tipo de dados `String` não pode ser mapeado para uma variável com um tipo de dados numérico. Quando você define a propriedade **TypeConversionMode** como `Allowed`, a tarefa Executar SQL tentará converter o parâmetro de saída e os resultados da consulta no tipo de dados da variável à qual os resultados são atribuídos.  
   
  Um conjunto de resultados XML somente pode ser mapeado para uma variável com o tipo de dados `String` ou `Object`. Se a variável tiver o tipo de dados `String`, a tarefa Executar SQL retorna uma cadeia de caracteres e a fonte XML pode consumir os dados XML. Se a variável tiver o tipo de dados `Object`, a tarefa Executar SQL retornará um objeto do Modelo de Objeto de Documento (DOM).  
   
- Um **conjunto de resultados completo** deve ser mapeado para uma variável do `Object` tipo de dados. O resultado de retorno é um objeto de conjunto de linhas. Você pode usar um contêiner do Loop Foreach para extrair os valores de linha da tabela que são armazenados na variável Object em variáveis ​​de pacote e usar uma Tarefa Script para gravar os dados armazenados em variáveis ​​de pacotes em um arquivo. Para uma demonstração de como fazer isso usando um contêiner de Loop Foreach e uma Tarefa Script, confira a amostra CodePlex, [Executar conjuntos de resultados e parâmetros SQL](https://go.microsoft.com/fwlink/?LinkId=157863), no msftisprodsamples.codeplex.com.  
+ Um **conjunto de resultados completo** deve ser mapeado para uma variável `Object` do tipo de dados. O resultado de retorno é um objeto de conjunto de linhas. Você pode usar um contêiner do Loop Foreach para extrair os valores de linha da tabela que são armazenados na variável Object em variáveis ​​de pacote e usar uma Tarefa Script para gravar os dados armazenados em variáveis ​​de pacotes em um arquivo. Para uma demonstração de como fazer isso usando um contêiner de Loop Foreach e uma Tarefa Script, confira a amostra CodePlex, [Executar conjuntos de resultados e parâmetros SQL](https://go.microsoft.com/fwlink/?LinkId=157863), no msftisprodsamples.codeplex.com.  
   
  A tabela a seguir resume os tipos de dados de variáveis que podem ser mapeadas para conjuntos de resultados.  
   
@@ -68,11 +68,11 @@ ms.locfileid: "66056424"
 |Linha simples|Qualquer tipo compatível com a coluna de tipo no conjunto de resultados.|Não aplicável|  
 |Conjunto de resultados completo|`Object`|Se a tarefa usar um gerenciador de conexões nativo, incluindo os gerenciadores de conexões ADO, OLE DB, Excel e ODBC, o objeto retornado será `Recordset` ADO.<br /><br /> Se a tarefa usar um gerenciador de conexões gerenciado, como o gerenciador de conexões [!INCLUDE[vstecado](../includes/vstecado-md.md)], o objeto retornado será um `System.Data.DataSet`.<br /><br /> Você pode usar uma tarefa Script para acessar o objeto `System.Data.DataSet` , conforme mostrado no exemplo a seguir.<br /><br /> `Dim dt As Data.DataTable` <br /> `Dim ds As Data.DataSet = CType(Dts.Variables("Recordset").Value, DataSet)` <br /> `dt = ds.Tables(0)`|  
 |XML|`String`|`String`|  
-|XML|`Object`|Se a tarefa usar um gerenciador de conexões nativo, inclusive os gerenciadores de conexões ADO, OLE DB, Excel e ODBC, o objeto retornado será `MSXML6.IXMLDOMDocument`.<br /><br /> Se a tarefa usa um Gerenciador de conexão gerenciado, como o [!INCLUDE[vstecado](../includes/vstecado-md.md)] Gerenciador de conexão, o objeto retornado será um `System.Xml.XmlDocument`.|  
+|XML|`Object`|Se a tarefa usar um gerenciador de conexões nativo, inclusive os gerenciadores de conexões ADO, OLE DB, Excel e ODBC, o objeto retornado será `MSXML6.IXMLDOMDocument`.<br /><br /> Se a tarefa usar um Gerenciador de conexões gerenciado, como o [!INCLUDE[vstecado](../includes/vstecado-md.md)] Gerenciador de conexões, o objeto retornado será `System.Xml.XmlDocument`um.|  
   
  A variável pode ser definida no escopo da tarefa Executar SQL ou do pacote. Se a variável tiver escopo de pacote, o conjunto de resultados estará disponível para outras tarefas e contêineres no pacote e para qualquer pacote executado pelas tarefas Executar pacote ou Executar Pacotes do DTS 2000.  
   
- Quando você mapeia uma variável para um conjunto de resultados de **Linha simples** , os valores que não são de cadeia de caracteres retornados pela instrução SQL são convertidos em cadeias de caracteres quando as seguintes condições são atendidas:  
+ Quando você mapeia uma variável para um conjunto de resultados de **Linha simples**, os valores que não são de cadeia de caracteres retornados pela instrução SQL são convertidos em cadeias de caracteres quando as seguintes condições são atendidas:  
   
 -   A propriedade **TypeConversionMode** é definida como verdadeira. Você define o valor da propriedade na janela Propriedades ou por meio do **Editor da Tarefa Executar SQL**.  
   
@@ -80,10 +80,10 @@ ms.locfileid: "66056424"
   
  Para obter informações sobre como carregar um conjunto de resultados em uma variável, consulte [Mapear conjuntos de resultados para variáveis em uma tarefa Executar SQL](control-flow/execute-sql-task.md).  
   
-##  <a name="Configure_result_sets"></a> Configurando conjuntos de resultados tarefa Executar SQL  
+##  <a name="Configure_result_sets"></a>Configurando conjuntos de resultados na tarefa Executar SQL  
  Para obter mais informações sobre as propriedades dos conjuntos de resultados que podem ser definidas no Designer [!INCLUDE[ssIS](../includes/ssis-md.md)] , clique no seguinte tópico:  
   
--   [SQL Editor da tarefa executar &#40;página conjunto de resultados&#41;](../../2014/integration-services/execute-sql-task-editor-result-set-page.md)  
+-   [Editor da tarefa Executar SQL &#40;página conjunto de resultados&#41;](../../2014/integration-services/execute-sql-task-editor-result-set-page.md)  
   
  Para obter mais informações sobre como definir essas propriedades no [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, clique no tópico a seguir:  
   

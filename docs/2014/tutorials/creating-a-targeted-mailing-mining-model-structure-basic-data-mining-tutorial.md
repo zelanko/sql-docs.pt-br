@@ -1,5 +1,5 @@
 ---
-title: Criando uma estrutura de modelo de mineração de mala direta (Tutorial de mineração de dados básico) | Microsoft Docs
+title: Criando uma estrutura de modelo de mineração de endereçamento direcionada (tutorial de mineração de dados básico) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,58 +11,58 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2bd2e9d0decc730a59b63ee600bec2d080cc85fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62856160"
 ---
 # <a name="creating-a-targeted-mailing-mining-model-structure-basic-data-mining-tutorial"></a>Criando uma estrutura de modelo de mineração de mala direta (Tutorial de mineração de dados básico)
   A primeira etapa para criar um cenário de correspondência destinada é usar o Assistente de Mineração de Dados no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para criar uma nova estrutura de mineração e um modelo de mineração de árvore de decisão.  
   
- Nesta tarefa você configurar uma nova estrutura de mineração e adicionar um modelo de mineração inicial com base no [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmo árvores de decisão. Para criar a estrutura, primeiro você selecionará tabelas e exibições e depois identificará as colunas que serão usadas no treinamento e as que serão usadas para teste.  
+ Nesta tarefa, você irá configurar uma nova estrutura de mineração e adicionar um modelo de mineração inicial com base no [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmo árvores de decisão. Para criar a estrutura, primeiro você selecionará tabelas e exibições e depois identificará as colunas que serão usadas no treinamento e as que serão usadas para teste.  
   
 ### <a name="to-create-a-mining-structure-for-the-targeted-mailing-scenario"></a>Para criar uma estrutura de mineração para o cenário de mala direta  
   
-1.  No Gerenciador de soluções, clique com botão direito **estruturas de mineração** e selecione **nova estrutura de mineração** para iniciar o Assistente de mineração de dados.  
+1.  Em Gerenciador de Soluções, clique com o botão direito do mouse em **estruturas de mineração** e selecione **nova estrutura de mineração** para iniciar o assistente de mineração de dados.  
   
 2.  Na página **Bem-vindo ao Assistente de Mineração de Dados** , clique em **Avançar**.  
   
-3.  No **Selecionar método de definição** página, verifique **de warehouse existente de banco de dados ou dados relacional** está selecionado e, em seguida, clique em **próxima**.  
+3.  Na página **selecionar o método de definição** , verifique se a **partir de banco de dados relacional existente ou data warehouse** está selecionada e clique em **Avançar**.  
   
-4.  Sobre o **criar a estrutura de mineração de dados** página, em **qual técnica de mineração de dados você deseja usar?** , selecione **Microsoft Decision Trees**.  
-  
-    > [!NOTE]  
-    >  Se você receber um aviso de que não é possível encontrar nenhum algoritmo de mineração de dados, as propriedades do projeto talvez não sejam configuradas corretamente. Esse aviso ocorre quando o projeto tenta recuperar uma lista de algoritmos de mineração de dados do servidor do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e não consegue encontrá-lo. Por padrão, [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] usará **localhost** como o servidor. Se você estiver usando uma instância diferente ou uma instância nomeada, altere as propriedades do projeto. Para obter mais informações, consulte [criando um projeto do Analysis Services &#40;Tutorial básico de mineração de dados&#41;](../../2014/tutorials/creating-an-analysis-services-project-basic-data-mining-tutorial.md).  
-  
-5.  Clique em **Avançar**.  
-  
-6.  No **Selecionar exibição da fonte de dados** página, o **modos de exibição de fonte de dados disponíveis** painel, selecione **mala**. Você pode clicar em **navegue** para exibir as tabelas na exibição da fonte de dados e, em seguida, clique em **fechar** para retornar ao assistente.  
-  
-7.  Clique em **Avançar**.  
-  
-8.  Sobre o **especificar tipos de tabela** , marque a caixa de seleção a **caso** coluna para vTargetMail para usá-lo como a tabela de casos e, em seguida, clique em **próxima**. Você usará a tabela ProspectiveBuyer posteriormente para testes; ignore-a por enquanto.  
-  
-9. Sobre o **especificar os dados de treinamento** página, você identificará pelo menos uma coluna previsível, uma coluna de chave, e uma coluna de entrada para seu modelo. Selecione a caixa de seleção a **previsível** coluna o **BikeBuyer** linha.  
+4.  Na página **criar a estrutura de mineração de dados** , sob a **qual data mining técnica você deseja usar?**, selecione **árvores de decisão da Microsoft**.  
   
     > [!NOTE]  
-    >  Observe o aviso na parte inferior da janela. Você não poderá navegar até a próxima página até selecionar pelo menos um **entrada** e uma **previsível** coluna.  
+    >  Se você receber um aviso de que não é possível encontrar nenhum algoritmo de mineração de dados, as propriedades do projeto talvez não sejam configuradas corretamente. Esse aviso ocorre quando o projeto tenta recuperar uma lista de algoritmos de mineração de dados do servidor do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e não consegue encontrá-lo. Por padrão, [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] o usará **localhost** como o servidor. Se você estiver usando uma instância diferente ou uma instância nomeada, altere as propriedades do projeto. Para obter mais informações, consulte [criando um projeto de Analysis Services &#40;tutorial de mineração de dados básico&#41;](../../2014/tutorials/creating-an-analysis-services-project-basic-data-mining-tutorial.md).  
   
-10. Clique em **sugerir** para abrir o **sugerir colunas relacionadas** caixa de diálogo.  
+5.  Clique em **Próximo**.  
   
-     O **sugerir** botão fica habilitado sempre que pelo menos um atributo previsível foi selecionado. O **sugerir colunas relacionadas** caixa de diálogo lista as colunas que estão mais intrinsecamente relacionadas à coluna previsível e classifica os atributos pela correlação com o atributo previsível. As colunas com uma correlação significativa (confiança acima de 95%) são selecionadas automaticamente para serem incluídas no modelo.  
+6.  Na página **selecionar exibição da fonte de dados** , no painel **exibições da fonte de dados disponíveis** , selecione **endereçamento direcionado**. Você pode clicar em **procurar** para exibir as tabelas na exibição da fonte de dados e, em seguida, clicar em **fechar** para retornar ao assistente.  
   
-     Examine as sugestões e, em seguida, clique em **Cancelar** toignore as sugestões.  
+7.  Clique em **Próximo**.  
+  
+8.  Na página **especificar tipos de tabela** , marque a caixa de seleção na coluna **caso** de vTargetMail para usá-la como a tabela de casos e clique em **Avançar**. Você usará a tabela ProspectiveBuyer posteriormente para testes; ignore-a por enquanto.  
+  
+9. Na página **especificar os dados de treinamento** , você identificará pelo menos uma coluna previsível, uma coluna de chave e uma coluna de entrada para o modelo. Marque a caixa de seleção na coluna **previsível** na linha **BikeBuyer** .  
   
     > [!NOTE]  
-    >  Se você clicar **Okey**, listado todas as sugestões serão marcadas como colunas de entrada no assistente. Se você concordar com apenas algumas das sugestões, deverá alterar os valores manualmente.  
+    >  Observe o aviso na parte inferior da janela. Você não poderá navegar para a próxima página até selecionar pelo menos uma **entrada** e uma coluna **previsível** .  
   
-11. Verificar se a caixa de seleção de **chave** coluna é selecionada na **CustomerKey** linha.  
+10. Clique em **sugerir** para abrir a caixa de diálogo **sugerir colunas relacionadas** .  
+  
+     O botão **sugerir** é habilitado sempre que pelo menos um atributo previsível tiver sido selecionado. A caixa de diálogo **sugerir colunas relacionadas** lista as colunas mais próximas à coluna previsível e ordena os atributos por sua correlação com o atributo previsível. As colunas com uma correlação significativa (confiança acima de 95%) são selecionadas automaticamente para serem incluídas no modelo.  
+  
+     Revise as sugestões e, em seguida, clique em **Cancelar** ignorar as sugestões.  
+  
+    > [!NOTE]  
+    >  Se você clicar em **OK**, todas as sugestões listadas serão marcadas como colunas de entrada no assistente. Se você concordar com apenas algumas das sugestões, deverá alterar os valores manualmente.  
+  
+11. Verifique se a caixa de seleção na coluna **chave** está selecionada na linha **CustomerKey** .  
   
     > [!NOTE]  
     >  Se a tabela de origem na exibição de fonte de dados indicar uma chave, o Assistente de Mineração de Dados escolherá automaticamente essa coluna como uma chave para o modelo.  
   
-12. Marque as caixas de seleção de **entrada** coluna nas linhas a seguir. Você pode marcar várias colunas ao realçar um intervalo de células e pressionar CTRL durante a marcação de uma caixa de seleção.  
+12. Marque as caixas de seleção na coluna **entrada** nas linhas a seguir. Você pode marcar várias colunas ao realçar um intervalo de células e pressionar CTRL durante a marcação de uma caixa de seleção.  
   
     -   **Idade**  
   
@@ -72,7 +72,7 @@ ms.locfileid: "62856160"
   
     -   **EnglishOccupation**  
   
-    -   **Gênero**  
+    -   **Sexo**  
   
     -   **GeographyKey**  
   
@@ -94,26 +94,26 @@ ms.locfileid: "62856160"
   
     -   **AddressLine1**  
   
-    -   **AddressLine2**  
+    -   **Endereço2**  
   
     -   **DateFirstPurchase**  
   
     -   **EmailAddress**  
   
-    -   **FirstName**  
+    -   **Nome**  
   
     -   **LastName**  
   
      Verifique se essas linhas só possuem marcações na coluna à esquerda. Essas colunas serão adicionadas à sua estrutura mas não serão incluídas no modelo. No entanto, depois que o modelo for criado, elas estarão disponíveis para detalhamento e teste. Para obter mais informações sobre detalhamento, consulte [consultas de detalhamento &#40;mineração de dados&#41;](../../2014/analysis-services/data-mining/drillthrough-queries-data-mining.md)  
   
-14. Clique em **Avançar**.  
+14. Clique em **Próximo**.  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
- [Especificando o tipo de dados e o tipo de conteúdo &#40;Tutorial de mineração de dados básicos&#41;](../../2014/tutorials/specifying-the-data-type-and-content-type-basic-data-mining-tutorial.md)  
+ [Especificando o tipo de dados e o tipo de conteúdo &#40;tutorial de mineração de dados básico&#41;](../../2014/tutorials/specifying-the-data-type-and-content-type-basic-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Especificar tipos de tabela &#40;Assistente de mineração de dados&#41;](../../2014/analysis-services/specify-table-types-data-mining-wizard.md)   
- [Designer de Mineração de Dados](../../2014/analysis-services/data-mining/data-mining-designer.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Especificar tipos de tabela &#40;assistente de mineração de dados&#41;](../../2014/analysis-services/specify-table-types-data-mining-wizard.md)   
+ [Designer de mineração de dados](../../2014/analysis-services/data-mining/data-mining-designer.md)   
  [Algoritmo Árvores de Decisão da Microsoft](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md)  
   
   

@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 1a0cb087f5a0cd429d9bc6f30ea08aaef3d07b3b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483100"
 ---
 # <a name="delete-model-object-permissions-master-data-services"></a>Excluir permissões de objeto modelo (Master Data Services)
@@ -43,14 +43,14 @@ ms.locfileid: "65483100"
   
 5.  Opcionalmente, selecione um modelo na lista **Modelo** .  
   
-6.  No **resumo de permissões de modelo** painel, selecione a linha para a permissão que você deseja excluir.  
+6.  No painel **Resumo de permissões de modelo** , selecione a linha para a permissão que você deseja excluir.  
   
 7.  Clique em **excluir permissão selecionada**.  
   
     > [!NOTE]  
     >  Você não poderá remover uma permissão de um usuário se a permissão for herdada de um grupo. Em vez disso, você deve remover a permissão do grupo.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Permissões de objeto de modelo &#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
  [Atribuir permissões de objeto de modelo &#40;Master Data Services&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)  
   

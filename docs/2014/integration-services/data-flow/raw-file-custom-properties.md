@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fe3f77ac629aab7534077274aa9cf62a50149b57
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900896"
 ---
 # <a name="raw-file-custom-properties"></a>Propriedades personalizadas de arquivo bruto
@@ -24,10 +24,10 @@ ms.locfileid: "62900896"
   
  A tabela a seguir descreve as propriedades personalizadas da fonte de Arquivo Bruto. Todas as propriedades são de leitura/gravação.  
   
-|Nome da propriedade|Tipo de Dados|Descrição|  
+|Nome da propriedade|Tipo de Dados|DESCRIÇÃO|  
 |-------------------|---------------|-----------------|  
 |AccessMode|Inteiro (enumeração)|O modo usado para acessar os dados brutos. Os valores possíveis são `File name` (0) e `File name from variable` (1). O valor padrão é `File name` (0).|  
-|FileName|Cadeia de caracteres|O caminho e o nome do arquivo do arquivo de origem.|  
+|FileName|String|O caminho e o nome do arquivo do arquivo de origem.|  
   
  A saída e as colunas de saída da fonte Arquivo Bruto não têm nenhuma propriedade personalizada.  
   
@@ -39,10 +39,10 @@ ms.locfileid: "62900896"
   
  A tabela a seguir descreve as propriedades personalizadas do destino Arquivo Bruto. Todas as propriedades são de leitura/gravação.  
   
-|Nome da propriedade|Tipo de Dados|Descrição|  
+|Nome da propriedade|Tipo de Dados|DESCRIÇÃO|  
 |-------------------|---------------|-----------------|  
 |AccessMode|Inteiro (enumeração)|Um valor que especifica se a propriedade FileName contém um nome de arquivo ou o nome de uma variável que contenha um nome de arquivo. As opções são `File name` (0) e `File name from variable` (1).|  
-|FileName|Cadeia de caracteres|O nome do arquivo no qual o destino Arquivo Bruto grava.|  
+|FileName|String|O nome do arquivo no qual o destino Arquivo Bruto grava.|  
 |WriteOption|Inteiro (enumeração)|Um valor que especifica se o destino Arquivo Bruto exclui um arquivo existente de mesmo nome. As opções são `Create Always` (0), `Create Once` (1), `Truncate and Append` (3) e `Append` (2). O valor padrão dessa propriedade é `Create Always` (0).|  
   
 > [!NOTE]  
@@ -52,7 +52,7 @@ ms.locfileid: "62900896"
   
  Para obter mais informações, consulte [Raw File Destination](raw-file-destination.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Propriedades comuns](../common-properties.md)  
   
   

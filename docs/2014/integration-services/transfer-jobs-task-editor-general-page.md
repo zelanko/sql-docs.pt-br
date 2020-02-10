@@ -1,5 +1,5 @@
 ---
-title: Transferir o Editor da tarefa de trabalhos (página geral) | Microsoft Docs
+title: Editor da tarefa Transferir trabalhos (página Geral) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f8f8c9fd4f0a7f377640b99ac0bc7831c3f43de3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055008"
 ---
 # <a name="transfer-jobs-task-editor-general-page"></a>Editor da Tarefa Transferir Trabalhos (página Geral)
@@ -37,10 +37,10 @@ ms.locfileid: "66055008"
  **Descrição**  
  Digite uma descrição para a tarefa Transferir Trabalhos.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Tarefas do Integration Services](control-flow/integration-services-tasks.md)   
- [Editor da Tarefa Transferir Trabalhos &#40;página Trabalhos&#41;](../../2014/integration-services/transfer-jobs-task-editor-jobs-page.md)   
+ [Editor da tarefa Transferir trabalhos &#40;página trabalhos&#41;](../../2014/integration-services/transfer-jobs-task-editor-jobs-page.md)   
  [Página Expressões](expressions/expressions-page.md)  
   
   

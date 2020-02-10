@@ -1,5 +1,5 @@
 ---
-title: 'Usando as anotações SQL: Identity e SQL: GUID | Microsoft Docs'
+title: 'Usando as anotações sql: Identity e SQL: GUID | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,14 +24,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c6135f1b46e9b2312f01b9ff7a7ebdd08d2d34a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013634"
 ---
 # <a name="using-the-sqlidentity-and-sqlguid-annotations"></a>Usando as anotações sql:identity e sql:guid
-  Você pode especificar o `sql:identity` e `sql:guid` anotações em um esquema XSD em qualquer nó que mapeia para uma coluna de banco de dados no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Enquanto o formato de diagrama de atualização dá suporte aos atributos `updg:at-identity` e `updg:guid`, isso não ocorre com o formato DiffGram. O atributo `updg:at-identity` define o comportamento ao atualizar uma coluna do tipo IDENTITY. O atributo `updg:guid` permite obter um valor de GUID do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o utilizar no diagrama de atualização. Para obter mais informações e exemplos de funcionamento, consulte [inserindo dados usando diagramas de atualização XML &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md).  
+  Você pode especificar as `sql:identity` anotações `sql:guid` e em um esquema XSD em qualquer nó que seja mapeado para uma coluna de banco [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de dados no. Enquanto o formato de diagrama de atualização dá suporte aos atributos `updg:at-identity` e `updg:guid`, isso não ocorre com o formato DiffGram. O atributo `updg:at-identity` define o comportamento ao atualizar uma coluna do tipo IDENTITY. O atributo `updg:guid` permite obter um valor de GUID do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o utilizar no diagrama de atualização. Para obter mais informações e exemplos de trabalho, consulte [inserindo dados usando UPDATEGRAMS XML &#40;SQLXML 4,0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md).  
   
  As anotações `sql:identity` e `sql:guid` estendem esta funcionalidade a DiffGrams.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "66013634"
  As anotações `sql:identity` e `sql:guid` podem ser definidas em um elemento de conteúdo complexo.  
   
 ## <a name="sqlidentity-annotation"></a>Anotação sql:identity  
- Você pode especificar a anotação `sql:identity` no esquema XSD em qualquer nó mapeado para uma coluna de banco de dados do tipo IDENTITY. O valor especificado para esta anotação define como a coluna de tipo de identidade é atualizada (usando-se o valor fornecido no diagrama de atualização para modificar a coluna ou ignorando o valor, caso em que um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-valor gerado é usado para esta coluna).  
+ Você pode especificar a anotação `sql:identity` no esquema XSD em qualquer nó mapeado para uma coluna de banco de dados do tipo IDENTITY. O valor especificado para essa anotação define como a coluna de tipo de identidade é atualizada (usando o valor fornecido no updategram para modificar a coluna ou ignorando o valor; nesse caso, um valor gerado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]por um é usado para essa coluna).  
   
  É possível atribuir dois valores à anotação `sql:identity`:  
   
@@ -61,6 +61,6 @@ ms.locfileid: "66013634"
  Especifica que o GUID gerado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] seja usado para essa coluna na operação de atualização.  
   
  useValue  
- Especifica que o valor especificado no diagrama de atualização seja usado para a coluna. Este é o valor padrão.  
+ Especifica que o valor especificado no diagrama de atualização seja usado para a coluna. Esse é o valor padrão.  
   
   

@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c9f022f0ed2ba9b7bc320407526af0c12ce4073b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483927"
 ---
 # <a name="assign-a-flag-to-a-version-master-data-services"></a>Atribuir um sinalizador a uma versão (Master Data Services)
@@ -33,7 +33,7 @@ ms.locfileid: "65483927"
   
 -   Você deve ser um administrador de modelo. Para obter mais informações, veja [Administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
--   Você deveria ter criado um sinalizador de versão para atribuir. Para obter mais informações, consulte [Criar um sinalizador de versão &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-version-flag-master-data-services.md).  
+-   Você deveria ter criado um sinalizador de versão para atribuir. Para obter mais informações, veja [Criar um sinalizador de versão &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-version-flag-master-data-services.md).  
   
 ### <a name="to-assign-a-flag-to-a-version"></a>Para atribuir um sinalizador a uma versão  
   
@@ -48,7 +48,7 @@ ms.locfileid: "65483927"
   
 4.  Pressione ENTER para salvar a alteração.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar um sinalizador de versão &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-version-flag-master-data-services.md)   
  [Versões &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)  
   

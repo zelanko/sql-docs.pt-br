@@ -1,5 +1,5 @@
 ---
-title: Selecione os pacotes (Assistente de atualização da pacotes SSIS) | Microsoft Docs
+title: Selecionar pacotes (Assistente de atualização de pacotes SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ccf14ace0a160be4ca9ecc5287ca45f077ba7e16
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056017"
 ---
 # <a name="select-packages-ssis-package-upgrade-wizard"></a>Selecionar Pacotes (Assistente de Atualização de Pacotes SSIS)
   Use a página **Selecionar Pacotes** para selecionar os pacotes a serem atualizados. Essa página lista os pacotes que estão armazenados no local especificado na página **Selecionar Local de Origem** do assistente.  
   
- **Para executar o Assistente de Atualização de Pacotes SSIS**  
+ **Para executar o assistente de atualização de pacote SSIS**  
   
 -   [Atualizar pacotes do Integration Services usando o Assistente de Atualização de Pacote SSIS](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)  
   
@@ -42,8 +42,8 @@ ms.locfileid: "66056017"
  **Aplicar à seleção**  
  Aplique a senha especificada para descriptografar os pacotes de atualização selecionados.  
   
-## <a name="see-also"></a>Consulte também  
- [Selecione o local de origem &#40;Assistente de atualização de pacote SSIS&#41;](../../2014/integration-services/select-source-location-ssis-package-upgrade-wizard.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Selecione o local de origem &#40;assistente de atualização de pacotes SSIS&#41;](../../2014/integration-services/select-source-location-ssis-package-upgrade-wizard.md)   
  [Atualizar pacotes do Integration Services](install-windows/upgrade-integration-services-packages.md)  
   
   

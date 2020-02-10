@@ -1,5 +1,5 @@
 ---
-title: 'Tarefa 5: Adicionando a tarefa de fluxo de dados | Microsoft Docs'
+title: 'Tarefa 5: adicionando tarefa de fluxo de dados | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,26 +11,26 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: aaccdd5d4f84f5bdba240fadc7d4d0729476f215
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65489141"
 ---
-# <a name="task-5-adding-data-flow-task"></a>Tarefa 5: Adicionar a tarefa de Fluxo de Dados
+# <a name="task-5-adding-data-flow-task"></a>Tarefa 5: Adicionando a tarefa de fluxo de dados
   Nesta tarefa, você adicionará uma Tarefa de Fluxo de Dados ao fluxo de controle do pacote SSIS.  
   
-1.  Arrastar e soltar **a tarefa de fluxo de dados** partir **caixa de ferramentas do SSIS** para o **fluxo de controle** guia no Designer SSIS. Se você não vir as **caixa de ferramentas do SSIS**, clique em qualquer lugar a **fluxo de controle** , clique em **SSIS** na barra de menus e clique em **caixa de ferramentas do SSIS**.  
+1.  Arraste e solte a **tarefa fluxo de dados** da **caixa de ferramentas do SSIS** para a guia fluxo de **controle** no Designer SSIS. Se você não vir a **caixa de ferramentas do SSIS**, clique em qualquer lugar na guia fluxo de **controle** , clique em **SSIS** na barra de menus e clique em caixa de **Ferramentas do SSIS**.  
   
-     ![Tarefa da caixa de ferramentas do SSIS de fluxo de dados de arrastar e soltar](../../2014/tutorials/media/et-addingdataflowtask.jpg "tarefa da caixa de ferramentas do SSIS de fluxo de dados de arrastar e soltar")  
+     ![Arrastar e soltar tarefa de Fluxo de Dados na Caixa de Ferramentas do SSIS](../../2014/tutorials/media/et-addingdataflowtask.jpg "Arrastar e soltar tarefa de Fluxo de Dados na Caixa de Ferramentas do SSIS")  
   
-2.  Com o botão direito do **tarefa de fluxo de dados** na **fluxo de controle** guia e clique em **Renomear**.  
+2.  Clique com o botão direito do mouse na **tarefa fluxo de dados** na guia **fluxo de controle** e clique em **renomear**.  
   
-3.  Tipo de **receber, limpar, corresponder e corrigir dados do fornecedor** e pressione **ENTER**.  
+3.  Digite **receber, limpar, corresponder e inserir dados do fornecedor** e pressione **Enter**.  
   
-4.  Clique duas vezes o **tarefa de fluxo de dados** para alternar para o **fluxo de dados** guia.  
+4.  Clique duas vezes na **tarefa fluxo de dados** para alternar para a guia **fluxo de dados** .  
   
 ## <a name="next-step"></a>Próxima etapa  
- [Tarefa 6: Adicionar origem do Excel ao fluxo de dados](task-6-adding-excel-source-to-the-data-flow.md)  
+ [Tarefa 6: Adicionando a origem do Excel ao fluxo de dados](task-6-adding-excel-source-to-the-data-flow.md)  
   
   

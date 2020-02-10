@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b630442c1a47bcd4ebabee75b82cff9b8f64d006
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62901081"
 ---
 # <a name="sap-bw-source-editor-connection-manager-page"></a>Editor de Origem SAP BW (página Gerenciador de Conexões)
@@ -44,7 +44,7 @@ ms.locfileid: "62901081"
  **Gerenciador de conexões SAP BW**  
  Selecione um gerenciador de conexões existente na lista ou crie uma nova conexão clicando em **Nova**.  
   
- **Nova**  
+ **Novo**  
  Crie um novo gerenciador de conexões, usando a caixa de diálogo **Gerenciador de Conexões SAP BW** .  
   
  Para obter mais informações sobre essa caixa de diálogo, consulte [SAP BW Connection Manager Editor](../sap-bw-connection-manager-editor.md).  
@@ -55,7 +55,7 @@ ms.locfileid: "62901081"
  **Modo de execução**  
  Especifique o método para extrair os dados da origem.  
   
-|Opção|Descrição|  
+|Opção|DESCRIÇÃO|  
 |------------|-----------------|  
 |**P - Disparar Cadeia de Processo**|Disparar uma cadeia de processo. Nesse caso, o pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inicia o processo de extração.|  
 |**A - Aguardar Notificação**|Aguarde a notificação do sistema SAP Netweaver BW para iniciar a extração dos dados. Nesse caso, o sistema do SAP Netweaver BW inicia o processo de extração.|  
@@ -121,10 +121,10 @@ ms.locfileid: "62901081"
  **Request ID**  
  Insira a ID de solicitação que está associada à extração.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Editor de Origem SAP BW &#40;Página Colunas&#41;](sap-bw-source-editor-columns-page.md)   
  [Editor de Origem SAP BW &#40;Página Saída de Erro&#41;](sap-bw-source-editor-error-output-page.md)   
  [Editor de Origem SAP BW &#40;Página Avançado&#41;](sap-bw-source-editor-advanced-page.md)   
- [Ajuda F1 do Microsoft Connector 1.1 para SAP BW](../microsoft-connector-for-sap-bw-f1-help.md)  
+ [Ajuda F1 do Microsoft Connector 1.1 for SAP BW](../microsoft-connector-for-sap-bw-f1-help.md)  
   
   

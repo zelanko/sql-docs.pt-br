@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fafb116e1e5c02d27ad3242edd27064ffae6e401
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010367"
 ---
 # <a name="avoid-conflicts-with-database-operations-in-filestream-applications"></a>Evitar conflitos com operações de banco de dados em aplicativos de FILESTREAM
@@ -26,9 +26,9 @@ ms.locfileid: "66010367"
   
 |instruções Transact-SQL|Abertas para leitura|Abertas para gravação|  
 |------------------------------|---------------------|----------------------|  
-|Instruções de DDL que funcionam com metadados de banco de dados, como CREATE TABLE, CREATE INDEX, DROP TABLE e ALTER TABLE.|Allowed (permitido)|São bloqueadas e falham devido ao tempo limite esgotado.|  
-|Instruções DML que funcionam com os dados armazenados no banco de dados, como UPDATE, DELETE e INSERT.|Allowed (permitido)|Negadas|  
-|SELECT|Allowed (permitido)|Allowed (permitido)|  
+|Instruções de DDL que funcionam com metadados de banco de dados, como CREATE TABLE, CREATE INDEX, DROP TABLE e ALTER TABLE.|Permitido|São bloqueadas e falham devido ao tempo limite esgotado.|  
+|Instruções DML que funcionam com os dados armazenados no banco de dados, como UPDATE, DELETE e INSERT.|Permitido|Negadas|  
+|SELECT|Permitido|Permitido|  
 |COMMIT TRANSACTION|Negadas*|Negadas*.|  
 |SAVE TRANSACTION|Negadas*|Negadas*|  
 |ROLLBACK|Permitidas*|Permitidas*|  
@@ -38,7 +38,7 @@ ms.locfileid: "66010367"
 ## <a name="examples"></a>Exemplos  
  Os exemplos a seguir mostram como as instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] e o acesso de FILESTREAM do Win32 podem causar conflitos.  
   
-### <a name="a-opening-a-filestream-blob-for-write-access"></a>A. Abrindo um BLOB FILESTREAM para acesso de gravação  
+### <a name="a-opening-a-filestream-blob-for-write-access"></a>a. Abrindo um BLOB FILESTREAM para acesso de gravação  
  O exemplo a seguir mostra o efeito de abrir um arquivo para acesso apenas de gravação.  
   
 ```  
@@ -140,7 +140,7 @@ HANDLE srcHandle =  OpenSqlFilestream(srcFilePath,
 //cursor is still open.  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Acessar dados do FILESTREAM com OpenSqlFilestream](access-filestream-data-with-opensqlfilestream.md)   
  [Usando MARS &#40;Multiple Active Result Sets&#41;](../native-client/features/using-multiple-active-result-sets-mars.md)  
   

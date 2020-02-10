@@ -1,5 +1,5 @@
 ---
-title: Vários arquivos simples (página geral) de Editor do Gerenciador de Conexão | Microsoft Docs
+title: Editor do Gerenciador de conexões de vários arquivos simples (página Geral) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6d4b926d08096087735458ed309e5bc4189a87df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057479"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-general-page"></a>Editor do Gerenciador de Conexões de Vários Arquivos Simples (página Geral)
@@ -34,7 +34,7 @@ ms.locfileid: "66057479"
  Descreva a conexão. Como prática recomendável, descreva a conexão em termos de objetivo, para tornar os pacotes autodocumentados e mais fáceis de manter.  
   
  **Nomes de arquivo**  
- Digite o caminho e o nome de arquivos para usar na conexão de vários arquivos simples. Você pode especificar vários arquivos usando curingas, como no exemplo “C:\\\*.txt”, ou usando o caractere de barra vertical (|) para separar vários nomes de arquivo. Todos os arquivos devem ter o mesmo formato de dados.  
+ Digite o caminho e o nome de arquivos para usar na conexão de vários arquivos simples. Você pode especificar vários arquivos usando curingas, como no exemplo “C:\\*.txt”, ou usando o caractere de barra vertical (|) para separar vários nomes de arquivo. Todos os arquivos devem ter o mesmo formato de dados.  
   
  **Procurar**  
  Procure os nomes de arquivo para usar na conexão de vários arquivos simples. Você pode selecionar vários arquivos. Todos os arquivos devem ter o mesmo formato de dados.  
@@ -48,10 +48,10 @@ ms.locfileid: "66057479"
  **Página de código**  
  Especifique a página de código do texto não Unicode.  
   
- **Formato**  
+ **Ao**  
  Indique se será usada formatação delimitada, de largura fixa ou irregular à direita. Todos os arquivos devem ter o mesmo formato de dados.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |Delimitado|As colunas são separadas por delimitadores, especificados na página **Colunas** .|  
 |Largura fixa|As colunas têm uma largura fixa, especificada arrastando as linhas do marcador na página **Colunas** .|  
@@ -63,15 +63,15 @@ ms.locfileid: "66057479"
  **Delimitador de linha de cabeçalho**  
  Selecione na lista de delimitadores de linhas de cabeçalho ou digite o texto do delimitador.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
-|**{CR}{LF}**|A linha do cabeçalho é delimitada por uma combinação de retorno de carro e avanço de linha.|  
-|**{CR}**|A linha do cabeçalho é delimitada por um retorno de carro.|  
-|**{LF}**|A linha do cabeçalho é delimitada por um avanço de linha.|  
-|**Ponto-e-vírgula {;}**|A linha do cabeçalho é delimitada por um ponto-e-vírgula.|  
+|**CD ALIMENTAÇÃO**|A linha do cabeçalho é delimitada por uma combinação de retorno de carro e avanço de linha.|  
+|**CD**|A linha do cabeçalho é delimitada por um retorno de carro.|  
+|**ALIMENTAÇÃO**|A linha do cabeçalho é delimitada por um avanço de linha.|  
+|**Ponto e vírgula {;}**|A linha do cabeçalho é delimitada por um ponto-e-vírgula.|  
 |**Dois-pontos {:}**|A linha do cabeçalho é delimitada por dois-pontos.|  
-|**Vírgula {,}**|A linha do cabeçalho é delimitada por uma vírgula.|  
-|**Tabulação {t}**|A linha do cabeçalho é delimitada por uma tabulação.|  
+|**Pontos{,}**|A linha do cabeçalho é delimitada por uma vírgula.|  
+|**Guia {t}**|A linha do cabeçalho é delimitada por uma tabulação.|  
 |**Barra vertical {&#124;}**|A linha do cabeçalho é delimitada por uma barra vertical.|  
   
  **Linhas de cabeçalho a ignorar**  
@@ -80,10 +80,10 @@ ms.locfileid: "66057479"
  **Nomes de coluna na primeira linha de dados**  
  Indique se deseja esperar ou fornecer nomes de coluna na primeira linha de dados.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor do Gerenciador de Conexões de Vários Arquivos Simples &#40;Página Colunas&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)   
- [Editor do Gerenciador de Conexões de Vários Arquivos Simples &#40;Página Avançado&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)   
- [Editor do Gerenciador de Conexões de Vários Arquivos Simples &#40;Página Visualização&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)  
+ [Editor do Gerenciador de conexões de vários arquivos simples &#40;página colunas&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)   
+ [Editor do Gerenciador de conexões de vários arquivos simples &#40;página avançado&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)   
+ [Editor do Gerenciador de conexões de vários arquivos simples &#40;página Visualização&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)  
   
   

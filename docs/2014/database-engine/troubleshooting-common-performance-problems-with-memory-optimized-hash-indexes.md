@@ -1,5 +1,5 @@
 ---
-title: Solução de problemas comuns de desempenho com índices de Hash com otimização de memória | Microsoft Docs
+title: Solucionando problemas comuns de desempenho com índices de hash com otimização de memória | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,23 +11,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d7ed4098feb8bfd2d156e3de2f81fbf7329915aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62842521"
 ---
 # <a name="troubleshooting-common-performance-problems-with-memory-optimized-hash-indexes"></a>Solucionando problemas comuns de desempenho com índices de hash com otimização de memória
   Este tópico abordará a solução de problemas e como contornar problemas comuns com índices de hash.  
   
 ## <a name="search-requires-a-subset-of-hash-index-key-columns"></a>A busca requer um subconjunto de colunas de chave de índice de hash  
- **Problema:** Índices de hash requerem valores para todas as colunas de chave de índice para calcular o valor de hash e localizar as linhas correspondentes na tabela de hash. Em virtude disso, se uma consulta inclui predicados de igualdade para apenas um subconjunto das chaves do índice na cláusula WHERE, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não pode usar uma busca de índice para localizar as linhas que correspondem aos predicados na cláusula WHERE.  
+ **Problema:** Os índices de hash exigem valores para todas as colunas de chave de índice para computar o valor de hash e localizar as linhas correspondentes na tabela de hash. Em virtude disso, se uma consulta inclui predicados de igualdade para apenas um subconjunto das chaves do índice na cláusula WHERE, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não pode usar uma busca de índice para localizar as linhas que correspondem aos predicados na cláusula WHERE.  
   
  Em contraste, índices ordenados, como os índices não clusterizados baseados em disco e os índices não clusterizados com otimização de memória, dão suporte à busca de índice em um subconjunto das colunas de chave de índice, desde que elas sejam as colunas principais do índice.  
   
- **Sintoma:** Isso resulta na degradação de desempenho, como [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] precisa para executar verificações de tabela completa em vez de uma busca de índice, que normalmente é uma operação mais rápida.  
+ **Sintoma:** Isso resulta em uma degradação do desempenho, pois [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] precisa executar verificações de tabela completas em vez de uma busca de índice, que normalmente é uma operação mais rápida.  
   
- **Como solucionar problemas:** Além de degradação do desempenho, a inspeção dos planos de consulta mostrará uma verificação em vez de uma busca de índice. Se a consulta for bem simples, a inspeção do texto da consulta e da definição de índice também mostrará se a busca requer um subconjunto das colunas de chave de índice.  
+ **Como solucionar problemas:** Além da degradação do desempenho, a inspeção dos planos de consulta mostrará uma verificação em vez de uma busca de índice. Se a consulta for bem simples, a inspeção do texto da consulta e da definição de índice também mostrará se a busca requer um subconjunto das colunas de chave de índice.  
   
  Considere a seguinte tabela e consulta:  
   
@@ -72,7 +72,7 @@ WITH (MEMORY_OPTIMIZED = ON)
   
  Observe que um índice de hash com otimização de memória não apresenta o desempenho ideal quando há muitas linhas duplicadas para um valor de chave de índice específico: no exemplo, se o número de valores exclusivos para a coluna o_id fosse bem menor do que o número de linhas na tabela, o ideal não seria adicionar um índice (o_id); a melhor solução seria alterar o tipo de índice PK_od de hash para não clusterizado. Para obter mais informações, consulte [Determining the Correct Bucket Count for Hash Indexes](../relational-databases/indexes/indexes.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Índices em tabelas com otimização de memória](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   

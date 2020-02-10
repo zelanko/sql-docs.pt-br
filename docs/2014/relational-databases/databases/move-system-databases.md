@@ -28,10 +28,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: da6b02061ca12210f78ee48b9d3a78c30d43e0b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62871533"
 ---
 # <a name="move-system-databases"></a>Mover bancos de dados do sistema
@@ -45,26 +45,26 @@ ms.locfileid: "62871533"
   
  Os procedimentos a seguir se aplicam para mover arquivos de banco de dados dentro da mesma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para mover um banco de dados para uma outra instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou para um outro servidor, use as operações de [backup e restauração](../backup-restore/back-up-and-restore-of-sql-server-databases.md) ou [de anexação e desanexação](move-a-database-using-detach-and-attach-transact-sql.md) .  
   
- Os procedimentos neste tópico exigem o nome lógico dos arquivos de banco de dados. Para obter o nome, consulte a coluna de nome na exibição de catálogo [sys.master_files](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql).  
+ Os procedimentos neste tópico exigem o nome lógico dos arquivos de banco de dados. Para obter o nome, consulte a coluna de nome na exibição de catálogo [sys.master_files](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql) .  
   
 > [!IMPORTANT]  
 >  Se você mover um banco de dados do sistema e, posteriormente, recriar o banco de dados mestre, será necessário mover o banco de dados do sistema novamente porque a operação de recriação instala todos os bancos de dados do sistema em seus locais padrão.  
   
 ##  <a name="Intro"></a> **Neste tópico**  
   
--   [Realocação planejada e procedimento de manutenção de disco agendado](#Planned)  
+-   [Procedimento de manutenção de disco agendado e realocação planejada](#Planned)  
   
--   [Falha no procedimento de recuperação](#Failure)  
+-   [Procedimento de recuperação de falha](#Failure)  
   
 -   [Movendo o banco de dados mestre](#master)  
   
--   [Movendo o banco de dados do recurso](#Resource)  
+-   [Movendo o banco de dados de recursos](#Resource)  
   
--   [Acompanhamento: Depois de mover todos os bancos de dados do sistema](#Follow)  
+-   [Acompanhamento: depois de mover todos os bancos de dados do sistema](#Follow)  
   
 -   [Exemplos](#Examples)  
   
-##  <a name="Planned"></a> Realocação planejada e procedimento de manutenção de disco agendado  
+##  <a name="Planned"></a>Procedimento de manutenção de disco agendado e realocação planejada  
  Para mover um arquivo de dados de um banco de dados do sistema ou arquivo de log como parte de uma realocação planejada ou operação de manutenção, execute as etapas a seguir. Este procedimento se aplica a todos os bancos de dados do sistema exceto os bancos de dados mestre e Recurso.  
   
 1.  Para cada arquivo a ser movido, execute a seguinte instrução.  
@@ -101,7 +101,7 @@ ms.locfileid: "62871533"
   
 2.  Verifique se o Database Mail está funcionando, enviando um email de teste.  
   
-##  <a name="Failure"></a> Falha no procedimento de recuperação  
+##  <a name="Failure"></a>Procedimento de recuperação de falha  
  Se um arquivo tiver de ser movido devido à falha de um hardware, siga estas etapas para realocar o arquivo para o novo local. Este procedimento se aplica a todos os bancos de dados do sistema exceto os bancos de dados mestre e Recurso.  
   
 > [!IMPORTANT]  
@@ -149,14 +149,14 @@ ms.locfileid: "62871533"
     WHERE database_id = DB_ID(N'<database_name>');  
     ```  
   
-##  <a name="master"></a> Movendo o banco de dados mestre  
+##  <a name="master"></a>Movendo o banco de dados mestre  
  Para mover o banco de dados mestre, siga estas etapas.  
   
 1.  Pelo menu **Iniciar** , aponte para **Todos os Programas**, aponte para **Microsoft SQL Server**, aponte para **Ferramentas de Configuração**e clique em **SQL Server Configuration Manager**.  
   
-2.  No nó **Serviços do SQL Server** , clique com o botão direito do mouse na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (por exemplo, **SQL Server [MSSQLSERVER]** ) e escolha **Propriedades**.  
+2.  No nó **Serviços do SQL Server** , clique com o botão direito do mouse na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (por exemplo, **SQL Server [MSSQLSERVER]**) e escolha **Propriedades**.  
   
-3.  Na caixa de diálogo **Propriedades do SQL Server (***instance_name***)** , clique na guia **Parâmetros de Inicialização**.  
+3.  Na caixa de diálogo **Propriedades do SQL Server (***nome_instância***)** , clique na guia **Parâmetros de Inicialização** .  
   
 4.  Na caixa **Parâmetros existentes**, selecione o parâmetro -d para mover o arquivo de dados mestre. Clique em **Atualizar** para salvar a alteração.  
   
@@ -193,10 +193,10 @@ ms.locfileid: "62871533"
     GO  
     ```  
   
-##  <a name="Resource"></a> Movendo o banco de dados de recursos  
+##  <a name="Resource"></a>Movendo o banco de dados de recursos  
  A localização do banco de dados Resource é \<*drive*>:\Program Files\Microsoft SQL Server\MSSQL\<version>.\<*instance_name*>\MSSQL\Binn\\. O banco de dados não pode ser movido.  
   
-##  <a name="Follow"></a> Acompanhamento: Depois de mover todos os bancos de dados do sistema  
+##  <a name="Follow"></a>Acompanhamento: depois de mover todos os bancos de dados do sistema  
  Se você moveu todos os bancos de dados do sistema para uma nova unidade ou volume ou para outro servidor com uma letra de unidade diferente, faça as atualizações a seguir.  
   
 -   Altere o caminho do log do SQL Server Agent. Se você não atualizar este caminho, o SQL Server Agent não iniciará.  
@@ -209,7 +209,7 @@ ms.locfileid: "62871533"
   
 2.  Clique com o botão direito do mouse em **Logs de Erros** e clique em **Configurar**.  
   
-3.  Na caixa de diálogo **Configurar Logs de Erros do SQL Server Agent** , especifique o novo local do arquivo SQLAGENT.OUT. O local padrão é C:\Program Files\Microsoft SQL Server\MSSQL12. < nome_da_instância > \mssql\log\\.  
+3.  Na caixa de diálogo **Configurar Logs de Erros do SQL Server Agent** , especifique o novo local do arquivo SQLAGENT.OUT. O local padrão é C:\Program Files\Microsoft SQL Server\MSSQL12. <instance_name> \MSSQL\Log\\.  
   
 #### <a name="change-the-database-default-location"></a>Altere o local padrão do banco de dados  
   
@@ -223,7 +223,7 @@ ms.locfileid: "62871533"
   
 ##  <a name="Examples"></a> Exemplos  
   
-### <a name="a-moving-the-tempdb-database"></a>A. Movendo o banco de dados tempdb  
+### <a name="a-moving-the-tempdb-database"></a>a. Movendo o banco de dados tempdb  
  O seguinte exemplo move os arquivos de log e de dados `tempdb` para um novo local como parte de uma realocação planejada.  
   
 > [!NOTE]  
@@ -263,7 +263,7 @@ ms.locfileid: "62871533"
   
 5.  Exclua os arquivos `tempdb.mdf` e `templog.ldf` do local original.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Banco de dados de recursos](resource-database.md)   
  [Banco de dados tempdb](tempdb-database.md)   
  [Banco de dados mestre](master-database.md)   
@@ -271,7 +271,7 @@ ms.locfileid: "62871533"
  [Banco de dados modelo](model-database.md)   
  [Mover bancos de dados de usuário](move-user-databases.md)   
  [Mover arquivos de banco de dados](move-database-files.md)   
- [Iniciar, parar, pausar, retomar, reiniciar o mecanismo de banco de dados, o SQL Server Agent ou o serviço SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)   
+ [Iniciar, parar, pausar, retomar, reiniciar o Mecanismo de Banco de Dados, SQL Server Agent ou SQL Server Browser serviço](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [Recompilar bancos de dados do sistema](system-databases.md)  
   

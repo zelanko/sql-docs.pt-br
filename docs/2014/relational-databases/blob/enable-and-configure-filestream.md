@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f074872f05ff907d88d58e986d33ae128bcb5f2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010164"
 ---
 # <a name="enable-and-configure-filestream"></a>Habilitar e configurar FILESTREAM
@@ -62,9 +62,9 @@ ms.locfileid: "66010164"
   
 
   
-##  <a name="best"></a> Práticas recomendadas  
+##  <a name="best"></a>Práticas recomendadas  
   
-###  <a name="config"></a> Configuração e manutenção física  
+###  <a name="config"></a>Configuração física e manutenção  
  Ao configurar volumes de armazenamento de FILESTREAM, considere as seguintes diretrizes:  
   
 -   Desative nomes de arquivos curtos em sistemas de computador FILESTREAM. Nomes de arquivos curtos precisam de significativamente mais tempo para serem criados. Para desabilitar nomes de arquivos curtos, use o utilitário **fsutil** do Windows.  
@@ -83,15 +83,15 @@ ms.locfileid: "66010164"
 |-|-|-|-|-|  
 |Nível de RAID|Desempenho de gravação|Desempenho de leitura|Tolerância a falhas|Comentários|  
 |RAID 5|Normal|Normal|Excelente|O desempenho é melhor do que o de um disco ou JBOD; e menor do que o do RAID 0 ou do RAID 5 com distribuição.|  
-|RAID 0|Excelente|Excelente|None||  
+|RAID 0|Excelente|Excelente|Nenhum||  
 |RAID 5 + distribuição|Excelente|Excelente|Excelente|A opção mais cara.|  
   
 
   
-###  <a name="database"></a> Design físico do banco de dados  
+###  <a name="database"></a>Design de banco de dados físico  
  Ao criar um banco de dados de FILESTREAM, considere as seguintes diretrizes:  
   
--   Colunas FILESTREAM devem ser acompanhadas por um correspondente `uniqueidentifier`coluna ROWGUID. Esses tipos de tabelas também devem ser acompanhados por um índice exclusivo. Normalmente esse índice não é um índice clusterizado. Se a lógica corporativa do bancos de dados exigir um índice clusterizado, você precisará verificar se os valores armazenados no índice não são aleatórios. Valores aleatórios farão com que o índice seja reorganizado toda vez que uma linha for adicionada ou removida da tabela.  
+-   As colunas FILESTREAM devem ser acompanhadas por `uniqueidentifier`uma coluna rowguid correspondente. Esses tipos de tabelas também devem ser acompanhados por um índice exclusivo. Normalmente esse índice não é um índice clusterizado. Se a lógica corporativa do bancos de dados exigir um índice clusterizado, você precisará verificar se os valores armazenados no índice não são aleatórios. Valores aleatórios farão com que o índice seja reorganizado toda vez que uma linha for adicionada ou removida da tabela.  
   
 -   Por razões de desempenho, grupos de arquivos e contêineres de FILESTREAM devem residir em volumes diferentes do sistema operacional, do banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , do log do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , do tempdb ou do arquivo de paginação.  
   

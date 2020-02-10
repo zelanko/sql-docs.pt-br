@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7d2046882eeed6b04cd1b1c4035b89eccbddc4f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056684"
 ---
 # <a name="precedence-constraint-editor"></a>Editor de Restrição de Precedência
@@ -26,10 +26,10 @@ ms.locfileid: "66056684"
   
 ## <a name="options"></a>Opções  
  **Operação de avaliação**  
- Especifica a operação de avaliação usada pela restrição de precedência. As operações são: **Constraint**, **Expression**, **Expression and Constraint** e **Expression or Constraint**.  
+ Especifica a operação de avaliação usada pela restrição de precedência. As operações são: **Constraint**, **Expression**, **Expression and Constraint**e **Expression or Constraint**.  
   
- **Value**  
- Especifique o valor de restrição: **Success**, **Failure** ou **Completion**.  
+ **Valor**  
+ Especifique o valor de restrição: **Êxito**, **Falha**ou **Conclusão**.  
   
 > [!NOTE]  
 >  A linha de restrição de precedência é verde para **Sucesso**, realçado para **Falha**e azul para **Conclusão**.  
@@ -52,7 +52,7 @@ ms.locfileid: "66056684"
 > [!NOTE]  
 >  Este tipo de restrição de precedência aparece como uma linha pontilhada nas cores verde, realçado ou azul.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Restrições de precedência](control-flow/precedence-constraints.md)   
  [Tarefas do Integration Services](control-flow/integration-services-tasks.md)   
  [Contêineres do Integration Services](control-flow/integration-services-containers.md)   

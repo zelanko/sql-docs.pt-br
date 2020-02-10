@@ -1,5 +1,5 @@
 ---
-title: Editor de transformação mesclagem | Microsoft Docs
+title: Editor de transformação junção de mesclagem | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 118d68d1cacd5035535c6f1ac578542909356c7b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057706"
 ---
 # <a name="merge-join-transformation-editor"></a>Editor de Transformação Mesclagem
@@ -47,10 +47,10 @@ ms.locfileid: "66057706"
  **Alias de Saída**  
  Digite um alias para cada coluna de saída. O padrão é o nome da coluna de entrada; no entanto, é possível escolher qualquer nome descritivo exclusivo.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Classificar dados para as transformações Mesclagem e Junção de Mesclagem](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)   
- [Estender um conjunto de dados por meio da transformação Junção de Mesclagem](data-flow/transformations/extend-a-dataset-by-using-the-merge-join-transformation.md)   
+ [Classificar dados para as transformações mesclagem e junção de mesclagem](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)   
+ [Estender um conjunto de um DataSet usando a transformação junção de mesclagem](data-flow/transformations/extend-a-dataset-by-using-the-merge-join-transformation.md)   
  [Transformação Mesclar](data-flow/transformations/merge-transformation.md)   
  [Transformação Unir Tudo](data-flow/transformations/union-all-transformation.md)  
   

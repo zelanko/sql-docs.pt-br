@@ -13,16 +13,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cc25af8e18e826ce6b8323d714f090ac3d571a97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010551"
 ---
 # <a name="core-sqlxml-security-considerations"></a>Principais considerações de segurança do SQLXML
   A seguir, encontram-se diretrizes de segurança para o uso do SQLXML para acessar dados.  
   
--   O provedor SQLXMLOLEDB expõe uma propriedade `StreamFlags` que permite definir sinalizadores para indicar qual funcionalidade do SQLXML deve ser habilitada ou desabilitada para cada instância específica. Você pode usar essa propriedade para personalizar o uso do SQLXML e ter certeza de que apenas os que você deseja estão habilitados. Para obter mais informações, consulte [provedor SQLXMLOLEDB &#40;SQLXML 4.0&#41;](../../../database-engine/dev-guide/sqlxmloledb-provider-sqlxml-4-0.md).  
+-   O provedor SQLXMLOLEDB expõe uma propriedade `StreamFlags` que permite definir sinalizadores para indicar qual funcionalidade do SQLXML deve ser habilitada ou desabilitada para cada instância específica. Você pode usar essa propriedade para personalizar o uso do SQLXML e ter certeza de que apenas os que você deseja estão habilitados. Para obter mais informações, consulte [SQLXMLOLEDB Provider &#40;SQLXML 4,0&#41;](../../../database-engine/dev-guide/sqlxmloledb-provider-sqlxml-4-0.md).  
   
 -   Quando erros de SQLXML ocorrem e são retornados, eles podem conter informações sobre o esquema de banco de dados, como nomes de tabela, nomes de colunas ou informações sobre tipo. Você deve ter cuidado ao tratar esses erros, para que as informações sobre a instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não sejam facilmente descobertas por usuários não autorizados.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "66010551"
   
 -   Ao executar diagramas de atualização, o SQLXML converte o diagrama em comandos DELETE, UPDATE e INSERT na instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Esses comandos só afetam os dados existentes. Os comandos gerados pelo SQLXML nunca alterarão o banco de dados. Os usuários devem executar comandos explícitos para alterar a estrutura do banco de dados. Por exemplo, incluindo-os em um bloco `sql:query` de um modelo.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Considerações de segurança do SQLXML 4.0](sqlxml-4-0-security-considerations.md)  
   
   

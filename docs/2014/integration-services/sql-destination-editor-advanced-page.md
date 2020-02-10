@@ -1,5 +1,5 @@
 ---
-title: Editor de destino SQL (página Avançado) | Microsoft Docs
+title: Editor de destino SQL (página avançado) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 087f32510b65d7ea505bc4bf816a5ca9edcfe82d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055457"
 ---
 # <a name="sql-destination-editor-advanced-page"></a>Editor de Destino SQL (página Avançado)
@@ -39,17 +39,17 @@ ms.locfileid: "66055457"
  **Verificar restrições**  
  Especifique se a tarefa deve verificar restrições. O valor padrão dessa propriedade é `True`.  
   
- **Acionadores**  
+ **Gatilhos de incêndio**  
  Especifique se a inserção em massa deve ativar gatilhos em tabelas. O valor padrão dessa propriedade é `False`.  
   
- **Primeira Linha**  
- Especifique a primeira linha a inserir. O valor padrão desta propriedade é **-1**, indicando que nenhum valor foi atribuído.  
+ **Primeira linha**  
+ Especifique a primeira linha a inserir. O valor padrão dessa propriedade é **-1**, indicando que nenhum valor foi atribuído.  
   
 > [!NOTE]  
 >  Limpe a caixa de texto no **Editor de Destino SQL** para indicar que não deseja atribuir um valor para esta propriedade. Use -1 na janela **Propriedades** , no **Editor Avançado**e no modelo de objeto.  
   
- **Última Linha**  
- Especifique a última linha a inserir. O valor padrão desta propriedade é **-1**, indicando que nenhum valor foi atribuído.  
+ **Última linha**  
+ Especifique a última linha a inserir. O valor padrão dessa propriedade é **-1**, indicando que nenhum valor foi atribuído.  
   
 > [!NOTE]  
 >  Limpe a caixa de texto no **Editor de Destino SQL** para indicar que não deseja atribuir um valor para esta propriedade. Use -1 na janela **Propriedades** , no **Editor Avançado**e no modelo de objeto.  
@@ -66,10 +66,10 @@ ms.locfileid: "66055457"
  **Ordenar colunas**  
  Digite os nomes das colunas de classificação. Cada coluna pode ser classificada em ordem crescente ou decrescente. Ao usar várias colunas de classificação, delimite a lista com vírgulas.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de Destinos SQL &#40;página Gerenciador de Conexões&#41;](../../2014/integration-services/sql-destination-editor-connection-manager-page.md)   
- [Editor de Destinos SQL &#40;página Mapeamentos&#41;](../../2014/integration-services/sql-destination-editor-mappings-page.md)   
+ [Editor de destinos SQL &#40;página Gerenciador de conexões&#41;](../../2014/integration-services/sql-destination-editor-connection-manager-page.md)   
+ [Página Mapeamentos de &#40;do editor de destinos SQL&#41;](../../2014/integration-services/sql-destination-editor-mappings-page.md)   
  [Carregar dados em massa por meio do destino do SQL Server](data-flow/bulk-load-data-by-using-the-sql-server-destination.md)  
   
   

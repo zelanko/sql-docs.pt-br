@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d93e6cfa3ce6e958b31c1156cd4fc5fa046ad5ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62872251"
 ---
 # <a name="create-a-database"></a>Criar um banco de dados
@@ -36,7 +36,7 @@ ms.locfileid: "62872251"
   
      [Segurança](#Security)  
   
--   **Para criar um diagrama de banco de dados usando:**  
+-   **Para criar um banco de dados usando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -54,7 +54,7 @@ ms.locfileid: "62872251"
   
 ###  <a name="Recommendations"></a> Recomendações  
   
--   O backup do banco de dados [mestre](master-database.md) deve ser feito sempre que um banco de dados de usuário for criado, modificado ou descartado.  
+-   O backup do banco de dados [mestre](master-database.md) deve ser feito sempre que um banco de dados de usuário é criado, modificado ou descartado.  
   
 -   Ao criar um banco de dados, torne os arquivos de dados tão grandes quanto possível, com base na quantidade máxima de dados que você espera ter no banco de dados.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "62872251"
   
 4.  Para criar o banco de dados aceitando todos os valores padrão, clique em **OK**; do contrário, passe para as etapas opcionais a seguir.  
   
-5.  Para alterar o nome do proprietário, clique em ( **...** ) para selecionar outro proprietário.  
+5.  Para alterar o nome do proprietário, clique em (**...**) para selecionar outro proprietário.  
   
     > [!NOTE]  
     >  A opção **Usar indexação de texto completo** sempre está marcada e esmaecida porque, a partir do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], todos os bancos de dados de usuários são habilitados para texto completo.  
@@ -131,8 +131,8 @@ GO
   
  Para obter mais exemplos, consulte [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql).  
   
-## <a name="see-also"></a>Consulte também  
- [Arquivos e grupos de arquivos do banco de dados](database-files-and-filegroups.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Database Files and Filegroups](database-files-and-filegroups.md)   
  [Anexar e desanexar bancos de dados &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [Adicionar arquivos de dados ou de log a um banco de dados](add-data-or-log-files-to-a-database.md)  

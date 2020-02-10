@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0aefc386d2da3cc17c7ed335a6438667b715d11a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62835142"
 ---
 # <a name="work-with-cdc-services"></a>Trabalhar com serviços CDC
@@ -39,8 +39,8 @@ ms.locfileid: "62835142"
   
  O caixa de diálogo Novo Serviço do Oracle CDC é aberta.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Como trabalhar com os serviços CDC](work-with-cdc-services.md)   
- [Criar e editar um Serviço Oracle CDC](create-and-edit-an-oracle-cdc-service.md)  
+ [Criar e editar um serviço Oracle CDC](create-and-edit-an-oracle-cdc-service.md)  
   
   

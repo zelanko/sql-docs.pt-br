@@ -16,23 +16,23 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 15f45af03125ebd797de0e36cb67516b4f01408d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060145"
 ---
 # <a name="create-and-map-a-server-environment"></a>Criar e mapear um ambiente de servidor
-  Você cria um ambiente de servidor para especificar valores de tempo de execução para pacotes contidos em um projeto que você implantou no servidor do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Você pode mapear as variáveis de ambiente para parâmetros, para um pacote específico, para pacotes de ponto de entrada ou para todos os pacotes em um projeto específico. Um pacote de ponto de entrada é geralmente um pacote pai que executa um pacote filho.  
+  Você cria um ambiente de servidor para especificar valores de runtime para pacotes contidos em um projeto que você implantou no servidor do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Você pode mapear as variáveis de ambiente para parâmetros, para um pacote específico, para pacotes de ponto de entrada ou para todos os pacotes em um projeto específico. Um pacote de ponto de entrada é geralmente um pacote pai que executa um pacote filho.  
   
 > [!IMPORTANT]  
 >  Para uma execução específica, um pacote pode ser executado somente com os valores contidos em um único ambiente de servidor.  
   
- Você pode consultar as exibições para uma lista de ambientes de servidor, referências de ambiente e variáveis de ambiente. Você também pode chamar procedimentos armazenados para adicionar, excluir, alterar e modificar ambientes, referências de ambiente e variáveis de ambiente. Para obter mais informações, consulte a seção **Ambientes de servidor, variáveis de servidor e referências de ambiente de servidor** em [SSIS Catalog](catalog/ssis-catalog.md).  
+ Você pode consultar as exibições para uma lista de ambientes de servidor, referências de ambiente e variáveis de ambiente. Você também pode chamar procedimentos armazenados para adicionar, excluir, alterar e modificar ambientes, referências de ambiente e variáveis de ambiente. Para obter mais informações, consulte a seção ambientes de servidor **, variáveis de servidor e referências de ambiente de servidor** no [catálogo do SSIS](catalog/ssis-catalog.md).  
   
 ### <a name="to-create-and-use-a-server-environment"></a>Para criar e usar um ambiente de servidor  
   
-1.  No [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], expanda o nó [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Catálogos> **SSISDB** no Pesquisador de Objetos e localize a pasta **Ambientes** do projeto por meio do qual você quer criar um ambiente.  
+1.  No [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], expanda [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] o nó catálogos> **SSISDB** no Pesquisador de objetos e localize a pasta **ambientes** do projeto para o qual você deseja criar um ambiente.  
   
 2.  Clique com o botão direito do mouse na pasta **Ambientes** e clique em **Criar Ambiente**.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "66060145"
   
 5.  Na página **Variáveis** , faça o seguinte para adicionar uma variável.  
   
-    1.  Selecione o **Tipo** da variável. O nome da variável **não** precisa corresponder ao nome do parâmetro do projeto que você mapeará para a variável.  
+    1.  Selecione o **Tipo** da variável. O nome da variável **não** precisa corresponder ao nome do parâmetro de projeto que você mapeia para a variável.  
   
     2.  Digite uma **Descrição** opcional para a variável.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "66060145"
   
 13. Para mapear a variável de ambiente para uma propriedade de gerenciador de conexões, siga os procedimentos a seguir. Os parâmetros são gerados automaticamente no servidor do SSIS para as propriedades do gerenciador de conexões.  
   
-    1.  Na guia **Gerenciadores de Conexões** na página **Parâmetros** , clique no botão Procurar ao lado do campo **Valor** .  
+    1.  Na guia **Gerenciadores de Conexões** na página **Parâmetros**, clique no botão Procurar ao lado do campo **Valor**.  
   
     2.  Clique em **Usar variável de ambiente**e selecione a variável de ambiente que você criou.  
   

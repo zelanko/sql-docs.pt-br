@@ -1,5 +1,5 @@
 ---
-title: Organizador de configurações do pacote | Microsoft Docs
+title: Organizador de configurações de pacote | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d5313118f7949818d341a47744a69cf13c43dbc9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056973"
 ---
 # <a name="package-configurations-organizer"></a>Organizador de Configurações do Pacote
@@ -32,19 +32,19 @@ ms.locfileid: "66056973"
 > [!NOTE]  
 >  Quando as configurações de pacote são carregadas na ordem preferencial, elas são carregadas da parte superior da lista mostrada na caixa de diálogo **Organizador de Configurações do Pacote** até a parte inferior da lista. Porém, no tempo de execução, talvez as configurações do pacote não sejam carregadas na ordem preferencial. Em particular, Configurações do Pacote Pai são carregadas depois das configurações de outros tipos.  
   
- Configurações de Pacote atualizam os valores das propriedades de objetos de pacote em tempo de execução. Quando um pacote é carregado, os valores das configurações substituem os valores que foram definidos quando o pacote foi desenvolvido. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] dá suporte a diferentes tipos de configuração. Por exemplo, é possível usar um arquivo XML que pode ter várias configurações, ou uma variável de ambiente que contenha uma única configuração. Para obter mais informações, consulte [Package Configurations](../../2014/integration-services/package-configurations.md).  
+ Configurações de Pacote atualizam os valores das propriedades de objetos de pacote em tempo de execução. Quando um pacote é carregado, os valores das configurações substituem os valores que foram definidos quando o pacote foi desenvolvido. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]dá suporte a tipos de configuração diferentes. Por exemplo, é possível usar um arquivo XML que pode ter várias configurações, ou uma variável de ambiente que contenha uma única configuração. Para obter mais informações, consulte [Package Configurations](../../2014/integration-services/package-configurations.md).  
   
 ## <a name="options"></a>Opções  
  **Habilitar configurações de pacote**  
  Selecione para usar configurações com o pacote.  
   
- **Nome da Configuração**  
+ **Nome da configuração**  
  Exibe o nome da configuração.  
   
- **Tipo de Configuração**  
+ **Tipo de configuração**  
  Exibe o tipo do local onde as configurações são armazenadas.  
   
- **Cadeia de Caracteres de Configuração**  
+ **Cadeia de caracteres de configuração**  
  Exibe o local no qual os valores de configuração são armazenados. O local pode ser um caminho de um arquivo, o nome de uma variável de ambiente, uma chave do Registro, o nome de uma variável do pacote pai ou o nome de uma tabela do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  **Objeto de Destino**  
@@ -65,7 +65,7 @@ ms.locfileid: "66056973"
  **Setas**  
  Selecione uma configuração e use as setas para cima e para baixo para movê-la para cima ou para baixo na lista. As configurações são carregadas na sequência exibida na lista.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar configurações de pacote](../../2014/integration-services/create-package-configurations.md)  
   
   

@@ -14,17 +14,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fd08aaa50f307d107a55c838395677e5692914ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011738"
 ---
 # <a name="use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server"></a>Usar um arquivo de formato para mapear colunas de uma tabela para campos de arquivo de dados (SQL Server)
   Um arquivo de dados pode conter campos organizados em uma ordem diferente das colunas correspondentes na tabela. Este tópico apresenta arquivos de formato não XML e XML que foram modificados para acomodar um arquivo de dados cujos campos são organizados em uma ordem diferente das colunas da tabela. O arquivo de formato modificado mapeia os campos de dados para as colunas da tabela correspondentes.  
   
 > [!NOTE]  
->  Um arquivo de formato XML ou não XML pode ser usado para importar em massa um arquivo de dados para a tabela usando um comando do **bcp**, uma instrução BULK INSERT ou INSERT... Instrução SELECT * FROM OPENROWSET(BULK...). Para obter mais informações, veja [Usar um arquivo de formato para importação de dados em massa &#40;SQL Server&#41;](use-a-format-file-to-bulk-import-data-sql-server.md).  
+>  Um arquivo de formato não XML ou um arquivo de formato XML pode ser usado para importar em massa um arquivo de dados para a tabela usando um comando **bcp** , instrução BULK INSERT ou INSERT... Selecione * da instrução OPENROWSET (BULK...). Para obter mais informações, veja [Usar um arquivo de formato para importação de dados em massa &#40;SQL Server&#41;](use-a-format-file-to-bulk-import-data-sql-server.md).  
   
 ## <a name="sample-table-and-data-file"></a>Tabela e arquivo de dados de exemplo  
  Os exemplos de arquivos de formato modificados neste tópico baseiam-se na tabela e no arquivo de dados a seguir.  
@@ -124,7 +124,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ### <a name="example"></a>Exemplo  
  O exemplo abaixo usa o provedor de conjuntos de linhas em massa `OPENROWSET` para importar dados do arquivo de dados `myTestOrder-c.txt` para a tabela de exemplo `myTestOrder` usando o arquivo de formato XML `myTestOrder.xml`. A instrução `INSERT... SELECT` especifica a lista de colunas na lista de seleção.  
   
- No Editor de Consultas do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], execute o seguinte código:  
+ No Editor de Consultas do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , execute o seguinte código:  
   
 ```  
 USE AdventureWorks2012;  
@@ -138,8 +138,8 @@ GO
   
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Usar um arquivo de formato para ignorar uma coluna de tabela &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Use um arquivo de formato para ignorar uma coluna de tabela &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)   
  [Usar um arquivo de formato para ignorar um campo de dados &#40;SQL Server&#41;](use-a-format-file-to-skip-a-data-field-sql-server.md)  
   
   

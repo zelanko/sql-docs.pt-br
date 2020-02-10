@@ -1,5 +1,5 @@
 ---
-title: Editor de origem do OData (página saída de erro) | Microsoft Docs
+title: Editor de origem OData (página saída de erro) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0578dcb98e34f06db155fd5c3f1438209d8b2687
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057288"
 ---
 # <a name="odata-source-editor-error-output-page"></a>Editor de Origem do OData (página Saída de Erro)
@@ -46,9 +46,9 @@ ms.locfileid: "66057288"
  **Aplicar**  
  Aplique a opção de tratamento de erros às células selecionadas.  
   
-## <a name="see-also"></a>Consulte também  
- [Editor de Origem do OData &#40;Página Conexão&#41;](../../2014/integration-services/odata-source-editor-connection-page.md)   
- [Editor de Fonte OData &#40;Página Colunas&#41;](../../2014/integration-services/odata-source-editor-columns-page.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Editor de origem OData &#40;página conexão&#41;](../../2014/integration-services/odata-source-editor-connection-page.md)   
+ [Editor de origem OData &#40;página colunas&#41;](../../2014/integration-services/odata-source-editor-columns-page.md)   
  [Origem do OData](data-flow/odata-source.md)   
  [Gerenciador de Conexões OData](connection-manager/odata-connection-manager.md)  
   

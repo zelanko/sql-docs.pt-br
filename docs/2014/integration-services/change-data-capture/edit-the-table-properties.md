@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 618a155390d8719e639d0e12d241b2f824e5375d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62835980"
 ---
 # <a name="edit-the-table-properties"></a>Editar as propriedades da tabela
@@ -46,12 +46,12 @@ ms.locfileid: "62835980"
   
     -   **Substituir Existente**: neste caso, a instância de captura atual é excluída e é substituída pela instância de captura criada. Se houver duas instâncias de captura definidas para esta tabela, você deverá selecionar uma para substituir.  
   
- **Observação**: você pode remover uma instância de captura da lista de tabelas na guia **Tabela**.  
+ **Observação**: você pode remover uma instância de captura da lista de tabelas na guia **Tabela** .  
   
  Depois de terminar de inserir as informações nesta caixa de diálogo, clique em **OK** para aceitar as alterações.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Como editar as propriedades de instância CDC](how-to-edit-the-cdc-instance-properties.md)   
- [Fazer alterações às tabelas selecionadas para capturar alterações](make-changes-to-the-tables-selected-for-capturing-changes.md)  
+ [Fazer alterações nas tabelas selecionadas para capturar alterações](make-changes-to-the-tables-selected-for-capturing-changes.md)  
   
   

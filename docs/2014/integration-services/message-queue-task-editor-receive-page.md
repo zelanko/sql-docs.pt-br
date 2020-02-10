@@ -15,14 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 51c26583e24ca0e5247c2aca65ea6fa617932e5a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057669"
 ---
 # <a name="message-queue-task-editor-receive-page"></a>Editor da Tarefa Fila de Mensagens (página Receber)
-  Use a página **Receber** da caixa de diálogo **Editor da Tarefa Fila de Mensagens** para configurar uma tarefa Fila de Mensagens para receber mensagens do MSMQ (Serviço de Enfileiramento de Mensagens) [!INCLUDE[msCoName](../includes/msconame-md.md)].  
+  Use a página **Receber** da caixa de diálogo **Editor da Tarefa Fila de Mensagens** para configurar uma tarefa Fila de Mensagens para receber mensagens do MSMQ (Serviço de Enfileiramento de Mensagens) [!INCLUDE[msCoName](../includes/msconame-md.md)] .  
   
  Para obter informações sobre essa tarefa, consulte [Message Queue Task](control-flow/message-queue-task.md).  
   
@@ -39,7 +39,7 @@ ms.locfileid: "66057669"
  **MessageType**  
  Selecione o tipo de mensagem. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |**Mensagem do arquivo de dados**|A mensagem é armazenada em um arquivo. Selecionar este valor faz com que seja exibida a opção dinâmica **DataFileMessage**.|  
 |**Mensagem de variável**|A mensagem é armazenada em uma variável. Selecionar este valor faz com que seja exibida a opção dinâmica **VariableMessage**.|  
@@ -58,9 +58,9 @@ ms.locfileid: "66057669"
  **Filter**  
  Especifique se deve ser aplicado um filtro à mensagem. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
-|**Sem-filtro**|A tarefa não filtra as mensagens. Selecionar este valor faz com que seja exibida a opção dinâmica **IdentifierReadOnly**.|  
+|**Sem filtro**|A tarefa não filtra as mensagens. Selecionar este valor faz com que seja exibida a opção dinâmica **IdentifierReadOnly**.|  
 |**Do pacote**|A mensagem recebe somente mensagens do pacote especificado. Selecionar este valor faz com que seja exibida a opção dinâmica **Identifier**.|  
   
 ### <a name="filter-dynamic-options"></a>Opções dinâmicas do filtro  
@@ -73,21 +73,21 @@ ms.locfileid: "66057669"
  **Identificador**  
  Se você escolher aplicar um filtro, digite o identificador exclusivo do pacote do qual mensagens podem ser recebidas ou clique no botão de reticências **(…)** e especifique o pacote.  
   
- **Tópicos relacionados:** [Selecionar um Pacote](control-flow/select-a-package.md)  
+ **Tópicos relacionados:** [selecionar um pacote](control-flow/select-a-package.md)  
   
 ### <a name="messagetype--variable-message"></a>MessageType = Mensagem de variável  
  **Filter**  
  Especifique se deve ser aplicado um filtro às mensagens. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
-|**Sem-filtro**|A tarefa não filtra as mensagens. Selecionar este valor faz com que seja exibida a opção dinâmica **IdentifierReadOnly**.|  
+|**Sem filtro**|A tarefa não filtra as mensagens. Selecionar este valor faz com que seja exibida a opção dinâmica **IdentifierReadOnly**.|  
 |**Do pacote**|A mensagem recebe somente mensagens do pacote especificado. Selecionar este valor faz com que seja exibida a opção dinâmica **Identifier**.|  
   
  **Variável**  
  Digite o nome da variável ou clique em \<**Nova variável...**> e configure uma variável nova.  
   
- **Tópicos relacionados:** [Adicionar Variável](../../2014/integration-services/add-variable.md)  
+ **Tópicos relacionados:** [Adicionar variável](../../2014/integration-services/add-variable.md)  
   
 ### <a name="filter-dynamic-options"></a>Opções dinâmicas do filtro  
   
@@ -99,18 +99,18 @@ ms.locfileid: "66057669"
  **Identificador**  
  Se você escolher aplicar um filtro, digite o identificador exclusivo do pacote do qual mensagens podem ser recebidas ou clique no botão de reticências **(…)** e especifique o pacote.  
   
- **Tópicos relacionados:** [Selecionar um Pacote](control-flow/select-a-package.md)  
+ **Tópicos relacionados:** [selecionar um pacote](control-flow/select-a-package.md)  
   
 ### <a name="messagetype--string-message"></a>MessageType = Mensagem de cadeia de caracteres  
  **Comparar**  
  Especifique se deve ser aplicado um filtro às mensagens. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
-|**Nenhum.**|As mensagens não são comparadas.|  
+|**Nenhuma**|As mensagens não são comparadas.|  
 |**Correspondência exata**|As mensagens devem corresponder exatamente à cadeia de caracteres na opção **CompareString** .|  
 |**Ignora maiúsculas e minúsculas**|A mensagem deve corresponder à cadeia de caracteres da opção **CompareString** , mas a comparação não diferencia maiúsculas e minúsculas.|  
-|**Contendo**|A mensagem deve conter a cadeia de caracteres na opção **CompareString** .|  
+|**Content**|A mensagem deve conter a cadeia de caracteres na opção **CompareString** .|  
   
  **CompareString**  
  A menos que a opção **Comparar** esteja definida como **Nenhum**, forneça a cadeia de caracteres com a qual a mensagem é comparada.  
@@ -119,12 +119,12 @@ ms.locfileid: "66057669"
  **Comparar**  
  Especifique se deve ser aplicado um filtro às mensagens. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
-|**Nenhum.**|As mensagens não são comparadas.|  
+|**Nenhuma**|As mensagens não são comparadas.|  
 |**Correspondência exata**|A mensagem deve corresponder exatamente à cadeia de caracteres na opção **CompareString** .|  
 |**Ignora maiúsculas e minúsculas**|A mensagem deve corresponder à cadeia de caracteres da opção **CompareString** , mas a comparação não diferencia maiúsculas e minúsculas.|  
-|**Contendo**|A mensagem deve conter a cadeia de caracteres na opção **CompareString** .|  
+|**Content**|A mensagem deve conter a cadeia de caracteres na opção **CompareString** .|  
   
  **CompareString**  
  A menos que a opção **Comparar** esteja definida como **Nenhum**, forneça a cadeia de caracteres com a qual a mensagem é comparada.  
@@ -132,12 +132,12 @@ ms.locfileid: "66057669"
  **Variável**  
  Digite o nome da variável para manter a mensagem recebida ou clique em \<**Nova variável...**> e configure uma variável nova.  
   
- **Tópicos relacionados:** [Adicionar Variável](../../2014/integration-services/add-variable.md)  
+ **Tópicos relacionados:** [Adicionar variável](../../2014/integration-services/add-variable.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor da Tarefa Fila de Mensagens &#40;Página Geral&#41;](general-page-of-integration-services-designers-options.md)   
- [Editor da Tarefa Fila de Mensagens &#40;Página Enviar&#41;](../../2014/integration-services/message-queue-task-editor-send-page.md)   
+ [Editor da tarefa fila de mensagens &#40;página Geral&#41;](general-page-of-integration-services-designers-options.md)   
+ [Editor da tarefa fila de mensagens &#40;Enviar página&#41;](../../2014/integration-services/message-queue-task-editor-send-page.md)   
  [Página Expressões](expressions/expressions-page.md)   
  [Message Queue Task](control-flow/message-queue-task.md)  
   

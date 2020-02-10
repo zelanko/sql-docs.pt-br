@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bc9f6c28e775cdbd21806172d7074e655fdd1545
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054814"
 ---
 # <a name="use-an-expression-in-a-data-flow-component"></a>Usar uma expressão em um componente de fluxo de dados
@@ -59,12 +59,12 @@ ms.locfileid: "66054814"
         > [!NOTE]  
         >  Ao remover o foco da coluna **Condição** ou da coluna **Expressão** , o texto da expressão pode ser realçado para indicar que a sintaxe da expressão está incorreta.  
   
-10. Clique em **OK** para fechar a caixa de diálogo.  
+10. Clique em **OK** para sair da caixa de diálogo.  
   
     > [!NOTE]  
     >  Se a expressão não for válida, um alerta aparecerá descrevendo os erros de sintaxe na expressão.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Expressões do SSIS &#40;Integration Services&#41;](expressions/integration-services-ssis-expressions.md)   
  [Conditional Split Transformation](data-flow/transformations/conditional-split-transformation.md)   
  [Derived Column Transformation](data-flow/transformations/derived-column-transformation.md)   

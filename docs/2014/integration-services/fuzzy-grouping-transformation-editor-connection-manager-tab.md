@@ -1,5 +1,5 @@
 ---
-title: Editor de transformação agrupamento difuso (guia de Gerenciador de Conexão) | Microsoft Docs
+title: Editor de transformação Agrupamento Difuso (guia Gerenciador de conexões) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7cfee2c2a79410d73eb6ca4da47f0fd361a24fb2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058336"
 ---
 # <a name="fuzzy-grouping-transformation-editor-connection-manager-tab"></a>Editor de Transformação Agrupamento Difuso (guia Gerenciador de Conexões)
@@ -33,10 +33,10 @@ ms.locfileid: "66058336"
  **Gerenciador de conexões OLE DB**  
  Selecione um gerenciador de conexões OLE DB existente usando a caixa de listagem ou crie uma nova conexão usando o botão **Novo** .  
   
- **Nova**  
+ **Novo**  
  Crie uma nova conexão usando a caixa de diálogo **Configurar Gerenciador de Conexões OLE DB** .  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Identificar linhas de dados semelhantes por meio da transformação Agrupamento Difuso](data-flow/transformations/identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md)  
   

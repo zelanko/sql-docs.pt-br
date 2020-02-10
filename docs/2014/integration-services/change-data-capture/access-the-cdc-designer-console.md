@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c552ef16cc2f9502a365ba09c7f8868eccd53396
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62836078"
 ---
 # <a name="access-the-cdc-designer-console"></a>Acessar o CDC Designer Console
@@ -32,7 +32,7 @@ ms.locfileid: "62836078"
  Digite o nome do servidor em que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está localizado.  
   
 ### <a name="authentication"></a>Autenticação  
- Selecione uma destas opções:  
+ Selecione uma das seguintes:  
   
 -   **Autenticação do Windows**  
   
@@ -57,7 +57,7 @@ ms.locfileid: "62836078"
   
  Para obter informações sobre a caixa de diálogo Propriedades Avançadas de Conexão, consulte [Propriedades Avançadas de Conexão](advanced-connection-properties.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Permissões necessárias para conexão do SQL Server para o Designer CDC](sql-server-connection-required-permissions-for-the-cdc-designer.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Permissões necessárias para conexão do SQL Server para o CDC Designer](sql-server-connection-required-permissions-for-the-cdc-designer.md)  
   
   

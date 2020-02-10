@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7ee7e06829f72ab44fd036766907be94c95b7d90
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483689"
 ---
 # <a name="automatic-code-creation-master-data-services"></a>Criação automática de código (Master Data Services)
@@ -31,11 +31,11 @@ ms.locfileid: "65483689"
  Quando você insere valores de atributo no MDS, em uma das ferramentas ou usando o processo de preparo, o valor de atributo pode ficar em branco. Quando forem aplicadas regras de negócio, os valores serão incrementados com base no valor existente mais alto. Por exemplo, se a regra for "Atributo padrão para um valor gerado que inicia em 1 e é incrementado de 4" e o valor atual mais alto para o atributo for 700, o valor do próximo membro adicionado será 704.  
   
 ## <a name="deleting-automatically-generated-values"></a>Excluindo automaticamente valores gerados  
- Depois que um administrador habilita valores gerados automaticamente para o atributo de código, os usuários podem excluir acidentalmente um membro que tinha um valor de código que eles desejam reutilizar. A mensagem de erro "o código de membro já é usado por um membro que foi excluído" aparecerá. Há duas soluções possíveis:  
+ Depois que um administrador habilita valores gerados automaticamente para o atributo de código, os usuários podem excluir acidentalmente um membro que tinha um valor de código que eles desejam reutilizar. A mensagem de erro "o código de membro já está sendo usado por um membro que foi excluído" será exibido. Há duas soluções possíveis:  
   
--   Na área funcional **Gerenciamento de Versão** , um administrador pode inverter a transação que ocorreu quando o membro foi excluído. No entanto, isso significa que todos os atributos e a associação em hierarquias e coleções do membro anterior é restaurado. Para obter mais informações, consulte [reverter uma transação &#40;Master Data Services&#41;](reverse-a-transaction-master-data-services.md).  
+-   Na área funcional **Gerenciamento de Versão** , um administrador pode inverter a transação que ocorreu quando o membro foi excluído. No entanto, isso significa que todos os atributos do membro anterior e a associação em hierarquias e coleções são restaurados. Para obter mais informações, consulte [inverter uma transação &#40;Master Data Services&#41;](reverse-a-transaction-master-data-services.md).  
   
--   Um administrador pode usar o processo de preparo para excluir o membro permanentemente. Para obter mais informações, consulte [desativar ou excluir membros por meio do processo de preparo &#40;Master Data Services&#41;](add-update-and-delete-data-master-data-services.md).  
+-   Um administrador pode usar o processo de preparo para excluir o membro permanentemente. Para obter mais informações, consulte [desativar ou excluir membros usando o processo de preparo &#40;Master Data Services&#41;](add-update-and-delete-data-master-data-services.md).  
   
 ## <a name="related-tasks"></a>Related Tasks  
   

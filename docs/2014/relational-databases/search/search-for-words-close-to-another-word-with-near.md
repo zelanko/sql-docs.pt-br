@@ -21,16 +21,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fadff7e68404ffae528cb4630e1f6c4b8156ccc0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011073"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>Procurar palavras perto de outra palavra com NEAR
-  Você pode usar uma condição de proximidade (NEAR) em um predicado [CONTAINS](/sql/t-sql/queries/contains-transact-sql) ou uma função [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) para procurar palavras ou frases próximas umas das outras. Você também pode especificar o número máximo de condições não relacionadas à pesquisa que separam a primeira e a última condição da pesquisa. Além disso, você pode pesquisar palavras ou frases em qualquer ordem, ou pode pesquisar palavras ou frases na ordem em que especificá-las. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] dá suporte a ambos cedo [de proximidade genérica](#Generic_NEAR), que agora está obsoleto e o [de proximidade personalizada](#Custom_NEAR), que é nova no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
+  Você pode usar uma condição de proximidade (NEAR) em um predicado [CONTAINS](/sql/t-sql/queries/contains-transact-sql) ou uma função [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) para procurar palavras ou frases próximas umas das outras. Você também pode especificar o número máximo de condições não relacionadas à pesquisa que separam a primeira e a última condição da pesquisa. Além disso, você pode pesquisar palavras ou frases em qualquer ordem, ou pode pesquisar palavras ou frases na ordem em que especificá-las. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]dá suporte à [condição de proximidade genérica](#Generic_NEAR)anterior, que agora é preterida e a [condição de proximidade personalizada](#Custom_NEAR), que é [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]nova no.  
   
-##  <a name="Custom_NEAR"></a> O termo de proximidade personalizada  
+##  <a name="Custom_NEAR"></a>A condição de proximidade personalizada  
  A condição de proximidade personalizada introduz os novos recursos a seguir:  
   
 -   Você pode especificar o número máximo de condições não relacionadas à pesquisa ou *distância máxima*que separa a primeira e o último critério de pesquisa para constituir uma correspondência.  
@@ -51,11 +51,11 @@ ms.locfileid: "66011073"
   
  {  
   
- *search_term* [ ,...*n* ]  
+ *search_term* [,... *n* ]  
   
  |  
   
- (*search_term* [ ,...*n* ] ) [, <maximum_distance> [, <match_order> ] ]  
+ (*search_term* [,... *n* ]) [, <maximum_distance> [, <match_order>]]  
   
  }  
   
@@ -77,16 +77,16 @@ CONTAINS(column_name, 'NEAR((John, Smith), 2)')
  Observe que, para um idioma que lê da direita para a esquerda, como árabe ou hebraico, o Mecanismo de texto completo aplica as condições especificadas em ordem invertida. Além disso, o Pesquisador de Objetos no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] inverte automaticamente a ordem de exibição de palavras especificada em idiomas da direita para a esquerda.  
   
 > [!NOTE]  
->  Para obter mais informações, veja “[Considerações adicionais sobre pesquisas de proximidade](#Additional_Considerations)”, mais adiante neste tópico.  
+>  Para obter mais informações, consulte "[Considerações adicionais sobre pesquisas de proximidade](#Additional_Considerations)", posteriormente neste tópico.  
   
 ### <a name="how-maximum-distance-is-measured"></a>Como a distância máxima é medida  
  Uma distância máxima específica, como 10 ou 25, determina quantas condições não relacionadas à pesquisa, inclusive palavras irrelevantes, podem ocorrer entre a primeira e a última condição de pesquisa em uma determinada cadeia de caracteres. Por exemplo, `NEAR((dogs, cats, "hunting mice"), 3)` retorna a linha a seguir na qual o número total de condições não relacionadas à pesquisa é três ("`enjoy`", "`but`" e "`avoid`"):  
   
- “`Cats` `enjoy` `hunting mice``, but avoid` `dogs``.`”  
+ "`Cats` `enjoy` `hunting mice``, but avoid` `dogs``.`"  
   
  A mesma condição de proximidade não retorna a linha a seguir, porque a distância máxima é excedida pelas quatro condições não relacionadas à pesquisa ("`enjoy`", "`but`", "`usually`" e "`avoid`"):  
   
- “`Cats` `enjoy` `hunting mice``, but usually avoid` `dogs``.`”  
+ "`Cats` `enjoy` `hunting mice``, but usually avoid` `dogs``.`"  
   
 ### <a name="combining-a-custom-proximity-term-with-other-terms"></a>Combinando uma condição de proximidade personalizada com outras condições  
  Você pode combinar uma condição de proximidade personalizada com outras condições. Você pode usar AND (&), OR (|) ou AND NOT (&!) para combinar uma condição de proximidade personalizada com outra, uma condição simples ou uma condição de prefixo. Por exemplo:  
@@ -107,9 +107,9 @@ CONTAINS(column_name, 'NEAR((John, Smith), 2)')
 CONTAINS(column_name, 'NEAR((term1, term2), 5, TRUE) AND term3')  
 ```  
   
- Não é possível combinar um termo de proximidade personalizada com um termo de proximidade genérica (*term1* NEAR *term2*), uma condição geracional (ISABOUT...) ou uma condição ponderada (FORMSOF...).  
+ Não é possível combinar uma condição de proximidade personalizada com uma condição de proximidade genérica (*Term1* perto de *Term2*), um termo de geração (ISABOUT...) ou um termo ponderado (FORMSOF...).  
   
-### <a name="example-using-the-custom-proximity-term"></a>Exemplo: Usando o termo de proximidade personalizada  
+### <a name="example-using-the-custom-proximity-term"></a>Exemplo: usando a condição de proximidade personalizada  
  O exemplo a seguir pesquisa a tabela `Production.Document` do banco de dados de exemplo `AdventureWorks2012` para todos os resumos de documento que contêm o palavra "reflector" no mesmo documento que a palavra "bracket".  
   
 ```  
@@ -125,7 +125,7 @@ GO
   
 
   
-##  <a name="Additional_Considerations"></a> Considerações adicionais para pesquisas de proximidade  
+##  <a name="Additional_Considerations"></a>Considerações adicionais para pesquisas de proximidade  
  Esta seção discute considerações que afetam pesquisas de proximidade genéricas e personalizadas:  
   
 -   Sobrepondo ocorrências de condições de pesquisa  
@@ -153,14 +153,14 @@ GO
   
 
   
-##  <a name="Generic_NEAR"></a> A proximidade genérica substituída  
+##  <a name="Generic_NEAR"></a>O termo de proximidade genérico preterido  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] É recomendável que você use o [de proximidade personalizada](#Custom_NEAR).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Recomendamos que você use a [condição de proximidade personalizada](#Custom_NEAR).  
   
  Um termo de proximidade genérico indica que todos os termos de pesquisa especificados devem ocorrer em um documento para que uma correspondência seja retornada, independentemente do número de termos não relacionados à pesquisa (a *distância*) entre os termos de pesquisa. A sintaxe básica é:  
   
- { *search_term* { NEAR | ~ } *search_term* } [ ,...*n* ]  
+ { *search_term* {Near | ~} *search_term* } [ ,... *n* ]  
   
  Por exemplo, nos exemplos a seguir, as palavras 'fox' e 'chicken' ambos devem aparecer, em qualquer ordem, para gerar uma correspondência:  
   
@@ -171,7 +171,7 @@ GO
 > [!NOTE]  
 >  Para obter informações sobre a sintaxe <generic_proximity_term>, veja [CONTAINS &#40;Transact-SQL&#41;](/sql/t-sql/queries/contains-transact-sql).  
   
- Para obter mais informações, veja “[Considerações adicionais sobre pesquisas de proximidade](#Additional_Considerations)”, mais adiante neste tópico.  
+ Para obter mais informações, consulte "[Considerações adicionais sobre pesquisas de proximidade](#Additional_Considerations)", posteriormente neste tópico.  
   
 ### <a name="combining-a-generic-proximity-term-with-other-terms"></a>Combinando uma condição de proximidade genérica com outras condições  
  Você pode usar AND (&), OR (|) ou AND NOT (&!) para combinar uma condição de proximidade genérica com outra, uma condição simples ou uma condição de prefixo. Por exemplo:  
@@ -184,9 +184,9 @@ CONTAINSTABLE (Production.ProductDescription,
 )  
 ```  
   
- Você não pode combinar um termo de proximidade genérica com um termo de proximidade personalizadas, como `NEAR((term1,term2),5)`, uma condição ponderada (ISABOUT...) ou uma condição geracional (FORMSOF...).  
+ Não é possível combinar uma condição de proximidade genérica com uma condição de proximidade personalizada `NEAR((term1,term2),5)`, como, um termo ponderado (ISABOUT...) ou um termo de geração (FORMSOF...).  
   
-### <a name="example-using-the-generic-proximity-term"></a>Exemplo: Usando o termo de proximidade genérica  
+### <a name="example-using-the-generic-proximity-term"></a>Exemplo: usando a condição de proximidade genérica  
  O exemplo a seguir usa a condição de proximidade genérica para procurar o palavra "reflector" no mesmo documento que a palavra "bracket".  
   
 ```  
@@ -224,7 +224,7 @@ CONTAINSTABLE(Production.Document, Document, '(reflector ~ bracket ~ installatio
   
 
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CONTAINSTABLE &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/containstable-transact-sql)   
  [Consulta com pesquisa de texto completo](query-with-full-text-search.md)   
  [CONTAINS &#40;Transact-SQL&#41;](/sql/t-sql/queries/contains-transact-sql)  

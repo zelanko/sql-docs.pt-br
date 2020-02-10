@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 0dbf84d6fd3253a3b4d945693090fdad00d077ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483541"
 ---
 # <a name="collections-master-data-services"></a>Coleções (Master Data Services)
@@ -36,7 +36,7 @@ ms.locfileid: "65483541"
 >  Para poder criar uma coleção, a entidade deve estar habilitada para hierarquias explícitas. Para obter mais informações, consulte [habilitar uma entidade para hierarquias explícitas e coleções &#40;Master Data Services&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md).  
   
 ## <a name="subscription-views-for-collections"></a>Exibições de assinatura para coleções  
- Há dois tipos de exibições de assinatura que mostram coleções. O formato **Atributos da coleção** mostra uma lista de coleções e todos os atributos relacionados às coleções (como descrição ou proprietário). O formato **Coleções** mostra todos os membros em todas as coleções, bem como cada peso de membros e a ordem de classificação. Para obter mais informações, consulte [exportação de dados &#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md).  
+ Há dois tipos de exibições de assinatura que mostram coleções. O formato **Atributos da coleção** mostra uma lista de coleções e todos os atributos relacionados às coleções (como descrição ou proprietário). O formato **Coleções** mostra todos os membros em todas as coleções, bem como cada peso de membros e a ordem de classificação. Para obter mais informações, consulte [exportando dados &#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md).  
   
  Se você definir valores de peso para membros específicos em uma coleção, estes valores estarão disponíveis em exibições de assinatura relacionadas.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "65483541"
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  
-|Habilitar uma entidade para hierarquias explícitas e coleções.|[Habilitar uma entidade para hierarquias explícitas e coleções &#40;Master Data Services&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|  
+|Habilitar uma entidade para hierarquias explícitas e coleções.|[Habilite uma entidade para hierarquias explícitas e coleções &#40;Master Data Services&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|  
 |Criar uma nova coleção.|[Criar uma coleção &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-collection-master-data-services.md)|  
 |Adicionar membros a uma coleção existente.|[Adicionar membros a uma coleção &#40;Master Data Services&#41;](../../2014/master-data-services/add-members-to-a-collection-master-data-services.md)|  
   
@@ -52,6 +52,6 @@ ms.locfileid: "65483541"
   
 -   [Hierarquias explícitas &#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)  
   
--   [Exportação de dados &#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)  
+-   [Exportando dados &#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)  
   
   

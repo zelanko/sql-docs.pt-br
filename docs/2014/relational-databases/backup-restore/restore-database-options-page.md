@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 266c127a8ef38a1a5701de24f9442861e604d84d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62875638"
 ---
 # <a name="restore-database-options-page"></a>Restaurar o banco de dados (página Opções)
@@ -33,7 +33,7 @@ ms.locfileid: "62875638"
   
 ## <a name="options"></a>Opções  
   
-### <a name="restore-options"></a>Opções de restauração  
+### <a name="restore-options"></a>Restaurar opções  
  Para modificar os aspectos do comportamento da operação de restauração, use as opções do painel **Opções de restauração** .  
   
  **Substituir o banco de dados existente [WITH REPLACE]**  
@@ -98,7 +98,7 @@ ms.locfileid: "62875638"
  **Encerre as conexões existentes**  
  As operações de restauração poderão falhar se houver conexões ativas com o banco de dados. Marque a opção **Fechar conexões existentes** para assegurar que todas as conexões ativas entre o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] e o banco de dados sejam fechadas. Essa caixa de seleção define o banco de dados no modo de usuário único antes de executar as operações de restauração e define o banco de dados no modo de vários usuários ao concluir.  
   
-### <a name="prompt"></a>Aviso  
+### <a name="prompt"></a>Prompt  
  **Perguntar antes de restaurar cada backup**  
  Especifica que, após a restauração de cada backup, a caixa de diálogo **Continuar Restauração** será exibida para perguntar se você deseja continuar a sequência de restauração. Esta caixa de diálogo exibe o nome do conjunto de mídia seguinte (se conhecido) e o nome e a descrição do conjunto de backup seguinte.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "62875638"
   
 -   Se o backup seguinte for um backup de log, use a tarefa **Restaurar Log de Transações** . Para obter informações sobre como retomar uma sequência de restauração restaurando um log de transações, veja [Restaurar um backup de log de transações &#40;SQL Server&#41;](restore-a-transaction-log-backup-sql-server.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [Restaurar um backup de um dispositivo &#40;SQL Server&#41;](restore-a-backup-from-a-device-sql-server.md)   
  [Restaurar um backup de log de transações &#40;SQL Server&#41;](restore-a-transaction-log-backup-sql-server.md)   

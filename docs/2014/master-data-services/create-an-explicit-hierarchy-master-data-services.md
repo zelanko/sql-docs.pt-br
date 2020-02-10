@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 5defabecf637a230571a954c306d207b0f1bbcfb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483304"
 ---
 # <a name="create-an-explicit-hierarchy-master-data-services"></a>Criar uma hierarquia explícita (Master Data Services)
@@ -28,7 +28,7 @@ ms.locfileid: "65483304"
 ## <a name="prerequisites"></a>Prerequisites  
  Para executar esse procedimento:  
   
--   Você deve ter permissão para acessar a área funcional **Administração do Sistema** .  
+-   Você deve ter permissão para acessar a área funcional **Administração do sistema** .  
   
 -   Você deve ser um administrador de modelo. Para obter mais informações, veja [Administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
@@ -46,25 +46,25 @@ ms.locfileid: "65483304"
   
 5.  Clique em **Editar entidade selecionada**.  
   
-6.  Sobre o **Editar entidade** página, o **hierarquias explícitas** painel, clique em **adicionar hierarquia explícita**.  
+6.  Na página **Editar entidade** , no painel **hierarquias explícitas** , clique em **Adicionar Hierarquia explícita**.  
   
-7.  No **adicionar hierarquia explícita** página, o **nome da hierarquia explícita** caixa, digite um nome para a hierarquia.  
+7.  Na página **Adicionar Hierarquia explícita** , na caixa **nome da hierarquia explícita** , digite um nome para a hierarquia.  
   
 8.  Opcionalmente, desmarque a caixa de seleção **Hierarquia obrigatória** para criar a hierarquia como não obrigatória. Para obter mais informações sobre tipos de hierarquia, consulte [Hierarquias explícitas &#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md).  
   
 9. Clique em **salvar hierarquia**.  
   
-10. Sobre o **Editar entidade** , clique em **salvar entidade**.  
+10. Na página **Editar entidade** , clique em **salvar entidade**.  
   
 ## <a name="next-steps"></a>Próximas etapas  
   
 -   [Criar um membro consolidado &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-consolidated-member-master-data-services.md)  
   
--   [Mover membros dentro de uma hierarquia de &#40;Master Data Services&#41;](../../2014/master-data-services/move-members-within-a-hierarchy-master-data-services.md)  
+-   [Mover membros dentro de uma hierarquia &#40;Master Data Services&#41;](../../2014/master-data-services/move-members-within-a-hierarchy-master-data-services.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Hierarquias explícitas &#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)   
  [Hierarquias derivadas com limites explícitos &#40;Master Data Services&#41;](../../2014/master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)   
- [Alterar o nome de uma hierarquia explícita &#40;Master Data Services&#41;](../../2014/master-data-services/change-an-explicit-hierarchy-name-master-data-services.md)  
+ [Alterar um nome de hierarquia explícito &#40;Master Data Services&#41;](../../2014/master-data-services/change-an-explicit-hierarchy-name-master-data-services.md)  
   
   

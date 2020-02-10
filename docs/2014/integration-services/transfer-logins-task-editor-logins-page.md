@@ -1,5 +1,5 @@
 ---
-title: Editor da tarefa logons (página logons) transferir | Microsoft Docs
+title: Editor da tarefa Transferir Logons (página Logons) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ae8ebf56e4ae7c4fce3566cb7688d203b8ceb318
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054931"
 ---
 # <a name="transfer-logins-task-editor-logins-page"></a>Editor da Tarefa Transferir Logons (página Logons)
@@ -29,15 +29,15 @@ ms.locfileid: "66054931"
   
 ## <a name="options"></a>Opções  
  **SourceConnection**  
- Selecione um gerenciador de conexões SMO na lista ou clique em **\<Nova conexão...>** para criar uma nova conexão com o servidor de origem.  
+ Selecione um Gerenciador de conexões Smo na lista ou clique em ** \<nova conexão... >** para criar uma nova conexão com o servidor de origem.  
   
  **DestinationConnection**  
- Selecione um gerenciador de conexões SMO na lista ou clique em **\<Nova conexão...>** para criar uma nova conexão com o servidor de destino.  
+ Selecione um Gerenciador de conexões Smo na lista ou clique em ** \<nova conexão... >** para criar uma nova conexão com o servidor de destino.  
   
  **LoginsToTransfer**  
  Selecione os logons [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para copiar da fonte para o servidor de destino. As opções desta propriedade estão listadas na seguinte tabela:  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |**AllLogins**|Todos os logons [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no servidor de origem serão copiados para o servidor de destino.|  
 |**SelectedLogins**|Apenas os logons especificados com **LoginsList** serão copiados para o servidor de destino.|  
@@ -46,7 +46,7 @@ ms.locfileid: "66054931"
  **LoginsList**  
  Selecione os logons no servidor de origem serão copiados para o servidor de destino. Esta opção somente está disponível quando **SelectedLogins** é selecionado para **LoginsToTransfer**.  
   
- **DatabasesList**  
+ **DatabaseList**  
  Selecione os logons no servidor de origem que serão copiados para o servidor de destino. Esta opção somente está disponível quando **AllLoginsFromSelectedDatabases** é selecionado para **LoginsToTransfer**.  
   
  **IfObjectExists**  
@@ -54,19 +54,19 @@ ms.locfileid: "66054931"
   
  As opções desta propriedade estão listadas na seguinte tabela:  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |**FailTask**|A tarefa irá falhar se já existirem logons com o mesmo nome no servidor de destino.|  
 |**Overwrite**|A tarefa irá substituir logons de mesmo nome no servidor de destino.|  
 |**Skip**|A tarefa irá ignorar os logons de mesmo nome que existem no servidor de destino.|  
   
  **CopySids**  
- Selecione se os identificadores de segurança associados aos logons devem ser copiados para o servidor de destino. Será necessário definir**CopySids** para **True** se a tarefa Transferir Logons for usada junto com a tarefa Transferir Banco de Dados. Caso contrário, os logons copiados não serão reconhecidos pelo banco de dados transferido.  
+ Selecione se os identificadores de segurança associados aos logons devem ser copiados para o servidor de destino. **CopySids** deverá ser definido como **true** se a tarefa Transferir Logons for usada junto com a tarefa Transferir Banco de dados. Caso contrário, os logons copiados não serão reconhecidos pelo banco de dados transferido.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Tarefas do Integration Services](control-flow/integration-services-tasks.md)   
- [Editor da Tarefa Transferir Logons &#40;Página Geral&#41;](general-page-of-integration-services-designers-options.md)   
+ [Editor da tarefa Transferir Logons &#40;página Geral&#41;](general-page-of-integration-services-designers-options.md)   
  [Página Expressões](expressions/expressions-page.md)   
  [Gerenciador de conexões SMO](connection-manager/smo-connection-manager.md)   
  [Senhas fortes](../relational-databases/security/strong-passwords.md)   

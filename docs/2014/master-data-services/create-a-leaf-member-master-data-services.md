@@ -15,21 +15,21 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a113803c9d6e5c688ea6eddca9446d96d79e82be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483398"
 ---
 # <a name="create-a-leaf-member-master-data-services"></a>Criar um membro folha (Master Data Services)
-  Na [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], crie um membro folha quando desejar adicionar dados mestres a seu sistema e não estiver usando tabelas de preparo ou o [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] para importar dados.  
+  No [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], crie um membro folha quando desejar adicionar dados mestres ao seu sistema e não estiver usando tabelas de preparo ou o [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] para importar dados.  
   
 ## <a name="prerequisites"></a>Prerequisites  
  Para executar esse procedimento:  
   
 -   Você deve ter permissão para acessar a área funcional do **Gerenciador** .  
   
--   Você deve ter um mínimo de **atualização** permissão para o objeto de modelo folha para a entidade que você está adicionando um membro.  
+-   Você deve ter, no mínimo, a permissão **Atualizar** para o objeto de modelo folha da entidade à qual você está adicionando um membro.  
   
 ### <a name="to-create-a-leaf-member"></a>Para criar um membro folha  
   
@@ -49,8 +49,8 @@ ms.locfileid: "65483398"
   
 8.  Clique em **OK**.  
   
-## <a name="see-also"></a>Consulte também  
- [Carregar ou atualizar membros no Master Data Services por meio do processo de preparo](add-update-and-delete-data-master-data-services.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Carregar ou atualizar Membros no Master Data Services usando o processo de preparo](add-update-and-delete-data-master-data-services.md)   
  [Criar um membro consolidado &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-consolidated-member-master-data-services.md)   
  [Membros &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)  
   

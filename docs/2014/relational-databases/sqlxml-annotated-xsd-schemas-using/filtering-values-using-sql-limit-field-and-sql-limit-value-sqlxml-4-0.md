@@ -1,5 +1,5 @@
 ---
-title: 'Filtrando valores usando SQL: limit-campo e SQL: limit-value (SQLXML 4.0) | Microsoft Docs'
+title: 'Filtrando valores usando SQL: limit-field e SQL: limit-value (SQLXML 4,0) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f93a60e7b6c1dfa2a0c7577aafbbb68d5068c629
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013805"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>Filtrando valores usando sql:limit-field e sql:limit-value (SQLXML 4.0)
@@ -44,7 +44,7 @@ ms.locfileid: "66013805"
   
  Nestes exemplos, são usados modelos para especificar consultas XPath com base no esquema XSD de mapeamento.  
   
-### <a name="a-limiting-the-customer-addresses-returned-to-a-specific-address-type"></a>A. Limitar os endereços de cliente retornados para um tipo de endereço específico  
+### <a name="a-limiting-the-customer-addresses-returned-to-a-specific-address-type"></a>a. Limitar os endereços de cliente retornados para um tipo de endereço específico  
  Neste exemplo, um banco de dados contém duas tabelas:  
   
 -   Customer (CustomerID, CompanyName)  
@@ -53,7 +53,7 @@ ms.locfileid: "66013805"
   
  Um cliente pode ter um endereço para cobrança e/ou um endereço para entrega. Os valores da coluna AddressType são Shipping e Billing.  
   
- Este é o esquema de mapeamento no qual o **ShipTo** atributo de esquema é mapeado para a coluna StreetAddress na relação Addresses. Os valores retornados para esse atributo são limitados somente aos endereços para entrega especificando as anotações `sql:limit-field` e `sql:limit-value`. Da mesma forma, o **BillTo** atributo de esquema retorna somente o endereço de cobrança de um cliente.  
+ Esse é o esquema de mapeamento no qual o atributo de esquema **NomeDoDestinatário** é mapeado para a coluna StreetAddress na relação de endereços. Os valores retornados para esse atributo são limitados somente aos endereços para entrega especificando as anotações `sql:limit-field` e `sql:limit-value`. Da mesma forma, o atributo de esquema **billTo** retorna apenas o endereço de cobrança de um cliente.  
   
  Este é o esquema:  
   
@@ -99,7 +99,7 @@ ms.locfileid: "66013805"
   
 ##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>Para testar uma consulta XPath de exemplo com relação ao esquema  
   
-1.  Crie duas tabelas na **tempdb** banco de dados:  
+1.  Crie duas tabelas no banco de dados **tempdb** :  
   
     ```  
     USE tempdb  
@@ -146,9 +146,9 @@ ms.locfileid: "66013805"
   
 5.  Crie e use o script de teste SQLXML 4.0 (Sqlxml4test.vbs) para executar o modelo.  
   
-     Para obter mais informações, consulte [usando o ADO para executar consultas SQLXML](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Para obter mais informações, consulte [usando o ADO para executar consultas do SQLXML](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
- Esse é o resultado:  
+ Este é o resultado:  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">   
@@ -170,7 +170,7 @@ ms.locfileid: "66013805"
   
 -   OrderDetails (OrderID, ProductID, UnitPrice, Quantity, Price, Discount)  
   
- Este é o esquema de mapeamento no qual o **OrderID** atributo os detalhes do pedido é mapeado para a coluna OrderID na relação de pedidos. Os valores que são retornados para esse atributo são limitados somente àqueles que têm um valor de 2.0000000e-001 (0.2) conforme especificado para o **desconto** de atributo usando o `sql:limit-field` e `sql:limit-value` anotações.  
+ Esse é o esquema de mapeamento no qual o atributo **OrderID** nos detalhes da ordem é mapeado para a coluna OrderID na relação Orders. Os valores retornados para esse atributo são limitados apenas aos que têm um valor de 2.0000000 e-001 (0,2) conforme especificado para o atributo de **desconto** usando as `sql:limit-field` anotações e `sql:limit-value` .  
   
  Este é o esquema:  
   
@@ -216,7 +216,7 @@ ms.locfileid: "66013805"
   
 ##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>Para testar uma consulta XPath de exemplo com relação ao esquema  
   
-1.  Crie duas tabelas na **tempdb** banco de dados:  
+1.  Crie duas tabelas no banco de dados **tempdb** :  
   
     ```  
     USE tempdb  
@@ -287,7 +287,7 @@ ms.locfileid: "66013805"
   
 5.  Execute o arquivo TestQuery.vbs clicando nele no Windows Explorer.  
   
-     Esse é o resultado:  
+     Este é o resultado:  
   
     ```  
     <root>  
@@ -304,10 +304,10 @@ ms.locfileid: "66013805"
     </root>  
     ```  
   
-## <a name="see-also"></a>Consulte também  
- [float e real &#40;Transact-SQL&#41;](/sql/t-sql/data-types/float-and-real-transact-sql)   
- [nchar and nvarchar &#40;Transact-SQL&#41;](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)   
+## <a name="see-also"></a>Consulte Também  
+ [&#41;de Transact-SQL de &#40;flutuante e real](/sql/t-sql/data-types/float-and-real-transact-sql)   
+ [nchar e nvarchar &#40;&#41;de Transact-SQL](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)   
  [Instalando o SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)   
- [Usando anotados a esquemas XSD em consultas &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
+ [Usando esquemas XSD anotados em consultas &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
   
   

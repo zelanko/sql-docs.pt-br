@@ -1,5 +1,5 @@
 ---
-title: Executando um DiffGram usando SQLXML Classes gerenciadas | Microsoft Docs
+title: Executando um DiffGram usando classes gerenciadas SQLXML | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3d8756bb3dc7b030541159c2aa127162907aa4b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013046"
 ---
 # <a name="executing-a-diffgram-by-using-sqlxml-managed-classes"></a>Executando um DiffGram usando as classes gerenciadas SQLXML
-  Este exemplo mostra como executar um arquivo DiffGram na [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ambiente .NET Framework para aplicar a dados é atualizado para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tabelas usando Classes gerenciadas SQLXML (Microsoft.Data.SqlXml).  
+  Este exemplo mostra como executar um arquivo DiffGram no ambiente de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework para aplicar atualizações de dados a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tabelas usando classes gerenciadas SQLXML (Microsoft. Data. SQLXML).  
   
  Neste exemplo, o DiffGram atualiza as informações do cliente (CompanyName e ContactName) de ALFKI do cliente.  
   
@@ -52,9 +52,9 @@ ms.locfileid: "66013046"
 </ROOT>  
 ```  
   
- O  **\<antes de >** bloco inclui um  **\<cliente >** elemento (**diffgr:ID="customer4 ="Customer1"** ). O  **\<DataInstance >** inclusões em bloco correspondente  **\<cliente >** elemento com o mesmo **id**. O  **\<cliente >** elemento no  **\<NewDataSet >** também especifica **diffgr: HasChanges = "modified"** . Isso indica uma operação de atualização e o registro de cliente na tabela Cust é atualizado adequadamente. Observe que, se o **diffgr: HasChanges** atributo não for especificado, a lógica de processamento de DiffGram ignora esse elemento e nenhuma atualização será executada.  
+ O ** \<bloco before>** inclui um ** \<elemento Customer>** (**diffgr: ID = "Customer1"**). O bloco de ** \<>de DataInstance** inclui o elemento de ** \<>do cliente** correspondente com a mesma **ID**. O ** \<elemento>do cliente** na ** \<>de NewDataSet** também especifica **diffgr: hasChanges = "Modified"**. Isso indica uma operação de atualização e o registro de cliente na tabela Cust é atualizado adequadamente. Observe que, se o atributo **diffgr: hasChanges** não for especificado, a lógica de processamento de DiffGram ignorará esse elemento e nenhuma atualização será executada.  
   
- A seguir está o código para um aplicativo em C# tutorial que mostra como usar as Classes gerenciadas SQLXML para executar o DiffGram acima e atualizar duas tabelas (Cust, Ord) você também criará os **tempdb** banco de dados.  
+ Este é o código para um aplicativo de tutorial em C# que mostra como usar as classes gerenciadas SQLXML para executar o DiffGram acima e atualizar duas tabelas (Cust, Ord) que você também criará no banco de dados **tempdb** .  
   
 ```  
 using System;  
@@ -128,7 +128,7 @@ class Test
     </xsd:schema>  
     ```  
   
-3.  Crie estas tabelas na **tempdb** banco de dados.  
+3.  Crie essas tabelas no banco de dados **tempdb** .  
   
     ```  
     CREATE TABLE Cust(  
@@ -177,7 +177,7 @@ class Test
   
 8.  No prompt de comando, execute DiffgramSample.exe.  
   
-## <a name="see-also"></a>Consulte também  
- [Exemplos de DiffGram &#40;SQLXML 4.0&#41;](diffgram-examples-sqlxml-4-0.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Exemplos de DiffGram &#40;SQLXML 4,0&#41;](diffgram-examples-sqlxml-4-0.md)  
   
   

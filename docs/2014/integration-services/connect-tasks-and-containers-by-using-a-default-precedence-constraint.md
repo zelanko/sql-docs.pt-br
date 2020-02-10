@@ -1,5 +1,5 @@
 ---
-title: Conecte tarefas e contêineres utilizando uma restrição de precedência padrão | Microsoft Docs
+title: Conectar tarefas e contêineres usando uma restrição de precedência padrão | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4e5c0ad2405c0d62b703dcb7fa668837e7e47386
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060426"
 ---
 # <a name="connect-tasks-and-containers-by-using-a-default-precedence-constraint"></a>Como conectar tarefas e contêineres por meio de uma restrição de precedência padrão
@@ -30,7 +30,7 @@ ms.locfileid: "66060426"
   
 #### <a name="to-set-the-default-value-for-precedence-constraints"></a>Para definir o valor padrão de restrições de precedência  
   
-1.  Abra [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
+1.  Abra o [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 2.  No menu **Ferramentas** , clique em **Opções**.  
   
@@ -54,9 +54,9 @@ ms.locfileid: "66060426"
   
 5.  Para salvar o pacote atualizado, clique em **Salvar Itens Selecionados** no menu **Arquivo** .  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Restrições de precedência](control-flow/precedence-constraints.md)   
- [Defina o valor de uma restrição de precedência usando o Menu de atalho](../../2014/integration-services/set-the-value-of-a-precedence-constraint-by-using-the-shortcut-menu.md)   
+ [Definir o valor de uma restrição de precedência usando o menu de atalho](../../2014/integration-services/set-the-value-of-a-precedence-constraint-by-using-the-shortcut-menu.md)   
  [Definir as propriedades de uma restrição de precedência](../../2014/integration-services/set-the-properties-of-a-precedence-constraint.md)   
  [Usar uma expressão em uma restrição de precedência](../../2014/integration-services/use-an-expression-in-a-precedence-constraint.md)  
   

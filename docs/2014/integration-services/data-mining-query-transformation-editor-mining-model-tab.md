@@ -1,5 +1,5 @@
 ---
-title: Editor de transformação de consulta de mineração de dados (guia modelo de mineração) | Microsoft Docs
+title: Editor de transformação consulta de mineração de dados (guia modelo de mineração) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 88dbc58a205a87f1b4c2e187537eef9d9c493cf1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059764"
 ---
 # <a name="data-mining-query-transformation-editor-mining-model-tab"></a>Editor de Transformação Consultas de Mineração de Dados (guia Modelo de Mineração)
@@ -30,7 +30,7 @@ ms.locfileid: "66059764"
  **Conexão**  
  Selecione uma conexão do Analysis Services existente usando a caixa de listagem ou crie uma nova conexão usando o botão **Novo** descrito a seguir.  
   
- **Nova**  
+ **Novo**  
  Crie uma nova conexão usando a caixa de diálogo **Adicionar Gerenciador de Conexões do Analysis Services** .  
   
  **Estrutura de mineração**  
@@ -39,8 +39,8 @@ ms.locfileid: "66059764"
  **Modelos de mineração**  
  Exiba a lista de modelos de mineração associada com a estrutura de mineração de dados selecionada.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de Transformação Consultas de Mineração de Dados &#40;guia Consulta&#41;](../../2014/integration-services/data-mining-query-transformation-editor-query-tab.md)  
+ [Editor de transformação consulta de mineração de dados &#40;guia consulta&#41;](../../2014/integration-services/data-mining-query-transformation-editor-query-tab.md)  
   
   

@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b6c7b5cff8b288e688f2744c615d62bd8417acf5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62856641"
 ---
 # <a name="job-activity-monitor-filter-settings"></a>Monitor de atividade do trabalho (Configurações de Filtro)
@@ -59,12 +59,12 @@ ms.locfileid: "62856641"
  Essa caixa sem-nome fornece uma descrição curta dos critérios à medida que eles são selecionados.  
   
  **Aplicar filtro**  
- Para aplicar o filtro, clique em **Aplicar filtro** e, em seguida, clique em **Okey**. Para manter as configurações de filtro na **configurações de filtro** diálogo caixa, mas não aplicá-las, desmarque a opção **Aplicar filtro**e, em seguida, clique em **Okey**, para exibir todas as linhas.  
+ Para aplicar o filtro, clique em **aplicar filtro** e clique em **OK**. Para manter as configurações de filtro na caixa de diálogo **configurações de filtro** , mas não aplicá-las, desmarque **aplicar filtro**e clique em **OK**para exibir todas as linhas.  
   
- **Liberada**  
+ **Limpar**  
  Retorna as configurações de filtro para as configurações padrão.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Monitorar Atividade do Trabalho](../../ssms/agent/monitor-job-activity.md)  
   
   

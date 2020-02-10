@@ -1,5 +1,5 @@
 ---
-title: 'Tarefa 2 (opcional): Criando uma exibição de assinatura do MDS usando o Master Data Manager | Microsoft Docs'
+title: 'Tarefa 2 (opcional): criando uma exibição de assinatura do MDS usando Master Data Manager | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,40 +11,40 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: e6cbed42d059714dde1c82dbb50edf8ccc1dd65b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65484719"
 ---
-# <a name="task-2-optional-creating-a-mds-subscription-view-using-master-data-manager"></a>Tarefa 2 (opcional): Criar uma exibição de assinatura do MDS usando o Master Data Manager
-  Nesta tarefa, você criará uma exibição de assinatura para expor a **Supplier** entidade na **fornecedores** modelo para outros aplicativos. Você não utiliza essa exibição na versão atual do tutorial.  
+# <a name="task-2-optional-creating-a-mds-subscription-view-using-master-data-manager"></a>Tarefa 2 (opcional): Criando uma exibição de assinatura do MDS usando o Master Data Manager
+  Nesta tarefa, você cria uma exibição de assinatura para expor a entidade **Supplier** no modelo **suppliers** para outros aplicativos. Você não utiliza essa exibição na versão atual do tutorial.  
   
-1.  Alterne para a página principal do **Master Data Manager** ([http://localhost/MDS](http://localhost/MDS)), clicando em **SQL Server 2012 Master Data Services** na parte superior.  
+1.  Alterne para a página principal do **Master Data Manager** ([http://localhost/MDS](http://localhost/MDS)) clicando em **SQL Server 2012 Master Data Services** na parte superior.  
   
-2.  Clique em **gerenciamento de integração**.  
+2.  Clique em **Gerenciamento de integração**.  
   
-3.  Clique em **criar exibições** na barra de menus.  
+3.  Clique em **criar modos de exibição** na barra de menus.  
   
-     ![Adicionar um novo botão de modo de exibição de assinatura](../../2014/tutorials/media/et-creatingamdssubscriptionviewusingmdm-01.jpg "adicionar um novo botão de modo de exibição de assinatura")  
+     ![Botão Adicionar uma Nova Exibição de Assinatura](../../2014/tutorials/media/et-creatingamdssubscriptionviewusingmdm-01.jpg "Botão Adicionar uma Nova Exibição de Assinatura")  
   
-4.  Clique em **+ (adição)** ícone na barra de ferramentas para criar uma exibição de assinatura.  
+4.  Clique no ícone **+ (mais)** na barra de ferramentas para criar uma exibição de assinatura.  
   
-5.  No **criar exibição de assinatura** painel, digite **fornecedores** para **nome de exibição de assinatura**.  
+5.  No painel **criar exibição de assinatura** , digite **fornecedores** para **nome de exibição de assinatura**.  
   
 6.  Selecione **Fornecedores** como **Modelo**.  
   
 7.  Selecione **VERSION_1** como **Versão**.  
   
-8.  Selecione **Supplier** para **entidade**.  
+8.  Selecione **fornecedor** para **entidade**.  
   
-9. Selecione **membros folha** para **formato**.  
+9. Selecione **membros folha** para o **formato**.  
   
-     ![Salve o botão de modo de exibição de assinatura](../../2014/tutorials/media/et-creatingamdssubscriptionviewusingmdm-02.jpg "Salvar botão de modo de exibição de assinatura")  
+     ![Botão Salvar Exibição de Assinatura](../../2014/tutorials/media/et-creatingamdssubscriptionviewusingmdm-02.jpg "Botão Salvar Exibição de Assinatura")  
   
-10. Clique em **salvar** na barra de ferramentas para salvar a exibição de assinatura. Essa ação cria um modo de exibição no SQL Server denominada **fornecedores**. Você pode verificar isso usando o SQL Server Management Studio (SSMS).  
+10. Clique em **salvar** na barra de ferramentas para salvar a exibição de assinatura. Essa ação cria uma exibição em SQL Server **fornecedores**nomeados. Você pode verificar isso usando o SQL Server Management Studio (SSMS).  
   
 ## <a name="next-step"></a>Próxima etapa  
- [Tarefa 3 &#40;opcional&#41;: Examinando exibições de assinatura](task-3-optional-reviewing-the-subscription-views.md)  
+ [Tarefa 3 &#40;&#41; opcional: revisando as exibições de assinatura](task-3-optional-reviewing-the-subscription-views.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Executando um diagrama de atualização usando o ADO (SQLXML 4.0) | Microsoft Docs
+title: Executando um updategram usando ADO (SQLXML 4,0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 54ee962310cb1ac41e442155a146afec8758c64f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014842"
 ---
 # <a name="executing-an-updategram-by-using-ado-sqlxml-40"></a>Executando um diagrama de atualização usando o ADO (SQLXML 4.0)
@@ -26,19 +26,19 @@ ms.locfileid: "66014842"
   
  Neste aplicativo de exemplo:  
   
--   O **conn** objeto (**ADODB. Conexão**) estabelece uma conexão a uma instância em execução do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em um computador servidor específico.  
+-   O objeto **Conn** (**ADODB. Conexão**) estabelece uma conexão com uma instância em execução do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em um computador servidor específico.  
   
--   O **cmd** objeto (**ADODB**) é executado sobre a conexão estabelecida.  
+-   O objeto **cmd** (**ADODB. Command**) é executado na conexão estabelecida.  
   
 -   O dialeto do comando é definido como DBGUID_MSSQLXML.  
   
--   O diagrama de atualização é copiado para o fluxo de comando (**strmIn**).  
+-   O updategram é copiado para o fluxo de comando (**strmIn**).  
   
--   Fluxo de saída do comando é definido como o **StrmOut** objeto (**ADODB. Stream**) receber qualquer dados retornados.  
+-   O fluxo de saída do comando é definido como o objeto **StrmOut** (**ADODB. Stream**) para receber todos os dados retornados.  
   
 -   Por fim, o comando (diagrama de atualização) é executado.  
   
- Segue o código de exemplo:  
+ Veja o código de exemplo:  
   
 ```vb  
 Private Sub Form_Load()  
@@ -182,7 +182,7 @@ End Sub
 ```  
   
 ## <a name="passing-parameters"></a>Passando parâmetros  
- Nos aplicativos do Visual Basic fornecidos anteriormente, os parâmetros não são passados. Neste aplicativo, o **ContactID** e **MiddleName** valores são passados como entrada com parâmetros para o diagrama de atualização.  
+ Nos aplicativos do Visual Basic fornecidos anteriormente, os parâmetros não são passados. Neste aplicativo, os valores **ContactID** e **MiddleName** são passados como entrada parametrizada para o updategram.  
   
 ```vb  
 Private Sub Form_Load()  

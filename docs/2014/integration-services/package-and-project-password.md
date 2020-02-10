@@ -1,5 +1,5 @@
 ---
-title: Pacote e a senha do projeto | Microsoft Docs
+title: Senha do pacote e do projeto | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ad916fddff23bcffbed37bab76b0b49d67c6c484
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056984"
 ---
 # <a name="package-and-project-password"></a>Senha do Pacote e do Projeto
@@ -27,7 +27,7 @@ ms.locfileid: "66056984"
  **Senha**  
  Digite a senha.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Visão geral de segurança &#40;Integration Services&#41;](security/security-overview-integration-services.md)   
  [Caixa de diálogo Nível de Proteção do Pacote e do Projeto](../../2014/integration-services/package-and-project-protection-level-dialog-box.md)  
   

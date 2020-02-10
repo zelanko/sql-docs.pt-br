@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a71ee85fc4dce4abd7d8ef91a8f22529ce8d5a0f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483011"
 ---
 # <a name="custom-workflow-xml-description-master-data-services"></a>Descrição XML do fluxo de trabalho personalizado (Master Data Services)
@@ -62,20 +62,22 @@ ms.locfileid: "65483011"
   
  A tabela a seguir descreve algumas das marcas contidas neste XML.  
   
-|Marca|Descrição|  
+|Marca|DESCRIÇÃO|  
 |---------|-----------------|  
-|\<Type>|O texto que você inseriu na caixa de texto **Tipo de fluxo de trabalho** no [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] para identificar qual assembly de fluxo de trabalho personalizado deve ser carregado.|  
-|\<SendData>|Um valor booliano controlado pela caixa de seleção **Incluir dados de membro na mensagem** no [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]. Um valor de 1 significa que a seção \<MemberData> é enviada; caso contrário a seção \<MemberData> não é enviada.|  
+|\<Tipo>|O texto que você inseriu na caixa de texto **Tipo de fluxo de trabalho** no [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] para identificar qual assembly de fluxo de trabalho personalizado deve ser carregado.|  
+|
+  \<SendData>|Um valor booliano controlado pela caixa de seleção **Incluir dados de membro na mensagem** no [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]. Um valor de 1 significa que a seção \<MemberData> é enviada; caso contrário a seção \<MemberData> não é enviada.|  
 |<Server_URL>|O texto que você inseriu na caixa de texto **Site de fluxo de trabalho** no [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)].|  
 |<Action_ID>|O texto que você inseriu na caixa de texto **Nome do fluxo de trabalho** no [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)].|  
-|\<MemberData>|Contém os dados do membro que disparou a ação do fluxo de trabalho. Isso será incluído apenas se o valor de \<SendData> for 1.|  
-|\<Enter*xxx*>|Esse conjunto de marcas contém metadados sobre a criação do membro, por exemplo, quando foi criado e quem o criou.|  
+|
+  \<MemberData>|Contém os dados do membro que disparou a ação do fluxo de trabalho. Isso será incluído apenas se o valor de \<SendData> for 1.|  
+|\<Digite*xxx*>|Esse conjunto de marcas contém metadados sobre a criação do membro, por exemplo, quando foi criado e quem o criou.|  
 |\<LastChg*xxx*>|Esse conjunto de marcas contém metadados sobre as últimas alterações feitas no membro, por exemplo, quando a alteração foi feita e quem a fez.|  
-|\<Name>|O primeiro atributo do membro que foi alterado. Este membro de exemplo contém apenas os atributos Name e Code.|  
-|\<Code>|O próximo atributo do membro que foi alterado. Se esse membro de exemplo tinha mais atributos, eles viriam depois deste.|  
+|\<Nome>|O primeiro atributo do membro que foi alterado. Este membro de exemplo contém apenas os atributos Name e Code.|  
+|\<> de código|O próximo atributo do membro que foi alterado. Se esse membro de exemplo tinha mais atributos, eles viriam depois deste.|  
   
-## <a name="see-also"></a>Consulte também  
- [Criar um fluxo de trabalho personalizado &#40;Master Data Services&#41;](create-a-custom-workflow-master-data-services.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Criar um &#40;de fluxo de trabalho personalizado Master Data Services&#41;](create-a-custom-workflow-master-data-services.md)   
  [Exemplo de fluxo de trabalho personalizado &#40;Master Data Services&#41;](create-a-custom-workflow-example.md)  
   
   

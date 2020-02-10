@@ -1,5 +1,5 @@
 ---
-title: Execute o Editor da tarefa de processo (página geral) | Microsoft Docs
+title: Editor da tarefa Executar processo (página Geral) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 743f8d8930652deadf3698ea16440b3361ae1789
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059072"
 ---
 # <a name="execute-process-task-editor-general-page"></a>Editor da Tarefa Executar Processo (página Geral)
@@ -36,9 +36,9 @@ ms.locfileid: "66059072"
  **Descrição**  
  Digite uma descrição para a tarefa Executar Processo.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor da Tarefa Executar Processo &#40;Página Processo&#41;](../../2014/integration-services/execute-process-task-editor-process-page.md)   
+ [Editor da tarefa Executar processo &#40;página processo&#41;](../../2014/integration-services/execute-process-task-editor-process-page.md)   
  [Página Expressões](expressions/expressions-page.md)  
   
   

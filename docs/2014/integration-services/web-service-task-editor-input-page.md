@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 63b88aa365139c4d22d7a074f2a30e64947158b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054522"
 ---
 # <a name="web-service-task-editor-input-page"></a>Editor da Tarefa Serviço da Web (página Entrada)
@@ -48,13 +48,13 @@ ms.locfileid: "66054522"
  **Variável**  
  Marque as caixas de seleção para usar variáveis para fornecer entradas.  
   
- **Value**  
+ **Valor**  
  Se as caixas de seleção Variável forem marcadas, selecione as variáveis na lista para fornecer as entradas; caso contrário, digite os valores a serem usados nas entradas.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor da Tarefa Serviço da Web &#40;Página Geral&#41;](general-page-of-integration-services-designers-options.md)   
- [Editor da Tarefa Serviço da Web &#40;Página Saída&#41;](../../2014/integration-services/web-service-task-editor-output-page.md)   
+ [Editor da tarefa serviço da Web &#40;página Geral&#41;](general-page-of-integration-services-designers-options.md)   
+ [Editor da tarefa serviço da Web &#40;página saída&#41;](../../2014/integration-services/web-service-task-editor-output-page.md)   
  [Página Expressões](expressions/expressions-page.md)  
   
   

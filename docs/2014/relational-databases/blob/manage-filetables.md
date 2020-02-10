@@ -14,16 +14,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b6653f2340dfbcf6265c527f85d87d60a3680f30
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66009987"
 ---
 # <a name="manage-filetables"></a>Gerenciar FileTables
   Descreve tarefas administrativas comuns para gerenciar FileTables.  
   
-##  <a name="HowToEnumerate"></a> Como Obter uma lista de FileTables e objetos relacionados  
+##  <a name="HowToEnumerate"></a> Como obter uma lista de FileTables e objetos relacionados  
  Para obter uma lista de FileTables, consulte um das exibições do catálogo a seguir:  
   
 -   [sys.filetables &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-filetables-transact-sql)  
@@ -79,7 +79,7 @@ GO
   
 -   Nenhum dos diretórios em nível de banco de dados na instância estará visível se FILESTREAM for desabilitado no nível de instância.  
   
-###  <a name="HowToDisable"></a> Como Desabilitar e reabilitar o acesso não transacional no nível de banco de dados  
+###  <a name="HowToDisable"></a> Como desabilitar e reabilitar o acesso não transacional no nível de banco de dados  
  Para obter mais informações, veja [Opções ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
   
  **Para desabilitar o acesso não transacional**  
@@ -231,7 +231,7 @@ GO
 ##  <a name="OtherDBCC"></a> DBCC e FileTables  
  Você pode usar DBCC CHECKCONSTRAINTS para validar as restrições em uma FileTable, inclusive restrições definidas pelo sistema.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Compatibilidade do FileTable com outros recursos do SQL Server](filetable-compatibility-with-other-sql-server-features.md)   
  [DDL, funções, procedimentos armazenados e exibições de FileTable](../views/views.md)  
   

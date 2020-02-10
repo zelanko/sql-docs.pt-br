@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6037c1d31b52fba0f961020f1e514b3354e535b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65484040"
 ---
 # <a name="change-a-version-flag-name-master-data-services"></a>Alterar o nome de um sinalizador de versão (Master Data Services)
@@ -43,7 +43,7 @@ ms.locfileid: "65484040"
   
 6.  Pressione ENTER.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Versões &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)   
  [Atribuir um sinalizador a uma versão &#40;Master Data Services&#41;](../../2014/master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
   

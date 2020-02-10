@@ -11,42 +11,42 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ca7c735f00f4fa5c7baf102b26edb6634f57b90f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65489248"
 ---
-# <a name="task-3-creating-and-running-a-data-quality-project-for-matching"></a>Tarefa 3: Criar e executar um projeto de qualidade de dados para correspondência
+# <a name="task-3-creating-and-running-a-data-quality-project-for-matching"></a>Tarefa 3: Criando e executando um projeto de qualidade de dados para correspondência
   Nesta tarefa, você criará um Projeto do Data Quality para a atividade de correspondência e executará o processo de correspondência nos dados de fornecedor limpos para remover as duplicatas nos dados.  
   
-1.  Na página principal do **cliente DQS**, clique em **novo projeto de qualidade de dados**.  
+1.  Na página principal do **cliente do DQS**, clique em **novo projeto de qualidade de dados**.  
   
-2.  Tipo de **remover duplicatas do fornecedor** da **nome do projeto**.  
+2.  Digite **remover duplicatas do fornecedor** do **nome do projeto**.  
   
-3.  Selecione **fornecedores** na lista de bases de dados para o **usar a Base de dados de Conhecimento** campo. Você criou uma política de correspondência nessa base de dados de conhecimento na lição anterior.  
+3.  Selecione **fornecedores** na lista de KBS para o campo **usar base de dados de conhecimento** . Você criou uma política de correspondência nessa base de dados de conhecimento na lição anterior.  
   
-4.  Selecione **correspondentes** da **lista de atividades** no painel inferior direito.  
+4.  Selecione **correspondência** na **lista de atividades** no painel inferior direito.  
   
-     ![Novo projeto de qualidade de dados - correspondência selecionada](../../2014/tutorials/media/et-creatingandrunningadqpformatching.jpg "novo projeto de qualidade de dados - correspondência selecionada")  
+     ![Projeto de Qualidade de Novos Dados - Correspondência selecionada](../../2014/tutorials/media/et-creatingandrunningadqpformatching.jpg "Projeto de Qualidade de Novos Dados - Correspondência selecionada")  
   
-5.  Clique em **Avançar**.  
+5.  Clique em **Próximo**.  
   
 6.  Na página **Mapear** , selecione **Arquivo do Excel** em **Fonte de Dados**.  
   
-7.  Clique em **navegue** e selecione **Cleansed Supplier List**, que é o arquivo de saída da atividade de limpeza.  
+7.  Clique em **procurar** e selecione **lista de fornecedores limpos. xls**, que é o arquivo de saída da atividade de limpeza.  
   
-8.  Mapa **SupplierID** coluna de origem para o **Supplier ID** domínio, **Supplier Name** coluna **Supplier Name** edomínio**ContactEmailAddress** coluna para **Contact Email** domínio.  
+8.  Mapeie a coluna de origem **CódigoDoFornecedor** para o domínio da **ID** do fornecedor, a coluna **nome do fornecedor** para **nome do fornecedor** domínio e a coluna **ContactEmailAddress** para contatar o domínio de **email** .  
   
-9. Clique em **próxima** para alternar para o **correspondentes** página.  
+9. Clique em **Avançar** para alternar para a página **correspondente** .  
   
-10. Clique em **iniciar** para iniciar o processo de correspondência. Você deverá visualizar resultados semelhantes aos da tarefa anterior, pois usou o mesmo arquivo de entrada para definir a política de correspondência.  
+10. Clique em **Iniciar** para iniciar o processo de correspondência. Você deverá visualizar resultados semelhantes aos da tarefa anterior, pois usou o mesmo arquivo de entrada para definir a política de correspondência.  
   
 11. Revise todos os registros correspondentes e sua pontuação na caixa de listagem. Os resultados deverão ser iguais aos exibidos na tarefa anterior. Consulte as etapas na tarefa anterior para analisar os resultados dessa atividade de correspondência.  
   
-12. Clique em **próxima** para alternar para o **exportar** página.  
+12. Clique em **Avançar** para alternar para a página **Exportar** .  
   
 ## <a name="next-step"></a>Próxima etapa  
- [Tarefa 4: Exportando os resultados de correspondência de atividade para um arquivo do Excel](../../2014/tutorials/task-4-exporting-the-results-from-matching-activity-to-an-excel-file.md)  
+ [Tarefa 4: Exportando os resultados da atividade de correspondência para um arquivo do Excel](../../2014/tutorials/task-4-exporting-the-results-from-matching-activity-to-an-excel-file.md)  
   
   

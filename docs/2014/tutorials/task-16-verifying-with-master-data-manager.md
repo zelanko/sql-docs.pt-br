@@ -1,5 +1,5 @@
 ---
-title: 'Tarefa 16: Verificando com o Master Data Manager | Microsoft Docs'
+title: 'Tarefa 16: verificando com Master Data Manager | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,30 +11,30 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 35dd2da7f6cf6598918cd9d109b97f3d314556d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65484697"
 ---
-# <a name="task-16-verifying-with-master-data-manager"></a>Tarefa 16: Verificar com o Master Data Manager
+# <a name="task-16-verifying-with-master-data-manager"></a>Tarefa 16: Verificando com o Master Data Manager
   Nesta tarefa, você verificará o status do trabalho em lotes enviado pelo pacote SSIS e verificará se os dados foram carregados no servidor MDS usando o Master Data Manager.  
   
-1.  Inicie **Master Data Manager** ([http://localhost/MDS](http://localhost/MDS)). Se já estiver aberto, clique em **Microsoft SQL Server Master Data Services** na parte superior para alternar para o **home page do**.  
+1.  Iniciar **Master Data Manager** ([http://localhost/MDS](http://localhost/MDS)). Se ele já estiver aberto, clique em **Microsoft SQL Server Master Data Services** na parte superior para alternar para o **Home Page**.  
   
-2.  Clique em **gerenciamento de integração**.  
+2.  Clique em **Gerenciamento de integração**.  
   
-3.  Observe que há um lote com denominado **EIMBatch** que você enviou na lista. Clique em **importação de dados** na barra de menus se você não vir a tela a seguir.  
+3.  Observe que há um lote com o nome **EIMBatch** que você enviou na lista. Clique em **importar dados** na barra de menus se você não vir a tela a seguir.  
   
-     ![Lote EIM](../../2014/tutorials/media/et-verifyingwithmasterdatamanager.jpg "lote EIM")  
+     ![Lote EIM](../../2014/tutorials/media/et-verifyingwithmasterdatamanager.jpg "Lote EIM")  
   
-4.  Alternar de volta para a home page por clique **SQL Server 2012 Master Data Services** na parte superior.  
+4.  Volte para a home page clicando em **SQL Server 2012 Master Data Services** na parte superior.  
   
-5.  Certifique-se de que **fornecedores** modelo é selecionado para **modelo** e **VERSION_1** está selecionado para **versão**e clique em  **Explorer**.  
+5.  Verifique se modelo de **fornecedores** está selecionado para **modelo** e **VERSION_1** está selecionado para **versão**e clique em **Gerenciador**.  
   
-6.  Você pode consultar o pacote SSIS de dados importado para o MDS. Os dados devem ser limpos e não ter nenhuma duplicata **código** valores (Observação: **SupplierID** coluna no Excel corresponde à **código** atributo da entidade Supplier no MDS).  
+6.  Você pode consultar o pacote SSIS de dados importado para o MDS. Os dados devem ser limpos e não têm valores de **código** de duplicatas (Observação: a coluna **CódigoDoFornecedor** no Excel corresponde ao atributo de **código** da entidade fornecedor no MDS).  
   
 ## <a name="next-step"></a>Próxima etapa  
- [Tarefa 17: Revisando a limpeza do DQS projeto criado pelo pacote SSIS](../../2014/tutorials/task-17-reviewing-dqs-cleansing-project-created-by-the-ssis-package.md)  
+ [Tarefa 17: Examinando o projeto de limpeza do DQS criado pelo pacote SSIS](../../2014/tutorials/task-17-reviewing-dqs-cleansing-project-created-by-the-ssis-package.md)  
   
   

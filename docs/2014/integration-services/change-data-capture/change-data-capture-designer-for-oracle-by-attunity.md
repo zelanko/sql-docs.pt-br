@@ -13,20 +13,20 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 768a9c821c2c8f663bf65c58ed495993795b2eb9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62835942"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity"></a>Change Data Capture Designer para Oracle da Attunity
   O CDC Designer Console é usado para desenvolver e manter Instâncias Oracle CDC. O CDC Designer Console é um snap-in do Console de Gerenciamento Microsoft que contém os seguintes elementos:  
   
--   Assistente de Nova Instância: este assistente cria uma nova Instância Oracle CDC. Para obter informações sobre o uso do New Instance Wizard, consulte [Use the New Instance Wizard](use-the-new-instance-wizard.md).  
+-   New Instance Wizard: este assistente cria uma nova Instância Oracle CDC. Para obter informações sobre o uso do New Instance Wizard, consulte [Use the New Instance Wizard](use-the-new-instance-wizard.md).  
   
--   Visualizador de Propriedades de Instância CDC: esta é uma exibição encaixada que mostra o status e a configuração da instância CDC selecionada. Para obter informações sobre o visualizador de propriedades, consulte [Como gerenciar uma instância CDC](manage-a-cdc-instance.md).  
+-   CDC Instance Properties Viewer: esta é uma exibição encaixada que mostra o status e a configuração da instância CDC selecionada. Para obter informações sobre o visualizador de propriedades, consulte [Como gerenciar uma instância CDC](manage-a-cdc-instance.md).  
   
--   Editor de Propriedades de Instância CDC: esta caixa de diálogo é usada para editar qualquer instância de Serviço Oracle CDC existente. Para obter informações sobre as propriedades da instância CDC, consulte [Edit Instance Properties](edit-instance-properties.md).  
+-   CDC Instance Properties Editor: esta caixa de diálogo é usada para editar qualquer instância de Serviço Oracle CDC existente. Para obter informações sobre as propriedades da instância CDC, consulte [Edit Instance Properties](edit-instance-properties.md).  
   
 ## <a name="in-this-documentation"></a>Nesta documentação  
   
@@ -34,7 +34,7 @@ ms.locfileid: "62835942"
   
 -   [Tipos de dados de instância Oracle CDC](oracle-cdc-instance-data-types.md)  
   
--   [Tratamento de erro](error-handling.md)  
+-   [Tratamento de erros](error-handling.md)  
   
 -   [A instância Oracle CDC](the-oracle-cdc-instance.md)  
   
@@ -44,9 +44,9 @@ ms.locfileid: "62835942"
   
 -   [Guia de instruções do Change Data Capture Designer para Oracle da Attunity](change-data-capture-designer-for-oracle-by-attunity-how-to-guide.md)  
   
--   [Conexão de SQL Server para a criação de instância](sql-server-connection-for-instance-creation.md)  
+-   [Conexão do SQL Server para a criação de instância](sql-server-connection-for-instance-creation.md)  
   
--   [Propriedades avançadas de conexão](advanced-connection-properties.md)  
+-   [Propriedades Avançadas de Conexão](advanced-connection-properties.md)  
   
 -   [Credenciais Oracle para executar scripts](oracle-credentials-for-running-script.md)  
   
@@ -54,6 +54,6 @@ ms.locfileid: "62835942"
   
 -   [Script de implantação de instância CDC](cdc-instance-deployment-script.md)  
   
--   [Permissões necessárias para conexão do SQL Server para o CDC Designer](sql-server-connection-required-permissions-for-the-cdc-designer.md)  
+-   [Permissões necessárias para conexão do SQL Server para o Designer CDC](sql-server-connection-required-permissions-for-the-cdc-designer.md)  
   
   

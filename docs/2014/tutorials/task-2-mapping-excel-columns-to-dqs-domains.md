@@ -1,5 +1,5 @@
 ---
-title: 'Tarefa 2: Mapeando colunas do Excel para domínios do DQS | Microsoft Docs'
+title: 'Tarefa 2: mapeando colunas do Excel para domínios do DQS | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,44 +11,44 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 29d45e06dcd3e67af3abbc6b356d44877e40f46b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65484700"
 ---
-# <a name="task-2-mapping-excel-columns-to-dqs-domains"></a>Tarefa 2: Mapear colunas do Excel para domínios do DQS
+# <a name="task-2-mapping-excel-columns-to-dqs-domains"></a>Tarefa 2: Mapeando colunas do Excel para domínios do DQS
     
 1.  Na página **Mapear** , selecione **Arquivo do Excel** em **Fonte de Dados**.  
   
-2.  Clique em **navegue**, selecione **Suppliers**e clique em **abrir**.  
+2.  Clique em **procurar**, selecione **suppliers. xlsx**e clique em **abrir**.  
   
-3.  Selecione **IncomingSuppliers$** para o **planilha**.  
+3.  Selecione **IncomingSuppliers $** para a **planilha**.  
   
-4.  Mapeie as colunas conforme mostrado na tabela e na captura de tela a seguir. Ao criar mapeamentos para o **estado** domínio, clique em **adicionar um mapeamento de coluna** na barra de ferramentas localizada imediatamente acima da lista.  
+4.  Mapeie as colunas conforme mostrado na tabela e na captura de tela a seguir. Ao criar mapeamentos para o domínio de **estado** , clique no botão **Adicionar um mapeamento de coluna** na barra de ferramentas localizada logo acima da lista.  
   
     > [!TIP]  
-    >  Você não estiver usando **Supplier ID** coluna/domínio para limpeza. Você usará o **Supplier ID** domínio posteriormente na atividade de correspondência.  
+    >  Você não está usando a coluna/domínio da **ID do fornecedor** para limpeza. Você usará o domínio da **ID do fornecedor** mais tarde na atividade de correspondência.  
   
     |Coluna do Excel|Domínio do DQS|  
     |------------------|----------------|  
     |Supplier Name|Supplier Name|  
     |ContactEmailAddress|Email de contato|  
     |Linha de Endereço|Linha de Endereço|  
-    |Cidade|Cidade|  
+    |City|City|  
     |Estado|Estado|  
-    |País (clique em **+ (Adicionar um mapeamento de coluna)** barra de ferramentas para adicionar uma linha)|País|  
-    |Zip Code|CEP|  
+    |País (clique na barra de ferramentas **(adicionar um mapeamento de coluna)** para adicionar uma linha)|País/Região|  
+    |Zip Code|Zip|  
   
-     ![Mapeamentos de colunas do Excel para domínios](../../2014/tutorials/media/et-mappingexcelcolumnstodqsdomains-01.jpg "mapeamentos de colunas do Excel para domínios")  
+     ![Mapeamentos de colunas do Excel para Domínios](../../2014/tutorials/media/et-mappingexcelcolumnstodqsdomains-01.jpg "Mapeamentos de colunas do Excel para Domínios")  
   
-5.  Como você mapeou todos os domínios individuais dentro de **Address Validation** domínio composto, o domínio composto participa automaticamente o processo de limpeza. Clique em **exibir/Selecionar domínios compostos** botão para ver que o **validação de endereço** domínio composto é selecionada automaticamente e, em seguida, clique em **Okey**.  
+5.  Como você mapeou todos os domínios individuais dentro do domínio composto de **validação de endereço** , o domínio composto participa automaticamente do processo de limpeza. Clique no botão **Exibir/selecionar domínios compostos** para ver se o domínio composto de **validação de endereço** está selecionado automaticamente e clique em **OK**.  
   
-     ![Caixa de diálogo Exibir/Selecionar domínios compostos](../../2014/tutorials/media/et-mappingexcelcolumnstodqsdomains-02.jpg "caixa de diálogo Exibir/Selecionar domínios compostos")  
+     ![Caixa de diálogo Exibir/Selecionar Domínios Compostos](../../2014/tutorials/media/et-mappingexcelcolumnstodqsdomains-02.jpg "Caixa de diálogo Exibir/Selecionar Domínios Compostos")  
   
-6.  Clique em **próxima** para alternar para o **limpar** página.  
+6.  Clique em **Avançar** para alternar para a página **limpar** .  
   
 ## <a name="next-step"></a>Próxima etapa  
- [Tarefa 3: Limpeza de dados em relação a Base de dados de Conhecimento fornecedores](../../2014/tutorials/task-3-cleansing-data-against-the-suppliers-knowledge-base.md)  
+ [Tarefa 3: Limpando dados em relação à base de dados de conhecimento de fornecedores](../../2014/tutorials/task-3-cleansing-data-against-the-suppliers-knowledge-base.md)  
   
   

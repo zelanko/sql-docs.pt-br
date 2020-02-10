@@ -1,5 +1,5 @@
 ---
-title: Desenvolvedor&#39;guia (Master Data Services) | Microsoft Docs
+title: Guia do desenvolvedor&#39;s (Master Data Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2f87f812ad9f4f12f5f78828e88c220e3dcf494d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483033"
 ---
-# <a name="developer39s-guide-master-data-services"></a>Desenvolvedor&#39;guia (Master Data Services)
+# <a name="developer39s-guide-master-data-services"></a>Guia do desenvolvedor&#39;s (Master Data Services)
   Localize informações sobre como gravar código para personalizar o modo como você e seus usuários interagem com o [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]. Saiba como:  
   
 -   Escreva um programa que acesse o serviço Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] . O serviço Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] é um serviço WCF (Windows Communication Foundation) que os desenvolvedores usam para controlar recursos do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] por meio de código.  
@@ -42,13 +42,13 @@ ms.locfileid: "65483033"
  O [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] usa regras de negócios para criar soluções de fluxo de trabalho básicas. Você pode atualizar e validar dados automaticamente e pode configurar o envio de notificações por email com base nas condições especificadas. As regras de negócios no [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] devem gerenciar os cenários de fluxo de trabalho mais comuns. Se seu fluxo de trabalho exigir o processamento de eventos mais complexos, como aprovações em várias camadas ou árvores de decisão complexas, você poderá configurar o [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] para enviar dados a um assembly personalizado criado por você. Para tratar fluxos de trabalho personalizados, você deve configurar e iniciar o Serviço de Integração de Fluxo de Trabalho MDS do SQL Server no computador do aplicativo Web e criar um assembly que implementa a interface <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender>.  
   
 ### <a name="custom-workflow-content"></a>Conteúdo de fluxo de trabalho personalizado  
- [Criar um fluxo de trabalho personalizado &#40;Master Data Services&#41;](create-a-custom-workflow-master-data-services.md)  
+ [Criar um &#40;de fluxo de trabalho personalizado Master Data Services&#41;](create-a-custom-workflow-master-data-services.md)  
  Instruções sobre como criar um assembly de manipulador de fluxo de trabalho, como configurar e iniciar o Serviço de Integração de Fluxo de Trabalho MDS do SQL Server e como criar uma regra de negócio no [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] que inicia um fluxo de trabalho personalizado.  
   
 ## <a name="web-server-namespaces"></a>Namespaces do servidor Web  
  O [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] instala um conjunto de assemblies no computador do servidor Web. Esses assemblies contêm namespaces que podem ser usados para cenários avançados que personalizam o comportamento do computador do servidor Web. A tabela a seguir descreve esses namespaces.  
   
-|Namespace|Descrição|  
+|Namespace|DESCRIÇÃO|  
 |---------------|-----------------|  
 |<xref:Microsoft.MasterDataServices.Deployment>|Contém classes que podem ser usadas para criar um pacote de implantação de um modelo e para implantar um pacote em um banco de dados do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] .|  
 |<xref:Microsoft.MasterDataServices.Services>|Contém uma classe que recebe e processa operações de serviço Web feitas no computador do servidor Web por meio do aplicativo Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] .|  
