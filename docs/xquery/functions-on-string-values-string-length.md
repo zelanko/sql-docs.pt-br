@@ -1,5 +1,5 @@
 ---
-title: Função string-length (XQuery) | Microsoft Docs
+title: Função de comprimento de cadeia de caracteres (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 7cd69c8b-cf2c-478c-b9a3-e0e14e1aa8aa
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 12ae1efbf900a505a5f257f9684842a0ad9ff21f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68004657"
 ---
 # <a name="functions-on-string-values---string-length"></a>Funções em Valores da Cadeia de Caracteres – string-length
@@ -40,13 +40,13 @@ fn:string-length($arg as xs:string?) as xs:integer
  Cadeia de caracteres de origem cujo comprimento será computado.  
   
 ## <a name="remarks"></a>Comentários  
- Se o valor de *$arg* é uma sequência vazia, um **xs: Integer** valor 0 será retornado.  
+ Se o valor de *$ARG* for uma sequência vazia, um valor **xs: integer** de 0 será retornado.  
   
- O comportamento de pares substitutos em funções XQuery depende do nível de compatibilidade do banco de dados. Se o nível de compatibilidade for 110 ou posterior, cada par substituto será contado como um único caractere. Em níveis de compatibilidade anteriores, eles são contados como dois caracteres. Para obter mais informações, consulte [nível de compatibilidade de ALTER DATABASE &#40;Transact-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) e [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
+ O comportamento de pares substitutos em funções XQuery depende do nível de compatibilidade do banco de dados. Se o nível de compatibilidade for 110 ou posterior, cada par substituto será contado como um único caractere. Em níveis de compatibilidade anteriores, eles são contados como dois caracteres. Para obter mais informações, consulte [nível de compatibilidade de ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) e [suporte a agrupamento e Unicode](../relational-databases/collations/collation-and-unicode-support.md).  
   
  Se o valor contiver um caractere Unicode de 4 bytes, representado por dois caracteres substitutos, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] contará os caracteres substitutos individualmente.  
   
- O **string-length()** sem um parâmetro só pode ser usado dentro de um predicado. Por exemplo, a seguinte consulta retorna o <`ROOT`> elemento:  
+ O **comprimento da cadeia de caracteres ()** sem um parâmetro só pode ser usado dentro de um predicado. Por exemplo, a consulta a seguir retorna o `ROOT` elemento <>:  
   
 ```  
 DECLARE @x xml;  
@@ -55,13 +55,13 @@ SELECT @x.query('/ROOT[string-length()=5]');
 ```  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>Caracteres suplementares (pares substitutos)  
- O comportamento de pares substitutos em funções XQuery depende do nível de compatibilidade do banco de dados e, em alguns casos, o URI do namespace padrão para funções. Para obter mais informações, consulte a seção "XQuery funções têm consciência de substitutos" no tópico [alterações recentes em recursos do mecanismo de banco de dados no SQL Server 2016](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md). Consulte também [nível de compatibilidade de ALTER DATABASE &#40;Transact-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) e [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
+ O comportamento de pares substitutos em funções XQuery depende do nível de compatibilidade do banco de dados e, em alguns casos, o URI do namespace padrão para funções. Para obter mais informações, consulte a seção "as funções do XQuery são de reconhecimento de substitutos" no tópico [alterações significativas em mecanismo de banco de dados recursos no SQL Server 2016](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md). Consulte também o [nível de compatibilidade de ALTER DATABASE &#40;&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) e [agrupamento e suporte a Unicode](../relational-databases/collations/collation-and-unicode-support.md)do Transact-SQL.  
   
 ## <a name="examples"></a>Exemplos  
- Este tópico fornece exemplos de XQuery em instâncias XML armazenadas em várias **xml** colunas de tipo de banco de dados AdventureWorks.  
+ Este tópico fornece exemplos de XQuery em relação a instâncias XML armazenadas em várias colunas de tipo **XML** no banco de dados AdventureWorks.  
   
-### <a name="a-using-the-string-length-xquery-function-to-retrieve-products-with-long-summary-descriptions"></a>A. Usando uma função string-length() XQuery para recuperar produtos com longas descrições resumidas  
- Para produtos cuja descrição resumida é maior que 50 caracteres, a consulta a seguir recupera a ID do produto, o comprimento da descrição resumida e o próprio resumo, o <`Summary`> elemento.  
+### <a name="a-using-the-string-length-xquery-function-to-retrieve-products-with-long-summary-descriptions"></a>a. Usando uma função string-length() XQuery para recuperar produtos com longas descrições resumidas  
+ Para produtos cuja descrição resumida é maior que 50 caracteres, a consulta a seguir recupera a ID do produto, o comprimento da descrição resumida e o próprio Resumo, o <`Summary`> elemento.  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' as pd)  
@@ -99,9 +99,9 @@ Result
 ```  
   
 ### <a name="b-using-the-string-length-xquery-function-to-retrieve-products-whose-warranty-descriptions-are-short"></a>B. Usando a função string-length() XQuery para recuperar produtos cujas descrições de garantia sejam curtas  
- Para produtos cujas descrições de garantia sejam menos de 20 caracteres, a consulta a seguir recupera XML que inclui a ID do produto, comprimento, a descrição de garantia, e o <`Warranty`> elemento em si.  
+ Para produtos cujas descrições de garantia tenham menos de 20 caracteres de comprimento, a consulta a seguir recupera XML que inclui a ID do produto, o comprimento, a `Warranty` descrição da garantia e o próprio elemento <>.  
   
- A garantia é um dos recursos do produto. Um recurso opcional <`Warranty`> elemento filho segue após o <`Features`> elemento.  
+ A garantia é um dos recursos do produto. Um <`Warranty` opcional> elemento filho segue depois do elemento `Features` <>.  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -127,9 +127,9 @@ WHERE CatalogDescription.exist('/pd:ProductDescription')=1;
   
  Observe o seguinte na consulta anterior:  
   
--   **PD** e **wm** são os prefixos de namespace usados nessa consulta. Eles identificam os mesmos namespaces utilizados no documento que está sendo consultado.  
+-   o **PD** e o **WM** são os prefixos de namespace usados nesta consulta. Eles identificam os mesmos namespaces utilizados no documento que está sendo consultado.  
   
--   O XQuery especifica um loop FOR aninhado. O loop FOR externo é necessário, pois você deseja recuperar o **ProductModelID** atributos da <`ProductDescription`> elemento. O loop FOR interno é necessário, porque você deseja somente aqueles produtos que têm descrições de recursos de garantia com menos de 20 caracteres.  
+-   O XQuery especifica um loop FOR aninhado. O loop FOR externo é necessário, pois você deseja recuperar os atributos **ProductModelID** do elemento <`ProductDescription`>. O loop FOR interno é necessário, porque você deseja somente aqueles produtos que têm descrições de recursos de garantia com menos de 20 caracteres.  
   
  Este é o resultado parcial:  
   
@@ -148,7 +148,7 @@ Result
 ...  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Funções XQuery em Tipos de Dados XML](../xquery/xquery-functions-against-the-xml-data-type.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Funções XQuery em tipos de dados xml](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

@@ -14,16 +14,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f500429659f7f2960140286e102fbf252e86a448
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206550"
 ---
 # <a name="sql-server-broker-statistics-object"></a>SQL Server, objeto Broker Statistics
   O objeto de desempenho SQLServer:Broker Statistics inclui contadores de desempenho que relatam informações gerais sobre o [!INCLUDE[ssSB](../../includes/sssb-md.md)] para uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. A seguinte tabela lista os contadores incluídos nesse objeto:  
   
-|Contadores do SQL Server Broker Statistics|Descrição|  
+|Contadores do SQL Server Broker Statistics|DESCRIÇÃO|  
 |-------------------------------------------|-----------------|  
 |**Total de Erros de Ativação**|O número de vezes que um procedimento armazenado de ativação do [!INCLUDE[ssSB](../../includes/sssb-md.md)] fechou com um erro.|  
 |**Reversões de Transações do Agente**|O número de transações revertidas que continham instruções DML relacionadas ao [!INCLUDE[ssSB](../../includes/sssb-md.md)], como SEND e RECEIVE.|  
@@ -63,7 +63,7 @@ ms.locfileid: "68206550"
 |**SEND Total do SQL**|O número total de instruções SEND [!INCLUDE[tsql](../../includes/tsql-md.md)] executadas.|  
 |**SENDs do SQL/s**|O número de instruções SEND [!INCLUDE[tsql](../../includes/tsql-md.md)] executadas por segundo.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)   
  [Monitorar o uso de recursos &#40;Monitor do Sistema&#41;](monitor-resource-usage-system-monitor.md)  
   

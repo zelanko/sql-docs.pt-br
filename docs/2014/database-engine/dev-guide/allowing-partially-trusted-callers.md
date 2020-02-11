@@ -16,16 +16,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bed854ba13bec4206f3ee869795af91c4da4f525
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754194"
 ---
 # <a name="allowing-partially-trusted-callers"></a>Permitindo chamadores parcialmente confiáveis
   O compartilhamento de bibliotecas de códigos é um cenário comum na integração do CLR (common language runtime), onde um assembly que contém um tipo definido pelo usuário, procedimento armazenado, função definida pelo usuário, agregação definida pelo usuário, gatilho ou classe de utilitário é normalmente acessada por outro assembly ou aplicativo. Bibliotecas de códigos a serem compartilhadas entre vários aplicativos devem ser assinadas com um nome forte.  
   
- Apenas aplicativos totalmente confiáveis por parte do sistema de segurança de acesso do código em tempo de execução têm permissão para acessar um assembly de código gerenciado compartilhado não marcado explicitamente com o atributo `System.Security.AllowPartiallyTrustedCallers`. Um assembly parcialmente confiável (um registrado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com o conjunto de permissões `SAFE` ou `EXTERNAL_ACCESS`) que tenta acessar um assembly assinado com nome forte sem esse atributo faz com que um `System.Security.SecurityException` seja lançado. A mensagem de erro exibida é semelhante à seguinte:  
+ Apenas aplicativos totalmente confiáveis por parte do sistema de segurança de acesso do código em runtime têm permissão para acessar um assembly de código gerenciado compartilhado não marcado explicitamente com o atributo `System.Security.AllowPartiallyTrustedCallers`. Um assembly parcialmente confiável (um registrado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com o conjunto de permissões `SAFE` ou `EXTERNAL_ACCESS`) que tenta acessar um assembly assinado com nome forte sem esse atributo faz com que um `System.Security.SecurityException` seja lançado. A mensagem de erro exibida é semelhante à seguinte:  
   
 ```  
 Msg 6522, Level 16, State 1, Procedure usp_RSTest, Line 0  
@@ -45,7 +45,7 @@ Microsoft.Samples.SqlServer.TestResultSet.Test()
   
 ## <a name="example"></a>Exemplo  
   
-### <a name="description"></a>Descrição  
+### <a name="description"></a>DESCRIÇÃO  
  Suponha que haja uma classe de utilitário que seria útil em muitos aplicativos de integração do CLR do lado do servidor. Por exemplo, ela talvez fosse uma classe que representa os resultados de uma consulta invocada. Para habilitar o compartilhamento desse componente, essa classe de utilitário é colocada em um assembly separado. Dessa forma, o assembly é referenciado em vários outros assemblies que contêm objetos de integração do CLR. Como é usada em muitos aplicativos de servidor diferentes, essa classe de utilitário é examinada cuidadosamente e todos os problemas de segurança são resolvidos. Como o atributo `AllowPartiallyTrustedCallers` é aplicado ao assembly que contém a classe de utilitário, os objetos de integração do CLR contidos nos assemblies marcados com os conjuntos de permissões `SAFE` ou `EXTERNAL_ACCESS` podem usar a classe e os métodos do utilitário, mesmo que estejam em um assembly separado.  
   
  Às vezes, é útil poder executar comandos e, ao mesmo tempo, ler os resultados de uma consulta sem abrir uma nova conexão e sem ler todos os resultados na memória. O recurso MARS (Multiple Active Result Set) no ADO.NET 2.0 é uma tecnologia que pode ajudar a conseguir isso. Atualmente, MARS não é implementado para o provedor em processo usado para programação de servidor. Para solucionar essa limitação, você pode usar cursores de servidor. Este exemplo demonstra como usar cursores de servidor para solucionar a falta de suporte a MARS para programação de servidor.  
@@ -60,7 +60,7 @@ Microsoft.Samples.SqlServer.TestResultSet.Test()
   
  Esse exemplo também demonstra como usar o atributo "Permitir chamadores parcialmente confiáveis" para indicar que o assembly de conjunto de resultados é uma biblioteca que pode ser chamada com segurança de outros assemblies. Essa abordagem é um pouco mais complexa, mas muito mais segura do que registrar o assembly de chamada por meio de permissão não segura. É mais segura porque, com o registro do assembly de chamada como seguro, o assembly de chamada limita o impacto nos recursos do servidor e evita danos à integridade do servidor.  
   
- As instruções de compilação para este exemplo assumem que os arquivos de código-fonte estão em um diretório chamado c:\samples.  Se você usar outro diretório, precisará modificar os scripts [!INCLUDE[tsql](../../includes/tsql-md.md)]. O [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts também requer o banco de dados AdventureWorks. Você pode baixar o banco de dados de exemplo AdventureWorks do [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) página inicial.  
+ As instruções de compilação para este exemplo assumem que os arquivos de código-fonte estão em um diretório chamado c:\samples.  Se você usar outro diretório, precisará modificar os scripts [!INCLUDE[tsql](../../includes/tsql-md.md)]. Os [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts também exigem o banco de dados AdventureWorks. Você pode baixar o banco de dados de exemplo AdventureWorks nos [exemplos de Microsoft SQL Server e projetos da comunidade](https://go.microsoft.com/fwlink/?LinkID=85384) Home Page.  
   
  Para compilar e executar o exemplo, cole a primeira listagem de código em um arquivo chamado ResultSet.cs e compile com csc target:library ResultSet.cs.  
   
@@ -1098,7 +1098,7 @@ DROP ASSEMBLY ResultSet;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Segurança da integração CLR](../../relational-databases/clr-integration/security/clr-integration-security.md)  
   
   

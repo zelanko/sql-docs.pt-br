@@ -13,13 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f600d7bf2515cb77c587e5c9c3d5f8d1db1e343f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097184"
 ---
-# <a name="getreportserverurls-method-wmi-msreportserverinstance"></a>Método GetReportServerUrls (WMI MSReportServer_Instance)
+# <a name="getreportserverurls-method-wmi-msreportserver_instance"></a>Método GetReportServerUrls (WMI MSReportServer_Instance)
   Retorna uma lista de URLs que os usuários podem usar para acessar o servidor de relatório e o gerenciador de relatórios.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -34,17 +34,17 @@ public void GetReportServerUrls(out string[] applicationName,
     out string[] URLs, out int length, out int HRESULT);  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
- *ApplicationName[]*  
+## <a name="parameters"></a>parâmetros  
+ *ApplicationName []*  
  Uma matriz que contém os aplicativos que estão instalados. Os valores são `ReportServerWebService` ou `ReportManager`.  
   
- *URLs[]*  
+ *URLs []*  
  Uma matriz que contém as Urls registradas com êxito.  
   
  *Comprimento*  
  Um valor de inteiro que contém o tamanho das matrizes retornadas.  
   
- *HRESULT*  
+ *RESULTADO*  
  Um valor que indica êxito ou um código de erro.  
   
 ## <a name="return-values"></a>Valores de retorno  
@@ -53,9 +53,9 @@ public void GetReportServerUrls(out string[] applicationName,
  Os métodos expostos pelos objetos de gerenciamento de WMI são chamados pela função InvokeMethod. Para obter mais informações, consulte "Executando Métodos em Objetos de Gerenciamento" na documentação da WMI do [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework.  
   
 ## <a name="requirements"></a>Requisitos  
- **Namespace:** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
+ **Namespace:**[!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Membros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

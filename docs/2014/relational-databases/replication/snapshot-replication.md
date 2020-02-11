@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ffc03bf3f50c629dc53913959dc01b0a6443edef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63270176"
 ---
 # <a name="snapshot-replication"></a>Replicação de instantâneo
@@ -42,13 +42,13 @@ ms.locfileid: "63270176"
   
  **Neste tópico**  
   
- [Como a replicação de instantâneo funciona](#HowWorks)  
+ [Como funciona a replicação de instantâneo](#HowWorks)  
   
  [Snapshot Agent](#SnapshotAgent)  
   
- [Agentes de Distribuição e Mesclagem](#DistAgent)  
+ [Agentes de distribuição e mesclagem](#DistAgent)  
   
-##  <a name="HowWorks"></a> Como a replicação de instantâneo funciona  
+##  <a name="HowWorks"></a>Como funciona a replicação de instantâneo  
  Por padrão, todos os três tipos de replicação usam um instantâneo para inicializar os Assinantes. O Snapshot Agent do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sempre gera os arquivos de instantâneo, mas o agente que distribui os arquivos pode diferir dependendo do tipo de replicação que estiver sendo usada. A replicação transacional e a de instantâneo usam o Distribution Agent para distribuir os arquivos, ao passo que a replicação de mesclagem usa o Merge Agent do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . O Agente de Instantâneo executa no Distribuidor. O Agente de Distribuição e o Agente de Mesclagem são executados no Distribuidor para as assinaturas push ou no Assinante para assinaturas pull.  
   
  Os instantâneos podem ser gerados e aplicados imediatamente após a assinatura ser criada ou de acordo com uma programação definida no momento que a publicação for criada. O Snapshot Agent prepara os arquivos de instantâneo que contêm o esquema e os dados das tabelas publicadas e os objetos do banco de dados, armazena os arquivos na pasta do instantâneo para o Publicador e registra o rastreamento de informações do banco de dados de distribuição no Distribuidor. Você especifica uma pasta padrão de instantâneo quando configura um Distribuidor, mas você pode especificar um local alternativo para uma publicação além do padrão.  
@@ -57,9 +57,9 @@ ms.locfileid: "63270176"
   
  A ilustração a seguir mostra os principais componentes de replicação de instantâneo.  
   
- ![Componentes e fluxo de dados da replicação de instantâneo](media/snapshot.gif "Componentes e fluxo de dados da replicação de instantâneo")  
+ ![Componentes e fluxo de dados de replicação de instantâneo](media/snapshot.gif "Componentes e fluxo de dados de replicação de instantâneo")  
   
-##  <a name="SnapshotAgent"></a> Snapshot Agent  
+##  <a name="SnapshotAgent"></a>Agente de Instantâneo  
  Para replicação de mesclagem, é gerado um instantâneo toda vez que o Agente de Instantâneo é executado. Para replicação transacional, a geração de instantâneo depende da configuração da propriedade de publicação de **immediate_sync**. Se a propriedade estiver definida como TRUE (padrão ao usar o Assistente para Nova Publicação), um instantâneo é gerado toda vez que o Agente de Instantâneo for executado e pode ser aplicado ao Assinante a qualquer momento. Se a propriedade estiver definida como FALSE (padrão ao usar **sp_addpublication**), o instantâneo só é gerado se uma assinatura nova for adicionada desde a última execução do Agente de Instantâneo; Assinantes devem esperar que o Agente de Instantâneo termine antes de poder sincronizar-se.  
   
  O Snapshot Agent executa as seguintes etapas:  
@@ -84,7 +84,7 @@ ms.locfileid: "63270176"
   
  Durante a geração de instantâneo, você não pode fazer alterações de esquema em tabelas publicadas. Depois que os arquivos de instantâneo forem gerados, você pode exibi-los na pasta de instantâneo usando o Windows Explorer.  
   
-##  <a name="DistAgent"></a> Agente de Distribuição e Agente de Mesclagem  
+##  <a name="DistAgent"></a>Agente de Distribuição e Agente de Mesclagem  
  Para publicações de instantâneo, sempre que o Agente de Distribuição for executado para a publicação, ele moverá um novo instantâneo para cada Assinante que ainda não tiver sido sincronizado, que não tenha sido marcado para reinicialização, ou incluirá novos artigos.  
   
  Para replicação de instantâneo e transacional, o Distribution Agent executará as seguintes etapas:  

@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 78573a21a5aa6a719a9bb55d0ee17bf9837258f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63277077"
 ---
 # <a name="filter-settings-object-explorer-and-utility-explorer"></a>Configurações de Filtro (Pesquisador de Objetos e Gerenciador do Utilitário)
@@ -66,14 +66,14 @@ ms.locfileid: "63277077"
   
      Disponível para datas, esse filtro mostra os itens cuja data está antes ou depois das duas datas fornecidas. Selecione **Não entre** e saia da coluna **Operador** para adicionar outra linha permitindo a entrada da segunda data.  
   
- **Value**  
+ **Valor**  
  Digite o valor para comparar à propriedade. Para datas, clique na seta para baixo para mostrar um calendário para selecionar a data.  
   
  **Limpar Filtro**  
  Remove todas as configurações de filtro atuais.  
   
-## <a name="see-also"></a>Consulte também  
- [Usar o SQL Server Management Studio](../sql-server-management-studio-ssms.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Usar SQL Server Management Studio](../sql-server-management-studio-ssms.md)   
  [Recursos e tarefas do utilitário do SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
   
   

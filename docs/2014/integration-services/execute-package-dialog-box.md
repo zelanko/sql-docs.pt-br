@@ -1,5 +1,5 @@
 ---
-title: Caixa de diálogo pacote executar | Microsoft Docs
+title: Caixa de diálogo Executar Pacote | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b4b920b17e960059e1212be7dd15c176c0b25a47
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059192"
 ---
 # <a name="execute-package-dialog-box"></a>Execute Package Dialog Box
@@ -33,13 +33,13 @@ ms.locfileid: "66059192"
   
 -   [Definir as opções na guia Parâmetros](#parameters)  
   
--   [Definir as opções na guia de Gerenciadores de Conexões](#connection)  
+-   [Definir as opções na guia gerenciadores de conexões](#connection)  
   
 -   [Definir as opções na guia Avançado](#advanced)  
   
 -   [Criando scripts para as opções na caixa de diálogo Executar Pacote](#script)  
   
-##  <a name="open_dialog"></a> Abrir a caixa de diálogo Executar Pacote  
+##  <a name="open_dialog"></a>Abrir a caixa de diálogo Executar Pacote  
   
 1.  No [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], conecte-se ao servidor do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
@@ -53,31 +53,31 @@ ms.locfileid: "66059192"
   
 5.  Clique com o botão direito do mouse no pacote e clique em **Executar**.  
   
-##  <a name="general"></a> Definir as opções na página Geral  
+##  <a name="general"></a>Definir as opções na página Geral  
  Selecione **Ambiente** para especificar o ambiente aplicado com o pacote executado.  
   
-##  <a name="parameters"></a> Definir as opções na guia Parâmetros  
+##  <a name="parameters"></a>Definir as opções na guia parâmetros  
  Use a guia **Parâmetros** para modificar os valores de parâmetros usados quando o pacote for executado.  
   
-##  <a name="connection"></a> Definir as opções na guia de Gerenciadores de Conexões  
+##  <a name="connection"></a>Definir as opções na guia gerenciadores de conexões  
  Use a guia Gerenciadores de Conexões para definir as propriedades dos gerenciadores de conexões do pacote.  
   
-##  <a name="advanced"></a> Definir as opções na guia Avançado  
+##  <a name="advanced"></a>Definir as opções na guia Avançado  
  Use a guia Avançado para gerenciar propriedades e outras configurações de pacote.  
   
- **Adicionar**, **Editar**, **Remover**  
+ **Adicionar**, **Editar**, **remover**  
  Clique para adicionar, editar ou remover uma propriedade.  
   
  **Nível de log**  
  Selecione o nível de log para a execução do pacote. Para obter mais informações, consulte [catalog.set_execution_parameter_value &#40;Banco de dados SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database).  
   
- **Despejar quando ocorrerem erros**  
+ **Despejar em erros**  
  Especifique se um arquivo de despejo será criado quando ocorrerem erros durante a execução do pacote. Para obter mais informações, consulte [Generating Dump Files for Package Execution](troubleshooting/generating-dump-files-for-package-execution.md).  
   
- **Tempo de execução de 32 bits**  
+ **runtime de 32 bits**  
  Especifique se o pacote será executado em um sistema de 32 bits.  
   
-##  <a name="script"></a> Criando scripts para as opções na caixa de diálogo Executar Pacote  
+##  <a name="script"></a>Criando scripts para as opções na caixa de diálogo Executar Pacote  
  Enquanto estiver na caixa de diálogo **Executar Pacote** , você também poderá usar o botão **Script** na barra de ferramentas para gravar o código [!INCLUDE[tsql](../includes/tsql-md.md)] . O script gerado chama os procedimentos armazenados [catalog.start_execution &#40;Banco de dados SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database) com as mesmas opções selecionadas na caixa de diálogo **Executar Pacote**. O script aparece em uma nova janela de script no [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
   
   

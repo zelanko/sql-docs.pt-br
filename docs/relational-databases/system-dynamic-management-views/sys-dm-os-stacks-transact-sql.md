@@ -1,5 +1,5 @@
 ---
-title: DM os_stacks (Transact-SQL) | Microsoft Docs
+title: sys. dm_os_stacks (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -21,13 +21,13 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8f287c548a7ebb71b1ebf3e1bce30e43b412c755
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68265724"
 ---
-# <a name="sysdmosstacks-transact-sql"></a>sys.dm_os_stacks (Transact-SQL)
+# <a name="sysdm_os_stacks-transact-sql"></a>sys.dm_os_stacks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Esta exibição de gerenciamento dinâmica é usada internamente pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para fazer o seguinte:  
@@ -36,22 +36,22 @@ ms.locfileid: "68265724"
   
 -   Supor ou validar a lógica usada pelos componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nos lugares em que o componente pressupõe que uma determinada chamada foi feita.  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
-|**stack_address**|**varbinary(8)**|Endereço exclusivo para esta alocação de pilha. Não permite valor nulo.|  
-|**frame_index**|**int**|Cada linha representa uma função chamada que, quando classificada em ordem crescente pelo índice do quadro para um determinado **stack_address**, retorna a pilha de chamadas completa. Não permite valor nulo.|  
-|**frame_address**|**varbinary(8)**|Endereço da chamada de função. Não permite valor nulo.|  
+|**stack_address**|**varbinary (8)**|Endereço exclusivo para esta alocação de pilha. Não permite valor nulo.|  
+|**frame_index**|**int**|Cada linha representa uma chamada de função que, quando classificada em ordem crescente por índice de quadro para um determinado **stack_address**, retorna a pilha de chamadas completa. Não permite valor nulo.|  
+|**frame_address**|**varbinary (8)**|Endereço da chamada de função. Não permite valor nulo.|  
   
 ## <a name="remarks"></a>Comentários  
- **DM os_stacks** exige que os símbolos do servidor e outros componentes estejam presentes no servidor para exibir as informações corretamente.  
+ **Sys. dm_os_stacks** requer que os símbolos do servidor e outros componentes estejam presentes no servidor para exibir as informações corretamente.  
   
 ## <a name="permissions"></a>Permissões
 
-Na [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
-Na [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, requer o `VIEW DATABASE STATE` permissão no banco de dados. Na [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e básica, requer a **administrador de servidor** ou uma **administrador do Active Directory do Azure** conta.   
+Ativado [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
+Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a `VIEW DATABASE STATE` permissão no banco de dados. Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e Basic, o requer o **administrador do servidor** ou uma conta de **administrador do Azure Active Directory** .   
 
 
-## <a name="see-also"></a>Consulte também  
-  [Sistema operacional SQL Server relacionados exibições de gerenciamento dinâmico &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+  [SQL Server exibições de gerenciamento dinâmico relacionadas ao sistema operacional &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   

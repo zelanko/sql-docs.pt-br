@@ -1,5 +1,5 @@
 ---
-title: Conceder permissões em estruturas de mineração de dados e modelos (Analysis Services) | Microsoft Docs
+title: Conceder permissões em estruturas e modelos de Data Mining (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 25eb8fe00c523d4a94b7f6f0325bfd2c1f55e7be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074936"
 ---
 # <a name="grant-permissions-on-data-mining-structures-and-models-analysis-services"></a>Conceder permissões em estruturas e modelos de mineração de dados (Analysis Services)
@@ -40,7 +40,7 @@ ms.locfileid: "66074936"
   
 4.  Na página Geral, insira um nome e, opcionalmente, uma descrição. Essa página também contém várias permissões de banco de dados, tais como Controle Total, Processar Banco de Dados e Ler Definição. Nenhuma dessas permissões é necessária para acesso aos dados de mineração. Consulte [Conceder permissões de banco de dados &#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md) para obter mais informações sobre as permissões do banco de dados.  
   
-5.  No painel **Estrutura de Mineração**, escolha **Leitura** ou **Leitura/Gravação** para cada estrutura de mineração de dados.  
+5.  No painel **Estrutura de Mineração** , escolha **Leitura** ou **Leitura/Gravação**  para cada estrutura de mineração de dados.  
   
 6.  No painel **Associação** , insira as contas de usuário e de grupo do Windows que se conectam ao Analysis Services usando essa função.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "66074936"
 ## <a name="set-permissions-to-access-a-mining-model"></a>Definir permissões para acessar um modelo de mineração  
  Para um modelo de mineração de dados, uma função pode ter permissões de **Leitura** ou **Leitura/Gravação** , bem como permissões de **Detalhamento** e **Ler Definição** que permitem exibir e procurar dados subjacentes.  
   
- **Observação** Se você habilitar detalhamento na estrutura de mineração e no modelo de mineração, qualquer usuário que for membro de uma função que tenha permissões de detalhamento no modelo de mineração e na estrutura de mineração também poderá exibir colunas na estrutura de mineração, até mesmo se essas colunas não estiverem incluídas no modelo de mineração. Portanto, para proteger informações confidenciais, você deveria configurar a exibição da fonte de dados para mascarar informações pessoais e só permitir acesso de detalhamento na estrutura de mineração quando necessário.  
+ **Observação** Se você habilitar o detalhamento na estrutura de mineração e no modelo de mineração, qualquer usuário que seja membro de uma função que tenha permissões de detalhamento no modelo de mineração e na estrutura de mineração também poderá exibir colunas na estrutura de mineração, mesmo que essas colunas não sejam incluídas no modelo de mineração. Portanto, para proteger informações confidenciais, você deveria configurar a exibição da fonte de dados para mascarar informações pessoais e só permitir acesso de detalhamento na estrutura de mineração quando necessário.  
   
  Para conceder a um usuário permissões de leitura ou de leitura/gravação a uma função do banco de dados, o usuário deve ser membro da função de servidor do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou membro de uma função de banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] com permissões de Controle total (Administrador).  
   
@@ -66,10 +66,10 @@ ms.locfileid: "66074936"
 > [!NOTE]  
 >  Por padrão, o envio de consultas de DMX usando OPENROWSET está desabilitado.  
   
-## <a name="see-also"></a>Consulte também  
- [Conceder permissões de administrador de servidor &#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Permissões de administrador de servidor Grant &#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
  [Conceder permissões de cubo ou modelo &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
- [Conceder acesso personalizado a dados da dimensão &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
+ [Conceder acesso personalizado a dados de dimensão &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
  [Conceder acesso personalizado a dados de célula &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
   
   

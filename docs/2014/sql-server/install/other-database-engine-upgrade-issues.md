@@ -1,5 +1,5 @@
 ---
-title: Outros problemas de atualização de mecanismo de banco de dados | Microsoft Docs
+title: Outros problemas de atualização de Mecanismo de Banco de Dados | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f247f9addde6baa949f3260d7a9d9f86ce0c5bff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66093695"
 ---
 # <a name="other-database-engine-upgrade-issues"></a>Outros problemas de atualização do Mecanismo de Banco de Dados
@@ -54,7 +54,7 @@ ms.locfileid: "66093695"
 ## <a name="new-data-types"></a>Novos tipos de dados  
  Os itens indicados a seguir serão tipos de sistema reservados. Renomeie os tipos conflitantes definidos pelo usuário antes ou depois da atualização.  
   
--   Geografia  
+-   painel Geografia do app&#39;s selecionado  
   
 -   Geometry  
   
@@ -63,7 +63,7 @@ ms.locfileid: "66093695"
 -   HierarchyID  
   
 ## <a name="target-table-of-the-output-into-clause-cannot-have-any-defined-triggers"></a>Target Table da cláusula OUTPUT INTO não pode ter gatilhos definidos  
- SAÍDA em uma tabela de destino quando a tabela possui gatilhos habilitados não é suportado.  
+ Não há suporte para a saída em uma tabela de destino quando a tabela tem nenhum gatilho habilitado.  
   
 ## <a name="compile-time-error-for-udfs-when-the-target-of-an-output-into-clause-is-a-table"></a>Erro de tempo de compilação para UDFs quando o destino de uma cláusula OUTPUT INTO é uma tabela  
  As UDFs (funções definidas pelo usuário) não podem ser usadas para executar ações que modificam o estado do banco de dados. Por exemplo, uma UDF não pode realizar ações DDL (CREATE/ALTER/DROP) ou DML (INSERT/UPDATE/DELETE) em nenhum objeto, exceto em variáveis de tabelas.  
@@ -72,9 +72,9 @@ ms.locfileid: "66093695"
  MERGE agora é uma palavra-chave completamente reservada. Os aplicativos não podem mais ter objetos (tabelas, colunas, etc.) chamados MERGE.  
   
 ## <a name="rename-cdc-schema"></a>Renomear esquema CDC  
- Há um nome de esquema chamado CDC. Esse nome de esquema não pode ser usado se **Change Data Capture** está habilitada para o banco de dados.  
+ Há um nome de esquema chamado CDC. Esse nome de esquema não poderá ser usado se a **captura de dados de alteração** estiver habilitada para o banco de dado.  
   
- Você deve descartar o esquema CDC antes de habilitar **Change Data Capture** para o banco de dados. Isso pode ser feito antes ou depois da atualização. Para descartar o esquema, faça o seguinte:  
+ Você deve remover o esquema CDC antes de habilitar a **captura de dados de alteração** para o banco de dado. Isso pode ser feito antes ou depois da atualização. Para descartar o esquema, faça o seguinte:  
   
 1.  Transfira os objetos de esquema CDC para um novo nome de esquema usando ALTER SCHEMA.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "66093695"
   
 4.  Descarte o esquema CDC usando DROP SCHEMA.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Problemas de atualização do Mecanismo de Banco de Dados](../../../2014/sql-server/install/database-engine-upgrade-issues.md)  
   
   

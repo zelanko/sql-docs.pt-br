@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 21f58cd6991b760edeefb81c37e02c617f8e09cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916939"
 ---
 # <a name="shrink-a-database"></a>Reduzir um banco de dados
@@ -44,7 +44,7 @@ ms.locfileid: "62916939"
   
 ###  <a name="Recommendations"></a> Recomendações  
   
--   Para visualizar a quantidade atual de espaço livre (não alocado) no banco de dados. Para obter mais informações, consulte [Exibir dados e informações de espaço de log para um banco de dados](display-data-and-log-space-information-for-a-database.md)  
+-   Para visualizar a quantidade atual de espaço livre (não alocado) no banco de dados. Para obter mais informações, consulte [Display Data and Log Space Information for a Database](display-data-and-log-space-information-for-a-database.md).  
   
 -   Considere as seguintes informações ao planejar reduzir um banco de dados:  
   
@@ -65,9 +65,9 @@ ms.locfileid: "62916939"
   
 #### <a name="to-shrink-a-database"></a>Para reduzir um banco de dados  
   
-1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]e expanda-a.  
+1.  No Pesquisador de **objetos**, conecte-se a [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]uma instância do e expanda essa instância.  
   
-2.  Expanda **Bancos de Dados**e clique com o botão direito do mouse no banco de dados que deseja reduzir.  
+2.  Expanda **bancos**de dados e clique com o botão direito do mouse no banco que você deseja reduzir.  
   
 3.  Aponte para **Tarefas**, depois **Reduzir**e clique em **Banco de dados**.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "62916939"
      **Reorganizar arquivos antes de liberar espaço não utilizado**  
      Selecionar essa opção é equivalente a executar DBCC SHRINKDATABASE especificando uma opção de porcentagem de destino. Desmarcar esta opção é o mesmo que executar DBCC SHRINKDATABASE com a opção TRUNCATEONLY. Por padrão, essa opção não é selecionada quando a caixa de diálogo está aberta. Se esta opção for selecionada, o usuário deverá especificar uma opção de porcentagem de destino.  
   
-     **Máximo espaço livre em arquivos após a redução**  
+     **Máximo de espaço livre em arquivos após a redução**  
      Digite a porcentagem máxima de espaço livre a ser deixado nos arquivos de banco de dados após a redução do banco de dados. Os valores permitidos estão entre 0 e 99.  
   
 4.  Clique em **OK**.  
@@ -100,15 +100,15 @@ ms.locfileid: "62916939"
   
  [!code-sql[DBCC#DBCC_SHRINKDB1](../../snippets/tsql/SQL14/tsql/dbcc/transact-sql/dbcc_other.sql#dbcc_shrinkdb1)]  
   
-##  <a name="FollowUp"></a> Acompanhamento: Depois de reduzir um banco de dados  
+##  <a name="FollowUp"></a>Acompanhamento: depois de reduzir um banco de dados  
  Os dados movidos para reduzir um arquivo podem ser espalhados para qualquer local disponível no arquivo. Isso provoca uma fragmentação do índice e pode reduzir a velocidade do desempenho de consultas que pesquisam um intervalo do índice. Para eliminar a fragmentação, considere a recompilação dos índices no arquivo após a redução.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Reduzir um arquivo](shrink-a-file.md)   
  [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)   
- [sys.database_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)   
+ [sys. database_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)   
  [DBCC &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-transact-sql)   
- [DBCC SHRINKFILE &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-shrinkfile-transact-sql)   
+ [&#41;&#40;Transact-SQL de DBCC SHRINKFILE](/sql/t-sql/database-console-commands/dbcc-shrinkfile-transact-sql)   
  [Arquivos e grupos de arquivos do banco de dados](database-files-and-filegroups.md)  
   
   

@@ -14,10 +14,10 @@ ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
 ms.openlocfilehash: 83009008745a696919aa5ae5795d60ddfe9ba80b
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73632887"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>Novidades do Assistente de Migração de Dados
@@ -31,7 +31,7 @@ A versão v 5.0 do Assistente de Migração de Dados fornece suporte para:
 - SQL Server 2019 para Windows e SQL Server 2019 para Linux como destinos para avaliação e atualização.
 - Salvar e carregar avaliações, incluindo suporte para salvar e carregar avaliações criadas em versões anteriores do Assistente de Migração de Dados.
 - Avaliando projetos do SQL Server Integration Services (SSIS) hospedados em pacotes SSISDB e SSIS hospedados no repositório de pacotes. O Assistente de Migração de banco de dados detecta recursos sem suporte, parcialmente suportados ou preteridos e problemas de compatibilidade que são usados em pacotes de origem e fornece recomendações para ajudá-lo a resolver esses problemas.
-- Avaliando consultas SQL de aplicativo externo, por exemplo, consultas SQL C# no código-fonte. Os usuários podem usar o kit de ferramentas de migração de acesso a dados para gerar um relatório JSON completo C# para as consultas SQL usadas no código-fonte e, em seguida, carregar o relatório para assistente de migração de dados.
+- Avaliando consultas SQL de aplicativo externo, por exemplo, consultas SQL no código-fonte C#. Os usuários podem usar o kit de ferramentas de migração de acesso a dados para gerar um relatório JSON completo para as consultas SQL usadas no código-fonte C# e, em seguida, carregar o relatório para Assistente de Migração de Dados.
 
 Além disso, esta versão do Assistente de Migração de Dados fornece aprimoramentos adicionais e correções de bugs, e a ferramenta foi atualizada para o .NET 4.7.2.
 
@@ -175,7 +175,7 @@ A versão v 2.0 do Assistente de Migração de Dados inclui recomendações de r
 A versão v 1.0 do Assistente de Migração de Dados é a versão inicial e fornece para:
 
 - Descoberta de problemas que podem afetar uma atualização para uma versão local do SQL Server. Quaisquer descobertas são descritas como problemas de compatibilidade e elas são categorizadas nas seguintes áreas:
-  - Alterações recentes
+  - Alterações de quebra
   - Alterações de comportamento
   - Recursos preteridos
 - Descoberta de novos recursos na plataforma de SQL Server de destino para as quais o banco de dados pode se beneficiar após uma atualização. Quaisquer descobertas são descritas como recomendações de recurso e elas são categorizadas nas seguintes áreas:
@@ -184,6 +184,6 @@ A versão v 1.0 do Assistente de Migração de Dados é a versão inicial e forn
   - Armazenamento
 - Experiência de usuário moderna para realizar avaliações.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Visão geral do Assistente de Migração de Dados](../dma/dma-overview.md)

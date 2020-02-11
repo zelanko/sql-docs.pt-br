@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 00c5e0017b8d81eaea6960f016e40dbc381e69e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63049125"
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>Caixa de diálogo Índices Espaciais (Ferramentas de Banco de Dados Visual)
@@ -85,7 +85,7 @@ ms.locfileid: "63049125"
  Quando expandida, mostra os campos de propriedade **Nome** e **Descrição** .  
   
  **(Nome)**  
- Mostra o nome do índice espacial. Quando um novo índice é criado, é dado um nome padrão baseado na tabela da janela ativa no Designer de Tabela. O nome pode ser alterado a qualquer momento.  
+ Mostra o nome do índice espacial. Quando um novo índice é criado, é dado um nome padrão baseado na tabela da janela ativa no Designer de Tabela. É possível alterar o nome a qualquer momento.  
   
  **Descrição**  
  Descreve o índice. Para escrever uma descrição mais detalhada, clique em **Descrição** e, em seguida, clique no botão de reticências ( **…** ) que aparece à direita do campo de propriedade. Isso criará uma área maior para a redação do texto.  
@@ -115,7 +115,7 @@ ms.locfileid: "63049125"
  **Bloqueios de Linha Permitidos**  
  Especifica se o bloqueio de linha é permitido no índice. A permissão ou não dos bloqueios de linha afeta o desempenho do banco de dados.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Visão geral de índices espaciais](../../relational-databases/spatial/spatial-indexes-overview.md)  
   
   

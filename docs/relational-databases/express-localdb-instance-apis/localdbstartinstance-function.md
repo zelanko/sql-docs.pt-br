@@ -16,17 +16,17 @@ ms.assetid: cb325f5d-10ee-4a56-ba28-db0074ab3926
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: b06364adefd62b4267d43bac50d79f8f1d37958a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68022091"
 ---
 # <a name="localdbstartinstance-function"></a>Função LocalDBStartInstance
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Inicia a instância especificada de LocalDB do SQL Server Express.  
   
- **Arquivo de cabeçalho:** sqlncli.h  
+ **Arquivo de cabeçalho:** sqlncli. h  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,7 +39,7 @@ HRESULT LocalDBStartInstance(
 );  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  *pInstanceName*  
  [Entrada] O nome da instância de LocalDB a ser iniciada.  
   
@@ -52,7 +52,7 @@ HRESULT LocalDBStartInstance(
  *lpcchSqlConnection*  
  [Saída/entrada] On input contém o tamanho do buffer *wszSqlConnection* em caracteres, incluindo qualquer caractere nulo à esquerda. Na saída, se o tamanho de buffer especificado for muito pequeno, conterá o tamanho de buffer necessário em caracteres, incluindo quaisquer caracteres nulos à esquerda.  
   
-## <a name="returns"></a>Retorna  
+## <a name="returns"></a>Retornos  
  S_OK  
  A função foi bem-sucedida.  
   
@@ -107,16 +107,16 @@ HRESULT LocalDBStartInstance(
 ## <a name="details"></a>Detalhes  
  O argumento do buffer de conexão (*wszSqlConnection*) e o argumento do tamanho do buffer de conexão (*lpcchSqlConnection*) são opcionais. A tabela a seguir mostra opções para o uso desses argumentos e seus resultados.  
   
-|Buffer|Tamanho do buffer|Fundamento|Action|  
+|Buffer|Tamanho do buffer|Fundamento|Ação|  
 |------------|-----------------|---------------|------------|  
-|NULL|NULL|Deseja iniciar a instância de usuário e não precisa de um pipe de nome.|Inicia uma instância (sem retorno de pipe e sem retorno do tamanho de buffer necessário).|  
-|NULL|Presente|O usuário solicita o tamanho do buffer de saída. (Na próxima chamada, o usuário provavelmente solicitará uma inicialização real.)|Retorna um tamanho de buffer necessário (sem inicialização e sem retorno de pipe). O resultado é S_OK.|  
-|Presente|NULL|Não permitido; entrada incorreta.|O resultado retornado é LOCALDB_ERROR_INVALID_PARAMETER.|  
-|Presente|Presente|O usuário deseja iniciar a instância e precisa do nome do pipe para se conectar a ela após a inicialização.|Verifica o tamanho do buffer, inicia a instância e retorna o nome do pipe no buffer. <br />O argumento de tamanho do buffer retorna o comprimento do "server =" cadeia de caracteres, sem incluir caracteres nulos de terminação.|  
+|NULO|NULO|O usuário deseja iniciar a instância e não precisa de um nome de pipe.|Inicia uma instância (sem retorno de pipe e sem retorno do tamanho de buffer necessário).|  
+|NULO|Presente|O usuário solicita o tamanho do buffer de saída. (Na próxima chamada, o usuário provavelmente solicitará uma inicialização real.)|Retorna um tamanho de buffer necessário (sem inicialização e sem retorno de pipe). O resultado é S_OK.|  
+|Presente|NULO|Não permitido; entrada incorreta.|O resultado retornado é LOCALDB_ERROR_INVALID_PARAMETER.|  
+|Presente|Presente|O usuário deseja iniciar a instância e precisa do nome do pipe para se conectar a ela após a inicialização.|Verifica o tamanho do buffer, inicia a instância e retorna o nome do pipe no buffer. <br />O argumento tamanho do buffer retorna o comprimento da cadeia de caracteres "Server =", sem incluir nulos de terminação.|  
   
  Para obter uma amostra do código que usa a API LocalDB, consulte [SQL Server Express LocalDB Reference](../../relational-databases/sql-server-express-localdb-reference.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Cabeçalho e informações de versão de LocalDB do SQL Server Express](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  
   
   

@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e92fbb8bc29aed54e43925a0670d9a365388df62
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62808667"
 ---
 # <a name="connect-to-server-additional-connection-parameters-page"></a>Conectar ao Servidor (página Parâmetros Adicionais de Conexão)
@@ -45,14 +45,14 @@ ms.locfileid: "62808667"
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="example-a-connecting-to-the-database-engine"></a>Exemplo a: conexão ao mecanismo de banco de dados  
+### <a name="example-a-connecting-to-the-database-engine"></a>Exemplo A: Conectando ao Mecanismo de Banco de Dados  
  Para conectar ao banco de dados do [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] em um servidor nomeado CONTABILIDADE, digite o seguinte na página **Parâmetros de conexão adicionais** :  
   
 ```  
 ;SERVER=ACCOUNTING;DATABASE=AdventureWorks2012  
 ```  
   
-### <a name="example-b-connecting-to-analysis-services"></a>Exemplo b: Conectar-se ao Analysis Services  
+### <a name="example-b-connecting-to-analysis-services"></a>Exemplo B: Conectando a Analysis Services  
  Para conectar aos servidores de análises e fazer todas as partições escutarem as notificações a serem consultadas em tempo real (ignorando o cache) e para definir o valor do tempo limite de write-back como 5, digite o seguinte na página **Parâmetros de conexão adicionais** :  
   
 ```  

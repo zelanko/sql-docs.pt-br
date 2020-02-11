@@ -1,5 +1,5 @@
 ---
-title: Suporte à transação em DBMSs | Microsoft Docs
+title: Suporte a transações em DBMSs | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,11 +14,11 @@ ms.assetid: 0fc2ae34-4748-4120-9fc3-bb28c8ed867e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 72353e9917996ecacdc5971b4a11f9c73718ba43
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68037635"
 ---
 # <a name="transaction-support-in-dbmss"></a>Suporte à transação em DBMSs
-Alguns bancos de dados, especialmente da área de trabalho bancos de dados, como, Paradox, dBASE e Btrieve, damos suporte a transações. Até mesmo entre bancos de dados que oferecem suporte a transações, não há variação nas quais os tipos de instruções SQL podem ser em uma transação. Para obter mais informações, consulte a opção de SQL_TXN_CAPABLE na [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) descrição da função.
+Alguns bancos de dados, especialmente bancos de dados da área de trabalho, como dBASE, Paradox e Btrieve, não dão suporte a transações. Mesmo entre os bancos de dados que dão suporte a transações, há variação no que os tipos de instruções SQL podem estar em uma transação. Para obter mais informações, consulte a opção SQL_TXN_CAPABLE na descrição da função [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) .

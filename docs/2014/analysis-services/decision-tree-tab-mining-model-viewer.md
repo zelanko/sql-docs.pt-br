@@ -1,5 +1,5 @@
 ---
-title: Guia árvore (Visualizador do modelo de mineração) de decisão | Microsoft Docs
+title: Guia árvore de decisão (Visualizador do modelo de mineração) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,19 +13,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cee721aca66f5266a29d3bf61babf9060e9aef32
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082296"
 ---
 # <a name="decision-tree-tab-mining-model-viewer"></a>Guia Árvore de Decisão (Visualizador do Modelo de Mineração)
   O painel **DecisionTree** exibe uma representação visual das regras de decisão criadas em um modelo de árvore de decisão. As regras de decisão descrevem caminhos para um determinado resultado.  
   
- **Para obter mais informações:** [Algoritmo de árvores de decisão da Microsoft](data-mining/microsoft-decision-trees-algorithm.md), [procurar um modelo usando o Visualizador de árvore da Microsoft](data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
+ **Para obter mais informações:** [algoritmo árvores de decisão da Microsoft](data-mining/microsoft-decision-trees-algorithm.md), [procurar um modelo usando o Visualizador de árvore da Microsoft](data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
   
 ## <a name="options"></a>Opções  
- **Atualizar conteúdo do Visualizador**  
+ **Atualizar conteúdo do visualizador**  
  Recarregue o modelo de mineração no visualizador.  
   
  **Modelo de mineração**  
@@ -37,13 +37,13 @@ ms.locfileid: "66082296"
  **Ampliar**  
  Aproxime para obter uma exibição mais detalhada dos nós e das ramificações na árvore de decisão. Em um modelo complexo, as árvores de decisão podem ter muitos níveis de ramificação.  
   
- **Reduza a imagem**  
+ **Reduzir**  
  Reduza para obter uma exibição geral da estrutura da árvore.  
   
- **Copiar exibição de gráfico**  
+ **Copiar Exibição do Gráfico**  
  Copie a seção visível do diagrama para a área de transferência.  
   
- **Copiar gráfico inteiro**  
+ **Copiar Todo o Gráfico**  
  Copie todo o diagrama na área de transferência.  
   
  **Dimensionar diagrama para ajustar à janela**  
@@ -52,21 +52,21 @@ ms.locfileid: "66082296"
  **Histogramas**  
  Selecione, para cada nó, o número de estados que podem ser exibidos no histograma. Se o número de estados no modelo for menor que o valor que você selecionar, nenhuma barra adicional será exibida.  
   
- **Árvore**  
+ **Três**  
  Escolha uma árvore para ser exibida no visualizador. Se você criar um modelo que tem vários atributos previsíveis, o algoritmo criará uma árvore separada para cada atributo previsível.  
   
- **Plano de fundo**  
+ **Segundo plano**  
  Escolha um valor do atributo previsível para ser usado na representação da cor de fundo de cada nó. Por exemplo, nos modelos de exemplo da AdventureWorks, se você definir **Segundo plano** como 1 ([Comprador de Bicicleta] = Sim), os nós serão escurecidos se tiverem uma proporção maior proporção de compradores de bicicleta. Esta opção fornece uma sugestão visual adicional sobre o significado das ramificações e nós na árvore.  
   
  **Expansão padrão**  
  Escolha um valor da lista para definir o padrão para o número de níveis exibidos no gráfico de árvore.  
   
- **Mostrar nível**  
+ **Mostrar Nível**  
  Mova a barra do controle deslizante para a direita ou esquerda para ajustar o número de níveis exibidos no gráfico de árvore. Para ver todos os nós no modelo, deslize a barra completamente para a direita.  
   
-## <a name="see-also"></a>Consulte também  
- [Algoritmos de mineração de dados &#40;Analysis Services – Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Visualizadores do modelo de mineração &#40; Designer do modelo de mineração de dados &#41;](mining-model-viewers-data-mining-model-designer.md)   
- [Visualizadores do modelo de Mineração de dados](data-mining/data-mining-model-viewers.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Algoritmos de mineração de dados &#40;mineração de dados Analysis Services&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Visualizadores de modelo de mineração &#40;designer de modelo de mineração de dados&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Visualizadores do Modelo de Mineração de Dados](data-mining/data-mining-model-viewers.md)  
   
   

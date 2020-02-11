@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a0f7e10a39896efffa5159911ebd753b1d649e45
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768573"
 ---
 # <a name="coding-a-custom-log-provider"></a>Codificando um provedor de log personalizado
@@ -86,7 +86,7 @@ End Function
 >  Durante a validação e execução de um único pacote, são chamados os métodos <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.OpenLog%2A> e <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.CloseLog%2A> mais de uma vez. Verifique se seu código personalizado não faz com que as entradas de log anteriores sejam substituídas pela próxima abertura e fechamento de log. Se você optou por registrar em log os eventos de validação em seu pacote de teste, o primeiro evento registrado que deverá ver é o OnPreValidate. Se, em vez disso, o primeiro evento registrado que você visualizar for o PackageStart, os eventos de validação iniciais foram substituídos.  
   
 ### <a name="opening-the-log"></a>Abrindo o log  
- A maioria dos provedores de log se conecta a fontes de dados externas, como um arquivo ou banco de dados, para armazenar as informações do evento coletadas durante a execução do pacote. Como com qualquer outro objeto no tempo de execução, a conexão com a fonte de dados externa normalmente é realizada por meio de objetos do gerenciador de conexões.  
+ A maioria dos provedores de log se conecta a fontes de dados externas, como um arquivo ou banco de dados, para armazenar as informações do evento coletadas durante a execução do pacote. Como com qualquer outro objeto no runtime, a conexão com a fonte de dados externa normalmente é realizada por meio de objetos do gerenciador de conexões.  
   
  O método <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.OpenLog%2A> é chamado no início da execução do pacote. Substitua esse método para estabelecer uma conexão com a fonte de dados externa.  
   
@@ -188,9 +188,9 @@ Public Overrides  Sub CloseLog()
 End Sub  
 ```  
   
-![Ícone do Integration Services (pequeno)](../../media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
+![Ícone de Integration Services (pequeno)](../../media/dts-16.gif "Ícone do Integration Services (pequeno)")  **Mantenha-se atualizado com Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar um provedor de logs personalizado](creating-a-custom-log-provider.md)   
  [Desenvolver uma interface do usuário para um provedor de logs personalizado](developing-a-user-interface-for-a-custom-log-provider.md)  
   

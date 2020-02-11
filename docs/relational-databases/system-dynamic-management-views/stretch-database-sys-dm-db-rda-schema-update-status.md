@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_rda_schema_update_status (Transact-SQL) | Microsoft Docs
+title: sys. dm_db_rda_schema_update_status (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,35 +17,35 @@ ms.assetid: 364e3caa-a7c6-4be5-a029-0b19da34de3e
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 611fe9d5bea47204b655f2defe5072d2dd17be92
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67937013"
 ---
-# <a name="stretch-database---sysdmdbrdaschemaupdatestatus"></a>Stretch Database - sys.dm_db_rda_schema_update_status
+# <a name="stretch-database---sysdm_db_rda_schema_update_status"></a>Stretch Database-sys. dm_db_rda_schema_update_status
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Contém uma linha para cada tarefa de atualização de esquema para o arquivo de dados remotos de cada tabela habilitada para Stretch no banco de dados atual. As tarefas são identificadas por suas ids de tarefa.  
+  Contém uma linha para cada tarefa de atualização de esquema para o arquivo de dados remoto de cada tabela habilitada para o Stretch no banco de dado atual. As tarefas são identificadas por suas IDs de tarefa.  
   
- **dm_db_rda_schema_update_status** tem como escopo o contexto de banco de dados atual. Verifique se que você está no contexto da tabela habilitados para Stretch para a qual você deseja ver o status de atualização do esquema de banco de dados.  
+ **dm_db_rda_schema_update_status** está no escopo do contexto do banco de dados atual. Verifique se você está no contexto do banco de dados da tabela habilitada para Stretch para a qual você deseja ver o status de atualização do esquema.  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
-|**table_id**|**int**|A ID local habilitado para ampliação da tabela de esquema de arquivar cujos dados remotos está sendo atualizada.|  
+|**table_id**|**int**|A ID da tabela local habilitada para Stretch cujo esquema de arquivo de dados remoto está sendo atualizado.|  
 |**database_id**|**int**|A ID do banco de dados que contém a tabela local habilitada para Stretch.|  
-|**task_id**|**bigint**|A ID da tarefa de atualização de esquema de arquivo morto de dados remotos.|  
-|**task_type**|**int**|O tipo da tarefa de atualização de esquema de arquivo morto de dados remotos.|  
-|**task_type_desc**|**nvarchar**|A descrição do tipo da tarefa de atualização de esquema de arquivo morto de dados remotos.|  
-|**task_state**|**int**|O estado da tarefa de atualização de esquema de arquivo morto de dados remotos.|  
-|**task_state_des**|**nvarchar**|A descrição do estado da tarefa de atualização de esquema de arquivo morto de dados remotos.|  
-|**start_time_utc**|**datetime**|A hora UTC em que os dados remotos arquivar iniciada de atualização de esquema.|  
-|**end_time_utc**|**datetime**|A hora UTC em que os dados remotos arquivar a atualização do esquema foi concluída.|  
-|**error_number**|**int**|Se a atualização de esquema de arquivo morto de dados remotos falhar, o número do erro do erro que ocorreu; Caso contrário, nulo.|  
-|**error_severity**|**int**|Se a atualização de esquema de arquivo morto de dados remotos falhar, a severidade do erro ocorrido; Caso contrário, nulo.|  
-|**error_state**|**int**|Se a atualização de esquema de arquivo morto de dados remotos falhar, o estado do erro que ocorreu; Caso contrário, nulo. O error_state indica o local em que ocorreu o erro ou condição.|  
+|**task_id**|**bigint**|A ID da tarefa de atualização do esquema de arquivo de dados remoto.|  
+|**task_type**|**int**|O tipo da tarefa de atualização do esquema de arquivo de dados remoto.|  
+|**task_type_desc**|**nvarchar**|A descrição do tipo da tarefa de atualização do esquema de arquivo de dados remoto.|  
+|**task_state**|**int**|O estado da tarefa de atualização do esquema de arquivo de dados remoto.|  
+|**task_state_des**|**nvarchar**|A descrição do estado da tarefa de atualização do esquema de arquivo de dados remoto.|  
+|**start_time_utc**|**datetime**|A hora UTC em que a atualização do esquema do arquivo de dados remoto foi iniciada.|  
+|**end_time_utc**|**datetime**|A hora UTC em que a atualização do esquema do arquivo de dados remoto foi concluída.|  
+|**error_number**|**int**|Se a atualização do esquema do arquivo de dados remoto falhar, o número do erro que ocorreu; caso contrário, NULL.|  
+|**error_severity**|**int**|Se a atualização do esquema do arquivo de dados remoto falhar, a severidade do erro que ocorreu; caso contrário, NULL.|  
+|**error_state**|**int**|Se a atualização do esquema do arquivo de dados remoto falhar, o estado do erro que ocorreu; caso contrário, NULL. O error_state indica a condição ou o local em que o erro ocorreu.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  
   
   

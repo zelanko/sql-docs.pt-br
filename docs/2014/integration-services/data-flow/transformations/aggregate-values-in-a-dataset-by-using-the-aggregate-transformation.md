@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 10b14aa8a1f68b32c00ecb321c1af36fb15b868e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900916"
 ---
 # <a name="aggregate-values-in-a-dataset-by-using-the-aggregate-transformation"></a>Agregar valores em um conjunto de dados por meio da transformação Agregação
@@ -54,7 +54,7 @@ ms.locfileid: "62900916"
     > [!NOTE]  
     >  O fornecimento do número de valores distintos, exato ou aproximado, melhora o desempenho, pois a transformação pode alocar antecipadamente uma quantidade da memória para fazer seu trabalho.  
   
-12. Como opção, clique em **Avançado** e atualize o nome da saída da transformação Agregação. Se as agregações incluirem uma `Group By` operação, você pode selecionar uma contagem aproximada de agrupamento de valores de chave em de **escala de chaves** coluna ou especifique um número exato de agrupamento de valores de chave no **chaves** coluna.  
+12. Como opção, clique em **Avançado** e atualize o nome da saída da transformação Agregação. Se as agregações incluírem `Group By` uma operação, você poderá selecionar uma contagem aproximada de valores de chave de agrupamento na coluna **escala de chaves** ou especificar um número exato de valores de chave de agrupamento na coluna **chaves** .  
   
     > [!NOTE]  
     >  O fornecimento do número de valores distintos, exato ou aproximado, melhora o desempenho, pois a transformação pode alocar antecipadamente uma quantidade da memória para fazer seu trabalho.  
@@ -68,7 +68,7 @@ ms.locfileid: "62900916"
   
 15. Para salvar o pacote atualizado, clique em **Salvar Itens Selecionados** no menu **Arquivo** .  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Transformação Agregação](aggregate-transformation.md)   
  [Transformações do Integration Services](integration-services-transformations.md)   
  [Caminhos do Integration Services](../integration-services-paths.md)   

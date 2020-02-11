@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cda3117df524ba90f322bbb99d6db98ee989ab71
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62870625"
 ---
-# <a name="mssqlserver10532"></a>MSSQLSERVER_10532
+# <a name="mssqlserver_10532"></a>MSSQLSERVER_10532
     
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|10532|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|PG_NO_ELIGIBLE_STMT|  
-|Texto da mensagem|Não é possível criar guia de plano ' %. \*ls' porque o lote ou módulo especificado por `@plan_handle` não contém uma instrução qualificada para um guia de plano. Especifique outro valor para `@plan_handle`.|  
+|Texto da mensagem|Não é possível criar o guia de plano '%.\*ls' porque o lote ou o módulo especificado por `@plan_handle` não contém uma instrução qualificada para um guia de plano. Especifique outro valor para `@plan_handle`.|  
   
 ## <a name="explanation"></a>Explicação  
  O lote ou o módulo especificado por `@plan_handle` não contém uma instrução qualificada para um guia de plano.  
@@ -38,7 +38,7 @@ ms.locfileid: "62870625"
 ## <a name="user-action"></a>Ação do usuário  
  Especifique outro valor para `@plan_handle`.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Guias de plano](../performance/plan-guides.md)   
  [sp_create_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
  [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql)  

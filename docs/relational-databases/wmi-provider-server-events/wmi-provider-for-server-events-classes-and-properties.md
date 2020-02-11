@@ -15,10 +15,10 @@ ms.assetid: e2916cd7-a3ed-41e6-97b4-2ee060754cbe
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 08b18a3a5805b37a371d6fa17850584d6f4953fd
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74164915"
 ---
 # <a name="wmi-provider-for-server-events-classes-and-properties"></a>Provedor WMI para classes e propriedades de eventos de servidor
@@ -36,13 +36,13 @@ ms.locfileid: "74164915"
   
  **Eventos de linguagem de definição de dados e grupos de eventos**  
   
- ![Provedor WMI para árvore de eventos de eventos de servidor](../../relational-databases/wmi-provider-server-events/media/sql-wmi-ddl-events-ktm.gif "Provedor WMI para árvore de eventos de eventos de servidor")  
+ ![Provedor WMI de Árvore de Eventos de Servidor.](../../relational-databases/wmi-provider-server-events/media/sql-wmi-ddl-events-ktm.gif "Provedor WMI de Árvore de Eventos de Servidor.")  
   
  **Eventos de rastreamento e grupos de eventos**  
   
- ![Eventos de rastreamento e grupos de eventos](../../relational-databases/wmi-provider-server-events/media/sql-wmi-trc-all-events.gif "Eventos de rastreamento e grupos de eventos")  
+ ![Eventos de rastreamento e grupos de evento](../../relational-databases/wmi-provider-server-events/media/sql-wmi-trc-all-events.gif "Eventos de rastreamento e grupos de evento")  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Provedor WMI para conceitos de eventos de servidor](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)   
  [Usando o WQL com o Provedor WMI para eventos de servidor](../../relational-databases/wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md)  
   

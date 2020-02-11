@@ -14,16 +14,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f7a18a44a0f71254342f8fc29c38f0993fc05bfb
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637890"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>Localizar GUIDs do conjunto de propriedades e IDs de inteiro de propriedade para propriedades de pesquisa
   Este tópico discute como obter os valores que são necessários antes de adicionar uma propriedade a uma lista de propriedades de pesquisa, tornando-a pesquisável através de pesquisa de texto completo. Estes valores incluem o GUID do conjunto de propriedades e o identificador de inteiro de propriedade de uma propriedade de documento.  
   
- As propriedades de documento que são extraídas por IFilters de dados binários – ou seja, de dados armazenados em uma `varbinary`, `varbinary(max)` (incluindo `FILESTREAM`) ou `image` coluna de tipo de dados, podem ser disponibilizadas para pesquisa de texto completo. Para tornar uma propriedade extraída pesquisável, adicione manualmente a propriedade a uma lista de propriedades de pesquisa. A lista de propriedades de pesquisa também deve ser associada a um ou mais índices de texto completo. Para obter mais informações, veja [Pesquisar propriedades de documento com listas de propriedades de pesquisa](search-document-properties-with-search-property-lists.md).  
+ As propriedades de documento que são extraídas por IFilters de dados binários – ou seja, de `varbinary`dados `varbinary(max)` armazenados em `FILESTREAM`uma coluna de `image` tipo de dados, (incluindo) ou de tipos de dado, podem ser disponibilizadas para pesquisa de texto completo. Para tornar uma propriedade extraída pesquisável, adicione manualmente a propriedade a uma lista de propriedades de pesquisa. A lista de propriedades de pesquisa também deve ser associada a um ou mais índices de texto completo. Para obter mais informações, veja [Pesquisar propriedades de documento com listas de propriedades de pesquisa](search-document-properties-with-search-property-lists.md).  
   
  Antes de você poder acrescentar uma propriedade disponível a uma lista de propriedades, tem que localizar 2 pedaços de informações sobre a propriedade:  
   
@@ -38,12 +38,12 @@ ms.locfileid: "73637890"
 ##  <a name="wellknown"></a> Localizando informações sobre propriedades da Microsoft amplamente usadas e conhecidas  
  A Microsoft define centenas de propriedades de documento para uso em vários contextos, mas somente um pequeno subconjunto das propriedades disponíveis é usado por cada formato de arquivo. Dentre as propriedades frequentemente usadas do Windows está um conjunto pequeno de propriedades genéricas. Alguns exemplos de propriedades genéricas conhecidas são mostrados na tabela seguinte. A tabela mostra o nome conhecido, o nome canônico (da descrição de propriedade publicada pela Microsoft) no Windows, a GUID do conjunto de propriedades, o identificador de inteiro de propriedade e uma descrição sucinta.  
   
-|Nome conhecido|Nome canônico no Windows.|GUID do conjunto de propriedades|ID de inteiro|Descrição|  
+|Nome conhecido|Nome canônico no Windows.|GUID do conjunto de propriedades|ID de inteiro|DESCRIÇÃO|  
 |----------------------|----------------------------|-----------------------|----------------|-----------------|  
 |Autores|`System.Author`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|4|Autor ou autores de um determinado item.|  
-|tags|`System.Keywords`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|5|Conjunto de palavras-chave (também conhecidas como marcas) atribuído ao item.|  
+|Marcas|`System.Keywords`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|5|Conjunto de palavras-chave (também conhecidas como marcas) atribuído ao item.|  
 |Type|`System.PerceivedType`|28636AA6-953D-11D2-B5D6-00C04FD918D0|9|Tipo de arquivo percebido com base em seu tipo canônico.|  
-|Título|`System.Title`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|2|Título do item. Por exemplo, o título de um documento, o assunto de uma mensagem, a legenda de uma fotografia ou o nome de uma música.|  
+|Title|`System.Title`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|2|Título do item. Por exemplo, o título de um documento, o assunto de uma mensagem, a legenda de uma fotografia ou o nome de uma música.|  
   
  Para encorajar a consistência entre formatos de arquivos, a Microsoft identificou subconjuntos de propriedades de documento frequentemente usadas e de alta prioridade para várias categorias de documentos. Estas incluem comunicações, contatos, documentos, arquivos de música, imagens e vídeos. Para obter mais informações sobre as principais propriedades classificadas para cada categoria, veja [Propriedades definidas pelo sistema para formatos de arquivos personalizados](https://go.microsoft.com/fwlink/?LinkId=144336) na documentação do Windows Search.  
   
@@ -101,7 +101,7 @@ GO
   
  Para obter mais informações sobre como criar uma lista de propriedades de pesquisa e associá-la a um índice de texto completo, veja [Pesquisar propriedades de documento com listas de propriedades de pesquisa](search-document-properties-with-search-property-lists.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Pesquisar propriedades de documento com listas de propriedades de pesquisa](search-document-properties-with-search-property-lists.md)   
  [Configurar e gerenciar filtros de pesquisa](configure-and-manage-filters-for-search.md)  
   

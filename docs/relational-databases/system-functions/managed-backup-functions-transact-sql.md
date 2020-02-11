@@ -1,5 +1,5 @@
 ---
-title: Funções de Backup (Transact-SQL) gerenciadas | Microsoft Docs
+title: Funções de backup gerenciadas (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: 1d513d9c-05af-446d-8eba-42f55efcc221
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1b9b16e426143e1eca7dc39d7d050988faa0222a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68140618"
 ---
-# <a name="managed-backup-functions-transact-sql"></a>Funções de Backup gerenciadas (Transact-SQL)
+# <a name="managed-backup-functions-transact-sql"></a>Funções de backup gerenciadas (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Fornece as seguintes funções para [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]fornece as funções a seguir [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]para o.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [managed_backup.fn_backup_db_config &#40;Transact-SQL&#41;](../../relational-databases/system-functions/managed-backup-fn-backup-db-config-transact-sql.md)  
@@ -40,9 +40,9 @@ ms.locfileid: "68140618"
   
  [managed_backup.fn_get_health_status &#40;Transact-SQL&#41;](../../relational-databases/system-functions/managed-backup-fn-get-health-status-transact-sql.md)  
   
- [managed_backup.fn_backup_instance_config &#40;Transact-SQL&#41;](../../relational-databases/system-functions/managed-backup-fn-backup-instance-config-transact-sql.md)  
+ [managed_backup. fn_backup_instance_config &#40;&#41;do Transact-SQL](../../relational-databases/system-functions/managed-backup-fn-backup-instance-config-transact-sql.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Backup gerenciado do SQL Server no Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Backup Gerenciado do SQL Server para o Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   
