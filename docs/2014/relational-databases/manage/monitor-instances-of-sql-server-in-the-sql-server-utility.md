@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6e016b8fb3986b4fa9431a1d223335affa72d3d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63188559"
 ---
 # <a name="monitor-instances-of-sql-server-in-the-sql-server-utility"></a>Monitorar instâncias do SQL Server no Utilitário do SQL Server
@@ -27,7 +27,7 @@ ms.locfileid: "63188559"
 |[Exibir resultados da política de integridade de recursos &#40;Utilitário do SQL Server&#41;](view-resource-health-policy-results-sql-server-utility.md)|Descreve a exibição do painel do Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e a exibição de lista no Gerenciador do Utilitário do SSMS.|  
 |[Modificar uma definição de política de integridade de recursos &#40;Utilitário do SQL Server&#41;](modify-a-resource-health-policy-definition-sql-server-utility.md)|Descreve a exibição ou a modificação das definições de política de integridade de recurso do Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Recursos e tarefas do utilitário do SQL Server](sql-server-utility-features-and-tasks.md)  
   
   

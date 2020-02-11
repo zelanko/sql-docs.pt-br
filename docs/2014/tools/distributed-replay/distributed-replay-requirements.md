@@ -1,5 +1,5 @@
 ---
-title: Distributed Replay Requirements | Microsoft Docs
+title: Requisitos de Distributed Replay | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0e7a87ad14dbe1b12abb4ca4fe0af6b0a439c57b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63149756"
 ---
 # <a name="distributed-replay-requirements"></a>Distributed Replay Requirements
@@ -51,9 +51,9 @@ ms.locfileid: "63149756"
   
  Também é possível criar um modelo de rastreamento personalizado e usá-lo para reproduzir eventos com o Distributed Replay, desde que ele contenha os seguintes eventos:  
   
--   Audit Login  
+-   Auditar logon  
   
--   Audit Logout  
+-   Auditar logoff  
   
 -   ExistingConnection  
   
@@ -103,11 +103,11 @@ ms.locfileid: "63149756"
   
 -   HostName  
   
--   Binary Data  
+-   Dados binários  
   
 -   SPID  
   
--   Start Time  
+-   Hora de Início  
   
 -   EndTime  
   
@@ -124,8 +124,8 @@ ms.locfileid: "63149756"
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
   
-## <a name="operating-system-requirements"></a>Requisitos do sistema operacional  
- Os sistemas operacionais com suporte para a execução da ferramenta de administração e o controlador e os serviços cliente são os mesmos que sua instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações sobre quais sistemas operacionais têm suporte para seus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da instância, consulte [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
+## <a name="operating-system-requirements"></a>Requisitos de sistema operacional  
+ Os sistemas operacionais com suporte para a execução da ferramenta de administração e o controlador e os serviços cliente são os mesmos que sua instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações sobre quais sistemas operacionais têm suporte para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sua instância do, consulte [requisitos de hardware e software para a instalação do SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
   
  Os recursos do Distributed Replay têm suporte em sistemas operacionais x86 e x64. Para sistemas operacionais x64, somente há suporte para Windows no modo Windows (WOW).  
   
@@ -134,8 +134,10 @@ ms.locfileid: "63149756"
   
 |Recurso Distributed Replay|Máximo de instalações por ambiente de repetição|  
 |--------------------------------|--------------------------------------------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller|1|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client|16 (computadores físicos ou virtuais)|  
+|
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller|1|  
+|
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client|16 (computadores físicos ou virtuais)|  
 |Ferramenta de administração|Ilimitado|  
   
 > [!NOTE]  
@@ -157,9 +159,9 @@ ms.locfileid: "63149756"
   
  A repetição de eventos associados com logons faltantes ou incorretos resulta em erros de repetição, mas a operação de repetição continua.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
- [Segurança do Distributed Replay](distributed-replay-security.md)   
+ [Segurança de Distributed Replay](distributed-replay-security.md)   
  [Instalar o Distributed Replay](install-distributed-replay-overview.md)  
   
   

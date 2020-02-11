@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 06651ffcfee30d538c8ede09914133a2ed818b3b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63151099"
 ---
 # <a name="sql-server-workload-group-stats-object"></a>SQL Server, objeto de estatísticas de grupo de cargas de trabalho
@@ -25,7 +25,7 @@ ms.locfileid: "63151099"
   
  Cada grupo de cargas de trabalho ativo cria uma instância do objeto de desempenho SQLServer:Estatísticas de Grupo de Cargas de Trabalho que tem o mesmo nome de instância do grupo de cargas de trabalho do Administrador de Recursos. A tabela a seguir descreve os contadores suportados nesta instância.  
   
-|Nome do contador|Descrição|  
+|Nome do contador|DESCRIÇÃO|  
 |------------------|-----------------|  
 |Solicitações em fila|O número atual de solicitações em fila que estão esperando para serem selecionadas. Esta contagem poderá ser diferente de zero se a aceleração ocorrer depois que o limite GROUP_MAX_REQUESTS for atingido.|  
 |Solicitações ativas|O número de solicitações que estão sendo executadas neste grupo de cargas de trabalho. Deverá ser equivalente à contagem de linhas de sys.dm_exec_requests filtradas pela ID de grupo.|  
@@ -39,7 +39,7 @@ ms.locfileid: "63151099"
 |Planos de qualidade inferior/s|O número de planos de qualidade inferior que são gerados por segundo neste grupo de cargas de trabalho.|  
 |Threads paralelos ativos|A contagem atual de uso de threads paralelos.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Monitorar o uso de recursos &#40;Monitor do Sistema&#41;](monitor-resource-usage-system-monitor.md)   
  [SQL Server, objeto de estatísticas do pool de recursos](sql-server-resource-pool-stats-object.md)   
  [Resource Governor](../resource-governor/resource-governor.md)  

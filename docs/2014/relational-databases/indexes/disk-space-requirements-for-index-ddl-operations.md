@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7dbb3fafd32ead6587d9c64eb6ccf2294ed4918b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63161791"
 ---
 # <a name="disk-space-requirements-for-index-ddl-operations"></a>Disk Space Requirements for Index DDL Operations
@@ -78,7 +78,7 @@ ms.locfileid: "63161791"
  As operações de índice online utilizam o controle de versão de linha para isolar a operação de índice dos efeitos das modificações feitas por outras transações. Isso evita a necessidade de solicitar bloqueios de compartilhamento de linhas já lidas. As operações simultâneas de atualização e exclusão de usuários durante operações de índice online precisam de espaço para os registros de versão no **tempdb**. Para obter mais informações, consulte [Executar operações de índice online](perform-index-operations-online.md) .  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Index Disk Space Example](index-disk-space-example.md)  
+ [Exemplo de espaço em disco de índice](index-disk-space-example.md)  
   
  [Espaço em disco de log de transações para operações de índice](transaction-log-disk-space-for-index-operations.md)  
   
@@ -88,7 +88,7 @@ ms.locfileid: "63161791"
   
  [Estimar o tamanho de um índice não clusterizado](../databases/estimate-the-size-of-a-nonclustered-index.md)  
   
- [Estimando o tamanho de um heap](../databases/estimate-the-size-of-a-heap.md)  
+ [Estimar o tamanho de um heap](../databases/estimate-the-size-of-a-heap.md)  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
  [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)  
@@ -97,7 +97,7 @@ ms.locfileid: "63161791"
   
  [DROP INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-index-transact-sql)  
   
- [Especificar fator de preenchimento para um índice](specify-fill-factor-for-an-index.md)  
+ [Especificar o fator de preenchimento para um índice](specify-fill-factor-for-an-index.md)  
   
  [Reorganizar e recompilar índices](indexes.md)  
   

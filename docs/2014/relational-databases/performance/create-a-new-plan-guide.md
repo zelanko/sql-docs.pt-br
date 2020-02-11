@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9fa024e9e744fd955e4ccc323919cb22a97b7dd3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63151193"
 ---
 # <a name="create-a-new-plan-guide"></a>Criar um novo guia de plano
@@ -33,7 +33,7 @@ ms.locfileid: "63151193"
   
      [Segurança](#Security)  
   
--   **Para criar um guia de plano usando:**  
+-   **Para criar um guia de plano, usando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -62,7 +62,7 @@ ms.locfileid: "63151193"
   
 1.  Clique no sinal de adição para expandir o banco de dados no qual você deseja criar um guia de plano e clique no sinal de adição para expandir a pasta **Programação** .  
   
-2.  Clique com botão direito do **guias de plano** pasta e selecione **novo guia de plano...** .  
+2.  Clique com o botão direito do mouse na pasta **guias de plano** e selecione **novo guia de plano...**.  
   
 3.  Na caixa de diálogo **Novo Guia de Plano** , na caixa **Nome** , digite o nome do guia de plano.  
   

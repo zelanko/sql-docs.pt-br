@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fc4e2ecd81b6bf0a6c24aff8e89dc31c95e04625
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63191445"
 ---
-# <a name="mssqleng014150"></a>MSSQL_ENG014150
+# <a name="mssql_eng014150"></a>MSSQL_ENG014150
     
 ## <a name="message-details"></a>Detalhes da mensagem  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|14150|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |Nome simbólico||  
 |Texto da mensagem|Replicação-%s: agente %s bem-sucedida. %s|  
@@ -50,13 +50,13 @@ ms.locfileid: "63191445"
 ## <a name="user-action"></a>Ação do usuário  
  O Log Reader Agent, o Queue Reader Agent e o Distribution Agent são, em geral, executados continuamente, diferente de outros agentes, que são, em geral, executados sob demanda ou de forma programada. Se você não esperar que um agente tenha concluído a sua execução, verifique o estado do agente. Para obter mais informações, consulte [Monitor Replication Agents](agents/replication-agents-overview.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Administração do agente de replicação](agents/replication-agent-administration.md)   
  [Referência de erros e eventos &#40;Replicação&#41;](errors-and-events-reference-replication.md)   
- [Agente de Distribuição de Replicação](agents/replication-distribution-agent.md)   
- [Agente do Leitor de Log de Replicação](agents/replication-log-reader-agent.md)   
- [Agente de Mesclagem de Replicação](agents/replication-merge-agent.md)   
- [Agente de Leitor de Fila de Replicação](agents/replication-queue-reader-agent.md)   
+ [Replication Distribution Agent](agents/replication-distribution-agent.md)   
+ [Replication Log Reader Agent](agents/replication-log-reader-agent.md)   
+ [Replication Merge Agent](agents/replication-merge-agent.md)   
+ [Replication Queue Reader Agent](agents/replication-queue-reader-agent.md)   
  [Replication Snapshot Agent](agents/replication-snapshot-agent.md)  
   
   

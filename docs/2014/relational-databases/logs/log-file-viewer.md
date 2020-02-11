@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f72f8e40374198a5230e32b8ec5b3974fdb6b971
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63144642"
 ---
 # <a name="log-file-viewer"></a>Visualizador do Arquivo de Log
@@ -27,7 +27,7 @@ ms.locfileid: "63144642"
   
 -   Coleta de Auditoria  
   
--   Coleta de Dados  
+-   Coleta de dados  
   
 -   Database Mail  
   
@@ -51,7 +51,7 @@ ms.locfileid: "63144642"
 |Descreve como exibir arquivos de log offline através de servidores registrados e como verificar permissões de WMI.|[Exibir arquivos de log offline](view-offline-log-files.md)|  
 |Oferece ajuda F1 do Visualizador de Arquivo de Log.|[Ajuda F1 do Visualizador do Arquivo de Log](log-file-viewer-f1-help.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Auditoria do SQL Server &#40;Mecanismo de Banco de Dados&#41;](../security/auditing/sql-server-audit-database-engine.md)   
  [Log de erros do SQL Server Agent](../../ssms/agent/sql-server-agent-error-log.md)  
   

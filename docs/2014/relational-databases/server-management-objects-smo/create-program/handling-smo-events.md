@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d0d309103880a369a88952e19b252fc15693fdd4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63191922"
 ---
 # <a name="handling-smo-events"></a>Manipulando eventos SMO
@@ -35,9 +35,9 @@ ms.locfileid: "63191922"
 ## <a name="event-subscription"></a>Assinatura do evento  
  Para manipular eventos, escreva uma classe de manipulador de evento, crie uma instância dela, atribua o manipulador de eventos ao objeto pai e faça a assinatura do evento.  
   
- Uma classe de manipulador de eventos deve ser escrita para manipular eventos. A classe do manipulador de eventos pode conter mais de uma função de manipulador de eventos e deve ser instalada para os eventos a serem manipulados. As funções de manipulador de eventos recebem informações sobre o evento a partir de *ServerEventNotificatificationArgs* parâmetro que pode ser usado para relatar informações sobre o evento.  
+ Uma classe de manipulador de eventos deve ser escrita para manipular eventos. A classe do manipulador de eventos pode conter mais de uma função de manipulador de eventos e deve ser instalada para os eventos a serem manipulados. As funções do manipulador de eventos recebem informações sobre o evento do parâmetro *ServerEventNotificatificationArgs* que pode ser usado para relatar informações sobre o evento.  
   
- Os tipos de eventos de banco de dados e servidor que podem ser manipulados são listados na <xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet> classe e o <xref:Microsoft.SqlServer.Management.Smo.ServerEventSet>classe.  
+ Os tipos de eventos de servidor e banco de dados que podem ser manipulados <xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet> são listados na <xref:Microsoft.SqlServer.Management.Smo.ServerEventSet>classe e na classe.  
   
 ## <a name="example"></a>Exemplo  
  [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  
