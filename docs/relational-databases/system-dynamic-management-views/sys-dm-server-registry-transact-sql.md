@@ -1,5 +1,5 @@
 ---
-title: sys.dm_server_registry (Transact-SQL) | Microsoft Docs
+title: sys. dm_server_registry (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,22 +19,22 @@ ms.assetid: 9b3e0c74-2e99-4996-a383-104d51831e97
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d8b91540724b30ac42f0f8c4302e58b3d40ec066
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68090719"
 ---
-# <a name="sysdmserverregistry-transact-sql"></a>sys.dm_server_registry (Transact-SQL)
+# <a name="sysdm_server_registry-transact-sql"></a>sys.dm_server_registry (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retorna informações de configuração e instalação que estão armazenadas no registro do Windows para a instância atual do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Retorna uma linha por chave de registro. Use essa exibição de gerenciamento dinâmico para retornar informações como os serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que estão disponíveis nos computadores host ou valores de configuração de rede para a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |registry_key|**nvarchar(256)**|Nome da chave do Registro. Permite valor nulo.|  
-|value_name|**nvarchar(256)**|Nome do valor da chave. Este é o item mostrado na **nome** coluna do Editor do registro. Permite valor nulo.|  
-|value_data|**sql_variant**|Valor dos dados da chave. Esse é o valor mostrado na **dados** do Editor do registro para uma determinada entrada de coluna. Permite valor nulo.|  
+|value_name|**nvarchar(256)**|Nome do valor da chave. Esse é o item mostrado na coluna **Name** do editor do registro. Permite valor nulo.|  
+|value_data|**sql_variant**|Valor dos dados da chave. Esse é o valor mostrado na coluna de **dados** do editor do registro para uma determinada entrada. Permite valor nulo.|  
   
 ## <a name="security"></a>Segurança  
   
@@ -43,7 +43,7 @@ ms.locfileid: "68090719"
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-display-the-sql-server-services"></a>A. Exibir os serviços do SQL Server  
+### <a name="a-display-the-sql-server-services"></a>a. Exibir os serviços do SQL Server  
  O exemplo a seguir retorna valores da chave do registro para os serviços do SQL Server e SQL Server Agent para a instância atual do SQL Server.  
   
 ```  
@@ -88,7 +88,7 @@ FROM sys.dm_server_registry
 WHERE registry_key LIKE N'%SuperSocketNetLib%';  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [sys.dm_server_services &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-services-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [sys. dm_server_services &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-services-transact-sql.md)  
   
   

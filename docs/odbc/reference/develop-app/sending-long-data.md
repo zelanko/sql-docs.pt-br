@@ -1,5 +1,5 @@
 ---
-title: Enviando dados Long | Microsoft Docs
+title: Enviando dados longos | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,34 +14,34 @@ ms.assetid: ea989084-a8e6-4737-892e-9ec99dd49caf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: acb4ff1637c1530527af88affaf437334596016b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68094338"
 ---
 # <a name="sending-long-data"></a>Enviar dados Long
-Definem DBMSs *dados long* como qualquer caractere ou dados binários ao longo de um determinado tamanho, como 254 caracteres. Pode não ser possível armazenar todo o item de dados longos em memória, como quando o item representa um documento de texto longo ou um bitmap. Como esses dados não podem ser armazenados em um único buffer, a fonte de dados envia para o driver em partes com **SQLPutData** quando a instrução é executada. Os parâmetros para o qual os dados são enviados em tempo de execução são conhecidos como *parâmetros de dados em execução*.  
+DBMSs definem *dados longos* como qualquer caractere ou dados binários em um determinado tamanho, como 254 caracteres. Talvez não seja possível armazenar um item inteiro de dados longos na memória, como quando o item representa um documento de texto longo ou um bitmap. Como esses dados não podem ser armazenados em um único buffer, a fonte de dados o envia para o driver em partes com **SQLPutData** quando a instrução é executada. Os parâmetros para os quais os dados são enviados no momento da execução são conhecidos como *parâmetros de dados em execução*.  
   
 > [!NOTE]  
->  Um aplicativo, na verdade, pode enviar qualquer tipo de dados em tempo de execução com **SQLPutData**, embora somente os caracteres e dados binários podem ser enviados em partes. No entanto, se os dados são pequenos o suficiente para caber em um único buffer, há geralmente não há motivo para usar **SQLPutData**. É muito mais fácil associar o buffer e permitir que o driver recupera os dados do buffer.  
+>  Um aplicativo pode realmente enviar qualquer tipo de dados no momento da execução com **SQLPutData**, embora apenas dados de caractere e binário possam ser enviados em partes. No entanto, se os dados forem pequenos o suficiente para caber em um único buffer, geralmente não há motivo para usar **SQLPutData**. É muito mais fácil associar o buffer e permitir que o driver recupere os dados do buffer.  
   
- Para enviar dados em tempo de execução, o aplicativo executa as seguintes ações:  
+ Para enviar dados no momento da execução, o aplicativo executa as seguintes ações:  
   
-1.  Transmite um valor de 32 bits que identifica o parâmetro na *ParameterValuePtr* argumento **SQLBindParameter** em vez de passar o endereço de um buffer. Esse valor não será analisado pelo driver. Ele será retornado para o aplicativo mais tarde, portanto, ele deve significar algo para o aplicativo. Por exemplo, ele pode ser o número do parâmetro ou o identificador de um arquivo que contém dados.  
+1.  Passa um valor de 32 bits que identifica o parâmetro no argumento *ParameterValuePtr* em **SQLBindParameter** em vez de passar o endereço de um buffer. Esse valor não é analisado pelo driver. Ele será retornado para o aplicativo mais tarde, portanto, ele deve significar algo ao aplicativo. Por exemplo, pode ser o número do parâmetro ou o identificador de um arquivo que contém dados.  
   
-2.  Passa o endereço de um buffer de comprimento/indicador na *StrLen_or_IndPtr* argumento de **SQLBindParameter**.  
+2.  Passa o endereço de um buffer de comprimento/indicador no argumento *StrLen_or_IndPtr* de **SQLBindParameter**.  
   
-3.  Armazena SQL_DATA_AT_EXEC ou o resultado do SQL_LEN_DATA_AT_EXEC (*comprimento*) macro no buffer de comprimento/indicador. Esses valores indicam para o driver que serão enviados com os dados para o parâmetro **SQLPutData**. SQL_LEN_DATA_AT_EXEC (*comprimento*) é usado ao enviar dados longos para uma fonte de dados que precisa saber quantos bytes de dados long serão enviados para que ele pode alocar antecipadamente espaço. Para determinar se uma fonte de dados solicita este valor, o aplicativo chama **SQLGetInfo** com a opção SQL_NEED_LONG_DATA_LEN. Todos os drivers devem dar suporte a esta macro; Se a fonte de dados não requer o comprimento em bytes, o driver pode ignorá-lo.  
+3.  Armazena SQL_DATA_AT_EXEC ou o resultado da macro SQL_LEN_DATA_AT_EXEC (*comprimento*) no buffer de comprimento/indicador. Ambos os valores indicam ao driver que os dados para o parâmetro serão enviados com **SQLPutData**. SQL_LEN_DATA_AT_EXEC (*Length*) é usado ao enviar dados longos para uma fonte de dados que precisa saber quantos bytes de dados longos serão enviados para que possa alocar espaço. Para determinar se uma fonte de dados requer esse valor, o aplicativo chama **SQLGetInfo** com a opção SQL_NEED_LONG_DATA_LEN. Todos os drivers devem dar suporte a essa macro; se a fonte de dados não exigir o comprimento do byte, o driver poderá ignorá-lo.  
   
-4.  Chamadas **SQLExecute** ou **SQLExecDirect**. O driver detecta que um buffer de comprimento/indicador contém o valor SQL_DATA_AT_EXEC ou o resultado do SQL_LEN_DATA_AT_EXEC (*comprimento*) macro e retorna SQL_NEED_DATA como o valor de retorno da função.  
+4.  Chama **SQLExecute** ou **SQLExecDirect**. O driver descobre que um buffer de comprimento/indicador contém o valor SQL_DATA_AT_EXEC ou o resultado da macro SQL_LEN_DATA_AT_EXEC (*comprimento*) e retorna SQL_NEED_DATA como o valor de retorno da função.  
   
-5.  Chamadas **SQLParamData** em resposta ao SQL_NEED_DATA o valor de retorno. Se precisam ser enviada, dados longos **SQLParamData** retornará SQL_NEED_DATA. No buffer apontado pela *ValuePtrPtr* argumento, o driver retorna o valor que identifica o parâmetro de dados em execução. Se houver mais de um parâmetro de dados em execução, o aplicativo deve usar esse valor para determinar qual parâmetro para enviar dados para; o driver não é necessário para solicitar dados para parâmetros de dados em execução em uma ordem específica.  
+5.  Chama **SQLParamData** em resposta ao valor de retorno de SQL_NEED_DATA. Se for necessário enviar dados longos, **SQLParamData** retornará SQL_NEED_DATA. No buffer apontado pelo argumento *ValuePtrPtr* , o driver retorna o valor que identifica o parâmetro de dados em execução. Se houver mais de um parâmetro de dados em execução, o aplicativo deverá usar esse valor para determinar para qual parâmetro enviar dados; o driver não precisa solicitar dados para parâmetros de dados em execução em qualquer ordem específica.  
   
-6.  Chamadas **SQLPutData** para enviar os dados de parâmetro para o driver. Se os dados de parâmetro não couberem em um único buffer, pois geralmente é o caso de dados longo, o aplicativo chama **SQLPutData** repetidamente para enviar os dados em partes; cabe a fonte de dados e o driver para remontar os dados. Se o aplicativo passa os dados de cadeia de caracteres terminada em nulo, a driver ou fonte de dados deve remover o caractere de terminação null como parte do processo de remontagem.  
+6.  Chama **SQLPutData** para enviar os dados de parâmetro para o driver. Se os dados do parâmetro não couberem em um único buffer, como geralmente é o caso com dados longos, o aplicativo chamará **SQLPutData** repetidamente para enviar os dados em partes; cabe ao driver e à fonte de dados remontar os dados. Se o aplicativo passar dados de cadeia de caracteres terminados em nulo, o driver ou a fonte de dados deverá remover o caractere de terminação nula como parte do processo de remontagem.  
   
-7.  Chamadas **SQLParamData** novamente para indicar que ele enviou todos os dados para o parâmetro. Se houver quaisquer parâmetros de dados em execução para o qual os dados não foram enviados, o driver retorna SQL_NEED_DATA e o valor que identifica o próximo parâmetro; o aplicativo retorna para a etapa 6. Se os dados foram enviados para todos os parâmetros de dados em execução, a instrução é executada. **SQLParamData** retorna SQL_SUCCESS ou SQL_SUCCESS_WITH_INFO e pode retorna qualquer valor de retorno ou diagnóstico que **SQLExecute** ou **SQLExecDirect** pode retornar.  
+7.  Chama **SQLParamData** novamente para indicar que ele enviou todos os dados para o parâmetro. Se houver parâmetros de dados em execução para os quais os dados não foram enviados, o driver retornará SQL_NEED_DATA e o valor que identificará o próximo parâmetro; o aplicativo retorna para a etapa 6. Se os dados forem enviados para todos os parâmetros de dados em execução, a instrução será executada. **SQLParamData** retorna SQL_SUCCESS ou SQL_SUCCESS_WITH_INFO e pode retornar qualquer valor de retorno ou diagnóstico que **SQLExecute** ou **SQLExecDirect** possa retornar.  
   
- Após **SQLExecute** ou **SQLExecDirect** retornará SQL_NEED_DATA e antes de dados seja completamente enviados para o último parâmetro de dados em execução, a instrução está em um estado de dados necessário. Enquanto uma instrução está em um estado de dados necessário, o aplicativo pode chamar apenas **SQLPutData**, **SQLParamData**, **SQLCancel**, **SQLGetDiagField**, ou **SQLGetDiagRec**; todas as outras funções retornam SQLSTATE HY010 (erro de sequência de função). Chamando **SQLCancel** cancela a execução da instrução e o retorna ao estado anterior. Para obter mais informações, consulte [apêndice b: Tabelas de transição de estado ODBC](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
+ Após **SQLExecute** ou **SQLExecDirect** retornar SQL_NEED_DATA e antes que os dados sejam completamente enviados para o último parâmetro de dados em execução, a instrução estará em um estado de dados necessário. Embora uma instrução esteja em um estado de dados necessário, o aplicativo pode chamar somente **SQLPutData**, **SQLParamData**, **SQLCancel**, **SQLGetDiagField**ou **SQLGetDiagRec**; todas as outras funções retornam SQLSTATE HY010 (erro de sequência de função). Chamar **SQLCancel** cancela a execução da instrução e a retorna ao estado anterior. Para obter mais informações, consulte o [Apêndice B: tabelas de transição de estado ODBC](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
   
- Para obter um exemplo de envio de dados em tempo de execução, consulte o [SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md) descrição da função.
+ Para obter um exemplo de envio de dados em tempo de execução, consulte a descrição da função [SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md) .

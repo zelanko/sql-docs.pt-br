@@ -1,5 +1,5 @@
 ---
-title: 'Ibcpsession:: Bcpcontrol (OLE DB) | Microsoft Docs'
+title: 'IBCPSession:: BCPControl (OLE DB) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6fae6e3ba4f861fa7d75ae3ee4e8825350d80c39
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63046741"
 ---
 # <a name="ibcpsessionbcpcontrol-ole-db"></a>IBCPSession::BCPControl (OLE DB)
@@ -38,23 +38,23 @@ void *iValue);
 ## <a name="remarks"></a>Comentários  
  O método **BCPControl** define vários parâmetros de controle para operações de cópia em massa, inclusive o número de erros permitidos antes de cancelar uma cópia em massa, os números da primeira e da última linha a serem copiadas de um arquivo de dados e o tamanho do lote.  
   
- Esse método também é usado para especificar a instrução SELECT a ser usada na cópia em massa de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Você pode definir as `eOption` argumento como BCP_OPTION_HINTS e `iValue` argumento para ter um ponteiro para uma cadeia de caracteres de caractere largo que contém a instrução SELECT.  
+ Esse método também é usado para especificar a instrução SELECT a ser usada na cópia em massa de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Você pode definir o `eOption` argumento como BCP_OPTION_HINTS e `iValue` o argumento para ter um ponteiro para uma cadeia de caracteres larga contendo a instrução SELECT.  
   
  Os valores possíveis para *eOption* são:  
   
-|Opção|Descrição|  
+|Opção|DESCRIÇÃO|  
 |------------|-----------------|  
 |BCP_OPTION_ABORT|Para uma operação de cópia em massa que já está em andamento. Você pode chamar o método **BCPControl** com um argumento *eOption* com valor BCP_OPTION_ABORT de outro thread para parar uma operação de cópia em massa em execução. O argumento *iValue* é ignorado.|  
 |BCP_OPTION_BATCH|O número de linhas por lote. O padrão é 0, que indica que todas as linhas de uma tabela quando os dados estiverem sendo extraídos, ou todas as linhas no arquivo de dados do usuário quando os dados estiverem sendo copiados para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Um valor menor que 1 reinicia BCP_OPTION_BATCH para o valor padrão.|  
-|BCP_OPTION_DELAYREADFMT|Um booliano, se definido como true, fará com que [IBCPSession::BCPReadFmt](ibcpsession-bcpreadfmt-ole-db.md) leia na execução. Se false (padrão), ibcpsession:: Bcpreadfmt será imediatamente ler o arquivo de formato. Ocorrerá um erro de sequência se `BCP_OPTION_DELAYREADFMT` é a verdadeira e você chamar ibcpsession:: BCPColumns ou ibcpsession:: BCPColFmt.<br /><br /> Um erro de sequência também ocorrerá se você chamar `IBCPSession::BCPControl(BCPDELAYREADFMT, (void *)FALSE))` depois de chamar `IBCPSession::BCPControl(BCPDELAYREADFMT, (void *)TRUE)` e ibcpsession:: Bcpwritefmt.<br /><br /> Para obter mais informações, veja [Descoberta de metadados](../native-client/features/metadata-discovery.md).|  
-|BCP_OPTION_FILECP|O argumento *iValue* contém o número da página de código para o arquivo de dados. Você pode especificar o número da página de código, como 1252 ou 850, ou um dos seguintes valores:<br /><br /> -BCP_FILECP_ACP: os dados no arquivo estão no Windows a Microsoft?? página de código do cliente.<br />-BCP_FILECP_OEMCP: os dados no arquivo estão na página de código OEM do cliente (padrão).<br />-BCP_FILECP_RAW: os dados no arquivo estão na página de código do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|BCP_OPTION_FILEFMT|O número de versão do formato de arquivo de dados. Pode ser 80 ([!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]), 90 ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]), 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]), 110 ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) ou 120 ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. 120 é o padrão. Isso é útil para exportar e importar dados em formatos que tinham suporte em versões anteriores do servidor.  Por exemplo, para importar dados obtidos de uma coluna de texto em um servidor [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] para uma coluna **varchar(max)** em um servidor [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou mais recente, você deve especificar 80. Da mesma forma, se você especificar 80 ao exportar dados de uma coluna **varchar(max)** , eles serão salvos da mesma forma como colunas de texto no formato [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] e poderão ser importados para uma coluna de texto de um servidor [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] .|  
+|BCP_OPTION_DELAYREADFMT|Um booliano, se definido como true, fará com que [IBCPSession::BCPReadFmt](ibcpsession-bcpreadfmt-ole-db.md) leia na execução. Se false (o padrão), IBCPSession:: BCPReadFmt lerá imediatamente o arquivo de formato. Um erro de sequência ocorrerá `BCP_OPTION_DELAYREADFMT` se for verdadeiro e você chamar IBCPSession:: BCPColumns ou IBCPSession:: BCPColFmt.<br /><br /> Um erro de sequência também ocorrerá se você `IBCPSession::BCPControl(BCPDELAYREADFMT, (void *)FALSE))` chamar depois `IBCPSession::BCPControl(BCPDELAYREADFMT, (void *)TRUE)` de chamar e IBCPSession:: BCPWriteFmt.<br /><br /> Para obter mais informações, veja [Descoberta de metadados](../native-client/features/metadata-discovery.md).|  
+|BCP_OPTION_FILECP|O argumento *iValue* contém o número da página de código para o arquivo de dados. Você pode especificar o número da página de código, como 1252 ou 850, ou um dos seguintes valores:<br /><br /> -BCP_FILECP_ACP: os dados no arquivo estão no Microsoft Windows?? página de código do cliente.<br />-BCP_FILECP_OEMCP: os dados no arquivo estão na página de código OEM do cliente (padrão).<br />-BCP_FILECP_RAW: os dados no arquivo estão na página de código de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|BCP_OPTION_FILEFMT|O número de versão do formato de arquivo de dados. Pode ser 80 ([!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]), 90 ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]), 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]), 110 ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) ou 120 ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. 120 é o padrão. Isso é útil para exportar e importar dados em formatos que tinham suporte em versões anteriores do servidor.  Por exemplo, para importar dados obtidos de uma coluna de texto em um servidor [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] para uma coluna **varchar(max)** em um servidor [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou posterior, você deve especificar 80. Da mesma forma, se você especificar 80 ao exportar dados de uma coluna **varchar(max)**, eles serão salvos exatamente do mesmo modo que colunas de texto são salvas (no formato [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]) e poderão ser importados para uma coluna de texto de um servidor [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)].|  
 |BCP_OPTION_FIRST|A primeira linha de dados do arquivo ou da tabela a ser copiada. O padrão é 1; um valor menor que 1 redefine essa opção para seu valor padrão.|  
 |BCP_OPTION_FIRSTEX|Para operações de saída BCP, especifica a primeira linha da tabela do banco de dados a ser copiada no arquivo de dados.<br /><br /> Para BCP em operações, especifica a primeira linha do arquivo de dados a ser copiada na tabela de banco de dados.<br /><br /> Espera-se que o parâmetro *iValue* seja o endereço de um inteiro de 64 bits assinado que contenha o valor. O valor máximo que pode ser passado para BCPFIRSTEX é 2^63-1.|  
-|BCP_OPTION_FMTXML|Usado para especificar que o arquivo de formato gerado deve estar no formato XML. Por padrão, está desativado, o que implica que os arquivos formatados são salvos como arquivos de texto. O arquivo de formato XML fornece maior flexibilidade, mas com algumas restrições adicionais. Por exemplo, não é possível especificar o prefixo e terminador para um campo simultaneamente, o que é possível em arquivos de formatos mais antigos. **Observação:**  Arquivos de formato XML só são suportados quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as ferramentas são instaladas com [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.|  
+|BCP_OPTION_FMTXML|Usado para especificar que o arquivo de formato gerado deve estar no formato XML. Por padrão, está desativado, o que implica que os arquivos formatados são salvos como arquivos de texto. O arquivo de formato XML fornece maior flexibilidade, mas com algumas restrições adicionais. Por exemplo, não é possível especificar o prefixo e terminador para um campo simultaneamente, o que é possível em arquivos de formatos mais antigos. **Observação:**  Só há suporte para arquivos de formato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XML quando as ferramentas são [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instaladas junto com o Native Client.|  
 |BCP_OPTION_HINTS|O argumento *iValue* contém um ponteiro de cadeia de caracteres largo. A cadeia de caracteres endereçada especifica dicas de processamento da cópia em massa do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] que retorna um conjunto de resultados. Se uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] especificada retornar mais de um conjunto de resultados, todos os conjuntos de resultados depois do primeiro serão ignorados.|  
 |BCP_OPTION_KEEPIDENTITY|Quando o argumento *iValue* é definido como TRUE, esta opção especifica que os métodos de cópia em massa inserem os valores de dados fornecidos para as colunas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definidas com uma restrição de identidade. O arquivo de entrada deve fornecer valores para as colunas de identidade. Se essa opção não for definida, novos valores de identidade serão gerados para as linhas inseridas. Quaisquer dados contidos no arquivo para as colunas de identidade serão ignorados.|  
-|BCP_OPTION_KEEPNULLS|Especifica se valores de dados vazios no arquivo serão convertidos em valores NULL na tabela [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Quando o argumento *iValue* é definido como TRUE, os valores vazios serão convertidos para NULL na tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . O padrão será converter valores vazios em um valor padrão para a coluna na tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se houver um padrão.|  
+|BCP_OPTION_KEEPNULLS|Especifica se valores de dados vazios no arquivo serão convertidos em valores NULL na tabela [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Quando o argumento *iValue* é definido como TRUE, os valores vazios são convertidos para NULL na tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O padrão será converter valores vazios em um valor padrão para a coluna na tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se houver um padrão.|  
 |BCP_OPTION_LAST|A última linha a ser copiada. O padrão é copiar todas as linhas. Um valor menor que 1 redefine esta opção para seu valor padrão.|  
 |BCP_OPTION_LASTEX|Para operações de saída BCP, especifica a última linha da tabela do banco de dados a ser copiada no arquivo de dados.<br /><br /> Para BCP em operações, especifica a última linha do arquivo de dados a ser copiada na tabela do banco de dados.<br /><br /> Espera-se que o parâmetro *iValue* seja o endereço de um inteiro de 64 bits assinado que contenha o valor. O valor de máximo que pode ser passado para BCPLASTEX é 2^63-1.|  
 |BCP_OPTION_MAXERRS|O número de erros permitido antes da falha da operação de cópia em massa. O padrão é 10. Um valor menor que 1 redefine esta opção para seu valor padrão. A cópia em massa impõe um máximo de 65.535 erros. Uma tentativa de definir esta opção como um valor maior que 65.535 resulta na definição da opção como 65.535.|  
@@ -74,7 +74,7 @@ void *iValue);
  O método foi bem-sucedido.  
   
  E_FAIL  
- Ocorreu um erro específico do provedor. Para obter informações detalhadas, use a interface [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md) .  
+ Ocorreu um erro específico do provedor; para obter informações detalhadas, use a interface [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md) .  
   
  E_UNEXPECTED  
  A chamada para o método era inesperada. Por exemplo, o método [IBCPSession::BCPInit](ibcpsession-bcpinit-ole-db.md) não foi chamado antes de chamar essa função.  
@@ -82,7 +82,7 @@ void *iValue);
  E_OUTOFMEMORY  
  Erro de memória insuficiente.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [IBCPSession &#40;OLE DB&#41;](ibcpsession-ole-db.md)   
  [Executando operações de cópia em massa](../native-client/features/performing-bulk-copy-operations.md)  
   

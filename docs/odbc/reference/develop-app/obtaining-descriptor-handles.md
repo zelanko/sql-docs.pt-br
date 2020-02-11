@@ -13,11 +13,11 @@ ms.assetid: 936f983f-c7e9-43f3-97ea-dd4b1bbf4654
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8bfa0b36ecca3af655efde84c3ce3f22ab0c1f88
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68086316"
 ---
 # <a name="obtaining-descriptor-handles"></a>Obter identificadores de descritor
-Um aplicativo obtém o identificador de qualquer descritor alocado explicitamente como um argumento de saída da chamada para **SQLAllocHandle**. O identificador de um descritor de implicitamente alocado é obtido chamando **SQLGetStmtAttr**.
+Um aplicativo obtém o identificador de qualquer descritor explicitamente alocado como um argumento de saída da chamada para **SQLAllocHandle**. O identificador de um descritor implicitamente alocado é obtido chamando **SQLGetStmtAttr**.

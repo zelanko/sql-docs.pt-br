@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e94a9dc0530aa84914bb6ccfb1ecb1fb39464bb9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63127224"
 ---
 # <a name="localdb_error_version_requested_not_installed"></a>LOCALDB_ERROR_VERSION_REQUESTED_NOT_INSTALLED
@@ -23,16 +23,16 @@ ms.locfileid: "63127224"
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|273|  
-|Origem do evento|Tempo de execução de banco de dados local do SQL Server 12.0|  
-|Componente|API do tempo de execução de banco de dados local|  
+|Origem do Evento|Runtime de banco de dados local do SQL Server 12.0|  
+|Componente|API do runtime de banco de dados local|  
 |Texto da mensagem|A versão do Banco de Dados Local disponível nesta estação de trabalho é inferior à versão solicitada do Banco de Dados Local.|  
   
 ## <a name="explanation"></a>Explicação  
  O nível de patch especificado não está instalado.  
   
 ## <a name="user-action"></a>Ação do usuário  
- Instale a versão do Tempo de Execução de Banco de Dados Local com o nível de patch solicitado (ou superior).  
+ Instale a versão do Runtime de Banco de Dados Local com o nível de patch solicitado (ou superior).  
   
   

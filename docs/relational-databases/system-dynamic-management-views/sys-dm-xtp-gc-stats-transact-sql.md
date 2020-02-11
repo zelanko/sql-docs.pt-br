@@ -1,5 +1,5 @@
 ---
-title: sys.dm_xtp_gc_stats (Transact-SQL) | Microsoft Docs
+title: sys. dm_xtp_gc_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,22 +19,22 @@ ms.assetid: 8287d611-50e3-43e1-ba8d-3e3793d3ba0e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 28d98f7f95d9e9c2af967976b875f61388342583
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68090172"
 ---
-# <a name="sysdmxtpgcstats-transact-sql"></a>sys.dm_xtp_gc_stats (Transact-SQL)
+# <a name="sysdm_xtp_gc_stats-transact-sql"></a>sys.dm_xtp_gc_stats (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Fornece informações (estatística geral) sobre o comportamento atual do processo de coleta de lixo do [!INCLUDE[hek_2](../../includes/hek-2-md.md)].  
   
- As linhas são coletadas como lixo durante o processamento de transação regular ou pelo thread principal de coleta de lixo, que é conhecido como trabalhador inativo. Quando uma transação de usuário é confirmada, ela remove um item de trabalho da fila de coleta de lixo ([DM xtp_gc_queue_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xtp-gc-queue-stats-transact-sql.md)). Qualquer linha que poderia ser coletada como lixo mas não foi acessada pela transação de usuário principal é coletada como lixo por um trabalhador inativo, como parte da verificação de canto sujo (uma verificação das áreas do índice que são menos acessadas).  
+ As linhas são coletadas como lixo durante o processamento de transação regular ou pelo thread principal de coleta de lixo, que é conhecido como trabalhador inativo. Quando uma transação de usuário é confirmada, ela recoloca um item de trabalho da fila de coleta de lixo ([Sys. dm_xtp_gc_queue_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xtp-gc-queue-stats-transact-sql.md)). Qualquer linha que poderia ser coletada como lixo mas não foi acessada pela transação de usuário principal é coletada como lixo por um trabalhador inativo, como parte da verificação de canto sujo (uma verificação das áreas do índice que são menos acessadas).  
   
  Para obter mais informações, veja [OLTP in-memory &#40;Otimização na memória&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
-|Nome da coluna|type|Descrição|  
+|Nome da coluna|Type|DESCRIÇÃO|  
 |-----------------|----------|-----------------|  
 |rows_examined|**bigint**|O número de linhas verificadas pelo subsistema de coleta de lixo desde que o servidor foi iniciado.|  
 |rows_no_sweep_needed|**bigint**|O número de linhas que foram removidas sem uma verificação de canto sujo.|  
@@ -69,7 +69,7 @@ sweep_rows_expiring  sweep_rows_expired   sweep_rows_expired_removed
                0                 673673  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Exibições de gerenciamento dinâmico de tabela otimizada em memória &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Exibições de gerenciamento dinâmico de tabela com otimização de memória &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

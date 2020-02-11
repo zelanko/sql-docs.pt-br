@@ -1,5 +1,5 @@
 ---
-title: sys.dm_xtp_system_memory_consumers (Transact-SQL) | Microsoft Docs
+title: sys. dm_xtp_system_memory_consumers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,16 +19,16 @@ ms.assetid: 9eb0dd82-7920-42e0-9e50-7ce6e7ecee8b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 83e9368b562a7ac200171dc814830b21d677770a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68090091"
 ---
-# <a name="sysdmxtpsystemmemoryconsumers-transact-sql"></a>sys.dm_xtp_system_memory_consumers (Transact-SQL)
+# <a name="sysdm_xtp_system_memory_consumers-transact-sql"></a>sys.dm_xtp_system_memory_consumers (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  Relata os consumidores de memória no nível do sistema para [!INCLUDE[hek_2](../../includes/hek-2-md.md)]. A memória desses consumidores vem do pool padrão (quando a alocação está no contexto de um thread do usuário) ou do pool interno (se a alocação está no contexto de um thread do sistema).  
+  Relata os consumidores de memória no nível do sistema para [!INCLUDE[hek_2](../../includes/hek-2-md.md)]. A memória para esses consumidores é proveniente do pool padrão (quando a alocação está no contexto de um thread de usuário) ou do pool interno (se a alocação estiver no contexto de um thread do sistema).  
   
 ```  
 -- system memory consumers @ instance  
@@ -37,12 +37,12 @@ select * from sys.dm_xtp_system_memory_consumers
   
  Para obter mais informações, veja [OLTP in-memory &#40;Otimização na memória&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
-|Nome da coluna|type|Descrição|  
+|Nome da coluna|Type|DESCRIÇÃO|  
 |-----------------|----------|-----------------|  
 |memory_consumer_id|**bigint**|ID interna do consumidor de memória.|  
-|memory_consumer_type|**int**|Um inteiro que representa o tipo do consumidor de memória com um dos seguintes valores:<br /><br /> 0 – não deve ser exibido. Agrega o uso de memória de dois ou mais consumidores.<br /><br /> 1 - À PARTE: Rastreia o consumo de memória para a parte de um sistema.<br /><br /> 2 - VARHEAP: Rastreia o consumo de memória para um heap de comprimento variável.<br /><br /> 4 - pool de página de e/s: Rastreia o consumo de memória para um pool de página do sistema usado para operações de e/s.|  
-|memory_consumer_type_desc|**nvarchar(16)**|A descrição do tipo do consumidor de memória:<br /><br /> 0 – não deve ser exibido.<br /><br /> 1 - LOOKASIDE<br /><br /> 2 - VARHEAP<br /><br /> 4 - PGPOOL|  
-|memory_consumer_desc|**nvarchar(64)**|Descrição da instância do consumidor de memória:<br /><br /> VARHEAP: <br />Heap do sistema. Uso geral. Atualmente usado apenas para alocar itens de trabalho de coleta de lixo.<br />-ou-<br />A parte de heap. Usado por partes quando o número de itens contidos na lista de partes alcançar um valor predeterminado (normalmente em torno de 5.000 itens).<br /><br /> PGPOOL: Para o sistema de e/s pools lá são três tamanhos diferentes: Pool de página do pool de página do sistema 4K, pool de página do sistema de 64 K e sistema 256K.|  
+|memory_consumer_type|**int**|Um inteiro que representa o tipo de consumidor de memória com um dos seguintes valores:<br /><br /> 0-não deve ser exibido. Agrega o uso de memória de dois ou mais consumidores.<br /><br /> 1-à parte: controla o consumo de memória para uma parte do sistema.<br /><br /> 2-VARHEAP: controla o consumo de memória para um heap de comprimento variável.<br /><br /> 4-pool de páginas de e/s: rastreia o consumo de memória para um pool de páginas do sistema usado para operações de e/s.|  
+|memory_consumer_type_desc|**nvarchar (16)**|A descrição do tipo do consumidor de memória:<br /><br /> 0-não deve ser exibido.<br /><br /> 1-À PARTE<br /><br /> 2 - VARHEAP<br /><br /> 4 - PGPOOL|  
+|memory_consumer_desc|**nvarchar (64)**|Descrição da instância do consumidor de memória:<br /><br /> VARHEAP: <br />Heap do sistema. Uso geral. Atualmente usado apenas para alocar itens de trabalho de coleta de lixo.<br />-OU-<br />A parte de heap. Usado por partes quando o número de itens contidos na lista de partes alcançar um valor predeterminado (normalmente em torno de 5.000 itens).<br /><br /> PGPOOL: para pools de sistema de e/s, há três tamanhos diferentes: pool de páginas de 4K do sistema, pool de páginas do sistema 64 K e pool de páginas do sistema 256 K.|  
 |lookaside_id|**bigint**|A ID do provedor de memória de direções de local de thread.|  
 |pagepool_id|**bigint**|A ID do provedor de memória do pool de páginas de local de thread.|  
 |allocated_bytes|**bigint**|Número de bytes reservados para o consumidor.|  
@@ -104,7 +104,7 @@ total_allocated_MB   total_used_MB
 2                    2  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Exibições de gerenciamento dinâmico de tabela otimizada em memória &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Exibições de gerenciamento dinâmico de tabela com otimização de memória &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

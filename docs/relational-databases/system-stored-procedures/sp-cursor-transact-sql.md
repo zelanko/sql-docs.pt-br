@@ -18,22 +18,22 @@ ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cd5cae24b30840ea08ec2ae025b021fcf70f2dc6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68108570"
 ---
-# <a name="spcursor-transact-sql"></a>sp_cursor (Transact-SQL)
+# <a name="sp_cursor-transact-sql"></a>sp_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Solicita atualizações posicionadas. Este procedimento executa operações em uma ou mais linhas no buffer de busca de um cursor. sp_cursor é invocado pela especificação de ID = 1 em um pacote do protocolo TDS.  
+  Solicita atualizações posicionadas. Este procedimento executa operações em uma ou mais linhas no buffer de busca de um cursor. sp_cursor é invocado especificando ID = 1 em um pacote TDS (tabela de dados tabulares).  
   
 ||  
 |-|  
-|**Aplica-se ao**: SQL Server ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+|**Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SQL Server (por meio da [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,20 +45,20 @@ sp_cursor  cursor, optype, rownum, table
   
 ## <a name="arguments"></a>Argumentos  
  *cursor*  
- O identificador do cursor. *cursor* é um parâmetro obrigatório que chama uma **int** valor de entrada. *cursor* é o *manipular* valor gerado pelo SQL Server e retornado pelo procedimento sp_cursoropen.  
+ O identificador do cursor. *cursor* é um parâmetro necessário que chama um valor de entrada **int** . *cursor* é o valor do *identificador* gerado por SQL Server e retornado pelo procedimento sp_cursoropen.  
   
- *optype*  
- É um parâmetro necessário que designa qual operação o cursor executará. *optype* requer um dos seguintes **int** valores de entrada.  
+ *OpType*  
+ É um parâmetro necessário que designa qual operação o cursor executará. *OpType* requer um dos valores de entrada **int** a seguir.  
   
-|Valor|Nome|Descrição|  
+|Valor|Nome|DESCRIÇÃO|  
 |-----------|----------|-----------------|  
-|0X0001|UPDATE|É usado para atualizar uma ou mais linhas no buffer de busca.  As linhas especificadas em *rownum* são novamente acessadas e atualizadas.|  
-|0x0002|DELETE|É usado para excluir uma ou mais linhas no buffer de busca. As linhas especificadas em *rownum* são novamente acessadas e excluídas.|  
-|0X0004|INSERT|Insere dados sem precisar criar um SQL **inserir** instrução.|  
+|0X0001|UPDATE|É usado para atualizar uma ou mais linhas no buffer de busca.  As linhas especificadas em *rownum* são acessadas novamente e atualizadas.|  
+|0x0002|Delete (excluir)|É usado para excluir uma ou mais linhas no buffer de busca. As linhas especificadas em *rownum* são acessadas novamente e excluídas.|  
+|0X0004|INSERT|Insere dados sem criar uma instrução SQL **Insert** .|  
 |0X0008|REFRESH|É usado para preencher novamente o buffer a partir de tabelas subjacentes e pode ser usado para atualizar a linha se uma atualização ou exclusão falhar devido a controle de simultaneidade otimista, ou após UPDATE.|  
-|0X10|LOCK|Faz com que um SQL Server U bloqueio seja adquirido na página que contém a linha especificada. Esse bloqueio é compatível com Bloqueios S, mas não com Bloqueios X ou outros Bloqueios U. Pode ser usado para implementar bloqueio a curto prazo.|  
-|0X20|SETPOSITION|É usado somente quando o programa for emitir um subsequentes do SQL Server posicionado instrução DELETE ou UPDATE.|  
-|0X40|ABSOLUTE|Pode ser usado apenas junto com UPDATE ou DELETE.  ABSOLUTE é usado apenas com cursores KEYSET (é ignorado para cursores DYNAMIC e cursores STATIC não podem ser atualizados).<br /><br /> Observação: Se ABSOLUTE for especificado em uma linha no conjunto de chaves que não foi buscado, a operação poderá falhar a verificação de simultaneidade e o resultado de retorno não pode ser garantido.|  
+|0X10|LOCK|Faz com que um SQL Server bloqueio de U seja adquirido na página que contém a linha especificada. Esse bloqueio é compatível com Bloqueios S, mas não com Bloqueios X ou outros Bloqueios U. Pode ser usado para implementar bloqueio a curto prazo.|  
+|0X20|SETPOSITION|É usado somente quando o programa vai emitir um subseqüente SQL Server a instrução DELETE ou UPDATE posicionada.|  
+|0X40|ABSOLUTE|Pode ser usado apenas junto com UPDATE ou DELETE.  ABSOLUTE é usado apenas com cursores KEYSET (é ignorado para cursores DYNAMIC e cursores STATIC não podem ser atualizados).<br /><br /> Observação: se ABSOLUTE for especificado em uma linha no conjunto de chaves que não foi buscada, a operação poderá falhar na verificação de simultaneidade e o resultado de retorno não poderá ser garantido.|  
   
  *rownum*  
  Especifica qual das linhas no buffer de busca o cursor irá afetar, atualizar ou excluir.  
@@ -66,7 +66,7 @@ sp_cursor  cursor, optype, rownum, table
 > [!NOTE]  
 >  Isso não afeta o ponto de partida de qualquer operação de busca RELATIVE, NEXT ou PREVIOUS, nem as atualizações ou exclusões executadas com sp_cursor.  
   
- *rowNum* é um parâmetro obrigatório que chama uma **int** valor de entrada.  
+ *rownum* é um parâmetro necessário que chama um valor de entrada **int** .  
   
  1  
  Significa a primeira linha no buffer de busca.  
@@ -84,50 +84,50 @@ sp_cursor  cursor, optype, rownum, table
  Significa todas as linhas no buffer de busca.  
   
 > [!NOTE]  
->  Só é válido para uso com a atualização, exclusão, atualização ou bloqueio *optype* valores.  
+>  Só é válido para uso com valores de UPDATE, DELETE, REFRESH ou LOCK *OpType* .  
   
- *table*  
- Nome da tabela que identifica a tabela que *optype* aplica-se a quando a definição de cursor envolve uma junção ou nomes de coluna ambíguos são retornados pelo *valor* parâmetro. Se nenhuma tabela específica for designada, o padrão será a primeira tabela da cláusula FROM. *tabela* é um parâmetro opcional que requer um valor de cadeia de caracteres de entrada. É possível especificar a cadeia de caracteres como qualquer tipo de dados de caractere ou UNICODE. *tabela* pode ser um nome de tabela de várias partes.  
+ *tabela*  
+ O nome da tabela que identifica a tabela à qual *OpType* se aplica quando a definição do cursor envolve uma junção ou nomes de coluna ambíguos são retornados pelo parâmetro de *valor* . Se nenhuma tabela específica for designada, o padrão será a primeira tabela da cláusula FROM. *Table* é um parâmetro opcional que requer um valor de entrada de cadeia de caracteres. É possível especificar a cadeia de caracteres como qualquer tipo de dados de caractere ou UNICODE. a *tabela* pode ser um nome de tabela de várias partes.  
   
- *value*  
- Usado inserir ou atualizar valores. O *valor* parâmetro de cadeia de caracteres é usado apenas com UPDATE e INSERT *optype* valores. É possível especificar a cadeia de caracteres como qualquer tipo de dados de caractere ou UNICODE.  
+ *valor*  
+ Usado inserir ou atualizar valores. O parâmetro de cadeia de caracteres *Value* é usado somente com os valores Update e Insert *OpType* . É possível especificar a cadeia de caracteres como qualquer tipo de dados de caractere ou UNICODE.  
   
 > [!NOTE]  
->  Os nomes de parâmetro para *valor* podem ser atribuídos pelo usuário.  
+>  Os nomes de parâmetro para o *valor* podem ser atribuídos pelo usuário.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
- Ao usar uma RPC, uma operação posicionada DELETE ou UPDATE com um número de buffer 0 retornará uma mensagem DONE com um *rowcount* 0 (falha) ou 1 (êxito) para cada linha no buffer de busca.  
+ Ao usar um RPC, uma operação de exclusão ou atualização posicionada com um número de buffer 0 retornará uma mensagem feita com um *RowCount* de 0 (falha) ou 1 (êxito) para cada linha no buffer de busca.  
   
 ## <a name="remarks"></a>Comentários  
   
 ## <a name="optype-parameter"></a>Parâmetro optype  
- Com exceção das combinações de SETPOSITION com UPDATE, DELETE, atualização ou bloqueio; ou ABSOLUTO com UPDATE ou DELETE, o *optype* valores são mutuamente exclusivos.  
+ Exceção das combinações de SETPOSITION com atualização, exclusão, atualização ou bloqueio; ou absoluto com UPDATE ou DELETE, os valores de *OpType* são mutuamente exclusivos.  
   
- A cláusula SET do valor UPDATE é construída a partir de *valor* parâmetro.  
+ A cláusula SET do valor de atualização é construída a partir do parâmetro *Value* .  
   
- Uma vantagem de usar a inserção *optype* valor é que você pode evitar a conversão de dados de caractere não em formato de caractere para inserções. Os valores são especificados da mesma maneira como UPDATE. Se qualquer coluna obrigatório não for incluída, INSERT falhará.  
+ Um benefício de usar o valor de INSERT *OpType* é que você pode evitar a conversão de dados de não caractere em formato de caractere para inserções. Os valores são especificados da mesma maneira como UPDATE. Se qualquer coluna obrigatório não for incluída, INSERT falhará.  
   
--   O valor SETPOSITION não afeta o ponto de partida de qualquer operação de busca RELATIVE, NEXT ou PREVIOUS, nem as atualizações ou exclusões executadas com a interface sp_cursor. Qualquer número que não especificar uma linha no buffer de busca resultará na posição sendo definida como 1 sem erro sendo retornado. Quando SETPOSITION for executado, a posição permanecerá em vigor até a próxima operação sp_cursorfetch, T-SQL **BUSCAR** operação ou operação SETPOSITION sp_cursor pelo mesmo cursor. Uma operação sp_cursorfetch subsequente definirá a posição do cursor como a primeira linha no novo buffer de busca, enquanto outras chamadas de cursor não afetarão o valor da posição. SETPOSITION pode ser vinculado por uma cláusula OR com REFRESH, UPDATE, DELETE ou LOCK para definir o valor da posição como a última linha modificada.  
+-   O valor SETPOSITION não afeta o ponto de partida de qualquer operação de busca RELATIVE, NEXT ou PREVIOUS, nem as atualizações ou exclusões executadas com a interface sp_cursor. Qualquer número que não especificar uma linha no buffer de busca resultará na posição sendo definida como 1 sem erro sendo retornado. Depois que SETPOSITION é executada, a posição permanece em vigor até a próxima operação de sp_cursorfetch, a operação de **busca** do T-SQL ou sp_cursor operação SETPOSITION por meio do mesmo cursor. Uma operação sp_cursorfetch subsequente definirá a posição do cursor como a primeira linha no novo buffer de busca, enquanto outras chamadas de cursor não afetarão o valor da posição. SETPOSITION pode ser vinculado por uma cláusula OR com REFRESH, UPDATE, DELETE ou LOCK para definir o valor da posição como a última linha modificada.  
   
- Se uma linha no buffer de busca não é especificada por meio de *rownum* parâmetro, a posição será definida como 1, sem erro sendo retornado. Uma vez que a posição seja definida, ela permanecerá em vigor até a próxima operação sp_cursorfetch, operação T-SQL ou operação SETPOSITION sp_cursor ser executada no mesmo cursor.  
+ Se uma linha no buffer de busca não for especificada por meio do parâmetro *rownum* , a posição será definida como 1, sem nenhum erro retornado. Uma vez que a posição seja definida, ela permanecerá em vigor até a próxima operação sp_cursorfetch, operação T-SQL ou operação SETPOSITION sp_cursor ser executada no mesmo cursor.  
   
  SETPOSITION pode ser vinculado por uma cláusula OR com REFRESH, UPDATE, DELETE ou LOCK para definir a posição do cursor como a última linha modificada.  
   
 ## <a name="rownum-parameter"></a>Parâmetro rownum  
- Se for especificado, o *rownum* parâmetro pode ser interpretado como o número da linha no conjunto de chaves em vez do número de linha dentro do buffer de busca. O usuário é responsável para assegurar que o controle de simultaneidade seja mantido. Isso significa que, para cursores SCROLL_LOCKS, você deve manter um bloqueio de forma independente na linha determinada (isso pode ser feito por meio de uma transação). Para cursores OPTIMISTIC, você deve ter buscado previamente a linha para executar essa operação.  
+ Se especificado, o parâmetro *rownum* poderá ser interpretado como o número da linha dentro do conjunto de chaves, em vez do número da linha dentro do buffer de busca. O usuário é responsável para assegurar que o controle de simultaneidade seja mantido. Isso significa que, para cursores SCROLL_LOCKS, você deve manter um bloqueio de forma independente na linha determinada (isso pode ser feito por meio de uma transação). Para cursores OPTIMISTIC, você deve ter buscado previamente a linha para executar essa operação.  
   
 ## <a name="table-parameter"></a>Parâmetro table  
- Se o *optype* valor for UPDATE ou INSERT e uma instrução de inserção ou atualização completa é enviada como o *valor* parâmetro, o valor especificado para *tabela* será ignorado.  
+ Se o valor de *OpType* for Update ou INSERT e uma instrução UPDATE ou INSERT completa for enviada como o parâmetro *Value* , o valor especificado para *Table* será ignorado.  
   
 > [!NOTE]  
->  Com relação a exibições, somente uma tabela participante da exibição pode ser modificada. O *valor* nomes de coluna de parâmetro devem refletir os nomes de coluna no modo de exibição, mas o nome da tabela pode ser aquele da tabela base subjacente (caso em que sp_cursor substituirá o nome de exibição).  
+>  Com relação a exibições, somente uma tabela participante da exibição pode ser modificada. Os nomes de coluna de parâmetro de *valor* devem refletir os nomes de coluna na exibição, mas o nome da tabela pode ser o da tabela base subjacente (nesse caso sp_cursor substituirá o nome da exibição).  
   
 ## <a name="value-parameter"></a>Parâmetro value  
- Há duas alternativas para as regras para usar *valor* conforme mencionado anteriormente na seção argumentos:  
+ Há duas alternativas às regras para usar o *valor* , conforme mencionado anteriormente na seção argumentos:  
   
-1.  Você pode usar um nome que é '\@' anexado ao nome da coluna na lista de seleção para qualquer chamada *valor* parâmetros. Uma vantagem dessa alternativa é que a conversão de dados pode não ser necessária.  
+1.  Você pode usar um nome que seja '\@' pre-pendente para o nome da coluna na lista de seleção para qualquer parâmetro de *valor* nomeado. Uma vantagem dessa alternativa é que a conversão de dados pode não ser necessária.  
   
-2.  Use um parâmetro para enviar uma instrução UPDATE ou INSERT completa ou usar vários parâmetros para enviar partes de uma instrução UPDATE ou INSERT que o SQL Server, em seguida, compilará em uma instrução completa. Você encontrará exemplos disso na seção Exemplos, posteriormente neste tópico.  
+2.  Use um parâmetro para enviar uma instrução UPDATE ou INSERT completa ou use vários parâmetros para enviar partes de uma instrução UPDATE ou INSERT que SQL Server, em seguida, será criada em uma instrução completa. Você encontrará exemplos disso na seção Exemplos, posteriormente neste tópico.  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -139,7 +139,7 @@ sp_cursor  cursor, optype, rownum, table
  `[ [ UPDATE <table name> ] SET ] {<column name> = expression} [,...n]`  
   
 > [!NOTE]  
->  Se UPDATE \<nome da tabela > for especificado, qualquer valor especificado para o *tabela* parâmetro será ignorado.  
+>  Se o \<nome da tabela de atualização> for especificado, qualquer valor especificado para o parâmetro de *tabela* será ignorado.  
   
  Quando são usados vários parâmetros, o primeiro deve ser uma cadeia de caracteres no seguinte formato:  
   
@@ -149,7 +149,7 @@ sp_cursor  cursor, optype, rownum, table
   
  `<column name> = expression  [,...n]`  
   
- Nesse caso, o \<nome da tabela > na atualização construída instrução é aquele especificado ou que adotou o padrão pela *tabela* parâmetro.  
+ Nesse caso, o nome \<da tabela> na instrução UPDATE construída é aquele especificado ou padronizado pelo parâmetro *Table* .  
   
  Para INSERT:  
   
@@ -158,7 +158,7 @@ sp_cursor  cursor, optype, rownum, table
  `[ [ INSERT [INTO] <table name> ] VALUES ] ( <expression> [,...n] )`  
   
 > [!NOTE]  
->  Se inserir  *\<nome da tabela >* for especificado, qualquer valor especificado para o *tabela* parâmetro será ignorado.  
+>  Se o * \<nome de tabela* de inserção>for especificado, qualquer valor especificado para o parâmetro de *tabela* será ignorado.  
   
  Quando são usados vários parâmetros, o primeiro deve ser uma cadeia de caracteres no seguinte formato:  
   
@@ -168,14 +168,14 @@ sp_cursor  cursor, optype, rownum, table
   
  `expression [,...n]`  
   
- exceto onde VALUES foi especificado, quando deverá haver um ")" à direita após a última expressão. Nesse caso, o  *\<nome da tabela >* a atualização construída instrução é aquele especificado ou usado como padrão pelo *tabela* parâmetro.  
+ exceto onde VALUES foi especificado, quando deverá haver um ")" à direita após a última expressão. Nesse caso, o * \<nome da tabela>* na instrução UPDATE construída é aquele especificado ou padronizado pelo parâmetro *Table* .  
   
 > [!NOTE]  
 >  É possível enviar um parâmetro como um parâmetro nomeado, isto é, "`@VALUES`". Neste caso, nenhum outro parâmetro nomeado pode ser usado.  
   
-## <a name="see-also"></a>Consulte também  
- [sp_cursoropen &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
- [sp_cursorfetch &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [&#41;&#40;Transact-SQL de sp_cursoropen](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_cursorfetch](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

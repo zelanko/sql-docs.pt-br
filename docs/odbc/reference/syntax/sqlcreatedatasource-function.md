@@ -20,15 +20,15 @@ ms.assetid: 76ee851a-dca9-40cc-8e9e-eb3f74e560ee
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0b3a6fced096c779b5ab91bf4e5b6a3f0a66e5f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68121393"
 ---
 # <a name="sqlcreatedatasource-function"></a>Função SQLCreateDataSource
-**Conformidade com**  
- Versão introduzida: ODBC 2.0  
+**Conformidade**  
+ Versão introduzida: ODBC 2,0  
   
  **Resumo**  
  **SQLCreateDataSource** exibe uma caixa de diálogo com a qual o usuário pode adicionar uma fonte de dados.  
@@ -43,69 +43,69 @@ BOOL SQLCreateDataSource(
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *hwnd*  
- [Entrada] Identificador de janela pai.  
+ *HWND*  
+ Entrada Identificador de janela pai.  
   
  *lpszDS*  
- [Entrada] Nome da fonte de dados. *lpszDS* pode ser um ponteiro nulo ou uma cadeia de caracteres vazia.  
+ Entrada Nome da fonte de dados. *lpszDS* pode ser um ponteiro nulo ou uma cadeia de caracteres vazia.  
   
-## <a name="returns"></a>Retorna  
- **SQLCreateDataSource** retorna TRUE se a fonte de dados é criada. Caso contrário, retornará FALSE.  
+## <a name="returns"></a>Retornos  
+ **SQLCreateDataSource** retornará true se a fonte de dados for criada. Caso contrário, retornará FALSE.  
   
-## <a name="diagnostics"></a>Diagnóstico  
- Quando **SQLCreateDataSource** retornar FALSE, um associado  *\*pfErrorCode* valor pode ser obtido chamando **SQLInstallerError**. A seguinte tabela lista os  *\*pfErrorCode* valores que podem ser retornados por **SQLInstallerError** e explica cada uma no contexto dessa função.  
+## <a name="diagnostics"></a>Diagnósticos  
+ Quando **SQLCreateDataSource** retorna false, um valor * \*pfErrorCode* associado pode ser obtido chamando **SQLInstallerError**. A tabela a seguir lista os valores de * \*pfErrorCode* que podem ser retornados por **SQLInstallerError** e explica cada um no contexto dessa função.  
   
-|*\*pfErrorCode*|Erro|Descrição|  
+|*\*pfErrorCode*|Erro|DESCRIÇÃO|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_GENERAL_ERR|Erro geral de instalador|Ocorreu um erro para que nenhum erro específico do instalador.|  
-|ODBC_ERROR_INVALID_HWND|Identificador de janela inválido|O *hwnd* argumento era inválido ou nulo.|  
-|ODBC_ERROR_INVALID_DSN|DSN inválido|O *lpszDS* argumento continha uma cadeia de caracteres que era inválida para um DSN.|  
-|ODBC_ERROR_REQUEST_FAILED|*Solicitar* falhou|A chamada para **ConfigDSN** com a opção ODBC_ADD_DSN falhou.|  
-|ODBC_ERROR_LOAD_LIBRARY_FAILED|Não foi possível carregar a biblioteca de instalação do driver ou conversor|Não foi possível carregar a biblioteca de instalação do driver.|  
+|ODBC_ERROR_GENERAL_ERR|Erro geral do instalador|Ocorreu um erro para o qual não havia nenhum erro do instalador específico.|  
+|ODBC_ERROR_INVALID_HWND|Identificador de janela inválido|O argumento *HWND* era inválido ou nulo.|  
+|ODBC_ERROR_INVALID_DSN|DSN inválido|O argumento *lpszDS* continha uma cadeia de caracteres que era inválida para um DSN.|  
+|ODBC_ERROR_REQUEST_FAILED|Falha na *solicitação*|Falha na chamada para **ConfigDSN** com a opção ODBC_ADD_DSN.|  
+|ODBC_ERROR_LOAD_LIBRARY_FAILED|Não foi possível carregar a biblioteca de instalação do driver ou do Tradutor|Não foi possível carregar a biblioteca de instalação do driver.|  
 |ODBC_ERROR_USER_CANCELED|Operação cancelada pelo usuário|O usuário cancelou a criação de uma nova fonte de dados.|  
 |ODBC_ERROR_CREATE_DSN_FAILED|Não foi possível criar o DSN solicitado|Não foi possível conectar ao banco de dados; a chamada para **SQLDriverConnect** para um DSN de arquivo não retornou uma conexão bem-sucedida.<br /><br /> Não foi possível gravar no arquivo.|  
-|ODBC_ERROR_OUT_OF_MEM|Memória insuficiente|O instalador não foi possível executar a função devido à falta de memória.|  
+|ODBC_ERROR_OUT_OF_MEM|Memória insuficiente|O instalador não pôde executar a função devido à falta de memória.|  
   
 ## <a name="comments"></a>Comentários  
- Se *hwnd* for nulo, **SQLCreateDataSource** retorna FALSE. Caso contrário, ele exibe a **criar nova fonte de dados** caixa de diálogo com uma página do Assistente para escolher o tipo de fonte de dados a ser definido, conforme mostrado na ilustração a seguir.  
+ Se *HWND* for NULL, **SQLCreateDataSource** retornará false. Caso contrário, ele exibe a caixa de diálogo **criar nova fonte de dados** com uma página de assistente para escolher o tipo de fonte de dados a ser configurado, conforme mostrado na ilustração a seguir.  
   
- ![Criar caixa de diálogo Nova fonte de dados: selecione o tipo](../../../odbc/reference/syntax/media/ch23a.gif "CH23A")  
+ ![Caixa de diálogo Criar Nova Fonte de Dados: selecionar tipo](../../../odbc/reference/syntax/media/ch23a.gif "CH23A")  
   
- A opção padrão é **fonte de dados do arquivo**. Quando uma fonte de dados foi escolhida e **próxima** clicado, a seguinte página de assistente que contém uma lista dos drivers instalados é exibida.  
+ A opção padrão é **fonte de dados de arquivo**. Quando uma fonte de dados tiver sido escolhida e, **em seguida** , clicada, a página do assistente a seguir que contém uma lista de drivers instalados será exibida.  
   
- ![Criar caixa de diálogo Nova fonte de dados: Selecionar driver](../../../odbc/reference/syntax/media/ch23b.gif "CH23B")  
+ ![Caixa de diálogo Criar Nova Fonte de Dados: selecionar driver](../../../odbc/reference/syntax/media/ch23b.gif "CH23B")  
   
- Se **cancele** é clicado, a caixa de diálogo caixa desaparece e **SQLCreateDataSource** retorna falso com o código de erro de ODBC_ERROR_USER_CANCELED. Se o **fonte de dados de usuário** ou **fonte de dados do sistema** opção foi selecionada, o **avançado** botão não estiver disponível.  
+ Se **Cancel** for clicado, a caixa de diálogo desaparecerá e **SQLCreateDataSource** retornará false com o código de erro ODBC_ERROR_USER_CANCELED. Se a opção fonte de **dados do usuário** ou fonte de **dados do sistema** tiver sido selecionada, o botão **avançado** não estará disponível.  
   
- Quando o **próxima** botão é clicado, o seguinte ocorrerá, dependendo de qual tipo de dados de origem foi selecionada:  
+ Quando o botão **Avançar** for clicado, ocorrerá uma das seguintes opções, dependendo de qual tipo de fonte de dados foi selecionado:  
   
--   Se **fonte de dados de arquivo** foi selecionado, uma página do assistente é exibida para o usuário insira um nome de arquivo.  
+-   Se a **fonte de dados de arquivo** tiver sido selecionada, uma página de assistente será exibida para que o usuário insira um nome de arquivo.  
   
--   Se qualquer um dos **fonte de dados de usuário** ou **fonte de dados do sistema** foi selecionado, uma página de assistente exibe o tipo de fonte de dados e o driver será exibida para revisão e quando **concluir** é clicado, a fonte de dados está configurada.  
+-   Se a **fonte** de dados do usuário ou a **fonte de dados do sistema** tiver sido selecionada, uma página do assistente exibindo o tipo de fonte de dados e o driver será exibida para revisão e quando a opção **concluir** for clicada, a fonte de dados será configurada.  
   
- Se **avançado** é clicado na página do assistente Criar nova fonte de dados, uma página do assistente é exibida para o usuário insira informações específicas de driver. Na caixa de texto dessa caixa de diálogo, digite o driver e palavras-chave separadas por retorna, conforme mostrado na ilustração a seguir.  
+ Se **avançado** for clicado na página Criar novo assistente de fonte de dados, será exibida uma página de assistente para que o usuário insira informações específicas do driver. Na caixa de texto dessa caixa de diálogo, digite o driver e as palavras-chave separadas por Devoluções, conforme mostrado na ilustração a seguir.  
   
- ![Caixa de diálogo de configurações de criação de DSN de arquivo de avanço](../../../odbc/reference/syntax/media/ch23c.gif "CH23C")  
+ ![Caixa de diálogo Configurações Avançadas de Criação de DSN de Arquivo](../../../odbc/reference/syntax/media/ch23c.gif "CH23C")  
   
- Palavras-chave específicas do driver de adicionais podem ser encontradas na descrição do **SQLDriverConnect**. Todos, exceto **DSN** são permitidos.  
+ Palavras-chave adicionais específicas do driver podem ser encontradas na descrição de **SQLDriverConnect**. Todos, exceto **DSN** , são permitidos.  
   
- O padrão para o **verificar esta Conexão** opção for TRUE. Esse padrão se aplica a esta página do assistente está ativada ou não. Se **Okey** é clicado, a cadeia de caracteres especificada na caixa de texto e o **verificar esta Conexão** valor de opção são armazenados em cache. (Se o **feche** botão ou **Cancelar** é clicado, qualquer recentemente inserido informações específicas de driver serão perdidas, pois a cadeia de caracteres especificada na caixa de texto e o **verificar esta Conexão** não estão em cache o valor da opção.)  
+ O padrão para a opção **verificar esta conexão** é true. Esse padrão se aplica se esta página do assistente está ativada ou não. Se **OK** for clicado, a cadeia de caracteres especificada na caixa de texto e o valor da opção **verificar esta conexão** serão armazenados em cache. (Se o botão **fechar** ou **Cancelar** for clicado, todas as informações específicas do driver inseridas recentemente serão perdidas porque a cadeia de caracteres especificada na caixa de texto e o valor da opção **verificar esta conexão** não serão armazenados em cache.)  
   
- Se **fonte de dados de arquivo** tiver sido selecionada na primeira página do assistente, em seguida, depois que um driver foi selecionado e os valores de palavra-chave tenham sido inseridos na página de assistente avançado, o usuário é solicitado a inserir um nome de arquivo. Clique em **navegue** para procurar um nome de arquivo, caso em que o diretório padrão no **procurar** caixa é especificada por uma combinação do caminho especificado por CommonFileDir em HKEY_LOCAL_MACHINE\SOFTWARE\ Microsoft\Windows\CurrentVersion e "ODBC\DataSources". (Se CommonFileDir era "C:\Program Files\Common Files", o diretório padrão seria "C:\Program programas\Arquivos Comuns\odbc\fontes".)  
+ Se a **fonte de dados de arquivo** tiver sido selecionada na primeira página do assistente, depois que um driver tiver sido selecionado e os valores de palavra-chave tiverem sido inseridos na página avançado do assistente, será solicitado que o usuário insira um nome de arquivo. Clique em **procurar** para procurar um nome de arquivo; nesse caso, o diretório padrão na caixa de **procura** é especificado por uma combinação do caminho especificado por CommonFileDir em HKEY_LOCAL_MACHINE \Software\Microsoft\Windows\CurrentVersion e "ODBC\DataSources". (Se CommonFileDir fosse "C:\Program Files\Common Files", o diretório padrão seria "C:\Program Files\Common Files\ODBC\Data sources".)  
   
- Quando um nome de arquivo foi inserido e **próxima** é clicado, o arquivo de nome inserido é verificado quanto à validade contra as regras de nomenclatura de arquivo padrão do sistema operacional. Se o nome do arquivo for inválido, uma caixa de mensagem de erro notifica o usuário se um nome de arquivo inválido foi inserido. Depois que o usuário confirma a caixa de mensagem, o foco é retornado para a página do assistente em que o nome do arquivo é inserido. Se o nome do arquivo for válido, uma página de assistente que mostra os pares de palavra-chave-valor selecionado é exibida para revisão, conforme mostrado na ilustração a seguir.  
+ Quando um nome de arquivo é inserido e o **próximo** é clicado, o nome de arquivo inserido é verificado quanto à validade em relação às regras de nomenclatura de arquivo padrão do sistema operacional. Se o nome do arquivo for inválido, uma caixa de mensagem de erro notificará o usuário de que um nome de arquivo inválido foi inserido. Depois que o usuário reconhece a caixa de mensagem, o foco é retornado para a página do assistente na qual o nome do arquivo é inserido. Se o nome do arquivo for válido, uma página do assistente que mostra os pares de palavras-chave selecionados será exibida para revisão, conforme mostrado na ilustração a seguir.  
   
- ![Criar caixa de diálogo Nova fonte de dados: revisar](../../../odbc/reference/syntax/media/ch23d.gif "CH23D")  
+ ![Caixa de diálogo Criar Nova Fonte de Dados: revisão](../../../odbc/reference/syntax/media/ch23d.gif "CH23D")  
   
- Se **terminar** é clicado e **fonte de dados de arquivo** foi selecionado como o tipo de fonte de dados e se o **verificar esta conexão** opção for TRUE,  **SQLDriverConnect** é chamado com o **SAVEFILE** e **DRIVER** palavras-chave. O *DriverCompletion* argumento é definido como SQL_DRIVER_COMPLETE. O nome do arquivo para o **SAVEFILE** palavra-chave é o nome que foi inserido ou escolhido e o nome do driver para o **DRIVER** palavra-chave é o nome que foi escolhido. Se uma cadeia de caracteres de conexão específicos de driver foi especificada na página de assistente avançado, essa cadeia de caracteres é acrescentada após o **DRIVER** palavra-chave.  
+ Se o botão **concluir** for clicado e a **fonte de dados de arquivo** tiver sido selecionada como o tipo de fonte de dados, e se a opção **verificar esta conexão** for verdadeira, **SQLDriverConnect** será chamado com as palavras-chave **SaveFile** e **Driver** . O argumento *DriverCompletion* é definido como SQL_DRIVER_COMPLETE. O nome do arquivo para a palavra-chave **SaveFile** é o nome que foi inserido ou escolhido e o nome do driver para a palavra-chave do **Driver** é o nome que foi escolhido. Se uma cadeia de conexão específica do driver tiver sido especificada na página do assistente avançado, essa cadeia de caracteres será anexada após a palavra-chave do **Driver** .  
   
- Se **SQLDriverConnect** retorna SQL_SUCCESS, o Gerenciador de Driver tiver criado o DSN de arquivo. **SQLCreateDataSource** retorna TRUE. Se **SQLDriverConnect** não retorna SQL_SUCCESS, uma mensagem de aviso caixa indica que não foi possível estabelecer uma conexão à fonte de dados. Um DSN com informações de conexão mínima ainda pode ser criado. Essa caixa de mensagem permite que o usuário cancelar ou continuar com a criação de DSN de arquivo.  
+ Se **SQLDriverConnect** retornar SQL_SUCCESS, o Gerenciador de driver criou o DSN do arquivo. **SQLCreateDataSource** retorna true. Se **SQLDriverConnect** não retornar SQL_SUCCESS, uma caixa de mensagem de aviso indicará que não foi possível estabelecer uma conexão com a fonte de dados. Um DSN com informações de conexão mínima ainda pode ser criado. Essa caixa de mensagem permite que o usuário cancele ou continue com a criação do DSN de arquivo.  
   
- Se o usuário optar por continuar criando o DSN, esse processo continua como se o **Verifique se essa conexão** opção foi definida como FALSE. Se o usuário optar por cancelar, FALSO será retornado para **SQLCreateDataSource** com um código de erro de ODBC_ERROR_CREATE_DSN_FAILED.  
+ Se o usuário optar por continuar criando o DSN, esse processo continuará como se a opção **verificar esta conexão** estivesse definida como false. Se o usuário optar por cancelar, FALSE será retornado para **SQLCreateDataSource** com um código de erro de ODBC_ERROR_CREATE_DSN_FAILED.  
   
- Se **fonte de dados de arquivo** foi selecionado como o tipo de fonte de dados e o **verificar esta conexão** opção for FALSE, um DSN de arquivo é criado com o **DRIVER** palavra-chave e especificado pelo usuário cadeia de conexão (se houver) da página de assistente avançado. Se a criação do arquivo tiver sido bem-sucedida, será retornado verdadeiro para **SQLCreateDataSource**. Se a criação do arquivo não foi bem-sucedida, uma caixa de mensagem de erro notifica o usuário com o erro que foi retornado do sistema operacional. É retornado falso para **SQLCreateDataSource** com um código de erro de ODBC_ERROR_CREATE_DSN_FAILED. Para obter mais informações sobre fontes de dados de arquivo, consulte [conectar fontes de dados de arquivo usando](../../../odbc/reference/develop-app/connecting-using-file-data-sources.md), ou consulte [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md).  
+ Se a **fonte de dados de arquivo** tiver sido selecionada como o tipo de fonte de dados e a opção **verificar esta conexão** for falsa, um DSN de arquivo será criado com a palavra-chave do **Driver** e a cadeia de conexão especificada pelo usuário (se houver) na página avançado do assistente. Se a criação do arquivo tiver sido bem-sucedida, TRUE será retornado para **SQLCreateDataSource**. Se a criação do arquivo não tiver sido bem-sucedida, uma caixa de mensagem de erro notificará o usuário com qualquer erro retornado do sistema operacional. FALSE é retornado para **SQLCreateDataSource** com um código de erro de ODBC_ERROR_CREATE_DSN_FAILED. Para obter mais informações sobre fontes de dados de arquivo, consulte [conectando-se usando fontes de dados de arquivo](../../../odbc/reference/develop-app/connecting-using-file-data-sources.md)ou consulte [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md).  
   
- Se **usuário** ou **fonte de dados do sistema** foi selecionado como o tipo de fonte de dados **ConfigDSN** na configuração do driver biblioteca é chamada com o ODBC_ADD_DSN  *Frequentes*. Para obter mais informações, consulte [ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md).  
+ Se a **fonte de dados** do **usuário** ou do sistema tiver sido selecionada como o tipo de fonte de dados, **ConfigDSN** na biblioteca de instalação do driver será chamada com o ODBC_ADD_DSN *fRequest*. Para obter mais informações, consulte [ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md).  
   
 ## <a name="related-functions"></a>Funções relacionadas  
   

@@ -18,18 +18,18 @@ ms.assetid: 8aa96182-60b7-4d7b-b2a7-ccce70378c6e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c95cc2db84bdf059437a45e2719bbc63d6eb6829
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68108348"
 ---
-# <a name="spcycleagenterrorlog-transact-sql"></a>sp_cycle_agent_errorlog (Transact-SQL)
+# <a name="sp_cycle_agent_errorlog-transact-sql"></a>sp_cycle_agent_errorlog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Fecha o arquivo de log de erros atual do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent e alterna os números de extensão do log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent exatamente como um reinício do servidor. O novo log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent contém uma linha que indica que o novo log foi criado.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,12 +45,12 @@ sp_cycle_agent_errorlog
  Nenhum  
   
 ## <a name="remarks"></a>Comentários  
- Sempre que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent é iniciado, atual [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] log de erros do agente foi renomeada para **SQLAgent.1**; **SQLAgent.1** se torna **SQLAgent.2**, **SQLAgent.2** se torna **SQLAgent.3**e assim por diante. **sp_cycle_agent_errorlog** lhe permite alternar os arquivos de log de erros sem interromper e iniciar o servidor.  
+ Toda vez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que o agente é iniciado, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o log de erros do agente atual é renomeado para **SQLAgent. 1**; O **SQLAgent. 1** se torna o **SQLAgent. 2**, o **SQLAgent. 2** se torna **SQLAgent. 3**e assim por diante. **sp_cycle_agent_errorlog** permite que você alterne os arquivos de log de erros sem parar e iniciar o servidor.  
   
- Esse procedimento armazenado deve ser executado a partir de **msdb** banco de dados.  
+ Esse procedimento armazenado deve ser executado do banco de dados **msdb** .  
   
 ## <a name="permissions"></a>Permissões  
- Permissões de execução **sp_cycle_agent_errorlog** estão restritas a membros da **sysadmin** função de servidor fixa.  
+ As permissões de execução para **sp_cycle_agent_errorlog** são restritas a membros da função de servidor fixa **sysadmin** .  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir alterna o log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
@@ -63,7 +63,7 @@ EXEC dbo.sp_cycle_agent_errorlog ;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [sp_cycle_errorlog &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cycle-errorlog-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [&#41;&#40;Transact-SQL de sp_cycle_errorlog](../../relational-databases/system-stored-procedures/sp-cycle-errorlog-transact-sql.md)  
   
   

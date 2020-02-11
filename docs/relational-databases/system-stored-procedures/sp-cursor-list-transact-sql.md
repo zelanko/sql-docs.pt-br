@@ -18,18 +18,18 @@ ms.assetid: 7187cfbe-d4d9-4cfa-a3bb-96a544c7c883
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5adcaab96bfe9af3945b479e4bff5180ca8140d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68108586"
 ---
-# <a name="spcursorlist-transact-sql"></a>sp_cursor_list (Transact-SQL)
+# <a name="sp_cursor_list-transact-sql"></a>sp_cursor_list (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Informa os atributos de cursores de servidor atualmente abertos para a conexão.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,13 +41,13 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @cursor_return=] *cursor_variable_name*saída  
- É o nome de uma variável de cursor declarada. *cursor_variable_name* está **cursor**, sem padrão. O cursor é um cursor rolável, dinâmico, somente leitura.  
+ [ @cursor_return= ] *cursor_variable_name* DER  
+ É o nome de uma variável de cursor declarada. *cursor_variable_name* é **cursor**, sem padrão. O cursor é um cursor rolável, dinâmico, somente leitura.  
   
  [ @cursor_scope= ] *cursor_scope*  
- Especifica o nível dos cursores a serem relatados. *cursor_scope* está **int**, sem padrão e pode ser um destes valores.  
+ Especifica o nível dos cursores a serem relatados. *cursor_scope* é **int**, sem padrão, e pode ser um desses valores.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |1|Informar todos os cursores locais.|  
 |2|Informar todos os cursores globais.|  
@@ -61,31 +61,32 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
   
  Esse é o formato do cursor retornado por sp_cursor_list. O formato do cursor é o mesmo que o formato retornado por sp_cursor_list.  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |reference_name|**sysname**|O nome usado para se referir ao cursor. Se a referência ao cursor for feita através do nome dado em uma instrução DECLARE CURSOR, o nome de referência será igual ao nome do cursor. Se a referência ao cursor foi feita por uma variável, o nome da referência será o nome da variável do cursor.|  
-|cursor_name|**sysname**|O nome do cursor de uma instrução DECLARE CURSOR. Na [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se o cursor foi criado, definindo uma variável de cursor para um cursor **cursor_name** retorna o nome da variável de cursor.  Em versões anteriores, essa coluna de saída retorna um nome gerado pelo sistema.|  
+|cursor_name|**sysname**|O nome do cursor de uma instrução DECLARE CURSOR. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se o cursor tiver sido criado pela definição de uma variável de cursor para um cursor, **cursor_name** retornará o nome da variável de cursor.  Em versões anteriores, essa coluna de saída retorna um nome gerado pelo sistema.|  
 |cursor_scope|**smallint**|1 = LOCAL<br /><br /> 2 = GLOBAL|  
 |status|**smallint**|Os mesmos valores conforme informado pela função do sistema CURSOR_STATUS:<br /><br /> 1 = O cursor referenciado pelo nome do cursor ou pela variável de cursor está aberto. Se o cursor for insensível, estático ou controlado por um conjunto de chaves terá ao menos uma linha. Se o cursor for dinâmico, o conjunto de resultados terá zero ou mais linhas.<br /><br /> 0 = O cursor referenciado pelo nome ou pela variável do cursor está aberto, mas não contém linhas. Cursores dinâmicos nunca retornam esse valor.<br /><br /> -1 = O cursor referenciado pelo nome ou pela variável do cursor está fechado.<br /><br /> -2 = Aplicável somente a variáveis de cursor. Não há nenhum cursor atribuído à variável. Possivelmente, um parâmetro OUTPUT atribuiu um cursor à variável, mas o procedimento armazenado fechou o cursor antes de retornar.<br /><br /> -3 = Um cursor ou uma variável de cursor com o nome especificado não existe, ou nenhum cursor foi alocado à variável de cursor.|  
 |modelo|**smallint**|1 = Insensível (ou estático)<br /><br /> 2 = conjunto de chaves<br /><br /> 3 = dinâmico<br /><br /> 4 = De avanço rápido|  
-|concurrency|**smallint**|1 = somente leitura<br /><br /> 2 = Bloqueios de rolagem<br /><br /> 3 = Otimista|  
+|simultaneidade|**smallint**|1 = somente leitura<br /><br /> 2 = Bloqueios de rolagem<br /><br /> 3 = Otimista|  
 |rolável|**smallint**|0 = Somente avanço<br /><br /> 1 = Rolável|  
 |open_status|**smallint**|0 = Fechado<br /><br /> 1 = Abrir|  
-|cursor_rows|**int**|O número de linhas de qualificação no conjunto de resultados. Para obter mais informações, consulte [@@CURSOR_ROWS](../../t-sql/functions/cursor-rows-transact-sql.md).|  
-|fetch_status|**smallint**|O status da última busca nesse cursor. Para obter mais informações, consulte [@@FETCH_STATUS](../../t-sql/functions/fetch-status-transact-sql.md):<br /><br /> 0 = Busca bem-sucedida.<br /><br /> -1 = A busca falhou ou está além dos limites do cursor.<br /><br /> -2 = A linha solicitada está ausente.<br /><br /> -9 = Não houve busca no cursor.|  
+|cursor_rows|**int**|O número de linhas de qualificação no conjunto de resultados. Para obter mais informações, [consulte@CURSOR_ROWS@](../../t-sql/functions/cursor-rows-transact-sql.md).|  
+|fetch_status|**smallint**|O status da última busca nesse cursor. Para obter mais informações, [consulte@FETCH_STATUS@](../../t-sql/functions/fetch-status-transact-sql.md):<br /><br /> 0 = Busca bem-sucedida.<br /><br /> -1 = A busca falhou ou está além dos limites do cursor.<br /><br /> -2 = A linha solicitada está ausente.<br /><br /> -9 = Não houve busca no cursor.|  
 |column_count|**smallint**|O número de colunas no conjunto de resultados do cursor.|  
-|row_count|**smallint**|O número de linhas afetadas pela última operação no cursor. Para obter mais informações, consulte [@@ROWCOUNT](../../t-sql/functions/rowcount-transact-sql.md).|  
+|row_count|**smallint**|O número de linhas afetadas pela última operação no cursor. Para obter mais informações, [consulte@ROWCOUNT@](../../t-sql/functions/rowcount-transact-sql.md).|  
 |last_operation|**smallint**|A última operação executada no cursor:<br /><br /> 0 = Nenhuma operação foi executada no cursor.<br /><br /> 1 = OPEN<br /><br /> 2 = FETCH<br /><br /> 3 = INSERIR<br /><br /> 4 = UPDATE<br /><br /> 5 = EXCLUIR<br /><br /> 6 = CLOSE<br /><br /> 7 = DEALLOCATE|  
 |cursor_handle|**int**|Um valor exclusivo que identifica o cursor dentro do escopo do servidor.|  
   
 ## <a name="remarks"></a>Comentários  
  sp_cursor_list gera uma lista dos cursores de servidor atuais aberta pela conexão e descreve os atributos globais de cada cursor, como a capacidade do cursor de ser rolável e atualizável. Os cursores listados por sp_cursor_list incluem:  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)]Cursores de servidor  
+-   
+  [!INCLUDE[tsql](../../includes/tsql-md.md)]Cursores de servidor   
   
--   Cursores de servidor API abertos por um aplicativo ODBC que é chamado SQLSetCursorName para o nome do cursor.  
+-   Cursores de servidor API abertos por um aplicativo ODBC que é chamado SQLSetCursorName como o nome do cursor.  
   
- Use sp_describe_cursor_columns para uma descrição dos atributos do conjunto de resultados retornado pelo cursor. Use sp_describe_cursor_tables para obter um relatório das tabelas base referenciadas pelo cursor. sp_describe_cursor reporta as mesmas informações que sp_cursor_list, mas apenas para um cursor especificado.  
+ Use sp_describe_cursor_columns para uma descrição dos atributos do conjunto de resultados retornado pelo cursor. Use sp_describe_cursor_tables para obter um relatório das tabelas base referenciadas pelo cursor. sp_describe_cursor relata as mesmas informações que sp_cursor_list, mas apenas para um cursor especificado.  
   
 ## <a name="permissions"></a>Permissões  
  Execute permissões padrão para a função pública.  
@@ -129,7 +130,7 @@ DEALLOCATE abc;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

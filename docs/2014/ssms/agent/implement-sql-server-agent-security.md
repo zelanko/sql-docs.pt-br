@@ -16,14 +16,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 52537ac126115fbde3d7d0fb1a13f61f1d25cf15
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63137525"
 ---
 # <a name="implement-sql-server-agent-security"></a>Implementar a segurança do SQL Server Agent
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Agent permite que o administrador do banco de dados execute cada etapa de trabalho em um contexto de segurança que tem apenas as permissões necessárias para executá-la, as quais são determinadas por um proxy do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Para definir as permissões para uma etapa de trabalho em particular, crie um proxy com as permissões necessárias e atribua-o à etapa de trabalho. Um proxy pode ser especificado para mais de uma etapa de trabalho. Para etapas de trabalho que requerem as mesmas permissões, use o mesmo proxy.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]O Agent permite que o administrador de banco de dados execute cada etapa de trabalho em um contexto de segurança que tem apenas as permissões necessárias para executar essa etapa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de trabalho, que é determinada por um proxy de agente. Para definir as permissões para uma etapa de trabalho em particular, crie um proxy com as permissões necessárias e atribua-o à etapa de trabalho. Um proxy pode ser especificado para mais de uma etapa de trabalho. Para etapas de trabalho que requerem as mesmas permissões, use o mesmo proxy.  
   
  A seção a seguir explica qual função de banco de dados deve ser concedida aos usuários para que eles possam criar ou executar trabalhos usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
@@ -65,18 +65,18 @@ ms.locfileid: "63137525"
   
 -   ACE depende das seguintes DLLs de configuração de propriedade do SSDP, porque essas APIs de DLLs são chamadas pelo ACE:  
   
-    -   **SCO** – Microsoft.SqlServer.Configuration.Sco.dll, incluindo novas validações de SCO para contas virtuais  
+    -   **SCO** -Microsoft. SqlServer. Configuration. SCO. dll, incluindo novas validações de SCO para contas virtuais  
   
-    -   **Cluster** – Microsoft.SqlServer.Configuration.Cluster.dll  
+    -   **Cluster** -Microsoft. SqlServer. Configuration. cluster. dll  
   
-    -   **SFC** – Microsoft.SqlServer.Configuration.SqlConfigBase.dll  
+    -   **Sfc** -Microsoft. SqlServer. Configuration. SqlConfigBase. dll  
   
-    -   **Extensão** – Microsoft.SqlServer.Configuration.ConfigExtension.dll  
+    -   **Extensão** -Microsoft. SqlServer. Configuration. ConfigExtension. dll  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [funções predefinidas](../../reporting-services/security/role-definitions-predefined-roles.md)   
  [sp_addrolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql)   
- [sp_droprolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droprolemember-transact-sql)   
+ [&#41;&#40;Transact-SQL de sp_droprolemember](/sql/relational-databases/system-stored-procedures/sp-droprolemember-transact-sql)   
  [Central de segurança do Mecanismo de Banco de Dados do SQL Server e Banco de Dados SQL do Azure](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   

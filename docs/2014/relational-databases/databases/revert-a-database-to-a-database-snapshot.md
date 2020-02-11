@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 357030c913888d299cbec06c212eb049383b4526
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916704"
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>Reverter um banco de dados a um instantâneo do banco de dados
@@ -46,7 +46,7 @@ ms.locfileid: "62916704"
   
  Antes de reverter um banco de dados, considere as seguintes limitações:  
   
--   Reverter não é destinado à recuperação de mídia. . Um instantâneo do banco de dados é uma cópia incompleta dos arquivos de banco de dados. Assim, se o banco de dados ou o instantâneo do banco de dados estiver corrompido, reverter de um instantâneo será praticamente impossível. Além disso, mesmo quando isso é possível, é improvável que a reversão corrija o problema no caso de corrupção. Portanto, é essencial fazer backups e testar regularmente seu plano de restauração para proteger um banco de dados. Para obter mais informações, consulte [Back Up and Restore of SQL Server Databases](../backup-restore/back-up-and-restore-of-sql-server-databases.md).  
+-   Reverter não é destinado à recuperação de mídia. . Um instantâneo do banco de dados é uma cópia incompleta dos arquivos de banco de dados. Assim, se o banco de dados ou o instantâneo do banco de dados estiver corrompido, reverter de um instantâneo será praticamente impossível. Além disso, mesmo quando isso é possível, é improvável que a reversão corrija o problema no caso de corrupção. Portanto, é essencial fazer backups e testar regularmente seu plano de restauração para proteger um banco de dados. Para obter mais informações, consulte [Fazer backup e restaurar bancos de dados do SQL Server](../backup-restore/back-up-and-restore-of-sql-server-databases.md).  
   
     > [!NOTE]  
     >  Se você precisa ser capaz de restaurar o banco de dados de origem para o momento determinado em que o instantâneo do banco de dados foi criado, use um modelo de recuperação completo e implemente uma política de backup que permita fazer isso.  
@@ -74,9 +74,9 @@ ms.locfileid: "62916704"
     > [!NOTE]  
     >  Se o banco de dados tiver sido corrompido, você precisará restaurá-lo de backups. Para obter mais informações, veja [Restaurações completas de banco de dados &#40;Modelo de recuperação simples#41;](../backup-restore/complete-database-restores-simple-recovery-model.md) ou [Restaurações completas de banco de dados &#40;Modelo de recuperação completa#41;](../backup-restore/complete-database-restores-full-recovery-model.md).  
   
--   Identifique um instantâneo recente que foi criado antes do erro. Para obter mais informações, consulte [Exibir um instantâneo de banco de dados &#40;SQL Server&#41;](view-a-database-snapshot-sql-server.md).  
+-   Identifique um instantâneo recente que foi criado antes do erro. Para obter mais informações, veja [Exibir um instantâneo de banco de dados &#40;SQL Server&#41;](view-a-database-snapshot-sql-server.md).  
   
--   Descarte todos os outros instantâneos que existem no banco de dados. Para obter mais informações, consulte [Remover um instantâneo do banco de dados &#40;Transact-SQL&#41;](drop-a-database-snapshot-transact-sql.md).  
+-   Descarte todos os outros instantâneos que existem no banco de dados. Para obter mais informações, veja [Remover um instantâneo do banco de dados &#40;Transact-SQL&#41;](drop-a-database-snapshot-transact-sql.md).  
   
 ###  <a name="Security"></a> Segurança  
   
@@ -99,11 +99,11 @@ ms.locfileid: "62916704"
   
      Uma operação de reversão requer permissões RESTORE DATABASE no banco de dados de origem. Para reverter o banco de dados, use a seguinte instrução Transact-SQL:  
   
-     RESTORE DATABASE *database_name* FROM DATABASE_SNAPSHOT **=**_database_snapshot_name_  
+     RESTORE DATABASE *database_name* FROM DATABASE_SNAPSHOT **=** _database_snapshot_name_  
   
      Em que *database_name* é o banco de dados de origem e *database_snapshot_name* é o nome do instantâneo para o qual você deseja reverter o banco de dados. Observe que nessa instrução, você deve especificar um nome de instantâneo em vez de um dispositivo de backup.  
   
-     Para obter mais informações, consulte [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql).  
+     Para obter mais informações, veja [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql).  
   
     > [!NOTE]  
     >  Durante a operação de reversão, o instantâneo e o banco de dados de origem estão indisponíveis. O instantâneo e o banco de dados de origem ficam ambos marcados como “Em restauração”. Se ocorrer um erro durante a operação de reversão, ela tentará terminar a reversão quando o banco de dados for novamente inicializado.  
@@ -120,7 +120,7 @@ ms.locfileid: "62916704"
 ###  <a name="TsqlExample"></a> Exemplos (Transact-SQL)  
  Esta seção contém os seguintes exemplos de reversão de um banco de dados para um instantâneo do banco de dados:  
   
--   A. [Revertendo um instantâneo no banco de dados AdventureWorks](#Reverting_AW)  
+-   a. [Revertendo um instantâneo no banco de dados AdventureWorks](#Reverting_AW)  
   
 -   B. [Revertendo um instantâneo no banco de dados Sales](#Reverting_Sales)  
   
@@ -165,7 +165,7 @@ GO
   
 -   [Remover um instantâneo do banco de dados &#40;Transact-SQL&#41;](drop-a-database-snapshot-transact-sql.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Instantâneos de banco de dados &#40;SQL Server&#41;](database-snapshots-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)   

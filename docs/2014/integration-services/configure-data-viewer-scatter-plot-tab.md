@@ -1,5 +1,5 @@
 ---
-title: Configurar Visualizador de dados (guia dispersão) | Microsoft Docs
+title: Configurar o Visualizador de dados (guia gráfico de dispersão) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,28 +15,28 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9b1c002a7fcf0027f5169c4365c4ee1cd82f1a83
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060674"
 ---
 # <a name="configure-data-viewer-scatter-plot-tab"></a>Configurar Visualizador de Dados (guia Dispersão)
   Use a guia **Dispersão (x, y)** da caixa de diálogo **Configurar Visualizador de Dados** para especificar duas colunas para plotar uma em relação à outra. Um gráfico de dispersão plota os valores dos dados de duas colunas numéricas uma em relação à outra. Cada registro de dados se torna um ponto na plotagem. O gráfico reflete o conteúdo de apenas um buffer.  
   
 ## <a name="options"></a>Opções  
- **Coluna do eixo x**  
+ **Coluna do eixo X**  
  Selecione a coluna a ser usada como eixo X. Só uma coluna pode ser selecionada para cada eixo.  
   
  **Coluna eixo Y**  
  Selecione a coluna a ser usada como eixo Y. Só uma coluna pode ser selecionada para cada eixo.  
   
-## <a name="see-also"></a>Consulte também  
- [Configurar Visualizador de dados &#40;guia Geral&#41;](../../2014/integration-services/configure-data-viewer-general-tab.md)   
- [Configurar Visualizador de dados &#40;guia do gráfico de coluna&#41;](../../2014/integration-services/configure-data-viewer-column-chart-tab.md)   
- [Configurar Visualizador de dados &#40;guia de grade&#41;](../../2014/integration-services/configure-data-viewer-grid-tab.md)   
- [Configurar Visualizador de dados &#40;guia de histograma&#41;](../../2014/integration-services/configure-data-viewer-histogram-tab.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Configurar o Visualizador de dados &#40;guia Geral&#41;](../../2014/integration-services/configure-data-viewer-general-tab.md)   
+ [Configurar o Visualizador de dados &#40;guia gráfico de colunas&#41;](../../2014/integration-services/configure-data-viewer-column-chart-tab.md)   
+ [Configurar o Visualizador de dados &#40;guia grade&#41;](../../2014/integration-services/configure-data-viewer-grid-tab.md)   
+ [Configurar o Visualizador de dados &#40;guia histograma&#41;](../../2014/integration-services/configure-data-viewer-histogram-tab.md)   
  [Fluxo de Dados](data-flow/data-flow.md)   
- [Depurando fluxo de dados](troubleshooting/debugging-data-flow.md)  
+ [Depurar o fluxo de dados](troubleshooting/debugging-data-flow.md)  
   
   
