@@ -16,17 +16,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bda582c7b9171e89a43b6870b3b6c2df139b7b11
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62670459"
 ---
 # <a name="remove-tables-from-queries-visual-database-tools"></a>Remover tabelas de consultas (Visual Database Tools)
   Você pode remover uma tabela ou qualquer objeto com valor de tabela da consulta.  
   
 > [!NOTE]  
->  Removendo uma tabela ou objeto com valor de tabela não exclui nada do banco de dados; só remove isto da consulta atual. Para obter detalhes sobre como remover uma tabela de um banco de dados, consulte [excluir tabelas &#40;mecanismo de banco de dados&#41;](../../relational-databases/tables/delete-tables-database-engine.md).  
+>  Removendo uma tabela ou objeto com valor de tabela não exclui nada do banco de dados; só remove isto da consulta atual. Para obter detalhes sobre como remover uma tabela de um banco de dados, consulte [excluir tabelas &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/tables/delete-tables-database-engine.md).  
   
 ### <a name="to-remove-a-table-or-table-structured-object"></a>Para remover uma tabela ou objeto estruturado por tabela  
   
@@ -38,11 +38,11 @@ ms.locfileid: "62670459"
   
  Quando você remover uma tabela ou objeto com valor de tabela, o Designer de Consulta e Exibição removerá automaticamente as junções que envolvem aquela tabela ou objeto com valor de tabela e removerá as referências às colunas do objeto no **Painel SQL** e no **Painel de Critérios**. Porém, se a consulta contiver expressões complexas que envolvam o objeto, o objeto não será removido automaticamente até que todas as referências a ele sejam removidas.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Adicionar tabelas a consultas &#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [Criar Aliases de tabela &#40;Visual Database Tools&#41;](create-table-aliases-visual-database-tools.md)   
+ [Criar aliases de tabela &#40;Visual Database Tools&#41;](create-table-aliases-visual-database-tools.md)   
  [Especificar critérios de pesquisa &#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md)   
- [Resumir resultados da consulta &#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)   
+ [Resumir os resultados da consulta &#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)   
  [Executar operações básicas com consultas &#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

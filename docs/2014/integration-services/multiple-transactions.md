@@ -1,5 +1,5 @@
 ---
-title: Várias transações | Microsoft Docs
+title: Transações múltiplas | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: da0f932acb2ab97204aeb27c9e077c7fae154987
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057395"
 ---
 # <a name="multiple-transactions"></a>Transações múltiplas
@@ -36,7 +36,7 @@ ms.locfileid: "66057395"
   
  O diagrama a seguir mostra as cinco transações não relacionadas no pacote. Uma transação é iniciada pelo contêiner de Sequência e quatro transações são iniciadas pelas tarefas Executar SQL.  
   
- ![Implementação de transações múltiplas](media/mw-dts-trans2.gif "Implementation of multiple transactions")  
+ ![Implementação de várias transações](media/mw-dts-trans2.gif "Implementação de várias transações")  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [Configurar um pacote para usar transações](../relational-databases/native-client-ole-db-transactions/transactions.md)  

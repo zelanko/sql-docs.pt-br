@@ -1,5 +1,5 @@
 ---
-title: Partições (caixa de diálogo para restaurar banco de dados) (Analysis Services - dados multidimensionais) | Microsoft Docs
+title: Partições (caixa de diálogo Restore Database) (Analysis Services-dados multidimensionais) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a0c28420d711fd009dfc2b1e36ef4a613b3ecfaf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072113"
 ---
 # <a name="partitions-restore-database-dialog-box-analysis-services---multidimensional-data"></a>Partições (caixa de diálogo Restaurar Banco de Dados) (Analysis Services - Dados multidimensionais)
@@ -28,7 +28,7 @@ ms.locfileid: "66072113"
 > [!NOTE]  
 >  Após restaurar um banco de dados existente, o usuário que o restaurou poderá perder o acesso ao banco de dados restaurado. Essa perda de acesso pode ocorrer se, no momento da execução do backup, o usuário não for membro da função de servidor, nem membro da função de banco de dados com permissões de Controle total (Administrador).  
   
- **Para exibir a página de partições na caixa de diálogo restaurar banco de dados**  
+ **Para exibir a página partições na caixa de diálogo Restaurar Banco de dados**  
   
 -   No [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], clique com o botão direito do mouse na pasta **Bancos de Dados** de uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ou em um banco de dados em **Pesquisador de Objetos**, clique em **Restaurar**e, em **Selecionar uma página**, clique em **Partições**.  
   
@@ -59,14 +59,14 @@ ms.locfileid: "66072113"
   
  A grade a seguir, habilitada quando se seleciona esta opção, é usada para especificar uma pasta de restauração para cada partição local:  
   
-|coluna|Descrição|  
+|Coluna|DESCRIÇÃO|  
 |------------|-----------------|  
-|**Cube**|Exibe o nome do cubo que contém a partição local.|  
+|**Simples**|Exibe o nome do cubo que contém a partição local.|  
 |**MeasureGroup**|Exibe o nome do grupo de medidas que contém a partição local.|  
 |**Partição**|Exibe o nome da partição local.|  
 |**Tamanho (MB)**|Exibe o tamanho, em megabytes, da partição local.|  
-|**Original Folder**|Exibe o nome da pasta original na qual a partição local foi armazenada.|  
-|**Pasta de restauração**|Digite o nome da pasta de restauração da partição local ou clique no botão de reticências ( **...** ) para exibir a caixa de diálogo **Procurar Pasta Remota** e selecione o caminho da pasta a ser usado. Para obter mais informações sobre a caixa de diálogo **Procurar Pasta Remota**, consulte [Caixa de diálogo Procurar Pasta Remota &#40;Analysis Services – Dados Multidimensionais&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md).|  
+|**Pasta original**|Exibe o nome da pasta original na qual a partição local foi armazenada.|  
+|**Pasta de Restauração**|Digite o nome da pasta de restauração da partição local ou clique no botão de reticências (**...**) para exibir a caixa de diálogo **Procurar Pasta Remota** e selecione o caminho da pasta a ser usado. Para obter mais informações sobre a caixa de diálogo **Procurar Pasta Remota**, consulte [Caixa de diálogo Procurar Pasta Remota &#40;Analysis Services – Dados Multidimensionais&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md).|  
   
  **Restaurar partições remotas**  
  Selecione essa opção para restaurar partições remotas armazenadas em arquivos de backup remotos.  
@@ -76,16 +76,16 @@ ms.locfileid: "66072113"
   
  A grade a seguir, habilitada quando se seleciona esta opção, é usada para especificar uma pasta de restauração para cada partição local:  
   
-|coluna|Descrição|  
+|Coluna|DESCRIÇÃO|  
 |------------|-----------------|  
 |**Servidor**|Exibe o nome da instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que administra a partição remota.|  
-|**Fonte de dados**|Exibe o nome da fonte de dados no arquivo de backup que representa o banco de dados que contém a partição remota.|  
-|**Arquivo de backup**|Digite o caminho completo e o nome de arquivo do arquivo de backup remoto a ser usado ou clique no botão de reticências ( **...** ) para exibir a caixa de diálogo **Localizar Arquivos de Banco de Dados** e selecione o caminho e o nome do arquivo de backup remoto a serem usados. Para obter mais informações sobre a caixa de diálogo **Localizar Arquivos de Banco de Dados**, consulte [Caixa de diálogo Localizar Arquivos de Banco de Dados &#40;Analysis Services – Dados Multidimensionais&#41;](locate-database-files-dialog-box-analysis-services-multidimensional-data.md).|  
+|**Fonte de Dados**|Exibe o nome da fonte de dados no arquivo de backup que representa o banco de dados que contém a partição remota.|  
+|**Arquivo de backup**|Digite o caminho completo e o nome de arquivo do arquivo de backup remoto a ser usado ou clique no botão de reticências (**...**) para exibir a caixa de diálogo **Localizar Arquivos de Banco de Dados** e selecione o caminho e o nome do arquivo de backup remoto a serem usados. Para obter mais informações sobre a caixa de diálogo **Localizar Arquivos de Banco de Dados**, consulte [Caixa de diálogo Localizar Arquivos de Banco de Dados &#40;Analysis Services – Dados Multidimensionais&#41;](locate-database-files-dialog-box-analysis-services-multidimensional-data.md).|  
 |**...**|Clique para exibir a caixa de diálogo **Partições Remotas – Configurações Avançadas** e modificar opções avançadas, como a cadeia de conexão da fonte de dados, para restaurar a partição remota. Para obter mais informações sobre a caixa de diálogo **Partições Remotas – Configurações Avançadas**, consulte [Caixa de diálogo Partições Remotas – Configurações Avançadas &#40;Analysis Services – Dados Multidimensionais&#41;](remote-partitions-advanced-settings-dialog-analysis-services-multidimensional-data.md).|  
   
-## <a name="see-also"></a>Consulte também  
- [Caixa de diálogo Restaurar Banco de Dados &#40;Analysis Services – Dados Multidimensionais&#41;](restore-database-dialog-box-analysis-services-multidimensional-data.md)   
- [Geral &#40;restaurar a caixa de diálogo banco de dados&#41; &#40;Analysis Services - dados multidimensionais&#41;](general-restore-database-dialog-box-analysis-services-multidimensional-data.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Caixa de diálogo Restaurar Banco de dados &#40;Analysis Services-&#41;](restore-database-dialog-box-analysis-services-multidimensional-data.md)   
+ [Geral &#40;caixa de diálogo Restaurar Banco de dados&#41; &#40;Analysis Services –&#41;multidimensional](general-restore-database-dialog-box-analysis-services-multidimensional-data.md)   
  [Backup e restauração de bancos de dados do Analysis Services](multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   
   

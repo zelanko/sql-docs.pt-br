@@ -1,5 +1,5 @@
 ---
-title: 'Lição 3: Renomear colunas | Microsoft Docs'
+title: 'Lição 3: renomear colunas | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 80d9cae6deae4059327084f531f6a6d958a39ec6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070315"
 ---
 # <a name="lesson-3-rename-columns"></a>Lição 3: Renomear colunas
@@ -23,10 +23,10 @@ ms.locfileid: "66070315"
 > [!IMPORTANT]  
 >  A renomeação das colunas não é necessária para concluir este tutorial; no entanto, as lições restantes, em particular as que incluem a criação de relações e de colunas e medidas calculadas que usam fórmulas DAX, referem-se aos nomes amigáveis de coluna descritos nesta lição. Se você optar por não renomear colunas, será necessário editar as fórmulas DAX nas lições 5, 6 e 7 para usar os nomes de coluna de origem originais fornecidos nesta lição.  
   
- Tempo estimado para concluir esta lição: **20 minutos**  
+ Tempo estimado para conclusão desta lição: **20 minutos**  
   
 ## <a name="prerequisites"></a>Prerequisites  
- Este tópico faz parte de um tutorial de modelo de tabela, que deve ser concluído na ordem. Antes de executar as tarefas nesta lição, você deve ter concluído a lição anterior: [Lição 2: Adicionar dados](lesson-2-add-data.md).  
+ Este tópico faz parte de um tutorial de modelagem tabular, que deve ser concluído na devida ordem. Antes de executar as tarefas desta lição, você deverá ter concluído a lição anterior: [Lição 2: Adicionar dados](lesson-2-add-data.md).  
   
 ## <a name="rename-columns"></a>Renomear colunas  
   
@@ -36,10 +36,10 @@ ms.locfileid: "66070315"
   
      Quando você clica em uma guia, essa tabela fica ativa na janela do designer de modelos.  
   
-2.  Clique duas vezes o **CustomerKey** coluna Nome e, em seguida, digite `Customer  Id`, e pressione ENTER.  
+2.  Clique duas vezes no nome da coluna **CustomerKey** , `Customer  Id`digite e pressione Enter.  
   
     > [!TIP]  
-    >  Você também pode renomear uma coluna na **nome da coluna** propriedade da coluna **propriedades** janela, ou na exibição de diagrama.  
+    >  Você também pode renomear uma coluna na propriedade **nome da coluna** na janela **Propriedades** da coluna ou na exibição de diagrama.  
   
 3.  Renomeie as colunas restantes na tabela **Cliente** , bem como as colunas nas tabelas restantes, substituindo o nome de origem pelo nome amigável:  
   
@@ -49,23 +49,23 @@ ms.locfileid: "66070315"
     |-----------------|-------------------|  
     |GeographyKey|Geography Id|  
     |CustomerAlternateKey|Customer Alternate Id|  
-    |FirstName|First Name|  
+    |Nome|Nome|  
     |MiddleName|Middle Name|  
-    |LastName|Last Name|  
+    |LastName|Sobrenome|  
     |NameStyle|Name Style|  
     |BirthDate|Birth Date|  
     |MaritalStatus|Estado Civil|  
-    |EmailAddress|Endereço de email|  
+    |EmailAddress|Endereço de Email|  
     |YearlyIncome|Renda Anual|  
     |TotalChildren|Total de Filhos|  
     |NumberChildrenAtHome|Number of Children At Home|  
-    |EnglishEducation|Education|  
+    |EnglishEducation|Educação|  
     |EnglishOccupation|Occupation|  
     |HouseOwnerFlag|Owns House|  
     |NumberCarsOwned|Number of Cars Owned|  
     |AddressLine1|Linha de endereço 1|  
     |AddressLine2|Address Line 2|  
-    |Phone|Phone Number|  
+    |Telefone|Número do telefone|  
     |DateFirstPurchase|Date of First Purchase|  
     |CommuteDistance|Distância do Trabalho|  
   
@@ -73,7 +73,7 @@ ms.locfileid: "66070315"
   
     |Nome de origem|Nome amigável|  
     |-----------------|-------------------|  
-    |FullDateAlternateKey|Date|  
+    |FullDateAlternateKey|Data|  
     |DayNumberOfWeek|Day Number of Week|  
     |EnglishDayNameOfWeek|Day Name|  
     |DayNumberOfMonth|Day of Month|  
@@ -88,7 +88,7 @@ ms.locfileid: "66070315"
     |FiscalYear|Fiscal Year|  
     |FiscalSemester|Fiscal Semester|  
   
-     **Geography**  
+     **Gráfico**  
   
     |Nome de origem|Nome amigável|  
     |-----------------|-------------------|  
@@ -97,10 +97,10 @@ ms.locfileid: "66070315"
     |StateProvinceName|State Province Name|  
     |CountryRegionCode|Country Region Code|  
     |EnglishCountryRegionName|Country Region Name|  
-    |PostalCode|Postal Code|  
+    |PostalCode|Código postal|  
     |SalesTerritoryKey|Sales Territory Id|  
   
-     **Product**  
+     **Produto**  
   
     |Nome de origem|Nome amigável|  
     |-----------------|-------------------|  
@@ -109,7 +109,7 @@ ms.locfileid: "66070315"
     |ProductSubcategoryKey|Product Subcategory Id|  
     |WeightUnitMeasureCode|Weight Unit Code|  
     |SizeUnitMeasureCode|Size Unit Code|  
-    |EnglishProductName|Nome do produto|  
+    |EnglishProductName|Nome do Produto|  
     |StandardCost|Custo Padrão|  
     |FinishedGoodsFlag|Is Finished Product|  
     |SafetyStockLevel|Safety Stock Level|  
@@ -119,22 +119,22 @@ ms.locfileid: "66070315"
     |DaysToManufacture|Days to Manufacture|  
     |ProductLine|Product Line|  
     |Preço do Revendedor|Preço do Revendedor|  
-    |ModelName|Model Name|  
+    |ModelName|Nome do modelo|  
     |LargePhoto|Large Photo|  
-    |EnglishDescription|Descrição|  
+    |EnglishDescription|DESCRIÇÃO|  
     |StartDate|Product Start Date|  
     |EndDate|Product End Date|  
     |Status|Product Status|  
   
-     **Categoria de produto**  
+     **Categoria do Produto**  
   
-    |Nome de origem|Nome Amigável|  
+    |Nome de origem|Nome amigável|  
     |-----------------|-------------------|  
     |ProductCategoryKey|Product Category Id|  
     |ProductCategoryAlternateKey|Product Category Alternate Id|  
     |EnglishProductCategoryName|Product Category Name|  
   
-     **Subcategoria do produto**  
+     **Product Subcategory**  
   
     |Nome de origem|Nome amigável|  
     |-----------------|-------------------|  
@@ -153,24 +153,24 @@ ms.locfileid: "66070315"
     |CurrencyKey|Currency Id|  
     |SalesTerritoryKey|Sales Territory Id|  
     |SalesOrderNumber|Sales Order Number|  
-    |SalesOrderLineNumber|Sales Order Line Number|  
+    |SalesOrderLineNumber|Número da Linha do Pedido de Vendas|  
     |RevisionNumber|Número de Revisão|  
     |OrderQuantity|Order Quantity|  
     |UnitPrice|Preço Unitário|  
     |ExtendedAmount|Valor Ampliado|  
     |UnitPriceDiscountPct|Unit Price Discount Pct|  
-    |DiscountAmount|Valor de desconto|  
+    |DiscountAmount|Valor do desconto|  
     |ProductStandardCost|Custo Padrão do Produto|  
     |TotalProductCost|Custo Total do Produto|  
     |SalesAmount|Valor das Vendas|  
-    |TaxAmt|Valor dos Impostos|  
+    |TaxAmt|Valor dos Imp.|  
     |CarrierTrackingNumber|Carrier Tracking Number|  
     |CustomerPONumber|Customer PO Number|  
-    |OrderDate|Order Date|  
+    |OrderDate|Data do Pedido|  
     |DueDate|Due Date|  
     |ShipDate|Ship Date|  
   
 ## <a name="next-step"></a>Próxima etapa  
- Para continuar este tutorial, vá para a próxima lição: [Lição 4: Marcar como tabela de data](lesson-3-mark-as-date-table.md).  
+ Para continuar este tutorial, vá para a próxima lição: [Lição 4: Marcar como Tabela de Data](lesson-3-mark-as-date-table.md).  
   
   

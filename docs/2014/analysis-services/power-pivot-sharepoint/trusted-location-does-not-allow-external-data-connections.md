@@ -1,5 +1,5 @@
 ---
-title: 'O local confiável em que a pasta de trabalho é armazenada não permite conexões de dados externas. As conexões a seguir não foram atualizadas: Dados do PowerPivot | Microsoft Docs'
+title: 'O local confiável em que a pasta de trabalho é armazenada não permite conexões de dados externas. As seguintes conexões não foram atualizadas: dados PowerPivot | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b10a4a80b74bf64741784edc4fc1974dc0464805
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070974"
 ---
-# <a name="the-trusted-location-where-the-workbook-is-stored-does-not-allow-external-data-connections-the-following-connections-failed-to-refresh-powerpivot-data"></a>O local confiável em que a pasta de trabalho é armazenada não permite conexões de dados externas. As conexões a seguir não foram atualizadas: Dados PowerPivot
+# <a name="the-trusted-location-where-the-workbook-is-stored-does-not-allow-external-data-connections-the-following-connections-failed-to-refresh-powerpivot-data"></a>O local confiável em que a pasta de trabalho é armazenada não permite conexões de dados externas. As seguintes conexões não foram atualizadas: Dados PowerPivot
   Para pastas de trabalho do Excel que contenham dados PowerPivot, os Serviços do Excel retornarão este erro se não for possível conectar a fontes de dados inseridas.  
   
 ## <a name="details"></a>Detalhes  
@@ -25,9 +25,9 @@ ms.locfileid: "66070974"
 |||  
 |-|-|  
 |Aplica-se a|PowerPivot para SharePoint|  
-|Versão do Produto|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
+|Versão do produto|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |Causa|Os Serviços do Excel são configurados para negar acesso a dados externos.|  
-|Texto da mensagem|O local confiável em que a pasta de trabalho é armazenada não permite conexões de dados externas. As conexões a seguir não foram atualizadas: Dados PowerPivot|  
+|Texto da mensagem|O local confiável em que a pasta de trabalho é armazenada não permite conexões de dados externas. As seguintes conexões não foram atualizadas: Dados PowerPivot|  
   
 ## <a name="explanation"></a>Explicação  
  As pastas de trabalho PowerPivot contêm conexões de dados inseridas. Para dar suporte à interação de pastas de trabalho por slicers e filtros, os Serviços do Excel devem ser configurados para permitir acesso a dados externos por informações de conexão inseridas. O acesso a dados externos é necessário para recuperar dados PowerPivot carregados em servidores PowerPivot no farm.  
@@ -47,6 +47,6 @@ ms.locfileid: "66070974"
   
 6.  Clique em **OK**.  
   
- Também é possível criar um novo local confiável para sites que contenham pastas de trabalho PowerPivot e, em seguida, modificar os parâmetros de configuração apenas para esse site. Para obter mais informações, consulte [criar um local confiável para sites do PowerPivot na Administração Central](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
+ Também é possível criar um novo local confiável para sites que contenham pastas de trabalho PowerPivot e, em seguida, modificar os parâmetros de configuração apenas para esse site. Para obter mais informações, consulte [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
   
   

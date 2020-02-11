@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2066eeb7d9b86228ed86aed290e69f2a0e981b95
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62736236"
 ---
 # <a name="synonyms-database-engine"></a>Sinônimos (Mecanismo de Banco de Dados)
@@ -41,7 +41,7 @@ ms.locfileid: "62736236"
 |Procedimento de filtro de replicação|Procedimento armazenado estendido|  
 |Função SQL escalar|Função SQL com valor de tabela|  
 |Função SQL com valor de tabela embutida|Procedimento armazenado SQL|  
-|Exibição|Tabela<sup>1</sup> (definida pelo usuário)|  
+|Visualizar|Tabela<sup>1</sup> (definida pelo usuário)|  
   
  <sup>1</sup> inclui tabelas temporárias locais e globais  
   
@@ -64,7 +64,7 @@ ms.locfileid: "62736236"
   
 |||  
 |-|-|  
-|CONTROL|DELETE|  
+|CONTROL|Delete (excluir)|  
 |Execute|INSERT|  
 |SELECT|TAKE OWNERSHIP|  
 |UPDATE|VIEW DEFINITION|  
@@ -75,7 +75,7 @@ ms.locfileid: "62736236"
 |||  
 |-|-|  
 |SELECT|INSERT|  
-|UPDATE|DELETE|  
+|UPDATE|Delete (excluir)|  
 |Execute|Subseleções|  
   
  Quando você está trabalhando com sinônimos nos contextos declarados anteriormente, o objeto base é afetado. Por exemplo, se um sinônimo fizer referência a um objeto base que está em uma tabela e você inserir uma linha no sinônimo, na verdade você estará inserindo uma linha na tabela referida.  
@@ -98,7 +98,7 @@ EXEC ('ALTER TABLE dbo.MyProduct
   
 |||  
 |-|-|  
-|GRANT|DENY|  
+|GRANT|NEGAR|  
 |REVOKE||  
   
  Sinônimos não são associados a esquemas e, portanto, não podem ser referidos pelos seguintes contextos de expressão associados a esquemas:  
@@ -112,7 +112,7 @@ EXEC ('ALTER TABLE dbo.MyProduct
  Para obter mais informações sobre funções associadas a esquema, veja [Criar funções definidas pelo usuário &#40;Mecanismo de Banco de Dados&#41;](../user-defined-functions/create-user-defined-functions-database-engine.md).  
   
 ## <a name="getting-information-about-synonyms"></a>Obtendo informações sobre sinônimos  
- A exibição do catálogo sys.synonyms contém uma entrada para cada sinônimo em um determinado banco de dados. Essa exibição do catálogo expõe metadados de sinônimos, como o nome do sinônimo e o nome do objeto base. Para obter mais informações sobre o `sys.synonyms` exibição de catálogo, consulte [sys. synonyms &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-synonyms-transact-sql).  
+ A exibição do catálogo sys.synonyms contém uma entrada para cada sinônimo em um determinado banco de dados. Essa exibição do catálogo expõe metadados de sinônimos, como o nome do sinônimo e o nome do objeto base. Para obter mais informações sobre `sys.synonyms` a exibição de catálogo, consulte [Sys. synonyms &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-synonyms-transact-sql).  
   
  Usando propriedades estendidas é possível adicionar texto descritivo ou instrucional, máscaras de entrada e regras de formatação como propriedades de um sinônimo. Como a propriedade é armazenada em um banco de dados, todos os aplicativos que leem a propriedade podem avaliar o objeto da mesma maneira. Para obter mais informações, veja [sp_addextendedproperty &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql).  
   
@@ -143,7 +143,7 @@ GO
 ```  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
- [Criar sinônimos](create-synonyms.md)  
+ [Criar Sinônimos](create-synonyms.md)  
   
  [CREATE SYNONYM &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-synonym-transact-sql)  
   

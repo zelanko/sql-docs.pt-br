@@ -1,5 +1,5 @@
 ---
-title: Criar gerenciadores de Conexão | Microsoft Docs
+title: Criar gerenciadores de conexões | Microsoft Docs
 ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a82ef5c249dd1bc15bc91e9ccc502ebffe3f1728
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060118"
 ---
 # <a name="create-connection-managers"></a>Criar gerenciadores de conexões
@@ -52,11 +52,11 @@ ms.locfileid: "66060118"
   
  No tempo de execução, a versão correta é usada e não importa se você especificou a versão de 32 bits do provedor no tempo de design. A versão de 64 bits do provedor pode ser executada mesmo que o pacote esteja sendo executado no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
- Ambas as versões do provedor têm o mesmo ID. Para especificar se o tempo de execução do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] usa uma versão de 64 bits disponível do provedor, você define a propriedade Run64BitRuntime do projeto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Se a propriedade Run64BitRuntime estiver definida como `true`, o tempo de execução encontrará e usará o provedor de 64 bits; se Run64BitRuntime for `false`, o tempo de execução encontrará e usará o provedor de 32 bits. Para obter mais informações sobre as propriedades que você pode definir em projetos [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], consulte [Integration Services &#40;SSIS&#41; e Studio Environments](integration-services-ssis-development-and-management-tools.md).  
+ Ambas as versões do provedor têm o mesmo ID. Para especificar se o tempo de execução do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] usa uma versão de 64 bits disponível do provedor, você define a propriedade Run64BitRuntime do projeto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Se a propriedade Run64BitRuntime for definida como `true`, o tempo de execução localizará e usará o provedor de 64 bits; se Run64BitRuntime for `false`, o tempo de execução localizará e usará o provedor de 32 bits. Para obter mais informações sobre as propriedades que você pode definir em projetos [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], consulte [Integration Services &#40;SSIS&#41; e Studio Environments](integration-services-ssis-development-and-management-tools.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Fluxo de Controle](control-flow/control-flow.md)   
  [Fluxo de Dados](data-flow/data-flow.md)   
- [Manipuladores de eventos do Integration Services &#40;SSIS&#41](integration-services-ssis-event-handlers.md)  
+ [Manipuladores de eventos do SSIS &#40;Integration Services&#41;](integration-services-ssis-event-handlers.md)  
   
   

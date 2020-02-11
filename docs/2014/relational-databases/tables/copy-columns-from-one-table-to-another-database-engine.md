@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 67df7c541b0c664f200f6cf77affc0c809dbc719
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62736349"
 ---
 # <a name="copy-columns-from-one-table-to-another-database-engine"></a>Copiar colunas de uma tabela em outra (Mecanismo de Banco de Dados)
@@ -77,7 +77,7 @@ ms.locfileid: "62736349"
      Se você estiver copiando linhas em uma tabela, poderá adicionar a tabela de origem como tabela de destino.  
   
     > [!NOTE]  
-    >  O**Designer de Consulta** não pode determinar antecipadamente quais tabelas e exibições poderão ser atualizadas. Portanto a lista de tabelas da caixa de diálogo **Escolher Tabela de Destino para Inserir Resultados** mostra todas as tabelas e exibições disponíveis na conexão de dados que está sendo consultada, até mesmo aquelas nas quais não é possível copiar linhas.  
+    >  O **Designer de consulta** não pode determinar com antecedência quais tabelas e exibições você pode atualizar. Portanto a lista de tabelas da caixa de diálogo **Escolher Tabela de Destino para Inserir Resultados** mostra todas as tabelas e exibições disponíveis na conexão de dados que está sendo consultada, até mesmo aquelas nas quais não é possível copiar linhas.  
   
 5.  Clique com o botão direito do mouse no corpo do painel do diagrama e, no menu de atalho, clique em **Adicionar Tabela ao Diagrama**.  
   
@@ -93,11 +93,11 @@ ms.locfileid: "62736349"
   
      Se você não especificar um critério de pesquisa, todas as linhas da tabela de origem serão copiadas na tabela de destino.  
   
-10. Para copiar informações resumidas, especifique as opções **Agrupar por** . Para obter detalhes, veja [Resumir ou agregar valores para todas as linhas de uma tabela &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools.md).  
+10. Se você quiser copiar informações de resumo, especifique opções **Agrupar por** . Para obter detalhes, veja [Resumir ou agregar valores para todas as linhas de uma tabela &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools.md).  
   
 11. Clique no botão **Executar SQL** para executar a consulta.  
   
-     Quando uma consulta para inserir resultados é executada, nenhum resultado é relatado no [Painel de Resultados](../../ssms/visual-db-tools/results-pane-visual-database-tools.md). Em vez disso, será exibida uma mensagem indicando o total de linhas copiadas.  
+     Quando você executa uma consulta Insert Results, nenhum resultado é relatado no [painel de resultados](../../ssms/visual-db-tools/results-pane-visual-database-tools.md). Em vez disso, será exibida uma mensagem indicando o total de linhas copiadas.  
   
 ##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   

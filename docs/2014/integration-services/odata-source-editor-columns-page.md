@@ -1,5 +1,5 @@
 ---
-title: Editor de origem do OData (página colunas) | Microsoft Docs
+title: Editor de origem OData (página colunas) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f6677fad3df1d1f99e2f78257ea85551f8ae8db3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057336"
 ---
 # <a name="odata-source-editor-columns-page"></a>Editor de Origem do OData (página Colunas)
@@ -32,9 +32,9 @@ ms.locfileid: "66057336"
  **Coluna de Saída**  
  Forneça um nome exclusivo para cada coluna de saída. O padrão é o nome da coluna externa (origem) selecionada; porém, é possível escolher qualquer nome descritivo exclusivo.  
   
-## <a name="see-also"></a>Consulte também  
- [Editor de Origem do OData &#40;Página Conexão&#41;](../../2014/integration-services/odata-source-editor-connection-page.md)   
- [Editor de Fonte OData &#40;Página Saída de Erro&#41;](../../2014/integration-services/odata-source-editor-error-output-page.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Editor de origem OData &#40;página conexão&#41;](../../2014/integration-services/odata-source-editor-connection-page.md)   
+ [Editor de origem OData &#40;página saída de erro&#41;](../../2014/integration-services/odata-source-editor-error-output-page.md)   
  [Origem do OData](data-flow/odata-source.md)   
  [Gerenciador de Conexões OData](connection-manager/odata-connection-manager.md)  
   

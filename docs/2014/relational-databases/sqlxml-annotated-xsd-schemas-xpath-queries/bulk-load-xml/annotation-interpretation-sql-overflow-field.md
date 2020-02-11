@@ -1,5 +1,5 @@
 ---
-title: sql:overflow-field (SQLXML 4.0) | Microsoft Docs
+title: 'SQL: overflow-field (SQLXML 4,0) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 594ebdbad3968ba2efe7e255b28379194d2fb77f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013465"
 ---
 # <a name="sqloverflow-field-sqlxml-40"></a>sql:overflow-field (SQLXML 4.0)
@@ -29,7 +29,7 @@ ms.locfileid: "66013465"
   
  Conforme ele armazena dados na coluna de estouro, o XML Bulk Load também armazena as marcas de abertura e fechamento do elemento pai para o qual `sql:overflow-field` é definido.  
   
- Por exemplo, o esquema a seguir descreve o  **\<clientes >** e  **\<CustOrder >** elementos. Cada um destes elementos identifica uma coluna de estouro:  
+ Por exemplo, o esquema a seguir descreve os ** \<elementos Customers>** e ** \<CustOrder>** . Cada um destes elementos identifica uma coluna de estouro:  
   
 ```  
 <?xml version="1.0" ?>  
@@ -73,9 +73,9 @@ ms.locfileid: "66013465"
 </xsd:schema>  
 ```  
   
- No esquema, o  **\<cliente >** elemento é mapeado para a tabela Cust e o  **\<Order >** elemento é mapeado para a tabela CustOrder.  
+ No esquema, o elemento ** \<>do cliente** é mapeado para a tabela Cust e o ** \<elemento Order>** é mapeado para a tabela CustOrder.  
   
- Os dois os  **\<cliente >** e  **\<Order >** elementos identificam uma coluna de estouro. Assim, o XML Bulk Load salva todos os filhos não consumidos elementos e atributos do  **\<cliente >** elemento na coluna de estouro da tabela Cust e todos os elementos filho não consumido e atributos dos  **\<Ordem >** elemento na coluna de estouro da tabela CustOrder.  
+ Os elementos ** \<>do cliente** e ** \<ordem>** identificam uma coluna de estouro. Assim, o carregamento em massa de XML salva todos os elementos filho e atributos não consumidos do elemento ** \<>do cliente** na coluna Overflow da tabela Cust e todos os elementos filho e atributos não consumidos do elemento ** \<Order>** na coluna Overflow da tabela CustOrder.  
   
 ### <a name="to-test-a-working-sample"></a>Para testar um exemplo de funcionamento  
   

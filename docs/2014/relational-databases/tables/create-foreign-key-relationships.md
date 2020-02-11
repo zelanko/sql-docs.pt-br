@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8b5789a277eac84d9753a180b418c05c5fd71d09
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62761611"
 ---
 # <a name="create-foreign-key-relationships"></a>Criar relações de chaves estrangeiras
@@ -30,7 +30,7 @@ ms.locfileid: "62761611"
   
      [Segurança](#Security)  
   
--   **Para criar relações de chave estrangeira usando:**  
+-   **Para criar relações de chaves estrangeiras usando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -79,7 +79,7 @@ ms.locfileid: "62761611"
   
 3.  Na caixa de diálogo **Relações de Chave Estrangeira** , clique em **Adicionar**.  
   
-     A relação é exibida na lista **Relação Selecionada** com um nome fornecido pelo sistema no formato FK_\<*tablename*>_\<*tablename*>, em que *tablename* é o nome da tabela de chave estrangeira.  
+     A relação aparece na lista **de relações selecionada** com um nome fornecido pelo sistema no formato FK_\<*TableName*>_\<*TableName*>, em que *TableName* é o nome da tabela de chave estrangeira.  
   
 4.  Clique na relação na lista **Relação Selecionada** .  
   
@@ -89,7 +89,7 @@ ms.locfileid: "62761611"
   
 7.  Na grade inferior, escolha as colunas que contribuem para chave primária da tabela. Na célula da grade adjacente à esquerda de cada coluna, escolha a coluna da chave estrangeira correspondente da tabela da chave estrangeira.  
   
-     O**Designer de Tabela** sugere um nome para a relação. Para mudar esse nome, edite o conteúdo da caixa de texto **Nome da Relação** .  
+     **Designer de tabela** sugere um nome para a relação. Para mudar esse nome, edite o conteúdo da caixa de texto **Nome da Relação** .  
   
 8.  Escolha **OK** para criar a relação.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "62761611"
   
 2.  Na barra Padrão, clique em **Nova Consulta**.  
   
-3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. O exemplo cria uma chave estrangeira na coluna `TempID` e referencia a coluna `SalesReasonID` na tabela `Sales.SalesReason`.  
+3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. O exemplo cria uma chave estrangeira na coluna `TempID` e referencia a coluna `SalesReasonID` na tabela `Sales.SalesReason` .  
   
     ```  
     USE AdventureWorks2012;  

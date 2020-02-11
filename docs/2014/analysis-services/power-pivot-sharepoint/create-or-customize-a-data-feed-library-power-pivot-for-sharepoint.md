@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 31e69ddc36079c993e66a7e9253bfdd178057302
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66071559"
 ---
 # <a name="create-or-customize-a-data-feed-library-powerpivot-for-sharepoint"></a>Criar ou personalizar uma biblioteca de feed de dados (PowerPivot para SharePoint)
@@ -27,7 +27,7 @@ ms.locfileid: "66071559"
   
 -   Compartilhar e gerenciar documentos do serviço de dados em um local central.  
   
--   Identificar visualmente documentos do serviço de dados por um ícone, de forma que você possa distinguir facilmente documentos do serviço de outros documentos armazenados na mesma biblioteca: ![GMNI_IconDataFeed](../media/gmni-icondatafeed.gif "GMNI_IconDataFeed")  
+-   Identifique visualmente os documentos do serviço de dados por um ícone, para que você possa distinguir facilmente documentos de serviço de outros documentos armazenados na mesma biblioteca: ![GMNI_IconDataFeed](../media/gmni-icondatafeed.gif "GMNI_IconDataFeed")  
   
  Uma biblioteca de feeds de dados sempre contém arquivos de documento do serviço de dados (.atomsvc) e nunca o próprio feed de dados. Ao contrário de um feed de dados, que consiste em dados XML estáticos, o documento do serviço de dados especifica uma URL para um serviço ou aplicativo que gera um feed sob solicitação, fornecendo informações de conexão reutilizáveis para operações de importação repetíveis.  
   
@@ -37,14 +37,15 @@ ms.locfileid: "66071559"
   
  [Criar uma nova biblioteca de feeds de dados](#createlib)  
   
- [Adicionar o tipo de conteúdo do feed de dados a uma biblioteca](#addtolib)  
+ [Adicionar o tipo de conteúdo do feed de dados a qualquer biblioteca](#addtolib)  
   
 ##  <a name="prereq"></a> Pré-requisitos  
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] deve ser ativada para sites para os quais você está criando a biblioteca de feeds de dados. Se o tipo de modelo da biblioteca de feeds de dados não estiver disponível, a causa mais provável será que esse pré-requisito não foi atendido. Para obter mais informações, consulte [ativar a integração do recurso do PowerPivot para coleções de sites na Administração Central](activate-power-pivot-integration-for-site-collections-in-ca.md).  
+ 
+  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] deve ser ativada para sites para os quais você está criando a biblioteca de feeds de dados. Se o tipo de modelo da biblioteca de feeds de dados não estiver disponível, a causa mais provável será que esse pré-requisito não foi atendido. Para obter mais informações, consulte [ativar a integração de recursos do PowerPivot para coleções de sites na administração central](activate-power-pivot-integration-for-site-collections-in-ca.md).  
   
  Você deve ser um proprietário do site criar a biblioteca.  
   
-##  <a name="createlib"></a> Criar uma nova biblioteca de feeds de dados  
+##  <a name="createlib"></a>Criar uma nova biblioteca de feeds de dados  
  A criação de uma biblioteca de feeds de dados é a primeira etapa para habilitar feeds de dados para pastas de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Como uma biblioteca de feeds de dados fornece páginas de aplicativo e gerenciamento para os documentos do serviço de dados, você deve ter essa biblioteca pronta para criar um novo documento.  
   
  Uma biblioteca de feeds de dados é baseada em um modelo interno e em um *tipo de conteúdo de documento do serviço de dados* pré-configurado que define propriedades e comportamentos para um documento do serviço de dados.  
@@ -61,16 +62,16 @@ ms.locfileid: "66071559"
   
  Um link para a biblioteca de feeds de dados é exibido no painel Início Rápido da navegação do site atual.  
   
- Depois de criar uma biblioteca, você pode usá-la para criar documentos de serviço de dados. Para obter mais informações, consulte [usar Feeds de dados &#40;PowerPivot para SharePoint&#41;](use-data-feeds-power-pivot-for-sharepoint.md).  
+ Depois de criar uma biblioteca, você pode usá-la para criar documentos de serviço de dados. Para obter mais informações, consulte [usar feeds de dados &#40;PowerPivot para SharePoint&#41;](use-data-feeds-power-pivot-for-sharepoint.md).  
   
-##  <a name="addtolib"></a> Adicionar o tipo de conteúdo do feed de dados a uma biblioteca  
+##  <a name="addtolib"></a>Adicionar o tipo de conteúdo do feed de dados a qualquer biblioteca  
  Se você não desejar criar uma biblioteca de feeds de dados dedicada, mas ainda quiser criar e gerenciar documentos do serviço de dados de um site do SharePoint, poderá adicionar e configurar manualmente o tipo de conteúdo de documento do serviço de dados para qualquer biblioteca que será usada para compartilhar arquivos de documento do serviço de dados (.atomsvc).  
   
  Você deve ter pelo menos a permissão Gerenciar Listas para adicionar e configurar um tipo de conteúdo. Esta permissão é compilada no nível de permissão Design e superior.  
   
  As etapas a seguir devem ser repetidas para cada biblioteca na qual você deseja criar ou editar documentos de registro de feed de dados.  
   
-#### <a name="step-1-enable-content-type-management"></a>Etapa 1: Habilitar o gerenciamento de tipo de conteúdo  
+#### <a name="step-1-enable-content-type-management"></a>Etapa 1: Habilitar o gerenciamento do tipo de conteúdo  
   
 1.  Abra a biblioteca de documentos para a qual você deseja habilitar vários tipos de conteúdo.  
   
@@ -86,7 +87,7 @@ ms.locfileid: "66071559"
   
 7.  Clique em **OK**.  
   
-#### <a name="step-2-add-the-data-service-document-content-type"></a>Etapa 2: Adicione o tipo de conteúdo do documento de serviço de dados  
+#### <a name="step-2-add-the-data-service-document-content-type"></a>Etapa 2: Adicionar o tipo de conteúdo de documento de serviço de dados  
   
 1.  Na seção Tipos de Conteúdo, clique em **Adicionar a partir de tipos de conteúdo de site existentes**. Se você não vir essa página, volte para o site, clique em **Biblioteca** em Ferramentas de Biblioteca e clique em **Definições da Biblioteca**.  
   
@@ -108,10 +109,10 @@ ms.locfileid: "66071559"
   
 4.  Clique na seta para baixo em Novo Documento e selecione **Documento de Serviço de Dados**. A página Novo Documento de Serviço de Dados deve aparecer.  
   
-## <a name="see-also"></a>Consulte também  
- [Usar Feeds de dados &#40;PowerPivot para SharePoint&#41;](use-data-feeds-power-pivot-for-sharepoint.md)   
- [Excluir uma biblioteca de feeds de dados do PowerPivot](delete-a-power-pivot-data-feed-library.md)   
- [Administração de servidor do PowerPivot e a configuração na Administração Central](power-pivot-server-administration-and-configuration-in-central-administration.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Usar feeds de dados &#40;PowerPivot para SharePoint&#41;](use-data-feeds-power-pivot-for-sharepoint.md)   
+ [Excluir uma biblioteca de feeds de dados PowerPivot](delete-a-power-pivot-data-feed-library.md)   
+ [Administração e configuração do servidor PowerPivot na administração central](power-pivot-server-administration-and-configuration-in-central-administration.md)   
  [Feeds de dados PowerPivot](power-pivot-data-feeds.md)  
   
   

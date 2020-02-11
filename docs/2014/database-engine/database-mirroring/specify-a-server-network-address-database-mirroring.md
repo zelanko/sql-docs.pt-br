@@ -16,23 +16,23 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f197eef6369281001359969bf1d92bd0390bedc8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62755063"
 ---
 # <a name="specify-a-server-network-address-database-mirroring"></a>Especificar um endereço de rede do servidor (Espelhamento de banco de dados)
   A configuração de uma sessão de espelhamento de banco de dados requer um endereço de rede de servidor para cada uma das instâncias de servidor. O endereço de rede de servidor de uma instância de servidor deve identificar a instância de forma inequívoca fornecendo um endereço de sistema e número de porta na qual a instância está escutando.  
   
- Antes de você poder especificar uma porta em um endereço de rede de servidor, deve existir o ponto de extremidade do espelhamento de banco de dados na instância de servidor. Para obter mais informações, veja [Criar um ponto de extremidade de espelhamento de banco de dados para a Autenticação do Windows &#40;SQL Server&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  
+ Antes de você poder especificar uma porta em um endereço de rede de servidor, deve existir o ponto de extremidade do espelhamento de banco de dados na instância de servidor. Para obter mais informações, veja [Criar um ponto de extremidade de espelhamento de banco de dados para a Autenticação do Windows &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  
   
   
   
 ##  <a name="Syntax"></a> Sintaxe para um endereço de rede de servidor  
  A sintaxe para um endereço de rede de servidor é do formato:  
   
- TCP<strong>://</strong> *\<system-address>* <strong>:<strong> *\<port>* 
+ <strong>TCP<strong>://</strong>*\<sistema->de endereços *:<strong>*\<porta>* 
   
  onde  
   
@@ -61,7 +61,7 @@ ms.locfileid: "62755063"
   
      No endereço de rede de servidor de uma instância de servidor, somente o número da porta associado a seu ponto de extremidade de espelhamento distingue essa instância de qualquer outra instância no computador. A figura a seguir ilustra os endereços de rede de servidor de duas instâncias de servidor em um único computador. A instância padrão usa a porta `7022` e a instância nomeada usa a porta `7033`. O endereço de rede de servidor para estas duas instâncias de servidor é, respectivamente: `TCP://MYSYSTEM.Adventure-works.MyDomain.com:7022` e `TCP://MYSYSTEM.Adventure-works.MyDomain.com:7033`. Note que o endereço não contém o nome da instância de servidor.  
   
-     ![Endereços de rede do servidor de uma instância padrão](../media/dbm-2-instances-ports-1-system.gif "Endereços de rede do servidor de uma instância padrão")  
+     ![Endereços de rede de servidor de uma instância padrão](../media/dbm-2-instances-ports-1-system.gif "Endereços de rede de servidor de uma instância padrão")  
   
      Para identificar a porta associada atualmente com o ponto de extremidade de espelhamento de banco de dados de uma instância de servidor, use a seguinte instrução do [!INCLUDE[tsql](../../includes/tsql-md.md)] :  
   
@@ -73,7 +73,7 @@ ms.locfileid: "62755063"
   
 ### <a name="examples"></a>Exemplos  
   
-#### <a name="a-using-a-system-name"></a>A. Usando um nome de sistema  
+#### <a name="a-using-a-system-name"></a>a. Usando um nome de sistema  
  O endereço de rede de servidor a seguir especifica um nome de sistema, `SYSTEM46`e a porta `7022`.  
   
 ```  
@@ -133,7 +133,7 @@ ALTER DATABASE AdventureWorks SET PARTNER ='tcp://[2001:4898:23:1002:20f:1fff:fe
   
 -   [Criar um ponto de extremidade de espelhamento de banco de dados para a Autenticação do Windows &#40;SQL Server&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Espelhamento de banco de dados &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [O ponto de extremidade de espelhamento de banco de dados &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)  
   

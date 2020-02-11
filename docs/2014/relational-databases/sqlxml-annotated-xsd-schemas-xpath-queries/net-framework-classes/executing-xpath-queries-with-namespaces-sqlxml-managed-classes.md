@@ -1,5 +1,5 @@
 ---
-title: Executando consultas XPath com Namespaces (Classes gerenciadas SQLXML) | Microsoft Docs
+title: Executando consultas XPath com namespaces (classes gerenciadas SQLXML) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,18 +19,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 793107e91425e4fa0df23211a6d4ea42afef8c54
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010798"
 ---
 # <a name="executing-xpath-queries-with-namespaces-sqlxml-managed-classes"></a>Executando consultas XPath com namespaces (classes gerenciadas SQLXML)
   As consultas XPath podem incluir namespaces. Se os elementos de esquema forem qualificados por namespace (use um namespace de destino), as consultas XPath no esquema deverão especificar o namespace.  
   
- Como o caractere curinga (*) não é suportado no [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0, você precisa especificar a consulta XPath usando um prefixo de namespace. Para resolver o prefixo, use a propriedade de namespaces para especificar a associação de namespace.  
+ Como o caractere curinga (*) não é suportado no [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0, você precisa especificar a consulta XPath usando um prefixo de namespace. Para resolver o prefixo, use a propriedade namespaces para especificar a associação de namespace.  
   
- No exemplo a seguir, a consulta XPath especifica namespaces usando o caractere curinga (\*) e as funções XPath example e namespace-uri(). Essa consulta XPath retorna todos os elementos em que o nome local é `Employee` e o URI de namespace é `urn:myschema:Contacts`:  
+ No exemplo a seguir, a consulta XPath especifica namespaces usando o caractere curinga (\*) e as funções XPath de nome local () e namespace-URI (). Essa consulta XPath retorna todos os elementos em que o nome local é `Employee` e o URI de namespace é `urn:myschema:Contacts`:  
   
 ```  
 /*[local-name() = 'Contact' and namespace-uri() = 'urn:myschema:Contacts']  
@@ -54,7 +54,7 @@ ms.locfileid: "66010798"
   
  Como esse esquema define o namespace de destino, uma consulta XPath (como "Employee") com relação a esse esquema precisa incluir o namespace.  
   
- O exemplo de aplicativo C# a seguir executa uma consulta XPath com relação ao esquema XSD anterior (MySchema.xml). Para resolver o prefixo, especifique a associação de namespace usando a propriedade de Namespaces do objeto SqlXmlCommand.  
+ O exemplo de aplicativo C# a seguir executa uma consulta XPath com relação ao esquema XSD anterior (MySchema.xml). Para resolver o prefixo, especifique a associação de namespace usando a propriedade namespaces do objeto SqlXmlCommand.  
   
 > [!NOTE]  
 >  No código, é necessário fornecer o nome da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] na cadeia de conexão.  

@@ -1,5 +1,5 @@
 ---
-title: Execute o Editor da tarefa SQL (página geral) | Microsoft Docs
+title: Editor da tarefa Executar SQL (página Geral) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 96d211defa789888a3fd7b513b4dff60fa795cb6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058986"
 ---
 # <a name="execute-sql-task-editor-general-page"></a>Editor da Tarefa Executar SQL (página Geral)
@@ -33,8 +33,8 @@ ms.locfileid: "66058986"
  **Descrição**  
  Descreva a tarefa Executar SQL. Como prática recomendável, para tornar os pacotes autodocumentados e mais fáceis de manter, descreva a tarefa de acordo com a sua finalidade.  
   
- **TimeOut**  
- Especifique o número máximo de segundos que a tarefa será executada antes de exceder o tempo limite. O valor 0 indica que não há limite de tempo. O padrão é 0.  
+ **Cedido**  
+ Especifique o número máximo de segundos que a tarefa será executada antes de atingir o tempo limite. Um valor de 0 indica um tempo infinito. O padrão é 0.  
   
 > [!NOTE]  
 >  Procedimentos armazenados não atingirão o tempo limite se emularem uma funcionalidade de suspensão fornecendo um tempo para que as conexões sejam estabelecidas e as transações completadas sejam maior que o número de segundos especificados pelo **TimeOut**. Porém, os procedimentos armazenados que executam as consultas estão sempre sujeitos à restrição de tempo especificada pelo **TimeOut**.  
@@ -48,47 +48,48 @@ ms.locfileid: "66058986"
  **TypeConversionMode**  
  Quando você definir essa propriedade como `Allowed`, a Tarefa Executar SQL tentará converter o parâmetro de saída e os resultados da consulta no tipo de dados da variável à qual os resultados estão atribuídos. Isso se aplica ao tipo de conjunto de resultados de **Linha única** .  
   
- **ResultSet**  
+ **Resultado**  
  Especifique o tipo de resultado esperado pela instrução SQL que está sendo executada. Escolha entre **Linha Simples**, **Conjunto de Resultados Completo**, **XML**, ou **Nenhum**.  
   
  **ConnectionType**  
  Escolha o tipo de gerenciador de conexões a ser usado para conectar-se à fonte de dados. Os tipos de conexão disponíveis incluem **OLE DB**, **ODBC**, **ADO**, **ADO.NET** e **SQLMOBILE**.  
   
- **Tópicos relacionados:** [Gerenciador de conexões do OLE DB](connection-manager/ole-db-connection-manager.md)e [Gerenciador de conexões ODBC](connection-manager/odbc-connection-manager.md)e [Gerenciador de conexões ADO](connection-manager/ado-connection-manager.md)e [Gerenciador de conexões ADO.NET](connection-manager/ado-net-connection-manager.md)e [Gerenciador de conexões do SQL Server Compact Edition](connection-manager/sql-server-compact-edition-connection-manager.md)  
+ **Tópicos relacionados:** [OLE DB Gerenciador de conexões](connection-manager/ole-db-connection-manager.md), [Gerenciador de conexões ODBC](connection-manager/odbc-connection-manager.md), [Gerenciador de conexões ADO](connection-manager/ado-connection-manager.md), Gerenciador de [conexões do ADO.net](connection-manager/ado-net-connection-manager.md), Gerenciador de [conexões do SQL Server Compact Edition](connection-manager/sql-server-compact-edition-connection-manager.md)  
   
  **Conexão**  
- Escolha a conexão a partir de uma lista definida de gerenciadores de conexões. Para criar uma nova conexão, selecione \<**Nova conexão…** >.  
+ Escolha a conexão a partir de uma lista definida de gerenciadores de conexões. Para criar uma nova conexão, selecione \< **nova conexão...**>.  
   
  **SQLSourceType**  
  Selecione o tipo de origem da instrução SQL que a tarefa executa.  
   
  Dependendo do tipo de gerenciador de conexões que a tarefa Executar SQL utiliza, você deve usar marcadores de parâmetro específicos em instruções SQL com parâmetros.  
   
- **Tópicos relacionados:** Executando a seção comandos SQL com parâmetros em [tarefa Executar SQL](control-flow/execute-sql-task.md)  
+ **Tópicos relacionados:** Executando a seção de comandos SQL com parâmetros na [tarefa Executar SQL](control-flow/execute-sql-task.md)  
   
  As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
-|**Entrada Direta**|Defina a fonte como uma instrução Transact-SQL. Selecionando esse valor, a opção dinâmica **Instrução SQL**é exibida.|  
-|**Conexão do Arquivo**|Selecione um arquivo que contém uma instrução Transact-SQL. Definindo essa opção, a opção dinâmica **FileConnection**é exibida.|  
+|**Entrada direta**|Defina a fonte como uma instrução Transact-SQL. Selecionando esse valor, a opção dinâmica **Instrução SQL**é exibida.|  
+|**Conexão de arquivo**|Selecione um arquivo que contém uma instrução Transact-SQL. Definindo essa opção, a opção dinâmica **FileConnection**é exibida.|  
 |**Variável**|Defina a fonte como uma variável que identifique a instrução Transact-SQL. Selecionando esse valor, a opção dinâmica **SourceVariable**é exibida.|  
   
  **QueryIsStoredProcedure**  
  Indica se a instrução SQL especificada a ser executada é um procedimento armazenado. Essa propriedade será de somente leitura/gravação se a tarefa usar o gerenciador de conexões ADO. Caso contrário a propriedade será somente leitura e seu valor será `false`.  
   
  **BypassPrepare**  
- Indique se a instrução SQL está preparada.  `true` ignora a preparação; `false` prepara a instrução SQL antes de executá-la. Essa opção só está disponível com conexões OLE DB que dão suporte à preparação.  
+ Indique se a instrução SQL está preparada.  
+  `true` ignora a preparação; `false` prepara a instrução SQL antes de executá-la. Essa opção só está disponível com conexões OLE DB que dão suporte à preparação.  
   
- **Tópicos relacionados:**  [Execução preparada](../relational-databases/native-client-odbc-queries/executing-statements/prepared-execution.md)  
+ **Tópicos relacionados:**  [execução preparada](../relational-databases/native-client-odbc-queries/executing-statements/prepared-execution.md)  
   
  **Procurar**  
  Localize um arquivo que contém uma instrução SQL usando a caixa de diálogo **Abrir** . Selecione um arquivo para copiar o conteúdo do arquivo como uma instrução SQL para a propriedade **SQLStatement** .  
   
- **Construir Consulta**  
+ **Compilar consulta**  
  Crie uma instrução SQL usando a caixa de diálogo **Construtor de Consultas** , uma ferramenta gráfica usada para criar consultas. Esta opção está disponível quando a opção **SQLSourceType** é definida como **Entrada Direta**.  
   
- **Analisar Consulta**  
+ **Analisar consulta**  
  Valide a sintaxe da instrução SQL.  
   
 ## <a name="sqlsourcetype-dynamic-options"></a>Opções dinâmicas SQLSourceType  
@@ -97,23 +98,23 @@ ms.locfileid: "66058986"
  **SQLStatement**  
  Digite a instrução SQL a ser executada na caixa de opções ou clique no botão Procurar (...) para digitar a instrução SQL na caixa de diálogo **Inserir Consulta SQL** ou clique em **Construir Consulta** para redigir a instrução usando a caixa de diálogo **Construtor de Consultas**.  
   
- **Tópicos relacionados:** [Construtor de Consultas](../../2014/integration-services/query-builder.md)  
+ **Tópicos relacionados:** [Construtor de consultas](../../2014/integration-services/query-builder.md)  
   
 ### <a name="sqlsourcetype--file-connection"></a>SQLSourceType = Conexão do Arquivo  
  **FileConnection**  
- Selecione um gerenciador de conexões de arquivos existente ou clique em \<**Nova conexão...** > para criar um novo gerenciador de conexões.  
+ Selecione um gerenciador de conexões de arquivos existente ou clique em \<**Nova conexão...**> para criar um novo gerenciador de conexões.  
   
- **Tópicos relacionados:** [Gerenciador de conexões de arquivos](connection-manager/file-connection-manager.md), [Editor do Gerenciador de conexões de Arquivos](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Tópicos relacionados:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="sqlsourcetype--variable"></a>SQLSourceType = Variável  
  **SourceVariable**  
- Selecione uma variável existente ou clique em \<**Nova variável...** > para criar uma nova variável.  
+ Selecione uma variável existente ou clique em \< **nova variável...**> para criar uma nova variável.  
   
- **Tópicos relacionados:** [Variáveis do Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Adicionar variável](../../2014/integration-services/add-variable.md)  
+ **Tópicos relacionados:** [Integration Services &#40;&#41; as variáveis do SSIS](integration-services-ssis-variables.md), [Adicionar variável](../../2014/integration-services/add-variable.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [SQL Editor da tarefa executar &#40;página de mapeamento de parâmetro&#41;](../../2014/integration-services/execute-sql-task-editor-parameter-mapping-page.md)   
- [SQL Editor da tarefa executar &#40;página conjunto de resultados&#41;](../../2014/integration-services/execute-sql-task-editor-result-set-page.md)  
+ [Editor da tarefa Executar SQL &#40;página mapeamento de parâmetro&#41;](../../2014/integration-services/execute-sql-task-editor-parameter-mapping-page.md)   
+ [Editor da tarefa Executar SQL &#40;página conjunto de resultados&#41;](../../2014/integration-services/execute-sql-task-editor-result-set-page.md)  
   
   

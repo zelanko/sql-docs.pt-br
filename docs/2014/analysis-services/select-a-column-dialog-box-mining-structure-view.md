@@ -1,5 +1,5 @@
 ---
-title: Selecione uma caixa de diálogo de coluna (exibição de estrutura de mineração) | Microsoft Docs
+title: Caixa de diálogo Selecionar uma coluna (exibição da estrutura de mineração) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7ee69724fbcacad78c6053c1bbdf9c3465482665
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069917"
 ---
 # <a name="select-a-column-dialog-box-mining-structure-view"></a>Caixa de diálogo selecionar uma coluna (exibição de estrutura de mineração)
@@ -45,8 +45,8 @@ ms.locfileid: "66069917"
   
  Esta opção só é usada para modelos de mineração de OLAP.  
   
-## <a name="see-also"></a>Consulte também  
- [Exibição de estrutura de mineração &#40;Designer de modelo de mineração de dados&#41;](mining-structure-view-data-mining-model-designer.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Exibição de estrutura de mineração &#40;designer de modelo de mineração de dados&#41;](mining-structure-view-data-mining-model-designer.md)   
  [Adicionar colunas a uma estrutura de mineração](data-mining/add-columns-to-a-mining-structure.md)  
   
   

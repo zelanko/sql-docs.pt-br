@@ -1,5 +1,5 @@
 ---
-title: Linha do Editor de transformação de amostragem (página amostragem) | Microsoft Docs
+title: Editor de transformação amostragem de linhas (página amostragem) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 30163b4d65ac6a732efb3f7c67a018f433a42ac0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056452"
 ---
 # <a name="row-sampling-transformation-editor-sampling-page"></a>Editor de Transformação Amostragem de Linhas (página Amostragem)
@@ -42,8 +42,8 @@ ms.locfileid: "66056452"
  **Usar a seguinte semente aleatória**  
  Especifique a semente de amostra para o gerador de números aleatórios que a transformação usa para criar uma amostra. Recomendado apenas para desenvolvimento e teste. A transformação usará a contagem de tiques do Microsoft Windows como semente se não for especificada uma semente aleatória.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Transformação Amostragem Percentual](data-flow/transformations/percentage-sampling-transformation.md)  
+ [transformação Amostragem Percentual](data-flow/transformations/percentage-sampling-transformation.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Copiar itens do projeto | Microsoft Docs
+title: Copiar itens de projeto | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ef503e88e66bd6f89cac8d235f7175fb4cefe4e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060335"
 ---
 # <a name="copy-project-items"></a>Copiar itens do projeto
@@ -39,7 +39,7 @@ ms.locfileid: "66060335"
   
      Os itens são copiados automaticamente na pasta correta. Se você copiar itens que não são pacotes no projeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , os itens serão copiados na pasta **Diversos** .  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Pacotes do Integration Services &#40;SSIS&#41;](../../2014/integration-services/integration-services-ssis-packages.md)   
  [Copiar objetos de pacote](../../2014/integration-services/copy-package-objects.md)  
   

@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f355527002ed6d3637a3d1d895eb776c620c971d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060365"
 ---
 # <a name="connect-to-integration-services"></a>Conectar-se ao Integration Services
@@ -22,7 +22,7 @@ ms.locfileid: "66060365"
   
 ### <a name="to-open-connect-to-integration-services-service"></a>Para abrir a conexão ao serviço do Integration Services  
   
-1.  Abra [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
+1.  Abra o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 2.  Clique em **Pesquisador de Objetos** no menu **Exibir** .  
   

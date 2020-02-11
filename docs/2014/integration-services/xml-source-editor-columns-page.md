@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 403e9394f23ba0d6ce503dbea3e46ad7f37b9cd9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054314"
 ---
 # <a name="xml-source-editor-columns-page"></a>Editor de Origem XML (página Colunas)
@@ -36,10 +36,10 @@ ms.locfileid: "66054314"
  **Coluna de Saída**  
  Forneça um nome exclusivo para cada coluna de saída. O padrão é o nome da coluna externa (origem) selecionada; porém, é possível escolher qualquer nome descritivo exclusivo. O nome fornecido será exibido no Designer do [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de Origem XML &#40;Página Gerenciador de Conexões&#41;](../../2014/integration-services/xml-source-editor-connection-manager-page.md)   
- [Editor de Origem XML &#40;Página Saída de Erro&#41;](../../2014/integration-services/xml-source-editor-error-output-page.md)   
+ [Editor de origem XML &#40;página do Gerenciador de conexões&#41;](../../2014/integration-services/xml-source-editor-connection-manager-page.md)   
+ [Editor de origem XML &#40;página saída de erro&#41;](../../2014/integration-services/xml-source-editor-error-output-page.md)   
  [Extrair dados por meio da origem XML](data-flow/extract-data-by-using-the-xml-source.md)  
   
   

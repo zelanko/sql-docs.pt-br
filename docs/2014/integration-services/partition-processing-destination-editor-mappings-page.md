@@ -1,5 +1,5 @@
 ---
-title: Editor de destino de processamento de partições (página mapeamentos) | Microsoft Docs
+title: Editor de destino de processamento de partições (página Mapeamentos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 16f08d9b10bd0f29593695b8d7ea44c329b6a3a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056697"
 ---
 # <a name="partition-processing-destination-editor-mappings-page"></a>Editor de Destino de Processamento de Partições (Página Mapeamentos)
@@ -42,9 +42,9 @@ ms.locfileid: "66056697"
  **Coluna de Destino**  
  Exiba cada coluna de destino disponível, seja ela mapeada ou não.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de Destino de Processamento de Partições &#40;Página Gerenciador de Conexões&#41;](../../2014/integration-services/partition-processing-destination-editor-connection-manager-page.md)   
- [Editor de Destino de Processamento de Partições &#40;Página Avançado&#41;](../../2014/integration-services/partition-processing-destination-editor-advanced-page.md)  
+ [Editor de destino de processamento de partições &#40;página Gerenciador de conexões&#41;](../../2014/integration-services/partition-processing-destination-editor-connection-manager-page.md)   
+ [Editor de destino de processamento de partições &#40;página avançado&#41;](../../2014/integration-services/partition-processing-destination-editor-advanced-page.md)  
   
   

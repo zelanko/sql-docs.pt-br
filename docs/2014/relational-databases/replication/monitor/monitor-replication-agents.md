@@ -20,14 +20,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ab277c5ad8d85fdc7c24046bfa191078525fe705
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62667113"
 ---
 # <a name="monitor-replication-agents"></a>Monitorar agentes de replicação
-  O[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Monitor fornece uma exibição sistemática da atividade de replicação, mas também torna direta a localização de informações em um agente específico. A lista a seguir inclui cada agente, as guias no Replication Monitor onde pode ser localizado e um link para um tópico que explica como acessar essas guias:  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] O Replication Monitor fornece uma exibição do sistema de atividade de replicação, mas também torna simples encontrar informações sobre um agente específico. A lista a seguir inclui cada agente, as guias no Replication Monitor onde pode ser localizado e um link para um tópico que explica como acessar essas guias:  
   
 -   Os agentes a seguir estão associados às publicações no Replication Monitor:  
   
@@ -37,7 +37,7 @@ ms.locfileid: "62667113"
   
     -   Queue Reader Agent  
   
-     Acesse as informações e as tarefas associadas a esses agentes por meio das guias a seguir: **Agentes** (disponível para cada Editor e publicação) e **Avisos** (disponível para cada publicação). Para obter mais informações, confira [Exibir informações e executar tarefas usando o Replication Monitor](view-information-and-perform-tasks-replication-monitor.md).  
+     Acesse as informações e as tarefas associadas a esses agentes por meio das seguintes guias: **Agentes** (disponível para cada Publicador e publicação) e **Avisos** (disponível para cada publicação). Para obter mais informações, confira [Exibir informações e executar tarefas usando o Replication Monitor](view-information-and-perform-tasks-replication-monitor.md).  
   
 -   Os agentes a seguir estão associados às assinaturas no Replication Monitor:  
   
@@ -45,16 +45,16 @@ ms.locfileid: "62667113"
   
     -   Merge Agent  
   
-     Acesse as informações e as tarefas associadas a esses agentes por meio das guias a seguir: **Lista de Observação da Assinatura** (disponível para cada Editor) ou **Todas as Assinaturas** (disponível para cada publicação). Para obter mais informações, confira [Exibir informações e executar tarefas usando o Replication Monitor](view-information-and-perform-tasks-replication-monitor.md).  
+     Acesse as informações e as tarefas associadas a esses agentes por meio das seguintes guias: **Lista de Observação da Assinatura** (disponível para cada Publicador) ou a guia **Todas as Assinaturas** (disponível para cada publicação). Para obter mais informações, confira [Exibir informações e executar tarefas usando o Replication Monitor](view-information-and-perform-tasks-replication-monitor.md).  
   
 ## <a name="using-sql-server-management-studio-to-monitor-replication-agents"></a>Usando o SQL Server Management Studio para monitorar agentes de replicação  
- O[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] fornece as seguintes caixas de diálogo para monitorar agentes de replicação:  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] fornece as seguintes caixas de diálogo para monitorar agentes de replicação:  
   
--   **Exibir Status do Snapshot Agent** (para todas as publicações)  
+-   **Exibir status de agente de instantâneo** (para todas as publicações)  
   
--   **Exibir Status do Log Reader Agent** (para todas as publicações transacionais)  
+-   **Exibir status de agente de leitor de log** (para todas as publicações transacionais)  
   
--   **Exibir Status da Sincronização** (para todas as assinaturas; essa caixa de diálogo permite acesso ao Distribution Agent e ao Merge Agent)  
+-   **Exibir status de sincronização** (para todas as assinaturas; essa caixa de diálogo permite acesso ao agente de distribuição e ao agente de mesclagem)  
   
  O Replication Monitor fornece informações adicionais sobre cada agente e fornece monitoramento para o Queue Reader Agent, se necessário. Para obter mais informações, confira [Exibir informações e executar tarefas usando o Replication Monitor](view-information-and-perform-tasks-replication-monitor.md).  
   
@@ -74,7 +74,7 @@ ms.locfileid: "62667113"
   
     -   Clique em **Monitor** para iniciar o **Replication Monitor**.  
   
-5.  Clique em **Fechar**.  
+5.  Clique em **fechar**  
   
 #### <a name="to-monitor-the-distribution-agent-and-merge-agent-from-the-publisher"></a>Para monitorar o Distribution Agent e o Merge Agent (no Publicador)  
   
@@ -96,7 +96,7 @@ ms.locfileid: "62667113"
   
     -   Para assinaturas pull, clique em **Exibir Histórico de Trabalhos** para iniciar o **Visualizador do Arquivo de Log**que exibe a saída do log do agente.  
   
-6.  Clique em **Fechar**.  
+6.  Clique em **fechar**  
   
 #### <a name="to-monitor-the-distribution-agent-and-merge-agent-from-the-subscriber"></a>Para monitorar o Distribution Agent e o Merge Agent (no Assinante)  
   
@@ -114,9 +114,9 @@ ms.locfileid: "62667113"
   
     -   Clique em **Exibir Histórico do Agente** para iniciar o **Visualizador do Arquivo de Log**que exibe a saída do log do agente.  
   
-5.  Clique em **Fechar**.  
+5.  Clique em **fechar**  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Monitorando a Replicação](../monitoring-replication.md)   
  [Visão geral dos agentes de replicação](../agents/replication-agents-overview.md)  
   

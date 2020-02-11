@@ -1,5 +1,5 @@
 ---
-title: sys.external_language_files (Transact-SQL) – SQL Server | Microsoft Docs
+title: sys. external_language_files (Transact-SQL)-SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 05/22/2019
 ms.prod: sql
@@ -20,32 +20,32 @@ ms.author: negust
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 0d1325311ef0b708f5a3abd5f4494e099863efc2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65995084"
 ---
-# <a name="sysexternallanguagefiles-transact-sql"></a>sys.external_language_files (Transact-SQL)
+# <a name="sysexternal_language_files-transact-sql"></a>sys. external_language_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Este modo de exibição de catálogo fornece uma lista dos arquivos de extensão de linguagem externo no banco de dados. **R** e **Python** são nomes reservados, e nenhuma linguagem externa pode ser criada com esses nomes específicos.
+Esta exibição de catálogo fornece uma lista dos arquivos de extensão de idioma externo no banco de dados. **R** e **Python** são nomes reservados e nenhum idioma externo pode ser criado com esses nomes específicos.
 
-Quando uma linguagem externa é criada a partir de um file_spec, a extensão em si e suas propriedades são listadas nesta exibição. Essa exibição contém uma entrada por idioma, por sistema operacional.
+Quando um idioma externo é criado a partir de um file_spec, a própria extensão e suas propriedades são listadas nessa exibição. Essa exibição conterá uma entrada por idioma, por sistema operacional.
 
-## <a name="sysexternallanguages"></a>sys.external_languages
+## <a name="sysexternal_languages"></a>sys.external_languages
 
-O sys.external_language_files do modo de exibição de catálogo lista uma linha para cada extensão de linguagem externo no banco de dados. Parâmetros
+A exibição de catálogo sys. external_language_files lista uma linha para cada extensão de idioma externo no banco de dados. parâmetros
 
-|Nome da coluna |Tipo de dados | Descrição|
+|Nome da coluna |Tipo de dados | DESCRIÇÃO|
 |------|------|------|
-|external_language_id |INT | Identificação do idioma externo|
-|content|varbinary(max) |Conteúdo do arquivo de extensão de linguagem externo|
-|file_name|nvarchar(266)|Nome do arquivo de extensão de linguagem|
-|Plataforma|TINYINT|ID da plataforma do host no qual o SQL Server está instalado|
-|platform_desc |nvarchar(60)|Nome da plataforma do host. Os valores válidos são 'WINDOWS', 'LINUX'.|
-|parameters|nvarchar(4000)|Prameters de idiomas externos|
-|environment_variables |nvarchar(4000)|Variáveis de ambiente de linguagem externo|
+|external_language_id |INT | ID do idioma externo|
+|conteúdo|varbinary(max) |Conteúdo do arquivo de extensão de idioma externo|
+|file_name|nvarchar (266)|Nome do arquivo de extensão de idioma|
+|plataforma|tinyint|ID da plataforma de host na qual o SQL Server está instalado|
+|platform_desc |nvarchar(60)|Nome da plataforma do host. Os valores válidos são ' WINDOWS ', ' LINUX '.|
+|parâmetros|nvarchar(4000)|Prameters de idioma externo|
+|environment_variables |nvarchar(4000)|Variáveis de ambiente de idioma externo|
 
 ## <a name="see-also"></a>Confira também  
 

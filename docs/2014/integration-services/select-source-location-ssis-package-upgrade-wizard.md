@@ -1,5 +1,5 @@
 ---
-title: Selecione o local de origem (Assistente de atualização da pacotes SSIS) | Microsoft Docs
+title: Selecionar local de origem (Assistente de atualização de pacotes SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1ba348d3a47945bf9bb4f375310c5c92e6be7705
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055938"
 ---
 # <a name="select-source-location-ssis-package-upgrade-wizard"></a>Selecionar Local de Origem (Assistente de Atualização de Pacotes SSIS)
@@ -25,7 +25,7 @@ ms.locfileid: "66055938"
 > [!NOTE]  
 >  Essa página só está disponível quando o Assistente de Atualização de Pacotes do [!INCLUDE[ssIS](../includes/ssis-md.md)] é executado por meio do [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ou no prompt de comando.  
   
- **Para executar o Assistente de Atualização de Pacotes SSIS**  
+ **Para executar o assistente de atualização de pacote SSIS**  
   
 -   [Atualizar pacotes do Integration Services usando o Assistente de Atualização de Pacote SSIS](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)  
   
@@ -33,7 +33,7 @@ ms.locfileid: "66055938"
  **Origem do pacote**  
  Selecione o local de armazenamento que contém os pacotes a serem atualizados. Os valores dessa opção estão relacionados na tabela a seguir.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |**Sistema de Arquivos**|Indica que os pacotes a serem atualizados estão em uma pasta no computador local.<br /><br /> Para que o assistente faça backup dos pacotes originais antes de atualizá-los, esses pacotes devem ser armazenados no sistema de arquivos. Para obter mais informações, consulte o tópico de instruções.|  
 |**Armazenamento de Pacotes SSIS**|Indica que os pacotes a serem atualizados estão no armazenamento de pacotes. O repositório de pacotes consiste no conjunto de pastas do sistema de arquivos gerenciado pelo serviço do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Para obter mais informações, consulte [Gerenciamento de pacotes &#40;Serviço SSIS&#41;](service/package-management-ssis-service.md).<br /><br /> Selecione esse valor para exibir as opções dinâmicas de **Origem do pacote** correspondentes.|  
@@ -55,10 +55,10 @@ ms.locfileid: "66055938"
  **Servidor**  
  Digite o nome do servidor que tem os pacotes a serem atualizados ou selecione esse servidor na lista.  
   
- **Usar a autenticação do Windows**  
+ **Usar autenticação do Windows**  
  Selecione para usar a Autenticação do Windows para estabelecer conexão com o servidor.  
   
- **Usar Autenticação do SQL Server**  
+ **Usar autenticação SQL Server**  
  Selecione para usar a Autenticação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para estabelecer conexão com o servidor. Se você usar a Autenticação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , será preciso fornecer um nome de usuário e uma senha.  
   
  **Nome de usuário**  
@@ -67,7 +67,7 @@ ms.locfileid: "66055938"
  **Senha**  
  Digite a senha que a Autenticação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usará para estabelecer conexão com o servidor.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Atualizar pacotes do Integration Services](install-windows/upgrade-integration-services-packages.md)  
   
   

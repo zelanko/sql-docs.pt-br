@@ -15,16 +15,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0220e81325345e84524ec0218dbaff7d6143bdd8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62663652"
 ---
 # <a name="exchange-spill-event-class"></a>classe de evento Exchange Spill
   A classe de evento **Exchange Spill** indica que os buffers de comunicação em um plano de consulta paralelo foram temporariamente gravados no banco de dados **tempdb** . Isso ocorre raramente e somente quando um plano de consulta tiver exames de vários intervalos.  
   
- Normalmente, a consulta do [!INCLUDE[tsql](../../includes/tsql-md.md)] que gera tais exames de intervalo tem muitos operadores BETWEEN, cada um dos quais seleciona um intervalo de linhas de uma tabela ou um índice. Como alternativa, você pode obter vários intervalos usando expressões como (t. > 10 e t. \< 20) ou (t. > 100 AND t. \< 120). Além disso, os planos de consulta devem exigir que esses intervalos sejam examinados em ordem, porque existe uma cláusula ORDER BY em T.a ou um iterador do plano requer que ele consuma as tuplas na ordem classificada.  
+ Normalmente, a consulta do [!INCLUDE[tsql](../../includes/tsql-md.md)] que gera tais exames de intervalo tem muitos operadores BETWEEN, cada um dos quais seleciona um intervalo de linhas de uma tabela ou um índice. Como alternativa, você pode obter vários intervalos usando expressões como (T. a > 10 e T. a \< 20) ou (t. a > 100 e t. a \< 120). Além disso, os planos de consulta devem exigir que esses intervalos sejam examinados em ordem, porque existe uma cláusula ORDER BY em T.a ou um iterador do plano requer que ele consuma as tuplas na ordem classificada.  
   
  Quando um plano de consulta para tal consulta tem vários operadores **Parallelism** , os buffers de comunicação de memória usados pelos operadores **Parallelism** ficam completos e pode surgir uma situação em que o progresso da execução da consulta é interrompido. Nessa situação, um dos operadores **Parallelism** grava seu buffer de saída em **tempdb** (uma operação chamada *exchange spill*) de modo que possa consumir linhas de alguns de seus buffers de entrada. Finalmente, as linhas derramadas são devolvidas ao consumidor quando este estiver pronto para consumi-las.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "62663652"
   
 ## <a name="exchange-spill-event-class-data-columns"></a>Colunas de dados da classe de evento Exchange Spill  
   
-|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|DESCRIÇÃO|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|Nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |**ClientProcessID**|**int**|ID atribuída pelo computador host ao processo em que o aplicativo cliente está sendo executado. Essa coluna de dados será populada se o cliente fornecer a ID de processo do cliente.|9|Sim|  
@@ -62,7 +62,7 @@ ms.locfileid: "62663652"
 |**HostName**|**nvarchar**|Nome do computador no qual o cliente está sendo executado. Essa coluna de dados será populada se o cliente fornecer o nome do host. Para determinar o nome do host, use a função HOST_NAME.|8|Sim|  
 |**IsSystem**|**int**|Indica se o evento ocorreu em um processo do sistema ou do usuário. 1 = sistema, 0 = usuário.|60|Sim|  
 |**LoginName**|**nvarchar**|Nome de logon do usuário (logon de segurança do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou as credenciais de logon do Windows no formato *\<DOMAIN>\\<username\>* ).|11|Sim|  
-|**LoginSid**|**image**|Número SID (identificação de segurança) do usuário que fez logon. Você pode encontrar essas informações na tabela **syslogins** do banco de dados **master** . Cada SID é exclusivo para cada logon no servidor.|41|Sim|  
+|**LoginSid**|**imagem**|Número SID (identificação de segurança) do usuário que fez logon. Você pode encontrar essas informações na tabela **syslogins** do banco de dados **master** . Cada SID é exclusivo para cada logon no servidor.|41|Sim|  
 |**NTDomainName**|**nvarchar**|O domínio do Windows ao qual o usuário pertence.|7|Sim|  
 |**NTUserName**|**nvarchar**|Nome do usuário do Windows.|6|Sim|  
 |**ObjectID**|**int**|ID de objeto atribuída pelo sistema. Corresponde à ID do nó nos Showplans.|22|Sim|  
@@ -74,7 +74,7 @@ ms.locfileid: "62663652"
 |**TransactionID**|**bigint**|ID da transação atribuída pelo sistema.|4|Sim|  
 |**XactSequence**|**bigint**|Token que descreve a transação atual.|50|Sim|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [Opções Set Index](../indexes/set-index-options.md)   
  [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)  

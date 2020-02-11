@@ -1,5 +1,5 @@
 ---
-title: Editor de origem do Excel (página Gerenciador de Conexão) | Microsoft Docs
+title: Editor de origem do Excel (página Gerenciador de conexões) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,17 +15,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c3132bd65bb6f3092cc950758d4f346b5c4cd8fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059165"
 ---
 # <a name="excel-source-editor-connection-manager-page"></a>Editor de Origem do Excel (página Gerenciador de Conexões)
   Use o nó **Gerenciador de Conexões** da caixa de diálogo **Editor de Origem do Excel** para selecionar a pasta de trabalho do [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] para a origem que será usada. A origem do Excel lê os dados de uma planilha ou intervalo nomeado em uma pasta de trabalho existente.  
   
 > [!NOTE]  
->  O `CommandTimeout` propriedade da origem do Excel não está disponível na **Editor de origem do Excel**, mas pode ser definida usando a **Editor Avançado**. Para obter mais informações sobre esta propriedade, consulte a seção Origem do Excel em [Excel Custom Properties](data-flow/excel-custom-properties.md).  
+>  A `CommandTimeout` propriedade da origem do Excel não está disponível no **Editor de origem do Excel**, mas pode ser definida usando o **Editor avançado**. Para obter mais informações sobre esta propriedade, consulte a seção Origem do Excel em [Excel Custom Properties](data-flow/excel-custom-properties.md).  
   
  Para obter mais informações sobre origem do Excel, consulte [Excel Source](data-flow/excel-source.md).  
   
@@ -33,16 +33,16 @@ ms.locfileid: "66059165"
  **Gerenciador de conexões OLE DB**  
  Selecione um gerenciador de conexões do Excel existente na lista ou crie uma nova conexão clicando em **Nova**.  
   
- **Nova**  
+ **Novo**  
  Crie um novo gerenciador de conexões usando a caixa de diálogo **Gerenciador de Conexões do Excel** .  
   
  **Modo de acesso aos dados**  
  Especifique o método para selecionar os dados da origem.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |Tabela ou exibição|Recupere dados de uma planilha ou intervalo nomeado no arquivo do Excel.|  
-|Nome da tabela ou variável do nome de exibição|Especifique a planilha ou o nome do intervalo em uma variável.<br /><br /> **Informações relacionadas:** [Usar variáveis em pacotes](../../2014/integration-services/use-variables-in-packages.md)|  
+|Nome da tabela ou variável do nome de exibição|Especifique a planilha ou o nome do intervalo em uma variável.<br /><br /> **Informações relacionadas:** [usar variáveis em pacotes](../../2014/integration-services/use-variables-in-packages.md)|  
 |Comando SQL|Recupere os dados do arquivo do Excel usando uma consulta SQL. Para obter mais informações sobre a sintaxe da consulta, consulte [Excel Source](data-flow/excel-source.md).|  
 |Comando SQL a partir da variável|Especifique o texto da consulta SQL em uma variável.|  
   
@@ -66,7 +66,7 @@ ms.locfileid: "66059165"
  **Parâmetros**  
  Se você inseriu uma consulta parametrizada usando ? como um espaço reservado para o parâmetro no texto da consulta, use a caixa de diálogo **Definir Parâmetros da Consulta** para mapear os parâmetros de entrada da consulta para as variáveis do pacote.  
   
- **Build query**  
+ **Compilar consulta**  
  Use a caixa de diálogo **Construtor de Consultas** para construir a consulta SQL visualmente.  
   
  **Procurar**  
@@ -79,11 +79,11 @@ ms.locfileid: "66059165"
  **Nome da variável**  
  Selecione a variável que contém o texto da consulta SQL.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de Fonte do Excel &#40;Página Colunas&#41;](../../2014/integration-services/excel-source-editor-columns-page.md)   
- [Editor de Origem do Excel &#40;Página Saída de Erro&#41;](../../2014/integration-services/excel-source-editor-error-output-page.md)   
- [Gerenciador de Conexões do Excel](connection-manager/excel-connection-manager.md)   
- [Loop através de arquivos e tabelas do Excel por meio de um contêiner do Loop Foreach](control-flow/foreach-loop-container.md)  
+ [Editor de origem do Excel &#40;página colunas&#41;](../../2014/integration-services/excel-source-editor-columns-page.md)   
+ [Editor de origem do Excel &#40;página saída de erro&#41;](../../2014/integration-services/excel-source-editor-error-output-page.md)   
+ [Gerenciador de conexões do Excel](connection-manager/excel-connection-manager.md)   
+ [Loop por meio de arquivos do Excel e tabelas usando um contêiner de Loop Foreach](control-flow/foreach-loop-container.md)  
   
   

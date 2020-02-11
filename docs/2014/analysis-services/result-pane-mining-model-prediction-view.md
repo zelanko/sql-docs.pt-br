@@ -1,5 +1,5 @@
 ---
-title: Resultado do painel (exibição de previsão do modelo de mineração) | Microsoft Docs
+title: Painel de resultados (exibição de previsão do modelo de mineração) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 41579af945bcf546eb2c32b5a337ba10bd59510a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070179"
 ---
 # <a name="result-pane-mining-model-prediction-view"></a>Painel Resultado (Exibição da Previsão do Modelo de Mineração)
   O painel **Resultados** exibe os resultados da consulta de previsões da mineração de dados na exibição **Design** do Construtor de Consultas de Previsão. Você pode copiar uma seleção da grade ou toda a grade de resultados para a Área de Transferência.  
   
 ## <a name="options"></a>Opções  
- **Alterne para modo de design de consulta**  
+ **Alternar para a exibição do design de consulta**  
  Clique para mudar entre os painéis **Design**, **Consulta**e **Resultado** .  
   
  **Salvar resultados da consulta**  
@@ -35,9 +35,9 @@ ms.locfileid: "66070179"
  **Atualizar resultados de consulta**  
  Processa novamente a consulta de previsão.  
   
-## <a name="see-also"></a>Consulte também  
- [Construtor de Consultas de previsão &#40;Mineração de Dados&#41;](prediction-query-builder-data-mining.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Construtor de Consultas de &#40;de mineração de dados de previsão&#41;](prediction-query-builder-data-mining.md)   
  [Interfaces de consulta de mineração de dados](data-mining/data-mining-query-tools.md)   
- [Referência de instruções de DMX &#40extensões de Mineração de Dados&#41;](/sql/dmx/data-mining-extensions-dmx-statements)  
+ [Referência de instrução&#41; &#40;DMX de extensões de mineração de dados](/sql/dmx/data-mining-extensions-dmx-statements)  
   
   

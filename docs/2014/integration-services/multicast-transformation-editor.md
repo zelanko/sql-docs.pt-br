@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c4013483838f81e9147eb45c84598c9cc73016fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057617"
 ---
 # <a name="multicast-transformation-editor"></a>Editor de Transformação Difusão Seletiva
@@ -33,7 +33,7 @@ ms.locfileid: "66057617"
  **Propriedades**  
  Todas as propriedades de saída listadas são somente leitura, exceto **Nome** e **Descrição**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Transformação Divisão Condicional](data-flow/transformations/conditional-split-transformation.md)  
   

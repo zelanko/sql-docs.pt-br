@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2903eef63152af9b2e9af1434ba12ea91b4058fc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721778"
 ---
 # <a name="article-properties---ltarticlegt"></a>Propriedades do Artigo – &lt;Artigo&gt;
@@ -88,7 +88,7 @@ ms.locfileid: "62721778"
  Essa opção só se aplica a procedimentos armazenados. Determina se a definição do procedimento armazenado (a instrução CREATE PROCEDURE) ou sua execução devem ser replicadas ou não. Se você replicar a execução do procedimento, a definição do procedimento será replicada para o Assinante quando a assinatura for inicializada; quando o procedimento armazenado for executado no Publicador, a replicação executará o procedimento correspondente no Assinante. Isso pode fornecer um desempenho significativamente melhor em casos onde são executadas grandes operações em lote. Para obter mais informações, consulte [Publicando execução de procedimento armazenado em replicação transacional](transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
   
 ## <a name="options-for-merge-publications"></a>Opções para publicações de mesclagem  
- A caixa de diálogo **Propriedades do Artigo** para publicações de mesclagem tem duas guias: **Propriedades** e **Resolver**.  
+ A caixa de diálogo **Propriedades do Artigo** para publicações de mesclagem tem duas guias: **Propriedades** e **Resolvedor**.  
   
 ### <a name="properties-tab"></a>Guia Propriedades  
  **Direção de sincronização**  
@@ -124,7 +124,7 @@ ms.locfileid: "62721778"
  Se você selecionar o resolvedor padrão, os conflitos serão resolvidos com base na prioridade atribuída a cada Assinante ou na primeira alteração gravada no Publicador, dependendo do tipo de assinatura usado. Para obter mais informações, consulte [Detectar e resolver conflitos de replicação de mesclagem](merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
  **Usar um resolvedor personalizado (registrado no Distribuidor)**  
- Se você escolher usar um resolvedor de artigo (um fornecido pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] ou um que você gravou), deve selecionar um resolvedor na caixa de listagem. Para obter mais informações, consulte [Detecção e resolução de conflito de replicação de mesclagem avançada ](merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
+ Se você escolher usar um resolvedor de artigo (um fornecido pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] ou um que você gravou), deve selecionar um resolvedor na caixa de listagem. Para obter mais informações, consulte [Replicação de mesclagem avançada – detecção e resolução de conflito](merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
  Se o resolvedor requerer uma entrada, especifique-a na caixa de texto **Insira as informações necessárias para o desenvolvedor** . Para obter mais informações sobre entrada requerida por resolvedores personalizados [!INCLUDE[msCoName](../../includes/msconame-md.md)] , consulte [Resolvedores Microsoft baseados em COM](merge/advanced-merge-replication-conflict-com-based-resolvers.md).  
   
@@ -172,7 +172,7 @@ ms.locfileid: "62721778"
   
 -   Para alguns tipos, é possível selecionar mais de uma opção. A[!INCLUDE[msCoName](../../includes/msconame-md.md)] recomenda que você use o mapeamento padrão, a menos que seu aplicativo exija um mapeamento diferente. Para obter mais informações, consulte [Mapeamento de tipo de dados para Publicadores Oracle ](non-sql/data-type-mapping-for-oracle-publishers.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Create a Publication](publish/create-a-publication.md)   
  [Exibir e modificar as propriedades da publicação](publish/view-and-modify-publication-properties.md)   
  [Criar e aplicar o instantâneo inicial](create-and-apply-the-initial-snapshot.md)   

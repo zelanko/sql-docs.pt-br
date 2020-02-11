@@ -1,5 +1,5 @@
 ---
-title: Usando propriedades do membro (MDX) | Microsoft Docs
+title: Usando propriedades de membro (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8c0326d45af68db966f120fa12e35eb59f30becc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074157"
 ---
 # <a name="using-member-properties-mdx"></a>Usando propriedades do membro (MDX)
@@ -40,10 +40,10 @@ ms.locfileid: "66074157"
   
  Para obter mais informações, consulte [Propriedades do membro definidas pelo usuário &#40;MDX&#41;](mdx-member-properties-user-defined-member-properties.md).  
   
- Ambas as propriedades do membro intrínsecas e definidas pelo usuário podem ser recuperadas por meio do uso do `PROPERTIES` palavra-chave ou o [propriedades](/sql/mdx/properties-mdx) função.  
+ As propriedades intrínsecas e definidas pelo usuário podem ser recuperadas por meio do uso `PROPERTIES` da palavra-chave ou da função [Properties](/sql/mdx/properties-mdx) .  
   
 ## <a name="using-the-properties-keyword"></a>Usando a palavra-chave PROPERTIES  
- A palavra-chave `PROPERTIES` especifica as propriedades do membro que serão usadas em uma determinada dimensão de eixo. O `PROPERTIES` palavra-chave é inserida na `<axis specification>` cláusula do MDX [selecione](/sql/mdx/mdx-data-manipulation-select) instrução:  
+ A palavra-chave `PROPERTIES` especifica as propriedades do membro que serão usadas em uma determinada dimensão de eixo. A `PROPERTIES` palavra-chave é incluída `<axis specification>` na cláusula da instrução MDX [Select](/sql/mdx/mdx-data-manipulation-select) :  
   
 ```  
 SELECT [<axis_specification>  
@@ -69,11 +69,11 @@ SELECT [<axis_specification>
   
  A quebra da sintaxe `<property>` varia de acordo com a propriedade que você está consultando:  
   
--   Propriedades do membro intrínsecas sensíveis a contexto devem ser precedidas pelo nome da dimensão ou do nível. No entanto, propriedades do membro intrínsecas não sensíveis a contexto não podem ser qualificadas pelo nome da dimensão ou do nível. Para obter mais informações sobre como usar o `PROPERTIES` palavra-chave com propriedades intrínsecas do membro, consulte [propriedades intrínsecas do membro &#40;MDX&#41;](mdx-member-properties-intrinsic-member-properties.md).  
+-   Propriedades do membro intrínsecas sensíveis a contexto devem ser precedidas pelo nome da dimensão ou do nível. No entanto, propriedades do membro intrínsecas não sensíveis a contexto não podem ser qualificadas pelo nome da dimensão ou do nível. Para obter mais informações sobre como usar a `PROPERTIES` palavra-chave com propriedades intrínsecas do membro, consulte [propriedades intrínsecas do membro &#40;MDX&#41;](mdx-member-properties-intrinsic-member-properties.md).  
   
--   Propriedades do membro definidas pelo usuário devem ser precedidas pelo nome do nível no qual residem. Para obter mais informações sobre como usar o `PROPERTIES` palavra-chave com as propriedades do membro definidas pelo usuário, consulte [propriedades do membro definidas pelo usuário &#40;MDX&#41;](mdx-member-properties-user-defined-member-properties.md).  
+-   Propriedades do membro definidas pelo usuário devem ser precedidas pelo nome do nível no qual residem. Para obter mais informações sobre como usar a `PROPERTIES` palavra-chave com propriedades de membro definidas pelo usuário, consulte [Propriedades do membro definidas pelo usuário &#40;MDX&#41;](mdx-member-properties-user-defined-member-properties.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criando e usando valores de propriedade &#40;MDX&#41;](../../creating-and-using-property-values-mdx.md)  
   
   

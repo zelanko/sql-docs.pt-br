@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 995afe55c1cd1b7d925c9267ba5dfa3aed038358
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057754"
 ---
 # <a name="map-result-sets-to-variables-in-an-execute-sql-task"></a>Mapear conjuntos de resultados para variáveis em uma tarefa Executar SQL
@@ -34,7 +34,7 @@ ms.locfileid: "66057754"
   
 3.  Clique na guia **Fluxo de Controle** .  
   
-4.  Se o pacote ainda não incluir uma tarefa Executar SQL, adicione uma ao fluxo de controle do pacote. Para obter mais informações, consulte [adicionar ou excluir uma tarefa ou um contêiner em um fluxo de controle](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
+4.  Se o pacote ainda não incluir uma tarefa Executar SQL, adicione uma ao fluxo de controle do pacote. Para obter mais informações, consulte [Adicionar ou excluir uma tarefa ou um contêiner em um fluxo de controle](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   .  
   
 5.  Clique duas vezes na tarefa Executar SQL.  
@@ -59,13 +59,13 @@ ms.locfileid: "66057754"
   
 11. Clique em **OK**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tarefa Executar SQL](control-flow/execute-sql-task.md)   
  [Conjuntos de resultados na tarefa Executar SQL](result-sets-in-the-execute-sql-task.md)   
- [Tarefa executar pacote](control-flow/execute-package-task.md)   
- [Configurações do Pacote](../../2014/integration-services/package-configurations.md)   
+ [Tarefa Executar Pacote](control-flow/execute-package-task.md)   
+ [Configurações do pacote](../../2014/integration-services/package-configurations.md)   
  [Criar configurações de pacote](../../2014/integration-services/create-package-configurations.md)   
- [Use os valores de variáveis e parâmetros em um pacote filho](../../2014/integration-services/use-the-values-of-variables-and-parameters-in-a-child-package.md)   
+ [Usar os valores de variáveis e parâmetros em um pacote filho](../../2014/integration-services/use-the-values-of-variables-and-parameters-in-a-child-package.md)   
  [Variáveis do SSIS &#40;Integration Services&#41;](integration-services-ssis-variables.md)  
   
   

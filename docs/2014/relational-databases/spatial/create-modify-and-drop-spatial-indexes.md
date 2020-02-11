@@ -17,27 +17,27 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 7e5dcd71dec0a2189e9f3b51bb7a68b50b070416
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014268"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>Criar, modificar e remover índices espaciais
-  Um índice espacial pode executar com mais eficiência de determinadas operações em uma coluna do `geometry` ou `geography` tipo de dados (um *coluna espacial*). Mais de um índice espacial pode ser especificado em uma coluna espacial. Por exemplo, isto é útil para indexar diferentes parâmetros de mosaico em uma única coluna.  
+  Um índice espacial pode executar determinadas operações com mais eficiência em uma coluna do `geometry` tipo `geography` de dados ou (uma *coluna espacial*). Mais de um índice espacial pode ser especificado em uma coluna espacial. Por exemplo, isto é útil para indexar diferentes parâmetros de mosaico em uma única coluna.  
   
  Há várias restrições na criação de índices espaciais. Para obter mais informações, consulte [Restrições em índices espaciais](#restrictions) neste tópico.  
   
 > [!NOTE]  
 >  Para obter informações sobre a relação de índices espaciais com a partição e os grupos de arquivos, consulte a seção "Comentários" em [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-spatial-index-transact-sql).  
   
-##  <a name="creating"></a> Criando, modificando e removendo índices espaciais  
+##  <a name="creating"></a>Criando, modificando e descartando índices espaciais  
   
-###  <a name="create"></a> Para criar um índice espacial  
- **Para criar um índice espacial com o Transact-SQL**  
+###  <a name="create"></a>Para criar um índice espacial  
+ **Para criar um índice espacial usando Transact-SQL**  
  [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-spatial-index-transact-sql)  
   
- **Para criar um índice espacial usando a caixa de diálogo Novo Índice no Management Studio**  
+ **Para criar um índice espacial usando a caixa de diálogo novo índice no Management Studio**  
  ##### <a name="to-create-a-spatial-index-in-management-studio"></a>Para criar um índice espacial no Management Studio  
   
 1.  No Pesquisador de Objetos, conecte-se a uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e expanda-a.  
@@ -54,7 +54,7 @@ ms.locfileid: "66014268"
   
 7.  Para especificar a coluna espacial que você deseja indexar, clique em **Adicionar**.  
   
-8.  No **selecionar colunas de**  *\<nome da tabela >* caixa de diálogo, selecione uma coluna do tipo `geometry` ou `geography` , marcando a caixa de seleção correspondente. Todas as outras colunas espaciais se tornam não editáveis. Para selecionar uma coluna espacial diferente, primeiro desmarque a coluna selecionada no momento. Quando terminar, clique em **OK**.  
+8.  Na caixa de diálogo **selecionar colunas do nome da** * \<tabela>* , selecione uma coluna do `geometry` tipo `geography` ou marcando a caixa de seleção correspondente. Todas as outras colunas espaciais se tornam não editáveis. Para selecionar uma coluna espacial diferente, primeiro desmarque a coluna selecionada no momento. Quando terminar, clique em **OK**.  
   
 9. Verifique a seleção da coluna na grade **Colunas de chave de índice** .  
   
@@ -62,7 +62,7 @@ ms.locfileid: "66014268"
   
 11. Na página **Espacial** , especifique os valores que você deseja usar para as propriedades espaciais do índice.  
   
-     Ao criar um índice em uma `geometry` coluna de tipo, você deve especificar o **( *`X-min`* , *`Y-min`* )** e **( *`X-max`* , *`Y-max`* )** coordenadas da caixa delimitadora. Para um índice em uma `geography` coluna de tipo, os campos da caixa delimitadora se tornam somente leitura depois de especificar o **grade geográfica** esquema de mosaico, porque o mosaico de grade geográfica não usa uma caixa delimitadora.  
+     Ao criar um índice em uma `geometry` coluna de tipo, você deve especificar as coordenadas ***`X-min`*(,*`Y-min`*)** e ***`X-max`*(,*`Y-max`*)** da caixa delimitadora. Para um índice em uma `geography` coluna de tipo, os campos de caixa delimitadora se tornam somente leitura depois que você especifica o esquema de mosaico de **grade geográfica** , porque o mosaico de grade de geografia não usa uma caixa delimitadora.  
   
      Opcionalmente, é possível especificar valores não padrão para o campo **Células por Objeto** e para a densidade da grade em qualquer nível do esquema de mosaico. O número padrão de células por objeto é 16 para o [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] ou 8 para o [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] ou versão superior, e a densidade padrão da grade é **Média** para o [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)].  
   
@@ -76,7 +76,7 @@ ms.locfileid: "66014268"
 >  Para criar outro índice espacial na mesma ou em outra coluna espacial, repita as etapas anteriores.  
   
   
- **Para criar um índice espacial usando o Designer de Tabela no Management Studio**  
+ **Para criar um índice espacial usando Designer de Tabela em Management Studio**  
  ##### <a name="to-create-a-spatial-index-in-table-designer"></a>Para criar um índice espacial no Designer de Tabela  
   
 1.  No Pesquisador de Objetos, clique com o botão direito do mouse na tabela para a qual deseja criar um índice espacial e clique em **Design**.  
@@ -92,7 +92,7 @@ ms.locfileid: "66014268"
 5.  Selecione o novo índice na lista **Índice Espacial Selecionado** e, na grade à direita, defina as propriedades do índice espacial. Para obter informações sobre as propriedades, consulte [Caixa de diálogo Índices Espaciais &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/visual-database-tools.md).  
   
   
-###  <a name="alter"></a> Para alterar um índice espacial  
+###  <a name="alter"></a>Para alterar um índice espacial  
   
 -   [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)  
   
@@ -104,14 +104,14 @@ ms.locfileid: "66014268"
 -   [Mover um índice existente para um grupo de arquivos diferente](../indexes/move-an-existing-index-to-a-different-filegroup.md)  
   
   
-###  <a name="drop"></a> Para descartar um índice espacial  
- **Para descartar um índice espacial com o Transact-SQL**  
+###  <a name="drop"></a>Para descartar um índice espacial  
+ **Para descartar um índice espacial usando Transact-SQL**  
  [DROP INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-index-transact-sql)  
   
- **Para descartar um índice usando o Management Studio**  
+ **Para descartar um índice usando Management Studio**  
  [Excluir um índice](../indexes/delete-an-index.md)  
   
- **Para descartar um índice espacial usando o Designer de Tabela no Management Studio**  
+ **Para descartar um índice espacial usando Designer de Tabela em Management Studio**  
  ##### <a name="to-drop-a-spatial-index-in-table-designer"></a>Para descartar um índice espacial no Designer de Tabela  
   
 1.  No Pesquisador de Objetos, clique com o botão direito do mouse no índice espacial que você deseja excluir e clique em **Design**.  
@@ -127,7 +127,7 @@ ms.locfileid: "66014268"
 4.  Clique em **Excluir**.  
   
   
-##  <a name="restrictions"></a> Restrições em índices espaciais  
+##  <a name="restrictions"></a>Restrições em índices espaciais  
  Um índice espacial pode ser criado apenas em uma coluna do tipo `geometry` ou `geography`.  
   
 ### <a name="table-and-view-restrictions"></a>Restrições de tabela e de exibição  
@@ -152,7 +152,7 @@ ms.locfileid: "66014268"
  Os mosaicos espaciais introduzidos no [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] não podem ser replicados para o [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] ou o [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]. Você deverá usar mosaicos espaciais do [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] ou do [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] em índices espaciais quando a compatibilidade com versões anteriores com bancos de dados do [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] ou do [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] for um requisito.  
   
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Visão geral de índices espaciais](spatial-indexes-overview.md)  
   
   

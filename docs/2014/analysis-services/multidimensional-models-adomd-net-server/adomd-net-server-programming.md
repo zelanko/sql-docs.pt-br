@@ -1,5 +1,5 @@
 ---
-title: Programação de servidor do ADOMD.NET | Microsoft Docs
+title: Programação de servidor ADOMD.NET | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,24 +14,24 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fcd6feff1bdcd1e53aeb6af45be3edea9c80d50c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62703025"
 ---
 # <a name="adomdnet-server-programming"></a>Programando o servidor no ADOMD.NET
-  Os componentes de servidor do ADOMD.NET residem no namespace `Microsoft.AnalysisServices.AdomdServer` (em msmgdsrv.dll). Use esses componentes de servidor para criar funções personalizadas do MDX (Multidimensional Expressions) e procedimentos armazenados que são executados em uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Os objetos de servidor oferecem os recursos para a consulta de cubos e de modelos de mineração e para a avaliação de expressões em um determinado contexto. Os benefícios da criação de funções e de procedimentos armazenados personalizados incluem execução rápida, implantação centralizada e maior facilidade de manutenção.  
+  Os componentes de servidor do ADOMD.NET residem no namespace `Microsoft.AnalysisServices.AdomdServer` (em msmgdsrv.dll). Você usa esses componentes de servidor para criar funções MDX (expressões multidimensionais) personalizadas e procedimentos armazenados que são executados em uma instância [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]do. Os objetos de servidor oferecem os recursos para a consulta de cubos e de modelos de mineração e para a avaliação de expressões em um determinado contexto. Os benefícios da criação de funções e de procedimentos armazenados personalizados incluem execução rápida, implantação centralizada e maior facilidade de manutenção.  
   
  Os tópicos da tabela a seguir ajudarão você a desenvolver aplicativos de servidor com o ADOMD.NET.  
   
-|Tópico|Descrição|  
+|Tópico|DESCRIÇÃO|  
 |-----------|-----------------|  
 |[Funcionalidade de servidor do ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-functionality)|Descreve os usos para objetos de servidor do ADOMD.NET.|  
 |[Arquitetura de objeto de servidor do ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-object-architecture)|Descreve a arquitetura de objeto para objetos de servidor do ADOMD.NET.|  
 |[Funções e procedimentos armazenados definidos pelo usuário](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures)|Orienta você pelo processo de criação de uma função ou procedimento armazenado definido pelo usuário.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Programação de cliente ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/adomd-net-client-programming)   
  [Desenvolvendo com ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net)  
   

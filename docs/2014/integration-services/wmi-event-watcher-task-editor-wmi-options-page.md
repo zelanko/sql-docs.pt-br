@@ -1,5 +1,5 @@
 ---
-title: O Editor da tarefa de observador de eventos do WMI (página Opções do WMI) | Microsoft Docs
+title: Editor da tarefa detector de eventos do WMI (página Opções do WMI) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 52ca90b38975c8db762ec0937b265a91b03c5cb2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054378"
 ---
 # <a name="wmi-event-watcher-task-editor-wmi-options-page"></a>Editor do Detector de Eventos do WMI (página Opções do WMI)
@@ -30,15 +30,15 @@ ms.locfileid: "66054378"
  **WMIConnectionName**  
  Selecione um gerenciador de conexões WMI na lista ou clique em \<**Nova Conexão WMI...**> para criar um novo gerenciador de conexões.  
   
- **Tópicos relacionados:** [Gerenciador de Conexões WMI](connection-manager/wmi-connection-manager.md), [Editor do Gerenciador de Conexões WMI](../../2014/integration-services/wmi-connection-manager-editor.md)  
+ **Tópicos relacionados:** [Gerenciador de conexões WMI](connection-manager/wmi-connection-manager.md), [Editor do Gerenciador de conexões WMI](../../2014/integration-services/wmi-connection-manager-editor.md)  
   
  **WQLQuerySourceType**  
  Selecione o tipo de origem da consulta WQL que a tarefa executa. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
-|**Entrada Direta**|Defina a origem de consultas WQL. Selecionar este valor faz com que seja exibida a opção dinâmica **WQLQuerySource**.|  
-|**Conexão do Arquivo**|Selecione um arquivo que contém a consulta WQL. Selecionar este valor faz com que seja exibida a opção dinâmica **WQLQuerySource**.|  
+|**Entrada direta**|Defina a origem de consultas WQL. Selecionar este valor faz com que seja exibida a opção dinâmica **WQLQuerySource**.|  
+|**Conexão de arquivo**|Selecione um arquivo que contém a consulta WQL. Selecionar este valor faz com que seja exibida a opção dinâmica **WQLQuerySource**.|  
 |**Variável**|Define a origem de uma variável que define a consulta WQL. Selecionar este valor faz com que seja exibida a opção dinâmica **WQLQuerySource**.|  
   
  **ActionAtEvent**  
@@ -67,19 +67,19 @@ ms.locfileid: "66054378"
   
 ### <a name="wqlquerysource--file-connection"></a>WQLQuerySource = Conexão do arquivo  
  **WQLQuerySource**  
- Selecione um gerenciador de conexões de arquivos na lista ou clique em \<**Nova conexão…**> para criar um novo gerenciador de conexões.  
+ Selecione um Gerenciador de conexões de arquivo na lista ou clique \<em **nova conexão...**> para criar um novo Gerenciador de conexões.  
   
- **Tópicos relacionados:** [Gerenciador de conexões de arquivos](connection-manager/file-connection-manager.md), [Editor do Gerenciador de conexões de Arquivos](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Tópicos relacionados:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="wqlquerysource--variable"></a>WQLQuerySource = Variável  
  **WQLQuerySource**  
- Selecione uma variável na lista ou clique em \<**Nova variável...**> para criar uma nova variável.  
+ Selecione uma variável na lista ou clique em \< **nova variável...**> para criar uma nova variável.  
   
- **Tópicos relacionados:** [Variáveis do Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Adicionar variável](../../2014/integration-services/add-variable.md)  
+ **Tópicos relacionados:** [Integration Services &#40;&#41; as variáveis do SSIS](integration-services-ssis-variables.md), [Adicionar variável](../../2014/integration-services/add-variable.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor da Tarefa Detector de Eventos do WMI &#40;Página Geral&#41;](general-page-of-integration-services-designers-options.md)   
+ [Editor da tarefa Inspetor de eventos do WMI &#40;página Geral&#41;](general-page-of-integration-services-designers-options.md)   
  [Página Expressões](expressions/expressions-page.md)   
  [Tarefa Leitor de Dados do WMI](control-flow/wmi-data-reader-task.md)  
   

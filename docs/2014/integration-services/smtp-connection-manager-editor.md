@@ -1,5 +1,5 @@
 ---
-title: Editor do Gerenciador de Conexão SMTP | Microsoft Docs
+title: Editor do Gerenciador de conexões SMTP | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 527c8f647c963c2c1c03171eeb154a790ab1994a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055555"
 ---
 # <a name="smtp-connection-manager-editor"></a>Editor do Gerenciador de Conexões SMTP
@@ -36,19 +36,19 @@ ms.locfileid: "66055555"
  **Servidor SMTP**  
  Forneça o nome do servidor SMTP.  
   
- **Usar Autenticação do Windows**  
+ **Usar autenticação do Windows**  
  Selecione para enviar email usando um servidor SMTP que usa a Autenticação do Windows para autenticar o acesso ao servidor.  
   
 > [!IMPORTANT]  
 >  O gerenciador de conexões SMTP dá suporte apenas para autenticação anônima e Autenticação do Windows. Ele não suporta a autenticação básica.  
   
 > [!NOTE]  
->  Ao usar o Microsoft Exchange como servidor SMTP, talvez você precise definir **usar autenticação do Windows** para `True`. Os servidores do Exchange podem ser configurados para não permitir conexões SMTP não autenticadas.  
+>  Ao usar o Microsoft Exchange como servidor SMTP, talvez seja necessário definir **usar a autenticação** do Windows `True`para o. Os servidores do Exchange podem ser configurados para não permitir conexões SMTP não autenticadas.  
   
- **Habilitar SSL (Secure Sockets Layer)**  
+ **Habilitar protocolo SSL (SSL)**  
  Selecione para criptografar a comunicação utilizando a SSL (Secure Sockets Layer) ao enviar mensagens de email.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

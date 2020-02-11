@@ -1,5 +1,5 @@
 ---
-title: Transferir o Editor da tarefa procedimentos armazenados mestres (página geral) | Microsoft Docs
+title: Editor da tarefa Transferir procedimentos armazenados mestres (página Geral) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cab36a851c5ef50f0690e9bc0a1a18676d335e50
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054914"
 ---
 # <a name="transfer-master-stored-procedures-task-editor-general-page"></a>Editor da Tarefa Transferir Procedimentos Armazenados Mestres (Página Geral)
@@ -37,7 +37,7 @@ ms.locfileid: "66054914"
  **Descrição**  
  Digite uma descrição da tarefa Transferir Procedimentos Armazenados Mestres.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Tarefas do Integration Services](control-flow/integration-services-tasks.md)   
  [Editor da Tarefa Transferir Procedimentos Armazenados Mestres &#40;Página Procedimentos Armazenados&#41;](../../2014/integration-services/transfer-master-stored-procedures-task-editor-stored-procedures-page.md)   

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6554691ce8debb96d4b0ee350ef98d2bfc57f02c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011875"
 ---
 # <a name="non-xml-format-files-sql-server"></a>Arquivos de formato não XML (SQL Server)
@@ -56,14 +56,14 @@ ms.locfileid: "66011875"
   
  Os campos **Versão** e **Número de Colunas** só ocorrem uma vez. Seus significados são descritos na tabela a seguir.  
   
-|Campo de arquivo de formato|Descrição|  
+|Campo de arquivo de formato|DESCRIÇÃO|  
 |------------------------|-----------------|  
 |Versão|O número de versão é reconhecido somente pelo **bcp**, não pelo [!INCLUDE[tsql](../../includes/tsql-md.md)]. Número de versão do utilitário **bcp** :<br /><br /> 9.0 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 10.0 = [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]<br /><br /> 11.0 = [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]<br /><br /> 12.0 = [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]<br /><br /> Observação: a versão do utilitário **bcp** (Bcp.exe) usada para ler um arquivo de formato deve ser igual ou posterior à versão usada para criar o arquivo de formato. Por exemplo, o [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]**bcp** pode ler um arquivo de formato da versão 10.0, que é gerado pelo [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]**bcp**, mas o [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]**bcp** não pode ler um arquivo de formato da versão 12.0, que é gerado pelo [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]**bcp**.|  
 |Número de Colunas|Número de campos no arquivo de dados. Esse número deve ser o mesmo em todas as linhas.|  
   
  Os outros campos de arquivo de formato descrevem os campos de dados que devem ser importados ou exportados em massa. Cada campo de dados requer uma linha separada no arquivo de formato. Cada linha do arquivo de formato contém valores para os campos de arquivo de formato descritos na tabela a seguir.  
   
-|Campo de arquivo de formato|Descrição|  
+|Campo de arquivo de formato|DESCRIÇÃO|  
 |------------------------|-----------------|  
 |**Ordem de campo do arquivo host**|Um número que indica a posição de cada campo no arquivo de dados. O primeiro campo na linha é 1, e assim por diante.|  
 |**Tipo de dados do arquivo host**|Indica o tipo de dados que é armazenado em um determinado campo do arquivo de dados. Com arquivos de dados ASCII, use SQLCHAR; para arquivos de dados de formato nativo, use tipos de dados padrão. Para obter mais informações, veja [Especificar tipo de armazenamento de arquivo usando bcp &#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md).|  
@@ -106,7 +106,7 @@ ms.locfileid: "66011875"
   
 -   [Usar um arquivo de formato para mapear colunas de uma tabela para campos de arquivo de dados &#40;SQL Server&#41;](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Utilitário bcp](../../tools/bcp-utility.md)   
  [Criar um arquivo de formato &#40;SQL Server&#41;](create-a-format-file-sql-server.md)   
  [Arquivos de formato XML &#40;SQL Server&#41;](xml-format-files-sql-server.md)   

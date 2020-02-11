@@ -1,5 +1,5 @@
 ---
-title: Editor de destino (página Gerenciador de Conexão) do arquivo simples | Microsoft Docs
+title: Editor de destino de arquivo simples (página Gerenciador de conexões) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 429ba1f8a12a4bd574a8304d18311a6e6e4efc79
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058703"
 ---
 # <a name="flat-file-destination-editor-connection-manager-page"></a>Editor de Destino de Arquivo Simples (página Gerenciador de Conexões)
@@ -27,10 +27,10 @@ ms.locfileid: "66058703"
  Para saber mais sobre o destino de Arquivo Simples, consulte [Flat File Destination](data-flow/flat-file-destination.md).  
   
 ## <a name="options"></a>Opções  
- **Gerenciador de conexões de arquivo simples**  
+ **Gerenciador de conexões de arquivos simples**  
  Selecione um gerenciador de conexões existente usando a caixa de listagem ou crie uma nova conexão clicando em **Novo**.  
   
- **Nova**  
+ **Novo**  
  Crie uma nova conexão utilizando as caixas de diálogo **Formato de Arquivo Simples** e **Editor do Gerenciador de Conexões de Arquivos Simples** .  
   
  Além dos formatos padrão de arquivo simples: delimitado, de largura fixa e irregular à direita, a caixa de diálogo **Formato de Arquivo Simples** tem uma quarta opção, **Largura fixa com delimitadores de linha**. Esta opção representa um caso especial do formato irregular à direita no qual o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] adiciona uma coluna fictícia como a coluna final de dados. Essa coluna fictícia assegura que a coluna final tenha uma largura fixa.  
@@ -46,8 +46,8 @@ ms.locfileid: "66058703"
  **Visualização**  
  Visualize os resultados usando a caixa de diálogo **Exibição de Dados** . A visualização pode exibir até 200 linhas.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de Destino de Arquivo Simples &#40;Página Mapeamentos&#41;](../../2014/integration-services/flat-file-destination-editor-mappings-page.md)  
+ [Editor de destino de arquivo simples &#40;página Mapeamentos&#41;](../../2014/integration-services/flat-file-destination-editor-mappings-page.md)  
   
   

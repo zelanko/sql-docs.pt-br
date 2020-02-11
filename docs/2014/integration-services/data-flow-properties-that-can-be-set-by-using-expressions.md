@@ -1,5 +1,5 @@
 ---
-title: Propriedades que podem ser definidas usando expressões de fluxo de dados | Microsoft Docs
+title: Propriedades de fluxo de dados que podem ser definidas usando expressões | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f70a956834108c21dd7b17bb9f3e04db38f29bfa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059937"
 ---
 # <a name="data-flow-properties-that-can-be-set-by-using-expressions"></a>Propriedades de fluxo de dados que podem ser definidas usando expressões
@@ -35,7 +35,7 @@ ms.locfileid: "66059937"
   
  Para especificar uma expressão de propriedade para uma das propriedades de objetos de fluxo de dados listadas nesse tópico, exiba a janela **Propriedades** para a tarefa de Fluxo de Dados selecionando a tarefa de Fluxo de Dados na superfície **Fluxo de Controle** do designer, ou selecionando a guia **Fluxo de Dados** do designer sem selecionar nenhum componente individual ou caminho. Selecione a propriedade **Expressões** e clique nas reticências (...) para exibir a caixa de diálogo **Editor de Expressões de Propriedades** . Abra a lista suspensa **Propriedade** para selecionar uma propriedade e digite uma expressão na caixa de texto **Expressão** ou clique nas reticências (...) para exibir a caixa de diálogo **Construtor de Expressões** .  
   
- A lista **Propriedade** exibe as propriedades disponíveis para apenas esses objetos de fluxo de dados já colocados na superfície **Fluxo de Dados** do designer. Portanto, não é possível usar a lista **Propriedade** para exibir todas as possíveis propriedades de objetos de fluxo de dados que aceitam expressões de propriedades. Por exemplo, se você tiver colocado uma origem do ADO NET na superfície do designer, o **propriedade** lista contém uma entrada para o `[ADO NET Source].[SqlCommand]` propriedade. A lista também exibe muitas propriedades da própria tarefa de Fluxo de Dados.  
+ A lista **Propriedade** exibe as propriedades disponíveis para apenas esses objetos de fluxo de dados já colocados na superfície **Fluxo de Dados** do designer. Portanto, não é possível usar a lista **Propriedade** para exibir todas as possíveis propriedades de objetos de fluxo de dados que aceitam expressões de propriedades. Por exemplo, se você colocou uma origem do ADO NET na superfície do designer, a lista de **Propriedades** conterá uma entrada `[ADO NET Source].[SqlCommand]` para a propriedade. A lista também exibe muitas propriedades da própria tarefa de Fluxo de Dados.  
   
 ## <a name="properties-of-data-flow-objects-that-support-property-expressions"></a>Propriedades de objetos de fluxo de dados que aceitam expressões de propriedade  
  Os valores das propriedades na lista a seguir podem ser especificados usando expressões de propriedades.  
@@ -70,8 +70,8 @@ ms.locfileid: "66059937"
 |----------------------|--------------|  
 |Destino do ADO NET|Propriedade TableOrViewName<br /><br /> Propriedade BatchSize<br /><br /> Propriedade CommandTimeout|  
 |Destino de arquivo simples|Propriedade Header|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Destino Compact|Propriedade TableName|  
-|Destino [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Propriedade BulkInsertTableName<br /><br /> Propriedade BulkInsertFirstRow<br /><br /> Propriedade BulkInsertLastRow<br /><br /> Propriedade BulkInsertOrder<br /><br /> Propriedade Timeout|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Destino do Compact|Propriedade TableName|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]destino|Propriedade BulkInsertTableName<br /><br /> Propriedade BulkInsertFirstRow<br /><br /> Propriedade BulkInsertLastRow<br /><br /> Propriedade BulkInsertOrder<br /><br /> Propriedade Timeout|  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
@@ -80,7 +80,7 @@ ms.locfileid: "66059937"
 ## <a name="related-content"></a>Conteúdo relacionado  
  Artigo técnico, [SSIS Expression Cheat Sheet](https://pragmaticworks.com/Resources/Cheat-Sheets/SSIS-Expression-Cheat-Sheet), em pragmaticworks.com  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Usar expressões de propriedade em pacotes](expressions/use-property-expressions-in-packages.md)   
  [Propriedades comuns](../../2014/integration-services/common-properties.md)   
  [Propriedades personalizadas da transformação](data-flow/transformations/transformation-custom-properties.md)   

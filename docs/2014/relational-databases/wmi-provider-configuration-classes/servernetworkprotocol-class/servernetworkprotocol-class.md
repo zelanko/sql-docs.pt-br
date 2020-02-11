@@ -19,16 +19,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: b40f40cea8e4f9c36b74ea87b22c5c2a6633e077
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62659938"
 ---
 # <a name="servernetworkprotocol-class"></a>Classe ServerNetworkProtocol
-  O [ServerNetworkProtocol classe] servernetworkprotocol-class.md) representa protocolos de rede instalados em uma instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que permite a comunicação com clientes em uma rede.  
+  A [ServerNetworkProtocol Class] ServerNetworkProtocol-Class.MD) representa os protocolos de rede instalados em uma [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instância do que permite a comunicação com clientes em uma rede.  
   
- Com servernetworkprotocol o [ServerNetworkProtocol classe]-class.md), você pode:  
+ Com a [classe ServerNetworkProtocol] ServerNetworkProtocol-class.md), você pode:  
   
 -   Verificar o nome, a versão, o arquivo .dll, número de propriedades e nome para exibição do protocolo de rede de servidor referenciado.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "62659938"
   
 -   Habilitar e desabilitar o protocolo de rede de servidor.  
   
-## <a name="see-also"></a>Consulte também  
- [Configurando protocolos de rede do servidor e bibliotecas de rede](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+## <a name="see-also"></a>Consulte Também  
+ [Configurando protocolos de rede de servidor e Net-Libraries](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

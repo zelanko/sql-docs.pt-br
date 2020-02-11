@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 00d17af3ce46ee5b20a730e536321140bb69f4ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073327"
 ---
 # <a name="partitions-in-multidimensional-models"></a>Partições em modelos multidimensionais
@@ -34,22 +34,22 @@ ms.locfileid: "66073327"
  Partições locais são partições definidas, processadas e armazenadas em um servidor. Se houver grandes grupos de medidas em um cubo, é possível particioná-los para que o processamento ocorra paralelamente entre as partições. A vantagem é que o processamento paralelo fornece uma execução mais rápida. Como um trabalho de processamento de partição não precisa terminar antes do início de outro, eles podem ser executados em paralelo. Para obter mais informações, consulte [Criar e gerenciar uma partição local &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md).  
   
 ## <a name="remote-partitions"></a>Partições remotas  
- Partições remotas são partições definidas em um servidor, mas processadas e armazenadas em outro. Se desejar distribuir o armazenamento de dados e metadados entre vários servidores, use partições remotas. Normalmente, ao fazer a transição do desenvolvimento para a produção, o tamanho dos dados analisados aumenta várias vezes. Com grandes blocos de dados como esses, uma possível alternativa é distribuir tais dados entre vários computadores. Isso é feito não só porque um computador não pode armazenar todos os dados, mas também para processar os dados paralelamente em mais de um computador. Para obter mais informações, consulte [Create and Manage a Remote Partition &#40;Analysis Services&#41;](create-and-manage-a-remote-partition-analysis-services.md).  
+ Partições remotas são partições definidas em um servidor, mas processadas e armazenadas em outro. Se desejar distribuir o armazenamento de dados e metadados entre vários servidores, use partições remotas. Normalmente, ao fazer a transição do desenvolvimento para a produção, o tamanho dos dados analisados aumenta várias vezes. Com grandes blocos de dados como esses, uma possível alternativa é distribuir tais dados entre vários computadores. Isso é feito não só porque um computador não pode armazenar todos os dados, mas também para processar os dados paralelamente em mais de um computador. Para obter mais informações, consulte [Criar e gerenciar uma partição remota &#40;Analysis Services&#41;](create-and-manage-a-remote-partition-analysis-services.md).  
   
 ## <a name="aggregations"></a>Agregações  
  As agregações são resumos pré-calculados de dados de cubo que ajudam a habilitar o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para fornecer rápidas respostas de consultas. Você pode controlar o número de agregações criadas para um grupo de medidas definindo limites de armazenamento, ganhos de desempenho, ou arbitrariamente interrompendo o processo de criação de agregação após sua execução por algum tempo. Mais agregações não são necessariamente melhores. Cada nova agregação tem a custo, em termos de espaço em disco e de tempo de processamento. Recomendamos criar agregações para um ganho de 30% em desempenho e, depois, aumentar o número apenas se o teste ou a experiência o justificar. Para obter mais informações, consulte [Projetando agregações &#40;Analysis Services – Multidimensional&#41;](designing-aggregations-analysis-services-multidimensional.md).  
   
 ## <a name="partition-merging-and-editing"></a>Mesclando e editando partições  
- Se duas partições usarem o mesmo design de agregação, é possível mesclar essas duas partições em uma. Por exemplo, se você tiver uma dimensão de inventário particionada por mês, no final de cada mês do calendário, será possível mesclar a partição desse mês com a partição existente dos meses acumulados no ano. Desse modo, a partição do mês atual pode ser processada e analisada rapidamente, enquanto o resto do ano em meses só será reprocessado quando for mesclado. O reprocessamento requer um tempo maior e pode ser executado com menos frequência. Para obter mais informações sobre como gerenciar a processo de mesclagem de partições, consulte [Mesclar partições no Analysis Services &#40;SSAS – Multidimensional&#41;](merge-partitions-in-analysis-services-ssas-multidimensional.md). Para editar as partições do cubo usando o **partições** no Designer de cubo, consulte [editar ou excluir partições &#40;Analysis Services - Multidimensional&#41;](edit-or-delete-partitions-analyisis-services-multidimensional.md).  
+ Se duas partições usarem o mesmo design de agregação, é possível mesclar essas duas partições em uma. Por exemplo, se você tiver uma dimensão de inventário particionada por mês, no final de cada mês do calendário, será possível mesclar a partição desse mês com a partição existente dos meses acumulados no ano. Desse modo, a partição do mês atual pode ser processada e analisada rapidamente, enquanto o resto do ano em meses só será reprocessado quando for mesclado. O reprocessamento requer um tempo maior e pode ser executado com menos frequência. Para obter mais informações sobre como gerenciar a processo de mesclagem de partições, consulte [Mesclar partições no Analysis Services &#40;SSAS – Multidimensional&#41;](merge-partitions-in-analysis-services-ssas-multidimensional.md). Para editar as partições de cubo usando a guia **partições** no designer de cubo, consulte [Editar ou excluir partições &#40;Analysis Services-&#41;multidimensional ](edit-or-delete-partitions-analyisis-services-multidimensional.md).  
   
-## <a name="related-topics"></a>Tópicos relacionados  
+## <a name="related-topics"></a>Tópicos Relacionados  
   
-|Tópico|Descrição|  
+|Tópico|DESCRIÇÃO|  
 |-----------|-----------------|  
 |[Criar e gerenciar uma partição local &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)|Contém informações sobre como particionar dados usando filtros ou tabelas de fato diferentes sem duplicar dados.|  
-|[Definir armazenamento de partição &#40;Analysis Services – Multidimensional&#41;](set-partition-storage-analysis-services-multidimensional.md)|Descreve como configurar o armazenamento para partições.|  
-|[Editar ou excluir partições &#40;do Analysis Services - Multidimensional&#41;](edit-or-delete-partitions-analyisis-services-multidimensional.md)|Descreve como exibir e editar partições.|  
-|[Mesclar partições no Analysis Services &#40;SSAS – Multidimensional&#41;](merge-partitions-in-analysis-services-ssas-multidimensional.md)|Contém informações sobre como mesclar partições que têm tabelas de fato diferentes ou fatias de dados diferentes sem duplicar dados.|  
+|[Definir &#40;de armazenamento de partição Analysis Services-&#41;multidimensional](set-partition-storage-analysis-services-multidimensional.md)|Descreve como configurar o armazenamento para partições.|  
+|[Editar ou excluir partições &#40;Analysis Services multidimensional&#41;](edit-or-delete-partitions-analyisis-services-multidimensional.md)|Descreve como exibir e editar partições.|  
+|[Mesclar partições em Analysis Services &#40;SSAS –&#41;multidimensional](merge-partitions-in-analysis-services-ssas-multidimensional.md)|Contém informações sobre como mesclar partições que têm tabelas de fato diferentes ou fatias de dados diferentes sem duplicar dados.|  
 |[Definir o write-back de partições](set-partition-writeback.md)|Fornece instruções sobre como habilitar uma partição para gravação.|  
 |[Criar e gerenciar uma partição remota &#40;Analysis Services&#41;](create-and-manage-a-remote-partition-analysis-services.md)|Descreve como criar e gerenciar uma partição remota.|  
   

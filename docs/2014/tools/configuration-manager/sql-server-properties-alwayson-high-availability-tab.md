@@ -1,5 +1,5 @@
 ---
-title: Propriedades do SQL Server (guia alta disponibilidade AlwaysOn) | Microsoft Docs
+title: Propriedades de SQL Server (guia alta disponibilidade AlwaysOn) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: mikeraymsft
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: daf3ed025405b753116bba267ce6f4c50d350601
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62678467"
 ---
 # <a name="sql-server-properties-alwayson-high-availability-tab"></a>Propriedades do SQL Server (guia Alta disponibilidade AlwaysOn)

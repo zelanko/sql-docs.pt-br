@@ -1,5 +1,5 @@
 ---
-title: Transferir o Editor da tarefa de banco de dados (página bancos de dados) | Microsoft Docs
+title: Editor da tarefa Transferir Banco de dados (página databases) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8d93d2e95f6a18174a6d9b2f05e434a5443701ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055106"
 ---
 # <a name="transfer-database-task-editor-databases-page"></a>Editor da Tarefa Transferir Banco de Dados (página Bancos de Dados)
@@ -26,10 +26,10 @@ ms.locfileid: "66055106"
   
 ## <a name="options"></a>Opções  
  **SourceConnection**  
- Selecione um gerenciador de conexões SMO na lista ou clique em **\<Nova conexão...>** para criar uma nova conexão com o servidor de origem.  
+ Selecione um Gerenciador de conexões Smo na lista ou clique em ** \<nova conexão... >** para criar uma nova conexão com o servidor de origem.  
   
  **DestinationConnection**  
- Selecione um gerenciador de conexões SMO na lista ou clique em **\<Nova conexão...>** para criar uma nova conexão com o servidor de destino.  
+ Selecione um Gerenciador de conexões Smo na lista ou clique em ** \<nova conexão... >** para criar uma nova conexão com o servidor de destino.  
   
  **DestinationDatabaseName**  
  Especifique o nome do banco de dados [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no servidor de destino.  
@@ -53,7 +53,7 @@ ms.locfileid: "66055106"
   
  As opções desta propriedade estão listadas na seguinte tabela:  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |**Verdadeiro**|Substitui o banco de dados no servidor de destino.|  
 |**Falso**|Não substitui o banco de dados no servidor de destino.|  
@@ -82,16 +82,16 @@ ms.locfileid: "66055106"
   
  As opções desta propriedade estão listadas na seguinte tabela:  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |**Verdadeiro**|Anexa novamente o banco de dados de origem.|  
 |**Falso**|Não anexa novamente o banco de dados de origem.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Tarefas do Integration Services](control-flow/integration-services-tasks.md)   
- [Editor da Tarefa Transferir Banco de Dados &#40;Página Geral&#41;](general-page-of-integration-services-designers-options.md)   
+ [Editor da tarefa Transferir Banco de dados &#40;página Geral&#41;](general-page-of-integration-services-designers-options.md)   
  [Página Expressões](expressions/expressions-page.md)   
- [Gerenciador de conexões SMO](connection-manager/smo-connection-manager.md)  
+ [gerenciador de conexões SMO](connection-manager/smo-connection-manager.md)  
   
   

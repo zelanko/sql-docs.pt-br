@@ -1,5 +1,5 @@
 ---
-title: Propriedades do SQL Server (guia de parâmetros de inicialização) | Microsoft Docs
+title: Propriedades de SQL Server (guia parâmetros de inicialização) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5ab3d9e9e4178b1ee2e10e5be63f0ea9252fd4a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62679154"
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>Propriedades do SQL Server (guia Parâmetros de Inicialização)
@@ -36,7 +36,7 @@ ms.locfileid: "62679154"
   
 -   Todos os parâmetros de inicialização começam com um - (traço) e o segundo valor é uma letra.  
   
-## <a name="required-parameters"></a>Parâmetros necessários  
+## <a name="required-parameters"></a>Parâmetros obrigatórios  
  As seguintes parâmetros são necessários. Eles podem ser alterados, mas não poder ser removidos.  
   
 -   -d é o caminho do arquivo **master.mdf** (o arquivo de dados do banco de dados mestre).  
@@ -77,6 +77,6 @@ ms.locfileid: "62679154"
 -   A conta de domínio usada pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se o [!INCLUDE[ssDE](../../includes/ssde-md.md)] estiver configurado para ser executado em uma conta de domínio.  
   
 ## <a name="books-online-references"></a>Referências dos Manuais Online  
- Para obter informações adicionais sobre os parâmetros de inicialização [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], confira "Como: Configurar opções de inicialização do servidor ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager) "no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Manuais Online.  
+ Para obter mais informações sobre os parâmetros de inicialização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consulte “Como configurar as opções de inicialização do servidor ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager)” nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
   

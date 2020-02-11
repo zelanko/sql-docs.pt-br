@@ -1,5 +1,5 @@
 ---
-title: 'Propriedades do Trabalho: Novo trabalho (página agendas) | Microsoft Docs'
+title: 'Propriedades do trabalho: novo trabalho (página agendas) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,32 +13,32 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 98478b8ed61a49e74a70d576ccd3600319fce645
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62695681"
 ---
-# <a name="job-properties-new-job-schedules-page"></a>Propriedades do Trabalho: Novo Trabalho (página Agendamentos)
-  Use essa página para exibir e organizar as agendas para um trabalho do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
+# <a name="job-properties-new-job-schedules-page"></a>Propriedades do trabalho: novo trabalho (página Agendas)
+  Use esta página para exibir e organizar agendas para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] um trabalho do Agent.  
   
 ## <a name="options"></a>Opções  
  **Lista de agendas**  
  Lista as agendas para esse trabalho.  
   
- **Nova**  
+ **Novo**  
  Crie uma agenda nova. Depois de criada, a agenda é adicionada ao trabalho.  
   
- **Escolher**  
+ **Dique**  
  Selecione uma agenda dentre as agendas existentes. Como um trabalho e uma agenda precisam ter o mesmo proprietário, essa opção não lhe permitirá escolher dentre as agendas que você tem.  
   
- **Editarar**  
+ **Editar**  
  Edite a agenda selecionada para alterar propriedades da agenda de trabalho.  
   
- **Removerr**  
+ **Remover**  
  Remova a agenda selecionada do trabalho. Se nenhum outro trabalho usar a agenda, a agenda será excluída do banco de dados.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Implementar trabalhos](implement-jobs.md)  
   
   

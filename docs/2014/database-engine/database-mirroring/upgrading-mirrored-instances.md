@@ -15,17 +15,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 857e18b1b956d3d8c9d2fc4c5692dbf022bf85fe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754270"
 ---
 # <a name="minimize-downtime-for-mirrored-databases-when-upgrading-server-instances"></a>Minimizar o tempo de inatividade de bancos de dados espelhados ao atualizar instâncias do servidor
-  Ao atualizar instâncias de servidor [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], você pode reduzir o tempo de inatividade para cada banco de dados espelho para apenas um único failover manual executando uma atualização em sequência, conhecida como uma *atualização sem interrupção*. Uma atualização sem-interrupção consiste em um processo de várias etapas que, em sua forma mais simples, envolve atualizar a instância do servidor que funciona como o servidor espelho de uma sessão de espelhamento, executar o failover manual no banco de dados espelho, atualizar o antigo servidor principal e continuar o espelhamento. Na prática, o processo exato dependerá do modo de operação e do número e do layout de sessões de espelhamento em execução nas instâncias do servidor que você está atualizando.  
+  Ao atualizar instâncias de servidor [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]para o, você pode reduzir o tempo de inatividade de cada banco de dados espelhado para apenas um único failover manual executando uma atualização sequencial, conhecida como *atualização sem interrupção*. Uma atualização sem-interrupção consiste em um processo de várias etapas que, em sua forma mais simples, envolve atualizar a instância do servidor que funciona como o servidor espelho de uma sessão de espelhamento, executar o failover manual no banco de dados espelho, atualizar o antigo servidor principal e continuar o espelhamento. Na prática, o processo exato dependerá do modo de operação e do número e do layout de sessões de espelhamento em execução nas instâncias do servidor que você está atualizando.  
   
 > [!NOTE]  
->  Para obter informações sobre como executar uma atualização sem interrupção para instalar um service pack ou hotfix, consulte [instalar um Service Pack em um sistema com tempo de inatividade mínimo para bancos de dados espelhado](../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md).  
+>  Para obter informações sobre como executar uma atualização sem interrupção para instalar um service pack ou hotfix, consulte [instalar um Service Pack em um sistema com tempo de inatividade mínimo para bancos de dados espelhados](../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md).  
   
  **Preparação recomendada (práticas recomendadas)**  
   
@@ -44,11 +44,11 @@ ms.locfileid: "62754270"
   
     1.  Executar um backup de banco de dados completo em todos os bancos de dados principais:  
   
-         [Criar um backup completo de banco de dados &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
+         [Crie um &#40;de backup de banco de dados completo SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
   
     2.  Execute o comando [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) em todos os bancos de dados principais.  
   
- **Estágios de uma atualização sem interrupção**  
+ **Etapas da atualização sem-interrupção**  
   
  As etapas específicas de uma atualização sem-interrupção dependem do modo de operação da configuração de espelhamento. No entanto, as etapas básicas são as mesmas.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "62754270"
   
  A ilustração a seguir é um fluxograma que mostra as etapas básicas de uma atualização sem-interrupção para cada modo de operação. Os procedimentos correspondentes estão descritos após a ilustração.  
   
- ![Fluxograma mostrando as etapas de uma atualização sem interrupção](../media/dbm-rolling-upgrade.gif "Flowchart showing steps of a rolling upgrade")  
+ ![Fluxograma mostrando as etapas de uma atualização de rolagem](../media/dbm-rolling-upgrade.gif "Fluxograma mostrando as etapas de uma atualização de rolagem")  
   
 > [!IMPORTANT]  
 >  Uma instância do servidor pode estar executando diferentes funções de espelhamento (servidor principal, servidor espelho ou testemunha) nas sessões de espelhamento simultâneas. Nesse caso, é preciso adaptar o processo básico de atualização sem-interrupção na mesma proporção. Para obter mais informações, consulte [Troca de função durante uma sessão de espelhamento de banco de dados &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md).  
@@ -69,16 +69,16 @@ ms.locfileid: "62754270"
     > [!IMPORTANT]  
     >  Se o servidor espelho está geograficamente distante do servidor principal, uma atualização sem-interrupção pode ser inadequada.  
   
-    -   Em [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: altere a opção **Modo de operação** para **Segurança alta sem failover automático (síncrono)** usando a [página Espelhamento](../../relational-databases/databases/database-properties-mirroring-page.md) da caixa de diálogo **Propriedades do Banco de Dados**. Para obter informações sobre como acessar essa página, consulte [Iniciar o Assistente para Configurar Segurança de Espelhamento de Banco de Dados &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md).  
+    -   No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: altere a opção **Modo de operação** para **Segurança alta sem failover automático (síncrono)** usando a [página Espelhamento](../../relational-databases/databases/database-properties-mirroring-page.md) da caixa de diálogo **Propriedades do Banco de Dados** . Para obter informações sobre como acessar essa página, consulte [Iniciar o Assistente para Configurar Segurança de Espelhamento de Banco de Dados &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md).  
   
-    -   Em [!INCLUDE[tsql](../../includes/tsql-md.md)]: defina a segurança de transações para FULL. Para obter mais informações, consulte [Alterar a segurança da transação em uma sessão de espelhamento de banco de dados &#40;Transact-SQL&#41;](change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)  
+    -   No [!INCLUDE[tsql](../../includes/tsql-md.md)]: defina a segurança de transações para FULL. Para obter mais informações, consulte [alterar a segurança da transação em uma sessão de espelhamento de banco de dados &#40;Transact-SQL&#41;](change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)  
   
 ### <a name="to-remove-a-witness-from-a-session"></a>Para remover uma testemunha de uma sessão  
   
 1.  Se a sessão de espelhamento envolver uma testemunha, recomendamos a remoção da testemunha antes de executar a atualização sem-interrupção. Caso contrário, quando a instância do servidor espelho estiver sendo atualizada, a disponibilidade do banco de dados dependerá da testemunha que permanece conectada à instância do servidor principal. Depois que remover uma testemunha, é possível atualizá-la a qualquer momento durante o processo de atualização sem-interrupção sem arriscar o tempo de inatividade do banco de dados.  
   
     > [!NOTE]  
-    >  Para obter mais informações, confira [Quorum: Como uma testemunha afeta a disponibilidade do banco de dados &#40;Espelhamento de Banco de Dados&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+    >  Para obter mais informações, consulte [Quorum: como uma testemunha afeta a disponibilidade do banco de dados &#40;Espelhamento de Banco de Dados&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
     -   [Remover a testemunha de uma sessão de espelhamento de banco de dados &#40;SQL Server&#41;](remove-the-witness-from-a-database-mirroring-session-sql-server.md)  
   
@@ -101,14 +101,14 @@ ms.locfileid: "62754270"
   
      O objetivo dessa etapa é que outra instância do servidor torne-se o servidor espelho em cada sessão de espelhamento na qual é um parceiro.  
   
-     **Restrições depois da execução de failover para uma instância de servidor atualizada.**  
+     **Restrições após o failover para uma instância de servidor atualizada.**  
   
      Depois de executar failover de uma instância de servidor anterior para uma instância do servidor do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , a sessão de banco de dados é suspensa. Ela não pode ser retomada até que o outro parceiro seja atualizado. Porém, o servidor principal ainda aceita conexões e permite acesso a dados e modificações no banco de dados principal.  
   
     > [!NOTE]  
     >  O estabelecimento de uma nova sessão de espelhamento exige que todas as instâncias de servidor estejam executando a mesma versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-3.  Após o failover, é recomendável que você execute as [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) comando no banco de dados theprincipal.  
+3.  Após o failover, recomendamos que você execute o comando [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) no banco de dados principal.  
   
 4.  Atualize cada instância de servidor que seja agora o servidor espelho em todas as sessões de espelhamento nas quais é um parceiro. Pode necessário atualizar vários servidores nesse momento.  
   
@@ -126,9 +126,9 @@ ms.locfileid: "62754270"
   
 1.  Opcionalmente, retorne ao modo de alto desempenho usando um dos seguintes métodos:  
   
-    -   Em [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: altere a opção **Modo de operação** para **Alto desempenho (assíncrono)** usando a [página Espelhamento](../../relational-databases/databases/database-properties-mirroring-page.md) da caixa de diálogo **Propriedades do Banco de Dados** .  
+    -   No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: altere a opção **Modo de operação** para **Alto desempenho (assíncrono)** usando a [página Espelhamento](../../relational-databases/databases/database-properties-mirroring-page.md) da caixa de diálogo **Propriedades do Banco de Dados** .  
   
-    -   Em [!INCLUDE[tsql](../../includes/tsql-md.md)]: use [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)para definir a segurança de transações como OFF.  
+    -   No [!INCLUDE[tsql](../../includes/tsql-md.md)]: use [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)para definir a segurança de transações como OFF.  
   
 ### <a name="to-add-a-witness-back-into-a-mirroring-session"></a>Para adicionar uma testemunha de volta a uma sessão de espelhamento  
   
@@ -140,15 +140,15 @@ ms.locfileid: "62754270"
   
     -   [Adicionar uma testemunha de espelhamento de banco de dados usando a Autenticação do Windows &#40;Transact-SQL&#41;](add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Espelhamento de banco de dados ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [Exibir o estado de um banco de dados espelhado &#40;SQL Server Management Studio&#41;](view-the-state-of-a-mirrored-database-sql-server-management-studio.md)   
  [Espelhamento de banco de dados &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [Instalar um Service Pack em um sistema com tempo de inatividade mínimo para bancos de dados espelhados](../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md)   
  [Troca de função durante uma sessão de espelhamento de banco de dados &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)   
- [Forçar o serviço em uma sessão de espelhamento de banco de dados &#40;Transact-SQL&#41;](force-service-in-a-database-mirroring-session-transact-sql.md)   
+ [Forçar serviço em uma sessão de espelhamento de banco de dados &#40;Transact-SQL&#41;](force-service-in-a-database-mirroring-session-transact-sql.md)   
  [Iniciar o Monitor de Espelhamento de Banco de Dados &#40;SQL Server Management Studio&#41;](start-database-mirroring-monitor-sql-server-management-studio.md)   
- [Modos de operação do Espelhamento de Banco de Dados](database-mirroring-operating-modes.md)  
+ [Modos de operação de espelhamento de banco de dados](database-mirroring-operating-modes.md)  
   
   

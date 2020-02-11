@@ -19,24 +19,26 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: e2b3441d98bc9226abce3a49fd28820df6ec99ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62666857"
 ---
 # <a name="monitoring-replication"></a>Monitorando (Replicação)
   Monitorar uma topologia de replicação é um aspecto importante na implantação da replicação. Já que a atividade de replicação é distribuída, é essencial controlar sua atividade e o status em todos os computadores envolvidos na replicação. As seguintes ferramentas podem ser usadas para monitorar a replicação:  
   
--   [!INCLUDE[msCoName](../../includes/msCoName-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] Replication Monitor  
+-   [!INCLUDE[msCoName](../../includes/msCoName-md.md)][!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] Replication Monitor  
   
      O Replication Monitor é a ferramenta mais importante para monitorar a replicação, apresentando uma exibição do Publicador dedicada a toda atividade de replicação. Para obter mais informações, consulte [monitorar o desempenho com o Replication Monitor](monitor/monitor-performance-with-replication-monitor.md).  
   
 -   [!INCLUDE[msCoName](../../includes/msCoName-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssManStudioFull-md.md)]  
   
-     [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] fornece o acesso ao Replication Monitor. Também permite que você exiba o status atual e a última mensagem registrada pelos seguintes agentes e permite que você inicie e interrompa cada agente: Agente de Leitor de Log, Agente de Instantâneo, Agente de Mesclagem e Agente de Distribuição. Para obter mais informações, consulte [Monitor Replication Agents](monitor/monitor-replication-agents.md).  
+     
+  [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] fornece o acesso ao Replication Monitor. Também permite exibir o status atual e a última mensagem registrada pelos seguintes agentes e permite iniciar e parar cada agente: Agent de Leitor de Log, Agente de Instantâneo, Agente de Mesclagem e Agente de Distribuição. Para obter mais informações, consulte [Monitor Replication Agents](monitor/monitor-replication-agents.md).  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)] e RMO (Replication Management Objects)  
+-   
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] e RMO (Replication Management Objects)  
   
      Ambas as interfaces permitem monitorar todos os tipos de replicação do Distribuidor. A replicação de mesclagem fornece também a capacidade de monitorar a replicação a partir do Assinante.  
   
@@ -48,7 +50,7 @@ ms.locfileid: "62666857"
   
      O Monitor do Sistema pode ser útil para monitorar o desempenho, ao fornecer vários contadores para a replicação. Para obter mais informações, consulte [Monitoring Replication with System Monitor](monitor/monitoring-replication-with-system-monitor.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Perguntas Frequentes sobre Administração de Replicação](administration/frequently-asked-questions-for-replication-administrators.md)   
  [Best Practices for Replication Administration](administration/best-practices-for-replication-administration.md)   
 

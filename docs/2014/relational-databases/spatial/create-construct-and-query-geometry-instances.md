@@ -14,10 +14,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: cb99c2ff07f30d268980c5c1c4d43a34904cdec9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014306"
 ---
 # <a name="create-construct-and-query-geometry-instances"></a>Criar, construir e consultar instâncias de geometria
@@ -129,7 +129,7 @@ ms.locfileid: "66014306"
   
   
 ###  <a name="gml"></a> Construindo uma instância de geometria de entrada de texto GML  
- O `geometry` tipo de dados fornece um método que gera um `geometry` instância de GML, uma representação XML de objetos geométricos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte a um subconjunto de GML.  
+ O `geometry` tipo de dados fornece um método que gera `geometry` uma instância de GML, uma representação XML de objetos geométricos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte a um subconjunto de GML.  
   
  **Para construir qualquer tipo de instância de geometria de entrada GML**  
  [GeomFromGml &#40;tipo de dados geometry&#41;](/sql/t-sql/spatial-geometry/geomfromgml-geometry-data-type)  
@@ -156,7 +156,7 @@ ms.locfileid: "66014306"
   
   
 ##  <a name="querying"></a> Consultando as propriedades e comportamentos de instâncias de geometria  
- Todos os `geometry` instâncias têm várias propriedades que podem ser recuperados por meio de métodos que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece. Os tópicos a seguir definem propriedades e comportamentos de tipos de geometria e os métodos de consulta de cada um.  
+ Todas `geometry` as instâncias têm várias propriedades que podem ser recuperadas por meio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] métodos que o fornece. Os tópicos a seguir definem propriedades e comportamentos de tipos de geometria e os métodos de consulta de cada um.  
   
 ###  <a name="valid"></a> Informações de validade, tipo de instância e GeometryCollection  
  Quando uma instância de `geometry` é construída, é possível usar os seguintes métodos para determinar se ela está bem formada, para retornar o tipo da instância ou, se ela for uma instância de coleção, retornar uma instância de `geometry` específica.  
@@ -182,7 +182,8 @@ ms.locfileid: "66014306"
   
   
 ###  <a name="number"></a> Número de pontos  
- Todos os não vazio `geometry` consistem em instâncias *pontos*. Esses pontos representam as coordenadas X e Y do plano no qual as geometrias são obtidas. `geometry` fornece vários métodos internos de consulta de pontos de uma instância.  
+ Todas as instâncias `geometry` não vazias são compostas de *pontos*. Esses pontos representam as coordenadas X e Y do plano no qual as geometrias são obtidas. 
+  `geometry` fornece vários métodos internos de consulta de pontos de uma instância.  
   
  **Para retornar o número de pontos que compõem uma instância**  
  [STNumPoints &#40;tipo de dados geometry&#41;](/sql/t-sql/spatial-geometry/stnumpoints-geometry-data-type)  
@@ -211,7 +212,8 @@ ms.locfileid: "66014306"
   
   
 ###  <a name="dimension"></a> Dimensão  
- Uma instância `geometry` não vazia pode ser zero, uni ou bidimensional. `geometries` de dimensão zero, como `Point` e `MultiPoint`, não têm nenhum comprimento ou área. Objetos unidimensionais, como `LineString, CircularString, CompoundCurve` e `MultiLineString`, têm comprimento. Instâncias bidimensionais, como `Polygon`, `CurvePolygon` e `MultiPolygon`, têm área e comprimento. Instâncias vazias relatarão uma dimensão de -1 e uma `GeometryCollection` relatará uma área dependente dos tipos de seu conteúdo.  
+ Uma instância `geometry` não vazia pode ser zero, uni ou bidimensional. 
+  `geometries` de dimensão zero, como `Point` e `MultiPoint`, não têm nenhum comprimento ou área. Objetos unidimensionais, como `LineString, CircularString, CompoundCurve` e `MultiLineString`, têm comprimento. Instâncias bidimensionais, como `Polygon`, `CurvePolygon` e `MultiPolygon`, têm área e comprimento. Instâncias vazias relatarão uma dimensão de -1 e uma `GeometryCollection` relatará uma área dependente dos tipos de seu conteúdo.  
   
  **Para retornar a dimensão de uma instância**  
  [STDimension](/sql/t-sql/spatial-geometry/stdimension-geometry-data-type)  
@@ -225,7 +227,7 @@ ms.locfileid: "66014306"
   
   
 ###  <a name="empty"></a> Empty (vazio)  
- Uma *vazio* `geometry` instância não tem pontos. O comprimento de instâncias `LineString, CircularString`, `CompoundCurve` e `MultiLineString` é zero. A área de instâncias de `Polygon`, `CurvePolygon` e `MultiPolygon` vazias é 0.  
+ Uma instância *vazia* `geometry` não tem nenhum ponto. O comprimento de instâncias `LineString, CircularString`, `CompoundCurve` e `MultiLineString` é zero. A área de instâncias de `Polygon`, `CurvePolygon` e `MultiPolygon` vazias é 0.  
   
  **Para determinar se uma instância está vazia**  
  [STIsEmpty](/sql/t-sql/spatial-geometry/stisempty-geometry-data-type).  
@@ -233,7 +235,7 @@ ms.locfileid: "66014306"
   
   
 ###  <a name="simple"></a> Simple (simples)  
- Para um `geometry` da instância a ser *simples*, ele deve atender a estes dois requisitos:  
+ Para que `geometry` uma das instâncias seja *simples*, ela deve atender a esses dois requisitos:  
   
 -   Não deve haver interseção de nenhuma figura da instância consigo mesma, exceto em seus pontos de extremidade.  
   
@@ -248,7 +250,7 @@ ms.locfileid: "66014306"
   
   
 ###  <a name="boundary"></a> Limite, interior e exterior  
- O *interior* de uma `geometry` instância é o espaço ocupado pela instância e o *exterior* é o espaço não ocupado por ela.  
+ O *interior* de uma `geometry` instância é o espaço ocupado pela instância e o *exterior* é o espaço que não o ocupa.  
   
  O*Limite* é definido pelo OGC da seguinte maneira:  
   
@@ -276,7 +278,7 @@ SELECT @g.STBoundary().ToString();
   
   
 ###  <a name="envelope"></a> Envelope  
- O *envelope* de uma `geometry` da instância, também conhecido como o *caixa delimitadora*, é o retângulo alinhado por eixo formado por mínimo coordenadas máxima e (X, Y) da instância.  
+ O *envelope* de uma `geometry` instância, também conhecido como a *caixa delimitadora*, é o retângulo alinhado ao eixo formado pelas coordenadas mínima e máxima (X, Y) da instância.  
   
  **Para retornar o envelope de uma instância**  
  [STEnvelope](/sql/t-sql/spatial-geometry/stenvelope-geometry-data-type)  
@@ -284,7 +286,7 @@ SELECT @g.STBoundary().ToString();
   
   
 ###  <a name="closure"></a> Fechamento  
- Um *fechada* `geometry` instância é uma figura cujos pontos inicial e final são os mesmos. As instâncias `Polygon` são consideradas fechadas. As instâncias `Point` não estão fechadas.  
+ Uma instância *fechada* `geometry` é uma figura cujos pontos inicial e final são os mesmos. As instâncias `Polygon` são consideradas fechadas. As instâncias `Point` não estão fechadas.  
   
  Um anel é uma instância de `LineString` simples e fechada.  
   
@@ -359,7 +361,7 @@ SELECT @g.STBoundary().ToString();
 ##  <a name="examples"></a> Exemplos  
  Os dois exemplos a seguir mostram como adicionar e consultar dados geométricos.  
   
--   O primeiro exemplo cria uma tabela com uma coluna de identidade e uma coluna de `geometry` `GeomCol1`. Uma terceira coluna renderiza a coluna de `geometry` em sua representação WKT (Well-Known Text) do Open Geospatial Consortium (OGC) e usa o método `STAsText()` . Em seguida, duas linhas são inseridas: uma linha que contém uma instância `LineString` de `geometry`e uma linha que contém uma instância de `Polygon` .  
+-   O primeiro exemplo cria uma tabela com uma coluna de identidade e uma coluna de `geometry``GeomCol1`. Uma terceira coluna renderiza a coluna de `geometry` em sua representação WKT (Well-Known Text) do Open Geospatial Consortium (OGC) e usa o método `STAsText()` . Em seguida, duas linhas são inseridas: uma linha que contém uma instância `LineString` de `geometry`e uma linha que contém uma instância de `Polygon` .  
   
     ```  
     IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   
@@ -395,7 +397,7 @@ SELECT @g.STBoundary().ToString();
   
   
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Dados espaciais &#40;SQL Server&#41;](spatial-data-sql-server.md)  
   
   

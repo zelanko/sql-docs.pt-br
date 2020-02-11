@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 183dba1f69634ea6931dc14cc6aa3fb6d6eca6ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62755345"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>Conectar clientes a uma sessão de espelhamento de banco de dados (SQL Server)
@@ -45,7 +45,7 @@ ms.locfileid: "62755345"
   
  A figura a seguir ilustra uma conexão de cliente com o parceiro inicial, **Partner_A**, para um banco de dados espelho denominado **Db_1**. Esta figura mostra um caso em que o nome do parceiro inicial fornecido pelo cliente identifica corretamente o servidor principal atual, **Partner_A**. A tentativa de conexão inicial tem sucesso e o provedor de acesso a dados armazena o nome do servidor espelho (atualmente **Partner_B**) como o nome do parceiro de failover no cache local. Finalmente, o cliente se conecta à cópia principal do banco de dados **Db_1** .  
   
- ![Conexão do cliente se o parceiro inicial é principal](../media/dbm-initial-connection.gif "Conexão do cliente se o parceiro inicial é principal")  
+ ![Conexão de cliente se o parceiro inicial for o principal](../media/dbm-initial-connection.gif "Conexão de cliente se o parceiro inicial for o principal")  
   
  A tentativa de conexão inicial pode falhar, por exemplo, por causa de um erro de rede ou uma instância de servidor inativa. Como o parceiro inicial está indisponível, para que o provedor de acesso de dados tente se conectar ao parceiro de failover, o cliente deve ter fornecido o nome do parceiro de failover na cadeia de conexão.  
   
@@ -89,7 +89,7 @@ Network=dbnmpntw;
   
  `Server=Partner_A;`  
   
- ou em  
+ ou  
   
  `Server=Partner_A\Instance_2;`  
   
@@ -98,7 +98,7 @@ Network=dbnmpntw;
 > [!NOTE]  
 >  Uma consulta com o SQL Server Browser será necessária se a cadeia de conexão especificar o nome da instância nomeada, e não a porta.  
   
- Para especificar o endereço IP e porta, o `Server` atributo assume o formato `Server=` *< endereço_IP >* `,` *\<porta >* , por exemplo:  
+ Para especificar o endereço IP e a porta, `Server` o atributo usa o seguinte formulário `Server=` , *<ip_address>* `,` * \<>de porta *, por exemplo:  
   
 ```  
 Server=123.34.45.56,4724;   
@@ -118,7 +118,7 @@ Server=123.34.45.56,4724;
 >  Essa cadeia de caracterse omite informações de autenticação.  
   
 > [!IMPORTANT]  
->  Agrupamento do prefixo de protocolo com o `Server` atributo (`Server=tcp:` *\<servername >* ) é incompatível com o **rede** de atributos e especificar o protocolo no ambos os lugares provavelmente resultará em erro. Portanto, é recomendável que uma cadeia de caracteres de conexão Especifica o protocolo usando o **rede** do atributo e especifique somente o nome do servidor na `Server` atributo (`"Network=dbmssocn; Server=` *\<servername >* `"`).  
+>  O agrupamento do prefixo de protocolo `Server` com o`Server=tcp:`atributo (*\<ServerName>*) é incompatível com o atributo **Network** e a especificação do protocolo em ambos os locais provavelmente resultará em um erro. Portanto, é recomendável que uma cadeia de conexão especifique o protocolo usando o atributo **Network** e especifique apenas o nome do `Server` servidor no`"Network=dbmssocn; Server=`atributo (*\<ServerName>* `"`).  
   
 #### <a name="failover-partner-attribute"></a>Atributo de parceiro de failover  
  Além do nome do parceiro inicial, o cliente pode especificar também o nome do parceiro de failover, que deve identificar a instância do servidor espelho atual. O parceiro de failover é especificado por uma das palavras-chave para o atributo do parceiro de failover. A palavra-chave desse atributo depende da API em uso. A tabela a seguir lista estas palavras-chave:  
@@ -172,7 +172,7 @@ Server=123.34.45.56,4724;
   
  Por exemplo, se usar o período de intervalo de logon padrão de 15 segundos, *LoginTimeout* *= 15*. Nesse caso, os tempos de nova tentativa alocados nos primeiros três turnos são os seguintes:  
   
-|Arredondamento|Cálculo de*RetryTime*|Tempo de nova tentativa por tentativa|  
+|Round|Cálculo de*RetryTime*|Tempo de nova tentativa por tentativa|  
 |-----------|-----------------------------|----------------------------|  
 |1|0 **+(** 0,08 **&#42;** 15 **)**|1,2 segundos|  
 |2|1,2 **+(** 0,08 **&#42;** 15 **)**|2,4 segundos|  
@@ -199,7 +199,7 @@ Server=123.34.45.56,4724;
   
  A figura seguinte ilustra como o atraso de nova tentativa afeta as tentativas de conexão durante um failover manual, no qual os parceiros trocam suas funções. O período de tempo limite de logon padrão é de 15 segundos.  
   
- ![Algoritmo de atraso de repetição](../media/dbm-retry-delay-algorithm.gif "Retry-delay algorithm")  
+ ![Algoritmo de repetição-atraso](../media/dbm-retry-delay-algorithm.gif "Algoritmo de repetição-atraso")  
   
 ##  <a name="Reconnecting"></a> Reconectando uma sessão de espelhamento de banco de dados  
  Se uma conexão estabelecida com uma sessão de espelhamento de banco de dados falhar por qualquer motivo, por exemplo, devido a um failover de espelhamento de banco de dados, e o aplicativo tentar se reconectar ao servidor inicial, o provedor de acesso de dados poderá tentar se reconectar usando o nome de parceiro de failover armazenado no cache do cliente. Porém, a reconexão não é automática. O aplicativo deve se dar conta do erro. Então, o aplicativo precisa fechar a conexão com falha e abrir uma conexão nova que use os mesmos atributos de cadeia de caracteres de conexão. Neste momento, o provedor de acesso de dados redireciona a conexão ao parceiro de failover. Se a instância de servidor identificada por este nome for atualmente o servidor principal, a tentativa de conexão normalmente terá sucesso. Caso estiver obscuro se uma transação foi confirmada ou revertida, o aplicativo deve inspecionar o estado da transação, da mesma maneira como ao reconectar a uma instância de servidor autônoma.  
@@ -241,7 +241,7 @@ Server=123.34.45.56,4724;
 |O administrador do banco de dados interrompe o espelhamento (desconectando os clientes), substitui Partner_A por Partner_C e reinicializa o espelhamento.|Partner_B|Partner_C|O cliente tenta se conectar com o Partner_A e não consegue; então o cliente tenta o Partner_B (o servidor principal atual) e tem sucesso. O provedor de acesso de dados carrega o nome do servidor espelho atual, Partner_C, e o coloca em cache como o nome do parceiro de failover atual.|  
 |O failover do serviço é enviado manualmente para o Partner_C (desconectando os clientes).|Partner_C|Partner_B|O cliente tenta conexão com o Partner_A inicialmente, e depois com o Partner_B. Os dois nomes falham, e finalmente o tempo limite da solicitação de conexão se esgota e falha.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Espelhamento de banco de dados &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [Possíveis falhas durante espelhamento de banco de dados](possible-failures-during-database-mirroring.md)  
   

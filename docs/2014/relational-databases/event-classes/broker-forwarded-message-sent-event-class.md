@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 51784663fdfec66f851bed479184ae21170a3681
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62664002"
 ---
 # <a name="brokerforwarded-message-sent-event-class"></a>classe de evento Broker:Forwarded Message Sent
@@ -26,7 +26,7 @@ ms.locfileid: "62664002"
   
 ## <a name="brokerforwarded-message-sent-event-class-data-columns"></a>Colunas de dados da classe de evento Broker:Forwarded Message Sent  
   
-|Coluna de dados|Tipo|Descrição|Número da coluna|Filtrável|  
+|Coluna de dados|Type|DESCRIÇÃO|Número da coluna|Filtrável|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |ApplicationName|`nvarchar`|O nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |BigintData1|`bigint`|Número de sequência da mensagem.|52|Não|  
@@ -47,13 +47,13 @@ ms.locfileid: "62664002"
 |ObjectId|`int`|Valor do tempo de vida da mensagem no momento de seu encaminhamento.|22|Não|  
 |ObjectName|`nvarchar`|O ID da mensagem encaminhada.|34|Não|  
 |OwnerName|`nvarchar`|O identificador do Broker ao qual a mensagem se destina.|37|Não|  
-|RoleName|`nvarchar`|A função do identificador de conversa. Um dos seguintes:<br /><br /> Initiator. Este Broker iniciou a conversa.<br /><br /> Target. Este Broker é o destino da conversa.|38|Não|  
+|RoleName|`nvarchar`|A função do identificador de conversa. Um destes:<br /><br /> Initiator. Este Broker iniciou a conversa.<br /><br /> Target. Este Broker é o destino da conversa.|38|Não|  
 |ServerName|`nvarchar`|O nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo rastreada.|26|Não|  
 |SPID|`int`|A ID de processo do servidor atribuída pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao processo associado ao cliente.|12|Sim|  
 |StartTime|`datetime`|O horário no qual o evento foi iniciado, quando disponível.|14|Sim|  
-|Êxito|`int`|O tempo gasto pelo processo de encaminhamento.|23|Não|  
+|Sucesso|`int`|O tempo gasto pelo processo de encaminhamento.|23|Não|  
 |TargetLoginName|`nvarchar`|O endereço de rede para o qual a instância enviou a mensagem. Note que pode diferir do destino final da mensagem.|42|Não|  
-|TargetUserName|`nvarchar`|O nome do serviço que iniciou a mensagem.|39|Não|  
+|TargetUserName|`nvarchar`|O nome do serviço que iniciou a mensagem.|11,8|Não|  
 |TransactionID|`bigint`|ID da transação atribuída pelo sistema.|4|Não|  
   
   

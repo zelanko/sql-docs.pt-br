@@ -1,5 +1,5 @@
 ---
-title: Conversões implícitas de Cursor (ODBC) | Microsoft Docs
+title: Conversões implícitas de cursor (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,23 +15,23 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 300ce02538a59ef043424d866ad4ce49267fcfa4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62711564"
 ---
 # <a name="implicit-cursor-conversions-odbc"></a>Conversões implícitas de cursor (ODBC)
-  Os aplicativos podem solicitar um tipo de cursor por meio [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md) e, em seguida, executar uma instrução SQL que não é suportada por cursores de servidor do tipo solicitado. Uma chamada para **SQLExecute** ou **SQLExecDirect** retorna SQL_SUCCESS_WITH_INFO e **SQLGetDiagRec** retorna:  
+  Os aplicativos podem solicitar um tipo de cursor por meio de [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md) e, em seguida, executar uma instrução SQL que não tenha suporte de cursores de servidor do tipo solicitado. Uma chamada para **SQLExecute** ou **SQLExecDirect** retorna SQL_SUCCESS_WITH_INFO e **SQLGetDiagRec** retorna:  
   
 ```  
 szSqlState = "01S02", *pfNativeError = 0,  
 szErrorMsg="[Microsoft][SQL Server Native Client] Cursor type changed"  
 ```  
   
- O aplicativo pode determinar que tipo de cursor está sendo usado agora chamando **SQLGetStmtOption** definido como SQL_CURSOR_TYPE. A conversão do tipo de cursor se aplica somente a uma instrução. A próxima **SQLExecDirect** ou **SQLExecute** será feita usando as configurações de cursor de instrução original.  
+ O aplicativo pode determinar que tipo de cursor está sendo usado agora chamando **SQLGetStmtOption** definido como SQL_CURSOR_TYPE. A conversão do tipo de cursor se aplica somente a uma instrução. O próximo **SQLExecDirect** ou **SQLExecute** será feito usando as configurações de cursor da instrução original.  
   
-## <a name="see-also"></a>Consulte também  
- [Detalhes de programação de cursor &#40;ODBC&#41;](cursor-programming-details-odbc.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Detalhes de programação do cursor &#40;&#41;ODBC](cursor-programming-details-odbc.md)  
   
   

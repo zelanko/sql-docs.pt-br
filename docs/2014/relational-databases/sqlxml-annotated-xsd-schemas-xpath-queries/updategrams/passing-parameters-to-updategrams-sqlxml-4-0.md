@@ -1,5 +1,5 @@
 ---
-title: Passando parâmetros para diagramas de atualização (SQLXML 4.0) | Microsoft Docs
+title: Passando parâmetros para Updategrams (SQLXML 4,0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 92238e27c364c8f09721a55d00c750022b53a18f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014729"
 ---
 # <a name="passing-parameters-to-updategrams-sqlxml-40"></a>Transmitindo parâmetros a diagramas de atualização (SQLXML 4.0)
-  Os diagramas de atualização (updategrams) são modelos; portanto, é possível passar parâmetros para eles. Para obter mais informações sobre como passar parâmetros para modelos, consulte [considerações de segurança do diagrama de atualização &#40;SQLXML 4.0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md).  
+  Os diagramas de atualização (updategrams) são modelos; portanto, é possível passar parâmetros para eles. Para obter mais informações sobre como passar parâmetros para modelos, consulte [considerações de segurança do Updategram &#40;SQLXML 4,0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md).  
   
  Diagramas de atualização permitem passar NULL como um valor de parâmetro. Para passar o valor de parâmetro NULL, você especifica o atributo `nullvalue`. O valor atribuído ao atributo `nullvalue` é fornecido como sendo o valor do parâmetro. Diagramas de atualização tratam esse valor como NULL.  
   
@@ -32,14 +32,14 @@ ms.locfileid: "66014729"
 >  Em `<sql:header>` e `<updg:header>`, você deve especificar `nullvalue` como não qualificado; enquanto isso, já em `<updg:sync>`, você especifica o `nullvalue` como qualificado (por exemplo, `updg:nullvalue`).  
   
 ## <a name="examples"></a>Exemplos  
- Para criar exemplos de funcionamento usando os exemplos a seguir, você deve atender aos requisitos especificados em [requisitos para executar exemplos do SQLXML](../../sqlxml/requirements-for-running-sqlxml-examples.md).  
+ Para criar exemplos de trabalho usando os exemplos a seguir, você deve atender aos requisitos especificados em [requisitos para executar exemplos do SQLXML](../../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
  Antes de usar os exemplos de diagrama de atualização, observe o seguinte:  
   
--   Os exemplos usam mapeamento padrão (quer dizer, nenhum esquema de mapeamento é especificado no diagrama de atualização). Para obter mais exemplos de diagramas de atualização que usam esquemas de mapeamento, consulte [especificando um esquema de mapeamento anotado em um diagrama de atualização &#40;SQLXML 4.0&#41;](specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
+-   Os exemplos usam mapeamento padrão (quer dizer, nenhum esquema de mapeamento é especificado no diagrama de atualização). Para obter mais exemplos de Updategrams que usam esquemas de mapeamento, consulte [especificando um esquema de mapeamento anotado em um Updategram &#40;SQLXML 4,0&#41;](specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
   
-### <a name="a-passing-parameters-to-an-updategram"></a>A. Passando parâmetros para um diagrama de atualização  
- Neste exemplo, o diagrama de atualização altera o sobrenome de um funcionário na tabela HumanResources.Shift. O diagrama de atualização é passado dois parâmetros: ShiftID, que é usada exclusivamente identificar uma mudança e nome.  
+### <a name="a-passing-parameters-to-an-updategram"></a>a. Passando parâmetros para um diagrama de atualização  
+ Neste exemplo, o diagrama de atualização altera o sobrenome de um funcionário na tabela HumanResources.Shift. O diagrama de atualização é passado com dois parâmetros: ShiftID, usado para identificar exclusivamente uma troca e Name.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -62,7 +62,7 @@ ms.locfileid: "66014729"
   
 1.  Copie o updategram acima no Bloco de Notas e salve-o em um arquivo como UpdategramWithParameters.xml.  
   
-2.  Prepare o script de teste SQLXML 4.0 (Sqlxml4test.vbs) em [usando o ADO para executar consultas do SQLXML 4.0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md) para executar o updategram adicionando as seguintes linhas depois de `cmd.Properties("Output Stream").Value = outStream`:  
+2.  Prepare o script de teste do SQLXML 4,0 (Sqlxml4test. vbs) no [usando o ADO para executar consultas do sqlxml 4,0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md) para executar o updategram adicionando as seguintes `cmd.Properties("Output Stream").Value = outStream`linhas após o:  
   
     ```  
     cmd.NamedParameters = True  
@@ -97,7 +97,7 @@ ms.locfileid: "66014729"
   
 1.  Copie o diagrama de atualização acima no Bloco de Notas e salve-o em um arquivo como UpdategramPassingNullvalues.xml.  
   
-2.  Prepare o script de teste SQLXML 4.0 (Sqlxml4test.vbs) em [usando o ADO para executar consultas do SQLXML 4.0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md) para executar o updategram adicionando as seguintes linhas depois de `cmd.Properties("Output Stream").Value = outStream`:  
+2.  Prepare o script de teste do SQLXML 4,0 (Sqlxml4test. vbs) no [usando o ADO para executar consultas do sqlxml 4,0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md) para executar o updategram adicionando as seguintes `cmd.Properties("Output Stream").Value = outStream`linhas após o:  
   
     ```  
     cmd.NamedParameters = True  
@@ -106,7 +106,7 @@ ms.locfileid: "66014729"
     cmd.Parameters.Append cmd.CreateParameter("@ManagerID",  3, 1, 0, Null)  
     ```  
   
-## <a name="see-also"></a>Consulte também  
- [Considerações de segurança do diagrama de atualização &#40;SQLXML 4.0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Considerações de segurança do updategram &#40;SQLXML 4,0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

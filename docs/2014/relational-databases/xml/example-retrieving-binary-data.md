@@ -1,5 +1,5 @@
 ---
-title: 'Exemplo: Recuperando dados binários | Microsoft Docs'
+title: 'Exemplo: recuperando dados binários | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c39f508d20e194b0031baecf168851cd300031e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62704841"
 ---
 # <a name="example-retrieving-binary-data"></a>Exemplo: Recuperando dados binários
@@ -34,13 +34,13 @@ FOR XML RAW, BINARY BASE64 ;
 GO  
 ```  
   
- Esse é o resultado:  
+ Este é o resultado:  
   
 ```  
 <row ProductModelID="1" ThumbNailPhoto="base64 encoded binary data"/>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Usar modo RAW com FOR XML](use-raw-mode-with-for-xml.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Usar o modo RAW com FOR XML](use-raw-mode-with-for-xml.md)  
   
   

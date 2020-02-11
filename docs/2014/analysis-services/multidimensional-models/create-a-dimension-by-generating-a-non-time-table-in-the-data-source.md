@@ -1,5 +1,5 @@
 ---
-title: Criar uma dimensão ao gerar uma tabela que não seja de tempo na fonte de dados | Microsoft Docs
+title: Criar uma dimensão gerando uma tabela que não seja de tempo na fonte de dados | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,14 +16,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 962df497e804011e69e2a350c24ce41f4c273b6d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076435"
 ---
 # <a name="create-a-dimension-by-generating-a-non-time-table-in-the-data-source"></a>Criar uma dimensão ao gerar uma tabela que não seja de tempo na fonte de dados
-  No [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], você pode usar o Assistente para Dimensões no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para criar uma dimensão sem usar uma fonte de dados existente. Isso é possível selecionando a opção **Gerar uma tabela que não seja de tempo na fonte de dados** da página **Selecionar Método de Criação** do assistente. Para criar uma nova tabela de dimensão na fonte de dados subjacente, você precisa ter permissão para criar objetos na fonte de dados subjacente. Ao definir uma dimensão sem uma exibição da fonte de dados predefinida, você pode definir a dimensão do zero ou pode usar um modelo de dimensão.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] No [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], você pode usar o assistente para dimensões [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] no para criar uma dimensão sem usar uma fonte de dados existente. Isso é possível selecionando a opção **Gerar uma tabela que não seja de tempo na fonte de dados** da página **Selecionar Método de Criação** do assistente. Para criar uma nova tabela de dimensão na fonte de dados subjacente, você precisa ter permissão para criar objetos na fonte de dados subjacente. Ao definir uma dimensão sem uma exibição da fonte de dados predefinida, você pode definir a dimensão do zero ou pode usar um modelo de dimensão.  
   
  O Assistente para Dimensões fornece modelos de dimensão de exemplo, com os quais é possível construir um tipo de dimensão comum. Você pode selecionar a partir dos seguintes tipos de dimensão:  
   
@@ -31,15 +31,15 @@ ms.locfileid: "66076435"
   
 -   Cliente  
   
--   Date  
+-   Data  
   
 -   Departamento  
   
 -   Moeda de destino  
   
--   Employee  
+-   Funcionário  
   
--   Geografia  
+-   painel Geografia do app&#39;s selecionado  
   
 -   Detalhes do pedido de vendas pela Internet  
   
@@ -51,7 +51,7 @@ ms.locfileid: "66076435"
   
 -   Detalhes do pedido de vendas do revendedor  
   
--   Reseller  
+-   Revendedor  
   
 -   Canal de vendas  
   
@@ -89,7 +89,7 @@ ms.locfileid: "66076435"
   
  Quando você marcar a caixa de seleção **Esta é uma dimensão variável** , o Assistente para Dimensões definirá os atributos indicados na seguinte tabela:  
   
-|attribute|Tipo|  
+|Atributo|Type|  
 |---------------|----------|  
 |SCD OriginalID|SCDOriginalID|  
 |Data de Término da SCD|SCDEndDate|  
@@ -103,8 +103,8 @@ ms.locfileid: "66076435"
 ## <a name="completing-the-dimension-wizard"></a>Concluindo o Assistente para Dimensões  
  Na página **Concluindo o Assistente** , digite um nome para a nova dimensão e veja a estrutura da dimensão. Marque a caixa de seleção **Gerar esquema agora** para iniciar o Assistente de Geração de Esquema depois que você clicar em **Concluir**. Na maioria dos casos, você não deve marcar esta caixa de seleção se planejar criar outros objetos. Se você não marcar essa caixa de seleção, poderá usar o Designer de Dimensão para gerar o esquema posteriormente.  
   
-## <a name="see-also"></a>Consulte também  
- [Criar uma dimensão de tempo ao gerar uma tabela de tempo](create-a-time-dimension-by-generating-a-time-table.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Criar uma dimensão de tempo gerando uma tabela de tempo](create-a-time-dimension-by-generating-a-time-table.md)   
  [Criar uma dimensão de tempo ao gerar uma tabela de tempo](create-a-time-dimension-by-generating-a-time-table.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Nomeie o elemento de tabela (DTA) | Microsoft Docs
+title: Elemento de nome para a tabela (DTA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 16e5145ff3338cb597813e26e480d92aa899a1c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62657241"
 ---
 # <a name="name-element-for-table-dta"></a>Elemento de nome de tabela (DTA)
@@ -35,9 +35,10 @@ ms.locfileid: "62657241"
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Descrição|  
+|Característica|DESCRIÇÃO|  
 |--------------------|-----------------|  
-|**Comprimento e tipo de dados**|`string`, entre 1 e 255 caracteres.|  
+|**Comprimento e tipo de dados**|
+  `string`, entre 1 e 255 caracteres.|  
 |**Valor padrão**|Nenhum.|  
 |**Ocorrência**|Obrigatórios. Uma vez para cada elemento de `Table`.|  
   
@@ -51,7 +52,7 @@ ms.locfileid: "62657241"
 ## <a name="example"></a>Exemplo  
  Para obter um exemplo de uso, veja [Elemento Server&#40;DTA&#41;](server-element-dta.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência do arquivo de entrada XML &#40;Orientador de Otimização do Mecanismo de Banco de Dados&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

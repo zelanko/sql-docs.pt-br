@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 844879c0e1b02bc9b6fd88ab153cb2a5dbd6ebe6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754781"
 ---
 # <a name="prepare-a-mirror-database-for-mirroring-sql-server"></a>Preparar um banco de dados espelho para espelhamento (SQL Server)
@@ -49,7 +49,7 @@ ms.locfileid: "62754781"
   
 -   Não é possível espelhar os bancos de dados do sistema **mestre**, **msdb**, **temp**ou **modelo** .  
   
--   Você não pode espelhar um banco de dados que pertence a um [grupos de disponibilidade AlwaysOn (SQL Server)](../availability-groups/windows/always-on-availability-groups-sql-server.md).  
+-   Não é possível espelhar um banco de dados que pertence a um [grupos de disponibilidade AlwaysOn (SQL Server)](../availability-groups/windows/always-on-availability-groups-sql-server.md).  
   
 ###  <a name="Recommendations"></a> Recomendações  
   
@@ -79,7 +79,7 @@ ms.locfileid: "62754781"
 ##  <a name="PrepareToRestartMirroring"></a> Para preparar um banco de dados espelho existente para reiniciar o espelhamento  
  Se o espelhamento foi removido e o banco de dados espelho ainda está no estado de RECOVERING, você pode reinicializar o espelhamento.  
   
-1.  Faça pelo menos um backup de log no banco de dados principal. Para obter mais informações, veja [Fazer backup de um log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md).  
+1.  Faça pelo menos um backup de log no banco de dados principal. Para obter mais informações, veja [Fazer backup de um log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)).  
   
 2.  No banco de dados espelho, use RESTORE WITH NORECOVERY para restaurar todos os backups de logs efetuados no banco de dados principal desde que o espelhamento foi removido. Para obter mais informações, veja [Restaurar um backup de log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md).  
   
@@ -110,7 +110,7 @@ ms.locfileid: "62754781"
     > [!NOTE]  
     >  Se restaurar o grupo de arquivos de banco de dados pelo grupo de arquivos, restaure todo o banco de dados.  
   
-    -   [Restaurar um Backup de banco de dados &#40;SQL Server Management Studio&#41;](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
+    -   [Restaurar um backup de banco de dados &#40;SQL Server Management Studio&#41;](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
   
     -   [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql) e [RESTORE Arguments &amp;#40;Transact-SQL&amp;#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql).  
   
@@ -242,9 +242,9 @@ ms.locfileid: "62754781"
   
 -   [Configurar um banco de dados espelho para usar a propriedade confiável &#40;Transact-SQL&#41;](set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Espelhamento de banco de dados &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
- [Segurança de transporte para espelhamento de banco de dados e grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
+ [Segurança de transporte para espelhamento de banco de dados e Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
  [Configurando o espelhamento de banco de dados &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [Fazer backup e restaurar índices e catálogos de texto completo](../../relational-databases/indexes/indexes.md)   
  [Espelhamento de banco de dados e catálogos de texto completo &#40;SQL Server&#41;](database-mirroring-and-full-text-catalogs-sql-server.md)   

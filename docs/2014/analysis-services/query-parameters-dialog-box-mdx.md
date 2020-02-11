@@ -1,5 +1,5 @@
 ---
-title: Caixa de diálogo de parâmetros (MDX) consulta | Microsoft Docs
+title: Caixa de diálogo parâmetros de consulta (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c7ad326f5205aa7efc3be9aee79af3671d892130
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070524"
 ---
 # <a name="query-parameters-dialog-box-mdx"></a>Caixa de diálogo Parâmetros de Consulta (MDX)
@@ -26,19 +26,19 @@ ms.locfileid: "66070524"
  **Parâmetro**  
  Digite um nome de parâmetro para começar a criar um novo parâmetro ou edite o nome de um parâmetro existente.  
   
- **Dimension**  
+ **Dimensão**  
  Escolha uma dimensão existente na lista.  
   
- **Hierarchy**  
+ **Hierarquia**  
  Escolha uma hierarquia da lista, se o parâmetro estiver aplicado a uma hierarquia específica.  
   
  **Vários valores**  
- Descrição  
+ DESCRIÇÃO  
   
  **Default**  
  Indique o valor padrão do parâmetro, se houver. Por padrão, nenhum valor é atribuído.  
   
- **Outro**  
+ **Outros**  
  Use a tecla Delete ou o botão X para remover parâmetros que você não usa mais. Use as teclas de direção para mover o parâmetro realçado para cima ou para baixo na lista. As seguintes regras se aplicam à ordem dos parâmetros:  
   
 -   Escopo dos parâmetros.  

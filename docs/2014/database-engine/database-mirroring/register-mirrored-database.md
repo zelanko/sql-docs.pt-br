@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b5be7eb52d0aa8c0a94b1a4ff63493e7f641bdbd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754463"
 ---
 # <a name="register-mirrored-database"></a>Registrar banco de dados espelho
@@ -44,9 +44,9 @@ ms.locfileid: "62754463"
   
  A grade contém as seguintes colunas:  
   
-|Nome da coluna|Descrição|  
+|Nome da coluna|DESCRIÇÃO|  
 |-----------------|-----------------|  
-|**Registrar**|Verifique cada um dos bancos de dados que deseja registrar. Se um banco de dados já estiver monitorado, a sua caixa de seleção será marcada e será desabilitada.<br /><br /> Observação: Para cancelar o registro de um banco de dados, feche o **registrado banco de dados espelhado** caixa de diálogo, selecione o banco de dados na árvore de navegação e selecione **Unregister** do **ação** menu.|  
+|**Registrar**|Verifique cada um dos bancos de dados que deseja registrar. Se um banco de dados já estiver monitorado, a sua caixa de seleção será marcada e será desabilitada.<br /><br /> Observação: para cancelar o registro do banco de dados, desmarque a caixa de diálogo **Banco de Dados Espelho Registrado** , selecione o banco de dados na árvore de navegação e selecione **Cancelar registro** no menu **Ação** .|  
 |**Backup de banco de dados**|O nome de um banco de dados espelho na instância de servidor selecionada.|  
 |**Função Atual**|A função de espelhamento atual do banco de dados, Principal ou Espelho na instância de servidor selecionada.|  
 |**Parceiro (Conectar como)**|O nome do parceiro de failover do banco de dados. A **Autenticação do Windows do usuário do console** ou a **Autenticação do SQL Server do logon "***\<nome de logon>***"** é exibida entre parênteses. Essas são as informações de autenticação atualmente usadas, se a instância foi adicionada antes, ou que serão usadas, se esta instância não foi acrescentada ao monitor.|  
@@ -61,7 +61,7 @@ ms.locfileid: "62754463"
  **Aplicar**  
  Clique neste botão para registrar o banco de dados selecionado (e salve os credenciais das instâncias de servidor do parceiro), mantendo ao mesmo tempo a caixa de diálogo aberta.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Iniciar o Monitor de Espelhamento de Banco de Dados &#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [Monitorando o espelhamento de banco de dados &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [Iniciar o Assistente para Configurar Segurança de Espelhamento de Banco de Dados &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md)  

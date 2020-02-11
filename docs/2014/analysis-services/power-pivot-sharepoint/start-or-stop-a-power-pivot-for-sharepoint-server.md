@@ -1,5 +1,5 @@
 ---
-title: Iniciar ou parar um PowerPivot para SharePoint Server | Microsoft Docs
+title: Iniciar ou parar um servidor de PowerPivot para SharePoint | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 312afc0336405ca530f731ad4fec55a26a960e7a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66071045"
 ---
 # <a name="start-or-stop-a-powerpivot-for-sharepoint-server"></a>Iniciar ou parar um PowerPivot para SharePoint Server
@@ -28,21 +28,21 @@ ms.locfileid: "66071045"
   
  [Efeitos da interrupção de um servidor do PowerPivot](#effects)  
   
-##  <a name="dependencies"></a> Dependências de serviço  
+##  <a name="dependencies"></a>Dependências de serviço  
  O Serviço de Sistema do PowerPivot tem uma dependência na instância de servidor do Analysis Services local que é instalada com ele no mesmo servidor físico. Se você parar o Serviço de Sistema do PowerPivot, também terá que parar manualmente a instância de servidor do Analysis Services local. Se um serviço estiver em execução sem o outro, você verá erros de alocação na solicitação de processamento de dados PowerPivot.  
   
  O servidor do Analysis Services só deverá ser executado por si só se você estiver diagnosticando ou soluciona um problema. Em todos os outros casos, o servidor requer que o Serviço de Sistema do PowerPivot seja executado localmente no mesmo servidor.  
   
-##  <a name="startstop"></a> Iniciar ou parar os serviços  
+##  <a name="startstop"></a>Iniciar ou parar os serviços  
  Sempre use a Administração Central para iniciar ou parar o Serviço de Sistema do PowerPivot ou a instância de servidor do Analysis Services. A Administração Central permite iniciar ou parar os serviços na mesma página. Além disso, a Administração Central usa um trabalho de timer chamado **Um ou mais serviços foram iniciados ou interrompidos** para reiniciar serviços que devem estar em execução. Se você parar o Serviço de Sistema do PowerPivot ou os Analysis Services usando uma ferramenta que não seja do SharePoint, os serviços serão reiniciados quando o trabalho de timer for executado.  
   
  Iniciar e parar serviços são ações que se aplicam a uma instância de serviço física. Se você tiver servidores adicionais do PowerPivot para SharePoint no farm, os outros servidores dentro do farm continuarão aceitando solicitações de dados PowerPivot.  
   
  Você não pode iniciar ou parar todos os serviços físicos simultaneamente pelo farm. Você deve selecionar cada servidor e depois iniciar ou parar um serviço específico.  
   
- Você não pode iniciar, pausar ou parar um Serviço de Sistema do PowerPivot para um aplicativo Web específico, mas você pode remover um serviço da lista de conexões padrão para torná-lo não disponível. Para obter mais informações, consulte [conectar um aplicativo de serviço do PowerPivot a um aplicativo Web do SharePoint na Administração Central](connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md).  
+ Você não pode iniciar, pausar ou parar um Serviço de Sistema do PowerPivot para um aplicativo Web específico, mas você pode remover um serviço da lista de conexões padrão para torná-lo não disponível. Para obter mais informações, consulte [conectar um aplicativo de serviço PowerPivot a um aplicativo Web do SharePoint na administração central](connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md).  
   
-1.  Na Administração Central, em **Configurações do Sistema**, clique em **Gerenciar serviços no servidor**.  
+1.  Na administração central, em **configurações do sistema**, clique em **gerenciar serviços no servidor**.  
   
 2.  Na parte superior da página, em Servidor, clique na seta para baixo e, em seguida, em **Alterar Servidor**.  
   
@@ -50,10 +50,10 @@ ms.locfileid: "66071045"
   
 4.  Selecione o serviço e clique na ação. Lembre-se de iniciar ou parar os serviços como um par. Se você iniciar ou parar o Serviço de Sistema do PowerPivot, não se esqueça de iniciar ou parar a instância de servidor do Analysis Services executada no mesmo computador.  
   
-##  <a name="effects"></a> Efeitos da interrupção de um servidor do PowerPivot  
+##  <a name="effects"></a>Efeitos da interrupção de um servidor PowerPivot  
  A tabela a seguir descreve os efeitos de parar o Serviço de Sistema do PowerPivot e o serviço Analysis Services em um servidor do SharePoint.  
   
-|Efeito em|Descrição|  
+|Efeito em|DESCRIÇÃO|  
 |---------------|-----------------|  
 |Consultas existentes|As consultas que estão em andamento em um servidor do Analysis Services pararão imediatamente. O usuário receberá o erro de dados não localizados ou conexão da fonte de dados não localizada.|  
 |Trabalhos de atualização de dados existentes em processamento no momento|Os trabalhos que estão em andamento em um servidor do Analysis Services atual pararão imediatamente. A atualização de dados falhará e um erro será registrado no histórico da atualização de dados.<br /><br /> É possível exibir o status de trabalhos atuais antes de parar o serviço, usando-se a página Verificar status do trabalho na Administração Central do SharePoint.<br /><br /> Embora seja impossível saber quais trabalhos estão em processamento no momento, não há como exibir a própria fila para verificar se outros trabalhos estão prestes a começar.|  
@@ -61,7 +61,7 @@ ms.locfileid: "66071045"
 |Novas solicitações para consultas ou atualização de dados|Se você estiver parando somente o servidor do PowerPivot para SharePoint no farm, novas solicitações para dados PowerPivot não serão manipuladas e uma solicitação de dados resultará em um erro de dados não encontrados.<br /><br /> Se você tiver servidores do PowerPivot para SharePoint adicionais, a solicitação irá para um dos servidores disponíveis.|  
 |Dados de uso|Não serão coletados dados de uso enquanto os serviços estiverem parados.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Configurar contas de serviço PowerPivot](configure-power-pivot-service-accounts.md)  
   
   

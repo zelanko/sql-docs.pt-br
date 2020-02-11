@@ -13,10 +13,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 5aceabe5a263cfa53572be6f818ddc905f9742a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014229"
 ---
 # <a name="geometrycollection"></a>GeometryCollection
@@ -50,7 +50,8 @@ DECLARE @g4 geometry = 'GEOMETRYCOLLECTION(LINESTRING(1 1, 3 5),POLYGON((-1 -1, 
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid();  
 ```  
   
- `@g4` não é válida porque a instância de `Polygon` na instância de `GeometryCollection` não é válida.  
+ 
+  `@g4` não é válida porque a instância de `Polygon` na instância de `GeometryCollection` não é válida.  
   
  Para obter mais informações sobre instâncias aceitas e válidas, consulte [Point](point.md), [MultiPoint](multipoint.md), [LineString](linestring.md), [MultiLineString](multilinestring.md), [Polygon](polygon.md)e [MultiPolygon](multipolygon.md).  
   
@@ -62,7 +63,7 @@ DECLARE @g geometry;
 SET @g = geometry::STGeomCollFromText('GEOMETRYCOLLECTION(POINT(3 3 1), POLYGON((0 0 2, 1 10 3, 1 0 4, 0 0 2)))', 1);  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Dados espaciais &#40;SQL Server&#41;](spatial-data-sql-server.md)  
   
   

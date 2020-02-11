@@ -1,5 +1,5 @@
 ---
-title: Selecionar tabelas e exibições (Assistente de exibição de fonte de dados) (Analysis Services) | Microsoft Docs
+title: Selecionar tabelas e exibições (Assistente de exibição da fonte de dados) (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f4b940d5cb3c91cc8257ef1a3e6828286bc1c240
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069247"
 ---
 # <a name="select-tables-and-views-data-source-view-wizard-analysis-services"></a>Selecionar Tabelas e Exibições (Assistente de Exibição da Fonte de Dados) (Analysis Services)
@@ -43,7 +43,7 @@ ms.locfileid: "66069247"
 |**\***|Qualquer cadeia de caracteres|  
 |**%**|Qualquer cadeia de caracteres|  
 |**?**|Um único caractere|  
-|**"** *string* **"**|Uma cadeia de caracteres literal. Este caractere curinga corresponderá a qualquer subcadeia de caracteres dentro do nome do objeto.|  
+|**"** *String* **"**|Uma cadeia de caracteres literal. Este caractere curinga corresponderá a qualquer subcadeia de caracteres dentro do nome do objeto.|  
   
  **Mostrar objetos do sistema**  
  Exibe objetos do sistema em **Objetos disponíveis**. Essa opção estará disponível apenas se o provedor da fonte de dados expuser objetos do sistema. A remoção de um objeto do sistema da lista **Objetos incluídos** seleciona automaticamente essa opção.  
@@ -51,8 +51,8 @@ ms.locfileid: "66069247"
  **Adicionar tabelas relacionadas**  
  Adiciona todas as tabelas que estão relacionadas às tabelas listadas em **Objetos incluídos**. Essa opção não adiciona exibições. No entanto ela adiciona tabelas particionadas. Se você selecionar critérios de correspondência de nomes na página **Correspondência de Nomes** do assistente, essa opção também incluirá tabelas relacionadas lógicas de acordo com os critérios selecionados. Tabelas também serão incluídas se estiverem relacionadas a tabelas relacionadas recém-adicionadas e se tiverem uma estrutura idêntica a da tabela original.  
   
-## <a name="see-also"></a>Consulte também  
- [Ajuda de F1 do Assistente de exibição de fonte de dados &#40;Analysis Services&#41;](data-source-view-wizard-f1-help-analysis-services.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Ajuda F1 do assistente de exibição da fonte de dados &#40;Analysis Services&#41;](data-source-view-wizard-f1-help-analysis-services.md)   
  [Exibições de fontes de dados em modelos multidimensionais](multidimensional-models/data-source-views-in-multidimensional-models.md)  
   
   

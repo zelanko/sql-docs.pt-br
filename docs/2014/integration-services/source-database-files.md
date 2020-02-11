@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ac7d4b590fa5c3efccd16deebf3bafab83b74f6b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055542"
 ---
 # <a name="source-database-files"></a>Arquivos de banco de dados de origem
@@ -25,22 +25,22 @@ ms.locfileid: "66055542"
  Para popular esta caixa de diálogo com os nomes e locais dos arquivos do banco de dados no servidor de origem, especifique primeiro **SourceConnection** e **SourceDatabaseName** na página **Banco de Dados** da caixa de diálogo **Editor da Tarefa Transferir Banco de Dados** .  
   
 ## <a name="options"></a>Opções  
- **Arquivo de Origem**  
- Nomes do arquivo de banco de dados no servidor de origem que serão transferidos. O**Arquivo de Origem** é somente leitura.  
+ **Arquivo de origem**  
+ Nomes do arquivo de banco de dados no servidor de origem que serão transferidos. O **arquivo de origem** é somente leitura.  
   
- **Pasta de Origem**  
- Pasta no servidor de origem em que residem os arquivos de banco de dados a serem transferidos. A**Pasta de Origem** é somente leitura.  
+ **Pasta de origem**  
+ Pasta no servidor de origem em que residem os arquivos de banco de dados a serem transferidos. A **pasta de origem** é somente leitura.  
   
- **Compartilhamento de Arquivos na Rede**  
- Pasta de compartilhamento de rede no servidor de origem da qual os arquivos de banco de dados serão transferidos. Use **Compartilhamento de Arquivo na Rede** ao transferir um banco de dados em modo offline, especificando **DatabaseOffline** em **Método** na página **Banco de Dados** da caixa de diálogo **Editor da Tarefa Transferir Banco de Dados** .  
+ **Compartilhamento de arquivos de rede**  
+ Pasta de compartilhamento de rede no servidor de origem da qual os arquivos de banco de dados serão transferidos. Use **o compartilhamento de arquivos de rede** ao transferir um banco de dados no modo offline especificando **DatabaseOffline em** para o **método** na página **bancos** de dados da caixa de diálogo **Editor da tarefa Transferir Banco de dados** .  
   
  Insira a localização de compartilhamento de arquivos na rede ou clique no botão Procurar **(...)** para localizá-la.  
   
  Na transferência de um banco de dados em modo offline, os arquivos de banco de dados são copiados para o local **Compartilhamento de arquivo na rede** no servidor de origem, antes de serem transferidos ao servidor de destino.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor da Tarefa Transferir Banco de Dados &#40;Página Geral&#41;](general-page-of-integration-services-designers-options.md)   
- [Editor da Tarefa Transferir Banco de Dados &#40;Página Bancos de Dados&#41;](../../2014/integration-services/transfer-database-task-editor-databases-page.md)  
+ [Editor da tarefa Transferir Banco de dados &#40;página Geral&#41;](general-page-of-integration-services-designers-options.md)   
+ [Editor da tarefa Transferir Banco de dados &#40;página bancos de dados&#41;](../../2014/integration-services/transfer-database-task-editor-databases-page.md)  
   
   

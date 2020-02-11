@@ -1,5 +1,5 @@
 ---
-title: Anotações CSDL para Business Intelligence (CSDLBI) | Microsoft Docs
+title: Anotações de CSDL para Business Intelligence (CSDLBI) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 760e90c34c84bd4b44af90cbbb78aec7e025689a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62757962"
 ---
 # <a name="csdl-annotations-for-business-intelligence-csdlbi"></a>CSDLBI (Anotações CSDL para Business Intelligence)
@@ -29,20 +29,20 @@ ms.locfileid: "62757962"
   
 -   [Soluções de modelo de tabela &#40;SSAS de tabela&#41;](../tabular-model-solutions-ssas-tabular.md)  
   
--   [Implantação de uma solução de modelo de tabela &#40;SSAS de Tabela&#41;](../tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
+-   [Implantação de solução de modelo de tabela &#40;SSAS de tabela&#41;](../tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   
--   [Conexão de modelo semântico de BI do PowerPivot &#40;. bism&#41;](../power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)  
+-   [Conexão de modelo semântico de BI do PowerPivot &#40;. BISM&#41;](../power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)  
   
  Um esquema da CSDL é gerado pelo servidor do Analysis Services em resposta a uma solicitação por uma definição de modelo de um cliente, como o [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]. O aplicativo cliente envia uma consulta XML ao servidor do Analysis Services que hospeda os dados modelo. Em resposta, o servidor envia uma mensagem XML que contém uma definição das entidades no modelo, usando as anotações da CSDLBI. O cliente de relatórios usa as informações para apresentar os campos, as agregações e as medidas disponíveis no modelo. As anotações da CSDL também fornecem informações sobre como agrupar, classificar e formatar os dados.  
   
- Para obter informações gerais sobre a CSDLBI, consulte [conceitos da CSDLBI](https://docs.microsoft.com/bi-reference/csdl/csdlbi-concepts).  
+ Para obter informações gerais sobre CSDLBI, consulte [conceitos de CSDLBI](https://docs.microsoft.com/bi-reference/csdl/csdlbi-concepts).  
   
 ### <a name="working-with-csdl"></a>Trabalhando com a CSDL  
  O conjunto de anotações da CSDLBI que representa qualquer modelo de tabela específico é um documento XML que contém uma coleção de entidades, simples e complexas. As entidades definem tabelas (ou dimensões), colunas (atributos), associações (relações) e fórmulas incluídas em colunas calculadas, medidas ou KPIs.  
   
  Você não pode modificar estes objetos diretamente, mas deve usar as ferramentas de cliente e APIs (interfaces de programação de aplicativo) fornecidas para trabalhar com modelos de tabela.  
   
- Você pode obter a CSDL para um modelo enviando uma solicitação DISCOVER ao servidor que hospeda o modelo. A solicitação deve ser qualificada especificando o servidor e o modelo e, opcionalmente, uma exibição ou perspectiva. A mensagem retornada é uma cadeia de caracteres XML. Certos elementos dependem da linguagem e retornam valores diferentes de acordo com a linguagem da conexão atual. Para obter mais informações, consulte [conjunto de linhas DISCOVER_CSDL_METADATA](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset).  
+ Você pode obter a CSDL para um modelo enviando uma solicitação DISCOVER ao servidor que hospeda o modelo. A solicitação deve ser qualificada especificando o servidor e o modelo e, opcionalmente, uma exibição ou perspectiva. A mensagem retornada é uma cadeia de caracteres XML. Certos elementos dependem da linguagem e retornam valores diferentes de acordo com a linguagem da conexão atual. Para obter mais informações, consulte [DISCOVER_CSDL_METADATA conjunto de linhas](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset).  
   
 ### <a name="csdlbi-versions"></a>Versões da CSDLBI  
  A especificação da CSDL original (da Estrutura de Dados de Entidade) oferece a maioria das entidades e propriedades necessárias para oferecer suporte à modelagem. As anotações de BI oferecem suporte aos requisitos especiais de modelos de tabela, às propriedades de relatório exigidas por clientes como o [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] e aos metadados adicionais exigidos pelos modelos multidimensionais. Esta seção descreve as atualizações em cada versão.  
@@ -71,12 +71,12 @@ ms.locfileid: "62757962"
   
 -   Suporte para perspectivas.  
   
- Para obter informações detalhadas sobre os elementos individuais nas anotações da CSDLBI, consulte [referência técnica para anotações de BI para CSDL](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl). Para obter informações sobre a especificação principal de CSDL, consulte o [especificação v3 de CSDL](https://docs.microsoft.com/ef/ef6/modeling/designer/advanced/edmx/csdl-spec).  
+ Para obter informações detalhadas sobre elementos individuais nas anotações do CSDLBI, consulte [Technical Reference for bi Annotations to CSDL](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl). Para obter informações sobre a especificação CSDL principal, consulte a [especificação CSDL v3](https://docs.microsoft.com/ef/ef6/modeling/designer/advanced/edmx/csdl-spec).  
   
   
-## <a name="see-also"></a>Consulte também  
- [Noções básicas sobre o modelo de objeto Tabular](representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)   
- [Conceitos da CSDLBI](https://docs.microsoft.com/bi-reference/csdl/csdlbi-concepts)   
+## <a name="see-also"></a>Consulte Também  
+ [Compreendendo o modelo de objeto de tabela](representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)   
+ [Conceitos de CSDLBI](https://docs.microsoft.com/bi-reference/csdl/csdlbi-concepts)   
  [Compreendendo o modelo de objeto de tabela](representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)  
   
   

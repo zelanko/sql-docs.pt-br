@@ -1,5 +1,5 @@
 ---
-title: Transferir o Editor da tarefa procedimentos armazenados mestres (páginas procedimentos armazenados) | Microsoft Docs
+title: Editor da tarefa Transferir procedimentos armazenados mestres (página procedimentos armazenados) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f233f0730286a1623ee54c38084d07a2aba903e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054856"
 ---
 # <a name="transfer-master-stored-procedures-task-editor-stored-procedures-page"></a>Editor da Tarefa Transferir Procedimentos Armazenados Mestres (páginas Procedimentos Armazenados)
@@ -29,17 +29,17 @@ ms.locfileid: "66054856"
   
 ## <a name="options"></a>Opções  
  **SourceConnection**  
- Selecione um gerenciador de conexões SMO na lista ou clique em **\<Nova conexão...>** para criar uma nova conexão com o servidor de origem.  
+ Selecione um Gerenciador de conexões Smo na lista ou clique em ** \<nova conexão... >** para criar uma nova conexão com o servidor de origem.  
   
  **DestinationConnection**  
- Selecione um gerenciador de conexões SMO na lista ou clique em **\<Nova conexão...>** para criar uma nova conexão com o servidor de destino.  
+ Selecione um Gerenciador de conexões Smo na lista ou clique em ** \<nova conexão... >** para criar uma nova conexão com o servidor de destino.  
   
  **IfObjectExists**  
  Selecione como a tarefa deve manipular procedimentos armazenados definidos pelo usuário de nome idêntico a outros já existentes no banco de dados **mestre** no servidor de destino.  
   
  As opções desta propriedade estão listadas na seguinte tabela:  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |**FailTask**|Haverá falha na tarefa se já existirem procedimentos armazenados de nome igual no banco de dados **mestre** no servidor de destino.|  
 |**Overwrite**|A tarefa irá substituir os procedimentos armazenados de nome igual no banco de dados **mestre** no servidor de destino.|  
@@ -48,7 +48,7 @@ ms.locfileid: "66054856"
  **TransferAllStoredProcedures**  
  Selecione se todos os procedimentos armazenados definidos pelo usuário no banco de dados **mestre** no servidor de origem devem ser copiados para o servidor de destino.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |**Verdadeiro**|Copiar todos os procedimentos armazenados definidos pelo usuário no banco de dados **mestre** .|  
 |**Falso**|Copiar só os procedimentos armazenados especificados.|  
@@ -56,11 +56,11 @@ ms.locfileid: "66054856"
  **StoredProceduresList**  
  Selecione quais procedimentos armazenados definidos pelo usuário no banco de dados **mestre** no servidor de origem devem ser copiados para o banco de dados **mestre** no servidor de destino. Esta opção só fica disponível quando **TransferAllStoredProcedures** for definido como **False**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Tarefas do Integration Services](control-flow/integration-services-tasks.md)   
- [Editor da Tarefa Transferir Procedimentos Armazenados Mestres &#40;página Geral&#41;](general-page-of-integration-services-designers-options.md)   
+ [Editor da tarefa Transferir procedimentos armazenados mestres &#40;página Geral&#41;](general-page-of-integration-services-designers-options.md)   
  [Página Expressões](expressions/expressions-page.md)   
- [Gerenciador de conexões SMO](connection-manager/smo-connection-manager.md)  
+ [gerenciador de conexões SMO](connection-manager/smo-connection-manager.md)  
   
   

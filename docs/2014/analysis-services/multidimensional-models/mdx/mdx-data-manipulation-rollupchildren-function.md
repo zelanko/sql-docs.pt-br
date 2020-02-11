@@ -16,14 +16,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 45db581de7b7aef2822597ef60d3b43ebad3acbd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074273"
 ---
 # <a name="working-with-the-rollupchildren-function-mdx"></a>Trabalhando com a função RollupChildren (MDX)
-  O MDX (Multidimensional Expressions) [RollupChildren](/sql/mdx/rollupchildren-mdx) função [Script de pesquisa e substituição] acumula os filhos de um membro, aplicando um operador unário diferente a cada filho e retorna o valor desse Rollup como um número. O operador unário pode ser fornecido por uma propriedade do membro associada ao membro filho ou pode ser uma expressão de cadeia de caracteres fornecida diretamente para a função.  
+  A função MDX (Multidimensional Expressions) [RollupChildren](/sql/mdx/rollupchildren-mdx) [script for Search and Replace] acumula os filhos de um membro, aplicando um operador unário diferente a cada filho e retorna o valor desse ROLLUP como um número. O operador unário pode ser fornecido por uma propriedade do membro associada ao membro filho ou pode ser uma expressão de cadeia de caracteres fornecida diretamente para a função.  
   
 ## <a name="rollupchildren-function-examples"></a>Exemplos da função RollupChildren  
  O uso da função `RollupChildren` em instruções MDX é simples de explicar, mas seu efeito sobre consultas MDX pode ser bastante abrangente.  
@@ -41,7 +41,7 @@ ms.locfileid: "66074273"
 ### <a name="using-a-custom-member-property"></a>Usando uma propriedade de membro personalizado  
  Se o cálculo acumulado for uma operação realizada com frequência, um método seria criar uma propriedade membro capaz de armazenar o operador que será usado com cada filho para um função específica. A tabela a seguir exibe os operadores unários válidos e descreve o resultado esperado.  
   
-|Operador|Resultado|  
+|Operador|Result|  
 |--------------|------------|  
 |+|total = total + filho atual|  
 |-|total = total – filho atual|  
@@ -64,7 +64,7 @@ RollupChildren([Net Sales], [Net Sales].CurrentMember.Properties("SALES_OPERATOR
  Quando a função é chamada, o valor de cada filho é aplicado ao total usando o operador armazenado na propriedade membro. Os membros de lucros interno e de exportação são ignorados e o total acumulado retornado pela função `RollupChildren` é multiplicado por 1,1.  
   
 ### <a name="using-the-iif-function"></a>Usando a função IIf  
- Se a operação de exemplo não for comum ou se a operação se aplica somente a uma consulta MDX, o [IIf](/sql/mdx/iif-mdx) função pode ser usada com o `RollupChildren` função para fornecer o mesmo resultado. A consulta MDX a seguir apresenta o mesmo resultado que o exemplo MDX anterior, mas sem reordenar para usar uma propriedade de membro personalizado:  
+ Se a operação de exemplo não for comum ou se a operação se aplicar somente a uma consulta MDX, a função [IIF](/sql/mdx/iif-mdx) poderá ser usada `RollupChildren` com a função para fornecer o mesmo resultado. A consulta MDX a seguir apresenta o mesmo resultado que o exemplo MDX anterior, mas sem reordenar para usar uma propriedade de membro personalizado:  
   
 ```  
 RollupChildren([Net Sales], IIf([Net Sales].CurrentMember.Properties("UNARY_OPERATOR") = "-", "~", [Net Sales].CurrentMember.Properties("UNARY_OPERATOR))) * 1.1  
@@ -72,7 +72,7 @@ RollupChildren([Net Sales], IIf([Net Sales].CurrentMember.Properties("UNARY_OPER
   
  A instrução MDX analisa o operador unário do membro filho. Se ele for usado em uma subtração (como no caso dos membros de lucros interno e de exportação), a função `IIf` substituirá o operador unário til (~). Caso contrário, a função `IIf` utilizará o operador unário do membro filho. Por fim, o total acumulado retornado é então multiplicado por 1,1 para apresentar o valor estimado de vendas brutas internas e exportações.  
   
-## <a name="see-also"></a>Consulte também  
- [Manipulando dados &#40;MDX&#41;](mdx-data-manipulation-manipulating-data.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Manipulando dados &#40;&#41;MDX](mdx-data-manipulation-manipulating-data.md)  
   
   

@@ -24,10 +24,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 341066defb122e33e82cfde87a561bc9df1ed762
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721648"
 ---
 # <a name="configure-web-synchronization"></a>Configurar Sincronização da Web
@@ -101,7 +101,8 @@ Há suporte para sincronização da Web no IIS, a partir da versão 5.0. O Assis
   
  Se você estiver usando um Publicador pela primeira vez, será necessário configurar também um Distribuidor e um compartilhamento de instantâneos. O Agente de Mesclagem, em cada Assinante, precisa ter permissões de leitura no compartilhamento de instantâneo. Para obter mais informações, consulte [Configurar a distribuição](configure-distribution.md) e [Proteger uma pasta de instantâneo](security/secure-the-snapshot-folder.md).  
   
- `gen` é uma palavra reservada em arquivos XML websync. Não tente publicar tabelas que contêm colunas nomeadas `gen`.  
+ 
+  `gen` é uma palavra reservada em arquivos XML websync. Não tente publicar tabelas que contêm colunas nomeadas `gen`.  
   
 ## <a name="configuring-the-subscription"></a>Configurando a assinatura  
  Depois de habilitar uma publicação e configurar o IIS, crie uma assinatura pull e especifique que ela deve ser sincronizada usando o IIS. (A sincronização da Web tem suporte apenas para assinaturas pull.)  
@@ -124,7 +125,7 @@ Há suporte para sincronização da Web no IIS, a partir da versão 5.0. O Assis
   
 -   Se você reproduzir grandes volumes de dados, talvez tenha que ajustar o tamanho do lote do Agente de Mesclagem.  
   
- O tamanho do lote para replicação de mesclagem é medido em *gerações*, que são coleções de alterações por artigo. O número de gerações em um lote é especificado usando o -`DownloadGenerationsPerBatch` e -`UploadGenerationsPerBatch` parâmetros do Merge Agent. Para obter mais informações, consulte [Replication Merge Agent](agents/replication-merge-agent.md).  
+ O tamanho do lote para replicação de mesclagem é medido em *gerações*, que são coleções de alterações por artigo. O número de gerações em um lote é especificado usando os parâmetros-`DownloadGenerationsPerBatch` e-`UploadGenerationsPerBatch` do agente de mesclagem. Para obter mais informações, consulte [Replication Merge Agent](agents/replication-merge-agent.md).  
   
  Para grandes volumes de dados, especifique um número pequeno para cada um dos parâmetros para envio em lote. É recomendável começar com um valor de 10 e ajustá-lo com base nas necessidades e no desempenho do aplicativo. Normalmente, esses parâmetros são especificados em um perfil de agente. Para obter mais informações sobre perfis, consulte [Replication Agent Profiles](agents/replication-agent-profiles.md).  
   
@@ -144,7 +145,7 @@ Há suporte para sincronização da Web no IIS, a partir da versão 5.0. O Assis
   
      Para obter mais informações sobre permissões requeridas pelos agentes, consulte [Replication Agent Security Model](security/replication-agent-security-model.md).  
   
--   Especifique a mesma conta de domínio que o Agente de Mesclagem usa quando a conta e a senha são especificadas na página **Informações do Servidor Web** do Assistente para Nova Assinatura ou quando se especificam valores para os parâmetros **@internet_url** e **@internet_login** de [sp_addpullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql). Essa conta deve ter permissões de leitura para o compartilhamento de instantâneo.  
+-   Especifique a mesma conta de domínio que o Agente de Mesclagem usa quando você especifica uma conta e uma senha na página de **informações do servidor Web** do assistente para nova assinatura ou quando você especifica valores para **@internet_url** os **@internet_login** parâmetros e de [sp_addpullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql). Essa conta deve ter permissões de leitura para o compartilhamento de instantâneo.  
   
 -   Cada publicação deve usar um diretório virtual separado para o IIS.  
   
@@ -163,7 +164,7 @@ Há suporte para sincronização da Web no IIS, a partir da versão 5.0. O Assis
 > [!IMPORTANT]  
 >  A abertura de portas no firewall pode deixar o servidor exposto a ataques mal-intencionados. Certifique-se de conhecer os sistemas de firewall antes de abrir portas. Para obter mais informações, consulte [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Sincronização da Web para replicação de mesclagem](web-synchronization-for-merge-replication.md)  
   
   
