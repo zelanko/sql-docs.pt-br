@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d5f3dffc7661fc5843dcd220f27beb1117a85729
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63313767"
 ---
 # <a name="work-with-data-in-the-results-pane-visual-database-tools"></a>Trabalhar com dados no painel de resultados (Visual Database Tools)
@@ -115,11 +115,11 @@ ms.locfileid: "63313767"
 ### <a name="what-can-not-be-represented-fully"></a>O que não pode ser totalmente representado  
  O que é retornado do banco de dados para o painel Resultados é em grande parte controlado pelo provedor da fonte de dados em uso. O painel Resultados não pode traduzir sempre os dados de todos os sistemas de gerenciamento de banco de dados. A seguir, alguns casos onde isso ocorre.  
   
--   Os tipos de dados binários, muitas vezes, não são úteis para pessoas que trabalham no painel Resultados, além de gastar muito tempo para serem baixados. Portanto, eles são representados por  *\<dados binários >* ou *nulo*.  
+-   Os tipos de dados binários, muitas vezes, não são úteis para pessoas que trabalham no painel Resultados, além de gastar muito tempo para serem baixados. Portanto, eles são representados por * \<dados binários>* ou *nulos*.  
   
--   A precisão e a escala nem sempre podem ser preservadas. Por exemplo, o painel Resultados dá suporte à precisão de 27. Se dados forem de um tipo de dados com maior precisão, os dados poderão ficar truncados ou poderão ser representados por  *\<não é possível ler dados >* .  
+-   A precisão e a escala nem sempre podem ser preservadas. Por exemplo, o painel Resultados dá suporte à precisão de 27. Se os dados forem de um tipo de dados com uma precisão maior, os dados poderão ser truncados ou poderão ser representados por * \<não conseguir ler os dados>*.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Executar operações básicas com consultas &#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)   
  [Especificar critérios de pesquisa &#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md)  
   

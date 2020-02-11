@@ -1,5 +1,5 @@
 ---
-title: Usando Cube Writebacks (MDX) | Microsoft Docs
+title: Usando o cubo write-backs (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a79e98375c27c6a3570b2fafcf424965d7a97c8d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074215"
 ---
 # <a name="using-cube-writebacks-mdx"></a>Usando Cube Writebacks (MDX)
-  Você atualiza um cubo usando a instrução [UPDATE CUBE](/sql/mdx/mdx-data-manipulation-update-cube). Essa instrução permite que você atualize uma tupla com um valor específico. Para usar a instrução UPDATE CUBE de forma eficiente para atualizar um cubo, você precisa entender a sintaxe da instrução, as condições de erro que podem acontecer, e como as atualizações podem afetar um cubo.  
+  Você atualiza um cubo usando a instrução [UPDATE CUBE](/sql/mdx/mdx-data-manipulation-update-cube) . Essa instrução permite que você atualize uma tupla com um valor específico. Para usar a instrução UPDATE CUBE de forma eficiente para atualizar um cubo, você precisa entender a sintaxe da instrução, as condições de erro que podem acontecer, e como as atualizações podem afetar um cubo.  
   
 ## <a name="update-cube-statement-syntax"></a>Sintaxe da instrução UPDATE CUBE  
  A seguinte sintaxe descreve a instrução UPDATE CUBE:  
@@ -84,7 +84,7 @@ USE_EQUAL_ALLOCATION
 ## <a name="error-conditions"></a>Condições de erro  
  A tabela a seguir descreve a causa de falha dos write-backs e o resultado desses erros.  
   
-|Condição de erro|Resultado|  
+|Condição de erro|Result|  
 |---------------------|------------|  
 |A atualização inclui membros da mesma dimensão que não existem um com o outro.|Haverá falha na atualização. O espaço do cubo não conterá a célula mencionada.|  
 |A atualização inclui uma medida com origem em uma medida de um tipo não atribuído.|Haverá falha na atualização. Os incrementos requerem que a medida possa receber um valor negativo.|  
@@ -116,7 +116,7 @@ USE_EQUAL_ALLOCATION
   
 -   Alterando a granularidade da dimensão da dimensão incluída no write-back.  
   
-## <a name="see-also"></a>Consulte também  
- [Modificando dados &#40;MDX&#41;](mdx-data-modification-modifying-data.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Modificando dados &#40;&#41;MDX](mdx-data-modification-modifying-data.md)  
   
   

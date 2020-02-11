@@ -14,23 +14,23 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 138fd2b43b214e16d960bec9daabb84b0f820c6d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63298598"
 ---
 # <a name="deploying-a-rendering-extension"></a>Implantando uma extensão de renderização
-  Depois de ter escrito e compilado a sua extensão de renderização de relatório do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] para uma biblioteca do [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] , será necessário torná-la descobrível pelo servidor de relatório e pelo Designer de Relatórios. Para fazer isso, copie a extensão para o diretório apropriado e adicione entradas para os arquivos de configuração [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] apropriados.  
+  Depois de escrever e compilar a extensão de renderização de relatório do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] para uma biblioteca do [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], você precisa torná-la detectável pelo servidor de relatório e pelo Designer de Relatórios. Para fazer isso, copie a extensão para o diretório apropriado e adicione entradas para os arquivos de configuração [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] apropriados.  
   
 ## <a name="configuration-file-rendering-extension-element"></a>Elemento de extensão de renderização de arquivo de configuração  
  Quando uma extensão de renderização foi compilada em um .DLL, você adiciona uma entrada no arquivo rsreportserver.config. Por padrão, o local é em %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<InstanceName>\Reporting Services\ReportServer. O elemento pai é \<Render>. Sob o elemento Render, existe um elemento Extension para cada extensão de renderização. O elemento `Extension` contém dois atributos, Name e Type.  
   
- A tabela a seguir descreve os atributos para o `Extension` elemento para extensões de renderização:  
+ A tabela a seguir descreve os atributos do `Extension` elemento para extensões de renderização:  
   
-|attribute|Descrição|  
+|Atributo|DESCRIÇÃO|  
 |---------------|-----------------|  
-|**Nome**|Um nome exclusivo para a extensão. O tamanho máximo do atributo **Name** é de 255 caracteres. O nome deve ser exclusivo entre todas as entradas do elemento **Extension** de um arquivo de configuração. Se um nome duplicado estiver presente, o servidor de relatório retornará um erro.|  
+|**Nome**|Um nome exclusivo para a extensão. O comprimento máximo do atributo **Name** é de 255 caracteres. O nome deve ser exclusivo entre todas as entradas do elemento **Extension** de um arquivo de configuração. Se um nome duplicado estiver presente, o servidor de relatório retornará um erro.|  
 |**Tipo**|Uma lista separada por vírgulas que inclui o namespace totalmente qualificado junto com o nome do assembly.|  
 |**Visível**|Um valor `false` indica que a extensão de renderização não deve ser visível nas interfaces do usuário. Se o atributo não for incluído, o valor padrão será `true`.|  
 |**LogAllExecutionRequests**|Um valor de `false` indica que uma entrada está registrada apenas para a primeira execução do relatório em uma sessão. Se o atributo não for incluído, o valor padrão será `true`.<br /><br /> Esta configuração determina, por exemplo, se é preciso registrar uma entrada apenas para a primeira página renderizada de um relatório (quando `false`) ou uma entrada para cada página renderizada do relatório (quando `true`).|  
@@ -44,7 +44,7 @@ ms.locfileid: "63298598"
   
 1.  Copie o assembly do local de preparação para o diretório bin do servidor de relatório no qual você deseja usar a extensão de renderização. A localização padrão do diretório Bin do servidor de relatório é %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<InstanceName>\Reporting Services\ReportServer\Bin.  
   
-2.  Depois da cópia do arquivo de assembly, abra o arquivo rsreportserver.config. O arquivo rsreportserver.config também está localizado no diretório bin do servidor de relatório. Você precisa criar uma entrada no arquivo de configuração para o seu arquivo de assembly de extensão. Abra o arquivo de configuração com o [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ou com um editor de texto simples.  
+2.  Depois da cópia do arquivo de assembly, abra o arquivo rsreportserver.config. O arquivo rsreportserver.config também está localizado no diretório bin do servidor de relatório. Você precisa criar uma entrada no arquivo de configuração para o seu arquivo de assembly de extensão. Abra o arquivo com o [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ou um editor de texto simples.  
   
      Para obter mais informações, consulte [RSReportServer Configuration File](../../report-server/rsreportserver-config-configuration-file.md).  
   
@@ -64,12 +64,12 @@ ms.locfileid: "63298598"
     <Extension Name="My Rendering Extension Name" Type="CompanyName.ExtensionName.MyRenderingProvider, AssemblyName" />  
     ```  
   
-     O valor de **Name** é o nome exclusivo da extensão de renderização. O valor de **Type** é uma lista separada por vírgula que inclui uma entrada para o namespace totalmente qualificado da implementação do <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension>, seguida pelo nome do assembly (não incluindo a extensão de arquivo .dll). Por padrão, as extensões de renderização ficam visíveis. Para ocultar uma extensão de interfaces do usuário, como o Gerenciador de relatórios, adicione uma **Visible** atributo para o `Extension` elemento e defina-o como `false`.  
+     O valor de **Name** é o nome exclusivo da extensão de renderização. O valor de **Type** é uma lista separada por vírgula que inclui uma entrada para o namespace totalmente qualificado da implementação do <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension>, seguida pelo nome do assembly (não incluindo a extensão de arquivo .dll). Por padrão, as extensões de renderização ficam visíveis. Para ocultar uma extensão das interfaces do usuário, como Report Manager, adicione um atributo **visível** ao elemento `Extension` e defina-o como `false`.  
   
 ## <a name="verifying-the-deployment"></a>Verificando a implantação  
  Você também pode abrir o Gerenciador de Relatórios e verificar se a sua extensão foi incluída na lista de tipos de exportação disponíveis para um relatório.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Implementando uma extensão de renderização](implementing-a-rendering-extension.md)   
  [Visão geral das extensões de renderização](rendering-extensions-overview.md)   
  [Implementando a interface IRenderingExtension](implementing-the-irenderingextension-interface.md)   

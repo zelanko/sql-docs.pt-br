@@ -1,5 +1,5 @@
 ---
-title: sys.fn_helpcollations (Transact-SQL) | Microsoft Docs
+title: sys. fn_helpcollations (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: sql
@@ -21,19 +21,19 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016|| = azure-sqldw-latest ||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ee626b9eef8cf2f2e80217b2a3709271a227f293
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67906123"
 ---
-# <a name="sysfnhelpcollations-transact-sql"></a>sys.fn_helpcollations (Transact-SQL)
+# <a name="sysfn_helpcollations-transact-sql"></a>sys.fn_helpcollations (Transact-SQL)
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Retorna uma lista de todos os agrupamentos com suporte.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,19 +45,19 @@ fn_helpcollations ()
 
  **fn_helpcollations** retorna as informações a seguir.  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
-|Name|**sysname**|Nome de ordenação padrão|  
-|Descrição|**nvarchar(1000)**|Descrição da ordenação.|  
+|Nome|**sysname**|Nome de ordenação padrão|  
+|DESCRIÇÃO|**nvarchar (1000)**|Descrição da ordenação.|  
   
- O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte a ordenações do Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] também dá suporte a um número limitado (< 80) de agrupamentos chamados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agrupamentos, que foram desenvolvidos antes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agrupamentos do Windows com suporte. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agrupamentos ainda são suportados para compatibilidade com versões anteriores, mas não devem ser usados para o novo trabalho de desenvolvimento. Para obter mais informações sobre a ordenação do Windows, veja [Nome de ordenação do Windows &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md). Para obter mais informações sobre ordenações, consulte [Suporte a ordenações e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
+ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte a ordenações do Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]também dá suporte a um número limitado (<80) de agrupamentos chamados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agrupamentos, que foram [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desenvolvidos antes dos agrupamentos do Windows com suporte. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]os agrupamentos ainda têm suporte para compatibilidade com versões anteriores, mas não devem ser usados para novos trabalhos de desenvolvimento. Para obter mais informações sobre a ordenação do Windows, veja [Nome de ordenação do Windows &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md). Para obter mais informações sobre ordenações, consulte [Suporte a ordenações e a Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
   
 ## <a name="examples"></a>Exemplos
 
  O exemplo a seguir retorna todos os nomes de ordenação que começam com a letra `L` e que são ordenações de classificação binária.
 
 > [!Note]
-> Consultas de SQL Data Warehouse do Azure contra fn_helpcollations () devem ser executadas no banco de dados mestre.  
+> As consultas do Azure SQL Data Warehouse em relação a fn_helpcollations () devem ser executadas no banco de dados mestre.  
   
 ```sql  
 SELECT Name, Description FROM fn_helpcollations()  
@@ -80,8 +80,8 @@ WHERE Name like 'L%' AND Description LIKE '% binary sort';
  (7 row(s) affected)  
  ```
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 
-[COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md)   
-[COLLATIONPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/collation-functions-collationproperty-transact-sql.md)  
-[Suporte ao agrupamento de banco de dados do Azure SQL Data Warehouse](https://azure.microsoft.com/blog/database-collation-support-for-azure-sql-data-warehouse-2)  
+[AGRUPAR &#40;&#41;Transact-SQL](~/t-sql/statements/collations.md)   
+[&#41;de agrupamento &#40;Transact-SQL](../../t-sql/functions/collation-functions-collationproperty-transact-sql.md)  
+[Suporte a agrupamento de banco de dados para o Azure SQL Data Warehouse](https://azure.microsoft.com/blog/database-collation-support-for-azure-sql-data-warehouse-2)  

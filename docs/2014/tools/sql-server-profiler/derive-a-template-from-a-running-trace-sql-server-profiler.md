@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 659a6d76fabd2b01d91ae993fc818d81874350c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63276309"
 ---
 # <a name="derive-a-template-from-a-running-trace-sql-server-profiler"></a>Derivar um modelo de um rastreamento em execução (SQL Server Profiler)
@@ -34,7 +34,7 @@ ms.locfileid: "63276309"
 > [!NOTE]  
 >  Se você selecionar um arquivo de modelo existente, será perguntado se você deseja substituir o arquivo. Você só pode selecionar um modelo definido pelo usuário. Não podem ser substituídos modelos de rastreamento do sistema predefinidos.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Modelos e permissões do SQL Server Profiler](sql-server-profiler-templates-and-permissions.md)   
  [Criar um modelo de rastreamento &#40;SQL Server Profiler&#41;](create-a-trace-template-sql-server-profiler.md)   
  [Modificar um modelo de rastreamento &#40;SQL Server Profiler&#41;](../../database-engine/modify-a-trace-template-sql-server-profiler.md)   

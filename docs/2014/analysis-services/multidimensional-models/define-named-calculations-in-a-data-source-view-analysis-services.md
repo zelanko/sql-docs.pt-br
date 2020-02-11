@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a69d5194c6eea3bc81676e8c0c3b1cac1d06270c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075573"
 ---
 # <a name="define-named-calculations-in-a-data-source-view-analysis-services"></a>Definir cálculos nomeados em uma exibição da fonte de dados (Analysis Services)
@@ -63,7 +63,7 @@ FROM
   
 3.  No painel **Tabelas** ou **Diagrama** , clique com o botão direito do mouse na tabela na qual você deseja definir o cálculo nomeado e, em seguida, clique em **Novo Cálculo Nomeado**. Clique com o botão direito do mouse no nome de tabela, e não em um atributo. O menu deverá ser semelhante ao seguinte:  
   
-     ![Captura de tela do espaço de trabalho de diagrama, menu de atalho](../media/ssas-olapdsv-diagram.gif "captura de tela do espaço de trabalho de diagrama, menu de atalho")  
+     ![Instantâneo do workspace de diagrama, menu de atalho](../media/ssas-olapdsv-diagram.gif "Instantâneo do workspace de diagrama, menu de atalho")  
   
     > [!NOTE]  
     >  Para localizar uma tabela ou exibição, use a opção **Localizar Tabela** clicando no menu **Exibição da Fonte de Dados** ou clicando com o botão direito do mouse em uma área livre dos painéis **Tabelas** ou **Diagrama** .  
@@ -83,7 +83,7 @@ FROM
 ## <a name="delete-a-named-calculation"></a>Excluir um cálculo nomeado  
  Quando você tenta excluir um cálculo nomeado, recebe uma lista de objetos definidos no projeto ou no banco de dados que serão invalidados pela exclusão. Revise a lista com cuidado antes de excluir o cálculo.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Definir consultas nomeadas em uma exibição da fonte de dados &#40;Analysis Services&#41;](define-named-queries-in-a-data-source-view-analysis-services.md)  
   
   

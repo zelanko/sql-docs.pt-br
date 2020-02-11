@@ -1,5 +1,5 @@
 ---
-title: Detalhes de conversão (guia traduções, Designer de cubo) (Analysis Services - dados multidimensionais) | Microsoft Docs
+title: Detalhes da tradução (guia Traduções, designer de cubo) (Analysis Services-dados multidimensionais) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8905a7fbb075826f37b9d362fe82def3e9664109
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065855"
 ---
 # <a name="translation-details-translations-tab-cube-designer-analysis-services---multidimensional-data"></a>Detalhes da Tradução (guia Traduções, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
   Use o painel **Detalhes da Transação** na guia **Transações** do Designer de Dimensão para definir e gerenciar traduções do cubo selecionado.  
   
 ## <a name="options"></a>Opções  
- **Idioma Padrão**  
+ **Idioma padrão**  
  Define os nomes dos objetos do cubo no idioma padrão.  
   
  **Tipo de objeto**  
@@ -31,19 +31,19 @@ ms.locfileid: "66065855"
   
 -   Grupo de medidas  
   
-     Propriedade `Caption`  
+     `Caption`Propriedade  
   
--   Measure  
+-   Medida  
   
      Propriedades `Caption` e `DisplayFolder`  
   
 -   Dimensão  
   
-     Propriedade `Caption`  
+     `Caption`Propriedade  
   
 -   Perspectiva  
   
-     Propriedade `Caption`  
+     `Caption`Propriedade  
   
 -   KPI (indicador chave de desempenho)  
   
@@ -51,17 +51,17 @@ ms.locfileid: "66065855"
   
 -   Ação  
   
-     Propriedade `Caption`  
+     `Caption`Propriedade  
   
 -   Conjunto nomeado  
   
-     Propriedade `Caption`  
+     `Caption`Propriedade  
   
 -   membro calculado  
   
-     Propriedade `Caption`  
+     `Caption`Propriedade  
   
- **\<Language>**  
+ **\<>de idiomas**  
  Digite o valor da propriedade do objeto de cubo no idioma selecionado.  
   
 ## <a name="context-menu"></a>Menu de contexto  
@@ -69,7 +69,7 @@ ms.locfileid: "66065855"
   
 |Termo|Definição|  
 |----------|----------------|  
-|**Nova tradução**|Selecione para exibir a caixa de diálogo **Selecionar Idioma** e criar uma nova tradução. A conversão será exibida como uma coluna nova na grade **Detalhes de Conversão** .|  
-|**Excluir tradução**|Selecione para excluir a tradução selecionada.|  
+|**Nova Tradução**|Selecione para exibir a caixa de diálogo **Selecionar Idioma** e criar uma nova tradução. A conversão será exibida como uma coluna nova na grade **Detalhes de Conversão** .|  
+|**Excluir Tradução**|Selecione para excluir a tradução selecionada.|  
   
   

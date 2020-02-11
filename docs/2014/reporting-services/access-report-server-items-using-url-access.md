@@ -14,21 +14,21 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bb841d8014bd1a66d533c10c4740c016bb13e737
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66110096"
 ---
 # <a name="access-report-server-items-using-url-access"></a>Acessar itens do Servidor de Relatório usando o acesso à URL
-  Este tópico descreve como acessar itens de catálogo de diferentes tipos em um banco de dados do servidor de relatório ou em um site do SharePoint usando *rs:Command*=*Value*.  
+  Este tópico descreve como acessar itens de catálogo de diferentes tipos em um banco de dados do servidor de relatório ou em um site do SharePoint usando *RS:*=*valor*do comando.  
   
- Não é necessário adicionar essa cadeia de caracteres de parâmetro. Se você omiti-la, o servidor de relatório avaliará o tipo de item e selecionará o valor de parâmetro apropriado automaticamente. No entanto, usar a cadeia de caracteres *rs:Command*=*Value* na URL melhora o desempenho do servidor de relatórios.  
+ Não é necessário adicionar essa cadeia de caracteres de parâmetro. Se você omiti-la, o servidor de relatório avaliará o tipo de item e selecionará o valor de parâmetro apropriado automaticamente. No entanto, usar a cadeia de caracteres de=*valor* de *comando RS:* na URL melhora o desempenho do servidor de relatório.  
   
  Observe a sintaxe do proxy `_vti_bin` nos exemplos a seguir. Para obter mais informações sobre como usar a sintaxe do proxy, consulte [Referência de parâmetro de acesso à URL](url-access-parameter-reference.md).  
   
 ## <a name="access-a-report"></a>Acessar um relatório  
- Para exibir um relatório no navegador, use o parâmetro *rs:Command*=*Render* . Por exemplo:  
+ Para exibir um relatório no navegador, use o parâmetro de*renderização* *RS: Command*=. Por exemplo:  
   
  `Native` `http://myrshost/reportserver?/Sales/YearlySalesByCategory&rs:Command=Render`  
   
@@ -38,14 +38,14 @@ ms.locfileid: "66110096"
 >  É importante que a URL inclua a sintaxe do proxy `_vti_bin` para rotear a solicitação através do SharePoint e do proxy HTTP [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . O proxy adiciona qualquer contexto à solicitação HTTP, o contexto necessário para garantir a execução adequada do relatório para servidores de relatório no modo do SharePoint.  
   
 ## <a name="access-a-resource"></a>Acessar um recurso  
- Para acessar um recurso, use o parâmetro *rs:Command*=*GetResourceContents* . Se o recurso for compatível com o navegador, como uma imagem, ele será aberto no navegador. Caso contrário, você será solicitado a abrir ou salvar o arquivo ou recurso em disco.  
+ Para acessar um recurso, use o parâmetro *RS: Command*=*GetResourceContents* . Se o recurso for compatível com o navegador, como uma imagem, ele será aberto no navegador. Caso contrário, você será solicitado a abrir ou salvar o arquivo ou recurso em disco.  
   
  `Native` `http://myrshost/reportserver?/Sales/StorePicture&rs:Command=GetResourceContents`  
   
  `SharePoint` `http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales/StorePicture.jpg&rs:Command=GetResourceContents`  
   
 ## <a name="access-a-data-source"></a>Acessar uma fonte de dados  
- Para acessar uma fonte de dados, use o parâmetro *rs:Command*=*GetDataSourceContents* . Se houver suporte para XML em seu navegador, a definição de fonte de dados será exibida se você for um usuário autenticado com a permissão `Read Contents` na fonte de dados. Por exemplo:   
+ Para acessar uma fonte de dados, use o parâmetro *RS: Command*=*GetDataSourceContents* . Se houver suporte para XML em seu navegador, a definição de fonte de dados será exibida se você for um usuário autenticado com a permissão `Read Contents` na fonte de dados. Por exemplo:  
   
  `Native` `http://myrshost/reportserver?/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents`  
   
@@ -68,7 +68,7 @@ ms.locfileid: "66110096"
  A cadeia de conexão é retornada com base na configuração **SecureConnectionLevel** do servidor de relatório. Para obter mais informações sobre a configuração **SecureConnectionLevel** , consulte [Usando métodos seguros do serviço Web](report-server-web-service/net-framework/using-secure-web-service-methods.md).  
   
 ## <a name="access-the-contents-of-a-folder"></a>Acessar o conteúdo de uma pasta  
- Para acessar o conteúdo de uma pasta, use o parâmetro *rs:Command*=*GetChildren* . Uma página genérica de navegação em pasta será retornada contendo links para subpastas, relatórios, fontes de dados e recursos na pasta solicitada. Por exemplo:   
+ Para acessar o conteúdo de uma pasta, use o parâmetro *RS: Command*=*GetChildren* . Uma página genérica de navegação em pasta será retornada contendo links para subpastas, relatórios, fontes de dados e recursos na pasta solicitada. Por exemplo:  
   
  `Native` `http://myrshost/reportserver?/Sales&rs:Command=GetChildren`  
   
@@ -76,7 +76,7 @@ ms.locfileid: "66110096"
   
  A interface do usuário que você vê é semelhante ao modo de procura do diretório usado pelo [!INCLUDE[msCoName](../includes/msconame-md.md)] IIS (Servidor de Informações da Internet). O número de versão, inclusive o número de compilação, do servidor de relatório também é exibido embaixo da listagem de pastas.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Acesso à URL &#40;SSRS&#41;](url-access-ssrs.md)   
  [Referência de parâmetro de acesso de URL](url-access-parameter-reference.md)  
   

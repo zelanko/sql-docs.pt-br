@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 271be9656aa7fabc1edbece16f18ae7a60ba3978
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63312622"
 ---
 # <a name="set-the-startup-options"></a>Definir as opções de inicialização
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pode ser configurado para abrir a superfície de design na configuração preferida quando o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] é iniciado. Configurar o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para ser aberto na configuração preferida pode economizar tempo.  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]pode ser configurado para abrir a superfície de design para a configuração preferida quando [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o é iniciado. Configurar o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para ser aberto na configuração preferida pode economizar tempo.  
   
 ## <a name="configuring-startup-options"></a>Configurando as opções de inicialização  
   
@@ -28,13 +28,13 @@ ms.locfileid: "63312622"
   
 2.  Expanda **Ambiente**e depois clique em **Inicialização**. Na lista **Na inicialização** , examine suas opções:  
   
-    -   **Abrir o Pesquisador de Objetos**. Essa é a opção padrão.  
+    -   **Abra**o pesquisador de objetos. Essa é a opção padrão.  
   
     -   **Abrir nova janela de consulta**.  
   
-    -   **Abrir Pesquisador de Objetos e nova consulta**.  
+    -   Abra o pesquisador **de objetos e a nova consulta**.  
   
-    -   **Abrir Pesquisador de Objetos e Monitor de Atividade**.  
+    -   **Abra o pesquisador de objetos e o monitor de atividade**.  
   
     -   **Abrir ambiente vazio**.  
   

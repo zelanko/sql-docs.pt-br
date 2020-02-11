@@ -14,15 +14,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2a611de458537156740521dae8b732eed3e2653c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63270250"
 ---
 # <a name="modify-snapshot-initialization-options-for-sql-replication"></a>Modificar as opções de inicialização de instantâneo para Replicação do SQL
 
-Este artigo descreve como modificar um número de opções quando [inicializando uma assinatura com um instantâneo](initialize-a-subscription-with-a-snapshot.md).
+Este artigo discute como modificar várias opções ao [inicializar uma assinatura com um instantâneo](initialize-a-subscription-with-a-snapshot.md).
 
 ## <a name="snapshot-format"></a>Formato do instantâneo
   Especifique o formato do instantâneo na página **Instantâneo** da caixa de diálogo **Propriedades de Publicação – \<Publicação>** . Para obter mais informações sobre como acessar essa caixa de diálogo, consulte [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md).  
@@ -36,7 +36,7 @@ Este artigo descreve como modificar um número de opções quando [inicializando
 ## <a name="snapshot-folder-locations"></a>Locais de pasta de instantâneo
 
 ### <a name="default-snapshot-location"></a>Localização do instantâneo padrão
-Especifique o local do instantâneo padrão (SQL Server Management Studio) local do instantâneo padrão na **pasta de instantâneo** página do Assistente para configurar a distribuição. Para obter mais informações sobre como usar o assistente, consulte [Configurar a publicação e a distribuição](configure-publishing-and-distribution.md). Se você criar uma publicação em um servidor que não esteja configurada como Distributor, especifique um local de instantâneo padrão na página **Pasta de Instantâneo** do Assistente para Novas Publicações. Para obter mais informações sobre como usar esse assistente, consulte [Criar uma publicação](publish/create-a-publication.md).  
+Especifique o local do instantâneo padrão (SQL Server Management Studio) especifique o local do instantâneo padrão na página **pasta do instantâneo** do assistente para configurar distribuição. Para obter mais informações sobre como usar o assistente, consulte [Configurar a publicação e a distribuição](configure-publishing-and-distribution.md). Se você criar uma publicação em um servidor que não esteja configurada como Distributor, especifique um local de instantâneo padrão na página **Pasta de Instantâneo** do Assistente para Novas Publicações. Para obter mais informações sobre como usar esse assistente, consulte [Criar uma publicação](publish/create-a-publication.md).  
   
  Modifique o local do instantâneo padrão na página **Publicadores** da caixa de diálogo **Propriedades do Distribuidor – \<Distribuidor>** . Para obter mais informações, consulte [Exibir e modificar as propriedades do Distribuidor e do Publicador](view-and-modify-distributor-and-publisher-properties.md). Defina a pasta de instantâneo para cada publicação na caixa de diálogo **Propriedades da Publicação – \<Publicação>** . Para obter mais informações, consulte [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md).  
   
@@ -50,10 +50,10 @@ Especifique o local do instantâneo padrão (SQL Server Management Studio) local
 1.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 
 ### <a name="alternate-snapshot-location"></a>Local de instantâneo alternativo
-  Especificar um local de instantâneo alternativo na página **Instantâneo** da caixa de diálogo **Propriedades de publicação – \<Publicação>** . Para obter mais informações sobre como acessar essa caixa de diálogo, consulte [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md). 
+  Especifique um local de instantâneo alternativo na página **instantâneo** da caixa de diálogo **Propriedades \<da publicação –>de publicação** . Para obter mais informações sobre como acessar essa caixa de diálogo, consulte [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md). 
 
   
-#### <a name="specify-an-alternate-snapshot-location"></a>Especificar um local alternativo de instantâneo  
+#### <a name="specify-an-alternate-snapshot-location"></a>Especificar um local de instantâneo alternativo  
   
 1.  Na página **Instantâneo** da caixa de diálogo **Propriedades da Publicação – \<Publicação>** :    
     1.  Selecione **Colocar os arquivos nesta pasta**, depois clique em **Procurar** para ir para o diretório ou para entrar no caminho de diretório em que os arquivos de instantâneo devem estar armazenados.    
@@ -66,7 +66,7 @@ Especifique o local do instantâneo padrão (SQL Server Management Studio) local
 
 
 ## <a name="compress-snapshot-files"></a>Compactar arquivos de instantâneo
-Especifique que os arquivos devem ser compactados na página **Instantâneo** da caixa de diálogo **Propriedades da Publicação – \<Publicação>** . Para obter mais informações sobre como acessar essa caixa de diálogo, consulte [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md).  
+Especifique que os arquivos devem ser compactados na página **instantâneo** da caixa de diálogo **Propriedades da publicação – \<>de publicação** . Para obter mais informações sobre como acessar essa caixa de diálogo, consulte [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md).  
   
 1.  Na página **Instantâneo** da caixa de diálogo **Propriedades da Publicação – \<Publicação>** :  
   
@@ -90,8 +90,8 @@ Especifique que os arquivos devem ser compactados na página **Instantâneo** da
   
  Se você estiver compactando o arquivo de instantâneo (colocando-o em um formato de arquivo CAB [!INCLUDE[msCoName](../../includes/msconame-md.md)] ), os scripts também são compactados e colocados no arquivo CAB. Depois que o arquivo de instantâneo compactado for transferido para o Assinante e descompactado para um diretório de trabalho no Assinante, qualquer script indicado como script de pré-instantâneo será executado. Da mesma forma, qualquer script de pós-instantâneo é descompactado e executado no Assinante como última etapa aplicando-se o instantâneo.  
 
-### <a name="execute-a-script-before-or-after-a-snapshot-is-applied"></a>Executar um script antes ou depois que um instantâneo é aplicado.  
- Especifique um script opcional para ser executado antes ou depois da aplicação do instantâneo na página **Instantâneo** da caixa de diálogo **Propriedades da Publicação – \<Publicação>** . Para obter mais informações sobre como acessar essa caixa de diálogo, consulte [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md).  
+### <a name="execute-a-script-before-or-after-a-snapshot-is-applied"></a>Executar um script antes ou depois de um instantâneo ser aplicado  
+ Especifique um script opcional para ser executado antes ou depois que o instantâneo for aplicado na página **instantâneo** da caixa de diálogo **Propriedades da publicação – \<>de publicação** . Para obter mais informações sobre como acessar essa caixa de diálogo, consulte [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md).  
 
 
 1.  Na página **Instantâneo** da caixa de diálogo **Propriedades da Publicação – \<Publicação>** :    

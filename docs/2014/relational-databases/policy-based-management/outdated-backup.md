@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: bcdfc02c06117529c2f09621197728f3c9e77dc1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63253158"
 ---
 # <a name="outdated-backup"></a>Backup desatualizado
@@ -45,7 +45,7 @@ ms.locfileid: "63253158"
   
  [Backups de log de transações &#40;SQL Server&#41;](../backup-restore/transaction-log-backups-sql-server.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Monitorar e impor práticas recomendadas usando o Gerenciamento Baseado em Políticas](monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Monitorar e impor melhores práticas usando o gerenciamento baseado em políticas](monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
   
   

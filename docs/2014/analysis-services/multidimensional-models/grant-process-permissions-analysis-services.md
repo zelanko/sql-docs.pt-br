@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 49b8a1c8ce566b18143b6b693a227fba4a5bd094
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074885"
 ---
 # <a name="grant-process-permissions-analysis-services"></a>Conceder permissões de processo (Analysis Services)
@@ -35,9 +35,9 @@ ms.locfileid: "66074885"
   
 1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conecte-se à instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], abra a pasta Bancos de Dados e selecione um banco de dados.  
   
-2.  Clique com o botão direito do mouse em **Funções** | **Nova Função**. Insira um nome e uma descrição.  
+2.  Clique com o botão direito do mouse em **funções** | **nova função**. Insira um nome e uma descrição.  
   
-3.  No **gerais** painel, selecione o `Process Database` caixa de seleção. Além disso, selecione `Read Definition` para permitir o processamento interativo por meio de uma das ferramentas do SQL Server, como também [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+3.  No painel **geral** , marque a caixa `Process Database` de seleção. Além disso, `Read Definition` selecione também habilitar o processamento interativo por meio de uma das ferramentas de SQL Server [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], como.  
   
 4.  No painel **Associação** , adicione as contas de usuário e de grupo do Windows com permissão para processar qualquer objeto nesse banco de dados.  
   
@@ -50,11 +50,11 @@ ms.locfileid: "66074885"
   
 1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conecte-se à instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], abra a pasta Bancos de Dados e selecione um banco de dados.  
   
-2.  Clique com o botão direito do mouse em **Funções** | **Nova Função**. Insira um nome e uma descrição.  
+2.  Clique com o botão direito do mouse em **funções** | **nova função**. Insira um nome e uma descrição.  
   
-3.  No **gerais** painel, desmarque o `Process Database` caixa de seleção. As permissões de banco de dados substituem a capacidade de definir permissões em objetos de nível mais baixo, tornando as opções de função acinzentadas ou não selecionáveis.  
+3.  No painel **geral** , desmarque a `Process Database` caixa de seleção. As permissões de banco de dados substituem a capacidade de definir permissões em objetos de nível mais baixo, tornando as opções de função acinzentadas ou não selecionáveis.  
   
-     Tecnicamente, nenhuma permissão de banco de dados é necessária para as funções de processamento dedicadas. Mas sem `Read Definition` no nível do banco de dados, não é possível exibir o banco de dados [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], o que dificulta o teste.  
+     Tecnicamente, nenhuma permissão de banco de dados é necessária para as funções de processamento dedicadas. Mas sem `Read Definition` no nível do banco de dados, não é possível exibir [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]o banco de dados no, tornando o teste mais difícil.  
   
 4.  Selecione objetos individuais para processar:  
   
@@ -77,11 +77,11 @@ ms.locfileid: "66074885"
 ## <a name="set-processing-permissions-on-a-data-mining-structure"></a>Defina permissões de processamento em uma estrutura de mineração de dados  
  Você pode criar uma função que conceda permissão para processar estruturas de mineração de dados. Isso inclui o processamento de todos os modelos de mineração.  
   
- **Detalhar** e `Read Definition` permissões usadas para um modelo de mineração e uma estrutura de navegação são atômicas e podem ser adicionados à mesma função ou separados em uma função diferente.  
+ **Drill** -through `Read Definition` e permissões usadas para navegar em um modelo de mineração e estrutura são atômicas e podem ser adicionadas à mesma função ou separadas em uma função diferente.  
   
 1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conecte-se à instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], abra a pasta Bancos de Dados e selecione um banco de dados.  
   
-2.  Clique com o botão direito do mouse em **Funções** | **Nova Função**. Insira um nome e uma descrição. No painel **Geral** , verifique se as caixas de seleção de permissão do banco de dados estão desmarcadas. As permissões de banco de dados substituirão a capacidade de definir permissões em objetos de nível mais baixo, tornando as opções de função acinzentadas ou não selecionáveis.  
+2.  Clique com o botão direito do mouse em **funções** | **nova função**. Insira um nome e uma descrição. No painel **Geral** , verifique se as caixas de seleção de permissão do banco de dados estão desmarcadas. As permissões de banco de dados substituirão a capacidade de definir permissões em objetos de nível mais baixo, tornando as opções de função acinzentadas ou não selecionáveis.  
   
 3.  No painel **Estruturas de Mineração** , marque a caixa de seleção **Processar** para cada estrutura de mineração.  
   
@@ -89,10 +89,10 @@ ms.locfileid: "66074885"
   
 5.  Clique em **OK** para concluir a definição de função.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Processar banco de dados, tabela ou partição](../tabular-models/process-database-table-or-partition-analysis-services.md)   
- [Processamento de objetos de modelo multidimensional](processing-a-multidimensional-model-analysis-services.md)   
+ [Processamento de objeto de modelo multidimensional](processing-a-multidimensional-model-analysis-services.md)   
  [Conceder permissões de banco de dados &#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md)   
- [Conceder permissões para ler definição em metadados de objetos &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md)  
+ [Conceda permissões Read Definition em metadados de objeto &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md)  
   
   

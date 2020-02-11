@@ -1,5 +1,5 @@
 ---
-title: 'Como fazer: Implantar um Item de relatório personalizado | Microsoft Docs'
+title: Como implantar um item de relatório personalizado | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2b41519ee6a6d31be33d92c8fbdf2ab503c93ec1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63265076"
 ---
-# <a name="how-to-deploy-a-custom-report-item"></a>Como fazer: Implantar um item de relatório personalizado
+# <a name="how-to-deploy-a-custom-report-item"></a>Como implantar um item de relatório personalizado
   Para implantar um item de relatório personalizado no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], modifique os arquivos de configuração do servidor de relatório e copie os assemblies de componente em tempo de design e em tempo de execução nas pastas de aplicativo apropriadas para o Designer de Relatórios e o servidor de relatório.  
   
 ### <a name="to-deploy-a-custom-report-item"></a>Para implantar um item de relatório personalizado  
@@ -65,7 +65,7 @@ ms.locfileid: "63265076"
   
 5.  Copie a DLL de componente em tempo de design de item de relatório personalizado para o diretório %ProgramFiles%\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Arquivos de configuração do Reporting Services](../report-server/reporting-services-configuration-files.md)   
  [Bibliotecas de classes de itens de relatório personalizados](custom-report-item-class-libraries.md)  
   

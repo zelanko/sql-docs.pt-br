@@ -18,18 +18,18 @@ ms.assetid: 832ec15a-6e92-4eb5-8c4a-af4dba79fbaa
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ebc71c304939a977ac34cc2fad819edd463614fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67894988"
 ---
-# <a name="spmanagejobsbylogin-transact-sql"></a>sp_manage_jobs_by_login (Transact-SQL)
+# <a name="sp_manage_jobs_by_login-transact-sql"></a>sp_manage_jobs_by_login (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Exclui ou reatribui trabalhos pertencentes ao logon especificado.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,11 +42,11 @@ sp_manage_jobs_by_login
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @action = ] 'action'` A ação a ser tomada para o logon especificado. *ação* está **varchar(10)** , sem padrão. Quando *ação*é **excluir**, **sp_manage_jobs_by_login** exclui todos os trabalhos pertencentes a *current_owner_login_name*. Quando *ação* é **REATRIBUIR**, todos os trabalhos são atribuídos a *new_owner_login_name*.  
+`[ @action = ] 'action'`A ação a ser tomada para o logon especificado. a *ação* é **varchar (10)**, sem padrão. Quando a *ação*é **excluída**, **sp_manage_jobs_by_login** exclui todos os trabalhos de propriedade de *current_owner_login_name*. Quando a *ação* é **reatribuída**, todos os trabalhos são atribuídos a *new_owner_login_name*.  
   
-`[ @current_owner_login_name = ] 'current_owner_login_name'` O nome de logon do proprietário do trabalho atual. *current_owner_login_name* está **sysname**, sem padrão.  
+`[ @current_owner_login_name = ] 'current_owner_login_name'`O nome de logon do proprietário do trabalho atual. *current_owner_login_name* é **sysname**, sem padrão.  
   
-`[ @new_owner_login_name = ] 'new_owner_login_name'` O nome de logon do novo proprietário do trabalho. Use este parâmetro somente se *ação* é **REATRIBUIR**. *new_owner_login_name* está **sysname**, com um padrão NULL.  
+`[ @new_owner_login_name = ] 'new_owner_login_name'`O nome de logon do novo proprietário do trabalho. Use esse parâmetro somente se a *ação* for **reatribuir**. *new_owner_login_name* é **sysname**, com um padrão de NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -55,7 +55,7 @@ sp_manage_jobs_by_login
  Nenhum  
   
 ## <a name="permissions"></a>Permissões  
- Para executar esse procedimento armazenado, os usuários devem ter o **sysadmin** função de servidor fixa.  
+ Para executar esse procedimento armazenado, os usuários devem receber a função de servidor fixa **sysadmin** .  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir reatribui todos os trabalhos de `danw` para `françoisa`.  
@@ -71,8 +71,8 @@ EXEC dbo.sp_manage_jobs_by_login
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [sp_delete_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [&#41;&#40;Transact-SQL de sp_delete_job](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

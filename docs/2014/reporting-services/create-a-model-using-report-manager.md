@@ -1,5 +1,5 @@
 ---
-title: Criar um modelo usando o Gerenciador de relatórios | Microsoft Docs
+title: Criar um modelo usando Report Manager | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7b67e2a7048520d8a411789e501dbbe545d3cc02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109668"
 ---
 # <a name="create-a-model-using-report-manager"></a>Criar um modelo com o Gerenciador de Relatórios
@@ -26,7 +26,7 @@ ms.locfileid: "66109668"
  O modelo de relatório que você gera se baseia totalmente no esquema de fonte de dados compartilhados. Não é possível escolher quais partes da fonte de dados são incluídas no modelo, nem é possível editar as regras ou metadados de um modelo gerado. Entretanto, você pode definir propriedades no modelo após ele ser gerado e definir atribuições de funções que restringem o acesso à parte ou a todo o modelo.  
   
 > [!NOTE]  
->  Um modelo baseado no Oracle gerado usando o Gerenciador de relatórios ou [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[offSPServ](../includes/offspserv-md.md)] 2007 [!INCLUDE[SPS2010](../includes/sps2010-md.md)] incluirá objetos de banco de dados que fazem parte do esquema para a conta de usuário usada para se conectar à fonte de dados Oracle. O nome de conta de usuário é especificado nas credenciais de propriedades de fonte de dados.  
+>  Um modelo baseado em Oracle gerado usando Report Manager ou [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[offSPServ](../includes/offspserv-md.md)] 2007 [!INCLUDE[SPS2010](../includes/sps2010-md.md)] incluirá objetos de banco de dados que fazem parte do esquema para a conta de usuário usada para conectar-se à fonte do Oracle Data. O nome de conta de usuário é especificado nas credenciais de propriedades de fonte de dados.  
   
 ### <a name="to-create-a-new-data-source-for-a-report-model-using-report-manager"></a>Para criar uma nova fonte de dados para um modelo de relatório que usa o Gerenciador de Relatórios  
   
@@ -40,15 +40,15 @@ ms.locfileid: "66109668"
   
 5.  Verifique se a caixa de seleção **Habilitar esta fonte de dados** está selecionada.  
   
-6.  Na lista **Tipo de conexão** , selecione o tipo de fonte de dados para o qual você deseja se conectar. O tipo de conexão deve ser um destes procedimentos: **Oracle**, **Microsoft SQL Server** ou **Microsoft SQL Server Analysis Services**.  
+6.  Na lista **Tipo de conexão** , selecione o tipo de fonte de dados para o qual você deseja se conectar. O tipo de conexão deve ser um dos seguintes: **Oracle**, **Microsoft SQL Server** ou **Microsoft SQL Server Analysis Services**.  
   
 7.  Na caixa **Cadeia de conexão** , digite a cadeia de conexão que aponta para o banco de dados.  
   
 8.  Selecione o método de conexão que os usuários do Construtor de Relatórios necessitarão usar para se conectar ao banco de dados.  
   
-    -   Autenticação do Windows: Selecione esta opção quando desejar que o sistema operacional autentique [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usuários. Esta opção permite [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usar os recursos de segurança do Windows como a criptografia de senha para autenticar os usuários. É altamente recomendado que você selecione essa opção.  
+    -   Autenticação do Windows: Selecione esta opção quando desejar que o sistema operacional autentique os usuários [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Esta opção permite [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usar os recursos de segurança do Windows como a criptografia de senha para autenticar os usuários. É altamente recomendado que você selecione essa opção.  
   
-    -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Autenticação: Selecione esta opção quando desejar que os usuários usem um [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] conta de logon que você criou. Os usuários devem fornecer um nome de logon e senha válidos [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+    -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Autenticação: Selecione esta opção quando desejar que os usuários usem uma [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] conta de logon que você criou. Os usuários devem fornecer um nome de logon e senha válidos [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
         > [!CAUTION]  
         >  Sempre que for possível, use a Autenticação do Windows.  
@@ -79,9 +79,9 @@ ms.locfileid: "66109668"
   
      O modelo de relatório é criado e salvo no local por você especificado. Você pode atribuir permissões a este modelo usando o Gerenciador de Relatórios.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Concedendo permissões em um servidor de relatório no modo nativo](security/granting-permissions-on-a-native-mode-report-server.md)   
- [Conexões de dados, fontes de dados e cadeias de caracteres de Conexão no Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [Página Nova Fonte de Dados &#40;Gerenciador de Relatórios&#41;](../../2014/reporting-services/new-data-source-page-report-manager.md)  
+ [Conexões de dados, fontes de dados e cadeias de conexão no Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
+ [Nova página de fonte de dados &#40;Report Manager&#41;](../../2014/reporting-services/new-data-source-page-report-manager.md)  
   
   

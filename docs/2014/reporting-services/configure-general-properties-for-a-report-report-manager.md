@@ -1,5 +1,5 @@
 ---
-title: Configurar propriedades gerais de um relatório (Gerenciador de relatórios) | Microsoft Docs
+title: Configurar propriedades gerais para um relatório (Report Manager) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cd0371497067f754166c33fb18022fe058cb88e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109749"
 ---
 # <a name="configure-general-properties-for-a-report-report-manager"></a>Configurar as propriedades gerais de um relatório (Gerenciador de Relatórios)
@@ -28,35 +28,35 @@ ms.locfileid: "66109749"
   
 2.  No Gerenciador de Relatórios, navegue até a página **Conteúdo** . Navegue até o relatório para o qual deseja configurar as propriedades gerais e abra-o.  
   
-3.  Clique na guia **Propriedades** .  
+3.  Clique no guia **Propriedades**.  
   
-     Ou, se o **conteúdo** página está no modo de exibição de detalhes, clique no ícone de página de propriedade:  
+     Ou, se a página **conteúdo** estiver no modo de exibição de detalhes, clique no ícone da página de propriedades:  
   
-     ![Ícone da página de propriedade](media/prop.gif "ícone da página de propriedade")  
+     ![Ícone da página de propriedades](media/prop.gif "Ícone da página de propriedades")  
   
-4.  O **geral** página de propriedades é exibida e você pode configurar as propriedades da seguinte maneira:  
+4.  A página Propriedades **gerais** é exibida e você pode configurar as propriedades da seguinte maneira:  
   
-    -   No **propriedades** seção, você pode modificar o nome do relatório e a descrição.  
+    -   Na seção **Propriedades** , você pode modificar o nome e a descrição do relatório.  
   
-    -   Você pode selecionar o **ocultar na exibição de lista** caixa de seleção para ocultar o item quando a página é aberta no layout de página padrão (modo de exibição de lista) que organiza itens para baixo na página.  
+    -   Você pode marcar a caixa de seleção **ocultar na exibição de lista** para ocultar o item quando a página for aberta no layout de página padrão (modo de exibição de lista) que organiza os itens na página.  
   
-    -   No **definição de relatório** seção, clique em **editar** para extrair uma cópia da definição de relatório. As modificações feitas localmente na definição de relatório não são salvas no servidor de relatório.  
+    -   Na seção **definição de relatório** , clique em **Editar** para extrair uma cópia da definição de relatório. As modificações feitas localmente na definição de relatório não são salvas no servidor de relatório.  
   
-         Ou, para atualizar a definição de relatório a partir de um arquivo. RDL, clique em **atualizar**.  
+         Ou, para atualizar a definição de relatório de um arquivo. RDL, clique em **Atualizar**.  
   
         > [!NOTE]  
         >  Se você atualizar uma definição de relatório, deverá redefinir as definições de fonte de dados depois de a atualização ser concluída.  
   
-    -   Use o **exclua** ou **mover** botões para excluir ou mover o relatório.  
+    -   Use os botões **excluir** ou **mover** para excluir ou mover o relatório.  
   
     -   Você também pode criar um relatório vinculado.  
   
-5.  Quando você terminar de configurar propriedades gerais para o relatório, clique em **aplicar**.  
+5.  Quando terminar de configurar as propriedades gerais para o relatório, clique em **aplicar**.  
   
-## <a name="see-also"></a>Consulte também  
- [Mover ou excluir um Item &#40;Gerenciador de relatórios&#41;](report-server/move-or-delete-an-item-report-manager.md)   
- [Página Conteúdo &#40;Gerenciador de Relatórios&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Mover ou excluir um item &#40;Report Manager&#41;](report-server/move-or-delete-an-item-report-manager.md)   
+ [Página de conteúdo &#40;Report Manager&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [Localizando, exibindo e gerenciando relatórios &#40;Construtor de Relatórios e SSRS&#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [Página de propriedades gerais, relatórios &#40;Gerenciador de relatórios&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)  
+ [Página Propriedades gerais, relatórios &#40;Report Manager&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)  
   
   
