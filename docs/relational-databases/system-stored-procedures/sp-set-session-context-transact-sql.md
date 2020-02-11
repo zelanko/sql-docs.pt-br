@@ -19,19 +19,19 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a57bf4acff6f8d0d08f86852de5ecc0411211c67
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68104391"
 ---
-# <a name="spsetsessioncontext-transact-sql"></a>sp_set_session_context (Transact-SQL)
+# <a name="sp_set_session_context-transact-sql"></a>sp_set_session_context (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
 Define um par chave-valor no contexto da sessão.  
   
 
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,41 +43,41 @@ sp_set_session_context [ @key= ] N'key', [ @value= ] 'value'
   
 ## <a name="arguments"></a>Argumentos  
  [ @key= ] N'key'  
- A chave que está sendo definida, do tipo **sysname**. O tamanho de chave máximo é 128 bytes.  
+ A chave que está sendo definida, do tipo **sysname**. O tamanho máximo da chave é 128 bytes.  
   
- [ @value=] 'value'  
- O valor para a chave especificada, do tipo **sql_variant**. Definir um valor NULL libera a memória. O tamanho máximo é 8.000 bytes.  
+ [ @value= ] valor  
+ O valor da chave especificada, do tipo **sql_variant**. A definição de um valor nulo libera a memória. O tamanho máximo é 8.000 bytes.  
   
- [ @read_only= ] { 0 | 1 }  
- Um sinalizador de tipo **bit**. Se for 1, em seguida, o valor para a chave especificada não pode ser alterado novamente nessa conexão lógica. Se 0 (padrão) e, em seguida, o valor pode ser alterado.  
+ [ @read_only= ] {0 | 1}  
+ Um sinalizador do tipo **bit**. Se for 1, o valor da chave especificada não poderá ser alterado novamente nesta conexão lógica. Se for 0 (padrão), o valor poderá ser alterado.  
   
 ## <a name="permissions"></a>Permissões  
  Qualquer usuário pode definir um contexto de sessão para sua sessão.  
   
 ## <a name="remarks"></a>Comentários  
- Como outros procedimentos armazenados, apenas literais e variáveis (não a expressões ou chamadas de função) podem ser passadas como parâmetros.  
+ Assim como outros procedimentos armazenados, somente literais e variáveis (não expressões ou chamadas de função) podem ser passados como parâmetros.  
   
- O tamanho total do contexto da sessão é limitado a 1 MB. Se você definir um valor que faz com que esse limite ser excedido, a instrução falhará. Você pode monitorar o uso de memória global no [DM os_memory_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).  
+ O tamanho total do contexto da sessão é limitado a 1 MB. Se você definir um valor que faz com que esse limite seja excedido, a instrução falhará. Você pode monitorar o uso geral de memória em [Sys. dm_os_memory_objects &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).  
   
- Você pode monitorar o uso de memória global consultando [DM os_memory_cache_counters &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-counters-transact-sql.md) da seguinte maneira: `SELECT * FROM sys.dm_os_memory_cache_counters WHERE type = 'CACHESTORE_SESSION_CONTEXT';`  
+ Você pode monitorar o uso de memória geral consultando [Sys. dm_os_memory_cache_counters &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-counters-transact-sql.md) da seguinte maneira:`SELECT * FROM sys.dm_os_memory_cache_counters WHERE type = 'CACHESTORE_SESSION_CONTEXT';`  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir mostra como definir e, em seguida, retornar uma chave de contexto de sessões chamada linguagem com um valor de inglês.  
+ O exemplo a seguir mostra como definir e, em seguida, retornar uma chave de contexto de sessões chamada idioma com um valor de inglês.  
   
 ```  
 EXEC sys.sp_set_session_context @key = N'language', @value = 'English';  
 SELECT SESSION_CONTEXT(N'language');  
 ```  
   
- O exemplo a seguir demonstra o uso do sinalizador somente leitura opcional.  
+ O exemplo a seguir demonstra o uso do sinalizador opcional somente leitura.  
   
 ```  
 EXEC sys.sp_set_session_context @key = N'user_id', @value = 4, @read_only = 1;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CURRENT_TRANSACTION_ID &#40;Transact-SQL&#41;](../../t-sql/functions/current-transaction-id-transact-sql.md)   
- [SESSION_CONTEXT &#40;Transact-SQL&#41;](../../t-sql/functions/session-context-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de SESSION_CONTEXT](../../t-sql/functions/session-context-transact-sql.md)   
  [Segurança em nível de linha](../../relational-databases/security/row-level-security.md)   
  [CONTEXT_INFO &#40;Transact-SQL&#41;](../../t-sql/functions/context-info-transact-sql.md)   
  [SET CONTEXT_INFO &#40;Transact-SQL&#41;](../../t-sql/statements/set-context-info-transact-sql.md)  

@@ -1,5 +1,5 @@
 ---
-title: 'Apêndice F: Biblioteca de cursores ODBC | Microsoft Docs'
+title: 'Apêndice F: biblioteca de cursores ODBC | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,31 +16,31 @@ ms.assetid: a03084df-4e48-48ef-917d-4a3fae48a605
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3bfffd95dd88b0a25be682a3df581e55825ed9ed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68090829"
 ---
 # <a name="appendix-f-odbc-cursor-library"></a>Apêndice F: Biblioteca de cursores ODBC
 > [!IMPORTANT]  
->  Este recurso será removido em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que usam esse recurso atualmente. A Microsoft recomenda usar a funcionalidade de cursor do driver.  
+>  Este recurso será removido em uma versão futura do Windows. Evite usar esse recurso em novos trabalhos de desenvolvimento e planeje modificar os aplicativos que atualmente usam esse recurso. A Microsoft recomenda usar a funcionalidade de cursor do driver.  
   
- A biblioteca de cursores ODBC (Odbccr32.dll) dá suporte a cursores roláveis do bloco para qualquer driver que está em conformidade com o nível de conformidade com a API do nível 1 e pode ser redistribuída por desenvolvedores com seus aplicativos ou drivers. A biblioteca de cursores também dá suporte a instruções de exclusão e atualização posicionadas para conjuntos de resultados gerados pelo **selecionar** instruções. Embora ela ofereça suporte a apenas Cursores estáticos e somente de encaminhamento, a biblioteca de cursores atende às necessidades de muitos aplicativos. Além disso, ele pode fornecer bom desempenho, especialmente para conjuntos de resultados de empresas de pequeno a médio porte e para aplicativos que não têm suporte de cursor BOM.  
+ A biblioteca de cursores ODBC (Odbccr32. dll) dá suporte a um bloco de cursores rolável para qualquer driver que esteja em conformidade com o nível de conformidade da API de nível 1 e possa ser redistribuído por desenvolvedores com seus aplicativos ou drivers. A biblioteca de cursores também dá suporte a instruções de atualização e exclusão posicionadas para conjuntos de resultados gerados por instruções **Select** . Embora ele dê suporte apenas a cursores estáticos e somente de encaminhamento, a biblioteca de cursores atende às necessidades de muitos aplicativos. Além disso, ele pode fornecer um bom desempenho, especialmente para conjuntos de resultados de tamanho pequeno para médio e para aplicativos que não têm um bom suporte a cursores.  
   
- A biblioteca de cursores é uma biblioteca de vínculo dinâmico (DLL) que reside entre o Gerenciador de Driver e o driver. Quando um aplicativo chama uma função, o Gerenciador de Driver chama a função na biblioteca de cursor, que executa a função ou chama no driver especificado. Para uma determinada conexão, um aplicativo especifica se a biblioteca de cursores é sempre usada, usada se o driver não oferece suporte a cursores roláveis ou nunca foi usada.  
+ A biblioteca de cursores é uma DLL (biblioteca de vínculo dinâmico) que reside entre o Gerenciador de driver e o driver. Quando um aplicativo chama uma função, o Gerenciador de driver chama a função na biblioteca de cursores, que executa a função ou a chama no driver especificado. Para uma determinada conexão, um aplicativo especifica se a biblioteca de cursores sempre será usada, usada se o driver não oferecer suporte a cursores roláveis ou nunca usado.  
   
- A biblioteca de cursor aparece como um driver para o Gerenciador de Driver. Se a biblioteca de cursores reside entre o Gerenciador de Driver e um ODBC *2.x* driver, a biblioteca de cursor aparece como um ODBC *2.x* driver. Se a biblioteca de cursores reside entre o Gerenciador de Driver e um ODBC *3.x* driver, a biblioteca de cursor aparece como um ODBC *3.x* driver. O comportamento exibido pela biblioteca de cursores depende da versão do driver está funcionando, com exceção dos deslocamentos de associação, que tem suporte para ODBC *2.x* e ODBC *3.x* drivers.  
+ A biblioteca de cursores aparece como um driver para o Gerenciador de driver. Se a biblioteca de cursores residir entre o Gerenciador de driver e um driver ODBC *2. x* , a biblioteca de cursores aparecerá como um driver ODBC *2. x* . Se a biblioteca de cursores residir entre o Gerenciador de driver e um driver ODBC *3. x* , a biblioteca de cursores aparecerá como um driver ODBC *3. x* . O comportamento exibido pela biblioteca de cursores depende da versão do driver com o qual está trabalhando, com exceção dos deslocamentos de ligação, que tem suporte para os drivers ODBC *2. x* e ODBC *3. x* .  
   
- Para implementar cursores em bloco **SQLFetch** e **SQLFetchScroll**, a biblioteca de cursores chama repetidamente **SQLFetch** no driver. Para implementar a rolagem, ele armazena em cache os dados que ela foi recuperada na memória e nos arquivos de disco. Quando um aplicativo solicita um novo conjunto de linhas, a biblioteca de cursores recupera conforme a necessidade do driver ou o cache.  
+ Para implementar cursores de bloco em **SQLFetch** e **SQLFetchScroll**, a biblioteca de cursores chama repetidamente **SQLFetch** no driver. Para implementar a rolagem, ele armazena em cache os dados recuperados na memória e em arquivos de disco. Quando um aplicativo solicita um novo conjunto de linhas, a biblioteca de cursores a recupera conforme necessário no driver ou no cache.  
   
- Para implementar atualização posicionadas e instruções delete, a biblioteca de cursores constrói uma **atualize** ou **excluir** instrução com uma **onde** cláusula que especifica o armazenados em cache valor de cada coluna associada na linha. Quando ele executa uma instrução de atualização posicionada, a biblioteca de cursores atualiza seu cache entre os valores nos buffers de conjunto de linhas.  
+ Para implementar as instruções UPDATE e DELETE posicionadas, a biblioteca de cursores constrói uma instrução **Update** ou **delete** com uma cláusula **Where** que especifica o valor em cache de cada coluna associada na linha. Quando ele executa uma instrução UPDATE posicionada, a biblioteca de cursores atualiza seu cache dos valores nos buffers de conjunto de linhas.  
   
- Para obter mais informações sobre a biblioteca de cursores ODBC, consulte as seções a seguir deste apêndice:  
+ Para obter mais informações sobre a biblioteca de cursores ODBC, consulte as seguintes seções deste apêndice:  
   
--   [Usando a biblioteca de cursores ODBC](../../../odbc/reference/appendixes/using-the-odbc-cursor-library.md)  
+-   [Usar a biblioteca de cursores ODBC](../../../odbc/reference/appendixes/using-the-odbc-cursor-library.md)  
   
--   [Executando instruções de exclusão e atualização posicionadas](../../../odbc/reference/appendixes/executing-positioned-update-and-delete-statements.md)  
+-   [Executar instruções de exclusão e atualização posicionadas](../../../odbc/reference/appendixes/executing-positioned-update-and-delete-statements.md)  
   
 -   [Exemplo de código de biblioteca de cursores](../../../odbc/reference/appendixes/cursor-library-code-example.md)  
   

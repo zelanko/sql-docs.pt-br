@@ -1,5 +1,5 @@
 ---
-title: SQLSTATEs | Microsoft Docs
+title: Sqlstates | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,30 +14,30 @@ ms.assetid: f29fff2e-3d09-4a8c-a2f9-2059062cbebf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8213c08e6844003d880129dda4b441a5592bbc86
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68107340"
 ---
 # <a name="sqlstates"></a>SQLSTATEs
-SQLSTATEs fornecem informações detalhadas sobre a causa de um aviso ou erro. Os SQLSTATEs neste manual baseadas nesses encontrada na especificação de CLI IEF/ISO, embora esses SQLSTATEs que começam com mensagens Instantâneas são específicas para ODBC.  
+Os sqlstates fornecem informações detalhadas sobre a causa de um aviso ou erro. Os hiperestados neste manual se baseiam naqueles encontrados na especificação da CLI ISO/IEF, embora esses sqlestados que começam com IM sejam específicos do ODBC.  
   
- Ao contrário de códigos de retorno, os SQLSTATEs deste manual são diretrizes e drivers não são necessários para retorná-los. Portanto, enquanto os drivers devem retornar o SQLSTATE apropriado para qualquer erro ou aviso, que eles são capazes de detectar, aplicativos não devem contar com esse sempre que ocorrem. Os motivos para essa situação são dois:  
+ Ao contrário dos códigos de retorno, os sqlstates neste manual são diretrizes e os drivers não são necessários para retorná-los. Portanto, embora os drivers devam retornar o SQLSTATE adequado para qualquer erro ou aviso que eles sejam capazes de detectar, os aplicativos não devem contar com isso sempre ocorrendo. As razões para essa situação são duplas:  
   
--   **Incompletude** embora deste manual lista um grande número de erros e avisos e as possíveis causas para esses erros e avisos, ele não está completo e provavelmente nunca estará; implementações de driver simplesmente variam muito. Qualquer driver específico provavelmente não retornará todos os SQLSTATEs listados neste manual e podem retornar SQLSTATEs não listadas neste manual.  
+-   **Inintegridade** Embora este manual liste um grande número de erros e avisos e as possíveis causas desses erros e avisos, ele não está completo e provavelmente nunca será; implementações de driver simplesmente variam muito. Qualquer driver específico provavelmente não retornará todos os sqlstates listados neste manual e poderá retornar sqlstates não listados neste manual.  
   
--   **Complexidade** alguns mecanismos de banco de dados - mecanismos de banco de dados relacional particularmente - retornam literalmente milhares de erros e avisos. Os drivers para esses mecanismos são provavelmente não mapear todos esses erros e avisos a serem SQLSTATEs por causa do esforço envolvido, o inexactness dos mapeamentos, o tamanho grande de código resultante e o valor baixo do código resultante, que geralmente retorna programação erros que nunca devem ser encontrados em tempo de execução. Portanto, drivers devem ser mapeado como muitos erros e avisos que parece razoável e certifique-se de mapear esses erros e avisos no qual a lógica do aplicativo podem se basear, como o SQLSTATE 01004 (dados truncados).  
+-   **Complexidade** Alguns mecanismos de banco de dados – especialmente mecanismos de banco de dados relacionais – retornam literalmente milhares de erros e avisos. Os drivers para esses mecanismos são improvável de Mapear todos esses erros e avisos para sqlstates devido ao esforço envolvido, à desexatação dos mapeamentos, ao grande tamanho do código resultante e ao valor baixo do código resultante, que geralmente retorna programação erros que nunca devem ser encontrados em tempo de execução. Portanto, os drivers devem mapear quantos erros e avisos forem razoáveis e não se esqueça de mapear esses erros e avisos em que a lógica do aplicativo pode ser baseada, como o SQLSTATE 01004 (dados truncados).  
   
- Como SQLSTATEs não são retornados de forma confiável, a maioria dos aplicativos exibi-los apenas para o usuário, juntamente com sua mensagem de diagnóstico associado, geralmente é adaptado para o erro ou aviso que ocorreu e o código de erro nativo. Não há raramente qualquer perda de funcionalidade ao fazer isso, porque os aplicativos não podem basear lógica de programação na maioria dos SQLSTATEs mesmo assim. Por exemplo, suponha **SQLExecDirect** retornará SQLSTATE 42000 (sintaxe ou violação de acesso). Se a instrução SQL que causou este erro é embutido em código ou criada pelo aplicativo, isso é um erro de programação e o código precisa ser corrigido. Se a instrução SQL é inserida pelo usuário, esse é um erro de usuário e o aplicativo fez tudo o que é possível por meio de informando ao usuário do problema.  
+ Como os sqlstates não são retornados de forma confiável, a maioria dos aplicativos apenas os exibe para o usuário junto com sua mensagem de diagnóstico associada, que geralmente é adaptada para o erro ou aviso específico que ocorreu e o código de erro nativo. Raramente há perda de funcionalidade para fazer isso, porque os aplicativos não podem basear a lógica de programação na maioria dos sqlstates mesmo assim. Por exemplo, suponha que **SQLExecDirect** retorna SQLSTATE 42000 (erro de sintaxe ou violação de acesso). Se a instrução SQL que causou esse erro for embutida em código ou criada pelo aplicativo, esse será um erro de programação e o código precisará ser corrigido. Se a instrução SQL for inserida pelo usuário, esse será um erro de usuário e o aplicativo terá feito tudo o que é possível ao informar o usuário do problema.  
   
- Quando aplicativos basear a lógica de programação em SQLSTATEs, deve estar preparados para o SQLSTATE não deve ser retornado ou um SQLSTATE diferente a serem retornados. Exatamente qual SQLSTATEs são retornados de forma confiável podem ser com base apenas na experiência com vários drivers. No entanto, a diretriz geral é que SQLSTATEs para erros que ocorrem no driver ou do Gerenciador de Driver, em vez de fonte de dados, são mais probabilidade de ser retornado de forma confiável. Por exemplo, a maioria dos drivers provavelmente retornará SQLSTATE HYC00 (recurso opcional não implementado), enquanto os drivers menos provavelmente retornam SQLSTATE 42021 (a coluna já existe).  
+ Quando os aplicativos fazem a lógica de programação base em sqlstates, eles devem estar preparados para que o SQLSTATE não seja retornado ou para que um SQLSTATE diferente seja retornado. Exatamente quais sqlstates são retornados de forma confiável podem se basear apenas na experiência com inúmeros drivers. No entanto, uma diretriz geral é que sqlstates para erros que ocorrem no driver ou no Gerenciador de driver, ao contrário da fonte de dados, têm maior probabilidade de serem retornados de forma confiável. Por exemplo, a maioria dos drivers provavelmente retorna SQLSTATE HYC00 (recurso opcional não implementado), enquanto menos drivers provavelmente retornam SQLSTATE 42021 (a coluna já existe).  
   
- As seguir SQLSTATEs indicam erros de tempo de execução ou avisos e são bons candidatos no qual basear a lógica de programação. No entanto, não há nenhuma garantia de que todos os drivers de retorná-los.  
+ Os sqlstates a seguir indicam erros de tempo de execução ou avisos e são bons candidatos nos quais basear a lógica de programação. No entanto, não há nenhuma garantia de que todos os drivers as retornem.  
   
 -   01004 (dados truncados)  
   
--   01S02 (valor de opção alterado)  
+-   01S02 (valor da opção alterado)  
   
 -   HY008 (operação cancelada)  
   
@@ -45,6 +45,6 @@ SQLSTATEs fornecem informações detalhadas sobre a causa de um aviso ou erro. O
   
 -   HYT00 (tempo limite expirado)  
   
- SQLSTATE HYC00 (recurso opcional não implementado) é significativo principalmente porque é a única maneira na qual um aplicativo pode determinar se um driver dá suporte a um determinado atributo de instrução ou a conexão.  
+ O SQLSTATE HYC00 (recurso opcional não implementado) é particularmente significativo porque é a única maneira na qual um aplicativo pode determinar se um driver dá suporte a uma instrução ou a um atributo de conexão específico.  
   
- Para obter uma lista completa de SQLSTATEs e quais funções retornarão-los, consulte [apêndice a: Códigos de erro ODBC](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md). Para obter uma explicação detalhada das condições sob as quais cada função pode retornar um SQLSTATE específico, consulte essa função.
+ Para obter uma lista completa de sqlstates e quais funções os retornam, consulte o [Apêndice a: códigos de erro ODBC](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md). Para obter uma explicação detalhada das condições sob as quais cada função pode retornar um SQLSTATE específico, consulte essa função.

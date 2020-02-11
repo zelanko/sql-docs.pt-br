@@ -18,18 +18,18 @@ ms.assetid: 0bd1cff4-ceff-4095-9ae4-e1e65a80f5d6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 98907614a132cfafd297e48f0ef625bc8eb4155d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68107900"
 ---
-# <a name="spoadestroy-transact-sql"></a>sp_OADestroy (Transact-SQL)
+# <a name="sp_oadestroy-transact-sql"></a>sp_OADestroy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Destrói um objeto OLE criado.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,21 +40,21 @@ sp_OADestroy objecttoken
   
 ## <a name="arguments"></a>Argumentos  
  *objecttoken*  
- É o token de objeto de um objeto OLE que foi criado anteriormente usando **sp_OACreate**.  
+ É o token do objeto de um objeto OLE criado anteriormente usando **sp_OACreate**.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou um número diferente de zero (falha) que é o valor inteiro do HRESULT retornado pelo objeto de Automação OLE.  
   
- Para obter mais informações sobre códigos de retorno HRESULT, consulte [OLE automação códigos de retorno e informações de erro](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
+ Para obter mais informações sobre códigos de retorno HRESULT, consulte [códigos de retorno de automação OLE e informações de erro](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
   
 ## <a name="remarks"></a>Comentários  
- Se **sp_OADestroy** não for chamado, criado objeto OLE é destruído automaticamente no final do lote.  
+ Se **sp_OADestroy** não for chamado, o objeto OLE criado será automaticamente destruído no final do lote.  
   
 ## <a name="permissions"></a>Permissões  
- Requer associação na **sysadmin** função de servidor fixa ou permissão de execução diretamente nesse procedimento armazenado. `Ole Automation Procedures` configuração deve estar **habilitado** usar qualquer procedimento de sistema relacionado à automação OLE.  
+ Requer a associação na função de servidor fixa **sysadmin** ou a permissão execute diretamente neste procedimento armazenado. `Ole Automation Procedures`a configuração deve ser **habilitada** para usar qualquer procedimento do sistema relacionado à automação OLE.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir destrói criado anteriormente **SQLServer** objeto.  
+ O exemplo a seguir destrói o objeto **SqlServer** criado anteriormente.  
   
 ```  
 EXEC @hr = sp_OADestroy @object;  
@@ -65,8 +65,8 @@ BEGIN
 END;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [OLE procedimentos armazenados de automação &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
- [Script de exemplo de automação](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Procedimentos armazenados de automação OLE &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
+ [Script de exemplo de automação OLE](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  
   
   

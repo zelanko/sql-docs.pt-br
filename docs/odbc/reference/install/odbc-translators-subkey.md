@@ -15,22 +15,22 @@ ms.assetid: 6b170f1f-e263-4aac-9d49-8d0ca0470ca2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7d26f2d33d81e08cfe4bddff9b2260bd2f098f00
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68093937"
 ---
 # <a name="odbc-translators-subkey"></a>Subchave de conversores ODBC
-Os valores sob a subchave de conversores ODBC listam os tradutores instalados. O formato desses valores é mostrado na tabela a seguir.  
+Os valores na subchave de conversores ODBC listam os tradutores instalados. O formato desses valores é mostrado na tabela a seguir.  
   
-|Nome|Tipo de dados|Data|  
+|Nome|Tipo de dados|data|  
 |----------|---------------|----------|  
-|*translator-desc*|REG_SZ|**instalado**|  
+|*Tradutor-desc*|REG_SZ|**Recém-instalado**|  
   
- O *tradutor desc* nome é definido pelo desenvolvedor do conversor.  
+ O nome do *Tradutor-desc* é definido pelo desenvolvedor do tradutor.  
   
- Por exemplo, suponha que um usuário tiver instalado o conversor de página de código do Microsoft® e um ASCII personalizado ao translator EBCDIC. Os valores sob a subchave de conversores ODBC podem ser da seguinte maneira:  
+ Por exemplo, suponha que um usuário tenha instalado o tradutor de página de código do Microsoft® e um conversor ASCII personalizado para EBCDIC. Os valores na subchave de conversores ODBC podem ser os seguintes:  
   
 ```  
 MS Code Page Translator: REG_SZ : Installed  

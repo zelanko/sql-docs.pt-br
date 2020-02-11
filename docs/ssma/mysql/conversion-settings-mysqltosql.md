@@ -10,16 +10,16 @@ ms.assetid: f551cf6e-1575-4206-9cca-975b5b43a6b8
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: debdd549dc010f7be6b9d9b37a4caf649d4e106a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68103120"
 ---
 # <a name="conversion-settings-mysqltosql"></a>Configurações de conversão (MySQLToSQL)
-O **'Configurações'** guia permite que o usuário defina as configurações de nível de nó. Na guia estará disponível nos seguintes nós da Metabase:  
+A guia **' configurações '** permite que o usuário defina as configurações de nível de nó. A guia estará disponível nos seguintes nós de metabase:  
   
--   Nó de banco de dados  
+-   Nó do banco de dados  
   
 -   Categoria de funções  
   
@@ -29,51 +29,51 @@ O **'Configurações'** guia permite que o usuário defina as configurações de
   
 -   Nó de tabela  
   
-## <a name="specifications"></a>Especificações:  
-O **configurações** guia tem duas configurações de usuário, de visualização.:  
+## <a name="specifications"></a>As  
+A guia **configurações** tem duas configurações de usuário, aula sobre visualização.:  
   
 1.  Conversão de função  
   
 2.  Conversão de tabela  
   
-Essas configurações estarão disponíveis com base no tipo de nó de Metabase. Por exemplo, conversão de função relacionados ao definir não estarão disponível em um nó da tabela  
+Essas configurações estarão disponíveis com base no tipo de nó da metabase. Por exemplo, a configuração relacionada à conversão de função não estará disponível no nó de tabela  
   
 > [!NOTE]  
-> -   As alterações feitas pelo usuário serão salvas no espaço de trabalho do projeto como um arquivo separado de preferência.  
-> -   A extensão deste arquivo serão **ccprefs**.  
+> -   As alterações feitas pelo usuário serão salvas no espaço de trabalho do projeto como um arquivo de preferência separado.  
+> -   A extensão desse arquivo será **ccprefs**.  
   
-1.  **Configuração da função de conversão:**  
+1.  **Configuração de conversão de função:**  
   
-    1.  Essa guia conterá **'Forçar a conversão de função'** opção. A opção pode ter um dos quatro valores a seguir:  
+    1.  Esta guia contém a opção **"forçar conversão de função"** . A opção pode ter um dos quatro valores a seguir:  
   
-        -   Converter de acordo com as configurações de projeto [herdadas]  
+        -   Converter de acordo com as configurações do projeto [herdado]  
   
-        -   Sempre converter para uma função  
+        -   Sempre converter em uma função  
   
         -   Sempre converter em um procedimento  
   
-        -   Converter de acordo com as configurações de projeto  
+        -   Converter de acordo com as configurações do projeto  
   
-    2.  Com base nas configurações, a função será ser convertida para uma função ou um procedimento armazenado.  
+    2.  Com base nas configurações, a função será convertida em uma função ou em um procedimento armazenado.  
   
-    3.  As configurações feitas pelo usuário são salvas no arquivo de preferências em cascata, ao clicar em **aplicar** botão.  
+    3.  As configurações feitas pelo usuário são salvas no arquivo de preferências em cascata ao clicar no botão **aplicar** .  
   
-2.  **Configuração da conversão de tabela:**  
+2.  **Configuração de conversão de tabela:**  
   
-    1.  Essa guia conterá **'Geração de coluna auxiliar ROWID Suprimir'** opção. A opção pode ter um dos quatro valores a seguir:  
+    1.  Esta guia contém a opção **' suprimir a geração de colunas auxiliares de ROWID '** . A opção pode ter um dos quatro valores a seguir:  
   
-        -   Converter de acordo com as configurações de projeto [herdadas]  
+        -   Converter de acordo com as configurações do projeto [herdado]  
   
         -   Sim  
   
         -   Não  
   
-        -   Converter de acordo com as configurações de projeto  
+        -   Converter de acordo com as configurações do projeto  
   
-    2.  Se **'Sim'** , essa configuração impede a criação de criação de coluna auxiliar ROWID em tabelas de destino.  
+    2.  Se **' Sim '**, essa configuração proíbe a criação de criação de coluna auxiliar de ROWID em tabelas de destino.  
   
-    3.  As configurações feitas pelo usuário são salvas no arquivo de preferências em cascata ao clicar em **aplicar** botão.  
+    3.  As configurações feitas pelo usuário são salvas no arquivo de preferências em cascata ao clicar no botão **aplicar** .  
   
-## <a name="see-also"></a>Consulte também  
-[Configurações do projeto (conversão) (MySQL para o SQL)](https://msdn.microsoft.com/7ad5fe44-6445-4ba8-a457-5af792631f11)  
+## <a name="see-also"></a>Consulte Também  
+[Configurações do projeto (conversão) (MySQL para SQL)](https://msdn.microsoft.com/7ad5fe44-6445-4ba8-a457-5af792631f11)  
   

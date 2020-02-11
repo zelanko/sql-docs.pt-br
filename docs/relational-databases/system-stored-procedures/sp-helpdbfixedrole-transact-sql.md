@@ -18,18 +18,18 @@ ms.assetid: ad87e9a0-b901-4e37-9950-aa517d680fc3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: dc461bcd1b5adbbc64b2eadaa4bb55af690ea88a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68123826"
 ---
-# <a name="sphelpdbfixedrole-transact-sql"></a>sp_helpdbfixedrole (Transact-SQL)
+# <a name="sp_helpdbfixedrole-transact-sql"></a>sp_helpdbfixedrole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retorna uma lista das funções de banco de dados fixas.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,22 +39,22 @@ sp_helpdbfixedrole [ [ @rolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @rolename = ] 'role'` É o nome de uma função de banco de dados fixa. *função* está **sysname**, com um padrão NULL. Se *função* é especificado, apenas as informações sobre essa função são retornadas; caso contrário, uma lista e descrição de todas as funções de banco de dados fixa será retornado.  
+`[ @rolename = ] 'role'`É o nome de uma função de banco de dados fixa. *role* é **sysname**, com um padrão de NULL. Se a *função* for especificada, somente as informações sobre essa função serão retornadas; caso contrário, uma lista e uma descrição de todas as funções de banco de dados fixas são retornadas.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |**DbFixedRole**|**sysname**|Nome da função de banco de dados fixa.|  
-|**Descrição**|**nvarchar(70)**|Descrição do **DbFixedRole.**|  
+|**Descrição**|**nvarchar (70)**|Descrição de **DbFixedRole.**|  
   
 ## <a name="remarks"></a>Comentários  
  As funções de banco de dados fixas, conforme mostrado na tabela a seguir, são definidas no nível de banco de dados e possuem permissões para executar atividades administrativas específicas no nível de banco de dados. As funções de banco de dados fixas não podem ser adicionadas ou removidas. As permissões concedidas a uma função de banco de dados fixa não podem ser alteradas.  
   
-|Função de banco de dados fixa|Descrição|  
+|Função de banco de dados fixa|DESCRIÇÃO|  
 |-------------------------|-----------------|  
 |**db_owner**|Proprietários de banco de dados|  
 |**db_accessadmin**|Administradores de acesso de banco de dados|  
@@ -68,7 +68,7 @@ sp_helpdbfixedrole [ [ @rolename = ] 'role' ]
   
  A tabela a seguir mostra os procedimentos armazenados usados para modificar as funções de banco de dados.  
   
-|Procedimento armazenado|Action|  
+|Procedimento armazenado|Ação|  
 |----------------------|------------|  
 |**sp_addrolemember**|Adiciona um usuário de banco de dados a uma função de banco de dados fixa.|  
 |**sp_helprole**|Exibe uma lista dos membros de uma função de banco de dados fixa.|  
@@ -87,13 +87,13 @@ EXEC sp_helpdbfixedrole;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Procedimentos de segurança armazenados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Procedimentos armazenados de segurança &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
- [sp_dbfixedrolepermission &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbfixedrolepermission-transact-sql.md)   
- [sp_droprolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
- [sp_helprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   
- [sp_helprolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_dbfixedrolepermission](../../relational-databases/system-stored-procedures/sp-dbfixedrolepermission-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_droprolemember](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_helprole](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_helprolemember](../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

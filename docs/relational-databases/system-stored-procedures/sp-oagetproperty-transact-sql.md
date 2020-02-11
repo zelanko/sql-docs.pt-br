@@ -18,18 +18,18 @@ ms.assetid: 240eeeb9-6d8b-4930-b912-1d273ca0ab38
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6efc0b620dcec300b5342ea5a0f63358fcdfadc5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68107886"
 ---
-# <a name="spoagetproperty-transact-sql"></a>sp_OAGetProperty (Transact-SQL)
+# <a name="sp_oagetproperty-transact-sql"></a>sp_OAGetProperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Obtém um valor de propriedade de um objeto OLE.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,24 +42,24 @@ sp_OAGetProperty objecttoken , propertyname
   
 ## <a name="arguments"></a>Argumentos  
  *objecttoken*  
- É o token de objeto de um objeto OLE que foi criado anteriormente usando **sp_OACreate**.  
+ É o token do objeto de um objeto OLE criado anteriormente usando **sp_OACreate**.  
   
  *propertyname*  
  É o nome de propriedade do objeto OLE a ser retornado.  
   
- *PropertyValue* **saída**  
+ *PropertyValue* de **saída**  
  É o valor de propriedade retornado. Se for especificado, deverá ser uma variável local do tipo de dados apropriado.  
   
- Se a propriedade retorna um objeto OLE, *propertyvalue* deve ser uma variável local de tipo de dados **int**. Um token de objeto é armazenado na variável local, e esse token de objeto pode ser usado com outros procedimentos armazenados de automação OLE.  
+ Se a propriedade retornar um objeto OLE, *PropertyValue* deverá ser uma variável local do tipo de dados **int**. Um token de objeto é armazenado na variável local e esse token de objeto pode ser usado com outros procedimentos armazenados de automação OLE.  
   
- Se a propriedade retornar um único valor, especifique uma variável local para *propertyvalue*, que retorna a propriedade de valor na variável local; ou não especificar *propertyvalue*, que retorna o valor da propriedade para o cliente como um conjunto de resultados de coluna única e uma linha.  
+ Se a propriedade retornar um único valor, especifique uma variável local para *PropertyValue*, que retorna o valor da propriedade na variável local; ou não especifique *PropertyValue*, que retorna o valor da propriedade para o cliente como um conjunto de resultados de coluna única e de linha única.  
   
- Quando a propriedade retorna uma matriz, se *propertyvalue* for especificado, ele é definido como NULL.  
+ Quando a propriedade retorna uma matriz, se *PropertyValue* for especificado, ela será definida como NULL.  
   
- Se *propertyvalue* for especificado, mas a propriedade não retorna um valor, ocorrerá um erro. Se a propriedade retornar uma matriz com mais de duas dimensões, ocorrerá um erro.  
+ Se *PropertyValue* for especificado, mas a propriedade não retornar um valor, ocorrerá um erro. Se a propriedade retornar uma matriz com mais de duas dimensões, ocorrerá um erro.  
   
  *index*  
- É um parâmetro de índice. Se especificado, *índice* deve ser um valor de tipo de dados apropriado.  
+ É um parâmetro de índice. Se especificado, o *índice* deve ser um valor do tipo de dados apropriado.  
   
  Algumas propriedades têm parâmetros. Estas propriedades são chamadas de propriedades indexadas e os parâmetros são chamados de parâmetros de índice. Uma propriedade pode ter vários parâmetros de índice.  
   
@@ -69,7 +69,7 @@ sp_OAGetProperty objecttoken , propertyname
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou um número diferente de zero (falha) que é o valor inteiro do HRESULT retornado pelo objeto de Automação OLE.  
   
- Para obter mais informações sobre códigos de retorno HRESULT, consulte [OLE automação códigos de retorno e informações de erro](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
+ Para obter mais informações sobre códigos de retorno HRESULT, consulte [códigos de retorno de automação OLE e informações de erro](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Se a propriedade retornar uma matriz com uma ou duas dimensões, a matriz será retornada ao cliente como um conjunto de resultados:  
@@ -78,11 +78,11 @@ sp_OAGetProperty objecttoken , propertyname
   
 -   Uma matriz bidimensional é retornada ao cliente como um conjunto de resultados com tantas colunas quanto houver elementos na primeira dimensão da matriz e com tantas linhas quanto houver elementos na segunda dimensão da matriz. Em outras palavras, a matriz é retornada como (colunas, linhas).  
   
- Quando o valor de retorno de uma propriedade ou valor de retorno de método é uma matriz **sp_OAGetProperty** ou **sp_OAMethod** retorna um conjunto de resultados para o cliente. (Os parâmetros de saída de método não podem ser matrizes.) Esses procedimentos examinam todos os valores de dados na matriz para determinar os tipos de dados apropriados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e os tamanhos dos dados a serem usados para cada coluna no conjunto de resultados. Para uma coluna específica, esses procedimentos usam o tipo de dados e o tamanho necessários para representar todos os valores de dados nesta coluna.  
+ Quando um valor de retorno de propriedade ou um valor de retorno de método é uma matriz, **sp_OAGetProperty** ou **sp_OAMethod** retorna um conjunto de resultados para o cliente. (Os parâmetros de saída de método não podem ser matrizes.) Esses procedimentos examinam todos os valores de dados na matriz para determinar os tipos de dados apropriados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e os tamanhos dos dados a serem usados para cada coluna no conjunto de resultados. Para uma coluna específica, esses procedimentos usam o tipo de dados e o tamanho necessários para representar todos os valores de dados nesta coluna.  
   
  Quando todos os valores de dados em uma coluna compartilharem o mesmo tipo de dados, esse tipo de dados será usado para a coluna inteira. Quando os valores de dados em uma coluna forem de tipos de dados diferentes, o tipo de dados da coluna inteira será escolhido com base no quadro a seguir.  
   
-||int|float|money|datetime|varchar|NVARCHAR|  
+||INT|FLOAT|money|DATETIME|varchar|NVARCHAR|  
 |------|---------|-----------|-----------|--------------|-------------|--------------|  
 |**int**|**int**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**float**|**float**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
@@ -92,15 +92,15 @@ sp_OAGetProperty objecttoken , propertyname
 |**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|  
   
 ## <a name="remarks"></a>Comentários  
- Você também pode usar **sp_OAMethod** para obter um valor da propriedade.  
+ Você também pode usar **sp_OAMethod** para obter um valor de propriedade.  
   
 ## <a name="permissions"></a>Permissões  
- Requer associação na **sysadmin** função de servidor fixa ou permissão de execução diretamente nesse procedimento armazenado. `Ole Automation Procedures` configuração deve estar **habilitado** usar qualquer procedimento de sistema relacionado à automação OLE.  
+ Requer a associação na função de servidor fixa **sysadmin** ou a permissão execute diretamente neste procedimento armazenado. `Ole Automation Procedures`a configuração deve ser **habilitada** para usar qualquer procedimento do sistema relacionado à automação OLE.  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-a-local-variable"></a>A. Usando uma variável local  
- O exemplo a seguir obtém a `HostName` propriedade (da criado anteriormente **SQLServer** objeto) e o armazena em uma variável local.  
+### <a name="a-using-a-local-variable"></a>a. Usando uma variável local  
+ O exemplo a seguir obtém `HostName` a propriedade (do objeto **SqlServer** criado anteriormente) e a armazena em uma variável local.  
   
 ```  
 DECLARE @property varchar(255);  
@@ -114,7 +114,7 @@ PRINT @property;
 ```  
   
 ### <a name="b-using-a-result-set"></a>B. Usando um conjunto de resultados  
- O exemplo a seguir obtém a `HostName` propriedade (da criado anteriormente **SQLServer** objeto) e retorna-o para o cliente como um conjunto de resultados.  
+ O exemplo a seguir obtém `HostName` a propriedade (do objeto **SqlServer** criado anteriormente) e a retorna ao cliente como um conjunto de resultados.  
   
 ```  
 EXEC @hr = sp_OAGetProperty @object, 'HostName';  
@@ -125,8 +125,8 @@ BEGIN
 END;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [OLE procedimentos armazenados de automação &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
- [Script de exemplo de automação](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Procedimentos armazenados de automação OLE &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
+ [Script de exemplo de automação OLE](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  
   
   
