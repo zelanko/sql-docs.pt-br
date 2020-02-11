@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 39f3ccc462fb063ecb314b1e9968dcfa8a095cbb
-ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72688893"
 ---
 # <a name="define-the-serialization-of-xml-data"></a>Definir a serialização de dados XML
@@ -65,7 +65,7 @@ select CAST(CAST(N'<Δ/>' as XML) as NVARCHAR(MAX))
 select CAST(CAST(N'<Δ/>' as XML) as VARCHAR(MAX))  
 ```  
   
- Isso pode resultar em um erro, se a página de código do agrupamento atual não puder representar o &#x10300;caractere Unicode, ou ele irá representá-lo na codificação específica.  
+ Isso pode resultar em um erro se a página de código do agrupamento atual não puder representar o caractere Unicode & # x10300;, ou ele irá representá-lo na codificação específica.  
   
  Ao retornar resultados XML para o lado do cliente, os dados serão enviados em codificação UTF-16. O provedor do lado do cliente exporá os dados de acordo com as regras de sua API.  
   
@@ -149,7 +149,7 @@ select CAST(@x.query('1.34e1') as nvarchar(50))
   
  Isso retorna o valor da cadeia de caracteres 13.4.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Regras de conversão de tipo em XQuery](/sql/xquery/type-casting-rules-in-xquery)   
  [CAST e CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql)  
   

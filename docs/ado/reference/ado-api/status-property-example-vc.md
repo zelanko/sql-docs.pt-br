@@ -1,5 +1,5 @@
 ---
-title: Exemplo da propriedade status (VC + +) | Microsoft Docs
+title: Exemplo da propriedade Status (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 194ce221-49bd-4474-ba34-91453d329381
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 708120992341b0e184cc42d13ebe1f461ecf861a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67916778"
 ---
 # <a name="status-property-example-vc"></a>Exemplo da propriedade Status (VC++)
-Este exemplo usa o [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md) propriedade para exibir quais registros foram modificados em uma operação em lote antes de uma atualização em lotes tiver ocorrido.  
+Este exemplo usa a propriedade [status](../../../ado/reference/ado-api/status-property-ado-recordset.md) para exibir quais registros foram modificados em uma operação em lote antes que uma atualização do lote tenha ocorrido.  
   
 ```  
 // BeginStatusCpp.cpp  
@@ -186,5 +186,5 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Propriedade Status (Conjunto de registros ADO)](../../../ado/reference/ado-api/status-property-ado-recordset.md)

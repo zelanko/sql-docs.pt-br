@@ -13,16 +13,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: d2205465f1fd6f03c67e1fc09ec76a2dfbb2e083
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71952039"
 ---
 # <a name="reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode"></a>Tópicos de Ajuda F1 do Gerenciador de Configurações do Reporting Services (modo nativo do SSRS).
   Esta seção fornece ajuda de F1 para o Gerenciador de Configurações do Reporting Services.  
   
- [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+ [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modo nativo.  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
@@ -30,7 +30,7 @@ ms.locfileid: "71952039"
   
 -   [Status do servidor de relatório](../../../2014/sql-server/install/report-server-status-ssrs-native-mode.md)  
   
--   [Conta de Serviço](../../../2014/sql-server/install/service-account-ssrs-native-mode.md)  
+-   [Conta de serviço](../../../2014/sql-server/install/service-account-ssrs-native-mode.md)  
   
 -   [URL do serviço Web](../../../2014/sql-server/install/web-service-url-ssrs-native-mode.md)  
   
@@ -40,7 +40,7 @@ ms.locfileid: "71952039"
   
 -   [Assistente para alterar banco de dados](../../../2014/sql-server/install/change-database-wizard-ssrs-native-mode.md)  
   
--   [Assistente de alteração de credenciais](../../../2014/sql-server/install/change-credentials-wizard-ssrs-native-mode.md)  
+-   [Assistente para Alterar Credenciais](../../../2014/sql-server/install/change-credentials-wizard-ssrs-native-mode.md)  
   
 -   [URL de Report Manager](../../../2014/sql-server/install/report-manager-url-ssrs-native-mode.md)  
   
@@ -50,13 +50,13 @@ ms.locfileid: "71952039"
   
 -   [Chaves de criptografia](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md)  
   
--   [Chave de criptografia de backup](../../../2014/sql-server/install/backup-encryption-key-ssrs-native-mode.md)  
+-   [Backup de chave de criptografia](../../../2014/sql-server/install/backup-encryption-key-ssrs-native-mode.md)  
   
 -   [Restaurar chave de criptografia](../../../2014/sql-server/install/restore-encryption-key-ssrs-native-mode.md)  
   
 -   [Implantação em expansão](../../../2014/sql-server/install/scale-out-deployment-native-mode-report-server.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Gerenciador de Configurações do Reporting Services &#40;del&#41;](reporting-services-configuration-manager-native-mode.md)  
   
   

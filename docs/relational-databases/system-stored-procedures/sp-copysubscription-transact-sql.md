@@ -16,10 +16,10 @@ ms.assetid: 3c56cd62-2966-4e87-a986-44cb3fd0b760
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5d3f67794eb2825c10b822ce719459b563f046d2
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72304826"
 ---
 # <a name="sp_copysubscription-transact-sql"></a>sp_copysubscription (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "72304826"
   
  Copia um banco de dados de assinatura que tem assinatura pull, mas nenhuma assinatura push. Somente bancos de dados de arquivo único podem ser copiados. Esse procedimento armazenado é executado no Assinante no banco de dados de assinatura.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,16 +43,16 @@ sp_copysubscription [ @filename = ] 'file_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @filename = ] 'file_name'` é a cadeia de caracteres que especifica o caminho completo, incluindo o nome do arquivo, para o qual uma cópia do arquivo de dados (. MDF) é salva. o *nome do arquivo* é **nvarchar (260)** , sem padrão.  
+`[ @filename = ] 'file_name'`É a cadeia de caracteres que especifica o caminho completo, incluindo o nome do arquivo, para o qual uma cópia do arquivo de dados (. MDF) é salva. o *nome do arquivo* é **nvarchar (260)**, sem padrão.  
   
-`[ @temp_dir = ] 'temp_dir'` é o nome do diretório que contém os arquivos temporários. *temp_dir* é **nvarchar (260)** , com um padrão de NULL. Se for NULL, o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diretório de dados padrão será usado. O diretório deve ter bastante espaço suficiente para conter um arquivo do tamanho de todos os arquivos de banco de dados de assinante combinados.  
+`[ @temp_dir = ] 'temp_dir'`É o nome do diretório que contém os arquivos temporários. *temp_dir* é **nvarchar (260)**, com um padrão de NULL. Se for NULL, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o diretório de dados padrão será usado. O diretório deve ter bastante espaço suficiente para conter um arquivo do tamanho de todos os arquivos de banco de dados de assinante combinados.  
   
-`[ @overwrite_existing_file = ] 'overwrite_existing_file'` é um sinalizador booliano opcional que especifica se deve ou não substituir um arquivo existente com o mesmo nome especificado em **\@filename**. *overwrite_existing_file*é **bit**, com um padrão de **0**. Se for **1**, ele substituirá o arquivo especificado por **\@filename**, se existir. Se **0**, o procedimento armazenado falhará se o arquivo existir e o arquivo não for substituído.  
+`[ @overwrite_existing_file = ] 'overwrite_existing_file'`É um sinalizador booliano opcional que especifica se deve ou não substituir um arquivo existente com o mesmo nome especificado em ** \@filename**. *overwrite_existing_file*é **bit**, com um padrão de **0**. Se for **1**, ele substituirá o arquivo especificado por ** \@filename**, se existir. Se **0**, o procedimento armazenado falhará se o arquivo existir e o arquivo não for substituído.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  **sp_copysubscription** é usado em todos os tipos de replicação para copiar um banco de dados de assinatura para um arquivo como uma alternativa para aplicar um instantâneo no Assinante. O banco de dados deve ser configurado para oferecer suporte somente a assinaturas pull. Usuários com permissões apropriadas podem fazer cópias do banco de dados de assinatura e enviar por email, copiar ou transportar o arquivo de assinatura (.msf) para outro Assinante, onde poderá ser anexado a uma assinatura.  
   
  O tamanho do banco de dados de assinatura copiado deve ser menor de 2 gigabytes (GB).  
@@ -62,8 +62,8 @@ sp_copysubscription [ @filename = ] 'file_name'
 ## <a name="permissions"></a>Permissões  
  Somente os membros da função de servidor fixa **sysadmin** podem executar **sp_copysubscription**.  
   
-## <a name="see-also"></a>Consulte também  
- [Locais da pasta de instantâneos alternativos](../../relational-databases/replication/snapshot-options.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Locais de pastas de instantâneos alternativos](../../relational-databases/replication/snapshot-options.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

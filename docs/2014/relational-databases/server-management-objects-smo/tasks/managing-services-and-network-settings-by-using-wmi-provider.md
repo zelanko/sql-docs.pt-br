@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9ba2f9688adb5579616693470be151d757818117
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72796633"
 ---
 # <a name="managing-services-and-network-settings-by-using-wmi-provider"></a>Gerenciando serviços e configurações de rede através do provedor do WMI
@@ -30,7 +30,7 @@ ms.locfileid: "72796633"
 ## <a name="example"></a>Exemplo  
  [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  
   
- Para programas que usam o provedor WMI [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], você deve incluir a instrução `Imports` para qualificar o namespace WMI. Insira a instrução após outras instruções `Imports`, antes de qualquer declaração no aplicativo, como:  
+ Para programas que usam o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor WMI, você deve incluir a `Imports` instrução para qualificar o namespace WMI. Insira a instrução após outras instruções `Imports`, antes de qualquer declaração no aplicativo, como:  
   
  `Imports Microsoft.SqlServer.Management.Smo`  
   

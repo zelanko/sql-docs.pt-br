@@ -18,10 +18,10 @@ ms.assetid: 59bc993e-7913-4091-89cb-d2871cffda95
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 88b0dffa84674b2d7e55895830f28cf1b95cd3dc
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72305267"
 ---
 # <a name="sp_attach_db-transact-sql"></a>sp_attach_db (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "72305267"
   Anexa um banco de dados a um servidor.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] recomendamos que você use criar *database_name* de banco de dados para anexar em vez disso. Para obter mais informações, consulte [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]É recomendável que você use criar *database_name* de banco de dados para anexar em vez disso. Para obter mais informações, consulte [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
   
 > [!NOTE]  
 >  Para recompilar vários arquivos de log quando um ou mais têm um novo local, use CREATE DATABASE *database_name* for ATTACH_REBUILD_LOG.  
@@ -47,9 +47,9 @@ sp_attach_db [ @dbname= ] 'dbname'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @dbname = ] 'dbnam_ '` é o nome do banco de dados a ser anexado ao servidor. O nome deve ser exclusivo. *dbname* é **sysname**, com um padrão de NULL.  
+`[ @dbname = ] 'dbnam_ '`É o nome do banco de dados a ser anexado ao servidor. O nome deve ser exclusivo. *dbname* é **sysname**, com um padrão de NULL.  
   
-`[ @filename1 = ] 'filename_n'` é o nome físico, incluindo o caminho, de um arquivo de banco de dados. *filename_n* é **nvarchar (260)** , com um padrão de NULL. Podem ser especificados até 16 nomes de arquivo. Os nomes de parâmetro começam em **\@arquivo1** e incrementam para **\@filename16**. A lista de nomes de arquivo deve incluir, pelo menos, o arquivo primário. O arquivo primário contém as tabelas de sistema que apontam para outros arquivos no banco de dados. A lista também deve incluir quaisquer arquivos que tenham sido movidos depois que o banco de dados foi desanexado.  
+`[ @filename1 = ] 'filename_n'`É o nome físico, incluindo o caminho, de um arquivo de banco de dados. *filename_n* é **nvarchar (260)**, com um padrão de NULL. Podem ser especificados até 16 nomes de arquivo. Os nomes de parâmetro começam em ** \@arquivo1** e incrementam para ** \@filename16**. A lista de nomes de arquivo deve incluir, pelo menos, o arquivo primário. O arquivo primário contém as tabelas de sistema que apontam para outros arquivos no banco de dados. A lista também deve incluir quaisquer arquivos que tenham sido movidos depois que o banco de dados foi desanexado.  
   
 > [!NOTE]  
 >  Este argumento mapeia para o parâmetro FILENAME da instrução CREATE DATABASE. Para obter mais informações, consulte [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
@@ -60,9 +60,9 @@ sp_attach_db [ @dbname= ] 'dbname'
  0 (êxito) ou 1 (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhum.  
+ Nenhum  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O procedimento armazenado **sp_attach_db** só deve ser executado em bancos de dados que foram desanexados anteriormente do servidor de banco de dados usando uma operação **sp_detach_db** explícita ou em bancos de dados copiados. Se você precisar especificar mais de 16 arquivos, use criar *database_name* de banco de dados para anexar ou criar banco de dados *database_name* FOR_ATTACH_REBUILD_LOG. Para obter mais informações, consulte [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
   
  Considera-se que todo arquivo não especificado esteja em seu último local conhecido. Para usar um arquivo em um local diferente, você deve especificar o novo local.  
@@ -83,7 +83,7 @@ sp_attach_db [ @dbname= ] 'dbname'
  Quando um banco de dados é anexado ou restaurado pela primeira vez a uma nova instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], uma cópia da chave mestra de banco de dados (criptografada pela chave mestra de serviço) ainda não está armazenada no servidor. É necessário usar a instrução **OPEN MASTER KEY** para descriptografar a DMK (chave mestra do banco de dados). Após a descriptografia da DMK, você tem a opção de habilitar a descriptografia automática no futuro usando a instrução **ALTER MASTER KEY REGENERATE** para provisionar o servidor com uma cópia da DMK criptografada com a SMK (chave mestra de serviço). Quando um banco de dados for atualizado de uma versão anterior, a DMK deverá ser regenerada para usar o algoritmo AES mais recente. Para obter mais informações sobre como regenerar a DMK, veja [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md). O tempo necessário para regenerar a chave DMK para atualizar o AES depende do número de objetos protegidos pela DMK. É necessário regenerar a chave DMK para atualizar o AES somente uma vez, isso não tem impacto sobre regenerações futuras como parte de uma estratégia de rotação de chave.  
   
 ## <a name="permissions"></a>Permissões  
- Para obter informações sobre como as permissões são tratadas quando um banco de dados é anexado, consulte [ &#40;Create&#41;Database SQL Server Transact-SQL](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+ Para obter informações sobre como as permissões são tratadas quando um banco de dados é anexado, consulte [create database &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir anexa arquivos de [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] ao servidor atual.  
@@ -96,11 +96,11 @@ N'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\Adventure
 N'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\AdventureWorks2012_log.ldf';  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Anexar e desanexar bancos de dados &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
- [sp_detach_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)   
- [sp_helpfile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
- [sp_removedbreplication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_detach_db](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_helpfile](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_removedbreplication](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

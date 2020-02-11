@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6375229899c1bfe8f175771e55fdd821fc232166
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798297"
 ---
 # <a name="create-a-powershell-script-job-step"></a>Create a PowerShell Script Job Step
@@ -64,7 +64,7 @@ ms.locfileid: "72798297"
   
 8.  Clique na página **Avançado** para definir as seguintes opções de etapa de trabalho: a ação a tomar em caso de êxito ou falha da etapa, quantas vezes o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent deve tentar executar a etapa e com que frequência.  
   
-##  <a name="TSQL"></a> Usando Transact-SQL  
+##  <a name="TSQL"></a> Usando o Transact-SQL  
   
 #### <a name="to-create-a-powershell-script-job-step"></a>Para criar uma etapa de trabalho de script PowerShell  
   
@@ -88,9 +88,9 @@ ms.locfileid: "72798297"
     GO  
     ```  
   
- Para obter mais informações, [consulte &#40;Transact-SQL&#41;sp_add_jobstep](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql).  
+ Para obter mais informações, consulte [sp_add_jobstep &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql).  
   
 ##  <a name="SMO"></a>Usando SQL Server Management Objects  
- **Para criar uma etapa de trabalho de script PowerShell**  
+ **Para criar uma etapa de trabalho de script do PowerShell**  
   
  Use a classe `JobStep` usando uma linguagem de programação da sua escolha, como o Visual Basic, o Visual C# ou o PowerShell.  

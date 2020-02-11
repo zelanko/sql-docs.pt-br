@@ -1,5 +1,5 @@
 ---
-title: Exemplo de DeleteRecord e MoveRecord exemplo dos métodos (VB) | Microsoft Docs
+title: Exemplo dos métodos DeleteRecord e MoveRecord (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: c3937d1e-9872-47e5-a22e-b147637f2388
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1c449e2a7c52b069478a07e4e2fa902c3b0527e1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919105"
 ---
-# <a name="deleterecord-and-moverecord-methods-example-vb"></a>Exemplo de DeleteRecord e MoveRecord exemplo dos métodos (VB)
-Este exemplo demonstra como copiar, mover, editar e excluir o conteúdo de um arquivo de texto publicado em uma pasta da Web. Incluem outras propriedades e métodos usados [GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md), [ParentURL](../../../ado/reference/ado-api/parenturl-property-ado.md), [origem](../../../ado/reference/ado-api/source-property-ado-record.md), e [liberar](../../../ado/reference/ado-api/flush-method-ado.md).  
+# <a name="deleterecord-and-moverecord-methods-example-vb"></a>Exemplo dos métodos DeleteRecord e MoveRecord (VB)
+Este exemplo demonstra como copiar, mover, editar e excluir o conteúdo de um arquivo de texto publicado em uma pasta da Web. Outras propriedades e métodos usados incluem [GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md), [ParentURL](../../../ado/reference/ado-api/parenturl-property-ado.md), [Source](../../../ado/reference/ado-api/source-property-ado-record.md)e [flush](../../../ado/reference/ado-api/flush-method-ado.md).  
   
 ```  
 'BeginDeleteRecordVB  
@@ -148,9 +148,9 @@ End Sub
 'EndDeleteRecordVB  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Método DeleteRecord (ADO)](../../../ado/reference/ado-api/deleterecord-method-ado.md)   
- [Método flush (ADO)](../../../ado/reference/ado-api/flush-method-ado.md)   
+ [Método Flush (ADO)](../../../ado/reference/ado-api/flush-method-ado.md)   
  [Método GetChildren (ADO)](../../../ado/reference/ado-api/getchildren-method-ado.md)   
  [Método MoveRecord (ADO)](../../../ado/reference/ado-api/moverecord-method-ado.md)   
  [Propriedade ParentURL (ADO)](../../../ado/reference/ado-api/parenturl-property-ado.md)   

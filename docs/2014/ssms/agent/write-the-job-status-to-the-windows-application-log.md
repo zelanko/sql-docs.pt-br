@@ -17,14 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ec615911233227c15f43e55125adfd6166cb51e8
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783366"
 ---
 # <a name="write-the-job-status-to-the-windows-application-log"></a>Write the Job Status to the Windows Application Log
-  Este tópico descreve como configurar o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] para gravar status de trabalho no log de eventos de aplicativos Windows usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]ou o SQL Server Management Objects.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Este tópico descreve como configurar o Agent no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] para gravar o status do trabalho no log de eventos de aplicativos [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]do [!INCLUDE[tsql](../../includes/tsql-md.md)]Windows usando o, o ou o SQL Server Management Objects.  
   
  As respostas de trabalho asseguram que os administradores de banco de dados saibam quando os trabalhos são concluídos e a frequência com que são executados. São respostas de trabalho típicas:  
   
@@ -40,7 +40,7 @@ ms.locfileid: "72783366"
   
      [Segurança](#Security)  
   
--   **Para gravar o status do trabalho no log de aplicativos do Windows usando:**  
+-   **Para gravar o status do trabalho no log de aplicativos do Windows, usando:**  
   
      [SQL Server Management Studio](#SSMS)  
   

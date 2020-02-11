@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 25e45e5877d528d1f01fe8695d8575466991c381
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798042"
 ---
 # <a name="monitor-sql-server-managed-backup-to-azure"></a>Monitorar o backup gerenciado do SQL Server para Azure
@@ -41,7 +41,7 @@ SELECT * FROM smart_admin.fn_get_parameter (NULL)
 GO  
 ```  
   
- Para obter mais informações, consulte [smart_admin. &#40;FN_GET_PARAMETER Transact-&#41; SQL](/sql/relational-databases/system-functions/managed-backup-fn-get-parameter-transact-sql)  
+ Para obter mais informações, consulte [smart_admin. fn_get_parameter &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/managed-backup-fn-get-parameter-transact-sql)  
   
 ### <a name="extended-events-for-monitoring"></a>Eventos Estendidos para monitoramento  
  Por padrão, os eventos Admin, Operacional e Analítico estão ativados. Os eventos Admin são mais críticos, úteis para identificar erros que requerem intervenção manual para resolver o problema. Talvez seja necessário ativar os eventos operacional e de depuração, mas considere que esses eventos são detalhados e podem requerer filtragem. Os procedimentos a seguir descrevem como monitorar eventos registrados em log com Eventos Estendidos.  
@@ -57,7 +57,7 @@ GO
     SELECT * FROM smart_admin.fn_get_current_xevent_settings()  
     ```  
   
-     A saída desta consulta exibirá o event_name, quer seja configurável ou não, e se estiver habilitado no momento.  Para obter mais informações, consulte [smart_admin. &#40;FN_GET_CURRENT_XEVENT_SETTINGS Transact-&#41;SQL](/sql/relational-databases/system-functions/managed-backup-fn-get-current-xevent-settings-transact-sql).  
+     A saída desta consulta exibirá o event_name, quer seja configurável ou não, e se estiver habilitado no momento.  Para obter mais informações, consulte [smart_admin. fn_get_current_xevent_settings &#40;&#41;do Transact-SQL ](/sql/relational-databases/system-functions/managed-backup-fn-get-current-xevent-settings-transact-sql).  
   
 2.  Para habilitar eventos de depuração, execute a seguinte consulta:  
   
@@ -68,7 +68,7 @@ GO
     EXEC smart_admin.sp_set_parameter 'FileRetentionDebugXevent', 'True'  
     ```  
   
-     Para obter mais informações sobre o procedimento armazenado, consulte [smart_admin. &#40;SP_SET_PARAMETER Transact-&#41;SQL](/sql/relational-databases/system-stored-procedures/managed-backup-sp-set-parameter-transact-sql).  
+     Para obter mais informações sobre o procedimento armazenado, consulte [smart_admin. sp_set_parameter &#40;&#41;do Transact-SQL ](/sql/relational-databases/system-stored-procedures/managed-backup-sp-set-parameter-transact-sql).  
   
 3.  Para exibir os eventos em log, execute esta consulta:  
   
@@ -108,13 +108,13 @@ GO
     ```  
   
 ### <a name="aggregated-error-countshealth-status"></a>Contagens de erros agregadas/Status de integridade  
- A função **smart_admin. fn_get_health_status** retorna uma tabela de contagens de erros agregados para cada categoria que pode ser usada para monitorar o status de integridade de [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]. Essa mesma função também é usada pelo mecanismo de notificação por email configurado pelo sistema descrito mais adiante neste tópico.   
-Essas contagens agregadas podem ser usadas para monitorar a integridade do sistema. Por exemplo, se a coluna number_ of_retention_loops for 0 em 30 minutos, pode ser que o gerenciamento de retenção esteja demorando ou talvez nem esteja funcionando corretamente. As colunas diferentes de zero do erro podem indicar problemas e os logs de Eventos Estendidos devem ser verificados para descobrir o problema. Como alternativa, chame o procedimento armazenado **smart_admin. sp_get_backup_diagnostics** para encontrar os detalhes do erro.  
+ A função **smart_admin. fn_get_health_status** retorna uma tabela de contagens de erros agregados para cada categoria que pode ser usada para monitorar o status de [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]integridade de. Essa mesma função também é usada pelo mecanismo de notificação por email configurado pelo sistema descrito mais adiante neste tópico.   
+Essas contagens agregadas podem ser usadas para monitorar a integridade do sistema. Por exemplo, se a coluna number_ of_retention_loops for 0 em 30 minutos, pode ser que o gerenciamento de retenção esteja demorando ou talvez nem esteja funcionando corretamente. As colunas diferentes de zero do erro podem indicar problemas e os logs de Eventos Estendidos devem ser verificados para descobrir o problema. Como alternativa, chame **smart_admin. sp_get_backup_diagnostics** procedimento armazenado para encontrar os detalhes do erro.  
   
 ### <a name="using-agent-notification-for-assessing-backup-status-and-health"></a>Usando a notificação do agente para avaliar o status e a integridade do backup  
  O [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] inclui um mecanismo de notificação baseado nas políticas de gerenciamento baseado em políticas do SQL Server.  
   
- **Pré-requisitos:**  
+ **Pré-requisitos**  
   
 -   O Database Mail é necessário para usar essa funcionalidade. Para obter mais informações, sobre como habilitar o BD mail para a instância do SQL Server, consulte [configurar Database Mail](../relational-databases/database-mail/configure-database-mail.md).  
   
@@ -130,7 +130,7 @@ Essas contagens agregadas podem ser usadas para monitorar a integridade do siste
   
 1.  Se Database Mail ainda não estiver configurado, use as etapas descritas em [configurar Database Mail](../relational-databases/database-mail/configure-database-mail.md).  
   
-2.  Definir banco de dados como o sistema de email para SQL Server sistema de alertas: clique com o botão direito do mouse em **SQL Server Agent**, selecione **sistema de alerta**, marque a caixa **habilitar perfil de email** , selecione **Database Mail** como o **sistema de email**e selecione um anteriormente Perfil de email criado.  
+2.  Definir banco de dados como o sistema de email para SQL Server sistema de alertas: clique com o botão direito do mouse em **SQL Server Agent**, selecione **sistema de alerta**, marque a caixa **habilitar perfil de email** , selecione **Database Mail** como o **sistema de email**e selecione um perfil de email criado anteriormente.  
   
 3.  Execute a consulta a seguir em uma janela de consulta e forneça o endereço de email para o qual você deseja que a notificação seja enviada:  
   
@@ -210,7 +210,7 @@ $policyResults.PolicyEvaluationDetails | Select Name, Category, Expression, Resu
 ```  
   
 ### <a name="objects-in-msdb-database"></a>Objetos em um banco de dados MSDB  
- Há objetos que são instalados para implementar a funcionalidade. Esses objetos são reservados para uso interno. Porém, há uma tabela do sistema que pode ser útil para monitorar o status do backup: smart_backup_files. A maioria das informações armazenadas nesta tabela relevante para o monitoramento, como o tipo de backup, nome do banco de dados, o primeiro e o último LSN, as datas de expiração do backup são expostas por meio da função do sistema [smart_admin. fn_available_backups &#40;&#41; Transact-SQL ](/sql/relational-databases/system-functions/managed-backup-fn-available-backups-transact-sql). Embora a coluna de status na tabela smart_backup_files que indica o status do arquivo de backup não esteja disponível por meio da função. O seguinte é um exemplo de consulta que você pode usar para recuperar algumas informações que incluem o status da tabela do sistema:  
+ Há objetos que são instalados para implementar a funcionalidade. Esses objetos são reservados para uso interno. Porém, há uma tabela do sistema que pode ser útil para monitorar o status do backup: smart_backup_files. A maioria das informações armazenadas nesta tabela é relevante para o monitoramento como o tipo de backup, nome do banco de dados, primeiro e último LSN, as datas de expiração de backup são expostas por meio da função do sistema [smart_admin. fn_available_backups &#40;&#41;do Transact-SQL ](/sql/relational-databases/system-functions/managed-backup-fn-available-backups-transact-sql). Embora a coluna de status na tabela smart_backup_files que indica o status do arquivo de backup não esteja disponível por meio da função. O seguinte é um exemplo de consulta que você pode usar para recuperar algumas informações que incluem o status da tabela do sistema:  
   
 ```sql
 USE msdb  
@@ -248,8 +248,8 @@ smart_backup_files;
   
 -   **Falha na cópia-F:** Semelhante à cópia em andamento, esses bancos de dados de grupo de disponibilidade t são específicos. Se o processo de cópia falhar, o status será marcado como F.  
   
--   **Corrompido-C:** Se [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] não puder verificar o arquivo de backup no armazenamento executando um comando RESTOre HEADER_ONLY mesmo após várias tentativas, ele marcará esse arquivo como corrompido. O [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] agendará um backup para garantir que o arquivo corrompido não resulte em uma interrupção da cadeia de backup.  
+-   **Corrompido-C:** Se [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] o não puder verificar o arquivo de backup no armazenamento executando um comando restore HEADER_ONLY, mesmo após várias tentativas, ele marcará esse arquivo como corrompido. O [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] agendará um backup para garantir que o arquivo corrompido não resulte em uma interrupção da cadeia de backup.  
   
 -   **Excluído-D:** O arquivo correspondente não pode ser encontrado no armazenamento do Azure. O [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] agendará um backup se o arquivo excluído resultar em uma interrupção na cadeia de backup.  
   
--   **Desconhecido-U:** Esse status indica que [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] ainda não foi capaz de verificar a existência do arquivo e suas propriedades no armazenamento do Azure. Na próxima vez que o processo for executado, que é aproximadamente a cada 15 minutos, esse status será atualizado.  
+-   **Desconhecido-U:** Esse status indicou [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] que ainda não foi capaz de verificar a existência do arquivo e suas propriedades no armazenamento do Azure. Na próxima vez que o processo for executado, que é aproximadamente a cada 15 minutos, esse status será atualizado.  

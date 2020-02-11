@@ -18,10 +18,10 @@ ms.assetid: 0cba908a-c85c-4b09-b16a-df1cb333c629
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 10b4aa19b86530213f852ea90f959a1d7ef6c74f
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72251232"
 ---
 # <a name="filetablerootpath-transact-sql"></a>FileTableRootPath (Transact-SQL)
@@ -38,14 +38,14 @@ FileTableRootPath ( [ '[schema_name.]FileTable_name' ], @option )
   
 ## <a name="arguments"></a>Argumentos  
  *FileTable_name*  
- O nome da FileTable. *FileTable_name* é do tipo **nvarchar**. Esse é um parâmetro opcional. O valor padrão é o banco de dados atual. A especificação de *schema_name* também é opcional. Você pode passar NULL para *FileTable_name* usar o valor do parâmetro padrão  
+ O nome da FileTable. *FileTable_name* é do tipo **nvarchar**. Esse é um parâmetro opcional. O valor padrão é o banco de dados atual. Especificar *schema_name* também é opcional. Você pode passar nulo para *FileTable_name* usar o valor do parâmetro padrão  
   
- *\@option*  
- Uma expressão de inteiro que define como o componente do servidor do caminho deve ser formatado. *\@option* pode ter um dos seguintes valores:  
+ *\@Option*  
+ Uma expressão de inteiro que define como o componente do servidor do caminho deve ser formatado. a opção pode ter um dos seguintes valores: * \@*  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
-|**0**|Retorna o nome do servidor convertido no formato NetBIOS, por exemplo:<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDatabase`<br /><br /> Este é o valor padrão.|  
+|**0**|Retorna o nome do servidor convertido no formato NetBIOS, por exemplo:<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDatabase`<br /><br /> Esse é o valor padrão.|  
 |**1**|Retorna o nome do servidor sem conversão, por exemplo:<br /><br /> `\\ServerName\MSSQLSERVER\MyDocumentDatabase`|  
 |**2**|Retorna o caminho completo do servidor, por exemplo:<br /><br /> `\\ServerName.MyDomain.com\MSSQLSERVER\MyDocumentDatabase`|  
   
@@ -65,7 +65,7 @@ FileTableRootPath ( [ '[schema_name.]FileTable_name' ], @option )
   
  Para obter mais informações, consulte [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md).  
   
-## <a name="best-practices"></a>Práticas recomendadas  
+## <a name="best-practices"></a>Práticas Recomendadas  
  Para manter código e aplicativos independentes do computador e do banco de dados atuais, evite escrever código baseado em caminhos de arquivo absolutos. Em vez disso, obtenha o caminho completo de um arquivo em tempo de execução usando as funções **funções filetablerootpath** e **GetFileNamespacePath** juntas, conforme mostrado no exemplo a seguir. Por padrão, a função **GetFileNamespacePath** retorna o caminho relativo do arquivo sob o caminho raiz do banco de dados.  
   
 ```sql  
@@ -87,7 +87,7 @@ WHERE Name = N'document.docx';
   
 -   A permissão SELECT no FileTable para obter o caminho raiz de um FileTable específico.  
   
--   a permissão **db_datareader** ou superior para obter o caminho raiz do banco de dados atual.  
+-   **db_datareader** ou maior permissão para obter o caminho raiz do banco de dados atual.  
   
 ## <a name="examples"></a>Exemplos  
  Os exemplos a seguir mostram como chamar a função **funções filetablerootpath** .  
@@ -104,7 +104,7 @@ SELECT FileTableRootPath(N'dbo.MyFileTable');
 SELECT FileTableRootPath(N'MyFileTable');  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Trabalhar com diretórios e caminhos em FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)  
   
   

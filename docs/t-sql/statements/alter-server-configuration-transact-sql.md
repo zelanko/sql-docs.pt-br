@@ -21,10 +21,10 @@ ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: ef4bf385e2ce0ecd140ad402c43d0039669c56e8
-ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72006071"
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "72006071"
 
 Modifica as definições da configuração global do servidor atual no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
 
@@ -146,7 +146,7 @@ Especifica o nó NUMA ou o intervalo de nós NUMA.
 DIAGNOSTICS LOG  
 Inicia ou interrompe o log de dados de diagnóstico que o procedimento sp_server_diagnostics captura. Este argumento também define parâmetros de configuração de log SQLDIAG, como a contagem de substituições de arquivo de log, o tamanho do arquivo de log e o local do arquivo. Para obter mais informações, consulte [Exibir e ler o log de diagnóstico da instância do cluster de failover](../../sql-server/failover-clusters/windows/view-and-read-failover-cluster-instance-diagnostics-log.md).  
   
-ON  
+ATIVADO  
 Inicia o log de dados de diagnóstico do [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] no local especificado na opção de arquivo PATH. Este argumento é o padrão.  
   
 OFF  
@@ -220,7 +220,7 @@ Para obter mais informações, veja [Alterar contexto do cluster HADR da instân
   
 **Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]).    
   
-ON  
+ATIVADO  
 Habilita a opção de extensão do pool de buffers. Essa opção estende o tamanho do pool de buffers usando o armazenamento não volátil. O armazenamento não volátil, como unidades de estado sólido (SSD), mantém páginas de dados limpas no pool. Para saber mais sobre esse recurso, confira [Extensão do pool de buffers](../../database-engine/configure-windows/buffer-pool-extension.md). A extensão do pool de buffers não está disponível em todas as edições do SQL Server. Para obter mais informações, consulte [Edições e recursos compatíveis com o SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 FILENAME = 'os_file_path_and_name'  
@@ -241,7 +241,7 @@ Desabilita a opção de extensão do pool de buffers. Desabilite a opção de ex
 
 **Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]).  
   
-ON  
+ATIVADO  
 Permite que o particionamento automático divida nós de hardware NUMA grandes em nós NUMA menores. Alterar o valor de execução requer a reinicialização do mecanismo de banco de dados.  
   
 OFF  
@@ -260,7 +260,7 @@ Desabilita o particionamento automático de software de nós de hardware NUMA gr
 
 **Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]).
 
-ON <br>
+ATIVADO <br>
 Habilita todos os recursos no nível da instância que fazem parte da família de recursos do [Banco de Dados em Memória](../../relational-databases/in-memory-database.md). Atualmente, isso inclui os [metadados do tempdb com otimização de memória](../../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata) e o [pool de buffers híbrido](../../database-engine/configure-windows/hybrid-buffer-pool.md). Exige uma reinicialização para entrar em vigor.
 
 OFF <br>
@@ -312,7 +312,7 @@ Os exemplos desta seção mostram como definir a afinidade do processo para CPUs
 -   Grupo 2: Nós NUMA 8 a 12, CPUs 128 a 191  
 -   Grupo 3: Nós NUMA 13 a 16, CPUs 192 a 255  
   
-#### <a name="a-setting-affinity-to-all-cpus-in-groups-0-and-2"></a>A. Configurando a afinidade para todas as CPUs nos grupos 0 e 2  
+#### <a name="a-setting-affinity-to-all-cpus-in-groups-0-and-2"></a>a. Configurando a afinidade para todas as CPUs nos grupos 0 e 2  
 O exemplo a seguir define afinidade para todas as CPUs nos grupos 0 e 2.  
   
 ```sql  
@@ -357,7 +357,7 @@ SET PROCESS AFFINITY CPU=AUTO;
   
 Os exemplos desta seção mostram como definir os valores para a opção de log de diagnóstico.  
   
-#### <a name="a-starting-diagnostic-logging"></a>A. Iniciando o log de diagnóstico  
+#### <a name="a-starting-diagnostic-logging"></a>a. Iniciando o log de diagnóstico  
 O exemplo a seguir inicia o log de dados de diagnóstico.  
   
 ```sql  
@@ -393,7 +393,7 @@ SET DIAGNOSTICS LOG MAX_SIZE = 10 MB;
   
 O exemplo a seguir ilustra a configuração dos valores das propriedades do recurso de cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-#### <a name="a-specifying-the-value-for-the-healthchecktimeout-property"></a>A. Especificando o valor da propriedade HealthCheckTimeout  
+#### <a name="a-specifying-the-value-for-the-healthchecktimeout-property"></a>a. Especificando o valor da propriedade HealthCheckTimeout  
 O exemplo a seguir define a opção `HealthCheckTimeout` como 15.000 milissegundos (15 segundos).  
   
 ```sql  
@@ -443,7 +443,7 @@ GO
 
 **Aplica-se a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]).
 
-#### <a name="a-enable-all-in-memory-database-features-with-default-options"></a>A. Habilitar todos os recursos do Banco de Dados em Memória com as opções padrão
+#### <a name="a-enable-all-in-memory-database-features-with-default-options"></a>a. Habilitar todos os recursos do Banco de Dados em Memória com as opções padrão
 
 ```sql
 ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED ON;

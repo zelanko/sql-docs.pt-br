@@ -16,27 +16,27 @@ ms.assetid: 4013075d-dbea-4bbc-a6f4-c345a55c5633
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9f356097f1262630d47b4b4b4048c61d42816a4c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918230"
 ---
 # <a name="marshaloptionsenum"></a>MarshalOptionsEnum
-Especifica quais registros devem ser retornados para o servidor.  
+Especifica quais registros devem ser retornados ao servidor.  
   
-|Constante|Valor|Descrição|  
+|Constante|Valor|DESCRIÇÃO|  
 |--------------|-----------|-----------------|  
-|**adMarshalAll**|0|Padrão. Retorna todas as linhas para o servidor.|  
-|**adMarshalModifiedOnly**|1|Retorna somente modificada linhas para o servidor.|  
+|**adMarshalAll**|0|Padrão. Retorna todas as linhas ao servidor.|  
+|**adMarshalModifiedOnly**|1|Retorna somente as linhas modificadas para o servidor.|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente do ADO/WFC  
- Pacote: **com.ms.wfc.data**  
+ Pacote: **com. ms. wfc. Data**  
   
 |Constante|  
 |--------------|  
-|AdoEnums.MarshalOptions.ALL|  
-|AdoEnums.MarshalOptions.MODIFIEDONLY|  
+|AdoEnums. Marshaloptions. ALL|  
+|AdoEnums. Marshaloptions. MODIFIEDONLY|  
   
-## <a name="applies-to"></a>Aplica-se a  
+## <a name="applies-to"></a>Aplica-se A  
  [Propriedade MarshalOptions (ADO)](../../../ado/reference/ado-api/marshaloptions-property-ado.md)

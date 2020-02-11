@@ -1,5 +1,5 @@
 ---
-title: 'Solucionar problemas de relatórios: Mapear relatórios (Construtor de Relatórios e SSRS) | Microsoft Docs'
+title: 'Solução de problemas de relatórios: relatórios de mapa (Construtor de Relatórios e SSRS) | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -11,19 +11,19 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1d5a5bee68f328a5ba15ffb1480437fad92adff8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104643"
 ---
-# <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>Solucionar problemas de relatórios: Relatórios de mapa (construtor de relatórios e SSRS)
+# <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>Solução de problemas de relatórios: relatórios de mapa (Construtor de Relatórios e SSRS)
   Os problemas com mapas em um relatório podem ocorrer quando você adiciona um mapa ou camada do mapa ao relatório, quando você personaliza um mapa existente ou camada do mapa em seu relatório, quando visualiza um mapa em um relatório ou quando publica um relatório com um mapa. Use este tópico para ajudar a solucionar esses problemas.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Embedded"></a> Problemas de tamanho da definição de relatório  
+##  <a name="Embedded"></a>Problemas de tamanho de definição de relatório  
  Use esta seção para ajudar a resolver problemas relacionados ao tamanho da definição do relatório.  
   
 ### <a name="how-do-i-reduce-the-report-definition-size"></a>Como eu reduzo o tamanho da definição de relatório?  
@@ -49,7 +49,7 @@ ms.locfileid: "66104643"
   
   
   
-##  <a name="Spatial"></a> Problemas de dados espaciais  
+##  <a name="Spatial"></a>Problemas de dados espaciais  
  Use esta seção para ajudar a resolver problemas relacionados a dados espaciais.  
   
 ### <a name="on-the-design-surface-i-see-sample-spatial-data"></a>Na superfície de design, eu vejo dados espaciais de exemplo  
@@ -102,7 +102,7 @@ ms.locfileid: "66104643"
   
   
   
-##  <a name="Viewport"></a> Problemas de centralização e exibição do visor  
+##  <a name="Viewport"></a>Problemas no centro do visor e no modo de exibição  
  Use esta seção para ajudar a resolver problemas relacionados às opções do visor.  
   
 ### <a name="i-cannot-set-the-center-and-view-on-an-embedded-map-element"></a>Eu não posso centralizar e exibir em um elemento de mapa inserido.  
@@ -126,21 +126,21 @@ ms.locfileid: "66104643"
   
   
   
-##  <a name="Layers"></a> Problemas de camada  
+##  <a name="Layers"></a>Problemas de camada  
  Use esta seção para ajudar a resolver problemas relacionados às opções de camada.  
   
 ### <a name="i-do-not-see-one-or-more-layers-in-my-map"></a>Não vejo uma ou mais camadas no meu mapa.  
  A exibição de uma camada do mapa em um relatório dependerá da disponibilidade dos dados espaciais, da relação entre os dados espaciais e os dados analíticos, do tipo de dados espaciais e do tipo de camada correspondente, da visibilidade e das opções de transparência na camada e da ordem de desenho da camada. Se você não vir dados de uma camada, verifique as seguintes opções:  
   
--   **Tipo de camada e tipo de dados espacial.** O tipo de camada exibe somente dados espaciais que correspondem ao tipo de camada. Por exemplo, se o tipo de camada for Ponto, mas os dados espaciais forem Linha, nenhum dado aparecerá.  
+-   **Tipo de camada e tipo de dados espaciais.** O tipo de camada exibe somente dados espaciais que correspondem ao tipo de camada. Por exemplo, se o tipo de camada for Ponto, mas os dados espaciais forem Linha, nenhum dado aparecerá.  
   
--   **Valores de campos de correspondência.** Os valores nos campos que você especifica para relacionar dados analíticos e dados espaciais devem identificar cada elemento do mapa exclusivamente. Os campos devem ter o mesmo tipo de dados. Os valores nos campos devem ser idênticos. Para obter mais informações, consulte [Problemas de legenda, escala de cores e escala de distância](#Legend).  
+-   **Corresponder valores de campo.** Os valores nos campos que você especifica para relacionar dados analíticos e dados espaciais devem identificar cada elemento do mapa exclusivamente. Os campos devem ter o mesmo tipo de dados. Os valores nos campos devem ser idênticos. Para obter mais informações, consulte [Problemas de legenda, escala de cores e escala de distância](#Legend).  
   
 -   **Ordem da camada.** A ordem das camadas no painel Mapa é a ordem na qual as camadas são desenhadas no renderizador de relatório. Os dados espaciais nas camadas que são desenhadas primeiro podem ser substituídos pelos dados espaciais para camadas que são desenhadas depois. As camadas que aparecem na parte superior da lista são desenhadas primeiro. Quando altera a ordem das camadas na lista, você está alterando a ordem de desenho das camadas.  
   
 -   **Transparência.** Você pode especificar a transparência de cada camada do mapa de modo independente. Os valores padrão de transparência são diferentes de acordo com o modo como você adiciona uma camada. Uma transparência de 0% significa que a camada é opaca e nenhum outro dado da camada será exibido através deste. Para permitir que outros dados apareçam através de uma camada existente, ajuste o valor para um percentual mais alto que apresente o efeito desejado.  
   
--   **Visibilidade.** A visibilidade de uma camada é definida como **Visível**, **Oculta**ou **ZoomBased**, com base no nível de zoom do visor do mapa. Os intervalos máximo e mínimo do nível de zoom também podem ser especificados. A visibilidade pode se basear em uma expressão que seja avaliada para um desses valores.  
+-   **Visualizar.** A visibilidade de uma camada é definida como **Visível**, **Oculta**ou **ZoomBased**, com base no nível de zoom do visor do mapa. Os intervalos máximo e mínimo do nível de zoom também podem ser especificados. A visibilidade pode se basear em uma expressão que seja avaliada para um desses valores.  
   
     > [!TIP]  
     >  Você pode alternar a visibilidade de cada camada no painel Mapa. Quando você estiver criando cada camada, alterne todas as outras camadas para determinar se o problema vem de uma camada individual ou se decorre de problemas de transparência entre camadas.  
@@ -148,7 +148,7 @@ ms.locfileid: "66104643"
 ### <a name="i-set-a-filter-on-the-map-layer-and-it-has-no-effect"></a>Eu defini um filtro na camada do mapa e ele não tem nenhum efeito.  
  Para filtrar os dados de uma camada, o tipo de dados na expressão de filtro deve ser especificado. Verifique se você especificou os o tipo de dados subjacente correto de forma que a equação de filtro seja avaliada corretamente para a condição especificada. Para obter mais informações, consulte [Exemplos de equações de filtro &#40;Construtor de Relatórios e SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md).  
   
-##  <a name="Legend"></a> Problemas de legenda, escala de cores e régua  
+##  <a name="Legend"></a>Problemas de legenda, escala de cores e regra  
  Use esta seção para ajudar a resolver problemas relacionados às opções de regras, legendas e escala de cores.  
   
 ### <a name="how-do-i-control-the-values-in-the-map-legend"></a>Como eu controlo os valores na legenda do mapa?  
@@ -172,7 +172,8 @@ ms.locfileid: "66104643"
 -   Para obter mais informações, consulte [Variar a exibição de polígono, linha e ponto por regras e dados analíticos &#40;Construtor de Relatórios e SSRS&#41;](vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
   
 ### <a name="what-is-the-value-nan-on-the-color-scale"></a>O que é o valor NaN na escala de cores?  
- `NaN` significa Não é um Número. Os valores de escalas de cores devem ser numéricos. Verifique as configurações de distribuição e o valor de texto da legenda das regras associadas à escala de cores. Se você criou intervalos de distribuição personalizados, verifique se especificou o limite inferior no primeiro intervalo e o limite superior no último intervalo.  
+ 
+  `NaN` significa Não é um Número. Os valores de escalas de cores devem ser numéricos. Verifique as configurações de distribuição e o valor de texto da legenda das regras associadas à escala de cores. Se você criou intervalos de distribuição personalizados, verifique se especificou o limite inferior no primeiro intervalo e o limite superior no último intervalo.  
   
 ### <a name="my-color-scale-does-not-appear-when-i-run-the-report"></a>Minha escala de cores não aparece quando eu executo o relatório.  
  A escala de cores exibe informações ao usuário quando uma camada do mapa especifica regras de cores para polígonos, linhas ou pontos para a camada inteira ou para elementos do mapa inseridos. Se nenhum elemento do mapa especificar uma regra de cor, ou se as regras de cores especificarem com o uso de uma legenda, em vez do mapa de cores, o mapa de cores não aparecerá no relatório renderizado.  
@@ -181,7 +182,7 @@ ms.locfileid: "66104643"
   
   
   
-##  <a name="Tile"></a> Problemas de peça  
+##  <a name="Tile"></a>Problemas de bloco  
  Use esta seção para ajudar a resolver problemas relacionados às opções de plano de fundo lado a lado.  
   
 ### <a name="i-cannot-see-the-bing-maps-tile-background"></a>Eu não consigo visualizar o plano de fundo de mapas do Bing lado a lado.  
@@ -204,7 +205,7 @@ ms.locfileid: "66104643"
   
   
   
-##  <a name="Tooltip"></a> Problemas de dica de ferramenta e rótulo  
+##  <a name="Tooltip"></a>Problemas de dica de ferramenta e rótulo  
  Use esta seção para ajudar a resolver problemas relacionados às opções de dica de rótulo ou dica de ferramenta.  
   
 ### <a name="i-get-an-expression-error-about-dataset-scope-when-i-set-a-label-or-tooltip-to-an-expression"></a>Eu recebo um erro de expressão sobre o escopo do conjunto de dados quando defino um rótulo ou Dica de Ferramenta como uma expressão.  
@@ -214,7 +215,7 @@ ms.locfileid: "66104643"
   
   
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Mapas &#40;Construtor de Relatórios e SSRS&#41;](maps-report-builder-and-ssrs.md)   
  [Solução de problemas do Construtor de Relatórios](../troubleshoot-report-builder.md)  
   

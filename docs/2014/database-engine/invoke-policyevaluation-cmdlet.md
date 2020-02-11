@@ -17,21 +17,21 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 17da45f3e66ed0adc68a40a776bfb8fe1126f330
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797853"
 ---
 # <a name="invoke-policyevaluation-cmdlet"></a>cmdlet Invoke-PolicyEvaluation
-  O**Invoke-PolicyEvaluation** é um cmdlet do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que relata se um conjunto de objetos SQL Server de destino é compatível com as condições especificadas em uma ou mais políticas do Gerenciamento Baseado em Políticas.  
+  **Invoke-PolicyEvaluation** é um [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cmdlet que relata se um conjunto de destino de objetos de SQL Server está em conformidade com as condições especificadas em uma ou mais políticas de gerenciamento baseado em políticas.  
   
 ## <a name="using-invoke-policyevaluation"></a>Usando Invoke-PolicyEvaluation  
- O**Invoke-PolicyEvaluation** avalia uma ou mais políticas em relação a um conjunto de objetos SQL Server, chamado conjunto de destino. O conjunto de objetos de destino origina-se em um servidor de destino. Cada política define condições, as quais são os estados permitidos dos objetos de destino. Por exemplo, a política **Banco de Dados Confiável** declara que a propriedade TRUSTWORTHY do banco de dados deve ser definida como OFF.  
+ **Invoke-PolicyEvaluation** avalia uma ou mais políticas em relação a um conjunto de objetos SQL Server chamado de conjunto de destino. O conjunto de objetos de destino origina-se em um servidor de destino. Cada política define condições, as quais são os estados permitidos dos objetos de destino. Por exemplo, a política **Banco de Dados Confiável** declara que a propriedade TRUSTWORTHY do banco de dados deve ser definida como OFF.  
   
  O parâmetro **-AdHocPolicyEvaluationMode** especifica as ações tomadas:  
   
- Verificar  
+ Verificação  
  Relate o status de conformidade dos objetos de destino que usam as credenciais do seu logon atual. Não reconfigure nenhum objeto. Essa é a configuração padrão.  
   
  CheckSqlScriptAsProxy  
@@ -84,11 +84,11 @@ gci "Database Status.xml", "Trustworthy Database.xml" | Invoke-PolicyEvaluation 
 ## <a name="specifying-the-target-set"></a>Especificando o conjunto de destino  
  Use três parâmetros para especificar o conjunto de objetos de destino:  
   
--   O **-TargetServerName** especifica a instância do SQL Server que contém os objetos de destino. Você pode especificar as informações em uma cadeia de caracteres que use o formato definido para a propriedade ConnectionString da classe <xref:System.Data.SqlClient.SqlConnection> . Você pode usar a classe <xref:System.Data.SqlClient.SqlConnectionStringBuilder> para criar uma cadeia de conexão formatada corretamente. Você pode criar também um objeto <xref:Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection> e transmiti-lo para **-TargetServer**. Se você fornecer uma cadeia de caracteres que tenha apenas o nome do servidor, **Invoke-PolicyEvaluation** usará a Autenticação do Windows para se conectar ao servidor.  
+-   **-TargetServerName** especifica a instância de SQL Server que contém os objetos de destino. Você pode especificar as informações em uma cadeia de caracteres que use o formato definido para a propriedade ConnectionString da classe <xref:System.Data.SqlClient.SqlConnection> . Você pode usar a classe <xref:System.Data.SqlClient.SqlConnectionStringBuilder> para criar uma cadeia de conexão formatada corretamente. Você pode criar também um objeto <xref:Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection> e transmiti-lo para **-TargetServer**. Se você fornecer uma cadeia de caracteres que tenha apenas o nome do servidor, **Invoke-PolicyEvaluation** usará a Autenticação do Windows para se conectar ao servidor.  
   
--   O **-TargetObjects** utiliza um objeto ou uma matriz de objetos que representam os objetos SQL Server no conjunto de destino. Por exemplo, você pode criar uma matriz de objetos da classe <xref:Microsoft.SqlServer.Management.Smo.Database> para transmitir para **-TargetObjects**.  
+-   **-TargetObjects** usa um objeto ou uma matriz de objetos que representam os objetos SQL Server no conjunto de destino. Por exemplo, você pode criar uma matriz de objetos da classe <xref:Microsoft.SqlServer.Management.Smo.Database> para transmitir para **-TargetObjects**.  
   
--   O **-TargetExpressions** utiliza uma cadeia de caracteres que contém uma expressão de consulta que especifica os objetos no conjunto de destino. A expressão de consulta está na forma de nós separados pelo caractere '/'. Cada nó está na forma ObjectType[Filtro]. O tipo de objeto é um dos objetos em uma hierarquia de objetos do SMO (SQL Server Management Object). O filtro é uma expressão que filtra objetos desse nó. Para obter mais informações, consulte [Query Expressions and Uniform Resource Names](../powershell/query-expressions-and-uniform-resource-names.md).  
+-   **-TargetExpressions** usa uma cadeia de caracteres que contém uma expressão de consulta que especifica os objetos no conjunto de destino. A expressão de consulta está na forma de nós separados pelo caractere '/'. Cada nó está na forma ObjectType[Filtro]. O tipo de objeto é um dos objetos em uma hierarquia de objetos do SMO (SQL Server Management Object). O filtro é uma expressão que filtra objetos desse nó. Para obter mais informações, consulte [Query Expressions and Uniform Resource Names](../powershell/query-expressions-and-uniform-resource-names.md).  
   
  Especifique **-TargetObjects** ou **-TargetExpression**, mas não ambos.  
   
@@ -129,7 +129,7 @@ Invoke-PolicyEvaluation -Policy "Surface Area Configuration for Reporting Servic
 ```  
   
 ## <a name="formatting-output"></a>Formatando a saída  
- Por padrão, a saída de **Invoke-PolicyEvaluation** é exibida na janela do prompt de comando como um relatório conciso em formato legível. Você pode usar o parâmetro **-OutputXML** para especificar que, em vez disso, o cmdlet deve produzir um relatório detalhado como um arquivo XML. **Invoke-PolicyEvaluation** usa o esquema SML-IF (Systems Modeling Language Interchange Format) para que o arquivo possa ser lido por leitores de SML-IF.  
+ Por padrão, a saída de **Invoke-PolicyEvaluation** é exibida na janela do prompt de comando como um relatório conciso em formato legível. Você pode usar o parâmetro **-OutputXML** para especificar que, em vez disso, o cmdlet deve produzir um relatório detalhado como um arquivo XML. O **Invoke-PolicyEvaluation** usa o esquema SML-if (System Modeling Language Interchange Format) para que o arquivo possa ser lido por leitores de SML-If.  
   
 ```powershell
 sl "SQLSERVER:\SQLPolicy\MyComputer\DEFAULT\Policies"  

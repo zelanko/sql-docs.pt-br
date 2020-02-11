@@ -1,5 +1,5 @@
 ---
-title: Provedor Microsoft OLE DB para SQL Server | Microsoft Docs
+title: Provedor de OLE DB da Microsoft para SQL Server | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,29 +15,29 @@ ms.assetid: 99bc40c4-9181-4ca1-a06f-9a1a914a0b7b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bd28ece0e82c4551409920c876d54fbd7dc501ff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926614"
 ---
-# <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>Provedor Microsoft OLE DB para visão geral do SQL Server
-O Microsoft OLE DB Provider para SQL Server, SQLOLEDB, permite que o ADO para acessar o Microsoft SQL Server.
+# <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>Visão geral do provedor do Microsoft OLE DB para SQL Server
+O provedor de OLE DB da Microsoft para SQL Server, SQLOLEDB, permite que o ADO acesse Microsoft SQL Server.
 
 > [!IMPORTANT]
-> O Microsoft OLE DB Provider for SQL Server (SQLOLEDB) permanece preterido e não é recomendável usá-lo para o novo trabalho de desenvolvimento. Em vez disso, use a nova [Microsoft Driver do OLE DB para SQL Server](../../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) que será atualizado com os recursos mais recentes do servidor.
+> O provedor de OLE DB da Microsoft para SQL Server (SQLOLEDB) permanece preterido e não é recomendável usá-lo para novos trabalhos de desenvolvimento. Em vez disso, use o novo [Driver do Microsoft OLE DB para SQL Server](../../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL), que será atualizado com os recursos de servidor mais recentes.
 
-## <a name="connection-string-parameters"></a>Parâmetros de cadeia de caracteres de Conexão
- Para se conectar ao provedor, defina as *provedor* argumento para o [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) propriedade para:
+## <a name="connection-string-parameters"></a>Parâmetros da cadeia de conexão
+ Para se conectar a esse provedor, defina o argumento do *provedor* como a propriedade [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) como:
 
 ```vb
 SQLOLEDB
 ```
 
- Esse valor também pode ser definido ou lidos usando o [provedor](../../../ado/reference/ado-api/provider-property-ado.md) propriedade.
+ Esse valor também pode ser definido ou lido usando a propriedade [Provider](../../../ado/reference/ado-api/provider-property-ado.md) .
 
-## <a name="typical-connection-string"></a>Cadeia de caracteres de Conexão típica
- Uma cadeia de caracteres de conexão típica para esse provedor é:
+## <a name="typical-connection-string"></a>Cadeia de conexão típica
+ Uma cadeia de conexão típica para esse provedor é:
 
 ```vb
 "Provider=SQLOLEDB;Data Source=serverName;"
@@ -47,51 +47,51 @@ User ID=MyUserID;Password=MyPassword;"
 
  A cadeia de caracteres consiste nessas palavras-chave:
 
-|Palavra-chave|Descrição|
+|Palavra-chave|DESCRIÇÃO|
 |-------------|-----------------|
-|**Provedor**|Especifica o provedor OLE DB para SQL Server.|
-|**Fonte de dados** ou **Server**|Especifica o nome de um servidor.|
+|**Provedor**|Especifica o provedor de OLE DB para SQL Server.|
+|**Fonte de dados** ou **servidor**|Especifica o nome de um servidor.|
 |**Catálogo inicial** ou **banco de dados**|Especifica o nome de um banco de dados no servidor.|
-|**ID de usuário** ou **uid**|Especifica o nome de usuário (para autenticação do SQL Server).|
-|**Senha** ou **pwd**|Especifica a senha do usuário (para autenticação do SQL Server).|
+|**ID de usuário** ou **UID**|Especifica o nome de usuário (para SQL Server autenticação).|
+|**Senha** ou **pwd**|Especifica a senha do usuário (para SQL Server autenticação).|
 
 > [!NOTE]
->  Se você estiver se conectando a um provedor de fonte de dados que dá suporte à autenticação do Windows, você deve especificar **Trusted_Connection = yes** ou **Integrated Security = SSPI** em vez de ID de usuário e senha informações na cadeia de conexão.
+>  Se você estiver se conectando a um provedor de fonte de dados que dá suporte à autenticação do Windows, especifique **Trusted_Connection = Sim** ou **segurança integrada = SSPI** , em vez de ID de usuário e informações de senha na cadeia de conexão.
 
-## <a name="provider-specific-connection-parameters"></a>Parâmetros de Conexão específicas do provedor
- O provedor oferece suporte a vários parâmetros de conexão específica do provedor além daqueles definidos pelo ADO. Como com as propriedades de conexão ADO, essas propriedades específicas do provedor podem ser definidas por meio de [propriedades](../../../ado/reference/ado-api/properties-collection-ado.md) coleção de um [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) ou pode ser definido como parte do **ConnectionString**.
+## <a name="provider-specific-connection-parameters"></a>Parâmetros de conexão específicos do provedor
+ O provedor dá suporte a vários parâmetros de conexão específicos do provedor, além daqueles definidos pelo ADO. Assim como acontece com as propriedades de conexão ADO, essas propriedades específicas do provedor podem ser definidas por meio da coleção [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) de uma [conexão](../../../ado/reference/ado-api/connection-object-ado.md) ou podem ser definidas como parte de **ConnectionString**.
 
-|Parâmetro|Descrição|
+|Parâmetro|DESCRIÇÃO|
 |---------------|-----------------|
-|Trusted_Connection|Indica o modo de autenticação do usuário. Isso pode ser definido como **Yes** ou **não**. O valor padrão é **não**. Se essa propriedade é definida como **Yes**, SQLOLEDB usa o modo de autenticação do Microsoft Windows NT para autorizar o acesso de usuário no banco de dados do SQL Server especificado pela **local** e [fonte de dados ](../../../ado/reference/ado-api/datasource-property-ado.md) valores de propriedade. Se essa propriedade é definida como **não**, SQLOLEDB usa modo misto para autorizar o acesso de usuário no banco de dados do SQL Server. O logon do SQL Server e a senha são especificadas na **Id de usuário** e **senha** propriedades.|
-|Idioma Atual|Indica um nome de idioma do SQL Server. Identifica o idioma usado para seleção de mensagem de sistema e formatação. O idioma deve ser instalado no SQL Server, caso contrário, abertura a conexão falhará.|
-|Endereço de Rede|Indica o endereço de rede do SQL Server especificado pela **local** propriedade.|
-|Biblioteca de rede|Indica o nome da biblioteca de rede (DLL) usado para se comunicar com o SQL Server. O nome não deve incluir o caminho ou a extensão de nome de arquivo .dll. O padrão é fornecido pela configuração de cliente do SQL Server.|
-|Usar procedimento para preparar|Determina se o SQL Server cria procedimentos armazenados temporários quando os comandos são preparados (pela **preparado** propriedade).|
-|Tradução automática|Indica se os caracteres OEM/ANSI são convertidos. Essa propriedade pode ser definida como **verdadeira** ou **falso**. O valor padrão é **True**. Se essa propriedade é definida como **verdadeira**, SQLOLEDB executa a conversão de caracteres OEM/ANSI quando cadeias de caracteres multibyte são recuperadas de ou enviadas para o SQL Server. Se essa propriedade é definida como **falsos**, SQLOLEDB não faz a conversão de caracteres OEM/ANSI em dados de cadeia de caracteres de vários bytes.|
-|Tamanho do Pacote|Indica um tamanho de pacote de rede em bytes. O valor de propriedade de tamanho de pacote deve estar entre 512 e 32767. O tamanho de pacote de rede SQLOLEDB padrão é 4096.|
+|Trusted_Connection|Indica o modo de autenticação do usuário. Isso pode ser definido como **Sim** ou **não**. O valor padrão é **no**. Se essa propriedade for definida como **Sim**, SQLOLEDB usará o modo de autenticação do Microsoft Windows NT para autorizar o acesso do usuário ao banco de dados de SQL Server especificado pelos valores de propriedade **local** e [DataSource](../../../ado/reference/ado-api/datasource-property-ado.md) . Se essa propriedade for definida como **não**, SQLOLEDB usará o modo misto para autorizar o acesso do usuário ao banco de dados de SQL Server. O logon de SQL Server e a senha são especificados nas propriedades **ID de usuário** e **senha** .|
+|Idioma Atual|Indica um nome de idioma SQL Server. Identifica o idioma usado para seleção de mensagem de sistema e formatação. O idioma deve ser instalado na SQL Server, caso contrário, abrir a conexão falhará.|
+|Endereço de Rede|Indica o endereço de rede do SQL Server especificado pela propriedade **Location** .|
+|Biblioteca de rede|Indica o nome da biblioteca de rede (DLL) usada para se comunicar com o SQL Server. O nome não deve incluir o caminho ou a extensão de nome de arquivo .dll. O padrão é fornecido pela configuração do cliente SQL Server.|
+|Usar procedimento para preparar|Determina se SQL Server cria procedimentos armazenados temporários quando os comandos são preparados (pela propriedade **preparada** ).|
+|Tradução automática|Indica se os caracteres OEM/ANSI são convertidos. Essa propriedade pode ser definida como **true** ou **false**. O valor padrão é **True**. Se essa propriedade for definida como **true**, SQLOLEDB executará a conversão de caracteres OEM/ANSI quando as cadeias de caracteres de vários bytes forem recuperadas ou enviadas para o SQL Server. Se essa propriedade for definida como **false**, SQLOLEDB não executará a conversão de caracteres OEM/ANSI em dados de cadeia de caracteres de vários bytes.|
+|Tamanho do Pacote|Indica um tamanho de pacote de rede em bytes. O valor da propriedade tamanho do pacote deve estar entre 512 e 32767. O tamanho padrão do pacote de rede SQLOLEDB é 4096.|
 |Nome do Aplicativo|Indica o nome do aplicativo cliente.|
 |ID da Estação de Trabalho|Uma cadeia de caracteres que identifica a estação de trabalho.|
 
 ## <a name="command-object-usage"></a>Uso do objeto Command
- SQLOLEDB aceita uma amálgama de ODBC, ANSI e específicas do SQL Server Transact-SQL como sintaxe válida. Por exemplo, a seguinte instrução SQL usa uma sequência de escape do ODBC SQL para especificar a função de cadeia de caracteres LCASE:
+ SQLOLEDB aceita um mistura de ODBC, ANSI e Transact-SQL específico de SQL Server como sintaxe válida. Por exemplo, a seguinte instrução SQL usa uma sequência de escape do ODBC SQL para especificar a função de cadeia de caracteres LCASE:
 
 ```sql
 SELECT customerid={fn LCASE(CustomerID)} FROM Customers
 
 ```
 
- LCASE retorna uma cadeia de caracteres, convertendo todos os caracteres em maiúscula aos seus equivalentes em minúsculas. A função de cadeia de caracteres SQL ANSI inferior executa a mesma operação, portanto, a seguinte instrução SQL é um ANSI equivalente à instrução ODBC apresentada anteriormente:
+ LCASE retorna uma cadeia de caracteres, convertendo todos os caracteres em maiúscula aos seus equivalentes em minúsculas. A função de cadeia de caracteres SQL ANSI baixa executa a mesma operação, portanto, a seguinte instrução SQL é um equivalente ANSI para a instrução ODBC apresentada anteriormente:
 
 ```sql
 SELECT customerid=LOWER(CustomerID) FROM Customers
 
 ```
 
- SQLOLEDB processa com êxito o formulário da instrução quando especificado como o texto para um comando.
+ SQLOLEDB processa com êxito a forma da instrução quando especificado como texto para um comando.
 
 ## <a name="stored-procedures"></a>Procedimentos armazenados
- Ao executar um SQL Server armazenado procedimento usando um comando SQLOLEDB, use a sequência de escape ODBC chamada de procedimento no texto do comando. SQLOLEDB, em seguida, usa o mecanismo de chamada de procedimento remoto do SQL Server para otimizar o processamento do comando. Por exemplo, a seguinte instrução SQL ODBC é o texto do comando preferencial sobre o formulário de Transact-SQL:
+ Ao executar um procedimento armazenado SQL Server usando um comando SQLOLEDB, use a sequência de escape de chamada de procedimento ODBC no texto do comando. Em seguida, SQLOLEDB usa o mecanismo de chamada de procedimento remoto de SQL Server para otimizar o processamento de comandos. Por exemplo, a seguinte instrução SQL ODBC é o texto de comando preferencial no formulário Transact-SQL:
 
 ## <a name="odbc-sql"></a>ODBC SQL
 
@@ -107,86 +107,86 @@ EXECUTE SalesByCategory 'Produce', '1995'
 
 ```
 
-## <a name="sql-server-features"></a>Recursos do SQL Server
- Com o SQL Server, o ADO pode usar XML para **comando** inserir e recuperar os resultados no formato de fluxo XML em vez de usar **Recordset** objetos. Para obter mais informações, consulte [usando fluxos de entrada de comando](../../../ado/guide/data/command-streams.md) e [recuperando conjuntos de resultados em fluxos](../../../ado/guide/data/retrieving-resultsets-into-streams.md).
+## <a name="sql-server-features"></a>Recursos de SQL Server
+ Com o SQL Server, o ADO pode usar XML para entrada de **comando** e recuperar resultados em formato de fluxo XML em vez de em objetos **Recordset** . Para obter mais informações, consulte [usando fluxos para entrada de comando](../../../ado/guide/data/command-streams.md) e [recuperando conjuntos de resultados em fluxos](../../../ado/guide/data/retrieving-resultsets-into-streams.md).
 
-### <a name="accessing-sqlvariant-data-using-mdac-27-mdac-28-or-windows-dac-60"></a>Acessando dados sql_variant usando MDAC 2.7, o MDAC 2.8 ou o Windows DAC 6.0
- Microsoft SQL Server tem um tipo de dados chamado **sql_variant**. Semelhante do OLE DB **DBTYPE_VARIANT**, o **sql_variant** tipo de dados pode armazenar dados de vários tipos diferentes. No entanto, há algumas diferenças importantes entre **DBTYPE_VARIANT** e **sql_variant**. ADO também lida com dados armazenados como um **sql_variant** Diferentemente de como ele lida com outros tipos de dados de valor. A lista a seguir descreve problemas devem ser consideradas quando você acessa dados do SQL Server armazenados em colunas do tipo **sql_variant**.
+### <a name="accessing-sql_variant-data-using-mdac-27-mdac-28-or-windows-dac-60"></a>Acessando dados sql_variant usando MDAC 2,7, MDAC 2,8 ou Windows DAC 6,0
+ Microsoft SQL Server tem um tipo de dados chamado **sql_variant**. Semelhante ao **DBTYPE_VARIANT**do OLE DB, o tipo de dados **sql_variant** pode armazenar dados de vários tipos diferentes. No entanto, há algumas diferenças importantes entre **DBTYPE_VARIANT** e **sql_variant**. O ADO também manipula os dados armazenados como um valor **sql_variant** de forma diferente de como ele lida com outros tipos de dados. A lista a seguir descreve os problemas a serem considerados quando você acessa SQL Server dados armazenados em colunas do tipo **sql_variant**.
 
--   No MDAC 2.7, MDAC 2.8 e Windows Data Access Components (Windows DAC) 6.0, o provedor OLE DB para SQL Server dá suporte a **sql_variant** tipo. O provedor OLE DB para ODBC, não.
+-   No MDAC 2,7, no MDAC 2,8 e no Windows Data Access Components (Windows DAC) 6,0, o provedor de OLE DB para SQL Server dá suporte ao tipo de **sql_variant** . O provedor de OLE DB para ODBC não faz isso.
 
--   O **sql_variant** tipo corresponde exatamente a **DBTYPE_VARIANT** tipo de dados.  O **sql_variant** tipo dá suporte a alguns novos subtipos não tem suportados pelo **DBTYPE_VARIANT,** incluindo **GUID**, **ANSI** (não-UNICODE) cadeias de caracteres, e **BIGINT**. Usando subtipos diferente daqueles listados anteriormente funcionará corretamente.
+-   O tipo de **sql_variant** não corresponde exatamente ao tipo de dados **DBTYPE_VARIANT** .  O tipo de **sql_variant** dá suporte a alguns novos subtipos, o que não é suportado pelo **DBTYPE_VARIANT,** incluindo cadeias de caracteres **GUID**, **ANSI** (não Unicode) e **bigint**. O uso de subtipos diferentes daqueles listados anteriormente funcionará corretamente.
 
--   O **sql_variant** subtipo **NUMÉRICO** não coincide com o **DBTYPE_DECIMAL** de tamanho.
+-   O **numérico** de subtipo **sql_variant** não corresponde ao **DBTYPE_DECIMAL** de tamanho.
 
--   Várias coerções de tipo de dados resultará em tipos que não correspondem. Por exemplo, a coerção uma **sql_variant** com um subtipo do **GUID** para um **DBTYPE_VARIANT** resultará em um subtipo do **safearray**(bytes) . Conversão desse tipo de volta para um **sql_variant** resultará em um novo subtipo **matriz**(bytes).
+-   Várias coerçãos de tipo de dados resultarão em tipos que não correspondem. Por exemplo, a coerção de um **sql_variant** com um subtipo de **GUID** para um **DBTYPE_VARIANT** resultará em um subtipo de **SafeArray**(bytes). Converter esse tipo de volta para um **sql_variant** resultará em um novo subtipo de **matriz**(bytes).
 
--   **Conjunto de registros** campos que contêm **sql_variant** dados podem ser remotos (empacotado) ou persistente somente se o **sql_variant** contiver subtipos específicos. A tentativa de remoto ou manter os dados com o seguinte sem suporte subtipos causará um erro de tempo de execução (não há suporte para conversão) do provedor de persistência de Microsoft (MSPersist): **VT_VARIANT**, **VT_RECORD**, **VT_ILLEGAL**, **VT_UNKNOWN**, **VT_BSTR**, e **VT_DISPATCH.**
+-   Os campos do **conjunto de registros** que contêm **sql_variant** dados poderão ser remotos (empacotados) ou persistidos somente se o **sql_variant** contiver subtipos específicos. A tentativa de manter os dados remotos ou persistentes com os seguintes subtipos sem suporte causará um erro em tempo de execução (conversão sem suporte) do provedor de persistência da Microsoft (MSPersist): **VT_VARIANT**, **VT_RECORD**, **VT_ILLEGAL**, **VT_UNKNOWN**, **VT_BSTR**e **VT_DISPATCH.**
 
--   O provedor OLE DB para SQL Server no MDAC 2.7, MDAC 2.8 e 6.0 do Windows DAC tem uma propriedade dinâmica chamada **permitir variantes nativas** que, como o nome sugere, permite que os desenvolvedores acessem os **sql_variant** em seu formulário nativo em vez de um **DBTYPE_VARIANT**. Se essa propriedade for definida e um **conjunto de registros** é aberta com o mecanismo de Cursor do cliente (**adUseClient**), o **Recordset.Open** chamada falhará. Se essa propriedade é definida e uma **conjunto de registros** é aberto com cursores de servidor (**adUseServer**), o **Recordset.Open** chamada terá êxito, mas acessando as colunas do tipo **sql_variant** produzirá um erro.
+-   O provedor de OLE DB para SQL Server no MDAC 2,7, no MDAC 2,8 e no Windows DAC 6,0 tem uma propriedade dinâmica chamada **permitir variantes nativas** , que, como o nome sugere, permite que os desenvolvedores acessem o **sql_variant** em sua forma nativa, em oposição a um **DBTYPE_VARIANT**. Se essa propriedade for definida e um **conjunto de registros** for aberto com o mecanismo de cursor do cliente (**adUseClient**), a chamada **Recordset. Open** falhará. Se essa propriedade for definida e um **conjunto de registros** for aberto com cursores de servidor (**adUseServer**), a chamada **Recordset. Open** terá sucesso, mas o acesso às colunas do tipo **sql_variant** produzirá um erro.
 
--   Em aplicativos cliente que usam MDAC 2.5 **sql_variant** dados podem ser usados com consultas no Microsoft SQL Server. No entanto, os valores de **sql_variant** dados são tratados como cadeias de caracteres. Tais aplicativos cliente devem ser atualizados para MDAC 2.7, o MDAC 2.8 ou o Windows DAC 6.0.
+-   Em aplicativos cliente que usam o MDAC 2,5, **sql_variant** dados podem ser usados com consultas no Microsoft SQL Server. No entanto, os valores dos dados de **sql_variant** são tratados como cadeias de caracteres. Esses aplicativos cliente devem ser atualizados para MDAC 2,7, MDAC 2,8 ou Windows DAC 6,0.
 
 ## <a name="recordset-behavior"></a>Comportamento do conjunto de registros
- SQLOLEDB não é possível usar cursores do SQL Server para suportar o resultado de vários gerado por muitos comandos. Se um consumidor solicitar um conjunto de registros que exigem suporte de cursor do SQL Server, ocorrerá um erro se o texto do comando usado mais de um único conjunto de registros gera como resultado.
+ SQLOLEDB não pode usar cursores SQL Server para dar suporte a vários resultados gerados por muitos comandos. Se um consumidor solicitar um conjunto de registros exigindo SQL Server suporte a cursor, ocorrerá um erro se o texto do comando usado gerar mais de um único conjunto de registros como resultado.
 
- Conjuntos de registros SQLOLEDB roláveis são compatíveis com cursores do SQL Server. SQL Server impõe limitações sobre cursores que são sensíveis às alterações feitas por outros usuários do banco de dados. Especificamente, as linhas em alguns cursores não podem ser ordenadas e tentar criar um conjunto de registros usando um comando que contém uma cláusula SQL ORDER BY pode falhar.
+ Os conjuntos de registros SQLOLEDB que podem ser rolados são suportados pelos cursores SQL Server. SQL Server impõe limitações em cursores que são sensíveis a alterações feitas por outros usuários do banco de dados. Especificamente, as linhas em alguns cursores não podem ser ordenadas e a tentativa de criar um conjunto de registros usando um comando que contém uma cláusula SQL ORDER BY pode falhar.
 
 ## <a name="dynamic-properties"></a>Propriedades Dinâmicas
- O Microsoft OLE DB Provider para SQL Server insere várias propriedades dinâmicas para o **propriedades** coleção da não abertos [Conexão](../../../ado/reference/ado-api/connection-object-ado.md), [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md)e [ Comando](../../../ado/reference/ado-api/command-object-ado.md) objetos.
+ O provedor de OLE DB da Microsoft para SQL Server insere várias propriedades dinâmicas na coleção **Properties** dos objetos [Connection](../../../ado/reference/ado-api/connection-object-ado.md), [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)e [Command](../../../ado/reference/ado-api/command-object-ado.md) não abertos.
 
- As tabelas a seguir são um cross-index dos nomes de ADO e OLE DB para cada propriedade dinâmica. O referência do programador DB OLE se refere a um nome de propriedade ADO usando o termo "Descrição". Você pode encontrar mais informações sobre essas propriedades na referência do OLE DB do programador. Pesquise o nome da propriedade do OLE DB no índice ou consulte [apêndice c: Propriedades OLE DB](https://msdn.microsoft.com/deded3ff-f508-4e1b-b2b1-fd9afd3bd292).
+ As tabelas a seguir são um índice cruzado dos nomes do ADO e do OLE DB para cada propriedade dinâmica. A referência do programador de OLE DB refere-se a um nome de propriedade ADO pelo termo "Descrição". Você pode encontrar mais informações sobre essas propriedades na referência do programador de OLE DB. Procure o nome da propriedade OLE DB no índice ou veja o [Apêndice C: OLE DB Propriedades](https://msdn.microsoft.com/deded3ff-f508-4e1b-b2b1-fd9afd3bd292).
 
-## <a name="connection-dynamic-properties"></a>Propriedades dinâmicas da Conexão
- As propriedades a seguir são adicionadas para o **propriedades** coleção da **Conexão** objeto.
+## <a name="connection-dynamic-properties"></a>Propriedades dinâmicas da conexão
+ As propriedades a seguir são adicionadas à coleção **Properties** do objeto **Connection** .
 
-|Nome da propriedade ADO|Nome da propriedade do OLE DB|
+|Nome da propriedade ADO|Nome da propriedade de OLE DB|
 |-----------------------|--------------------------|
 |Sessões ativas|DBPROP_ACTIVESESSIONS|
-|Anulação Asynchable|DBPROP_ASYNCTXNABORT|
-|Confirmação de Asynchable|DBPROP_ASYNCTNXCOMMIT|
+|Anular Asynchable|DBPROP_ASYNCTXNABORT|
+|Asynchable confirmação|DBPROP_ASYNCTNXCOMMIT|
 |Níveis de isolamento de confirmação automática|DBPROP_SESS_AUTOCOMMITISOLEVELS|
 |Local do catálogo|DBPROP_CATALOGLOCATION|
 |Termo do catálogo|DBPROP_CATALOGTERM|
 |Definição de coluna|DBPROP_COLUMNDEFINITION|
 |Connect Timeout|DBPROP_INIT_TIMEOUT|
 |Catálogo atual|DBPROP_CURRENTCATALOG|
-|fonte de dados|DBPROP_INIT_DATASOURCE|
-|Nome da Fonte de Dados|DBPROP_DATASOURCENAME|
-|Objeto de fonte de dados modelo de Threading|DBPROP_DSOTHREADMODEL|
+|Fonte de dados|DBPROP_INIT_DATASOURCE|
+|Nome da fonte de dados|DBPROP_DATASOURCENAME|
+|Modelo de Threading do objeto de fonte de dados|DBPROP_DSOTHREADMODEL|
 |Nome do DBMS|DBPROP_DBMSNAME|
 |Versão do DBMS|DBPROP_DBMSVER|
 |Propriedades estendidas|DBPROP_INIT_PROVIDERSTRING|
-|Suporte GROUP BY|DBPROP_GROUPBY|
+|Agrupar por suporte|DBPROP_GROUPBY|
 |Suporte a tabelas heterogêneas|DBPROP_HETEROGENEOUSTABLES|
-|Maiusculas e minúsculas do identificador|DBPROP_IDENTIFIERCASE|
+|Diferenciar maiúsculas de minúsculas|DBPROP_IDENTIFIERCASE|
 |Catálogo Inicial|DBPROP_INIT_CATALOG|
 |Níveis de isolamento|DBPROP_SUPPORTEDTXNISOLEVELS|
 |Retenção de isolamento|DBPROP_SUPPORTEDTXNISORETAIN|
 |Identificador de Localidade|DBPROP_INIT_LCID|
-|Tamanho máximo de índice|DBPROP_MAXINDEXSIZE|
+|Tamanho máximo do índice|DBPROP_MAXINDEXSIZE|
 |Tamanho máximo da linha|DBPROP_MAXROWSIZE|
-|Tamanho máximo de linha inclui BLOB|DBPROP_MAXROWSIZEINCLUDESBLOB|
+|O tamanho máximo da linha inclui o BLOB|DBPROP_MAXROWSIZEINCLUDESBLOB|
 |Máximo de tabelas em SELECT|DBPROP_MAXTABLESINSELECT|
 |Vários conjuntos de parâmetros|DBPROP_MULTIPLEPARAMSETS|
 |Vários resultados|DBPROP_MULTIPLERESULTS|
 |Vários objetos de armazenamento|DBPROP_MULTIPLESTORAGEOBJECTS|
-|Atualização multi-tabela|DBPROP_MULTITABLEUPDATE|
-|Ordem de agrupamento de NULL|DBPROP_NULLCOLLATION|
-|Comportamento de concatenação nulo|DBPROP_CONCATNULLBEHAVIOR|
+|Atualização de várias tabelas|DBPROP_MULTITABLEUPDATE|
+|Ordem de agrupamento nula|DBPROP_NULLCOLLATION|
+|Comportamento de concatenação NULL|DBPROP_CONCATNULLBEHAVIOR|
 |Versão do OLE DB|DBPROP_PROVIDEROLEDBVER|
-|Suporte do objeto OLE|DBPROP_OLEOBJECTS|
-|Suporte de conjunto de linhas aberto|DBPROP_OPENROWSETSUPPORT|
-|Colunas ORDER BY na lista de seleção|DBPROP_ORDERBYCOLUMNSINSELECT|
+|Suporte a objeto OLE|DBPROP_OLEOBJECTS|
+|Abrir suporte a conjunto de linhas|DBPROP_OPENROWSETSUPPORT|
+|CLASSIFICAR por colunas na lista de seleção|DBPROP_ORDERBYCOLUMNSINSELECT|
 |Disponibilidade do parâmetro de saída|DBPROP_OUTPUTPARAMETERAVAILABILITY|
-|Acessadores passe por referência|DBPROP_BYREFACCESSORS|
+|Acessadores de passagem por referência|DBPROP_BYREFACCESSORS|
 |Senha|DBPROP_AUTH_PASSWORD|
 |Informações de Persistência de Segurança|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|
 |Tipo de ID persistente|DBPROP_PERSISTENTIDTYPE|
-|Preparar comportamento do abortar|DBPROP_PREPAREABORTBEHAVIOR|
-|Preparar comportamento da confirmação|DBPROP_PREPARECOMMITBEHAVIOR|
-|Termo de procedimento|DBPROP_PROCEDURETERM|
-|Aviso|DBPROP_INIT_PROMPT|
+|Preparar comportamento de anulação|DBPROP_PREPAREABORTBEHAVIOR|
+|Preparar comportamento de confirmação|DBPROP_PREPARECOMMITBEHAVIOR|
+|Termo do procedimento|DBPROP_PROCEDURETERM|
+|Prompt|DBPROP_INIT_PROMPT|
 |Nome amigável do provedor|DBPROP_PROVIDERFRIENDLYNAME|
 |Nome do Provedor|DBPROP_PROVIDERFILENAME|
 |Versão do provedor|DBPROP_PROVIDERVER|
@@ -194,38 +194,38 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |Conversões de conjunto de linhas no comando|DBPROP_ROWSETCONVERSIONSONCOMMAND|
 |Termo do esquema|DBPROP_SCHEMATERM|
 |Uso do esquema|DBPROP_SCHEMAUSAGE|
-|Suporte do SQL|DBPROP_SQLSUPPORT|
+|Suporte a SQL|DBPROP_SQLSUPPORT|
 |Armazenamento estruturado|DBPROP_STRUCTUREDSTORAGE|
-|Suporte subconsulta|DBPROP_SUBQUERIES|
-|Termo de tabela|DBPROP_TABLETERM|
-|Transação DDL|DBPROP_SUPPORTEDTXNDDL|
-|ID de usuário|DBPROP_AUTH_USERID|
-|Nome do Usuário|DBPROP_USERNAME|
+|Suporte a subconsulta|DBPROP_SUBQUERIES|
+|Termo da tabela|DBPROP_TABLETERM|
+|DDL de transação|DBPROP_SUPPORTEDTXNDDL|
+|Id de Usuário|DBPROP_AUTH_USERID|
+|Nome de usuário|DBPROP_USERNAME|
 |Identificador de janela|DBPROP_INIT_HWND|
 
 ## <a name="recordset-dynamic-properties"></a>Propriedades dinâmicas do conjunto de registros
- As propriedades a seguir são adicionadas para o **propriedades** coleção da **Recordset** objeto.
+ As propriedades a seguir são adicionadas à coleção **Properties** do objeto **Recordset** .
 
-|Nome da propriedade ADO|Nome da propriedade do OLE DB|
+|Nome da propriedade ADO|Nome da propriedade de OLE DB|
 |-----------------------|--------------------------|
 |Ordem de acesso|DBPROP_ACCESSORDER|
-|Bloquear objetos de armazenamento|DBPROP_BLOCKINGSTORAGEOBJECTS|
+|Bloqueando objetos de armazenamento|DBPROP_BLOCKINGSTORAGEOBJECTS|
 |Tipo de indicador|DBPROP_BOOKMARKTYPE|
-|Possíveis de indicação|DBPROP_IROWSETLOCATE|
-|Modificar linhas inseridas|DBPROP_CHANGEINSERTEDROWS|
+|Indicação|DBPROP_IROWSETLOCATE|
+|Alterar linhas inseridas|DBPROP_CHANGEINSERTEDROWS|
 |Privilégios de coluna|DBPROP_COLUMNRESTRICT|
-|Notificação de conjunto de coluna|DBPROP_NOTIFYCOLUMNSET|
-|Tempo limite de comando|DBPROP_COMMANDTIMEOUT|
-|Adiar a coluna|DBPROP_DEFERRED|
-|Atualizações de objetos de armazenamento de atraso|DBPROP_DELAYSTORAGEOBJECTS|
-|Buscar na ordem inversa|DBPROP_CANFETCHBACKWARDS|
-|Manter linhas|DBPROP_CANHOLDROWS|
+|Notificação de conjunto de colunas|DBPROP_NOTIFYCOLUMNSET|
+|Tempo limite do comando|DBPROP_COMMANDTIMEOUT|
+|Adiar coluna|DBPROP_DEFERRED|
+|Atrasar atualizações de objeto de armazenamento|DBPROP_DELAYSTORAGEOBJECTS|
+|Buscar versões anteriores|DBPROP_CANFETCHBACKWARDS|
+|Linhas de espera|DBPROP_CANHOLDROWS|
 |IAccessor|DBPROP_IAccessor|
 |IColumnsInfo|DBPROP_IColumnsInfo|
 |IColumnsRowset|DBPROP_IColumnsRowset|
 |IConnectionPointContainer|DBPROP_IConnectionPointContainer|
 |IConvertType|DBPROP_IConvertType|
-|Linhas imóveis|DBPROP_IMMOBILEROWS|
+|Linhas irmóveis|DBPROP_IMMOBILEROWS|
 |IRowset|DBPROP_IRowset|
 |IRowsetChange|DBPROP_IRowsetChange|
 |IRowsetIdentity|DBPROP_IRowsetIdentity|
@@ -236,71 +236,71 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |IRowsetUpdate|DBPROP_IRowsetUpdate|
 |ISequentialStream|DBPROP_ISequentialStream|
 |ISupportErrorInfo|DBPROP_ISupportErrorInfo|
-|Marcadores literais|DBPROP_LITERALBOOKMARKS|
+|Indicadores literais|DBPROP_LITERALBOOKMARKS|
 |Identidade de linha literal|DBPROP_LITERALIDENTITY|
 |Máximo de linhas abertas|DBPROP_MAXOPENROWS|
 |Máximo de linhas pendentes|DBPROP_MAXPENDINGROWS|
 |Máximo de linhas|DBPROP_MAXROWS|
-|Granularidade de notificação|DBPROP_NOTIFICATIONGRANULARITY|
+|Granularidade da notificação|DBPROP_NOTIFICATIONGRANULARITY|
 |Fases de notificação|DBPROP_NOTIFICATIONPHASES|
 |Objetos transacionados|DBPROP_TRANSACTEDOBJECT|
 |Alterações de outros visíveis|DBPROP_OTHERUPDATEDELETE|
 |Inserções de outros visíveis|DBPROP_OTHERINSERT|
-|Modificações próprias visíveis|DBPROP_OWNUPDATEDELETE|
-|Indicações próprias visíveis|DBPROP_OWNINSERT|
-|Preservar no abortar|DBPROP_ABORTPRESERVE|
-|Preservar na confirmação|DBPROP_COMMITPRESERVE|
+|Próprias alterações visíveis|DBPROP_OWNUPDATEDELETE|
+|Próprias inserções visíveis|DBPROP_OWNINSERT|
+|Preservar ao abortar|DBPROP_ABORTPRESERVE|
+|Preservar ao confirmar|DBPROP_COMMITPRESERVE|
 |Reinicialização rápida|DBPROP_QUICKRESTART|
-|Eventos reentrantes|DBPROP_REENTRANTEVENTS|
+|Eventos reentrante|DBPROP_REENTRANTEVENTS|
 |Remover linhas excluídas|DBPROP_REMOVEDELETED|
-|Reportar múltiplas mudanças|DBPROP_REPORTMULTIPLECHANGES|
-|Retorna inserções pendentes|DBPROP_RETURNPENDINGINSERTS|
-|Notificação de exclusão da linha|DBPROP_NOTIFYROWDELETE|
-|Primeira notificação de alteração de linha|DBPROP_NOTIFYROWFIRSTCHANGE|
+|Relatar várias alterações|DBPROP_REPORTMULTIPLECHANGES|
+|Retornar inserções pendentes|DBPROP_RETURNPENDINGINSERTS|
+|Notificação de exclusão de linha|DBPROP_NOTIFYROWDELETE|
+|Notificação da primeira alteração da linha|DBPROP_NOTIFYROWFIRSTCHANGE|
 |Notificação de inserção de linha|DBPROP_NOTIFYROWINSERT|
-|Privilégios de linhas|DBPROP_ROWRESTRICT|
+|Privilégios de linha|DBPROP_ROWRESTRICT|
 |Notificação de ressincronização de linha|DBPROP_NOTIFYROWRESYNCH|
-|Modelo de Threading de linha|DBPROP_ROWTHREADMODEL|
-|Notificação de alteração de desfazer de linha|DBPROP_NOTIFYROWUNDOCHANGE|
-|Notificação de desfazer deleção de linha|DBPROP_NOTIFYROWUNDODELETE|
-|Notificação desfazer inserção de linha|DBPROP_NOTIFYROWUNDOINSERT|
+|Modelo de threading de linha|DBPROP_ROWTHREADMODEL|
+|Notificação de desfazer alteração de linha|DBPROP_NOTIFYROWUNDOCHANGE|
+|Notificação de desfazer exclusão de linha|DBPROP_NOTIFYROWUNDODELETE|
+|Notificação de desfazer inserção de linha|DBPROP_NOTIFYROWUNDOINSERT|
 |Notificação de atualização de linha|DBPROP_NOTIFYROWUPDATE|
-|Notificação de alteração de posição de busca do conjunto de linhas|DBPROP_NOTIFYROWSETFETCHPOSISIONCHANGE|
+|Notificação de alteração de posição de busca de conjunto de linhas|DBPROP_NOTIFYROWSETFETCHPOSISIONCHANGE|
 |Notificação de liberação de conjunto de linhas|DBPROP_NOTIFYROWSETRELEASE|
-|Rolar na ordem inversa|DBPROP_CANSCROLLBACKWARDS|
-|Cursor de servidor|DBPROP_SERVERCURSOR|
-|Ignorar marcadores apagados|DBPROP_BOOKMARKSKIPPED|
+|Rolar para trás|DBPROP_CANSCROLLBACKWARDS|
+|Cursor do servidor|DBPROP_SERVERCURSOR|
+|Ignorar indicadores excluídos|DBPROP_BOOKMARKSKIPPED|
 |Identidade de linha forte|DBPROP_STRONGITDENTITY|
 |Linhas exclusivas|DBPROP_UNIQUEROWS|
-|Capacidade de atualização|DBPROP_UPDATABILITY|
+|Capacidade|DBPROP_UPDATABILITY|
 |Usar indicadores|DBPROP_BOOKMARKS|
 
 ## <a name="command-dynamic-properties"></a>Propriedades dinâmicas do comando
- As propriedades a seguir são adicionadas para o **propriedades** coleção da **comando** objeto.
+ As propriedades a seguir são adicionadas à coleção **Properties** do objeto **Command** .
 
-|Nome da propriedade ADO|Nome da propriedade do OLE DB|
+|Nome da propriedade ADO|Nome da propriedade de OLE DB|
 |-----------------------|--------------------------|
 |Ordem de acesso|DBPROP_ACCESSORDER|
 |Caminho base|SSPROP_STREAM_BASEPATH|
-|Bloquear objetos de armazenamento|DBPROP_BLOCKINGSTORAGEOBJECTS|
+|Bloqueando objetos de armazenamento|DBPROP_BLOCKINGSTORAGEOBJECTS|
 |Tipo de indicador|DBPROP_BOOKMARKTYPE|
-|Possíveis de indicação|DBPROP_IROWSETLOCATE|
-|Modificar linhas inseridas|DBPROP_CHANGEINSERTEDROWS|
+|Indicação|DBPROP_IROWSETLOCATE|
+|Alterar linhas inseridas|DBPROP_CHANGEINSERTEDROWS|
 |Privilégios de coluna|DBPROP_COLUMNRESTRICT|
-|Notificação de conjunto de coluna|DBPROP_NOTIFYCOLUMNSET|
-|Tipo de Conteúdo|SSPROP_STREAM_CONTENTTYPE|
-|Busca do cursor automaticamente|SSPROP_CURSORAUTOFETCH|
-|Adiar a coluna|DBPROP_DEFERRED|
+|Notificação de conjunto de colunas|DBPROP_NOTIFYCOLUMNSET|
+|Tipo de conteúdo|SSPROP_STREAM_CONTENTTYPE|
+|Busca automática do cursor|SSPROP_CURSORAUTOFETCH|
+|Adiar coluna|DBPROP_DEFERRED|
 |Adiar Preparação|SSPROP_DEFERPREPARE|
-|Atualizações de objetos de armazenamento de atraso|DBPROP_DELAYSTORAGEOBJECTS|
-|Buscar na ordem inversa|DBPROP_CANFETCHBACKWARDS|
-|Manter linhas|DBPROP_CANHOLDROWS|
+|Atrasar atualizações de objeto de armazenamento|DBPROP_DELAYSTORAGEOBJECTS|
+|Buscar versões anteriores|DBPROP_CANFETCHBACKWARDS|
+|Linhas de espera|DBPROP_CANHOLDROWS|
 |IAccessor|DBPROP_IAccessor|
 |IColumnsInfo|DBPROP_IColumnsInfo|
 |IColumnsRowset|DBPROP_IColumnsRowset|
 |IConnectionPointContainer|DBPROP_IConnectionPointContainer|
 |IConvertType|DBPROP_IConvertType|
-|Linhas imóveis|DBPROP_IMMOBILEROWS|
+|Linhas irmóveis|DBPROP_IMMOBILEROWS|
 |IRowset|DBPROP_IRowset|
 |IRowsetChange|DBPROP_IRowsetChange|
 |IRowsetIdentity|DBPROP_IRowsetIdentity|
@@ -311,51 +311,51 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |IRowsetUpdate|DBPROP_IRowsetUpdate|
 |ISequentialStream|DBPROP_ISequentialStream|
 |ISupportErrorInfo|DBPROP_ISupportErrorInfo|
-|Marcadores literais|DBPROP_LITERALBOOKMARKS|
+|Indicadores literais|DBPROP_LITERALBOOKMARKS|
 |Identidade de linha literal|DBPROP_LITERALIDENTITY|
 |Modo de bloqueio|DBPROP_LOCKMODE|
 |Máximo de linhas abertas|DBPROP_MAXOPENROWS|
 |Máximo de linhas pendentes|DBPROP_MAXPENDINGROWS|
 |Máximo de linhas|DBPROP_MAXROWS|
-|Granularidade de notificação|DBPROP_NOTIFICATIONGRANULARITY|
+|Granularidade da notificação|DBPROP_NOTIFICATIONGRANULARITY|
 |Fases de notificação|DBPROP_NOTIFICATIONPHASES|
 |Objetos transacionados|DBPROP_TRANSACTEDOBJECT|
 |Alterações de outros visíveis|DBPROP_OTHERUPDATEDELETE|
 |Inserções de outros visíveis|DBPROP_OTHERINSERT|
 |Propriedade de codificação de saída|DBPROP_OUTPUTENCODING|
-|Propriedade Stream de saída|DBPROP_OUTPUTSTREAM|
-|Modificações próprias visíveis|DBPROP_OWNUPDATEDELETE|
-|Indicações próprias visíveis|DBPROP_OWNINSERT|
-|Preservar no abortar|DBPROP_ABORTPRESERVE|
-|Preservar na confirmação|DBPROP_COMMITPRESERVE|
+|Propriedade de fluxo de saída|DBPROP_OUTPUTSTREAM|
+|Próprias alterações visíveis|DBPROP_OWNUPDATEDELETE|
+|Próprias inserções visíveis|DBPROP_OWNINSERT|
+|Preservar ao abortar|DBPROP_ABORTPRESERVE|
+|Preservar ao confirmar|DBPROP_COMMITPRESERVE|
 |Reinicialização rápida|DBPROP_QUICKRESTART|
-|Eventos reentrantes|DBPROP_REENTRANTEVENTS|
+|Eventos reentrante|DBPROP_REENTRANTEVENTS|
 |Remover linhas excluídas|DBPROP_REMOVEDELETED|
-|Reportar múltiplas mudanças|DBPROP_REPORTMULTIPLECHANGES|
-|Retorna inserções pendentes|DBPROP_RETURNPENDINGINSERTS|
-|Notificação de exclusão da linha|DBPROP_NOTIFYROWDELETE|
-|Primeira notificação de alteração de linha|DBPROP_NOTIFYROWFIRSTCHANGE|
+|Relatar várias alterações|DBPROP_REPORTMULTIPLECHANGES|
+|Retornar inserções pendentes|DBPROP_RETURNPENDINGINSERTS|
+|Notificação de exclusão de linha|DBPROP_NOTIFYROWDELETE|
+|Notificação da primeira alteração da linha|DBPROP_NOTIFYROWFIRSTCHANGE|
 |Notificação de inserção de linha|DBPROP_NOTIFYROWINSERT|
-|Privilégios de linhas|DBPROP_ROWRESTRICT|
+|Privilégios de linha|DBPROP_ROWRESTRICT|
 |Notificação de ressincronização de linha|DBPROP_NOTIFYROWRESYNCH|
-|Modelo de Threading de linha|DBPROP_ROWTHREADMODEL|
-|Notificação de alteração de desfazer de linha|DBPROP_NOTIFYROWUNDOCHANGE|
-|Notificação de desfazer deleção de linha|DBPROP_NOTIFYROWUNDODELETE|
-|Notificação desfazer inserção de linha|DBPROP_NOTIFYROWUNDOINSERT|
+|Modelo de threading de linha|DBPROP_ROWTHREADMODEL|
+|Notificação de desfazer alteração de linha|DBPROP_NOTIFYROWUNDOCHANGE|
+|Notificação de desfazer exclusão de linha|DBPROP_NOTIFYROWUNDODELETE|
+|Notificação de desfazer inserção de linha|DBPROP_NOTIFYROWUNDOINSERT|
 |Notificação de atualização de linha|DBPROP_NOTIFYROWUPDATE|
-|Notificação de alteração de posição de busca do conjunto de linhas|DBPROP_NOTIFYROWSETFETCHPOSITIONCHANGE|
+|Notificação de alteração de posição de busca de conjunto de linhas|DBPROP_NOTIFYROWSETFETCHPOSITIONCHANGE|
 |Notificação de liberação de conjunto de linhas|DBPROP_NOTIFYROWSETRELEASE|
-|Rolar na ordem inversa|DBPROP_CANSCROLLBACKWARDS|
-|Cursor de servidor|DBPROP_SERVERCURSOR|
-|Dados de servidor na inserção|DBPROP_SERVERDATAONINSERT|
-|Ignorar marcadores apagados|DBPROP_BOOKMARKSKIP|
+|Rolar para trás|DBPROP_CANSCROLLBACKWARDS|
+|Cursor do servidor|DBPROP_SERVERCURSOR|
+|Dados do servidor ao inserir|DBPROP_SERVERDATAONINSERT|
+|Ignorar indicadores excluídos|DBPROP_BOOKMARKSKIP|
 |Identidade de linha forte|DBPROP_STRONGIDENTITY|
-|Capacidade de atualização|DBPROP_UPDATABILITY|
+|Capacidade|DBPROP_UPDATABILITY|
 |Usar indicadores|DBPROP_BOOKMARKS|
 |Raiz XML|SSPROP_STREAM_XMLROOT|
 |XSL|SSPROP_STREAM_XSL|
 
- Para detalhes específicos de implementação e funcionais informações sobre o Microsoft SQL Server OLE DB Provider, consulte a [provedor do SQL Server](https://msdn.microsoft.com/adf1d6c4-5930-444a-9248-ff1979729635).
+ Para obter detalhes de implementação específicos e informações funcionais sobre o provedor de OLE DB de Microsoft SQL Server, consulte o [provedor de SQL Server](https://msdn.microsoft.com/adf1d6c4-5930-444a-9248-ff1979729635).
 
-## <a name="see-also"></a>Consulte também
- [Propriedade ConnectionString (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md) [propriedade Provider (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) [objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+## <a name="see-also"></a>Consulte Também
+ Propriedade [ConnectionString (](../../../ado/reference/ado-api/connectionstring-property-ado.md) ADO) provedor de conjunto de [Propriedades](../../../ado/reference/ado-api/provider-property-ado.md) (ADO) [Recordset (](../../../ado/reference/ado-api/recordset-object-ado.md) ADO)

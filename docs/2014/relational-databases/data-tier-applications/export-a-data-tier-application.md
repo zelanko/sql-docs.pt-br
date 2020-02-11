@@ -25,10 +25,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3335c5a7fcb46b901777de0404b5206aa6a876f6
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70175978"
 ---
 # <a name="export-a-data-tier-application"></a>Exportar um aplicativo da camada de dados
@@ -82,7 +82,7 @@ ms.locfileid: "70175978"
   
  **Opções**  
   
- **Não exibir esta página novamente.** - Clique na caixa de seleção para interromper a exibição da página de Introdução no futuro.  
+ **Não mostrar esta página novamente.** - Clique na caixa de seleção para interromper a exibição da página de Introdução no futuro.  
   
  **Avançar** – Segue para a página **Selecionar Pacote de DAC** .  
   
@@ -124,8 +124,8 @@ ms.locfileid: "70175978"
   
 3.  Use o método `Export` do tipo `Microsoft.SqlServer.Management.Dac.DacStore` para exportar o DAC. Especifique o nome do DAC a ser exportado e o caminho para a pasta onde o arquivo de exportação será colocado.  
   
-## <a name="see-also"></a>Consulte também  
- [Aplicativos da camada de dados](data-tier-applications.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Aplicativos da Camada de Dados](data-tier-applications.md)   
  [Extrair um DAC de um banco de dados](extract-a-dac-from-a-database.md)  
   
   

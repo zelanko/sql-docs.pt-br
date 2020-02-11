@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2c77ae94a7b8c5760d14dcb3fed2af40573549d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103756"
 ---
 # <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>Modify a Reporting Services Configuration File (RSreportserver.config)
@@ -82,7 +82,7 @@ ms.locfileid: "66103756"
   
     -   [Autenticação com o servidor de relatório](../security/authentication-with-the-report-server.md)  
   
-    -   [Configurar o Gerenciador de Relatórios para passar cookies de autenticação personalizados](../security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)  
+    -   [Configurar o Gerenciador de Relatórios para transmitir cookies de autenticação personalizados](../security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)  
   
     -   [Personalizar parâmetros de extensão de renderização em RSReportServer.config](../customize-rendering-extension-parameters-in-rsreportserver-config.md)  
   
@@ -90,14 +90,14 @@ ms.locfileid: "66103756"
   
 6.  Verifique os arquivos de log de rastreamento para observar se ocorreu algum erro. Se houver condições de erro, uma configuração ou seu valor foi especificado incorretamente. Revise o [RSReportServer Configuration File](rsreportserver-config-configuration-file.md) para obter valores válidos para qualquer configuração que esteja causando um erro. Para obter mais informações sobre como exibir o log de rastreamento, consulte [Log de rastreamento de serviço de servidor de relatório](report-server-service-trace-log.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Arquivo de configuração RSReportServer](rsreportserver-config-configuration-file.md)   
  [Arquivo de configuração ReportingServicesService](reportingservicesservice-configuration-file.md)   
  [Arquivo de configuração RSReportDesigner](rsreportdesigner-configuration-file.md)   
  [Implantando uma extensão de processamento de dados](../extensions/data-processing/deploying-a-data-processing-extension.md)   
  [Implantando uma extensão de entrega](../extensions/delivery-extension/deploying-a-delivery-extension.md)   
  [Implantando uma extensão de renderização](../extensions/rendering-extension/deploying-a-rendering-extension.md)   
- [Como: Implantar um Item de relatório personalizado](../custom-report-items/how-to-deploy-a-custom-report-item.md)   
+ [Como: implantar um item de relatório personalizado](../custom-report-items/how-to-deploy-a-custom-report-item.md)   
  [Arquivos de configuração do Reporting Services](reporting-services-configuration-files.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Exemplo (VC + +) de modelo de eventos ADO | Microsoft Docs
+title: Exemplo do modelo de eventos ADO (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,38 +15,38 @@ ms.assetid: 29530153-b963-4a7c-8665-2335f1d604a8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1af45d9ac4674af98097083e2da89a217f17a58f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921010"
 ---
 # <a name="ado-events-model-example-vc"></a>Exemplo do modelo de eventos ADO (VC++)
-A seção do Visual C++ [instanciação de evento ADO por linguagem](../../../ado/guide/data/ado-event-instantiation-by-language.md) fornece uma descrição geral de como criar uma instância do modelo de evento ADO. A seguir está um exemplo específico de instanciar o modelo de evento dentro do ambiente criado pela **#import** diretiva.  
+A seção Visual C++ da [instanciação do evento ADO por linguagem](../../../ado/guide/data/ado-event-instantiation-by-language.md) fornece uma descrição geral de como instanciar o modelo de evento ADO. Veja a seguir um exemplo específico de instanciação do modelo de evento dentro do ambiente criado pela diretiva **#import** .  
   
- Usa a descrição geral **adoint.h** como uma referência para assinaturas de método. No entanto, alguns detalhes na descrição geral ligeiramente alterado como resultado do uso de **#import** diretiva:  
+ A descrição geral usa **adoint. h** como uma referência para assinaturas de método. No entanto, alguns detalhes na descrição geral mudam um pouco como resultado do uso da diretiva **#import** :  
   
--   O **#import** diretiva resolve **typedef**do, tipos de dados de assinatura de método e modificadores de suas formas fundamentais.  
+-   A diretiva **#import** resolve os tipos de dados de **typedef**, de assinatura do método e os modificadores para suas formas fundamentais.  
   
--   Os métodos puros virtuais que devem ser substituídos são prefixados por "**RAW _** ".  
+-   Os métodos virtuais puros que devem ser substituídos são todos prefixados por "**raw_**".  
   
  Parte do código simplesmente reflete o estilo de codificação.  
   
--   O ponteiro para **IUnknown** usado pelas **Advise** método é obtido explicitamente com uma chamada para **QueryInterface**.  
+-   O ponteiro para **IUnknown** usado pelo método **Advise** é obtido explicitamente com uma chamada para **QueryInterface**.  
   
 -   Você não precisa codificar explicitamente um destruidor nas definições de classe.  
   
--   Você talvez queira código mais robustas implementações de QueryInterface, AddRef e Release.  
+-   Talvez você queira codificar implementações mais robustas de QueryInterface, AddRef e Release.  
   
--   O **__uuidof()** diretiva é usada extensivamente para obter as IDs de interface.  
+-   A diretiva **__uuidof ()** é usada extensivamente para obter IDs de interface.  
   
  Por fim, o exemplo contém algum código de trabalho.  
   
 -   O exemplo é escrito como um aplicativo de console.  
   
--   Você deve inserir seu próprio código sob o comentário "`// Do some work`".  
+-   Você deve inserir seu próprio código no comentário "`// Do some work`".  
   
--   Todos os eventos manipuladores padrão sem fazer nada e cancelando a notificações. Você deve inserir o código apropriado para seu aplicativo e permitir as notificações se necessário.  
+-   Todos os manipuladores de eventos assumem o padrão de não fazer nada e cancelar outras notificações. Você deve inserir o código apropriado para seu aplicativo e permitir notificações, se necessário.  
   
 ```  
 // ADO_Events_Model_Example.cpp  

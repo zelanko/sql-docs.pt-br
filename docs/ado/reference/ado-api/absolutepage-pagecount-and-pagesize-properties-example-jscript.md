@@ -1,5 +1,5 @@
 ---
-title: AbsolutePage, PageCount, PageSize exemplo das propriedades e (JScript) | Microsoft Docs
+title: Exemplo das propriedades AbsolutePage, PageCount e PageSize (JScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: 2db6dd3f-5a9c-438c-ae62-d09242906c98
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 09b6c0303f11be8534ec46fcf2f719175f463e4b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921861"
 ---
-# <a name="absolutepage-pagecount-and-pagesize-properties-example-jscript"></a>AbsolutePage, PageCount, PageSize exemplo das propriedades e (JScript)
-Este exemplo demonstra as propriedades de AbsolutePage, PageCount e PageSize. Recortar e colar o seguinte código ao bloco de notas ou outro editor de texto e salve-o como **AbsolutePageJS.asp**.  
+# <a name="absolutepage-pagecount-and-pagesize-properties-example-jscript"></a>Exemplo das propriedades AbsolutePage, PageCount e PageSize (JScript)
+Este exemplo demonstra as propriedades AbsolutePage, PageCount e PageSize. Recorte e cole o código a seguir no bloco de notas ou em outro editor de texto e salve-o como **AbsolutePageJS. asp**.  
   
 ```  
 <!-- BeginAbsolutePageJS -->  
@@ -157,7 +157,7 @@ BODY {
 <!-- EndAbsolutePageJS -->  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Propriedade AbsolutePage (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md)   
  [Propriedade PageCount (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md)   
  [Propriedade PageSize (ADO)](../../../ado/reference/ado-api/pagesize-property-ado.md)   

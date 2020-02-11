@@ -1,5 +1,5 @@
 ---
-title: Método (ADO Stream) Open | Microsoft Docs
+title: Método Open (fluxo ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: d26f48fb-904e-4932-a245-3b4332ca1600
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6549fd10b173a8e133c941ea4315634badb3f35f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917831"
 ---
 # <a name="open-method-ado-stream"></a>Método Open (Fluxo do ADO)
-Abre um [Stream](../../../ado/reference/ado-api/stream-object-ado.md) objeto para manipular fluxos de dados de texto ou binárias.  
+Abre um objeto de [fluxo](../../../ado/reference/ado-api/stream-object-ado.md) para manipular fluxos de dados binários ou de texto.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -33,37 +33,37 @@ Abre um [Stream](../../../ado/reference/ado-api/stream-object-ado.md) objeto par
 Stream.Open Source, Mode , OpenOptions, UserName, Password  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- *Source*  
- Opcional. Um **Variant** valor que especifica a fonte de dados para o **Stream**. *Origem* pode conter uma cadeia de caracteres de URL absoluta que aponta para um nó existente em uma estrutura de árvore bem conhecidos, como um sistema de email ou arquivo. Uma URL deve ser especificada usando a palavra-chave de URL ("URL =*esquema de*://*server*/*pasta*"). Como alternativa, *fonte* pode conter uma referência a uma já aberta [registro](../../../ado/reference/ado-api/record-object-ado.md) objeto, que abre o fluxo padrão associado a **registro**. Se *fonte* não for especificado, um **Stream** é instanciada e aberta, associado a nenhuma fonte subjacente por padrão. Para obter mais informações sobre esquemas de URL e os provedores associados, consulte [absoluta e relativa URLs](../../../ado/guide/data/absolute-and-relative-urls.md).  
+#### <a name="parameters"></a>parâmetros  
+ *Origem*  
+ Opcional. Um valor de **variante** que especifica a fonte de dados para o **fluxo**. A *origem* pode conter uma cadeia de caracteres de URL absoluta que aponta para um nó existente em uma estrutura de árvore conhecida, como um email ou sistema de arquivos. Uma URL deve ser especificada usando a palavra-chave URL ("URL *= esquema*://*pasta**do servidor*/"). Como alternativa, a *origem* pode conter uma referência a um objeto de [registro](../../../ado/reference/ado-api/record-object-ado.md) já aberto, que abre o fluxo padrão associado ao **registro**. Se a *origem* não for especificada, um **fluxo** será instanciado e aberto, associado a nenhuma fonte subjacente por padrão. Para obter mais informações sobre esquemas de URL e seus provedores associados, consulte [URLs absolutas e relativas](../../../ado/guide/data/absolute-and-relative-urls.md).  
   
- *Modo*  
- Opcional. Um [ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md) valor que especifica o modo de acesso para o resultante **Stream** (por exemplo, leitura/gravação ou somente leitura). Valor padrão é **adModeUnknown**. Consulte a [modo](../../../ado/reference/ado-api/mode-property-ado.md) propriedade para obter mais informações sobre modos de acesso. Se *modo* não for especificado, ela é herdada pelo objeto de fonte. Por exemplo, se o código-fonte **registro** é aberto no modo somente leitura, o **Stream** também será aberto no modo somente leitura por padrão.  
+ *Mode*  
+ Opcional. Um valor de [ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md) que especifica o modo de acesso para o **fluxo** resultante (por exemplo, leitura/gravação ou somente leitura). O valor padrão é **adModeUnknown**. Consulte a propriedade [Mode](../../../ado/reference/ado-api/mode-property-ado.md) para obter mais informações sobre modos de acesso. Se o *modo* não for especificado, ele será herdado pelo objeto de origem. Por exemplo, se o **registro** de origem for aberto no modo somente leitura, o **fluxo** também será aberto no modo somente leitura por padrão.  
   
- *OpenOptions*  
- Opcional. Um [StreamOpenOptionsEnum](../../../ado/reference/ado-api/streamopenoptionsenum.md) valor. Valor padrão é **adOpenStreamUnspecified**.  
+ *Abriroptions*  
+ Opcional. Um valor de [StreamOpenOptionsEnum](../../../ado/reference/ado-api/streamopenoptionsenum.md) . O valor padrão é **adOpenStreamUnspecified**.  
   
- *UserName*  
- Opcional. Um **cadeia de caracteres** valor que contém a identificação do usuário que, se ela for necessária, acessa o **Stream** objeto.  
+ *Usu*  
+ Opcional. Um valor de **cadeia de caracteres** que contém a identificação de usuário que, se necessário, acessa o objeto de **fluxo** .  
   
  *Senha*  
- Opcional. Um **cadeia de caracteres** valor que contém a senha que, se ela for necessária, acessa o **Stream** objeto.  
+ Opcional. Um valor de **cadeia de caracteres** que contém a senha que, se necessário, acessa o objeto de **fluxo** .  
   
 ## <a name="remarks"></a>Comentários  
- Quando um **registro** objeto é passado como o parâmetro de origem, o *UserID* e *senha* parâmetros não forem usados, porque o acesso ao **registro** objeto já está disponível. Da mesma forma, o [modo](../../../ado/reference/ado-api/mode-property-ado.md) da **registro** objeto é transferido para o **Stream** objeto. Quando *fonte* não for especificado, o **Stream** aberto não contém dados e tem um [tamanho](../../../ado/reference/ado-api/size-property-ado-stream.md) de zero (0). Para evitar a perda dos dados que são gravados a este **Stream** quando o **Stream** é fechado, salve o **Stream** com o [CopyTo](../../../ado/reference/ado-api/copyto-method-ado.md) ou [ SaveToFile](../../../ado/reference/ado-api/savetofile-method.md) métodos, ou salvá-lo em outro local da memória.  
+ Quando um objeto de **registro** é passado como o parâmetro de origem, os parâmetros *userid* e *password* não são usados porque o acesso ao objeto de **registro** já está disponível. Da mesma forma, o [modo](../../../ado/reference/ado-api/mode-property-ado.md) do objeto de **registro** é transferido para o objeto **Stream** . Quando a *origem* não é especificada, o **fluxo** aberto não contém dados e tem um [tamanho](../../../ado/reference/ado-api/size-property-ado-stream.md) de zero (0). Para evitar a perda de todos os dados que são gravados nesse **fluxo** quando o **fluxo** é fechado, salve o **fluxo** com os métodos [CopyTo](../../../ado/reference/ado-api/copyto-method-ado.md) ou [SaveToFile](../../../ado/reference/ado-api/savetofile-method.md) ou salve-o em outro local da memória.  
   
- Uma *OpenOptions* valor de **adOpenStreamFromRecord** identifica o conteúdo do *origem* parâmetro já aberto **registro**objeto. O comportamento padrão é tratar *origem* como uma URL que aponte diretamente para um nó em uma estrutura de árvore, como um arquivo. O fluxo padrão associado a esse nó é aberto.  
+ Um valor *openoptions* de **adOpenStreamFromRecord** identifica o conteúdo do parâmetro de *origem* como um objeto de **registro** já aberto. O comportamento padrão é tratar a *origem* como uma URL que aponta diretamente para um nó em uma estrutura de árvore, como um arquivo. O fluxo padrão associado a esse nó é aberto.  
   
- Enquanto o **Stream** é não está aberta, é possível ler todas as propriedades somente leitura do **Stream**. Se um **Stream** é aberto de forma assíncrona, todas as operações subsequentes (diferente de verificação a [estado](../../../ado/reference/ado-api/state-property-ado.md) e outras propriedades somente leitura) são bloqueados até que o **abrir** operação é concluída.  
+ Embora o **fluxo** não esteja aberto, é possível ler todas as propriedades somente leitura do **fluxo**. Se um **fluxo** for aberto de forma assíncrona, todas as operações subsequentes (além de verificar o [estado](../../../ado/reference/ado-api/state-property-ado.md) e outras propriedades somente leitura) serão bloqueadas até que a operação de **abertura** seja concluída.  
   
- Além das opções que foram abordadas anteriormente, não especificando *fonte*, você pode criar uma instância de um **Stream** objeto na memória sem associá-la a uma fonte subjacente. Você pode adicionar dinamicamente dados no fluxo gravando os dados binários ou de texto para o **Stream** com [escrever](../../../ado/reference/ado-api/write-method.md) ou [WriteText](../../../ado/reference/ado-api/writetext-method.md), ou pelo carregamento de dados de um arquivo com [ LoadFromFile](../../../ado/reference/ado-api/loadfromfile-method-ado.md).  
+ Além das opções que foram discutidas anteriormente, não especificando a *origem*, você pode criar uma instância de um objeto de **fluxo** na memória sem associá-la a uma fonte subjacente. Você pode adicionar dados dinamicamente ao fluxo, gravando dados binários ou de texto no **fluxo** com [Write](../../../ado/reference/ado-api/write-method.md) ou [WriteText](../../../ado/reference/ado-api/writetext-method.md)ou carregando dados de um arquivo com [LoadFromFile](../../../ado/reference/ado-api/loadfromfile-method-ado.md).  
   
-## <a name="applies-to"></a>Aplica-se a  
+## <a name="applies-to"></a>Aplica-se A  
  [Objeto Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Método Open (Conexão ADO)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Método Open (conexão ADO)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
  [Método Open (registro ADO)](../../../ado/reference/ado-api/open-method-ado-record.md)   
  [Método Open (conjunto de registros ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [Exemplo do método OpenSchema](../../../ado/reference/ado-api/openschema-method.md)   
+ [Método OpenSchema](../../../ado/reference/ado-api/openschema-method.md)   
  [Método SaveToFile](../../../ado/reference/ado-api/savetofile-method.md)

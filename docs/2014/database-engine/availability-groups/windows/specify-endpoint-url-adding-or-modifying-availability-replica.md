@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 524f9d4b3173a70d3491f2efc0f00f4061c4d6b4
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797972"
 ---
 # <a name="specify-the-endpoint-url-when-adding-or-modifying-an-availability-replica-sql-server"></a>Especifique a URL do Ponto de Extremidade Ao Adicionar ou Modificando uma Réplica de disponibilidade (SQL Server)
@@ -30,7 +30,7 @@ ms.locfileid: "72797972"
   
 -   [Sintaxe para uma URL de ponto de extremidade](#SyntaxOfURL)  
   
--   [Encontrando o nome de domínio completamente qualificado de um sistema](#Finding_FQDN)  
+-   [Encontrando o nome de domínio totalmente qualificado de um sistema](#Finding_FQDN)  
   
 -   [Tarefas relacionadas](#RelatedTasks)  
   
@@ -77,7 +77,7 @@ ms.locfileid: "72797972"
   
 ### <a name="examples"></a>Exemplos  
   
-#### <a name="a-using-a-system-name"></a>A. Usando um nome de sistema  
+#### <a name="a-using-a-system-name"></a>a. Usando um nome de sistema  
  A URL de ponto de extremidade a seguir especifica um nome de sistema, `SYSTEM46`e a porta `7022`.  
   
  `TCP://SYSTEM46:7022`  
@@ -122,7 +122,7 @@ ms.locfileid: "72797972"
 ##  <a name="RelatedTasks"></a> Tarefas relacionadas  
  **Para configurar um ponto de extremidade de espelhamento de banco de dados**  
   
--   [Criar um ponto de extremidade de espelhamento &#40;de banco de dados para grupos de disponibilidade AlwaysOn SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
+-   [Criar um ponto de extremidade de espelhamento de banco de dados para Grupos de Disponibilidade AlwaysOn &#40;SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
   
 -   [Criar um ponto de extremidade de espelhamento de banco de dados para a Autenticação do Windows &#40;SQL Server&#41;](../../database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
@@ -132,9 +132,9 @@ ms.locfileid: "72797972"
   
     -   [Permitir que um ponto de extremidade de espelhamento de banco de dados use certificados para conexões de entrada &#40;Transact-SQL&#41;](../../database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md)  
   
--   [Especificar um endereço de rede do servidor &#40;espelhamento de banco de dados&#41;](../../database-mirroring/specify-a-server-network-address-database-mirroring.md)  
+-   [Especificar um endereço de rede do servidor &#40;Espelhamento de banco de dados&#41;](../../database-mirroring/specify-a-server-network-address-database-mirroring.md)  
   
--   [Solucionar problemas &#40;de&#41;configuração grupos de disponibilidade AlwaysOn SQL Server excluídos](troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
+-   [Solucionar problemas de &#40;de configuração de Grupos de Disponibilidade AlwaysOn SQL Server&#41;excluídos](troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
   
  **Para exibir informações sobre o ponto de extremidade de espelhamento de banco de dados**  
   
@@ -148,9 +148,9 @@ ms.locfileid: "72797972"
   
 ##  <a name="RelatedContent"></a> Conteúdo relacionado  
   
--   [Guia de soluções do Microsoft SQL Server AlwaysOn para alta disponibilidade e recuperação de desastres](https://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Guia de soluções AlwaysOn do Microsoft SQL Server para alta disponibilidade e recuperação de desastre](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criação e configuração de grupos de disponibilidade &#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)   
- [Visão geral do &#40;grupos de disponibilidade AlwaysOn&#41; SQL Server](overview-of-always-on-availability-groups-sql-server.md)   
+ [Visão geral do Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)  

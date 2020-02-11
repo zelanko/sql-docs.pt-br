@@ -14,25 +14,25 @@ ms.assetid: e65c2871-9986-44ff-b8b7-7f5eda91b3fa
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6163a5b5fd0999e17e17961639e0a1fee3e8fa4c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67922795"
 ---
 # <a name="customization-file-sql-section"></a>Seção SQL do arquivo de personalização
-O **sql** seção pode conter uma nova cadeia de caracteres SQL que substitui a cadeia de caracteres de comando do cliente. Se não houver nenhuma cadeia de caracteres SQL na seção, a seção será ignorada.  
+A seção **SQL** pode conter uma nova cadeia de caracteres SQL que substitui a cadeia de caracteres de comando do cliente. Se não houver nenhuma cadeia de caracteres SQL na seção, a seção será ignorada.  
   
 > [!IMPORTANT]
->  Começando com o Windows 8 e Windows Server 2012, os componentes de servidor RDS não estão mais incluídos no sistema operacional Windows (consulte o Windows 8 e [manual de compatibilidade do Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Componentes de cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Devem ser migrados para aplicativos que usam o RDS [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir do Windows 8 e do Windows Server 2012, os componentes do servidor RDS não são mais incluídos no sistema operacional Windows (consulte Windows 8 e [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Os componentes do cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Os aplicativos que usam o RDS devem migrar para o [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Nova cadeia de caracteres SQL pode ser *parametrizada*. Ou seja, os parâmetros na **sql** seção da cadeia de caracteres SQL (designado pelo '?' caractere) podem ser substituídos pelos argumentos correspondentes em um *identificador* na cadeia de caracteres de comando do cliente (designado por um lista delimitada por parênteses). O identificador e a lista de argumentos se comportam como uma chamada de função.  
+ A nova cadeia de caracteres SQL pode ser *parametrizada*. Ou seja, os parâmetros na cadeia de caracteres SQL da seção **SQL** (designado pelo caractere '? ') podem ser substituídos por argumentos correspondentes em um *identificador* na cadeia de caracteres de comando do cliente (designado por uma lista delimitada por vírgula entre parênteses). O identificador e a lista de argumentos se comportam como uma chamada de função.  
   
- Por exemplo, suponha que a cadeia de caracteres de comando do cliente é `"CustomerByID(4)"`, o cabeçalho de seção SQL é `[SQL CustomerByID]`, e a nova cadeia de caracteres de seção SQL é `"SELECT * FROM Customers WHERE CustomerID = ?".` gerará o manipulador `"SELECT * FROM Customers WHERE CustomerID = 4"` e usar essa cadeia de caracteres para consultar a fonte de dados.  
+ Por exemplo, suponha que a cadeia de caracteres `"CustomerByID(4)"`de comando do cliente seja, `[SQL CustomerByID]`o cabeçalho da seção SQL seja, e `"SELECT * FROM Customers WHERE CustomerID = ?".` a nova cadeia de `"SELECT * FROM Customers WHERE CustomerID = 4"` caracteres da seção SQL seja o manipulador irá gerar e usar essa cadeia de caracteres para consultar a fonte de dados.  
   
- Se a nova instrução SQL é a cadeia de caracteres nula (""), a seção será ignorada.  
+ Se a nova instrução SQL for a cadeia de caracteres nula (""), a seção será ignorada.  
   
- Se a nova cadeia de caracteres de instrução de SQL não for válida, a execução da instrução falhará. O parâmetro do cliente é ignorado. Você pode fazer isso intencionalmente para "desligar" todos os comandos SQL de cliente, especificando:  
+ Se a nova cadeia de caracteres de instrução SQL não for válida, a execução da instrução falhará. O parâmetro do cliente é efetivamente ignorado. Você pode fazer isso intencionalmente para "desativar" todos os comandos de cliente SQL especificando:  
   
 ```console
 [SQL default]   
@@ -40,23 +40,23 @@ SQL = " "
 ```  
   
 ## <a name="syntax"></a>Sintaxe  
- É uma substituição de entrada de cadeia de caracteres SQL da forma:  
+ Uma entrada de cadeia de caracteres SQL substituta está no formato:  
   
- **SQL=**    
+ **SQL =**   
  ***sqlString***  
   
-|Parte|Descrição|  
+|Parte|DESCRIÇÃO|  
 |----------|-----------------|  
-|**SQL**|Uma cadeia de caracteres literal que indica que essa é uma entrada de seção SQL.|  
+|**SQL**|Uma cadeia de caracteres literal que indica que se trata de uma entrada de seção SQL.|  
 |***sqlString***|Uma cadeia de caracteres SQL que substitui a cadeia de caracteres do cliente.|  
   
-## <a name="see-also"></a>Consulte também  
- [Seção conexão do arquivo de personalização](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
- [Seção de Logs do arquivo de personalização](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
- [Seção de UserList do arquivo de personalização](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
- [Personalização do DataFactory](../../../ado/guide/remote-data-service/datafactory-customization.md)   
- [Configurações de cliente necessárias](../../../ado/guide/remote-data-service/required-client-settings.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Seção conexão de arquivo de personalização](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
+ [Seção de logs de arquivo de personalização](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
+ [Seção UserList do arquivo de personalização](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
+ [Personalização de datafactory](../../../ado/guide/remote-data-service/datafactory-customization.md)   
+ [Configurações do cliente necessárias](../../../ado/guide/remote-data-service/required-client-settings.md)   
  [Noções básicas sobre o arquivo de personalização](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
- [Escrevendo seu próprio manipulador personalizado](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
+ [Escrever seu próprio manipulador personalizado](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
 
 

@@ -1,5 +1,5 @@
 ---
-title: sys.server_permissions (Transact-SQL) | Microsoft Docs
+title: sys. server_permissions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/20/2019
 ms.prod: sql
@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cbfa717aa70bb057734a285e2b6d84fdc6f4961a
-ms.sourcegitcommit: 7625f78617a5b4fd0ff68b2c6de2cb2c758bb0ed
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71163927"
 ---
 # <a name="sysserver_permissions-transact-sql"></a>sys.server_permissions (Transact-SQL)
@@ -32,18 +32,18 @@ ms.locfileid: "71163927"
 
   Retorna uma linha para cada permissão em nível de servidor.  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |**class**|**tinyint**|Identifica a classe na qual a permissão existe.<br /><br /> 100 = Servidor<br /><br /> 101 = Principal de servidor<br /><br /> 105 = Ponto de extremidade|  
-|**class_desc**|**nvarchar(60)**|Descrição de classe na qual a permissão existe. Um dos valores seguintes:<br /><br /> **SERVIDOR**<br /><br /> **SERVER_PRINCIPAL**<br /><br /> **ENDPOINT**|  
+|**class_desc**|**nvarchar (60)**|Descrição de classe na qual a permissão existe. Um dos seguintes valores:<br /><br /> **SERVIDOR**<br /><br /> **SERVER_PRINCIPAL**<br /><br /> **ENDPOINT**|  
 |**major_id**|**int**|ID do protegível no qual a permissão existe, interpretada de acordo com a classe. Em geral, é o tipo de ID que se aplica àquilo que a classe representa. A interpretação para sem-padrão é a seguinte:<br /><br /> 100 = sempre 0|  
 |**minor_id**|**int**|ID secundária na qual a permissão existe, interpretada de acordo com a classe.|  
 |**grantee_principal_id**|**int**|ID do principal de servidor para a qual as permissões são concedidas.|  
 |**grantor_principal_id**|**int**|ID do principal de servidor do concessor dessas permissões.|  
-|**tipo**|**char(4)**|Tipo de permissão de servidor. Para obter uma lista de tipos de permissão, consulte a próxima tabela.|  
+|**tipo**|**Char (4)**|Tipo de permissão de servidor. Para obter uma lista de tipos de permissão, consulte a próxima tabela.|  
 |**permission_name**|**nvarchar(128)**|Nome de permissão.|  
-|**state**|**char(1)**|Estado de permissão:<br /><br /> D = Negar<br /><br /> R = Revogar<br /><br /> G = Conceder<br /><br /> W = Grant com a opção Grant|  
-|**state_desc**|**nvarchar(60)**|Descrição do estado da permissão:<br /><br /> DENY<br /><br /> REVOKE<br /><br /> GRANT<br /><br /> GRANT_WITH_GRANT_OPTION|  
+|**status**|**char(1)**|Estado de permissão:<br /><br /> D = Negar<br /><br /> R = Revogar<br /><br /> G = Conceder<br /><br /> W = Grant com a opção Grant|  
+|**state_desc**|**nvarchar (60)**|Descrição do estado da permissão:<br /><br /> NEGAR<br /><br /> REVOKE<br /><br /> GRANT<br /><br /> GRANT_WITH_GRANT_OPTION|  
   
 |Tipo de permissão|Nome de permissão|Aplica-se a protegíveis|  
 |---------------------|---------------------|--------------------------|  
@@ -68,7 +68,7 @@ ms.locfileid: "71163927"
 |CADB|CONNECT ANY DATABASE|SERVER|  
 |CL|CONTROL|ENDPOINT, LOGIN|  
 |CL|CONTROL SERVER|SERVER|  
-|CO|CONNECT|ENDPOINT|  
+|CO|CONECTAR|ENDPOINT|  
 |COSQ|CONNECT SQL|SERVER|
 |CRAC|Criar grupo de disponibilidade|SERVER|  
 |CRDB|CREATE ANY DATABASE|SERVER|  
@@ -77,7 +77,7 @@ ms.locfileid: "71163927"
 |CRSR|CREATE SERVER ROLE|SERVER|  
 |CRTE|CREATE TRACE EVENT NOTIFICATION|SERVER|
 |IAL|IMPERSONATE ANY LOGIN|SERVER|  
-|IM|IMPERSONATE|Logon|  
+|IM|IMPERSONATE|LOGIN|  
 |SHDN|SHUTDOWN|SERVER|
 |SUS|SELECT ALL USER SECURABLES|SERVER|
 |TO|TAKE OWNERSHIP|ENDPOINT|  
@@ -91,7 +91,7 @@ ms.locfileid: "71163927"
 ## <a name="permissions"></a>Permissões  
  Qualquer usuário pode ver suas próprias permissões. Para ver as permissões de outros logons, requer VIEW DEFINITION, ALTER ANY LOGIN ou qualquer permissão em um logon. Ver funções de servidor definidas pelo usuário requer ALTER ANY SERVER ROLE ou associação na função.  
   
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Para obter mais informações, consulte [configuração de visibilidade de metadados](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="examples"></a>Exemplos  
  A consulta a seguir lista as permissões concedidas ou negadas explicitamente a entidades de segurança do servidor.  
@@ -107,7 +107,7 @@ JOIN sys.server_permissions AS pe
     ON pe.grantee_principal_id = pr.principal_id;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exibições de catálogo de segurança &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [Securables](../../relational-databases/security/securables.md)   
  [Exibições de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   

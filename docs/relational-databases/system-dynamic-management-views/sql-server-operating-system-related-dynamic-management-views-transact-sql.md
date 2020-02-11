@@ -17,20 +17,20 @@ ms.assetid: 3030c86a-0a74-4fed-ac0f-392e244cb965
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 862f54351eb67d2170d8e9806347eb8608178c23
-ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71342043"
 ---
 # <a name="sql-server-operating-system-related-dynamic-management-views-transact-sql"></a>Exibições de gerenciamento dinâmico relacionadas ao sistema operacional do SQL Server (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-Esta seção documenta as exibições de gerenciamento dinâmico (DMV) associadas ao sistema operacional [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLOS). SQLOS é responsável por gerenciar recursos do sistema operacional que são específicos para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+Esta seção documenta as exibições de gerenciamento dinâmico (DMV) que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estão associadas ao sistema operacional (SQLOS). SQLOS é responsável por gerenciar recursos do sistema operacional que são específicos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]do.
 
-As DMVs SQLOS são listadas no sumário. A maioria deles e se chama `sys.dm_os_<description>`.
+As DMVs SQLOS são listadas no sumário. A maioria deles e são nomeados `sys.dm_os_<description>`.
 
- As exibições de gerenciamento dinâmico relacionadas ao sistema operacional [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a seguir são [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)].  
+ As exibições de gerenciamento dinâmico relacionadas ao sistema operacional a seguir [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)].  
   
 |||  
 |-|-|  
@@ -38,7 +38,7 @@ As DMVs SQLOS são listadas no sumário. A maioria deles e se chama `sys.dm_os_<
 |**sys.dm_os_memory_allocations**|**sys.dm_os_sublatches**|  
 |**sys.dm_os_worker_local_storage**||  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   

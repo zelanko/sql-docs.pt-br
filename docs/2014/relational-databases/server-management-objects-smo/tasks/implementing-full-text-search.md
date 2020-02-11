@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6ddc3521031f34f179cdfef08abf178f21f5f47e
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72796716"
 ---
 # <a name="implementing-full-text-search"></a>Implementando a pesquisa de texto completo
@@ -27,7 +27,7 @@ ms.locfileid: "72796716"
  Primeiro, crie um catálogo de texto completo no banco de dados chamando o construtor <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalog> e especificando o nome do catálogo. Depois, crie o índice de texto completo chamando o construtor e especificando a tabela na qual ele será criado. Depois, você poderá adicionar colunas de índice ao índice de texto completo, usando o objeto <xref:Microsoft.SqlServer.Management.Smo.FullTextIndexColumn> e fornecendo o nome da coluna dentro da tabela. Em seguida, defina a propriedade <xref:Microsoft.SqlServer.Management.Smo.FullTextIndex.CatalogName%2A> para o catálogo criado. Finalmente, chame o método <xref:Microsoft.SqlServer.Management.Smo.FullTextIndex.Create%2A> e crie o índice de texto completo na instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="example"></a>Exemplo  
- Para usar qualquer exemplo de código fornecido, será necessário escolher o ambiente de programação, o modelo de programação e a linguagem de programação para criar o aplicativo. Para obter mais informações, consulte [criar um projeto Visual Basic Smo no Visual Studio .net](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) ou [criar um projeto&#35; do Visual C Smo no Visual Studio .net](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Para usar qualquer exemplo de código fornecido, será necessário escolher o ambiente de programação, o modelo de programação e a linguagem de programação para criar o aplicativo. Para obter mais informações, consulte [criar um projeto Visual Basic Smo no Visual Studio .net](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) ou [criar um projeto do Visual C&#35; Smo no Visual Studio .net](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-a-full-text-search-service-in-visual-basic"></a>Criando um serviço de pesquisa de texto completo no Visual Basic  
  Este exemplo de código cria um catálogo de pesquisa de texto completo para a tabela `ProductCategory` no banco de dados de exemplo [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] . Ele cria um índice de pesquisa de texto completo na coluna Nome da tabela `ProductCategory` . O índice de pesquisa de texto completo exige que haja um índice exclusivo já definido na coluna.  

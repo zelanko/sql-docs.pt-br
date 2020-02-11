@@ -13,41 +13,41 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: b331015abd90fbff4c3810118666dbc9b356369b
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71952675"
 ---
 # <a name="advanced-multiple-web-site-configuration-ssrs-native-mode"></a>Configuração avançada de vários sites (modo nativo do SSRS)
   Use esta caixa de diálogo para criar e gerenciar as URLs usadas para acessar um servidor de relatório ou um Gerenciador de Relatórios. A caixa de diálogo **Configuração Avançada de Vários Sites** é usada para criar URLs adicionais, URLs personalizadas que incluem um nome de cabeçalho de host ou para especificar um endereço IP no formato IPv4 ou IPv6.  
   
- [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+ [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modo nativo.  
   
  A criação de várias URLs será útil se você deseja configurar formas diferentes para acessar um servidor de relatório. Por exemplo, o acesso ao servidor de relatório por uma conexão intranet e extranet normalmente requer a existência de URLs diferentes para cada tipo de conexão.  
   
  Para abrir a caixa de diálogo **Configuração Avançada de Vários Sites** , clique em **Avançada** na página **URL do Serviço Web** ou **URL do Gerenciador de Relatórios** no Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Depois que a caixa de diálogo **Configuração Avançada de Vários Sites** for aberta, você poderá clicar em **Adicionar** ou **Editar** para definir novas URLs, ou ainda modificar ou excluir URLs existentes.  
   
- Clique em **OK** para salvar as alterações. Se você adicionar ou remover URLs, mas depois fechar a caixa de diálogo sem primeiro clicar em **OK**, suas alterações serão perdidas.  
+ Clique em **OK** para salvar suas alterações. Se você adicionar ou remover URLs, mas depois fechar a caixa de diálogo sem primeiro clicar em **OK**, suas alterações serão perdidas.  
   
 ## <a name="options"></a>Opções  
  **Endereço IP**  
  Identifica o computador do servidor de relatório em uma rede TCP/IP. Os valores válidos incluem:  
   
--   **Todos Atribuídos** especifica que qualquer um dos endereços IP atribuídos ao computador podem ser usados em uma URL que aponta para um aplicativo para servidores de relatório. Esse valor também abrange nomes de host amigáveis (como nomes de computadores) que podem ser resolvidos por um servidor de nome de domínio para um endereço IP que é atribuído ao computador. Esse é o valor padrão para uma URL do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+-   **Todos atribuídos** especifica que qualquer um dos endereços IP atribuídos ao computador pode ser usado em uma URL que aponta para um aplicativo de servidor de relatório. Esse valor também abrange nomes de host amigáveis (como nomes de computadores) que podem ser resolvidos por um servidor de nome de domínio para um endereço IP que é atribuído ao computador. Esse é o valor padrão para uma URL do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
--   **Nenhum Atribuído** especifica que o servidor de relatório aceitará qualquer solicitação que não tenha uma correspondência exata para o endereço IP ou o nome do host. Não use esse valor se outro aplicativo Web já o estiver usando. Se isso for feito, você interromperá o serviço para o outro aplicativo.  
+-   **Todos os não atribuídos** especifica que o servidor de relatório aceitará qualquer solicitação que não tenha uma correspondência exata para o endereço IP ou nome do host. Não use esse valor se outro aplicativo Web já o estiver usando. Se isso for feito, você interromperá o serviço para o outro aplicativo.  
   
--   **127.0.0.1** é usado para acessar localhost. Ele dá suporte à administração local no computador do servidor de relatório. Se você selecionar apenas esse valor, somente os usuários que fizerem logon localmente no computador do servidor de relatório terão acesso ao aplicativo.  
+-   **127.0.0.1** é usado para acessar o localhost. Ele dá suporte à administração local no computador do servidor de relatório. Se você selecionar apenas esse valor, somente os usuários que fizerem logon localmente no computador do servidor de relatório terão acesso ao aplicativo.  
   
--   *Nnn.nnn.nnn.nnn* é o endereço IPv4 de uma placa de adaptador de rede em seu computador. Se sua rede usar endereçamento IPv6, o endereço IP será um valor de 128 bits de campos de 8 4 bytes semelhante ao seguinte formato: \<cabeçalho >:*nnnn: nnnn: nnnn: nnnn*.  
+-   *Nnn. nnn. nnn. nnn* é o endereço IPv4 de uma placa de adaptador de rede em seu computador. Se sua rede usar o endereçamento IPv6, o endereço IP será um valor de 128 bits de campos de 8 4 bytes semelhante ao seguinte formato: \<header>:*nnnn: nnnn: nnnn: nnnn*.  
   
      Se você tiver várias placas, verá um endereço IP para cada uma. Se você selecionar apenas esse valor, isso limitará o acesso do aplicativo somente ao endereço IP (e qualquer nome de host que um servidor de nome de domínio mapear para esse endereço). Você não pode usar localhost para acessar um servidor de relatório e não pode usar os endereços IP de outras placas de adaptador de rede que estejam instaladas no computador do servidor de relatório.  
   
  **Porta**  
  Especifica a porta que o servidor de relatório monitora por solicitações. A porta 80 é a padrão. Se você usar a porta 80, não precisará incluí-la na URL. Se você usar qualquer outro número de porta, sempre deverá incluí-lo na URL (por exemplo, http://localhost:8181/reports).  
   
- **Cabeçalho de Host**  
+ **Cabeçalho do host**  
  Se você já tiver um cabeçalho de host definido em um servidor de nome de domínio que seja resolvido para seu computador, poderá especificar esse cabeçalho de host em uma URL que você configure para acesso ao servidor de relatório.  
   
  Um cabeçalho de host é um nome exclusivo que permite que vários sites compartilhem um único endereço IP e porta. Os nomes de cabeçalho de host são mais fáceis de se lembrar e digitar que endereço IP e números de porta. Um exemplo de um nome de cabeçalho de host poderia ser www.adventure-works.com.  
@@ -68,13 +68,13 @@ ms.locfileid: "71952675"
  **Adicionar**  
  Defina uma URL adicional.  
   
- **Editarar**  
+ **Editar**  
  Modifique qualquer parte da sintaxe da URL.  
   
- **Removerr**  
+ **Remover**  
  Desmarque uma entrada de URL da lista.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Reporting Services Configuration Manager &#40;Modo Nativo&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [Configurar uma URL &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
  [Configurar as URLs do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  

@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 31430674d88d8aa5b820823a16dc18d110b9dd9a
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782308"
 ---
 # <a name="creating-altering-and-removing-triggers"></a>Criando, alterando e removendo gatilhos
-  No SMO, gatilhos são representados por meio do uso do objeto <xref:Microsoft.SqlServer.Management.Smo.Trigger>. O código de [!INCLUDE[tsql](../../../includes/tsql-md.md)] que é executado quando o gatilho é acionado é definido pela propriedade <xref:Microsoft.SqlServer.Management.Smo.Trigger.TextBody%2A> do objeto de gatilho. O tipo de gatilho é definido através de outras propriedades do objeto <xref:Microsoft.SqlServer.Management.Smo.Trigger>, como, por exemplo, a propriedade <xref:Microsoft.SqlServer.Management.Smo.Trigger.Update%2A>. Essa é uma propriedade booliana que especifica se o gatilho é acionado por um `UPDATE` de registros na tabela pai.  
+  No SMO, gatilhos são representados por meio do uso do objeto <xref:Microsoft.SqlServer.Management.Smo.Trigger>. O [!INCLUDE[tsql](../../../includes/tsql-md.md)] código que é executado quando o gatilho é acionado é definido pela <xref:Microsoft.SqlServer.Management.Smo.Trigger.TextBody%2A> Propriedade do objeto de gatilho. O tipo de gatilho é definido através de outras propriedades do objeto <xref:Microsoft.SqlServer.Management.Smo.Trigger>, como, por exemplo, a propriedade <xref:Microsoft.SqlServer.Management.Smo.Trigger.Update%2A>. Essa é uma propriedade booliana que especifica se o gatilho é acionado por um `UPDATE` de registros na tabela pai.  
   
  O objeto <xref:Microsoft.SqlServer.Management.Smo.Trigger> representa gatilhos tradicionais da DML (linguagem de manipulação de dados). No [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] e em versões posteriores, também há suporte a gatilhos da DDL (linguagem de definição de dados). Os gatilhos da DDL são representados pelos objetos <xref:Microsoft.SqlServer.Management.Smo.DatabaseDdlTrigger> e <xref:Microsoft.SqlServer.Management.Smo.ServerDdlTrigger>.  
   

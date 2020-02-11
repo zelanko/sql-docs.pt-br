@@ -8,10 +8,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 749dfd8f7cce37aeeb9721af9f951caa6ab15dfd
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "71952742"
 ---
 # <a name="install-sql-server-reporting-services"></a>Instale o SQL Server Reporting Services
@@ -85,7 +85,7 @@ Para solucionar o erro, altere a conta de serviço para Serviço de Rede ou uma 
 
 Para obter mais informações, consulte [Configurar a conta de serviço do servidor de relatório](configure-the-report-server-service-account-ssrs-configuration-manager.md).
 
-## <a name="windows-service"></a>Serviço Windows
+## <a name="windows-service"></a>Windows Service
 
 Um serviço Windows é criado como parte da instalação. Ele é exibido como **SQL Server Reporting Services**. O nome do serviço é **SQLServerReportingServices**.
 
@@ -136,4 +136,4 @@ Com o servidor de relatório instalado, comece a criar relatórios e implante-os
 
 Para criar relatórios usando o SQL Server Data Tools, [baixe o SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714).
 
-Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
+Mais perguntas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

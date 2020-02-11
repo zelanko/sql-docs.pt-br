@@ -9,10 +9,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 47fc9ba65aca128a7e812f85c5bd06ca38131cbf
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72251915"
 ---
 # <a name="branding-the-web-portal"></a>Identidade visual do portal da Web
@@ -93,7 +93,7 @@ A seção da interface é dividida nos seguintes agrupamentos.
   
 |Seção|Descrição|  
 |---|---|  
-|primary|Cores do botão e da passagem do mouse.|  
+|Primária|Cores do botão e da passagem do mouse.|  
 |Secundário|Barra de título, barra de pesquisa, menu esquerdo (se for exibido) e cor do texto desses itens|  
 |Principal neutro|Planos de fundo da Página inicial e da área de relatório.|  
 |Neutro secundário|Planos de fundo das opções de pasta e caixa de texto, e o menu configurações.|  
@@ -243,4 +243,4 @@ Você também pode **Baixar** ou **Remover** o pacote. A remoção do pacote red
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
+Mais perguntas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 22271c7c7fd5099ae9e65fecfedb820da00c6e30
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70911270"
 ---
 # <a name="getting-started-in-smo"></a>Guia de Introdução ao SMO
@@ -29,11 +29,11 @@ Esta página fornece links para tópicos criados para ajudá-lo a começar a usa
 ## <a name="installing-smo"></a>Instalando o SMO
 A [instalação do Smo](installing-smo.md) fornece instruções para instalar e referenciar os ASSEMBLIES do Smo.
 
-## <a name="object-model"></a>Modelo de Objeto  
+## <a name="object-model"></a>Modelo de objeto  
 O [modelo de objeto](../../relational-databases/server-management-objects-smo/smo-object-model.md) descreve a hierarquia de objetos do Smo e como os objetos se relacionam entre si.  
   
-## <a name="programming-languages"></a>Linguagens de programação  
-[Linguagens de programação](../../relational-databases/server-management-objects-smo/smo-programming-languages.md) descreve o ambiente de programação e inclui procedimentos detalhados para começar a C#escrever um programa Smo no.  
+## <a name="programming-languages"></a>Linguagens de Programação  
+[Linguagens de programação](../../relational-databases/server-management-objects-smo/smo-programming-languages.md) descreve o ambiente de programação e inclui procedimentos detalhados para começar a escrever um programa Smo em C#.  
   
 ## <a name="general-programming-in-smo"></a>Programação Geral em SMO  
 A [programação geral no Smo](../../relational-databases/server-management-objects-smo/create-program/creating-smo-programs.md) é uma introdução à programação com o Smo. Este tópico descreve como se conectar a uma instância do SQL Server e como usar propriedades, métodos e coleções. Os tópicos mais avançados descrevem tipos de dados, transações, definição do modo de captura e manipulação de eventos e exceção.  

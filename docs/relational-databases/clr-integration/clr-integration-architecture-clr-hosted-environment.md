@@ -27,10 +27,10 @@ ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 016d8af878a75a0a4e72b17fc9fa09f8791b242b
-ms.sourcegitcommit: c0fd28306a3b42895c2ab673734fbae2b56f9291
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71096922"
 ---
 # <a name="clr-integration-architecture---clr-hosted-environment"></a>Arquitetura de integração CLR – Ambiente hospedado de CLR
@@ -39,7 +39,7 @@ ms.locfileid: "71096922"
   
   O CLR apresenta a memória coletada por lixo, threading de preempção, serviços de metadados (reflexão de tipo), verificação de código e segurança de acesso ao código. Ele usa metadados para localizar e carregar classes, distribuir as instâncias na memória, resolver invocações de métodos, gerar código nativo, impor a segurança e definir limites de contexto em tempo de execução.  
   
- O CLR e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diferem como ambientes de tempo de execução pela forma como tratam memória, threads e sincronização. Este artigo descreve a maneira como esses dois tempos de execução são integrados para que todos os recursos do sistema sejam gerenciados uniformemente. Este artigo também aborda a maneira como a CAS (segurança de acesso a código) do CLR e a segurança do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são integradas para fornecer um ambiente de execução confiável e seguro para o código do usuário.  
+ O CLR e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diferem como ambientes de tempo de execução pela forma como tratam memória, threads e sincronização. Este artigo descreve a maneira como esses dois tempos de execução são integrados para que todos os recursos do sistema sejam gerenciados uniformemente. Este artigo também aborda a maneira como a CAS (segurança de acesso a código) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do CLR e a segurança são integradas para fornecer um ambiente de execução confiável e seguro para o código do usuário.  
   
 ## <a name="basic-concepts-of-clr-architecture"></a>Conceitos básicos da arquitetura do CLR  
  No .NET Framework, um programador escreve o código em uma linguagem de alto nível que implementa uma classe definindo sua estrutura (por exemplo, os campos das propriedades da classe) e seus métodos. Alguns desses métodos podem ser funções estáticas. A compilação do programa produz um arquivo chamado assembly, que contém o código compilado na MSIL ([!INCLUDE[msCoName](../../includes/msconame-md.md)] intermediate language) e um manifesto que contém todas as referências para assemblies dependentes.  
@@ -100,10 +100,10 @@ ms.locfileid: "71096922"
  Dados esses atributos, o host pode especificar uma lista de HPAs, como o atributo SharedState, que devem ser desabilitados no ambiente hospedado. Nesse caso, o CLR nega as tentativas do código de usuário de chamar APIs que são anotadas pelo HPAs na lista proibida. Para obter mais informações, consulte [atributos de proteção do host e programação de integração do CLR](../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md).  
   
 ## <a name="how-sql-server-and-the-clr-work-together"></a>Como o SQL Server e o CLR trabalham juntos  
- Esta seção discute como o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] integra os modelos de threading, agendamento, sincronização e gerenciamento de memória do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do CLR. Em particular, esta seção examina a integração sob o ponto de vista das metas de escalabilidade, confiabilidade e segurança. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] atua essencialmente como o sistema operacional para o CLR quando este é hospedado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O CLR chama rotinas de baixo nível implementadas pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para threading, agendamento e gerenciamento de memória. Essas rotinas são os mesmos primitivos que o restante do mecanismo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa. Esta abordagem fornece vários benefícios de escalabilidade, confiabilidade e segurança.  
+ Esta seção discute como o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] integra os modelos de threading, agendamento, sincronização e gerenciamento de memória do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do CLR. Em particular, esta seção examina a integração sob o ponto de vista das metas de escalabilidade, confiabilidade e segurança. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] atua essencialmente como o sistema operacional para o CLR quando este é hospedado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O CLR chama rotinas de baixo nível implementadas pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para threading, agendamento e gerenciamento de memória. Essas rotinas são os mesmos primitivos que o resto do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mecanismo usa. Esta abordagem fornece vários benefícios de escalabilidade, confiabilidade e segurança.  
   
 ###### <a name="scalability-common-threading-scheduling-and-synchronization"></a>Escalabilidade: Threading, agendamento e sincronização comuns  
- O CLR chama as APIs do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para criar threads, tanto para executar código de usuário quanto para seu próprio uso interno. Para fazer a sincronização de vários threads, o CLR chama objetos de sincronização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa prática permite que o Agendador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agende outras tarefas quando um thread está aguardando um objeto de sincronização. Por exemplo, quando o CLR iniciar a coleta de lixo, todos os seus threads esperam a coleta de lixo terminar. Como os threads do CLR e os objetos de sincronização pelos quais eles estão esperando são conhecidos para o agendador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode agendar threads que estão executando outras tarefas do banco de dados que não envolvem o CLR. Isto também permite que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] detecte deadlocks que envolvem bloqueios tomados pelos objetos de sincronização CLR e utilize técnicas tradicionais para remoção de deadlock.  
+ O CLR chama as APIs do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para criar threads, tanto para executar código de usuário quanto para seu próprio uso interno. Para fazer a sincronização de vários threads, o CLR chama objetos de sincronização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa prática permite que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Agendador agende outras tarefas quando um thread estiver aguardando um objeto de sincronização. Por exemplo, quando o CLR iniciar a coleta de lixo, todos os seus threads esperam a coleta de lixo terminar. Como os threads do CLR e os objetos de sincronização pelos quais eles estão esperando são conhecidos para o agendador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode agendar threads que estão executando outras tarefas do banco de dados que não envolvem o CLR. Isto também permite que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] detecte deadlocks que envolvem bloqueios tomados pelos objetos de sincronização CLR e utilize técnicas tradicionais para remoção de deadlock.  
   
  O código gerenciado é executado preventivamente no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O agendador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tem a capacidade de detectar e parar threads que não tenham sido executados durante um tempo significativo. A capacidade de conectar threads do CLR a threads do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implica que o agendador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode identificar threads “fugitivos” no CLR e gerenciar sua prioridade. Tais threads fugitivos são suspensos e devolvidos à fila. Os threads que são identificados repetidamente como fugitivos não recebem permissão de execução por um determinado período de tempo, para que outros trabalhos possam ser executados.  
   
@@ -156,7 +156,7 @@ Thread.EndThreadAffinity();
 |||||  
 |-|-|-|-|  
 |Conjunto de permissões|SAFE|EXTERNAL_ACCESS|UNSAFE|  
-|Segurança de Acesso do Código|Somente execução|Execução + acesso a recursos externos|Unrestricted|  
+|Segurança de Acesso do Código|Somente execução|Execução + acesso a recursos externos|Irrestrito|  
 |Restrições do modelo de programação|Sim|Sim|Sem restrições|  
 |Requisito de verificabilidade|Sim|Sim|Não|  
 |Capacidade de chamar código nativo|Não|Não|Sim|  
@@ -174,10 +174,10 @@ Thread.EndThreadAffinity();
   
  Dadas essas considerações, desencorajamos o uso de variáveis estáticas e membros de dados estáticos de classes usado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para assemblies SAFE e EXTERNAL_ACCESS, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] examina os metadados do assembly na ocasião CREATE ASSEMBLY e gerará uma falha na criação desses assemblies se encontrar o uso de membros e variáveis de dados estáticos.  
   
- o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] também não permite chamadas para .NET Framework APIs que são anotadas com os atributos de proteção de host **SharedState**, **sincronização**e **ExternalProcessMgmt** . Isso impede que os assemblies SAFE e EXTERNAL_ACCESS chamem APIs que permitam compartilhar o estado, fazer sincronização e afetar a integridade do processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [restrições do modelo de programação de integração CLR](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]também não permite chamadas para .NET Framework APIs que são anotadas com os atributos de proteção de host **SharedState**, **sincronização**e **ExternalProcessMgmt** . Isso impede que os assemblies SAFE e EXTERNAL_ACCESS chamem APIs que permitam compartilhar o estado, fazer sincronização e afetar a integridade do processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [restrições do modelo de programação de integração CLR](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md).  
   
-## <a name="see-also"></a>Consulte também  
-   de [segurança de integração CLR](../../relational-databases/clr-integration/security/clr-integration-security.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Segurança de integração CLR](../../relational-databases/clr-integration/security/clr-integration-security.md)   
  [Desempenho da integração CLR](../../relational-databases/clr-integration/clr-integration-architecture-performance.md)  
   
   

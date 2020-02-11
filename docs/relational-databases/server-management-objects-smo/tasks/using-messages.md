@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 73dbbb93c226c145dc16f5148f903900b602760e
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70911222"
 ---
 # <a name="using-messages"></a>Usando mensagens
@@ -28,7 +28,7 @@ ms.locfileid: "70911222"
  Mensagens definidas pelo usuário são representadas programaticamente no SMO pelo objeto <xref:Microsoft.SqlServer.Management.Smo.UserDefinedMessageCollection>. Mensagens existentes, definidas pelo usuário, podem ser descobertas através da iteração pela coleção. Para gerar novas mensagens definidas pelo usuário, você pode criar uma instância de um novo objeto **UserDefinedMessage** e definir as propriedades adequadas.  
   
 ## <a name="examples"></a>Exemplos  
- Para os exemplos de código a seguir, selecione o ambiente de programação, o modelo de programação e a linguagem de programação para criar seu aplicativo. Para obter mais informações, consulte [criar um projeto&#35; do Visual C Smo no Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Para os exemplos de código a seguir, selecione o ambiente de programação, o modelo de programação e a linguagem de programação para criar seu aplicativo. Para obter mais informações, consulte [criar um projeto do Visual C&#35; Smo no Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="finding-a-particular-system-message-in-visual-basic"></a>Localizando uma mensagem de sistema específica no Visual Basic .NET  
  O exemplo de código mostra como identificar uma mensagem de sistema através do número de identificação e como exibir a mensagem.  

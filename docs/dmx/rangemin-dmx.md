@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 7d55b60a1b3287807963bb77c365259a5c761d13
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67928484"
 ---
 # <a name="rangemin-dmx"></a>RangeMin (DMX)
@@ -27,16 +27,16 @@ ms.locfileid: "67928484"
 RangeMin(<scalar column reference>)  
 ```  
   
-## <a name="applies-to"></a>Aplica-se a  
+## <a name="applies-to"></a>Aplica-se A  
  Colunas escalares.  
   
 ## <a name="return-type"></a>Tipo de retorno  
  Valor escalar.  
   
 ## <a name="remarks"></a>Comentários  
- O **RangeMin** função pode ser usada em [SELECT DISTINCT FROM &#60;modelo &#62; &#40;DMX&#41; ](../dmx/select-distinct-from-model-dmx.md) consultas. Quando usada com esse tipo de consulta, a referência da coluna escalar poderá conter colunas contínuas ou distintas que são tanto previsíveis como de entrada.  
+ A função **RangeMin** pode ser usada em consultas [do modelo de &#60;&#62; &#40;DMX&#41;](../dmx/select-distinct-from-model-dmx.md) . Quando usada com esse tipo de consulta, a referência da coluna escalar poderá conter colunas contínuas ou distintas que são tanto previsíveis como de entrada.  
   
- Quando usado com [SELECT FROM &#60;modelo&#62; PREDICTION JOIN &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md), o **RangeMin**, **RangeMid**, e **RangeMax**  funções retornam os valores de limite atuais da partição especificada. Por exemplo, se uma previsão for realizada em uma coluna de dados discretos, a consulta retornará o número de partição previsto na coluna de dados discretos. O **RangeMin**, **RangeMid**, e **RangeMax** funções descrevem a partição que especifica a previsão. Quando o **RangeMin** função é usada com uma instrução PREDICTION JOIN, a referência de coluna escalar só pode conter colunas de dados discretas e previsíveis.  
+ Quando usado com [Select do modelo de &#60;&#62; junção de previsão &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md), as funções **RangeMin**, **RangeMid**e **RangeMax** retornam os valores de limite reais do Bucket especificado. Por exemplo, se uma previsão for realizada em uma coluna de dados discretos, a consulta retornará o número de partição previsto na coluna de dados discretos. As funções **RangeMin**, **RangeMid**e **RangeMax** descrevem o Bucket que a previsão especifica. Quando a função **RangeMin** é usada com uma instrução de junção de previsão, a referência de coluna escalar pode conter apenas colunas discretas e previsíveis.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir retorna valores mínimo, máximo e médio para a coluna contínua Yearly Income no modelo de mineração Árvore de decisão.  
@@ -49,11 +49,11 @@ SELECT DISTINCT
 FROM [TM Decision Tree]  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Extensões de mineração de dados &#40;DMX&#41; referência de função](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Funções &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [Funções de previsão gerais &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
- [RangeMax &#40;DMX&#41;](../dmx/rangemax-dmx.md)   
- [RangeMid &#40;DMX&#41;](../dmx/rangemid-dmx.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Referência de função&#41; DMX &#40;extensões de mineração de dados](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Funções &#40;&#41;DMX](../dmx/functions-dmx.md)   
+ [Funções de previsão gerais &#40;&#41;DMX](../dmx/general-prediction-functions-dmx.md)   
+ [&#41;&#40;DMX RangeMax](../dmx/rangemax-dmx.md)   
+ [&#41;&#40;DMX RangeMid](../dmx/rangemid-dmx.md)  
   
   

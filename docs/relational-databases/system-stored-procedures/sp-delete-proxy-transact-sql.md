@@ -19,10 +19,10 @@ ms.assetid: 44a1db13-b7f2-4dab-a1b5-b8dafb41737c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fd717f645b9e53d08f6dabbfc1ea5779c373056e
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72305109"
 ---
 # <a name="sp_delete_proxy-transact-sql"></a>sp_delete_proxy (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "72305109"
 
   Remove o proxy especificado.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,9 +40,9 @@ sp_delete_proxy [ @proxy_id = ] id , [ @proxy_name = ] 'proxy_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @proxy_id = ] id` o número de identificação de proxy do proxy a ser removido. O *proxy_id* é **int**, com um padrão de NULL.  
+`[ @proxy_id = ] id`O número de identificação de proxy do proxy a ser removido. O *proxy_id* é **int**, com um padrão de NULL.  
   
-`[ @proxy_name = ] 'proxy_name'` o nome do proxy a ser removido. O *proxy_name* é **sysname**, com um padrão de NULL.  
+`[ @proxy_name = ] 'proxy_name'`O nome do proxy a ser removido. O *proxy_name* é **sysname**, com um padrão de NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -51,7 +51,7 @@ sp_delete_proxy [ @proxy_id = ] id , [ @proxy_name = ] 'proxy_name'
  Nenhum  
   
 ## <a name="remarks"></a>Comentários  
- É necessário especificar **\@proxy_name** ou **\@proxy_id** . Se os dois argumentos forem especificados, eles deverão se referir ao mesmo proxy, caso contrário o procedimento armazenado falhará.  
+ O ** \@proxy_name** ou ** \@proxy_id** deve ser especificado. Se os dois argumentos forem especificados, eles deverão se referir ao mesmo proxy, caso contrário o procedimento armazenado falhará.  
   
  Se uma etapa de trabalho fizer referência ao proxy especificado, o proxy não poderá ser excluído e o procedimento armazenado falhará.  
   
@@ -70,7 +70,7 @@ EXEC dbo.sp_delete_proxy
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [sp_add_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [&#41;&#40;Transact-SQL de sp_add_proxy](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)  
   
   

@@ -13,57 +13,57 @@ ms.assetid: 2fa6237b-44b8-4b6c-9952-5acd80a54e20
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0ca9c22cb54c54441f848ecbf367e92e30c1fd83
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921876"
 ---
 # <a name="microsoft-activex-data-objects-ado"></a>Microsoft ADO (ActiveX Data Objects)
 
-ADO é usado em programas C++ para se conectar ao SQL Server. É claro, ele também funciona para se conectar ao banco de dados SQL Azure na nuvem.
+O ADO é usado em programas C++ para se conectar ao SQL Server. É claro que também funciona para se conectar ao banco de dados SQL do Azure na nuvem.
 
-Cada seção deste artigo descreve um componente do ADO.
+Cada seção neste artigo descreve um componente do ADO.
 
 > [!NOTE]
-> O ADO.NET é diferente do ADO. ADO.NET e muitos outros drivers de conexão SQL e suas linguagens são discutidas começando [Drivers do SQL Server](../connect/sql-connection-libraries.md).
+> ADO.NET é diferente do ADO. ADO.NET e muitos outros drivers de conexão SQL e seus idiomas são discutidos a partir de [SQL Server drivers](../connect/sql-connection-libraries.md).
 
   
 ## <a name="ado"></a>ADO  
- Microsoft ActiveX Data Objects (ADO) permitem que os aplicativos de cliente acessar e manipular dados de uma variedade de fontes por meio de um provedor OLE DB. Seus principais benefícios são a facilidade de uso, de alta velocidade, baixa sobrecarga da memória e um espaço pequeno disco. ADO dá suporte a recursos importantes para a criação de cliente/servidor e aplicativos baseados na Web.  
+ O Microsoft ActiveX Data Objects (ADO) permite que seus aplicativos cliente acessem e manipulem dados de uma variedade de fontes por meio de um provedor de OLE DB. Seus principais benefícios são a facilidade de uso, a alta velocidade, a baixa sobrecarga de memória e uma pequena superfície de disco. O ADO oferece suporte aos principais recursos para a criação de aplicativos cliente/servidor e baseados na Web.  
   
 ## <a name="ado-md"></a>ADO MD  
- Microsoft ActiveX Data Objects (Multidimensional) (ADO MD) oferece acesso fácil a dados multidimensionais de linguagens como o Microsoft Visual Basic e o Microsoft Visual C++. ADO MD estende o Microsoft ActiveX Data Objects (ADO) para incluir objetos específicos para dados multidimensionais, como os objetos CubeDef e conjunto de células. Com o ADO MD procurar esquema multidimensional, um cubo de consulta e recuperar os resultados.  
+ O Microsoft ActiveX Data Objects (Multidimensional) (ADO MD) fornece acesso fácil a dados multidimensionais de linguagens como Microsoft Visual Basic e Microsoft Visual C++. ADO MD estende o Microsoft ActiveX Data Objects (ADO) para incluir objetos específicos de dados multidimensionais, como os objetos CubeDef e células. Com ADO MD você pode procurar o esquema multidimensional, consultar um cubo e recuperar os resultados.  
   
- Como ADO, o ADO MD usa um provedor OLE DB subjacente para obter acesso aos dados. Para trabalhar com ADO MD, o provedor deve ser um provedor de dados multidimensional (MDP) conforme definido pelo OLE DB para a especificação OLAP. MDPs apresentar dados em exibições multidimensionais em vez de provedores de dados de tabela (TDPs) os dados presentes nos modos de exibição tabulares. Consulte a documentação para o seu provedor de OLE DB OLAP para obter mais informações sobre a sintaxe específica e comportamentos com suporte pelo seu provedor.  
+ Assim como o ADO, o ADO MD usa um provedor de OLE DB subjacente para obter acesso aos dados. Para trabalhar com ADO MD, o provedor deve ser um MDP (provedor de dados multidimensional), conforme definido pelo OLE DB para especificação de OLAP. MDPs apresentam dados em exibições multidimensionais em vez de TDPs (provedores de dados de tabela) que apresentam dados em exibições de tabela. Consulte a documentação do seu provedor de OLE DB OLAP para obter informações mais detalhadas sobre a sintaxe e os comportamentos específicos com suporte no seu provedor.  
   
 ## <a name="rds"></a>RDS  
- Serviço de dados remota (RDS) é um recurso do ADO, com a qual você pode mover dados de um servidor para um aplicativo cliente ou página da Web, manipular os dados no cliente e retornar as atualizações para o servidor em uma única viagem de ida.  
+ O RDS (serviço de dados remotos) é um recurso do ADO, com o qual você pode mover dados de um servidor para um aplicativo cliente ou página da Web, manipular os dados no cliente e retornar atualizações para o servidor em uma única viagem de ida e volta.  
   
 > [!IMPORTANT]
->  Começando com o Windows 8 e Windows Server 2012, os componentes de servidor RDS não estão mais incluídos no sistema operacional Windows (consulte o Windows 8 e [manual de compatibilidade do Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Componentes de cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Devem ser migrados para aplicativos que usam o RDS [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir do Windows 8 e do Windows Server 2012, os componentes do servidor RDS não são mais incluídos no sistema operacional Windows (consulte Windows 8 e [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Os componentes do cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Os aplicativos que usam o RDS devem migrar para o [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="adox"></a>ADOX  
- Extensões de objetos de dados do Microsoft ActiveX para a linguagem de definição de dados e segurança (ADOX) é uma extensão para os objetos do ADO e o modelo de programação. ADOX inclui objetos para criação de esquema e modificação, bem como a segurança. Porque é uma abordagem baseada em objeto para manipulação de esquema, você pode escrever código que funcione em relação aos dados de várias fontes, independentemente de diferenças em suas sintaxes nativos.  
+ O Microsoft ActiveX Data Objects Extensions para segurança e linguagem de definição de dados (ADOX) é uma extensão para os objetos ADO e o modelo de programação. O ADOX inclui objetos para a criação e modificação de esquemas, bem como segurança. Como é uma abordagem baseada em objeto para a manipulação de esquema, você pode escrever código que funcionará em várias fontes de dados, independentemente das diferenças em suas sintaxes nativas.  
   
- ADOX é uma biblioteca complementar aos objetos do ADO do núcleo. Ele expõe objetos adicionais para criar, modificar e excluir objetos de esquema, como tabelas e procedimentos. Ele também inclui objetos de segurança para manter usuários e grupos para conceder e revogar permissões em objetos.  
+ O ADOX é uma biblioteca complementar para os principais objetos do ADO. Ele expõe objetos adicionais para criar, modificar e excluir objetos de esquema, como tabelas e procedimentos. Ele também inclui objetos de segurança para manter usuários e grupos e conceder e revogar permissões em objetos.  
   
 ## <a name="documentation"></a>Documentação  
- [Problemas de design de segurança ADO](../ado/guide/ado-security-design-issues.md)  
+ [Problemas de design de segurança de ADO](../ado/guide/ado-security-design-issues.md)  
   
  [Guia do programador do ADO](../ado/guide/ado-programmer-s-guide.md)  
   
- Uma introdução ao uso de ADO, RDS, ADO MD e ADOX.  
+ Uma introdução ao uso do ADO, do RDS, do ADO MD e do ADOX.  
   
  [Referência do programador do ADO](../ado/reference/ado-programmer-s-reference.md)  
   
- Esta seção da documentação do ADO contém tópicos para cada ADO, RDS, ADO MD e ADOX objeto, coleção, propriedade, a propriedade dinâmica, método, eventos e enumeração.  
+ Esta seção da documentação do ADO contém tópicos para cada objeto ADO, RDS, ADO MD e ADOX, coleção, propriedade, propriedade dinâmica, método, evento e enumeração.  
   
  [Glossário ADO](../ado/ado-glossary.md)  
   
 ## <a name="support"></a>Suporte  
- Gratuita ajuda com problemas de ADO, tente o lançamento para o grupo de notícias público do ADO. Esse grupo de notícias é monitorado por profissionais de suporte da Microsoft Product Support Services (PSS) que abrangem o ADO e por outros desenvolvedores experientes do ADO.  
+ Para obter ajuda gratuita com problemas do ADO, tente postar no grupo de notícias público do ADO. Este grupo de notícias é monitorado pelos profissionais de suporte do PSS (Atendimento Microsoft) que abordam o ADO e por outros desenvolvedores experientes do ADO.  
   
- Mais informações sobre opções de suporte podem ser encontradas no site do Microsoft Help e suporte de.
+ Mais informações sobre as opções de suporte podem ser encontradas no site de ajuda e suporte da Microsoft.
 
 

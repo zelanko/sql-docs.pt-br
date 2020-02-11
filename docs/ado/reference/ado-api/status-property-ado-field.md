@@ -1,5 +1,5 @@
 ---
-title: Propriedade status (campo ADO) | Microsoft Docs
+title: Propriedade Status (campo ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,35 +18,35 @@ ms.assetid: 8cd1f7f4-0a3a-4f07-b8ba-6582e70140ad
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d90eff53ef998a009aecd4d82fc3b502a487c01d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67930830"
 ---
 # <a name="status-property-ado-field"></a>Propriedade Status (campo ADO)
-Indica o status de uma [campo](../../../ado/reference/ado-api/field-object.md) objeto.  
+Indica o status de um objeto de [campo](../../../ado/reference/ado-api/field-object.md) .  
   
 ## <a name="return-value"></a>Valor retornado  
- Retorna um [FieldStatusEnum](../../../ado/reference/ado-api/fieldstatusenum.md) valor. O valor padrão é **adFieldOK**.  
+ Retorna um valor [FieldStatusEnum](../../../ado/reference/ado-api/fieldstatusenum.md) . O valor padrão é **adFieldOK**.  
   
 ## <a name="remarks"></a>Comentários  
   
-## <a name="record-field-status"></a>Status de campo do registro  
- Altera para o valor de uma **campo** objeto da coleção de campos de uma [registro](../../../ado/reference/ado-api/record-object-ado.md) objeto são armazenadas em cache até que o objeto [atualização](../../../ado/reference/ado-api/update-method.md) método é chamado. Nesse ponto, se a alteração para o valor do campo causou um erro, o OLE DB gera o erro **DB_E_ERRORSOCCURRED** (2147749409). A propriedade de Status de qualquer um dos **campo** objetos na **campos** coleção que causou o erro conterá um valor da [FieldStatusEnum](../../../ado/reference/ado-api/fieldstatusenum.md) que descreve a causa da o problema.  
+## <a name="record-field-status"></a>Status do campo de registro  
+ As alterações no valor de um objeto de **campo** na coleção Fields de um objeto de [registro](../../../ado/reference/ado-api/record-object-ado.md) são armazenadas em cache até que o método [Update](../../../ado/reference/ado-api/update-method.md) do objeto seja chamado. Nesse ponto, se a alteração no valor do campo tiver causado um erro, OLE DB gerará o erro **DB_E_ERRORSOCCURRED** (2147749409). A propriedade status de qualquer um dos objetos **Field** na coleção **Fields** que causou o erro conterá um valor de [FieldStatusEnum](../../../ado/reference/ado-api/fieldstatusenum.md) que descreve a causa do problema.  
   
- Para melhorar o desempenho, adições e exclusões para o [campos](../../../ado/reference/ado-api/fields-collection-ado.md) coleções da **registro** objeto são armazenadas em cache até que o **atualização** método é chamado e, em seguida, as alterações são feitas em uma atualização otimista de lote. Se o **atualização** método não é chamado, o servidor não será atualizado. Se todas as atualizações falharem, será retornado um erro de provedor do OLE DB (DB_E_ERRORSOCCURRED) e o **Status** propriedade indica os valores combinados do código de status de operação e erro. Por exemplo, **adFieldPendingInsert adFieldPermissionDenied OR**. O **Status** propriedade para cada **campo** pode ser usado para determinar por que o **campo** foi adicionada, modificada ou excluída não.  
+ Para aprimorar o desempenho, adições e exclusões para as coleções de [campos](../../../ado/reference/ado-api/fields-collection-ado.md) do objeto de **registro** são armazenadas em cache até que o método de **atualização** seja chamado e, em seguida, as alterações sejam feitas em uma atualização otimista em lote. Se o método **Update** não for chamado, o servidor não será atualizado. Se alguma atualização falhar, um erro do provedor de OLE DB (DB_E_ERRORSOCCURRED) será retornado e a propriedade **status** indicará os valores combinados da operação e do código de status de erro. Por exemplo, **ADFIELDPENDINGINSERT ou adFieldPermissionDenied**. A propriedade **status** de cada **campo** pode ser usada para determinar por que o **campo** não foi adicionado, modificado ou excluído.  
   
- Muitos tipos de problemas encontrados ao adicionar, modificar ou excluir uma **campo** são relatados por meio de **Status** propriedade. Por exemplo, se o usuário exclui um **campo**, ele é marcado para exclusão da **campos** coleção. Se o subsequentes **atualização** retorna um erro porque o usuário tentou excluir um **campo** para os quais não têm permissão, o **campo** terão uma  **Status** dos **adFieldPermissionDenied adFieldPendingDelete OR**. Chamar o [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) valores originais do método restaurações e define o **Status** para **adFieldOK**.  
+ Muitos tipos de problemas encontrados ao adicionar, modificar ou excluir um **campo** são relatados por meio da propriedade **status** . Por exemplo, se o usuário excluir um **campo**, ele será marcado para exclusão na coleção **campos** . Se a **atualização** subsequente retornar um erro porque o usuário tentou excluir um **campo** para o qual ele não tem permissão, o **campo** terá o **status** de **adFieldPermissionDenied ou adFieldPendingDelete**. Chamar o método [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) restaura os valores originais e define o **status** como **adFieldOK**.  
   
- Da mesma forma, o **atualização** método pode retornar um erro porque uma nova **campo** foi adicionada e recebe um valor inadequado. Nesse caso, o novo **campo** estará na **campos** coleção e ter um status de **adFieldPendingInsert** e, talvez, **adFieldCantCreate** (dependendo de seu provedor). Você pode fornecer um valor apropriado para o novo **campo** e chame **atualização** novamente.  
+ Da mesma forma, o método **Update** pode retornar um erro porque um novo **campo** foi adicionado e recebeu um valor inadequado. Nesse caso, o novo **campo** estará na coleção **Fields** e terá um status de **AdFieldPendingInsert** e, talvez, **adFieldCantCreate** (dependendo do seu provedor). Você pode fornecer um valor apropriado para o novo **campo** e chamar **Atualizar** novamente.  
   
-## <a name="recordset-field-status"></a>Status de campo de conjunto de registros  
- Altera para o valor de uma **campo** objeto da coleção de campos de um uma [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) são armazenados em cache até que o objeto [atualização](../../../ado/reference/ado-api/update-method.md) método é chamado. Nesse ponto, se a alteração para o valor do campo causou um erro, o OLE DB gera o erro **DB_E_ERRORSOCCURRED** (2147749409). A propriedade de Status de qualquer um dos **campo** objetos na **campos** coleção que causou o erro conterá um valor da [FieldStatusEnum](../../../ado/reference/ado-api/fieldstatusenum.md) que descreve a causa da o problema.  
+## <a name="recordset-field-status"></a>Status do campo do conjunto de registros  
+ As alterações no valor de um objeto **Field** na coleção Fields de um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) são armazenadas em cache até que o método [Update](../../../ado/reference/ado-api/update-method.md) do objeto seja chamado. Nesse ponto, se a alteração no valor do campo tiver causado um erro, OLE DB gerará o erro **DB_E_ERRORSOCCURRED** (2147749409). A propriedade status de qualquer um dos objetos **Field** na coleção **Fields** que causou o erro conterá um valor de [FieldStatusEnum](../../../ado/reference/ado-api/fieldstatusenum.md) que descreve a causa do problema.  
   
-## <a name="applies-to"></a>Aplica-se a  
- [Objeto Field](../../../ado/reference/ado-api/field-object.md)  
+## <a name="applies-to"></a>Aplica-se A  
+ [Objeto Campo](../../../ado/reference/ado-api/field-object.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Exemplo da propriedade status (campo) (VB)](../../../ado/reference/ado-api/status-property-example-field-vb.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Exemplo da propriedade Status (campo) (VB)](../../../ado/reference/ado-api/status-property-example-field-vb.md)   
  [Exemplo da propriedade Status (VC++)](../../../ado/reference/ado-api/status-property-example-vc.md)   

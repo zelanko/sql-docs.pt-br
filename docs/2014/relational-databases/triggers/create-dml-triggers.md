@@ -20,10 +20,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 10399a26335912a9370aa21a386f58d04d04321e
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72796393"
 ---
 # <a name="create-dml-triggers"></a>Criar gatilhos DML
@@ -56,12 +56,12 @@ ms.locfileid: "72796393"
   
 5.  Na caixa de diálogo **Especificar Valores para Parâmetros de Modelo** , digite os seguintes valores para os parâmetros mostrados.  
   
-    |Parâmetro|Value|  
+    |Parâmetro|Valor|  
     |---------------|-----------|  
     |Autor|*Seu nome*|  
     |Data de criação|*A data de hoje*|  
-    |Description|Verifica a avaliação de crédito de fornecedor antes de permitir uma nova ordem de compra com o fornecedor a ser inserido.|  
-    |Schema_Name|Purchasing|  
+    |DESCRIÇÃO|Verifica a avaliação de crédito de fornecedor antes de permitir uma nova ordem de compra com o fornecedor a ser inserido.|  
+    |Schema_Name|Compra|  
     |Trigger_Name|NewPODetail2|  
     |Table_Name|PurchaseOrderDetail|  
     |Data_Modification_Statement|Remova UPDATE e DELETE da lista.|  
@@ -100,7 +100,7 @@ ms.locfileid: "72796393"
   
  [Antes de começar](#Top)  
   
-###  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+###  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../../includes/ssde-md.md)] e expanda-a.  
   

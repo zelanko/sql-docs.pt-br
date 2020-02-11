@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 26aa24e28714f8fc89c7e384a122638d9773a262
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70911116"
 ---
 # <a name="using-table-and-index-partitioning"></a>Usando o particionamento de tabela e índice
@@ -36,7 +36,7 @@ ms.locfileid: "70911116"
  Cada objeto <xref:Microsoft.SqlServer.Management.Smo.Table> e <xref:Microsoft.SqlServer.Management.Smo.Index> especifica o esquema de partição usado na propriedade <xref:Microsoft.SqlServer.Management.Smo.PartitionScheme> e especifica as colunas no <xref:Microsoft.SqlServer.Management.Smo.PartitionSchemeParameterCollection>.  
   
 ## <a name="example"></a>Exemplo  
- Para os exemplos de código a seguir, selecione o ambiente de programação, o modelo de programação e a linguagem de programação para criar seu aplicativo. Para obter mais informações, consulte [criar um projeto&#35; do Visual C Smo no Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Para os exemplos de código a seguir, selecione o ambiente de programação, o modelo de programação e a linguagem de programação para criar seu aplicativo. Para obter mais informações, consulte [criar um projeto do Visual C&#35; Smo no Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="setting-up-a-partition-scheme-for-a-table-in-visual-c"></a>Configurando um esquema de partição para uma tabela no Visual C#  
  O exemplo de código mostra como criar uma função de partição e um esquema de partição para a tabela `TransactionHistory` no banco de dados de exemplo [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] . As partições são divididas por data com a intenção de separar registros antigos na tabela `TransactionHistoryArchive` .  
@@ -132,7 +132,7 @@ $ps.FileGroups.Add("Fourth")
 $ps.Create()  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tabelas e índices particionados](../../../relational-databases/partitions/partitioned-tables-and-indexes.md)  
   
   

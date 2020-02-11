@@ -13,26 +13,26 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6de7b5c8f9cdc7162eb9c6a8ddd214d0486255c6
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70175959"
 ---
 # <a name="create-credential---authenticate-to-azure-storage"></a>Criar credencial - autenticar no Armazenamento do Azure
   Use a caixa de diálogo **Backup para URL – Criar Credencial** para criar uma nova Credencial do SQL.  
   
- Ao usar essa caixa de diálogo para criar uma credencial, você deve fornecer um certificado de gerenciamento do Azure adicionado ao repositório de certificados local ou um perfil de publicação baixado em seu computador para validar a assinatura e as informações da conta de armazenamento.  
+ Ao usar essa caixa de diálogo para criar uma credencial, você precisa fornecer um Certificado de Gerenciamento do Azure adicionado ao repositório de certificados local ou a um perfil de publicação baixado em seu computador para validar a assinatura e as informações de conta de armazenamento.  
   
  **CREDENCIAL DO SQL**  
  Especifica o nome da Credencial do SQL que você quer criar.  
   
 ## <a name="azure-credentials"></a>Credenciais do Azure  
  **Certificado de Gerenciamento**  
- Use esta opção para especificar um certificado do repositório de certificados local que corresponda ao certificado de gerenciamento do Azure. Para obter mais informações sobre o certificado de gerenciamento do Azure, consulte [criar e carregar um certificado de gerenciamento para o Azure](https://go.microsoft.com/fwlink/?LinkId=320781).  
+ Use essa opção para especificar um certificado do repositório de certificados local que corresponda ao certificado de gerenciamento do Azure. Para obter mais informações sobre o certificado de gerenciamento do Azure, confira [Criar e carregar um certificado de gerenciamento para o Azure](https://go.microsoft.com/fwlink/?LinkId=320781).  
   
  **Assinatura**  
- Selecione, digite ou cole sua ID de assinatura do Azure que corresponda ao certificado de gerenciamento do repositório de certificados local.  
+ Selecione, digite ou cole a ID de assinatura do Azure que corresponde ao certificado de gerenciamento do repositório local de certificados.  
   
  **Perfil de Publicação**  
  Use essa opção se você tiver um perfil de publicação baixado no seu computador. Se você usar essa opção, a ID da assinatura e o certificado serão automaticamente populados.  

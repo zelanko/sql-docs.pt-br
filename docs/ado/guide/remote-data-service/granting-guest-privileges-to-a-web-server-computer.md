@@ -1,5 +1,5 @@
 ---
-title: Concedendo privilégios de convidado a um servidor Web | Microsoft Docs
+title: Concedendo privilégios de convidado a um computador do servidor Web | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,29 +13,29 @@ ms.assetid: e851a22d-01bc-4eb0-bc42-92b8f65d1c63
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bddf6ce0bbfb78435118ef3d87303a94c792c96d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67922645"
 ---
 # <a name="granting-guest-privileges-to-a-web-server-computer"></a>Conceder privilégios de convidado para um computador do servidor Web
-A conta do servidor Web anônima (IUSR _*ComputerName*) deve ser adicionado ao local grupo convidados no computador do servidor Web para usar o RDS.  
+A conta de servidor Web anônimo (IUSR_*ComputerName*) deve ser adicionada ao grupo local de convidados no computador do servidor Web para usar o RDS.  
   
 > [!IMPORTANT]
->  Começando com o Windows 8 e Windows Server 2012, os componentes de servidor RDS não estão mais incluídos no sistema operacional Windows (consulte o Windows 8 e [manual de compatibilidade do Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Componentes de cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Devem ser migrados para aplicativos que usam o RDS [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir do Windows 8 e do Windows Server 2012, os componentes do servidor RDS não são mais incluídos no sistema operacional Windows (consulte Windows 8 e [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Os componentes do cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Os aplicativos que usam o RDS devem migrar para o [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
-### <a name="to-grant-guest-privileges-to-a-web-server-computer"></a>Para conceder privilégios de convidado em um computador do servidor Web  
+### <a name="to-grant-guest-privileges-to-a-web-server-computer"></a>Para conceder privilégios de convidado a um computador do servidor Web  
   
-1.  No seu computador Microsoft Windows 2000 Server, clique em **inicie**, aponte para **programas**, aponte para **ferramentas administrativas**e, em seguida, clique em **computador Gerenciamento**.  
+1.  No computador do Microsoft Windows 2000 Server, clique em **Iniciar**, aponte para **programas**, aponte para **Ferramentas administrativas**e clique em **Gerenciamento do computador**.  
   
-2.  Na árvore de console, no **usuários e grupos locais**, clique em **grupos**.  
+2.  Na árvore de console, em **usuários e grupos locais**, clique em **grupos**.  
   
-3.  Selecione o **convidados** grupo local. Dos **ação** menu, escolha **propriedades**.  
+3.  Selecione o grupo local **convidados** . No menu **ação** , escolha **Propriedades**.  
   
-4.  No **propriedades de convidados** caixa de diálogo, clique em **Add**.  
+4.  Na caixa de diálogo **Propriedades de convidados** , clique em **Adicionar**.  
   
-5.  Se a conta anônima do servidor Web não aparecerá na lista na **selecionar usuários ou grupos** diálogo caixa, digite seu nome (IUSR _*ComputerName*) na caixa em branco da parte inferior e clique **adicionar** .  
+5.  Se a conta de servidor Web anônimo não aparecer na lista da caixa de diálogo **Selecionar usuários ou grupos** , digite seu nome (IUSR_*ComputerName*) na caixa em branco inferior e clique em **Adicionar**.  
   
 6.  Clique em **OK**.
 

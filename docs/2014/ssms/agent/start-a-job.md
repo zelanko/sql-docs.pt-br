@@ -15,16 +15,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e94adcf8242c6acaca7c28ff9a854e0aa87cb3ea
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798183"
 ---
-# <a name="start-a-job"></a>Start a Job
-  Este tópico descreve como começar a executar um trabalho do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] ou SQL Server Management Objects.  
+# <a name="start-a-job"></a>Iniciar um trabalho
+  Este tópico descreve como iniciar a execução de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] um trabalho do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Agent no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]usando [!INCLUDE[tsql](../../includes/tsql-md.md)] o, ou SQL Server Management Objects.  
   
- Um trabalho é uma série especificada de ações que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent executa. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent podem ser executados em um servidor local ou em vários servidores remotos.  
+ Um trabalho é uma série especificada de ações que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent executa. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent podem ser executados em um servidor local ou em vários servidores remotos.  
   
 -   **Antes de começar:**  
   
@@ -59,7 +60,7 @@ ms.locfileid: "72798183"
   
     -   Se estiver trabalhando em um servidor mestre e quiser especificar servidores de destino para o trabalho, clique com o botão direito do mouse no trabalho que deseja iniciar, clique em **Iniciar Trabalho**e, em seguida, clique em **Iniciar em servidores de destino específicos**. Na caixa de diálogo **Instruções Pós-Download** , marque a caixa de seleção **Estes servidores de destino** e selecione cada servidor de destino em que o trabalho deve ser executado.  
   
-##  <a name="TSQL"></a> Usando Transact-SQL  
+##  <a name="TSQL"></a> Usando o Transact-SQL  
   
 ### <a name="to-start-a-job"></a>Para iniciar um trabalho  
   

@@ -13,16 +13,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a960df20b7b07bffab900589ae4d520541d720c1
-ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72688661"
 ---
 # <a name="call-stored-procedures-odbc"></a>Chamar procedimentos armazenados (ODBC)
   Quando uma instrução SQL chama um procedimento armazenado usando a cláusula ODBC CALL escape, o driver Microsoft SQL Server envia o procedimento para SQL Server usando o mecanismo RPC (chamada de procedimento armazenado remoto). As solicitações de RPC ignoram grande parte da análise de instruções e do processamento de parâmetros no SQL Server e são mais rápidas do que a instrução EXECUTE do Transact-SQL.  
   
- Para obter um aplicativo de exemplo que demonstra esse recurso, consulte [processar códigos de retorno &#40;e&#41;parâmetros de saída ODBC](running-stored-procedures-process-return-codes-and-output-parameters.md).  
+ Para obter um aplicativo de exemplo que demonstra esse recurso, consulte [processar códigos de retorno e parâmetros de saída &#40;&#41;ODBC ](running-stored-procedures-process-return-codes-and-output-parameters.md).  
   
 ### <a name="to-run-a-procedure-as-an-rpc"></a>Para executar um procedimento como um RPC  
   
@@ -39,8 +39,8 @@ ms.locfileid: "72688661"
 > [!NOTE]  
 >  Se um aplicativo enviar um procedimento usando a sintaxe EXECUTE Transact-SQL (em oposição à sequência de escape ODBC CALL), o driver ODBC SQL Server passará a chamada de procedimento para o SQL Server como uma instrução SQL, em vez de como um RPC. Além disso, os parâmetros de saída não serão retornados se a instrução EXECUTE Transact-SQL for usada.  
   
-## <a name="see-also"></a>Consulte também  
- [Tópicos &#40;de instruções de procedimentos armazenados em execução&#41; ODBC](../../database-engine/dev-guide/running-stored-procedures-how-to-topics-odbc.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Tópicos de instruções sobre como executar procedimentos armazenados &#40;&#41;ODBC](../../database-engine/dev-guide/running-stored-procedures-how-to-topics-odbc.md)   
  [Processamento em lote de chamadas de procedimento armazenado](../native-client-odbc-stored-procedures/batching-stored-procedure-calls.md)   
  [Executando procedimentos armazenados](../native-client-odbc-stored-procedures/running-stored-procedures.md)   
  [Chamando um procedimento armazenado](../native-client-odbc-stored-procedures/calling-a-stored-procedure.md)   

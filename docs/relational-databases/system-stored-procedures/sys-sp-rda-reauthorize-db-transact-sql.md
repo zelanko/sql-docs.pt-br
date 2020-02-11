@@ -1,5 +1,5 @@
 ---
-title: sys.sp_rda_reauthorize_db (Transact-SQL) | Microsoft Docs
+title: sys. sp_rda_reauthorize_db (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,10 +17,10 @@ ms.assetid: f6f3e4b2-8c72-4d23-a5de-fe671ca5c5cd
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 01809f0d4eb494d58f035d23846025578aada7c7
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72251268"
 ---
 # <a name="syssp_rda_reauthorize_db-transact-sql"></a>sys.sp_rda_reauthorize_db (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "72251268"
 
   Restaura a conexão autenticada entre um banco de dados local habilitado para Stretch e o banco de dados remoto.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,25 +38,25 @@ sp_rda_reauthorize_db @credential = @credential, @with_copy = @with_copy [ , @az
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- @credential = *\@credencial*  
+ @credential= * \@credencial*  
  É a credencial no escopo do banco de dados associada ao banco de dados local habilitado para Stretch.  
   
- @with_copy = *\@with_copy*  
- Especifica se uma cópia dos dados remotos deve ser feita e conectada à cópia (recomendado). *\@with_copy* é bit.  
+ @with_copy= * \@with_copy*  
+ Especifica se uma cópia dos dados remotos deve ser feita e conectada à cópia (recomendado). with_copy é bit. * \@*  
   
- @azure_servername = *\@azure_servername*  
- Especifica o nome do servidor do Azure que contém os dados remotos. *\@azure_servername* é sysname.  
+ @azure_servername= * \@azure_servername*  
+ Especifica o nome do servidor do Azure que contém os dados remotos. azure_servername é sysname. * \@*  
   
- @azure_databasename = *\@azure_databasename*  
- Especifica o nome do banco de dados do Azure que contém o dado remoto. *\@azure_databasename* é sysname.  
+ @azure_databasename= * \@azure_databasename*  
+ Especifica o nome do banco de dados do Azure que contém o dado remoto. azure_databasename é sysname. * \@*  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
- 0 (êxito) ou > 0 (falha)  
+ 0 (êxito) ou >0 (falha)  
   
 ## <a name="permissions"></a>Permissões  
  Requer db_owner permissões.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Quando você executa [Sys. sp_rda_reauthorize_db (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) para se reconectar ao banco de dados remoto do Azure, essa operação redefine automaticamente o modo de consulta como LOCAL_AND_REMOTE, que é o comportamento padrão para Stretch Database. Ou seja, as consultas retornam resultados de dados locais e remotos.  
   
 ## <a name="example"></a>Exemplo  
@@ -69,8 +69,8 @@ EXEC sp_rda_reauthorize_db @credential = @credentialName, @with_copy = 1;
   
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [sys.sp_rda_deauthorize_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [sys. sp_rda_deauthorize_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md)   
  [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  
   
   

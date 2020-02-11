@@ -18,18 +18,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 56655f7d75635668d266b44853fc29969fd741ed
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782665"
 ---
 # <a name="validate-a-dac-package"></a>Validar um pacote de DAC
   Esta é uma prática recomendada para revisar o conteúdo de um pacote de DAC antes de implantá-lo em produção e também para validar as ações de atualização antes de atualizar um DAC existente. Isso é especialmente válido durante a implantação de pacotes que não foram desenvolvidos em sua organização.  
   
-1.  **Before you begin:**  [Prerequisites](#Prerequisites)  
+1.  **Antes de começar:**  [Pré-requisitos](#Prerequisites)  
   
-2.  **Para atualizar um DAC, usando:**  [Exibir o Conteúdo de um DAC](#ViewDACContents), [Exibir Alterações no Banco de Dados](#ViewDBChanges), [Exibir Ações de Atualização](#ViewUpgradeActions), [Comparar DACs](#CompareDACs)  
+2.  **Para atualizar um DAC, usando:**  [Exibir o Conteúdo de um DAC](#ViewDACContents), [Exibir Alterações no Banco de Dados](#ViewDBChanges), [Exibir Ações de Atualização](#ViewUpgradeActions), [Compare DACs](#CompareDACs)  
   
 ##  <a name="Prerequisites"></a> Pré-requisitos  
  Recomendamos não implantar um pacote de DAC de origens desconhecidas ou não confiáveis. Como os DACs podem conter código mal-intencionado que pode executar código [!INCLUDE[tsql](../../includes/tsql-md.md)] sem finalidade ou provocar erros modificando o esquema. Antes de usar um DAC de uma origem desconhecida ou não confiável, implante-o em uma instância de teste isolada do [!INCLUDE[ssDE](../../includes/ssde-md.md)], execute [DBCC CHECKDB &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) no banco de dados. Além disso, examine o código, como procedimentos armazenados ou outro código definido pelo usuário, no banco de dados.  
@@ -105,10 +105,10 @@ $dacName  = "MyApplication"
 $dacChanges = $dacstore.GetDatabaseChanges($dacName) | Out-File -Filepath C:\DACScripts\MyApplicationChanges.txt  
 ```  
   
-##  <a name="ViewUpgradeActions"></a> Exibir Ações de Atualização  
+##  <a name="ViewUpgradeActions"></a>Exibir ações de atualização  
  Antes de usar uma nova versão de um pacote de DAC para atualizar um DAC que foi implantado de um pacote de DAC anterior, você pode gerar um relatório que contém as instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] a serem executadas durante a atualização e, depois, examinar as instruções.  
   
- **Relate ações de atualização usando um assistente**  
+ **Relatar ações de atualização usando um assistente**  
   
 1.  Execute o assistente para **Atualizar Aplicativo da Camada de Dados** , especificando o DAC implantado no momento e o pacote de DAC que contém a nova versão do DAC.  
   
@@ -118,7 +118,7 @@ $dacChanges = $dacstore.GetDatabaseChanges($dacName) | Out-File -Filepath C:\DAC
   
 4.  Para obter mais informações sobre como usar o assistente, veja [Atualizar um aplicativo da camada de dados](upgrade-a-data-tier-application.md).  
   
- **Relate ações de atualização usando o PowerShell**  
+ **Relatar ações de atualização usando o PowerShell**  
   
 1.  Crie um objeto de servidor SMO e defina-o como a instância que contém o DAC implantado.  
   
@@ -161,14 +161,14 @@ $dacstore.GetIncrementalUpgradeScript($dacName, $dacType) | Out-File -Filepath C
 $fileStream.Close()  
 ```  
   
-##  <a name="CompareDACs"></a> Compare DACs  
+##  <a name="CompareDACs"></a>Comparar DACs  
  Antes de atualizar um DAC, é recomendável revisar as diferenças nos objetos em nível de banco de dados e instância entre o DAC atual e o novo. Se você não tiver uma cópia do pacote para o DAC atual, poderá extrair um pacote do banco de dados atual.  
   
  Se você importar os pacotes de DAC para projetos de DAC no SQL Server Developer Tools, poderá usar a ferramenta de comparação de esquemas para analisar as diferenças entre o dois DACs.  
   
  Outra alternativa é desempacotar os DACs em pastas separadas. Você pode usar uma ferramenta de diferenças, como o utilitário WinDiff, para analisar as diferenças.  
   
-## <a name="see-also"></a>Consulte também  
- [Aplicativos da camada de dados](data-tier-applications.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Aplicativos da Camada de Dados](data-tier-applications.md)   
  [Implantar um aplicativo da camada de dados](deploy-a-data-tier-application.md)   
  [Atualizar um aplicativo da camada de dados](upgrade-a-data-tier-application.md)  

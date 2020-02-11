@@ -18,30 +18,30 @@ ms.assetid: 493a2028-88a0-4e83-ad89-ae5661d9f477
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9e62d2e8cf46de73bf8f0881b398437ab4ef58fa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67909042"
 ---
-# <a name="msmergeidentityrange-transact-sql"></a>MSmerge_identity_range (Transact-SQL)
+# <a name="msmerge_identity_range-transact-sql"></a>MSmerge_identity_range (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  O **MSmerge_identity_range** tabela é usada para controlar os intervalos numéricos atribuídos a colunas de identidade para assinatura em publicações em que a replicação gerencia automaticamente essas atribuições de intervalo. Essa tabela é armazenada nos bancos de dados da publicação e assinatura.  
+  A tabela **MSmerge_identity_range** é usada para rastrear os intervalos numéricos atribuídos às colunas de identidade para a assinatura em publicações em que a replicação está gerenciando automaticamente essas atribuições de intervalo. Essa tabela é armazenada nos bancos de dados de publicação e de assinatura.  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |**subid**|**uniqueidentifier**|O número de identificação exclusivo para uma determinada assinatura.|  
 |**artid**|**uniqueidentifier**|O número de identificação exclusivo para o artigo determinado.|  
-|**range_begin**|**numeric(38)**|O valor de identidade no início do intervalo atual.|  
-|**range_end**|**numeric(38)**|O valor de identidade no fim do intervalo atual.|  
-|**next_range_begin**|**numeric(38)**|O valor de identidade no início do próximo intervalo a ser atribuído.|  
-|**next_range_end**|**numeric(38)**|O valor de identidade no fim do próximo intervalo a ser atribuído.|  
-|**is_pub_range**|**bit**|Um valor de **1** se o intervalo de identidade é atribuído à publicação.|  
-|**max_used**|**numeric(38)**|O valor de identidade máximo que pode ser atribuído.|  
+|**range_begin**|**numeric (38)**|O valor de identidade no início do intervalo atual.|  
+|**range_end**|**numeric (38)**|O valor de identidade no fim do intervalo atual.|  
+|**next_range_begin**|**numeric (38)**|O valor de identidade no início do próximo intervalo a ser atribuído.|  
+|**next_range_end**|**numeric (38)**|O valor de identidade no fim do próximo intervalo a ser atribuído.|  
+|**is_pub_range**|**bit**|Um valor de **1** se o intervalo de identidade for atribuído à publicação.|  
+|**max_used**|**numeric (38)**|O valor de identidade máximo que pode ser atribuído.|  
   
-## <a name="see-also"></a>Consulte também  
- [Tabelas de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Tabelas de replicação &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Exibições de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

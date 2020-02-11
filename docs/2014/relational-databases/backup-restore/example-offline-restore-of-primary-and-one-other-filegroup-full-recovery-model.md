@@ -1,5 +1,5 @@
 ---
-title: 'Exemplo: Restauração offline de arquivos primário e um (modelo de recuperação completa) | Microsoft Docs'
+title: 'Exemplo: restauração offline de um grupo de arquivos primário e outro (modelo de recuperação completa) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fec409bf6f391e14dd5e1a2b8b102df2fd00cfd4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62921751"
 ---
 # <a name="example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model"></a>Exemplo: Restauração offline do grupo de arquivos primário e mais um (modelo de recuperação completa)
@@ -29,7 +29,7 @@ ms.locfileid: "62921751"
  O administrador de banco de dados decide restaurar e recuperar o grupo de arquivos primário e grupo de arquivos `B`. O banco de dados está usando o modelo de recuperação completa; portanto, antes do início da restauração, um backup do final do log deve ser extraído do banco de dados. Quando o banco de dados estiver online, os grupos de arquivos `A` e `C` ficarão automaticamente online.  
   
 > [!NOTE]  
->  A sequência de restauração offline tem menos etapas do que a restauração online de um arquivo somente leitura. Por exemplo, consulte [exemplo: Restauração online de um arquivo somente leitura &#40;recuperação&#41;](example-online-restore-of-a-read-only-file-full-recovery-model.md). Porém, todo o banco de dados está offline na duração da sequência.  
+>  A sequência de restauração offline tem menos etapas do que a restauração online de um arquivo somente leitura. Para obter um exemplo, confira [Exemplo: restauração online de um arquivo somente leitura #40;Modelo de recuperação completa&#41;](example-online-restore-of-a-read-only-file-full-recovery-model.md). Porém, todo o banco de dados está offline na duração da sequência.  
   
 ## <a name="tail-log-backup"></a>Backup do final do log  
  Antes de restaurar o banco de dados, o administrador do banco de dados deve fazer backup do final do log. Como o banco de dados está danificado, é preciso usar a opção NO_TRUNCATE para criar o backup do final do log:  
@@ -57,7 +57,7 @@ RESTORE LOG adb FROM tailLogBackup WITH RECOVERY
   
  Os arquivos que não estão restaurados ficam automaticamente online. Todos os grupos de arquivos agora estão online.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Restauração online &#40;SQL Server&#41;](online-restore-sql-server.md)   
  [Restaurações por etapas &#40;SQL Server&#41;](piecemeal-restores-sql-server.md)   
  [Restaurações de arquivo &#40;Modelo de recuperação completa&#41;](file-restores-full-recovery-model.md)   

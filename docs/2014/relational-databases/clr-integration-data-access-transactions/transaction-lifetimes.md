@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 627dafb26a4368261e820dd03525f147429cdbcb
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70874435"
 ---
 # <a name="transaction-lifetimes"></a>Vidas úteis de transação
@@ -31,7 +31,7 @@ ms.locfileid: "70874435"
   
 -   Uma tentativa de reverter uma transação não iniciada no mesmo procedimento faz com que a transação pare de responder (impedindo que qualquer outra operação de efeito colateral ocorra). A transação é descontinuada até que o código CLR saia do escopo. Observe que isso pode ser útil quando você detecta um erro em seu procedimento e deseja verificar se a transação inteira é finalizada.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Integração CLR e transações](../native-client-ole-db-transactions/transactions.md)  
   
   

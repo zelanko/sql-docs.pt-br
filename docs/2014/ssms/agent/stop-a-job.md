@@ -15,16 +15,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b55ca5e8f2e57e85a75f610efe4115ced0dce365
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798146"
 ---
 # <a name="stop-a-job"></a>Stop a Job
-  Este tópico descreve como interromper um trabalho do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Um trabalho é uma série especificada de ações que o SQL Server Agent executa.  
+  Este tópico descreve como interromper um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trabalho do Agent. Um trabalho é uma série especificada de ações que o SQL Server Agent executa.  
   
--   **Antes de começar:**  ,  
+-   **Antes de começar:** ,  
   
      [Limitações e restrições](#Restrictions)  
   
@@ -40,7 +40,7 @@ ms.locfileid: "72798146"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e Restrições  
+###  <a name="Restrictions"></a> Limitações e restrições  
   
 -   Se um trabalho estiver executando no momento uma etapa do tipo **CmdExec** ou **PowerShell**, o processo em execução (por exemplo, MyProgram.exe) será forçado a terminar prematuramente. Isso pode causar comportamento imprevisível, como manter abertos os arquivos em uso pelo processo.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "72798146"
   
 3.  Se desejar interromper vários trabalhos, clique com o botão direito do mouse em **Monitor de Atividade do Trabalho**e, depois, clique em **Exibir Atividade do Trabalho**. No Monitor de Atividade do Trabalho, selecione os trabalhos que você deseja interromper, clique com o botão direito do mouse em sua seleção e, depois, clique em **Parar Trabalhos**.  
   
-##  <a name="TSQL"></a> Usando Transact-SQL  
+##  <a name="TSQL"></a> Usando o Transact-SQL  
   
 ### <a name="to-stop-a-job"></a>Para interromper um trabalho  
   
@@ -79,7 +79,7 @@ ms.locfileid: "72798146"
     GO  
     ```  
   
- Para obter mais informações, [consulte &#40;Transact-SQL&#41;sp_stop_job](/sql/relational-databases/system-stored-procedures/sp-stop-job-transact-sql).  
+ Para obter mais informações, consulte [sp_stop_job &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-stop-job-transact-sql).  
   
 ##  <a name="SMO"></a>Usando SQL Server Management Objects  
 

@@ -18,10 +18,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5fefe8f2a129d92b10c685e81a89079128c8c0a6
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70911233"
 ---
 # <a name="using-filegroups-and-files-to-store-data"></a>Usando grupos de arquivos e arquivos para armazenar dados
@@ -32,7 +32,7 @@ ms.locfileid: "70911233"
  Cada banco de dados que é criado automaticamente tem um grupo de arquivos nomeado "Primário" e um arquivo de dados com o mesmo nome do banco de dados. Outros arquivos e grupos podem ser adicionados às coleções.  
   
 ## <a name="examples"></a>Exemplos  
- Para os exemplos de código a seguir, selecione o ambiente de programação, o modelo de programação e a linguagem de programação para criar seu aplicativo. Para obter mais informações, consulte [criar um projeto&#35; do Visual C Smo no Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Para os exemplos de código a seguir, selecione o ambiente de programação, o modelo de programação e a linguagem de programação para criar seu aplicativo. Para obter mais informações, consulte [criar um projeto do Visual C&#35; Smo no Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="adding-filegroups-and-datafiles-to-a-database-in-visual-basic"></a>Adicionando FileGroups e DataFiles a um banco de dados no Visual Basic  
  O grupo de arquivos primário e o arquivo de dados são criados automaticamente com valores de propriedade padrão. O exemplo de código especifica alguns valores de propriedade a serem usados. Caso contrário, os valores de propriedade padrão são usados.  
@@ -193,7 +193,7 @@ $lf1.Drop()
   
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  <xref:Microsoft.SqlServer.Management.Smo.FileGroup>   
  [Arquivos e grupos de arquivos do banco de dados](../../../relational-databases/databases/database-files-and-filegroups.md)  
   

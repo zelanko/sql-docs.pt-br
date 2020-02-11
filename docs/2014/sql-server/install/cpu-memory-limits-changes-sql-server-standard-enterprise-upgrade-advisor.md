@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 6564a507b01e45e9808f2efbce79c4b3d07b0680
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71952570"
 ---
 # <a name="changes-to-cpu-and-memory-limits-for-sql-server-standard-and-enterprise-upgrade-advisor"></a>Alterações nos limites de CPU e de memória para o SQL Server Standard e Enterprise (Supervisor de Atualização)
@@ -22,12 +22,12 @@ ms.locfileid: "71952570"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modo nativo &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modo do SharePoint.|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Modo nativo &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] modo do SharePoint.|  
   
 ## <a name="component"></a>Componente  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
-### <a name="description"></a>Descrição  
+### <a name="description"></a>DESCRIÇÃO  
  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard edition oferece suporte a 128 gigabytes de memória do sistema, enquanto o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise oferece suporte ao máximo permitido pelo sistema operacional.  
   
 > [!NOTE]  
@@ -35,11 +35,11 @@ ms.locfileid: "71952570"
   
  Para obter mais informações sobre os limites de CPU e memória em outras edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte o seguinte  
   
--   [Recursos com suporte nas edições do SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
+-   [Recursos compatíveis com as edições do SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
   
 -   [Computar limites de capacidade por edição do SQL Server](../compute-capacity-limits-by-edition-of-sql-server.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Supervisor de atualização &#40;de problemas de atualização do Reporting Services&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Problemas de atualização do Reporting Services &#40;o supervisor de atualização&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
   
   
