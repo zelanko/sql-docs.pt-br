@@ -10,10 +10,10 @@ ms.assetid: e360ba3a-e96b-4f85-b588-ed1f767fa973
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 0442f63413c3fd0213fb5b63151208fb10b55351
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729172"
 ---
 # <a name="secure-a-master-data-manager-web-application"></a>Proteger um aplicativo Web Master Data Manager
@@ -25,7 +25,7 @@ ms.locfileid: "73729172"
 > [!NOTE]  
 >  O aplicativo Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] pode usar HTTP ou HTTPS, mas não ambos.  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
  Para executar o procedimento:  
   
 -   Você deve ser um administrador no servidor Web onde o [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] é instalado.  
@@ -38,7 +38,7 @@ ms.locfileid: "73729172"
   
 2.  No painel **Conexões** , em **Sites**, clique no site que hospeda o aplicativo Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] .  
   
-3.  No painel **Ações** , clique em **Associações**.  
+3.  No painel **Ações**, clique em **Associações**.  
   
 4.  Clique em **Adicionar**.  
   
@@ -61,10 +61,10 @@ ms.locfileid: "73729172"
 
 12. Alterar `<serviceMetadata httpGetEnable="true" httpsGetEnabled="false">` para `<serviceMetadata httpGetEnable="false" httpsGetEnabled="true">` para evitar problemas que podem aparecer no cliente do Silverlight.
 
-13. Salve o arquivo e feche-o. Se você receber um erro, pode ser porque o UAC está habilitado. Agora, os usuários devem ser capazes de usar HTTPS para acessar o site.  
+13. Salve e feche o arquivo. Se você receber um erro, pode ser porque o UAC está habilitado. Agora, os usuários devem ser capazes de usar HTTPS para acessar o site.  
 
   
-## <a name="see-also"></a>Consulte também  
- [Criar um aplicativo Web do Master Data Manager &#40;Master Data Services&#41;](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Criar um aplicativo Web Master Data Manager &#40;Master Data Services&#41;](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)  
   
   

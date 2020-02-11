@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1916be8c443799fa41680341e72889bd10551b4a
-ms.sourcegitcommit: 381595e990f2294dbf324ef31071e2dd2318b8dd
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74200425"
 ---
 # <a name="import-the-sqlps-module"></a>Importar o módulo SQLPS
@@ -40,7 +40,7 @@ ms.locfileid: "74200425"
 > [!NOTE]  
 >  Os verbos usados nos nomes de dois cmdlets de SQL Server (`Encode-Sqlname` e `Decode-Sqlname`) não correspondem aos verbos aprovados para o Windows PowerShell 2.0. Isso não tem efeito na sua operação, mas o Windows PowerShell gera um aviso quando o módulo `sqlps` é importado para uma sessão.  
   
-###  <a name="Security"></a>Segurança  
+###  <a name="Security"></a> Segurança  
  Por padrão, o Windows PowerShell é executado em conjunto com a política de execução de scripts definida como **Restrita**, que evita a execução de qualquer script do Windows PowerShell. Para carregar o módulo `sqlps` module, você pode usar o cmdlet `Set-ExecutionPolicy` a fim de habilitar a execução de scripts assinados ou de quaisquer outros scripts. Somente os scripts de origem confiável devem ser executados, e é preciso verificar se todos os arquivos de entrada e de saída estão usando as permissões NTFS adequadas. Para obter mais informações sobre como habilitar scripts do Windows PowerShell, consulte [Executando scripts do Windows PowerShell](https://docs.microsoft.com/powershell/scripting/getting-started/starting-windows-powershell?view=powershell-6#how-to-enable-windows-powershell-ise-on-earlier-releases-of-windows).  
   
 ##  <a name="LoadSqlps"></a>Carregar o módulo sqlps  
@@ -63,4 +63,4 @@ Import-Module "sqlps" -DisableNameChecking
 ## <a name="see-also"></a>Consulte Também  
  [SQL Server PowerShell](../powershell/sql-server-powershell.md)   
  [Provedor de SQL Server PowerShell](../powershell/sql-server-powershell-provider.md)   
- [Usar os cmdlets Mecanismo de Banco de Dados](../../2014/database-engine/use-the-database-engine-cmdlets.md)  
+ [Usar cmdlets do Mecanismo de Banco de Dados](../../2014/database-engine/use-the-database-engine-cmdlets.md)  

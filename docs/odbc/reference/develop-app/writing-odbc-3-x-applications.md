@@ -1,5 +1,5 @@
 ---
-title: Escrevendo aplicativos ODBC 3.x | Microsoft Docs
+title: Gravando aplicativos ODBC 3. x | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,81 +19,81 @@ ms.assetid: 19c54fc5-9dd6-49b6-8c9f-a38961b40a65
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9939d11e3a779cc25d7faeb4950783353947f140
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68081451"
 ---
 # <a name="writing-odbc-3x-applications"></a>Escrever aplicativos ODBC 3.x
-Quando um ODBC *2.x* aplicativo é atualizado para ODBC *3.x*, ele deve ser escrito de forma que ele funciona com ODBC *2.x* e *3.x* drivers . O aplicativo deve incorporar o código condicional para aproveitar ao máximo o ODBC *3.x* recursos.  
+Quando um aplicativo ODBC *2. x* é atualizado para o ODBC *3. x*, ele deve ser escrito de forma que funcione com os drivers ODBC *2. x* e *3. x* . O aplicativo deve incorporar o código condicional para aproveitar ao máximo os recursos do ODBC *3. x* .  
   
- O atributo de ambiente SQL_ATTR_ODBC_VERSION deve ser definido como SQL_OV_ODBC2. Isso garantirá que o driver se comporta como um ODBC *2.x* driver em relação as alterações descritas na seção [alterações comportamentais](../../../odbc/reference/develop-app/behavioral-changes.md).  
+ O atributo de ambiente SQL_ATTR_ODBC_VERSION deve ser definido como SQL_OV_ODBC2. Isso garantirá que o driver se comporta como um driver ODBC *2. x* , com relação às alterações descritas na seção [alterações comportamentais](../../../odbc/reference/develop-app/behavioral-changes.md).  
   
- Se o aplicativo usar qualquer um dos recursos descritos na seção [novos recursos](../../../odbc/reference/develop-app/new-features.md), código condicional deve ser usado para determinar se o driver é um ODBC *3.x* ou ODBC *2.x* driver. O aplicativo usa **SQLGetDiagField** e **SQLGetDiagRec** obter ODBC *3.x* SQLSTATEs enquanto faz esses fragmentos de código condicional de processamento de erro. Os seguintes pontos sobre a nova funcionalidade devem ser considerados:  
+ Se o aplicativo usar qualquer um dos recursos descritos na seção [novos recursos](../../../odbc/reference/develop-app/new-features.md), o código condicional deverá ser usado para determinar se o driver é um driver ODBC *3. x* ou ODBC *2. x* . O aplicativo usa **SQLGetDiagField** e **SQLGetDiagRec** para obter o ODBC *3. x* sqlstates enquanto realiza o processamento de erro nesses fragmentos de código condicional. Os seguintes pontos sobre a nova funcionalidade devem ser considerados:  
   
--   Um aplicativo afetado pela mudança no comportamento de tamanho do conjunto de linhas deve ter cuidado para não chame **SQLFetch** quando o tamanho da matriz é maior que 1. Esses aplicativos devem substituir chamadas para **SQLExtendedFetch** com chamadas para **SQLSetStmtAttr** para definir o atributo de instrução SQL_ATTR_ARRAY_STATUS_PTR e **SQLFetchScroll**, de modo que eles têm código comum que funciona com ODBC *3.x* e ODBC *2.x* drivers. Porque **SQLSetStmtAttr** com SQL_ATTR_ROW_ARRAY_SIZE será mapeado para **SQLSetStmtAttr** com SQL_ROWSET_SIZE para ODBC *2.x* drivers, aplicativos podem definir apenas SQL _ATTR_ROW_ARRAY_SIZE para suas operações de busca multilinha.  
+-   Um aplicativo afetado pela alteração no comportamento do tamanho do conjunto de linhas deve ter cuidado para não chamar **SQLFetch** quando o tamanho da matriz for maior que 1. Esses aplicativos devem substituir chamadas para **SQLExtendedFetch** com chamadas para **SQLSetStmtAttr** para definir o atributo de instrução SQL_ATTR_ARRAY_STATUS_PTR e como **SQLFetchScroll**, para que eles tenham um código comum que funcione com os drivers ODBC *3. x* e ODBC *2. x* . Como **SQLSetStmtAttr** com SQL_ATTR_ROW_ARRAY_SIZE será mapeado para **SQLSetStmtAttr** com SQL_ROWSET_SIZE para drivers ODBC *2. x* , os aplicativos podem apenas definir SQL_ATTR_ROW_ARRAY_SIZE para suas operações de busca de multirow.  
   
--   A maioria dos aplicativos que estão sendo atualizados, na verdade, não são afetados pelas alterações nos códigos de SQLSTATE. Para os aplicativos que são afetados, pode fazer uma pesquisa mecânica e substituir na maioria dos casos, usando a tabela de conversão de erro na seção "Mapeamento de SQLSTATE" Converter ODBC *3.x* códigos de erro ODBC *2.x* códigos. Desde o ODBC *3.x* Gerenciador de Driver executará o mapeamento do ODBC *2.x* SQLSTATEs ODBC *3.x* SQLSTATEs, esses criadores de aplicativo precisam verificação apenas para o ODBC  *3. x* SQLSTATEs e não se preocupe sobre ODBC, inclusive *2.x* SQLSTATEs no código condicional.  
+-   A maioria dos aplicativos que estão sendo atualizados não é realmente afetada por alterações nos códigos SQLSTATE. Para os aplicativos que são afetados, eles podem fazer uma pesquisa mecânica e substituir na maioria dos casos usando a tabela de conversão de erros na seção "mapeamento de SQLSTATE" para converter códigos de erro ODBC *3. x* em códigos ODBC *2. x* . Como o Gerenciador de driver ODBC *3. x* executará o mapeamento dos sqlstates do ODBC *2.* x para o ODBC *3. x* , esses gravadores só precisarão verificar o ODBC *3. x* sqlstates e não se preocupar com a inclusão de ODBC *2. x* sqlstates no código condicional.  
   
--   Se um aplicativo faz muito uso de data, hora e tipos de dados de carimbo de hora, o aplicativo pode declarar propriamente ditos tenham um ODBC *2.x* aplicativo e como usar as existentes de código em vez de usar código condicionado.  
+-   Se um aplicativo fizer grande uso de tipos de dados de data, hora e timestamp, o aplicativo poderá declarar-se como um aplicativo ODBC *2. x* e usar seu código existente em vez de usar código de condicionamento.  
   
  A atualização também deve incluir as seguintes etapas:  
   
--   Chame **SQLSetEnvAttr** antes de alocar uma conexão para definir o atributo de ambiente SQL_ATTR_ODBC_VERSION SQL_OV_ODBC2.  
+-   Chame **SQLSetEnvAttr** antes de alocar uma conexão para definir o atributo de ambiente SQL_ATTR_ODBC_VERSION como SQL_OV_ODBC2.  
   
--   Substitua todas as chamadas para **SQLAllocEnv**, **SQLAllocConnect**, ou **SQLAllocStmt** com chamadas para **SQLAllocHandle** com os devidos *HandleType* argumento SQL_HANDLE_ENV, SQL_HANDLE_DBC ou SQL_HANDLE_STMT.  
+-   Substitua todas as chamadas para **SQLAllocEnv**, **SQLAllocConnect**ou **SQLAllocStmt** por chamadas para **SQLAllocHandle** com o argumento *HandleType* apropriado de SQL_HANDLE_ENV, SQL_HANDLE_DBC ou SQL_HANDLE_STMT.  
   
--   Substitua todas as chamadas para **SQLFreeEnv** ou **SQLFreeConnect** com chamadas para **SQLFreeHandle** com os devidos *HandleType* argumento de SQL_HANDLE_DBC ou SQL_HANDLE_STMT.  
+-   Substitua todas as chamadas para **SQLFreeEnv** ou **SQLFreeConnect** com chamadas para **SQLFreeHandle** com o argumento *HandleType* apropriado de SQL_HANDLE_DBC ou SQL_HANDLE_STMT.  
   
--   Substitua todas as chamadas para **SQLSetConnectOption** com chamadas para **SQLSetConnectAttr**. Se definir um atributo cujo valor é uma cadeia de caracteres, defina as *StringLength* argumento adequadamente. Alteração *atributo* argumento de SQL_XXXX para SQL_ATTR_XXXX.  
+-   Substitua todas as chamadas para **SQLSetConnectOption** com chamadas para **SQLSetConnectAttr**. Se estiver definindo um atributo cujo valor é uma cadeia de caracteres, defina o argumento *StringLength* adequadamente. Altere o argumento de *atributo* de SQL_XXXX para SQL_ATTR_XXXX.  
   
--   Substitua todas as chamadas para **SQLGetConnectOption** com chamadas para **SQLGetConnectAttr**. Se obter uma cadeia de caracteres ou um atributo binário, defina *BufferLength* para o valor apropriado e passar uma *StringLength* argumento. Alteração *atributo* argumento de SQL_XXXX para SQL_ATTR_XXXX.  
+-   Substitua todas as chamadas para **SQLGetConnectOption** com chamadas para **SQLGetConnectAttr**. Se obter uma cadeia de caracteres ou um atributo binário, defina *BufferLength* como o valor apropriado e passe um argumento *StringLength* . Altere o argumento de *atributo* de SQL_XXXX para SQL_ATTR_XXXX.  
   
--   Substitua todas as chamadas para **SQLSetStmtOption** com chamadas para **SQLSetStmtAttr**. Se definir um atributo cujo valor é uma cadeia de caracteres, defina as *StringLength* argumento adequadamente. Alteração *atributo* argumento de SQL_XXXX para SQL_ATTR_XXXX.  
+-   Substitua todas as chamadas para **SQLSetStmtOption** com chamadas para **SQLSetStmtAttr**. Se estiver definindo um atributo cujo valor é uma cadeia de caracteres, defina o argumento *StringLength* adequadamente. Altere o argumento de *atributo* de SQL_XXXX para SQL_ATTR_XXXX.  
   
--   Substitua todas as chamadas para **SQLGetStmtOption** com chamadas para **SQLGetStmtAttr**. Se obter uma cadeia de caracteres ou um atributo binário, defina *BufferLength* para o valor apropriado e passar uma *StringLength* argumento. Alteração *atributo* argumento de SQL_XXXX para SQL_ATTR_XXXX.  
+-   Substitua todas as chamadas para **SQLGetStmtOption** com chamadas para **SQLGetStmtAttr**. Se obter uma cadeia de caracteres ou um atributo binário, defina *BufferLength* como o valor apropriado e passe um argumento *StringLength* . Altere o argumento de *atributo* de SQL_XXXX para SQL_ATTR_XXXX.  
   
--   Substitua todas as chamadas para **SQLTransact** com chamadas para **SQLEndTran**. Se o identificador válido mais à direita na **SQLTransact** chamada é um identificador de ambiente, um *HandleType* argumento SQL_HANDLE_ENV deve ser usado no **SQLEndTran** chamar com apropriado *manipular* argumento. Se o identificador válido mais à direita em sua **SQLTransact** chamada é um identificador de conexão, um *HandleType* argumento SQL_HANDLE_DBC deve ser usado no **SQLEndTran** chamar com apropriado *manipular* argumento.  
+-   Substitua todas as chamadas para **Sqltransacted** por chamadas para **SQLEndTran**. Se o identificador válido mais à direita na chamada **SQLTransact** for um identificador de ambiente, um argumento *handletype* de SQL_HANDLE_ENV deverá ser usado na chamada **SQLEndTran** com o argumento *Handle* apropriado. Se o identificador válido mais à direita em sua chamada **SQLTransact** for um identificador de conexão, um argumento *handletype* de SQL_HANDLE_DBC deverá ser usado na chamada **SQLEndTran** com o argumento *Handle* apropriado.  
   
--   Substitua todas as chamadas para **SQLColAttributes** com chamadas para **SQLColAttribute**. Se o *FieldIdentifier* argumento é SQL_COLUMN_PRECISION, SQL_COLUMN_SCALE ou SQL_COLUMN_LENGTH, não altere nada diferente do nome da função. Caso contrário, altere *FieldIdentifier* de SQL_COLUMN_XXXX para SQL_DESC_XXXX. Se *FieldIdentifier* é SQL_DESC_CONCISE_TYPE e o tipo de dados é um tipo de dados de data e hora, altere para o ODBC correspondente *3.x* tipo de dados.  
+-   Substitua todas as chamadas para **SQLColAttributes** com chamadas para **SQLColAttribute**. Se o argumento *FieldIdentifier* for SQL_COLUMN_PRECISION, SQL_COLUMN_SCALE ou SQL_COLUMN_LENGTH, não altere nada além do nome da função. Caso contrário, altere *FieldIdentifier* de SQL_COLUMN_XXXX para SQL_DESC_XXXX. Se *FieldIdentifier* for SQL_DESC_CONCISE_TYPE e o tipo de dados for um tipo de dados DateTime, altere para o tipo de dados ODBC *3. x* correspondente.  
   
--   Se usar cursores em bloco, cursores roláveis ou ambos, o aplicativo faz o seguinte:  
+-   Se estiver usando cursores de bloco, cursores roláveis ou ambos, o aplicativo fará o seguinte:  
   
-    -   Define o tamanho de conjunto de linhas, o tipo de cursor e a simultaneidade de cursor usando **SQLSetStmtAttr**.  
+    -   Define o tamanho do conjunto de linhas, o tipo de cursor e a simultaneidade do cursor usando **SQLSetStmtAttr**.  
   
-    -   Chamadas **SQLSetStmtAttr** defina sql_attr_row_status_ptr de modo que aponte para uma matriz de registros de status.  
+    -   Chama **SQLSetStmtAttr** para definir SQL_ATTR_ROW_STATUS_PTR para apontar para uma matriz de registros de status.  
   
-    -   Chamadas **SQLSetStmtAttr** definir SQL_ATTR_ROWS_FETCHED_PTR para apontar para um sqlinteger que contém.  
+    -   Chama **SQLSetStmtAttr** para definir SQL_ATTR_ROWS_FETCHED_PTR para apontar para um sqlinteiro.  
   
     -   Executa as associações necessárias e executa a instrução SQL.  
   
-    -   Chamadas **SQLFetchScroll** em um loop para buscar linhas e mover-se no resultado definido.  
+    -   Chama **SQLFetchScroll** em um loop para buscar linhas e mover-se no conjunto de resultados.  
   
-    -   Se desejar buscar por indicador, o aplicativo chama **SQLSetStmtAttr** para definir SQL_ATTR_FETCH_BOOKMARK_PTR como uma variável que contém o indicador para a linha que deseja buscar e chama **SQLFetchScroll** com um *FetchOrientation* argumento de SQL_FETCH_BOOKMARK.  
+    -   Se quiser buscar por indicador, o aplicativo chamará **SQLSetStmtAttr** para definir SQL_ATTR_FETCH_BOOKMARK_PTR para uma variável que conterá o indicador para a linha que deseja buscar e chamará **SQLFetchScroll** com um argumento *FetchOrientation* de SQL_FETCH_BOOKMARK.  
   
--   Se o uso de matrizes de parâmetros, o aplicativo faz o seguinte:  
+-   Se estiver usando matrizes de parâmetros, o aplicativo fará o seguinte:  
   
-    -   Chamadas **SQLSetStmtAttr** para definir o atributo SQL_ATTR_PARAMSET_SIZE como o tamanho da matriz de parâmetros.  
+    -   Chama **SQLSetStmtAttr** para definir o atributo SQL_ATTR_PARAMSET_SIZE como o tamanho da matriz de parâmetros.  
   
-    -   Chamadas **SQLSetStmtAttr** definir SQL_ATTR_ROWS_PROCESSED_PTR para apontar para uma variável UDWORD interna.  
+    -   Chama **SQLSetStmtAttr** para definir SQL_ATTR_ROWS_PROCESSED_PTR para apontar para uma variável UDWORD interna.  
   
-    -   Executa a se preparar, associar e executar operações conforme apropriado.  
+    -   Executa as operações de preparação, ligação e execução conforme apropriado.  
   
-    -   Se a execução for interrompida por algum motivo (por exemplo, SQL_NEED_DATA), ele pode encontrar a linha "atual" de parâmetros inspecionando o local apontado pela SQL_ATTR_ROWS_PROCESSED_PTR.  
+    -   Se a execução for interrompida por algum motivo (como SQL_NEED_DATA), ela poderá encontrar a linha "atual" dos parâmetros inspecionando o local apontado por SQL_ATTR_ROWS_PROCESSED_PTR.  
   
- Esta seção contém os tópicos a seguir.  
+ Esta seção contém os seguintes tópicos:  
   
--   [Mapeando funções de substituição para compatibilidade com versões anteriores de aplicativos](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)  
+-   [Mapear funções de substituição para compatibilidade com versões anteriores de aplicativos](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)  
   
 -   [Calling SQLCloseCursor](../../../odbc/reference/develop-app/calling-sqlclosecursor.md)  
   
--   [Chamando SQLGetDiagField](../../../odbc/reference/develop-app/calling-sqlgetdiagfield.md)  
+-   [Chamar SQLGetDiagField](../../../odbc/reference/develop-app/calling-sqlgetdiagfield.md)  
   
--   [Chamando SQLSetPos](../../../odbc/reference/develop-app/calling-sqlsetpos.md)  
+-   [Chamar SQLSetPos](../../../odbc/reference/develop-app/calling-sqlsetpos.md)  
   
 -   [Operações de biblioteca de cursor](../../../odbc/reference/develop-app/cursor-library-operations.md)  
   
--   [Mapeando os tipos de informações dos atributos1 de cursor](../../../odbc/reference/develop-app/mapping-the-cursor-attributes1-information-types.md)  
+-   [Mapear os tipos de informações dos atributos1 de cursor](../../../odbc/reference/develop-app/mapping-the-cursor-attributes1-information-types.md)  
   
 -   [SQL_NO_DATA](../../../odbc/reference/develop-app/sql-no-data.md)

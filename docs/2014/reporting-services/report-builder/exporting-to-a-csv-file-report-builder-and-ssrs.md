@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6981b756bacd720284fcd38fd29c9ba371db8a87
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107926"
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>Exportando para um arquivo CSV (Construtor de Relatórios e SSRS)
@@ -55,7 +55,7 @@ ms.locfileid: "66107926"
   
 -   Linha  
   
--   Image  
+-   Imagem  
   
 -   Retângulo  
   
@@ -68,7 +68,7 @@ ms.locfileid: "66107926"
 |Item|Comportamento da renderização|  
 |----------|------------------------|  
 |Caixa de texto|Renderiza o conteúdo da caixa de texto. No modo padrão, os itens são formatados com base nas propriedades de formatação do item. No modo compatível, a formatação pode ser alterada pelas configurações das informações do dispositivo. Para obter mais informações sobre os modos de renderização de CSV, consulte as informações a seguir.|  
-|Table|Renderiza expandindo a tabela e criando uma linha e uma coluna para cada linha e coluna no nível mais baixo de detalhe. As linhas e colunas de subtotal não têm cabeçalhos de coluna ou de linha. Não há suporte para relatórios detalhados.|  
+|Tabela|Renderiza expandindo a tabela e criando uma linha e uma coluna para cada linha e coluna no nível mais baixo de detalhe. As linhas e colunas de subtotal não têm cabeçalhos de coluna ou de linha. Não há suporte para relatórios detalhados.|  
 |Matriz|Renderiza expandindo a matriz e criando uma linha e uma coluna para cada linha e coluna no nível mais baixo de detalhe. As linhas e colunas de subtotal não têm cabeçalhos de coluna ou de linha.|  
 |Lista|Renderiza um registro para cada linha de detalhes ou instância na lista.|  
 |Sub-relatório|O item pai é repetido para cada instância de conteúdos.|  
@@ -77,7 +77,7 @@ ms.locfileid: "66107926"
 |Minigráficos|Renderiza como um gráfico. Normalmente, um minigráfico não inclui hierarquias ou rótulos.|  
 |Medidor|Renderiza como um único registro com os valores mínimo e máximo da escala linear, valores de início e fim do intervalo e valor do ponteiro.|  
 |Indicador|Renderiza como um único registro com o nome do estado ativo, estados disponíveis e o valor de dados.|  
-|Mapa|Renderiza uma linha com os rótulos e os valores para cada membro do mapa de uma camada do mapa.<br /><br /> Se o mapa tiver várias camadas, os valores nas linhas variarão, dependendo do fato de as camadas do mapa usarem as mesmas regiões de dados do mapa ou regiões de dados do mapa diferentes. Se várias camadas do mapa usarem a mesma região de dados, as linhas conterão dados de todas as camadas.|  
+|Mapeamento|Renderiza uma linha com os rótulos e os valores para cada membro do mapa de uma camada do mapa.<br /><br /> Se o mapa tiver várias camadas, os valores nas linhas variarão, dependendo do fato de as camadas do mapa usarem as mesmas regiões de dados do mapa ou regiões de dados do mapa diferentes. Se várias camadas do mapa usarem a mesma região de dados, as linhas conterão dados de todas as camadas.|  
   
 ### <a name="hierarchical-and-grouped-data"></a>Dados hierárquicos e agrupados  
  Os dados hierárquicos e agrupados devem ser para ser mesclados para que possam ser representados no formato CSV.  
@@ -144,7 +144,7 @@ ms.locfileid: "66107926"
   
   
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Paginação no Reporting Services &#40;Construtor de Relatórios e SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportamentos de renderização &#40;Construtor de Relatórios e SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [Funcionalidade interativa para extensões de renderização de relatório diferentes &#40;Construtor de Relatórios e SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   

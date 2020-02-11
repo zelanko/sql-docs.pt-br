@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9db326ac27a7137f03f34e242c3c5c3931637f36
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68198990"
 ---
 # <a name="conflict-detection-in-peer-to-peer-replication"></a>Detecção de conflitos na replicação ponto a ponto
@@ -86,7 +86,7 @@ ms.locfileid: "68198990"
   
 -   Tente sincronizar o nó novamente permitindo que o Agente de Distribuição continue a aplicar as alterações:  
   
-    1.  Execute [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql): Especifique 'p2p_continue_onconflict' para o @property parâmetro e `true` para o @value parâmetro.  
+    1.  Execute [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql): especifique ' p2p_continue_onconflict ' para o @property parâmetro e `true` para o @value parâmetro.  
   
     2.  Reinicie o Agente de Distribuição.  
   
@@ -97,9 +97,9 @@ ms.locfileid: "68198990"
         > [!NOTE]  
         >  Se os dados forem inconsistentes depois dessa etapa, você deve atualizar manualmente as linhas no nó que tem a prioridade mais alta e, em seguida, permitir que as alterações propagem a partir desse nó. Se não houver nenhuma outra alteração conflitante na topologia, todos os nós serão levados para um estado consistente.  
   
-    5.  Execute [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql): Especifique 'p2p_continue_onconflict' para o @property parâmetro e `false` para o @value parâmetro.  
+    5.  Execute [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql): especifique ' p2p_continue_onconflict ' para o @property parâmetro e `false` para o @value parâmetro.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Peer-to-Peer Transactional Replication](peer-to-peer-transactional-replication.md)  
   
   

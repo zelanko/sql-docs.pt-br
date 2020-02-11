@@ -20,10 +20,10 @@ ms.assetid: 73a309c3-6d22-42dc-a6fe-8a63747aa2e4
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 96fb5c880346c534c3b956e577f15622e598d48c
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72305205"
 ---
 # <a name="sp_fulltext_load_thesaurus_file-transact-sql"></a>sp_fulltext_load_thesaurus_file (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "72305205"
 
   Faz com que a instância do servidor analise e carregue os dados do arquivo do dicionário de sinônimos que corresponde ao idioma cujo LCID está especificado. Esse procedimento armazenado é útil após a atualização de um arquivo de dicionário de sinônimos. A execução de **sp_fulltext_load_thesaurus_file** causa a recompilação de consultas de texto completo que usam o dicionário de sinônimos do LCID especificado.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,10 +41,10 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *lcid*  
- Inteiro que mapeia o identificador de localidade (LCID) da linguagem para a qual você quer carregar a definição XML do dicionário de sinônimos. Para obter os LCIDs de idiomas que estão disponíveis em uma instância de servidor, use a exibição do catálogo [Transact &#40;-&#41; SQL sys. fulltext_languages](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md) .  
+ *LCID*  
+ Inteiro que mapeia o identificador de localidade (LCID) da linguagem para a qual você quer carregar a definição XML do dicionário de sinônimos. Para obter os LCIDs de idiomas que estão disponíveis em uma instância de servidor, use a exibição de catálogo [fulltext_languages de&#41;do &#40;do Transact-SQL](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md) .  
   
- *ação* **\@loadOnlyIfNotLoaded** =   
+ **\@** = *ação* loadOnlyIfNotLoaded  
  Especifica se o arquivo de dicionário de sinônimos é carregado nas tabelas de dicionário de sinônimos mesmo que ele já tenha sido carregado. a *ação* é uma de:  
   
 |Valor|Definição|  
@@ -70,7 +70,7 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-load-a-thesaurus-file-even-if-it-is-already-loaded"></a>A. Carregar um arquivo de dicionário de sinônimos mesmo que ele já tenha sido carregado  
+### <a name="a-load-a-thesaurus-file-even-if-it-is-already-loaded"></a>a. Carregar um arquivo de dicionário de sinônimos mesmo que ele já tenha sido carregado  
  O exemplo a seguir analisa e carrega o dicionário de sinônimos em inglês.  
   
 ```sql
@@ -84,8 +84,8 @@ EXEC sys.sp_fulltext_load_thesaurus_file 1033;
 EXEC sys.sp_fulltext_load_thesaurus_file 1025, @loadOnlyIfNotLoaded = 1;
 ```  
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 
 [FULLTEXTSERVICEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)  
 [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-[Configurar e gerenciar arquivos de dicionário de sinônimos para pesquisa de texto completo](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)
+[Configurar e gerenciar arquivos de dicionário de sinônimos para Pesquisa de texto completo](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)

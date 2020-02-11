@@ -11,16 +11,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8303c387ff38ab5448d15e478534df165e05bddf
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637653"
 ---
 # <a name="hello-world-ready-sample"></a>Exemplo pronto do Hello World
   O exemplo Hello World Ready demonstra as operações básicas envolvidas na criação, implantação e teste de um procedimento armazenado simples e pronto para uso, baseado na integração CLR (common language runtime). Um componente pronto para uso pode ser facilmente localizado em diferentes idiomas para diferentes mercados do mundo, sem alterar o código-fonte do componente. Este exemplo também demonstra como retornar dados por meio de um parâmetro de saída e de um registro, que é construído dinamicamente pelo procedimento armazenado e retornado ao cliente. Esse exemplo é quase idêntico ao Exemplo Hello World, com a exceção de que é muito mais fácil e mais seguro localizar este aplicativo. Para alterar textos localizados é necessário o seguinte:  
   
-1.  Alterando um arquivo XML (o.`resx` arquivo) para a cultura específica no diretório de recursos  
+1.  Alterar um arquivo XML (o.`resx` arquivo) para a cultura específica no diretório de recursos  
   
 2.  Criar o arquivo de recursos da cultura por meio de `resgen`  
   
@@ -30,12 +30,13 @@ ms.locfileid: "73637653"
   
  O código-fonte e o assembly do próprio procedimento armazenado CLR não são alterados. É fornecido um script `build.cmd` que demonstra como compilar e vincular os assemblies do recurso. Embora o código-fonte do aplicativo crie um gerenciador de recursos baseado no assembly que está sendo executado no momento, você não precisa inserir os recursos com neutralidade de cultura na DLL que contém o procedimento armazenado. O `System.Resources.NeutralResourcesLanguage attribute` permite que recursos com neutralidade de cultura existam em uma DLL satélite. É muito melhor usar uma DLL separada para essa finalidade, de forma que, quando for necessário adicionar ou alterar textos localizados, a DLL primária que contém o procedimento armazenado CLR não precise ser alterado. Isso é especialmente útil para tipos de dados CLR definidos pelo usuário que podem ter colunas e outras dependências que dificultam a remoção e a nova adição do tipo. Normalmente, as versões de DLL satélite devem ser idênticas à versão do assembly principal. No entanto, é possível usar o atributo `SatelliteContractVersion` para permitir que o assembly principal seja atualizado sem atualizar os assemblies satélites também. Para obter mais informações, consulte a documentação da classe `ResourceManager` no Microsoft .NET.  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
  Esse exemplo funciona apenas com o SQL Server 2005 e versões posteriores.  
   
  Para criar e executar este projeto, o software a seguir deve estar instalado:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. É possível obter o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express gratuitamente no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site [de Documentação e Amostras do](https://www.microsoft.com/sql-server/sql-server-editions-express)Express  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. É possível obter o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express gratuitamente no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site [de Documentação e Amostras do](https://www.microsoft.com/sql-server/sql-server-editions-express)Express  
   
 -   O banco de dados AdventureWorks que está disponível no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site [do](https://go.microsoft.com/fwlink/?linkid=62796)Developer  
   
@@ -82,7 +83,7 @@ ms.locfileid: "73637653"
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
-    -   Para ler  
+    -   Para ler   
   
     -   `<value xml:space="preserve">Hallo Welt!</value>`  
   
@@ -90,7 +91,7 @@ ms.locfileid: "73637653"
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
-    -   Para ler  
+    -   Para ler   
   
     -   `<value xml:space="preserve">Hola a todos</value>`  
   
@@ -98,7 +99,7 @@ ms.locfileid: "73637653"
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
-    -   Para ler  
+    -   Para ler   
   
     -   `<value xml:space="preserve">BonjourÂ !</value>`  
   
@@ -106,7 +107,7 @@ ms.locfileid: "73637653"
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
-    -   Para ler  
+    -   Para ler   
   
     -   `<value xml:space="preserve">Bonjour de France!</value>`  
   
@@ -114,7 +115,7 @@ ms.locfileid: "73637653"
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
-    -   Para ler  
+    -   Para ler   
   
     -   `<value xml:space="preserve">Buongiorno</value>`  
   
@@ -122,7 +123,7 @@ ms.locfileid: "73637653"
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
-    -   Para ler  
+    -   Para ler   
   
     -   `<value xml:space="preserve">` `ã"ã‚"ã«ã¡ã¯</value>`  
   
@@ -154,7 +155,7 @@ ms.locfileid: "73637653"
   
     -   `sqlcmd -E -I -i cleanup.sql`  
   
-## <a name="sample-code"></a>Código de exemplo  
+## <a name="sample-code"></a>Exemplo de código  
  As listagens de código deste exemplo são as seguintes.  
   
  C#  
@@ -450,7 +451,7 @@ USE master;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Cenários de uso e exemplos para a integração do CLR &#40;Common Language Runtime&#41;](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Cenários de uso e exemplos de integração do CLR&#41; &#40;Common Language Runtime](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

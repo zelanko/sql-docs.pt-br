@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_input_buffer (Transact-SQL) | Microsoft Docs
+title: sys. dm_exec_input_buffer (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/14/2019
 ms.prod: sql
@@ -21,17 +21,17 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4e18f635b7bbdd8fa96a565fef6aef5be5bde87f
-ms.sourcegitcommit: 0c40843c13f67ba7d975f4fedb9d20d70747f66d
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74097876"
 ---
-# <a name="sysdm_exec_input_buffer-transact-sql"></a>sys.dm_exec_input_buffer (Transact-SQL)
+# <a name="sysdm_exec_input_buffer-transact-sql"></a>sys. dm_exec_input_buffer (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-2014sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2014sp2-asdb-xxxx-xxx-md.md)]
 
-Retorna informações sobre as instruções enviadas a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+Retorna informações sobre as instruções enviadas a uma instância [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]do.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -51,31 +51,31 @@ sys.dm_exec_input_buffer ( session_id , request_id )
 
 ## <a name="table-returned"></a>Tabela retornada
 
-|Nome da coluna|Data type|Descrição|
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|
 |-----------------|---------------|-----------------|
 |**event_type**|**nvarchar(256)**|O tipo de evento no buffer de entrada para o SPID especificado.|
-|**parameters**|**smallint**|Todos os parâmetros fornecidos para a instrução.|
+|**parâmetro**|**smallint**|Todos os parâmetros fornecidos para a instrução.|
 |**event_info**|**nvarchar(max)**|O texto da instrução no buffer de entrada para o SPID especificado.|
 
 ## <a name="permissions"></a>Permissões
 
-Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se o usuário tiver a permissão VIEW SERVER STATE, o usuário verá todas as sessões em execução na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; caso contrário, o usuário verá apenas a sessão atual.
+Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se o usuário tiver a permissão View Server State, o usuário verá todas as sessões em execução na instância [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]do; caso contrário, o usuário verá apenas a sessão atual.
 
 > [!IMPORTANT]
 > A execução dessa DMV fora de SQL Server Management Studio contra SQL Server sem exibir permissões de estado do servidor (como em um gatilho, procedimento armazenado ou função) gera um erro de permissão no banco de dados mestre.
 
-Em [!INCLUDE[ssSDS](../../includes/sssds-md.md)], se o usuário for o proprietário do banco de dados, o usuário verá todas as sessões em execução no [!INCLUDE[ssSDS](../../includes/sssds-md.md)]; caso contrário, o usuário verá apenas a sessão atual.
+Em [!INCLUDE[ssSDS](../../includes/sssds-md.md)], se o usuário for o proprietário do banco de dados, o usuário verá todas as sessões [!INCLUDE[ssSDS](../../includes/sssds-md.md)]em execução no; caso contrário, o usuário verá apenas a sessão atual.
 
 > [!IMPORTANT]
 > A execução dessa DMV fora do SQL Server Management Studio no banco de dados SQL do Azure sem permissões de proprietário (como em um gatilho, procedimento armazenado ou função) gera um erro de permissão no banco de dados mestre.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Comentários
 
 Essa função de gerenciamento dinâmico pode ser usada em conjunto com sys. dm_exec_sessions ou sys. dm_exec_requests fazendo a **aplicação cruzada**.
 
 ## <a name="examples"></a>Exemplos
 
-### <a name="a-simple-example"></a>A. Exemplo simples
+### <a name="a-simple-example"></a>a. Exemplo simples
 
 O exemplo a seguir demonstra a passagem de uma ID de sessão (SPID) e uma ID de solicitação para a função.
 
@@ -84,7 +84,7 @@ SELECT * FROM sys.dm_exec_input_buffer (52, 0);
 GO
 ```
 
-### <a name="b-using-cross-apply-to-additional-information"></a>b. Usando Cross aplicar a informações adicionais
+### <a name="b-using-cross-apply-to-additional-information"></a>B. Usando Cross aplicar a informações adicionais
 
 O exemplo a seguir lista o buffer de entrada para sessões com ID de sessão maior que 50.
 
@@ -96,7 +96,7 @@ WHERE es.session_id > 50;
 GO
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 
 - [Funções e exibições de gerenciamento dinâmico relacionadas à execução &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)
 - [sys.dm_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)

@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7da89810a92c14f5b59ebcd546c4fb4cfa256f02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62637756"
 ---
 # <a name="create-xml-indexes"></a>Criar índices XML
@@ -44,7 +44,7 @@ ms.locfileid: "62637756"
   
 -   Nomes de índice XML primário têm as mesmas restrições que nomes de exibição.  
   
- Você não pode criar um índice XML em um `xml` tipo de coluna em uma exibição em um **tabela** com valor de variável com `xml` colunas de tipo ou `xml` variáveis do tipo.  
+ Você não pode criar um índice XML em `xml` uma coluna de tipo em uma exibição, em uma variável com `xml` valor de **tabela** com `xml` colunas de tipo ou variáveis de tipo.  
   
 -   Para alterar uma coluna de tipo `xml` de XML sem-tipo para XML com tipo ou vice-versa, usando a opção ALTER TABLE ALTER COLUMN, nenhum índice XML deve existir na coluna. Se existir um índice, ele deve ser descartado antes da tentativa de alterar o tipo de coluna.  
   
@@ -199,7 +199,7 @@ DROP TABLE T;
 Go  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Índices XML &#40;SQL Server&#41;](xml-indexes-sql-server.md)   
  [Dados XML &#40;SQL Server&#41;](xml-data-sql-server.md)  
   

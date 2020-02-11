@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f3612a8b2006978a8098a406a6557d6c9f0f1f7f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62960470"
 ---
 # <a name="secure-the-snapshot-folder"></a>Proteger uma pasta de instantâneo
@@ -25,7 +25,7 @@ ms.locfileid: "62960470"
 > [!NOTE]  
 >  O UAC (Controle de Conta de Usuário) ajuda os administradores a gerenciar o uso de direitos do usuário elevados (algumas vezes chamados de *privilégios*). Ao ser executado em sistemas operacionais com UAC habilitado, os administradores não usam seus direitos administrativos. Em vez disso, eles executam a maioria das ações como usuários padrão (não administrativos), assumindo temporariamente seus direitos administrativos somente quando necessário. O UAC pode impedir o acesso administrativo ao compartilhamento de instantâneos. Portanto, você deve conceder permissões de compartilhamento de instantâneos explicitamente às contas do Windows usadas pelo Agente de Instantâneo, pelo Agente de Distribuição, e pelo Agente de Mesclagem. Faça isso, mesmo se as contas do Windows forem membros do grupo de Administradores.  
   
- Ao configurar um Distribuidor por meio do Assistente para Configurar Distribuição ou do Assistente para Nova Publicação, a pasta de instantâneo usa por padrão um caminho local: X:\Arquivos de Programas\Microsoft SQL Server\\ *\<instância>* \MSSQL\ReplData. Se estiver usando um Distribuidor remoto ou assinaturas pull, você deverá especificar um compartilhamento de rede UNC (como \\\\<*computername>* \snapshot) em vez de um caminho local.  
+ Ao configurar um Distribuidor por meio do Assistente para Configurar a Distribuição ou o Assistente para Nova Publicação, a pasta de instantâneos fica, por padrão, no caminho local: X:\Arquivos de Programas\Microsoft SQL Server\\ *\<instância>* \MSSQL\ReplData. Se estiver usando um Distribuidor remoto ou assinaturas pull, você deverá especificar um compartilhamento de rede UNC (como \\\\<*computername>* \snapshot) em vez de um caminho local.  
   
  Ao fornecer permissões de acesso para a pasta de instantâneos, você deve fornecê-las de acordo com o modo como a pasta é acessada. As guias de caixa de diálogo abaixo são usadas no [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 2003:  
   
@@ -50,11 +50,11 @@ ms.locfileid: "62960470"
   
  Para obter mais informações sobre a configuração e alteração de senha para acesso a instantâneos via FTP, consulte a seção "Entrega de instantâneo por FTP" neste tópico [Secure the Publisher](secure-the-publisher.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Locais da pasta de instantâneos alternativos](../alternate-snapshot-folder-locations.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Locais de pastas de instantâneos alternativos](../alternate-snapshot-folder-locations.md)   
  [Inicializar uma assinatura com um instantâneo](../initialize-a-subscription-with-a-snapshot.md)   
  [Replication Security Best Practices](replication-security-best-practices.md)   
- [Segurança de replicação do SQL Server](view-and-modify-replication-security-settings.md)   
+ [Segurança de Replicação do SQL Server](view-and-modify-replication-security-settings.md)   
  [Transferir instantâneos pelo FTP](../transfer-snapshots-through-ftp.md)  
   
   

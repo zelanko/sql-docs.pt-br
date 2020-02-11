@@ -13,22 +13,22 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fe8d52d898db35698155518646f074e7167687a0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66110174"
 ---
 # <a name="viewing-tuning-recommendations"></a>Exibindo recomendações de ajuste
-  Esta tarefa usa a sessão de ajuste criada no [Tuning a Workload](lesson-1-1-tuning-a-workload.md). Depois que você ajusta o banco de dados do [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] usando o script MyScript.sql [!INCLUDE[tsql](../../includes/tsql-md.md)] , o Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] exibe os resultados na guia **Recomendações** . A tarefa a seguir apresenta a guia **Recomendações** da GUI (interface gráfica do usuário) do Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] e explica como explorar as informações fornecidas sobre os resultados da sessão de ajuste.  
+  Esta tarefa usa a sessão de ajuste criada no [Tuning a Workload](lesson-1-1-tuning-a-workload.md). Depois de ajustar o banco [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] de dados usando o script MyScript. [!INCLUDE[tsql](../../includes/tsql-md.md)] SQL, [!INCLUDE[ssDE](../../includes/ssde-md.md)] o Orientador de otimização exibirá seus resultados na guia **recomendações** . A tarefa a seguir apresenta a guia **recomendações** da [!INCLUDE[ssDE](../../includes/ssde-md.md)] GUI (interface gráfica do usuário) do Orientador de otimização e orienta você a explorar as informações que ele fornece sobre os resultados da sessão de ajuste.  
   
 ### <a name="view-tuning-recommendations"></a>Exibir recomendações de ajuste  
   
 1.  Iniciar o Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Consulte [Iniciando o Orientador de Otimização do Mecanismo de Banco de Dados](../../relational-databases/performance/database-engine-tuning-advisor.md). Verifique se você está conectado à mesma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usada na prática [Ajustando uma carga de trabalho](lesson-1-1-tuning-a-workload.md).  
   
-2.  Clique duas vezes em **MySession** no painel **Monitor de Sessão** . [!INCLUDE[ssDE](../../includes/ssde-md.md)] carrega a informações da sessão de ajuste anterior e exibe a guia **Recomendações** . Observe que o Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] não fez **Recomendações de Partição** porque você aceitou todas as opções de ajuste padrão e **Nenhum particionamento** foi selecionado na guia **Opções de Ajuste** .  
+2.  Clique duas vezes em **MySession** no painel **Monitor de Sessão** . [!INCLUDE[ssDE](../../includes/ssde-md.md)]O Orientador de otimização carrega as informações de sessão de sua sessão de **** ajuste anterior e exibe a [!INCLUDE[ssDE](../../includes/ssde-md.md)] guia recomendações. Observe que o Orientador de otimização não fez nenhuma **recomendação de partição** porque você aceitou todos os padrões de opção de ajuste e **nenhum particionamento** foi selecionado na guia **Opções de ajuste** .  
   
-3.  Na guia **Recomendações** , use a barra de rolagem na parte inferior da página da guia para exibir todas as colunas de **Recomendações de Índice** . Cada linha representa um objeto de banco de dados (índices ou exibições indexadas) que o Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] recomenda que sejam descartadas ou criadas. Role a tela até a coluna mais à direita e clique em **Definição**. [!INCLUDE[ssDE](../../includes/ssde-md.md)] exibe uma janela **Visualização de Script SQL** , na qual você pode exibir o script [!INCLUDE[tsql](../../includes/tsql-md.md)] que cria ou descarta o objeto de banco de dados nessa linha. Clique em **Fechar** para fechar a janela de visualização.  
+3.  Na guia **Recomendações** , use a barra de rolagem na parte inferior da página da guia para exibir todas as colunas de **Recomendações de Índice** . Cada linha representa um objeto de banco de dados (índices ou exibições indexadas) que o Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] recomenda que sejam descartadas ou criadas. Role a tela até a coluna mais à direita e clique em **Definição**. [!INCLUDE[ssDE](../../includes/ssde-md.md)]Exibe uma janela de **visualização de script SQL** , na qual você pode [!INCLUDE[tsql](../../includes/tsql-md.md)] exibir o script que cria ou descarta o objeto de banco de dados nessa linha. Clique em **Fechar** para fechar a janela de visualização.  
   
      Se você estiver tendo dificuldades em localizar uma **Definição** que contenha um link, clique para desmarcar a caixa de seleção **Mostrar objetos existentes** na parte inferior da página da guia, o que diminuirá o número de linhas exibidas. Quando você desmarca essa caixa de seleção, o Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] mostra só os objetos para os quais gerou uma recomendação. Marque a caixa de seleção **Mostrar objetos existentes** para exibir todos os objetos do banco de dados que existem atualmente no banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Use a barra de rolagem à direita da página da guia para exibir todos os objetos.  
   
@@ -42,9 +42,10 @@ ms.locfileid: "66110174"
   
 6.  Se houver mais de uma recomendação na guia **Recomendações** , desmarque algumas das linhas que listam objetos do banco de dados na grade **Recomendações de Índice** .  
   
-7.  No menu **Ações** , clique em **Avaliar Recomendações**. [!INCLUDE[ssDE](../../includes/ssde-md.md)] cria uma nova sessão de ajuste em que você pode avaliar um subconjunto das recomendações originais em MySession.  
+7.  No menu **Ações** , clique em **Avaliar Recomendações**. 
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)] cria uma nova sessão de ajuste em que você pode avaliar um subconjunto das recomendações originais em MySession.  
   
-8.  Tipo de `EvaluateMySession` para seu novo **nome da sessão**e clique no **iniciar análise** na barra de ferramentas. Você pode repetir os passos 2 e 3 para esta nova sessão de ajuste a fim de exibir suas recomendações.  
+8.  Digite `EvaluateMySession` para o nome da nova **sessão**e clique no botão **iniciar análise** na barra de ferramentas. Você pode repetir os passos 2 e 3 para esta nova sessão de ajuste a fim de exibir suas recomendações.  
   
 ## <a name="summary"></a>Resumo  
  Você exibiu o conteúdo da guia **Recomendações** para a sessão de ajuste MySession e avaliou um subconjunto de recomendações na nova sessão de ajuste EvaluateMySession.  

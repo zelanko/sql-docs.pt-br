@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 17c8b67d29cb82956a37bc3f83867161486a4f9e
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637863"
 ---
 # <a name="prerequisites-for-tutorials-report-builder"></a>Pré-requisitos para tutoriais (Construtor de Relatórios)
@@ -25,19 +25,19 @@ ms.locfileid: "73637863"
 ## <a name="requirements"></a>Requisitos  
  Você deve ter os seguintes pré-requisitos para concluir os tutoriais do Construtor de Relatórios:  
   
--   Acesso ao Construtor de Relatórios do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] . Você pode executar o Construtor de Relatórios usando a versão autônoma do Construtor de Relatórios ou a versão ClickOnce, disponível no Gerenciador de Relatórios ou em um site do SharePoint. Somente a primeira etapa, como abrir o Construtor de Relatórios, é diferente para versões do ClickOnce.  
+-   Acesso a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Construtor de relatórios. Você pode executar o Construtor de Relatórios usando a versão autônoma do Construtor de Relatórios ou a versão ClickOnce, disponível no Gerenciador de Relatórios ou em um site do SharePoint. Somente a primeira etapa, como abrir o Construtor de Relatórios, é diferente para versões do ClickOnce.  
   
-     Para usar Report Manager, abra Report Manager e clique em **Construtor de relatórios**. Por padrão, a URL para Report Manager é http://\<*servername*>/Reports.  
+     Para usar Report Manager, abra Report Manager e clique em **Construtor de relatórios**. Por padrão, a URL para Report Manager é http://\<*ServerName*>/Reports.  
   
-     Para usar um site do SharePoint, navegue até o site, clique na guia Documentos, clique em Novo Documento e, na lista suspensa, clique em Relatório do Construtor de Relatórios. Por exemplo, http://\<ServerName >/sites/mySite/reports. O administrador do SharePoint deve habilitar o recurso Relatório do Construtor de Relatórios para cada biblioteca de documentos.  
+     Para usar um site do SharePoint, navegue até o site, clique na guia Documentos, clique em Novo Documento e, na lista suspensa, clique em Relatório do Construtor de Relatórios. Por exemplo, http://\<servername>/sites/MySite/Reports. O administrador do SharePoint deve habilitar o recurso Relatório do Construtor de Relatórios para cada biblioteca de documentos.  
   
--   A URL para um [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] servidor de relatório ou um site do SharePoint integrado a um servidor de relatório [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]. É necessário ter permissão para salvar e exibir relatórios, fontes de dados compartilhadas, conjuntos de dados compartilhados, partes de relatório e modelos. Por padrão, a URL de um servidor de relatório é http://\<ServerName >/ReportServer. Por padrão, a URL para um site do SharePoint é http://\<SiteName > ou http://\<Server >/site.  
+-   A URL de um servidor de relatório do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] ou de um site do SharePoint integrado a um servidor de relatório do [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] . É necessário ter permissão para salvar e exibir relatórios, fontes de dados compartilhadas, conjuntos de dados compartilhados, partes de relatório e modelos. Por padrão, a URL de um servidor de relatório é\<http://servername>/ReportServer. Por padrão, a URL para um site do SharePoint é\<http://sitename> ou\<http://Server>/site.  
   
--   O nome de um [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] instância e credenciais suficientes para acesso somente leitura a qualquer banco de dados. As consultas a conjuntos de dados nos tutoriais usam dados literais, mas cada consulta deve ser processada por uma instância do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] para retornar os metadados necessários a um conjunto de dados de relatório. Por exemplo, a seguinte cadeia de conexão especifica apenas um servidor: `data source=<servername>`. Você deve ter acesso de leitura ao banco de dados padrão atribuído a você pelo administrador do sistema que concede permissão para acessar o servidor. Também é possível especificar um banco de dados, conforme mostrado na seguinte cadeia de conexão: `data source=<servername>;initial catalog=<database>`.  
+-   O nome de uma instância do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] e credenciais suficientes para acesso somente leitura a qualquer banco de dados. As consultas a conjuntos de dados nos tutoriais usam dados literais, mas cada consulta deve ser processada por uma instância do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] para retornar os metadados necessários a um conjunto de dados de relatório. Por exemplo, a seguinte cadeia de conexão especifica apenas um servidor: `data source=<servername>`. Você deve ter acesso de leitura ao banco de dados padrão atribuído a você pelo administrador do sistema que concede permissão para acessar o servidor. Também é possível especificar um banco de dados, conforme mostrado na seguinte cadeia de conexão: `data source=<servername>;initial catalog=<database>`.  
   
--   Para o tutorial que inclui um mapa, o servidor de relatório deve ser configurado para dar suporte ao Bing Maps como plano de fundo. Para obter mais informações, consulte [planejar o suporte a relatórios de mapa](plan-for-map-report-support.md) na documentação [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] nos [manuais online](https://go.microsoft.com/fwlink/?LinkId=154888) do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no msdn.Microsoft.com.  
+-   Para o tutorial que inclui um mapa, o servidor de relatório deve ser configurado para dar suporte ao Bing Maps como plano de fundo. Para obter mais informações, consulte [planejar o suporte a relatórios de mapa](plan-for-map-report-support.md) na [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] documentação nos [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [manuais online](https://go.microsoft.com/fwlink/?LinkId=154888) do em msdn.Microsoft.com.  
   
--   O tutorial, [tutorial: Criando relatórios &#40;de detalhamento e&#41;principais Construtor de relatórios](tutorial-creating-drillthrough-and-main-reports-report-builder.md), usa o conjunto de Business Intelligence de demonstração da contoso. Esse conjunto de dados é composto do data warehouse ContosoDW e do banco de dados OLAP (processamento analítico online) Contoso_Retail. Os relatórios que você criará neste tutorial recuperam dados do cubo Vendas da Contoso. O banco de dados OLAP Contoso_Retail pode ser baixado no [Centro de Download da Microsoft](https://www.microsoft.com/download/details.aspx?id=18279). Basta baixar o arquivo ContosoBIdemoABF.exe. Ele contém o banco de dados OLAP.  
+-   O tutorial, [tutorial: Criando relatórios principais e de detalhamento &#40;Construtor de Relatórios&#41;](tutorial-creating-drillthrough-and-main-reports-report-builder.md), usa o conjunto de conjuntos de demonstração contoso Business Intelligence. Esse conjunto de dados é composto do data warehouse ContosoDW e do banco de dados OLAP (processamento analítico online) Contoso_Retail. Os relatórios que você criará neste tutorial recuperam dados do cubo Vendas da Contoso. O banco de dados OLAP Contoso_Retail pode ser baixado no [Centro de Download da Microsoft](https://www.microsoft.com/download/details.aspx?id=18279). Basta baixar o arquivo ContosoBIdemoABF.exe. Ele contém o banco de dados OLAP.  
   
      O outro arquivo, ContosoBIdemoBAK.exe, é para o data warehouse ContosoDW que não é usado neste tutorial.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "73637863"
   
  O administrador do servidor de relatório deve conceder a você as permissões necessárias no servidor de relatório, configurar os locais das pastas do [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] e configurar as opções padrão do Construtor de Relatórios. Para obter mais informações, consulte [instalar, desinstalar e Construtor de relatórios suporte](install-uninstall-and-report-builder-support.md).  
   
-## <a name="see-also"></a>Consulte também  
- [TUTORIAIS &#40;Construtor de relatórios&#41;](report-builder-tutorials.md)  
+## <a name="see-also"></a>Consulte Também  
+ [TUTORIAIS &#40;Construtor de Relatórios&#41;](report-builder-tutorials.md)  
   
   

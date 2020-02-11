@@ -1,5 +1,5 @@
 ---
-title: Visão geral de atributos personalizados de integração de CLR | Microsoft Docs
+title: Visão geral dos atributos personalizados de integração CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,16 +17,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8df7881dd5f38935628cb6653d57763a8846e60f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62781101"
 ---
 # <a name="overview-of-clr-integration-custom-attributes"></a>Visão geral dos atributos personalizados da integração CLR
-  O CLR (common language runtime) do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] permite o uso de palavras-chave descritivas, denominadas atributos. Esses atributos fornecem informações adicionais para vários elementos, como métodos e classes. Os atributos são salvos no assembly com os metadados do objeto e podem ser usados para descrever seu código para outras ferramentas de desenvolvimento ou para afetar o comportamento do tempo de execução dentro do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  O CLR (common language runtime) do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] permite o uso de palavras-chave descritivas, denominadas atributos. Esses atributos fornecem informações adicionais para vários elementos, como métodos e classes. Os atributos são salvos no assembly com os metadados do objeto e podem ser usados para descrever seu código para outras ferramentas de desenvolvimento ou para afetar o comportamento do runtime dentro do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Quando você registrar uma rotina de CLR com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] será gerado um conjunto de propriedades sobre a rotina. Essas propriedades de rotina determinam os recursos da rotina, incluindo sua possibilidade de ser indexada. Por exemplo, a definição da propriedade `DataAccess` como `DataAccessKind.Read` permite que você acesse dados de tabelas do usuário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dentro de uma função CLR. O exemplo a seguir mostra um caso simples em que o `DataAccess` propriedade é definida para facilitar o acesso a dados de uma tabela de usuário **table1**.  
+ Quando você registrar uma rotina de CLR com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] será gerado um conjunto de propriedades sobre a rotina. Essas propriedades de rotina determinam os recursos da rotina, incluindo sua possibilidade de ser indexada. Por exemplo, a definição da propriedade `DataAccess` como `DataAccessKind.Read` permite que você acesse dados de tabelas do usuário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dentro de uma função CLR. O exemplo a seguir mostra um caso simples no qual `DataAccess` a propriedade é definida para facilitar o acesso a dados de uma tabela de usuário **Table1**.  
   
 ```csharp  
 using System;  
@@ -88,7 +88,7 @@ End Class
   
  Os atributos personalizados necessários para rotinas de CLR, tipos definidos pelo usuário e agregações são definidos no namespace `Microsoft.SqlServer.Server`.  
   
-## <a name="see-also"></a>Consulte também  
- [Atributos personalizados para rotinas de CLR](../../relational-databases/clr-integration/database-objects/clr-integration-custom-attributes-for-clr-routines.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Atributos personalizados para rotinas do CLR](../../relational-databases/clr-integration/database-objects/clr-integration-custom-attributes-for-clr-routines.md)  
   
   

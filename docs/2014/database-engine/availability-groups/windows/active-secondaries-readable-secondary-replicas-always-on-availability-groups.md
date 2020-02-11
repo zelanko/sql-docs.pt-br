@@ -1,5 +1,5 @@
 ---
-title: 'Secundárias ativas: Réplicas secundárias legíveis (grupos de disponibilidade) Always On | Microsoft Docs'
+title: 'Secundárias ativas: réplicas secundárias legíveis (Always On grupos de disponibilidade) | Microsoft Docs'
 ms.custom: ''
 ms.date: 10/27/2017
 ms.prod: sql-server-2014
@@ -18,13 +18,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 86340f1bdb9b178c23295c61378d781e2d4a83cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62789848"
 ---
-# <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>Secundárias ativas: Réplicas secundárias legíveis (grupos de disponibilidade) Always On
+# <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>Secundárias ativas: réplicas secundárias legíveis (Grupos de Disponibilidade AlwaysOn)
   Os recursos secundários ativos do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] incluem suporte para acesso somente leitura para uma ou mais réplicas secundárias (*réplicas secundárias legíveis*). Uma réplica secundária legível permite acesso somente leitura a todos os seus bancos de dados secundários. No entanto, os bancos de dados secundários legíveis não são definidos como somente leitura. Eles são dinâmicos. Um banco de dados secundário determinado muda conforme as alterações nos dados do banco de dados primário correspondente são aplicadas ao banco de dados secundário. Para uma réplica secundária típica, os dados, incluindo tabelas com otimização de memória durável, nos bancos de dados secundários estão quase em tempo real. Além disso, os índices de texto completo são sincronizados com os bancos de dados secundários. Em muitas circunstâncias, a latência de dados entre um banco de dados primário e o banco de dados secundário correspondente é de somente alguns segundos.  
   
  Configurações de segurança que ocorrem nos bancos de dados primários para os bancos de dados secundários são permitidas. Isso inclui os usuários, as funções de banco de dados e de aplicativos junto com suas permissões respectivas e a TDE (criptografia de dados transparente), se habilitada no banco de dados primário.  
@@ -62,7 +62,7 @@ ms.locfileid: "62789848"
     > [!NOTE]  
     >  Como opção, o administrador de banco de dados pode configurar qualquer réplica de disponibilidade para excluir conexões somente leitura ao executar sob a função primária.  
   
-     Para obter informações, veja [Sobre o acesso de conexão de cliente a réplicas de disponibilidade &#40;SQL Server&#41;](about-client-connection-access-to-availability-replicas-sql-server.md).  
+     Para obter mais informações, consulte [Sobre Acesso de conexão de cliente a réplicas de disponibilidade &#40;SQL Server&#41;](about-client-connection-access-to-availability-replicas-sql-server.md).  
   
 -   **Ouvinte de grupo de disponibilidade**  
   
@@ -82,7 +82,7 @@ ms.locfileid: "62789848"
      Para obter informações, veja [Configurar o roteamento somente leitura para um grupo de disponibilidade &#40;SQL Server&#41;](configure-read-only-routing-for-an-availability-group-sql-server.md).  
   
 > [!NOTE]  
->  Para obter informações sobre ouvintes do grupo de disponibilidade e mais informações sobre roteamento somente leitura, veja [Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativos &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md).  
+>  Para obter informações sobre ouvintes do grupo de disponibilidade e mais informações sobre roteamento somente leitura, veja [Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativo &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md).  
   
 ##  <a name="bkmk_LimitationsRestrictions"></a> Limitações e restrições  
  Algumas operações não têm suporte total, como segue:  
@@ -201,7 +201,7 @@ GO
   
 -   Como as estatísticas temporárias são armazenadas em **tempdb**, uma reinicialização do serviço [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] faz com que todas as estatísticas temporárias desapareçam.  
   
--   O sufixo _readonly_database_statistic fica reservado para estatísticas geradas pelo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Você não pode usar esse sufixo na criação de estatísticas em um banco de dados primário. Para obter mais informações, consulte [Statistics](../../../relational-databases/statistics/statistics.md).  
+-   O sufixo _readonly_database_statistic fica reservado para estatísticas geradas pelo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Você não pode usar esse sufixo na criação de estatísticas em um banco de dados primário. Para obter mais informações, consulte [Estatísticas](../../../relational-databases/statistics/statistics.md).  
   
 ##  <a name="bkmk_AccessInMemTables"></a> Acessando tabelas com otimização de memória em uma réplica secundária  
  Os níveis de isolamento de carga de trabalho de leitura na réplica secundária são apenas os permitidos na réplica primária. Não há nenhum mapeamento dos níveis de isolamento feitos na réplica secundária. Isso garante que qualquer carga de trabalho de relatório que possa ser executada na réplica primária possa ser executada na réplica secundária sem exigir nenhuma alteração. Isso facilita que você migre uma carga de trabalho de relatório da réplica primária para uma secundária ou vice-versa quando a réplica secundária não estiver disponível.  
@@ -238,7 +238,7 @@ GO
     SELECT * FROM t_hk WITH (UPDLOCK)  
     ```  
   
--   Para transações entre contêineres, as transações com nível de isolamento da sessão "instantâneo" que não há suporte para tabelas com otimização de memória de acesso. Por exemplo,  
+-   Para transações entre contêineres, não há suporte para transações com nível de isolamento de sessão "instantâneo" que acessam tabelas com otimização de memória. Por exemplo,  
   
     ```sql  
     SET TRANSACTION ISOLATION LEVEL SNAPSHOT  
@@ -292,12 +292,12 @@ GO
   
 ##  <a name="RelatedContent"></a> Conteúdo relacionado  
   
--   [Blog da equipe do AlwaysOn do SQL Server: O Team Blog oficial do SQL Server AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/)  
+-   [Blog da equipe do AlwaysOn do SQL Server: blog oficial da equipe do SQL Server AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/)  
   
-## <a name="see-also"></a>Consulte também  
- [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Visão geral do Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Sobre o acesso de conexão de cliente a réplicas de disponibilidade &#40;SQL Server&#41;](about-client-connection-access-to-availability-replicas-sql-server.md)   
- [Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativos &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
+ [Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativo &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [Estatísticas](../../../relational-databases/statistics/statistics.md)  
   
   

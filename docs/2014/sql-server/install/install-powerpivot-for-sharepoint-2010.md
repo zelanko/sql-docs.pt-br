@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 4eab56329c2b51f792394ffc37921e8a1ed8e117
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71952251"
 ---
 # <a name="install-powerpivot-for-sharepoint-2010"></a>Instale o PowerPivot para SharePoint 2010
@@ -22,11 +22,11 @@ ms.locfileid: "71952251"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2010|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2010|  
   
  
   
- Para obter instruções sobre como instalar [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] e [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no mesmo servidor, consulte [lista de verificação de implantação: Reporting Services, Power View e PowerPivot para SharePoint](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md).  
+ Para obter instruções sobre como instalar [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e o no mesmo servidor, consulte [lista de verificação de implantação: Reporting Services, Power View e PowerPivot para SharePoint](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md).  
   
 ## <a name="prerequisites"></a>Prerequisites  
   
@@ -61,9 +61,9 @@ ms.locfileid: "71952251"
   
 4.  Na página **Chave do Produto (Product Key)** , especifique a edição de avaliação ou digite uma chave do produto (product key) de uma cópia licenciada da edição empresarial.  
   
-     Clique em **Avançar**.  
+     Clique em **Próximo**.  
   
-5.  Aceite os termos do contrato de licença de software da Microsoft e nós agradeceremos se você também ativar a experiência do cliente e o relatório de erros. Clique em **Avançar**.  
+5.  Aceite os termos do contrato de licença de software da Microsoft e nós agradeceremos se você também ativar a experiência do cliente e o relatório de erros. Clique em **Próximo**.  
   
 6.  Atualize os arquivos de instalação se você for solicitado a fazer isso.  
   
@@ -72,41 +72,41 @@ ms.locfileid: "71952251"
     > [!NOTE]  
     >  Como o Firewall do Windows está ativado, você será avisado para abrir portas a fim de permitir o acesso remoto. Esse aviso geralmente não é aplicável a instalações do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . As conexões com arquivos de dados e serviços do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] são feitas com o uso de portas do SharePoint que já estão abertas para a comunicação entre serviços do SharePoint.  
   
-     Clique em **Avançar**. Aguarde enquanto os arquivos do programa de Instalação do SQL Server são instalados no servidor.  
+     Clique em **Próximo**. Aguarde enquanto os arquivos do programa de Instalação do SQL Server são instalados no servidor.  
   
 8.  Na página **Função de Instalação** , selecione **SQL Server PowerPivot para SharePoint**.  
   
-9. Opcionalmente, você pode acrescentar uma instância do Mecanismo de banco de dados a sua instalação. Você pode fazer isso se estiver configurando um novo farm e precisar de um servidor de banco de dados para executar a configuração do farm e os bancos de dados de conteúdo. Se você adicionar o Mecanismo de Banco de Dados, ele será instalado como uma instância nomeada do PowerPivot. Sempre que você precisar especificar uma conexão com essa instância (por exemplo, no assistente de configuração do farm se estiver usando esse assistente para configurar o farm), insira o nome do banco de dados neste formato: <`servername`> \PowerPivot.  
+9. Opcionalmente, você pode acrescentar uma instância do Mecanismo de banco de dados a sua instalação. Você pode fazer isso se estiver configurando um novo farm e precisar de um servidor de banco de dados para executar a configuração do farm e os bancos de dados de conteúdo. Se você adicionar o Mecanismo de Banco de Dados, ele será instalado como uma instância nomeada do PowerPivot. Sempre que você precisar especificar uma conexão com essa instância (por exemplo, no assistente de configuração do farm se estiver usando esse assistente para configurar o farm), insira o nome do banco de dados neste formato `servername` : <> \powerpivot.  
   
      ![GMNI_SetupUI_FeatureRole](../../../2014/sql-server/install/media/gmni-setupui-featurerole.gif "GMNI_SetupUI_FeatureRole")  
   
-10. Clique em **Avançar**.  
+10. Clique em **Próximo**.  
   
-11. Na página **Seleção de Recursos** , uma lista somente leitura dos recursos a serem instalados será exibida para fins informativos. Não é possível adicionar ou remover itens pré-selecionados para essa função. Clique em **Avançar**.  
+11. Na página **Seleção de Recursos** , uma lista somente leitura dos recursos a serem instalados será exibida para fins informativos. Não é possível adicionar ou remover itens pré-selecionados para essa função. Clique em **Próximo**.  
   
 12. Na página **Regras de Recurso** , clique em **Avançar**. A página pode ser ignorada.  
   
-13. Na página **Configuração da Instância** , um nome de instância somente leitura do 'PowerPivot' é exibido para fins informativos. Esse nome de instância do **POWERPIVOT** é **obrigatória e não pode ser modificada**. No entanto, é possível inserir um ID da Instância exclusivo para especificar um nome de diretório descritivo e chaves do Registro. Clique em **Avançar**.  
+13. Na página **Configuração da Instância** , um nome de instância somente leitura do 'PowerPivot' é exibido para fins informativos. Esse nome de instância do **POWERPIVOT** é **obrigatória e não pode ser modificada**. No entanto, é possível inserir um ID da Instância exclusivo para especificar um nome de diretório descritivo e chaves do Registro. Clique em **Próximo**.  
   
 14. Na página **Configuração do Servidor** , digite as informações da conta desejada.  
   
      Para o SQL Server Analysis Services, é preciso especificar uma conta de usuário do domínio. Não especifique uma conta interna. As contas de domínio não necessárias para gerenciar a conta de serviço do Analysis Services como uma *conta gerenciada* na Administração Central do SharePoint.  
   
-     ![Configuração do servidor SSAS](../../../2014/sql-server/install/media/ssas-powerpivotsetupsql2012sp1-serverconfiguration.gif "Configuração do servidor SSAS")  
+     ![Configuração do SSAS Server](../../../2014/sql-server/install/media/ssas-powerpivotsetupsql2012sp1-serverconfiguration.gif "Configuração do SSAS Server")  
   
      Se você adicionou o Mecanismo de Banco de Dados do SQL Server e o SQL Server Agent, é possível configurar os serviços para serem executados como contas de usuário do domínio ou na conta virtual padrão.  
   
      Nunca use sua própria conta de usuário de domínio para provisionar qualquer serviço. Isso concede ao servidor as mesmas permissões que você tem aos recursos em sua rede. Se o servidor for afetado por um usuário mal-intencionado, esse usuário será conectado com suas credenciais de domínio, com capacidade para baixar ou usar os mesmos dados e aplicativos que você use.  
   
-15. Clique em **Avançar**.  
+15. Clique em **Próximo**.  
   
-16. Se você estiver instalando o Mecanismo de Banco de Dados, a página Configuração do Mecanismo de Banco de Dados será exibida. Em Configuração do Mecanismo de Banco de Dados, clique em **Adicionar Usuário Atual** para conceder à conta do usuário permissões de administrador na instância do Mecanismo de Banco de Dados. Clique em **Adicionar** para adicionar contas. Clique em **Avançar**.  
+16. Se você estiver instalando o Mecanismo de Banco de Dados, a página Configuração do Mecanismo de Banco de Dados será exibida. Em Configuração do Mecanismo de Banco de Dados, clique em **Adicionar Usuário Atual** para conceder à conta do usuário permissões de administrador na instância do Mecanismo de Banco de Dados. Clique em **Adicionar** para adicionar contas. Clique em **Próximo**.  
   
 17. Na página **Configuração do Analysis Services** , clique em **Adicionar Usuário Atual** para conceder à conta do usuário permissões administrativas. Você precisará de permissão administrativa para configurar o servidor depois que Instalação seja concluída.  
   
 18. Na mesma página, adicione a conta de usuário do Windows de qualquer pessoa que também precise de permissões administrativas. Por exemplo, qualquer usuário que quiser se conectar à instância do [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] no SQL Server Management Studio para solucionar problemas de conexão do banco de dados ou obter informações sobre a versão deve ter permissões de administrador do sistema no servidor. Adicione a conta do usuário de qualquer pessoa que precise solucionar problemas ou administrar o servidor agora.  
   
-19. Clique em **Avançar**.  
+19. Clique em **Próximo**.  
   
 20. Clique em **Avançar** em cada uma das páginas restantes até chegar à página Pronto para Instalar.  
   
@@ -122,13 +122,13 @@ ms.locfileid: "71952251"
   
  Instalação não é completa até que o servidor é configurado. Nesta versão, a configuração do servidor é executada sempre como tarefa de pós-instalação, usando uma das seguintes abordagens: [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Ferramenta de Configuração, Administração Central ou PowerShell. Para continuar, escolha uma das seguintes abordagens:  
   
--   [Configurar ou reparar a ferramenta &#40;de configuração do PowerPivot PowerPivot para SharePoint 2010&#41;](../../../2014/analysis-services/configure-repair-powerpivot-sharepoint-2010.md)  
+-   [Configurar ou reparar a ferramenta de configuração do PowerPivot para SharePoint 2010 &#40;o PowerPivot&#41;](../../../2014/analysis-services/configure-repair-powerpivot-sharepoint-2010.md)  
   
 -   [Administração e configuração de servidor do PowerPivot na Administração Central](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration)  
   
 -   [Configuração do PowerPivot usando o Windows PowerShell](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell)  
   
- **Conectando-se à instância de Mecanismo de Banco de Dados.** Quando você instalar o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], a Instalação do SQL Server dá a opção de adicionar uma instância do Mecanismo de Banco de Dados a sua instalação. Você pode ter adicionado uma instância de Mecanismo de Banco de Dados à sua instalação se estiver configurando um novo farm e precisar de um servidor de banco de dados para executar a configuração do farm e os bancos de dados de conteúdo. Se você adicionou o Mecanismo de Banco de Dados, ele foi instalado como uma instância nomeada do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Sempre que você precisar especificar uma conexão com essa instância (por exemplo, no assistente de configuração do farm se estiver usando esse assistente para configurar o farm), lembre-se de inserir o nome do banco de dados neste formato: <`servername`> \PowerPivot.  
+ **Conectando à instância do mecanismo de banco de dados.** Quando você instalar o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], a Instalação do SQL Server dá a opção de adicionar uma instância do Mecanismo de Banco de Dados a sua instalação. Você pode ter adicionado uma instância de Mecanismo de Banco de Dados à sua instalação se estiver configurando um novo farm e precisar de um servidor de banco de dados para executar a configuração do farm e os bancos de dados de conteúdo. Se você adicionou o Mecanismo de Banco de Dados, ele foi instalado como uma instância nomeada do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Sempre que você precisar especificar uma conexão com essa instância (por exemplo, no assistente de configuração do farm se estiver usando esse assistente para configurar o farm), lembre-se de inserir o nome do banco de dados `servername` neste formato: <> \powerpivot.  
   
 ##  <a name="bkmk_redist"></a>Etapa 3: instalar Analysis Services provedores de OLE DB em servidores de aplicativos de serviços do Excel  
  As etapas de instalação adicionais serão necessárias se você executar os Serviços de Cálculo do Excel e o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] em servidores de aplicativo separados. Nos servidores de aplicativo que executam os Serviços de Cálculo do Excel, instale a versão apropriada do provedor OLE DB do Analysis Services (MSOLAP).  
@@ -145,10 +145,10 @@ ms.locfileid: "71952251"
 ##  <a name="bkmk_verify"></a>Etapa 4: verificar a instalação  
  Nesta última etapa, você verificará que o SharePoint 2010 e o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] estão funcionando completamente. Para obter instruções, consulte [Verify a PowerPivot for SharePoint Installation](https://docs.microsoft.com/analysis-services/instances/install-windows/verify-a-power-pivot-for-sharepoint-installation).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Instalação do PowerPivot para SharePoint 2010](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)   
  [Lista de verificação de implantação: Reporting Services, Power View e PowerPivot para SharePoint](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md)   
  [Lista de verificação de implantação: expansão adicionando servidores PowerPivot a um farm do SharePoint 2010](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)   
- [Lista de verificação de implantação: instalação de vários servidores do PowerPivot para SharePoint 2010](../../../2014/sql-server/install/deployment-checklist-multiserver-installation-powerpivot-sharepoint-2010.md)  
+ [Lista de verificação de implantação: instalação multisservidor do PowerPivot para SharePoint 2010](../../../2014/sql-server/install/deployment-checklist-multiserver-installation-powerpivot-sharepoint-2010.md)  
   
   

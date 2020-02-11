@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 99e1d3377cb5ed4afd4577462e0b436bb16d2fee
-ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68941093"
 ---
 # <a name="specify-data-type-mappings-for-an-oracle-publisher"></a>Especificar mapeamentos de tipo de dados para um Publicador Oracle
@@ -50,7 +50,7 @@ ms.locfileid: "68941093"
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
- Você pode especificar programaticamente mapeamentos de tipo de dados personalizados usando procedimentos armazenados de replicação. Você pode também definir os mapeamentos padrão que são usados ao mapear tipos de dados entre o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e um DBMS (sistema de gerenciamento de banco de dados) não[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para obter mais informações, consulte [Data Type Mapping for Oracle Publishers](../non-sql/data-type-mapping-for-oracle-publishers.md).  
+ Você pode especificar programaticamente mapeamentos de tipo de dados personalizados usando procedimentos armazenados de replicação. Você também pode definir os mapeamentos padrão que são usados ao mapear tipos de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dados entre o e[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] um DBMS (sistema de gerenciamento de não-banco de dados). Para obter mais informações, consulte [Mapeamento de tipo de dados para Publicadores Oracle ](../non-sql/data-type-mapping-for-oracle-publishers.md).  
   
 #### <a name="to-define-custom-data-type-mappings-when-creating-an-article-belonging-to-an-oracle-publication"></a>Para definir mapeamentos de tipo de dados personalizados ao criar um artigo que pertence a uma publicação Oracle  
   
@@ -81,7 +81,7 @@ ms.locfileid: "68941093"
 1.  No Distribuidor em qualquer banco de dados, execute [sp_helpdatatypemap](/sql/relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql). Especifique um valor de **ORACLE** para **\@source_dbms** e quaisquer outros parâmetros necessários para filtrar o conjunto de resultados.  
   
 ###  <a name="TsqlExample"></a> Exemplos (Transact-SQL)  
- Este exemplo altera uma coluna com um tipo de dados Oracle de NUMBER, de modo que ele seja mapeado para o tipo de dados `numeric`(38,38) do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], em vez do tipo de dados padrão `float`.  
+ Este exemplo altera uma coluna com um tipo de dados Oracle de NUMBER, de modo que ele seja mapeado para o tipo de dados [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)](38,38) do `numeric`, em vez do tipo de dados padrão `float`.  
   
  [!code-sql[HowTo#sp_changecolumndatatype](../../../snippets/tsql/SQL15/replication/howto/tsql/datatypemapping.sql#sp_changecolumndatatype)]  
   
@@ -93,7 +93,7 @@ ms.locfileid: "68941093"
   
  [!code-sql[HowTo#sp_helpcolumndatatype_number](../../../snippets/tsql/SQL15/replication/howto/tsql/datatypemapping.sql#sp_helpcolumndatatype_number)]  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Data Type Mapping for Oracle Publishers](../non-sql/data-type-mapping-for-oracle-publishers.md)   
  [Replicação de banco de dados heterogênea](../non-sql/heterogeneous-database-replication.md)   
  [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   

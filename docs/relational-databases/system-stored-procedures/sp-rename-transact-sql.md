@@ -22,21 +22,21 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 92ef8c4583db152b2f81a574010a12030680704f
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73983067"
 ---
 # <a name="sp_rename-transact-sql"></a>sp_rename (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Altera o nome de um objeto criado pelo usuário no banco de dados atual. Esse objeto pode ser uma tabela, um índice, uma coluna, um tipo de dados de alias ou um tipo CLR ([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Common Language Runtime) definido pelo usuário.  
+  Altera o nome de um objeto criado pelo usuário no banco de dados atual. Esse objeto pode ser uma tabela, um índice, uma coluna, um tipo de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] dados de alias ou um tipo de Common Language Runtime (CLR) definido pelo usuário.  
   
 > [!CAUTION]  
 >  A alteração de qualquer parte de um nome de objeto pode quebrar scripts e procedimentos armazenados. É recomendável não usar essa instrução para renomear procedimentos armazenados, gatilhos, funções definidas pelo usuário ou exibições; em vez disso, descarte o objeto e recrie-o com o novo nome.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -47,10 +47,10 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [@objname =] '*object_name*'  
+ [ @objname = ] '*object_name*'  
  É o nome atual qualificado ou não qualificado do objeto do usuário ou do tipo de dados. Se o objeto a ser renomeado for uma coluna em uma tabela, *object_name* deverá estar no formato *tabela. coluna* ou *esquema. tabela. coluna*. Se o objeto a ser renomeado for um índice, *object_name* deverá estar no formato *Table. index* ou *Schema. Table. index*. Se o objeto a ser renomeado for uma restrição, *object_name* deverá estar no formato *Schema. Constraint*.  
   
- As aspas serão necessárias apenas se um objeto qualificado estiver especificado. Se um nome completamente qualificado, incluindo um nome de banco de dados, for fornecido, o nome do banco de dados deverá ser o nome do banco de dados atual. *object_name* é **nvarchar (776)** , sem padrão.  
+ As aspas serão necessárias apenas se um objeto qualificado estiver especificado. Se um nome completamente qualificado, incluindo um nome de banco de dados, for fornecido, o nome do banco de dados deverá ser o nome do banco de dados atual. *object_name* é **nvarchar (776)**, sem padrão.  
   
  [ @newname = ] '*new_name*'  
  É o novo nome do objeto especificado. *new_name* deve ser um nome de uma parte e deve seguir as regras para identificadores. *NewName* é **sysname**, sem padrão.  
@@ -58,10 +58,10 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
 > [!NOTE]  
 >  Os nomes de gatilhos não podem começar com # ou ##.  
   
- [@objtype =] '*object_type*'  
- É o tipo do objeto que está sendo renomeado. *object_type* é **varchar (13)** , com um padrão de NULL, e pode ser um desses valores.  
+ [ @objtype = ] '*object_type*'  
+ É o tipo do objeto que está sendo renomeado. *object_type* é **varchar (13)**, com um padrão de NULL, e pode ser um desses valores.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |COLUMN|Uma coluna a ser renomeada.|  
 |DATABASE|Um banco de dados definido pelo usuário. Esse tipo de objeto é necessário quando um banco de dados é renomeado.|  
@@ -73,7 +73,7 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou um número diferente de zero (falha)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Você só pode alterar o nome de um objeto ou tipo de dados no banco de dados atual. Os nomes da maioria dos tipos de dados do sistema e objetos do sistema não podem ser alterados.  
   
  sp_rename renomeia automaticamente o índice associado sempre que uma restrição PRIMARY KEY ou UNIQUE é renomeada. Se um índice renomeado for vinculado a uma restrição PRIMARY KEY, a restrição PRIMARY KEY também será renomeada automaticamente através de sp_rename.  
@@ -89,7 +89,7 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-renaming-a-table"></a>A. Renomeando uma tabela  
+### <a name="a-renaming-a-table"></a>a. Renomeando uma tabela  
  O exemplo a seguir renomeia a tabela `SalesTerritory` como `SalesTerr` no esquema `Sales` .  
   
 ```  
@@ -100,7 +100,7 @@ GO
 ```  
   
 ### <a name="b-renaming-a-column"></a>B. Renomeando uma coluna  
- O exemplo a seguir renomeia a coluna `TerritoryID` na tabela `SalesTerritory` como `TerrID`.  
+ O exemplo a seguir renomeia `TerritoryID` a coluna na `SalesTerritory` tabela como `TerrID`.  
   
 ```  
 USE AdventureWorks2012;  
@@ -203,10 +203,10 @@ sp_rename 'Person.Person.ContactMail1', 'NewContact','Statistics';
   
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Mecanismo de Banco de Dados procedimentos &#40;armazenados TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
+ [Mecanismo de Banco de Dados procedimentos armazenados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

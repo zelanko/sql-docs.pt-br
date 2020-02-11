@@ -22,10 +22,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 325bedac3968cb59c70863d54c7e0ef429cedd75
-ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68941070"
 ---
 # <a name="view-and-modify-article-properties"></a>Visualizar e modificar propriedades de artigos
@@ -39,7 +39,7 @@ ms.locfileid: "68941070"
   
      [Recomendações](#Recommendations)  
   
--   **Para exibir e modificar as propriedades do artigo, usando:**  
+-   **Para exibir e modificar propriedades de artigo, usando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -58,7 +58,7 @@ ms.locfileid: "68941070"
 -   Depois que uma publicação é criada, algumas alterações de propriedade requerem um novo instantâneo. Se uma publicação tiver assinaturas, algumas alterações também exigirão que todas as assinaturas sejam reiniciadas. Para obter mais informações, consulte [Alterar propriedades da publicação e do artigo](change-publication-and-article-properties.md) e [Add Articles to and Drop Articles from Existing Publications](add-articles-to-and-drop-articles-from-existing-publications.md) (Adicionar e remover artigos para/de publicações existentes).  
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
- Exibir e modificar propriedades do artigo na caixa de diálogo **Propriedades de Publicação – \<Publicação>** , disponível no [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] e no Replication Monitor. Para obter informações sobre como iniciar o Replication Monitor, consulte [Start the Replication Monitor](../monitor/start-the-replication-monitor.md) (Iniciar o Replication Monitor).  
+ Exibir e modificar propriedades do artigo na caixa de diálogo **Propriedades de Publicação – \<Publicação>**, disponível no [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] e no Replication Monitor. Para obter informações sobre como iniciar o Replication Monitor, consulte [Start the Replication Monitor](../monitor/start-the-replication-monitor.md) (Iniciar o Replication Monitor).  
   
 -   A página **Geral** inclui o nome e descrição da publicação, o nome do banco de dados, o tipo da publicação, e as configurações para expiração da assinatura.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "68941070"
   
 #### <a name="to-view-and-modify-article-properties"></a>Para visualizar e modificar as propriedades do artigo  
   
-1.  Na página **Artigos** da caixa de diálogo **Propriedades de Publicação – \<Publicação>** , selecione um artigo e clique em **Propriedades do Artigo**.  
+1.  Na página **Artigos** da caixa de diálogo **Propriedades de Publicação – \<Publicação>**, selecione um artigo e clique em **Propriedades do Artigo**.  
   
 2.  Selecione quais alterações da propriedade dos artigos devem ser aplicadas a:  
   
@@ -95,36 +95,36 @@ ms.locfileid: "68941070"
   
 3.  Modifique propriedades, se necessário, depois clique em **OK**.  
   
-4.  Clique em **OK** na caixa de diálogo **Propriedades da Publicação – \<Publicação >** .  
+4.  Clique em **OK** na caixa de diálogo **Propriedades da Publicação – \<Publicação >**.  
   
 ##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
  É possível modificar artigos e retornar suas propriedades programaticamente usando procedimentos armazenados de replicação. Os procedimentos armazenados usados dependem do tipo de publicação ao qual o artigo pertence.  
   
 #### <a name="to-view-the-properties-of-an-article-belonging-to-a-snapshot-or-transactional-publication"></a>Para exibir as propriedades de um artigo que pertence a um instantâneo ou publicação transacional  
   
-1.  Execute [sp_helparticle](/sql/relational-databases/system-stored-procedures/sp-helparticle-transact-sql), especificando o nome da publicação para o  **\@** parâmetro de publicação e o nome do artigo para o  **\@** parâmetro de artigo. Se você não especificar  **\@o artigo**, as informações serão retornadas para todos os artigos na publicação.  
+1.  Execute [sp_helparticle](/sql/relational-databases/system-stored-procedures/sp-helparticle-transact-sql), especificando o nome da publicação para o parâmetro **\@publication** e o nome do artigo para o parâmetro **\@article**. Se você não especificar ** \@o artigo**, as informações serão retornadas para todos os artigos na publicação.  
   
 2.  Execute [sp_helparticlecolumns](/sql/relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql) para que os artigos de tabela listem todas as colunas disponíveis na tabela base.  
   
 #### <a name="to-modify-the-properties-of-an-article-belonging-to-a-snapshot-or-transactional-publication"></a>Para modificar as propriedades de um artigo que pertence a um instantâneo ou publicação transacional  
   
-1.  Execute [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql), especificando a propriedade do artigo que está sendo  **\@** alterada no parâmetro Property e o novo  **\@** valor dessa propriedade no parâmetro value.  
+1.  Execute [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql), especificando a propriedade do artigo que está sendo alterada no parâmetro **\@property** e o novo valor dessa propriedade no parâmetro **\@value**.  
   
     > [!NOTE]  
-    >  Se a alteração exigir a geração de um novo instantâneo, você também deverá especificar um valor de **1** para  **\@force_invalidate_snapshot**e, se a alteração exigir que os assinantes sejam reinicializados, você também deverá especificar um valor de **1**  **para\@force_reinit_subscription**. Para obter mais informações sobre as propriedades que, quando alteradas, exigem um novo instantâneo ou uma nova reinicialização, consulte [Alterar propriedades da publicação e do artigo](change-publication-and-article-properties.md).  
+    >  Se a alteração exigir a geração de um novo instantâneo, você também precisará especificar um valor igual a **1** em **\@force_invalidate_snapshot** e, se a alteração exigir que os Assinantes sejam reinicializados, você também precisará especificar um valor igual a **1** para **\@force_reinit_subscription**. Para obter mais informações sobre as propriedades que, quando alteradas, exigem um novo instantâneo ou uma nova reinicialização, consulte [Alterar propriedades da publicação e do artigo](change-publication-and-article-properties.md).  
   
 #### <a name="to-view-the-properties-of-an-article-belonging-to-a-merge-publication"></a>Para exibir as propriedades de um artigo que pertence a uma publicação de mesclagem  
   
-1.  Execute [sp_helpmergearticle](/sql/relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql), especificando o nome da publicação para o  **\@** parâmetro de publicação e o nome do artigo para o  **\@** parâmetro de artigo. Se você não especificar esses parâmetros, serão retornadas informações de todos os artigos em uma publicação ou no publicador.  
+1.  Execute [sp_helpmergearticle](/sql/relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql), especificando o nome da publicação para o parâmetro **\@publication** e o nome do artigo para o parâmetro **\@article**. Se você não especificar esses parâmetros, serão retornadas informações de todos os artigos em uma publicação ou no publicador.  
   
 2.  Execute [sp_helpmergearticlecolumn](/sql/relational-databases/system-stored-procedures/sp-helpmergearticlecolumn-transact-sql) para que os artigos de tabela listem todas as colunas disponíveis na tabela base.  
   
 #### <a name="to-modify-the-properties-of-an-article-belonging-to-a-merge-publication"></a>Para modificar as propriedades de um artigo que pertence a uma publicação de mesclagem  
   
-1.  Execute [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql), especificando a propriedade do artigo que está sendo  **\@** alterada no parâmetro Property e o novo  **\@** valor dessa propriedade no parâmetro value.  
+1.  Execute [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql), especificando a propriedade do artigo que está sendo alterada no parâmetro **\@property** e o novo valor dessa propriedade no parâmetro **\@value**.  
   
     > [!NOTE]  
-    >  Se a alteração exigir a geração de um novo instantâneo, você também deverá especificar um valor de **1** para  **\@force_invalidate_snapshot**e, se a alteração exigir que os assinantes sejam reinicializados, você também deverá especificar um valor de **1**  **para\@force_reinit_subscription**. Para obter mais informações sobre as propriedades que, quando alteradas, exigem um novo instantâneo ou uma nova reinicialização, consulte [Alterar propriedades da publicação e do artigo](change-publication-and-article-properties.md).  
+    >  Se a alteração exigir a geração de um novo instantâneo, você também precisará especificar um valor igual a **1** em **\@force_invalidate_snapshot** e, se a alteração exigir que os Assinantes sejam reinicializados, você também precisará especificar um valor igual a **1** para **\@force_reinit_subscription**. Para obter mais informações sobre as propriedades que, quando alteradas, exigem um novo instantâneo ou uma nova reinicialização, consulte [Alterar propriedades da publicação e do artigo](change-publication-and-article-properties.md).  
   
 ###  <a name="TsqlExample"></a> Exemplo (Transact-SQL)  
  Esse exemplo de replicação transacional retorna as propriedades do artigo publicado.  
@@ -150,7 +150,7 @@ ms.locfileid: "68941070"
   
 1.  Crie uma conexão com o Publicador usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.TransArticle> .  
+2.  Criar uma instância da classe <xref:Microsoft.SqlServer.Replication.TransArticle>.  
   
 3.  Defina as propriedades <xref:Microsoft.SqlServer.Replication.Article.Name%2A>, <xref:Microsoft.SqlServer.Replication.Article.PublicationName%2A>e <xref:Microsoft.SqlServer.Replication.Article.DatabaseName%2A> .  
   
@@ -166,7 +166,7 @@ ms.locfileid: "68941070"
   
 1.  Crie uma conexão com o Publicador usando a classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.MergeArticle> .  
+2.  Criar uma instância da classe <xref:Microsoft.SqlServer.Replication.MergeArticle>.  
   
 3.  Defina as propriedades <xref:Microsoft.SqlServer.Replication.Article.Name%2A>, <xref:Microsoft.SqlServer.Replication.Article.PublicationName%2A>e <xref:Microsoft.SqlServer.Replication.Article.DatabaseName%2A> .  
   
@@ -185,7 +185,7 @@ ms.locfileid: "68941070"
   
  [!code-vb[HowTo#rmo_vb_ChangeMergeArticle_BLH](../../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_changemergearticle_blh)]  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Implementar um manipulador de lógica de negócios para um artigo de mesclagem](../implement-a-business-logic-handler-for-a-merge-article.md)   
  [Publicar dados e objetos de banco de dados](publish-data-and-database-objects.md)   
  [Alterar propriedades da publicação e do artigo](change-publication-and-article-properties.md)   

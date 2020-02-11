@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 374a38d07c3174e799d01199e20e822f85deed13
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892919"
 ---
 # <a name="currentmember-mdx"></a>Função CurrentMember (MDX)
@@ -74,7 +74,7 @@ Hierarchy_Expression.CurrentMember
   
  `WHERE([Customer].[Customer Geography].[Country].&[Australia])`  
   
- O membro atual é alterado em uma hierarquia usada em um eixo em uma consulta. Portanto, o membro atual em outras hierarquias na mesma dimensão que não são usados em um eixo também pode ser alterado; Esse comportamento é chamado de ' auto-Exists ' e mais detalhes podem ser encontrados em [conceitos principais &#40;em&#41;MDX Analysis Services](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services). Por exemplo, a consulta abaixo mostra como o membro atual na hierarquia Ano Civil da dimensão Data é alterado com o membro atual na hierarquia Calendário, quando este último é exibido no eixo Linhas:  
+ O membro atual é alterado em uma hierarquia usada em um eixo em uma consulta. Portanto, o membro atual em outras hierarquias na mesma dimensão que não são usados em um eixo também pode ser alterado; Esse comportamento é chamado de ' auto-Exists ' e mais detalhes podem ser encontrados em [conceitos principais em MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services). Por exemplo, a consulta abaixo mostra como o membro atual na hierarquia Ano Civil da dimensão Data é alterado com o membro atual na hierarquia Calendário, quando este último é exibido no eixo Linhas:  
   
  `WITH MEMBER MEASURES.CURRENTYEAR AS`  
   
@@ -116,7 +116,7 @@ FROM [Adventure Works]
 WHERE {[Date].[Calendar Year].[Calendar Year].&[2003]}  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Referência de função MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -16,16 +16,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f11f2eac6d1d44ed361324f2b5e25cea80df8768
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68890405"
 ---
 # <a name="data-mining-query-task"></a>Data Mining Query Task
   A tarefa Consulta de Mineração de Dados executa consultas de previsão com base em modelos internos de mineração de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. A consulta de previsão cria uma previsão para novos dados usando modelos de mineração. Por exemplo, uma consulta de previsão pode prever quantos veleiros serão vendidos durante os meses de verão ou gerar uma lista de possíveis clientes para a compra de um veleiro.  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornece tarefas que desempenham outras operações de business intelligence, como executar instruções DDL (linguagem de definição de dados) e objetos de análise de processamento.  
+ 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornece tarefas que desempenham outras operações de business intelligence, como executar instruções DDL (linguagem de definição de dados) e objetos de análise de processamento.  
   
  Para obter mais informações sobre outras tarefas de business intelligence, clique em um dos tópicos a seguir:  
   
@@ -45,17 +46,17 @@ ms.locfileid: "68890405"
  Se os resultados incluírem aninhamento, o resultado será simplificado antes de ser salvo. A simplificação de um resultado altera um resultado aninhado definido para uma tabela. Por exemplo, simplificar um resultado aninhado com uma coluna **Cliente** e uma coluna aninhada **Produto** adiciona linhas à coluna **Cliente** para fazer uma tabela que inclui dados de produto para cada cliente. Por exemplo, um cliente com três produtos diferentes transforma-se em uma tabela com três linhas, repetindo o cliente em cada linha e incluindo um produto diferente em cada linha. Se a palavra-chave FLATTENED for omitida, a tabela conterá só a coluna **Cliente** e só uma linha por cliente. Para obter mais informações, consulte [SELECT &#40;DMX&#41;](/sql/dmx/select-dmx).  
   
 ## <a name="configuration-of-the-data-mining-query-task"></a>Configuração da tarefa Consulta de Mineração de Dados  
- A tarefa Consulta de Mineração de Dados requer duas conexões. A primeira conexão é um gerenciador de conexões do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que se conecta a uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou a um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que contém a estrutura de mineração e o modelo de mineração. A segunda conexão é um gerenciador de conexões OLE DB que se conecta ao banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que contém a tabela na qual a tarefa é gravada. Para obter mais informações, consulte [Analysis Services Connection Manager](../connection-manager/analysis-services-connection-manager.md) e [OLE DB Connection Manager](../connection-manager/ole-db-connection-manager.md).  
+ A tarefa Consulta de Mineração de Dados requer duas conexões. A primeira conexão é um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Gerenciador de conexões que se conecta a uma instância [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] do ou a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] um projeto do que contém a estrutura de mineração e o modelo de mineração. A segunda conexão é um gerenciador de conexões OLE DB que se conecta ao banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que contém a tabela na qual a tarefa é gravada. Para obter mais informações, consulte [Analysis Services Connection Manager](../connection-manager/analysis-services-connection-manager.md) e [OLE DB Connection Manager](../connection-manager/ole-db-connection-manager.md).  
   
  Você pode definir propriedades pelo Designer do [!INCLUDE[ssIS](../../../includes/ssis-md.md)] ou programaticamente.  
   
  Para obter mais informações sobre as propriedades que podem ser definidas no [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer, clique em um dos seguintes tópicos:  
   
--   [Editor da Tarefa Consulta de Mineração de Dados &#40;Guia Modelo de Mineração&#41;](../data-mining-query-task-editor-mining-model-tab.md)  
+-   [Editor da tarefa consulta de mineração de dados &#40;guia modelo de mineração&#41;](../data-mining-query-task-editor-mining-model-tab.md)  
   
--   [Editor da Tarefa Consulta de Mineração de Dados &#40;Guia Consulta&#41;](../data-mining-query-task-editor-query-tab.md)  
+-   [Editor da tarefa consulta de mineração de dados &#40;guia consulta&#41;](../data-mining-query-task-editor-query-tab.md)  
   
--   [Editor da Tarefa Consulta de Mineração de Dados &#40;Guia Saída&#41;](../data-mining-query-task-editor-output-tab.md)  
+-   [Editor da tarefa consulta de mineração de dados &#40;guia saída&#41;](../data-mining-query-task-editor-output-tab.md)  
   
 > [!NOTE]  
 >  O Editor de Consultas de Mineração de Dados não tem nenhuma página Expressões. Em vez disso, use a janela **Propriedades** para acessar as ferramentas de criação e gerenciamento de expressões de propriedade para as propriedades da tarefa Consulta de Mineração de Dados.  

@@ -1,5 +1,5 @@
 ---
-title: Utilitário Profiler | Microsoft Docs
+title: Utilitário do criador de perfil | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 572644cf673c70000cee7de77f2bca9199f19675
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211090"
 ---
 # <a name="profiler-utility"></a>Utilitário Profiler
@@ -62,32 +62,32 @@ ms.locfileid: "68211090"
 > [!NOTE]  
 >  [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)].  
   
- **/P** *password*  
+ **/P** *senha*  
  Especifica uma senha especificada pelo usuário para a autenticação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  **/E**  
  Especifica a conexão com a autenticação do Windows com as credenciais do usuário atual.  
   
- **/S**  *sql_server_name*  
+ **/S**  *SQL_SERVER_NAME*  
  Especifica uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. O Profiler vai se conectar automaticamente ao servidor especificado usando as informações de autenticação especificadas nas opções **/U** e **/P** ou na opção **/E** . Para se conectar a uma instância nomeada do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], use **/S** *sql_server_name*\\*instance_name*.  
   
  **/A**  *analysis_services_server_name*  
  Especifica uma instância do Analysis Services. O Profiler vai se conectar automaticamente ao servidor especificado usando as informações de autenticação especificadas nas opções **/U** e **/P** ou na opção **/E** . Para se conectar a uma instância nomeada do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , use **/A** *analysis_services_server_name\instance_name*.  
   
- **/D** *database*  
+ **/D** *banco de dados*  
  Especifica o nome do banco de dados a ser usado com a conexão. Essa opção selecionará o banco de dados padrão para o usuário especificado se nenhum banco de dados for especificado.  
   
  **/B "** *trace_table_name* **"**  
  Especifica uma tabela de rastreamento a ser carregada quando o profiler for iniciado. Você deve especificar o banco de dados, o usuário ou esquema e a tabela.  
   
- **/T"** *template_name* **"**  
+ **/T "** *template_name* **"**  
  Especifica o modelo que será carregado para configurar o rastreamento. O nome do modelo deve estar entre aspas. O nome do modelo deve estar no diretório de modelos de sistema ou no diretório de modelos de usuário. Se existirem dois modelos com mesmo nome em ambos os diretórios, o modelo do diretório do sistema será carregado. Se nenhum modelo com o nome especificado existir, o modelo padrão será carregado. Observe que a extensão de arquivo do modelo (.tdf) não deve ser especificada como parte do *template_name*. Por exemplo:  
   
 ```  
 /T "standard"  
 ```  
   
- **/F"** *filename* **"**  
+ **/F "** *nome do arquivo* **"**  
  Especifica o caminho e o nome de um arquivo de rastreamento a ser carregado quando o profiler for iniciado. O caminho e o nome de arquivo completos devem estar entre aspas. Essa opção não pode ser usada com **/O**.  
   
  **/O "** *filename*  **"**  
@@ -96,7 +96,7 @@ ms.locfileid: "68211090"
  **/L** *locale_ID*  
  Não disponível.  
   
- **/M "** *MM-DD-YY hh:mm:ss* **"**  
+ **/M "** *mm-dd-aa hh: mm: SS* **"**  
  Especifica a data e a hora para o rastreamento parar. A hora de parada deve estar entre aspas. Especifique a hora de parada de acordo com os parâmetros na tabela abaixo:  
   
 |Parâmetro|Definição|  
@@ -124,7 +124,7 @@ ms.locfileid: "68211090"
 profiler /S MyServer\MyInstance /T "Standard"  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Referência de utilitários de prompt de comando &#40;Mecanismo de Banco de Dados&#41;](command-prompt-utility-reference-database-engine.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Referência do utilitário de prompt de comando &#40;Mecanismo de Banco de Dados&#41;](command-prompt-utility-reference-database-engine.md)  
   
   

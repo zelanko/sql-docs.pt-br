@@ -1,5 +1,5 @@
 ---
-title: Executar um procedimento armazenado (usando sintaxe ODBC CALL) e processar códigos de retorno e parâmetros de saída (OLE DB) | Microsoft Docs
+title: Executar um procedimento armazenado (usando sintaxe de chamada ODBC) e processar códigos de retorno e parâmetros de saída (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 609322d265d18345e7ef39b4598cb6e1c226c97a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206689"
 ---
 # <a name="execute-a-stored-procedure-using-odbc-call-syntax-and-process-return-codes-and-output-parameters-ole-db"></a>Executar um procedimento armazenado (usando sintaxe ODBC CALL) e processar códigos de retorno e parâmetros de saída (OLE DB)
@@ -353,7 +353,7 @@ DROP PROCEDURE myProc
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tópicos de instruções sobre o processamento de resultados &#40;OLE DB&#41;](processing-results-how-to-topics-ole-db.md)  
   
   

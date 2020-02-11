@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: ee90d2c367fa289e8255a84e4eb6da19b37933e0
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68891209"
 ---
 # <a name="mdx-data-manipulation---drillthrough"></a>Manipulação de dados MDX – DRILLTHROUGH
@@ -49,7 +49,7 @@ DRILLTHROUGH[MAXROWSUnsigned_Integer]
   
  Uma instrução MDX especifica a célula de assunto. O valor especificado pelo argumento **MAXROWS** indica o número máximo de linhas que devem ser retornadas pelo conjunto de linhas resultante.  
   
- Por padrão, o número máximo de linhas retornadas é 10.000. Isso significa que, se você deixar **MAXROWS** não especificado, receberá 10.000 linhas ou menos. Se esse valor for muito baixo para seu cenário, você poderá definir **MAXROWS** como um número mais alto, `MAXROWS 20000`como. Se estiver em um nível muito baixo, você poderá aumentar o padrão alterando a propriedade do servidor **OLAP\Query\DefaultDrillthroughMaxRows** . Para obter mais informações sobre como alterar essa propriedade, consulte [Propriedades do servidor em Analysis Services](https://docs.microsoft.com/analysis-services/server-properties/server-properties-in-analysis-services).  
+ Por padrão, o número máximo de linhas retornadas é 10.000. Isso significa que, se você deixar **MAXROWS** não especificado, receberá 10.000 linhas ou menos. Se esse valor for muito baixo para seu cenário, você poderá definir **MAXROWS** como um número mais alto, como `MAXROWS 20000`. Se estiver em um nível muito baixo, você poderá aumentar o padrão alterando a propriedade do servidor **OLAP\Query\DefaultDrillthroughMaxRows** . Para obter mais informações sobre como alterar essa propriedade, consulte [Propriedades do servidor em Analysis Services](https://docs.microsoft.com/analysis-services/server-properties/server-properties-in-analysis-services).  
   
  A menos que o contrário seja especificado, as colunas retornadas devem incluir todos os atributos de granularidade de todas as dimensões relacionadas ao grupo de medidas da medida especificada, em vez das dimensões muitos para muitos. As dimensões de cubo são precedidas por $ para que possam ser diferenciadas de dimensões e grupos de medidas. A cláusula **Return** é usada para especificar as colunas retornadas pela consulta de detalhamento. As funções a seguir podem ser aplicadas a um único atributo ou medida pela cláusula de **retorno** .  
   
@@ -96,7 +96,7 @@ RETURN
   ,[Reseller Sales].[Reseller Standard Product Cost]  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [MDX instruções &#40;de manipulação de dados MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Instruções de manipulação de dados MDX &#40;&#41;MDX](../mdx/mdx-data-manipulation-statements-mdx.md)  
   
   

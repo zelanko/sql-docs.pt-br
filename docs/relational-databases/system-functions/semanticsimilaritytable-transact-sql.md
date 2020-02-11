@@ -18,10 +18,10 @@ ms.assetid: b49d40ab-7552-438b-ad67-6237dcccb75b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 24193b3474b1088a87acb5bdd15a5c5c4459f44d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68140552"
 ---
 # <a name="semanticsimilaritytable-transact-sql"></a>semanticsimilaritytable (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68140552"
   
  Essa função de conjunto de linhas pode ser referenciada na cláusula FROM de uma instrução SELECT como um nome de tabela normal.  
 
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,7 +45,7 @@ SEMANTICSIMILARITYTABLE
 ```  
   
 ##  <a name="Arguments"></a> Argumentos  
- **table**  
+ **tabela**  
  É o nome de uma tabela que tem indexação de texto completo e semântica habilitada.  
   
  Esse nome pode ser um nome de uma a quatro partes, mas um nome de servidor remoto não é permitido.  
@@ -62,25 +62,25 @@ SEMANTICSIMILARITYTABLE
  **source_key**  
  Chave exclusiva da linha para solicitar resultados de uma linha específica.  
   
- A chave é implicitamente convertida para o tipo da chave exclusiva de texto completo na tabela de origem sempre que possível. A chave pode ser especificaca como uma constante ou variável, mas não pode ser uma expressão ou o resultado de uma subconsulta escalar.  
+ A chave é convertida implicitamente no tipo da chave exclusiva de texto completo na tabela de origem sempre que possível. A chave pode ser especificaca como uma constante ou variável, mas não pode ser uma expressão ou o resultado de uma subconsulta escalar.  
   
 ## <a name="table-returned"></a>Tabela retornada  
  A tabela a seguir descreve as informações sobre documentos semelhantes ou relacionados retornados por esta função de conjunto de linhas.  
   
  Documentos correspondidos serão retornados por coluna se os resultados forem solicitados de mais de uma coluna.  
   
-|Column_name|type|Descrição|  
+|Column_name|Type|DESCRIÇÃO|  
 |------------------|----------|-----------------|  
 |**source_column_id**|**int**|ID da coluna da qual um documento de origem foi usado para localizar documentos semelhantes.<br /><br /> Consulte as funções COL_NAME e COLUMNPROPERTY para obter detalhes sobre como recuperar o nome da coluna do column_id e vice-versa.|  
 |**matched_column_id**|**int**|ID da coluna da qual um documento similar foi localizado.<br /><br /> Consulte as funções COL_NAME e COLUMNPROPERTY para obter detalhes sobre como recuperar o nome da coluna do column_id e vice-versa.|  
 |**matched_document_key**|**\***<br /><br /> Essa chave corresponde ao tipo da chave exclusiva na tabela de origem.|Valor da chave exclusiva da extração de texto completo e semântica do documento ou linha que foi localizada como similar ao documento especificado na consulta.|  
-|**score**|**REAL**|Um valor relativo da similaridade deste documento em sua relação com todos os outros documentos similares.<br /><br /> O valor é um valor decimal fracionário no intervalo de [0,0, 1,0] onde uma pontuação mais alta representa uma correspondência mais próxima e 1,0 é uma pontuação perfeita.|  
+|**placar**|**FOTO**|Um valor relativo da similaridade deste documento em sua relação com todos os outros documentos similares.<br /><br /> O valor é um valor decimal fracionário no intervalo de [0,0, 1,0] onde uma pontuação mais alta representa uma correspondência mais próxima e 1,0 é uma pontuação perfeita.|  
   
 ## <a name="general-remarks"></a>Comentários gerais  
- Para obter mais informações, consulte [localizar documentos semelhantes e relacionados com a pesquisa semântica](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md).  
+ Para obter mais informações, consulte [localizar documentos semelhantes e relacionados com pesquisa semântica](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md).  
   
 ## <a name="limitations-and-restrictions"></a>Limitações e Restrições  
- Não é possível consultar documentos similares em colunas. O **SEMANTICSIMILARITYTABLE** função recupera documentos similares apenas da mesma coluna que a coluna de origem, que é identificada pelo **source_key** argumento.  
+ Não é possível consultar documentos similares em colunas. A função **SEMANTICSIMILARITYTABLE** recupera apenas documentos semelhantes da mesma coluna que a coluna de origem, que é identificada pelo argumento **source_key** .  
   
 ## <a name="metadata"></a>Metadados  
  Para obter informações e o status da extração e população de similaridade semântica, consulte as exibições de gerenciamento dinâmico a seguir:  

@@ -16,10 +16,10 @@ ms.assetid: b9c2eaed-6d2d-4b78-ae9b-73633133180b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 79bca732108776b66a2e5750015a27e5931b617a
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69028948"
 ---
 # <a name="sp_addpullsubscription_agent-transact-sql"></a>sp_addpullsubscription_agent (Transact-SQL)
@@ -27,7 +27,7 @@ ms.locfileid: "69028948"
  
   Adiciona um novo trabalho agendado de agente usado para sincronizar uma assinatura pull com uma publicação transacional. Esse procedimento armazenado é executado no Assinante no banco de dados de assinatura.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -79,13 +79,13 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publisher = ] 'publisher'`É o nome do Publicador. o Publicador é **sysname**, sem padrão.  
+`[ @publisher = ] 'publisher'`É o nome do Publicador. o *Publicador* é **sysname**, sem padrão.  
   
-`[ @publisher_db = ] 'publisher_db'_`É o nome do banco de dados do Publicador. *publisher_db* é **sysname**, com um valor padrão de NULL. *publisher_db* é ignorado por Publicadores Oracle.  
+`[ @publisher_db = ] 'publisher_db'_`É o nome do banco de dados do Publicador. *publisher_db* é **sysname**, com um valor padrão de NULL. *publisher_db* é ignorado pelos Publicadores Oracle.  
   
 `[ @publication = ] 'publication'`É o nome da publicação. a *publicação* é **sysname**, sem padrão.  
   
-`[ @subscriber = ] 'subscriber'`É o nome da instância do assinante ou o nome do ouvinte AG se o banco de dados do Assinante estiver em um grupo de disponibilidade. o assinante é **sysname**, com um padrão de NULL.  
+`[ @subscriber = ] 'subscriber'`É o nome da instância do assinante ou o nome do ouvinte AG se o banco de dados do Assinante estiver em um grupo de disponibilidade. o *assinante* é **sysname**, com um padrão de NULL.  
   
 > [!NOTE]  
 >  Esse parâmetro foi preterido e é mantido para compatibilidade com versões anteriores de scripts.  
@@ -126,17 +126,17 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 > [!IMPORTANT]  
 >  Não use uma senha em branco. Use uma senha forte. Quando possível, solicite que os usuários insiram as credenciais de segurança em tempo de execução. Se for necessário armazenar credenciais em um arquivo de script, você deverá proteger o arquivo para impedir acesso não autorizado.  
   
-`[ @optional_command_line = ] 'optional_command_line'`É um prompt de comando opcional fornecido para o Agente de Distribuição. Por exemplo, **-DefinitionFile** C:\Distdef.txt ou **-CommitBatchSize** 10. *optional_command_line* é **nvarchar (4000)** , com um padrão de cadeia de caracteres vazia.  
+`[ @optional_command_line = ] 'optional_command_line'`É um prompt de comando opcional fornecido para o Agente de Distribuição. Por exemplo, **-DefinitionFile** C:\Distdef.txt ou **-CommitBatchSize** 10. *optional_command_line* é **nvarchar (4000)**, com um padrão de cadeia de caracteres vazia.  
   
 `[ @frequency_type = ] frequency_type`É a frequência com a qual agendar a Agente de Distribuição. *frequency_type* é **int**e pode ser um dos valores a seguir.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |**1**|Uma vez|  
-|**2** (padrão)|Sob Demanda|  
-|**4**|Diariamente|  
+|**2** (padrão)|Sob demanda|  
+|**quatro**|Diário|  
 |**8**|Semanalmente|  
-|**16**|Mensalmente|  
+|**16**|Mensal|  
 |**32**|Relativo ao mês|  
 |**64**|Iniciar automaticamente|  
 |**128**|Recorrente|  
@@ -148,23 +148,23 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`É a data da Agente de Distribuição. Esse parâmetro é usado quando *frequency_type* é definido como **32** (relativo mensal). *frequency_relative_interval* é **int**e pode ser um dos valores a seguir.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
-|**1** (padrão)|First|  
+|**1** (padrão)|Primeiro|  
 |**2**|Segundo|  
-|**4**|Terceiro|  
+|**quatro**|Terceiro|  
 |**8**|Quarto|  
-|**16**|Last|  
+|**16**|Último|  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`É o fator de recorrência usado pelo *frequency_type*. *frequency_recurrence_factor* é **int**, com um padrão de **1**.  
   
 `[ @frequency_subday = ] frequency_subday`É a frequência de reagendar durante o período definido. *frequency_subday* é **int**e pode ser um dos valores a seguir.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |**1** (padrão)|Uma vez|  
 |**2**|Segundo|  
-|**4**|Minuto|  
+|**quatro**|Minuto|  
 |**8**|Hora|  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`É o intervalo para *frequency_subday*. *frequency_subday_interval* é **int**, com um padrão de **1**.  
@@ -177,11 +177,11 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 `[ @active_end_date = ] active_end_date`É a data em que a Agente de Distribuição para de ser agendada, formatada como AAAAMMDD. *active_end_date* é **int**, com um padrão de **0**.  
   
-`[ @distribution_jobid = ] _distribution_jobidOUTPUT`É a ID do Agente de Distribuição para este trabalho. *distribution_jobid* é **binary (16)** , com um padrão de NULL, e é um parâmetro de saída.  
+`[ @distribution_jobid = ] _distribution_jobidOUTPUT`É a ID do Agente de Distribuição para este trabalho. *distribution_jobid* é **binary (16)**, com um padrão de NULL, e é um parâmetro de saída.  
   
 `[ @encrypted_distributor_password = ] encrypted_distributor_password`Não há mais suporte para a configuração de *encrypted_distributor_password* . A tentativa de definir esse parâmetro de **bit** como **1** resultará em um erro.  
   
-`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`É se a assinatura pode ser sincronizada [!INCLUDE[msCoName](../../includes/msconame-md.md)] por meio do Gerenciador de sincronização. *enabled_for_syncmgr* é **nvarchar (5)** , com um padrão de false. Se for **false**, a assinatura não será registrada com o Gerenciador de sincronização. Se for **true**, a assinatura será registrada com o Gerenciador de sincronização e poderá [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ser sincronizada sem iniciar.  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`É se a assinatura pode ser sincronizada [!INCLUDE[msCoName](../../includes/msconame-md.md)] por meio do Gerenciador de sincronização. *enabled_for_syncmgr* é **nvarchar (5)**, com um padrão de false. Se for **false**, a assinatura não será registrada com o Gerenciador de sincronização. Se for **true**, a assinatura será registrada com o Gerenciador de sincronização e poderá [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ser sincronizada sem iniciar.  
   
 `[ @ftp_address = ] 'ftp_address'`Somente para compatibilidade com versões anteriores.  
   
@@ -191,11 +191,11 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 `[ @ftp_password = ] 'ftp_password'`Somente para compatibilidade com versões anteriores.  
   
-`[ @alt_snapshot_folder = ] 'alternate_snapshot_folder'_`Especifica o local da pasta alternativa para o instantâneo. *alternate_snapshot_folder* é **nvarchar (255)** , com um padrão de NULL.  
+`[ @alt_snapshot_folder = ] 'alternate_snapshot_folder'_`Especifica o local da pasta alternativa para o instantâneo. *alternate_snapshot_folder* é **nvarchar (255)**, com um padrão de NULL.  
   
-`[ @working_directory = ] 'working_director'`É o nome do diretório de trabalho usado para armazenar dados e arquivos de esquema para a publicação. *working_directory* é **nvarchar (255)** , com um padrão de NULL. O nome deve ser especificado no formato UNC.  
+`[ @working_directory = ] 'working_director'`É o nome do diretório de trabalho usado para armazenar dados e arquivos de esquema para a publicação. *working_directory* é **nvarchar (255)**, com um padrão de NULL. O nome deve ser especificado no formato UNC.  
   
-`[ @use_ftp = ] 'use_ftp'`Especifica o uso de FTP em vez do protocolo regular para recuperar instantâneos. *use_ftp* é **nvarchar (5)** , com um padrão de false.  
+`[ @use_ftp = ] 'use_ftp'`Especifica o uso de FTP em vez do protocolo regular para recuperar instantâneos. *use_ftp* é **nvarchar (5)**, com um padrão de false.  
   
 `[ @publication_type = ] publication_type`Especifica o tipo de replicação da publicação. *publication_type* é um **tinyint** com um padrão de **0**. Se **0**, a publicação é um tipo de transação. Se for **1**, a publicação será um tipo de instantâneo. Se **2**, a publicação será um tipo de mesclagem.  
   
@@ -206,7 +206,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 > [!NOTE]  
 >  Você deve especificar uma senha se *dts_package_name* for especificado.  
   
-`[ @dts_package_location = ] 'dts_package_location'`Especifica o local do pacote. *dts_package_location* é um **nvarchar (12)** , com um padrão de **assinante**. O local do pacote pode ser **distribuidor** ou **assinante**.  
+`[ @dts_package_location = ] 'dts_package_location'`Especifica o local do pacote. *dts_package_location* é um **nvarchar (12)**, com um padrão de **assinante**. O local do pacote pode ser **distribuidor** ou **assinante**.  
   
 `[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
@@ -220,7 +220,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 `[ @job_name = ] 'job_name'`É o nome de um trabalho de agente existente. *job_name* é **sysname**, com um valor padrão de NULL. Esse parâmetro só é especificado quando a assinatura for sincronizada usando um trabalho existente em vez de um trabalho recém-criado (o padrão). Se você não for membro da função de servidor fixa **sysadmin** , deverá especificar *job_login* e *job_password* ao especificar *job_name*.  
   
-`[ @job_login = ] 'job_login'`É o logon da conta do Windows na qual o agente é executado. *job_login* é **nvarchar (257)** , sem padrão. Essa conta do Windows sempre é usada para conexões doe agente com o Assinante.  
+`[ @job_login = ] 'job_login'`É o logon da conta do Windows na qual o agente é executado. *job_login* é **nvarchar (257)**, sem padrão. Essa conta do Windows sempre é usada para conexões doe agente com o Assinante.  
   
 `[ @job_password = ] 'job_password'`É a senha para a conta do Windows na qual o agente é executado. *job_password* é **sysname**, sem padrão.  
   
@@ -237,15 +237,15 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
  [!code-sql[HowTo#sp_addtranpullsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addpullsubscription-a_1.sql)]  
   
 ## <a name="permissions"></a>Permissões  
- Somente os membros da função de servidor fixa **sysadmin** ou da função de banco de dados fixa **db_owner** podem executar **sp_addpullsubscription_agent**.  
+ Somente os membros da função de servidor fixa **sysadmin** ou **db_owner** função de banco de dados fixa podem ser executados **sp_addpullsubscription_agent**.  
   
-## <a name="see-also"></a>Consulte também  
- [Criar uma assinatura pull](../../relational-databases/replication/create-a-pull-subscription.md)   
- [Assinar publicações](../../relational-databases/replication/subscribe-to-publications.md)   
- [sp_addpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
- [sp_change_subscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)   
- [sp_droppullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
- [sp_helppullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)   
- [sp_helpsubscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
+ [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
+ [&#41;&#40;Transact-SQL de sp_addpullsubscription](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_change_subscription_properties](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_droppullsubscription](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_helppullsubscription](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_helpsubscription_properties](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
   
   

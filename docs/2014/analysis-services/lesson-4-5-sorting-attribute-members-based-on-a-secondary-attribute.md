@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 067348432bc7a460b4dbf39444852e14c7ef2ce5
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69493900"
 ---
 # <a name="sorting-attribute-members-based-on-a-secondary-attribute"></a>Classificando membros de atributo com base em um atributo secundário
@@ -69,17 +69,17 @@ ms.locfileid: "69493900"
   
      Observe que os meses agora estão classificados em ordem cronológica, como mostra a imagem a seguir:  
   
-     ![Hierarquia de usuário modificada em ordem cronológica](../../2014/tutorials/media/l4-memberproperties-3.gif "Hierarquia de usuário modificada em ordem cronológica")  
+     ![Hierarquia modificada pelo usuário em ordem cronológica](../../2014/tutorials/media/l4-memberproperties-3.gif "Hierarquia modificada pelo usuário em ordem cronológica")  
   
 ## <a name="defining-attribute-relationships-and-sort-order-in-the-customer-dimension"></a>Definindo relações de atributo e ordem de classificação na dimensão Cliente  
   
 1.  Mude para a guia **Navegador** no Designer de Dimensão da dimensão Cliente e procure os membros da hierarquia de atributo **Distância do Trabalho** .  
   
-     Observe que os membros dessa hierarquia de atributo são classificados com base nos valores ASCII da chave de membro. Nesse caso, classificar pelo nome ou chave do atributo não classifica as distâncias do trabalho da menor para a maior. Nesta tarefa, você classifica os membros da hierarquia de atributo com base no cálculo nomeado **CommuteDistanceSort** que atribui o número de classificação apropriado a cada valor distinto na coluna. Para economizar tempo, esse cálculo nomeado já foi adicionado à tabela **Cliente** na exibição da fonte de dados [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] DW. Você pode alternar para essa exibição da fonte de dados para exibir o script SQL que é usado para esse cálculo nomeado. Para obter mais informações, consulte [Definir cálculos nomeados em uma exibição da fonte de dados &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md).  
+     Observe que os membros dessa hierarquia de atributo são classificados com base nos valores ASCII da chave de membro. Nesse caso, classificar pelo nome ou chave do atributo não classifica as distâncias do trabalho da menor para a maior. Nesta tarefa, você classifica os membros da hierarquia de atributo com base no cálculo nomeado **CommuteDistanceSort** que atribui o número de classificação apropriado a cada valor distinto na coluna. Para economizar tempo, esse cálculo nomeado já foi adicionado à tabela **Cliente** na exibição da fonte de dados [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] DW. Você pode alternar para essa exibição da fonte de dados para exibir o script SQL que é usado para esse cálculo nomeado. Para obter mais informações, consulte [definir cálculos nomeados em uma exibição da fonte de dados &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md).  
   
      A imagem a seguir mostra os membros da hierarquia de atributo **Distância do Trabalho** , classificados pelos valores ASCII da chave de membro.  
   
-     ![Hierarquia de atributo de distância](../../2014/tutorials/media/l4-memberproperties-4.gif " do commudo Hierarquia de atributo de distância") do commudo  
+     ![Hierarquia do atributo Distância do Trabalho](../../2014/tutorials/media/l4-memberproperties-4.gif "Hierarquia do atributo Distância do Trabalho")  
   
 2.  Mude para a guia **Estrutura da Dimensão** no Designer de Dimensão da dimensão Cliente, clique com o botão direito do mouse em **CommuteDistanceSort** na tabela **Cliente** do painel **Exibição da Fonte de Dados** e clique em **Novo Atributo da Coluna**.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "69493900"
   
      Observe que os membros da hierarquia de atributo agora estão classificados em ordem lógica com base no aumento da distância, como mostra a imagem a seguir:  
   
-     ![Hierarquia de atributo de distância do mudo](../../2014/tutorials/media/l4-memberproperties-5.gif " reclassificada Hierarquia de atributo de distância do mudo") reclassificada  
+     ![Hierarquia do atributo Distância do Trabalho reclassificada](../../2014/tutorials/media/l4-memberproperties-5.gif "Hierarquia do atributo Distância do Trabalho reclassificada")  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
  [Especificando relações de atributo entre atributos em uma hierarquia definida pelo usuário](4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)  

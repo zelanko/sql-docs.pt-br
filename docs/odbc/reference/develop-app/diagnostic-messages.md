@@ -15,39 +15,39 @@ ms.assetid: 98027871-9901-476e-a722-ee58b7723c1f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 39ebda5de5820cdfd7333ad1d0997593922e0a4f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68039896"
 ---
 # <a name="diagnostic-messages"></a>Mensagens de diagnóstico
-Uma mensagem de diagnóstico será retornada com cada SQLSTATE. O SQLSTATE mesmo frequentemente é retornado com um número de mensagens diferentes. Por exemplo, o SQLSTATE 42000 (sintaxe ou violação de acesso) é retornado para a maioria dos erros de sintaxe SQL. No entanto, cada erro de sintaxe é a probabilidade de ser descrito por uma mensagem diferente.  
+Uma mensagem de diagnóstico é retornada com cada SQLSTATE. O mesmo SQLSTATE é geralmente retornado com um número de mensagens diferentes. Por exemplo, o SQLSTATE 42000 (erro de sintaxe ou violação de acesso) é retornado para a maioria dos erros na sintaxe SQL. No entanto, cada erro de sintaxe provavelmente será descrito por uma mensagem diferente.  
   
- Mensagens de diagnóstico de exemplo são listadas na coluna de erro na tabela de SQLSTATEs no Apêndice A e em cada função. Embora drivers podem retornar essas mensagens, eles são mais prováveis de retornar qualquer mensagem é passada a eles pela fonte de dados.  
+ As mensagens de diagnóstico de exemplo são listadas na coluna erro na tabela de hiperestados no apêndice A e em cada função. Embora os drivers possam retornar essas mensagens, é mais provável que eles retornem qualquer mensagem passada para eles pela fonte de dados.  
   
- Aplicativos geralmente exibem mensagens de diagnóstico para o usuário, junto com o SQLSTATE e o código de erro nativo. Isso ajuda o usuário e equipe de suporte determinar a causa de quaisquer problemas. As informações de componente inseridas na mensagem são particularmente útil ao fazer isso.  
+ Os aplicativos geralmente exibem mensagens de diagnóstico para o usuário, juntamente com o SQLSTATE e o código de erro nativo. Isso ajuda o usuário e a equipe de suporte a determinar a causa de quaisquer problemas. As informações de componente inseridas na mensagem são particularmente úteis para fazer isso.  
   
- Mensagens de diagnóstico provenientes de fontes de dados e componentes em uma conexão ODBC, como drivers, gateways e o Gerenciador de Driver. Normalmente, fontes de dados não suportam diretamente ODBC. Consequentemente, se um componente em uma conexão ODBC recebe uma mensagem de uma fonte de dados, ele deverá identificar a fonte de dados como a origem da mensagem. Ele também deve identificar em si como o componente que recebeu a mensagem.  
+ As mensagens de diagnóstico são provenientes de fontes de dados e componentes em uma conexão ODBC, como drivers, gateways e o Gerenciador de driver. Normalmente, as fontes de dados não dão suporte diretamente a ODBC. Consequentemente, se um componente em uma conexão ODBC receber uma mensagem de uma fonte de dados, ele deverá identificar a fonte de dados como a origem da mensagem. Ele também deve se identificar como o componente que recebeu a mensagem.  
   
- Se a fonte de um erro ou aviso é um componente em si, a mensagem de diagnóstico deve explicar isso. Portanto, o texto de mensagens tem dois formatos diferentes. Para erros e avisos que não ocorram em uma fonte de dados, a mensagem de diagnóstico deve usar este formato:  
+ Se a origem de um erro ou aviso for um componente em si, a mensagem de diagnóstico deverá explicar isso. Portanto, o texto das mensagens tem dois formatos diferentes. Para erros e avisos que não ocorrem em uma fonte de dados, a mensagem de diagnóstico deve usar este formato:  
   
- **[** *vendor-identifier* **][** *ODBC-component-identifier* **]** *component-supplied-text*  
+ **[** *fornecedor-identificador* **] [** *ODBC-componente-identificador* **]** *texto fornecido pelo componente*  
   
  Para erros e avisos que ocorrem em uma fonte de dados, a mensagem de diagnóstico deve usar este formato:  
   
- **[** *identificador de fornecedor* **] [** *identificador de componente de ODBC* **] [** *identificador da fonte de dados*  **]** *dados--fornecido-texto de origem*  
+ **[** *fornecedor-identificador* **] [** *ODBC-componente-identificador* **] [** *Data-fonte-identificador* **]** *dados-fonte-fornecido-texto*  
   
  A tabela a seguir mostra o significado de cada elemento.  
   
 |Elemento|Significado|  
 |-------------|-------------|  
-|*vendor-identifier*|Identifica o fornecedor do componente no qual ocorreu o erro ou aviso ou que recebeu o erro ou aviso diretamente da fonte de dados.|  
-|*Identificador do componente de ODBC*|Identifica o componente no qual ocorreu o erro ou aviso ou que recebeu o erro ou aviso diretamente da fonte de dados.|  
-|*data-source-identifier*|Identifica a fonte de dados. Para drivers baseados em arquivo, isso normalmente é um formato de arquivo, como drivers baseados em DBMS para Xbase [1], isso é o produto do DBMS.|  
-|*component-supplied-text*|Gerado pelo componente do ODBC.|  
-|*data-source-supplied-text*|Gerado pela fonte de dados.|  
+|*identificador de fornecedor*|Identifica o fornecedor do componente no qual ocorreu o erro ou o aviso ou que recebeu o erro ou aviso diretamente da fonte de dados.|  
+|*ODBC-identificador de componente*|Identifica o componente no qual ocorreu o erro ou o aviso ou que recebeu o erro ou aviso diretamente da fonte de dados.|  
+|*identificador de fonte de dados*|Identifica a fonte de dados. Para drivers baseados em arquivo, normalmente é um formato de arquivo, como Xbase [1] para drivers baseados em DBMS, este é o produto DBMS.|  
+|*texto fornecido pelo componente*|Gerado pelo componente ODBC.|  
+|*fonte de dados-fornecida-texto*|Gerado pela fonte de dados.|  
   
- [1] nesse caso, o driver está atuando como o driver e a fonte de dados.  
+ [1] nesse caso, o driver está agindo como o driver e a fonte de dados.  
   
- Colchetes ( **[]** ) deve ser incluído na mensagem e não indicam itens opcionais.
+ Os colchetes (**[]**) devem ser incluídos na mensagem e não indicam itens opcionais.

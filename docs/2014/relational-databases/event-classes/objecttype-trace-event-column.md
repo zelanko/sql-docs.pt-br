@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 31ba88f3bc49d78dc8c68ac77ba6bda90e63aad0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63028373"
 ---
 # <a name="objecttype-trace-event-column"></a>Coluna de evento de rastreamento ObjectType
@@ -39,14 +39,14 @@ ms.locfileid: "63028373"
 |8275|Tabela do sistema|  
 |8276|Gatilho em servidor|  
 |8277|Tabela (definida pelo usuário)|  
-|8278|Exibição|  
+|8278|Visualizar|  
 |8280|Procedimento armazenado estendido|  
 |16724|Gatilho CLR|  
-|16964|banco de dados|  
-|16975|Object|  
+|16964|Banco de dados|  
+|16975|Objeto|  
 |17222|Catálogo de texto completo|  
 |17232|Procedimento armazenado CLR|  
-|17235|esquema|  
+|17235|Esquema|  
 |17475|Credencial|  
 |17491|Evento DDL|  
 |17741|Evento de gerenciamento|  
@@ -61,11 +61,11 @@ ms.locfileid: "63028373"
 |18263|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows|  
 |19265|Chave assimétrica|  
 |19277|Chave mestra|  
-|19280|Chave Primária|  
+|19280|Chave primária|  
 |19283|ObfusKey|  
 |19521|Logon de chave assimétrica|  
 |19523|Logon de certificado|  
-|19538|Role|  
+|19538|Função|  
 |19539|Logon do SQL|  
 |19543|Logon do Windows|  
 |20034|Associação de serviço remoto|  
@@ -88,7 +88,7 @@ ms.locfileid: "63028373"
 |21318|Função CLR escalar|  
 |21321|Função SQL escalar embutida|  
 |21328|Esquema de partição|  
-|21333|User|  
+|21333|Usuário|  
 |21571|Contrato do serviço do Service Broker|  
 |21572|Gatilho em banco de dados|  
 |21574|Função CLR com valor de tabela|  
@@ -96,14 +96,14 @@ ms.locfileid: "63028373"
 |21581|Tipo de mensagem do Service Broker|  
 |21586|Rota do Service Broker|  
 |21587|Estatísticas|  
-|21825<br /><br /> 21827<br /><br /> 21831<br /><br /> 21843<br /><br /> 21847|User|  
+|21825<br /><br /> 21827<br /><br /> 21831<br /><br /> 21843<br /><br /> 21847|Usuário|  
 |22099|Serviço do Service Broker|  
 |22601|Índice|  
 |22604|Logon de certificado|  
 |22611|Esquema XML|  
-|22868|Tipo|  
+|22868|Type|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   
   

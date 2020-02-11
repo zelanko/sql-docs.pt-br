@@ -19,10 +19,10 @@ ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ec7758ad2f9443ad29f0da799e3f286612f95cab
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72278185"
 ---
 # <a name="sp_detach_db-transact-sql"></a>sp_detach_db (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "72278185"
 > [!IMPORTANT]  
 >  Para que um banco de dados replicado seja desanexado, é preciso que ele seja não publicado. Para obter mais informações, consulte "Comentários", posteriormente neste tópico.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,28 +45,28 @@ sp_detach_db [ @dbname= ] 'database_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @dbname = ] 'database_name'` é o nome do banco de dados a ser desanexado. *database_name* é um valor de **sysname** , com um valor padrão de NULL.  
+`[ @dbname = ] 'database_name'`É o nome do banco de dados a ser desanexado. *database_name* é um valor de **sysname** , com um valor padrão de NULL.  
   
-`[ @skipchecks = ] 'skipchecks'` especifica se a estatística de atualização deve ser ignorada ou executada. *skipchecks* é um valor **nvarchar (10)** , com um valor padrão de NULL. Para ignorar as estatísticas de atualização, especifique **true**. Para executar explicitamente UPDATE STATISTICs, especifique **false**.  
+`[ @skipchecks = ] 'skipchecks'`Especifica se a estatística de atualização deve ser ignorada ou executada. *skipchecks* é um valor **nvarchar (10)** , com um valor padrão de NULL. Para ignorar as estatísticas de atualização, especifique **true**. Para executar explicitamente UPDATE STATISTICs, especifique **false**.  
   
  Por padrão, UPDATE STATISTICS é executado para atualizar as informações sobre os dados nas tabelas e os índices. A execução de UPDATE STATISTICS é útil para bancos de dados que serão movidos para mídias somente leitura.  
   
-`[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'` especifica que o arquivo de índice de texto completo associado ao banco de dados que está sendo desanexado não será removido durante a operação de desanexação do banco de dados. *Keepfulltextindexfile* é um valor **nvarchar (10)** com um padrão de **true**. Se *keepfulltextindexfile* for **false**, todos os arquivos de índice de texto completo associados ao banco de dados e os metadados do índice de texto completo serão descartados, a menos que o banco de dados seja somente leitura. Se for NULL ou **true**, os metadados relacionados a texto completo serão mantidos.  
+`[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'`Especifica que o arquivo de índice de texto completo associado ao banco de dados que está sendo desanexado não será removido durante a operação de desanexação do banco de dados. *Keepfulltextindexfile* é um valor **nvarchar (10)** com um padrão de **true**. Se *keepfulltextindexfile* for **false**, todos os arquivos de índice de texto completo associados ao banco de dados e os metadados do índice de texto completo serão descartados, a menos que o banco de dados seja somente leitura. Se for NULL ou **true**, os metadados relacionados a texto completo serão mantidos.  
   
 > [!IMPORTANT]
->  O parâmetro **\@keepfulltextindexfile** será removido em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Não use esse parâmetro em desenvolvimentos novos e modifique, assim que possível, os aplicativos que atualmente o usam.  
+>  O ** \@parâmetro keepfulltextindexfile** será removido em uma versão futura do. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Não use esse parâmetro em desenvolvimentos novos e modifique, assim que possível, os aplicativos que atualmente o usam.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhum.  
+ Nenhum  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Quando um banco de dados é desanexado, todos os metadados são descartados. Se o banco de dados for o banco de dados padrão de qualquer conta de logon, o **mestre** se tornará seu banco de dados padrão.  
   
 > [!NOTE]  
->  Para obter informações sobre como exibir o banco de dados padrão de todas as contas de logon, consulte [ &#40;SP_HELPLOGINS&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md). Se você tiver as permissões necessárias, poderá usar [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md) para atribuir um novo banco de dados padrão a um logon.  
+>  Para obter informações sobre como exibir o banco de dados padrão de todas as contas de logon, consulte [sp_helplogins &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md). Se você tiver as permissões necessárias, poderá usar [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md) para atribuir um novo banco de dados padrão a um logon.  
   
 ## <a name="restrictions"></a>Restrições  
  Um banco de dados não pode ser desanexado se algum dos seguintes fatores for verdadeiro:  
@@ -82,7 +82,7 @@ sp_detach_db [ @dbname= ] 'database_name'
   
 -   Há um instantâneo do banco de dados no banco de dados.  
   
-     Antes de poder desanexar o banco de dados, você deve descartar todos os seus instantâneos. Para obter mais informações, veja [Remover um instantâneo de banco de dados &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md).  
+     Antes de poder desanexar o banco de dados, você deve descartar todos os seus instantâneos. Para obter mais informações, veja [Remover um instantâneo do banco de dados &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md).  
   
     > [!NOTE]  
     >  Um instantâneo do banco de dados não pode ser desanexado ou anexado.  
@@ -102,7 +102,7 @@ sp_detach_db [ @dbname= ] 'database_name'
 
  Antes de definir o banco de dados como SINGLE_USER, verifique se a opção AUTO_UPDATE_STATISTICS_ASYNC está definida como OFF. Quando esta opção está definida como ON, o thread em segundo plano usado para a atualização de estatísticas estabelece uma conexão com o banco de dados e não será possível acessar o banco de dados em modo de usuário único. Para obter mais informações, consulte [definir um banco de dados para o modo de usuário único](../databases/set-a-database-to-single-user-mode.md).
 
- Por exemplo, a instrução `ALTER DATABASE` a seguir obtém acesso exclusivo ao banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] depois que todos os usuários atuais se desconectam do banco de dados.  
+ Por exemplo, a instrução `ALTER DATABASE` a seguir obtém acesso exclusivo ao [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] banco de dados depois que todos os usuários atuais se desconectam do banco de dados.  
   
 ```  
 USE master;  
@@ -121,7 +121,7 @@ GO
  Requer associação na função de servidor fixa **sysadmin** ou associação na função de **db_owner** do banco de dados.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir desanexa o banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] com *skipchecks* definido como true.  
+ O exemplo a seguir desanexa o [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] banco de dados com *skipchecks* definido como true.  
   
 ```  
 EXEC sp_detach_db 'AdventureWorks2012', 'true';  
@@ -134,10 +134,10 @@ exec sp_detach_db @dbname='AdventureWorks2012'
     , @keepfulltextindexfile='true';  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [Anexar e desanexar bancos de dados &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
+ [CRIAR &#40;de banco de dados SQL Server&#41;Transact-SQL](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [Desanexar um banco de dados](../../relational-databases/databases/detach-a-database.md)  
   
   

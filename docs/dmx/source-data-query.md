@@ -9,21 +9,21 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: e523d33da502a971b950e33ec0bd935149ed26f7
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892338"
 ---
 # <a name="ltsource-data-querygt"></a>&lt;consulta de dados de origem&gt;
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Para treinar um modelo de data mining e criar previsões de um modelo de mineração, você precisa acessar os dados que são externos ao [!INCLUDE[msCoName](../includes/msconame-md.md)] banco de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dado. Use a \<cláusula > de consulta de dados de origem em DMX (extensões de mineração de dados) para definir esses dados externos. A [inserção no &#40;DMX&#41;](../dmx/insert-into-dmx.md), [selecione do &#60;modelo&#62; de junção &#40;de previsão&#41;DMX](../dmx/select-from-model-prediction-join-dmx.md)e [selecione de instruções de junção de previsão natural](../dmx/select-from-model-prediction-join-dmx.md) todos usam **\<consulta de dados de origem >** .  
+  Para treinar um modelo de data mining e criar previsões de um modelo de mineração, você precisa acessar os dados que são externos ao [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] banco de dado. Use a \<cláusula> de consulta de dados de origem em DMX (extensões de mineração de dados) para definir esses dados externos. O [&#41;de inserção no &#40;DMX ](../dmx/insert-into-dmx.md), [selecione do modelo de &#60;&#62; junção de previsão &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md)e [Selecione em instruções de junção de previsão natural](../dmx/select-from-model-prediction-join-dmx.md) todos usam ** \<>de consulta de dados de origem **.  
   
 ## <a name="query-types"></a>Tipos de consultas  
  As três modos mais comuns para especificar dados de origem são:  
   
- [OPENQUERY &#40;DMX&#41;](../dmx/source-data-query-openquery.md)  
+ [&#40;DE&#41;DE OPENQUERY DO DMX](../dmx/source-data-query-openquery.md)  
  Esta instrução consulta dados que são externos a uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], usando uma fonte de dados existente.  
   
  Embora **OPENQUERY** seja semelhante na função para **OPENROWSET**, **OPENQUERY** tem os seguintes benefícios:  
@@ -35,7 +35,7 @@ ms.locfileid: "68892338"
  [OPENROWSET &#40;DMX&#41;](../dmx/source-data-query-openrowset.md)  
  Esta instrução consulta dados que são externos a uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], usando uma fonte de dados existente.  
   
- [FORMA &#40;DMX&#41;](../dmx/source-data-query-shape.md)  
+ [&#41;DE FORMA &#40;DMX](../dmx/source-data-query-shape.md)  
  Esta instrução consulta múltiplas fontes de dados para criar uma tabela aninhada. Usando **Shape**, você pode combinar dados de várias fontes em uma única tabela hierárquica. Isto permite a você aproveitar a capacidade do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] de aninhar tabelas inserindo uma tabela dentro de outra.  
   
  Para especificar os dados de origem, você pode usar também as seguintes opções:  
@@ -50,9 +50,9 @@ ms.locfileid: "68892338"
   
 -   Um parâmetro de conjunto de linhas  
   
-## <a name="see-also"></a>Consulte também  
- [Instruções de manipulação &#40;de&#41; dados DMX de extensões de mineração de dados](../dmx/dmx-statements-data-manipulation.md)   
- [Referência de instrução &#40;DMX&#41; de extensões de mineração de dados](../dmx/data-mining-extensions-dmx-statements.md)   
- [Analysis Services de &#40;tabelas aninhadas – mineração de dados&#41;](https://docs.microsoft.com/analysis-services/data-mining/nested-tables-analysis-services-data-mining)  
+## <a name="see-also"></a>Consulte Também  
+ [&#40;instruções de manipulação de dados do DMX&#41; extensões do Data Mining](../dmx/dmx-statements-data-manipulation.md)   
+ [Referência de instrução&#41; &#40;DMX de extensões de mineração de dados](../dmx/data-mining-extensions-dmx-statements.md)   
+ [Tabelas aninhadas &#40;Analysis Services de mineração de dados&#41;](https://docs.microsoft.com/analysis-services/data-mining/nested-tables-analysis-services-data-mining)  
   
   

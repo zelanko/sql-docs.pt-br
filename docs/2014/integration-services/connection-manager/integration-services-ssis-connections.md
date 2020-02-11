@@ -21,14 +21,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 78c3ba452d3ba681823e5c9f473d7a86f55809a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833769"
 ---
 # <a name="integration-services-ssis-connections"></a>Conexões do SSIS (Integration Services)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usam conexões para executar diferentes tarefas e implementar recursos do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]os pacotes usam conexões para executar tarefas diferentes e para [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] implementar recursos: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  
   
 -   Conectar com armazenamentos de dados de origem e de destino, como texto, XML, pastas de trabalho do Excel e bancos de dados relacionais para extrair e carregar dados.  
   
@@ -51,11 +51,12 @@ ms.locfileid: "62833769"
  Para estabelecer essas conexões, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usa gerenciadores de conexões, conforme descrito na próxima seção.  
   
 ## <a name="connection-managers"></a>Gerenciadores de conexões  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usa o gerenciador de conexões como uma representação lógica de uma conexão. Em tempo de design, você define as propriedades de um gerenciador de conexões para descrever a conexão física que o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] cria quando o pacote é executado. Por exemplo, um gerenciador de conexões inclui a propriedade `ConnectionString` que você define em tempo de design; em tempo de execução, uma conexão física é criada usando o valor na propriedade da cadeia de conexão.  
+ 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usa o gerenciador de conexões como uma representação lógica de uma conexão. Em tempo de design, você define as propriedades de um gerenciador de conexões para descrever a conexão física que o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] cria quando o pacote é executado. Por exemplo, um gerenciador de conexões inclui a propriedade `ConnectionString` que você define em tempo de design; em tempo de execução, uma conexão física é criada usando o valor na propriedade da cadeia de conexão.  
   
  Um pacote pode usar várias instâncias de um tipo de gerenciador de conexões e você pode definir as propriedades em cada instância. Em tempo de execução, cada instância de um tipo de gerenciador de conexões cria uma conexão que tem atributos diferentes.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornece diferentes tipos de gerenciadores de conexões que permitem a conexão de pacotes com várias fontes de dados e servidores.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornece tipos diferentes de gerenciadores de conexões que permitem que os pacotes se conectem a uma variedade de fontes de dados e servidores:  
   
 -   Há gerenciadores de conexões internos que a Instalação instala durante a instalação do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
@@ -64,29 +65,29 @@ ms.locfileid: "62833769"
 -   Você poderá criar seu próprio gerenciador de conexões personalizado se os gerenciadores de conexões existentes não atenderem às suas necessidades.  
   
 ### <a name="built-in-connection-managers"></a>Gerenciadores de conexões internos  
- A tabela a seguir lista os tipos de gerenciadores de conexões fornecidos pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
+ A tabela a seguir lista os tipos de gerenciadores de conexões que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] o fornece.  
   
-|Tipo|Descrição|Tópico|  
+|Type|DESCRIÇÃO|Tópico|  
 |----------|-----------------|-----------|  
 |ADO|Conecta-se a objetos ActiveX Data Objects (ADO).|[Gerenciador de conexões ADO](ado-connection-manager.md)|  
 |ADO.NET|Conecta-se a uma fonte de dados usando um provedor .NET.|[Gerenciador de conexões ADO.NET](ado-net-connection-manager.md)|  
-|CACHE|Lê dados do fluxo de dados ou de um arquivo de cache (.caw) e pode salvar esses dados em um arquivo de cache.|[Gerenciador de conexões de cache](cache-connection-manager.md)|  
+|CACHE|Lê dados do fluxo de dados ou de um arquivo de cache (.caw) e pode salvar esses dados em um arquivo de cache.|[Gerenciador de conexões do cache](cache-connection-manager.md)|  
 |DQS|Conecta-se a um servidor a um banco de dados do Data Quality Services no servidor.|[Gerenciador de Conexões de Limpeza DQS](dqs-cleansing-connection-manager.md)|  
 |EXCEL|Conecta-se a um arquivo da pasta de trabalho do Excel.|[Gerenciador de conexões do Excel](excel-connection-manager.md)|  
-|FILE|Conecta-se a um arquivo ou uma pasta.|[Gerenciador de Conexões de Arquivos](file-connection-manager.md)|  
+|FILE|Conecta-se a um arquivo ou uma pasta.|[Gerenciador de conexões de arquivos](file-connection-manager.md)|  
 |FLATFILE|Conecta-se a dados em um único arquivo simples.|[Gerenciador de Conexões de Arquivos Simples](flat-file-connection-manager.md)|  
-|FTP|Conecta-se a um servidor FTP.|[Gerenciador de Conexões de FTP](ftp-connection-manager.md)|  
+|FTP|Conecta-se a um servidor FTP.|[Gerenciador de conexões FTP](ftp-connection-manager.md)|  
 |HTTP|Conecta-se a um servidor Web.|[Gerenciador de conexões HTTP](http-connection-manager.md)|  
-|MSMQ|Conecta-se a uma fila de mensagens.|[Gerenciador de Conexões MSMQ](msmq-connection-manager.md)|  
-|MSOLAP100|Conecta-se a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou a um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|[Gerenciador de Conexões do Analysis Services](analysis-services-connection-manager.md)|  
-|MULTIFILE|Conecta-se a vários arquivos e pastas.|[Gerenciador de Conexões de Vários Arquivos](multiple-files-connection-manager.md)|  
-|MULTIFLATFILE|Conecta-se a vários arquivos e pastas de dados.|[Gerenciador de Conexões de Vários Arquivos Simples](multiple-flat-files-connection-manager.md)|  
-|OLEDB|Conecta-se a uma fonte de dados usando um provedor OLE DB.|[Gerenciador de Conexões OLE DB](ole-db-connection-manager.md)|  
-|ODBC|Conecta-se a uma fonte de dados usando ODBC.|[Gerenciador de Conexões ODBC](odbc-connection-manager.md)|  
-|SMOServer|Conecta-se a um servidor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO).|[Gerenciador de conexões SMO](smo-connection-manager.md)|  
+|MSMQ|Conecta-se a uma fila de mensagens.|[Gerenciador de conexões MSMQ](msmq-connection-manager.md)|  
+|MSOLAP100|Conecta-se a uma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou a um projeto.|[Gerenciador de conexões do Analysis Services](analysis-services-connection-manager.md)|  
+|MULTIFILE|Conecta-se a vários arquivos e pastas.|[Gerenciador de conexões de vários arquivos](multiple-files-connection-manager.md)|  
+|MULTIFLATFILE|Conecta-se a vários arquivos e pastas de dados.|[Gerenciador de conexões de vários arquivos simples](multiple-flat-files-connection-manager.md)|  
+|OLEDB|Conecta-se a uma fonte de dados usando um provedor OLE DB.|[gerenciador de conexões OLE DB](ole-db-connection-manager.md)|  
+|ODBCODBC|Conecta-se a uma fonte de dados usando ODBC.|[gerenciador de conexões ODBC](odbc-connection-manager.md)|  
+|SMOServer|Conecta-se a um servidor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO).|[gerenciador de conexões SMO](smo-connection-manager.md)|  
 |SMTP|Conecta-se a um servidor de email SMTP.|[Gerenciador de conexões SMTP](smtp-connection-manager.md)|  
 |SQLMOBILE|Conecta-se a um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact.|[Gerenciador de Conexões do SQL Server Compact Edition](sql-server-compact-edition-connection-manager.md)|  
-|WMI|Conecta-se a um servidor e especifica o escopo de gerenciamento de Instrumentação de Gerenciamento do Windows (WMI) no servidor.|[Gerenciador de Conexões WMI](wmi-connection-manager.md)|  
+|WMI|Conecta-se a um servidor e especifica o escopo de gerenciamento de Instrumentação de Gerenciamento do Windows (WMI) no servidor.|[Gerenciador de conexões WMI](wmi-connection-manager.md)|  
   
 ### <a name="connection-managers-available-for-download"></a>Gerenciadores de conexão disponíveis para download  
  A tabela a seguir lista tipos adicionais de gerenciadores de conexões que podem ser baixados no site da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
@@ -94,11 +95,11 @@ ms.locfileid: "62833769"
 > [!IMPORTANT]  
 >  Os gerenciadores de conexões listados na tabela a seguir funcionam apenas com o [!INCLUDE[ssEnterpriseEd11](../../includes/ssenterpriseed11-md.md)] e o [!INCLUDE[ssDeveloperEd11](../../includes/ssdevelopered11-md.md)].  
   
-|Tipo|Descrição|Tópico|  
+|Type|DESCRIÇÃO|Tópico|  
 |----------|-----------------|-----------|  
-|ORACLE|Conecta-se a um Oracle \<informações de versão > servidor.|O gerenciador de conexões Oracle é o componente de gerenciador de conexões do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Oracle da Attunity. O [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Oracle da Attunity também inclui uma origem e um destino. Para obter mais informações, consulte a página de download de [Microsoft Connectors para Oracle e Teradata da Attunity](https://go.microsoft.com/fwlink/?LinkId=251526).|  
+|ORACLE|Conecta-se a \<um servidor do> de informações de versão do Oracle.|O gerenciador de conexões Oracle é o componente de gerenciador de conexões do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Oracle da Attunity. O [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Oracle da Attunity também inclui uma origem e um destino. Para obter mais informações, consulte a página de download de [Microsoft Connectors para Oracle e Teradata da Attunity](https://go.microsoft.com/fwlink/?LinkId=251526).|  
 |SAPBI|Conecta a um sistema SAP NetWeaver BI versão 7.|O gerenciador de conexões SAP BI é o componente de gerenciador de conexões do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para SAP BI. O [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para SAP BI também inclui uma origem e um destino. Para obter mais informações, consulte a página de download [Microsoft SQL Server 2008 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=262016).|  
-|TERADATA|Conecta-se a um Teradata \<informações de versão > servidor.|O gerenciador de conexões Teradata é o componente de gerenciador de conexões do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Teradata da Attunity. O [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Teradata da Attunity também inclui uma origem e um destino. Para obter mais informações, consulte a página de download de [Microsoft Connectors para Oracle e Teradata da Attunity](https://go.microsoft.com/fwlink/?LinkId=251526).|  
+|TERADATA|Conecta-se a \<uma informações de versão do Teradata> Server.|O gerenciador de conexões Teradata é o componente de gerenciador de conexões do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Teradata da Attunity. O [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Teradata da Attunity também inclui uma origem e um destino. Para obter mais informações, consulte a página de download de [Microsoft Connectors para Oracle e Teradata da Attunity](https://go.microsoft.com/fwlink/?LinkId=251526).|  
   
 ### <a name="custom-connection-managers"></a>Gerenciadores de conexões personalizados  
  Também é possível escrever gerenciadores de conexões personalizados. Para obter mais informações, consulte [Developing a Custom Connection Manager](../extending-packages-custom-objects/connection-manager/developing-a-custom-connection-manager.md).  

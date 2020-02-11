@@ -18,10 +18,10 @@ ms.assetid: 87c7c39c-8e05-4e68-9272-45f908809c3b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 857e4139081833980ee6c90eca9d90d16d4c0ad2
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72305148"
 ---
 # <a name="sysmail_help_account_sp-transact-sql"></a>sysmail_help_account_sp (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "72305148"
 
   Lista informações (exceto senhas) sobre contas do Database Mail.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,9 +39,9 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @account_id = ] account_id` a ID da conta para a qual listar informações. *account_id* é **int**, com um padrão de NULL.  
+`[ @account_id = ] account_id`A ID da conta para a qual listar informações. *account_id* é **int**, com um padrão de NULL.  
   
-`[ @account_name = ] 'account_name'` o nome da conta para a qual listar informações. *account_name* é **sysname**, com um padrão de NULL.  
+`[ @account_name = ] 'account_name'`O nome da conta para a qual listar informações. *account_name* é **sysname**, com um padrão de NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -51,21 +51,21 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
   
 ||||  
 |-|-|-|  
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |**account_id**|**int**|O ID da conta.|  
 |**name**|**sysname**|O nome da conta.|  
-|**description**|**nvarchar(256)**|A descrição da conta.|  
+|**ndescrição**|**nvarchar(256)**|A descrição da conta.|  
 |**email_address**|**nvarchar(128)**|O endereço de email a partir do qual as mensagens serão enviadas.|  
 |**display_name**|**nvarchar(128)**|O nome para exibição da conta.|  
 |**replyto_address**|**nvarchar(128)**|O endereço onde as respostas às mensagens desta conta são enviadas.|  
-|**servertype**|**sysname**|O tipo de servidor de email da conta.|  
-|**servername**|**sysname**|O nome do servidor de email da conta.|  
+|**ServerType**|**sysname**|O tipo de servidor de email da conta.|  
+|**ServerName**|**sysname**|O nome do servidor de email da conta.|  
 |**port**|**int**|O número da porta usada pelo servidor de email.|  
-|**username**|**nvarchar(128)**|O nome de usuário a ser usado para fazer logon no servidor de email, se o servidor de email usar autenticação. Quando **username** é nulo, Database Mail não usa a autenticação para essa conta.|  
-|**use_default_credentials**|**bit**|Especifica se o email deve ser enviado ao servidor SMTP com as credenciais do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. **use_default_credentials** é bit, sem padrão. Quando este parâmetro for 1, o Database Mail usa as credenciais do serviço [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Quando esse parâmetro for 0, Database Mail usará o **nome de usuário\@** e a **senha de\@** para autenticação no servidor SMTP. Se **\@nome de usuário** e a **senha de\@** forem nulos, Database Mail usará a autenticação anônima. Consulte o administrador do SMTP antes de especificar esse parâmetro.|  
+|**usu**|**nvarchar(128)**|O nome de usuário a ser usado para fazer logon no servidor de email, se o servidor de email usar autenticação. Quando **username** é nulo, Database Mail não usa a autenticação para essa conta.|  
+|**use_default_credentials**|**bit**|Especifica se o email deve ser enviado ao servidor SMTP com as credenciais do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. **use_default_credentials** é bit, sem padrão. Quando este parâmetro for 1, o Database Mail usa as credenciais do serviço [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Quando esse parâmetro for 0, Database Mail usará o ** \@nome de usuário** e ** \@a senha** para autenticação no servidor SMTP. Se ** \@o nome de usuário** e ** \@a senha** forem nulos, Database Mail usará a autenticação anônima. Consulte o administrador do SMTP antes de especificar esse parâmetro.|  
 |**enable_ssl**|**bit**|Especifica se o Database Mail criptografa a comunicação usando o Protocolo SSL. Use esta opção se o SSL for exigido em seu servidor SMTP. **Enable_ssl** é bit, sem padrão. 1 indica que o Database Mail criptografa a comunicação usando SSL. 0 indica que o Database Mail envia o email sem criptografia SSL.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Quando nenhum *account_id* ou *account_name* é fornecido, **sysmail_help_account** lista informações sobre todas as contas de Database Mail na instância de Microsoft SQL Server.  
   
  O procedimento armazenado **sysmail_help_account_sp** está no banco de dados **msdb** e pertence ao esquema **dbo** . O procedimento deve ser executado com um nome de três partes se o banco de dados atual não for **msdb**.  
@@ -108,9 +108,9 @@ account_id  name                         description                            
 148         AdventureWorks Administrator Mail account for administrative e-mail. dba@Adventure-Works.com   AdventureWorks Automated Mailer  NULL            SMTP       smtp.Adventure-Works.com  25          NULL     0                       0       
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)   
  [Criar uma conta de Database Mail](../../relational-databases/database-mail/create-a-database-mail-account.md)   
- [Database Mail procedimentos &#40;armazenados TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Database Mail procedimentos armazenados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 350e48c225814052655e4fced89d2f934efa188f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62808394"
 ---
 # <a name="connection-properties-dialog-box"></a>caixa de diálogo Propriedades da conexão
@@ -29,12 +29,12 @@ ms.locfileid: "62808394"
  Observe que o período limite de consulta para o SQL Azure é de 30 minutos.  
   
 ## <a name="authentication"></a>Autenticação  
- Exiba propriedades de autenticação para a conexão atual. As propriedades de autenticação são o logon e método de autenticação quando a conexão foi estabelecida. Para alterar as propriedades de autenticação, desconecte do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]e, então, conecte o Pesquisador de Objetos novamente ao servidor, usando as opções de conexão desejadas.  
+ Exiba propriedades de autenticação para a conexão atual. As propriedades de autenticação são o logon e método de autenticação quando a conexão foi estabelecida. Para alterar as propriedades de autenticação, desconectar de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]e, em seguida, conectar o pesquisador de objetos ao servidor novamente, usando as opções de conexão desejadas.  
   
- **Método de Autenticação**  
+ **Método de autenticação**  
  O método de autenticação usado para a conexão atual.  
   
- **Nome do Usuário**  
+ **Nome de usuário**  
  O nome do usuário de logon usado para a autenticação da conexão.  
   
 ## <a name="connection-category"></a>Categoria de conexão  
@@ -49,31 +49,31 @@ ms.locfileid: "62808394"
  **Protocolo de rede**  
  O protocolo de rede da conexão do [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] . Para alterar isso, conecte novamente com as propriedades de conexão desejadas.  
   
- **Tamanho do Pacote de Rede**  
+ **Tamanho do pacote de rede**  
  O tamanho de pacote usado ao comunicar com o servidor. Para alterar isso, conecte novamente com as propriedades de conexão desejadas.  
   
  **Tempo-limite da conexão**  
  O intervalo de tempo em segundos a esperar quando conectar ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] antes de atingir o tempo-limite e retornar ao usuário uma falha em conectar. Para alterar isso, conecte novamente com as propriedades de conexão desejadas.  
   
- **Tempo Limite de Execução**  
+ **Tempo limite de execução**  
  O intervalo de tempo em segundos a aguardar antes que a execução de uma tarefa seja concluída no servidor. Para alterar isso, conecte novamente com as propriedades de conexão desejadas.  
   
  **Criptografado**  
  Se a conexão atual é criptografada. Para alterar isso, conecte novamente com as propriedades de conexão desejadas.  
   
-## <a name="product-category"></a>Product Category  
+## <a name="product-category"></a>Categoria do Produto  
  Exiba as propriedades do produto para a conexão atual. Essas propriedades descrevem o produto de servidor, versão, nome de instância e ordenação. As propriedades são definidas durante a instalação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
- **Nome do produto**  
+ **Nome do Produto**  
  O nome do produto do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
- **Versão do Produto**  
+ **Versão do produto**  
  A versão do produto do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  **Nome do servidor**  
  O nome do computador que executa o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
- **Nome da Instância**  
+ **Nome da instância**  
  Nome da instância do servidor. A instância padrão é em branco.  
   
  **Idioma**  
@@ -85,7 +85,7 @@ ms.locfileid: "62808394"
 ## <a name="server-environment-category"></a>Categoria do ambiente do servidor  
  Exiba propriedades do ambiente do servidor para a conexão atual relacionadas ao hardware do servidor e sistema operacional. As propriedades não podem ser configuradas pelo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
- **Nome do Computador**  
+ **Nome do computador**  
  O nome do computador do servidor que está executando o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **Plataforma**  
@@ -94,14 +94,14 @@ ms.locfileid: "62808394"
  **Sistema operacional**  
  A versão do [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows instalada no servidor.  
   
- **Processadores**  
+ **Duo**  
  O número de processadores no servidor.  
   
- **Memória do Sistema Operacional**  
+ **Memória do sistema operacional**  
  O total de memória física no servidor, em megabytes.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Páginas de propriedades no SQL Server Management Studio](../ssms/property-pages-in-sql-server-management-studio.md)   
- [Conectar ao servidor &#40;página Logon&#41; Mecanismo de Banco de Dados](../ssms/f1-help/connect-to-server-login-page-database-engine.md)  
+ [Conectar ao servidor &#40;página de logon&#41; Mecanismo de Banco de Dados](../ssms/f1-help/connect-to-server-login-page-database-engine.md)  
   
   

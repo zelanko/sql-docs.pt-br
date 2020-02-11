@@ -14,22 +14,22 @@ ms.assetid: 1a801f22-6fea-48aa-a723-3187a2ad852b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 853a364b61b63d58da93111c75db0d7d723ee49b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68073909"
 ---
 # <a name="sqlgetdescfield-and-sqlgetdescrec-cursor-library"></a>SQLGetDescField e SQLGetDescRec (Biblioteca de cursores)
 > [!IMPORTANT]  
->  Este recurso será removido em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que usam esse recurso atualmente. A Microsoft recomenda usar a funcionalidade de cursor do driver.  
+>  Este recurso será removido em uma versão futura do Windows. Evite usar esse recurso em novos trabalhos de desenvolvimento e planeje modificar os aplicativos que atualmente usam esse recurso. A Microsoft recomenda usar a funcionalidade de cursor do driver.  
   
- Este tópico discute o uso do **SQLGetDescField** e **SQLGetDescRec** funções na biblioteca do cursor. Para obter informações gerais sobre essas funções, consulte [função SQLGetDescField](../../../odbc/reference/syntax/sqlgetdescfield-function.md) e [função SQLGetDescRec](../../../odbc/reference/syntax/sqlgetdescrec-function.md).  
+ Este tópico discute o uso das funções **SQLGetDescField** e **SQLGetDescRec** na biblioteca de cursores. Para obter informações gerais sobre essas funções, consulte [função SQLGetDescField](../../../odbc/reference/syntax/sqlgetdescfield-function.md) e [função SQLGetDescRec](../../../odbc/reference/syntax/sqlgetdescrec-function.md).  
   
- Executa a biblioteca de cursores **SQLGetDescRec** para retornar metadados para colunas de indicador. Executa a biblioteca de cursores **SQLGetDescField** para retornar os mesmos campos retornados pela **SQLGetDescRec**, que são SQL_DESC_NAME, SQL_DESC_TYPE, SQL_DESC_DATETIME_INTERVAL_CODE, SQL_DESC_OCTET_ COMPRIMENTO, SQL_DESC_PRECISION, SQL_DESC_SCALE e SQL_DESC_NULLABLE. Para manter a consistência, **SQLGetDescField** também retorna SQL_DESC_UNNAMED.  
+ A biblioteca de cursores executa **SQLGetDescRec** para retornar metadados para colunas de indicador. A biblioteca de cursores executa **SQLGetDescField** para retornar os mesmos campos retornados por **SQLGetDescRec**, que são SQL_DESC_NAME, SQL_DESC_TYPE, SQL_DESC_DATETIME_INTERVAL_CODE, SQL_DESC_OCTET_LENGTH, SQL_DESC_PRECISION, SQL_DESC_SCALE e SQL_DESC_NULLABLE. Para consistência, o **SQLGetDescField** também retorna SQL_DESC_UNNAMED.  
   
- Executa a biblioteca de cursores **SQLGetDescField** quando ele é chamado para retornar o valor dos seguintes campos que são definidos para colunas de indicador de associação: SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR, SQL_DESC_OCTET_LENGTH_PTR e SQL_DESC_LENGTH.  
+ A biblioteca de cursores executa **SQLGetDescField** quando é chamada para retornar o valor dos campos a seguir que são definidos para as colunas de indicador de associação: SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR, SQL_DESC_OCTET_LENGTH_PTR e SQL_DESC_LENGTH.  
   
- Executa a biblioteca de cursores **SQLGetDescField** quando ele é chamado para retornar o valor do campo SQL_DESC_BIND_OFFSET_PTR, SQL_DESC_BIND_TYPE, SQL_DESC_ROW_ARRAY_SIZE ou SQL_DESC_ROW_STATUS_PTR. Esses campos podem ser retornados para qualquer linha, não apenas a linha do indicador.  
+ A biblioteca de cursores executa **SQLGetDescField** quando é chamada para retornar o valor do SQL_DESC_BIND_OFFSET_PTR, SQL_DESC_BIND_TYPE, SQL_DESC_ROW_ARRAY_SIZE ou SQL_DESC_ROW_STATUS_PTR campo. Esses campos podem ser retornados para qualquer linha, não apenas para a linha de indicador.  
   
- Se um aplicativo chamar **SQLGetDescField** para retornar o valor de qualquer campo que não sejam aquelas mencionadas anteriormente, a biblioteca de cursores passará a chamada para o driver.
+ Se um aplicativo chamar **SQLGetDescField** para retornar o valor de qualquer campo diferente daqueles mencionados anteriormente, a biblioteca de cursores passará a chamada para o driver.

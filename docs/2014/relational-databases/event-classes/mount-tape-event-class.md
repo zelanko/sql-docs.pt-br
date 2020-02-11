@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 513792c12833a14b8d1d3fc78f4b3bb6be173627
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63023454"
 ---
 # <a name="mount-tape-event-class"></a>classe de evento Mount Tape
@@ -26,13 +26,13 @@ ms.locfileid: "63023454"
   
 ## <a name="mount-tape-event-class-data-columns"></a>Colunas de dados de classe de evento Mount Tape  
   
-|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|DESCRIÇÃO|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|`nvarchar`|Nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo.|10|Sim|  
 |ClientProcessID|`int`|ID atribuída pelo computador host ao processo em que o aplicativo cliente está sendo executado. Essa coluna de dados será populada se o cliente fornecer a ID de processo do cliente.|9|Sim|  
 |DatabaseID|`int`|ID do banco de dados especificado pela instrução USE *database* ou o banco de dados padrão se nenhuma instrução USE *database* tiver sido emitida para uma instância especificada. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exibirá o nome do banco de dados se a coluna de dados ServerName for capturada no rastreamento e o servidor estiver disponível. Determine o valor para um banco de dados usando a função DB_ID.|3|Sim|  
 |DatabaseName|`nvarchar`|Nome do banco de dados no qual a instrução do usuário está sendo executada.|35|Sim|  
-|Duração|`bigint`|Período de tempo (em microssegundos) utilizado pelo evento.|13|Sim|  
+|Duration|`bigint`|Período de tempo (em microssegundos) utilizado pelo evento.|13|Sim|  
 |EndTime|`datetime`|Para eventos de Solicitação de Montagem, o tempo limite da montagem, se houver um tempo-limite; caso contrário, o tempo do evento em si (em tais casos,  StartTime indica o tempo da solicitação de montagem correspondente).|15|Sim|  
 |EventClass|`int`|Tipo de evento = 195.|27|Não|  
 |EventSequence|`int`|A sequência de um evento especificado na solicitação.|51|Não|  
@@ -49,7 +49,7 @@ ms.locfileid: "63023454"
 |StartTime|`datetime`|Hora de início do evento, se disponível.|14|Sim|  
 |TextData|`ntext`|*nome do dispositivo físico* [ ( *nome do dispositivo lógico* ) ]. O nome de dispositivo lógico é exibido somente se definido na exibição de catálogo sys.backup_devices.|1|Sim|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [Fazer backup e restaurar bancos de dados do SQL Server](../backup-restore/back-up-and-restore-of-sql-server-databases.md)  
   

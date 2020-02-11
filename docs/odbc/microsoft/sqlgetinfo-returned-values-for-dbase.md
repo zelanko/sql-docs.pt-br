@@ -17,10 +17,10 @@ ms.assetid: af64753c-c758-4b68-954b-2c84e3bbd93f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 247928cfbc7e051853bba0c7f49644a1a6203614
-ms.sourcegitcommit: bcc3b2c7474297aba17b7a63b17c103febdd0af9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68794685"
 ---
 # <a name="sqlgetinfo-returned-values-for-dbase"></a>Valores retornados SQLGetInfo para dBASE
@@ -94,7 +94,7 @@ A tabela a seguir lista os #defines de linguagem C para o argumento *fInfoType* 
 |SQL_DRIVER_HENV|Manipulado pelo Gerenciador de driver.|  
 |SQL_DRIVER_HLIB|Manipulado pelo Gerenciador de driver.|  
 |SQL_DRIVER_HSTMT|Manipulado pelo Gerenciador de driver.|  
-|SQL_DRIVER_NAME|"OdbcJt32.dll"|  
+|SQL_DRIVER_NAME|"OdbcJt32. dll"|  
 |SQL_DRIVER_ODBC_VER|"3.51.0000"|  
 |SQL_DRIVER_VER|"4, 0.*nnnn*" (*nnnn* especifica a data de compilação)|  
 |SQL_DROP_ASSERTION|0|  
@@ -141,7 +141,7 @@ A tabela a seguir lista os #defines de linguagem C para o argumento *fInfoType* 
 |SQL_NON_NULLABLE_COLUMNS|SQL_NNC_NON_NULL|  
 |SQL_NULL_COLLATION|SQL_NC_LOW|  
 |SQL_NUMERIC_FUNCTIONS|Vários valores|  
-|SQL_ODBC_SAG_CLI_ CONFORMANCE|SQL_OSCC_COMPLIANT|  
+|CONFORMIDADE SQL_ODBC_SAG_CLI_|SQL_OSCC_COMPLIANT|  
 |SQL_ODBC_SQL_INTEGRITY|"N"|  
 |SQL_ODBC_VER|Do Gerenciador de driver|  
 |SQL_OJ_CAPABILITIES|Vários valores|  
@@ -156,7 +156,7 @@ A tabela a seguir lista os #defines de linguagem C para o argumento *fInfoType* 
 |SQL_SCROLL_OPTIONS|Vários valores|  
 |SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
 |SQL_SERVER_NAME|DBASE|  
-|SQL_SPECIAL_CHARACTERS|"~\`\@}{\?" ';:/<,.!\>'#$%^&\*\_-+=\\ \[]&#124;"|  
+|SQL_SPECIAL_CHARACTERS|\`\@#$%^&"~\*\? / } {\> " ';:<,.! '\_-+=\\ \[] &#124; "|  
 |SQL_STRING_FUNCTIONS|Vários valores|  
 |SQL_SUBQUERIES|Vários valores|  
 |SQL_SYSTEM_FUNCTIONS|0|  

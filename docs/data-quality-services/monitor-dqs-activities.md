@@ -15,10 +15,10 @@ ms.assetid: 1d4c76f3-0d7b-498e-b792-4db4a0349814
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: d9926eb251d109eb8ed9529a4ae739e8a1915b07
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245464"
 ---
 # <a name="monitor-dqs-activities"></a>Monitorar atividade do DQS
@@ -27,14 +27,14 @@ ms.locfileid: "75245464"
 
   Este tópico descreve como monitorar as seguintes atividades de modo centralizado no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS): descoberta de conhecimento, gerenciamento de domínio, política de correspondência, limpeza de dados, correspondência de dados e limpeza do SSIS.  
   
-##  <a name="BeforeYouBegin"></a>Antes de começar  
+##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="LimitationsRestrictions"></a>Limitações e restrições  
+###  <a name="LimitationsRestrictions"></a> Limitações e restrições  
  Somente os usuários com a função dqs_administrator no banco de dados DQS_Main podem encerrar uma atividade ou interromper um processo em uma atividade.  
   
-###  <a name="Security"></a>Segurança  
+###  <a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a>Permissões  
+####  <a name="Permissions"></a> Permissões  
   
 -   Você deve ter a função dqs_kb_editor ou dqs_kb_operator no banco de dados DQS_MAIN para exibir as atividades do DQS.  
   
@@ -135,7 +135,7 @@ ms.locfileid: "75245464"
   
 3.  Você é solicitado a especificar um nome e local para o arquivo do Excel a ser salvo. O arquivo do Excel exportado contém as seguintes planilhas:  
   
-    |Nome da planilha|Descrição|  
+    |Nome da planilha|DESCRIÇÃO|  
     |----------------|-----------------|  
     |Atividade|Contém informações (colunas) sobre a atividade como na grade de atividade.|  
     |Processos|Contém informações (colunas) sobre os processos da atividade como na guia **Etapas da Atividade** .|  

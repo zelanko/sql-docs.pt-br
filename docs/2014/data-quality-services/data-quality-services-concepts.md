@@ -11,29 +11,29 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6f1cba6a6a20fc804d29aeb0dbf43d7bebfbb225
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70154451"
 ---
 # <a name="data-quality-services-concepts"></a>Conceitos do Data Quality Services
   Este tópico fornece um resumo breve de conceitos do [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) em gerenciamento de conhecimento, projetos de qualidade de dados e administração de qualidade de dados.  
   
-##  <a name="Knowledge"></a> Conceitos de gerenciamento de conhecimento  
+##  <a name="Knowledge"></a>Conceitos de gerenciamento de conhecimento  
  A base de dados de conhecimento do DQS é um repositório de metadados que são criados pelo administrador de dados ou pelo profissional de TI a fim de melhorar a qualidade de dados através da limpeza e da correspondência de dados. O gerenciamento de conhecimento do DQS inclui os processos usados para criar e gerenciar a base de conhecimento, de forma assistida por computador e interativamente.  
   
- **Descoberta da Base de Dados de Conhecimento**  
+ **Descoberta de conhecimento**  
   
  A descoberta de conhecimento é um processo assistido por computador que analisa exemplos dos dados de sua organização para criar conhecimento sobre os dados. Quando você tem os resultados da análise, pode validar e aprimorar o conhecimento e, depois, aplicá-lo à execução de limpeza, correspondência e criação de perfil de dados. Para obter mais informações, consulte [DQS Knowledge Bases and Domains](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md).  
   
- **Gerenciamento de Domínio**  
+ **Gerenciamento de domínio**  
   
  O processo de gerenciamento de domínio lhe permite alterar ou aumentar o conhecimento gerado pelo processo de descoberta de conhecimento. Você pode editar, atualizar e revisar interativamente o conhecimento em uma base de dados de conhecimento. Uma base de dados de conhecimento consiste em domínios de dados que contêm valores de domínio e seu status, regras de domínio, relações baseadas em termos e dados de referência. No gerenciamento de domínio, você pode alterar propriedades de domínio, anexar dados de referência a um domínio, gerenciar regras de domínio, gerenciar valores de domínio e inserir relações de dados, além de criar, excluir, importar ou exportar domínios. Você também pode usar domínios compostos que agregam mais de um domínio único. Para obter mais informações, consulte [DQS Knowledge Bases and Domains](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md).  
   
- **Política de Correspondência**  
+ **Política de correspondência**  
   
- Uma política de correspondência contém as regras de correspondência usadas para executar a eliminação de duplicação de dados. O processo de política de correspondência permite a você criar regras de correspondência, ajustá-las com base nos resultados correspondentes e na criação de perfis de dados, além de adicionar a política à base de dados de conhecimento. Para obter mais informações, consulte [Correspondência de dados](../../2014/data-quality-services/data-matching.md).  
+ Uma política de correspondência contém as regras de correspondência usadas para executar a eliminação de duplicação de dados. O processo de política de correspondência permite a você criar regras de correspondência, ajustá-las com base nos resultados correspondentes e na criação de perfis de dados, além de adicionar a política à base de dados de conhecimento. Para obter mais informações, consulte [Data Matching](../../2014/data-quality-services/data-matching.md).  
   
  **Serviços de Dados de Referência**  
   
@@ -41,16 +41,16 @@ ms.locfileid: "70154451"
   
  Para obter mais informações sobre o gerenciamento de conhecimento no DQS, consulte [DQS Knowledge Bases and Domains](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md).  
   
-##  <a name="Projects"></a> Conceitos de projeto de qualidade de dados  
+##  <a name="Projects"></a>Conceitos de projeto de qualidade de dados  
  O administrador de dados executa operações de qualidade de dados (limpeza e correspondência) usando um projeto de qualidade de dados no aplicativo do [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] .  
   
- **Limpeza de Dados**  
+ **Data Cleansing**  
   
  A limpeza de dados no DQS é feita com base no conhecimento em uma base de dados de conhecimento do DQS. A limpeza de dados no DQS é um processo de duas etapas:  
   
--   **Limpeza auxiliada por computador**: o DQS usa o conhecimento na base de dados de conhecimento selecionada para o projeto de limpeza para propor correções/sugestões aos valores em uma fonte de dados.  
+-   **Limpeza auxiliada por computador**: o DQS usa o conhecimento na base de dados de conhecimento selecionada para que o projeto de limpeza proponha correções/sugestões para os valores em uma fonte.  
   
--   **Limpeza interativa**: O administrador de dados pode executar o processo de limpeza interativa para alterar ou aumentar correções de dados que foram propostas pelo processo de limpeza de dados assistida por computador. O administrador de dados faz isso usando níveis de confiança e estatísticas identificadas pelo processo de limpeza de dados, ou inserindo manualmente suas próprias alterações no projeto.  
+-   **Limpeza interativa**: o administrador de dados pode executar o processo de limpeza interativo para alterar ou aumentar as correções de dados que foram propostas pelo processo de limpeza de dados assistido por computador. O administrador de dados faz isso usando níveis de confiança e estatísticas identificadas pelo processo de limpeza de dados, ou inserindo manualmente suas próprias alterações no projeto.  
   
  Depois de limpar dados, o administrador de dados pode exportar os dados processados para um banco de dados do SQL Server, .csv ou um arquivo do Excel. Para obter mais informações, consulte [Data Cleansing](../../2014/data-quality-services/data-cleansing.md).  
   
@@ -58,16 +58,16 @@ ms.locfileid: "70154451"
   
  O processo de correspondência permite ao administrador de dados comparar dados de forma que dados semelhantes, mas com ligeiras diferenças, possam ser alinhados através de um processo de eliminação de duplicação. O DQS executa a eliminação de duplicação com base em regras de correspondência contidas na base de dados de conhecimento; o administrador de dados especifica parâmetros para o processo de correspondência dentro de um projeto de qualidade de dados. Para obter mais informações, consulte [Data Matching](../../2014/data-quality-services/data-matching.md).  
   
- **Criação de perfis e notificações**  
+ **Criação de perfil e notificações**  
   
  A criação de perfil de dados fornece aos administradores de dados estatísticas em tempo real e informações sobre os dados que estão sendo processados pelo DQS para as atividades de limpeza e correspondência enquanto executa um projeto de qualidade de dados. A criação de perfil de dados ajuda a avaliar a efetividade das atividades de limpeza e correspondência em um projeto de qualidade de dados, e as notificações ajudam o usuário com ações que podem ser realizadas para aprimorar as atividades de limpeza de dados e correspondência de dados. Para obter mais informações, consulte [Data Profiling and Notifications in DQS](../../2014/data-quality-services/data-profiling-and-notifications-in-dqs.md).  
   
  Para obter mais informações sobre projetos de qualidade de dados no DQS, consulte [Projetos de qualidade de dados &#40;DQS&#41;](../../2014/data-quality-services/data-quality-projects-dqs.md).  
   
-##  <a name="Admin"></a> Conceitos de administração do Data Quality  
+##  <a name="Admin"></a>Conceitos de administração de qualidade de dados  
  Um administrador de DQS pode executar a variedade de tarefas administrativas usando o aplicativo [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] .  
   
- **Monitoramento de Atividades**  
+ **Monitoramento de atividades**  
   
  O monitoramento de atividades exibe o status e o estado de cada atividade executada em um intervalo de dados, fornece dados para cada atividade e permite que os administradores do DQS controlem uma atividade. Para obter mais informações, consulte [Monitor DQS Activities](../../2014/data-quality-services/monitor-dqs-activities.md).  
   
@@ -89,7 +89,7 @@ ms.locfileid: "70154451"
   
  Para obter mais informações sobre a administração do DQS, consulte [DQS Administration](../../2014/data-quality-services/dqs-administration.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Data Quality Services](../../2014/data-quality-services/data-quality-services.md)  
   
   

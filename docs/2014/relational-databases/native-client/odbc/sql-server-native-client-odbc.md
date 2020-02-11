@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 570c0574357d9315f0e6b153f3eeabac79ec673b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63055656"
 ---
 # <a name="sql-server-native-client-odbc"></a>SQL Server Native Client (ODBC)
@@ -38,15 +38,15 @@ ms.locfileid: "63055656"
   
 -   [Criando um aplicativo de driver ODBC do SQL Server Native Client](creating-a-driver-application.md)  
   
--   [Comunicando-se com o SQL Server &#40;ODBC&#41;](../../native-client-odbc-communication/communicating-with-sql-server-odbc.md)  
+-   [Comunicando-se com SQL Server &#40;ODBC&#41;](../../native-client-odbc-communication/communicating-with-sql-server-odbc.md)  
   
 -   [Executando consultas &#40;ODBC&#41;](../../native-client-odbc-queries/executing-queries-odbc.md)  
   
--   [Processando resultados &#40;ODBC&#41;](../../native-client-odbc-results/processing-results-odbc.md)  
+-   [Processando resultados &#40;&#41;ODBC](../../native-client-odbc-results/processing-results-odbc.md)  
   
--   [Uso de cursores &#40;ODBC&#41;](../../native-client-odbc-cursors/using-cursors-odbc.md)  
+-   [Usando cursores &#40;ODBC&#41;](../../native-client-odbc-cursors/using-cursors-odbc.md)  
   
--   [Executando transações &#40;ODBC&#41;](../../../database-engine/dev-guide/performing-transactions-odbc.md)  
+-   [Executando transações &#40;&#41;ODBC](../../../database-engine/dev-guide/performing-transactions-odbc.md)  
   
 -   [Tratando de erros e mensagens](../../native-client-odbc-error-messages/handling-errors-and-messages.md)  
   
@@ -54,30 +54,30 @@ ms.locfileid: "63055656"
   
 -   [Usando funções de catálogo](using-catalog-functions.md)  
   
--   [Executando operações de cópia em massa &#40;ODBC&#41;](../../native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
+-   [Executando operações de cópia em massa &#40;&#41;ODBC](../../native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
   
--   [Gerenciando colunas Text e Image](../../native-client-odbc-text-image-columns/managing-text-and-image-columns.md)  
+-   [Gerenciando colunas de texto e imagem](../../native-client-odbc-text-image-columns/managing-text-and-image-columns.md)  
   
 -   [Criando perfil de desempenho do driver ODBC](profiling-odbc-driver-performance.md)  
   
--   [Parâmetros com valor de tabela &#40;ODBC&#41;](../../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
+-   [Parâmetros com valor de tabela &#40;&#41;ODBC](../../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
--   [Aprimoramentos de data e hora &#40;ODBC&#41;](../../native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+-   [Melhorias de data e hora &#40;&#41;ODBC](../../native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
--   [Tipos CLR grandes definidos pelo usuário &#40;ODBC&#41;](large-clr-user-defined-types-odbc.md)  
+-   [Tipos de CLR grandes definidos pelo usuário &#40;&#41;ODBC](large-clr-user-defined-types-odbc.md)  
   
--   [Suporte a FILESTREAM &#40;ODBC&#41;](filestream-support-odbc.md)  
+-   [Suporte a FILESTREAM &#40;&#41;ODBC](filestream-support-odbc.md)  
   
--   [Nomes de entidade de serviço &#40;SPNs&#41; em conexões de cliente &#40;ODBC&#41;](service-principal-names-spns-in-client-connections-odbc.md)  
+-   [SPNs &#40;Nomes da Entidade de Serviço&#41; em conexões de cliente &#40;ODBC&#41;](service-principal-names-spns-in-client-connections-odbc.md)  
   
--   [Suporte a colunas esparsas &#40;ODBC&#41;](sparse-columns-support-odbc.md)  
+-   [Colunas esparsas dão suporte a&#41;&#40;ODBC](sparse-columns-support-odbc.md)  
   
--   [SQL Server Native Client &#40;ODBC&#41; referência](../../../database-engine/dev-guide/sql-server-native-client-odbc-reference.md)  
+-   [Referência de&#41; &#40;ODBC do SQL Server Native Client](../../../database-engine/dev-guide/sql-server-native-client-odbc-reference.md)  
   
 -   [Tópicos de instruções sobre ODBC](../../native-client-odbc-how-to/odbc-how-to-topics.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Programação do SQL Server Native Client](../sql-server-native-client-programming.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Programação de SQL Server Native Client](../sql-server-native-client-programming.md)   
  [Instalando o SQL Server Native Client](../applications/installing-sql-server-native-client.md)  
   
   

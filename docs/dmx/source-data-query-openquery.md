@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: caac43eb176e17a6e92e487f3dedae71a252f5af
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68887724"
 ---
 # <a name="ltsource-data-querygt---openquery"></a>&lt;consulta&gt; de dados de origem-OPENQUERY
@@ -29,15 +29,15 @@ OPENQUERY(<named datasource>, <query syntax>)
   
 ## <a name="arguments"></a>Argumentos  
  *fonte de fontes nomeada*  
- Uma fonte de dados que existe no [!INCLUDE[msCoName](../includes/msconame-md.md)] banco de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dado.  
+ Uma fonte de dados que existe no [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] banco de dado.  
   
  *sintaxe de consulta*  
  Sintaxe de consulta que retorna um conjunto de linhas.  
   
 ## <a name="remarks"></a>Comentários  
- **OPENQUERY** fornece uma maneira mais segura de acessar dados externos ao dar suporte a permissões de fonte de dados. Como a cadeia de conexão é armazenada na fonte de dados, os administradores podem usar as propriedades da fonte de dados para gerenciar o acesso aos dados. Para obter mais informações sobre fontes de dados, consulte [fontes &#40;de dados com suporte SSAS&#41;-](https://docs.microsoft.com/analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional)multidimensional.  
+ **OPENQUERY** fornece uma maneira mais segura de acessar dados externos ao dar suporte a permissões de fonte de dados. Como a cadeia de conexão é armazenada na fonte de dados, os administradores podem usar as propriedades da fonte de dados para gerenciar o acesso aos dados. Para obter mais informações sobre fontes de dados, consulte [fontes de dados com suporte &#40;SSAS-&#41;multidimensional ](https://docs.microsoft.com/analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional).  
   
- Você pode obter uma lista das fontes de dados que estão disponíveis em um servidor consultando o conjunto de linhas de esquema **MDSCHEMA_INPUT_DATASOURCES** . Para obter mais informações sobre como usar **MDSCHEMA_INPUT_DATASOURCES**, consulte [conjunto de linhas MDSCHEMA_INPUT_DATASOURCES](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-input-datasources-rowset).  
+ Você pode obter uma lista das fontes de dados que estão disponíveis em um servidor consultando o conjunto de linhas de esquema **MDSCHEMA_INPUT_DATASOURCES** . Para obter mais informações sobre como usar **MDSCHEMA_INPUT_DATASOURCES**, consulte [MDSCHEMA_INPUT_DATASOURCES conjunto de linhas](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-input-datasources-rowset).  
   
  Também é possível retornar uma lista das fontes de dados no banco de dados atual do Analysis Services usando a seguinte consulta DMX:  
   
@@ -50,9 +50,9 @@ OPENQUERY(<named datasource>, <query syntax>)
 OPENQUERY (MyDS,'SELECT TOP 1000 * FROM vTargetMail')  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [&#60;consulta de dados de origem&#62;](../dmx/source-data-query.md)   
- [Instruções de manipulação &#40;de&#41; dados DMX de extensões de mineração de dados](../dmx/dmx-statements-data-manipulation.md)   
- [Referência de instruções de DMX &#40extensões de Mineração de Dados&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
+## <a name="see-also"></a>Consulte Também  
+ [&#62;de consulta de dados de origem&#60;](../dmx/source-data-query.md)   
+ [&#40;instruções de manipulação de dados do DMX&#41; extensões do Data Mining](../dmx/dmx-statements-data-manipulation.md)   
+ [Referência de instrução&#41; &#40;DMX de extensões de mineração de dados](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

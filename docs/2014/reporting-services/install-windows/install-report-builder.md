@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 60a96db6a7568c2af22242f10f96e7a2abf13937
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637833"
 ---
 # <a name="install-the-stand-alone-version-of-report-builder-report-builder"></a>Instalar a versão autônoma do Construtor de Relatórios (Construtor de Relatórios)
-  Você pode instalar o Construtor de Relatórios do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Feature Pack no [centro de download da Microsoft](https://www.microsoft.com/download/details.aspx?id=53613) ou em um local como a pasta pública na qual o ReportBuilder3_x86. msi, o pacote de Windows Installer para Construtor de relatórios, foi baixado.  
+  Você pode instalar o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Construtor de relatórios do Feature Pack no centro de download da [Microsoft](https://www.microsoft.com/download/details.aspx?id=53613) ou em um local, como a pasta pública na qual o ReportBuilder3_x86. msi, o pacote de Windows Installer para Construtor de relatórios, foi baixado.  
   
  Também é possível executar uma instalação de linha de comando do Construtor de Relatórios e fornecer argumentos para personalizar a instalação. Além dos parâmetros intrínsecos ao MSI padrão, você pode usar os parâmetros personalizados fornecidos pelo Construtor de Relatórios: RBINSTALLDIR e REPORTSERVERURL. RBINSTALLDIR especifica a pasta de instalação raiz para o Construtor de Relatórios. REPORTSERVERURL especifica o servidor de relatório padrão que o Construtor de Relatórios usa para salvar relatórios no servidor.  
   
@@ -47,23 +47,23 @@ ms.locfileid: "73637833"
   
 6.  Na página **Bem-vindo ao assistente de instalação** , clique em **Avançar**.  
   
-7.  Na página **contrato de licença** , leia o contrato e, em seguida, selecione a opção **eu aceito os termos do contrato de licença** . Clique em **Avançar**.  
+7.  Na página **contrato de licença** , leia o contrato e, em seguida, selecione a opção **eu aceito os termos do contrato de licença** . Clique em **Próximo**.  
   
-8.  Forneça seu nome e o nome da sua empresa. Clique em **Avançar**.  
+8.  Forneça seu nome e o nome da sua empresa. Clique em **Próximo**.  
   
-9. Na página **seleção de recursos** , opcionalmente, clique em **procurar** ou em **custo de disco**. Clique em **Avançar**.  
+9. Na página **seleção de recursos** , opcionalmente, clique em **procurar** ou em **custo de disco**. Clique em **Próximo**.  
   
     -   Clique em **procurar** para ver o local padrão de construtor de relatórios e atualizá-lo.  
   
         > [!NOTE]  
-        >  A pasta de instalação padrão para Construtor de Relatórios é \<unidade > arquivos de Programas\microsoft SQL Server.  
+        >  A pasta de instalação padrão para Construtor de Relatórios \<é Drive>arquivos de Programas\Microsoft SQL Server.  
   
     -   Clique em **custo do disco** para saber a quantidade de espaço em disco que o construtor de relatórios consome.  
   
         > [!NOTE]  
         >  Se um volume não tiver a quantidade suficiente de espaço livre em disco, esse volume será realçado.  
   
-10. Na página **Servidor de Destino Padrão** , se desejar, forneça a URL ao servidor de relatório de destino se for diferente do padrão. Clique em **Avançar**.  
+10. Na página **Servidor de Destino Padrão** , se desejar, forneça a URL ao servidor de relatório de destino se for diferente do padrão. Clique em **Próximo**.  
   
     > [!NOTE]  
     >  Se você planejar trabalhar com o Construtor de Relatórios quando estiver conectado a um servidor de relatório, será conveniente fornecer a URL ao servidor nesse momento. No entanto, você também pode fazer isso na caixa de diálogo **Opções** quando estiver trabalhando no construtor de relatórios.  
@@ -80,23 +80,23 @@ ms.locfileid: "73637833"
   
 3.  Na página **Bem-vindo ao assistente de instalação** , clique em **Avançar**.  
   
-4.  Na página **contrato de licença** , leia o contrato e, em seguida, selecione a opção **eu aceito os termos do contrato de licença** . Clique em **Avançar**.  
+4.  Na página **contrato de licença** , leia o contrato e, em seguida, selecione a opção **eu aceito os termos do contrato de licença** . Clique em **Próximo**.  
   
-5.  Forneça seu nome e o nome da sua empresa. Clique em **Avançar**.  
+5.  Forneça seu nome e o nome da sua empresa. Clique em **Próximo**.  
   
-6.  Na página **seleção de recursos** , opcionalmente, clique em **procurar** ou em **custo de disco**. Clique em **Avançar**.  
+6.  Na página **seleção de recursos** , opcionalmente, clique em **procurar** ou em **custo de disco**. Clique em **Próximo**.  
   
     -   Clique em **procurar** para ver o local padrão de construtor de relatórios e atualizá-lo.  
   
         > [!NOTE]  
-        >  A pasta de instalação padrão para Construtor de Relatórios é \<unidade > arquivos de Programas\microsoft SQL Server.  
+        >  A pasta de instalação padrão para Construtor de Relatórios \<é Drive>arquivos de Programas\Microsoft SQL Server.  
   
     -   Clique em **custo do disco** para saber a quantidade de espaço em disco que o construtor de relatórios consome.  
   
         > [!NOTE]  
         >  Se um volume não tiver a quantidade suficiente de espaço livre em disco, esse volume será realçado.  
   
-7.  Na página **Servidor de Destino Padrão** , se desejar, forneça a URL ao servidor de relatório de destino se for diferente do padrão. Clique em **Avançar**.  
+7.  Na página **Servidor de Destino Padrão** , se desejar, forneça a URL ao servidor de relatório de destino se for diferente do padrão. Clique em **Próximo**.  
   
     > [!NOTE]  
     >  Se você planejar trabalhar com o Construtor de Relatórios quando estiver conectado a um servidor de relatório, será conveniente fornecer a URL ao servidor nesse momento. No entanto, você também pode fazer isso na caixa de diálogo **Opções** quando estiver trabalhando no construtor de relatórios.  
@@ -115,7 +115,7 @@ ms.locfileid: "73637833"
   
 5.  No menu **Iniciar** , clique em **Executar**.  
   
-6.  Na caixa de texto abrir, digite `cmd.`  
+6.  Na caixa de texto Abrir, digite `cmd.`  
   
 7.  Na janela do prompt de comando, navegue até pasta em que você salvou o ReportBuilder3_x86.msi.  
   
@@ -129,8 +129,8 @@ ms.locfileid: "73637833"
   
 9. Para executar o comando, pressione Enter.  
   
-## <a name="see-also"></a>Consulte também  
- [Instalar, desinstalar e Construtor de relatórios suporte](../install-uninstall-and-report-builder-support.md)   
- [Desinstalar a versão autônoma do Construtor de Relatórios &#40;Construtor de relatórios&#41;](install-report-builder.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Instalar, desinstalar e Construtor de Relatórios suporte](../install-uninstall-and-report-builder-support.md)   
+ [Desinstale a versão autônoma do Construtor de Relatórios &#40;Construtor de Relatórios&#41;](install-report-builder.md)  
   
   

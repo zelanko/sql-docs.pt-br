@@ -11,18 +11,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 66cbc5b8b54ec2507bb4fbe96443afa25386de96
-ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/31/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68670503"
 ---
 # <a name="backup-restore-and-move-the-ssis-catalog"></a>Fazer backup, restaurar e mover o catálogo do SSIS
-  [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] inclui o banco de dados SSISDB. Você consulta exibições no banco de dados SSISDB para inspecionar objetos, configurações e dados operacionais que são armazenados no catálogo do **SSISDB** . Este tópico fornece instruções para fazer backup do banco de dados e restaurá-lo.  
+  [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)]inclui o banco de dados SSISDB. Você consulta exibições no banco de dados SSISDB para inspecionar objetos, configurações e dados operacionais que são armazenados no catálogo do **SSISDB** . Este tópico fornece instruções para fazer backup do banco de dados e restaurá-lo.  
   
  O catálogo do **SSISDB** armazena os pacotes que você implantou no servidor [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Para obter mais informações sobre o catálogo, consulte [Catálogo do SSIS](catalog/ssis-catalog.md).  
   
-##  <a name="backup"></a> Para fazer o backup do banco de dados SSIS  
+##  <a name="backup"></a>Para fazer backup do banco de dados do SSIS  
   
 1.  Abra o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] e conecte-se a uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
@@ -38,7 +38,7 @@ ms.locfileid: "68670503"
   
     ```  
   
-3.  Faça backup do banco de dados do SSISDB usando a caixa de diálogo **Backup de Banco de Dados** no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Para obter mais informações, confira [Como executar backup de um banco de dados (SQL Server Management Studio)](https://go.microsoft.com/fwlink/?LinkId=231812).  
+3.  Faça backup do banco de dados do SSISDB usando a caixa de diálogo **Backup de Banco de Dados** no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Para obter mais informações, consulte [Como fazer backup de um banco de dados (SQL Server Management Studio)](https://go.microsoft.com/fwlink/?LinkId=231812).  
   
 4.  Gere o script de CREATE LOGIN para ##MS_SSISServerCleanupJobLogin ##, fazendo o seguinte. Para obter mais informações, veja [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql).  
   
@@ -48,7 +48,7 @@ ms.locfileid: "68670503"
   
 5.  Se você estiver restaurando o banco de dados SSISDB para uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] na qual o catálogo do SSISDB nunca foi criado, gere o script CREATE PROCEDURE para sp_ssis_startup, fazendo o seguinte. Para obter mais informações, consulte [CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql).  
   
-    1.  No Pesquisador de objetos, expanda o nó **bancos de dados** e expanda os > bancos de dados do sistema nó de**procedimentos armazenados** de**programação** > **mestre** > .  
+    1.  No Pesquisador de objetos, expanda o nó **bancos de dados** e expanda os bancos de **dados** > do sistema nó de**procedimentos armazenados** de**programação** > **mestre** > .  
   
     2.  Clique com o botão direito do mouse em **dbo.sp_ssis_startup**e clique em **Script de Procedimento Armazenado como** > **CREATE To** > **Nova Janela do Editor de Consultas**.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "68670503"
   
     1.  No Pesquisador de Objetos, expanda o nó **SQL Server Agent** e, em seguida, expanda o nó **Trabalhos** .  
   
-    2.  Clique com o botão direito do mouse em Trabalho de Manutenção do Servidor SSIS e clique em **Script de Trabalho como** > **CREATE To** > **Nova Janela do Editor de Consultas**.  
+    2.  Clique com o botão direito do mouse em trabalho de manutenção do servidor SSIS e clique em **trabalho de script como** > **criar para a** > **nova janela do editor de consultas**.  
   
 ### <a name="to-restore-the-ssis-database"></a>Para restaurar o banco de dados SSIS  
   
@@ -79,7 +79,7 @@ ms.locfileid: "68670503"
   
     ```  
   
-     [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Os procedimentos armazenados CLR exigem que permissões de UNSAFE sejam concedidas ao logon porque o logon exige acesso adicional a recursos restritos, como a API do Microsoft Win32. Para obter mais informações sobre a permissão de código UNSAFE, consulte [Criando um assembly](../relational-databases/clr-integration/assemblies/creating-an-assembly.md).  
+     [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]Os procedimentos armazenados CLR exigem que permissões não seguras sejam concedidas ao logon, pois o logon requer acesso adicional a recursos restritos, como a API do Microsoft Win32. Para obter mais informações sobre a permissão de código UNSAFE, consulte [Criando um assembly](../relational-databases/clr-integration/assemblies/creating-an-assembly.md).  
   
     ```  
     Create Login MS_SQLEnableSystemAssemblyLoadingUser  
@@ -93,7 +93,7 @@ ms.locfileid: "68670503"
   
     -   [Restaurar banco de dados &#40;página Geral&#41;](general-page-of-integration-services-designers-options.md)  
   
-    -   [Restaurar banco de dados &#40;página Arquivos&#41;](../relational-databases/backup-restore/restore-database-files-page.md)  
+    -   [Página restaurar arquivos de &#40;de banco de dados&#41;](../relational-databases/backup-restore/restore-database-files-page.md)  
   
     -   [Restaurar banco de dados &#40;página Opções&#41;](../relational-databases/backup-restore/restore-database-options-page.md)  
   

@@ -11,16 +11,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1b2f4b080287dd4481a121def388f327112f21ae
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70154607"
 ---
 # <a name="database-engine-tutorials"></a>Tutoriais do Mecanismo de Banco de Dados
   Esta seção contém tutoriais para [!INCLUDE[ssDECurrent](../includes/ssdecurrent-md.md)].  
   
- [Tutorial: introdução ao Mecanismo de Banco de Dados](tutorial-getting-started-with-the-database-engine.md)  
+ [Tutorial: Introdução ao Mecanismo de Banco de Dados](tutorial-getting-started-with-the-database-engine.md)  
  Este tutorial ensina como conectar-se a uma instância do [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
  [Tutorial: SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)  
@@ -32,29 +32,29 @@ ms.locfileid: "70154607"
  [Tutorial: Orientador de Otimização do Mecanismo de Banco de Dados](../tools/dta/tutorial-database-engine-tuning-advisor.md)  
  Este tutorial apresenta o uso do orientador para analisar como as consultas são processadas e, em seguida, examinar as recomendações para melhorar o desempenho da consulta.  
   
- [Tutorial: Usando o tipo de dados hierarchyid](tables/tutorial-using-the-hierarchyid-data-type.md)  
+ [Tutorial: Usar o tipo de dados hierarchyid](tables/tutorial-using-the-hierarchyid-data-type.md)  
  Este tutorial ensina a converter uma tabela em uma estrutura hierárquica, e gerencia os dados na tabela.  
   
- [Tutorial: Assinando procedimentos armazenados com um certificado](tutorial-signing-stored-procedures-with-a-certificate.md)  
+ [Tutorial: Assinar procedimentos armazenados com um certificado](tutorial-signing-stored-procedures-with-a-certificate.md)  
  Este tutorial ilustra como assinar procedimentos armazenados usando um certificado gerado pelo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
- [Tutorial: Ownership Chains and Context Switching](tutorial-ownership-chains-and-context-switching.md)  
+ [Tutorial: Cadeias de Propriedade e Comutação de Contexto](tutorial-ownership-chains-and-context-switching.md)  
  Este tutorial usa um cenário para ilustrar os conceitos de segurança do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] envolvendo cadeias de propriedade e alternância de contexto de usuário.  
   
- [Tutorial: Administrando servidores com o uso do Gerenciamento Baseado em Políticas](policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md)  
+ [Tutorial: Administrar servidores com gerenciamento baseado em políticas](policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md)  
  Este tutorial ensina como criar políticas que impõem padrões de administração de site.  
   
  [Tutorial: Avaliando práticas recomendadas usando o Gerenciamento Baseado em Políticas](../tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md)  
  Este tutorial ensina como criar políticas que podem ser usadas para analisar as instâncias do [!INCLUDE[ssDE](../includes/ssde-md.md)] para problemas conhecidos.  
   
- [Tutorial: SQL Server Backup e restauração para o serviço de armazenamento de BLOBs do Azure](tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+ [Tutorial: Backup e restauração do SQL Server no serviço de Armazenamento de Blobs do Azure](tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
  Este tutorial ilustra como fazer um backup do SQL Server e uma restauração do SQL Server para o serviço de Armazenamento de Blobs do Azure.  
   
- [Tutorial: SQL Server arquivos de dados no serviço de armazenamento do Azure](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
+ [Tutorial: Arquivos de dados do SQL Server no serviço de Armazenamento do Azure](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
  Este tutorial explica como armazenar diretamente os arquivos de dados do SQL Server no serviço de Armazenamento de Blobs do Azure.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tutoriais para SQL Server 2014](../tutorials/tutorials-for-sql-server-2014.md)   
- [TechNet WIKI: exemplos do SQL Server 2012](https://go.microsoft.com/fwlink/?linkID=220734)  
+ [TechNet WIKI: exemplos de SQL Server 2012](https://go.microsoft.com/fwlink/?linkID=220734)  
   
   

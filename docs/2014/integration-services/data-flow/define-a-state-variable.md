@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4b0dcc3c1709943207834aab6ef4b39453b2d89d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62827561"
 ---
 # <a name="define-a-state-variable"></a>Definir uma variável de estado
@@ -26,7 +26,7 @@ ms.locfileid: "62827561"
   
  A tabela a seguir fornece uma descrição de alto nível dos componentes do valor da variável de estado CDC.  
   
-|Componente|Descrição|  
+|Componente|DESCRIÇÃO|  
 |---------------|-----------------|  
 |`<state-name>`|Este é o nome do estado CDC atual.|  
 |`CS`|Isso marca o ponto inicial do intervalo de processamento atual (Início atual).|  
@@ -45,7 +45,7 @@ ms.locfileid: "62827561"
   
  A tabela a seguir descreve os valores de estado CDC possíveis.  
   
-|Estado|Descrição|  
+|Estado|DESCRIÇÃO|  
 |-----------|-----------------|  
 |(INITIAL)|Esse é o estado inicial antes de qualquer pacote ter sido executado no grupo de CDC atual. Este também é o estado quando o estado de CDC está vazio.|  
 |ILSTART (Initial Load Started)|Esse é o estado do início do pacote de carga inicial, depois da chamada da operação de `MarkInitialLoadStart` para a tarefa Controle CDC.|  
@@ -84,7 +84,7 @@ ms.locfileid: "62827561"
   
  Se você não estiver usando a tarefa de Controle CDC com a Persistência de Estado Automática, deverá carregar o valor da variável a partir do repositório persistente em que seu valor foi salvo da última vez que o pacote foi executado e gravá-la no repositório persistente quando o processamento do intervalo atual for concluído.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tarefa Controle de CDC](../control-flow/cdc-control-task.md)   
  [Editor da Tarefa Controle de CDC](../cdc-control-task-editor.md)  
   

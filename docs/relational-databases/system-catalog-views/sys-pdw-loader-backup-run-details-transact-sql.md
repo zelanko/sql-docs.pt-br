@@ -1,5 +1,5 @@
 ---
-title: sys.pdw_loader_backup_run_details (Transact-SQL) | Microsoft Docs
+title: sys. pdw_loader_backup_run_details (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,28 +13,28 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: dead5962987f7fb132f21bb4e3517f7cc9249601
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68127653"
 ---
-# <a name="syspdwloaderbackuprundetails-transact-sql"></a>sys.pdw_loader_backup_run_details (Transact-SQL)
+# <a name="syspdw_loader_backup_run_details-transact-sql"></a>sys. pdw_loader_backup_run_details (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Contém mais informações detalhadas, além das informações no [sys.pdw_loader_backup_runs &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md), e sobre backup em andamento e concluído e operações de restauração na [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e sobre em andamento e concluir o backup, restauração e operações de carregamento em [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. As informações persistem entre os reinícios do sistema.  
+  Contém informações detalhadas adicionais, além das informações em [Sys. pdw_loader_backup_runs &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md), sobre operações de backup e restauração em andamento e [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] concluídas no e sobre operações de backup, restauração e carregamento em [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]andamento e concluídas no. As informações persistem entre os reinícios do sistema.  
   
-|Nome da coluna|Tipo de dados|Descrição|Intervalo|  
+|Nome da coluna|Tipo de Dados|DESCRIÇÃO|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
-|run_id|**int**|Identificador exclusivo de um backup específico ou a restauração da execução.<br /><br /> run_id e pdw_node_id formam a chave para esta exibição.||  
-|pdw_node_id|**int**|Identificador exclusivo de um nó de dispositivo para o qual esse registro contém detalhes.<br /><br /> run_id e pdw_node_id formam a chave para esta exibição.|Consulte node_id na [sys.dm_pdw_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).|  
-|status|**nvarchar(16)**|O status atual da execução.|'CANCELLED', 'COMPLETED', 'FAILED', 'QUEUED', 'RUNNING'|  
-|start_time|**datetime**|Hora em que a operação iniciada neste nó específico.||  
-|end_time|**datetime**|Hora em que a operação foi encerrado neste nó específico, se houver.||  
-|total_elapsed_time|**int**|Total de tempo a operação tem em execução neste nó específico.|Se total_elapsed_time exceder o valor máximo para um inteiro (24,8 dias em milissegundos), ela causará falha de materialização devido a estouro.<br /><br /> O valor máximo em milissegundos é equivalente a 24,8 dias.|  
-|Progresso|**int**|Progresso da operação expressada como uma porcentagem.|0 a 100|  
+|run_id|**int**|Identificador exclusivo para uma execução de backup ou restauração específica.<br /><br /> run_id e pdw_node_id formate a chave para essa exibição.||  
+|pdw_node_id|**int**|Identificador exclusivo de um nó de dispositivo para o qual este registro contém detalhes.<br /><br /> run_id e pdw_node_id formate a chave para essa exibição.|Consulte node_id em [Sys. dm_pdw_nodes &#40;&#41;do Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).|  
+|status|**nvarchar (16)**|O status atual da execução.|' CANCELADO ', ' CONCLUÍDO ', ' COM FALHA ', ' ENFILEIRADO ', ' EM EXECUÇÃO '|  
+|start_time|**datetime**|Hora em que a operação foi iniciada neste nó em particular.||  
+|end_time|**datetime**|Hora em que a operação foi encerrada neste nó específico, se houver.||  
+|total_elapsed_time|**int**|Tempo total de execução da operação neste nó em particular.|Se total_elapsed_time exceder o valor máximo de um inteiro (24,8 dias em milissegundos), isso causará falha de materialização devido ao estouro.<br /><br /> O valor máximo em milissegundos é equivalente a 24,8 dias.|  
+|progresso|**int**|Progresso da operação expressa como uma porcentagem.|0 a 100|  
   
-## <a name="see-also"></a>Consulte também  
- [SQL Data Warehouse e Parallel Data Warehouse exibições do catálogo](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Exibições de Catálogo do SQL Data Warehouse e Parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

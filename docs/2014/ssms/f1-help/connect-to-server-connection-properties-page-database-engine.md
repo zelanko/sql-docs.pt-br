@@ -13,20 +13,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 30382bcb0c70fb985c88866602cb997988b88569
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70153747"
 ---
 # <a name="connect-to-server-connection-properties-page-database-engine"></a>Conectar ao Servidor (página Propriedades da Conexão) Mecanismo de Banco de Dados
-  Use esta guia para exibir ou especificar opções ao se conectar a uma emstância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ou registrar [!INCLUDE[ssDE](../../includes/ssde-md.md)] em **Servidores Registrados**. **Conectar** e **Opções** só são exibidas nesta caixa de diálogo ao conectar-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. **Testar** e **Salvar** só aparecem nesta caixa de diálogo durante o registro no [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+  Use esta guia para exibir ou especificar opções ao se conectar a uma emstância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ou registrar [!INCLUDE[ssDE](../../includes/ssde-md.md)] em **Servidores Registrados**. **** **As opções** conectar e somente aparecem nessa caixa de diálogo ao se conectar a uma instância [!INCLUDE[ssDE](../../includes/ssde-md.md)]do. **Test** e **Save** aparecem apenas nesta caixa de diálogo durante o registro [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="options"></a>Opções  
  **Conectar ao banco de dados**  
- Selecione um banco de dados com o qual deseja se conectar na lista. Se você selecionar  **\<> padrão**, você será conectado ao banco de dados padrão para o servidor. Se você selecionar  **\<procurar > de servidor**, poderá procurar o banco de dados ao qual se conectará o servidor.  
+ Selecione um banco de dados com o qual deseja se conectar na lista. Se você selecionar ** \<>padrão **, você será conectado ao banco de dados padrão para o servidor. Se você selecionar ** \<procurar>de servidor **, poderá procurar o banco de dados ao qual se conectará o servidor.  
   
- Ao conectar-se a uma instância do Mecanismo de Banco de Dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por meio do [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], você deve usar a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e especificar um banco de dados na caixa de diálogo **Conectar ao Servidor** , na guia **Propriedades da Conexão** . Verifique se você marcou a caixa de seleção **Criptografar conexão** .  
+ Ao se conectar a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mecanismo de banco de dados por [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]meio do, você [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve usar a autenticação do e especificar um banco de dados na caixa de diálogo **conectar ao servidor** , na guia **Propriedades da conexão** . Marque a caixa de seleção **criptografar conexão** .  
   
  Por padrão, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conecta-se ao **mestre**. Se você especificar um banco de dados de usuário, consultará somente esse banco de dados e seus objetos no Pesquisador de Objetos. Se você se conectar ao **mestre**, poderá ver todos os bancos de dados. Para obter mais informações, consulte [visão geral do banco de dados SQL do Azure](/azure/sql-database/sql-database-technical-overview).  
   
@@ -37,7 +37,7 @@ ms.locfileid: "70153747"
  Digite o tamanho dos pacotes de rede a serem enviados. O padrão é 4096 bytes.  
   
  **Tempo limite da conexão**  
- Insira o número de segundos a esperar que uma conexão seja estabelecida antes do tempo expirar. O valor padrão é 15 segundos.  
+ Insira o número de segundos de espera para que uma conexão seja estabelecida antes de atingir o tempo limite. O valor padrão é 15 segundos.  
   
  **Tempo limite de execução**  
  Digite o tempo em segundos que se deve esperar antes que a execução de uma tarefa seja concluída no servidor. O valor padrão é zero segundo, o que indica que não há nenhum tempo limite.  
@@ -54,7 +54,7 @@ ms.locfileid: "70153747"
   
 -   No menu **Arquivo** , quando você clica em **Novo** e depois em **Consulta do Mecanismo do Banco de Dados**, a cor que você especifica na caixa de diálogo **Conectar ao Servidor** aplica-se àquela janela do Editor de Consultas.  
   
- **Redefinir Tudo**  
+ **Redefinir tudo**  
  Substitua todos os valores de propriedade de conexão digitados manualmente por seus padrões.  
   
  **Connect**  
@@ -69,7 +69,7 @@ ms.locfileid: "70153747"
  **Salvar**  
  Salve as configurações em **Servidores Registrados**.  
   
-## <a name="see-also"></a>Consulte também  
- [Caixa de diálogo Propriedades da conexão](../../database-engine/connection-properties-dialog-box.md)  
+## <a name="see-also"></a>Consulte Também  
+ [caixa de diálogo Propriedades da conexão](../../database-engine/connection-properties-dialog-box.md)  
   
   

@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 067c77839a852965c7684359acf50fb328d21a6a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62779026"
 ---
 # <a name="full-text-index-properties-schedules-page"></a>Propriedades do Índice de Texto Completo (página Agendas)
@@ -24,7 +24,7 @@ ms.locfileid: "62779026"
   
  **Para exibir ou alterar as propriedades de um índice de texto completo**  
   
--   [Administrar índices de texto completo](../relational-databases/indexes/indexes.md)  
+-   [Gerenciar índices de texto completo](../relational-databases/indexes/indexes.md)  
   
 ## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
  **Agendas**  
@@ -33,7 +33,7 @@ ms.locfileid: "62779026"
  **Nome**  
  Exibe o nome de cada população agendada.  
   
- **Tipo de população**  
+ **Tipo de População**  
  Exibe o tipo de cada população agendada.  
   
  **Enabled**  
@@ -42,11 +42,11 @@ ms.locfileid: "62779026"
  **Descrição**  
  Exibe a descrição especificada quando a agenda foi criada.  
   
- **Nova**  
+ **Novo**  
  Clique para criar uma nova agenda para popular o índice de texto completo.  
   
-## <a name="see-also"></a>Consulte também  
- [Use o Assistente para indexação de texto completo](../relational-databases/search/use-the-full-text-indexing-wizard.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Usar o assistente para indexação de texto completo](../relational-databases/search/use-the-full-text-indexing-wizard.md)   
  [Popular índices de texto completo](../relational-databases/search/populate-full-text-indexes.md)  
   
   

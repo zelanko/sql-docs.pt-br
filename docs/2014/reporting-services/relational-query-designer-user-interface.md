@@ -11,17 +11,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 45f4b0b09c5f99a1dc561fdba40a659b7f0012d6
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68891132"
 ---
 # <a name="relational-query-designer-user-interface"></a>Interface de usuário do Designer de Consulta relacional
-  O Designer de Relatórios no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] fornece um designer de consulta gráfica e um designer de consulta baseado em texto para ajudar a criar uma consulta que especifica os dados a serem recuperados do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] e [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] para um conjunto de dados de relatório. Use o designer de consultas gráficas para explorar os metadados, criar uma consulta interativamente e exibir os dados da consulta. Use o designer de consulta baseado em texto para exibir a consulta que foi criada pelo designer de consultas gráficas ou modificar uma consulta. Também é possível importar uma consulta existente de um arquivo ou relatório.  
+  O Report Designer [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] no fornece um designer de consultas gráficas e um designer de consulta baseado em texto para ajudá-lo a criar uma consulta que especifica [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] os [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] dados a serem recuperados e para um DataSet de relatório. Use o designer de consultas gráficas para explorar os metadados, criar uma consulta interativamente e exibir os dados da consulta. Use o designer de consulta baseado em texto para exibir a consulta que foi criada pelo designer de consultas gráficas ou modificar uma consulta. Também é possível importar uma consulta existente de um arquivo ou relatório.  
   
 > [!NOTE]  
->  O designer de consulta gráfica em que você escreve consultas para recuperar dados do [!INCLUDE[ssSDS](../includes/sssds-md.md)] e do [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] é diferente do designer de consulta que você usa com o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para escrever consultas para recuperar dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], você usa o [!INCLUDE[vspnvdt](../includes/vspnvdt-md.md)] que o Visual Studio fornece. Para obter mais informações, consulte [Interface do usuário do Designer de Consultas Gráficas](report-data/graphical-query-designer-user-interface.md).  
+>  O designer de consulta gráfica em que você escreve consultas para recuperar dados do [!INCLUDE[ssSDS](../includes/sssds-md.md)] e do [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] é diferente do designer de consulta que você usa com o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para escrever consultas para recuperar dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], você usa o [!INCLUDE[vspnvdt](../includes/vspnvdt-md.md)] que o Visual Studio fornece. Para obter mais informações, consulte [Interface do usuário do designer de consultas gráficas](report-data/graphical-query-designer-user-interface.md).  
   
 > [!IMPORTANT]  
 >  Os usuários acessam fontes de dados quando criam e executam consultas. Você deve conceder permissões mínimas nas fontes de dados, como permissões somente leitura.  
@@ -32,11 +32,12 @@ ms.locfileid: "68891132"
  O designer de consultas gráficas é dividido em três áreas. Se a consulta usar tabelas/exibições ou procedimentos armazenados/funções com valor de tabela, o layout do designer de consulta será alterado.  
   
 > [!NOTE]  
->  [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] não dá suporte a procedimentos armazenados ou funções com valor de tabela.  
+>  
+  [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] não dá suporte a procedimentos armazenados ou funções com valor de tabela.  
   
  A figura a seguir mostra o designer de consultas gráficas quando ele é usado com tabelas ou exibições.  
   
- ![Designer gráfico para consultas](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqd-relational-graphical.gif "Designer gráfico para consultas")  
+ ![Designer gráfico para consultas](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqd-relational-graphical.gif "Designer de consultas gráficas")  
   
  A figura a seguir mostra o designer de consultas gráficas quando ele é usado com procedimentos armazenados ou funções com valor de tabela.  
   
@@ -62,43 +63,43 @@ ms.locfileid: "68891132"
  [Resultados da consulta](#QueryResults)  
  Exibe dados de exemplo do conjunto de resultados da consulta gerada automaticamente.  
   
-###  <a name="DatabaseView"></a> Painel Exibição de Banco de Dados  
+###  <a name="DatabaseView"></a>Painel de exibição de banco de dados  
  O painel Exibição de Banco de Dados exibe os metadados de objetos de banco de dados que você tem permissões para exibir, o que é determinado pela conexão da fonte de dados e credenciais. A exibição hierárquica exibe objetos de banco de dados organizados por esquema de banco de dados. Expanda o nó de cada esquema para exibir tabelas, exibições, procedimentos armazenados e funções com valor de tabela. Expanda uma tabela ou exibição para exibir as colunas.  
   
-###  <a name="SelectedFields"></a> Painel Campos Selecionados  
+###  <a name="SelectedFields"></a>Painel campos selecionados  
  O painel Campos Selecionados exibe os campos do conjunto de dados do relatório e os grupos e agregações a serem incluídos na consulta.  
   
  As seguintes opções são exibidas:  
   
--   **Campos selecionados** Exibe os campos do banco de dados que você seleciona para tabelas ou exibições ou os parâmetros de entrada para procedimentos armazenados ou funções com valor de tabela. Os campos mostrados neste painel se tornam a coleção de campos do conjunto de dados de relatório.  
+-   **Campos selecionados** Exibe os campos de banco de dados que você seleciona para tabelas ou exibições ou os parâmetros de entrada para procedimentos armazenados ou funções com valor de tabela. Os campos mostrados neste painel se tornam a coleção de campos do conjunto de dados de relatório.  
   
      Use o painel de dados do relatório para exibir o conjunto de campos de um conjunto de dados de relatório. Esses campos representam os dados que você pode exibir em tabelas, gráficos e outros itens de relatório ao exibir um relatório.  
   
--   **Grupo e Agregação** Alterna o uso do agrupamento e das agregações na consulta. Se você desativar o recurso de agrupamento e agregação depois de adicionar o agrupamento e as agregações, eles serão removidos. O texto **(nenhum)** indica que não é usado nenhum agrupamento ou agregação. Se você reativar o recurso de agrupamento e agregação, o agrupamento e as agregações anteriores serão restaurados.  
+-   **Agrupar e agregar** Alterna o uso de agrupamento e agregações na consulta. Se você desativar o recurso de agrupamento e agregação depois de adicionar o agrupamento e as agregações, eles serão removidos. O texto **(nenhum)** indica que não é usado nenhum agrupamento ou agregação. Se você reativar o recurso de agrupamento e agregação, o agrupamento e as agregações anteriores serão restaurados.  
   
--   **Excluir Campo** Exclui o campo selecionado.  
+-   **Excluir campo** Exclui o campo selecionado.  
   
 #### <a name="group-and-aggregate"></a>Grupo e Agregação  
  As consultas a bancos de dados com uma tabela grande podem retornar várias linhas de dados que são muito grandes para serem úteis em um relatório e têm um impacto de desempenho na rede que transporta a enorme quantidade de dados e no servidor de relatórios que processa o relatório. Para limitar o número de linhas de dados, a consulta pode incluir agregações de SQL que resumem os dados no servidor de banco de dados. As agregações SQL são diferentes de agregações do lado do cliente, que são aplicadas quando o relatório é renderizado.  
   
  As agregações fornecem resumos de dados, e os dados são agrupados para oferecer suporte à agregação que entrega os dados resumidos. Quando você usa uma agregação na consulta, os outros campos retornados pela consulta são agrupados automaticamente e a consulta inclui a cláusula SQL GROUP BY. É possível resumir dados sem adicionar uma agregação usando somente a opção **Agrupado por** na lista **Grupo e Agregação** . Muitas das agregações incluem uma versão que usa a palavra-chave DISTINCT. A inclusão de DISTINCT elimina valores duplicados.  
   
- [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)]usa [!INCLUDE[tsql](../includes/tsql-md.md)] e [!INCLUDE[msCoName](../includes/msconame-md.md)] usa.[!INCLUDE[DWsql](../includes/dwsql-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] Ambos os dialetos da linguagem SQL dão suporte à cláusula, à palavra-chave e às agregações fornecidas pelo designer de consulta.  
+ [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)]usa [!INCLUDE[tsql](../includes/tsql-md.md)] e [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] usa [!INCLUDE[DWsql](../includes/dwsql-md.md)]. Ambos os dialetos da linguagem SQL dão suporte à cláusula, à palavra-chave e às agregações fornecidas pelo designer de consulta.  
   
- Para obter mais informações sobre o [!INCLUDE[tsql](../includes/tsql-md.md)], consulte [Referência do Transact-SQL &#40;Mecanismo de Banco de Dados&#41;](/sql/t-sql/language-reference)nos [Manuais Online](https://go.microsoft.com/fwlink/?LinkId=141687) do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] em msdn.microsoft.com.  
+ Para obter mais informações sobre o [!INCLUDE[tsql](../includes/tsql-md.md)], consulte [Referência do Transact-SQL &#40;Mecanismo de Banco de Dados&#41;](/sql/t-sql/language-reference)nos Manuais Online[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [ do ](https://go.microsoft.com/fwlink/?LinkId=141687) em msdn.microsoft.com.  
   
  A tabela a seguir lista as agregações e fornece descrições resumidas delas.  
   
-|Agregado|Descrição|  
+|Agregado|DESCRIÇÃO|  
 |---------------|-----------------|  
 |Avg|Retorna a média dos valores em um grupo. Implementa a agregação SQL AVG.|  
-|Count|Retorna o número de itens de um grupo. Implementa a agregação SQL COUNT.|  
+|Contagem|Retorna o número de itens de um grupo. Implementa a agregação SQL COUNT.|  
 |Count Big|Retorna o número de itens de um grupo. Ela é a agregação SQL COUNT_BIG. A diferença entre COUNT e COUNT_BIG é que COUNT_BIG sempre retorna um valor de tipo de dados `bigint`.|  
 |Mín|Retorna o valor mínimo de um grupo. Implementa a agregação SQL MIN.|  
 |Max|Retorna o valor máximo em um grupo. Implementa a agregação SQL MAX.|  
 |StDev|Retorna o desvio padrão estatístico de todos os valores de um grupo. Implementa a agregação SQL STDEV.|  
 |StDevP|Retorna o desvio padrão estatístico para a população de todos os valores da expressão especificada de um grupo. Implementa a agregação SQL STDEVP.|  
-|Sum|Retorna a soma de todos os valores do grupo. Implementa a agregação SQL SUM.|  
+|SUM|Retorna a soma de todos os valores do grupo. Implementa a agregação SQL SUM.|  
 |Var|Retorna a variação estatística de todos os valores do grupo. Implementa a agregação SQL VAR.|  
 |VarP|Retorna a variação estatística para a população de todos os valores do grupo. Implementa a agregação SQL VARP.|  
 |Avg Distinct|Retorna médias exclusivas. Implementa uma combinação da agregação AVG e da palavra-chave DISTINCT.|  
@@ -110,24 +111,24 @@ ms.locfileid: "68891132"
 |Var Distinct|Retorna variações estatísticas exclusivas. Implementa uma combinação da agregação VAR e da palavra-chave DISTINCT.|  
 |VarP Distinct|Retorna variações estatísticas exclusivas. Implementa uma combinação da agregação VARP e da palavra-chave DISTINCT.|  
   
-###  <a name="FunctionParameters"></a> Painel Parâmetros de Função  
+###  <a name="FunctionParameters"></a>Painel de parâmetros de função  
  O painel Parâmetros de Função exibe os parâmetros de um procedimento armazenado ou função com valor de tabela. As seguintes colunas são exibidas:  
   
--   **Nome do Parâmetro** Exibe o nome do parâmetro definido pelo procedimento armazenado ou função com valor de tabela.  
+-   **Nome do parâmetro** Exibe o nome do parâmetro que é definido pelo procedimento armazenado ou função com valor de tabela.  
   
--   **Valor** Um valor a ser usado para o parâmetro quando a consulta é executada para recuperar dados a serem exibidos no painel Resultados da Consulta em tempo de design. Esse valor não é usado quando o relatório executado em tempo de execução.  
+-   **Valor** do Um valor a ser usado para o parâmetro quando a consulta é executada para recuperar dados a serem exibidos no painel de resultados da consulta em tempo de design. Esse valor não é usado quando o relatório executado em tempo de execução.  
   
-###  <a name="Relationships"></a> Painel Relações  
+###  <a name="Relationships"></a>Painel relações  
  O painel Relações exibe as relações de junção. As relações podem ser detectadas automaticamente a partir de relações de chave estrangeira recuperadas dos metadados de banco do dados. Se preferir, você pode criá-las manualmente.  
   
  As seguintes opções são exibidas:  
   
--   **Detecção Automática** Alterna o recurso de detecção automática que cria automaticamente relações entre tabelas. Se a detecção automática estiver ativada, o designer de consulta criará relações a partir de chaves estrangeiras nas tabelas; caso contrário, você deverá criar as relações manualmente. Quando você seleciona tabelas no painel **Exibição do banco de dados** , a detecção automática tenta criar relações automaticamente. Se você ativar a detecção automática depois de criar junções manualmente, essas junções serão descartadas.  
+-   **Detecção automática** Alterna o recurso de detecção automática que cria automaticamente relações entre tabelas. Se a detecção automática estiver ativada, o designer de consulta criará relações a partir de chaves estrangeiras nas tabelas; caso contrário, você deverá criar as relações manualmente. Quando você seleciona tabelas no painel **Exibição do banco de dados** , a detecção automática tenta criar relações automaticamente. Se você ativar a detecção automática depois de criar junções manualmente, essas junções serão descartadas.  
   
     > [!IMPORTANT]  
     >  Durante o uso com [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] , os metadados necessários à criação de junções não são fornecidos e as relações não podem ser detectadas automaticamente. Se a consulta recuperar dados de [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)], todas as junções da tabela deverão ser criadas manualmente.  
   
--   **Adicionar Relação** Adiciona uma relação à lista de **Relações** .  
+-   **Adicionar relação** Adiciona uma relação à lista de **relações** .  
   
      Se a detecção automática estiver ativada, as tabelas cujas colunas são usadas na consulta serão adicionadas automaticamente à lista de **Relações** . Quando a detecção automática identifica que há duas tabelas relacionadas, uma tabela é adicionada à coluna **Tabela Esquerda** , a outra à coluna **Tabela Direita** e uma junção interna é criada entre elas. Cada relação gera uma cláusula JOIN na consulta. Se as tabelas não forem relacionadas, todas elas serão listadas na coluna **Tabela Esquerda** e a coluna **Tipo de Junção** indicará que as tabelas não estão relacionadas a outras tabelas. Quando a detecção automática estiver ativada, não será possível adicionar relações manualmente entre tabelas que a detecção automática considerar não relacionadas.  
   
@@ -139,36 +140,36 @@ ms.locfileid: "68891132"
   
      Se ambas as tabelas em uma relação forem referenciadas por uma relação anterior, a relação não irá gerar uma cláusula de junção à parte; em vez disso, uma condição de junção é adicionada à cláusula de junção gerada para a relação anterior. O tipo de junção é inferido pela relação anterior que referenciou as mesmas tabelas.  
   
--   **Editar Campos** Abre a caixa de diálogo **Editar Campos Relacionados** na qual você adiciona e modifica relações entre tabelas. Você escolheu os campos nas tabelas direita e esquerda a serem unidos. É possível unir vários campos da tabela esquerda e da tabela direita para especificar várias condições de junção em uma relação. Os dois campos que unem as tabelas esquerda e direita não precisam ter o mesmo nome. O tipo de dados dos campos unidos deve ter tipos de dados compatíveis.  
+-   **Editar campos** Abre a caixa de diálogo **editar campos relacionados** , na qual você adiciona e modifica relações entre tabelas. Você escolheu os campos nas tabelas direita e esquerda a serem unidos. É possível unir vários campos da tabela esquerda e da tabela direita para especificar várias condições de junção em uma relação. Os dois campos que unem as tabelas esquerda e direita não precisam ter o mesmo nome. O tipo de dados dos campos unidos deve ter tipos de dados compatíveis.  
   
--   **Excluir Relação** Exclui a relação selecionada **.**  
+-   **Excluir relação**  Exclui a relação selecionada **.**  
   
--   **Mover para Cima** e **Mover para Baixo** Move relações para cima ou para baixo na lista de **Relações** . A sequência na qual as relações são colocadas na consulta pode afetar os resultados da consulta. As relações são adicionadas à consulta na ordem em que são exibidas na lista de **Relações** .  
+-   **Mover para cima** e **mover para baixo** move as relações para cima ou para baixo na lista de **relações** . A sequência na qual as relações são colocadas na consulta pode afetar os resultados da consulta. As relações são adicionadas à consulta na ordem em que são exibidas na lista de **Relações** .  
   
  As seguintes colunas são exibidas:  
   
--   **Tabela Esquerda** Exibe o nome da primeira tabela que faz parte de uma relação de junção.  
+-   **Tabela esquerda** Exibe o nome da primeira tabela que faz parte de uma relação de junção.  
   
--   **Tipo de Junção** Exibe o tipo de instrução SQL JOIN usada na consulta gerada automaticamente. Por padrão, se uma restrição de chave estrangeira for detectada, INNER JOIN será usada. Outros tipos de junção podem ser LEFT JOIN ou RIGHT JOIN. Se nenhum desses tipos de junção se aplicar, a coluna **Tipo de Junção** exibirá **Não relacionado**. Nenhuma junção CROSS JOIN é criada para tabelas não relacionadas. Em vez disso, você deve criar relações manualmente unindo colunas nas tabelas esquerda e direita. Para obter mais informações sobre tipos de JOINs, consulte "Fundamentos de JOIN" nos [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][Books Online](https://go.microsoft.com/fwlink/?LinkId=141687) on msdn.microsoft.com.  
+-   **Tipo de junção** Exibe o tipo de instrução SQL JOIN que é usado na consulta gerada automaticamente. Por padrão, se uma restrição de chave estrangeira for detectada, INNER JOIN será usada. Outros tipos de junção podem ser LEFT JOIN ou RIGHT JOIN. Se nenhum desses tipos de junção se aplicar, a coluna **Tipo de Junção** exibirá **Não relacionado**. Nenhuma junção CROSS JOIN é criada para tabelas não relacionadas. Em vez disso, você deve criar relações manualmente unindo colunas nas tabelas esquerda e direita. Para obter mais informações sobre tipos de JOINs, consulte "Fundamentos de JOIN" nos [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Books Online](https://go.microsoft.com/fwlink/?LinkId=141687) on msdn.microsoft.com.  
   
--   **Tabela Direita** Exibe o nome da segunda tabela na relação de junção.  
+-   **Tabela direita** Exibe o nome da segunda tabela na relação de junção.  
   
--   **Campos de Junção** Lista os pares de campos unidos. Se uma relação tiver várias condições de junção, os pares de campos unidos serão separados por vírgulas (,).  
+-   **Campos de junção** Lista os pares de campos Unidos, se uma relação tiver várias condições de junção, os pares de campos Unidos serão separados por vírgulas (,).  
   
-###  <a name="AppliedFilters"></a> Painel Filtros Aplicados  
+###  <a name="AppliedFilters"></a>Painel filtros aplicados  
  O painel Filtros Aplicados exibe os critérios usados para limitar o número de linhas de dados recuperadas no tempo de execução. Os critérios especificados nesse painel são usados para gerar uma cláusula SQL WHERE. Quando você seleciona a opção de parâmetro, um parâmetro de relatório é criado automaticamente. Os parâmetros de relatório se baseiam em parâmetros de consulta que permitem a um usuário especificar valores para a consulta, para controlar os dados no relatório.  
   
  As seguintes colunas são exibidas:  
   
--   **Nome do Campo** Exibe o nome do campo ao qual aplicar os critérios.  
+-   **Nome do campo** Exibe o nome do campo ao qual aplicar os critérios.  
   
 -   **Operador** Exibe a operação a ser usada na expressão de filtro.  
   
--   **Valor** Exibe o valor a ser usado na expressão de filtro.  
+-   **Valor** do Exibe o valor a ser usado na expressão de filtro.  
   
--   **Parâmetro** Exibe a opção para adicionar um parâmetro à consulta. Use as propriedades do conjunto de dados para exibir as relações entre o parâmetro de consulta e o parâmetro do relatório.  
+-   **Parâmetro** do Exibe a opção para adicionar um parâmetro de consulta à consulta. Use as propriedades do conjunto de dados para exibir as relações entre o parâmetro de consulta e o parâmetro do relatório.  
   
-###  <a name="QueryResults"></a> Painel Resultados da Consulta  
+###  <a name="QueryResults"></a>Painel de resultados da consulta  
  O painel Resultados da Consulta exibe os resultados para a consulta automaticamente gerada que é especificada por seleções nos outros painéis. As colunas do conjunto de resultados são os campos que você especifica no painel Campos Selecionados e os dados de linha são limitados pelos filtros que você especifica no painel Filtros Aplicados. Se a consulta incluir agregações, o conjunto de resultados incluirá as novas colunas de agregações. Por exemplo, se a **Cor** da coluna for agregada com a agregação Count, os resultados da consulta incluirão uma nova coluna. Por padrão, essa coluna é denominada **Count_Color**.  
   
  Esses dados representam valores da fonte de dados no momento em que você executa a consulta. Os dados não são salvos na definição de relatório. Os dados reais do relatório são recuperados quando o relatório é processado.  
@@ -178,11 +179,11 @@ ms.locfileid: "68891132"
 ### <a name="graphical-query-designer-toolbar"></a>Barra de ferramentas do designer de consultas gráficas  
  A barra de ferramentas do designer de consulta relacional fornece os seguintes botões para ajudá-lo a especificar ou exibir os resultados de uma consulta.  
   
-|Botão|Descrição|  
+|Botão|DESCRIÇÃO|  
 |------------|-----------------|  
-|**Editar como Texto**|Alterna para o designer de consulta baseado em texto para exibir a consulta gerada automaticamente ou para modificar a consulta.|  
-|**Importarar**|Importa uma consulta existente de um arquivo ou relatório. Há suporte para os tipos de arquivo .sql e .rdl.|  
-|**Executar consulta**|Executa a consulta. O painel Resultados da consulta exibe o conjunto de resultados.|  
+|**Editar como texto**|Alterna para o designer de consulta baseado em texto para exibir a consulta gerada automaticamente ou para modificar a consulta.|  
+|**Importar**|Importa uma consulta existente de um arquivo ou relatório. Há suporte para os tipos de arquivo .sql e .rdl.|  
+|**Executar Consulta**|Executa a consulta. O painel Resultados da consulta exibe o conjunto de resultados.|  
   
 ## <a name="understanding-automatically-generated-queries"></a>Entendendo consultas geradas automaticamente  
  Quando você seleciona tabelas e colunas ou procedimentos armazenados e exibições no painel Exibição de Banco de dados, o designer de consulta recupera a chave primária subjacente e relações de chave estrangeira do esquema de banco de dados. Ao analisar essas relações, o designer de consulta detecta as relações entre duas tabelas e adiciona junções à consulta. Dessa forma, é possível modificar a consulta adicionando grupos e agregações, adicionando ou alterando relações e adicionando filtros. Para exibir o texto da consulta que mostra as colunas das quais os dados são recuperados, as junções entre tabelas e qualquer grupo ou agregação, clique em **Editar Como Texto**.  
@@ -190,7 +191,7 @@ ms.locfileid: "68891132"
 ## <a name="text-based-query-designer"></a>Designer de Consulta com Base em Texto  
  Para ter o máximo controle sobre sua consulta, use o designer de consulta baseado em texto. Para mudar para o designer de consulta baseado em texto, na barra de ferramentas, clique em **Editar como Texto**. Depois que você editar uma consulta no designer de consulta baseado em texto, não poderá mais usar o designer de consulta relacional. A consulta sempre será aberta no designer de consulta baseado em texto. Para obter mais informações, consulte [Interface do usuário do Designer de Consultas baseado em texto](../../2014/reporting-services/text-based-query-designer-user-interface.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Designers de Consultas do Reporting Services](../../2014/reporting-services/reporting-services-query-designers.md)  
   
   

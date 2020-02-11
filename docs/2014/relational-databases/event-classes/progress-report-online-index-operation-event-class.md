@@ -1,5 +1,5 @@
 ---
-title: 'Relatório de andamento: classe de evento Online Index Operation | Microsoft Docs'
+title: 'Relatório de andamento: classe de evento de operação de índice online | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,18 +15,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3d0efc3d22fcba588c1104d716cbab0f26eff374
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68811263"
 ---
-# <a name="progress-report-online-index-operation-event-class"></a>Relatório de andamento: Classe de evento Operação de Índice Online
-  A classe de evento Progress Report: Online Index Operation indica o progresso de uma operação de build de índice online enquanto o processo de build está em execução.  
+# <a name="progress-report-online-index-operation-event-class"></a>Classe de evento Progress Report: Online Index Operation
+  A classe de evento Progress Report: Online Index Operation  indica o progresso de uma operação de construção de índice online enquanto a operação de construção está em execução.  
   
-## <a name="progress-report-online-index-operation-event-class-data-columns"></a>Relatório de andamento: colunas de dados da classe de evento Online Index Operation  
+## <a name="progress-report-online-index-operation-event-class-data-columns"></a>Colunas de dados de classe de evento Progress Report: Online Index Operation  
   
-|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|DESCRIÇÃO|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|`nvarchar`|Nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |BigintData1|`bigint`|Número de linhas inseridas.|52|Sim|  
@@ -34,11 +34,11 @@ ms.locfileid: "68811263"
 |ClientProcessID|`int`|ID atribuída pelo computador host ao processo em que o aplicativo cliente está sendo executado. Essa coluna de dados será populada se o cliente fornecer a ID de processo do cliente.|9|Sim|  
 |DatabaseID|`int`|ID do banco de dados especificado pela instrução USE de *database* ou o banco de dados padrão se nenhuma instrução USE de *database* tiver sido emitida para uma determinada instância. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibirá o nome do banco de dados se a coluna de dados ServerName for capturada no rastreamento e o servidor estiver disponível. Determine o valor para um banco de dados usando a função DB_ID.|3|Sim|  
 |DatabaseName|`nvarchar`|Nome do banco de dados no qual a instrução do usuário está sendo executada.|35|Sim|  
-|Duração|`bigint`|Período de tempo (em microssegundos) utilizado pelo evento.|13|Sim|  
+|Duration|`bigint`|Período de tempo (em microssegundos) utilizado pelo evento.|13|Sim|  
 |EndTime|`datetime`|Hora em que a operação de índice online foi concluída.|15|Sim|  
 |EventClass|`int`|Tipo de evento = 190.|27|Não|  
 |EventSequence|`int`|Sequência de um determinado evento na solicitação.|51|Não|  
-|EventSubClass|`int`|Tipo de subclasse de evento.<br /><br /> 1 = Iniciar<br /><br /> 2=Início de execução da etapa 1<br /><br /> 3=Término de execução da etapa 1<br /><br /> 4= Início de execução da etapa 2<br /><br /> 5= Término de execução da etapa 2<br /><br /> 6=Contagem de linhas inseridas<br /><br /> 7=Concluído<br /><br /> O estágio 1 refere-se ao objeto base (índice clusterizado ou heap) ou se a operação de índice envolve apenas um índice não clusterizado. O estágio 2 é usado quando uma operação de compilação de índice envolve a recompilação original mais índices não clusterizados adicionais.  Por exemplo, se um objeto tiver um índice clusterizado e vários índices não clusterizados, ' Recompilar tudo ' recompilaria todos os índices. O objeto base (o índice clusterizado) é recriado no estágio 1 e todos os índices não clusterizados são recriados no estágio 2.|21|Sim|  
+|EventSubClass|`int`|Tipo de subclasse de evento.<br /><br /> 1 = Iniciar<br /><br /> 2=Início de execução da etapa 1<br /><br /> 3=Término de execução da etapa 1<br /><br /> 4= Início de execução da etapa 2<br /><br /> 5= Término de execução da etapa 2<br /><br /> 6=Contagem de linhas inseridas<br /><br /> 7=Concluído<br /><br /> A fase 1 refere-se ao objeto base (índice clusterizado ou heap) ou se a operação de índice envolver somente um índice não clusterizado. A fase 2 é usada quando uma operação de build de índice envolve a recompilação original além de índices não clusterizados adicionais.  Por exemplo, se um objeto tiver um índice clusterizado e vários índices não clusterizados, 'recompilar tudo' recompilará todos os índices. O objeto base (o índice clusterizado) é recompilado na fase 1 e, em seguida, todos os índices não clusterizados são recompilados na fase 2.|21|Sim|  
 |GroupID|`int`|ID do grupo de carga de trabalho no qual o evento de Rastreamento do SQL dispara.|66|Sim|  
 |HostName|`nvarchar`|Nome do computador no qual o cliente está sendo executado. Essa coluna de dados será populada se o cliente fornecer o nome do host. Para determinar o nome do host, use a função HOST_NAME.|8|Sim|  
 |IndexID|`int`|ID do índice no objeto afetado pelo evento.|24|Sim|  
@@ -57,7 +57,7 @@ ms.locfileid: "68811263"
 |StartTime|`datetime`|Hora do início do evento.|14|Sim|  
 |TransactionID|`bigint`|ID da transação atribuída pelo sistema.|4|Sim|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   
   

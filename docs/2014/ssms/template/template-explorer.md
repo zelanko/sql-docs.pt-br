@@ -20,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 42e52d92d993627129f79f215fa536001f44538d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63074048"
 ---
 # <a name="template-explorer"></a>Explorador de Modelos
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece uma variedade de modelos. Modelos são arquivos boilerplate que contêm scripts SQL que ajudam você a criar objetos em um banco de dados. Na primeira vez em que o Gerenciador de modelos é aberto, uma cópia dos modelos são colocados na pasta do usuário c:\Users, em AppData\Roaming\Microsoft\SQL Server Management Studio\120\Templates.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece uma variedade de modelos. Modelos são arquivos boilerplate que contêm scripts SQL que ajudam você a criar objetos em um banco de dados. Na primeira vez que o Gerenciador de modelos é aberto, uma cópia dos modelos é colocada na pasta do usuário em C:\Users, em AppData\Roaming\Microsoft\SQL Server Management Studio\120\Templates.  
   
  Você pode procurar os modelos disponíveis no Gerenciador de Modelos e, depois, abrir um modelo para incorporar o código em uma janela de editor de códigos. Você também pode criar modelos personalizados.  
   
@@ -43,9 +43,9 @@ ms.locfileid: "63074048"
 ## <a name="related-tasks"></a>Related Tasks  
  Use os tópicos a seguir como introdução rápida a modelos  
   
-|**Description**|**Tópico**|  
+|**Descrição**|**Tópico**|  
 |---------------------|---------------|  
 |Descreve como incorporar o código de um modelo em uma janela de editor de códigos.|[Abrir um modelo](open-a-template.md)|  
-|Descreve como substituir valores de parâmetros de modelo depois de abrir um modelo em um editor de códigos.|[Substituir Parâmetros do Modelo](replace-template-parameters.md)|  
+|Descreve como substituir valores de parâmetros de modelo depois de abrir um modelo em um editor de códigos.|[Substituir parâmetros do modelo](replace-template-parameters.md)|  
   
   

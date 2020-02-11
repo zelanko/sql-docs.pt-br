@@ -15,19 +15,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2db385919c30037612f00e53b2b990c1a7df0429
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72781863"
 ---
 # <a name="using-database-mail"></a>Usando o Database Mail
   No SMO, o subsistema Database Mail é representado pelo objeto <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> que é referenciado pela propriedade <xref:Microsoft.SqlServer.Management.Smo.Server.Mail%2A>. Através do objeto <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> do SMO, você pode configurar o subsistema Database Mail e gerenciar perfis e contas de email. O objeto <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> do SMO pertence ao objeto `Server`. Isso significa que o escopo das contas de email está em nível de servidor.  
   
 ## <a name="examples"></a>Exemplos  
- Para usar qualquer exemplo de código fornecido, será necessário escolher o ambiente de programação, o modelo de programação e a linguagem de programação para criar o aplicativo. Para obter mais informações, consulte [criar um projeto Visual Basic Smo no Visual Studio .net](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) ou [criar um projeto&#35; do Visual C Smo no Visual Studio .net](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Para usar qualquer exemplo de código fornecido, será necessário escolher o ambiente de programação, o modelo de programação e a linguagem de programação para criar o aplicativo. Para obter mais informações, consulte [criar um projeto Visual Basic Smo no Visual Studio .net](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) ou [criar um projeto do Visual C&#35; Smo no Visual Studio .net](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
- Para programas que usam [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Database Mail, você deve incluir a instrução `Imports` para qualificar o namespace de email. Insira a instrução após outras instruções `Imports`, antes de qualquer declaração no aplicativo, como:  
+ Para programas que usam [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Database Mail, você deve incluir a `Imports` instrução para qualificar o namespace de email. Insira a instrução após outras instruções `Imports`, antes de qualquer declaração no aplicativo, como:  
   
  `Imports Microsoft.SqlServer.Management.Smo`  
   

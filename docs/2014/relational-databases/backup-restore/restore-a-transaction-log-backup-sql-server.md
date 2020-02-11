@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a0cfc68f78ae9ca4022abfb59a33d756e82a6f2f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62875668"
 ---
 # <a name="restore-a-transaction-log-backup-sql-server"></a>Restaurar um backup de log de transações (SQL Server)
@@ -69,7 +69,7 @@ ms.locfileid: "62875668"
   
 #### <a name="to-restore-a-transaction-log-backup"></a>Para restaurar um backup de log de transações  
   
-1.  Depois de se conectar à instância apropriada do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], no Pesquisador de Objetos, clique no nome do servidor para expandir a árvore do servidor.  
+1.  Depois de se conectar à instância apropriada do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], em Pesquisador de Objetos, clique no nome do servidor para expandir a árvore do servidor.  
   
 2.  Expanda **Bancos de Dados**e, dependendo do banco de dados, selecione um banco de dados de usuário ou expanda **Bancos de Dados do Sistema** e selecione um banco de dados do sistema.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "62875668"
     |------------|-----------|  
     |**Restaurar**|Caixas de seleção selecionadas indicam os conjuntos de backup a serem restaurados.|  
     |**Nome**|Nome do conjunto de backup.|  
-    |**Componente**|Componente com backup: **Banco de dados**, **arquivo**, ou \<em branco > (para logs de transação).|  
+    |**Componente**|O componente de backup: **Database**, **File** ou \<blank> (para logs de transações).|  
     |**Backup de banco de dados**|Nome do banco de dados envolvido na operação de backup.|  
     |**Data de Início**|A data e hora do início da operação de backup, apresentadas na configuração regional do cliente.|  
     |**Data de Conclusão**|Data e hora de término da operação de backup, apresentadas na configuração regional do cliente.|  
@@ -109,12 +109,12 @@ ms.locfileid: "62875668"
     |**LSN do Ponto de Verificação**|Número de sequência de log do ponto de verificação mais recente no momento em que o backup foi criado.|  
     |**LSN Completo**|Número de sequência de log do backup de banco de dados completo mais recente.|  
     |**Servidor**|Nome da instância do Mecanismo de Banco de Dados que executou a operação de backup.|  
-    |**Nome do Usuário**|Nome do usuário que realizou a operação de backup.|  
+    |**Nome de usuário**|Nome do usuário que realizou a operação de backup.|  
     |**Tamanho**|Tamanho do conjunto de backup em bytes.|  
     |**Posição**|Posição do conjunto de backup no volume.|  
     |**Validade**|Data e hora de vencimento do conjunto de backup.|  
   
-7.  Selecione uma destas opções:  
+7.  Selecione uma das seguintes:  
   
     -   **Point-in-time**  
   
@@ -136,7 +136,7 @@ ms.locfileid: "62875668"
         |**Descrição**|Descrição da transação marcada especificada pelo usuário quando a transação foi confirmada (se houver).|  
         |**LSN**|Número de sequência de log da transação marcada.|  
         |**Backup de banco de dados**|Nome do banco de dados em que a transação marcada foi confirmada.|  
-        |**Nome do Usuário**|Nome do usuário do banco de dados que confirmou a transação marcada.|  
+        |**Nome de usuário**|Nome do usuário do banco de dados que confirmou a transação marcada.|  
   
 8.  Para exibir ou selecionar as opções avançadas, clique em **Opções** no painel **Selecionar uma página** .  
   
@@ -146,9 +146,9 @@ ms.locfileid: "62875668"
   
          Preserva as configurações de replicação ao restaurar um banco de dados publicado em um servidor diferente daquele onde o banco de dados foi criado.  
   
-         Essa opção só está disponível com o **deixar o banco de dados pronto para uso Revertendo as transações não confirmadas...**  opção (descrita adiante), que é equivalente a restaurar um backup com o `RECOVERY` opção.  
+         Essa opção está disponível apenas com a opção **deixar o banco de dados pronto para uso revertendo as transações não confirmadas...** (descrito posteriormente), que é equivalente a restaurar `RECOVERY` um backup com a opção.  
   
-         Marcar essa opção é equivalente a usar o `KEEP_REPLICATION` opção em um [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` instrução.  
+         Marcar essa opção é equivalente a usar a `KEEP_REPLICATION` opção em uma [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` instrução.  
   
     -   **Perguntar antes de restaurar cada backup**  
   
@@ -162,19 +162,19 @@ ms.locfileid: "62875668"
   
          Disponibiliza o banco de dados restaurado apenas para os membros do **db_owner**, **dbcreator**ou **sysadmin**.  
   
-         Marcar essa opção é sinônimo de usar o `RESTRICTED_USER` opção em um [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` instrução.  
+         Marcar essa opção é sinônimo de usar a `RESTRICTED_USER` opção em uma [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` instrução.  
   
 10. Para as opções **Estado de recuperação** , especifique o estado do banco de dados após a operação de restauração.  
   
     -   **Deixe o banco de dados pronto para uso revertendo as transações não confirmadas. Os logs de transações adicionais não podem ser restaurados. (RESTORE WITH RECOVERY)**  
   
-         Recupera o banco de dados. Essa opção é equivalente à `RECOVERY` opção em um [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` instrução.  
+         Recupera o banco de dados. Essa opção é equivalente à `RECOVERY` opção em uma [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` instrução.  
   
          Só escolha essa opção se você não tiver nenhum arquivo de log que queira restaurar.  
   
     -   **Deixe o banco de dados não operacional e não reverta as transações não confirmadas. Os logs de transações adicionais podem ser restaurados. (RESTORE WITH NORECOVERY)**  
   
-         Deixa o banco de dados não recuperado, no estado `RESTORING`. Essa opção é equivalente a usar o `NORECOVERY` opção em um [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` instrução.  
+         Deixa o banco de dados não recuperado, no estado `RESTORING`. Essa opção é equivalente a usar a `NORECOVERY` opção em uma [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` instrução.  
   
          Quando você escolhe essa opção, a opção **Preservar configurações de replicação** fica indisponível.  
   
@@ -183,7 +183,7 @@ ms.locfileid: "62875668"
   
     -   **Deixar o banco de dados no modo somente leitura. Desfaça as transações não confirmadas, mas salve as ações de desfazer em um arquivo, para que os efeitos da recuperação possam ser revertidos. (RESTORE WITH STANDBY)**  
   
-         Deixa o banco de dados no estado de espera. Essa opção é equivalente a usar o `STANDBY` opção em um [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` instrução.  
+         Deixa o banco de dados no estado de espera. Essa opção é equivalente a usar a `STANDBY` opção em uma [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` instrução.  
   
          A escolha desta opção requer que você especifique um arquivo de espera.  
   
@@ -241,7 +241,7 @@ ms.locfileid: "62875668"
 ALTER DATABASE AdventureWorks2012 SET RECOVERY FULL;  
 ```  
   
-#### <a name="a-applying-a-single-transaction-log-backup"></a>A. Aplicando um único backup de log de transações  
+#### <a name="a-applying-a-single-transaction-log-backup"></a>a. Aplicando um único backup de log de transações  
  O exemplo seguinte inicia restaurando o banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] usando um backup de banco de dados completo que reside em um dispositivo de backup chamado `AdventureWorks2012_1`. O exemplo aplica então o primeiro backup de log de transações que reside em um dispositivo de backup chamado `AdventureWorks2012_log`. Por fim, o exemplo recupera o banco de dados.  
   
 ```sql  
@@ -291,7 +291,7 @@ GO
   
 -   [Fazer backup de um log de transações &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)  
   
--   [Restaurar um Backup de banco de dados &#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
+-   [Restaurar um backup de banco de dados &#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
   
 -   [Restaurar um banco de dados até o ponto de falha no modelo de recuperação completa &#40;Transact-SQL&#41;](restore-database-to-point-of-failure-full-recovery.md)  
   
@@ -299,7 +299,7 @@ GO
   
 -   [Restaurar um banco de dados para uma transação marcada &#40;SQL Server Management Studio&#41;](restore-a-database-to-a-marked-transaction-sql-server-management-studio.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [Aplicar backups de log de transações &#40;SQL Server&#41;](apply-transaction-log-backups-sql-server.md)  
   

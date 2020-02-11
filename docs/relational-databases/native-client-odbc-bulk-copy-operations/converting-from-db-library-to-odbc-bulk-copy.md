@@ -18,16 +18,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b7e14018ea62edb5dd262b87ddbea467d1872132
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73785191"
 ---
 # <a name="converting-from-db-library-to-odbc-bulk-copy"></a>Convertendo de cópia em massa DB-Library em ODBC
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  A conversão de um programa de cópia em massa de biblioteca de banco de BD para ODBC é fácil porque as funções de cópia em massa com suporte do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC de cliente nativo são semelhantes às funções de cópia em massa da biblioteca DB, com as seguintes exceções:  
+  A conversão de um programa de cópia em massa de biblioteca de banco de BD para ODBC é fácil porque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as funções de cópia em massa com suporte do driver ODBC do Native Client são semelhantes às funções de cópia em massa da biblioteca de banco de BD, com as seguintes exceções:  
   
 -   Os aplicativos DB-Library passam, para uma estrutura DBPROCESS, um ponteiro como o primeiro parâmetro de funções de cópia em massa. Em aplicativos ODBC, o ponteiro DBPROCESS é substituído por um identificador de conexão ODBC.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "73785191"
         (void *)SQL_BCP_ON, SQL_IS_INTEGER);  
     ```  
   
--   O driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client não dá suporte a mensagens de biblioteca de BD e manipuladores de erro; Você deve chamar **SQLGetDiagRec** para obter erros e mensagens geradas pelas funções de cópia em massa do ODBC. As versões ODBC das funções de cópia em massa retornam os códigos de retorno padrão da cópia em massa, SUCCEED ou FAILED, e não os códigos de retorno ODBC, como SQL_SUCCESS ou SQL_ERROR.  
+-   O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC do Native Client não dá suporte a mensagens de biblioteca de DB e manipuladores de erro; Você deve chamar **SQLGetDiagRec** para obter erros e mensagens geradas pelas funções de cópia em massa do ODBC. As versões ODBC das funções de cópia em massa retornam os códigos de retorno padrão da cópia em massa, SUCCEED ou FAILED, e não os códigos de retorno ODBC, como SQL_SUCCESS ou SQL_ERROR.  
   
 -   Os valores especificados para o parâmetro DB-Library [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)*varlen* são interpretados de forma diferente do parâmetro_cbData_ do ODBC **bcp_bind**.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "73785191"
   
     -   cadeias de caracteres **DateTime** e **smalldatetime** em qualquer formato com suporte pela função **DBConvert** do DB-Library.  
   
-    -   Quando a caixa **usar configurações internacionais** é marcada na guia **Opções** da biblioteca de banco de dados do utilitário de rede do cliente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], as funções de cópia em massa da biblioteca de banco de dados também aceitam datas no formato de data regional definido para a configuração de localidade do registro do computador cliente.  
+    -   Quando a caixa **usar configurações internacionais** é marcada na guia **Opções** da biblioteca de banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do utilitário de rede do cliente, as funções de cópia em massa da biblioteca de banco de dados também aceitam datas no formato de data regional definido para a configuração de localidade do registro do computador cliente.  
   
      As funções de cópia em massa da biblioteca DB não aceitam os formatos ODBC **DateTime** e **smalldatetime** .  
   
@@ -108,8 +108,8 @@ ms.locfileid: "73785191"
   
 -   Ao gerar valores **monetários** no formato de caractere, as funções de cópia em massa ODBC fornecem quatro dígitos de precisão e nenhum separador de vírgula; As versões de biblioteca do banco de BD fornecem apenas dois dígitos de precisão e incluem os separadores de vírgula.  
   
-## <a name="see-also"></a>Consulte também  
- [Executando operações &#40;de cópia em&#41; massa  ODBC](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
- [Funções de cópia em massa](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Executando operações de cópia em massa &#40;&#41;ODBC](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)   
+ [Bulk Copy Functions](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

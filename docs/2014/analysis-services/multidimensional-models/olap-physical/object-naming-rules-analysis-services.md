@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f45ccaa0caab2e1dcc7e96e80e217d82d4f1f805
-ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69530886"
 ---
 # <a name="object-naming-rules-analysis-services"></a>Regras de nomenclatura de objeto (Analysis Services)
@@ -74,7 +74,7 @@ ms.locfileid: "69530886"
 |`Dimension` ou `Hierarchy`|````. , ; ' ` : / \ * \| ? " & % $ ! + = () [] {} <,>````|  
 |Todos os outros objetos|````. , ; ' ` : / \ * \| ? " & % $ ! + = () [] {} < >````|  
   
- **Exceção Quando caracteres reservados são permitidos**  
+ **Exceções: Quando caracteres reservados são permitidos**  
   
  Conforme observado, os bancos de dados de uma modalidade e de um nível de compatibilidade específicos podem ter nomes de objetos que incluam caracteres reservados. Os nomes de objeto de atributo de dimensão, hierarquia, nível, medida e KPI podem incluir caracteres reservados, para bancos de dados de tabelas (1103 ou superior) que permitem o uso de caracteres estendidos:  
   
@@ -87,9 +87,9 @@ ms.locfileid: "69530886"
   
  Bancos de dados podem ter um ModelType padrão. O padrão é equivalente a multidimensional e, portanto, não dá suporte ao uso de caracteres reservados em nomes de colunas.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Palavras reservadas MDX](/sql/mdx/mdx-reserved-words)   
- [Traduções &#40;Analysis Services&#41;](/analysis-services/translation-support-in-analysis-services)   
- [XMLA de &#40;conformidade do XML for Analysis&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-compliance-xmla)  
+ [Conversões &#40;Analysis Services&#41;](/analysis-services/translation-support-in-analysis-services)   
+ [Conformidade XML for Analysis &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-compliance-xmla)  
   
   

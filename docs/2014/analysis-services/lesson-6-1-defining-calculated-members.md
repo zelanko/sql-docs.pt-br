@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ede0a23a6e37c47a1af242748233ca49b0cdfab7
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69493880"
 ---
 # <a name="defining-calculated-members"></a>Definindo membros calculados
@@ -32,7 +32,7 @@ ms.locfileid: "69493880"
   
      A imagem a seguir mostra a guia **Cálculos** do Designer de Cubo.  
   
-     ![Guia cálculos do designer de cubo](../../2014/tutorials/media/l6-calculatedmembers-1.gif "Guia cálculos do designer de cubo")  
+     ![Guia Cálculos do Designer de Cubo](../../2014/tutorials/media/l6-calculatedmembers-1.gif "Guia Cálculos do Designer de Cubo")  
   
 2.  Na barra de ferramentas da guia **Cálculos** , clique em **Novo Membro Calculado**.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "69493880"
   
      A imagem a seguir mostra o formulário que aparece no painel **Expressões de Cálculos** quando você clica em **Novo Membro Calculado**.  
   
-     ![Formulário do painel expressões de cálculo](../../2014/tutorials/media/l6-calculatedmembers-02.gif "Formulário do painel expressões de cálculo")  
+     ![Formulário de painel Expressões de Cálculo](../../2014/tutorials/media/l6-calculatedmembers-02.gif "Formulário de painel Expressões de Cálculo")  
   
 3.  Na caixa **nome** , altere o nome da medida calculada para `[Total Sales Amount]`.  
   
@@ -57,11 +57,11 @@ ms.locfileid: "69493880"
   
 5.  Arraste **Vendas pela Internet/Valor das Vendas** da guia **Metadados** no painel **Ferramentas de Cálculo** até a caixa **Expressão** no painel **Expressões de Cálculo** .  
   
-6.  Na caixa **expressão** , digite um sinal de adição (`+`) após **[medidas]. [ Vendas pela Internet-valor das vendas]** .  
+6.  Na caixa **Expressão** , digite um sinal de adição (`+`) depois de **[Medidas].[Vendas pela Internet/Valor das Vendas]**.  
   
 7.  Na guia **Metadados** do painel **Ferramentas de Cálculo** , expanda **Vendas do Revendedor**e arraste **Vendas do Revendedor/Valor das Vendas** até a caixa **Expressão** no painel **Expressões de Cálculos** após o sinal de adição (+).  
   
-8.  Na lista **Cadeia de caracteres de formato** , selecione **"Moeda"** .  
+8.  Na lista **cadeia de caracteres de formato** , selecione **"moeda".**  
   
 9. Na lista **Comportamento Não Vazio** , marque as caixas de seleção **Vendas pela Internet/Valor das Vendas** e **Vendas do Revendedor/Valor das Vendas**e clique em **OK**.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "69493880"
   
      A imagem a seguir mostra o painel **Expressões de Cálculos** preenchido com as configurações que você especificou nas etapas anteriores.  
   
-     ![Painel de expressões de cálculo preenchidas](../../2014/tutorials/media/l6-calculatedmembers-03.gif "Painel de expressões de cálculo preenchidas")  
+     ![Painel Expressões de Cálculo populado](../../2014/tutorials/media/l6-calculatedmembers-03.gif "Painel Expressões de Cálculo populado")  
   
 10. Na barra de ferramentas da guia **Cálculos** , clique em **Exibição de Script**e verifique o script de cálculo no painel **Expressões de Cálculos** .  
   
@@ -83,9 +83,9 @@ ms.locfileid: "69493880"
   
      A imagem a seguir mostra como os scripts de cálculos devem ser exibidos no painel **Expressões de Cálculos** neste ponto do tutorial.  
   
-     ![Scripts no painel expressões de cálculo](../../2014/tutorials/media/l6-calculatedmembers-04.gif "Scripts no painel expressões de cálculo")  
+     ![Scripts no painel Expressões de Cálculo](../../2014/tutorials/media/l6-calculatedmembers-04.gif "Scripts no painel Expressões de Cálculo")  
   
-12. Na barra de ferramentas da guia **cálculos** , clique em **exibição de formulário** `[Total Sales Amount]` , verifique se está selecionado no painel Organizador de **script** e clique em **novo membro calculado**.  
+12. Na barra de ferramentas da guia **cálculos** , clique em **exibição de formulário**, `[Total Sales Amount]` Verifique se está selecionado no painel **organizador de script** e clique em **novo membro calculado**.  
   
 13. Altere o nome desse novo membro calculado para `[Total Product Cost]`e, em seguida, crie a seguinte expressão na caixa **expressão** :  
   
@@ -93,7 +93,7 @@ ms.locfileid: "69493880"
     [Measures].[Internet Sales-Total Product Cost] + [Measures].[Reseller Sales-Total Product Cost]  
     ```  
   
-14. Na lista **Cadeia de caracteres de formato** , selecione **"Moeda"** .  
+14. Na lista **Cadeia de caracteres de formato** , selecione **"Moeda"**.  
   
 15. Na lista **Comportamento não vazio** , marque as caixas de seleção **Vendas pela Internet-Custo Total do Produto** e **Vendas do Revendedor-Custo Total do Produto**e clique em **OK**.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "69493880"
   
 ## <a name="defining-gross-profit-margin-calculations"></a>Definindo cálculos de margem de lucro bruto  
   
-1.  Verifique se está selecionado no painel Organizador de script e, em seguida, clique em novo membro calculado na barra de ferramentas da guia cálculos. `[Total Product Cost]`  
+1.  Verifique se `[Total Product Cost]` está selecionado no painel **organizador de script** e, em seguida, clique em **novo membro calculado** na barra de ferramentas da guia **cálculos** .  
   
 2.  Na caixa **nome** , altere o nome dessa nova medida calculada para `[Internet GPM]`.  
   
@@ -113,7 +113,7 @@ ms.locfileid: "69493880"
     [Measures].[Internet Sales-Sales Amount]  
     ```  
   
-4.  Na lista **Cadeia de caracteres de formato** , selecione **"Porcentagem"** .  
+4.  Na lista **Cadeia de caracteres de formato** , selecione **"Porcentagem"**.  
   
 5.  Na lista **Comportamento Não Vazio** , marque a caixa de seleção **Vendas pela Internet/Valor das Vendas**e clique em **OK**.  
   
@@ -129,7 +129,7 @@ ms.locfileid: "69493880"
     [Measures].[Reseller Sales-Sales Amount]  
     ```  
   
-9. Na lista **Cadeia de caracteres de formato** , selecione **"Porcentagem"** .  
+9. Na lista **Cadeia de caracteres de formato** , selecione **"Porcentagem"**.  
   
 10. Na lista **Comportamento Não Vazio** , marque a caixa de seleção **Vendas do Revendedor/Valor das Vendas**e clique em **OK**.  
   
@@ -147,7 +147,7 @@ ms.locfileid: "69493880"
   
      Observe que esse membro calculado faz referência a outros membros calculados. Como esse membro calculado será calculado após os membros aos quais ele faz referência, trata-se de um membro calculado válido.  
   
-14. Na lista **Cadeia de caracteres de formato** , selecione **"Porcentagem"** .  
+14. Na lista **Cadeia de caracteres de formato** , selecione **"Porcentagem"**.  
   
 15. Na lista **Comportamento Não Vazio** , marque as caixas de seleção **Vendas pela Internet/Valor das Vendas** e **Vendas do Revendedor/Valor das Vendas**e clique em **OK**.  
   
@@ -161,7 +161,7 @@ ms.locfileid: "69493880"
   
      A imagem a seguir mostra o painel **Expressões** com os três novos cálculos.  
   
-     ![Novos cálculos no painel expressões de cálculo](../../2014/tutorials/media/l6-calculatedmembers-05.gif "Novos cálculos no painel expressões de cálculo")  
+     ![Novos cálculos no painel Expressões de Cálculo](../../2014/tutorials/media/l6-calculatedmembers-05.gif "Novos cálculos no painel Expressões de Cálculo")  
   
 ## <a name="defining-the-percent-of-total-calculations"></a>Definindo o percentual de cálculos totais  
   
@@ -188,7 +188,7 @@ ms.locfileid: "69493880"
   
      Essa expressão MDX calcula a contribuição para totalizar as vendas pela Internet de cada produto. A instrução Case junto com a função IS EMPTY garante que não ocorra um erro de divisão por zero quando um produto não for vendido.  
   
-5.  Na lista **Cadeia de caracteres de formato** , selecione **"Porcentagem"** .  
+5.  Na lista **Cadeia de caracteres de formato** , selecione **"Porcentagem"**.  
   
 6.  Na lista **Comportamento Não Vazio** , marque a caixa de seleção **Vendas pela Internet/Valor das Vendas**e clique em **OK**.  
   
@@ -209,7 +209,7 @@ ms.locfileid: "69493880"
         End  
     ```  
   
-10. Na lista **Cadeia de caracteres de formato** , selecione **"Porcentagem"** .  
+10. Na lista **Cadeia de caracteres de formato** , selecione **"Porcentagem"**.  
   
 11. Na lista **Comportamento Não Vazio** , marque a caixa de seleção **Vendas do Revendedor/Valor das Vendas**e clique em **OK**.  
   
@@ -230,7 +230,7 @@ ms.locfileid: "69493880"
         End  
     ```  
   
-15. Na lista **Cadeia de caracteres de formato** , selecione **"Porcentagem"** .  
+15. Na lista **Cadeia de caracteres de formato** , selecione **"Porcentagem"**.  
   
 16. Na lista **Comportamento Não Vazio** , marque as caixas de seleção **Vendas pela Internet/Valor das Vendas** e **Vendas do Revendedor/Valor das Vendas**e clique em **OK**.  
   
@@ -272,7 +272,7 @@ ms.locfileid: "69493880"
   
      Observe que a margem de lucro bruto das vendas do revendedor é significativamente mais baixa que as vendas pela Internet, conforme mostrado na imagem a seguir.  
   
-     ![Painel de dados mostrando vendas](../../2014/tutorials/media/l6-calculatedmembers-7b.gif " do revendedor Painel de dados mostrando vendas") do revendedor  
+     ![Painel Dados que mostra as vendas do revendedor](../../2014/tutorials/media/l6-calculatedmembers-7b.gif "Painel Dados que mostra as vendas do revendedor")  
   
 9. Adicione as medidas **Taxa de Vendas Total para Todos os Produtos**, **Taxa de Vendas pela Internet para Todos os Produtos**e **Taxa de Vendas do Revendedor para Todos os Produtos** à área de Valores.  
   
@@ -289,7 +289,7 @@ ms.locfileid: "69493880"
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
  [Definindo conjuntos nomeados](lesson-6-2-defining-named-sets.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Cálculos](multidimensional-models-olap-logical-cube-objects/calculations.md)   
  [Cálculos em modelos multidimensionais](multidimensional-models/calculations-in-multidimensional-models.md)   
  [Criar membros calculados](multidimensional-models/create-calculated-members.md)  

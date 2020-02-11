@@ -9,10 +9,10 @@ ms.assetid: 2641ea84-9343-4e6f-aec1-25339031b163
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e034b911ec5817ac82214466fdc2bf7087e8865a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68222778"
 ---
 # <a name="work-with-shared-datasets---web-portal"></a>Trabalhar com conjuntos de dados compartilhados – portal da Web
@@ -104,4 +104,4 @@ Quando terminar, selecione **Criar Plano de Atualização do Cache**.
   
 Em seguida, você pode **Editar** ou **Excluir** os planos listados. A opção **Novo Com Base Em Existente** é habilitada quando um, e apenas um, plano de atualização do cache for selecionado. Essa opção criará um novo plano de atualização que é copiado do plano original. A página Plano de Atualização do Cache é aberta pré-populada com detalhes do plano que foi selecionado. Você pode modificar as opções do plano de atualização e salvar o plano com uma nova descrição.  
 
-Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
+Mais perguntas? [Experimente perguntar no fórum do Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

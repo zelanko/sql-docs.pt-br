@@ -1,5 +1,5 @@
 ---
-title: Definir um Alias do SQL Server para o serviço do SQL Server Agent (SQL Server Management Studio) | Microsoft Docs
+title: Definir um alias de SQL Server para o serviço de SQL Server Agent (SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 752796caafa86ece1b471beb25a77ea381497409
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774382"
 ---
 # <a name="set-a-sql-server-alias-for-the-sql-server-agent-service-sql-server-management-studio"></a>Set a SQL Server Alias for the SQL Server Agent Service (SQL Server Management Studio)
-  Este tópico descreve como definir um alias do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a ser usado pelo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent para se conectar ao [!INCLUDE[ssDE](../includes/ssde-md.md)] usando o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Por padrão, o serviço do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent se conecta a uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] em pipes nomeados usando nomes dinâmicos de servidor que não exigem configuração adicional de cliente. Só será necessário configurar um alias de conexão com o servidor se você não estiver usando o transporte de rede padrão ou se estiver se conectando a uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que escute em um pipe nomeado alternativo.  
+  Este tópico descreve como definir um alias [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que o Agent use para se conectar ao [!INCLUDE[ssDE](../includes/ssde-md.md)] usando [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]o. Por padrão, o serviço do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent se conecta a uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] em pipes nomeados usando nomes dinâmicos de servidor que não exigem configuração adicional de cliente. Só será necessário configurar um alias de conexão com o servidor se você não estiver usando o transporte de rede padrão ou se estiver se conectando a uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que escute em um pipe nomeado alternativo.  
   
  **Neste tópico**  
   
@@ -31,13 +31,14 @@ ms.locfileid: "62774382"
   
      [Segurança](#Security)  
   
--   [Para definir um Alias do SQL Server para o Serviço do SQL Server Agent usando o SQL Server Management Studio](#SSMSProcedure)  
+-   [Para definir um alias de SQL Server para o serviço de SQL Server Agent usando SQL Server Management Studio](#SSMSProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
 ###  <a name="Restrictions"></a> Limitações e restrições  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent não funcionará corretamente a menos que você selecione um alias referente à instância local do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+-   
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent não funcionará corretamente a menos que você selecione um alias referente à instância local do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 -   O Pesquisador de Objetos só exibirá o nó [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent se você tiver permissão para usá-lo.  
   
@@ -54,7 +55,7 @@ ms.locfileid: "62774382"
   
 -   Ajustar cotas de memória para um processo (SeIncreaseQuotaPrivilege)  
   
- Para obter mais informações sobre as permissões do Windows necessárias para o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] conta de serviço do Agent, consulte [selecionar uma conta para o serviço do SQL Server Agent](../ssms/agent/select-an-account-for-the-sql-server-agent-service.md) e [configurar contas de serviço do Windows e Permissões](configure-windows/configure-windows-service-accounts-and-permissions.md).  
+ Para obter mais informações sobre as permissões do Windows necessárias [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para a conta de serviço do Agent, consulte [selecionar uma conta para o serviço de SQL Server Agent](../ssms/agent/select-an-account-for-the-sql-server-agent-service.md) e [Configurar contas de serviço e permissões do Windows](configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
@@ -64,7 +65,7 @@ ms.locfileid: "62774382"
   
 2.  Clique com o botão direito do mouse em **SQL Server Agent**e então clique em **Propriedades**.  
   
-3.  Na caixa de diálogo **Propriedades do SQL Server Agent**_server_name_ , em **Selecionar uma página**, selecione **Conexão**, e  
+3.  Na caixa de diálogo **Propriedades do SQL Server Agent**_server_name_ , em **selecionar uma página**, selecione **conexão**e  
   
 4.  Na caixa **Servidor de host local do alias** , digite o alias do servidor ao qual o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent deve se conectar.  
   

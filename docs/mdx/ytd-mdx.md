@@ -1,5 +1,5 @@
 ---
-title: Ytd (MDX) | Microsoft Docs
+title: Acumulado no ano (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 2e3fcd823dea5d651cd7be9295fa4c6bba25380c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68125756"
 ---
 # <a name="ytd-mdx"></a>Ytd (MDX)
 
 
-  Retorna os membros de um conjunto de irmãos do mesmo nível de um determinado membro, começando com o primeiro irmão e terminando com um determinado membro, restringido pelo *ano* nível na dimensão de tempo.  
+  Retorna um conjunto de membros irmãos do mesmo nível de um determinado membro, começando com o primeiro irmão e terminando com o membro determinado, como restrito pelo nível de *ano* na dimensão de tempo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -32,12 +32,12 @@ Ytd( [ Member_Expression ] )
  Uma linguagem MDX válida que retorna um membro.  
   
 ## <a name="remarks"></a>Comentários  
- Se uma expressão de membro não for especificada, o padrão é o membro atual da primeira hierarquia com um nível de tipo *anos* na primeira dimensão do tipo *tempo* no grupo de medidas.  
+ Se uma expressão de membro não for especificada, o padrão será o membro atual da primeira hierarquia com um nível do tipo *Years* na primeira dimensão do tipo *time* no grupo de medidas.  
   
- O **Ytd** é uma função de atalho para o [PeriodsToDate](../mdx/periodstodate-mdx.md) função em que a propriedade de tipo da hierarquia de atributo no qual o nível é baseado é definida como *anos*. Ou seja, `Ytd(Member_Expression)` é equivalente a `PeriodsToDate(Year_Level_Expression,Member_Expression)`. Observe que essa função não funcionará quando a propriedade Type é definida como *FiscalYears*.  
+ A função timeyear é **uma função de** atalho para a função [PeriodsToDate](../mdx/periodstodate-mdx.md) em que a propriedade Type da hierarquia de atributo na qual o nível é baseado é definida como *Years*. Ou seja, `Ytd(Member_Expression)` é equivalente a `PeriodsToDate(Year_Level_Expression,Member_Expression)`. Observe que essa função não funcionará quando a propriedade Type for definida como *FiscalYears*.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir retorna a soma do `Measures.[Order Quantity]` membro, agregado durante os primeiros oito meses do ano calendário 2003 contidos na `Date` dimensão, da **Adventure Works** cubo.  
+ O exemplo a seguir retorna a soma do `Measures.[Order Quantity]` membro, agregados nos primeiros oito meses do ano civil 2003 que estão contidos na `Date` dimensão, do cubo **Adventure Works** .  
   
 ```  
 WITH MEMBER [Date].[Calendar].[First8MonthsCY2003] AS  
@@ -53,7 +53,7 @@ WHERE
     [Measures].[Order Quantity]  
 ```  
   
- **Acumulado no ano** é usado frequentemente em combinação com nenhum parâmetro especificado, o que significa que o [CurrentMember &#40;MDX&#41; ](../mdx/currentmember-mdx.md) função exibirá um total acumulado de year-to-date em um relatório, conforme mostrado no consulta a seguir:  
+ O **ano** é frequentemente usado em combinação sem parâmetros especificados, o que significa que a função [CurrentMember &#40;MDX&#41;](../mdx/currentmember-mdx.md) exibirá um total acumulado no ano até a data em um relatório, conforme mostrado na seguinte consulta:  
   
  `WITH MEMBER MEASURES.YTDDEMO AS`  
   
@@ -65,7 +65,7 @@ WHERE
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>Consulte também  
- [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Referência de função MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

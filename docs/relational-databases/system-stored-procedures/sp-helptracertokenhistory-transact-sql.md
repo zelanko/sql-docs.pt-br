@@ -16,10 +16,10 @@ ms.assetid: 96910d1c-be76-43eb-9c93-4477e6761749
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b8755bea5e318d1ded2631a2253134fd8721a421
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68771149"
 ---
 # <a name="sp_helptracertokenhistory-transact-sql"></a>sp_helptracertokenhistory (Transact-SQL)
@@ -27,7 +27,7 @@ ms.locfileid: "68771149"
 
   Retorna informações de latência detalhada por tokens de rastreamento especificados, com uma linha retornada para cada Assinante. Esse procedimento armazenado é executado no Publicador, no banco de dados de publicação, ou no Distribuidor, no banco de dados de distribuição.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,9 +42,9 @@ sp_helptracertokenhistory [ @publication = ] 'publication'
 ## <a name="arguments"></a>Argumentos  
 `[ @publication = ] 'publication'`É o nome da publicação na qual o token de rastreamento foi inserido. a *publicação* é **sysname**, sem padrão.  
   
-`[ @tracer_id = ] tracer_id`É a ID do token de rastreamento na tabela [Transact &#40;-SQL&#41; MStracer_tokens](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md) para a qual as informações de histórico são retornadas. *tracer_id* é **int**, sem padrão.  
+`[ @tracer_id = ] tracer_id`É a ID do token de rastreamento no [MStracer_tokens &#40;tabela de&#41;Transact-SQL](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md) para a qual as informações de histórico são retornadas. *tracer_id* é **int**, sem padrão.  
   
-`[ @publisher = ] 'publisher'`O nome do Publicador. o Publicador é **sysname**, com um padrão de NULL.  
+`[ @publisher = ] 'publisher'`O nome do Publicador. o *Publicador* é **sysname**, com um padrão de NULL.  
   
 > [!NOTE]
 >  Esse parâmetro só deve ser especificado para não [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicadores.  
@@ -53,7 +53,7 @@ sp_helptracertokenhistory [ @publication = ] 'publication'
   
 ## <a name="result-set"></a>Conjunto de resultados  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |**distributor_latency**|**bigint**|Número de segundos entre o registro de token de rastreamento sendo aplicado no Publicador e o registro sendo aplicado no Distribuidor.|  
 |**Assinante**|**sysname**|Nome do Assinante que recebeu o token de rastreamento.|  
@@ -67,7 +67,7 @@ sp_helptracertokenhistory [ @publication = ] 'publication'
 ## <a name="remarks"></a>Comentários  
  **sp_helptracertokenhistory** é usado na replicação transacional.  
   
- Execute [sp_helptracertokens &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md) para obter uma lista de tokens de rastreamento para a publicação.  
+ Execute [sp_helptracertokens &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md) para obter uma lista de tokens de rastreamento para a publicação.  
   
  Um valor NULL no conjunto de resultados significa que não podem ser calculadas estatísticas de latência. Isso porque o token de rastreamento não foi recebido no Distribuidor ou em um dos Assinantes.  
   
@@ -75,10 +75,10 @@ sp_helptracertokenhistory [ @publication = ] 'publication'
  [!code-sql[HowTo#sp_tracertokens](../../relational-databases/replication/codesnippet/tsql/sp-helptracertokenhistor_1.sql)]  
   
 ## <a name="permissions"></a>Permissões  
- Somente os membros da função de servidor fixa **sysadmin** , a função de banco de dados fixa **db_owner** no banco de dados de publicação ou as funções de banco de dados fixas **db_owner** ou **replmonitor** no banco de dados de distribuição podem executar **sp_ helptracertokenhistory**.  
+ Somente os membros da função de servidor fixa **sysadmin** , a função de banco de dados fixa **db_owner** no banco de dados de publicação ou **db_owner** banco de dados fixo ou funções **replmonitor** no banco de dados de distribuição podem executar **sp_helptracertokenhistory**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Medir a latência e validar as conexões para a replicação transacional](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)   
- [sp_deletetracertokenhistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md)  
+ [&#41;&#40;Transact-SQL de sp_deletetracertokenhistory](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md)  
   
   

@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 068b7aa3c068b10b787b99bba26c12a2b680bcd3
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727412"
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>Desempenho para R Services: resultados e recursos
@@ -92,7 +92,7 @@ Esta seção compara os resultados antes e depois de cada um dos testes.
 
 O primeiro teste vai comparar o uso de compactação e uma tabela colunar para reduzir o tamanho dos dados.
 
-| Nome da tabela            | Linhas     | Reservado   | data       | index_size | Não usado  | % de economia (reservado) |
+| Nome da tabela            | Linhas     | Reservado   | Dados       | index_size | Não usado  | % de economia (reservado) |
 |-----------------------|----------|------------|------------|------------|---------|---------------------|
 | *airlineWithIndex*    | 10000000 | 2978816 KB | 2972160 KB | 6128 KB    | 528 KB  | 0                   |
 | *airlineWithPageComp* | 10000000 | 625784 KB  | 623744 KB  | 1352 KB    | 688 KB  | 79%                 |
@@ -268,8 +268,8 @@ Os resultados de teste mostram a hora de salvar o modelo e o tempo necessário p
 
 | Nome da tabela | Nome do teste | Tempo médio (para treinar o modelo) | Tempo para salvar/carregar o modelo|
 |------------|------------|------------|------------|
-| airline    | SaveModel| 21.59| 2.08|
-| airline    | LoadModelAndPredict | | 2,09 (inclui o tempo de previsão) |
+| companhia aérea    | SaveModel| 21.59| 2.08|
+| companhia aérea    | LoadModelAndPredict | | 2,09 (inclui o tempo de previsão) |
 
 **Conclusões**
 

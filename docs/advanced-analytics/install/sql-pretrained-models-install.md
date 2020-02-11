@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 97da2ed795d002fa47900eb21ead90b48b525387
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727553"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>Instalar modelos de machine learning pré-treinados no SQL Server
@@ -213,7 +213,7 @@ Para obter mais informações sobre os algoritmos usados nesses modelos de apren
 
 ## <a name="see-also"></a>Confira também
 
-+ [Serviços de aprendizado de máquina do SQL Server](sql-machine-learning-services-windows-install.md)
++ [Serviços de Machine Learning do SQL Server](sql-machine-learning-services-windows-install.md)
 + [Atualizar componentes de R e Python em instâncias do SQL Server](../install/upgrade-r-and-python.md)
 + [Pacote MicrosoftML para R](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)
 + [Pacote microsoftml para Python](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0a2037297db3f8a303ffd08fb31241e51505aeff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62829469"
 ---
 # <a name="value-inclusion-profile-request-options-data-profiling-task"></a>Opções da solicitação do perfil Inclusão de Valor (tarefa Criação de Perfil de Dados)
@@ -102,7 +102,7 @@ ms.locfileid: "62829469"
 > [!NOTE]  
 >  Quando você usa o curinga **(\*)** para **ColumnName**, **CompareOptions** é somente leitura e definido como **Default**.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |**Default**|Classifica e compara dados com base na ordenação da coluna na tabela de origem.|  
 |**BinarySort**|Classifica e compara dados com base nos padrões de bit definidos para cada caractere. A ordem de classificação binária faz distinção entre maiúsculas e minúsculas e acentuação. Binário é também a ordem de classificação mais rápida.|  
@@ -110,7 +110,7 @@ ms.locfileid: "62829469"
   
  Se **DictionarySort**for selecionado, também é possível selecionar qualquer combinação das opções relacionadas na tabela a seguir. Por padrão, nenhuma destas opções adicionais está selecionada.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |**IgnoreCase**|Especifica se a comparação faz distinção entre letras maiúsculas e minúsculas. Se esta opção for definida, a comparação de cadeia de caracteres ignorará a distinção entre letras maiúsculas e minúsculas. Por exemplo, "ABC" torna-se igual a "abc".|  
 |**IgnoreNonSpace**|Especifica se a comparação distingue entre caracteres de espaço e sinais diacríticos. Se esta opção for definida, a comparação ignorará os sinais diacríticos. Por exemplo, "å" é igual a "a".|  
@@ -125,9 +125,9 @@ ms.locfileid: "62829469"
  **InclusionThresholdSetting**  
  Selecione a configuração de limite para refinar a saída do perfil. O valor padrão dessa propriedade é **Especificado**. Para obter mais informações, consulte a seção "Compreendendo as configurações de limite" anteriormente neste tópico.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
-|**Nenhum**|Nenhum limite é especificado. A intensidade da chave é informada independentemente de seu valor.|  
+|**Nenhuma**|Nenhum limite é especificado. A intensidade da chave é informada independentemente de seu valor.|  
 |**Especificado**|Use o limite especificado em **InclusionStrengthThreshold**. A intensidade de inclusão só será informada se for superior ao limite.|  
 |**Exato**|Nenhum limite é especificado. A intensidade de inclusão só será informada se os valores de subconjunto forem completamente incluídos nos valores de superconjunto.|  
   
@@ -139,9 +139,9 @@ ms.locfileid: "62829469"
  **SupersetColumnsKeyThresholdSetting**  
  Especifique o limite de superconjunto. O valor padrão dessa propriedade é **Especificado**. Para obter mais informações, consulte a seção "Compreendendo as configurações de limite" anteriormente neste tópico.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
-|**Nenhum**|Nenhum limite é especificado. A intensidade de inclusão é informada independentemente da intensidade da chave da coluna de superconjunto.|  
+|**Nenhuma**|Nenhum limite é especificado. A intensidade de inclusão é informada independentemente da intensidade da chave da coluna de superconjunto.|  
 |**Especificado**|Use o limite especificado em **SupersetColumnsKeyThreshold**. A intensidade de inclusão só será informada se a intensidade da chave da coluna de superconjunto for maior que o limite.|  
 |**Exato**|Nenhum limite é especificado. A intensidade de inclusão só será informada se as colunas de superconjunto forem uma chave exata na tabela de superconjunto.|  
   
@@ -153,7 +153,7 @@ ms.locfileid: "62829469"
  **MaxNumberOfViolations**  
  Especifique o número máximo de violações de inclusão a serem informadas na saída. O valor padrão dessa propriedade é 100. Esta opção é desabilitada quando **Exato** é selecionado como **InclusionThresholdSetting**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Editor da tarefa Criação de Perfil de Dados &#40;Página Geral&#41;](../general-page-of-integration-services-designers-options.md)   
  [Formulário de Perfil Rápido de Tabela Única &#40;Tarefa Criação de Perfil de Dados&#41;](single-table-quick-profile-form-data-profiling-task.md)  
   

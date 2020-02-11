@@ -1,5 +1,5 @@
 ---
-title: Propriedades do índice de texto completo (página geral) | Microsoft Docs
+title: Propriedades do índice de texto completo (página Geral) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: a240ed4e3788d65ab795d8680dc93f253cfde059
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62778937"
 ---
 # <a name="full-text-index-properties-general-page"></a>Propriedades do Índice de Texto Completo (página Geral)
   **Para exibir ou alterar as propriedades modificáveis de um índice de texto completo**  
   
--   [Administrar índices de texto completo](../relational-databases/indexes/indexes.md)  
+-   [Gerenciar índices de texto completo](../relational-databases/indexes/indexes.md)  
   
 ## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
  **Catálogo de texto completo**  
@@ -34,10 +34,10 @@ ms.locfileid: "62778937"
  **Table**  
  Exibe o nome da tabela na qual o índice de texto completo está definido.  
   
- **Chave de índice de texto completo**  
+ **Chave de Índice de Texto Completo**  
  Exibe o nome da chave de índice de texto completo, que é um índice exclusivo em uma única coluna da tabela.  
   
- **Status da população de texto completo da tabela**  
+ **Status da População de Texto Completo da Tabela**  
  Exibe o status da população da tabela indexada de texto completo.  
   
  Os valores possíveis são os seguintes:  
@@ -54,27 +54,27 @@ ms.locfileid: "62778937"
   
  5 = Indexação de texto completo acelerado ou pausado.  
   
- **Índice de texto completo ativo**  
+ **Índice de Texto Completo Ativo**  
  Indica se a tabela tem um índice de texto completo ativo.  
   
  1 = True  
   
  0 = False  
   
- **Grupo de arquivos de índice de texto completo**  
+ **Grupo de arquivos do índice de texto completo**  
  O grupo de arquivos ao qual o índice de texto completo pertence.  
   
  **Lista de palavras irrelevantes de índice de texto completo**  
- A lista de palavras irrelevantes associada ao índice de texto completo no momento. Uma lista de palavras irrelevantes contém [palavras irrelevantes](../relational-databases/search/full-text-search.md). A lista de palavras irrelevantes associada a um índice de texto completo, se houver, é aplicada a consultas de texto completo nesse índice. Você pode remover a lista de palavras irrelevantes do índice selecionando  **\<OFF >** na lista, ou você pode selecionar uma outra lista de palavras irrelevantes;  **\<Sistema >** indica a lista de palavras irrelevantes do sistema.  
+ A lista de palavras irrelevantes associada ao índice de texto completo no momento. Uma lista de palavras irrelevantes contém [palavras irrelevantes](../relational-databases/search/full-text-search.md). A lista de palavras irrelevantes associada a um índice de texto completo, se houver, é aplicada a consultas de texto completo nesse índice. Você pode remover a lista de palavras irrelevantes do índice selecionando ** \<desativado>** na listagem ou pode selecionar uma diferente lista de palavras irrelevantes; O sistema>indica a System STOPLIST. ** \<**  
   
- **Para criar uma lista de palavras irrelevantes**  
+ **Par criar uma lista de palavras irrelevantes (stoplist)**  
   
 -   [Configurar e gerenciar palavras irrelevantes e listas de palavras irrelevantes para pesquisa de texto completo](../relational-databases/search/full-text-search.md)  
   
  **Lista de propriedades de pesquisa**  
  A lista de propriedades de pesquisa associada atualmente o índice de texto completo, se houver algum. Uma lista de propriedades de pesquisa especifica um conjunto de propriedades de documento que são incluídos no índice de texto completo quando ele é preenchido. Para obter mais informações, veja [Pesquisar propriedades de documento com listas de propriedades de pesquisa](../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
- **\<Desativar >** indica que não há atualmente nenhuma lista de propriedades de pesquisa associada ao índice. Você pode remover a lista de propriedades de pesquisa atual do índice selecionando  **\<desativar >** na lista, ou você pode selecionar uma lista de propriedades de pesquisa diferente na lista. Somente as listas de propriedades de pesquisa do banco de dados atual são relacionadas aqui.  
+ Off>indica que atualmente não há nenhuma lista de propriedades de pesquisa associada ao índice. ** \<** Você pode remover a lista de propriedades de pesquisa atual do índice selecionando ** \<desativado>** na lista ou pode selecionar uma lista de propriedades de pesquisa diferente na lista. Somente as listas de propriedades de pesquisa do banco de dados atual são relacionadas aqui.  
   
 > [!NOTE]  
 >  Você pode associar uma determinada lista de propriedades de pesquisa a mais de um índice de texto completo no mesmo banco de dados.  
@@ -83,12 +83,12 @@ ms.locfileid: "62778937"
   
 -   [Pesquisar propriedades de documento com listas de propriedades de pesquisa](../relational-databases/search/search-document-properties-with-search-property-lists.md)  
   
- **Contagem de itens de texto completo da tabela**  
+ **Contagem de Itens de Texto Completo da Tabela**  
  Indica o número de linhas com indexação de texto completo bem-sucedida.  
   
  Essa propriedade corresponde à propriedade `TableFulltextItemCount` retornada pela função [!INCLUDE[tsql](../includes/tsql-md.md)] OBJECTPROPERTYEX.  
   
- **Documentos de texto completo da tabela processados**  
+ **Documentos de Texto Completo da Tabela Processados**  
  Exibe o número de linhas processadas desde o início da indexação de texto completo. Em uma tabela que está sendo indexada para pesquisa de texto completo, todas as colunas de uma linha são consideradas parte de um documento a ser indexado. Linhas excluídas não são contadas.  
   
 |||  
@@ -96,14 +96,14 @@ ms.locfileid: "62778937"
 |0|Indica que a indexação de texto completo está concluída e que não há população ativa.|  
 |> 0|Para uma população ativa, indica o número de documentos processados pelas operações de inserção ou de atualização desde qualquer uma das seguintes opções: uma população, a habilitação do controle de alterações com população de índice de atualização em segundo plano (como controle de alterações automáticas), a alteração do esquema de índice de texto completo, a reconstrução do catálogo de texto completo, o reinício da instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], etc.|  
   
- **Texto completo da tabela alterações pendentes**  
+ **Alterações de Texto Completo Pendentes da Tabela**  
  Número de entradas de controle de alterações pendentes a serem processadas.  
   
  0 = o controle de alterações não está habilitado.  
   
  NULL = A tabela não tem um índice de texto completo.  
   
- **Contagem de falhas de texto completo da tabela**  
+ **Contagem de Falhas de Texto Completo da Tabela**  
  O número de linhas que a pesquisa de texto completo não indexou.  
   
  0 = A população foi concluída.  
@@ -119,7 +119,7 @@ ms.locfileid: "62778937"
   
 |||  
 |-|-|  
-|**Verdadeiro**|Enabled|  
+|**Verdadeiro**|habilitado|  
 |**Falso**|Desabilitado|  
   
  **Controle de alterações**  
@@ -129,7 +129,7 @@ ms.locfileid: "62778937"
   
 |||  
 |-|-|  
-|**Off**|O índice de texto completo não é atualizado com alterações nos dados subjacentes.|  
+|**Desconto**|O índice de texto completo não é atualizado com alterações nos dados subjacentes.|  
 |**Manual**|O índice de texto completo não é atualizado automaticamente conforme as alterações ocorrem nos dados subjacentes. Porém, as alterações aos dados subjacentes são mantidas e você pode propagá-los para o índice de texto completo ou em uma agenda que usa o SQL Server Agent ou manualmente.|  
 |**Automático**|O índice de texto completo é atualizado automaticamente conforme as alterações ocorrem nos dados subjacentes na tabela base.|  
   
@@ -138,11 +138,11 @@ ms.locfileid: "62778937"
   
 |||  
 |-|-|  
-|**Full (cheio)**|Durante uma população completa de uma tabela, as entradas de índice são criadas para todas as linhas.|  
-|**Incremental**|A população incremental atualiza o índice de texto completo para linhas adicionadas, excluídas ou modificadas após a última população ou enquanto a última população estava em andamento. A execução de uma população incremental requer que a tabela base contenha uma coluna do tipo de dados `timestamp`.|  
-|**Update (atualizar)**|O índice de texto completo é atualizado sempre que os dados da tabela base são modificados.|  
+|**Full**|Durante uma população completa de uma tabela, as entradas de índice são criadas para todas as linhas.|  
+|**Lucrativ**|A população incremental atualiza o índice de texto completo para linhas adicionadas, excluídas ou modificadas após a última população ou enquanto a última população estava em andamento. A execução de uma população incremental requer que a tabela base contenha uma coluna do tipo de dados `timestamp`.|  
+|**Cumulativo**|O índice de texto completo é atualizado sempre que os dados da tabela base são modificados.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Iniciar a pesquisa de texto completo](../relational-databases/search/get-started-with-full-text-search.md)  
   
   

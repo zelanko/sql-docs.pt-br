@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ffe65b15ef18618058ea9ccc385dd12cd0482d96
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73781701"
 ---
 # <a name="call-sqlcolumns-on-a-table-with-sparse-columns"></a>Chamar SQLColumns em uma tabela com colunas esparsas
@@ -35,7 +35,7 @@ ms.locfileid: "73781701"
   
  Compile com /EHsc /D, "UNICODE" e odbc32.lib.  
   
- A segunda listagem de código ([!INCLUDE[tsql](../../includes/tsql-md.md)]) exclui a tabela criada por este exemplo.  
+ A segunda listagem [!INCLUDE[tsql](../../includes/tsql-md.md)]de código () exclui a tabela criada por este exemplo.  
   
 ```  
 // compile with: /EHsc /D "UNICODE" odbc32.lib  

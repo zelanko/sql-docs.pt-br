@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ace9bbbbbc023d14dbce91a176f7d05ad19d699b
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68811063"
 ---
 # <a name="understanding-incremental-generation"></a>Entendendo a geração com incremento
@@ -83,8 +83,8 @@ ms.locfileid: "68811063"
   
  Por outro lado, se você alterar a cadeia de conexão da fonte de dados para um banco de dados diferente daquele usado na geração anterior, nenhum erro será gerado. O novo banco de dados será usado e nenhuma alteração será feita no banco de dados anterior.  
   
-## <a name="see-also"></a>Consulte também  
- [Gerenciar alterações em exibições da fonte de dados e em fontes de dados](manage-changes-to-data-source-views-and-data-sources.md)   
- [Assistente de Geração de Esquema &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Gerenciar alterações em fontes de dados e exibições de fonte de dados](manage-changes-to-data-source-views-and-data-sources.md)   
+ [&#40;Analysis Services do assistente de geração de esquema&#41;](schema-generation-wizard-analysis-services.md)  
   
   

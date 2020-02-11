@@ -16,10 +16,10 @@ ms.assetid: 01100309-7bef-4154-85bf-f18489577e37
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 56ed176d8b4b29e1ed4caafabd0893b7a33b1293
-ms.sourcegitcommit: eae9efe2a2d3758685e85039ffb8fa698aa47f9b
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73962389"
 ---
 # <a name="sp_markpendingschemachange-transact-sql"></a>sp_markpendingschemachange (Transact-SQL)
@@ -40,16 +40,16 @@ sp_markpendingschemachange [@publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` é o nome da publicação. a *publicação* é **sysname**, sem padrão.  
+`[ @publication = ] 'publication'`É o nome da publicação. a *publicação* é **sysname**, sem padrão.  
   
-`[ @schemaversion = ] schemaversion` identifica uma alteração de esquema pendente. *SchemaVersion* é **int**, com um valor padrão de **0**. Use [sp_enumeratependingschemachanges &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql.md) para listar as alterações de esquema pendentes para a publicação.  
+`[ @schemaversion = ] schemaversion`Identifica uma alteração de esquema pendente. *SchemaVersion* é **int**, com um valor padrão de **0**. Use [sp_enumeratependingschemachanges &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql.md) para listar as alterações de esquema pendentes para a publicação.  
   
-`[ @status = ] 'status'` é se uma alteração de esquema pendente será ignorada. *status* é **nvarchar (10)** com um valor padrão de **ativo**. Se o valor do *status* for **ignorado**, a alteração de esquema selecionada não será replicada.  
+`[ @status = ] 'status'`É se uma alteração de esquema pendente será ignorada. *status* é **nvarchar (10)** com um valor padrão de **ativo**. Se o valor do *status* for **ignorado**, a alteração de esquema selecionada não será replicada.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  **sp_markpendingschemachange** é usado com replicação de mesclagem.  
   
  **sp_markpendingschemachange** é um procedimento armazenado destinado à compatibilidade da replicação de mesclagem e deve ser usado somente quando outras ações corretivas, como reinicialização, falharam ao corrigir a situação ou são muito caras em termos de desempenho.  
@@ -57,7 +57,7 @@ sp_markpendingschemachange [@publication = ] 'publication'
 ## <a name="permissions"></a>Permissões  
  Somente os membros da função de servidor fixa **sysadmin** ou **db_owner** função de banco de dados fixa podem ser executados **sp_markpendingschemachange**.  
   
-## <a name="see-also"></a>Consulte também  
- [sysmergeschemachange &#40;Transact-SQL&#41;](../../relational-databases/system-tables/sysmergeschemachange-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [&#41;sysmergeschemachange &#40;Transact-SQL](../../relational-databases/system-tables/sysmergeschemachange-transact-sql.md)  
   
   

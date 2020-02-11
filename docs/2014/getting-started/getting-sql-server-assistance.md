@@ -42,10 +42,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cfa159a88cfc159e65fe3ec39b334a3f6e8c5c8b
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74683609"
 ---
 # <a name="getting-sql-server-assistance"></a>Obtendo assistência do SQL Server
@@ -59,8 +59,7 @@ ms.locfileid: "74683609"
   
  Se não encontrar a informações que está procurando nessas origens, você poderá postar perguntas nos fóruns e grupos de notícias da comunidade do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou abrir um caso de suporte com a [!INCLUDE[msCoName](../includes/msconame-md.md)].  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-books-online"></a>
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Manuais Online  
+## <a name="includessnoversionincludesssnoversion-mdmd-books-online"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Manuais Online  
  Os Manuais Online do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] documentam os conceitos e procedimentos necessários para usar o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Os Manuais Online também incluem material de referência dos idiomas e interfaces de programação para armazenamento, recuperação, relatórios e modificação de dados usando o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  É possível acessar os Manuais Online das seguintes formas:  
@@ -87,7 +86,7 @@ ms.locfileid: "74683609"
 ## <a name="additional-online-information"></a>Informações online adicionais  
  Informações adicionais sobre o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] estão disponíveis nestes sites da [!INCLUDE[msCoName](../includes/msconame-md.md)].  
   
-|Recurso|Descrição|  
+|Recurso|DESCRIÇÃO|  
 |--------------|-----------------|  
 |[Microsoft SQL Server](https://go.microsoft.com/fwlink/?linkid=8504)|Fornece informações de pré-venda sobre como avaliar o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] como um armazenamento de dados e ferramenta de business intelligence.|  
 |[Base de dados de conhecimento da Microsoft](https://go.microsoft.com/fwlink/?LinkId=42461)|Fornece um repositório pesquisável de artigos sobre o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] escritos por suporte da [!INCLUDE[msCoName](../includes/msconame-md.md)].|    

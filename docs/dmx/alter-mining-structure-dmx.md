@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 5535428d89a0d14b60e3ac79d281f63b4c69bfb5
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68889871"
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Cria um novo modelo de mineração baseado em uma estrutura de mineração existente.  Quando você usa a instrução **ALTER MINING STRUCTURE** para criar um novo modelo de mineração, a estrutura já deve existir. Por outro lado, ao usar a instrução, [crie um modelo &#40;de&#41;mineração DMX](../dmx/create-mining-model-dmx.md), você cria um modelo e gera automaticamente sua estrutura de mineração subjacente ao mesmo tempo.  
+  Cria um novo modelo de mineração baseado em uma estrutura de mineração existente.  Quando você usa a instrução **ALTER MINING STRUCTURE** para criar um novo modelo de mineração, a estrutura já deve existir. Por outro lado, ao usar a instrução, [crie um modelo de mineração &#40;&#41;DMX ](../dmx/create-mining-model-dmx.md), crie um modelo e gere automaticamente sua estrutura de mineração subjacente ao mesmo tempo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -55,7 +55,7 @@ USING <algorithm> [(<parameter list>)]
  O nome de um algoritmo de mineração de dados, conforme definido pelo provedor.  
   
 > [!NOTE]  
->  Uma lista dos algoritmos com suporte pelo provedor atual pode ser recuperada usando o [conjunto de linhas DMSCHEMA_MINING_SERVICES](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset). Para exibir os algoritmos com suporte na instância atual [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]do, consulte [Propriedades de mineração de dados](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties).  
+>  Uma lista dos algoritmos com suporte pelo provedor atual pode ser recuperada usando [DMSCHEMA_MINING_SERVICES conjunto de linhas](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset). Para exibir os algoritmos com suporte na instância atual [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]do, consulte [Propriedades de mineração de dados](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties).  
   
  *lista de parâmetros*  
  Opcional. Uma lista separada por vírgulas de parâmetros definidos pelo provedor para o algoritmo.  
@@ -72,7 +72,7 @@ USING <algorithm> [(<parameter list>)]
   
 -   Adicione a palavra-chave **Filter** e uma condição de filtro. O filtro se aplica aos casos no modelo de mineração.  
   
--   Adicione a palavra-chave de detalhamento para permitir que os usuários do modelo de mineração façam uma busca detalhada dos resultados do modelo para os dados do caso. Em DMX, o detalhamento pode ser habilitado somente quando você cria o modelo.  
+-   Adicione a palavra-chave de **detalhamento** para permitir que os usuários do modelo de mineração façam uma busca detalhada dos resultados do modelo para os dados do caso. Em DMX, o detalhamento pode ser habilitado somente quando você cria o modelo.  
   
  Para usar a filtragem de casos e o detalhamento, você combina as palavras-chave em uma única cláusula **with** usando a sintaxe mostrada no exemplo a seguir:  
   
@@ -114,7 +114,7 @@ USING <algorithm> [(<parameter list>)]
 |**REGRESSOR**|Indica que o algoritmo pode usar a coluna especificada na fórmula de regressão de algoritmos de regressão.|  
 |**MODEL_EXISTENCE_ONLY**|Indica que os valores da coluna de atributo são menos importantes que a presença do atributo.|  
   
- É possível definir diversos sinalizadores de modelagem para uma coluna. Para obter mais informações sobre como usar sinalizadores de modelagem, consulte [sinalizadores &#40;de&#41;modelagem DMX](../dmx/modeling-flags-dmx.md).  
+ É possível definir diversos sinalizadores de modelagem para uma coluna. Para obter mais informações sobre como usar sinalizadores de modelagem, consulte [sinalizadores de modelagem &#40;&#41;DMX ](../dmx/modeling-flags-dmx.md).  
   
 ### <a name="prediction-clause"></a>Cláusula de previsão  
  A cláusula de previsão descreve como a coluna de previsão é usada. A tabela seguinte lista as possíveis cláusulas.  
@@ -129,7 +129,7 @@ USING <algorithm> [(<parameter list>)]
   
  As expressões de critérios de filtro são predicados DMX simplificados, similares à cláusula WHERE. As expressões de filtro são restritas a fórmulas que usam operadores matemáticos básicos, escalares e nomes de coluna. A exceção é o operador EXISTS, avaliado como true se pelo menos uma linha for retornada para a subconsulta. Os predicados podem ser combinados usando os operadores lógicos comuns: AND, OR e NOT.  
   
- Para obter mais informações sobre filtros usados com modelos de mineração, consulte [filtros para &#40;modelos de mineração Analysis Services&#41;-mineração de dados](https://docs.microsoft.com/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining).  
+ Para obter mais informações sobre filtros usados com modelos de mineração, consulte [filtros para modelos de mineração &#40;&#41;de mineração de dados de Analysis Services ](https://docs.microsoft.com/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining).  
   
 > [!NOTE]  
 >  As colunas em um filtro devem ser colunas de estrutura de mineração. Não é possível criar um filtro em uma coluna de modelo ou com alias.  
@@ -137,7 +137,7 @@ USING <algorithm> [(<parameter list>)]
  Para obter mais informações sobre operadores DMX e sintaxe, consulte [colunas do modelo de mineração](https://docs.microsoft.com/analysis-services/data-mining/mining-model-columns).  
   
 ## <a name="parameter-definition-list"></a>Lista de definições de parâmetro  
- Você pode ajustar o desempenho e a funcionalidade de um modelo adicionando parâmetros de algoritmo à lista de parâmetros. Os parâmetros que podem ser usados dependem do algoritmo especificado na cláusula USING. Para obter uma lista de parâmetros associados a cada algoritmo, consulte [algoritmos &#40;de mineração de dados Analysis Services-&#41;mineração de dados](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining).  
+ Você pode ajustar o desempenho e a funcionalidade de um modelo adicionando parâmetros de algoritmo à lista de parâmetros. Os parâmetros que podem ser usados dependem do algoritmo especificado na cláusula USING. Para obter uma lista de parâmetros associados a cada algoritmo, consulte [algoritmos de mineração de dados &#40;&#41;de mineração de dados Analysis Services ](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining).  
   
  A sintaxe da lista de parâmetros é a seguinte:  
   
@@ -177,7 +177,7 @@ WITH FILTER([Gender] = 'F' AND [Age] >50)
 ```  
   
 ## <a name="example-3-add-a-filtered-model-to-a-structure-with-a-nested-table"></a>Exemplo 3: Adicionar um modelo filtrado a uma estrutura com uma tabela aninhada  
- O exemplo a seguir adiciona um modelo de mineração a uma versão modificada da estrutura de mineração de market basket. A estrutura de mineração usada no exemplo foi modificada para adicionar uma coluna de **região** , que contém atributos para a região do cliente e uma coluna de **grupo de renda** , que categoriza a renda do cliente usando os valores **alto**, **moderado** ou **baixo**.  
+ O exemplo a seguir adiciona um modelo de mineração a uma versão modificada da estrutura de mineração de market basket. A estrutura de mineração usada no exemplo foi modificada para adicionar uma coluna de **região** , que contém atributos para a região do cliente e uma coluna de **grupo de renda** , que categoriza a renda do cliente usando os valores **alto**, **moderado**ou **baixo**.  
   
  A estrutura de mineração também inclui uma tabela aninhada que lista os itens que o cliente comprou.  
   
@@ -200,9 +200,9 @@ WITH FILTER (EXISTS (SELECT * FROM [v Assoc Seq Line Items] WHERE
 USING Microsoft_Decision Trees  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Instruções de definição &#40;de&#41; dados DMX das extensões de mineração de dados](../dmx/dmx-statements-data-definition.md)   
- [Instruções de manipulação &#40;de&#41; dados DMX de extensões de mineração de dados](../dmx/dmx-statements-data-manipulation.md)   
- [Referência de instruções de DMX &#40extensões de Mineração de Dados&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
+## <a name="see-also"></a>Consulte Também  
+ [&#40;&#41; instruções de definição de dados DMX de extensões de mineração de dados](../dmx/dmx-statements-data-definition.md)   
+ [&#40;instruções de manipulação de dados do DMX&#41; extensões do Data Mining](../dmx/dmx-statements-data-manipulation.md)   
+ [Referência de instrução&#41; &#40;DMX de extensões de mineração de dados](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

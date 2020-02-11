@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: d23a16fab200c3c6ef55a1cac8f1838a2f51468d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211724"
 ---
 # <a name="ddl-event-groups"></a>grupos de eventos DDL
@@ -27,14 +27,14 @@ ms.locfileid: "68211724"
 > [!NOTE]  
 >  Certos procedimentos armazenados do sistema que executam operações similares a DDL também podem acionar gatilhos ou notificações de eventos DDL. Teste seus gatilhos e notificações de eventos DDL para determinar suas respostas aos procedimentos armazenados do sistema que são executados. Por exemplo, a instrução CREATE TYPE e o procedimento armazenado **sp_addtype** acionarão um gatilho DDL ou uma notificação de eventos que tenham sido criados em um evento CREATE_TYPE.  
   
-## <a name="events"></a>Events  
+## <a name="events"></a>Eventos  
  Os eventos listados em DDL_DATABASE_LEVEL_EVENTS são executados no nível do servidor (instância) ou do banco de dados. Os eventos listados em DDL_SERVER_LEVEL_EVENTS são executados apenas no nível do servidor.  
   
 ||||  
 |-|-|-|  
 |parent_type|type|name|  
-|NULL|296|ALTER_SERVER_CONFIGURATION|  
-|NULL|10001|DDL_EVENTS|  
+|NULO|296|ALTER_SERVER_CONFIGURATION|  
+|NULO|10001|DDL_EVENTS|  
 |10001|10016|&#124;    DDL_DATABASE_LEVEL_EVENTS|  
 |10016|10027|&#124;    &#124;    DDL_ASSEMBLY_EVENTS|  
 |10027|102|&#124;    &#124;    &#124;    ALTER_ASSEMBLY|  
@@ -315,7 +315,7 @@ FROM DirectReports
 ORDER BY sort;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Notificações de eventos](../service-broker/event-notifications.md)   
  [Gatilhos DDL](ddl-triggers.md)   
  [Eventos DDL](ddl-events.md)  

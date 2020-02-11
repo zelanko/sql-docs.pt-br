@@ -13,18 +13,18 @@ ms.author: rortloff
 manager: craigg
 monikerRange: = azure-sqldw-latest||= sqlallproducts-allversions
 ms.openlocfilehash: 6e77239d019cb51e66a34a3a5b909e01c28a7faa
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73633430"
 ---
 # <a name="sysdm_workload_management_workload_groups_stats-transact-sql"></a>sys. dm_workload_management_workload_groups_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-Retorna estatísticas do grupo de carga de trabalho e os valores efetivos do grupo de carga de trabalho em [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
+Retorna estatísticas do grupo de carga de trabalho e os valores efetivos [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]do grupo de cargas de trabalho no.  
   
-|Nome da coluna|Tipo de dados|Descrição|Intervalo|  
+|Nome da coluna|Tipo de Dados|DESCRIÇÃO|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |group_id|**int**|ID exclusivo do grupo de carga de trabalho.||
 |name|**sysname**|Nome do grupo de carga de trabalho.||
@@ -39,6 +39,6 @@ Retorna estatísticas do grupo de carga de trabalho e os valores efetivos do gru
 |effective_request_max_resource_grant_percent|**decimal (5, 2)**|O valor de tempo de execução efetivo para request_max_resource_grant_percent do grupo de carga de trabalho Considerando a configuração de todos os grupos de carga de trabalho.||
 |||||
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
- [Exibições &#40;de gerenciamento dinâmico SQL data warehouse e Parallel Data Warehouse TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+ [Exibições de gerenciamento dinâmico de SQL Data Warehouse e paralelo data warehouse &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  

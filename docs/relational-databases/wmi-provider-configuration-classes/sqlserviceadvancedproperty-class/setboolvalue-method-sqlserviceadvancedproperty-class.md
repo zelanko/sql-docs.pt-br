@@ -18,10 +18,10 @@ ms.assetid: 5252b439-fce5-446a-8e57-99e3054bee69
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 0b893415c56aae38c76836fbe0496e4d990ff83b
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73659952"
 ---
 # <a name="setboolvalue-method-sqlserviceadvancedproperty-class"></a>Método SetBoolValue (classe SqlServiceAdvancedProperty)
@@ -36,12 +36,12 @@ object.SetBoolValue [= value]
 ```  
   
 ## <a name="parts"></a>Partes  
- *object*  
+ *objeto*  
  Um objeto da [classe SqlServiceAdvancedProperty](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) que representa uma propriedade avançada.  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
   
-|Parâmetro|Descrição|  
+|Parâmetro|DESCRIÇÃO|  
 |---------------|-----------------|  
 |*BoolValue*|Um valor booliano que especifica o valor da propriedade avançada.|  
   
@@ -51,7 +51,7 @@ object.SetBoolValue [= value]
 ## <a name="remarks"></a>Comentários  
  O tipo de valor da propriedade deve ser booliano para definir a propriedade como um valor booliano.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Iniciando e parando serviços](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

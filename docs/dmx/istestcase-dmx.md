@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 050ceeaa8eb5700f108b7135616817e09c0031cb
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68889034"
 ---
 # <a name="istestcase-dmx"></a>IsTestCase (DMX)
@@ -27,7 +27,7 @@ ms.locfileid: "68889034"
 IsTestCase()  
 ```  
   
-## <a name="result-type"></a>Tipo de Resultado  
+## <a name="result-type"></a>Tipo de resultado  
  Retornará **true** se o caso for uma parte do conjunto de dados de teste; caso contrário, **false**.  
   
 ## <a name="remarks"></a>Comentários  
@@ -38,7 +38,7 @@ IsTestCase()
 > [!NOTE]  
 >  O detalhamento deve ser habilitado no modelo se você quiser usar as funções IsTrainingCase ou IsTestCase para retornar detalhes sobre os casos em um modelo específico. Para obter mais informações,consulte [Habilitar drillthrough para um modelo de mineração](https://docs.microsoft.com/analysis-services/data-mining/enable-drillthrough-for-a-mining-model).  
   
- Para retornar casos que fazem parte do conjunto de dados de treinamento, use a [função &#40;IsTrainingCase&#41;DMX](../dmx/istrainingcase-dmx.md).  
+ Para retornar casos que fazem parte do conjunto de dados de treinamento, use a função [IsTrainingCase &#40;DMX&#41;](../dmx/istrainingcase-dmx.md).  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir usa `Targeted Mailing` a estrutura de mineração criada no [tutorial de mineração de dados básico](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). A consulta retorna todos os casos da estrutura que são usados para teste.  
@@ -49,10 +49,10 @@ FROM [Targeted Mailing].CASES
 WHERE IsTestCase()  
 ```  
   
- Para obter mais informações sobre como consultar casos usados em Data Mining, consulte [selecionar do &#60;modelo&#62;. Casos &#40;DMX&#41; ](../dmx/select-from-model-cases-dmx.md) e [Select da &#60;estrutura&#62;. CASOS](../dmx/select-from-structure-cases.md).  
+ Para obter mais informações sobre como consultar os casos usados em Data Mining, consulte [selecionar do modelo de &#60;&#62;. CASOS &#40;&#41;DMX](../dmx/select-from-model-cases-dmx.md) e [selecionar entre &#60;estrutura&#62;. CASOS](../dmx/select-from-structure-cases.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Funções &#40;DMX&#41;](../dmx/functions-dmx.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Funções &#40;&#41;DMX](../dmx/functions-dmx.md)   
  [Consultas de mineração de dados](https://docs.microsoft.com/analysis-services/data-mining/data-mining-queries)   
  [Conjuntos de dados de teste e treinamento](https://docs.microsoft.com/analysis-services/data-mining/training-and-testing-data-sets)  
   

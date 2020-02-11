@@ -14,10 +14,10 @@ ms.assetid: 1ad3400d-7fcd-40c9-87ae-f5afc61e0374
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 75c5d2f0f04cf0692f4a6c6ca3145210fee014b3
-ms.sourcegitcommit: aaa42f26c68abc2de10eb58444fe6b490c174eab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74308068"
 ---
 # <a name="filestream-support"></a>Suporte a FILESTREAM
@@ -35,7 +35,7 @@ ms.locfileid: "74308068"
   
 -   [Suporte a FILESTREAM &#40;&#41;ODBC](../../../relational-databases/native-client/odbc/filestream-support-odbc.md)  
   
--   [Acessar dados FILESTREAM com OpenSqlFilestream](../../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)  
+-   [Acessar dados do FILESTREAM com OpenSqlFilestream](../../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)  
   
 ## <a name="querying-for-filestream-columns"></a>Consultando colunas FILESTREAM  
  Conjuntos de linhas de esquema no OLE DB não relatarão se uma coluna é uma coluna FILESTREAM. ITableDefinition no OLE DB não pode ser usado para criar uma coluna FILESTREAM.  
@@ -44,7 +44,7 @@ ms.locfileid: "74308068"
   
  Para criar colunas FILESTREAM ou detectar quais colunas existentes são colunas FILESTREAM, use a coluna **is_filestream** da exibição de catálogo [sys.columns](../../../relational-databases/system-catalog-views/sys-columns-transact-sql.md).  
   
- A seguir, um exemplo:  
+ A seguir, é mostrado um exemplo:  
   
 ```  
 -- Create a table with a FILESTREAM column.  
@@ -65,6 +65,6 @@ SELECT is_filestream FROM sys.columns WHERE name = 'varbinaryCol3' AND object_id
  Para clientes que usam SQLOLEDB ou outros provedores que foram liberados antes [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] da versão [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] do Native Client, **varbinary (max)** será mapeado para Image.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Recursos de SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  
+ [Recursos do SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  
   
   
