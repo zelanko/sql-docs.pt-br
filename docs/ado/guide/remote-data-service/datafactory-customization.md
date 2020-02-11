@@ -1,5 +1,5 @@
 ---
-title: Personalização do DataFactory | Microsoft Docs
+title: Personalização de datafactory | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,27 +13,27 @@ ms.assetid: 86d77985-a0d0-405a-8587-c85a20540a0e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1bdc406778bea0d6355e747998d2517b841fc17b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67922779"
 ---
 # <a name="datafactory-customization"></a>Personalização do DataFactory
-Serviço de dados remota (RDS) fornece uma maneira de executar facilmente o acesso a dados em um sistema de três camadas de cliente/servidor. Um controle de dados do cliente especifica os parâmetros de cadeia de caracteres de conexão e comando para executar uma consulta em uma fonte de dados remota ou a cadeia de caracteres de conexão e [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) parâmetros para executar uma atualização do objeto.  
+O RDS (serviço de dados remotos) fornece uma maneira de executar facilmente o acesso a dados em um sistema cliente/servidor de três camadas. Um controle de dados do cliente especifica parâmetros de conexão e de cadeia de caracteres de comando para executar uma consulta em uma fonte de dados remota, ou parâmetros de objeto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) e de cadeia de conexão para executar uma atualização.  
   
 > [!IMPORTANT]
->  Começando com o Windows 8 e Windows Server 2012, os componentes de servidor RDS não estão mais incluídos no sistema operacional Windows (consulte o Windows 8 e [manual de compatibilidade do Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Componentes de cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Devem ser migrados para aplicativos que usam o RDS [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir do Windows 8 e do Windows Server 2012, os componentes do servidor RDS não são mais incluídos no sistema operacional Windows (consulte Windows 8 e [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Os componentes do cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Os aplicativos que usam o RDS devem migrar para o [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Os parâmetros são passados para um programa de servidor que executa a operação de acesso a dados na fonte de dados remoto. O RDS fornece um programa de servidor padrão chamado de [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) objeto. O **RDSServer.DataFactory** objeto retorna qualquer **Recordset** objeto produzido por uma consulta para o cliente.  
+ Os parâmetros são passados para um programa de servidor, que executa a operação de acesso a dados na fonte de dados remota. O RDS fornece um programa de servidor padrão chamado objeto [RDSServer. datafactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) . O objeto **RDSServer. datafactory** retorna qualquer objeto **Recordset** produzido por uma consulta ao cliente.  
   
- No entanto, o **RDSServer.DataFactory** é limitado a executar consultas e atualizações. Ele não é possível executar nenhuma validação ou processamento em que as cadeias de caracteres de conexão ou o comando.  
+ No entanto, o **RDSServer. datafactory** é limitado à execução de consultas e atualizações. Ele não pode executar nenhuma validação ou processamento nas cadeias de caracteres de conexão ou de comando.  
   
- Com o ADO, você pode especificar que o **DataFactory** funcionam em conjunto com outro tipo de programa de servidor chamado um *manipulador*. O manipulador pode modificar cadeias de caracteres de comando e conexão de cliente antes de serem usadas para acessar a fonte de dados. Além disso, o manipulador pode impor os direitos de acesso, que controlam a capacidade do cliente para ler e gravar dados na fonte de dados.  
+ Com o ADO, você pode especificar que o **DataFactory** funcione em conjunto com outro tipo de programa de servidor chamado de *manipulador*. O manipulador pode modificar a conexão do cliente e as cadeias de caracteres de comando antes que elas sejam usadas para acessar a fonte de dados. Além disso, o manipulador pode impor direitos de acesso, que regem a capacidade do cliente de ler e gravar dados na fonte de dados.  
   
- Os parâmetros que o manipulador usa para modificar os parâmetros de cliente e direitos de acesso são especificados nas seções de um arquivo de personalização.  
+ Os parâmetros usados pelo manipulador para modificar os parâmetros de cliente e os direitos de acesso são especificados em seções de um arquivo de personalização.  
   
- Os tópicos a seguir fornecem mais informações sobre como personalizar o **DataFactory** objeto.  
+ Os tópicos a seguir fornecem mais informações sobre como personalizar o objeto **DataFactory** .  
   
 -   [Noções básicas sobre o arquivo de personalização](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)  
   
@@ -47,6 +47,6 @@ Serviço de dados remota (RDS) fornece uma maneira de executar facilmente o aces
   
 -   [Configurações necessárias de cliente](../../../ado/guide/remote-data-service/required-client-settings.md)  
   
--   [Escrevendo seu próprio manipulador personalizado](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
+-   [Escrever seu próprio manipulador personalizado](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
 
 

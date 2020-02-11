@@ -15,16 +15,16 @@ ms.assetid: 8269ea29-912a-4d20-9360-f48b3746081f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e8d189646cc421eb05d9f49d2da08dfe39d9cb34
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921646"
 ---
 # <a name="activecommand-property-example-vc"></a>Exemplo da propriedade ActiveCommand (VC++)
-Este exemplo demonstra a [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) propriedade.  
+Este exemplo demonstra a propriedade [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) .  
   
- Uma sub-rotina é fornecida uma [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) do objeto cuja **ActiveCommand** propriedade é usada para exibir o texto do comando e parâmetro que criou o **conjunto de registros**.  
+ Uma sub-rotina recebe um objeto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) cuja propriedade **ActiveCommand** é usada para exibir o texto do comando e o parâmetro que criou o **conjunto de registros**.  
   
 ## <a name="example"></a>Exemplo  
   
@@ -220,6 +220,6 @@ Parameter = 'Ringer'
 Name = 'Anne  Ringer'  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Propriedade ActiveCommand (ADO)](../../../ado/reference/ado-api/activecommand-property-ado.md)   
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

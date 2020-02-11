@@ -1,5 +1,5 @@
 ---
-title: '* (Multiplicação) (DMX) | Microsoft Docs'
+title: '* Multiplicar (DMX) | Microsoft Docs'
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 840dc41afe689b7beb6af4b2272f1851fdde72e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68008268"
 ---
 # <a name="-multiply-dmx"></a>* (Multiplicação) (DMX)
@@ -27,7 +27,7 @@ ms.locfileid: "68008268"
 Numeric_Expression * Numeric_Expression  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>parâmetros  
  *Numeric_Expression*  
  Expressão DMX (Data Mining Extensions) válida que retorna um valor numérico.  
   
@@ -37,9 +37,9 @@ Numeric_Expression * Numeric_Expression
 ## <a name="remarks"></a>Comentários  
  As duas expressões devem ser do mesmo tipo de dados ou uma expressão deve poder ser convertida implicitamente no tipo de dados da outra expressão. Se uma expressão for avaliada como um valor nulo, o operador retornará um valor nulo.  
   
-## <a name="see-also"></a>Consulte também  
- [Operadores aritméticos &#40;DMX&#41;](../dmx/operators-arithmetic.md)   
- [Extensões de mineração de dados &#40;DMX&#41; referência de operador](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Operators &#40;DMX&#41;](../dmx/operators-dmx.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Operadores aritméticos &#40;&#41;DMX](../dmx/operators-arithmetic.md)   
+ [Referência de operador de&#41; &#40;DMX de extensões de mineração de dados](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [Operadores &#40;&#41;DMX](../dmx/operators-dmx.md)  
   
   

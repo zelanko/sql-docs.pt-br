@@ -13,18 +13,18 @@ ms.assetid: a28fadb9-b998-472a-b252-709507e92005
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f16cac6a715716dcef0a1c2b337716835c14b2b7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67910370"
 ---
 # <a name="sqlsetconnectattrfordbcinfo-function"></a>Função SQLSetConnectAttrForDbcInfo
-**Conformidade com**  
- Versão introduzida: Conformidade com padrões 3.81 ODBC: ODBC  
+**Conformidade**  
+ Versão introduzida: conformidade de padrões do ODBC 3,81: ODBC  
   
  **Resumo**  
- **SQLSetConnectAttrForDbcInfo** é o mesmo que **SQLSetConnectAttr**, mas ele define o atributo no token de informações de conexão em vez de no identificador de conexão.  
+ **SQLSetConnectAttrForDbcInfo** é o mesmo que **SQLSetConnectAttr**, mas define o atributo no token de informações de conexão em vez de no identificador de conexão.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,45 +39,45 @@ SQLRETURN  SQLSetConnectAttrForDbcInfo(
   
 ## <a name="arguments"></a>Argumentos  
  *hDbcInfoToken*  
- [Entrada] Identificador de token.  
+ Entrada Identificador de token.  
   
- *Atributo*  
- [Entrada] Atributo a ser definido. A lista de atributos válidos é específico do driver e os mesmos para [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md).  
+ *Attribute*  
+ Entrada Atributo a ser definido. A lista de atributos válidos é específica do driver e a mesma para [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md).  
   
  *ValuePtr*  
- [Entrada] Ponteiro para o valor a ser associado aos *atributo*. Dependendo do valor de *atributo*, *ValuePtr* será um valor inteiro sem sinal de 32 bits ou apontará para uma cadeia de caracteres terminada em nulo. Observe que, se o *atributo* argumento é um valor específico do driver, o valor na *ValuePtr* pode ser um inteiro com sinal.  
+ Entrada Ponteiro para o valor a ser associado ao *atributo*. Dependendo do valor do *atributo*, *ValuePtr* será um valor inteiro sem sinal de 32 bits ou apontará para uma cadeia de caracteres de caractere terminada em nulo. Observe que, se o argumento de *atributo* for um valor específico de driver, o valor em *ValuePtr* poderá ser um inteiro assinado.  
   
  *StringLength*  
- [Entrada] Se *atributo* é um atributo definido pelo ODBC e *ValuePtr* aponta para uma cadeia de caracteres ou um buffer de binário, este argumento deve ser o comprimento de **ValuePtr*. Para dados de cadeia de caracteres, esse argumento deve conter o número de bytes na cadeia de caracteres.  
+ Entrada Se o *atributo* for um atributo definido pelo ODBC e *ValuePtr* apontar para uma cadeia de caracteres ou um buffer binário, esse argumento deverá ter o comprimento de **ValuePtr*. Para dados de cadeia de caracteres, esse argumento deve conter o número de bytes na cadeia de caracteres.  
   
- Se *atributo* é um atributo definido pelo ODBC e *ValuePtr* é um inteiro *StringLength* será ignorado.  
+ Se o *atributo* for um atributo definido pelo ODBC e *ValuePtr* for um inteiro, *StringLength* será ignorado.  
   
- Se *atributo* é um atributo definido pelo driver, o aplicativo indica a natureza do atributo para o Gerenciador de Driver, definindo o *StringLength* argumento. *StringLength* pode ter os seguintes valores:  
+ Se o *atributo* for um atributo definido por Driver, o aplicativo indicará a natureza do atributo para o Gerenciador de driver, definindo o argumento *StringLength* . *StringLength* pode ter os seguintes valores:  
   
--   Se *ValuePtr* é um ponteiro para uma cadeia de caracteres, em seguida, *StringLength* é o comprimento da cadeia de caracteres ou SQL_NTS.  
+-   Se *ValuePtr* for um ponteiro para uma cadeia de caracteres, *StringLength* será o comprimento da cadeia de caracteres ou SQL_NTS.  
   
--   Se *ValuePtr* é um ponteiro para um buffer de binário, em seguida, o aplicativo coloca o resultado do SQL_LEN_BINARY_ATTR (*comprimento*) macro na *StringLength*. Isso coloca um valor negativo em *StringLength*.  
+-   Se *ValuePtr* for um ponteiro para um buffer binário, o aplicativo colocará o resultado da macro SQL_LEN_BINARY_ATTR (*Length*) em *StringLength*. Isso coloca um valor negativo em *StringLength*.  
   
--   Se *ValuePtr* é um ponteiro para um valor diferente de uma cadeia de caracteres ou uma cadeia de caracteres binária, em seguida, *StringLength* deve ter o valor SQL_IS_POINTER.  
+-   Se *ValuePtr* for um ponteiro para um valor diferente de uma cadeia de caracteres ou uma cadeia de caracteres binária, *StringLength* deverá ter o valor SQL_IS_POINTER.  
   
--   Se *ValuePtr* contiver um valor de comprimento fixo, então *StringLength* é SQL_IS_INTEGER ou SQL_IS_UINTEGER, conforme apropriado.  
+-   Se *ValuePtr* contiver um valor de comprimento fixo, o *StringLength* será SQL_IS_INTEGER ou SQL_IS_UINTEGER, conforme apropriado.  
   
-## <a name="returns"></a>Retorna  
+## <a name="returns"></a>Retornos  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR ou SQL_INVALID_HANDLE.  
   
-## <a name="diagnostics"></a>Diagnóstico  
- Mesmo que [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md), exceto que o Gerenciador de Driver usará uma **HandleType** de SQL_HANDLE_DBC_INFO_TOKEN e uma **manipular** de *hDbcInfoToken* .  
+## <a name="diagnostics"></a>Diagnósticos  
+ O mesmo que [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md), exceto pelo fato de que o Gerenciador de driver usará um **handletype** de SQL_HANDLE_DBC_INFO_TOKEN e um **identificador** de *hDbcInfoToken*.  
   
 ## <a name="remarks"></a>Comentários  
- **SQLSetConnectAttrForDbcInfo** é o mesmo que **SQLSetConnectAttr**, mas ele define o atributo no token de informações de conexão, em vez de no identificador de conexão. Por exemplo, se **SQLSetConnectAttr** não reconhece um atributo **SQLSetConnectAttrForDbcInfo** também deve retornar SQL_ERROR para esse atributo.  
+ **SQLSetConnectAttrForDbcInfo** é o mesmo que **SQLSetConnectAttr**, mas define o atributo no token de informações de conexão, em vez de no identificador de conexão. Por exemplo, se **SQLSetConnectAttr** não reconhecer um atributo, **SQLSetConnectAttrForDbcInfo** também deverá retornar SQL_ERROR para esse atributo.  
   
- Sempre que o driver retornará SQL_ERROR ou SQL_INVALID_HANDLE, o driver deve ignorar esse atributo para calcular a ID do pool. Além disso, o Gerenciador de Driver obterá as informações de diagnóstico da *hDbcInfoToken*e retornar SQL_SUCCESS_WITH_INFO para o aplicativo nos [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) e [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md). Portanto, um aplicativo pode recuperar detalhes sobre por que alguns atributos não podem ser definidos.  
+ Sempre que o driver retorna SQL_ERROR ou SQL_INVALID_HANDLE, o driver deve ignorar esse atributo para computar a ID do pool. Além disso, o Gerenciador de driver obterá as informações de diagnóstico de *hDbcInfoToken*e retornará SQL_SUCCESS_WITH_INFO ao aplicativo em [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) e [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md). Portanto, um aplicativo pode recuperar detalhes sobre por que alguns atributos não podem ser definidos.  
   
- Aplicativos não devem chamar essa função diretamente. Um driver ODBC que dá suporte ao pool de conexão de reconhecimento de driver deve implementar essa função.  
+ Os aplicativos não devem chamar essa função diretamente. Um driver ODBC que dá suporte ao pool de conexões com reconhecimento de driver deve implementar essa função.  
   
- Inclua sqlspi.h para desenvolvimento de driver ODBC.  
+ Inclua sqlspi. h para o desenvolvimento de driver ODBC.  
   
-## <a name="see-also"></a>Consulte também  
- [Desenvolvendo um Driver ODBC](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
- [Pooling de Conexão de reconhecimento de driver](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Desenvolvendo um driver ODBC](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
+ [Pooling de conexão com reconhecimento de driver](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
  [Desenvolvimento um reconhecimento de pool de conexão em um driver ODBC](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)

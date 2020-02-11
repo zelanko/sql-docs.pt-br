@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 7a8856b28d8eec76d2bc262c4209b007c0a7fa04
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68020642"
 ---
 # <a name="qtd-mdx"></a>Qtd (MDX)
 
 
-  Retorna os membros de um conjunto de irmãos do mesmo nível de um determinado membro, começando com o primeiro irmão e terminando com um determinado membro, restringido pelo *trimestre* nível na dimensão de tempo.  
+  Retorna um conjunto de membros irmãos do mesmo nível de um determinado membro, começando com o primeiro irmão e terminando com o membro determinado, como restrito pelo nível de *trimestre* na dimensão de tempo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -32,12 +32,12 @@ Qtd( [ Member_Expression ] )
  Uma linguagem MDX válida que retorna um membro.  
   
 ## <a name="remarks"></a>Comentários  
- Se um expressionis de membro não especificado, o padrão será o membro atual da primeira hierarquia com um nível de tipo *trimestres* na primeira dimensão do tipo *tempo* no grupo de medidas.  
+ Se uma expressão de membro não for especificada, o padrão será o membro atual da primeira hierarquia com um nível do tipo *trimestres* na primeira dimensão do tipo *time* no grupo de medidas.  
   
- O **Qtd** é uma função de atalho para o [PeriodsToDate &#40;MDX&#41; ](../mdx/periodstodate-mdx.md) função cujo argumento de expressão de nível for definido como *trimestre*. Ou seja, `Qtd(Member_Expression)` é funcionalmente equivalente a `PeriodsToDate(Quarter_Level_Expression, Member_Expression)`.  
+ A função **Qtd** é uma função de atalho para o [PeriodsToDate &#40;MDX&#41;](../mdx/periodstodate-mdx.md) função cujo argumento de expressão de nível é definido como *trimestre*. Ou seja, `Qtd(Member_Expression)` é funcionalmente equivalente a `PeriodsToDate(Quarter_Level_Expression, Member_Expression)`.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir retorna a soma do `Measures.[Order Quantity]` membro, agregado durante os primeiros dois meses do terceiro trimestre do ano calendário 2003 contidos na `Date` dimensão, da **Adventure Works** cubo.  
+ O exemplo a seguir retorna a soma do `Measures.[Order Quantity]` membro, agregados nos primeiros dois meses do terceiro trimestre do ano civil 2003 que estão contidos na `Date` dimensão, do cubo **Adventure Works** .  
   
 ```  
 WITH MEMBER [Date].[Calendar].[First2MonthsSecondSemester2003] AS  
@@ -53,7 +53,7 @@ WHERE
     [Measures].[Order Quantity]  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Referência de função MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_xtp_hash_index_stats (Transact-SQL) | Microsoft Docs
+title: sys. dm_db_xtp_hash_index_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -21,13 +21,13 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f2bbaaaa6770c5644da227c7e64a9ff9e0fc2c13
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68026846"
 ---
-# <a name="sysdmdbxtphashindexstats-transact-sql"></a>sys.dm_db_xtp_hash_index_stats (Transact-SQL)
+# <a name="sysdm_db_xtp_hash_index_stats-transact-sql"></a>sys.dm_db_xtp_hash_index_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Essas estatísticas são úteis para entender e ajustar o número de buckets. Também pode ser usado para detectar os casos em que a chave de índice tem muitas duplicatas.  
@@ -41,11 +41,11 @@ ms.locfileid: "68026846"
 Os comprimentos de cadeia longos podem afetar significativamente o desempenho de todas as operações DML em linhas individuais, incluindo SELECT e INSERT. Os comprimentos de cadeias curtas com um número alto de buckets vazios estão na indicação de um bucket_count que seja muito alto. Isso diminui o desempenho de verificações de índice.  
   
 > [!WARNING]
-> **DM db_xtp_hash_index_stats** examina a tabela inteira. Portanto, se houver grandes tabelas no banco de dados **DM db_xtp_hash_index_stats** pode levar um longo tempo de execução.  
+> **Sys. dm_db_xtp_hash_index_stats** examina a tabela inteira. Portanto, se houver grandes tabelas em seu banco de dados, **Sys. dm_db_xtp_hash_index_stats** poderá levar muito tempo.  
   
-Para obter mais informações, consulte [índices de Hash para tabelas com otimização de memória](../../relational-databases/sql-server-index-design-guide.md#hash_index).  
+Para obter mais informações, consulte [índices de hash para tabelas com otimização de memória](../../relational-databases/sql-server-index-design-guide.md#hash_index).  
   
-|Nome da coluna|type|Descrição|  
+|Nome da coluna|Type|DESCRIÇÃO|  
 |-----------------|----------|-----------------|  
 |object_id|**int**|A ID de objeto da tabela pai.|  
 |xtp_object_id|**bigint**|ID da tabela com otimização de memória.|  
@@ -61,9 +61,9 @@ Para obter mais informações, consulte [índices de Hash para tabelas com otimi
 
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-troubleshooting-hash-index-bucket-count"></a>A. Solução de problemas de contagem de buckets do índice de hash
+### <a name="a-troubleshooting-hash-index-bucket-count"></a>a. Solução de problemas de contagem de buckets do índice de hash
 
-A consulta a seguir pode ser usada para solucionar problemas de contagem de bucket do índice de hash de uma tabela existente. A consulta retorna estatísticas sobre o percentual de buckets vazios e comprimento da cadeia de todos os índices de hash em tabelas de usuário.
+A consulta a seguir pode ser usada para solucionar o número de buckets de índice de hash de uma tabela existente. A consulta retorna estatísticas sobre a porcentagem de buckets vazios e o comprimento da cadeia para todos os índices de hash em tabelas do usuário.
 
 ```sql
   SELECT  
@@ -87,11 +87,11 @@ A consulta a seguir pode ser usada para solucionar problemas de contagem de buck
   ORDER BY [table], [index];  
 ``` 
 
-Para obter detalhes sobre como interpretar os resultados dessa consulta, consulte [solução de problemas de índices de Hash para tabelas com otimização de memória](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md) .  
+Para obter detalhes sobre como interpretar os resultados dessa consulta, consulte [Solucionando problemas de índices de hash para tabelas com otimização de memória](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md) .  
 
 ### <a name="b-hash-index-statistics-for-internal-tables"></a>B. Estatísticas de índice de hash para tabelas internas
 
-Determinados recursos usam tabelas internas que aproveitam os índices de hash, por exemplo os índices de columnstore em tabelas com otimização de memória. A consulta a seguir retorna estatísticas para índices de hash em tabelas internas que estão vinculadas a tabelas de usuário.
+Determinados recursos usam tabelas internas que aproveitam índices de hash, por exemplo, índices columnstore em tabelas com otimização de memória. A consulta a seguir retorna estatísticas para índices de hash em tabelas internas que estão vinculadas a tabelas de usuário.
 
 ```sql
   SELECT  
@@ -112,9 +112,9 @@ Determinados recursos usam tabelas internas que aproveitam os índices de hash, 
   ORDER BY [user_table], [internal_table_type], [index]; 
 ```
 
-Observe que o BUCKET_COUNT de índice em tabelas internas não podem ser alteradas, portanto, a saída dessa consulta deve ser considerada informativa apenas. Nenhuma ação é necessária.  
+Observe que a BUCKET_COUNT do índice em tabelas internas não pode ser alterada, portanto, a saída dessa consulta deve ser considerada apenas informativa. Nenhuma ação é necessária.  
 
-Essa consulta não é esperada para retornar todas as linhas, a menos que você estiver usando um recurso que aproveita os índices de hash em tabelas internas. A tabela com otimização de memória a seguir contém um índice columnstore. Depois de criar essa tabela, você verá os índices de hash em tabelas internas.
+Essa consulta não deve retornar nenhuma linha, a menos que você esteja usando um recurso que aproveita índices de hash em tabelas internas. A tabela com otimização de memória a seguir contém um índice columnstore. Depois de criar essa tabela, você verá índices de hash em tabelas internas.
 
 ```sql
   CREATE TABLE dbo.table_columnstore
@@ -124,7 +124,7 @@ Essa consulta não é esperada para retornar todas as linhas, a menos que você 
   ) WITH (MEMORY_OPTIMIZED=ON)
 ```
 
-## <a name="see-also"></a>Consulte também  
- [Exibições de gerenciamento dinâmico de tabela otimizada em memória &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Exibições de gerenciamento dinâmico de tabela com otimização de memória &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

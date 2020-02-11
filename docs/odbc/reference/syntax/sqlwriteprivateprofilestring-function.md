@@ -20,18 +20,18 @@ ms.assetid: 526f36a4-92ed-4874-9725-82d27c0b86f9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4b847576e503fbbbb511d2dda8f60675c298681c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68039385"
 ---
 # <a name="sqlwriteprivateprofilestring-function"></a>Função SQLWritePrivateProfileString
-**Conformidade com**  
- Versão introduzida: ODBC 2.0  
+**Conformidade**  
+ Versão introduzida: ODBC 2,0  
   
  **Resumo**  
- **SQLWritePrivateProfileString** grava um nome de valor e os dados até a subchave ini as informações do sistema.  
+ **SQLWritePrivateProfileString** grava um nome de valor e dados na subchave ODBC. ini das informações do sistema.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,36 +46,36 @@ BOOL SQLWritePrivateProfileString(
   
 ## <a name="arguments"></a>Argumentos  
  *lpszSection*  
- [Entrada] Aponta para uma cadeia de caracteres terminada em nulo que contém o nome da seção em que a cadeia de caracteres será copiada. Se a seção não existir, ele é criado. O nome da seção é independente de caso; a cadeia de caracteres pode ser qualquer combinação de letras maiusculas e minúsculas.  
+ Entrada Aponta para uma cadeia de caracteres terminada em nulo que contém o nome da seção para a qual a cadeia de caracteres será copiada. Se a seção não existir, ela será criada. O nome da seção diferencia maiúsculas de minúsculas; a cadeia de caracteres pode ser qualquer combinação de letras maiúsculas e minúsculas.  
   
  *lpszEntry*  
- [Entrada] Aponta para uma cadeia de caracteres terminada em nulo que contém o nome da chave a ser associado uma cadeia de caracteres. Se a chave não existir na seção especificada, ele é criado. Se esse argumento for nulo, a seção inteira, incluindo todas as entradas dentro da seção, é excluída.  
+ Entrada Aponta para uma cadeia de caracteres terminada em nulo que contém o nome da chave a ser associada a uma cadeia de caracteres. Se a chave não existir na seção especificada, ela será criada. Se esse argumento for nulo, a seção inteira, incluindo todas as entradas dentro da seção, será excluída.  
   
  *lpszString*  
- [Entrada] Aponta para uma cadeia de caracteres terminada em nulo a serem gravados no arquivo. Se esse argumento for NULL, a chave apontando para o *lpszEntry* argumento é excluído.  
+ Entrada Aponta para uma cadeia de caracteres terminada em nulo a ser gravada no arquivo. Se esse argumento for nulo, a chave apontada pelo argumento *lpszEntry* será excluída.  
   
  *lpszFilename*  
- [Saída] Aponta para uma cadeia de caracteres terminada em nulo que nomeia o arquivo de inicialização.  
+ Der Aponta para uma cadeia de caracteres terminada em nulo que nomeia o arquivo de inicialização.  
   
-## <a name="returns"></a>Retorna  
- A função retorna TRUE se for bem-sucedida, FALSO se ele falhar.  
+## <a name="returns"></a>Retornos  
+ A função retornará TRUE se for bem-sucedida, FALSE se falhar.  
   
-## <a name="diagnostics"></a>Diagnóstico  
- Quando **SQLWritePrivateProfileString** retornar FALSE, um associado  *\*pfErrorCode* valor pode ser obtido chamando **SQLInstallerError**. A seguinte tabela lista os  *\*pfErrorCode* valores que podem ser retornados por **SQLInstallerError** e explica cada uma no contexto dessa função.  
+## <a name="diagnostics"></a>Diagnósticos  
+ Quando **SQLWritePrivateProfileString** retorna false, um valor * \*pfErrorCode* associado pode ser obtido chamando **SQLInstallerError**. A tabela a seguir lista os valores de * \*pfErrorCode* que podem ser retornados por **SQLInstallerError** e explica cada um no contexto dessa função.  
   
-|*\*pfErrorCode*|Erro|Descrição|  
+|*\*pfErrorCode*|Erro|DESCRIÇÃO|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_GENERAL_ERR|Erro geral de instalador|Ocorreu um erro para que nenhum erro específico do instalador.|  
-|ODBC_ERROR_REQUEST_FAILED|Falha na solicitação|Não foi possível gravar as informações solicitadas do sistema.|  
-|ODBC_ERROR_OUT_OF_MEM|Memória insuficiente|O instalador não foi possível executar a função devido à falta de memória.|  
+|ODBC_ERROR_GENERAL_ERR|Erro geral do instalador|Ocorreu um erro para o qual não havia nenhum erro do instalador específico.|  
+|ODBC_ERROR_REQUEST_FAILED|Falha na solicitação|Não foi possível gravar as informações do sistema solicitadas.|  
+|ODBC_ERROR_OUT_OF_MEM|Memória insuficiente|O instalador não pôde executar a função devido à falta de memória.|  
   
 ## <a name="comments"></a>Comentários  
- **SQLWritePrivateProfileString** é fornecido como uma maneira simples de drivers de porta e DLLs de instalação do driver do Microsoft® Windows® para Microsoft Windows/Windows 2000. Chamadas para **WritePrivateProfileString** que gravar uma cadeia de caracteres de perfil para o arquivo ini deve ser substituída por chamadas para **SQLWritePrivateProfileString**. **SQLWritePrivateProfileString** chama funções na API Win32® para adicionar o nome do valor especificado e os dados até a subchave ini as informações do sistema.  
+ O **SQLWritePrivateProfileString** é fornecido como uma maneira simples de drivers de porta e DLLs de instalação de driver do Microsoft® Windows® para o Microsoft Windows NT®/Windows 2000. Chamadas para **WritePrivateProfileString** que gravam uma cadeia de caracteres de perfil no arquivo ODBC. ini devem ser substituídas por chamadas para **SQLWritePrivateProfileString**. **SQLWritePrivateProfileString** chama funções na API de® do Win32 para adicionar o nome de valor e os dados especificados à subchave ODBC. ini das informações do sistema.  
   
- Um modo de configuração indica em que a entrada ini listando valores DSN é nas informações do sistema. Se o DSN é um DSN de usuário (a variável de estado é USERDSN_ONLY), a função grava a entrada ini em HKEY_CURRENT_USER. Se o DSN é um DSN de sistema (SYSTEMDSN_ONLY), a função grava a entrada ini em HKEY_LOCAL_MACHINE. Se a variável de estado for BOTHDSN, HKEY_CURRENT_USER é tentada e se ele falhar, HKEY_LOCAL_MACHINE é usada.  
+ Um modo de configuração indica onde a entrada ODBC. ini que lista os valores de DSN está nas informações do sistema. Se o DSN for um DSN de usuário (a variável de estado é USERDSN_ONLY), a função gravará na entrada ODBC. ini em HKEY_CURRENT_USER. Se o DSN for um DSN do sistema (SYSTEMDSN_ONLY), a função gravará na entrada ODBC. ini no HKEY_LOCAL_MACHINE. Se a variável de estado for BOTHDSN, HKEY_CURRENT_USER for tentado e, se falhar, HKEY_LOCAL_MACHINE será usado.  
   
 ## <a name="related-functions"></a>Funções relacionadas  
   
 |Para obter informações sobre|Consulte|  
 |---------------------------|---------|  
-|Obtendo um valor de informações do sistema|[SQLGetPrivateProfileString](../../../odbc/reference/syntax/sqlgetprivateprofilestring-function.md)|
+|Obtendo um valor das informações do sistema|[SQLGetPrivateProfileString](../../../odbc/reference/syntax/sqlgetprivateprofilestring-function.md)|

@@ -1,5 +1,5 @@
 ---
-title: Exemplo de conjunto de células (VB) | Microsoft Docs
+title: Exemplo de células (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 2666ad1c-b48e-4b2c-b269-5a9f4e4a7810
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1b099a1eb5d513285b33b26f5623f1e14b322731
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67911585"
 ---
 # <a name="cellset-example-vb"></a>Exemplo de conjunto de células (VB)
-Este projeto do Visual Basic demonstra as Noções básicas de como usar o ADO MD para acessar os dados de cubo. Ele exibe as legendas de membro para cabeçalhos de coluna e linha, em seguida, exibe formatados valores de células específicas dentro do conjunto de células.  
+Este projeto de Visual Basic demonstra as noções básicas do uso de ADO MD para acessar dados de cubo. Ele exibe legendas de membro para cabeçalhos de coluna e linha e, em seguida, exibe valores formatados de células específicas dentro de células.  
   
 ```  
 Private Sub cmdCellSettoDebugWindow_Click()  

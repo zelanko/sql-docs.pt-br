@@ -18,18 +18,18 @@ ms.assetid: d59ddf0c-72c0-4c57-bc83-aef260e4e105
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: b2ed385026d2bd47912a1a95d237b2adedafa26d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68042825"
 ---
-# <a name="fnsyscollectorgetexecutiondetails-transact-sql"></a>fn_syscollector_get_execution_details (Transact-SQL)
+# <a name="fn_syscollector_get_execution_details-transact-sql"></a>fn_syscollector_get_execution_details (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retorna uma parte do log [!INCLUDE[ssIS](../../includes/ssis-md.md)] (sysssislog) que corresponde ao package_execution_id do pacote fornecido. A tabela contém uma linha para cada entrada de log gerada em tempo de execução por pacotes, trabalhos e contêineres.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,30 +40,30 @@ fn_syscollector_get_execution_details ( log_id )
   
 ## <a name="arguments"></a>Argumentos  
  *log_id*  
- O identificador exclusivo local do log de execução. *log_id* está **int**.  
+ O identificador exclusivo local do log de execução. *log_id* é **int**.  
   
 ## <a name="table-returned"></a>Tabela retornada  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
-|id|**int**|O identificador exclusivo da entrada do log.|  
+|ID|**int**|O identificador exclusivo da entrada do log.|  
 |event|**sysname**|O nome do evento que gerou a entrada do log.|  
 |computer|**nvarchar**|O computador no qual o pacote foi executado quando a entrada do log foi gerada.|  
-|operator|**nvarchar**|O nome de usuário da pessoa ou agente que executou o pacote que gerou a entrada do log.|  
+|operador|**nvarchar**|O nome de usuário da pessoa ou agente que executou o pacote que gerou a entrada do log.|  
 |source|**nvarchar**|O nome do executável que gerou a entrada do log.|  
 |sourceid|**uniqueidentifier**|A GUID do executável que gerou a entrada do log.|  
 |executionid|**uniqueidentifier**|A GUID da instância de execução do executável que gerou a entrada do log.|  
 |starttime|**datetime**|A hora em que o pacote começou a ser executado.|  
 |endtime|**datetime**|A hora em que o pacote foi concluído.|  
 |datacode|**int**|Um valor inteiro que identifica o evento associado à entrada do log. "0" indica que o evento não forneceu nenhum identificador.|  
-|databytes|**image**|Uma matriz de bytes que identifica um valor de retorno.|  
-|mensagem|**nvarchar**|Uma descrição do evento e as informações associadas a ele.|  
+|databytes|**imagem**|Uma matriz de bytes que identifica um valor de retorno.|  
+|message|**nvarchar**|Uma descrição do evento e as informações associadas a ele.|  
   
 ## <a name="permissions"></a>Permissões  
  Requer permissão SELECT para **dc_operator**.  
   
-## <a name="see-also"></a>Consulte também  
- [Habilitar o log de pacote no SQL Server Data Tools](../../integration-services/performance/integration-services-ssis-logging.md#server_logging)   
- [Coleta de Dados](../../relational-databases/data-collection/data-collection.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Habilitar log de pacote no SQL Server Data Tools](../../integration-services/performance/integration-services-ssis-logging.md#server_logging)   
+ [Coleta de dados](../../relational-databases/data-collection/data-collection.md)  
   
   

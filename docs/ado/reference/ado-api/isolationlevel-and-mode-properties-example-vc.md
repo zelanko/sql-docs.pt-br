@@ -1,5 +1,5 @@
 ---
-title: IsolationLevel e modo propriedades (VC + +) | Microsoft Docs
+title: Exemplo das propriedades IsolationLevel e Mode (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: 92ddec5d-e3dc-4e8e-997a-c5417cceab69
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fb39288499e2a78523ca29f2e1e4feff4ea9a310
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932314"
 ---
-# <a name="isolationlevel-and-mode-properties-example-vc"></a>IsolationLevel e modo propriedades (VC + +)
-Este exemplo usa o [modo](../../../ado/reference/ado-api/mode-property-ado.md) para abrir uma conexão exclusiva e o [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) propriedade para abrir uma transação que é realizada em isolamento de outras transações.  
+# <a name="isolationlevel-and-mode-properties-example-vc"></a>Exemplo das propriedades IsolationLevel e Mode (VC + +)
+Este exemplo usa a propriedade [Mode](../../../ado/reference/ado-api/mode-property-ado.md) para abrir uma conexão exclusiva e a propriedade [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) para abrir uma transação que é conduzida em isolamento de outras transações.  
   
 ## <a name="example"></a>Exemplo  
   
@@ -223,26 +223,26 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
- **Modo de Conexão é exclusivo**  
-**Transação é isolada**  
-**Guia do ocupado executivo de banco de dados - business**  
-**Culinária com computadores: Balanços ilegais - business**  
-**Você pode combater o estresse de computador! -business**  
-**Reta falar sobre computadores - business**  
-**Vale do silício Gastronomia trata - mod_cook**  
-**A microondas Gourmet - mod_cook**  
-**O aspecto psicológico do computador cozinhar - UNDECIDED**  
-**Mas é amigável de usuário? -popular_comp**  
-**Segredos do vale do silício - popular_comp**  
-**Etiqueta de NET - popular_comp**  
-**Indivíduos Phobic e não com aversão ao computador: Variações de comportamento - self_help**  
-**É raiva o inimigo? -self_help**  
-**Vida sem medo - self_help**  
-**Deprivation prolongada de dados: Quatro estudos de caso - self_help**  
-**Segurança emocional: Um novo algoritmo - self_help**  
-**Onions, Leeks e Garlic: Culinária segredos de Mediterrâneo - trad_cook**  
-**50 anos em Buckingham Palace cozinhas - trad_cook**  
+ **O modo de conexão é exclusivo**  
+**A transação está isolada**  
+**O guia de banco de dados do executivo ocupado-Business**  
+**Culinária com computadores: surreptitious Balance Sheets-Business**  
+**Você pode combater a pressão do computador! -negócios**  
+**Fale direta sobre computadores – negócios**  
+**O vale do silício gastronomic trata-mod_cook**  
+**O gourmet microondas-mod_cook**  
+**Psicologia de culinária de computador-não decidido**  
+**Mas é amigável para o usuário? -popular_comp**  
+**Segredos do vale do silício-popular_comp**  
+**NET etiqueta-popular_comp**  
+**Computadores phobic e não phobic: variações de comportamento-self_help**  
+**Está raivando o inimigo? -self_help**  
+**Vida sem medo-self_help**  
+**Desprivilégios de dados prolongados: estudos de quatro casos – self_help**  
+**Segurança emocional: um novo algoritmo-self_help**  
+**Onions, Leeks e garlic: os segredos de culinária do Mediterrâneo-trad_cook**  
+**50 anos em Buckingham Palace cozinhas-trad_cook**  
 **Sushi, qualquer pessoa? -trad_cook**   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Propriedade IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)   
  [Propriedade Mode (ADO)](../../../ado/reference/ado-api/mode-property-ado.md)

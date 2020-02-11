@@ -1,5 +1,5 @@
 ---
-title: Função not (XQuery) | Microsoft Docs
+title: Não função (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -18,16 +18,16 @@ ms.assetid: 93dfc377-45f1-4384-9392-560d9331a915
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 8711190a6d3cbae0c716f7f62af478b70b9473e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68038907"
 ---
 # <a name="functions-on-boolean-values---not-function"></a>Funções em Valores Boolianos – função not 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Retorna VERDADEIRO se o valor booliano efetivo de *$arg* é false e retornará FALSE se o valor booliano efetivo da *$arg* é verdadeiro.  
+  Retornará TRUE se o valor booliano efetivo de *$ARG* for false e retornará false se o valor booliano efetivo de *$ARG* for true.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,10 +41,10 @@ fn:not($arg as item()*) as xs:boolean
  Uma sequência de itens para quais há um valor Booliano efetivo.  
   
 ## <a name="examples"></a>Exemplos  
- Este tópico fornece exemplos de XQuery contra instâncias XML armazenadas em várias **xml** colunas de tipo de banco de dados AdventureWorks.  
+ Este tópico fornece exemplos de XQuery em relação a instâncias XML que são armazenadas em várias colunas de tipo **XML** no banco de dados AdventureWorks.  
   
-### <a name="a-using-the-not-xquery-function-to-find-product-models-whose-catalog-descriptions-do-not-include-the-specifications-element"></a>A. Usando a função XQuery de not () para localizar modelos de produto cujas descrições de catálogo não incluem o \<especificações > elemento.  
- A consulta a seguir constrói XML que contém as IDs de modelo de produto para modelos de produto cujas descrições de catálogo não incluem o <`Specifications`> elemento.  
+### <a name="a-using-the-not-xquery-function-to-find-product-models-whose-catalog-descriptions-do-not-include-the-specifications-element"></a>a. Usando a função not () XQuery para localizar modelos de produto cujas descrições de catálogo não incluem \<as especificações> elemento.  
+ A consulta a seguir constrói XML que contém IDs de modelo de produto para modelos de produto cujas descrições de catálogo não `Specifications` incluem o elemento <>.  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
@@ -61,18 +61,18 @@ WHERE CatalogDescription.exist('
   
  Observe o seguinte na consulta anterior:  
   
--   Como documento usa namespaces, a amostra usa a instrução WITH NAMESPACES. Outra opção é usar o **declarar o namespace** palavra-chave na [prólogo do XQuery](../xquery/modules-and-prologs-xquery-prolog.md) para definir o prefixo.  
+-   Como documento usa namespaces, a amostra usa a instrução WITH NAMESPACES. Outra opção é usar a palavra-chave **declare namespace** no [prólogo XQuery](../xquery/modules-and-prologs-xquery-prolog.md) para definir o prefixo.  
   
--   A consulta então constrói o XML que inclui o <`Product`> elemento e seu **ProductModelID** atributo.  
+-   Em seguida, a consulta constrói o XML que inclui o `Product` elemento <> e seu atributo **ProductModelID** .  
   
--   A cláusula WHERE usa o [método exist () (tipo de dados XML)](../t-sql/xml/exist-method-xml-data-type.md) para filtrar as linhas. O **exist ()** método retornará True se houver \<ProductDescription > elementos que não têm \<especificação > elementos filho. Observe o uso do **not ()** função.  
+-   A cláusula WHERE usa o [método exist () (tipo de dados XML)](../t-sql/xml/exist-method-xml-data-type.md) para filtrar as linhas. O método **exist ()** retornará true se houver elementos \<de> ProductDescription que não têm \<especificação> elementos filho. Observe o uso da função **not ()** .  
   
- Esse conjunto de resultados está vazio, porque cada descrição de catálogo do modelo de produto inclui o \<especificações > elemento.  
+ Este conjunto de resultados está vazio, pois cada descrição do catálogo de modelos \<de produto inclui as especificações> elemento.  
   
 ### <a name="b-using-the-not-xquery-function-to-retrieve-work-center-locations-that-do-not-have-a-machinehours-attribute"></a>B. Usando a função not() XQuery para recuperar locais de centro de trabalho que não têm um atributo MachineHours  
  A consulta a seguir é especificada na coluna Instructions. Essa coluna armazena instruções de fabricação para os modelos de produtos.  
   
- Para um modelo de produto em particular, a consulta recupera locais de centro de trabalho que não especificam MachineHours. Ou seja, o atributo **MachineHours** não for especificado para o \<local > elemento.  
+ Para um modelo de produto em particular, a consulta recupera locais de centro de trabalho que não especificam MachineHours. Ou seja, o atributo **MachineHours** não é especificado para o \<local> elemento.  
   
 ```  
 SELECT ProductModelID, Instructions.query('  
@@ -89,11 +89,11 @@ WHERE ProductModelID=7
   
  Na consulta anterior, observe o seguinte:  
   
--   O **declarenamespace** na [prólogo do XQuery](../xquery/modules-and-prologs-xquery-prolog.md) define o prefixo de namespace de instruções de fabricação do Adventure Works. Ela representa o mesmo namespace usado no documento de instruções de fabricação.  
+-   O **declarenamespace** no [prólogo do XQuery](../xquery/modules-and-prologs-xquery-prolog.md) define o prefixo de namespace de instruções de fabricação da Adventure Works. Ela representa o mesmo namespace usado no documento de instruções de fabricação.  
   
--   Na consulta, o **não (@MachineHours)** predicado retornar True se não houver nenhuma **MachineHours** atributo.  
+-   Na consulta, o predicado **not (@MachineHours)** retornará true se não houver nenhum atributo **MachineHours** .  
   
- Esse é o resultado:  
+ Este é o resultado:  
   
 ```  
 ProductModelID Result   
@@ -106,9 +106,9 @@ ProductModelID Result
 ### <a name="implementation-limitations"></a>Limitações de implementação  
  Estas são as limitações:  
   
--   O **not ()** função só dá suporte a argumentos de tipo xs: Boolean ou Node () * ou a sequência vazia.  
+-   A função **not ()** dá suporte apenas a argumentos do tipo xs: Boolean ou node () *, ou a sequência vazia.  
   
-## <a name="see-also"></a>Consulte também  
- [Funções XQuery em Tipos de Dados XML](../xquery/xquery-functions-against-the-xml-data-type.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Funções XQuery em tipos de dados xml](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

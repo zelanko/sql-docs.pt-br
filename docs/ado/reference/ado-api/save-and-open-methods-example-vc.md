@@ -1,5 +1,5 @@
 ---
-title: Salvar e abrir um exemplo dos métodos (VC + +) | Microsoft Docs
+title: Exemplo dos métodos Save e Open (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,16 +16,16 @@ ms.assetid: 334ae655-8cac-48e6-8d00-1d28f3436e1e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 245affed25c7fb3d0ccc91504de0cfaaeee1807a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917070"
 ---
-# <a name="save-and-open-methods-example-vc"></a>Salvar e abrir um exemplo dos métodos (VC + +)
-Esses três exemplos demonstram como o [salve](../../../ado/reference/ado-api/save-method.md) e **abrir** métodos podem ser usados juntos.  
+# <a name="save-and-open-methods-example-vc"></a>Exemplo dos métodos Save e Open (VC + +)
+Esses três exemplos demonstram como os métodos [Save](../../../ado/reference/ado-api/save-method.md) e **Open** podem ser usados juntos.  
   
- Suponha que você está saindo de uma viagem de negócios e deseja levar ao longo de uma tabela de banco de dados. Antes de entrar, você acessa os dados como uma [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) e salve-o em um formulário transportável. Quando você chega ao seu destino, você acessa o **conjunto de registros** como um local, desconectado **conjunto de registros**. Fazer alterações para o **Recordset**, em seguida, salve-o novamente. Finalmente, quando você voltar ao início, conecte-se novamente ao banco de dados e atualizá-lo com as alterações feitas em trânsito.  
+ Suponha que você está passando por uma viagem de negócios e deseja pegar uma tabela de um banco de dados. Antes de começar, você acessa os dados como um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) e salva-os em um formulário transportável. Ao chegar ao seu destino, você acessa o **conjunto** de registros como um conjunto de **registros**local e desconectado. Faça alterações no conjunto de **registros**e salve-o novamente. Por fim, ao retornar Home, você se conecta ao banco de dados novamente e o atualiza com as alterações feitas em trânsito.  
   
 ```  
 // BeginSaveCpp.cpp  
@@ -260,7 +260,7 @@ bool FileExists() {
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Método Open (conjunto de registros ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Método Save](../../../ado/reference/ado-api/save-method.md)

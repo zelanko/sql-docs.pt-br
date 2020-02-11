@@ -22,18 +22,18 @@ ms.assetid: 4db1fb3b-e46f-43fb-b269-a5b6e8b39ed0
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a308225e96c740680b2df243f35cac216f53e3e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68024305"
 ---
-# <a name="indexcol-transact-sql"></a>INDEX_COL (Transact-SQL)
+# <a name="index_col-transact-sql"></a>INDEX_COL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Retorna o nome de coluna indexado. Retorna NULL para índices XML.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -69,7 +69,7 @@ INDEX_COL ( '[ database_name . [ schema_name ] .| schema_name ]
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-using-indexcol-to-return-an-index-column-name"></a>A. Usando INDEX_COL para retornar um nome de coluna de índice  
+### <a name="a-using-index_col-to-return-an-index-column-name"></a>a. Usando INDEX_COL para retornar um nome de coluna de índice  
  O exemplo a seguir retorna os nomes de coluna das duas colunas de chave no índice `PK_SalesOrderDetail_SalesOrderID_LineNumber`.  
   
 ```  

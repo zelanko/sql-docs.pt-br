@@ -1,5 +1,5 @@
 ---
-title: Microsoft Cursor Service para OLE DB (ADO componente de serviço) | Microsoft Docs
+title: Serviço de cursor da Microsoft para OLE DB (componente de serviço ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,21 +14,21 @@ ms.assetid: 420d0989-7cfb-4c66-a7b5-f4199d13165d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e7e5b9a973e5ccf04f92a2162d88ee25b7fa5242
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926793"
 ---
-# <a name="microsoft-cursor-service-for-ole-db-overview"></a>Microsoft Cursor Service para visão geral do OLE DB
-O Microsoft Cursor Service para OLE DB complementa as funções de suporte de cursor de provedores de dados. Como resultado, o usuário percebe a funcionalidade relativamente uniforme de todos os provedores de dados.
+# <a name="microsoft-cursor-service-for-ole-db-overview"></a>Visão geral do serviço de cursor da Microsoft para OLE DB
+O serviço de cursor da Microsoft para OLE DB complementa as funções de suporte de cursor dos provedores de dados. Como resultado, o usuário percebe uma funcionalidade relativamente uniforme de todos os provedores de dados.
 
- O serviço de Cursor disponibiliza as propriedades dinâmicas e aprimora o comportamento de determinados métodos. Por exemplo, o [otimizar](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) propriedade dinâmica permite a criação de índices temporários para facilitar a determinadas operações, como o [localizar](../../../ado/reference/ado-api/find-method-ado.md) método.
+ O serviço de cursor torna as propriedades dinâmicas disponíveis e aprimora o comportamento de determinados métodos. Por exemplo, a propriedade [otimizar](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) dinâmico permite a criação de índices temporários para facilitar determinadas operações, como o método [Find](../../../ado/reference/ado-api/find-method-ado.md) .
 
- O serviço de Cursor habilita o suporte para atualização em lote em todos os casos. Ele também simula o mais compatível com tipos de cursor, como cursores dinâmicos, quando um provedor de dados pode fornecer apenas cursores com menor capacidade, como os cursores estáticos.
+ O serviço de cursor habilita o suporte para atualização em lotes em todos os casos. Ele também simula tipos de cursor mais capacitados, como cursores dinâmicos, quando um provedor de dados só pode fornecer cursores menos capacitados, como cursores estáticos.
 
 ## <a name="keyword"></a>Palavra-chave
- Para invocar esse componente de serviço, defina as [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) ou [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) do objeto [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) propriedade **adUseClient**.
+ Para invocar esse componente de serviço, defina a propriedade [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) do [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) ou do objeto de [conexão](../../../ado/reference/ado-api/connection-object-ado.md) como **adUseClient**.
 
 ```vb
 connection.CursorLocation=adUseClient
@@ -36,9 +36,9 @@ recordset.CursorLocation=adUseClient
 ```
 
 ## <a name="dynamic-properties"></a>Propriedades Dinâmicas
- Quando o Cursor Service para OLE DB é chamado, as seguintes propriedades dinâmicas são adicionadas para o **conjunto de registros** do objeto [propriedades](../../../ado/reference/ado-api/properties-collection-ado.md) coleção. A lista completa das **Conexão** e **conjunto de registros** propriedades dinâmicas do objeto é listado na [índice de propriedade dinâmica do ADO](../../../ado/reference/ado-api/ado-dynamic-property-index.md). Os nomes de propriedade associados do OLE DB, quando apropriado, serão incluídos em parênteses após o nome da propriedade ADO.
+ Quando o serviço de cursor para OLE DB é invocado, as propriedades dinâmicas a seguir são adicionadas à coleção de [Propriedades](../../../ado/reference/ado-api/properties-collection-ado.md) do objeto **Recordset** . A lista completa de propriedades dinâmicas de **conexão** e objeto **Recordset** está listada no [índice de propriedades dinâmicas do ADO](../../../ado/reference/ado-api/ado-dynamic-property-index.md). Os nomes de propriedade OLE DB associados, quando apropriado, são incluídos entre parênteses após o nome da propriedade ADO.
 
- Alterações em algumas propriedades dinâmicas não são visíveis à fonte de dados subjacentes depois que o serviço de Cursor foi invocado. Por exemplo, definindo a *tempo limite do comando* propriedade em um **conjunto de registros** não estarão visíveis para o provedor de dados subjacente.
+ As alterações em algumas propriedades dinâmicas não são visíveis para a fonte de dados subjacente depois que o serviço de cursor é invocado. Por exemplo, definir a propriedade de *tempo limite do comando* em um **conjunto de registros** não será visível para o provedor de dados subjacente.
 
 ```vb
 
@@ -51,28 +51,28 @@ Recordset1.Properties.Item("Command Time out") = 50
 
 ```
 
- Se seu aplicativo requer que o serviço de Cursor, mas você precisa definir as propriedades dinâmicas no provedor subjacente, defina as propriedades antes de invocar o serviço de Cursor. Configurações de propriedade do objeto de comando sempre são passadas para o provedor de dados subjacente, independentemente do local do cursor. Portanto, você também pode usar um objeto de comando para definir as propriedades a qualquer momento.
+ Se seu aplicativo requer o serviço de cursor, mas você precisa definir propriedades dinâmicas no provedor subjacente, defina as propriedades antes de invocar o serviço de cursor. As configurações de propriedade de objeto de comando sempre são passadas para o provedor de dados subjacente, independentemente do local do cursor. Portanto, você também pode usar um objeto de comando para definir as propriedades a qualquer momento.
 
 > [!NOTE]
->  Não há suporte para a propriedade dinâmica DBPROP_SERVERDATAONINSERT pelo serviço de cursor, mesmo se for suportado pelo provedor de dados subjacente.
+>  Não há suporte para a propriedade dinâmica DBPROP_SERVERDATAONINSERT pelo serviço de cursor, mesmo que ele tenha suporte do provedor de dados subjacente.
 
-|Nome da Propriedade|Descrição|
+|Nome da propriedade|DESCRIÇÃO|
 |-------------------|-----------------|
-|Recálculo automático (DBPROP_ADC_AUTORECALC)|Para conjuntos de registros criados com o Data Shaping Service, esse valor indica a frequência com que as colunas calculadas e de agregação são calculadas. O padrão (valor = 1) é recalcular sempre que o Data Shaping Service determina que os valores foram alterados. Se o valor for 0, as colunas calculadas ou de agregação só são calculadas quando a hierarquia é inicialmente criada.|
-|Tamanho do lote (DBPROP_ADC_BATCHSIZE)|Indica o número de instruções de atualização que podem ser enviadas em lote antes de serem enviados ao armazenamento de dados. As instruções mais em um lote, as menos viagens de ida e aos dados armazenar.|
-|Linhas filho de cache (DBPROP_ADC_CACHECHILDROWS)|Para conjuntos de registros criados com o Data Shaping Service, esse valor indica se o conjunto de registros filho é armazenados em um cache para uso posterior.|
-|Versão do mecanismo de cursor (DBPROP_ADC_CEVER)|Indica a versão do serviço de Cursor que está sendo usado.|
-|Manter o Status de alteração (DBPROP_ADC_MAINTAINCHANGESTATUS)|Indica o texto do comando usado para sincronizar novamente a uma ou mais linhas em uma junção de várias tabelas.|
-|[Otimizar](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)|Indica se um índice deve ser criado. Quando definido como **verdadeira**, autoriza a criação temporária de índices para melhorar a execução de determinadas operações.|
-|[Alterar a forma de nome](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)|Indica o nome da **conjunto de registros**. Pode ser referenciado dentro do atual ou a subsequente, comandos de formatação de dados.|
-|[Comando de ressincronização](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md)|Indica uma cadeia de caracteres de comando personalizado que é usada pelas [ressincronizar](../../../ado/reference/ado-api/resync-method.md) método quando o [tabela exclusiva](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) propriedade está em vigor.|
-|[Catálogo exclusivo](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|Indica o nome do banco de dados que contém a tabela referenciada na **tabela exclusiva** propriedade.|
-|[Esquema exclusivo](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|Indica o nome do proprietário da tabela referenciada na **tabela exclusiva** propriedade.|
-|[Tabela exclusiva](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|Indica o nome de uma tabela em uma **Recordset** criado a partir de várias tabelas que podem ser modificadas pelo inserções, atualizações ou exclusões.|
-|Critérios de atualização (DBPROP_ADC_UPDATECRITERIA)|Indica quais campos na **onde** cláusula são usados para lidar com conflitos que ocorrem durante uma atualização.|
-|[Atualizar a ressincronização](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md) (DBPROP_ADC_UPDATERESYNC)|Indica se o **ressincronizar** método implicitamente é invocado após o [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) método (e seu comportamento), quando o **tabela exclusiva** propriedade está em vigor.|
+|Recálculo automático (DBPROP_ADC_AUTORECALC)|Para conjuntos de registros criados com o data Shaping Service, esse valor indica a frequência com que as colunas calculadas e agregadas são calculadas. O padrão (valor = 1) é recalcular sempre que o serviço de data Shaping determinar que os valores foram alterados. Se o valor for 0, as colunas calculadas ou agregadas só serão calculadas quando a hierarquia for inicialmente compilada.|
+|Tamanho do lote (DBPROP_ADC_BATCHSIZE)|Indica o número de instruções UPDATE que podem ser agrupadas em lote antes de serem enviadas ao armazenamento de dados. Quanto mais instruções em um lote, menos viagens de ida e volta para o armazenamento de dados.|
+|Linhas filhas de cache (DBPROP_ADC_CACHECHILDROWS)|Para conjuntos de registros criados com o data Shaping Service, esse valor indica se os conjuntos de registros filho são armazenados em um cache para uso posterior.|
+|Versão do mecanismo de cursor (DBPROP_ADC_CEVER)|Indica a versão do serviço de cursor que está sendo usado.|
+|Manter status de alteração (DBPROP_ADC_MAINTAINCHANGESTATUS)|Indica o texto do comando usado para a ressincronização de uma ou mais linhas em uma junção de várias tabelas.|
+|[Formato](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)|Indica se um índice deve ser criado. Quando definido como **true**, o autoriza a criação temporária de índices para melhorar a execução de determinadas operações.|
+|[Remodelar nome](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)|Indica o nome do **conjunto de registros**. Podem ser referenciados nos comandos de data Shaping atuais, ou subsequentes.|
+|[Comando Ressync](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md)|Indica uma cadeia de caracteres de comando Personalizada que é usada pelo método de [ressincronização](../../../ado/reference/ado-api/resync-method.md) quando a propriedade de [tabela exclusiva](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) está em vigor.|
+|[Catálogo exclusivo](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|Indica o nome do banco de dados que contém a tabela referenciada na propriedade de **tabela exclusiva** .|
+|[Esquema exclusivo](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|Indica o nome do proprietário da tabela referenciada na propriedade de **tabela exclusiva** .|
+|[Tabela única](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|Indica o nome de uma tabela em um **conjunto de registros** criado a partir de várias tabelas que podem ser modificadas por inserções, atualizações ou exclusões.|
+|Critérios de atualização (DBPROP_ADC_UPDATECRITERIA)|Indica quais campos na cláusula **Where** são usados para lidar com colisões que ocorrem durante uma atualização.|
+|[Atualizar ressincronização](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md) (DBPROP_ADC_UPDATERESYNC)|Indica se o método de **ressincronização** é invocado implicitamente após o método [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) (e seu comportamento) quando a propriedade de **tabela exclusiva** está em vigor.|
 
- Você também pode definir ou recuperar uma propriedade dinâmica especificando seu nome como o índice para o **propriedades** coleção. Por exemplo, obter e imprimir o valor atual do [otimizar](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) propriedades dinâmicas, em seguida, defina um novo valor, da seguinte maneira:
+ Você também pode definir ou recuperar uma propriedade dinâmica especificando seu nome como o índice para a coleção de **Propriedades** . Por exemplo, obtenha e imprima o valor atual da propriedade [otimizar](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) dinâmico e, em seguida, defina um novo valor, da seguinte maneira:
 
 ```vb
 Debug.Print rs.Properties("Optimize")
@@ -80,13 +80,13 @@ rs.Properties("Optimize") = True
 ```
 
 ## <a name="built-in-property-behavior"></a>Comportamento de propriedade interna
- O Cursor Service para OLE DB também afeta o comportamento de determinadas propriedades internas.
+ O serviço de cursor para OLE DB também afeta o comportamento de determinadas propriedades internas.
 
-|Nome da Propriedade|Descrição|
+|Nome da propriedade|DESCRIÇÃO|
 |-------------------|-----------------|
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|Complementa os tipos de cursores que estão disponíveis para um **conjunto de registros**.|
-|[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|Complementa os tipos de bloqueios disponíveis para um **conjunto de registros**. Permite o atualizações em lotes.|
-|[Sort](../../../ado/reference/ado-api/sort-property.md)|Especifica o campo de um ou mais nomes que o **Recordset** é classificada e se cada campo é classificado em ordem crescente ou decrescente.|
+|[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|Complementa os tipos de bloqueios disponíveis para um **conjunto de registros**. Habilita atualizações em lotes.|
+|[Classificar](../../../ado/reference/ado-api/sort-property.md)|Especifica um ou mais nomes de campos nos quais o **conjunto de registros** é classificado e se cada campo é classificado em ordem crescente ou decrescente.|
 
 ## <a name="method-behavior"></a>Comportamento do método
- O Cursor Service para OLE DB habilita ou afeta o comportamento do [campo](../../../ado/reference/ado-api/field-object.md) do objeto [Append](../../../ado/reference/ado-api/append-method-ado.md) método; e o **conjunto de registros** do objeto [abrir](../../../ado/reference/ado-api/open-method-ado-recordset.md), [Ressincronizar](../../../ado/reference/ado-api/resync-method.md), [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md), e [salvar](../../../ado/reference/ado-api/save-method.md) métodos.
+ O serviço de cursor para OLE DB habilita ou afeta o comportamento do método [Append](../../../ado/reference/ado-api/append-method-ado.md) do objeto [Field](../../../ado/reference/ado-api/field-object.md) ; e os métodos [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md), [Ressync](../../../ado/reference/ado-api/resync-method.md), [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)e [Save](../../../ado/reference/ado-api/save-method.md) do objeto **Recordset** .

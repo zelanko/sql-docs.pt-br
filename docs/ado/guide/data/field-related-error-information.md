@@ -1,5 +1,5 @@
 ---
-title: Informações de erro relacionadas ao campo | Microsoft Docs
+title: Informações de erro relacionadas a campo | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,21 +14,21 @@ ms.assetid: 5e7b1af4-996b-47c5-9161-c5575ad4fec9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7094c2dba004e35593f5ab11b1162efbdf3283c1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925319"
 ---
 # <a name="field-related-error-information"></a>Informações de erro relacionadas ao campo
-Se um erro está diretamente relacionado a um campo - por exemplo, se os dados estão ausentes ou se ele é do tipo incorreto para o campo - você pode recuperar mais informações sobre a causa do problema examinando os **campo** do objeto **Status**  propriedade. Essa propriedade foi aprimorada para fornecer informações específicas sobre o problema. Portanto, por exemplo, quando uma chamada para **UpdateBatch** falhar, a causa do problema pode ser determinado examinando a **Status** propriedade do **campos** em cada uma da afetados registros. A propriedade conterá um dos valores de **FieldStatusEnum** constante. A tabela a seguir inclui os valores que são de especial interesse quando ocorre um erro.  
+Se um erro estiver diretamente relacionado a um campo, por exemplo, se os dados estiverem ausentes ou se forem do tipo incorreto para o campo – você poderá recuperar mais informações sobre a causa do problema examinando a propriedade **status** do objeto **Field** . Esta propriedade foi aprimorada para fornecer informações específicas sobre o problema. Portanto, por exemplo, quando uma chamada para **UpdateBatch** falha, a causa do problema pode ser determinada examinando a propriedade **status** dos **campos** em cada um dos registros afetados. A propriedade conterá um dos valores na constante **FieldStatusEnum** . A tabela a seguir inclui os valores que são de interesse particular quando ocorre um erro.  
   
-|Constante|Valor|Descrição|  
+|Constante|Valor|DESCRIÇÃO|  
 |--------------|-----------|-----------------|  
 |**adFieldCantConvertValue**|2|Indica que o campo não pode ser recuperado ou armazenado sem perda de dados.|  
-|**adFieldDataOverflow**|6|Indica que a retornada do provedor de dados estouraram o tipo de dados do campo.|  
-|**adFieldDefault**|13|Indica que o valor padrão para o campo foi usado ao definir os dados.|  
-|**adFieldIgnore**|15|Indica que esse campo foi ignorado quando valores na fonte de dados de configuração. Nenhum valor foi definido pelo provedor.|  
+|**adFieldDataOverflow**|6|Indica que os dados retornados do provedor estouram o tipo de dados do campo.|  
+|**adFieldDefault**|13|Indica que o valor padrão do campo foi usado ao definir dados.|  
+|**adFieldIgnore**|15|Indica que esse campo foi ignorado ao definir valores de dados na origem. Nenhum valor foi definido pelo provedor.|  
 |**adFieldIntegrityViolation**|10|Indica que o campo não pode ser modificado porque é uma entidade calculada ou derivada.|  
 |**adFieldIsNull**|3|Indica que o provedor retornou um valor nulo.|  
-|**adFieldOutOfSpace**|22|Indica que o provedor é não é possível obter espaço de armazenamento suficiente para concluir uma movimentação ou a operação de cópia.|
+|**adFieldOutOfSpace**|22|Indica que o provedor não pode obter espaço de armazenamento suficiente para concluir uma operação de movimentação ou cópia.|

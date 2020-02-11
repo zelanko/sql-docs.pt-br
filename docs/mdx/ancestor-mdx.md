@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 385206d4a94362831e0949bafe5a11c1ce48d7bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68017132"
 ---
 # <a name="ancestor-mdx"></a>Ancestor (MDX)
@@ -38,21 +38,21 @@ Ancestor(Member_Expression, Distance)
  *Level_Expression*  
  Uma linguagem MDX válida que retorna um nível.  
   
- *distância*  
+ *Alcance*  
  Uma expressão numérica válida que especifica a distância do membro especificado.  
   
 ## <a name="remarks"></a>Comentários  
- Com o **ancestral** função, você fornece a função com uma expressão de membro MDX e, em seguida, fornecer a uma expressão MDX de um nível que é um ancestral do membro ou uma expressão numérica que representa o número de níveis acima Esse membro. Com essas informações, o **ancestrais** função retorna o membro ancestral nesse nível.  
+ Com a função **Ancestor** , você fornece a função com uma expressão de membro MDX e, em seguida, fornece uma expressão MDX de um nível que é um ancestral do membro ou uma expressão numérica que representa o número de níveis acima daquele membro. Com essas informações, a função **ancestrais** retorna o membro ancestral nesse nível.  
   
 > [!NOTE]  
->  Para retornar um conjunto que contém o membro ancestral, em vez de apenas o membro ancestral, use o [ancestrais &#40;MDX&#41; ](../mdx/ancestors-mdx.md) função.  
+>  Para retornar um conjunto que contém o membro ancestral, em vez de apenas o membro ancestral, use a função [ancestrais &#40;MDX&#41;](../mdx/ancestors-mdx.md) .  
   
- Se uma expressão de nível for especificada, o **ancestral** função retorna o ancestral do membro especificado no nível especificado. Se o membro especificado não estiver dentro da mesma hierarquia que o nível especificado, a função retornará um erro.  
+ Se uma expressão de nível for especificada, a função **Ancestor** retornará o ancestral do membro especificado no nível especificado. Se o membro especificado não estiver dentro da mesma hierarquia que o nível especificado, a função retornará um erro.  
   
- Se uma distância for especificada, o **ancestral** função retorna o ancestral do membro especificado que é o número de etapas especificadas na hierarquia especificada por uma expressão de membro. Um membro pode ser especificado como um membro de uma hierarquia de atributo, uma hierarquia definida pelo usuário ou, em alguns casos, uma hierarquia pai-filho. Um número 1 retorna o pai de um membro e um número 2 retorna o avô do membro (se houver um). Zero retorna o membro em si.  
+ Se uma distância for especificada, a função **Ancestor** retornará o ancestral do membro especificado que é o número de etapas especificado na hierarquia especificada pela expressão de membro. Um membro pode ser especificado como um membro de uma hierarquia de atributo, uma hierarquia definida pelo usuário ou, em alguns casos, uma hierarquia pai-filho. Um número 1 retorna o pai de um membro e um número 2 retorna o avô do membro (se houver um). Zero retorna o membro em si.  
   
 > [!NOTE]  
->  Use essa forma do **ancestral** função para casos em que o nível do pai é desconhecido ou não pode ser nomeado.  
+>  Use esse formulário da função **ancestral** para casos em que o nível do pai é desconhecido ou não pode ser nomeado.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir usa uma expressão de nível e retorna o Valor de Vendas pela Internet para cada Estado-Província da Austrália e seu percentual do Valor de Vendas pala Internet para a Austrália.  
@@ -98,7 +98,7 @@ SELECT {[Measures].[Internet Sales Amount], Measures.x} ON 0,
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Referência de função MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -15,21 +15,21 @@ ms.assetid: ea1d4a97-58c3-476b-a496-cc80db2a90d5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2d92d96e3b8cdfea5cacea35d852e8859de65dbd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925982"
 ---
 # <a name="anticipating-errors"></a>Antecipar erros
-Prevenção de erro é pelo menos tão importante quanto o tratamento de erros. Nesta seção final contém uma lista curta de precauções de que seu aplicativo pode adotar para ajudar a tornar erros menor probabilidade de ocorrer.  
+A prevenção de erros é pelo menos tão importante quanto o tratamento de erros. Esta seção final contém uma pequena lista de precauções que seu aplicativo pode tomar para ajudar a tornar os erros menos prováveis.  
   
- Verificar o estado dos objetos verificando o valor de **estado** propriedade antes de tentar executar uma operação usando esses objetos. Por exemplo, se seu aplicativo usa um global **Conexão**, verifique suas **estado** propriedade para ver se ele já está aberto antes de chamar o **abrir** método.  
+ Verifique o estado dos objetos verificando o valor na propriedade **State** antes de tentar executar uma operação usando esses objetos. Por exemplo, se seu aplicativo usar uma **conexão**global, verifique sua propriedade de **estado** para ver se ela já está aberta antes de chamar o método **Open** .  
   
--   Qualquer programa que aceita dados de um usuário deve incluir o código para validar que os dados antes de enviá-la para o armazenamento de dados. Você não pode contar o armazenamento de dados, o provedor, ADO ou até mesmo a linguagem de programação para notificá-lo de problemas. Você deve verificar cada byte inserido pelos usuários, certificando-se de que os dados são o tipo correto para seu campo e os campos obrigatórios não estão vazios.  
+-   Qualquer programa que aceite dados de um usuário deve incluir o código para validar esses dados antes de enviá-los para o armazenamento de dados. Você não pode contar com o armazenamento de dados, o provedor, o ADO ou até mesmo sua linguagem de programação para notificá-lo de problemas. Você deve verificar cada byte inserido por seus usuários, verificando se os dados são do tipo correto para seu campo e se os campos obrigatórios não estão vazios.  
   
- Verifique os dados antes de tentar gravar dados no armazenamento de dados. A maneira mais fácil de fazer isso é lidar com o **eventos WillMove** eventos ou o **WillUpdateRecordset** eventos. Para obter uma discussão mais completa de manipulação de eventos ADO, consulte [manipulação de eventos ADO](../../../ado/guide/data/handling-ado-events.md).  
+ Verifique os dados antes de tentar gravar dados no armazenamento de dados. A maneira mais fácil de fazer isso é manipular o evento **WillMove** ou o evento **WillUpdateRecordset** . Para obter uma discussão mais completa sobre como lidar com eventos ADO, consulte [manipulando eventos ADO](../../../ado/guide/data/handling-ado-events.md).  
   
- Certifique-se de que **conjunto de registros** objetos não forem além dos limites do **Recordset** antes de tentar mover o ponteiro de registro. Se você tentar **MoveNext** quando **EOF** for True ou **MovePrev** quando **BOF** for True, ocorrerá um erro. Se você executar qualquer uma da **mova** métodos quando ambos **EOF** e **BOF** forem True, um erro será gerado.  
+ Verifique se os objetos **Recordset** não estão além dos limites do **conjunto de registros** antes de tentar mover o ponteiro de registro. Se você tentar **MoveNext** quando **EOF** for true ou **MovePrev** quando **BOF** for true, ocorrerá um erro. Se você executar qualquer um dos métodos de **movimentação** quando **EOF** e **BOF** forem verdadeiros, um erro será gerado.  
   
- Erros também ocorrerá se você tentar executar operações, como **Seek** e **localizar** em um vazio **conjunto de registros**.
+ Os erros também ocorrerão se você tentar executar operações como **Seek** e **Find** em um conjunto de **registros**vazio.

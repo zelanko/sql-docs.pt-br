@@ -13,22 +13,22 @@ ms.assetid: e3c50eee-964a-4abd-810d-1bd51978e814
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 91200b79a075f594968fd5700993d96219e35b40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67927045"
 ---
-# <a name="ado-programmers-guide-for-using-ado-objects"></a>Guia do programador do ADO para usar objetos do ADO
-Esta documentação fornece uma visão geral de como usar objetos do ADO para trabalhar com dados de várias fontes de dados. Em primeiro lugar, a introdução resume os novos recursos e o requisito para instalar, usar e redistribuir o componente do ADO. As seções a seguir abordam o uso de vários tipos de objetos do ADO. Por fim, os apêndices discutem vários dados fornecidos pela Microsoft e provedores de serviço, as mensagens de erro e dicas sobre como usar o ADO em várias linguagens de programação, além de exemplos e um glossário.
+# <a name="ado-programmers-guide-for-using-ado-objects"></a>Guia do programador do ADO para usar objetos ADO
+Esta documentação fornece uma visão geral de como usar objetos ADO para trabalhar com dados de várias fontes de dados. Primeiro, a introdução resume os novos recursos e o requisito para instalar, usar e redistribuir o componente ADO. As seções a seguir discutem o uso dos vários tipos de objetos ADO. Por fim, os apêndices abordam vários provedores de dados e serviços fornecidos pela Microsoft, mensagens de erro e dicas sobre como usar o ADO em várias linguagens de programação, além de exemplos e um glossário.
 
- Esta seção contém os tópicos a seguir.
+ Esta seção contém os seguintes tópicos:
 
 -   [Introdução](../../ado/guide/ado-introduction.md)
 
--   [ADO (ActiveX Data Objects)](../../ado/guide/data/activex-data-objects-ado.md)
+-   [ADO ( ActiveX Data Object)](../../ado/guide/data/activex-data-objects-ado.md)
 
--   [Serviços de dados remota (RDS)](../../ado/guide/remote-data-service/remote-data-service-rds.md)
+-   [RDS (serviços de dados remotos)](../../ado/guide/remote-data-service/remote-data-service-rds.md)
 
 -   [ADO (Multidimensional) (ADO MD)](../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)
 

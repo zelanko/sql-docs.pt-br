@@ -1,5 +1,5 @@
 ---
-title: Função ParallelPeriod (MDX) | Microsoft Docs
+title: ParallelPeriod (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: b4122c13a5371cc0ffe1c5c6235ad750e7fdadad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68020704"
 ---
 # <a name="parallelperiod-mdx"></a>Função ParallelPeriod (MDX)
@@ -38,19 +38,19 @@ ParallelPeriod( [ Level_Expression [ ,Index [ , Member_Expression ] ] ] )
  Uma linguagem MDX válida que retorna um membro.  
   
 ## <a name="remarks"></a>Comentários  
- Embora seja semelhante do [primo](../mdx/cousin-mdx.md) função, o **ParallelPeriod** função está mais estreitamente relacionada à série temporal. O **ParallelPeriod** função aproveita o ancestral do membro especificado no nível especificado, encontra o irmão do ancestral com o atraso especificado e, finalmente, retorna o período paralelo do membro especificado entre o descendentes do irmão.  
+ Embora seja semelhante à função [primo](../mdx/cousin-mdx.md) , a função **ParallelPeriod** está mais bem relacionada à série temporal. A função **ParallelPeriod** usa o ancestral do membro especificado no nível especificado, localiza o irmão do ancestral com o retardo especificado e, finalmente, retorna o período paralelo do membro especificado entre os descendentes do irmão.  
   
- O **ParallelPeriod** função tem os seguintes padrões:  
+ A função **ParallelPeriod** tem os seguintes padrões:  
   
--   Se nem uma expressão de nível nem uma expressão de membro for especificada, o valor do membro padrão será o membro atual da primeira hierarquia na primeira dimensão com um tipo de *tempo* no grupo de medidas.  
+-   Se nenhuma expressão de nível nem uma expressão de membro for especificada, o valor do membro padrão será o membro atual da primeira hierarquia na primeira dimensão com um tipo de *tempo* no grupo de medidas.  
   
--   Se uma expressão de nível for especificada, mas uma expressão de membro não for especificada, o valor do membro padrão é *Level_Expression*. **Hierarchy.CurrentMember**.  
+-   Se uma expressão de nível for especificada, mas uma expressão de membro não for especificada, o valor de membro padrão será *Level_Expression*. **Hierarchy. CurrentMember**.  
   
 -   O valor de índice padrão é 1.  
   
 -   O nível padrão é o nível do pai do membro especificado.  
   
- O **ParallelPeriod** função é equivalente à instrução MDX a seguir:  
+ A função **ParallelPeriod** é equivalente à seguinte instrução MDX:  
   
  `Cousin(Member_Expression, Ancestor(Member_Expression, Level_Expression) .Lag(Numeric_Expression))`  
   
@@ -75,7 +75,7 @@ SELECT ParallelPeriod ([Date].[Calendar].[Calendar Semester]
    FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Referência de função MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

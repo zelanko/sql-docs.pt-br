@@ -1,5 +1,5 @@
 ---
-title: Processamento posicionado instruções Update e Delete | Microsoft Docs
+title: Processando instruções UPDATE e DELETE posicionadas | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,27 +19,27 @@ ms.assetid: 2975dd97-48e6-4d0a-a9c7-40759a7d94c8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 41b4fe248f815e63c48a8da70edc88a1cc173667
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68028430"
 ---
 # <a name="processing-positioned-update-and-delete-statements"></a>Processar instruções de atualização e exclusão posicionadas
 > [!IMPORTANT]  
->  Este recurso será removido em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que usam esse recurso atualmente. A Microsoft recomenda usar a funcionalidade de cursor do driver.  
+>  Este recurso será removido em uma versão futura do Windows. Evite usar esse recurso em novos trabalhos de desenvolvimento e planeje modificar os aplicativos que atualmente usam esse recurso. A Microsoft recomenda usar a funcionalidade de cursor do driver.  
   
- O suporta da biblioteca de cursor posicionado instruções update e delete, substituindo o **WHERE CURRENT OF** cláusula em tais instruções com um **onde** cláusula que enumera os valores armazenados em seu cache para cada coluna associada. A biblioteca de cursores passa recentemente construído **atualização** e **excluir** instruções para o driver para execução. Para instruções de atualização posicionada, a biblioteca de cursores, em seguida, atualiza seu cache entre os valores nos buffers de conjunto de linhas e define o valor correspondente na matriz de status de linha para SQL_ROW_UPDATED. Para instruções delete posicionadas, ele define o valor correspondente na matriz de status de linha para SQL_ROW_DELETED.  
+ A biblioteca de cursores dá suporte a instruções UPDATE e DELETE posicionadas substituindo a cláusula **Where Current of** em tais instruções por uma cláusula **Where** que enumera os valores armazenados em seu cache para cada coluna associada. A biblioteca de cursores passa as instruções **Update** e **delete** recém-criadas para o driver para execução. Para instruções UPDATE posicionadas, a biblioteca de cursores atualiza seu cache dos valores nos buffers de conjunto de linhas e define o valor correspondente na matriz de status de linha como SQL_ROW_UPDATED. Para instruções DELETE posicionadas, ele define o valor correspondente na matriz de status de linha como SQL_ROW_DELETED.  
   
 > [!CAUTION]  
->  O **onde** cláusula construída pela biblioteca de cursores para identificar a linha atual pode não conseguir identificar todas as linhas, identifique uma linha diferente ou identificar mais de uma linha. Para obter mais informações, consulte [construindo instruções pesquisadas](../../../odbc/reference/appendixes/constructing-searched-statements.md), mais adiante neste apêndice.  
+>  A cláusula **Where** construída pela biblioteca de cursores para identificar a linha atual pode falhar ao identificar quaisquer linhas, identificar uma linha diferente ou identificar mais de uma linha. Para obter mais informações, consulte [construindo instruções pesquisadas](../../../odbc/reference/appendixes/constructing-searched-statements.md), posteriormente neste apêndice.  
   
- Posicionado update e delete instruções estão sujeitos às seguintes restrições:  
+ As instruções UPDATE e DELETE posicionadas estão sujeitas às seguintes restrições:  
   
--   Posicionado update e delete instruções podem ser usadas apenas nos seguintes casos: quando um **selecionar** instrução gerou o conjunto de resultados; quando o **selecionar** instrução não continha uma junção, um  **União** cláusula, ou um **GROUP BY** cláusula; e quando todas as colunas que é usado um alias ou uma expressão na lista de seleção não foram vinculadas com **SQLBindCol**.  
+-   As instruções UPDATE e DELETE posicionadas só podem ser usadas nos seguintes casos: quando uma instrução **Select** gerou o conjunto de resultados; Quando a instrução **Select** não continha uma junção, uma cláusula **Union** ou uma cláusula **Group by** ; e quando qualquer coluna que usou um alias ou uma expressão na lista de seleção não foi associada a **SQLBindCol**.  
   
--   Se um aplicativo prepara uma instrução de exclusão ou atualização posicionada, deverá fazê-lo depois que ele chamou **SQLFetch** ou **SQLFetchScroll**. Embora a biblioteca de cursores envia a instrução para o driver para a preparação, ele fecha a instrução e o executa diretamente quando o aplicativo chama **SQLExecute**.  
+-   Se um aplicativo prepara uma instrução UPDATE ou DELETE posicionada, ele deve fazer isso depois de ter chamado **SQLFetch** ou **SQLFetchScroll**. Embora a biblioteca de cursores envie a instrução para o driver para preparação, ela fecha a instrução e a executa diretamente quando o aplicativo chama **SQLExecute**.  
   
--   Se o driver dá suporte a apenas uma instrução ativa, as buscas do cursor biblioteca o restante do resultado definido e refetches, em seguida, o conjunto de linhas atual de seu cache antes de executar um posicionadas instrução update ou delete. Se o aplicativo chama uma função que retorna metadados em um conjunto de resultados (por exemplo, **SQLNumResultCols** ou **SQLDescribeCol**), a biblioteca de cursores retornará um erro.  
+-   Se o driver oferecer suporte a apenas uma instrução ativa, a biblioteca de cursores buscará o restante do conjunto de resultados e, em seguida, buscará novamente o conjunto de linhas atual de seu cache antes de executar uma instrução UPDATE ou DELETE posicionada. Se o aplicativo chamar uma função que retorna metadados em um conjunto de resultados (por exemplo, **SQLNumResultCols** ou **SQLDescribeCol**), a biblioteca de cursores retornará um erro.  
   
--   Se uma atualização posicionada ou uma instrução delete for executada em uma coluna de uma tabela que inclui uma coluna de carimbo de hora é atualizada automaticamente sempre que uma atualização é executada, todas as próximas atualização posicionada ou instruções delete falhará se a coluna de carimbo de hora associado. Isso ocorre porque o pesquisada update ou delete instrução que cria a biblioteca de cursores não identificará com precisão a linha a ser atualizada. O valor na instrução pesquisada para a coluna de carimbo de hora não corresponderá o valor atualizado automaticamente da coluna de carimbo de hora.
+-   Se uma instrução UPDATE ou DELETE posicionada for executada em uma coluna de uma tabela que inclui uma coluna timestamp que é atualizada automaticamente toda vez que uma atualização for executada, todas as instruções UPDATE ou DELETE posicionadas subsequentes falharão se a coluna timestamp for limita. Isso ocorre porque a instrução UPDATE ou DELETE pesquisada criada pela biblioteca de cursores não identificará com precisão a linha a ser atualizada. O valor na instrução pesquisada para a coluna timestamp não corresponderá ao valor atualizado automaticamente da coluna timestamp.

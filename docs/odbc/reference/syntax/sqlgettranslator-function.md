@@ -20,18 +20,18 @@ ms.assetid: 33879db3-5ef9-4585-9be5-69376157e017
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f769d3c5b2dcfe5d2aa8a431695cb18a52893b91
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68030655"
 ---
 # <a name="sqlgettranslator-function"></a>Função SQLGetTranslator
-**Conformidade com**  
- Versão introduzida: ODBC 2.0  
+**Conformidade**  
+ Versão introduzida: ODBC 2,0  
   
  **Resumo**  
- **SQLGetTranslator** exibe uma caixa de diálogo na qual um usuário pode selecionar um conversor.  
+ **SQLGetTranslator** exibe uma caixa de diálogo da qual um usuário pode selecionar um tradutor.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -50,55 +50,55 @@ BOOL SQLGetTranslator(
   
 ## <a name="arguments"></a>Argumentos  
  *hwndParent*  
- [Entrada] Identificador de janela pai.  
+ Entrada Identificador de janela pai.  
   
  *lpszName*  
- [Entrada/saída] Nome do tradutor de informações do sistema.  
+ [Entrada/saída] Nome do tradutor a partir das informações do sistema.  
   
  *cbNameMax*  
- [Entrada] Comprimento máximo do *lpszName* buffer.  
+ Entrada Comprimento máximo do buffer *lpszName* .  
   
  *pcbNameOut*  
- [Entrada/saída] Número total de bytes (excluindo o byte nulo de terminação) passado ou retornado em *lpszName*. Se o número de bytes disponíveis para retornar for maior que ou igual a *cbNameMax*, o nome do tradutor na *lpszName* será truncado com *cbNameMax* menos o caractere de finalização null. O *pcbNameOut* argumento pode ser um ponteiro nulo.  
+ [Entrada/saída] Número total de bytes (exceto o byte de terminação nula) passados ou retornados em *lpszName*. Se o número de bytes disponíveis para retornar for maior ou igual a *cbNameMax*, o nome do tradutor em *lpszName* será truncado para *cbNameMax* menos o caractere de terminação nula. O argumento *pcbNameOut* pode ser um ponteiro nulo.  
   
  *lpszPath*  
- [Saída] Caminho completo da DLL de tradução.  
+ Der Caminho completo da DLL de tradução.  
   
  *cbPathMax*  
- [Entrada] Comprimento máximo do *lpszPath* buffer.  
+ Entrada Comprimento máximo do buffer *lpszPath* .  
   
  *pcbPathOut*  
- [Saída] Número total de bytes (excluindo o byte nulo de terminação) retornado em *lpszPath*. Se o número de bytes disponíveis para retornar for maior que ou igual a *cbPathMax*, o caminho DLL de conversão na *lpszPath* será truncado com *cbPathMax* menos o caractere de finalização null. O *pcbPathOut* argumento pode ser um ponteiro nulo.  
+ Der Número total de bytes (excluindo o byte de terminação nula) retornado em *lpszPath*. Se o número de bytes disponíveis para retornar for maior ou igual a *cbPathMax*, o caminho da DLL de tradução em *lpszPath* será truncado para *cbPathMax* menos o caractere de terminação nula. O argumento *pcbPathOut* pode ser um ponteiro nulo.  
   
  *pvOption*  
- Opção de conversão de 32 bits do [saída].  
+ [Saída] opção de conversão de 32 bits.  
   
-## <a name="returns"></a>Retorna  
- A função retorna TRUE se for bem-sucedido e FALSO se ele falhar ou se o usuário cancelar a caixa de diálogo.  
+## <a name="returns"></a>Retornos  
+ A função retornará TRUE se for bem-sucedida, FALSE se falhar ou se o usuário cancelar a caixa de diálogo.  
   
-## <a name="diagnostics"></a>Diagnóstico  
- Quando **SQLGetTranslator** retornar FALSE, um associado  *\*pfErrorCode* valor pode ser obtido chamando **SQLInstallerError**. A seguinte tabela lista os  *\*pfErrorCode* valores que podem ser retornados por **SQLInstallerError** e explica cada uma no contexto dessa função.  
+## <a name="diagnostics"></a>Diagnósticos  
+ Quando **SQLGetTranslator** retorna false, um valor * \*pfErrorCode* associado pode ser obtido chamando **SQLInstallerError**. A tabela a seguir lista os valores de * \*pfErrorCode* que podem ser retornados por **SQLInstallerError** e explica cada um no contexto dessa função.  
   
-|*\*pfErrorCode*|Erro|Descrição|  
+|*\*pfErrorCode*|Erro|DESCRIÇÃO|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_GENERAL_ERR|Erro geral de instalador|Ocorreu um erro para que nenhum erro específico do instalador.|  
-|ODBC_ERROR_INVALID_BUFF_LEN|Comprimento de buffer inválido|O *cbNameMax* ou *cbPathMax* argumento era menor que ou igual a 0.|  
-|ODBC_ERROR_INVALID_HWND|Identificador de janela inválido|O *hwndParent* argumento era inválido ou nulo.|  
-|ODBC_ERROR_INVALID_NAME|Nome inválido de driver ou conversor|O *lpszName* argumento era inválido. Ele não pôde ser encontrado no registro.|  
-|ODBC_ERROR_LOAD_LIBRARY_FAILED|Não foi possível carregar a biblioteca de instalação do driver ou conversor|Não foi possível carregar a biblioteca de tradução.|  
-|ODBC_ERROR_INVALID_OPTION|Opção de transação inválido|O *pvOption* argumento continha um valor inválido.|  
-|ODBC_ERROR_OUT_OF_MEM|Memória insuficiente|O instalador não foi possível executar a função devido à falta de memória.|  
+|ODBC_ERROR_GENERAL_ERR|Erro geral do instalador|Ocorreu um erro para o qual não havia nenhum erro do instalador específico.|  
+|ODBC_ERROR_INVALID_BUFF_LEN|Comprimento de buffer inválido|O argumento *cbNameMax* ou *cbPathMax* era menor ou igual a 0.|  
+|ODBC_ERROR_INVALID_HWND|Identificador de janela inválido|O argumento *hwndParent* era inválido ou nulo.|  
+|ODBC_ERROR_INVALID_NAME|Nome de driver ou tradutor inválido|O argumento *lpszName* era inválido. Ele não foi encontrado no registro.|  
+|ODBC_ERROR_LOAD_LIBRARY_FAILED|Não foi possível carregar a biblioteca de instalação do driver ou do Tradutor|Não foi possível carregar a biblioteca de tradutores.|  
+|ODBC_ERROR_INVALID_OPTION|Opção de transação inválida|O argumento *pvOption* continha um valor inválido.|  
+|ODBC_ERROR_OUT_OF_MEM|Memória insuficiente|O instalador não pôde executar a função devido à falta de memória.|  
   
 ## <a name="comments"></a>Comentários  
- Se *hwndParent* é nulo ou se *lpszName*, *lpszPath*, ou *pvOption* é um ponteiro nulo, **SQLGetTranslator** retorna FALSE. Caso contrário, ele exibe a lista de conversores instalados na caixa de diálogo a seguir.  
+ Se *hwndParent* for nulo ou se *lpszName*, *lpszPath*ou *pvOption* for um ponteiro nulo, **SQLGetTranslator** retornará false. Caso contrário, ele exibirá a lista de tradutores instalados na caixa de diálogo a seguir.  
   
- ![Marque a caixa de diálogo tradução](../../../odbc/reference/syntax/media/ch23j.gif "CH23J")  
+ ![Caixa de diálogo Selecionar Conversor](../../../odbc/reference/syntax/media/ch23j.gif "CH23J")  
   
- Se *lpszName* contém um nome válido de tradução, ele é selecionado. Caso contrário, \<tradutor não > está selecionada.  
+ Se *lpszName* contiver um nome de Tradutor válido, ele será selecionado. Caso contrário \<, nenhuma> de conversor será selecionada.  
   
- Se o usuário escolhe \<tradutor não >, o conteúdo de *lpszName*, *lpszPath*, e *pvOption* não são tocadas. **SQLGetTranslator** define *pcbNameOut* e *pcbPathOut* como 0 e retornará TRUE.  
+ Se o usuário não \<escolher nenhum Tradutor>, o conteúdo de *lpszName*, *lpszPath*e *pvOption* não será tocado. **SQLGetTranslator** define *pcbNameOut* e *PCBPATHOUT* como 0 e retorna true.  
   
- Se o usuário escolhe um tradutor **SQLGetTranslator** chamadas **ConfigTranslator** na DLL de instalação do tradutor. Se **ConfigTranslator** retorna FALSE, o **SQLGetTranslator** retorna à sua caixa de diálogo. Se **ConfigTranslator** retorna TRUE, **SQLGetTranslator** retorna TRUE, junto com a opção de tradução, o caminho e nome do tradutor selecionado.  
+ Se o usuário escolher um tradutor, **SQLGetTranslator** chamará **ConfigTranslator** na DLL de instalação do tradutor. Se **ConfigTranslator** retornar false, **SQLGetTranslator** retornará para sua caixa de diálogo. Se **ConfigTranslator** retornar true, **SQLGetTranslator** retornará true, junto com o nome do tradutor, o caminho e a opção de conversão selecionados.  
   
 ## <a name="related-functions"></a>Funções relacionadas  
   
@@ -106,4 +106,4 @@ BOOL SQLGetTranslator(
 |---------------------------|---------|  
 |Configurando um tradutor|[ConfigTranslator](../../../odbc/reference/syntax/configtranslator-function.md)|  
 |Obtendo um atributo de tradução|[SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)|  
-|Definir um atributo de tradução|[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|
+|Configurando um atributo de tradução|[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|

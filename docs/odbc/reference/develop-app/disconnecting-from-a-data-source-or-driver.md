@@ -1,5 +1,5 @@
 ---
-title: Desconectar-se de dados de um fonte ou Driver | Microsoft Docs
+title: Desconectando de uma fonte de dados ou driver | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,15 +18,15 @@ ms.assetid: 83dbf0bf-b400-41fb-8537-9b016050dc3c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a01220b6a4f15ee3770b844f41e7ddc5399f5f86
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68039761"
 ---
 # <a name="disconnecting-from-a-data-source-or-driver"></a>Desconectar de uma fonte de dados ou de um driver
-Quando um aplicativo tiver terminado de usar uma fonte de dados, ele chama **SQLDisconnect**. **SQLDisconnect** libera todas as instruções que são alocadas a conexão e desconecta o driver da fonte de dados. Ele retornará um erro se uma transação está em processo.  
+Quando um aplicativo termina de usar uma fonte de dados, ele chama **SQLDisconnect**. O **SQLDisconnect** libera Todas as instruções que são alocadas na conexão e desconecta o driver da fonte de dados. Ele retornará um erro se uma transação estiver em andamento.  
   
- Após a desconexão, o aplicativo pode chamar **SQLFreeHandle** para liberar a conexão. Depois de liberar a conexão, ele é um erro de programação de aplicativo para usar o identificador da conexão em uma chamada para uma função ODBC; Isso traz consequências indefinidas, mas provavelmente fatais. Quando **SQLFreeHandle** é chamado, as versões de driver a estrutura usada para armazenar informações sobre a conexão.  
+ Após a desconexão, o aplicativo pode chamar **SQLFreeHandle** para liberar a conexão. Depois de liberar a conexão, é um erro de programação de aplicativo usar o identificador da conexão em uma chamada para uma função ODBC; Isso tem conseqüências indefinidas, mas provavelmente fatais. Quando **SQLFreeHandle** é chamado, o driver libera a estrutura usada para armazenar informações sobre a conexão.  
   
- O aplicativo também pode reutilizar a conexão, para se conectar a uma fonte de dados diferente ou reconectar-se à mesma fonte de dados. A decisão de permanecer conectado, em vez de desconectar e reconectar posteriormente, requer que o criador do aplicativo considere os custos relativos de cada opção. tanto a se conectar a uma fonte de dados e permanecer conectado podem ser relativamente caros, dependendo da mídia de conexão. Ao fazer um equilíbrio correto, o aplicativo também deve fazer suposições sobre a probabilidade e o intervalo de outras operações na mesma fonte de dados.
+ O aplicativo também pode reutilizar a conexão, seja para se conectar a uma fonte de dados diferente ou reconectar-se à mesma fonte de dados. A decisão de permanecer conectada, em oposição à desconexão e reconexão posterior, requer que o gravador do aplicativo considere os custos relativos de cada opção; tanto a conexão com uma fonte de dados quanto a conexão restante podem ser relativamente dispendiosas dependendo da mídia de conexão. Ao fazer uma compensação correta, o aplicativo também deve fazer suposições sobre a probabilidade e o tempo de operações adicionais na mesma fonte de dados.

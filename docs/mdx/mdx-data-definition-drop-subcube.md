@@ -1,5 +1,5 @@
 ---
-title: Instrução DROP SUBCUBE (MDX) | Microsoft Docs
+title: Instrução DROP SUBCUBO (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 0c1af84d315b843669a25f385b1e0ec9b7f123dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68038155"
 ---
 # <a name="mdx-data-definition---drop-subcube"></a>Definição de dados MDX – DROP SUBCUBE
@@ -31,8 +31,8 @@ DROP SUBCUBE Subcube_Name
  *Subcube_Name*  
  Uma expressão de cadeia de caracteres válida que fornece um nome de subcubo.  
   
-## <a name="see-also"></a>Consulte também  
- [Instruções de script MDX &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)   
- [Instrução CREATE SUBCUBE &#40;MDX&#41;](../mdx/mdx-data-definition-create-subcube.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Instruções de script MDX &#40;&#41;MDX](../mdx/mdx-scripting-statements-mdx.md)   
+ [Instrução CREATE SUBCUBO &#40;MDX&#41;](../mdx/mdx-data-definition-create-subcube.md)  
   
   

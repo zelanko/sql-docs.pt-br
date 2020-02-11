@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 23c8c3c76b881f342f56490e5722a0ae641464ac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62755364"
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>Monitorando o espelhamento de banco de dados (SQL Server)
@@ -82,7 +82,7 @@ ms.locfileid: "62755364"
   
      A tabela a seguir apresenta os procedimentos armazenados para administrar e usar o monitoramento de espelhamento de banco de dados independentemente do Monitor de Espelhamento de Banco de Dados.  
   
-    |Procedimento|Descrição|  
+    |Procedimento|DESCRIÇÃO|  
     |---------------|-----------------|  
     |[sp_dbmmonitoraddmonitoring](/sql/relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql)|Cria uma tarefa que atualiza periodicamente as informações de status para cada banco de dados espelho na instância do servidor.|  
     |[sp_dbmmonitorchangemonitoring](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql)|Altera o valor de um parâmetro de monitoração de espelhamento de banco de dados.|  
@@ -129,8 +129,8 @@ ms.locfileid: "62755364"
   
      Administradores do sistema podem usar o procedimento armazenado do sistema **sp_dbmmonitorresults** para exibir e, opcionalmente, atualizar a tabela de status, caso não tenha sido atualizada nos 15 segundos anteriores. Esse procedimento chama o procedimento **sp_dbmmonitorupdate** e retorna uma ou mais linhas do histórico, dependendo da quantidade solicitada na chamada de procedimento. Para obter informações sobre o status em seu conjunto de resultados, veja [sp_dbmmonitorresults &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql).  
   
-#### <a name="monitoring-database-mirroring-status-by-dbmmonitor-members"></a>Monitorando o status de espelhamento de banco de dados (por membros dbm_monitor)  
- Conforme mencionado, na primeira vez que **sp_dbmmonitorupdate** é executado, ele cria a função de banco de dados fixa **dbm_monitor** no banco de dados **msdb** . Membros da função de banco de dados fixa **dbm_monitor** podem exibir o status de espelhamento existente usando o Monitor de Espelhamento de Banco de Dados ou o procedimento armazenado **sp_dbmmonitorresults** . Esses usuários, porém, não podem atualizar a tabela de status. Para saber a idade do status exibido, um usuário pode examinar os horários nos rótulos **Log principal (***\<time>***)** e **Log espelhado (***\<time>***)** na página **Status**.  
+#### <a name="monitoring-database-mirroring-status-by-dbm_monitor-members"></a>Monitorando o status de espelhamento de banco de dados (por membros dbm_monitor)  
+ Conforme mencionado, na primeira vez que **sp_dbmmonitorupdate** é executado, ele cria a função de banco de dados fixa **dbm_monitor** no banco de dados **msdb** . Membros da função de banco de dados fixa **dbm_monitor** podem exibir o status de espelhamento existente usando o Monitor de Espelhamento de Banco de Dados ou o procedimento armazenado **sp_dbmmonitorresults** . Esses usuários, porém, não podem atualizar a tabela de status. Para saber a idade do status exibido, um usuário pode examinar os horários nos rótulos **log principal (***\<tempo>***)** e **log espelhado (***\<tempo>***)** na página **status** .  
   
  Membros da função de banco de dados fixa **dbm_monitor** dependem do **Trabalho de Monitor de Espelhamento de Banco de Dados** para atualizar a tabela de status em intervalos regulares. Se o trabalho não existir ou o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent for interrompido, o status se tornará cada vez mais obsoleto e poderá deixar de refletir a configuração da sessão de espelhamento. Por exemplo, depois de um failover, poderá parecer que os parceiros compartilham a mesma função, principal ou espelhada ou o servidor principal atual poderá ser mostrado como o espelho e o servidor espelhado atual como o principal.  
   
@@ -154,15 +154,15 @@ ms.locfileid: "62755364"
   
 -   Função atual  
   
-     Função atual da instância de servidor. Os estados possíveis são:  
+     Função atual da instância de servidor. Os possíveis estados são:  
   
     -   Principal  
   
     -   Espelho  
   
--   Estado de espelhamento  
+-   estado de espelhamento  
   
-     Os estados possíveis são:  
+     Os possíveis estados são:  
   
     -   Unknown (desconhecido)  
   
@@ -176,7 +176,7 @@ ms.locfileid: "62755364"
   
 -   Conexão de testemunha  
   
-     Status de conexão de testemunha. Os estados possíveis são:  
+     Status de conexão de testemunha. Os possíveis estados são:  
   
     -   Unknown (desconhecido)  
   
@@ -329,7 +329,7 @@ ms.locfileid: "62755364"
   
 -   [sp_dbmmonitorupdate &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorupdate-transact-sql)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Espelhamento de banco de dados &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [Provedor WMI para conceitos de eventos de servidor](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)  
   
