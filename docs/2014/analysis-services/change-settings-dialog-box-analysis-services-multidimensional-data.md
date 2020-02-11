@@ -1,5 +1,5 @@
 ---
-title: Alterar a caixa de diálogo de configurações (Analysis Services - dados multidimensionais) | Microsoft Docs
+title: Caixa de diálogo Alterar configurações (Analysis Services-dados multidimensionais) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 43dfc1dca2e60fe2f5e467556ee36c3add1a9da3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088246"
 ---
 # <a name="change-settings-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Alterar Configurações (Analysis Services - Dados Multidimensionais)
@@ -41,9 +41,9 @@ ms.locfileid: "66088246"
  **Modo de transação**  
  Escolha o modo de transação usado quando os objetos são processados em ordem sequencial:  
   
--   **Uma Transação** processa todos os objetos na mesma transação.  
+-   **Uma transação** processa todos os objetos na mesma transação.  
   
--   **Separar Transações** processa todos os objetos, inclusive objetos dependentes, em transações separadas.  
+-   **Transações separadas** processam todos os objetos, incluindo objetos dependentes, em transações separadas.  
   
 > [!NOTE]  
 >  Essa opção estará habilitada apenas se a opção **Sequencial** estiver selecionada.  
@@ -51,11 +51,11 @@ ms.locfileid: "66088246"
  **Opção de tabela de write-back**  
  Escolha a opção usada para gerenciar uma tabela de write-back:  
   
--   **Criar** criará uma tabela de write-back se ela não existir. Ocorrerá um erro se uma tabela write-back já existir.  
+-   **Criar** cria uma tabela de write-back se ela não existir. Ocorrerá um erro se uma tabela write-back já existir.  
   
--   **Criar sempre** cria uma tabela write-back se ela não existir ou substitui a tabela write-back existente se ela já existir.  
+-   **Criar sempre** criará uma tabela de write-back se ela não existir ou substituirá a tabela de write-back existente se ela existir.  
   
--   **Usar existente** usará a tabela de write-back existente se ela já existir. Ocorrerá um erro se uma tabela write-back não existir.  
+-   **Usar existente** usa a tabela de write-back existente se ela existir. Ocorrerá um erro se uma tabela write-back não existir.  
   
  **Objetos afetados pelo processo**  
  Selecione para incluir e processar objetos que dependem de objetos incluídos na operação de processamento.  
@@ -72,9 +72,9 @@ ms.locfileid: "66088246"
  **Ação de erro de chave**  
  Escolha uma das seguintes ações que ocorrem quando uma nova chave é encontrada durante processamento que não pode ser pesquisado:  
   
--   **Converter em desconhecido** agrega as informações do registro ao membro desconhecido.  
+-   **Converter em desconhecido** agrega as informações para o registro no membro desconhecido.  
   
--   **Descartar registro** exclui a informações do registro para que não sejam processadas com o objeto.  
+-   **Descartar registro** exclui as informações para que o registro seja processado com o objeto.  
   
  **Ignorar contagem de erros**  
  Clique para ignorar quaisquer erros ocorridos durante o processamento.  
@@ -88,9 +88,9 @@ ms.locfileid: "66088246"
  **Ação se houver erro**  
  Escolha uma das seguintes ações a serem executadas quando o número de erros exceder o valor em **Número de erros**:  
   
--   **Parar processamento** encerra a operação de processamento.  
+-   **Parar o processamento** encerra a operação de processamento.  
   
--   **Parar log** para o log de erros, mas continua a operação de processamento.  
+-   **Parar o log** interrompe os erros de log, mas continua a operação de processamento.  
   
  **Chave não encontrada**  
  Especifique uma das seguintes ações a ser executada quando uma chave não for localizada quando um objeto for processado:  
@@ -99,7 +99,7 @@ ms.locfileid: "66088246"
   
 -   **Relatar e continuar** relata o erro e continua a operação de processamento.  
   
--   **Relatar e parar** relata o erro e para a operação de processamento.  
+-   **Relate e Stop** relata o erro e interrompe a operação de processamento.  
   
  **Chave duplicada**  
  Especifique uma das seguintes ações a ser executada se uma chave duplicada for localizada quando um objeto for processado:  
@@ -108,7 +108,7 @@ ms.locfileid: "66088246"
   
 -   **Relatar e continuar** relata o erro e continua a operação de processamento.  
   
--   **Relatar e parar** relata o erro e para a operação de processamento.  
+-   **Relate e Stop** relata o erro e interrompe a operação de processamento.  
   
  **Chave nula convertida em desconhecida**  
  Especifique uma das seguintes ações a ser executada quando uma chave de membro nula for adicionada ao membro desconhecido quando um objeto for processado:  
@@ -117,7 +117,7 @@ ms.locfileid: "66088246"
   
 -   **Relatar e continuar** relata o erro e continua a operação de processamento.  
   
--   **Relatar e parar** relata o erro e para a operação de processamento.  
+-   **Relate e Stop** relata o erro e interrompe a operação de processamento.  
   
  **Chave nula não permitida**  
  Especifique uma das seguintes ações a ser executada quando uma chave nula for localizada, mas não for permitida, quando um objeto for processado:  
@@ -126,7 +126,7 @@ ms.locfileid: "66088246"
   
 -   **Relatar e continuar** relata o erro e continua a operação de processamento.  
   
--   **Relatar e parar** relata o erro e para a operação de processamento.  
+-   **Relate e Stop** relata o erro e interrompe a operação de processamento.  
   
  **Caminho do log de erros**  
  Digite o caminho completo e nome do arquivo de log de erros.  
@@ -137,8 +137,8 @@ ms.locfileid: "66088246"
  **Objetos afetados pelo processo**  
  Clique para processar os objetos que têm uma dependência dos objetos selecionados na caixa de diálogo **Processar** .  
   
-## <a name="see-also"></a>Consulte também  
- [Designers e caixas de diálogo do Analysis Services &#40;dados multidimensionais&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Processar caixa de diálogo &#40;Analysis Services - dados multidimensionais&#41;](process-dialog-box-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Analysis Services designers e caixas de diálogo &#40;dados multidimensionais&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Caixa de diálogo processo &#40;Analysis Services de dados multidimensionais&#41;](process-dialog-box-analysis-services-multidimensional-data.md)  
   
   

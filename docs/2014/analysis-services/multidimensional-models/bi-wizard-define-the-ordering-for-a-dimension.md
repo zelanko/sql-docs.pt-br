@@ -1,5 +1,5 @@
 ---
-title: Definir a ordenação para uma dimensão | Microsoft Docs
+title: Definir a ordenação de uma dimensão | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 05e75eb726d67e992a0a9320be8d23bbc547bedb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076856"
 ---
 # <a name="define-the-ordering-for-a-dimension"></a>Definir a ordenação para uma dimensão
@@ -35,7 +35,7 @@ ms.locfileid: "66076856"
 ## <a name="specifying-ordering"></a>Especificando a ordenação  
  Na segunda página **Especificar a Ordenação de Atributos** do assistente, especifique como os atributos da dimensão serão ordenados.  
   
- Na coluna **Atributo de Ordenação** , você pode alterar o atributo usado para fazer a ordenação. Se o atributo que você deseja usar para ordenar os membros não estiver na lista, role para baixo na lista e, em seguida, selecione  **\<novo atributo... >** para abrir o **selecionar uma coluna** caixa de diálogo, no qual você pode Selecione uma coluna em uma tabela de dimensão. Com a seleção de uma coluna pela caixa de diálogo **Selecionar uma Coluna** , é criado um atributo adicional que será usado para ordenar os membros de um atributo.  
+ Na coluna **Atributo de Ordenação** , você pode alterar o atributo usado para fazer a ordenação. Se o atributo que você deseja usar para ordenar Membros não estiver na lista, role para baixo na lista e, em seguida, selecione ** \<novo atributo... >** para abrir a caixa de diálogo **selecionar uma coluna** , onde você pode selecionar uma coluna em uma tabela de dimensões. Com a seleção de uma coluna pela caixa de diálogo **Selecionar uma Coluna** , é criado um atributo adicional que será usado para ordenar os membros de um atributo.  
   
  Na coluna **Critérios** , você pode selecionar ordenar os membros do atributo por **Chave** ou **Nome**.  
   

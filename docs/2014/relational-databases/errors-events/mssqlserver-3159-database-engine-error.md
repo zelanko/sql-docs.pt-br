@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0373952a28a901519d1d40e92750af3da72f94e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62868877"
 ---
-# <a name="mssqlserver3159"></a>MSSQLSERVER_3159
+# <a name="mssqlserver_3159"></a>MSSQLSERVER_3159
     
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|Nome do Produto|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |ID do evento|3159|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|LDDB_LOGNOTBACKEDUP|  
 |Texto da mensagem|Não foi feito backup da parte final do log do banco de dados "%ls". Use BACKUP LOG WITH NORECOVERY para fazer backup do log se ele contiver um trabalho que você não deseja perder. Use a cláusula WITH REPLACE ou WITH STOPAT da instrução RESTORE para simplesmente substituir o conteúdo do log.|  
@@ -47,9 +47,9 @@ ms.locfileid: "62868877"
   
  Se você não puder fazer um backup de final do log, use WITH STOPAT ou WITH REPLACE em suas instruções RESTORE.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Restaurar um banco de dados do SQL Server em um ponto específico &#40;Modelo de recuperação completa&#41;](../backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   
- [Fazer backup de Log de transações quando o banco de dados está danificado &#40;SQL Server&#41;](../backup-restore/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)   
+ [Faça backup do log de transações quando o banco de dados estiver danificado &#40;SQL Server&#41;](../backup-restore/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)   
  [Fazer backup de um log de transações &#40;SQL Server&#41;](../backup-restore/back-up-a-transaction-log-sql-server.md)   
  [Backups da parte final do log &#40;SQL Server&#41;](../backup-restore/tail-log-backups-sql-server.md)  
   

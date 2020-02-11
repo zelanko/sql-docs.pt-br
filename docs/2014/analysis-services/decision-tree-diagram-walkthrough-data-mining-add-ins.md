@@ -1,5 +1,5 @@
 ---
-title: Passo a passo o diagrama de árvore (suplementos de mineração de dados) de decisão | Microsoft Docs
+title: Explicação do diagrama de árvore de decisão (suplementos de mineração de dados) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,47 +16,47 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ef951825144f381ab37a83526ec96321fe43cfec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082277"
 ---
-# <a name="decision-tree-diagram-walkthrough--data-mining-add-ins"></a>Passo a passo o diagrama de árvore de decisão (suplementos de mineração de dados)
-  Se você criou um modelo de árvore de decisão, pode criar um diagrama personalizado no Visio usando a forma da Árvore de Decisão ou a forma de Rede de Dependências. Este tópico descreve as personalizações que você pode executar usando o **árvore de decisão** forma e esses controles:  
+# <a name="decision-tree-diagram-walkthrough--data-mining-add-ins"></a>Explicação do diagrama de árvore de decisão (suplementos de mineração de dados)
+  Se você criou um modelo de árvore de decisão, pode criar um diagrama personalizado no Visio usando a forma da Árvore de Decisão ou a forma de Rede de Dependências. Este tópico descreve as personalizações que você pode executar usando a forma de **árvore de decisão** e esses controles:  
   
 -   Controles de renderização para o diagrama de árvore de decisão  
   
-     Essas opções fazem parte dos **Assistente de árvore de decisão** que é iniciado quando você solta uma forma no espaço de trabalho do Visio.  
+     Essas opções fazem parte do **Assistente de árvore de decisão** que é iniciado quando você solta uma forma no espaço de trabalho do Visio.  
   
--   **Layout de mineração de dados** barra de ferramentas  
+-   Barra de ferramentas **layout de mineração de dados**  
   
      Essas opções são adicionadas ao workspace do Visio para ajudá-lo a interagir com a forma.  
   
 ## <a name="build-a-decision-tree-diagram"></a>Criar um diagrama de árvore de decisão  
- Você solta a forma da árvore de decisão na página do Visio para iniciar o **Assistente para criar formas do Visio árvore de decisão** e defina as opções do diagrama.  
+ Descartar a forma da árvore de decisão na página do Visio para iniciar o **Assistente de forma da árvore de decisão do Visio** e definir opções de diagrama.  
   
 #### <a name="use-the-decision-tree-wizard"></a>Use o Assistente de Árvore de Decisão  
   
-1.  Se você não vir **formas de mineração de dados do Microsoft** na **formas** , clique em **mais formas**, selecione **Abrir estêncil**e abra o modelo do local de instalação padrão.  
+1.  Se você não vir **as formas de mineração de dados da Microsoft** na lista **formas** , clique em **mais formas**, selecione **Abrir Estêncil**e abra o modelo no local de instalação padrão.  
   
-     \<drive>:\Program files (x85)\Microsoft SQL Server 2012 DM Add-Ins  
+     \<unidade>: \Program Files (x85) \Microsoft SQL Server 2012 DM Add-ins  
   
-2.  Arraste o **árvore de decisão** forma na página.  
+2.  Arraste a forma **árvore de decisão** para a página.  
   
-3.  Na página de boas-vinda a **Assistente para criar formas do Visio árvore de decisão**, clique em **próxima**.  
+3.  Na página inicial do assistente de **forma da árvore de decisão do Visio**, clique em **Avançar**.  
   
-4.  No **selecionar uma fonte de dados** página do **Assistente de Cluster**, escolha uma conexão para um [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] server que tem o modelo que você deseja visualizar.  
+4.  Na página **selecionar uma fonte de dados** do **Assistente de cluster**, escolha uma conexão com um [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] servidor que tenha o modelo que você deseja visualizar.  
   
-5.  Selecione um modelo de mineração apropriado e, em seguida, clique em **próxima**.  
+5.  Selecione um modelo de mineração apropriado e clique em **Avançar**.  
   
-     Esse tipo de diagrama dá suporte a modelos criados usando o algoritmo árvores de decisão ou Regressão Linear.  
+     Esse tipo de diagrama dá suporte a modelos criados usando as árvores de decisão ou o algoritmo de regressão linear.  
   
-6.  Sobre o **selecionar árvore de decisão** , escolha uma árvore individual para exibir.  
+6.  Na página **selecionar árvore de decisão** , escolha uma árvore individual a ser exibida.  
   
-     Uma árvore modela as interações que levam a um resultado específico que você modelou; Portanto, mesmo se seu modelo contiver vários resultados, você pode exibir somente uma única árvore por vez.  
+     Uma árvore modela as interações que levam a um determinado resultado que você modelou; Portanto, mesmo que seu modelo contenha vários resultados, você poderá exibir apenas uma árvore por vez.  
   
-7.  No **selecionar árvore de decisão** caixa de diálogo, você também pode definir essas opções de renderização:  
+7.  Na caixa de diálogo **selecionar árvore de decisão** , você também pode definir estas opções de renderização:  
   
      **Profundidade de renderização máxima**  
      Use esta opção para controlar quantos nós são exibidos.  
@@ -65,79 +65,79 @@ ms.locfileid: "66082277"
   
      O padrão é três níveis de nós.  
   
-     **Selecionar cor e exibir o texto para valores**  
+     **Selecionar cor e exibir o texto para os valores**  
      Escolher a cor que representará cada um dos resultados. Se você não especificar cores, elas serão geradas automaticamente usando as cores de tema do vídeo atual.  
   
-8.  Clique em **avançado** para personalizar as seguintes opções para cada um de nós no diagrama da árvore de decisão.  
+8.  Clique em **avançado** para personalizar as seguintes opções para cada um dos nós no diagrama de árvore de decisão.  
   
-     **Variável de sombreamento** e **estado**  
+     Variável e **estado** de **sombreamento**  
      Escolha o resultado pretendido que você deseja exibir no diagrama da árvore.  
   
      **Mostrar Histograma**  
      Adiciona um gráfico para cada nó que mostra as regras que definem esse nó.  
   
-     **Mostrar rótulo**  
+     **Mostrar Rótulo**  
      Adiciona nomes de coluna ao histograma.  
   
-     **Mostrar probabilidade**  
+     **Mostrar Probabilidade**  
      Exibe a probabilidade de cada valor.  
   
-     **Mostrar suporte**  
+     **Mostrar Suporte**  
      Exibe o suporte para cada valor.  
   
-     **Mostrar rodapé**  
+     **Mostrar Rodapé**  
      Adiciona um rodapé que soma todos os valores exibidos.  
   
-     **Mostrar cabeçalho**  
+     **Mostrar Cabeçalho**  
      Adiciona títulos de coluna.  
   
      **Mostrar estados sem nenhum suporte**  
      Permite que você exiba valores ausentes.  
   
-9. Clique em **concluir** para criar o gráfico.  
+9. Clique em **concluir** para criar o grafo.  
   
     > [!WARNING]  
     >  Em alguns ambientes, os conectores no gráfico podem não ser renderizados no Office 2013.  
   
 ## <a name="explore-and-modify-the-finished-diagram"></a>Explorar e modificar o diagrama completo  
- Depois de concluir a **Assistente para criar formas do Visio árvore de decisão**, Visio cria um diagrama de árvore na página que exibe graficamente as regras que levam ao resultado esperado.  
+ Depois de concluir o **Assistente de forma da árvore de decisão do Visio**, o Visio cria um diagrama de árvore na página que exibe graficamente as regras que levam ao resultado previsto.  
   
  Você pode continuar modificando a forma usando os seguintes controles para diagramas da árvore de decisão:  
   
 #### <a name="using-the-decision-tree-option-menus"></a>Usando os menus de opção da árvore de decisão  
   
-1.  Clique o **Add-Ins** faixa de opções e, em seguida, exiba uma das barras de ferramentas personalizadas usadas para trabalhar com diagramas de mineração de dados:  
+1.  Clique na faixa de **bits suplementos** e, em seguida, exiba uma das barras de ferramentas personalizadas usadas para trabalhar com diagramas de Data Mining:  
   
      **Layout**  
      Otimiza a organização da árvore para caber na página atual.  
   
-     **Redimensionar página**  
-     Esse controle foi planejado para versões anteriores do HTML. Use a página do Visio em vez disso, os controles de redimensionamento  
+     **Redimensionar Página**  
+     Esse controle foi planejado para versões anteriores do HTML. Em vez disso, use os controles redimensionamento de página do Visio,  
   
      **Descrição**  
      Quando um nó da árvore é selecionado, clique nessa opção para exibir detalhes sobre os casos no nó.  
   
-2.  Use o **Refazer Layout da página** opção no Visio **Design** faixa de opções para fazer experiências com diferentes layouts da árvore.  
+2.  Use a opção **página Refazer layout** na faixa de opções **design** do Visio para experimentar diferentes layouts de árvore.  
   
-3.  Use o **conectores** opção a **Design** tab para mudar os conectores usados entre os nós na árvore.  
+3.  Use a opção **conectores** na guia **design** para alterar os conectores usados entre os nós na árvore.  
   
-4.  Use o **Panorâmica e Zoom** controlar, o **painel de tarefas** área do Visio **exibição** faixa de opções, para se concentrar em uma área específica do diagrama.  
+4.  Use o controle de **panorâmica e zoom** , na área do **painel de tarefas** da faixa de **modos do modo de exibição** do Visio, para se concentrar em uma área específica do diagrama.  
   
 5.  Clique com o botão direito do mouse em qualquer nó na árvore, e escolha dessas opções de menu de atalho específicas dos diagramas de árvore de decisão:  
   
-     **Melhorar o Layout de página**  
+     **Aperfeiçoar o Layout de Página**  
      Distribui os nós uniformemente na página e ajusta a exibição da página para visualização de todos os nós.  
   
-     **Mover filhos para a nova página**  
+     **Mover Filhos para a Nova Página**  
      Move os filhos do nó selecionado atualmente para uma nova página.  
   
-     **Recolher nós filho**  
+     **Recolher Nós Filho**  
      Oculta os filhos do nó selecionado no momento.  
   
-     **Expanda nós filho**  
+     **Expandir Nós Filho**  
      Exibe os filhos do nó selecionado no momento.  
   
-## <a name="see-also"></a>Consulte também  
- [Solução de problemas de diagramas de mineração de dados do Visio &#40;suplementos de mineração de dados do SQL Server&#41;](troubleshooting-visio-data-mining-diagrams-sql-server-data-mining-add-ins.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Solução de problemas de diagramas de mineração de dados do Visio &#40;SQL Server suplementos de mineração de dados&#41;](troubleshooting-visio-data-mining-diagrams-sql-server-data-mining-add-ins.md)  
   
   

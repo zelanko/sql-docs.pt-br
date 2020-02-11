@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bd9095a11ef304c256b6c5a60560a71866e744fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62899014"
 ---
 # <a name="add-or-change-a-property-expression"></a>Adicionar ou alterar uma expressão de propriedade
@@ -64,13 +64,13 @@ ms.locfileid: "62899014"
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Expressões do Integration Services &#40;SSIS&#41;](integration-services-ssis-expressions.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Expressões do SSIS &#40;Integration Services&#41;](integration-services-ssis-expressions.md)   
  [Usar expressões de propriedade em pacotes](use-property-expressions-in-packages.md)   
  [Pacotes do Integration Services &#40;SSIS&#41;](../integration-services-ssis-packages.md)   
  [Contêineres do Integration Services](../control-flow/integration-services-containers.md)   
  [Tarefas do Integration Services](../control-flow/integration-services-tasks.md)   
- [Manipuladores de eventos do Integration Services &#40;SSIS&#41](../integration-services-ssis-event-handlers.md)   
+ [Manipuladores de eventos do SSIS &#40;Integration Services&#41;](../integration-services-ssis-event-handlers.md)   
  [Conexões do SSIS &#40;Integration Services&#41;](../connection-manager/integration-services-ssis-connections.md)   
  [Registro em Log do SSIS &#40;Integration Services&#41;](../performance/integration-services-ssis-logging.md)  
   

@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 57ce65cb8fed85eed9eacc176a371dec52145e1c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62867910"
 ---
-# <a name="mssqlserver41342"></a>MSSQLSERVER_41342
+# <a name="mssqlserver_41342"></a>MSSQLSERVER_41342
     
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|Nome do Produto|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |ID do evento|41342|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|HK_HW_NOT_SUPPORTED|  
 |Texto da mensagem|O modelo do processador no sistema não dá suporte à criação de *construct*. Esse erro normalmente ocorre com processadores mais antigos. Consulte os Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para obter informações sobre modelos com suporte.|  
@@ -38,7 +38,7 @@ ms.locfileid: "62867910"
 ## <a name="user-action"></a>Ação do usuário  
  Atualize o processador. Se o processador der suporte à instrução e você estiver executando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma máquina virtual, altere a configuração para dar suporte à instrução CMPXCHG16B.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [OLTP in-memory &#40;Otimização na memória&#41;](../in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

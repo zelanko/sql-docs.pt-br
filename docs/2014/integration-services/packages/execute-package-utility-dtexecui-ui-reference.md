@@ -1,5 +1,5 @@
 ---
-title: Referência de interface do usuário do pacote (DtExecUI) do utilitário de execução | Microsoft Docs
+title: Referência da interface do usuário do Utilitário de Execução de Pacotes (DtExecUI) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,14 +24,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3648798bdbdfb6114fb44b0c4086340bb32d1085
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62890159"
 ---
 # <a name="execute-package-utility-dtexecui-ui-reference"></a>Referência da interface do usuário do utilitário de Execução de Pacotes (DtExecUI)
-  Use o **Utilitário do Pacote de Execução** para executar pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . O utilitário executa pacotes que estão armazenados em um dos três locais: o banco de dados do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o Repositório de pacotes [!INCLUDE[ssIS](../../includes/ssis-md.md)] e o sistema de arquivos Essa interface do usuário, que pode ser aberta no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou digitando `dtexecui` em um prompt de comando, é uma alternativa à execução de pacotes usando o **DTExec** ferramenta de prompt de comando.  
+  Use o **Utilitário do Pacote de Execução** para executar pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . O utilitário executa pacotes que são armazenados em um dos três locais: [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] banco de dados [!INCLUDE[ssIS](../../includes/ssis-md.md)] , o repositório de pacotes e o sistema de arquivos. Essa interface do usuário, que pode ser aberta [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] de ou digitando `dtexecui` em um prompt de comando, é uma alternativa à execução de pacotes usando a ferramenta de prompt de comando **dtexec** .  
   
  Os pacotes são executados no mesmo processo que o utilitário **dtexecui.exe** . Como esse utilitário é uma ferramenta de 32 bits, os pacotes são executados por meio do **dtexecui.exe** em um ambiente de 64 bits no Windows on Win32 (WOW). Ao desenvolver e testar comandos por meio do utilitário dtexecui.exe em um computador de 64 bits, será necessário testar os comandos no modo de 64 bits com a versão de 64 bits do **dtexec.exe** antes de implantar ou agendar os comandos em um servidor de produção.  
   
@@ -66,14 +66,14 @@ ms.locfileid: "62890159"
   
 |||  
 |-|-|  
-|Valor|Descrição|  
-|**SQL Server**|Selecione esta opção quando o pacote estiver no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Especifique uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e forneça um nome de usuário e senha para a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cada nome de usuário e senha adiciona as opções de **/USER** _nome de usuário_ e **/PASSWORD** _senha_ options to the comme prompt.|  
-|**Sistema de arquivos**|Selecione esta opção quando o pacote estiver no sistema de arquivos.|  
+|Valor|DESCRIÇÃO|  
+|**SQL Server**|Selecione esta opção quando o pacote residir no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Especifique uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e forneça um nome de usuário e senha para a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cada nome de usuário e senha adiciona as opções de **/USER** _nome de usuário_ e **/PASSWORD** _senha_ options to the comme prompt.|  
+|**Sistema de Arquivos**|Selecione esta opção quando o pacote estiver no sistema de arquivos.|  
 |**Armazenamento de Pacotes SSIS**|Selecione esta opção quando o pacote estiver no Armazenamento de Pacotes [!INCLUDE[ssIS](../../includes/ssis-md.md)] .|  
   
  Cada uma dessas seleções apresenta o seguinte conjunto de opções.  
   
- **Executar**  
+ **Executados**  
  Clique para executar o pacote.  
   
  **Fechar**  
@@ -85,13 +85,13 @@ ms.locfileid: "62890159"
  **Servidor**  
  Digite o nome do servidor onde o pacote está ou selecione um servidor da lista.  
   
- **Fazer login no servidor**  
+ **Fazer logon no servidor**  
  Especifique se o pacote deve usar a Autenticação do Windows ou a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para estabelecer conexão com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A Autenticação do Windows é recomendada para obter melhor segurança. Com a Autenticação do Windows você não precisa especificar um nome de usuário e senha.  
   
- **Usar Autenticação do Windows**  
+ **Usar autenticação do Windows**  
  Selecione esta opção para usar a Autenticação do Windows e fazer logon usando uma conta de usuário do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
- **Usar Autenticação do SQL Server**  
+ **Usar autenticação SQL Server**  
  Selecione esta opção para usar a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Quando um usuário se conecta com um nome de logon e senha especificados em uma conexão não confiável, o próprio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] efetua a autenticação verificando se foi definida uma conta de logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e se a senha especificada corresponde a uma senha registrada previamente. Se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não localizar a conta de login, ocorrerá uma falha na autenticação e o usuário receberá uma mensagem de erro.  
   
 > [!IMPORTANT]  
@@ -108,13 +108,13 @@ ms.locfileid: "62890159"
  **Servidor**  
  Digite o nome do computador onde o pacote está ou selecione um computador da lista.  
   
- **Fazer login no servidor**  
+ **Fazer logon no servidor**  
  Especifique se o pacote deve usar a Autenticação do Microsoft Windows para estabelecer conexão com a origem do pacote. A Autenticação do Windows é recomendada para obter melhor segurança. Com a Autenticação do Windows você não precisa especificar um nome de usuário e senha.  
   
- **Usar Autenticação do Windows**  
+ **Usar autenticação do Windows**  
  Selecione esta opção para usar a Autenticação do Windows e efetuar login usando uma conta de usuário do Microsoft Windows.  
   
- **Usar Autenticação do SQL Server**  
+ **Usar autenticação SQL Server**  
  Esta opção não estará disponível quando você executar um pacote armazenado no **Repositório de Pacotes SSIS**.  
   
  **Pacote**  
@@ -139,7 +139,7 @@ ms.locfileid: "62890159"
  **Remover**  
  Selecione um arquivo de configuração na lista e clique em **Remover**.  
   
- **Executar**  
+ **Executados**  
  Clique para executar o pacote.  
   
  **Fechar**  
@@ -149,7 +149,7 @@ ms.locfileid: "62890159"
  Use a página **Arquivos de Comando** da caixa de diálogo **Utilitário de Execução de Pacotes** para selecionar os arquivos de comando a serem carregados no momento da execução.  
   
 ### <a name="options"></a>Opções  
- **Command files**  
+ **Arquivos de comando**  
  Lista os arquivos de comando que o pacote usa. Um pacote pode usar vários arquivos para definir as opções de linha de comando.  
   
  **Teclas de direção**  
@@ -161,7 +161,7 @@ ms.locfileid: "62890159"
  **Remover**  
  Selecione um arquivo de comandos na caixa de texto e remova-o usando o botão **Remover** .  
   
- **Executar**  
+ **Executados**  
  Clique para executar o pacote.  
   
  **Fechar**  
@@ -171,16 +171,16 @@ ms.locfileid: "62890159"
  Use a página **Gerenciadores de Conexões** da caixa de diálogo do **Utilitário de Execução de Pacotes** para editar as cadeias de conexão dos gerenciadores de conexões usados pelo pacote.  
   
 ### <a name="options"></a>Opções  
- **Gerenciador de Conexões**  
+ **Gerenciador de conexões**  
  Marque a caixa de seleção para que a coluna **Cadeia de Conexão** possa ser editada.  
   
  **Descrição**  
  Exiba uma descrição para cada gerenciador de conexões. As descrições não podem ser editadas.  
   
- **Cadeia de Conexão**  
+ **Cadeia de conexão**  
  Edite a cadeia de caracteres de conexão para um gerenciador de conexões. Este campo só permitirá edições quando a caixa de seleção **Gerenciador de Conexões** estiver marcada.  
   
- **Executar**  
+ **Executados**  
  Clique para executar o pacote.  
   
  **Fechar**  
@@ -190,16 +190,16 @@ ms.locfileid: "62890159"
  Use a página **Opções de Execução** da caixa de diálogo **Utilitário de Execução de Pacotes** para especificar as opções de tempo de execução do pacote.  
   
 ### <a name="options"></a>Opções  
- **Falha de pacote com avisos de validação**  
+ **Falha no pacote em avisos de validação**  
  Indique se o pacote falha quando ocorre um aviso de validação.  
   
  **Validar pacote sem executar**  
  Indique se o pacote será apenas validado.  
   
- **Executáveis máximos simultâneos**  
+ **Máximo de executáveis simultâneos**  
  Indique se você deseja especificar o número máximo de executáveis que poderá ser executado simultaneamente no pacote. Depois que você marcar esta caixa de seleção, use a caixa de rotação para especificar o número máximo de executáveis.  
   
- **Ativar pontos de verificação do pacote**  
+ **Habilitar pontos de verificação de pacote**  
  Indique se deseja ativar os pontos de verificação do pacote.  
   
  **Arquivo de ponto de verificação**  
@@ -214,7 +214,7 @@ ms.locfileid: "62890159"
  **Opção de reinicialização**  
  Selecione como os pontos de verificação serão usados ao substituir as opções de reinicialização.  
   
- **Execute (executar)**  
+ **Executados**  
  Clique para executar o pacote.  
   
  **Fechar**  
@@ -224,13 +224,13 @@ ms.locfileid: "62890159"
  Use a página **Relatório** da caixa de diálogo **Utilitário de Execução de Pacotes** para especificar eventos e informações sobre o pacote a ser registrado no console quando o pacote é executado.  
   
 ### <a name="options"></a>Opções  
- **Eventos do console**  
+ **Eventos de console**  
  Indique os eventos e os tipos de mensagens a serem relatados.  
   
- **Nenhum**  
+ **Nenhuma**  
  Selecione para não gerar relatórios.  
   
- **Erros**  
+ **Errors**  
  Selecione para informar mensagens de erro.  
   
  **Warnings**  
@@ -239,13 +239,13 @@ ms.locfileid: "62890159"
  **Eventos personalizados**  
  Selecione para informar mensagens de eventos personalizados.  
   
- **Eventos de Pipeline**  
+ **Eventos de pipeline**  
  Selecione para informar mensagens de eventos de fluxo de dados.  
   
  **Informações**  
  Selecione para informar mensagens de informações.  
   
- **Verbose**  
+ **Extensa**  
  Selecione para usar relatório verboso.  
   
  **Log de console**  
@@ -254,28 +254,28 @@ ms.locfileid: "62890159"
  **Nome**  
  Selecione para informar o nome da pessoa que criou o pacote.  
   
- **Computer**  
+ **Ele**  
  Selecione para informar o nome do computador em que o pacote está sendo executado.  
   
  **Operador**  
  Selecione para informar o nome da pessoa que iniciou o pacote.  
   
- **Nome de origem**  
+ **Nome da origem**  
  Selecione para informar o nome do pacote.  
   
- **GUID de Origem**  
+ **GUID de origem**  
  Selecione para informar a GUID do pacote.  
   
- **GUID de Execução**  
+ **GUID de execução**  
  Selecione para informar a GUID da instância de execução do pacote.  
   
  **Mensagem**  
  Selecione para informar mensagens.  
   
- **Hora de início e Hora de término**  
+ **Hora de início e hora de término**  
  Selecione para informar quando o pacote começou e quando terminou.  
   
- **Executar**  
+ **Executados**  
  Clique para executar o pacote.  
   
  **Fechar**  
@@ -285,16 +285,16 @@ ms.locfileid: "62890159"
  Use a página **Log** da caixa de diálogo **Utilitário de Execução de Pacotes** para que os provedores de log sejam disponibilizados para o pacote no momento da execução. Forneça o tipo de provedor de log e a cadeia de conexão do pacote para estabelecer conexão com o log. Cada entrada de provedor de log adiciona uma opção **/LOGGER**_classid_ ao prompt de comando.  
   
 ### <a name="options"></a>Opções  
- **Provedor de Log**  
+ **Provedor de log**  
  Selecione um provedor de log da lista.  
   
- **Cadeia de Caracteres de Configuração**  
+ **Cadeia de caracteres de configuração**  
  Selecione o nome do gerenciador de conexões do pacote que aponta para o local do log ou digite a cadeia de caracteres de conexão para estabelecer conexão com o provedor de log.  
   
  **Remover**  
  Selecione um provedor de log e clique para removê-lo.  
   
- **Executar**  
+ **Executados**  
  Clique para executar o pacote.  
   
  **Fechar**  
@@ -307,13 +307,13 @@ ms.locfileid: "62890159"
  **Caminho da propriedade**  
  Digite o caminho da propriedade. A sintaxe do caminho usa uma barra invertida (\\) para indicar que o item a seguir é um contêiner, usa um ponto (.) para indicar que o item a seguir é uma propriedade e usa colchetes para indicar um membro da coleção. O membro pode ser identificado pelo índice ou pelo nome. Por exemplo, o caminho da propriedade de uma variável de pacote é \Package.Variables[MyVariable].Value.  
   
- **Value**  
+ **Valor**  
  Digite o valor da propriedade.  
   
  **Remover**  
  Selecione o caminho da propriedade e clique para removê-lo.  
   
- **Executar**  
+ **Executados**  
  Clique para executar o pacote.  
   
  **Fechar**  
@@ -323,13 +323,13 @@ ms.locfileid: "62890159"
  Use a página **Verificação** da caixa de diálogo **Executar Pacote** para definir os critérios de verificação do pacote.  
   
 ### <a name="options"></a>Opções  
- **Executar apenas pacotes assinados**  
+ **Executar somente pacotes assinados**  
  Selecione para executar apenas os pacotes que foram assinados.  
   
- **Verificar construção de pacote**  
+ **Verificar compilação do pacote**  
  Selecione para verificar a construção do pacote.  
   
- Compilação  
+ Build  
  Especifique o número de compilação (build) sequencial associado à criação.  
   
  **Verificar ID do pacote**  
@@ -341,10 +341,10 @@ ms.locfileid: "62890159"
  **Verificar ID da versão**  
  Selecione para verificar a ID da versão.  
   
- ID da Versão  
+ ID da versão  
  Especifique o número de identificação da versão.  
   
- **Executar**  
+ **Executados**  
  Clique para executar o pacote.  
   
  **Fechar**  
@@ -360,16 +360,16 @@ ms.locfileid: "62890159"
  **Editar a linha de comando manualmente**  
  Clique para editar a linha de comando na caixa de texto **Linha de comando** .  
   
- **Command line**  
+ **Linha de comando**  
  Exibe a linha de comando atual. Se você selecionou a opção para editar a linha de comando manualmente, ela será editável.  
   
- **Executar**  
+ **Executados**  
  Clique para executar o pacote.  
   
  **Fechar**  
  Clique para fechar a caixa de diálogo **Utilitário do Pacote de Execução** .  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Utilitário dtexec](dtexec-utility.md)  
   
   

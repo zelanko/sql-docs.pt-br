@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 34462589141133e04ca8728361e3a173f0944f12
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62895495"
 ---
 # <a name="detecting-an-empty-flat-file-with-the-script-task"></a>Detectando um arquivo simples vazio com a tarefa Script
@@ -28,12 +28,12 @@ ms.locfileid: "62895495"
 > [!NOTE]  
 >  Se desejar criar uma tarefa mais fácil de ser reutilizada em vários pacotes, procure utilizar o código desse exemplo de tarefa Script como o ponto inicial de uma tarefa personalizada. Para obter mais informações, consulte [Desenvolvendo uma tarefa personalizada](../extending-packages-custom-objects/task/developing-a-custom-task.md).  
   
-## <a name="description"></a>Descrição  
- O exemplo a seguir utiliza métodos do namespace `System.IO` para testar o arquivo simples especificado em um gerenciador de conexões de arquivos simples para determinar se o arquivo está vazio, ou se ele contém apenas linhas esperadas que não são de dados, como títulos de colunas ou uma linha vazia. O script verifica primeiro o tamanho do arquivo; se o tamanho é zero bytes, o arquivo está vazio. Quando o tamanho do arquivo é maior que zero, o script lê linhas do arquivo até não encontrar mais linhas ou até o número de linhas exceder o número esperado de linhas que não são de dados. Quando o número de linhas no arquivo é menor que ou igual ao número esperado de linhas que não são de dados, o arquivo é considerado vazio. Os resultados são retornados como um valor booliano em uma variável de usuário, cujo valor pode ser usado para criar ramificação no fluxo de controle do pacote. O `FireInformation` método também exibe o resultado em de **saída** janela dos [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA).  
+## <a name="description"></a>DESCRIÇÃO  
+ O exemplo a seguir utiliza métodos do namespace `System.IO` para testar o arquivo simples especificado em um gerenciador de conexões de arquivos simples para determinar se o arquivo está vazio, ou se ele contém apenas linhas esperadas que não são de dados, como títulos de colunas ou uma linha vazia. O script verifica primeiro o tamanho do arquivo; se o tamanho é zero bytes, o arquivo está vazio. Quando o tamanho do arquivo é maior que zero, o script lê linhas do arquivo até não encontrar mais linhas ou até o número de linhas exceder o número esperado de linhas que não são de dados. Quando o número de linhas no arquivo é menor que ou igual ao número esperado de linhas que não são de dados, o arquivo é considerado vazio. Os resultados são retornados como um valor booliano em uma variável de usuário, cujo valor pode ser usado para criar ramificação no fluxo de controle do pacote. O `FireInformation` método também exibe o resultado na janela de **saída** do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] VSTA (Tools for Applications).  
   
 #### <a name="to-configure-this-script-task-example"></a>Para configurar esse exemplo de tarefa Script  
   
-1.  Criar e configurar um Gerenciador de conexão de arquivo simples nomeado `EmptyFlatFileTest`.  
+1.  Crie e configure um Gerenciador de conexões de arquivo `EmptyFlatFileTest`simples chamado.  
   
 2.  Crie uma variável de inteiro nomeada `FFNonDataRows` e defina seu valor como o número de linhas que não são de dados esperadas no arquivo simples.  
   
@@ -139,9 +139,9 @@ public void Main()
         }  
 ```  
   
-![Ícone do Integration Services (pequeno)](../media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
+![Ícone de Integration Services (pequeno)](../media/dts-16.gif "Ícone do Integration Services (pequeno)")  **Mantenha-se atualizado com Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplos de tarefa Script](../extending-packages-scripting-task-examples/script-task-examples.md)  
   
   

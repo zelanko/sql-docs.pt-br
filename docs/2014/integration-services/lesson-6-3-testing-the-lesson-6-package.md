@@ -1,5 +1,5 @@
 ---
-title: 'Etapa 3: Testando o pacote da lição 6 | Microsoft Docs'
+title: 'Etapa 3: testar o pacote da Lição 6 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c69c75c9dff4bf8d0542dae71cddcf1a431ab063
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62890833"
 ---
-# <a name="step-3-testing-the-lesson-6-package"></a>Etapa 3: Testar o pacote da Lição 6
+# <a name="step-3-testing-the-lesson-6-package"></a>Etapa 3: Testando o pacote da Lição 6
   Em tempo de execução, seu pacote irá obter o valor para a propriedade Diretório a partir do parâmetro VarFolderName.  
   
  Para verificar se, em tempo de execução, o pacote atualizou corretamente o Diretório com o novo valor, simplesmente execute o pacote. Devido a serem copiados apenas três arquivos de dados de exemplo para o novo diretório, o fluxo de dados irá executar apenas três vezes ao invés de interagir com 14 arquivos da pasta original.  
@@ -40,6 +40,6 @@ ms.locfileid: "62890833"
 2.  Terminada a execução do pacote, no menu Depurar, clique em Parar Depuração.  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
- [Etapa 4: Implantar o pacote da lição 6](../integration-services/lesson-6-4-deploying-the-lesson-6-package.md)  
+ [Etapa 4: Implantando o pacote da Lição 6](../integration-services/lesson-6-4-deploying-the-lesson-6-package.md)  
   
   

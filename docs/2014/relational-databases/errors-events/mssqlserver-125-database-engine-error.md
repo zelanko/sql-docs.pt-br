@@ -15,21 +15,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8287572d31dc136f21717ba45b730936b4fb78ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62870453"
 ---
-# <a name="mssqlserver125"></a>MSSQLSERVER_125
+# <a name="mssqlserver_125"></a>MSSQLSERVER_125
     
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|125|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico||  
 |Texto da mensagem|As expressões Case só podem ser aninhadas no nível %d.|  
@@ -40,7 +40,7 @@ ms.locfileid: "62870453"
 ## <a name="user-action"></a>Ação do usuário  
  Reduza o nível de instruções CASE instruções para 10 ou menos.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CASE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/case-transact-sql)  
   
   

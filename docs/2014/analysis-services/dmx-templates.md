@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3bf7682ce42422efb0e47e4272e53933eba92a4e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081557"
 ---
 # <a name="dmx-templates"></a>Modelos DMX
@@ -22,15 +22,15 @@ ms.locfileid: "66081557"
   
 ## <a name="using-the-templates"></a>Usando os modelos  
   
-1.  No cliente mineração de dados para Excel, clique em **consulta**.  
+1.  No cliente de mineração de dados para Excel, clique em **consulta**.  
   
-2.  No assistente **inicie** , clique em **próxima**.  
+2.  Na página **inicial** do assistente, clique em **Avançar**.  
   
-3.  Na página de **Selecionar modelo**, clique em **avançado**.  
+3.  Na página, **selecione modelo**, clique em **avançado**.  
   
-     **Dica:** Se você pretende criar uma consulta de previsão em um modelo, selecione o modelo primeiro e, em seguida, clique em **avançado**para pré-popular o modelo com o nome do modelo.  
+     **Dica:** Se você pretende criar uma consulta de previsão em um modelo, você pode selecionar o modelo primeiro e, em seguida, clicar em **avançado**para preencher previamente o modelo com o nome do modelo.  
   
-4.  No **dados Editor avançada de mineração consulta**, clique em **modelos DMX**e selecione um modelo.  
+4.  No **Editor de consulta avançada de mineração de dados**, clique em **modelos DMX**e selecione um modelo.  
   
 5.  Pressione ENTER para carregar o modelo no painel Consulta DMX.  
   
@@ -42,12 +42,12 @@ ms.locfileid: "66081557"
   
      Saiba que, se você alternar exibições ao trabalhar no editor de consulta, quaisquer informações contidas na exibição anterior serão limpas. Antes de alterar as exibições, salve seu trabalho copiando e colando as instruções DMX em um arquivo separado.  
   
-8.  Clique em **Concluir**. No **Escolher destino** caixa de diálogo, especifique onde deseja salvar os resultados. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+8.  Clique em **Concluir**. Na caixa de diálogo **escolher destino** , especifique onde você deseja que o resultado seja salvo. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 > [!NOTE]  
->  Se você executou uma instrução com êxito, a instrução DMX que você enviou para o servidor também é registrada na **rastreamento** janela. Para obter mais informações sobre como usar o recurso de rastreamento, consulte [rastreamento &#40;cliente de mineração de dados para Excel&#41;](trace-data-mining-client-for-excel.md).  
+>  Se você executou uma instrução com êxito, a instrução DMX que você enviou para o servidor também será registrada na janela de **rastreamento** . Para obter mais informações sobre como usar o recurso de rastreamento, consulte [rastrear &#40;cliente de mineração de dados para Excel&#41;](trace-data-mining-client-for-excel.md).  
   
- Para obter mais informações sobre como usar o Data Mining Editor de consulta avançada, consulte [consulta &#40;SQL Server Data Mining Add-ins&#41; ](query-sql-server-data-mining-add-ins.md) e [Editor de consulta de mineração de dados avançada](advanced-data-mining-query-editor.md).  
+ Para obter mais informações sobre como usar o editor de consultas avançadas de mineração de dados, consulte [consulta &#40;SQL Server suplementos de mineração](query-sql-server-data-mining-add-ins.md) de dados&#41;e [Editor de consulta de mineração de dados avançado](advanced-data-mining-query-editor.md).  
   
 ## <a name="list-of-dmx-templates"></a>Lista de modelos DMX  
  Os seguintes modelos DMX são incluídos no Cliente de Mineração de Dados para Excel.  
@@ -72,11 +72,11 @@ ms.locfileid: "66081557"
   
 -   Consulta de previsão TOP em tabela aninhada  
   
- **Criar**  
+ **Criada**  
   
- Use esses modelos para criar modelos ou estruturas de dados personalizados. Você não está limitado aos modelos de suporte dos assistentes - você pode usar qualquer algoritmo de mineração de dados com suporte pela instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que você está conectado, incluindo algoritmos de plug-in.  
+ Use esses modelos para criar modelos ou estruturas de dados personalizados. Você não está limitado aos modelos suportados pelos assistentes-você pode usar qualquer Data Mining algoritmo com suporte na instância do à qual [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] você está conectado, incluindo algoritmos de plug-in.  
   
--   modelo de mineração  
+-   Modelo de mineração  
   
 -   Estrutura de mineração  
   
@@ -125,7 +125,7 @@ ms.locfileid: "66081557"
 ### <a name="requirements"></a>Requisitos  
  Dependendo do modelo usado, talvez você precise de permissões administrativas para acessar o servidor [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e executar a consulta.  
   
-## <a name="see-also"></a>Consulte também  
- [Criar um modelo de mineração de dados](creating-a-data-mining-model.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Criando um modelo de mineração de dados](creating-a-data-mining-model.md)  
   
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a1026597a0ae000b91e088d2457b3c9dd607044b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083117"
 ---
 # <a name="prediction-queries-data-mining"></a>Prediction Queries (Data Mining)
@@ -30,17 +30,17 @@ ms.locfileid: "66083117"
   
  As seções a seguir descrevem a sintaxe geral de consultas de previsão, os tipos diferentes de consultas de previsão, e como trabalhar com os resultados de consultas de previsão.  
   
- [Design básico de consulta de previsão](#bkmk_PredQuery)  
+ [Design de consulta de previsão básica](#bkmk_PredQuery)  
   
 -   [Adicionando funções de previsão](#bkmk_PredFunc)  
   
 -   [Consultas singleton](#bkmk_SingletonQuery)  
   
--   [Consultas de previsão em lotes](#bkmk_BatchQuery)  
+-   [Consultas de previsão de lote](#bkmk_BatchQuery)  
   
  [Trabalhando com os resultados de consultas](#bkmk_WorkResults)  
   
-##  <a name="bkmk_PredQuery"></a> Design básico de consulta de previsão  
+##  <a name="bkmk_PredQuery"></a>Design de consulta de previsão básica  
  Ao criar uma previsão, você normalmente fornece alguns dados novos e solicita ao modelo para gerar uma previsão com base nos dados novos.  
   
 -   Em uma consulta de lote, mapeie o modelo para uma fonte de dados externa usando uma *junção de previsão*.  
@@ -55,22 +55,22 @@ ms.locfileid: "66083117"
   
  Para modelos de série temporal, os dados de entrada não são sempre necessários; é possível fazer previsões usando apenas nos dados existentes no modelo. No entanto, se você especificar novos dados de entrada, precisará optar entre usar os novos dados para atualizar e estender o modelo, ou substituir a série original dos dados que foram usados no modelo.  Para obter mais informações sobre essas opções, consulte [Time Series Model Query Examples](time-series-model-query-examples.md).  
   
-###  <a name="bkmk_PredFunc"></a> Adicionando funções de previsão  
+###  <a name="bkmk_PredFunc"></a>Adicionando funções de previsão  
  Além de prever um valor, é possível personalizar uma consulta de previsão para retornar vários tipos de informações relacionadas à previsão. Por exemplo, se a previsão criar uma lista de produtos para recomendar a um cliente, talvez você também queira retornar a probabilidade para cada previsão, de forma que possa classificá-las e apresentar somente as principais recomendações para o usuário.  
   
- Para fazer isso, adicione *funções de previsão* à consulta. Cada modelo ou tipo de consulta dá suporte a funções específicas. Por exemplo, os modelos de clustering oferecem suporte a funções de previsão especiais que fornecem detalhes adicionais sobre os clusters criados pelo modelo, ao passo que modelos de série temporal têm funções que calculam diferenças com o passar do tempo. Também há funções de previsão gerais que funcionam com quase todos os tipos de modelo. Para obter uma lista das funções de previsão com suporte em tipos diferentes de consultas, consulte este tópico de referência DMX:  [Funções de previsão gerais &#40;DMX&#41;](/sql/dmx/general-prediction-functions-dmx).  
+ Para fazer isso, adicione *funções de previsão* à consulta. Cada modelo ou tipo de consulta dá suporte a funções específicas. Por exemplo, os modelos de clustering oferecem suporte a funções de previsão especiais que fornecem detalhes adicionais sobre os clusters criados pelo modelo, ao passo que modelos de série temporal têm funções que calculam diferenças com o passar do tempo. Também há funções de previsão gerais que funcionam com quase todos os tipos de modelo. Para obter uma lista das funções de previsão com suporte em tipos diferentes de consultas, consulte esse tópico sobre a referência DMX: [Funções de previsão gerais &#40;DMX&#41;](/sql/dmx/general-prediction-functions-dmx).  
   
-###  <a name="bkmk_SingletonQuery"></a> Criando consultas de previsão singleton  
+###  <a name="bkmk_SingletonQuery"></a>Criando consultas de Previsão Singleton  
  Uma consulta de previsão singleton é útil quando você deseja criar previsões rápidas em tempo real. Um cenário comum pode ser que você obteve informações de um cliente, talvez usando um formulário em um site e, em seguida, quer enviar esses dados como a entrada para uma consulta de previsão singleton. Por exemplo, quando um cliente escolher um produto de uma lista, você poderá usar a seleção como a entrada para uma consulta que prevê os melhores produtos para recomendar.  
   
  As consultas de previsão singleton não exigem uma tabela separada que contém entrada. Você fornece uma ou várias linhas de valores como entrada para o modelo e as previsões são retornadas em tempo real.  
   
 > [!WARNING]  
->  Apesar do nome, consultas de previsão singleton não fazem apenas previsões únicas-você pode gerar várias previsões para cada conjunto de entradas. Forneça vários casos de entrada criando uma instrução SELECT para cada caso de entrada e combinando-os com o operador UNION.  
+>  Apesar do nome, as consultas de Previsão Singleton não fazem apenas previsões únicas – você pode gerar várias previsões para cada conjunto de entradas. Forneça vários casos de entrada criando uma instrução SELECT para cada caso de entrada e combinando-os com o operador UNION.  
   
  Ao criar uma consulta de previsão singleton, é necessário fornecer os novos dados ao modelo na forma de uma PREDICTION JOIN. Isso significa que, mesmo que não esteja mapeando para uma tabela real, você deve verificar se os novos dados correspondem às colunas existentes no modelo de mineração. Se as colunas dos novos dados e os novos dados corresponderem de modo exato, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mapeará as colunas. Isto é chamado de *JUNÇÃO DE PREVISÃO NATURAL*. No entanto, se as colunas não coincidirem ou se os novos dados não tiverem o mesmo tipo e quantidade de dados do modelo, especifique quais colunas do modelo devem ser mapeadas para os novos dados ou especifique os valores ausentes.  
   
-###  <a name="bkmk_BatchQuery"></a> Consultas de previsão em lotes  
+###  <a name="bkmk_BatchQuery"></a>Consultas de previsão de lote  
  Uma consulta de previsão em lote é útil quando você tem dados externos que deseja usar fazendo previsões. Por exemplo, você pode ter criado um modelo que categoriza clientes por sua atividade online e histórico de compras. Você pode aplicar esse modelo a uma lista de clientes potenciais recém-adquiridos para criar projeções para vendas, ou identificar alvos para campanhas propostas.  
   
  Quando você realiza uma junção de previsão, deve mapear as colunas do modelo para as colunas na nova fonte de dados. Portanto, a fonte de dados que você escolher para uma entrada deve conter dados que sejam semelhantes aos dados no modelo. As novas informações não têm que corresponder exatamente e podem estar incompletas. Por exemplo, suponha que o modelo foi treinado usando informações sobre renda e idade; porém, a lista de clientes usada para previsões tem dados sobre idade mas não sobre renda. Neste cenário, você ainda pode mapear os novos dados para o modelo e criar uma previsão para cada cliente. Entretanto, se a renda fosse uma previsor importante para o modelo, a falta de informações completas afetaria a qualidade de previsões.  
@@ -84,14 +84,14 @@ ms.locfileid: "66083117"
   
  Se a linguagem DMX for usada para criar uma junção de previsão, especifique a fonte de dados externa usando os comandos OPENQUERY, OPENROWSET ou SHAPE. O método de acesso aos dados padrão nos modelos DMX é OPENQUERY. Para obter mais informações sobre esses métodos, consulte [&#60;consulta de dados de origem&#62;](/sql/dmx/source-data-query).  
   
-###  <a name="bkmk_TSQuery"></a> Previsões em modelos de mineração de série temporal  
+###  <a name="bkmk_TSQuery"></a>Previsões em modelos de mineração de série temporal  
  Modelos de série temporal são diferentes de outros tipos de modelos; você pode usar o modelo como ele é para criar previsões, ou pode fornecer novos dados para o modelo para atualizá-lo e criar previsões com base em tendências recentes. Se você adicionar novos dados, poderá especificar o modo como os novos dados devem ser usados.  
   
--   *Estender os casos de modelo* significa que você adiciona os novos dados à série existente de dados no modelo de série temporal. Daqui em diante, as previsões são baseadas na nova série combinada. Esta opção é boa quando você quiser simplesmente adicionar alguns pontos de dados a um modelo existente.  
+-   *Estender os casos de modelo* significa que você adiciona os novos dados na série de dados existente no modelo de série temporal. Daqui em diante, as previsões são baseadas na nova série combinada. Esta opção é boa quando você quiser simplesmente adicionar alguns pontos de dados a um modelo existente.  
   
      Por exemplo, imagine que você tenha um modelo de série temporal existente treinado nos dados de vendas do ano anterior. Após coletar vários meses de novos dados de vendas, você decide atualizar suas previsões de vendas para o ano atual. Você pode criar uma junção de previsão que atualize o modelo adicionando novos dados e que estenda o modelo para fazer novas previsões.  
   
--   *Substituir casos do modelo* significa manter o modelo treinado, mas substituir os casos subjacentes por um novo conjunto de dados de caso. Esta opção é útil quando você quiser manter a tendência no modelo, mas aplicá-lo a um conjunto diferente de dados.  
+-   *Substituir os casos de modelo* significa que você mantém o modelo treinado, mas substitua os casos subjacentes por um novo conjunto de dados de caso. Esta opção é útil quando você quiser manter a tendência no modelo, mas aplicá-lo a um conjunto diferente de dados.  
   
      Por exemplo, seu modelo original pode ter sido treinado em um conjunto de dados com volumes de vendas muito altos; quando você substituir os dados subjacentes por uma nova série (talvez de um repositório com volume de vendas inferior), preserva a tendência, mas as previsões começam dos valores na série de substituição.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "66083117"
   
  Para obter mais informações sobre como criar junções de previsão em modelos de série temporal, consulte [Exemplos de consulta de um modelo de série temporal](time-series-model-query-examples.md) ou [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx).  
   
-##  <a name="bkmk_WorkResults"></a> Trabalhando com os resultados de uma consulta de previsão  
+##  <a name="bkmk_WorkResults"></a>Trabalhando com os resultados de uma consulta de previsão  
  Suas opções para salvar os resultados de uma consulta de previsão de mineração de dados são diferentes dependendo de como você cria a consulta.  
   
 -   Quando você criar uma consulta usando o Construtor de Consultas de Previsão no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], poderá salvar os resultados de uma consulta de previsão em uma fonte de dados existente do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Para obter mais informações, consulte [Exibir e salvar os resultados de uma consulta de previsão](view-and-save-the-results-of-a-prediction-query.md).  
@@ -125,11 +125,11 @@ FROM
   
  **PredictedAmount**  
   
-|$TIME|Valor|  
+|$TIME|Amount|  
 |-----------|------------|  
 |201101|172067.11|  
   
-|$TIME|Valor|  
+|$TIME|Amount|  
 |-----------|------------|  
 |201102|363390.68|  
   
@@ -145,8 +145,8 @@ FROM
   
  Se o provedor não puder manipular conjuntos de linhas hierárquicos, você poderá mesclar os resultados usando a palavra-chave FLATTEN na consulta de previsão. Para obter mais informações, inclusive exemplos de conjuntos de linhas bidimensionais, consulte [SELECT &#40;DMX&#41;](/sql/dmx/select-dmx).  
   
-## <a name="see-also"></a>Consulte também  
- [Consultas de conteúdo &#40;Data Mining&#41;](content-queries-data-mining.md)   
- [Consultas de definição de dados &#40;Data Mining&#41;](data-definition-queries-data-mining.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Consultas de conteúdo &#40;mineração de dados&#41;](content-queries-data-mining.md)   
+ [Consultas de definição de dados &#40;mineração de dados&#41;](data-definition-queries-data-mining.md)  
   
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bc77762698b04143802ad38c05385d4b18555e1c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079145"
 ---
 # <a name="granting-process-database-permissions"></a>Concedendo permissões ao banco de dados do processo
@@ -30,9 +30,9 @@ ms.locfileid: "66079145"
   
 2.  Clique na caixa de seleção **Processar banco de dados** .  
   
-3.  Na janela Propriedades, altere o **nome** propriedade essa nova função para `Process Database Objects Role`.  
+3.  No janela Propriedades, altere a propriedade **Name** para essa nova função para `Process Database Objects Role`.  
   
-     ![Designer de função](../../2014/tutorials/media/l10-security-1.png "Designer de função")  
+     ![Designer de Função](../../2014/tutorials/media/l10-security-1.png "Designer de Função")  
   
 4.  Alterne para a guia **Associação** do Designer de Função e clique em **Adicionar**.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "66079145"
   
      Observe que os membros dessa função têm permissão para processar este banco de dados, mas não para acessar os dados no cubo do Tutorial do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e também não têm acesso ao cubo/detalhamento local, conforme mostrado na imagem a seguir:  
   
-     ![Guia cubos do Designer de função](../../2014/tutorials/media/l10-security-2.png "guia cubos do Designer de função")  
+     ![Guia Cubos do Designer de Função](../../2014/tutorials/media/l10-security-2.png "Guia Cubos do Designer de Função")  
   
 7.  Alterne para a guia **Dimensões** do Designer de Função.  
   
@@ -53,9 +53,9 @@ ms.locfileid: "66079145"
      Você definiu e implantou com êxito a função de segurança Processar objetos de banco de dados. Depois que o cubo for implantado no ambiente de produção, os administradores desse cubo poderão adicionar usuários a essa função, conforme necessário para delegar responsabilidades de processamento a determinados usuários.  
   
 > [!NOTE]  
->  Um projeto completo para a Lição 10 pode ser obtido por meio do download e instalação dos exemplos. Para obter mais informações, consulte [Instalar dados de exemplo e projetos para o tutorial de modelagem multidimensional do Analysis Services](install-sample-data-and-projects.md).  
+>  Um projeto completo para a Lição 10 pode ser obtido por meio do download e instalação dos exemplos. Para obter mais informações, consulte [instalar dados de exemplo e projetos para o tutorial de modelagem multidimensional Analysis Services](install-sample-data-and-projects.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Funções e permissões &#40;Analysis Services&#41;](multidimensional-models/roles-and-permissions-analysis-services.md)  
   
   

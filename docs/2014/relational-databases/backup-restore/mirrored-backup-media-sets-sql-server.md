@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ad183871e58f5dc64cf763c540e1629a09b4f320
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62876077"
 ---
 # <a name="mirrored-backup-media-sets-sql-server"></a>Conjuntos de mídias de backup espelhadas (SQL Server)
@@ -43,7 +43,7 @@ ms.locfileid: "62876077"
   
 -   [Tarefas relacionadas](#RelatedTasks)  
   
-##  <a name="OverviewofMirroredMediaSets"></a> Visão geral dos conjuntos de mídias espelhados  
+##  <a name="OverviewofMirroredMediaSets"></a>Visão geral dos conjuntos de mídias espelhados  
  Espelhamento de mídia é uma propriedade do conjunto de mídias. Um *conjunto de mídias espelhado* consiste em várias cópias (*espelhos*) do conjunto de mídias. Um conjunto de mídias contém uma ou mais famílias de mídia, cada uma correspondendo a um dispositivo de backup. Por exemplo, se a cláusula TO de uma instrução BACKUP DATABASE listar três dispositivos, BACKUP difundirá os dados entre três famílias de mídia, um por dispositivo. O número de famílias de mídia e espelhos é definido quando o conjunto de mídias é criado (por uma instrução BACKUP DATABASE que especifica WITH FORMAT).  
   
  Um conjunto de mídias espelhado tem de dois a quatro espelhos. Cada espelho contém todas as famílias de mídia no conjunto de mídias. Os espelhos requerem o mesmo número de dispositivos, um por família de mídia. Cada espelho requer um dispositivo de backup separado para cada família de mídia. Por exemplo, um conjunto de mídias espelhado que consiste em quatro famílias de mídia com três espelhos requer doze dispositivos de backup. Todos esses dispositivos devem ser equivalentes. Por exemplo, unidades de fita que tenham o mesmo número de modelo do mesmo fabricante.  
@@ -61,7 +61,7 @@ ms.locfileid: "62876077"
   
  As operações de backup e de restauração impõem requisitos diferentes quanto à presença ou não de todos os espelhos. Para que uma operação de backup grave (ou seja, crie ou estenda) um conjunto de mídias espelhado, todos os espelhos devem estar presentes. Em contrapartida, ao restaurar um backup de um conjunto de mídias espelhado, você poderá especificar apenas um único espelho para cada família de mídia. Você pode executar a restauração de menos dispositivos do que famílias, mas cada família de mídia é processada somente uma vez. Porém, na presença de erros, a existência de outros espelhos permite que alguns problemas de restauração sejam resolvidos rapidamente. Você pode substituir um volume de mídia danificado pelo volume correspondente de outro espelho. Isso ocorre porque RESTORE e RESTORE VERIFYONLY oferecem suporte à substituição de mídias danificadas pelo volume das mídias de backup correspondentes de outro espelho.  
   
-##  <a name="HardwareReqs"></a> Requisitos de hardware para espelhos de backup  
+##  <a name="HardwareReqs"></a>Requisitos de hardware para espelhos de backup  
  O espelhamento se aplica a disco e fita (discos não dão suporte a fitas de continuação). Todos os dispositivos de backup de um único backup ou operação de restauração devem ser do mesmo tipo, disco ou fita.  
   
  Dentro dessas classes mais amplas, deve-se usar dispositivos semelhantes que tenham as mesmas propriedades. Dispositivos insuficientemente semelhantes geram uma mensagem de erro (3212). Para evitar o risco de uma incompatibilidade de dispositivo, use dispositivos que sejam equivalentes, como somente unidades com o mesmo número de modelo do mesmo fabricante.  
@@ -69,9 +69,9 @@ ms.locfileid: "62876077"
 ##  <a name="RelatedTasks"></a> Tarefas relacionadas  
  **Para fazer backup em dispositivos de backup espelhados**  
   
--   [Fazer backup em um conjunto de mídias espelhado &#40;Transact-SQL&#41;](back-up-to-a-mirrored-media-set-transact-sql.md)  
+-   [Fazer backup em um conjunto de mídias espelhado &#40;&#41;Transact-SQL](back-up-to-a-mirrored-media-set-transact-sql.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Erros de mídia possíveis durante backup e restauração &#40;SQL Server&#41;](possible-media-errors-during-backup-and-restore-sql-server.md)   
  [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-verifyonly-transact-sql)   
  [Dispositivos de backup &#40;SQL Server&#41;](backup-devices-sql-server.md)   

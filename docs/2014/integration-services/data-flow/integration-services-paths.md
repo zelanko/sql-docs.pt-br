@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 832ea48478eb28b94caf292067344a3754040b2b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62901788"
 ---
 # <a name="integration-services-paths"></a>Caminhos do Integration Services
@@ -41,7 +41,7 @@ ms.locfileid: "62901788"
   
  Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor de Caminho do Fluxo de Dados** , clique em um dos seguintes tópicos:  
   
--   [Editor de caminho de fluxo de dados &#40;página geral&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor de caminho de fluxo de dados &#40;página Geral&#41;](../general-page-of-integration-services-designers-options.md)  
   
 -   [Editor de caminho de fluxo de dados &#40;página de metadados&#41;](../data-flow-path-editor-metadata-page.md)  
   
@@ -55,7 +55,7 @@ ms.locfileid: "62901788"
   
 -   [Conectar componentes em um fluxo de dados](connect-components-in-a-data-flow.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Fluxo de Dados](data-flow.md)  
   
   

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e500eb47af39502e1bcf59f60b3dd24fed0713fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62872123"
 ---
 # <a name="database-mail-log-and-audits"></a>Registro em log e auditoria do Database Mail
@@ -36,11 +36,11 @@ ms.locfileid: "62872123"
 |||  
 |-|-|  
 |**Examinando e gerenciando logs do Database Mail**|**Link para tópico**|  
-|Verifique o status de entrega de uma mensagem individual|[Verificar o status de mensagens de email enviadas por Database Mail](check-the-status-of-e-mail-messages-sent-with-database-mail.md)|  
+|Verifique o status de entrega de uma mensagem individual|[Verificar o status de mensagens de email enviadas com o Database Mail](check-the-status-of-e-mail-messages-sent-with-database-mail.md)|  
 |Limpe mensagens, anexos e entradas de log do Database Mail|[sysmail_delete_mailitems_sp &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sysmail-delete-mailitems-sp-transact-sql)<br /><br /> [sysmail_delete_log_sp &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sysmail-delete-log-sp-transact-sql)|  
-|Arquive mensagens e logs do Database Email|[Criar um trabalho do SQL Server Agent para arquivar mensagens do Database Mail e logs de eventos](create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)|  
+|Arquive mensagens e logs do Database Email|[Criar um trabalho do SQL Server Agent para arquivar mensagens e logs de eventos do Database Mail](create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Monitorar o uso de recursos &#40;Monitor do Sistema&#41;](../performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

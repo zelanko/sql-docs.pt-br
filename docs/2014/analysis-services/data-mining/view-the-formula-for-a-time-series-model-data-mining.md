@@ -1,5 +1,5 @@
 ---
-title: Exibir a fórmula para uma série temporal (mineração de dados) do modelo | Microsoft Docs
+title: Exibir a fórmula para um modelo de série temporal (mineração de dados) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,26 +18,26 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 43382b5dd8a20de1454bfc3d6a16aa68c99e34a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082594"
 ---
 # <a name="view-the-formula-for-a-time-series-model-data-mining"></a>Exibir a fórmula para um modelo de série temporal (mineração de dados)
-  O [!INCLUDE[msCoName](../../includes/msconame-md.md)] inData do Visualizador de série temporal Designer de mineração fornece a maneira mais fácil de exibir os detalhes da equação de regressão usada em um modelo de série temporal.  
+  O [!INCLUDE[msCoName](../../includes/msconame-md.md)] designer de mineração de dados do Visualizador de séries temporais fornece a maneira mais fácil de exibir os detalhes da equação de regressão usada em um modelo de série temporal.  
   
- Você pode extrair a fórmula de regressão para um modelo de série temporal consultando o conteúdo do modelo. No entanto, para exibir a fórmula ARTXP ou ARIMA completa, recomendamos que você use o **legenda de mineração** da [visualizador MTS](browse-a-model-using-the-microsoft-time-series-viewer.md), que apresenta todas as constantes em um formato legível.  
+ Você pode extrair a fórmula de regressão para um modelo de série temporal consultando o conteúdo do modelo. No entanto, para exibir a fórmula ARTXP ou ARIMA completa, recomendamos que você use a **legenda de mineração** do [Visualizador do Microsoft Time Series](browse-a-model-using-the-microsoft-time-series-viewer.md), que apresenta todas as constantes em um formato legível.  
   
  Se você criar um modelo misto, as análises ARIMA e ARTXP serão criadas em árvores separadas, unidas no nó raiz que representa o modelo. As estruturas das árvores ARIMA e ARTXP são bem diferentes. Por exemplo, a árvore ARTXP na verdade é uma estrutura de árvore, como uma árvore de decisão, enquanto a árvore ARIMA representa uma série de médias móveis. Assim, embora as duas representações estejam presentes em um modelo por conveniência, elas devem ser tratadas como modelos independentes. As equações também são completamente diferentes e não podem ser combinadas ou comparadas.  
   
- Você também pode exibir modelos de série temporal usando o [Microsoft genérico conteúdo Visualizador de árvore](../microsoft-generic-content-tree-viewer-data-mining.md). Para obter mais informações sobre o conteúdo de um modelo de série temporal, consulte [conteúdo do modelo de mineração para modelos de série temporal &#40;Analysis Services - mineração de dados&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md).  
+ Você também pode exibir modelos de série temporal usando o [Visualizador de árvore de conteúdo genérica da Microsoft](../microsoft-generic-content-tree-viewer-data-mining.md). Para obter mais informações sobre o conteúdo de um modelo de série temporal, consulte [conteúdo do modelo de mineração para modelos de série temporal &#40;&#41;de mineração de dados Analysis Services ](mining-model-content-for-time-series-models-analysis-services-data-mining.md).  
   
 ### <a name="to-view-the-artxp-regression-formula-for-a-time-series-model"></a>Para exibir a fórmula de regressão ARTXP para um modelo de série temporal  
   
 1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], selecione o modelo de série temporal que você quer exibir e clique em **Procurar**.  
   
-     – ou –  
+     -- ou --  
   
      No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], selecione o modelo de série temporal e clique na guia **Visualizador do Modelo de Mineração** .  
   
@@ -60,7 +60,7 @@ ms.locfileid: "66082594"
   
 1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], selecione o modelo de série temporal que você quer exibir e clique em **Procurar**.  
   
-     – ou –  
+     -- ou --  
   
      No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], selecione o modelo de série temporal e clique na guia **Visualizador do Modelo de Mineração** .  
   
@@ -77,9 +77,9 @@ ms.locfileid: "66082594"
   
 5.  Se a **Legenda de Mineração** não estiver disponível, clique com o botão direito do mouse no nó e selecione **Mostrar Legenda**.  
   
-## <a name="see-also"></a>Consulte também  
- [Tarefas e instruções do visualizador do modelo de mineração](mining-model-viewer-tasks-and-how-tos.md)   
- [Procurar um modelo usando o Visualizador MTS](browse-a-model-using-the-microsoft-time-series-viewer.md)   
- [Exemplos de consulta de modelos de série temporal](time-series-model-query-examples.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Tarefas e instruções do Visualizador do modelo de mineração](mining-model-viewer-tasks-and-how-tos.md)   
+ [Procurar um modelo usando o Visualizador do Microsoft Time Series](browse-a-model-using-the-microsoft-time-series-viewer.md)   
+ [Exemplos de consulta de um modelo de série temporal](time-series-model-query-examples.md)  
   
   

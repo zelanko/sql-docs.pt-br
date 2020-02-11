@@ -1,5 +1,5 @@
 ---
-title: Especifique uma coluna para usar como Regressor em um modelo | Microsoft Docs
+title: Especificar uma coluna a ser usada como regressor em um modelo | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cf035895142ae48cb59f6256e7249710d9709b92
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082907"
 ---
 # <a name="specify-a-column-to-use-as-regressor-in-a-model"></a>Especificar uma coluna para usar como regressor em um modelo
@@ -59,10 +59,10 @@ ms.locfileid: "66082907"
   
      No visualizador, o modelo é representando como um único nó contendo a fórmula de regressão. Você poderá exibir a fórmula na **Legenda de Mineração**ou extrair os coeficientes da fórmula usando consultas.  
   
-## <a name="see-also"></a>Consulte também  
- [Algoritmo Regressão Linear da Microsoft](microsoft-linear-regression-algorithm.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Algoritmo de regressão linear da Microsoft](microsoft-linear-regression-algorithm.md)   
  [Consultas de mineração de dados](data-mining-queries.md)   
- [Referência Técnica do Algoritmo de Regressão Linear da Microsoft](microsoft-linear-regression-algorithm-technical-reference.md)   
- [Conteúdo do modelo de mineração para modelos de regressão linear &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [Referência técnica do algoritmo regressão linear da Microsoft](microsoft-linear-regression-algorithm-technical-reference.md)   
+ [Conteúdo do modelo de mineração para modelos de regressão linear &#40;mineração de dados Analysis Services&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

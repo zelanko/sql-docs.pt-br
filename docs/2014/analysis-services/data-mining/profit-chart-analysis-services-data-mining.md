@@ -1,5 +1,5 @@
 ---
-title: Gráfico de ganho (Analysis Services - mineração de dados) | Microsoft Docs
+title: Gráfico de ganho (Analysis Services-Mineração de dados) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1a64eacb1219e239ad894d9922db5a5032ed525b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083085"
 ---
 # <a name="profit-chart-analysis-services---data-mining"></a>Gráfico de ganho (Analysis Services - Mineração de dados)
-  Um gráfico de ganho exibe a rentabilidade estimada associada ao uso de um modelo de mineração. Por exemplo, vamos supor que seu modelo prevê quais clientes a empresa devem contatar em um cenário de negócios. Nesse caso, você adicionaria às informações de gráfico de ganho sobre o custo da condução de uma campanha de mala direta. Em seguida, no gráfico completo, você pode consultar o ganho estimado se os clientes são destinados corretamente, em relação a clientes contatados aleatoriamente.  
+  Um gráfico de ganho exibe a rentabilidade estimada associada ao uso de um modelo de mineração. Por exemplo, vamos supor que seu modelo prevê quais clientes uma empresa deve contatar em um cenário de negócios. Nesse caso, você adicionaria às informações de gráfico de ganho sobre o custo da condução de uma campanha de mala direta. Em seguida, no gráfico completo, você pode consultar o ganho estimado se os clientes são destinados corretamente, em relação a clientes contatados aleatoriamente.  
   
 ## <a name="build-a-profit-chart"></a>Criar um gráfico de ganho  
  Um gráfico de lucro é semelhante a um gráfico de comparação de precisão. Você inicia criando um gráfico de comparação de precisão e, depois, adiciona as informações de custo e de lucro.  
@@ -33,7 +33,7 @@ ms.locfileid: "66083085"
   
  Para este exemplo, usamos o modelo de árvore de decisão Mala Direta. O modelo identifica os clientes que provavelmente comprarão uma bicicleta. Você pode aplicar o **Gráfico de Ganho** para determinar a quantos de seus clientes deve se dirigir para maximizar o ganho.  
   
- Se você não tiver o modelo de exemplo, você pode criá-la usando o [Tutorial básico de mineração de dados](../../tutorials/basic-data-mining-tutorial.md).  
+ Se você não tiver o modelo de exemplo, poderá criá-lo usando o [tutorial de mineração de dados básico](../../tutorials/basic-data-mining-tutorial.md).  
   
 1.  Abra o criador de gráfico de precisão de mineração.  
   
@@ -61,10 +61,10 @@ ms.locfileid: "66083085"
   
     |Configuração|Valor|Comentários|  
     |-------------|-----------|--------------|  
-    |**População**|20,000|Defina o valor para a população de destino total<br /><br /> Seu banco de dados pode conter muitos clientes, mas, para economizar em despesas de mala direta, você precisa se dirigir apenas aos 20.000 clientes com maior probabilidade de resposta. Você pode obter essa lista executando uma consulta de previsão e classificando pela saída de probabilidade pelo modelo previsível.|  
+    |**Média**|20.000|Defina o valor para a população de destino total<br /><br /> Seu banco de dados pode conter muitos clientes, mas, para economizar em despesas de mala direta, você precisa se dirigir apenas aos 20.000 clientes com maior probabilidade de resposta. Você pode obter essa lista executando uma consulta de previsão e classificando pela saída de probabilidade pelo modelo previsível.|  
     |**Custo fixo**|500|Insira o custo único da criação de uma campanha de mala direta para 20.000 pessoas. Isso pode incluir a impressão, ou o custo da criação de uma campanha de email.|  
     |**Custo individual**|3|Insira o custo individual da campanha de mala direta.<br /><br /> Esse valor será multiplicado por um número igual ou inferior a 20.000, dependendo de quantos clientes o modelo prevê como bons clientes potenciais.|  
-    |**Receita por indivíduo**|400|Insira um valor que representa a quantidade de lucro ou receita que pode ser esperada de um resultado com êxito. Nesse caso, vamos supor que a mala direta um catálogo resulte na compra de acessórios ou Bicicletas $400.<br /><br /> Essa quantia será usada para projetar o lucro total associado aos casos de alta probabilidade.|  
+    |**Receita por indivíduo**|400|Insira um valor que representa a quantidade de lucro ou receita que pode ser esperada de um resultado com êxito. Nesse caso, vamos supor que a correspondência de um catálogo resulta na compra de acessórios ou bicicletas de média de $400.<br /><br /> Essa quantia será usada para projetar o lucro total associado aos casos de alta probabilidade.|  
   
 7.  Após definir os parâmetros necessários, clique em **OK**.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "66083085"
   
  Como vimos aqui, você pode usar um gráfico de ganho para comparar vários modelos, contanto que todos prevejam o mesmo atributo discreto.  
   
- ![Comparando três modelos de gráfico de lucro](../media/dm14-profitchartupdated.gif "Comparando três modelos de gráfico de lucro")  
+ ![um gráfico de lucros que compara três modelos](../media/dm14-profitchartupdated.gif "um gráfico de lucros que compara três modelos")  
   
  Observe a linha vertical cinza no gráfico. Quando você clicar na linha e arrastá-la, a exibição Dica de Ferramenta exibirá a porcentagem da população de destino que é incluída na curva nesse ponto.  
   
@@ -91,13 +91,13 @@ ms.locfileid: "66083085"
   
 |Tópicos|Links|  
 |------------|-----------|  
-|Fornece um passo a passo sobre como criar um gráfico de comparação de precisão para o modelo Mala Direta Dirigida.|[Tutorial de mineração de dados básico](../../tutorials/basic-data-mining-tutorial.md)<br /><br /> [Testando a precisão com gráficos de comparação de precisão &#40;Tutorial de mineração de dados básica&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)|  
-|Explica os tipos de gráficos relacionados.|[Gráfico de comparação de precisão &#40;Analysis Services – Mineração de dados&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [Matriz de classificação &#40;Analysis Services – Mineração de dados&#41;](classification-matrix-analysis-services-data-mining.md)<br /><br /> [Dispersão &#40;Analysis Services – Mineração de dados&#41;](scatter-plot-analysis-services-data-mining.md)|  
-|Descreve validação cruzada para modelos de mineração e estruturas de mineração.|[Validação cruzada &#40;Analysis Services – Data Mining&#41;](cross-validation-analysis-services-data-mining.md)|  
-|Descreve as etapas para criar gráficos de comparação de precisão e outros gráficos de exatidão.|[Tarefas de teste e validação e instruções &#40;Mineração de dados&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
+|Fornece um passo a passo sobre como criar um gráfico de comparação de precisão para o modelo Mala Direta Dirigida.|[Tutorial de mineração de dados básico](../../tutorials/basic-data-mining-tutorial.md)<br /><br /> [Testando a exatidão com gráficos de comparação de precisão &#40;tutorial de mineração de dados básico&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)|  
+|Explica os tipos de gráficos relacionados.|[&#40;do gráfico de comparação de precisão Analysis Services-Mineração de dados&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [&#40;de matriz de classificação Analysis Services&#41;de mineração de dados](classification-matrix-analysis-services-data-mining.md)<br /><br /> [Gráfico de dispersão &#40;Analysis Services de mineração de dados&#41;](scatter-plot-analysis-services-data-mining.md)|  
+|Descreve validação cruzada para modelos de mineração e estruturas de mineração.|[&#40;de validação cruzada Analysis Services&#41;de mineração de dados](cross-validation-analysis-services-data-mining.md)|  
+|Descreve as etapas para criar gráficos de comparação de precisão e outros gráficos de exatidão.|[Tarefas de teste e validação e instruções &#40;mineração de dados&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
   
-## <a name="see-also"></a>Consulte também  
- [Teste e validação &#40;Mineração de dados&#41;](testing-and-validation-data-mining.md)   
- [Testando a precisão com gráficos de comparação de precisão &#40;Tutorial de mineração de dados básica&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Teste e validação &#40;mineração de dados&#41;](testing-and-validation-data-mining.md)   
+ [Testando a exatidão com gráficos de comparação de precisão &#40;tutorial de mineração de dados básico&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
   
   

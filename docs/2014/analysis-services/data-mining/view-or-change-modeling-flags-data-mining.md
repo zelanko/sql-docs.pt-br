@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7657e7502d3b215cd87326c51cc9416ba0707235
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082675"
 ---
 # <a name="view-or-change-modeling-flags-data-mining"></a>Exibir ou alterar sinalizadores de modelagem (mineração de dados)
@@ -28,7 +28,7 @@ ms.locfileid: "66082675"
   
 1.  No SQL Server Design Estúdio, abra o Gerenciador de Soluções e clique duas vezes na estrutura de mineração.  
   
-2.  Para definir o sinalizador de modelagem NOT NULL, clique na guia **Estrutura de Mineração** . Para definir os sinalizadores REGRESSOR ou MODEL_EXISTENCE_ONLY, clique na guia **Modelo de Mineração** .  
+2.  Para definir o sinalizador de modelagem NOT NULL, clique na guia **estrutura de mineração** . Para definir os sinalizadores de REGRESSOr ou de MODEL_EXISTENCE_ONLY, clique na guia **modelo de mineração** .  
   
 3.  Clique com o botão direito do mouse na coluna que você deseja exibir ou alterar e selecione **Propriedades**.  
   
@@ -50,8 +50,8 @@ ms.locfileid: "66082675"
   
     ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tarefas e instruções do modelo de mineração](mining-model-tasks-and-how-tos.md)   
- [Sinalizadores de modelagem &#40;Mineração de dados&#41;](modeling-flags-data-mining.md)  
+ [Sinalizadores de modelagem &#40;mineração de dados&#41;](modeling-flags-data-mining.md)  
   
   

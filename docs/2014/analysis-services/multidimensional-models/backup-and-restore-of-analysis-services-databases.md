@@ -1,5 +1,5 @@
 ---
-title: Backup e restauração de bancos de dados do Analysis Services | Microsoft Docs
+title: Backup e restauração de bancos de dados Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/25/2019
 ms.prod: sql-server-2014
@@ -22,13 +22,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5f591a5a8c8099e496c10958b43694e98ae7a24b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077026"
 ---
 # <a name="backup-and-restore-of-analysis-services-databases"></a>Backup e restauração de bancos de dados do Analysis Services
+  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] inclui backup e restauração de forma que você possa recuperar um banco de dados e seus objetos de um ponto específico no tempo. Backup e restauração também é uma técnica válida por migrar bancos de dados para servidores atualizados, mover bancos de dados entre servidores ou implantar um banco de dados para um servidor de produção. Para fins de recuperação de dados, se você ainda não tem um plano de backup e seus dados são valiosos, deve criar e implementar um plano o mais breve possível.  
   
  Os comandos de backup e restauração são executados em um banco de dados implantado do Analysis Services. Para seus projetos e soluções no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], você deve usar o controle do código-fonte para garantir que possa recuperar versões específicas de seus arquivos de origem e, então, criar um plano de recuperação de dados para o repositório do sistema de controle do código-fonte que você estiver usando.  
@@ -37,13 +38,13 @@ ms.locfileid: "66077026"
   
  Um benefício claro de automatizar o backup é que os instantâneos de dados sempre estarão tão atualizados quanto à frequência automatizada de backup especifica. Agendadores automatizados garantem o não esquecimento dos backups. A restauração de um banco de dados também pode ser automatizada e ser uma boa maneira de replicar dados, mas certifique-se de fazer o backup do arquivo da chave de criptografia na instância para a qual deseja fazer a replicação. O recurso de sincronização é dedicado à replicação de banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , mas somente para os dados obsoletos. Todos os recursos mencionados aqui podem ser implementados pela interface do usuário, por meio de comandos XML/A ou executados programaticamente pelo AMO.  
   
- Este tópico inclui as seguintes seções:  
+ Este tópico inclui as seções a seguir:  
   
--   [Preparando para backup](#bkmk_prep)  
+-   [Preparando para o backup](#bkmk_prep)  
   
--   [Fazendo backup de um banco de dados multidimensional ou de tabela](#bkmk_cube)  
+-   [Fazendo backup de um banco de dados multidimensional ou tabular](#bkmk_cube)  
   
--   [Restaurando um banco de dados do Analysis Services](#bkmk_restore)  
+-   [Restaurando um banco de dados Analysis Services](#bkmk_restore)  
   
 ##  <a name="bkmk_prereq"></a> Pré-requisitos  
  Você deve ter permissões administrativas na instância do Analysis Services ou permissões de Controle completo (Administrador) no banco de dados do qual você está fazendo backup.  
@@ -52,7 +53,7 @@ ms.locfileid: "66077026"
   
  O local de restauração deve ser o mesmo tipo de servidor. Os bancos de dados tabulares somente podem ser restaurados para um Analysis Services que esteja sendo executado em modo tabular. Os bancos de dados multidimensionais exigem uma instância que é executada em modo multidimensional.  
   
-##  <a name="bkmk_prep"></a> Preparando para backup  
+##  <a name="bkmk_prep"></a>Preparando para o backup  
  Use a lista de verificação a seguir para preparar para o backup:  
   
 -   Verifique o local em que o arquivo de backup será armazenado. Se você estiver usando um local remoto, deverá especificá-lo como uma pasta UNC. Verifique se você pode acessar o caminho UNC.  
@@ -63,7 +64,7 @@ ms.locfileid: "66077026"
   
 -   Verifique se há arquivos existentes do mesmo nome. Se já existir um arquivo com o mesmo nome, o backup falhará, a menos que você especifique opções para substituir o arquivo.  
   
-##  <a name="bkmk_cube"></a> Fazendo backup de um banco de dados multidimensional ou de tabela  
+##  <a name="bkmk_cube"></a>Fazendo backup de um banco de dados multidimensional ou tabular  
  Os administradores podem fazer backup de um banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] em um único arquivo de backup (.abf) do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , seja qual for o tamanho do banco de dados. Para obter instruções passo a passo, consulte [Como fazer backup de um banco de dados do Analysis Services (TechMantra)](http://www.mytechmantra.com/LearnSQLServer/Backup_an_Analysis_Services_Database.html) e [Automatizar o backup de um banco de dados do Analysis Services (TechMantra)](http://www.mytechmantra.com/LearnSQLServer/Automate_Backup_of_Analysis_Services_Database.html).  
   
 > [!NOTE]  
@@ -99,7 +100,7 @@ ms.locfileid: "66077026"
   
  Para obter mais informações sobre como fazer backup de um banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , consulte [Opções de backup](backup-options.md).  
   
-##  <a name="bkmk_restore"></a> Restaurando um banco de dados do Analysis Services  
+##  <a name="bkmk_restore"></a>Restaurando um banco de dados Analysis Services  
  Os administradores podem restaurar um banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de um ou mais arquivos de backup.  
   
 > [!NOTE]  
@@ -123,8 +124,8 @@ ms.locfileid: "66077026"
   
  Para obter mais informações sobre como restaurar um banco de dados [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , consulte [Opções de restauração](restore-options.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Fazendo backup, restaurando e sincronizando bancos de dados &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)   
- [O Analysis Services PowerShell](../analysis-services-powershell.md)  
+ [Analysis Services PowerShell](../analysis-services-powershell.md)  
   
   

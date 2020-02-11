@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f78f4bdf08b9a5caf9b2654289bf181080efff02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62871510"
 ---
 # <a name="modified-features-contained-database"></a>Recursos modificados (banco de dados independente)
@@ -44,13 +44,13 @@ ms.locfileid: "62871510"
   
  Tabelas temporárias podem não recorrer a tipos definidos pelo usuário, coleções de esquemas XML ou funções definidas pelo usuário.  
   
-## <a name="collation"></a>Ordenação  
- No modelo de banco de dados dependente, há três tipos de ordenação: Ordenação de banco de dados, ordenação de instância e ordenação de tempdb. Bancos de dados independentes usam apenas duas ordenações, ordenação de banco de dados e a nova ordenação de catálogo. Veja [Ordenações de banco de dados independentes](contained-database-collations.md) para obter mais detalhes sobre a ordenação de banco de dados independente.  
+## <a name="collation"></a>Collation  
+ No modelo de banco de dados dependente, há três tipos separados de ordenação: ordenação de banco de dados, ordenação de Instância e ordenação de tempdb. Bancos de dados independentes usam apenas duas ordenações, ordenação de banco de dados e a nova ordenação de catálogo. Veja [Ordenações de banco de dados independentes](contained-database-collations.md) para obter mais detalhes sobre a ordenação de banco de dados independente.  
   
 ## <a name="user-options"></a>Opções de usuário  
  Ao habilitar bancos de dados independentes, é preciso definir a [Opção user options](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md) como 0 para a instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Ordenações de banco de dados independentes](contained-database-collations.md)   
  [Bancos de dados independentes](contained-databases.md)  
   

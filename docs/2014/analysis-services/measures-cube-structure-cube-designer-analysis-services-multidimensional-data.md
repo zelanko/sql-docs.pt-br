@@ -1,5 +1,5 @@
 ---
-title: Medidas (guia estrutura do cubo, Designer de cubo) (Analysis Services - dados multidimensionais) | Microsoft Docs
+title: Medidas (guia estrutura do cubo, designer de cubo) (Analysis Services-dados multidimensionais) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cbd64cd4eb3ca686fdbdd1a59c9e84fa387e6a7f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077919"
 ---
 # <a name="measures-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>Medidas (guia Estrutura do Cubo, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
@@ -26,7 +26,7 @@ ms.locfileid: "66077919"
  medidas  
  Exibe os grupos de medidas e medidas incluídas no cubo dependendo da exibição selecionada:  
   
- trEE  
+ Árvore  
  Exibe uma exibição de árvore de grupos de medidas com medidas como nós filho.  
   
  Expanda grupos de medidas para exibir medidas. Clique em um grupo de medidas ou medida selecionada para renomear o grupo de medidas ou medida, respectivamente.  
@@ -36,7 +36,7 @@ ms.locfileid: "66077919"
   
  A grade contém as seguintes colunas:  
   
- Measure  
+ Medida  
  Digite o nome da medida.  
   
  Grupo de Medidas  
@@ -51,46 +51,46 @@ ms.locfileid: "66077919"
 ## <a name="context-menu"></a>Menu de contexto  
  As seguintes opções estão disponíveis no menu de contexto exibido ao clicar com o botão direito do mouse no painel **Medidas** :  
   
- **Nova medida**  
+ **Nova Medida**  
  Selecione para exibir a caixa de diálogo **Nova Medida** e adicionar uma nova medida ao grupo de medidas selecionado atualmente no painel **Medidas** .  
   
- **Novo grupo de medidas**  
+ **Novo Grupo de Medidas**  
  Selecione para exibir a caixa de diálogo **Novo Grupo de Medidas** e adicionar um novo grupo de medidas ao painel **Medidas** .  
   
- **Mostrar medidas em**  
+ **Mostrar Medidas em**  
  Selecione para alternar entre as seguintes opções ou selecione uma das seguintes opções para alterar a exibição do painel **Medidas** :  
   
 |Opção|Definição|  
 |------------|----------------|  
-|**Árvore**|Exiba grupos de medidas e medidas em uma exibição de árvore.|  
+|**Três**|Exiba grupos de medidas e medidas em uma exibição de árvore.|  
 |**Grade**|Exiba grupos de medidas e medidas em uma grade.|  
   
- **Renomear**  
+ **Nome**  
  Selecione para renomear a medida ou grupo de medidas selecionado.  
   
  **Delete (excluir)**  
  Selecione para exibir a caixa de diálogo **Excluir Objetos** e excluir os objetos selecionados no painel **Medidas** .  
   
- **Mover para Cima**  
+ **Mover para cima**  
  Selecione para mover a medida ou grupo de medidas selecionado uma posição para cima.  
   
 > [!NOTE]  
 >  Esta opção estará desabilitada se o item selecionado não puder ser movido para cima.  
   
- **Mover para Baixo**  
+ **Mover para baixo**  
  Selecione para mover a medida ou grupo de medidas selecionado uma posição para baixo.  
   
 > [!NOTE]  
 >  Esta opção estará desabilitada se o item selecionado não puder ser movido para baixo.  
   
- **Novo objeto vinculado**  
+ **Novo Objeto Vinculado**  
  Clique para exibir o **Assistente para Objetos Vinculados** e vincular grupos de medidas e dimensões de outros cubos, e para importar ações, KPIs e cálculos ao cubo selecionado.  
   
  **Propriedades**  
  Selecione para exibir a janela **Propriedades** do [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] da medida ou grupo de medidas selecionado.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Configurar propriedades de medida](multidimensional-models/configure-measure-properties.md)   
- [Medidas e grupos de medidas](multidimensional-models/measures-and-measure-groups.md)  
+ [Medidas e Grupos de Medidas](multidimensional-models/measures-and-measure-groups.md)  
   
   

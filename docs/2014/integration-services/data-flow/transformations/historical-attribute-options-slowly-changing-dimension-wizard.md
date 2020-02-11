@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 315d6a4e4bb0d9b28f6f921e0a254fec6e11fdae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900122"
 ---
 # <a name="historical-attribute-options-slowly-changing-dimension-wizard"></a>Opções de Atributo Histórico (Assistente para Dimensões de Alteração Lenta)
@@ -28,7 +28,7 @@ ms.locfileid: "62900122"
  **Use uma única coluna para mostrar os registros atual e expirado**  
  Se você optar por usar uma única coluna para registrar o status de atributos históricos, estarão disponíveis as seguintes opções:  
   
-|Opção|Descrição|  
+|Opção|DESCRIÇÃO|  
 |------------|-----------------|  
 |**Coluna para indicar o registro atual**|Selecione uma coluna na qual indicar o registro atual.|  
 |**Valor atual**|Use **Verdadeiro** ou **Atual** para mostrar se o registro é atual.|  
@@ -37,13 +37,13 @@ ms.locfileid: "62900122"
  **Use as datas de início e de término para identificar os registros atual e expirado**  
  A tabela de dimensão desta opção deve incluir uma coluna de data. Se você optar por mostrar atributos históricos por datas de início e de término, estarão disponíveis as seguintes opções:  
   
-|Opção|Descrição|  
+|Opção|DESCRIÇÃO|  
 |------------|-----------------|  
 |**Coluna da data de início**|Selecione a coluna na tabela de dimensões que conterá a data de início.|  
 |**Coluna da data de término**|Selecione a coluna na tabela de dimensões que conterá a data de término.|  
 |**Variável para definir valores de data**|Selecione uma variável de data na lista.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Configurar saídas por meio do Assistente para Dimensões de Alteração Lenta](configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
   
   

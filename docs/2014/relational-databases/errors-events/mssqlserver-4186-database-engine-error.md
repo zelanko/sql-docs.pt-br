@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 53a8e0ab728c1fee0033ef86dbf6b7dfc22bdc8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62867835"
 ---
-# <a name="mssqlserver4186"></a>MSSQLSERVER_4186
+# <a name="mssqlserver_4186"></a>MSSQLSERVER_4186
     
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|4186|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico||  
 |Texto da mensagem|A coluna '%ls.%.*ls' não pode ser referenciada na cláusula OUTPUT porque a definição da coluna contém uma subconsulta ou faz referência a uma função que executa acesso a dados de sistema ou de usuário. Por padrão, se uma função não estabelece associação com o esquema, supõe-se que ela execute acesso a dados. Considere remover a subconsulta ou a função da definição de coluna ou remover a coluna da cláusula OUTPUT.|  
@@ -106,7 +106,7 @@ WHERE ProductModelID BETWEEN 75 and 80;
   
 -   Remova a coluna de cláusula OUTPUT.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Cláusula OUTPUT &#40;Transact-SQL&#41;](/sql/t-sql/queries/output-clause-transact-sql)  
   
   

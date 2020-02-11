@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 79d356aa1b14ac30ba5bc9a8f579fc66ddebea92
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081269"
 ---
 # <a name="exploring-and-cleaning-data"></a>Explorando e limpando dados
@@ -32,13 +32,13 @@ ms.locfileid: "66081269"
   
 -   Conversão dos tipos de dados ou categorização de valores se necessário para análise.  
   
- Se você for novo para a modelagem de dados, é recomendável que você leia o tópico relacionado, [lista de verificação de preparação para mineração de dados](checklist-of-preparation-for-data-mining.md).  
+ Se você for novo na modelagem de dados, é recomendável ler o tópico relacionado, [lista de verificação de preparação para mineração de dados](checklist-of-preparation-for-data-mining.md).  
   
 ## <a name="data-preparation-tools"></a>Ferramentas de preparação de dados  
  Os Suplementos de Mineração de Dados para Office incluem as seguintes ferramentas para limpeza e preparação dos dados:  
   
 ### <a name="explore-data"></a>Explorar Dados  
- Use o **explorar dados** Assistente para essas tarefas de preparação de dados:  
+ Use o assistente para **explorar dados** para estas tarefas de preparação de dados:  
   
 -   Visualize seus dados e identifique erros que devem ser corrigidos antes da análise.  
   
@@ -46,10 +46,10 @@ ms.locfileid: "66081269"
   
 -   Identifique colunas que sejam úteis para análise e planeje a fase de modelagem de dados.  
   
- [Explorar dados &#40;suplementos de mineração de dados do SQL Server&#41;](explore-data-sql-server-data-mining-add-ins.md).  
+ [Explore os dados &#40;SQL Server suplementos de mineração de dados&#41;](explore-data-sql-server-data-mining-add-ins.md).  
   
 ### <a name="detect-and-handle-outliers"></a>Detectar exceções e lidar com elas  
- O **exceções** Assistente representa graficamente a distribuição dos valores de seus dados e ajuda a remover valores extremos. Use o **exceções** ferramenta para as seguintes tarefas de preparação de dados:  
+ O assistente de **exceções** grafa a distribuição de valores em seus dados e ajuda você a remover valores extremos. Use a ferramenta de **exceções** para as seguintes tarefas de preparação de dados:  
   
 -   Determine se valores individuais são confiáveis, com base em padrões encontrados nos dados.  
   
@@ -57,10 +57,10 @@ ms.locfileid: "66081269"
   
 -   Faça um escopo de um modelo para um intervalo de valores específicos. Por exemplo, se você souber que tem exceções em um armazenamento em particular, poderá eliminar esse valor e obter um modelo que preveja melhor outros armazenamentos.  
   
- [Exceções &#40;suplementos de mineração de dados do SQL Server&#41;](outliers-sql-server-data-mining-add-ins.md).  
+ As [exceções &#40;SQL Server suplementos de mineração de dados&#41;](outliers-sql-server-data-mining-add-ins.md).  
   
 ### <a name="relabel-and-bin-data"></a>Rotular Novamente e Guardar Dados  
- O **rotular novamente** Assistente agrupa dados por valores para que você possa alterar os rótulos nos dados. Use a ferramenta Rotular Novamente para estas tarefas de preparação de dados:  
+ O assistente de **rerotulação** agrupa dados por valores para que você possa alterar os rótulos nos dados. Use a ferramenta Rotular Novamente para estas tarefas de preparação de dados:  
   
 -   Altere códigos numéricos usados nos resultados da pesquisa para uma descrição textual do significado do código numérico.  
   
@@ -68,13 +68,13 @@ ms.locfileid: "66081269"
   
 -   Guarde os dados, criando grupos que representam intervalos de número.  
   
-     Por exemplo, você talvez queira substituir uma coluna de receita de números por rótulos como **receita - moderada** e **receita - alta**.  
+     Por exemplo, talvez você queira substituir uma coluna de renda de números por rótulos como **receita-moderada** e **renda alta**.  
   
 -   Recolher valores discretos em categorias.  
   
      Por exemplo, se você tiver muitos produtos individuais para detectar um padrão entre compras, poderá tentar atribuir produtos em categorias mais amplas.  
   
- [Rotular novamente &#40;suplementos de mineração de dados do SQL Server&#41;](relabel-sql-server-data-mining-add-ins.md)  
+ [Rerotular &#40;SQL Server os suplementos de mineração de dados&#41;](relabel-sql-server-data-mining-add-ins.md)  
   
 ### <a name="cleanse-data"></a>Limpar dados  
  A limpeza de dados inclui uma ampla gama de atividades, a maioria das quais têm suporte pelos suplementos  
@@ -83,24 +83,24 @@ ms.locfileid: "66081269"
   
 -   Detecte valores ausentes e remova-os ou impute um valor adequado, como um valor médio, nulo ou outro.  
   
- [Explorar dados &#40;suplementos de mineração de dados do SQL Server&#41;](explore-data-sql-server-data-mining-add-ins.md)  
+ [Explorar dados &#40;SQL Server suplementos de mineração de dados&#41;](explore-data-sql-server-data-mining-add-ins.md)  
   
- [Rotular novamente &#40;suplementos de mineração de dados do SQL Server&#41;](relabel-sql-server-data-mining-add-ins.md)  
+ [Rerotular &#40;SQL Server os suplementos de mineração de dados&#41;](relabel-sql-server-data-mining-add-ins.md)  
   
  [Preencher com Base no Exemplo](fill-from-example-table-analysis-tools-for-excel.md)  
   
 ### <a name="sample-data"></a>Dados de Amostra  
  O assistente de Dados de Amostra fornece dois métodos para criar conjuntos de dados balanceados para modelos de treinamento e teste.  
   
--   **Amostragem aleatória.** Use esta opção para extrair um conjunto representativo de dados de um conjunto de dados maior, para usar em treinamento ou teste. Usam os suplementos de mineração de dados *estratificado* para garantir que um conjunto de valores balanceado é obtido para cada variável de exemplo.  
+-   **Amostragem aleatória.** Use esta opção para extrair um conjunto representativo de dados de um conjunto de dados maior, para usar em treinamento ou teste. Os suplementos de mineração de dados usam a *amostragem de sobreratificação* para garantir que um conjunto equilibrado de valores seja obtido para cada variável amostrada.  
   
 -   **Sobreamostragem.** Use essa opção quando você tiver menos dados do que desejar para um resultado de destino, e precisar pesar esses dados de maneira mais pesada. Por exemplo, a fraude pode ser relativamente rara, mas você pode sobreamostrar os casos que envolvem fraude para obter dados suficientes para modelagem.  
   
- [Dados de exemplo &#40;suplementos de mineração de dados do SQL Server&#41;](sample-data-sql-server-data-mining-add-ins.md).  
+ [Dados de exemplo &#40;SQL Server suplementos de mineração de dados&#41;](sample-data-sql-server-data-mining-add-ins.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Criar um modelo de mineração de dados](creating-a-data-mining-model.md)   
- [Validando modelos e usando modelos para previsão &#40;Data Mining Add-ins para Excel&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)   
- [Implantando e dimensionando modelos de mineração &#40;Data Mining Add-ins para Excel&#41;](deploying-and-scaling-mining-models-data-mining-add-ins-for-excel.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Criando um modelo de mineração de dados](creating-a-data-mining-model.md)   
+ [Validando modelos e usando modelos para previsão &#40;suplementos de mineração de dados para Excel&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)   
+ [Implantando e dimensionando modelos de mineração &#40;suplementos de mineração de dados para Excel&#41;](deploying-and-scaling-mining-models-data-mining-add-ins-for-excel.md)  
   
   

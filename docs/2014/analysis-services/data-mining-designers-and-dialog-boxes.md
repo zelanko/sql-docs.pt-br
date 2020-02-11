@@ -1,5 +1,5 @@
 ---
-title: Designers de mineração de dados e caixas de diálogo | Microsoft Docs
+title: Designers e caixas de diálogo de mineração de dados | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,29 +14,29 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e2d8784c79ed4bbce63d8f9a18dce6b1b12f33f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086470"
 ---
 # <a name="data-mining-designers-and-dialog-boxes"></a>Designers de Mineração de Dados e Caixas de Diálogo
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fornece ferramentas de design que você pode usar para criar, exibir, testar e criar previsões de modelos de mineração de dados.  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fornece ferramentas de design que você pode usar para criar, exibir, testar e criar previsões de modelos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Data Mining.  
   
  A tabela a seguir lista os tópicos de referência para os designers e as ferramentas de mineração de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
-|Tópico|Descrição|  
+|Tópico|DESCRIÇÃO|  
 |-----------|-----------------|  
-|[Designer de modelo de mineração de dados &#40;Analysis Services - mineração de dados&#41;](data-mining-model-designer-analysis-services-data-mining.md)|Use as ferramentas do [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para definir uma nova estrutura de mineração e modelos de mineração associados.|  
-|[Visualizadores do Modelo de Mineração &#40;Designer do Modelo de Mineração de Dados&#41;](mining-model-viewers-data-mining-model-designer.md)|Use os visualizadores personalizados fornecidos no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] e no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para procurar o modelo preenchido e entender melhor os padrões dos dados.|  
-|[Designer do gráfico de precisão de mineração &#40;mineração de dados&#41;](mining-accuracy-chart-designer-data-mining.md)|Use as ferramentas de gráfico de precisão, como gráficos de comparação de precisão, a matriz de classificação e a validação cruzada, para avaliar os modelos de mineração de dados e conjuntos de dados usados no treinamento. Todas as ferramentas de precisão estão disponíveis no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] e no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] .|  
-|[Construtor de consultas de previsão &#40;mineração de dados&#41;](prediction-query-builder-data-mining.md)|Use o Construtor de consulta de previsão fornecido no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] e no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para|  
-|[Caixa de diálogo de propriedades de estrutura de mineração &#40;Analysis Services - mineração de dados&#41;](mining-structure-properties-dialog-analysis-services-data-mining.md)<br /><br /> [Caixa de diálogo de propriedades do modelo de mineração &#40;Analysis Services - mineração de dados&#41;](mining-model-properties-dialog-box-analysis-services-data-mining.md)|Altere as propriedades da estrutura de mineração ou do modelo de mineração para afetar a maneira como esses dados são tratados, para adicionar sinalizadores de modelagem ou editar metadados.|  
-|[Editor de Consultas DMX &#40;Analysis Services – Mineração de Dados&#41;](dmx-query-editor-analysis-services-data-mining.md)|Utilize o Editor de Consultas DMX para criar e executar instruções gravadas na linguagem DMX.|  
+|[Designer de modelo de mineração de dados &#40;Analysis Services Data Mining&#41;](data-mining-model-designer-analysis-services-data-mining.md)|Use as ferramentas do [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para definir uma nova estrutura de mineração e modelos de mineração associados.|  
+|[Visualizadores de modelo de mineração &#40;designer de modelo de mineração de dados&#41;](mining-model-viewers-data-mining-model-designer.md)|Use os visualizadores personalizados fornecidos no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] e no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para procurar o modelo preenchido e entender melhor os padrões dos dados.|  
+|[Designer de gráfico de precisão de mineração &#40;mineração de dados&#41;](mining-accuracy-chart-designer-data-mining.md)|Use as ferramentas de gráfico de precisão, como gráficos de comparação de precisão, a matriz de classificação e a validação cruzada, para avaliar os modelos de mineração de dados e conjuntos de dados usados no treinamento. Todas as ferramentas de precisão estão disponíveis no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] e no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] .|  
+|[Construtor de Consultas de &#40;de mineração de dados de previsão&#41;](prediction-query-builder-data-mining.md)|Use o Construtor de consulta de previsão fornecido no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] e no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para|  
+|[Caixa de diálogo Propriedades da estrutura de mineração &#40;Analysis Services-Mineração de dados&#41;](mining-structure-properties-dialog-analysis-services-data-mining.md)<br /><br /> [Caixa de diálogo Propriedades do modelo de mineração &#40;mineração de dados Analysis Services&#41;](mining-model-properties-dialog-box-analysis-services-data-mining.md)|Altere as propriedades da estrutura de mineração ou do modelo de mineração para afetar a maneira como esses dados são tratados, para adicionar sinalizadores de modelagem ou editar metadados.|  
+|[Editor de consultas DMX &#40;Analysis Services de mineração de dados&#41;](dmx-query-editor-analysis-services-data-mining.md)|Utilize o Editor de Consultas DMX para criar e executar instruções gravadas na linguagem DMX.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Ferramentas de mineração de dados](data-mining/data-mining-tools.md)   
- [Ajuda F1 do Assistente de mineração de dados &#40;Analysis Services - mineração de dados&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [Ajuda F1 do assistente de mineração de dados &#40;Analysis Services Data Mining&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
  [Tutorial de mineração de dados básico](../../2014/tutorials/basic-data-mining-tutorial.md)  
   
   

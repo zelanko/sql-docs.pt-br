@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 898dd309dae82818b60332b29c14f785c18b173b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62873057"
 ---
 # <a name="view-a-collection-set-report-sql-server-management-studio"></a>Exibir um relatório de conjuntos de coleta (SQL Server Management Studio)
@@ -54,7 +54,7 @@ ms.locfileid: "62873057"
  **Duration**  
  Especifique o intervalo de tempo que será incluído no relatório. O valor padrão é 240 minutos. Os valores disponíveis para seleção são 15 minutos, 60 minutos, 240 minutos (4 horas), 720 minutos (12 horas) e 1440 minutos (24 horas).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Coleta de Dados](data-collection.md)   
  [Relatórios personalizados no Management Studio](../../ssms/object/custom-reports-in-management-studio.md)   
  [Configurar o Data Warehouse de Gerenciamento &#40;SQL Server Management Studio&#41;](configure-the-management-data-warehouse-sql-server-management-studio.md)  

@@ -1,5 +1,5 @@
 ---
-title: Usar eventos estendidos (XEvents) do SQL Server para monitorar o Analysis Services | Microsoft Docs
+title: Usar SQL Server XEvents (eventos estendidos) para monitorar Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -11,18 +11,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6d6abfca98386ef691add200d433af827ed44836
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079740"
 ---
 # <a name="use-sql-server-extended-events-xevents-to-monitor-analysis-services"></a>Usar eventos estendidos do SQL Server (XEvents) para monitorar o Analysis Services
-  O Analysis Services fornece recursos de rastreamento através do uso de [eventos estendidos](../../relational-databases/extended-events/extended-events.md).  
+  Analysis Services fornece recursos de rastreamento por meio do uso de [eventos estendidos](../../relational-databases/extended-events/extended-events.md).  
   
  Eventos Estendidos são uma infraestrutura de evento que é altamente escalonável e configurável para sistemas de servidor. Eventos Estendidos são um sistema de monitoramento de desempenho de peso leve que usa poucos recursos de desempenho.  
   
- Todos os serviços de análise de eventos podem ser capturados e destinados a consumidores específicos, conforme definido na [eventos estendidos](../../relational-databases/extended-events/extended-events.md), através de XEvents.  
+ Todos os eventos de Analysis Services podem ser capturados e direcionados para consumidores específicos, conforme definido em [eventos estendidos](../../relational-databases/extended-events/extended-events.md), por meio de XEvents.  
   
 ## <a name="initiating-extended-events-in-analysis-services"></a>Iniciando Eventos Estendidos no Analysis Services  
  O rastreamento de Eventos Estendidos é habilitado usando um comando de script de objeto de criação XMLA, conforme mostrado abaixo:  
@@ -98,7 +98,7 @@ ms.locfileid: "66079740"
  *trace_id*  
  Define o identificador exclusivo para o rastreamento a ser excluído.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Eventos estendidos](../../relational-databases/extended-events/extended-events.md)  
   
   

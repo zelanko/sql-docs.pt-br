@@ -1,5 +1,5 @@
 ---
-title: Concluindo o Assistente (Assistente para partições) | Microsoft Docs
+title: Concluindo o assistente (Assistente para partições) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f7ab4ad7a819c18056ab5901f95caf1b74b23a25
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087533"
 ---
 # <a name="completing-the-wizard-partition-wizard"></a>Concluindo o Assistente (Assistente para Partições)
@@ -31,16 +31,16 @@ ms.locfileid: "66087533"
   
  A tabela a seguir lista as opções de agregação disponíveis.  
   
-|Opção|Descrição|  
+|Opção|DESCRIÇÃO|  
 |------------|-----------------|  
 |**Criar agregações para a partição agora**|Cria agregações para a nova partição depois que o Assistente para Partições cria a nova partição. A seleção dessa opção inicia o Assistente de Design de Agregação depois que você clica **em Concluir** no Assistente para Partições. Para obter mais informações sobre o Assistente de Design de Agregação, consulte a [Ajuda de F1 do Assistente de Design de Agregação](aggregation-design-wizard-f1-help.md).|  
 |**Criar as agregações mais tarde**|Cria a partição sem criar agregações neste momento.|  
-|**Copiar o design de agregação de uma partição existente**|Copia o design de agregação de uma partição existente no grupo de medidas para a nova partição. Um clique nesta opção disponibiliza a opção **Copiar de** . Use a opção **Copiar de** para selecionar a partição da qual copiar o design de agregação.<br /><br /> Observe que as partições que podem ser mescladas no futuro devem ter o mesmo design de agregação e a estrutura de tabela. Se você mesclar a nova partição com uma partição existente no grupo de medidas, deverá copiar o design de agregação da partição existente na nova partição.|  
+|**Copiar o design de agregação de uma partição existente**|Copia o design de agregação de uma partição existente no grupo de medidas para a nova partição. Um clique nesta opção disponibiliza a opção **Copiar de** . Use a opção **Copiar de** para selecionar a partição da qual copiar o design de agregação.<br /><br /> Observe que as partições que podem ser mescladas no futuro devem ter a mesma estrutura de tabela e design de agregação. Se você mesclar a nova partição com uma partição existente no grupo de medidas, deverá copiar o design de agregação da partição existente na nova partição.|  
   
- **Implantar e processar agora**  
+ **Implantar e Processar Agora**  
  Implanta e processa a partição para a instância do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] especificada na página **Locais de Processamento e Armazenamento** . O assistente implanta e processa a partição depois que você clica em **Concluir** nessa página.  
   
-## <a name="see-also"></a>Consulte também  
- [Partições &#40;Analysis Services – Dados Multidimensionais&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Partições &#40;Analysis Services de dados multidimensionais&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

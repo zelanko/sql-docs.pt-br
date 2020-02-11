@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1bedefd277f1be7f44d807e6539097dd24f5ab2f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900906"
 ---
 # <a name="raw-file-source"></a>Origem do arquivo bruto
@@ -53,8 +53,8 @@ ms.locfileid: "62900906"
   
 -   Entrada de blog, [Raw Files Are Awesome](http://www.sqlservercentral.com/blogs/stratesql/archive/2011/1/1/31-days-of-ssis-_1320_-raw-files-are-awesome-_2800_1_2F00_31_2900_.aspx), em sqlservercentral.com  
   
-## <a name="see-also"></a>Consulte também  
- [Raw File Destination](raw-file-destination.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Destino do arquivo bruto](raw-file-destination.md)   
  [Fluxo de Dados](data-flow.md)  
   
   

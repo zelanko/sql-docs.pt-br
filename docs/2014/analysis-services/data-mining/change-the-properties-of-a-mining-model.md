@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4c34cbfd2ea88d863239c068300c65531fd19f5f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085874"
 ---
 # <a name="change-the-properties-of-a-mining-model"></a>Alterar as propriedades de um modelo de mineração
@@ -25,9 +25,9 @@ ms.locfileid: "66085874"
   
  As propriedades modelo a seguir têm editores avançados que você pode usar para criar expressões ou configurar propriedades de modelo complexas. Estas propriedades oferecem:  
   
--   `Filter` Propriedade: Abre o [Data Set filtro or Model filtro Dialog Box](../data-set-filter-or-model-filter-dialog-box.md).  
+-   `Filter`Propriedade: abre a [caixa de diálogo Filtro de conjunto de dados ou filtro de modelo](../data-set-filter-or-model-filter-dialog-box.md).  
   
--   `AlgorithmParameters` Propriedade: Abre o [caixa de diálogo de parâmetros de algoritmo &#40;modo de exibição de modelos de mineração&#41;](../algorithm-parameters-dialog-box-mining-models-view.md).  
+-   `AlgorithmParameters`Propriedade: abre a [caixa de diálogo parâmetros de algoritmo &#40;exibição de modelos de mineração&#41;](../algorithm-parameters-dialog-box-mining-models-view.md).  
   
  Para obter informações sobre como definir as propriedades em um modelo de mineração, consulte [Colunas do modelo de mineração](mining-model-columns.md).  
   
@@ -46,11 +46,11 @@ ms.locfileid: "66085874"
 2.  Na janela **Propriedades** na lateral direita da tela, realce o valor que corresponde à propriedade que você deseja alterar e digite o novo valor.  
   
     > [!NOTE]  
-    >  Se o uso da coluna for definido como `Ignore`, o **propriedades** janela para a coluna está em branco.  
+    >  Se o uso da coluna for definido `Ignore`como, a janela **Propriedades** da coluna ficará em branco.  
   
      O novo valor entrará em vigor quando você selecionar um elemento diferente no designer.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tarefas e instruções do modelo de mineração](mining-model-tasks-and-how-tos.md)  
   
   

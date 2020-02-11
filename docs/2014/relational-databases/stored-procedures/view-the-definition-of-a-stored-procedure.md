@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 333d4d9f0ab9feb5d5b5c4d0aa48fd584cef3143
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62856509"
 ---
 # <a name="view-the-definition-of-a-stored-procedure"></a>Exibir a definição de um procedimento armazenado
@@ -58,7 +58,7 @@ ms.locfileid: "62856509"
   
 2.  Expanda **Bancos de Dados**, expanda o banco de dados ao qual pertence o procedimento e expanda **Programação**.  
   
-3.  Expandir **procedimentos armazenados**, o procedimento com o botão direito e, em seguida, clique em **Script de procedimento armazenado como**e, em seguida, clique em um dos seguintes: **Criar para**, **alterar para**, ou **descartar e criar para**.  
+3.  Expanda **Procedimentos armazenados**, clique com o botão direito do mouse no procedimento, clique em **Gerar script de procedimento armazenado como** e clique em um dos itens a seguir: **Criar para**, **Alterar para** ou **Descartar e criar para**.  
   
 4.  Selecione **Janela do Editor de Nova Consulta**. Isso exibirá a definição de procedimento.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "62856509"
     WHERE object_id = (OBJECT_ID(N'AdventureWorks2012.dbo.uspLogError'));  
     ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar um procedimento armazenado](create-a-stored-procedure.md)   
  [Modificar um procedimento armazenado](modify-a-stored-procedure.md)   
  [Excluir um procedimento armazenado](delete-a-stored-procedure.md)   

@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ef7f15fc1b54d18c71d7fccfd379454911cb8961
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62875004"
 ---
 # <a name="restore-database-files-page"></a>Restaurar banco de dados (página de arquivos)
@@ -31,7 +31,7 @@ ms.locfileid: "62875004"
  **Realoque todos os arquivos para pasta**  
  Realoque os arquivos restaurados.  
   
-|Opção|Descrição|  
+|Opção|DESCRIÇÃO|  
 |------------|-----------------|  
 |**Pasta Arquivo de dados**|Insira ou procure o nome de pasta de arquivo de dados para o qual o arquivo de dados restaurado ou arquivos devem ser realocados.|  
 |**Pasta Arquivo de log**|Insira ou procure o arquivo de log ou pasta de arquivos para o qual o arquivo de log deve ser realocado.|  
@@ -48,7 +48,7 @@ ms.locfileid: "62875004"
  **Restaurar Como**  
  Lista os nomes de arquivos que renomearão os arquivos restaurados. Insira ou procure o nome de arquivo apropriado.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Restaurar banco de dados &#40;página Geral&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)   
  [Restaurar banco de dados &#40;página Opções&#41;](restore-database-options-page.md)   
  [Argumentos de RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql)   

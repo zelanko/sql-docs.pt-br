@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 71efd530222ce548bb867b9e886b1891d5aedb05
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62899444"
 ---
 # <a name="errors-and-events-reference-integration-services"></a>Referência de erros e eventos (Integration Services)
@@ -32,7 +32,7 @@ ms.locfileid: "62899444"
   
 ## <a name="error-messages"></a>Mensagens de erro  
   
-|Nome simbólico de erro|Descrição|  
+|Nome simbólico de erro|DESCRIÇÃO|  
 |----------------------------|-----------------|  
 |DTS_E_CACHELOADEDFROMFILE|Indica que o pacote não pode ser executado porque uma Transformação Cache está tentando gravar dados no cache na memória. No entanto, um gerenciador de conexões de Cache já carregou um arquivo de cache no cache na memória.|  
 |DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER|Indica que o pacote não pode ser executado porque ocorreu uma falha na conexão especificada.|  
@@ -42,7 +42,7 @@ ms.locfileid: "62899444"
 |DTS_E_CONNECTIONNOTFOUND|Indica que o pacote não pode ser executado porque o gerenciador de conexões especificado não pode ser localizado.|  
 |DTS_E_CONNECTIONREQUIREDFORMETADATA|Indica que o Designer do [!INCLUDE[ssIS](../includes/ssis-md.md)] deve conectar-se a uma fonte de dados para recuperar metadados novos ou atualizados para uma origem ou destino e que não é possível conectar-se à fonte de dados.|  
 |DTS_E_MULTIPLECACHEWRITES|Indica que o pacote não pode ser executado porque uma Transformação Cache está tentando gravar dados no cache na memória. No entanto outra Transformação Cache já foi gravada no cache na memória.|  
-|DTS_E_PRODUCTLEVELTOLOW|Indica que o pacote não pode ser executado porque a versão apropriada do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] não foi instalada.|  
+|DTS_E_PRODUCTLEVELTOLOW|Indica que o pacote não pode ser executado porque a versão [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] apropriada do não está instalada.|  
 |DTS_E_READNOTFILLEDCACHE|Indica que uma transformação Pesquisa está tentando ler dados do cache na memória ao mesmo tempo que uma transformação Cache está gravando dados no cache.|  
 |DTS_E_UNPROTECTXMLFAILED|Indica que o sistema não descriptografou um nó XML protegido.|  
 |DTS_E_WRITEWHILECACHEINUSE|Indica que uma Transformação Cache está tentando gravar dados no cache na memória ao mesmo tempo que uma transformação Pesquisa está lendo dados no cache na memória.|  
@@ -51,7 +51,7 @@ ms.locfileid: "62899444"
 ## <a name="events-sqlispackage"></a>Eventos (SQLISPackage)  
  Para obter mais informações, consulte [Eventos registrados por um pacote do Integration Services](performance/events-logged-by-an-integration-services-package.md).  
   
-|Evento|Descrição|  
+|Evento|DESCRIÇÃO|  
 |-----------|-----------------|  
 |SQLISPackage_12288|Indica que um pacote foi iniciado.|  
 |SQLISPackage_12289|Indica que um pacote concluiu a execução com êxito.|  
@@ -65,7 +65,7 @@ ms.locfileid: "62899444"
 ## <a name="events-sqlisservice"></a>Eventos (SQLISService)  
  Para obter mais informações, consulte [Eventos registrados pelo serviço do Integration Services](service/events-logged-by-the-integration-services-service.md).  
   
-|Evento|Descrição|  
+|Evento|DESCRIÇÃO|  
 |-----------|-----------------|  
 |SQLISService_256|Indica que o serviço está prestes a ser iniciado.|  
 |SQLISService_257|Indica que o serviço foi iniciado.|  
@@ -76,7 +76,7 @@ ms.locfileid: "62899444"
 |SQLISService_273|Indica que o arquivo de configuração não pôde ser lido ou não é válido.|  
 |SQLISService_274|Indica que a entrada do Registro que contém o local do arquivo de configuração não existe ou está vazia.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

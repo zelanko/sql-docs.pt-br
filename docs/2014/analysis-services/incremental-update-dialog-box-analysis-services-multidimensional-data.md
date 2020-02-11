@@ -1,5 +1,5 @@
 ---
-title: Caixa de diálogo atualização incremental (Analysis Services - dados multidimensionais) | Microsoft Docs
+title: Caixa de diálogo atualização incremental (Analysis Services-dados multidimensionais) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0948fda951bb415d9fe3f457729200752a8afaaf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080493"
 ---
 # <a name="incremental-update-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Atualização Incremental (Analysis Services - Dados Multidimensionais)
@@ -26,17 +26,17 @@ ms.locfileid: "66080493"
   
 |Termo|Definição|  
 |----------|----------------|  
-|**Grupo de Medidas**|Selecione o grupo de medidas a ser atualizado incrementalmente.<br /><br /> Observação: Essa opção é habilitada somente se você estiver atualizando um cubo incrementalmente. Se você estiver atualizando um grupo de medidas ou partição incrementalmente, esta opção será desabilitada.|  
-|**Partição**|Selecione a partição a ser atualizada.<br /><br /> Observação: Essa opção é habilitada somente se você estiver atualizando um cubo incrementalmente. Se você estiver atualizando um grupo de medidas ou partição incrementalmente, esta opção será desabilitada.|  
+|**Grupo de medidas**|Selecione o grupo de medidas a ser atualizado incrementalmente.<br /><br /> Observação: esta opção apenas estará habilitada se você estiver atualizando um cubo incrementalmente. Se você estiver atualizando um grupo de medidas ou partição incrementalmente, esta opção será desabilitada.|  
+|**Partição**|Selecione a partição a ser atualizada.<br /><br /> Observação: esta opção apenas estará habilitada se você estiver atualizando um cubo incrementalmente. Se você estiver atualizando um grupo de medidas ou partição incrementalmente, esta opção será desabilitada.|  
 |**Table**|Clique para atualizar o objeto de uma tabela.|  
-|**Fonte de dados ou exibição**|Selecione a fonte de dados ou exibição da fonte de dados na qual a tabela de origem está localizada.<br /><br /> Observação: Essa opção estará habilitada apenas se **tabela** está selecionado.|  
-|**Nome e o esquema de tabela**|Selecione a tabela de origem usada para recuperar dados para atualização incremental do cubo, grupo de medidas ou partição.<br /><br /> Observação: Essa opção estará habilitada apenas se **tabela** está selecionado.|  
+|**Fonte de dados ou exibição**|Selecione a fonte de dados ou exibição da fonte de dados na qual a tabela de origem está localizada.<br /><br /> Observação: esta opção apenas estará habilitada se **Tabela** estiver selecionada.|  
+|**Nome e esquema da tabela**|Selecione a tabela de origem usada para recuperar dados para atualização incremental do cubo, grupo de medidas ou partição.<br /><br /> Observação: esta opção apenas estará habilitada se **Tabela** estiver selecionada.|  
 |**Consulta**|Clique para atualizar o objeto de uma consulta.|  
-|**Fonte de dados**|Selecione a fonte de dados na qual as tabelas a serem consultadas estão localizadas.<br /><br /> Observação: Essa opção estará habilitada apenas se **consulta** está selecionado.|  
-|**Texto da consulta**|Digite o texto da consulta usada para recuperar dados para atualização incremental do cubo, grupo de medidas ou partição.<br /><br /> Observação: Essa opção estará habilitada apenas se **consulta** está selecionado.|  
+|**Fonte de Dados**|Selecione a fonte de dados na qual as tabelas a serem consultadas estão localizadas.<br /><br /> Observação: esta opção apenas estará habilitada se **Consulta** estiver selecionada.|  
+|**Texto da consulta**|Digite o texto da consulta usada para recuperar dados para atualização incremental do cubo, grupo de medidas ou partição.<br /><br /> Observação: esta opção apenas estará habilitada se **Consulta** estiver selecionada.|  
   
-## <a name="see-also"></a>Consulte também  
- [Designers e caixas de diálogo do Analysis Services &#40;dados multidimensionais&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Processar caixa de diálogo &#40;Analysis Services - dados multidimensionais&#41;](process-dialog-box-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Analysis Services designers e caixas de diálogo &#40;dados multidimensionais&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Caixa de diálogo processo &#40;Analysis Services de dados multidimensionais&#41;](process-dialog-box-analysis-services-multidimensional-data.md)  
   
   

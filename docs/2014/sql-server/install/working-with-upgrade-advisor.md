@@ -1,5 +1,5 @@
 ---
-title: Trabalhando com o Supervisor de atualização | Microsoft Docs
+title: Trabalhando com o supervisor de atualização | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8b80e11ffdf12037b466531b0d5b10a2b9f3a2e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66090963"
 ---
 # <a name="working-with-upgrade-advisor"></a>Trabalhando com o Supervisor de Atualização
@@ -33,20 +33,20 @@ ms.locfileid: "66090963"
   
 -   Exiba os resultados da análise.  
   
- O Supervisor de Atualização inclui um analisador e um visualizador. O Assistente para Análise do Supervisor de Atualização analisa os componentes que você selecionar. Em seguida, o analisador gera relatórios personalizados sobre os problemas que devem ser solucionados antes da atualização para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Use o Visualizador de Relatórios do Supervisor de Atualização para exibir os relatórios personalizados. Para obter mais informações sobre quais análise do Supervisor de atualização detecta, consulte [Resolvendo problemas de atualização](../../../2014/sql-server/install/resolving-upgrade-issues.md).  
+ O Supervisor de Atualização inclui um analisador e um visualizador. O Assistente para Análise do Supervisor de Atualização analisa os componentes que você selecionar. Em seguida, o analisador gera relatórios personalizados sobre os problemas que devem ser solucionados antes da atualização para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Use o Visualizador de Relatórios do Supervisor de Atualização para exibir os relatórios personalizados. Para obter mais informações sobre o que a análise do supervisor de atualização detecta, consulte [resolvendo problemas de atualização](../../../2014/sql-server/install/resolving-upgrade-issues.md).  
   
  Os tópicos desta seção fornecem uma visão geral da funcionalidade do Supervisor de Atualização e informações sobre como usar o Supervisor de Atualização e seus relatórios.  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|Descrição|  
+|Tópico|DESCRIÇÃO|  
 |-----------|-----------------|  
-|[Visão geral do Supervisor de Atualização](../../../2014/sql-server/install/overview-of-upgrade-advisor.md)|Fornece uma visão geral do processo de atualização, do Assistente para Análise do Supervisor de Atualização e do Visualizador de Relatórios do Supervisor de Atualização.|  
+|[Visão geral do Assistente de Atualização](../../../2014/sql-server/install/overview-of-upgrade-advisor.md)|Fornece uma visão geral do processo de atualização, do Assistente para Análise do Supervisor de Atualização e do Visualizador de Relatórios do Supervisor de Atualização.|  
 |[Tópicos de informações práticas do Supervisor de Atualização](../../../2014/sql-server/install/upgrade-advisor-how-to-topics.md)|Fornece instruções para executar procedimentos comuns do Supervisor de Atualização.|  
-|[Referência de Interface de usuário do Supervisor de atualização](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)|Contém tópicos que serão exibidos se você pressionar a tecla F1 ou clique em **ajudar** nas páginas do Assistente para análise do Supervisor de atualização.|  
+|[Referência da interface de usuário do Supervisor de Atualização](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)|Contém os tópicos que aparecem se você pressionar a tecla F1 ou clicar em **ajuda** nas páginas do assistente de análise do supervisor de atualização.|  
   
-## <a name="see-also"></a>Consulte também  
- [Instalando o Supervisor de atualização](../../../2014/sql-server/install/installing-upgrade-advisor.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Instalando o supervisor de atualização](../../../2014/sql-server/install/installing-upgrade-advisor.md)   
  [Solucionando problemas de atualização](../../../2014/sql-server/install/resolving-upgrade-issues.md)  
   
   

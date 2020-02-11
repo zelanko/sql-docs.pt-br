@@ -1,5 +1,5 @@
 ---
-title: Algoritmo Regressão logística da Microsoft | Microsoft Docs
+title: Algoritmo de regressão logística da Microsoft | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 14e86ac2dd32f2a3e1384e08aca597794ee4bc71
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083962"
 ---
 # <a name="microsoft-logistic-regression-algorithm"></a>Algoritmo Regressão Logística da Microsoft
@@ -46,11 +46,11 @@ ms.locfileid: "66083962"
   
  Os requisitos de um modelo de regressão logística são os seguintes:  
   
- **Uma única coluna de chave** Cada modelo deve conter uma coluna de texto ou numérica que identifique unicamente cada registro. Chaves compostas não são permitidas.  
+ **Uma única coluna de chave** Cada modelo deve conter uma coluna numérica ou de texto que identifique exclusivamente cada registro. Chaves compostas não são permitidas.  
   
- **Colunas de entrada** Cada modelo deve conter pelo menos uma coluna de entrada que tenha os valores que serão usados como fatores na análise. Você pode ter quantas colunas de entrada desejar, mas, dependendo do número de valores em cada coluna, a inclusão de colunas extras pode aumentar o tempo que leva para treinar o modelo.  
+ **Colunas de entrada** Cada modelo deve conter pelo menos uma coluna de entrada que contenha os valores que são usados como fatores na análise. Você pode ter quantas colunas de entrada desejar, mas, dependendo do número de valores em cada coluna, a inclusão de colunas extras pode aumentar o tempo que leva para treinar o modelo.  
   
- **Pelo menos uma coluna previsível** O modelo deve conter pelo menos uma coluna previsível de qualquer tipo, incluindo dados numéricos contínuos. Os valores da coluna previsível também podem ser tratados como entradas no modelo ou você pode especificar que eles devem ser usados apenas para previsão. Não são permitidas tabelas aninhadas em colunas previsíveis, mas elas podem ser usadas como entradas.  
+ **Pelo menos uma coluna previsível** O modelo deve conter pelo menos uma coluna previsível de qualquer tipo de dados, incluindo dados numéricos contínuos. Os valores da coluna previsível também podem ser tratados como entradas no modelo ou você pode especificar que eles devem ser usados apenas para previsão. Não são permitidas tabelas aninhadas em colunas previsíveis, mas elas podem ser usadas como entradas.  
   
  Para obter informações mais detalhadas sobre os tipos de conteúdo e de dados aceitos por modelos de regressão logística, consulte a seção Requisitos de [Referência técnica do algoritmo Regressão Logística da Microsoft](microsoft-logistic-regression-algorithm-technical-reference.md).  
   
@@ -59,7 +59,7 @@ ms.locfileid: "66083962"
   
  Ao exibir o modelo usando o Visualizador de Rede Neural da Microsoft, o Analysis Services mostra os fatores que contribuem com um determinado resultado, classificados por importância. Você pode escolher um atributo e valores para comparar. Para obter mais informações, consulte [Procurar um modelo usando o Visualizador de Rede Neural da Microsoft](browse-a-model-using-the-microsoft-neural-network-viewer.md).  
   
- Para obter mais informações, você pode navegar pelos detalhes do modelo usando o Visualizador de Árvore de Conteúdo Genérica da Microsoft. O conteúdo do modelo em um modelo de regressão logística inclui um nó marginal que mostra todas as entradas usadas para o modelo e as sub-redes dos atributos previsíveis. Para obter mais informações, consulte [Mining Model Content for Logistic Regression Models &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-logistic-regression-models.md).  
+ Para obter mais informações, você pode navegar pelos detalhes do modelo usando o Visualizador de Árvore de Conteúdo Genérica da Microsoft. O conteúdo do modelo em um modelo de regressão logística inclui um nó marginal que mostra todas as entradas usadas para o modelo e as sub-redes dos atributos previsíveis. Para obter mais informações, consulte [Conteúdo do modelo de mineração para modelos de regressão logística &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-logistic-regression-models.md).  
   
 ## <a name="creating-predictions"></a>Criando previsões  
  Depois que o modelo foi treinado, você pode criar consultas para o conteúdo do modelo a fim de obter os coeficientes de regressão e outros detalhes ou pode usar o modelo para fazer previsões.  
@@ -78,9 +78,9 @@ ms.locfileid: "66083962"
   
 -   Não dá suporte ao uso de PMML para criar modelos de mineração.  
   
-## <a name="see-also"></a>Consulte também  
- [Conteúdo do modelo de mineração para modelos de regressão logística &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-logistic-regression-models.md)   
- [Referência técnica do algoritmo Regressão Logística da Microsoft](microsoft-logistic-regression-algorithm-technical-reference.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Conteúdo do modelo de mineração para modelos de regressão logística &#40;Analysis Services&#41;de mineração de dados](mining-model-content-for-logistic-regression-models.md)   
+ [Referência técnica do algoritmo regressão logística da Microsoft](microsoft-logistic-regression-algorithm-technical-reference.md)   
  [Exemplos de consulta de modelo de regressão logística](logistic-regression-model-query-examples.md)  
   
   

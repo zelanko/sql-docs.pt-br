@@ -1,5 +1,5 @@
 ---
-title: Referência técnica do algoritmo de cluster da Microsoft | Microsoft Docs
+title: Referência técnica do algoritmo Microsoft Clustering | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,10 +24,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d48dd57d71d04611947e0ec6158b29c97a6b7646
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084027"
 ---
 # <a name="microsoft-clustering-algorithm-technical-reference"></a>Referência técnica do algoritmo Microsoft Clustering
@@ -35,7 +35,7 @@ ms.locfileid: "66084027"
   
  Para obter informações adicionais sobre como usar modelos de clustering, consulte os seguintes tópicos:  
   
--   [Conteúdo do modelo de mineração para modelos de clustering &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+-   [Conteúdo do modelo de mineração para modelos de clustering &#40;mineração de dados Analysis Services&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
 -   [Exemplos de consulta de modelo de clustering](clustering-model-query-examples.md)  
   
@@ -65,7 +65,7 @@ ms.locfileid: "66084027"
   
  Para obter um relatório técnico que descreve a implementação do EM no algoritmo do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering, consulte [Scaling EM (Expectation Maximization) Clustering to Large Databases](https://go.microsoft.com/fwlink/?LinkId=45964)(Dimensionando clustering EM [Maximização de Expectativa] para bancos de dados grandes).  
   
-### <a name="k-means-clustering"></a>Cluster K-Means  
+### <a name="k-means-clustering"></a>Cluster K-means  
  O cluster K-means é um método conhecido de atribuir a associação de clusters minimizando as diferenças entre os itens de um cluster e maximizando a distância entre os clusters. Em K-means, a palavra “means” (médio) refere-se ao *centroide* do cluster, que é um ponto de dados escolhido arbitrariamente e refinado de modo iterativo até representar a média real de todos os pontos de dados do cluster. O “K” refere-se a um número arbitrário de pontos que são usados para propagar o processo de cluster. O algoritmo K-means calcula as distâncias euclidianas quadradas entre os registros de dados de um cluster e o vetor que representa a média do cluster e é convertido em um conjunto final de K clusters quando essa soma atinge um valor mínimo.  
   
  O algoritmo K-means atribui cada ponto de dados exatamente a um cluster e não permite incertezas na associação. A associação em um cluster é expressa como uma distância do centroide.  
@@ -159,9 +159,9 @@ ms.locfileid: "66084027"
 ### <a name="modeling-flags"></a>Sinalizadores de modelagem  
  O algoritmo dá suporte aos seguintes sinalizadores de modelagem. Você define sinalizadores de modelagem ao criar a estrutura de mineração ou o modelo de mineração. Os sinalizadores de modelagem especificam como os valores de cada coluna são controlados durante a análise.  
   
-|Sinalizador de modelagem|Descrição|  
+|Sinalizador de modelagem|DESCRIÇÃO|  
 |-------------------|-----------------|  
-|MODEL_EXISTENCE_ONLY|A coluna será tratada como tendo dois estados possíveis: Ausente e existente. Nulo é um valor ausente.<br /><br /> Aplica-se à coluna de modelo de mineração.|  
+|MODEL_EXISTENCE_ONLY|A coluna será tratada como tendo dois estados possíveis: Ausente e Existente. Nulo é um valor ausente.<br /><br /> Aplica-se à coluna de modelo de mineração.|  
 |NOT NULL|A coluna não pode conter um valor nulo. Um erro ocorrerá se o Analysis Services encontrar um valor nulo durante o treinamento do modelo.<br /><br /> Aplica-se à coluna de estrutura de mineração.|  
   
 ## <a name="requirements"></a>Requisitos  
@@ -170,7 +170,7 @@ ms.locfileid: "66084027"
 ### <a name="input-and-predictable-columns"></a>Colunas de entrada e colunas previsíveis  
  O algoritmo do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering dá suporte a colunas de entrada e colunas previsíveis específicas que são listadas na tabela a seguir. Para obter mais informações sobre o significado dos tipos de conteúdo quando usados em um modelo de mineração, consulte [Tipos de conteúdo &#40;Mineração de dados&#41;](content-types-data-mining.md).  
   
-|coluna|Tipos de conteúdo|  
+|Coluna|Tipos de conteúdo|  
 |------------|-------------------|  
 |Atributo de entrada|Contínuo, cíclico, discreto, diferenciado, chave, tabela, ordenado|  
 |Atributo previsível|Contínuo, cíclico, discreto, diferenciado, tabela, ordenado|  
@@ -178,9 +178,9 @@ ms.locfileid: "66084027"
 > [!NOTE]  
 >  Os tipos de conteúdo Cíclico e Ordenado têm suporte, mas o algoritmo os trata como valores discretos e não executa processamento especial.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Algoritmo Microsoft Clustering](microsoft-clustering-algorithm.md)   
  [Exemplos de consulta de modelo de clustering](clustering-model-query-examples.md)   
- [Conteúdo do modelo de mineração para modelos de clustering &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+ [Conteúdo do modelo de mineração para modelos de clustering &#40;mineração de dados Analysis Services&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
   

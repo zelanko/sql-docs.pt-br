@@ -1,5 +1,5 @@
 ---
-title: 'Etapa 2: Adicionando e configurando um Gerenciador de Conexão de arquivo simples | Microsoft Docs'
+title: 'Etapa 2: adicionar e configurar um gerenciador de conexões de arquivo simples | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,24 +11,24 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0c6cd41be722d80baf442db907d6fdab9f334859
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62891785"
 ---
-# <a name="step-2-adding-and-configuring-a-flat-file-connection-manager"></a>Etapa 2: Adicionar e configurar um gerenciador de conexões de arquivo simples
+# <a name="step-2-adding-and-configuring-a-flat-file-connection-manager"></a>Etapa 2: adicionando e configurando um gerenciador de conexões de arquivo simples
   Nesta tarefa, você adiciona um gerenciador de conexões de Arquivos Simples ao pacote que acabou de criar. Um gerenciador de conexões de Arquivos Simples habilita um pacote para extrair dados de um arquivo simples. Com o gerenciador de conexões de Arquivos Simples, você pode especificar o nome e o local do arquivo, a localidade e a página de códigos e o formato do arquivo, incluindo os delimitadores de coluna, a serem aplicados quando o pacote extrai os dados do arquivo simples. Além disso, é possível especificar manualmente o tipo de dados das colunas individuais ou usar a caixa de diálogo **Sugerir Tipos de Coluna** para mapear automaticamente as colunas de dados extraídos para os tipos de dados [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
  Você deve criar um novo gerenciador de conexões de Arquivos Simples para cada formato de arquivo com os quais você trabalha. Como este tutorial extrai dados de vários arquivos simples que apresentam exatamente o mesmo formato de dados, será preciso adicionar e configurar apenas um gerenciador de conexões de Arquivos Simples para seu pacote.  
   
  Neste tutorial, serão configuradas as seguintes propriedades em seu gerenciador de conexões de Arquivos Simples:  
   
--   **Nomes de coluna:** Porque o arquivo simples não tem nomes de coluna, o Gerenciador de conexão de arquivos simples cria padrão nomes de coluna. Estes nomes padrões não são úteis para identificar o que cada coluna representa. Para tornar esses nomes mais úteis, altere os nomes padrão para nomes que correspondam à tabela de fatos à qual os dados do arquivo simples serão carregados.  
+-   **Nomes de colunas:** Como o arquivo simples não tem nomes de coluna, o Gerenciador de conexões de arquivo simples cria nomes de coluna padrão. Estes nomes padrões não são úteis para identificar o que cada coluna representa. Para tornar esses nomes mais úteis, altere os nomes padrão para nomes que correspondam à tabela de fatos à qual os dados do arquivo simples serão carregados.  
   
--   **Mapeamentos de dados:** Os mapeamentos de tipo de dados que você especificar para o Gerenciador de conexão Flat File serão usados por todos os componentes de fonte de dados de arquivo simples que fazem referência ao Gerenciador de conexão. Os tipos de dados podem ser mapeados manualmente usando o gerenciador de conexões de Arquivos Simples ou a caixa de diálogo **Sugerir Tipos de Coluna** . Neste tutorial, você exibirá os mapeamentos sugeridos na caixa de diálogo **Sugerir Tipos de Coluna** e fará manualmente os mapeamentos necessários na caixa de diálogo **Editor do Gerenciador de Conexões de Arquivos Simples** .  
+-   **Mapeamentos de dados:** Os mapeamentos de tipo de dados que você especificar para o Gerenciador de conexões de arquivo simples serão usados por todos os componentes de fonte de dados de arquivo simples que fazem referência ao Gerenciador de conexões. Os tipos de dados podem ser mapeados manualmente usando o gerenciador de conexões de Arquivos Simples ou a caixa de diálogo **Sugerir Tipos de Coluna** . Neste tutorial, você exibirá os mapeamentos sugeridos na caixa de diálogo **Sugerir Tipos de Coluna** e fará manualmente os mapeamentos necessários na caixa de diálogo **Editor do Gerenciador de Conexões de Arquivos Simples** .  
   
- O gerenciador de conexões de Arquivos Simples fornece informações de localidade sobre o arquivo de dados. Se seu computador não estiver configurado para usar a opção regional Inglês (Estados Unidos), será preciso definir propriedades adicionais na caixa de diálogo **Editor do Gerenciador de Conexões de Arquivos Simples** .  
+ O gerenciador de conexões de Arquivos Simples fornece informações de localidade sobre o arquivo de dados. Se o computador não estiver configurado para usar a opção regional inglês (Estados Unidos), você deverá definir propriedades adicionais na caixa de diálogo **Editor do Gerenciador de conexões de arquivos simples** .  
   
 ### <a name="to-add-a-flat-file-connection-manager-to-the-ssis-package"></a>Para adicionar um gerenciador de conexões de arquivos simples ao pacote SSIS  
   
@@ -54,7 +54,7 @@ ms.locfileid: "62891785"
   
 1.  Na caixa de diálogo **Editor do Gerenciador de Conexões de Arquivos Simples** , clique em **Geral**.  
   
-2.  Defina **Localidade** como Inglês (Estados Unidos) e **Página de código** como 1252.  
+2.  Defina a **localidade** como inglês (Estados Unidos) e a **página de código** como 1252.  
   
 ### <a name="to-rename-columns-in-the-flat-file-connection-manager"></a>Renomear colunas no gerenciador de conexões de Arquivos Simples  
   
@@ -62,13 +62,13 @@ ms.locfileid: "62891785"
   
 2.  No painel de propriedade, faça as seguintes alterações:  
   
-    -   Alterar o **coluna 0** nome da propriedade a ser `AverageRate`.  
+    -   Altere a propriedade de nome da **coluna 0** para `AverageRate`.  
   
-    -   Alterar o **coluna 1** nome da propriedade a ser `CurrencyID`.  
+    -   Altere a propriedade de nome da **coluna 1** para `CurrencyID`.  
   
-    -   Alterar o **coluna 2** nome da propriedade a ser `CurrencyDate`.  
+    -   Altere a propriedade de nome da **coluna 2** para `CurrencyDate`.  
   
-    -   Alterar o **coluna 3** nome da propriedade a ser `EndOfDayRate`.  
+    -   Altere a propriedade de nome da **coluna 3** para `EndOfDayRate`.  
   
     > [!NOTE]  
     >  Por padrão, as quatro colunas são definidas inicialmente como um tipo de dados de cadeia de caracteres [DT_STR] com uma `OutputColumnWidth` de 50.  
@@ -77,7 +77,8 @@ ms.locfileid: "62891785"
   
 1.  Na caixa de diálogo **Editor do Gerenciador de Conexões de Arquivos Simples** , clique em **Sugerir Tipos**.  
   
-     [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sugere automaticamente os tipos de dados mais apropriados com base nas primeiras 200 linhas de dados. Também é possível alterar essas opções de sugestão para mostrar mais ou menos dados, para especificar o tipo de dados padrão para dados inteiro ou booliano, ou para adicionar espaços como preenchimento das colunas de cadeia de caracteres.  
+     
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sugere automaticamente os tipos de dados mais apropriados com base nas primeiras 200 linhas de dados. Também é possível alterar essas opções de sugestão para mostrar mais ou menos dados, para especificar o tipo de dados padrão para dados inteiro ou booliano, ou para adicionar espaços como preenchimento das colunas de cadeia de caracteres.  
   
      Por enquanto, não faça alterações nas opções na caixa de diálogo **Sugerir Tipos de Coluna** e clique em **OK** para que o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sugira os tipos de dados para as colunas. Esse procedimento retornará o painel **Avançado** da caixa de diálogo **Editor do Gerenciador de Conexões de Arquivos Simples** , em que é possível exibir os tipos de dados de coluna sugeridos pelo [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. (Se você clicar em **Cancelar**, nenhuma sugestão será indicada para os metadados da coluna e o tipo de dados da cadeia de caracteres padrão [DT_STR] será usado.)  
   
@@ -85,24 +86,24 @@ ms.locfileid: "62891785"
   
     |Coluna de Arquivos Simples|Tipo Sugerido|Coluna de Destino|Tipo de Destino|  
     |----------------------|--------------------|------------------------|----------------------|  
-    |AverageRate|float [DT_R4]|FactCurrency.AverageRate|float|  
+    |AverageRate|float [DT_R4]|FactCurrency.AverageRate|FLOAT|  
     |CurrencyID|string [DT_STR]|DimCurrency.CurrencyAlternateKey|nchar(3)|  
     |CurrencyDate|date [DT_DATE]|DimDate.FullDateAlternateKey|date|  
-    |EndOfDayRate|float [DT_R4]|FactCurrency.EndOfDayRate|float|  
+    |EndOfDayRate|float [DT_R4]|FactCurrency.EndOfDayRate|FLOAT|  
   
-     O tipo de dados sugerido para o `CurrencyID` coluna é incompatível com o tipo de dados do campo na tabela de destino. Porque o tipo de dados `DimCurrency.CurrencyAlternateKey` é nchar (3), `CurrencyID` deve ser alterado de cadeia de caracteres [DT_STR] para cadeia de caracteres [DT_WSTR]. Além disso, o campo `DimDate.FullDateAlternateKey` é definido como um tipo de dados de data; portanto, `CurrencyDate` precisa ser alterado da data [DT_Date] para a data do banco de dados [DT_DBDATE].  
+     O tipo de dados sugerido para `CurrencyID` a coluna é incompatível com o tipo de dados do campo na tabela de destino. Como o tipo de dados `DimCurrency.CurrencyAlternateKey` de é nchar (3) `CurrencyID` , deve ser alterado de cadeia de caracteres [DT_STR] para cadeia de caracteres [DT_WSTR]. Além disso, o `DimDate.FullDateAlternateKey` campo é definido como um tipo de dados de data; Portanto, `CurrencyDate` o precisa ser alterado da data [DT_DATE] para a data do banco de dados [DT_DBDATE].  
   
-2.  Na lista, selecione a coluna CurrencyID e no painel de propriedade, altere o tipo de dados da coluna `CurrencyID` de cadeia de caracteres [DT_STR] para Unicode da cadeia de caracteres [DT_WSTR].  
+2.  Na lista, selecione a coluna CurrencyID e, no painel Propriedade, altere o tipo de dados da coluna `CurrencyID` da cadeia de caracteres [DT_STR] para cadeia de caracteres Unicode [DT_WSTR].  
   
-3.  No painel de propriedade, altere o tipo de dados da coluna `CurrencyDate` da data [DT_DATE] para a data do banco de dados [DT_DBDATE].  
+3.  No painel Propriedade, altere o tipo de dados da coluna `CurrencyDate` de data [DT_DATE] para data do banco de dado [DT_DBDATE].  
   
 4.  Clique em **OK**.  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
- [Etapa 3: Adicionando e configurando um Gerenciador de Conexão do OLE DB](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
+ [Etapa 3: adicionando e configurando um gerenciador de conexões OLE DB](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Gerenciador de Conexão de arquivo simples](connection-manager/file-connection-manager.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Gerenciador de conexões de arquivos simples](connection-manager/file-connection-manager.md)   
  [Tipos de dados do Integration Services](data-flow/integration-services-data-types.md)  
   
   

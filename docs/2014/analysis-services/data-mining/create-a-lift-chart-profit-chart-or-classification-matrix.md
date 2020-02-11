@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 033965a6152edaf3d62fcd8c29476651648c1697
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085411"
 ---
 # <a name="create-a-lift-chart-profit-chart-or-classification-matrix"></a>Criar um gráfico de comparação de precisão, gráfico de lucro ou matriz de classificação
@@ -69,49 +69,49 @@ ms.locfileid: "66085411"
   
     -   Selecione a opção, **Usar casos de teste da estrutura de mineração**, para usar o conjunto completo de casos de teste definido como parte do conjunto de dados de controle de estruturas de mineração.  
   
-    -   Selecione a opção **Especificar um conjunto de dados diferente**se você quiser usar dados externos.  O conjunto de dados deve estar disponível como uma exibição da fonte de dados.   Clique no botão Procurar ( **...** ) botão para escolher as tabelas de dados a ser usado para o gráfico de precisão. Para obter mais informações, consulte [Escolher e mapear dados de teste de modelo](choose-and-map-model-testing-data.md).  
+    -   Selecione a opção **Especificar um conjunto de dados diferente**se você quiser usar dados externos.  O conjunto de dados deve estar disponível como uma exibição da fonte de dados.   Clique no botão procurar (**...**) para escolher as tabelas de dados a serem usadas para o gráfico de precisão. Para obter mais informações, consulte [Escolher e mapear dados de teste de modelo](choose-and-map-model-testing-data.md).  
   
          Se você estiver usando um conjunto de dados externo, poderá filtrar, se desejar, o conjunto de dados de entrada. Para obter mais informações, consulte [Aplicar filtros aos dados de teste de modelo](apply-filters-to-model-testing-data.md).  
   
 > [!NOTE]  
->  Não é possível criar um filtro nos casos de teste de modelo ou nos casos de teste de estrutura na guia **Seleção de Entrada** . Para criar um filtro no modelo de mineração, modifique a propriedade Filtro do modelo. Para obter mais informações, consulte [Aplicar um filtro a um modelo de mineração](apply-a-filter-to-a-mining-model.md).  
+>  Você não pode criar um filtro nos casos de teste do modelo ou nos casos de teste da estrutura de mineração na guia **seleção de entrada** . Para criar um filtro no modelo de mineração, modifique a propriedade Filter do modelo. Para obter mais informações, consulte [Aplicar um filtro a um modelo de mineração](apply-a-filter-to-a-mining-model.md).  
   
 ### <a name="configure-chart-settings-and-generate-the-chart"></a>Definir configurações de gráfico e gerar o gráfico  
   
 1.  Na guia **Gráfico de Precisão de Mineração** , clique na guia do gráfico que deseja criar.  
   
-2.  Para um **gráfico de comparação de precisão**, clique na guia **Gráfico de Comparação de Precisão** . O gráfico é gerado automaticamente com base no modelo, atributos previsíveis e dados de entrada recém-selecionados.  
+2.  Para obter um gráfico de comparação de **precisão**, clique na guia gráfico de comparação de **precisão** . O gráfico é gerado automaticamente com base no modelo, atributos previsíveis e dados de entrada que você acabou de selecionar.  
   
-3.  Para uma **matriz de classificação**, clique na guia **Matriz de Classificação** . Não são necessárias configurações adicionais; o gráfico é gerado automaticamente com base nos dados de entrada e no modelo selecionado.  
+3.  Para uma **matriz de classificação**, clique na guia **matriz de classificação** . Nenhuma configuração adicional é necessária; o gráfico é gerado automaticamente com base nos dados de entrada e no modelo que você selecionou.  
   
-4.  Para obter um **gráfico de ganho**, primeiro clique na guia **Gráfico de Comparação de Precisão** . Depois, na lista suspensa **Tipo de gráfico** , selecione **Gráfico de ganho**.  
+4.  Para um **gráfico de ganho**, primeiro clique na guia gráfico de comparação de **precisão** . Em seguida, na lista suspensa **tipo de gráfico** , selecione **gráfico de ganho**.  
   
      Insira as configurações a seguir na caixa de diálogo **Configurações do Gráfico de Ganho** .  
   
-     **População**  
+     **Média**  
      O número de casos do conjunto de dados que você quer usar ao criar o gráfico de comparação de precisão.  
   
      O modelo sempre escolhe os casos na ordem de probabilidade decrescente, ou seja, se você está avaliando clientes em potencial e escolhe um número que representa somente metade dos registros do seu banco de dados de clientes, o modelo medirá a precisão no subconjunto de casos que melhor se adaptar ao seu modelo.  
   
      Isso acontece porque, ao usar o modelo para gerar uma correspondência ou criar uma campanha, você usa a probabilidade da previsão associada a cada caso para enviar mala direta apenas aos clientes com maior probabilidade de fornecer uma resposta positiva.  
   
-     **Custo Fixo**  
+     **Custo fixo**  
      O custo fixo associado ao problema empresarial.  
   
      No caso de uma solução de mala direta, o custo fixo poderia representar a taxa de instalação de uma impressora, que é o custo inicial da preparação da mala direta promocional.  
   
      Esse custo se aplica uma vez a toda população alvo.  
   
-     **Custo Individual**  
+     **Custo individual**  
      Os custos adicionais ao custo fixo, que podem estar associados a cada contato de cliente. Por exemplo, você poderia inserir o custo da tarifa de correio, no caso de mala direta promocional, ou de ligações telefônicas.  
   
      Esse custo deve ser o mesmo para toda a população alvo. Cada valor é multiplicado pelo número de casos designados.  
   
-     **Receita por Indivíduo**  
+     **Receita por indivíduo**  
      A receita associada a cada venda bem sucedida.  
   
-## <a name="see-also"></a>Consulte também  
- [Gráfico de comparação de precisão &#40;Analysis Services – Mineração de dados&#41;](lift-chart-analysis-services-data-mining.md)   
- [Matriz de classificação &#40;Analysis Services – Mineração de dados&#41;](classification-matrix-analysis-services-data-mining.md)  
+## <a name="see-also"></a>Consulte Também  
+ [&#40;do gráfico de comparação de precisão Analysis Services-Mineração de dados&#41;](lift-chart-analysis-services-data-mining.md)   
+ [&#40;de matriz de classificação Analysis Services&#41;de mineração de dados](classification-matrix-analysis-services-data-mining.md)  
   
   

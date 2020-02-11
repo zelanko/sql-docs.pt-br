@@ -1,5 +1,5 @@
 ---
-title: Gerenciamento de instâncias do Analysis Services | Microsoft Docs
+title: Gerenciamento de instância do Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ac0c6637dd08dc2ea8927853b7a6bf8dccca454d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080346"
 ---
 # <a name="analysis-services-instance-management"></a>Gerenciamento de instância do Analysis Services
@@ -40,23 +40,23 @@ ms.locfileid: "66080346"
  Como regra geral, a maioria das tarefas administrativas que você deve executar não variam por modo. Como administrador de sistema do Analysis Services, você pode usar os mesmos procedimentos e scripts para gerenciar qualquer instância do Analysis Services em sua rede independentemente de como tenha sido instalado.  
   
 > [!NOTE]  
->  A exceção é o PowerPivot para SharePoint. A administração de servidor de uma implantação do PowerPivot sempre está dentro do contexto de um farm do SharePoint. O PowerPivot difere de outros modos de servidor porque sempre é de instância única e sempre gerenciada por meio da Administração Central do SharePoint ou da Ferramenta de Configuração do PowerPivot. Embora seja possível conectar-se ao PowerPivot para SharePoint no SQL Server Management Studio ou [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], isso não é desejável. Um farm do SharePoint inclui infraestrutura que sincroniza o estado de servidor e supervisiona a disponibilidade do servidor. Usar outras ferramentas pode interferir com estas operações. Para obter mais informações sobre a administração de servidor do PowerPivot, consulte [PowerPivot para SharePoint &#40;SSAS&#41;](../power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md).  
+>  A exceção é o PowerPivot para SharePoint. A administração de servidor de uma implantação do PowerPivot sempre está dentro do contexto de um farm do SharePoint. O PowerPivot difere de outros modos de servidor porque sempre é de instância única e sempre gerenciada por meio da Administração Central do SharePoint ou da Ferramenta de Configuração do PowerPivot. Embora seja possível conectar-se ao PowerPivot para SharePoint no SQL Server Management Studio ou [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], isso não é desejável. Um farm do SharePoint inclui infraestrutura que sincroniza o estado de servidor e supervisiona a disponibilidade do servidor. Usar outras ferramentas pode interferir com estas operações. Para obter mais informações sobre a administração do servidor do PowerPivot, consulte [PowerPivot para SharePoint &#40;SSAS&#41;](../power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md).  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
 |Link|Descrição da tarefa|  
 |----------|----------------------|  
-|[Configuração de pós-instalação &#40;Analysis Services&#41;](post-install-configuration-analysis-services.md)|Descreve as tarefas necessárias e opcionais que completam ou modificam uma instalação do Analysis.|  
+|[&#40;de configuração de pós-instalação Analysis Services&#41;](post-install-configuration-analysis-services.md)|Descreve as tarefas necessárias e opcionais que completam ou modificam uma instalação do Analysis.|  
 |[Conectar ao Analysis Services](connect-to-analysis-services.md)|Descreve as propriedades de cadeia de conexão, as bibliotecas de cliente, as metodologias de autenticação, e as etapas para estabelecer ou limpar conexões.|  
 |[Monitorar uma instância do Analysis Services](monitor-an-analysis-services-instance.md)|Descreve ferramentas e técnicas por monitorar uma instância de servidor, inclusive como usar o Desempenho do Sistema e o SQL Server Profiler.|  
-|[Script de tarefas administrativas no Analysis Services](../script-administrative-tasks-in-analysis-services.md)|Explica como automatizar muitas tarefas administrativas, inclusive processamento.|  
-|[Cenários de globalização para Analysis Services multidimensional](../globalization-scenarios-for-analysis-services-multiidimensional.md)|Explica o suporte ao idioma e à ordenação, as etapas para alterar ambas as propriedades e dicas para definir e testar comportamentos de idioma e de ordenação.|  
+|[Criar script de tarefas administrativas no Analysis Services](../script-administrative-tasks-in-analysis-services.md)|Explica como automatizar muitas tarefas administrativas, inclusive processamento.|  
+|[Cenários de globalização para Analysis Services Multidimensional](../globalization-scenarios-for-analysis-services-multiidimensional.md)|Explica o suporte ao idioma e à ordenação, as etapas para alterar ambas as propriedades e dicas para definir e testar comportamentos de idioma e de ordenação.|  
 |[Operações de log no Analysis Services](log-operations-in-analysis-services.md)|Descreve os logs e explica como configurá-los.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Comparando soluções tabulares e multidimensionais &#40;SSAS&#41;](../comparing-tabular-and-multidimensional-solutions-ssas.md)   
- [Ferramentas de configuração do PowerPivot](../power-pivot-sharepoint/power-pivot-configuration-tools.md)   
- [Administração de servidor do PowerPivot e a configuração na Administração Central](../power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)   
- [Determina o Modo de Servidor de uma instância do Analysis Services.](determine-the-server-mode-of-an-analysis-services-instance.md)  
+ [Ferramentas de Configuração do PowerPivot](../power-pivot-sharepoint/power-pivot-configuration-tools.md)   
+ [Administração e configuração do servidor PowerPivot na administração central](../power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)   
+ [Determinar o modo de servidor de uma instância de Analysis Services](determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: adf29f6f73020ddc265072b3b9f3f67042200506
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085247"
 ---
 # <a name="create-an-olap-mining-structure"></a>Criar uma estrutura de mineração OLAP
@@ -28,46 +28,46 @@ ms.locfileid: "66085247"
   
  [Cenários para usar a mineração de dados em soluções OLAP](#bkmk_OLAP_Scenarios)  
   
- [Filtros](#bkmk_Filters)  
+ [Filter](#bkmk_Filters)  
   
  [Usando tabelas aninhadas](#bkmk_Nested)  
   
  [Dimensões de mineração de dados](#bkmk_DMDimension)  
   
-##  <a name="bkmk_Reqs"></a> Requisitos para a estrutura e modelos de mineração OLAP  
+##  <a name="bkmk_Reqs"></a>Requisitos para estrutura e modelos de mineração OLAP  
  Se você está criando um modelo de mineração OLAP, sua fonte de dados já existe, no banco de dados usado para criar o cubo. Você não pode se conectar a um cubo remoto e criar objetos de mineração de dados; os objetos de cubo devem estar disponíveis na mesma solução que o banco de dados como a estrutura de mineração que você criará.  
   
  Se você não tiver os arquivos de projeto originais, ou não quiser alterá-los, poderá usar a opção no Visual Studio, **Importar do Servidor (Multidimensional ou Mineração de dados)**, para obter uma cópia dos metadados e dos objetos de solução. Você pode modificar o destino de implantação, editar fontes de dados e trabalhar com os objetos de cubo sem afetar os objetos existentes.  
   
  Para obter mais informações, consulte [Importar um projeto de mineração de dados usando o Assistente de Importação do Analysis Services](import-a-data-mining-project-using-the-analysis-services-import-wizard.md).  
   
-##  <a name="bkmk_Overview"></a> Visão geral do processo de mineração de dados OLAP  
+##  <a name="bkmk_Overview"></a>Visão geral do processo de mineração de dados OLAP  
  Inicie o Assistente de Mineração de Dados, clicando com o botão direito do mouse no nó **Estruturas de Mineração** , no Gerenciador de Soluções, e selecionando  **Nova Estrutura de Mineração**. O assistente orienta-o pelas seguintes etapas para criar a estrutura de um novo modelo e estrutura:  
   
-1.  **Selecione o método de definição**: Aqui você seleciona os dados de um tipo de fonte e, em seguida, escolha **de cubo existente**.  
+1.  **Selecione o método de definição**: aqui você seleciona um tipo de fonte de dados e escolhe um **cubo existente**.  
   
     > [!NOTE]  
     >  O cubo OLAP usado como uma origem deve existir no mesmo banco de dados que a estrutura de mineração, conforme descrito acima. Além disso, você não pode usar um cubo criado pelo suplemento PowerPivot para Excel como uma fonte para mineração de dados.  
   
-2.  **Criar a estrutura de mineração de dados**: Determine se você criará somente uma estrutura ou uma estrutura com um modelo de mineração.  
+2.  **Criar a estrutura de mineração de dados**: Determine se você criará apenas uma estrutura ou uma estrutura com um modelo de mineração.  
   
      Você também deve escolher um algoritmo apropriado para analisar seus dados. Para obter orientação sobre qual algoritmo é melhor para determinadas tarefas, consulte HYPERLINK "ms-help://SQL111033/as_1devconc/html/ed1fc83b-b98c-437e-bf53-4ff001b92d64.htm" Algoritmos de mineração de dados (Analysis Services - Data Mining).  
   
-3.  **Selecionar a dimensão do cubo de origem**: Esta etapa é o mesmo que selecionar uma fonte de dados. Você precisa escolher a única dimensão que contém os dados mais importantes usados para treinar seu modelo. Você pode adicionar dados de outras dimensões posteriormente ou filtrar a dimensão.  
+3.  **Selecione a dimensão do cubo de origem**: essa etapa é a mesma que selecionar uma fonte de dados. Você precisa escolher a única dimensão que contém os dados mais importantes usados para treinar seu modelo. Você pode adicionar dados de outras dimensões posteriormente ou filtrar a dimensão.  
   
-4.  **Selecione a chave do caso**: Na dimensão recém-selecionada, escolha um atributo (coluna) para servir como o identificador exclusivo de seus dados de caso.  
+4.  **Selecione a chave de caso**: dentro da dimensão que você acabou de selecionar, escolha um atributo (coluna) para servir como o identificador exclusivo para seus dados de caso.  
   
      Normalmente, uma coluna será pré-selecionada para você, mas será possível alterar a coluna se houver várias chaves.  
   
-5.  **Selecionando colunas de nível de caso**: Aqui você escolhe os atributos da dimensão selecionada e as medidas relacionadas, que são relevantes para sua análise. Esta etapa equivale a selecionar colunas de uma tabela.  
+5.  **Selecionando colunas de nível de caso**: aqui você escolhe os atributos da dimensão selecionada e as medidas relacionadas que são relevantes para sua análise. Esta etapa equivale a selecionar colunas de uma tabela.  
   
      O assistente inclui automaticamente para sua análise e seleção quaisquer medidas criadas usando atributos da dimensão selecionada.  
   
-     Por exemplo, se seu cubo contiver uma medida que calcula o custo de frete com base em localização geográfica do cliente e escolher a dimensão cliente como a fonte de dados principal para modelagem, a medida será proposta como um candidato para adicionar ao modelo. Tenha cuidado ao adicionar muitas medidas que já estejam diretamente baseadas em atributos, pois já existe uma relação implícita entre as colunas, conforme definido na fórmula de medida, e a força desta correlação (esperada) pode obscurecer outras relações porventura descobertas.  
+     Por exemplo, se o cubo contiver uma medida que calcule o custo do frete com base na localização geográfica do cliente e você escolher a dimensão cliente como sua fonte de dados principal para modelagem, a medida será proposta como um candidato para a adição ao modelo. Tenha cuidado ao adicionar muitas medidas que já estejam diretamente baseadas em atributos, pois já existe uma relação implícita entre as colunas, conforme definido na fórmula de medida, e a força desta correlação (esperada) pode obscurecer outras relações porventura descobertas.  
   
-6.  **Especificar o uso de colunas do modelo de mineração**: Para cada atributo ou medida adicionada à estrutura, você deve especificar se o atributo deve ser usado para previsão, ou como entrada. Se você não selecionar uma destas opções, os dados serão processados, mas não serão usados para análise; porém, eles estarão disponíveis como dados em segundo plano caso você habilite o detalhamento posteriormente.  
+6.  **Especificar o uso da coluna do modelo de mineração**: para cada atributo ou medida que você adicionou à estrutura, você deve especificar se o atributo deve ser usado para previsão ou usado como entrada. Se você não selecionar uma destas opções, os dados serão processados, mas não serão usados para análise; porém, eles estarão disponíveis como dados em segundo plano caso você habilite o detalhamento posteriormente.  
   
-7.  **Adicionar tabelas aninhadas**: Clique para adicionar tabelas relacionadas. Na caixa de diálogo **Selecionar uma Dimensão de Grupo de Medidas** , você pode escolher uma única dimensão entre as dimensões relacionadas à dimensão atual.  
+7.  **Adicionar tabelas aninhadas**: clique para adicionar tabelas relacionadas. Na caixa de diálogo **Selecionar uma Dimensão de Grupo de Medidas** , você pode escolher uma única dimensão entre as dimensões relacionadas à dimensão atual.  
   
      Em seguida, use a caixa de diálogo **Selecionar uma Chave de Tabela Aninhada** para definir como a nova dimensão é relacionada à dimensão que contém os dados de caso.  
   
@@ -75,21 +75,21 @@ ms.locfileid: "66085247"
   
      Depois de adicionar todos os atributos aninhados necessários, retorne à página, **Especificar Uso de Colunas do Modelo de Mineração**e clique em **Avançar**.  
   
-8.  **Especificar colunas de conteúdo e tipo de dados**: Nesse ponto, você adicionou todos os dados que serão usados para análise e devem especificar o *tipo de dados* e *tipo de conteúdo* para cada atributo.  
+8.  **Especificar o tipo de dados e o conteúdo das colunas**: nesse ponto, você adicionou todos os dados que serão usados para análise e deve especificar o *tipo de dados* e o tipo de *conteúdo* para cada atributo.  
   
      Em um modelo OLAP, você não tem a opção de detectar tipos de dados automaticamente, porque o tipo de dados já está definido pela solução multidimensional e não pode ser alterado. As chaves também são identificadas automaticamente. Para obter mais informações, consulte [Tipos de dados &#40;Mineração de dados&#41;](data-types-data-mining.md).  
   
      O *tipo de conteúdo* que você escolhe para cada coluna que usa no modelo informa como o algoritmo deve processar os dados. Para obter mais informações, consulte [Tipos de conteúdo &#40;Mineração de dados&#41;](content-types-data-mining.md).  
   
-9. **Dividindo o cubo de origem**: Aqui você pode definir filtros em um cubo para selecionar um subconjunto de dados e treinar modelos mais direcionados.  
+9. **Fatiando o cubo de origem**: aqui você pode definir filtros em um cubo para selecionar apenas um subconjunto de dados e treinar modelos que são mais direcionados.  
   
      Você filtra um cubo escolhendo a dimensão de filtragem, selecionando o nível da hierarquia que contém os critérios a serem usados e digitando uma condição a ser usada como o filtro.  
   
-10. **Criar conjunto de testes**: Nessa página, você pode informar o Assistente para a quantidade de dados deve ser definido reservados para uso ao testar o modelo. Se seus dados oferecerão suporte a vários modelos, convém criar um conjunto de dados de controle, de forma que todos os modelos possam ser testados nos mesmos dados.  
+10. **Criar conjunto de teste**: nessa página, você pode informar ao assistente quantos dados devem ser separados para uso no teste do modelo. Se seus dados oferecerão suporte a vários modelos, convém criar um conjunto de dados de controle, de forma que todos os modelos possam ser testados nos mesmos dados.  
   
      Para obter mais informações, consulte [Teste e validação &#40;Mineração de dados&#41;](testing-and-validation-data-mining.md).  
   
-11. **Concluindo o assistente**: Nessa página, dê um nome para a nova estrutura de mineração e o modelo de mineração associado e salve a estrutura e modelo.  
+11. **Concluindo o assistente**: nessa página, você fornece um nome para a nova estrutura de mineração e o modelo de mineração associado e salva a estrutura e o modelo.  
   
      Nesta página, você também pode definir as seguintes opções:  
   
@@ -103,28 +103,32 @@ ms.locfileid: "66085247"
   
  Neste ponto, a estrutura de mineração e seu modelo são apenas metadados; você precisará processar ambos para obter resultados.  
   
-##  <a name="bkmk_OLAP_Scenarios"></a> Cenários para uso de mineração de dados com dados OLAP  
+##  <a name="bkmk_OLAP_Scenarios"></a>Cenários para uso de mineração de dados com dados OLAP  
  Os cubos OLAP geralmente contêm tantos membros e tantas dimensões que pode ser difícil saber por onde começar a mineração de dados. Para ajudar a identificar os padrões que os cubos contêm, geralmente você identifica uma única dimensão de interesse e, em seguida, começa a explorar os padrões relacionados à dimensão. A tabela a seguir lista várias tarefas de mineração de dados OLAP comuns, descreve os cenários de amostra nos quais você pode aplicar cada tarefa e identifica o algoritmo de mineração de dados a ser usado para cada tarefa.  
   
 |Tarefa|Cenário de exemplo|Algoritmo|  
 |----------|---------------------|---------------|  
-|Agrupar membros em clusters|Segmente uma dimensão de cliente com base nas propriedades do membro do cliente, os produtos que os clientes compram e a quantidade de dinheiro que eles gastam.|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Algoritmo de Cluster|  
-|Localizar membros interessantes ou anormais|Identifique lojas interessantes ou anormais em uma dimensão de loja com base em vendas, lucros, local da loja e tamanho da loja.|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Algoritmo de Árvores de Decisão|  
-|Localizar células interessantes ou anormais|Identifique as vendas por loja que contradizem as tendências típicas com o tempo.|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series|  
-|Localize correlações|Identifique fatores relacionados ao tempo de inatividade do servidor, inclusive região, tipo de computador, SO ou data de compra.|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Naïve Bayes|  
+|Agrupar membros em clusters|Segmente uma dimensão de cliente com base nas propriedades do membro do cliente, os produtos que os clientes compram e a quantidade de dinheiro que eles gastam.|
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Algoritmo de Cluster|  
+|Localizar membros interessantes ou anormais|Identifique lojas interessantes ou anormais em uma dimensão de loja com base em vendas, lucros, local da loja e tamanho da loja.|
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Algoritmo de Árvores de Decisão|  
+|Localizar células interessantes ou anormais|Identifique as vendas por loja que contradizem as tendências típicas com o tempo.|
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series|  
+|Localize correlações|Identifique fatores relacionados ao tempo de inatividade do servidor, inclusive região, tipo de computador, SO ou data de compra.|
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naïve Bayes|  
   
-##  <a name="bkmk_Filters"></a> Dividindo um cubo versus. Filtrando modelos  
+##  <a name="bkmk_Filters"></a>Fatiando um cubo versus filtrando modelos  
  Fatiar o cubo enquanto cria um modelo é como criar um filtro em um modelo de mineração relacional. Em um modelo relacional, o filtro na fonte de dados é definido como uma cláusula WHERE em uma instrução SQL; em um cubo, você usa o editor para criar instruções de filtro que usam MDX.  
   
  Por exemplo, um cubo pode conter informações sobre compras de produtos no mundo, mas, para sua campanha de marketing, você deseja criar um modelo baseado na análise de consumidoras com mais de 30 anos que morem no Reino Unido.  
   
  Neste cenário, você criaria dois filtros:  
   
--   Para o primeiro filtro, você teria escolherá a dimensão Geografia, escolherá a hierarquia para região e, em seguida, usar o **expressão de filtro** lista para escolher "Reino Unido" nos possíveis valores.  
+-   Para o primeiro filtro, escolha a dimensão Geografia, escolha a hierarquia para região e, em seguida, use a lista **expressão de filtro** para escolher "Reino Unido" dos valores possíveis.  
   
--   Para o segundo filtro, escolher a dimensão cliente, selecione o atributo gênero e selecionará "Feminino" na lista de valores de atributo.  
+-   Para o segundo filtro, escolha a dimensão cliente, selecione o atributo gênero e selecione "fêmea" na lista de valores de atributo.  
   
- Após a criação da estrutura de mineração, você pode modificar a definição dos dados de cubo e os critérios de filtro. Para obter mais informações, consulte [Filtrar o cubo de origem para uma estrutura de mineração](../filter-the-source-cube-for-a-mining-structure.md).  
+ Após a criação da estrutura de mineração, você pode modificar a definição dos dados de cubo e os critérios de filtro. Para obter mais informações, consulte [Filter the Source Cube for a Mining Structure](../filter-the-source-cube-for-a-mining-structure.md).  
   
  As guias **Estrutura de Mineração** e **Modelo de Mineração** fornecem uma opção para adicionar um filtro a uma estrutura de mineração existente, clicando em **Definir uma Fatia do Cubo**. A caixa de diálogo **Fatiar Cubo** ajuda-o a criar uma expressão de filtro MDX válida, escolhendo um valor nas listas suspensas.  
   
@@ -133,22 +137,22 @@ ms.locfileid: "66085247"
   
  Você pode adicionar quantos filtros forem necessários no cubo para retornar os dados necessários ao modelo de mineração. Você também pode definir fatias em fatias de cubo individuais. Por exemplo, se a sua estrutura contiver duas tabelas aninhadas baseadas em produtos, você poderá fatiar uma tabela em março de 2004 e a outra tabela em abril de 2004. O modelo resultante poderá então ser usado para prever compras realizadas em abril com base nas compras que foram realizadas em março.  
   
-##  <a name="bkmk_Nested"></a> Usando tabelas aninhadas em um modelo de mineração OLAP  
+##  <a name="bkmk_Nested"></a>Usando tabelas aninhadas em um modelo de mineração OLAP  
  Quando você usar o Assistente de Mineração de Dados para criar um modelo baseado em dados de cubo, poderá adicionar tabelas aninhadas especificando os nomes de dimensões relacionadas e, depois, escolhendo os atributos ou medidas a serem adicionadas ao modelo  
   
  Por exemplo, caso a dimensão principal usada para dados de caso seja Cliente, você pode adicionar a dimensão Produtos como uma dimensão relacionada, porque você espera que um cliente tenha solicitado vários produtos ao longo do tempo, e o cubo já vincula cada cliente aos diversos produtos por meio das tabelas de fatos de pedidos.  
   
- Você adiciona tabelas aninhadas à página **Especificar Uso de Colunas do Modelo de Mineração** do assistente, clicando em **Adicionar Tabelas Aninhadas**. Uma caixa de diálogo é aberta e orienta-o no processo de escolher uma dimensão relacionada, bem como na escolha de medidas. As dimensões de caso e aninhadas devem ser relacionadas por uma chave estrangeira, e medidas devem usar um dos atributos já incluídos nas tabelas de caso ou aninhadas. Infelizmente, essas restrições não contribuem muito para estreitar o escopo, portanto, você deve ter cuidado para selecionar apenas os atributos que são úteis para modelagem.  
+ Você adiciona tabelas aninhadas à página **Especificar Uso de Colunas do Modelo de Mineração** do assistente, clicando em **Adicionar Tabelas Aninhadas**. Uma caixa de diálogo é aberta e orienta-o no processo de escolher uma dimensão relacionada, bem como na escolha de medidas. As dimensões de caso e aninhadas devem ser relacionadas por uma chave estrangeira, e medidas devem usar um dos atributos já incluídos nas tabelas de caso ou aninhadas. Infelizmente, essas restrições realmente não fazem muito para restringir o escopo, portanto, você deve ter cuidado para selecionar apenas os atributos que são úteis para modelagem.  
   
  Para cada atributo ou medida adicionada à tabela aninhada, especifique se o atributo aninhado será usado para previsão ou não, selecionando **Previsível** ou **Entrada** na caixa de diálogo **Selecionar Colunas de Tabela Aninhada** . Se você não selecionar uma destas opções, os dados serão adicionados à estrutura de mineração, mas não serão usados para análise.  
   
- Para cada atributo e medida, especifique também se o atributo é discreto, discretizado ou contínuo. O assistente selecionará previamente um padrão com base no tipo de dados do atributo, mas você pode precisar alterá-los, dependendo dos requisitos de algoritmo. Se você escolher um tipo de conteúdo que não é compatível com o algoritmo que você tiver escolhido (por exemplo, você usar um tipo numérico contínuo com um modelo de Naïve Bayes), você não obterá uma mensagem de erro até que você tentar processar o modelo.  
+ Para cada atributo e medida, especifique também se o atributo é discreto, discretizado ou contínuo. O assistente selecionará previamente um padrão com base no tipo de dados do atributo, mas você pode precisar alterá-los, dependendo dos requisitos de algoritmo. Se você escolher um tipo de conteúdo que não seja compatível com o algoritmo escolhido (por exemplo, usar um tipo numérico contínuo com um modelo de Bayes ingênua), você não receberá uma mensagem de erro até tentar processar o modelo.  
   
  Quando você terminar de configurar estas opções, o assistente adicionará a tabela aninhada à tabela de casos. O nome padrão para a tabela aninhada é o nome da dimensão aninhada, mas você pode alterar o nome da tabela aninhada e de suas colunas. Você pode repetir este processo para adicionar várias tabelas aninhadas à estrutura de mineração.  
   
  A capacidade de usar dados de tabela aninhada como essa é um recurso de mineração de dados do SQL Server especialmente avançado e, em um cubo, as possibilidades de usar subconjuntos de dados relacionados são praticamente ilimitadas.  
   
-##  <a name="bkmk_DMDimension"></a> Noções básicas de dimensões e detalhamento de mineração de dados  
+##  <a name="bkmk_DMDimension"></a>Noções básicas sobre dimensões e detalhamento de mineração de dados  
  A opção, **Permitir detalhamento**, permite executar consultas nos dados de cubo subjacentes ao procurar o modelo. Os dados não estão contidos na nova dimensão de mineração de dados, mas o banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pode usar as associações de dados para recuperar as informações do cubo de origem.  
   
  A opção, **Criar dimensão de modelo de mineração**, permite gerar uma nova dimensão no cubo existente que contém os padrões descobertos pelo algoritmo. A hierarquia na nova dimensão é determinada em grande parte pelo tipo de modelo. Por exemplo, a representação de um modelo de clustering é simples, com o nó (Todos) na parte superior da hierarquia e cada cluster no próximo nível. Em contraste, a dimensão que é criada para um modelo de árvore de decisão pode ter uma hierarquia profunda, representando a ramificação da árvore.  
@@ -158,8 +162,8 @@ ms.locfileid: "66085247"
 > [!WARNING]  
 >  Apenas estes tipos de modelo oferecem suporte à criação de dimensões de mineração de dados: modelos baseados no algoritmo Microsoft Clustering, no algoritmo Árvores de Decisão da Microsoft ou no algoritmo Associação da Microsoft.  
   
-## <a name="see-also"></a>Consulte também  
- [Algoritmos de mineração de dados &#40;Analysis Services – Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Algoritmos de mineração de dados &#40;mineração de dados Analysis Services&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
  [Colunas da estrutura de mineração](mining-structure-columns.md)   
  [Colunas do modelo de mineração](mining-model-columns.md)   
  [Propriedades do modelo de mineração](mining-model-properties.md)   

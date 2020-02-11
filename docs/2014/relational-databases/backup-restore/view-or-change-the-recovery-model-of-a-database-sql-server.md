@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4bc7254d8a3eafa3c7c7d152d323051a3c5bea94
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62875077"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>Exibir ou alterar o modelo de recuperação de um banco de dados (SQL Server)
@@ -42,7 +42,7 @@ ms.locfileid: "62875077"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Siga as recomendações:**  [Após você alterar o modelo de recuperação](#FollowUp)  
+-   **Recomendações de acompanhamento:**  [depois de alterar o modelo de recuperação](#FollowUp)  
   
 -   [Tarefas relacionadas](#RelatedTasks)  
   
@@ -117,7 +117,7 @@ USE master ;
 ALTER DATABASE model SET RECOVERY FULL ;  
 ```  
   
-##  <a name="FollowUp"></a> Siga as recomendações: Após você alterar o modelo de recuperação  
+##  <a name="FollowUp"></a>Recomendações de acompanhamento: depois de alterar o modelo de recuperação  
   
 -   **Depois de alternar entre os modelos de recuperação completa e bulk-logged**  
   
@@ -154,13 +154,13 @@ ALTER DATABASE model SET RECOVERY FULL ;
   
 -   [Criar um trabalho](../../ssms/agent/create-a-job.md)  
   
--   [Desabilitar ou habilitar um trabalho](../../ssms/agent/disable-or-enable-a-job.md)  
+-   [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md)  
   
 ##  <a name="RelatedContent"></a> Conteúdo relacionado  
   
 -   [Planos de manutenção de banco de dados](../maintenance-plans/maintenance-plans.md) (nos Manuais Online do [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] )  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Modelos de recuperação &#40;SQL Server&#41;](recovery-models-sql-server.md)   
  [O log de transações &#40;SQL Server&#41;](../logs/the-transaction-log-sql-server.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   

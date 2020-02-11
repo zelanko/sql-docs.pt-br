@@ -1,5 +1,5 @@
 ---
-title: Não permitido de tipos e membros no DLL | Microsoft Docs
+title: Tipos e membros não permitidos em System. Data. dll | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,17 +14,17 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4233bc1ddd98d6fe678d9d37f1acd7a4b66b687e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62874366"
 ---
 # <a name="disallowed-types-and-members-in-systemdatadll"></a>Tipos e membros não permitidos em System.Data.dll
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] programação de integração (CLR) de linguagem comum não permite o uso de um tipo ou membro que tem um `HostProtectionAttribute` que especifica um `System.Security.Permissions.HostProtectionResource` enumeração com um valor de `ExternalProcessMgmt`, `ExternalThreading`, `MayLeakOnAbort`, `SecurityInfrastructure`, `SelfAffectingProcessMgmnt`, `SelfAffectingThreading`, **SharedState**, `Synchronization`, ou `UI`. A tabela a seguir lista os membros e os tipos do assembly System.Data.dll cujos valores de HPA (atributo de proteção de host) não são permitidos.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]a programação comum de integração de linguagem (CLR) não permite o uso de um tipo ou membro que `HostProtectionAttribute` tenha um que `System.Security.Permissions.HostProtectionResource` especifique uma enumeração com um `ExternalProcessMgmt`valor `ExternalThreading`de `MayLeakOnAbort`, `SecurityInfrastructure`, `SelfAffectingProcessMgmnt`, `SelfAffectingThreading`, ****,, `Synchronization`SharedState, `UI`ou. A tabela a seguir lista os membros e os tipos do assembly System.Data.dll cujos valores de HPA (atributo de proteção de host) não são permitidos.  
   
 > [!NOTE]  
->  Esta lista foi gerada dos assembly com suporte. Para obter mais informações, consulte [suporte para bibliotecas do .NET Framework](../clr-integration/database-objects/supported-net-framework-libraries.md).  
+>  Esta lista foi gerada dos assembly com suporte. Para obter mais informações, consulte [bibliotecas de .NET Framework com suporte](../clr-integration/database-objects/supported-net-framework-libraries.md).  
   
 |Tipo ou membro|Valor(es) de HPA|  
 |--------------------|--------------------|  
@@ -37,11 +37,11 @@ ms.locfileid: "62874366"
 |System.Data.TypedDataSetGenerator|SharedState, Sincronização|  
 |System.Xml.XmlDataDocument|Synchronization|  
   
-## <a name="see-also"></a>Consulte também  
- [Atributos de proteção de host e programação da integração CLR](host-protection-attributes-and-clr-integration-programming.md)   
- [Tipos desaprovados e membros no VisualBasic](disallowed-types-and-members-in-microsoft-visualbasic-dll.md)   
- [Tipos desaprovados e membros em mscorlib. dll](disallowed-types-and-members-in-mscorlib-dll.md)   
- [Tipos desaprovados e membros em System. dll](disallowed-types-and-members-in-system-dll.md)   
- [Tipos e membros não permitidos no System.Core.dll](disallowed-types-and-members-in-system-core-dll.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Atributos de proteção do host e programação de integração CLR](host-protection-attributes-and-clr-integration-programming.md)   
+ [Tipos e membros não permitidos em Microsoft. VisualBasic. dll](disallowed-types-and-members-in-microsoft-visualbasic-dll.md)   
+ [Tipos e membros não permitidos em mscorlib. dll](disallowed-types-and-members-in-mscorlib-dll.md)   
+ [Tipos e membros não permitidos em System. dll](disallowed-types-and-members-in-system-dll.md)   
+ [Tipos e membros desaprovados no System.Core.dll](disallowed-types-and-members-in-system-core-dll.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Opções (consulta resultados SQL Server-Multi-Server) | Microsoft Docs
+title: Opções (resultados da consulta-SQL Server-multi-Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 6019a328463d27b4495ae0db70e844eb4e05d747
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089973"
 ---
 # <a name="options-query-results-sql-server-multi-server"></a>Opções (Resultados da Consulta/SQL Server/Multisservidor)
@@ -29,14 +29,14 @@ ms.locfileid: "66089973"
  **Mesclar resultados**  
  Selecione esta caixa de seleção para combinar os conjuntos de resultados de vários servidores na mesma grade.  
   
- **Adicione o nome do servidor aos resultados**  
+ **Adicionar nome do servidor aos resultados**  
  Selecione esta caixa de seleção para incluir uma coluna adicional que indica o nome do servidor que gerou cada linha.  
   
  **Adicionar nome de logon aos resultados**  
  Selecione esta caixa de seleção para incluir uma coluna adicional que indica o logon usado para conectar-se ao servidor que gerou cada linha.  
   
-## <a name="see-also"></a>Consulte também  
- [Criar um servidor de gerenciamento Central e grupo de servidores &#40;SQL Server Management Studio&#41;](../ssms/register-servers/create-a-central-management-server-and-server-group.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Criar um servidor de gerenciamento central e um grupo de servidores &#40;SQL Server Management Studio&#41;](../ssms/register-servers/create-a-central-management-server-and-server-group.md)   
  [Executar instruções em vários servidores simultaneamente &#40;SQL Server Management Studio&#41;](../ssms/register-servers/execute-statements-against-multiple-servers-simultaneously.md)  
   
   

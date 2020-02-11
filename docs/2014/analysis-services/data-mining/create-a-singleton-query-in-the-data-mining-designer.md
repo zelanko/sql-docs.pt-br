@@ -1,5 +1,5 @@
 ---
-title: Criar uma consulta Singleton no Designer de mineração de dados | Microsoft Docs
+title: Criar uma consulta singleton no designer de mineração de dados | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 795347e0ef2bdee226daff57e85e2b02f8b00c9e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085305"
 ---
 # <a name="create-a-singleton-query-in-the-data-mining-designer"></a>Criar uma consulta Singleton no Designer de Mineração de Dados
@@ -57,9 +57,9 @@ AS [t]
   
 4.  Na tabela **Entrada da Consulta Singleton** , selecione os valores na coluna **Valor** para descrever o caso para o qual deseja criar uma previsão.  
   
-     Por exemplo, selecione **2** para **número de crianças em casa**e, em seguida, digite `45` para **idade**.  
+     Por exemplo, selecione **2** para **número de filhos em casa**e, em `45` seguida, digite para **idade**.  
   
-5.  Arraste uma coluna previsível da tabela **Modelo de Mineração** para a coluna **Origem** na parte inferior da guia. Opcionalmente, você pode digitar um alias para a coluna.  
+5.  Arraste uma coluna previsível da tabela do **modelo de mineração** para a coluna de **origem** na parte inferior da guia. opcionalmente, você pode digitar um alias para a coluna.  
   
      Por exemplo, arraste **Comprador de Bicicleta** para a coluna **Origem** .  
   
@@ -79,7 +79,7 @@ AS [t]
   
      Uma tela nova se abre para mostrar o resultado da consulta. Para exibir a instrução DMX que você acabou de criar, clique em **SQL**.  
   
-## <a name="see-also"></a>Consulte também  
- [Consultas de previsão &#40;Mineração de dados&#41;](prediction-queries-data-mining.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Consultas de previsão &#40;mineração de dados&#41;](prediction-queries-data-mining.md)  
   
   

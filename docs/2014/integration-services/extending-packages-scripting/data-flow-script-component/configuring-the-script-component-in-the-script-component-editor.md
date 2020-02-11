@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1b2b588c61742d5ab9c57d934b0f4f11230f1ca5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62894810"
 ---
 # <a name="configuring-the-script-component-in-the-script-component-editor"></a>Configurando o componente Script no Editor de Componentes de Script
@@ -49,7 +49,7 @@ ms.locfileid: "62894810"
 ### <a name="inputs-columns-page-of-the-script-transformation-editor"></a>Página Colunas de Entrada do Editor de Transformação Scripts  
  A página **Colunas de Entrada** do **Editor de Transformação Scripts** é exibida para transformações e destinos, mas não para origens. Nessa página, você seleciona as colunas de entrada disponíveis a serem disponibilizadas para seu script personalizado, e especifica o acesso somente leitura ou de leitura/gravação a elas.  
   
- No projeto de código que será gerado com base nesses metadados, o item de projeto BufferWrapper contém uma classe para cada entrada. Essa classe contém propriedades de acessador tipado para cada coluna de entrada selecionada. Por exemplo, se você selecionar um número inteiro **CustomerID** coluna e uma cadeia de caracteres **CustomerName** coluna de uma entrada denominada `CustomerInput`, o item de projeto BufferWrapper conterá uma `CustomerInput` classe que deriva de <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer>e o `CustomerInput` classe exporá uma propriedade de inteiro chamada **CustomerID** e uma propriedade de cadeia de caracteres denominada **CustomerName**. Essa convenção permite escrever código com verificação de tipo, conforme mostrado a seguir:  
+ No projeto de código que será gerado com base nesses metadados, o item de projeto BufferWrapper contém uma classe para cada entrada. Essa classe contém propriedades de acessador tipado para cada coluna de entrada selecionada. Por exemplo, se você selecionar uma coluna **CustomerID** inteiro e uma coluna **CustomerName** de uma entrada chamada `CustomerInput`, o item de projeto BufferWrapper conterá `CustomerInput` uma classe derivada <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer>de, e `CustomerInput` a classe irá expor uma propriedade Integer chamada **CustomerID** e uma propriedade String chamada **CustomerName**. Essa convenção permite escrever código com verificação de tipo, conforme mostrado a seguir:  
   
 ```vb  
 Dim currentCustomerID as Integer = CustomerInput.CustomerID  
@@ -67,7 +67,7 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
   
 -   Quando usado como um destino, o componente Script dá suporte a uma entrada e não possui saídas.  
   
- No projeto de código que será gerado com base nesses metadados, o item de projeto BufferWrapper contém uma classe para cada entrada e saída. Por exemplo, se você criar uma saída nomeada `CustomerOutput`, o item de projeto BufferWrapper conterá uma `CustomerOutput` classe que deriva <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer>e o `CustomerOutput` classe conterá propriedades do acessador tipado para cada coluna de saída criada.  
+ No projeto de código que será gerado com base nesses metadados, o item de projeto BufferWrapper contém uma classe para cada entrada e saída. Por exemplo, se você criar uma saída chamada `CustomerOutput`, o item de projeto BufferWrapper conterá `CustomerOutput` uma classe derivada de <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer>, e a `CustomerOutput` classe conterá Propriedades de acessador de tipo para cada coluna de saída criada.  
   
  Você só pode configurar colunas de saída na página **Entradas e Saídas**. Selecione colunas de entrada para transformações e destinos na página **Colunas de Entrada**. As propriedades de acessador tipado criadas para você no item de projeto BufferWrapper serão somente para gravação em colunas de saída. As propriedades do acessador para colunas de entrada serão somente leitura ou de leitura/gravação, dependendo do tipo de uso selecionado para cada coluna na página **Colunas de Entrada**.  
   
@@ -82,11 +82,11 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
  A propriedade `SynchronousInputID` só tem um valor diferente de zero em transformações com saídas síncronas. Se o valor dessa propriedade for zero, significa que a saída é assíncrona. Para uma saída síncrona, em que linhas são transmitidas às saídas selecionadas sem adicionar novas linhas, essa propriedade deve conter a `ID` da entrada do componente.  
   
 > [!NOTE]  
->  Quando o **Editor de transformação scripts** cria a primeira saída, ele define o `SynchronousInputID` propriedade da saída para o `ID` de entrada do componente. Porém, quando o editor cria saídas subsequentes, ele define as propriedades `SynchronousInputID` dessas saídas como zero.  
+>  Quando o **Editor de transformação scripts** cria a primeira saída, o editor define `SynchronousInputID` a propriedade da saída para a `ID` da entrada do componente. Porém, quando o editor cria saídas subsequentes, ele define as propriedades `SynchronousInputID` dessas saídas como zero.  
 >   
->  Se você estiver criando um componente com saídas síncronas, cada saída deverá ter sua `SynchronousInputID` propriedade definida como o `ID` de entrada do componente. Portanto, cada saída criada pelo editor depois da primeira saída precisa mudar seu valor `SynchronousInputID` de zero para a `ID` da entrada do componente.  
+>  Se você estiver criando um componente com saídas síncronas, cada saída deverá ter `SynchronousInputID` sua propriedade definida como `ID` a da entrada do componente. Portanto, cada saída criada pelo editor depois da primeira saída precisa mudar seu valor `SynchronousInputID` de zero para a `ID` da entrada do componente.  
 >   
->  Se você estiver criando um componente com saídas assíncronas, cada saída deverá ter sua propriedade `SynchronousInputID` definida como zero. Portanto, a primeira saída deve ter sua `SynchronousInputID` valor alterado a partir de `ID` da entrada do componente para zero.  
+>  Se você estiver criando um componente com saídas assíncronas, cada saída deverá ter sua propriedade `SynchronousInputID` definida como zero. Portanto, a primeira saída deve ter seu `SynchronousInputID` valor alterado do `ID` da entrada do componente para zero.  
   
  Para obter um exemplo de como direcionar linhas para uma das duas saídas síncronas no componente Script, consulte [Criando uma transformação síncrona com o componente Script](../../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md).  
   
@@ -126,9 +126,9 @@ Dim myADONETConnectionManager As IDTSConnectionManager100 = _
   
  Para obter mais informações, consulte [Conectando-se a fontes de dados no componente Script](connecting-to-data-sources-in-the-script-component.md).  
   
-![Ícone do Integration Services (pequeno)](../../media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
+![Ícone de Integration Services (pequeno)](../../media/dts-16.gif "Ícone do Integration Services (pequeno)")  **Mantenha-se atualizado com Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   
-## <a name="see-also"></a>Consulte também  
- [Codificar e depurar o componente de Script](coding-and-debugging-the-script-component.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Codificando e depurando o componente Script](coding-and-debugging-the-script-component.md)  
   
   

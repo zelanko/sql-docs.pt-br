@@ -1,5 +1,5 @@
 ---
-title: Definir a propriedade Usage | Microsoft Docs
+title: Definir propriedade de uso | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: def616b09e6d5378257c3e5c377f2724c9d09676
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077172"
 ---
 # <a name="set-usage-property"></a>Definir propriedade de uso
   Você pode definir o uso de um atributo empregando a exibição **Estrutura da Dimensão** do Designer de Dimensão, acessado pelo [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
- Quando você definir o uso para um atributo, as alterações só entrarão em vigor depois que você processar a dimensão. Para obter mais informações, consulte [processamento de objeto de modelo Multidimensional](processing-a-multidimensional-model-analysis-services.md).  
+ Quando você definir o uso para um atributo, as alterações só entrarão em vigor depois que você processar a dimensão. Para obter mais informações, consulte [processamento de objeto de modelo multidimensional](processing-a-multidimensional-model-analysis-services.md).  
   
 ### <a name="to-set-usage-for-an-attribute"></a>Definir o uso para um atributo  
   
@@ -33,14 +33,14 @@ ms.locfileid: "66077172"
   
 2.  Em **Atributos**, clique com o botão direito do mouse no atributo cujo uso você deseja configurar, aponte para **Definir Utilização de Atributo**e, em seguida, clique em uma destas opções:  
   
-    -   **Regular**  
+    -   **Regularmente**  
   
     -   **Chave**  
   
     -   **Pai**  
   
-## <a name="see-also"></a>Consulte também  
- [Atributos e hierarquias de atributos](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Atributos e hierarquias de atributo](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
  [Adicionar um atributo a uma dimensão](attribute-properties-add-an-attribute-to-a-dimension.md)  
   
   

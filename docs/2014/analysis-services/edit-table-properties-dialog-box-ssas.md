@@ -1,5 +1,5 @@
 ---
-title: Editar caixa de diálogo de propriedades de tabela (SSAS) | Microsoft Docs
+title: Caixa de diálogo Editar propriedades da tabela (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1fefc72d81129ac4691f35209f25c4f348272c81
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081441"
 ---
 # <a name="edit-table-properties-dialog-box-ssas"></a>Caixa de diálogo Editar Propriedades da Tabela (SSAS)
@@ -35,7 +35,7 @@ ms.locfileid: "66081441"
  **Nome da conexão**  
  Exibe o nome da conexão que está em uso no momento.  
   
- **Nome de origem**  
+ **Nome da origem**  
  Exiba ou altere a tabela a partir da qual os dados são obtidos.  
   
  Se você alterar a origem para uma tabela que tenha colunas diferentes das da tabela atual, uma mensagem será exibida, avisando que as colunas são diferentes. Em seguida, você deve selecionar as colunas que deseja colocar na tabela atual e clicar em **Salvar**. Você pode substituir toda a tabela marcando a caixa de seleção no lado esquerdo da tabela.  
@@ -43,11 +43,11 @@ ms.locfileid: "66081441"
 > [!NOTE]  
 >  Quando você altera a fonte de dados de uma tabela, basicamente substitui o conteúdo da tabela atual pelo conteúdo da nova tabela de origem.  
   
- **Nomes de coluna do**  
+ **Nomes das colunas de**  
  |||  
 |-|-|  
 |**Origem**|Selecione esta opção para substituir os nomes de colunas atuais pelos nomes das colunas da tabela de origem selecionada.|  
-|**Modelo**|Selecione esta opção para usar os nomes de colunas atuais como existem no modelo.|  
+|**Deprecia**|Selecione esta opção para usar os nomes de colunas atuais como existem no modelo.|  
   
  **Atualizar visualização**  
  Clique para exibir as colunas de dados na tabela de origem selecionada atualmente.  
@@ -98,7 +98,7 @@ ms.locfileid: "66081441"
  **OK**  
  Clique para aplicar todas as alterações feitas, incluindo a substituição de colunas.  
   
-## <a name="see-also"></a>Consulte também  
- [Tabelas e colunas &#40;SSAS de Tabela&#41;](tabular-models/tables-and-columns-ssas-tabular.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Tabelas e colunas &#40;SSAS de tabela&#41;](tabular-models/tables-and-columns-ssas-tabular.md)  
   
   

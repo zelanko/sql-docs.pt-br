@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dfbfa64cb61332591fadef874b8c73da3ce1e7c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62913743"
 ---
-# <a name="mssqlserver5228"></a>MSSQLSERVER_5228
+# <a name="mssqlserver_5228"></a>MSSQLSERVER_5228
     
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|5228|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|DBCC4_ANTIMATTER_COLUMN_DETECTED|  
-|Texto da mensagem|Erro de tabela: ID de objeto O_ID, ID de índice I_ID, ID PN_ID, unidade de alocação A_ID ID (tipo TYPE), página PG_ID, linha R_ID de partição. DBCC detectou limpeza incompleta de uma operação de criação de índice online. (O valor de coluna de antimatéria é VALUE.)|  
+|Texto da mensagem|Erro de tabela: ID de objeto O_ID, ID de índice I_ID, ID de partição PN_ID, ID de unidade de alocação A_ID (tipo TYPE), página PG_ID, linha R_ID. DBCC detectou limpeza incompleta de uma operação de criação de índice online. (O valor de coluna de antimatéria é VALUE.)|  
   
 ## <a name="explanation"></a>Explicação  
  O build não concluído de um índice online foi detectada para o objeto *O_ID*, o índice *I_ID* e a partição *PN_ID*. Isso é manifesto pela presença de uma coluna de antimatéria na linha *R_ID*. Uma coluna de antimatéria é usada para reconciliar registros de diversas origens durante a criação de um índice online. A mensagem de erro também indica o valor da coluna de antimatéria.  
@@ -58,7 +58,7 @@ ms.locfileid: "62913743"
 ### <a name="results-of-running-repair-options"></a>Resultados da execução de opções REPAIR  
  A execução de REPAIR fará com que o índice especificado e todos os seus índices dependentes sejam recriados.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [DBCC CHECKDB &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)  
   
   

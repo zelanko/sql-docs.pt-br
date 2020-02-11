@@ -13,27 +13,27 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f37f2ce9ec367d136eb853ce3bffe81f22b2dc4e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62869591"
 ---
-# <a name="mssqlserver18456"></a>MSSQLSERVER_18456
+# <a name="mssqlserver_18456"></a>MSSQLSERVER_18456
     
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|18456|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|LOGON_FAILED|  
 |Texto da mensagem|Falha no logon do usuário '%.*ls'.%.\*ls|  
   
 ## <a name="explanation"></a>Explicação  
- Quando uma tentativa de conexão é rejeitada devido a uma falha de autenticação que envolva uma senha incorreta ou o nome de usuário, uma mensagem semelhante à seguinte é retornada ao cliente:  “Falha no logon do usuário '<nome_do_usuário>'. (Microsoft SQL Server, Error: 18456)".  
+ Quando uma tentativa de conexão é rejeitada por causa de uma falha na autenticação que envolva uma senha ou um nome de usuário incorreto, uma mensagem semelhante à seguinte é retornada ao cliente:  “Falha no logon do usuário '<nome_do_usuário>'. (Microsoft SQL Server, Erro: 18456)".  
   
  Informações adicionais voltadas ao cliente incluem o seguinte:  
   
@@ -45,11 +45,11 @@ ms.locfileid: "62869591"
   
  "Número do erro: 18456"  
   
- "Gravidade: 14"  
+ "Severidade: 14"  
   
  "Estado: 1"  
   
- "Número de linha: 65536"  
+ "Número de Linha: 65536"  
   
  A mensagem seguinte também poderá ser retornada:  
   
@@ -75,9 +75,9 @@ ms.locfileid: "62869591"
   
  Outros estados de erro existem e significam um erro de processamento interno inesperado.  
   
- **Outra possível causa incomum**  
+ **Uma possível causa incomum adicional**  
   
- A razão de erro **Falha em uma tentativa de logon com a Autenticação do SQL Server. O servidor está configurado apenas para a autenticação do Windows.** pode ser retornado nas situações a seguir.  
+ O motivo do erro **falha na tentativa de logon usando a autenticação do SQL. O servidor está configurado somente para autenticação do Windows.** pode ser retornado nas situações a seguir.  
   
 -   Quando o servidor é configurado para a autenticação de modo misto e uma conexão ODBC usa o protocolo TCP, e a conexão não especificar explicitamente que a conexão deve usar uma conexão confiável.  
   
@@ -88,13 +88,13 @@ ms.locfileid: "62869591"
 ## <a name="examples"></a>Exemplos  
  Neste exemplo, o estado do erro de autenticação é 8. Isso indica que a senha está incorreta.  
   
-|Date|`Source`|Mensagem|  
+|Data|Fonte|Mensagem|  
 |----------|------------|-------------|  
-|2007-12-05 20:12:56.34|Logon|Erro: 18456, severidade: 14, estado: 8.|  
-|2007-12-05 20:12:56.34|Logon|Falha no logon do usuário '<nome_do_usuário>'. [Cliente: \<endereço ip >]|  
+|2007-12-05 20:12:56.34|Logon|Erro: 18456, Severidade: 14, Estado: 8.|  
+|2007-12-05 20:12:56.34|Logon|Falha no logon do usuário '<nome_do_usuário>'. [Cliente: \<> de endereço IP]|  
   
 > [!NOTE]  
->  Quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é instalado usando o modo de Autenticação do Windows e depois alterado para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o modo de Autenticação do Windows, o logon **sa** é inicialmente desabilitado. Isso faz com que o erro de estado 7: "Falha no logon do usuário 'sa'." Para habilitar o logon **sa**, consulte [Alterar modo de autenticação do servidor](../../database-engine/configure-windows/change-server-authentication-mode.md).  
+>  Quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é instalado usando o modo de Autenticação do Windows e depois alterado para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o modo de Autenticação do Windows, o logon **sa** é inicialmente desabilitado. Isso causa o erro de Estado 7: "falha no logon para o usuário ' sa '." Para habilitar o logon **SA** , consulte [alterar o modo de autenticação do servidor](../../database-engine/configure-windows/change-server-authentication-mode.md).  
   
 ## <a name="user-action"></a>Ação do usuário  
  Se você estiver tentando se conectar usando a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], verifique se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está configurado no Modo de Autenticação Mista.  
@@ -109,6 +109,6 @@ ms.locfileid: "62869591"
   
  Se o [!INCLUDE[ssDE](../../includes/ssde-md.md)] oferecer suporte a bancos de dados independentes, confirme que o logon não foi excluído após a migração para um usuário de banco de dados independente.  
   
- Durante a conexão local a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], as conexões de serviços executados em **NT AUTHORITY\NETWORK SERVICE** deverão ser autenticadas com o uso do nome de domínio totalmente qualificado dos computadores. Para saber mais, confira [Como Usar a conta de serviço de rede para acessar recursos no ASP.NET](https://msdn.microsoft.com/library/ff647402.aspx)  
+ Durante a conexão local a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], as conexões de serviços executados em **NT AUTHORITY\NETWORK SERVICE** deverão ser autenticadas com o uso do nome de domínio totalmente qualificado dos computadores. Para obter mais informações, consulte [Como usar a conta de serviço de rede para acessar recursos no ASP.NET](https://msdn.microsoft.com/library/ff647402.aspx)  
   
   

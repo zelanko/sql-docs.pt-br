@@ -12,10 +12,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 69127078f72eeab296c754dfce666804dcdda53d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62837686"
 ---
 # <a name="getting-assistance-sql-server-2014"></a>Obtendo assistência (SQL Server 2014)
@@ -39,8 +39,8 @@ ms.locfileid: "62837686"
  [Fornecendo comentários sobre o SQL Server 2014](../../2014/getting-started/providing-feedback-for-sql-server-2014.md)  
  Descreve como fornecer sugestões e relatórios de erros sobre os recursos e a interface do usuário do produto, enviar comentários sobre a documentação e optar por enviar relatórios de erros e dados de uso automaticamente para a [!INCLUDE[msCoName](../includes/msconame-md.md)] para análise.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [O que há de novo no SQL Server 2014](../sql-server/what-s-new-in-sql-server-2016.md)   
- [Instalação do SQL Server 2014](../database-engine/install-windows/installation-for-sql-server.md)  
+ [Instalação para SQL Server 2014](../database-engine/install-windows/installation-for-sql-server.md)  
   
   

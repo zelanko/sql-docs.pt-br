@@ -1,5 +1,5 @@
 ---
-title: Use o SQL Server Profiler para criar um conjunto de coleta de rastreamento do SQL (SQL Server Management Studio) | Microsoft Docs
+title: Usar SQL Server Profiler para criar um conjunto de coleta de rastreamento do SQL (SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a9e37fd917dc2716967623648a62057e45df73dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62873292"
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set-sql-server-management-studio"></a>Usar o SQL Server Profiler para criar um conjunto de coleta de Rastreamento do SQL (SQL Server Management Studio)
-  No [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], você pode explorar as funcionalidades de rastreamento do lado do servidor do [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para exportar uma definição de rastreamento que pode ser usada para criar um conjunto de coleta que usa o tipo de coletor de Rastreamento do SQL Genérico. Há duas partes nesse processo:  
+  No [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , você pode explorar as funcionalidades de rastreamento do lado do servidor do [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para exportar uma definição de rastreamento que pode ser usada para criar um conjunto de coleta que usa o tipo de coletor de Rastreamento do SQL Genérico. Há duas partes nesse processo:  
   
 1.  Crie e exporte um rastreamento [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] .  
   
@@ -72,7 +72,7 @@ ms.locfileid: "62873292"
   
     1.  Na lista de filtros, clique em **Duração**.  
   
-    2.  Na janela do operador booliano, expanda o **maior que ou igual** nó, digite `80` como o valor e, em seguida, clique **Okey**.  
+    2.  Na janela do operador booliano, expanda o nó **maior que ou igual** , digite `80` como o valor e clique em **OK**.  
   
 9. Clique em **Executar** para iniciar o rastreamento.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "62873292"
   
     2.  Expanda **Gerenciamento**e expanda **Coleta de Dados**.  
   
-     O `SPROC_CollectionSet` conjunto de coleta é exibido no mesmo nível como o **conjuntos de coleta de dados do sistema** nó. Por padrão, o conjunto de coleta é desabilitado.  
+     O `SPROC_CollectionSet` conjunto de coleta aparece no mesmo nível que o nó **conjuntos de coleta de dados do sistema** . Por padrão, o conjunto de coleta é desabilitado.  
   
 6.  Use o Pesquisador de Objetos para editar as propriedades de SPROC_CollectionSet, como o modo de coleta e a agenda de carregamento. Siga os mesmos procedimentos que você usaria para os conjuntos de coleta de Dados do Sistema que são fornecidos com o coletor de dados.  
   

@@ -16,14 +16,15 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 34aefc2895057c499e54c572340ca63dc28ed68f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082743"
 ---
 # <a name="training-and-testing-data-sets"></a>Conjuntos de dados de teste e treinamento
-  A separação de dados em conjuntos de teste e treinamento é uma parte importante da avaliação de modelos de mineração de dados. Normalmente, quando você separa um conjunto de dados em um conjunto de treinamentos e um conjunto de testes, a maior parte dos dados é usada para treinamento e uma parte menor dos dados é usada para teste. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] faz a amostra aleatória dos dados para ajudar a garantir que as partições de teste e de treinamento são similares. Usando dados semelhantes para treinamento e teste, você pode minimizar os efeitos das discrepâncias de dados e entender melhor as características do modelo.  
+  A separação de dados em conjuntos de teste e treinamento é uma parte importante da avaliação de modelos de mineração de dados. Normalmente, quando você separa um conjunto de dados em um conjunto de treinamentos e um conjunto de testes, a maior parte dos dados é usada para treinamento e uma parte menor dos dados é usada para teste. 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] faz a amostra aleatória dos dados para ajudar a garantir que as partições de teste e de treinamento são similares. Usando dados semelhantes para treinamento e teste, você pode minimizar os efeitos das discrepâncias de dados e entender melhor as características do modelo.  
   
  Depois que um modelo for processado usando o conjunto de treinamentos, você testa o modelo fazendo previsões contra o conjunto de testes. Como os dados no conjunto de teste já contêm valores conhecidos para o atributo que você deseja prever, é fácil determinar se a precisão das previsões do modelo está correta.  
   
@@ -51,7 +52,7 @@ ms.locfileid: "66082743"
 ### <a name="modifying-structure-properties-to-create-a-test-data-set"></a>Modificando propriedades de estrutura para criar um conjunto de dados de teste  
  Se você criar e processar uma estrutura de mineração e posteriormente decidir que deseja definir separadamente um conjunto de dados de teste, poderá modificar as propriedades da estrutura de mineração. Para alterar a maneira que os dados são particionados, edite as seguintes propriedades:  
   
-|Propriedade|Descrição|  
+|Propriedade|DESCRIÇÃO|  
 |--------------|-----------------|  
 |`HoldoutMaxCases`|Especifica o número máximo de casos a serem incluídos no conjunto de teste.|  
 |`HoldoutMaxPercent`|Especifica o número de casos a serem incluídos no conjunto de teste como uma porcentagem do conjunto de dados completo. Para não ter nenhum conjunto de dados, especifique 0.|  
@@ -62,11 +63,11 @@ ms.locfileid: "66082743"
 ### <a name="specifying-holdout-programmatically"></a>Especificando controle programaticamente  
  Você pode definir conjuntos de dados de teste e treinamento em uma estrutura de mineração usando instruções DMX, AMO ou XML DDL. A instrução ALTER MINING STRUCTURE não oferece suporte ao uso dos parâmetros de controle.  
   
--   **DMX** Na linguagem DMX (extensões DMX), a instrução CREATE MINING STRUCTURE foi ampliada para incluir uma cláusula WITH HOLDOUT.  
+-   **DMX** na linguagem DMX (Data Mining Extensions), a instrução CREATE MINING STRUCTURE foi estendida para incluir uma cláusula WITH de validação.  
   
--   **ASSL** Você pode criar uma nova estruturas de mineração ou adicionar um conjunto de dados de teste a uma estrutura de mineração existente, usando a ASSL ( [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Scripting Language).  
+-   **ASSL** Você pode criar uma nova estrutura de mineração ou adicionar um conjunto de dados de teste a uma estrutura de mineração existente, usando [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a linguagem de script (ASSL).  
   
--   **AMO** Você também pode exibir e modificar os conjuntos de dados de controle usando AMO.  
+-   **Amo** Você também pode exibir e modificar os conjuntos de dados de controle usando o AMO.  
   
  Você pode exibir informações sobre os conjuntos de dados de controle em uma estrutura de mineração existente consultando o conjunto de linhas do esquema de mineração de dados. Você pode fazer isso através de uma chamada DISCOVER ROWSET ou usando uma consulta DMX.  
   
@@ -91,7 +92,8 @@ SELECT * from <structure>.CASES WHERE IsTestCase() AND <structure column name> =
   
 -   Você não pode remover dados de um modelo de série temporal; portanto, você não pode separar os dados de origem em conjuntos de treinamento e teste. Se você começar a criar uma estrutura de mineração e modelo e escolher o algoritmo MTS ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series), a opção de criar um conjunto de dados de controle será desabilitada. O uso de dados de controle também será desabilitado se a estrutura de mineração contiver uma coluna KEY TIME no caso ou no nível de tabela aninhada.  
   
--   É possível configurar inadvertidamente os conjuntos de dados de controle de modo que o conjunto de dados inteiro seja usado em testes e nenhum dado permanecer para usar em treinamento. Porém, se você fizer assim, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] gerará um erro de forma que você possa corrigir o problema. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] também avisa você quando a estrutura é processada se mais de 50% dos dados tiverem sido validados para teste.  
+-   É possível configurar inadvertidamente os conjuntos de dados de controle de modo que o conjunto de dados inteiro seja usado em testes e nenhum dado permanecer para usar em treinamento. Porém, se você fizer assim, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] gerará um erro de forma que você possa corrigir o problema. 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] também avisa você quando a estrutura é processada se mais de 50% dos dados tiverem sido validados para teste.  
   
 -   Na maioria dos casos, o valor de validação padrão de 30 fornece um bom equilíbrio entre os dados de treinamento e teste. Não há uma maneira simples de determinar o tamanho necessário do conjunto de dados para fornecer treinamento suficiente, nem o quão esparso o conjunto de treinamentos pode ser e, conseguir, ainda, evitar o superajuste. Porém, depois que você criar um modelo, pode usar validação cruzada para avaliar o conjunto de dados em relação a um modelo específico.  
   
@@ -101,16 +103,16 @@ SELECT * from <structure>.CASES WHERE IsTestCase() AND <structure column name> =
   
 |Tópicos|Links|  
 |------------|-----------|  
-|Descreve como os filtros em um modelo interagem com conjuntos de dados de treinamento e teste.|[Filtros para modelos de mineração &#40;Analysis Services – Mineração de dados&#41;](mining-models-analysis-services-data-mining.md)|  
-|Descreve como o uso de dados de treinamento e teste afeta a validação cruzada.|[Validação cruzada &#40;Analysis Services – Data Mining&#41;](cross-validation-analysis-services-data-mining.md)|  
+|Descreve como os filtros em um modelo interagem com conjuntos de dados de treinamento e teste.|[Filtros para modelos de mineração &#40;mineração de dados Analysis Services&#41;](mining-models-analysis-services-data-mining.md)|  
+|Descreve como o uso de dados de treinamento e teste afeta a validação cruzada.|[&#40;de validação cruzada Analysis Services&#41;de mineração de dados](cross-validation-analysis-services-data-mining.md)|  
 |Fornece informações sobre as interfaces programáticas para funcionar com conjuntos de treinamento e teste em uma estrutura de mineração.|[Conceitos e modelo de objeto AMO](https://docs.microsoft.com/bi-reference/amo/amo-concepts-and-object-model)<br /><br /> [Elemento MiningStructure &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/objects/miningstructure-element-assl)|  
-|Fornece sintaxe de DMX para criar conjuntos de controle.|[CREATE MINING STRUCTURE &#40;DMX&#41;](/sql/dmx/create-mining-structure-dmx)|  
-|Recuperar informações sobre casos nos conjuntos de treinamento e teste.|[Conjuntos de linhas de esquema de mineração de dados](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)<br /><br /> [Consultando os conjuntos de linhas de esquema de mineração de dados &#40;Analysis Services - mineração de dados&#41;](data-mining-schema-rowsets-ssas.md)|  
+|Fornece sintaxe de DMX para criar conjuntos de controle.|[CRIAR ESTRUTURA DE MINERAÇÃO &#40;&#41;DMX](/sql/dmx/create-mining-structure-dmx)|  
+|Recuperar informações sobre casos nos conjuntos de treinamento e teste.|[Conjuntos de linhas de esquema de mineração de dados](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)<br /><br /> [Consultando os conjuntos de linhas do esquema de mineração de dados &#40;mineração de dados Analysis Services&#41;](data-mining-schema-rowsets-ssas.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Ferramentas de mineração de dados](data-mining-tools.md)   
  [Conceitos de mineração de dados](data-mining-concepts.md)   
  [Soluções de mineração de dados](data-mining-solutions.md)   
- [Teste e validação &#40;Mineração de dados&#41;](testing-and-validation-data-mining.md)  
+ [Teste e validação &#40;mineração de dados&#41;](testing-and-validation-data-mining.md)  
   
   

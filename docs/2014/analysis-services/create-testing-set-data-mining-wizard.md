@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9f0e4d1a384995c0c49c346102f8fddbcdf47f68
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086787"
 ---
 # <a name="create-testing-set-data-mining-wizard"></a>Criar Conjunto de Testes (Assistente de Mineração de Dados)
@@ -26,18 +26,18 @@ ms.locfileid: "66086787"
   
  Por padrão, o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] gera uma semente numérica usada para iniciar o particionamento. Essa semente é baseada no nome da estrutura de mineração. Para garantir que a partição permaneça igual mesmo que o nome da estrutura de mineração seja alterada, você pode especificar um valor para a semente, definindo a propriedade HoldoutSeed da estrutura de mineração. Se você alterar a semente de validação, deverá reprocessar a estrutura.  
   
- Se posteriormente você desejar alterar a quantidade de dados de treinamento ou teste, você pode modificar os `HoldoutMaxCases` e `HoldoutMaxPercent` propriedades na estrutura de mineração de dados usando o **propriedades** janela. Porém, depois de alterar, você deve reprocessar a estrutura de mineração e todos os modelos de mineração associados. As seguintes limitações também se aplicam:  
+ Se posteriormente você quiser alterar a quantidade de dados de teste ou treinamento, poderá modificar as `HoldoutMaxCases` Propriedades e `HoldoutMaxPercent` na estrutura de Data Mining usando a janela **Propriedades** . Porém, depois de alterar, você deve reprocessar a estrutura de mineração e todos os modelos de mineração associados. As seguintes limitações também se aplicam:  
   
--   O particionamento de uma estrutura de mineração de dados só tem suporte quando a estrutura de mineração de dados é armazenada no [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. Versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] não dão suporte a cache de informações de partição para estruturas de mineração.  
+-   O particionamento de uma estrutura de mineração de dados só tem suporte quando a estrutura de mineração de dados é armazenada no [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. As versões anteriores [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] do não dão suporte ao cache de informações de partição para estruturas de mineração.  
   
 -   Você não pode particionar uma estrutura de mineração se esta contiver uma coluna Key Time, que é obrigatória para modelos de mineração de série temporal.  
   
 -   Você não pode particionar dados se estiver tentando prever um valor armazenado em uma tabela aninhada.  
   
- **Para obter mais informações:** [Teste e validação &#40;Data Mining&#41;](data-mining/testing-and-validation-data-mining.md), [criar uma estrutura de mineração relacional](data-mining/create-a-relational-mining-structure.md), [Tutorial de mineração de dados básicos](../../2014/tutorials/basic-data-mining-tutorial.md)  
+ **Para obter mais informações:** [testes e validação &#40;&#41;de mineração de dados ](data-mining/testing-and-validation-data-mining.md), [criar uma estrutura de mineração relacional](data-mining/create-a-relational-mining-structure.md), [tutorial de mineração de dados básico](../../2014/tutorials/basic-data-mining-tutorial.md)  
   
 ## <a name="options"></a>Opções  
- **Porcentagem de dados de teste**  
+ **Percentual de dados para teste**  
  Clique nas setas para cima e para baixo para aumentar ou diminuir a porcentagem de dados a serem usados como um conjunto de treinamento. Se preferir, digite um valor entre 0 e 100 na caixa de texto.  
   
  **Número máximo de casos no conjunto de dados de teste**  
@@ -47,10 +47,10 @@ ms.locfileid: "66086787"
   
  O padrão é NULO. Isso significa não há nenhum limite.  
   
-## <a name="see-also"></a>Consulte também  
- [Ajuda F1 do Assistente de mineração de dados &#40;Analysis Services - mineração de dados&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
- [Sugerir colunas relacionadas &#40;Assistente de mineração de dados&#41;](suggest-related-columns-data-mining-wizard.md)   
- [Especificar tipos de tabela &#40;Assistente de mineração de dados&#41;](specify-table-types-data-mining-wizard.md)   
- [Especificar conteúdo e o tipo de dados da coluna &#40;Assistente de mineração de dados&#41;](specify-the-column-s-content-and-data-type-data-mining-wizard.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Ajuda F1 do assistente de mineração de dados &#40;Analysis Services Data Mining&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [Sugerir colunas relacionadas &#40;assistente de mineração de dados&#41;](suggest-related-columns-data-mining-wizard.md)   
+ [Especificar tipos de tabela &#40;assistente de mineração de dados&#41;](specify-table-types-data-mining-wizard.md)   
+ [Especifique o tipo de conteúdo e de dados da coluna &#40;assistente de mineração de dados&#41;](specify-the-column-s-content-and-data-type-data-mining-wizard.md)  
   
   

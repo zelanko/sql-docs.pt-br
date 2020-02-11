@@ -1,5 +1,5 @@
 ---
-title: Integration Services (SSIS) projetos | Microsoft Docs
+title: Projetos do Integration Services (SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,16 +17,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 26ab429a5f2abeda9a811e85dc5113121380e999
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62892470"
 ---
 # <a name="integration-services-ssis-projects"></a>Projetos do Integration Services (SSIS)
+  
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fornece o [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para o desenvolvimento de pacotes do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
- Quando você implanta pacotes em um banco de dados do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou no armazenamento de pacotes do [!INCLUDE[ssIS](../includes/ssis-md.md)] , usa o serviço do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] para gerenciar os pacotes. O serviço [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] está disponível apenas no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Para obter mais informações sobre o serviço, consulte [Serviço Integration Services &#40;Serviço SSIS&#41;](service/integration-services-service-ssis-service.md). Para obter mais informações sobre a implantação de pacote, consulte [implantação de pacote &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md).  
+ Ao implantar pacotes em um [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] banco de dados ou [!INCLUDE[ssIS](../includes/ssis-md.md)] no armazenamento de pacotes, você [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] usa o serviço para gerenciar os pacotes. O serviço [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] está disponível apenas no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Para obter mais informações sobre o serviço, consulte [Serviço Integration Services &#40;Serviço SSIS&#41;](service/integration-services-service-ssis-service.md). Para obter mais informações sobre a implantação de pacotes, consulte [implantação de pacote &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md).  
   
  Quando você implantar projetos do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] no servidor do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], usa as exibições de Transact-SQL e procedimentos armazenados no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para gerenciar os projetos. Para obter mais informações sobre a implantação de projetos, consulte [Deployment of Projects and Packages](packages/deploy-integration-services-ssis-projects-and-packages.md). Para obter mais informações sobre o servidor [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], consulte [Servidor do Integration Services &#40;SSIS&#41;](catalog/integration-services-ssis-server-and-catalog.md).  
   
@@ -46,9 +47,9 @@ ms.locfileid: "62892470"
   
  A tabela a seguir descreve as pastas que aparecem em um projeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
-|Pasta|Descrição|  
+|Pasta|DESCRIÇÃO|  
 |------------|-----------------|  
-|[!INCLUDE[ssIS](../includes/ssis-md.md)] Packages|Contém pacotes. Para obter mais informações, consulte [Integration Services &#40;SSIS&#41; Pacotes](../../2014/integration-services/integration-services-ssis-packages.md).|  
+|[!INCLUDE[ssIS](../includes/ssis-md.md)]Compacta|Contém pacotes. Para obter mais informações, consulte [Integration Services &#40;SSIS&#41; Pacotes](../../2014/integration-services/integration-services-ssis-packages.md).|  
 |Diversos|Contém arquivos diferentes de arquivos de pacotes.|  
   
 ### <a name="files-in-integration-services-projects"></a>Arquivos em projetos do Integration Services  
@@ -79,7 +80,7 @@ ms.locfileid: "62892470"
 ## <a name="related-tasks"></a>Related Tasks  
  [Adicionar ou remover um projeto do Integration Services em uma solução](../../2014/integration-services/add-or-remove-an-integration-services-project-in-a-solution.md)  
   
- [Criar um novo projeto do Integration Services](../../2014/integration-services/create-a-new-integration-services-project.md)  
+ [Criar um novo projeto de Integration Services](../../2014/integration-services/create-a-new-integration-services-project.md)  
   
  [Adicionar um item a um projeto do Integration Services](../../2014/integration-services/add-an-item-to-an-integration-services-project.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Algoritmos de mineração de dados (SQL Server Data Mining Add-ins) | Microsoft Docs
+title: Algoritmos de mineração de dados (SQL Server suplementos de mineração de dados) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,10 +24,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6e0bf6c0c1126dff29107636e0956d92d4b314a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086506"
 ---
 # <a name="data-mining-algorithms-sql-server-data-mining-add-ins"></a>Algoritmos de mineração de dados (Suplementos de mineração de dados do SQL Server)
@@ -46,19 +46,19 @@ ms.locfileid: "66086506"
 |Algoritmo Redes Neurais da Microsoft|Localizar relações ocultas entre várias entradas e até mesmo saídas. Usar para exploração ou para previsão.<br /><br /> [https://msdn.microsoft.com/library/ms174941.aspx](https://msdn.microsoft.com/library/ms174941.aspx)|  
 |Algoritmo Microsoft Time Series|Usar dados históricos para prever valores futuros.<br /><br /> [https://msdn.microsoft.com/library/ms174923.aspx](https://msdn.microsoft.com/library/ms174923.aspx)|  
   
-## <a name="advanced-options"></a>Opções Avançadas  
+## <a name="advanced-options"></a>Opções avançadas  
  Quando usa o Cliente de Mineração de Dados para Excel, você tem a opção de criar seus próprios modelos e estruturas de mineração de dados, ou de ajustar os parâmetros dos algoritmos.  
   
- [Parâmetros do algoritmo &#40;suplementos de mineração de dados do SQL Server&#41;](algorithm-parameters-sql-server-data-mining-add-ins.md)  
+ [Parâmetros de algoritmo &#40;SQL Server suplementos de mineração de dados&#41;](algorithm-parameters-sql-server-data-mining-add-ins.md)  
   
  Há duas maneiras de personalizar seus modelos usando essas opções avançadas:  
   
--   Use o **consulta de mineração de dados** Assistente para criar seu modelo.  
+-   Use o assistente de **consulta de mineração de dados** para criar seu modelo.  
   
 -   No **cliente de mineração de dados**, depois de iniciar o assistente, clique em **parâmetros**.  
   
-## <a name="see-also"></a>Consulte também  
- [Consulta &#40;suplementos de mineração de dados do SQL Server&#41;](query-sql-server-data-mining-add-ins.md)   
- [Avançadas de modelagem &#40;Data Mining Add-ins para Excel&#41;](advanced-modeling-data-mining-add-ins-for-excel.md)  
+## <a name="see-also"></a>Consulte Também  
+ [&#40;de consulta SQL Server suplementos de mineração de dados&#41;](query-sql-server-data-mining-add-ins.md)   
+ [Modelagem avançada &#40;suplementos de mineração de dados para Excel&#41;](advanced-modeling-data-mining-add-ins-for-excel.md)  
   
   

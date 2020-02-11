@@ -11,21 +11,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2b753397b4791d658692a8cb63dbc6a3d779c621
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62914353"
 ---
-# <a name="mssqlserver30053"></a>MSSQLSERVER_30053
+# <a name="mssqlserver_30053"></a>MSSQLSERVER_30053
     
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|30053|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|FTXT_QUERY_E_WORDBREAKINGTIMEOUT|  
 |Texto da mensagem|Foi atingido o tempo limite de quebra de palavras para a cadeia de consulta de texto completo. O separador de palavras pode ter demorado para processar a cadeia de consulta de texto completo ou um grande número de consultas está em execução no servidor. Tente executar a consulta novamente com uma carga mais leve.|  
@@ -56,11 +56,11 @@ ms.locfileid: "62914353"
 |A configuração do processo de daemon de filtro está incorreta.|Verifique se você está usando a senha atual e se uma política de domínio não está impedindo a conta do daemon de filtro de fazer logon.|  
 |Uma carga de trabalho de consulta muito pesada está em execução na instância do servidor.|Tente executar a consulta novamente com uma carga mais leve.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Definir a conta de serviço do Iniciador do Daemon de Filtro de Texto Completo](../search/set-the-service-account-for-the-full-text-filter-daemon-launcher.md)   
- [Pesquisa de Texto Completo](../search/full-text-search.md)   
- [sp_help_fulltext_system_components &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql)   
- [Configurar e gerenciar separadores de palavras e lematizadores de pesquisa](../search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
+ [Pesquisa de texto completo](../search/full-text-search.md)   
+ [&#41;&#40;Transact-SQL de sp_help_fulltext_system_components](/sql/relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql)   
+ [Configurar e gerenciar separadores de palavras e lematizadores para pesquisa](../search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [Configurar e gerenciar filtros de pesquisa](../search/configure-and-manage-filters-for-search.md)  
   
   

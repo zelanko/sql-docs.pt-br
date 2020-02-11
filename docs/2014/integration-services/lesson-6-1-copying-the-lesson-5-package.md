@@ -1,5 +1,5 @@
 ---
-title: 'Etapa 1: Copiando o pacote da lição 5 | Microsoft Docs'
+title: 'Etapa 1: copiar o pacote da Lição 5 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ede34999b9ca7a18a2bb5ec997c4a93735b82be2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62890752"
 ---
-# <a name="step-1-copying-the-lesson-5-package"></a>Etapa 1: Copiar o pacote da Lição 5
+# <a name="step-1-copying-the-lesson-5-package"></a>Etapa 1: Copiando o pacote da Lição 5
   Nesta tarefa, você criará uma cópia do pacote Lesson 5.dtsx criado na lição 5. Como alternativa, é possível adicionar o pacote concluído da Lição 5 incluído com o tutorial do projeto e copiá-lo. Você usará esta cópia nova ao longo de toda a lição 6.  
   
 ### <a name="to-copy-the-lesson-5-package"></a>Para copiar o pacote da Lição 5  
@@ -38,7 +38,7 @@ ms.locfileid: "62890752"
   
 7.  Na janela Propriedades, atualize a propriedade de Nome da lição 6.  
   
-8.  Clique na caixa para a propriedade de ID, em seguida, clique na seta suspensa e, em seguida, clique em \<gerar nova ID >.  
+8.  Clique na caixa da propriedade ID, clique na seta suspensa e, em seguida, clique \<em gerar nova ID>.  
   
 ### <a name="to-add-the-completed-lesson-5-package"></a>Para adicionar o pacote concluído da lição 5  
   
@@ -63,6 +63,6 @@ ms.locfileid: "62890752"
      Depois de copiar o pacote da lição 5, se você tiver atualmente os pacotes das lições anteriores em sua solução, clique com o botão direito do mouse em cada pacote das lições de 1 a 5 e clique em Excluir do Projeto. Ao terminar, você deve ter apenas a Lição 6.dtsx em sua solução.  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
- [Etapa 2: Convertendo o projeto para o modelo de implantação de projeto](lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
+ [Etapa 2: Convertendo o projeto para o modelo de implantação de projetos](lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
   
   

@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 14ead76661b6818ac2daf6a3aa250dddb348745d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62876127"
 ---
 # <a name="full-file-backups-sql-server"></a>Backups completos de arquivos (SQL Server)
@@ -96,10 +96,10 @@ ms.locfileid: "62876127"
 > [!NOTE]  
 >  Backups de arquivo não são suportados pelo Assistente de plano de manutenção.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [Visão geral do backup &#40;SQL Server&#41;](backup-overview-sql-server.md)   
- [Backup e Restauração: Interoperabilidade e Coexistência &#40;SQL Server&#41;](backup-and-restore-interoperability-and-coexistence-sql-server.md)   
+ [Backup e restauração: interoperabilidade e coexistência &#40;SQL Server&#41;](backup-and-restore-interoperability-and-coexistence-sql-server.md)   
  [Backups diferenciais &#40;SQL Server&#41;](differential-backups-sql-server.md)   
  [Restaurações de arquivos &#40;Modelo de recuperação simples&#41;](file-restores-simple-recovery-model.md)   
  [Restaurações de arquivo &#40;Modelo de recuperação completa&#41;](file-restores-full-recovery-model.md)   

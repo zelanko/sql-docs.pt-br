@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d1cc7358a7058af9feb3f0540085ab140cfd8a7b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62889617"
 ---
 # <a name="loading-and-running-a-remote-package-programmatically"></a>Carregando e executando um pacote remoto programaticamente
@@ -36,7 +36,7 @@ ms.locfileid: "62889617"
   
 -   [Usar um serviço Web ou componente remoto para executar o pacote remoto de forma programática](#service)  
   
- Quase todos os métodos que são usados neste tópico para carregar e salvar pacotes requerem uma referência ao assembly `Microsoft.SqlServer.ManagedDTS`. A exceção é a abordagem do ADO.NET demonstrada neste tópico para executar o **sp_start_job** procedimento armazenado, que exige apenas uma referência ao `System.Data`. Depois que você acrescentar a referência ao assembly `Microsoft.SqlServer.ManagedDTS` em um projeto novo, importe o namespace <xref:Microsoft.SqlServer.Dts.Runtime> com uma instrução `using` ou `Imports`.  
+ Quase todos os métodos que são usados neste tópico para carregar e salvar pacotes requerem uma referência ao assembly `Microsoft.SqlServer.ManagedDTS`. A exceção é a abordagem ADO.NET demonstrada neste tópico para executar o procedimento armazenado **sp_start_job** , que requer apenas uma referência a `System.Data`. Depois que você acrescentar a referência ao assembly `Microsoft.SqlServer.ManagedDTS` em um projeto novo, importe o namespace <xref:Microsoft.SqlServer.Dts.Runtime> com uma instrução `using` ou `Imports`.  
   
 ###  <a name="agent"></a> Usando o SQL Server Agent para executar um pacote remoto de forma programática no servidor  
  O exemplo do código seguinte demonstra como usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent programaticamente para executar um pacote remoto no servidor. O exemplo de código chama o procedimento armazenado do sistema, **sp_start_job**, que inicia um trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. O trabalho que o procedimento lança é chamado `RunSSISPackage`, e esse trabalho está no computador remoto. O trabalho `RunSSISPackage` executa o pacote no computador remoto.  
@@ -46,7 +46,7 @@ ms.locfileid: "62889617"
   
  Para obter informações sobre como solucionar problemas de pacotes executados nos trabalhos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, consulte o artigo da Microsoft, [Um pacote do SSIS não é executado quando chamado em uma etapa de trabalho do SQL Server Agent](https://support.microsoft.com/kb/918760).  
   
-### <a name="sample-code"></a>Código de exemplo  
+### <a name="sample-code"></a>Exemplo de código  
   
 ```vb  
 Imports System.Data  
@@ -154,7 +154,7 @@ namespace LaunchSSISPackageAgent_CS
 > [!IMPORTANT]  
 >  Os métodos da classe <xref:Microsoft.SqlServer.Dts.Runtime.Application> para funcionar com o Repositório de Pacotes do SSIS dão suporte apenas a “.”, localhost ou ao nome do servidor local. Você não pode usar "(local)".  
   
-### <a name="sample-code"></a>Código de exemplo  
+### <a name="sample-code"></a>Exemplo de código  
  Os exemplos de código seguintes mostram como criar e testar o serviço Web.  
   
 #### <a name="creating-the-web-service"></a>Criando o serviço Web  
@@ -164,7 +164,7 @@ namespace LaunchSSISPackageAgent_CS
   
 1.  Abra o Visual Studio e crie um projeto de serviço Web na linguagem de programação de sua preferência. O código de exemplo usa o nome LaunchSSISPackageService para o projeto.  
   
-2.  Adicione uma referência ao `Microsoft.SqlServer.ManagedDTS` e adicione uma `Imports` ou `using` instrução ao arquivo de código para o **SQLServer** namespace.  
+2.  Adicione uma referência a `Microsoft.SqlServer.ManagedDTS` e adicione uma `Imports` instrução `using` ou ao arquivo de código para o namespace **Microsoft. SqlServer. Dts. Runtime** .  
   
 3.  Cole o código de exemplo para o método LaunchPackage do serviço Web na classe. (O exemplo mostra os conteúdos inteiros da janela de código).  
   
@@ -420,11 +420,11 @@ namespace LaunchSSISPackageSvcTestCS
   
 ## <a name="external-resources"></a>Recursos externos  
   
--   Vídeo, [Como automatizar a execução de pacote do SSIS usando o SQL Server Agent (vídeo do SQL Server)](https://technet.microsoft.com/sqlserver/ff686764.aspx), em technet.microsoft.com  
+-   Vídeo [Como automatizar a execução de pacote do SSIS usando o SQL Server Agent (vídeo do SQL Server)](https://technet.microsoft.com/sqlserver/ff686764.aspx), em technet.microsoft.com  
   
-![Ícone do Integration Services (pequeno)](../media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
+![Ícone de Integration Services (pequeno)](../media/dts-16.gif "Ícone do Integration Services (pequeno)")  **Mantenha-se atualizado com Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Compreender as diferenças entre execução local e remota](../run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   
  [Carregando e executando um pacote local de forma programática](../run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md)   
  [Carregar a saída de um pacote local](../run-manage-packages-programmatically/loading-the-output-of-a-local-package.md)  

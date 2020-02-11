@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a6db88a8bb5e44090e5201220fee36a432b69767
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62869871"
 ---
-# <a name="mssqlserver14421"></a>MSSQLSERVER_14421
+# <a name="mssqlserver_14421"></a>MSSQLSERVER_14421
     
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|14421|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|SQLErrorNum14421|  
 |Texto da mensagem|O banco de dados secundário de envio de logs %s.%s tem um limite de restauração de %d minutos e está fora de sincronização. Nenhuma restauração foi executada há %d minutos. A latência restaurada é de %d minutos. Verifique as informações de monitoração de log do agente e de envio de logs.|  
@@ -35,7 +35,7 @@ ms.locfileid: "62869871"
 ## <a name="explanation"></a>Explicação  
  Essa mensagem indica que o envio de logs está fora de sincronia além do limite de restauração. O limite de restauração é o número de minutos entre as operações de restauração antes de uma mensagem ser gerada.  
   
-### <a name="possible-causes"></a>Causas possíveis  
+### <a name="possible-causes"></a>Possíveis causas  
  Essa mensagem não indica necessariamente um problema com o envio de logs. Em vez disso, ela pode indicar um dos seguintes problemas:  
   
 -   O trabalho de restauração não está sendo executado.  
@@ -66,11 +66,11 @@ ms.locfileid: "62869871"
     > [!NOTE]  
     >  Fusos horários diferentes para as duas instâncias de servidor não deveriam causar um problema.  
   
-## <a name="see-also"></a>Consulte também  
- [log_shipping_monitor_secondary &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/log-shipping-monitor-secondary-transact-sql)   
+## <a name="see-also"></a>Consulte Também  
+ [&#41;&#40;Transact-SQL de log_shipping_monitor_secondary](/sql/relational-databases/system-tables/log-shipping-monitor-secondary-transact-sql)   
  [Sobre o envio de logs &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
- [sp_help_log_shipping_monitor_secondary &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-secondary-transact-sql)   
- [sp_refresh_log_shipping_monitor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql)   
+ [&#41;&#40;Transact-SQL de sp_help_log_shipping_monitor_secondary](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-secondary-transact-sql)   
+ [&#41;&#40;Transact-SQL de sp_refresh_log_shipping_monitor](/sql/relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql)   
  [Sobre o envio de logs &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)  
   
   

@@ -13,29 +13,29 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0eda0980b3b8ffbc748f15933ea397ae3d0b71e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62913410"
 ---
-# <a name="mssqlserver7916"></a>MSSQLSERVER_7916
+# <a name="mssqlserver_7916"></a>MSSQLSERVER_7916
     
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|7916|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|DBCC2_REPAIR_RECORD_DELETED|  
-|Texto da mensagem|Reparar: Registro excluído para ID de objeto O_ID, ID de índice I_ID, ID de partição PN_ID, ID A_ID (tipo TYPE), de unidade de alocação na página P_ID, slot S_ID aparece antes. Os índices serão recriados.|  
+|Texto da mensagem|Correção: registro excluído referente a ID de objeto O_ID, ID de índice I_ID, ID de partição PN_ID, ID de unidade de alocação A_ID (tipo TYPE), na página P_ID, slot S_ID. Os índices serão recriados.|  
   
 ## <a name="explanation"></a>Explicação  
  Essa é uma mensagem informativa da cláusula REPAIR que indica que o registro especificado foi excluído da página.  
   
 ## <a name="user-action"></a>Ação do usuário  
- None  
+ Nenhum  
   
   

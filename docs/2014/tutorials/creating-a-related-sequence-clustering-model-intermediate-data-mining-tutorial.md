@@ -1,5 +1,5 @@
 ---
-title: Criando um modelo (Tutorial de mineração de dados intermediário) de Clustering de sequências relacionado | Microsoft Docs
+title: Criando um modelo de clustering de sequência relacionado (tutorial de mineração de dados intermediário) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 71db7ba5246e151bbca8a52972a2ba835b80ddb6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62855873"
 ---
 # <a name="creating-a-related-sequence-clustering-model-intermediate-data-mining-tutorial"></a>Criando um modelo de clustering de sequências relacionado (Tutorial de mineração de dados intermediário)
@@ -26,11 +26,11 @@ ms.locfileid: "62855873"
   
 ### <a name="to-make-a-copy-of-the-sequence-clustering-model"></a>Para fazer uma cópia do modelo de clustering de sequências  
   
-1.  Na [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], no Designer de mineração de dados, clique em de **modelos de mineração** guia.  
+1.  No [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], no designer de mineração de dados, clique na guia **modelos de mineração** .  
   
-2.  Com o modelo que você deseja copiar e, em seguida, selecione o botão direito **novo modelo de mineração**.  
+2.  Clique com o botão direito do mouse no modelo que você deseja copiar e selecione **novo modelo de mineração**.  
   
-3.  No **novo modelo de mineração** caixa de diálogo, digite um nome de modelo e selecione Microsoft `Sequence Clustering`.  
+3.  Na caixa de diálogo **novo modelo de mineração** , digite um nome de modelo e selecione `Sequence Clustering`Microsoft.  
   
      Para este tutorial, digite o nome `Sequence Clustering`.  
   
@@ -38,36 +38,36 @@ ms.locfileid: "62855873"
   
 ### <a name="to-remove-columns-from-the-mining-model"></a>Para remover colunas do modelo de mineração  
   
-1.  No **modelo de mineração** guia, na coluna para o novo modelo chamado Clustering de sequências, clique na linha para o **grupo de renda** de atributo e, em seguida, selecione **ignorar**.  
+1.  Na guia **modelo de mineração** , na coluna do novo modelo denominado clustering de sequência, clique na linha do atributo de **grupo renda** e selecione **ignorar**.  
   
-2.  Repita essa etapa para o atributo **região**.  
+2.  Repita essa etapa para a **região**de atributo.  
   
-3.  Clique no sinal de adição ao lado do nome da tabela, **v Assoc Seq Line Items**, para expandir a tabela e exiba as colunas da tabela aninhada.  
+3.  Clique no sinal de adição ao lado do nome da tabela, **v associações Seq itens de linha**, para expandir a tabela e exibir as colunas da tabela aninhada.  
   
      O novo modelo só deve conter as seguintes colunas:  
   
-     **Ordem NumberKey**  
+     **Solicitar NumberKey**  
   
-     **Tecla de número de linha**  
+     **Chave de número de linha**  
   
-     **Modelo de previsão**  
+     **Previsão de modelo**  
   
 ### <a name="to-process-the-new-sequence-clustering-model"></a>Para processar o novo modelo de clustering de sequências  
   
-1.  No **modelo de mineração** guia, clique no novo modelo chamado `Sequence Clustering`e selecione **modelo de processo**.  
+1.  Na guia **modelo de mineração** , clique com o botão direito do mouse `Sequence Clustering`no novo modelo chamado e selecione **modelo de processo**.  
   
      Como o novo modelo de mineração simplificado se baseia em uma estrutura que já foi processada, não será preciso reprocessá-la. É possível processar somente o novo modelo de mineração.  
   
-2.  Clique em **Sim** para implantar o projeto de mineração de dados atualizados no servidor.  
+2.  Clique em **Sim** para implantar o projeto de Data Mining atualizado no servidor.  
   
-3.  No **processar modelo de mineração** caixa de diálogo, clique em **executar**.  
+3.  Na caixa de diálogo **modelo de mineração de processo** , clique em **executar**.  
   
-4.  Clique em **feche** para fechar o **progresso do processo** caixa de diálogo e clique **fechar** novamente no **processar modelo de mineração** caixa de diálogo.  
+4.  Clique em **fechar** para fechar a caixa de diálogo **progresso do processo** e clique em **fechar** novamente na caixa de diálogo **processar modelo de mineração** .  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
- [Criando previsões em um modelo de Clustering de sequência &#40;Tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/create-predictions-on-model-intermediate-data-mining-tutorial.md)  
+ [Criando previsões em um modelo de clustering de sequência &#40;tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/create-predictions-on-model-intermediate-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Requisitos e considerações de processamento &#40;Mineração de dados&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Requisitos e considerações de processamento &#40;mineração de dados&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

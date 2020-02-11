@@ -1,5 +1,5 @@
 ---
-title: 'Etapa 6: Adicionando e configurando a transformação pesquisa | Microsoft Docs'
+title: 'Etapa 6: Adicionando e configurando a transformação Pesquisa | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f652519efc4b77bd785cdded468fe114f6499200
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62891544"
 ---
-# <a name="step-6-adding-and-configuring-the-lookup-transformations"></a>Etapa 6: Adicionar e configurar a transformação Pesquisa
+# <a name="step-6-adding-and-configuring-the-lookup-transformations"></a>Etapa 6: Adicionando e configurando a transformação Pesquisa
   Depois de configurar a fonte de Arquivo Simples para extrair dados do arquivo de origem, a próxima tarefa será definir as transformações Pesquisa necessárias para obter os valores de **CurrencyKey** e **DateKey**. Uma transformação Pesquisa executa uma pesquisa ao unir dados na entrada coluna para uma coluna especificada em um conjunto de dados referenciado. O conjunto de dados de referência pode ser uma tabela existente ou visualização, uma nova tabela ou o resultado de uma instrução SQL. Neste tutorial, a transformação Pesquisa usa um gerenciador de conexões OLE DB para conectar-se ao banco de dados que contém os dados que é a fonte do conjunto de dados de referência.  
   
 > [!NOTE]  
@@ -33,7 +33,7 @@ ms.locfileid: "62891544"
   
 ### <a name="to-add-and-configure-the-lookup-currency-key-transformation"></a>Para adicionar e configurar a transformação Código de Moeda da Pesquisa  
   
-1.  Na **Caixa de Ferramentas do SSIS**, expanda **Comum**e arraste **Pesquisa** para a superfície de design da guia **Fluxo de Dados** . Coloque Pesquisa diretamente abaixo da fonte **Extrair Dados de Exemplo de Moeda** .  
+1.  Na **caixa de ferramentas do SSIS**, expanda **comum**e, em seguida, arraste **pesquisa** para a superfície de design da guia **fluxo de dados** . Coloque a pesquisa diretamente abaixo da fonte de **dados extrair exemplo de moeda** .  
   
 2.  Clique na fonte de arquivo simples **Extrair Dados de Exemplo de Moeda** e arraste a seta verde para a transformação **Pesquisa** recém-adicionada, para poder conectar assim os dois componentes.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "62891544"
   
 9. Clique com o botão direito do mouse na transformação Chave de Moeda de Pesquisa e clique em **Propriedades**.  
   
-10. Na janela Propriedades, verifique se o `LocaleID` estiver definida como **inglês (Estados Unidos)** e o **DefaultCodePage** estiver definida como **1252**.  
+10. `LocaleID` No janela Propriedades, verifique se a propriedade está definida como **Inglês (Estados Unidos)** e se a propriedade **defaultcodepage** está definida como **1252**.  
   
 ### <a name="to-add-and-configure-the--lookup-datekey-transformation"></a>Para adicionar e configurar a transformação Pesquisa de Chave de Data  
   
@@ -114,7 +114,7 @@ ms.locfileid: "62891544"
   
     1.  Na caixa de diálogo **Gerenciador de conexões OLE DB** , verifique se **localhost.AdventureWorksDW2012** é exibido.  
   
-    2.  Na caixa **Usar uma tabela ou exibição** , digite ou selecione **[dbo].[DimDate]** .  
+    2.  Na caixa **Usar uma tabela ou exibição** , digite ou selecione **[dbo].[DimDate]**.  
   
 8.  Na página **Colunas** , faça as seguintes seleções:  
   
@@ -128,12 +128,12 @@ ms.locfileid: "62891544"
   
 11. Clique com o botão direito do mouse na transformação Chave de Data de Pesquisa e clique em **Propriedades**.  
   
-12. Na janela Propriedades, verifique se o `LocaleID` estiver definida como **inglês (Estados Unidos)** e o **DefaultCodePage** estiver definida como **1252**.  
+12. `LocaleID` No janela Propriedades, verifique se a propriedade está definida como **Inglês (Estados Unidos)** e se a propriedade **defaultcodepage** está definida como **1252**.  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
  [Etapa 7: Adicionando e configurando o destino OLE DB](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Lookup Transformation](data-flow/transformations/lookup-transformation.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Transformação Pesquisa](data-flow/transformations/lookup-transformation.md)  
   
   

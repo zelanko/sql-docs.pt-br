@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7d9b75cc79f1f127858ce8547aa222524614ac09
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62901480"
 ---
 # <a name="ole-db-destination"></a>Destino OLE DB
@@ -45,7 +45,7 @@ ms.locfileid: "62901480"
 > [!NOTE]  
 >  O destino OLE DB não aceita parâmetros. Se você precisar executar uma instrução parametrizada INSERT, considere a transformação Comando OLE DB. Para obter mais informações, consulte [OLE DB Command Transformation](transformations/ole-db-command-transformation.md).  
   
- Quando o destino OLE DB carrega dados que usam o conjunto de caracteres de dois bytes (DBCS), os dados poderão ser corrompidos se o modo de acesso de dados não usar a opção de carregamento rápido e se o gerenciador de conexões OLE DB usar o provedor OLE DB [!INCLUDE[msCoName](../../includes/msconame-md.md)] para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLOLEDB). Para garantir a integridade dos dados DBCS, você deve configurar o gerenciador de conexões OLE DB para usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ou utilizar um dos modos de acesso de carregamento rápido: **Tabela ou exibição – carregamento rápido** ou **Variável de nome da tabela ou exibição – carregamento rápido**. As duas opções estão disponíveis na caixa de diálogo **Editor de Destino de OLE DB** . Ao programar o [!INCLUDE[ssIS](../../includes/ssis-md.md)] modelo de objeto, você deve definir a propriedade AccessMode `OpenRowset Using FastLoad`, ou `OpenRowset Using FastLoad From Variable`.  
+ Quando o destino OLE DB carrega dados que usam o conjunto de caracteres de dois bytes (DBCS), os dados poderão ser corrompidos se o modo de acesso de dados não usar a opção de carregamento rápido e se o gerenciador de conexões OLE DB usar o provedor OLE DB [!INCLUDE[msCoName](../../includes/msconame-md.md)] para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLOLEDB). Para garantir a integridade dos dados DBCS, você deve configurar o gerenciador de conexões OLE DB para usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ou utilizar um dos modos de acesso de carregamento rápido: **Tabela ou exibição – carregamento rápido** ou **Variável de nome da tabela ou exibição – carregamento rápido**. As duas opções estão disponíveis na caixa de diálogo **Editor de Destino de OLE DB** . Ao programar [!INCLUDE[ssIS](../../includes/ssis-md.md)] o modelo de objeto, você deve definir a propriedade AccessMode `OpenRowset Using FastLoad`como `OpenRowset Using FastLoad From Variable`, ou.  
   
 > [!NOTE]  
 >  Se você usar a caixa de diálogo **Editor de Destino de OLE DB** no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer para criar a tabela de destino em que o destino OLE DB insere dados, você poderá ter que selecionar a nova tabela manualmente. A necessidade de selecionar manualmente ocorre quando um provedor OLE DB, como o provedor OLE DB para DB2, adiciona automaticamente identificadores de esquema ao nome da tabela.  
@@ -76,16 +76,16 @@ ms.locfileid: "62901480"
   
 -   Especificar o número de linhas no lote e o tamanho de confirmação.  
   
- Algumas opções de carregamento rápido são armazenadas em propriedades específicas do destino OLE DB. Por exemplo, FastLoadKeepIdentity especifica se os valores de identidade são mantidos ou não, FastLoadKeepNulls especifica se valores nulos são mantidos ou não e FastLoadMaxInsertCommitSize especifica o número de linhas a serem confirmadas como um lote. Outras opções de carregamento rápido são armazenadas em uma lista separada por vírgulas na propriedade FastLoadOptions. Se o destino de OLE DB usa todas as opções de carregamento rápido que são armazenadas em FastLoadOptions e listadas na **Editor de destino do OLE DB** caixa de diálogo, o valor da propriedade é definido como `TABLOCK, CHECK_CONSTRAINTS, ROWS_PER_BATCH=1000`. O valor 1000 indica que o destino é configurado para usar lotes de 1000 linhas.  
+ Algumas opções de carregamento rápido são armazenadas em propriedades específicas do destino OLE DB. Por exemplo, FastLoadKeepIdentity especifica se os valores de identidade são mantidos ou não, FastLoadKeepNulls especifica se valores nulos são mantidos ou não e FastLoadMaxInsertCommitSize especifica o número de linhas a serem confirmadas como um lote. Outras opções de carregamento rápido são armazenadas em uma lista separada por vírgulas na propriedade FastLoadOptions. Se o destino de OLE DB usar todas as opções de carregamento rápido armazenadas em FastLoadOptions e listadas na caixa de diálogo **Editor de destino de OLE DB** , o valor da propriedade será `TABLOCK, CHECK_CONSTRAINTS, ROWS_PER_BATCH=1000`definido como. O valor 1000 indica que o destino é configurado para usar lotes de 1000 linhas.  
   
 > [!NOTE]  
 >  Qualquer falha de restrição ao destino fará com que todo o lote de linhas definido por FastLoadMaxInsertCommitSize falhe.  
   
  Além das opções de carregamento rápido apresentadas na caixa de diálogo **Editor de Destino de OLE DB** , você pode configurar o destino OLE DB para usar as seguintes opções de carregamento em massa informando-as na propriedade FastLoadOptions na caixa de diálogo **Editor Avançado** .  
   
-|Opção de carregamento rápido|Descrição|  
+|Opção de carregamento rápido|DESCRIÇÃO|  
 |----------------------|-----------------|  
-|KILOBYTES_PER_BATCH|Especifica o tamanho em quilobytes a ser inserido. A opção tem o formato `KILOBYTES_PER_BATCH`  =  \<valor inteiro positivo **>** .|  
+|KILOBYTES_PER_BATCH|Especifica o tamanho em quilobytes a ser inserido. A opção tem o formato `KILOBYTES_PER_BATCH`  =  \<de valor**>** inteiro positivo.|  
 |FIRE_TRIGGERS|Especifica se os gatilhos devem ser disparados na tabela de inserção. A opção tem o formato **FIRE_TRIGGERS**. A presença da opção indica que os gatilhos irão disparar.|  
 |ORDER|Especifica como os dados de entrada são classificados. A opção tem o formato ORDER \<nome da coluna> ASC&#124;DESC. Qualquer número de colunas pode ser listado e a inclusão da ordem de classificação é opcional. Se a ordem de classificação for omitida, a operação de inserção assumirá que os dados não estão classificados.<br /><br /> Observação: o desempenho pode ser otimizado se você usar a opção ORDER para classificar os dados de entrada de acordo com o índice clusterizado da tabela.|  
   
@@ -101,11 +101,11 @@ ms.locfileid: "62901480"
   
  Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor de Destino de OLE DB** clique em um dos seguintes tópicos:  
   
--   [Editor de Destino OLE DB &#40;Página Gerenciador de Conexões&#41;](../ole-db-destination-editor-connection-manager-page.md)  
+-   [OLE DB editor de destino &#40;página do Gerenciador de conexões&#41;](../ole-db-destination-editor-connection-manager-page.md)  
   
--   [Editor de Destino de OLE DB &#40;Página Mapeamentos&#41;](../ole-db-destination-editor-mappings-page.md)  
+-   [Página Mapeamentos do OLE DB editor de destino &#40;&#41;](../ole-db-destination-editor-mappings-page.md)  
   
--   [Editor de Destino OLE DB &#40;Página Saída de Erro&#41;](../ole-db-destination-editor-error-output-page.md)  
+-   [Editor de destino OLE DB &#40;página saída de erro&#41;](../ole-db-destination-editor-error-output-page.md)  
   
  A caixa de diálogo **Editor Avançado** reflete as propriedades que podem ser definidas programaticamente. Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   

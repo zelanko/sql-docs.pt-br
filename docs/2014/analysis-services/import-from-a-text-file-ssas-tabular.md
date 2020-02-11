@@ -1,5 +1,5 @@
 ---
-title: Importação de um arquivo de texto (SSAS Tabular) | Microsoft Docs
+title: Importar de um arquivo de texto (SSAS tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 455d0981a4b81bc81b2dece8cedbd6ea07e66a21
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080542"
 ---
 # <a name="import-from-a-text-file-ssas-tabular"></a>Importar de um arquivo de texto (SSAS tabular)
@@ -30,8 +30,8 @@ ms.locfileid: "66080542"
   
 3.  Siga as etapas no Assistente de Importação de Tabela. Nas páginas subsequentes, você poderá selecionar tabelas específicas e aplicar filtros usando as páginas **Selecionar Tabelas e Exibições** .  
   
-## <a name="see-also"></a>Consulte também  
- [Importar dados &#40;SSAS de Tabela&#41;](import-data-ssas-tabular.md)   
- [Fontes de dados com suporte &#40;SSAS de Tabela&#41;](tabular-models/data-sources-supported-ssas-tabular.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Importar dados &#40;SSAS de tabela&#41;](import-data-ssas-tabular.md)   
+ [Fontes de dados com suporte &#40;SSAS de tabela&#41;](tabular-models/data-sources-supported-ssas-tabular.md)  
   
   

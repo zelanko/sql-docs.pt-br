@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: eed258c78e76c5ec3f6aeeeb6bdd647166592613
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62856130"
 ---
 # <a name="add-columns-to-a-table-database-engine"></a>Adicionar colunas a uma tabela (Mecanismo de Banco de Dados)
@@ -32,7 +32,7 @@ ms.locfileid: "62856130"
   
      [Segurança](#Security)  
   
--   **Para inserir colunas, usando:**  
+-   **Para inserir colunas usando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -68,7 +68,7 @@ ms.locfileid: "62856130"
     > [!NOTE]  
     >  Valores padrão de propriedades de coluna são adicionados quando uma nova coluna é criada. Contudo, é possível alterá-los na guia **Propriedades da Coluna** .  
   
-6.  Quando você concluir a adição de colunas, no menu **Arquivo** , escolha **Save**_table name_.  
+6.  Quando você concluir a adição de colunas, no menu **Arquivo**, escolha **Salvar**_nome da tabela_.  
   
 ##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
@@ -78,12 +78,12 @@ ms.locfileid: "62856130"
   
 2.  Na barra Padrão, clique em **Nova Consulta**.  
   
-3.  O exemplo a seguir adiciona duas colunas à tabela `dbo.doc_exa`. Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**.  
+3.  O exemplo a seguir adiciona duas colunas à tabela `dbo.doc_exa`. Copie e cole o exemplo a seguir na janela de consulta e clique em **executar**  
   
 ```  
 ALTER TABLE dbo.doc_exa ADD column_b VARCHAR(20) NULL, column_c INT NULL ;  
 ```  
   
-##  <a name="FollowUp"></a> Para obter mais informações, consulte [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)  
+##  <a name="FollowUp"></a>Para obter mais informações, consulte [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)  
   
   

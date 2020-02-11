@@ -15,10 +15,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 0c2c543343bd602be75d600a489edfd84663790b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62911398"
 ---
 # <a name="set-breakpoints"></a>Definir Pontos de Interrupção
@@ -28,13 +28,13 @@ ms.locfileid: "62911398"
  **Enabled**  
  Selecione para habilitar um ponto de interrupção em um evento.  
   
- **Condição de Interrupção**  
+ **Condição de interrupção**  
  Exiba uma lista de eventos disponíveis nos quais definir pontos de interrupção.  
   
- **Tipo de Contagem de Ocorrências**  
+ **Tipo de contagem de acesso**  
  Especifique quando o ponto de interrupção entra em vigor.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |**Always**|A execução será sempre suspensa quando ocorrer o ponto de interrupção.|  
 |**Contagem de ocorrências igual a**|A execução será suspensa quando o número de vezes que o ponto de interrupção ocorreu for igual à contagem de ocorrências.|  
@@ -44,7 +44,7 @@ ms.locfileid: "62911398"
  **Contagem de Ocorrências**  
  Especifique o número de ocorrências no qual engatilhe uma interrupção. Esta opção não estará disponível se o ponto de interrupção estiver sempre ativado.  
   
-## <a name="see-also"></a>Consulte também  
- [Depurando o fluxo de controle](../../../integration-services/troubleshooting/debugging-control-flow.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Depurar o fluxo de controle](../../../integration-services/troubleshooting/debugging-control-flow.md)  
   
   

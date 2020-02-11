@@ -1,5 +1,5 @@
 ---
-title: Filtro de uma regra em uma associação de modelo de regras | Microsoft Docs
+title: Filtrar uma regra em um modelo de regras de associação | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b63a6d6da0cb1d489ecac418e2682590ea2164e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084407"
 ---
 # <a name="filter-a-rule-in-an-association-rules-model"></a>Filtrar uma regra em um modelo de regras de associação
@@ -43,7 +43,7 @@ ms.locfileid: "66084407"
   
 5.  Para **Importância mínima**, aumente o valor da importância para exibir menos regras ou diminua o valor para exibir mais regras.  
   
-6.  Para **Mostrar**, selecione uma das seguintes opções: **Mostrar nome de atributo e valor**, **Mostrar apenas nome de atributo**, ou **Mostrar apenas o valor do atributo**.  
+6.  Para **Mostrar**, selecione um das seguintes opções: **Mostrar nome e valor do atributo**, **Mostrar apenas o nome de atributo**ou **Mostrar apenas o valor de atributo**.  
   
 7.  Para **Máximo de linhas**, aumente o valor para aumentar o número total de regras que atendem às condições especificadas ou diminua o valor para limitar o número de regras retornadas. As regras são ordenadas por probabilidade, assim você poderia eliminar regras adicionais que atendem às condições especificadas de probabilidade ou importância.  
   
@@ -58,9 +58,9 @@ ms.locfileid: "66084407"
   
 -   [Exemplos de consulta de um modelo de associação](association-model-query-examples.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Tarefas e instruções do visualizador do modelo de mineração](mining-model-viewer-tasks-and-how-tos.md)   
- [Procurar um modelo usando o Visualizador de Regras de Associação da Microsoft](browse-a-model-using-the-microsoft-association-rules-viewer.md)   
- [Lição 3: Criando um cenário de cesta de compras &#40;Tutorial de mineração de dados intermediário&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Tarefas e instruções do Visualizador do modelo de mineração](mining-model-viewer-tasks-and-how-tos.md)   
+ [Procurar um modelo usando o Visualizador de regras de associação da Microsoft](browse-a-model-using-the-microsoft-association-rules-viewer.md)   
+ [Lição 3: Criando um cenário de cesta de mercado &#40;tutorial de mineração de dados intermediário&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
   
   

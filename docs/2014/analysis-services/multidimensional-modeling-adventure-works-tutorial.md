@@ -1,5 +1,5 @@
 ---
-title: Modelagem multidimensional (Adventure Works Tutorial) | Microsoft Docs
+title: Modelagem multidimensional (tutorial do Adventure Works) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 174d4ab61cf56f4916babb1639e110162d20e6fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077575"
 ---
 # <a name="multidimensional-modeling-adventure-works-tutorial"></a>Modelagem multidimensional (Tutorial do Adventure Works)
@@ -48,15 +48,15 @@ ms.locfileid: "66077575"
 ## <a name="lessons"></a>Lições  
  Este tutorial inclui as seguintes lições.  
   
-|Lição|Tempo estimado para concluir|  
+|Lição|Tempo estimado para conclusão|  
 |------------|--------------------------------|  
-|[Lição 1: Definindo uma exibição da fonte de dados dentro de uma análise de projeto de serviços](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md)|15 minutos|  
+|[Lição 1: Definindo uma exibição da fonte de dados em um Projeto do Analysis Services](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md)|15 minutos|  
 |[Lição 2: Definindo e implantando um cubo](lesson-2-defining-and-deploying-a-cube.md)|30 minutos|  
 |[Lição 3: Modificando medidas, atributos e hierarquias](lesson-3-modifying-measures-attributes-and-hierarchies.md)|45 minutos|  
 |[Lição 4: Definindo propriedades de dimensão e atributo avançadas](lesson-4-defining-advanced-attribute-and-dimension-properties.md)|120 minutos|  
-|[Lição 5: Definindo relações entre dimensões e grupos de medidas](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)|45 minutos|  
+|[Lição 5: Definindo relações entre grupos de medidas e dimensões](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)|45 minutos|  
 |[Lição 6: Definindo cálculos](lesson-6-defining-calculations.md)|45 minutos|  
-|[Lição 7: Definindo indicadores chave de desempenho &#40;KPIs&#41;](lesson-7-defining-key-performance-indicators-kpis.md)|30 minutos|  
+|[Lição 7: definindo indicadores chave de desempenho &#40;KPIs&#41;](lesson-7-defining-key-performance-indicators-kpis.md)|30 minutos|  
 |[Lição 8: Definindo ações](lesson-8-defining-actions.md)|30 minutos|  
 |[Lição 9: Definindo perspectivas e traduções](lesson-9-defining-perspectives-and-translations.md)|30 minutos|  
 |[Lição 10: Definindo funções administrativas](lesson-10-defining-administrative-roles.md)|15 minutos|  
@@ -65,6 +65,6 @@ ms.locfileid: "66077575"
 >  O banco de dados de cubo que você criará neste tutorial é uma versão simplificada do projeto de modelo multidimensional do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que faz parte dos bancos de dados de exemplo da Adventure Works disponível para download no site do codeplex. A versão de tutorial do banco de dados multidimensional do Adventure Works é simplificada para trazer maior foco às habilidades específicas que você desejará dominar imediatamente. Depois que você concluir o tutorial, explore o projeto de modelo multidimensional por conta própria para avançar sua compreensão da modelagem multidimensional do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
 ## <a name="next-step"></a>Próxima etapa  
- Para começar o tutorial, vá para a primeira lição: [Lição 1: Definindo uma exibição da fonte de dados dentro de uma análise de projeto de serviços](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md).  
+ Para começar o tutorial, vá para a primeira lição: [Lesson 1: Defining a Data Source View within an Analysis Services Project](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md).  
   
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a79df6d154b5b5f2363eb14af0a4ffae5c9cb618
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081362"
 ---
 # <a name="enable-dimension-writeback-business-intelligence-wizard"></a>Habilitar Write-back de Dimensão (Assistente de Business Intelligence)
@@ -26,10 +26,10 @@ ms.locfileid: "66081362"
  **Habilitar write-back na dimensão**  
  Selecione para tornar a dimensão habilitada para gravação.  
   
-## <a name="see-also"></a>Consulte também  
- [Ajuda F1 do Assistente de Business Intelligence](business-intelligence-wizard-f1-help.md)   
- [Designer de cubo &#40;Analysis Services - dados multidimensionais&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [Designer de dimensão &#40;Analysis Services - dados multidimensionais&#41;](dimension-designer-analysis-services-multidimensional-data.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Ajuda F1 do assistente de Business Intelligence](business-intelligence-wizard-f1-help.md)   
+ [O designer de cubo &#40;Analysis Services-dados multidimensionais&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [O designer de dimensão &#40;Analysis Services de dados multidimensionais&#41;](dimension-designer-analysis-services-multidimensional-data.md)   
  [Dimensões habilitadas para gravação](multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)   
  [Habilitar o write-back de dimensão](multidimensional-models/bi-wizard-enable-dimension-writeback.md)  
   

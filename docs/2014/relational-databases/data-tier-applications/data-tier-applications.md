@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b9731a25633b5bc127039ae81a31df8c69bb8ccb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62873097"
 ---
 # <a name="data-tier-applications"></a>Aplicativos da camada de Dados
@@ -58,7 +58,7 @@ ms.locfileid: "62873097"
 ## <a name="dac-tools"></a>Ferramentas de DAC  
  Um DACPAC pode ser usado diretamente por várias ferramentas que são enviadas com o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Estas ferramentas tratam os requisitos de diferentes personas de usuário usando um DACPAC como a unidade de interoperabilidade.  
   
--   Desenvolvedor de aplicativo  
+-   Desenvolvedor de aplicativos  
   
     -   Um desenvolvedor de banco de dados pode usar um projeto de banco de dados do SQL Server Data Tools para criar um banco de dados. Uma compilação bem-sucedida deste projeto resulta na geração de um DACPAC contido em um arquivo .dacpac.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "62873097"
 ## <a name="backup-package-bacpac"></a>Pacote de backup (.bacpac)  
  Um BACPAC é um artefato que encapsula o esquema de banco de dados e também os dados armazenados no banco de dados. O BACPAC é um arquivo do Windows com uma extensão .bacpac. Semelhante ao DACPAC, o formato de arquivo do BACPAC é aberto – o conteúdo de esquema do BACPAC é idêntico ao do DACPAC. Os dados são armazenados em formato JSON.  
   
- DACPAC e BACPAC são semelhantes, mas eles se destinam a cenários diferentes. Um DACPAC destina-se a capturar e implantar esquema, inclusive atualizar um banco de dados existente. Caso de uso primário para um DACPAC é implantar um esquema altamente definido para desenvolvimento, teste e, em seguida, ambientes de produção e o inverso: capturar o esquema de produção e aplicá-lo novamente para teste e ambientes de desenvolvimento.  
+ DACPAC e BACPAC são semelhantes, mas eles se destinam a cenários diferentes. Um DACPAC destina-se a capturar e implantar esquema, inclusive atualizar um banco de dados existente. O caso de uso primário para um DACPAC é implantar um esquema rigidamente definido em ambientes de desenvolvimento, teste e produção, e o inverso: capturar o esquema de produção e aplicá-lo de volta aos ambientes de teste e desenvolvimento.  
   
  Por outro lado, um BACPAC destina-se a capturar esquema e dados. Um BACPAC é o equivalente lógico de um backup de banco de dados e não pode ser usado para atualizar bancos de dados existentes. O caso de uso primário para um BACPAC é mover um banco de dados de um servidor para outro - ou de um servidor local para a nuvem - e arquivar um banco de dados existente em um formato aberto.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "62873097"
   
 -   **IMPORT** – o usuário pode importar o esquema e os dados em um novo banco de dados no servidor de host.  
   
- Ambas as funcionalidades são compatíveis com as ferramentas de gerenciamento de banco de dados: Server Management Studio, o Portal de gerenciamento para SQL Azure e a API DACFx.  
+ Estes recursos têm suporte pelas ferramentas de gerenciamento de banco de dados: o Servidor Management Studio, o portal de gerenciamento para o SQL Azure e a API do DACFx.  
   
 ## <a name="permissions"></a>Permissões  
  Você deve ser membro da função `dbmanager` ou ter permissões `CREATE DATABASE` atribuídas para criar um banco de dados, incluindo criar um banco de dados implantando um pacote de DAC. Você deve ser um membro da função `dbmanager` ou ter permissões `DROP DATABASE` atribuídas para remover um banco de dados.  
@@ -129,7 +129,7 @@ ms.locfileid: "62873097"
 |Descreve como colocar o conteúdo de um pacote de DAC em uma pasta onde um administrador de banco de dados pode analisar o que o DAC faz antes de implantá-lo em um servidor de produção.|[Desempacotar um pacote de DAC](unpack-a-dac-package.md)|  
 |Descreve como usar um assistente para implantar um banco de dados existente. O assistente usa os DACs para executar a implantação.|[Implantar um banco de dados usando um DAC](deploy-a-database-by-using-a-dac.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Suporte ao DAC para objetos e versões do SQL Server](dac-support-for-sql-server-objects-and-versions.md)  
   
   

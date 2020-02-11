@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bfb82476d42bf471853a66b3c93736952d876071
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62897325"
 ---
 # <a name="round-ssis-expression"></a>ROUND (Expressão SSIS)
@@ -34,7 +34,7 @@ ROUND(numeric_expression,length)
  *numeric_expression*  
  É uma expressão de um tipo de numérico válido. Para obter mais informações, consulte [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
   
- *comprimento*  
+ *length*  
  É uma expressão de inteiro. Precisão para a qual *numeric_expression* é arredondada.  
   
 ## <a name="result-types"></a>Tipos de resultado  
@@ -53,7 +53,7 @@ ROUND(137.1574,3)
 ROUND(137.1575,3)  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Funções &#40;Expressão do SSIS&#41;](functions-ssis-expression.md)  
   
   

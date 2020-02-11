@@ -1,5 +1,5 @@
 ---
-title: Habilitar / desabilitar a caixa de diálogo de write-back (Analysis Services - dados multidimensionais) | Microsoft Docs
+title: Caixa de diálogo Habilitar-Desabilitar Write-back (Analysis Services-dados multidimensionais) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 498d1af6f96791b9ee3912c09a3667e139f30ff0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081293"
 ---
-# <a name="enable-disable-writeback-dialog-box-analysis-services---multidimensional-data"></a>Habilitar / desabilitar a caixa de diálogo de write-back (Analysis Services - dados multidimensionais)
+# <a name="enable-disable-writeback-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Habilitar-Desabilitar Write-back (Analysis Services-dados multidimensionais)
   A caixa de diálogo **Habilitar/Desabilitar Write-back** habilita ou desabilita write-back para um grupo de medidas em um cubo. Habilitar write-back em um grupo de medidas define uma partição de write-back e cria uma tabela de write-back para esse grupo de medidas. Desabilitar write-back em um grupo de medidas remove a partição de write-back, mas não exclui a tabela de write-back, de modo a evitar perda de dados inesperada. A caixa de diálogo **Habilitar/Desabilitar Write-back** é exibida da seguintes maneiras:  
   
 -   Clicando em **Configurações de Write-back** no painel **Grupos de Medidas** na guia **Partições** no Designer de Cubo.  
@@ -39,7 +39,7 @@ ms.locfileid: "66081293"
 > [!NOTE]  
 >  Essa opção estará desabilitada se write-back não estiver habilitado.  
   
- **Nova**  
+ **Novo**  
  Clique para exibir a caixa de diálogo **Gerenciador de Conexões** e definir uma nova fonte de dados para conter a tabela de write-back.  
   
 > [!NOTE]  

@@ -1,5 +1,5 @@
 ---
-title: 'Etapa 4: Testando o pacote de Tutorial da lição 5 | Microsoft Docs'
+title: 'Etapa 4: testar o pacote de tutoriais da Lição 5 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 30f395ed065df5974adf6146a4ee12d0c7b472f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62890925"
 ---
-# <a name="step-4-testing-the-lesson-5-tutorial-package"></a>Etapa 4: Testar o pacote de tutorial da Lição 5
+# <a name="step-4-testing-the-lesson-5-tutorial-package"></a>Etapa 4: Testando o pacote de tutorial da Lição 5
   Em tempo de execução, o pacote irá obter o valor da propriedade `Directory` de uma variável atualizada em tempo de execução, ao invés de utilizar o nome original de diretório que foi especificado quando você criou o pacote. O valor da variável é populado pelo arquivo SSISTutorial.dtsConfig.  
   
  Para verificar se, em tempo de execução, o pacote atualizou corretamente o Diretório com o novo valor, simplesmente execute o pacote. Devido a serem copiados apenas três arquivos de dados de exemplo para o novo diretório, o fluxo de dados irá executar apenas três vezes ao invés de interagir com 14 arquivos da pasta original.  
@@ -37,7 +37,7 @@ ms.locfileid: "62890925"
   
 1.  No menu **Depurar** , clique em **Iniciar Depuração**.  
   
-2.  Terminada a execução do pacote, no menu **Depurar** , clique em **Parar Depuração**.  
+2.  Após a conclusão da execução do pacote, no menu **depurar** , clique em **parar depuração**.  
   
 ## <a name="next-lesson"></a>Próxima lição  
  [Lição 6: Usando parâmetros com o modelo de implantação de projeto](../integration-services/lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  

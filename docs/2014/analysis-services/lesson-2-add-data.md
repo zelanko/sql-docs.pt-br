@@ -1,5 +1,5 @@
 ---
-title: 'Lição 2: Adicionar dados | Microsoft Docs'
+title: 'Lição 2: adicionar dados | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 370e368843fa1e9584cc341397853fcdad26922a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66078968"
 ---
 # <a name="lesson-2-add-data"></a>Lição 2: Adicionar dados
@@ -24,10 +24,10 @@ ms.locfileid: "66078968"
   
  Para saber mais sobre como importar dados e os diferentes tipos de fontes de dados das quais você pode importar dados, consulte [Fontes de dados &#40;SSAS Tabular&#41;](data-sources-ssas-tabular.md).  
   
- Tempo estimado para concluir esta lição: **20 minutos**  
+ Tempo estimado para conclusão desta lição: **20 minutos**  
   
 ## <a name="prerequisites"></a>Prerequisites  
- Este tópico faz parte de um tutorial de modelo de tabela, que deve ser concluído na ordem. Antes de executar as tarefas nesta lição, você deve ter concluído a lição anterior: [Lição 1: Criar um novo projeto de modelo de tabela](lesson-1-create-a-new-tabular-model-project.md).  
+ Este tópico faz parte de um tutorial de modelagem tabular, que deve ser concluído na devida ordem. Antes de executar as tarefas nesta lição, você deve ter concluído a lição anterior: [lição 1: criar um novo projeto de modelo de tabela](lesson-1-create-a-new-tabular-model-project.md).  
   
 ## <a name="create-a-connection"></a>Criar uma conexão  
   
@@ -39,7 +39,7 @@ ms.locfileid: "66078968"
   
 2.  No **Assistente de Importação de Tabela**, em **Bancos de Dados Relacionais**, clique em **Microsoft SQL Server**e clique em **Avançar**.  
   
-3.  No **conectar-se a um banco de dados do Microsoft SQL Server** página, na **nome de Conexão amigável**, tipo `Adventure Works DB from SQL`.  
+3.  Na página **conectar a um banco de dados Microsoft SQL Server** , em **nome de conexão amigável**, digite `Adventure Works DB from SQL`.  
   
 4.  Na caixa **Nome do servidor**, digite o nome do servidor no qual você instalou o banco de dados AdventureWorksDW.  
   
@@ -48,30 +48,30 @@ ms.locfileid: "66078968"
 6.  Na página **Informações sobre Representação** , é necessário especificar as credenciais que o Analysis Services usará para se conectar à fonte de dados ao importar e processar dados. Verifique se a opção **Nome de usuário e senha específicos do Windows** está selecionada e, em **Nome de Usuário** e **Senha**, insira suas credenciais de logon do Windows e clique em **Avançar**.  
   
     > [!NOTE]  
-    >  O uso de uma conta de usuário e senha do Windows é o método mais seguro de conexão a uma fonte de dados. Para obter mais informações, consulte [Representação &#40;SSAS de Tabela&#41;](tabular-models/impersonation-ssas-tabular.md).  
+    >  Usar uma conta de usuário e senha do Windows fornece o método mais seguro de se conectar a uma fonte de dados. Para obter mais informações, consulte [Representação &#40;SSAS de Tabela&#41;](tabular-models/impersonation-ssas-tabular.md).  
   
 7.  Na página **Escolher como Importar os Dados** , verifique se a opção **Selecionar itens em uma lista de tabelas e exibições para escolher os dados a serem importados** está marcada. Para selecionar em uma lista de tabelas e exibições, clique em **Avançar** para exibir uma lista de todas as tabelas de origem do banco de dados de origem.  
   
-8.  No **selecionar tabelas e exibições** , marque a caixa de seleção para as tabelas a seguir: **DimCustomer**, **DimDate**, **DimGeography**, **DimProduct**, **DimProductCategory**,  **DimProductSubcategory**, e **FactInternetSales**.  
+8.  Na página **Selecionar tabelas e exibições** , marque a caixa de seleção para as tabelas a seguir: **DimCustomer**, **DimDate**, **DimGeography**, **DimProduct**, **DimProductCategory**, **DimProductSubcategory**e **FactInternetSales**.  
   
-9. Desejamos atribuir às tabelas do modelo nomes mais explicativos. Clique na célula da coluna **Nome Amigável** de **DimCustomer**. Renomear a tabela removendo "Dim" de DimCustomer.  
+9. Desejamos atribuir às tabelas do modelo nomes mais explicativos. Clique na célula da coluna **Nome Amigável** de **DimCustomer**. Renomeie a tabela removendo "Dim" de DimCustomer.  
   
 10. Renomeie as outras tabelas:  
   
     |Nome de origem|Nome amigável|  
     |-----------------|-------------------|  
-    |DimDate|Date|  
-    |DimGeography|Geografia|  
+    |DimDate|Data|  
+    |DimGeography|painel Geografia do app&#39;s selecionado|  
     |DimProduct|Produto|  
-    |DimProductCategory|Product Category|  
+    |DimProductCategory|Categoria do Produto|  
     |DimProductSubcategory|Product Subcategory|  
     |FactInternetSales|Internet Sales|  
   
-     **NÃO** clique em **Concluir**.  
+     **Não clique** em **concluir**.  
   
  Agora que você se conectou ao banco de dados, selecionou as tabelas a serem importadas e atribuiu nomes amigáveis às tabelas, vá para a próxima seção, [Filtrar os dados da tabela antes de importar](#FilterData).  
   
-##  <a name="FilterData"></a> Filtrar os dados da tabela  
+##  <a name="FilterData"></a>Filtrar os dados da tabela  
  A tabela DimCustomer que você está importando do banco de dados contém um subconjunto dos dados contidos no banco de dados Adventure Works original do SQL Server. Você filtrará algumas das colunas da tabela DimCustomer que não são necessárias. Quando possível, você desejará filtrar dados que não serão usados para economizar espaço na memória usado pelo modelo.  
   
 #### <a name="to-filter-the-table-data-prior-to-importing"></a>Para filtrar os dados da tabela antes de importar  
@@ -87,15 +87,15 @@ ms.locfileid: "66078968"
     |**SpanishOccupation**|  
     |**FrenchOccupation**|  
   
-     Como os valores destas colunas não são pertinentes à análise de vendas da Internet, não há necessidade de importar essas colunas. A eliminação de colunas desnecessárias reduzirá o tamanho do modelo.  
+     Como os valores dessas colunas não são pertinentes à análise de vendas pela Internet, não é necessário importá-las. A eliminação de colunas desnecessárias reduzirá o tamanho do modelo.  
   
 3.  Verifique se todas as outras colunas estão marcadas e clique em **OK**.  
   
-     Observe as palavras **filtros aplicados** são exibidas agora na **detalhes do filtro** coluna no **cliente** linha; se você clicar no link você verá uma descrição de texto a filtros recém-aplicados.  
+     Observe que as palavras **filtros aplicados** agora são exibidas na coluna **Filtrar detalhes** na linha **cliente** ; Se você clicar nesse link, verá uma descrição de texto dos filtros que você acabou de aplicar.  
   
 4.  Filtre as tabelas restantes desmarcando as caixas de seleção das colunas seguintes em cada tabela:  
   
-    |Date|  
+    |Data|  
     |----------|  
     |**DateKey**|  
     |**SpanishDayNameOfWeek**|  
@@ -103,7 +103,7 @@ ms.locfileid: "66078968"
     |**SpanishMonthName**|  
     |**FrenchMonthName**|  
   
-    |Geografia|  
+    |painel Geografia do app&#39;s selecionado|  
     |---------------|  
     |**SpanishCountryRegionName**|  
     |**FrenchCountryRegionName**|  
@@ -122,7 +122,7 @@ ms.locfileid: "66078968"
     |**JapaneseDescription**|  
     |**TurkishDescription**|  
   
-    |Product Category|  
+    |Categoria do Produto|  
     |----------------------|  
     |**SpanishProductCategoryName**|  
     |**FrenchProductCategoryName**|  
@@ -140,19 +140,19 @@ ms.locfileid: "66078968"
   
  Agora que você visualizou e filtrou os dados desnecessários, poderá importar os dados. Vá para a próxima seção **Importar as tabelas e os dados de coluna selecionados**.  
   
-##  <a name="Import"></a> Importar os dados de coluna e tabelas selecionadas  
- Agora você pode importar os dados selecionados. O assistente importa os dados da tabela junto com as relações entre as tabelas. São criadas novas tabelas e colunas no modelo usando os nomes amigáveis que você especificou, e os dados que você filtrou não serão importados.  
+##  <a name="Import"></a>Importar as tabelas e os dados de coluna selecionados  
+ Agora você pode importar os dados selecionados. O assistente importa os dados da tabela juntamente com quaisquer relacionamentos entre tabelas. São criadas novas tabelas e colunas no modelo usando os nomes amigáveis que você especificou, e os dados que você filtrou não serão importados.  
   
-#### <a name="to-import-the-selected-tables-and-column-data"></a>Para importar os dados da tabela e da coluna selecionadas  
+#### <a name="to-import-the-selected-tables-and-column-data"></a>Para importar os dados de colunas e tabelas selecionadas  
   
-1.  Examine as seleções. Se tudo estiver correto, clique em **Concluir**.  
+1.  Examine suas seleções. Se tudo estiver correto, clique em **Concluir**.  
   
      Durante a importação dos dados, o assistente exibirá quantas linhas foram buscadas. Quando todos os dados tiverem sido importados, será exibida uma mensagem indicando êxito.  
   
     > [!TIP]  
     >  Para ver as relações que foram criadas automaticamente entre as tabelas importadas, na linha **Preparação de dados** , clique em **Detalhes**.  
   
-2.  Clique em **Fechar**.  
+2.  Clique em **fechar**  
   
      O assistente é fechado e o modelo de designer fica visível. Cada tabela foi adicionada como uma nova guia no designer de modelos.  
   

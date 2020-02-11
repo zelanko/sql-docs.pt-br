@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f1345051d06493a456172a183defce3a8bd555ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62872050"
 ---
 # <a name="contained-database-collations"></a>Ordenações de banco de dados independentes
@@ -58,7 +58,7 @@ mycolumn1       Chinese_Simplified_Pinyin_100_CI_AS
 mycolumn2       Frisian_100_CS_AS  
 ```  
   
- Isso parece relativamente simples, mas vários problemas ocorrem. Como o agrupamento para uma coluna depende do banco de dados no qual a tabela é criada, surgem problemas com o uso de tabelas temporárias que são armazenados em `tempdb`. O agrupamento de `tempdb` geralmente corresponde ao agrupamento da instância, que não precisa corresponder ao agrupamento de banco de dados.  
+ Isso parece relativamente simples, mas vários problemas ocorrem. Como o agrupamento de uma coluna depende do banco de dados no qual a tabela é criada, os problemas surgem com o uso de tabelas temporárias que `tempdb`são armazenadas no. O agrupamento `tempdb` geralmente corresponde ao agrupamento para a instância, que não precisa corresponder ao agrupamento de banco de dados.  
   
 ### <a name="example-2"></a>Exemplo 2  
  Por exemplo, considere o banco de dados (chinês) acima quando usado em uma instância com uma ordenação **Latin1_General**:  
@@ -111,14 +111,14 @@ AS BEGIN
 END;  
 ```  
   
- Essa é uma função bastante peculiar. Em um agrupamento que diferencia maiusculas de minúsculas, o @i na cláusula return não pode associar a qualquer um @I ou @??. Em uma ordenação Latin1_General sem diferenciação de maiúsculas e minúsculas, @i é associado a @I e a função retorna 1. Mas em um agrupamento turco diferencia maiusculas de minúsculas, @i é associado a @??, e a função retorna 2. Isso pode causar confusão em um banco de dados que se move entre instâncias com ordenações diferentes.  
+ Essa é uma função bastante peculiar. Em um agrupamento com diferenciação de maiúsculas e minúsculas, o @i na cláusula @I Return não pode ser associado a nem a @??. Em uma ordenação Latin1_General sem diferenciação de maiúsculas e minúsculas, @i é associado a @I e a função retorna 1. Mas, em um agrupamento turco que não diferencia maiúsculas de minúsculas, @i é associado a @??, e a função retorna 2. Isso pode causar confusão em um banco de dados que se move entre instâncias com ordenações diferentes.  
   
 ## <a name="contained-databases"></a>Bancos de dados independentes  
  Como um objetivo de design dos bancos de dados independentes é torná-los dependentes, a dependência da instância e das ordenações `tempdb` deve ser removida. Para isso, os bancos de dados independentes apresentam o conceito de ordenação de catálogo. A ordenação de catálogo é usada para metadados de sistema e objetos transitórios. Os detalhes são fornecidos abaixo.  
   
  Em um banco de dados independente, a ordenação de catálogo **Latin1_General_100_CI_AS_WS_KS_SC**. Essa ordenação é a mesma para todos os bancos de dados independentes em todas as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e não pode ser alterada.  
   
- A ordenação de banco de dados é mantida, mas é usada somente como a ordenação padrão para dados de usuário. Por padrão, o agrupamento de banco de dados é igual ao agrupamento de banco de dados de modelo, mas pode ser alterado pelo usuário por meio de um `CREATE` ou `ALTER DATABASE` comando como com bancos de dados dependentes.  
+ A ordenação de banco de dados é mantida, mas é usada somente como a ordenação padrão para dados de usuário. Por padrão, o agrupamento de banco de dados é igual ao agrupamento de banco de dados modelo, mas pode ser alterado `CREATE` pelo `ALTER DATABASE` usuário por meio de um comando ou, como com bancos de dados não independentes.  
   
  Uma nova palavra-chave, `CATALOG_DEFAULT`, está disponível na cláusula `COLLATE`. Ela é usada como um atalho para a ordenação atual de metadados em bancos de dados contidos e não contidos. Isso significa que, em um banco de dados não contido, `CATALOG_DEFAULT` retornará a ordenação de banco de dados atual, pois os metadados são agrupados na ordenação de banco de dados. Em um banco de dados contido, esses valores podem ser diferentes, pois o usuário pode alterar a ordenação do banco de dados para que ele não corresponda à ordenação de catálogo.  
   
@@ -131,7 +131,7 @@ END;
 |Dados temp (padrão)|Ordenação TempDB|DATABASE_DEFAULT|  
 |Metadados|DATABASE_DEFAULT / CATALOG_DEFAULT|CATALOG_DEFAULT|  
 |Metadados temporários|Ordenação tempdb|CATALOG_DEFAULT|  
-|Variáveis|Ordenação de instância|CATALOG_DEFAULT|  
+|variáveis|Ordenação de instância|CATALOG_DEFAULT|  
 |Rótulos Goto|Ordenação de instância|CATALOG_DEFAULT|  
 |Nomes de cursor|Ordenação de instância|CATALOG_DEFAULT|  
   
@@ -235,7 +235,7 @@ GO
  Nome do objeto inválido '#A'.  
   
 ### <a name="example-3"></a>Exemplo 3  
- O exemplo a seguir demonstra o caso em que a referência localiza várias correspondências que eram originalmente distintas. Primeiro, começamos `tempdb` (que tem o mesmo agrupamento diferencia maiusculas de minúsculas que nossa instância) e execute as seguintes instruções.  
+ O exemplo a seguir demonstra o caso em que a referência localiza várias correspondências que eram originalmente distintas. Primeiro, começamos `tempdb` (que tem o mesmo agrupamento que diferencia maiúsculas de minúsculas da nossa instância) e executamos as instruções a seguir.  
   
 ```  
 USE tempdb;  
@@ -278,7 +278,7 @@ GO
 ## <a name="conclusion"></a>Conclusão  
  O comportamento de ordenação de bancos de dados contidos é sutilmente diferente daquele em bancos de dados não contidos. Esse comportamento é geralmente benéfico, fornecendo independência de instância e simplicidade. Alguns usuários podem ter problemas, particularmente quando uma sessão acessa bancos de dados contidos e não contidos.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Bancos de dados independentes](contained-databases.md)  
   
   

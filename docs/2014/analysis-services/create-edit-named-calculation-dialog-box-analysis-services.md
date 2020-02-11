@@ -1,5 +1,5 @@
 ---
-title: Criar-Editar nomeado a caixa de diálogo cálculo (Analysis Services) | Microsoft Docs
+title: Caixa de diálogo Criar-editar cálculo nomeado (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a53db9413ce7877182ca5f9c768bb1e1ef71e383
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086848"
 ---
 # <a name="create-edit-named-calculation-dialog-box-analysis-services"></a>Create-Edit Named Calculation Dialog Box (Analysis Services)
@@ -46,8 +46,8 @@ SELECT <Table Name in Data Source>.* , <Expression> AS <Column Name> FROM <Table
   
  A expressão pode conter referências a outras tabelas, por meio de uma instrução de subseleção. If the expression would require parentheses in a SELECT statement, the expression entered must be enclosed between parentheses.  
   
-## <a name="see-also"></a>Consulte também  
- [Designers e caixas de diálogo do Analysis Services &#40;dados multidimensionais&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Designer de Exibição da Fonte de Dados &#40;Analysis Services – Dados multidimensionais&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Analysis Services designers e caixas de diálogo &#40;dados multidimensionais&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [O designer de exibição da fonte de dados &#40;Analysis Services-dados multidimensionais&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

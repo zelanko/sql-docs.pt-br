@@ -14,16 +14,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 179e7aaea331ba565ca5afae7bd51754e23b9718
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62876180"
 ---
 # <a name="differential-backups-sql-server"></a>Backups diferenciais (SQL Server)
   Este tópico de backup e restauração é relevante para todos os bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- Um backup diferencial baseia-se no backup de dados completo anterior mais recente. Um backup diferencial captura apenas os dados que foram alterados desde o backup completo. O backup completo no qual um backup diferencial se baseia é conhecido como a *base* do diferencial. Os backups completos, com exceção dos backups somente cópia, podem servir como base para uma série de backups diferenciais, inclusive backups de banco de dados, backups parciais e backups de arquivo. O backup de base para um backup diferencial de arquivo pode ser contido dentro de um backup completo, um backup de arquivo ou um backup parcial.  
+ Um backup diferencial é baseado no backup de dados completo anterior mais recente. Um backup diferencial captura apenas os dados que foram alterados desde o backup completo. O backup completo no qual um backup diferencial se baseia é conhecido como a *base* do diferencial. Os backups completos, com exceção dos backups somente cópia, podem servir como base para uma série de backups diferenciais, inclusive backups de banco de dados, backups parciais e backups de arquivo. O backup de base para um backup diferencial de arquivo pode ser contido dentro de um backup completo, um backup de arquivo ou um backup parcial.  
   
   
 ##  <a name="Benefits"></a> Benefícios  
@@ -34,7 +34,7 @@ ms.locfileid: "62876180"
   
 -   No modelo de recuperação completa, o uso de backups diferenciais pode reduzir o número de backups de log que você precisa restaurar.  
   
-##  <a name="Overview"></a> Visão geral dos backups diferenciais  
+##  <a name="Overview"></a>Visão geral dos backups diferenciais  
  Um backup diferencial captura o estado de qualquer *extensão* (coleções de oito páginas fisicamente contíguas) que foi alterada entre quando a base diferencial foi criada e quando o backup diferencial é criado. Isso significa que o tamanho de um backup diferencial depende da quantidade de dados alterada desde a base. Em geral, quanto mais antiga a base, maior será o novo backup diferencial. Em uma série de backups diferenciais, é provável que uma extensão atualizada com frequência contenha dados diferentes em cada backup diferencial.  
   
  A ilustração a seguir mostra como funciona um backup diferencial. A figura exibe 24 extensões de dados, dentre as quais 6 que foram alteradas. O backup diferencial contém somente estas 6 extensões de dados. A operação de backup diferencial baseia-se em uma página de bitmap que contém um bit para cada extensão. Para cada extensão atualizada desde a base, o bit é definido para 1 no bitmap.  
@@ -53,7 +53,7 @@ ms.locfileid: "62876180"
 ## <a name="differential-backups-of-databases-with-memory-optimized-tables"></a>Backups diferenciais de bancos de dados com tabelas com otimização de memória  
  Para obter informações sobre backups diferenciais e bancos de dados com tabelas com otimização de memória, consulte [Fazendo backup de um banco de dados com tabelas com otimização de memória](../in-memory-oltp/memory-optimized-tables.md).  
   
-##  <a name="ReadOnlyDbs"></a> Backups diferenciais de bancos de dados somente leitura  
+##  <a name="ReadOnlyDbs"></a>Backups diferenciais de bancos de dados somente leitura  
  Para bancos de dados somente leitura, os backups completos usados isoladamente são mais fáceis de serem gerenciados do que os usados com backups diferenciais. Quando um banco de dados for somente de leitura, o backup e outras operações não podem alterar os metadados que estão contidos no arquivo. Portanto, os metadados exigidos por um backup diferencial, como o número de sequência de log no qual o backup diferencial começa (o LSN base diferencial), é armazenado no banco de dados **mestre** . Se a base diferencial for tomada quando o banco de dados for somente de leitura, o bitmap diferencial indicará mais alterações do que as ocorridas, de fato, desde o backup de base. Os dados extras são lidos pelo backup, mas não são gravados no backup, porque o **differential_base_lsn** armazenado na tabela do sistema [conjunto de backup](/sql/relational-databases/system-tables/backupset-transact-sql) é usado para determinar se os dados realmente foram alterados desde a base.  
   
  Quando um banco de dados somente leitura é recriado, restaurado ou desanexado e anexado, as informações básicas diferenciais são perdidas. Isso ocorre porque o banco de dados **mestre** não é sincronizado com o banco de dados de usuário. O [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] não pode detectar nem prevenir esse problema. Nenhum backup diferencial posterior tem base no backup completo mais recente e pode fornecer resultados inesperados. Para estabelecer uma nova base diferencial, recomendamos que você crie um backup de banco de dados completo.  
@@ -72,7 +72,7 @@ ms.locfileid: "62876180"
 -   [Restaurar um backup de banco de dados diferencial &#40;SQL Server&#41;](restore-a-differential-database-backup-sql-server.md)  
   
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Visão geral do backup &#40;SQL Server&#41;](backup-overview-sql-server.md)   
  [Backups de bancos de dados completos &#40;SQL Server&#41;](full-database-backups-sql-server.md)   
  [Restaurações completas de banco de dados &#40;Modelo de recuperação completa&#41;](complete-database-restores-full-recovery-model.md)   

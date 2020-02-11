@@ -1,5 +1,5 @@
 ---
-title: Controle de código-fonte do Gerenciador de soluções | Microsoft Docs
+title: Controle do código-fonte Gerenciador de Soluções | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,14 +19,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 788ce615f914dcc8a2a49fba7575061fff0df870
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62843091"
 ---
 # <a name="solution-explorer-source-control"></a>Controle do código-fonte do Gerenciador de Soluções
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] Gerenciador de soluções pode ser integrado em um sistema de controle do código-fonte separado. Quando uma solução ou projeto é integrado em um sistema de controle do código-fonte, você pode controlar o acesso ao arquivo e a versão para os scripts e consultas em seus projetos.  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] Gerenciador de soluções pode ser integrado a um sistema de controle do código-fonte separado. Quando uma solução ou projeto é integrado em um sistema de controle do código-fonte, você pode controlar o acesso ao arquivo e a versão para os scripts e consultas em seus projetos.  
   
 ## <a name="solution-and-project-source-control"></a>Solução e projeto no controle do código-fonte  
   
@@ -41,13 +41,13 @@ ms.locfileid: "62843091"
   
 2.  No [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], no menu **Ferramentas** , clique em **Opções**.  
   
-3.  No **opções** diálogo caixa, expanda **controle do código-fonte**e, em seguida, clique no **seleção de plug-in** página.  
+3.  Na caixa de diálogo **Opções** , expanda **controle do código-fonte**e clique na página **seleção de plug-in** .  
   
-4.  No **controle de origem atual plug-in** , selecione o plug-in de controle do código-fonte.  
+4.  Na caixa de **plug-in do controle do código-fonte atual** , selecione o plug-in de controle do código-fonte.  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|Descrição|  
+|Tópico|DESCRIÇÃO|  
 |-----------|-----------------|  
 |[Noções básicas de controle do código-fonte](../../2014/database-engine/source-control-basics.md)|Define a terminologia básica de controle do código-fonte e explica como seu projeto pode se beneficiar do uso de controle do código-fonte.|  
 |[Adicionar soluções e projetos ao controle do código-fonte](../../2014/database-engine/add-solutions-and-projects-to-source-control.md)|Explica como usar o ambiente do [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] para adicionar soluções e projetos ao controle do código-fonte.|  
@@ -57,8 +57,8 @@ ms.locfileid: "62843091"
 |[Definir e recuperar informações de versão](../../2014/database-engine/set-and-retrieve-version-information.md)|Explica como recuperar o histórico de um projeto ou item, recuperar uma cópia local de um item ou comparar duas versões de item.|  
 |||  
   
-## <a name="see-also"></a>Consulte também  
- [Gerenciador de soluções](../ssms/solution/solution-explorer.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Gerenciador de Soluções](../ssms/solution/solution-explorer.md)   
  [Soluções &#40;SQL Server Management Studio&#41;](../ssms/sql-server-management-studio-ssms.md)   
  [Projetos &#40;SQL Server Management Studio&#41;](../ssms/solution/projects-sql-server-management-studio.md)   
  [Arquivos que gerenciam soluções e projetos](../ssms/solution/files-that-manage-solutions-and-projects.md)  

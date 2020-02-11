@@ -1,5 +1,5 @@
 ---
-title: Tarefas do Visualizador do modelo e instruções de mineração | Microsoft Docs
+title: Tarefas e instruções do Visualizador do modelo de mineração | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a3c99733ca6853a2e0a5503868e2270fa6585eae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083477"
 ---
 # <a name="mining-model-viewer-tasks-and-how-tos"></a>Tarefas e instruções do visualizador do modelo de mineração
@@ -39,14 +39,14 @@ ms.locfileid: "66083477"
   
 -   [Filtrar uma conjunto de itens em um modelo de regras de associação](filter-an-itemset-in-an-association-rules-model.md)  
   
--   [Detalhar dados de caso com base em um modelo de mineração](drill-through-to-case-data-from-a-mining-model.md)  
+-   [Detalhar dados do caso a partir do modelo de mineração](drill-through-to-case-data-from-a-mining-model.md)  
   
--   [Exibir a fórmula para um modelo de série temporal &#40;Data Mining&#41;](view-the-formula-for-a-time-series-model-data-mining.md)  
+-   [Exibir a fórmula de um modelo de série temporal &#40;Data Mining&#41;](view-the-formula-for-a-time-series-model-data-mining.md)  
   
 -   [Alterar as cores usadas no Visualizador de Mineração de Dados](change-the-colors-used-in-the-data-mining-viewer.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tutorial de mineração de dados básico](../../tutorials/basic-data-mining-tutorial.md)   
- [Visualizadores do Modelo de Mineração &#40;Designer do Modelo de Mineração de Dados&#41;](../mining-model-viewers-data-mining-model-designer.md)  
+ [Visualizadores de modelo de mineração &#40;designer de modelo de mineração de dados&#41;](../mining-model-viewers-data-mining-model-designer.md)  
   
   

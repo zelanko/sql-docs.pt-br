@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a43a437b277c0fcc090a4ebd52d9deb14bec9fd0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62872964"
 ---
 # <a name="unicode-compression-implementation"></a>Implementação da compactação Unicode
@@ -46,16 +46,16 @@ ms.locfileid: "62872964"
   
  O espaço de armazenamento que a compactação economiza depende das características e da localidade dos dados que estão sendo compactados. A tabela a seguir lista a economia de espaço que pode ser obtida para diversas localidades.  
   
-|Localidade|Porcentagem de compactação|  
+|Local|Porcentagem de compactação|  
 |------------|-------------------------|  
 |Inglês|50%|  
-|German|50%|  
+|Alemão|50%|  
 |Híndi|50%|  
 |Turco|48%|  
 |Vietnamita|39%|  
 |Japonês|15%|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Compactação de dados](data-compression.md)   
  [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql)   
  [Implementação da compactação de página](page-compression-implementation.md)   

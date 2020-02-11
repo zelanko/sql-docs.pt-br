@@ -1,5 +1,5 @@
 ---
-title: Instalação de manutenção do SQL Server | Microsoft Docs
+title: Instalação do serviço de SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fd3b78fd168541dc431d248b4a15960e8d1cddee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66091817"
 ---
 # <a name="sql-server-servicing-installation"></a>Instalação de serviços do SQL Server
-  O conteúdo desta seção discute como aplicar uma atualização a qualquer componente do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instalado com uma atualização de manutenção do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
+  O conteúdo desta seção discute como aplicar uma atualização a qualquer componente do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instalado com uma atualização de manutenção do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
   

@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0259f14bb814fd4157af95e4ce92f462d1fab68a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62877263"
 ---
 # <a name="back-up-and-restore-of-system-databases-sql-server"></a>Fazer backup e restaurar bancos de dados do sistema (SQL Server)
@@ -28,20 +28,20 @@ ms.locfileid: "62877263"
   
  A tabela a seguir resume todos os bancos de dados do sistema.  
   
-|Banco de dados do sistema|Descrição|Requer backups?|modelo de recuperação|Comentários|  
+|Banco de dados do sistema|DESCRIÇÃO|Requer backups?|modelo de recuperação|Comentários|  
 |---------------------|-----------------|---------------------------|--------------------|--------------|  
-|[mestre](../databases/master-database.md)|O banco de dados que registra todas as informações de nível de sistema para um sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|Sim|Simple (simples)|Faça backup do **mestre** com a frequência necessária para proteger adequadamente os dados para suas necessidades empresariais. Recomendamos uma agenda regular de backup, que você pode complementar com um backup adicional após uma atualização significativa.|  
+|[mestre](../databases/master-database.md)|O banco de dados que registra todas as informações de nível de sistema para um sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|Sim|Simples|Faça backup do **mestre** com a frequência necessária para proteger adequadamente os dados para suas necessidades empresariais. Recomendamos uma agenda regular de backup, que você pode complementar com um backup adicional após uma atualização significativa.|  
 |[modelo](../databases/model-database.md)|O modelo de todos os bancos de dados criados na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Sim|Configurável pelo usuário<sup>1</sup>|Faça backup do **modelo** somente quando necessário para suas necessidades empresariais; por exemplo, logo após personalizar suas opções de banco de dados.<br /><br /> **Prática recomendada:** é recomendável criar somente backups completos de bancos de dados do **modelo**, conforme necessário. Como **model** é pequeno e raramente alterado, é desnecessário fazer backup do log.|  
 |[msdb](../databases/msdb-database.md)|O banco de dados é usado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para programar alertas e trabalhos, e também para registrar operadores. O**msdb** também contém tabelas de histórico, como as tabelas de histórico de backup e de restauração.|Sim|Simples (padrão)|Faça backup do **msdb** sempre que este for atualizado.|  
-|[Resource](../databases/resource-database.md) (RDB)|Um banco de dados somente leitura que contém cópias de todos os objetos do sistema fornecido com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Não|-|O banco de dados **Resource** reside no arquivo mssqlsystemresource.mdf, que contém somente código. Portanto, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não pode fazer backup do banco de dados **Recurso** .<br /><br /> Observação: Você pode executar um arquivo ou um backup baseado em disco no arquivo mssqlsystemresource mdf tratando o arquivo como se fosse um arquivo binário (.exe), em vez de um arquivo de banco de dados. Mas você não pode usar a restauração do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nos backups. A restauração de uma cópia de backup de mssqlsystemresource.mdf pode ser feita apenas manualmente, e é necessário ter cuidado para não substituir o banco de dados **Resource** atual com uma versão desatualizada ou potencialmente insegura.|  
-|[tempdb](../databases/tempdb-database.md)|Um workspace para manter conjuntos de resultados temporários ou intermediários. Esse banco de dados é recriado sempre que é iniciada uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Quando a instância de servidor é desativada, qualquer dado em **tempdb** é excluído permanentemente.|Não|Simple (simples)|Você não poderá fazer backup do banco de dados do sistema **tempdb** .|  
-|[Configurar Distribuição](../replication/configure-distribution.md)|Um banco de dados que existe somente se o servidor estiver configurado como um Distribuidor de replicação. Esse banco de dados armazena metadados e dados de histórico para todos os tipos de replicação e transações para replicação transacional.|Sim|Simple (simples)|Para obter informações sobre quando fazer backup do banco de dados **distribution** , veja [Fazer backup e restaurar bancos de dados replicados](../replication/administration/back-up-and-restore-replicated-databases.md).|  
+|[Resource](../databases/resource-database.md) (RDB)|Um banco de dados somente leitura que contém cópias de todos os objetos do sistema fornecido com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Não|-|O banco de dados **Resource** reside no arquivo mssqlsystemresource.mdf, que contém somente código. Portanto, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não pode fazer backup do banco de dados **Recurso** .<br /><br /> Observação: você pode executar um backup baseado em arquivo ou disco no arquivo mssqlsystemresource.mdf tratando o arquivo como se fosse um arquivo binário (.exe) em vez de um arquivo de banco de dados. Mas você não pode usar a restauração do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nos backups. A restauração de uma cópia de backup de mssqlsystemresource.mdf pode ser feita apenas manualmente, e é necessário ter cuidado para não substituir o banco de dados **Resource** atual com uma versão desatualizada ou potencialmente insegura.|  
+|[tempdb](../databases/tempdb-database.md)|Um workspace para manter conjuntos de resultados temporários ou intermediários. Esse banco de dados é recriado sempre que é iniciada uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Quando a instância de servidor é desativada, qualquer dado em **tempdb** é excluído permanentemente.|Não|Simples|Você não poderá fazer backup do banco de dados do sistema **tempdb** .|  
+|[Configurar Distribuição](../replication/configure-distribution.md)|Um banco de dados que existe somente se o servidor estiver configurado como um Distribuidor de replicação. Esse banco de dados armazena metadados e dados de histórico para todos os tipos de replicação e transações para replicação transacional.|Sim|Simples|Para obter informações sobre quando fazer backup do banco de dados **distribution** , veja [Fazer backup e restaurar bancos de dados replicados](../replication/administration/back-up-and-restore-replicated-databases.md).|  
   
- <sup>1</sup> para aprender o modelo de recuperação atual do modelo, consulte [exibir ou alterar o modelo de recuperação de um banco de dados &#40;SQL Server&#41; ](view-or-change-the-recovery-model-of-a-database-sql-server.md) ou [sys. Databases &#40;Transact-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql).  
+ <sup>1</sup> para aprender o modelo de recuperação atual do modelo, consulte [Exibir ou alterar o modelo de recuperação de um banco de dados &#40;SQL Server&#41;](view-or-change-the-recovery-model-of-a-database-sql-server.md) ou [sys. databases &#40;&#41;do Transact-SQL ](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql).  
   
 ## <a name="limitations-on-restoring-system-databases"></a>Limitações da restauração de bancos de dados do sistema  
   
--   Os bancos de dados do sistema podem ser restaurados somente a partir de backups criados na versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está em execução na instância de servidor no momento. Por exemplo, para restaurar um banco de dados do sistema em uma instância de servidor que está sendo executado no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1.  
+-   Os bancos de dados do sistema podem ser restaurados somente a partir de backups criados na versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está em execução na instância de servidor no momento. Por exemplo, para restaurar um banco de dados do sistema em uma instância de servidor [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] em execução no SP1.  
   
 -   Para restaurar qualquer banco de dados, a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve estar em execução. Iniciar uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requer que o banco de dados **mestre** esteja acessível e pelo menos parcialmente utilizável. Se o **mestre** se tornar inutilizável, você poderá retornar o banco de dados a um estado utilizável das seguintes maneiras:  
   
@@ -70,7 +70,7 @@ ms.locfileid: "62877263"
   
 -   [Mover bancos de dados do sistema](../databases/move-system-databases.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Banco de dados de distribuição](../../relational-databases/replication/distribution-database.md)   
  [Banco de dados mestre](../databases/master-database.md)   
  [Banco de dados msdb](../databases/msdb-database.md)   

@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 969a8f11926957ae19512e92b68e02d12011dd03
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077276"
 ---
 # <a name="define-custom-member-formulas"></a>Definir fórmulas de membro personalizado
@@ -29,7 +29,7 @@ ms.locfileid: "66077276"
   
  A propriedade `CustomRollupColumn` de um atributo especifica a coluna que contém fórmulas de membro personalizado para os membros do atributo. Se uma linha da coluna estiver vazia, o valor de célula do membro será retornado normalmente. Se a fórmula da coluna não for válida, ocorrerá um erro de tempo de execução sempre que o valor de uma célula que usa o membro for recuperado.  
   
- Antes de poder especificar fórmulas de membro personalizado para um atributo, confirme se a tabela de dimensões contém o atributo, ou uma tabela diretamente relacionada, possui uma coluna de cadeia de caracteres para armazenar as fórmulas de membro personalizado. Se esse for o caso, você pode definir o `CustomRollupColumn` propriedade em um atributo manualmente ou usar o aprimoramento de definir fórmula de membro personalizado do Assistente de Business Intelligence para uma fórmula de membro personalizado em um atributo. Para obter mais informações sobre como usar essa melhoria, consulte [Definir fórmulas de membro personalizado para os atributos de uma dimensão](bi-wizard-custom-member-formulas-for-attributes-in-a-dimension.md).  
+ Antes de poder especificar fórmulas de membro personalizado para um atributo, confirme se a tabela de dimensões contém o atributo, ou uma tabela diretamente relacionada, possui uma coluna de cadeia de caracteres para armazenar as fórmulas de membro personalizado. Se esse for o caso, você poderá definir a `CustomRollupColumn` Propriedade em um atributo manualmente ou usar o aprimoramento de definir fórmula de membro personalizado do assistente de Business Intelligence para habilitar uma fórmula de membro personalizado em um atributo. Para obter mais informações sobre como usar essa melhoria, consulte [Definir fórmulas de membro personalizado para os atributos de uma dimensão](bi-wizard-custom-member-formulas-for-attributes-in-a-dimension.md).  
   
 ## <a name="evaluating-custom-member-formulas"></a>Avaliando fórmulas de membro personalizado  
  Fórmulas de membro personalizado são diferentes de membros calculados. As fórmulas de membro personalizado aplicam-se a membros que existem em tabelas de dimensões e fornecem apenas o valor do membro. Diferentemente, os membros calculados não são armazenados em tabelas de dimensões e as expressões de membros calculados definem os dados e os metadados para membros adicionais incluídos em uma dimensão ou hierarquia.  
@@ -38,9 +38,9 @@ ms.locfileid: "66077276"
   
 -   2003: 2100  
   
-    -   1º trimestre: 700  
+    -   Trimestre 1: 700  
   
-    -   2º trimestre: 500  
+    -   Trimestre 2: 500  
   
     -   Trimestre 3: 100  
   
@@ -48,9 +48,9 @@ ms.locfileid: "66077276"
   
 -   2004: 1500  
   
-    -   1º trimestre: 600  
+    -   Trimestre 1: 600  
   
-    -   2º trimestre: 200  
+    -   Trimestre 2: 200  
   
     -   Trimestre 3: 300  
   
@@ -71,8 +71,8 @@ Time.[Quarter 3] * 1.5
   
  Se você usar membros calculados e fórmulas de acúmulo personalizado para os membros de um atributo, não deixe de ordenar a avaliação. Membros calculados são resolvidos antes das fórmulas de acúmulo personalizado.  
   
-## <a name="see-also"></a>Consulte também  
- [Atributos e hierarquias de atributos](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Atributos e hierarquias de atributo](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
  [Definir fórmulas de membro personalizado para os atributos de uma dimensão](bi-wizard-custom-member-formulas-for-attributes-in-a-dimension.md)  
   
   

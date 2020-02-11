@@ -11,16 +11,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 71212f81a2f42fbbff28e04b4632bc2120362089
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084578"
 ---
 # <a name="drillthrough-on-mining-structures"></a>Detalhamento em estruturas de mineração
-  *Detalhar* significa ter a capacidade de consultar um modelo de mineração ou uma estrutura de mineração e obter dados detalhados não expostos no modelo.  
+  *Detalhamento* significa a capacidade de consultar um modelo de mineração ou uma estrutura de mineração e obter dados detalhados que não são expostos no modelo.  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oferece duas opções diferentes de detalhamento em dados de caso. Você pode detalhar para os dados que foram usados para criar o modelo de mineração ou pode detalhar para os dados de origem na estrutura de mineração.  
+ 
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oferece duas opções diferentes de detalhamento em dados de caso. Você pode detalhar para os dados que foram usados para criar o modelo de mineração ou pode detalhar para os dados de origem na estrutura de mineração.  
   
 ## <a name="drillthrough-to-model-cases-vs-drillthrough-to-structure"></a>Detalhar para casos do modelo vs. Detalhar para estrutura  
  O detalhamento para **casos do modelo** é útil para localizar detalhes adicionais sobre regras, padrões ou clusters em um modelo.  
@@ -38,7 +39,7 @@ ms.locfileid: "66084578"
   
 -   O detalhamento funciona com a recuperação de informações sobre os casos de treinamento armazenados em cache quando você processou a estrutura de mineração. Portanto, se você limpar os dados armazenados em cache após processar a estrutura, alterando a propriedade <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> para `ClearAfterProcessing`, o detalhamento não funcionará. Para habilitar o detalhamento para colunas de estrutura, você deve alterar a propriedade <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> para `KeepTrainingCases` e depois processar a estrutura novamente.  
   
--   Verifique se a estrutura de mineração e o modelo de mineração tem o [AllowDrillThrough](https://docs.microsoft.com/bi-reference/assl/properties/allowdrillthrough-element-assl) propriedade definida como `True`. Além disso, você deve ser um membro da função que tem as permissões de detalhamento no modelo e na estrutura.  
+-   Verifique se a estrutura de mineração e o modelo de mineração têm a propriedade [AllowDrillThrough](https://docs.microsoft.com/bi-reference/assl/properties/allowdrillthrough-element-assl) definida `True`como. Além disso, você deve ser um membro da função que tem as permissões de detalhamento no modelo e na estrutura.  
   
 ## <a name="security-issues-for-drillthrough"></a>Problemas de segurança para detalhamento  
  As permissões de detalhamento são definidas separadamente na estrutura e no modelo. A permissão para o modelo lhe permite detalhar do modelo, mesmo que você não tenha permissões na estrutura. As permissões para detalhamento na estrutura fornecem a capacidade adicional de incluir colunas de estrutura em consultas de detalhamento do modelo, usando a função [StructureColumn &#40;DMX&#41;](/sql/dmx/structurecolumn-dmx).  
@@ -55,9 +56,9 @@ ms.locfileid: "66084578"
 |-|-|  
 |Use o detalhamento para estruturar a partir de visualizadores do modelo de mineração|[Usar detalhamento dos visualizadores do modelo](use-drillthrough-from-the-model-viewers.md)|  
 |Veja exemplos de consultas de detalhamento para tipos de modelo específicos.|[Consultas de mineração de dados](data-mining-queries.md)|  
-|Obtenha informações sobre permissões que se aplicam a estruturas de mineração e modelos de mineração específicos.|[Conceder permissões em estruturas e modelos de mineração de dados &#40;Analysis Services&#41;](../multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
+|Obtenha informações sobre permissões que se aplicam a estruturas de mineração e modelos de mineração específicos.|[Conceder permissões em estruturas e modelos de Data Mining &#40;Analysis Services&#41;](../multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Detalhamento em modelos de mineração](drillthrough-on-mining-models.md)  
   
   

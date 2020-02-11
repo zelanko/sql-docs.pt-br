@@ -1,5 +1,5 @@
 ---
-title: Drill-Through a caixa de diálogo (Visualizador do modelo de mineração) | Microsoft Docs
+title: Caixa de diálogo Drill-through (Visualizador do modelo de mineração) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c065e36dd20646312d04379ea61b96d37a47a262
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081491"
 ---
 # <a name="drill-through-dialog-box-mining-model-viewer"></a>Caixa de diálogo Extrair Detalhes (Visualizador do modelo de mineração)
@@ -28,15 +28,15 @@ ms.locfileid: "66081491"
  Para obter informações sobre como acessar os dados de caso de cada visualizador de modelo de mineração que dá suporte ao detalhamento, **consulte** [Detalhar dados do caso com base em um modelo de mineração](data-mining/drill-through-to-case-data-from-a-mining-model.md).  
   
 ## <a name="options"></a>Opções  
- **Casos classificados em**  
+ **Casos Classificados em**  
  Exibe a definição da regra, o conjunto de itens e o cluster contidos no nó selecionado.  
   
  **Lista de colunas**  
  Exibe as colunas no modelo, seguida pelas colunas da estrutura.  
   
- **Observação** As colunas da estrutura são exibidas somente se o detalhamento estiver habilitado na estrutura de mineração e se você tiver selecionado a opção **Colunas do Modelo e da Estrutura**. Além disso, você deve ter permissões de detalhamento no modelo de mineração e na estrutura de mineração para exibir as colunas.  
+ **Observação** As colunas de estrutura serão exibidas somente se o detalhamento estiver habilitado na estrutura de mineração e se você tiver selecionado a opção, **modelo e colunas de estrutura**. Além disso, você deve ter permissões de detalhamento no modelo de mineração e na estrutura de mineração para exibir as colunas.  
   
- Colunas de estrutura que não estão incluídas no modelo aparecem como **estrutura.\< nome da coluna >** .  
+ As colunas de estrutura que não estão incluídas no modelo aparecem como **estrutura\< . nome da coluna>**.  
   
 > [!NOTE]  
 >  É possível clicar com o botão direito do mouse em qualquer lugar da grade da coluna e selecionar **Copiar Tudo** para copiar os dados do detalhamento, no formato delimitado por tabulação, para a Área de transferência. Os dados copiados incluem apenas os dados de caso, não a definição de nó.  
@@ -44,9 +44,9 @@ ms.locfileid: "66081491"
  **Reproduzir**  
  Clique no botão de seta verde para atualizar os dados.  
   
-## <a name="see-also"></a>Consulte também  
- [Consultas de detalhamento &#40;Mineração de dados&#41;](data-mining/drillthrough-queries-data-mining.md)   
- [Visualizadores do modelo de mineração &#40; Designer do modelo de mineração de dados &#41;](mining-model-viewers-data-mining-model-designer.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Consultas de detalhamento &#40;mineração de dados&#41;](data-mining/drillthrough-queries-data-mining.md)   
+ [Visualizadores de modelo de mineração &#40;designer de modelo de mineração de dados&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Tarefas e instruções do visualizador do modelo de mineração](data-mining/mining-model-viewer-tasks-and-how-tos.md)  
   
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9b24e99ac31b126888a1fa49f3ef5547a4f82dda
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079678"
 ---
 # <a name="schedule-ssas-administrative-tasks-with-sql-server-agent"></a>Agendar tarefas administrativas do SSAS com o SQL Server Agent
@@ -27,16 +27,16 @@ ms.locfileid: "66079678"
 ## <a name="prerequisites"></a>Prerequisites  
  O serviço SQL Server Agent deve ser instalado.  
   
- Por padrão, os trabalhos são executados na conta de serviço. Na [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], a conta padrão do SQL Server Agent é NT Service\SQLAgent$\<instancename >. Para executar um backup ou uma tarefa de processamento, essa conta deve ser um administrador do sistema na instância do Analysis Services. Para obter mais informações, consulte [conceder permissões de administrador do servidor &#40;Analysis Services&#41;](grant-server-admin-rights-to-an-analysis-services-instance.md).  
+ Por padrão, os trabalhos são executados na conta de serviço. No [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], a conta padrão para SQL Server Agent é NT Service\SQLAgent $\<InstanceName>. Para executar um backup ou uma tarefa de processamento, essa conta deve ser um administrador do sistema na instância do Analysis Services. Para obter mais informações, consulte [conceder permissões de administrador do servidor &#40;Analysis Services&#41;](grant-server-admin-rights-to-an-analysis-services-instance.md).  
   
- Você também deveria ter um banco de dados de teste. Você pode implantar o banco de dados de exemplo multidimensional do AdventureWorks ou um projeto do tutorial multidimensional do Analysis Services para usar neste passo a passo. Para obter mais informações, consulte [Instalar dados de exemplo e projetos para o tutorial de modelagem multidimensional do Analysis Services](../install-sample-data-and-projects.md).  
+ Você também deveria ter um banco de dados de teste. Você pode implantar o banco de dados de exemplo multidimensional do AdventureWorks ou um projeto do tutorial multidimensional do Analysis Services para usar neste passo a passo. Para obter mais informações, consulte [instalar dados de exemplo e projetos para o tutorial de modelagem multidimensional Analysis Services](../install-sample-data-and-projects.md).  
   
 ## <a name="example-1-processing-a-dimension-in-a-scheduled-task"></a>Exemplo 1: Processando uma dimensão em uma tarefa agendada  
  Este exemplo demonstra como criar e agendar um trabalho que processa uma dimensão.  
   
  Uma tarefa agendada do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é um script XMLA inserido em um trabalho do SQL Server Agent. A execução desse trabalho é agendada para as horas e com a frequência desejadas. Como o SQL Server Agent faz parte do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], você trabalha com o Mecanismo de Banco de Dados e o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para criar e agendar uma tarefa administrativa.  
   
-###  <a name="bkmk_CreateScript"></a> Criar um script para processar uma dimensão em um trabalho do SQL Server Agent  
+###  <a name="bkmk_CreateScript"></a>Criar um script para processar uma dimensão em um trabalho SQL Server Agent  
   
 1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conecte-se a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Abra uma pasta de banco de dados e localize uma dimensão. Clique com o botão direito do mouse na dimensão e selecione **Processar**.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "66079678"
     </Batch>  
     ```  
   
-###  <a name="bkmk_ProcessJob"></a> Criar e agendar o trabalho de processamento de dimensão  
+###  <a name="bkmk_ProcessJob"></a>Criar e agendar o trabalho de processamento de dimensões  
   
 1.  Conecte-se a uma instância do Mecanismo de Banco de Dados e abra o Pesquisador de Objetos.  
   
@@ -79,11 +79,11 @@ ms.locfileid: "66079678"
   
 5.  Em **Selecionar uma página**, selecione **Etapas**e clique em **Novo**.  
   
-6.  Na caixa de diálogo **Nova Etapa do Trabalho**, digite um nome de etapa em **Nome da Etapa**.  
+6.  Na caixa de diálogo **Nova Etapa do Trabalho** , digite um nome de etapa em **Nome da Etapa**.  
   
-7.  Em **Servidor**, digite **localhost** como instância padrão de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e **localhost\\** \<*nome da instância*> como instância nomeada.  
+7.  Em **Servidor**, digite **localhost** como instância padrão de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e **localhost\\**\<*nome da instância*> como instância nomeada.  
   
-     Se você pretende executar o trabalho de um computador remoto, use o nome de servidor e nome de instância onde o trabalho será executado. Use o formato \< *nome do servidor*> para uma instância padrão, e \< *nome do servidor*>\\<*instância nome*> para uma instância nomeada.  
+     Se você pretende executar o trabalho de um computador remoto, use o nome de servidor e nome de instância onde o trabalho será executado. Use o \< *nome do servidor* de formato> para uma instância padrão \<e o*nome de instância* do nome do *servidor*>\\<> para uma instância nomeada.  
   
 8.  Em **Tipo**, selecione **Comando do SQL Server Analysis Services**.  
   
@@ -105,10 +105,10 @@ ms.locfileid: "66079678"
   
 15. Quando o trabalho for concluído, clique em **Fechar**.  
   
-## <a name="example-2-batch-processing-a-dimension-and-a-partition-in-a-scheduled-task"></a>Exemplo 2: Uma dimensão e uma partição em uma tarefa agendada de processamento em lotes  
+## <a name="example-2-batch-processing-a-dimension-and-a-partition-in-a-scheduled-task"></a>Exemplo 2: Processando uma dimensão e uma partição em lote em uma tarefa agendada  
  Os procedimentos deste exemplo demonstram como criar e agendar um trabalho que processa uma dimensão de banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] em lote e, ao mesmo tempo, processa uma partição de cubo que depende da dimensão para agregação. Para obter mais informações sobre processamento em lote de objetos do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], consulte [Processamento em lote &#40;Analysis Services&#41;](../multidimensional-models/batch-processing-analysis-services.md).  
   
-###  <a name="bkmk_BatchProcess"></a> Criar um script para processamento de uma dimensão e uma partição em lote em um trabalho do SQL Server Agent  
+###  <a name="bkmk_BatchProcess"></a>Criar um script para processamento em lotes de uma dimensão e uma partição em um trabalho SQL Server Agent  
   
 1.  Usando o mesmo banco de dados, expanda **Dimensões**, clique com o botão direito do mouse na dimensão **Cliente** e selecione **Processo**.  
   
@@ -183,7 +183,7 @@ ms.locfileid: "66079678"
   
 12. Essa etapa copia o script XMLA para a Área de Transferência do Windows. Você pode deixar o script XMLA na Área de Transferência, salvá-lo em um arquivo ou colá-lo no Bloco de Notas ou em outro editor de texto.  
   
-###  <a name="bkmk_Scheduling"></a> Criar e agendar o trabalho de processamento em lote  
+###  <a name="bkmk_Scheduling"></a>Criar e agendar o trabalho de processamento em lotes  
   
 1.  Conecte-se a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e abra o Pesquisador de Objetos.  
   
@@ -221,8 +221,8 @@ ms.locfileid: "66079678"
   
 16. Quando o trabalho for concluído, clique em **Fechar**.  
   
-## <a name="see-also"></a>Consulte também  
- [Processando opções e configurações &#40;Analysis Services&#41;](../multidimensional-models/processing-options-and-settings-analysis-services.md)   
- [Script de tarefas administrativas no Analysis Services](../script-administrative-tasks-in-analysis-services.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Opções de processamento e configurações &#40;Analysis Services&#41;](../multidimensional-models/processing-options-and-settings-analysis-services.md)   
+ [Criar script de tarefas administrativas no Analysis Services](../script-administrative-tasks-in-analysis-services.md)  
   
   

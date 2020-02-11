@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fb4bfb2073427d0f48b3d4a7ac7b7ab496299030
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66091515"
 ---
 # <a name="upgrade-process-overview"></a>Visão geral do processo de atualização
@@ -52,8 +52,8 @@ ms.locfileid: "66091515"
   
 9. Solucione qualquer problema de pós-atualização e de migração.  
   
-## <a name="see-also"></a>Consulte também  
- [Executando o Supervisor de atualização &#40;Interface do usuário&#41;](../../../2014/sql-server/install/running-upgrade-advisor-user-interface.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Executando o supervisor de atualização &#40;a interface do usuário&#41;](../../../2014/sql-server/install/running-upgrade-advisor-user-interface.md)   
  [Usando relatórios](../../../2014/sql-server/install/using-reports.md)   
  [Trabalhando com o Supervisor de Atualização](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
   

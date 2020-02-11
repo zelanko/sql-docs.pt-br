@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b550291b06918cce7adb430b0b05d1f37018fd78
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086377"
 ---
 # <a name="add-a-mining-model-to-an-existing-mining-structure"></a>Adicionar um modelo de mineração a uma estrutura de mineração existente
@@ -36,9 +36,9 @@ ms.locfileid: "66086377"
   
 4.  Clique em **OK**.  
   
- Um modelo de mineração novo é exibido na guia **Modelos de Mineração** . O modelo usa as colunas padrão que existem na estrutura. Para obter mais informações sobre como modificar as colunas, consulte [Alterar as propriedades de um modelo de mineração](change-the-properties-of-a-mining-model.md).  
+ Um novo modelo de mineração é exibido na guia **modelos de mineração** . O modelo usa as colunas padrão que existem na estrutura. Para obter mais informações sobre como modificar as colunas, consulte [Alterar as propriedades de um modelo de mineração](change-the-properties-of-a-mining-model.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tarefas e instruções do modelo de mineração](mining-model-tasks-and-how-tos.md)  
   
   

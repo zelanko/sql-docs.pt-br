@@ -1,5 +1,5 @@
 ---
-title: Atualizar um Cluster de Failover do SQL Server | Microsoft Docs
+title: Atualizar um cluster de failover do SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a7a8d5f04808582bd56c106adce0df2c1f66aa77
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62913668"
 ---
 # <a name="upgrade-a-sql-server-failover-cluster"></a>Atualizar um cluster de failover do SQL Server
@@ -28,7 +28,7 @@ ms.locfileid: "62913668"
   
 -   A atualização tem suporte na interface do usuário e no prompt de comando. Para obter mais informações, consulte [Atualizar uma instância de cluster de failover do SQL Server &#40;Instalação&#41;](upgrade-a-sql-server-failover-cluster-instance-setup.md) e [Instalar o SQL Server 2014 do prompt de comando](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   
--   Atualizando do [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] -você pode executar a atualização do prompt de comando em cada nó de cluster de failover ou usando a IU da instalação para atualizar cada nó de cluster. Se os recursos de pesquisa de texto completo e de Replicação não existirem na instância que está sendo atualizada, eles serão instalados automaticamente sem a opção para omiti-los.  
+-   Atualizando [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] de – você pode executar a atualização do prompt de comando em cada nó de cluster de failover ou usando a interface do usuário de instalação para atualizar cada nó de cluster. Se os recursos de pesquisa de texto completo e de Replicação não existirem na instância que está sendo atualizada, eles serão instalados automaticamente sem a opção para omiti-los.  
   
 -   Instalação de service pack: você deve aplicar service packs e patches do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para os clusters de failover do [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] separadamente em todos os nós.  
   
@@ -43,11 +43,11 @@ ms.locfileid: "62913668"
 -   Para obter mais informações, consulte [Instâncias do Cluster de Failover do AlwaysOn (SQL Server)](always-on-failover-cluster-instances-sql-server.md).  
   
 ## <a name="upgrading-a-includessnoversionincludesssnoversion-mdmd-multi-subnet-failover-cluster"></a>Atualizando um cluster de failover de várias sub-redes do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
- Você não pode atualizar diretamente uma não-várias sub-redes [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cluster de failover para um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cluster de failover de várias sub-redes. Para obter mais informações, consulte [Atualizar uma instância de cluster de failover do SQL Server &#40;instalação&#41;](upgrade-a-sql-server-failover-cluster-instance-setup.md).  
+ Não é possível atualizar diretamente um cluster de failover que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não seja de várias [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sub-redes para um cluster de failover de várias sub-redes. Para obter mais informações, consulte [Atualizar uma instância de cluster de failover do SQL Server &#40;instalação&#41;](upgrade-a-sql-server-failover-cluster-instance-setup.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Atualizações de versão e edição com suporte](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
- [Atualizar uma instância de Cluster de Failover do SQL Server &#40;programa de instalação&#41;](upgrade-a-sql-server-failover-cluster-instance-setup.md)   
- [Instalar o SQL Server 2014 do Prompt de Comando](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)  
+ [Atualizar uma instância de cluster de failover SQL Server &#40;instalação&#41;](upgrade-a-sql-server-failover-cluster-instance-setup.md)   
+ [Install SQL Server 2014 from the Command Prompt](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)  
   
   

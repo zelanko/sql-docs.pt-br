@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 085b1783214e7f629f1cb91084303edacd151c25
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62874640"
 ---
 # <a name="retrieving-udt-data"></a>Recuperando dados UDT
@@ -38,7 +38,7 @@ ms.locfileid: "62874640"
  Não é necessário ter uma cópia do assembly UDT no cliente para recuperar os dados raw de uma coluna UDT em uma tabela.  
   
 > [!NOTE]  
->  **SqlClient** pode falhar ao carregar um UDT no caso de versões incompatíveis do UDT ou outros problemas. Nesse caso, use os mecanismos de solução de problemas comuns para determinar porque o assembly que contém o UDT não pode ser localizado pelo aplicativo que fez a chamada. Para obter mais informações, consulte o tópico "Diagnosticando erros com Assistentes para Depuração Gerenciada" na documentação do .NET Framework.  
+>  O **SqlClient** pode falhar ao carregar um UDT no caso de versões UDT incompatíveis ou outros problemas. Nesse caso, use os mecanismos de solução de problemas comuns para determinar porque o assembly que contém o UDT não pode ser localizado pelo aplicativo que fez a chamada. Para obter mais informações, consulte o tópico "Diagnosticando erros com Assistentes para Depuração Gerenciada" na documentação do .NET Framework.  
   
 ## <a name="accessing-udts-with-a-sqldatareader"></a>Acessando UDTs com um SqlDataReader  
  Um `System.Data.SqlClient.SqlDataReader` pode ser usado no código do cliente para recuperar um conjunto de resultados que contém uma coluna UDT que está exposta como uma instância do objeto.  
@@ -157,10 +157,10 @@ static void Main()
 ```  
   
 ## <a name="binding-udts-as-bytes"></a>Associando UDTs como bytes  
- Em algumas situações, você pode desejar recuperar os dados raw da coluna UDT. Talvez o tipo não esteja disponível localmente ou você não queira instanciar uma instância uma instância do UDT. Você pode ler os bytes brutos em uma matriz de bytes usando o **GetBytes** método de um `SqlDataReader`. Esse método lê um fluxo de bytes do deslocamento de coluna especificado no buffer de uma matriz, começando com um deslocamento de buffer especificado. Outra opção é usar uma da **GetSqlBytes** ou **GetSqlBinary** métodos e ler todo o conteúdo em uma única operação. De qualquer maneira, o objeto UDT nunca é instanciado; assim, não é necessário definir uma referência para o UDT no assembly cliente.  
+ Em algumas situações, você pode desejar recuperar os dados raw da coluna UDT. Talvez o tipo não esteja disponível localmente ou você não queira instanciar uma instância uma instância do UDT. Você pode ler os bytes brutos em uma matriz de bytes usando o método **GetBytes** de um `SqlDataReader`. Esse método lê um fluxo de bytes do deslocamento de coluna especificado no buffer de uma matriz, começando com um deslocamento de buffer especificado. Outra opção é usar um dos métodos **GetSqlBytes** ou **GetSqlBinary** e ler todo o conteúdo em uma única operação. De qualquer maneira, o objeto UDT nunca é instanciado; assim, não é necessário definir uma referência para o UDT no assembly cliente.  
   
 ### <a name="example"></a>Exemplo  
- Este exemplo mostra como recuperar o **ponto** dados como bytes brutos em uma matriz de bytes usando um `SqlDataReader`. O código usa um `System.Text.StringBuilder` para converter os bytes brutos em uma representação de cadeia de caracteres a ser exibida na janela do console.  
+ Este exemplo mostra como recuperar os dados do **ponto** como bytes brutos em uma matriz de bytes `SqlDataReader`usando um. O código usa um `System.Text.StringBuilder` para converter os bytes brutos em uma representação de cadeia de caracteres a ser exibida na janela do console.  
   
 ```vb  
 Option Explicit On  
@@ -266,7 +266,7 @@ class GetRawBytes
 ```  
   
 ### <a name="example-using-getsqlbytes"></a>Exemplo de uso de GetSqlBytes  
- Este exemplo mostra como recuperar o **ponto** dados como bytes brutos em uma única operação usando o **GetSqlBytes** método. O código usa um `StringBuilder` para converter os bytes brutos em uma representação de cadeia de caracteres a ser exibida na janela do console.  
+ Este exemplo mostra como recuperar os dados do **ponto** como bytes brutos em uma única operação usando o método **GetSqlBytes** . O código usa um `StringBuilder` para converter os bytes brutos em uma representação de cadeia de caracteres a ser exibida na janela do console.  
   
 ```vb  
 Option Explicit On  
@@ -374,7 +374,7 @@ class GetRawBytes
  Os UDTs podem ser usados como parâmetros de entrada e de saída no código do ADO.NET.  
   
 ## <a name="using-udts-in-query-parameters"></a>Usando UDTs em parâmetros de consulta  
- Os UDTs podem ser usados como valores de parâmetros ao configurar um `SqlParameter` para um objeto `System.Data.SqlClient.SqlCommand`. A enumeração `SqlDbType.Udt` de um objeto `SqlParameter` é usada para indicar que o parâmetro é um UDT ao chamar o método `Add` para a coleção `Parameters`. O `UdtTypeName` propriedade de um `SqlCommand` objeto é usado para especificar o nome totalmente qualificado do UDT no banco de dados usando o *object_name* sintaxe. Embora não seja necessário, o uso do nome totalmente qualificado elimina a ambiguidade do código.  
+ Os UDTs podem ser usados como valores de parâmetros ao configurar um `SqlParameter` para um objeto `System.Data.SqlClient.SqlCommand`. A enumeração `SqlDbType.Udt` de um objeto `SqlParameter` é usada para indicar que o parâmetro é um UDT ao chamar o método `Add` para a coleção `Parameters`. A `UdtTypeName` propriedade de um `SqlCommand` objeto é usada para especificar o nome totalmente qualificado do UDT no banco de dados usando a sintaxe *Database. schema_name. object_name* . Embora não seja necessário, o uso do nome totalmente qualificado elimina a ambiguidade do código.  
   
 > [!NOTE]  
 >  Uma cópia local do assembly UDT deve estar disponível para o projeto cliente.  
@@ -452,7 +452,7 @@ static void Main()
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Acessando tipos definidos pelo usuário no ADO.NET](accessing-user-defined-types-in-ado-net.md)  
   
   

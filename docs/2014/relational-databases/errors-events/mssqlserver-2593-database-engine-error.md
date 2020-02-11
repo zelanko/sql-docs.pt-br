@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 400a754f58b2a4bbe5c0512cf7bae36d34f9fa70
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62868781"
 ---
-# <a name="mssqlserver2593"></a>MSSQLSERVER_2593
+# <a name="mssqlserver_2593"></a>MSSQLSERVER_2593
     
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|2593|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|DBCC_OBJECT_ROW_PAGE_SUMMARY|  
 |Texto da mensagem|Há linhas ROWCOUNT em páginas PAGECOUNT referentes ao objeto 'OBJECT'.|  
@@ -36,6 +36,6 @@ ms.locfileid: "62868781"
  Essa mensagem faz parte das informações retornadas por todas as verificações DBCC, com exceção de DBCC CHECKALLOC, e indica os números de linhas e de páginas de um determinado objeto.  
   
 ## <a name="user-action"></a>Ação do usuário  
- None  
+ Nenhum  
   
   

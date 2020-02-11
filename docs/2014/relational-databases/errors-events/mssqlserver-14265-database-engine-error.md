@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ba6f533f2f975a69d0b78d6458a01f64a10595f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62870066"
 ---
-# <a name="mssqlserver14265"></a>MSSQLSERVER_14265
+# <a name="mssqlserver_14265"></a>MSSQLSERVER_14265
     
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|14265|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|SQLErrorNum14265|  
 |Texto da mensagem|O serviço MSSQLServer foi encerrado inesperadamente. Verifique o log de erros do SQL Server e os logs de eventos do aplicativo e do sistema do Windows para obter as causas possíveis.|  

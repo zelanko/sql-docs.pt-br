@@ -26,10 +26,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d0caed882338b4ac1ce2f3e1e225693017ff1605
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62899927"
 ---
 # <a name="term-extraction-transformation"></a>Transformação Extração de Termos
@@ -44,7 +44,7 @@ ms.locfileid: "62899927"
   
  A transformação Extração de Termos gera uma contagem para cada termo que extrai. A contagem pode ser um valor de TFIDF ou a frequência bruta, significando o número de vezes que o termo normalizado aparece na entrada. Nesse caso, a contagem é representada por um número real que é maior do que 0. Por exemplo, a pontuação de TFIDF poderia ter o valor 0,5, e a frequência seria um valor como 1,0 ou 2,0.  
   
- A saída da transformação Extração de Termos inclui apenas duas colunas. Uma coluna contém os termos extraídos e a outra coluna contém a pontuação. Os nomes padrão das colunas são **termo** e `Score`. Como a coluna de texto na entrada pode conter múltiplos termos, a saída da transformação Extração de Termos geralmente tem mais linhas que a entrada.  
+ A saída da transformação Extração de Termos inclui apenas duas colunas. Uma coluna contém os termos extraídos e a outra coluna contém a pontuação. Os nomes padrão das colunas são **Term** e `Score`. Como a coluna de texto na entrada pode conter múltiplos termos, a saída da transformação Extração de Termos geralmente tem mais linhas que a entrada.  
   
  Se os termos extraídos forem gravados em uma tabela, eles podem ser usados por outra transformação de pesquisa como a Pesquisa de Termos, Pesquisa Difusa e transformações de Pesquisa.  
   
@@ -173,11 +173,11 @@ ms.locfileid: "62899927"
   
  Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor de Transformação Extração de Termos** , clique em um dos seguintes tópicos:  
   
--   [Editor de Transformação Extração de Termos &#40;Guia Extração de Termos&#41;](../../term-extraction-transformation-editor-term-extraction-tab.md)  
+-   [Editor de transformação Extração de termos &#40;guia extração de termos&#41;](../../term-extraction-transformation-editor-term-extraction-tab.md)  
   
--   [Editor de Transformação Extração de Termos &#40;Guia Exclusão&#41;](../../term-extraction-transformation-editor-exclusion-tab.md)  
+-   [Editor de transformação Extração de termos &#40;guia exclusão&#41;](../../term-extraction-transformation-editor-exclusion-tab.md)  
   
--   [Editor de Transformação Extração de Termos &#40;Guia Avançado&#41;](../../term-extraction-transformation-editor-advanced-tab.md)  
+-   [Editor de transformação Extração de termos &#40;guia Avançado&#41;](../../term-extraction-transformation-editor-advanced-tab.md)  
   
  Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   

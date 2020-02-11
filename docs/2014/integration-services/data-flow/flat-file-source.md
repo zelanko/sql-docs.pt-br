@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6338c7a306f163f786f2c1e7d44ae4dbc66504ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62902429"
 ---
 # <a name="flat-file-source"></a>Fonte de Arquivo Simples
@@ -44,7 +44,7 @@ ms.locfileid: "62902429"
   
  As colunas na saída da origem Arquivo Simples incluem a propriedade FastParse. FastParse indica se a coluna usa as rotinas de análise mais rápidas, mas sem distinção de localidade, que são fornecidas pelo [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , ou as rotinas de análise padrão com distinção de localidade. Para obter mais informações, consulte [Fast Parse](../fast-parse.md) e [Standard Parse](../standard-parse.md).  
   
- Colunas de saída também incluem a propriedade UseBinaryFormat. Use esta propriedade para implementar o suporte a dados binários, como dados com o formato decimal compactado, em arquivos. Por padrão, UseBinaryFormat é definido `false`. Se você quiser usar um formato binário, defina UseBinaryFormat como `true` e o tipo de dados na coluna de saída para `DT_BYTES`. Ao fazer isso, a fonte de Arquivo Simples ignora a conversão de dados e transfere os dados para a coluna de saída como estão. Você pode usar uma transformação, como Colunas Derivadas ou Conversão de Dados para lançar os dados `DT_BYTES` a um tipo de dados diferente ou pode escrever scripts personalizados em uma transformação de scripts para interpretar os dados. Você também pode escrever um componente de fluxo de dados personalizado para interpretar os dados. Para obter mais informações sobre quais tipos de dados você podem converter `DT_BYTES` para ver [conversão &#40;expressão do SSIS&#41;](../expressions/cast-ssis-expression.md).  
+ Colunas de saída também incluem a propriedade UseBinaryFormat. Use esta propriedade para implementar o suporte a dados binários, como dados com o formato decimal compactado, em arquivos. Por padrão, UseBinaryFormat é definido `false`como. Se você quiser usar um formato binário, defina UseBinaryFormat como `true` e o tipo de dados na coluna de saída como `DT_BYTES`. Ao fazer isso, a fonte de Arquivo Simples ignora a conversão de dados e transfere os dados para a coluna de saída como estão. Você pode usar uma transformação, como Colunas Derivadas ou Conversão de Dados para lançar os dados `DT_BYTES` a um tipo de dados diferente ou pode escrever scripts personalizados em uma transformação de scripts para interpretar os dados. Você também pode escrever um componente de fluxo de dados personalizado para interpretar os dados. Para obter mais informações sobre quais tipos de dados você `DT_BYTES` pode converter, consulte [Cast &#40;SSIS Expression&#41;](../expressions/cast-ssis-expression.md).  
   
  Essa fonte utiliza um gerenciador de conexões de arquivos simples para acessar o arquivo de texto. Definindo propriedades no gerenciador de conexões de arquivos simples, você pode fornecer informações sobre o arquivo e cada coluna nele contido, e especificar como a fonte de Arquivo Simples deverá tratar os dados no arquivo de texto. Por exemplo, você pode especificar os caracteres que delimitam colunas e linhas no arquivo e o tipo de dados e o comprimento de cada coluna. Para obter mais informações, consulte [Flat File Connection Manager](../connection-manager/file-connection-manager.md).  
   
@@ -55,11 +55,11 @@ ms.locfileid: "62902429"
   
  Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor de Fonte de Arquivo Simples**, clique em um dos seguintes tópicos:  
   
--   [Editor de Fonte de Arquivo Simples &#40;Página Gerenciador de Conexões&#41;](../flat-file-source-editor-connection-manager-page.md)  
+-   [Editor de fonte de arquivo simples &#40;página Gerenciador de conexões&#41;](../flat-file-source-editor-connection-manager-page.md)  
   
--   [Editor de Fonte de Arquivo Simples &#40;Página Colunas&#41;](../flat-file-source-editor-columns-page.md)  
+-   [Editor de fonte de arquivo simples &#40;página colunas&#41;](../flat-file-source-editor-columns-page.md)  
   
--   [Editor de Fonte de Arquivo Simples &#40;Página Saída de Erro&#41;](../flat-file-source-editor-error-output-page.md)  
+-   [Editor de fonte de arquivo simples &#40;página saída de erro&#41;](../flat-file-source-editor-error-output-page.md)  
   
  A caixa de diálogo **Editor Avançado** reflete as propriedades que podem ser definidas programaticamente. Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   
@@ -70,7 +70,7 @@ ms.locfileid: "62902429"
 ## <a name="related-tasks"></a>Related Tasks  
  Para obter detalhes sobre como definir as propriedades de um componente de fluxo de dados, consulte [Definir as propriedades de um componente de fluxo de dados](set-the-properties-of-a-data-flow-component.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Destino de arquivo simples](flat-file-destination.md)   
  [Fluxo de Dados](data-flow.md)  
   

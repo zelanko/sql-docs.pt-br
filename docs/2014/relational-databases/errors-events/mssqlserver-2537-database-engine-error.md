@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9c4a2a9c8a49344a581ed85bc714cf4976f9f6b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62869226"
 ---
-# <a name="mssqlserver2537"></a>MSSQLSERVER_2537
+# <a name="mssqlserver_2537"></a>MSSQLSERVER_2537
     
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|2537|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|DBCC_RECORD_CHECK_FAILED|  
-|Texto da mensagem|Erro de tabela: ID de objeto O_ID, ID de índice I_ID, ID PN_ID, unidade de alocação A_ID ID (tipo TYPE), página P_ID, linha ROW_ID de partição. Falha na verificação de registro (CHECK_TEXT). Os valores são VALUE1 e VALUE2.|  
+|Texto da mensagem|Erro de tabela: ID de objeto O_ID, ID de índice I_ID, ID de partição PN_ID, ID de unidade de alocação A_ID (tipo TYPE), página P_ID, linha ROW_ID. Falha na verificação de registro (CHECK_TEXT). Os valores são VALUE1 e VALUE2.|  
   
 ## <a name="explanation"></a>Explicação  
  A linha ROW_ID (ou uma coluna na linha) falhou no teste ou não atendeu à condição descrita por CHECK_TEXT.  

@@ -1,5 +1,5 @@
 ---
-title: Visualizadores do modelo (Designer de modelo de mineração de dados) de mineração | Microsoft Docs
+title: Visualizadores do modelo de mineração (Designer de modelo de mineração de dados) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 67cd89f4cf857f11f08f69769ff54a22fd83760f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077736"
 ---
 # <a name="mining-model-viewers-data-mining-model-designer"></a>Visualizadores do Modelo de Mineração (Designer do Modelo de Mineração de Dados)
@@ -27,14 +27,14 @@ ms.locfileid: "66077736"
  Para obter instruções passo a passo sobre como usar cada visualizador, consulte [Visualizadores do modelo de mineração de dados](data-mining/data-mining-model-viewers.md).  
   
 ## <a name="common-options"></a>Opções comuns  
- **Atualizar conteúdo do Visualizador**  
+ **Atualizar conteúdo do visualizador**  
  Recarregue o modelo de mineração no visualizador.  
   
  **Modelo de mineração**  
  Escolha um modelo de mineração para exibir o que está presente na estrutura de mineração atual. O modelo de mineração será aberto primeiro no visualizador personalizado associado.  
   
  **Visualizador**  
- Escolha um visualizador a ser utilizado para explorar o modelo de mineração selecionado. Esta lista contém os visualizadores que o [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fornece para cada modelo de mineração, o Visualizador de Conteúdo de Mineração da [!INCLUDE[msCoName](../includes/msconame-md.md)] e quaisquer visualizadores plug-in.  
+ Escolha um visualizador a ser utilizado para explorar o modelo de mineração selecionado. Essa lista inclui os visualizadores [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que o fornece para cada modelo de [!INCLUDE[msCoName](../includes/msconame-md.md)] mineração, o Visualizador de conteúdo de mineração e quaisquer visualizadores de plug-in.  
   
  O diagrama a seguir mostra um visualizador personalizado e um genérico para o mesmo modelo.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "66077736"
   
 -   O diagrama inferior mostra o mesmo modelo, exibido usando o **Visualizador de Árvore de Conteúdo Genérica da Microsoft**. Este visualizador apresenta o conteúdo do modelo de mineração de acordo com um esquema padronizado. Para obter mais informações, consulte [Visualizador de Árvore de Conteúdo Genérica da Microsoft &#40;Mineração de dados&#41;](microsoft-generic-content-tree-viewer-data-mining.md).  
   
- ![Visão geral do designer de modelo de mineração](media/generic-mining-model-tab1.gif "visão geral do designer de modelo de mineração")  
+ ![Visão geral do designer de modelo de mineração](media/generic-mining-model-tab1.gif "Visão geral do designer de modelo de mineração")  
   
 ## <a name="viewers-and-their-components"></a>Visualizadores e seus componentes  
  Dependendo do modelo que você selecionar, você verá um visualizador personalizado diferente, adaptado para o algoritmo usado para criar o modelo de mineração de dados selecionado. Cada visualizador personalizado tem uma variedade de ferramentas e caixas de diálogo para ajudar a explorar as estatísticas e os padrões no modelo.  
@@ -65,7 +65,7 @@ ms.locfileid: "66077736"
   
     -   [Guia diagrama de cluster &#40;Visualizador do modelo de mineração&#41;](cluster-diagram-tab-mining-model-viewer.md)  
   
-    -   [Guia Perfis de cluster &#40;Visualizador do modelo de mineração&#41;](cluster-profiles-tab-mining-model-viewer.md)  
+    -   [Guia perfis de cluster &#40;Visualizador do modelo de mineração&#41;](cluster-profiles-tab-mining-model-viewer.md)  
   
     -   [Guia características do cluster &#40;Visualizador do modelo de mineração&#41;](cluster-characteristics-tab-mining-model-viewer.md)  
   
@@ -103,9 +103,9 @@ ms.locfileid: "66077736"
   
     -   [Guia rede de dependências &#40;Visualizador do modelo de mineração&#41;](dependency-network-tab-mining-model-viewer.md)  
   
-    -   [Guia Perfis de atributo &#40;Visualizador do modelo de mineração&#41;](attribute-profiles-tab-mining-model-viewer.md)  
+    -   [Guia perfis de atributo &#40;Visualizador do modelo de mineração&#41;](attribute-profiles-tab-mining-model-viewer.md)  
   
-    -   [Guia características do atributo &#40;Visualizador do modelo de mineração&#41;](attribute-characteristics-tab-mining-model-viewer.md)  
+    -   [Guia características do atributo &#40;o Visualizador do modelo de mineração&#41;](attribute-characteristics-tab-mining-model-viewer.md)  
   
     -   [Guia discriminação de atributo &#40;Visualizador do modelo de mineração&#41;](attribute-discrimination-tab-mining-model-viewer.md)  
   
@@ -115,38 +115,38 @@ ms.locfileid: "66077736"
   
     -   [Guia rede de dependências &#40;Visualizador do modelo de mineração&#41;](dependency-network-tab-mining-model-viewer.md)  
   
-    -   [Rede neural &#40;Visualizador do modelo de mineração&#41;](neural-network-mining-model-viewer.md)  
+    -   [Visualizador de modelo de mineração de &#40;de rede neural&#41;](neural-network-mining-model-viewer.md)  
   
-    -   [Localize a caixa de diálogo do nó &#40;Visualizador do modelo de mineração&#41;](find-node-dialog-box-mining-model-viewer.md)  
+    -   [Caixa de diálogo Localizar nó &#40;Visualizador do modelo de mineração&#41;](find-node-dialog-box-mining-model-viewer.md)  
   
 ### <a name="microsoft-sequence-clustering-algorithm"></a>Microsoft Sequence Clustering Algorithm  
   
 -   [Procurar um modelo usando o Visualizador de Cluster de Sequência da Microsoft](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
-    -   [Guia diagrama de Cluster de Clustering de sequência &#40;Visualizador do modelo de mineração](sequence-clustering-cluster-diagram-tab-mining-model-viewer.md)  
+    -   [Guia diagrama de clustering de sequências &#40;Visualizador do modelo de mineração](sequence-clustering-cluster-diagram-tab-mining-model-viewer.md)  
   
-    -   [Guia Perfis de Cluster de Clustering de sequência &#40;Visualizador do modelo de mineração](sequence-clustering-cluster-profiles-tab-mining-model-viewer.md)  
+    -   [Guia perfis de cluster do clustering de sequências &#40;Visualizador do modelo de mineração](sequence-clustering-cluster-profiles-tab-mining-model-viewer.md)  
   
-    -   [Guia características do Cluster de Clustering de sequência &#40;Visualizador do modelo de mineração&#41;](sequence-clustering-cluster-characteristics-tab-mining-model-viewer.md)  
+    -   [Guia características do cluster clustering de sequências &#40;Visualizador do modelo de mineração&#41;](sequence-clustering-cluster-characteristics-tab-mining-model-viewer.md)  
   
-    -   [Guia discriminação de Cluster de Clustering de sequência &#40;Visualizador do modelo de mineração&#41;](sequence-clustering-cluster-discrimination-tab-mining-model-viewer.md)  
+    -   [Guia discriminação de cluster de clustering de sequências &#40;Visualizador de modelos de mineração&#41;](sequence-clustering-cluster-discrimination-tab-mining-model-viewer.md)  
   
-    -   [Guia transição de Cluster de Clustering de sequência &#40;Visualizador do modelo de mineração&#41;](sequence-clustering-cluster-transition-tab-mining-model-viewer.md)  
+    -   [Guia transição de cluster do clustering de sequências &#40;Visualizador do modelo de mineração&#41;](sequence-clustering-cluster-transition-tab-mining-model-viewer.md)  
   
 ### <a name="microsoft-time-series-algorithm"></a>Algoritmo MTS  
   
 -   [Procurar um modelo usando o Visualizador MTS](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
   
-    -   [Guia de modelo &#40;visualizadores do modelo de mineração&#41;](model-tab-mining-model-viewers.md)  
+    -   [Guia modelo &#40;visualizadores de modelo de mineração&#41;](model-tab-mining-model-viewers.md)  
   
-    -   [Guia do gráfico &#40;visualizadores do modelo de mineração&#41;](chart-tab-mining-model-viewers.md)  
+    -   [Guia gráfico &#40;visualizadores de modelo de mineração&#41;](chart-tab-mining-model-viewers.md)  
   
     -   [Caixa de diálogo legenda de mineração &#40;Visualizador do modelo de mineração&#41;](mining-legend-dialog-box-mining-model-viewer.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Exibição de modelos de mineração &#40;Designer de modelo de mineração de dados&#41;](mining-models-view-data-mining-model-designer.md)   
- [Exibição de estrutura de mineração &#40;Designer de modelo de mineração de dados&#41;](mining-structure-view-data-mining-model-designer.md)   
- [Designer do gráfico de precisão de mineração &#40;mineração de dados&#41;](mining-accuracy-chart-designer-data-mining.md)   
- [Construtor de consultas de previsão &#40;mineração de dados&#41;](prediction-query-builder-data-mining.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Exibição de modelos de mineração &#40;designer de modelo de mineração de dados&#41;](mining-models-view-data-mining-model-designer.md)   
+ [Exibição de estrutura de mineração &#40;designer de modelo de mineração de dados&#41;](mining-structure-view-data-mining-model-designer.md)   
+ [Designer de gráfico de precisão de mineração &#40;mineração de dados&#41;](mining-accuracy-chart-designer-data-mining.md)   
+ [Construtor de Consultas de &#40;de mineração de dados de previsão&#41;](prediction-query-builder-data-mining.md)  
   
   

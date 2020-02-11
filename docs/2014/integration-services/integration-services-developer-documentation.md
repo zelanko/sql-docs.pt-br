@@ -1,5 +1,5 @@
 ---
-title: Desenvolvedor&#39;guia (Integration Services) | Microsoft Docs
+title: Guia do desenvolvedor&#39;s (Integration Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -19,13 +19,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3fc7c93f8e499fb063e0d01c9132606f3ddfa3f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62892393"
 ---
-# <a name="developer39s-guide-integration-services"></a>Desenvolvedor&#39;guia (Integration Services)
+# <a name="developer39s-guide-integration-services"></a>Guia do desenvolvedor&#39;s (Integration Services)
   O [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] inclui um modelo de objeto totalmente reescrito, que foi aprimorado com vários recursos que tornam a extensão e a programação mais fáceis, flexíveis e eficientes. Desenvolvedores podem estender e programar quase todos os aspectos de pacotes do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
  Como desenvolvedor do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], há duas abordagens fundamentais que você pode adotar na programação do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]:  
@@ -84,7 +84,7 @@ ms.locfileid: "62892393"
   
 -   Exemplos do CodePlex, [Exemplos de Produtos do Integration Services](https://go.microsoft.com/fwlink/?LinkID=131204), em www.codeplex.com/MSFTISProdSamples  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [SQL Server Integration Services](sql-server-integration-services.md)  
   
   

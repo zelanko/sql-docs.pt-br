@@ -1,5 +1,5 @@
 ---
-title: Geral (caixa de diálogo para restaurar banco de dados) (Analysis Services - dados multidimensionais) | Microsoft Docs
+title: Geral (caixa de diálogo Restore Database) (Analysis Services-dados multidimensionais) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2ebc1bc72a15545412adcc71d10feb08f3f05b16
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080952"
 ---
 # <a name="general-restore-database-dialog-box-analysis-services---multidimensional-data"></a>Geral (caixa de diálogo Restaurar Banco de Dados) (Analysis Services - Dados multidimensionais)
@@ -28,7 +28,7 @@ ms.locfileid: "66080952"
 > [!NOTE]  
 >  Após restaurar um banco de dados existente, o usuário que o restaurou poderá perder o acesso ao banco de dados restaurado. Essa perda de acesso pode ocorrer se, no momento da execução do backup, o usuário não for membro da função de servidor, nem membro da função de banco de dados com permissões de Controle total (Administrador).  
   
- **Para exibir a página geral na caixa de diálogo restaurar banco de dados**  
+ **Para exibir a página Geral na caixa de diálogo Restaurar Banco de Dados**  
   
 -   No [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], clique com o botão direito do mouse na pasta **Bancos de Dados** de uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ou em um banco de dados no **Pesquisador de Objetos**, clique em **Restaurar**e então, em **Selecionar uma página**, clique em **Geral**.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "66080952"
  **Restaurar banco de dados**  
  Selecione o banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] a restaurar.  
   
- **Arquivo de backup**  
+ **De arquivo de backup**  
  Selecione o arquivo de backup do qual restaurar o banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] selecionado.  
   
  **Procurar**  
@@ -65,17 +65,17 @@ ms.locfileid: "66080952"
   
  Se esta opção for selecionada, você poderá escolher a quantidade de informações de segurança na lista suspensa habilitada ao selecionar esta opção. As seguintes opções estão disponíveis:  
   
-|Opção|Descrição|  
+|Opção|DESCRIÇÃO|  
 |------------|-----------------|  
 |**Copiar tudo**|Restaura as funções de banco de dados contidas no arquivo de backup, assim como as contas de usuário associadas às funções.|  
-|**Ignorar associação**|Restaura as funções de banco de dados contidas no arquivo de backup, mas não restaura as contas de usuário associadas às funções.|  
+|**Ignorar Associação**|Restaura as funções de banco de dados contidas no arquivo de backup, mas não restaura as contas de usuário associadas às funções.|  
   
  **Senha**  
  Se o arquivo de backup estiver criptografado, digite a senha usada para criptografar o arquivo de backup.  
   
-## <a name="see-also"></a>Consulte também  
- [Caixa de diálogo Restaurar Banco de Dados &#40;Analysis Services – Dados Multidimensionais&#41;](restore-database-dialog-box-analysis-services-multidimensional-data.md)   
- [Partições &#40;restaurar a caixa de diálogo banco de dados&#41; &#40;Analysis Services - dados multidimensionais&#41;](partitions-restore-database-dialog-box-analysis-services-multidimensional-data.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Caixa de diálogo Restaurar Banco de dados &#40;Analysis Services-&#41;](restore-database-dialog-box-analysis-services-multidimensional-data.md)   
+ [Caixa de diálogo partições &#40;Restore Database&#41; &#40;Analysis Services-dados multidimensionais&#41;](partitions-restore-database-dialog-box-analysis-services-multidimensional-data.md)   
  [Backup e restauração de bancos de dados do Analysis Services](multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   
   

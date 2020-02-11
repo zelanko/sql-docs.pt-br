@@ -1,5 +1,5 @@
 ---
-title: Parâmetros do SQL Server | Microsoft Docs
+title: Parâmetros de SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e528b94e51238a06a9776e58693c3093f4bfb831
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66091874"
 ---
 # <a name="sql-server-parameters"></a>Parâmetros do SQL Server
@@ -29,30 +29,30 @@ ms.locfileid: "66091874"
 >  Alguns problemas de atualização poderão ser detectados somente se você submeter arquivos de rastreamento ou arquivos em lote do SQL à análise.  
   
 ## <a name="options"></a>Opções  
- **Bancos de dados para analisar**  
- Para analisar todos os bancos de dados, selecione a **todos os bancos de dados** caixa de seleção. Para analisar uma seleção de bancos de dados, marque a caixa de seleção próxima a cada banco de dados para incluir na verificação.  
+ **Banco(s) de dados a serem analisados**  
+ Para analisar todos os bancos de dados, marque a caixa de seleção **todos os bancos de dados** . Para analisar uma seleção de bancos de dados, marque a caixa de seleção próxima a cada banco de dados para incluir na verificação.  
   
- **Analisar arquivo (s) de rastreamento**  
+ **Analisar arquivo(s) de rastreamento**  
  Marque esta caixa de seleção para analisar arquivos de rastreamento no sistema de arquivos.  
   
- **Caminho para arquivos de rastreamento**  
+ **Caminho do(s) arquivo(s) de rastreamento**  
  Você pode analisar um ou mais arquivos. É possível navegar até um local e selecionar vários arquivos ou fornecer vários nomes de arquivos. Use o nome do caminho completo para cada arquivo, incluindo o nome do arquivo, e separe as entrada usando o caractere barra vertical (|).  
   
- Se você habilitar **analisar arquivo (s) de rastreamento**, **próxima** é desabilitado até que você insira um nome de caminho e um nome de arquivo.  
+ Se você habilitar **analisar arquivo (s) de rastreamento**, **Avançar** será desabilitado até que você insira um nome de caminho e um nome de arquivo.  
   
- **Analisar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] arquivo (s) do lote**  
+ **Analisar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] arquivo (s) em lotes**  
  Marque essa caixa de seleção para analisar arquivos em lote do [!INCLUDE[tsql](../../includes/tsql-md.md)] no sistema de arquivos.  
   
- **Caminho para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] arquivo (s) do lote**  
+ **Caminho para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] arquivo (s) em lotes**  
  Você pode analisar um ou mais lotes de arquivos. Você pode navegar até um local e selecionar vários arquivos ou pode digitar vários nomes de arquivos. Use o nome do caminho completo para cada arquivo, incluindo o nome do arquivo, e separe as entrada usando o caractere barra vertical (|).  
   
- Se você habilitar **arquivos em lote de SQL analisar**, o **próxima** botão será desabilitado até que você insira um nome de caminho e um nome de arquivo.  
+ Se você habilitar **analisar arquivo (s) do lote SQL**, o botão **Avançar** será desabilitado até que você insira um nome de caminho e um nome de arquivo.  
   
- **Separador de lotes SQL**  
- O texto que é usado para separar lotes de instruções do [!INCLUDE[tsql](../../includes/tsql-md.md)]. O valor padrão é **ACESSE**.  
+ **Separador de Lotes do SQL**  
+ O texto que é usado para separar lotes de instruções do [!INCLUDE[tsql](../../includes/tsql-md.md)]. O valor padrão é **go**.  
   
-## <a name="see-also"></a>Consulte também  
- [Trabalhando com o Supervisor de atualização](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   
- [Referência de Interface de usuário do Supervisor de atualização](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Trabalhando com o supervisor de atualização](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   
+ [Referência da interface de usuário do Supervisor de Atualização](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)  
   
   

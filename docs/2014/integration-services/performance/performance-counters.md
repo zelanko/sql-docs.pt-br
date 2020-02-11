@@ -17,21 +17,22 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 79c9e433a6b5bcf9babee0060fdf028775e0e8a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62889827"
 ---
 # <a name="performance-counters"></a>Contadores de desempenho
+  
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] instala um conjunto de contadores de desempenho que podem ser usados para monitorar o desempenho do mecanismo de fluxo de dados. Por exemplo, é possível observar o contador "Buffers em spool" para determinar se os buffers de dados estão sendo gravados temporariamente no disco durante a execução de um pacote. Essa troca reduz o desempenho e indica que o computador não tem memória suficiente.  
   
 > [!NOTE]  
->  Se você instalar o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] em um computador que está executando o [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)]e, em seguida, atualizar o computador para o [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)], o processo de atualização removerá os contadores de desempenho do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] do computador. Para restaurar os contadores de desempenho do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no computador, execute a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em modo de reparo.  
+>  se você instalar o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] em um computador que está executando o [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)]e atualizar o computador para o [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)], o processo de atualização removerá os contadores de desempenho do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] do computador. Para restaurar os contadores de desempenho do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no computador, execute a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em modo de reparo.  
   
  A tabela a seguir descreve os contadores de desempenho.  
   
-|Contador de desempenho|Descrição|  
+|Contador de desempenho|DESCRIÇÃO|  
 |-------------------------|-----------------|  
 |Bytes de BLOB lidos|O número de bytes dos dados de BLOB (objetos binários grandes) que o mecanismo de fluxo de dados leu em todas as fontes.|  
 |Bytes de BLOB gravados|O número de bytes de dados de BLOB que o mecanismo de fluxo de dados gravou em todos os destinos.|  
@@ -73,11 +74,11 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   
 -   Ferramenta, [SSIS Performance Visualization for Business Intelligence Development Studio (projeto CodePlex)](https://go.microsoft.com/fwlink/?LinkId=146626), em codeplex.com.  
   
--   Vídeo, [Measuring and Understanding the Performance of Your SSIS Packages in the Enterprise (vídeo do SQL Server)](https://go.microsoft.com/fwlink/?LinkId=150497) (Medindo e compreendendo o desempenho de seus pacotes do SSIS na empresa), em msdn.microsoft.com.  
+-   Vídeo, [Measuring and Understanding the Performance of Your SSIS Packages in the Enterprise (vídeo do SQL Server)](https://go.microsoft.com/fwlink/?LinkId=150497)(Medindo e compreendendo o desempenho de seus pacotes do SSIS na empresa), em msdn.microsoft.com.  
   
 -   Artigo de suporte, [The SSIS performance counter is no longer available in the Performance Monitor after you upgrade to Windows Server 2008](https://go.microsoft.com/fwlink/?LinkId=235319), em support.microsoft.com.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Execução de projetos e pacotes](../packages/run-integration-services-ssis-packages.md)  
   
   

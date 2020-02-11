@@ -1,5 +1,5 @@
 ---
-title: 'Lição 4: Adicionando redirecionamento de fluxo de erro | Microsoft Docs'
+title: 'Lição 4: adicionando o redirecionamento de fluxo de erro | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,18 +11,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 636c199e84eae9bd141bcb33fc5c06f35eac760b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62891312"
 ---
-# <a name="lesson-4-adding-error-flow-redirection"></a>Lição 4: Adicionar redirecionamento de fluxo de erro
-  Para tratar erros que podem ocorrer no processo de transformação, o [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fornece a capacidade de decidir, em termos de componente e coluna, como tratar dados que não podem ser transformados. Você pode escolher ignorar uma falha em determinadas colunas, redirecionar toda a linha com falha ou apenas causar falha no componente. Por padrão, todos os componentes no [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] são configurados para falhar quando ocorrerem erros. Causar falha em um componente, por sua vez, faz com que o pacote falhe e todo o processamento subsequente pare.  
+# <a name="lesson-4-adding-error-flow-redirection"></a>Lição 4: Adicionando redirecionamento de fluxo de erro
+  Para lidar com erros que podem ocorrer no processo de transformação [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , o oferece a capacidade de decidir por componente e por coluna como manipular dados que não podem ser transformados. Você pode escolher ignorar uma falha em determinadas colunas, redirecionar toda a linha com falha ou apenas causar falha no componente. Por padrão, todos os componentes no [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] são configurados para falhar quando ocorrerem erros. Causar falha em um componente, por sua vez, faz com que o pacote falhe e todo o processamento subsequente pare.  
   
  Em vez de permitir que as falhas interrompam a execução do pacote, é bom configurar e tratar erros de processamento em potencial conforme ocorrem dentro da transformação. Como você pode escolher ignorar as falhas para garantir que seu pacote seja executado com êxito, frequentemente é melhor redirecionar a linha com falhas para outro caminho de processamento, em que os dados e o erro podem ser persistentes, examinados e reprocessados posteriormente.  
   
- Nesta lição, você criará uma cópia do pacote desenvolvido em [lição 3: Adicionando log](lesson-3-add-logging-with-ssis.md). Ao trabalhar com este pacote novo, você criará uma versão corrompida de um dos arquivos de dados de exemplo. O arquivo corrompido forçará a ocorrência de um erro de processamento quando você executar o pacote.  
+ Nesta lição, você criará uma cópia do pacote desenvolvido em [Lesson 3: Adding Logging](lesson-3-add-logging-with-ssis.md). Ao trabalhar com este pacote novo, você criará uma versão corrompida de um dos arquivos de dados de exemplo. O arquivo corrompido forçará a ocorrência de um erro de processamento quando você executar o pacote.  
   
  Para tratar os dados de erro, você adicionará e configurará um destino de Arquivo Simples que gravará qualquer linha que não localize um valor de pesquisa na transformação Pesquisa de Códigos de Moeda em um arquivo.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "62891312"
 ## <a name="tasks-in-lesson"></a>Tarefas da lição  
  Esta lição contém as seguintes tarefas:  
   
--   [Etapa 1: Copiando o pacote da lição 3](lesson-4-1-copying-the-lesson-3-package.md)  
+-   [Etapa 1: Copiando o pacote da Lição 3](lesson-4-1-copying-the-lesson-3-package.md)  
   
 -   [Etapa 2: Criando um arquivo corrompido](lesson-4-2-creating-a-corrupted-file.md)  
   
@@ -42,9 +42,9 @@ ms.locfileid: "62891312"
   
 -   [Etapa 4: Adicionando um destino de arquivo simples](lesson-4-4-adding-a-flat-file-destination.md)  
   
--   [Etapa 5: Testando o pacote de Tutorial da lição 4](lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
+-   [Etapa 5: Testando o pacote de tutorial da Lição 4](lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>Iniciar a lição  
- [Etapa 1: Copiando o pacote da lição 3](lesson-4-1-copying-the-lesson-3-package.md)  
+ [Etapa 1: Copiando o pacote da Lição 3](lesson-4-1-copying-the-lesson-3-package.md)  
   
   

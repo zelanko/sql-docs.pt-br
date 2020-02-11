@@ -1,5 +1,5 @@
 ---
-title: Nome de elemento para índice (DTA) | Microsoft Docs
+title: Elemento de nome para o índice (DTA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fbf267591ccd85b31bd8436a773e2337e292d0b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62866211"
 ---
 # <a name="name-element-for-index-dta"></a>Elemento de nome para índice (DTA)
@@ -35,9 +35,10 @@ ms.locfileid: "62866211"
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|Descrição|  
+|Característica|DESCRIÇÃO|  
 |--------------------|-----------------|  
-|**Comprimento e tipo de dados**|`string`, comprimento ilimitado.|  
+|**Comprimento e tipo de dados**|
+  `string`, comprimento ilimitado.|  
 |**Valor padrão**|Nenhum.|  
 |**Ocorrência**|Necessário uma vez para cada elemento `Index`.|  
   
@@ -51,7 +52,7 @@ ms.locfileid: "62866211"
 ## <a name="example"></a>Exemplo  
  Para obter um exemplo de uso desse elemento, veja [Amostra de arquivo de entrada XML com a configuração especificada pelo usuário &#40;DTA&#41;](xml-input-file-sample-with-user-specified-configuration-dta.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência do arquivo de entrada XML &#40;Orientador de Otimização do Mecanismo de Banco de Dados&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0370d4fceada5c0a287c4a071691ea20d5a28f6c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086217"
 ---
 # <a name="apply-a-filter-to-a-mining-model"></a>Aplicar um filtro a um modelo de mineração
@@ -66,7 +66,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 8.  Clique na caixa de texto **Valor** e digite um valor na caixa.  
   
-     Por exemplo, selecione `Income` como a coluna, selecione a maior que (>) do operador e digite `30000`.  
+     Por exemplo, selecione `Income` como a coluna, selecione o operador maior que (>) e, em seguida `30000`, digite.  
   
 9. Na grade, clique na linha seguinte.  
   
@@ -78,7 +78,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 11. Selecione um operador e digite um valor conforme descrito nas etapas 7 e 8.  
   
-     Por exemplo, selecione `Income` como a coluna novamente, selecione o operador menor que (<) e, em seguida, digite `40000`.  
+     Por exemplo, selecione `Income` como a coluna novamente, selecione o operador menor que (<) e, em seguida `40000`, digite.  
   
 12. Na grade, clique na linha seguinte.  
   
@@ -86,7 +86,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 ### <a name="to-add-a-filter-on-the-nested-table-in-a-mining-model"></a>Para adicionar um filtro na tabela aninhada em um modelo de mineração  
   
-1.  No  **\<nome > filtro de modelos** caixa de diálogo, clique em uma linha vazia na grade, em **coluna da estrutura de mineração**.  
+1.  Na caixa de diálogo ** \<filtro de modelo de nome>** , clique em uma linha vazia na grade na **coluna estrutura de mineração**.  
   
 2.  Selecione o nome da tabela aninhada na lista suspensa.  
   
@@ -96,9 +96,9 @@ WHERE [Model] <> 'Water Bottle' )
   
      Essas são as únicas condições disponíveis para a tabela aninhada na caixa de diálogo **Filtro de Modelos** , pois você está restringindo a tabela de casos a apenas aqueles que têm um determinado valor na tabela aninhada. Você definirá o valor da condição na tabela aninhada na próxima etapa.  
   
-4.  Clique o **valor** caixa e, em seguida, clique no **(...)**  botão para criar uma expressão.  
+4.  Clique na caixa **valor** e, em seguida, clique no botão **(...)** para criar uma expressão.  
   
-     O  **\<nome > filtro** caixa de diálogo é aberta. Essa caixa de diálogo só pode definir condições na tabela atual, que neste caso é a tabela aninhada.  
+     A caixa de ** \<diálogo nome>filtro** é aberta. Essa caixa de diálogo só pode definir condições na tabela atual, que neste caso é a tabela aninhada.  
   
 5.  Clique na caixa **Coluna da Estrutura de Mineração** e selecione o nome de coluna nas listas suspensas das colunas da tabela aninhada.  
   
@@ -106,7 +106,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 7.  Clique em **Valor** e digite um valor.  
   
-     Por exemplo, para **coluna da estrutura de mineração** selecione `Model`. Para **operador**, selecione `<>`e digite o valor `Water Bottle`. Essa condição cria a seguinte expressão de filtro:  
+     Por exemplo, para **coluna da estrutura de mineração,** selecione `Model`. Para **operador**, selecione `<>`e digite o valor `Water Bottle`. Essa condição cria a seguinte expressão de filtro:  
   
 ```  
 EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )   
@@ -115,7 +115,7 @@ EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )
 > [!NOTE]  
 >  Como o número de atributos da tabela aninhada é potencialmente ilimitado, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] não fornece a lista dos possíveis valores a serem selecionados. Você deve digitar o valor exato. Você não pode usar um operador LIKE em uma tabela aninhada.  
   
-1.  Adicionar mais condições conforme a necessidade, combinando as condições, selecionando `AND` ou `OR` na **e/ou** caixa no lado esquerdo do **condições** grade. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+1.  Adicione mais condições conforme necessário, combinando as condições `AND` selecionando `OR` ou na caixa **e/ou** no lado esquerdo da grade de **condições** . [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 2.  Na caixa de diálogo **Filtro de Modelos** , examine as condições que você criou usando a caixa de diálogo **Filtro** . As condições para a tabela aninhada são acrescentadas às condições da tabela de casos, e o conjunto completo das condições de filtro é exibido na caixa de texto **Expressão** .  
   
@@ -125,8 +125,8 @@ EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )
     >  Se você alterar manualmente qualquer parte da expressão de filtro, a grade será desabilitada e, assim sendo, você deverá trabalhar com a expressão de filtro apenas no modo de edição de texto. Para restaurar o modo de edição da grade, você deve apagar a expressão de filtro e iniciar novamente.  
   
   
-## <a name="see-also"></a>Consulte também  
- [Filtros para modelos de mineração &#40;Analysis Services – Mineração de dados&#41;](mining-models-analysis-services-data-mining.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Filtros para modelos de mineração &#40;mineração de dados Analysis Services&#41;](mining-models-analysis-services-data-mining.md)   
  [Tarefas e instruções do modelo de mineração](mining-model-tasks-and-how-tos.md)   
  [Excluir um filtro de um modelo de mineração](delete-a-filter-from-a-mining-model.md)  
   

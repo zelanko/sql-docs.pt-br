@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 663ef21dc9c4d0f3698ae468637fe0a8fd55a16e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66078896"
 ---
 # <a name="modifying-measures"></a>Modificando medidas
@@ -28,7 +28,7 @@ ms.locfileid: "66078896"
   
      É mais fácil alterar as propriedades de vários itens no cubo quando a janela Propriedades permanece aberta.  
   
-3.  Na janela Propriedades, clique na lista **FormatString** e digite **#,#** .  
+3.  Na janela Propriedades, clique na lista **FormatString** e digite **#,#**.  
   
 4.  Na barra de ferramentas da guia **Estrutura do Cubo** , clique no ícone **Mostrar Grade de Medidas** à esquerda.  
   
@@ -36,19 +36,19 @@ ms.locfileid: "66078896"
   
 5.  Selecione as medidas a seguir. Você pode selecionar várias medidas clicando em cada uma enquanto mantém pressionada a tecla CTRL.  
   
-    -   **Preço Unitário**  
+    -   **Preço unitário**  
   
-    -   **Valor Ampliado**  
+    -   **Valor estendido**  
   
-    -   **Valor de desconto**  
+    -   **Valor do desconto**  
   
-    -   **Custo Padrão do Produto**  
+    -   **Custo padrão do produto**  
   
-    -   **Custo Total do Produto**  
+    -   **Custo total do produto**  
   
-    -   **Valor das Vendas**  
+    -   **Valor das vendas**  
   
-    -   **Valor dos Impostos**  
+    -   **AMT de imposto**  
   
     -   **Freight**  
   
@@ -56,9 +56,9 @@ ms.locfileid: "66078896"
   
 7.  Na lista suspensa na parte superior da janela Propriedades (logo abaixo da barra de título), selecione a medida **Percentual de Desconto no Preço Unitário**e **Percentual** na lista **FormatString** .  
   
-8.  Na janela Propriedades, altere o **nome** propriedade para o **preço desconto unitário** medida a `Unit Price Discount Percentage`.  
+8.  No janela Propriedades, altere a propriedade **nome** da medida **percentual de desconto de preço unitário** para `Unit Price Discount Percentage`.  
   
-9. No **medidas** painel, clique em **Tax Amt** e altere o nome dessa medida para `Tax Amount`.  
+9. No painel **medidas** , clique em **imposto AMT** e altere o nome dessa medida para `Tax Amount`.  
   
 10. Na janela Propriedades, clique no ícone **Ocultar Automaticamente** para ocultar a janela Propriedades. Depois, clique em **Mostrar Árvore de Medidas** na barra de ferramentas da guia **Estrutura do Cubo** .  
   
@@ -67,8 +67,8 @@ ms.locfileid: "66078896"
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
  [Modificando a dimensão Cliente](lesson-3-2-modifying-the-customer-dimension.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Definir as dimensões do banco de dados](multidimensional-models/define-database-dimensions.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Definir dimensões de banco de dados](multidimensional-models/define-database-dimensions.md)   
  [Configurar propriedades de medida](multidimensional-models/configure-measure-properties.md)  
   
   

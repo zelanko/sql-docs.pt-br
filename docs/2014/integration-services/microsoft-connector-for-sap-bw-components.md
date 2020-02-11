@@ -1,5 +1,5 @@
 ---
-title: Microsoft Connector 1.1 for SAP BW componentes | Microsoft Docs
+title: Microsoft Connector 1,1 para componentes SAP BW | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0f1656121328c2c2f9ac81420207cbdd53a3f585
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62890646"
 ---
 # <a name="microsoft-connector-11-for-sap-bw-components"></a>Componentes do Microsoft Connector 1.1 for SAP BW
@@ -30,13 +30,13 @@ ms.locfileid: "62890646"
 >  A documentação do Microsoft Connector 1.1 for SAP BW supõe familiaridade com o ambiente do SAP Netweaver BW. Para obter mais informações sobre o SAP Netweaver BW ou para obter informações sobre como configurar objetos e processos do SAP Netweaver BW, consulte sua documentação do SAP.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [SAP BW Connection Manager](connection-manager/sap-bw-connection-manager.md)  
+ [Gerenciador de Conexões SAP BW](connection-manager/sap-bw-connection-manager.md)  
  Descreve o gerenciador de conexões SAP BW. O gerenciador de conexões conecta a origem SAP BW ou o destino SAP BW a um sistema SAP Netweaver BW versão 7.  
   
- [SAP BW Source](data-flow/sap-bw-source.md)  
+ [Origem SAP BW](data-flow/sap-bw-source.md)  
  Descreve a origem SAP BW que permite extrair dados de um sistema SAP Netweaver BW.  
   
- [SAP BW Destination](data-flow/sap-bw-destination.md)  
+ [Destino SAP BW](data-flow/sap-bw-destination.md)  
  Descreve o destino SAP BW que permite carregar dados em um sistema SAP Netweaver BW.  
   
   

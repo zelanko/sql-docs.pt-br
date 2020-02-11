@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 910bb7a425e62221dce932392e1aedfaa401a992
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66078977"
 ---
 # <a name="browsing-the-cube"></a>Navegando pelo cubo
@@ -30,7 +30,7 @@ ms.locfileid: "66078977"
   
 1.  Alterne para o **Designer de Dimensão** para a dimensão Produto no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Para fazer isso, clique duas vezes na dimensão **Produto** no nó **Dimensões** do Gerenciador de Soluções.  
   
-2.  Clique no **Browser** guia para exibir o **todos os** membro do `Product Key` hierarquia de atributo. Na lição três, você definirá uma hierarquia de usuário para a dimensão Produto que permitirá navegar pela dimensão.  
+2.  Clique na guia **navegador** para exibir o membro **todos** da hierarquia `Product Key` de atributo. Na lição três, você definirá uma hierarquia de usuário para a dimensão Produto que permitirá navegar pela dimensão.  
   
 3.  Alterne para o **Designer de Cubo** no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Para fazer isso, clique duas vezes no cubo **Tutorial do Analysis Services** no nó **Cubos** do Gerenciador de Soluções.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "66078977"
 ## <a name="next-lesson"></a>Próxima lição  
  [Lição 3: Modificando medidas, atributos e hierarquias](lesson-3-modifying-measures-attributes-and-hierarchies.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Editor de Consultas MDX &#40;Analysis Services - Dados Multidimensionais&#41;](mdx-query-editor-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Editor de consultas MDX &#40;Analysis Services de dados multidimensionais&#41;](mdx-query-editor-analysis-services-multidimensional-data.md)  
   
   

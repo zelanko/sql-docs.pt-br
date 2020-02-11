@@ -1,5 +1,5 @@
 ---
-title: Não permitido para tipos e membros em mscorlib. dll | Microsoft Docs
+title: Tipos e membros não permitidos em mscorlib. dll | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,17 +14,17 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 43f71d7dc73239b240b841e14a11f3f28f755b61
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62874361"
 ---
 # <a name="disallowed-types-and-members-in-mscorlibdll"></a>Membros e tipos não permitidos em mscorlib.dll
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] programação de integração (CLR) de linguagem comum não permite o uso de um tipo ou membro que tem um `HostProtectionAttribute` que especifica um `System.Security.Permissions.HostProtectionResource` enumeração com um valor de `ExternalProcessMgmt`, `ExternalThreading`, `MayLeakOnAbort`, `SecurityInfrastructure`, `SelfAffectingProcessMgmnt`, `SelfAffectingThreading`, **SharedState**, `Synchronization`, ou `UI`. A tabela a seguir lista os membros e tipos do assembly mscorlib.dll cujos valores de HPA (atributo de proteção de host) não são permitidos.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]a programação comum de integração de linguagem (CLR) não permite o uso de um tipo ou membro que `HostProtectionAttribute` tenha um que `System.Security.Permissions.HostProtectionResource` especifique uma enumeração com um `ExternalProcessMgmt`valor `ExternalThreading`de `MayLeakOnAbort`, `SecurityInfrastructure`, `SelfAffectingProcessMgmnt`, `SelfAffectingThreading`, ****,, `Synchronization`SharedState, `UI`ou. A tabela a seguir lista os membros e tipos do assembly mscorlib.dll cujos valores de HPA (atributo de proteção de host) não são permitidos.  
   
 > [!NOTE]  
->  Esta lista foi gerada dos assembly com suporte. Para obter mais informações, consulte [suporte para bibliotecas do .NET Framework](../clr-integration/database-objects/supported-net-framework-libraries.md).  
+>  Esta lista foi gerada dos assembly com suporte. Para obter mais informações, consulte [bibliotecas de .NET Framework com suporte](../clr-integration/database-objects/supported-net-framework-libraries.md).  
   
 |Tipo ou membro|Valor(es) de HPA|  
 |--------------------|--------------------|  
@@ -35,22 +35,22 @@ ms.locfileid: "62874361"
 |System.Collections.Queue.Synchronized()|Synchronization|  
 |System.Collections.SortedList.Synchronized()|Synchronization|  
 |System.Collections.Stack.Synchronized()|Synchronization|  
-|System.Console.Beep()|UI|  
-|System.Console.get_Error()|UI|  
-|System.Console.get_In()|UI|  
-|System.Console.get_KeyAvailable()|UI|  
-|System.Console.get_Out()|UI|  
-|System.Console.OpenStandardError()|UI|  
-|System.Console.OpenStandardInput()|UI|  
-|System.Console.OpenStandardOutput()|UI|  
-|System.Console.Read()|UI|  
-|System.Console.ReadKey()|UI|  
-|System.Console.ReadLine()|UI|  
-|System.Console.SetError()|UI|  
-|System.Console.SetIn()|UI|  
-|System.Console.SetOut()|UI|  
-|System.Console.Write()|UI|  
-|System.Console.WriteLine()|UI|  
+|System.Console.Beep()|Interface do usuário|  
+|System.Console.get_Error()|Interface do usuário|  
+|System.Console.get_In()|Interface do usuário|  
+|System.Console.get_KeyAvailable()|Interface do usuário|  
+|System.Console.get_Out()|Interface do usuário|  
+|System.Console.OpenStandardError()|Interface do usuário|  
+|System.Console.OpenStandardInput()|Interface do usuário|  
+|System.Console.OpenStandardOutput()|Interface do usuário|  
+|System.Console.Read()|Interface do usuário|  
+|System.Console.ReadKey()|Interface do usuário|  
+|System.Console.ReadLine()|Interface do usuário|  
+|System.Console.SetError()|Interface do usuário|  
+|System.Console.SetIn()|Interface do usuário|  
+|System.Console.SetOut()|Interface do usuário|  
+|System.Console.Write()|Interface do usuário|  
+|System.Console.WriteLine()|Interface do usuário|  
 |System.Diagnostics.LogMessageEventHandler|ExternalThreading, Synchronization|  
 |System.IO.FileStream.BeginRead()|ExternalThreading|  
 |System.IO.FileStream.BeginWrite()|ExternalThreading|  
@@ -98,11 +98,11 @@ ms.locfileid: "62874361"
 |System.Threading.Timer|ExternalThreading, Synchronization|  
 |System.Threading.TimerBase|ExternalThreading, Synchronization|  
   
-## <a name="see-also"></a>Consulte também  
- [Atributos de proteção de host e programação da integração CLR](host-protection-attributes-and-clr-integration-programming.md)   
- [Tipos desaprovados e membros no VisualBasic](disallowed-types-and-members-in-microsoft-visualbasic-dll.md)   
- [Tipos desaprovados e membros em System. dll](disallowed-types-and-members-in-system-dll.md)   
- [Tipos desaprovados e membros na DLL](disallowed-types-and-members-in-system-data-dll.md)   
- [Tipos e membros não permitidos no System.Core.dll](disallowed-types-and-members-in-system-core-dll.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Atributos de proteção do host e programação de integração CLR](host-protection-attributes-and-clr-integration-programming.md)   
+ [Tipos e membros não permitidos em Microsoft. VisualBasic. dll](disallowed-types-and-members-in-microsoft-visualbasic-dll.md)   
+ [Tipos e membros não permitidos em System. dll](disallowed-types-and-members-in-system-dll.md)   
+ [Tipos e membros não permitidos em System. Data. dll](disallowed-types-and-members-in-system-data-dll.md)   
+ [Tipos e membros desaprovados no System.Core.dll](disallowed-types-and-members-in-system-core-dll.md)  
   
   

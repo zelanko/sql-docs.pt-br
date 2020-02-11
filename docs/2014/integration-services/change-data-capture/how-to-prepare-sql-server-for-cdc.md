@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7d0b936b0d48696491e71aa6ad4ea573b898f33c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62836035"
 ---
 # <a name="how-to-prepare-sql-server-for-cdc"></a>Como Preparar o SQL Server para CDC
@@ -22,7 +22,7 @@ ms.locfileid: "62836035"
   
  Veja a seguir uma descrição sobre como preparar um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para Change Data Capture da Oracle usando o Console de Configuração do Serviço CDC. Este processo cria o banco de dados MSXDBCDC e define as tabelas necessárias, os procedimentos armazenados e outros artefatos necessários.  
   
- A preparação do SQL Server para Oracle CDC é feito pelo Administrador de Serviço Oracle CDC. Para obter mais informações sobre a função de administrador do serviço CDC, consulte [funções de usuário para o serviço Change Data Capture para Oracle da attunity](user-roles.md).  
+ A preparação do SQL Server para Oracle CDC é feito pelo Administrador de Serviço Oracle CDC. Para obter mais informações sobre a função de administrador de serviço CDC, consulte [funções de usuário para o serviço de captura de dados de alterações para Oracle por Attunity](user-roles.md).  
   
 ### <a name="to-enable-sql-server-for-cdc"></a>Para habilitar o SQL Server para CDC  
   
@@ -38,7 +38,7 @@ ms.locfileid: "62836035"
   
  **Observação**: clique em **Exibir Script** para exibir uma versão somente leitura do script de instalação. Um administrador do sistema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode copiar este script no Console de Gerenciamento do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para editá-lo e executá-lo, se for necessário.  
   
-## <a name="see-also"></a>Consulte também  
- [Preparar SQL Server para CDC](prepare-sql-server-for-cdc.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Preparar o SQL Server para CDC](prepare-sql-server-for-cdc.md)  
   
   

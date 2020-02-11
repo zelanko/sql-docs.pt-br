@@ -1,5 +1,5 @@
 ---
-title: Altere o valor de tempo limite para consultas de mineração de dados | Microsoft Docs
+title: Alterar o valor de tempo limite para consultas de mineração de dados | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 640d07115e2a071bb5d57e87955c11670f4c38b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085885"
 ---
 # <a name="change-the-time-out-value-for-data-mining-queries"></a>Alterar o valor do tempo limite de consultas de mineração de dados
@@ -34,8 +34,8 @@ ms.locfileid: "66085885"
   
 3.  Clique na caixa de texto **Tempo Limite da Consulta** e digite um valor para a quantidade de segundos.  
   
-## <a name="see-also"></a>Consulte também  
- [Tarefas e instruções de consulta de Data Mining](data-mining-query-tasks-and-how-tos.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Tarefas e instruções de consulta de mineração de dados](data-mining-query-tasks-and-how-tos.md)   
  [Consultas de mineração de dados](data-mining-queries.md)  
   
   

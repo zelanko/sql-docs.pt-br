@@ -1,5 +1,5 @@
 ---
-title: Criar painel (exibição de previsão do modelo de mineração) | Microsoft Docs
+title: Painel de design (exibição de previsão do modelo de mineração) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 743eefc1bd13dec480ec8773a8602773ded7ca6b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081847"
 ---
 # <a name="design-pane-mining-model-prediction-view"></a>Painel Design (Exibição da Previsão do Modelo de Mineração)
@@ -29,10 +29,10 @@ ms.locfileid: "66081847"
 > [!NOTE]  
 >  Se você fizer alguma alteração manual na consulta, suas alterações serão perdidas ao voltar para a exibição Design. Se desejar salvar a consulta DMX, copie-a na área de transferência do Windows e cole-a em um arquivo de texto.  
   
- **Para obter mais informações:** [Consultas de mineração de dados](data-mining/data-mining-queries.md)  
+ **Para obter mais informações:** [consultas de mineração de dados](data-mining/data-mining-queries.md)  
   
 ## <a name="options"></a>Opções  
- **Alterne para a exibição de resultado de consulta**  
+ **Alternar para a exibição de resultado da consulta**  
  Clique para mudar entre os painéis **Design**, **Consulta**e **Resultado** . A consulta é executada ao alternar para o painel **Resultado** .  
   
  **Salvar o resultado da consulta**  
@@ -47,31 +47,31 @@ ms.locfileid: "66081847"
  **Modelo de mineração**  
  Exibe o modelo de mineração selecionado no qual você deseja basear as previsões.  
   
- **Selecionar Modelo**  
+ **Selecionar modelo**  
  Abre a caixa de diálogo **Selecionar Modelo de Mineração** .  
   
- **Selecione a tabela de entrada**  
+ **Selecionar Tabela(s) de Entrada**  
  Exibe as tabelas de entrada selecionadas que contêm dados conhecidos nos quais as previsões serão fundamentadas.  
   
  **Excluir tabela**  
  Exclui a tabela selecionada. Esse botão será desabilitado se uma tabela não tiver sido selecionada ou não existir.  
   
- **Selecionar tabela de casos**  
+ **Selecionar Tabela de Casos**  
  Abre a caixa de diálogo **Selecionar Tabela** . Esse botão só será exibido se uma tabela da caixa não tiver sido selecionada.  
   
- **Selecionar tabela aninhada**  
+ **Selecionar Tabela Aninhada**  
  Abre a caixa de diálogo **Selecionar Tabela** . Esse botão só será exibido se uma tabela do casos tiver sido selecionada. Se a estrutura de mineração associada não contiver uma tabela aninhada, esse botão será desabilitado.  
   
- **Modificar junção**  
+ **Modificar Junção**  
  Abre a caixa de diálogo **Especificar Junção Aninhada** . Esse botão só será ativado se a tabela aninhada for selecionada.  
   
- **Entrada de consulta singleton**  
+ **Entrada de Consultas Singleton**  
  Habilitado quando você seleciona o botão **Consulta Singleton** . Contém as seguintes colunas:  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
-|**Coluna do modelo de mineração**|Lista as colunas de modelo de mineração contidas no modelo de mineração que for selecionado na tabela **Modelo de Mineração** .|  
-|**Value**|Selecione um valor da lista que contém cada estado possível da coluna de modelos de mineração selecionada.<br /><br /> Se a coluna for uma coluna de tabela aninhada, clicar na célula de valor abrirá a caixa de diálogo **Entrada de Tabela Aninhada** .|  
+|**Coluna do Modelo de Mineração**|Lista as colunas de modelo de mineração contidas no modelo de mineração que for selecionado na tabela **Modelo de Mineração** .|  
+|**Valor**|Selecione um valor da lista que contém cada estado possível da coluna de modelos de mineração selecionada.<br /><br /> Se a coluna for uma coluna de tabela aninhada, clicar na célula de valor abrirá a caixa de diálogo **Entrada de Tabela Aninhada** .|  
   
  **Origem**  
  Selecione a origem que contém o campo que você utilizará para a coluna. Você pode usar o modelo de mineração selecionado na tabela **Modelo de Mineração** , a tabela ou as tabelas selecionadas na tabela **Selecionar Tabela(s) de Entrada** , uma função de previsão ou uma expressão personalizada.  
@@ -84,15 +84,15 @@ ms.locfileid: "66081847"
  **Agrupar**  
  Use com a coluna **E/ou** para agrupar expressões. Por exemplo, `(expr1 Or expr2) And expr3`.  
   
- **E/Ou**  
+ **E/ou**  
  Use para criar uma consulta lógica. Por exemplo, `(expr1 Or expr2) And expr3`.  
   
- **Critérios/Argumento**  
+ **Critério/argumento**  
  Especifique uma condição ou expressão de usuário que se aplica à coluna. As colunas podem ser arrastadas das tabelas que contêm o modelo de mineração e as tabelas de entrada até a célula.  
   
-## <a name="see-also"></a>Consulte também  
- [Extensões de mineração de dados &#40;DMX&#41; referência de instrução](/sql/dmx/data-mining-extensions-dmx-statements)   
+## <a name="see-also"></a>Consulte Também  
+ [Referência de instrução&#41; &#40;DMX de extensões de mineração de dados](/sql/dmx/data-mining-extensions-dmx-statements)   
  [Interfaces de consulta de mineração de dados](data-mining/data-mining-query-tools.md)   
- [Construtor de consultas de previsão &#40;mineração de dados&#41;](prediction-query-builder-data-mining.md)  
+ [Construtor de Consultas de &#40;de mineração de dados de previsão&#41;](prediction-query-builder-data-mining.md)  
   
   

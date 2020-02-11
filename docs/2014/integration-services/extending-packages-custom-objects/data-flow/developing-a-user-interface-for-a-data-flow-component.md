@@ -23,10 +23,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 273e0343fc57af419a349725482047df08619cdd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62896318"
 ---
 # <a name="developing-a-user-interface-for-a-data-flow-component"></a>Desenvolvendo uma interface do usuário para um componente de fluxo de dados
@@ -35,7 +35,7 @@ ms.locfileid: "62896318"
  Se você não fornecer uma interface de usuário personalizada para seu componente, os usuários ainda poderão configurar o componente e suas propriedades personalizadas utilizando o Editor Avançado. Para certificar-se de que o Editor Avançado permita aos usuários editar valores de propriedade personalizados adequadamente, utilize as propriedades <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.TypeConverter%2A> e <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.UITypeEditor%2A> do <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100> quando apropriado. Para obter mais informações, consulte "Criando propriedades personalizadas" em [Métodos de tempo de design de um componente de fluxo de dados](design-time-methods-of-a-data-flow-component.md).  
   
 ## <a name="setting-the-uitypename-property"></a>Definindo a propriedade UITypeName  
- Para fornecer uma interface de usuário personalizada, o desenvolvedor deve definir a propriedade <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.UITypeName%2A> do <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute> como o nome de uma classe que implementa a interface <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI>. Quando essa propriedade é definida pelo componente, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] carrega e chama a interface do usuário personalizada quando o componente é editado no Designer [!INCLUDE[ssIS](../../../includes/ssis-md.md)].  
+ Para fornecer uma interface de usuário personalizada, o desenvolvedor deve definir a propriedade <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.UITypeName%2A> do <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute> como o nome de uma classe que implementa a interface <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI>. Quando essa propriedade é definida pelo componente, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] o carrega e chama a interface do usuário personalizada quando o componente é editado no [!INCLUDE[ssIS](../../../includes/ssis-md.md)] designer.  
   
  A propriedade <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.UITypeName%2A> é uma cadeia de caracteres delimitada por vírgulas que identifica o nome totalmente qualificado do tipo. A lista a seguir mostra, em ordem, os elementos que identificam o tipo:  
   
@@ -89,7 +89,7 @@ End Class
 ### <a name="using-the-services-of-the-ssis-designer"></a>Usando os serviços do Designer SSIS  
  O parâmetro `IServiceProvider` do método <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Initialize%2A> fornece acesso aos seguintes serviços do Designer [!INCLUDE[ssIS](../../../includes/ssis-md.md)]:  
   
-|Serviço|Descrição|  
+|Serviço|DESCRIÇÃO|  
 |-------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Design.IDtsClipboardService>|Usado para determinar se o componente foi gerado como parte de uma operação copiar/colar ou recortar/colar.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionService>|Usado acessar conexões existentes ou criar novas conexões no pacote.|  
@@ -281,9 +281,9 @@ Namespace Microsoft.Samples.SqlServer.Dts
 End Namespace  
 ```  
   
-![Ícone do Integration Services (pequeno)](../../media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
+![Ícone de Integration Services (pequeno)](../../media/dts-16.gif "Ícone do Integration Services (pequeno)")  **Mantenha-se atualizado com Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   
-## <a name="see-also"></a>Consulte também  
- [Criar um componente de fluxo de dados personalizado](creating-a-custom-data-flow-component.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Criando um componente de fluxo de dados personalizado](creating-a-custom-data-flow-component.md)  
   
   

@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 54ec4cc92383d0b8e423aabd19c0aeee9226d71f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62896036"
 ---
 # <a name="developing-a-user-interface-for-a-custom-connection-manager"></a>Desenvolvendo uma interface do usuário para um gerenciador de conexões personalizado
@@ -37,7 +37,7 @@ ms.locfileid: "62896036"
 > [!NOTE]  
 >  Talvez não seja necessário gravar nenhum código para o método <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI.Delete%2A>, se nenhuma limpeza for exigida quando o usuário excluir uma instância do gerenciador de conexões.  
   
-### <a name="initializing-the-user-interface"></a>Inicializando a interface do usuário   
+### <a name="initializing-the-user-interface"></a>Inicializando a interface do usuário  
  No método <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI.Initialize%2A>, o designer fornece uma referência para o gerenciador de conexões que está sendo configurado, dessa forma a classe de interface do usuário pode modificar as propriedades do gerenciador de conexões. Conforme mostrado no código a seguir, seu código precisa armazenar em cache a referência ao gerenciador de conexões para uso futuro.  
   
 ```vb  
@@ -159,7 +159,7 @@ public bool Edit(System.Windows.Forms.IWin32Window parentWindow, Microsoft.SqlSe
 ## <a name="coding-the-user-interface-form"></a>Codificando o formulário de interface do usuário  
  Depois de criar a classe de interface do usuário que implementa os métodos da interface <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI>, você deverá criar um formulário do Windows onde o usuário possa configurar as propriedades do gerenciador de conexões.  
   
-### <a name="initializing-the-user-interface-form"></a>Inicializando o formulário de interface do usuário   
+### <a name="initializing-the-user-interface-form"></a>Inicializando o formulário de interface do usuário  
  Quando você exibir seu formulário personalizado para editar, poderá transmitir uma referência ao gerenciador de conexões que está sendo editado. Você pode transmitir essa referência utilizando um construtor personalizado para a classe de formulário ou criando seu próprio método `Initialize`, conforme mostrado aqui.  
   
 ```vb  
@@ -284,9 +284,9 @@ private void ConfigureControlsFromConnectionManager()
  }  
 ```  
   
-![Ícone do Integration Services (pequeno)](../../media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
+![Ícone de Integration Services (pequeno)](../../media/dts-16.gif "Ícone do Integration Services (pequeno)")  **Mantenha-se atualizado com Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar um gerenciador de conexões personalizado](creating-a-custom-connection-manager.md)   
  [Codificar um gerenciador de conexões personalizado](coding-a-custom-connection-manager.md)  
   

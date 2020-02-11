@@ -1,5 +1,5 @@
 ---
-title: Agrupar membros de atributo (diferenciação) | Microsoft Docs
+title: Agrupar membros de atributo (discretização) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -23,18 +23,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3cc874831f9f96c2540d58f2ffe3b89f8c4dc7aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077272"
 ---
 # <a name="group-attribute-members-discretization"></a>Agrupar membros de atributo (diferenciação)
-  Um grupo de membros é uma coleção gerada pelo sistema de membros da dimensão consecutivos. No [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], é possível agrupar os membros de um atributo em diversos grupos de membros por meio de um processo chamado diferenciação. Um nível em uma hierarquia contém grupos de membro ou membros, mas não ambos. Quando os usuários da empresa procuram um nível que contém grupos de membros, eles veem nomes e valores de célula dos grupos de membros. Os membros gerados pelo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para oferecer suporte aos grupos de membros são chamados membros do agrupamento e são similares aos membros comuns.  
+  Um grupo de membros é uma coleção gerada pelo sistema de membros da dimensão consecutivos. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] No [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], os membros de um atributo podem ser agrupados em vários grupos de membros por meio de um processo chamado discretização. Um nível em uma hierarquia contém grupos de membro ou membros, mas não ambos. Quando os usuários da empresa procuram um nível que contém grupos de membros, eles veem nomes e valores de célula dos grupos de membros. Os membros gerados pelo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para oferecer suporte aos grupos de membros são chamados membros do agrupamento e são similares aos membros comuns.  
   
  A propriedade `DiscretizationMethod` de um atributo controla como os membros são agrupados.  
   
-|Configuração `DiscretizationMethod`|Descrição|  
+|`DiscretizationMethod`Configuração|DESCRIÇÃO|  
 |--------------------------------------|-----------------|  
 |`None`|Exibe os membros.|  
 |`Automatic`|Seleciona o método que melhor representa os dados: o método `EqualAreas` ou o método `Clusters`.|  
@@ -70,7 +70,7 @@ ms.locfileid: "66077272"
   
  O parâmetro `<Bucket name>` é uma expressão de cadeia de caracteres que pode incorporar um conjunto de variáveis para representar informações de membros ou grupos de membros como parte do nome do grupo de membros:  
   
-|Variável|Descrição|  
+|Variável|DESCRIÇÃO|  
 |--------------|-----------------|  
 |% {Primeiro membro do bloco}|O nome do primeiro membro que será incluído no grupo de membros atual.|  
 |% {Último membro do bloco}|O nome do último membro que será incluído no grupo de membros atual.|  
@@ -109,7 +109,7 @@ ms.locfileid: "66077272"
   
 -   Se a tabela de dimensões de uma dimensão que contém grupos de membros for atualizada e, na sequência, a dimensão for totalmente processada, será gerado um novo conjunto de grupos de membros. Os nomes e os filhos dos novos grupos de membros podem ser diferentes dos anteriores.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Atributos e hierarquias de atributos](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)  
   
   

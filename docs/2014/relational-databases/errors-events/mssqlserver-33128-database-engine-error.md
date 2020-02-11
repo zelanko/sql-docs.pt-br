@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a995a68849ed55dbf136191a061ac6f855703a66
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62914508"
 ---
-# <a name="mssqlserver33128"></a>MSSQLSERVER_33128
+# <a name="mssqlserver_33128"></a>MSSQLSERVER_33128
     
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|33128|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|SEC_DEPRECATED_ALGO|  
 |Texto da mensagem|A criptografia falhou. A chave usa um algoritmo substituído '%. * ls' que já não tão mais suporte.|  
@@ -42,7 +42,7 @@ ms.locfileid: "62914508"
 > [!NOTE]  
 >  O buffer de anéis é um componente interno que não é totalmente documentado e não deve ser usado por clientes. Mensagens do buffer de anéis são úteis ao entrar em contato com o Suporte ao Cliente do [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Para exibir o buffer de anéis, consulte a exibição de gerenciamento dinâmico sys.dm_os_ring_buffers.  
   
-|Estado|Descrição|  
+|Estado|DESCRIÇÃO|  
 |-----------|-----------------|  
 |1|Uma chave RC4 é usada na função encryptbykey() interna. Função interna retorna NULL. Esta mensagem aparece somente no buffer de anéis.|  
 |2|Uma chave RC4 é usada pela função decryptbykey() interna. Esta mensagem aparece somente no buffer de anéis.|  
