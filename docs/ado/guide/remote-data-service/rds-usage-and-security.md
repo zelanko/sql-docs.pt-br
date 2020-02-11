@@ -1,5 +1,5 @@
 ---
-title: Segurança e uso RDS | Microsoft Docs
+title: Uso e segurança de RDS | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,31 +14,31 @@ ms.assetid: b8ac3739-05d3-4818-8201-a763795fb8b4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 26d3a5d785db3ae138e26225ea5b37b182f6b076
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67922401"
 ---
 # <a name="rds-usage-and-security"></a>Segurança e uso RDS
-Use as informações nesta seção para configurar seu servidor e usar o RDS rapidamente. Esta seção inclui etapas de configuração específicos que você talvez precise executar ao implementar RDS, descreve algumas das relações de chave entre RDS e outras tecnologias e ajuda a identificar soluções para problemas que você pode encontrar ao configurar um Solução RDS.  
+Use as informações desta seção para configurar o servidor e usar o RDS rapidamente. Esta seção inclui etapas de configuração específicas que talvez você precise executar ao implementar o RDS, descreve algumas das principais relações entre o RDS e outras tecnologias e ajuda a identificar soluções para problemas que você pode encontrar ao configurar um Solução RDS.  
   
 > [!IMPORTANT]
->  Começando com o Windows 8 e Windows Server 2012, os componentes de servidor RDS não estão mais incluídos no sistema operacional Windows (consulte o Windows 8 e [manual de compatibilidade do Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Componentes de cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Devem ser migrados para aplicativos que usam o RDS [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir do Windows 8 e do Windows Server 2012, os componentes do servidor RDS não são mais incluídos no sistema operacional Windows (consulte Windows 8 e [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Os componentes do cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Os aplicativos que usam o RDS devem migrar para o [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Esta seção contém os tópicos a seguir.  
+ Esta seção contém os seguintes tópicos:  
   
--   [Configurando o RDS](../../../ado/guide/remote-data-service/configuring-rds.md)  
+-   [Configurar o RDS](../../../ado/guide/remote-data-service/configuring-rds.md)  
   
--   [Usando tecnologias relacionadas com RDS](../../../ado/guide/remote-data-service/using-related-technologies-with-rds.md)  
+-   [Usar tecnologias relacionadas com RDS](../../../ado/guide/remote-data-service/using-related-technologies-with-rds.md)  
   
 -   [Personalização do DataFactory](../../../ado/guide/remote-data-service/datafactory-customization.md)  
   
 -   [Solução de problemas do RDS](../../../ado/guide/remote-data-service/troubleshooting-rds.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Conceitos básicos do RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)   
- [Cenário RDS](../../../ado/guide/remote-data-service/rds-scenario.md)   
+ [Cenário de RDS](../../../ado/guide/remote-data-service/rds-scenario.md)   
  [Tutorial RDS](../../../ado/guide/remote-data-service/rds-tutorial.md)
 
 

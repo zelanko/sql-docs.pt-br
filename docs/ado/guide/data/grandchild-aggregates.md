@@ -1,5 +1,5 @@
 ---
-title: Agregações neto | Microsoft Docs
+title: Agregações do neto | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,14 +14,14 @@ ms.assetid: 4162d35f-2ce1-4218-80a5-b6933348837e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ac0b06479b3ad4feedaa63bdac227d028b7a9e09
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925235"
 ---
 # <a name="grandchild-aggregates"></a>Agregações neto
-A coluna de capítulo criada em uma cláusula de um comando de forma pode receber um *nome do alias do capítulo* (normalmente com a palavra-chave). Você pode identificar qualquer coluna em qualquer capítulo o moldado **Recordset** com um nome totalmente qualificado que identifica o filho que contém a coluna. Por exemplo, se o capítulo pai, Cap1, contém um capítulo de filho, chap2, que tem uma coluna de quantidade amt, e o nome qualificado seria chap1.chap2.amt. O nome qualificado, em seguida, pode ser usado como um argumento para uma das funções de agregação (SUM, AVG, MAX, MIN, COUNT, STDEV ou qualquer).  
+A coluna de capítulo criada em uma cláusula de um comando de forma pode receber um *nome de alias de capítulo* (normalmente com a palavra-chave as). Você pode identificar qualquer coluna em qualquer capítulo do conjunto de **registros** moldado com um nome totalmente qualificado que identifica o filho que contém a coluna. Por exemplo, se o capítulo pai, chap1, contiver um capítulo filho, CHAP2, que tem uma coluna amount, AMT, o nome qualificado será chap1. CHAP2. AMT. O nome qualificado pode ser usado como um argumento para uma das funções de agregação (SUM, AVG, MAX, MIN, COUNT, Desv ou ANY).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplo de data shaping](../../../ado/guide/data/data-shaping-example.md)

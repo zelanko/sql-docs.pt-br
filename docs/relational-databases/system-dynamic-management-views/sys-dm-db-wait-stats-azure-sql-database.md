@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_wait_stats (banco de dados SQL) | Microsoft Docs
+title: sys. dm_db_wait_stats (banco de dados SQL do Azure) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.service: sql-database
@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 0c32af194a1e74e0fd11e65a75109165e81cc4c1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68090870"
 ---
 # <a name="sysdm_db_wait_stats-azure-sql-database"></a>sys.dm_db_wait_stats (Banco de Dados SQL do Azure)
@@ -33,9 +33,9 @@ ms.locfileid: "68090870"
   
  Tipos específicos de horas de espera durante execução de consulta podem indicar gargalos ou pontos de pausa dentro da consulta. Da mesma forma, os tempos de espera altos ou as contagens de espera em todo o servidor podem indicar gargalos nas interações de consulta de interação na instância do servidor. Por exemplo, as esperas de bloqueio indicam a contenção de dados por consultas; as esperas de trava de ES de página indicam tempos de resposta de ES lentos; as esperas de atualização de trava de página indicam layout de arquivo incorreto.  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
-|wait_type|**nvarchar(60)**|Nome do tipo de espera. Para obter mais informações, consulte [tipos de espera](#WaitTypes), mais adiante neste tópico.|  
+|wait_type|**nvarchar (60)**|Nome do tipo de espera. Para obter mais informações, consulte [Tipos de espera](#WaitTypes) mais adiante neste tópico.|  
 |waiting_tasks_count|**bigint**|Número de esperas nesse tipo de espera. O contador é incrementado no início de cada espera.|  
 |wait_time_ms|**bigint**|Tempo de espera total para esse tipo de espera em milissegundos. Essa hora é inclusiva de signal_wait_time_ms.|  
 |max_wait_time_ms|**bigint**|Tempo de espera máximo neste tipo de espera.|  
@@ -62,7 +62,7 @@ ms.locfileid: "68090870"
 ## <a name="permissions"></a>Permissões  
  Requer a permissão VIEW DATABASE STATE no servidor.  
   
-##  <a name="WaitTypes"></a> Tipos de esperas  
+##  <a name="WaitTypes"></a>Tipos de esperas  
  Esperas de recurso  
  As esperas de recurso ocorrem quando um trabalhador solicita acesso a um recurso que não está disponível porque esse recurso está sendo usado por outro trabalhador ou ainda não foi disponibilizado. Exemplos de esperas de recurso são bloqueios, travas, rede e esperas de E/S de disco. Bloqueio e trava são esperas em objetos de sincronização.  
   
@@ -74,11 +74,11 @@ ms.locfileid: "68090870"
   
  Embora o thread já não esteja mais aguardando, ele não precisa iniciar a execução imediatamente. Isso ocorre porque esse thread é colocado primeiro na fila de trabalhadores executáveis e deve aguardar a execução de um quantum no agendador.  
   
- Na [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são os contadores de tempo de espera **bigint** valores e, portanto, não são tão suscetíveis à substituição de contador quanto os contadores equivalentes em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Nos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contadores de tempo de espera são valores **bigint** e, portanto, não são tão propensos à substituição de contador como os contadores [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]equivalentes em versões anteriores do.  
   
  A tabela a seguir lista os tipos de espera encontrados por tarefas.  
   
-|Tipo de espera|Descrição|  
+|Tipo de espera|DESCRIÇÃO|  
 |---------------|-----------------|  
 |ABR|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |ASSEMBLY_LOAD|Ocorre durante o acesso exclusivo ao carregamento do assembly.|  
@@ -90,7 +90,7 @@ ms.locfileid: "68090870"
 |AUDIT_ON_DEMAND_TARGET_LOCK|Ocorre quando há uma espera em um bloqueio que é usado para garantir a inicialização única dos destinos do Evento Estendido relacionados à auditoria.|  
 |AUDIT_XE_SESSION_MGR|Ocorre quando há uma espera em um bloqueio que é usado para sincronizar o início e a interrupção de sessões de Eventos Estendidos relacionadas à auditoria.|  
 |BACKUP|Ocorre quando uma tarefa é bloqueada como parte do processamento do backup.|  
-|BACKUP_OPERATOR|Ocorre quando uma tarefa está aguardando uma montagem de fita. Para exibir o status da fita, consulte [DM io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md). Se uma operação de montagem não estiver pendente, esse tipo de espera poderá indicar um problema de hardware na unidade de fita.|  
+|BACKUP_OPERATOR|Ocorre quando uma tarefa está aguardando uma montagem de fita. Para exibir o status da fita, consulte [sys.dm_io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md). Se uma operação de montagem não estiver pendente, esse tipo de espera poderá indicar um problema de hardware na unidade de fita.|  
 |BACKUPBUFFER|Ocorre quando uma tarefa de backup estiver aguardando dados ou um buffer para armazenar dados nele. Esse tipo não é comum, exceto quando uma tarefa estiver aguardando uma montagem de fita.|  
 |BACKUPIO|Ocorre quando uma tarefa de backup estiver aguardando dados ou um buffer para armazenar dados nele. Esse tipo não é comum, exceto quando uma tarefa estiver aguardando uma montagem de fita.|  
 |BACKUPTHREAD|Ocorre quando uma tarefa estiver esperando a conclusão da tarefa de backup. Os tempos de espera podem ser longos, de alguns minutos até várias horas. Se a tarefa sendo aguardada estiver em um processo de E/S, esse tipo não indicará um problema.|  
@@ -122,7 +122,7 @@ ms.locfileid: "68090870"
 |CLR_RWLOCK_WRITER|Ocorre quando uma tarefa executa o CLR e aguarda um bloqueio de gravador.|  
 |CLR_SEMAPHORE|Ocorre quando uma tarefa executa o CLR e aguarda um semáforo.|  
 |CLR_TASK_START|Ocorre enquanto aguarda a inicialização de uma tarefa de CLR ser concluída.|  
-|CLRHOST_STATE_ACCESS|Ocorre quando há uma espera para adquirir acesso exclusivo às estruturas de dados de hospedagem de CLR. Esse tipo de espera ocorre ao configurar ou subdividir o tempo de execução do CLR.|  
+|CLRHOST_STATE_ACCESS|Ocorre quando há uma espera para adquirir acesso exclusivo às estruturas de dados de hospedagem de CLR. Esse tipo de espera ocorre ao configurar ou subdividir o runtime do CLR.|  
 |CMEMTHREAD|Ocorre quando uma tarefa está aguardando um objeto de memória protegido por thread. O tempo de espera pode aumentar quando há contenção provocada por várias tarefas tentando alocar memória do mesmo objeto de memória.|  
 |CXPACKET|Ocorre ao tentar sincronizar o iterador de troca do processador de consulta. A redução do grau de paralelismo poderá ser considerada se a contenção nesse tipo de espera se tornar um problema.|  
 |CXROWSET_SYNC|Ocorre durante um exame de intervalo paralelo.|  
@@ -192,27 +192,27 @@ ms.locfileid: "68090870"
 |LATCH_SH|Ocorre ao esperar uma trava de SH (compartilhamento). Isso não inclui travas de buffer ou de marcação de transação. Uma listagem de esperas de LATCH_* está disponível em sys.dm_os_latch_stats. Observe que sys.dm_os_latch_stats agrupa LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX e LATCH_DT.|  
 |LATCH_UP|Ocorre ao esperar uma trava de UP (atualização). Isso não inclui travas de buffer ou de marcação de transação. Uma listagem de esperas de LATCH_* está disponível em sys.dm_os_latch_stats. Observe que sys.dm_os_latch_stats agrupa LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX e LATCH_DT.|  
 |LAZYWRITER_SLEEP|Ocorre quando as tarefas lazywriter são suspensas. É uma medição do tempo gasto por tarefas em segundo plano em espera. Não considere esse estado quando você estiver procurando pausas de usuário.|  
-|LCK_M_BU|Ocorre quando uma tarefa está esperando para adquirir um bloqueio Atualização em Massa (BU). Para uma matriz de compatibilidade de bloqueio, consulte [DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_IS|Ocorre quando uma tarefa está esperando para adquirir um bloqueio Tentativa Compartilhada (IS). Para uma matriz de compatibilidade de bloqueio, consulte [DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_IU|Ocorre quando uma tarefa está esperando para adquirir um bloqueio Atualização da Tentativa (IU). Para uma matriz de compatibilidade de bloqueio, consulte [DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_IX|Ocorre quando uma tarefa está esperando para adquirir um bloqueio Exclusivo da Tentativa (IX). Para uma matriz de compatibilidade de bloqueio, consulte [DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RIn_NL|Ocorre quando uma tarefa está esperando adquirir um bloqueio NULL no valor de chave atual e um bloqueio Inserção de Intervalo entre a chave atual e a anterior. Um bloqueio NULL na chave é um bloqueio de liberação instantâneo. Para uma matriz de compatibilidade de bloqueio, consulte [DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RIn_S|Ocorre quando uma tarefa está esperando adquirir um bloqueio compartilhado no valor de chave atual e um bloqueio Inserção de Intervalo entre a chave atual e a anterior. Para uma matriz de compatibilidade de bloqueio, consulte [DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RIn_U|Uma tarefa que está esperando para adquirir um bloqueio Atualização no valor de chave atual e um bloqueio Inserção de Intervalo entre a chave atual e a anterior. Para uma matriz de compatibilidade de bloqueio, consulte [DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RIn_X|Ocorre quando uma tarefa está esperando adquirir um bloqueio Exclusivo no valor de chave atual e um bloqueio Inserção de Intervalo entre a chave atual e a anterior. Para uma matriz de compatibilidade de bloqueio, consulte [DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RS_S|Ocorre quando uma tarefa está esperando adquirir um bloqueio Compartilhado no valor de chave atual e um bloqueio Intervalo Compartilhado entre a chave atual e a anterior. Para uma matriz de compatibilidade de bloqueio, consulte [DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RS_U|Ocorre quando uma tarefa está esperando adquirir um bloqueio Atualização no valor de chave atual e um bloqueio Atualização de Intervalo entre a chave atual e a anterior. Para uma matriz de compatibilidade de bloqueio, consulte [DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RX_S|Ocorre quando uma tarefa está esperando adquirir um bloqueio Compartilhado no valor de chave atual e um bloqueio Intervalo Exclusivo entre a chave atual e a anterior. Para uma matriz de compatibilidade de bloqueio, consulte [DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RX_U|Ocorre quando uma tarefa está esperando adquirir um bloqueio Atualização no valor de chave atual e um bloqueio Intervalo Exclusivo entre a chave atual e a anterior. Para uma matriz de compatibilidade de bloqueio, consulte [DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RX_X|Ocorre quando uma tarefa está esperando adquirir um bloqueio Exclusivo no valor de chave atual e um bloqueio Intervalo Exclusivo entre a chave atual e a anterior. Para uma matriz de compatibilidade de bloqueio, consulte [DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_S|Ocorre quando uma tarefa está esperando para adquirir um bloqueio Compartilhado. Para uma matriz de compatibilidade de bloqueio, consulte [DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_SCH_M|Ocorre quando uma tarefa está esperando para adquirir um bloqueio Modificação de Esquema. Para uma matriz de compatibilidade de bloqueio, consulte [DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_SCH_S|Ocorre quando uma tarefa está esperando para adquirir um bloqueio Compartilhamento de Esquema. Para uma matriz de compatibilidade de bloqueio, consulte [DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_SIU|Ocorre quando uma tarefa está esperando para adquirir um bloqueio Compartilhado com Atualização da Tentativa. Para uma matriz de compatibilidade de bloqueio, consulte [DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_SIX|Ocorre quando uma tarefa está esperando para adquirir um bloqueio Compartilhado com Exclusivo da Tentativa. Para uma matriz de compatibilidade de bloqueio, consulte [DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_U|Ocorre quando uma tarefa está esperando para adquirir um bloqueio Atualização. Para uma matriz de compatibilidade de bloqueio, consulte [DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_UIX|Ocorre quando uma tarefa está esperando para adquirir um bloqueio Atualização com Exclusivo da Tentativa. Para uma matriz de compatibilidade de bloqueio, consulte [DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_X|Ocorre quando uma tarefa está esperando para adquirir um bloqueio Exclusivo. Para uma matriz de compatibilidade de bloqueio, consulte [DM tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_BU|Ocorre quando uma tarefa está esperando para adquirir um bloqueio Atualização em Massa (BU). Para uma matriz de compatibilidade de bloqueio, consulte [Sys. dm_tran_locks &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_IS|Ocorre quando uma tarefa está esperando para adquirir um bloqueio Tentativa Compartilhada (IS). Para uma matriz de compatibilidade de bloqueio, consulte [Sys. dm_tran_locks &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_IU|Ocorre quando uma tarefa está esperando para adquirir um bloqueio Atualização da Tentativa (IU). Para uma matriz de compatibilidade de bloqueio, consulte [Sys. dm_tran_locks &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_IX|Ocorre quando uma tarefa está esperando para adquirir um bloqueio Exclusivo da Tentativa (IX). Para uma matriz de compatibilidade de bloqueio, consulte [Sys. dm_tran_locks &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_RIn_NL|Ocorre quando uma tarefa está esperando adquirir um bloqueio NULL no valor de chave atual e um bloqueio Inserção de Intervalo entre a chave atual e a anterior. Um bloqueio NULL na chave é um bloqueio de liberação instantâneo. Para uma matriz de compatibilidade de bloqueio, consulte [Sys. dm_tran_locks &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_RIn_S|Ocorre quando uma tarefa está esperando adquirir um bloqueio compartilhado no valor de chave atual e um bloqueio Inserção de Intervalo entre a chave atual e a anterior. Para uma matriz de compatibilidade de bloqueio, consulte [Sys. dm_tran_locks &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_RIn_U|Uma tarefa que está esperando para adquirir um bloqueio Atualização no valor de chave atual e um bloqueio Inserção de Intervalo entre a chave atual e a anterior. Para uma matriz de compatibilidade de bloqueio, consulte [Sys. dm_tran_locks &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_RIn_X|Ocorre quando uma tarefa está esperando adquirir um bloqueio Exclusivo no valor de chave atual e um bloqueio Inserção de Intervalo entre a chave atual e a anterior. Para uma matriz de compatibilidade de bloqueio, consulte [Sys. dm_tran_locks &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_RS_S|Ocorre quando uma tarefa está esperando adquirir um bloqueio Compartilhado no valor de chave atual e um bloqueio Intervalo Compartilhado entre a chave atual e a anterior. Para uma matriz de compatibilidade de bloqueio, consulte [Sys. dm_tran_locks &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_RS_U|Ocorre quando uma tarefa está esperando adquirir um bloqueio Atualização no valor de chave atual e um bloqueio Atualização de Intervalo entre a chave atual e a anterior. Para uma matriz de compatibilidade de bloqueio, consulte [Sys. dm_tran_locks &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_RX_S|Ocorre quando uma tarefa está esperando adquirir um bloqueio Compartilhado no valor de chave atual e um bloqueio Intervalo Exclusivo entre a chave atual e a anterior. Para uma matriz de compatibilidade de bloqueio, consulte [Sys. dm_tran_locks &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_RX_U|Ocorre quando uma tarefa está esperando adquirir um bloqueio Atualização no valor de chave atual e um bloqueio Intervalo Exclusivo entre a chave atual e a anterior. Para uma matriz de compatibilidade de bloqueio, consulte [Sys. dm_tran_locks &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_RX_X|Ocorre quando uma tarefa está esperando adquirir um bloqueio Exclusivo no valor de chave atual e um bloqueio Intervalo Exclusivo entre a chave atual e a anterior. Para uma matriz de compatibilidade de bloqueio, consulte [Sys. dm_tran_locks &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_S|Ocorre quando uma tarefa está esperando para adquirir um bloqueio Compartilhado. Para uma matriz de compatibilidade de bloqueio, consulte [Sys. dm_tran_locks &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_SCH_M|Ocorre quando uma tarefa está esperando para adquirir um bloqueio Modificação de Esquema. Para uma matriz de compatibilidade de bloqueio, consulte [Sys. dm_tran_locks &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_SCH_S|Ocorre quando uma tarefa está esperando para adquirir um bloqueio Compartilhamento de Esquema. Para uma matriz de compatibilidade de bloqueio, consulte [Sys. dm_tran_locks &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_SIU|Ocorre quando uma tarefa está esperando para adquirir um bloqueio Compartilhado com Atualização da Tentativa. Para uma matriz de compatibilidade de bloqueio, consulte [Sys. dm_tran_locks &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_SIX|Ocorre quando uma tarefa está esperando para adquirir um bloqueio Compartilhado com Exclusivo da Tentativa. Para uma matriz de compatibilidade de bloqueio, consulte [Sys. dm_tran_locks &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_U|Ocorre quando uma tarefa está esperando para adquirir um bloqueio Atualização. Para uma matriz de compatibilidade de bloqueio, consulte [Sys. dm_tran_locks &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_UIX|Ocorre quando uma tarefa está esperando para adquirir um bloqueio Atualização com Exclusivo da Tentativa. Para uma matriz de compatibilidade de bloqueio, consulte [Sys. dm_tran_locks &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_X|Ocorre quando uma tarefa está esperando para adquirir um bloqueio Exclusivo. Para uma matriz de compatibilidade de bloqueio, consulte [Sys. dm_tran_locks &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
 |LOG_RATE_GOVERNOR|Ocorre quando o BD está esperando a cota para gravação no log.|  
 |LOGBUFFER|Ocorre quando uma tarefa está esperando espaço no buffer de log para armazenar um registro de log. Consistentemente, valores altos podem indicar que os dispositivos de log não podem acompanhar a quantidade de log que está sendo gerada pelo servidor.|  
 |LOGGENERATION|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -250,17 +250,17 @@ ms.locfileid: "68090870"
 |PREEMPTIVE_CLOSEBACKUPVDIDEVICE|Ocorre quando o agendador de SQLOS alterna para o modo preemptivo para fechar um dispositivo de backup virtual.|  
 |PREEMPTIVE_CLUSAPI_CLUSTERRESOURCECONTROL|Ocorre quando o agendador de Sistema operacional (SQLOS) alterna para o modo preemptivo para executar operações de cluster de failover do Windows.|  
 |PREEMPTIVE_COM_COCREATEINSTANCE|Ocorre quando o agendador de SQLOS alterna para o modo preemptivo para criar um objeto COM.|  
-|PREEMPTIVE_HADR_LEASE_MECHANISM|Grupos de disponibilidade AlwaysOn para diagnóstico de CSS de agendamento do Gerenciador de concessão.|  
+|PREEMPTIVE_HADR_LEASE_MECHANISM|Always On o agendamento do Gerenciador de concessão de grupos de disponibilidade para o diagnóstico de CSS.|  
 |PREEMPTIVE_SOSTESTING|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |PREEMPTIVE_STRESSDRIVER|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |PREEMPTIVE_TESTING|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |PREEMPTIVE_XETESTING|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |PRINT_ROLLBACK_PROGRESS|Usado para aguardar enquanto os processos do usuário são finalizados em um banco de dados que passou por transição usando a cláusula de término ALTER DATABASE. Para obter mais informações, veja [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).|  
 |PWAIT_HADR_CHANGE_NOTIFIER_TERMINATION_SYNC|Ocorre quando uma tarefa em segundo plano está aguardando a conclusão de uma tarefa em segundo plano que recebe (via sondagem) as notificações do Windows Server Failover Clustering.  Somente para uso interno.|  
-|PWAIT_HADR_CLUSTER_INTEGRATION|Um acréscimo, substituir e/ou Remover operação está aguardando para obter um bloqueio de gravação em uma lista Always On, interna, (por exemplo, uma lista de redes, endereços de rede ou ouvintes do grupo de disponibilidade).  Somente para uso interno.|  
-|PWAIT_HADR_OFFLINE_COMPLETED|Uma Always On soltar operação grupo de disponibilidade está aguardando o grupo de disponibilidade de destino ficar offline antes de destruir os objetos de cluster de Failover do Windows Server.|  
-|PWAIT_HADR_ONLINE_COMPLETED|Um Always On cria ou operação de failover do grupo de disponibilidade está aguardando o grupo de disponibilidade de destino ficar online.|  
-|PWAIT_HADR_POST_ONLINE_COMPLETED|Uma Always On soltar operação grupo de disponibilidade está aguardando a conclusão de todas as tarefas em segundo plano que foi agendada como parte de um comando anterior. Por exemplo, pode haver uma tarefa em segundo plano que está fazendo a transição de bancos de dados de disponibilidade para a função primária. O DROP AVAILABILITY GROUP DDL deve aguardar esta tarefa em segundo plano ser finalizada para evitar situações de competição.|  
+|PWAIT_HADR_CLUSTER_INTEGRATION|Uma operação de acréscimo, substituição e/ou remoção está aguardando para obter um bloqueio de gravação em uma Always On lista interna (como uma lista de redes, endereços de rede ou ouvintes de grupo de disponibilidade).  Somente para uso interno.|  
+|PWAIT_HADR_OFFLINE_COMPLETED|Uma operação Always On remover grupo de disponibilidade está aguardando o grupo de disponibilidade de destino ficar offline antes de destruir os objetos de clustering de failover do Windows Server.|  
+|PWAIT_HADR_ONLINE_COMPLETED|Um Always On operação criar ou grupo de disponibilidade de failover está aguardando o grupo de disponibilidade de destino ficar online.|  
+|PWAIT_HADR_POST_ONLINE_COMPLETED|Uma operação Always On remover grupo de disponibilidade está aguardando o encerramento de qualquer tarefa em segundo plano que foi agendada como parte de um comando anterior. Por exemplo, pode haver uma tarefa em segundo plano que está fazendo a transição de bancos de dados de disponibilidade para a função primária. O DROP AVAILABILITY GROUP DDL deve aguardar esta tarefa em segundo plano ser finalizada para evitar situações de competição.|  
 |PWAIT_HADR_WORKITEM_COMPLETED|Espera interna por um thread que espera uma tarefa de trabalho assíncrona ser concluída. Essa é uma espera prevista e deve ser usada pelo CSS.|  
 |PWAIT_MD_LOGIN_STATS|Ocorre durante a sincronização interna nos metadados nas estatísticas de logon.|  
 |PWAIT_MD_RELATION_CACHE|Ocorre durante a sincronização interna nos metadados na tabela ou no índice.|  

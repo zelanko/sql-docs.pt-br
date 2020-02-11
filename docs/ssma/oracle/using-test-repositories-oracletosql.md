@@ -13,68 +13,68 @@ ms.assetid: f941cce4-d3e3-4aeb-a88a-4f101a97a9f4
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: da99b63c986029a1791793fbbd33910bb95d4b7b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68086799"
 ---
 # <a name="using-test-repositories-oracletosql"></a>Uso de repositórios de teste (OracleToSQL)
-O repositório de teste do SSMA armazenamentos casos de teste do testador do SSMA e resultados de teste para uso posterior. Os dados de repositório são salvos nas tabelas do SQL Server **TestCaseRepository** e **RunTestCaseResultRepository** no esquema **ssma_oracle_utilities** de **ssmatesterdb** banco de dados.  
+O repositório de teste do SSMA armazena casos de teste e resultados de teste do SSMA Tester para uso posterior. Os dados do repositório são salvos nas tabelas de SQL Server **TestCaseRepository** e **RunTestCaseResultRepository** no esquema **ssma_oracle_utilities** do banco de dados **ssmatesterdb** .  
   
-Os seguintes botões estão disponíveis na caixa de diálogo repositório de casos de teste:  
+Os botões a seguir estão disponíveis na caixa de diálogo repositório de casos de teste:  
   
--   Clique o **Refresh** botão para atualizar a lista de casos de teste ou resultados de teste.  
+-   Clique no botão **Atualizar** para atualizar os casos de teste ou resultados de teste lista.  
   
--   Clique o **feche** botão para fechar a caixa de diálogo repositório de casos de teste.  
+-   Clique no botão **fechar** para fechar o repositório da caixa de diálogo casos de teste.  
   
 ## <a name="test-cases-repository"></a>Repositório de casos de teste  
-Você pode exibir o repositório de casos de teste clicando **casos de teste...**  do **testador** menu. O SSMA, em seguida, exibe o **repositório de casos de teste** janela da caixa de diálogo com uma lista de casos de teste salvos no **casos de teste** página.  
+Você pode exibir o repositório de casos de teste clicando em **casos de teste...** no menu **testador** . Em seguida, o SSMA exibe a janela de caixa de diálogo **repositório de casos de** teste com uma lista de casos de teste salvos na página **casos de teste** .  
   
 A grade mostra as seguintes informações sobre cada caso de teste:  
   
--   Nome: O nome do caso de teste.  
+-   Nome: o nome do caso de teste.  
   
--   Criado: A data de criação do caso de teste.  
+-   Criado: a data de criação do caso de teste.  
   
--   Modificação: O caso de teste Data da última modificação.  
+-   Modificado: a data da última modificação do caso de teste.  
   
--   Descrição: As descrições de caso de teste.  
+-   Descrição: as descrições do caso de teste.  
   
-Os seguintes botões estão disponíveis na página de casos de teste:  
+Os botões a seguir estão disponíveis na página casos de teste:  
   
--   Clique o **adicionar** botão para executar o Assistente de caso de teste e criar um novo teste.  
+-   Clique no botão **Adicionar** para executar o assistente de caso de teste e criar um novo teste.  
   
--   Clique o **remover** botão para excluir o teste selecionado do repositório. Quando um caso de teste é excluído, todos os resultados de teste relacionados também são excluídos.  
+-   Clique no botão **remover** para excluir o teste selecionado do repositório. Quando um caso de teste é excluído, todos os Resultados de Teste relacionados também são excluídos.  
   
--   Clique o **editar** botão para executar o Assistente de caso de teste e alterar o teste selecionado.  
+-   Clique no botão **Editar** para executar o assistente de caso de teste e alterar o teste selecionado.  
   
--   Clique o **executados** para abrir o [executando casos de teste (OracleToSQL)](https://msdn.microsoft.com/fc208cdb-7373-4f6b-8f6c-cdff9d3dcd02) caixa de diálogo e executar o teste selecionado.  
+-   Clique no botão **executar** para abrir a caixa de diálogo [executando casos de teste (OracleToSQL)](https://msdn.microsoft.com/fc208cdb-7373-4f6b-8f6c-cdff9d3dcd02) e execute o teste selecionado.  
   
-## <a name="test-results-repository"></a>Repositório de resultados de teste  
-Você pode exibir o repositório de resultados de teste na **resultados de teste** página do **repositório de casos de teste** janela. Abra-o clicando em **resultados de teste...**  do **testador** menu.  
+## <a name="test-results-repository"></a>Repositório de Resultados de Teste  
+Você pode exibir o repositório Resultados de Teste na página **resultados de teste** do **repositório da janela casos de teste** . Abra-o clicando em **resultados de teste...** no menu do **testador** .  
   
-Você pode usar dois filtros na **resultados de teste** página:  
+Você pode usar dois filtros na página **resultados de teste** :  
   
--   O filtro de nome de caso de teste: Permite escolher os resultados do teste por nome do caso de teste. Esse filtro **todos os casos de teste** valor permite que a exibição dos resultados de teste para todos os casos de teste.  
+-   O filtro de nome de caso de teste: permite escolher resultados de teste por nome de caso de teste. O valor de **todos os casos de teste** do filtro permite exibir resultados de teste para todos os casos de teste.  
   
--   O filtro de data de execução do caso de teste: Filtros de resultados do teste por data de salvar. Esse filtro **todo o período** valor permite exibir os resultados de teste para qualquer data de salvar.  
+-   O filtro de data de execução do caso de teste: filtra os resultados do teste pela data de salvamento. O valor de **todos os períodos** do filtro permite exibir resultados de teste para qualquer data de salvamento.  
   
-As seguintes informações sobre resultados de teste são exibidas na grade.  
+As informações a seguir sobre os resultados de teste são exibidas na grade.  
   
--   Nome: Nome do caso de teste.  
+-   Nome: nome do caso de teste.  
   
--   Salvo: Data do caso de teste de salvar.  
+-   Salvo: data do caso de teste de salvamento.  
   
--   Resultados: Um breve resumo da execução de teste (dica de ferramenta dessa célula exibe um resumo completo de execução de teste).  
+-   Resultados: um breve resumo da execução de teste (a dica de ferramenta dessa célula exibe um resumo completo da execução do teste).  
   
-Os seguintes botões estão disponíveis na página de resultados de teste:  
+Os botões a seguir estão disponíveis na página resultado do teste:  
   
--   Clique o **modo de exibição** para abrir [exibindo relatórios de caso de teste &#40;OracleToSQL&#41; ](../../ssma/oracle/viewing-test-case-reports-oracletosql.md) do resultado do caso de teste atual.  
+-   Clique no botão **Exibir** para abrir a [exibição de relatórios de caso de teste &#40;OracleToSQL&#41;](../../ssma/oracle/viewing-test-case-reports-oracletosql.md) do resultado do caso de teste atual.  
   
--   Clique o **excluir** botão para excluir o resultado do teste selecionado  
+-   Clique no botão **excluir** para excluir o resultado do teste selecionado  
   
-## <a name="see-also"></a>Consulte também  
-[Executar casos de teste &#40;OracleToSQL&#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
-[Testar objetos de banco de dados migrados &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+## <a name="see-also"></a>Consulte Também  
+[Executando casos de teste &#40;OracleToSQL&#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
+[Testando objetos de banco de dados migrados &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

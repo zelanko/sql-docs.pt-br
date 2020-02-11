@@ -18,25 +18,25 @@ ms.assetid: be30abc9-c00d-446f-b1b4-1269772f37e6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 38c6bb0ae74ffe54e9637610139374e458e3649d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68095700"
 ---
-# <a name="msagentparameters-transact-sql"></a>MSagent_parameters (Transact-SQL)
+# <a name="msagent_parameters-transact-sql"></a>MSagent_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  O **MSagent_parameters** tabela contém parâmetros associados a um perfil de agente. Os nomes de parâmetro são os mesmos que os suportados pelo agente. Essa tabela é armazenada na **msdb** banco de dados.  
+  A tabela **MSagent_parameters** contém parâmetros associados a um perfil de agente. Os nomes de parâmetro são os mesmos que os suportados pelo agente. Essa tabela é armazenada no banco de dados **msdb** .  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
-|**profile_id**|**int**|A ID de perfil a partir de **MSagent_profiles** tabela.|  
+|**profile_id**|**int**|A ID do perfil da tabela de **MSagent_profiles** .|  
 |**parameter_name**|**sysname**|O nome do parâmetro.|  
-|**value**|**nvarchar(255)**|O valor do parâmetro.|  
+|**valor**|**nvarchar (255)**|O valor do parâmetro.|  
   
-## <a name="see-also"></a>Consulte também  
- [Tabelas de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Tabelas de replicação &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Exibições de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

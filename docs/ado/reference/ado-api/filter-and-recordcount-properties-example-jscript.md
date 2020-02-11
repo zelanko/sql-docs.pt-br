@@ -1,5 +1,5 @@
 ---
-title: Exemplo de Filter e RecordCount propriedades (JScript) | Microsoft Docs
+title: Exemplo das propriedades Filter e RecordCount (JScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: 677fa67e-9cb9-4d7d-a786-beeb5bee5236
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0832ddbbb16c54ee62c8fcec8749aeadb4f98449
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932653"
 ---
-# <a name="filter-and-recordcount-properties-example-jscript"></a>Exemplo de Filter e RecordCount propriedades (JScript)
-Este exemplo abre um **conjunto de registros** na tabela de banco de dados Northwind e, em seguida, usa as empresas a [filtro](../../../ado/reference/ado-api/filter-property.md) propriedade para limitar os registros visíveis para aqueles em que o campo CompanyName começa com a letra D. recortar e colar o seguinte código ao bloco de notas ou outro editor de texto e salve-o como **FilterJS.asp**.  
+# <a name="filter-and-recordcount-properties-example-jscript"></a>Exemplo das propriedades Filter e RecordCount (JScript)
+Este exemplo abre um **conjunto de registros** na tabela empresas do banco de dados Northwind e, em seguida, usa a propriedade [Filter](../../../ado/reference/ado-api/filter-property.md) para limitar os registros visíveis àqueles onde o campo CompanyName começa com a letra D. recorte e cole o código a seguir no bloco de notas ou em outro editor de texto e salve-o como **FilterJS. asp**.  
   
 ```  
 <!-- BeginFilterJS -->  
@@ -148,7 +148,7 @@ BODY {
 <!-- EndFilterJS -->  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Propriedade de filtro](../../../ado/reference/ado-api/filter-property.md)   
  [Propriedade RecordCount (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)   
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

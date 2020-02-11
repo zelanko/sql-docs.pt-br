@@ -15,28 +15,28 @@ ms.assetid: f9534144-8f42-4946-b0fb-638e9dcde9c8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8aad5171b98c54aa0c4adbde1a5678e4fd953640
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68093960"
 ---
 # <a name="odbc-subkey"></a>Subchave do ODBC
-Os valores na subchave ODBC especificam as opções de rastreamento de ODBC. Essas opções são definidas por meio da guia de rastreamento da caixa de diálogo Administrador de fonte de dados ODBC exibida pelo **SQLManageDataSources**. A subchave do ODBC em si é opcional. O formato desses valores é conforme mostrado na tabela a seguir.  
+Os valores na subchave ODBC especificam opções de rastreamento ODBC. Essas opções são definidas por meio da guia rastreamento da caixa de diálogo administrador de fonte de dados ODBC exibida por **SQLManageDataSources**. A própria subchave ODBC é opcional. O formato desses valores é mostrado na tabela a seguir.  
   
-|Nome|Tipo de dados|Data|  
+|Nome|Tipo de dados|data|  
 |----------|---------------|----------|  
 |Trace|REG_SZ|**0** &#124; **1**|  
-|TraceFile|REG_SZ|*tracefile-path*|  
+|TraceFile|REG_SZ|*TraceFile-caminho*|  
   
- Os valores possuem o significado descrito na tabela a seguir.  
+ Os valores têm os significados descritos na tabela a seguir.  
   
 |Valor|Significado|  
 |-----------|-------------|  
-|Trace|Se o valor de rastreamento for definido, como 1 quando um aplicativo chama **SQLAllocHandle** com a opção SQL_HANDLE_ENV, o rastreamento está habilitado para o aplicativo de chamada.<br /><br /> Se a palavra-chave de rastreamento é definida como 0 quando um aplicativo chama **SQLAllocHandle** com a opção SQL_HANDLE_ENV, o rastreamento está desabilitado para o aplicativo de chamada. Este é o valor padrão.<br /><br /> Um aplicativo pode habilitar ou desabilitar o rastreamento com o atributo de conexão SQL_ATTR_TRACE. No entanto, fazer então não altera os dados para esse valor.|  
-|TraceFile|Se o rastreamento está habilitado, o Gerenciador de Driver grava o arquivo de rastreamento especificado pelo valor TraceFile.<br /><br /> Se nenhum arquivo de rastreamento for especificado, o Gerenciador de Driver grava no arquivo de log na unidade atual. Este é o valor padrão.<br /><br /> O rastreamento deve ser usado apenas para um único aplicativo, ou cada aplicativo deve especificar um arquivo de rastreamento diferentes. Caso contrário, duas ou mais aplicativos tentará abrir o mesmo arquivo de rastreamento ao mesmo tempo, causando um erro.<br /><br /> Um aplicativo pode especificar um novo arquivo de rastreamento com o atributo de conexão SQL_ATTR_TRACEFILE. No entanto, fazer então não altera os dados para esse valor.|  
+|Trace|Se o valor de rastreamento for definido como 1 quando um aplicativo chamar **SQLAllocHandle** com a opção SQL_HANDLE_ENV, o rastreamento será habilitado para o aplicativo de chamada.<br /><br /> Se a palavra-chave Trace for definida como 0 quando um aplicativo chamar **SQLAllocHandle** com a opção SQL_HANDLE_ENV, o rastreamento será desabilitado para o aplicativo de chamada. Esse é o valor padrão.<br /><br /> Um aplicativo pode habilitar ou desabilitar o rastreamento com o atributo de conexão SQL_ATTR_TRACE. No entanto, isso não altera os dados para esse valor.|  
+|TraceFile|Se o rastreamento estiver habilitado, o Gerenciador de driver gravará no arquivo de rastreamento especificado pelo valor de TraceFile.<br /><br /> Se nenhum arquivo de rastreamento for especificado, o Gerenciador de driver gravará no arquivo SQL. log na unidade atual. Esse é o valor padrão.<br /><br /> O rastreamento deve ser usado somente para um único aplicativo, ou cada aplicativo deve especificar um arquivo de rastreamento diferente. Caso contrário, dois ou mais aplicativos tentarão abrir o mesmo arquivo de rastreamento ao mesmo tempo, causando um erro.<br /><br /> Um aplicativo pode especificar um novo arquivo de rastreamento com o atributo de conexão SQL_ATTR_TRACEFILE. No entanto, isso não altera os dados para esse valor.|  
   
- Por exemplo, suponha que o rastreamento está habilitado e o arquivo de rastreamento é C:\Odbc.log. Os valores na subchave ODBC seria da seguinte maneira:  
+ Por exemplo, suponha que o rastreamento esteja habilitado e o arquivo de rastreamento seja C:\Odbc.log. Os valores na subchave ODBC seriam os seguintes:  
   
 ```  
 Trace : REG_SZ : 1  

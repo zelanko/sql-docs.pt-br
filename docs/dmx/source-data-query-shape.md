@@ -9,18 +9,18 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: c928d4c96917479f8c37415d5ebe2db9b7f9eb98
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67938113"
 ---
-# <a name="ltsource-data-querygt---shape"></a>&lt;consulta de fonte de dados&gt; -forma
+# <a name="ltsource-data-querygt---shape"></a>&lt;consulta&gt; de dados de origem-forma
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Combina consultas de várias fontes de dados em uma tabela hierárquica única (ou seja, uma tabela com tabelas aninhadas), que se torna a tabela de caso do modelo de mineração.  
   
- A sintaxe completa da **forma** comando está documentado no [!INCLUDE[msCoName](../includes/msconame-md.md)] Data Access Components (MDAC) Software Development Kit (SDK).  
+ A sintaxe completa do comando **forma** é documentada no SDK [!INCLUDE[msCoName](../includes/msconame-md.md)] (Software Development Kit) do MDAC (Data Access Components).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,26 +39,26 @@ APPEND ({ <child table query> }
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *consulta mestre*  
+ *consulta mestra*  
  Consulta que retorna a tabela pai.  
   
  *consulta de tabela filho*  
  Consulta que retorna a tabela aninhada.  
   
- *coluna mestre*  
+ *coluna mestra*  
  Coluna da tabela pai para identificar linhas filho no resultado de uma consulta de tabela filho.  
   
  *coluna filho*  
  Coluna da tabela filho para identificar linhas pai no resultado de uma consulta mestre.  
   
- *nome da tabela de coluna*  
+ *nome da tabela de colunas*  
  Nome de coluna recentemente adicionada à tabela pai da tabela aninhada.  
   
 ## <a name="remarks"></a>Comentários  
  É preciso classificar as consultas pela coluna que relaciona a tabela pai à tabela filho.  
   
 ## <a name="examples"></a>Exemplos  
- Você pode usar o exemplo a seguir dentro de um [INSERT INTO &#40;DMX&#41; ](../dmx/insert-into-dmx.md) instrução para treinar um modelo que contém uma tabela aninhada. As duas tabelas do **forma** instrução são relacionadas por meio de **OrderNumber** coluna.  
+ Você pode usar o exemplo a seguir em uma instrução [INSERT INTO &#40;DMX&#41;](../dmx/insert-into-dmx.md) para treinar um modelo que contém uma tabela aninhada. As duas tabelas dentro da instrução **Shape** estão relacionadas por meio da coluna **OrderNumber** .  
   
 ```  
 SHAPE {  
@@ -70,10 +70,10 @@ SHAPE {
   RELATE OrderNumber to OrderNumber)   
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [&#60;consulta de fonte de dados&#62;](../dmx/source-data-query.md)   
- [Extensões de mineração de dados &#40;DMX&#41; instruções de definição de dados](../dmx/dmx-statements-data-definition.md)   
- [Extensões de mineração de dados &#40;DMX&#41; instruções de manipulação de dados](../dmx/dmx-statements-data-manipulation.md)   
- [Referência de instruções de DMX &#40extensões de Mineração de Dados&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
+## <a name="see-also"></a>Consulte Também  
+ [&#62;de consulta de dados de origem&#60;](../dmx/source-data-query.md)   
+ [&#40;&#41; instruções de definição de dados DMX de extensões de mineração de dados](../dmx/dmx-statements-data-definition.md)   
+ [&#40;instruções de manipulação de dados do DMX&#41; extensões do Data Mining](../dmx/dmx-statements-data-manipulation.md)   
+ [Referência de instrução&#41; &#40;DMX de extensões de mineração de dados](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

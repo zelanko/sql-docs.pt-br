@@ -1,5 +1,5 @@
 ---
-title: Tópicos explicativos de desempenho de Driver do ODBC (ODBC) de criação de perfil | Microsoft Docs
+title: Tópicos de instruções de desempenho do driver ODBC de criação de perfil (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,26 +11,26 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7cf597a459f12ccebc449de684fa05ac6dce39b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200288"
 ---
 # <a name="profiling-odbc-driver-performance-how-to-topics-odbc"></a>Tópicos de instruções sobre a criação de perfil de desempenho do driver ODBC (ODBC)
   O driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tem duas opções específicas do driver para a criação de perfil de desempenho do driver.  
   
- O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC pode registrar estatísticas de desempenho no arquivo. O arquivo de log é um arquivo delimitado por tabulação que pode ser analisado em qualquer planilha com suporte para arquivos delimitados por tabulação, como o Microsoft Excel.  
+ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC pode registrar as estatísticas de desempenho no arquivo. O arquivo de log é um arquivo delimitado por tabulação que pode ser analisado em qualquer planilha com suporte para arquivos delimitados por tabulação, como o Microsoft Excel.  
   
  O driver também pode registrar consultas de longa execução (consultas que não obtêm uma resposta do servidor em um intervalo especificado de tempo). Essas consultas podem ser analisadas depois pelos programadores e pelos administradores de banco de dados.  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
--   [Criar o perfil de dados de desempenho de Driver &#40;ODBC&#41;](profiling-odbc-driver-performance-data.md)  
+-   [Dados de desempenho de driver de perfil &#40;&#41;ODBC](profiling-odbc-driver-performance-data.md)  
   
--   [Registrar consultas de longa execução &#40;ODBC&#41;](profiling-odbc-driver-performance-data-log-long-running-queries.md)  
+-   [Consultas de execução longa do log &#40;&#41;ODBC](profiling-odbc-driver-performance-data-log-long-running-queries.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tópicos de instruções sobre ODBC](odbc-how-to-topics.md)  
   
   

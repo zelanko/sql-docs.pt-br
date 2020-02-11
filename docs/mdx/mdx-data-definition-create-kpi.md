@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: e2380f72fe8a5faf9dc5504e56941f724b1bd159
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68098400"
 ---
 # <a name="mdx-data-definition---create-kpi"></a>Definição de dados MDX – CREATE KPI
@@ -58,10 +58,10 @@ CREATE KPI CURRENTCUBE | <Cube Name>.KPI_Name AS KPI_Value
 |CURRENT_TIME_MEMBER|Uma linguagem MDX válida que retorna um membro na dimensão temporal. CURRENT_TIME_MEMBER define o ponto de referência para todas as funções de hora relativas|  
 |PARENT_KPI|Uma cadeia de caracteres válida que especifica o nome do KPI pai.|  
 |CAPTION|Uma cadeia de caracteres que o aplicativo cliente usa como legenda para o KPI.|  
-|DISPLAY_FOLDER|Uma cadeia de caracteres que especifica o caminho da pasta de exibição onde o KPI será mostrado pelo aplicativo cliente. O separador de nível de pasta é definido pelo aplicativo cliente. Para as ferramentas e clientes fornecidos pelo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], a barra invertida (\\) é o separador de nível. Para várias pastas de exibição de um membro definido, use ponto-e-vírgula (;) para separar as pastas.|  
+|DISPLAY_FOLDER|Uma cadeia de caracteres que especifica o caminho da pasta de exibição onde o KPI será mostrado pelo aplicativo cliente. O separador de nível de pasta é definido pelo aplicativo cliente. Para as ferramentas e os clientes fornecidos [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]pelo, a barra invertida (\\) é o separador de nível. Para várias pastas de exibição de um membro definido, use ponto-e-vírgula (;) para separar as pastas.|  
 |ASSOCIATED_MEASURE_GROUP|Uma cadeia de caracteres que especifica o nome do grupo de medidas ao qual todos os cálculos de MDX deveriam recorrer.|  
   
- Os valores para as propriedades GOAL, STATUS e TREND são expressões MDX que deveriam ser avaliadas entre -1 a 1. No entanto, é o aplicativo cliente que define o intervalo real de valores para essas propriedades. Quando você usa as ferramentas e clientes fornecidos pelo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] para procurar KPIs, valores menores do que -1 são tratados como -1, e valores maiores que 1 são tratados como 1.  
+ Os valores para as propriedades GOAL, STATUS e TREND são expressões MDX que deveriam ser avaliadas entre -1 a 1. No entanto, é o aplicativo cliente que define o intervalo real de valores para essas propriedades. Quando você usa as ferramentas e os clientes fornecidos [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] pelo para procurar KPIs, valores menores que-1 são tratados como-1, e valores maiores que 1 são tratados como 1.  
   
  STATUS_GRAPHIC e TREND_GRAPHIC são valores de cadeia de caracteres que o aplicativo cliente usa para identificar o conjunto correto de imagens a serem exibidas. Essas cadeias de caracteres também definem o comportamento da função de exibição. Esse comportamento inclui o número de estados a serem exibidos (normalmente, esse é um número ímpar) e quais imagens serão usadas para cada um dos estados.  
   
@@ -76,7 +76,7 @@ CREATE KPI CURRENTCUBE | <Cube Name>.KPI_Name AS KPI_Value
 > [!NOTE]  
 >  Para alguns gráficos, como o medidor invertido ou a seta de status invertida, o intervalo é invertido. Ou seja, -1 é bom e 1 é ruim.  
   
- No [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], o nome do elemento gráfico de KPI determina se o gráfico tem três ou cinco estados. A tabela a seguir apresenta o uso, nome e número de estados que [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] associa a seus gráficos KPI.  
+ No [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], o nome do elemento gráfico de KPI determina se o gráfico tem três ou cinco estados. A tabela a seguir lista o uso, o nome e o número de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] Estados que o associa a seus gráficos de KPI.  
   
 |Uso de gráfico|Nome de gráfico de KPI|Número de estados|  
 |--------------------|-------------------------|----------------------|  
@@ -94,8 +94,8 @@ CREATE KPI CURRENTCUBE | <Cube Name>.KPI_Name AS KPI_Value
 |Tendência|Seta de status invertida|5|  
 |Tendência|Faces|3|  
   
-## <a name="see-also"></a>Consulte também  
- [Instrução do DROP KPI &#40;MDX&#41;](../mdx/mdx-data-definition-drop-kpi.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Instrução DROP KPI &#40;MDX&#41;](../mdx/mdx-data-definition-drop-kpi.md)   
  [Instruções de definição de dados MDX &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

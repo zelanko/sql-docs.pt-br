@@ -13,37 +13,37 @@ ms.assetid: efff5569-db52-451d-a039-2e74870534da
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a5f28b5d593524288a755f4c9455bba39554d7bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924813"
 ---
 # <a name="namespaces"></a>Namespaces
-O formato de persistência XML no ADO usa os seguintes namespaces de quatro.  
+O formato de persistência XML no ADO usa os quatro namespaces a seguir.  
   
 ## <a name="remarks"></a>Comentários  
- O formato de persistência XML no ADO usa os seguintes namespaces de quatro.  
+ O formato de persistência XML no ADO usa os quatro namespaces a seguir.  
   
-|Prefixo|Descrição|  
+|Prefixo|DESCRIÇÃO|  
 |------------|-----------------|  
-|s|Refere-se ao namespace "XML-Data", que contém os elementos e atributos que definem o esquema do conjunto de registros atual.|  
-|dt|Refere-se a especificação de definições de tipo de dados.|  
-|rs|Refere-se aos elementos de recipiente de namespace e atributos específicos para as propriedades do conjunto de registros ADO e atributos.|  
+|s|Refere-se ao namespace "XML-Data" que contém os elementos e atributos que definem o esquema do conjunto de registros atual.|  
+|DT|Refere-se à especificação de definições de tipo de dados.|  
+|rs|Refere-se ao namespace que contém elementos e atributos específicos para propriedades e atributos do conjunto de registros ADO.|  
 |z|Refere-se ao esquema do conjunto de linhas atual.|  
   
- Um cliente não deve adicionar suas próprias marcas para esses namespaces, conforme definido pela especificação. Por exemplo, um cliente não deve definir um namespace como "urn: schemas-microsoft-com:rowset" e, em seguida, escrever algo como "rs: MyOwnTag." Para obter mais informações sobre namespaces, consulte a [Namespaces W3C na recomendação XML](http://www.w3.org/TR/REC-xml-names/).  
+ Um cliente não deve adicionar suas próprias marcas a esses namespaces, conforme definido pela especificação. Por exemplo, um cliente não deve definir um namespace como "urn: schemas-microsoft-com: Rowset" e, em seguida, escrever algo como "RS: MyOwnTag". Para saber mais sobre namespaces, consulte a [recomendação namespaces do W3C em XML](http://www.w3.org/TR/REC-xml-names/).  
   
 > [!IMPORTANT]
->  A ID para a marca de esquema deve ser "RowsetSchema", e o namespace usado para consultar o esquema do conjunto de linhas atual deve apontar para "#RowsetSchema".  
+>  A ID da marca do esquema deve ser "RowsetSchema" e o namespace usado para fazer referência ao esquema do conjunto de linhas atual deve apontar para "#RowsetSchema".  
   
- Observe que o prefixo do namespace - a parte entre os dois-pontos e o sinal de igual - é arbitrário.  
+ Observe que o prefixo do namespace – a parte entre os dois-pontos e o sinal de igualdade é arbitrário.  
   
 ```  
 xmlns:rs="urn:schemas-microsoft-com:rowset"  
 ```  
   
- O usuário pode definir isso para ser qualquer nome desde que esse nome é usado de forma consistente em todo o documento XML. ADO sempre grava "s," "rs", "dt," e "z", mas esses nomes de prefixo não são embutidos em código no componente de carregamento.  
+ O usuário pode definir isso como qualquer nome, desde que esse nome seja usado consistentemente em todo o documento XML. O ADO sempre grava "s", "RS", "DT" e "z", mas esses nomes de prefixo não são embutidos em código no componente de carregamento.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Persistência de registros em formato XML](../../../ado/guide/data/persisting-records-in-xml-format.md)

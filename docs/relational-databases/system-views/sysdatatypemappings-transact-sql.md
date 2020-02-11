@@ -18,21 +18,21 @@ ms.assetid: 5dfafb70-3e3d-4465-b293-1acff1f855b6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3d58525ec4bcedc4249466be93628a7c1baa21bc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67910143"
 ---
 # <a name="sysdatatypemappings-transact-sql"></a>sysdatatypemappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  O **sysdatatypemappings** exibição é usada para mostrar o mapeamento entre tipos de dados do SQL Server e tipos de dados de um sistema de gerenciamento de banco de dados (DBMS) não SQL Server. Essa exibição é armazenada na **msdb** banco de dados.  
+  A exibição **sysdatatypemappings** é usada para mostrar o mapeamento entre SQL Server tipos de dados e os tipos de dados de um sistema de gerenciamento de banco (DBMS) não SQL Server. Essa exibição é armazenada no banco de dados **msdb** .  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |**mapping_id**|**int**|A ID do mapeamento de tipo de dados.|  
-|**source_dbms**|**sysname**|Indica o nome do DBMS do qual os tipos de dados são mapeados, e pode ser um dos seguintes valores:<br /><br /> **MSSQLSERVER** = a origem é um banco de dados do SQL Server.<br /><br /> **ORACLE** = a origem é um banco de dados Oracle.|  
+|**source_dbms**|**sysname**|Indica o nome do DBMS do qual os tipos de dados são mapeados, e pode ser um dos seguintes valores:<br /><br /> **MSSQLSERVER** = a origem é um banco de dados SQL Server.<br /><br /> **Oracle** = a origem é um banco de dados Oracle.|  
 |**source_version**|**sysname**|Indica a versão do produto do DBMS de origem.|  
 |**source_type**|**sysname**|Indica o tipo de dados listado no DBMS de origem.|  
 |**source_length_min**|**bigint**|O comprimento mínimo do tipo de dados no DBMS de origem, onde um valor NULL indica que o comprimento não é usado.|  
@@ -43,7 +43,7 @@ ms.locfileid: "67910143"
 |**source_scale_max**|**int**|A escala máxima do tipo de dados no DBMS de origem, onde um valor NULL indica que a escala não é usada.|  
 |**source_nullable**|**bit**|Indicado se o tipo de dados de destino oferecer suporte a valores nulos.|  
 |**source_createparams**|**int**|Somente para uso interno.|  
-|**destination_dbms**|**sysname**|Indica o nome do DBMS de destino e pode ser um dos seguintes valores:<br /><br /> **MSSQLSERVER** = o destino é um banco de dados do SQL Server.<br /><br /> **ORACLE** = o destino é um banco de dados Oracle.<br /><br /> **DB2** = o destino é um banco de dados IBM DB2.<br /><br /> **SYBASE** = o destino é um banco de dados Sybase.|  
+|**destination_dbms**|**sysname**|Indica o nome do DBMS de destino e pode ser um dos seguintes valores:<br /><br /> **MSSQLSERVER** = o destino é um banco de dados SQL Server.<br /><br /> **Oracle** = o destino é um banco de dados Oracle.<br /><br /> **DB2** = o destino é um banco de dados IBM DB2.<br /><br /> **Sybase** = o destino é um banco de dados Sybase.|  
 |**destination_version**|**sysname**|A versão de produto do DBMS de destino.|  
 |**destination_type**|**sysname**|O tipo de dados no DBMS de destino.|  
 |**destination_length**|**bigint**|O comprimento do tipo de dados no DBMS de destino.|  
@@ -51,13 +51,13 @@ ms.locfileid: "67910143"
 |**destination_scale**|**int**|A escala do tipo de dados no DBMS de destino.|  
 |**destination_nullable**|**bit**|Indica se o tipo de dados no DBMS de destino oferece suporte a um valor nulo.|  
 |**destination_createparams**|**int**|Somente para uso interno.|  
-|**perda de dados**|**bit**|Indica se ocorre perda de dados ao mapear entre o tipo de dados no DBMS de origem e destino.|  
+|**perda**|**bit**|Indica se ocorre perda de dados ao mapear entre o tipo de dados no DBMS de origem e destino.|  
 |**is_default**|**bit**|Indica se o mapeamento de tipo de dados é usado por padrão.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Replicação de banco de dados heterogênea](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
- [Tabelas de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Exibições de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sp_helpdatatypemap &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql.md)  
+ [Tabelas de replicação &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Exibições de replicação &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_helpdatatypemap](../../relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql.md)  
   
   

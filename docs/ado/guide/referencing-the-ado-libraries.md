@@ -1,5 +1,5 @@
 ---
-title: Referenciando as bibliotecas ADO | Microsoft Docs
+title: Referenciando as bibliotecas do ADO | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,17 +15,17 @@ ms.assetid: 573f8f27-babd-4e2f-bf9a-270ee7024975
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4a5d11102989e3194f3b878b94610e4802084f97
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67922998"
 ---
 # <a name="referencing-the-ado-libraries"></a>Referenciar as bibliotecas ADO
-A versão mais recente do ADO é empacotada como *msado15.dll*. As versões mais recentes do ADO MD e ADOX são empacotadas como *msadom.dll* e *msadox.dll*, respectivamente. Essas bibliotecas são instaladas por padrão no *$installDir*, onde *$installDir* significa o caminho do diretório em que a biblioteca do ADO foi instalada no seu computador. Para usar as bibliotecas ADO em seu aplicativo, você precisa referenciá-los explicitamente no projeto de aplicativo.  
+A versão mais recente do ADO é empacotada como *MsADO15. dll*. As versões mais recentes do ADO MD e do ADOX são empacotadas como *msadom. dll* e *msadox. dll*, respectivamente. Essas bibliotecas são instaladas por padrão no *$installDir*, em que *$installDir* representa o caminho do diretório no qual a biblioteca do ADO foi instalada no computador. Para usar as bibliotecas do ADO em seu aplicativo, você deve referenciá-las explicitamente no projeto do aplicativo.  
   
- A seguir estão as etapas que você pode tomar para referenciar as bibliotecas ADO:  
+ Veja a seguir as etapas que você pode executar para fazer referência às bibliotecas do ADO:  
   
 -   [Em um aplicativo Visual Basic](../../ado/guide/referencing-the-ado-libraries-in-a-visual-basic-6-application.md)  
   
--   [Em um aplicativo do Visual C++](../../ado/guide/referencing-the-ado-libraries-in-a-visual-c-application.md)
+-   [Em um aplicativo Visual C++](../../ado/guide/referencing-the-ado-libraries-in-a-visual-c-application.md)

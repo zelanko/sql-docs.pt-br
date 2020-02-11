@@ -1,5 +1,5 @@
 ---
-title: Comandos citados | Microsoft Docs
+title: Comandos nomeados | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,14 +14,14 @@ ms.assetid: 5a0ec8f9-5ba3-4f9f-b80d-2073aa049586
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 928ac3b1d3cd753ded0bcf4337f10a654c9a3dc0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924820"
 ---
 # <a name="named-commands"></a>Comandos nomeados
-[Criar e executar um comando simples](../../../ado/guide/data/creating-and-executing-a-simple-command.md) mostra uma maneira de executar um comando. Há outra maneira: você pode torná-lo em um comando nomeado e, em seguida, chame este comando diretamente no chamado a **Conexão** objeto (atribuído à **ActiveConnection** propriedade do **comando** objeto). Nomear um comando significa que a atribuição de um nome para o **nome** propriedade de uma **comando** objeto. Por exemplo,  
+[Criar e executar um comando simples](../../../ado/guide/data/creating-and-executing-a-simple-command.md) mostra uma maneira de executar um comando. Há outra maneira: você pode torná-lo um comando nomeado e, em seguida, chamar esse comando nomeado diretamente no objeto de **conexão** (atribuído à propriedade **ActiveConnection** do objeto **Command** ). Nomear um comando significa atribuir um nome à propriedade **Name** de um objeto **Command** . Por exemplo,  
   
 ```  
 objCmd.Name = "GetCustomers"  
@@ -29,7 +29,7 @@ objCmd.ActiveConnection = objConn
 objConn.GetCustomers objRs  
 ```  
   
- O comando nomeado atua como se fosse um "método personalizado" a **Conexão** objeto. O resultado do comando é retornado como um parâmetro de saída desse "método personalizados".  
+ O comando nomeado atua como se fosse um "método personalizado" no objeto de **conexão** . O resultado do comando é retornado como um parâmetro out desse "método personalizado".  
   
  O exemplo a seguir ilustra esse recurso.  
   
@@ -89,5 +89,5 @@ ErrHandler:
 'EndNamedCmd  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Objeto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

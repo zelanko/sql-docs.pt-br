@@ -1,5 +1,5 @@
 ---
-title: Alterar instrução de CUBE (MDX) | Microsoft Docs
+title: Instrução ALTER CUBE (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 750f8ae7a1b9275bdab734a15134d255916e7d44
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68098520"
 ---
 # <a name="mdx-data-definition---alter-cube"></a>Definição de dados MDX – ALTER CUBE
 
 
-  Altera a estrutura de um cubo especificado, geralmente usado para oferecer suporte ao write-back de dimensão. Para obter mais informações sobre como usar o write-back em um aplicativo, consulte este blog de postagem: [Criando um aplicativo de write-back com o Analysis Services (blog)](https://go.microsoft.com/fwlink/?LinkId=394977)  
+  Altera a estrutura de um cubo especificado, geralmente usado para oferecer suporte ao write-back de dimensão. Para obter mais informações sobre como usar write-back em um aplicativo, consulte esta postagem de blog: [criando um aplicativo de write-back com Analysis Services (blog)](https://go.microsoft.com/fwlink/?LinkId=394977)  
   
  Observe que os write-backs de dimensão simultâneos podem resultar em um deadlock, onde o primeiro write-back é bloqueado de uma confirmação devido ao bloqueio compartilhado mantido pelo segundo write-back. Nenhum erro é gerado nessa situação, mas nenhuma operação pode avançar. Por fim, os dois write-backs expiram e as alterações são revertidas.  
   
@@ -91,7 +91,7 @@ CELL CALCULATION Calculation_Name
  *ParentName*  
  Uma expressão de cadeia de caracteres válida que fornece o nome do pai do novo membro de dimensão, a não ser que o membro esteja sendo criado na raiz.  
   
- *Nome do membro*  
+ *MemberName*  
  Uma expressão de cadeia de caracteres válida que fornece um nome de membro.  
   
  *Key_Value*  
@@ -117,7 +117,7 @@ CELL CALCULATION Calculation_Name
  Se a cláusula WITH DESCENDANTS não for utilizada, os filhos de um membro descartado se tornam filhos do pai do membro descartado. Se a cláusula WITH DESCENDENTES for utilizada, todos os descendentes e suas linhas na tabela de dimensões também serão descartados.  
   
 > [!NOTE]  
->  Para obter informações sobre como descartar membros calculados, conjuntos nomeados, ações e calculus de célula, consulte [a instrução DROP do membro &#40;MDX&#41;](../mdx/mdx-data-definition-drop-member.md), [remover instrução SET &#40;MDX&#41;](../mdx/mdx-data-definition-drop-set.md), [Instrução de ação DROP &#40;MDX&#41;](../mdx/mdx-data-definition-drop-action.md), e [instrução de CÁLCULO de CÉLULA DROP &#40;MDX&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md).  
+>  Para obter informações sobre como descartar membros calculados, conjuntos nomeados, ações e cálculos de células, consulte [&#40;mdx&#41;](../mdx/mdx-data-definition-drop-member.md), [descartar instrução &#40;MDX&#41;](../mdx/mdx-data-definition-drop-set.md), [descartar instrução de ação &#40;MDX&#41;](../mdx/mdx-data-definition-drop-action.md)e [remover instrução de cálculo de célula &#40;&#41;MDX ](../mdx/mdx-data-definition-drop-cell-calculation.md).  
   
 ## <a name="updating-the-default-dimension-member"></a>Atualizando o membro de dimensão padrão  
  Essa cláusula atualiza o membro padrão de um cubo e é usada no script de cálculo MDX para definir um membro padrão. O membro padrão pode ser especificado para a dimensão de banco de dados, uma dimensão de cubo ou para o logon de um usuário. O membro padrão também pode ser alterado durante uma sessão.  
@@ -139,7 +139,7 @@ CELL CALCULATION Calculation_Name
  *ParentName*  
  Uma expressão de cadeia de caracteres válida que fornece o nome do novo pai do membro de dimensão que está sendo movido.  
   
- *Nome do membro*  
+ *MemberName*  
  Uma expressão de cadeia de caracteres válida que fornece um nome de membro.  
   
  Unsigned_*inteiro*  
@@ -151,7 +151,7 @@ CELL CALCULATION Calculation_Name
  A cláusula UPDATE DIMENSION MEMBER permite modificar propriedades de um membro, bem como da fórmula de membro personalizado associada a um membro.  
   
 ### <a name="arguments"></a>Argumentos  
- *Nome do membro*  
+ *MemberName*  
  Uma expressão de cadeia de caracteres válida que fornece um nome de membro.  
   
  *MDX_Expression*  
@@ -161,9 +161,9 @@ CELL CALCULATION Calculation_Name
  Uma expressão MDX escalar válida que define o valor de propriedade do membro calculado.  
   
 ## <a name="creating-a-cell-calculation"></a>Criando um cálculo de célula  
- Para obter mais informações sobre como criar um cálculo de célula usando a instrução ALTER CUBE, consulte [instrução DROP de CÁLCULO de CÉLULA &#40;MDX&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md).  
+ Para obter mais informações sobre como criar um cálculo de célula usando a instrução ALTER CUBE, consulte [instrução DROP Cell calculation &#40;MDX&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Instruções de definição de dados MDX &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

@@ -14,22 +14,22 @@ ms.assetid: f0dd84c6-5c33-4ab9-82b4-4c42dfdd2277
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 158b9084ebe9aac28a2ec05c18938338c1bc90ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67922965"
 ---
 # <a name="address-book-navigation-buttons"></a>Botões de navegação do catálogo de endereços
-O aplicativo de catálogo de endereços exibe os botões de navegação na parte inferior da página da Web. Você pode usar os botões de navegação para navegar por meio dos dados na exibição de grade HTML selecionando a primeira ou última linha de dados ou linhas adjacentes à seleção atual.  
+O aplicativo de catálogo de endereços exibe os botões de navegação na parte inferior da página da Web. Você pode usar os botões de navegação para navegar pelos dados na exibição da grade HTML selecionando a primeira ou a última linha de dados ou linhas adjacentes à seleção atual.  
   
 > [!IMPORTANT]
->  Começando com o Windows 8 e Windows Server 2012, os componentes de servidor RDS não estão mais incluídos no sistema operacional Windows (consulte o Windows 8 e [manual de compatibilidade do Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Componentes de cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Devem ser migrados para aplicativos que usam o RDS [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir do Windows 8 e do Windows Server 2012, os componentes do servidor RDS não são mais incluídos no sistema operacional Windows (consulte Windows 8 e [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Os componentes do cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Os aplicativos que usam o RDS devem migrar para o [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
-## <a name="navigation-sub-procedures"></a>Navegação subprocedimentos  
- O aplicativo de catálogo de endereços contém vários procedimentos que permitem que os usuários cliquem a **primeira**, **próxima**, **anterior**, e **último** botões para mover os dados.  
+## <a name="navigation-sub-procedures"></a>Procedimentos sub de navegação  
+ O aplicativo de catálogo de endereços contém vários procedimentos que permitem aos usuários clicar nos **primeiros**botões, **próximo**, **anterior**e **último** para mover-se pelos dados.  
   
- Por exemplo, clicar na **primeiro** botão ativa o procedimento de VBScript First_OnClick Sub. O procedimento executa um [MoveFirst](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md) método, que torna a primeira linha de dados da seleção atual. Clicar na **última** botão ativa o procedimento de sub-rotina Last_OnClick, que invoca a [MoveLast](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md) método, tornando a última linha de dados da seleção atual. Os botões de navegação restantes funcionam de maneira semelhante.  
+ Por exemplo, clicar no **primeiro** botão ativa o procedimento Sub First_OnClick do VBScript. O procedimento executa um método [MoveFirst](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md) , que torna a primeira linha de dados a seleção atual. Clicar no botão **último** ativa o procedimento Last_OnClick sub, que invoca o método [MoveLast](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md) , tornando a última linha de dados a seleção atual. Os botões de navegação restantes funcionam de maneira semelhante.  
   
 ```vb
 ' Move to the first record in the bound Recordset.  
@@ -61,7 +61,7 @@ Sub Last_OnClick
 End Sub  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [Métodos MoveFirst, MoveLast, MoveNext e MovePrevious (RDS)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)
 

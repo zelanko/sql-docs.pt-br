@@ -1,5 +1,5 @@
 ---
-title: Garantindo espaço suficiente de TempDB | Microsoft Docs
+title: Garantindo espaço TempDB suficiente | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,49 +13,49 @@ ms.assetid: 09130db1-6248-4234-a1e5-a9c8e1622c06
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fe377cd15f2b95577a561e6784f78113b2843d07
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67922653"
 ---
 # <a name="ensuring-sufficient-tempdb-space"></a>Garantir espaço suficiente de TempDB
-Se ocorrerem erros durante a manipulação [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objetos que precisam de processamento de espaço no Microsoft SQL Server 6.5, talvez você precise aumentar o tamanho do TempDB. (Algumas consultas exigem espaço temporário de processamento; por exemplo, uma consulta com uma cláusula ORDER BY requer uma classificação do **Recordset**, que exige algum espaço temporário.)  
+Se ocorrerem erros durante o tratamento de objetos [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) que precisam de espaço de processamento no Microsoft SQL Server 6,5, talvez seja necessário aumentar o tamanho do tempdb. (Algumas consultas exigem espaço de processamento temporário; por exemplo, uma consulta com uma cláusula ORDER BY requer um tipo de **conjunto de registros**, que requer algum espaço temporário.)  
   
 > [!IMPORTANT]
->  Começando com o Windows 8 e Windows Server 2012, os componentes de servidor RDS não estão mais incluídos no sistema operacional Windows (consulte o Windows 8 e [manual de compatibilidade do Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Componentes de cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Devem ser migrados para aplicativos que usam o RDS [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir do Windows 8 e do Windows Server 2012, os componentes do servidor RDS não são mais incluídos no sistema operacional Windows (consulte Windows 8 e [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Os componentes do cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Os aplicativos que usam o RDS devem migrar para o [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 > [!IMPORTANT]
->  Leia este procedimento antes de executar as ações porque não é tão fácil de reduzir um dispositivo depois que ele é expandido.  
+>  Leia este procedimento antes de executar as ações porque não é tão fácil reduzir um dispositivo depois que ele é expandido.  
   
 > [!NOTE]
->  No padrão Microsoft SQL Server 7.0 e versões posterior, o TempDB é definido para aumentar automaticamente conforme necessário. Portanto, este procedimento só pode ser necessário em servidores executando versões anteriores à 7.0.  
+>  Por padrão, o Microsoft SQL Server 7,0 e posterior, o TempDB é definido para crescer automaticamente conforme necessário. Portanto, esse procedimento só pode ser necessário em servidores que executam versões anteriores a 7,0.  
   
-### <a name="to-increase-the-tempdb-space-on-sql-server-65"></a>Para aumentar o espaço de TempDB no SQL Server 6.5  
+### <a name="to-increase-the-tempdb-space-on-sql-server-65"></a>Para aumentar o espaço de TempDB no SQL Server 6,5  
   
-1.  Iniciar o Microsoft SQL Server Enterprise Manager, abra a árvore para o servidor e, em seguida, abrir a árvore de dispositivos de banco de dados.  
+1.  Inicie o Gerenciador de Microsoft SQL Server Enterprise, abra a árvore para o servidor e, em seguida, abra a árvore dispositivos de banco de dados.  
   
-2.  Selecione um dispositivo (físico) para expandir, como o mestre e duas vezes no dispositivo para abrir o **Editar banco de dados do dispositivo** caixa de diálogo.  
+2.  Selecione um dispositivo (físico) para expandir, como mestre, e clique duas vezes no dispositivo para abrir a caixa de diálogo **Editar dispositivo de banco de dados** .  
   
-     Essa caixa de diálogo mostra quanto espaço que os bancos de dados atuais estão usando.  
+     Essa caixa de diálogo mostra quanto espaço os bancos de dados atuais estão usando.  
   
-3.  No **tamanho** caixa, aumentar o dispositivo para a quantidade desejada (por exemplo, 50 megabytes (MB) de espaço em disco rígido).  
+3.  Na caixa **tamanho** , aumente o dispositivo para o valor desejado (por exemplo, 50 megabytes (MB) de espaço em disco rígido).  
   
-4.  Clique em **alteração agora** para aumentar a quantidade de espaço para o qual pode expandir o TempDB (lógico).  
+4.  Clique em **alterar agora** para aumentar a quantidade de espaço que o tempdb (lógico) pode expandir.  
   
-5.  Abrir a árvore de bancos de dados no servidor e, em seguida, clique duas vezes **TempDB** para abrir o **Editar banco de dados** caixa de diálogo. O **banco de dados** guia lista a quantidade de espaço alocada atualmente ao TempDB (**tamanho dos dados**). Por padrão, isso é de 2 MB.  
+5.  Abra a árvore bancos de dados no servidor e clique duas vezes em **tempdb** para abrir a caixa de diálogo **Editar banco de dados** . A guia **banco** de dados lista a quantidade de espaço alocada atualmente para tempdb (**tamanho dos dados**). Por padrão, é 2 MB.  
   
-6.  Sob o **tamanho** , clique em **expandir**. Os grafos mostram o espaço disponível e alocado em cada um dos dispositivos físicos. As barras na cor Bordô representam o espaço disponível.  
+6.  No grupo **tamanho** , clique em **expandir**. Os grafos mostram o espaço disponível e alocado em cada um dos dispositivos físicos. As barras na cor bordô representam o espaço disponível.  
   
-7.  Selecione uma **Log de dispositivo**, como o mestre, para exibir o tamanho disponível na **tamanho (MB)** caixa.  
+7.  Selecione um **dispositivo de log**, como mestre, para exibir o tamanho disponível na caixa **tamanho (MB)** .  
   
-8.  Clique em **expanda agora** para alocar esse espaço para o banco de dados TempDB.  
+8.  Clique em **expandir agora** para alocar esse espaço para o banco de dados tempdb.  
   
-     O **Editar banco de dados** caixa de diálogo exibe o novo tamanho alocado para o TempDB.  
+     A caixa de diálogo **Editar banco de dados** exibe o novo tamanho alocado para tempdb.  
   
- Para obter mais informações sobre esse tópico, procure o arquivo de Ajuda do Microsoft SQL Server Enterprise Manager para "Caixa de diálogo de expansão de banco de dados".  
+ Para obter mais informações sobre este tópico, pesquise o arquivo de ajuda do Microsoft SQL Server Enterprise Manager para a caixa de diálogo "expandir banco de dados".  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Conceitos básicos do RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)
 
 

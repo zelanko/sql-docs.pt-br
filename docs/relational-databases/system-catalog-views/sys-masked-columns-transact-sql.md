@@ -1,5 +1,5 @@
 ---
-title: masked_columns (Transact-SQL) | Microsoft Docs
+title: sys. masked_columns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/25/2016
 ms.prod: sql
@@ -19,24 +19,24 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9e059265dc5f5e0d2e4bc4a3b1396d2401386d7b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68102371"
 ---
-# <a name="sysmaskedcolumns-transact-sql"></a>masked_columns (Transact-SQL)
+# <a name="sysmasked_columns-transact-sql"></a>sys. masked_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Use o **masked_columns** exibição para consultar colunas de tabela que têm uma função aplicada a eles de mascaramento de dados dinâmicos. Essa exibição herda valores da exibição **sys.columns** . Ela retorna todas as colunas na exibição **sys.columns** , mais as colunas **is_masked** e **masking_function** , indicando se a coluna é mascarada e, em caso positivo, qual função de mascaramento foi definida. Essa exibição só mostra colunas com uma função de máscara aplicada.  
+  Use a exibição **Sys. masked_columns** para consultar colunas de tabela que têm uma função de máscara de dados dinâmicos aplicada a elas. Essa exibição herda valores da exibição **sys.columns** . Ela retorna todas as colunas na exibição **sys.columns** , mais as colunas **is_masked** e **masking_function** , indicando se a coluna é mascarada e, em caso positivo, qual função de mascaramento foi definida. Essa exibição só mostra colunas com uma função de máscara aplicada.  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|ID do objeto ao qual esta coluna pertence.|  
 |name|**sysname**|Nome da coluna. É exclusiva no objeto.|  
 |column_id|**int**|ID da coluna. É exclusiva no objeto.<br /><br /> Os IDs de coluna podem não ser sequenciais.|  
-|**masked_columns** retorna muitas colunas mais herdadas de **sys. Columns**.|vários|Ver [Columns &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) para obter mais definições de coluna.|  
-|is_masked|**bit**|Indica se a coluna é mascarada. 1 indica mascarado.|  
+|**Sys. masked_columns** retorna muito mais colunas herdadas de **Sys. Columns**.|vários|Consulte [Sys. columns &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) para obter mais definições de coluna.|  
+|is_masked|**bit**|Indica se a coluna está mascarada. 1 indica mascarado.|  
 |masking_function|**nvarchar(4000)**|A função de mascaramento para a coluna.|  
   
 ## <a name="remarks"></a>Comentários  
@@ -45,7 +45,7 @@ ms.locfileid: "68102371"
  Essa exibição retorna informações sobre tabelas em que o usuário tem algum tipo de permissão na tabela ou se o usuário tem a permissão VIEW ANY DEFINITION.  
   
 ## <a name="example"></a>Exemplo  
- A consulta a seguir junções **masked_columns** à **sys. Tables** retornar informações sobre todas as colunas de mascarado.  
+ A consulta a seguir une **Sys. masked_columns** a **Sys. Tables** para retornar informações sobre todas as colunas mascaradas.  
   
 ```  
 SELECT tbl.name as table_name, c.name AS column_name, c.is_masked, c.masking_function  
@@ -55,7 +55,7 @@ JOIN sys.tables AS tbl
 WHERE is_masked = 1;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Máscara de Dados Dinâmicos](../../relational-databases/security/dynamic-data-masking.md)   
  [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_xtp_gc_queue_stats (Transact-SQL) | Microsoft Docs
+title: sys. dm_xtp_gc_queue_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
@@ -20,13 +20,13 @@ author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
 ms.openlocfilehash: c56fe40ec6864ac48a991e155d06ce7c505ed593
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68090205"
 ---
-# <a name="sysdmxtpgcqueuestats-transact-sql"></a>sys.dm_xtp_gc_queue_stats (Transact-SQL)
+# <a name="sysdm_xtp_gc_queue_stats-transact-sql"></a>sys.dm_xtp_gc_queue_stats (Transact-SQL)
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
@@ -34,12 +34,12 @@ ms.locfileid: "68090205"
   
  O thread principal de coleta de lixo (thread inativo) rastreia linhas atualizadas, excluídas e inseridas de todas as transações concluídas desde a última chamada do thread principal de coleta de lixo. Quando o thread de coleta de lixo é ativado, ele determina se o carimbo de data/hora da transação ativa mais antiga foi alterado. Se a transação ativa mais antiga tiver sido alterada, o thread inativo enfileirará os itens de trabalho (em partes de 16 linhas) para transações cujos conjuntos de gravações não são mais necessários. Por exemplo, se você excluir 1.024 linhas, acabará vendo 64 itens de trabalho de coleta de lixo enfileirados, cada um contendo 16 linhas excluídas.  Depois que uma transação de usuário é confirmada, ela seleciona todos os itens enfileirados em seu agendador. Se não houver itens enfileirados no agendador, a transação do usuário realizará a pesquisa em qualquer fila do nó NUMA atual.  
   
- Você pode determinar se a coleta de lixo está liberando memória para as linhas excluídas executando sys.dm_xtp_gc_queue_stats para saber se o trabalho enfileirado está sendo processado. Se as entradas em current_queue_depth não estiverem sendo processadas ou se novos itens de trabalho não estão sendo adicionados ao current_queue_depth, isso é uma indicação de que a coleta de lixo não está liberando memória. Por exemplo, a coleta de lixo não pode ser feita se houver uma transação de longa execução.  
+ Você pode determinar se a coleta de lixo está liberando memória para as linhas excluídas executando sys.dm_xtp_gc_queue_stats para saber se o trabalho enfileirado está sendo processado. Se as entradas no current_queue_depth não estiverem sendo processadas ou se nenhum item de trabalho novo estiver sendo adicionado ao current_queue_depth, essa será uma indicação de que a coleta de lixo não está liberando memória. Por exemplo, a coleta de lixo não pode ser feita se houver uma transação de longa execução.  
   
  Para obter mais informações, veja [OLTP in-memory &#40;Otimização na memória&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
 
-|Nome da coluna|type|Descrição|  
+|Nome da coluna|Type|DESCRIÇÃO|  
 |-----------------|----------|-----------------|  
 |queue_id|**int**|O identificador exclusivo da fila.|  
 |total_enqueues|**bigint**|O número total de itens de trabalho de coleta de lixo enfileirados para essa fila desde que o servidor foi iniciado.|  
@@ -65,7 +65,7 @@ queue_id total_enqueues total_dequeues current_queue_depth  maximum_queue_depth 
 3        15625                15625    0                    15625                1233571605761  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Exibições de gerenciamento dinâmico de tabela otimizada em memória &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Exibições de gerenciamento dinâmico de tabela com otimização de memória &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

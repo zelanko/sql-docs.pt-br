@@ -1,5 +1,5 @@
 ---
-title: NonEmpty (MDX) | Microsoft Docs
+title: Não vazio (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 45daf970f69322cad36bbe5419bf1dc8cc8009b9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68088339"
 ---
 # <a name="nonempty-mdx"></a>NonEmpty (MDX)
@@ -35,16 +35,16 @@ NONEMPTY(set_expression1 [,set_expression2])
  Uma expressão MDX (Multidimensional Expressions) válida que retorna um conjunto.  
   
 ## <a name="remarks"></a>Comentários  
- Essa função retorna as tuplas do primeiro conjunto especificado que não estão vazias, quando avaliadas pelas tuplas do segundo conjunto. O **NonEmpty** função leva em conta os cálculos e preserva as tuplas duplicadas. Se um segundo conjunto não for fornecido, a expressão será avaliada no contexto das coordenadas atuais dos membros das hierarquias de atributos e medidas no cubo.  
+ Essa função retorna as tuplas do primeiro conjunto especificado que não estão vazias, quando avaliadas pelas tuplas do segundo conjunto. A função não **vazia** leva em conta cálculos e preserva tuplas duplicadas. Se um segundo conjunto não for fornecido, a expressão será avaliada no contexto das coordenadas atuais dos membros das hierarquias de atributos e medidas no cubo.  
   
 > [!NOTE]  
->  Use essa função em vez de preteridas [NonEmptyCrossjoin &#40;MDX&#41; ](../mdx/nonemptycrossjoin-mdx.md) função.  
+>  Use essa função em vez do NonEmptyCrossjoin preterido [&#40;função&#41;MDX](../mdx/nonemptycrossjoin-mdx.md) .  
   
 > [!IMPORTANT]  
 >  Não vazia é uma característica das referências de células pelas tuplas, não as próprias tuplas.  
   
 ## <a name="examples"></a>Exemplos  
- A consulta a seguir mostra um exemplo simples de **NonEmpty**, retornando todos os clientes que tinham um valor não nulo para o volume de vendas pela Internet em 1º de julho de 2001:  
+ A consulta a seguir mostra um exemplo simples de não **vazio**, retornando todos os clientes que tinham um valor não nulo para o valor de vendas pela Internet em 1º de julho de 2001:  
   
  `SELECT [Measures].[Internet Sales Amount] ON 0,`  
   
@@ -60,7 +60,7 @@ NONEMPTY(set_expression1 [,set_expression2])
   
  `FROM [Adventure Works]`  
   
- O exemplo a seguir retorna o conjunto de tuplas contendo clientes e datas de compra, usando o **filtro** função e o **NonEmpty** funções para localizar a última data em que cada cliente compra feita:  
+ O exemplo a seguir retorna o conjunto de tuplas que contém clientes e datas de compra, usando a função de **filtro** e as funções não **vazias** para localizar a última data em que cada cliente fez uma compra:  
   
  `WITH SET MYROWS AS FILTER`  
   
@@ -86,11 +86,11 @@ NONEMPTY(set_expression1 [,set_expression2])
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>Consulte também  
- [DefaultMember &#40;MDX&#41;](../mdx/defaultmember-mdx.md)   
- [Filter &#40;MDX&#41;](../mdx/filter-mdx.md)   
- [IsEmpty &#40;MDX&#41;](../mdx/isempty-mdx.md)   
- [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
- [NonEmptyCrossjoin &#40;MDX&#41;](../mdx/nonemptycrossjoin-mdx.md)  
+## <a name="see-also"></a>Consulte Também  
+ [&#41;MDX do DefaultMember &#40;](../mdx/defaultmember-mdx.md)   
+ [Filtrar &#40;&#41;MDX](../mdx/filter-mdx.md)   
+ [IsEmpty &#40;&#41;MDX](../mdx/isempty-mdx.md)   
+ [Referência de função MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)   
+ [NonEmptyCrossjoin&#41;MDX &#40;](../mdx/nonemptycrossjoin-mdx.md)  
   
   

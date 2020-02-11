@@ -1,5 +1,5 @@
 ---
-title: 'Etapa 4: Preencha a caixa de texto de detalhes | Microsoft Docs'
+title: 'Etapa 4: preencher a caixa de texto de detalhes | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -11,14 +11,14 @@ ms.assetid: cb4273e2-c907-4a86-a621-3bf110088228
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 90748ca7f725ddbf947d9686b846695da0c6626c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924063"
 ---
 # <a name="step-4-populate-the-details-text-box"></a>Etapa 4: Preencher a caixa de texto de detalhes
-Para preencher a caixa de texto de detalhes, criar uma nova sub-rotina denominada **recFields** e insira o seguinte código:  
+Para preencher a caixa de texto detalhes, crie uma nova sub-rotina chamada **recFields** e insira o código a seguir:  
   
 ```  
 Sub recFields(r As Record, l As ListBox, t As TextBox)  
@@ -44,8 +44,8 @@ Sub recFields(r As Record, l As ListBox, t As TextBox)
 End Sub  
 ```  
   
- Esse código preenche `lstDetails` com os campos e valores do registro simple passado para `recFields`. Se o recurso for um arquivo de texto, um Stream de texto é aberto do registro de recurso. O código determina se o conjunto de caracteres ASCII e copia o conteúdo do Stream em `txtDetails`.  
+ Esse código é preenchido `lstDetails` com os campos e valores do registro simples passado para `recFields`. Se o recurso for um arquivo de texto, um fluxo de texto será aberto do registro de recurso. O código determina se o conjunto de caracteres é ASCII e copia o conteúdo do `txtDetails`fluxo para.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Cenário de publicação na Internet](../../../ado/guide/data/internet-publishing-scenario.md)   
- [Etapa 3: Preencha a caixa de lista de campos](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)
+ [Etapa 3: Preencher a caixa de listagem de campos](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)

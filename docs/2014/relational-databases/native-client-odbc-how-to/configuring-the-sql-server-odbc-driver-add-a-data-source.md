@@ -13,22 +13,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c050efd2f309ccec76b80fd24b519e7d2389e4ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63126070"
 ---
 # <a name="add-a-data-source-odbc"></a>Adicionar uma fonte de dados (ODBC)
-  Você pode adicionar uma fonte de dados usando o administrador de ODBC, programaticamente (usando [SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md)), ou criando um arquivo.  
+  Você pode adicionar uma fonte de dados usando o Administrador ODBC, programaticamente (usando [SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md)) ou criando um arquivo.  
   
 ### <a name="to-add-a-data-source-by-using-odbc-administrator"></a>Para adicionar uma fonte de dados usando o Administrador ODBC  
   
-1.  Dos **painel de controle**, acesso **ferramentas administrativas** e, em seguida, **fontes de dados (ODBC)** . Como alternativa, você pode invocar odbcad32.exe.  
+1.  No **painel de controle**, acesse **Ferramentas administrativas** e, em seguida, **fontes de dados (ODBC)**. Como alternativa, você pode invocar odbcad32.exe.  
   
-2.  Clique o **DSN de usuário**, **DSN de sistema**, ou **DSN de arquivo** guia e, em seguida, clique em **adicionar**.  
+2.  Clique na **guia DSN do usuário**, DSN do **sistema**ou **DSN de arquivo** e, em seguida, clique em **Adicionar**.  
   
-3.  Clique em **SQL Server**e, em seguida, clique em **concluir**.  
+3.  Clique em **SQL Server**e em **concluir**.  
   
 4.  Conclua as etapas no Assistente para Criação de Nova Fonte de Dados no SQL Server.  
   
@@ -38,9 +38,9 @@ ms.locfileid: "63126070"
   
 ### <a name="to-add-a-file-data-source"></a>Para adicionar uma fonte de dados de arquivo  
   
-1.  Chame [SQLDriverConnect](../native-client-odbc-api/sqldriverconnect.md) com um SAVEFILE = file_name parâmetro na cadeia de conexão. Se a conexão for bem-sucedida, o driver ODBC criará uma fonte de dados de arquivo com os parâmetros de conexão no local apontado pelo parâmetro SAVEFILE.  
+1.  Chame [SQLDriverConnect](../native-client-odbc-api/sqldriverconnect.md) com um parâmetro SAVEFILE = file_name na cadeia de conexão. Se a conexão for bem-sucedida, o driver ODBC criará uma fonte de dados de arquivo com os parâmetros de conexão no local apontado pelo parâmetro SAVEFILE.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tópicos de instrução sobre a configuração do driver ODBC do SQL Server](../../database-engine/dev-guide/configuring-the-sql-server-odbc-driver-how-to-topics.md)  
   
   

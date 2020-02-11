@@ -14,16 +14,16 @@ ms.assetid: 36e0cdbe-7f50-40f5-af0d-700f5d8dc75a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9799fb3f05871c16cfcd8edb5f2a50c6f7792978
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924697"
 ---
 # <a name="passing-parameters-to-a-named-command"></a>Passar parâmetros para um comando nomeado
-Assim como o resultado do comando é passado como um *horizontalmente* variável do comando nomeado, parâmetros para um comando parametrizado pode foi passado como *no* variáveis para o comando nomeado.  
+Assim como o resultado do comando é passado como uma variável *out* do comando nomeado, os parâmetros para um comando com parâmetros podem ser passados como *em* variáveis para o comando nomeado.  
   
- O código a seguir exemplo tenta recuperar todos os pedidos feitos pelo cliente cuja **CustomerID** é "ALKFI" do banco de dados Northwind. O valor de **CustomerID** é fornecido no momento quando o comando nomeado é chamado.  
+ O exemplo de código a seguir tenta recuperar todos os pedidos feitos pelo cliente cujo **CustomerID** é "ALKFI" do banco de dados Northwind. O valor de **CustomerID** é fornecido no momento em que o comando nomeado é chamado.  
   
 ```  
 Const DS = "MySqlServer"  
@@ -76,21 +76,21 @@ Set objConn = Nothing
 Set objComm = Nothing  
 ```  
   
- Observe que todos os parâmetros de entrada devem preceder qualquer variável de saída e os tipos de dados de parâmetros devem corresponder ou podem ser convertidos para aqueles dos campos correspondentes. A seguinte instrução:  
+ Observe que todos os parâmetros de entrada devem preceder qualquer variável de saída e os tipos de dados de parâmetros devem corresponder ou podem ser convertidos para aqueles dos campos correspondentes. A instrução a seguir-  
   
 ```  
 objConn.GetOrdersOf 12345, objRs  
 ```  
   
- -resultará em um erro de tipos de dados incompatíveis, porque o parâmetro de entrada necessário é de um **cadeia de caracteres** tipo, não de um **inteiro** tipo.  
+ -resultará em um erro de tipos de dados incompatíveis, pois o parâmetro de entrada necessário é de um tipo de **cadeia de caracteres** , não de um tipo **inteiro** .  
   
- A seguinte chamada:  
+ A seguinte chamada-  
   
 ```  
 objConn.GetOrdersOf "12345", objRs  
 ```  
   
- -é válido, mas produzirá um resultado vazio definido porque esses registros não existem no banco de dados.  
+ -é válido, mas produzirá um conjunto de resultados vazio porque não existem registros desse tipo no banco de dados.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Objeto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

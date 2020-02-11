@@ -10,260 +10,260 @@ ms.assetid: cf426c69-6a8e-4d19-951d-6661d5ae2562
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 7c0866a753bb61cb688ffe491e1de77431ddcb22
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68060157"
 ---
 # <a name="project-settings-type-mapping-db2tosql"></a>Configurações do projeto (mapeamento de tipo) (DB2ToSQL)
-A página de mapeamento de tipo a **configurações do projeto** caixa de diálogo contém configurações que personalizam como SSMA converte tipos de dados do DB2 em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de dados.  
+A página mapeamento de tipos da caixa de diálogo **configurações do projeto** contém configurações que personalizam como o SSMA converte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] os tipos de dados do DB2 em tipos de dados.  
   
-A página mapeamento de tipo está disponível na **configurações do projeto** e **configurações do projeto padrão** caixas de diálogo.  
+A página mapeamento de tipo está disponível nas caixas de diálogo **configurações do projeto** e **configurações do projeto padrão** .  
   
--   Para especificar configurações para todos os projetos futuros do SSMA, na **ferramentas** menu, clique em **configurações do projeto padrão**, selecione o tipo de projeto de migração para o qual as configurações são necessárias para ser exibida ou alterada de **Versão de destino de migração** lista suspensa e, em seguida, clique em **mapeamento de tipo** na parte inferior do painel esquerdo.  
+-   Para especificar configurações para todos os projetos do SSMA futuros, no menu **ferramentas** , clique em **configurações de projeto padrão**, selecione tipo de projeto de migração para o qual as configurações devem ser exibidas ou alteradas no menu suspenso **versão de destino de migração** e clique em mapeamento de **tipo** na parte inferior do painel esquerdo.  
   
--   Para especificar configurações para o projeto atual, nos **ferramentas** menu, clique em **configurações do projeto**e, em seguida, clique em **mapeamento de tipo** na parte inferior do painel esquerdo.  
+-   Para especificar as configurações do projeto atual, no menu **ferramentas** , clique em **configurações do projeto**e, em seguida, clique em mapeamento de **tipo** na parte inferior do painel esquerdo.  
   
-Para especificar configurações para o objeto atual ou a classe de objetos, use o **mapeamento de tipo** guia na janela principal do SSMA.  
+Para especificar as configurações do objeto ou da classe de objetos atual, use a guia **mapeamento de tipo** na janela principal do SSMA.  
   
 ## <a name="options"></a>Opções  
-A tabela a seguir mostra a **mapeamento de tipo** opções da guia:  
+A tabela a seguir mostra as opções da guia **mapeamento de tipos** :  
   
-**Tipo de Origem**  
-O tipo de dados do DB2 mapeado.  
+**Tipo de origem**  
+O tipo de dados mapeado do DB2.  
   
 **Tipo de destino**  
-O destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados para o tipo de dados do DB2 especificado.  
+O tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de dados de destino para o tipo de dados do DB2 especificado.  
   
-Consulte as tabelas na próxima seção para o padrão do SSMA para DB2 mapeamentos de tipo.  
+Consulte as tabelas na próxima seção para obter os mapeamentos de tipo do SSMA para DB2 padrão.  
   
 **Adicionar**  
 Clique para adicionar um tipo de dados à lista de mapeamento.  
   
 **Editar**  
-Clique para editar o tipo de dados selecionado na lista de mapeamento.  
+Clique para editar o tipo de dados selecionado na lista mapeamento.  
   
-**Removerr**  
+**Remover**  
 Clique para remover o mapeamento de tipo de dados selecionado da lista de mapeamento.  
   
-**Restaurar Padrões**  
+**Redefinir para padrão**  
 Clique para redefinir a lista de mapeamento de tipo para os padrões do SSMA.  
   
 ## <a name="default-type-mappings"></a>Mapeamentos de tipo padrão  
-Do SSMA para DB2, você pode definir mapeamentos de tipo personalizado de argumentos, colunas, variáveis locais e valores de retorno. O mapeamento padrão para argumentos e tipos de retorno é quase idêntico.  
+No SSMA para DB2, você pode definir mapeamentos de tipo personalizados para argumentos, colunas, variáveis locais e valores de retorno. O mapeamento padrão para argumentos e tipos de retorno é quase idêntico.  
   
 ### <a name="default-argument-type-and-return-value-type-mapping"></a>Tipo de argumento padrão e mapeamento de tipo de valor de retorno  
 A tabela a seguir contém o mapeamento de tipo de dados padrão para argumentos e valores de retorno.  
   
-|DB2 Tipo de dados|Padrão [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados|  
+|Tipo de dados DB2|Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de dados padrão|  
 |-----------------|-------------------------------------------------------------------------|  
-|BFILE|varbinary(max)|  
+|bArquivo|varbinary(max)|  
 |binary_double|float [53]|  
 |binary_float|float [53]|  
-|binary_integer|int|  
+|binary_integer|INT|  
 |blob|varbinary(max)|  
-|boolean|bit|  
+|booleano|bit|  
 |char|varchar(max)|  
 |char varying|varchar(max)|  
 |character|varchar(max)|  
 |character varying|varchar(max)|  
 |CLOB|varchar(max)|  
-|date|datetime2[0]|  
-|dec|dec[38][0]|  
-|Decimal|float [53]|  
-|precisão dupla|float [53]|  
-|float|float [53]|  
-|int|int|  
-|integer|int|  
+|date|datetime2 [0]|  
+|dec|Dec [38] [0]|  
+|decimal|float [53]|  
+|double precision|float [53]|  
+|FLOAT|float [53]|  
+|INT|INT|  
+|inteiro|INT|  
 |long|varchar(max)|  
-|Long raw|varbinary(max)|  
-|Long raw [\*... 8000]<sup>\*</sup>|varbinary[\*]|  
-|Long raw [8001...\*]<sup>\*</sup>|varbinary(max)|  
-|char nacional|nvarchar(max)|  
-|National char variados|nvarchar(max)|  
-|caracteres nacionais|nvarchar(max)|  
-|a variável de caracteres nacionais<sup>\*\*</sup>|nvarchar(max)|  
-|variável de caracteres nacionais<sup>\*</sup>|nvarchar(max)|  
+|Long RAW|varbinary(max)|  
+|Long RAW [\*.. 8000]<sup>\*</sup>|varbinary [\*]|  
+|Long RAW [8001..\*]<sup>\*</sup>|varbinary(max)|  
+|caractere nacional|nvarchar(max)|  
+|variação de caractere nacional|nvarchar(max)|  
+|caractere nacional|nvarchar(max)|  
+|variação de caractere nacional<sup>\*\*</sup>|nvarchar(max)|  
+|variação de caractere nacional<sup>\*</sup>|nvarchar(max)|  
 |NCHAR|nvarchar(max)|  
 |NCLOB|nvarchar(max)|  
-|number|float [53]|  
+|número|float [53]|  
 |numeric|float [53]|  
 |nvarchar2|nvarchar(max)|  
-|pls_integer|int|  
-|bruto|varbinary(max)|  
-|REAL|float [53]|  
-|RowId|UNIQUEIDENTIFIER|  
-|Signtype|SMALLINT|  
+|pls_integer|INT|  
+|raw|varbinary(max)|  
+|real|float [53]|  
+|ROWID|UNIQUEIDENTIFIER|  
+|sinal de|SMALLINT|  
 |SMALLINT|SMALLINT|  
-|cadeia de caracteres|varchar(max)|  
+|string|varchar(max)|  
 |timestamp|datetime2|  
-|carimbo de hora com fuso horário local|datetimeoffset|  
-|carimbo de hora com fuso horário|datetimeoffset|  
-|urowid|UNIQUEIDENTIFIER|  
+|carimbo de data/hora com fuso horário local|datetimeoffset|  
+|carimbo de data/hora com fuso horário|datetimeoffset|  
+|UROWID|UNIQUEIDENTIFIER|  
 |varchar|varchar(max)|  
-|varchar2|varchar(max)|  
-|tipo XML|xml|  
+|VARCHAR2|varchar(max)|  
+|XmlType|Xml|  
   
-<sup>\*</sup> Aplica-se para retornar o mapeamento de tipo de valor apenas.  
+<sup>\*</sup>Aplica-se somente ao mapeamento de tipo de valor de retorno.  
   
-<sup>\*\*</sup> Aplica-se ao mapeamento de tipo de argumento somente.  
+<sup>\*\*</sup>Aplica-se somente ao mapeamento de tipo de argumento.  
   
 ### <a name="default-column-type-mapping"></a>Mapeamento de tipo de coluna padrão  
 A tabela a seguir contém o mapeamento de tipo padrão para colunas.  
   
-|DB2 Tipo de dados|Padrão [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados|  
+|Tipo de dados DB2|Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de dados padrão|  
 |-----------------|-------------------------------------------------------------------------|  
-|BFILE|varbinary(max)|  
+|bArquivo|varbinary(max)|  
 |binary_double|float [53]|  
 |binary_float|float [53]|  
 |blob|varbinary(max)|  
 |char|char|  
-|variando de char [\*... \*]|varchar[\*]|  
-|char [\*... \*]|char[\*]|  
+|variável de caractere\*[.. \*]|varchar [\*]|  
+|Char [\*.. \*]|Char [\*]|  
 |character|char|  
-|a variável de caractere [\*... \*]|varchar[\*]|  
-|caracteres [\*... \*]|char[\*]|  
+|variável de caractere\*[.. \*]|varchar [\*]|  
+|caractere [\*.. \*]|Char [\*]|  
 |CLOB|varchar(max)|  
-|date|datetime2[0]|  
-|dec|dec[38][0]|  
-|DEC [\*... \*]|dec[\*][0]|  
-|DEC [\*... \*][\*.. \*]|dec[\*][\*]|  
-|Decimal|decimal[38][0]|  
-|decimal[\*..\*]|decimal[\*][0]|  
-|decimal[\*..\*][\*..\*]|decimal[\*][\*]|  
-|precisão dupla|float [53]|  
-|float|float [53]|  
-|float [\*... 53]|float[\*]|  
-|float[54..\*]|float [53]|  
-|int|int|  
-|integer|int|  
+|date|datetime2 [0]|  
+|dec|Dec [38] [0]|  
+|Dec [\*.. \*]|Dec [\*] [0]|  
+|Dec [\*.. \*][\*.. \*]|Dec [\*] [\*]|  
+|decimal|Decimal [38] [0]|  
+|Decimal [\*.. \*]|Decimal [\*] [0]|  
+|Decimal [\*.. \*][\*.. \*]|Decimal [\*] [\*]|  
+|double precision|float [53]|  
+|FLOAT|float [53]|  
+|float [\*.. 53]|float [\*]|  
+|float [54..\*]|float [53]|  
+|INT|INT|  
+|inteiro|INT|  
 |long|varchar(max)|  
-|Long raw|varbinary(max)|  
-|Long raw [\*... 8000]|varbinary[\*]|  
-|Long raw [8001...\*]|varbinary(max)|  
-|Long varchar|varchar(max)|  
-|Long [\*... 8000]|varchar[\*]|  
-|Long [8001...\*]|varchar(max)|  
-|char nacional|NCHAR|  
-|National char variados [\*... \*]|nvarchar[\*]|  
-|National char [\*... \*]|nchar[\*]|  
-|caracteres nacionais|NCHAR|  
-|a variável de caractere nacional [\*... \*]|nvarchar[\*]|  
-|caractere nacional [\*... \*]|nchar[\*]|  
+|Long RAW|varbinary(max)|  
+|Long RAW [\*.. 8000]|varbinary [\*]|  
+|Long RAW [8001..\*]|varbinary(max)|  
+|long varchar|varchar(max)|  
+|longo [\*.. 8000]|varchar [\*]|  
+|longo [8001..\*]|varchar(max)|  
+|caractere nacional|NCHAR|  
+|variação de caractere nacional\*[.. \*]|nvarchar [\*]|  
+|caractere nacional [\*.. \*]|nchar [\*]|  
+|caractere nacional|NCHAR|  
+|variação de caractere nacional\*[.. \*]|nvarchar [\*]|  
+|caractere nacional [\*.. \*]|nchar [\*]|  
 |NCHAR|NCHAR|  
-|nchar[\*]|nchar[\*]|  
+|nchar [\*]|nchar [\*]|  
 |NCLOB|nvarchar(max)|  
-|number|float [53]|  
-|número [\*... \*]|numeric[\*]|  
-|número [\*... \*][\*.. \*]|numeric[\*][\*]|  
+|número|float [53]|  
+|número [\*.. \*]|numeric [\*]|  
+|número [\*.. \*][\*.. \*]|numeric [\*] [\*]|  
 |numeric|numeric|  
-|numérico [\*... \*]|numeric[\*]|  
-|numérico [\*... \*][\*.. \*]|numeric[\*][\*]|  
-|nvarchar2[\*..\*]|nvarchar[\*]|  
-|RAW [\*... \*]|varbinary[\*]|  
-|REAL|float [53]|  
-|RowId|UNIQUEIDENTIFIER|  
+|numérico [\*.. \*]|numeric [\*]|  
+|numérico [\*.. \*][\*.. \*]|numeric [\*] [\*]|  
+|NVARCHAR2 [\*.. \*]|nvarchar [\*]|  
+|RAW [\*.. \*]|varbinary [\*]|  
+|real|float [53]|  
+|ROWID|UNIQUEIDENTIFIER|  
 |SMALLINT|SMALLINT|  
 |timestamp|datetime2|  
-|carimbo de hora com fuso horário local|datetimeoffset|  
-|carimbo de hora com fuso horário local [\*... \*]|datetimeoffset[\*]|  
-|carimbo de hora com fuso horário|datetimeoffset|  
-|carimbo de hora com fuso horário [\*... \*]|datetimeoffset[\*]|  
-|carimbo de hora [\*... \*]|datetime2[\*]|  
-|urowid|UNIQUEIDENTIFIER|  
-|urowid [\*... \*]|UNIQUEIDENTIFIER|  
-|varchar[\*..\*]|varchar[\*]|  
-|varchar2[\*..\*]|varchar[\*]|  
-|tipo XML|xml|  
+|carimbo de data/hora com fuso horário local|datetimeoffset|  
+|carimbo de data/hora com\*fuso horário local [.. \*]|DateTimeOffset [\*]|  
+|carimbo de data/hora com fuso horário|datetimeoffset|  
+|carimbo de data/hora\*com fuso horário [.. \*]|DateTimeOffset [\*]|  
+|carimbo de\*data/hora [.. \*]|datetime2 [\*]|  
+|UROWID|UNIQUEIDENTIFIER|  
+|UROWID [\*.. \*]|UNIQUEIDENTIFIER|  
+|varchar [\*.. \*]|varchar [\*]|  
+|VARCHAR2 [\*.. \*]|varchar [\*]|  
+|XmlType|Xml|  
   
-### <a name="default-local-variable-type-mapping"></a>Mapeamento de tipo de variável Local padrão  
+### <a name="default-local-variable-type-mapping"></a>Mapeamento de tipo de variável local padrão  
 A tabela a seguir contém o mapeamento de tipo padrão para variáveis locais.  
   
-|DB2 Tipo de dados|Padrão [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados|  
+|Tipo de dados DB2|Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de dados padrão|  
 |-----------------|-------------------------------------------------------------------------|  
 |Bfile|varbinary(max)|  
 |binary_double|float [53]|  
 |binary_float|float [53]|  
-|binary_interger|int|  
+|binary_interger|INT|  
 |Blob|varbinary(max)|  
 |Boolean|bit|  
 |Char|char|  
-|variando de char [\*... 8000]|varchar[\*]|  
-|variando de char [8001...\*]|varchar(max)|  
-|char [\*... 8000]|char[\*]|  
-|char[8001..\*]|varchar(max)|  
-|Caractere|char|  
-|a variável de caractere [\*... 8000]|varchar[\*]|  
-|a variável de caractere [8001...\*]|varchar(max)|  
-|caracteres [\*... 8000]|char[\*]|  
-|caracteres [8001...\*]|varchar(max)|  
+|variável de caractere\*[.. 8000]|varchar [\*]|  
+|variação de caractere [8001.\*.]|varchar(max)|  
+|Char [\*.. 8000]|Char [\*]|  
+|Char [8001..\*]|varchar(max)|  
+|Character|char|  
+|variável de caractere\*[.. 8000]|varchar [\*]|  
+|variável de caractere [8001.\*.]|varchar(max)|  
+|caractere [\*.. 8000]|Char [\*]|  
+|caractere [8001..\*]|varchar(max)|  
 |CLOB|varchar(max)|  
-|date|datetime2[0]|  
-|dec|dec[38][0]|  
-|DEC [\*... \*]|dec[\*][0]|  
-|DEC [\*... \*][\*.. \*]|dec[\*][\*]|  
-|Decimal|decimal[38][0]|  
-|decimal[\*..\*]|decimal[\*][0]|  
-|decimal[\*..\*][\*..\*]|decimal[\*][\*]|  
-|precisão dupla|float [53]|  
+|date|datetime2 [0]|  
+|dec|Dec [38] [0]|  
+|Dec [\*.. \*]|Dec [\*] [0]|  
+|Dec [\*.. \*][\*.. \*]|Dec [\*] [\*]|  
+|decimal|Decimal [38] [0]|  
+|Decimal [\*.. \*]|Decimal [\*] [0]|  
+|Decimal [\*.. \*][\*.. \*]|Decimal [\*] [\*]|  
+|double precision|float [53]|  
 |Float|float [53]|  
-|float [\*... 53]|float[\*]|  
-|float[54..\*]|float [53]|  
-|int|int|  
-|Inteiro|int|  
-|inteiro [\*... \*]|numeric[\*][0]|  
-|Long|varchar(max)|  
-|Long raw|varbinary(max)|  
-|Long raw [\*... 8000]|varbinary[\*]|  
-|Long raw [8001...\*]|varbinary(max)|  
-|char nacional|NCHAR|  
-|National char variados [\*... 4000]|nvarchar[\*]|  
-|National char variados [4001...\*]|nvarchar(max)|  
-|National char [\*... 4000]|nchar[\*]|  
-|National char [4001...\*]|nvarchar(max)|  
-|caracteres nacionais|NCHAR|  
-|caractere nacional [\*... 4000]|nvarchar[\*]|  
-|caractere nacional [4001...\*]|nvarchar(max)|  
-|a variável de caractere nacional [\*... 4000]|nvarchar[\*]|  
-|a variável de caractere nacional [4001...\*]|nvarchar(max)|  
+|float [\*.. 53]|float [\*]|  
+|float [54..\*]|float [53]|  
+|Int|INT|  
+|Integer|INT|  
+|inteiro [\*.. \*]|numeric [\*] [0]|  
+|long|varchar(max)|  
+|Long RAW|varbinary(max)|  
+|Long RAW [\*.. 8000]|varbinary [\*]|  
+|Long RAW [8001..\*]|varbinary(max)|  
+|caractere nacional|NCHAR|  
+|variação de caractere nacional\*[.. 4000]|nvarchar [\*]|  
+|variação de caractere nacional [4001.\*.]|nvarchar(max)|  
+|caractere nacional [\*.. 4000]|nchar [\*]|  
+|caractere nacional [4001..\*]|nvarchar(max)|  
+|caractere nacional|NCHAR|  
+|caractere nacional [\*.. 4000]|nvarchar [\*]|  
+|caractere nacional [4001..\*]|nvarchar(max)|  
+|variação de caractere nacional\*[.. 4000]|nvarchar [\*]|  
+|variação de caractere nacional [4001.\*.]|nvarchar(max)|  
 |Nchar|NCHAR|  
-|nchar [\*... 4000]|nchar[\*]|  
-|nchar[4001..\*]|nvarchar(max)|  
-|nchar variados [\*... 4000]|nvarchar[\*]|  
-|nchar variados [4001...\*]|nvarchar(max)|  
+|nchar [\*.. 4000]|nchar [\*]|  
+|nchar [4001..\*]|nvarchar(max)|  
+|nchar variando\*[.. 4000]|nvarchar [\*]|  
+|variável nchar [4001..\*]|nvarchar(max)|  
 |NCLOB|nvarchar(max)|  
-|Number|float [53]|  
-|número [\*... \*]|numeric[\*]|  
-|número [\*... \*][\*.. \*]|numeric[\*][\*]|  
-|Numeric|numeric[38][0]|  
-|numérico [\*... \*]|numeric[\*]|  
-|numérico [\*... \*][\*.. \*]|numeric[\*][\*]|  
-|NVARCHAR2 [\*... 4000]|nvarchar[\*]|  
-|nvarchar2[4001..\*]|nvarchar(max)|  
-|pls_integer|int|  
-|RAW [\*... 8000]|varbinary[\*]|  
-|RAW [8001...\*]|varbinary(max)|  
+|Número|float [53]|  
+|número [\*.. \*]|numeric [\*]|  
+|número [\*.. \*][\*.. \*]|numeric [\*] [\*]|  
+|Numérico|numeric [38] [0]|  
+|numérico [\*.. \*]|numeric [\*]|  
+|numérico [\*.. \*][\*.. \*]|numeric [\*] [\*]|  
+|NVARCHAR2 [\*.. 4000]|nvarchar [\*]|  
+|NVARCHAR2 [4001..\*]|nvarchar(max)|  
+|pls_integer|INT|  
+|RAW [\*.. 8000]|varbinary [\*]|  
+|RAW [8001..\*]|varbinary(max)|  
 |Real|float [53]|  
 |Rowid|UNIQUEIDENTIFIER|  
-|Signtype|SMALLINT|  
+|Sinal de|SMALLINT|  
 |Smallint|SMALLINT|  
-|cadeia de caracteres [\*... 8000]|varchar[\*]|  
-|cadeia de caracteres [8001...\*]|varchar(max)|  
+|Cadeia de\*caracteres [.. 8000]|varchar [\*]|  
+|Cadeia de caracteres [8001\*..]|varchar(max)|  
 |timestamp|datetime2|  
-|carimbo de hora com fuso horário local|datetimeoffset|  
-|carimbo de hora com fuso horário|datetimeoffset|  
-|carimbo de hora com fuso horário local [\*... \*]|datetimeoffset[\*]|  
-|carimbo de hora com fuso horário [\*... \*]|datetimeoffset[\*]|  
-|carimbo de hora [\*... \*]|datetime2[\*]|  
-|urowid|UNIQUEIDENTIFIER|  
-|urowid [\*... \*]|UNIQUEIDENTIFIER|  
-|varchar[\*..8000]|varchar[\*]|  
-|varchar[8001..\*]|varchar(max)|  
-|varchar2[\*..8000]|varchar[\*]|  
-|varchar2[8001..\*]|varcha(max)|  
-|tipo XML|xml|  
+|carimbo de data/hora com fuso horário local|datetimeoffset|  
+|carimbo de data/hora com fuso horário|datetimeoffset|  
+|carimbo de data/hora com\*fuso horário local [.. \*]|DateTimeOffset [\*]|  
+|carimbo de data/hora\*com fuso horário [.. \*]|DateTimeOffset [\*]|  
+|carimbo de\*data/hora [.. \*]|datetime2 [\*]|  
+|UROWID|UNIQUEIDENTIFIER|  
+|UROWID [\*.. \*]|UNIQUEIDENTIFIER|  
+|varchar [\*.. 8000]|varchar [\*]|  
+|varchar [8001..\*]|varchar(max)|  
+|VARCHAR2 [\*.. 8000]|varchar [\*]|  
+|VARCHAR2 [8001..\*]|varcha (máx.)|  
+|XmlType|Xml|  
   
-## <a name="see-also"></a>Consulte também  
-[Referência da Interface do usuário &#40;DB2ToSQL&#41;](../../ssma/db2/user-interface-reference-db2tosql.md)  
+## <a name="see-also"></a>Consulte Também  
+[Referência da interface do usuário &#40;DB2ToSQL&#41;](../../ssma/db2/user-interface-reference-db2tosql.md)  
   

@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 04b836a53b4b9928118221053d1fbc2c3a89dfdd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63217808"
 ---
 # <a name="count-rows-in-a-table-visual-database-tools"></a>Contar linhas em uma tabela (Visual Database Tools)
@@ -43,7 +43,7 @@ ms.locfileid: "63217808"
   
 2.  Clique com o botão direito do mouse na tela de fundo do painel Diagrama e escolha **Adicionar Grupo por** no menu de atalho. O [Designer de Consulta e Exibição](visual-database-tools.md) adicionará a coluna **Agrupar por** à grade do painel Critérios.  
   
-3.  Selecione  **\* (todas as colunas)** no retângulo que representa a tabela ou objeto com valor de tabela.  
+3.  Selecione ** \* (todas as colunas)** no retângulo que representa a tabela ou o objeto com valor de tabela.  
   
      O Designer de Consulta e Exibição preenche automaticamente o termo **Contagem** na coluna **Agrupar por** no painel de critérios e atribui um alias de coluna à coluna que você está resumindo. Você pode substituir esse alias gerado automaticamente por outro que tenha mais significado. Para obter mais detalhes, veja [Criar aliases de coluna &#40;Visual Database Tools&#41;](create-column-aliases-visual-database-tools.md).  
   
@@ -55,7 +55,7 @@ ms.locfileid: "63217808"
   
 2.  Clique com o botão direito do mouse na tela de fundo do painel Diagrama e escolha **Adicionar Grupo por** no menu de atalho. O Designer de Consulta e Exibição adicionará a coluna **Agrupar por** à grade do Painel de Critérios.  
   
-3.  Selecione  **\*(todas as colunas)** no retângulo que representa a tabela ou objeto estruturado por tabela.  
+3.  Selecione ** \*(todas as colunas)** no retângulo que representa a tabela ou o objeto estruturado por tabela.  
   
      O Designer de Consulta e Exibição preenche automaticamente o termo **Contagem** na coluna **Agrupar por** no painel de critérios e atribui um alias de coluna à coluna que você está resumindo. Para criar um título de coluna mais útil na saída da consulta, consulte [Criar aliases de coluna &#40;Visual Database Tools&#41;](create-column-aliases-visual-database-tools.md).  
   
@@ -86,8 +86,8 @@ ms.locfileid: "63217808"
   
 5.  Executa a consulta.  
   
-## <a name="see-also"></a>Consulte também  
- [Classificar e agrupar resultados da consulta &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Classificar e agrupar resultados de consulta &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
  [Resumir resultados da consulta &#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)  
   
   

@@ -18,25 +18,25 @@ ms.assetid: da51b0f8-5ad0-4aeb-96ed-2b3672a2a6e2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d3bddc4642d13fe84d35782849a80d2737601763
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68106400"
 ---
-# <a name="msmergealtsyncpartners-transact-sql"></a>MSmerge_altsyncpartners (Transact-SQL)
+# <a name="msmerge_altsyncpartners-transact-sql"></a>MSmerge_altsyncpartners (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  O **MSmerge_altsyncpartners** tabela controla a associação de quem são os parceiros de sincronização atual para um publicador. Essa tabela é armazenada nos bancos de dados da publicação e assinatura.  
+  A tabela **MSmerge_altsyncpartners** rastreia a associação de quem são os parceiros de sincronização atuais para um Publicador. Essa tabela é armazenada nos bancos de dados de publicação e de assinatura.  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |**subid**|**uniqueidentifier**|O identificador para o Publicador original.|  
 |**alternate_subid**|**uniqueidentifier**|O identificador para o Assinante que é o parceiro de sincronização alternativo.|  
-|**description**|**nvarchar(255)**|A descrição do parceiro de sincronização alternativo.|  
+|**ndescrição**|**nvarchar (255)**|A descrição do parceiro de sincronização alternativo.|  
   
-## <a name="see-also"></a>Consulte também  
- [Tabelas de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Tabelas de replicação &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Exibições de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

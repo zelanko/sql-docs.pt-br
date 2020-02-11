@@ -13,55 +13,55 @@ ms.assetid: 84387746-aa3e-44fd-ad6c-a8214a6966dc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 61f3e34af2a9331118b41657cf958021b972b04a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923138"
 ---
 # <a name="working-with-multidimensional-data"></a>Manipular dados multidimensionais
-Um *conjunto de células* é o resultado de uma consulta em dados multidimensionais. Ele consiste em uma coleção de eixos, normalmente não mais do que quatro eixos e normalmente apenas dois ou três. Uma *eixo* é uma coleção de membros de uma ou mais dimensões, que é usada para localizar ou filtrar valores específicos em um cubo.  
+Um *células* é o resultado de uma consulta em dados multidimensionais. Ele consiste em uma coleção de eixos, geralmente não mais do que quatro eixos e geralmente apenas dois ou três. Um *eixo* é uma coleção de membros de uma ou mais dimensões, que é usada para localizar ou filtrar valores específicos em um cubo.  
   
- Um *posição* é um ponto ao longo do eixo. Para um eixo que consiste em uma única dimensão, essas posições são um subconjunto dos membros de dimensão. Se um eixo consiste em mais de uma dimensão e, em seguida, cada posição é uma entidade composta, que tem *n* partes where *n* é o número de dimensões orientados ao longo desse eixo. Cada parte da posição é um membro de uma dimensão constituinte.  
+ Uma *posição* é um ponto ao longo de um eixo. Para um eixo que consiste em uma única dimensão, essas posições são um subconjunto dos membros da dimensão. Se um eixo consistir em mais de uma dimensão, cada posição será uma entidade composta, que tem *n* partes em que *n* é o número de dimensões orientadas ao longo desse eixo. Cada parte da posição é um membro de uma dimensão constituinte.  
   
- Por exemplo, se as dimensões de Geografia e o produto de um cubo que contém dados de vendas são orientadas ao longo do eixo x de um conjunto de células, uma posição ao longo deste eixo pode conter os membros "EUA" e "Computadores". Neste exemplo, determinar uma posição ao longo do eixo x requer que os membros de cada dimensão são orientados ao longo do eixo.  
+ Por exemplo, se as dimensões de Geografia e produto de um cubo que contém dados de vendas forem orientadas ao longo do eixo x de um células, uma posição ao longo desse eixo poderá conter os membros "EUA" e "computadores". Neste exemplo, a determinação de uma posição ao longo do eixo x requer que os membros de cada dimensão sejam orientados ao longo do eixo.  
   
- Um *célula* é um objeto posicionado na interseção de coordenadas do eixo. Cada célula tem várias partes de informações associado a ele, incluindo os dados em si, uma cadeia de caracteres formatada (o formulário de exibição dos dados da célula) e o valor ordinal da célula. (Cada célula é um valor ordinal exclusivo no conjunto de células. O valor ordinal da primeira célula no conjunto de células é zero, enquanto a célula mais à esquerda na segunda linha de um conjunto de células com oito colunas teria um valor ordinal de oito.)  
+ Uma *célula* é um objeto posicionado na interseção de coordenadas do eixo. Cada célula tem várias informações associadas a ela, incluindo os dados em si, uma cadeia de caracteres formatada (a forma de exibição de dados da célula) e o valor ordinal da célula. (Cada célula é um valor ordinal exclusivo no células. O valor ordinal da primeira célula no células é zero, enquanto a célula mais à esquerda na segunda linha de um células com oito colunas teria um valor ordinal de oito.)  
   
- Por exemplo, um cubo tem as seguintes seis dimensões (Observe que esse esquema de cubo é ligeiramente diferente do exemplo fornecido em [visão geral de esquemas Multidimensional e de dados](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)):  
+ Por exemplo, um cubo tem as seis dimensões a seguir (Observe que esse esquema de cubos difere ligeiramente do exemplo fornecido em [visão geral dos dados e esquemas multidimensionais](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)):  
   
--   Vendedor  
+-   Representante  
   
--   Geografia (hierarquia natural) - continentes, países, Estados e assim por diante  
+-   Geografia (hierarquia natural)-continentes, países, Estados e assim por diante  
   
--   Trimestres de trimestres, meses, dias  
+-   Trimestres-trimestres, meses, dias  
   
 -   Years  
   
--   Medidas - BudgetedSales de vendas, PercentChange,  
+-   Medidas-vendas, PercentChange, BudgetedSales  
   
--   Products  
+-   Produtos  
   
- O conjunto de células a seguir representa as vendas de 1991 para todos os produtos:  
+ O células a seguir representa as vendas de 1991 para todos os produtos:  
   
 > [!NOTE]
->  No exemplo, os valores de célula podem ser exibidos como pares ordenados de ordinais de posição do eixo onde o primeiro dígito representa a posição do eixo x e o segundo dígito a posição do eixo y.  
+>  Os valores de célula no exemplo podem ser exibidos como pares ordenados de ordinais de posição do eixo em que o primeiro dígito representa a posição do eixo x e o segundo dígito a posição do eixo y.  
   
- As características deste conjunto de células são da seguinte maneira:  
+ As características desse células são as seguintes:  
   
--   Dimensões de eixo: Trimestres, vendedor, geografia  
+-   Dimensões do eixo: trimestres, vendedor, Geografia  
   
--   Dimensões de filtro: Produtos de medidas, anos,  
+-   Dimensões de filtro: medidas, anos, produtos  
   
--   Dois eixos: COLUNA (x, ou eixo 0) e linha (y ou eixo 1)  
+-   Dois eixos: coluna (x ou eixo 0) e linha (y ou eixo 1)  
   
--   eixo x: dois aninhados dimensões, o vendedor e Geografia  
+-   eixo x: duas dimensões aninhadas, vendedor e Geografia  
   
--   eixo y: Dimensão de trimestres  
+-   eixo y: dimensão de trimestres  
   
- O eixo x tem duas dimensões aninhadas: Vendedor e Geografia. De geografia, quatro membros são selecionados: Seattle, Boston, Sul dos EUA e Japão. Dois membros são selecionados de vendedor: Meu amor e Nash. Isso resulta em um total de oito posições nesse eixo (8 = 4 * 2).  
+ O eixo x tem duas dimensões aninhadas: vendedor e geografia. Na geografia, quatro membros são selecionados: Seattle, Boston, EUA-Sul e Japão. Dois membros são selecionados do vendedor: namorado e Nash. Isso produz um total de oito posições neste eixo (8 = 4 * 2).  
   
- Cada coordenada é representada como uma posição com dois membros: um da dimensão de vendedor e outro da dimensão Geografia:  
+ Cada coordenada é representada como uma posição com dois membros – um da dimensão vendedor e outro da dimensão Geografia:  
   
 ```console
 (Valentine, Seattle), (Valentine, Boston), (Valentine, USA_North),  
@@ -69,17 +69,17 @@ Um *conjunto de células* é o resultado de uma consulta em dados multidimension
 (Nash, Japan)  
 ```  
   
- O eixo y tem apenas uma dimensão, que contém as seguintes oito posições:  
+ O eixo y tem apenas uma dimensão, contendo as oito posições a seguir:  
   
 ```console
 Jan, Feb, Mar, Qtr2, Qtr3, Oct, Nov, Dec  
 ```  
   
- Conjuntos de células, células, eixos e posições são todos representadas no ADO MD por objetos correspondentes: [Conjunto de células](../../../ado/reference/ado-md-api/cellset-object-ado-md.md), [célula](../../../ado/reference/ado-md-api/cell-object-ado-md.md), [eixo](../../../ado/reference/ado-md-api/axis-object-ado-md.md), e [posição](../../../ado/reference/ado-md-api/position-object-ado-md.md).  
+ Células, Cells, Axes e Positions são todos representados em ADO MD por objetos correspondentes: [células](../../../ado/reference/ado-md-api/cellset-object-ado-md.md), [Cell](../../../ado/reference/ado-md-api/cell-object-ado-md.md), [Axis](../../../ado/reference/ado-md-api/axis-object-ado-md.md)e [Position](../../../ado/reference/ado-md-api/position-object-ado-md.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Modelo de objeto do ADO MD](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Modelo de objeto ADO MD](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
  [ADO (Multidimensional) (ADO MD)](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
- [Visão geral de esquemas Multidimensional e de dados](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)   
+ [Visão geral de esquemas multidimensionais e dados](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)   
  [Programando com ADO MD](../../../ado/guide/multidimensional/programming-with-ado-md.md)   
- [Usando o ADO com ADO MD](../../../ado/guide/multidimensional/using-ado-with-ado-md.md)
+ [Usar o ADO com ADO MD](../../../ado/guide/multidimensional/using-ado-with-ado-md.md)

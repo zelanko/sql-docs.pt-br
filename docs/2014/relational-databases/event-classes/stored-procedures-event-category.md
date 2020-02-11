@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 47dc8180fd6c8f59050520477724ff8adbc46a6a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63061009"
 ---
 # <a name="stored-procedures-event-category"></a>Categoria de evento dos procedimentos armazenados
@@ -28,7 +28,7 @@ ms.locfileid: "63061009"
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|Descrição|  
+|Tópico|DESCRIÇÃO|  
 |-----------|-----------------|  
 |[Classe de evento RPC:Completed](rpc-completed-event-class.md)|Indica que uma RPC (chamada de procedimento remoto) foi completada.|  
 |[Classe de evento PreConnect:Completed](preconnect-completed-event-class.md)|Indica quando a função de classificação Administrador de Recursos conclui a execução.|  
@@ -45,7 +45,7 @@ ms.locfileid: "63061009"
 |[Classe de evento SP:StmtCompleted](sp-stmtcompleted-event-class.md)|Indica que uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] em um procedimento armazenado foi concluída.|  
 |[Classe de evento SP: StmtStarting](sp-stmtstarting-event-class.md)|Indica que uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] em um procedimento armazenado foi iniciada.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Eventos estendidos](../extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   

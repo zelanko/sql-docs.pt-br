@@ -22,16 +22,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0aefbfdeb984aa6b384c5c123ed69ec4fdaa41ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200034"
 ---
 # <a name="assigning-storage"></a>Atribuindo armazenamento
   Um aplicativo pode atribuir armazenamento para resultados antes ou depois de executar uma instrução SQL. Caso prepare ou execute a instrução SQL primeiro, um aplicativo pode consultar o conjunto de resultados antes de atribuir o armazenamento para resultados. Por exemplo, caso o conjunto de resultados seja desconhecido, o aplicativo deve recuperar o número de colunas antes de atribuir o armazenamento a eles.  
   
- Para associar o armazenamento para uma coluna de dados, um aplicativo chama [SQLBindCol](../native-client-odbc-api/sqlbindcol.md)e passa-o:  
+ Para associar o armazenamento de uma coluna de dados, um aplicativo chama [SQLBindCol](../native-client-odbc-api/sqlbindcol.md)e o passa:  
   
 -   O tipo de dados no qual os dados serão convertidos.  
   
@@ -49,15 +49,15 @@ ms.locfileid: "63200034"
   
 -   A associação que reconhece a coluna é concluída quando cada coluna é associada a sua própria matriz de variáveis.  
   
-     A associação é especificada chamando [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md) com *atributo* definido como SQL_ATTR_ROW_BIND_TYPE e *ValuePtr* definido como SQL_BIND_BY_COLUMN. Todos as matrizes devem ter o mesmo número de elementos.  
+     A associação de coluna é especificada chamando [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md) com o *atributo* definido como SQL_ATTR_ROW_BIND_TYPE e *ValuePtr* definido como SQL_BIND_BY_COLUMN. Todos as matrizes devem ter o mesmo número de elementos.  
   
 -   A associação que reconhece a linha é concluída quando todos os parâmetros na instrução SQL são associados como uma unidade a uma matriz de estruturas que contêm as variáveis individuais dos parâmetros.  
   
-     A associação é especificada chamando **SQLSetStmtAttr** com *atributo* definido como SQL_ATTR_ROW_BIND_TYPE e *ValuePtr* definido como o tamanho do contendo a estrutura de colunas do conjunto de variáveis que receberão o resultado.  
+     A associação de linha é especificada chamando **SQLSetStmtAttr** com o *atributo* definido como SQL_ATTR_ROW_BIND_TYPE e *ValuePtr* definido como o tamanho da estrutura que contém as variáveis que receberão as colunas do conjunto de resultados.  
   
  O aplicativo também define SQL_ATTR_ROW_ARRAY_SIZE como o número de elementos nas matrizes da coluna ou da linha e define SQL_ATTR_ROW_STATUS_PTR e SQL_ATTR_ROWS_FETCHED_PTR.  
   
-## <a name="see-also"></a>Consulte também  
- [Processando resultados &#40;ODBC&#41;](processing-results-odbc.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Processando resultados &#40;&#41;ODBC](processing-results-odbc.md)  
   
   

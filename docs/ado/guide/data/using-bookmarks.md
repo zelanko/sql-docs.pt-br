@@ -14,18 +14,18 @@ ms.assetid: cca244e6-84f8-4394-bca9-f7a819b8f4df
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9fa2a738a3e94cd306619a318b75a2fd506972c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923602"
 ---
 # <a name="using-bookmarks"></a>Usar indicadores
-Geralmente é útil retornar diretamente a um registro específico após ter movidos a **Recordset** sem precisar rolar por todos os registros e comparar valores. Por exemplo, se você tentar procurar um registro usando o **encontrar** método, mas a pesquisa não retornar nenhum registro, são colocados automaticamente no final o **conjunto de registros**. Se seu provedor oferecer suporte a eles, os indicadores podem ser usados para marcar seu lugar antes de usar o **localizar** método para que você possa retornar para seu local. Um indicador é um **Variant** tipo de valor que identifica exclusivamente um registro em um **Recordset** objeto.  
+Geralmente, é útil retornar diretamente a um registro específico depois de movido no **conjunto de registros** sem a necessidade de percorrer cada registro e comparar valores. Por exemplo, se você tentar Pesquisar um registro usando o método **Find** , mas a pesquisa não retornar registros, você será colocado automaticamente em qualquer uma das extremidades do **conjunto de registros**. Se seu provedor oferecer suporte a eles, os indicadores poderão ser usados para marcar seu local antes de usar o método **Find** para que você possa retornar ao seu local. Um indicador é um valor de tipo **Variant** que identifica exclusivamente um registro em um objeto **Recordset** .  
   
- Você também pode usar uma matriz de variantes de marcadores com o **filtro de conjunto de registros** método para filtrar em um conjunto de registros selecionado. Para obter detalhes sobre essa técnica, consulte Filtrando os resultados no tópico [trabalhando com conjuntos de registros](../../../ado/guide/data/working-with-recordsets.md), mais adiante nesta seção.  
+ Você também pode usar uma matriz variante de indicadores com o método de **filtro Recordset** para filtrar em um conjunto selecionado de registros. Para obter detalhes sobre essa técnica, consulte Filtrando os resultados no tópico, [trabalhando com conjuntos de registros](../../../ado/guide/data/working-with-recordsets.md), mais adiante nesta seção.  
   
- Você pode usar o **indicador** propriedade para obter um indicador para um registro ou definir o registro atual um **Recordset** objeto para o registro identificado por um indicador válido. O código a seguir usa o **indicador** propriedade para definir um indicador e, em seguida, retornar para o registro com indicador depois de passar para outros registros. Para determinar se sua **conjunto de registros** dá suporte a indicadores, use o **dá suporte a** método.  
+ Você pode usar a propriedade **Bookmark** para obter um indicador de um registro ou definir o registro atual em um objeto **Recordset** para o registro identificado por um indicador válido. O código a seguir usa a propriedade **Bookmark** para definir um indicador e, em seguida, retornar ao registro com indicador depois de passar para outros registros. Para determinar se o **conjunto de registros** dá suporte a indicadores, use o método **com suporte** .  
   
 ```  
 'BeginBookmarkEg  
@@ -46,6 +46,6 @@ End If
 'EndBookmarkEg  
 ```  
   
- O [dá suporte a](../../../ado/reference/ado-api/supports-method.md) método é abordado em mais detalhes posteriormente.  
+ O método de [suporte](../../../ado/reference/ado-api/supports-method.md) é abordado em mais detalhes posteriormente.  
   
- Exceto para o caso de clonado **conjuntos de registros**, os indicadores são exclusivos para o **Recordset** no qual eles foram criados, mesmo se o mesmo comando é usado. Isso significa que você não pode usar um **indicador** obtidas de um **conjunto de registros** mover para o mesmo registro em um segundo **Recordset** aberta com o mesmo comando.
+ Exceto pelo caso de **conjuntos de registros**clonados, os indicadores são exclusivos do **conjunto de registros** no qual foram criados, mesmo que o mesmo comando seja usado. Isso significa que você não pode usar um **indicador** obtido de um **conjunto de registros** para mover para o mesmo registro em um segundo conjunto de **registros** aberto com o mesmo comando.

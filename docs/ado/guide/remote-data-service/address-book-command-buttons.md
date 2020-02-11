@@ -14,44 +14,44 @@ ms.assetid: 80676831-6488-4dad-a558-c47c52256a22
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d1aa5b628bec9399374b94a2cd78090207bf09b7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67922982"
 ---
 # <a name="address-book-command-buttons"></a>Botões de comando do catálogo de endereços
 O aplicativo de catálogo de endereços inclui os seguintes botões de comando:  
   
--   Um **localizar** botão para enviar uma consulta ao banco de dados.  
+-   Um botão **Localizar** para enviar uma consulta ao banco de dados.  
   
--   Um **limpar** botão para limpar as caixas de texto antes de iniciar uma nova pesquisa.  
+-   Um botão **limpar** para limpar as caixas de texto antes de iniciar uma nova pesquisa.  
   
--   Uma **atualizar o perfil** botão para salvar as alterações em um registro de funcionário.  
+-   Um botão **Atualizar perfil** para salvar alterações em um registro de funcionário.  
   
--   Um **Cancelar alterações** botão para descartar as alterações.  
+-   Um botão **cancelar alterações** para descartar as alterações.  
   
 > [!IMPORTANT]
->  Começando com o Windows 8 e Windows Server 2012, os componentes de servidor RDS não estão mais incluídos no sistema operacional Windows (consulte o Windows 8 e [manual de compatibilidade do Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Componentes de cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Devem ser migrados para aplicativos que usam o RDS [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir do Windows 8 e do Windows Server 2012, os componentes do servidor RDS não são mais incluídos no sistema operacional Windows (consulte Windows 8 e [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Os componentes do cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Os aplicativos que usam o RDS devem migrar para o [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="find-button"></a>Botão Localizar  
- Clicar a **localizar** botão ativa o procedimento de VBScript Find_OnClick Sub, que compila e envia a consulta SQL. Clicar nesse botão popula a grade de dados.  
+ Clicar no botão **Localizar** ativa o procedimento Sub Find_OnClick do VBScript, que compila e envia a consulta SQL. Clicar nesse botão popula a grade de dados.  
   
-## <a name="building-the-sql-query"></a>Criar a consulta SQL  
- A primeira parte do procedimento Sub Find_OnClick compila a consulta SQL, uma só vez, acrescentando cadeias de caracteres de texto para uma instrução de SQL SELECT global. Ele começa definindo a variável `myQuery` para uma instrução SQL SELECT que solicita a todas as linhas de dados da tabela de origem de dados. Em seguida, o procedimento de sub-rotina examina cada uma das quatro caixas de entrada na página.  
+## <a name="building-the-sql-query"></a>Criando a consulta SQL  
+ A primeira parte do procedimento Find_OnClick sub cria a consulta SQL, uma frase por vez, acrescentando cadeias de caracteres de texto a uma instrução SQL SELECT global. Ele começa definindo a variável `myQuery` como uma instrução SQL SELECT que solicita todas as linhas de dados da tabela de fonte de dados. Em seguida, o procedimento Sub examina cada uma das quatro caixas de entrada na página.  
   
- Como o programa usa a palavra `like` na criação de instruções SQL, as consultas são as pesquisas de subcadeia de caracteres em vez de correspondências exatas.  
+ Como o programa usa a palavra `like` na criação de instruções SQL, as consultas são subcadeias de pesquisa em vez de correspondências exatas.  
   
- Por exemplo, se o **Sobrenome** caixa contido a entrada "Berge" e o **título** caixa contido a entrada de "Gerente de programas", a instrução SQL (valor de `myQuery`) leria:  
+ Por exemplo, se a caixa **sobrenome** contivesse a entrada "Berge" e a caixa de **título** contivesse a entrada "gerente do programa", a `myQuery`instrução SQL (valor de) lerá:  
   
 ```sql
 Select FirstName, LastName, Title, Email, Building, Room, Phone from Employee where lastname like 'Berge%' and title like 'Program Manager%'  
 ```  
   
- Se a consulta foi bem-sucedida, todas as pessoas com um sobrenome que contém o texto "Berge" (como Berge e Berger) e com um título que contêm as palavras "Gerente de programas" (por exemplo, gerente de programa, tecnologias avançadas) são exibidas na grade de dados HTML.  
+ Se a consulta foi bem-sucedida, todas as pessoas com um sobrenome que contém o texto "Berge" (como Berge e Bergeron) e com um título contendo as palavras "gerente de programa" (por exemplo, gerente de programa, tecnologias avançadas) são exibidas na grade de dados HTML.  
   
-## <a name="preparing-and-sending-the-query"></a>Preparar e enviar a consulta  
- A última parte do procedimento Sub Find_OnClick consiste em duas instruções. A primeira instrução atribui a [SQL](../../../ado/reference/rds-api/sql-property.md) propriedade do [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) objeto igual à consulta SQL criada dinamicamente. A segunda instrução faz com que o **RDS. DataControl** objeto (`DC1`) para consultar o banco de dados e, em seguida, exibir os novos resultados da consulta na grade.  
+## <a name="preparing-and-sending-the-query"></a>Preparando e enviando a consulta  
+ A última parte do procedimento Find_OnClick sub consiste em duas instruções. A primeira instrução atribui a propriedade [SQL](../../../ado/reference/rds-api/sql-property.md) do [RDS. Objeto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) igual à consulta SQL criada dinamicamente. A segunda instrução faz com que o **RDS. Objeto DataControl** (`DC1`) para consultar o banco de dados e exibir os novos resultados da consulta na grade.  
   
 ```vb
 Sub Find_OnClick  
@@ -61,8 +61,8 @@ Sub Find_OnClick
 End Sub  
 ```  
   
-## <a name="update-profile-button"></a>Botão de perfil de atualização  
- Clicar a **atualizar o perfil** botão ativa o procedimento de VBScript Update_OnClick Sub, que executa o [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) do objeto (`DC1`) [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) e [atualizar](../../../ado/reference/rds-api/refresh-method-rds.md) métodos.  
+## <a name="update-profile-button"></a>Botão Atualizar perfil  
+ Clicar no botão **Atualizar perfil** ativa o procedimento Sub Update_OnClick do VBScript, que executa o [RDS. ](../../../ado/reference/rds-api/datacontrol-object-rds.md)Métodos [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) e [Refresh](../../../ado/reference/rds-api/refresh-method-rds.md) do`DC1`objeto DataControl.  
   
 ```vb
 Sub Update_OnClick  
@@ -71,10 +71,10 @@ Sub Update_OnClick
 End Sub  
 ```  
   
- Quando `DC1.SubmitChanges` é executado, o serviço de dados remoto todas as informações de atualização de pacotes e o envia para o servidor por meio de HTTP. A atualização é tudo ou nada; Se uma parte da atualização for bem-sucedida, nenhuma alteração é feita, e uma mensagem de status é retornada. `DC1.Refresh` não é necessário após **SubmitChanges** com o serviço de dados remoto, mas garante dados atualizados.  
+ Quando `DC1.SubmitChanges` o é executado, o serviço de dados remoto empacota todas as informações de atualização e as envia para o servidor via http. A atualização é tudo ou nada; se uma parte da atualização não for bem-sucedida, nenhuma das alterações será feita e uma mensagem de status será retornada. `DC1.Refresh`Não é necessário após **SubmitChanges** com o Remote Data Service, mas garante dados atualizados.  
   
-## <a name="cancel-changes-button"></a>Botão Cancelar alterações  
- Clicando em **Cancelar alterações** ativa o procedimento de VBScript Cancel_OnClick Sub, que executa o [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) do objeto (`DC1)` [CancelUpdate](../../../ado/reference/rds-api/cancelupdate-method-rds.md) método.  
+## <a name="cancel-changes-button"></a>Botão cancelar alterações  
+ Clicar em **cancelar alterações** ativa o procedimento Sub Cancel_OnClick do VBScript, que executa o [RDS. Objeto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) (`DC1)` método [CancelUpdate](../../../ado/reference/rds-api/cancelupdate-method-rds.md) .  
   
 ```vb
 Sub Cancel_OnClick  
@@ -82,9 +82,9 @@ Sub Cancel_OnClick
 End Sub  
 ```  
   
- Quando `DC1.CancelUpdate` é executado, ele descarta todas as edições que um usuário fez para um registro de funcionário na grade de dados desde a última consulta ou atualização. Ele restaura os valores originais.  
+ Quando `DC1.CancelUpdate` é executado, ele descarta todas as edições feitas por um usuário em um registro de funcionário na grade de dados desde a última consulta ou atualização. Ele restaura os valores originais.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Botões de navegação do catálogo de endereços](../../../ado/guide/remote-data-service/address-book-navigation-buttons.md)   
  [Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)
 

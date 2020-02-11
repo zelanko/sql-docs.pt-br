@@ -1,5 +1,5 @@
 ---
-title: Detectar e resolver conflitos | Microsoft Docs
+title: Detectando e resolvendo conflitos | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,25 +14,25 @@ ms.assetid: b28fdd26-c1a4-40ce-a700-2b0c9d201514
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bce9917f144e8c63160f571a986263d8d7e97b21
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925561"
 ---
 # <a name="detecting-and-resolving-conflicts"></a>Detectando e solucionando conflitos
-Se você estiver lidando com seu conjunto de registros no modo imediato, há muito menos chance de problemas de simultaneidade ocorram. Por outro lado, se seu aplicativo usa a atualização do modo em lote, pode haver uma boa chance de que um usuário será alterado de um registro antes de salvar alterações que foram feitas por outro usuário editar o mesmo registro. Nesse caso, você desejará que seu aplicativo para tratar normalmente o conflito. Pode ser seu desejo que a última pessoa a enviar uma atualização para o servidor "vence". Ou talvez você queira permitir que o usuário mais recente para decidir qual atualização deve ter precedência, fornecendo-lhe uma opção entre os dois valores conflitantes.  
+Se você estiver lidando com o conjunto de registros no modo imediato, haverá muito menos chances de ocorrer problemas de simultaneidade. Por outro lado, se seu aplicativo usar a atualização do modo de lote, poderá haver uma boa chance de que um usuário altere um registro antes que as alterações feitas por outro usuário editando o mesmo registro sejam salvas. Nesse caso, você desejará que seu aplicativo manipule normalmente o conflito. Pode ser que você queira que a última pessoa envie uma atualização para o servidor "WINS". Ou talvez você queira permitir que o usuário mais recente decida qual atualização deve ter precedência fornecendo-lhe uma opção entre os dois valores conflitantes.  
   
- Seja qual for o caso, o ADO fornece as propriedades UnderlyingValue e OriginalValue do objeto de campo para lidar com esses tipos de conflitos. Use essas propriedades em combinação com o método de ressincronização e a propriedade de filtro do conjunto de registros.  
+ Seja qual for o caso, o ADO fornecerá as propriedades subdependent e OriginalValue do objeto Field para lidar com esses tipos de conflitos. Use essas propriedades em combinação com o método de ressincronização e a propriedade Filter do conjunto de registros.  
   
 ## <a name="remarks"></a>Comentários  
- Quando o ADO encontra um conflito durante uma atualização em lotes, um aviso será adicionado à coleção de erros. Portanto, você sempre deve verificar erros imediatamente após chamar BatchUpdate e se você encontrá-los, começar a testar a suposição de que você encontrou um conflito. A primeira etapa é definir a propriedade de filtro em igual o conjunto de registros para adFilterConflictingRecords. Isso limita a exibição em seu conjunto de registros a apenas os registros que estão em conflito. Se a propriedade RecordCount for igual a zero após essa etapa, você sabe que o erro foi gerado por algo diferente de um conflito.  
+ Quando o ADO encontra um conflito durante uma atualização do lote, um aviso será adicionado à coleção de erros. Portanto, você sempre deve verificar se há erros imediatamente depois de chamar BatchUpdate e, se encontrá-los, começar a testar a suposição de que você encontrou um conflito. A primeira etapa é definir a propriedade Filter no conjunto de registros igual a adFilterConflictingRecords. Isso limita a exibição no conjunto de registros somente aos registros que estão em conflito. Se a propriedade RecordCount for igual a zero após essa etapa, você saberá que o erro foi gerado por algo diferente de um conflito.  
   
- Quando você chama BatchUpdate, ADO e o provedor estiver gerando instruções SQL para realizar atualizações na fonte de dados. Lembre-se de que determinadas fontes de dados tem limitações na qual os tipos de colunas podem ser usados em uma cláusula WHERE.  
+ Quando você chama BatchUpdate, o ADO e o provedor estão gerando instruções SQL para executar atualizações na fonte de dados. Lembre-se de que determinadas fontes de dados têm limitações sobre quais tipos de colunas podem ser usados em uma cláusula WHERE.  
   
- Em seguida, chame o método de ressincronização no conjunto de registros com o argumento de AffectRecords definido igual a adAffectGroup e o argumento de ResyncValues definido igual ao adResyncUnderlyingValues. O método de ressincronização atualiza os dados no objeto de conjunto de registros atual do banco de dados subjacente. Ao usar adAffectGroup, você garante que somente os registros visíveis com a configuração, ou seja, somente os registros conflitantes, de filtro atual são sincronizados novamente com o banco de dados. Se você estiver lidando com um grande conjunto de registros, isso pode tornar uma diferença significativa de desempenho. Definindo o argumento ResyncValues como adResyncUnderlyingValues ao chamar a ressincronização, você certifique-se de que a propriedade UnderlyingValue conterá o valor (conflitante) do banco de dados, que a propriedade Value manterá o valor inserido pelo usuário, e Se a propriedade OriginalValue conterá o valor original para o campo (o valor que tinha antes da última chamada bem-sucedida de UpdateBatch foi feita). Em seguida, você pode usar esses valores para resolver o conflito de forma programática ou exigir que o usuário selecionar o valor que será usado.  
+ Em seguida, chame o método Ressync no conjunto de registros com o argumento AffectRecords definido igual a adAffectGroup e o argumento ResyncValues definido igual a adResyncUnderlyingValues. O método Ressync atualiza os dados no objeto Recordset atual do banco de dados subjacente. Usando o adAffectGroup, você está garantindo que apenas os registros visíveis com a configuração de filtro atual, ou seja, apenas os registros conflitantes, sejam ressincronizados com o banco de dados. Isso pode fazer uma diferença significativa no desempenho se você estiver lidando com um grande conjunto de registros. Ao definir o argumento ResyncValues como adResyncUnderlyingValues ao chamar a ressincronização, você garante que a propriedade subdependent conterá o valor (conflitante) do banco de dados, que a propriedade Value manterá o valor inserido pelo usuário e Essa propriedade original conterá o valor original do campo (o valor que ele tinha antes da última chamada UpdateBatch bem-sucedida foi feita). Você pode usar esses valores para resolver o conflito programaticamente ou exigir que o usuário selecione o valor que será usado.  
   
- Essa técnica é mostrada no exemplo de código a seguir. O exemplo cria artificialmente um conflito usando um conjunto de registros separado para alterar um valor na tabela subjacente antes de UpdateBatch é chamado.  
+ Essa técnica é mostrada no exemplo de código a seguir. O exemplo cria artificialmente um conflito usando um conjunto de registros separado para alterar um valor na tabela subjacente antes que UpdateBatch seja chamado.  
   
 ```  
 'BeginConflicts  
@@ -111,9 +111,9 @@ Se você estiver lidando com seu conjunto de registros no modo imediato, há mui
 'EndConflicts  
 ```  
   
- Você pode usar a propriedade de Status do registro atual ou de um campo específico para determinar que tipo de um conflito ocorreu.  
+ Você pode usar a propriedade status do registro atual ou de um campo específico para determinar que tipo de conflito ocorreu.  
   
- Para obter informações detalhadas sobre o tratamento de erro, consulte [tratamento de erro](../../../ado/guide/data/error-handling.md).  
+ Para obter informações detalhadas sobre o tratamento de erros, consulte [tratamento de erros](../../../ado/guide/data/error-handling.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Modo de lote](../../../ado/guide/data/batch-mode.md)

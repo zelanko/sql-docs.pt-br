@@ -24,25 +24,25 @@ ms.assetid: 7741035c-f3e7-4c89-901e-fe528392f67d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 24e3d4c87f3bc461a339a6cb635d64f20dc73e20
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68106159"
 ---
 # <a name="descriptor-handles"></a>Identificadores de descritor
-Um *descritor* é uma coleção de metadados que descrevem os parâmetros de uma instrução SQL ou as colunas de um conjunto de resultados, como visto pelo aplicativo ou driver (também conhecido como o *implementação*). Portanto, pode preencher um descritor de qualquer um dos quatro funções:  
+Um *descritor* é uma coleção de metadados que descreve os parâmetros de uma instrução SQL ou as colunas de um conjunto de resultados, como visto pelo aplicativo ou driver (também conhecido como *implementação*). Assim, um descritor pode preencher qualquer uma das quatro funções:  
   
--   **Parâmetro APD (descritor aplicativo).** Contém informações sobre os buffers de aplicativo associados aos parâmetros em uma instrução SQL, como seus endereços, tamanhos e tipos de dados C.  
+-   **Descritor de parâmetro de aplicativo (APD).** Contém informações sobre os buffers de aplicativo associados aos parâmetros em uma instrução SQL, como seus endereços, comprimentos e tipos de dados C.  
   
 -   **Descritor de parâmetro de implementação (IPD).** Contém informações sobre os parâmetros em uma instrução SQL, como seus tipos de dados SQL, comprimentos e nulidade.  
   
--   **Descritor de linha de aplicativo (descartar).** Contém informações sobre os buffers do aplicativo associado para as colunas em um conjunto de resultados, como seus endereços, tamanhos e tipos de dados C.  
+-   **Descritor de linha do aplicativo (ARD).** Contém informações sobre os buffers de aplicativo associados às colunas em um conjunto de resultados, como seus endereços, comprimentos e tipos de dados de C.  
   
 -   **Descritor de linha de implementação (IRD).** Contém informações sobre as colunas em um conjunto de resultados, como seus tipos de dados SQL, comprimentos e nulidade.  
   
- Descritores de quatro (um preenchimento de cada função) são alocados automaticamente quando uma instrução é alocada. Eles são conhecidos como *alocado automaticamente descritores* e sempre estão associadas essa instrução. Aplicativos também podem alocar descritores com **SQLAllocHandle**. Eles são conhecidos como *alocado explicitamente descritores*. Eles são alocados em uma conexão e podem ser associados uma ou mais instruções sobre essa conexão para atender a função de um APD ou descartar essas instruções.  
+ Quatro descritores (um preenchimento de cada função) são alocados automaticamente quando uma instrução é alocada. Eles são conhecidos como *descritores alocados automaticamente* e sempre são associados a essa instrução. Os aplicativos também podem alocar descritores com **SQLAllocHandle**. Eles são conhecidos como *descritores explicitamente alocados*. Eles são alocados em uma conexão e podem ser associados a uma ou mais instruções nessa conexão para atender à função de um APD ou ARD nessas instruções.  
   
- A maioria das operações em ODBC podem ser executadas sem o uso explícito de descritores de pelo aplicativo. No entanto, os descritores de fornecem um atalho prático para algumas operações. Por exemplo, suponha que um aplicativo quiser inserir dados de dois conjuntos diferentes de buffers. Para usar o primeiro conjunto de buffers, ele poderia chamar repetidamente **SQLBindParameter** vinculá-las para os parâmetros em um **inserir** instrução e, em seguida, execute a instrução. Para usar o segundo conjunto de buffers, ele repetiria esse processo. Como alternativa, ele poderia configurar associações para o primeiro conjunto de buffers em um descritor de e para o segundo conjunto de buffers no descritor de outro. Para alternar entre os conjuntos de associações, o aplicativo simplesmente chamaria **SQLSetStmtAttr** e associar o descritor correto com a instrução como APD.  
+ A maioria das operações no ODBC pode ser executada sem o uso explícito de descritores pelo aplicativo. No entanto, os descritores fornecem um atalho conveniente para algumas operações. Por exemplo, suponha que um aplicativo queira inserir dados de dois conjuntos diferentes de buffers. Para usar o primeiro conjunto de buffers, ele chamaria repetidamente **SQLBindParameter** para associá-los aos parâmetros em uma instrução **Insert** e, em seguida, executar a instrução. Para usar o segundo conjunto de buffers, ele repetiria esse processo. Como alternativa, ele poderia configurar associações para o primeiro conjunto de buffers em um descritor e para o segundo conjunto de buffers em outro descritor. Para alternar entre os conjuntos de associações, o aplicativo simplesmente chamaria **SQLSetStmtAttr** e associaria o descritor correto à instrução como APD.  
   
  Para obter mais informações sobre descritores, consulte [tipos de descritores](../../../odbc/reference/develop-app/types-of-descriptors.md).

@@ -20,17 +20,17 @@ ms.assetid: 3104514d-b404-47c9-b6d7-928106384874
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 9f8a7f5ebb1b85740735c6070a784423b3258012
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68064035"
 ---
 # <a name="srv_paramdata-extended-stored-procedure-api"></a>srv_paramdata (API de procedimento armazenado estendido)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Em vez disso, use a Integração CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Em vez disso, use a integração CLR.  
   
  Retorna o valor de um parâmetro de chamada de procedimento armazenado remoto. Essa função foi substituída pela função **srv_paraminfo**.  
   
@@ -54,25 +54,26 @@ n
  *n*  
  É o número do parâmetro. O primeiro parâmetro equivale ao número 1.  
   
-## <a name="returns"></a>Retorna  
+## <a name="returns"></a>Retornos  
  Um ponteiro para o valor do parâmetro. Se o *n*-ésimo parâmetro for NULL, se não houver *n*-ésimo parâmetro ou não houver procedimento armazenado remoto, retornará NULL. Se o valor do parâmetro for uma cadeia de caracteres, ele não pode terminar com caractere nulo. Use **srv_paramlen** para determinar o tamanho da cadeia de caracteres.  
   
- Essa função retornará os valores a seguir se o parâmetro for um dos tipos de dados do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os dados de ponteiro indicam se o ponteiro para o tipo de dados é válido (VP), NULL ou não aplicável (N/A) e o conteúdo dos dados apontados.  
+ Essa função retornará os valores a seguir, se o parâmetro for um dos [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de dados. Os dados de ponteiro indicam se o ponteiro para o tipo de dados é válido (VP), NULL ou não aplicável (N/A) e o conteúdo dos dados apontados.  
   
 |Novos tipos de dados|Comprimento dos dados de entrada|  
 |--------------------|-----------------------|  
-|BITN|**NULO:** VP, NULO<br /><br /> **ZERO:** VP, NULO<br /><br /> **>=255:** N/A<br /><br /> **<255:** N/A|  
-|BIGVARCHAR|**NULO:** NULO, N/D<br /><br /> **ZERO:** VP, NULO<br /><br /> **>=255:** VP, 255 caracteres<br /><br /> **<255:** VP, dados reais|  
-|BIGCHAR|**NULO:** NULO, N/D<br /><br /> **ZERO:** VP, 255 espaços<br /><br /> **>=255:** VP, 255 caracteres<br /><br /> **<255:** VP, dados reais + preenchimento (até 255)|  
-|BIGBINARY|**NULO:** NULO, N/D<br /><br /> **ZERO:** VP, 255 0x00<br /><br /> **>=255:** VP, 255 bytes<br /><br /> **<255:** VP, dados reais + preenchimento (até 255)|  
-|BIGVARBINARY|**NULO:** NULO, N/D<br /><br /> **ZERO:** VP, 0x00<br /><br /> **>=255:** VP, 255 bytes<br /><br /> **<255:** VP, dados reais|  
-|NCHAR|**NULO:** NULO, N/D<br /><br /> **ZERO:** VP, 255 espaços<br /><br /> **>=255:** VP, 255 caracteres<br /><br /> **<255:** VP, dados reais + preenchimento (até 255)|  
-|NVARCHAR|**NULO:** NULO, N/D<br /><br /> **ZERO:** VP, NULO<br /><br /> **>=255:** VP, 255 caracteres<br /><br /> **<255:** VP, dados reais|  
-|NTEXT|**NULO:** N/A<br /><br /> **ZERO:** N/A<br /><br /> **>=255:** N/A<br /><br /> **\<255:** N/A|  
+|BITN|**Nulo:** VP, NULO<br /><br /> **Zero:** VP, NULO<br /><br /> **>= 255:** N/A<br /><br /> **<255:** N/A|  
+|BIGVARCHAR|**Nulo:** NULL, N/A<br /><br /> **Zero:** VP, NULO<br /><br /> **>= 255:** VP, 255 caracteres<br /><br /> **<255:** VP, dados reais|  
+|BIGCHAR|**Nulo:** NULL, N/A<br /><br /> **Zero:** VP, 255 espaços<br /><br /> **>= 255:** VP, 255 caracteres<br /><br /> **<255:** VP, dados reais + preenchimento (até 255)|  
+|BIGBINARY|**Nulo:** NULL, N/A<br /><br /> **Zero:** VP, 255 0x00<br /><br /> **>= 255:** VP, 255 bytes<br /><br /> **<255:** VP, dados reais + preenchimento (até 255)|  
+|BIGVARBINARY|**Nulo:** NULL, N/A<br /><br /> **Zero:** VP, 0x00<br /><br /> **>= 255:** VP, 255 bytes<br /><br /> **<255:** VP, dados reais|  
+|NCHAR|**Nulo:** NULL, N/A<br /><br /> **Zero:** VP, 255 espaços<br /><br /> **>= 255:** VP, 255 caracteres<br /><br /> **<255:** VP, dados reais + preenchimento (até 255)|  
+|NVARCHAR|**Nulo:** NULL, N/A<br /><br /> **Zero:** VP, NULO<br /><br /> **>= 255:** VP, 255 caracteres<br /><br /> **<255:** VP, dados reais|  
+|NTEXT|**Nulo:** N/A<br /><br /> **Zero:** N/A<br /><br /> **>= 255:** N/A<br /><br /> ** \<255:** N/A|  
   
- \* Os dados não terminam em nulo; nenhum aviso é emitido no truncamento de dados >255 caracteres.  
+ 
+  \* Os dados não terminam em nulo; nenhum aviso é emitido no truncamento de dados >255 caracteres.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Se você souber o nome do parâmetro, poderá usar **srv_paramnumber** para obter o número do parâmetro. Para determinar se um parâmetro é NULL, use **srv_paramlen**.  
   
  Quando uma chamada de procedimento armazenado remoto for feita com parâmetros, os parâmetros poderão ser passados pelo nome ou pela posição (sem-nome). Se a chamada de procedimento armazenado remoto for feita com alguns parâmetros transmitidos pelo nome e outros pela posição, ocorrerá um erro. Em caso de erro, o manipulador SRV_RPC ainda será chamado, mas aparecerá como se não houvesse parâmetros e **srv_rpcparams** retornará 0.  
@@ -81,6 +82,6 @@ n
 >  Você deve examinar totalmente o código-fonte de procedimentos armazenados estendidos e deve testar as DLLs compiladas antes de instalá-las em um servidor de produção. Para obter informações sobre revisão e testes de segurança, consulte este [site da Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
 ## <a name="see-also"></a>Consulte Também  
- [srv_rpcparams &#40;API de Procedimento Armazenado Estendido&#41;](../../relational-databases/extended-stored-procedures-reference/srv-rpcparams-extended-stored-procedure-api.md)  
+ [srv_rpcparams &#40;API de procedimento armazenado estendido&#41;](../../relational-databases/extended-stored-procedures-reference/srv-rpcparams-extended-stored-procedure-api.md)  
   
   

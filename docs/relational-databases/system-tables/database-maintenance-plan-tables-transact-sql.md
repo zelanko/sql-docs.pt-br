@@ -1,5 +1,5 @@
 ---
-title: Banco de dados a tabelas de plano de manutenção (Transact-SQL) | Microsoft Docs
+title: Tabelas do plano de manutenção de banco de dados (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,10 +17,10 @@ ms.assetid: f264554c-5514-4df2-aadb-6dcdc2dfcfea
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f6fe1c0734864f8bde8b579ced77dc8106cb80ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68084751"
 ---
 # <a name="database-maintenance-plan-tables-transact-sql"></a>Tabelas do plano de manutenção do banco de dados (Transact-SQL)
@@ -44,7 +44,7 @@ ms.locfileid: "68084751"
  [sysdbmaintplans](../../relational-databases/system-tables/sysdbmaintplans-transact-sql.md)  
  Contém uma linha para cada plano de manutenção de banco de dados atualizado.  
   
-## <a name="see-also"></a>Consulte também  
- [Planos de Manutenção](../../relational-databases/maintenance-plans/maintenance-plans.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Planos de manutenção](../../relational-databases/maintenance-plans/maintenance-plans.md)  
   
   

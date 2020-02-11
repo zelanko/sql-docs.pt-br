@@ -1,5 +1,5 @@
 ---
-title: Criando uma estrutura de cesta de compras e um modelo (Tutorial de mineração de dados intermediário) | Microsoft Docs
+title: Criando uma estrutura e um modelo de cesta de compras (tutorial de mineração de dados intermediário) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 207d82f740b7b5ff174e220e647d67d5bac7f9ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63190836"
 ---
 # <a name="creating-a-market-basket-structure-and-model-intermediate-data-mining-tutorial"></a>Criando uma estrutura e um modelo de cesta de compras (Tutorial de mineração de dados intermediário)
@@ -25,60 +25,60 @@ ms.locfileid: "63190836"
   
 ### <a name="to-create-an-association-mining-structure"></a>Para criar uma estrutura de mineração de associação  
   
-1.  No Gerenciador de soluções no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], clique com botão direito **estruturas de mineração** e selecione **nova estrutura de mineração** para abrir o Assistente de mineração de dados.  
+1.  Em Gerenciador de Soluções no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], clique com o botão direito do mouse em **estruturas de mineração** e selecione **nova estrutura de mineração** para abrir o assistente de mineração de dados.  
   
 2.  Na página **Bem-vindo ao Assistente de Mineração de Dados** , clique em **Avançar**.  
   
-3.  No **Selecionar método de definição** página, verifique **de warehouse existente de banco de dados ou dados relacional** está selecionado e, em seguida, clique em **próxima**.  
+3.  Na página **selecionar o método de definição** , verifique se a **partir de banco de dados relacional existente ou data warehouse** está selecionada e clique em **Avançar**.  
   
-4.  Sobre o **criar a estrutura de mineração de dados** página, em **qual técnica de mineração de dados você deseja usar?** , selecione **regras de associação da Microsoft** na lista e, em seguida, clique **Próxima**. O **Selecionar exibição da fonte de dados** página será exibida.  
+4.  Na página **criar a estrutura de mineração de dados** , sob a **qual data mining técnica você deseja usar?**, selecione **regras de associação da Microsoft** na lista e clique em **Avançar**. A página **selecionar exibição da fonte de dados** é exibida.  
   
-5.  Selecione **pedidos**sob **modos de exibição de fonte de dados disponíveis**e, em seguida, clique em **próxima**.  
+5.  Selecione **pedidos**em **exibições da fonte de dados disponíveis**e clique em **Avançar**.  
   
-6.  No **especificar tipos de tabela** página, na linha para a tabela vAssocSeqLineItems, selecione o **Nested** caixa de seleção e, na linha para a tabela aninhada vAssocSeqOrders, selecione o **caso** caixa de seleção. Clique em **Avançar**.  
+6.  Na página **especificar tipos de tabela** , na linha da tabela vAssocSeqLineItems, marque a caixa de seleção **aninhada** e, na linha da tabela aninhada vAssocSeqOrders, marque a caixa de seleção **caso** . Clique em **Próximo**.  
   
-7.  Sobre o **especificar os dados de treinamento** página, desmarque qualquer caixa que possam ser verificada. Defina a chave para a tabela de casos vAssocSeqOrders, marcando a **chave** caixa de seleção ao lado de OrderNumber.  
+7.  Na página **especificar os dados de treinamento** , desmarque as caixas que podem estar marcadas. Defina a chave para a tabela de casos, vAssocSeqOrders, selecionando a caixa de seleção **chave** ao lado de OrderNumber.  
   
-     Como é o objetivo da análise de cesta de compras determinar quais produtos estão incluídos em uma única transação, você não precisa usar o **CustomerKey** campo.  
+     Como a finalidade da análise de cesta de mercado é determinar quais produtos estão incluídos em uma única transação, você não precisa usar o campo **CustomerKey** .  
   
-8.  Defina a chave para a tabela aninhada, vAssocSeqLineItems, marcando a **chave** caixa de seleção ao lado do modelo. O **entrada** caixa de seleção é marcada automaticamente quando você fizer isso. Selecione o **previsível** caixa de seleção `Model` também.  
+8.  Defina a chave para a tabela aninhada, vAssocSeqLineItems, selecionando a caixa de seleção **chave** ao lado de modelo. A caixa de seleção de **entrada** também é selecionada automaticamente quando você faz isso. Marque a caixa de `Model` seleção **previsível** também.  
   
-     Em um modelo de cesta de compras, você não se importam a sequência de produtos no carrinho de compras e, portanto, você não deve incluir **LineNumber** como uma chave para a tabela aninhada. Você usaria **LineNumber** como uma chave somente em um modelo em que a sequência é importante. Você criará um modelo que use o algoritmo [!INCLUDE[msCoName](../includes/msconame-md.md)] Sequence Clustering na Lição 4.  
+     Em um modelo de cesta de compras, você não se preocupa com a seqüência de produtos na cesta de compra e, portanto, não deve incluir **LineNumber** como uma chave para a tabela aninhada. Você usaria **LineNumber** como uma chave somente em um modelo em que a sequência é importante. Você criará um modelo que use o algoritmo [!INCLUDE[msCoName](../includes/msconame-md.md)] Sequence Clustering na Lição 4.  
   
 9. Marque a caixa de seleção à esquerda de IncomeGroup e de Região, mas não faça outras seleções. Verificar a coluna mais à esquerda adiciona as colunas à estrutura para referência futura, mas as colunas não serão usadas no modelo. As suas seleções deverão ficar assim:  
   
-     ![como a caixa de diálogo deve parecer](../../2014/tutorials/media/tutorial-configassocmodel.gif "deve ser a aparência de caixa de diálogo")  
+     ![como a caixa de diálogo deve parecer](../../2014/tutorials/media/tutorial-configassocmodel.gif "como a caixa de diálogo deve parecer")  
   
-10. Clique em **Avançar**.  
+10. Clique em **Próximo**.  
   
-11. Sobre o **colunas especificar conteúdo e tipo de dados**, examine as seleções, que devem ser conforme mostrado na tabela a seguir e, em seguida, clique em **próxima**.  
+11. Na página **especificar conteúdo e tipo de dados das colunas**, examine as seleções, que devem ser conforme mostrado na tabela a seguir e clique em **Avançar**.  
   
-    |Colunas|Tipo de Conteúdo|Tipo de Dados|  
+    |Colunas|Tipo de conteúdo|Tipo de Dados|  
     |-------------|------------------|---------------|  
-    |IncomeGroup|Discreto|Text|  
-    |Número do pedido|Chave|Text|  
-    |Região|Discreto|Text|  
+    |IncomeGroup|Discreto|Texto|  
+    |Número do pedido|Chave|Texto|  
+    |Região|Discreto|Texto|  
     |vAssocSeqLineItems|||  
-    |Modelo|Chave|Text|  
+    |Modelo|Chave|Texto|  
   
-12. No **criar o teste definido** página, o valor padrão para a opção **porcentagem de dados de teste** é 30 %). Altere-a para **0**. Clique em **Avançar**.  
+12. Na página **criar conjunto de testes** , o valor padrão para a **porcentagem de opção de dados para teste** é de 30%. Altere isso para **0**. Clique em **Próximo**.  
   
     > [!NOTE]  
     >  O [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fornece gráficos diferentes para medir a exatidão do modelo. No entanto, alguns tipos de gráfico de precisão, como o gráfico de comparação de precisão e o relatório de validação cruzada, foram criados para classificação e estimativa. Eles não são suportados para previsão associativa.  
   
-13. Sobre o **Concluindo o assistente** página, na **nome da estrutura de mineração**, tipo `Association`.  
+13. Na página **concluindo o assistente** , em **nome da estrutura**de mineração `Association`, digite.  
   
-14. Na **nome do modelo de mineração**, tipo `Association`.  
+14. Em **nome do modelo**de mineração `Association`, digite.  
   
-15. Selecione a opção **Permitir drill-through**e, em seguida, clique em **concluir**.  
+15. Selecione a opção **permitir Drill-through**e clique em **concluir**.  
   
-     Designer de mineração de dados é aberta para exibir o `Association` estrutura de mineração que você acabou de criar.  
+     O designer de mineração de dados é `Association` aberto para exibir a estrutura de mineração que você acabou de criar.  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
- [Modificando e processando o modelo de cesta de compras &#40;Tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/modify-process-market-basket-model-intermediate-data-mining-tutorial.md)  
+ [Modificando e processando o modelo de cesta de mercado &#40;tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/modify-process-market-basket-model-intermediate-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Algoritmo Associação da Microsoft](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md)   
- [Tipos de conteúdo &#40;Data Mining&#41;](../../2014/analysis-services/data-mining/content-types-data-mining.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Algoritmo de associação da Microsoft](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md)   
+ [Tipos de conteúdo &#40;mineração de dados&#41;](../../2014/analysis-services/data-mining/content-types-data-mining.md)  
   
   

@@ -17,40 +17,40 @@ ms.assetid: cfd37a82-aad2-41cd-8d13-1566c43d95f0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 25ea858995c884af202d3d80f4de675c9f4cda27
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923058"
 ---
 # <a name="referencing-the-ado-libraries-in-a-visual-basic-6-application"></a>Referenciar as bibliotecas ADO em um aplicativo do Visual Basic 6
-Para importar as bibliotecas ADO em um aplicativo do Microsoft Visual Basic 6, você deve definir uma referência no projeto do Visual Basic.  
+Para importar as bibliotecas do ADO para um aplicativo do Microsoft Visual Basic 6, você deve definir uma referência no projeto Visual Basic.  
   
-### <a name="to-set-a-reference-to-the-ado-libraries-in-a-visual-basic-project"></a>Para definir uma referência para as bibliotecas ADO em um projeto do Visual Basic  
+### <a name="to-set-a-reference-to-the-ado-libraries-in-a-visual-basic-project"></a>Para definir uma referência às bibliotecas ADO em um projeto Visual Basic  
   
-1.  Criar um novo ou abrir um projeto existente do Visual Basic.  
+1.  Crie um novo projeto do Visual Basic ou abra um existente.  
   
-2.  Clique o **Project** item de menu e selecione **referências...**  do painel do menu suspenso.  
+2.  Clique no item de menu **projeto** e, em seguida, selecione **referências...** no painel de menu suspenso.  
   
-3.  Partir **referências disponíveis**, marque a caixa **Microsoft ActiveX Data Objects *n.n* biblioteca**, onde ***n.n*** representa a versão mais recente número de versão. O **local** campo abaixo deve identificar sua escolha, como *$installDir\msado15.dll*, onde *$installDir* representa o caminho do diretório em que a biblioteca do ADO foi instalado.  
+3.  Em **referências disponíveis**, marque a caixa da **biblioteca Microsoft ActiveX Data Objects *n. n* **, em que ***n. n*** representa o número de versão mais recente. O campo **local** abaixo deve identificar sua escolha como *$installDir \msado15.dll*, em que *$installDir* representa o caminho do diretório no qual a biblioteca ADO foi instalada.  
   
-4.  Se você pretende usar o ADO MD, repita a etapa 3 para selecionar **Microsoft ActiveX Data Objects (multidimensional) *n.n* biblioteca**. O **local** campo deve identificar essa opção como *$installDir\msadomd.dll*.  
+4.  Se você pretende usar ADO MD, repita a etapa 3 para selecionar a **biblioteca do Microsoft ActiveX Data Objects (Multidimensional) *n. n* **. O campo **local** deve identificar essa opção como *$installDir \msadomd.dll*.  
   
-5.  Se você pretende usar ADOX, repita a etapa 3 para selecionar **Microsoft ADO ramal *n.n* DDL e segurança**. O **local** campo deve identificar essa opção como *$installDir\msadox.dll*.  
+5.  Se você pretende usar o ADOX, repita a etapa 3 para selecionar **Microsoft ADO ext. n *. n* para DDL e segurança**. O campo **local** deve identificar essa opção como *$installDir \msadox.dll*.  
   
-6.  Clique em **Okey** para terminar de definir as referências.  
+6.  Clique em **OK** para concluir a configuração das referências.  
   
 ## <a name="backward-compatibility"></a>Backward Compatibility  
- Instalar o ADO também copia a bibliotecas de tipo de versões anteriores:  
+ A instalação do ADO também copia as seguintes bibliotecas de tipos de versões anteriores:  
   
--   *msado27.tlb*, biblioteca de tipos de 2,7 do ADO  
+-   *msado27. tlb*, biblioteca de tipos ADO 2,7  
   
--   *msado26.tlb*, biblioteca de tipos de 2,6 do ADO  
+-   *msado26. tlb*, biblioteca de tipos ADO 2,6  
   
--   *msado25.tlb*, biblioteca de tipos de 2,5 do ADO  
+-   *msado25. tlb*, biblioteca de tipos ADO 2,5  
   
--   *msado21.tlb*, biblioteca de tipos 2.1 de ADO  
+-   *msado21. tlb*, biblioteca de tipos ADO 2,1  
   
--   *msado20.tlb*, biblioteca de tipos de 2.0 do ADO  
+-   *msado20. tlb*, biblioteca de tipos ADO 2,0  
   
- Se seu aplicativo deve usar qualquer uma dessas bibliotecas ADO para fins de compatibilidade com versões anteriores, você precisa importar a versão apropriada da biblioteca de tipos. Para fazer isso, siga os procedimentos na seção anterior, substituindo *msado15.dll* pela *msadoXX.tlb*, onde *XX* representa o número de versão, você precisa importar.
+ Se seu aplicativo precisar usar qualquer uma dessas bibliotecas ADO por motivos de compatibilidade com versões anteriores, você precisará importar a versão apropriada da biblioteca de tipos. Para fazer isso, siga os procedimentos na seção anterior, substituindo *MsADO15. dll* por *msadoXX. tlb*, em que *XX* representa o número de versão que você precisa importar.
