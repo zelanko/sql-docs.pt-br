@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 27748ee6f4c70ebbcb4d1d28738130ddea07232b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211661"
 ---
 # <a name="create-views"></a>Criar exibições
@@ -62,7 +62,7 @@ ms.locfileid: "68211661"
   
 2.  Clique com o botão direito do mouse na pasta **Exibições** objeto e clique em **Nova Exibição...** .  
   
-3.  Na caixa de diálogo **Adicionar Tabela**, selecione o elemento ou elementos que você deseja incluir em sua nova exibição de uma destas guias: tabelas, exibições, funções e sinônimos.  
+3.  Na caixa de diálogo **Adicionar Tabela** , selecione o elemento ou elementos que você deseja incluir em sua nova exibição de uma destas guias: Tabelas, Exibições, Funções e Sinônimos.  
   
 4.  Clique em **Adicionar**e em **Fechar**.  
   
