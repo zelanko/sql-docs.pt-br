@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 040d49e66e9feed4f8bc213c8189c8d41486b77d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107776"
 ---
 # <a name="keyboard-shortcuts-report-builder"></a>Atalhos de teclado (Construtor de Relatórios)
@@ -32,11 +32,11 @@ ms.locfileid: "66107776"
   
 ## <a name="keyboard-shortcuts-in-report-builder"></a>Atalhos de teclado no Construtor de Relatórios  
   
-|Descrição|Combinação de teclas|  
+|DESCRIÇÃO|Combinação de teclas|  
 |-----------------|---------------------|  
-|Abre o menu Construtor de Relatórios.|ALT+F|  
-|Criar um relatório.|CTRL+N|  
-|Abra um relatório.|CTRL+O|  
+|Abre o menu Construtor de Relatórios.|ALT + F|  
+|Criar um relatório.|Ctrl+N|  
+|Abra um relatório.|Ctrl+O|  
 |Salva um relatório.|CTRL+S, ALT+S|  
 |Move entre áreas do Construtor de Relatórios, como a Faixa de Opções, a superfície de design, o painel Agrupamento, o painel Propriedades e o painel Dados.|F6, SHIFT+F6|  
 |Move para a Faixa de Opções.|ALT|  
@@ -56,11 +56,11 @@ ms.locfileid: "66107776"
 |Alinha as bordas de vários itens selecionados.|ALT+H+A|  
 |Execute o relatório.|F5, ALT+H+R|  
 |Alterna para o modo de design.|F8|  
-|Copiar|CTRL+C, ALT+H+C|  
-|Recorta|CTRL+X, ALT+H+X|  
+|Cópia|CTRL+C, ALT+H+C|  
+|Recortar|CTRL+X, ALT+H+X|  
 |Colar|CTRL+V, ALT+H+V|  
-|Seleciona tudo.|CTRL+A|  
-|Desfaz|CTRL+Z, ALT+Z|  
+|Seleciona tudo.|Ctrl+A|  
+|Desfazer|CTRL+Z, ALT+Z|  
 |Refaz|CTRL+Y, ALT+Y|  
 |Amplia.|CTRL+sinal de adição (+)|  
 |Reduz.|CTRL+sinal de subtração (-)|  
@@ -91,8 +91,8 @@ ms.locfileid: "66107776"
 |Reduz uma área de exibição do mapa quando um visor do mapa é selecionado.|CTRL +sinal de subtração (-)|  
 |Modo de acelerador para panorâmica e ampliação na área de exibição do mapa quando um visor do mapa é selecionado.|CTRL +clique com o botão esquerdo|  
   
-## <a name="see-also"></a>Consulte também  
- [Construtor de relatórios no SQL Server 2014](report-builder-in-sql-server-2016.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Construtor de Relatórios no SQL Server 2014](report-builder-in-sql-server-2016.md)   
  [Modo de exibição de Design de relatório &#40;Construtor de Relatórios&#41;](report-design-view-report-builder.md)   
  [Glossário &#40;Construtor de Relatórios&#41;](glossary-report-builder.md)  
   

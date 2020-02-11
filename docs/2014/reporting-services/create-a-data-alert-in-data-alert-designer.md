@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e2b54bbbd6b989890c1d31a545c95117c4b6cbe2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109712"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>Criar um Alerta de Dados no Designer de Alertas de Dados
@@ -35,7 +35,7 @@ ms.locfileid: "66109712"
   
      A imagem a seguir mostra o menu **Ações** .  
   
-     ![Abrir o Designer de Alertas por meio da biblioteca do SharePoint](media/rs-openalertdesigneriw.gif "Abrir o Designer de Alertas por meio da biblioteca do SharePoint")  
+     ![Abra o Designer de Alertas da biblioteca do SharePoint](media/rs-openalertdesigneriw.gif "Abra o Designer de Alertas da biblioteca do SharePoint")  
   
      O Designer de Alertas de Dados é aberto e mostra as primeiras 100 linhas do primeiro feed de dados que o relatório gera em uma tabela.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "66109712"
   
      Dependendo do tipo dos dados da coluna selecionada, diferentes operadores de comparação serão listados. Se a coluna tiver um tipo de dados de data, um ícone de calendário será exibido ao lado do valor de limite da regra. É possível inserir dados com um clique em uma data no calendário ou por meio de digitação da data.  
   
-     O Designer de Alerta de Dados fornece dois modos de comparação: **Modo de Entrada de Valor** e **Modo de Seleção de Campo**. O padrão é **Modo de Entrada de Valor**. Você só pode adicionar cláusulas OR quando está no **Modo de Entrada de Valor** e está usando a comparação **is** .  
+     O Designer de Alertas de Dados fornece dois modos de comparação: **Modo de Entrada de Valor** e **Modo de Seleção de Campo**. O padrão é **Modo de Entrada de Valor**. Você só pode adicionar cláusulas OR quando está no **Modo de Entrada de Valor** e está usando a comparação **is** .  
   
 9. Para adicionar uma cláusula OR, clique na seta para baixo e clique em **Modo de Entrada de Valor**.  
   
@@ -109,15 +109,15 @@ ms.locfileid: "66109712"
   
 20. Opcionalmente, na caixa de texto **Assunto** , atualize a linha de Assunto da mensagem de alerta.  
   
-     O Assunto padrão é **Alerta de dados para \<data alert name>** .  
+     O Assunto padrão é **Alerta de dados para \<data alert name>**.  
   
 21. Opcionalmente, na caixa de texto **Descrição** , digite uma descrição da mensagem de alerta.  
   
-22. Clique em **Salvar**.  
+22. Clique em **Save** (Salvar).  
   
-## <a name="see-also"></a>Consulte também  
- [Designer de Alertas de Dados](../../2014/reporting-services/data-alert-designer.md)   
- [Gerenciador de Alertas de dados para administradores de alertas](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Designer de alertas de dados](../../2014/reporting-services/data-alert-designer.md)   
+ [Gerenciador de alertas de dados para administradores de alertas](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
  [Reporting Services Data Alerts](../ssms/agent/alerts.md)  
   
   

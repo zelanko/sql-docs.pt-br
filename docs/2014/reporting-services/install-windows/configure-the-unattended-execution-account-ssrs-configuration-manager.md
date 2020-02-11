@@ -19,13 +19,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 42299bce176f3fa93b9a145204ff95e292aed542
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108887"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>Configurar a conta de execução autônoma (Gerenciador de configurações do SSRS)
+  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornece uma conta especial que é usada para o processamento autônomo de relatórios e para enviar solicitações de conexão pela rede. A conta é usada das seguintes maneiras:  
   
 -   Enviar solicitações de conexão pela rede para relatórios que usam autenticação do banco de dados ou conexão a fontes de dados de relatórios externos que não requeiram ou utilizem autenticação. Para obter mais informações, consulte [Especificar informações de credenciais e de conexão para Fontes de Dados de Relatório](../../integration-services/connection-manager/data-sources.md) nos Manuais Online do SQL Server.  
@@ -35,7 +36,7 @@ ms.locfileid: "66108887"
  O termo processamento autônomo de relatórios se refere a qualquer processo de execução de relatório que seja disparado por um evento (um evento controlado por agenda ou um evento de atualização de dados) e não a uma solicitação de usuário. O servidor de relatório usa a conta de processamento autônomo de relatórios para fazer logon no computador que hospeda a fonte de dados externa. Essa conta é necessária porque as credenciais da conta de serviço do Servidor de Relatório nunca são usadas para conectar a outros computadores.  
   
 > [!IMPORTANT]  
->  A configuração da conta é opcional. Entretanto, se não for configurada, suas opções de conexão a algumas fontes de dados ficarão limitadas e talvez você não possa recuperar arquivos de imagem a partir de computadores remotos. Se você configurar a conta, deverá mantê-la atualizada. Especificamente, se você permitir que uma senha expire ou as informações de conta forem alteradas no Active Directory, você encontrará o seguinte erro na próxima vez que um relatório é processado: "Falha de logon (rsLogonFailed) Falha de Logon: nome de usuário desconhecido ou senha incorreta." A manutenção apropriada da conta de processamento autônomo de relatórios é essencial, mesmo se você nunca recuperar imagens externas ou enviar solicitações de conexão para computadores externos. Se você configurar a conta, mas depois descobrir que não a está usando, poderá excluí-la para evitar tarefas rotineiras de manutenção de conta.  
+>  A configuração da conta é opcional. Entretanto, se não for configurada, suas opções de conexão a algumas fontes de dados ficarão limitadas e talvez você não possa recuperar arquivos de imagem a partir de computadores remotos. Se você configurar a conta, deverá mantê-la atualizada. Especificamente, se você permitir que uma senha expire ou se as informações da conta forem alteradas no Active Directory, será exibido o seguinte erro na próxima vez que um relatório for processado: "Falha de logon (rsLogonFailed) Falha de logon: nome de usuário desconhecido ou senha incorreta". A manutenção apropriada da conta de processamento autônomo de relatórios é essencial, mesmo se você nunca recuperar imagens externas ou enviar solicitações de conexão para computadores externos. Se você configurar a conta, mas depois descobrir que não a está usando, poderá excluí-la para evitar tarefas rotineiras de manutenção de conta.  
   
 ## <a name="how-to-configure-the-account"></a>Como configurar a conta  
  Você deve usar uma conta de usuário de domínio. Para que sirva à sua finalidade pretendida, essa conta deve ser diferente daquela usada para executar o serviço Servidor de Relatório. Certifique-se de usar uma conta que tenha permissões mínimas (acesso somente leitura com permissões de conexão de rede é suficiente) e acesso limitado apenas aos computadores que forneçam fontes de dados e recursos ao servidor de relatório. Para obter mais informações, consulte [Reporting Services Configuration Manager &#40;Modo Nativo&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md).  
@@ -49,17 +50,17 @@ ms.locfileid: "66108887"
 3.  Digite a conta e a senha, digite novamente a senha e clique em **Aplicar**.  
   
 ### <a name="using-rsconfig-utility"></a>Usando o utilitário RSCONFIG  
- Outra maneira de definir a conta é usar o utilitário **rsconfig** . Para especificar a conta, use o argumento **-e** do **rsconfig**. A especificação do argumento **-e** para **rsconfig** orienta o utilitário a gravar as informações da conta no arquivo de configuração. Não é necessário especificar um caminho para RSreportserver.config. Siga estas etapas para configurar a conta.  
+ Outra maneira de definir a conta é usar o utilitário **rsconfig** . Para especificar a conta, use o argumento **-e** do **rsconfig**. A especificação do argumento **-e** para **rsconfig** orienta o utilitário a gravar as informações da conta no arquivo de configuração. Você não precisa especificar um caminho para RSreportserver. config. Siga estas etapas para configurar a conta.  
   
 1.  Crie ou selecione uma conta de domínio que tenha acesso a computadores e servidores que forneçam dados ou serviços a um servidor de relatório. Você deve usar uma conta que tenha permissões reduzidas (por exemplo, permissões somente leitura).  
   
-2.  Abra um prompt de comando: Sobre o **iniciar** menu, clique em **execute**, tipo **cmd**e, em seguida, clique em **Okey**.  
+2.  Abra um prompt de comando: No menu **Iniciar** , clique em **Executar**, digite **cmd**e clique em **OK**.  
   
 3.  Digite o seguinte comando para configurar a conta em uma instância local do servidor de relatório:  
   
-     **rsconfig -e -u\<domain/username> -p\<password>**  
+     **rsconfig-e-u\<domínio/nome de usuário>\<-p senha>**  
   
- **rsconfig -e** dá suporte a argumentos adicionais. Para obter mais informações sobre a sintaxe e exibir exemplos de comandos, consulte [Utilitário rsconfig &#40;SSRS&#41;](../tools/rsconfig-utility-ssrs.md) nos Manuais Online do SQL Server.  
+ **rsconfig-e** dá suporte a argumentos adicionais. Para obter mais informações sobre a sintaxe e como exibir exemplos de comandos, consulte [Utilitário rsconfig &#40;SSRS&#41;](../tools/rsconfig-utility-ssrs.md) nos Manuais Online do SQL Server.  
   
 ### <a name="how-account-information-is-stored"></a>Como as informações de conta são armazenadas  
  Quando você define a conta, as seguintes configurações são especificadas como valores criptografados no arquivo RSreportserver.config na instância local ou remota do servidor de relatório.  
@@ -77,7 +78,7 @@ ms.locfileid: "66108887"
 ## <a name="how-to-use-the-unattended-report-processing-account"></a>Como usar a conta de processamento autônomo de relatórios.  
  Para recuperar arquivos de imagem, o servidor de relatório usa automaticamente a conta e nenhuma ação específica é necessária de sua parte. Para usar a conta a fim de conectar-se a fontes de dados externas que forneçam dados para relatórios, você deve especificar uma opção **Tipo de Credencial** na página de propriedades da fonte de dados do relatório ou compartilhada:  
   
--   No Gerenciador de relatórios ou em um site do SharePoint, selecione a **não são necessárias credenciais** opção.  
+-   No Report Manager ou em um site do SharePoint, selecione a opção as **credenciais não são necessárias** .  
   
  A conta de processamento autônomo de relatórios é usada principalmente para conectar-se a servidores externos, não como um logon para servidores de banco de dados. Para usar as credenciais de conta para fazer logon em um banco de dados, especifique as credenciais na cadeia de caracteres de conexão. Você poderá especificar **Integrated Security=SSPI** se o servidor de banco de dados der suporte à segurança integrada do Windows e se a conta usada para o processamento autônomo de relatórios tiver permissão para ler o banco de dados. Caso contrário, digite o nome do usuário e a senha na cadeia de conexão, onde ela aparecerá em texto não criptografado para qualquer usuário com permissão para editar propriedades da conexão da fonte de dados.  
   
@@ -103,7 +104,7 @@ ms.locfileid: "66108887"
   
  As informações da conta serão removidas do arquivo RSReportServer.config.  
   
-## <a name="see-also"></a>Consulte também  
- [Gerenciador de configuração do Reporting Services &#40;/DEL&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Gerenciador de Configurações do Reporting Services &#40;del&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  
   
   

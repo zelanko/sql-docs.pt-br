@@ -1,5 +1,5 @@
 ---
-title: Excluir uma coluna (SSAS Tabular) | Microsoft Docs
+title: Excluir uma coluna (SSAS tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f0a95e8580aa30ce34ada1c77e198eb40d767304
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067268"
 ---
 # <a name="delete-a-column-ssas-tabular"></a>Excluir uma coluna (SSAS tabular)
@@ -23,7 +23,7 @@ ms.locfileid: "66067268"
 ## <a name="delete-a-model-table-column"></a>Excluir uma coluna de tabela modelo  
   
 > [!NOTE]  
->  A exclusão de uma coluna de uma tabela modelo não exclui a coluna de uma definição de consulta de partição. Se a coluna que você está excluindo fizer parte de uma partição, exclua a coluna manualmente da definição de consulta de partição. A falha ao excluir a coluna da definição de consulta de partição causará a consulta da coluna e o retorno dos dados, mas não a população da tabela modelo, durante operações de processamento. Para obter mais informações, consulte [Partitions &#40;SSAS Tabular&#41;](partitions-ssas-tabular.md).  
+>  A exclusão de uma coluna de uma tabela modelo não exclui a coluna de uma definição de consulta de partição. Se a coluna que você está excluindo fizer parte de uma partição, exclua a coluna manualmente da definição de consulta de partição. A falha ao excluir a coluna da definição de consulta de partição causará a consulta da coluna e o retorno dos dados, mas não a população da tabela modelo, durante operações de processamento. Para obter mais informações, consulte [Partições &#40;SSAS de Tabela&#41;](partitions-ssas-tabular.md).  
   
 #### <a name="to-delete-a-model-table-column"></a>Para excluir uma coluna de tabela modelo  
   
@@ -37,8 +37,8 @@ ms.locfileid: "66067268"
   
 3.  Na caixa de diálogo **Editar Propriedades da Tabela** , na janela de visualização de tabela, desmarque a coluna a ser excluída e clique em **OK**.  
   
-## <a name="see-also"></a>Consulte também  
- [Adicionar colunas a uma tabela &#40;SSAS de Tabela&#41;](add-columns-to-a-table-ssas-tabular.md)   
- [Partições &#40;SSAS de Tabela&#41;](partitions-ssas-tabular.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Adicionar colunas a uma tabela &#40;SSAS tabular&#41;](add-columns-to-a-table-ssas-tabular.md)   
+ [Partições &#40;SSAS de tabela&#41;](partitions-ssas-tabular.md)  
   
   

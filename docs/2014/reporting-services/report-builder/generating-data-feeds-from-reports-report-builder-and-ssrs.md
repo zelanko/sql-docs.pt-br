@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d7afc644d96c895164aa954cc4813762cc4ef32d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107835"
 ---
 # <a name="generating-data-feeds-from-reports-report-builder-and-ssrs"></a>Gerando feeds de dados de relatórios (Construtor de Relatórios e SSRS)
-  A extensão de renderização do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Atom gera um documento de serviço Atom que lista os feeds de dados disponíveis em um relatório e os feeds de dados das regiões de dados em um relatório. Use essa extensão para gerar feeds de dados compatíveis com Atom legíveis e intercambiáveis com aplicativos que podem consumir feeds de dados gerados de relatórios. Por exemplo, você pode usar a extensão de renderização Atom para feeds de dados gerados a serem usados no cliente [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
+  A extensão de renderização do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Atom gera um documento de serviço Atom que lista os feeds de dados disponíveis em um relatório e os feeds de dados das regiões de dados em um relatório. Use essa extensão para gerar feeds de dados em conformidade com Atom legíveis e intercambiáveis com aplicativos que podem consumir feeds de dados gerados de relatórios. Por exemplo, você pode usar a extensão de renderização Atom para feeds de dados gerados que você pode usar [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] no cliente.  
   
  O documento de serviço Atom lista pelo menos um feed de dados para cada região de dados em um relatório. Dependendo do tipo de região de dados e dos dados que a região de dados exibe, o [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] pode gerar vários feeds de dados de uma região de dados. Por exemplo, uma matriz ou gráfico podem fornecer vários feeds de dados. Quando a extensão de renderização Atom cria o documento de serviço Atom, um identificador exclusivo é criado para cada feed de dados e você usa o identificador na URL para acessar o conteúdo do feed de dados.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "66107835"
   
  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="ReportDataAsDataFeeds"></a> Relatórios como feeds de dados  
+##  <a name="ReportDataAsDataFeeds"></a>Relatórios como feeds de dados  
  Você pode exportar um relatório de produção como um feed de dados ou pode criar um relatório cujo principal objetivo seja fornecer dados, na forma de feeds de dados, para aplicativos. O uso de relatórios como feeds de dados oferece um método adicional para o fornecimento de dados a aplicativos quando os dados não podem ser acessados facilmente por meio de provedores de dados cliente, ou quando você prefere ocultar a complexidade da fonte de dados e facilitar o uso dos dados. Outro benefício do uso de dados de relatório como um feed de dados é que você pode usar recursos do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] , como o Gerenciador de Relatórios, a segurança, a programação e os instantâneos de relatório para gerenciar os relatórios que fornecem feeds de dados.  
   
  Para tirar o máximo proveito da extensão de renderização Atom, você deve entender como o relatório é renderizado em feeds de dados. Se você estiver usando relatórios existentes, a capacidade de prever quais feeds de dados os relatórios gerarão será útil; se você estiver escrevendo o relatório especificamente para uso como feeds de dados, a capacidade de incluir os dados e ajustar o layout do relatório para maximizar a utilidade dos feeds de dados será valiosa.  
@@ -41,7 +41,7 @@ ms.locfileid: "66107835"
   
 
   
-##  <a name="AtomServiceDocument"></a> Documento de serviço Atom (arquivo .atomsvc)  
+##  <a name="AtomServiceDocument"></a>Documento do serviço Atom (arquivo. atomsvc)  
  Um documento do serviço Atom especifica uma conexão com um ou mais feeds de dados. No mínimo, a conexão é uma URL simples para o serviço de dados que gera o feed.  
   
  Quando você renderiza os dados do relatório usando a extensão de renderização Atom, o documento do serviço Atom lista os feeds de dados disponíveis para um relatório. O documento lista pelo menos um feed de dados para cada região no relatório. As tabelas e os medidores geram somente um feed de dados cada, mas matrizes, listas e gráficos podem ter gerado vários dependendo dos dados que exibem.  
@@ -56,13 +56,13 @@ ms.locfileid: "66107835"
   
  ![RS_Atom_PeerDynamicColumns](../media/rs-atom-peerdynamiccolumns.gif "RS_Atom_PeerDynamicColumns")  
   
- O documento do serviço Atom gerado com base neste relatório inclui dois feeds de dados, um para cada coluna par dinâmica: Território e ano. O diagrama a seguir mostra o conteúdo de cada feed de dados.  
+ O documento do serviço Atom gerado com base neste relatório inclui dois feeds de dados, um para cada coluna par dinâmica: Território e Ano. O diagrama a seguir mostra o conteúdo de cada feed de dados.  
   
  ![RS_Atom_PeerDynamicDataFeeds](../media/rs-atom-peerdynamicdatafeeds.gif "RS_Atom_PeerDynamicDataFeeds")  
   
 
   
-##  <a name="DataFeeds"></a> Feeds de dados  
+##  <a name="DataFeeds"></a>Feeds de dados  
  O feed de dados é um arquivo XML com um formato de tabela consistente que não é alterado com o passar do tempo e dados variáveis que podem ser diferentes cada vez que o relatório é executado. Os feeds de dados gerados pelo [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] estão no mesmo formato que os gerados pelo ADO.NET Data Services.  
   
  Um feed de dados contém duas seções: cabeçalho e dados. A especificação Atom define os elementos em cada seção. O cabeçalho inclui informações, como o esquema de codificação de caracteres a ser usado com os feeds de dados.  
@@ -79,13 +79,13 @@ ms.locfileid: "66107835"
  `<updated>2009-05-08T23:09:58Z</updated>`  
   
 ### <a name="data-section"></a>Seção de dados  
- A seção de dados dos feeds de dados contém um <`entry`> elemento para cada linha no conjunto de linhas mesclada gerado pela extensão de renderização Atom.  
+ A seção de dados dos feeds de dados contém `entry` um elemento <> para cada linha no conjunto de linhas mesclado gerado pela extensão de renderização Atom.  
   
  O diagrama a seguir mostra um relatório que usa grupos e totais.  
   
  ![RS_Atom_ProductSalesSummaryCircledValues](../media/rs-atom-productsalessummarycircledvalues.gif "RS_Atom_ProductSalesSummaryCircledValues")  
   
- O XML a seguir mostra um <`entry`> elemento desse relatório em um feed de dados. Observe que o <`entry`> elemento inclui os totais de vendas e pedidos para o grupo e os totais de vendas e pedidos para todos os grupos. O <`entry`> elemento inclui todos os valores no relatório.  
+ O XML a seguir mostra um `entry` elemento <> desse relatório em um feed de dados. Observe que o elemento `entry` <> inclui os totais das vendas e dos pedidos para o grupo e os totais de vendas e pedidos para todos os grupos. O elemento `entry` <> inclui todos os valores no relatório.  
   
  `<entry><id>uuid:1795992c-a6f3-40ec-9243-fbfd0b1a5be3;id=166322</id><title type="text"></title><updated>2009-05-08T23:09:58Z</updated><author /><content type="application/xml"><m:properties>`  
   
@@ -114,11 +114,11 @@ ms.locfileid: "66107835"
   
  As linhas de dados para regiões de dados aninhadas em geral são largas, principalmente se as tabelas aninhadas e as matrizes tiverem grupos e totais. Talvez você ache útil exportar o relatório para um feed de dados e exibir o feed de dados para verificar se os dados gerados correspondem ao esperado.  
   
- Quando a extensão de renderização Atom cria o documento de serviço Atom, um identificador exclusivo é criado para cada feed de dados e você usa o identificador na URL para exibir o conteúdo do feed de dados. O documento de serviço de Atom de exemplo, mostrado acima, inclui a URL <http://ServerName/ReportServer?%2fProduct+Sales+Summary&rs%3aCommand=Render&rs%3aFormat=ATOM&rc%3aDataFeed=xAx0x1>". A URL identifica o relatório (Resumo de Vendas do Produto), o formato de renderização Atom (ATOM) e o nome do feed de dados (xAx0x1).  
+ Quando a extensão de renderização Atom cria o documento de serviço Atom, um identificador exclusivo é criado para cada feed de dados e você usa o identificador na URL para exibir o conteúdo do feed de dados. O documento do serviço Atom de exemplo, mostrado acima, inclui <http://ServerName/ReportServer?%2fProduct+Sales+Summary&rs%3aCommand=Render&rs%3aFormat=ATOM&rc%3aDataFeed=xAx0x1>a URL ". A URL identifica o relatório (Resumo de Vendas do Produto), o formato de renderização Atom (ATOM) e o nome do feed de dados (xAx0x1).  
   
  Os nomes do item de relatório seguem o padrão de nomes de elemento RDL dos itens de relatório e, com frequência, não são intuitivos, nem fáceis de lembrar. Por exemplo, o nome padrão da primeira matriz posicionada em um relatório é Tablix 1. Os feeds de dados usam esses nomes.  
   
- Para facilitar o trabalho com o feed de dados, use a propriedade DataElementName da região de dados para fornecer nomes amigáveis. Se você fornecer um valor para DataElementName subelemento do feed de dados <`d`> será uso é ele em vez do nome de região de dados padrão. Por exemplo, se o nome padrão de uma região de dados for Tablix1 e DataElementName definir SalesByTerritoryYear, o <`d`> nos dados de feed usará SalesByTerritoryYear. Se as regiões de dados tiverem dois feeds de dados como o relatório de matriz descrito acima, os nomes usados nos feeds de dados serão alesByTerritoryYear _Territory e SalesByTerritoryYear _Year.  
+ Para facilitar o trabalho com o feed de dados, use a propriedade DataElementName da região de dados para fornecer nomes amigáveis. Se você fornecer um valor para DataElementName, o subelemento do feed `d` de dados <> usará é ele, em vez do nome da região de dados padrão. Por exemplo, se o nome padrão de uma região de dados for Tablix1 e DataElementName definir SalesByTerritoryYear, o `d` <> no feed de dados usará SalesByTerritoryYear. Se as regiões de dados tiverem dois feeds de dados como o relatório de matriz descrito acima, os nomes usados nos feeds de dados serão alesByTerritoryYear _Territory e SalesByTerritoryYear _Year.  
   
  Se você comparar os dados mostrados no relatório e os dados no feed de dados, poderá observar algumas diferenças. Os relatórios frequentemente mostram dados numéricos e dados de hora/data, enquanto o feed de dados contém dados não formatados.  
   
@@ -126,7 +126,7 @@ ms.locfileid: "66107835"
   
 
   
-##  <a name="FlatteningReportData"></a> Mesclando dados do relatório  
+##  <a name="FlatteningReportData"></a>Mesclando dados de relatório  
  O renderizador Atom fornece dados de relatório como conjuntos de linhas mescladas em um formato XML. As regras para mesclar tabelas de dados são iguais às do renderizador CSV com algumas exceções:  
   
 -   Os itens no escopo são mesclados no nível de detalhe. Diferentemente do renderizador CSV, as caixas de texto no nível da parte superior aparecem em cada entrada gravada no feed de dados.  
@@ -149,7 +149,7 @@ ms.locfileid: "66107835"
   
 
   
-##  <a name="AtomRendering"></a> Regras de renderização Atom  
+##  <a name="AtomRendering"></a>Regras de renderização Atom  
  A extensão de renderização Atom ignora as seguintes informações ao renderizar um feed de dados:  
   
 -   Formatação e layout  
@@ -174,7 +174,7 @@ ms.locfileid: "66107835"
   
 |Item|Comportamento da renderização|  
 |----------|------------------------|  
-|Table|Renderiza expandindo a tabela e criando uma linha e uma coluna para cada linha e coluna no nível mais baixo de detalhe. As linhas e colunas de subtotal não têm cabeçalhos de coluna ou de linha. Não há suporte para relatórios detalhados.|  
+|Tabela|Renderiza expandindo a tabela e criando uma linha e uma coluna para cada linha e coluna no nível mais baixo de detalhe. As linhas e colunas de subtotal não têm cabeçalhos de coluna ou de linha. Não há suporte para relatórios detalhados.|  
 |Matriz|Renderiza expandindo a matriz e criando uma linha e uma coluna para cada linha e coluna no nível mais baixo de detalhe. As linhas e colunas de subtotal não têm cabeçalhos de coluna ou de linha.|  
 |Lista|Renderiza um registro para cada linha de detalhes ou instância na lista.|  
 |Sub-relatório|O item pai é repetido para cada instância de conteúdos.|  
@@ -192,8 +192,8 @@ ms.locfileid: "66107835"
   
 
   
-## <a name="see-also"></a>Consulte também  
- [Exportação para um arquivo CSV &#40;Construtor de Relatórios e SSRS&#41;](exporting-to-a-csv-file-report-builder-and-ssrs.md)   
- [Exportando relatórios &#40;relatórios e SSRS&#41;](export-reports-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Exportando para um arquivo CSV &#40;Construtor de Relatórios e SSRS&#41;](exporting-to-a-csv-file-report-builder-and-ssrs.md)   
+ [Exportando relatórios &#40;Construtor de Relatórios e SSRS&#41;](export-reports-report-builder-and-ssrs.md)  
   
   

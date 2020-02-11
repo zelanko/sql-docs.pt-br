@@ -1,5 +1,5 @@
 ---
-title: Adicionar e verificar uma Conexão de dados ou uma fonte de dados (construtor de relatórios e SSRS) | Microsoft Docs
+title: Adicionar e verificar uma conexão de dados ou fonte de dados (Construtor de Relatórios e SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ca1e5d039a7ea7aacd930f47eb99f854cbce8cac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107516"
 ---
 # <a name="add-and-verify-a-data-connection-or-data-source-report-builder-and-ssrs"></a>Adicionar e verificar uma conexão de dados ou uma fonte de dados (Construtor de Relatórios e SSRS)
@@ -24,14 +24,14 @@ ms.locfileid: "66107516"
   
  Para criar uma fonte de dados inserida, você deve ter informações de conexão com a fonte de dados externa e deve saber quais permissões são necessárias para acessar os dados. Em geral, essas informações derivam do proprietário da fonte de dados. Você pode testar a conexão para verificar se as credenciais especificadas são suficientes.  
   
- Para obter mais informações, consulte [Conexões de dados, fontes de dados e cadeias de conexão no Construtor de Relatórios](../data-connections-data-sources-and-connection-strings-in-report-builder.md) e [Especificar as credenciais no Construtor de Relatórios](../specify-credentials-in-report-builder.md).  
+ Para obter mais informações, consulte [conexões de dados, fontes de dados e cadeias de conexão em Construtor de relatórios](../data-connections-data-sources-and-connection-strings-in-report-builder.md) e [especificar credenciais no construtor de relatórios](../specify-credentials-in-report-builder.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ### <a name="to-create-a-reference-to-a-shared-data-source"></a>Para criar uma referência a uma fonte de dados compartilhada  
   
-1.  Na barra de ferramentas do painel Dados do Relatório, clique em **Nova** e em **Fonte de Dados**. A caixa de diálogo **Propriedades da Fonte de Dados** é aberta.  
+1.  Na barra de ferramentas do painel dados do relatório, clique em **novo** e em **fonte de dados**. A caixa de diálogo **Propriedades da Fonte de Dados** é aberta.  
   
 2.  Na caixa de texto **Nome** , digite um nome para a fonte de dados.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "66107516"
   
 ### <a name="to-create-an-embedded-data-source"></a>Para criar uma fonte de dados inserida  
   
-1.  Na barra de ferramentas do painel Dados do Relatório, clique em **Nova** e em **Fonte de Dados**. A caixa de diálogo **Propriedades da Fonte de Dados** é aberta.  
+1.  Na barra de ferramentas do painel Dados do Relatório, clique em **Nova**e em **Fonte de Dados**. A caixa de diálogo **Propriedades da Fonte de Dados** é aberta.  
   
 2.  Na caixa de texto **Nome** , digite um nome para a fonte de dados ou aceite o padrão.  
   
@@ -80,9 +80,9 @@ ms.locfileid: "66107516"
   
 2.  Clique em **Testar Conexão**.  
   
-3.  Se a conexão for bem-sucedida, a seguinte mensagem será exibida: "Conexão criada com êxito". [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3.  Se a conexão for bem-sucedida, a seguinte mensagem aparecerá: Conexão criada com êxito". [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-4.  Se a conexão não for bem-sucedida, a seguinte mensagem será exibida: "Não é possível conectar-se à fonte de dados."  
+4.  Se a conexão não for bem-sucedida, a seguinte mensagem aparecerá: "Não é possível conectar à fonte de dados".  
   
 5.  Clique em **Detalhes**e use as informações para corrigir o problema.  
   
@@ -90,8 +90,8 @@ ms.locfileid: "66107516"
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Adicionar dados a um relatório &#40;relatórios e SSRS&#41;](report-datasets-ssrs.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Adicionar dados a um relatório &#40;Construtor de Relatórios e SSRS&#41;](report-datasets-ssrs.md)   
  [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Localizando, exibindo e gerenciando relatórios &#40;Construtor de Relatórios e SSRS&#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Conexões de dados, fontes de dados e cadeias de conexão no Construtor de Relatórios](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  

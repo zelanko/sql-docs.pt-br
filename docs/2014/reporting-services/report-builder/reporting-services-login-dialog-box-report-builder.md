@@ -13,17 +13,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 16da6af99af021185c8965dccd087e1c8420e50a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107654"
 ---
 # <a name="reporting-services-login-dialog-box-report-builder"></a>Caixa de diálogo Logon do Reporting Services (Construtor de Relatórios)
   Use a caixa de diálogo **Logon do Reporting Services** para fornecer credenciais para publicar relatórios no servidor de relatório. Para obter ajuda com essas credenciais, entre em contato o administrador do servidor de relatório.  
   
 ## <a name="options"></a>Opções  
- **Server**  
+ **Servidor**  
  Exibe o nome do servidor de relatório. Por exemplo, `http://localhost/reportserver`. Para servidores de relatório que usam uma porta diferente da porta 80 padrão, inclua o número da porta. Por exemplo, `http://localhost:8080/reportserver`.  
   
  **Nome de usuário**  
@@ -32,7 +32,7 @@ ms.locfileid: "66107654"
  **Senha**  
  Digite a senha para fazer logon no serviço Web.  
   
-## <a name="see-also"></a>Consulte também  
- [Ajuda do Construtor de Relatórios para caixas de diálogo, painéis e assistentes](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Construtor de Relatórios ajuda para caixas de diálogo, painéis e assistentes](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 517db08c37a0952a25a66828a37b11fd6ffa96ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63280666"
 ---
 # <a name="use-the-toolbox"></a>Usar a Caixa de Ferramentas
@@ -42,7 +42,7 @@ ms.locfileid: "63280666"
 |Alterar a posição de um item em uma guia expandida da Caixa de Ferramentas|Arraste o item até o local novo e libere o botão do mouse.|  
 |Renomear um item da Caixa de Ferramentas|Clique com o botão direito do mouse no item e clique em **Renomear Item** no menu de atalho.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Elementos gerais da interface do usuário](general-user-interface-elements.md)  
   
   

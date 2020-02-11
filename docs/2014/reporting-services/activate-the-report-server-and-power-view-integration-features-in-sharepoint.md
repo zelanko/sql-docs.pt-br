@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e30ae6ea0e7fa314748c4da265650273c0a7d56e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66110033"
 ---
 # <a name="activate-the-report-server-and-power-view-integration-features-in-sharepoint"></a>Ativar o servidor de relatório e os recursos de integração do Power View no SharePoint
-  Os recursos da coleção de sites [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] geralmente são ativados por padrão após a instalação do Suplemento [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] para produtos SharePoint. Em algumas situações, você precisará ativar manualmente os recursos.  
+  Os [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] recursos do conjunto de sites geralmente são ativados por padrão depois [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] que você instala o suplemento para produtos do SharePoint. Em algumas situações, você precisará ativar manualmente os recursos.  
   
  Se você instalar o suplemento do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para Produtos SharePoint 2010 depois da instalação do produto SharePoint, o recurso de integração de Servidor de relatório e o recurso de integração do Power View só será ativado para coleções de sites de raiz. Para outras coleções de sites, você precisará ativar manualmente os recursos. Por exemplo se você tiver uma coleção de sites de **http://[nome do meu servidor]/sites/[nome da coleção de sites]** , será necessário ativar manualmente os recursos da coleção de sites do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
   
@@ -26,15 +26,15 @@ ms.locfileid: "66110033"
   
  "O aplicativo Web SharePoint 80 não tem a coleção de sites raiz"  
   
- Será possível encontrar a mensagem no log de instalação do suplemento, denominado "Rs_sp _ #. log" em que # é um número de incremento. O arquivo de log será localizado na pasta Temp de usuários atual, por exemplo C:\Users\\[nome de usuário]\AppData\Local\Temp. Para obter mais informações sobre as opções de registro em log com o suplemento, consulte [instalar ou desinstalar o suplemento Reporting Services para SharePoint &#40;do SharePoint 2010 e SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md).  
+ A mensagem será encontrada no log de instalação do suplemento, chamado "RS_SP_ #. log", em que # é um número de incremento. O arquivo de log será encontrado na pasta Temp Users atual, por exemplo,\\C:\Users [nome de usuário] \AppData\Local\Temp. Para obter mais informações sobre opções de log com o suplemento, consulte [instalar ou desinstalar o suplemento Reporting Services para sharepoint &#40;sharepoint 2010 e sharepoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md).  
   
  Neste tópico:  
   
--   [Para ativar o Servidor de Relatório e os recursos de coleção de sites do Power View:](#bkmk_features)  
+-   [Para ativar o servidor de relatório e Power View os recursos do conjunto de sites de integração:](#bkmk_features)  
   
--   [Para ativar ou desativar o recurso de coleção de sites da Administração Central do Reporting Services:](#bkmk_centraladmin)  
+-   [Para ativar ou desativar Reporting Services recurso de conjunto de sites de administração central:](#bkmk_centraladmin)  
   
-##  <a name="bkmk_features"></a> Para ativar o Servidor de Relatório e os recursos de coleção de sites do Power View:  
+##  <a name="bkmk_features"></a>Para ativar o servidor de relatório e Power View os recursos do conjunto de sites de integração:  
   
 1.  Abra seu navegador no site em que você deseja que os recursos do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] estejam ativos.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66110033"
   
  Para desativar os recursos, é possível usar o mesmo procedimento, mas clique em **Desativar** em vez de **Ativar**.  
   
-##  <a name="bkmk_centraladmin"></a> Para ativar ou desativar o recurso de coleção de sites da Administração Central do Reporting Services:  
+##  <a name="bkmk_centraladmin"></a>Para ativar ou desativar Reporting Services recurso de conjunto de sites de administração central:  
   
 1.  Abra seu navegador na Administração Central do SharePoint.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "66110033"
 ## <a name="next-steps"></a>Próximas etapas  
  Depois que o recurso for ativado, será possível continuar com a integração do servidor.  
   
-## <a name="see-also"></a>Consulte também  
- [Instalar ou desinstalar o Reporting Services suplemento para SharePoint &#40;SharePoint 2010 e SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Instalar ou desinstalar o suplemento Reporting Services para SharePoint &#40;SharePoint 2010 e SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
   
   

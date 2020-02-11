@@ -1,5 +1,5 @@
 ---
-title: Executar lotes | Microsoft Docs
+title: Executando lotes | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,16 +14,16 @@ ms.assetid: f082c717-4f82-4820-a2fa-ba607d8fd872
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 84d3cf65284d767d437987c8ff2b21793466106e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67901267"
 ---
 # <a name="executing-batches"></a>Lotes em execução
-Antes de um aplicativo executa um lote de instruções, ele deve primeiro verificar se eles têm suporte. Para fazer isso, o aplicativo chama **SQLGetInfo** com as opções SQL_BATCH_SUPPORT, SQL_PARAM_ARRAY_ROW_COUNTS e SQL_PARAM_ARRAY_SELECTS. A primeira opção retorna se geradores de contagem de linha e o resultado da geração de conjunto de instruções são suportadas em lotes explícitas e procedimentos, enquanto as duas últimas opções retornam informações sobre a disponibilidade de contagens de linhas e o resultado define em parametrizadas execução.  
+Antes que um aplicativo execute um lote de instruções, ele deve primeiro verificar se há suporte. Para fazer isso, o aplicativo chama **SQLGetInfo** com as opções SQL_BATCH_SUPPORT, SQL_PARAM_ARRAY_ROW_COUNTS e SQL_PARAM_ARRAY_SELECTS. A primeira opção retorna se as instruções de geração de contagem de linhas e de conjunto de resultados são suportadas em lotes e procedimentos explícitos, enquanto as duas últimas opções retornam informações sobre a disponibilidade de contagens de linhas e conjuntos de resultados em parâmetros chão.  
   
- Lotes de instruções são executadas por meio **SQLExecute** ou **SQLExecDirect**. Por exemplo, a chamada a seguir executa um lote explícito de instruções para abrir uma nova ordem de venda.  
+ Lotes de instruções são executados por meio de **SQLExecute** ou **SQLExecDirect**. Por exemplo, a chamada a seguir executa um lote explícito de instruções para abrir uma nova ordem de venda.  
   
 ```  
 SQLCHAR *BatchStmt =  
@@ -37,9 +37,9 @@ SQLCHAR *BatchStmt =
 SQLExecDirect(hstmt, BatchStmt, SQL_NTS);  
 ```  
   
- Quando um lote de geração de resultado de instruções é executado, ele retorna um ou mais contagens de linhas ou resultado define. Para obter informações sobre como recuperar essas, consulte [vários resultados](../../../odbc/reference/develop-app/multiple-results.md).  
+ Quando um lote de instruções de geração de resultados é executado, ele retorna uma ou mais contagens de linhas ou conjuntos de resultados. Para obter informações sobre como recuperá-los, consulte [vários resultados](../../../odbc/reference/develop-app/multiple-results.md).  
   
- Se um lote de instruções inclui marcadores de parâmetro, elas são numeradas de aumentar a ordem do parâmetro, como em qualquer outra instrução. Por exemplo, o lote de instruções a seguir tem parâmetros, numerados de 1 a 21; aqueles no primeiro **inserir** instrução são numerados 1 a 5 e aqueles na última **inserir** instrução são numeradas 18 a 21.  
+ Se um lote de instruções incluir marcadores de parâmetro, eles serão numerados no aumento da ordem dos parâmetros como estão em qualquer outra instrução. Por exemplo, o seguinte lote de instruções tem parâmetros numerados de 1 a 21; aqueles na primeira instrução **Insert** são numerados de 1 a 5 e aqueles na última instrução **Insert** são numerados de 18 a 21.  
   
 ```  
 INSERT INTO Orders (OrderID, CustID, OpenDate, SalesPerson, Status)  

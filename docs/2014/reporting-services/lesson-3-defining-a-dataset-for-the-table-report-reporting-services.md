@@ -1,5 +1,5 @@
 ---
-title: 'Lição 3: Definir um conjunto de dados para o relatório de tabela (Reporting Services) | Microsoft Docs'
+title: 'Lição 3: Definindo um conjunto de dados para o relatório de tabela (Reporting Services) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,26 +11,26 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f4c78328e02215520b8d33213e01871f010f62d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108455"
 ---
-# <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>Lição 3: Definir um conjunto de dados para o relatório de tabela (Reporting Services)
+# <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>Lição 3: Definindo um conjunto de dados para o relatório de tabela (Reporting Services)
   Depois de definir a fonte de dados, é necessário definir um conjunto de dados. No [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], os dados usados em relatórios são contidos em um *conjunto de dados*. Um conjunto de dados inclui um ponteiro para uma fonte de dados e uma consulta a ser usada pelo relatório, bem como variáveis e campos calculados.  
   
- Você pode usar o designer de consulta em Designer de Relatórios para criar a consulta. Para este tutorial, você criará uma consulta que recupera informações de pedido de vendas a [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] **2008** banco de dados.  
+ Você pode usar o designer de consulta em Designer de Relatórios para criar a consulta. Para este tutorial, você criará uma consulta que recupera informações de pedidos de vendas [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]do banco de dados **2008** .  
   
 ### <a name="to-define-a-transact-sql-query-for-report-data"></a>Para definir uma consulta Transact-SQL a fim de obter dados de relatório  
   
-1.  No painel **Dados do Relatório**, clique em **Novo** e em **Conjunto de Dados...** . A caixa de diálogo **Propriedades do Conjunto de Dados** é aberta.  
+1.  No painel **dados do relatório** , clique em **novo**e, em seguida, clique em **DataSet...**. A caixa de diálogo **Propriedades do conjunto** de os é aberta.  
   
 2.  Na caixa **Nome** , digite **AdventureWorksDataset**.  
   
-3.  Clique em **Usar um conjunto de dados inserido em meu relatório**.  
+3.  Clique em **Usar um conjunto de dados inserido no meu relatório**.  
   
-4.  Verifique se o nome da fonte de dados, AdventureWorks2012, está no **fonte de dados** caixa de texto e que o **tipo de consulta** está **texto**.  
+4.  Verifique se o nome da fonte de dados, AdventureWorks2012, está na caixa de texto **fonte de dados** e se o **tipo de consulta** é **texto**.  
   
 5.  Digite, ou copie e cole, a consulta Transact-SQL a seguir na caixa **Consulta** .  
   
@@ -57,7 +57,7 @@ ms.locfileid: "66108455"
     HAVING ppc.Name = 'Clothing'  
     ```  
   
-6.  (Opcional) Clique no botão **Designer de Consultas** . A consulta é exibida no designer de consulta baseado em texto. Você pode ativar/desativar o designer de consultas gráficas clicando em **Editar Como Texto**. Exibir os resultados da consulta clicando-se a execução **(!)**  botão na barra de ferramentas de designer de consulta.  
+6.  (Opcional) Clique no botão **Designer de Consultas** . A consulta é exibida no designer de consulta baseado em texto. Você pode ativar/desativar o designer de consultas gráficas clicando em **Editar Como Texto**. Exiba os resultados da consulta clicando no botão executar **(!)** na barra de ferramentas do designer de consulta.  
   
      É possível ver os dados em seis campos de quatro tabelas diferentes no banco de dados [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] . A consulta utiliza a funcionalidade Transact-SQL como aliases. Por exemplo, a tabela SalesOrderHeader é chamada de soh.  
   
@@ -68,11 +68,11 @@ ms.locfileid: "66108455"
      O conjunto de dados **AdventureWorksDataset** e os campos são exibidos no painel Dados do Relatório.  
   
 ## <a name="next-task"></a>Próxima tarefa  
- Você especificou uma consulta que recupera dados para o relatório com êxito. A seguir, você criará o layout de relatório. Confira [Lição 4: Adicionar uma tabela ao relatório &#40;Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md).  
+ Você especificou uma consulta que recupera dados para o relatório com êxito. A seguir, você criará o layout de relatório. Consulte [Lição 4: Adicionando uma tabela ao relatório &#40;Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Ferramentas de Design no Designer do SQL Server Data Tools de relatório de consulta &#40;SSRS&#41;](report-data/query-design-tools-ssrs.md)   
- [O tipo de conexão do SQL Server &#40;SSRS&#41;](report-data/sql-server-connection-type-ssrs.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Ferramentas de design de consulta no Report Designer SQL Server Data Tools &#40;SSRS&#41;](report-data/query-design-tools-ssrs.md)   
+ [SQL Server tipo de conexão &#40;SSRS&#41;](report-data/sql-server-connection-type-ssrs.md)   
  [Tutorial: Gravando instruções Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md)  
   
   

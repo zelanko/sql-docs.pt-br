@@ -20,10 +20,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cfedde2b9bdeff831029f2f3916f28bec480d659
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106402"
 ---
 # <a name="report-and-group-variables-collections-references-report-builder-and-ssrs"></a>Referências de coleções de variáveis de grupo e de relatório (Construtor de Relatórios e SSRS)
@@ -47,7 +47,7 @@ ms.locfileid: "66106402"
   
 -   **Uso de leitura-gravação** Defina um valor uma vez e serialize-o dentro da sessão de relatório. A opção de leitura-gravação para variáveis fornece uma alternativa melhor do que o uso de uma variável estática no bloco de Código na definição do relatório.  
   
-     Quando você desmarca a **somente leitura** para a variável é definida como a opção para uma variável, a propriedade Writable `true`. Para atualizar o valor de uma expressão, use o método SetValue, por exemplo, `=Variables!MyVariable.SetValue("123")`.  
+     Quando você limpa a opção **somente leitura** para uma variável, a propriedade gravável para a variável é definida como `true`. Para atualizar o valor de uma expressão, use o método SetValue, por exemplo, `=Variables!MyVariable.SetValue("123")`.  
   
     > [!NOTE]  
     >  Não é possível controlar quando o processador do relatório inicializa uma variável ou avalia uma expressão que atualiza uma variável. A ordem de execução da inicialização da variável não é definida.  
@@ -71,7 +71,7 @@ ms.locfileid: "66106402"
   
  Para fazer referência à variável em uma expressão, use a sintaxe de coleção global, por exemplo, `=Variables!GroupDescription.Value`. Na superfície de design, o valor é exibido em uma caixa de texto como `<<Expr>>`.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Filtrar, agrupar e classificar dados &#40;Construtor de Relatórios e SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Coleções internas em expressões &#40;Construtor de Relatórios e SSRS&#41;](built-in-collections-in-expressions-report-builder.md)   
  [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  

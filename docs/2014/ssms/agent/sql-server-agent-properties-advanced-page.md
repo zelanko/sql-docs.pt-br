@@ -13,17 +13,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: aeb0c6c47a9203a7124fbe5d9f4739c52ae430d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63246236"
 ---
 # <a name="sql-server-agent-properties-advanced-page"></a>Propriedades do SQL Server Agent (página Avançado)
-  Use esta página para exibir e modificar as propriedades avançadas do serviço do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
+  Use esta página para exibir e modificar as propriedades avançadas do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serviço do Agent.  
   
 ## <a name="options"></a>Opções  
- **Encaminhamento de evento do SQL Server**  
+ **Encaminhamento de eventos SQL Server**  
  As opções nesta categoria ativam e configuram o encaminhamento de evento.  
   
  **Encaminhar eventos para um servidor diferente**  
@@ -32,13 +32,14 @@ ms.locfileid: "63246236"
  **Servidor**  
  Selecionar o nome do servidor ao qual os eventos serão encaminhados.  
   
- **Eventos sem-tratamento**  
- Encaminha apenas os eventos sem-tratamento para o servidor especificado. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Agent só encaminha os eventos aos quais não haja respostas de nenhum alerta.  
+ **Eventos sem tratamento**  
+ Encaminha apenas os eventos sem-tratamento para o servidor especificado. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Agent só encaminha os eventos aos quais não haja respostas de nenhum alerta.  
   
  **Todos os eventos**  
  Encaminha todos os eventos. Quando um alerta na instância local responde ao evento, o agente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] encaminhará o evento e processará o alerta.  
   
- **Se a gravidade do evento for esta ou acima**  
+ **Se o evento tiver severidade no ou acima**  
  Encaminha apenas os eventos com nível de severidade igual ou maior que o nível especificado.  
   
  **Condição de CPU ociosa**  
@@ -47,13 +48,13 @@ ms.locfileid: "63246236"
  **Definir condição de CPU ociosa**  
  Define as condições sob as quais o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent considera que a CPU está ociosa.  
   
- **Uso médio de CPU cai abaixo de**  
+ **O uso médio de CPU cai abaixo de**  
  Porcentagem de uso de CPU abaixo do qual a CPU é considerada ociosa.  
   
- **E permanece abaixo desse nível por**  
+ **E permanece abaixo desse nível para**  
  Quantidade de tempo em que o uso médio da CPU deve estar abaixo do nível especificado antes que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent execute trabalhos na agenda de CPU ociosa.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar e anexar agendas a trabalhos](create-and-attach-schedules-to-jobs.md)   
  [Gerenciar eventos](manage-events.md)  
   

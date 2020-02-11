@@ -1,5 +1,5 @@
 ---
-title: 'Lição 7: Adicionar ação de detalhamento ao relatório pai | Microsoft Docs'
+title: 'Lição 7: Adicionar uma ação de detalhamento ao relatório pai | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 356ad7ed670ee13bbc6b4e2d7a86cb6095e79e10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108403"
 ---
 # <a name="lesson-7-add-drillthrough-action-on-parent-report"></a>Lição 7: Adicionar ação de detalhamento ao relatório pai
@@ -24,19 +24,19 @@ ms.locfileid: "66108403"
   
 1.  Vá para o relatório pai.  
   
-2.  Clique em caixa de texto que contém o valor da **nome**.  
+2.  Clique na caixa de texto que contém o valor de **nome**.  
   
-3.  Clique com botão direito a caixa de texto e, em seguida, clique em **propriedades da caixa de texto**.  
+3.  Clique com o botão direito do mouse na caixa de texto e, em seguida, clique em **Propriedades**da  
   
 4.  Vá para a guia **Ação** e selecione a opção **Ir para o relatório** .  
   
 5.  Insira o nome do relatório filho na seção **Especificar um relatório** .  
   
-6.  Clique em **Add** sob **usar esses parâmetros para executar o relatório** seção.  
+6.  Clique em **Adicionar** em **usar estes parâmetros para executar a seção relatório** .  
   
-7.  Tipo de **productid** na **nome** caixa e, em seguida, clique em **ProductID** no **valor** lista suspensa.  
+7.  Digite **ProductID** na caixa **nome** e clique em **ProductID** na lista suspensa **valor** .  
   
-8.  Clique em **Okey** para concluir.  
+8.  Clique em **OK** para concluir.  
   
 ## <a name="next-task"></a>Próxima tarefa  
  Você adicionou uma ação de detalhamento no relatório pai. Em seguida, você criará um filtro de dados para a tabela de dados definida para o relatório filho.  

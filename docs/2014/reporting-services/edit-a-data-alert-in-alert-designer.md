@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 948bf1fd8145da9db9d0e0b81beabb8e7b3efaf2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109247"
 ---
 # <a name="edit-a-data-alert-in-alert-designer"></a>Editar um alerta de dados no Designer de Alertas
@@ -27,7 +27,7 @@ ms.locfileid: "66109247"
   
  A imagem a seguir mostra o menu de contexto em um alerta de dados no Gerenciador de Alertas de Dados.  
   
- ![Abrir o Designer de Alerta de Dados clicando em Editar](media/rs-alertmanageriwopendesigner.gif "Abrir o Designer de Alerta de Dados clicando em Editar")  
+ ![Abrir o Designer de Alertas de Dados clicando em Editar](media/rs-alertmanageriwopendesigner.gif "Abrir o Designer de Alertas de Dados clicando em Editar")  
   
  O procedimento a seguir inclui as etapas para abrir a definição de alerta para edição no Designer de Alertas de Dados no Gerenciador de Alertas de Dados.  
   
@@ -42,13 +42,13 @@ ms.locfileid: "66109247"
     > [!NOTE]  
     >  Você não pode escolher um feed de dados diferente. Para usar um feed de dados diferente, você deve criar uma nova definição de alerta de dados.  
   
-3.  Clique em **Salvar**.  
+3.  Clique em **Save** (Salvar).  
   
     > [!NOTE]  
     >  Se o relatório tiver sido alterado e os feeds de dados gerados no relatório tiverem sido alterados, a definição de alerta talvez não seja mais válida. Isso ocorre quando uma coluna referenciada pela definição de alerta nas regras é excluída do relatório ou altera o tipo de dados, ou quando o relatório é excluído ou movido. Você pode abrir uma definição de alerta que não é válida, mas só pode salvá-la novamente depois que ela estiver válida com base na versão atual do feed de dados de relatório do qual ela depende. Para saber mais sobre como os feeds de dados são gerados com base em relatórios, consulte [Gerando feeds de dados com base em relatórios &#40;Construtor de Relatórios e SSRS&#41;](report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Gerenciador de Alertas de dados para administradores de alertas](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Gerenciador de alertas de dados para administradores de alertas](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
  [Reporting Services Data Alerts](../ssms/agent/alerts.md)  
   
   

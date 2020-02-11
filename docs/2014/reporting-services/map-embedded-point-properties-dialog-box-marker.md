@@ -1,5 +1,5 @@
 ---
-title: Caixa de diálogo Propriedades do ponto inserido, marcador de mapa | Microsoft Docs
+title: Caixa de diálogo Mapear Propriedades de ponto inserido, marcador | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e58ab5cbee4b039206eec713fe964169c4aecee1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108331"
 ---
 # <a name="map-embedded-point-properties-dialog-box-marker"></a>Caixa de diálogo Mapear Propriedades de Ponto Inserido, Marcador
@@ -36,7 +36,7 @@ ms.locfileid: "66108331"
  **Tamanho do marcador**  
  Especifique o tamanho do marcador. O valor padrão é 10pt.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Mapas &#40;Construtor de Relatórios e SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)  
   
   

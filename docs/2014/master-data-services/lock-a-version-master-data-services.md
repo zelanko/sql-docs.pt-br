@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: e38a4c75ad6cf8c65d7120e0eb98163f7ee0fccc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482868"
 ---
 # <a name="lock-a-version-master-data-services"></a>Bloquear uma versão (Master Data Services)
@@ -47,11 +47,11 @@ ms.locfileid: "65482868"
   
 ## <a name="next-steps"></a>Próximas etapas  
   
--   [Validar uma versão em relação a regras de negócio &#40;Master Data Services&#41;](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
+-   [Validar uma versão em relação às regras de negócio &#40;Master Data Services&#41;](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
 -   [Confirmar uma versão &#40;Master Data Services&#41;](../../2014/master-data-services/commit-a-version-master-data-services.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Versões &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)   
  [Desbloquear uma versão &#40;Master Data Services&#41;](../../2014/master-data-services/unlock-a-version-master-data-services.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Verificar ou desativar atualizações (construtor de relatórios e SSRS) | Microsoft Docs
+title: Verificar se há atualizações ou desativar atualizações (Construtor de Relatórios e SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 27942be9c32d4537f729adbd69df1c64a9c9ff6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109869"
 ---
 # <a name="check-for-updates-or-turn-updates-off-report-builder-and-ssrs"></a>Verificar ou desativar atualizações (Construtor de Relatórios e SSRS)
@@ -24,22 +24,22 @@ ms.locfileid: "66109869"
   
 ### <a name="to-turn-on-and-off-report-part-updates"></a>Para ligar e desligar as atualizações de parte de relatório  
   
-1.  Clique no botão Construtor de relatórios e, em seguida, clique em **opções**.  
+1.  Clique no botão Construtor de Relatórios e clique em **Opções**.  
   
-2.  No **opções** caixa de diálogo do **recursos** guia, marque ou desmarque o **Mostrar atualizações de partes de relatório em Meus relatórios** caixa de seleção.  
+2.  Na caixa de diálogo **Opções** , na guia **recursos** , marque ou desmarque a caixa de seleção **Mostrar atualizações em partes de relatório em meus relatórios** .  
   
 > [!NOTE]  
 >  Esta é uma configuração de usuário. Ela será desabilitada para todos os relatórios que você abrir.  
   
 ### <a name="to-check-for-updates"></a>Para verificar atualizações  
   
--   A superfície de design, fora do relatório ou no corpo do relatório com o botão direito e, em seguida, clique em **verificar se há atualizações**.  
+-   Clique com o botão direito do mouse na superfície de design fora do relatório ou no corpo do relatório e clique em **verificar se há atualizações**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Partes de relatório &#40;Construtor de Relatórios e SSRS&#41;](report-parts-report-builder-and-ssrs.md)   
- [Publicar e republicar partes de relatório &#40;relatórios e SSRS&#41;](report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md)   
- [Procurar partes de relatório e definir uma pasta padrão &#40;relatórios e SSRS&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)   
- [Solucionar problemas de partes de relatório &#40;relatórios e SSRS&#41;](../../2014/reporting-services/troubleshoot-report-parts-report-builder-and-ssrs.md)   
+ [Publicar e republicar partes de relatório &#40;Construtor de Relatórios e SSRS&#41;](report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md)   
+ [Procurar partes de relatório e definir uma pasta padrão &#40;Construtor de Relatórios e SSRS&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)   
+ [Solucionar problemas de partes de relatório &#40;Construtor de Relatórios e SSRS&#41;](../../2014/reporting-services/troubleshoot-report-parts-report-builder-and-ssrs.md)   
  [Partes de relatório e conjuntos de dados no Construtor de Relatórios](report-data/report-parts-and-datasets-in-report-builder.md)  
   
   

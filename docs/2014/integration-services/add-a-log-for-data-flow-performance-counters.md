@@ -1,5 +1,5 @@
 ---
-title: Adicionar um Log para contadores de desempenho de fluxo de dados | Microsoft Docs
+title: Adicionar um log para contadores de desempenho de fluxo de dados | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,17 +15,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 76c85de1e9e8c294ab9db1f887f2b417b321d663
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062056"
 ---
 # <a name="add-a-log-for-data-flow-performance-counters"></a>Adicionar um log para contadores de desempenho de fluxo de dados
   Este procedimento descreve como adicionar um log para os contadores de desempenho fornecidos pelo mecanismo de fluxo de dados.  
   
 > [!NOTE]  
->  Se você instalar o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] em um computador que está executando o [!INCLUDE[winxpsvr](../includes/winxpsvr-md.md)]e, em seguida, atualizar o computador para o [!INCLUDE[firstref_longhorn](../includes/firstref-longhorn-md.md)], o processo de atualização removerá os contadores de desempenho do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] do computador. Para restaurar os contadores de desempenho do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] no computador, execute a Instalação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] em modo de reparo.  
+>  se você instalar o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] em um computador que está executando o [!INCLUDE[winxpsvr](../includes/winxpsvr-md.md)]e atualizar o computador para o [!INCLUDE[firstref_longhorn](../includes/firstref-longhorn-md.md)], o processo de atualização removerá os contadores de desempenho do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] do computador. Para restaurar os contadores de desempenho do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] no computador, execute a Instalação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] em modo de reparo.  
   
 ### <a name="to-add-logging-of-performance-counters"></a>Para adicionar registros de contadores de desempenho  
   
@@ -51,7 +51,7 @@ ms.locfileid: "66062056"
   
 9. Clique em **Adicionar**.  
   
-10. Clique em **Fechar**.  
+10. Clique em **fechar**  
   
 11. Na caixa de diálogo **MyLog** , examine a lista de registro de contadores de desempenho na lista **Contadores** .  
   
@@ -62,7 +62,7 @@ ms.locfileid: "66062056"
     > [!NOTE]  
     >  Você deve iniciar o serviço Logs e Alertas de Desempenho usando uma conta local ou uma conta de domínio que seja um membro do grupo Administradores.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Contadores de desempenho](performance/performance-counters.md)   
  [Exibir entradas de log na janela Eventos de Log](../../2014/integration-services/view-log-entries-in-the-log-events-window.md)  
   

@@ -18,19 +18,19 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 37d0031ebfb4ec6d31da6aad9a8842c0623cb75b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63283477"
 ---
 # <a name="report-server-web-service-methods"></a>Métodos de serviço Web Servidor de Relatórios
-  Os serviços Web Servidor de Relatórios incluem várias categorias de métodos que se baseiam em recursos de componente. Esses métodos são fornecidos através de vários pontos de extremidade de serviço Web (três para gerenciamento de relatórios e um para execução de relatórios), os quais são expostos como membros das classes <xref:ReportService2010.ReportingService2010> e <xref:ReportExecution2005.ReportExecutionService>. Essas classes podem ser geradas por meio de uma ferramenta de classe proxy como wsdl.exe, que está incluída no SDK do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Para obter mais informações sobre os serviços Web Servidor de Relatórios e o [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], consulte [Criando aplicativos usando o serviço Web e o .NET Framework](../net-framework/building-applications-using-the-web-service-and-the-net-framework.md).  
+  Os serviços Web Servidor de Relatórios incluem várias categorias de métodos que se baseiam em recursos de componente. Esses métodos são fornecidos através de vários pontos de extremidade de serviço Web (três para gerenciamento de relatórios e um para execução de relatórios), os quais são expostos como membros das classes <xref:ReportService2010.ReportingService2010> e <xref:ReportExecution2005.ReportExecutionService>. Essas classes podem ser geradas por meio de uma ferramenta de classe proxy, como WSDL. exe, que [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] está incluída no SDK. Para obter mais informações sobre os serviços Web Servidor de Relatórios e o [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], consulte [Criando aplicativos usando o serviço Web e o .NET Framework](../net-framework/building-applications-using-the-web-service-and-the-net-framework.md).  
   
 ## <a name="endpoints-and-methods"></a>Pontos de extremidade e métodos  
  A tabela a seguir lista os pontos de extremidade do serviço Web Servidor de Relatórios e as categorias de métodos fornecidas pelo ponto de extremidade <xref:ReportService2010.ReportingService2010>. Para obter informações sobre os métodos disponíveis nos outros pontos de extremidade, consulte [Referência técnica &#40;SSRS&#41;](../../technical-reference-ssrs.md).  
   
-|Tópico|Descrição|  
+|Tópico|DESCRIÇÃO|  
 |-----------|-----------------|  
 |[Pontos de extremidade do serviço Web Servidor de Relatórios](report-server-web-service-endpoints.md)|Descreve os pontos de extremidade de gerenciamento e execução do serviço Web Servidor de Relatórios.|  
 |[Métodos de gerenciamento de namespace do Servidor de Relatório](report-server-namespace-management-methods.md)|Descreve métodos que você pode usar para gerenciar o banco de dados do servidor de relatório. Você pode especificamente gerenciar pastas e recursos e definir propriedades de item.|  
@@ -44,10 +44,10 @@ ms.locfileid: "63283477"
 |[Métodos de assinatura e de entrega](subscription-and-delivery-methods.md)|Descreve métodos que você pode usar para criar e gerenciar assinaturas e entrega de relatório.|  
 |[Métodos de relatórios vinculados](linked-reports-methods.md)|Descreve métodos que você pode usar para criar e gerenciar relatórios vinculados.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Acessando a API SOAP](../accessing-the-soap-api.md)   
  [Criando aplicativos usando o serviço Web e o .NET Framework](../net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
- [Serviço Web do Servidor de Relatório](../report-server-web-service.md)   
+ [Serviço Web Servidor de Relatórios](../report-server-web-service.md)   
  [Referência técnica &#40;SSRS&#41;](../../technical-reference-ssrs.md)  
   
   

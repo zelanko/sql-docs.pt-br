@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 60b081b96ae54885a6f1968706903b13fb7505a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106386"
 ---
 # <a name="reportitems-collection-references-report-builder-and-ssrs"></a>Referências de coleções ReportItems (Construtor de Relatórios e SSRS)
@@ -24,7 +24,7 @@ ms.locfileid: "66106386"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="using-the-reportitems-value-property"></a>Usando a propriedade Value de ReportItems  
- Itens dentro de `ReportItems` coleção tem apenas uma propriedade: Value. O valor para um item de `ReportItems` pode ser usado para exibir ou calcular dados de outro campo no relatório. Para acessar o valor da caixa de texto atual, é possível usar o Me.Value ou simplesmente o Value global interno de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] . Em funções de relatório, como First e funções de agregação, use a sintaxe totalmente qualificada.  
+ Itens dentro da coleção `ReportItems` possuem apenas uma propriedade: Value. O valor para um item de `ReportItems` pode ser usado para exibir ou calcular dados de outro campo no relatório. Para acessar o valor da caixa de texto atual, é possível usar o Me.Value ou simplesmente o Value global interno de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] . Em funções de relatório, como First e funções de agregação, use a sintaxe totalmente qualificada.  
   
  Por exemplo:  
   
@@ -32,7 +32,7 @@ ms.locfileid: "66106386"
   
      `=ReportItems!Textbox1.Value`  
   
--   Esta expressão, colocada em um `ReportItem` propriedade Color, da caixa de texto exibe o texto em preto quando o valor é > 0; caso contrário, o valor é exibido em vermelho:  
+-   Essa expressão, colocada em uma `ReportItem` propriedade de cor da caixa de texto, exibe o texto em preto quando o valor é > 0; caso contrário, o valor será exibido em vermelho:  
   
      `=IIF(Me.Value > 0,"Black","Red")`  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66106386"
   
  Por exemplo, uma caixa de texto em uma linha que está em um grupo pai não deve conter uma expressão que faça referência ao nome de uma caixa de texto em uma linha do grupo filho. Essa expressão não é resolvida como um valor no relatório porque a caixa de texto da linha filho está fora do escopo. Para obter mais informações, consulte [Referência de funções de agregação &#40;Construtor de Relatórios e SSRS&#41;](report-builder-functions-aggregate-functions-reference.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Coleções internas em expressões &#40;Construtor de Relatórios e SSRS&#41;](built-in-collections-in-expressions-report-builder.md)   
  [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Paginação no Reporting Services &#40;Construtor de Relatórios e SSRS&#41;](pagination-in-reporting-services-report-builder-and-ssrs.md)   

@@ -1,5 +1,5 @@
 ---
-title: Alterações no comportamento de string-length e substring | Microsoft Docs
+title: Alterações no comportamento de String-Length e substring | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,22 +11,22 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 18643dfc11d2b1b1d875a19c478f9ec8cbdd5be6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66428841"
 ---
 # <a name="changes-to-behavior-of-string-length-and-substring"></a>Alterações no comportamento de string-length e substring
-  O [função string-length &#40;XQuery&#41; ](/sql/xquery/functions-on-string-values-string-length) e [função substring &#40;XQuery&#41; ](/sql/xquery/functions-on-string-values-substring) funções podem retornar resultados diferentes quando usadas com bancos de dados XML que contêm caracteres substitutos.  
+  A [função de comprimento da cadeia de caracteres &#40;xquery&#41;](/sql/xquery/functions-on-string-values-string-length) e a [função substring &#40;funções do XQuery&#41;](/sql/xquery/functions-on-string-values-substring) podem retornar resultados diferentes quando usadas com bancos de dados XML que contêm caracteres substitutos.  
   
-## <a name="description"></a>Descrição  
- Quando um banco de dados é definido para ser compatível com [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], o comportamento do [função string-length &#40;XQuery&#41; ](/sql/xquery/functions-on-string-values-string-length) e [função substring &#40;XQuery&#41; ](/sql/xquery/functions-on-string-values-substring) alterações de funções ao lidar com caracteres suplementares do Unicode. Cada caractere suplementar Unicode definido para ter um ponto de código maior que U+FFFF, é contado como um caractere por essas funções, em vez de dois, como era contado em versões anteriores.  
+## <a name="description"></a>DESCRIÇÃO  
+ Quando um banco de dados é definido para ser [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]compatível com, o comportamento da [função de comprimento da cadeia de caracteres &#40;XQuery&#41;](/sql/xquery/functions-on-string-values-string-length) e a [função substring &#40;XQuery&#41;](/sql/xquery/functions-on-string-values-substring) funções são alteradas ao lidar com caracteres suplementares Unicode. Cada caractere suplementar Unicode definido para ter um ponto de código maior que U+FFFF, é contado como um caractere por essas funções, em vez de dois, como era contado em versões anteriores.  
   
  Para obter mais informações sobre caracteres substitutos, consulte [Surrogates and Supplementary Characters](https://go.microsoft.com/fwlink/?LinkId=178317)(em inglês).  
   
-## <a name="see-also"></a>Consulte também  
- [Problemas de atualização de mecanismo de banco de dados](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Problemas de atualização do Mecanismo de Banco de Dados](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
  [Supervisor de atualização do SQL Server 2014 &#91;novo&#93;](https://docs.microsoft.com/sql/sql-server/install/sql-server-2014-upgrade-advisor)  
   
   

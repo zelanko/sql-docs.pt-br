@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d71c83195c8f91984bbbce95bd00402928fdb36e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109204"
 ---
 # <a name="excel-device-information-settings"></a>Configurações das informações do dispositivo do Excel
@@ -27,12 +27,12 @@ ms.locfileid: "66109204"
 |-------------|-----------|  
 |**OmitDocumentMap**|Indica se será preciso omitir o mapa do documento para relatórios que dão suporte a ele. O valor padrão é `false`.|  
 |**OmitFormulas**|Indica se será preciso omitir fórmulas a partir do relatório renderizado. O valor padrão é `false`.|  
-|`SimplePageHeade`rs|Indica se o cabeçalho de página do relatório será renderizado para o cabeçalho de página do Excel. Um valor `false` indica que o cabeçalho de página será renderizado para a primeira linha da planilha. O valor padrão é `false`.|  
+|`SimplePageHeade`RS|Indica se o cabeçalho de página do relatório será renderizado para o cabeçalho de página do Excel. Um valor `false` indica que o cabeçalho de página será renderizado para a primeira linha da planilha. O valor padrão é `false`.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
  [Passando configurações de informações de dispositivos para extensões de renderização](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [Personalizar parâmetros de extensão de renderização em RSReportServer.config](customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [Personalizar parâmetros de extensão de renderização em RSReportServer.Config](customize-rendering-extension-parameters-in-rsreportserver-config.md)   
  [Referência técnica &#40;SSRS&#41;](../../2014/reporting-services/technical-reference-ssrs.md)  
   
   

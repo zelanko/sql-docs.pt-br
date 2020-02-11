@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b174f9ad33ee38c2f47ffc8a684cddd7ea4376bf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107357"
 ---
 # <a name="dataset-properties-dialog-box-options-report-builder"></a>Caixa de diálogo Propriedades do Conjunto de Dados, Opções (Construtor de Relatórios)
@@ -45,13 +45,13 @@ ms.locfileid: "66107357"
  Selecione um valor que determina distinção de largura. Esta opção indica se os dados são sensíveis à largura e pode ser definida como **True**, **False**ou **Auto**. O valor padrão, **Auto**, indica que o servidor de relatório deve tentar obter o valor do provedor de dados quando o relatório é executado. Se o provedor de dados não der suporte ao tipo de distinção de largura, o relatório executará como se o valor fosse **Falso**. Se souber o valor e souber que ele tem suporte, escolha **Verdadeiro**.  
   
  **Interprete subtotais como linhas de detalhe**  
- Selecione um valor que indica se deseja que linhas de subtotais sejam interpretadas como linhas de detalhes ao invés de linhas de agregação. O valor padrão, **automática**, indica que as linhas de subtotais devem ser tratadas como linhas de detalhes se o relatório não usar o `Aggregate`função () para acessar os campos no conjunto de dados. Se quiser que as linhas de subtotais sejam interpretadas como linhas de agregação, selecione **Falso**. Se você deseja que as linhas de subtotais sejam interpretadas como linhas de detalhes e você souber que elas não usam o `Aggregate`() de função, escolha **verdadeiro**.  
+ Selecione um valor que indica se deseja que linhas de subtotais sejam interpretadas como linhas de detalhes ao invés de linhas de agregação. O valor padrão, **auto**, indica que as linhas de subtotal devem ser tratadas como linhas de detalhes se o relatório `Aggregate`não usar a função () para acessar os campos no conjunto de dados. Se quiser que as linhas de subtotais sejam interpretadas como linhas de agregação, selecione **Falso**. Se você quiser que as linhas de subtotal sejam interpretadas como linhas de detalhes e souber que elas `Aggregate`não usam a função (), escolha **true**.  
   
-## <a name="see-also"></a>Consulte também  
- [Ajuda do Construtor de Relatórios para caixas de diálogo, painéis e assistentes](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
- [Função Aggregate &#40;Construtor de Relatórios e SSRS&#41;](../report-design/report-builder-functions-aggregate-function.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Construtor de Relatórios ajuda para caixas de diálogo, painéis e assistentes](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
+ [Função de agregação &#40;Construtor de Relatórios e SSRS&#41;](../report-design/report-builder-functions-aggregate-function.md)   
  [Filtrar, agrupar e classificar dados &#40;Construtor de Relatórios e SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [Caixa de diálogo Propriedades do Conjunto de Dados, Consulta &#40;Construtor de Relatórios&#41;](dataset-properties-dialog-box-query-report-builder.md)  
+ [Caixa de diálogo Propriedades do conjunto de &#40;, Construtor de Relatórios de consulta&#41;](dataset-properties-dialog-box-query-report-builder.md)  
   
   

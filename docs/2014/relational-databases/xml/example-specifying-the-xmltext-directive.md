@@ -1,5 +1,5 @@
 ---
-title: 'Exemplo: Especificando a diretiva XMLTEXT | Microsoft Docs'
+title: 'Exemplo: especificando a diretiva XMLTEXT | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 56ccb1e8a25b7d9f138c2900422d301919fef039
-ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67597554"
 ---
 # <a name="example-specifying-the-xmltext-directive"></a>Exemplo: Especificando a diretiva XMLTEXT
@@ -52,7 +52,7 @@ FOR XML EXPLICIT;
   
 -   Como o atributo `PersonID` no elemento <`xmltext`> entra em conflito com o atributo `PersonID` recuperado no mesmo nível de elemento, o atributo no elemento <`xmltext`> é ignorado, mesmo que `PersonID` seja NULL. Geralmente, um atributo substitui um atributo do mesmo nome no estouro.  
   
- Esse é o resultado:  
+ Este é o resultado:  
   
  `<Parent PersonID="P1" PersonName="Joe" attr1="data">content</Parent>`  
   
@@ -86,7 +86,7 @@ FROM Person
 FOR XML EXPLICIT;  
 ```  
   
- Esse é o resultado:  
+ Este é o resultado:  
   
  `<Parent PersonID="P1" PersonName="Joe" attr1="data">content</Parent>`  
   
@@ -98,9 +98,9 @@ FOR XML EXPLICIT;
   
  `</Parent>`  
   
- Se *AttributeName* for especificado com a diretiva `xmltext`, os atributos do elemento <`overflow`> serão adicionados como atributos dos subelementos do elemento <`Parent`> de circunscrição. O nome especificado para *AttributeName* se torna o nome do subelemento.  
+ Se *AttributeName* for especificado com a diretiva `xmltext`, os atributos do elemento <`overflow`> serão adicionados como atributos dos subelementos do elemento <`Parent`> de circunscrição. O nome especificado para *AttributeName* torna-se o nome do subelemento.  
   
- Nesta consulta, *AttributeName*, <`overflow`>, é especificado junto com o `xmltext` diretiva:  
+ Nesta consulta, *AttributeName*, <`overflow`>, é especificado junto com a `xmltext` diretiva:  
   
 ```  
 SELECT 1 as Tag, NULL as parent,  
@@ -112,7 +112,7 @@ FROM Person
 FOR XML EXPLICIT  
 ```  
   
- Esse é o resultado:  
+ Este é o resultado:  
   
  `<Parent PersonID="P1" PersonName="Joe">`  
   
@@ -136,7 +136,7 @@ FOR XML EXPLICIT
   
  `</Parent>`  
   
- Neste elemento de consulta, *directive* está especificada para o atributo `PersonName`. Isso resulta na adição de `PersonName` como um subelemento do elemento <`Parent`> de circunscrição. Os atributos do <`xmltext`> ainda estão anexados ao elemento <`Parent`> de circunscrição. O conteúdo do elemento e subelementos de <`overflow`> são pré-anexados a outros subelementos dos elementos <`Parent`> de circunscrição.  
+ Neste elemento de consulta, *directive* está especificada para o atributo `PersonName` . Isso resulta na adição de `PersonName` como um subelemento do elemento <`Parent`> de circunscrição. Os atributos do <`xmltext`> ainda estão anexados ao elemento <`Parent`> de circunscrição. O conteúdo do elemento e subelementos de <`overflow`> são pré-anexados a outros subelementos dos elementos <`Parent`> de circunscrição.  
   
 ```  
 SELECT 1      AS Tag, NULL as parent,  
@@ -147,7 +147,7 @@ FROM Person
 FOR XML EXPLICIT;  
 ```  
   
- Esse é o resultado:  
+ Este é o resultado:  
   
  `<Parent PersonID="P1" attr1="data">content<PersonName>Joe</PersonName>`  
   
@@ -194,7 +194,7 @@ FOR XML EXPLICIT, xmldata;
   
  `</overflow>`  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Usar o modo EXPLICIT com FOR XML](use-explicit-mode-with-for-xml.md)  
   
   

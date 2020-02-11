@@ -1,5 +1,5 @@
 ---
-title: Página Minhas assinaturas (Gerenciador de relatórios) | Microsoft Docs
+title: Página minhas assinaturas (Report Manager) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 75d662f677ee2b6bbab8e445804ca7f142b5c034
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108186"
 ---
 # <a name="my-subscriptions-page-report-manager"></a>Página Minhas Assinaturas (Gerenciador de Relatórios)
-  Use a página Minhas Assinaturas para exibir todas as suas assinaturas em um lugar. Desta página, você pode acessar e modificar ou excluir qualquer assinatura que possui. Você só possui as assinaturas que cria. Você não pode acessar as de outros usuários nem pode acessar assinaturas que você usa, mas não possui (por exemplo, se seu nome foi adicionado a uma assinatura existente definida por outro usuário). Você não pode criar assinaturas nesta página. Para obter mais informações sobre como criar assinaturas, consulte o [página nova assinatura ou Editar assinatura &#40;Gerenciador de relatórios&#41;](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md).  
+  Use a página Minhas Assinaturas para exibir todas as suas assinaturas em um lugar. Desta página, você pode acessar e modificar ou excluir qualquer assinatura que possui. Você só possui as assinaturas que cria. Você não pode acessar as de outros usuários nem pode acessar assinaturas que você usa, mas não possui (por exemplo, se seu nome foi adicionado a uma assinatura existente definida por outro usuário). Você não pode criar assinaturas nesta página. Para obter mais informações sobre como criar assinaturas, consulte a [página nova assinatura ou editar assinatura &#40;Report Manager&#41;](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md).  
   
  Por padrão, as assinaturas são classificadas em ordem alfabética pelo nome do relatório. Clique em um cabeçalho de coluna diferente para alterar o modo de classificação das assinaturas. Se você não tiver assinaturas ou se a permissão para criar ou gerenciar assinaturas estiver desabilitada, nenhuma assinatura será exibida na página.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "66108186"
  **Pasta**  
  Exibe a pasta que contém o relatório especificado na assinatura. Clique no nome de pasta para exibir o conteúdo da pasta.  
   
- **Gatilho**  
+ **Of**  
  Identifica critérios que causam a execução da assinatura. Um gatilho **TimedSubscription** é baseado em uma agenda que define quando a assinatura é executada. Um gatilho **SnapshotUpdated** é baseado em uma atualização de um instantâneo de relatório.  
   
  **Última Execução**  
@@ -66,7 +66,7 @@ ms.locfileid: "66108186"
   
  Uma assinatura não poderá ser processada se tiver sido desativada. Para atualizar a assinatura e torná-la operacional, abra e depois salve a assinatura.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Assinaturas e entrega &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Ajuda F1 do Gerenciador de Relatórios](../../2014/reporting-services/report-manager-f1-help.md)  
   

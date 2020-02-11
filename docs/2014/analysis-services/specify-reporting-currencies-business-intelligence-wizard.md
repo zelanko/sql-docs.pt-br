@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1be12aae3f4b4907fe7464aab1ea4bef6ff5f8dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068210"
 ---
 # <a name="specify-reporting-currencies-business-intelligence-wizard"></a>Especificar Moedas de Relatório (Assistente de Business Intelligence)
@@ -31,9 +31,9 @@ ms.locfileid: "66068210"
   
  Selecione um membro específico para incluir o membro na dimensão de moedas de relatório. Desmarque um membro específico para excluí-lo.  
   
-## <a name="see-also"></a>Consulte também  
- [Ajuda F1 do Assistente de Business Intelligence](business-intelligence-wizard-f1-help.md)   
- [Designer de cubo &#40;Analysis Services - dados multidimensionais&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [Designer de dimensão &#40;Analysis Services - dados multidimensionais&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Ajuda F1 do assistente de Business Intelligence](business-intelligence-wizard-f1-help.md)   
+ [O designer de cubo &#40;Analysis Services-dados multidimensionais&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [O designer de dimensão &#40;Analysis Services de dados multidimensionais&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   
   

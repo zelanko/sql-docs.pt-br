@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 6a9337e925da40f148bbe0d2c77fb1cf4f5f1a99
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67905772"
 ---
 # <a name="lastperiods-mdx"></a>LastPeriods (MDX)
@@ -35,13 +35,13 @@ LastPeriods(Index [ ,Member_Expression ] )
  Uma linguagem MDX válida que retorna um membro.  
   
 ## <a name="remarks"></a>Comentários  
- Se o número especificado de períodos for positivo, o **LastPeriods** função retorna um conjunto de membros que começam com o membro defasagem *índice* -1 na expressão de membro especificado e termina com o membro especificado. O número de membros retornados pela função é igual a *índice*.  
+ Se o número especificado de períodos for positivo, a função **LastPeriods** retornará um conjunto de membros que começam com o membro que atrasa o *índice* -1 da expressão de membro especificada e termina com o membro especificado. O número de membros retornados pela função é igual ao *índice*.  
   
- Se o número especificado de períodos for negativo, o **LastPeriods** função retorna um conjunto de membros que começam com o membro especificado e termina com o membro que lidera (- *índice* - 1) especificado membro. O número de membros retornados pela função é igual ao valor absoluto de *índice*.  
+ Se o número especificado de períodos for negativo, a função **LastPeriods** retornará um conjunto de membros que começam com o membro especificado e termina com o membro que leva (- *index* -1) do membro especificado. O número de membros retornados pela função é igual ao valor absoluto do *índice*.  
   
- Se o número especificado de períodos for zero, o **LastPeriods** função retorna o conjunto vazio. Isso é diferente de **Lag** função, que retorna o membro especificado se 0 for especificado.  
+ Se o número especificado de períodos for zero, a função **LastPeriods** retornará o conjunto vazio. Isso é diferente da função **lag** , que retorna o membro especificado se 0 for especificado.  
   
- Se um membro não for especificado, o **LastPeriods** função usa **Time.CurrentMember**. Se nenhuma dimensão for marcada como uma dimensão Tempo, a função será analisada e executada sem um erro, mas causará um erro de célula no aplicativo cliente.  
+ Se um membro não for especificado, a função **LastPeriods** usará **time. CurrentMember**. Se nenhuma dimensão for marcada como uma dimensão Tempo, a função será analisada e executada sem um erro, mas causará um erro de célula no aplicativo cliente.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir retorna o valor de medida padrão durante o segundo, terceiro e quarto trimestres fiscais do ano fiscal 2002.  
@@ -65,7 +65,7 @@ SELECT LastPeriods
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Referência de função MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

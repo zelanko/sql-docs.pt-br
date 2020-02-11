@@ -13,14 +13,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 719e7a24efa2b0c68d4984d8b16f957a268fdafb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63265854"
 ---
 # <a name="creating-a-custom-report-item-run-time-component"></a>Criando um componente de item de relatório personalizado em tempo de execução
-  O componente de item de relatório personalizado em tempo de execução é implementado como um componente do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] usando qualquer linguagem em conformidade com CLS e é chamado pelo processador de relatório em tempo de execução. Para definir as propriedades do componente em tempo de execução no ambiente de design, modifique o componente em tempo de design correspondente do item de relatório personalizado.  
+  O componente de tempo de execução do item de relatório personalizado é [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] implementado como um componente usando qualquer linguagem compatível com CLS e é chamado pelo processador de relatório em tempo de execução. Para definir as propriedades do componente em tempo de execução no ambiente de design, modifique o componente em tempo de design correspondente do item de relatório personalizado.  
 
 <!--
 Replacing the following multiValue.....
@@ -146,10 +146,10 @@ namespace Microsoft.Samples.ReportingServices
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Arquitetura de item de relatório personalizado](custom-report-item-architecture.md)   
  [Criando um componente de item de relatório personalizado em tempo de design](creating-a-custom-report-item-design-time-component.md)   
- [Bibliotecas de classes de itens de relatório personalizados](custom-report-item-class-libraries.md)   
- [Como implantar um Item de relatório personalizado](how-to-deploy-a-custom-report-item.md)  
+ [Bibliotecas de classe de item de relatório personalizado](custom-report-item-class-libraries.md)   
+ [Como implantar um item de relatório personalizado](how-to-deploy-a-custom-report-item.md)  
   
   

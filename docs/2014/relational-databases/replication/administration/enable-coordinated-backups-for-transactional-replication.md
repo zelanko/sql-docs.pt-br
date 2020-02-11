@@ -1,5 +1,5 @@
 ---
-title: Habilitar Backups coordenados para replicação transacional (programação Transact-SQL de replicação) | Microsoft Docs
+title: Habilitar backups coordenados para replicação transacional (Programação Transact-SQL de replicação) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 582e7afef033aac6fdc281e8fc310760a77949a0
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67793416"
 ---
 # <a name="enable-coordinated-backups-for-transactional-replication-replication-transact-sql-programming"></a>Habilitar backups coordenados para a replicação transacional (Programação Transact-SQL de replicação)
@@ -32,7 +32,7 @@ ms.locfileid: "67793416"
   
 1.  No Publicador, use a função [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](/sql/t-sql/functions/databasepropertyex-transact-sql) para retornar a propriedade **IsSyncWithBackup** do banco de dados de publicação. Se a função retornar **1**, os backups coordenados já estarão habilitados para o banco de dados publicado.  
   
-2.  Se a função na etapa 1 retornar **0**, execute [sp_replicationdboption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql) no Publicador do banco de dados de publicação. Especifique um valor de **sincronizar com backup** para  **\@optname**, e **true** para  **\@valor**.  
+2.  Se a função na etapa 1 retornar **0**, execute [sp_replicationdboption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql) no Publicador do banco de dados de publicação. Especifique um valor de **sync with backup** para **\@optname** e **true** para **\@value**.  
   
     > [!NOTE]  
     >  Se alterar a opção **sync with backup** para **falso**, o ponto de truncamento do banco de dados de publicação será atualizado após a execução do Agente de Leitor de Log ou após um intervalo, caso o Agente de Leitor de Log esteja executando continuamente. O intervalo máximo é controlado pelo parâmetro do agente **-MessageInterval** (que tem um padrão de 30 segundos).  
@@ -41,10 +41,10 @@ ms.locfileid: "67793416"
   
 1.  No Editor, use a função [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](/sql/t-sql/functions/databasepropertyex-transact-sql) para retornar a propriedade **IsSyncWithBackup** do banco de dados de distribuição. Se a função retornar **1**, os backups coordenados já estarão habilitados para o banco de dados de distribuição.  
   
-2.  Se a função na etapa 1 retornar **0**, execute [sp_replicationdboption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql) no Distribuidor do banco de dados de distribuição. Especifique um valor de **sincronizar com backup** para  **\@optname** e **true** para  **\@valor**.  
+2.  Se a função na etapa 1 retornar **0**, execute [sp_replicationdboption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql) no Distribuidor do banco de dados de distribuição. Especifique um valor de **sync with backup** para **\@optname** e **true** para **\@value**.  
   
 ### <a name="to-disable-coordinated-backups"></a>Para desabilitar backups coordenados  
   
-1.  No Publicador do banco de dados de publicação ou no Distribuidor no banco de dados de distribuição, execute [sp_replicationdboption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql). Especifique um valor de **sincronizar com backup** para  **\@optname** e **false** para  **\@valor**.  
+1.  No Publicador do banco de dados de publicação ou no Distribuidor no banco de dados de distribuição, execute [sp_replicationdboption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql). Especifique um valor **sync with backup** para **\@optname** e **false** para **\@value**.  
   
   

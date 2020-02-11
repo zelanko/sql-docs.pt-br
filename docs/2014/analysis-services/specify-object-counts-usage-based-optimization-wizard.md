@@ -13,18 +13,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e0503192c3c948110f8301c8eb375e1c8203e42f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068241"
 ---
 # <a name="specify-object-counts-usage-based-optimization-wizard"></a>Especificar Contagens de Objetos (Assistente de Otimização com Base no Uso)
   Use a página **Especificar Contagens de Objetos** para calcular a contagem de objetos no cubo automaticamente ou para inserir contagens estimadas manualmente. O Assistente de Otimização com Base no Uso usa a contagem de objetos para estimar requisitos de armazenamento.  
   
 ## <a name="options"></a>Opções  
- **Objetos Cube**  
- Exibe as dimensões e os atributos do cubo. Somente os atributos que não têm seus `AggregationUsage` propriedade definida como nenhum na **revisar uso de agregação** página do assistente são exibidos, porque esses são os únicos atributos que precisam de contagens especificadas.  
+ **Objetos de Cubo**  
+ Exibe as dimensões e os atributos do cubo. Somente os atributos que não têm sua `AggregationUsage` propriedade definida como nenhum na página **revisar uso de agregação** do assistente são mostrados porque esses são os únicos atributos que precisam de contagens especificadas.  
   
  **Contagem estimada**  
  Exibe o número estimado de linhas no grupo de medidas e as contagens de membros de atributo estimadas nas dimensões do banco de dados. Você pode digitar um valor a ser usado como a contagem estimada ou calcular os valores da contagem estimada. Para calcular os valores da contagem, digite 0 no campo e clique em **Contagem**. Os campos que já exibem uma contagem não são atualizados.  
@@ -32,11 +32,11 @@ ms.locfileid: "66068241"
  **Contagem de partições**  
  (Opcional) Digite o número estimado de linhas no grupo de medidas e as contagens de membros de atributo estimadas nas partições.  
   
- **Count**  
+ **Contar**  
  Calcula e popula novamente os valores na coluna **Contagem estimada** para todos os campos vazios. Os campos que já exibem uma contagem não são atualizados.  
   
-## <a name="see-also"></a>Consulte também  
- [Ajuda de F1 do Assistente de Design de agregação](aggregation-design-wizard-f1-help.md)   
- [Assistentes do Analysis Services &#40;dados multidimensionais&#41;](analysis-services-wizards-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Ajuda F1 do assistente de design de agregação](aggregation-design-wizard-f1-help.md)   
+ [Analysis Services assistentes &#40;dados multidimensionais&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Página de propriedades gerais, pastas (Gerenciador de relatórios) | Microsoft Docs
+title: Página Propriedades gerais, pastas (Report Manager) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 901ed097b1a1f689a854d60e0df9b541403fdc76
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109126"
 ---
 # <a name="general-properties-page-folders-report-manager"></a>Página Propriedades Gerais, Pastas (Gerenciador de Relatórios)
@@ -35,7 +35,7 @@ ms.locfileid: "66109126"
   
 ## <a name="options"></a>Opções  
  **Nome**  
- Especifique um nome para a pasta. Um nome deve conter pelo menos um caractere alfanumérico. Também pode conter espaços e alguns símbolos. Não use os caracteres ; ? : \@ & = +, $ * \< > | "ou / ao especificar um nome.  
+ Especifique um nome para a pasta. Um nome deve conter pelo menos um caractere alfanumérico. Também pode conter espaços e alguns símbolos. Não use os caracteres ; ? : \@ & = +, $ * \< > | "or/ao especificar um nome.  
   
  **Descrição**  
  Digite uma descrição dos conteúdos de pasta. Essa descrição aparece na página Conteúdo para usuários com permissão para acessar a pasta.  
@@ -49,10 +49,10 @@ ms.locfileid: "66109126"
  **Delete (excluir)**  
  Clique para remover a pasta e seus conteúdos.  
   
- **Migrar**  
+ **Mover**  
  Clique para realocar um relatório ou pasta dentro do namespace do servidor de relatório. Clicar nesse botão abre a página Mover Itens, que lhe permite navegar pelas pastas para um novo local de pasta.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Ajuda F1 do Gerenciador de Relatórios](../../2014/reporting-services/report-manager-f1-help.md)  
   

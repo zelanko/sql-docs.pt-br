@@ -1,5 +1,5 @@
 ---
-title: Mostrar conjuntos de dados ocultos para valores de parâmetro para dados multidimensionais (construtor de relatórios e SSRS) | Microsoft Docs
+title: Mostrar conjuntos de dados ocultos para obter os valores de parâmetros para o multidimensional data (Construtor de Relatórios e SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 92db49f8f6a112f8466fc81527b214bad7252f82
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107062"
 ---
 # <a name="show-hidden-datasets-for-parameter-values-for-multidimensional-data-report-builder-and-ssrs"></a>Mostrar conjuntos de dados ocultos para obter valores de parâmetros para dados multidimensionais (Construtor de Relatórios e SSRS)
@@ -35,10 +35,10 @@ ms.locfileid: "66107062"
   
 -   No painel de dados do relatório, clique com o botão direito do mouse na pasta Conjuntos de Dados e clique em **Exibir Conjuntos de Dados Ocultos**.  
   
-## <a name="see-also"></a>Consulte também  
- [Designers de Consultas &#40;Construtor de Relatórios&#41;](../query-designers-report-builder.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Designers de consulta &#40;Construtor de Relatórios&#41;](../query-designers-report-builder.md)   
  [Designers de Consultas do Reporting Services](../reporting-services-query-designers.md)   
  [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [Adicionar dados a um relatório &#40;relatórios e SSRS&#41;](report-datasets-ssrs.md)  
+ [Adicionar dados a um relatório &#40;Construtor de Relatórios e SSRS&#41;](report-datasets-ssrs.md)  
   
   

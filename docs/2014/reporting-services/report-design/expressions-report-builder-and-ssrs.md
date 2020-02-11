@@ -11,15 +11,15 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/13/2017
 ms.openlocfilehash: 3660ecee1271d4fd2673b0dfe9107a8fb5c52e88
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67413013"
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>Expressões (Construtor de Relatórios e SSRS)
 
-As expressões são amplamente usadas em um relatório inteiro para recuperar, calcular, exibir, agrupar, classificar, filtrar, parametrizar e formatar dados. Várias propriedades de item de relatório podem ser definidas para uma expressão. Expressões ajudam a controlar o conteúdo, o design e a interatividade do seu relatório. As expressões são escritas em [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)], salvas na definição de relatório e avaliadas pelo processador de relatórios quando você executa o relatório.  
+As expressões são amplamente usadas em um relatório inteiro para recuperar, calcular, exibir, agrupar, classificar, filtrar, parametrizar e formatar dados. Várias propriedades de item de relatório podem ser definidas para uma expressão. Expressões ajudam a controlar o conteúdo, o design e a interatividade do seu relatório. As expressões são gravadas em [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)], salvas na definição de relatório e avaliadas pelo processador de relatório quando você executa o relatório.  
 
 Em aplicativos como o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office Excel, você trabalha com dados diretamente em uma planilha. Já em um relatório, você trabalha com expressões que são espaços reservados de dados. Para ver os dados reais das expressões avaliadas, visualize o relatório. Quando você executa o relatório, o processador de relatório avalia cada expressão pois combina dados de relatório e elementos de layout de relatório, tais como tabelas e gráficos.  
 
@@ -29,7 +29,7 @@ Em aplicativos como o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Off
 
 Quando você visualiza o relatório, o processador de relatório combina a região de dados da tabela com os dados reais da conexão de dados e exibe uma linha na tabela para cada linha no conjunto de resultados.  
 
-Para inserir expressões manualmente, selecione um item na superfície de design, e use menus de atalho e caixas de diálogo para definir as propriedades do item. Quando você visualiza o botão ***(fx)*** ou o valor `<Expression>` em uma lista suspensa, sabe que pode definir a propriedade para uma expressão. Para obter mais informações, consulte [Adicionar uma Expressão &#40;Construtor de Relatórios e SSRS&#41;](add-an-expression-report-builder-and-ssrs.md).  
+Para inserir expressões manualmente, selecione um item na superfície de design, e use menus de atalho e caixas de diálogo para definir as propriedades do item. Quando você visualiza o botão ***(fx)*** ou o valor `<Expression>` em uma lista suspensa, sabe que pode definir a propriedade para uma expressão. Para obter mais informações, consulte [Adicionar uma expressão &#40;Construtor de Relatórios e SSRS&#41;](add-an-expression-report-builder-and-ssrs.md).  
 
 Para obter mais informações e exemplos, consulte os seguintes tópicos:  
 
@@ -41,7 +41,7 @@ Para obter mais informações e exemplos, consulte os seguintes tópicos:
 
 -   [Exemplos de expressões de grupo &#40;Construtor de Relatórios e SSRS&#41;](group-expression-examples-report-builder-and-ssrs.md)  
 
--   [Tutoriais do &#40;construtor de relatórios&#41;](../report-builder-tutorials.md)  
+-   [TUTORIAIS &#40;Construtor de Relatórios&#41;](../report-builder-tutorials.md)  
 
 -   [Tutoriais do Reporting Services &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)  
 
@@ -52,16 +52,16 @@ Para desenvolver expressões complexas ou expressões que usam código personali
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
 
-##  <a name="Types"></a> Compreendendo expressões simples e complexas  
-As expressões começam com o sinal de igual (=) e são gravadas no [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]. Elas podem incluir uma combinação de constantes, operadores e referências para valores internos (campos, coleções e funções) e para o código externo ou personalizado.  
+##  <a name="Types"></a>Compreendendo expressões simples e complexas  
+As expressões começam com um sinal de igual (=) e são [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]gravadas em. Elas podem incluir uma combinação de constantes, operadores e referências para valores internos (campos, coleções e funções) e para o código externo ou personalizado.  
 
 Você pode usar expressões para especificar o valor de muitas propriedades de item de relatório. As propriedades mais comuns são valores para caixas de texto e texto do espaço reservado. Normalmente, se uma caixa de texto contiver só uma expressão, a expressão será o valor da propriedade de caixa de texto. Se uma caixa de texto contiver várias expressões, cada expressão será o valor de texto do espaço reservado na caixa de texto.  
 
 Por padrão, expressões aparecem na superfície de design de relatório como *expressões simples* ou *expressões complexas*.  
 
--   **Simples** Uma expressão simples contém uma referência a um único item em uma coleção interna, como, por exemplo, um campo do conjunto de dados, um parâmetro ou um campo interno. Na superfície de design, uma expressão simples aparece entre colchetes. Por exemplo, `[FieldName]` corresponde à expressão subjacente `=Fields!FieldName.Value`. Expressões simples são criadas automaticamente à medida que você cria o layout de relatório e arrasta itens do painel de dados do relatório para a superfície de design. Para obter mais informações sobre os símbolos que representam coleções internas diferentes, consulte [Compreendendo símbolos de prefixo de expressões simples](#DisplayText).  
+-   **Simples** Uma expressão simples contém uma referência a um único item em uma coleção interna, por exemplo, um campo de conjunto de um, um parâmetro ou um campo interno. Na superfície de design, uma expressão simples aparece entre colchetes. Por exemplo, `[FieldName]` corresponde à expressão subjacente `=Fields!FieldName.Value`. Expressões simples são criadas automaticamente à medida que você cria o layout de relatório e arrasta itens do painel de dados do relatório para a superfície de design. Para obter mais informações sobre os símbolos que representam coleções internas diferentes, consulte [Compreendendo símbolos de prefixo de expressões simples](#DisplayText).  
 
--   **Complexa** Uma expressão complexa contém referências a várias referências internas, operadores e chamadas de função. Uma expressão complexa é exibida como <\<Expr>> quando o valor de expressão inclui mais que uma referência simples. Para exibir a expressão, passe o mouse sobre ela e use a dica de ferramenta. Para editar a expressão, abra-a na caixa de diálogo **Expressão** .  
+-   **Complexo** Uma expressão complexa contém referências a várias referências internas, operadores e chamadas de função. Uma expressão complexa é exibida como <\<Expr>> quando o valor de expressão inclui mais que uma referência simples. Para exibir a expressão, passe o mouse sobre ela e use a dica de ferramenta. Para editar a expressão, abra-a na caixa de diálogo **Expressão** .  
 
 A figura a seguir mostra expressões simples e complexas típicas para caixas de texto e texto do espaço reservado.  
 
@@ -73,7 +73,7 @@ Para exibir valores de exemplo em vez de texto para expressões, aplique a forma
 
 Para obter mais informações, consulte [Formatando texto e espaços reservados &#40;Construtor de Relatórios e SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md).  
 
-## <a name="DisplayText"></a> Compreendendo símbolos de prefixo em expressões simples  
+## <a name="DisplayText"></a>Noções básicas sobre símbolos de prefixo em expressões simples  
 
 As expressões simples usam símbolos para indicar se a referência destina-se a um campo, a um parâmetro, a uma coleção interna ou à coleção ReportItems. A seguinte tabela mostra exemplos de texto de expressão e de exibição:  
 
@@ -86,7 +86,7 @@ As expressões simples usam símbolos para indicar se a referência destina-se a
 
 
 
-##  <a name="References"></a> Escrevendo expressões complexas  
+##  <a name="References"></a>Escrevendo expressões complexas  
 Expressões podem incluir referências a funções, operadores, constantes, campos, parâmetros, itens das coleções internas, e ao código personalizado interno ou assemblies personalizados.  
 
 > [!NOTE]
@@ -94,17 +94,17 @@ Expressões podem incluir referências a funções, operadores, constantes, camp
 
 A seguinte tabela lista os tipos de referências que podem ser incluídos em uma expressão:  
 
-|Referências|Descrição|Exemplo|  
+|Referências|DESCRIÇÃO|Exemplo|  
 |----------------|-----------------|-------------|  
 |[Constantes](expressions-report-builder-and-ssrs.md)|Descreve as constantes acessadas interativamente para propriedades que exigem valores de constantes, tais como cores de fontes.|`="Blue"`|  
 |[Operadores](operators-in-expressions-report-builder-and-ssrs.md)|Descreve os operadores a serem usados para combinar referências em uma expressão. Por exemplo, o operador `&` é usado para concatenar cadeias de caracteres.|`="The report ran at: " & Globals!ExecutionTime & "."`|  
 |[Coleções internas](built-in-collections-in-expressions-report-builder.md)|Descreve as coleções internas que podem ser incluídas em uma expressão, tais como `Fields`, `Parameters`e `Variables`.|`=Fields!Sales.Value`<br /><br /> `=Parameters!Store.Value`<br /><br /> `=Variables!MyCalculation.Value`|  
 |[Relatório interno e funções de agregação](report-builder-functions-aggregate-functions-reference.md)|Descreve as funções internas, tais como `Sum` ou `Previous`, que podem ser acessadas de uma expressão.|`=Previous(Sum(Fields!Sales.Value))`|  
-|[Referências a código personalizado e assemblies em expressões no Designer de Relatórios &#40;SSRS&#41;](custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)|Descreve como é possível acessar as classes CLR internas <xref:System.Math> e <xref:System.Convert>, outras classes CLR, funções da biblioteca em tempo de execução do [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] ou métodos de um assembly externo.<br /><br /> Descreve como é possível acessar o código personalizado que é inserido no relatório, ou que é compilado e instalado como um assembly personalizado no cliente de relatório e no servidor de relatório.|`=Sum(Fields!Sales.Value)`<br /><br /> `=CDate(Fields!SalesDate.Value)`<br /><br /> `=DateAdd("d",3,Fields!BirthDate.Value)`<br /><br /> `=Code.ToUSD(Fields!StandardCost.Value)`|  
+|[Referências de código personalizado e assembly em expressões em Report Designer &#40;SSRS&#41;](custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)|Descreve como é possível acessar as classes CLR internas <xref:System.Math> e <xref:System.Convert>, outras classes CLR, funções da biblioteca em tempo de execução do [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] ou métodos de um assembly externo.<br /><br /> Descreve como é possível acessar o código personalizado que é inserido no relatório, ou que é compilado e instalado como um assembly personalizado no cliente de relatório e no servidor de relatório.|`=Sum(Fields!Sales.Value)`<br /><br /> `=CDate(Fields!SalesDate.Value)`<br /><br /> `=DateAdd("d",3,Fields!BirthDate.Value)`<br /><br /> `=Code.ToUSD(Fields!StandardCost.Value)`|  
 
 
 
-##  <a name="Valid"></a> Validando expressões  
+##  <a name="Valid"></a>Validando expressões  
 Quando você cria uma expressão para uma propriedade de item de relatório específica, as referências que podem ser incluídas em uma expressão dependem dos valores que a propriedade de item de relatório pode aceitar e do escopo em que a propriedade é avaliada. Por exemplo:  
 
 -   Por padrão, a expressão [Sum] calcula a soma de dados que estão no escopo quando a expressão é avaliada. Para uma célula de tabela, o escopo depende das associações de grupo de linhas e colunas. Para obter mais informações, consulte [Escopo das expressões para totais, agregações e coleções internas &#40;Construtor de Relatórios e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
@@ -123,9 +123,9 @@ Para obter mais informações, consulte [Referência de expressões &#40;Constru
 
 [Escopo das expressões para totais, agregações e coleções internas &#40;Construtor de Relatórios e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
 
-[Referência de expressões &#40;Construtor de Relatórios e SSRS &#41;](expression-reference-report-builder-and-ssrs.md)  
+[Referência de expressão &#40;Construtor de Relatórios e SSRS&#41;](expression-reference-report-builder-and-ssrs.md)  
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 
 - [Caixa de diálogo Expressão](../expression-dialog-box.md)   
 - [Caixa de diálogo Expressão &#40;Construtor de Relatórios&#41;](../expression-dialog-box-report-builder.md)

@@ -15,16 +15,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fcb3a7ccfc5e0b5da01d3976f3c9f13e06df7ee7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250385"
 ---
 # <a name="replication-monitor"></a>Replication Monitor
-  Esta seção da documentação inclui informações sobre o Replication Monitor. As páginas e caixas de diálogo exibidas no monitor diferem, dependendo do tipo de replicação e da versão do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo monitorado.  
+  Esta seção da documentação inclui informações sobre o Replication Monitor. As páginas e caixas de diálogo exibidas no monitor diferem dependendo do tipo de replicação e da versão do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que é monitorada.  
   
--   [Replication Monitor, Página principal](replication-monitor-main-page.md)  
+-   [Replication Monitor, página principal](replication-monitor-main-page.md)  
   
 -   [Adicionar Publicador](add-publisher.md)  
   
@@ -36,43 +36,43 @@ ms.locfileid: "63250385"
   
 -   [Informações do Publicador, Publicações](publisher-information-publications.md)  
   
--   [Informações do Publicador, Lista de inspeção da Assinatura &#40;Publicação transacional, SQL Server 2005 e versões posteriores&#41;](publisher-information-subscription-watch-list-transactional.md)  
+-   [Informações do Publicador, lista de inspeção de assinatura &#40;publicação transacional, SQL Server 2005 e posteriores&#41;](publisher-information-subscription-watch-list-transactional.md)  
   
--   [Informações do Publicador, Lista de inspeção da Assinatura &#40;Publicação de mesclagem, SQL Server 2005 e versões posteriores&#41;](publisher-information-subscription-watch-list-merge-publication.md)  
+-   [Informações do Publicador, lista de inspeção de assinatura &#40;publicação de mesclagem, SQL Server 2005 e posteriores&#41;](publisher-information-subscription-watch-list-merge-publication.md)  
   
--   [Informações do Publicador, Lista de inspeção da Assinatura &#40;Publicação de instantâneo, SQL Server 2005 e versões posteriores&#41;](publisher-information-subscription-watch-list-snapshot.md)  
+-   [Informações do Publicador, lista de inspeção de assinatura &#40;publicação de instantâneo, SQL Server 2005 e posteriores&#41;](publisher-information-subscription-watch-list-snapshot.md)  
   
 -   [Informações do Publicador, Agentes](publisher-information-agents.md)  
   
--   [Informações da Publicação, Todas as Assinaturas &#40;Publicação transacional&#41;](publication-information-all-subscriptions-transactional-publication.md)  
+-   [Informações da publicação, todas as assinaturas &#40;publicação transacional&#41;](publication-information-all-subscriptions-transactional-publication.md)  
   
--   [Informações da Publicação, Todas as Assinaturas &#40;Publicação de mesclagem&#41;](publication-information-all-subscriptions-merge-publication.md)  
+-   [Informações da publicação, todas as assinaturas &#40;publicação de mesclagem&#41;](publication-information-all-subscriptions-merge-publication.md)  
   
--   [Informações da Publicação, Todas as Assinaturas &#40;Publicação de instantâneo&#41;](publication-information-all-subscriptions-snapshot-publication.md)  
+-   [Informações da publicação, todas as assinaturas &#40;publicação de instantâneo&#41;](publication-information-all-subscriptions-snapshot-publication.md)  
   
--   [Informações da Publicação, Avisos &#40;Publicação transacional, SQL Server 2005 e versões posteriores&#41;](publication-information-warnings-transactional-publication.md)  
+-   [Informações da publicação, avisos &#40;publicação transacional, SQL Server 2005 e posteriores&#41;](publication-information-warnings-transactional-publication.md)  
   
--   [Informações da Publicação, Avisos &#40;Publicação de mesclagem, SQL Server 2005 e versões posteriores&#41;](publication-information-warnings-merge-publication-sql-server-2005-and-later.md)  
+-   [Informações da publicação, avisos &#40;publicação de mesclagem, SQL Server 2005 e posteriores&#41;](publication-information-warnings-merge-publication-sql-server-2005-and-later.md)  
   
--   [Informações da Publicação, Avisos &#40;Publicação de instantâneo, SQL Server 2005 e versões posteriores&#41;](publication-information-warnings-snapshot-publication-sql-server-2005-and-later.md)  
+-   [Informações da publicação, avisos &#40;publicação de instantâneo, SQL Server 2005 e posteriores&#41;](publication-information-warnings-snapshot-publication-sql-server-2005-and-later.md)  
   
--   [Informações da Publicação, Agentes &#40;Publicação transacional&#41;](publication-information-agents-transactional-publication.md)  
+-   [Informações da publicação, agentes &#40;publicação transacional&#41;](publication-information-agents-transactional-publication.md)  
   
--   [Informações da Publicação, Agentes &#40;Publicação de mesclagem&#41;](publication-information-agents-merge-publication.md)  
+-   [Informações da publicação, agentes &#40;publicação de mesclagem&#41;](publication-information-agents-merge-publication.md)  
   
--   [Informações da Publicação, Agentes &#40;Publicação de instantâneo&#41;](publication-information-agents-snapshot-publication.md)  
+-   [Informações da publicação, agentes &#40;publicação de instantâneo&#41;](publication-information-agents-snapshot-publication.md)  
   
--   [Informações da Publicação, Tokens de Rastreamento &#40;Publicação transacional, SQL Server 2005 e versões posteriores&#41;](publication-information-tracer-tokens-sql-server-2005-and-later.md)  
+-   [Informações da publicação, tokens de rastreamento &#40;publicação transacional, SQL Server 2005 e posteriores&#41;](publication-information-tracer-tokens-sql-server-2005-and-later.md)  
   
--   [Assinatura, Comandos não Distribuídos &#40;Assinatura transacional, SQL Server 2005 e versões posteriores&#41;](subscription-undistributed-commands-transactional-subscription.md)  
+-   [Assinatura, comandos não distribuídos &#40;assinatura transacional, SQL Server 2005 e posteriores&#41;](subscription-undistributed-commands-transactional-subscription.md)  
   
--   [Assinatura, Histórico do Publicador para o Distribuidor &#40;Assinatura transacional&#41;](subscription-publisher-to-distributor-history-transactional-subscription.md)  
+-   [Assinatura, histórico do Publicador para o distribuidor &#40;assinatura transacional&#41;](subscription-publisher-to-distributor-history-transactional-subscription.md)  
   
--   [Assinatura, Histórico do Distribuidor para o Assinante &#40;Assinatura transacional&#41;](subscription-distributor-to-subscriber-history-transactional-subscription.md)  
+-   [Assinatura, histórico do distribuidor para o assinante &#40;assinatura transacional&#41;](subscription-distributor-to-subscriber-history-transactional-subscription.md)  
   
--   [Assinatura, Histórico de Sincronização &#40;Assinatura de mesclagem, SQL Server 2005 e versões posteriores&#41;](subscription-synchronization-history.md)  
+-   [Assinatura, histórico de sincronização &#40;assinatura de mesclagem, SQL Server 2005 e posteriores&#41;](subscription-synchronization-history.md)  
   
--   [Assinatura, Histórico do Distribuidor para o Assinante &#40;Assinatura de instantâneo&#41;](subscription-distributor-to-subscriber-history-snapshot-subscription.md)  
+-   [Assinatura, histórico do distribuidor para o assinante &#40;assinatura de instantâneo&#41;](subscription-distributor-to-subscriber-history-snapshot-subscription.md)  
   
 -   [Agente de Leitor de Log](log-reader-agent.md)  
   
@@ -82,9 +82,9 @@ ms.locfileid: "63250385"
   
 -   [Configurações de filtro](filter-settings.md)  
   
--   [Classificar Colunas](sort-columns.md)  
+-   [Classificar colunas](sort-columns.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Iniciar o Replication Monitor](monitor/start-the-replication-monitor.md)   
  [Monitorando a Replicação](monitoring-replication.md)   
   

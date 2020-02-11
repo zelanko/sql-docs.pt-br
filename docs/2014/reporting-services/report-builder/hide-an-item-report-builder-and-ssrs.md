@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5daf807904f833a5e8cbe8f237d3f5df77e3887b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107817"
 ---
 # <a name="hide-an-item-report-builder-and-ssrs"></a>Ocultar um item (Construtor de Relatórios e SSRS)
@@ -37,7 +37,7 @@ ms.locfileid: "66107817"
     > [!NOTE]  
     >  Para selecionar uma tabela ou uma região de dados tablix inteira, clique na região de dados para selecioná-la, clique com o botão direito do mouse em uma linha, coluna ou alça de canto e, em seguida, clique em **Propriedades do Tablix**.  
   
-2.  Clique em **Visibilidade**.  
+2.  Clique em **visibilidade.**  
   
 3.  Em **Quando o relatório for executado inicialmente**, especifique se deseja ocultar o item quando exibir o relatório pela primeira vez:  
   
@@ -49,9 +49,9 @@ ms.locfileid: "66107817"
   
         > [!NOTE]  
         >  Quando você especifica uma expressão para visibilidade, você está configurando a propriedade Hidden do item de relatório, conforme mostrado na imagem a seguir. A expressão avaliada mostra o item de relatório quando o valor é False e oculta o item de relatório quando o valor é True.   
-        > ![Caixa de diálogo Properties_Visibility e propriedade Hidden](../media/hiddenproperty-propertiesvisibility.png "Caixa de diálogo Properties_Visibility e propriedade Hidden")  
+        > ![Caixa de diálogo Properties_Visibility e propriedade Oculta](../media/hiddenproperty-propertiesvisibility.png "Caixa de diálogo Properties_Visibility e propriedade Oculta")  
   
-4.  Clique duas vezes em **OK** .  
+4.  Clique em **OK** duas vezes.  
   
 ### <a name="to-hide-static-rows-in-a-table-matrix-or-list"></a>Para ocultar linhas estáticas em uma tabela, matriz ou lista  
   
@@ -69,9 +69,9 @@ ms.locfileid: "66107817"
   
 3.  Na caixa de diálogo **Visibilidade da Coluna** , siga as etapas 3 e 4 do primeiro procedimento.  
   
-## <a name="see-also"></a>Consulte também  
- [Ação de análise detalhada &#40;Construtor de Relatórios e SSRS&#41;](../report-design/drilldown-action-report-builder-and-ssrs.md)   
- [Adicionar uma ação de expandir/recolher a um item &#40;Construtor de Relatórios e SSRS&#41;](../report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Ação de busca detalhada &#40;Construtor de Relatórios e SSRS&#41;](../report-design/drilldown-action-report-builder-and-ssrs.md)   
+ [Adicionar uma ação de expandir ou recolher a um item &#40;Construtor de Relatórios e SSRS&#41;](../report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)   
  [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](../report-design/expression-examples-report-builder-and-ssrs.md)  
   
   

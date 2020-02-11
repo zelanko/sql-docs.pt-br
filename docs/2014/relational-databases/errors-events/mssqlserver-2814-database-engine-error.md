@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4c8def0fad1ae7eddb9de2e7206923b872c41ed2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67046776"
 ---
-# <a name="mssqlserver2814"></a>MSSQLSERVER_2814
+# <a name="mssqlserver_2814"></a>MSSQLSERVER_2814
     
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|2814|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|PR_POSSIBLE_INFINITE_RECOMPILE|  
 |Texto da mensagem|Uma possível recompilação infinita foi detectada para SQLHANDLE %hs, PlanHandle %hs, deslocamento inicial %d, deslocamento final %d. O último motivo da recompilação foi %d.|  
@@ -37,7 +37,7 @@ ms.locfileid: "67046776"
   
  A tabela a seguir lista os motivos da recompilação.  
   
-|Código do motivo|Descrição|  
+|Código do motivo|DESCRIÇÃO|  
 |-----------------|-----------------|  
 |1|Esquema alterado|  
 |2|Estatísticas alteradas|  
@@ -75,7 +75,7 @@ ms.locfileid: "67046776"
   
 3.  Se o problema persistir, contate os Serviços de Atendimento ao Cliente da Microsoft.  
   
-## <a name="see-also"></a>Consulte também  
- [SQL:StmtRecompile Event Class](../event-classes/sql-stmtrecompile-event-class.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Classe de evento SQL:StmtRecompile](../event-classes/sql-stmtrecompile-event-class.md)  
   
   

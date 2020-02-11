@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4dfabea6ba2b8785e4c55b74099d9e4b0cd824ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65478937"
 ---
 # <a name="create-an-entity-mds-add-in-for-excel"></a>Criar uma entidade (Suplemento do MDS para Excel)
@@ -33,7 +33,7 @@ ms.locfileid: "65478937"
   
     -   Os dados devem ter uma linha de cabeçalho.  
   
-    -   É útil ter colunas **Nome** e **Código** . **Código** é um identificador exclusivo de cada linha.  
+    -   É útil ter colunas **Nome** e **Código** . O **código** é um identificador exclusivo para cada linha.  
   
     -   Você deve ter pelo menos uma linha de dados diferente do cabeçalho. Nem todas as colunas precisam de valores, mas os dados devem ser representativos dos dados que estarão na entidade.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "65478937"
   
 -   Confirme se os atributos foram criados como o tipo de dados esperado.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar um atributo baseado em domínio &#40;Suplemento MDS para Excel&#41;](create-a-domain-based-attribute-mds-add-in-for-excel.md)  
   
   

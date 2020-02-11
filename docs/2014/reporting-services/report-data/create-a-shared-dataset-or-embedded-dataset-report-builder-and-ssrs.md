@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 208c5608037d99b9dc02f1ab7fefd151cd4bdecf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107431"
 ---
 # <a name="create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs"></a>Criar um conjunto de dados compartilhado ou um conjunto de dados inserido (Construtor de Relatórios e SSRS)
@@ -56,7 +56,7 @@ ms.locfileid: "66107431"
   
 4.  No designer de consulta, especifique os campos a serem incluídos no conjunto de dados.  
   
-5.  Clique em **Executar** ( **!** ) para executar a consulta.  
+5.  Clique em **Executar** (**!**) para executar a consulta.  
   
 6.  No botão **Construtor de Relatórios** , clique em **Salvar** ou em **Salvar como** para salvar o conjunto de dados compartilhado no servidor de relatório.  
   
@@ -110,13 +110,13 @@ ms.locfileid: "66107431"
   
      O conjunto de dados e sua coleção de campos aparecerão no painel de dados do relatório abaixo do nó da fonte de dados.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Coleção de campos de conjuntos de dados &#40;Construtor de Relatórios e SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)   
- [Designers de Consultas &#40;Construtor de Relatórios&#41;](../query-designers-report-builder.md)   
- [Ajuda do Construtor de Relatórios para caixas de diálogo, painéis e assistentes](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
- [Adicionar dados a um relatório &#40;relatórios e SSRS&#41;](report-datasets-ssrs.md)   
+ [Designers de consulta &#40;Construtor de Relatórios&#41;](../query-designers-report-builder.md)   
+ [Construtor de Relatórios ajuda para caixas de diálogo, painéis e assistentes](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
+ [Adicionar dados a um relatório &#40;Construtor de Relatórios e SSRS&#41;](report-datasets-ssrs.md)   
  [Conexões de dados, fontes de dados e cadeias de conexão no Construtor de Relatórios](../data-connections-data-sources-and-connection-strings-in-report-builder.md)   
- [Conjuntos de dados inseridos e compartilhados &#40;Construtor de Relatórios e SSRS&#41;](embedded-and-shared-datasets-report-builder-and-ssrs.md)  
+ [Conjuntos de e compartilhados, &#40;Construtor de Relatórios e SSRS&#41;](embedded-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

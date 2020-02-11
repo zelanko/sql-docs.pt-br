@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5c1cf33c00dc9bf0b2fbf588fea9793e0deabfc2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106879"
 ---
 # <a name="add-a-border-to-a-report-report-builder-and-ssrs"></a>Adicionar uma borda a um relatório (Construtor de Relatórios e SSRS)
@@ -30,13 +30,13 @@ ms.locfileid: "66106879"
 1.  Clique com o botão direito do mouse no cabeçalho fora de qualquer item no cabeçalho e clique em **Cabeçalho Propriedades**. Na guia **Borda** , adicione uma borda esquerda, superior e direita com o estilo que você deseja.  
   
     > [!NOTE]  
-    >  Se você não usa cabeçalhos no relatório, você poderá colocar bordas em torno de apenas o corpo do relatório ou você pode adicionar cabeçalhos dos **inserir** guia.  
+    >  Se você não usar cabeçalhos em seu relatório, poderá posicionar apenas o corpo do relatório ou pode adicionar cabeçalhos da guia **Inserir** .  
   
 2.  Clique com o botão direito do mouse no corpo fora de qualquer item na superfície de design e clique em **Propriedades do Corpo**. Na guia **Borda** , adicione uma borda esquerda e direita com o estilo que você deseja.  
   
 3.  Clique com o botão direito do mouse no rodapé fora de qualquer item no rodapé e clique em **Propriedades do Rodapé**. Na guia **Borda** , adicione uma borda esquerda, inferior e direita com o estilo que você deseja.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Retângulos e linhas &#40;Construtor de Relatórios e SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Configurar Gerenciador de Conexão ADO.NET | Microsoft Docs
+title: Configurar o Gerenciador de conexões do ADO.NET | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 51d115aaeebcedd102709b0e1f3fab81e439a521
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060834"
 ---
 # <a name="configure-adonet-connection-manager"></a>Configurar Gerenciador de Conexões ADO.NET
@@ -33,13 +33,13 @@ ms.locfileid: "66060834"
  **Propriedades de conexão de dados**  
  Exiba as propriedades e os valores da conexão de dados ADO.NET selecionada.  
   
- **Nova**  
+ **Novo**  
  Crie uma conexão de dados ADO.NET utilizando a caixa de diálogo do **Gerenciador de Conexões** .  
   
  **Delete (excluir)**  
  Selecione uma conexão e exclua-a usando o botão **Excluir** .  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

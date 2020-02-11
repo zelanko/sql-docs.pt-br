@@ -1,5 +1,5 @@
 ---
-title: Relatórios de Clickthrough de página (Gerenciador de relatórios) | Microsoft Docs
+title: Página de relatórios de clickthrough (Report Manager) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d996463baaed3095b6866fa2da88ed811745878d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109802"
 ---
 # <a name="clickthrough-reports-page-report-manager"></a>Página Relatórios de Clickthrough (Gerenciador de Relatórios)
@@ -47,7 +47,7 @@ ms.locfileid: "66109802"
 4.  Selecione a guia **Clickthrough** .  
   
 ## <a name="options"></a>Opções  
- **Hierarquia de modelo de item**  
+ **Hierarquia de itens de modelo**  
  Mostra as entidades, pastas e itens no namespace de modelo para o qual você pode fornecer um relatório personalizado.  
   
  **Relatório de instância única**  
@@ -56,7 +56,7 @@ ms.locfileid: "66109802"
  **Relatório de várias instâncias**  
  Especifica o relatório personalizado a ser usado quando a navegação de usuário exigir uma exibição de dados de várias instâncias. Clique no botão de procura para selecionar o relatório que deseja usar.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Publicar Relatórios](../../2014/reporting-services/publish-reports.md)  
   
   

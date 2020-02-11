@@ -1,5 +1,5 @@
 ---
-title: Imagem da caixa de diálogo de propriedades de tamanho (construtor de relatórios e SSRS) | Microsoft Docs
+title: Caixa de diálogo Propriedades da imagem, tamanho (Construtor de Relatórios e SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7fb80bffc3160b171cbffd40b80d5c8c0f9bb137
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108988"
 ---
 # <a name="image-properties-dialog-box-size-report-builder-and-ssrs"></a>Caixa de diálogo Propriedades da Imagem, Tamanho (Construtor de Relatórios e SSRS)
@@ -33,25 +33,25 @@ ms.locfileid: "66108988"
  **Ajustar proporcionalmente**  
  Escolha esta opção para ajustar o tamanho da imagem proporcionalmente à altura e à largura da célula ou caixa de texto.  
   
- **Clip**  
+ **Clipe**  
  Escolha esta opção para exibir uma imagem do canto superior esquerdo da imagem até a altura ou largura da célula ou caixa de texto. As bordas da imagem podem ser reduzidas ou ampliadas para ajustar a imagem. Se a imagem for maior do que a célula ou caixa de texto, apenas uma parte da imagem será exibida.  
   
- **Left**  
+ **Mantida**  
  Especifique a quantidade de preenchimento ou o espaço existente entre a borda esquerda de uma célula ou caixa de texto e o valor exibido dentro dela.  
   
  **Certo**  
  Especifique a quantidade de preenchimento ou o espaço existente entre a borda direita de uma célula ou caixa de texto e o valor exibido dentro dela.  
   
- **Top**  
+ **Início**  
  Especifique a quantidade de preenchimento ou o espaço existente entre a borda direita de uma célula ou caixa de texto e o valor exibido dentro dela.  
   
- **parte inferior**  
+ **Inferior**  
  Especifique a quantidade de preenchimento ou o espaço existente entre a borda direita de uma célula ou caixa de texto e o valor exibido dentro dela.  
   
-## <a name="see-also"></a>Consulte também  
- [Caixa de diálogo de propriedades geral da imagem &#40;relatórios e SSRS&#41;](../../2014/reporting-services/image-properties-dialog-box-general-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Caixa de diálogo Propriedades da imagem, &#40;geral Construtor de Relatórios e SSRS&#41;](../../2014/reporting-services/image-properties-dialog-box-general-report-builder-and-ssrs.md)   
  [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
  [Imagens &#40;Construtor de Relatórios e SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
- [Ajuda do Construtor de Relatórios para caixas de diálogo, painéis e assistentes](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [Construtor de Relatórios ajuda para caixas de diálogo, painéis e assistentes](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

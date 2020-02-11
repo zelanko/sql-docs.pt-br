@@ -1,5 +1,5 @@
 ---
-title: Filtros de linha (função)(Tabular Model) Designer | Microsoft Docs
+title: Filtros de linha (Designer de função) (modelo de tabela) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fdc5f0326152eaa62bd41364ace48d7e02fbd0f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070128"
 ---
 # <a name="row-filters-role-designertabular-model"></a>Filtros de linha (designer de função) (modelo de tabela)
-  Use a página **Filtros de Linha** do Designer de Função para definir os filtros de nível de linha para a função associada. Os filtros de linha podem ser definidos somente para funções com permissões de Leitura e Leitura e Processo.  
+  Use a página **Filtros de Linha** do Designer de Função para definir os filtros de nível de linha para a função associada. Os filtros de linha podem ser definidos somente para funções com as permissões Ler e Ler e Processar.  
   
 > [!NOTE]  
 >  Todas as opções desta página estarão desabilitadas se a opção **Controle Total (Administrador)** estiver selecionada na página **Geral** do Designer de Função ou se a permissão da função estiver definida como **Processar**.  
@@ -32,11 +32,11 @@ ms.locfileid: "66070128"
  **Filtro DAX**  
  Uma fórmula DAX que avalia para uma condição Booliana.  
   
- **Filtro DAX - \<tablename >**  
+ **Filtro DAX- \<TableName>**  
  Digite uma fórmula DAX que avalia para uma condição Booliana.  
   
-## <a name="see-also"></a>Consulte também  
- [Funções de modelo de tabela &#40;Tabular do SSAS&#41;](tabular-models/roles-ssas-tabular.md)   
- [Gerenciar funções usando o SSMS &#40;SSAS de Tabela&#41;](tabular-models/manage-roles-by-using-ssms-ssas-tabular.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Funções de modelo de tabela &#40;SSAS de tabela&#41;](tabular-models/roles-ssas-tabular.md)   
+ [Gerenciar funções usando o SSMS &#40;SSAS tabular&#41;](tabular-models/manage-roles-by-using-ssms-ssas-tabular.md)  
   
   

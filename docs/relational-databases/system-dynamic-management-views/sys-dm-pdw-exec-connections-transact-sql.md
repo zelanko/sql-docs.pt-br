@@ -1,5 +1,5 @@
 ---
-title: sys.dm_pdw_exec_connections (Transact-SQL) | Microsoft Docs
+title: sys. dm_pdw_exec_connections (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,35 +13,35 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: b333af29e3d39c0f4ce59ea68602f652c042003f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67899413"
 ---
-# <a name="sysdmpdwexecconnections-transact-sql"></a>sys.dm_pdw_exec_connections (Transact-SQL)
+# <a name="sysdm_pdw_exec_connections-transact-sql"></a>sys. dm_pdw_exec_connections (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Retorna informações sobre as conexões estabelecidas com essa instância do [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e os detalhes de cada conexão.  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
-|session_id|**int**|Identifica a sessão associada a esta conexão. Use `SESSION_ID()` para retornar o `session_id` da conexão atual.|  
+|session_id|**int**|Identifica a sessão associada a esta conexão. Use `SESSION_ID()` para retornar a `session_id` da conexão atual.|  
 |connect_time|**datetime**|Carimbo de data/hora de quando a conexão foi estabelecida. Não permite valor nulo.|  
-|encrypt_option|**nvarchar(40)**|Indica o verdadeiro (a conexão é criptografada) ou falso (conexão não é enctypred).|  
+|encrypt_option|**nvarchar(40)**|Indica TRUE (a conexão é criptografada) ou FALSE (a conexão não é enctypred).|  
 |auth_scheme|**nvarchar(40)**|Especifica o esquema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/Autenticação do Windows usado com esta conexão. Não permite valor nulo.|  
-|client_id|**varchar(48)**|Endereço IP do cliente que se conecta a esse servidor. Permite valor nulo.|  
-|sql_spid|**int**|A ID de processo do servidor da conexão. Use `@@SPID` para retornar o `sql_spid` da conexão atual. Para mais para outra finalidade, use o `session_id` em vez disso.|  
+|client_id|**varchar(48)**|Endereço IP do cliente que está se conectando a este servidor. Permite valor nulo.|  
+|sql_spid|**int**|A ID de processo do servidor da conexão. Use `@@SPID` para retornar a `sql_spid` da conexão atual. Para a maior finalidade, use o `session_id` em vez disso.|  
   
 ## <a name="permissions"></a>Permissões  
- Requer **VIEW SERVER STATE** permissão no servidor.  
+ Requer a permissão **View Server State** no servidor.  
   
 ## <a name="relationship-cardinalities"></a>Cardinalidades de relações  
   
 ||||  
 |-|-|-|  
-|dm_pdw_exec_sessions.session_id|dm_pdw_exec_connections.session_id|Um para um|  
-|dm_pdw_exec_requests.connection_id|dm_pdw_exec_connections.connection_id|Muitos para um|  
+|dm_pdw_exec_sessions. session_id|dm_pdw_exec_connections. session_id|Um-para-um|  
+|dm_pdw_exec_requests. connection_id|dm_pdw_exec_connections. connection_id|Muitos para um|  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  Consulta típica para reunir informações sobre a própria conexão de consultas.  
@@ -57,8 +57,8 @@ JOIN sys.dm_pdw_exec_sessions AS s
 WHERE c.session_id = SESSION_ID();  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [SQL Data Warehouse e Parallel Data Warehouse exibições de gerenciamento dinâmico &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Exibições de gerenciamento dinâmico de SQL Data Warehouse e paralelo data warehouse &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   
 

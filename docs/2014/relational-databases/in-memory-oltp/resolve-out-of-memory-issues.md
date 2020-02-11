@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: e31f36624e8923722612810836df5d2a57b6b686
-ms.sourcegitcommit: 9af07bd57b76a34d3447e9e15f8bd3b17709140a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/08/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67624403"
 ---
 # <a name="resolve-out-of-memory-issues"></a>Resolver problemas de memória insuficiente
@@ -29,7 +29,7 @@ ms.locfileid: "67624403"
 | [Resolver falhas de alocação de página devido à memória insuficiente quando há memória suficiente disponível](#resolve-page-allocation-failures-due-to-insufficient-memory-when-sufficient-memory-is-available) |O que fazer se você receber a mensagem de erro “Desautorizando as alocações de página do banco de dados ' *\<databaseName>* ' devido à memória insuficiente no pool de recursos ' *\<resourcePoolName>* '”. ...” quando a memória disponível é suficiente para a operação.|  
   
 ## <a name="resolve-database-restore-failures-due-to-oom"></a>Resolver falhas de restauração de banco de dados devido a OOM  
- Quando você tenta restaurar um banco de dados, você pode receber a mensagem de erro: "Operação de restauração falhou para o banco de dados ' *\<databaseName >* 'devido à memória insuficiente no pool de recursos' *\<resourcePoolName >* '." Antes de restaurar com êxito o banco de dados, você deve resolver o problema de memória insuficiente disponibilizando mais memória.  
+ Ao tentar restaurar um banco de dados, você pode receber a mensagem de erro: "falha na operação de restauração do banco de dados '*\<DatabaseName>*' devido à memória insuficiente no pool de recursos '*\<resourcePoolName>*'." Antes de restaurar com êxito o banco de dados, você deve resolver o problema de memória insuficiente disponibilizando mais memória.  
   
  Para resolver a falha de recuperação devido a OOM, aumente a memória disponível usando qualquer ou todos esses meios para aumentar temporariamente a memória disponível para a operação de recuperação.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "67624403"
   
     > [!IMPORTANT]  
     >  Se o servidor estiver sendo executado em uma máquina virtual e não for dedicado, defina o valor de MIN_MEMORY_PERCENT para o mesmo valor de MAX_MEMORY_PERCENT.   
-    > Consulte o tópico [práticas recomendadas: Usando OLTP na memória em um ambiente de VM](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) para obter mais informações.  
+    > Confira o tópico [Práticas recomendadas: Usando OLTP in-memory em um ambiente de máquina virtual](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) para obter mais informações.  
   
     ```sql  
   
@@ -61,22 +61,22 @@ ms.locfileid: "67624403"
   
     ```  
   
-     Para obter informações sobre os valores máximos para MAX_MEMORY_PERCENT, consulte a seção do tópico [percentual de memória disponível para tabelas com otimização de memória e índices](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#percent-of-memory-available-for-memory-optimized-tables-and-indexes)
+     Para obter informações sobre os valores máximos para MAX_MEMORY_PERCENT consulte a seção [de tópico porcentagem de memória disponível para índices e tabelas com otimização de memória](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#percent-of-memory-available-for-memory-optimized-tables-and-indexes)
   
--   Reconfigurar **memória máxima do servidor**.  
-    Para obter informações sobre como configurar **max server memory**, veja o tópico [Otimizando o desempenho do servidor usando opções de configuração de memória](https://technet.microsoft.com/library/ms177455\(v=SQL.105\).aspx).  
+-   Reconfigure a **memória máxima do servidor**.  
+    Para obter informações sobre como configurar **max server memory** , veja o tópico [Otimizando o desempenho do servidor usando opções de configuração de memória](https://technet.microsoft.com/library/ms177455\(v=SQL.105\).aspx).  
   
 ## <a name="resolve-impact-of-low-memory-or-oom-conditions-on-the-workload"></a>Resolver o impacto de pouca memória ou condições de OOM na carga de trabalho  
  Obviamente, é melhor não ficar com pouca memória ou na situação de OOM (memória insuficiente). Um bom planejamento e monitoramento pode ajudar a evitar situações de OOM. Ainda assim, o melhor planejamento nem sempre prevê o que realmente acontece e você pode acabar com pouca memória ou OOM. Há duas etapas para a recuperação de OOM:  
   
-1.  [Abrir uma DAC (Conexão de Administrador Dedicada)](#open-a-dac-dedicated-administrator-connection) 
+1.  [Abrir um DAC (conexão de administrador dedicada)](#open-a-dac-dedicated-administrator-connection) 
   
-2.  [Realizar a ação corretiva](#take-corrective-action) 
+2.  [Executar ação corretiva](#take-corrective-action) 
   
 ### <a name="open-a-dac-dedicated-administrator-connection"></a>Abrir uma DAC (Conexão de Administrador Dedicada)  
  O Microsoft SQL Server fornece uma DAC (conexão de administrador dedicada). A DAC permite que um administrador acesse uma instância em execução do Mecanismo de Banco de Dados do SQL Server para solucionar problemas no servidor, mesmo quando o servidor não está respondendo às conexões de outro cliente. A DAC está disponível com o utilitário do `sqlcmd` e o SQL Server Management Studio (SSMS).  
   
- Para obter orientação sobre como usar o `sqlcmd` e o DAC, veja [Usando uma conexão de administrador dedicada](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md). Para obter orientação sobre como usar o DAC por meio do SSMS consulte [como: Usar a Conexão de administrador dedicada com o SQL Server Management Studio](https://msdn.microsoft.com/library/ms178068.aspx).  
+ Para obter orientação sobre como usar o `sqlcmd` e o DAC, veja [Usando uma conexão de administrador dedicada](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md). Para obter orientação sobre como usar o DAC por meio do SSMS, veja [Como usar a conexão de administrador dedicada com o SQL Server Management Studio](https://msdn.microsoft.com/library/ms178068.aspx).  
   
 ### <a name="take-corrective-action"></a>Realizar a ação corretiva  
  Para resolver a sua condição de OOM, você precisa ou liberar memória existente reduzindo o uso ou disponibilizar mais memória para as tabelas de memória.  
@@ -95,7 +95,7 @@ ms.locfileid: "67624403"
   
 #### <a name="increase-available-memory"></a>Aumentar a memória disponível  
   
-##### <a name="increase-value-of-maxmemorypercent-on-the-resource-pool"></a>Aumentar o valor de MAX_MEMORY_PERCENT no pool de recursos  
+##### <a name="increase-value-of-max_memory_percent-on-the-resource-pool"></a>Aumentar o valor de MAX_MEMORY_PERCENT no pool de recursos  
  Se você não criou um pool de recursos nomeado para as tabelas de memória, deverá fazer isso e associar seus bancos de dados do [!INCLUDE[hek_2](../../includes/hek-2-md.md)] a ele. Confira o tópico [Associar um banco de dados com tabelas com otimização de memória a um pool de recursos](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md) para obter diretrizes sobre como criar e associar bancos de dados do [!INCLUDE[hek_2](../../includes/hek-2-md.md)] a um pool de recursos.  
   
  Se seu banco de dados do [!INCLUDE[hek_2](../../includes/hek-2-md.md)] estiver associado a um pool de recursos, você poderá aumentar a porcentagem de memória que o pool pode acessar. Confira o subtópico [Alterar MIN_MEMORY_PERCENT e MAX_MEMORY_PERCENT em um pool existente](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#change-min-memory-percent-and-max-memory-percent-on-an-existing-pool) para obter diretrizes sobre como alterar o valor de MIN_MEMORY_PERCENT e MAX_MEMORY_PERCENT em um pool de recursos.  
@@ -105,7 +105,7 @@ Este snippet de código altera MAX_MEMORY_PERCENT para o pool de recursos PoolHk
   
 > [!IMPORTANT]  
 >  Se o servidor estiver sendo executado em uma máquina virtual e não for dedicado, defina o valor de MIN_MEMORY_PERCENT e MAX_MEMORY_PERCENT como o mesmo.   
-> Consulte o tópico [práticas recomendadas: Usando OLTP na memória em um ambiente de VM](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) para obter mais informações.  
+> Confira o tópico [Práticas recomendadas: Usando OLTP in-memory em um ambiente de máquina virtual](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) para obter mais informações.  
   
 ```sql  
   
@@ -132,19 +132,19 @@ GO
   
 > [!IMPORTANT]  
 >  Se o servidor estiver sendo executado em uma máquina virtual e não for dedicado, defina o valor de MIN_MEMORY_PERCENT e MAX_MEMORY_PERCENT como o mesmo.   
-> Consulte o tópico [práticas recomendadas: Usando OLTP na memória em um ambiente de VM](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) para obter mais informações.  
+> Confira o tópico [Práticas recomendadas: Usando OLTP in-memory em um ambiente de máquina virtual](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) para obter mais informações.  
   
 ## <a name="resolve-page-allocation-failures-due-to-insufficient-memory-when-sufficient-memory-is-available"></a>Resolver falhas de alocação de página devido à memória insuficiente quando há memória suficiente disponível  
- Se você receber a mensagem de erro "desautorizando as alocações de página do banco de dados ' *\<databaseName >* 'devido à memória insuficiente no pool de recursos' *\<resourcePoolName >* '. Consulte '<https://go.microsoft.com/fwlink/?LinkId=330673>' para obter mais informações. " No log de erros quando a memória física disponível for suficiente para alocar a página, talvez isso ocorra devido a um Administrador de Recursos desabilitado. Quando o Administrador de Recursos é desabilitado, MEMORYBROKER_FOR_RESERVE induz artificial à pressão de memória artificial.  
+ Se você receber a mensagem de erro "desautorizando as alocações de página do banco de dados '*\<DatabaseName>*' devido à memória insuficiente no pool de recursos '*\<resourcePoolName>*'. Consulte '<https://go.microsoft.com/fwlink/?LinkId=330673>' para obter mais informações. " No log de erros quando a memória física disponível for suficiente para alocar a página, talvez isso ocorra devido a um Administrador de Recursos desabilitado. Quando o Administrador de Recursos é desabilitado, MEMORYBROKER_FOR_RESERVE induz artificial à pressão de memória artificial.  
   
  Para resolver isso, é necessário habilitar o Administrador de Recursos.  
   
  Veja [Habilitar Administrador de Recursos](https://technet.microsoft.com/library/bb895149.aspx) para obter informações sobre limites e restrições, bem como diretrizes sobre como habilitar o Administrador de Recursos usando o Pesquisador de Objetos, as propriedades do Administrador de Recursos ou o Transact-SQL.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Gerenciando memória para OLTP na memória](../../database-engine/managing-memory-for-in-memory-oltp.md)   
- [Monitorar e solucionar problemas de uso da memória](monitor-and-troubleshoot-memory-usage.md)   
+ [Monitorar e solucionar problemas de uso de memória](monitor-and-troubleshoot-memory-usage.md)   
  [Associar um banco de dados com tabelas com otimização de memória a um pool de recursos](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
- [Práticas recomendadas: Usando OLTP na memória em um ambiente de VM](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md)  
+ [Práticas recomendadas: usando o OLTP na memória em um ambiente de VM](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md)  
   
   

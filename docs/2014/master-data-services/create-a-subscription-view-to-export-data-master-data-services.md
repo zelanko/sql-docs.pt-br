@@ -14,14 +14,14 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c4a2f747192b1cddefeac256d4470a2b345305de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479943"
 ---
 # <a name="create-a-subscription-view-master-data-services"></a>Criar uma exibição de assinatura (Master Data Services)
-  Criar uma exibição de assinatura quando você deseja criar uma exibição de seus dados no [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] banco de dados para uso por sistemas de assinatura.  
+  Crie uma exibição de assinatura quando desejar criar uma exibição dos dados no [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] banco de dado para uso por sistemas de assinatura.  
   
 ## <a name="prerequisites"></a>Prerequisites  
  Para executar esse procedimento:  
@@ -36,27 +36,27 @@ ms.locfileid: "65479943"
   
 2.  Da barra de menus, clique em **Criar Exibições**.  
   
-3.  Sobre o **exibições de assinatura** , clique em **adicionar exibição de assinatura**.  
+3.  Na página **exibições de assinatura** , clique em **Adicionar exibição de assinatura**.  
   
-4.  No **criar exibição de assinatura** painel, no **nome de exibição de assinatura** , digite um nome para o modo de exibição.  
+4.  No painel **criar exibição de assinatura** , na caixa **nome da exibição de assinatura** , digite um nome para a exibição.  
   
 5.  Na lista **Modelo** , selecione um modelo.  
   
-6.  Selecione o **versão** ou **sinalizador de versão** opção e, em seguida, selecione da lista correspondente.  
+6.  Selecione a opção **versão** ou **sinalizador** de versão e, em seguida, selecione na lista correspondente.  
   
     > [!TIP]  
     >  Crie uma exibição de assinatura com base em um sinalizador de versão. Quando você bloqueia uma versão, pode reatribuir o sinalizador a uma versão aberta sem atualizar a exibição de assinatura.  
   
-7.  Selecione o **Entity** ou **hierarquia derivada** opção e, em seguida, selecione da lista correspondente.  
+7.  Selecione a opção **entidade** ou **hierarquia derivada** e, em seguida, selecione na lista correspondente.  
   
 8.  Selecione um formato de exibição de assinatura na lista **Formato** .  
   
 9. Se você escolheu **Níveis Explícitos** ou **Níveis Derivados** da lista **Formato** , digite o número de níveis na hierarquia para incluir na exibição.  
   
-10. Clique em **Salvar**.  
+10. Clique em **Save** (Salvar).  
   
-## <a name="see-also"></a>Consulte também  
- [Exportação de dados &#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Exportando dados &#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)   
  [Excluir uma exibição de assinatura &#40;Master Data Services&#41;](delete-a-subscription-view-master-data-services.md)   
  [Criar um sinalizador de versão &#40;Master Data Services&#41;](create-a-version-flag-master-data-services.md)  
   

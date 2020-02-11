@@ -1,5 +1,5 @@
 ---
-title: Criar e gerenciar funções (SSAS Tabular) | Microsoft Docs
+title: Criar e gerenciar funções (SSAS tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 10e5e26142cd1819e4f2c5f884af9c2f2af10812
-ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67284901"
 ---
 # <a name="create-and-manage-roles-ssas-tabular"></a>Criar e Gerenciar Funções (SSAS tabular)
@@ -28,7 +28,7 @@ ms.locfileid: "67284901"
 ## <a name="tasks"></a>Tarefas  
  Para criar, editar, copiar e excluir funções, você usará a caixa de diálogo **Gerenciador de Funções** . Para exibir a caixa de diálogo **Gerenciador de Funções** , no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], clique no menu **Modelo** e em **Gerenciador de Funções**.  
   
-###  <a name="bkmk_new_role"></a> Para criar uma nova função  
+###  <a name="bkmk_new_role"></a>Para criar uma nova função  
   
 1.  No [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], clique no menu **Modelo** e em **Gerenciador de Funções**.  
   
@@ -42,13 +42,13 @@ ms.locfileid: "67284901"
   
 4.  No campo **Permissões** , clique na seta para baixo e selecione um dos tipos de permissão a seguir:  
   
-    |Permissão|Descrição|  
+    |Permissão|DESCRIÇÃO|  
     |----------------|-----------------|  
-    |**Nenhum**|Os membros não podem fazer modificações ao esquema modelo e não podem consultar dados.|  
-    |**Leitura**|Os membros têm permissão de consultar dados (com base em filtros de linha) mas não podem fazer nenhuma alteração ao esquema modelo.|  
+    |**Nenhuma**|Os membros não podem fazer modificações ao esquema modelo e não podem consultar dados.|  
+    |**Ler**|Os membros têm permissão de consultar dados (com base em filtros de linha) mas não podem fazer nenhuma alteração ao esquema modelo.|  
     |**Leitura e processo**|Os membros têm permissão de consultar dados (com base em filtros de nível de linha) e executar operações de Processar e Processar Tudo, mas não podem fazer nenhuma alteração ao esquema modelo.|  
-    |**Processar**|Membros podem executar operações de Processar e Processar Tudo. Não é possível modificar o esquema modelo e não é possível consultar dados.|  
-    |**Administrador**|Os membros podem fazer modificações ao esquema modelo e podem consultar todos os dados.|  
+    |**Processo**|Os membros podem executar as operações Processar e Processar Tudo. Não podem modificar o esquema do modelo e não podem consultar dados.|  
+    |**Administradores**|Os membros podem fazer modificações ao esquema modelo e podem consultar todos os dados.|  
   
 5.  Para inserir uma descrição para a função, clique no campo **Descrição** e digite uma descrição.  
   
@@ -63,11 +63,11 @@ ms.locfileid: "67284901"
   
 9. Clique em **OK**.  
   
-## <a name="see-also"></a>Consulte também  
- [Funções &#40;SSAS de Tabela&#41;](roles-ssas-tabular.md)   
- [Perspectivas &#40;SSAS de Tabela&#41;](perspectives-ssas-tabular.md)   
- [Analisar no Excel &#40;SSAS de Tabela&#41;](analyze-in-excel-ssas-tabular.md)   
- [Função USERNAME &#40;DAX&#41;](/dax/username-function-dax)   
+## <a name="see-also"></a>Consulte Também  
+ [Funções &#40;SSAS de tabela&#41;](roles-ssas-tabular.md)   
+ [Perspectivas &#40;SSAS de tabela&#41;](perspectives-ssas-tabular.md)   
+ [Analisar no Excel &#40;SSAS de tabela&#41;](analyze-in-excel-ssas-tabular.md)   
+ [Função de nome de usuário &#40;DAX&#41;](/dax/username-function-dax)   
  [Função CUSTOMDATA &#40;DAX&#41;](/dax/customdata-function-dax)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Modificando a estrutura de previsão (Tutorial de mineração de dados intermediário) | Microsoft Docs
+title: Modificando a estrutura de previsão (tutorial de mineração de dados intermediário) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,49 +11,49 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: a86ddf0a715fc3a2313f555e898b3bd94cf66d8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63301297"
 ---
 # <a name="modifying-the-forecasting-structure-intermediate-data-mining-tutorial"></a>Modificando a estrutura de previsão (Tutorial de mineração de dados intermediário)
   A estrutura de mineração criada na tarefa anterior contém um modelo de previsão único. Antes de processar e explorar o modelo, você deve alterar sua estrutura ligeiramente e modificar uma de suas propriedades.  
   
 ## <a name="modifying-the-mining-structure"></a>Modificando a estrutura de mineração  
- Você pode alterar a estrutura de mineração usando o **estrutura de mineração** guia do Designer de mineração de dados. Quando você criou o modelo com o Assistente de mineração de dados, você usou três colunas: ReportingDate, ModelRegion e quantidade. No entanto, o **Forecasting** tabela também contém uma coluna de valor, que pode ser usado para prever o volume de vendas. Usando o **estrutura de mineração** guia, você pode adicionar essa coluna da exibição da fonte de dados para a estrutura de mineração.  
+ Você pode alterar a estrutura de mineração usando a guia **estrutura de mineração** do designer de mineração de dados. Ao criar o modelo com o Assistente de Mineração de Dados, você usou três colunas: ReportingDate, ModelRegion e Quantidade. No entanto, a tabela de **previsão** também contém uma coluna de valor, que pode ser usada para prever a quantidade de vendas. Usando a guia **estrutura de mineração** , você pode adicionar essa coluna da exibição da fonte de dados à estrutura de mineração.  
   
 #### <a name="to-add-the-amount-column-to-the-forecasting-mining-structure"></a>Para adicionar a coluna Valor à estrutura de mineração de previsão  
   
-1.  Sobre o **estrutura de mineração** guia do Designer de mineração de dados, no **exibição da fonte de dados** painel, selecione a coluna valor na tabela vTimeSeries.  
+1.  Na guia **estrutura de mineração** do designer de data mining, no painel **exibição da fonte de dados** , selecione a coluna valor na tabela vTimeSeries.  
   
-2.  Arraste a coluna Quantidade a **exibição da fonte de dados** painel para a lista de colunas para o **Forecasting** estrutura.  
+2.  Arraste a coluna valor do painel **exibição da fonte de dados** para a lista de colunas da estrutura de **previsão** .  
   
-     A coluna valor agora está incluída na **Forecasting** estrutura de mineração.  
+     A coluna de valor agora está incluída na estrutura de mineração de **previsão** .  
   
 ## <a name="modifying-the-columns-in-the-mining-model"></a>Modificando as colunas do modelo de mineração  
- Como você adicionou uma nova coluna à estrutura, é preciso definir como o modelo a usará. Você pode especificar como a coluna será usada na **modelos de mineração** guia do Designer de mineração de dados.  
+ Como você adicionou uma nova coluna à estrutura, é preciso definir como o modelo a usará. Você pode especificar como a coluna será usada na guia **modelos de mineração** do designer de mineração de dados.  
   
- O **modelos de mineração** guia lista as colunas contidas na estrutura de mineração na **estrutura** coluna da grade e lista as colunas que o modelo de mineração contém a coluna que tem o nome das modelo, nesse caso **Forecasting**. Clique nos nomes das colunas para fazer modificações. No **Forecasting** modelo de mineração, a coluna de valor é usada como uma coluna de entrada e também é usada para prever vendas futuras. Portanto, é preciso definir as propriedades da coluna de forma que ela possa ser usada como uma coluna de entrada e uma coluna previsível.  
+ A guia **modelos de mineração** lista as colunas que a estrutura de mineração contém na coluna **estrutura** da grade e lista as colunas que o modelo de mineração contém na coluna que tem o nome do modelo, neste caso, **previsão**. Clique nos nomes das colunas para fazer modificações. No modelo de mineração de **previsão** , a coluna valor é usada como uma coluna de entrada e também é usada para prever vendas futuras. Portanto, é preciso definir as propriedades da coluna de forma que ela possa ser usada como uma coluna de entrada e uma coluna previsível.  
   
 > [!NOTE]  
->  No **modelos de mineração** guia, você também pode criar novos modelos com base na mesma estrutura, e você pode ajustar as propriedades de algoritmo e da coluna para cada modelo. No entanto, você deverá processar o modelo antes que essas alterações entrem em vigor.  
+>  Na guia **modelos de mineração** , você também pode criar novos modelos com base na mesma estrutura e pode ajustar as propriedades de algoritmo e coluna para cada modelo. No entanto, você deverá processar o modelo antes que essas alterações entrem em vigor.  
   
 #### <a name="to-define-how-the-amount-column-will-be-used"></a>Para definir a coluna Valor que será usada  
   
-1.  No **Forecasting** coluna da grade, na **modelos de mineração** guia, clique na célula na linha de quantidade.  
+1.  Na coluna **previsão** da grade na guia **modelos de mineração** , clique na célula da linha valor.  
   
-2.  Selecione **Predict** na lista.  
+2.  Selecione **prever** na lista.  
   
      Agora, a coluna Valor passa a ser uma coluna de entrada e uma coluna previsível.  
   
- Você também pode alterar as propriedades das colunas individuais selecionando a coluna e abrindo o **propriedades** janela. Para abrir o **propriedades** janela, clique com botão direito no nome da coluna e, em seguida, selecione **propriedades**. Se você alterar uma propriedade dentro da coluna de um modelo individual, só será possível alterar as propriedades deste modelo. No entanto, quando você altera uma propriedade dentro de **estrutura** coluna, a alteração afetará todo o modelo que está associado com a estrutura. Sempre que você fizer alterações no modelo ou na estrutura, deverá processá-los novamente para ver os efeitos.  
+ Você também pode alterar as propriedades de colunas individuais selecionando a coluna e abrindo a janela **Propriedades** . Para abrir a janela **Propriedades** , clique com o botão direito do mouse no nome da coluna e selecione **Propriedades**. Se você alterar uma propriedade dentro da coluna de um modelo individual, só será possível alterar as propriedades deste modelo. No entanto, quando você altera uma propriedade dentro da coluna de **estrutura** , a alteração afeta todos os modelos associados à estrutura. Sempre que você fizer alterações no modelo ou na estrutura, deverá processá-los novamente para ver os efeitos.  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
- [Personalizando e processando o modelo de previsão &#40;Tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/customize-process-forecasting-model-intermediate-data-mining-tutorial.md)  
+ [Personalizando e processando o modelo de previsão &#40;tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/customize-process-forecasting-model-intermediate-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Estruturas de Mineração &#40;Analysis Services – Data Mining&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [Modelos de mineração &#40;Analysis Services – Data Mining&#41;](../../2014/analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Estruturas de mineração &#40;Analysis Services de mineração de dados&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [Modelos de mineração &#40;Analysis Services de mineração de dados&#41;](../../2014/analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   
   

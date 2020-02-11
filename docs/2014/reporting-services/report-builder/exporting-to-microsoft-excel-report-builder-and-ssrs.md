@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ed18d5f14a2245290e14804d4a64f58beba885d8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107909"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Exporting to Microsoft Excel (Report Builder and SSRS)
@@ -27,7 +27,7 @@ ms.locfileid: "66107909"
 > [!IMPORTANT]  
 >  Para evitar mensagens de erro ao exportar um relatório maior que 10 MB para o Excel, instale o service pack mais recente para [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. O problema foi corrigido no SP2.  
 >   
->  Para obter mais informações sobre o problema, consulte [corrigir: SSRS 2012 não é possível exportar um relatório que é maior do que 10 MB para o formato do Excel](https://go.microsoft.com/fwlink/p/?LinkId=402513)  
+>  Para obter mais informações sobre o problema, consulte [Corrigir: O SSRS 2012 não consegue exportar um relatório maior que 10 MB para o formato Excel](https://go.microsoft.com/fwlink/p/?LinkId=402513)  
 >   
 >  Para obter o service pack mais recente para o [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], consulte [Como obter o service pack mais recente para o SQL Server 2012](https://go.microsoft.com/fwlink/p/?LinkId=402512)  
   
@@ -39,8 +39,9 @@ ms.locfileid: "66107909"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="ExcelLimitations"></a> Limitações do Excel  
- [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] impõe limitações a relatórios exportados devido aos recursos do Excel e de seus formatos de arquivo. Estas são as mais significativas:  
+##  <a name="ExcelLimitations"></a>Limitações do Excel  
+ 
+  [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] impõe limitações a relatórios exportados devido aos recursos do Excel e de seus formatos de arquivo. Estas são as mais significativas:  
   
 -   A largura máxima de coluna está limitada a 255 caracteres ou 1726,5 pontos. O processador não verifica se a largura da coluna é inferior ao limite.  
   
@@ -93,7 +94,8 @@ ms.locfileid: "66107909"
   
 -   Os cabeçalhos e os rodapés do Excel dão suporte a um máximo de 256 caracteres, inclusive a marcação. A extensão de renderização trunca a cadeia de caracteres em 256 caracteres.  
   
--   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] não dá suporte a margens em cabeçalhos e rodapés de relatórios. Quando exportados para o Excel, os valores de margem são definidos como zero e qualquer cabeçalho ou rodapé que contenha várias linhas de dados talvez não imprima várias linhas, dependendo das configurações da impressora.  
+-   
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] não dá suporte a margens em cabeçalhos e rodapés de relatórios. Quando exportados para o Excel, os valores de margem são definidos como zero e qualquer cabeçalho ou rodapé que contenha várias linhas de dados talvez não imprima várias linhas, dependendo das configurações da impressora.  
   
 -   As caixas de texto em um cabeçalho ou rodapé mantêm a formatação, mas não o alinhamento durante a exportação para o Excel. Isso ocorre porque os espaços à esquerda e à direita são removidos quando o relatório é renderizado no Excel.  
   
@@ -135,7 +137,7 @@ ms.locfileid: "66107909"
 ### <a name="excel-2003-renderer"></a>Renderizador do Excel 2003  
   
 > [!IMPORTANT]  
->  A extensão de renderização [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] 2003 é substituída. Para obter mais informações, consulte [recursos preteridos no SQL Server Reporting Services no SQL Server 2014](../deprecated-features-in-sql-server-reporting-services-ssrs.md).  
+>  A extensão de renderização [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] 2003 é substituída. Para obter mais informações, consulte [recursos preteridos em SQL Server Reporting Services no SQL Server 2014](../deprecated-features-in-sql-server-reporting-services-ssrs.md).  
   
  A versão anterior do renderizador do Excel, compatível com o Excel 2003, agora é chamada Excel 2003 e listada em menus usando esse nome. O tipo de conteúdo dos arquivos gerados por este renderizador é **application/vnd.ms-excel** e a extensão de nome de arquivo dos arquivos é .xls.  
   
@@ -147,7 +149,7 @@ ms.locfileid: "66107909"
   
      Isso ocorre nas versões [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] e autônoma do Construtor de Relatórios.  
   
--   O Web Part do Visualizador de Relatórios em modo local e o farm do SharePoint não são integrados com um servidor de relatório [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . Para obter mais informações, consulte [Relatórios no modo Local versus em modo Conectado no Visualizador de Relatórios &#40;Reporting Services no modo do SharePoint&#41;](../local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md)  
+-   O Web Part do Visualizador de Relatórios em modo local e o farm do SharePoint não são integrados com um servidor de relatório [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . Para obter mais informações, consulte modo [local versus os relatórios do modo conectado no Visualizador de relatórios &#40;Reporting Services no modo do SharePoint&#41;](../local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md)  
   
  Se o renderizador de opção de menu **Excel 2003** estiver configurado para ficar visível, as opções Excel e Excel 2003 estarão disponíveis nos seguintes cenários:  
   
@@ -155,7 +157,8 @@ ms.locfileid: "66107909"
   
 -   Site do SharePoint quando o Reporting Services é instalado no modo integrado do SharePoint.  
   
--   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] e visualização de relatórios  
+-   
+  [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] e visualização de relatórios  
   
 -   Construtor de Relatórios conectado a um servidor de relatórios. Esta pode ser uma versão [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] ou autônoma do Construtor de Relatórios.  
   
@@ -167,24 +170,25 @@ ms.locfileid: "66107909"
   
  `<Extension Name="EXCEL" Type="Microsoft.ReportingServices.Rendering.ExcelRenderer.ExcelRenderer,Microsoft.ReportingServices.ExcelRendering" Visible="false"/>`  
   
- A extensão EXCELOPENXML define o renderizador do Excel para o Excel 2007-2010. A extensão EXCEL define a versão do Excel 2003. `Visible = "false"` indica que o renderizador do Excel 2003 está oculto. Para obter mais informações, consulte [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md) e [RSReportDesigner Configuration File](../report-server/rsreportdesigner-configuration-file.md).  
+ A extensão EXCELOPENXML define o renderizador do Excel para o Excel 2007-2010. A extensão EXCEL define a versão do Excel 2003. 
+  `Visible = "false"` indica que o renderizador do Excel 2003 está oculto. Para obter mais informações, consulte [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md) e [RSReportDesigner Configuration File](../report-server/rsreportdesigner-configuration-file.md).  
   
 ### <a name="differences-between-the-excel-2007-2010-and-excel-2003-renderers"></a>Diferenças entre os renderizadores do Excel 2007-2010 e do Excel 2003  
  Relatórios, renderizando usando o renderizador do Excel ou do Excel 2003, costumam ser idênticos e apenas em raras circunstâncias você notará diferenças entre os dois formatos. A tabela a seguir compara os renderizadores do Excel e do Excel 2003.  
   
 |Propriedade|Excel 2003|Excel|  
 |--------------|----------------|-----------|  
-|Máximo de colunas por planilha|256|16\.384|  
-|Máximo de linhas por planilha|65\.536|1\.048.576|  
+|Máximo de colunas por planilha|256|16.384|  
+|Máximo de linhas por planilha|65.536|1.048.576|  
 |Número de cores permitido em uma planilha|56 (paleta)<br /><br /> Se mais de 56 cores forem utilizadas no relatório, a extensão de renderização corresponderá à cor necessária de uma das 56 cores já disponíveis na paleta personalizada.|Aproximadamente 16 milhões (cor de 24 bits)|  
-|Arquivos compactados em ZIP|None|compactação em ZIP|  
+|Arquivos compactados em ZIP|Nenhum|compactação em ZIP|  
 |Família de fontes padrão|Arial|Calibri|  
 |Tamanho da fonte padrão|10pt|11pt|  
 |Altura de linha padrão|12,75 pt|15 pt|  
   
  Como o relatório define explicitamente a altura da linha, a altura de linha padrão só afeta linhas dimensionadas automaticamente na exportação para o Excel.  
   
-##  <a name="ReportItemsExcel"></a> Itens de relatório do Excel  
+##  <a name="ReportItemsExcel"></a>Itens de relatório no Excel  
  Retângulos, sub-relatórios, corpo do relatório e regiões de dados são renderizados como um intervalo de células do Excel. Caixas de texto, imagens, gráficos, barras de dados, minigráficos, mapas, medidores e indicadores devem ser renderizados dentro de uma célula do Excel, que pode ser mesclada dependendo do layout do restante do relatório.  
   
  Imagens, gráficos, minigráficos, barras de dados, mapas, medidores, indicadores e linhas são posicionados dentro de uma célula do Excel mas eles ficam sobre a grade de célula. Linhas são renderizadas como bordas de célula.  
@@ -198,8 +202,8 @@ ms.locfileid: "66107909"
   
  Se nenhuma correspondência for encontrada, o Excel usará o tamanho de página padrão para a impressora. Se a altura do papel for maior que a largura, a orientação será definida como Retrato; caso contrário, será Paisagem.  
   
-##  <a name="WorksheetTabNames"></a> Nomes de guia de planilha  
- Quando você exporta um relatório para o Excel, as páginas do relatório criadas por quebras de página são exportadas para planilhas diferentes. Se você forneceu um nome de página inicial para o relatório, cada planilha da pasta de trabalho do Excel terá seu nome por padrão. O nome aparece na guia da planilha. No entanto, como cada planilha em uma pasta de trabalho deve ter um nome exclusivo, um número inteiro iniciado em 1 e incrementado em 1 é anexado ao nome de página inicial para cada planilha adicional. Por exemplo, se o nome da página inicial é **Relatório de Vendas por Ano Fiscal**, a segunda planilha será denominada **Relatório de Vendas por Ano Fiscal1**, a terceira **Relatório de Vendas por Ano Fiscal2**e assim por diante.  
+##  <a name="WorksheetTabNames"></a>Nomes de guias de planilha  
+ Quando você exporta um relatório para o Excel, as páginas do relatório criadas por quebras de página são exportadas para planilhas diferentes. Se você forneceu um nome de página inicial para o relatório, cada planilha da pasta de trabalho do Excel terá seu nome por padrão. O nome aparece na guia da planilha. No entanto, como cada planilha em uma pasta de trabalho deve ter um nome exclusivo, um inteiro começando em 1 e incrementado em 1 é acrescentado ao nome da página inicial de cada planilha adicional. Por exemplo, se o nome da página inicial é **Relatório de Vendas por Ano Fiscal**, a segunda planilha será denominada **Relatório de Vendas por Ano Fiscal1**, a terceira **Relatório de Vendas por Ano Fiscal2**e assim por diante.  
   
  Se todas as páginas de relatório criadas por quebras de páginas fornecerem novos nomes de página, cada planilha terá o nome de página associado. No entanto, esses nomes de páginas talvez não sejam exclusivos. Se os nomes de páginas não forem exclusivos, as planilhas serão nomeadas da mesma maneira que as páginas iniciais. Por exemplo, se o nome de página de dois grupos for **Vendas para NW**, uma guia de planilha terá o nome **Vendas para NW**e a outra **Vendas para NW1**.  
   
@@ -207,17 +211,17 @@ ms.locfileid: "66107909"
   
  O Reporting Services fornece propriedades a serem definidas em relatórios, regiões de dados, grupos e retângulos para ajudá-lo a criar relatórios que possam ser exportados para o Excel da maneira desejada. Para obter mais informações, consulte [Paginação no Reporting Services &#40;Construtor de Relatórios e SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
   
-##  <a name="DocumentProperties"></a> Propriedades do documento  
+##  <a name="DocumentProperties"></a>Propriedades do documento  
  O processador do Excel grava os metadados a seguir no arquivo Excel.  
   
-|Propriedades do Elemento de Relatório|Description|  
+|Propriedades do Elemento de Relatório|DESCRIÇÃO|  
 |-------------------------------|-----------------|  
 |Criado|Data e hora da execução do relatório como um valor ISO de data/hora.|  
 |Autor|Autor do Relatório|  
-|Descrição|Descrição do Relatório|  
+|DESCRIÇÃO|Descrição do Relatório|  
 |LastSaved|Data e hora da execução do relatório como um valor ISO de data/hora.|  
   
-##  <a name="PageHeadersFooters"></a> Cabeçalhos e rodapés de página  
+##  <a name="PageHeadersFooters"></a>Cabeçalhos e rodapés de página  
  Dependendo da configuração SimplePageHeaders das Informações do Dispositivo, o cabeçalho da página pode ser renderizado de duas maneiras: o cabeçalho da página pode ser renderizado no topo de cada grade de célula na planilha, ou na seção real do cabeçalho da planilha Excel. Por padrão, o cabeçalho é renderizado à grade de célula na planilha do Excel.  
   
  O rodapé da página é sempre renderizado na seção real do rodapé da planilha Excel, independentemente do valor da configuração SimplePageHeaders.  
@@ -242,7 +246,8 @@ ms.locfileid: "66107909"
  Alguns elementos interativos têm suporte no Excel. A seguir, uma descrição dos comportamentos específicos.  
   
 ### <a name="show-and-hide"></a>Mostrar e Ocultar  
- [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] tem limitações a respeito de como administra os itens de relatório ocultos e exibidos ao serem exportados. Grupos, linhas e colunas que contêm itens de relatório que podem ser alternados são renderizados como esboços do Excel. O Excel cria esboços que expandam e recolhem linhas e colunas ao longo de toda a linha ou coluna que pode causar o recolhimento de itens de relatório que não devem ser recolhidos. Além disso, os símbolos de estrutura de tópicos do Excel podem tornar-se atravancados com esboços sobrepostos. Para tratar destes assuntos, as seguintes regras para estrutura de tópicos são aplicadas ao usar a extensão de renderização do Excel:  
+ 
+  [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] tem limitações a respeito de como administra os itens de relatório ocultos e exibidos ao serem exportados. Grupos, linhas e colunas que contêm itens de relatório que podem ser alternados são renderizados como esboços do Excel. O Excel cria esboços que expandam e recolhem linhas e colunas ao longo de toda a linha ou coluna que pode causar o recolhimento de itens de relatório que não devem ser recolhidos. Além disso, os símbolos de estrutura de tópicos do Excel podem tornar-se atravancados com esboços sobrepostos. Para tratar destes assuntos, as seguintes regras para estrutura de tópicos são aplicadas ao usar a extensão de renderização do Excel:  
   
 -   O item de relatório no canto superior esquerdo que pode ser alternado pode continuar a ser alternado no Excel. Os itens de relatório que podem ser alternado e compartilham um espaço vertical ou horizontal com o item de relatório que pode ser alternado no canto superior esquerdo não pode ser alterando no Excel.  
   
@@ -273,10 +278,10 @@ ms.locfileid: "66107909"
 ### <a name="bookmarks"></a>Indicadores  
  Os links indicadores nas caixas de texto são renderizados como hiperlinks Excel na célula em que o texto é renderizado. Os links indicadores para imagens e gráficos são renderizados como hiperlinks Excel na imagem quando renderizada. Quando clicado, a indicação vai para a célula do Excel na qual o item de relatório indicado é renderizado.  
   
-##  <a name="ConditionalFormat"></a> Alterando relatórios em tempo de execução  
+##  <a name="ConditionalFormat"></a>Alterando relatórios em tempo de execução  
  Se um relatório precisar ser renderizado em vários formatos e não for possível criar um layout de relatório que renderize da forma desejada em todos os formatos obrigatórios, você pode considerar usar o valor em RenderFormat global interno para alterar condicionalmente a aparência do relatório em tempo de execução. Dessa forma, é possível ocultar ou mostrar itens de relatório dependendo do renderizador usado para obter os melhores resultados em cada formato. Para obter mais informações, consulte [Referências de globais internas e referências de usuários &#40;Construtor de Relatórios e SSRS&#41;](../report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Paginação no Reporting Services &#40;Construtor de Relatórios e SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportamentos de renderização &#40;Construtor de Relatórios e SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [Funcionalidade interativa para extensões de renderização de relatório diferentes &#40;Construtor de Relatórios e SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   

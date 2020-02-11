@@ -15,16 +15,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: df6622abc3a507d917aefd2a8a5a1bf9505a2622
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062256"
 ---
 # <a name="analyze-key-influencers-table-analysis-tools-for-excel"></a>Analisar os Influenciadores Principais (Ferramentas de Análise de Tabela para Excel)
-  ![Botão do analisar os influenciadores principais na faixa de opções](media/tat-aki.gif "botão analisar os influenciadores principais na faixa de opções")  
+  ![Botão Analisar os Influenciadores Principais na faixa de opções](media/tat-aki.gif "Botão Analisar os Influenciadores Principais na faixa de opções")  
   
- Com o **analisar os influenciadores principais** ferramenta, que você escolher uma coluna que contém um resultado de destino e o algoritmo determina quais fatores tiveram a maior influência no resultado.  
+ Com a ferramenta **analisar influenciadores principais** , você escolhe uma coluna que contém um resultado de destino e o algoritmo determina quais fatores tinham a influência mais forte sobre o resultado.  
   
  A ferramenta cria novas tabelas de dados que reportam os fatores associados a cada resultado e exibe graficamente a probabilidade de relação. Você pode filtrar as tabelas por fatores e resultados diferentes para explorar os resultados com mais profundidade.  
   
@@ -34,32 +34,32 @@ ms.locfileid: "66062256"
   
 1.  Abra uma tabela de dados do Excel.  
   
-2.  No **ferramentas de tabela**diante de **analisar** faixa de opções, clique em **analisar os influenciadores principais.**  
+2.  Em **ferramentas de tabela**, na faixa de quadro **analisar** , clique em **analisar influenciadores-chave.**  
   
 3.  Selecione a coluna única que é o destino da análise.  
   
-4.  Opcionalmente, clique em **escolher colunas a serem usadas para análise**. No **seleção de colunas avançada** caixa de diálogo caixa, escolha as colunas que têm mais probabilidade de conter dados relevantes. Para melhorar o desempenho e a precisão, desmarque colunas como ID ou nome que não são importantes para análise de padrão. Clique em **Okey** para fechar o **seleção de colunas avançada** caixa de diálogo.  
+4.  Opcionalmente, clique em **escolher colunas a serem usadas para análise**. Na caixa de diálogo **seleção de colunas avançadas** , escolha as colunas que têm mais probabilidade de conter dados relevantes. Para melhorar o desempenho e a precisão, desmarque colunas como ID ou nome que não são importantes para análise de padrão. Clique em **OK** para fechar a caixa de diálogo **seleção de colunas avançadas** .  
   
 5.  Clique em **Executar**.  
   
-     O **analisar os influenciadores principais** ferramenta realiza uma análise dos dados para determinar as configurações ideais e define todos os parâmetros automaticamente.  
+     A ferramenta **analisar influenciadores principais** conduz uma análise dos dados para determinar as configurações ideais e define todos os parâmetros automaticamente.  
   
 6.  Se nenhum padrão for detectado, o assistente criará uma nova planilha contendo uma descrição do problema.  
   
-7.  Se forem detectados padrões, o assistente criará um relatório em uma nova planilha mostrando esses padrões. O relatório é denominado **influenciadores principais para \<coluna >** . Você pode personalizar o relatório conforme descrito no procedimento a seguir.  
+7.  Se forem detectados padrões, o assistente criará um relatório em uma nova planilha mostrando esses padrões. O relatório é nomeado **como influenciadores- \<chave para>de coluna **. Você pode personalizar o relatório conforme descrito no procedimento a seguir.  
   
 #### <a name="create-a-custom-report"></a>Criar um relatório personalizado  
   
-1.  No **discriminação com base nos influenciadores principais** diálogo caixa, escolha os dois valores que você deseja comparar selecionando-os da **valor 1** e **valor 2** listas suspensas . Por exemplo, você pode comparar compradores a não compradores.  
+1.  Na caixa de diálogo **discriminação baseada em influenciadores de chave** , escolha os dois valores que você deseja comparar selecionando-os nas listas suspensas **valor 1** e **valor 2** . Por exemplo, você pode comparar compradores a não compradores.  
   
 2.  Clique em **Adicionar relatório**.  
   
      O assistente cria uma nova planilha e adiciona uma tabela para cada par de comparações de fatores chave.  
   
-3.  Quando você terminar de fazer comparações, clique em **fechar**.  
+3.  Quando terminar de fazer comparações, clique em **fechar**.  
   
 ## <a name="understanding-the-key-influencers-report"></a>Compreendendo o relatório Influenciadores Principais  
- Depois que o modelo de dados tiver sido criado, o **analisar os influenciadores principais** ferramenta cria relatórios que ajudam você a explorar e comparar influenciadores principais.  
+ Após a criação do modelo de dados, a ferramenta **analisar influenciadores principais** cria relatórios que ajudam você a explorar e comparar os influenciadores principais.  
   
 -   O relatório no lado esquerdo é gerado por padrão. Ele mostra os preditores mais fortes da coluna de resultado (a variável dependente).  
   
@@ -77,9 +77,9 @@ ms.locfileid: "66062256"
  **Favorece**  
  No segundo relatório, os valores de destino que você compara são listados em duas colunas, com os fatores relacionados listados em ordem decrescente de confiança.  
   
--   O **azul** barra mostra atributos que contribuem para o resultado, "Não" (= não comprou).  
+-   A barra **azul** mostra atributos que contribuem para o resultado, "não" (= não adquiriu).  
   
--   O **vermelho** barra mostra atributos que contribuem para o resultado, "Yes" (= comprou uma bicicleta).  
+-   A barra **vermelha** mostra atributos que contribuem para o resultado "Sim" (= comprou uma bicicleta).  
   
  As cores na barra de matização são arbitrárias. Você pode alterar estas cores definindo as opções para design de tabela no Excel.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "66062256"
  Como todos os gráficos são baseados nas tabelas do Excel, você pode filtrar e classificar para enfatizar fatores ou resultados específicos.  
   
 ## <a name="more-about-the-analyze-key-influencers-tool"></a>Mais informações sobre a ferramenta Analisar os Influenciadores Principais  
- Quando o **analisar os influenciadores principais** ferramenta analisa os dados, ele faz o seguinte:  
+ Quando a ferramenta **analisar influenciadores principais** analisa seus dados, ela faz o seguinte:  
   
 -   Cria uma estrutura de dados que armazena as principais informações sobre a distribuição dos dados.  
   
@@ -101,22 +101,22 @@ ms.locfileid: "66062256"
 -   Cria um relatório que descreve os influenciadores principais, ordenados por pontuações de confiança.  
   
 ### <a name="requirements"></a>Requisitos  
- Se a coluna de destino contiver valores numéricos contínuos, a ferramenta segmentará automaticamente os valores numéricos em grupos. Esses agrupamentos representam clusters de casos com características semelhantes. No entanto, talvez os valores numéricos não sejam divididos em grupos amigáveis com o usuário. Por exemplo, o relatório pode conter um agrupamento como "\<12.85701", ao passo que os usuários de relatório geralmente prefiram visualizar agrupamentos que utilizem números inteiros, como 10-19, 20-29 e assim por diante.  
+ Se a coluna de destino contiver valores numéricos contínuos, a ferramenta segmentará automaticamente os valores numéricos em grupos. Esses agrupamentos representam clusters de casos com características semelhantes. No entanto, talvez os valores numéricos não sejam divididos em grupos amigáveis com o usuário. Por exemplo, o relatório pode conter um agrupamento como "\<12,85701", enquanto os usuários de relatório normalmente gostam de ver agrupamentos que usam números inteiros, como 10-19, 20-29 e assim por diante.  
   
- Se você quiser agrupar dados numéricos de um modo diferente, será necessário segmentar os dados da maneira desejada antes de criar a análise. Por exemplo, você pode usar o [rotular novamente](relabel-sql-server-data-mining-add-ins.md) ferramenta no cliente de mineração de dados para Excel para criar um novo rótulo de agrupamento em uma coluna separada e, em seguida, usar apenas essa nova coluna na análise.  
+ Se você quiser agrupar dados numéricos de um modo diferente, será necessário segmentar os dados da maneira desejada antes de criar a análise. Por exemplo, você pode usar a ferramenta de [rerotulação](relabel-sql-server-data-mining-add-ins.md) no cliente de mineração de dados para Excel para criar um novo rótulo de agrupamento em uma coluna separada e, em seguida, usar apenas essa nova coluna na análise.  
   
 ### <a name="related-tools"></a>Ferramentas relacionadas  
- O **mineração de dados** faixa de opções fornece ferramentas mais avançadas, incluindo a capacidade de personalizar modelos de mineração de dados  
+ A faixa de informações de **mineração de dados** fornece ferramentas mais avançadas, incluindo a capacidade de personalizar modelos de Data Mining  
   
- Se você salvar o modelo usando o **analisar os influenciadores principais** ferramenta, você pode usar o cliente de mineração de dados para procurar o modelo e explorar relações com mais detalhes. Para obter informações, consulte [procurando modelos no Excel &#40;SQL Server Data Mining Add-ins&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md). Também é possível usar o Microsoft Office Visio para criar gráficos e diagramas que exibem as relações como cluster ou redes de dependências. Para obter mais informações, consulte [solução de problemas do Visio Data Mining diagramas &#40;SQL Server Data Mining Add-ins&#41;](troubleshooting-visio-data-mining-diagrams-sql-server-data-mining-add-ins.md).  
+ Se você salvar seu modelo usando a ferramenta **analisar influenciadores principais** , poderá usar o cliente de mineração de dados para procurar o modelo e explorar relações com mais detalhes. Para obter informações, consulte [procurando modelos no Excel &#40;SQL Server suplementos de mineração de dados&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md). Também é possível usar o Microsoft Office Visio para criar gráficos e diagramas que exibem as relações como cluster ou redes de dependências. Para obter mais informações, consulte [solução de problemas de diagramas de mineração de dados do Visio &#40;SQL Server suplementos de mineração de dados&#41;](troubleshooting-visio-data-mining-diagrams-sql-server-data-mining-add-ins.md).  
   
 > [!NOTE]  
 >  Os modelos criados quando você usa as Ferramentas de Análise de Tabela são excluídas quando você fecha a planilha ou encerra a conexão com o servidor do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Portanto, você pode procurar os modelos contanto que a conexão permaneça aberta. Você não pode renderizar os modelos no Visio se fechar a conexão ou a planilha.  
   
- Para obter mais informações sobre o algoritmo usado pelas **analisar os influenciadores principais** ferramenta, consulte "Microsoft Naive Bayes algoritmo" nos Manuais Online do SQL Server.  
+ Para obter mais informações sobre o algoritmo usado pela ferramenta **analisar influenciadores de chave** , consulte "algoritmo Bayes do Microsoft ingênua" em manuais online do SQL Server.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Ferramentas de análise de tabela para Excel](table-analysis-tools-for-excel.md)   
- [Criar um modelo de mineração de dados](creating-a-data-mining-model.md)  
+ [Criando um modelo de mineração de dados](creating-a-data-mining-model.md)  
   
   

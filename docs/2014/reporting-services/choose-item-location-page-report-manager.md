@@ -1,5 +1,5 @@
 ---
-title: Escolha a página de local do Item (Gerenciador de relatórios) | Microsoft Docs
+title: Página escolher local do item (Report Manager) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8fd750b8c83816caf775fd508d892ff2511ce67f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109896"
 ---
 # <a name="choose-item-location-page-report-manager"></a>Página Escolher local do item (Gerenciador de Relatórios)
@@ -52,7 +52,7 @@ ms.locfileid: "66109896"
 4.  Na guia **Geral** , na página de propriedades, clique em **Alterar Local** para abrir a página Escolher Local do Item.  
   
 ## <a name="options"></a>Opções  
- **Local**  
+ **Location**  
  Especifique o nome da pasta que deve conter o item que você está criando. É possível digitar o nome completo da pasta ou usar a exibição de árvore para navegar até a pasta desejada.  
   
  **Exibição de árvore**  
@@ -60,9 +60,9 @@ ms.locfileid: "66109896"
   
  Clique nos ícones expandir  (+) e recolher (-) na exibição de árvore para abrir e fechar pastas sem adicionar os nomes das pastas ao campo **Local** . Para adicionar um nome de pasta ao campo **Local** , clique no nome da pasta.  
   
-## <a name="see-also"></a>Consulte também  
- [Página Novo Relatório Vinculado &#40;Gerenciador de Relatórios&#41;](../../2014/reporting-services/new-linked-report-page-report-manager.md)   
- [Página novo modelo &#40;Gerenciador de relatórios&#41;](../../2014/reporting-services/new-model-page-report-manager.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Nova página de relatório vinculada &#40;Report Manager&#41;](../../2014/reporting-services/new-linked-report-page-report-manager.md)   
+ [Nova página de modelo &#40;Report Manager&#41;](../../2014/reporting-services/new-model-page-report-manager.md)   
  [Ajuda F1 do Gerenciador de Relatórios](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

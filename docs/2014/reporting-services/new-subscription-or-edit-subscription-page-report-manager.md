@@ -1,5 +1,5 @@
 ---
-title: Página nova assinatura ou Editar assinatura (Gerenciador de relatórios) | Microsoft Docs
+title: Página nova assinatura ou editar assinatura (Report Manager) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 968362b2835c0e76f2a44c44e6cd427af863e8e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108137"
 ---
 # <a name="new-subscription-or-edit-subscription-page-report-manager"></a>Página Nova Assinatura ou Editar Assinatura (Gerenciador de Relatórios)
@@ -36,7 +36,7 @@ ms.locfileid: "66108137"
   
 3.  No menu suspenso, siga um destes procedimentos:  
   
-    -   Clique em **Gerenciar**. Esse procedimento abre a página de propriedades Geral do relatório. Em seguida, selecione a guia **Assinaturas** . Na barra de ferramentas, clique em **Nova Assinatura**ou selecione uma assinatura existente e clique em **Editar**.  
+    -   Clique em **Gerenciar**. Esse procedimento abre a página de propriedades Geral do relatório. Em seguida, selecione a guia **assinaturas** . Na barra de ferramentas, clique em **nova assinatura**ou selecione uma assinatura existente e clique em **Editar**.  
   
     -   Clique em **Assinar**. Esse procedimento abre a página **Nova Assinatura** para o relatório.  
   
@@ -44,9 +44,9 @@ ms.locfileid: "66108137"
  **Entregue por**  
  Selecione a extensão de entrega a ser usada para distribuir o relatório. Dependendo da extensão de entrega selecionada, as configurações a seguir são exibidas:  
   
--   Assinaturas de email fornecem campos que são familiares a usuários de email (por exemplo, os campos **Para**, **Assunto**e **Prioridade** ). Especifique **Incluir Relatório** para inserir ou anexar o relatório ou **Incluir Link** para incluir uma URL ao relatório. Especifique **Formato de Renderização** para escolher um formato de apresentação para o relatório anexado ou inserido.  
+-   As assinaturas de email fornecem campos que são familiares para usuários de email (por exemplo, campos **para**, **assunto**e **prioridade** ). Especifique **Incluir Relatório** para inserir ou anexar o relatório ou **Incluir Link** para incluir uma URL ao relatório. Especifique **Formato de Renderização** para escolher um formato de apresentação para o relatório anexado ou inserido.  
   
--   Assinaturas de compartilhamento de arquivo fornecem campos que permitem especificar um local de destino. Você pode entregar qualquer relatório a um compartilhamento de arquivo. No entanto, relatórios que oferecem suporte a recursos interativos (incluindo relatórios matriz com suporte para busca detalhada em linhas e colunas) são renderizados como arquivos estáticos. Você não pode exibir busca detalhada em linhas e colunas em um arquivo estático. O nome do compartilhamento de arquivo deve ser especificado no formato UNC Uniform Naming Convention () (por exemplo, \\\mycomputer\public\myreportfiles). Não inclua barras invertidas à direita no nome do caminho. O arquivo de relatório será entregue em um formato de arquivo que tem base no formato de renderização (por exemplo, se você escolher **Excel**, o relatório será entregue como um arquivo .xls).  
+-   Assinaturas de compartilhamento de arquivo fornecem campos que permitem especificar um local de destino. Você pode entregar qualquer relatório a um compartilhamento de arquivo. No entanto, relatórios que oferecem suporte a recursos interativos (incluindo relatórios matriz com suporte para busca detalhada em linhas e colunas) são renderizados como arquivos estáticos. Você não pode exibir busca detalhada em linhas e colunas em um arquivo estático. O nome do compartilhamento de arquivos deve ser especificado no formato UNC (Convenção de nomenclatura uniforme) ( \\por exemplo, \mycomputer\public\myreportfiles). Não inclua barras invertidas à direita no nome do caminho. O arquivo de relatório será entregue em um formato de arquivo que tem base no formato de renderização (por exemplo, se você escolher **Excel**, o relatório será entregue como um arquivo .xls).  
   
  A disponibilidade de uma extensão de entrega depende se ela está instalada e configurada no servidor de relatório. O Email do Servidor de Relatório é a extensão de entrega padrão, mas deve ser configurado antes de ser usado. Entrega de Compartilhamento de Arquivo não requer configuração, mas você deve definir uma pasta compartilhada antes de usá-la.  
   
@@ -62,11 +62,11 @@ ms.locfileid: "66108137"
  **Em uma agenda compartilhada**  
  Selecionar uma agenda predefinida para processar a assinatura.  
   
- **Insira valores de parâmetro**  
+ **Inserir valores de parâmetro**  
  Use essa opção quando você estiver assinando um relatório com parâmetros. Essa opção só está disponível para relatórios com parâmetros. Ao assinar um relatório com parâmetros, você pode especificar que os valores de parâmetro usados criem a versão do relatório entregue pela assinatura. Por exemplo, você pode especificar um código de região para selecionar dados de vendas para uma região específica. Se você não especificar um valor, o valor padrão será usado.  
   
-## <a name="see-also"></a>Consulte também  
- [Configurar um servidor de relatório para entrega de email &#40;Configuration Manager do SSRS&#41;](../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Configurar um servidor de relatório para entrega de email &#40;Configuration Manager SSRS&#41;](../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)   
  [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Criar, modificar e excluir agendas](subscriptions/create-modify-and-delete-schedules.md)   
  [Ajuda F1 do Gerenciador de Relatórios](../../2014/reporting-services/report-manager-f1-help.md)  

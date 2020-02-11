@@ -1,5 +1,5 @@
 ---
-title: Classe SqlErrorLogFile | Microsoft Docs
+title: Classe sqllogsfile | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 8c5c6f1998cffc268a57318e0124f74d3411a3b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63249321"
 ---
 # <a name="sqlerrorlogfile-class"></a>Classe SqlErrorLogFile
@@ -36,7 +36,7 @@ class SQLErrorLogFile
 ```  
   
 ## <a name="properties"></a>Propriedades  
- A classe SQLErrorLogFile define as propriedades a seguir.  
+ A classe sqllogsfile define as propriedades a seguir.  
   
 |||  
 |-|-|  
@@ -55,7 +55,7 @@ class SQLErrorLogFile
 |Namespace|\root\Microsoft\SqlServer\ComputerManagement10|  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir recupera informações sobre todos os arquivos de log do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma instância especificada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para executar o exemplo, substitua \< *Instance_Name*> com o nome da instância, por exemplo, 'instância1'.  
+ O exemplo a seguir recupera informações sobre todos os arquivos de log do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma instância especificada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para executar o exemplo, substitua \< *Instance_Name*> pelo nome da instância, por exemplo, ' instance1 '.  
   
 ```  
 on error resume next  
@@ -82,20 +82,20 @@ Next
 ```  
   
 ## <a name="security"></a>Segurança  
- Para se conectar a um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] arquivo de log por meio do WMI, você deve ter as seguintes permissões em ambos os computadores locais e remotos:  
+ Para se conectar a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] um arquivo de log por meio do WMI, você deve ter as seguintes permissões nos computadores locais e remotos:  
   
--   Acesso de leitura para o **Root\Microsoft\SqlServer\ComputerManagement10** namespace WMI. Por padrão, todos usuários têm acesso de leitura por meio da permissão Habilitar Conta.  
+-   Acesso de leitura ao namespace WMI do **Root\Microsoft\SqlServer\ComputerManagement10** . Por padrão, todos usuários têm acesso de leitura por meio da permissão Habilitar Conta.  
   
     > [!NOTE]  
-    >  Para obter informações sobre como verificar permissões de WMI, consulte a seção de segurança do tópico [arquivos de Log Offline exibição](../logs/view-offline-log-files.md).  
+    >  Para obter informações sobre como verificar as permissões de WMI, consulte a seção segurança do tópico [Exibir arquivos de log offline](../logs/view-offline-log-files.md).  
   
--   Permissão de leitura para a pasta que contém os logs de erros. Por padrão, o erro logs estão localizados no caminho a seguir (onde \< *unidade >* representa a unidade onde você instalou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e \< *InstanceName*> é o nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]):  
+-   Permissão de leitura para a pasta que contém os logs de erros. Por padrão, os logs de erros estão localizados no caminho a seguir \<(em que a *unidade>* representa a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unidade \<em que você instalou e *InstanceName*> é o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]nome da instância do):  
   
-     **\<Unidade >: \Program Files\Microsoft SQL Server\MSSQL11** **.\< InstanceName > \mssql\log.**  
+     **Unidade>: \Program Files\Microsoft SQL Server\MSSQL11. \<** **\< InstanceName> \MSSQL\Log**  
   
- Se você se conectar através de um firewall, verifique se uma exceção está definida no firewall para WMI em computadores de destino remotos. Para obter mais informações, consulte [conectar-se ao WMI iniciando remotamente com o Windows Vista](https://go.microsoft.com/fwlink/?LinkId=178848).  
+ Se você se conectar através de um firewall, verifique se uma exceção está definida no firewall para WMI em computadores de destino remotos. Para obter mais informações, consulte [conectando-se ao WMI remotamente a partir do Windows Vista](https://go.microsoft.com/fwlink/?LinkId=178848).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Classe SqlErrorLogEvent](sqlerrorlogevent-class.md)   
  [Exibir arquivos de log offline](../logs/view-offline-log-files.md)  
   

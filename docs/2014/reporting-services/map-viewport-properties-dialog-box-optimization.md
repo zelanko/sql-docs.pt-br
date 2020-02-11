@@ -1,5 +1,5 @@
 ---
-title: Caixa de diálogo de propriedades do visor, otimização do mapa | Microsoft Docs
+title: Caixa de diálogo Propriedades do visor do mapa, otimização | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1adbeccdedb8d80900047790d94ff35568460ff4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108274"
 ---
 # <a name="map-viewport-properties-dialog-box-optimization"></a>Caixa de diálogo Propriedades do Visor do Mapa, Otimização
@@ -31,14 +31,14 @@ ms.locfileid: "66108274"
  **Desempenho**  
  Deslize o ponteiro para mais perto de **Desempenho** para simplificar o mapa e exibir menos detalhes.  
   
- **Qualidade**  
+ **PrintQuality**  
  Deslize o ponteiro para mais perto de **Qualidade** para desenhar o mapa com mais detalhes.  
   
- **resolução do mapa**  
+ **Resolução do mapa**  
  Especifique uma resolução para o mapa. Esse valor especifica o menor detalhe que você deseja visualizar no mapa renderizado em pontos.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Mapas &#40;Construtor de Relatórios e SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)   
- [Solucionar problemas de relatórios: Mapear relatórios &#40;Construtor de Relatórios e SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Solucionar problemas de relatórios: mapear relatórios &#40;Construtor de Relatórios e SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

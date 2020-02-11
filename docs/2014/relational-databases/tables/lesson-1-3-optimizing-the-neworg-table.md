@@ -13,17 +13,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 952043d5d001fe4fe65e6dd1aa7bb2001290429e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66110068"
 ---
 # <a name="optimizing-the-neworg-table"></a>Otimizando a tabela NewOrg
-  O **NewOrd** que você criou na tabela a [populando uma tabela com dados hierárquicos existentes](lesson-1-2-populating-a-table-with-existing-hierarchical-data.md) tarefa contém todas as informações de funcionários e representa a estrutura hierárquica usando um `hierarchyid`tipo de dados. Essa tarefa adiciona índices novos para oferecer suporte às pesquisas na coluna `hierarchyid`.  
+  A tabela **NewOrd** que você criou na tarefa [populando uma tabela com dados hierárquicos existentes](lesson-1-2-populating-a-table-with-existing-hierarchical-data.md) contém todas as informações do funcionário e representa a estrutura hierárquica usando `hierarchyid` um tipo de dados. Essa tarefa adiciona índices novos para oferecer suporte às pesquisas na coluna `hierarchyid`.  
   
 ## <a name="clustered-index"></a>Índice clusterizado  
- O `hierarchyid` coluna (**OrgNode**) é a chave primária para o **NewOrg** tabela. Quando a tabela foi criada, ela continha um índice clusterizado chamado **PK_NewOrg_OrgNode** para impor a exclusividade da coluna **OrgNode** . Esse índice clusterizado também oferece suporte a uma pesquisa primária detalhada da tabela.  
+ A `hierarchyid` coluna (**OrgNode**) é a chave primária para a tabela **NewOrg** . Quando a tabela foi criada, ela continha um índice clusterizado chamado **PK_NewOrg_OrgNode** para impor a exclusividade da coluna **OrgNode** . Esse índice clusterizado também oferece suporte a uma pesquisa primária detalhada da tabela.  
   
 ## <a name="nonclustered-index"></a>Índice não clusterizado  
  Este passo cria dois índices não clusterizados para oferecer suporte a pesquisas típicas.  
@@ -71,7 +71,7 @@ ms.locfileid: "66110068"
   
      [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-     Índice de profundidade: Registros de funcionários são armazenados adjacentes de seu gerente.  
+     Índice de profundidade primária: os registros de funcionário são armazenados adjacentes aos de seu gerente.  
   
      `LogicalNode OrgNode    H_Level EmployeeID LoginID`  
   
@@ -95,7 +95,7 @@ ms.locfileid: "66110068"
   
      `/2/2/       0x6B40       2         8      norint`  
   
-     **EmployeeID**-índice: Linhas são armazenadas em **EmployeeID** sequência.  
+     **EmployeeID**-First index: as linhas são armazenadas na sequência **EmployeeID** .  
   
      `LogicalNode OrgNode    H_Level EmployeeID LoginID`  
   
@@ -159,6 +159,6 @@ ms.locfileid: "66110068"
     ```  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
- [Resumo: Convertendo uma tabela em uma estrutura hierárquica](lesson-1-4-summary-converting-a-table-to-a-hierarchical-structure.md)  
+ [Resumo: convertendo uma tabela para uma estrutura hierárquica](lesson-1-4-summary-converting-a-table-to-a-hierarchical-structure.md)  
   
   

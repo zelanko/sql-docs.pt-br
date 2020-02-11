@@ -15,23 +15,24 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e3ba4d9ee2e0b92617c2d2bcadae3bf87c8b5414
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108635"
 ---
 # <a name="upgrade-a-report-server-database"></a>Atualizar um banco de dados do servidor de relatório
   O banco de dados do servidor de relatório fornece armazenamento para uma ou mais instâncias do servidor de relatório. Como o esquema do banco de dados do servidor de relatório pode ser alterado a cada versão nova do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], é necessário que a versão do banco de dados corresponda à versão da instância do servidor de relatório que você está usando. Na maioria dos casos, um banco de dados do servidor de relatório pode ser atualizado automaticamente sem ação específica de sua parte.  
   
- **Modo nativo:** No [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] modo nativo, o banco de dados do servidor de relatório é realmente composto de dois bancos de dados que têm nomes padrão de "ReportServer e ReportServerTempDB".  
+ **Modo nativo:** No [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] modo nativo, o banco de dados do servidor de relatório é realmente composto de dois bancos de dados que têm nomes padrão "ReportServer e ReportServerTempDB".  
   
- **Modo SharePoint:** Na [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] modo do SharePoint, o banco de dados do servidor de relatório é na verdade uma coleção de bancos de dados é criada para cada instância da [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] aplicativo de serviço.  
+ **Modo do SharePoint:** No [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] modo do SharePoint, o banco de dados do servidor de relatório é, na verdade, uma coleção de bancos que [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] é criada para cada instância do aplicativo de serviço.  
   
 ## <a name="ways-to-upgrade-a-native-mode-report-server-database"></a>Maneiras de atualizar um banco de dados do servidor de relatório de modo nativo  
  A seguinte lista identifica as condições nas quais um banco de dados do servidor de relatório é atualizado:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] atualiza uma única instância de um servidor de relatório. O esquema de banco de dados do servidor de relatório é atualizado automaticamente após a inicialização do serviço, e o servidor de relatório determina que a versão do esquema de banco de dados não corresponde à do servidor.  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] atualiza uma única instância de um servidor de relatório. O esquema de banco de dados do servidor de relatório é atualizado automaticamente após a inicialização do serviço, e o servidor de relatório determina que a versão do esquema de banco de dados não corresponde à do servidor.  
   
      Durante a inicialização do serviço, o servidor de relatório verifica se a versão do esquema de banco de dados corresponde à versão do servidor. Se a versão do esquema de banco de dados for mais antiga, ela será atualizada automaticamente para a versão de esquema exigida pelo servidor de relatório. A atualização automática é especialmente útil se você restaurou ou anexou um banco de dados de servidor de relatório mais antigo. Uma mensagem é inserida no arquivo de log de rastreamento do servidor de relatório, indicando que a versão do esquema de banco de dados foi atualizada.  
   
@@ -64,11 +65,11 @@ ms.locfileid: "66108635"
 #### <a name="to-upgrade-a-native-mode-database-with-scripts"></a>Para atualizar um banco de dados de modo nativo com scripts  
  Você pode usar scripts do WMI para atualizar um banco de dados do servidor de relatórios. Para obter mais informações, consulte [Método GenerateDatabaseUpgradeScript &#40;WMI MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-generatedatabaseupgradescript.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Reporting Services Configuration Manager &#40;Modo Nativo&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [Criar um banco de dados do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
- [Alterar o Assistente de banco de dados &#40;modo nativo do SSRS&#41;](../../sql-server/install/change-database-wizard-ssrs-native-mode.md)   
- [Atualizar e migrar o Reporting Services](upgrade-and-migrate-reporting-services.md)   
- [Migrar uma instalação do Reporting Services &#40;modo nativo&#41;](migrate-a-reporting-services-installation-native-mode.md)  
+ [Assistente para alterar banco de dados &#40;modo nativo do SSRS&#41;](../../sql-server/install/change-database-wizard-ssrs-native-mode.md)   
+ [Atualizar e migrar Reporting Services](upgrade-and-migrate-reporting-services.md)   
+ [Migre uma instalação do Reporting Services &#40;modo nativo&#41;](migrate-a-reporting-services-installation-native-mode.md)  
   
   

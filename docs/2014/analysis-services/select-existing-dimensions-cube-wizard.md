@@ -13,24 +13,24 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e02b4da19c3fe8cef9d31b304b1aeecdaa906bdd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069523"
 ---
 # <a name="select-existing-dimensions-cube-wizard"></a>Selecionar Dimensões Existentes (Assistente para Cubos)
   Use a página **Selecionar Dimensões Existentes** para selecionar as dimensões existentes a serem incluídas no cubo.  
   
 ## <a name="options"></a>Opções  
- **Dimensions**  
+ **Dimensões**  
  Selecione as dimensões a serem incluídas no cubo.  
   
  Apenas as dimensões que podem ser alcançadas dos grupos de medidas que foram selecionados na página **Selecionar Tabelas de Grupos de Medidas** deste assistente aparecerão na lista.  
   
  Por padrão, todas as dimensões são selecionadas.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Cubos em modelos multidimensionais](multidimensional-models/cubes-in-multidimensional-models.md)  
   
   

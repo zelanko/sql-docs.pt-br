@@ -18,21 +18,21 @@ ms.assetid: 1a5eafa7-384e-4691-ba05-978eb73bbefb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0db0242e5bdd9e04d3d7c424382933121c2e0ac2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67902986"
 ---
-# <a name="sphelpdevice-transact-sql"></a>sp_helpdevice (Transact-SQL)
+# <a name="sp_helpdevice-transact-sql"></a>sp_helpdevice (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Relata informações sobre dispositivos de backup do Microsoft® SQL Server™.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] É recomendável que você use o [sys. backup_devices](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md) exibição do catálogo  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]É recomendável usar a exibição de catálogo [Sys. backup_devices](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md) em vez disso  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,26 +42,26 @@ sp_helpdevice [ [ @devname = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @devname = ] 'name'` É o nome do dispositivo de backup para os quais informações são relatadas. O valor de *nome* é sempre **sysname**.  
+`[ @devname = ] 'name'`É o nome do dispositivo de backup para o qual as informações são relatadas. O valor de *Name* sempre é **sysname**.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |**device_name**|**sysname**|Nome do dispositivo lógico.|  
 |**physical_name**|**nvarchar(260)**|Nome do arquivo físico.|  
-|**description**|**nvarchar(255)**|A descrição do dispositivo.|  
-|**status**|**int**|Um número que corresponde à descrição do status na **descrição** coluna.|  
+|**ndescrição**|**nvarchar (255)**|A descrição do dispositivo.|  
+|**Estado**|**int**|Um número que corresponde à descrição do status na coluna **Descrição** .|  
 |**cntrltype**|**smallint**|Tipo de controlador do dispositivo:<br /><br /> 2 = Dispositivo de disco<br /><br /> 5 = Dispositivo de fita|  
-|**size**|**int**|Tamanho do dispositivo em páginas de 2 KB.|  
+|**tamanho**|**int**|Tamanho do dispositivo em páginas de 2 KB.|  
   
 ## <a name="remarks"></a>Comentários  
- Se *nome* for especificado, **sp_helpdevice** exibe informações sobre o dispositivo de despejo especificado. Se *nome* não for especificado, **sp_helpdevice** exibe informações sobre todos os dispositivos de despejo no **backup_devices** exibição do catálogo.  
+ Se *nome* for especificado, **sp_helpdevice** exibirá informações sobre o dispositivo de despejo especificado. Se o *nome* não for especificado, **sp_helpdevice** exibirá informações sobre todos os dispositivos de despejo na exibição do catálogo **Sys. backup_devices** .  
   
- Dispositivos de despejo são adicionados ao sistema usando **sp_addumpdevice**.  
+ Os dispositivos de despejo são adicionados ao sistema usando **sp_addumpdevice**.  
   
 ## <a name="permissions"></a>Permissões  
  Requer associação à função **pública** .  
@@ -73,10 +73,10 @@ sp_helpdevice [ [ @devname = ] 'name' ]
 EXEC sp_helpdevice;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [sp_addumpdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)   
  [sp_dropdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md)   
- [Procedimentos armazenados do mecanismo de banco de dados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Mecanismo de Banco de Dados procedimentos armazenados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Editor de formulário de ação (guia Ações, Designer de cubo) (Analysis Services - dados multidimensionais) | Microsoft Docs
+title: Editor de formulário de ação (guia ações, designer de cubo) (Analysis Services-dados multidimensionais) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f7c0a9b232a30fbaa4358bf9b23eb28ff16d79b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062955"
 ---
 # <a name="action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Editor de Formulário de Ação (guia Ações, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
@@ -26,7 +26,7 @@ ms.locfileid: "66062955"
  **Nome**  
  Digite o nome da ação.  
   
- **Destino da Ação**  
+ **Destino da ação**  
  Expanda para exibir as opções **Tipo de destino** e **Objeto de destino** .  
   
  **Tipo de destino**  
@@ -36,7 +36,7 @@ ms.locfileid: "66062955"
 |-----------|---------------------|  
 |Membros de atributo|Um membro é selecionado de um nível baseado no atributo em **Objeto de destino**.|  
 |Células|O conjunto nomeado em **Objeto de destino** é selecionado. Selecione **Todas as células** para selecionar todas as células no cubo.|  
-|Cube|O cubo em **Objeto de destino** é selecionado. Selecione CURRENTCUBE para usar o cubo atual.<br /><br /> Observação: Uso de CURRENTCUBE fornece portabilidade adicional em casos em que o cubo pode ser renomeado ou a ação copiada para outros cubos. É recomendável usar CURRENTCUBE para representar o cubo atual.|  
+|Cube|O cubo em **Objeto de destino** é selecionado. Selecione CURRENTCUBE para usar o cubo atual.<br /><br /> Observação: o uso de CURRENTCUBE fornece portabilidade adicional em casos nos quais o cubo possa ser renomeado ou a ação copiada para outros cubos. É recomendável usar CURRENTCUBE para representar o cubo atual.|  
 |Membros de dimensão|Um membro da dimensão em **Objeto de destino** é selecionado.|  
 |Hierarquia|A hierarquia do **Objeto de destino** é selecionada.|  
 |Membros de hierarquia|Um membro dentro da hierarquia do **Objeto de destino** é selecionado.|  
@@ -46,18 +46,18 @@ ms.locfileid: "66062955"
  **Objeto de destino**  
  Selecione o objeto ao qual a ação deve ser associada. A instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] retorna ao cliente apenas as ações que se aplicam ao objeto selecionado. A lista de objetos disponíveis é restrita pela escolha de **Tipo de destino**.  
   
- **Condição (Opcional)**  
+ **Condição (opcional)**  
  Digite a expressão MDX que descreve uma condição opcional usada em conjunto com **Objeto de destino**que restringe ainda mais quando a ação está disponível. A expressão deve retornar um valor booliano que, se verdadeiro, indicará que a ação está disponível.  
   
  Arraste elementos selecionados do painel **Ferramentas de Cálculo** para esta opção para incluir a sintaxe MDX para o elemento selecionado.  
   
- **Conteúdo da Ação**  
+ **Conteúdo da ação**  
  Expanda para exibir as opções **Tipo** e **Expressão da Ação** .  
   
  **Tipo**  
  Selecione o tipo de ação a ser tomada quando a ação for executada. Os seguintes tipos de ação estão disponíveis:  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |Dataset|Retorna uma instrução MDX representando um conjunto de dados multidimensional a ser executado e exibido pelo aplicativo cliente.|  
 |Proprietário|Retorna uma cadeia de caracteres proprietária que pode ser interpretada por aplicativos cliente associados à configuração **Aplicativo** para esta ação.|  
@@ -70,7 +70,7 @@ ms.locfileid: "66062955"
  **Expressão da ação**  
  Digite a expressão MDX que retorna a cadeia de caracteres retornada pela ação ao aplicativo cliente para execução.  
   
- **Propriedades Adicionais**  
+ **Propriedades adicionais**  
  Expanda para exibir as opções **Invocação**, **Aplicativo**, **Descrição**, **Legenda**e **A legenda é MDX** .  
   
  **Invocação**  
@@ -81,7 +81,7 @@ ms.locfileid: "66062955"
   
  A tabela a seguir descreve as configurações disponíveis.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |Lote|A ação deve ser executada como parte de uma operação em lote ou de uma tarefa do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .|  
 |Interativo|A ação é executada quando o usuário a invoca.|  
@@ -98,22 +98,22 @@ ms.locfileid: "66062955"
  **Descrição**  
  Digite a descrição opcional da ação.  
   
- **Caption**  
+ **Legenda**  
  Digite a legenda a ser exibida para a ação no aplicativo cliente, se a opção **A legenda é MDX** estiver configurada como **Falso**.  
   
  Digite a expressão MDX que retornará uma cadeia de caracteres para a legenda se a opção **A legenda é MDX** estiver configurada como **True**.  
   
- **A legenda é MDX**  
+ **Legenda é MDX**  
  Selecione **Falso** para indicar que a **Legenda** contém uma cadeia de caracteres literal que representa uma legenda a ser exibida para a ação no aplicativo cliente.  
   
  Selecione **Verdadeiro** para indicar que a **Legenda** contém uma expressão MDX que retorna uma cadeia de caracteres que representa uma legenda a ser exibida para a ação no aplicativo cliente. A expressão MDX deve ser resolvida antes da ação ser retornada ao aplicativo cliente.  
   
-## <a name="see-also"></a>Consulte também  
- [Ações &#40;Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](actions-cube-designer-analysis-services-multidimensional-data.md)   
- [Barra de ferramentas &#40;guia Ações, Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [Organizador de ações &#40;guia Ações, Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](action-organizer-cube-designer-analysis-services-multidimensional-data.md)   
- [Ferramentas de cálculo de &#40;guia Ações, Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](calculation-tools-actions-cube-designer-analysis-services-multidimensional-data.md)   
- [Editor de formulário de ação de detalhamento &#40;guia Ações, Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](drillthrough-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
- [Editor de formulário de ação de relatório &#40;guia Ações, Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](report-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Ações &#40;designer de cubo&#41; &#40;Analysis Services de dados multidimensionais&#41;](actions-cube-designer-analysis-services-multidimensional-data.md)   
+ [Barra de ferramentas &#40;guia ações, designer de cubo&#41; &#40;Analysis Services de dados multidimensionais&#41;](toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [Guia ações do organizador de ação &#40;, designer de cubo&#41; &#40;Analysis Services de dados multidimensionais&#41;](action-organizer-cube-designer-analysis-services-multidimensional-data.md)   
+ [Ferramentas de cálculo &#40;guia ações, designer de cubo&#41; &#40;Analysis Services de dados multidimensionais&#41;](calculation-tools-actions-cube-designer-analysis-services-multidimensional-data.md)   
+ [Editor de formulário de ação de detalhamento &#40;guia ações, designer de cubo&#41; &#40;Analysis Services de dados multidimensionais&#41;](drillthrough-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
+ [Editor de formulário de ação de relatório &#40;guia ações, designer de cubo&#41; &#40;Analysis Services de dados multidimensionais&#41;](report-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)  
   
   

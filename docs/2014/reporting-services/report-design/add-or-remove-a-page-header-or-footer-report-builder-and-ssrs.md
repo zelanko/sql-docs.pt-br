@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 88a4cb2598b8c57813f3d2034434eeef31f49a76
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106547"
 ---
 # <a name="add-or-remove-a-page-header-or-footer-report-builder-and-ssrs"></a>Adicionar ou remover um cabeçalho ou rodapé de página (Construtor de Relatórios e SSRS)
@@ -47,7 +47,7 @@ ms.locfileid: "66106547"
   
     -   **Retângulo**  
   
-    -   **Image**  
+    -   **Imagem**  
   
 3.  Clique com o botão direito do mouse no cabeçalho da página e clique em **Propriedades do Cabeçalho** para adicionar bordas, imagens de tela de fundo ou cores, ou para ajustar a largura do cabeçalho. Em seguida, clique em **OK**.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "66106547"
 > [!NOTE]  
 >  Ao remover um cabeçalho ou rodapé de página, você o exclui do relatório. Quaisquer itens adicionados anteriormente ao cabeçalho ou rodapé de página não voltarão a ser exibidos, se você adicionar o cabeçalho ou rodapé novamente mais tarde.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Cabeçalhos e rodapés de página &#40;Construtor de Relatórios e SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)  
   
   

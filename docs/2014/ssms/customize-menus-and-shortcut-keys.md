@@ -21,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1e0f635cc6eb6d985bb75f87583397d6f4c2baa4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63245789"
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>Personalizar menus e teclas de atalho
-  Um acelerador de teclado permite selecionar um comando de menu ou botão pressionando ALT+*\<letra única>*. Por exemplo, para abrir o menu **Editar** , pressione ALT+E. Você pode reorganizar e modificar os botões da barra de ferramentas, menus e comandos de menu usando a caixa de diálogo **Personalizar** . São fornecidas instruções para alterar as configurações usando o mouse e usando apenas o teclado.  
+  Um acelerador de teclado permite selecionar um comando de menu ou botão pressionando ALT+ *\<letra única>* . Por exemplo, para abrir o menu **Editar** , pressione ALT+E. Você pode reorganizar e modificar os botões da barra de ferramentas, menus e comandos de menu usando a caixa de diálogo **Personalizar** . São fornecidas instruções para alterar as configurações usando o mouse e usando apenas o teclado.  
   
  Podem ser criados aceleradores de teclado para procedimentos armazenados usando a tecla Ctrl na página **Teclado** da caixa de diálogo **Ferramentas**/**Opções** .  
   
@@ -55,7 +55,7 @@ ms.locfileid: "63245789"
   
 1.  Clique no botão na barra de ferramentas.  
   
-2.  Na caixa de diálogo **Personalizar**, na guia **Comandos**, clique em **Modificar Seleção**.  
+2.  Na caixa de diálogo **Personalizar** , na guia **Comandos** , clique em **Modificar Seleção**.  
   
 3.  Na caixa **Nome** no menu de atalho, digite um nome para o botão de barra de ferramentas usando um E comercial (&) antes da letra que você deseja definir como acelerador de teclado.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "63245789"
   
 2.  Clique no comando de menu.  
   
-3.  Na caixa de diálogo **Personalizar**, clique em **Modificar Seleção**.  
+3.  Na caixa de diálogo **Personalizar** , clique em **Modificar Seleção**.  
   
 4.  Na caixa **Nome** no menu de atalho, digite um nome para o comando de menu usando um E comercial (&) antes da letra que você deseja definir como acelerador de teclado.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "63245789"
   
 4.  Alterne para a lista **Controles** e use as teclas de direção para selecionar o botão que você deseja alterar.  
   
-5.  Pressione **ALT+M** para selecionar **Modificar Seleção**.  
+5.  Pressione **ALT+M**para selecionar **Modificar Seleção**.  
   
 6.  Alterne para a caixa **Nome** no menu de atalho, digite um nome para o botão de barra de ferramentas usando um E comercial (&) antes da letra que você deseja definir como acelerador de teclado.  
   
@@ -160,7 +160,7 @@ ms.locfileid: "63245789"
 > [!NOTE]  
 >  Alguns comandos só estarão disponíveis quando o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] estiver exibindo conteúdo relevante. Se nenhum comando do menu estiver disponível, o item de menu não estará disponível.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Atalhos de teclado do SQL Server Management Studio](sql-server-management-studio-keyboard-shortcuts.md)  
   
   

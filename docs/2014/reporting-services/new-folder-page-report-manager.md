@@ -1,5 +1,5 @@
 ---
-title: Página da nova pasta (Gerenciador de relatórios) | Microsoft Docs
+title: Página nova pasta (Report Manager) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 21d79e84ca30283eab6fe788be940f712b2cd41f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108197"
 ---
 # <a name="new-folder-page-report-manager"></a>Página Nova Pasta (Gerenciador de Relatórios)
@@ -35,17 +35,17 @@ ms.locfileid: "66108197"
   
 ## <a name="options"></a>Opções  
  **Nome**  
- Especifique o nome da pasta. Um nome deve conter pelo menos um caractere alfanumérico. Também pode conter espaços e certos símbolos. Não use os caracteres ; ? : \@ & = +, $ / * \< > | "ou / ao especificar um nome.  
+ Especifique o nome da pasta. Um nome deve conter pelo menos um caractere alfanumérico. Também pode conter espaços e certos símbolos. Não use os caracteres ; ? : \@ & = +, $/* \< > | "or/ao especificar um nome.  
   
  **Descrição**  
  Digite uma descrição do conteúdo da pasta. Essa descrição aparece na página Conteúdo para usuários com permissão para acessar a pasta.  
   
-## <a name="see-also"></a>Consulte também  
- [Criar, excluir ou modificar uma pasta &#40;Gerenciador de relatórios&#41;](report-server/create-delete-or-modify-a-folder-report-manager.md)   
- [Página Propriedades gerais, pastas &#40;Gerenciador de relatórios&#41;](../../2014/reporting-services/general-properties-page-folders-report-manager.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Criar, excluir ou modificar uma pasta &#40;Report Manager&#41;](report-server/create-delete-or-modify-a-folder-report-manager.md)   
+ [Página Propriedades gerais, pastas &#40;Report Manager&#41;](../../2014/reporting-services/general-properties-page-folders-report-manager.md)   
  [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Página Conteúdo &#40;Gerenciador de Relatórios&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
- [Ajuda de F1 do Gerenciador de relatórios](../../2014/reporting-services/report-manager-f1-help.md)   
- [Página Propriedades gerais, pastas &#40;Gerenciador de relatórios&#41;](../../2014/reporting-services/general-properties-page-folders-report-manager.md)  
+ [Página de conteúdo &#40;Report Manager&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [Ajuda F1 Report Manager](../../2014/reporting-services/report-manager-f1-help.md)   
+ [Página Propriedades gerais, pastas &#40;Report Manager&#41;](../../2014/reporting-services/general-properties-page-folders-report-manager.md)  
   
   

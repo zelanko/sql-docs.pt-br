@@ -1,5 +1,5 @@
 ---
-title: Desenvolvendo o reconhecimento de Pool de Conexão em um Driver ODBC | Microsoft Docs
+title: Desenvolvendo o reconhecimento do pool de conexões em um driver ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,17 +11,17 @@ ms.assetid: c63d5cae-24fc-4fee-89a9-ad0367cddc3e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 02577370218a799faf86a7f8986859c415962f5a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67897733"
 ---
 # <a name="developing-connection-pool-awareness-in-an-odbc-driver"></a>Desenvolvimento um reconhecimento de pool de conexão em um driver ODBC
-Este tópico discute os detalhes do desenvolvimento de um driver ODBC que contém informações sobre como o driver deve fornecer os serviços de pooling de conexão.  
+Este tópico discute os detalhes do desenvolvimento de um driver ODBC que contém informações sobre como o driver deve fornecer serviços de pooling de conexão.  
   
-## <a name="enabling-driver-aware-connection-pooling"></a>Habilitando o Pooling de Conexão de reconhecimento de Driver  
- Um driver deve implementar as seguintes funções de ODBC Service Provider Interface (SPI):  
+## <a name="enabling-driver-aware-connection-pooling"></a>Habilitando o pool de conexões com reconhecimento de driver  
+ Um driver deve implementar as seguintes funções SPI (interface do provedor de serviços ODBC):  
   
 -   SQLSetConnectAttrForDbcInfo  
   
@@ -37,62 +37,62 @@ Este tópico discute os detalhes do desenvolvimento de um driver ODBC que conté
   
 -   SQLCleanupConnectionPoolID  
   
- Ver [referência de Interface de provedor de serviço (SPI) ODBC](../../../odbc/reference/syntax/odbc-service-provider-interface-spi-reference.md) para obter mais informações.  
+ Consulte [referência da SPI (interface do provedor de serviços ODBC)](../../../odbc/reference/syntax/odbc-service-provider-interface-spi-reference.md) para obter mais informações.  
   
- Um driver também deve implementar as seguintes funções existentes para que o pool de reconhecimento de driver pode ser habilitado:  
+ Um driver também deve implementar as seguintes funções existentes para que o pool com reconhecimento de driver possa ser habilitado:  
   
 |Função|Funcionalidade adicionada|  
 |--------------|-------------------------|  
 |[SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md)<br /><br /> [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)<br /><br /> [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)<br /><br /> [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)|Suporte para o novo tipo de identificador: SQL_HANDLE_DBC_INFO_TOKEN (consulte a descrição abaixo).|  
-|[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|Suporte para o novo atributo de conexão somente conjunto: SQL_ATTR_DBC_INFO_TOKEN para redefinir a conexão (consulte a descrição abaixo).|  
+|[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|Suporte ao novo atributo de conexão somente de conjunto: SQL_ATTR_DBC_INFO_TOKEN para redefinir a conexão (consulte a descrição abaixo).|  
   
 > [!NOTE]  
->  Funções preteridas, como **SQLError** e **SQLSetConnectOption** não têm suporte para o pool de conexão de reconhecimento de driver.  
+>  Funções preteridas, como **SqlError** e **SQLSetConnectOption** , não têm suporte para pool de conexões com suporte a driver.  
   
-## <a name="the-pool-id"></a>A ID do Pool  
- A ID do pool é uma ID de específicos do driver de tamanho de ponteiro para representar um determinado grupo de conexões que podem ser usados alternadamente. Dado um conjunto de informações de conexão, um driver deve ser capaz de deduzir rapidamente a ID do pool correspondente.  
+## <a name="the-pool-id"></a>A ID do pool  
+ A ID do pool é uma ID específica do driver de comprimento de ponteiro para representar um grupo específico de conexões que podem ser usadas de forma intercambiável. Dado um conjunto de informações de conexão, um driver deve ser capaz de deduzir rapidamente a ID de pool correspondente.  
   
- Por exemplo, a ID do pool deve codificar as informações de nome e uma credencial do servidor. No entanto, o nome do banco de dados não é necessário porque um driver pode ser capaz de reutilizar uma conexão e, em seguida, altere o banco de dados em menos tempo do que fazer uma nova conexão.  
+ Por exemplo, a ID do pool deve codificar as informações de nome e credencial do servidor. No entanto, o nome do banco de dados não é necessário porque um driver pode ser capaz de reutilizar uma conexão e, em seguida, alterar o banco de dados em menos tempo do que fazer uma nova conexão.  
   
- Um driver deve definir um conjunto de atributos de chave, que compõem a ID do pool. O valor desses atributos chave pode vir de atributos de conexão, a cadeia de caracteres de conexão e o DSN. Caso haja qualquer conflito dessas origens, a política de resolução específicos do driver, existente, deve ser usada para compatibilidade com versões anteriores.  
+ Um driver deve definir um conjunto de atributos de chave, que incluirá a ID do pool. O valor desses atributos de chave pode vir de atributos de conexão, Cadeia de conexão e DSN. Caso haja conflitos nessas fontes, a política de resolução específica do driver existente deve ser usada para compatibilidade com versões anteriores.  
   
- O Gerenciador de Driver usará um pool diferente para diferentes IDs do pool. Todas as conexões no mesmo pool são reutilizáveis. O Gerenciador de Driver nunca reutilizará uma conexão com uma ID do pool diferente.  
+ O Gerenciador de driver usará um pool diferente para IDs de pool diferentes. Todas as conexões no mesmo pool são reutilizáveis. O Gerenciador de driver nunca reutilizará uma conexão com uma ID de pool diferente.  
   
- Portanto drivers devem atribuir uma ID de pool exclusivo para cada grupo de conexões com o mesmo valor em seus atributos chave definidos. Se um driver usa a mesma ID do pool para duas conexões com valores diferentes em seus atributos de chave, o Gerenciador de Driver continuará colocando-los no mesmo pool (o Gerenciador de Driver sabe nada sobre os atributos de chave específicos do driver). Isso significa que o driver será necessário relatar para o Gerenciador de Driver que uma conexão com um conjunto diferente de atributos de chave não é reutilizável dentro [função SQLRateConnection](../../../odbc/reference/syntax/sqlrateconnection-function.md). Isso pode diminuir o desempenho e isso não é recomendado.  
+ Portanto, os drivers devem atribuir uma ID de pool exclusiva para cada grupo de conexões com o mesmo valor em seus atributos de chave definidos. Se um driver usar a mesma ID de pool para duas conexões com valores diferentes em seus atributos de chave, o Gerenciador de driver ainda as colocará no mesmo pool (o Gerenciador de driver não sabe nada sobre os atributos de chave específicos do driver). Isso significa que o driver precisará relatar ao Gerenciador de driver que uma conexão com um conjunto diferente de atributos de chave não é reutilizável na [função SQLRateConnection](../../../odbc/reference/syntax/sqlrateconnection-function.md). Isso pode diminuir o desempenho e isso não é recomendado.  
   
- O Gerenciador de Driver não reutilizará uma conexão alocado de outro ambiente de driver, mesmo se correspondem a todas as informações de conexão. O Gerenciador de Driver usará um pool diferente para um ambiente diferente, mesmo quando as conexões têm a mesma ID do pool. Portanto, a ID do pool é local para seu ambiente de driver.  
+ O Gerenciador de driver não reutilizará uma conexão alocada de outro ambiente de driver, mesmo se todas as informações de conexão forem correspondentes. O Gerenciador de driver usará um pool diferente para um ambiente diferente, mesmo quando as conexões tiverem a mesma ID de pool. Portanto, a ID do pool é local para seu ambiente de driver.  
   
- É a função para obter a ID do pool de driver [função SQLGetPoolID](../../../odbc/reference/syntax/sqlgetpoolid-function.md).  
+ A função para obter a ID do pool do driver é a [função SQLGetPoolID](../../../odbc/reference/syntax/sqlgetpoolid-function.md).  
   
-## <a name="the-connection-rating"></a>A classificação de Conexão  
- Em comparação com o estabelecimento de uma nova conexão, você pode obter um melhor desempenho, redefinindo algumas informações de conexão (por exemplo, o banco de dados) em uma conexão em pool. Portanto, você pode não querer o nome do banco de dados em seu conjunto de atributos de chave. Caso contrário, você pode ter um pool separado para cada banco de dados, que pode não ser bom em aplicativos de camada intermediária, em que os clientes usam várias cadeias de caracteres de conexão diferente.  
+## <a name="the-connection-rating"></a>A classificação de conexão  
+ Em comparação com o estabelecimento de uma nova conexão, você pode obter melhor desempenho redefinindo algumas informações de conexão (como banco de dados) em uma conexão em pool. Portanto, talvez você não queira que o nome do banco de dados esteja em seu conjunto de atributos de chave. Caso contrário, você pode ter um pool separado para cada banco de dados, o que pode não ser bom em aplicativos de camada intermediária, em que os clientes usam várias cadeias de conexão diferentes.  
   
- Sempre que você reutilize uma conexão que tem alguma incompatibilidade do atributo, você deve redefinir os atributos incompatíveis com base na nova solicitação de aplicativo, para que a conexão retornada é idêntica à solicitação de aplicativo (consulte a discussão sobre o atributo SQL_ATTR _DBC_INFO_TOKEN na [função SQLSetConnectAttr](https://go.microsoft.com/fwlink/?LinkId=59368)). No entanto, redefinir esses atributos pode diminuir o desempenho. Por exemplo, a redefinição de um banco de dados requer uma chamada de rede ao servidor. Portanto, reutilize uma conexão que é correspondida perfeitamente, se houver uma disponível.  
+ Sempre que você reutiliza uma conexão que tem alguma incompatibilidade de atributo, você deve redefinir os atributos incompatíveis com base na nova solicitação de aplicativo, para que a conexão retornada seja idêntica à solicitação do aplicativo (consulte a discussão do atributo SQL_ATTR_DBC_INFO_TOKEN na [função SQLSetConnectAttr](https://go.microsoft.com/fwlink/?LinkId=59368)). No entanto, a redefinição desses atributos pode diminuir o desempenho. Por exemplo, redefinir um banco de dados requer uma chamada de rede para o servidor. Portanto, reutilize uma conexão perfeitamente correspondida, se houver uma disponível.  
   
  Uma função de classificação no driver pode avaliar uma conexão existente com uma nova solicitação de conexão. Por exemplo, a função de classificação do driver pode determinar:  
   
--   Se a conexão existente é perfeitamente correspondente com a solicitação.  
+-   Se a conexão existente for perfeitamente correspondida com a solicitação.  
   
--   Se houver apenas algumas insignificantes incompatibilidades, como o tempo limite de conexão, que não exigem comunicação com o servidor a redefinir.  
+-   Se houver apenas algumas incompatibilidades insignificantes, como tempo limite de conexão, que não exigem comunicação com o servidor a ser redefinido.  
   
--   Se houver alguns atributos incompatíveis que exigem uma comunicação com o servidor para a redefinição, mas ainda pode resultar em desempenho melhor do que o estabelecimento de uma nova conexão.  
+-   Se houver alguns atributos incompatíveis que exigem uma comunicação com o servidor para redefinir, mas ainda resultarão em um melhor desempenho do que estabelecer uma nova conexão.  
   
--   Se o incompatíveis ocorreram para um atributo que é muito demorado redefinir (o desenvolvedor do driver, considere adicionar esse atributo no conjunto de atributos de chave, que é usado para gerar a ID do pool).  
+-   Se o erro for incompatível para um atributo que é muito demorado para redefinir (o desenvolvedor do driver pode considerar adicionar esse atributo ao conjunto de atributos de chave, que é usado para gerar a ID do pool).  
   
- Uma pontuação entre 0 e 100 é possível, onde 0 significa não reutilize e 100 significa que perfeitamente adequados. [SQLRateConnection](../../../odbc/reference/syntax/sqlrateconnection-function.md) é a função de classificação de uma conexão.  
+ Uma pontuação entre 0 e 100 é possível, onde 0 significa não reutilizar e 100 significa perfeitamente correspondido. [SQLRateConnection](../../../odbc/reference/syntax/sqlrateconnection-function.md) é a função para classificar uma conexão.  
   
-## <a name="new-odbc-handle---sqlhandledbcinfotoken"></a>Novo identificador ODBC - SQL_HANDLE_DBC_INFO_TOKEN  
- Para dar suporte a pool de conexão reconhecimento de driver, o driver precisa de informações de conexão para calcular a ID do Pool. O driver também precisa de informações de conexão a ser comparado a novas solicitações de conexão com conexões no pool.  Sempre que pode ser reutilizada sem conexão no pool, o driver deve estabelecer uma nova conexão, exigindo, portanto, as informações de conexão.  
+## <a name="new-odbc-handle---sql_handle_dbc_info_token"></a>Novo identificador ODBC-SQL_HANDLE_DBC_INFO_TOKEN  
+ Para dar suporte ao pool de conexões com suporte a Driver, o driver precisa de informações de conexão para calcular a ID do pool. O driver também precisa de informações de conexão para comparar novas solicitações de conexão com conexões no pool.  Sempre que nenhuma conexão no pool puder ser reutilizada, o driver precisará estabelecer uma nova conexão, portanto, exigindo informações de conexão.  
   
- Como as informações de conexão podem vir de várias fontes (cadeia de caracteres de conexão, os atributos de conexão e DSN), o driver seja necessário analisar a cadeia de caracteres de conexão e resolver o conflito entre essas fontes em cada chamada de função acima.  
+ Como as informações de conexão podem vir de várias fontes (cadeia de conexão, atributos de conexão e DSN), o driver pode precisar analisar a cadeia de conexão e resolver o conflito entre essas fontes em cada uma das chamadas de função acima.  
   
- Portanto, foi introduzido um novo identificador ODBC: SQL_HANDLE_DBC_INFO_TOKEN. Com SQL_HANDLE_DBC_INFO_TOKEN, um driver não precisa analisar a cadeia de conexão e resolver conflitos em informações de conexão de mais de uma vez. Como essa é uma estrutura de dados específicos do driver, o driver pode armazenar dados, como informações de conexão ou ID do pool.  
+ Portanto, um novo identificador ODBC é introduzido: SQL_HANDLE_DBC_INFO_TOKEN. Com o SQL_HANDLE_DBC_INFO_TOKEN, um driver não precisa analisar a cadeia de conexão e resolver conflitos em informações de conexão mais de uma vez. Como essa é uma estrutura de dados específica de driver, o driver pode armazenar dados, como informações de conexão ou ID do pool.  
   
- Esse identificador é usado apenas como uma interface entre o Gerenciador de Driver e o driver. Um aplicativo não pode alocar esse identificador diretamente.  
+ Esse identificador é usado apenas como uma interface entre o Gerenciador de driver e o driver. Um aplicativo não pode alocar esse identificador diretamente.  
   
- O identificador pai deste identificador é do tipo SQL_HANDLE_ENV, que significa que o driver pode obter as informações de ambiente do identificador HENV durante a resolução de informações de conexão.  
+ O identificador pai desse identificador é do tipo SQL_HANDLE_ENV, o que significa que o driver pode obter as informações de ambiente do identificador HENV durante a resolução de informações de conexão.  
   
- Sempre que receber uma nova solicitação de conexão, o Gerenciador de Driver será alocar um identificador de tipo SQL_HANDLE_DBC_INFO_TOKEN para armazenar informações de conexão, depois que ela confirma que o driver dá suporte a reconhecimento de pool de conexão. Quando concluído usando o identificador (mas antes de retornar alguns códigos diferente de SQL_STILL_EXECUTING a partir de retorno [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) ou [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)), o Gerenciador de Driver irá liberar o identificador. Portanto, o identificador é criado após a chamada de SQLAllocHandle e destruído após a chamada SQLFreeHandle. O Gerenciador de Driver garante que o identificador será liberado antes de liberar seu HENV associado (quando [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) ou [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) retornará um erro).  
+ Sempre que receber uma nova solicitação de conexão, o Gerenciador de driver irá alocar um identificador do tipo SQL_HANDLE_DBC_INFO_TOKEN para armazenar informações de conexão, depois de confirmar que o driver dá suporte ao reconhecimento de pool de conexões. Quando terminar de usar o identificador (mas antes de retornar alguns códigos de retorno diferentes de SQL_STILL_EXECUTING de [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) ou [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)), o Gerenciador de driver liberará o identificador. Portanto, o identificador é criado após a chamada SQLAllocHandle e destruído após a chamada SQLFreeHandle. O Gerenciador de driver garante que o identificador será liberado antes de liberar seu HENV associado (quando [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) ou [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) retornar um erro).  
   
  O driver deve modificar as seguintes funções para aceitar o novo tipo de identificador SQL_HANDLE_DBC_INFO_TOKEN:  
   
@@ -104,47 +104,47 @@ Este tópico discute os detalhes do desenvolvimento de um driver ODBC que conté
   
 4.  [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)  
   
- O Gerenciador de Driver garante que vários threads não usará o mesmo identificador SQL_HANDLE_DBC_INFO_TOKEN simultaneamente. Portanto, o modelo de sincronização desse identificador pode ser muito simple no driver. O Gerenciador de Driver não terão um bloqueio de ambiente antes de alocar e liberar SQL_HANDLE_DBC_INFO_TOKEN.  
+ O Gerenciador de driver garante que vários threads não usarão o mesmo identificador de SQL_HANDLE_DBC_INFO_TOKEN simultaneamente. Portanto, o modelo de sincronização desse identificador pode ser muito simples dentro do driver. O Gerenciador de driver não usará um bloqueio de ambiente antes de alocar e liberar SQL_HANDLE_DBC_INFO_TOKEN.  
   
- O Gerenciador de Driver **SQLAllocHandle** e **SQLFreeHandle** não aceitará esse novo tipo de identificador.  
+ O **SQLAllocHandle** e o **SQLFreeHandle** do Gerenciador de driver não aceitam esse novo tipo de identificador.  
   
- SQL_HANDLE_DBC_INFO_TOKEN podem conter informações confidenciais, como credenciais. Portanto, um driver com segurança deve limpar o buffer de memória (usando [SecureZeroMemory](https://msdn.microsoft.com/library/windows/desktop/aa366877\(v=vs.85\).aspx)) que contém as informações confidenciais antes de liberar esse identificador com **SQLFreeHandle**. Sempre que o identificador de ambiente do aplicativo é fechado, todos os pools de conexão associada serão fechados.  
+ SQL_HANDLE_DBC_INFO_TOKEN pode conter informações confidenciais, como credenciais. Portanto, um driver deve limpar com segurança o buffer de memória (usando [SecureZeroMemory](https://msdn.microsoft.com/library/windows/desktop/aa366877\(v=vs.85\).aspx)) que contém as informações confidenciais antes de liberar esse identificador com **SQLFreeHandle**. Sempre que o identificador de ambiente de um aplicativo for fechado, todos os pools de conexão associados serão fechados.  
   
-## <a name="driver-manager-connection-pool-rating-algorithm"></a>Pool de Conexão do Gerenciador de driver de algoritmo de classificação  
- Esta seção discute o algoritmo de classificação para o pool de conexão do Gerenciador de Driver. Os desenvolvedores de driver podem implementar o mesmo algoritmo para compatibilidade com versões anteriores. Esse algoritmo não pode ser melhor. Você deverá refinar esse algoritmo com base em sua implementação (caso contrário, há nenhum motivo para implementar esse recurso).  
+## <a name="driver-manager-connection-pool-rating-algorithm"></a>Algoritmo de classificação do pool de conexões do Gerenciador de driver  
+ Esta seção discute o algoritmo de classificação para o pool de conexões do Gerenciador de driver. Os desenvolvedores de driver podem implementar o mesmo algoritmo para compatibilidade com versões anteriores. Esse algoritmo pode não ser o melhor. Você deve refinar esse algoritmo com base na sua implementação (caso contrário, não há motivo para implementar esse recurso).  
   
- O Gerenciador de Driver retornará uma classificação integral de 0 a 100 para cada conexão do pool. 0 significa que a conexão não pode ser reutilizada e 100 indica a correspondência de um perfeito. Suponha que a solicitação de conexão é denominada hRequest, e a conexão existente do pool como hCandidate. Se qualquer uma das seguintes condições for false, o hCandidate de conexão em pool não pode ser reutilizado para hRequest (o Gerenciador de Driver atribuirá uma classificação de 0).  
+ O Gerenciador de driver retornará uma classificação integral de 0 a 100 para cada conexão do pool. 0 significa que a conexão não pode ser reutilizada e 100 indica uma correspondência perfeita. Suponha que a solicitação de conexão seja nomeada hRequest e a conexão existente do pool seja nomeada como hCandidate. Se qualquer uma das seguintes condições for falsa, a conexão em pool hCandidate não poderá ser reutilizada para hRequest (o Gerenciador de driver atribuirá uma classificação de 0).  
   
--   hCandidate e hRequest vêm de API do UNICODE (por exemplo, SQLDriverConnectW) ou ANSI API (por exemplo, SQLDriverConnectA). (Drivers do UNICODE podem comportamento diferente considerando API ANSI e UNICODE API (consulte o atributo de conexão SQL_ATTR_ANSI_APP).)  
+-   hCandidate e hRequest vêm de uma API UNICODE (como SQLDriverConnectW) ou da API ANSI (como SQLDriverConnectA). (Os drivers UNICODE podem ter comportamento diferente da API ANSI e da API UNICODE (consulte o atributo de conexão SQL_ATTR_ANSI_APP).)  
   
--   hCandidate e hRequest são criados na mesma função; SQLDriverConnect ou SQLConnect.  
+-   hCandidate e hRequest são criados pela mesma função; SQLDriverConnect ou SQLConnect.  
   
--   A cadeia de caracteres de conexão usada para abrir hCandidate deve ser o mesmo que hRequest, quando SQLDriverConnect é usado.  
+-   A cadeia de conexão usada para abrir hCandidate deve ser a mesma que hRequest, quando SQLDriverConnect é usado.  
   
--   O nome de usuário ServerName (ou DSN), e a senha usada para abrir hCandidate deve ser o mesmo usado para abrir hRequest quando SQLConnect é usado.  
+-   O ServerName (ou DSN), o nome de usuário e a senha usados para abrir hCandidate devem ser os mesmos usados para abrir o hRequest quando o SQLConnect é usado.  
   
--   O identificador de segurança (SID) do thread atual deve ser o mesmo como o SID usado para abrir hCandidate.  
+-   O SID (identificador de segurança) do thread atual deve ser o mesmo que o SID usado para abrir o hCandidate.  
   
--   Para o driver é caro para se inscrever e inscrição (veja a discussão de SQL_DTC_TRANSITION_COST na [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)), reutilizando *hRequest* não deve exigir uma inscrição adicional ou unenlistment.  
+-   Para o driver que é caro para se inscrever e desinscrever (consulte a discussão de SQL_DTC_TRANSITION_COST em [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)), a reutilização de *hRequest* não deve exigir inscrição extra ou cannela.  
   
- A tabela a seguir mostra a atribuição de pontuação para cenários diferentes.  
+ A tabela a seguir mostra a atribuição de Pontuação para diferentes cenários.  
   
-|Comparação em atributos de conexão entre a conexão em pool e a solicitação|Nenhuma inscrição / unenlistment|Exige a inscrição Extra / Unenlistment|  
+|Comparação de atributos de conexão entre a conexão em pool e a solicitação|Nenhuma Inscrição/Desinscrição|Exigir Inscrição/Desinscrição extra|  
 |---------------------------------------------------------------------------------------|-----------------------------------|----------------------------------------------|  
-|Catálogo (SQL_ATTR_CURRENT_CATALOG) é diferente|60|50|  
+|O catálogo (SQL_ATTR_CURRENT_CATALOG) é diferente|60|50|  
 |Alguns atributos de conexão são diferentes, mas o catálogo é o mesmo|90|70|  
-|Todos os atributos de conexão perfeitamente adequados|100|80|  
+|Todos os atributos de conexão perfeitamente correspondidos|100|80|  
   
 ## <a name="sequence-diagram"></a>Diagrama de sequências  
- Este diagrama de sequência mostra o mecanismo básico de pooling descrito neste tópico. Ela mostra o uso de apenas [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) , mas o [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) caso é semelhante.  
+ Este diagrama de sequência mostra o mecanismo básico de Pooling descrito neste tópico. Ele mostra apenas o uso de [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) , mas o caso de [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) é semelhante.  
   
- ![Diagrama de sequência](../../../odbc/reference/develop-driver/media/odbc_seq_dia.gif "odbc_seq_dia")  
+ ![Diagrama de sequências](../../../odbc/reference/develop-driver/media/odbc_seq_dia.gif "odbc_seq_dia")  
   
 ## <a name="state-diagram"></a>Diagrama de estado  
- Este diagrama de estado mostra conexão info objeto de token, descrito neste tópico. O diagrama mostra apenas [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) , mas o [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) caso é semelhante. Uma vez que o Gerenciador de Driver, talvez seja necessário tratar os erros a qualquer momento, o Gerenciador de Driver pode chamar [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md) para qualquer estado.  
+ Esse diagrama de estado mostra o objeto token de informações de conexão, descrito neste tópico. O diagrama mostra apenas [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) , mas o caso de [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) é semelhante. Como o Gerenciador de driver pode precisar manipular erros a qualquer momento, o Gerenciador de driver pode chamar [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md) para qualquer Estado.  
   
  ![Diagrama de estado](../../../odbc/reference/develop-driver/media/odbc_state_diagram.gif "odbc_state_diagram")  
   
-## <a name="see-also"></a>Consulte também  
- [Pooling de Conexão de reconhecimento de driver](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Pooling de conexão com reconhecimento de driver](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
  [Referência da SPI (Interface do Provedor de Serviços) do ODBC](../../../odbc/reference/syntax/odbc-service-provider-interface-spi-reference.md)

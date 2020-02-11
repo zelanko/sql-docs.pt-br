@@ -11,14 +11,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e54caf8ec3e99fe4076ae50cb0b8015c8330ddb0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065078"
 ---
 # <a name="create-an-extended-events-session"></a>Criar uma sessão de Eventos Estendidos
-  Você pode criar uma sessão de Eventos Estendidos usando o Editor de Consulta ou pode criar uma sessão no Pesquisador de Objetos. No Pesquisador de objetos, eventos estendidos fornecem duas interfaces de usuário, que você pode usar para criar, modificar e exibir dados de sessão de evento: um assistente que orienta você durante o processo de criação de sessão de evento e uma interface de usuário nova sessão que fornece opções mais avançadas de configuração. Você pode criar sessões de Eventos Estendidos para diagnosticar rastreamento de SQL Server que permite resolver problemas como os seguintes:  
+  Você pode criar uma sessão de Eventos Estendidos usando o Editor de Consulta ou pode criar uma sessão no Pesquisador de Objetos. No Pesquisador de objetos, os eventos estendidos fornecem duas interfaces de usuário que você pode usar para criar, modificar e exibir dados de sessão de evento-um assistente que orienta você pelo processo de criação de sessão de evento e uma nova interface de usuário de sessão que fornece opções de configuração mais avançadas. Você pode criar sessões de Eventos Estendidos para diagnosticar rastreamento de SQL Server que permite resolver problemas como os seguintes:  
   
 -   Localizar suas consultas mais caras  
   
@@ -33,7 +33,7 @@ ms.locfileid: "66065078"
 ## <a name="in-this-section"></a>Nesta seção  
  [Criar uma sessão de Eventos Estendidos usando o Editor de Consultas](../../2014/database-engine/create-an-extended-events-session-using-query-editor.md)  
   
- [Criar uma sessão de eventos estendidos usando o Assistente de &#40;Pesquisador de objetos&#41;](../ssms/object/object-explorer.md)  
+ [Criar uma sessão de eventos estendidos usando o assistente &#40;pesquisador de objetos&#41;](../ssms/object/object-explorer.md)  
   
  [Criar uma sessão de Eventos Estendidos usando a caixa de diálogo Nova Sessão](../../2014/database-engine/create-an-extended-events-session-using-the-new-session-dialog.md)  
   

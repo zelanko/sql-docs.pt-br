@@ -1,5 +1,5 @@
 ---
-title: Definir ou alterar o método de Conexão preferencial para DirectQuery | Microsoft Docs
+title: Definir ou alterar o método de conexão preferencial para DirectQuery | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9737b829a5ccab1ddc0362f2d8ac81285f0f6e1c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068695"
 ---
 # <a name="set-or-change-the-preferred-connection-method-for-directquery"></a>Definir ou alterar o método de conexão preferencial para DirectQuery
-  Quando você criar um modelo para uso em modo DirectQuery, primeiro configure o ambiente de design para oferece suporte ao uso do DirectQuery. Para fazer isso, consulte [habilitar o modo de Design de DirectQuery &#40;SSAS de tabela&#41;](tabular-models/enable-directquery-mode-in-ssdt.md).  
+  Quando você criar um modelo para uso em modo DirectQuery, primeiro configure o ambiente de design para oferece suporte ao uso do DirectQuery. Para fazer isso, consulte [habilitar modo de design do DirectQuery &#40;SSAS de tabela&#41;](tabular-models/enable-directquery-mode-in-ssdt.md).  
   
  Quando você estiver pronto para implantar o modelo, defina algumas propriedades adicionais para habilitar usuários a acessar seu modelo usando um dos modos do DirectQuery:  
   
@@ -38,11 +38,11 @@ ms.locfileid: "66068695"
   
 3.  No painel **Propriedades** , altere a propriedade, **DirectQueryMode**, para um dos valores que oferecem suporte ao uso do DirectQuery:  
   
-    -   **InMemory com DirectQuery**: Se você usar essa opção, o modelo é implantado, mas você deve processar o cache antes que você pode executar consultas no modelo.  
+    -   **Inmemory com DirectQuery**: se você usar essa opção, o modelo será implantado, mas você deverá processar o cache antes de poder executar consultas no modelo.  
   
-    -   **DirectQuery com InMemory**: Se você usar essa opção, o cache estará disponível para uso por clientes, se já tiver sido processado. Se você implantar o modelo com esta configuração e não processar o cache, alguns clientes obterão um erro ao tentar se conectar ao modelo.  
+    -   **DirectQuery com inmemory**: se você usar essa opção, o cache estará disponível para uso pelos clientes se ele já tiver sido processado. Se você implantar o modelo com esta configuração e não processar o cache, alguns clientes obterão um erro ao tentar se conectar ao modelo.  
   
-    -   **Somente DirectQuery**: Se você usar essa opção, os metadados serão implantados mas o modelo não tem dados nele. Clientes que tentam se conectar usando o modo Na memória obterão um erro, indicando que o modelo não existe ou não foi processado.  
+    -   **Somente DirectQuery**: se você usar essa opção, os metadados serão implantados, mas o modelo não terá dados nele. Clientes que tentam se conectar usando o modo Na memória obterão um erro, indicando que o modelo não existe ou não foi processado.  
   
 4.  Se houver erros no Visual Studio, abra a **Lista de Erros** e resolva os problemas que possam impedir a implantação do modelo no modo DirectQuery.  
   
@@ -62,8 +62,8 @@ ms.locfileid: "66068695"
   
  Observe que estas propriedades são iguais às propriedades que você define no projeto antes da implantação no Visual Studio. Você pode alterar o modo de conexão preferencial a qualquer momento para o modo DirectQuery, desde que o modelo esteja configurado para oferecer suporte ao uso do DirectQuery.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Modo DirectQuery &#40;SSAS de tabela&#41;](tabular-models/directquery-mode-ssas-tabular.md)   
- [Habilitar o modo de Design do DirectQuery &#40;Tabular do SSAS&#41;](tabular-models/enable-directquery-mode-in-ssdt.md)  
+ [Habilitar modo de design do DirectQuery &#40;SSAS de tabela&#41;](tabular-models/enable-directquery-mode-in-ssdt.md)  
   
   

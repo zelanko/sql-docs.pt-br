@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 1707de1934ff6265268e40a3ab2a805629134e3d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482940"
 ---
 # <a name="create-a-master-data-services-database"></a>Criar um banco de dados do Master Data Services
@@ -26,7 +26,7 @@ ms.locfileid: "65482940"
   
 ### <a name="to-create-a-master-data-services-database"></a>Para criar um banco de dados do Master Data Services  
   
-1.  Abra [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
+1.  Abra o [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
   
 2.  No painel esquerdo, clique em **Configuração do Banco de Dados**.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "65482940"
   
 -   Configure um plano de manutenção para fazer backup dos logs de banco de dados e de transação. Para obter mais informações, veja [Requisitos do banco de dados &#40;Master Data Services&#41;](database-requirements-master-data-services.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Instalar o Master Data Services](install-master-data-services.md)  
   
   

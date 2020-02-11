@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 85b9387b5e60cdcdfd7af17bc3268f5ee475b739
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109315"
 ---
 # <a name="delete-group-dialog-box"></a>Caixa de diálogo Excluir Grupo
@@ -32,8 +32,8 @@ ms.locfileid: "66109315"
  **Excluir somente grupo**  
  Escolha esta opção para excluir somente a definição do grupo.  
   
-## <a name="see-also"></a>Consulte também  
- [Ajuda F1 do Designer de Relatórios](tools/report-designer-f1-help.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Ajuda F1 Report Designer](tools/report-designer-f1-help.md)   
  [Noções básicas sobre grupos &#40;Construtor de Relatórios e SSRS&#41;](report-design/understanding-groups-report-builder-and-ssrs.md)   
  [Tabelas, matrizes e listas &#40;Construtor de Relatórios e SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   

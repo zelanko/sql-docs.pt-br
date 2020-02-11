@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4963a309f6c54998ece968f8a5393e818fd30d07
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66110151"
 ---
 # <a name="viewing-tuning-reports"></a>Exibindo relatórios de ajuste
@@ -46,6 +46,6 @@ ms.locfileid: "66110151"
  Você explorou a guia **Relatórios** da sessão de ajuste MySession na interface gráfica do usuário do Orientador de Otimização do Mecanismo de Banco de Dados. Você pode usar esses mesmos passos para explorar os relatórios que foram gerados para a sessão de ajuste EvaluateMySession. Clique duas vezes em **EvaluateMySession** no painel **Monitor de Sessão** para começar.  
   
 ## <a name="next-lesson"></a>Próxima lição  
- [Lição 3: Usando o utilitário de Prompt de comando dta](lesson-3-using-the-dta-command-prompt-utility.md)  
+ [Lição 3: usar o utilitário de prompt de comando DTA](lesson-3-using-the-dta-command-prompt-utility.md)  
   
   

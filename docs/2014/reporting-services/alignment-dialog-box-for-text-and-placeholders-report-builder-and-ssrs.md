@@ -1,5 +1,5 @@
 ---
-title: Caixa de diálogo alinhamento para texto e espaços reservados (construtor de relatórios e SSRS) | Microsoft Docs
+title: Caixa de diálogo alinhamento para texto e espaços reservados (Construtor de Relatórios e SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,31 +16,31 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9ef4f2f59698f45f4d0882117abbf2ffc8ae5930
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66110038"
 ---
 # <a name="alignment-dialog-box-for-text-and-placeholders-report-builder-and-ssrs"></a>Caixa de diálogo Alinhamento para texto e espaços reservados (Construtor de Relatórios e SSRS)
-  Selecione a guia **Alinhamento** para posicionar os valores dentro de uma célula ou região de dados selecionada. É possível formatar só o alinhamento horizontal de texto individual dentro de uma caixa de texto. Para definir valores de preenchimento na caixa de texto ou como o texto é alinhado verticalmente, use as propriedades correspondentes da caixa de texto. Para obter mais informações, consulte [caixa de diálogo de propriedades de caixa de texto, alinhamento &#40;construtor de relatórios e SSRS&#41;](../../2014/reporting-services/text-box-properties-dialog-box-alignment-report-builder-and-ssrs.md).  
+  Selecione a guia **Alinhamento** para posicionar os valores dentro de uma célula ou região de dados selecionada. É possível formatar só o alinhamento horizontal de texto individual dentro de uma caixa de texto. Para definir valores de preenchimento na caixa de texto ou como o texto é alinhado verticalmente, use as propriedades correspondentes da caixa de texto. Para obter mais informações, consulte [caixa de diálogo Propriedades da caixa de texto, alinhamento &#40;Construtor de relatórios e&#41;do SSRS ](../../2014/reporting-services/text-box-properties-dialog-box-alignment-report-builder-and-ssrs.md).  
   
 ## <a name="options"></a>Opções  
  **Horizontal**  
- Especifique um valor ou digite uma expressão que seja avaliada para a posição na qual o texto é posicionado horizontalmente dentro de uma célula ou região de dados selecionada. Clique no botão **Expressão** (*fx*) para editar a expressão.  
+ Especifique um valor ou digite uma expressão que seja avaliada para a posição na qual o texto é posicionado horizontalmente dentro de uma célula ou região de dados selecionada. Clique no botão **expressão** (*FX*) para editar a expressão.  
   
--   **Geral** Exibir o texto calculado pelo [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Para obter mais informações sobre como o alinhamento de texto é calculado, consulte [Formatando texto e espaços reservados &#40;Construtor de Relatórios e SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md).  
+-   **Geral** Exiba o texto conforme calculado por [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Para obter mais informações sobre como o alinhamento de texto é calculado, consulte [Formatando texto e espaços reservados &#40;Construtor de Relatórios e SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md).  
   
--   **Esquerda** Exibir o texto alinhado à esquerda.  
+-   **À esquerda** Exiba o texto alinhado à esquerda.  
   
--   **Centro** Exibir o texto alinhado no centro.  
+-   **Central** Exiba o texto alinhado no centro.  
   
--   **Direita** Exibir o texto alinhado à direita.  
+-   **À direita** Exiba o texto alinhado à direita.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Formatando itens de relatório &#40;Construtor de Relatórios e SSRS&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   
  [Expressões &#40;Construtor de Relatórios e SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
- [Adicionar um HTML a um relatório &#40;Construtor de Relatórios e SSRS&#41;](report-design/add-html-into-a-report-report-builder-and-ssrs.md)   
+ [Adicionar HTML a um relatório &#40;Construtor de Relatórios e SSRS&#41;](report-design/add-html-into-a-report-report-builder-and-ssrs.md)   
  [Formatar o texto em uma caixa de texto &#40;Construtor de Relatórios e SSRS&#41;](report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)  
   
   

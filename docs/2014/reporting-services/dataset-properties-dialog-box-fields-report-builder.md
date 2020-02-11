@@ -1,5 +1,5 @@
 ---
-title: Caixa de diálogo de propriedades do conjunto de dados, campos (construtor de relatórios) | Microsoft Docs
+title: Caixa de diálogo Propriedades do conjunto de, campos (Construtor de Relatórios) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 375d8eda6f0863dbe3852f1a88ea2e58ecc85b80
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109429"
 ---
 # <a name="dataset-properties-dialog-box-fields-report-builder"></a>Caixa de diálogo Propriedades do Conjunto de Dados, Campos (Construtor de Relatórios)
@@ -34,7 +34,7 @@ ms.locfileid: "66109429"
  **Nome do campo**  
  Digite um nome para o campo. O campo deve ser exclusivo no conjunto de dados. Para cada campo existente no conjunto de dados, o nome é pré-preenchido.  
   
- **Origem do campo**  
+ **Origem de Campo**  
  Insira um valor para o campo.  
   
  Para um campo calculado, a origem do campo deve ter o nome de um campo existente recuperado pela consulta do conjunto de dados ou uma expressão criada por você. Por exemplo, para criar um campo que represente 10 vezes o valor no campo de consulta Sales, use a expressão `=10 * Fields!Sales.Value`.  
@@ -44,14 +44,14 @@ ms.locfileid: "66109429"
  **Expressão (fx)**  
  Adicione ou altere uma expressão para o novo campo calculado. Esse botão só é exibido quando você clica em **Adicionar** e seleciona **Campo Calculado**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Coleção de campos de conjuntos de dados &#40;Construtor de Relatórios e SSRS&#41;](report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [Criar um conjunto de dados compartilhado ou um conjunto de dados inserido &#40;Construtor de Relatórios e SSRS&#41;](report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
- [Ajuda do Construtor de Relatórios para caixas de diálogo, painéis e assistentes](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
- [Caixa de diálogo de propriedades do conjunto de dados, opções de &#40;construtor de relatórios&#41;](report-data/dataset-properties-dialog-box-options-report-builder.md)   
- [Caixa de diálogo de propriedades do conjunto de dados, filtros &#40;construtor de relatórios&#41;](../../2014/reporting-services/dataset-properties-dialog-box-filters-report-builder.md)   
- [Caixa de diálogo de propriedades do conjunto de dados, os parâmetros &#40;construtor de relatórios&#41;](../../2014/reporting-services/dataset-properties-dialog-box-parameters-report-builder.md)   
- [Caixa de diálogo de propriedades do conjunto de dados, consulta &#40;construtor de relatórios&#41;](report-data/dataset-properties-dialog-box-query-report-builder.md)   
+ [Criar um conjunto de um DataSet compartilhado ou um conjunto de &#40;inserido Construtor de Relatórios e SSRS&#41;](report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
+ [Construtor de Relatórios ajuda para caixas de diálogo, painéis e assistentes](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
+ [Caixa de diálogo Propriedades do conjunto de, opções &#40;Construtor de Relatórios&#41;](report-data/dataset-properties-dialog-box-options-report-builder.md)   
+ [Caixa de diálogo Propriedades do conjunto de, filtros &#40;Construtor de Relatórios&#41;](../../2014/reporting-services/dataset-properties-dialog-box-filters-report-builder.md)   
+ [Caixa de diálogo Propriedades do conjunto de, parâmetros &#40;Construtor de Relatórios&#41;](../../2014/reporting-services/dataset-properties-dialog-box-parameters-report-builder.md)   
+ [Caixa de diálogo Propriedades do conjunto de &#40;, Construtor de Relatórios de consulta&#41;](report-data/dataset-properties-dialog-box-query-report-builder.md)   
  [Expressões &#40;Construtor de Relatórios e SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
  [Conexões de dados, fontes de dados e cadeias de conexão no Construtor de Relatórios](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)  
   

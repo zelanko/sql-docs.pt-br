@@ -1,5 +1,5 @@
 ---
-title: sys.dm_pdw_component_health_status (Transact-SQL) | Microsoft Docs
+title: sys. dm_pdw_component_health_status (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -11,27 +11,27 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 51e364650f8b8f8dae386126bdc820f9c72e571c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67899516"
 ---
-# <a name="sysdmpdwcomponenthealthstatus-transact-sql"></a>sys.dm_pdw_component_health_status (Transact-SQL)
+# <a name="sysdm_pdw_component_health_status-transact-sql"></a>sys. dm_pdw_component_health_status (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   Contém informações sobre a integridade atual dos componentes do dispositivo.  
   
-|Nome da coluna|Tipo de dados|Descrição|Intervalo|  
+|Nome da coluna|Tipo de Dados|DESCRIÇÃO|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |pdw_node_id|**int**||Não NULL|  
-|component_id|int|A ID do componente. Ver [sys.pdw_health_components &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-health-components-transact-sql.md).<br /><br /> pdw_node_id, identificação_do_componente, property_id e component_instance_id formam a chave para esta exibição.|Não NULL|  
-|property_id|**int**|A ID da propriedade. Ver [sys.pdw_health_component_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-health-component-properties-transact-sql.md).|NOT NULL|  
-|component_instance_id|**nvarchar(255)**|Identifica uma instância de um componente. Por exemplo, uma instância de uma CPU pode ser identificada pelo component_instance_id = 'CPU1'.<br /><br /> pdw_node_id, identificação_do_componente, property_id e component_instance_id formam a chave para esta exibição.|NOT NULL|  
-|property_value|**nvarchar(255)**|O valor da propriedade atual.|NULL|  
+|component_id|INT|A ID do componente. Consulte [Sys. pdw_health_components &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-pdw-health-components-transact-sql.md).<br /><br /> pdw_node_id, component_id, property_id e component_instance_id formam a chave para essa exibição.|Não NULL|  
+|property_id|**int**|A ID da propriedade. Consulte [Sys. pdw_health_component_properties &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-pdw-health-component-properties-transact-sql.md).|NOT NULL|  
+|component_instance_id|**nvarchar (255)**|Identifica uma instância de um componente. Por exemplo, uma instância de uma CPU pode ser identificada por component_instance_id = ' CPU1 '.<br /><br /> pdw_node_id, component_id, property_id e component_instance_id formam a chave para essa exibição.|NOT NULL|  
+|property_value|**nvarchar (255)**|O valor da propriedade atual.|NULO|  
 |update_time|**datetime**|A última vez em que a métrica foi atualizada.|NOT NULL|  
   
-## <a name="see-also"></a>Consulte também  
- [SQL Data Warehouse e Parallel Data Warehouse exibições de gerenciamento dinâmico &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Exibições de gerenciamento dinâmico de SQL Data Warehouse e paralelo data warehouse &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

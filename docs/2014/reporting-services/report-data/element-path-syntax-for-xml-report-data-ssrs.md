@@ -14,17 +14,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9981a3ebeb1b67bda67509e2a08995fadb195abb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107296"
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>Sintaxe do caminho do elemento para dados de relatório XML (SSRS)
   No Designer de Relatórios, você especifica os dados para uso em um relatório de uma fonte de dados XML definindo um caminho do elemento que faz distinção entre maiúsculas e minúsculas. Um caminho de elemento indica como transpor os nós hierárquicos XML e seus atributos na fonte de dados XML. Para usar o caminho do elemento padrão, deixe a consulta do conjunto de dados ou o `ElementPath` XML da `Query` XML vazio. Quando os dados são recuperados da fonte de dados XML, os nós do elemento que possuem valores de texto e os atributos do nó do elemento se tornam colunas no conjunto de resultados. Os valores dos nós e atributos tornam-se os dados da linha quando a consulta é executada. As colunas são exibidas como a coleção de campos do conjunto de dados no painel de dados do relatório. Este tópico descreve a sintaxe do caminho do elemento.  
   
 > [!NOTE]  
->  A sintaxe do caminho do elemento é independente do namespace. Para usar namespaces em um caminho de elemento, use a sintaxe de consulta XML que inclui um XML `ElementPath` elemento descrito na [sintaxe de consulta XML para dados de relatório XML &#40;SSRS&#41;](report-data-ssrs.md).  
+>  A sintaxe do caminho do elemento é independente do namespace. Para usar namespaces em um caminho de elemento, use a sintaxe de consulta XML que inclui `ElementPath` um elemento XML descrito em [sintaxe de consulta XML para dados de relatório XML &#40;&#41;do SSRS ](report-data-ssrs.md).  
   
  A tabela a seguir descreve as convenções usadas para definir um caminho de elemento.  
   
@@ -33,8 +33,8 @@ ms.locfileid: "66107296"
 |**bold**|Texto que deve ser digitado exatamente como mostrado.|  
 |&#124; (barra vertical)|Separa itens de sintaxe. Somente um desses itens poderá ser selecionado.|  
 |`[ ] (brackets)`|Itens de sintaxe opcionais. Não digite os colchetes.|  
-|**{ }** (chaves)|Delimita parâmetros de itens de sintaxe.|  
-|[ **,** ...*n*]|Indica que o item precedente pode ser repetido *n* vezes. As ocorrências são separadas por vírgulas.|  
+|**{}** (chaves)|Delimita parâmetros de itens de sintaxe.|  
+|[**,**... *n*]|Indica que o item anterior pode ser repetido *n* número de vezes. As ocorrências são separadas por vírgulas.|  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -75,34 +75,36 @@ XMLLocalName :: =
 |Termo|Definição|  
 |----------|----------------|  
 |Caminho do elemento|Define a sequência de nós a serem transpostos dentro do documento XML para recuperar dados do campo para um conjunto de dados com uma fonte de dados XML.|  
-|`ElementNode`|O nó XML no documento XML. Os nós são designados por marcas e existem em uma relação hierárquica com outros nós. Por exemplo, \<Clientes> é o nó do elemento raiz. \<Cliente> é um subelemento de \<Clientes>.|  
+|`ElementNode`|O nó XML no documento XML. Os nós são designados por marcas e existem em uma relação hierárquica com outros nós. Por exemplo, \<Clientes> é o nó do elemento raiz. 
+  \<Cliente> é um subelemento de \<Clientes>.|  
 |`XMLName`|O nome do nó. Por exemplo, o nome do nó Clientes é Clientes. Um `XMLName` pode ser prefixado com um identificador de namespace para nomear exclusivamente cada nó.|  
 |`Encoding`|Indica que o `Value` deste elemento é XML codificado e precisa ser decodificado e incluído como um subelemento desse elemento.|  
-|`FieldList`|Define o conjunto de elementos e atributos a serem usados para recuperar dados.<br /><br /> Se não estiverem especificados, todos os atributos e subelementos serão usados como campos. Se a lista de campos vazia for especificada ( **{}** ), nenhum campo deste nó será usado.<br /><br /> Uma `FieldList` pode não conter um `Value` e um `Element` ou `ElementNode`.|  
+|`FieldList`|Define o conjunto de elementos e atributos a serem usados para recuperar dados.<br /><br /> Se não estiverem especificados, todos os atributos e subelementos serão usados como campos. Se a lista de campos vazia for especificada**{}**(), nenhum campo desse nó será usado.<br /><br /> Uma `FieldList` pode não conter um `Value` e um `Element` ou `ElementNode`.|  
 |`Field`|Especifica os dados recuperados como um campo do conjunto de dados.|  
-|`Attribute`|Um par de nome-valor dentro do `ElementNode`. Por exemplo, no nó do elemento \<Customer ID = "1" >, `ID` é um atributo e `@ID(Integer)` retorna "1" com um tipo inteiro no campo de dados correspondente `ID`.|  
-|`Value`|O valor do elemento. `Value` pode ser usado apenas no último `ElementNode` no caminho do elemento. Por exemplo, porque \<retornar > é um nó folha, se ele for incluído no final de um caminho de elemento, o valor da `Return {@}` é `Chair`.|  
+|`Attribute`|Um par de nome-valor dentro do `ElementNode`. Por exemplo, no \<nó do elemento Customer ID = "1" >, `ID` é um atributo e `@ID(Integer)` retorna "1" como um tipo inteiro no campo `ID`de dados correspondente.|  
+|`Value`|O valor do elemento. 
+  `Value` pode ser usado apenas no último `ElementNode` no caminho do elemento. Por exemplo, como \<Return> é um nó folha, se você incluí-lo no final de um caminho de elemento, o valor `Return {@}` de `Chair`é.|  
 |`Element`|O valor do subelemento nomeado. Por exemplo, Clientes {}/Cliente {}/Sobrenome recupera valores apenas para o elemento Sobrenome.|  
 |`Type`|O tipo de dados opcional a ser usado para o campo criado desse elemento.|  
-|`NamespacePrefix`|O `NamespacePrefix` é definido no elemento Consulta XML. Se não existir nenhum elemento Consulta XML, os namespaces no `ElementPath` XML serão ignorados. Se existir um elemento Consulta XML, o `ElementPath` XML terá um atributo opcional `IgnoreNamespaces`. Se IgnoreNamespaces for `true`, namespaces no XML `ElementPath` e o documento XML serão ignorados. Para obter mais informações, consulte [Sintaxe de consulta XML para dados de relatório XML &#40;SSRS&#41;](report-data-ssrs.md).|  
+|`NamespacePrefix`|O `NamespacePrefix` é definido no elemento Consulta XML. Se não existir nenhum elemento Consulta XML, os namespaces no `ElementPath` XML serão ignorados. Se existir um elemento Consulta XML, o `ElementPath` XML terá um atributo opcional `IgnoreNamespaces`. Se IgnoreNamespaces for `true`, os namespaces no XML `ElementPath` e no documento XML serão ignorados. Para obter mais informações, consulte [Sintaxe de consulta XML para dados de relatório XML &#40;SSRS&#41;](report-data-ssrs.md).|  
   
 ## <a name="example---no-namespaces"></a>Exemplo – Nenhum namespace  
  Os exemplos a seguir usam o documento XML Customers.xml. Esta tabela mostra exemplos de sintaxe do caminho do elemento e os resultados do uso do caminho do elemento em uma consulta que define um conjunto de dados, baseado no documento XML como uma fonte de dados.  
   
  Observe que, quando o caminho do elemento está vazio, a consulta usa o caminho do elemento padrão: o primeiro caminho para uma coleção de nós folha. No primeiro exemplo, deixar o caminho do elemento vazio é equivalente a especificar o caminho do elemento /Clientes/Cliente/Pedidos/Pedido. Todos os valores e atributos do nó ao longo do caminho são retornados no conjunto de resultados, e os nomes de nós e de atributos são exibidos como campos do conjunto de dados.  
   
--   *Empty (vazio)*  
+-   *Vazio*  
   
-    |Order|Qty|ID|FirstName|LastName|Customer.ID|xmlns|  
+    |Order|Qtd|ID|Nome|LastName|Customer.ID|xmlns|  
     |-----------|---------|--------|---------------|--------------|-----------------|-----------|  
     |Chair|6|1|Bobby|Moore|11|http://www.adventure-works.com|  
-    |Table|1|2|Bobby|Moore|11|http://www.adventure-works.com|  
+    |Tabela|1|2|Bobby|Moore|11|http://www.adventure-works.com|  
     |Sofa|2|8|Crystal|Hu|20|http://www.adventure-works.com|  
     |EndTables|2|15|Wyatt|Diaz|33|http://www.adventure-works.com|  
   
 -   `Customers {}/Customer`  
   
-    |FirstName|LastName|ID|  
+    |Nome|LastName|ID|  
     |---------------|--------------|--------|  
     |Bobby|Moore|11|  
     |Crystal|Hu|20|  
@@ -118,16 +120,16 @@ XMLLocalName :: =
   
 -   `Customers {}/Customer {}/Orders/Order {@,@Qty}`  
   
-    |Order|Qty|  
+    |Order|Qtd|  
     |-----------|---------|  
     |Chair|6|  
-    |Table|1|  
+    |Tabela|1|  
     |Sofa|2|  
     |EndTables|2|  
   
 -   `Customers {}/Customer/Orders/Order{ @ID(Integer)}`  
   
-    |Order.ID|FirstName|LastName|ID|  
+    |Order.ID|Nome|LastName|ID|  
     |--------------|---------------|--------------|--------|  
     |1|Bobby|Moore|11|  
     |2|Bobby|Moore|11|  
@@ -202,9 +204,9 @@ XMLLocalName :: =
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tipo de conexão XML &#40;SSRS&#41;](xml-connection-type-ssrs.md)   
- [Tutoriais do Reporting Services &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)   
- [Adicionar, editar e atualizar campos no painel de dados do relatório &#40;Construtor de Relatórios e SSRS&#41;](add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)  
+ [Reporting Services tutoriais &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)   
+ [Adicione, edite, atualize campos no painel de dados do relatório &#40;Construtor de Relatórios e SSRS&#41;](add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)  
   
   

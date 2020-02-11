@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 257df5742c2f8dec7d48c6d3afb4d6c6373d058c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106888"
 ---
 # <a name="add-a-chart-to-a-report-report-builder-and-ssrs"></a>Adicionar um gráfico a um relatório (Construtor de Relatórios e SSRS)
@@ -42,7 +42,7 @@ ms.locfileid: "66106888"
   
 ### <a name="to-add-a-chart-to-a-report"></a>Para adicionar um gráfico a um relatório  
   
-1.  Crie um relatório e defina um conjunto de dados. Para obter mais informações, consulte [adicionar dados a um relatório &#40;construtor de relatórios e SSRS&#41;](../report-data/report-datasets-ssrs.md).  
+1.  Crie um relatório e defina um conjunto de dados. Para obter mais informações, consulte [Adicionar dados a um relatório &#40;Construtor de relatórios e SSRS&#41;](../report-data/report-datasets-ssrs.md).  
   
 2.  Na guia **Inserir** , clique em **Gráfico**e em **Inserir Gráfico**.  
   
@@ -66,13 +66,13 @@ ms.locfileid: "66106888"
   
  Em gráficos com eixos, como gráficos de barras e de colunas, o eixo de categoria pode não exibir todos os rótulos de categoria. Para obter mais informações sobre como alterar os rótulos do eixo, consulte [Especificar um intervalo do eixo &#40;Construtor de Relatórios e SSRS&#41;](specify-an-axis-interval-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Tipos de gráficos &#40;Construtor de Relatórios e SSRS&#41;](chart-types-report-builder-and-ssrs.md)   
  [Pontos de dados vazios e nulos em gráficos &#40;Construtor de Relatórios e SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [Tutorial: Adicionar um gráfico de barras ao relatório (Construtor de Relatórios)](https://go.microsoft.com/fwlink/?LinkId=198052)   
- [Tutorial: Adicionar um gráfico de barras a um relatório (Designer de Relatórios)](https://go.microsoft.com/fwlink/?LinkId=198042)   
- [Tutorial: Adicionar um gráfico de pizza ao relatório (Construtor de Relatórios)](https://go.microsoft.com/fwlink/?LinkId=198051)   
- [Tutorial: Adicionar um gráfico de pizza a um relatório (Designer de Relatórios)](https://go.microsoft.com/fwlink/?LinkId=198041)  
+ [Tutorial: Adicionando um gráfico de barras ao relatório (Construtor de Relatórios)](https://go.microsoft.com/fwlink/?LinkId=198052)   
+ [Tutorial: Adicionando um gráfico de barras a um relatório (Designer de Relatórios)](https://go.microsoft.com/fwlink/?LinkId=198042)   
+ [Tutorial: Adicionando um gráfico de pizza ao relatório (Construtor de Relatórios)](https://go.microsoft.com/fwlink/?LinkId=198051)   
+ [Tutorial: Adicionando um gráfico de pizza ao relatório (Designer de Relatórios)](https://go.microsoft.com/fwlink/?LinkId=198041)  
   
   

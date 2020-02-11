@@ -11,18 +11,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0aada3a83a29a921584a204f51695e6598131e0a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63312559"
 ---
 # <a name="select-the-keyboard-shortcut-scheme"></a>Selecionar o esquema de atalhos de teclado
   Em vez do esquema de teclado padrão do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , você pode configurar o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para usar um esquema de teclado compatível com o [!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)].  
   
-## <a name="changing-to-the-includevsdev10longincludesvs-dev10-long-mdmd-keyboard-scheme"></a>Alterando para o esquema de teclado do [!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)]  
+## <a name="changing-to-the-includevs_dev10_longincludesvs-dev10-long-mdmd-keyboard-scheme"></a>Alterando para o esquema de teclado do [!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)]  
   
-#### <a name="to-apply-includevsdev10longincludesvs-dev10-long-mdmd-compatible-keyboard-scheme"></a>Para aplicar o esquema de teclado compatível com o [!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)]  
+#### <a name="to-apply-includevs_dev10_longincludesvs-dev10-long-mdmd-compatible-keyboard-scheme"></a>Para aplicar o esquema de teclado compatível com o [!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)]  
   
 1.  No menu **Ferramentas** , clique em **Opções**.  
   
@@ -35,8 +35,8 @@ ms.locfileid: "63312559"
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
  [Definir as opções de inicialização](lesson-1-7-set-the-startup-options.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Atalhos de teclado do SQL Server Management Studio](../sql-server-management-studio-keyboard-shortcuts.md)   
+## <a name="see-also"></a>Consulte Também  
+ [SQL Server Management Studio atalhos de teclado](../sql-server-management-studio-keyboard-shortcuts.md)   
  [Personalizar menus e teclas de atalho](../customize-menus-and-shortcut-keys.md)  
   
   

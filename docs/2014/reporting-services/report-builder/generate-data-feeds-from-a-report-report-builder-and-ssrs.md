@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ceca9ef914afeab3420bbd35c46c582c112644dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107845"
 ---
 # <a name="generate-data-feeds-from-a-report-report-builder-and-ssrs"></a>Gerar feeds de dados de um relatório (Construtor de Relatórios e SSRS)
-  Você pode gerar feeds de dados compatíveis com o Atom a partir de relatórios e, depois, usar os feeds de dados em aplicativos, como o cliente do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , que pode consumir feeds de dados.  
+  Você pode gerar feeds de dados em conformidade com Atom a partir de relatórios e, em seguida, usar os feeds de dados em aplicativos, como o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] cliente, que pode consumir feeds de dados.  
   
  A extensão de renderização do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Atom gera um documento de serviço Atom que lista os feeds de dados disponíveis a partir de um relatório. O documento lista pelo menos um feed de dados para cada região no relatório. Dependendo do tipo de região de dados e dos dados que a região de dados exibe, o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pode gerar vários feeds de dados de uma região de dados.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "66107845"
   
 6.  Opcionalmente, abra o arquivo .atom em um navegador, editor de texto ou editor de XML.  
   
-## <a name="see-also"></a>Consulte também  
- [Exportando relatórios &#40;relatórios e SSRS&#41;](export-reports-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Exportando relatórios &#40;Construtor de Relatórios e SSRS&#41;](export-reports-report-builder-and-ssrs.md)  
   
   

@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 737e5eb03cabe655b4b1dc1da6735b9b4ef68c05
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107246"
 ---
 # <a name="manage-report-data-sources"></a>Gerenciar fontes de dados de relatório
@@ -39,10 +39,10 @@ ms.locfileid: "66107246"
   
  Observe que a modificação de consultas não faz parte do gerenciamento de conexão da fonte de dados. Para modificar uma consulta em um relatório ou modelo, você deve usar uma ferramenta de autoria e fazer suas alterações na definição do relatório ou do modelo.  
   
-## <a name="managed-properties-data-source-type-connection-strings-and-credentials"></a>Propriedades gerenciadas: Tipo de fonte de dados, cadeias de caracteres de Conexão e credenciais  
+## <a name="managed-properties-data-source-type-connection-strings-and-credentials"></a>Propriedades gerenciadas: tipo de fonte de dados, cadeias de conexão e credenciais  
  As propriedades da fonte de dados que você pode gerenciar em um servidor de relatório são:  
   
-|Propriedade|Descrição|Como gerenciá-la|  
+|Propriedade|DESCRIÇÃO|Como gerenciá-la|  
 |--------------|-----------------|----------------------|  
 |Tipo de fonte de dados|Determina qual extensão de processamento de dados do servidor de relatório será usada nos dados externos. Alguns exemplos de processadores de dados incluem SQL Server, Analysis Services e Oracle.|O tipo de fonte de dados é uma propriedade gerenciada, pois é configurável. Entretanto, você deverá configurar apenas um tipo de fonte de dados se estiver criando uma nova fonte de dados compartilhada.<br /><br /> Não altere o tipo da fonte de dados nas páginas de propriedades de um relatório publicado ou modelo, pois isso certamente invalidará a conexão. É improvável que as estruturas de dados requeridas por um relatório ou modelo sejam idênticas em uma plataforma de dados diferente.|  
 |Cadeia de conexão|Estabelece a conexão inicial a uma fonte de dados externa. Um relatório pode usar cadeias de conexões estáticas ou dinâmicas.<br /><br /> Uma *cadeia de conexão estática* é um conjunto de valores que o relatório usa para conectar-se à mesma fonte de dados sempre que é executado.<br /><br /> Uma *cadeia de conexão dinâmica* é uma expressão que você cria em um relatório, permitindo que o usuário selecione qual fonte de dados deve ser usada no tempo de execução. Você deve criar uma expressão e uma lista de seleção de fonte de dados no relatório ao criá-lo no Designer de Relatórios.|A alteração de uma cadeia de conexão é útil quando você move uma fonte de dados para outro computador, ou se você tiver criado relatórios usando dados de teste mas deseja implantar os relatórios com um banco de dados de produção.<br /><br /> Você pode gerenciar uma cadeia de conexão estática substituindo a cadeia original por uma diferente.<br /><br /> Para gerenciar uma cadeia de conexão dinâmica no Gerenciador de Relatórios ou em um site do SharePoint, você está limitado a substituí-la por uma estática. Não é possível editar a própria expressão, nem alterar a lista de seleção de fonte de dados. Para alterar a expressão ou a lista de valores válidos, você deve editar a definição do relatório e republicá-lo no servidor de relatório. Para obter mais informações, consulte [Conexões de dados, fontes de dados e cadeias de conexão no Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md).|  
@@ -61,26 +61,26 @@ ms.locfileid: "66107246"
   
 |Tarefa|Ferramenta|Link|  
 |----------|----------|----------|  
-|Exibir exemplos de cadeias de conexão.||[Conexões de dados, fontes de dados e cadeias de conexão no Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)|  
+|Exibir exemplos de cadeias de conexão.||[Data Connections, Data Sources, and Connection Strings in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)|  
 |Escolher uma abordagem para obter credenciais para conectar-se a uma fonte de dados.||[Especificar informações de credenciais e de conexão para fontes de dados de relatório](specify-credential-and-connection-information-for-report-data-sources.md)|  
 |Adicionar propriedades de conexão de fonte de dados a um arquivo de definição de relatório (.rdl).|Designer de Relatórios|[Criar uma fonte de dados inserida ou compartilhada &#40;SSRS&#41;](../create-an-embedded-or-shared-data-source-ssrs.md)|  
 |Adicionar e vincular a um arquivo de fonte de dados compartilhada (.rds) em um projeto de relatório.|Designer de Relatórios|[Criar, modificar e excluir fontes de dados compartilhadas &#40;SSRS&#41;](create-modify-and-delete-shared-data-sources-ssrs.md)|  
-|Crie uma lista predefinida de fontes de dados que os usuários possam selecionar em tempo de execução. Quando um usuário solicita um relatório, este fornece uma lista de fontes de dados. O usuário deve selecionar qual fonte de dados usar antes de executar o relatório. Para acrescentar uma lista de seleção de fonte de dados a um relatório, você usa uma expressão.<br /><br /> Isto é conhecido como uma conexão de fonte de dados dinâmica.|Designer de Relatórios|[Conexões de dados, fontes de dados e cadeias de conexão no Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)|  
-|Criar um item de fonte de dados compartilhada em um servidor de relatório.|Gerenciador de Relatórios|[Criar, excluir ou modificar uma fonte de dados compartilhada &#40;Gerenciador de Relatórios&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)|  
-|Armazenar credenciais como um pré-requisito para criar assinaturas ou instantâneos de relatório.|Gerenciador de Relatórios|[Store Credentials in a Reporting Services Data Source](store-credentials-in-a-reporting-services-data-source.md)|  
-|Editar propriedades de conexão da fonte de dados em um relatório publicado.|Gerenciador de Relatórios|[Configurar propriedades de fonte de dados para um relatório &#40;Gerenciador de Relatórios&#41;](configure-data-source-properties-for-a-report-report-manager.md)|  
+|Crie uma lista predefinida de fontes de dados que os usuários possam selecionar em tempo de execução. Quando um usuário solicita um relatório, este fornece uma lista de fontes de dados. O usuário deve selecionar qual fonte de dados usar antes de executar o relatório. Para acrescentar uma lista de seleção de fonte de dados a um relatório, você usa uma expressão.<br /><br /> Isto é conhecido como uma conexão de fonte de dados dinâmica.|Designer de Relatórios|[Data Connections, Data Sources, and Connection Strings in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)|  
+|Criar um item de fonte de dados compartilhada em um servidor de relatório.|Gerenciador de Relatórios|[Criar, excluir ou modificar uma fonte de dados compartilhada &#40;Report Manager&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)|  
+|Armazenar credenciais como um pré-requisito para criar assinaturas ou instantâneos de relatório.|Gerenciador de Relatórios|[Armazenar credenciais em uma fonte de dados do Reporting Services](store-credentials-in-a-reporting-services-data-source.md)|  
+|Editar propriedades de conexão da fonte de dados em um relatório publicado.|Gerenciador de Relatórios|[Configurar as propriedades da fonte de dados para um relatório &#40;Report Manager&#41;](configure-data-source-properties-for-a-report-report-manager.md)|  
 |Criar um item de fonte de dados compartilhada em um servidor de relatório.|Site do SharePoint|[Criar e gerenciar fontes de dados compartilhadas &#40;Reporting Services no modo integrado do SharePoint&#41;](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)|  
 |Usar informações de conexão .odc existentes com um relatório.|Site do SharePoint|[Usar uma conexão de dados do Office &#40;.odc&#41; com relatórios &#40;Reporting Services no modo integrado do SharePoint&#41;](use-an-office-data-connection-odc-with-reports.md)|  
   
 > [!NOTE]  
 >  Gerenciar as conexões de fonte de dados para relatar fontes de dados não é o mesmo que gerenciar a conexão do servidor de relatório para o banco de dados do servidor de relatório. Para obter mais informações sobre uma conexão do servidor de relatório com seu armazenamento de dados interno, consulte [Configurar uma conexão de banco de dados do servidor de relatório &#40;Gerenciador de Configurações do SSRS&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Associar um relatório ou modelo a uma fonte de dados compartilhada &#40;SSRS&#41;](bind-a-report-or-model-to-a-shared-data-source-ssrs.md)   
- [Criar, excluir ou modificar uma fonte de dados compartilhada &#40;Gerenciador de Relatórios&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
- [Armazenar as credenciais em uma fonte de dados do Reporting Services](store-credentials-in-a-reporting-services-data-source.md)   
- [Conexões de dados, fontes de dados e cadeias de caracteres de Conexão no Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [Fontes de dados com suporte no Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)   
+ [Criar, excluir ou modificar uma fonte de dados compartilhada &#40;Report Manager&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
+ [Armazenar credenciais em uma fonte de dados Reporting Services](store-credentials-in-a-reporting-services-data-source.md)   
+ [Conexões de dados, fontes de dados e cadeias de conexão no Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
+ [Fontes de dados com suporte pelo Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)   
  [Gerenciamento de conteúdo do Servidor de Relatório &#40;Modo Nativo do SSRS&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)  
   
   

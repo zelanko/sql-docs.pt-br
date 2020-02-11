@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 00e3643a1beb3f69f8b370715001317e536c42e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63245747"
 ---
 # <a name="sql-server-agent-properties-alert-system-page"></a>Propriedades do SQL Server Agent (página Sistema de Alerta)
-  Use essa página para exibir e modificar as configurações para mensagens enviadas pelos alertas do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
+  Use esta página para exibir e modificar as configurações de mensagens enviadas por [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alertas de agente.  
   
 ## <a name="options"></a>Opções  
  **Sessão de email**  
@@ -35,19 +35,19 @@ ms.locfileid: "63245747"
 > [!NOTE]  
 >  Após alterar o sistema de email, você deve reiniciar o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para que a alteração entre em vigor.  
   
- **Perfil de Email**  
- Define o perfil para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent usar. Você também pode selecionar **\<novo perfil do Database Mail...>** para criar um novo perfil.  
+ **Perfil de email**  
+ Define o perfil para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent usar. Você também pode selecionar ** \<novo perfil de Database Mail... >** para criar um novo perfil.  
   
  **Emails por pager**  
  As opções desta seção permitem configurar mensagens de email enviadas para endereços de pager para funcionarem com o seu sistema de paginação.  
   
- **Formatação de endereço para emails de pager**  
+ **Formatação de endereço para emails por pager**  
  Essa seção permite que você especifique o formato dos endereços e a linha de assunto incluída nos emails de pager.  
   
- **Linha Para**  
+ **Para linha**  
  Especifica as opções para a linha **Para** da mensagem  
   
- **Prefix**  
+ **Prefixo**  
  Digite qualquer texto fixo que o seu sistema solicita no início da linha **Para** de mensagens enviadas a um pager.  
   
  **Pager**  
@@ -56,10 +56,10 @@ ms.locfileid: "63245747"
  **Sufixo**  
  Digite qualquer texto fixo que o seu sistema de pagers solicita no fim da linha **Para** de mensagens enviadas a um pager.  
   
- **Linha Cc**  
+ **Linha CC**  
  Especifica as opções para a linha **Cc** da mensagem.  
   
- **Prefix**  
+ **Prefixo**  
  Digite qualquer texto fixo que o seu sistema solicita no início da linha **Cc** de mensagens enviadas a um pager.  
   
  **Pager**  
@@ -71,19 +71,19 @@ ms.locfileid: "63245747"
  **Assunto**  
  Especifica as opções para o assunto da mensagem.  
   
- **Prefix**  
+ **Prefixo**  
  Digite qualquer texto fixo que o seu sistema de pagers solicita no início da linha **Assunto** de mensagens enviadas a um pager.  
   
  **Sufixo**  
  Digite qualquer texto fixo que o seu sistema de pagers solicita no fim da linha **Assunto** de mensagens enviadas a um pager.  
   
- **Inclua o corpo de email em mensagem de notificação**  
+ **Incluir corpo de email na mensagem de notificação**  
  Inclui o corpo da mensagem de email na mensagem enviada ao pager.  
   
  **Operador à prova de falhas**  
  Essa seção permite que você especifique as opções para o operador à prova de falhas.  
   
- **Habilitar o operador à prova de falhas**  
+ **Habilitar operador à prova de falhas**  
  Especifica um operador à prova de falhas.  
   
  **Operador**  
@@ -92,20 +92,20 @@ ms.locfileid: "63245747"
  **Notificar usando**  
  Define o método a usar ao notificar o operador à prova de falhas.  
   
- **Substituição de Token**  
+ **Substituição de token**  
  Essa seção permite que você habilite tokens de etapa de trabalho que podem ser usados em trabalhos executados pelos alertas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Para obter mais informações sobre tokens de etapa de trabalho, consulte [Usar tokens em etapas de trabalho](use-tokens-in-job-steps.md).  
   
 > [!IMPORTANT]  
->  Qualquer usuário do Windows com permissões de gravação no Log de Eventos do Windows pode acessar etapas de trabalho ativadas pelos alertas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Para evitar riscos de segurança, os tokens do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent que podem ser usados em trabalhos ativados por alertas encontram-se desabilitados por padrão. Esses tokens são: **$(A-DBN)** , **$(A-SVR)** , **$(A-ERR)** , **$(A-SEV)** e **$(A-MSG)** .  
+>  Qualquer usuário do Windows com permissões de gravação no Log de Eventos do Windows pode acessar etapas de trabalho ativadas pelos alertas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Para evitar riscos de segurança, os tokens do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent que podem ser usados em trabalhos ativados por alertas encontram-se desabilitados por padrão. Esses tokens são: **$(A-DBN)**, **$(A-SVR)**, **$(A-ERR)**, **$(A-SEV)** e **$(A-MSG)**.  
 >   
 >  Se precisar usar esses tokens, certifique-se de que apenas membros dos grupos de segurança confiáveis do Windows, como o grupo Administradores, tenham permissões de gravação no Log de Eventos do computador em que reside o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antes de habilitá-los.  
   
- **Substitua os tokens para todas as respostas de trabalho a alertas**  
+ **Substituir tokens de todas as respostas de trabalho para alertas**  
  Marque essa caixa de seleção para habilitar a substituição de token para trabalhos que são ativados pelos alertas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="see-also"></a>Consulte também  
- [Operadores](operators.md)   
- [Configurar o SQL Server Agent Mail para usar o Database Mail](../../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Operações](operators.md)   
+ [Configurar o SQL Server Agent email a ser usado Database Mail](../../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)   
  [Database Mail](../../relational-databases/database-mail/database-mail.md)  
   
   

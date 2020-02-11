@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3b28a0543208ab28414fb93def15adf904e2c078
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63261726"
 ---
 # <a name="publishers"></a>Publicadores
@@ -29,9 +29,9 @@ ms.locfileid: "63261726"
  Selecione os servidores que têm permissão para usar esse Distribuidor. Clique no botão de propriedades ( **...** ) próximo ao Publicador para exibir e definir propriedades adicionais.  
   
  **Adicionar**  
- Se o servidor que você deseja permitir não estiver na lista, clique em **Adicionar** para adicionar um Editor [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou um Editor Oracle à lista de Publicadores disponíveis.  
+ Se o servidor que você deseja permitir não estiver listado, clique em **Adicionar** para adicionar um Publicador do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou um Publicador Oracle à lista de Publicadores disponíveis.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Configurar Distribuição](configure-distribution.md)   
  [Configurar a publicação e a distribuição](configure-publishing-and-distribution.md)   
  [Exibir e modificar propriedades de Publicador e Distribuidor](view-and-modify-distributor-and-publisher-properties.md)   

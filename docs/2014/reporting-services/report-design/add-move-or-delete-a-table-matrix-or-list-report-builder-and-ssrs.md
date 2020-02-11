@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b3e98a5c49877f6bc94e9e3ac1e880c90229cd3c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106595"
 ---
 # <a name="add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs"></a>Adicionar, mover ou excluir uma tabela, matriz ou lista (Construtor de Relatórios e SSRS)
@@ -32,7 +32,7 @@ ms.locfileid: "66106595"
   
 1.  Na guia **Inserir** , clique em **Tabela** ou **Matriz**e clique em **Assistente de Tabela** ou **Assistente de Matriz**.  
   
-2.  Siga as etapas a **NewTable** ou **nova matriz** assistente.  
+2.  Siga as etapas no assistente de **NewTable** ou **nova matriz** .  
   
 3.  Na guia **Página Inicial** , clique em **Executar** para visualizar o relatório renderizado.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "66106595"
   
 -   Selecione a região de dados, clique nela com o botão direito do mouse e, em seguida, clique em **Excluir**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Região de dados Tablix &#40;Construtor de Relatórios e SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)   
  [Tabelas &#40;Construtor de Relatórios e SSRS&#41;](tables-report-builder-and-ssrs.md)   
  [Matrizes &#40;Construtor de Relatórios e SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   

@@ -1,5 +1,5 @@
 ---
-title: 'Lição 5: Criar o relatório filho usando o Assistente de relatório | Microsoft Docs'
+title: 'Lição 5: Criar o relatório filho usando o Assistente de Relatório | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 661b4f3cc63eb0c19fddb53f872e940d1f9976e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108435"
 ---
 # <a name="lesson-5-design-the-child-report-using-the-report-wizard"></a>Lição 5: Criar o relatório filho usando o Assistente de Relatório
@@ -26,29 +26,29 @@ ms.locfileid: "66108435"
   
 2.  Clique com o botão direito do mouse no site e selecione **Adicionar Novo Item**.  
   
-3.  No **Adicionar Novo Item** caixa de diálogo, clique em **Assistente de relatório**, insira um nome para o arquivo de relatório e, em seguida, clique em **adicionar**.  
+3.  Na caixa de diálogo **Adicionar novo item** , clique em **Assistente de relatório**, insira um nome para o arquivo de relatório e clique em **Adicionar**.  
   
      Isso iniciará o Assistente de Relatório.  
   
-4.  No **propriedades do conjunto de dados** página, o **fonte de dados** , clique em **DataSet2**.  
+4.  Na página **Propriedades de DataSet** , na caixa **fonte de dados** , clique em **DataSet2**.  
   
      A caixa **Conjuntos de dados disponíveis** é atualizada automaticamente com a DataTable criada.  
   
-5.  Clique em **Avançar**.  
+5.  Clique em **Próximo**.  
   
 6.  Na página **Organizar campos** , faça o seguinte:  
   
     1.  Arraste **ProductID**, **PurchaseOrderID**, **PurchaseOrderDetailID**, **OrderQty**, **ReceivedQty**, **RejectedQty**e **StockedQty** de **Campos disponíveis** até a caixa **Valores** .  
   
-    2.  Clique na seta ao lado **SUM (ProductID)** , **SUM (purchaseorderid)** , **SUM (purchaseorderdetailid)** , **SUM (OrderQty)** ,  **SUM (receivedqty)** , **SUM (rejectedqty)** , e **SUM (stockedqty)** e desmarque o **soma** seleção.  
+    2.  Clique na seta ao lado de **Soma (ProductID)**, **Soma (PurchaseOrderID)**, **Soma (PurchaseOrderDetailID)**, **Soma (OrderQty)**, **Soma (ReceivedQty)**, **Soma (RejectedQty)** e **Soma (StockedQty)** e desmarque a seleção **soma** .  
   
-7.  Clique em **próxima** duas vezes, em seguida, clique em **concluir** para fechar o **Assistente de relatório**.  
+7.  Clique em **Avançar** duas vezes e, em seguida, clique em **concluir** para fechar o **Assistente de relatório**.  
   
      Agora você criou o arquivo .rdlc. O arquivo é aberto no Designer de Relatórios. Agora, o tablix que você criou será exibido na superfície de design.  
   
 8.  Com o arquivo .rdlc aberto, adicione um parâmetro da seguinte maneira:  
   
-    1.  Clique em **parâmetros** na **dados de relatório** painel e clique **adicionar parâmetros**.  
+    1.  Clique em **parâmetros** no painel **dados do relatório** e, em seguida, clique em **adicionar parâmetros**.  
   
     2.  Insira **productid** na caixa **Nome** .  
   

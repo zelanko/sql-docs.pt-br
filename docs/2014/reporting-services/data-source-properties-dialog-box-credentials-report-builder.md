@@ -1,5 +1,5 @@
 ---
-title: Fonte de dados de caixa de diálogo de propriedades, as credenciais (construtor de relatórios) | Microsoft Docs
+title: Caixa de diálogo Propriedades da fonte de dados, credenciais (Construtor de Relatórios) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,21 +13,21 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5dd4d113c92e0a2d094aa02d49010a5dd477c6ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109451"
 ---
 # <a name="data-source-properties-dialog-box-credentials-report-builder"></a>Caixa de diálogo Propriedades da Fonte de Dados, Credenciais (Construtor de Relatórios)
   Selecione **Credenciais** na caixa de diálogo **Propriedades da Fonte de Dados** para exibir e modificar as credenciais a fim de estabelecer conexão com uma fonte de dados inserida do relatório. As credenciais fornecidas são usadas para acessar a fonte de dados para externas para a visualização de relatórios. Para obter mais informações sobre credenciais, consulte [Especificar as credenciais no Construtor de Relatórios](../../2014/reporting-services/specify-credentials-in-report-builder.md).  
   
 ## <a name="options"></a>Opções  
- **Usar a autenticação do Windows (segurança integrada)**  
+ **Usar a Autenticação do Windows (segurança integrada)**  
  Selecione esta opção para usar a Autenticação do Windows.  
   
  **Usar este nome de usuário e senha**  
- Selecione esta opção para fornecer um nome de usuário e senha específicos. Em fontes de dados inseridas: quando você publicar o projeto do servidor de relatório no servidor de destino, o nome de usuário e a senha serão salvos como as credenciais armazenadas no banco de dados. Para usar o nome de usuário e a senha como credenciais do Windows, é possível alterar as propriedades da fonte de dados compartilhada no servidor de destino. Para obter mais informações, consulte [Criar, excluir ou modificar uma fonte de dados compartilhada &#40;Gerenciador de Relatórios&#41;](../../2014/reporting-services/create-delete-or-modify-a-shared-data-source-report-manager.md) na documentação do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] nos [Manuais Online](https://go.microsoft.com/fwlink/?linkid=121312) do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ Selecione esta opção para fornecer um nome de usuário e senha específicos. Em fontes de dados inseridas: quando você publicar o projeto do servidor de relatório no servidor de destino, o nome de usuário e a senha serão salvos como as credenciais armazenadas no banco de dados. Para usar o nome de usuário e a senha como credenciais do Windows, é possível alterar as propriedades da fonte de dados compartilhada no servidor de destino. Para obter mais informações, consulte [Criar, excluir ou modificar uma fonte de dados compartilhada &#40;Gerenciador de Relatórios&#41;](../../2014/reporting-services/create-delete-or-modify-a-shared-data-source-report-manager.md) na documentação do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] nos Manuais Online[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [ do ](https://go.microsoft.com/fwlink/?linkid=121312).  
   
  **Nome de usuário**  
  Digite um nome de usuário para fazer logon na fonte de dados.  
@@ -35,10 +35,10 @@ ms.locfileid: "66109451"
  **Senha**  
  Digite uma senha para fazer logon na fonte de dados.  
   
- **Pedir credenciais**  
+ **Solicita credenciais**  
  Selecione esta opção para solicitar as credenciais quando o relatório for executado.  
   
- **Insira a cadeia de caracteres de prompt**  
+ **Informar a cadeia de caracteres da solicitação**  
  Digite uma instrução para que o usuário forneça as credenciais de logon para a fonte de dados.  
   
  **Nenhuma credencial**  
@@ -46,12 +46,12 @@ ms.locfileid: "66109451"
   
  Em algumas extensões de dados, a conta de execução autônoma deve estar configurada no servidor de relatório.  
   
- Para obter mais informações, consulte o tópico sobre o tipo de fonte de dados correspondente em [Adicionar dados de fontes de dados externas &#40;SSRS&#41;](report-data/add-data-from-external-data-sources-ssrs.md) e [Configurar a conta de execução autônoma &#40;SSRS Configuration Manager&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) na documentação do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] nos [Manuais Online](https://go.microsoft.com/fwlink/?linkid=121312) do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ Para obter mais informações, consulte o tópico sobre o tipo de fonte de dados correspondente em [Adicionar dados de fontes de dados externas &#40;SSRS&#41;](report-data/add-data-from-external-data-sources-ssrs.md) e [Configurar a conta de execução autônoma &#40;SSRS Configuration Manager&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) na documentação do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] nos Manuais Online[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [ do ](https://go.microsoft.com/fwlink/?linkid=121312).  
   
-## <a name="see-also"></a>Consulte também  
- [Ajuda do Construtor de Relatórios para caixas de diálogo, painéis e assistentes](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
- [Caixa de diálogo Propriedades da Fonte de Dados, Geral &#40;Construtor de Relatórios&#41;](../../2014/reporting-services/data-source-properties-dialog-box-general-report-builder.md)   
- [Adicionar e verificar uma Conexão de dados ou uma fonte de dados &#40;relatórios e SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)   
- [Adicionar dados a um relatório &#40;relatórios e SSRS&#41;](report-data/report-datasets-ssrs.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Construtor de Relatórios ajuda para caixas de diálogo, painéis e assistentes](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
+ [Caixa de diálogo Propriedades da fonte de dados, Construtor de Relatórios geral &#40;&#41;](../../2014/reporting-services/data-source-properties-dialog-box-general-report-builder.md)   
+ [Adicionar e verificar uma conexão de dados ou uma fonte de dados &#40;Construtor de Relatórios e SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)   
+ [Adicionar dados a um relatório &#40;Construtor de Relatórios e SSRS&#41;](report-data/report-datasets-ssrs.md)  
   
   

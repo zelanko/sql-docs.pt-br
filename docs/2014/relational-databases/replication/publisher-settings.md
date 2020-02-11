@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1f1100f1c19a658fa6fe4b90816dca948e640a76
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63262305"
 ---
 # <a name="sql-server-replication-publisher-settings-dialog-box"></a>Caixa de diálogo 'Configurações do Editor' de Replicação do SQL Server
@@ -46,7 +46,7 @@ ms.locfileid: "63262305"
  **Novo grupo**  
  Clique para criar um novo grupo de Publicadores. Um grupo de Publicadores é um modo conveniente de organizar Publicadores no Replication Monitor. Grupos não afetam a replicação de dados ou a relação entre servidores em uma topologia de replicação.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Iniciar o Replication Monitor](monitor/start-the-replication-monitor.md)   
  [Monitorando a Replicação](monitoring-replication.md)  
   

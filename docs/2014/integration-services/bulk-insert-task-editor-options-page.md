@@ -1,5 +1,5 @@
 ---
-title: Em massa Editor da tarefa de inserção (página Opções) | Microsoft Docs
+title: Editor da tarefa inserção em massa (página Opções) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e7cb19e3ba2f58a39ffd87bdabc6eb1ad18a1d18
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061187"
 ---
 # <a name="bulk-insert-task-editor-options-page"></a>Editor da Tarefa Inserção em Massa (página de Opções)
-  Use a página **Opções** da caixa de diálogo **Editor da Tarefa Inserção em Massa** para definir as propriedades da operação de inserção em massa. A tarefa Inserção em Massa copia uma grande quantidade de dados em uma exibição ou tabela do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+  Use a página **Opções** da caixa de diálogo **Editor da Tarefa Inserção em Massa** para definir as propriedades da operação de inserção em massa. A tarefa inserção em massa copia grandes quantidades de dados em [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uma tabela ou exibição.  
   
  Para saber mais sobre como trabalhar com inserções em massa, consulte [Tarefa Inserção em Massa](control-flow/bulk-insert-task.md) e [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql).  
   
@@ -49,7 +49,7 @@ ms.locfileid: "66061187"
 |**Manter nulos**|Selecione para reter valores nulos durante a operação de inserção em massa, em vez de inserir qualquer valor padrão para colunas vazias.|  
 |**Habilitar inserção de identidade**|Selecione para inserir valores existentes em uma coluna de identidade.|  
 |**Bloqueio de tabela**|Selecione para bloquear a tabela durante a inserção em massa.|  
-|**Acionadores**|Selecione para acionar qualquer inserção, atualização ou exclusão de gatilhos na tabela.|  
+|**Gatilhos de incêndio**|Selecione para acionar qualquer inserção, atualização ou exclusão de gatilhos na tabela.|  
   
  **SortedData**  
  Especifique a cláusula ORDER BY na instrução de inserção em massa. O nome da coluna que você fornece deve ser uma coluna válida na tabela de destino. O padrão é `false`. Isto significa que os dados não são classificados por uma cláusula ORDER BY.  
@@ -60,10 +60,10 @@ ms.locfileid: "66061187"
 > [!NOTE]  
 >  Cada linha que não pode ser importada pela operação de carregamento em massa é contada como um erro.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor da Tarefa Inserção em Massa &#40;Página Geral&#41;](general-page-of-integration-services-designers-options.md)   
- [Editor da Tarefa Inserção em Massa &#40;Página Conexão&#41;](../../2014/integration-services/bulk-insert-task-editor-connection-page.md)   
+ [Editor da tarefa inserção em massa &#40;página Geral&#41;](general-page-of-integration-services-designers-options.md)   
+ [Editor da tarefa inserção em massa &#40;página conexão&#41;](../../2014/integration-services/bulk-insert-task-editor-connection-page.md)   
  [Página Expressões](expressions/expressions-page.md)   
  [Fluxo de Controle](control-flow/control-flow.md)  
   

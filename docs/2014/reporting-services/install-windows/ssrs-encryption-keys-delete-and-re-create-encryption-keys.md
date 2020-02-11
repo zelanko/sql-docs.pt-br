@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c293b7007ccb8a42928c02ed37bcaacb898504f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108695"
 ---
 # <a name="delete-and-re-create-encryption-keys--ssrs-configuration-manager"></a>Excluir e recriar chaves de criptografia (Gerenciador de configurações do SSRS)
@@ -36,7 +36,7 @@ ms.locfileid: "66108695"
   
  Você poderá recriar a chave simétrica somente quando o servidor de relatórios se encontrar em um estado de funcionamento. Recriar as chaves de criptografia e criptografar novamente o conteúdo interrompe as operações do servidor. Você deve colocar o servidor offline enquanto a nova criptografia estiver em andamento. Não deve haver nenhuma solicitação feita ao servidor de relatórios durante a nova criptografia.  
   
- Você pode usar a ferramenta Configuração do Reporting Services ou o utilitário **rskeymgmt** para redefinir a chave simétrica e os dados criptografados. Para obter mais informações sobre como a chave simétrica é criada, consulte [Inicializar um servidor de relatório &#40;SSRS Configuration Manager&#41;](ssrs-encryption-keys-initialize-a-report-server.md).  
+ Você pode usar a ferramenta Configuração do Reporting Services ou o utilitário **rskeymgmt** para redefinir a chave simétrica e os dados criptografados. Para obter mais informações sobre como a chave simétrica é criada, consulte [Inicializar um servidor de relatório &#40;Gerenciador de Configurações do SSRS&#41;](ssrs-encryption-keys-initialize-a-report-server.md).  
   
 #### <a name="how-to-re-create-encryption-keys-reporting-services-configuration-tool"></a>Como recriar chaves de criptografia (ferramenta Configuração do Reporting Services)  
   
@@ -115,8 +115,8 @@ ms.locfileid: "66108695"
   
 4.  Para assinaturas que usam dados criptografados (isso inclui a extensão de entrega Compartilhamento de Arquivos e qualquer extensão de entrega de terceiros que use criptografia), abra cada assinatura e digite novamente as credenciais. As assinaturas que usam a entrega de email do Servidor de Relatórios não usam dados criptografados e não são afetadas pela alteração da chave.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Configurar e gerenciar chaves de criptografia &#40;SSRS Configuration Manager&#41;](ssrs-encryption-keys-manage-encryption-keys.md)   
- [Armazenar dados criptografados do servidor de relatório &#40;Gerenciador de configurações do SSRS&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+ [Armazene dados criptografados do servidor de relatório &#40;Configuration Manager SSRS&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   
   

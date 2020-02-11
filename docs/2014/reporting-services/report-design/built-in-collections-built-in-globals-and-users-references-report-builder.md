@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ef0438dfa0750c2a516a801a2d81b5d1c0b49721
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106435"
 ---
 # <a name="built-in-globals-and-users-references-report-builder-and-ssrs"></a>Referências globais internas e referências de usuários (Construtor de Relatórios e SSRS)
@@ -29,7 +29,7 @@ ms.locfileid: "66106435"
 |**Membro**|**Tipo**|**Descrição**|  
 |----------------|--------------|---------------------|  
 |ExecutionTime|`DateTime`|A data e a hora em que o relatório começou a ser executado.|  
-|PageNumber|`Integer`|O número da página atual em relação às quebras de página que redefinem o número da página. No início do processamento do relatório, o valor inicial é definido como 1. O número da página é incrementado para cada página renderizada.<br /><br /> Para numerar páginas dentro de quebras de página para um retângulo, uma região de dados, um grupo de região de dados ou um mapa, na propriedade PageBreak, defina a propriedade ResetPageNumber `True`. Sem suporte em grupos de hierarquias de colunas tablix.<br /><br /> PageNumber somente pode ser usada em uma expressão em um cabeçalho ou rodapé de página.|  
+|PageNumber|`Integer`|O número da página atual em relação às quebras de página que redefinem o número da página. No início do processamento do relatório, o valor inicial é definido como 1. O número da página é incrementado para cada página renderizada.<br /><br /> Para numerar páginas dentro de quebras de página para um retângulo, uma região de dados, um grupo de região de dados ou um mapa, na Propriedade PageBreak, `True`defina a propriedade ResetPageNumber como. Sem suporte em grupos de hierarquias de colunas tablix.<br /><br /> PageNumber somente pode ser usada em uma expressão em um cabeçalho ou rodapé de página.|  
 |ReportFolder|`String`|O caminho completo para a pasta que contém o relatório. Isso não inclui a URL do servidor de relatório.|  
 |ReportName|`String`|O nome do relatório conforme armazenado no banco de dados do servidor de relatório.|  
 |ReportServerUrl|`String`|A URL do servidor de relatório na qual o relatório está sendo executado.|  
@@ -44,7 +44,7 @@ ms.locfileid: "66106435"
 ### <a name="renderformat"></a>RenderFormat  
  A tabela a seguir descreve os membros de `RenderFormat`.  
   
-|Membro|Tipo|Descrição|  
+|Membro|Type|DESCRIÇÃO|  
 |------------|----------|-----------------|  
 |Nome|`String`|O nome do renderizador conforme registrado no arquivo de configuração RSReportServer.<br /><br /> Disponível durante partes específicas do ciclo de processamento/renderização do relatório.|  
 |IsInteractive|`Boolean`|Se a solicitação de renderização atual usa um formato de renderização interativo.|  
@@ -57,13 +57,15 @@ ms.locfileid: "66106435"
   
      `=Globals.PageNumber & " of " & Globals.TotalPages`  
   
--   Esta expressão fornece o nome do relatório e a hora em que foi executado. A hora é formatada com a cadeia de caracteres de formatação do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] para data abreviada:  
+-   Esta expressão fornece o nome do relatório e a hora em que foi executado. A hora é formatada com a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] cadeia de caracteres de formatação para data abreviada:  
   
      `=Globals.ReportName & ", dated " & Format(Globals.ExecutionTime, "d")`  
   
 -   Esta expressão, colocada na caixa de diálogo **Visibilidade da Coluna** para uma coluna selecionada, exibe a coluna somente quando o relatório é exportado para o Excel. Caso contrário, a coluna fica oculta.  
   
-     `EXCELOPENXML` se refere ao formato do Excel que é incluído no Office 2007. `EXCEL` se refere ao formato do Excel que é incluído no Office 2003.  
+     
+  `EXCELOPENXML` se refere ao formato do Excel que é incluído no Office 2007. 
+  `EXCEL` se refere ao formato do Excel que é incluído no Office 2003.  
   
      `=IIF(Globals!RenderFormat.Name = "EXCELOPENXML" OR Globals!RenderFormat.Name = "EXCEL", false, true)`  
   
@@ -88,9 +90,9 @@ ms.locfileid: "66106435"
 ### <a name="identifying-userid-for-snapshot-or-history-reports"></a>Identificando a ID de usuário para relatórios de instantâneo ou de histórico  
  Em alguns casos, os relatórios que incluem a variável *User!UserID* não mostrarão os dados de relatório específicos do usuário atual que está exibindo o relatório.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Expressões &#40;Construtor de Relatórios e SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Caixa de diálogo Expressão &#40;Construtor de Relatórios&#41;](../expression-dialog-box-report-builder.md)   
+ [Caixa de diálogo expressão &#40;Construtor de Relatórios&#41;](../expression-dialog-box-report-builder.md)   
  [Tipos de dados em expressões &#40;Construtor de Relatórios e SSRS&#41;](expressions-report-builder-and-ssrs.md)   
  [Formatando números e datas &#40;Construtor de Relatórios e SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  

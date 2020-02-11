@@ -16,16 +16,16 @@ ms.assetid: 2c88c015-04fc-429b-84b2-835596a28b65
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 54b3603c18d814276d700a220fbee5e16ed77502
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67899028"
 ---
 # <a name="functions-on-string-values---contains"></a>Funções em Valores da Cadeia de Caracteres – contains
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Retorna um valor do tipo xs: Boolean indicando se o valor de *$arg1* contém um valor de cadeia de caracteres especificado por *US $arg2*.  
+  Retorna um valor do tipo xs: booliano que indica se o valor de *$ARG 1* contém um valor de cadeia de caracteres especificado por *$ARG 2*.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,31 +35,31 @@ fn:contains ($arg1 as xs:string?, $arg2 as xs:string?) as xs:boolean?
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *$arg1*  
+ *$arg 1*  
  Valor da cadeia de caracteres para testar.  
   
- *$arg2*  
+ *$arg 2*  
  Subcadeia de caracteres a ser procurada.  
   
 ## <a name="remarks"></a>Comentários  
- Se o valor de *US $arg2* for uma cadeia de caracteres de comprimento zero, a função retornará **verdadeiro**. Se o valor de *$arg1* é uma cadeia de caracteres de comprimento zero e o valor de *US $arg2* não é uma cadeia de caracteres de comprimento zero, a função retornará **False**.  
+ Se o valor de *$ARG 2* for uma cadeia de caracteres de comprimento zero, a função retornará **true**. Se o valor de *$ARG 1* for uma cadeia de caracteres de comprimento zero e o valor de *$ARG 2* não for uma cadeia de caracteres de comprimento zero, a função retornará **false**.  
   
- Se o valor de *$arg1* ou *US $arg2* é a sequência vazia, o argumento é tratado como a cadeia de caracteres de comprimento zero.  
+ Se o valor de *$ARG 1* ou *$ARG 2* for a sequência vazia, o argumento será tratado como a cadeia de caracteres de comprimento zero.  
   
  A função contains() usa a ordenação de ponto de código Unicode padrão do XQuery para a comparação de cadeias de caracteres.  
   
- O valor de subcadeia de caracteres especificado para *US $arg2* deve ser menor ou igual a 4000 caracteres. Se o valor especificado é maior que 4000 caracteres, ocorrerá uma condição de erro dinâmico e a função Contains () retorna uma sequência vazia em vez de um valor booleano **verdadeira** ou **falso**. O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não gera erros dinâmicos em expressões XQuery.  
+ O valor da subcadeia de caracteres especificado para *$ARG 2* deve ser menor ou igual a 4000 caracteres. Se o valor especificado for maior que 4000 caracteres, ocorrerá uma condição de erro dinâmico e a função Contains () retornará uma sequência vazia em vez de um valor booliano de **true** ou **false**. O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não gera erros dinâmicos em expressões XQuery.  
   
- Para obter comparações diferencia maiusculas de minúsculas, o [maiusculas](../xquery/functions-on-string-values-upper-case.md) ou funções em letras minúsculas podem ser usadas.  
+ Para obter comparações que não diferenciam maiúsculas de minúsculas, as funções [com](../xquery/functions-on-string-values-upper-case.md) letras maiúsculas ou minúsculas podem ser usadas.  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>Caracteres suplementares (pares substitutos)  
- O comportamento de pares substitutos em funções XQuery depende do nível de compatibilidade do banco de dados e, em alguns casos, o URI do namespace padrão para funções. Para obter mais informações, consulte a seção "XQuery funções têm consciência de substitutos" no tópico [alterações recentes em recursos do mecanismo de banco de dados no SQL Server 2016](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md). Consulte também [nível de compatibilidade de ALTER DATABASE &#40;Transact-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) e [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
+ O comportamento de pares substitutos em funções XQuery depende do nível de compatibilidade do banco de dados e, em alguns casos, o URI do namespace padrão para funções. Para obter mais informações, consulte a seção "as funções do XQuery são de reconhecimento de substitutos" no tópico [alterações significativas em mecanismo de banco de dados recursos no SQL Server 2016](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md). Consulte também o [nível de compatibilidade de ALTER DATABASE &#40;&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) e [agrupamento e suporte a Unicode](../relational-databases/collations/collation-and-unicode-support.md)do Transact-SQL.  
   
 ## <a name="examples"></a>Exemplos  
- Este tópico fornece exemplos de XQuery em instâncias XML armazenadas em várias colunas de tipo xml no banco de dados AdventureWorks.  
+ Este tópico fornece exemplos de XQuery em relação a instâncias XML armazenadas em várias colunas do tipo XML no banco de dados AdventureWorks.  
   
-### <a name="a-using-the-contains-xquery-function-to-search-for-a-specific-character-string"></a>A. Usando a função contains() XQuery para pesquisar uma cadeia de caracteres específica  
- A consulta a seguir localiza produtos que contêm a palavra Aerodynamic nas descrições resumidas. A consulta retorna o ProductID e o <`Summary`> elemento para esses produtos.  
+### <a name="a-using-the-contains-xquery-function-to-search-for-a-specific-character-string"></a>a. Usando a função contains() XQuery para pesquisar uma cadeia de caracteres específica  
+ A consulta a seguir localiza produtos que contêm a palavra Aerodynamic nas descrições resumidas. A consulta retorna o ProductID e o <`Summary` elemento> para esses produtos.  
   
 ```  
 --The product model description document uses  
@@ -108,7 +108,7 @@ where CatalogDescription.exist('
   
  `</Prod>`  
   
-## <a name="see-also"></a>Consulte também  
- [Funções XQuery em Tipos de Dados XML](../xquery/xquery-functions-against-the-xml-data-type.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Funções XQuery em tipos de dados xml](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

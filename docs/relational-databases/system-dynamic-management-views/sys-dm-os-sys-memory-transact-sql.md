@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_sys_memory (Transact-SQL) | Microsoft Docs
+title: sys. dm_os_sys_memory (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,23 +21,23 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4ca8b0f6e700e97c5cbc33964cc450ad54ea1a7e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67899710"
 ---
-# <a name="sysdmossysmemory-transact-sql"></a>sys.dm_os_sys_memory (Transact-SQL)
+# <a name="sysdm_os_sys_memory-transact-sql"></a>sys.dm_os_sys_memory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   Retorna informações de memória do sistema operacional.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é limitada pelos e responde às condições de memória externa no nível do sistema operacional e os limites físicos do hardware subjacente. Determinar o estado geral do sistema é uma parte importante da avaliação do uso de memória do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]O  está vinculado, e responde, às condições de memória externa, ao nível do sistema operacional e dos limites físicos do hardware subjacente.  Determinar o estado geral do sistema é uma parte importante da avaliação do uso de memória do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
->  Chamá-lo partir [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use o nome **sys.dm_pdw_nodes_os_sys_memory**.  
+>  Para chamá-lo [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] de [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]ou, use o nome **Sys. dm_pdw_nodes_os_sys_memory**.  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |**total_physical_memory_kb**|**bigint**|Tamanho total da memória física disponível para o sistema operacional, em kilobyte (KB).|  
 |**available_physical_memory_kb**|**bigint**|Tamanho da memória física disponível, em KB.|  
@@ -46,10 +46,10 @@ ms.locfileid: "67899710"
 |**system_cache_kb**|**bigint**|Quantidade total de memória cache do sistema, em KB.|  
 |**kernel_paged_pool_kb**|**bigint**|Quantidade total da reserva de memória do kernel paginável, em KB.|  
 |**kernel_nonpaged_pool_kb**|**bigint**|Quantidade total da reserva de memória do kernel não paginável, em KB.|  
-|**system_high_memory_signal_state**|**bit**|Estado do sistema de notificação do recurso de memória alta. Um valor de 1 indica o sinal de memória alto determinado pelo Windows. Para obter mais informações, consulte [CreateMemoryResourceNotification](https://go.microsoft.com/fwlink/?LinkId=82427) na biblioteca MSDN.|  
-|**system_low_memory_signal_state**|**bit**|Estado do sistema de notificação do recurso de memória insuficiente. Um valor de 1 indica que o sinal de memória insuficiente definido pelo Windows. Para obter mais informações, consulte [CreateMemoryResourceNotification](https://go.microsoft.com/fwlink/?LinkId=82427) na biblioteca MSDN.|  
-|**system_memory_state_desc**|**nvarchar(256)**|Descrição do estado da memória. Veja a tabela abaixo.|  
-|**pdw_node_id**|**int**|**Aplica-se ao**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador para o nó que essa distribuição é no.|  
+|**system_high_memory_signal_state**|**bit**|Estado do sistema de notificação do recurso de memória alta. Um valor de 1 indica o sinal de memória alto determinado pelo Windows. Para obter mais informações, consulte [CreateMemoryResourceNotification](https://go.microsoft.com/fwlink/?LinkId=82427) na biblioteca do MSDN.|  
+|**system_low_memory_signal_state**|**bit**|Estado do sistema de notificação do recurso de memória insuficiente. Um valor de 1 indica que o sinal de memória insuficiente definido pelo Windows. Para obter mais informações, consulte [CreateMemoryResourceNotification](https://go.microsoft.com/fwlink/?LinkId=82427) na biblioteca do MSDN.|  
+|**system_memory_state_desc**|**nvarchar(256)**|Descrição do estado da memória. Consulte a tabela abaixo.|  
+|**pdw_node_id**|**int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador do nó em que essa distribuição está.|  
   
 |Condição|Valor|  
 |---------------|-----------|  
@@ -61,9 +61,9 @@ ms.locfileid: "67899710"
 ## <a name="permissions"></a>Permissões  
  , é necessário ter permissão VIEW SERVER STATE no servidor.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Sistema operacional SQL Server relacionados exibições de gerenciamento dinâmico &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+ [SQL Server exibições de gerenciamento dinâmico relacionadas ao sistema operacional &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   
 

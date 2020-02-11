@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c72a3c52da21ca7af10103010500bb43fd46a10a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062606"
 ---
 # <a name="algorithm-parameters-dialog-box-mining-models-view"></a>Caixa de diálogo Parâmetros de Algoritmo (Exibição de Modelos de Mineração)
@@ -30,12 +30,12 @@ ms.locfileid: "66062606"
   
  A lista a seguir descreve as colunas disponíveis.  
   
-|coluna|Descrição|  
+|Coluna|DESCRIÇÃO|  
 |------------|-----------------|  
 |**Parâmetro**|Liste o nome do parâmetro.|  
-|**Value**|Digite um valor somente se desejar alterar o valor padrão do parâmetro.|  
+|**Valor**|Digite um valor somente se desejar alterar o valor padrão do parâmetro.|  
 |**Default**|Liste um valor padrão do parâmetro que o algoritmo utilizará caso você não forneça um valor na coluna **Valor** .|  
-|**Range**|Liste o intervalo de possíveis valores que se pode digitar na coluna **Valor** . Os intervalos podem ser um dos seguintes:<br /><br /> Uma lista distinta, como 1, 2, 3<br /><br /> Um intervalo inclusivo, como [0, 100]<br /><br /> Um intervalo exclusivo, como (0,...)<br /><br /> Uma combinação, como [0...)|  
+|**Intervalo**|Liste o intervalo de possíveis valores que se pode digitar na coluna **Valor** . Os intervalos podem ser um dos seguintes:<br /><br /> Uma lista discreta, como 1, 2, 3<br /><br /> Um intervalo inclusivo, como [0, 100]<br /><br /> Um intervalo exclusivo, como (0,...)<br /><br /> Uma combinação, como [0,...)|  
   
  **Descrição**  
  Descreve o parâmetro selecionado na lista **Parâmetros** .  
@@ -48,9 +48,9 @@ ms.locfileid: "66062606"
   
  Se você excluir da lista um dos parâmetros de algoritmo do Analysis Services padrão, o parâmetro ainda será usado no modelo, mas com os valores padrão daquele parâmetro. O parâmetro não é excluído permanentemente e aparecerá da próxima vez que você abrir a caixa de diálogo.  
   
-## <a name="see-also"></a>Consulte também  
- [Algoritmos de mineração de dados &#40;Analysis Services – Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Exibição de modelos de mineração &#40;Designer de modelo de mineração de dados&#41;](mining-models-view-data-mining-model-designer.md)   
- [Movendo objetos de Mineração de dados](data-mining/moving-data-mining-objects.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Algoritmos de mineração de dados &#40;mineração de dados Analysis Services&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Exibição de modelos de mineração &#40;designer de modelo de mineração de dados&#41;](mining-models-view-data-mining-model-designer.md)   
+ [Movendo objetos de mineração de dados](data-mining/moving-data-mining-objects.md)  
   
   

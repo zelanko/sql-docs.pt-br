@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 52e25a2977a324277fc9688d45911e2c8be59005
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106943"
 ---
 # <a name="add-a-background-image-report-builder-and-ssrs"></a>Adicionar uma imagem de plano de fundo (Construtor de Relatórios e SSRS)
@@ -67,7 +67,7 @@ ms.locfileid: "66106943"
   
          Para as imagens de tela de fundo em um gráfico, **BackgroundRepeat** poderá ser definido como **Default**, **Repeat**, **Fit**e **Clip**, mas não **RepeatX** ou **RepeatY**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Imagens &#40;Construtor de Relatórios e SSRS&#41;](images-report-builder-and-ssrs.md)   
  [Caixa de diálogo Propriedades da Imagem, Geral &#40;Construtor de Relatórios e SSRS&#41;](../image-properties-dialog-box-general-report-builder-and-ssrs.md)  
   

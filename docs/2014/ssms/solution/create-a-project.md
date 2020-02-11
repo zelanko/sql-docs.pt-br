@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3c36d070701712158587f283df0f55cffadac2ca
-ms.sourcegitcommit: d0d2505d3d517e7b3ea9c4aef4d6fd08aeb28d54
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67197592"
 ---
 # <a name="create-a-project"></a>Criar um projeto
@@ -69,7 +69,7 @@ ms.locfileid: "67197592"
   
     -   Nomes reservados para o Microsoft Windows ou MS-DOS, como ("nul", "aux", "con", "com1", "lpt1" e assim por diante)  
   
-     **Local**  
+     **Localidade**  
      Insira o local onde deseja criar seu projeto ou escolha um na lista.  
   
      **Procurar**  
@@ -91,15 +91,15 @@ ms.locfileid: "67197592"
   
 4.  Clique em **OK**.  
   
- Você pode definir um nome para o projeto de script, mas os nomes de pastas são definidos pelo [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] e não podem ser alterados. Você pode configurar a unidade e a especificação do caminho do conjunto comum de pastas usando a caixa de diálogo **Adicionar Novo Projeto** . No **Gerenciador de Soluções**, clique com o botão direito do mouse no ícone da solução e clique em **Adicionar**. O local padrão das pastas do projeto de script é: C:\Documents and Settings\\*username*\Meus Documentos\SQL Server Management Studio\Projetos\\.  
+ Você pode definir um nome para o projeto de script, mas os nomes de pastas são definidos pelo [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] e não podem ser alterados. Você pode configurar a unidade e a especificação do caminho do conjunto comum de pastas usando a caixa de diálogo **Adicionar Novo Projeto** . No **Gerenciador de Soluções**, clique com o botão direito do mouse no ícone da solução e clique em **Adicionar**. O local padrão para pastas de projeto de script é: C:\Documents and Settings\\*username*\My Documents\SQL Server Management Studio\Projects\\.  
   
-## <a name="see-also"></a>Consulte também  
- [Gerenciador de soluções](solution-explorer.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Gerenciador de Soluções](solution-explorer.md)   
  [Adicionar um projeto existente a uma solução](add-an-existing-project-to-a-solution.md)   
  [Adicionar novos itens a um projeto](add-new-items-to-a-project.md)   
  [Adicionar itens existentes a um projeto](add-existing-items-to-a-project.md)   
- [Alterar o local padrão para projetos](change-the-default-location-for-projects.md)   
- [Remover ou excluir um Item ou projeto](remove-or-delete-an-item-or-project.md)   
+ [Alterar o local padrão dos projetos](change-the-default-location-for-projects.md)   
+ [Remover ou excluir um item ou projeto](remove-or-delete-an-item-or-project.md)   
  [Excluir uma solução](delete-a-solution.md)  
   
   

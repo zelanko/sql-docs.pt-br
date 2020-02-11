@@ -1,5 +1,5 @@
 ---
-title: (Assistente de relatório) do construtor de consultas | Microsoft Docs
+title: Construtor de Consultas (Assistente de relatório) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8d289466fcff56a78172c54f24a093e0af169484
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108003"
 ---
 # <a name="query-builder-report-wizard"></a>Construtor de Consultas (Assistente de Relatório)
@@ -34,13 +34,13 @@ ms.locfileid: "66108003"
  Você também pode importar uma consulta de outro relatório.  
   
 ## <a name="query-builder-options"></a>Opções do Construtor de Consultas  
- **Editar como Texto**  
+ **Editar como texto**  
  Alterna entre os designers de consultas gráficas e baseados em texto, se ambos funcionarem para a consulta.  
   
  **Importar**  
  Abre a caixa de diálogo **Importar Consulta** e exibe arquivos .rdl e .sql de qualquer relatório disponível. Você pode usar a consulta importada como ela está ou pode modificá-la no construtor de consultas.  
   
- **! (Run)**  
+ **! (Executar)**  
  Executa a consulta e retorna um conjunto de resultados se a consulta for válida. Observe que você não poderá executar a consulta se ela for uma expressão. Para verificar uma consulta baseada em expressão, você deve visualizar o relatório.  
   
  **Tipo de comando**  
@@ -52,7 +52,7 @@ ms.locfileid: "66108003"
  **Painel de resultados**  
  Mostra o conjunto de resultados retornado da consulta.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Ajuda do Assistente de Relatório](../../2014/reporting-services/report-wizard-help.md)  
   

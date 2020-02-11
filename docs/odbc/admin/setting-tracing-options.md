@@ -1,5 +1,5 @@
 ---
-title: Configurando opções de rastreamento | Microsoft Docs
+title: Definindo opções de rastreamento | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,52 +15,52 @@ ms.assetid: 44404a79-b716-4bc1-9ffb-70cd8239d237
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 13e8caf9f3a9643f8063d6227258245a603f1665
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67901630"
 ---
 # <a name="setting-tracing-options"></a>Configurar opções de rastreamento
-O **rastreamento** guia o **administrador de fonte de dados ODBC** caixa de diálogo lhe permite configurar o modo como as chamadas de função ODBC são rastreadas.  
+A guia **rastreamento** da caixa de diálogo **administrador de fonte de dados ODBC** permite que você configure a maneira como as chamadas de função ODBC são rastreadas.  
   
 ## <a name="how-tracing-works"></a>Como funciona o rastreamento  
- Quando você inicia o rastreamento do **rastreamento** guia, o Gerenciador de Driver registrará em log todas as chamadas de função ODBC para todos, subsequentemente, executar aplicativos. Chamadas de função ODBC de aplicativos que são executados antes que o rastreamento seja iniciado não estão conectadas. Chamadas de função ODBC são registradas no arquivo de log que você especificar.  
+ Quando você iniciar o rastreamento na guia **rastreamento** , o Gerenciador de driver registrará todas as chamadas de função ODBC para todos os aplicativos executados posteriormente. As chamadas de função ODBC de aplicativos que estão em execução antes de o rastreamento ser iniciado não são registradas. As chamadas de função ODBC são registradas em um arquivo de log que você especificar.  
   
- Rastreamento será interrompido depois de clicar em **Parar rastreamento agora**. Lembre-se de que, enquanto o rastreamento estiver ativada, o arquivo de log continua a aumentar e que isso afeta o desempenho de todos os seus aplicativos de ODBC.  
+ O rastreamento é interrompido somente depois que você clica em **parar rastreamento agora**. Lembre-se de que enquanto o rastreamento está ativado, o arquivo de log continua a aumentar e isso afeta o desempenho de todos os seus aplicativos ODBC.  
   
- Para obter mais informações sobre rastreamento, consulte [rastreamento](../../odbc/reference/develop-app/tracing.md).  
+ Para obter mais informações sobre rastreamento, consulte [Tracing](../../odbc/reference/develop-app/tracing.md).  
   
 ### <a name="changes-in-odbc-tracing"></a>Alterações no rastreamento ODBC  
- Antes do SP2 do MDAC 2.7, rastreamento ODBC foi só pode ocorrer em uma base de todo o computador, no qual o rastreamento captura expostos detalhes sobre todos os aplicativos ODBC em execução em todas as identidades. Isso incluiu o rastreamento para atividades relacionadas ao ODBC que podem ocorrer em processos criados ou executados em nome de outras contas de usuário local e entidades de segurança internas, como o serviço Local e o serviço de rede.  
+ Antes do MDAC 2,7 SP2, o rastreamento de ODBC só permitia ocorrer em toda a máquina, na qual o rastreamento captura detalhes expostos sobre todos os aplicativos ODBC em execução sob qualquer identidade. Isso inclui o rastreamento de atividades relacionadas a ODBC que podem ocorrer para processos criados ou executados em nome de outras contas de usuário local e entidades de segurança internas, como o serviço local e o serviço de rede.  
   
- Por padrão, o ODBC rastreamento agora usa o modo por usuário. Se você for um administrador local, no entanto, você ainda poderá habilitar o rastreamento de todo o computador usando o administrador de fonte de dados ODBC.  
+ Por padrão, o rastreamento ODBC agora usa o modo por usuário. No entanto, se você for um administrador local, ainda poderá habilitar o rastreamento em todo o computador usando o administrador de fonte de dados ODBC.  
   
- Para configurar o modo de rastreamento de ODBC:  
+ Para configurar o modo de rastreamento ODBC:  
   
-1.  Se for necessário, faça logon usando uma conta que tenha associação no grupo de Administradores Local.  
+1.  Se necessário, faça logon usando uma conta que tenha associação no grupo Administradores local.  
   
-2.  Em Ferramentas administrativas, abra o administrador de fonte de dados ODBC.  
+2.  Em ferramentas administrativas, abra o administrador de fonte de dados ODBC.  
   
-3.  Clique o **rastreamento** guia.  
+3.  Clique na guia **rastreamento** .  
   
-4.  Configurar o modo de rastreamento usando o **rastreamento de todo o computador para todas as identidades de usuário** caixa de seleção:  
+4.  Configure o modo de rastreamento usando a caixa de seleção **rastreamento em todo o computador para todas as identidades de usuário** :  
   
-5.  Para habilitar o rastreamento de todo o computador, selecione a caixa de seleção.  
+5.  Para habilitar o rastreamento em todo o computador, marque a caixa de seleção.  
   
-6.  Para retornar para o rastreamento por usuário, desmarque a caixa de seleção.  
+6.  Para retornar ao rastreamento por usuário, desmarque a caixa de seleção.  
   
 7.  Clique em **Aplicar**.  
   
 > [!NOTE]  
->  Se você já tiver iniciado o rastreamento em um modo, você precisa interromper o rastreamento e alternar para outro modo para o modo a ser alterado com êxito.  
+>  Se você já tiver iniciado o rastreamento em um modo, será necessário interromper o rastreamento e alternar para o outro modo para que o modo seja alterado com êxito.  
   
 > [!IMPORTANT]  
->  Rastreamento de todo o computador deve ser habilitado apenas quando for necessário; Caso contrário, ele deverá ser deixado desativado.  
+>  O rastreamento em todo o computador só deve ser habilitado quando necessário; caso contrário, ela deve ser deixada desativada.  
   
-## <a name="visual-studio-analyzer-tracing"></a>Rastreamento do Visual Studio Analyzer  
+## <a name="visual-studio-analyzer-tracing"></a>Rastreamento de Visual Studio Analyzer  
   
 > [!IMPORTANT]  
->  Suporte para o analisador do Visual Studio foi removido a partir do Windows 8 (Visual Studio Analyzer foi incluído apenas em versões mais antigas do Visual Studio.). Para obter uma alternativa de mecanismo de solução de problemas, use o rastreamento da oferta.  
+>  O suporte para Visual Studio Analyzer foi removido a partir do Windows 8 (Visual Studio Analyzer foi incluído apenas em versões anteriores do Visual Studio.). Para obter um mecanismo de solução de problemas alternativo, use o rastreamento de LICITAção.  
   
- Rastreamento do Visual Studio® Analyzer fornece desempenho e informações de depuração sobre a camada ODBC. Todos os eventos de saída serão disparados na interface de nível superior para apresentar uma imagem como precisas quanto possível sobre tempo gasto em componentes de ODBC. Rastreamento do Visual Studio Analyzer exige a qualquer fonte de eventos para registrar quando a fonte é configurada. Para obter mais informações sobre esse tipo de rastreamento, consulte a documentação do Visual Studio.
+ O rastreamento do Visual Studio® Analyzer fornece informações de desempenho e depuração sobre a camada ODBC. Todos os eventos de saída serão acionados na interface de nível superior para apresentar o máximo possível de uma imagem com relação ao tempo gasto em componentes ODBC. O rastreamento de Visual Studio Analyzer exige que qualquer origem de evento seja registrada quando a fonte for configurada. Para obter mais informações sobre esse tipo de rastreamento, consulte a documentação do Visual Studio.

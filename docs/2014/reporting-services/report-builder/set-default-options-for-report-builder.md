@@ -1,5 +1,5 @@
 ---
-title: Caixa de diálogo, configurações (construtor de relatórios) de opções do construtor de relatórios | Microsoft Docs
+title: Caixa de diálogo opções de Construtor de Relatórios, configurações (Construtor de Relatórios) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bae94dfd09495d271b668390b17059e067f092c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107621"
 ---
 # <a name="report-builder-options-dialog-box-settings-report-builder"></a>Caixa de diálogo Opções do Construtor de Relatórios, Configurações (Construtor de Relatórios)
-  Clique o **construtor de relatórios** botão e, em seguida, clique em **opções** para definir opções para mostrar arquivos e conexões recentes. Também é possível alterar o servidor de relatório padrão ou adicionar um se você não tiver um padrão.  
+  Clique no botão **Construtor de relatórios** e, em seguida, clique em **Opções** para definir opções para mostrar os arquivos e as conexões recentes. Também é possível alterar o servidor de relatório padrão ou adicionar um se você não tiver um padrão.  
   
 ## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
  **Usar este servidor de relatório ou site do SharePoint por padrão**  
@@ -45,7 +45,7 @@ ms.locfileid: "66107621"
  **Limpar todas as listas de itens recentes**  
  Limpa as listas atuais de sites e servidores recentes, bancos de dados compartilhados, conexões da fontes de dados compartilhadas e documentos.  
   
-## <a name="see-also"></a>Consulte também  
- [Ajuda do Construtor de Relatórios para caixas de diálogo, painéis e assistentes](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Construtor de Relatórios ajuda para caixas de diálogo, painéis e assistentes](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

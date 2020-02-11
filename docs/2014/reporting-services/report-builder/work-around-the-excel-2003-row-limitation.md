@@ -1,5 +1,5 @@
 ---
-title: Solução alternativa a limitação de linhas do Excel | Microsoft Docs
+title: Contornar a limitação de linha do Excel | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 84f01e85a0a93ef1f2a14b2b01b4180143153865
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107548"
 ---
 # <a name="work-around-the-excel-row-limitation"></a>Solução do problema de limitação de linhas do Excel
@@ -26,9 +26,9 @@ ms.locfileid: "66107548"
   
 1.  Abra o relatório no [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] ou no Gerenciador de Relatórios.  
   
-2.  Clique com o botão direito do mouse na linha Dados da tabela e clique em **Adicionar Grupo** > **Grupo Pai** para adicionar um grupo de tabelas externo.  
+2.  Clique com o botão direito do mouse na linha de dados na tabela e clique em **Adicionar** > grupo**pai grupo** para adicionar um grupo de tabelas externo.  
   
-     ![Selecionar o grupo pai](../media/datarow-selectparentgroup.png "Selecionar o grupo pai")  
+     ![Selecione o grupo pai](../media/datarow-selectparentgroup.png "Selecione o grupo pai")  
   
 3.  Digite a fórmula a seguir na caixa de expressão **Agrupar por** e clique em **OK** para adicionar o grupo pai.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "66107548"
   
 5.  Clique com o botão direito do mouse em **Grupo 1** na seção **Grupos de Linhas** e clique em **Propriedades do Grupo**.  
   
-     ![Exibir as propriedades do grupo](../media/groupproperties-updated.png "Exibir as propriedades do grupo")  
+     ![Exibir propriedades da grupo](../media/groupproperties-updated.png "Exibir propriedades da grupo")  
   
 6.  Na página **Classificação** da caixa de diálogo **Propriedades do Grupo** , selecione a opção de classificação padrão e clique em **Excluir**.  
   

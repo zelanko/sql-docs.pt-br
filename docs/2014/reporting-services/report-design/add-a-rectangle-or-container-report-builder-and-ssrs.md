@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f1f9750813d305834fe36f2c6ab7abfaa1d95075
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106765"
 ---
 # <a name="add-a-rectangle-or-container-report-builder-and-ssrs"></a>Adicionar um retângulo ou um contêiner (Construtor de Relatórios e SSRS)
@@ -50,9 +50,9 @@ ms.locfileid: "66106765"
 2.  Clique na seta próxima ao botão **Borda** para determinar quais lados do retângulo devem ser alterados.  
   
     > [!NOTE]  
-    >  Se você definir o estilo de linha como **duplas** e a largura da linha é 1 1/2 pt ou mais estreita, a linha talvez não pareça dupla quando você executa o relatório no construtor de relatórios, Designer de relatórios ou Gerenciador de relatórios. Ela parecerá dupla quando você exportar o relatório para outros formatos, como Microsoft Word e Acrobat PDF.  
+    >  Se você definir o estilo de linha como **duplo** e a largura da linha for de 1 1/2 pt ou mais estreita, a linha poderá não aparecer dupla quando você executar o relatório em Construtor de Relatórios, Report Designer ou Report Manager. Ela parecerá dupla quando você exportar o relatório para outros formatos, como Microsoft Word e Acrobat PDF.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Retângulos e linhas &#40;Construtor de Relatórios e SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)   
  [Comportamentos de renderização &#40;Construtor de Relatórios e SSRS&#41;](rendering-behaviors-report-builder-and-ssrs.md)  
   

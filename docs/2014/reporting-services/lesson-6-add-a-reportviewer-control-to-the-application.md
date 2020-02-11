@@ -11,13 +11,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: dfce5e2bdf71dfb58481fedf05794d3603285449
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108417"
 ---
-# <a name="lesson-6-add-a-reportviewer-control-to-the-application"></a>Lição 6: Adicionar um controle ReportViewer ao aplicativo
+# <a name="lesson-6-add-a-reportviewer-control-to-the-application"></a>Lição 6: adicionar um controle ReportViewer ao aplicativo
   Depois que você criar o relatório filho usando o Assistente de Relatório, a próxima etapa será adicionar um controle ReportViewer ao aplicativo de site.  
   
 ### <a name="to-add-a-reportviewer-control-to-the-application"></a>Para adicionar um controle ReportViewer ao aplicativo  
@@ -34,7 +34,7 @@ ms.locfileid: "66108417"
   
      Quando você seleciona um relatório, as instâncias das fontes de dados usadas no relatório são criadas automaticamente. O código é gerado para criar uma instância de cada DataTable (e de seu contêiner [DataSet](https://msdn.microsoft.com/library/system.data.dataset\(v=vs.100\).aspx) ). Um controle [ObjectDataSource](https://msdn.microsoft.com/library/system.web.ui.webcontrols.objectdatasource\(v=vs.100\).aspx) é adicionado à superfície de design, correspondente a cada fonte de dados usada no relatório. Esse controle do código-fonte é configurado automaticamente.  
   
-     Se você estiver usando o Microsoft Visual Studio 2012, certifique-se de que o controle ObjectDataSource está associado ao DataSet1 totalmente qualificado com o namespace do projeto, se o nome totalmente qualificado é listado no **Vyberte obchodní objekt**caixa de lista suspensa (por exemplo, Projectnamespace.DataSet1TableAdapters.ProductTableAdapter). Acesse a caixa de listagem clicando com o botão direito do mouse em ObjectDataSource e clicando em **Configurar Fonte de Dados**.  
+     Se você estiver usando Microsoft Visual Studio 2012, verifique se o controle ObjectDataSource está associado a DataSet1 que é totalmente qualificado com o namespace do projeto, se o nome totalmente qualificado estiver listado na caixa de listagem suspensa **escolher seu objeto comercial** (por exemplo, Projectnamespace. DataSet1TableAdapters. ProductTableAdapter). Acesse a caixa de listagem clicando com o botão direito do mouse em ObjectDataSource e clicando em **Configurar Fonte de Dados**.  
   
 6.  No menu Criar, clique em Criar site.  
   

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 2e38df1a24b76ee40aae3a5ab3c28dd9bca2b310
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67905526"
 ---
 # <a name="linregr2-mdx"></a>LinRegR2 (MDX)
@@ -38,25 +38,25 @@ LinRegR2(Set_Expression, Numeric_Expression_y [ ,Numeric_Expression_x ] )
  Uma expressão numérica válida, geralmente uma linguagem MDX de coordenadas de célula, que retorna um número que representa valores do eixo x.  
   
 ## <a name="remarks"></a>Comentários  
- A regressão linear, que usa o método dos mínimos quadrados, calcula a equação de uma linha de regressão (ou seja, a linha mais adequada para uma série de pontos). A linha de regressão tem a seguinte equação, em que um é a inclinação e b é a interceptação:  
+ A regressão linear, que usa o método dos mínimos quadrados, calcula a equação de uma linha de regressão (ou seja, a linha mais adequada para uma série de pontos). A linha de regressão tem a seguinte equação, em que a é a inclinação e b é a interceptação:  
   
  y = ax+b  
   
- O **LinRegR2** função avalia o setagainst especificado o primeiro expressionto numérico obter os valores para o eixo y. Em seguida, a função avalia o conjunto especificado em relação à segunda expressão numérica, se especificada, para obter os valores para o eixo x. O segundo expressionis numéricos se não for especificado, a função usa o contexto atual das células no conjunto especificado como os valores para o eixo x. Não especificando o x-axisargument frequentemente é usado com a dimensão de tempo.  
+ A função **LinRegR2** avalia a primeira expressão numérica especificada para obter os valores para o eixo y. Em seguida, a função avalia o conjunto especificado em relação à segunda expressão numérica, se especificada, para obter os valores para o eixo x. Se a segunda expressão numéricanão for especificada, a função usará o contexto atual das células no conjunto especificado como os valores para o eixo x. A não especificação do argumentode eixo x frequentemente é usada com a dimensão Tempo.  
   
- Depois de obter o conjunto de pontos, o **LinRegR2** função retorna a estatística R<sup>2</sup> que descreve o ajuste da equação linear aos pontos.  
+ Depois de obter o conjunto de pontos, a função **LinRegR2** retorna o R<sup>2</sup> estatístico que descreve o ajuste da equação linear aos pontos.  
   
 > [!NOTE]  
->  O **LinRegR2** função ignora células vazias ou células que contêm texto ou valores lógicos. Porém, a função contém células com valores zero.  
+>  A função **LinRegR2** ignora células vazias ou células que contêm texto ou valores lógicos. Porém, a função contém células com valores zero.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir retorna a estatística R<sup>2</sup> que descreve a adequação do ajuste da equação de regressão linear aos pontos para as vendas de unidade e as medidas de vendas da loja.  
+ O exemplo a seguir retorna o R<sup>2</sup> estatístico que descreve a importabilidade da equação de regressão linear para os pontos das vendas da unidade e das medidas de vendas da loja.  
   
 ```  
 LinRegR2(LastPeriods(10), [Measures].[Unit Sales],[Measures].[Store Sales])  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Referência de função MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

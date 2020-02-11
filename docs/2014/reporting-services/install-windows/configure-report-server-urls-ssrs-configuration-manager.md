@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b086d067241606b61d733fc58c358195966a1345
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108844"
 ---
 # <a name="configure-report-server-urls--ssrs-configuration-manager"></a>Configurar as URLs do servidor de relatório (Configuration Manager do SSRS)
@@ -32,17 +32,17 @@ ms.locfileid: "66108844"
 ## <a name="defining-a-report-server-url"></a>Definindo uma URL do servidor de relatório  
  A URL identifica com precisão o local de uma instância de um aplicativo de servidor de relatório em sua rede. Quando você criar a URL de um servidor de relatório, deverá especificar as seguintes partes.  
   
-|Parte|Descrição|  
+|Parte|DESCRIÇÃO|  
 |----------|-----------------|  
 |Nome do host|Uma rede TCP/IP usa um endereço IP para identificar exclusivamente um dispositivo na rede. Há um endereço IP físico para cada placa de adaptador de rede instalada em um computador. Se o endereço IP for resolvido para um cabeçalho de host, você poderá especificar esse cabeçalho. Se estiver implantando o servidor de relatório em uma rede corporativa, você poderá usar o nome de rede do computador.|  
-|Port|Uma porta TCP é um ponto de extremidade no dispositivo. O servidor de relatório escutará solicitações em uma porta designada.|  
+|Porta|Uma porta TCP é um ponto de extremidade no dispositivo. O servidor de relatório escutará solicitações em uma porta designada.|  
 |Diretório virtual|Uma porta normalmente é compartilhada por vários serviços Web ou aplicativos. Por esse motivo, uma URL de servidor de relatório sempre inclui um diretório virtual que corresponde ao aplicativo que obtém a solicitação. Você deve especificar nomes de diretórios virtuais exclusivos para cada aplicativo do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que escute no mesmo endereço IP e porta.|  
 |Configurações SSL|As URLs no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] podem ser configuradas para usar um certificado SSL existente que você instalou anteriormente no computador. Para obter mais informações, veja [Configurar conexões SSL em um Servidor de Relatórios do Modo Nativo](../security/configure-ssl-connections-on-a-native-mode-report-server.md) nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
   
 ## <a name="default-urls"></a>URLs padrão  
  Quando você acessa um servidor de relatório ou Gerenciador de Relatórios por meio de sua URL, a URL deve incluir o nome do host, não o endereço IP. Em uma rede TCP/IP, o endereço IP será resolvido para um nome de host (ou o nome de rede do computador). Se você usou os valores padrão para configurar URLs, deverá poder acessar o serviço Web Servidor de Relatório usando URLs que especifiquem o nome do computador ou localhost como o nome do host:  
   
--   http://\<computername>/reportserver  
+-   http://\<ComputerName>/ReportServer  
   
 -   http://localhost/reportserver  
   
@@ -51,7 +51,7 @@ ms.locfileid: "66108844"
 |Parte|Valor|Explicação|  
 |----------|-----------|-----------------|  
 |Endereço IP|Todos Atribuídos|O serviço de nome de domínio em sua rede resolve o nome do host na URL para o endereço IP do computador. Desde que o endereço IP seja especificado na URL que você definir, uma solicitação enviada para um host específico alcançará seu destino pretendido.|  
-|Port|80|A porta 80 é a padrão para conexões TCP/IP em um computador. Como o servidor de relatório está escutando na porta 80, você pode omitir o número da porta da URL. Se você especificar outra porta, deverá especificá-la na URL.|  
+|Porta|80|A porta 80 é a padrão para conexões TCP/IP em um computador. Como o servidor de relatório está escutando na porta 80, você pode omitir o número da porta da URL. Se você especificar outra porta, deverá especificá-la na URL.|  
 |Diretório virtual|ReportServer|Note que ambos os exemplos de URLs incluem o nome do diretório virtual. A menos que você personalize a definição da URL, sempre deverá especificar o nome do diretório virtual do aplicativo na URL.|  
   
 > [!NOTE]  
@@ -67,19 +67,19 @@ ms.locfileid: "66108844"
  [Configurar uma URL &#40;SSRS Configuration Manager&#41;](configure-a-url-ssrs-configuration-manager.md)  
  Esse tópico fornece instruções para a configuração e a modificação de uma reserva de URL na ferramenta Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
- [Sobre reservas e registro de URL &#40;SSRS Configuration Manager&#41;](about-url-reservations-and-registration-ssrs-configuration-manager.md)  
+ [Sobre reservas de URL e registro &#40;Configuration Manager do SSRS&#41;](about-url-reservations-and-registration-ssrs-configuration-manager.md)  
  As URLs são usadas para acessar aplicativos e relatórios. Esse tópico explica as URLs de aplicativos, as URLs padrão e como s reservas de URL e o registro funcionam no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- [Sintaxe de reserva de URL &#40;SSRS Configuration Manager&#41;](url-reservation-syntax-ssrs-configuration-manager.md)  
+ [Sintaxe de reserva de URL &#40;Configuration Manager SSRS&#41;](url-reservation-syntax-ssrs-configuration-manager.md)  
  As reservas de URL padrão usadas pelo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] são válidas para a maioria dos cenários. Entretanto, para restringir o acesso ou estender a implantação a fim de habilitar o acesso de Internet ou extranet, você poderá ter que personalizar as configurações para que se ajustem a seus requisitos. Esse tópico descreve a sintaxe de uma reserva de URL e fornece recomendações para a criação de reservas personalizadas para sua implantação.  
   
- [URLs em arquivos de configuração &#40;SSRS Configuration Manager&#41;](urls-in-configuration-files-ssrs-configuration-manager.md)  
+ [URLs em arquivos de configuração &#40;Configuration Manager SSRS&#41;](urls-in-configuration-files-ssrs-configuration-manager.md)  
  O arquivo RSReportServer.config contém várias entradas para reservas de URL e as URLs usadas pela entrega de email do servidor de relatório e o Gerenciador de Relatórios. Esse tópico resume os parâmetros de configuração de URL de maneira que você possa entender como eles são comparados.  
   
- [Reservas de URL para implantações do Servidor de Relatório com várias instâncias &#40;SSRS Configuration Manager&#41;](url-reservations-for-multi-instance-report-server-deployments.md)  
+ [Reservas de URL para implantações de servidor de relatório de várias instâncias &#40;Configuration Manager SSRS&#41;](url-reservations-for-multi-instance-report-server-deployments.md)  
  Quando você instala várias instâncias do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em um único computador, aumenta a probabilidade de encontrar duplicação de URL quando uma URL for registrada. Para evitar esses erros, siga as recomendações neste tópico para a criação de reservas de URL específicas da instância.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Configurar uma URL &#40;SSRS Configuration Manager&#41;](configure-a-url-ssrs-configuration-manager.md)   
  [URL do serviço Web &#40;modo nativo do SSRS&#41;](../../sql-server/install/web-service-url-ssrs-native-mode.md)  
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6fa7b0d32a62e5e2d729e05c88b892ccaffc0fc2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106823"
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>Adicionar um hiperlink a uma URL (Construtor de Relatórios e SSRS)
@@ -27,14 +27,14 @@ ms.locfileid: "66106823"
   
  Você pode adicionar um hiperlink a uma URL para qualquer item que tenha uma propriedade **Action** , como uma caixa de texto, uma imagem ou uma série calculada em um gráfico. Quando o usuário clicar nesse item de relatório, ocorrerá a ação definida. Para obter mais informações, consulte a [Caixa de diálogo Propriedades de ação &#40;Construtor de Relatórios e SSRS&#41;](../action-properties-dialog-box-report-builder-and-ssrs.md) e [Especificando caminhos para itens externos &#40;Construtor de Relatórios e SSRS&#41;](specifying-paths-to-external-items-report-builder-and-ssrs.md).  
   
- Para começar rapidamente, confira [Tutorial: formatar o texto &#40;Construtor de Relatórios&#41;](../tutorial-format-text-report-builder.md).  
+ Para começar a usar rapidamente, consulte [Tutorial: Formatar texto &#40;Construtor de Relatórios&#41;](../tutorial-format-text-report-builder.md).  
   
 > [!NOTE]  
->  Links associados a campos de conjuntos de dados podem ser vulneráveis à violação para fins mal-intencionados. Para obter mais informações, consulte [Proteger Relatórios e Recursos](../security/secure-reports-and-resources.md) nos [Manuais Online](https://go.microsoft.com/fwlink/?LinkId=154888) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em msdn.microsoft.com.  
+>  Links associados a campos de conjuntos de dados podem ser vulneráveis à violação para fins mal-intencionados. Para obter mais informações, consulte [Proteger Relatórios e Recursos](../security/secure-reports-and-resources.md) nos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Manuais Online[ do ](https://go.microsoft.com/fwlink/?LinkId=154888) em msdn.microsoft.com.  
   
 ### <a name="to-add-a-hyperlink"></a>Para adicionar um hiperlink  
   
-1.  Na exibição do design de relatório, clique com o botão direito do mouse na caixa de texto, na imagem ou no gráfico a que você deseja adicionar um link e, em seguida, clique em **Propriedades**.  
+1.  No modo de exibição de Design de relatório, clique com o botão direito do mouse na caixa de texto, na imagem ou no gráfico a que você deseja adicionar um link e, em seguida, clique em **Propriedades**.  
   
 2.  Na caixa de diálogo Propriedades, clique em **Ação**.  
   
@@ -46,9 +46,9 @@ ms.locfileid: "66106823"
   
 6.  (Opcional) O texto não é formatado automaticamente como um link. Para textos, é recomendável alterar sua cor e seu efeito para indicar que ele é um link. Por exemplo, altere a cor para azul e o efeito para sublinhado na seção **Fonte** da guia Página Inicial da Faixa de Opções.  
   
-7.  Para testar o link, clique em **Executar** para visualizar o relatório e, em seguida, no item de relatório no qual você definiu esse link.  
+7.  Para testar o link, clique em **executar** para visualizar o relatório e, em seguida, clique no item de relatório no qual você definiu esse link.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Classificação interativa, mapas de documentos e links &#40;Construtor de Relatórios e SSRS&#41;](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [Criar um mapa de documentos &#40;Construtor de Relatórios e SSRS&#41;](create-a-document-map-report-builder-and-ssrs.md)  
   

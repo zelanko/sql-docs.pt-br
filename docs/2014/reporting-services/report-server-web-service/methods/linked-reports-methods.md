@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8b98e1dcaa3a9e688c7d3661047e888752b08b47
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63260767"
 ---
 # <a name="linked-reports-methods"></a>Métodos de relatórios vinculados
@@ -30,9 +30,9 @@ ms.locfileid: "63260767"
 |<xref:ReportService2010.ReportingService2010.ListDependentItems%2A>|Retorna uma lista dos itens vinculados a um item especificado.|  
 |<xref:ReportService2010.ReportingService2010.SetItemLink%2A>|Especifica o item de catálogo usado para a definição de item do item vinculado especificado.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criando aplicativos usando o serviço Web e o .NET Framework](../net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
- [Serviço Web do Servidor de Relatório](../report-server-web-service.md)   
+ [Serviço Web Servidor de Relatórios](../report-server-web-service.md)   
  [Métodos do serviço Web Servidor de Relatórios](report-server-web-service-methods.md)   
  [Referência técnica &#40;SSRS&#41;](../../technical-reference-ssrs.md)  
   

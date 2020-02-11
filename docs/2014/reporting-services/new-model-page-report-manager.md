@@ -1,5 +1,5 @@
 ---
-title: Nova página de modelo (Gerenciador de relatórios) | Microsoft Docs
+title: Nova página de modelo (Report Manager) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5b9fdcac2499cdf33d98ba636596218c14704f9d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108205"
 ---
 # <a name="new-model-page-report-manager"></a>Página Novo Modelo (Gerenciador de Relatórios)
@@ -41,12 +41,12 @@ ms.locfileid: "66108205"
  **Nome**  
  Especifica o nome do modelo. Um nome deve conter pelo menos um caractere alfanumérico. Também pode conter espaços e alguns símbolos. Não use os seguintes caracteres ao especificar um nome:  
   
- ; ? : \@ & = + , $ / * \< > | " /  
+ ; ? : \@ & = +, $/* \< > | " /  
   
  **Descrição**  
  Mostra uma descrição do modelo. Os usuários que exibirem esse item no Gerenciador de Relatórios poderão ver esta descrição ao navegar na hierarquia das pastas.  
   
- **Alterar local**  
+ **Alterar Local**  
  Mostra o local da pasta para o novo modelo. Clique no botão **Alterar Local** para selecionar outro local.  
   
   

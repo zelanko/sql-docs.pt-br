@@ -1,5 +1,5 @@
 ---
-title: Criar uma sessão de eventos estendidos usando o Editor de consultas | Microsoft Docs
+title: Criar uma sessão de eventos estendidos usando o editor de consultas | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4a541c86029be9a438492a851c0eb16d18120f75
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065027"
 ---
 # <a name="create-an-extended-events-session-using-query-editor"></a>Criar uma sessão de Eventos Estendidos usando o Editor de Consultas
-  Você pode criar uma sessão de Eventos Estendidos usando o Editor de Consulta ou pode criar uma sessão no Pesquisador de Objetos. No Pesquisador de objetos, eventos estendidos fornecem duas interfaces de usuário, que você pode usar para criar, modificar e exibir dados de sessão de evento: um assistente que orienta você durante o processo de criação de sessão de evento e uma interface de usuário nova sessão que fornece opções mais avançadas de configuração. Você pode criar sessões de Eventos Estendidos para diagnosticar rastreamento de SQL Server que permite resolver problemas como os seguintes:  
+  Você pode criar uma sessão de Eventos Estendidos usando o Editor de Consulta ou pode criar uma sessão no Pesquisador de Objetos. No Pesquisador de objetos, os eventos estendidos fornecem duas interfaces de usuário que você pode usar para criar, modificar e exibir dados de sessão de evento-um assistente que orienta você pelo processo de criação de sessão de evento e uma nova interface de usuário de sessão que fornece opções de configuração mais avançadas. Você pode criar sessões de Eventos Estendidos para diagnosticar rastreamento de SQL Server que permite resolver problemas como os seguintes:  
   
 -   Localizar suas consultas mais caras  
   
@@ -218,7 +218,7 @@ ADD TARGET package0.asynchronous_file_target
    (SET filename = 'c:\temp\xelog.xel', metadatafile = 'c:\temp\xelog.xem')  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [CREATE EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   
  [Destinos de eventos estendidos do SQL Server](../../2014/database-engine/sql-server-extended-events-targets.md)   
  [Pacotes de eventos estendidos do SQL Server](../relational-databases/extended-events/sql-server-extended-events-packages.md)  

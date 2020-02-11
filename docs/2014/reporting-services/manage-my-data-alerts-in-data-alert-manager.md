@@ -14,16 +14,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 07c75779d05d22e09e7823b5d0b3bffc2ca7acc8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108312"
 ---
 # <a name="manage-my-data-alerts-in-data-alert-manager"></a>Gerenciar meus alertas de dados no Gerenciador de Alertas de Dados
   Os usuários do SharePoint podem exibir uma lista dos alertas de dados que criaram e informações sobre os alertas. Os usuários também podem excluir seus alertas, abrir definições de alerta para edição no Designer de Alertas de Dados e executar seus alertas. A imagem a seguir mostra os recursos disponíveis para os usuários no Gerenciador de Alertas de Dados.  
   
- ![Recursos do Gerenciador de Alertas para usuários do SharePoint](media/rs-alertmanageriw.gif "Recursos do Gerenciador de Alertas para usuários do SharePoint")  
+ ![Recursos do Gerenciador de Alertas para SharePoint](media/rs-alertmanageriw.gif "Recursos do Gerenciador de Alertas para SharePoint")  
   
 ### <a name="to-view-a-list-of-your-alerts"></a>Para exibir uma lista dos seus alertas  
   
@@ -31,7 +31,7 @@ ms.locfileid: "66108312"
   
 2.  Clique no ícone para expandir o menu suspenso em um relatório e clique em **Gerenciar Alertas de Dados**. A imagem a seguir mostra o menu suspenso.  
   
-     ![Abrir o Gerenciador de Alertas no menu de contexto do relatório](media/rs-openalertmanager.gif "Abrir o Gerenciador de Alertas no menu de contexto do relatório")  
+     ![Abra o Gerenciador de Alertas do menu de contexto de relatório](media/rs-openalertmanager.gif "Abra o Gerenciador de Alertas do menu de contexto de relatório")  
   
      O Gerenciador de Alertas de Dados é aberto. Por padrão, ele lista os alertas para o relatório que você selecionou na biblioteca.  
   
@@ -66,8 +66,8 @@ ms.locfileid: "66108312"
   
      A instância do alerta é criada e a mensagem de alerta de dados é enviada imediatamente, independentemente das opções de agenda especificadas no Designer de Alerta de Dados. Por exemplo, um alerta configurado para ser enviado semanalmente e, depois, somente se a alteração de resultados for enviada.  
   
-## <a name="see-also"></a>Consulte também  
- [Gerenciador de Alertas de dados para administradores de alertas](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Gerenciador de alertas de dados para administradores de alertas](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
  [Reporting Services Data Alerts](../ssms/agent/alerts.md)  
   
   

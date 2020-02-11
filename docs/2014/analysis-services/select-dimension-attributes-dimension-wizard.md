@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 482e4ebbd467f3bc8946d90b9ad77bb892e85504
-ms.sourcegitcommit: 9af07bd57b76a34d3447e9e15f8bd3b17709140a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/08/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67624346"
 ---
 # <a name="select-dimension-attributes-dimension-wizard"></a>Selecionar atributos de dimensão (Assistente para Dimensões)
@@ -25,7 +25,7 @@ ms.locfileid: "67624346"
 > [!NOTE]  
 >  Se você não consegue ler os valores de alguma coluna, maximize a janela do assistente e altere a largura de cada cabeçalho de coluna até que consiga ler os valores.  
   
- **Para abrir o Assistente para dimensões**  
+ **Para abrir o Assistente para Dimensões**  
   
 -   No [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], no **Gerenciador de Soluções**, clique com o botão direito do mouse na pasta **Dimensões** de um projeto do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e clique em **Nova Dimensão**.  
   
@@ -45,23 +45,23 @@ ms.locfileid: "67624346"
   
  Para alterar o nome de um atributo, clique no nome do atributo e digite um nome novo para o atributo.  
   
- **Habilitar navegação**  
- Selecione para tornar o atributo disponível ao usuário final para navegação e filtragem. **Habilitar Navegação** deve ser selecionado para o atributo de chave. Para atributos não chave, o padrão é que **Habilitar Navegação** não esteja selecionado, o que faz com que os atributos não chave só sejam mostrados como propriedades do membro.  
+ **Habilitar Navegação**  
+ Selecione para tornar o atributo disponível ao usuário final para navegação e filtragem. **Habilitar navegação** deve ser selecionado para o atributo de chave. Para atributos não chave, o padrão é que **Habilitar Navegação** não esteja selecionado, o que faz com que os atributos não chave só sejam mostrados como propriedades do membro.  
   
  Na maioria dos casos, o atributo se torna disponível ou não disponível para navegação definindo-se a propriedade `AttributeHierarchyEnabled` como `True` ou `False`, respectivamente. No entanto, nas três caixas a seguir, o assistente usa configurações diferentes.  
   
-|Caso|Configurações|  
+|Caixa|Configurações|  
 |----------|--------------|  
 |Uma dimensão contém uma hierarquia pai-filho e **Habilitar Navegação** não é selecionado|O assistente deixa a propriedade `AttributeHierarchyEnabled` definida como `True` e define o atributo `AttributeHierarchyVisible` como `False` para o atributo de chave.|  
 |Uma tabela em uma dimensão contém uma chave estrangeira para uma tabela que não está na dimensão|O assistente seleciona a chave estrangeira como um atributo a ser incluído, mas não selecionará **Habilitar Navegação**. Se você mantiver estas configurações, a propriedade `AttributeHiearchyEnabled` do atributo será definida como `True` e a propriedade `AttributeHierarchyVisible` será definida como `False`.|  
-|Uma dimensão contém tabelas floco de neve que são alcançadas por meio de colunas de chave estrangeira anuláveis<br /><br /> \- e -<br /><br /> Habilitar Navegação não está selecionado para o atributo que está baseado na chave da tabela floco de neve|O assistente criará o novo atributo que tem a propriedade `AttributeHiearchyEnabled` definida como `True` e a propriedade `AttributeHierarchyVisible` definida como `False`.|  
+|Uma dimensão contém tabelas floco de neve que são alcançadas por meio de colunas de chave estrangeira anuláveis<br /><br /> -e-<br /><br /> Habilitar Navegação não está selecionado para o atributo que está baseado na chave da tabela floco de neve|O assistente criará o novo atributo que tem a propriedade `AttributeHiearchyEnabled` definida como `True` e a propriedade `AttributeHierarchyVisible` definida como `False`.|  
   
- **Tipo de atributo**  
+ **Tipo de Atributo**  
  (Opcional) Defina o tipo para o atributo. O valor padrão é **Regular**. O tipo de atributo fornece orientação a aplicativos clientes quanto a quais informações o atributo poderia conter.  
   
-## <a name="see-also"></a>Consulte também  
- [Ajuda de F1 do Assistente de dimensão](dimension-wizard-f1-help.md)   
- [Dimensões &#40;Analysis Services - dados multidimensionais&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Ajuda F1 do assistente para dimensões](dimension-wizard-f1-help.md)   
+ [Dimensões &#40;Analysis Services de dados multidimensionais&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Dimensões em modelos multidimensionais](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

@@ -15,24 +15,24 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 08ed0c207b92075952ffc71669b45100e4ff7d06
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109677"
 ---
 # <a name="create-a-basic-table-report-ssrs-tutorial"></a>Criando um relatório de tabela básico (Tutorial do SSRS)
-  Este tutorial é projetado para ajudá-lo a criar um relatório de tabela básico com base no [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] usando o Designer de relatórios do banco de dados. Você também pode usar o Construtor de Relatórios ou o Assistente de Relatório para criar relatórios. Neste tutorial, você irá criar um projeto de relatório, configurar informações de conexão, definir uma consulta, adicionar uma região de dados de Tabela, agrupar e totalizar alguns campos e visualizar o relatório.  
+  Este tutorial foi criado para ajudar a criar uma tabela básica com base no banco de dados [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] usando o Designer de Relatórios. Você também pode usar o Construtor de Relatórios ou o Assistente de Relatório para criar relatórios. Neste tutorial, você irá criar um projeto de relatório, configurar informações de conexão, definir uma consulta, adicionar uma região de dados de Tabela, agrupar e totalizar alguns campos e visualizar o relatório.  
   
 > [!NOTE]  
->  Para concluir este tutorial, você deve estar executando o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] em modo nativo. Se você estiver executando o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] em modo integrado do SharePoint, as etapas que usam URLs de servidor de relatório não funcionarão. Para obter mais informações sobre [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] modos, consulte [servidor de relatório do Reporting Services](reporting-services-report-server.md).  
+>  Para concluir este tutorial, você deve estar executando o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] em modo nativo. Se você estiver executando o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] em modo integrado do SharePoint, as etapas que usam URLs de servidor de relatório não funcionarão. Para obter mais informações [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] sobre modos, consulte [Reporting Services servidor de relatório](reporting-services-report-server.md).  
   
 ## <a name="requirements"></a>Requisitos  
  Para que você possa usar o tutorial, os itens a seguir devem estar instalados no sistema:  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] mecanismo de banco de dados.  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] mecanismo de banco de dados.  
   
--   O banco de dados [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] .  Para obter mais informações, consulte [Adventure Works para SQL Server 2012 (Adventure Works para SQL Server 2012)](https://go.microsoft.com/fwlink/?LinkId=245471) (https://go.microsoft.com/fwlink/?LinkId=245471).. Para obter mais informações sobre o suporte para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] bancos de dados de exemplo e código de exemplo [!INCLUDE[ssExpress](../includes/ssexpress-md.md)], consulte [Databases and Samples Overview](https://go.microsoft.com/fwlink/?LinkId=110391) no site da CodePlex.  
+-   O banco de dados [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] .  Para obter mais informações, consulte [Adventure Works para SQL Server 2012 (Adventure Works para SQL Server 2012)](https://go.microsoft.com/fwlink/?LinkId=245471) (https://go.microsoft.com/fwlink/?LinkId=245471).. Para obter mais informações sobre o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] suporte para bancos de dados de exemplo e [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]código de exemplo para o, consulte [visão geral de bancos de dados e exemplos](https://go.microsoft.com/fwlink/?LinkId=110391) no site do CodePlex.  
   
 -   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)].  
   
@@ -57,9 +57,9 @@ ms.locfileid: "66109677"
  [Lição 6: Adicionando agrupamentos e totais &#40;Reporting Services&#41;](lesson-6-adding-grouping-and-totals-reporting-services.md)  
   
 > [!NOTE]  
->  Ao revisar tutoriais, recomendamos que você adicione **próxima** e **Previous** botões na barra de ferramentas do Visualizador de documento. Para obter mais informações, consulte:  
+>  Ao revisar os tutoriais, recomendamos que você adicione os botões **Avançar** e **anterior** à barra de ferramentas do Visualizador de documentos. Para obter mais informações, confira:  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tutoriais do Reporting Services &#40;SSRS&#41;](reporting-services-tutorials-ssrs.md)  
   
   

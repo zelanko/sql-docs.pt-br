@@ -1,5 +1,5 @@
 ---
-title: Criar, excluir ou modificar uma fonte de dados compartilhada (Gerenciador de relatórios) | Microsoft Docs
+title: Criar, excluir ou modificar uma fonte de dados compartilhada (Report Manager) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c554215ba716a35f3e2851a5042be1989ee5648c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109610"
 ---
 # <a name="create-delete-or-modify-a-shared-data-source-report-manager"></a>Criar, excluir ou modificar uma fonte de dados compartilhada (Gerenciador de Relatórios)
@@ -28,7 +28,7 @@ ms.locfileid: "66109610"
   
  O ícone seguinte indica uma fonte de dados compartilhada na hierarquia da pasta do Gerenciador de Relatórios:  
   
- ![Ícone Fonte de dados compartilhada](media/hlp-16datasource.png "Ícone Fonte de dados compartilhada")  
+ ![Ícone de fonte de dados compartilhada](media/hlp-16datasource.png "Ícone de fonte de dados compartilhada")  
 ícone de fonte de dados compartilhada  
   
 ### <a name="to-create-a-shared-data-source"></a>Para criar uma fonte de dados compartilhada  
@@ -39,15 +39,15 @@ ms.locfileid: "66109610"
   
 3.  Clique em **Nova Fonte de Dados**. A página **Nova Fonte de Dados** será aberta.  
   
-4.  Digite um nome para o item. Um nome deve conter pelo menos um caractere e deve começar com uma letra. Ele também pode incluir certos símbolos, mas não espaços nem os caracteres ; ? : \@ & = + , $ / * \< > | " /.  
+4.  Digite um nome para o item. Um nome deve conter pelo menos um caractere e deve começar com uma letra. Ele também pode incluir certos símbolos, mas não espaços nem os caracteres ; ? : \@ & = +, $/* \< > | " /.  
   
 5.  Como opção, digite uma descrição para oferecer aos usuários informações sobre a conexão. Essa descrição será exibida na página **Conteúdo** no Gerenciador de Relatórios.  
   
 6.  Na lista **Tipo de fonte de dados** , especifique a extensão de processamento de dados usada para processar dados da fonte de dados.  
   
-7.  Em **Cadeia de conexão**, especifique a cadeia de conexão usada pelo servidor de relatório para se conectar à fonte de dados. Recomendamos que você não especifique credenciais na cadeia de conexão.  
+7.  Para **cadeia de conexão**, especifique a cadeia de conexão que o servidor de relatório usa para se conectar à fonte de dados. Recomendamos que você não especifique credenciais na cadeia de conexão.  
   
-     O exemplo a seguir ilustra uma cadeia de conexão usada para conexão com o banco de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] local:  
+     O exemplo a seguir ilustra uma cadeia de conexão para se conectar [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] ao banco de dados local:  
   
     ```  
     data source=<localservername>; initial catalog=AdventureWorks2012  
@@ -70,13 +70,13 @@ ms.locfileid: "66109610"
     > [!NOTE]  
     >  O botão Testar Conexão não tem suporte para o tipo de fonte de dados XML.  
   
-10. Clique em **OK**.  
+10. Clique em **OK**  
   
 ### <a name="to-modify-a-shared-data-source"></a>Para modificar uma fonte de dados compartilhada  
   
 1.  No Gerenciador de Relatórios, navegue até a página Conteúdo.  
   
-2.  Navegue até o item de fonte de dados compartilhada, focalize o item, clique na lista suspensa e, no menu de contexto, clique em **Gerenciar**. A página **Propriedades** é exibida.  
+2.  Navegue até o item de fonte de dados compartilhada, focalize o item, clique na lista suspensa e, no menu de contexto, clique em **Gerenciar**. A página **Propriedades** é aberta.  
   
 3.  Modifique a fonte de dados e clique em **Aplicar**.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "66109610"
   
          Clique no item para abri-lo. A página Propriedades Gerais será aberta.  
   
-         Clique em **Excluir**e em **OK**.  
+         Clique em **Excluir** e clique em **OK**.  
   
     -   Na página **Conteúdo** , navegue até a pasta que contém a fonte de dados que você quer excluir.  
   
@@ -96,11 +96,11 @@ ms.locfileid: "66109610"
   
          [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Conexões de dados, fontes de dados e cadeias de caracteres de Conexão no Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [Página Conteúdo &#40;Gerenciador de Relatórios&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Conexões de dados, fontes de dados e cadeias de conexão no Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
+ [Página de conteúdo &#40;Report Manager&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [Criar, modificar e excluir fontes de dados compartilhadas &#40;SSRS&#41;](report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
  [Gerenciar fontes de dados de relatório](report-data/manage-report-data-sources.md)   
- [Configurar propriedades de fonte de dados para um relatório &#40;Gerenciador de Relatórios&#41;](report-data/configure-data-source-properties-for-a-report-report-manager.md)  
+ [Configurar as propriedades da fonte de dados para um relatório &#40;Report Manager&#41;](report-data/configure-data-source-properties-for-a-report-report-manager.md)  
   
   

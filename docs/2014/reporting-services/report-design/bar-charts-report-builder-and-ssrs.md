@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5a839fb7253c2e66e024872b74fadc114cd58ecf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106487"
 ---
 # <a name="bar-charts-report-builder-and-ssrs"></a>Gráficos de barras (Construtor de Relatórios e SSRS)
@@ -57,7 +57,7 @@ ms.locfileid: "66106487"
   
 -   Caso haja muitos pontos de dados no conjunto de dados em relação ao tamanho do gráfico, o tamanho das colunas ou das barras e do espaço entre elas é reduzido. Para definir manualmente a largura das colunas de um gráfico, modifique a largura, em pixels, alterando a propriedade **PointWidth** . Por padrão, o valor dessa propriedade é 0,8. Quando você aumenta a largura das colunas ou das barras em um gráfico, o espaço entre cada coluna ou barra diminui.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Tipos de gráficos &#40;Construtor de Relatórios e SSRS&#41;](chart-types-report-builder-and-ssrs.md)   
  [Pontos de dados vazios e nulos em gráficos &#40;Construtor de Relatórios e SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
@@ -67,7 +67,7 @@ ms.locfileid: "66106487"
  [Formatando rótulos dos eixos de um gráfico &#40;Construtor de Relatórios e SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Formatando a legenda em um gráfico &#40;Construtor de Relatórios e SSRS&#41;](chart-legend-formatting-report-builder.md)   
  [Adicionar estilos de bisel, alto-relevo e textura a um gráfico &#40;Construtor de Relatórios e SSRS&#41;](chart-effects-add-bevel-emboss-or-texture-report-builder.md)   
- [Tutorial: Adicionar um gráfico de barras a um relatório (Construtor de Relatórios)](https://go.microsoft.com/fwlink/?LinkId=198052)   
- [Tutorial: Adicionar um gráfico de barras a um relatório](https://go.microsoft.com/fwlink/?LinkId=198042)  
+ [Tutorial: adicionando um gráfico de barras a um relatório (Construtor de Relatórios)](https://go.microsoft.com/fwlink/?LinkId=198052)   
+ [Tutorial: adicionando um gráfico de barras a um relatório](https://go.microsoft.com/fwlink/?LinkId=198042)  
   
   

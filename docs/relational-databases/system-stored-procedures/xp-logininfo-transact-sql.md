@@ -18,18 +18,18 @@ ms.assetid: ee7162b5-e11f-4a0e-a09c-1878814dbbbd
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2b3af47a1c09160faab97494d9749fd67c051cd4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67898405"
 ---
-# <a name="xplogininfo-transact-sql"></a>xp_logininfo (Transact-SQL)
+# <a name="xp_logininfo-transact-sql"></a>xp_logininfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retorna informações sobre os usuários e grupos do Windows.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,42 +41,43 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @acctname = ] 'account_name'` É o nome de um usuário do Windows ou grupo acesso concedido ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *account_name* está **sysname**, com um padrão NULL. Se *account_name* não for especificado, todos os grupos do Windows e os usuários do Windows que tenham sido explicitamente concedido permissão de logon são relatados. *account_name* deve ser totalmente qualificado. Por exemplo, 'ADVWKS4\macraes' ou 'BUILTIN\Administrators'.  
+`[ @acctname = ] 'account_name'`É o nome de um usuário ou grupo do Windows com acesso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]concedido ao. *account_name* é **sysname**, com um padrão de NULL. Se *account_name* não for especificado, todos os grupos do Windows e usuários do Windows que receberam permissão de logon explicitamente serão relatados. *account_name* deve ser totalmente qualificado. Por exemplo, 'ADVWKS4\macraes' ou 'BUILTIN\Administrators'.  
   
- **'todos'**  |  **'membros'**  
- Especifica se as informações sobre todos os caminhos de permissão para a conta ou sobre os membros do grupo do Windows devem ser relatadas. **\@opção** está **varchar(10)** , com um padrão NULL. A menos que **todos os** for especificado, somente o primeiro caminho de permissão é exibido.  
+ **' todos '** | **' Members '**  
+ Especifica se as informações sobre todos os caminhos de permissão para a conta ou sobre os membros do grupo do Windows devem ser relatadas. a opção é **varchar (10)**, com um padrão de NULL. ** \@** A menos que **All** seja especificado, somente o primeiro caminho de permissão é exibido.  
   
-`[ @privilege = ] variable_name` É um parâmetro de saída que retorna o nível de privilégio da conta do Windows especificada. *variable_name* está **varchar(10)** , com um padrão de 'Not wanted'. O nível de privilégio retornado é **usuário**, **admin**, ou **nulo**.  
+`[ @privilege = ] variable_name`É um parâmetro de saída que retorna o nível de privilégio da conta do Windows especificada. *variable_name* é **varchar (10)**, com um padrão de ' not desejable '. O nível de privilégio retornado é **usuário**, **administrador**ou **nulo**.  
   
  OUTPUT  
- Quando for especificado, põe *variable_name* no parâmetro de saída.  
+ Quando especificado, coloca *variable_name* no parâmetro de saída.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |**nome da conta**|**sysname**|Nome da conta do Windows completamente qualificada.|  
-|**type**|**char(8)**|Tipo de conta do Windows. Os valores válidos são **usuário** ou **grupo**.|  
-|**privilégio**|**char(9)**|Privilégio de acesso para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os valores válidos são **admin**, **usuário**, ou **nulo**.|  
-|**nome de logon mapeado**|**sysname**|Contas de usuário que tem o privilégio de usuário **mapeada de nome de logon** mostra o nome de logon mapeado que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta usar ao efetuar logon nesta conta usando as regras mapeadas com o nome de domínio é adicionado antes dele.|  
-|**caminho de permissão**|**sysname**|Associação de grupo que permitiu o acesso à conta.|  
+|**tipo**|**Char (8)**|Tipo de conta do Windows. Os valores válidos são **User** ou **Group**.|  
+|**privilégio**|**char(9)**|Privilégio de acesso para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os valores válidos são **admin**, **User**ou **NULL**.|  
+|**mapped login name**|**sysname**|Para contas de usuário que têm privilégio de usuário, **nome de logon mapeado** mostra o nome [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de logon mapeado que o tenta usar ao fazer logon com essa conta usando as regras mapeadas com o nome de domínio adicionado antes dela.|  
+|**permission path**|**sysname**|Associação de grupo que permitiu o acesso à conta.|  
   
 ## <a name="remarks"></a>Comentários  
- Se *account_name* for especificado, **xp_logininfo** relata o nível de privilégio mais alto do usuário do Windows especificado ou do grupo. Se um usuário do Windows tiver acesso como administrador de sistema e como usuário de domínio, ele será relatado como um administrador de sistema. Se o usuário for membro de vários grupos do Windows com o mesmo nível de privilégio, somente o grupo ao qual o acesso ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] foi concedido primeiro será relatado.  
+ Se *account_name* for especificado, **xp_logininfo** relatará o nível de privilégio mais alto do usuário ou grupo do Windows especificado. Se um usuário do Windows tiver acesso como administrador de sistema e como usuário de domínio, ele será relatado como um administrador de sistema. Se o usuário for membro de vários grupos do Windows com o mesmo nível de privilégio, somente o grupo ao qual o acesso ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] foi concedido primeiro será relatado.  
   
- Se *account_name* é um usuário do Windows válido ou um grupo que não está associado com um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon, um conjunto de resultados vazio será retornado. Se *account_name* não pode ser identificado como um usuário válido do Windows ou grupo, uma mensagem de erro é retornada.  
+ Se *account_name* for um usuário ou grupo válido do Windows que não esteja associado a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] um logon, um conjunto de resultados vazio será retornado. Se *account_name* não puder ser identificado como um usuário ou grupo válido do Windows, uma mensagem de erro será retornada.  
   
- Se *account_name* e **todos os** são todos os caminhos de permissão do usuário do Windows ou grupo especificado, serão retornados. Se *account_name* é um membro de vários grupos, todos os quais foi concedidos acesso ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], várias linhas são retornadas. O **admin** linhas de privilégio são retornadas antes do **usuário** linhas de privilégio e dentro de um privilégio de nível linhas são retornadas na ordem em que correspondente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logons foram criados.  
+ Se *account_name* e **todos** forem especificados, todos os caminhos de permissão para o usuário ou grupo do Windows serão retornados. Se *account_name* for um membro de vários grupos, todos os quais receberam acesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], várias linhas serão retornadas. As linhas de privilégio de **administrador** são retornadas antes das linhas de privilégio de **usuário** e dentro de uma linha de nível de privilégio são retornadas na ordem em que os logons correspondentes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] foram criados.  
   
- Se *account_name* e **membros** são uma lista de membros do próximo nível do grupo especificado, será retornada. Se *account_name* é um grupo local, a listagem pode incluir usuários locais, usuários de domínio e grupos. Se *account_name* é uma conta de domínio, a lista é composta de usuários do domínio. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve conectar-se ao controlador de domínio para recuperar informações de associação de grupo. Se o servidor não puder contatar o controlador de domínio, nenhuma informação será retornada.  
+ Se *account_name* e **Membros** forem especificados, uma lista dos membros de nível posterior do grupo será retornada. Se *account_name* for um grupo local, a listagem poderá incluir usuários locais, usuários de domínio e grupos. Se *account_name* for uma conta de domínio, a lista será composta de usuários de domínio. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve conectar-se ao controlador de domínio para recuperar informações de associação de grupo. Se o servidor não puder contatar o controlador de domínio, nenhuma informação será retornada.  
   
- **xp_logininfo** só retorna informações de grupos globais do Active Directory, não de grupos universais.  
+ **xp_logininfo** retorna informações de Active Directory grupos globais, não de grupos universais.  
   
 ## <a name="permissions"></a>Permissões  
- Requer associação na **sysadmin** fixa função de servidor ou associação na **pública** função de banco de dados fixa no **mestre** banco de dados com a permissão EXECUTE concedida.  
+ Requer associação na função de servidor fixa **sysadmin** ou associação na função de banco de dados fixa **pública** no banco de dados **mestre** com a permissão de execução concedida.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir exibe informações sobre o grupo do Windows `BUILTIN\Administrators`.  
@@ -85,10 +86,10 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 EXEC xp_logininfo 'BUILTIN\Administrators';  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [sp_denylogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md)   
- [sp_grantlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
- [sp_revokelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [&#41;&#40;Transact-SQL de sp_denylogin](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_grantlogin](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_revokelogin](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Procedimentos armazenados estendidos gerais &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)  
   

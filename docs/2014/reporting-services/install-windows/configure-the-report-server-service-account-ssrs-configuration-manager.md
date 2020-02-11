@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/10/2018
 ms.openlocfilehash: cb867bfdfc8d9ecb686d3ecc52c48c80bc60d9cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63261080"
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>Configurar a conta de serviço do servidor de relatório (Gerenciador de configurações SSRS)
@@ -22,7 +22,7 @@ ms.locfileid: "63261080"
   
 ## <a name="initial-configuration"></a>Configuração inicial
 
- A conta de serviço do Servidor de Relatório é definida durante a Instalação. Você pode executar o serviço em uma conta de usuário do domínio ou uma conta interna, como uma conta do `NetworkService`. Não há nenhuma conta padrão; qualquer conta que você especificar o [configuração do servidor — contas de serviço](../../sql-server/install/server-configuration-service-accounts.md) página do Assistente de instalação se torna a conta inicial do serviço servidor de relatório.  
+ A conta de serviço do Servidor de Relatório é definida durante a Instalação. Você pode executar o serviço em uma conta de usuário do domínio ou uma conta interna, como uma conta do `NetworkService`. Não há conta padrão; qualquer conta que você especificar na página [configuração do servidor – contas de serviço](../../sql-server/install/server-configuration-service-accounts.md) do assistente de instalação se tornará a conta inicial do serviço servidor de relatório.  
   
 > [!IMPORTANT]
 > Embora o serviço Web Servidor de Relatórios e o Gerenciador de Relatórios sejam aplicativos do [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)], não são executados na conta do [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]. A única arquitetura de serviço executa ambos os aplicativos ASP.NET na mesma identidade de processo do Servidor de Relatório. Essa é uma alteração importante de versões anteriores em que tanto o serviço Web Servidor de Relatórios quanto o Gerenciador de Relatórios eram executados na identidade do processo de trabalho do [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] especificada no IIS.
@@ -33,7 +33,7 @@ ms.locfileid: "63261080"
   
 - Adiciona automaticamente a nova conta para o grupo de servidor de relatório criado no computador local. Esse grupo é especificado nas ACLs (listas de controle de acesso) que protegem os arquivos do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
-- Atualiza automaticamente as permissões de logon na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] usada para hospedar o banco de dados do servidor de relatório. A nova conta será adicionada ao **RSExecRole**.  
+- Atualiza automaticamente as permissões de logon na [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] instância usada para hospedar o banco de dados do servidor de relatório. A nova conta será adicionada ao **RSExecRole**.  
   
      O logon do banco de dados da conta antiga não é removido automaticamente. Lembre-se de remover contas que não estejam mais sendo usadas. Para obter mais informações, consulte [Administrar um banco de dados de servidor de relatório &#40;modo nativo do SSRS&#41;](../report-server/report-server-database-ssrs-native-mode.md) nos Manuais Online do SQL Server.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "63261080"
     > [!NOTE]  
     > Se o servidor de relatório fizer parte da implantação em expansão, somente o servidor de relatório que você está atualizando será afetado. As chaves de criptografia para outros servidores de relatório na implantação não são afetadas pela alteração da conta de serviço.  
   
- Para obter instruções sobre como definir a conta, consulte [configurar uma conta de serviço &#40;Configuration Manager do SSRS&#41;](../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md).  
+ Para obter instruções sobre como definir a conta, consulte [Configurar uma conta de serviço &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md).  
   
 ## <a name="choosing-an-account"></a>Escolhendo uma conta
 
@@ -62,11 +62,11 @@ ms.locfileid: "63261080"
   
  Os links e as diretrizes a seguir irão ajudá-lo a decidir qual a melhor opção para sua implantação.  
   
-- [Conta de serviço &#40;modo nativo do SSRS&#41;](../../sql-server/install/service-account-ssrs-native-mode.md).  
+- [Conta de serviço &#40;&#41;de modo nativo do SSRS ](../../sql-server/install/service-account-ssrs-native-mode.md).  
   
-- [Configurar contas de serviço e permissões do Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) nos Manuais Online do SQL Server.  
+- [Configurar contas de serviço e permissões do Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) no manuais online do SQL Server.  
   
-- [The Services and Service Accounts Security Planning Guide](http://usergroup.doubletake.com/file_cabinet/download/0x000021733) (O guia de planejamento de segurança de serviços e de contas de serviço).  
+- [O guia de planejamento de segurança de contas de serviço e serviços](http://usergroup.doubletake.com/file_cabinet/download/0x000021733).  
   
 ## <a name="updating-an-expired-password"></a>Atualizando uma senha expirada
 
@@ -74,9 +74,9 @@ ms.locfileid: "63261080"
   
  Para redefinir a senha faça o seguinte:  
   
-1. Sobre o **iniciar** , aponte para **painel de controle**, aponte para **ferramentas do administrador**e clique em **serviços**.  
+1. No menu **Iniciar** , aponte para **painel de controle**, aponte para **Ferramentas do administrador**e clique em **Serviços**.  
   
-2. Clique com botão direito **SQL Server Reporting Services**, selecione **propriedades**.  
+2. Clique com o botão direito do mouse em **SQL Server Reporting Services**, selecione **Propriedades**.  
   
 3. Clique em **fazer logon**e digite a nova senha.  
   
@@ -94,9 +94,9 @@ ms.locfileid: "63261080"
   
  Depois de redefinir as informações de acesso ao banco de dados, você deve reiniciar o serviço [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] para garantir que a conexão antiga não seja mais usada.  
   
-1. Na **ferramentas administrativas**, clique em **Administração Central do SharePoint 2010**.  
+1. Em **Ferramentas administrativas**, clique em **Administração Central do SharePoint 2010**.  
   
-2. Clique em **gerenciamento de aplicativos**.  
+2. Clique em **Gerenciamento de aplicativos**.  
   
 3. Na seção Reporting Services, clique em **conceder acesso ao banco de dados**.  
   
@@ -106,17 +106,17 @@ ms.locfileid: "63261080"
   
 6. Para reiniciar o serviço, clique em **operações**.  
   
-7. Na topologia e serviços, clique em **os serviços no servidor**.  
+7. Em topologia e serviços, clique em **serviços no servidor**.  
   
-8. Para o aplicativo Web do Windows SharePoint Services, clique em **parar**.  
+8. Para aplicativo Web do Windows SharePoint Services, clique em **parar**.  
   
 9. Aguarde até o serviço parar.  
   
-10. Clique em **iniciar**.  
+10. Clique em **Iniciar**.  
   
 > [!NOTE]  
 > Os produtos e tecnologias do SharePoint exigem contas de domínio para a configuração de serviço, como o modo do SharePoint do Reporting Services.  
   
 ## <a name="next-steps"></a>Próximas etapas
 
- [Configurar uma conta de serviço &#40;Configuration Manager do SSRS&#41; ](../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md) [conta de serviço &#40;modo nativo do SSRS&#41; ](../../sql-server/install/service-account-ssrs-native-mode.md) [Configurar URLs do servidor de relatório &#40;configuração do SSRS Gerenciador de&#41; ](configure-report-server-urls-ssrs-configuration-manager.md) [Gerenciador de configuração do Reporting Services &#40;modo nativo&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)
+ [Configurar uma conta de serviço &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md) [conta de serviço &#40;modo nativo do SSRS&#41;](../../sql-server/install/service-account-ssrs-native-mode.md) [Configurar URLs do servidor de relatório &#40;SSRS Configuration Manager](configure-report-server-urls-ssrs-configuration-manager.md)&#41;Gerenciador de configurações do Reporting Services &#40;[modo nativo&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)

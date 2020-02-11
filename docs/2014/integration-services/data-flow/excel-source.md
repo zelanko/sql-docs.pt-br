@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 14153d38d53a87729231b60b2b2846dc12401fc1
-ms.sourcegitcommit: 9af07bd57b76a34d3447e9e15f8bd3b17709140a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/08/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67624361"
 ---
 # <a name="excel-source"></a>Origem do Excel
@@ -45,17 +45,18 @@ ms.locfileid: "67624361"
 ## <a name="usage-considerations"></a>Considerações de uso  
  O Gerenciador de Conexões do Excel usa o Provedor [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB para Jet 4.0 e driver ISAM do Excel com suporte para se conectar, além de ler e gravar dados nas fontes de dados do Excel.  
   
- Muitos artigos da Base de Dados de Conhecimento da [!INCLUDE[msCoName](../../includes/msconame-md.md)] documentam o comportamento desse provedor e driver e, embora esses artigos não sejam específicos do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ou de seus serviços de transformação de dados anteriores, talvez você queira obter mais informações sobre determinados comportamentos que podem levar a resultados inesperados. Para obter informações gerais sobre o uso e o comportamento do driver do Excel, consulte [HOWTO: Usar o ADO com dados do Excel do Visual Basic ou VBA](https://support.microsoft.com/kb/257819).  
+ Muitos artigos da Base de Dados de Conhecimento da [!INCLUDE[msCoName](../../includes/msconame-md.md)] documentam o comportamento desse provedor e driver e, embora esses artigos não sejam específicos do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ou de seus serviços de transformação de dados anteriores, talvez você queira obter mais informações sobre determinados comportamentos que podem levar a resultados inesperados. Para obter informações gerais sobre o uso e comportamento do driver do Excel, consulte [Como usar ADO com dados do Excel do Visual Basic ou do VBA](https://support.microsoft.com/kb/257819).  
   
  Os seguintes comportamentos do provedor Jet com o driver do Excel podem levar a resultados inesperados ao ler dados de uma fonte de dados do Excel.  
   
 -   **Fontes de dados**. A fonte de dados em uma pasta de trabalho do Excel pode ser uma planilha de trabalho, à qual o sinal $ deve ser anexado (por exemplo, Planilha1$), ou um intervalo nomeado (por exemplo, MeuIntervalo). Em uma instrução SQL, o nome de uma planilha de trabalho deve ser delimitado (por exemplo, [Planilha1$]) para evitar um erro de sintaxe causado pelo sinal $. O Construtor de Consultas adiciona automaticamente esses delimitadores. Quando você especifica uma planilha de trabalho ou um intervalo, o driver lê o bloco contínuo de células começando com a primeira célula não vazia no canto superior esquerdo da planilha de trabalho ou do intervalo. Dessa forma, você não pode ter linhas vazias nos dados de origem ou uma linha vazia entre o título ou as linhas de cabeçalho e de dados.  
   
--   **Valores ausentes**. O driver do Excel lê um determinado número de linhas (por padrão, 8 linhas) na fonte especificada para determinar o tipo de dados de cada coluna. Quando uma coluna parece conter tipos de dados mistos, especialmente dados numéricos combinados com dados de texto, o driver decide em favor do tipo de dados majoritário e retorna valores nulos para as células que contêm dados de outro tipo. (Em uma ligação, o tipo numérico vence.) A maioria das opções de formatação de células na planilha de trabalho do Excel não parece afetar a determinação desse tipo de dados. Você pode modificar esse comportamento de driver do Excel especificando Modo de Importação. Para especificar o modo de importação, adicione `IMEX=1` como o valor de propriedades estendidas na cadeia de conexão do Gerenciador de conexão do Excel na **propriedades** janela. Para obter mais informações, consulte [PRB: Valores retornados como nulos usando DAO OpenRecordset do Excel](https://support.microsoft.com/kb/194124).  
+-   **Valores ausentes**. O driver do Excel lê um determinado número de linhas (por padrão, 8 linhas) na fonte especificada para determinar o tipo de dados de cada coluna. Quando uma coluna parece conter tipos de dados mistos, especialmente dados numéricos combinados com dados de texto, o driver decide em favor do tipo de dados majoritário e retorna valores nulos para as células que contêm dados de outro tipo. (Em uma ligação, o tipo numérico vence.) A maioria das opções de formatação de células na planilha de trabalho do Excel não parece afetar a determinação desse tipo de dados. Você pode modificar esse comportamento de driver do Excel especificando Modo de Importação. Para especificar o modo de importação `IMEX=1` , adicione ao valor de propriedades estendidas na cadeia de conexão do Gerenciador de conexões do Excel na janela **Propriedades** . Para obter mais informações, consulte [PRB: valores do Excel retornados como NULOS usando DAO OpenRecordset](https://support.microsoft.com/kb/194124).  
   
--   **Texto truncado**. Quando o driver determina que uma coluna do Excel contém dados de texto, ele seleciona o tipo de dados (cadeia ou memorando) com base no valor mais longo que ele obtém. Se o driver não descobre nenhum valor maior que 255 caracteres nas linhas que ele verifica, ele trata a coluna como uma coluna de cadeia de 255 caracteres, não como uma coluna de memorando. Assim, valores com mais de 255 caracteres podem estar truncados. Para importar dados de uma coluna de memorando sem que haja truncamento, você deve certificar-se de que essa coluna, em pelo menos uma das linhas de amostra, contenha um valor com mais 255 caracteres ou deve aumentar o número de linhas de amostra pelo driver para incluir esse tipo de linha. Você pode aumentar o número de linhas de amostra aumentando o valor de **TypeGuessRows** na chave do Registro **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Jet\4.0\Engines\Excel** . Para obter mais informações, consulte [PRB: Transferência de dados de origem do Jet 4.0 OLEDB falha com erro](https://support.microsoft.com/kb/281517).  
+-   **Texto truncado**. Quando o driver determina que uma coluna do Excel contém dados de texto, ele seleciona o tipo de dados (cadeia ou memorando) com base no valor mais longo que ele obtém. Se o driver não descobre nenhum valor maior que 255 caracteres nas linhas que ele verifica, ele trata a coluna como uma coluna de cadeia de 255 caracteres, não como uma coluna de memorando. Assim, valores com mais de 255 caracteres podem estar truncados. Para importar dados de uma coluna de memorando sem que haja truncamento, você deve certificar-se de que essa coluna, em pelo menos uma das linhas de amostra, contenha um valor com mais 255 caracteres ou deve aumentar o número de linhas de amostra pelo driver para incluir esse tipo de linha. Você pode aumentar o número de linhas de amostra aumentando o valor de **TypeGuessRows** na chave do Registro **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Jet\4.0\Engines\Excel** . Para obter mais informações, consulte [PRB: a transferência de dados da fonte Jet 4.0 OLEDB falha com erro](https://support.microsoft.com/kb/281517).  
   
--   **Tipos de dados**. O driver do Excel reconhece apenas um conjunto limitado de tipos de dados. Por exemplo, todas as colunas numéricas são interpretadas como duplas (DT_R8) e todas as colunas de cadeia de caracteres (que não sejam colunas de memorando) são interpretadas como cadeias Unicode de 255 caracteres (DT_WSTR). [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] mapeia os tipos de dados do Excel da seguinte maneira:  
+-   **Tipos de dados**. O driver do Excel reconhece apenas um conjunto limitado de tipos de dados. Por exemplo, todas as colunas numéricas são interpretadas como duplas (DT_R8) e todas as colunas de cadeia de caracteres (que não sejam colunas de memorando) são interpretadas como cadeias Unicode de 255 caracteres (DT_WSTR). 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] mapeia os tipos de dados do Excel da seguinte maneira:  
   
     -   Numérico – flutuante de precisão dupla (DT_R8)  
   
@@ -63,13 +64,14 @@ ms.locfileid: "67624361"
   
     -   Booliano – booliano (DT_BOOL)  
   
-    -   Data/hora - `datetime` (DT_DATE)  
+    -   Data/hora- `datetime` (DT_DATE)  
   
     -   Cadeia de caracteres – cadeia Unicode, 255 de comprimento (DT_WSTR)  
   
     -   Memorando – fluxo de texto Unicode (DT_NTEXT)  
   
--   **Conversões de tipo e comprimento de dados**. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] não converte tipos de dados implicitamente. Como resultado, você pode precisar usar as transformações Coluna Derivada ou Conversão de Dados para converter explicitamente dados do Excel antes de carregá-los em um destino que não seja Excel ou para converter dados que não sejam do Excel antes de carregá-los em um destino Excel. Nesse caso, pode ser útil criar o pacote inicial usando o Assistente de Importação e Exportação, que configura as conversões necessárias. Alguns exemplos de conversões que podem ser necessárias incluem:  
+-   **Tipos de dados e conversões de comprimento**. 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] não converte tipos de dados implicitamente. Como resultado, você pode precisar usar as transformações Coluna Derivada ou Conversão de Dados para converter explicitamente dados do Excel antes de carregá-los em um destino que não seja Excel ou para converter dados que não sejam do Excel antes de carregá-los em um destino Excel. Nesse caso, pode ser útil criar o pacote inicial usando o Assistente de Importação e Exportação, que configura as conversões necessárias. Alguns exemplos de conversões que podem ser necessárias incluem:  
   
     -   Conversão entre colunas de cadeias Unicode e não Unicode do Excel com páginas de código específicas  
   
@@ -82,11 +84,11 @@ ms.locfileid: "67624361"
   
  Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor de Origem do Excel** clique em um dos seguintes tópicos:  
   
--   [Editor de Origem do Excel &#40;Página Gerenciador de Conexões&#41;](../excel-source-editor-connection-manager-page.md)  
+-   [Editor de origem do Excel &#40;página do Gerenciador de conexões&#41;](../excel-source-editor-connection-manager-page.md)  
   
--   [Editor de Fonte do Excel &#40;Página Colunas&#41;](../excel-source-editor-columns-page.md)  
+-   [Editor de origem do Excel &#40;página colunas&#41;](../excel-source-editor-columns-page.md)  
   
--   [Editor de Origem do Excel &#40;Página Saída de Erro&#41;](../excel-source-editor-error-output-page.md)  
+-   [Editor de origem do Excel &#40;página saída de erro&#41;](../excel-source-editor-error-output-page.md)  
   
  A caixa de diálogo **Editor Avançado** reflete todas as propriedades que podem ser definidas programaticamente. Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   
@@ -112,12 +114,12 @@ ms.locfileid: "67624361"
   
 -   Entrada de blog, [Importando dados do Excel de 64 bits no SSIS](https://go.microsoft.com/fwlink/?LinkId=217673), em hrvoje.piasevoli.com  
   
--   Entrada de blog, [Excel no Integration Services, parte 1 de 3: Conexões e componentes](https://go.microsoft.com/fwlink/?LinkId=217674), em dougbert.com  
+-   Entrada de blog, [Excel no Integration Services, Parte 1 de 3: conexões e componentes](https://go.microsoft.com/fwlink/?LinkId=217674), em dougbert.com  
   
--   Entrada de blog, [Excel no Integration Services, parte 2 de 3: Tipos de dados e tabelas](https://go.microsoft.com/fwlink/?LinkId=217675), em dougbert.com.  
+-   Entrada de blog, [Excel no Integration Services, Parte 2 de 3: tabelas e tipos de dados](https://go.microsoft.com/fwlink/?LinkId=217675), em dougbert.com.  
   
--   Entrada de blog, [Excel no Integration Services, parte 3 de 3: Problemas e alternativas](https://go.microsoft.com/fwlink/?LinkId=217676), em dougbert.com.  
+-   Entrada de blog, [O Excel no Integration Services, parte 3 de 3: problemas e alternativas](https://go.microsoft.com/fwlink/?LinkId=217676), no site dougbert.com.  
   
--   Entrada de blog [conectar-se ao Excel (XLSX) no SSIS](https://microsoft-ssis.blogspot.com/2014/02/connecting-to-excel-xlsx-in-ssis.html).  
+-   Entrada de blog, [conectando ao Excel (xlsx) no SSIS](https://microsoft-ssis.blogspot.com/2014/02/connecting-to-excel-xlsx-in-ssis.html).  
   
   

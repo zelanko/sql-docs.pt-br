@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 72a827e8f15627e986008e57ecb9a180b715a8a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106809"
 ---
 # <a name="add-a-multi-value-parameter-to-a-report"></a>Adicionar um parâmetro com vários valores a um relatório
@@ -44,7 +44,7 @@ ms.locfileid: "66106809"
     ```  
   
     > [!IMPORTANT]  
-    >  Se você não incluir os parênteses delimitando a variável, conforme mostrado acima, o relatório não será renderizado e o erro "deve declarar a variável escalar" será exibido.  
+    >  Se você não incluir os parênteses em volta da variável, como mostrado acima, o relatório não será renderizado e o erro "é necessário declarar a variável escalar" será exibido.  
   
      Um parâmetro de conjunto de dados para um conjunto de dados inserido ou um conjunto de dados compartilhado é criado automaticamente para a variável de consulta. Um parâmetro de relatório é criado automaticamente para o parâmetro de conjunto de dados.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "66106809"
     ```  
   
     > [!IMPORTANT]  
-    >  Se você não incluir os parênteses delimitando a variável, conforme mostrado acima, o relatório não será renderizado e o erro "deve declarar a variável escalar" será exibido.  
+    >  Se você não incluir os parênteses em volta da variável, como mostrado acima, o relatório não será renderizado e o erro "é necessário declarar a variável escalar" será exibido.  
   
      Um parâmetro de conjunto de dados para um conjunto de dados inserido ou um conjunto de dados compartilhado é criado automaticamente para a variável de consulta. Um parâmetro de relatório é criado automaticamente para o parâmetro de conjunto de dados.  
   
@@ -92,7 +92,7 @@ ms.locfileid: "66106809"
   
      Para obter mais informações, consulte [Adicionar, alterar ou excluir os valores disponíveis de um parâmetro de relatório &#40;Construtor de Relatórios e SSRS&#41;](add-change-or-delete-available-values-for-a-report-parameter.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Adicionar parâmetros em cascata a um relatório &#40;Construtor de Relatórios e SSRS&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
  [Adicionar, alterar ou excluir um parâmetro de relatório &#40;Construtor de Relatórios e SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)  
   

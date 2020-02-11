@@ -19,22 +19,22 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ddbf842839e917477269c0de7886055d585a196c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250485"
 ---
 # <a name="replication-backward-compatibility"></a>Compatibilidade com versões anteriores de replicação
-  Os tópicos da seção de compatibilidade com versões anteriores descrevem alterações no comportamento entre versões de replicação do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. É importante compreender a compatibilidade com versões anteriores, se você estiver atualizando ou tiver mais de uma versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma topologia de replicação.  
+  Os tópicos na seção de compatibilidade com versões anteriores descrevem as alterações no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comportamento entre as versões da replicação. É importante compreender a compatibilidade com versões anteriores, se você estiver atualizando ou tiver mais de uma versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma topologia de replicação.  
   
- [Recursos preteridos na Replicação do SQL Server](deprecated-features-in-sql-server-replication.md)  
- Recursos de replicação que foram retidos no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] para compatibilidade com versões anteriores, mas que serão removidos em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ [Recursos preteridos em Replicação do Microsoft SQL Server](deprecated-features-in-sql-server-replication.md)  
+ Recursos de replicação que foram retidos [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] no para compatibilidade com versões anteriores, mas que serão removidos em uma versão [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]futura do.  
   
- [Alterações significativas na replicação do SQL Server](breaking-changes-in-sql-server-replication.md)  
+ [Alterações de quebra na replicação do SQL Server](breaking-changes-in-sql-server-replication.md)  
  Alterações de recurso da replicação que podem exigir alterações para aplicativos.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Atualizar bancos de dados replicados](../../database-engine/install-windows/upgrade-replicated-databases.md)  
   
   

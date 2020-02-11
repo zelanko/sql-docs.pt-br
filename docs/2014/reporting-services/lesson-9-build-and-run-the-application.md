@@ -1,5 +1,5 @@
 ---
-title: 'Lição 9: Compilar e executar o aplicativo | Microsoft Docs'
+title: 'Lição 9: Criar e executar o aplicativo | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 321075631a48570a80e8294f992e8ddb17d50bd3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108379"
 ---
-# <a name="lesson-9-build-and-run-the-application"></a>Lição 9: Criar e executar o aplicativo
+# <a name="lesson-9-build-and-run-the-application"></a>Lesson 9: Build and Run the Application
   Após criar um filtro de dados para a tabela de dados, a próxima etapa será criar e executar o aplicativo de site.  
   
 ### <a name="to-build-and-run-the-application"></a>Para criar e executar o aplicativo  
@@ -34,7 +34,7 @@ ms.locfileid: "66108379"
   
 4.  Clique no ícone **Voltar para o relatório pai**na barra de ferramentas **ReportViewer** para retornar ao relatório **Pai** .  
   
-     ![SSRS drill-through usando o ReportViewer](../../2014/tutorials/media/ssrs-drillthrough-report.png "ssrs drill-through usando o ReportViewer")  
+     ![detalhamento do SSRS usando o ReportViewer](../../2014/tutorials/media/ssrs-drillthrough-report.png "detalhamento do SSRS usando o ReportViewer")  
   
 5.  Feche o navegador para sair.  
   

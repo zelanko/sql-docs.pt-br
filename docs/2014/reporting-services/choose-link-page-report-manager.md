@@ -1,5 +1,5 @@
 ---
-title: Página Escolher Link (Gerenciador de relatórios) | Microsoft Docs
+title: Página escolher link (Report Manager) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 910b06a5cd7af69cc668fb3054dfdfd98c3ae036
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109880"
 ---
 # <a name="choose-link-page-report-manager"></a>Página Escolher Link (Gerenciador de Relatórios)
@@ -36,15 +36,15 @@ ms.locfileid: "66109880"
 4.  Na guia **Geral** , na página de propriedades, clique em **Alterar Link**.  
   
 ## <a name="options"></a>Opções  
- **Local**  
+ **Location**  
  Especifique o nome completo do relatório publicado, incluindo o caminho da pasta e o nome do relatório. É possível digitar o nome completo do relatório ou usar a exibição de árvore para navegar até o relatório desejado.  
   
  **Exibição de árvore**  
  Exibe todas as pastas na hierarquia de pastas do servidor de relatórios. Para usar a exibição de árvore para preencher o campo **Local** , clique no nome do relatório.  
   
-## <a name="see-also"></a>Consulte também  
- [Página Propriedades Gerais, Relatórios &#40;Gerenciador de Relatórios&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
- [Página Novo Relatório Vinculado &#40;Gerenciador de Relatórios&#41;](../../2014/reporting-services/new-linked-report-page-report-manager.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Página Propriedades gerais, relatórios &#40;Report Manager&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
+ [Nova página de relatório vinculada &#40;Report Manager&#41;](../../2014/reporting-services/new-linked-report-page-report-manager.md)   
  [Ajuda F1 do Gerenciador de Relatórios](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

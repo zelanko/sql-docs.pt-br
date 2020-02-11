@@ -11,16 +11,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b3eb41d807a1b4678882c791a7bdeb7693de7b08
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107917"
 ---
 # <a name="exporting-to-a-pdf-file-report-builder-and-ssrs"></a>Exportando para um arquivo PDF (Construtor de Relatórios e SSRS)
   A extensão de renderização PDF renderiza um relatório para os arquivos que podem ser abertos no Adobe Acrobat e em outros visualizadores em PDF de terceiros que dão suporte ao PDF 1.3. Embora o PDF 1.3 seja compatível com o Adobe Acrobat 4.0 e versões posteriores, o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dá suporte ao Adobe Acrobat 6 ou posterior. A extensão de renderização não requer que o software Adobe renderize o relatório. Porém, os visualizadores de PDF, como o Adobe Acrobat, são necessários para exibir ou imprimir um relatório em formato PDF.  
   
- A extensão de renderização PDF suporta caracteres ANSI e pode traduzir caracteres Unicode do japonês, coreano, chinês tradicional, chinês simplificado, cirílico, hebraico e árabe com certas limitações. Para obter mais informações sobre as limitações, consulte [exportando relatórios &#40;construtor de relatórios e SSRS&#41;](export-reports-report-builder-and-ssrs.md).  
+ A extensão de renderização PDF suporta caracteres ANSI e pode traduzir caracteres Unicode do japonês, coreano, chinês tradicional, chinês simplificado, cirílico, hebraico e árabe com certas limitações. Para obter mais informações sobre as limitações, consulte [Exportando relatórios &#40;Construtor de relatórios e SSRS&#41;](export-reports-report-builder-and-ssrs.md).  
   
  O renderizador PDF é um renderizador físico de páginas e, portanto, tem um comportamento de paginação que difere dos demais renderizadores, tais como o HTML e o Excel. Este tópico fornece informações específicas sobre o renderizador PDF e descreve as exceções às regras.  
   
@@ -65,7 +65,8 @@ ms.locfileid: "66107917"
 |`Title`|O atributo `Name` do elemento RDL `Report`.|  
 |`Author`|O elemento RDL `Author`.|  
 |`Subject`|O elemento RDL `Description`.|  
-|`Creator`|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
+|`Creator`|
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
 |`Producer`|Nome e versão da extensão de renderização.|  
 |`CreationDate`|Tempo de execução do relatório no formato PDF `datetime`.|  
   
@@ -80,7 +81,7 @@ ms.locfileid: "66107917"
 ### <a name="document-map"></a>Mapa do documento  
  Se houver rótulos de mapas de documento presentes no relatório, um esboço do documento será adicionando ao arquivo PDF. Cada rótulo do mapa do documento aparece como uma entrada no esboço do documento para que apareça no relatório. No Acrobat, um indicador de destino é adicionado ao esboço do documento somente se a página onde ele está for renderizada.  
   
- Se apenas uma única página for renderizada, nenhum esboço de documento será adicionado. O mapa do documento é organizado hierarquicamente para refletir o nível de aninhamento no relatório. O esboço de documento é acessível em Acrobat sob a guia Marcadores. Clicando em uma entrada dentro do esboço de documento faz com que o documento seja enviado para o local indicado.  
+ Se apenas uma única página for renderizada, nenhum esboço de documento será adicionado. O mapa do documento é organizado hierarquicamente para refletir o nível de aninhamento no relatório. A estrutura de tópicos do documento pode ser acessada no Acrobat na guia indicadores. clicar em uma entrada no esboço do documento faz com que o documento vá para o local indicado.  
   
 ### <a name="bookmarks"></a>Indicadores  
  Os indicadores são têm suportes na renderização do PDF.  
@@ -93,7 +94,7 @@ ms.locfileid: "66107917"
   
   
   
-##  <a name="Compression"></a> Compactação  
+##  <a name="Compression"></a>Çã  
  A compactação de imagens se baseia no tipo original do arquivo da imagem. A extensão de renderização do PDF compacta os arquivos em PDF por padrão.  
   
  Para preservar a compactação de imagens incluídas no arquivo em PDF, quando possível, as imagens JPEG são armazenadas como JPEG e todos os demais tipos de imagens são armazenados como BMP.  
@@ -108,7 +109,7 @@ ms.locfileid: "66107917"
   
   
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Paginação no Reporting Services &#40;Construtor de Relatórios e SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportamentos de renderização &#40;Construtor de Relatórios e SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [Funcionalidade interativa para extensões de renderização de relatório diferentes &#40;Construtor de Relatórios e SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   

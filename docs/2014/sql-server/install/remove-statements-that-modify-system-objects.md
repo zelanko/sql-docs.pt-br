@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0f65d379076eb213971bba97b970b8aa866ca3a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66428879"
 ---
 # <a name="remove-statements-that-modify-system-objects"></a>Remover instruções que modificam objetos do sistema
@@ -26,7 +26,7 @@ ms.locfileid: "66428879"
 ## <a name="component"></a>Componente  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>Descrição  
+## <a name="description"></a>DESCRIÇÃO  
  Atualizações diretas no catálogo do sistema não são permitidas. Qualquer tentativa para fazer essas atualizações gerará o erro seguinte:  
   
  `Server: Msg 259, Level 16, State 1, Line 1`  
@@ -36,8 +36,8 @@ ms.locfileid: "66428879"
 ## <a name="corrective-action"></a>Ação corretiva  
  Modifique seus scripts SQL para usar APIs oficiais e documentadas. Por exemplo, use ALTER DATABASE *database_name* SET EMERGENCY em vez de executar uma instrução UPDATE na tabela de sistema **sysdatabases** .  
   
-## <a name="see-also"></a>Consulte também  
- [Problemas de atualização de mecanismo de banco de dados](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Problemas de atualização do Mecanismo de Banco de Dados](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
  [Supervisor de atualização do SQL Server 2014 &#91;novo&#93;](https://docs.microsoft.com/sql/sql-server/install/sql-server-2014-upgrade-advisor)  
   
   

@@ -11,10 +11,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: a3a79a6ec655e91264d6fcc00db5a920ad82a21e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66822375"
 ---
 # <a name="perform-an-on-demand-evaluation-by-using-registered-servers"></a>Realize uma avaliação sob demanda usando servidores registrados
@@ -25,11 +25,11 @@ ms.locfileid: "66822375"
 >  Você pode realizar uma avaliação sob demanda de políticas de práticas recomendadas em relação a membros de grupo de servidores que estão executando o [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] ou uma versão posterior do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. No entanto, você pode receber um erro de exceção se houver algumas propriedades referidas por uma política que não tem suporte no [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] ou [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)].  
   
 ## <a name="prerequisites"></a>Prerequisites  
- Para realizar essa tarefa, você deve configurar um ou mais registros de servidor em Servidores Registrados. Para mais informações, consulte os seguintes tópicos:  
+ Para realizar essa tarefa, você deve configurar um ou mais registros de servidor em Servidores Registrados. Para obter mais informações, consulte estes tópicos:  
   
 -   [Criar ou editar um grupo de servidores &#40;SQL Server Management Studio&#41;](../ssms/register-servers/create-or-edit-a-server-group-sql-server-management-studio.md)  
   
--   [Registrar um servidor conectado &#40;SQL Server Management Studio&#41;](../ssms/register-servers/register-a-connected-server-sql-server-management-studio.md).  
+-   [Registre um servidor conectado &#40;SQL Server Management Studio&#41;](../ssms/register-servers/register-a-connected-server-sql-server-management-studio.md).  
   
 -   [Criar um servidor de gerenciamento central e um grupo de servidores &#40;SQL Server Management Studio&#41;](../ssms/register-servers/create-a-central-management-server-and-server-group.md)  
   
@@ -37,48 +37,48 @@ ms.locfileid: "66822375"
   
 1.  No [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], no menu **Exibir** , clique em **Servidores Registrados**.  
   
-2.  Expandir **mecanismo de banco de dados**e, em seguida, expanda **Local Server Groups**, ou **servidores centrais de gerenciamento**, dependendo de sua configuração.  
+2.  Expanda **mecanismo de banco de dados**e, em seguida, expanda **grupos de servidores locais**ou **servidores de gerenciamento central**, dependendo de sua configuração.  
   
 3.  Execute um destes procedimentos:  
   
-    -   Para avaliar as políticas em relação a todos os servidores que são gerenciados pelo grupo de servidores locais ou o servidor de gerenciamento central, clique com botão direito o nome de grupo do servidor local ou o nome do servidor de gerenciamento central e, em seguida, clique em **avaliar políticas** .  
+    -   Para avaliar as políticas em relação a todos os servidores gerenciados pelo grupo de servidores local ou do servidor de gerenciamento central, clique com o botão direito do mouse no nome do grupo de servidores locais ou no nome do servidor de gerenciamento central e clique em **avaliar políticas**.  
   
         > [!NOTE]  
         >  Quando você avaliar políticas através de um servidor de gerenciamento central, as políticas não serão avaliadas em relação ao próprio servidor de gerenciamento central.  
   
-    -   Para avaliar as políticas em relação a um servidor específico ou um grupo de servidores, expanda **grupos de servidores locais** ou o servidor de gerenciamento central de nome, clique com botão direito do servidor ou grupo que você deseja avaliar políticas em relação a e, em seguida, clique em **Avaliar políticas**.  
+    -   Para avaliar as políticas em relação a um servidor ou grupo de servidores específico, expanda **grupos de servidores locais** ou o nome do servidor de gerenciamento central, clique com o botão direito do mouse no servidor ou grupo de servidores do qual você deseja avaliar políticas e clique em **avaliar políticas**.  
   
-4.  No **avaliar políticas** caixa de diálogo, em seguida o **fonte** , clique no botão de reticências ( **...** ) botão.  
+4.  Na caixa de diálogo **avaliar políticas** , ao lado da caixa **origem** , clique no botão de reticências (**...**).  
   
-5.  No **Selecionar origem** caixa de diálogo, você pode selecionar um **arquivos** ou **Server** como a origem dos arquivos de política para avaliar. Se você clicar **Server**, você pode realizar uma avaliação sob demanda de quaisquer políticas de práticas recomendadas que foram importados anteriormente para o gerenciamento baseado em políticas em um servidor local ou remoto. Neste tutorial, você clicará **arquivos**e, em seguida, selecione os arquivos de política individuais que você deseja avaliar. Para fazer isso, siga estas etapas:  
+5.  Na caixa de diálogo **selecionar origem** , você pode selecionar **arquivos** ou **servidor** como a origem dos arquivos de política a serem avaliados. Se você clicar em **servidor**, poderá executar uma avaliação sob demanda de todas as políticas de práticas recomendadas que foram importadas anteriormente para o gerenciamento baseado em políticas em um servidor local ou remoto. Neste tutorial, você clicará em **arquivos**e, em seguida, selecionará os arquivos de política individuais que deseja avaliar. Para fazer isso, siga estas etapas:  
   
     1.  Clique em **arquivos**.  
   
-    2.  Lado **arquivos**, clique no botão de reticências ( **...** ) botão.  
+    2.  Ao lado de **arquivos**, clique no botão de reticências (**...**).  
   
-    3.  Selecione um ou mais arquivos de política. XML para avaliar e, em seguida, clique em **aberto**.  
+    3.  Selecione um ou mais arquivos de política. XML a serem avaliados e clique em **abrir**.  
   
-         A lista de arquivos selecionadas aparece na **arquivos** caixa.  
+         A lista de arquivos selecionados aparece na caixa **arquivos** .  
   
-    4.  No **Selecionar origem** caixa de diálogo, clique em **Okey**.  
+    4.  Na caixa de diálogo **selecionar origem** , clique em **OK**.  
   
-    5.  Se o **Carregando políticas** caixa de diálogo for exibida, clique em **fechar**.  
+    5.  Se a caixa de diálogo **carregando políticas** for exibida, clique em **fechar**.  
   
-     As políticas que você selecionou são listadas na **seleção de política** página. Observe que um ícone de aviso ao lado de uma política indica que a política contém scripts.  
+     As políticas que você selecionou são listadas na página **seleção de política** . Observe que um ícone de aviso ao lado de uma política indica que a política contém scripts.  
   
-6.  Clique em **Evaluate** para avaliar as políticas.  
+6.  Clique em **avaliar** para avaliar as políticas.  
   
-7.  Para algumas falhas de política, o Gerenciamento Baseado em Políticas permite aplicar ações de conformidade com políticas no destino imediatamente. Para esse tipo de falha, uma caixa de seleção será exibida ao lado da política com falha. Se você selecionar a caixa de seleção, ou clique na linha com a política com falha, caixas de seleção aparecer na **detalhes de destino** painel ao lado de instâncias de destino que falharam a avaliação. Se qualquer uma das caixas de seleção estiver selecionada, o **aplicar** botão fica disponível. Quando você clica em **aplicar**, a configuração de não conformidade será atualizada automaticamente nas instâncias de destino que você selecionou.  
+7.  Para algumas falhas de política, o Gerenciamento Baseado em Políticas permite aplicar ações de conformidade com políticas no destino imediatamente. Para esse tipo de falha, uma caixa de seleção será exibida ao lado da política com falha. Se você marcar a caixa de seleção ou clicar na linha com a política com falha, as caixas de seleção aparecerão no painel **detalhes de destino** ao lado das instâncias de destino que falharam na avaliação. Se qualquer uma das caixas de seleção estiver selecionada, o botão **aplicar** ficará disponível. Quando você clica em **aplicar**, a configuração não compatível será atualizada automaticamente nas instâncias de destino que você selecionou.  
   
     > [!CAUTION]  
-    >  Tenha certeza de que você entende a configuração de política perfeitamente antes de atualizar uma instância de destino automaticamente. É recomendável que, depois de selecionar uma ou mais caixas de seleção, você clicar **Script**e escolha um local de saída para que você possa examinar subjacente [!INCLUDE[tsql](../includes/tsql-md.md)] antes de aplicar as alterações de código.  
+    >  Tenha certeza de que você entende a configuração de política perfeitamente antes de atualizar uma instância de destino automaticamente. Recomendamos que, depois de selecionar uma ou mais caixas de seleção, você clique em **script**e escolha um local de saída para poder examinar o [!INCLUDE[tsql](../includes/tsql-md.md)] código subjacente antes de aplicar as alterações.  
   
-8.  Para exibir os resultados detalhados para uma política, clique na política na **resultados** tabela. O **detalhes de destino** tabela mostra os detalhes para cada instância.  
+8.  Para exibir resultados detalhados de uma política, clique na política na tabela de **resultados** . A tabela **detalhes de destino** mostra os detalhes de cada instância.  
   
 ## <a name="next-lesson"></a>Próxima lição  
- [Lição 2: Avaliar as políticas de práticas recomendadas de forma programada](../../2014/tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md)  
+ [Lição 2: Avalie as políticas de práticas recomendadas de forma agendada](../../2014/tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Monitorar e impor práticas recomendadas usando o gerenciamento baseado em políticas](../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)   
  [Administrar vários servidores usando os Servidores de Gerenciamento Centrais](../relational-databases/administer-multiple-servers-using-central-management-servers.md)  
   

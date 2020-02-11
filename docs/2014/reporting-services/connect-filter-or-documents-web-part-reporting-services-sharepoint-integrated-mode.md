@@ -1,5 +1,5 @@
 ---
-title: Conectar-se o filtro ou uma Web Part de documentos (Reporting Services no modo integrado do SharePoint) | Microsoft Docs
+title: Conectar a Web Part de filtro ou documentos (Reporting Services no modo integrado do SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 062733f1ee68cd90ccc1b9a15d0cadc06b7e6f89
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109722"
 ---
 # <a name="connect-filter-or-documents-web-part-reporting-services-in-sharepoint-integrated-mode"></a>Conectar Web Part de filtro ou de documentos (Reporting Services no modo integrado do SharePoint)
@@ -37,17 +37,17 @@ ms.locfileid: "66109722"
   
 3.  Clique em **Adicionar uma Web Part**.  
   
-4.  Em **Todas as Web Parts**, na categoria **Diversos** , selecione **Visualizador de Relatórios do SQL Server Reporting Services**.  
+4.  Em **todos os Web Parts**, na categoria **diversos** , selecione **SQL Server Reporting Services Visualizador de relatórios**.  
   
 5.  Clique em **Adicionar**. A Web Part será adicionada à parte superior da zona.  
   
-6.  Em outra zona da mesma página ou do mesmo painel da Web Part, clique em **Adicionar uma Web Part**.  
+6.  Em outra zona na mesma página de Web Part ou no painel, clique em **Adicionar uma Web Part**.  
   
-7.  Em **Todas as Web Parts**, na seção **Filtros** , selecione uma Web Part.  
+7.  Em **todos os Web Parts**, na seção **filtros** , selecione uma Web Part.  
   
 8.  Clique em **Adicionar**. A Web Part será adicionada à parte superior da zona.  
   
-9. Na zona que contém a Web Part, clique no menu **Editar** da Web Part, aponte para **Conexões**, para **Enviar Valores de Filtro Para**e selecione **Visualizador de Relatórios** - *nome do relatório*.  
+9. Na zona que contém a Web Part, clique no menu **Editar** da Web Part, aponte para **conexões**, aponte para **enviar valores de filtro para**e selecione **Visualizador** - de relatórios*nome do relatório*.  
   
 10. Verifique suas alterações e salve a página.  
   
@@ -59,25 +59,25 @@ ms.locfileid: "66109722"
   
 3.  Clique em **Adicionar uma Web Part**.  
   
-4.  Em **Todas as Web Parts**, na seção **Listas e Biblioteca** , selecione **Documentos**.  
+4.  Em **todos os Web Parts**, na seção **listas e biblioteca** , selecione **documentos.**  
   
 5.  Clique em **Adicionar**. A Web Part será adicionada à parte superior da zona.  
   
 6.  Clique em **Aplicar** na parte inferior do painel de ferramentas e clique em **OK** para fechar esse painel.  
   
-7.  Em outra zona da mesma página ou do mesmo painel da Web Part, clique em **Adicionar uma Web Part**.  
+7.  Em outra zona na mesma página de Web Part ou no painel, clique em **Adicionar uma Web Part**.  
   
-8.  Em **Todas as Web Parts**, na categoria **Diversos** , selecione **Visualizador de Relatórios do SQL Server Reporting Services.**  
+8.  Em **todos os Web Parts**, na categoria **diversos** , selecione **SQL Server Reporting Services Visualizador de relatórios.**  
   
 9. Clique em **Adicionar**. A Web Part será adicionada à parte superior da zona.  
   
-10. Na zona que contém a Web Part, clique no menu **Editar** da Web Part, aponte para **Conexões**, para **Obter definições de relatório de**e selecione **Documentos**.  
+10. Na zona que contém a Web Part, clique no menu **Editar** da Web Part, aponte para **conexões**, aponte para **obter definições de relatório de**e, em seguida, selecione **documentos**.  
   
 11. Verifique suas alterações e salve a página.  
   
-## <a name="see-also"></a>Consulte também  
- [Adicionar a Web Part do Visualizador de Relatórios a uma página da Web &#40;Reporting Services no modo integrado do SharePoint&#41;](report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)   
- [Web Part do Visualizador de Relatórios em um site do SharePoint](../../2014/reporting-services/report-viewer-web-part-on-a-sharepoint-site.md)   
- [Personalizar a Web Part do Visualizador de Relatórios](../../2014/reporting-services/customize-the-report-viewer-web-part.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Adicione a Web Part do Visualizador de relatórios a uma página da Web &#40;Reporting Services no modo integrado do SharePoint&#41;](report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)   
+ [Web Part do Visualizador de relatórios em um site do SharePoint](../../2014/reporting-services/report-viewer-web-part-on-a-sharepoint-site.md)   
+ [Personalizar a Web Part do Visualizador de relatórios](../../2014/reporting-services/customize-the-report-viewer-web-part.md)  
   
   

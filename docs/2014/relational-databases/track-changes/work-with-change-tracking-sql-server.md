@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 5ed0a510a6b74e3c33e9cb7ed9d789ad8242a499
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63270220"
 ---
 # <a name="work-with-change-tracking-sql-server"></a>Trabalhar com o controle de alterações (SQL Server)
@@ -48,7 +48,7 @@ ms.locfileid: "63270220"
   
      A ilustração a seguir mostra como a função CHANGETABLE(CHANGES ...) é usada para obter alterações.  
   
-     ![Exemplo de saída da consulta de controle de alterações](../../database-engine/media/queryoutput.gif "Exemplo de saída da consulta de controle de alterações")  
+     ![Exemplo da saída de consulta de controle de alterações](../../database-engine/media/queryoutput.gif "Exemplo da saída de consulta de controle de alterações")  
   
  Função CHANGE_TRACKING_CURRENT_VERSION()  
  É usada para obter a versão atual que será usada na próxima vez ao consultar alterações. Essa versão representa a versão da última transação confirmada.  
@@ -431,7 +431,7 @@ COMMIT TRAN
   
 -   Quando um cliente consultar alterações, registre o último número de versão de sincronização para cada cliente no servidor. Se houver um problema com os dados, os últimos números de versão sincronizados não serão compatíveis. Isso indica que é necessária uma reinicialização.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Controle de alterações de dados &#40;SQL Server&#41;](../track-changes/track-data-changes-sql-server.md)   
  [Sobre o controle de alterações &#40;SQL Server&#41;](../track-changes/about-change-tracking-sql-server.md)   
  [Gerenciar o controle de alterações &#40;SQL Server&#41;](../track-changes/manage-change-tracking-sql-server.md)   

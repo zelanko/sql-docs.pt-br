@@ -1,5 +1,5 @@
 ---
-title: Preencha a caixa de diálogo (construtor de relatórios e SSRS) | Microsoft Docs
+title: Caixa de diálogo preenchimento (Construtor de Relatórios e SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,45 +20,45 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 86f54b00e530e70d1952461ce7b98b9238e4c3f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109154"
 ---
 # <a name="fill-dialog-box-report-builder-and-ssrs"></a>Caixa de diálogo Preenchimento (Construtor de Relatórios e SSRS)
-  Na guia **Preenchimento**, você pode especificar as opções de cor da tela de fundo de uma única ou de várias células dentro de uma região de dados ou de uma caixa de texto.  
+  Na guia **Preenchimento** , você pode especificar as opções de cor da tela de fundo de uma única ou de várias células dentro de uma região de dados ou de uma caixa de texto.  
   
 ## <a name="options"></a>Opções  
- **Cor de preenchimento**  
- Clique no botão de cor para selecionar uma cor de preenchimento para o retângulo. Clique no botão **Expressão** _(fx)_ para editar a expressão, que pode ser um valor hexadecimal para a cor RGB ou um dos nomes de cor predefinidos que foram fornecidos na caixa de diálogo **Expressão**. Para consultar uma lista de cores predefinidas, selecione **Web** no painel **Item**. Os nomes de cor listados no painel **Título** podem ser digitados no painel de texto da expressão. Não use sinal de igual (=) ou aspas ("") ao digitar o nome da cor.  
+ **Cor de Preenchimento**  
+ Clique no botão de cor para selecionar uma cor de preenchimento para o retângulo. Clique no botão **Expressão**_(fx)_ para editar a expressão, que pode ser um valor hexadecimal para a cor RGB ou um dos nomes de cor predefinidos que foram fornecidos na caixa de diálogo **Expressão**. Para consultar uma lista de cores predefinidas, selecione **Web** no painel **Item**. Os nomes de cor listados no painel **Título** podem ser digitados no painel de texto da expressão. Não use sinal de igual (=) ou aspas ("") ao digitar o nome da cor.  
   
  **Selecione a origem da imagem**  
  Indique onde a imagem está armazenada para que, quando o relatório for renderizado, o processador de relatórios possa exibi-la.  
   
--   **Externa** Escolha essa opção quando quiser que a imagem continue existindo como um arquivo em um servidor Web ou um servidor de relatórios.  
+-   **Externo** Escolha esta opção quando quiser que a imagem continue a existir como um arquivo em um servidor de relatório ou servidor Web.  
   
--   **Inserido** Escolha essa opção quando quiser inserir a imagem no relatório.  
+-   **Inserido** Escolha esta opção quando desejar inserir a imagem no relatório.  
   
--   **Banco de Dados** Escolha essa opção quando quiser incluir um nome de campo do banco de dados que representa as imagens que deseja incluir em seu relatório.  
+-   **Banco de dados** Escolha esta opção quando desejar incluir um nome de campo de banco de dados que represente as imagens que você deseja incluir em seu relatório.  
   
  **Usar esta imagem**  
  Essa opção aparece quando você seleciona a opção **Inserido** ou **Externo** .  
   
  Se estiver inserindo a imagem, na lista suspensa, escolha a imagem a ser adicionada ao relatório. Clique em **Importar** para adicionar a imagem à lista suspensa. Se você adicionou uma imagem ao painel **Dados** , poderá selecioná-la escolhendo a opção **Inserido** e, em seguida, selecionar a imagem na lista suspensa.  
   
- Se você selecionar a opção **Externo** , digite a URL da imagem. Para um relatório publicado em um servidor de relatório configurado para o modo nativo, use um caminho completo ou relativo (por exemplo, http:// *\<servername >*  /images/Image1.jpg). Para um relatório publicado em um servidor de relatório configurado no modo integrado do SharePoint, use uma URL totalmente qualificada (por exemplo, http:// *\<SharePointservername > /\<site >*  /documentos/imagens / Image1.jpg).  
+ Se você selecionar a opção **Externo** , digite a URL da imagem. Para um relatório publicado em um servidor de relatório configurado para o modo nativo, use um caminho completo ou relativo (por exemplo, http://*\<ServerName>*/images/image1.jpg). Para um relatório publicado em um servidor de relatório configurado no modo integrado do SharePoint, use uma URL totalmente qualificada (por exemplo, http://*\<SharePointservername>/\<site>*/Documents/images/image1.jpg).  
   
  **Importar**  
  Disponível quando você seleciona **Inserido**. Clique para adicionar uma imagem à lista suspensa **Usar esta imagem** .  
   
- **Use este campo**  
+ **Usar este campo**  
  Disponível quando você seleciona **Banco de Dados**. Selecione o nome do campo.  
   
- **Use esse tipo MIME**  
+ **Usar este tipo MIME**  
  Escolha o formato apropriado das imagens contidas no banco de dados (por exemplo, .bmp, .jpeg, .gif, .png ou .x-png).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Formatando itens de relatório &#40;Construtor de Relatórios e SSRS&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   
  [Formatando texto e espaços reservados &#40;Construtor de Relatórios e SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
  [Imagens &#40;Construtor de Relatórios e SSRS&#41;](report-design/images-report-builder-and-ssrs.md)  

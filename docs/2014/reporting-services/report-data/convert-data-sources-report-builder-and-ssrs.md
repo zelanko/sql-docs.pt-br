@@ -1,5 +1,5 @@
 ---
-title: Converter uma fonte de dados inserida em compartilhada (construtor de relatórios e SSRS) | Microsoft Docs
+title: Converter uma fonte de dados de inserido em compartilhado (Construtor de Relatórios e SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 64879a7ab82f509f129cf43ab50c1cdbb3b7f913
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107407"
 ---
 # <a name="convert-a-data-source-from-embedded-to-shared-report-builder-and-ssrs"></a>Converter uma fonte de dados inserida em compartilhada (Construtor de Relatórios e SSRS)
@@ -43,7 +43,7 @@ ms.locfileid: "66107407"
   
 ### <a name="to-convert-a-data-source-from-shared-to-embedded"></a>Para converter uma fonte de dados de compartilhada em inserida  
   
--   No painel Dados do Relatório, clique com o botão direito do mouse na fonte de dados, abra a caixa de diálogo **Propriedades da Fonte de Dados** e clique em **Conexão Inserida**. Digite as informações necessárias.  
+-   No painel Dados do Relatório, clique com o botão direito do mouse na fonte de dados, abra a caixa de diálogo **Propriedades da Fonte de Dados** e clique em **Conexão Inserida**. Insira as informações necessárias.  
   
      No painel de dados do relatório, o ícone da fonte de dados muda para o ícone de fonte de dados compartilhada.  
   
@@ -51,18 +51,18 @@ ms.locfileid: "66107407"
   
 #### <a name="to-convert-a-data-source-from-embedded-to-shared"></a>Para converter uma fonte de dados inserida em compartilhada  
   
--   No painel Dados do Relatório, clique com o botão direito do mouse na fonte de dados para abrir a caixa de diálogo **Propriedades da Fonte de Dados** e clique em **Conexão Inserida**. Digite as informações necessárias.  
+-   No painel Dados do Relatório, clique com o botão direito do mouse na fonte de dados para abrir a caixa de diálogo **Propriedades da Fonte de Dados** e clique em **Conexão Inserida**. Insira as informações necessárias.  
   
      No painel de dados do relatório, o ícone da fonte de dados muda para o ícone de fonte de dados compartilhada.  
   
 #### <a name="to-convert-a-data-source-from-shared-to-embedded"></a>Para converter uma fonte de dados de compartilhada em inserida  
   
--   No painel Dados do Relatório, clique com o botão direito do mouse na fonte de dados, abra a caixa de diálogo **Propriedades da Fonte de Dados** e clique em **Conexão Inserida**. Digite as informações necessárias.  
+-   No painel Dados do Relatório, clique com o botão direito do mouse na fonte de dados, abra a caixa de diálogo **Propriedades da Fonte de Dados** e clique em **Conexão Inserida**. Insira as informações necessárias.  
   
      No painel de dados do relatório, o ícone da fonte de dados muda para o ícone de fonte de dados compartilhada.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Gerenciar fontes de dados de relatório](manage-report-data-sources.md)   
- [Conexões de dados, fontes de dados e cadeias de conexão no Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)  
+ [Data Connections, Data Sources, and Connection Strings in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)  
   
   

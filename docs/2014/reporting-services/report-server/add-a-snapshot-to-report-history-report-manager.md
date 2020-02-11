@@ -16,10 +16,10 @@ helpviewer_keywords:
 ms.custom: ''
 ms.date: 06/13/2017
 ms.openlocfilehash: 00b1caa2f68da0a3a38d98cf35f959f83257b99e
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67413112"
 ---
 # <a name="add-a-snapshot-to-report-history-report-manager"></a>Adicionar um instantâneo ao histórico de relatório (Gerenciador de Relatórios)
@@ -63,7 +63,7 @@ Os instantâneos de relatório não são salvos em um formato de renderização 
   
 3. Clique em **Opções de Instantâneo**.  
   
-4. Marque a caixa de seleção para **Usar o agendamento a seguir para adicionar instantâneos ao histórico de relatório**. Execute um destes procedimentos:  
+4. Marque a caixa de seleção para **Usar o agendamento a seguir para adicionar instantâneos ao histórico de relatório**. Execute uma das ações a seguir:  
   
     - Selecione **Agendamento específico do relatório**. Preencha os detalhes do agendamento, selecione as datas de início e término e clique em **OK**.  
   
@@ -71,10 +71,10 @@ Os instantâneos de relatório não são salvos em um formato de renderização 
   
 5. Clique em **Aplicar**.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 
-- [Configurar propriedades de execução de um relatório &#40;Gerenciador de Relatórios&#41;](../reports/configure-execution-properties-for-a-report-report-manager.md)
-- [Abrir e fechar um relatório &#40;Gerenciador de Relatórios&#41;](../reports/open-and-close-a-report-report-manager.md)
+- [Configurar propriedades de execução para um relatório &#40;Report Manager&#41;](../reports/configure-execution-properties-for-a-report-report-manager.md)
+- [Abrir e fechar um relatório &#40;Report Manager&#41;](../reports/open-and-close-a-report-report-manager.md)
 - [Limitar o histórico de relatórios &#40;Gerenciador de Relatórios&#41;](../reports/limit-report-history-report-manager.md)
 - [Agendas](../subscriptions/schedules.md)   
 - [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](../report-manager-ssrs-native-mode.md)

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5204cab43e3c801acf80113ec92c51e00c0f9d13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108386"
 ---
 # <a name="lesson-8-create-a-data-filter"></a>Lição 8: Criar um filtro de dados
@@ -35,17 +35,17 @@ ms.locfileid: "66108386"
   
 1.  Abra o relatório filho.  
   
-2.  Selecione um título de coluna no tablix, clique com botão direito na célula cinza que aparece acima do título de coluna e, em seguida, clique em **propriedades do Tablix**.  
+2.  Selecione um título de coluna no Tablix, clique com o botão direito do mouse na célula cinza que aparece acima do título da coluna e clique em **Propriedades do Tablix**.  
   
-3.  Clique no **filtros** página e, em seguida, clique em **Add**.  
+3.  Clique na página **filtros** e, em seguida, clique em **Adicionar**.  
   
-4.  No **expressão** arquivado, clique em `ProductID` na lista suspensa. Esta é a coluna à qual você aplicará o filtro.  
+4.  Na **expressão** registrada, clique `ProductID` na lista suspensa. Esta é a coluna à qual você aplicará o filtro.  
   
-5.  Clique em de igual ( **=** ) operador no **operador** lista suspensa.  
+5.  Clique no operador EQUAL**=**() na lista suspensa **operador** .  
   
-6.  Clique no botão de expressão ao lado a **valor** , clique em **parâmetros** no **categoria** área e, em seguida, clique duas vezes `productid` no  **Valores** área. O **definir expressão para: Valor** campo agora deve conter uma expressão semelhante a **= parâmetros! productid. Valor**.  
+6.  Clique no botão de expressão ao lado do campo **valor** , clique em **parâmetros** na área **categoria** e clique `productid` duas vezes na área **valores** . O campo **Definir expressão para: Valor** agora deve conter uma expressão semelhante a **=Parameters!productid.Value**.  
   
-7.  Clique em **Okey,** e **Okey** novamente na **propriedades do Tablix** caixa de diálogo.  
+7.  Clique em **OK** e em **OK** novamente na caixa de diálogo **Propriedades do Tablix** .  
   
 8.  Salve o arquivo .rdlc.  
   
@@ -53,11 +53,11 @@ ms.locfileid: "66108386"
   
 1.  No Gerenciador de Soluções, expanda Default.aspx e clique duas vezes em Default.aspx.cs.  
   
-2.  Crie uma nova função que aceita um parâmetro `productid`, do tipo inteiro e retorna um `datatable` de objeto e faz o seguinte.  
+2.  Crie uma nova função que aceite um parâmetro, `productid`, do tipo inteiro, retorne `datatable` um objeto e faça o seguinte.  
   
-    1.  Cria uma instância do conjunto de dados, `DataSet2`, que foi criado na etapa 2 do [lição 4: Definir uma Conexão de dados e uma tabela de dados para o relatório filho](lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
+    1.  Cria uma instância do conjunto de dados `DataSet2`,, que foi criada na etapa 2 da [lição 4: definir uma conexão de dados e uma data Table para o relatório filho](lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
   
-    2.  Criar uma conexão para o banco de dados do SQL Server para executar a consulta definida no **lição 4: Definir dados de um Conexão e uma DataTable para o relatório filho**.  
+    2.  Crie uma conexão com o banco de dados SQL Server para executar a consulta definida na **Lição 4: Definir uma conexão de dados e uma DataTable para o relatório filho**.  
   
     3.  A consulta deve retornará dados não filtrados.  
   
@@ -105,11 +105,11 @@ ms.locfileid: "66108386"
   
 1.  Abra o Default.aspx  
   
-2.  Clique com botão direito no controle ReportViewer e, em seguida, clique em **propriedades.**  
+2.  Clique com o botão direito do mouse no controle ReportViewer e clique em **Propriedades.**  
   
-3.  Sobre o **propriedades** , clique no **eventos** ícone.  
+3.  Na página **Propriedades** , clique no ícone **eventos** .  
   
-4.  Clique duas vezes o **detalhamento** eventos.  
+4.  Clique duas vezes no evento de **detalhamento** .  
   
      Isso adicionará uma seção do manipulador de eventos ao código, que será semelhante ao bloco abaixo.  
   
@@ -123,7 +123,7 @@ ms.locfileid: "66108386"
   
     1.  Busque a referência de objeto do relatório filho no parâmetro *DrillthroughEventArgs* .  
   
-    2.  Chame a função `GetPurchaseOrderDetail`  
+    2.  Chame a função,`GetPurchaseOrderDetail`  
   
     3.  Associe a DataTable `PurchaseOrderDetail` à fonte de dados correspondente do relatório.  
   
@@ -165,9 +165,9 @@ ms.locfileid: "66108386"
   
 2.  Crie uma nova função que aceite um parâmetro, `productid`, do tipo inteiro e retorne um objeto `datatable`, e faça o seguinte.  
   
-    1.  Cria uma instância do conjunto de dados, `DataSet2`, que foi criado na etapa 2 do [lição 4: Definir uma Conexão de dados e uma tabela de dados para o relatório filho](lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
+    1.  Cria uma instância do conjunto de dados `DataSet2`,, que foi criada na etapa 2 da [lição 4: definir uma conexão de dados e uma data Table para o relatório filho](lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
   
-    2.  Criar uma conexão para o banco de dados do SQL Server para executar a consulta definida **lição 4: Definir dados de um Conexão e uma DataTable para o relatório filho**.  
+    2.  Crie uma conexão com o banco de dados SQL Server para executar a consulta definida na **Lição 4: Definir uma conexão de dados e uma DataTable para o relatório filho**.  
   
     3.  A consulta incluirá um parâmetro, `productid`, assegurar que os dados retornados serão filtrados com base na `ProductID` selecionada no relatório pai.  
   
@@ -216,11 +216,11 @@ ms.locfileid: "66108386"
   
 1.  Abra o Default.aspx  
   
-2.  O controle ReportViewer do botão direito do mouse e, em seguida, clique em **propriedades**.  
+2.  Clique com o botão direito do mouse no controle ReportViewer e clique em **Propriedades**.  
   
-3.  Sobre o **propriedades** painel, clique no **eventos** ícone.  
+3.  No painel **Propriedades** , clique no ícone **eventos** .  
   
-4.  Clique duas vezes o **detalhamento** eventos.  
+4.  Clique duas vezes no evento de **detalhamento** .  
   
      Isso adicionará uma seção do manipulador de eventos ao código, que será semelhante ao conteúdo abaixo.  
   
@@ -240,7 +240,7 @@ ms.locfileid: "66108386"
   
     4.  Chame a função `GetPurchaseOrderDetail` e passe o valor para o parâmetro `ProductID`.  
   
-    5.  Associar o `PurchaseOrderDetail` DataTable com o relatório correspondente da fonte de dados.  
+    5.  Associar a `PurchaseOrderDetail` DataTable à fonte de dados correspondente do relatório.  
   
          O código completo do manipulador de eventos será semelhante ao conteúdo seguinte.  
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e5f77df0a2e5322687f5724e7921932a551d07ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107167"
 ---
 # <a name="report-parts-and-datasets-in-report-builder"></a>Partes de relatório e conjuntos de dados no Construtor de Relatórios
@@ -59,7 +59,7 @@ ms.locfileid: "66107167"
 >  Para assegurar que você e outros usuários possam continuar usando os dados de um conjunto de dados compartilhado com êxito, é necessário entender os princípios por trás da proteção de itens de relatório. Para obter mais informações, consulte [Proteger itens de conjunto de dados compartilhados](../security/secure-shared-dataset-items.md).  
   
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Modo de exibição de Design de relatório &#40;Construtor de Relatórios&#41;](../report-builder/report-design-view-report-builder.md)   
  [Segurança &#40;Construtor de Relatórios&#41;](../report-builder/security-report-builder.md)   
  [Partes de relatório &#40;Construtor de Relatórios e SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   

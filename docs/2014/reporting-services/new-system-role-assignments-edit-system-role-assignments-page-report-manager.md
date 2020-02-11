@@ -1,5 +1,5 @@
 ---
-title: 'Novas Atribuições de Função do Sistema: Editar página de atribuições de função do sistema (Gerenciador de relatórios) | Microsoft Docs'
+title: 'Atribuições de nova função do sistema: página Editar atribuições de função do sistema (Report Manager) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 661ae0cafe5b484839bbee2531f82f3b62f72c75
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108126"
 ---
-# <a name="new-system-role-assignments-edit-system-role-assignments-page-report-manager"></a>Novas Atribuições de Função do Sistema: Editar página de atribuições de função do sistema (Gerenciador de relatórios)
+# <a name="new-system-role-assignments-edit-system-role-assignments-page-report-manager"></a>Atribuições de nova função do sistema: página Editar atribuições de função do sistema (Gerenciador de Relatórios)
   Use a página Atribuição de Nova Função do Sistema ou Editar Atribuições de Função do Sistema para definir a segurança do servidor de relatório. Toda a segurança é definida por atribuições de função que mapeiam usuários específicos ou grupos até as tarefas que eles podem executar. A lista de tarefas é representada como uma definição de função que você seleciona ao fazer a atribuição da função.  
   
  No nível do sistema, as atribuições de função que você cria ou modifica se aplicam ao servidor de relatórios como um todo. Por exemplo, a capacidade de criar agendas compartilhadas é especificada no nível do sistema porque agendas compartilhadas são usadas em todo o sistema.  
@@ -37,18 +37,18 @@ ms.locfileid: "66108126"
   
 2.  Na parte superior da página, no canto direito, clique em **Configurações de Site**. Esse procedimento abre a página Propriedades Gerais do site.  
   
-3.  Selecione a guia **Segurança** . Você deve ter permissões de Gerenciador de Conteúdo e de Administrador de Sistema para acessar essa página.  
+3.  Selecione a guia **segurança** . Você deve ter permissões de Gerenciador de conteúdo e de administrador do sistema para acessar esta página.  
   
 4.  Para criar uma atribuição de nova função, clique em **Atribuição de Nova Função** na barra de ferramentas. Para editar uma atribuição de função existente, clique em **Editar** , ao lado de um grupo ou usuário na página de propriedades de Segurança.  
   
 ## <a name="options"></a>Opções  
- **Grupo ou usuário**  
- Digite o nome de uma conta de grupo ou usuário do seu domínio. Se o servidor de relatório estiver sendo executado em uma conta local, você deve especificar grupos ou usuários locais. Se o servidor de relatório estiver sendo executado em uma conta de domínio, você deverá especificar grupos ou usuários de domínio. Insira a conta neste formato: \<domínio >\\< conta\>.  
+ **Grupo ou Usuário**  
+ Digite o nome de uma conta de grupo ou usuário do seu domínio. Se o servidor de relatório estiver sendo executado em uma conta local, você deve especificar grupos ou usuários locais. Se o servidor de relatório estiver sendo executado em uma conta de domínio, você deverá especificar grupos ou usuários de domínio. Insira a conta neste formato: \<domínio>\\ conta\>de<.  
   
 > [!NOTE]  
 >  Esta caixa só está disponível na página Atribuição de Nova Função.  
   
- **Roles**  
+ **Funções**  
  Fornece uma lista de funções no nível de sistema que você pode atribuir a outros usuários. Você pode especificar várias funções para uma única atribuição de função.  
   
  O Gerenciador de Relatórios não exibe as tarefas em cada função nem fornece um modo de adicionar ou modificar as tarefas. Você deve usar as funções como elas são definidas. Para criar, modificar ou excluir funções, use o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. Para obter mais informações, consulte [Criar, excluir ou modificar uma função &#40;Management Studio&#41;](security/role-definitions-create-delete-or-modify.md).  
@@ -64,8 +64,8 @@ ms.locfileid: "66108126"
 > [!NOTE]  
 >  Este botão só está disponível na página Editar Atribuição de Função.  
   
-## <a name="see-also"></a>Consulte também  
- [Ajuda de F1 do Gerenciador de relatórios](../../2014/reporting-services/report-manager-f1-help.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Ajuda F1 Report Manager](../../2014/reporting-services/report-manager-f1-help.md)   
  [Atribuições de função](security/role-assignments.md)   
  [Definições de função](security/role-definitions.md)  
   

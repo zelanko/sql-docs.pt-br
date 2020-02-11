@@ -1,5 +1,5 @@
 ---
-title: Vincular um relatório a um modelo como um relatório de Clickthrough | Microsoft Docs
+title: Vincular um relatório a um modelo como um relatório de clickthrough | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 45b7695a9cd259d10155036ce1f9367a71e2fe72
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108367"
 ---
 # <a name="link-a-report-to-a-model-as-a-clickthrough-report"></a>Vincular um relatório a um modelo como um relatório de clickthrough
@@ -31,7 +31,7 @@ ms.locfileid: "66108367"
   
 1.  Abra o [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer 6.0 ou posterior.  
   
-2.  Na barra de endereço do navegador da Web, digite a URL do Gerenciador de Relatórios. Por padrão, a URL é http://\<*ComputerName*> / reports.  
+2.  Na barra de endereço do navegador da Web, digite a URL do Gerenciador de Relatórios. Por padrão, a URL é http://\<*ComputerName*>/Reports.  
   
 ### <a name="to-create-a-customized-clickthrough-report"></a>Para criar um relatório de clickthrough personalizado  
   
@@ -56,7 +56,7 @@ ms.locfileid: "66108367"
   
 7.  Clique em **Aplicar**.  
   
-## <a name="see-also"></a>Consulte também  
- [Relatórios de Clickthrough &#40;SSRS&#41;](reports/clickthrough-reports-ssrs.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Relatórios de clickthrough &#40;SSRS&#41;](reports/clickthrough-reports-ssrs.md)  
   
   

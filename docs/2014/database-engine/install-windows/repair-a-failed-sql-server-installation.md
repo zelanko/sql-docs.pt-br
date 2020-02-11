@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0d9486134e0a9103239853d8378e29aea688c7fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67046660"
 ---
 # <a name="drop-a-sql-server-2014-installation"></a>Descartar uma instalação do SQL Server 2014
@@ -75,7 +75,7 @@ ms.locfileid: "67046660"
     Setup.exe /q /ACTION=Repair /INSTANCENAME=instancename  
     ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exibir e ler arquivos de log da Instalação do SQL Server](view-and-read-sql-server-setup-log-files.md)   
  [Tópicos de instruções sobre a instalação](../../sql-server/install/installation-how-to-topics.md)  
   

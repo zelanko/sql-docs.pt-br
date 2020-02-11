@@ -1,5 +1,5 @@
 ---
-title: sys.dm_pdw_exec_sessions (Transact-SQL) | Microsoft Docs
+title: sys. dm_pdw_exec_sessions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/22/2019
 ms.prod: sql
@@ -13,37 +13,37 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 4d559f7fb03b632fc5cfca573b2fedc72506fead
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67899405"
 ---
-# <a name="sysdmpdwexecsessions-transact-sql"></a>sys.dm_pdw_exec_sessions (Transact-SQL)
+# <a name="sysdm_pdw_exec_sessions-transact-sql"></a>sys. dm_pdw_exec_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Contém informações sobre todas as sessões abertas no momento ou recentemente no dispositivo. Ele lista uma linha por sessão.  
+  Contém informações sobre todas as sessões no momento ou recentemente abertas no dispositivo. Ele lista uma linha por sessão.  
   
-|Nome da coluna|Tipo de dados|Descrição|Intervalo|  
+|Nome da coluna|Tipo de Dados|DESCRIÇÃO|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
-|session_id|**nvarchar(32)**|A id da consulta atual ou a última consulta executada (se a sessão é ENCERRADA e a consulta estava em execução no momento do encerramento). A chave para este modo de exibição.|Exclusivo em todas as sessões no sistema.|  
-|status|**nvarchar(10)**|Para sessões atuais, identifica se a sessão está atualmente ativo ou ocioso. Para sessões anteriores, a sessão de status poderá mostrar fechado ou eliminado (se a sessão foi fechada à força).|'ACTIVE', 'FECHADO', 'OCIOSA', 'ENCERRADO'|  
-|request_id|**nvarchar(32)**|A id da consulta atual ou da última consulta executada.|Exclusivo entre todas as solicitações no sistema. NULL se nenhum tiver sido executada.|  
-|security_id|**varbinary(85)**|ID de segurança da entidade de segurança executando a sessão.||  
-|login_name|**nvarchar(128)**|O nome de logon da entidade de segurança executando a sessão.|Qualquer cadeia de caracteres de acordo com as convenções de nomenclatura do usuário.|  
-|login_time|**datetime**|Data e hora em que o usuário conectado e esta sessão foi criada.|Válido **datetime** antes da hora atual.|  
-|query_count|**int**|Captura o número de consultas/requeststhis sessão foi executada desde a criação.|Maior que ou igual a 0.|  
-|is_transactional|**bit**|Captura se uma sessão está atualmente em uma transação ou não.|0 para a confirmação automática, 1 para transacional.|  
-|client_id|**nvarchar(255)**|Captura informações de cliente para a sessão.|Qualquer cadeia de caracteres válida.|  
-|app_name|**nvarchar(255)**|Captura informações de nome de aplicativo, opcionalmente, definidas como parte do processo de conexão.|Qualquer cadeia de caracteres válida.|  
-|sql_spid|**int**|O número de identificação de SPID. Use o `session_id` esta sessão. Use o `sql_spid` coluna para ingressar **sys.dm_pdw_nodes_exec_sessions**.<br /><br /> **\*\* Aviso \* \***  esta coluna contém SPIDs fechados.||  
+|session_id|**nvarchar (32)**|A ID da consulta atual ou a última execução de consulta (se a sessão for ENCERRAda e a consulta estiver sendo executada no momento do encerramento). Chave para esta exibição.|Exclusivo em todas as sessões no sistema.|  
+|status|**nvarchar (10)**|Para sessões atuais, identifica se a sessão está ativa ou ociosa no momento. Para as sessões anteriores, o status da sessão pode mostrar fechado ou encerrado (se a sessão foi fechada de modo forçado).|' ATIVO ', ' FECHADO ', ' OCIOSO ', ' ENCERRADO '|  
+|request_id|**nvarchar (32)**|A ID da consulta atual ou da última execução de consulta.|Exclusivo em todas as solicitações no sistema. NULL se nenhum tiver sido executado.|  
+|security_id|**varbinary(85)**|A ID de segurança do principal que está executando a sessão.||  
+|login_name|**nvarchar(128)**|O nome de logon da entidade de segurança que está executando a sessão.|Qualquer cadeia de caracteres que esteja de acordo com as convenções de nomenclatura de usuário.|  
+|login_time|**datetime**|Data e hora em que o usuário fez logon e esta sessão foi criada.|**Data** e hora válidas antes da hora atual.|  
+|query_count|**int**|Captura o número de consultas/a sessão requeststhis foi executada desde a criação.|Maior ou igual a 0.|  
+|is_transactional|**bit**|Captura se uma sessão está atualmente dentro de uma transação ou não.|0 para confirmação automática, 1 para transacional.|  
+|client_id|**nvarchar (255)**|Captura informações do cliente para a sessão.|Qualquer cadeia de caracteres válida.|  
+|app_name|**nvarchar (255)**|Captura as informações de nome do aplicativo como opção definidas como parte do processo de conexão.|Qualquer cadeia de caracteres válida.|  
+|sql_spid|**int**|O número de identificação do SPID. Use `session_id` esta sessão. Use a `sql_spid` coluna para ingressar em **Sys. dm_pdw_nodes_exec_sessions**.<br /><br /> ** \* Aviso \* \* ** Esta coluna contém SPIDs fechados.||  
   
- Para obter informações sobre o máximo de linhas mantido por esta exibição, consulte a seção de metadados na [limites de capacidade](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) tópico.  
+ Para obter informações sobre o máximo de linhas retidas por essa exibição, consulte a seção de metadados no tópico [limites de capacidade](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) .  
   
 ## <a name="permissions"></a>Permissões  
  Requer a permissão `VIEW SERVER STATE`.  
   
-## <a name="see-also"></a>Consulte também  
- [SQL Data Warehouse e Parallel Data Warehouse exibições de gerenciamento dinâmico &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Exibições de gerenciamento dinâmico de SQL Data Warehouse e paralelo data warehouse &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

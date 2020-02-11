@@ -1,5 +1,5 @@
 ---
-title: Barra de ferramentas (guia agregações, Designer de cubo) | Microsoft Docs
+title: Barra de ferramentas (guia Agregações, designer de cubo) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4114610833d9e661e72e80db4bbe529e0ec39493
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066187"
 ---
 # <a name="toolbar-aggregations-tab-cube-designer"></a>Barra de Ferramentas (guia Agregações, Designer de Cubo)
@@ -22,17 +22,17 @@ ms.locfileid: "66066187"
   
 ## <a name="options"></a>Opções  
   
-|Opção|Descrição|  
+|Opção|DESCRIÇÃO|  
 |------------|-----------------|  
-|**Agregações de design**|Clique para exibir o **Assistente de Design de Agregação**.<br /><br /> Observação: Esta opção somente é exibida no modo de exibição padrão do designer de agregação.|  
-|**Otimização baseada no uso**|Clique para exibir o **Assistente de Otimização com Base no Uso**.<br /><br /> Observação: Esta opção somente é exibida no modo de exibição padrão do designer de agregação.|  
-|**Atribuir Design de agregação**|Clique para exibir a caixa de diálogo **Atribuir Design de Agregação** .|  
-|**Modo de exibição padrão**|Clique para exibir a **Exibição Padrão** do designer de agregação em que você pode criar e modificar designs de agregações usando o **Assistente de Design de Agregação** ou o **Assistente de Otimização com Base no Uso**.|  
-|**Exibição avançada**|Clique para exibir a **Exibição Avançada** do designer de agregação em que você pode criar e modificar manualmente designs de agregação e agregações individuais. Essa exibição só deverá ser usada por usuários avançados.<br /><br /> Observação: O **Assistente de Design de agregação** e o **Assistente de otimização com base no uso** não estão disponíveis nessa exibição.|  
-|**Novo Design de agregação**|Clique para exibir a caixa de diálogo **Novo Design de Agregação** . Você pode criar um design de agregação vazio ou pode criar uma cópia de um design de agregação existente.<br /><br /> Observação: Essa opção só é exibida na exibição avançada do designer de agregação.|  
+|**Criar Agregações**|Clique para exibir o **Assistente de Design de Agregação**.<br /><br /> Observação: esta opção só é exibida na exibição padrão do designer de agregação.|  
+|**Otimização baseada no uso**|Clique para exibir o **Assistente de Otimização com Base no Uso**.<br /><br /> Observação: esta opção só é exibida na exibição padrão do designer de agregação.|  
+|**Atribuir Design de Agregação**|Clique para exibir a caixa de diálogo **Atribuir Design de Agregação** .|  
+|**Exibição Padrão**|Clique para exibir a **Exibição Padrão** do designer de agregação em que você pode criar e modificar designs de agregações usando o **Assistente de Design de Agregação** ou o **Assistente de Otimização com Base no Uso**.|  
+|**Exibição Avançada**|Clique para exibir a **Exibição Avançada** do designer de agregação em que você pode criar e modificar manualmente designs de agregação e agregações individuais. Essa exibição só deverá ser usada por usuários avançados.<br /><br /> Observação: o **Assistente de Design de Agregação** e o **Assistente de Otimização com Base no Uso** não estão disponíveis nessa exibição.|  
+|**Novo Design de Agregação**|Clique para exibir a caixa de diálogo **Novo Design de Agregação** . Você pode criar um design de agregação vazio ou pode criar uma cópia de um design de agregação existente.<br /><br /> Observação: esta opção só é exibida na exibição avançada do designer de agregação.|  
 |**Delete (excluir)**|Clique para excluir um design de agregação selecionado.  Na exibição avançada do designer de agregação também pode ser usada para excluir uma agregação de um design de agregação.|  
   
-## <a name="see-also"></a>Consulte também  
- [Agregações &#40;Design de cubo&#41;](aggregations-cube-design.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Agregações &#40;design de cubo&#41;](aggregations-cube-design.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Controlar a distribuição de relatórios | Microsoft Docs
+title: Distribuição de relatório de controle | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -19,17 +19,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: de8a27801ef89f10bf303cee17d1c2d0e1081c5a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109695"
 ---
 # <a name="control-report-distribution"></a>Controlar a distribuição de relatórios
   Você pode configurar um servidor de relatório para reduzir os riscos de segurança associados à distribuição de emails e de compartilhamentos de arquivos.  
   
 ## <a name="securing-reports"></a>Protegendo relatórios  
- A primeira etapa para controlar a distribuição de relatório é proteger o relatório contra o acesso não autorizado. Para ser usado em uma assinatura, o relatório deve usar um conjunto armazenado de credenciais que não variam para entregas individuais. Qualquer usuário que pode acessar o relatório no servidor de relatório pode executá-lo e possivelmente distribuí-lo. Para impedir que isto aconteça, você deve limitar o acesso somente aos usuários que precisam do relatório. Para obter mais informações, consulte [proteger relatórios e recursos](security/secure-reports-and-resources.md) e [proteger pastas](security/secure-folders.md).  
+ A primeira etapa para controlar a distribuição de relatório é proteger o relatório contra o acesso não autorizado. Para ser usado em uma assinatura, o relatório deve usar um conjunto armazenado de credenciais que não variam para entregas individuais. Qualquer usuário que pode acessar o relatório no servidor de relatório pode executá-lo e possivelmente distribuí-lo. Para impedir que isto aconteça, você deve limitar o acesso somente aos usuários que precisam do relatório. Para obter mais informações, consulte [proteger relatórios e recursos](security/secure-reports-and-resources.md) e [pastas seguras](security/secure-folders.md).  
   
  Relatórios extremamente confidenciais que usam a segurança de banco de dados para autorizar o acesso não podem ser distribuídos por meio de assinaturas.  
   
@@ -46,9 +46,9 @@ ms.locfileid: "66109695"
 ## <a name="controlling-file-share-delivery"></a>Controlando a entrega de compartilhamentos de arquivos  
  A entrega de compartilhamentos de arquivos é usada para enviar um relatório a um arquivo em um disco rígido. Depois de ser salvo em disco, o arquivo não pode mais ser submetido ao modelo de segurança baseado em funções que o servidor de relatório usa para controlar o acesso do usuário. Para proteger um relatório que foi entregue em disco, coloque listas de controle de acesso (ACLs) no próprio arquivo ou na pasta que o contém. Opções de segurança adicionais podem estar disponíveis, dependendo do sistema operacional.  
   
-## <a name="see-also"></a>Consulte também  
- [Configurar um servidor de relatório para entrega de email &#40;Configuration Manager do SSRS&#41;](../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Configurar um servidor de relatório para entrega de email &#40;Configuration Manager SSRS&#41;](../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)   
  [Assinaturas e entrega &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Criar e gerenciar assinaturas de servidores de relatório no modo Nativo](../../2014/reporting-services/create-manage-subscriptions-native-mode-report-servers.md)  
+ [Crie e gerencie assinaturas de servidores de relatório no modo Nativo](../../2014/reporting-services/create-manage-subscriptions-native-mode-report-servers.md)  
   
   

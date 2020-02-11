@@ -1,5 +1,5 @@
 ---
-title: Criar e gerenciar perspectivas (SSAS Tabular) | Microsoft Docs
+title: Criar e gerenciar perspectivas (SSAS tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b920446018c9199ed0bd436e67a65d43341f7f43
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067427"
 ---
 # <a name="create-and-manage-perspectives-ssas-tabular"></a>Criar e Gerenciar Perspectivas (SSAS tabular)
@@ -37,30 +37,30 @@ ms.locfileid: "66067427"
 ## <a name="tasks"></a>Tarefas  
  Para criar perspectivas, você usará a caixa de diálogo **Criar e Gerenciar Perspectivas** , onde você pode adicionar, editar, excluir, copiar e exibir perspectivas. Para exibir a caixa de diálogo **Perspectivas** , no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], clique no menu **Modelo** e clique em **Perspectivas**.  
   
-###  <a name="bkmk_add"></a> Para adicionar uma perspectiva  
+###  <a name="bkmk_add"></a>Para adicionar uma perspectiva  
   
 -   Para adicionar uma nova perspectiva, clique em **Nova Perspectiva**. É possível marcar e desmarcar os objetos de campo a serem incluídos e fornecer um nome à nova perspectiva.  
   
      Se você criar uma perspectiva vazia com todos os campos de objeto, um usuário que usa essa perspectiva verá uma Lista de Campos vazia. Perspectivas devem conter pelo menos uma tabela e coluna.  
   
-###  <a name="bkmk_edit"></a> Para editar uma perspectiva  
+###  <a name="bkmk_edit"></a>Para editar uma perspectiva  
   
--   Para modificar uma perspectiva, marque e desmarque os campos na coluna da perspectiva, o que adiciona e remove objetos de campo da perspectiva.  
+-   Para modificar uma perspectiva, marque e desmarque os campos na coluna da perspectiva, que adiciona e remove objetos de campo da perspectiva.  
   
-###  <a name="bkmk_rename"></a> Para renomear uma perspectiva  
+###  <a name="bkmk_rename"></a>Para renomear uma perspectiva  
   
--   Quando você focaliza o cabeçalho da coluna da perspectiva (o nome da perspectiva), o **Renomear** botão é exibido. Para renomear a perspectiva, clique em **Renomear**e insira um novo nome ou edite o nome existente.  
+-   Quando você passa o mouse sobre o cabeçalho da coluna de uma perspectiva (o nome da perspectiva), o botão **renomear** é exibido. Para renomear a perspectiva, clique em **Renomear**e insira um novo nome ou edite o nome existente.  
   
-###  <a name="bkmk_delete"></a> Para excluir uma perspectiva  
+###  <a name="bkmk_delete"></a>Para excluir uma perspectiva  
   
--   Quando você focaliza o cabeçalho da coluna da perspectiva (o nome da perspectiva), o **excluir** botão é exibido. Para excluir a perspectiva, clique no botão **Excluir** e clique em **Sim** na janela de confirmação.  
+-   Quando você passa o mouse sobre o cabeçalho da coluna de uma perspectiva (o nome da perspectiva), o botão **excluir** é exibido. Para excluir a perspectiva, clique no botão **Excluir** e clique em **Sim** na janela de confirmação.  
   
-###  <a name="bkmk_copy"></a> Para copiar uma perspectiva  
+###  <a name="bkmk_copy"></a>Para copiar uma perspectiva  
   
--   Quando você focaliza o cabeçalho de coluna da perspectiva, o **cópia** botão é exibido. Para criar uma cópia dessa perspectiva, clique no botão **Copiar** . Uma cópia da perspectiva selecionada é adicionada como uma nova perspectiva à direita das perspectivas existentes. A nova perspectiva herda o nome da perspectiva copiada e uma anotação *- Copiar* é acrescentada ao final do nome. Por exemplo, se uma cópia do *Sales* perspectiva é criada, a nova perspectiva será chamada *vendas – cópia*.  
+-   Quando você passa o mouse sobre o cabeçalho da coluna de uma perspectiva, o botão **copiar** é exibido. Para criar uma cópia dessa perspectiva, clique no botão **Copiar** . Uma cópia da perspectiva selecionada é adicionada como uma nova perspectiva à direita das perspectivas existentes. A nova perspectiva herda o nome da perspectiva copiada e uma anotação *- Copiar* é acrescentada ao final do nome. Por exemplo, se uma cópia da perspectiva de *vendas* for criada, a nova perspectiva será chamada de *cópia de vendas*.  
   
-## <a name="see-also"></a>Consulte também  
- [Perspectivas &#40;SSAS de Tabela&#41;](perspectives-ssas-tabular.md)   
- [Hierarquias &#40;SSAS de Tabela&#41;](hierarchies-ssas-tabular.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Perspectivas &#40;SSAS de tabela&#41;](perspectives-ssas-tabular.md)   
+ [Hierarquias &#40;SSAS de tabela&#41;](hierarchies-ssas-tabular.md)  
   
   

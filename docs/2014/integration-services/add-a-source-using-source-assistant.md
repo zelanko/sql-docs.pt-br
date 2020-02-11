@@ -1,5 +1,5 @@
 ---
-title: Adicionar uma fonte usando o Assistente de origem | Microsoft Docs
+title: Adicionar uma fonte usando o assistente de origem | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b162ebfa6d888460b49f0877d634c88bba47464a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062135"
 ---
 # <a name="add-a-source-using-source-assistant"></a>Adicionar uma origem com o Assistente de Origem
@@ -24,7 +24,7 @@ ms.locfileid: "66062135"
   
 1.  No [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], abra o pacote do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ao qual você deseja adicionar um componente de origem.  
   
-2.  Arraste o componente **Assistente de Origem** da Caixa de Ferramentas do SSIS para a guia **Fluxo de Dados** . Você deveria ver a caixa de diálogo **Adicionar Nova Origem** . A próxima seção fornece detalhes sobre as opções disponíveis na caixa de diálogo.  
+2.  Arraste o componente **Assistente de origem** da caixa de ferramentas do SSIS para a guia fluxo de **dados** . Você deve ver a caixa de diálogo **Adicionar nova origem** . A próxima seção fornece detalhes sobre as opções disponíveis na caixa de diálogo.  
   
 3.  Selecione o tipo do destino na lista **Tipos**.  
   
@@ -32,6 +32,6 @@ ms.locfileid: "66062135"
   
 5.  Se você selecionar um gerenciador de conexões existente, clique em **OK** para fechar a caixa de diálogo **Adicionar Novo Destino**. Você deve ver o destino e os gerenciadores de conexões adicionados ao fluxo de dados.  
   
-6.  Se você clicar em **\<Novo>** para criar um novo gerenciador de conexões, deverá ver uma caixa de diálogo **Gerenciador de Conexões** que permitirá especificar parâmetros para a conexão. Depois de concluir a criação do novo gerenciador de conexões, você verá o destino e o gerenciador de conexões no Designer SSIS.  
+6.  Se você clicar em ** \<novo>** para criar um novo Gerenciador de conexões, você deverá ver uma caixa de diálogo **Gerenciador de conexões** , que permite especificar parâmetros para a conexão. Depois de concluir a criação do novo gerenciador de conexões, você verá o destino e o gerenciador de conexões no Designer SSIS.  
   
   

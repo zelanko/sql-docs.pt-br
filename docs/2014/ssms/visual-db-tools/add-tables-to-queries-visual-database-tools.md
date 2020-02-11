@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ba3957eb5b0c88396376d615033107b13d0621ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63297863"
 ---
 # <a name="add-tables-to-queries-visual-database-tools"></a>Adicionar tabelas a consultas (Visual Database Tools)
@@ -56,11 +56,11 @@ ms.locfileid: "63297863"
   
 7.  Ainda no **Painel SQL**, adicione um alias depois do parêntese direito.  
   
-## <a name="see-also"></a>Consulte também  
- [Criar Aliases de tabela &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Criar aliases de tabela &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [Remover tabelas de consultas &#40;Visual Database Tools&#41;](remove-tables-from-queries-visual-database-tools.md)   
  [Especificar critérios de pesquisa &#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md)   
- [Resumir resultados da consulta &#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)   
+ [Resumir os resultados da consulta &#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)   
  [Executar operações básicas com consultas &#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

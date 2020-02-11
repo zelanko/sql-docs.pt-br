@@ -1,5 +1,5 @@
 ---
-title: Excluir linhas de caixa de diálogo | Microsoft Docs
+title: Caixa de diálogo Excluir linhas | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2fbc640573d6d897205e11dbc40d40210502ee60
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109309"
 ---
 # <a name="delete-rows-dialog-box"></a>Caixa de diálogo Excluir Linhas
@@ -32,7 +32,7 @@ ms.locfileid: "66109309"
  **Excluir linhas apenas**  
  Escolha esta opção para excluir apenas as linhas selecionadas.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tabelas, matrizes e listas &#40;Construtor de Relatórios e SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   
   

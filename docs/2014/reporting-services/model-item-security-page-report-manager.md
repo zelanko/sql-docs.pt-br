@@ -1,5 +1,5 @@
 ---
-title: Página de segurança (Gerenciador de relatórios) do Item de modelo | Microsoft Docs
+title: Página de segurança do item de modelo (Report Manager) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f45169a2fdc8fdc4d56cb27a8bf6348a3c3c1a29
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108226"
 ---
 # <a name="model-item-security-page-report-manager"></a>Página segurança de item de modelo (Gerenciador de Relatórios)
@@ -61,19 +61,19 @@ ms.locfileid: "66108226"
 4.  Selecione a guia **Segurança do Item de Modelo** .  
   
 ## <a name="options"></a>Opções  
- **Proteger itens de modelo individuais independentemente para este modelo**  
+ **Proteja os itens de modelo individuais independentemente para este modelo**  
  Clique nesta caixa de seleção para habilitar a segurança de item de modelo.  
   
- **Especifique a segurança para itens de modelo individuais no modo**  
+ **Especifique a segurança para itens de modelo individuais no modelo**  
  Mostra todos os itens em um modelo. Você pode navegar no namespace do modelo para selecionar o item você quer proteger. Você só pode selecionar um item de cada vez. Crie a primeira atribuição de função no nó raiz antes de prosseguir com outras entidades e pastas.  
   
  **Herdar permissões do item pai**  
  Clique nessa opção para herdar as configurações de segurança do item pai.  
   
  **Atribuir permissão de leitura aos seguintes usuários e grupos (separados por ponto-e-vírgula)**  
- Clique nessa opção para especificar o usuário ou a conta de grupo para os quais você está definindo acesso. Se você estiver usando segurança padrão, as contas de usuário e grupo serão contas do domínio Windows. Especifique as contas neste formato:  *\<domínio >\\< conta\>* .  
+ Clique nessa opção para especificar o usuário ou a conta de grupo para os quais você está definindo acesso. Se você estiver usando segurança padrão, as contas de usuário e grupo serão contas do domínio Windows. Especifique as contas neste formato: * \<domínio \\>conta\>de<*.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Servidor de Relatório na ajuda F1 do Management Studio](tools/report-server-in-management-studio-f1-help.md)  
   
   

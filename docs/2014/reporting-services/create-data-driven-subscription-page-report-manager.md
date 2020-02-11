@@ -1,5 +1,5 @@
 ---
-title: Criar página de assinatura controlada por dados (Gerenciador de relatórios) | Microsoft Docs
+title: Página Criar assinatura controlada por dados (Report Manager) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 130027d60f5458b451d4f853a79228510c5e7d66
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109614"
 ---
 # <a name="create-data-driven-subscription-page-report-manager"></a>Página Criar Assinatura Controlada por Dados (Gerenciador de Relatórios)
@@ -36,7 +36,7 @@ ms.locfileid: "66109614"
   
 2.  Focalize o relatório e clique na seta do menu suspenso.  
   
-3.  No menu suspenso, clique em **Gerenciar**. Esse procedimento abre a página de propriedades **Geral** do relatório.  
+3.  No menu suspenso, clique em **Gerenciar**. Isso abre a página de propriedades **geral** do relatório.  
   
 4.  Selecione a guia **Assinaturas** e clique em **Nova Assinatura Orientada por Dados**.  
   
@@ -47,16 +47,16 @@ ms.locfileid: "66109614"
  **Descrição**  
  Forneça uma descrição para a assinatura. A descrição aparece em listas de assinatura em **Minhas Assinaturas** e na guia **Assinaturas** do relatório.  
   
- **Especificar como os destinatários serão notificados**  
+ **Especifique como os destinatários devem ser notificados**  
  Selecione a extensão de entrega a ser usada para distribuir o relatório. Somente uma extensão de entrega pode ser usada para cada assinatura. As seguintes opções estão disponíveis:  
   
 -   Selecione **Compartilhamento de Arquivo do Servidor de Relatório** para entregar os relatórios a um compartilhamento de arquivos. O relatório será entregue como um arquivo estático, desconectado do servidor de relatório. Para obter mais informações, consulte [File Share Delivery in Reporting Services](subscriptions/file-share-delivery-in-reporting-services.md).  
   
--   Selecione **Email do Servidor de Relatório** para entregar relatórios a uma caixa de entrada de emails. Para obter mais informações, consulte [E-Mail Delivery in Reporting Services](subscriptions/e-mail-delivery-in-reporting-services.md).  
+-   Selecione **Email do Servidor de Relatório** para entregar relatórios a uma caixa de entrada de emails. Para obter mais informações, consulte [Entrega de email no Reporting Services](subscriptions/e-mail-delivery-in-reporting-services.md).  
   
 -   Selecione **Provedor de Entrega Nulo** para entregar relatórios ao banco de dados do servidor de relatório. Essa opção cria instantâneos de relatório. Escolha essa opção quando quiser carregar antecipadamente o servidor de relatório com instantâneos de relatório com parâmetros ou específico de usuário em um agendamento específico. Para obter mais informações, consulte [Armazenando relatórios em cache &#40;SSRS&#41;](report-server/caching-reports-ssrs.md).  
   
- **Especifique uma fonte de dados que contém informações de destinatário**  
+ **Especifique uma fonte de dados que contenha informações sobre o destinatário**  
  Especifique como a conexão da fonte de dados é definida. Você poderá escolher uma fonte de dados compartilhada se tiver uma com as informações de conexão necessárias. Você também pode especificar informações de conexão diretamente nessa assinatura.  
   
  A fonte de dados fornece dados do assinante. Esses dados podem consistir em nomes de funcionário, IDs de funcionário, endereços de email e preferência para formatação de exportação (como HTML ou PDF). Se você estiver usando a extensão de entrega de email do servidor de relatórios, a fonte de dados deve conter endereços de email.  
@@ -64,13 +64,13 @@ ms.locfileid: "66109614"
 ## <a name="specify-a-connection-page-2"></a>Especificar uma Conexão (página 2)  
  Se você especificou uma fonte de dados compartilhada, use essa página para selecionar o item de fonte de dados compartilhada. Você pode usar o controle de árvore para navegar e selecionar o item. Se você estiver definindo uma conexão para essa assinatura, use essa página para especificar as opções a seguir.  
   
- **Tipo de Conexão**  
+ **Tipo de conexão**  
  Selecione qual extensão de processamento de dados usar com a fonte de dados.  
   
- **Cadeia de Conexão**  
+ **Cadeia de conexão**  
  Digite uma cadeia de conexão a ser usada para conectar à fonte de dados.  
   
- **Conecte-se usando**  
+ **Conectar usando**  
  Digite as credenciais a serem usadas ao se conectar à fonte de dados. As credenciais são armazenadas como valores criptografados no banco de dados do servidor de relatórios.  
   
  Se a fonte de dados usar a Autenticação do Windows, selecione **Usar como Credenciais do Windows** ao especificar a conexão.  
@@ -96,11 +96,11 @@ ms.locfileid: "66109614"
 ## <a name="set-delivery-options-page-4"></a>Definir Opções de Entrega (página 4)  
  Na quarta página, você especifica opções de extensão de entrega. As opções exibidas na página são derivadas da extensão da entrega. A especificação dessas opções pode variar consideravelmente, com base em como a extensão da entrega as apresenta. Se a extensão não tiver nenhuma configuração, nenhuma opção aparecerá nessa página.  
   
-|Selecione isto|Para fazer isso|  
+|Selecione isto|Para fazer isto|  
 |-----------------|----------------|  
 |**Especifique um valor estático**|Use um valor constante para a configuração da entrega. Algumas extensões de entrega fornecem valores estáticos entre os quais você pode escolher. Por exemplo, a entrega de email do servidor de relatório fornece valores para **IncludeReport**, **RenderFormat**, **Prioridade**e **Incluir Link**.|  
-|**Obter o valor do banco de dados**|Use um valor do conjunto de resultados. As colunas do conjunto de resultados podem ser usadas para fornecer dados de assinante e valores de parâmetro de relatório.|  
-|**Nenhum valor**|Omita a configuração da assinatura.|  
+|**Obtenha o valor no banco de dados**|Use um valor do conjunto de resultados. As colunas do conjunto de resultados podem ser usadas para fornecer dados de assinante e valores de parâmetro de relatório.|  
+|**Sem valor**|Omita a configuração da assinatura.|  
   
 #### <a name="set-delivery-options-for-file-share-delivery"></a>Definir opções de entrega para entrega de compartilhamento de arquivo  
  A extensão de entrega de compartilhamento de arquivo é frequentemente usada porque não requer nenhuma configuração anterior. Se você estiver usando a extensão de entrega de compartilhamento de arquivo, a tabela a seguir descreverá as opções que você pode definir:  
@@ -109,7 +109,7 @@ ms.locfileid: "66109614"
  Especifica um nome de arquivo para o relatório. A extensão de entrega do arquivo entrega um relatório como um arquivo de aplicativo estático a uma pasta compartilhada. Na maioria dos casos, você deve usar um valor do banco de dados para criar o nome do arquivo. Dependendo da definição do modo de gravação, o uso de um valor estático pode fazer com que cada nova entrega substitua a entrega anterior.  
   
  **Caminho**  
- Especifique uma pasta compartilhada que é acessível em uma conexão de rede. Para verificar se a pasta é acessível, clique em **executados** no menu Iniciar e insira o caminho da pasta neste formato: \\ \\< NomeDoComputador\>\\< nomedapastacompartilhada\>.  
+ Especifique uma pasta compartilhada que é acessível em uma conexão de rede. Para verificar se a pasta está acessível, clique em **executar** no menu iniciar e insira o caminho da pasta neste formato \\ \\ :<ComputerName\> \\<sharedfoldername\>.  
   
  **Formato de renderização**  
  Especifique o formato de saída do arquivo. O servidor de relatório pode gravar o arquivo em formatos de aplicativo das extensões de renderização instaladas no servidor de relatório.  
@@ -121,7 +121,7 @@ ms.locfileid: "66109614"
  Especifique Verdadeiro para anexar uma extensão de arquivo que corresponda ao formato de renderização selecionado.  
   
  **Nome de usuário**  
- Insira a conta de usuário de domínio que tenha permissão para adicionar arquivos à pasta compartilhada neste formato: \<domínio >\\< nome de usuário\>.  
+ Insira a conta de usuário de domínio que tem permissão para adicionar arquivos à pasta compartilhada neste formato: \<domínio>\\<nome\>de usuário.  
   
  **Senha**  
  Insira a senha para a conta.  
@@ -129,18 +129,18 @@ ms.locfileid: "66109614"
 ## <a name="set-parameters-page-5"></a>Definir Parâmetros (página 5)  
  Se um relatório incluir parâmetros, é necessário especificar quais valores de parâmetro usar com o relatório. Valores de parâmetros podem ser obtidos da fonte de dados do assinante (por exemplo, se você tiver um relatório de vendas regionais com parâmetros com base em um código regional, você pode obter informações da região de cada funcionário se as informações estiverem armazenadas no banco de dados de funcionário).  
   
-|Selecione isto|Para fazer isso|  
+|Selecione isto|Para fazer isto|  
 |-----------------|----------------|  
 |**Especifique um valor estático**|Use um valor constante para o parâmetro se você quiser usar o mesmo parâmetro para todos os assinantes. Se o parâmetro tiver valores múltiplos, você poderá escolher um valor da lista.|  
 |**Usar padrão**|Alguns relatórios contêm um valor padrão para todos ou alguns dos parâmetros. Se o parâmetro de relatório tiver um valor padrão, clique nessa caixa de seleção para usá-lo.|  
-|**Obter o valor do banco de dados**|Use um valor do conjunto de resultados. As colunas do conjunto de resultados podem ser selecionadas como um valor de fonte de dados a ser usado com cada instância da assinatura.|  
+|**Obtenha o valor no banco de dados**|Use um valor do conjunto de resultados. As colunas do conjunto de resultados podem ser selecionadas como um valor de fonte de dados a ser usado com cada instância da assinatura.|  
   
 ## <a name="specify-a-trigger-page-6"></a>Especificar um gatilho (página 6)  
  Selecione um evento que inicia o processamento da assinatura.  
   
-|Selecione isto|Para fazer isso|  
+|Selecione isto|Para fazer isto|  
 |-----------------|----------------|  
-|**Quando os dados do relatório são atualizados no servidor de relatório**|Se o relatório for configurado para executar como um instantâneo de execução de relatório, você pode especificar que a assinatura seja executada quando o instantâneo for atualizado.|  
+|**Quando os dados do relatório forem atualizados no servidor de relatórios**|Se o relatório for configurado para executar como um instantâneo de execução de relatório, você pode especificar que a assinatura seja executada quando o instantâneo for atualizado.|  
 |**Em um agendamento criado para esta assinatura**|Execute a assinatura e uma data e hora específicas.|  
 |**Em uma agenda compartilhada**|Execute a assinatura usando informações de agenda fornecidas por uma agenda compartilhada.|  
   
@@ -151,12 +151,12 @@ ms.locfileid: "66109614"
  Defina uma agenda que executa de hora em hora.  
   
  **Diário**  
- Define uma agenda que executa nos dias que você seleciona, em uma hora e minuto específico. Você pode especificar dias das seguintes maneiras: Cada  *\<dia >* , cada dia da semana e cada  *\<número >* dia. A escolha de uma abordagem invalida as outras, mesmo se os outros dias parecem selecionados.  
+ Define uma agenda que executa nos dias que você seleciona, em uma hora e minuto específico. Você pode especificar os dias das seguintes maneiras: todos * \<os dias>*, todos os dias da semana e a cada * \<número>* dia. A escolha de uma abordagem invalida as outras, mesmo se os outros dias parecem selecionados.  
   
- **Semanal**  
+ **Semanalmente**  
  Define uma agenda que executa em intervalos semanais, em uma hora e minuto específicos. O intervalo pode ser em semanas completas (por exemplo, a cada duas semanas) ou dias dentro de uma semana.  
   
- **Mensal**  
+ **Mensais**  
  Defina uma agenda que executa mensalmente. Dentro de um mês você pode escolher um dia com base em um padrão (por exemplo, o último domingo de cada mês) ou datas de calendário específicas (como 1 e 15, para indicar o primeiro e o décimo quinto dia de cada mês). Usando vírgulas e hífens, você pode especificar vários dias e intervalos, por exemplo, 1, 5, 7-12, 21.  
   
  **Uma vez**  
@@ -168,11 +168,11 @@ ms.locfileid: "66109614"
 ## <a name="saving-the-subscription"></a>Salvando a assinatura  
  O botão **Concluir** é habilitado quando há informações suficientes para a assinatura. Clique em **Concluir** para concluir a assinatura.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Data-Driven Subscriptions](subscriptions/data-driven-subscriptions.md)   
- [Criar uma assinatura controlada por dados &#40;Tutorial do SSRS&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)   
- [Especificar informações de credenciais e de conexão para fontes de dados de relatório](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [Criar uma assinatura controlada por dados &#40;tutorial do SSRS&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)   
+ [Especificar informações de credencial e de conexão para fontes de dados de relatório](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Assinaturas e entrega &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Ajuda F1 do Gerenciador de Relatórios](../../2014/reporting-services/report-manager-f1-help.md)  
   

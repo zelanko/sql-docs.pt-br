@@ -14,37 +14,37 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 69a521cb72e68141f5706f5187a0288a3f44f241
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061382"
 ---
 # <a name="azure-data-lake-store-file-system-task"></a>Tarefa do sistema de arquivos do Azure Data Lake Store
 
-O **tarefa de sistema de arquivos do Azure Data Lake Store** permite aos usuários executar várias operações de sistema de arquivos na [Azure Data Lake Store (ADLS)](https://azure.microsoft.com/services/data-lake-store/).
+A **tarefa sistema de arquivos Azure data Lake Store** permite que os usuários executem várias operações de sistema de arquivos em [Azure data Lake Store (ADLS)](https://azure.microsoft.com/services/data-lake-store/).
 
-Para adicionar uma tarefa do sistema de arquivos do Azure Data Lake Store para um pacote, arraste-o da Caixa de Ferramentas do SSIS para a tela do designer. Clique duas vezes na tarefa, ou a tarefa com o botão direito e selecione **editar**, para abrir a caixa de diálogo do editor de tarefa.
+Para adicionar uma tarefa do sistema de arquivos do Azure Data Lake Store para um pacote, arraste-o da Caixa de Ferramentas do SSIS para a tela do designer. Em seguida, clique duas vezes na tarefa ou clique com o botão direito do mouse na tarefa e selecione **Editar**para abrir a caixa de diálogo editor da tarefa.
 
-A propriedade **Operation** especifica a operação do sistema de arquivos a ser executada. As seguintes operações têm suporte.
+A propriedade **Operation** especifica a operação do sistema de arquivos a ser executada. As operações a seguir têm suporte.
 
-* **CopyToADLS:** carrega os arquivos para o ADLS.
-* **CopyFromADLS:** baixa os arquivos do ADLS.
+* **CopyToADLS:** carregar arquivos para o ADLS.
+* **CopyFromADLS:** baixar arquivos do ADLS.
 
 Para qualquer operação, você precisa especificar um gerenciador de conexões do Azure Data Lake.
 
-Aqui estão as descrições das propriedades específicas para cada operação.
+Aqui estão as descrições das propriedades específicas de cada operação.
 
 ## <a name="copytoadls"></a>CopyToADLS
 
 * **LocalDirectory:** Especifica o diretório de origem que contém os arquivos a serem carregados.
 * **FileNamePattern:** especifica um filtro de nome de arquivo para arquivos de origem. Somente os arquivos cujo nome corresponde ao padrão especificado serão carregados. Curingas `*` e `?` são compatíveis.
-* **SearchRecursively:** especifica se deve-se pesquisar recursivamente dentro do diretório de origem por arquivos a ser carregados.
+* **SearchRecursively:** especifica se deve-se pesquisar recursivamente dentro do diretório de origem por arquivos a serem carregados.
 * **AzureDataLakeDirectory:** especifica o diretório de destino do ADLS para o qual carregar arquivos.
-* **FileExpiry:** Especifica uma data de expiração para os arquivos carregados para o ADLS ou deixe essa propriedade em branco para indicar que os arquivos nunca expiram.
+* **Fileexpirey:** Especifica uma data e hora de expiração para os arquivos carregados em ADLS, ou deixe essa propriedade em branco para indicar que os arquivos nunca expiram.
 
 ## <a name="copyfromadls"></a>CopyFromADLS
 
-* **AzureDataLakeDirectory:** especifica o diretório de origem do ADLS que contém os arquivos a ser baixados.
-* **SearchRecursively:** especifica se deve-se pesquisar recursivamente dentro do diretório de origem por arquivos a ser baixados.
+* **AzureDataLakeDirectory:** especifica o diretório de origem do ADLS que contém os arquivos a serem baixados.
+* **SearchRecursively:** especifica se deve-se pesquisar recursivamente dentro do diretório de origem por arquivos a serem baixados.
 * **LocalDirectory:** especifica o diretório de destino no qual armazenar arquivos baixados.

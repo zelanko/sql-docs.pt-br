@@ -15,23 +15,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dc8f54bc4f6e7aaffa5d912fc9bc8f03fad71d03
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63245625"
 ---
 # <a name="external-tools-dialog-box"></a>Caixa de diálogo Ferramentas Externas
-  Use a caixa de diálogo **Ferramentas Externas** para adicionar ferramentas externas como SQLCMD ou o Bloco de Notas ao menu **Ferramentas**. Adicionar ferramentas externas permite a inicialização de outros aplicativos facilmente enquanto você trabalha no ambiente do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] . Você pode especificar argumentos e um diretório de trabalho na execução da ferramenta. Além disso, a saída de algumas ferramentas pode ser exibida na janela **Saída** . A caixa de diálogo **Ferramentas Externas** está disponível no menu **Ferramentas** .  
+  Use a caixa de diálogo **Ferramentas externas** para adicionar ferramentas externas, como sqlcmd ou bloco de notas, ao menu **ferramentas** . A adição de ferramentas externas permite que você inicie facilmente outros aplicativos enquanto trabalha [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] no ambiente. Você pode especificar argumentos e um diretório de trabalho na execução da ferramenta. Além disso, a saída de algumas ferramentas pode ser exibida na janela **Saída** . A caixa de diálogo **Ferramentas Externas** está disponível no menu **Ferramentas** .  
   
 ## <a name="options"></a>Opções  
- **Conteúdos de menu**  
+ **Conteúdo do menu**  
  Relaciona os títulos dos itens atuais adicionados ao menu **Ferramentas** . Use as setas **Mover para Cima** e **Mover para Baixo** para alterar a ordem dos itens que aparecem no menu. Use o botão **Excluir** para remover um item do menu.  
   
- **Mover para Cima**  
+ **Mover para cima**  
  Mova a ferramenta selecionada para cima na lista de ferramentas exibida no menu **Ferramentas** .  
   
- **Mover para Baixo**  
+ **Mover para baixo**  
  Mova a ferramenta selecionada para baixo na lista de ferramentas exibida no menu **Ferramentas** .  
   
  **Adicionar**  
@@ -40,8 +40,8 @@ ms.locfileid: "63245625"
  **Delete (excluir)**  
  Remova a ferramenta ou o comando da lista **Conteúdo do Menu** , bem como do menu **Ferramentas** .  
   
- **Título**  
- Insira o nome da ferramenta ou do comando que será exibido no submenu **Ferramentas Externas** do menu **Ferramentas** . Coloque um E comercial (&) antes de uma letra no nome da ferramenta para especificar essa letra como uma tecla de atalho. Por exemplo, "&SQLCMD" mostrará SQLCMD no menu **Ferramentas**.  
+ **Title**  
+ Insira o nome da ferramenta ou do comando que será exibido no submenu **Ferramentas Externas** do menu **Ferramentas**. Coloque um E comercial (&) antes de uma letra no nome da ferramenta para especificar essa letra como uma tecla de atalho. Por exemplo, "&SQLCMD" mostrará SQLCMD no menu **Ferramentas**.  
   
  **Comando**  
  Especifique o caminho do arquivo a ser iniciado.  
@@ -49,7 +49,7 @@ ms.locfileid: "63245625"
  **Argumentos**  
  Especifique as variáveis que serão passadas à ferramenta quando a ferramenta for selecionada no menu. Os argumentos podem especificar valores que são passados à ferramenta ou ao comando quando são iniciados. Por exemplo, um valor pode especificar um nome de arquivo ou diretório. Use o botão de seta para fazer a seleção em uma lista de argumentos predefinidos. Você pode adicionar mais de um argumento. Para obter uma lista completa de argumentos predefinidos e suas definições, consulte [Arguments for External Tools](menu-help/external-tools.md). Você também pode inserir argumentos personalizados (por exemplo, opções de linha de comando), dependendo do comando ou da ferramenta usada.  
   
- **Usar a janela Saída**  
+ **Usar janela de saída**  
  Abre a janela Saída do [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] para exibir a saída do comando que está sendo executado. Nem todas as ferramentas apresentam saída em um formato que pode ser exibido na janela Saída. Para obter mais informações, consulte [Janela Saída](../relational-databases/scripting/transact-sql-debugger-output-window.md).  
   
  **Tratar saída como Unicode**  
@@ -61,7 +61,7 @@ ms.locfileid: "63245625"
  **Solicitar argumentos**  
  Exibe a caixa de diálogo **Argumentos** para permitir a inserção ou edição dos valores para os argumentos sempre que você iniciar a ferramenta externa.  
   
- **Fechar na saída**  
+ **Fechar ao sair**  
  Fecha a janela aberta pela ferramenta quando ela for encerrada.  
   
 ## <a name="example"></a>Exemplo  
@@ -69,12 +69,13 @@ ms.locfileid: "63245625"
   
 |Box|Valor|  
 |---------|-----------|  
-|**Título**|DAC|  
-|**Comando**|[!INCLUDE[ssInstallPath](../includes/ssinstallpath-md.md)]Tools\Binn\SQLCMD.exe|  
+|**Title**|DAC|  
+|**Comando**|
+  [!INCLUDE[ssInstallPath](../includes/ssinstallpath-md.md)]Tools\Binn\SQLCMD.exe|  
 |**Argumentos**|-A|  
   
-## <a name="see-also"></a>Consulte também  
- [Argumentos de ferramentas externas](menu-help/external-tools.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Argumentos para ferramentas externas](menu-help/external-tools.md)   
  [Elementos gerais da interface do usuário](general-user-interface-elements.md)  
   
   

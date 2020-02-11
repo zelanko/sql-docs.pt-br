@@ -1,5 +1,5 @@
 ---
-title: SQLGetStmtOption (Driver ODBC do Visual FoxPro) | Microsoft Docs
+title: SQLGetStmtOption (driver ODBC do Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,28 +13,28 @@ ms.assetid: 984a8b1d-f12c-420c-8be4-f555114c764b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5521fb11cad064cf487d38562f4146fd32587993
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67898792"
 ---
 # <a name="sqlgetstmtoption-visual-foxpro-odbc-driver"></a>SQLGetStmtOption (Driver ODBC do Visual FoxPro)
 > [!NOTE]  
->  Este tópico contém informações específicas de Driver ODBC do Visual FoxPro. Para obter informações gerais sobre essa função, consulte o tópico apropriado sob [referência da API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Este tópico contém informações específicas do driver ODBC do Visual FoxPro. Para obter informações gerais sobre essa função, consulte o tópico apropriado em [referência da API do ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Suporte a: Completo  
+ Suporte: completo  
   
- Conformidade com a API ODBC: Nível de um  
+ Conformidade da API ODBC: nível um  
   
  Retorna a configuração atual de uma opção de instrução.  
   
-|*fOption*|Retorna|  
+|*FOption*|Retornos|  
 |---------------|-------------|  
-|SQL_GET_BOOKMARK|valor inteiro de 32 bits que é o indicador para o número de registro atual|  
-|SQL_ROW_NUMBER|inteiro de 32 bits que especifica a posição da linha atual no resultado definido|  
-|SQL_TRANSLATE_DLL|Erro: "Não têm a capacidade de driver"|  
+|SQL_GET_BOOKMARK|valor inteiro de 32 bits que é o indicador para o número do registro atual|  
+|SQL_ROW_NUMBER|inteiro de 32 bits especificando a posição da linha atual no conjunto de resultados|  
+|SQL_TRANSLATE_DLL|Erro: "driver não compatível"|  
   
- O Driver de ODBC do Visual FoxPro não tem nenhuma conversão DLLs.  
+ O driver ODBC do Visual FoxPro não tem DLLs de tradução.  
   
  Para obter mais informações, consulte [SQLGetStmtOption](../../odbc/reference/syntax/sqlgetstmtoption-function.md) na *referência do programador de ODBC*.

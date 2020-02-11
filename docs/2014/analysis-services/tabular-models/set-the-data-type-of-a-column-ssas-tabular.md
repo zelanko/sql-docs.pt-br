@@ -1,5 +1,5 @@
 ---
-title: Defina o tipo de dados de uma coluna (SSAS Tabular) | Microsoft Docs
+title: Definir o tipo de dados de uma coluna (SSAS tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f9240218b05af2c642ff374cb7e14d2a6c5dd616
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066606"
 ---
 # <a name="set-the-data-type-of-a-column-ssas-tabular"></a>Definir o tipo de dados de uma coluna (SSAS tabular)
@@ -50,7 +50,7 @@ ms.locfileid: "66066606"
   
 |Tipos de dados do modelo|  
 |----------------------|  
-|Texto<br /><br /> Número Decimal<br /><br /> Número Inteiro<br /><br /> Currency<br /><br /> TRUE/FALSE<br /><br /> Date|  
+|Texto<br /><br /> Número decimal<br /><br /> Número inteiro<br /><br /> Moeda<br /><br /> TRUE/FALSE<br /><br /> Data|  
   
  Caso descubra que seus dados têm um tipo de dados errado ou, pelo menos, um tipo diferente do desejado, você terá várias opções:  
   
@@ -65,9 +65,9 @@ ms.locfileid: "66066606"
   
  Se houver suporte para tipo de dados, mas o designer de modelo encontrar valores sem suporte no novo tipo de dados, você receberá outro erro e precisará corrigir os valores de dados antes de continuar.  
   
- Para obter informações detalhadas sobre os tipos de dados usados em modelos semânticos de business intelligence, como eles são convertidos implicitamente e como tipos de dados diferentes são usados em fórmulas, consulte [Data Types Supported &#40;SSAS Tabular&#41;](data-types-supported-ssas-tabular.md).  
+ Para obter informações detalhadas sobre os tipos de dados usados em modelos semânticos de business intelligence, como eles são convertidos implicitamente e como tipos de dados diferentes são usados em fórmulas, consulte [Tipos de dados com suporte &#40;SSAS de Tabela&#41;](data-types-supported-ssas-tabular.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Tipos de dados com suporte &#40;SSAS de Tabela&#41;](data-types-supported-ssas-tabular.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Tipos de dados com suporte &#40;SSAS de tabela&#41;](data-types-supported-ssas-tabular.md)  
   
   

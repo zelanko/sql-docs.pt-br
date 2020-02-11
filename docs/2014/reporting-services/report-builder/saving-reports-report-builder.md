@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e21b1c9e48dcccf8b72a60fbd381aac3d878c0dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107627"
 ---
 # <a name="saving-reports-report-builder"></a>Salvando relatórios (Construtor de Relatórios)
@@ -28,9 +28,9 @@ ms.locfileid: "66107627"
   
 -   Use o histórico de relatório para salvar versões de relatórios renderizados como cópias históricas.  
   
- Para saber mais sobre como exibir e gerenciar relatórios diretamente no servidor de relatórios, consulte [Localizando, exibindo e gerenciando relatórios &#40;Construtor de Relatórios e SSRS&#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md) e [Servidor de relatórios do Reporting Services &#40;Modo nativo&#41;](../report-server/reporting-services-report-server-native-mode.md) nos [Manuais Online](https://go.microsoft.com/fwlink/?LinkId=154888) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em msdn.microsoft.com.  
+ Para saber mais sobre como exibir e gerenciar relatórios diretamente no servidor de relatórios, consulte [Localizando, exibindo e gerenciando relatórios &#40;Construtor de Relatórios e SSRS&#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md) e [Servidor de relatórios do Reporting Services &#40;Modo nativo&#41;](../report-server/reporting-services-report-server-native-mode.md) nos Manuais Online[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [ do ](https://go.microsoft.com/fwlink/?LinkId=154888) em msdn.microsoft.com.  
   
-##  <a name="SavingReportDefinitions"></a> Salvando definições de relatório  
+##  <a name="SavingReportDefinitions"></a>Salvando definições de relatório  
  Embora seja possível salvar relatórios no computador, salvar relatórios em um servidor de relatório oferece muitas vantagens.  
   
  Salvar um relatório em um servidor de relatório oferece as seguintes vantagens:  
@@ -52,7 +52,7 @@ ms.locfileid: "66107627"
 
   
 ##  <a name="ExportingAndSavingReports"></a> Exportando e salvando relatórios  
- Se você tiver um número pequeno de relatórios para arquivar, considere exportar um relatório e salvá-lo como um arquivo. Após exportar um relatório para um aplicativo (como PDF ou Excel), você pode salvá-lo como um arquivo e colocá-lo em um diretório compartilhado protegido na rede. Como alternativa, você poderá carregar um arquivo PDF ou Excel salvo como um item de recurso, se desejar manter todas as cópias de um relatório, independentemente do formato, no banco de dados do servidor de relatório. Para obter mais informações sobre como exportar um relatório, consulte [exportando relatórios &#40;construtor de relatórios e SSRS&#41; ](export-reports-report-builder-and-ssrs.md) e [carregar um arquivo ou relatório &#40;Gerenciador de relatórios&#41;](../reports/upload-a-file-or-report-report-manager.md).  
+ Se você tiver um número pequeno de relatórios para arquivar, considere exportar um relatório e salvá-lo como um arquivo. Após exportar um relatório para um aplicativo (como PDF ou Excel), você pode salvá-lo como um arquivo e colocá-lo em um diretório compartilhado protegido na rede. Como alternativa, você poderá carregar um arquivo PDF ou Excel salvo como um item de recurso, se desejar manter todas as cópias de um relatório, independentemente do formato, no banco de dados do servidor de relatório. Para obter mais informações sobre como exportar um relatório, consulte [Exportando relatórios &#40;Construtor de relatórios e SSRS&#41;](export-reports-report-builder-and-ssrs.md) e [carregar um arquivo ou relatório &#40;Report Manager ](../reports/upload-a-file-or-report-report-manager.md)&#41;.  
   
 
   
@@ -72,15 +72,15 @@ ms.locfileid: "66107627"
   
 -   [Salvar um relatório em uma biblioteca do SharePoint &#40;Construtor de Relatórios&#41;](save-a-report-to-a-sharepoint-library-report-builder.md)  
   
--   [Salvar relatórios em seu computador &#40;construtor de relatórios&#41;](../save-reports-to-your-computer-report-builder.md)  
+-   [Salve os relatórios em seu computador &#40;Construtor de Relatórios&#41;](../save-reports-to-your-computer-report-builder.md)  
   
 
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Relatórios, partes de relatório e definições de relatório &#40;Construtor de Relatórios e SSRS&#41;](../report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
- [Instalar, desinstalar e oferecer suporte ao construtor de relatórios](../install-uninstall-and-report-builder-support.md)   
+ [Instalar, desinstalar e Construtor de Relatórios suporte](../install-uninstall-and-report-builder-support.md)   
  [Localizando, exibindo e gerenciando relatórios &#40;Construtor de Relatórios e SSRS&#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [Exportando relatórios &#40;relatórios e SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
+ [Exportando relatórios &#40;Construtor de Relatórios e SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
  [Imprimir relatórios &#40;Construtor de Relatórios e SSRS&#41;](print-reports-report-builder-and-ssrs.md)  
   
   

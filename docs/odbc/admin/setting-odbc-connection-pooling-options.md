@@ -1,5 +1,5 @@
 ---
-title: Definindo opções de pool de Conexão de ODBC | Microsoft Docs
+title: Definindo opções de pool de conexões ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,31 +15,31 @@ ms.assetid: 037e2f78-f204-40f4-b4ab-d9cdf562012b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 43d4fe1ab363326269daf40375e126b930d2548b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67901638"
 ---
 # <a name="setting-odbc-connection-pooling-options"></a>Configurar opções de pool de conexões ODBC
-Pooling de Conexão permite que um aplicativo para usar uma conexão de um pool de conexões que não precisam ser restabelecidas para cada uso. Você pode usar o **Pooling de Conexão** guia da **administrador de fonte de dados ODBC** caixa de diálogo para habilitar e desabilitar o monitoramento de desempenho. Clique duas vezes em um nome de driver para definir o período de tempo limite de conexão.  
+O pooling de conexões permite que um aplicativo use uma conexão de um pool de conexões que não precisam ser restabelecidas para cada uso. Você pode usar a guia **pool de conexões** da caixa de diálogo administrador de fonte de **dados ODBC** para habilitar e desabilitar o monitoramento de desempenho. Clique duas vezes em um nome de driver para definir o período de tempo limite de conexão.  
   
- Pooling de conexão está habilitada no nível do driver, pelo valor do registro CPTimeout. Este driver de seletivo permite que um administrador do sistema habilitar o pooling de conexão para apenas os drivers que dão suporte a ele. Isso é feito definindo o valor padrão de CPTimeout durante o programa de instalação do driver. Clique duas vezes em um nome de driver para definir o período de tempo limite de conexão.  
+ No nível do driver, o pooling de conexão é habilitado pelo valor do registro CPTimeout. Essa habilitação seletiva por driver permite que um administrador do sistema habilite o pool de conexões apenas para os drivers que podem dar suporte a ele. Ela é realizada definindo o valor padrão de CPTimeout durante o programa de instalação do driver. Clique duas vezes em um nome de driver para definir o período de tempo limite de conexão.  
   
- Para obter mais informações sobre o pooling de conexão, consulte [Pooling de Conexão ODBC](../../odbc/reference/develop-app/driver-manager-connection-pooling.md).  
+ Para obter mais informações sobre o pool de conexões, consulte [ODBC Connection Pooling](../../odbc/reference/develop-app/driver-manager-connection-pooling.md).  
   
 ## <a name="performance-monitoring"></a>Monitoramento de desempenho  
- Monitoramento de desempenho controla o desempenho de conexão por gravar uma variedade de estatísticas. Essas estatísticas podem ser personalizadas pelo desenvolvedor para incluir itens como o seguinte:  
+ O monitoramento de desempenho rastreia o desempenho da conexão gravando uma variedade de estatísticas. Essas estatísticas podem ser personalizadas pelo desenvolvedor para incluir itens como o seguinte:  
   
 |Contador|Definição|  
 |-------------|----------------|  
-|Contador de disco rígido de Conexão ODBC por segundo|O número de conexões reais por segundo que são feitas no servidor. Na primeira vez em que seu ambiente apresenta uma carga pesada, esse contador será subir muito rapidamente. Depois de alguns segundos, ele descarta a zero. Essa é a situação de normal quando o pooling de conexão está funcionando. Quando as conexões com o servidor tiveram sido estabelecidas, eles serão usados e colocados no pool para reutilização.|  
-|ODBC rígido desconectar contador por segundo|O número de disco rígido desconexões por segundo emitido para o servidor. Essas são as conexões reais para o servidor que estão sendo lançadas pelo pool de conexão. Esse valor serão aumentados de zero quando você parar todos os clientes no sistema e as conexões começam a atingir o tempo limite.|  
-|Contador de Conexão flexível de ODBC por segundo|O número de conexões satisfeitos por pool por segundo em outras palavras, as conexões do pool que foram entregues aos usuários. Este contador indica se o pool está funcionando. Dependendo da carga em seu servidor, não é incomum para esta opção para mostrar as conexões de software de 40 a 60 por segundo.|  
-|Contador de desconexão reversível ODBC por segundo|O número de desconexões por segundo emitido pelos aplicativos. Quando o aplicativo libera ou se desconecta, a conexão é colocado de volta no pool.|  
-|Contador de Conexão ativa atual do ODBC|O número de conexões no pool que estão atualmente em uso.|  
-|Contador de Conexão livre atual do ODBC|O número atual de conexões livres no pool. Essas são as conexões dinâmicas que estão disponíveis para uso.|  
-|Pools de ativo no momento|O número de pools de ativos no momento. Este contador foi adicionado no Windows 8, os drivers que gerenciar conexões no pool de conexão. Para obter mais informações, consulte [Pooling de Conexão de reconhecimento de Driver](../../odbc/reference/develop-app/driver-aware-connection-pooling.md).|  
-|Pools criados|O número de pools de Active Directory, incluindo pools do Active Directory e removidos. Este contador foi adicionado no Windows 8, os drivers que gerenciar conexões no pool de conexão. Para obter mais informações, consulte [Pooling de Conexão de reconhecimento de Driver](../../odbc/reference/develop-app/driver-aware-connection-pooling.md).|  
+|Contador de conexão física ODBC por segundo|O número de conexões reais por segundo que são feitas no servidor. Na primeira vez que o ambiente carrega uma carga pesada, esse contador será atualizado muito rapidamente. Depois de alguns segundos, ele será Descartado para zero. Essa é a situação normal quando o pool de conexões está funcionando. Quando as conexões com o servidor tiverem sido estabelecidas, elas serão usadas e colocadas no pool para reutilização.|  
+|Contador de desconexão fixa de ODBC por segundo|O número de desconexões físicas por segundo emitidas para o servidor. Essas são conexões reais com o servidor que estão sendo liberadas pelo pool de conexões. Esse valor aumentará de zero quando você parar todos os clientes no sistema e as conexões começarem a atingir o tempo limite.|  
+|Contador de conexões suaves ODBC por segundo|O número de conexões atendidas pelo pool por segundo, em outras palavras, conexões desse pool que foram entregues aos usuários. Este contador indica se o pooling está funcionando. Dependendo da carga no seu servidor, não é incomum que isso mostre 40-60 conexões flexíveis por segundo.|  
+|Contador de desconexão de disco ODBC por segundo|O número de desconexões por segundo emitidas pelos aplicativos. Quando o aplicativo libera ou se desconecta, a conexão é colocada de volta no pool.|  
+|Contador de conexões ativas ODBC atual|O número de conexões no pool que estão em uso no momento.|  
+|Contador de conexão livre atual do ODBC|O número atual de conexões livres disponíveis no pool. Essas são conexões dinâmicas que estão disponíveis para uso.|  
+|Pools ativos no momento|O número de pools atualmente ativos. Esse contador foi adicionado ao Windows 8 para drivers que gerenciam conexões no pool de conexões. Para obter mais informações, consulte [pooling de conexão com reconhecimento de driver](../../odbc/reference/develop-app/driver-aware-connection-pooling.md).|  
+|Pools criados|O número de pools ativos, incluindo pools ativos e removidos. Esse contador foi adicionado ao Windows 8 para drivers que gerenciam conexões no pool de conexões. Para obter mais informações, consulte [pooling de conexão com reconhecimento de driver](../../odbc/reference/develop-app/driver-aware-connection-pooling.md).|  
   
- Você deve especificar seus próprios parâmetros de monitoramento. Exemplos para o monitoramento de desempenho foram incluídos com esta versão do ODBC.
+ Você deve especificar seus próprios parâmetros de monitoramento. Exemplos de monitoramento de desempenho foram incluídos nesta versão do ODBC.

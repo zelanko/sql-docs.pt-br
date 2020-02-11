@@ -1,5 +1,5 @@
 ---
-title: Repetir até um Cursor (SQL Server Profiler) | Microsoft Docs
+title: Reproduzir para um cursor (SQL Server Profiler) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f7c4c4b9d2e2e07c53f850fe545d803fa411dbbc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63267489"
 ---
 # <a name="replay-to-a-cursor-sql-server-profiler"></a>Repetir até um cursor (SQL Server Profiler)
@@ -42,7 +42,7 @@ ms.locfileid: "63267489"
   
 6.  Repita a Etapa 5 até o término do rastreamento.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Reproduzir em um ponto de interrupção &#40;SQL Server Profiler&#41;](replay-to-a-breakpoint-sql-server-profiler.md)   
  [Repetir rastreamentos](replay-traces.md)   
  [SQL Server Profiler](sql-server-profiler.md)  

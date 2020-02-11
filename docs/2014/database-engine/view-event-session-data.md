@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e2fecf8a71854d7f8df160ba3ff63912086a34e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67131798"
 ---
 # <a name="view-event-session-data"></a>Exibir dados de sessão de evento
@@ -44,7 +44,7 @@ ms.locfileid: "67131798"
   
 -   Para um destino de event_file, exiba os dados de destino de arquivo (arquivo .XEL) usando um dos métodos a seguir:  
   
-    -   Use o arquivo -> Abrir no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].
+    -   Use o arquivo-> abrir [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]no.
     
     -   Arraste e solte o arquivo no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. 
     
@@ -54,16 +54,16 @@ ms.locfileid: "67131798"
     
     -   [fn_xe_file_target_read_file](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql).
     
-    -   Usar o Powershell, leia-SQLXevent no [SQLServer.XEvent módulo](https://www.powershellgallery.com/packages/SqlServer.XEvent).
+    -   Use o PowerShell Read-SQLXevent no [módulo SqlServer. XEvent](https://www.powershellgallery.com/packages/SqlServer.XEvent).
     
-    -   Consumir por meio de programação XEvents usando o [XELite NuGet](https://www.nuget.org/packages/Microsoft.SqlServer.XEvent.XELite).
+    -   Consumir programaticamente XEvents usando o [NuGet do XELite](https://www.nuget.org/packages/Microsoft.SqlServer.XEvent.XELite).
     
-    -   Você pode exibir mais de um. Arquivo XEL selecionando **mesclar arquivos de eventos estendidos** do arquivo -> Abrir menu.
+    -   Você pode exibir mais de um. XEL arquivo selecionando **mesclar arquivos de eventos estendidos** no menu arquivo-> abrir.
 
 ### <a name="watching-live-data"></a>Assistindo dados ao vivo  
  Você pode assistir dados ao vivo à medida que estão sendo capturados.  
   
--   No Pesquisador de Objetos, expanda os nós **Gerenciamento**, **Eventos Estendidos**e **Sessões** .  
+-   No Pesquisador de objetos, expanda os nós **Gerenciamento**, **eventos estendidos**e **sessões** .  
 
 -   Clique com o botão direito do mouse no nome da sessão e clique em **Observar Dados Dinâmicos** para começar a exibir dados de rastreamento.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "67131798"
   
      Em geral, os eventos são exibidos em aproximadamente 30 segundos. Se você quiser alterar o período de latência, poderá alterar a **Latência máxima de expedição** na página **Avançado** da caixa de diálogo **Nova Sessão** .  
      
--    Dados dinâmicos podem ser transmitidos pela [módulo do SqlServer.XEvent PowerShell](https://www.powershellgallery.com/packages/SqlServer.XEvent).
+-    Os dados dinâmicos podem ser transmitidos pelo [módulo SqlServer. XEvent do PowerShell](https://www.powershellgallery.com/packages/SqlServer.XEvent).
      
 ### <a name="to-refresh-target-data"></a>Para atualizar dados de destino  
  Atualizar dados de destino não tem suporte para destinos de event_files:  
@@ -87,7 +87,7 @@ ms.locfileid: "67131798"
 ## <a name="working-with-data"></a>Trabalhando com dados  
  Você pode usar os recursos de análise da interface de usuário de Eventos Estendidos para identificar problemas.  
   
-### <a name="details-pane"></a>Painel de detalhes  
+### <a name="details-pane"></a>Painel Detalhes  
  O painel de **Detalhes** mostra todas as colunas para o evento selecionado, incluindo campos e ações. Você pode adicionar uma coluna à tabela de dados de destino clicando com o botão direito em uma linha no painel de **Detalhes** e selecionando **Mostrar Coluna na Tabela**.  
   
 ### <a name="create-modify-or-delete-merged-columns"></a>Criar, modificar ou excluir colunas mescladas  
@@ -95,7 +95,7 @@ ms.locfileid: "67131798"
   
  Você pode criar, modificar ou excluir colunas mescladas:  
   
-1.  Abra um arquivo .XEL para exibir os resultados do rastreamento. (Você também pode clicar com o botão direito do mouse no nome da sessão e selecionar **Observar Dados Dinâmicos**.)  
+1.  Abra um arquivo .XEL para exibir os resultados do rastreamento. (Você também pode clicar com o botão direito do mouse no nome da sessão e selecionar **inspecionar dados dinâmicos**.)  
   
 2.  Na janela de resultados de rastreamento, clique com o botão direito no cabeçalho de coluna e clique em **Escolher Colunas**.  
   
@@ -110,18 +110,18 @@ ms.locfileid: "67131798"
   
  Para criar um filtro:  
   
-1.  Abra um arquivo .XEL para exibir os resultados do rastreamento. (Você também pode clicar com o botão direito do mouse no nome da sessão e selecionar **Observar Dados Dinâmicos**.)  
+1.  Abra um arquivo .XEL para exibir os resultados do rastreamento. (Você também pode clicar com o botão direito do mouse no nome da sessão e selecionar **inspecionar dados dinâmicos**.)  
   
 2.  Na janela de resultados de rastreamento, selecione os resultados que você deseja filtrar e, na barra de ferramentas **Eventos Estendidos** , clique no botão **Filtros**.  
   
 3.  Na caixa de diálogo **Filtros** , selecione **Definir filtro de hora** para definir o filtro de hora arrastando o controle deslizante ou modificando a hora na caixa de edição.  
   
-4.  Na seção **Filtros adicionais** , aplique seus critérios de filtro e clique em **Aplicar**.  
+4.  Na seção **filtros adicionais** , aplique os critérios de filtro e clique em **aplicar**.  
   
 ### <a name="sort-results"></a>Classificar Resultados  
  Para classificar os resultados em ordem crescente ou decrescente:  
   
-1.  Abra um arquivo .XEL para exibir os resultados do rastreamento. (Você também pode clicar com o botão direito no nome da sessão, **Observar Dados Dinâmicos**e em seguida clicar no botão **Parar Feed de Dados** na barra de ferramentas.)  
+1.  Abra um arquivo .XEL para exibir os resultados do rastreamento. (Você também pode clicar com o botão direito do mouse no nome da sessão, selecionar **observar dados dinâmicos**e clicar no botão **parar feed de dados** na barra de ferramentas.)  
   
 2.  Na janela de resultados de rastreamento, clique com o botão direito do mouse no cabeçalho da coluna que você quer classificar e clique em **Classificação Crescente** ou **Classificação Decrescente**.  
   
@@ -136,7 +136,7 @@ ms.locfileid: "67131798"
   
  Você pode agrupar os resultados por uma única coluna ou por várias colunas.  
   
- Abra um arquivo .XEL para exibir os resultados do rastreamento. (Você também pode clicar com o botão direito no nome da sessão, **Observar Dados Dinâmicos**e em seguida clicar no botão **Parar Feed de Dados** na barra de ferramentas.)  
+ Abra um arquivo .XEL para exibir os resultados do rastreamento. (Você também pode clicar com o botão direito do mouse no nome da sessão, selecionar **observar dados dinâmicos**e clicar no botão **parar feed de dados** na barra de ferramentas.)  
   
  Para agrupar resultados por uma única coluna, clique com o botão direito do mouse no cabeçalho da coluna na janela de resultados de rastreamento e clique em **Agrupar por Esta Coluna**. Para desfazer o agrupamento, selecione uma das linhas e clique em **Remover Todo o Agrupamento**.  
   
@@ -147,7 +147,7 @@ ms.locfileid: "67131798"
   
 -   sum  
   
--   min  
+-   Min  
   
 -   max  
   
@@ -159,7 +159,7 @@ ms.locfileid: "67131798"
   
  A agregação é realizada em um grupo; portanto, você deve agrupar os resultados antes de você executar a agregação. Para agregar resultados:  
   
-1.  Abra um arquivo .XEL para exibir os resultados do rastreamento. (Você também pode clicar com o botão direito no nome da sessão, **Observar Dados Dinâmicos**e em seguida clicar no botão **Parar Feed de Dados** na barra de ferramentas.)  
+1.  Abra um arquivo .XEL para exibir os resultados do rastreamento. (Você também pode clicar com o botão direito do mouse no nome da sessão, selecionar **observar dados dinâmicos**e clicar no botão **parar feed de dados** na barra de ferramentas.)  
   
 2.  Na barra de ferramentas **Eventos Estendidos** , clique no botão **Agregação** . A caixa de diálogo Agregação exibirá as colunas disponíveis para agregação.  
   
@@ -180,7 +180,7 @@ ms.locfileid: "67131798"
   
     -   Colunas da tabela. Use esta opção para procurar todas as colunas visíveis na janela de rastreamento.  
   
-    -   Detalhes. Use esta opção para procurar todas as colunas (promovida e não promovida) na janela de rastreamento que foram selecionadas antes de abrir o **localizar nos eventos estendidos** caixa de diálogo.  
+    -   Detalhes. Use esta opção para pesquisar todas as colunas (promovidas e não promovidas) na janela de rastreamento que foram selecionadas antes de abrir a caixa de diálogo **Localizar em eventos estendidos** .  
   
     -   *Event_column_name*. Use esta opção para procurar uma coluna de evento específica na lista suspensa.  
   
@@ -219,7 +219,7 @@ ms.locfileid: "67131798"
   
 -   Arquivo .XEL  
   
--   table  
+-   tabela  
   
 -   Arquivo .CSV  
   
@@ -238,7 +238,7 @@ ms.locfileid: "67131798"
   
  Para exibir o deadlock graph:  
   
--   No Pesquisador de Objetos, expanda os nós **Gerenciamento**, **Eventos Estendidos**e **Sessões** .  
+-   No Pesquisador de objetos, expanda os nós **Gerenciamento**, **eventos estendidos**e **sessões** .  
   
 -   Clique com o botão direito do mouse na sessão que contém o evento de deadlock configurado que você deseja exibir e selecione **Observar Dados Dinâmicos**.  
   
@@ -246,7 +246,7 @@ ms.locfileid: "67131798"
   
  Para exibir gráficos de plano de consulta:  
   
-1.  No Pesquisador de Objetos, expanda os nós **Gerenciamento**, **Eventos Estendidos**e **Sessões** .  
+1.  No Pesquisador de objetos, expanda os nós **Gerenciamento**, **eventos estendidos**e **sessões** .  
   
 2.  Clique com o botão direito do mouse na sessão que contém o gráfico de plano de consulta que você deseja exibir (por exemplo, query_post_compilation_showplan) e selecione **Observar Dados Dinâmicos**.  
   
