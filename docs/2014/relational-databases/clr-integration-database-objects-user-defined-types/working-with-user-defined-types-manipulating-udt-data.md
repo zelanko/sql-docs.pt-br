@@ -30,17 +30,17 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 11aa57037a1ea92bd72ed2eaa581d34baff8a122
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62874312"
 ---
 # <a name="manipulating-udt-data"></a>Manipulando dados UDT
   O [!INCLUDE[tsql](../../includes/tsql-md.md)] não fornece uma sintaxe especializada para instruções INSERT, UPDATE ou DELETE ao modificar dados nas colunas UDTs (tipos definidos pelo usuário). As funções [!INCLUDE[tsql](../../includes/tsql-md.md)] CAST ou CONVERT são usadas para converter tipos de dados nativos no tipo UDT.  
   
 ## <a name="inserting-data-in-a-udt-column"></a>Inserindo dados em uma coluna UDT  
- O seguinte [!INCLUDE[tsql](../../includes/tsql-md.md)] instruções inserirem três linhas de dados de exemplo para o **pontos** tabela. O **ponto** tipo de dados consiste em X e Y inteiro valores que são expostas como propriedades do UDT. Você deve usar a função CAST ou CONVERT para converter o delimitada por vírgulas para valores de X e Y para o **ponto** tipo. As duas primeiras instruções usam a função CONVERT para converter um valor de cadeia de caracteres para o **ponto** tipo e a terceira instrução usa a função CAST:  
+ As instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] a seguir inserem três linhas de dados de exemplo na tabela **Points** . O tipo de dados **Point** consiste em valores inteiros X e Y expostos como propriedades de UDT. Você deve usar a função CAST ou CONVERT para converter os valores X e Y delimitados por vírgula para o tipo de **ponto** . As duas primeiras instruções usam a função CONVERT para converter um valor de cadeia de caracteres para o tipo de **ponto** e a terceira instrução usa a função Cast:  
   
 ```  
 INSERT INTO dbo.Points (PointValue) VALUES (CONVERT(Point, '3,4'));  
@@ -55,7 +55,7 @@ INSERT INTO dbo.Points (PointValue) VALUES (CAST ('1,99' AS Point));
 SELECT ID, PointValue FROM dbo.Points  
 ```  
   
- Para ver a saída exibida em um formato legível, chame o `ToString` método da **ponto** UDT, que converte o valor em sua representação de cadeia de caracteres.  
+ Para ver a saída exibida em um formato legível, chame o `ToString` método do **ponto** UDT, que converte o valor em sua representação de cadeia de caracteres.  
   
 ```  
 SELECT ID, PointValue.ToString() AS PointValue   
@@ -156,7 +156,7 @@ WHERE PointValue = @ComparePoint;
 ```  
   
 ## <a name="invoking-udt-methods"></a>Invocando métodos UDT   
- Você também pode invocar métodos definidos em seu UDT no [!INCLUDE[tsql](../../includes/tsql-md.md)]. O **ponto** classe contém três métodos, `Distance`, `DistanceFrom`, e `DistanceFromXY`. Para as listagens de código definem esses três métodos, consulte [Codificando tipos](creating-user-defined-types-coding.md).  
+ Você também pode invocar métodos definidos em seu UDT no [!INCLUDE[tsql](../../includes/tsql-md.md)]. A classe **Point** contém três métodos, `Distance` `DistanceFrom`, e `DistanceFromXY`. Para as listagens de código que definem esses três métodos, consulte [codificação de tipos definidos pelo usuário](creating-user-defined-types-coding.md).  
   
  A seguinte instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] chama o método `PointValue.Distance`:  
   
@@ -167,7 +167,7 @@ SELECT ID, PointValue.X AS [Point.X],
 FROM dbo.Points;  
 ```  
   
- Os resultados são exibidos no `Distance` coluna:  
+ Os resultados são exibidos na `Distance` coluna:  
   
 ```  
 IDXYDistance  
@@ -177,7 +177,7 @@ IDXYDistance
 319999.0050503762308  
 ```  
   
- O `DistanceFrom` método usa um argumento do **aponte** tipo de dados e exibe a distância do ponto especificado até o PointValue:  
+ O `DistanceFrom` método usa um argumento de tipo de dados **Point** e exibe a distância do ponto especificado para o PointValue:  
   
 ```  
 SELECT ID, PointValue.ToString() AS Pnt,  
@@ -263,7 +263,7 @@ SET PointValue = null
 WHERE ID = 2  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Trabalhando com tipos de dados definidos pelo usuário no SQL Server](working-with-user-defined-types-in-sql-server.md)  
   
   

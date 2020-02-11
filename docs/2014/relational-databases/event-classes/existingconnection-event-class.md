@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d30a857647b9796afb919b078553ecce58344c21
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63023399"
 ---
 # <a name="existingconnection-event-class"></a>classe de evento ExistingConnection
@@ -26,7 +26,7 @@ ms.locfileid: "63023399"
   
 ## <a name="existing-connection-event-class-data-columns"></a>Colunas de dados da classe de evento Existing Connection  
   
-|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|DESCRIÇÃO|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|`nvarchar`|Nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |BinaryData|`image`|Despejo binário de sinalizadores de opção como definições de nível de sessão, incluindo nulos ANSI, preenchimento ANSI, fechar cursor ao confirmar, concatenação nula e identificadores entre aspas.|2|Sim|  
@@ -50,7 +50,7 @@ ms.locfileid: "63023399"
 |StartTime|`datetime`|Hora em que o usuário abriu essa conexão (hora de logon).|14|Sim|  
 |TextData|`ntext`|Defina opções específicas para a conexão.|1|Sim|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [Classe de evento Audit Login](audit-login-event-class.md)  
   

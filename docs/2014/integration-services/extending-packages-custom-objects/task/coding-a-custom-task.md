@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ee6c3325364e6b695b288e1a5b43e7d2470f6e34
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62896102"
 ---
 # <a name="coding-a-custom-task"></a>Codificando uma tarefa personalizada
@@ -157,24 +157,24 @@ End Class
  Esta seção descreve como usar o método `Execute`, que é herdado e substituído por tarefas. Esta seção também explica vários modos de fornecer informações sobre os resultados da execução de uma tarefa.  
   
 ### <a name="execute-method"></a>Método Execute  
- As tarefas contidas em um pacote são executadas quando o tempo de execução do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] chama seu método `Execute`. As tarefas implementam sua principal lógica de negócios e sua funcionalidade nesse método e fornecem os resultados da execução postando mensagens, retornando um valor da <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> enumeração e substituindo a propriedade `get` da `ExecutionValue` propriedade.  
+ As tarefas contidas em um pacote são executadas quando o runtime do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] chama seu método `Execute`. As tarefas implementam sua lógica de negócios e funcionalidade principais nesse método e fornecem os resultados da execução postando mensagens, retornando um valor <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> da enumeração e substituindo a `get` propriedade da `ExecutionValue` propriedade.  
   
- A classe base <xref:Microsoft.SqlServer.Dts.Runtime.Task> fornece uma implementação padrão do método <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A>. As tarefas personalizadas anulam esse método para definir sua funcionalidade de tempo de execução. O objeto <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> quebra a tarefa, isolando-a do mecanismo de tempo de execução e dos outros objetos no pacote. Por causa desse isolamento, a tarefa não reconhece sua localização no pacote quanto à ordem de execução e é executada somente quando chamada pelo tempo de execução. Essa arquitetura evita os problemas que podem ocorrer quando as tarefas modificam o pacote durante a execução. A tarefa recebe acesso aos outros objetos do pacote somente por meio dos objetos fornecidos a ela como parâmetros no método <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A>. Esses parâmetros permitem que as tarefas gerem eventos, gravem entradas no log de eventos, acessem a coleção de variáveis e inscrevam conexões em fontes de dados nas transações, ao mesmo tempo mantendo o isolamento necessário para garantir a estabilidade e a confiabilidade do pacote.  
+ A classe base <xref:Microsoft.SqlServer.Dts.Runtime.Task> fornece uma implementação padrão do método <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A>. As tarefas personalizadas anulam esse método para definir sua funcionalidade de tempo de execução. O objeto <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> quebra a tarefa, isolando-a do mecanismo de tempo de execução e dos outros objetos no pacote. Por causa desse isolamento, a tarefa não reconhece sua localização no pacote quanto à ordem de execução e é executada somente quando chamada pelo runtime. Essa arquitetura evita os problemas que podem ocorrer quando as tarefas modificam o pacote durante a execução. A tarefa recebe acesso aos outros objetos do pacote somente por meio dos objetos fornecidos a ela como parâmetros no método <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A>. Esses parâmetros permitem que as tarefas gerem eventos, gravem entradas no log de eventos, acessem a coleção de variáveis e inscrevam conexões em fontes de dados nas transações, ao mesmo tempo mantendo o isolamento necessário para garantir a estabilidade e a confiabilidade do pacote.  
   
  A tabela seguinte lista os parâmetros fornecidos à tarefa no método <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A>.  
   
-|Parâmetro|Descrição|  
+|Parâmetro|DESCRIÇÃO|  
 |---------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Connections>|Contém uma coleção de objetos <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> disponíveis para a tarefa.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.VariableDispenser>|Contém as variáveis disponíveis para a tarefa. As tarefas usam variáveis pelo VariableDispenser; as tarefas não usam variáveis diretamente. O VariableDispenser bloqueia e desbloqueia as variáveis e impede deadlocks ou substituições.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents>|Contém os métodos chamados pela tarefa para gerar eventos ao mecanismo de tempo de execução.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.IDTSLogging>|Contém métodos e propriedades usados pela tarefa para gravar entradas no log de eventos.|  
-|Object|Contém o objeto de transação do qual o contêiner faz parte, se houver. Esse valor é passado como um parâmetro ao método <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.AcquireConnection%2A> de um objeto <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>.|  
+|Objeto|Contém o objeto de transação do qual o contêiner faz parte, se houver. Esse valor é passado como um parâmetro ao método <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.AcquireConnection%2A> de um objeto <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>.|  
   
 ### <a name="providing-execution-feedback"></a>Fornecendo comentários de execução  
  As tarefas quebram seu código em blocos `try/catch` para evitar que sejam geradas exceções ao mecanismo de tempo de execução. Isso assegura que o pacote conclua a execução e não pare inesperadamente. Porém, o mecanismo de tempo de execução fornece outros mecanismos para tratar condições de erro que podem ocorrer durante a execução de uma tarefa. Eles incluem postar mensagens de erro e de aviso, retornar um valor da estrutura do <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult>, postar mensagens, retornar o valor <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> e divulgar informações sobre os resultados da execução da tarefa através da propriedade <xref:Microsoft.SqlServer.Dts.Runtime.Task.ExecutionValue%2A>.  
   
- A interface do <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> contém os métodos <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireWarning%2A> e <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireError%2A>, que podem ser chamados pela tarefa para postar mensagens de erro e de aviso para o mecanismo de tempo de execução. Ambos os métodos requerem parâmetros como código de erro, componente de origem, descrição, arquivo de Ajuda e informações de contexto de ajuda. Dependendo da configuração da tarefa, o tempo de execução responde a essas mensagens gerando eventos e pontos de interrupção, ou gravando informações no log de eventos.  
+ A interface do <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> contém os métodos <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireWarning%2A> e <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireError%2A>, que podem ser chamados pela tarefa para postar mensagens de erro e de aviso para o mecanismo de tempo de execução. Ambos os métodos requerem parâmetros como código de erro, componente de origem, descrição, arquivo de Ajuda e informações de contexto de ajuda. Dependendo da configuração da tarefa, o runtime responde a essas mensagens gerando eventos e pontos de interrupção, ou gravando informações no log de eventos.  
   
  O <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> também fornece a propriedade <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.ExecutionValue%2A> que pode ser usada para fornecer informações adicionais sobre os resultados da execução. Por exemplo, se uma tarefa exclui linhas de uma tabela como parte do seu método `Execute`, ela pode retornar o número de linhas excluídas como o valor da propriedade <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.ExecutionValue%2A>. Além disso, o <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> fornece a propriedade <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.ExecValueVariable%2A>. Essa propriedade permite que o usuário mapeie o <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.ExecutionValue%2A> retornado da tarefa para qualquer variável visível à tarefa. A variável especificada pode ser usada para estabelecer restrições de precedência entre as tarefas.  
   
@@ -285,9 +285,9 @@ Public Class SampleTask
 End Class  
 ```  
   
-![Ícone do Integration Services (pequeno)](../../media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
+![Ícone de Integration Services (pequeno)](../../media/dts-16.gif "Ícone do Integration Services (pequeno)")  **Mantenha-se atualizado com Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar uma tarefa personalizada](creating-a-custom-task.md)   
  [Codificar uma tarefa personalizada](coding-a-custom-task.md)   
  [Desenvolver uma interface do usuário para uma tarefa personalizada](developing-a-user-interface-for-a-custom-task.md)  

@@ -18,14 +18,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 821fd05e94ac820dff50bd08c70c75e7e9cc653d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62779590"
 ---
 # <a name="install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases"></a>Instalar um service pack em um sistema com tempo de inatividade mínimo para bancos de dados espelhados
-  Este tópico descreve como minimizar o tempo de inatividade para bancos de dados espelhados ao instalar service packs e hotfixes. Esse processo envolve atualizar sequencialmente as instâncias do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] que estão participando do espelhamento de banco de dados. Essa forma de atualização, o que é conhecida como um *atualização sem interrupção*, reduz o tempo de inatividade para um único failover. Observe que para sessões em modo de alto desempenho em que o servidor espelho está geograficamente distante do servidor principal, uma atualização sem interrupção pode ser inadequada.  
+  Este tópico descreve como minimizar o tempo de inatividade para bancos de dados espelhados ao instalar service packs e hotfixes. Esse processo envolve atualizar sequencialmente as instâncias do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] que estão participando do espelhamento de banco de dados. Essa forma de atualização, que é conhecida como *atualização sem interrupção*, reduz o tempo de inatividade para apenas um único failover. Observe que, para sessões em modo de alto desempenho, nas quais o servidor espelho está geograficamente distante do servidor principal, uma atualização sem interrupção pode ser inadequada.  
   
  A atualização sem interrupção é um processo de vários estágios que consiste no seguinte:  
   
@@ -34,7 +34,7 @@ ms.locfileid: "62779590"
 -   Se a sessão incluir uma testemunha, recomendamos a remoção da testemunha. Caso contrário, quando a instância do servidor espelho estiver sendo atualizada, a disponibilidade do banco de dados dependerá da testemunha que permanece conectada à instância do servidor principal. Depois que você remover uma testemunha, poderá atualizá-la a qualquer momento durante o processo de atualização sem interrupção sem arriscar o tempo de inatividade do banco de dados.  
   
     > [!NOTE]  
-    >  Para obter mais informações, confira [Quorum: Como uma testemunha afeta a disponibilidade do banco de dados &#40;Espelhamento de Banco de Dados&#41;](database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+    >  Para obter mais informações, consulte [Quorum: como uma testemunha afeta a disponibilidade do banco de dados &#40;Espelhamento de Banco de Dados&#41;](database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
 -   Se uma sessão estiver sendo executada em modo de alto desempenho, altere o modo operacional para o modo de segurança alta.  
   
@@ -56,9 +56,9 @@ ms.locfileid: "62779590"
   
 1.  Execute um backup de banco de dados completo em todos os bancos de dados principais.  
   
-     **Para fazer o backup de um banco de dados**  
+     **Para fazer backup de um banco de dados**  
   
-    -   [Criar um backup completo de banco de dados &#40;SQL Server&#41;](../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
+    -   [Crie um &#40;de backup de banco de dados completo SQL Server&#41;](../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
   
 2.  Execute o comando [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) em todos os bancos de dados principais.  
   
@@ -72,24 +72,24 @@ ms.locfileid: "62779590"
   
 ### <a name="to-change-a-session-from-high-performance-mode-to-high-safety-mode"></a>Para alterar uma sessão em modo de alto desempenho para modo de segurança alta  
   
-1.  Se a sessão de espelhamento estiver sendo executada em modo de alto desempenho, antes de executar uma atualização sem interrupção, altere o modo operacional para segurança alta sem failover automático. Use um dos métodos a seguir:  
+1.  Se a sessão de espelhamento estiver sendo executada em modo de alto desempenho, antes de executar uma atualização sem interrupção, altere o modo operacional para segurança alta sem failover automático. Use um dos seguintes métodos:  
   
-    -   No [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]: Alterar o **modo de operação** opção para **alta segurança sem failover automático (síncrono)** usando o [página espelhamento](../relational-databases/databases/database-properties-mirroring-page.md) do **banco de dados Propriedades** caixa de diálogo. Para obter informações sobre como acessar essa página, consulte [Iniciar o Assistente para Configurar Segurança de Espelhamento de Banco de Dados &#40;SQL Server Management Studio&#41;](database-mirroring/start-the-configuring-database-mirroring-security-wizard.md).  
+    -   No [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]: altere a opção **Modo de operação** para **Segurança alta sem failover automático (síncrono)** usando a [página Espelhamento](../relational-databases/databases/database-properties-mirroring-page.md) da caixa de diálogo **Propriedades do Banco de Dados** . Para obter informações sobre como acessar essa página, consulte [Iniciar o Assistente para Configurar Segurança de Espelhamento de Banco de Dados &#40;SQL Server Management Studio&#41;](database-mirroring/start-the-configuring-database-mirroring-security-wizard.md).  
   
-    -   No [!INCLUDE[tsql](../includes/tsql-md.md)]: Definir a segurança da transação como FULL. Para obter mais informações, consulte [Alterar a segurança da transação em uma sessão de espelhamento de banco de dados &#40;Transact-SQL&#41;](database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md).  
+    -   No [!INCLUDE[tsql](../includes/tsql-md.md)]: defina a segurança de transações para FULL. Para obter mais informações, consulte [Alterar a segurança da transação em uma sessão de espelhamento de banco de dados &#40;Transact-SQL&#41;](database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md).  
   
 ### <a name="to-perform-the-rolling-update"></a>Para executar a atualização sem interrupção  
   
-1.  Para minimizar o tempo de inatividade, recomendamos o seguinte: Inicie a atualização sem interrupção atualizando qualquer parceiro de espelhamento é atualmente o servidor espelho em todas as suas sessões de espelhamento. Pode ser necessário atualizar várias instâncias do servidor neste momento.  
+1.  Para minimizar o tempo de inatividade, é recomendável o seguinte: inicie a atualização sem interrupção atualizando qualquer parceiro de espelhamento que, no momento, seja o servidor espelho em todas as sessões de espelhamento. Pode ser necessário atualizar várias instâncias do servidor neste momento.  
   
     > [!NOTE]  
-    >  Uma testemunha pode ser atualizada em qualquer ponto do processo de atualização sem interrupção. Por exemplo, se uma instância de servidor for um servidor de espelho na sessão 1 e uma testemunha na sessão 2, você pode atualizar a instância do servidor agora.  
+    >  Uma testemunha pode ser atualizada em qualquer ponto do processo de atualização sem interrupção. Por exemplo, se uma instância de servidor for um servidor espelho na sessão 1 e for uma testemunha na sessão 2, você poderá atualizar a instância do servidor agora.  
   
      A instância do servidor a ser atualizada primeiro depende da configuração atual de suas sessões de espelhamento, da seguinte maneira:  
   
     -   Se qualquer instância do servidor já for o servidor espelho em todas as suas sessões de espelhamento, instale o service pack ou o hotfix nessa instância do servidor.  
   
-    -   Se todas as suas instâncias de servidor forem atualmente o servidor principal em quaisquer sessões de espelhamento, selecione uma instância de servidor para atualizar primeiro. Em seguida, execute manualmente um failover em cada um dos bancos de dados principais e atualize essa instância instalando o service pack ou hotfix.  
+    -   Se todas as instâncias de servidor forem atualmente o servidor principal em todas as sessões de espelhamento, selecione uma instância de servidor para atualizar primeiro. Em seguida, execute manualmente um failover em cada um dos bancos de dados principais e atualize essa instância instalando o service pack ou hotfix.  
   
      Depois de atualizada, a instância do servidor reingressa automaticamente em cada uma das sessões de espelhamento.  
   
@@ -110,12 +110,12 @@ ms.locfileid: "62779590"
 4.  Instale o service pack ou o hotfix em cada instância do servidor que seja agora o servidor espelho, em todas as sessões de espelhamento na qual seja um parceiro. Pode necessário atualizar vários servidores nesse momento.  
   
     > [!IMPORTANT]  
-    >  Em uma configuração de espelhamento complexa, algumas instâncias do servidor podem ainda ser o servidor principal original em uma ou mais sessões de espelhamento. Repita as etapas 2 a 4 para essas instâncias do servidor até que todas as instâncias envolvidas sejam atualizadas.  
+    >  Em uma configuração de espelhamento complexa, algumas instâncias do servidor podem ainda ser o servidor principal original em uma ou mais sessões de espelhamento. Repita as etapas 2-4 para essas instâncias de servidor até que todas as instâncias envolvidas sejam atualizadas.  
   
 5.  Continue a sessão de espelhamento.  
   
     > [!NOTE]  
-    >  Failover automático não funcionará até que a testemunha tiver sido atualizada.  
+    >  O failover automático não funcionará até que a testemunha seja atualizada.  
   
 6.  Instale os service packs ou hotfixes nas instâncias do servidor restantes que sejam a testemunha em todas as suas sessões de espelhamento. Depois que uma testemunha atualizada reingressar em uma sessão de espelhamento, o failover automático será possível novamente. Pode necessário atualizar vários servidores nesse momento.  
   
@@ -123,9 +123,9 @@ ms.locfileid: "62779590"
   
 1.  Opcionalmente, retorne ao modo de alto desempenho usando um dos seguintes métodos:  
   
-    -   No [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]: Alterar o **modo de operação** opção para **alto desempenho (assíncrono)** usando o [página espelhamento](../relational-databases/databases/database-properties-mirroring-page.md) do **propriedades de banco de dados**caixa de diálogo.  
+    -   No [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]: altere a opção **Modo de operação** para **Alto desempenho (assíncrono)** usando a [página Espelhamento](../relational-databases/databases/database-properties-mirroring-page.md) da caixa de diálogo **Propriedades do Banco de Dados** .  
   
-    -   No [!INCLUDE[tsql](../includes/tsql-md.md)]: Use [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring) para definir a segurança da transação como OFF.  
+    -   Em [!INCLUDE[tsql](../includes/tsql-md.md)]: use [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring) para definir a segurança da transação como off.  
   
 ### <a name="to-return-a-witness-to-a-mirroring-session"></a>Para retornar a testemunha a uma sessão de espelhamento  
   
@@ -137,7 +137,7 @@ ms.locfileid: "62779590"
   
     -   [Adicionar uma testemunha de espelhamento de banco de dados usando a Autenticação do Windows &#40;Transact-SQL&#41;](database-mirroring/add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Espelhamento de banco de dados ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [Espelhamento de banco de dados &#40;SQL Server&#41;](database-mirroring/database-mirroring-sql-server.md)   

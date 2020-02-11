@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1bb6f278b18381d1b3d3defdb53a7c40a6f673ad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62960267"
 ---
 # <a name="secure-the-distributor"></a>Proteger o distribuidor
@@ -44,10 +44,10 @@ ms.locfileid: "62960267"
 ## <a name="snapshot-folder-security"></a>Segurança da pasta de instantâneos  
  Certifique-se de que o compartilhamento de instantâneos tenha acesso de leitura para a conta sob a qual o Agente de Mesclagem (para replicação de mesclagem) ou o Agente de Distribuição (para replicação transacional ou de instantâneos) executa, e acesso de gravação concedido à conta sob a qual o Agente de Instantâneo executa. Para obter mais informações sobre a pasta de instantâneos, consulte [Proteger a pasta de instantâneos](secure-the-snapshot-folder.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exibir e modificar configurações de segurança de replicação](view-and-modify-replication-security-settings.md)   
  [Habilitar conexões criptografadas no Mecanismo de Banco de Dados &#40;SQL Server Configuration Manager&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
  [Replication Security Best Practices](replication-security-best-practices.md)   
- [Segurança de replicação do SQL Server](view-and-modify-replication-security-settings.md)  
+ [Segurança de Replicação do SQL Server](view-and-modify-replication-security-settings.md)  
   
   

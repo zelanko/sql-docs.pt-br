@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: be88f92c6dbf2a2fc0f04c3f29c54816174aafa0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63033612"
 ---
 # <a name="create-statistics"></a>Criar estatísticas
@@ -134,7 +134,7 @@ ms.locfileid: "63033612"
      **Identidade**  
      Indica uma coluna de identidade quando marcado.  
   
-     **Allow NULLs**  
+     **Permitir Nulos**  
      Indica se a coluna aceita valores nulos.  
   
 6.  Na caixa de diálogo **Selecionar Colunas** , marque as caixas de seleção de cada coluna para as quais você deseja criar uma estatística e clique em **OK**.  

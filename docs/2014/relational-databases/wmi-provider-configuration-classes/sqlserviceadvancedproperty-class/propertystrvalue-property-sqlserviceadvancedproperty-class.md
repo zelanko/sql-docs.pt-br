@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: d2d4c40b3dc4fada31a7e09b080ed9b3f29236ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62911578"
 ---
 # <a name="propertystrvalue-property-sqlserviceadvancedproperty-class"></a>Propriedade PropertyStrValue (classe SqlServiceAdvancedProperty)
@@ -37,15 +37,15 @@ object
 ```  
   
 ## <a name="parts"></a>Partes  
- *object*  
- Um [classe SqlServiceAdvancedProperty](sqlserviceadvancedproperty-class.md) objeto que representa uma propriedade avançada.  
+ *objeto*  
+ Um objeto de [classe SqlServiceAdvancedProperty](sqlserviceadvancedproperty-class.md) que representa uma propriedade avançada.  
   
 ## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  
  Um valor da cadeia de caracteres que especifica o valor da propriedade avançada.  
   
 ## <a name="remarks"></a>Comentários  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Iniciando e parando serviços](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

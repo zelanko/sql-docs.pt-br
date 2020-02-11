@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f3d0feff8d95a8fb0d1e7b6279e36567e06c7f81
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62896308"
 ---
 # <a name="raising-and-defining-events-in-a-data-flow-component"></a>Gerando e definindo eventos em um componente de fluxo de dados
@@ -42,10 +42,10 @@ ms.locfileid: "62896308"
   
  Os eventos personalizados de um componente não persistem no pacote XML. Portanto, o método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.RegisterEvents%2A> é chamado durante o design e a execução para permitir que o componente defina os eventos gerados por ele.  
   
- O parâmetro *allowEventHandlers* do método <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.IDTSEventInfos100.Add%2A> especifica se o componente permite criar objetos <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> para o evento. Observe que <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandlers> são síncronos. Portanto, o componente não retomará a execução até que um <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> anexado ao evento personalizado termine a execução. Se o *allowEventHandlers* parâmetro é `true`, cada parâmetro do evento é automaticamente disponibilizado para qualquer <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> objetos por meio de variáveis que são criadas e preenchidas automaticamente pelo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] tempo de execução.  
+ O parâmetro *allowEventHandlers* do método <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.IDTSEventInfos100.Add%2A> especifica se o componente permite criar objetos <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> para o evento. Observe que <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandlers> são síncronos. Portanto, o componente não retomará a execução até que um <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> anexado ao evento personalizado termine a execução. Se o parâmetro *AllowEventHandlers* for `true`, cada parâmetro do evento será disponibilizado automaticamente para todos os <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> objetos por meio de variáveis que são criadas e preenchidas [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] automaticamente pelo tempo de execução.  
   
 ### <a name="raising-a-custom-event"></a>Gerando um evento personalizado  
- Componentes geram eventos personalizados chamando o método <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireCustomEvent%2A> e fornecendo o nome, texto e parâmetros do evento. Se o *allowEventHandlers* parâmetro é `true`, qualquer <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandlers> que são criados para o evento personalizado serão executados pelo [!INCLUDE[ssIS](../../../includes/ssis-md.md)] mecanismo de tempo de execução.  
+ Componentes geram eventos personalizados chamando o método <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireCustomEvent%2A> e fornecendo o nome, texto e parâmetros do evento. Se o parâmetro *AllowEventHandlers* for `true`, qualquer <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandlers> um criado para o evento personalizado será executado pelo mecanismo de [!INCLUDE[ssIS](../../../includes/ssis-md.md)] tempo de execução.  
   
 ### <a name="custom-event-sample"></a>Exemplo de evento personalizado  
  O exemplo de código a seguir mostra um componente que define um texto personalizado durante o método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.RegisterEvents%2A> e, depois, gera o evento em tempo de execução chamando o método <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireCustomEvent%2A>.  
@@ -90,9 +90,9 @@ Public  Overrides Sub ProcessInput(ByVal inputID As Integer, ByVal buffer As Pip
 End Sub  
 ```  
   
-![Ícone do Integration Services (pequeno)](../../media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
+![Ícone de Integration Services (pequeno)](../../media/dts-16.gif "Ícone do Integration Services (pequeno)")  **Mantenha-se atualizado com Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Manipuladores de eventos do SSIS &#40;Integration Services&#41;](../../integration-services-ssis-event-handlers.md)   
  [Adicionar um manipulador de eventos a um pacote](../../add-an-event-handler-to-a-package.md)  
   

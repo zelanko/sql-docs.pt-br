@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4ceb9402780788d3a2a45e8d2b838c156c28faab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62832603"
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>Opções da solicitação de perfil Padrão de Coluna (tarefa Criação de Perfil de Dados)
@@ -32,7 +32,7 @@ ms.locfileid: "62832603"
   
 -   **Delimitadores** Por padrão, a lista de delimitadores contém os seguintes caracteres: espaço, guia horizontal (\t), nova linha (\n) e retorno de carro (\r). É possível especificar delimitadores adicionais, mas não é possível remover os delimitadores padrão.  
   
--   **Símbolos** por padrão, a lista de **símbolos** contém os seguintes caracteres: `,.;:-"'`~ = & / @!? [] de <> (){}| #* ^ %`. For example, if the symbols are "`()-'", o valor"(425) 123-4567"é indexado como ["(","425",")","123","-","4567",") "].  
+-   **Símbolos** do Por padrão, a lista de **símbolos** contém os seguintes caracteres: `,.;:-"'`~ =&/@!? () <> []{}| # * ^%`. For example, if the symbols are "`()-' ", o valor" (425) 123-4567 "é indexado como [" ("," 425 ",") "," 123 ","-"," 4567 ",") "].  
   
  Um caractere não pode ser um delimitador e um símbolo ao mesmo tempo.  
   
@@ -46,18 +46,18 @@ ms.locfileid: "62832603"
 |Marca|Termo|  
 |---------|----------|  
 |Direção|Leste|  
-|Direction|Oeste|  
-|Direction|Norte|  
-|Direction|Sul|  
+|Direção|Oeste|  
+|Direção|Norte|  
+|Direção|Sul|  
   
  Também seria possível usar outra marca para agrupar as palavras que especificam o logradouro em endereços:  
   
 |Marca|Termo|  
 |---------|----------|  
-|Logradouro|Logradouro|  
-|Logradouro|Avenida|  
-|Logradouro|Vila|  
-|Logradouro|Travessa|  
+|Street|Street|  
+|Street|Avenida|  
+|Street|Posicionar|  
+|Street|Travessa|  
   
  Com base nessa combinação de marcas, o padrão resultante para um endereço poderia se assemelhar ao seguinte padrão:  
   
@@ -71,7 +71,7 @@ ms.locfileid: "62832603"
 ## <a name="request-properties-options"></a>Opções de Propriedades da Solicitação  
  Para uma **Solicitação de Perfil de Padrão de Coluna**, o painel **Propriedades da Solicitação** exibe os seguintes grupos de opções:  
   
--   **Dados**que incluem as opções **TableOrView** e **Column**  
+-   **Dados**, que incluem as opções de **TableOrView** e **coluna**  
   
 -   **Geral**  
   
@@ -86,8 +86,8 @@ ms.locfileid: "62832603"
   
  Para obter mais informações, consulte a seção "Opções TableOrView" neste tópico.  
   
- **Column**  
- Selecione a coluna existente para a qual um perfil será criado. Selecione **(\*)** para analisar todas as colunas.  
+ **Coluna**  
+ Selecione a coluna existente para a qual um perfil será criado. Selecione **(\*)** para criar o perfil de todas as colunas.  
   
  Para obter mais informações, consulte a seção “Opções Column” neste tópico.  
   
@@ -100,10 +100,10 @@ ms.locfileid: "62832603"
   
 #### <a name="column-options"></a>Opções de Coluna  
  **IsWildCard**  
- Especifica se o curinga **(\*)** foi selecionado. Esta opção será definida como **True** se você tiver selecionado **(\*)** para analisar todas as colunas. Será **Falso** se você selecionou uma coluna individual para a criação de um perfil. Esta opção é somente leitura.  
+ Especifica se o **curinga\*()** foi selecionado. Esta opção será definida como **True** se você tiver selecionado **(\*)** para analisar todas as colunas. Será **Falso** se você selecionou uma coluna individual para a criação de um perfil. Esta opção é somente leitura.  
   
  **ColumnName**  
- Exibe o nome da coluna selecionada. Esta opção estará em branco se você tiver selecionado **(\*)** para analisar todas as colunas. Esta opção é somente leitura.  
+ Exibe o nome da coluna selecionada. Essa opção estará em branco se você tiver **selecionado\*()** para criar o perfil de todas as colunas. Esta opção é somente leitura.  
   
  **StringCompareOptions**  
  Esta opção não é aplicável ao Perfil de Criação de Coluna.  
@@ -127,8 +127,8 @@ ms.locfileid: "62832603"
   
  Para obter mais informações, consulte "Compreendendo o uso de delimitadores e símbolos" anteriormente neste tópico.  
   
- **Símbolos**  
- Liste os símbolos que deveriam ser retidos como parte de padrões. Exemplos poderiam incluir "/" para datas, ":" para horários e " @ " para endereços de email. Por padrão, a lista de **símbolos** contém os seguintes caracteres: `,.;:-"'`~ = & / @!? [] de <> (){}| #* ^ %'.  
+ **Symbol**  
+ Liste os símbolos que deveriam ser retidos como parte de padrões. Exemplos poderiam incluir "/" para datas, ":" para horários e "@" para endereços de email. Por padrão, a lista de **símbolos** contém os seguintes caracteres: `,.;:-"'`~ =&/@!? () <> []{}| # * ^% '.  
   
  Para obter mais informações, consulte "Compreendendo o uso de delimitadores e símbolos" anteriormente neste tópico.  
   
@@ -142,8 +142,8 @@ ms.locfileid: "62832603"
   
  Para obter mais informações, consulte "Compreendendo o uso da tabela de marcas" anteriormente neste tópico.  
   
-## <a name="see-also"></a>Consulte também  
- [Editor da tarefa Criação de Perfil de Dados &#40;Página Geral&#41;](../general-page-of-integration-services-designers-options.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Editor da tarefa criação de perfil de dados &#40;página Geral&#41;](../general-page-of-integration-services-designers-options.md)   
  [Formulário de Perfil Rápido de Tabela Única &#40;Tarefa Criação de Perfil de Dados&#41;](single-table-quick-profile-form-data-profiling-task.md)  
   
   

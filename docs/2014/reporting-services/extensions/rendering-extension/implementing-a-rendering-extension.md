@@ -17,14 +17,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 03deb7c818de8d875f69b585ae6015fc178e707d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62986750"
 ---
 # <a name="implementing-a-rendering-extension"></a>Implementando uma extensão de renderização
-  Uma extensão de renderização é um componente ou um módulo de um servidor de relatório que transforma dados de relatório e informações de layout para um formato específico do dispositivo. SQL Server Reporting Services inclui seis extensões de renderização: HTML, Excel, Word, CSV ou texto, XML, imagem e PDF. Você pode criar extensões de renderização adicionais para gerar relatórios em outros formatos.  
+  Uma extensão de renderização é um componente ou um módulo de um servidor de relatório que transforma dados de relatório e informações de layout para um formato específico do dispositivo. O SQL Server Reporting Services inclui seis extensões de renderização: HTML, Excel, Word, CSV ou Texto, XML, Imagem e PDF. Você pode criar extensões de renderização adicionais para gerar relatórios em outros formatos.  
   
 > [!NOTE]  
 >  Para determinar quais extensões de renderização estão disponíveis, exiba a lista das extensões instaladas no arquivo RSReportServer.config.  
@@ -42,7 +42,7 @@ ms.locfileid: "62986750"
  [Remover uma extensão de renderização](removing-a-rendering-extension.md)  
  Descreve como remover uma extensão de renderização de um servidor de relatório.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Extensões do Reporting Services](../reporting-services-extensions.md)   
  [Biblioteca de extensões do Reporting Services](../reporting-services-extension-library.md)  
   

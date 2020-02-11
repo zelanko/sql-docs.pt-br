@@ -1,5 +1,5 @@
 ---
-title: Propriedade ordinal (posição do ADO MD) | Microsoft Docs
+title: Propriedade ordinal (posição de ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,27 +17,27 @@ ms.assetid: 6efe8b5d-a2d5-43a9-a5ea-f9244f8d4ec9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c212b9a31c72b96444649129f0c54a4c52226de4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67949303"
 ---
 # <a name="ordinal-property-ado-md-position"></a>Propriedade Ordinal (Posição do ADO MD)
-Identifica exclusivamente um [posição](../../../ado/reference/ado-md-api/position-object-ado-md.md) ao longo do eixo.  
+Identifica exclusivamente uma [posição](../../../ado/reference/ado-md-api/position-object-ado-md.md) ao longo de um eixo.  
   
 ## <a name="return-values"></a>Valores de retorno  
- Retorna um **longo** inteiro e é somente leitura.  
+ Retorna um inteiro **longo** e é somente leitura.  
   
 ## <a name="remarks"></a>Comentários  
- O **Ordinal** propriedade de uma [posição](../../../ado/reference/ado-md-api/position-object-ado-md.md) objeto corresponde ao índice da **posição** dentro a [posições](../../../ado/reference/ado-md-api/positions-collection-ado-md.md) coleção.  
+ A propriedade **ordinal** de um objeto [Position](../../../ado/reference/ado-md-api/position-object-ado-md.md) corresponde ao índice da **posição** dentro da coleção [Positions](../../../ado/reference/ado-md-api/positions-collection-ado-md.md) .  
   
- Uma célula rapidamente pode ser recuperada usando o **Ordinal** da **posição** em cada eixo com o [Item](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md) propriedade do [conjunto de células](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) objeto .  
+ Uma célula pode ser recuperada rapidamente usando o **ordinal** da **posição** ao longo de cada eixo com a propriedade [Item](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md) do objeto [células](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) .  
   
-## <a name="applies-to"></a>Aplica-se a  
+## <a name="applies-to"></a>Aplica-se A  
  [Objeto Position (ADO MD)](../../../ado/reference/ado-md-api/position-object-ado-md.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Objeto Cellset (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)   
- [Propriedade item (conjunto de células do ADO MD)](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Objeto células (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)   
+ [Propriedade Item (ADO MD células)](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md)   
  [Propriedade Ordinal (Célula do ADO MD)](../../../ado/reference/ado-md-api/ordinal-property-ado-md-cell.md)

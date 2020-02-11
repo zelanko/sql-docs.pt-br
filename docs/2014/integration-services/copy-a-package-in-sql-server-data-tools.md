@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 673b69ea632108b889cc2f99b63c9c602ef05237
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62829542"
 ---
 # <a name="copy-a-package-in-sql-server-data-tools"></a>Copiar um pacote nas Ferramentas de Dados do SQL Server
@@ -42,9 +42,9 @@ ms.locfileid: "62829542"
   
 6.  Atualize o nome do arquivo do pacote. Lembre-se de manter a extensão de arquivo .dtsx.  
   
-7.  Clique em **Salvar**.  
+7.  Clique em **Save** (Salvar).  
   
-8.  No prompt, escolha se deseja atualizar o nome do objeto de pacote para corresponder ao nome de arquivo. Se você clicar **Yes**, o `Name` propriedade do pacote é atualizada. O novo pacote é adicionado ao projeto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e aberto no Designer [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
+8.  No prompt, escolha se deseja atualizar o nome do objeto de pacote para corresponder ao nome de arquivo. Se você clicar em **Sim**, `Name` a propriedade do pacote será atualizada. O novo pacote é adicionado ao projeto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e aberto no Designer [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
   
 9. Como opção, clique no plano de fundo da guia **Fluxo de Controle** e clique em **Propriedades**.  
   
@@ -52,9 +52,9 @@ ms.locfileid: "62829542"
   
 11. No menu **Arquivo** , clique em **Salvar Itens Selecionados** para salvar o novo pacote.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Salvar uma cópia de um pacote](../../2014/integration-services/save-a-copy-of-a-package.md)   
- [Copiar pacotes nas Ferramentas de Dados do SQL Server](create-packages-in-sql-server-data-tools.md)   
+ [Criar pacotes no SQL Server Data Tools](create-packages-in-sql-server-data-tools.md)   
  [Pacotes do SSIS &#40;Integration Services&#41;](../../2014/integration-services/integration-services-ssis-packages.md)  
   
   

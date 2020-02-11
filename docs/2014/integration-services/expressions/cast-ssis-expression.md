@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6549e2ad8faca23e32621e1cc871a62870c9effb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62899034"
 ---
 # <a name="cast-ssis-expression"></a>Cast (Expressão SSIS)
@@ -38,11 +38,11 @@ ms.locfileid: "62899034"
  *type_spec*  
  É um tipo de dados [!INCLUDE[ssIS](../../includes/ssis-md.md)] válido.  
   
- *Expressão*  
+ *expressão*  
  É uma expressão válida.  
   
 ## <a name="result-types"></a>Tipos de resultado  
- O tipo de dados de *type_spec*. Para obter mais informações, consulte [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
+ O tipo de dados de *type_spec*. Para obter mais informações, consulte [Integration Services tipos de dados](../data-flow/integration-services-data-types.md).  
   
 ## <a name="remarks"></a>Comentários  
  O diagrama a seguir mostra operações de conversão legais.  
@@ -53,12 +53,12 @@ ms.locfileid: "62899034"
   
 |Tipo de dados|Parâmetro|Exemplo|  
 |---------------|---------------|-------------|  
-|DT_STR|*charcount*<br /><br /> *codepage*|(DT_STR,30,1252) converte 30 bytes ou 30 caracteres únicos, para o tipo de dados DT_STR usando a página de código 1252.|  
-|DT_WSTR|*Charcount*|(DT_WSTR,20) converte 20 pares de bytes, ou 20 caracteres Unicode, para o tipo de dados DT_WSTR.|  
-|DT_BYTES|*Bytecount*|(DT_BYTES,50) converte 50 bytes para o tipo de dados de DT_BYTES.|  
+|DT_STR|*charCount*<br /><br /> *código*|(DT_STR,30,1252) converte 30 bytes ou 30 caracteres únicos, para o tipo de dados DT_STR usando a página de código 1252.|  
+|DT_WSTR|*CharCount*|(DT_WSTR,20) converte 20 pares de bytes, ou 20 caracteres Unicode, para o tipo de dados DT_WSTR.|  
+|DT_BYTES|*ByteCount*|(DT_BYTES,50) converte 50 bytes para o tipo de dados de DT_BYTES.|  
 |DT_DECIMAL|*Escala*|(DT_DECIMAL,2) converte um valor numérico para o tipo de dados DT_DECIMAL usando uma escala de 2.|  
 |DT_NUMERIC|*Precisão*<br /><br /> *Escala*|(DT_NUMERIC,10,3) converte um valor numérico para o tipo de dados DT_NUMERIC usando uma precisão de 10 e uma escala de 3.|  
-|DT_TEXT|*Codepage*|(DT_TEXT,1252) converte um valor para o tipo de dados DT_TEXT usando a página de código 1252.|  
+|DT_TEXT|*Código*|(DT_TEXT,1252) converte um valor para o tipo de dados DT_TEXT usando a página de código 1252.|  
   
  Quando uma cadeia de caracteres é convertida para um DT_DATE, ou vice-versa, a localidade da transformação é usada. Entretanto, a data está no formato ISO de AAAA-MM-DD, independentemente da preferência de localidade usada no formato ISO.  
   
@@ -142,7 +142,7 @@ ms.locfileid: "62899034"
 (DT_DBTIMESTAMPOFFSET, 7) "1999-10-11 16:34:52.1234567 + 5:35"  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Precedência de operador e capacidade de associação](operator-precedence-and-associativity.md)   
  [Operadores &#40;Expressão do SSIS&#41;](operators-ssis-expression.md)   
  [Expressões do SSIS &#40;Integration Services&#41;](integration-services-ssis-expressions.md)   

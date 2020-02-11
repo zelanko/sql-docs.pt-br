@@ -16,21 +16,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1280bb44d11ce4f8234d544bf113e796a9c3c85c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62915411"
 ---
-# <a name="mssqlserver17832"></a>MSSQLSERVER_17832
+# <a name="mssqlserver_17832"></a>MSSQLSERVER_17832
     
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|Nome do Produto|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |ID do evento|17832|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|SRV_BAD_LOGIN_PKT|  
 |Texto da mensagem|O pacote de logon usado para abrir a conexão é estruturalmente inválido; a conexão foi fechada. Contate o fornecedor da biblioteca de cliente.%. * ls|  
@@ -38,7 +38,7 @@ ms.locfileid: "62915411"
 ## <a name="explanation"></a>Explicação  
  O computador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não pôde processar o pacote de logon do cliente. Talvez isso ocorra porque o pacote foi criado de modo inadequado ou porque foi danificado durante a transmissão. Também pode ocorrer devido à configuração do computador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O endereço IP listado é o endereço do computador cliente.  
   
-### <a name="more-information"></a>Mais Informações  
+### <a name="more-information"></a>Mais informações  
  Ao usar a Autenticação Windows em um ambiente Kerberos, um cliente recebe um tíquete Kerberos que contém um Certificado de Atributos de Privilégio (PAC). O PAC contém vários tipos de dados de autorização, inclusive grupos dos quais o usuário é membro, direitos que o usuário possui e quais políticas se aplicam ao usuário. Quando o cliente recebe o tíquete Kerberos, as informações contidas no PAC são usadas para gerar o token de acesso do usuário. O cliente apresenta o token ao computador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como parte do pacote de logon.  
   
  Se o token foi criado incorretamente ou danificado durante transmissão, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não pode oferecer informações adicionais sobre o problema.  
@@ -55,7 +55,7 @@ ms.locfileid: "62915411"
   
 1.  No menu **Iniciar** , clique em **Executar**.  
   
-2.  Tipo de `regedit`e, em seguida, clique em **Okey**. (Se a caixa de diálogo **Controle de Conta de Usuário** for exibida, clique em **Continuar**.)  
+2.  Digite `regedit`e clique em **OK**. (Se a caixa de diálogo **Controle de Conta de Usuário** for exibida, clique em **Continuar**.)  
   
 3.  Navegue para **HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Lsa\Kerberos\Parameters**.  
   

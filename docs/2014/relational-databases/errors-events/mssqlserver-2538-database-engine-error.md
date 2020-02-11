@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 36ba25f8653e3fd3f1287d8de5108af880f9ba7c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62914484"
 ---
-# <a name="mssqlserver2538"></a>MSSQLSERVER_2538
+# <a name="mssqlserver_2538"></a>MSSQLSERVER_2538
     
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|2538|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|DBCC_ALLOCATION_SUMMARY_PER_FILE|  
 |Texto da mensagem|Arquivo FILE: Número de extensões = EXTENTS, páginas usadas = USED_PAGES, páginas reservadas = RESERVED_PAGES.|  
@@ -36,6 +36,6 @@ ms.locfileid: "62914484"
  Essas informações fazem parte da saída do comando DBCC CHECKALLOC. Elas são um resumo por arquivo de extensões alocadas, páginas usadas e páginas reservadas para o banco de dados especificado.  
   
 ## <a name="user-action"></a>Ação do usuário  
- None  
+ Nenhum  
   
   

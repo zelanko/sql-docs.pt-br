@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b87d71f8299c55e033adc21e25e29e8fb3d5e9d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62899949"
 ---
 # <a name="use-a-recordset-destination"></a>Usar um destino do conjunto de registros
@@ -121,7 +121,7 @@ ms.locfileid: "62899949"
   
 5.  Abra o **Editor de Destino do Conjunto de Registros**e defina o destino com as seguintes configurações:  
   
-    1.  Sobre o **propriedades do componente** guia, para `VariableName` propriedade, selecione `User::BonusRecordset`.  
+    1.  Na guia **Propriedades do componente** , para `VariableName` Propriedade, selecione `User::BonusRecordset`.  
   
     2.  Na guia **Colunas de Entrada** , selecione todas as três colunas disponíveis.  
   
@@ -131,9 +131,9 @@ ms.locfileid: "62899949"
   
 2.  Abra o **Editor de Loop Foreach**e defina o contêiner com as seguintes configurações:  
   
-    1.  Sobre o **coleta** página, para **enumerador**, selecione **enumerador ADO Foreach**e para **variável de origem do objeto ADO**, selecione `User::BonusRecordset`.  
+    1.  Na página **coleção** , para o **enumerador**, selecione **enumerador ADO foreach**e, para variável de origem de `User::BonusRecordset` **objeto ADO**, selecione.  
   
-    2.  Sobre o **mapeamentos de variáveis** página, mapeie `User::EmailAddress` para índice 0, `User::FirstName` para índice 1 e `User::Bonus` para índice 2.  
+    2.  Na página **mapeamentos de variáveis** , mapeie `User::EmailAddress` para o índice 0 `User::FirstName` , para o índice 1 `User::Bonus` e para o índice 2.  
   
 3.  Na guia **Fluxo de Controle** , dentro do contêiner Loop Foreach, adicione uma tarefa Enviar Email.  
   

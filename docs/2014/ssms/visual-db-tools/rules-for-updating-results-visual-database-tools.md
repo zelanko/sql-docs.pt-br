@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8f1814c96a5f58052be6271d2a35c1bbf78f87b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63066474"
 ---
 # <a name="rules-for-updating-results-visual-database-tools"></a>Regras para atualização de resultados (Visual Database Tools)
@@ -39,7 +39,7 @@ ms.locfileid: "63066474"
 |Consulta baseada em uma tabela com chave primária na lista de saída|Sim (exceto como listado abaixo).|  
 |Consulta baseada em uma tabela sem índice exclusivo e sem uma chave primária|Depende da consulta e do banco de dados. Alguns bancos de dados permitem atualizações se informações suficiente estiverem disponíveis para identificar registros exclusivamente.|  
 |Consulta baseada em tabelas múltiplas que não estão unidas|Não.|  
-|Consulta baseada em dados marcados como somente de leitura no banco de dados|Nenhum.|  
+|Consulta baseada em dados marcados como somente de leitura no banco de dados|Não.|  
 |Consulta baseada em uma exibição que envolve uma tabela sem restrições|Sim (exceto como listado abaixo).|  
 |Consulta baseada em tabelas unidas com uma relação um-para-um|Sim (exceto como listado abaixo).|  
 |Consulta baseada em tabelas unidas com uma relação um-para-um|Geralmente.|  
@@ -64,7 +64,7 @@ ms.locfileid: "63066474"
   
 -   Carimbo de data/hora ou colunas BLOB  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tópicos de instruções de como criar consultas e exibições &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

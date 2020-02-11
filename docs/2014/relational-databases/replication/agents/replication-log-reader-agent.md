@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e2dbe201e2690a013902ad6891b7f93f68fe0e04
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63127010"
 ---
 # <a name="replication-log-reader-agent"></a>Replication Agente de Leitor de Log
@@ -68,20 +68,20 @@ ms.locfileid: "63127010"
  **-?**  
  Exibe informações de uso.  
   
- **-Publisher** _server_name_[**\\**_instance_name_]  
- É o nome do Publicador. Especifica *server_name* para a instância padrão do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor. Especifique _server_name_**\\**_instance_name_ para uma instância nomeada do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor.  
+ **-** _Server_name_do Publicador [**\\**_instance_name_]  
+ É o nome do Publicador. Especifique *server_name* para a instância padrão do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no servidor. Especifique _server_name_**\\**_instance_name_ para uma instância nomeada do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nesse servidor.  
   
  **-PublisherDB** _publisher_database_  
  É o nome do banco de dados Publicador.  
   
- **-Continuous**  
+ **-Contínuo**  
  Especifica se o agente tenta ou não sondar transações replicadas continuamente. Se especificado, o agente sondará as transações replicadas da origem em intervalos de sondagem, mesmo que não haja transações pendentes.  
   
- **-DefinitionFile** _def_path_and_file_name_  
+ **-Definitionfile** _def_path_and_file_name_  
  É o caminho do arquivo de definição de agente. Um arquivo de definição de agente contém argumentos de linha de comando para o agente. O conteúdo do arquivo é analisado como um arquivo executável. Use aspas duplas (") para especificar os valores de argumentos que contêm caracteres arbitrários.  
   
- **-Distributor** _server_name_[**\\**_instance_name_]  
- É o nome do Distribuidor. Especifica *server_name* para a instância padrão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor. Especifica _server_name_**\\**_instance_name_ para uma instância nomeada do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor.  
+ **-** _Server_name_do distribuidor**\\**[_instance_name_]  
+ É o nome do Distribuidor. Especifique *server_name* para a instância padrão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor. Especifique _server_name_**\\**_instance_name_ para uma instância nomeada do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nesse servidor.  
   
  **-DistributorLogin** _distributor_login_  
  É o nome de logon do Distribuidor.  
@@ -95,7 +95,7 @@ ms.locfileid: "63127010"
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
  É o nível da criptografia SSL (Secure Sockets Layer) usada pelo Agente de Leitor de Log ao fazer conexões.  
   
-|Valor EncryptionLevel|Descrição|  
+|Valor EncryptionLevel|DESCRIÇÃO|  
 |---------------------------|-----------------|  
 |**0**|Especifica que o SSL não é usado.|  
 |**1**|Especifica que o SSL é usado, mas que +o agente não verifica se o certificado de servidor SSL é assinado por um emissor confiável.|  
@@ -104,7 +104,7 @@ ms.locfileid: "63127010"
  > [!NOTE]  
  >  É definido um certificado SSL válido com um nome de domínio totalmente qualificado do SQL Server. Para que o agente seja conectado com êxito ao definir -EncryptionLevel como 2, crie um alias no SQL Server local. O parâmetro 'Alias Name' deve ser o nome do servidor e o parâmetro 'Server' deve ser definido como o nome totalmente qualificado do SQL Server.
  
- Para obter mais informações, consulte [segurança de replicação do SQL Server](../security/view-and-modify-replication-security-settings.md).  
+ Para obter mais informações, consulte [replicação do SQL Server Security](../security/view-and-modify-replication-security-settings.md).  
   
  **-ExtendedEventConfigFile** _configuration_path_and_file_name_  
  Especifica o caminho e o nome do arquivo de configuração XML de eventos estendidos. O arquivo de configuração de eventos estendidos permite configurar sessões e habilitar eventos para acompanhamento.  
@@ -112,7 +112,7 @@ ms.locfileid: "63127010"
  **-HistoryVerboseLevel** [ **0**| **1**| **2**]  
  Especifica a quantidade de histórico registrada durante uma operação de leitura de log. Você pode minimizar o efeito de desempenho do registro de histórico selecionando **1**.  
   
-|Valor HistoryVerboseLevel|Descrição|  
+|Valor HistoryVerboseLevel|DESCRIÇÃO|  
 |-------------------------------|-----------------|  
 |**0**||  
 |**1**|Padrão. Sempre atualiza uma mensagem de histórico anterior do mesmo status (inicialização, andamento, êxito, etc.). Se nenhum registro anterior com o mesmo status existir, insira um registro novo.|  
@@ -138,29 +138,29 @@ ms.locfileid: "63127010"
   
  Se não houver nenhuma transação replicada disponível na origem, o agente informará uma mensagem de não transação ao Distributor. Essa opção especifica quanto tempo o agente espera antes de informar outro mensagem de não transação. O agente sempre informa uma mensagem de não transação quando detecta que não há transações disponíveis na origem após transações replicadas de processamento anterior. O padrão é 60 segundos.  
   
- **-Output** _output_path_and_file_name_  
+ **-Saída** _output_path_and_file_name_  
  É o caminho do arquivo de saída do agente. Se o nome de arquivo não for fornecido, a saída será enviada ao console. Se o nome do arquivo especificado existir, a saída será anexada ao arquivo.  
   
- **-OutputVerboseLevel** [ **0**| **1**| **2** | **3** | **4** ]  
+ **-OutputVerboseLevel** [ **0**| **1**| **2** | **** 3 | **4** ]  
  Especifica se a saída deve ser detalhada.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |**0**|Somente mensagens de erro são impressas.|  
 |**1**|Todas as mensagens de relatório de progresso do agente são impressas.|  
 |**2** (padrão)|Todas as mensagens de relatório de progresso do agente e de erro são impressas.|  
-|**3**|Os primeiros 100 bytes de cada comando replicado são impressos.|  
-|**4**|Todos os comandos replicados são impressos.|  
+|**Beta**|Os primeiros 100 bytes de cada comando replicado são impressos.|  
+|**quatro**|Todos os comandos replicados são impressos.|  
   
  Os valores 2-4 são úteis na depuração.  
   
- **-PacketSize** _packet_size_  
+ **-Pacotes de** _packet_size_  
  É o tamanho do pacote, em bytes. O padrão é 4096 (bytes).  
   
- **-PollingInterval** _intervalo_de_sondagem_  
+ **-PollingInterval** _polling_interval_  
  É a frequência, em segundos, que o log é consultado para transações replicadas. O padrão é 5 segundos.  
   
- **-ProfileName** _profile_name_  
+ **-Profilename** _profile_name_  
  Especifica um perfil de agente a ser usado para parâmetros de agente. Se **ProfileName** for NULL, o perfil de agente será desabilitado. Se **ProfileName** não for especificado, o perfil padrão de tipo de agente será usado. Para obter mais informações, consulte [Perfis do agente de replicação](replication-agent-profiles.md).  
   
  **-PublisherFailoverPartner** _server_name_[**\\**_instance_name_]  
@@ -175,7 +175,7 @@ ms.locfileid: "63127010"
  **-PublisherPassword** _publisher_password_  
  É a senha do Publicador.  
   
- **-QueryTimeOut** _tempo_limite_da_consulta_em_segundos_  
+ **-QueryTimeOut** _query_time_out_seconds_  
  É o número de segundos antes que a consulta expire. O padrão é 1800 segundos.  
   
  **-ReadBatchSize** _number_of_transactions_  
@@ -200,7 +200,7 @@ ms.locfileid: "63127010"
 |---------------------|  
 |Adicionado o parâmetro **-ExtendedEventConfigFile** .|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Administração do agente de replicação](replication-agent-administration.md)  
   
   

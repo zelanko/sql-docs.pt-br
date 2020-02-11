@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7e531a2d916cfc464c18aab931c268197fbf5982
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62915013"
 ---
-# <a name="mssqlserver2515"></a>MSSQLSERVER_2515
+# <a name="mssqlserver_2515"></a>MSSQLSERVER_2515
     
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|2515|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|DBCC_DIFF_MAP_OUT_OF_SYNC|  
 |Texto da mensagem|A página P_ID, ID de objeto O_ID, ID de índice I_ID, ID de partição PN_ID, ID de unidade de alocação A_ID tipo TYPE foi modificada, mas não está marcada como modificada no bitmap de backup diferencial.|  
@@ -60,7 +60,7 @@ ms.locfileid: "62915013"
 ### <a name="results-of-running-repair-options"></a>Resultados da execução de opções REPAIR  
  A execução de REPAIR invalidará o bitmap diferencial. Não será possível executar um backup diferencial até que seja feito um backup total do banco de dados. O backup total do banco de dados provê uma base para a recriação do bitmap diferencial.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar um backup completo de banco de dados &#40;SQL Server&#41;](../backup-restore/create-a-full-database-backup-sql-server.md)   
  [MSSQLSERVER_2516](mssqlserver-2516-database-engine-error.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Propriedades de Pipes nomeados | Microsoft Docs
+title: Propriedades de pipes nomeados | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,34 +16,35 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5d8b542e709ed7104d851652e75be41ae4d6afec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62911465"
 ---
 # <a name="named-pipes-properties"></a>Propriedades de Pipes Nomeados
   Use a página **Protocolo**na caixa de diálogo **Propriedades de Pipes Nomeados** para exibir ou alterar o pipe nomeado escutado pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , quando usar o protocolo Pipes Nomeados.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ser reiniciado para habilitar ou desabilitar o protocolo, ou para alterar o pipe nomeado.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ser reiniciado para habilitar ou desabilitar o protocolo, ou para alterar o pipe nomeado.  
   
 ## <a name="options"></a>Opções  
  **Enabled**  
  Os valores possíveis são **Sim** e **Não**.  
   
- **Nome do Pipe**  
+ **Nome do pipe**  
  Especifica o pipe nomeado no qual o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escuta. Por padrão, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escuta em: `\\.\pipe\sql\query` para a instância padrão e `\\.\pipe\MSSQL$<instancename>\sql\query` para uma instância nomeada. Este campo é limitado a 2.047 caracteres.  
   
 ## <a name="creating-an-alternate-named-pipe"></a>Criando um pipe nomeado alternativo  
  Para alterar o pipe nomeado, digite o nome do novo pipe na caixa **Nome do Pipe** e, em seguida, pare e reinicie o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Como **sql\query** é bem conhecido como o pipe nomeado usado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a alteração do pipe pode ajudar a reduzir o risco de ataque de programas mal-intencionados.  
   
 ### <a name="example"></a>Exemplo  
- Digite **\\\\.\pipe\unit\app** para escutar no pipe **unit\app** .  
+ ** \\Digite \\.\pipe\unit\app** para escutar no pipe **unit\app** .  
   
- Digite **\\\\.\pipe\acct** para escutar no pipe **acct** .  
+ ** \\Digite \\.\pipe\acct** para escutar no pipe **Acct** .  
   
-## <a name="see-also"></a>Consulte também  
- [Habilitar ou desabilitar um protocolo de rede de servidor](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Habilitar ou desabilitar um protocolo de rede do servidor](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)   
  [Escolhendo um protocolo de rede](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)   
  [Criando uma cadeia de conexão válida usando pipes nomeados](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-named-pipes.md)  
   

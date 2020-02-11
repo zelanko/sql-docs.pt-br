@@ -1,5 +1,5 @@
 ---
-title: Sequência de expressões (XQuery) | Microsoft Docs
+title: Expressões de sequência (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,10 +17,10 @@ ms.assetid: 41e18b20-526b-45d2-9bd9-e3b7d7fbce4e
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7fa45029557cc217b89293fa7963bf29b39f373f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946302"
 ---
 # <a name="sequence-expressions-xquery"></a>Expressões de sequência (XQuery)
@@ -88,7 +88,7 @@ select @x.query('for $i in ((1,2),10,(),(4, 5, 6))
 go  
 ```  
   
- Você pode contar os itens na sequência usando o **fn:count()** função.  
+ Você pode contar os itens na sequência usando a função **fn: Count ()** .  
   
 ```  
 declare @x xml  
@@ -99,7 +99,7 @@ go
 ```  
   
 ### <a name="example-c"></a>Exemplo C  
- A consulta a seguir é especificada na coluna AdditionalContactInfo do **xml** tipo na tabela Contact. Essa coluna armazena informações adicionais do contato, como um ou mais números de telefone, números de pager e endereços. O \<telephoneNumber >, \<pager >, e outros nós podem aparecer em qualquer lugar no documento. A consulta constrói uma sequência que contém todos os \<telephoneNumber > filhos do nó de contexto, seguido pelo \<pager > filhos. Observe o uso do operador de sequência vírgula na expressão de retorno, `($a//act:telephoneNumber, $a//act:pager)`.  
+ A consulta a seguir é especificada na coluna AdditionalContactInfo do tipo **XML** na tabela Contact. Essa coluna armazena informações adicionais do contato, como um ou mais números de telefone, números de pager e endereços. O \<> telephoneNumber, \<o pager> e outros nós podem aparecer em qualquer lugar do documento. A consulta constrói uma sequência que contém todos os \<telephoneNumber> filhos do nó de contexto, seguido pelo \<pager> filhos. Observe o uso do operador de sequência vírgula na expressão de retorno, `($a//act:telephoneNumber, $a//act:pager)`.  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS act,  
@@ -113,7 +113,7 @@ FROM Person.Contact
 WHERE ContactID=3  
 ```  
   
- Esse é o resultado:  
+ Este é o resultado:  
   
 ```  
 <act:telephoneNumber xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">  
@@ -131,7 +131,7 @@ Page only in case of emergencies.
 ```  
   
 ## <a name="filtering-sequences"></a>Filtrando sequências  
- Você pode filtrar a sequência retornada por uma expressão adicionando um predicado à expressão. Para obter mais informações, consulte [expressões de caminho &#40;XQuery&#41;](../xquery/path-expressions-xquery.md). Por exemplo, a consulta a seguir retorna uma sequência de três <`a`> nós de elemento:  
+ Você pode filtrar a sequência retornada por uma expressão adicionando um predicado à expressão. Para obter mais informações, consulte [expressões de caminho &#40;&#41;XQuery ](../xquery/path-expressions-xquery.md). Por exemplo, a consulta a seguir retorna uma sequência de três `a` <> nós de elemento:  
   
 ```  
 declare @x xml  
@@ -143,7 +143,7 @@ set @x = '<root>
 SELECT @x.query('/root/a')  
 ```  
   
- Esse é o resultado:  
+ Este é o resultado:  
   
 ```  
 <a attrA="1">111</a>  
@@ -151,7 +151,7 @@ SELECT @x.query('/root/a')
 <a />  
 ```  
   
- Para recuperar apenas <`a`> elementos que têm o atributo attrA, você pode especificar um filtro no predicado. A sequência resultante terá só um <`a`> elemento.  
+ Para recuperar somente <`a` elementos de> que têm o atributo attrA, você pode especificar um filtro no predicado. A sequência resultante terá apenas um elemento <`a`>.  
   
 ```  
 declare @x xml  
@@ -163,7 +163,7 @@ set @x = '<root>
 SELECT @x.query('/root/a[@attrA]')  
 ```  
   
- Esse é o resultado:  
+ Este é o resultado:  
   
 ```  
 <a attrA="1">111</a>  
@@ -195,14 +195,14 @@ SELECT @x.query('
 ')  
 ```  
   
- Esse é o resultado:  
+ Este é o resultado:  
   
 ```  
 <c>C under a</c>  
 <c>C under b</c>  
 ```  
   
- O exemplo a seguir aplica um filtro de predicado. A expressão localiza os elementos <`a`> e <`b`> que contêm o elemento <`c`>.  
+ O exemplo a seguir aplica um filtro de predicado. A expressão localiza os elementos `a` <> e `b` <> que contêm `c` <de elemento>.  
   
 ```  
 declare @x xml  
@@ -222,7 +222,7 @@ SELECT @x.query('
 ')  
 ```  
   
- Esse é o resultado:  
+ Este é o resultado:  
   
 ```  
 <a>  
@@ -242,7 +242,7 @@ SELECT @x.query('
   
 -   Não há suporte para a combinação de sequências de nó usando operadores de união, intersecção ou exceção.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Expressões XQuery](../xquery/xquery-expressions.md)  
   
   

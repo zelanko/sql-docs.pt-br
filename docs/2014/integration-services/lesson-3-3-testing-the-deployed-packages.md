@@ -1,5 +1,5 @@
 ---
-title: 'Etapa 3: Testar os pacotes implantados | Microsoft Docs'
+title: 'Etapa 3: Testando os pacotes implantados | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 92055ceb4226406fe26d7ce23491c81606f292c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62891796"
 ---
-# <a name="step-3-testing-the-deployed-packages"></a>Etapa 3: Testar os pacotes implantados
+# <a name="step-3-testing-the-deployed-packages"></a>Etapa 3: Testando os pacotes implantados
   Nesta tarefa, você testará os pacotes implantados em uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  Em outros tutoriais do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , você executou pacotes no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], o ambiente de desenvolvimento do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], usando a opção **Iniciar Depuração** no menu **Depurar** . Desta vez você executará os pacotes de modo diferente.  
@@ -103,9 +103,9 @@ ms.locfileid: "62891796"
   
      A consulta retorna 21 linhas de dados. O resultado de retorno consiste em linhas do arquivo de dados XML, orders.xml. Cada linha é um resumo por país/região; a linha lista o nome do país/região, o número de ordens de cada país/região e as datas das ordens mais antigas e mais recentes.  
   
-![Ícone do Integration Services (pequeno)](media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
+![Ícone de Integration Services (pequeno)](media/dts-16.gif "Ícone do Integration Services (pequeno)")  **Mantenha-se atualizado com Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Utilitário dtexec](packages/dtexec-utility.md)  
   
   

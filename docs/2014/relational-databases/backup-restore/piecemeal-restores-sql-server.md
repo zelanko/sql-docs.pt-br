@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 55520388424e110420ad96d329081ee7a61fe028
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62876073"
 ---
 # <a name="piecemeal-restores-sql-server"></a>Restaurações por etapas (SQL Server)
@@ -56,7 +56,7 @@ ms.locfileid: "62876073"
   
      Para obter informações sobre Restaurações por Etapas de bancos de dados OLTPin-memory, consulte [Backup e restauração por etapas de bancos de dados com tabelas com otimização de memória](../in-memory-oltp/memory-optimized-tables.md).  
   
-## <a name="restrictions"></a>Restrictions  
+## <a name="restrictions"></a>Restrições  
  Se uma sequência de restauração parcial excluir qualquer grupo de arquivos [FILESTREAM](../blob/filestream-sql-server.md) , não haverá suporte para a restauração pontual. Você pode forçar a sequência de restauração a continuar. Contudo, os grupos de arquivos FILESTREAM omitidos de sua instrução RESTORE nunca poderão ser restaurados. Para forçar uma restauração pontual, especifique a opção CONTINUE_AFTER_ERROR juntamente com a opção STOPAT, STOPATMARK ou STOPBEFOREMARK, que você também deve especificar nas instruções RESTORE LOG subsequentes. Se você especificar CONTINUE_AFTER_ERROR, a sequência de restauração parcial terá êxito e o grupo de arquivos FILESTREAM se tornará irrecuperável.  
   
 ## <a name="piecemeal-restore-under-the-simple-recovery-model"></a>Restauração por etapas no modelo de recuperação simples  
@@ -119,9 +119,9 @@ ms.locfileid: "62876073"
   
 ### <a name="examples"></a>Exemplos  
   
--   [Exemplo: Restauração por etapas de banco de dados &#40;Modelo de recuperação simples&#41;](example-piecemeal-restore-of-database-simple-recovery-model.md)  
+-   [Exemplo: restauração por etapas de banco de dados &#40;Modelo de recuperação simples&#41;](example-piecemeal-restore-of-database-simple-recovery-model.md)  
   
--   [Exemplo: Restauração por etapas de apenas alguns grupos de arquivos &#40;Modelo de recuperação simples&#41;](example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
+-   [Exemplo: restauração por etapas de apenas alguns grupos de arquivos &#40;Modelo de recuperação simples&#41;](example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
   
 ## <a name="piecemeal-restore-under-the-full-recovery-model"></a>Restauração por etapas no modelo de recuperação completa  
  No modelo de recuperação completa ou bulk-logged, a restauração por etapas está disponível para qualquer banco de dados que contenha vários grupos de arquivo, e você pode restaurar um banco de dados para qualquer ponto especificado. A sequência de restauração por etapas se comporta assim:  
@@ -147,9 +147,9 @@ ms.locfileid: "62876073"
   
 ### <a name="examples"></a>Exemplos  
   
--   [Exemplo: Restauração por etapas de banco de dados &#40;Modelo de recuperação completa&#41;](example-piecemeal-restore-of-database-full-recovery-model.md)  
+-   [Exemplo: restauração por etapas de banco de dados &#40;Modelo de recuperação completa&#41;](example-piecemeal-restore-of-database-full-recovery-model.md)  
   
--   [Exemplo: Restauração por etapas de apenas alguns grupos de arquivos &#40;Modelo de recuperação completa&#41;](example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
+-   [Exemplo: restauração por etapas de apenas alguns grupos de arquivos &#40;Modelo de recuperação completa&#41;](example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
   
 ## <a name="performing-a-piecemeal-restore-of-a-database-whose-recovery-model-has-been-switched-from-simple-to-full"></a>Para obter mais informações, consulte "Executando uma restauração por etapas de um banco de dados cujo modelo de recuperação foi trocado de simples para completo", adiante neste tópico.  
  Você pode executar uma restauração por etapas de um banco de dados que foi trocado do modelo de recuperação simples para o modelo de recuperação completa, a partir do backup de banco de dados completo ou parcial. Por exemplo, considere um banco de dados para o qual você executa as seguintes etapas:  
@@ -172,7 +172,7 @@ ms.locfileid: "62876073"
   
 4.  O backup diferencial seguido por quaisquer outros backups que foram restaurados pela sequência de restauração por etapas original, para restaurar os dados até o ponto de recuperação original.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Aplicar backups de log de transações &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [Restaurar um banco de dados do SQL Server em um ponto específico &#40;Modelo de recuperação completa&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   

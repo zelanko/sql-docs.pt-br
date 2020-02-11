@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9b5da9ff28dc658f870033a02fe88b14ea442c51
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62832868"
 ---
 # <a name="bulk-insert-task"></a>Tarefa Inserção em Massa
@@ -54,7 +54,7 @@ ms.locfileid: "62832868"
   
 -   O arquivo de origem que a tarefa de inserção em massa carregar pode estar no mesmo servidor que o banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no qual são inseridos os dados, ou em um servidor remoto. Se o arquivo estiver em um servidor remoto, você deve especificar o nome de arquivo usando o nome UNC no caminho.  
   
-## <a name="performance-optimization"></a>Otimização do desempenho  
+## <a name="performance-optimization"></a>Otimização do Desempenho  
  Para aperfeiçoar o desempenho, considere o seguinte:  
   
 -   Se o arquivo de texto estiver alocado no mesmo computador que a base de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no qual estão inseridos os dados, a operação de cópia ocorre a uma taxa ainda mais rápida, porque os dados não são movidos pela rede.  
@@ -64,7 +64,7 @@ ms.locfileid: "62832868"
 ## <a name="custom-log-entries-available-on-the-bulk-insert-task"></a>Entradas de log personalizado disponíveis na tarefa de inserção em massa  
  A seguinte tabela relaciona as entradas de log personalizadas para a tarefa inserção em massa . Para obter mais informações, consulte [Log do SSIS &#40;Integration Services&#41;](../performance/integration-services-ssis-logging.md) e [Mensagens personalizadas para log](../custom-messages-for-logging.md).  
   
-|Entrada de log|Descrição|  
+|Entrada de log|DESCRIÇÃO|  
 |---------------|-----------------|  
 |`BulkInsertTaskBegin`|Indica que a inserção em massa iniciou.|  
 |`BulkInsertTaskEnd`|Indica que a inserção em massa foi concluída.|  
@@ -89,11 +89,11 @@ ms.locfileid: "62832868"
   
  Para obter mais informações sobre as propriedades que podem ser definidas no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique em um dos seguintes tópicos:  
   
--   [Editor da Tarefa Inserção em Massa &#40;Página Geral&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor da tarefa inserção em massa &#40;página Geral&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Editor da Tarefa Inserção em Massa &#40;Página Conexão&#41;](../bulk-insert-task-editor-connection-page.md)  
+-   [Editor da tarefa inserção em massa &#40;página conexão&#41;](../bulk-insert-task-editor-connection-page.md)  
   
--   [Editor da Tarefa Inserção em Massa &#40;Página Opções&#41;](../bulk-insert-task-editor-options-page.md)  
+-   [Editor da tarefa inserção em massa &#40;página opções&#41;](../bulk-insert-task-editor-options-page.md)  
   
 -   [Página Expressões](../expressions/expressions-page.md)  
   

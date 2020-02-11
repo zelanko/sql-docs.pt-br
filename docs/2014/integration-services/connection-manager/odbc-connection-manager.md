@@ -16,16 +16,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c6c7ecd59bcf3a3ece0d61ecbb428bb39a80068f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833738"
 ---
 # <a name="odbc-connection-manager"></a>gerenciador de conexões ODBC
   Um gerenciador de conexões ODBC permite que um pacote se conecte com vários sistemas de gerenciamento de banco de dados que usam a especificação ODBC (Conectividade Aberta de Banco de Dados).  
   
- Quando você adiciona uma conexão ODBC para um pacote e definir propriedades do Gerenciador da conexão [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] cria uma conexão Gerenciador e adiciona o Gerenciador de conexão para o `Connections` coleção do pacote. No tempo de execução, o gerenciador de conexões é resolvido como uma conexão física ODBC.  
+ Quando você adiciona uma conexão ODBC a um pacote e define as propriedades do Gerenciador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] conexões, o cria um Gerenciador de conexões e adiciona o `Connections` Gerenciador de conexões à coleção do pacote. No tempo de execução, o gerenciador de conexões é resolvido como uma conexão física ODBC.  
   
  A propriedade `ConnectionManagerType` do gerenciador de conexões é definida como `ODBC`.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "62833738"
   
  Para obter informações sobre como configurar um gerenciador de conexões programaticamente, consulte <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> e [Adicionando conexões programaticamente](../building-packages-programmatically/adding-connections-programmatically.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Conexões do SSIS &#40;Integration Services&#41;](integration-services-ssis-connections.md)  
   
   

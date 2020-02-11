@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5b43cd194a2bfcf93b74b53fa2e9cb3a6a3eaff2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62913786"
 ---
-# <a name="mssqlserver4846"></a>MSSQLSERVER_4846
+# <a name="mssqlserver_4846"></a>MSSQLSERVER_4846
     
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|4846|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|BULKPROV_MEMORY|  
 |Texto da mensagem|Falha no provedor de dados em massa ao alocar memória.|  
@@ -40,7 +40,7 @@ ms.locfileid: "62913786"
   
 1.  Verifique se outros aplicativos ou serviços estão consumindo memória neste servidor. Reconfigure os aplicativos ou serviços menos críticos de maneira que eles consumam menos memória.  
   
-2.  Iniciar a coleta de contadores de desempenho para **do SQL Server: Gerenciador de buffer**, **do SQL Server: Gerenciador de memória**.  
+2.  Comece a coletar contadores do monitor de desempenho relativos a **SQL Server: Gerenciador de Buffer**, **SQL Server: Gerenciador de Memória**.  
   
 3.  Verifique os seguintes parâmetros de configuração da memória do SQL Server:  
   

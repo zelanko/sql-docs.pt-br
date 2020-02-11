@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 15dfb65dc7cb51311e60112145623eeda50339e7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63067482"
 ---
 # <a name="show-column-names-in-the-diagram-pane-visual-database-tools"></a>Mostrar nomes de colunas no painel de Diagrama (Visual Database Tools)
@@ -37,7 +37,7 @@ ms.locfileid: "63067482"
   
 2.  Escolha **Apenas Nome** no menu de atalho.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tópicos de instruções de como criar consultas e exibições &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

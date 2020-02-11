@@ -1,5 +1,5 @@
 ---
-title: As propriedades do objeto, métodos e eventos de tabela | Microsoft Docs
+title: Propriedades, métodos e eventos do objeto Table | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,10 +13,10 @@ ms.assetid: 140d1517-6f0c-4fc9-9deb-9658982d88ed
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c52e65ffe7d258b3707927b1f996be3a3a5f3dd3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965173"
 ---
 # <a name="table-object-properties-methods-and-events"></a>Propriedades, Métodos e Eventos do objeto Table
@@ -40,10 +40,10 @@ ms.locfileid: "67965173"
  [Propriedade Type (Table) (ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md)  
   
 ## <a name="methods"></a>Métodos  
- nenhuma.  
+ Nenhum.  
   
-## <a name="events"></a>Events  
- nenhuma.  
+## <a name="events"></a>Eventos  
+ Nenhum.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Objeto Table (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)

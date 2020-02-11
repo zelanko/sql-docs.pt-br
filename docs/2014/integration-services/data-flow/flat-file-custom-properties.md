@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0a0516d2e038f206c140f010c2ca4a459f79956a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62902043"
 ---
 # <a name="flat-file-custom-properties"></a>Propriedades personalizadas de arquivo simples
@@ -24,18 +24,18 @@ ms.locfileid: "62902043"
   
  A tabela a seguir descreve as propriedades personalizadas da fonte de Arquivo Simples. Todas as propriedades são de leitura/gravação.  
   
-|Nome da propriedade|Tipo de Dados|Descrição|  
+|Nome da propriedade|Tipo de Dados|DESCRIÇÃO|  
 |-------------------|---------------|-----------------|  
-|FileNameColumnName|Cadeia de caracteres|O nome de uma coluna de saída que contém o nome de arquivo. Se nenhum nome for especificado, nenhuma coluna de saída que contém o nome de arquivo será gerada.<br /><br /> Observação: essa propriedade não está disponível no **Editor de Fonte de Arquivo Simples**, mas pode ser definida por meio do **Editor Avançado**.|  
-|RetainNulls|Booliano|Um valor que especifica se os valores Nulos do arquivo de origem devem ser retidos como valores Nulos quando os dados forem processados pelo mecanismo Pipeline de Transformação de Dados. O valor padrão dessa propriedade é `False`.|  
+|FileNameColumnName|String|O nome de uma coluna de saída que contém o nome de arquivo. Se nenhum nome for especificado, nenhuma coluna de saída que contém o nome de arquivo será gerada.<br /><br /> Observação: essa propriedade não está disponível no **Editor de Fonte de Arquivo Simples**, mas pode ser definida por meio do **Editor Avançado**.|  
+|RetainNulls|Boolean|Um valor que especifica se os valores Nulos do arquivo de origem devem ser retidos como valores Nulos quando os dados forem processados pelo mecanismo Pipeline de Transformação de Dados. O valor padrão dessa propriedade é `False`.|  
   
  A saída da fonte de Arquivo Simples não tem nenhuma propriedade personalizada.  
   
  A tabela a seguir descreve as propriedades personalizadas das colunas de saída da fonte de Arquivo Simples. Todas as propriedades são de leitura/gravação.  
   
-|Nome da propriedade|Tipo de Dados|Descrição|  
+|Nome da propriedade|Tipo de Dados|DESCRIÇÃO|  
 |-------------------|---------------|-----------------|  
-|FastParse|Booliano|Um valor que indica se as colunas usam as rotinas de análise mais rápidas, mas que não fazem distinção entre localidades, fornecido pelo DTS, ou as rotinas de análise padrão que fazem distinção entre localidades. Para obter mais informações, consulte [Fast Parse](../fast-parse.md) e [Standard Parse](../standard-parse.md). O valor padrão dessa propriedade é `False`.<br /><br /> Observação: essa propriedade não está disponível no **Editor de Fonte de Arquivo Simples**, mas pode ser definida por meio do **Editor Avançado**.|  
+|FastParse|Boolean|Um valor que indica se as colunas usam as rotinas de análise mais rápidas, mas que não fazem distinção entre localidades, fornecido pelo DTS, ou as rotinas de análise padrão que fazem distinção entre localidades. Para obter mais informações, consulte [Fast Parse](../fast-parse.md) e [Standard Parse](../standard-parse.md). O valor padrão dessa propriedade é `False`.<br /><br /> Observação: essa propriedade não está disponível no **Editor de Fonte de Arquivo Simples**, mas pode ser definida por meio do **Editor Avançado**.|  
   
  Para obter mais informações, consulte [Flat File Source](flat-file-source.md).  
   
@@ -45,16 +45,16 @@ ms.locfileid: "62902043"
   
  A tabela a seguir descreve as propriedades personalizadas do destino Arquivo Simples. Todas as propriedades são de leitura/gravação.  
   
-|Nome da propriedade|Tipo de Dados|Descrição|  
+|Nome da propriedade|Tipo de Dados|DESCRIÇÃO|  
 |-------------------|---------------|-----------------|  
-|Cabeçalho|Cadeia de caracteres|Um bloco de texto inserido no arquivo antes que qualquer dado seja gravado.<br /><br /> O valor dessa propriedade pode ser especificado com uma expressão de propriedades.|  
-|Overwrite|Booliano|Um valor que especifica se será substituído ou adicionado a um arquivo de destino existente de mesmo nome. O valor padrão dessa propriedade é `True`.|  
+|Cabeçalho|String|Um bloco de texto inserido no arquivo antes que qualquer dado seja gravado.<br /><br /> O valor dessa propriedade pode ser especificado com uma expressão de propriedades.|  
+|Overwrite|Boolean|Um valor que especifica se será substituído ou adicionado a um arquivo de destino existente de mesmo nome. O valor padrão dessa propriedade é `True`.|  
   
  A entrada e as colunas de entrada do destino Arquivo Simples não têm nenhuma propriedade personalizada.  
   
  Para obter mais informações, consulte [Flat File Destination](flat-file-destination.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Propriedades comuns](../common-properties.md)  
   
   

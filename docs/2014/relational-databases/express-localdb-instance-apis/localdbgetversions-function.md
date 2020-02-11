@@ -17,16 +17,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 431124cff2fcf293ccf1e8e8bcb74321245a661e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63032289"
 ---
 # <a name="localdbgetversions-function"></a>Função LocalDBGetVersions
   Retorna todas as versões de LocalDB do SQL Server Express disponíveis no computador.  
   
- **Arquivo de cabeçalho:** sqlncli.h  
+ **Arquivo de cabeçalho:** sqlncli. h  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,15 +34,15 @@ ms.locfileid: "63032289"
 #define MAX_LOCALDB_VERSION_LENGTH 43typedef WCHAR TLocalDBVersion[MAX_LOCALDB_VERSION_LENGTH + 1];typedef TLocalDBVersion* PTLocalDBVersion;HRESULT LocalDBGetVersions(           PTLocalDBVersion pVersion,           LPDWORD lpdwNumberOfVersions);  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  *pVersionNames*  
- [Saída] Contém os nomes das versões de LocalDB que estão disponíveis na estação de trabalho do usuário.  
+ Der Contém nomes das versões de LocalDB que estão disponíveis na estação de trabalho do usuário.  
   
  *lpdwNumberOfVersions*  
  [Entrada/Saída] Na entrada, mantém o número de slots para versões no buffer *pVersionNames* .   
 Na saída, mantém o número de versões de LocalDB existentes.  
   
-## <a name="returns"></a>Retorna  
+## <a name="returns"></a>Retornos  
  S_OK  
  A função foi bem-sucedida.  
   
@@ -61,7 +61,7 @@ Na saída, mantém o número de versões de LocalDB existentes.
 ## <a name="remarks"></a>Comentários  
  Para obter uma amostra do código que usa a API LocalDB, consulte [SQL Server Express LocalDB Reference](../sql-server-express-localdb-reference.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Cabeçalho e informações de versão de LocalDB do SQL Server Express](sql-server-express-localdb-header-and-version-information.md)  
   
   

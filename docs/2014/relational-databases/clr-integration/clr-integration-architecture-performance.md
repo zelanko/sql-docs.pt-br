@@ -1,5 +1,5 @@
 ---
-title: Desempenho da integração do CLR | Microsoft Docs
+title: Desempenho da integração CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: eced622903a0d68369f28d19ff521d99bcedbdc3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62874519"
 ---
 # <a name="performance-of-clr-integration"></a>Desempenho da integração CLR
-  Este tópico discute algumas das escolhas de design que aprimoram o desempenho das [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] integração com o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] do .NET Framework CLR common language runtime ().  
+  Este tópico discute algumas das opções de design que aprimoram o desempenho da [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] integração com o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework Common Language Runtime (CLR).  
   
 ## <a name="the-compilation-process"></a>O processo de compilação  
  Durante a compilação de expressões SQL, quando é encontrada uma referência a uma rotina, é gerado um stub do MSIL ([!INCLUDE[msCoName](../../../includes/msconame-md.md)] Intermediate Language). Esse stub inclui código para realizar marshaling dos parâmetros de rotina do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para o CLR, invocar a função e retornar o resultado. Este código de "cola" se baseia no tipo de parâmetro e na direção do parâmetro (de entrada, de saída ou de referência).  
@@ -35,7 +35,7 @@ ms.locfileid: "62874519"
  O processo de compilação gera um ponteiro de função que pode ser chamado em tempo de execução a partir do código nativo. No caso de funções definidas pelo usuário com valor escalar, essa invocação de função ocorre por linha. A fim de minimizar o custo da transição entre o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e o CLR, as instruções que contêm qualquer invocação gerenciada têm uma etapa de inicialização para identificar o domínio do aplicativo de destino. Essa etapa de identificação reduz o custo de transição de cada linha.  
   
 ## <a name="performance-considerations"></a>Considerações sobre desempenho  
- Segue um resumo das considerações de desempenho específicas da integração CLR no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Informações mais detalhadas podem ser encontradas em "[usando a integração CLR no SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=50332)" no site do MSDN. Informações gerais sobre o desempenho do código gerenciado podem ser encontradas em "[melhorando o desempenho de aplicativos .NET e a escalabilidade](https://go.microsoft.com/fwlink/?LinkId=50333)" no site do MSDN.  
+ Segue um resumo das considerações de desempenho específicas da integração CLR no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Informações mais detalhadas podem ser encontradas em "[usando a integração CLR no SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=50332)" no site do MSDN. Informações gerais sobre o desempenho do código gerenciado podem ser encontradas em "[melhorando o desempenho e a escalabilidade do aplicativo .net](https://go.microsoft.com/fwlink/?LinkId=50333)" no site do MSDN.  
   
 ### <a name="user-defined-functions"></a>Funções definidas pelo usuário  
  As funções CLR se beneficiam de um caminho de invocação mais rápido que o das funções definidas pelo usuário do [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Além disso, o código gerenciado tem uma vantagem de desempenho decisiva sobre o [!INCLUDE[tsql](../../../includes/tsql-md.md)] em termos de código de procedimento, computação e manipulação de cadeias de caracteres. As funções CLR que utilizam muitos recursos de computação e que não executam acesso a dados são melhor escritas em código gerenciado. Entretanto, as funções [!INCLUDE[tsql](../../../includes/tsql-md.md)] executam o acesso a dados de forma mais eficiente que a integração CLR.  
@@ -48,13 +48,13 @@ ms.locfileid: "62874519"
   
  As STVFs são funções gerenciadas que retornam uma interface `IEnumerable`. A `IEnumerable` tem métodos para navegar pelo conjunto de resultados retornado pela STVF. Quando a STVF é invocada, a `IEnumerable` retornada é conectada diretamente ao plano de consulta. O plano de consulta chamará métodos de `IEnumerable` quando for necessário buscar linhas. Esse modelo de iteração permite que os resultados sejam consumidos imediatamente depois que a primeira linha é gerada, em vez de aguardar até que toda a tabela seja preenchida. Ele também reduz significativamente a memória consumida ao invocar a função.  
   
-### <a name="arrays-vs-cursors"></a>Matrizes vs. Cursores  
+### <a name="arrays-vs-cursors"></a>Matrizes vs. cursores  
  Quando os cursores [!INCLUDE[tsql](../../../includes/tsql-md.md)] devem atravessar dados que são expressos mais facilmente como uma matriz, é possível usar código gerenciado com ganhos de desempenho significativos.  
   
 ### <a name="string-data"></a>Dados de cadeia de caracteres  
  Em funções gerenciadas, os dados de caracteres do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], como `varchar`, podem ser do tipo SqlString ou SqlChars. As variáveis SqlString criam uma instância do valor inteiro na memória. As variáveis SqlChars fornecem uma interface de streaming que pode ser usada para obter um melhor desempenho e escalabilidade por não criar uma instância do valor inteiro na memória. Isso se torna especialmente importante no caso de dados LOB (objeto grande). Além disso, os dados XML do servidor podem ser acessados por meio de uma interface de streaming retornada por `SqlXml.CreateReader()`.  
   
-### <a name="clr-vs-extended-stored-procedures"></a>CLR vs. Procedimentos armazenados estendidos  
+### <a name="clr-vs-extended-stored-procedures"></a>CLR vs. procedimentos armazenados estendidos  
  As APIs Microsoft.SqlServer.Server que permitem que procedimentos gerenciados enviem conjuntos de resultados de volta ao cliente têm um desempenho melhor que as APIs ODS (Open Data Services) usadas por procedimentos armazenados estendidos. Além disso, as APIs System.Data.SqlServer dão suporte a tipos de dados como `xml`, `varchar(max)`, `nvarchar(max)` e `varbinary(max)`, introduzidos no [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], enquanto as APIs ODS não foram estendidas para dar suporte aos novos tipos de dados.  
   
  Com o código gerenciado, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gerencia o uso de recursos como a memória, os threads e a sincronização. Isso se deve ao fato de as APIs gerenciadas que expõem esses recursos serem implementadas sobre o gerenciador de recursos do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Por outro lado, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não tem nenhuma exibição ou controle sobre o uso de recursos do procedimento armazenado estendido. Por exemplo, se um procedimento armazenado estendido consumir muitos recursos de CPU ou de memória, não há uma forma de detectá-lo ou controlá-lo com o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Contudo, com o código gerenciado, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pode detectar que um determinado thread não teve resultados por um longo período e então forçar a geração da tarefa, de forma que outros trabalhos possam ser agendados. Consequentemente, o uso do código gerenciado fornece uma escalabilidade e um uso de recursos do sistema melhores.  
@@ -77,7 +77,7 @@ ms.locfileid: "62874519"
 ### <a name="scalable-memory-usage"></a>Uso da memória escalonável  
  Para que coleta de lixo gerenciada seja executada e bem-escalada no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], evite uma única alocação grande. As alocações com mais de 88 quilobytes (KB) serão colocadas no heap de objetos grandes, que fará o desempenho e a escala da coleta de lixo serem muito piores que no caso de várias alocações menores. Por exemplo, se você precisar alocar uma matriz multidimensional grande, é melhor alocar uma matriz denteada (dispersa).  
   
-## <a name="see-also"></a>Consulte também  
- [Tipos definidos pelo usuário do CLR](../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Tipos CLR definidos pelo usuário](../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
   
   

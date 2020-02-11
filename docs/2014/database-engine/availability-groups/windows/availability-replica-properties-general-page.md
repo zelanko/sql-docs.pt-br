@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 07652cec7b3b7a17c4b994eb68afd939e15244a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62791900"
 ---
 # <a name="availability-replica-properties-general-page"></a>Propriedades de réplica de disponibilidade (página Geral)
@@ -27,7 +27,7 @@ ms.locfileid: "62791900"
   
 -   [Exibir as propriedades da réplica de disponibilidade &#40;SQL Server&#41;](view-availability-replica-properties-sql-server.md)  
   
--   [Usar o Painel AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+-   [Use o painel AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
 ## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
  **Nome do grupo de disponibilidade**  
@@ -37,7 +37,7 @@ ms.locfileid: "62791900"
  O nome de servidor da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospeda essa réplica e, para uma instância não padrão, seu nome de instância.  
   
  **Função**  
- **Primária**  
+ **Primário**  
  Atualmente a réplica primária.  
   
  **Secundário**  
@@ -87,7 +87,7 @@ ms.locfileid: "62791900"
  **Sim**  
  Todas as conexões são permitidas para os bancos de dados secundários desta réplica, mas somente para acesso de leitura. Os bancos de dados secundários estão disponíveis para acesso de leitura.  
   
- Para obter mais informações, confira [Secundárias ativas: Réplicas secundárias legíveis (grupos de disponibilidade AlwaysOn)](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+ Para obter mais informações, consulte secundários [ativos: réplicas secundárias legíveis (grupos de disponibilidade AlwaysOn)](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
  **Tempo limite da sessão (segundos)**  
  O período de tempo limite, em segundos. O período de tempo limite é o tempo máximo que a réplica espera para receber uma mensagem de outra réplica antes de considerar que a conexão entre a réplica primária e secundária falhou. O tempo limite da sessão detecta se réplicas secundárias estão conectadas à réplica primária. Ao detectar uma falha de conexão com uma réplica secundária, a réplica primária considera a réplica secundária como NOT_SYNCHRONIZED. Ao detectar uma falha de conexão com a réplica primária, uma réplica secundária simplesmente tenta se conectar outra vez.  
@@ -98,7 +98,7 @@ ms.locfileid: "62791900"
  **URL do Ponto de Extremidade**  
  Representação de cadeia de caracteres do ponto de extremidade de espelhamento de banco de dados especificado pelo usuário usado pelas conexões entre réplicas primária e secundária para sincronização de dados. Para obter informações sobre a sintaxe das URLs de ponto de extremidade, veja [Especificar a URL do ponto de extremidade ao adicionar ou modificar uma réplica de disponibilidade &#40;SQL Server&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Visão geral do Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
   
   

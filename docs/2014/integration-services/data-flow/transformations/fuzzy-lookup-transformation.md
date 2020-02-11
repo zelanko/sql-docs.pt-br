@@ -31,10 +31,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d0b77d45ca55adaa85e4e37e9da817f325ce0fc7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900304"
 ---
 # <a name="fuzzy-lookup-transformation"></a>transformação Pesquisa Difusa
@@ -51,7 +51,7 @@ ms.locfileid: "62900304"
   
  Essa transformação tem uma entrada e uma saída.  
   
- Somente as colunas com os tipos de dados `DT_WSTR` e `DT_STR` podem ser usadas em correspondência difusa. A correspondência exata pode usar qualquer tipo de dados DTS, exceto `DT_TEXT`, `DT_NTEXT` e `DT_IMAGE`. Para obter mais informações, consulte [Integration Services Data Types](../integration-services-data-types.md). Colunas que participam da junção entre a tabela de entrada e de referência deve ter tipos de dados compatíveis. Por exemplo, é válido para unir uma coluna com o DTS `DT_WSTR` tipo de dados para uma coluna com o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `nvarchar` tipo de dados, mas inválido para unir uma coluna com o `DT_WSTR` tipo de dados para uma coluna com o `int` tipo de dados.  
+ Somente as colunas com os tipos de dados `DT_WSTR` e `DT_STR` podem ser usadas em correspondência difusa. A correspondência exata pode usar qualquer tipo de dados DTS, exceto `DT_TEXT`, `DT_NTEXT` e `DT_IMAGE`. Para obter mais informações, consulte [Integration Services tipos de dados](../integration-services-data-types.md). Colunas que participam da junção entre a tabela de entrada e de referência deve ter tipos de dados compatíveis. Por exemplo, é válido unir uma coluna com o tipo de dados `DT_WSTR` DTS a uma coluna com o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `nvarchar` tipo de dados, mas inválido para unir uma coluna com o `DT_WSTR` tipo de dados a uma coluna com `int` o tipo de dados.  
   
  Você pode personalizar essa transformação especificando a quantidade máxima de memória, o algoritmo de comparação de linha e o cache de índices e tabelas de referência que a transformação usa.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "62900304"
   
  As colunas de saída de transformação incluem as colunas de entrada marcadas como de passagem, as selecionadas na tabela de pesquisa e as seguintes colunas adicionais:  
   
--   **_Similarity**, uma coluna que descreve a similaridade entre valores nas colunas de entrada e de referência.  
+-   **_Similarity**, uma coluna que descreve a similaridade entre os valores nas colunas de entrada e referência.  
   
 -   **_Confidence**, uma coluna que descreve a qualidade da correspondência.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "62900304"
   
  A tabela a seguir descreve as opções de índice de correspondência.  
   
-|Opção|Descrição|  
+|Opção|DESCRIÇÃO|  
 |------------|-----------------|  
 |**GenerateAndMaintainNewIndex**|Cria um índice novo, salva-o e faz a sua manutenção. A transformação instala acionadores na tabela de referência para manter essa tabela de referência e a tabela de índice sincronizadas.|  
 |**GenerateAndPersistNewIndex**|Cria um índice novo, salva-o, mas não faz a sua manutenção.|  
@@ -109,12 +109,12 @@ ms.locfileid: "62900304"
 >  Como a opção **Manter índice armazenado** requer a integração CLR, esse recurso funciona apenas quando você seleciona uma tabela de referência em uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em que a integração CLR está habilitada.  
   
 ## <a name="row-comparison"></a>Comparação de linhas  
- Quando você configura a transformação Pesquisa Difusa, é possível especificar o algoritmo de comparação que a transformação usa para localizar registros correspondentes na tabela de referência. Se você definir a propriedade Exhaustive como `True`, a transformação comparará todas as linhas na entrada para cada linha na tabela de referência. Esse algoritmo de comparação pode produzir resultados mais precisos, mas é provável que faça com que a transformação seja executada com mais lentidão, a menos que o número de linhas na tabela de referência seja pequeno. Se a propriedade Exhaustive for definida como `True`, a tabela de referência inteira é carregada na memória. Para evitar problemas de desempenho, é aconselhável definir a propriedade Exhaustive como `True` durante o desenvolvimento de pacote somente.  
+ Quando você configura a transformação Pesquisa Difusa, é possível especificar o algoritmo de comparação que a transformação usa para localizar registros correspondentes na tabela de referência. Se você definir a propriedade exaustiva como `True`, a transformação compara cada linha na entrada para cada linha na tabela de referência. Esse algoritmo de comparação pode produzir resultados mais precisos, mas é provável que faça com que a transformação seja executada com mais lentidão, a menos que o número de linhas na tabela de referência seja pequeno. Se a propriedade exaustiva for definida como `True`, a tabela de referência inteira será carregada na memória. Para evitar problemas de desempenho, é aconselhável definir a propriedade exaustiva como `True` somente durante o desenvolvimento do pacote.  
   
- Se a propriedade Exhaustive for definida como `False`, a transformação pesquisa difusa retornará apenas as correspondências que têm pelo menos um token indexado ou uma subcadeia de caracteres (a subcadeia de caracteres é chamada um *q-gram*) em comum com o registro de entrada. Para maximizar a eficiência das pesquisas, apenas um subconjunto dos tokens em cada linha da tabela é indexado na estrutura de índice invertida que a transformação Pesquisa Difusa usa para localizar correspondências. Quando o conjunto de dados de entrada for pequeno, você poderá definir Exhaustive como `True` para evitar a perda de correspondências para as quais na exista tokens comuns na tabela de índice.  
+ Se a propriedade exaustiva for definida como `False`, a transformação Pesquisa Difusa retornará apenas as correspondências que têm pelo menos um token indexado ou uma subcadeia de caracteres (a subcadeia de caracteres é chamada de *q-gram*) em comum com o registro de entrada. Para maximizar a eficiência das pesquisas, apenas um subconjunto dos tokens em cada linha da tabela é indexado na estrutura de índice invertida que a transformação Pesquisa Difusa usa para localizar correspondências. Quando o conjunto de dados de entrada é pequeno, você pode `True` definir exaustiva como para evitar correspondências ausentes para as quais não existem tokens comuns na tabela de índice.  
   
 ## <a name="caching-of-indexes-and-reference-tables"></a>Cache de índices e tabelas de referência  
- Quando você configura a transformação Pesquisa Difusa, é possível especificar se a transformação deve armazenar parcialmente em cache o índice e a tabela de referência na memória antes de a transformação realizar o seu trabalho. Se você definir a propriedade WarmCaches como `True`, a tabela de referência e de índice são carregados na memória. Quando a entrada tiver muitas linhas, defina a propriedade WarmCaches como `True` pode melhorar o desempenho da transformação. Quando o número de linhas de entrada for pequeno, defina a propriedade WarmCaches `False` pode tornar mais rápida a reutilização de um índice grande.  
+ Quando você configura a transformação Pesquisa Difusa, é possível especificar se a transformação deve armazenar parcialmente em cache o índice e a tabela de referência na memória antes de a transformação realizar o seu trabalho. Se você definir a propriedade WarmCaches como `True`, o índice e a tabela de referência serão carregados na memória. Quando a entrada tiver muitas linhas, definir a propriedade WarmCaches como `True` pode melhorar o desempenho da transformação. Quando o número de linhas de entrada é pequeno, definir a propriedade WarmCaches `False` como pode tornar a reutilização de um índice grande mais rapidamente.  
   
 ## <a name="temporary-tables-and-indexes"></a>Tabelas e índices temporários  
  Durante a execução, a transformação Pesquisa Difusa cria objetos temporários, como tabelas e índices, no banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a que a transformação se conecta. O tamanho dessas tabelas e índices temporários é proporcional ao número de linhas e tokens na tabela de referência e ao número de tokens que a transformação Pesquisa Difusa cria; por esse motivo, eles podem consumir uma grande quantidade de espaço em disco. A transformação também consulta as tabelas temporárias. Portanto, você deverá considerar a conexão da transformação Pesquisa Difusa a uma instância de não produção de um banco de dados [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , especialmente se o servidor de produção tiver espaço em disco disponível limitado.  
@@ -126,24 +126,24 @@ ms.locfileid: "62900304"
   
  Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor de Transformação Pesquisa Difusa** , clique em um dos seguintes tópicos:  
   
--   [Editor de Transformação Pesquisa Difusa &#40;Guia Tabela de Referência&#41;](../../fuzzy-lookup-transformation-editor-reference-table-tab.md)  
+-   [Editor de transformação pesquisa difusa &#40;guia tabela de referência&#41;](../../fuzzy-lookup-transformation-editor-reference-table-tab.md)  
   
 -   [Editor de Transformação Pesquisa Difusa &#40;guia Colunas&#41;](../../fuzzy-lookup-transformation-editor-columns-tab.md)  
   
--   [Editor de Transformação Pesquisa Difusa &#40;Guia Avançado&#41;](../../fuzzy-lookup-transformation-editor-advanced-tab.md)  
+-   [Editor de transformação pesquisa difusa &#40;guia Avançado&#41;](../../fuzzy-lookup-transformation-editor-advanced-tab.md)  
   
  Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   
 -   [Propriedades comuns](../../common-properties.md)  
   
--   [Propriedades personalizadas da transformação](transformation-custom-properties.md)  
+-   [Propriedades personalizadas de Transformação](transformation-custom-properties.md)  
   
 ## <a name="related-tasks"></a>Related Tasks  
  Para obter detalhes sobre como definir as propriedades de um componente de fluxo de dados, consulte [Definir as propriedades de um componente de fluxo de dados](../set-the-properties-of-a-data-flow-component.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Transformação Pesquisa](lookup-transformation.md)   
- [Transformação Agrupamento Difuso](fuzzy-grouping-transformation.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Transformação pesquisa](lookup-transformation.md)   
+ [Fuzzy Grouping Transformation](fuzzy-grouping-transformation.md)   
  [Transformações do Integration Services](integration-services-transformations.md)  
   
   

@@ -11,16 +11,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b69440f38af5cd71e481325d5d4df577d4c267b3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63070823"
 ---
 # <a name="retrieve-data-from-a-filestream-column-using-isequentialstream-ole-db"></a>Recuperar dados de uma coluna FILESTREAM usando ISequentialStream (OLE DB)
   Este exemplo mostra como usar uma interface ISequentialStream em uma interface ICommandText para recuperar um único registro de uma coluna Filestream.  
   
- Para obter mais informações sobre o recurso filestream, consulte [suporte a FILESTREAM &#40;OLE DB&#41;](../../native-client/ole-db/filestream-support-ole-db.md).  
+ Para obter mais informações sobre o recurso FileStream, consulte [suporte a filestream &#40;OLE DB&#41;](../../native-client/ole-db/filestream-support-ole-db.md).  
   
 ## <a name="example"></a>Exemplo  
  Verifique se a variável de ambiente INCLUDE inclui o diretório que contém sqlncli.h.  
@@ -29,7 +29,7 @@ ms.locfileid: "63070823"
   
 -   [Enviar dados para uma coluna FILESTREAM usando ISequentialStream associado ao parâmetro ICommandText &#40;OLE DB&#41;](send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
   
--   [Enviar dados para uma coluna FILESTREAM usando IRowsetFastUpload &#40;OLE DB&#41;](send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
+-   [Enviar dados para uma coluna FILESTREAM usando o IRowsetFastUpload &#40;OLE DB&#41;](send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
   
  Copie a primeira listagem de código e cole-a em um arquivo denominado ISSHelper.h.  
   

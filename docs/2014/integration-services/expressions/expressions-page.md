@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4cb37061fd90f8662ee6670bb558e99035c792e7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62898028"
 ---
 # <a name="expressions-page"></a>Página Expressões
@@ -26,7 +26,7 @@ ms.locfileid: "62898028"
   
  Quando o pacote é executado, as expressões de propriedades atualizam os valores das propriedades. As expressões de propriedades são usadas com as propriedades dos pacotes, tarefas, contêiners, gerenciadores de conexões, bem como com alguns componentes do fluxo de dados. As expressões são avaliadas e seus resultados são usados em vez dos valores que você definiu para as propriedades ao configurar o pacote e os objetos do pacote. As expressões podem incluir variáveis e funções bem como operadores que o idioma da expressão fornece. Por exemplo, você pode gerar a linha do assunto para a tarefa Enviar Mensagem concatenando o valor de uma variável que contém a cadeia de caracteres "Previsão do tempo para" e os resultados retornados da função GETDATE() para desenvolver a cadeia de caracteres "Previsão do tempo para 4/5/2006.  
   
- Para saber mais sobre expressões de gravação e como usar expressões de propriedade, consulte [Integration Services &#40;SSIS&#41; Expressions](integration-services-ssis-expressions.md) e [Usar expressões de propriedade em pacotes](use-property-expressions-in-packages.md).  
+ Para saber mais sobre expressões de gravação e como usar expressões de propriedade, consulte [Expressões do Integration Services &#40;SSIS&#41;](integration-services-ssis-expressions.md) e [Usar expressões de propriedade em pacotes](use-property-expressions-in-packages.md).  
   
 ## <a name="options"></a>Opções  
  **Expressões (...)**  
@@ -35,7 +35,7 @@ ms.locfileid: "62898028"
  **\<nome da propriedade>**  
  Clique nas reticências para abrir a caixa de diálogo **Construtor de Expressões** . Para obter mais informações, consulte [Expression Builder](expression-builder.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Variáveis do SSIS &#40;Integration Services&#41;](../integration-services-ssis-variables.md)   
  [Variáveis do Sistema](../system-variables.md)   
  [Expressões do SSIS &#40;Integration Services&#41;](integration-services-ssis-expressions.md)  
