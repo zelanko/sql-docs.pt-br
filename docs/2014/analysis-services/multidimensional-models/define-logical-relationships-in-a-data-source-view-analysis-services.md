@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: caa1b9ee8af054f7fcc5f10869553343d50a9c2d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075616"
 ---
 # <a name="define-logical-relationships-in-a-data-source-view-analysis-services"></a>Definir relações lógicas em uma exibição da fonte de dados (Analysis Services)
@@ -39,15 +39,15 @@ ms.locfileid: "66075616"
   
  As relações são direcionadas. Para cada valor da coluna de origem, existe um valor correspondente na coluna de destino. Em um diagrama da exibição da fonte de dados, como os diagramas exibidos no painel **Diagrama** , uma seta na linha entre duas tabelas indica a direção da relação.  
   
- Este tópico inclui as seguintes seções:  
+ Este tópico inclui as seções a seguir:  
   
- [Adicionar uma relação entre tabelas, consultas nomeadas ou exibições](#bkmk_addRel)  
+ [Para adicionar uma relação entre tabelas, consultas nomeadas ou exibições](#bkmk_addRel)  
   
- [Para exibir ou modificar uma relação no painel de Diagrama](#bkmk_diagrampane)  
+ [Para exibir ou modificar uma relação no painel diagrama](#bkmk_diagrampane)  
   
- [Para exibir ou modificar uma relação no painel de Tabelas](#bkmk_tablespane)  
+ [Para exibir ou modificar uma relação no painel tabelas](#bkmk_tablespane)  
   
-##  <a name="bkmk_addRel"></a> Adicionar uma relação entre tabelas, consultas nomeadas ou exibições  
+##  <a name="bkmk_addRel"></a>Para adicionar uma relação entre tabelas, consultas nomeadas ou exibições  
   
 1.  No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra o projeto ou conecte-se ao banco de dados que contém a exibição da fonte de dados à qual você deseja adicionar uma relação lógica.  
   
@@ -72,11 +72,11 @@ ms.locfileid: "66075616"
   
     4.  Opcionalmente, na caixa **Descrição** , digite uma descrição para a relação.  
   
-##  <a name="bkmk_diagrampane"></a> Para exibir ou modificar uma relação no painel de Diagrama  
+##  <a name="bkmk_diagrampane"></a>Para exibir ou modificar uma relação no painel diagrama  
   
 -   No painel **Diagrama** no **Designer de Exibição da Fonte de Dados**, clique com o botão direito do mouse na relação que você deseja exibir e clique em **Editar Relação** (ou simplesmente clique duas vezes na seta da relação).  Use a caixa de diálogo **Editar Relação** para modificar a relação.  
   
-##  <a name="bkmk_tablespane"></a> Para exibir ou modificar uma relação no painel de Tabelas  
+##  <a name="bkmk_tablespane"></a>Para exibir ou modificar uma relação no painel tabelas  
   
 1.  No painel **Tabelas** no **Designer de Exibição da Fonte de Dados**, localize e expanda a tabela, exibição ou consulta nomeada que contém a relação que você deseja exibir ou modificar.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "66075616"
   
 3.  Clique com o botão direito do mouse na relação que você deseja modificar e, em seguida, clique em **Editar Relação**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exibições de fontes de dados em modelos multidimensionais](data-source-views-in-multidimensional-models.md)  
   
   

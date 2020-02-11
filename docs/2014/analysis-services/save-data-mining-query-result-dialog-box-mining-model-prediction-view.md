@@ -1,5 +1,5 @@
 ---
-title: Salvar a caixa de diálogo de resultados de consulta (exibição de previsão do modelo de mineração) de mineração de dados | Microsoft Docs
+title: Caixa de diálogo Salvar resultado da consulta de mineração de dados (exibição de previsão do modelo de mineração) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 97b391e24f98b230dbfe352e0cf1a574c7549984
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070016"
 ---
 # <a name="save-data-mining-query-result-dialog-box-mining-model-prediction-view"></a>Caixa de diálogo Salvar Resultado da Consulta de Mineração de Dados (Exibição de Previsão do Modelo de Mineração)
@@ -27,16 +27,16 @@ ms.locfileid: "66070016"
  A nova tabela será criada no banco de dados definido pela fonte de dados.  
   
 ## <a name="options"></a>Opções  
- **Fonte de dados**  
+ **Fonte de Dados**  
  Selecione uma fonte de dados do projeto atual. Se a fonte de dados correta não existir, clique em **Novo** para criar uma nova fonte de dados.  
   
- **Nova**  
+ **Novo**  
  Abre o **Assistente de Fonte de Dados**.  
   
  **Nome da tabela**  
  Digite um nome para a nova tabela.  
   
- **Substituir se existir**  
+ **Substitua se existir**  
  Selecione esta opção se você quiser substituir uma tabela existente com o mesmo nome.  
   
  Substituir a tabela existente será necessário se qualquer um dos seguintes for verdadeiro:  
@@ -52,11 +52,11 @@ ms.locfileid: "66070016"
  **Adicione à DSV**  
  (Opcional) Selecione uma exibição de fonte de dados contida no projeto se quiser adicionar a tabela a uma fonte de dados existente.  
   
- Essa opção é útil se você quiser manter todas as tabelas relacionadas para um modelo, como dados de treinamento, dados de origem de previsão e consulta os resultados-na mesma fonte de dados.  
+ Essa opção será útil se você quiser manter todas as tabelas relacionadas para um modelo, como dados de treinamento, dados de origem de previsão e resultados da consulta, na mesma fonte de dados.  
   
-## <a name="see-also"></a>Consulte também  
- [Construtor de Consultas de previsão &#40;Mineração de Dados&#41;](prediction-query-builder-data-mining.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Construtor de Consultas de &#40;de mineração de dados de previsão&#41;](prediction-query-builder-data-mining.md)   
  [Interfaces de consulta de mineração de dados](data-mining/data-mining-query-tools.md)   
- [Referência de instruções de DMX &#40extensões de Mineração de Dados&#41;](/sql/dmx/data-mining-extensions-dmx-statements)  
+ [Referência de instrução&#41; &#40;DMX de extensões de mineração de dados](/sql/dmx/data-mining-extensions-dmx-statements)  
   
   

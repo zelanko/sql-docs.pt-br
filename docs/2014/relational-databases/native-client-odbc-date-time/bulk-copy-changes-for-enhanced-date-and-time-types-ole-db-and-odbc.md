@@ -1,5 +1,5 @@
 ---
-title: Em massa copia alterações para aprimorados tipos de data e hora (OLE DB e ODBC) | Microsoft Docs
+title: Alterações de cópia em massa para tipos de data e hora aprimorados (OLE DB e ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 855d0baf0b0b890b9343378f8060919979d5f206
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63207109"
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc"></a>Alterações de cópia em massa para tipos de data e hora aprimorados (OLE DB e ODBC)
@@ -26,12 +26,12 @@ ms.locfileid: "63207109"
 ## <a name="format-files"></a>Arquivos de formato  
  Ao criar arquivos de formato interativamente, a tabela a seguir descreve a entrada usada para especificar os tipos de data/hora e os nomes de tipo de dados do arquivo de host correspondentes.  
   
-|tipo de armazenamento de arquivo|Tipo de dados do arquivo host|Resposta à solicitação: "Insira o tipo de armazenamento de arquivo do campo < nome_do_campo > [\<padrão >]:"|  
+|Tipo de armazenamento de arquivo|Tipo de dados do arquivo host|Resposta ao aviso: "Insira o tipo de armazenamento de arquivos do campo <field_name> [\<default>]:"|  
 |-----------------------|-------------------------|-----------------------------------------------------------------------------------------------------|  
-|DateTime|SQLDATETIME|d|  
+|Datetime|SQLDATETIME|d|  
 |Smalldatetime|SQLDATETIM4|D|  
-|Date|SQLDATE|de|  
-|Time|SQLTIME|te|  
+|Data|SQLDATE|de|  
+|Hora|SQLTIME|te|  
 |Datetime2|SQLDATETIME2|d2|  
 |Datetimeoffset|SQLDATETIMEOFFSET|do|  
   
@@ -61,15 +61,15 @@ ms.locfileid: "63207109"
 ```  
   
 ## <a name="character-data-files"></a>Arquivos de dados de caracteres  
- Em arquivos de dados de caractere, valores de data e hora são representados conforme descrito no "formatos de dados: Seção cadeias de caracteres e literais"de [suporte de tipo de dados para ODBC aprimoramentos de data e hora](data-type-support-for-odbc-date-and-time-improvements.md) para ODBC ou de [suporte de tipo de dados para OLE DB aprimoramentos de data e hora](../native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md) para OLE DB.  
+ Em arquivos de dados de caractere, os valores de data e hora são representados conforme descrito na seção "formatos de dados: cadeias de caracteres e literais" do [suporte de tipo de dados para melhorias de data e hora ODBC](data-type-support-for-odbc-date-and-time-improvements.md) para ODBC ou de [tipo de dados suporte para OLE DB melhorias de data e hora](../native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md) para OLE DB.  
   
- Em arquivos de dados nativos, os valores de data e hora para os quatro novos tipos são representados como suas representações de TDS com uma escala de 7 (porque esse é o máximo com suporte pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e arquivos de dados bcp não armazenam a escala dessas colunas). Não há nenhuma alteração no armazenamento do existente `datetime` e `smalldatetime` seus dados tabulares ou tipo de fluxo de representações de (TDS).  
+ No Fles de dados nativos, os valores de data e hora para os quatro novos tipos são representados como suas representações de TDS com uma escala de 7 (porque esse é [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o máximo com suporte do e os arquivos de dados BCP não armazenam a escala dessas colunas). Não há nenhuma alteração no armazenamento das representações existentes `datetime` e `smalldatetime` de tipo ou de TDS (Data Stream) de tabela.  
   
  Os tamanhos de armazenamento para os diferentes tipos de armazenamento do OLE DB são estes:  
   
-|tipo de armazenamento de arquivo|Tamanho de armazenamento em bytes|  
+|Tipo de armazenamento de arquivo|Tamanho de armazenamento em bytes|  
 |-----------------------|---------------------------|  
-|datetime|8|  
+|DATETIME|8|  
 |smalldatetime|4|  
 |date|3|  
 |time|6|  
@@ -78,7 +78,7 @@ ms.locfileid: "63207109"
   
  Os tamanhos para o ODBC são mostrados a seguir. Observe que não é necessário armazenar a precisão nem nos arquivos de formato nem nos de dados, porque o BCP.exe sempre recuperará a precisão do servidor.  
   
-|tipo de armazenamento de arquivo|Tamanho de armazenamento em bytes|Formato de armazenamento|  
+|Tipo de armazenamento de arquivo|Tamanho de armazenamento em bytes|Formato de armazenamento|  
 |-----------------------|---------------------------|--------------------|  
 |datetime (d)|8|TDS|  
 |smalldatetime (D)|4|TDS|  
@@ -88,28 +88,28 @@ ms.locfileid: "63207109"
 |datetimeoffset (do)|11|TDS|  
   
 ## <a name="bcp-types-in-sqlnclih"></a>Tipos BCP em sqlncli.h  
- Os tipos a seguir são definidos em sqlncli.h para ser usados com as extensões de API BCP para ODBC. Esses tipos são passados com a *eUserDataType* parâmetro do ibcpsession:: BCPColFmt no OLE DB.  
+ Os tipos a seguir são definidos em sqlncli.h para ser usados com as extensões de API BCP para ODBC. Esses tipos são passados com o parâmetro *eUserDataType* de IBCPSession:: BCPColFmt no OLE DB.  
   
-|tipo de armazenamento de arquivo|Tipo de dados do arquivo host|Digite SQLNCLI. h para uso com ibcpsession:: BCPColFmt|Valor|  
+|Tipo de armazenamento de arquivo|Tipo de dados do arquivo host|Digite sqlncli. h para uso com IBCPSession:: BCPColFmt|Valor|  
 |-----------------------|-------------------------|-----------------------------------------------------------|-----------|  
-|DateTime|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
+|Datetime|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
 |Smalldatetime|SQLDATETIM4|BCP_TYPE_SQLDATETIME4|0x3a|  
-|Date|SQLDATE|BCP_TYPE_SQLDATE|0x28|  
-|Time|SQLTIME|BCP_TYPE_SQLTIME|0x29|  
+|Data|SQLDATE|BCP_TYPE_SQLDATE|0x28|  
+|Hora|SQLTIME|BCP_TYPE_SQLTIME|0x29|  
 |Datetime2|SQLDATETIME2|BCP_TYPE_SQLDATETIME2|0x2a|  
 |Datetimeoffset|SQLDATETIMEOFFSET|BCP_TYPE_SQLDATETIMEOFFSET|0x2b|  
   
 ## <a name="bcp-data-type-conversions"></a>Conversões de tipo de dados BCP  
  As tabelas a seguir fornecem informações de conversão.  
   
- **Observação do OLE DB** As conversões a seguir são executadas por IBCPSession. IRowsetFastLoad usa conversões OLE DB conforme definido em [conversões executadas do cliente para o servidor](../native-client-ole-db-date-time/conversions-performed-from-client-to-server.md). Observe que os valores datetime são arredondados para 1/300 de um segundo e os valores smalldatetime têm os segundos definidos como zero depois de concluídas as conversões de cliente descritas a seguir. O arredondamento de datetime se propaga para horas e minutos, mas não para a data.  
+ **OLE DB observação** As conversões a seguir são executadas pelo IBCPSession. O IRowsetFastLoad usa conversões OLE DB conforme definido em [conversões executadas do cliente para o servidor](../native-client-ole-db-date-time/conversions-performed-from-client-to-server.md). Observe que os valores datetime são arredondados para 1/300 de um segundo e os valores smalldatetime têm os segundos definidos como zero depois de concluídas as conversões de cliente descritas a seguir. O arredondamento de datetime se propaga para horas e minutos, mas não para a data.  
   
-|To --><br /><br /> De|date|time|smalldatetime|datetime|datetime2|datetimeoffset|char|wchar|  
+|Para --><br /><br /> De|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|char|wchar|  
 |------------------------|----------|----------|-------------------|--------------|---------------|--------------------|----------|-----------|  
-|Date|1|-|1,6|1,6|1,6|1,5,6|1,3|1,3|  
-|Time|N/D|1,10|1,7,10|1,7,10|1,7,10|1,5,7,10|1,3|1,3|  
+|Data|1|-|1,6|1,6|1,6|1,5,6|1,3|1,3|  
+|Hora|N/D|1,10|1,7,10|1,7,10|1,7,10|1,5,7,10|1,3|1,3|  
 |Smalldatetime|1,2|1,4,10|1|1|1,10|1,5,10|1,11|1,11|  
-|DateTime|1,2|1,4,10|1,12|1|1,10|1,5,10|1,11|1,11|  
+|Datetime|1,2|1,4,10|1,12|1|1,10|1,5,10|1,11|1,11|  
 |Datetime2|1,2|1,4,10|1,10 (ODBC)1,12 (OLE DB)|1,10|1,10|1,5,10|1,3|1,3|  
 |Datetimeoffset|1,2,8|1,4,8,10|1,8,10|1,8,10|1,8,10|1,10|1,3|1,3|  
 |Char/wchar (date)|9|-|9,6 (ODBC)9,6,12 (OLE DB)|9,6 (ODBC)9,6,12 (OLE DB)|9,6|9,5,6|N/D|N/D|  
@@ -124,7 +124,7 @@ ms.locfileid: "63207109"
 |-|Não há suporte a nenhuma conversão.<br /><br /> Será gerado um registro de diagnóstico de ODBC com SQLSTATE 07006 e a mensagem "Violação do atributo de tipo de dados restrito".|  
 |1|Se os dados fornecidos não forem válidos, um registro de diagnóstico de ODBC será gerado com SQLSTATE 22007 e a mensagem "Formato de datetime inválido". Para valores datetimeoffset, a parte time deve estar dentro do intervalo após a conversão em UTC, mesmo que nenhuma conversão em UTC seja solicitada. O motivo disso é que o TDS e o servidor sempre normalizam a hora em valores datetimeoffset para UTC. Por isso, o cliente deve verificar se os componentes time estão dentro do intervalo com suporte após a conversão em UTC.|  
 |2|O componente time é ignorado.|  
-|3|Para ODBC, se ocorrer truncamento com perda de dados, um registro de diagnóstico será gerado com SQLSTATE 22001 e a mensagem 'Dados de cadeia de caracteres, truncados à direita' o número de dígitos de frações de segundo (a escala) é determinado pelo tamanho da coluna de destino de acordo com o tabela a seguir. Para tamanhos de coluna maiores do que o intervalo na tabela, é sugerida uma escala de 7. Essa conversão deve permitir até nove dígitos de segundos fracionários, o máximo permitido pelo ODBC.<br /><br /> **Tipo:** DBTIME2<br /><br /> **Escala implícita 0** 8<br /><br /> **Escala 1..7 implícita** 10,16<br /><br /> <br /><br /> **Tipo:** DBTIMESTAMP<br /><br /> **Escala implícita 0:** 19<br /><br /> **Escala implícita 1..7:** 21..27<br /><br /> <br /><br /> **Tipo:** DBTIMESTAMPOFFSET<br /><br /> **Escala implícita 0:** 26<br /><br /> **Escala implícita 1..7:** 28..34<br /><br /> Para OLE DB, se ocorrer o truncamento com a perda de dados, será postado um erro. Para datetime2, o número de dígitos de frações de segundo (a escala) é determinado pelo tamanho da coluna de destino de acordo com a tabela a seguir. Para tamanhos de coluna maiores do que o intervalo na tabela, é sugerida uma escala de 9. Essa conversão deve permitir até nove dígitos de frações de segundo, o máximo permitido pelo OLE DB.<br /><br /> **Tipo:** DBTIME2<br /><br /> **Escala implícita 0** 8<br /><br /> **Escala implícita 1..9** 1..9<br /><br /> <br /><br /> **Tipo:** DBTIMESTAMP<br /><br /> **Escala implícita 0:** 19<br /><br /> **Escala implícita 1..9:** 21..29<br /><br /> <br /><br /> **Tipo:** DBTIMESTAMPOFFSET<br /><br /> **Escala implícita 0:** 26<br /><br /> **Escala implícita 1..9:** 28..36|  
+|3|Para ODBC, se ocorrer truncamento com perda de dados, um registro de diagnóstico será gerado com SQLSTATE 22001 e dados de cadeia de caracteres de mensagem, truncados à direita o número de dígitos de segundos fracionários (a escala) é determinado do tamanho da coluna de destino de acordo com o tabela a seguir. Para tamanhos de coluna maiores do que o intervalo na tabela, é sugerida uma escala de 7. Essa conversão deve permitir até nove dígitos de segundos fracionários, o máximo permitido pelo ODBC.<br /><br /> **Tipo:** DBTIME2<br /><br /> **Escala implícita 0** 8<br /><br /> **Escala implícita 1.. 7** 10, 16<br /><br /> <br /><br /> **Tipo:** DBTIMESTAMP<br /><br /> **Escala implícita 0:** 19<br /><br /> **Escala implícita 1.. 7:** 21.. 27<br /><br /> <br /><br /> **Tipo:** DBTIMESTAMPOFFSET<br /><br /> **Escala implícita 0:** 26<br /><br /> **Escala implícita 1.. 7:** 28.. 34<br /><br /> Para OLE DB, se ocorrer o truncamento com a perda de dados, será postado um erro. Para datetime2, o número de dígitos de segundos fracionários (a escala) é determinado pelo tamanho da coluna de destino de acordo com a tabela a seguir. Para tamanhos de coluna maiores do que o intervalo na tabela, é sugerida uma escala de 9. Essa conversão deve permitir até nove dígitos de frações de segundo, o máximo permitido pelo OLE DB.<br /><br /> **Tipo:** DBTIME2<br /><br /> **Escala implícita 0** 8<br /><br /> **Escala implícita 1.. 9** 1.. 9<br /><br /> <br /><br /> **Tipo:** DBTIMESTAMP<br /><br /> **Escala implícita 0:** 19<br /><br /> **Escala implícita 1.. 9:** 21.. 29<br /><br /> <br /><br /> **Tipo:** DBTIMESTAMPOFFSET<br /><br /> **Escala implícita 0:** 26<br /><br /> **Escala implícita 1.. 9:** 28.. 36|  
 |4|O componente de data é ignorado.|  
 |5|O timezone é definido como UTC (por exemplo, 00:00).|  
 |6|A hora é definida como zero.|  
@@ -136,8 +136,8 @@ ms.locfileid: "63207109"
 |12|Os segundos são definidos como zero e os segundos fracionários são descartados. Nenhum erro de truncamento é possível.|  
 |N/D|O [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] existente e o comportamento anterior é mantido.|  
   
-## <a name="see-also"></a>Consulte também  
- [Aprimoramentos de data e hora &#40;ODBC&#41;](date-and-time-improvements-odbc.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Melhorias de data e hora &#40;&#41;ODBC](date-and-time-improvements-odbc.md)   
  [Melhorias de data e hora &#40;OLE DB&#41;](../native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

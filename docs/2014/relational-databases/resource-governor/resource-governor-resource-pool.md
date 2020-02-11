@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4177d7e8ebc96e40e831a6558c7d8b5073c86bc5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63209871"
 ---
 # <a name="resource-governor-resource-pool"></a>Pool de recursos do Administrador de Recursos
@@ -116,7 +116,7 @@ ms.locfileid: "63209871"
 |Descreve como alterar as configurações do pool de recursos.|[Alterar configurações do pool de recursos](change-resource-pool-settings.md)|  
 |Descreve como excluir um pool de recursos.|[Excluir um pool de recursos](delete-a-resource-pool.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Administrador de Recursos](resource-governor.md)   
  [Grupos de carga de trabalho do Administrador de Recursos](resource-governor-workload-group.md)   
  [Função de classificação do Administrador de Recursos](resource-governor-classifier-function.md)   

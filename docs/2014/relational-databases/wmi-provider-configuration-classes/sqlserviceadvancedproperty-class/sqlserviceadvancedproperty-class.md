@@ -19,20 +19,20 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 903c33c2679d4869bd26e95392e6eb5dcd2f9fb2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63188590"
 ---
 # <a name="sqlserviceadvancedproperty-class"></a>Classe SqlServiceAdvancedProperty
-  O [classe SqlServiceAdvancedProperty](sqlserviceadvancedproperty-class.md) representa uma propriedade avançada do que é referenciado pelo serviço do [classe SqlService](../sqlservice-class/sqlservice-class.md) objeto.  
+  A [classe SqlServiceAdvancedProperty](sqlserviceadvancedproperty-class.md) representa uma propriedade avançada do serviço que é referenciada pelo objeto de [classe SqlService](../sqlservice-class/sqlservice-class.md) .  
   
- O [propriedade AdvancedProperties (classe SqlService)](../sqlservice-class/advancedproperties-property-sqlservice-class.md) faz referência a uma matriz de [classe SqlServiceAdvancedProperty](sqlserviceadvancedproperty-class.md) objetos.  
+ A [Propriedade AdvancedProperties (classe SqlService)](../sqlservice-class/advancedproperties-property-sqlservice-class.md) faz referência a uma matriz de objetos de [classe SqlServiceAdvancedProperty](sqlserviceadvancedproperty-class.md) .  
   
- O [Iniciando e parando serviços](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx) classe representa as propriedades que são exclusivas para o serviço. Essas propriedades não estão na lista de propriedades que está associado a [SqlService classe](https://technet.microsoft.com/library/ms186497.aspx) classe. O [classe SqlServiceAdvancedProperty](https://technet.microsoft.com/library/ms182447.aspx) classe permite a representação de propriedades de cadeia de caracteres, numéricos ou booleanos. Você pode usar essa classe para exibir as propriedades exclusivas do serviço especificado.  
+ A classe [Iniciando e parando serviços](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx) representa propriedades que são exclusivas para o serviço. Essas propriedades não estão na lista de propriedades que está associada à classe de [classe SqlService](https://technet.microsoft.com/library/ms186497.aspx) . A classe de [classe SqlServiceAdvancedProperty](https://technet.microsoft.com/library/ms182447.aspx) permite a representação de propriedades de cadeia de caracteres, numéricas ou booleanas. Você pode usar essa classe para exibir as propriedades exclusivas do serviço especificado.  
   
-## <a name="see-also"></a>Consulte também  
- [Iniciando, parando e pausas serviços](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+## <a name="see-also"></a>Consulte Também  
+ [Iniciando, parando e pausando serviços](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

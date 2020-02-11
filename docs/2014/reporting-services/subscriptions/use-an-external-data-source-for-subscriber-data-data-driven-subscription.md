@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8c8dfb41890049918799bb3638f52dc222fc5dcf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100636"
 ---
 # <a name="use-an-external-data-source-for-subscriber-data-data-driven-subscription"></a>Usar uma fonte de dados externa para obter dados de assinante (assinatura controlada por dados)
@@ -60,7 +60,7 @@ ms.locfileid: "66100636"
 -   O servidor de relatório criará uma entrega de relatório para cada linha do conjunto de resultados. Se o conjunto de resultados for composto por trezentas linhas, o servidor de relatório tentará enviar trezentos relatórios.  
   
 ## <a name="setting-delivery-options-using-variable-data-from-a-subscriber-database"></a>Definindo opções de entrega com dados variáveis de um banco de dados de assinantes  
- Você pode usar dados no banco de dados de assinantes para personalizar opções de entrega para cada destinatário. O tipo de extensão de entrega usado determina quais opções estão disponíveis. Se você estiver usando a extensão de entrega de emails do servidor de relatórios, a consulta deve conter um alias de email para cada assinante. Se a entrega de compartilhamento de arquivos estiver sendo usada, os dados do assinante devem incluir valores que podem ser usados para criar arquivos de relatório específicos do assinante ou para fornecer um destino para a entrega. Para obter mais informações, consulte [File Share Delivery in Reporting Services](file-share-delivery-in-reporting-services.md) e [entrega de email no Reporting Services](e-mail-delivery-in-reporting-services.md).  
+ Você pode usar dados no banco de dados de assinantes para personalizar opções de entrega para cada destinatário. O tipo de extensão de entrega usado determina quais opções estão disponíveis. Se você estiver usando a extensão de entrega de emails do servidor de relatórios, a consulta deve conter um alias de email para cada assinante. Se a entrega de compartilhamento de arquivos estiver sendo usada, os dados do assinante devem incluir valores que podem ser usados para criar arquivos de relatório específicos do assinante ou para fornecer um destino para a entrega. Para obter mais informações, consulte [entrega de compartilhamento de arquivos em Reporting Services](file-share-delivery-in-reporting-services.md) e [entrega de email em Reporting Services](e-mail-delivery-in-reporting-services.md).  
   
 ## <a name="passing-parameter-values-from-the-subscriber-database-to-the-report"></a>Transmitindo valores de parâmetro do banco de dados de assinantes para o relatório  
  Se estiver criando uma assinatura controlada por dados para um relatório parametrizado, use valores de parâmetro variáveis para personalizar a saída de cada relatório. Por exemplo, o banco de dados de assinantes pode conter números de identificação de funcionários, datas de contratação, cargos e informações sobre a localização de escritórios que podem ser usados para filtrar dados de relatório. Se o relatório aceitar os parâmetros baseados nesses dados ou em outros dados de coluna disponíveis, você pode mapear o parâmetro para a coluna adequada.  
@@ -78,7 +78,7 @@ ms.locfileid: "66100636"
   
  Se fizer alguma dessas alterações, você deverá atualizar a assinatura.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar, modificar e excluir uma assinatura controlada por dados](data-driven-subscriptions.md)   
  [Data-Driven Subscriptions](data-driven-subscriptions.md)   
  [Assinaturas e entrega &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)  

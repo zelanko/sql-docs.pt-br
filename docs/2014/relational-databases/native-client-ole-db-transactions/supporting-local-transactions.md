@@ -1,5 +1,5 @@
 ---
-title: Suporte a transações locais | Microsoft Docs
+title: Oferecendo suporte a transações locais | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,47 +18,47 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b75104940cca183005f8a465ea19d0a517247c25
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63213812"
 ---
 # <a name="supporting-local-transactions"></a>Dando suporte a transações locais
-  Uma sessão delimita o escopo da transação para um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] transação local do provedor OLE DB do Native Client. Quando, na direção de um consumidor, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB do Native Client envia uma solicitação para uma instância conectada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a solicitação constitui uma unidade de trabalho para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor OLE DB do Native Client. Transações locais sempre quebram uma ou mais unidades de trabalho em um único [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sessão do provedor OLE DB do Native Client.  
+  Uma sessão delimita o escopo da transação para uma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] transação local do provedor de OLE DB de cliente nativo. Quando, na direção de um consumidor, o provedor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de OLE DB de cliente nativo envia uma solicitação para uma instância conectada [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]do, a solicitação constitui uma unidade de trabalho para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o provedor de OLE DB de cliente nativo. As transações locais sempre encapsulam uma ou mais unidades de trabalho em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uma única sessão de provedor de OLE DB de cliente nativo.  
   
- Usando o padrão [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] modo de confirmação automática do provedor OLE DB do Native Client, uma única unidade de trabalho é tratado como o escopo de uma transação local. Apenas uma unidade participa da transação local. Quando uma sessão é criada, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor OLE DB do Native Client inicia uma transação para a sessão. Na conclusão bem-sucedida de uma unidade de trabalho, o trabalho é confirmado. Em caso de falha, qualquer trabalho começado é revertido e o erro é relatado ao consumidor. Em ambos os casos, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor OLE DB do Native Client inicia uma nova transação local para a sessão, de modo que todo o trabalho é realizado em uma transação.  
+ Usando o modo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de confirmação automática do provedor de OLE DB de cliente nativo padrão, uma única unidade de trabalho é tratada como o escopo de uma transação local. Apenas uma unidade participa da transação local. Quando uma sessão é criada, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo inicia uma transação para a sessão. Na conclusão bem-sucedida de uma unidade de trabalho, o trabalho é confirmado. Em caso de falha, qualquer trabalho começado é revertido e o erro é relatado ao consumidor. Em ambos os casos, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o provedor de OLE DB de cliente nativo inicia uma nova transação local para a sessão para que todo o trabalho seja realizado em uma transação.  
   
- O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consumidor do provedor OLE DB do Native Client pode direcionar um controle mais preciso sobre o escopo de transação local usando o **ITransactionLocal** interface. Quando uma sessão do consumidor inicia uma transação, todas as unidades de trabalho da sessão entre o ponto inicial da transação e as eventuais chamadas do método **Commit** ou **Abort** são tratadas como uma unidade atômica. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor OLE DB do Native Client inicia uma transação quando instruído a fazer isso pelo consumidor implicitamente. Se o consumidor não solicitar retenção, a sessão reverterá para o comportamento pai em nível de transação, geralmente o modo de confirmação automática.  
+ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consumidor do provedor de OLE DB de cliente nativo pode direcionar um controle mais preciso sobre o escopo da transação local usando a interface **ITransactionLocal** . Quando uma sessão do consumidor inicia uma transação, todas as unidades de trabalho da sessão entre o ponto inicial da transação e as eventuais chamadas do método **Commit** ou **Abort** são tratadas como uma unidade atômica. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo inicia implicitamente uma transação quando instruído a fazer isso pelo consumidor. Se o consumidor não solicitar retenção, a sessão reverterá para o comportamento pai em nível de transação, geralmente o modo de confirmação automática.  
   
- O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte ao provedor de OLE DB do Native Client **itransactionlocal:: Starttransaction** parâmetros da seguinte maneira.  
+ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo oferece suporte aos parâmetros **ITransactionLocal:: StartTransaction** da seguinte maneira.  
   
-|Parâmetro|Descrição|  
+|Parâmetro|DESCRIÇÃO|  
 |---------------|-----------------|  
-|*isoLevel*[in]|O nível de isolamento a ser usado com esta transação. Em transações locais, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor OLE DB do Native Client dá suporte para o seguinte:<br /><br /> -   ISOLATIONLEVEL_UNSPECIFIED<br />-   ISOLATIONLEVEL_CHAOS<br />-   ISOLATIONLEVEL_READUNCOMMITTED<br />-   ISOLATIONLEVEL_READCOMMITTED<br />-   ISOLATIONLEVEL_REPEATABLEREAD<br />-   ISOLATIONLEVEL_CURSORSTABILITY<br />-   ISOLATIONLEVEL_REPEATABLEREAD<br />-   ISOLATIONLEVEL_SERIALIZABLE<br />-   ISOLATIONLEVEL_ISOLATED<br />-   ISOLATIONLEVEL_SNAPSHOT **Note:**  Começando com [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], ISOLATIONLEVEL_SNAPSHOT é válido para o *isoLevel* argumento ou não o controle de versão está habilitado para o banco de dados. Porém, ocorrerá um erro se o usuário tentar executar uma instrução e o controle de versão não estiver habilitado e/ou o banco de dados não for somente leitura. Além disso, o erro XACT_E_ISOLATIONLEVEL ocorrerá se ISOLATIONLEVEL_SNAPSHOT for especificado como o *isoLevel* quando conectado a uma versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anterior ao [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
-|*isoFlags*[in]|O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor OLE DB do Native Client retornará um erro para qualquer valor diferente de zero.|  
-|*pOtherOptions*[in]|Se não for NULL, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor OLE DB do Native Client solicita o objeto de opções da interface. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB do Native Client retornará XACT_E_NOTIMEOUT se o objeto de opções *ulTimeout* membro não é zero. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB do Native Client ignora o valor da *szDescription* membro.|  
-|*pulTransactionLevel*[out]|Se não for NULL, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor OLE DB do Native Client retornará o nível aninhado da transação.|  
+|*isoLevel*[in]|O nível de isolamento a ser usado com esta transação. Em transações locais, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo dá suporte ao seguinte:<br /><br /> -ISOLATIONLEVEL_UNSPECIFIED<br />-ISOLATIONLEVEL_CHAOS<br />-ISOLATIONLEVEL_READUNCOMMITTED<br />-ISOLATIONLEVEL_READCOMMITTED<br />-ISOLATIONLEVEL_REPEATABLEREAD<br />-ISOLATIONLEVEL_CURSORSTABILITY<br />-ISOLATIONLEVEL_REPEATABLEREAD<br />-ISOLATIONLEVEL_SERIALIZABLE<br />-ISOLATIONLEVEL_ISOLATED<br />-ISOLATIONLEVEL_SNAPSHOT **Observação:** começando com [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], ISOLATIONLEVEL_SNAPSHOT é válido para o argumento *isoLevel* se o controle de versão está habilitado ou não para o banco de dados. Porém, ocorrerá um erro se o usuário tentar executar uma instrução e o controle de versão não estiver habilitado e/ou o banco de dados não for somente leitura. Além disso, o erro XACT_E_ISOLATIONLEVEL ocorrerá se ISOLATIONLEVEL_SNAPSHOT for especificado como o *isoLevel* quando conectado a uma versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anterior ao [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
+|*isoFlags*[in]|O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo retorna um erro para qualquer valor diferente de zero.|  
+|*pOtherOptions*[in]|Se não for NULL, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o provedor de OLE DB de cliente nativo solicitará o objeto de opções da interface. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo retorna XACT_E_NOTIMEOUT se o membro *ulTimeout* do objeto de opções não for zero. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo ignora o valor do membro *szDescription* .|  
+|*pulTransactionLevel*[saída]|Se não for NULL, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o provedor de OLE DB de cliente nativo retornará o nível aninhado da transação.|  
   
- Para transações locais, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB do Native Client provedor implementa **ITransaction:: Abort** parâmetros da seguinte maneira.  
+ Para transações locais, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo implementa os parâmetros **ITransaction:: Abort** da seguinte maneira.  
   
-|Parâmetro|Descrição|  
+|Parâmetro|DESCRIÇÃO|  
 |---------------|-----------------|  
 |*pboidReason*[in]|Ignorado se definido. Pode ser NULL com segurança.|  
-|*fRetaining*[in]|Quando TRUE, uma nova transação é iniciada implicitamente para a sessão. A transação deve ser confirmada ou encerrada pelo consumidor. Quando for falso, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor OLE DB do Native Client reverte ao modo de confirmação automática para a sessão.|  
-|*fAsync*[in]|Anulação assíncrona não é compatível com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor OLE DB do Native Client. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor OLE DB do Native Client retornará XACT_E_NOTSUPPORTED se o valor não é FALSE.|  
+|*fRetaining*[in]|Quando TRUE, uma nova transação é iniciada implicitamente para a sessão. A transação deve ser confirmada ou encerrada pelo consumidor. Quando for falso, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o provedor de OLE DB de cliente nativo será revertido para o modo de confirmação automática da sessão.|  
+|*fAsync*[in]|O provedor de OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cliente nativo não dá suporte para anulação assíncrona. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo retornará XACT_E_NOTSUPPORTED se o valor não for false.|  
   
- Para transações locais, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB do Native Client provedor implementa **ITransaction:: Commit** parâmetros da seguinte maneira.  
+ Para transações locais, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo implementa os parâmetros **ITransaction:: Commit** da seguinte maneira.  
   
-|Parâmetro|Descrição|  
+|Parâmetro|DESCRIÇÃO|  
 |---------------|-----------------|  
-|*fRetaining*[in]|Quando TRUE, uma nova transação é iniciada implicitamente para a sessão. A transação deve ser confirmada ou encerrada pelo consumidor. Quando for falso, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor OLE DB do Native Client reverte ao modo de confirmação automática para a sessão.|  
-|*grfTC*[in]|Fase um retorna e assíncrono não são suportados pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor OLE DB do Native Client. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor OLE DB do Native Client retorna XACT_E_NOTSUPPORTED para qualquer valor diferente de XACTTC_SYNC.|  
+|*fRetaining*[in]|Quando TRUE, uma nova transação é iniciada implicitamente para a sessão. A transação deve ser confirmada ou encerrada pelo consumidor. Quando for falso, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o provedor de OLE DB de cliente nativo será revertido para o modo de confirmação automática da sessão.|  
+|*grfTC*[in]|Os retornos assíncronos e da fase um não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são suportados pelo provedor de OLE DB nativo do cliente. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo retorna XACT_E_NOTSUPPORTED para qualquer valor diferente de XACTTC_SYNC.|  
 |*grfRM*[in]|Deve ser 0.|  
   
- O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conjuntos de linhas do provedor OLE DB do Native Client na sessão são preservados em uma confirmação local ou anular a operação com base nos valores das propriedades do conjunto de linhas DBPROP_ABORTPRESERVE e DBPROP_COMMITPRESERVE. Por padrão, essas propriedades são VARIANT_FALSE e todos os [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conjuntos de linhas do provedor OLE DB do Native Client na sessão são perdidos após uma operação de confirmação ou anulação.  
+ Os [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conjuntos de linhas do provedor de OLE DB de cliente nativo na sessão são preservados em uma operação de confirmação local ou de anulação com base nos valores das propriedades do conjunto de linhas DBPROP_ABORTPRESERVE e DBPROP_COMMITPRESERVE. Por padrão, essas propriedades são VARIANT_FALSE e todos os [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conjuntos de linhas do provedor de OLE DB do cliente nativo na sessão são perdidos após uma operação de anulação ou confirmação.  
   
- O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB do Native Client não implementa o **ITransactionObject** interface. Uma tentativa do consumidor de recuperar uma referência na interface retorna E_NOINTERFACE.  
+ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo não implementa a interface **ITransactionObject** . Uma tentativa do consumidor de recuperar uma referência na interface retorna E_NOINTERFACE.  
   
  Este exemplo usa **ITransactionLocal**.  
   
@@ -125,7 +125,7 @@ if (FAILED(hr))
 // Release any references and continue.  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Transações](transactions.md)   
  [Trabalhando com isolamento de instantâneo](../native-client/features/working-with-snapshot-isolation.md)  
   

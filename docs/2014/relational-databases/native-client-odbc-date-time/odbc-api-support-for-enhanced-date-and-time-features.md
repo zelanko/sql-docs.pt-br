@@ -1,5 +1,5 @@
 ---
-title: Suporte a API ODBC para recursos aprimorados de data e hora | Microsoft Docs
+title: Suporte à API ODBC para recursos aprimorados de data e hora | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d898406bb78662ea6b56a923307f432dc68a080f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63210146"
 ---
 # <a name="odbc-api-support-for-enhanced-date-and-time-features"></a>Suporte à API ODBC para recursos avançados de data e hora
@@ -68,7 +68,7 @@ ms.locfileid: "63210146"
   
 -   [bcp_setcolfmt](../native-client-odbc-extensions-bulk-copy-functions/bcp-setcolfmt.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Aprimoramentos de data e hora &#40;ODBC&#41;](date-and-time-improvements-odbc.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Melhorias de data e hora &#40;&#41;ODBC](date-and-time-improvements-odbc.md)  
   
   

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 056c200ec6b73cb7cf11ee4b3acf35bc331110b3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63204671"
 ---
 # <a name="tables-and-columns-dialog-box-visual-database-tools"></a>Caixa de dialogo Tabelas e Colunas (Visual Database Tools)
@@ -26,25 +26,25 @@ ms.locfileid: "63204671"
 >  Se a tabela for publicada para replicação, você precisará fazer alterações no esquema usando a instrução Transact-SQL [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) ou o SMO (SQL Server Management Objects). Ao fazer alterações no esquema com o Criador de Tabelas ou com o Criador do Diagrama de Banco de Dados, ele tenta descartar e recriar a tabela. Não é possível descartar objetos publicados, portanto, haverá falha na alteração de esquema.  
   
 ## <a name="options"></a>Opções  
- **Nome da Relação**  
+ **Nome da relação**  
  Mostra o nome da relação.  
   
- **Tabela de Chaves Primárias**  
+ **Tabela de chave primária**  
  Lista as tabelas no banco de dados Selecione a tabela que estará no lado da chave primária da relação.  
   
- **Tabela de Chaves Estrangeiras**  
+ **Tabela de chave estrangeira**  
  Mostra a tabela no lado da chave estrangeira da relação. Essa é a tabela selecionada atualmente no Designer de Tabela.  
   
- **Grade abaixo da Tabela de Chaves Primárias**  
+ **Grade abaixo da tabela de chave primária**  
  Lista as colunas da tabela selecionada na lista da **Tabela de Chaves Primárias** . Insira as colunas que contribuam para a chave primária daquela tabela.  
   
- **Grade abaixo da Tabela de Chaves Estrangeiras**  
+ **Grade abaixo da tabela de chaves estrangeiras**  
  Lista as colunas da tabela selecionada na lista da **Tabela de Chaves Estrangeiras** . Insira a coluna das chaves estrangeiras da tabela das chaves estrangeiras que corresponde à coluna das chaves primárias.  
   
 > [!NOTE]  
 >  As colunas selecionadas para a chave estrangeira devem ter o mesmo tipo de dados das colunas primárias às quais elas correspondem. Deve haver um número igual de colunas em cada uma das chaves. Por exemplo, se a chave primária da tabela no lado primário da relação estiver composta de duas colunas, será necessário coincidir cada uma dessas colunas com uma coluna na tabela no lado da chave estrangeira da relação.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar relações de chaves estrangeiras](../../relational-databases/tables/create-foreign-key-relationships.md)  
   
   

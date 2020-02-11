@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: abc5b51acc9c6beef6d3a62b95370f5081d5364d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63181363"
 ---
 # <a name="preparing-to-implement-a-delivery-extension"></a>Preparando para implementar uma entrega de extensão
@@ -37,7 +37,7 @@ ms.locfileid: "63181363"
   
  A tabela a seguir descreve as interfaces e as classes disponíveis para extensões de entrega.  
   
-|Interface ou classe|Descrição|  
+|Interface ou classe|DESCRIÇÃO|  
 |------------------------|-----------------|  
 |<xref:Microsoft.ReportingServices.Interfaces.IExtension> Interface|Representa uma extensão no [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].|  
 |<xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension> Interface|Representa uma extensão de entrega no [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].|  
@@ -48,7 +48,7 @@ ms.locfileid: "63181363"
 |Classe <xref:Microsoft.ReportingServices.Interfaces.RenderedOutputFile>|Representa a saída de uma extensão de renderização. Um objeto <xref:Microsoft.ReportingServices.Interfaces.RenderedOutputFile> contém o nome de arquivo associado e as informações de tipo exigidos pela extensão de entrega para o processamento do fluxo retornado pela extensão de renderização.|  
 |<xref:Microsoft.ReportingServices.Interfaces.ISubscriptionBaseUIUserControl> Interface|Um controle de usuário que representa o meio de recuperação de informações de assinatura específicas da extensão de entrega do usuário no Gerenciador de Relatórios (por exemplo, um endereço de email ou o caminho para um compartilhamento de arquivo).|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Extensões do Reporting Services](../reporting-services-extensions.md)   
  [Implementando uma extensão de entrega](implementing-a-delivery-extension.md)   
  [Biblioteca de extensões do Reporting Services](../reporting-services-extension-library.md)  

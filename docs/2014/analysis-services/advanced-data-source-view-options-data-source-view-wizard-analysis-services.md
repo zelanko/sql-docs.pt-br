@@ -1,5 +1,5 @@
 ---
-title: Avançado da caixa de diálogo de opções para exibição de fonte dados (Assistente de exibição de fonte de dados) (Analysis Services) | Microsoft Docs
+title: Caixa de diálogo Opções avançadas de exibição da fonte de dados (Assistente de exibição da fonte de dados) (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 40a1c9ab87a608aa9d39f77fb4693acdc1b57efa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062851"
 ---
 # <a name="advanced-data-source-view-options-dialog-box-data-source-view-wizard-analysis-services"></a>Caixa de diálogo Opções Avançadas de Exibição da Fonte de Dados (Assistente de Exibição da Fonte de Dados) (Analysis Services)
@@ -28,11 +28,11 @@ ms.locfileid: "66062851"
  **Recuperar relações**  
  Indica se os detalhes da relação devem ser recuperados da fonte de dados e aplicados à exibição da fonte de dados. Se você alterar essa opção após criar as relações, nenhuma relação existente será removida da exibição da fonte de dados.  
   
- **Restringir ao esquema (s)**  
+ **Restringir ao(s) Esquema(s)**  
  Use para especificar um lista separada por vírgulas de nomes de esquemas que restringe os esquemas que são recuperados da fonte de dados. Se não houver nenhum nome de esquema listado para essa opção, não haverá restrições sobre os esquemas que podem ser usados.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Fontes de dados em modelos multidimensionais](multidimensional-models/data-sources-in-multidimensional-models.md)   
- [Fontes de dados com suporte no &#40;Multidimensional do SSAS&#41;](multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
+ [Fontes de dados com suporte &#40;SSAS multidimensional&#41;](multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
   
   

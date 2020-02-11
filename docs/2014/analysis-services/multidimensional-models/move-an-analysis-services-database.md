@@ -1,5 +1,5 @@
 ---
-title: Mover um Analysis Services do banco de dados | Microsoft Docs
+title: Mover um banco de dados Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 02d084aea4491982d560f1cf0b8dc449b8502f09
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073595"
 ---
 # <a name="move-an-analysis-services-database"></a>Mover um Banco de Dados do Analysis Services
@@ -43,7 +43,7 @@ ms.locfileid: "66073595"
   
 1.  Localize o banco de dados a ser movido no painel esquerdo ou direito do SSMS.  
   
-2.  Clique com botão direito no banco de dados e selecione **desanexar...**  
+2.  Clique com o botão direito do mouse no banco de dados e selecione **desanexar...**  
   
 3.  Atribua uma senha ao banco de dados a ser desanexado e clique em **OK** para executar o comando detach.  
   
@@ -51,11 +51,11 @@ ms.locfileid: "66073595"
   
 5.  Localize a pasta **Bancos de Dados** no painel esquerdo ou direito do SSMS.  
   
-6.  Clique com botão direito no **bancos de dados** pasta e selecione **anexar...**  
+6.  Clique com o botão direito do mouse na pasta **bancos de dados** e selecione **anexar..** .  
   
-7.  Na caixa de texto **pasta** , digite o novo local da pasta do banco de dados. Como alternativa, você pode usar o botão Procurar ( **...** ) para localizar a pasta do banco de dados.  
+7.  Na caixa de texto **pasta** , digite o novo local da pasta do banco de dados. Como alternativa, você pode usar o botão procurar (**...**) para localizar a pasta do banco de dados.  
   
-8.  Selecione o `ReadWrite` modo para o banco de dados.  
+8.  Selecione o `ReadWrite` modo do banco de dados.  
   
 9. Digite a senha usada na etapa 3 e clique em **OK** para executar o comando Anexar.  
   
@@ -139,15 +139,15 @@ ms.locfileid: "66073595"
   
 2.  Execute o comando XMLA.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  <xref:Microsoft.AnalysisServices.Server.Attach%2A>   
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
- [Anexar e desanexar bancos de dados do Analysis Services](attach-and-detach-analysis-services-databases.md)   
+ [Anexar e desanexar bancos de dados Analysis Services](attach-and-detach-analysis-services-databases.md)   
  [Local de armazenamento do banco de dados](database-storage-location.md)   
- [Banco de dados ReadWriteModes](database-readwritemodes.md)   
- [Elemento Attach](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)   
+ [ReadWriteModes do banco de dados](database-readwritemodes.md)   
+ [Anexar elemento](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)   
  [Elemento Detach](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   
- [Elemento ReadWriteMode](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/readwritemode-element)   
+ [Elemento ReadWritemode](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/readwritemode-element)   
  [Elemento DbStorageLocation](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/dbstoragelocation-element)  
   
   

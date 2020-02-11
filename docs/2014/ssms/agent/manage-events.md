@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ed78d5ff91d09f9d8370eef31fd3a6651b301a38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63188223"
 ---
 # <a name="manage-events"></a>Gerenciar eventos
@@ -42,11 +42,11 @@ ms.locfileid: "63188223"
 ## <a name="disadvantages-of-using-an-alerts-management-server"></a>Desvantagens de usar um servidor de gerenciamento de alertas  
  São desvantagens de se configurar um servidor de gerenciamento de alertas:  
   
--   **Aumento do tráfego**. Encaminhar eventos a um servidor de gerenciamento de alertas pode aumentar o tráfego da rede. Esse aumento pode ser moderado pela restrição do encaminhamento a eventos que estejam acima de um nível de severidade designado.  
+-   **Maior tráfego**. Encaminhar eventos a um servidor de gerenciamento de alertas pode aumentar o tráfego da rede. Esse aumento pode ser moderado pela restrição do encaminhamento a eventos que estejam acima de um nível de severidade designado.  
   
--   **Ponto de falha único**. Se o servidor de gerenciamento de alertas ficar offline, nenhum alerta será emitido para qualquer evento no grupo gerenciado de servidores.  
+-   **Ponto único de falha**. Se o servidor de gerenciamento de alertas ficar offline, nenhum alerta será emitido para qualquer evento no grupo gerenciado de servidores.  
   
--   **Carga de servidor**. A manipulação de alertas para os eventos encaminhados provocam um aumento na carga de processamento no servidor de gerenciamento de alertas.  
+-   **Carga do servidor**. A manipulação de alertas para os eventos encaminhados provocam um aumento na carga de processamento no servidor de gerenciamento de alertas.  
   
 ## <a name="guidelines-for-using-an-alerts-management-server"></a>Diretrizes para usar um servidor de gerenciamento de alertas  
  Ao configurar um servidor de gerenciamento de alertas, siga estas diretrizes:  
@@ -87,7 +87,7 @@ ms.locfileid: "63188223"
 > [!NOTE]  
 >  Uma vez que um trabalho pode emitir um evento, tenha cuidado para não criar um loop recursivo alerta-trabalho.  
   
-## <a name="see-also"></a>Consulte também  
- [sys.sysmessages &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-sysmessages-transact-sql)  
+## <a name="see-also"></a>Consulte Também  
+ [sys. sysmessages &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-sysmessages-transact-sql)  
   
   

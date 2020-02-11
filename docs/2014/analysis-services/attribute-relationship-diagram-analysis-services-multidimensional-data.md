@@ -1,5 +1,5 @@
 ---
-title: Atributo do diagrama de relação (guia Designer de relação de atributo, Designer de dimensão) (Analysis Services - dados multidimensionais) | Microsoft Docs
+title: Diagrama de relação de atributo (guia Designer de relação de atributo, designer de dimensão) (Analysis Services-dados multidimensionais) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8fbd67f8a6fcc88a3821583d1e06ec3e8a75ab91
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66063099"
 ---
 # <a name="attribute-relationship-diagram-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>Diagrama de Relação de Atributo (guia Designer de Relação de Atributo, Designer de Dimensão) (Analysis Services - Dados multidimensionais)
@@ -34,27 +34,27 @@ ms.locfileid: "66063099"
 ### <a name="diagram-shortcut-menu"></a>Menu de atalhos de diagrama  
  Para abrir o menu de atalhos para o diagrama de relação de atributo, clique com o botão direito do mouse no plano de fundo do diagrama. O menu de atalhos de diagrama tem os seguintes comandos:  
   
- **Nova relação de atributo**  
+ **Nova Relação de Atributo**  
  Abre a caixa de diálogo **Criar Relação de Atributo** , na qual é possível definir uma nova relação de atributo.  
   
  Para obter mais informações, consulte [Caixas de diálogo Criar Relação de Atributo e Editar Relação de Atributo &#40;guia Designer de Relação de Atributo, Designer de Dimensão&#41; &#40;Analysis Services – Dados multidimensionais&#41;](create-edit-attribute-relationships-dialog-boxes-analysis-services-multidimensional-data.md) e [Definir Relações de Atributo](multidimensional-models/attribute-relationships-define.md).  
   
- **Organizar formas**  
+ **Organizar Formas**  
  Organiza as formas de acordo com o algoritmo de layout que o Designer de Dimensão utiliza.  
   
- **Organizar formas automaticamente**  
+ **Organizar Formas Automaticamente**  
  Organiza as formas automaticamente no diagrama de acordo com o algoritmo de layout que o Designer de Dimensão utiliza. Por padrão, **Organizar Formas Automaticamente** é habilitado.  
   
- **Mostrar exibições de lista**  
+ **Mostrar Exibições de Lista**  
  Exibe ou oculta as listas **Atributos** e **Relações de Atributo** . Estas listas aparecem em seus próprios painéis imediatamente abaixo do painel que contém o diagrama de relação de atributo.  
   
- **Expandir todas as formas**  
+ **Expandir Todas as Formas**  
  Exibe os atributos agrupados que estão associados com os atributos de nível superior. Os atributos agrupados só são visíveis quando as formas no diagrama de relação de atributo estiverem expandidas.  
   
 > [!NOTE]  
 >  Se você clicar nesta opção, o Designer de Dimensão fará com que as formas do diagrama de relação de atributo retornem ao layout padrão usado pelo designer.  
   
- **Recolher todas as formas**  
+ **Recolher Todas as Formas**  
  Oculta os atributos agrupados que estão associados com os atributos de nível superior.  
   
 > [!NOTE]  
@@ -66,7 +66,7 @@ ms.locfileid: "66063099"
 ### <a name="attribute-shortcut-menu"></a>Menu de atalhos de atributo  
  Para abrir o menu de atalhos de atributo, clique com o botão direito do mouse no diagrama de relação de atributo. O menu de atalhos de atributo tem os seguintes comandos:  
   
- **Nova relação de atributo**  
+ **Nova Relação de Atributo**  
  Abre a caixa de diálogo **Criar Relação de Atributo** , na qual é possível definir uma nova relação de atributo.  
   
  Para obter mais informações, consulte [Caixas de diálogo Criar Relação de Atributo e Editar Relação de Atributo &#40;guia Designer de Relação de Atributo, Designer de Dimensão&#41; &#40;Analysis Services – Dados multidimensionais&#41;](create-edit-attribute-relationships-dialog-boxes-analysis-services-multidimensional-data.md) e [Definir Relações de Atributo](multidimensional-models/attribute-relationships-define.md).  
@@ -77,7 +77,7 @@ ms.locfileid: "66063099"
 ### <a name="relationship-shortcut-menu"></a>Menu de atalhos de relação  
  Para abrir o menu de atalhos de relação, clique com o botão direito do mouse na seta que identifica a relação entre dois atributos. O menu de atalhos de relação tem os seguintes comandos:  
   
- **Editar relação de atributo**  
+ **Editar Relação de Atributo**  
  Abre a caixa de diálogo **Editar Relação de Atributo** na qual é possível modificar a relação de atributo.  
   
  Para obter mais informações, consulte [Caixas de diálogo Criar Relação de Atributo e Editar Relação de Atributo &#40;guia Designer de Relação de Atributo, Designer de Dimensão&#41; &#40;Analysis Services – Dados multidimensionais&#41;](create-edit-attribute-relationships-dialog-boxes-analysis-services-multidimensional-data.md) e [Definir Relações de Atributo](multidimensional-models/attribute-relationships-define.md).  
@@ -91,10 +91,10 @@ ms.locfileid: "66063099"
  **Propriedades**  
  Exibe as propriedades da relação na janela **Propriedades** .  
   
-## <a name="see-also"></a>Consulte também  
- [Relações de atributo &#40;Designer de dimensão&#41; &#40;Analysis Services - dados multidimensionais&#41;](attribute-relationships-dimension-designer-analysis-services-multidimensional-data.md)   
- [Barra de ferramentas &#40;guia Designer de relação de atributo, Designer de dimensão&#41; &#40;Analysis Services - dados multidimensionais&#41;](toolbar-attribute-relationship-dimension-designer-analysis-services-multidimensional-data.md)   
- [Atributos &#40;guia Designer de relação de atributo, Designer de dimensão&#41; &#40;Analysis Services - dados multidimensionais&#41;](attributes-designer-tab-dimension-designer-analysis-services-multidimensional-data.md)   
- [Relações de atributo &#40;guia Designer de relação de atributo, Designer de dimensão&#41; &#40;Analysis Services - dados multidimensionais&#41;](attribute-relationships-designer-tab-dimension-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Relações de atributo &#40;designer de dimensão&#41; &#40;Analysis Services de dados multidimensionais&#41;](attribute-relationships-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Barra de ferramentas &#40;guia Designer de relação de atributo, designer de dimensão&#41; &#40;Analysis Services-dados multidimensionais&#41;](toolbar-attribute-relationship-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Atributos &#40;guia Designer de relação de atributo, designer de dimensão&#41; &#40;Analysis Services de dados multidimensionais&#41;](attributes-designer-tab-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Relações de atributo &#40;guia Designer de relação de atributo, designer de dimensão&#41; &#40;Analysis Services de dados multidimensionais&#41;](attribute-relationships-designer-tab-dimension-designer-analysis-services-multidimensional-data.md)  
   
   

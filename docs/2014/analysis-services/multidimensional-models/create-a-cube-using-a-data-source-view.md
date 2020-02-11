@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 84e134854770f0096cc99c94698cfd8d7e3e818a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076562"
 ---
 # <a name="create-a-cube-using-a-data-source-view"></a>Criar um cubo usando uma Exibição da Fonte de Dados
@@ -51,7 +51,7 @@ ms.locfileid: "66076562"
 > [!NOTE]  
 >  Na guia **Diagrama** , você pode ampliar ou maximizar a janela do assistente para exibir o esquema.  
   
- Se houver uma tabela de dimensão de tempo na exibição da fonte de dados, selecione-a na lista **Tabela de dimensões de tempo** . Se não houver nenhum, deixe  **\<None >** selecionado. Este é o item padrão na lista. Selecionar uma tabela como a tabela de dimensão de tempo também a seleciona como uma tabela de dimensão nas guias **Tabelas** e **Diagrama** .  
+ Se houver uma tabela de dimensão de tempo na exibição da fonte de dados, selecione-a na lista **Tabela de dimensões de tempo** . Se não houver nenhum, deixe ** \<nenhuma>** selecionada. Este é o item padrão na lista. Selecionar uma tabela como a tabela de dimensão de tempo também a seleciona como uma tabela de dimensão nas guias **Tabelas** e **Diagrama** .  
   
 ## <a name="defining-time-periods"></a>Definindo períodos de tempo  
  Se você especificou uma tabela de dimensão de tempo enquanto selecionava tipos de tabela, use a página **Definir períodos de tempo** do assistente para especificar as colunas na tabela que correspondem a períodos de tempo padrão. Procure os períodos padrão em **Nome da Propriedade de Tempo**. Para cada linha que tem uma coluna correspondente na tabela de dimensão de tempo, escolha a coluna correta em **Colunas da Tabela de Tempo**. O assistente usa as associações que você especifica para criar atributos e sugerir hierarquias de tempo que fazem sentido para seus dados. Estas associações também definem a propriedade **Tipo** para os atributos correspondentes na nova dimensão de tempo. O assistente cria uma dimensão de tempo com base em uma tabela de dimensão de tempo.  
@@ -61,7 +61,7 @@ ms.locfileid: "66076562"
 ## <a name="selecting-dimensions"></a>Selecionando dimensões  
  Use a página **Selecionar Dimensões** do assistente para adicionar dimensões ao cubo. Esta página só aparecerá se já houver dimensões compartilhadas correspondentes a tabelas de dimensão no novo cubo.  
   
- Para adicionar dimensões existentes, selecione uma ou mais dimensões na lista **Dimensões compartilhadas** e clique no botão de seta para a direita ( **>** ) para movê-las para a lista **Dimensões do cubo** . Clique no botão da seta dupla ( **>>** ) para mover todas as dimensões na lista.  
+ Para adicionar dimensões existentes, selecione uma ou mais dimensões na lista **Dimensões compartilhadas** e clique no botão de seta para a direita (**>**) para movê-las para a lista **Dimensões do cubo** . Clique no botão de seta dupla**>>**() para mover todas as dimensões na lista.  
   
  Se uma dimensão existente não aparecer na lista e você achar que deve, clique em **Voltar** e altere as configurações de tipo de tabela para uma ou mais tabelas. Uma dimensão existente também deve estar relacionada a pelo menos uma das tabelas de fato no cubo para aparecer na lista **Dimensões compartilhadas** .  
   
@@ -88,7 +88,7 @@ ms.locfileid: "66076562"
   
  Para remover qualquer objeto na árvore do cubo, desmarque a caixa de seleção ao lado dele. Desmarcar a caixa de seleção ao lado de um objeto também remove todos os objetos debaixo dele. As dependências entre objetos são impostas, de modo que, se você remover um atributo, os níveis de hierarquia dependentes no atributo também serão removidos. Por exemplo, desmarcar uma caixa de seleção ao lado de uma hierarquia desmarca as caixas de seleção ao lado de todos os níveis na hierarquia, e remove os níveis e também as hierarquias. O atributo de chave para uma dimensão não pode ser removido.  
   
- Você pode renomear qualquer dimensão, o atributo, a hierarquia ou o nível de tanto clicando no nome ou clicando com o nome e, em seguida, no menu de atalho clicando em **renomeie \<objeto >** , onde  **\< objeto >** está **dimensão**, **atributo**, ou **nível**.  
+ Você pode renomear qualquer dimensão, atributo, hierarquia ou nível clicando no nome ou clicando com o botão direito do mouse no nome e, em seguida, no menu de atalho, clicando em **renomear \<objeto>**, em que ** \<o objeto>** é **dimensão**, **atributo**ou **nível**.  
   
  Não há necessariamente uma relação de um para um entre o número de tabelas de dimensão definido na página **Identificar Tabelas de Fatos e Dimensões** do assistente e o número de dimensões listadas nesta página do assistente. Dependendo das relações entre as tabelas na exibição da fonte de dados, o assistente pode usar duas ou mais tabelas para criar uma dimensão (por exemplo, como exigido por um esquema de floco de neve).  
   

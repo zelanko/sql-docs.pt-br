@@ -11,16 +11,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: db51298ccadb2dc3ef6b9060bc3d83987bb3c9ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63233141"
 ---
 # <a name="read-a-filestream-column-to-file-using-ibcpsession-ole-db"></a>Ler uma coluna FILESTREAM para o arquivo usando IBCPSession (OLE DB)
   Este exemplo lê uma coluna filestream para um arquivo que usa a interface IBCPSession e grava um arquivo de formato.  
   
- Para obter mais informações sobre o recurso filestream, consulte [suporte a FILESTREAM &#40;OLE DB&#41;](../../native-client/ole-db/filestream-support-ole-db.md).  
+ Para obter mais informações sobre o recurso FileStream, consulte [suporte a filestream &#40;OLE DB&#41;](../../native-client/ole-db/filestream-support-ole-db.md).  
   
 ## <a name="example"></a>Exemplo  
  Verifique se a variável de ambiente INCLUDE inclui o diretório que contém sqlncli.h.  
@@ -29,7 +29,7 @@ ms.locfileid: "63233141"
   
 -   [Enviar dados para uma coluna FILESTREAM usando ISequentialStream associado ao parâmetro ICommandText &#40;OLE DB&#41;](send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
   
--   [Enviar dados para uma coluna FILESTREAM usando IRowsetFastUpload &#40;OLE DB&#41;](send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
+-   [Enviar dados para uma coluna FILESTREAM usando o IRowsetFastUpload &#40;OLE DB&#41;](send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
   
  Copie a primeira listagem de código e cole-a em um arquivo denominado ISSHelper.h.  
   

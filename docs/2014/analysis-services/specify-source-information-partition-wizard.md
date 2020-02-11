@@ -1,5 +1,5 @@
 ---
-title: Especifique as informações de origem (Assistente para partições) | Microsoft Docs
+title: Especificar informações de origem (Assistente para partições) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: aca14c9462d847d91ae2b51dfdf179650ee06732
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068166"
 ---
 # <a name="specify-source-information-partition-wizard"></a>Especificar Informações sobre a Origem (Assistente para Partições)
@@ -26,7 +26,7 @@ ms.locfileid: "66068166"
 >  Se você especificar uma tabela em **Tabelas Disponíveis** que seja usada por outra partição, deverá fornecer uma consulta na página **Restringir Linhas** ou arriscar duplicação de dados no cubo.  
   
 ## <a name="options"></a>Opções  
- **grupo de medidas**  
+ **Grupo de medidas**  
  Selecione um grupo de medidas para esta partição.  
   
  **Look in**  
@@ -38,7 +38,7 @@ ms.locfileid: "66068166"
  **Localizar tabelas**  
  Selecione para atualizar a lista de tabelas em **Tabelas disponíveis**, restringindo ainda mais a lista, se uma cadeia de caracteres tiver sido especificada em **Filtrar tabelas**.  
   
- **Tabelas disponíveis**  
+ **Tabelas Disponíveis**  
  Selecione as tabelas a serem usadas como tabelas de origem para partições. O **Assistente para Partições** cria uma partição para cada tabela selecionada em **Tabelas Disponíveis**.  
   
  Se nenhum filtro for especificado em **Filtrar tabelas**, essa opção listará todas as tabelas da fonte de dados ou exibição da fonte de dados que são especificadas em **Examinar** e que são semelhantes em estrutura à tabela de fatos usada pelo grupo de medidas especificado em **Grupo de medidas**.  
@@ -48,7 +48,7 @@ ms.locfileid: "66068166"
 > [!NOTE]  
 >  Se mais de uma tabela for selecionada, a página **Restringir Linhas** não poderá ser exibida e as linhas não poderão ser restringidas para as partições criadas a partir das tabelas selecionadas. Para restringir linhas para cada partição, execute o Assistente para Partições uma vez para cada tabela da qual uma partição deve ser criada.  
   
-## <a name="see-also"></a>Consulte também  
- [Partições &#40;Analysis Services – Dados Multidimensionais&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Partições &#40;Analysis Services de dados multidimensionais&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

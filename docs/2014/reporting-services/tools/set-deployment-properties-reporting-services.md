@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 85ddbe528734e5824c80bd5cc00a15d3b32c9bec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099546"
 ---
 # <a name="set-deployment-properties-reporting-services"></a>Definir propriedades de implantação (Reporting Services)
@@ -42,23 +42,23 @@ ms.locfileid: "66099546"
     > [!NOTE]  
     >  Você pode usar várias configurações para alternar rapidamente entre diferentes servidores de relatório ou configurações.  
   
-3.  No **OutputPath** caixa de texto, digite ou cole o caminho no sistema de arquivos local para armazenar a definição de relatório usada na verificação da compilação, implantação e visualização de relatórios. O caminho deve ser diferente do caminho que você usa para o projeto e um caminho relativo que é uma pasta filho sob o caminho do projeto.  
+3.  Na caixa de texto **OutputPath** , digite ou cole o caminho no sistema de arquivos local para armazenar a definição de relatório usada na verificação de compilação, implantação e visualização de relatórios. O caminho deve ser diferente do caminho que você usa para o projeto e um caminho relativo que é uma pasta filho sob o caminho do projeto.  
   
-4.  No **ErrorLevel** caixa de texto, digite a severidade da compilação problemas que são relatados como erros. Os níveis de problemas que ocorrem ao compilar relatórios, fontes de dados ou outros recursos de projeto com severidade menor ou igual ao valor de **ErrorLevel** são relatados como erros; caso contrário, os problemas são relatados como avisos. Qualquer erro causará falha na tarefa de compilação. Os níveis de severidade válidos são de 0 a 4, inclusive. O valor padrão é 2.  
+4.  Na caixa de texto **ERRORLEVEL** , digite a severidade dos problemas de compilação que são relatados como erros. Problemas que ocorrem durante a criação de relatórios, fontes de dados ou outros recursos de projeto com níveis de severidade menores ou iguais ao valor de **ERRORLEVEL** são relatados como erros; caso contrário, os problemas são relatados como avisos. Qualquer erro causará falha na tarefa de compilação. Os níveis de severidade válidos são de 0 a 4, inclusive. O valor padrão é 2.  
   
      **ErrorLevel** pode ser usado para aumentar ou diminuir a sensibilidade da compilação. Por exemplo, quando um relatório com um mapa é compilado durante a implantação em um servidor de relatório do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] , um erro é exibido por padrão e ocorre falha na compilação do relatório. Se você abaixar o **ErrorLevel** , o mapa será removido do relatório, um aviso será exibido e a compilação do relatório continuará.  
   
-5.  No **StartItem** lista, selecione um relatório a ser exibido na janela de visualização ou em uma janela do navegador quando o projeto de relatório é executado.  
+5.  Na lista **StartItem** , selecione um relatório a ser exibido na janela de visualização ou em uma janela do navegador quando o projeto de relatório for executado.  
   
 6.  Na lista **OverwriteDataSources** , selecione **True** para substituir a fonte de dados compartilhados no servidor cada vez que elas forem publicadas, ou selecione **False** para manter a fonte de dados no servidor.  
   
-7.  No **TargetServerVersion** lista, selecione o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] versão do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou selecione **detectar versão** para determinar automaticamente a versão instalada no o servidor identificado pela **TargetServer URL** propriedade. O valor padrão é **SQL Server 2008 R2**.  
+7.  Na lista **TargetServerVersion** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] , selecione a versão ou [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou selecione **detectar versão** para determinar automaticamente a versão instalada no servidor identificado pela propriedade **URL TargetServer** . O valor padrão é **SQL Server 2008 R2**.  
   
      Use **TargetServerVersion** para personalizar os relatórios criados, colocados no caminho especificado em OutputPath, para a versão do servidor de relatório especificada em **TargetServer URL**.  
   
 8.  Na caixa de texto **TargetDataSourceFolder** , digite a pasta no servidor de relatórios no qual as fontes de dados compartilhadas publicadas devem ser posicionadas. O valor padrão para **TargetDataSourceFolder** é Fontes de Dados. Se você deixar este valor em branco, as fontes de dados serão publicadas no local especificado em **TargetReportFolder**.  
   
-9. Na caixa de texto **TargetReportFolder** , digite a pasta no servidor de relatórios no qual os relatórios publicados devem ser posicionados. O valor padrão para **TargetReportFolder** é o nome do projeto de relatório.  
+9. Na caixa de texto **TargetReportFolder** , digite a pasta no servidor de relatórios no qual os relatórios publicados devem ser posicionados. O valor padrão de **TargetReportFolder** é o nome do projeto de relatório.  
   
     > [!NOTE]  
     >  Para um servidor de relatórios executado no modo nativo, você deverá ter permissões de **Publicação** na pasta de destino para publicar relatórios nessa pasta. As permissões de publicação são fornecidas por meio de uma atribuição de função que mapeia sua conta de usuário para uma função que inclui operações de publicação. Para obter mais informações, consulte [Criar e gerenciar atribuições](../security/create-and-manage-role-assignments.md). Para um servidor de relatórios executado no modo integrado do SharePoint, você deve ter permissão de **Membro** ou **Proprietário** no site do SharePoint. Para obter mais informações, consulte [Referência à permissão de listas e sites do SharePoint para itens do Servidor de Relatório](../security/sharepoint-site-and-list-permission-reference-for-report-server-items.md).  
@@ -80,10 +80,10 @@ ms.locfileid: "66099546"
     > [!NOTE]  
     >  Se **Build** estiver selecionado, o Designer de Relatórios cria o projeto de relatórios e procura erros antes de exibir ou publicar em um servidor de relatórios. Se **Deploy** estiver selecionado, o Designer de Relatórios publicará os relatórios no servidor de relatórios conforme definido nas propriedades de implantação. Se **Deploy** não estiver selecionado, o Designer de Relatórios exibirá o relatório especificado na propriedade **StartItem** em uma janela de visualização local.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Publicando fontes de dados e relatórios](../reports/publishing-data-sources-and-reports.md)   
- [Visualizar relatórios](../reports/previewing-reports.md)   
- [Ajuda F1 do Designer de Relatórios](report-designer-f1-help.md)   
+ [Visualizando relatórios](../reports/previewing-reports.md)   
+ [Ajuda F1 Report Designer](report-designer-f1-help.md)   
  [Exemplos de URL para itens de relatório publicados em um Servidor de Relatório no modo do SharePoint &#40;SSRS&#41;](url-examples-for-items-on-a-report-server-sharepoint-mode.md)   
  [Caixa de diálogo Páginas de Propriedades do Projeto](project-property-pages-dialog-box.md)   
  [Publicar relatórios em um servidor de relatórios](../reports/publishing-reports-to-a-report-server.md)  

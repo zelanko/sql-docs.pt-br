@@ -1,5 +1,5 @@
 ---
-title: Gráfico de precisão (SQL Server Data Mining Add-ins) | Microsoft Docs
+title: Gráfico de precisão (SQL Server suplementos de mineração de dados) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,16 +18,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ebe159aed7b27bf00ef47a110de1c7ec5ee70adb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062985"
 ---
 # <a name="accuracy-chart-sql-server-data-mining-add-ins"></a>Gráfico de Precisão (Suplementos de Mineração de Dados do SQL Server)
-  ![Botão na faixa de opções mineração de dados do gráfico de precisão](media/dmc-accchart.gif "botão gráfico de precisão na faixa de opções mineração de dados")  
+  ![Botão Gráfico de Precisão na faixa de opções Mineração de Dados](media/dmc-accchart.gif "Botão Gráfico de Precisão na faixa de opções Mineração de Dados")  
   
- Um gráfico de precisão lhe permite aplicar um modelo a um novo conjunto de dados e avaliar a execução desse modelo. O gráfico de precisão criado por este assistente é um *gráfico de comparação de precisão*, que é um tipo de gráfico que é frequentemente usado para medir a precisão de um modelo de mineração de dados. Esse tipo de gráfico de precisão exibe uma representação gráfica da melhoria obtida com o uso do modelo de mineração de dados especificado, em comparação com previsões aleatórias e com o caso ideal em que 100% das previsões são precisas. Você pode comparar vários modelos em um único gráfico.  
+ Um gráfico de precisão lhe permite aplicar um modelo a um novo conjunto de dados e avaliar a execução desse modelo. O gráfico de exatidão criado por esse assistente é um *gráfico*de comparação de precisão, que é um tipo de gráfico que é frequentemente usado para medir a precisão de um modelo de data mining. Esse tipo de gráfico de precisão exibe uma representação gráfica da melhoria obtida com o uso do modelo de mineração de dados especificado, em comparação com previsões aleatórias e com o caso ideal em que 100% das previsões são precisas. Você pode comparar vários modelos em um único gráfico.  
   
 ## <a name="example"></a>Exemplo  
  Considere o caso em que o Departamento de marketing da Adventure Works Cycles deseja criar uma campanha de correspondência direcionada. Das campanhas anteriores eles sabem que é típica uma taxa de resposta de 10 por cento. Eles têm uma lista de 10.000 clientes potenciais armazenada em uma tabela do banco de dados. Considerando a taxa de resposta típica, eles podem esperar que 1.000 clientes respondam.  
@@ -41,29 +41,29 @@ ms.locfileid: "66062985"
 ## <a name="using-the-accuracy-chart-wizard"></a>Usando o Assistente de Gráfico de Precisão  
  Para criar um gráfico de precisão, você deve referenciar uma estrutura de mineração de dados existente. Você pode medir a precisão de vários modelos com base nessa estrutura, desde que eles prevejam a mesma coisa.  
   
- Se você não tiver certeza sobre quais estruturas estão disponíveis, procure no servidor. Para obter mais informações, consulte [procurando modelos no Excel &#40;SQL Server Data Mining Add-ins&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md).  
+ Se você não tiver certeza sobre quais estruturas estão disponíveis, procure no servidor. Para obter mais informações, consulte [procurando modelos no Excel &#40;SQL Server suplementos de mineração de dados&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md).  
   
 #### <a name="to-create-an-accuracy-chart"></a>Para criar um gráfico de precisão  
   
-1.  Clique o **cliente de mineração de dados** faixa de opções.  
+1.  Clique na faixa de faixas **cliente de mineração de dados** .  
   
-2.  No **precisão e validação** , clique em **gráfico de precisão**.  
+2.  No grupo de **precisão e validação** , clique em **gráfico de precisão**.  
   
-3.  No **selecionar estrutura ou modelo** caixa de diálogo caixa, escolha o modelo que você deseja avaliar. Clique em **Avançar**.  
+3.  Na caixa de diálogo **selecionar estrutura ou modelo** , escolha o modelo que você deseja avaliar. Clique em **Próximo**.  
   
     > [!NOTE]  
     >  Escolha um modelo bem parecido com os dados que você pretende testar.  
   
-4.  No **especificar coluna e valor a prever** caixa de diálogo, escolha a coluna que você deseja prever e um valor de destino, se apropriado. Clique em **Avançar**.  
+4.  Na caixa de diálogo **especificar coluna para prever e valor a prever** , escolha a coluna que você deseja prever e um valor de destino, se apropriado. Clique em **Próximo**.  
   
      No exemplo acima, você pode escolher a coluna que modela a resposta do cliente e especificar o valor de destino como "Probabilidade de compra".  
   
     > [!NOTE]  
     >  Não é possível prever um valor contínuo. No entanto, você pode discretizar a coluna separando os valores em intervalos discretos. Faça isso antes de criar o modelo de mineração de dados.  
   
-5.  No **Selecionar fonte de dados** caixa de diálogo, especifique a fonte de dados que você passará por meio do modelo para criar uma previsão.  
+5.  Na caixa de diálogo **selecionar dados de origem** , especifique a origem dos dados que você passará pelo modelo para criar uma previsão.  
   
-6.  Se você estiver usando uma fonte de dados e não os dados de teste que são armazenados com o modelo, no externa a **especificar relacionamentos** caixa de diálogo, mapeie as colunas na nova fonte de dados para as colunas usadas no modelo de mineração de dados.  
+6.  Se você estiver usando uma fonte de dados externa, e não os dados de teste que são armazenados com o modelo, na caixa de diálogo **especificar relações** , mapeie as colunas nos novos dados de origem para as colunas usadas no modelo de data mining.  
   
      Se os nomes das colunas forem semelhantes, eles serão mapeados automaticamente pelo assistente. Embora algumas colunas nos dados de entrada talvez sejam irrelevantes para análise e possam ser ignoradas, algumas colunas são necessárias para que o modelo de mineração de dados processe a entrada. Essas colunas podem incluir uma ID de transação, o valor de destino ou colunas usadas para previsão. Se você não conseguir mapear uma coluna necessária, o assistente fornecerá uma mensagem de aviso.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "66062985"
      O assistente cria um relatório que contém o gráfico de comparação de precisão e os dados subjacentes.  
   
 ### <a name="requirements"></a>Requisitos  
- Se você estiver prevendo um valor discreto, selecione o valor de destino que deseja prever. Por exemplo, se os dados estiverem categorizados com uma resposta "Sim: Comprar"como 1 e a resposta" não: Não comprar"como 2, você deve especificar 1 ou 2 como valores de previsão. No entanto, se você quiser prever um intervalo de valores, compare apenas dois valores de cada vez. Por exemplo, para prever uma pontuação acima de 5, talvez seja necessário rotular novamente os dados de origem e criar um novo modelo que separa os resultados em dois conjuntos: aqueles maiores do que 5 e os menores do que 5. Você pode comparar a precisão desses dois grupos.  
+ Se você estiver prevendo um valor discreto, selecione o valor de destino que deseja prever. Por exemplo, se os dados estiverem categorizados com uma resposta "Sim: Comprar" como 1 e a resposta "Não: Não Comprar" como 2, você deve especificar 1 ou 2 como valores de previsão. No entanto, se você quiser prever um intervalo de valores, compare apenas dois valores de cada vez. Por exemplo, para prever uma pontuação acima de 5, talvez seja necessário rotular novamente os dados de origem e criar um novo modelo que separa os resultados em dois conjuntos: aqueles maiores do que 5 e os menores do que 5. Você pode comparar a precisão desses dois grupos.  
   
 ## <a name="understanding-accuracy"></a>Entendendo a precisão  
  É possível criar dois tipos de gráficos: um no qual você especifica um estado da coluna previsível e outro no qual não especifica o estado.  
@@ -83,7 +83,7 @@ ms.locfileid: "66062985"
   
  Para obter mais informações sobre como um gráfico de comparação de precisão funciona e como a precisão é calculada com base nas linhas de previsão aleatória e ideal, consulte o tópico "Gráfico de comparação de precisão" nos Manuais Online do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>Consulte também  
- [Validando modelos e usando modelos para previsão &#40;Data Mining Add-ins para Excel&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Validando modelos e usando modelos para previsão &#40;suplementos de mineração de dados para Excel&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)  
   
   

@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b18643f97a328dfee94bc5bfe125d6eddeae4efe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150438"
 ---
 # <a name="view-the-windows-application-log-windows"></a>Exibir o log de aplicativos do Windows (Windows)
@@ -43,7 +43,7 @@ ms.locfileid: "63150438"
   
 6.  Para exibir mais informações sobre um evento, clique duas vezes no evento.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exibir o log de erros do SQL Server &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md)  
   
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 35f851770c78a5079ab5381ad66a13776d90023d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66071413"
 ---
 # <a name="errors-and-events-reference-powerpivot-for-sharepoint"></a>Referência de erros e eventos (PowerPivot para SharePoint)
@@ -22,8 +22,8 @@ ms.locfileid: "66071413"
   
  Para exibir a lista de mensagens de erro documentada nesta seção, use o painel de conteúdo em Manuais Online.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Configurar a coleta de dados de uso para &#40;PowerPivot para SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)   
- [Configurar e exibir arquivos de Log do SharePoint e log de diagnóstico &#40;PowerPivot para SharePoint&#41;](configure-and-view-sharepoint-and-diagnostic-logging.md)  
+ [Configurar e exibir arquivos de log do SharePoint e log de diagnóstico &#40;PowerPivot para SharePoint&#41;](configure-and-view-sharepoint-and-diagnostic-logging.md)  
   
   

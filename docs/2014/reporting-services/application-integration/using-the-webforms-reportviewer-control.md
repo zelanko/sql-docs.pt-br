@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6fa1b5f0cc1e4952523f53f02e219db42aa5b3c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63238208"
 ---
 # <a name="using-the-webforms-reportviewer-control"></a>Usando o controle WebForms ReportViewer
@@ -24,9 +24,9 @@ ms.locfileid: "63238208"
   
 ###### <a name="to-use-the-reportviewer-control-in-a-web-application"></a>Para usar o controle ReportViewer em um aplicativo Web  
   
-1.  Crie um novo site [!INCLUDE[msCoName](../../includes/msconame-md.md)] ASP.NET usando o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] ou o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
+1.  Crie um novo [!INCLUDE[msCoName](../../includes/msconame-md.md)] site do ASP.NET usando o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] ou [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]o.  
   
-     \- Ou –  
+     \-Or  
   
      Abra um site ASP.NET existente e adicione um novo Web Form.  
   
@@ -38,11 +38,11 @@ ms.locfileid: "63238208"
   
      O controle **ReportViewer** chamado reportViewer1 é adicionado ao formulário.  
   
- Depois que o controle for adicionado ao formulário, marcação inteligente **Tarefas do ReportViewer**, será exibida solicitando que você selecione um relatório. Se o relatório que você deseja exibir tiver sido implantado em um servidor de relatório, selecione a opção **\<Server Report>** na lista suspensa **Escolher Relatório**. Depois que a opção **\<Server Report>** for selecionada, serão exibidas duas propriedades adicionais, **URL do Servidor de Relatório** e **Caminho do Relatório**. A **URL do Servidor de Relatório** é o endereço do servidor de relatório e o **Caminho do Relatório** é o caminho completo para o relatório que você deseja renderizar.  
+ Depois que o controle for adicionado ao formulário, marcação inteligente **Tarefas do ReportViewer**, será exibida solicitando que você selecione um relatório. Se o relatório que você deseja exibir tiver sido implantado em um servidor de ** \<** relatório, selecione a opção>do relatório do servidor na lista suspensa **escolher relatório** . Depois que a opção ** \<relatório do servidor>** for selecionada, duas propriedades adicionais serão exibidas, **URL do servidor de relatório** e **caminho do relatório**. A **URL do Servidor de Relatório** é o endereço do servidor de relatório e o **Caminho do Relatório** é o caminho completo para o relatório que você deseja renderizar.  
   
  Se desejar exibir um relatório no modo local, selecione a opção **Criar um novo relatório** para iniciar o designer de relatórios ou selecione um relatório que já faz parte do projeto existente. Depois de selecionar um relatório, insira o nome do arquivo de relatório RDLC na propriedade **ReportPath** do controle ReportViewer. Essa propriedade é exibida no nó **LocalReport** do painel **Propriedades**.  
   
- É possível ocultar um ou mais dos itens na barra de ferramentas ReportViewer quando o relatório é renderizado. Por exemplo, você pode ocultar o botão de impressão. Para ocultar itens da barra de ferramentas, defina as propriedades ReportViewer como `False` no **propriedades** painel.  
+ É possível ocultar um ou mais dos itens na barra de ferramentas ReportViewer quando o relatório é renderizado. Por exemplo, você pode ocultar o botão de impressão. Para ocultar itens da barra de ferramentas, defina as seguintes `False` Propriedades de ReportViewer como no painel **Propriedades** .  
   
 -   `ShowBackButton`  
   
@@ -61,7 +61,7 @@ ms.locfileid: "63238208"
 ## <a name="viewing-reports-in-remote-processing-mode"></a>Exibindo relatórios em modo de processamento remoto  
  O exemplo a seguir demonstra como renderizar um relatório implantado em um servidor de relatório. Este exemplo usa o relatório Detalhes do Pedido de Vendas incluído no projeto de relatórios de exemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
- O exemplo usa a Autenticação integrada do Windows, por isso primeiro você deve habilitar a representação. Para isso, insira a seguinte linha no `web.config` arquivo:  
+ O exemplo usa a Autenticação integrada do Windows, por isso primeiro você deve habilitar a representação. Para fazer isso, insira a seguinte linha no `web.config` arquivo:  
   
 ```  
 <!-- Web.config file. -->  
@@ -478,7 +478,7 @@ Partial Class _Default
 End Class  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Integrando o Reporting Services usando os controles ReportViewer](integrating-reporting-services-using-reportviewer-controls.md)  
   
   

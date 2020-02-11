@@ -1,5 +1,5 @@
 ---
-title: Gerenciando o Service Broker | Microsoft Docs
+title: Gerenciando Service Broker | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e74e1530efc8e6000a9edf8882cf37cc60b1f1e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63226200"
 ---
 # <a name="managing-service-broker"></a>Gerenciando o Service Broker
@@ -40,7 +40,7 @@ ms.locfileid: "63226200"
   
 -   Os objetos <xref:Microsoft.SqlServer.Management.Smo.Broker.ServiceRoute> representam uma rota do [!INCLUDE[ssSB](../../../includes/sssb-md.md)], que contém as informações de local para o serviço e o banco de dados no qual ele é definido. Uma rota é necessária para a entrega de mensagens. Por padrão, cada banco de dados contém uma rota que especifica o local como a instância atual do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  <xref:Microsoft.SqlServer.Management.Smo.Broker>   
  [SQL Server Service Broker](../../../database-engine/configure-windows/sql-server-service-broker.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Definir opções de Cursor (ODBC) | Microsoft Docs
+title: Definir opções de cursor (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 48389a3b537461a89bcf5c8bcbc646d3417939c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200349"
 ---
 # <a name="set-cursor-options-odbc"></a>Definir opções de cursor (ODBC)
   Para definir opções de cursor, chame [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md) para definir ou [SQLGetStmtAttr](../../native-client-odbc-api/sqlgetstmtattr.md) para obter as opções de instrução que controlam o comportamento do cursor.  
   
-|*Atributo*|Especifica|  
+|*Attribute*|Especifica|  
 |-----------------|---------------|  
 |SQL_ATTR_CURSOR_TYPE|Tipo de cursor: somente avanço, estático, dinâmico ou controlado por conjunto de chaves.|  
 |SQL_ATTR_CONCURRENCY|Opção de controle de simultaneidade: somente leitura, bloqueio, otimista usando carimbos de data/hora ou otimista usando valores.|  
@@ -30,7 +30,7 @@ ms.locfileid: "63200349"
 |SQL_ATTR_CURSOR_SENSITIVITY|Cursor que mostra ou não atualizações nas linhas de cursor feitas por outras conexões.|  
 |SQL_ATTR_CURSOR_SCROLLABLE|Cursor que pode avançar e recuar.|  
   
- Os valores padrão desses atributos (somente avanço, somente leitura, tamanho de conjunto de linhas de 1) não usam cursores de servidor. Para usar cursores de servidor, pelo menos um desses atributos deve ser definido como um valor diferente do padrão e a instrução executada deve ser uma instrução SELECT ou um procedimento armazenado que contém uma única instrução SELECT. Ao usar cursores de servidor, instruções SELECT não podem usar as cláusulas não suportadas por cursores de servidor: COMPUTE, COMPUTE BY, FOR BROWSE e INTO.  
+ Os valores padrão desses atributos (somente avanço, somente leitura, tamanho de conjunto de linhas de 1) não usam cursores de servidor. Para usar cursores de servidor, pelo menos um desses atributos deve ser definido como um valor diferente do padrão e a instrução executada deve ser uma instrução SELECT ou um procedimento armazenado que contém uma única instrução SELECT. Quando cursores de servidor forem usados, as instruções SELECT não poderão usar cláusulas às quais os cursores de servidor não ofereçam suporte: COMPUTE, COMPUTE BY, FOR BROWSE e INTO.  
   
  Você pode controlar o tipo de cursor usado ao definir SQL_ATTR_CURSOR_TYPE e SQL_ATTR_CONCURRENCY ou ao definir SQL_ATTR_CURSOR_SENSITIVITY e SQL_ATTR_CURSOR_SCROLLABLE. Você não deve misturar os dois métodos de especificação de comportamento de cursor.  
   
@@ -56,7 +56,7 @@ retcode = SQLSetStmtAttr(hstmt1, SQL_ATTR_CURSOR_SENSITIVITY, SQLPOINTER)SQL_INS
 retcode = SQLExecDirect(hstmt1, select au_lname from authors", SQL_NTS);  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Executar consultas de tópicos de instruções &#40;ODBC&#41;](executing-queries-how-to-topics-odbc.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Tópicos de instruções sobre como executar consultas &#40;ODBC&#41;](executing-queries-how-to-topics-odbc.md)  
   
   

@@ -11,18 +11,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6f5f4492dc18a93ab1fea9d34287eb90703bc3d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63149912"
 ---
 # <a name="preprocess-option-distributed-replay-administration-tool"></a>Opção de pré-processamento (ferramenta de administração Distributed Replay)
-  O [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ferramenta de administração do Distributed Replay, `DReplay.exe`, é uma ferramenta de linha de comando que você pode usar para se comunicar com o distributed replay controller. Este tópico descreve a opção de linha de comando **preprocess** e a sintaxe correspondente.  
+  A [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ferramenta de administração de `DReplay.exe`Distributed Replay,, é uma ferramenta de linha de comando que você pode usar para se comunicar com o Distributed Replay Controller. Este tópico descreve a opção de linha de comando **preprocess** e a sintaxe correspondente.  
   
  A opção **preprocess** inicia o estágio de pré-processamento. Durante esse estágio, o controlador prepara os dados de rastreamento de entrada para retomada contra o servidor de destino.  
   
- ![Ícone de link do tópico](../../database-engine/media/topic-link.gif "Ícone de link do tópico") Para obter mais informações sobre as convenções de sintaxe usadas com a sintaxe da ferramenta de administração, confira [Convenções de sintaxe Transact-SQL &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/transact-sql-syntax-conventions-transact-sql).  
+ ![Ícone de link do tópico](../../database-engine/media/topic-link.gif "Ícone de link do tópico") Para obter mais informações sobre as convenções de sintaxe usadas com a sintaxe da ferramenta de administração, consulte [convenções de sintaxe Transact-sql &#40;Transact-sql&#41;](/sql/t-sql/language-elements/transact-sql-syntax-conventions-transact-sql).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -32,8 +32,8 @@ ms.locfileid: "63149912"
     -dcontroller_working_dir [-cconfig_file] [-fstatus_interval]  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- **-m** *controller*  
+#### <a name="parameters"></a>parâmetros  
+ **-m** *controlador*  
  Especifica o nome do computador do controlador. Você pode usar "`localhost`" ou "`.`" para fazer referência ao computador local.  
   
  Se o parâmetro **-m** não for especificado, será usado o computador local.  
@@ -59,7 +59,7 @@ ms.locfileid: "63149912"
   
 -   Não há suporte para caminhos UNC.  
   
- **-c** *config_file*  
+ **-c** *CONFIG_FILE*  
  É o caminho completo do arquivo de configuração de pré-processamento; usado para especificar o local do arquivo de configuração de pré-processamento quando armazenado em um local diferente. Esse parâmetro pode ser um caminho UNC ou pode residir localmente no computador onde você executa a ferramenta de administração.  
   
  O parâmetro **-c** não será obrigatório se nenhuma filtragem for necessária, ou se você não desejar modificar o tempo ocioso máximo.  
@@ -103,9 +103,9 @@ dreplay preprocess -m localhost -i c:\mytrace.trc -d c:\WorkingDir -c c:\DReplay
   
  Para saber mais, confira [Distributed Replay Security](distributed-replay-security.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Preparar os dados de rastreamento de entrada](prepare-the-input-trace-data.md)   
  [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
- [Configurar o Distributed Replay](configure-distributed-replay.md)  
+ [Configure Distributed Replay](configure-distributed-replay.md)  
   
   

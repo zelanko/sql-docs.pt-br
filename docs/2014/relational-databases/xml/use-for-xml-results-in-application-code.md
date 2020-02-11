@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a27720408db760604852410d9733983d7d67f18e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63193334"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>Usar resultados de FOR XML no código do aplicativo
@@ -159,7 +159,7 @@ ms.locfileid: "63193334"
   
 -   **BankName:** Primary International  
   
--   **BusinessType:** Sistema operacional  
+-   **BusinessType:** OS  
   
 -   **YearOpened:** 1974  
   
@@ -290,9 +290,9 @@ SqlConnection closed.
 ```  
   
 > [!NOTE]  
->  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `xml` permite solicitar que o resultado de uma consulta FOR XML seja retornado como tipo de dados `xml` tipo de dados, em vez de string ou image tipadas dados, especificando o [diretiva TYPE](type-directive-in-for-xml-queries.md). Quando a diretiva TYPE é usada em consultas FOR XML, ela fornece acesso programático aos resultados de FOR XML de maneira semelhante à mostrada em [Usar dados XML em aplicativos](use-xml-data-in-applications.md).  
+>  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `xml` suporte ao tipo de dados permite que você solicite que o resultado de uma consulta for `xml` XML seja retornado como tipo de dados, em vez de dados de cadeia de caracteres ou tipos de imagem, especificando a [diretiva de tipo](type-directive-in-for-xml-queries.md). Quando a diretiva TYPE é usada em consultas FOR XML, ela fornece acesso programático aos resultados de FOR XML de maneira semelhante à mostrada em [Usar dados XML em aplicativos](use-xml-data-in-applications.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [FOR XML &#40;SQL Server&#41;](for-xml-sql-server.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Organizador de ações (guia Ações, Designer de cubo) (Analysis Services - dados multidimensionais) | Microsoft Docs
+title: Organizador de ações (guia ações, designer de cubo) (Analysis Services-dados multidimensionais) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 05d48f3d23ce9e8c3eca83396d9413d82717fa3c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062927"
 ---
 # <a name="action-organizer-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Organizador de Ações (guia Ações, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
@@ -31,13 +31,13 @@ ms.locfileid: "66062927"
 ## <a name="context-menu"></a>Menu de contexto  
  As seguintes opções estão disponíveis no menu de contexto exibido ao clicar com o botão direito do mouse em uma ação no painel **Organizador de Ações** :  
   
- **Nova ação**  
+ **Nova Ação**  
  Clique para exibir o painel **Editor de Formulário de Ação** e criar uma nova ação.  
   
- **Nova ação de detalhamento**  
+ **Nova Ação de Extração de Detalhes**  
  Clique para exibir o **Editor de Formulário de Ação de Detalhamento** e criar uma nova ação de detalhamento.  
   
- **Nova ação de relatório**  
+ **Nova Ação de Relatório**  
  Clique para exibir o painel **Editor de Formulário de Ação de Relatório** e criar uma nova ação de relatório.  
   
  **Delete (excluir)**  

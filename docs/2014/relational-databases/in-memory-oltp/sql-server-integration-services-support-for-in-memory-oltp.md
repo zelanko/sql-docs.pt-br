@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ccd4469ef7bb52927213e27e72498afa961e81a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63156738"
 ---
 # <a name="sql-server-integration-services-support-for-in-memory-oltp"></a>Suporte do SQL Server Integration Services para OLTP na memória
@@ -27,7 +27,7 @@ ms.locfileid: "63156738"
   
  Você também pode usar a Origem ADO .NET e a Origem OLE DB para invocar um procedimento armazenado nativamente compilado, mas é recomendável usar a Origem ODBC. Se você configurar a Origem ADO .NET para executar um procedimento armazenado nativamente compilado, será exibida uma mensagem de erro, pois o provedor de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient), que a Origem ADO .NET usa por padrão, não oferece suporte à execução de procedimentos armazenados compilados nativamente. É possível configurar a Origem ADO .NET para usar o Provedor de Dados ODBC, Provedor OLE DB para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. No entanto, observe que a Origem ODBC é mais bem executada do que a Origem ADO .NET com o Provedor de Dados ODBC.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Suporte ao SQL Server para OLTP na memória](sql-server-support-for-in-memory-oltp.md)  
   
   

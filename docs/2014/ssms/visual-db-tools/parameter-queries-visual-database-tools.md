@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5a3ea199f6e2e86f5dc2e51199386f31b93e9377
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63194990"
 ---
 # <a name="parameter-queries-visual-database-tools"></a>Consultas de parâmetros (Visual Database Tools)
@@ -64,9 +64,9 @@ WHERE au_fname = %first name% AND
   
  Quando você executa uma consulta no Designer de Consulta e Exibição, a caixa de diálogo [Parâmetros de Consulta](query-parameters-dialog-box-visual-database-tools.md) é exibida com uma lista de parâmetros com nome.  
   
-## <a name="see-also"></a>Consulte também  
- [Consulta com parâmetros &#40;Visual Database Tools&#41;](query-with-parameters-visual-database-tools.md)   
- [Suporte para tipos de consulta &#40;Visual Database Tools&#41;](supported-query-types-visual-database-tools.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Consultar com parâmetros &#40;Visual Database Tools&#41;](query-with-parameters-visual-database-tools.md)   
+ [Tipos de consulta com suporte &#40;Visual Database Tools&#41;](supported-query-types-visual-database-tools.md)   
  [Tópicos de instruções de como criar consultas e exibições &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Suporte do SQL Server Native Client para LocalDB | Microsoft Docs
+title: Suporte de SQL Server Native Client para LocalDB | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3a3f5a8214c2966b1958c3a4ea08edbee5af6a2d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63225482"
 ---
 # <a name="sql-server-native-client-support-for-localdb"></a>Suporte do SQL Server Native Client para LocalDB
@@ -31,7 +31,7 @@ ms.locfileid: "63225482"
   
 -   Usar `sqllocaldb.exe i` para descobrir o nome da instância padrão.  
   
--   Usar a palavra-chave da cadeia de conexão `AttachDBFilename` para especificar o arquivo de banco de dados que o servidor deve anexar. Ao usar `AttachDBFilename`, se você não especificar o nome do banco de dados com o **banco de dados** palavra-chave da cadeia de conexão, o banco de dados será removido da instância do LocalDB quando o aplicativo é fechado.  
+-   Usar a palavra-chave da cadeia de conexão `AttachDBFilename` para especificar o arquivo de banco de dados que o servidor deve anexar. Ao usar `AttachDBFilename`, se você não especificar o nome do banco de dados com a palavra-chave String de conexão de **banco** de dados, o banco de dados será removido da instância de LocalDB quando o aplicativo for fechado.  
   
 -   Especifique uma instância do LocalDB em sua cadeia de conexão:  
   
@@ -41,7 +41,7 @@ SERVER=(localdb)\v11.0
   
  Se necessário, você pode criar uma instância do LocalDB com sqllocaldb.exe. Você também pode usar sqlcmd.exe para adicionar e modificar bancos de dados em uma instância do LocalDB. Por exemplo, `sqlcmd -S (localdb)\v11.0`.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Recursos do SQL Server Native Client](sql-server-native-client-features.md)  
   
   

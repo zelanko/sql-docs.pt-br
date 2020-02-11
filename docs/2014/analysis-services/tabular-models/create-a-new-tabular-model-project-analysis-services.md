@@ -1,5 +1,5 @@
 ---
-title: Criar um projeto de modelo NewTabular (SSAS Tabular) | Microsoft Docs
+title: Criar um projeto de modelo NewTabular (SSAS tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ccb53d47b44ce70b8a84baa784decef74c8367fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067626"
 ---
 # <a name="create-a-newtabular-model-project-ssas-tabular"></a>Criar um projeto de modelo NewTabular (SSAS tabular)
@@ -28,10 +28,10 @@ ms.locfileid: "66067626"
   
 3.  Em **Nome**, digite um nome para o projeto e especifique um local e um nome para a solução e clique em **OK**.  
   
- Depois que seu novo projeto for criado, é importante definir as propriedades do projeto e do modelo. Para obter mais informações, consulte [Project Properties &#40;SSAS Tabular&#41;](properties-ssas-tabular.md) e [Model Properties &#40;SSAS Tabular&#41;](model-properties-ssas-tabular.md).  
+ Depois que seu novo projeto for criado, é importante definir as propriedades do projeto e do modelo. Para obter mais informações, consulte [Propriedades de projeto &#40;SSAS de Tabela&#41;](properties-ssas-tabular.md) e [Propriedades de modelo &#40;SSAS de Tabela&#41;](model-properties-ssas-tabular.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Propriedades de projeto &#40;SSAS de Tabela&#41;](properties-ssas-tabular.md)   
- [Propriedades de modelo &#40;SSAS de Tabela&#41;](model-properties-ssas-tabular.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Propriedades do projeto &#40;SSAS tabular&#41;](properties-ssas-tabular.md)   
+ [Propriedades de modelo &#40;SSAS de tabela&#41;](model-properties-ssas-tabular.md)  
   
   

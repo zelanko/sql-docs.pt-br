@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 066c69298126cbc635d388d75659b98dcff95917
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101804"
 ---
 # <a name="create-delete-or-modify-a-role-management-studio"></a>Criar, excluir ou modificar uma função (Management Studio)
@@ -45,7 +45,7 @@ ms.locfileid: "66101804"
   
      Se você estiver criando uma definição de função no nível do sistema, clique com o botão direito do mouse em **Funções do Sistema**e aponte para **Nova Função do Sistema**.  
   
-4.  Digite um nome exclusivo para a função. Um nome deve conter pelo menos um caractere. Ele também pode incluir espaços e alguns símbolos, mas não os caracteres ; ? : \@ & = +, $ / * \< > | "ou /.  
+4.  Digite um nome exclusivo para a função. Um nome deve conter pelo menos um caractere. Ele também pode incluir espaços e alguns símbolos, mas não os caracteres ; ? : \@ & = +, $/* \< > | "ou/.  
   
 5.  Como opção, digite uma descrição. No [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] , essa descrição só é visível nesta página. Os usuários que exibem esse item por meio do Gerenciador de Relatórios podem ver essa descrição nessa ferramenta.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "66101804"
   
 2.  Expanda a pasta Segurança.  
   
-3.  Para excluir ou modificar uma definição de função no nível do item, expanda a pasta Funções. Execute um destes procedimentos:  
+3.  Para excluir ou modificar uma definição de função no nível do item, expanda a pasta Funções. Execute uma das ações a seguir:  
   
     1.  Para excluir uma definição de função, clique com o botão direito do mouse no item e clique em **Excluir**. A caixa de diálogo **Excluir Objeto** é exibida. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -67,7 +67,7 @@ ms.locfileid: "66101804"
   
          Selecione as tarefas que os membros desta função podem executar e clique em **OK**.  
   
-4.  Para excluir ou modificar uma definição de função no nível do sistema, expanda a pasta **Funções do Sistema** . Execute um destes procedimentos:  
+4.  Para excluir ou modificar uma definição de função no nível do sistema, expanda a pasta **Funções do Sistema** . Execute uma das ações a seguir:  
   
     1.  Para excluir uma definição de função do sistema, clique com o botão direito do mouse no item e clique em **Excluir**. A caixa de diálogo **Excluir Objeto** é exibida. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -75,7 +75,7 @@ ms.locfileid: "66101804"
   
          Selecione as tarefas que os membros desta função podem executar e clique em **OK** para aplicar as alterações.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Conectar-se a um servidor de relatório no Management Studio](../tools/connect-to-a-report-server-in-management-studio.md)   
  (create-and-manage-role-assignments.md)   
  [Reporting Services no SQL Server Management Studio &#40;SSRS&#41;](../tools/reporting-services-in-sql-server-management-studio-ssrs.md)  

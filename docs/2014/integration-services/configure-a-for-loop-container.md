@@ -1,5 +1,5 @@
 ---
-title: Configurar um contêiner Loop For | Microsoft Docs
+title: Configurar um contêiner loop for | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fe51deb631f0c3d794bdce3f05af61b5e030d5e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060825"
 ---
 # <a name="configure-a-for-loop-container"></a>Configurar um contêiner Loop For
-  Este procedimento descreve como configurar um contêiner Loop For usando a caixa de diálogo **Editor do Loop For**.  
+  Este procedimento descreve como configurar um contêiner Loop For usando a caixa de diálogo **Editor do Loop For** .  
   
  Para obter um exemplo do contêiner Loop For, consulte [Loops SSIS que não falham](https://go.microsoft.com/fwlink/?LinkId=240295) em bimonkey.com.  
   
@@ -44,8 +44,8 @@ ms.locfileid: "66060825"
   
 7.  Clique em **OK** para fechar o **Editor do Loop For**.  
   
-## <a name="see-also"></a>Consulte também  
- [Contêiner Loop for](control-flow/for-loop-container.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Contêiner loop for](control-flow/for-loop-container.md)   
  [Expressões do SSIS &#40;Integration Services&#41;](expressions/integration-services-ssis-expressions.md)   
  [Usar expressões de propriedade em pacotes](expressions/use-property-expressions-in-packages.md)  
   

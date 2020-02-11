@@ -1,5 +1,5 @@
 ---
-title: Criar e gerenciar hierarquias (SSAS Tabular) | Microsoft Docs
+title: Criar e gerenciar hierarquias (SSAS tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2e0c1162d196abba660cb1f15091c5d6a5c13884
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067502"
 ---
 # <a name="create-and-manage-hierarchies-ssas-tabular"></a>Criar e Gerenciar hierarquias (SSAS tabular)
@@ -28,7 +28,7 @@ ms.locfileid: "66067502"
   
 -   [Excluir uma hierarquia](#bkmk_delete)  
   
-##  <a name="bkmk_create"></a> Criar uma hierarquia  
+##  <a name="bkmk_create"></a>Criar uma hierarquia  
  Você pode criar uma hierarquia usando as colunas e o menu de contexto de tabela. Quando você criar uma hierarquia, um novo nível pai é exibido com as colunas selecionadas como níveis filho.  
   
 #### <a name="to-create-a-hierarchy-from-the-context-menu"></a>Para criar uma hierarquia no menu de contexto  
@@ -41,12 +41,12 @@ ms.locfileid: "66067502"
   
 2.  Digite um nome para a hierarquia.  
   
- Você pode arrastar colunas adicionais para o nível pai da sua hierarquia, que copia as colunas. Remova o nível filho para colocá-lo onde você desejar que ele seja exibido na hierarquia.  
+ Você pode arrastar colunas adicionais para o nível pai da hierarquia, que copia as colunas. Remova o nível filho para colocá-lo onde você desejar que ele seja exibido na hierarquia.  
   
 > [!NOTE]  
 >  O comando Criar Hierarquia estará desabilitado no menu de contexto se você fizer multisseleção de uma medida junto com uma ou mais colunas, ou se você selecionar colunas de várias tabelas.  
   
-##  <a name="bkmk_edit"></a> Editar uma hierarquia  
+##  <a name="bkmk_edit"></a>Editar uma hierarquia  
  Você pode renomear uma hierarquia, renomear um nível filho, alterar a ordem dos níveis filho, adicionar colunas adicionais como níveis filho, remover um nível filho de uma hierarquia, mostrar o nome de origem de um nível filho (o nome da coluna) e ocultar um nível filho se tiver o mesmo nome como o nível pai da hierarquia.  
   
 #### <a name="to-change-the-name-of-a-hierarchy-or-child-level"></a>Para alterar o nome de uma hierarquia ou nível filho  
@@ -83,9 +83,9 @@ ms.locfileid: "66067502"
   
 #### <a name="to-show-a-source-name"></a>Para mostrar um nome de origem  
   
--   Clique com o botão direito do mouse no nível filho da hierarquia e clique em **Show Source Name (Mostrar Nome de Origem)** . O nome da coluna da qual ela foi copiada é exibido.  
+-   Clique com o botão direito do mouse no nível filho da hierarquia e clique em **Show Source Name (Mostrar Nome de Origem)**. O nome da coluna da qual ela foi copiada é exibido.  
   
-##  <a name="bkmk_delete"></a> Excluir uma hierarquia  
+##  <a name="bkmk_delete"></a>Excluir uma hierarquia  
   
 #### <a name="to-delete-a-hierarchy-and-remove-its-child-levels"></a>Para excluir uma hierarquia e remover seus níveis filho  
   
@@ -93,9 +93,9 @@ ms.locfileid: "66067502"
   
 -   Ou clique no nível pai da hierarquia e pressione Excluir. Isto também remove todos os níveis filho.  
   
-## <a name="see-also"></a>Consulte também  
- [Designer de modelo de tabela &#40;Tabular do SSAS&#41;](../tabular-model-designer-ssas-tabular.md)   
- [Hierarquias &#40;SSAS de Tabela&#41;](hierarchies-ssas-tabular.md)   
- [Medidas &#40;SSAS de Tabela&#41;](measures-ssas-tabular.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Designer de modelo de tabela &#40;SSAS de tabela&#41;](../tabular-model-designer-ssas-tabular.md)   
+ [Hierarquias &#40;SSAS de tabela&#41;](hierarchies-ssas-tabular.md)   
+ [Medidas &#40;&#41;de tabela do SSAS](measures-ssas-tabular.md)  
   
   

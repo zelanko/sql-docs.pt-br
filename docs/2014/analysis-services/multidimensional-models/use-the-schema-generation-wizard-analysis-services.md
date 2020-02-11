@@ -1,5 +1,5 @@
 ---
-title: Use o Assistente de geração de esquema (Analysis Services) | Microsoft Docs
+title: Usar o assistente de geração de esquema (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e434493813f0237533ca2e50ff089974f3556f34
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072652"
 ---
 # <a name="use-the-schema-generation-wizard-analysis-services"></a>Use o assistente de geração de esquema (Analysis Services)
@@ -40,7 +40,7 @@ ms.locfileid: "66072652"
 > [!NOTE]  
 >  Para desassociar dimensões e cubos do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dos objetos gerados anteriormente, exclua a exibição da fonte de dados à qual as dimensões e os cubos do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] foram associados e, em seguida, defina uma nova exibição da fonte de dados para eles usando o Assistente de Geração de Esquema.  
   
-## <a name="step-3-specify-schema-options-for-the-subject-area-database"></a>Etapa 3: Especificar opções de esquema para o banco de dados de área de assunto  
+## <a name="step-3-specify-schema-options-for-the-subject-area-database"></a>Etapa 3: Especificar opções de esquema para o banco de dados da área de assunto  
  O Assistente de Geração de Esquema oferece inúmeras opções para definição do esquema que é gerado para o banco de dados da área de assunto. Você pode especificar essas opções na página **Opções de Esquema de Banco de Dados da Área de Assunto** do assistente.  
   
 ### <a name="specifying-the-schema-owner"></a>Especificando o proprietário do esquema  

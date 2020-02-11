@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 39e444077c3dbe27ae243e4292b7a047e21de2b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66064845"
 ---
 # <a name="event-pairing-target"></a>Destino de emparelhamento de evento
@@ -30,7 +30,7 @@ ms.locfileid: "66064845"
   
  A tabela a seguir descreve as opções disponíveis para configurar um emparelhamento de evento.  
   
-|Opção|Valores permitidos|Descrição|  
+|Opção|Valores permitidos|DESCRIÇÃO|  
 |------------|--------------------|-----------------|  
 |begin_event|Qualquer nome de evento presente na sessão atual.|O nome do evento que especifica o evento inicial em uma sequência emparelhada.|  
 |end_event|Qualquer nome de evento presente na sessão atual.|O nome do evento que especifica o evento final em uma sequência emparelhada.|  
@@ -38,12 +38,12 @@ ms.locfileid: "66064845"
 |end_matching_columns|Uma lista delimitada por vírgula, ordenada por nomes de coluna.|As colunas em que a correspondência deve ser executada.|  
 |begin_matching_actions|Uma lista de ações ordenadas, delimitadas por vírgula.|As ações nas quais a correspondência deve ser executada.|  
 |end_matching_actions|Uma lista de ações ordenadas, delimitadas por vírgula.|As ações nas quais a correspondência deve ser executada.|  
-|respond_to_memory_pressure|Um dos valores seguintes:<br /><br /> 0 = Não responda.<br /><br /> 1 = Pare de adicionar novos órfãos à lista quando houver pressão de memória.|A resposta de destino a eventos de memória. Se definido como 1 e o servidor estiver com pouca memória, as informações não emparelhadas que estão sendo mantidas serão removidas.|  
+|respond_to_memory_pressure|Um dos seguintes valores:<br /><br /> 0 = Não responda.<br /><br /> 1 = Pare de adicionar novos órfãos à lista quando houver pressão de memória.|A resposta de destino a eventos de memória. Se definido como 1 e o servidor estiver com pouca memória, as informações não emparelhadas que estão sendo mantidas serão removidas.|  
 |max_orphans||Especifica o número total de eventos ímpares que serão coletados no destino. Quando o limite é atingido, os eventos não emparelhados são removidos na base PEPS (primeiro a entrar, primeiro a sair). Padrão = 10,000.|  
   
  Todos os dados associados a um evento são capturados e armazenados para emparelhamento futuro. Além disso, dados adicionados por ações também são coletados. Os dados de evento coletados são armazenados na memória e, portanto, têm um limite finito. Esse limite é baseado na capacidade e na atividade do sistema. Em vez de usar a quantidade máxima de memória a ser usada como um parâmetro, a quantidade de memória usada terá como base os recursos disponíveis do sistema. Quando esses não estiverem disponíveis, os eventos não emparelhados que foram retidos serão cancelados. Se um evento não tiver sido emparelhado e for cancelado, o evento correspondente aparecerá como um evento não emparelhado.  
   
- O destino de emparelhamento serializa eventos não emparelhados em um formato XML. Esse formato não se adapta a nenhum esquema. O formato contém apenas dois tipos de elementos. O  **\<não emparelhados >** elemento é a raiz, seguida por um. **\<evento >** elemento para cada evento não emparelhando que está sendo controlado no momento. O  **\<evento >** elemento contém um atributo que contém o nome do evento não emparelhado.  
+ O destino de emparelhamento serializa eventos não emparelhados em um formato XML. Esse formato não se adapta a nenhum esquema. O formato contém apenas dois tipos de elementos. O ** \<elemento>não emparelhado** é a raiz, seguido por um. elemento de>de evento para cada evento não emparelhado que está sendo rastreado no momento. ** \<** O ** \<elemento>do evento** contém um atributo que contém o nome do evento não emparelhado.  
   
 ## <a name="adding-the-target-to-a-session"></a>Adicionando o destino a uma sessão  
  Para adicionar o destino de correspondência de par a uma sessão de Eventos Estendidos, você deve incluir a instrução a seguir ao criar ou alterar uma sessão de evento:  
@@ -89,7 +89,7 @@ WHERE xe.name = 'session_name'
 </unpaired>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Destinos de eventos estendidos do SQL Server](../../2014/database-engine/sql-server-extended-events-targets.md)   
  [sys.dm_xe_session_targets &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql)   
  [CREATE EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   

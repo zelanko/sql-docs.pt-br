@@ -1,5 +1,5 @@
 ---
-title: Nome correspondente (Data Source View Wizard) (Analysis Services) | Microsoft Docs
+title: Correspondência de nomes (Assistente de exibição da fonte de dados) (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 866bdea710033a0cfa3bdadb34282c96c810d730
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072403"
 ---
 # <a name="name-matching-data-source-view-wizard-analysis-services"></a>Correspondência de Nomes (Assistente de Exibição da Fonte de Dados) (Analysis Services)
@@ -32,11 +32,11 @@ ms.locfileid: "66072403"
  **Correspondências de chave estrangeira**  
  Selecione o critério a ser usado para criar relações lógicas entre tabelas e exibições na fonte de dados. Caracteres não alfanuméricos são ignorados na correspondência de cadeias de caracteres. Por exemplo, todas as cadeias de caracteres "ID de Cliente", "ID_Cliente", "IDCliente" são correspondentes. Selecione uma das opções na tabela a seguir para criar relações sob as condições especificadas.  
   
-|Select (selecionar)|Para criar|  
+|Selecionar|Para criar|  
 |------------|---------------|  
 |**Mesmo nome que a chave primária**|Uma relação lógica com qualquer tabela com um nome de coluna que corresponda ao nome da coluna de chave primária em uma tabela selecionada.|  
-|**Mesmo nome que a tabela de destino**|Uma relação lógica com qualquer tabela com um nome de coluna que corresponda ao nome de uma tabela selecionada.|  
-|**Nome da tabela de destino + nome de chave primária**|Uma relação lógica com qualquer tabela na qual um nome de coluna corresponde ao nome da tabela selecionada concatenado com o nome da coluna de chave primária da tabela selecionada, nessa ordem. Caracteres não alfanuméricos dentro da concatenação são ignorados (por exemplo, "ID Produto", "ID_Produto" e "IDProduto", todos correspondem).|  
+|**Mesmo nome que o nome da tabela de destino**|Uma relação lógica com qualquer tabela com um nome de coluna que corresponda ao nome de uma tabela selecionada.|  
+|**Nome da tabela de destino + nome da chave primária**|Uma relação lógica com qualquer tabela na qual um nome de coluna corresponde ao nome da tabela selecionada concatenado com o nome da coluna de chave primária da tabela selecionada, nessa ordem. Caracteres não alfanuméricos dentro da concatenação são ignorados (por exemplo, "ID Produto", "ID_Produto" e "IDProduto", todos correspondem).|  
   
  **Descrição e exemplo**  
  Exiba uma descrição e um exemplo do critério selecionado.  

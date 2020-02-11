@@ -1,5 +1,5 @@
 ---
-title: Adicionar enumeração a um fluxo de controle | Microsoft Docs
+title: Adicionar Enumeração a um fluxo de controle | Microsoft Docs
 ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
@@ -17,13 +17,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cad9c6a3537fb523a13f0206eed6c8eee837ed06
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061905"
 ---
 # <a name="add-enumeration-to-a-control-flow"></a>Adicionar enumeração a um fluxo de controle
+  
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] inclui o contêiner do Loop Foreach, um elemento de fluxo de controle que torna simples a inclusão de um constructo de loop que enumera arquivos e objetos no fluxo de controle de um pacote. Para obter mais informações, consulte [Contêiner Loop Foreach](control-flow/foreach-loop-container.md).  
   
  O contêiner Loop Foreach não fornece nenhuma funcionalidade, ele só fornece a estrutura na qual você cria o fluxo de controle repetível, especifica o tipo do enumerados e configura o enumerador. Para fornecer funcionalidade de contêiner, você deve incluir no mínimo uma tarefa no contêiner Loop Foreach. Para obter mais informações, consulte [Tarefas do Integration Services](control-flow/integration-services-tasks.md).  
@@ -32,17 +33,17 @@ ms.locfileid: "66061905"
   
 ### <a name="to-implement-a-foreach-loop-container-in-a-control-flow"></a>Para implementar um contêiner Loop Foreach em um fluxo de controle  
   
-1.  Adicione o contêiner Loop Foreach ao pacote. Para obter mais informações, consulte [adicionar ou excluir uma tarefa ou um contêiner em um fluxo de controle](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
+1.  Adicione o contêiner Loop Foreach ao pacote. Para obter mais informações, consulte [Adicionar ou excluir uma tarefa ou um contêiner em um fluxo de controle](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   .  
   
-2.  Adicione tarefas e contêineres ao contêiner Loop Foreach. Para obter mais informações, consulte [adicionar ou excluir uma tarefa ou um contêiner em um fluxo de controle](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
+2.  Adicione tarefas e contêineres ao contêiner Loop Foreach. Para obter mais informações, consulte [Adicionar ou excluir uma tarefa ou um contêiner em um fluxo de controle](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   .  
   
 3.  Conecte tarefas e contêineres no contêiner Loop Foreach usando restrições de precedência. Para obter mais informações, consulte [Como conectar tarefas e contêineres utilizando uma restrição de precedência padrão](../../2014/integration-services/connect-tasks-and-containers-by-using-a-default-precedence-constraint.md).  
   
-4.  Configure o contêiner Loop Foreach. Para obter mais informações, consulte [Configurar um Contêiner do Loop Foreach](../../2014/integration-services/configure-a-foreach-loop-container.md).  
+4.  Configure o contêiner Loop Foreach. Para obter mais informações, consulte [Configurar um contêiner Loop Foreach](../../2014/integration-services/configure-a-foreach-loop-container.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Adicionar ou excluir uma tarefa ou um contêiner em um fluxo de controle](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
  [Agrupar ou desagrupar componentes](group-or-ungroup-components.md)   
  [Restrições de precedência](control-flow/precedence-constraints.md)   

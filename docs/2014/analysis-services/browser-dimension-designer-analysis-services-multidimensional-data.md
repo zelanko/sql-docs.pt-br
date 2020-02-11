@@ -1,5 +1,5 @@
 ---
-title: Navegador (Designer de dimensão) (Analysis Services - dados multidimensionais) | Microsoft Docs
+title: Navegador (Designer de dimensão) (Analysis Services-dados multidimensionais) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1b3448891baed6fe91bb0339030f74569a096377
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66064625"
 ---
 # <a name="browser-dimension-designer-analysis-services---multidimensional-data"></a>Navegador (Designer de Dimensão) (Analysis Services - Dados Multidimensionais)
@@ -27,17 +27,17 @@ ms.locfileid: "66064625"
 ## <a name="panes"></a>Painéis  
  A guia **Navegador** contém os seguintes painéis:  
   
- [Barra de Ferramentas](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Barra de ferramentas](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md)  
  Use a barra de ferramentas para executar ações comuns na guia **Navegador** do Designer de Dimensão.  
   
- [Nível e membros](level-members-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Nível e Membros](level-members-dimension-designer-analysis-services-multidimensional-data.md)  
  Use o painel **Nível e Membros** para navegar e modificar os membros da hierarquia selecionada, na linguagem selecionada.  
   
-## <a name="see-also"></a>Consulte também  
- [Designer de dimensão &#40;Analysis Services - dados multidimensionais&#41;](dimension-designer-analysis-services-multidimensional-data.md)   
- [Dimensões &#40;Analysis Services - dados multidimensionais&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
+## <a name="see-also"></a>Consulte Também  
+ [O designer de dimensão &#40;Analysis Services de dados multidimensionais&#41;](dimension-designer-analysis-services-multidimensional-data.md)   
+ [Dimensões &#40;Analysis Services de dados multidimensionais&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Dimensões em modelos multidimensionais](multidimensional-models/dimensions-in-multidimensional-models.md)   
- [Estrutura da dimensão &#40;Designer de dimensão&#41; &#40;Analysis Services - dados multidimensionais&#41;](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)   
- [Traduções &#40;Designer de dimensão&#41; &#40;Analysis Services - dados multidimensionais&#41;](translations-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Estrutura de dimensão &#40;designer de dimensão&#41; &#40;Analysis Services de dados multidimensionais&#41;](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Traduções &#40;o designer de dimensão&#41; &#40;Analysis Services de dados multidimensionais&#41;](translations-dimension-designer-analysis-services-multidimensional-data.md)  
   
   

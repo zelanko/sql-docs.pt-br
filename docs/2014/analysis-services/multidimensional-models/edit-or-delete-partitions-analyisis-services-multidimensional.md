@@ -1,5 +1,5 @@
 ---
-title: Editar ou excluir partições (Analysis Services - Multidimensional) | Microsoft Docs
+title: Editar ou excluir partições (serviços Analysiss – multidimensional) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7d7f51b24c487175d13153b9e5627e101175740b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075146"
 ---
 # <a name="edit-or-delete-partitions-analyisis-services---multidimensional"></a>Editar ou excluir partições (Analysis Services – Multidimensional)
   As partições do cubo são modificadas usando a guia **Partições** do Designer de Cubo no [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]. A guia **Partições** lista as partições para todos os grupos de medidas de um cubo. Essa guia também lista as partições de write-back habilitadas para gravação.  
   
- Para editar as partições de qualquer grupo de medidas, expanda o grupo de medidas na guia **Partições** . As partições de um grupo de medidas são listadas por números ordinais em um formato de tabela com as colunas relacionadas na tabela a seguir.  
+ Para editar as partições de qualquer grupo de medidas, expanda o grupo de medidas na guia **partições** . as partições de um grupo de medidas são listadas por número ordinal em um formato de tabela com as colunas listadas na tabela a seguir.  
   
  As configurações de um grupo de medidas vinculado devem ser editadas no cubo de origem.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "66075146"
 ## <a name="partition-source"></a>Origem da partição  
  Especifica a tabela de origem ou a consulta nomeada para a partição. Para alterar a tabela de origem, clique na célula e, em seguida, clique no botão de procura (**...**).  
   
- ![Coluna de origem no painel de partição](../media/ssas-partitionsource.png "coluna de origem no painel de partição")  
+ ![Coluna de origem no painel Partição](../media/ssas-partitionsource.png "Coluna de origem no painel Partição")  
   
  Se a partição for baseada em uma consulta, clique no botão Procurar (**...**) para editar a consulta. A propriedade **Origem** é editada para a partição. Para obter mais informações, consulte [Alterar uma origem de partição para usar uma tabela de fatos diferente](change-a-partition-source-to-use-a-different-fact-table.md).  
   
@@ -46,9 +46,9 @@ ms.locfileid: "66075146"
   
  O armazenamento pode ser configurado separadamente para cada partição de cada grupo de medidas em um cubo. Você também pode definir configurações de armazenamento padrão para um cubo ou grupo de medidas. O armazenamento é configurado na guia **Partições** do Assistente para Cubos.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar e gerenciar uma partição local &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)   
- [Projetando agregações &#40;Analysis Services – multidimensional&#41;](designing-aggregations-analysis-services-multidimensional.md)   
- [Mesclar partições no Analysis Services &#40;SSAS – Multidimensional&#41;](merge-partitions-in-analysis-services-ssas-multidimensional.md)  
+ [Criando agregações &#40;Analysis Services multidimensional&#41;](designing-aggregations-analysis-services-multidimensional.md)   
+ [Mesclar partições em Analysis Services &#40;SSAS –&#41;multidimensional](merge-partitions-in-analysis-services-ssas-multidimensional.md)  
   
   

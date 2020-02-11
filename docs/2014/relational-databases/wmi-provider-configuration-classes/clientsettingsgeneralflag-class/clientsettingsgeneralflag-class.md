@@ -19,16 +19,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 0a9b52652ec3e684c75a790f41899db2c117b62c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63243155"
 ---
 # <a name="clientsettingsgeneralflag-class"></a>Classe ClientSettingsGeneralFlag
-  O [classe ClientSettingsGeneralFlag](clientsettingsgeneralflag-class.md) representa as configurações gerais de sinalizador em uma instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cliente.  
+  A [classe ClientSettingsGeneralFlag](clientsettingsgeneralflag-class.md) representa as configurações de sinalizador geral em uma instância [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] do cliente.  
   
- O [classe ClientSettingsGeneralFlag](clientsettingsgeneralflag-class.md) pode ser usado para fazer o seguinte:  
+ A [classe ClientSettingsGeneralFlag](clientsettingsgeneralflag-class.md) pode ser usada para fazer o seguinte:  
   
 -   Exibir o nome do sinalizador.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "63243155"
   
 -   Exibir e modificar o valor de sinalizador.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Configurar protocolos de cliente](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

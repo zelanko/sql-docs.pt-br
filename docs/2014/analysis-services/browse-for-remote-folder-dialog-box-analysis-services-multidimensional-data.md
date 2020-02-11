@@ -1,5 +1,5 @@
 ---
-title: Procurar pasta remota caixa de diálogo (Analysis Services - dados multidimensionais) | Microsoft Docs
+title: Caixa de diálogo Procurar pasta remota (Analysis Services-dados multidimensionais) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 23b0125ab578ebb4fb8837c95ec61db900880ec6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66064526"
 ---
 # <a name="browse-for-remote-folder-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Procurar Pasta Remota (Analysis Services - Dados Multidimensionais)
@@ -37,10 +37,10 @@ ms.locfileid: "66064526"
  **Caminho selecionado**  
  Digite para modificar o caminho selecionado em **Selecionar a pasta**ou para selecionar uma pasta não listada em **Selecionar a pasta**.  
   
-## <a name="see-also"></a>Consulte também  
- [Designers e caixas de diálogo do Analysis Services &#40;dados multidimensionais&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Locais de processamento e armazenamento &#40;Assistente de partição&#41;](processing-and-storage-locations-partition-wizard.md)   
- [Partições &#40;restaurar a caixa de diálogo banco de dados&#41; &#40;Analysis Services - dados multidimensionais&#41;](partitions-restore-database-dialog-box-analysis-services-multidimensional-data.md)   
- [Partições remotas – caixa de diálogo Configurações avançadas &#40;Analysis Services - dados multidimensionais&#41;](remote-partitions-advanced-settings-dialog-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Analysis Services designers e caixas de diálogo &#40;dados multidimensionais&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Assistente para processamento e locais de armazenamento &#40;partições&#41;](processing-and-storage-locations-partition-wizard.md)   
+ [Caixa de diálogo partições &#40;Restore Database&#41; &#40;Analysis Services-dados multidimensionais&#41;](partitions-restore-database-dialog-box-analysis-services-multidimensional-data.md)   
+ [Partições remotas – caixa de diálogo Configurações avançadas &#40;Analysis Services-dados multidimensionais&#41;](remote-partitions-advanced-settings-dialog-analysis-services-multidimensional-data.md)  
   
   

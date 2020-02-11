@@ -1,5 +1,5 @@
 ---
-title: Adicionar Gerenciador de Conexão do SSIS | Microsoft Docs
+title: Adicionar Gerenciador de conexões SSIS | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 549ab9aa3a447c13939e352233acc42b974d92af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061815"
 ---
 # <a name="add-ssis-connection-manager"></a>Adicionar Gerenciador de Conexões SSIS
@@ -27,13 +27,13 @@ ms.locfileid: "66061815"
  Para saber mais sobre gerenciadores de conexões, consulte [Conexões do SSIS &#40;Integration Services&#41;](connection-manager/integration-services-ssis-connections.md).  
   
 ## <a name="options"></a>Opções  
- **Tipo de gerenciador de conexões**  
+ **Tipo de Gerenciador de conexões**  
  Selecione um tipo de conexão e clique em **Adicionar**ou clique duas vezes em um tipo de conexão, para especificar propriedades de conexão usando o editor para cada tipo de conexão.  
   
  **Adicionar**  
  Especifique propriedades de conexão usando o editor para cada tipo de conexão.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Adicionar, excluir ou compartilhar um gerenciador de conexões em um pacote](../../2014/integration-services/add-delete-or-share-a-connection-manager-in-a-package.md)  
   

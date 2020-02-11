@@ -14,14 +14,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8d3492cce19906322ef9b420718aae0ae9e0e62d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061109"
 ---
 # <a name="catalog-properties-dialog-box"></a>Caixa de diálogo Propriedades do Catálogo
-  Use a caixa de diálogo de Propriedades do Catálogo para configurar o catálogo do SSISDB. As propriedades do catálogo definem como dados confidenciais são criptografados, como dados de operações e de controle de versão de projeto são retidos, e quando o tempo limite de operações de validação expira. O catálogo do SSISDB é um armazenamento e ponto de administração central para projetos, pacotes, parâmetros e ambientes do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
+  Use a caixa de diálogo de Propriedades do Catálogo para configurar o catálogo do SSISDB. As propriedades do catálogo definem como os dados confidenciais são criptografados, como as operações e os dados de controle de versão do projeto são retidos e quando as operações de validação expiram. O catálogo do SSISDB é um ponto de administração e armazenamento [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] central para projetos, pacotes, parâmetros e ambientes.  
   
  Você também pode exibir propriedades do catálogo na exibição catalog.catalog_property e definir propriedades por meio do procedimento armazenado catalog.configure_catalog. Para obter mais informações, consulte [catalog.catalog_properties &#40;banco de dados SSISDB&#41;](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database) e [catalog.configure_catalog &#40;banco de dados SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database).  
   
@@ -33,7 +33,7 @@ ms.locfileid: "66061109"
   
 -   [Configurar as opções](#options)  
   
-##  <a name="open_dialog"></a> Abrir a caixa de diálogo Propriedades do Catálogo  
+##  <a name="open_dialog"></a>Abrir a caixa de diálogo Propriedades do catálogo  
   
 1.  Abra [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
   
@@ -46,9 +46,9 @@ ms.locfileid: "66061109"
 ### <a name="options"></a>Opções  
  A tabela a seguir descreve determinadas propriedades na caixa de diálogo e as propriedades correspondentes na exibição de catalog.catalog_property.  
   
-|Nome da Propriedade (caixa de diálogo Propriedades do Catálogo)|Nome da Propriedade (exibição catalog.catalog_property)|Descrição|  
+|Nome da Propriedade (caixa de diálogo Propriedades do Catálogo)|Nome da Propriedade (exibição catalog.catalog_property)|DESCRIÇÃO|  
 |-----------------------------------------------------|------------------------------------------------------|-----------------|  
-|Nome do Algoritmo de Criptografia|ENCRYPTION_CLEANUP_ENABLED|Especifica o tipo de criptografia usado para criptografar os valores dos parâmetros confidenciais no catálogo. O valores possíveis são os seguintes:<br /><br /> **DES**<br /><br /> **TRIPLE_DES**<br /><br /> **TRIPLE_DES_3KEY**<br /><br /> **DESPX**<br /><br /> **AES_128**<br /><br /> **AES_192**<br /><br /> **AES_256** (default)|  
+|Nome do Algoritmo de Criptografia|ENCRYPTION_CLEANUP_ENABLED|Especifica o tipo de criptografia usado para criptografar os valores dos parâmetros confidenciais no catálogo. O valores possíveis são os seguintes:<br /><br /> **DES**<br /><br /> **TRIPLE_DES**<br /><br /> **TRIPLE_DES_3KEY**<br /><br /> **DESPX**<br /><br /> **AES_128**<br /><br /> **AES_192**<br /><br /> **AES_256** (padrão)|  
 |Tempo Limite de Validação (segundos)|VALIDATION_TIMEOUT|Especifique o número máximo de segundos que a validação de um projeto ou de um pacote pode ser executada antes de ser parada. O valor padrão é 300 segundos.<br /><br /> A execução da validação é uma operação assíncrona. Quanto maior for o projeto ou o pacote, mais tempo será necessário para a validação.<br /><br /> Para obter informações sobre como validar projetos e pacotes, consulte [Tipos de dados do Integration Services em expressões](expressions/integration-services-data-types-in-expressions.md).|  
 |Limpar Logs Periodicamente|OPERATION_CLEANUP_ENABLED|Defina a propriedade como True para indicar que o trabalho do SQL Server Agent, limpeza de operações, é executada. Caso contrário, defina a propriedade como False.|  
 |Período de Retenção (dias)|RETENTION_WINDOW|Especifique a idade máxima dos dados de operações permitidos (em dias). Dados mais antigos do que o número de dias especificado serão removidos pelo trabalho do SQL Agent, limpeza de operações.|  

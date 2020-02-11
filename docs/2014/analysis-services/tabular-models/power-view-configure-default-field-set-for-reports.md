@@ -1,5 +1,5 @@
 ---
-title: Configurar conjunto de campo padrão para relatórios do Power View (SSAS Tabular) | Microsoft Docs
+title: Configurar o conjunto de campos padrão para relatórios de Power View (SSAS tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 37571e141395afe255329edc10edeaeaed121710
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066887"
 ---
 # <a name="configure-default-field-set-for-power-view-reports-ssas-tabular"></a>Configurar conjunto de campo padrão para relatórios de Power View (SSAS tabular)

@@ -1,5 +1,5 @@
 ---
-title: Trabalhar com o Analysis Services projetos e bancos de dados durante a fase de desenvolvimento | Microsoft Docs
+title: Trabalhando com projetos de Analysis Services e bancos de dados durante a fase de desenvolvimento | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3ab225433ca4ab08d7a7c013fa30dd37c05b9143
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072459"
 ---
 # <a name="working-with-analysis-services-projects-and-databases-during-the-development-phase"></a>Trabalhando com projetos e bancos de dados do Analysis Services durante a fase de desenvolvimento

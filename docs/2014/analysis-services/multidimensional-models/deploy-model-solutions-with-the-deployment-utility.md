@@ -1,5 +1,5 @@
 ---
-title: Implantar soluções modelo com o utilitário de implantação | Microsoft Docs
+title: Implantar soluções de modelo com o utilitário de implantação | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0c17ef5426703a666f3d6763f878da3cb129e75c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075362"
 ---
 # <a name="deploy-model-solutions-with-the-deployment-utility"></a>Implantar soluções modelo com o Utilitário de Implantação
@@ -40,10 +40,10 @@ ms.locfileid: "66075362"
  **/s**  
  Executa o utilitário em modo sem confirmação e não exibe nenhuma caixa de diálogo. Para obter mais informações sobre modos, consulte a seção, [Modos](#Modes), mais adiante neste tópico.  
   
- *logfile*  
+ *restaura*  
  O caminho completo e o nome do arquivo de log. Eventos de rastreamento serão registrados no arquivo de log especificado. Se o arquivo de log já existir, seu conteúdo será substituído.  
   
- **/a**  
+ **SRDF**  
  Executa o utilitário em modo de resposta. Todas as respostas feitas durante a parte do assistente do utilitário devem ser gravadas novamente nos arquivos de entrada, mas nenhuma alteração será realmente feita nos destinos da implantação.  
   
  **/o**  
@@ -65,16 +65,16 @@ ms.locfileid: "66075362"
   
  O utilitário está localizado na pasta \Arquivos de programas (x86)\Microsoft SQL Server\110\Binn\ManagementStudio.  
   
-##  <a name="Modes"></a> Modos  
+##  <a name="Modes"></a>Modelos  
  O utilitário pode ser executado nos modos listados na tabela a seguir.  
   
-|Modo|Descrição|  
+|Mode|DESCRIÇÃO|  
 |----------|-----------------|  
 |Modo sem confirmação|Nenhuma interface do usuário é exibida e todas as informações necessárias para a implantação são fornecidas pelos arquivos de entrada. Nenhum progresso é exibido pelo utilitário em modo sem confirmação. Em vez disso, um arquivo de log opcional pode ser usado para capturar o progresso e informações de erro para revisão posterior.|  
 |Modo de resposta|A interface do usuário do Assistente para Implantação é exibida e as respostas do usuário são salvas nos arquivos de entrada especificados para implantação posterior. A implantação não acontece em modo de resposta. O único propósito do modo de resposta é capturar respostas do usuário.|  
 |Modo de saída|Nenhuma interface do usuário é exibida e todas as informações necessárias para a implantação são fornecidas pelos arquivos de entrada.<br /><br /> No entanto, ao contrário do modo sem confirmação, a saída do utilitário é gravada em um arquivo de script de saída e não é enviada aos destinos de implantação indicados nos arquivos de entrada. A menos que o argumento **/d** seja especificado, o utilitário se conecta à cada destino de implantação para comparar metadados ao gerar o arquivo de script de saída.|  
   
- [Voltar para Argumentos](#Arguments)  
+ [Voltar aos argumentos](#Arguments)  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir mostra como implantar um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] em modo sem confirmação, registrando as mensagens de progresso e de erro para revisão posterior:  
@@ -85,7 +85,7 @@ ms.locfileid: "66075362"
   
  `/s: C:\ My Documents\Visual Studio 2010\Projects\AdventureWorksProject\Project1\bin\deployment.log`  
   
-## <a name="see-also"></a>Consulte também  
- [Referência de utilitários de prompt de comando &#40;Mecanismo de Banco de Dados&#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Referência do utilitário de prompt de comando &#40;Mecanismo de Banco de Dados&#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
   
   

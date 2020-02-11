@@ -1,5 +1,5 @@
 ---
-title: Conectar-se em modo Online a um banco de dados do Analysis Services | Microsoft Docs
+title: Conectar-se no modo online a um banco de dados Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 37b28b6d4f15e29242d20b33bb5ade12460ded7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076566"
 ---
 # <a name="connect-in-online-mode-to-an-analysis-services-database"></a>Conectar em Modo Online a um Banco de Dados do Analysis Services
-  Você pode se conectar diretamente a um banco de dados existente do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e modificar seus objetos. Quando você se conecta diretamente a um banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , as alterações feitas nos objetos ocorrem de imediato e nenhum projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é criado no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+  Você pode se conectar diretamente a um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] banco de dados existente e modificar os objetos diretamente dentro desse banco de dados. Quando você se conecta diretamente a um banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , as alterações feitas nos objetos ocorrem de imediato e nenhum projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é criado no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ### <a name="to-connect-directly-to-an-analysis-services-database-by-using-sql-server-data-tools"></a>Conectar-se diretamente a um banco de dados do Analysis Services usando as Ferramentas de Dados do SQL Server  
   
@@ -38,8 +38,8 @@ ms.locfileid: "66076566"
   
      Agora, você pode editar diretamente qualquer objeto do banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
-## <a name="see-also"></a>Consulte também  
- [Trabalhando com projetos e bancos de dados do Analysis Services durante a fase de desenvolvimento](work-with-analysis-services-projects-and-databases-in-development.md)   
- [Criação de modelos multidimensionais usando o SSDT &#40;SQL Server Data Tools&#41;](creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Trabalhando com projetos Analysis Services e bancos de dados durante a fase de desenvolvimento](work-with-analysis-services-projects-and-databases-in-development.md)   
+ [Criando modelos multidimensionais usando o SQL Server Data Tools &#40;SSDT&#41;](creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)  
   
   

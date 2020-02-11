@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c1ed99e6ee3ef6385e6041044e9b2cb829b1b3ce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63151139"
 ---
 # <a name="considerations-for-using-test-servers"></a>Considerações para usar servidores de teste
@@ -56,7 +56,7 @@ ms.locfileid: "63151139"
   
 -   Depois de ajustar, o Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] deverá remover quaisquer metadados que criou no servidor de teste durante o processo de ajuste. Isso inclui o banco de dados shell. Se você estiver executando uma série de sessões de ajuste com os mesmos servidores de produção e de teste, poderá desejar reter esse banco de dados shell para economizar tempo. No arquivo de entrada XML, especifique o subelemento **RetainShellDB** com os outros subelementos no elemento pai **TuningOptions** . Usar essas opções faz o Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] reter o banco de dados shell. Para obter mais informações, veja [Referência do arquivo de entrada XML &#40;Orientador de Otimização do Mecanismo de Banco de Dados&#41;](database-engine-tuning-advisor.md).  
   
--   Os bancos de dados shell poderão ser deixados no servidor de teste após uma sessão bem-sucedida de ajuste do servidor de teste/servidor de produção mesmo que você não tenha especificado o subelemento **RetainShellDB**. Esses bancos de dados de shell não desejados podem interferir com sessões de ajuste subsequentes e podem ser cancelados antes de executar outra sessão de ajuste do servidor de teste/servidor de produção. Além disso, se uma sessão de ajuste fechar inesperadamente, os bancos de dados de shell poderão ser deixados no servidor de teste e os objetos dentro desses bancos de dados deixados no servidor de teste. Você também deverá excluir esses bancos de dados e objetos antes de iniciar uma nova sessão de ajuste do servidor de teste/servidor de produção.  
+-   Os bancos de dados shell poderão ser deixados no servidor de teste após uma sessão bem-sucedida de ajuste do servidor de teste/servidor de produção mesmo que você não tenha especificado o subelemento **RetainShellDB** . Esses bancos de dados de shell não desejados podem interferir com sessões de ajuste subsequentes e podem ser cancelados antes de executar outra sessão de ajuste do servidor de teste/servidor de produção. Além disso, se uma sessão de ajuste fechar inesperadamente, os bancos de dados de shell poderão ser deixados no servidor de teste e os objetos dentro desses bancos de dados deixados no servidor de teste. Você também deverá excluir esses bancos de dados e objetos antes de iniciar uma nova sessão de ajuste do servidor de teste/servidor de produção.  
   
 ## <a name="issues-related-to-the-tuning-process"></a>Problemas relacionados ao processo de ajuste  
   

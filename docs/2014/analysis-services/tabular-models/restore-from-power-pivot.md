@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f90ea08269e79e57c623af41fc2f0fbc09e2fb42
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066643"
 ---
 # <a name="restore-from-powerpivot"></a>Restaurar do PowerPivot
   Você pode usar o recurso Restaurar do PowerPivot no SQL Server Management Studio para criar um novo banco de dados modelo de tabela em uma instância do Analysis Services (executando em modo Tabular) ou restaurar para um banco de dados existente de uma pasta de trabalho PowerPivot (.xlsx).  
   
 > [!NOTE]  
->  O modelo de projeto Importar do PowerPivot no SQL Server Data Tools fornece funcionalidade semelhante. Para obter mais informações, consulte [importar do PowerPivot &#40;SSAS de tabela&#41;](import-from-power-pivot-ssas-tabular.md).  
+>  O modelo de projeto Importar do PowerPivot no SQL Server Data Tools fornece funcionalidade semelhante. Para obter mais informações, consulte [Importar do PowerPivot &#40;SSAS tabular&#41;](import-from-power-pivot-ssas-tabular.md).  
   
  Ao usar Restaurar do PowerPivot, tenha em mente o seguinte:  
   
@@ -47,8 +47,8 @@ ms.locfileid: "66066643"
   
 5.  Em **Opções**, deixe **Incluir informações de segurança** marcado. Ao restaurar de uma pasta de trabalho PowerPivot, essa configuração não se aplica.  
   
-## <a name="see-also"></a>Consulte também  
- [Bancos de dados de modelo de tabela &#40;SSAS de Tabela&#41;](tabular-model-databases-ssas-tabular.md)   
- [Importar do PowerPivot &#40;Tabular do SSAS&#41;](import-from-power-pivot-ssas-tabular.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Bancos de dados de modelo de tabela &#40;SSAS de tabela&#41;](tabular-model-databases-ssas-tabular.md)   
+ [Importar do PowerPivot &#40;SSAS de tabela&#41;](import-from-power-pivot-ssas-tabular.md)  
   
   

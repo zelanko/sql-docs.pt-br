@@ -1,5 +1,5 @@
 ---
-title: Configure o acesso do DirectQuery para um banco de dados do modelo de tabela ou na memória | Microsoft Docs
+title: Configurar o acesso na memória ou DirectQuery para um banco de dados modelo de tabela | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,19 +11,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 55a1a296e6a7b2a2155dea590be9321b22e73451
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067191"
 ---
 # <a name="configure-in-memory-or-directquery-access-for-a-tabular-model-database"></a>Configure o Acesso Na Memória ou DirectQuery para um banco de dados modelo de tabela
   Este tópico descreve como alterar as propriedades de conexão de um modelo de tabela que já foi implantado, para habilitar o uso do modelo no modo Consulta Direta.  
   
- Para obter mais informações sobre essas propriedades e configuração para os cenários mais comuns, consulte [cenários de implantação do DirectQuery &#40;SSAS de tabela&#41;](../directquery-deployment-scenarios-ssas-tabular.md).  
+ Para obter mais informações sobre essas propriedades e a configuração para os cenários mais comuns, consulte [cenários de implantação do DirectQuery &#40;SSAS tabular&#41;](../directquery-deployment-scenarios-ssas-tabular.md).  
   
 ## <a name="requirements"></a>Requisitos  
- Habilitar o uso do modo Consulta Direta em um modelo de tabela é um processo de várias etapas. Faça o seguinte:  
+ Habilitar o uso do modo Consulta Direta em um modelo de tabela é um processo de várias etapas. Você deve:  
   
 1.  Verificar se o modelo não tem recursos que podem causar erros de validação no modo Consulta Direta.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "66067191"
   
 1.  No SQL Server Management Studio, abra a instância para a qual você implantou o modelo.  
   
-2.  No Pesquisador de objetos, clique no nome do banco de dados modelo e selecione **propriedades**.  
+2.  No Pesquisador de objetos, clique com o botão direito do mouse no nome do banco de dados modelo e selecione **Propriedades**.  
   
 3.  Localize a propriedade **DirectQueryMode**. Para habilitar o uso da fonte de dados relacional, esta propriedade deve ser definida como um destes valores:  
   

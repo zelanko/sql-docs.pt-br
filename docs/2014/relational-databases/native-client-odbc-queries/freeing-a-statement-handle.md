@@ -18,18 +18,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9b1a155f7d2ee6cc5f92d46c2bb744168dc5ebc0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200050"
 ---
 # <a name="freeing-a-statement-handle"></a>Liberando um identificador de instrução
-  É mais eficiente reutilizar identificadores de instrução do que eliminá-los e alocar novos. Antes de executar uma nova instrução SQL em um identificador de instrução, os aplicativos deverão verificar se as configurações de instrução atuais são apropriadas. Essas configurações incluem atributos de instrução, associações de parâmetro e associações de conjunto de resultados. Geralmente, parâmetros e conjuntos de resultados para a instrução SQL antiga deve ser desassociada chamando [SQLFreeStmt](../native-client-odbc-api/sqlfreestmt.md) com o SQL_RESET_PARAMS e SQL_UNBIND opções e, em seguida, novamente associado para a nova instrução SQL.  
+  É mais eficiente reutilizar identificadores de instrução do que eliminá-los e alocar novos. Antes de executar uma nova instrução SQL em um identificador de instrução, os aplicativos deverão verificar se as configurações de instrução atuais são apropriadas. Essas configurações incluem atributos de instrução, associações de parâmetro e associações de conjunto de resultados. Geralmente, os parâmetros e os conjuntos de resultados para a instrução SQL antiga devem ser desassociados chamando [SQLFreeStmt](../native-client-odbc-api/sqlfreestmt.md) com as opções SQL_RESET_PARAMS e SQL_UNBIND e, em seguida, reassociar para a nova instrução SQL.  
   
- Quando o aplicativo tiver terminado de usar a instrução, ele chama [SQLFreeHandle](../native-client-odbc-api/sqlfreehandle.md) para liberar a instrução. Observe que **SQLDisconnect** libera automaticamente todas as instruções em uma conexão.  
+ Quando o aplicativo termina de usar a instrução, ele chama [SQLFreeHandle](../native-client-odbc-api/sqlfreehandle.md) para liberar a instrução. Observe que **SQLDisconnect** libera automaticamente todas as instruções em uma conexão.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Executando consultas &#40;ODBC&#41;](executing-queries-odbc.md)  
   
   

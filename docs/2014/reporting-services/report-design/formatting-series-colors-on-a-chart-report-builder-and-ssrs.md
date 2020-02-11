@@ -16,14 +16,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 445e6d2ccaba0d03de9f25d770ac22f35b628778
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105764"
 ---
 # <a name="formatting-series-colors-on-a-chart-report-builder-and-ssrs"></a>Formatando as cores da série em um gráfico (Construtor de Relatórios e SSRS)
-  O Reporting Services fornece várias paletas internas para gráficos. Além disso, você pode definir uma paleta personalizada. Por padrão, os gráficos usam internos **BrightPastel** paleta de cores para preencher cada série. Essas cores também aparecem na legenda. Se forem adicionadas várias séries ao gráfico, ele atribuirá um cor à série na ordem em que as cores foram definidas na paleta.  
+  O Reporting Services fornece várias paletas internas para gráficos. Além disso, você pode definir uma paleta personalizada. Por padrão, os gráficos usam a paleta de cores **BrightPastel** interna para preencher cada série. Essas cores também aparecem na legenda. Se forem adicionadas várias séries ao gráfico, ele atribuirá um cor à série na ordem em que as cores foram definidas na paleta.  
   
  Se houver mais séries que o número de cores da paleta, o gráfico começará a reutilizar as cores, ou seja, poderão existir duas séries com a mesma cor. Isso ocorrerá frequentemente se você estiver usando um gráfico de Forma, no qual a cada ponto de dados é atribuído uma cor da paleta. Para evitar confusão, defina uma paleta personalizada que tenha, no mínimo, o mesmo número de cores que o número de séries do gráfico.  
   
@@ -54,9 +54,9 @@ ms.locfileid: "66105764"
   
  [Realçar dados do gráfico adicionando faixas &#40;Construtor de Relatórios e SSRS&#41;](highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Formatando um gráfico &#40;Construtor de Relatórios e SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
- [Adicionar estilos de bisel, relevo e textura a um gráfico &#40;Construtor de Relatórios e SSRS&#41;](chart-effects-add-bevel-emboss-or-texture-report-builder.md)   
+ [Adicionar estilos de bisel, alto-relevo e textura a um gráfico &#40;Construtor de Relatórios e SSRS&#41;](chart-effects-add-bevel-emboss-or-texture-report-builder.md)   
  [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Formatando a legenda em um gráfico &#40;Construtor de Relatórios e SSRS&#41;](chart-legend-formatting-report-builder.md)  
   

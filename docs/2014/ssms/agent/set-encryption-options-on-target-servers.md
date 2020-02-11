@@ -15,18 +15,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b27dd81df572e289d182fdaa637a3af972b3d603
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63244982"
 ---
 # <a name="set-encryption-options-on-target-servers"></a>Definir opções de criptografia em servidores de destino
   Se você não puder usar um certificado para comunicações criptografadas em SSL (Secure Sockets Layer) entre os servidores mestres e parte ou todos os servidores de destino, mas quiser criptografar o canal entre eles, configure o servidor de destino para que use o nível de segurança necessário.  
   
- Para configurar o nível apropriado de segurança necessário para um canal de comunicação servidor mestre/servidor de destino específico, defina a subchave do Registro do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\** \<*instance_name*> **\SQLServerAgent\MsxEncryptChannelOptions(REG_DWORD)** no servidor de destino como um dos valores a seguir. O valor de \<*instance_name*> é **MSSQL.** _n_. Por exemplo, **MSSQL.1** ou **MSSQL.3**.  
+ Para configurar o nível apropriado de segurança necessário para um canal de comunicação do servidor mestre/servidor de destino específico [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , defina a subchave do registro do agente **\\\HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server****>**** \<instance_name \SQLServerAgent\MsxEncryptChannelOptions (REG_DWORD) no servidor de destino como um dos valores a seguir. O valor de \< *instance_name*> é **MSSQL.** _n_. Por exemplo, **MSSQL.1** ou **MSSQL.3**.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |**0**|Desabilita a criptografia entre este servidor de destino e o servidor mestre. Escolha esta opção apenas quando o canal entre o servidor de destino e servidor mestre estiver protegido por outros meios.|  
 |**1**|Habilita criptografia apenas entre este servidor de destino e o servidor mestre, mas nenhuma validação de certificado é necessária.|  
@@ -37,7 +37,7 @@ ms.locfileid: "63244982"
 > [!CAUTION]  
 >  [!INCLUDE[ssNoteRegistry](../../includes/ssnoteregistry-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Habilitar conexões criptografadas no Mecanismo de Banco de Dados &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)  
   
   

@@ -22,10 +22,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c9b5ca361cbfb5de42341fad8625f10d7ce3c2fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099807"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>Utilitário rskeymgmt (SSRS)
@@ -75,17 +75,17 @@ ms.locfileid: "66099807"
  `-j`  
  Configura uma instância de servidor de relatório remota para compartilhar o banco de dados do servidor de relatório usado pela instância do servidor de relatório local.  
   
- **-r**  *installationID*  
+ **-r**  *InstallationID*  
  Remove as informações de chave simétrica de uma instância de servidor de relatório específica, removendo assim o servidor do relatório de uma implantação em expansão. O *ID_instalação* é um valor GUID que pode ser localizado no arquivo RSReportserver.config.  
   
- `-f`  *file*  
+ `-f`  *Grupo*  
  Especifica um caminho totalmente qualificado ao arquivo que armazena uma cópia de backup das chaves simétricas.  
   
  Para **rskeymgmt -e**, a chave simétrica é gravada no arquivo especificado.  
   
  Para **rskeymgmt -a**, o valor da chave simétrica armazenado no arquivo é aplicado à instância do servidor de relatório.  
   
- `-p`  *password*  
+ `-p`  *la*  
  (Necessário para `-f`) Especifica a senha usada para fazer backup ou para aplicar uma chave simétrica. Esse valor não pode ficar em branco.  
   
  `-i`  
@@ -97,13 +97,13 @@ ms.locfileid: "66099807"
  `-n`  
  Especifica o nome da instância do servidor de relatório em um computador remoto. Esse argumento será opcional se você instalou o servidor de relatório na instância padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (o valor padrão para `-n` é MSSQLSERVER). Se você instalou o servidor de relatório como uma instância nomeada, `-n` será necessário.  
   
- `-u`  *useraccount*  
+ `-u`  *USERACCOUNT*  
  Especifica a conta de administrador no computador remoto que você está unindo à implantação em expansão. Se uma conta não for especificada, as credenciais do usuário atual serão usadas.  
   
- `-v`  *password*  
+ `-v`  *la*  
  (Necessário para `-u`) Especifica a senha de uma conta de administrador no computador remoto que você quer unir à implantação em expansão.  
   
- **-t**  *trace*  
+ *rastreamento* **-t**    
  Produz mensagens de erro para o log de rastreamento. Esse argumento não exige um valor. Para obter mais informações, consulte [Report Server Service Trace Log](../report-server/report-server-service-trace-log.md).  
   
 ## <a name="permissions"></a>Permissões  
@@ -147,9 +147,9 @@ rskeymgmt -j -m <remotecomputer> -n <namedreportserverinstance> -u <administrato
 >  Uma implantação em expansão de servidor de relatório se refere a um modelo de implantação onde várias instâncias do servidor de relatório compartilham o mesmo banco de dados do servidor de relatório. Um banco de dados do servidor de relatório pode ser usado por qualquer instância que armazena suas chaves simétricas no banco de dados. Por exemplo, se um banco de dados do servidor de relatório contiver informações de chave para três instâncias do servidor de relatório, todas as três instâncias serão consideradas membros da mesma implantação em expansão.  
   
 #### <a name="joining-report-server-instances-on-the-same-computer"></a>Unindo instâncias do servidor de relatório no mesmo computador  
- Você pode criar uma implantação em expansão para várias de instâncias do servidor de relatório instaladas no mesmo computador. Não defina os argumentos `-u` e `-v` se você estiver unindo instâncias do servidor de relatório instaladas localmente. Os argumentos `-u` e `-v` só são usados quando você estiver unindo uma instância de um computador remoto. Se você especificar os argumentos, você receberá o seguinte erro: "As credenciais do usuário não podem ser usadas para conexões locais".  
+ Você pode criar uma implantação em expansão para várias de instâncias do servidor de relatório instaladas no mesmo computador. Não defina os argumentos `-u` e `-v` se você estiver unindo instâncias do servidor de relatório instaladas localmente. Os argumentos `-u` e `-v` só são usados quando você estiver unindo uma instância de um computador remoto. Se você especificar os argumentos, receberá o seguinte erro: "Credenciais de usuário não podem ser usadas para conexões locais".  
   
- O exemplo a seguir ilustra a sintaxe para criar uma implantação em expansão que usa várias instâncias locais. Neste exemplo, <`initializedinstance`> é o nome de uma instância que já esteja inicializado para usar o banco de dados de servidor de relatório e <`newinstance`> é o nome da instância que você deseja adicionar à implantação:  
+ O exemplo a seguir ilustra a sintaxe para criar uma implantação em expansão que usa várias instâncias locais. Neste exemplo, <`initializedinstance`> é o nome de uma instância que já foi inicializada para usar o banco de dados do servidor de `newinstance` relatório e <> é o nome da instância que você deseja adicionar à implantação:  
   
 ```  
 rskeymgmt -j -i <initializedinstance> -m <computer name> -n <newinstance>  
@@ -165,7 +165,7 @@ rskeymgmt -r <installationID>
 ```  
   
 ## <a name="file-location"></a>Local do arquivo  
- Rskeymgmt.exe está localizado em **\<*drive*>:\Program Files\Microsoft SQL Server\110\Tools\Binn** ou em **\<*drive*>:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn**. Você pode executar o utilitário de qualquer pasta em seu sistema de arquivos.  
+ O rskeymgmt. exe está localizado na ** \< *unidade*>: \Program Files\Microsoft SQL Server\110\Tools\Binn** ou na ** \< *unidade*>: \Program Files (x86) \Microsoft SQL Server\110\Tools\Binn**. Você pode executar o utilitário de qualquer pasta em seu sistema de arquivos.  
   
 ## <a name="remarks"></a>Comentários  
  Um servidor de relatório criptografa credenciais armazenadas e informações de conexão. Uma chave pública e uma chave simétrica são usadas para criptografar dados. Um banco de dados do servidor de relatório deve ter chaves válidas para que o servidor de relatório seja executado. Você pode usar **rskeymgmt** para fazer backup, excluir ou restaurar as chaves. Se as chaves não puderem ser restauradas, essa ferramenta fornecerá um modo de excluir conteúdo criptografado que não pode mais ser usado.  
@@ -174,9 +174,9 @@ rskeymgmt -r <installationID>
   
  Para obter mais informações sobre as chaves de criptografia, consulte [Configurar e gerenciar chaves de criptografia &#40; 	Gerenciador de Configurações do SSRS&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md) e [Inicializar um servidor de relatório &#40;Gerenciador de Configurações do SSRS&#41;](../install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Configurar uma implantação escalável do servidor de relatório no modo nativo &#40;Gerenciador de configurações do SSRS&#41;](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)   
- [Servidor de relatório do Reporting Services &#40;Modo Nativo&#41;](../report-server/reporting-services-report-server-native-mode.md)   
+ [Reporting Services servidor de relatório &#40;modo nativo&#41;](../report-server/reporting-services-report-server-native-mode.md)   
  [Utilitários de prompt de comando do servidor de relatório &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)   
  [Configurar e gerenciar chaves de criptografia &#40;SSRS Configuration Manager&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   

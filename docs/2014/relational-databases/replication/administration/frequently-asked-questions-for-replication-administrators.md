@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ce7e9249ec7ba97fdd159a743be30036847882b3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63207058"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>Perguntas frequentes para os administradores de replicação
@@ -94,7 +94,7 @@ ms.locfileid: "63207058"
  Essas informações estão disponíveis por meio do [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]e dos vários procedimentos de replicação armazenados. Para obter mais informações, consulte [Distributor and Publisher Information Script](distributor-and-publisher-information-script.md).  
   
 ### <a name="does-replication-encrypt-data"></a>A replicação criptografa dados?  
- Não. A replicação não criptografa dados armazenados no banco de dados nem transferidos pela rede. Para obter mais informações, consulte a seção "Criptografia" do tópico [segurança de replicação do SQL Server](../security/view-and-modify-replication-security-settings.md).  
+ Não. A replicação não criptografa dados armazenados no banco de dados nem transferidos pela rede. Para obter mais informações, consulte a seção "criptografia" do tópico [replicação do SQL Server segurança](../security/view-and-modify-replication-security-settings.md).  
   
 ### <a name="how-do-i-replicate-data-over-the-internet"></a>Como posso replicar dados pela Internet?  
  Replique os dados pela Internet, por meio de:  
@@ -103,7 +103,7 @@ ms.locfileid: "63207058"
   
 -   Opção de sincronização da Web para replicação de mesclagem. Para obter mais informações, consulte [Web Synchronization for Merge Replication](../web-synchronization-for-merge-replication.md).  
   
- Todos os tipos de replicação do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] podem replicar dados por uma VPN, no entanto, recomenda-se a sincronização da Web quando a replicação de mesclagem for utilizada.  
+ Todos os tipos de replicação de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] podem replicar dados por uma VPN, no entanto, recomenda-se a sincronização da Web quando a replicação de mesclagem for utilizada.  
   
 ### <a name="does-replication-resume-if-a-connection-is-dropped"></a>A replicação será retomada se uma conexão for cancelada  
  Sim. O processamento de replicação é retomado no ponto em que ele foi interrompido quando a conexão foi cancelada. Se estiver usando uma replicação de mesclagem em uma rede não confiável, tente usar os registros lógicos, isto garantirá que as alterações sejam processadas como uma unidade. Para obter mais informações, consulte [Agrupar alterações a linhas relacionadas com registros lógicos](../merge/group-changes-to-related-rows-with-logical-records.md).  
@@ -117,7 +117,7 @@ ms.locfileid: "63207058"
  Não. Você pode criar um pacote DTS para transferir os logons e as senhas do Publicador para um ou mais Assinantes.  
   
 ### <a name="what-are-schemas-and-how-are-they-replicated"></a>O que são os esquemas e como eles são replicados?  
- A começar pelo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], *esquema* tem dois significados:  
+ A começar pelo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], o *esquema* tem dois significados:  
   
 -   A definição de um objeto, como uma instrução CREATE TABLE. Por padrão, a replicação copia as definições de todos os objetos replicados para o Assinante.  
   
@@ -151,7 +151,7 @@ ms.locfileid: "63207058"
   
 -   Especifique que os objetos não devem ser descartados quando a assinatura for reinicializada. Antes da reinicialização, você deve:  
   
-    -   Execute [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql) ou [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Especifique um valor de 'pre_creation_cmd' (**sp_changearticle**) ou 'pre_creation_command' (**sp_changemergearticle**) para o parâmetro **@property** e um valor de 'nenhum', 'excluir' ou 'truncar' para o parâmetro **@value**.  
+    -   Execute [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql) ou [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Especifique um valor de ' pre_creation_cmd ' (**sp_changearticle**) ou ' pre_creation_command ' (**sp_changemergearticle**) para o parâmetro **@property** e um valor de ' nenhum ', ' excluir ' ou ' truncar ' para o parâmetro **@value**.  
   
     -   Na caixa de diálogo **Propriedades do Artigo – \<Artigo>** na seção **Objeto de Destino**, selecione um valor **Manter objeto existente inalterado**, **Excluir dados. Se o artigo tiver um filtro de linha, exclua somente os dados correspondentes ao filtro.** ou **Truncar todos os dados no objeto existente** para a opção **Ação se o nome estiver em uso**. Para mais informações sobre como acessar essa caixa de diálogo, consulte [Exibir e modificar propriedades de publicação](../publish/view-and-modify-publication-properties.md).  
   
@@ -167,7 +167,7 @@ ms.locfileid: "63207058"
  Sim. Existem várias considerações especiais para os bancos de dados envolvidos em replicação. Para obter mais informações, veja [Fazer backup e restaurar bancos de dados replicados](back-up-and-restore-replicated-databases.md).  
   
 ### <a name="does-replication-affect-the-size-of-the-transaction-log"></a>A replicação afeta o tamanho do log de transações?  
- A replicação de mesclagem e a replicação de instantâneos não afetam o tamanho do log de transações, mas uma replicação transacional sim. Se um banco de dados incluir uma ou mais publicações transacionais, o log não será truncado até que todas as transações pertinentes para as publicações sejam enviadas ao banco de dados de distribuição. Se o log de transações aumentar demasiadamente, e o Agente de Leitor de Log estiver em execução com agendamento definido, considere encurtar o intervalo entre as execuções. Ou, defina-o para executar em modo contínuo. Se ele for definido para executar em modo contínuo (o padrão), garanta que ele esteja em execução. Para obter mais informações sobre como verificar o status do agente de leitor de Log, consulte [exibir informações e executar tarefas usando o Replication Monitor](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
+ A replicação de mesclagem e a replicação de instantâneos não afetam o tamanho do log de transações, mas uma replicação transacional sim. Se um banco de dados incluir uma ou mais publicações transacionais, o log não será truncado até que todas as transações pertinentes para as publicações sejam enviadas ao banco de dados de distribuição. Se o log de transações aumentar demasiadamente, e o Agente de Leitor de Log estiver em execução com agendamento definido, considere encurtar o intervalo entre as execuções. Ou, defina-o para executar em modo contínuo. Se ele for definido para executar em modo contínuo (o padrão), garanta que ele esteja em execução. Para obter mais informações sobre como verificar Agente de Leitor de Log status, consulte [Exibir informações e executar tarefas usando o Replication Monitor](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
  Além disso, se você tiver definido a opção 'sync with backup' no banco de dados de publicação ou no banco de dados de distribuição, o log de transações não será truncado até o backup de todas as transações ser feito. Se o log de transações crescer demasiadamente, e você tiver essa opção definida, considere encurtar o intervalo entre os backups do log de transações. Para mais informações sobre backup e restauração de bancos de dados envolvidos na replicação transacional, consulte [Estratégias de backup e restauração de instantâneo e replicação transacional](strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md).  
   
@@ -181,10 +181,10 @@ ms.locfileid: "63207058"
  Em versões do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anteriores ao [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], para mover ou renomear arquivos de banco de dados era necessário desanexar e tornar a anexar o banco de dados. Como um banco de dados replicado não pode ser desanexado, a replicação devia ser removida antes que os bancos de dados. A partir do [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], é possível mover ou renomear arquivos sem desanexar e anexar novamente o banco de dados, e não produzir efeito sobre a replicação. Para mais informações sobre as operações de renomeação e movimentação, consulte [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql).  
   
 ### <a name="how-do-i-drop-a-table-that-is-being-replicated"></a>Como posso descartar uma tabela que está sendo replicada?  
- Primeiro, remova o artigo da publicação usando [sp_droparticle](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql), [sp_dropmergearticle](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql) ou a caixa de diálogo **Propriedades de Publicação – \<Publicação>**, em seguida, remova-o do banco de dados usando `DROP <Object>`. Não é possível descartar artigos de publicações transacionais ou de instantâneos após as assinaturas terem sido adicionadas; antes é preciso descartar as assinaturas. Para obter mais informações, consulte [Add Articles to and Drop Articles from Existing Publications](../publish/add-articles-to-and-drop-articles-from-existing-publications.md) (Adicionar e remover artigos para/de publicações existentes).  
+ Primeiro, remova o artigo da publicação usando [sp_droparticle](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql), [sp_dropmergearticle](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql) ou a caixa de diálogo **Propriedades de Publicação – \<Publicação>** , em seguida, remova-o do banco de dados usando `DROP <Object>`. Não é possível descartar artigos de publicações transacionais ou de instantâneos após as assinaturas terem sido adicionadas; antes é preciso descartar as assinaturas. Para obter mais informações, consulte [Add Articles to and Drop Articles from Existing Publications](../publish/add-articles-to-and-drop-articles-from-existing-publications.md) (Adicionar e remover artigos para/de publicações existentes).  
   
 ### <a name="how-do-i-add-or-drop-columns-on-a-published-table"></a>Como posso adicionar ou descartar colunas em uma tabela publicada?  
- O[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dá suporte a uma grande variedade de alterações de esquema em objetos publicados, inclusive a adição e o descarte de colunas. Por exemplo, execute ALTER TABLE... DROP COLUMN no Publicador e a instrução será replicada para os Assinantes, em seguida, será executada para descartar a coluna. Os Assinantes executando versões do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anteriores ao [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] possuem suporte para a adição e descarte de colunas por meio dos procedimentos armazenados [sp_repladdcolumn](/sql/relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql) e [sp_repldropcolumn](/sql/relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql). Para obter mais informações, consulte [Make Schema Changes on Publication Databases](../publish/make-schema-changes-on-publication-databases.md) (Fazer alterações de esquema em bancos de dados de publicação).  
+ O[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dá suporte a uma grande variedade de alterações de esquema em objetos publicados, inclusive a adição e o descarte de colunas. Por exemplo, execute ALTER TABLE... Solte a coluna no Publicador, e a instrução é replicada para os assinantes e, em seguida, executada para descartar a coluna. Os Assinantes executando versões do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anteriores ao [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] possuem suporte para a adição e descarte de colunas por meio dos procedimentos armazenados [sp_repladdcolumn](/sql/relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql) e [sp_repldropcolumn](/sql/relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql). Para obter mais informações, consulte [Make Schema Changes on Publication Databases](../publish/make-schema-changes-on-publication-databases.md) (Fazer alterações de esquema em bancos de dados de publicação).  
   
 ## <a name="replication-maintenance"></a>Manutenção da Replicação  
   
@@ -195,7 +195,7 @@ ms.locfileid: "63207058"
  Não é necessário interromper a atividade no banco de dados de publicação ou de assinatura para adicionar uma tabela (ou qualquer outro objeto). Adicione uma tabela a uma publicação com a caixa de diálogo **Propriedades de Publicação – \<Publicação>** ou os procedimentos armazenados [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) e [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Para obter mais informações, consulte [Add Articles to and Drop Articles from Existing Publications](../publish/add-articles-to-and-drop-articles-from-existing-publications.md) (Adicionar e remover artigos para/de publicações existentes).  
   
 ### <a name="how-do-i-remove-a-table-from-a-publication"></a>Como posso remover uma tabela de uma publicação?  
- Remova a tabela da publicação usando [sp_droparticle](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql), [sp_dropmergearticle](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql) ou a caixa de diálogo **Propriedades de Publicação – \<Publicação>**. Não é possível descartar artigos de publicações transacionais ou de instantâneos após as assinaturas terem sido adicionadas; antes é preciso descartar as assinaturas. Para obter mais informações, consulte [Add Articles to and Drop Articles from Existing Publications](../publish/add-articles-to-and-drop-articles-from-existing-publications.md) (Adicionar e remover artigos para/de publicações existentes).  
+ Remova a tabela da publicação usando [sp_droparticle](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql), [sp_dropmergearticle](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql) ou a caixa de diálogo **Propriedades de Publicação – \<Publicação>** . Não é possível descartar artigos de publicações transacionais ou de instantâneos após as assinaturas terem sido adicionadas; antes é preciso descartar as assinaturas. Para obter mais informações, consulte [Add Articles to and Drop Articles from Existing Publications](../publish/add-articles-to-and-drop-articles-from-existing-publications.md) (Adicionar e remover artigos para/de publicações existentes).  
   
 ### <a name="what-actions-require-subscriptions-to-be-reinitialized"></a>Que ações exigem que as assinaturas sejam reinicializadas?  
  Há várias alterações em artigos e publicações que exigem a reinicialização das assinaturas. Para obter mais informações, consulte [Alterar propriedade da publicação e do artigo](../publish/change-publication-and-article-properties.md).  
@@ -207,7 +207,7 @@ ms.locfileid: "63207058"
  As ações necessárias à remoção de replicação de banco de dados dependem se o banco de dados foi usado como um banco de dados de publicação, banco de dados de assinatura ou ambos.  
   
 ### <a name="how-do-i-determine-whether-there-are-transactions-or-rows-to-be-replicated"></a>Como posso determinar se há transações ou linhas a serem replicadas?  
- Para a replicação transacional, use os procedimentos armazenados ou a guia **Comandos não Distribuídos** no Replication Monitor. Para obter mais informações, consulte [exibir comandos replicados e outras informações no banco de dados de distribuição &#40;programação Transact-SQL de replicação&#41; ](../monitor/view-replicated-commands-and-information-in-distribution-database.md) e [exibir informações e executar tarefas usando O Replication Monitor](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
+ Para a replicação transacional, use os procedimentos armazenados ou a guia **Comandos não Distribuídos** no Replication Monitor. Para obter mais informações, consulte [exibir comandos replicados e outras informações no banco de dados de distribuição &#40;Programação Transact-SQL de replicação&#41;](../monitor/view-replicated-commands-and-information-in-distribution-database.md) e [Exibir informações e executar tarefas usando o Replication Monitor](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
  Para replicação de mesclagem, use o procedimento armazenado **sp_showpendingchanges**. Para mais informações, consulte [sp_showpendingchanges &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql).  
   
@@ -218,7 +218,7 @@ ms.locfileid: "63207058"
   
 -   A quantidade de tempo estimada para entrega de comandos ao Assinante. Se esse valor for maior do que a quantidade de tempo requerida para gerar e aplicar um instantâneo ao Assinante, considere reiniciar o Assinante. Para obter mais informações, consulte [Reinicializar as assinaturas](../reinitialize-subscriptions.md).  
   
- Para obter mais informações, consulte [sp_replmonitorsubscriptionpendingcmds &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-replmonitorsubscriptionpendingcmds-transact-sql) e [exibir informações e executar tarefas usando o Replication Monitor](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
+ Para obter mais informações, consulte [sp_replmonitorsubscriptionpendingcmds &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replmonitorsubscriptionpendingcmds-transact-sql) e [Exibir informações e executar tarefas usando o Replication Monitor](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 ## <a name="replication-and-other-database-features"></a>Replicação e demais recursos dos Bancos de Dados  
   
@@ -228,7 +228,7 @@ ms.locfileid: "63207058"
 ### <a name="does-replication-work-in-conjunction-with-clustering"></a>A replicação trabalha junto com o uso de cluster?  
  Sim. Nenhuma consideração especial é exigida porque todos os dados são armazenados em um conjunto de discos no cluster.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Perguntas Frequentes sobre Administração de Replicação](frequently-asked-questions-for-replication-administrators.md)   
  [Best Practices for Replication Administration](best-practices-for-replication-administration.md)  
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 59bff3eac690b7352b75d02bd7b266dfa8f303f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070208"
 ---
 # <a name="restrict-rows-partition-wizard"></a>Restringir linhas (Assistente para Partições)
@@ -29,7 +29,7 @@ ms.locfileid: "66070208"
 >  Se você tiver especificado uma tabela em **Tabelas Disponíveis** na página **Especificar Informações sobre a Origem** que seja usada por outra partição, deverá fornecer uma consulta na página **Restringir Linhas** ou arriscar a duplicação de dados no cubo.  
   
 ## <a name="options"></a>Opções  
- **Especifique uma consulta para restringir linhas**  
+ **Especificar uma consulta para restringir linhas**  
  Selecione para inserir uma consulta que restrinja linhas na caixa **Consulta** .  
   
  Se o campo **Fornecer uma cláusula WHERE** estiver vazio quando essa opção for selecionada, essa opção será preenchida com uma instrução SQL que recupera todas as linhas da tabela selecionada anteriormente.  
@@ -40,10 +40,10 @@ ms.locfileid: "66070208"
 > [!IMPORTANT]  
 >  Ao especificar uma cláusula WHERE, um subconjunto de registros pode ser usado para esta partição. Isso é essencial para evitar duplicação de dados quando várias partições estiverem baseadas em uma única tabela de fatos.  
   
- **Verificar**  
+ **Verificação**  
  Verifica se a instrução em **Consulta** é uma instrução SQL válida.  
   
-## <a name="see-also"></a>Consulte também  
- [Partições &#40;Analysis Services – Dados Multidimensionais&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Partições &#40;Analysis Services de dados multidimensionais&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Detalhes de conversão (guia traduções, Designer de dimensão) (Analysis Services - dados multidimensionais) | Microsoft Docs
+title: Detalhes da tradução (guia Traduções, designer de dimensão) (Analysis Services-dados multidimensionais) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,23 +13,23 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9f8debb50a798ba46457942e0e79a9d45ab392c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065848"
 ---
 # <a name="translation-details-translations-tab-dimension-designer-analysis-services---multidimensional-data"></a>Detalhes de conversão (guia Conversões, Designer de Dimensão) (Analysis Services - Dados multidimensionais)
   Use o painel **Detalhes da conversão** na guia **Conversões** do Designer de Dimensão para definir e gerenciar conversões da dimensão atualmente selecionada.  
   
- **Para exibir o painel de detalhes da conversão**  
+ **Para exibir o painel Detalhes da conversão**  
   
 1.  No [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], abra o projeto do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e então abra a dimensão desejada.  
   
 2.  Clique na guia **Conversões** .  
   
 ## <a name="options"></a>Opções  
- **Idioma Padrão**  
+ **Idioma padrão**  
  Define os nomes dos objetos de dimensão no idioma padrão.  
   
  **Tipo de objeto**  
@@ -39,7 +39,7 @@ ms.locfileid: "66065848"
   
      Propriedades `Caption` e `AttributeAllMember`  
   
--   attribute  
+-   Atributo  
   
      Propriedades `Caption`, `AttributeHierarchyDisplayFolder` e `NamingTemplate`  
   
@@ -52,12 +52,12 @@ ms.locfileid: "66065848"
   
 -   Nível  
   
-     Propriedade `Caption`  
+     `Caption`Propriedade  
   
- **\<Language>**  
- Digite ou selecione o valor de propriedade do objeto de dimensão na linguagem selecionada. Clicar no botão de reticências ( **...** ) abre caixas de diálogo adicionais, dependendo da propriedade que está sendo editada:  
+ **\<>de idiomas**  
+ Digite ou selecione o valor de propriedade do objeto de dimensão na linguagem selecionada. Clicar no botão de reticências (**...**) abre caixas de diálogo adicionais, dependendo da propriedade que está sendo editada:  
   
--   Propriedade `NamingTemplate`  
+-   `NamingTemplate`Propriedade  
   
      Exibe a [Caixa de diálogo Modelo de Nomeação de Nível &#40;Analysis Services - Dados Multidimensionais&#41;](level-naming-template-dialog-box-analysis-services-multidimensional-data.md).  
   
@@ -68,37 +68,37 @@ ms.locfileid: "66065848"
 ## <a name="shortcut-menu"></a>Menu de atalho  
  As opções seguintes estão disponíveis no menu de atalho exibido ao clicar com o botão direito do mouse em uma conversão no painel **Detalhes de Conversão** :  
   
- **Nova tradução**  
+ **Nova Tradução**  
  Selecione para exibir a caixa de diálogo **Selecionar Idioma** e criar uma nova tradução. A conversão aparecerá como uma coluna nova na grade **Detalhes de Conversão** .  
   
- **Excluir tradução**  
+ **Excluir Tradução**  
  Selecione para excluir a tradução selecionada.  
   
 > [!NOTE]  
 >  A opção só está habilitada se você clicou com o botão direito do mouse em uma célula para excluir a conversão.  
   
- **Nova coluna de legendas**  
+ **Nova Coluna de Legendas**  
  Selecione para exibir a caixa de diálogo **Conversão de Dados de Atributo** e definir uma nova coluna de legendas quando você modificar um atributo na grade **Detalhes de Conversão** . Para habilitar esta opção, é preciso selecionar uma célula na coluna de conversão de um atributo na grade **Detalhes de Conversão** .  
   
 > [!NOTE]  
 >  A opção só está habilitada se você clicou com o botão direito do mouse em uma célula para excluir a coluna de conversão de um atributo.  
   
- **Editar coluna de legendas**  
+ **Editar Coluna de Legendas**  
  Selecione para exibir a caixa de diálogo **Conversão de Dados de Atributo** e modificar uma coluna de legendas existente quando você modificar um atributo na grade **Detalhes de Conversão** .  
   
 > [!NOTE]  
 >  A opção só será habilitada se uma célula em uma coluna de conversão que contém a coluna de legendas de um atributo tiver que ser selecionada na grade **Detalhes de Conversão** .  
   
- **Excluir coluna de legendas**  
+ **Excluir Coluna de Legendas**  
  Selecione para excluir a coluna de legendas para o atributo selecionado na grade **Detalhes de Conversão** .  
   
 > [!NOTE]  
 >  A opção só está habilitada se você clicou com o botão direito em uma célula em uma coluna de conversão que contém uma coluna de legendas para um atributo.  
   
- **Mostrar todos os atributos**  
+ **Mostrar Todos os Atributos**  
  Selecione para alternar a exibição de todos os atributos definidos para a dimensão selecionada, inclusive atributos para os quais as hierarquias de atributo estão desabilitadas.  
   
-## <a name="see-also"></a>Consulte também  
- [Traduções &#40;Designer de dimensão&#41; &#40;Analysis Services - dados multidimensionais&#41;](translations-dimension-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Traduções &#40;o designer de dimensão&#41; &#40;Analysis Services de dados multidimensionais&#41;](translations-dimension-designer-analysis-services-multidimensional-data.md)  
   
   

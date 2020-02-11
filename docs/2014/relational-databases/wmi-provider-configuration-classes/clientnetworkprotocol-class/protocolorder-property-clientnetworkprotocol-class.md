@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 0a0043e5a894e3f3f1b778a6f42fe6e3bacbbc78
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63192888"
 ---
 # <a name="protocolorder-property-clientnetworkprotocol-class"></a>Propriedade ProtocolOrder (classe ClientNetworkProtocol)
@@ -37,16 +37,16 @@ object
 ```  
   
 ## <a name="parts"></a>Partes  
- *object*  
- A [classe ClientNetworkProtocol](clientnetworkprotocol-class.md) que representa o protocolo de rede usado pelo cliente do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+ *objeto*  
+ Um objeto da [classe ClientNetworkProtocol](clientnetworkprotocol-class.md) que representa o protocolo de rede usado [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pelo cliente.  
   
 ## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  
  Um valor `uint32` que especifica o número de pedido do protocolo de rede do cliente atualmente referenciado como definido pelo método `OrderValue`. Se o protocolo de rede de cliente estiver desabilitado, esse valor será zero.  
   
 ## <a name="remarks"></a>Comentários  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Configurar protocolos de cliente](https://technet.microsoft.com/library/ms181035.aspx)   
- [Configurando protocolos de rede do cliente e bibliotecas de rede](https://technet.microsoft.com/library/ms181035.aspx)  
+ [Configurando protocolos de cliente de servidor e bibliotecas de rede](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

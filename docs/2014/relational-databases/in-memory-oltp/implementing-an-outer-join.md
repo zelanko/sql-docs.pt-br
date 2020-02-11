@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 532cdf5466445f08d5d415799b9f4afab347e77f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63158166"
 ---
 # <a name="implementing-an-outer-join"></a>Implementando uma junção externa
@@ -22,7 +22,7 @@ ms.locfileid: "63158166"
   
  Os exemplos usam uma variável de tabela para simular um cursor no lado esquerdo da junção e um único conjunto de resultados de uma variável de tabela, que só é adequado ao processar um número limitado de linhas, pois isso envolve a criação de uma cópia adicional das linhas de dados.  
   
- Uma variável (@outer) do tipo t1_type é usada para iterar nas linhas de t1, usando um while loop para simular um cursor. A variável @result do tipo t1t2_join_type é usada para construir o conjunto de resultados.  
+ Uma variável (@outer) do tipo t1_type é usada para iterar sobre as linhas de T1, usando um loop while para simular um cursor. A variável @result do tipo t1t2_join_type é usada para construir o conjunto de resultados.  
   
  Você deve testar o desempenho dessa solução alternativa, para garantir que ela seja executada como esperado em seu aplicativo.  
   
@@ -112,7 +112,7 @@ GO
 exec dbo.usp_left_join  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Problemas de migração para procedimentos armazenados compilados nativamente](migration-issues-for-natively-compiled-stored-procedures.md)   
  [Construções do Transact-SQL sem suporte pelo OLTP na memória](transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
   

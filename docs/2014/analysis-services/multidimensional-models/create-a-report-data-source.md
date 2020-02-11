@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 77cc99e74a1ee9d5d4be08bf7f9ce8d39288bd5b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076335"
 ---
 # <a name="create-a-report-data-source"></a>Criar uma fonte de dados de relatório
@@ -39,10 +39,10 @@ ms.locfileid: "66076335"
   
 1.  Clique na guia **Documentos** na faixa de opções da biblioteca.  
   
-2.  Clique em **Novo Documento** > **Fonte de Dados de Relatório**.  
+2.  Clique em **novo documento** > **fonte de dados de relatório**.  
   
     > [!NOTE]  
-    >  Caso você não veja o item **Fonte de Dados de Relatório** no menu, isso significa que o tipo de conteúdo da fonte de dados de relatório não foi habilitado para essa biblioteca. Para obter mais informações, consulte [Adicionar servidor de tipos de conteúdo relatório em uma biblioteca do &#40;Reporting Services no modo integrado do SharePoint&#41;](../../reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md).  
+    >  Caso você não veja o item **Fonte de Dados de Relatório** no menu, isso significa que o tipo de conteúdo da fonte de dados de relatório não foi habilitado para essa biblioteca. Para obter mais informações, consulte [adicionar tipos de conteúdo do servidor de relatório a uma biblioteca &#40;Reporting Services no modo integrado do SharePoint&#41;](../../reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md).  
   
 3.  Na página **Propriedades da Fonte de Dados** , em **Nome**, digite um nome para o arquivo .rsds de conexão.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "66076335"
   
      (Opcional) Os cubos podem ter perspectivas que fornecem aos usuários uma exibição de seleção em que apenas determinadas dimensões e/ou grupos de medidas ficam visíveis no cliente. Para especificar uma perspectiva, insira o nome da perspectiva como um valor para a propriedade Cubo: `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<perspectivename>'`  
   
-     (Opcional) Os cubos podem ter traduções de dados e metadados especificadas para diversos idiomas no modelo. Para ver as traduções (dados e metadados), você precisará adicionar a propriedade "Identificador de localidade" à cadeia de conexão: `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<cubename>'; Locale Identifier=<identifier number>`  
+     (Opcional) Os cubos podem ter traduções de dados e metadados especificadas para diversos idiomas no modelo. Para ver as traduções (dados e metadados), você precisa adicionar a propriedade "identificador de localidade" à cadeia de conexão:`Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<cubename>'; Locale Identifier=<identifier number>`  
   
 6.  Em **Credenciais**, especifique como o servidor de relatório obtém credenciais para acessar a fonte de dados externa.  
   

@@ -1,5 +1,5 @@
 ---
-title: Processar dados (SSAS Tabular) | Microsoft Docs
+title: Processar dados (SSAS tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0a0ca45681866e0ba96edaa81c21445a89f94275
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070696"
 ---
 # <a name="process-data-ssas-tabular"></a>Processar dados (SSAS tabular)
@@ -24,9 +24,9 @@ ms.locfileid: "66070696"
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-|Tópico|Descrição|  
+|Tópico|DESCRIÇÃO|  
 |-----------|-----------------|  
-|[Processando os dados manualmente &#40;SSAS Tabular&#41;](manually-process-data-ssas-tabular.md)|Descreve como processar manualmente dados de workspace modelo.|  
-|[Solucionar problemas de dados de processo &#40;SSAS tabular&#41;](troubleshoot-process-data-ssas-tabular.md)|Descreve como solucionar problemas de operações de processo.|  
+|[Processar manualmente os dados &#40;SSAS de tabela&#41;](manually-process-data-ssas-tabular.md)|Descreve como processar manualmente dados de workspace modelo.|  
+|[Solucionar problemas de dados de processo &#40;SSAS de tabela&#41;](troubleshoot-process-data-ssas-tabular.md)|Descreve como solucionar problemas de operações de processo.|  
   
   

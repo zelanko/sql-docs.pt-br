@@ -1,5 +1,5 @@
 ---
-title: Editor de origem do ADO NET (página colunas) | Microsoft Docs
+title: Editor de origem ADO NET (página colunas) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1eba4cb2f1f5c8825e9cae5751fe230fbe45a835
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061698"
 ---
 # <a name="ado-net-source-editor-columns-page"></a>Editor de Origem ADO NET (Página Colunas)
@@ -42,9 +42,9 @@ ms.locfileid: "66061698"
  **Coluna de Saída**  
  Forneça um nome exclusivo para cada coluna de saída. O padrão é o nome da coluna externa (origem) selecionada; porém, é possível escolher qualquer nome descritivo exclusivo. O nome fornecido será exibido no Designer [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
   
-## <a name="see-also"></a>Consulte também  
- [Editor de Origem ADO NET &#40;página Gerenciador de Conexões&#41;](../../2014/integration-services/ado-net-source-editor-connection-manager-page.md)   
- [Editor de Origem ADO NET &#40;Página Saída de Erro&#41;](../../2014/integration-services/ado-net-source-editor-error-output-page.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Editor de origem ADO NET &#40;página Gerenciador de conexões&#41;](../../2014/integration-services/ado-net-source-editor-connection-manager-page.md)   
+ [Editor de origem ADO NET &#40;página saída de erro&#41;](../../2014/integration-services/ado-net-source-editor-error-output-page.md)   
  [Gerenciador de conexões ADO.NET](connection-manager/ado-net-connection-manager.md)  
   
   

@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1b6298020c1aa39f2c5c319efa492f6832c301f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63190282"
 ---
 # <a name="add-or-remove-nodes-in-a-sql-server-failover-cluster-setup"></a>Adicionar ou remover nós em um cluster de failover do SQL Server (instalação)
@@ -36,20 +36,20 @@ ms.locfileid: "63190282"
   
  Para exibir as etapas de procedimentos para adicionar ou remover nós, selecione uma das seguintes operações:  
   
--   [Adicionar um nó a um cluster de failover existente do SQL Server](#Add)  
+-   [Adicionar um nó a um cluster de failover de SQL Server existente](#Add)  
   
--   [Remover um nó de um cluster de failover existente do SQL Server](#Remove)  
+-   [Remover um nó de um cluster de failover de SQL Server existente](#Remove)  
   
 > [!IMPORTANT]  
 >  A letra da unidade do sistema operacional para locais de instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deve ser igual em todos os nós adicionados ao cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-##  <a name="Add"></a> Adicionar nó  
+##  <a name="Add"></a>Adicionar nó  
   
 #### <a name="to-add-a-node-to-an-existing-includessnoversionincludesssnoversion-mdmd-failover-cluster"></a>Para adicionar um nó a um cluster de failover existente do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
   
 1.  Insira a mídia de instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e, na pasta raiz, clique duas vezes em Setup.exe. Para instalar a partir de um compartilhamento de rede, navegue para a pasta raiz no compartilhamento e clique duas vezes em Setup.exe.  
   
-2.  O Assistente de Instalação iniciará o Centro de Instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para adicionar um nó a uma instância de cluster de failover existente, clique em **Instalação** no painel esquerdo. Em seguida, selecione **Adicionar nó a um cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]** .  
+2.  O Assistente de Instalação iniciará o Centro de Instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para adicionar um nó a uma instância de cluster de failover existente, clique em **Instalação** no painel esquerdo. Em seguida, selecione **Adicionar nó a um cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**.  
   
 3.  O Verificador de Configuração do Sistema executará uma operação de descoberta no computador. Para continuar, [!INCLUDE[clickOK](../../../includes/clickok-md.md)].  
   
@@ -67,7 +67,7 @@ ms.locfileid: "63190282"
   
 9. Na página Configuração do Servidor – Contas de Serviço, especifique as contas de logon dos serviços do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Os serviços reais configurados nessa página dependem dos recursos selecionados para instalação. Para instalações de cluster de failover, as informações de nome da conta e de tipo de inicialização serão pré-populadas nesta página com base nas configurações fornecidas para o nó ativo. Você deve fornecer senhas para cada conta. Para obter mais informações, consulte [Configuração do servidor — Contas de serviço](../../install/server-configuration-service-accounts.md) e [Configurar contas de serviço e permissões do Windows](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
-     **Observação sobre segurança** [!INCLUDE[ssNoteStrongPass](../../../includes/ssnotestrongpass-md.md)]  
+     **Observação de segurança** [!INCLUDE[ssNoteStrongPass](../../../includes/ssnotestrongpass-md.md)]  
   
      Depois de concluir a especificação de informações de logon para serviços do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , clique em **Avançar**.  
   
@@ -83,13 +83,13 @@ ms.locfileid: "63190282"
   
 15. Se você for instruído a reiniciar o computador, faça-o agora. É importante ler a mensagem do Assistente de Instalação ao concluir a Instalação. Para obter mais informações sobre os arquivos de log da Instalação, veja [Exibir e ler arquivos de log da Instalação do SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
-##  <a name="Remove"></a> Remover nó  
+##  <a name="Remove"></a>Remover nó  
   
 #### <a name="to-remove-a-node-from-an-existing-includessnoversionincludesssnoversion-mdmd-failover-cluster"></a>Para remover um nó de um cluster de failover existente do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
   
 1.  Insira a mídia de instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Na pasta raiz, clique duas vezes em setup.exe. Para instalar a partir de um compartilhamento de rede, navegue para a pasta raiz no compartilhamento e clique duas vezes em Setup.exe.  
   
-2.  O Assistente de Instalação inicia a Central de Instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para remover um nó de uma instância de cluster de failover existente, clique em **Manutenção** no painel esquerdo e selecione **Remover nó de um cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]** .  
+2.  O Assistente de Instalação inicia a Central de Instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para remover um nó de uma instância de cluster de failover existente, clique em **Manutenção** no painel esquerdo e selecione **Remover nó de um cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**.  
   
 3.  O Verificador de Configuração do Sistema executará uma operação de descoberta no computador. Para continuar, [!INCLUDE[clickOK](../../../includes/clickok-md.md)].  
   
@@ -103,7 +103,7 @@ ms.locfileid: "63190282"
   
 8.  A página Concluída fornece um link para o arquivo de log de resumo da operação de remoção de nó e outras observações importantes. Para concluir a remoção de nó do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , clique em **Fechar**. Para obter mais informações sobre os arquivos de log da Instalação, veja [Exibir e ler arquivos de log da Instalação do SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exibir e ler arquivos de log da Instalação do SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   
   

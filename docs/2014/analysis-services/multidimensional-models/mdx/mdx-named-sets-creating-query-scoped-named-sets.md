@@ -1,5 +1,5 @@
 ---
-title: Criando no escopo da consulta conjuntos nomeados (MDX) | Microsoft Docs
+title: Criando conjuntos nomeados no escopo da consulta (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a611d3d20d269bb9c3fa3a1f764181b1660713b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074066"
 ---
 # <a name="creating-query-scoped-named-sets-mdx"></a>Criando conjuntos nomeados no escopo da consulta (MDX)
@@ -92,8 +92,8 @@ FROM Sales
   
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Instrução SELECT &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)   
- [Criando conjuntos nomeados no escopo da sessão &#40;MDX&#41;](mdx-named-sets-creating-session-scoped-named-sets.md)  
+ [Criando conjuntos nomeados no escopo da sessão &#40;&#41;MDX](mdx-named-sets-creating-session-scoped-named-sets.md)  
   
   

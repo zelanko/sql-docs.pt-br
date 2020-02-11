@@ -1,5 +1,5 @@
 ---
-title: Abra uma tabela de rastreamento (SQL Server Profiler) | Microsoft Docs
+title: Abrir uma tabela de rastreamento (SQL Server Profiler) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 66329c13eff3d8691e44c5b0ca07171cb9493bc9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63240558"
 ---
 # <a name="open-a-trace-table-sql-server-profiler"></a>Abrir uma tabela de rastreamento (SQL Server Profiler)
@@ -32,7 +32,7 @@ ms.locfileid: "63240558"
   
 4.  Na lista **Tabela** , selecione o nome da tabela. Clique em **OK**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exibir e analisar rastreamentos com o SQL Server Profiler](view-and-analyze-traces-with-sql-server-profiler.md)   
  [Salvar rastreamentos e modelos de rastreamento](save-traces-and-trace-templates.md)   
  [SQL Server Profiler](sql-server-profiler.md)  

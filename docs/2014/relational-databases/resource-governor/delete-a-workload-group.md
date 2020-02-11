@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2daf8fe7e12cec5317335a0dcce273b16d428bcc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63215796"
 ---
 # <a name="delete-a-workload-group"></a>Excluir um grupo de carga de trabalho
@@ -79,7 +79,7 @@ ms.locfileid: "63215796"
   
     -   Em um cenário no qual você emitiu a instrução `DROP WORKLOAD GROUP` mas decide que não deseja parar sessões explicitamente para aplicar a mudança, é possível recriar o grupo usando o mesmo nome que ele tinha antes de você emitir a instrução DROP e depois mover o grupo para o pool de recursos original.  
   
-3.  Execute o `ALTER RESOURCE GOVERNOR RECONFIGURE` instrução.  
+3.  Execute a `ALTER RESOURCE GOVERNOR RECONFIGURE` instrução.  
   
 ### <a name="example-transact-sql"></a>Exemplo (Transact-SQL)  
  O seguinte exemplo descarta um grupo de carga de trabalho denominado `groupAdhoc`.  
@@ -91,7 +91,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Administrador de Recursos](resource-governor.md)   
  [Criar um pool de recursos](create-a-resource-pool.md)   
  [Criar um grupo de carga de trabalho](create-a-workload-group.md)   

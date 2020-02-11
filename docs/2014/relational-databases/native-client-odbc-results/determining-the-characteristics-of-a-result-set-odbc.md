@@ -1,5 +1,5 @@
 ---
-title: Determinando as características de um resultado definido (ODBC) | Microsoft Docs
+title: Determinando as características de um conjunto de resultados (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,16 +19,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ba96d6312710f16f70b296dcb17bc3d5f226ff19
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200206"
 ---
 # <a name="determining-the-characteristics-of-a-result-set-odbc"></a>Determinando as características de um conjunto de resultados (ODBC)
   Metadados são dados que descrevem outros dados. Por exemplo, os metadados de conjunto de resultados descrevem as características de um conjunto de resultados, como o número de colunas no conjunto de resultados, os tipos de dados dessas colunas, seus nomes, precisão e nulidade.  
   
- ODBC fornece metadados a aplicativos por meio de suas funções de API de catálogo. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client implementa muitas das funções de catálogo de API ODBC como chamadas para um correspondente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] procedimento do catálogo.  
+ ODBC fornece metadados a aplicativos por meio de suas funções de API de catálogo. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC do Native Client implementa muitas das funções do catálogo de API do ODBC como chamadas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para um procedimento de catálogo correspondente.  
   
  Os aplicativos exigem metadados para a maioria das operações de conjunto de resultados. Por exemplo, o aplicativo usa o tipo de dados de uma coluna para determinar que tipo de variável associar a essa coluna. Usa o comprimento de byte de uma coluna de caractere para determinar a quantidade de espaço necessária para exibir dados dessa coluna. Como um aplicativo determina os metadados para uma coluna depende do tipo do aplicativo.  
   
@@ -38,17 +38,17 @@ ms.locfileid: "63200206"
   
  Para determinar as características de um conjunto de resultados, um aplicativo pode chamar:  
   
--   [SQLNumResultCols](../native-client-odbc-api/sqlnumresultcols.md) para determinar quantas colunas uma solicitação é retornada.  
+-   [SQLNumResultCols](../native-client-odbc-api/sqlnumresultcols.md) para determinar quantas colunas uma solicitação retornou.  
   
 -   [SQLColAttribute](../native-client-odbc-api/sqlcolattribute.md) ou [SQLDescribeCol](../native-client-odbc-api/sqldescribecol.md) para descrever uma coluna no conjunto de resultados.  
   
- Um aplicativo bem projetado é gravado com a pressuposição de que o conjunto de resultados seja desconhecido e usa as informações retornadas por essas funções para associar as colunas no conjunto de resultados. Um aplicativo pode chamar essas funções a qualquer momento depois que uma instrução estiver preparada ou executada. No entanto, para otimizar o desempenho, um aplicativo deve chamar **SQLColAttribute**, **SQLDescribeCol**, e **SQLNumResultCols** depois que uma instrução é executada.  
+ Um aplicativo bem projetado é gravado com a pressuposição de que o conjunto de resultados seja desconhecido e usa as informações retornadas por essas funções para associar as colunas no conjunto de resultados. Um aplicativo pode chamar essas funções a qualquer momento depois que uma instrução estiver preparada ou executada. No entanto, para um desempenho ideal, um aplicativo deve chamar **SQLColAttribute**, **SQLDescribeCol**e **SQLNumResultCols** depois que uma instrução é executada.  
   
  Você pode ter várias chamadas simultâneas para metadados. Os procedimentos de catálogo de sistema subjacentes às implementações de API do catálogo de ODBC podem ser chamados pelo driver ODBC enquanto estão usando cursores de servidor estáticos. Isto permite que os aplicativos processem simultaneamente várias chamadas para funções de catálogo ODBC.  
   
  Se um aplicativo utilizar um conjunto específico de metadados mais de uma vez, ele provavelmente será beneficiado pelo armazenamento em cache das informações em variáveis particulares quando for obtido pela primeira vez. Isto impede chamadas em atraso para as funções de catálogo ODBC das mesmas informações, o que força o driver a fazer viagens de ida e volta ao servidor.  
   
-## <a name="see-also"></a>Consulte também  
- [Processando resultados &#40;ODBC&#41;](processing-results-odbc.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Processando resultados &#40;&#41;ODBC](processing-results-odbc.md)  
   
   

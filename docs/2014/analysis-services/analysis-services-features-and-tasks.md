@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9c0e42f289c5d5aa0aebf546e1adeb0a31683d82
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062543"
 ---
 # <a name="analysis-services-features-and-tasks"></a>Recursos e tarefas do Analysis Services
@@ -27,12 +27,12 @@ ms.locfileid: "66062543"
   
  [Gerenciamento de instância do Analysis Services](instances/analysis-services-instance-management.md)  
   
- [Modelagem de tabela &#40;Tabular do SSAS&#41;](tabular-models/tabular-models-ssas.md)  
+ [Modelagem de tabela &#40;SSAS de tabela&#41;](tabular-models/tabular-models-ssas.md)  
   
  [Modelagem multidimensional &#40;SSAS&#41;](multidimensional-models/multidimensional-models-ssas.md)  
   
- [Mineração de Dados &#40;SSAS&#41;](data-mining/data-mining-ssas.md)  
+ [&#41;de mineração de dados &#40;SSAS](data-mining/data-mining-ssas.md)  
   
- [O PowerPivot para SharePoint &#40;SSAS&#41;](power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)  
+ [PowerPivot para SharePoint &#40;SSAS&#41;](power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)  
   
   

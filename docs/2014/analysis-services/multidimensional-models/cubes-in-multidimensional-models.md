@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c7ce00bc87ca17c97996023d7cb9a4745b9882f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076111"
 ---
 # <a name="cubes-in-multidimensional-models"></a>Cubos em modelos multidimensionais
@@ -31,7 +31,7 @@ ms.locfileid: "66076111"
 ## <a name="components-of-cubes"></a>Componentes de cubos  
  Um cubo é constituído de:  
   
-|Elemento|Descrição|  
+|Elemento|DESCRIÇÃO|  
 |-------------|-----------------|  
 |Dimensões|[Dimensões em modelos multidimensionais](dimensions-in-multidimensional-models.md)|  
 |Medidas e Grupos de Medidas|[Criar medidas e grupos de medidas em modelos multidimensionais](create-measures-and-measure-groups-in-multidimensional-models.md)|  
@@ -39,13 +39,13 @@ ms.locfileid: "66076111"
 |perspectivas|[Perspectivas em modelos multidimensionais](perspectives-in-multidimensional-models.md)|  
 |Hierarquias|[Criar hierarquias definidas pelo usuário](user-defined-hierarchies-create.md)|  
 |Ações|[Ações em modelos multidimensionais](actions-in-multidimensional-models.md)|  
-|KPI (indicadores de desempenho chave)|[Indicadores Chave de Desempenho &#40;KPIs&#41; em Modelos Multidimensionais](key-performance-indicators-kpis-in-multidimensional-models.md)|  
+|KPI (indicadores de desempenho chave)|[Indicadores chave de desempenho &#40;KPIs&#41; em modelos multidimensionais](key-performance-indicators-kpis-in-multidimensional-models.md)|  
 |Cálculos|[Cálculos em modelos multidimensionais](calculations-in-multidimensional-models.md)|  
 |Translations|[Traduções em modelos multidimensionais](translations-in-multidimensional-models-analysis-services.md)|  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-|Tópico|Descrição|  
+|Tópico|DESCRIÇÃO|  
 |-----------|-----------------|  
 |[Criar um cubo usando o Assistente para Cubos](create-a-cube-using-the-cube-wizard.md)|Descreve como usar o Assistente para Cubos para definir um cubo, as dimensões, os atributos de dimensão e as hierarquias definidas pelo usuário.|  
 |[Criar medidas e grupos de medidas em modelos multidimensionais](create-measures-and-measure-groups-in-multidimensional-models.md)|Descreve como definir os grupos de medidas.|  

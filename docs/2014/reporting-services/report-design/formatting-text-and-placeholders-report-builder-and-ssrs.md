@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fc3cd0e7213426568a415e8b5f1b28475f0177e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105758"
 ---
 # <a name="formatting-text-and-placeholders-report-builder-and-ssrs"></a>Formatando texto e espaços reservados (Construtor de Relatórios e SSRS)
@@ -33,7 +33,7 @@ ms.locfileid: "66105758"
   
  Nessa ilustração, a própria caixa de texto tem uma borda e todo o texto está na mesma caixa de texto, mas o texto tem várias formatações.  
   
- Para começar rapidamente, confira [Tutorial: formatar o texto &#40;Construtor de Relatórios&#41;](../tutorial-format-text-report-builder.md).  
+ Para começar a usar rapidamente, consulte [Tutorial: Formatar texto &#40;Construtor de Relatórios&#41;](../tutorial-format-text-report-builder.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -70,12 +70,12 @@ ms.locfileid: "66105758"
 ## <a name="aligning-horizontal-text-using-general"></a>Alinhando texto horizontal usando geral  
  Em **Alinhamento** na caixa de diálogo **Propriedades da Caixa de Texto** , você pode especificar como o texto deve ser alinhado horizontalmente. Se você não especificar um valor para o alinhamento, o valor padrão do alinhamento será **Padrão**. Isso significa que o texto será alinhado com base no tipo de campo do valor de espaço reservado. Se você especificar uma expressão avaliada com um valor diferente de cadeia de caracteres, ou seja, um número, o texto será alinhado à direita. Se a expressão for avaliada com um valor da cadeia de caracteres, como um número, o texto será alinhado à esquerda.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Expressões &#40;Construtor de Relatórios e SSRS&#41;](expressions-report-builder-and-ssrs.md)   
  [Formatando rótulos dos eixos de um gráfico &#40;Construtor de Relatórios e SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Formatando escalas em um medidor &#40;Construtor de Relatórios e SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
  [Listas &#40;Construtor de Relatórios e SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Caixa de diálogo Propriedades do Espaço Reservado, Geral &#40;Construtor de Relatórios e SSRS&#41;](../placeholder-properties-dialog-box-general-report-builder-and-ssrs.md)   
+ [Caixa de diálogo Propriedades do espaço reservado, &#40;geral Construtor de Relatórios e SSRS&#41;](../placeholder-properties-dialog-box-general-report-builder-and-ssrs.md)   
  [Exportando para o Microsoft Excel &#40;Construtor de Relatórios e SSRS&#41;](../report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)   
  [Caixas de texto &#40;Construtor de Relatórios e SSRS&#41;](text-boxes-report-builder-and-ssrs.md)  
   

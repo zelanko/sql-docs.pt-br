@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fcab02cbe7f24da3567fdfa615a6595a268185ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105667"
 ---
 # <a name="importing-html-into-a-report-report-builder-and-ssrs"></a>Importando HTML para um relatório (Construtor de Relatórios e SSRS)
@@ -27,7 +27,7 @@ ms.locfileid: "66105667"
 > [!NOTE]  
 >  Ao importar texto contendo marcação HTML, os dados sempre devem ser analisados primeiro pela caixa de texto. Como apenas um subconjunto de marcas HTML possui suporte, o HTML mostrado no relatório renderizado pode ser diferente do HTML original.  
   
- Para começar rapidamente, confira [Tutorial: formatar o texto &#40;Construtor de Relatórios&#41;](../tutorial-format-text-report-builder.md).  
+ Para começar a usar rapidamente, consulte [Tutorial: Formatar texto &#40;Construtor de Relatórios&#41;](../tutorial-format-text-report-builder.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -35,7 +35,7 @@ ms.locfileid: "66105667"
 ## <a name="supported-html-tags"></a>Tags HTML Suportadas  
  A seguir, há uma lista completa de marcas que são renderizadas como HTML quando definidas como texto de espaço reservado:  
   
--   Elementos de cabeçalho, estilo e bloco: \<H{n}>, \<DIV>, \<SPAN>,\<P>, \<LI>  
+-   Elementos de cabeçalho, estilo e bloco \<: H {n} > \<, DIV> \<, span>\<, P> \<, li>  
   
  Qualquer outra marcação HTML será ignorada durante o processamento de relatório. Se o HTML representado pela expressão no texto de espaço reservado não for bem formado, o espaço reservado será processado como texto sem-formatação. Todas as marcas HTML não diferenciam maiúsculas de minúsculas.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "66105667"
   
     -   As unidades de comprimento CSS relativas são ignoradas e não têm suporte. As unidades com suporte são em, ex, px,%,rem.  
   
--   color  
+-   cor  
   
 -   preenchimento, preenchimento inferior, preenchimento superior, preenchimento à direita, preenchimento à esquerda  
   
@@ -70,11 +70,11 @@ ms.locfileid: "66105667"
   
 -   Valores CSS malformados são ignorados da mesma maneira que HTML malformado.  
   
--   Quando o atributo e os atributos de estilo CSS existirem na mesma marca, a propriedade CSS tem maior precedência. Por exemplo, se o texto for **\<p style="text-align: right" align="left">** , somente o atributo de alinhamento de texto será aplicado e o texto será alinhado à direita.  
+-   Quando o atributo e os atributos de estilo CSS existirem na mesma marca, a propriedade CSS tem maior precedência. Por exemplo, se o texto for ** \<p estilo = "texto-alinhar: direita" Alinhar = "esquerda" >**, somente o atributo de alinhamento de texto será aplicado e o texto será alinhado à direita.  
   
--   Para atributos e a estilos CSS, se uma propriedade for especificada mais de uma vez, somente sua última instância será aplicada. Por exemplo, se o texto for **\<p align="left" align="right">** , ele será alinhado à direita.  
+-   Para atributos e a estilos CSS, se uma propriedade for especificada mais de uma vez, somente sua última instância será aplicada. Por exemplo, se o texto for ** \<p align = "Left" align = "Right" >**, o texto será alinhado à direita.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Renderizando para HTML &#40;Construtor de Relatórios e SSRS&#41;](../report-builder/rendering-to-html-report-builder-and-ssrs.md)  
   
   

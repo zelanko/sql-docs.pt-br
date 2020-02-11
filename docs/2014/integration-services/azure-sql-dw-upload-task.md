@@ -14,24 +14,24 @@ author: yualan
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d3c310ee1d60648ac4b1eb299a0fd291adb86aea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061288"
 ---
 # <a name="azure-sql-dw-upload-task"></a>Tarefa de Upload do SQL DW do Azure
-A **Tarefa de Upload do SQL DW do Azure** permite que um pacote do SSIS carregue dados locais em uma tabela no SQL Data Warehouse (DW) do Azure. O formato de arquivo de dados de origem com suporte atualmente é texto delimitado em codificação UTF8. O processo de carregamento segue a abordagem PolyBase eficiente. Especificamente, os dados serão primeiro carregados no Armazenamento de Blobs do Azure e, em seguida, no SQL DW do Azure. Portanto, é necessário uma conta de Armazenamento de Blobs do Azure para usar essa tarefa.
+A **Tarefa de Upload do SQL DW do Azure** permite que um pacote do SSIS carregue dados locais em uma tabela no SQL Data Warehouse (DW) do Azure. O formato de arquivo de dados de origem com suporte atualmente é texto delimitado em codificação UTF8. O processo de carregamento segue a abordagem de polybase eficiente. Especificamente, os dados serão primeiro carregados no Armazenamento de Blobs do Azure e, em seguida, no SQL DW do Azure. Portanto, é necessário uma conta de Armazenamento de Blobs do Azure para usar essa tarefa.
 
 Para adicionar uma **Tarefa de Upload do SQL DW do Azure**, arraste-a da Caixa de Ferramentas do SSIS e solte-a na tela do designer, e clique duas vezes ou clique com o botão direito do mouse em **Editar** para ver a caixa de diálogo editor da tarefa.
 
 Na página **Geral** , defina as propriedades a seguir.
 
-Campo|Descrição
+Campo|DESCRIÇÃO
 -----|-----------
 LocalDirectory|Especifica o diretório local que contém os arquivos de dados a serem carregados.
 Recursivamente|Especifica se os subdiretórios devem ser pesquisados recursivamente.
-FileName|Especifica um filtro de nome para selecionar arquivos com o padrão de nome determinado. Por ex.: MySheet\*.xsl\* incluirá arquivos como MySheet001.xsl e MySheetABC.xslx.
+FileName|Especifica um filtro de nome para selecionar arquivos com o padrão de nome determinado. Por ex.: MySheet*.xsl\* incluirá arquivos como MySheet001.xsl e MySheetABC.xslx.
 RowDelimiter|Especifica os caracteres que marcam o final de cada linha.
 ColumnDelimiter|Especifica um ou mais caracteres que marcam o final de cada coluna. Por ex.: &#124; (barra vertical) \t (tabulação), ' (aspa simples), "(aspas duplas) e 0x5c (barra invertida).
 IsFirstRowHeader|Especifica se a primeira linha em cada arquivo de dados contém nomes de coluna em vez de dados reais.

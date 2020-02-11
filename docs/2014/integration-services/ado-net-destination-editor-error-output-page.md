@@ -1,5 +1,5 @@
 ---
-title: Editor de destino do ADO NET (página saída de erro) | Microsoft Docs
+title: Editor de destino ADO NET (página saída de erro) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f1a36537f8ca122a6fe9ae9521aa2f0713c94d01
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061764"
 ---
 # <a name="ado-net-destination-editor-error-output-page"></a>Editor de Destino ADO NET (Página Saída de Erro)
@@ -56,8 +56,8 @@ ms.locfileid: "66061764"
  **Aplicar**  
  Aplique a opção de tratamento de erros às células selecionadas.  
   
-## <a name="see-also"></a>Consulte também  
- [Editor de Destino ADO NET &#40;página Gerenciador de Conexões&#41;](../../2014/integration-services/ado-net-destination-editor-connection-manager-page.md)   
- [Editor de Destino ADO NET &#40;página Mapeamentos&#41;](../../2014/integration-services/ado-net-destination-editor-mappings-page.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Editor de destino ADO NET &#40;página Gerenciador de conexões&#41;](../../2014/integration-services/ado-net-destination-editor-connection-manager-page.md)   
+ [Editor de destino ADO NET &#40;página Mapeamentos&#41;](../../2014/integration-services/ado-net-destination-editor-mappings-page.md)  
   
   

@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5c5ff985b62e39287b696e96f10142daf90ae0a3
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783133"
 ---
 # <a name="view-or-change-server-properties-sql-server"></a>Exibir ou alterar propriedades de servidor (SQL Server)
@@ -59,7 +59,7 @@ ms.locfileid: "72783133"
 ####  <a name="Permissions"></a> Permissões  
  Para obter mais informações, veja [Funções de nível de servidor](../../relational-databases/security/authentication-access/server-level-roles.md).  
   
- Permissões de execução em `sp_configure` sem parâmetros ou com apenas o primeiro parâmetro são concedidas a todos os usuários por padrão. Para executar `sp_configure` com ambos os parâmetros para alterar uma opção de configuração ou para executar a instrução RECONFIGURE, um usuário deve receber a permissão de nível de servidor ALTER SETTINGS. A permissão ALTER SETTINGS é implicitamente mantida pelas funções de servidor fixas **sysadmin** e **serveradmin** .  
+ As permissões execute `sp_configure` no sem parâmetros ou com apenas o primeiro parâmetro são concedidas a todos os usuários por padrão. Para executar `sp_configure` com ambos os parâmetros para alterar uma opção de configuração ou para executar a instrução RECONFIGURE, um usuário deve receber a permissão de nível de servidor ALTER Settings. A permissão ALTER SETTINGS é implicitamente mantida pelas funções de servidor fixas **sysadmin** e **serveradmin** .  
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
@@ -69,7 +69,7 @@ ms.locfileid: "72783133"
   
 2.  Na caixa de diálogo **Propriedades do Servidor** , clique em uma página para exibir ou alterar informações de servidor sobre ela. Algumas propriedades são somente leitura.  
   
-##  <a name="TsqlProcedure"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-view-server-properties-by-using-the-serverproperty-built-in-function"></a>Para exibir propriedades de servidor usando a função interna SERVERPROPERTY  
   
@@ -137,32 +137,32 @@ RECONFIGURE;
 GO  
 ```  
   
- Para obter mais informações, consulte [Opções de configuração do servidor &#40;SQL Server&#41;](server-configuration-options-sql-server.md).  
+ Para obter mais informações, veja [Opções de configuração do servidor &#40;SQL Server&#41;](server-configuration-options-sql-server.md).  
   
 ##  <a name="PowerShellProcedure"></a> Usando o SQL Server Configuration Manager  
  Algumas propriedades de servidor podem ser exibidas ou alteradas usando o SQL Server Configuration Manager Por exemplo, você pode exibir a versão e a edição da instância de SQL Server ou alterar o local onde os arquivos do log de erros estão armazenados. Estas propriedades também podem ser exibidas consultando [Funções e exibições de gerenciamento dinâmico relacionadas ao servidor](/sql/relational-databases/system-dynamic-management-views/server-related-dynamic-management-views-and-functions-transact-sql).  
   
 #### <a name="to-view-or-change-server-properties"></a>Para exibir ou alterar propriedades de servidor  
   
-1.  No menu **Iniciar** , aponte para **Todos os Programas**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]e para **Ferramentas de Configuração**. Em seguida, clique em **SQL Server Configuration Manager**.  
+1.  No menu **Iniciar** , aponte para **Todos os Programas**, aponte para [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], aponte para **Ferramentas de Configuração**e clique em **SQL Server Configuration Manager**.  
   
 2.  No **SQL Server Configuration Manager**, clique em **Serviços do SQL Server**.  
   
-3.  No painel de detalhes, clique com o botão direito do mouse em **SQL Server (\<***instancename***>)** e, depois, clique em **Propriedades**.  
+3.  No painel de detalhes, clique com o botão direito do mouse em **SQL Server (\<***InstanceName***>)** e clique em **Propriedades**.  
   
-4.  Na caixa de diálogo **Propriedades do SQL Server (\<***instancename***>)** , altere as propriedades do servidor na guia **Serviço** ou na guia **Avançado** e, depois, clique em **OK**.  
+4.  Na caixa de diálogo **Propriedades do SQL Server (\<***instancename***>)**, altere as propriedades do servidor na guia **Serviço** ou na guia **Avançado** e, depois, clique em **OK**.  
   
 ##  <a name="FollowUp"></a> Acompanhamento: depois que você altera as propriedades de servidor  
  Para algumas propriedades, o servidor terá que ser reiniciado antes de a alteração entrar em vigor.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Opções de configuração do servidor &#40;SQL Server&#41;](server-configuration-options-sql-server.md)   
  [Instruções SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-statements-transact-sql)   
  [SERVERPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/serverproperty-transact-sql)   
  [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)   
  [RECONFIGURE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reconfigure-transact-sql)   
  [SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)   
- [Configurar o WMI para mostrar o status do servidor nas ferramentas do SQL Server](../../ssms/configure-wmi-to-show-server-status-in-sql-server-tools.md)   
+ [Configurar o WMI para mostrar o status do servidor nas Ferramentas do SQL Server](../../ssms/configure-wmi-to-show-server-status-in-sql-server-tools.md)   
  [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md)   
  [Funções de configuração &#40;Transact-SQL&#41;](/sql/t-sql/functions/configuration-functions-transact-sql)   
- [Funções e exibições de gerenciamento dinâmico relacionadas ao servidor &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/server-related-dynamic-management-views-and-functions-transact-sql)  
+ [Exibições e funções de gerenciamento dinâmico relacionadas ao servidor &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/server-related-dynamic-management-views-and-functions-transact-sql)  

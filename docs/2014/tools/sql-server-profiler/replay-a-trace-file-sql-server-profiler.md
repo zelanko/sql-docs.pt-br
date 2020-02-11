@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 503f7a3eeeeeee36893231c48b330a099a5adc61
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63240493"
 ---
 # <a name="replay-a-trace-file-sql-server-profiler"></a>Repetir um arquivo de rastreamento (SQL Server Profiler)
@@ -41,7 +41,7 @@ ms.locfileid: "63240493"
   
 5.  Escolha **Reproduzir eventos na oudem em que fouam rastreados**ou **Reproduzir eventos usando vários threads**. A tabela a seguir explica a diferença entre essas configurações.  
   
-    |Opção|Descrição|  
+    |Opção|DESCRIÇÃO|  
     |------------|-----------------|  
     |**Repetir eventos na ordem em que foram rastreados**|Repete os eventos na ordem em que foram registrados. Essa opção habilita a depuração.|  
     |**Reproduzir eventos usando vários threads**|Essa opção usa vários threads para repetir cada evento, não importando a sequência. Essa opção otimiza o desempenho.|  
@@ -58,7 +58,7 @@ ms.locfileid: "63240493"
   
     -   Para controlar o modo como o SQL Server gerencia os processos durante a reprodução, configure as **Opções do Health Monitor**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Permissões necessárias para executar o SQL Server Profiler](sql-server-profiler.md)   
  [Repetir rastreamentos](replay-traces.md)   
  [Abrir um arquivo de rastreamento &#40;SQL Server Profiler&#41;](open-a-trace-file-sql-server-profiler.md)   

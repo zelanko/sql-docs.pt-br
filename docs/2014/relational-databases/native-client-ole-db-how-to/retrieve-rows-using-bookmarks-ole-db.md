@@ -14,17 +14,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e0bfc6d28eb318bf36217a53873a48ab854d5f12
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63218211"
 ---
 # <a name="retrieve-rows-using-bookmarks-ole-db"></a>Recuperar linhas usando indicadores (OLE DB)
-  O consumidor define o valor de campo `dwFlag` da estrutura de associação a DBCOLUMNSINFO_ISBOOKMARK para indicar que a coluna é usada como um indicador. O consumidor também define a propriedade DBPROP_BOOKMARKS do conjunto de linhas como VARIANT_TRUE. Isso permite que a coluna 0 esteja presente no conjunto de linhas. `IRowsetLocate::GetRowsAt` é usado para buscar linhas a partir da linha especificada por um deslocamento de um indicador.  
+  O consumidor define o valor de campo `dwFlag` da estrutura de associação a DBCOLUMNSINFO_ISBOOKMARK para indicar que a coluna é usada como um indicador. O consumidor também define a propriedade DBPROP_BOOKMARKS do conjunto de linhas como VARIANT_TRUE. Isso permite que a coluna 0 esteja presente no conjunto de linhas. 
+  `IRowsetLocate::GetRowsAt` é usado para buscar linhas a partir da linha especificada por um deslocamento de um indicador.  
   
 > [!IMPORTANT]  
->  Quando possível, use a Autenticação do Windows. Se a Autenticação do Windows não estiver disponível, solicite aos usuários que digitem suas credenciais em tempo de execução. Evite armazenar as credenciais em um arquivo. Se for necessário manter as credenciais, criptografe-as com a [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)(em inglês).  
+>  Quando possível, use a Autenticação do Windows. Se a Autenticação do Windows não estiver disponível, solicite aos usuários que digitem suas credenciais em tempo de execução. Evite armazenar as credenciais em um arquivo. Se você precisar manter as credenciais, deverá criptografá-las com a [API de criptografia do Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-retrieve-rows-using-bookmarks"></a>Para recuperar linhas usando indicadores  
   

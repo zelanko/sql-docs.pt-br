@@ -1,5 +1,5 @@
 ---
-title: Definir uma relação muitos-para-muitos e propriedades da relação muitos-para-muitos | Microsoft Docs
+title: Definir uma relação muitos-para-muitos e propriedades de relação muitos-para-muitos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f679387dd1282dba3a4521f40bd11a2e0ba4b26f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075775"
 ---
 # <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>Definir uma relação muitos-para-muitos e as propriedades da relação muitos-para-muitos
@@ -43,11 +43,11 @@ ms.locfileid: "66075775"
   
  Visualmente, uma relação dimensional muitos-para-muitos não é indicada em um diagrama de cubo. Em vez disso, use a guia Uso da Dimensão para identificar rapidamente qualquer relação muitos-para-muitos em um modelo. Uma relação muitos-para-muitos é indicada pelo seguinte ícone.  
   
- ![Ícone de muitos-para-muitos no uso da dimensão](../media/ssas-m2m-icondimusage.png "muitos-para-muitos ícone no uso da dimensão")  
+ ![Ícone de muitos para muitos no uso da dimensão](../media/ssas-m2m-icondimusage.png "Ícone de muitos para muitos no uso da dimensão")  
   
  Clique no botão para abrir a caixa de diálogo Definir Relação para verificar se o tipo de relação é muitos-para-muitos, e para visualizar qual grupo de medidas intermediário é usado na relação.  
   
- ![Botão de relação de definir no uso da dimensão](../media/ssas-m2m-btndimusage.png "botão Definir relação no uso da dimensão")  
+ ![Definir o botão de relação no uso da dimensão](../media/ssas-m2m-btndimusage.png "Definir o botão de relação no uso da dimensão")  
   
  Em seções subsequentes, você aprenderá a configurar uma dimensão muitos-para-muitos e testar comportamentos modelo. Se você preferir analisar informações adicionais ou tentar tutoriais primeiro, consulte **Saiba mais** no final deste artigo.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "66075775"
   
      O exemplo a seguir confirma que as tabelas usadas nesse procedimento estão vinculadas usando as chaves primárias.  
   
-     ![DSV que mostra tabelas relacionadas](../media/ssas-m2m-dsvpkeys.PNG "DSV que mostra tabelas relacionadas")  
+     ![DSV que mostra as tabelas relacionadas](../media/ssas-m2m-dsvpkeys.PNG "DSV que mostra as tabelas relacionadas")  
   
 #### <a name="step-2-create-dimensions-and-measure-groups"></a>Etapa 2: Criar dimensões e grupos de medidas  
   
@@ -89,21 +89,21 @@ ms.locfileid: "66075775"
   
      Para atributos, selecione tudo.  
   
-     ![Lista de atributos na nova dimensão](../media/ssas-m2m-dimsalesreason.PNG "lista de atributos na nova dimensão")  
+     ![Lista de atributos em uma nova dimensão](../media/ssas-m2m-dimsalesreason.PNG "Lista de atributos em uma nova dimensão")  
   
 3.  Crie uma segunda dimensão com base em uma tabela existente, Fact Internet Sales. Embora essa seja uma tabela de fatos, ela contém informações de Pedido de Vendas. Usaremos isso para criar uma dimensão de Pedido de Vendas.  
   
 4.  Em Especificar Informações sobre a Origem, você verá um aviso que indica que uma coluna Nome deve ser especificada. Escolha **SalesOrderNumber** como o Nome.  
   
-     ![Dimensão de pedidos de vendas mostrando a coluna de nome](../media/ssas-m2m-dimsalesordersource.PNG "mostrando a coluna de nome de dimensão de pedido de vendas")  
+     ![Dimensão de pedidos de vendas que exibe a coluna de nomes](../media/ssas-m2m-dimsalesordersource.PNG "Dimensão de pedidos de vendas que exibe a coluna de nomes")  
   
 5.  Na próxima página do assistente, escolha os atributos. Nesse exemplo, você pode selecionar apenas **SalesOrderNumber**.  
   
-     ![Lista de atributos do pedido de vendas dimensão mostrando](../media/ssas-m2m-dimsalesorderattrib.PNG "Sales order dimensão mostrando atributo a lista")  
+     ![Dimensão de pedidos de vendas que exibe a lista de atributos](../media/ssas-m2m-dimsalesorderattrib.PNG "Dimensão de pedidos de vendas que exibe a lista de atributos")  
   
 6.  Renomeie a dimensão como **Dim Sales Orders**para que você tenha uma convenção de nomenclatura consistente para as dimensões.  
   
-     ![Página do assistente que mostra a renomeação da dimensão](../media/ssas-m2m-dimsalesorders.PNG "mostrando a renomeação da dimensão de página do Assistente")  
+     ![Página do assistente que mostra a renomeação da dimensão](../media/ssas-m2m-dimsalesorders.PNG "Página do assistente que mostra a renomeação da dimensão")  
   
 7.  Clique com o botão direito do mouse em **Cubos** e selecione **Novo Cubo**.  
   
@@ -113,7 +113,8 @@ ms.locfileid: "66075775"
   
 9. Escolha as medidas para cada tabela de fatos.  
   
-     Para simplificar seu modelo, limpe todas as medidas, em seguida, selecione apenas **Sales Amount** e **Fact Internet Sales Count** na parte inferior da lista. **FactInternetSalesReason** tem apenas uma medida, portanto, é selecionada automaticamente.  
+     Para simplificar seu modelo, limpe todas as medidas, em seguida, selecione apenas **Sales Amount** e **Fact Internet Sales Count** na parte inferior da lista. 
+  **FactInternetSalesReason** tem apenas uma medida, portanto, é selecionada automaticamente.  
   
 10. Na lista de dimensões, você deverá ver **Dim Sales Reason** e **Dim Sales Orders**.  
   
@@ -121,17 +122,17 @@ ms.locfileid: "66075775"
   
 11. Nomeie o cubo e clique em **Concluir**.  
   
-#### <a name="step-3-define-many-to-many-relationship"></a>Etapa 3: Definir muitos-para-muitos relação  
+#### <a name="step-3-define-many-to-many-relationship"></a>Etapa 3: Definir a relação muitos-para-muitos  
   
-1.  No designer de cubo, clique na guia Uso da Dimensão. Observe que já há uma relação de muitos para muitos entre **Dim Sales Reason** e **Fact Internet Sales**. Lembre-se de que o ícone a seguir indica uma relação muitos-para-muitos.  
+1.  No designer de cubo, clique na guia uso da dimensão. Observe que já existe uma relação muitos para muitos entre **Dim Sales Reason** e **Fact Internet Sales**. Lembre-se de que o ícone a seguir indica uma relação muitos-para-muitos.  
   
-     ![Ícone de muitos-para-muitos no uso da dimensão](../media/ssas-m2m-icondimusage.png "muitos-para-muitos ícone no uso da dimensão")  
+     ![Ícone de muitos para muitos no uso da dimensão](../media/ssas-m2m-icondimusage.png "Ícone de muitos para muitos no uso da dimensão")  
   
 2.  Clique na célula de interseção entre **Dim Sales Reason** e **Fact Internet Sales**, em seguida, clique no botão para abrir a caixa de diálogo Definir Relação.  
   
      Você pode ver que essa caixa de diálogo é usada para especificar uma relação muitos-para-muitos. Se você estivesse adicionando dimensões que têm uma relação regular, deveria usar essa caixa de diálogo para alterá-la para muitos-para-muitos.  
   
-     ![Botão de relação de definir no uso da dimensão](../media/ssas-m2m-btndimusage.png "botão Definir relação no uso da dimensão")  
+     ![Definir o botão de relação no uso da dimensão](../media/ssas-m2m-btndimusage.png "Definir o botão de relação no uso da dimensão")  
   
 3.  Implante o projeto a uma instância multidimensional do Analysis Services. Na próxima etapa, você procurará o cubo no Excel para verificar seus comportamentos.  
   
@@ -142,21 +143,21 @@ ms.locfileid: "66075775"
   
 1.  Implante o projeto e procure o cubo para confirmar se as agregações são válidas.  
   
-2.  No Excel, clique em **Dados** | **De Outras Fontes** | **Do Analysis Services**. Insira o nome do servidor, escolha o banco de dados e o cubo.  
+2.  No Excel, clique em **dados** | **de outras fontes** | **de Analysis Services**. Insira o nome do servidor, escolha o banco de dados e o cubo.  
   
 3.  Crie uma Tabela Dinâmica que use o seguinte:  
   
-    -   **Sales Amount** como o Valor  
+    -   **Valor das vendas** como o valor  
   
-    -   **Sales Reason Name** nas Colunas  
+    -   **Nome do motivo de vendas** nas colunas  
   
-    -   **Sales Order Number** nas Linhas  
+    -   **Número do pedido de vendas** em linhas  
   
 4.  Analise os resultados. Como estamos usando dados de exemplo, a impressão inicial é que todos os pedidos de vendas têm valores idênticos. No entanto, se você rolar para baixo, começará a ver variação de dados.  
   
      Do meio para baixo, você localizará os valores das vendas e os motivos das vendas para o número de pedido **SO5382**. O total geral desse pedido específico é **539,99**e os motivos da compra atribuídos a ele incluem a Promoção, Outros e Preço.  
   
-     ![Planilha do Excel que mostra agregações muitos-para-muitos](../media/ssas-m2m-excel.png "planilha do Excel que mostra agregações muitos-para-muitos")  
+     ![Planilha de Excel que mostra agregações muitos para muitos](../media/ssas-m2m-excel.png "Planilha de Excel que mostra agregações muitos para muitos")  
   
      Observe que Sales Amount está calculado corretamente para o pedido; é **539,99** para o pedido inteiro. Embora **539,99** esteja indicado para cada motivo, esse valor não é somado para todos os três motivos, inflacionando erroneamente nosso total geral.  
   
@@ -164,7 +165,7 @@ ms.locfileid: "66075775"
   
 5.  Role até a parte inferior da planilha. Agora é fácil ver que o Preço é o motivo mais importante para as compras dos clientes, em comparação com outros motivos assim como o total geral.  
   
-     ![Pasta de trabalho do Excel que mostra totais em muitos-para-muitos](../media/ssas-m2m-excelgrandtotal.png "pasta de trabalho do Excel que mostra totais em muitos-para-muitos")  
+     ![Pasta de trabalho do Excel que mostra totais em muitos para muitos](../media/ssas-m2m-excelgrandtotal.png "Pasta de trabalho do Excel que mostra totais em muitos para muitos")  
   
 #### <a name="tips-for-handling-unexpected-query-results"></a>Dicas para lidar com resultados de consulta inesperados  
   
@@ -176,19 +177,19 @@ ms.locfileid: "66075775"
   
 4.  Evite usar grupos de medidas vinculados em vários relacionamentos muitos para muitos, especialmente quando esses relacionamentos estiverem em cubos diferentes. Fazer isso poderá resultar em agregações ambíguas. Para obter mais informações, consulte [Incorrect Amounts for Linked Measures in Cubes containing Many-to-Many Relationships](https://social.technet.microsoft.com/wiki/contents/articles/22911.incorrect-amounts-for-linked-measures-in-cubes-containing-many-to-many-relationships-ssas-troubleshooting.aspx)(Quantidades incorretas de medidas vinculadas em cubos com relacionamentos muitos para muitos).  
   
-##  <a name="bkmk_Learn"></a> Learn more  
+##  <a name="bkmk_Learn"></a>Saiba Mais  
  Use os links a seguir para obter informações adicionais que ajudam a dominar os conceitos.  
   
  [Como posso definir uma dimensão muitos-para-muitos no Analysis Services](../lesson-5-3-defining-a-many-to-many-relationship.md)  
   
- [A revolução muitos-para-muitos 2.0](https://go.microsoft.com/fwlink/?LinkId=324760)  
+ [A revolução de muitos para muitos 2,0](https://go.microsoft.com/fwlink/?LinkId=324760)  
   
- [Tutorial: Exemplo de dimensão muitos-para-muitos para SQL Server Analysis Services](https://go.microsoft.com/fwlink/?LinkId=324761)  
+ [Tutorial: exemplo de dimensão muitos-para-muitos para SQL Server Analysis Services](https://go.microsoft.com/fwlink/?LinkId=324761)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Relações de dimensão](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [Instalar dados de exemplo e projetos para o tutorial de modelagem multidimensional do Analysis Services](../install-sample-data-and-projects.md)   
- [Implantar projetos do Analysis Services &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)   
+ [Instalar dados de exemplo e projetos para o tutorial de modelagem multidimensional Analysis Services](../install-sample-data-and-projects.md)   
+ [Implantar projetos de Analysis Services &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)   
  [Perspectivas em modelos multidimensionais](perspectives-in-multidimensional-models.md)  
   
   

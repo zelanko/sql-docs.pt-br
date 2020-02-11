@@ -1,5 +1,5 @@
 ---
-title: Defina a propriedade fatia de partição (Analysis Services) | Microsoft Docs
+title: Definir a propriedade de fatia da partição (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/05/2015
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d9d7b41de3505c3b6e3ccf3886254958ee71e456
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072937"
 ---
 # <a name="set-the-partition-slice-property-analysis-services"></a>Definir a propriedade Fatia de Partição (Analysis Services)
@@ -41,11 +41,11 @@ ms.locfileid: "66072937"
 > [!NOTE]  
 >  Observe que não há suporte para as funções MDX dinâmicas (como [Generate &#40;MDX&#41;](/sql/mdx/generate-mdx) ou [Except &#40;MDX&#41;](/sql/mdx/except-mdx-function)) na propriedade Slice das partições. Você deve definir a fatia usando tuplas explícitas ou referências de membro.  
 >   
->  Por exemplo, em vez de usar o [: &#40;intervalo&#41; &#40;MDX&#41; ](/sql/mdx/range-mdx) para definir um intervalo de função, você precisaria enumerar cada membro por anos específicos.  
+>  Por exemplo, em vez de usar o [intervalo: &#40;&#41; &#40;função MDX&#41;](/sql/mdx/range-mdx) para definir um intervalo, você precisaria enumerar cada membro pelos anos específicos.  
 >   
 >  Se você precisa definir uma fatia complexa, recomendamos definir as tuplas na fatia usando um script XMLA Alter. Em seguida, você pode usar a ferramenta de linha de comando ascmd ou a tarefa [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) do SSIS para executar o script e criar o conjunto especificado de membros imediatamente antes de você processar a partição.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar e gerenciar uma partição local &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)  
   
   

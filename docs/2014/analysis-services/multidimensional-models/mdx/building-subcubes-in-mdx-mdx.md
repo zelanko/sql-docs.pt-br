@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 197ee30aa65179e8a434d04d20a5f5b643b42efd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074715"
 ---
 # <a name="building-subcubes-in-mdx-mdx"></a>Criando subcubos em MDX (MDX)
@@ -53,7 +53,7 @@ CREATE SUBCUBE Subcube_Identifier AS Subcube_Expression
   
  Além disso, valores de agregação de um subcubo são visualmente totalizados. Por exemplo, um subcubo contém `USA`, `WA`e `OR`. O valor de agregação para `USA` será a soma de `{WA,OR}` , pois `WA` e `OR` são os únicos estados definidos pelo subcubo. Todos os outros estados serão ignorados.  
   
- Além disso, referências explicitas a células fora do subcubo retornarão valores de células que são avaliados no contexto do cubo inteiro. Por exemplo, você cria um subcubo limitado ao ano atual. Você usa a função [ParallelPeriod](/sql/mdx/parallelperiod-mdx) para comparar o ano atual ao anterior. A diferença nos valores será retornada, mesmo que o valor do ano anterior estando fora do subcubo.  
+ Além disso, referências explicitas a células fora do subcubo retornarão valores de células que são avaliados no contexto do cubo inteiro. Por exemplo, você cria um subcubo limitado ao ano atual. Você usa a função [ParallelPeriod](/sql/mdx/parallelperiod-mdx) para comparar o ano atual ao anterior. A diferença nos valores será retornada mesmo que o valor do ano anterior esteja fora do subcubo.  
   
  Por fim, se o contexto original não for substituído, as funções de conjunto de uma subseleção serão avaliadas no contexto da subseleção. Se o contexto for substituído, as funções de conjunto serão avaliadas no contexto do cubo inteiro.  
   
@@ -66,7 +66,7 @@ CREATE SUBCUBE Subcube_Identifier AS Subcube_Expression
   
  `SELECT [Account].[Account].Members ON 0, Measures.Members ON 1 FROM Budget`  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Estabelecendo o contexto de cubo em uma consulta &#40;MDX&#41;](establishing-cube-context-in-a-query-mdx.md)   
  [Conceitos básicos de consulta MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   

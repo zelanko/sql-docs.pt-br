@@ -1,5 +1,5 @@
 ---
-title: Alterações de comportamento à integração de serviços de recursos do SQL Server 2014 | Microsoft Docs
+title: Alterações de comportamento para Integration Services recursos no SQL Server 2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 30e1e0d882d249130cbd72ca62088ba3f7978ad3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061262"
 ---
 # <a name="behavior-changes-to-integration-services-features-in-sql-server-2014"></a>Alterações de comportamento dos recursos do Integration Services no SQL Server 2014
-  Este tópico descreve as alterações no comportamento do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Alterações de comportamento afetam como os recursos funcionam ou interagem na versão atual do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] em comparação com versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+  Este tópico descreve as alterações no comportamento do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. As alterações de comportamento afetam a forma como os recursos funcionam ou interagem na versão atual do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] em [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]comparação com as versões anteriores do.  
   
  Não há alterações de comportamento para recursos do Integration Services no SQL Server 2014.  
   

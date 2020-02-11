@@ -1,5 +1,5 @@
 ---
-title: Ações (Designer de cubo) (Analysis Services - dados multidimensionais) | Microsoft Docs
+title: Ações (Designer de cubo) (Analysis Services-dados multidimensionais) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,43 +13,43 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 67c2def091fe6e1282e00c65c23e8d98544e970f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062898"
 ---
 # <a name="actions-cube-designer-analysis-services---multidimensional-data"></a>Ações (Designer de Cubo) (Analysis Services - Dados Multidimensionais)
   Use a guia **Ações** do Designer de Cubo para exibir e editar ações, incluindo ações de extração de detalhes e ações de relatório, para o cubo selecionado.  
   
 ## <a name="panes"></a>Painéis  
- **Barra de Ferramentas**  
- Use a barra de ferramentas para executar ações comuns nessa guia. Para obter mais informações sobre esse painel, consulte [Toolbar &#40;Actions Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md).  
+ **Barra de ferramentas**  
+ Use a barra de ferramentas para executar ações comuns nessa guia. Para obter mais informações sobre esse painel, consulte a [barra de ferramentas &#40;guia ações, designer de cubo&#41; &#40;Analysis Services-&#41;de dados multidimensionais ](toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md).  
   
- **Organizador de ações**  
+ **Organizador de Ações**  
  Use o painel **Organizador de Ações** da exibição de formulário para exibir as ações contidas pelo cubo em um formato ordenado. Para obter mais informações sobre esse painel, consulte [Action Organizer &#40;Actions Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](action-organizer-cube-designer-analysis-services-multidimensional-data.md).  
   
- **Ferramentas de cálculo**  
+ **Ferramentas de Cálculo**  
  Use o painel **Ferramentas de Cálculo** da exibição de formulário para exibir metadados, funções e ferramentas disponíveis para o cubo. Para obter mais informações sobre esse painel, consulte [Calculation Tools &#40;Actions Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](calculation-tools-actions-cube-designer-analysis-services-multidimensional-data.md).  
   
- **Editor de formulário de ação**  
+ **Editor de Formulário de Ação**  
  Use o painel **Editor de Formulário de Ação** da exibição de formulário para editar ações padrão contidas pelo cubo. Para obter mais informações sobre esse painel, consulte [Action Form Editor &#40;Actions Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](action-form-editor-cube-designer-analysis-services-multidimensional-data.md).  
   
- **Editor de formulário de ação de detalhamento**  
- Use o painel **Editor de Formulário de Ação de Extração de Detalhes** para editar ações de extração de detalhes contidas pelo cubo. Para obter mais informações sobre esse painel, consulte [Editor de Formulário de Ação de Detalhamento &#40;Guia Ações, Designer de Cubo&#41; &#40;Analysis Services – Dados Multidimensionais&#41;](drillthrough-action-form-editor-cube-designer-analysis-services-multidimensional-data.md).  
+ **Editor de Formulário de Ação de Extração de Detalhes**  
+ Use o painel **Editor de Formulário de Ação de Extração de Detalhes** para editar ações de extração de detalhes contidas pelo cubo. Para obter mais informações sobre esse painel, consulte [Drillthrough Action Form Editor &#40;Actions Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](drillthrough-action-form-editor-cube-designer-analysis-services-multidimensional-data.md).  
   
- **Editor de formulário de ação de relatório**  
- Use o painel **Editor de Formulário de Ação de Relatório** para editar ações de relatório contidas pelo cubo. Para obter mais informações sobre esse painel, consulte [Editor de Formulário de Ação de Relatório&#40;guia Ações, Designer de Cubo&#41; &#40;Analysis Services – Dados Multidimensionais&#41;](report-action-form-editor-cube-designer-analysis-services-multidimensional-data.md).  
+ **Editor de Formulário de Ação de Relatório**  
+ Use o painel **Editor de Formulário de Ação de Relatório** para editar ações de relatório contidas pelo cubo. Para obter mais informações sobre esse painel, consulte [Report Action Form Editor &#40;Actions Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](report-action-form-editor-cube-designer-analysis-services-multidimensional-data.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Ações &#40;Analysis Services - dados multidimensionais&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   
- [Conceitos básicos do script MDX &#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
- [Barra de ferramentas &#40;guia Ações, Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [Organizador de ações &#40;guia Ações, Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](action-organizer-cube-designer-analysis-services-multidimensional-data.md)   
- [Ferramentas de cálculo de &#40;guia Ações, Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](calculation-tools-actions-cube-designer-analysis-services-multidimensional-data.md)   
- [Editor de formulário de ação &#40;guia Ações, Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](action-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
- [Editor de formulário de ação de detalhamento &#40;guia Ações, Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](drillthrough-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
- [Editor de formulário de ação de relatório &#40;guia Ações, Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](report-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
- [Designer de cubo &#40;Analysis Services - dados multidimensionais&#41;](cube-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Ações &#40;Analysis Services de dados multidimensionais&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   
+ [Conceitos básicos de script MDX &#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
+ [Barra de ferramentas &#40;guia ações, designer de cubo&#41; &#40;Analysis Services de dados multidimensionais&#41;](toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [Guia ações do organizador de ação &#40;, designer de cubo&#41; &#40;Analysis Services de dados multidimensionais&#41;](action-organizer-cube-designer-analysis-services-multidimensional-data.md)   
+ [Ferramentas de cálculo &#40;guia ações, designer de cubo&#41; &#40;Analysis Services de dados multidimensionais&#41;](calculation-tools-actions-cube-designer-analysis-services-multidimensional-data.md)   
+ [Editor de formulário de ação &#40;guia ações, designer de cubo&#41; &#40;Analysis Services de dados multidimensionais&#41;](action-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
+ [Editor de formulário de ação de detalhamento &#40;guia ações, designer de cubo&#41; &#40;Analysis Services de dados multidimensionais&#41;](drillthrough-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
+ [Editor de formulário de ação de relatório &#40;guia ações, designer de cubo&#41; &#40;Analysis Services de dados multidimensionais&#41;](report-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
+ [O designer de cubo &#40;Analysis Services-dados multidimensionais&#41;](cube-designer-analysis-services-multidimensional-data.md)  
   
   

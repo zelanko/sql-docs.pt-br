@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fb96831c54a67a6ea74ca984cb346dcaaf50a335
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104626"
 ---
 # <a name="text-boxes-report-builder-and-ssrs"></a>Caixas de texto (Construtor de Relatórios e SSRS)
@@ -28,7 +28,7 @@ ms.locfileid: "66104626"
 > [!NOTE]  
 >  Se você arrastar o valor do campo do conjunto de dados de um relatório diretamente para a superfície de design do relatório ou para uma caixa de texto na superfície de design do relatório, verá apenas o primeiro valor no conjunto de resultados ao executar o relatório. Para ver todos os valores de um campo, arraste o campo para uma célula em uma tabela ou matriz. Dessa maneira, quando você executar o relatório, verá todos os valores naquele campo.  
   
- Para mostrar texto repetido em um layout de formato livre, coloque uma caixa de texto em uma região de dados de lista. Use uma lista quando quiser repetir um formato para vários valores, como, por exemplo, um formato de fatura do cliente repetido uma vez para cada cliente. Para obter mais informações, consulte [lista &#40;construtor de relatórios e SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
+ Para mostrar texto repetido em um layout de formato livre, coloque uma caixa de texto em uma região de dados de lista. Use uma lista quando quiser repetir um formato para vários valores, como, por exemplo, um formato de fatura do cliente repetido uma vez para cada cliente. Para obter mais informações, consulte [listas &#40;Construtor de relatórios e SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
   
  Use um contêiner de retângulo quando quiser controlar o layout da caixa de texto e o espaço em branco abaixo da última caixa de texto. Para obter mais informações, consulte [Retângulos e linhas &#40;Construtor de Relatórios e SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md).  
   
@@ -39,7 +39,7 @@ ms.locfileid: "66104626"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="GrowShrinkTextBox"></a> Ampliando e reduzindo uma caixa de texto  
+##  <a name="GrowShrinkTextBox"></a>Aumentando e reduzindo uma caixa de texto  
  Por padrão, as caixas de texto apresentam um tamanho fixo. Você pode permitir a redução ou a expansão vertical de uma caixa de texto com base no seu conteúdo. Para obter mais informações, consulte [Permitir que uma caixa de texto seja ampliada ou reduzida &#40;Construtor de Relatórios e SSRS&#41;](allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md).  
   
 ## <a name="orienting-a-text-box"></a>Orientando uma caixa de texto  
@@ -53,7 +53,7 @@ ms.locfileid: "66104626"
   
  A orientação é definida na caixa de texto e se aplica a todo o texto da caixa. Você não pode especificar uma orientação diferente para partes da caixa de texto.  
   
- Para começar rapidamente com a alteração da orientação do texto, consulte a seção sobre como girar texto no [Tutorial: formatar o texto &#40;Construtor de Relatórios&#41;](../tutorial-format-text-report-builder.md). Para obter mais informações, consulte [definir orientação da caixa de texto &#40;construtor de relatórios e SSRS&#41;](set-text-box-orientation-report-builder-and-ssrs.md).  
+ Para começar rapidamente a alterar a orientação do texto, consulte a seção sobre como girar o texto no [tutorial: Formatar o texto &#40;Construtor de Relatórios&#41;](../tutorial-format-text-report-builder.md). Para obter mais informações, consulte [definir a orientação da caixa de texto &#40;Construtor de relatórios e SSRS&#41;](set-text-box-orientation-report-builder-and-ssrs.md).  
   
 ##  <a name="HowTo"></a> Tópicos de instruções  
  [Adicionar, mover ou excluir uma caixa de texto &#40;Construtor de Relatórios e SSRS&#41;](add-move-or-delete-a-text-box-report-builder-and-ssrs.md)  
@@ -62,9 +62,9 @@ ms.locfileid: "66104626"
   
  [Definir a orientação da caixa de texto &#40;Construtor de Relatórios e SSRS&#41;](set-text-box-orientation-report-builder-and-ssrs.md)  
   
- [Permitir que uma caixa de texto seja ampliada ou reduzida &#40;Construtor de Relatórios e SSRS&#41;](allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md)  
+ [Permitir que uma caixa de texto cresça ou reduza &#40;Construtor de Relatórios e SSRS&#41;](allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Formatando texto e espaços reservados &#40;Construtor de Relatórios e SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
  [Formatando números e datas &#40;Construtor de Relatórios e SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)  
   

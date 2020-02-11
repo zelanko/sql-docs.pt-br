@@ -1,5 +1,5 @@
 ---
-title: Tópicos de instruções de resultados (OLE DB) de processamento | Microsoft Docs
+title: Tópicos de instruções sobre processamento de resultados (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f0ffe1ae426b39742e9d50f343daf913777836cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63225476"
 ---
 # <a name="processing-results-how-to-topics-ole-db"></a>Tópicos de instrução sobre processamento de resultados (OLE DB)
@@ -24,15 +24,15 @@ ms.locfileid: "63225476"
   
 ## <a name="in-this-section"></a>Nesta seção  
   
--   [Executar um procedimento armazenado &#40;usando a sintaxe ODBC CALL&#41; e processar códigos de retorno e parâmetros de saída &#40;OLE DB&#41;](execute-stored-procedure-with-odbc-call-and-process-output.md)  
+-   [Execute um procedimento armazenado &#40;usando sintaxe de chamada ODBC&#41; e códigos de retorno de processo e parâmetros de saída &#40;OLE DB&#41;](execute-stored-procedure-with-odbc-call-and-process-output.md)  
   
--   [Executar um procedimento armazenado &#40;usando a sintaxe de RPC&#41; e processar códigos de retorno e parâmetros de saída &#40;OLE DB&#41;](execute-stored-procedure-with-rpc-and-process-output.md)  
+-   [Execute um procedimento armazenado &#40;usando a sintaxe RPC&#41; e processar códigos de retorno e parâmetros de saída &#40;OLE DB&#41;](execute-stored-procedure-with-rpc-and-process-output.md)  
   
--   [Executar uma função definida pelo usuário e processar o código de retorno &#40;OLE DB&#41;](execute-a-user-defined-function-and-process-return-code-ole-db.md)  
+-   [Execute uma função definida pelo usuário e processe o código de retorno &#40;OLE DB&#41;](execute-a-user-defined-function-and-process-return-code-ole-db.md)  
   
--   [Buscar linhas em um conjunto de resultados &#40;OLE DB&#41;](fetch-rows-from-a-result-set-ole-db.md)  
+-   [Buscar linhas de um conjunto de resultados &#40;OLE DB&#41;](fetch-rows-from-a-result-set-ole-db.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tópicos de instruções do OLE DB](../ole-db-how-to-topics.md)  
   
   

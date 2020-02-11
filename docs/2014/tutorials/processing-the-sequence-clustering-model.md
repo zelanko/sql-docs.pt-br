@@ -1,5 +1,5 @@
 ---
-title: Processando o modelo de Clustering de sequências | Microsoft Docs
+title: Processando o modelo de clustering de sequência | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 63f46f2d548437a707922bb9cf8b58727061253b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63188148"
 ---
 # <a name="processing-the-sequence-clustering-model"></a>Processando o modelo de clustering de sequências
@@ -37,11 +37,11 @@ ms.locfileid: "63188148"
 5.  Clique em **Fechar** novamente para sair da caixa de diálogo **Processar Estrutura de Mineração – Clustering de Sequências com Região** .  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
- [Explorando o modelo de Clustering de sequências &#40;Tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/exploring-the-sequence-clustering-model-intermediate-data-mining-tutorial.md)  
+ [Explorando o modelo de clustering de sequência &#40;tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/exploring-the-sequence-clustering-model-intermediate-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Designer de Mineração de Dados](../../2014/analysis-services/data-mining/data-mining-designer.md)   
- [Microsoft Sequence Clustering Algorithm](../../2014/analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
- [Requisitos e considerações de processamento &#40;Mineração de dados&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Designer de mineração de dados](../../2014/analysis-services/data-mining/data-mining-designer.md)   
+ [Algoritmo de clustering de sequência da Microsoft](../../2014/analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
+ [Requisitos e considerações de processamento &#40;mineração de dados&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

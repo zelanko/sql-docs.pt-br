@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8703ec6f199290185829a15a0079cd9b04e42fbc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068757"
 ---
 # <a name="set-aggregation-options-usage-based-optimization-wizard"></a>Definir Opções de Agregação (Assistente de Otimização com Base no Uso)
@@ -38,11 +38,11 @@ ms.locfileid: "66068757"
  **Parar**  
  Encerre o processo de design de agregação.  
   
- **Redefinir**  
+ **Definido**  
  Redefina todas as opções de agregação desta página para os valores padrão.  
   
-## <a name="see-also"></a>Consulte também  
- [Ajuda de F1 do Assistente de otimização com base no uso](usage-based-optimization-wizard-f1-help.md)   
- [Assistentes do Analysis Services &#40;dados multidimensionais&#41;](analysis-services-wizards-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Ajuda F1 do assistente de otimização com base no uso](usage-based-optimization-wizard-f1-help.md)   
+ [Analysis Services assistentes &#40;dados multidimensionais&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

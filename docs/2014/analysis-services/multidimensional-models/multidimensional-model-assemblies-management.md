@@ -1,5 +1,5 @@
 ---
-title: Gerenciamento de Assemblies de modelo multidimensional | Microsoft Docs
+title: Gerenciamento de assemblies de modelo multidimensional | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,14 +22,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6c4f57e12754fc8e32fba8f483a2dfc360d7edc0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073525"
 ---
 # <a name="multidimensional-model-assemblies-management"></a>Gerenciamento de assemblies de modelo multidimensional
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornece muitas funções intrínsecas para uso com as linguagens MDX e extensões DMX (extensões DMX) projetadas para obter tudo desde cálculos estatísticos padrão até passar membros em uma hierarquia. Mas, como em qualquer outro produto complexo, há sempre a necessidade de estender a funcionalidade para o produto.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece muitas funções intrínsecas para uso com as linguagens MDX (Multidimensional Expressions) e DMX (Data Mining Extensions), projetadas para realizar tudo, desde cálculos estatísticos padrão até a passagem de membros em uma [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] hierarquia. Mas, como em qualquer outro produto complexo, há sempre a necessidade de estender a funcionalidade para o produto.  
   
  Portanto, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] permite adicionar assemblies a uma instância ou banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Os assemblies permitem criar funções externas definidas pelo usuário usando qualquer CLR (Common Language Runtime), como o Microsoft Visual Basic .NET ou o Microsoft Visual C#. Você também pode usar linguagens de automação COM (Component Object Model), como o Microsoft Visual Basic ou o Microsoft Visual C++.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "66073525"
   
  Um assembly com novos procedimentos e funções pode ser adicionado ao servidor. É possível usar assemblies para aprimorar ou adicionar funcionalidade personalizada que não foi fornecida pelo servidor. Usando os assemblies, você pode adicionar novas funções para o MDX, extensões DMX ou procedimentos armazenados. Os assemblies são carregados do local onde o aplicativo personalizado é executado e uma cópia do arquivo binário do assembly é salva com os dados do banco de dados no servidor. Quando um assembly é removido, o assembly copiado também é removido do servidor.  
   
- Assemblies podem ser de dois tipos diferentes: COM e CLR. Os assemblies CLR são desenvolvidos em linguagens de programação .NET Framework, como C#, Visual Basic .NET, C++ gerenciado. Os assemblies COM são bibliotecas COM que devem ser registradas no servidor.  
+ Os assemblies podem ser de dois tipos diferentes: COM e CLR. Os assemblies CLR são desenvolvidos em linguagens de programação .NET Framework, como C#, Visual Basic .NET, C++ gerenciado. Os assemblies COM são bibliotecas COM que devem ser registradas no servidor.  
   
  Assemblies podem ser adicionados a objetos <xref:Microsoft.AnalysisServices.Server> ou <xref:Microsoft.AnalysisServices.Database> . Os assemblies de servidor podem ser chamados por qualquer usuário conectado ao servidor ou qualquer objeto no servidor. Os assemblies de banco de dados só podem ser chamados por objetos <xref:Microsoft.AnalysisServices.Database> ou usuários conectados ao banco de dados.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66073525"
   
  As especificações de segurança incluem a permissão definida e a representação usada para executar o assembly.  
   
-## <a name="calling-user-defined-functions"></a>chamando funções definidas pelo usuário  
+## <a name="calling-user-defined-functions"></a>Chamando funções definidas pelo usuário  
  A chamada de uma função definida pelo usuário em um assembly é executada como a chamada de uma função intrínseca, exceto pelo fato de que você deve usar um nome totalmente qualificado. Por exemplo, uma função definida pelo usuário que retorna um tipo esperado pelo MDX é incluída em uma consulta MDX, conforme mostrado no exemplo a seguir:  
   
 ```  
@@ -69,26 +69,27 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
   
  Para chamar uma função definida pelo usuário de um assembly CLR específico, a função é precedida pelo nome do assembly, o nome completo da classe e o nome do procedimento, conforme demonstrado aqui:  
   
- *AssemblyName*.*FullClassName*.*ProcedureName*(*Argument1*, *Argument2*, ...)  
+ *AssemblyName*. *FullClassName*. *ProcedureName*(*argument1*, *argument2*,...)  
   
  Para fins de compatibilidade com versões anteriores do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], a sintaxe a seguir é também aceitável:  
   
- *AssemblyName*!*FullClassName*!*ProcedureName*(*Argument1*, *Argument2*, ...)  
+ *AssemblyName*! *FullClassName*! *ProcedureName*(*argument1*, *argument2*,...)  
   
  Se a biblioteca COM oferece suporte para várias interfaces, a ID da interface também pode ser usada para resolver o nome do procedimento, conforme demonstrado aqui:  
   
- *AssemblyName*!*InterfaceID*!*ProcedureName*(*Argument1*, *Argument2*, ...)  
+ *AssemblyName*! *InterfaceName*! *ProcedureName*(*argument1*, *argument2*,...)  
   
 ## <a name="security"></a>Segurança  
- A segurança dos assemblies baseia-se no modelo de segurança .NET Framework, que é um modelo de segurança de acesso por código. O .NET Framework oferece suporte a um mecanismo de segurança de acesso por código assumindo que o tempo de execução pode hospedar tanto o código totalmente confiável quanto o parcialmente confiável. Os recursos protegidos pela segurança de código de acesso .NET Framework geralmente são envolvidos pelo código gerenciado que demanda a permissão correspondente antes de permitir o acesso ao recurso. A demanda para a permissão é satisfatória apenas quando todos os chamadores (no nível de assembly) na pilha de chamadas tiverem a permissão do recurso correspondente.  
+ A segurança dos assemblies baseia-se no modelo de segurança .NET Framework, que é um modelo de segurança de acesso por código. O .NET Framework oferece suporte a um mecanismo de segurança de acesso por código assumindo que o runtime pode hospedar tanto o código totalmente confiável quanto o parcialmente confiável. Os recursos protegidos pela segurança de código de acesso .NET Framework geralmente são envolvidos pelo código gerenciado que demanda a permissão correspondente antes de permitir o acesso ao recurso. A demanda para a permissão é satisfatória apenas quando todos os chamadores (no nível de assembly) na pilha de chamadas tiverem a permissão do recurso correspondente.  
   
  Para os assemblies, a permissão de execução é passada com a propriedade `PermissionSet` no objeto `Assembly`. As permissões que o código gerenciado recebe são determinadas pela política de segurança em vigor. Existem três níveis de política que estão em vigor em um ambiente de host não[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] : empresa, computador e usuário. A lista efetiva de permissões que o código recebe é determinada pela interseção das permissões obtidas por esses três níveis.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornece um nível de política de segurança no nível do host ao CLR ao hospedá-lo; essa política é um nível de política adicional abaixo dos três níveis de política que estão sempre em funcionamento. Essa política é definida para todos os domínios de aplicativo criados pelo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+ 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornece um nível de política de segurança no nível do host ao CLR ao hospedá-lo; essa política é um nível de política adicional abaixo dos três níveis de política que estão sempre em funcionamento. Essa política é definida para todos os domínios de aplicativo criados pelo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
  A política de nível host do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é uma combinação de política fixa do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para assemblies de sistema e política específica de usuário para assemblies de usuário. A parte especificada pelo usuário da política host do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] baseia-se no proprietário do assembly especificando um de três recipientes de permissão para cada assembly.  
   
-|Configuração de permissões|Descrição|  
+|Configuração de permissões|DESCRIÇÃO|  
 |------------------------|-----------------|  
 |`Safe`|Fornece a permissão de computação interna. Esse recipiente de permissão não atribui permissões para acessar qualquer um dos recursos protegidos em .NET Framework. Este será o recipiente de permissão padrão de um assembly se não houver outro especificado com a propriedade `PermissionSet`.|  
 |`ExternalAccess`|Fornece o mesmo acesso que a configuração `Safe`, com a habilidade adicional de acessar recursos externos do sistema. Esse recipiente de permissão não oferece garantias de segurança (embora seja possível para proteger esse cenário), mas oferece garantias de confiabilidade.|  
@@ -105,14 +106,15 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
   
 -   Se houver um EXECUTE AS intermediário que altere o contexto do chamador original, a tentativa de acessar o recurso externo falhará.  
   
- A propriedade `ImpersonationMode` pode ser definida como `ImpersonateCurrentUser` ou `ImpersonateAnonymous`. A configuração padrão, `ImpersonateCurrentUser`, executa um assembly na conta de login de rede do usuário atual. Se o `ImpersonateAnonymous` for usada, o contexto de execução será correspondente à conta de usuário de logon do Windows IUSER _*servername* no servidor. Esta é a conta-convidado da Internet que limitou os privilégios no servidor. Um assembly executado nesse contexto só pode acessar recursos limitados no servidor local.  
+ A propriedade `ImpersonationMode` pode ser definida como `ImpersonateCurrentUser` ou `ImpersonateAnonymous`. A configuração padrão, `ImpersonateCurrentUser`, executa um assembly na conta de login de rede do usuário atual. Se a `ImpersonateAnonymous` configuração for usada, o contexto de execução será correspondente à conta de*usuário de logon do Windows IUSER_* ServerName no servidor. Esta é a conta-convidado da Internet que limitou os privilégios no servidor. Um assembly executado nesse contexto só pode acessar recursos limitados no servidor local.  
   
 ### <a name="application-domains"></a>Domínios de aplicativo  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] não expõe os domínios de aplicativo diretamente. Devido a um conjunto de assemblies executado no mesmo domínio de aplicativo, os domínios de aplicativo podem descobrir um ao outro no momento de execução usando o namespace `System.Reflection` no .NET Framework, ou de alguma outra maneira, e podem chamá-los no modo associado mais recente. Essa chamadas estarão sujeitas às verificações de permissão usadas pela segurança com base na autorização do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
+ 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] não expõe os domínios de aplicativo diretamente. Devido a um conjunto de assemblies executado no mesmo domínio de aplicativo, os domínios de aplicativo podem descobrir um ao outro no momento de execução usando o namespace `System.Reflection` no .NET Framework, ou de alguma outra maneira, e podem chamá-los no modo associado mais recente. Essa chamadas estarão sujeitas às verificações de permissão usadas pela segurança com base na autorização do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
  Você não deve confiar na localização dos assemblies no mesmo domínio do aplicativo, pois o limite do domínio de aplicativo e dos assemblies que vão para cada domínio são definidos pela implementação.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Definindo a segurança para procedimentos armazenados](../multidimensional-models-extending-olap-stored-procedures/setting-security-for-stored-procedures.md)   
  [Definindo procedimentos armazenados](../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Editor do Gerenciador de Conexão de cache | Microsoft Docs
+title: Editor do Gerenciador de conexões de cache | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0802ed589813a43ffac516c05a3a52de382d36c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061083"
 ---
 # <a name="cache-connection-manager-editor"></a>Editor do Gerenciador de Conexões de Cache
@@ -33,9 +33,9 @@ ms.locfileid: "66061083"
   
 -   [Guia colunas](#columnstab)  
   
- Para obter mais informações sobre o Gerenciador de Conexões de Cache, consulte [Cache Connection Manager](connection-manager/cache-connection-manager.md).  
+ Para saber mais sobre o Gerenciador de conexões de cache, consulte [cache Connection Manager](connection-manager/cache-connection-manager.md).  
   
-##  <a name="generaltab"></a> Guia Geral  
+##  <a name="generaltab"></a>Guia geral  
  Use a guia **Geral** da caixa de diálogo **Editor do Gerenciador de Conexões de Cache** para indicar se é necessário ler o cache de um arquivo ou salvar o cache em um arquivo.  
   
 ### <a name="options"></a>Opções  
@@ -45,7 +45,7 @@ ms.locfileid: "66061083"
  **Descrição**  
  Descreva a conexão. Como prática recomendável, descreva a conexão de acordo com a sua finalidade para tornar os pacotes autodocumentados e facilitar a sua manutenção.  
   
- **Usar cache de arquivo.**  
+ **Usar cache de arquivos**  
  Indique se precisa usar um arquivo de cache.  
   
 > [!NOTE]  
@@ -66,14 +66,14 @@ ms.locfileid: "66061083"
  **Atualizar metadados**  
  Exclua os metadados de colunas no gerenciador de conexões de Cache e popule novamente o gerenciador de conexões do Cache com matadados de colunas de um arquivo de cache selecionado.  
   
-##  <a name="columnstab"></a> Guia Colunas  
+##  <a name="columnstab"></a>Guia colunas  
  Use a guia **Colunas** da caixa de diálogo **Editor do Gerenciador de Conexões de Cache** para configurar as propriedades de cada coluna no cache.  
   
 ### <a name="options"></a>Opções  
  **Coluna**  
  Especifique o nome da coluna.  
   
- **Posição de Índice**  
+ **Posição do índice**  
  Especifique quais colunas são colunas de índice indicando a posição de índice de cada coluna. O índice é uma coleção de uma ou mais colunas.  
   
  Para colunas sem-índice, a posição de índice é 0.  
@@ -98,7 +98,7 @@ ms.locfileid: "66061083"
  `Code Page`  
  Especifica a página de código para o tipo de coluna. Se aplicável ao tipo de dados, você pode atualizar a `Code Page`.  
   
-## <a name="see-also"></a>Consulte também  
- [Lookup Transformation](data-flow/transformations/lookup-transformation.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Transformação Pesquisa](data-flow/transformations/lookup-transformation.md)  
   
   

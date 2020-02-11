@@ -1,5 +1,5 @@
 ---
-title: Barra de ferramentas (guia traduções, Designer de dimensão) (Analysis Services - dados multidimensionais) | Microsoft Docs
+title: Barra de ferramentas (guia Traduções, designer de dimensão) (Analysis Services-dados multidimensionais) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9bf5f9fae501c019a7db3c9d78d578729cf1df42
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065995"
 ---
 # <a name="toolbar-translations-tab-dimension-designer-analysis-services---multidimensional-data"></a>Barra de Ferramentas (guia Conversões, Designer de Dimensão) (Analysis Services - Dados Multidimensionais)
@@ -24,13 +24,13 @@ ms.locfileid: "66065995"
  **Adicionar Business Intelligence**  
  Exibe o **Assistente de Business Intelligence** para adicionar recursos de business intelligence.  
   
- **Processar**  
+ **Processo**  
  Exibe a caixa de diálogo **Processo** para processar o objeto.  
   
- **Nova tradução**  
+ **Nova Tradução**  
  Clique para exibir a caixa de diálogo **Selecionar Linguagem** e criar uma nova conversão. A conversão será exibida como uma coluna nova na grade **Detalhes de Conversão** .  
   
- **Excluir tradução**  
+ **Excluir Tradução**  
  Clique para excluir a conversão selecionada.  
   
 > [!NOTE]  
@@ -57,8 +57,8 @@ ms.locfileid: "66065995"
  **Mostrar todos os atributos**  
  Clique para alternar a exibição de todos os atributos definidos para a dimensão selecionada, inclusive atributos para os quais as hierarquias de atributo estão desabilitadas.  
   
-## <a name="see-also"></a>Consulte também  
- [Traduções &#40;Designer de dimensão&#41; &#40;Analysis Services - dados multidimensionais&#41;](translations-dimension-designer-analysis-services-multidimensional-data.md)   
- [Detalhes de conversão &#40;guia traduções, Designer de dimensão&#41; &#40;Analysis Services - dados multidimensionais&#41;](translation-details-dimension-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Traduções &#40;o designer de dimensão&#41; &#40;Analysis Services de dados multidimensionais&#41;](translations-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Detalhes da tradução &#40;guia Traduções, designer de dimensão&#41; &#40;Analysis Services-dados multidimensionais&#41;](translation-details-dimension-designer-analysis-services-multidimensional-data.md)  
   
   

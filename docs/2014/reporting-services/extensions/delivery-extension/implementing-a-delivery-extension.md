@@ -16,40 +16,40 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cae33496e4dddcaf2d14ba2d87f0d4013795e58f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63165135"
 ---
 # <a name="implementing-a-delivery-extension"></a>Implementando uma extensão de entrega
-  O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] permite que os usuários criem e publiquem relatórios que, uma vez criados e publicados, podem ser entregues em vários locais. Além disso, o [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] inclui várias extensões de entrega e uma API de entrega que permite que os desenvolvedores criem extensões de entrega adicionais para estender ainda mais a funcionalidade de entrega do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] permite que os usuários criem e publiquem relatórios que, depois de criados e publicados, possam ser entregues a vários locais. Além disso, o [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] inclui várias extensões de entrega e uma API de entrega que permite que os desenvolvedores criem extensões de entrega adicionais para estender ainda mais a funcionalidade de entrega do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
  Para obter uma implementação de exemplo de uma extensão de entrega, consulte [Amostras de produto do SQL Server Reporting Services](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Visão geral de extensões de entrega] entrega-extensions-overview.md)  
+ [Visão geral das extensões de entrega] entrega-extensões-overview.md)  
  Apresenta como escrever uma extensão de entrega para o [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
- [Preparar para implementar uma entrega de extensão](preparing-to-implement-a-delivery-extension.md)  
+ [Preparando para implementar uma entrega de extensão](preparing-to-implement-a-delivery-extension.md)  
  Descreve as interfaces e as classes disponíveis durante a implementação de uma extensão de entrega do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], além dos problemas a serem considerados antes da implementação.  
   
- [Criar uma biblioteca de extensões de entrega](creating-a-delivery-extension-library.md)  
+ [Criando uma biblioteca de extensões de entrega](creating-a-delivery-extension-library.md)  
  Descreve a atribuição de um namespace para a extensão de entrega do seu [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] e a compilação da sua extensão de entrega em uma DLL de biblioteca.  
   
- [Implementar a interface IDeliveryExtension para uma extensão de entrega](implementing-the-ideliveryextension-interface-for-a-delivery-extension.md)  
+ [Implementando a interface IDeliveryExtension para uma extensão de entrega](implementing-the-ideliveryextension-interface-for-a-delivery-extension.md)  
  Descreve os atributos de uma extensão de entrega e como implementar a sua própria classe de extensão de entrega.  
   
- [Usar uma classe de notificação para uma extensão de entrega](using-a-notification-class-for-a-delivery-extension.md)  
+ [Usando uma classe de notificação classe para uma extensão de entrega](using-a-notification-class-for-a-delivery-extension.md)  
  Descreve os atributos de uma classe **Notification** e como usá-la na implementação de extensão de entrega.  
   
- [Usar a classe Setting para uma extensão de entrega](using-the-setting-class-for-a-delivery-extension.md)  
+ [Usando a classe Setting para uma extensão de entrega](using-the-setting-class-for-a-delivery-extension.md)  
  Descreve os atributos de uma classe **Setting** e como usá-la na implementação de extensão de entrega.  
   
- [Usar a interface IDeliveryReportServerInformation para uma extensão de entrega](using-the-ideliveryreportserverinformation-interface-for-a-delivery-extension.md)  
+ [Usando a interface IDeliveryReportServerInformation para uma extensão de entrega](using-the-ideliveryreportserverinformation-interface-for-a-delivery-extension.md)  
  Descreve os atributos de uma interface **IDeliveryReportServerInformation** e como usá-la na implementação de extensão de entrega.  
   
- [Usar a classe Report para uma extensão de entrega](using-the-report-class-for-a-delivery-extension.md)  
+ [Usando a classe Report para uma extensão de entrega](using-the-report-class-for-a-delivery-extension.md)  
  Descreve os atributos de uma classe **Report** e como usá-la na implementação de extensão de entrega.  
   
  [Usar a classe RenderedOutputFile para uma extensão de entrega](using-the-renderedoutputfile-class-for-a-delivery-extension.md)  
@@ -61,13 +61,13 @@ ms.locfileid: "63165135"
  [Implantando uma extensão de entrega](deploying-a-delivery-extension.md)  
  Descreve como implantar a sua extensão de entrega.  
   
- [Depurar o código de extensão de entrega](debugging-delivery-extension-code.md)  
+ [Depurando o código de extensão de entrega](debugging-delivery-extension-code.md)  
  Descreve como depurar código em sua extensão de entrega.  
   
- [Remover uma extensão de entrega](removing-a-delivery-extension.md)  
+ [Removendo uma extensão de entrega](removing-a-delivery-extension.md)  
  Descreve como remover uma extensão de entrega de um servidor de relatório.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Extensões do Reporting Services](../reporting-services-extensions.md)   
  [Biblioteca de extensões do Reporting Services](../reporting-services-extension-library.md)  
   

@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c56aef79df354ee8e355da215a241836f8c7ab45
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63204693"
 ---
 # <a name="table-properties-visual-database-tools"></a>Propriedades da tabela (Visual Database Tools)
@@ -40,11 +40,11 @@ ms.locfileid: "63204693"
 > [!CAUTION]  
 >  Se as consultas, exibições, funções definidas pelo usuário, procedimentos armazenados ou programas existentes se referirem à tabela, a modificação do nome tornará esses objetivos inválidos.  
   
- **Nome do Banco de Dados**  
+ **Database Name**  
  Mostra o nome da fonte dos dados para a tabela selecionada.  
   
  **Descrição**  
- Mostra uma descrição da tabela selecionada. Para ver a descrição inteira ou editá-la, clique nela e, em seguida, clique nas reticências **(…)** à direita da propriedade.  
+ Mostra uma descrição da tabela selecionada. Para ver a descrição inteira ou editá-la, clique na descrição e, em seguida, clique nas reticências **(...)** à direita da propriedade.  
   
  **Esquema**  
  Mostra o nome do esquema ao qual essa tabela pertence. (Aplica-se somente ao Microsoft SQL Server)  
@@ -58,31 +58,31 @@ ms.locfileid: "63204693"
  **Coluna de identidade**  
  Mostra a coluna usada como a coluna de identidade da tabela. Para alterar a coluna de identidade, escolha a partir da lista suspensa. Apenas colunas de um tipo de dados numérico serão exibidas na lista.  
   
- **Indexável**  
+ **É indexável**  
  Mostra se a tabela pode ser indexada. Se a tabela não for indexável pode ser porque você não é o proprietário da tabela ou porque a tabela contém colunas com tipos de dados de texto, ntext ou imagem.  
   
- **É Replicado**  
+ **É replicado**  
  Mostra se a tabela é replicada em outro local.  
   
- **Categoria de especificação espaço de dados regular**  
- Expande para mostrar propriedades para **(Tipo de Espaço de Dados)** , **Grupo de Arquivos ou Nome do Esquema de Partição**e **Lista de Colunas de Partição**.  
+ **Categoria de especificação de espaço de dados regular**  
+ Expande para mostrar propriedades para **(Tipo de Espaço de Dados)**, **Grupo de Arquivos ou Nome do Esquema de Partição**e **Lista de Colunas de Partição**.  
   
- **(Tipo de Espaço de Dados)**  
+ **(Tipo de espaço de dados)**  
  Mostra se essa tabela é armazenada usando um grupo de arquivos ou esquema de partição.  
   
- **Grupo de Arquivos ou Nome do Esquema de Partição**  
+ **Nome do esquema de partição ou grupo de arquivos**  
  Mostra o nome do grupo de arquivos ou esquema de partição.  
   
- **Lista de Colunas de Partição**  
+ **Lista de colunas de partição**  
  Fornece acesso à caixa de diálogo **Lista de Colunas de Partição** .  
   
- **Coluna GUID de Linha**  
+ **Coluna de GUID de linha**  
  Mostra a coluna usada pelo Microsoft SQL Server como a coluna ROWGUID da tabela. Para alterar a coluna ROWGUID , escolha a partir da lista suspensa. (Aplica-se apenas ao SQL Server 7.0 ou superior.)  
   
- **Grupo de arquivos de Texto/Imagem**  
+ **Grupo de arquivos de texto/imagem**  
  Fornece uma lista suspensa da qual você pode escolher o grupo de arquivos para colunas que têm tipos de dados de texto ou de imagem. Se a tabela é armazenada usando-se um esquema de partição, deixe esse espaço em branco.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar tabelas &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

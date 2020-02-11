@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f0b24a9c02e38ba8165e015cdf8d1b107e64cbaf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63193077"
 ---
 # <a name="values-for-ltxsdsimpletypegt-declarations"></a>Valores para declarações &lt;xsd:simpleType&gt;
@@ -24,9 +24,9 @@ ms.locfileid: "63193077"
   
  Além disso, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não dá suporte para o valor NaN nas declarações **\<<xsd:simpleType>** . Esquemas que incluem valores NaN são rejeitados pelo servidor.  
   
-|Tipo simples|Limitação|  
+|Tipo simples|Limitações|  
 |-----------------|----------------|  
-|`duration`|A parte do ano precisa estar dentro do intervalo de -2<sup>^</sup>31 a 2<sup>^</sup>31-1. O mês, o dia, a hora, o minuto e o segundo devem estar dentro do intervalo de 0 a 9999. A parte dos segundos tem três dígitos adicionais de precisão à direita da casa decimal.|  
+|`duration`|A parte do ano deve estar dentro do intervalo de-2<sup>^</sup>31 a 2<sup>^</sup>31-1. O mês, o dia, a hora, o minuto e o segundo devem estar dentro do intervalo de 0 a 9999. A parte dos segundos tem três dígitos adicionais de precisão à direita da casa decimal.|  
 |`dateTime`|A parte da hora no subcampo de fuso horário deve estar dentro do intervalo aceito de -14 a +14. A parte do ano deve estar dentro do intervalo de 1 a 9999. A parte do mês deve estar dentro do intervalo de 1 a 12. A parte do dia deve estar dentro do intervalo de 1 a 31 e deve ser uma data válida do calendário. Por exemplo, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] detecta e retorna um erro para uma data inválida, como 1974-02-31, porque o mês de fevereiro não tem 31 dias.<br /><br /> O componente de segundos oferece suporte a precisão de 100 nonossegundos. A indicação de fuso horário é opcional.<br /><br /> O SQL Server 2005 oferecia suporte a anos no intervalo de -9999 a 9999. Atualmente, o SQL Server oferece suporte a um intervalo de anos mais restrito. Para obter mais informações, consulte [Comparar XML digitado com XML não digitado](compare-typed-xml-to-untyped-xml.md).|  
 |`date`|A parte do ano deve estar dentro do intervalo de 1 a 9999. A parte do mês deve estar dentro do intervalo de 1 a 12. A parte do dia deve estar dentro do intervalo de 1 a 31 e deve ser uma data válida do calendário. Por exemplo, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] detecta e retorna um erro para uma data inválida, como 1974-02-31, porque o mês de fevereiro não tem 31 dias.<br /><br /> O SQL Server 2005 oferecia suporte a anos no intervalo de -9999 a 9999. Atualmente, o SQL Server oferece suporte a um intervalo de anos mais restrito. Para obter mais informações, consulte [Comparar XML digitado com XML não digitado](compare-typed-xml-to-untyped-xml.md).|  
 |`gYearMonth`|A parte do ano deve estar dentro do intervalo de -9999 a 9999.|  
@@ -40,7 +40,7 @@ ms.locfileid: "63193077"
 |`string`|Valores desse tipo devem estar de acordo com o formato do tipo `nvarchar(max)` do SQL.|  
 |`anyURI`|Valores deste tipo não podem ter mais que 4000 caracteres Unicode de comprimento.|  
   
-## <a name="see-also"></a>Consulte também  
- [Requisitos e limitações de uso de coleções de esquema XML no servidor](requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Requisitos e limitações para o uso de Coleções de Esquemas XML no servidor](requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
   
   

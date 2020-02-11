@@ -1,5 +1,5 @@
 ---
-title: Correlacionar um rastreamento com dados de Log de desempenho do Windows (SQL Server Profiler) | Microsoft Docs
+title: Correlacionar um rastreamento com os dados de log de desempenho do Windows (SQL Server Profiler) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3294c9fd70ebae8eab4e76e17b2e0a21771ec26f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065047"
 ---
 # <a name="correlate-a-trace-with-windows-performance-log-data-sql-server-profiler"></a>Correlacionar um rastreamento com dados do log de desempenho do Windows (SQL Server Profiler)
-  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] pode correlacionar os contadores do Monitor do Sistema do Microsoft Windows e os eventos do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . O Monitor do Sistema do Windows registra a atividade do sistema em logs de desempenho para os contadores especificados.  
+  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]pode correlacionar contadores do monitor do sistema [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Microsoft Windows a eventos ou. O Monitor do Sistema do Windows registra a atividade do sistema em logs de desempenho para os contadores especificados.  
   
 > [!NOTE]  
 >  Para obter informações sobre como compartilhar logs entre versões diferentes do Windows, consulte o procedimento ao final desse tópico.  
@@ -63,7 +63,7 @@ ms.locfileid: "66065047"
   
 11. Clique em **OK** para criar o log de desempenho.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Modelos e permissões do SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [Iniciar o SQL Server Profiler](../tools/sql-server-profiler/start-sql-server-profiler.md)  
   

@@ -10,25 +10,25 @@ ms.assetid: d0233525-a83b-4279-813e-c554042abd0e
 author: Jtoland
 ms.author: Jtoland
 ms.openlocfilehash: fa87f4ac6f5a4caf5da8d5b00200b1dd8c92d53a
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72252128"
 ---
 # <a name="sql-server-migration-assistant"></a>Assistente de Migração do SQL Server
 
-O SSMA (Assistente de Migração do Microsoft SQL Server) é uma ferramenta projetada para automatizar a migração de banco de dados para SQL Server do Microsoft Access, DB2, MySQL, Oracle e SAP ASE.  
+O Assistente de Migração do SQL Server (SSMA) é uma ferramenta projetada para automatizar a migração de banco de dados para o SQL Server do Microsoft Access, DB2, MySQL, Oracle e SAP ASE.  
   
 ## <a name="migration-sources"></a>Fontes de migração  
   
-- [Assistente de Migração do SQL Server para acesso](../ssma/access/sql-server-migration-assistant-for-access-accesstosql.md)  
+- [SQL Server Migration Assistant for Access](../ssma/access/sql-server-migration-assistant-for-access-accesstosql.md)  
   
-- [Assistente de Migração do SQL Server para DB2](../ssma/db2/sql-server-migration-assistant-for-db2-db2tosql.md)  
+- [Assistente de migração do SQL Server para DB2](../ssma/db2/sql-server-migration-assistant-for-db2-db2tosql.md)  
   
-- [Assistente de Migração do SQL Server para MySQL](../ssma/mysql/sql-server-migration-assistant-for-mysql-mysqltosql.md)  
+- [SQL Server Migration Assistant for MySQL](../ssma/mysql/sql-server-migration-assistant-for-mysql-mysqltosql.md)  
   
-- [Assistente de Migração do SQL Server para Oracle](../ssma/oracle/sql-server-migration-assistant-for-oracle-oracletosql.md)  
+- [SQL Server Migration Assistant for Oracle](../ssma/oracle/sql-server-migration-assistant-for-oracle-oracletosql.md)  
   
 - [Assistente de Migração do SQL Server para SAP ASE](../ssma/sybase/sql-server-migration-assistant-for-sybase-sybasetosql.md)  
 
@@ -43,10 +43,10 @@ As versões de destino a seguir têm suporte para o SSMA.
 - SQL Server 2016
 - SQL Server 2017 no Windows e no Linux
 - SQL Server 2019 no Windows e no Linux
-- Banco de dados SQL do Azure
+- Banco de Dados SQL do Azure
 - SQL Data Warehouse do Azure * *
 
-\* * Esse destino tem suporte apenas pelo SSMA para Oracle.
+* * Esse destino tem suporte apenas pelo SSMA para Oracle.
 
 ## <a name="downloads"></a>Downloads
 
@@ -68,7 +68,7 @@ As versões de destino a seguir têm suporte para o SSMA.
   
   - [Comunidade do SQL Server Developer Center](https://go.microsoft.com/fwlink/?LinkId=42456) – grupos de notícias, fóruns e outros recursos da Comunidade que são úteis para SQL Server desenvolvedores  
   
-- **Suporte assistido** -vá para [https://support.microsoft.com/assistedsupportproducts](https://support.microsoft.com/assistedsupportproducts) e pesquise por ' Assistente de migração do SQL Server '.  Selecione sua versão e, em seguida, selecione "Iniciar solicitação".  O suporte assistido está incluído na ferramenta de Assistente de Migração do SQL Server.  
+- **Suporte assistido** – vá [https://support.microsoft.com/assistedsupportproducts](https://support.microsoft.com/assistedsupportproducts) para e procure ' Assistente de migração do SQL Server '.  Selecione sua versão e, em seguida, selecione "Iniciar solicitação".  O suporte assistido está incluído na ferramenta de Assistente de Migração do SQL Server.  
   
 - **Suporte Premier** – se você tiver um contrato Premier, poderá obter o suporte Premier no [portal Premier Online](https://premier.microsoft.com/).  
   

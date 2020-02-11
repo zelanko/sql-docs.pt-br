@@ -16,20 +16,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: eeb258266c489056994d8f78f80a6856602a174a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073706"
 ---
 # <a name="using-variables-and-parameters-mdx"></a>Usando variáveis e parâmetros (MDX)
-  No [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], é possível parametrizar uma instrução MDX (Multidimensional Expressions). Uma instrução parametrizada permite a criação de instruções genéricas que podem ser personalizadas no tempo de execução.  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] No [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], você pode parametrizar uma instrução MDX (Multidimensional Expressions). Uma instrução parametrizada permite a criação de instruções genéricas que podem ser personalizadas no runtime.  
   
  Ao criar uma instrução parametrizada, você identifica o nome do parâmetro incluindo um prefixo ao nome com o sinal arroba (@). Por exemplo, @Year seria um nome de parâmetro válido  
   
  A linguagem MDX oferece suporte apenas a valores literais ou escalares. Para criar um parâmetro que faça referência a um membro, conjunto ou tupla, use uma função como [StrToMember](/sql/mdx/strtomember-mdx) ou [StrToSet](/sql/mdx/strtoset-mdx).  
   
- No XML a seguir, por exemplo Analysis (XMLA), o @CountryName parâmetro conterá o país em que o cliente para os dados são recuperados:  
+ No seguinte exemplo de XML for Analysis (XMLA), o @CountryName parâmetro conterá o país para o qual os dados do cliente são recuperados:  
   
 ```  
 <Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/">  
@@ -58,7 +58,7 @@ from [Adventure Works]
   
  Para usar essa funcionalidade com OLE DB, use a interface `ICommandWithParameters`. Para usar essa funcionalidade com ADOMD.Net, use a interface **AdomdCommand.Parameters** .  
   
-## <a name="see-also"></a>Consulte também  
- [Conceitos básicos do script MDX &#40;Analysis Services&#41;](mdx-scripting-fundamentals-analysis-services.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Conceitos básicos de script MDX &#40;Analysis Services&#41;](mdx-scripting-fundamentals-analysis-services.md)  
   
   

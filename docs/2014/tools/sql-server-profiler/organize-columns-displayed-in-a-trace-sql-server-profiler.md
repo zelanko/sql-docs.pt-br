@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e1a884f7c45accefb248029d148feb8b521e6ff4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63240542"
 ---
 # <a name="organize-columns-displayed-in-a-trace-sql-server-profiler"></a>Organizar colunas exibidas em um rastreamento (SQL Server Profiler)
@@ -28,16 +28,16 @@ ms.locfileid: "63240542"
   
 -   Escolha várias colunas de dados para agrupar apenas eventos de rastreamento. Quando várias colunas de dados são selecionadas para o agrupamento, a janela de rastreamento exibe os eventos agrupados pelos valores nas colunas de dados escolhidas. O exemplo a seguir mostra como a grade da janela de rastreamento apareceria se você selecionasse as colunas **Duration** e **StartTime** para agrupamento. Observe que os valores da coluna **Duration** são exibidos em ordem crescente, seguidos dos valores de **StartTime** .  
   
-|Duração|StartTime|EventClass|ClientProcessID|  
+|Duration|StartTime|EventClass|ClientProcessID|  
 |--------------|---------------|----------------|---------------------|  
 ||12/12/2006 3:16:43 PM|SQL:StmtStarting|2124|  
-|0|12/12/2006 5:39:23 PM|Audit Login|648|  
+|0|12/12/2006 5:39:23 PM|Auditar logon|648|  
 |1|12/12/2006 5:24:44 PM|SQL:StmtStarting|2124|  
 |25|12/12/2006 5:24:44 PM|SQL:StmtCompleted|648|  
   
 -   Selecione apenas uma coluna para agrupar e agregar os eventos do rastreamento. Quando uma única coluna de dados é selecionada para o agrupamento, a janela de rastreamento exibe os eventos agrupados pelos valores nessa coluna de dados e recolhe todos os eventos debaixo dela. Um sinal de adição ( **+** ) aparece à esquerda do evento na coluna de dados selecionada para o agrupamento com o número de eventos recolhidos sob ela entre parênteses, à direita do evento. O exemplo a seguir mostra como a grade da janela de rastreamento apareceria se você selecionasse apenas a coluna **EventClass** para agrupamento. Observe que todos os eventos estão organizados sob a coluna de dados **EventClass** . Para visualizar todos os eventos, clique no sinal mais para expandir e exibir todas as classes de evento daquele tipo.  
   
-|EventClass|StartTime|Duração|ClientProcessID|  
+|EventClass|StartTime|Duration|ClientProcessID|  
 |----------------|---------------|--------------|---------------------|  
 |+ ExistingConnection (6)||||  
 |+ SQL:BatchStarting (25)||||  
@@ -82,7 +82,7 @@ ms.locfileid: "63240542"
   
 7.  Para voltar à exibição normal dos dados do rastreamento, clique em **Exibição Agregada** no menu **Exibir** para cancelar a seleção. Se desejar voltar à exibição agregada, clique outra vez em **Exibição Agregada** no menu **Exibir** para selecioná-la novamente. Note que você também pode clicar em **Exibição Agrupada** no menu **Exibir** para exibir os eventos do rastreamento agrupado sem que eles sejam recolhidos.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar um rastreamento &#40;SQL Server Profiler&#41;](create-a-trace-sql-server-profiler.md)   
  [Abrir uma tabela de rastreamento &#40;SQL Server Profiler&#41;](open-a-trace-table-sql-server-profiler.md)   
  [Abrir um arquivo de rastreamento &#40;SQL Server Profiler&#41;](open-a-trace-file-sql-server-profiler.md)  

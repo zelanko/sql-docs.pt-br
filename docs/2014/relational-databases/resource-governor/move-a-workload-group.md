@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1c1fedfc0c21d78e73f38b5bfdf084eb37e5311d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63209744"
 ---
 # <a name="move-a-workload-group"></a>Mover um Grupo de Cargas de Trabalho
@@ -73,7 +73,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Administrador de Recursos](resource-governor.md)   
  [Habilitar Administrador de Recursos](enable-resource-governor.md)   
  [Criar um pool de recursos](create-a-resource-pool.md)   

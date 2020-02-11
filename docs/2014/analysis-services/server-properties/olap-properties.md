@@ -96,13 +96,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4b26323f99d0b31cdb31e12b64eabdd2a855d907
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068866"
 ---
 # <a name="olap-properties"></a>Propriedades OLAP
+  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oferece suporte às propriedades do servidor OLAP listadas nas seguintes tabelas. Para obter mais informações sobre as propriedades de servidor adicionais e como defini-las, consulte [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
   
  **Aplica-se a:** Somente modo de servidor multidimensional  
@@ -158,7 +159,7 @@ ms.locfileid: "66068866"
  Uma propriedade de inteiro de 32 bits assinada que define o tamanho de um buffer interno usado para contagens distintas. Aumente esse valor para acelerar o processamento de contagem distinto pelo uso da memória.  
   
  `EnableRolapDimQueryTableGrouping`  
- Uma propriedade booliana que especifica se o agrupamento da tabela está habilitado para dimensões ROLAP. Se True, ao consultar as dimensões ROLAP em tempo de execução, as tabelas de dimensões ROLAP inteiras serão consultadas uma vez, diferentemente das consultas separadas para cada atributo.  
+ Uma propriedade booliana que especifica se o agrupamento da tabela está habilitado para dimensões ROLAP. Se True, ao consultar as dimensões ROLAP em runtime, as tabelas de dimensões ROLAP inteiras serão consultadas uma vez, diferentemente das consultas separadas para cada atributo.  
   
  `EnableTableGrouping`  
  Uma propriedade booliana que especifica se o agrupamento da tabela está habilitado. Se True, ao processar as dimensões, as tabelas de dimensões inteiras serão consultadas uma vez, diferentemente das consultas separadas para cada atributo.  
@@ -196,7 +197,7 @@ ms.locfileid: "66068866"
  `PartitionLatencyAccuracy`  
  Uma propriedade avançada que não deve ser alterada, exceto sob orientação do suporte da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## <a name="process"></a>Process  
+## <a name="process"></a>Processo  
  `AggregationMemoryLimitMax`  
  Uma propriedade de número de ponto flutuante da precisão dupla de 64 bits assinada que define a quantidade máxima de memória que pode ser dedicada para processamento de agregação, expressa como uma porcentagem da memória física.  
   
@@ -289,7 +290,7 @@ ms.locfileid: "66068866"
   
 ## <a name="query"></a>Consulta  
  `AggregationsUseEnabled`  
- Uma propriedade booliana que define se as agregações armazenadas são usadas em tempo de execução. Essa propriedade permite que as agregações sejam desabilitadas sem alterar o projeto da agregação ou o reprocessamento, para fins de avaliação de desempenho e de informação.  
+ Uma propriedade booliana que define se as agregações armazenadas são usadas em runtime. Essa propriedade permite que as agregações sejam desabilitadas sem alterar o projeto da agregação ou o reprocessamento, para fins de avaliação de desempenho e de informação.  
   
  O valor padrão para essa propriedade é True, indicando que as agregações estão habilitadas.  
   
@@ -327,7 +328,7 @@ ms.locfileid: "66068866"
   
      Observe que a memória usada por esses caches é considerada não reduzível e será incluída para explicar o **TotalMemoryLimit**.  
   
--   Afeta todos os bancos de dados do servidor. **DimensionPropertyCachesize** é uma propriedade para todo o servidor. Alterar essa propriedade afeta todos os bancos de dados em execução na instância atual.  
+-   Afeta todos os bancos de dados do servidor. **DimensionPropertyCachesize** é uma propriedade de todo o servidor. Alterar essa propriedade afeta todos os bancos de dados em execução na instância atual.  
   
  Abordagem para calcular os requisitos de cache de dimensão:  
   
@@ -342,7 +343,7 @@ ms.locfileid: "66068866"
  Uma propriedade avançada que não deve ser alterada, exceto sob orientação do suporte da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
  `IndexUseEnabled`  
- Uma propriedade booliana que define se os índices são usados em tempo de execução. Essa propriedade é para fins de avaliação de desempenho e de informações.  
+ Uma propriedade booliana que define se os índices são usados em runtime. Essa propriedade é para fins de avaliação de desempenho e de informações.  
   
  `MapHandleAlgorithm`  
  Uma propriedade avançada que não deve ser alterada, exceto sob orientação do suporte da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
@@ -366,7 +367,7 @@ ms.locfileid: "66068866"
  Uma propriedade avançada que não deve ser alterada, exceto sob orientação do suporte da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
  `UseDataSlice`  
- Uma propriedade booliana, que define se frações de dados de partição devem ser usadas em tempo de execução para a otimização da consulta. Essa propriedade é para fins de avaliação de desempenho e de informação.  
+ Uma propriedade booliana, que define se frações de dados de partição devem ser usadas em runtime para a otimização da consulta. Essa propriedade é para fins de avaliação de desempenho e de informação.  
   
  `UseMaterializedIterators`  
  Uma propriedade avançada que não deve ser alterada, exceto sob orientação do suporte da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
@@ -431,7 +432,7 @@ ms.locfileid: "66068866"
  `DataCache\ MemoryModel\ Tax`  
  Uma propriedade avançada que não deve ser alterada, exceto sob orientação do suporte da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## <a name="jobs"></a>trabalhos  
+## <a name="jobs"></a>Trabalhos  
  `ProcessAggregation\ MemoryModel\ Income`  
  Uma propriedade avançada que não deve ser alterada, exceto sob orientação do suporte da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
@@ -477,8 +478,8 @@ ms.locfileid: "66068866"
  `ProcessAggregation\ ProcessProperty\ Tax`  
  Uma propriedade avançada que não deve ser alterada, exceto sob orientação do suporte da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## <a name="see-also"></a>Consulte também  
- [Configurar propriedades de servidor no Analysis Services](server-properties-in-analysis-services.md)   
- [Determina o Modo de Servidor de uma instância do Analysis Services.](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Configurar propriedades do servidor no Analysis Services](server-properties-in-analysis-services.md)   
+ [Determinar o modo de servidor de uma instância de Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

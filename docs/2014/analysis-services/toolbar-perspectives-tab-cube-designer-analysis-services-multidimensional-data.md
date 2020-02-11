@@ -1,5 +1,5 @@
 ---
-title: Barra de ferramentas (guia perspectivas, Designer de cubo) (Analysis Services - dados multidimensionais) | Microsoft Docs
+title: Barra de ferramentas (guia perspectivas, designer de cubo) (Analysis Services-dados multidimensionais) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8498f30b11a9b379d9cad0e98d7a5269fc60752a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065986"
 ---
 # <a name="toolbar-perspectives-tab-cube-designer-analysis-services---multidimensional-data"></a>Barra de Ferramentas (guia Perspectivas, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
@@ -22,11 +22,11 @@ ms.locfileid: "66065986"
   
 ## <a name="options"></a>Opções  
   
-|Opção|Descrição|  
+|Opção|DESCRIÇÃO|  
 |------------|-----------------|  
 |**Adicionar Business Intelligence**|Clique para exibir o **Assistente de Business Intelligence** e adicionar recursos de Business Intelligence ao cubo.|  
-|**Processar**|Clique para exibir a caixa de diálogo **Processar** e processar o cubo selecionado.|  
-|**Nova perspectiva**|Clique para criar uma nova perspectiva no cubo selecionado.|  
-|**Excluir perspectiva**|Clique para exibir a caixa de diálogo **Excluir Objetos** e excluir a perspectiva selecionada.<br /><br /> Observação: Essa opção é habilitada somente se uma perspectiva estiver selecionada na **detalhes da perspectiva** painel.|  
+|**Processo**|Clique para exibir a caixa de diálogo **Processar** e processar o cubo selecionado.|  
+|**Nova Perspectiva**|Clique para criar uma nova perspectiva no cubo selecionado.|  
+|**Excluir Perspectiva**|Clique para exibir a caixa de diálogo **excluir objetos** e excluir a perspectiva selecionada.<br /><br /> Observação: essa opção estará habilitada apenas se uma perspectiva estiver selecionada no painel **Detalhes da Perspectiva** .|  
   
   

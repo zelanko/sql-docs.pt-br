@@ -1,5 +1,5 @@
 ---
-title: Repetir uma tabela de rastreamento (SQL Server Profiler) | Microsoft Docs
+title: Reproduzir uma tabela de rastreamento (SQL Server Profiler) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6e80a18cef595ae3543aba8a656aca9267607e38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63240487"
 ---
 # <a name="replay-a-trace-table-sql-server-profiler"></a>Repetir uma tabela de rastreamento (SQL Server Profiler)
@@ -41,7 +41,7 @@ ms.locfileid: "63240487"
   
 5.  Escolha **Reproduzir eventos na oudem em que fouam rastreados**ou **Reproduzir eventos usando vários threads**. A tabela a seguir explica a diferença entre essas configurações.  
   
-    |Opção|Descrição|  
+    |Opção|DESCRIÇÃO|  
     |------------|-----------------|  
     |**Repetir eventos na ordem em que foram rastreados**|Repete os eventos na ordem em que foram registrados. Essa opção habilita a depuração.|  
     |**Reproduzir eventos usando vários threads**|Essa opção usa vários threads para repetir cada evento, não importando a sequência. Essa opção otimiza o desempenho.|  
@@ -58,7 +58,7 @@ ms.locfileid: "63240487"
   
     -   Para controlar como o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gerencia os processos durante a repetição, configure as **Opções do Health Monitor**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Permissões necessárias para executar o SQL Server Profiler](sql-server-profiler.md)   
  [Repetir rastreamentos](replay-traces.md)   
  [Abrir uma tabela de rastreamento &#40;SQL Server Profiler&#41;](open-a-trace-table-sql-server-profiler.md)   

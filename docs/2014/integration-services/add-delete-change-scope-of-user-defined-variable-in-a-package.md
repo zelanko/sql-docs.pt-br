@@ -13,14 +13,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 583e0f92f96c153fdeb0ade57fcdfa1d27578350
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061992"
 ---
 # <a name="add-delete-change-scope-of-user-defined-variable-in-a-package"></a>Adicionar, excluir, alterar o escopo de uma variável definida pelo usuário em um pacote
-  Estes procedimentos descrevem como adicionar, excluir e alterar o escopo de uma variável definida pelo usuário em um pacote usando a janela **Variáveis**.  
+  Estes procedimentos descrevem como adicionar, excluir e alterar o escopo de uma variável definida pelo usuário em um pacote usando a janela **Variáveis** .  
   
  Para obter mais informações sobre escopo variável, consulte [Variáveis do SSIS &#40;Integration Services&#41;](integration-services-ssis-variables.md).  
   
@@ -82,7 +82,7 @@ ms.locfileid: "66061992"
   
 6.  Para salvar o pacote atualizado, clique em **Salvar Itens Selecionados** no menu **Arquivo** .  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Variáveis do SSIS &#40;Integration Services&#41;](integration-services-ssis-variables.md)   
  [Usar variáveis em pacotes](../../2014/integration-services/use-variables-in-packages.md)   
  [Definir as propriedades de uma variável definida pelo usuário](../../2014/integration-services/set-the-properties-of-a-user-defined-variable.md)   

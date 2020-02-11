@@ -1,5 +1,5 @@
 ---
-title: Guia de transição de Cluster (Visualizador do modelo de mineração) de Clusterização de sequência | Microsoft Docs
+title: Guia transição de cluster do clustering de sequências (Visualizador do modelo de mineração) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8a236805ac047b351aa49c2486b8acac84818017
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069076"
 ---
 # <a name="sequence-clustering-cluster-transition-tab-mining-model-viewer"></a>Guia Transição de Cluster do clustering de sequências (Visualizador do Modelo de Mineração)
@@ -24,10 +24,10 @@ ms.locfileid: "66069076"
   
  Use esta exibição de um modelo de clustering de sequência para exibir padrões. No diagrama, um link representa a probabilidade de uma transição e um nó representa um estado de sequência.  
   
- **Para obter mais informações:** [Algoritmo msc](data-mining/microsoft-sequence-clustering-algorithm.md), [procurar um modelo usando o Visualizador de Cluster de sequência da Microsoft](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ **Para obter mais informações:** [algoritmo de clustering de sequência da Microsoft](data-mining/microsoft-sequence-clustering-algorithm.md), [procurar um modelo usando o Visualizador de cluster de sequência da Microsoft](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
 ## <a name="options"></a>Opções  
- **Atualizar conteúdo do Visualizador**  
+ **Atualizar conteúdo do visualizador**  
  Recarregue o modelo de mineração no visualizador.  
   
  **Modelo de mineração**  
@@ -39,29 +39,29 @@ ms.locfileid: "66069076"
  **Ampliar**  
  Amplie a imagem do diagrama, para ver melhor os estados.  
   
- **Reduza a imagem**  
+ **Reduzir**  
  Reduza o diagrama para obter uma exibição geral dos estados no cluster.  
   
- **Copiar exibição de gráfico**  
+ **Copiar Exibição do Gráfico**  
  Copie a seção visível do diagrama para a área de transferência.  
   
- **Copiar gráfico inteiro**  
+ **Copiar Todo o Gráfico**  
  Copie todo o diagrama na área de transferência.  
   
  **Cluster**  
  Escolha um cluster para ser exibido no visualizador. Por padrão, **População (Todos)** é selecionada, o que significa que os estados e as transições do modelo inteiro são incluídos no gráfico. Quando você escolhe um cluster específico, somente os estados e as transições que estão naquele cluster são exibidos.  
   
- **Dica:** Você pode renomear clusters usando o **diagrama de Cluster** guia. Basta selecionar um cluster, clicar com o botão direito do mouse e selecionar **Renomear**. Renomear clusters com um rótulo mais descritivo facilita a comparação de clusters na guia **de Transições de Estado** .  
+ **Dica:** Você pode renomear clusters usando a guia **diagrama de cluster** . Basta selecionar um cluster, clicar com o botão direito do mouse e selecionar **renomear**. Renomear clusters com um rótulo mais descritivo facilita a comparação de clusters na guia **de Transições de Estado** .  
   
- **Mostrar rótulos de borda**  
+ **Mostrar Rótulos de Borda**  
  Selecione esta opção para exibir números em cada borda no gráfico que denota a probabilidade da transição.  
   
  **Links**  
  Use o controle deslizante para controlar o número de estados e transições que são exibidos no gráfico. Abaixar o controle deslizante mostra somente os estados e as transições com a probabilidade mais alta.  
   
-## <a name="see-also"></a>Consulte também  
- [Algoritmos de mineração de dados &#40;Analysis Services – Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Visualizadores do modelo de mineração &#40; Designer do modelo de mineração de dados &#41;](mining-model-viewers-data-mining-model-designer.md)   
- [Visualizadores do modelo de Mineração de dados](data-mining/data-mining-model-viewers.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Algoritmos de mineração de dados &#40;mineração de dados Analysis Services&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Visualizadores de modelo de mineração &#40;designer de modelo de mineração de dados&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Visualizadores do Modelo de Mineração de Dados](data-mining/data-mining-model-viewers.md)  
   
   

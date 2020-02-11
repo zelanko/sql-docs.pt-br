@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7783fa93912c305403cc34ad6e52668123d164ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63192077"
 ---
 # <a name="disconnecting-from-an-instance-of-sql-server"></a>Desconectando de uma instância do SQL Server
@@ -31,7 +31,7 @@ ms.locfileid: "63192077"
 ## <a name="disconnecting-from-an-instance-of-sql-server-for-rmo"></a>Desconectando de uma instância do SQL Server para RMO  
  O fechamento de conexões de servidor quando você está programando com RMO é um pouco diferente do que quando a programação é feita com SMO.  
   
- Como a conexão de servidor para um objeto RMO é mantida pela <xref:Microsoft.SqlServer.Management.Common.ServerConnection> do objeto, esse objeto também é usado durante a desconexão de uma instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] quando você programa usando RMO. Para fechar uma conexão usando o objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection>, chame o método <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Disconnect%2A> do objeto RMO. Depois que a conexão tiver sido fechada, os objetos RMO não poderão ser usados.  
+ Como a conexão do servidor para um objeto RMO é mantida pelo <xref:Microsoft.SqlServer.Management.Common.ServerConnection> objeto, esse objeto também é usado ao desconectar-se de uma instância [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] do quando você programa usando o RMO. Para fechar uma conexão usando o objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection>, chame o método <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Disconnect%2A> do objeto RMO. Depois que a conexão tiver sido fechada, os objetos RMO não poderão ser usados.  
   
 ## <a name="example"></a>Exemplo  
  [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  
@@ -59,7 +59,7 @@ srv.ConnectionContext.Disconnect();
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  <xref:Microsoft.SqlServer.Management.Smo.Server>   
  <xref:Microsoft.SqlServer.Management.Common.ServerConnection>  
   

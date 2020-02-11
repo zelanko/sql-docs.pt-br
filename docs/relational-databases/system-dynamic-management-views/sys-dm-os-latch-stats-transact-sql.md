@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_latch_stats (Transact-SQL) | Microsoft Docs
+title: sys. dm_os_latch_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/18/2017
 ms.prod: sql
@@ -19,10 +19,10 @@ ms.assetid: 2085d9fc-828c-453e-82ec-b54ed8347ae5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f1a8480b7e512c697f3645006d453866963b81aa
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72289407"
 ---
 # <a name="sysdm_os_latch_stats-transact-sql"></a>sys.dm_os_latch_stats (Transact-SQL)
@@ -31,21 +31,21 @@ ms.locfileid: "72289407"
 Retorna as informações sobre todas as esperas de trava organizadas por classe. 
   
 > [!NOTE]  
-> Para chamá-lo de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use o nome **Sys. dm_pdw_nodes_os_latch_stats**.  
+> Para chamá-lo [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] de [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]ou, use o nome **Sys. dm_pdw_nodes_os_latch_stats**.  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
-|latch_class|**nvarchar(120)**|Nome da classe da trava.|  
+|latch_class|**nvarchar (120)**|Nome da classe da trava.|  
 |waiting_requests_count|**bigint**|Número de esperas em travas nessa classe. O contador é incrementado no início de uma espera de trava.|  
 |wait_time_ms|**bigint**|Tempo de espera total, em milissegundos, nas travas dessa classe.<br /><br /> **Observação:** Essa coluna é atualizada a cada cinco minutos durante uma espera de trava e no final de uma espera de trava.|  
 |max_wait_time_ms|**bigint**|Tempo máximo durante qual um objeto de memória esperou essa trava. Se o valor for exageradamente alto, pode indicar um deadlock interno.|  
-|pdw_node_id|**int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador do nó em que essa distribuição está.|  
+|pdw_node_id|**int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador do nó em que essa distribuição está.|  
   
 ## <a name="permissions"></a>Permissões  
-No [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer a permissão `VIEW SERVER STATE`.   
-Em [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a permissão `VIEW DATABASE STATE` no banco de dados. Em [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e Basic, o requer o **administrador do servidor** ou uma conta de **administrador do Azure Active Directory** .   
+Ativado [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
+Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a `VIEW DATABASE STATE` permissão no banco de dados. Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e Basic, o requer o **administrador do servidor** ou uma conta de **administrador do Azure Active Directory** .   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  sys.dm_os_latch_stats pode ser usado para identificar a origem de uma contenção de travamento, examinando os números e os tempos de espera relativos para as diferentes classes de trava. Em algumas situações, talvez seja possível resolver ou reduzir contenção de trava. Entretanto, pode haver situações em que seja necessário contatar o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Serviço de Atendimento ao Cliente.  
   
 É possível redefinir o conteúdo de sys.dm_os_latch_stats usando `DBCC SQLPERF` da seguinte maneira:  
@@ -61,18 +61,18 @@ GO
 >  Essas estatísticas não persistirão se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for reiniciado. Todos os dados são acumulados desde a última vez em que as estatísticas foram redefinidas ou desde que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] foi iniciado.  
   
 ## <a name="latches"></a>Travas  
- Uma trava é um objeto de sincronização Lightweight interno semelhante a um bloqueio, que é usado por vários componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Uma trava é usada principalmente para sincronizar páginas de banco de dados durante operações como o acesso ao buffer ou ao arquivo. Cada trava é associada a uma única unidade de alocação. 
+ Uma trava é um objeto de sincronização Lightweight interno semelhante a um bloqueio, que é usado por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vários componentes. Uma trava é usada principalmente para sincronizar páginas de banco de dados durante operações como o acesso ao buffer ou ao arquivo. Cada trava é associada a uma única unidade de alocação. 
   
  Uma espera de trava ocorre quando uma solicitação de trava não pode ser concedida imediatamente, porque a trava foi retida por outro thread em um modo conflitante. Ao contrário dos bloqueios, a trava é liberada logo após a operação, mesmo em operações de gravação.  
   
  As travas são agrupadas em classes baseadas em componentes e em utilização. Zero ou mais travas de uma classe específica podem existir a qualquer momento em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
-> `sys.dm_os_latch_stats` não rastreia as solicitações de trava que foram concedidas imediatamente ou que falharam sem espera.  
+> `sys.dm_os_latch_stats` não rastreia as solicitações de trava que foram concedidas imediatamente ou que falharam sem esperar.  
   
  A tabela a seguir contém breves descrições das diversas classes de trava.  
   
-|Classe de trava|Descrição|  
+|Classe de trava|DESCRIÇÃO|  
 |-----------------|-----------------|  
 |ALLOC_CREATE_RINGBUF|Usada internamente pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para inicializar a sincronização da criação de um buffer de anel de alocação.|  
 |ALLOC_CREATE_FREESPACE_CACHE|Usada para inicializar a sincronização de caches internos de espaço livre para heaps.|  
@@ -171,7 +171,7 @@ GO
 |SERVICE_BROKER_MIRROR_ROUTE|Somente para uso interno.|  
 |TRACE_ID|Somente para uso interno.|  
 |TRACE_AUDIT_ID|Somente para uso interno.|  
-|rastreamento|Somente para uso interno.|  
+|RASTREAMENTO|Somente para uso interno.|  
 |TRACE_CONTROLLER|Somente para uso interno.|  
 |TRACE_EVENT_QUEUE|Somente para uso interno.|  
 |TRANSACTION_DISTRIBUTED_MARK|Somente para uso interno.|  
@@ -193,7 +193,7 @@ GO
 |VERSIONING_STATE_CHANGE|Somente para uso interno.|  
 |KTM_VIRTUAL_CLOCK|Somente para uso interno.|  
   
-## <a name="see-also"></a>Consulte também  
-[DBCC SQLPERF &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)       
-[SQL Server exibições &#40;de&#41; gerenciamento dinâmico relacionadas ao sistema operacional](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)       
+## <a name="see-also"></a>Consulte Também  
+[&#41;DBCC SQLPERF &#40;Transact-SQL](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)       
+[SQL Server exibições de gerenciamento dinâmico relacionadas ao sistema operacional &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)       
 [SQL Server, objeto Latches](../../relational-databases/performance-monitor/sql-server-latches-object.md)      

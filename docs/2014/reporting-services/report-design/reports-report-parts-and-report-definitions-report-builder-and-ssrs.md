@@ -14,14 +14,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d22c8c22170ecef301eacd553f15c16091c9a6e7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105053"
 ---
 # <a name="reports-report-parts-and-report-definitions-report-builder-and-ssrs"></a>Relatórios, partes de relatório e definições de relatório (Construtor de Relatórios e SSRS)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa diversos termos para descrever um relatório em diferentes estados, incluindo a definição inicial, o relatório publicado e o relatório exibido conforme aparece para o usuário.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]o usa uma variedade de termos para descrever um relatório em diferentes Estados, incluindo a definição inicial, o relatório publicado e o relatório exibido como ele aparece para o usuário.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -60,13 +60,13 @@ ms.locfileid: "66105053"
   
 -   Assine um relatório, que é entregue em uma caixa de entrada de email ou em um compartilhamento de arquivo em um formato de saída especificado por você.  
   
- Assine um relatório, que é distribuído a uma caixa de entrada de emails ou a um compartilhamento de arquivos em um formato de saída especificado por você. O formato de renderização padrão de um relatório é HTML 4.0. Além do HTML, os relatórios podem ser renderizados em diversos formatos de saída, incluindo Excel, Word, XML, PDF, TIFF e CSV. Assim como os relatórios publicados, os relatórios renderizados não podem ser editados nem salvos em um servidor de relatório. Para obter mais informações, consulte [exportando relatórios &#40;construtor de relatórios e SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md).  
+ Assine um relatório, que é distribuído a uma caixa de entrada de emails ou a um compartilhamento de arquivos em um formato de saída especificado por você. O formato de renderização padrão de um relatório é HTML 4.0. Além do HTML, os relatórios podem ser renderizados em diversos formatos de saída, incluindo Excel, Word, XML, PDF, TIFF e CSV. Assim como os relatórios publicados, os relatórios renderizados não podem ser editados nem salvos em um servidor de relatório. Para obter mais informações, consulte [Exportando relatórios &#40;Construtor de relatórios e SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Conceitos de criação de relatórios &#40;Construtor de Relatórios e SSRS&#41;](report-authoring-concepts-report-builder-and-ssrs.md)   
- [Construtor de relatórios no SQL Server 2014](../report-builder/report-builder-in-sql-server-2016.md)   
- [Instalar, desinstalar e oferecer suporte ao construtor de relatórios](../install-uninstall-and-report-builder-support.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Conceitos de criação de relatório &#40;Construtor de Relatórios e SSRS&#41;](report-authoring-concepts-report-builder-and-ssrs.md)   
+ [Construtor de Relatórios no SQL Server 2014](../report-builder/report-builder-in-sql-server-2016.md)   
+ [Instalar, desinstalar e Construtor de Relatórios suporte](../install-uninstall-and-report-builder-support.md)   
  [Localizando, exibindo e gerenciando relatórios &#40;Construtor de Relatórios e SSRS&#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [Exportando relatórios &#40;relatórios e SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)  
+ [Exportando relatórios &#40;Construtor de Relatórios e SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)  
   
   

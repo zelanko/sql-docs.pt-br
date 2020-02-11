@@ -33,10 +33,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 7b28043d797585496686dea6fd0c5fad276f16b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63187972"
 ---
 # <a name="password-policy"></a>Política de senha
@@ -75,7 +75,7 @@ ms.locfileid: "63187972"
   
     -   O histórico de senhas é inicializado com o valor do hash da senha atual.  
   
-    -   As opções**duração do bloqueio de conta**, **limite de bloqueio de conta**e **zerar contador de bloqueios de conta após** também estão habilitadas.  
+    -   **Duração do bloqueio de conta**, **limite de bloqueio de conta**e contador de bloqueio de conta de **redefinição após** também estão habilitados.  
   
 -   Quando CHECK_POLICY é alterado para OFF, o seguinte comportamento ocorre:  
   
@@ -110,7 +110,7 @@ ms.locfileid: "63187972"
   
  [ALTER USER &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-user-transact-sql)  
   
- [Crie um logon](authentication-access/create-a-login.md)  
+ [Criar um logon](authentication-access/create-a-login.md)  
   
  [Criar um usuário de banco de dados](authentication-access/create-a-database-user.md)  
   

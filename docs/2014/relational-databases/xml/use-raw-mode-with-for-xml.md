@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: aec0ec20c9bd46a06560f5ce6ebd374e937f0343
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63193242"
 ---
 # <a name="use-raw-mode-with-for-xml"></a>Usar modo RAW com FOR XML
@@ -35,25 +35,25 @@ ms.locfileid: "63193242"
 ## <a name="in-this-section"></a>Nesta seção  
  Esta seção contém os seguintes exemplos:  
   
--   [Exemplo: Recuperando informações de modelo do produto como XML](example-retrieving-product-model-information-as-xml.md)  
+-   [Exemplo: recuperando informações de modelo de produto como XML](example-retrieving-product-model-information-as-xml.md)  
   
--   [Exemplo: Especificando XSINIL com a diretiva ELEMENTS](example-specifying-xsinil-with-the-elements-directive.md)  
+-   [Exemplo: Especificando XSINIL com a política ELEMENTS](example-specifying-xsinil-with-the-elements-directive.md)  
   
 -   [Exemplo: Solicitando esquemas como resultados com as opções XMLDATA e XMLSCHEMA](example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md)  
   
--   [Exemplo: Recuperando dados binários](example-retrieving-binary-data.md)  
+-   [Exemplo: recuperando dados binários](example-retrieving-binary-data.md)  
   
 -   [Exemplo: Renomeando o elemento &#60;row&#62;](example-renaming-the-row-element.md)  
   
--   [Exemplo: Especificando um elemento raiz para o XML gerado por FOR XML](example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md)  
+-   [Exemplo: especificando um elemento raiz para o XML gerado pela FOR XML](example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md)  
   
--   [Exemplo: Consultando colunas XMLType](example-querying-xmltype-columns.md)  
+-   [Exemplo: consultando colunas XMLType](example-querying-xmltype-columns.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Adicionar namespaces a consultas com WITH XMLNAMESPACES](add-namespaces-to-queries-with-with-xmlnamespaces.md)   
  [Usar o modo AUTO com FOR XML](use-auto-mode-with-for-xml.md)   
  [Usar o modo EXPLICIT com FOR XML](use-explicit-mode-with-for-xml.md)   
- [Usar modo PATH com FOR XML](use-path-mode-with-for-xml.md)   
+ [Usar o modo PATH com FOR XML](use-path-mode-with-for-xml.md)   
  [SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)   
  [FOR XML &#40;SQL Server&#41;](../xml/for-xml-sql-server.md)  
   

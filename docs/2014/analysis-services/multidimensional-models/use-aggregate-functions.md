@@ -13,23 +13,25 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4c8d65325f8008756a65a584a2538b9d56ebd579
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072722"
 ---
 # <a name="use-aggregate-functions"></a>Usar funções de agregação
   Quando uma dimensão é usada para fatiar uma medida, a medida é resumida juntamente com hierarquias contidas nessa dimensão. O comportamento da soma depende da função de agregação especificada para a medida. Para mais medidas contendo dados numéricos, a função de agregação é `Sum`. O valor da medida totalizará valores diferentes, dependendo de qual nível da hierarquia está ativo.  
   
- No Analysis Services, cada medida que você cria é apoiada por uma função de agregação que determina a operação da medida. Os tipos de agregação predefinidos incluem `Sum`, `Min`, `Max`, `Count`, **contagem distinta**e várias outras funções mais especializadas. Como alternativa, se você precisar de agregações com base em fórmulas complexas ou personalizadas, poderá criar um cálculo de MDX em vez de usar uma função de agregação pré-compilada. Por exemplo, se você quiser definir uma medida para um valor de porcentagem, faria isso no MDX, usando uma medida calculada. Consulte [Instrução CREATE MEMBER &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member).  
+ No Analysis Services, cada medida que você cria é apoiada por uma função de agregação que determina a operação da medida. Os `Sum`tipos de agregação `Min`predefinidos incluem,, `Max`, `Count`a **contagem distinta**e várias outras funções mais especializadas. Como alternativa, se você precisar de agregações com base em fórmulas complexas ou personalizadas, poderá criar um cálculo de MDX em vez de usar uma função de agregação pré-compilada. Por exemplo, se você quiser definir uma medida para um valor de porcentagem, faria isso no MDX, usando uma medida calculada. Consulte [Instrução CREATE MEMBER &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member).  
   
- Medidas criadas por meio do Assistente de cubo são atribuídas a um tipo de agregação como parte da definição da medida. O tipo de agregação é sempre `Sum`, supondo que a coluna de origem contém dados numéricos. `Sum` é atribuída, independentemente do tipo de dados da coluna de origem. Por exemplo, se você tiver usado o Assistente de cubo para criar medidas e preenchido todas as colunas por meio de uma tabela de fatos, notará que todas as medidas resultantes têm uma agregação de `Sum`, mesmo que a origem seja uma coluna de data e hora. Sempre examine os métodos de agregação pré-atribuídos para medidas criadas por meio do assistente para se certificar de que a função de agregação seja adequada.  
+ Medidas criadas por meio do Assistente de cubo são atribuídas a um tipo de agregação como parte da definição da medida. O tipo de agregação é sempre `Sum`, supondo que a coluna de origem contém dados numéricos. 
+  `Sum` é atribuída, independentemente do tipo de dados da coluna de origem. Por exemplo, se você tiver usado o Assistente de cubo para criar medidas e preenchido todas as colunas por meio de uma tabela de fatos, notará que todas as medidas resultantes têm uma agregação de `Sum`, mesmo que a origem seja uma coluna de data e hora. Sempre examine os métodos de agregação pré-atribuídos para medidas criadas por meio do assistente para se certificar de que a função de agregação seja adequada.  
   
- Você pode atribuir ou alterar o método de agregação na definição do cubo, por meio de [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] ou por meio do MDX. Consulte [Criar medidas e grupos de medidas em modelos multidimensionais](create-measures-and-measure-groups-in-multidimensional-models.md) ou [Agregação &#40;MDX&#41;](/sql/mdx/aggregate-mdx) para obter mais instruções.  
+ Você pode atribuir ou alterar o método de agregação na definição do cubo, por meio de [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)]ou por meio do MDX. Consulte [Criar medidas e grupos de medidas em modelos multidimensionais](create-measures-and-measure-groups-in-multidimensional-models.md) ou [Agregação &#40;MDX&#41;](/sql/mdx/aggregate-mdx) para obter mais instruções.  
   
-##  <a name="AggFunction"></a> Funções de agregação  
- [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] fornece funções para agregar medidas às dimensões contidas em grupos de medidas. A *capacidade aditiva* de uma função de agregação determina como a medida é agregada entre todas as dimensões no cubo. As funções de agregação enquadram-se em três níveis de capacidade aditiva:  
+##  <a name="AggFunction"></a>Funções de agregação  
+ 
+  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] fornece funções para agregar medidas às dimensões contidas em grupos de medidas. A *capacidade aditiva* de uma função de agregação determina como a medida é agregada entre todas as dimensões no cubo. As funções de agregação enquadram-se em três níveis de capacidade aditiva:  
   
  Aditiva  
  Uma medida aditiva, também chamada de medida totalmente aditiva, pode ser agregada a todas as dimensões incluídas no grupo de medidas que contém a medida, sem restrição.  
@@ -57,7 +59,7 @@ ms.locfileid: "66072722"
 |`FirstNonEmpty`|Semiaditiva|Recupera o valor do primeiro membro filho não vazio.|  
 |`LastNonEmpty`|Semiaditiva|Recupera o valor do último membro filho não vazio.|  
   
-##  <a name="bkmk_distinct"></a> Sobre medidas de contagem distintas  
+##  <a name="bkmk_distinct"></a>Sobre medidas de contagem distintas  
  Uma medida com o valor da propriedade **Função Aggregate** de **Contagem Distinta** é chamada de medida de contagem distinta. Uma medida de contagem distinta pode ser usada para contar ocorrências dos membros de nível mais baixo de uma dimensão da tabela de fatos. Como a contagem é distinta, se um membro ocorrer várias vezes, ele será contado apenas uma vez. Uma medida de contagem distinta é sempre colocada em um grupo de medidas dedicado. Colocar uma medida de contagem distinta em seu próprio grupo de medidas é uma prática recomendada que foi criada no designer como uma técnica de otimização do desempenho.  
   
  Normalmente, as medidas de contagem distinta são usadas para determinar para cada membro de uma dimensão quantos membros de nível inferior e distintos de outra dimensão compartilham linhas da tabela de fatos. Por exemplo, em um cubo Vendas, para cada cliente e grupo de clientes, quantos produtos distintos foram comprados? (Quer dizer, para cada membro da dimensão Clientes, quantos membros distintos, em nível inferior da dimensão Produtos, compartilham linhas na tabela de fatos?) Por exemplo, em um cubo Visitas ao Site da Internet, para cada visitante de site e grupo de visitantes de site, quantas páginas distintas no site da Internet foram visitadas? (Quer dizer, para cada membro da dimensão Visitantes de Site, quantos membros distintos, em nível inferior da dimensão Páginas, compartilham linhas na tabela de fatos?) Em cada um desses exemplos, os membros em nível inferior da segunda dimensão são contados por uma medida de contagem distinta.  
@@ -66,9 +68,9 @@ ms.locfileid: "66072722"
   
  Uma medida de contagem distinta que conta membros baseia-se m uma coluna de chave estrangeira da tabela de fatos. (Ou seja, a propriedade **Source Column** da medida identifica essa coluna.) Essa coluna une a coluna da tabela de dimensões que identifica os membros contados pela medida de contagem distinta.  
   
-## <a name="see-also"></a>Consulte também  
- [Medidas e Grupos de Medidas](measures-and-measure-groups.md)   
- [Referência da Função MDX &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)   
- [Definir comportamento semiaditivo](define-semiadditive-behavior.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Medidas e grupos de medidas](measures-and-measure-groups.md)   
+ [Referência de função MDX &#40;&#41;MDX](/sql/mdx/mdx-function-reference-mdx)   
+ [Definir um comportamento semiaditivo](define-semiadditive-behavior.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Consultar o painel (exibição de previsão do modelo de mineração) | Microsoft Docs
+title: Painel de consulta (exibição de previsão do modelo de mineração) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,19 +13,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6bfb0a0c4e8284173a102b034a8b19457340a286
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070522"
 ---
 # <a name="query-pane-mining-model-prediction-view"></a>Painel Consulta (Exibição da Previsão do Modelo de Mineração)
   O painel **Consulta** exibe as instruções DMX (extensões DMX) criadas pelo Construtor de Consultas de Previsão. Você pode modificar as instruções e, depois, clicar no botão **Alternar para a exibição de resultado da consulta** para retornar os resultados. Se você retornar à exibição de **Design** , quaisquer alterações efetuadas na instrução serão perdidas.  
   
- **Para obter mais informações:** [Extensões de mineração de dados &#40;DMX&#41; instruções de manipulação de dados](/sql/dmx/dmx-statements-data-manipulation), [criar uma consulta DMX no SQL Server Management Studio](data-mining/create-a-dmx-query-in-sql-server-management-studio.md)  
+ **Para obter mais informações:** [extensões de Data Mining &#40;instruções de manipulação de dados do DMX&#41;](/sql/dmx/dmx-statements-data-manipulation), [crie uma consulta DMX no SQL Server Management Studio](data-mining/create-a-dmx-query-in-sql-server-management-studio.md)  
   
 ## <a name="options"></a>Opções  
- **Alterne para a exibição de resultado de consulta**  
+ **Alternar para a exibição de resultado da consulta**  
  Clique para mudar entre os painéis **Design**, **Consulta**e **Resultado** . A consulta é executada ao alternar para o painel **Resultado** .  
   
  **Salvar o resultado da consulta**  
@@ -37,9 +37,9 @@ ms.locfileid: "66070522"
  **Atualizar resultados de consulta**  
  Processa novamente a consulta de previsão. Isso está habilitado apenas no painel **Resultado** .  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Interfaces de consulta de mineração de dados](data-mining/data-mining-query-tools.md)   
- [Extensões de mineração de dados &#40;DMX&#41; referência de instrução](/sql/dmx/data-mining-extensions-dmx-statements)   
- [Construtor de consultas de previsão &#40;mineração de dados&#41;](prediction-query-builder-data-mining.md)  
+ [Referência de instrução&#41; &#40;DMX de extensões de mineração de dados](/sql/dmx/data-mining-extensions-dmx-statements)   
+ [Construtor de Consultas de &#40;de mineração de dados de previsão&#41;](prediction-query-builder-data-mining.md)  
   
   

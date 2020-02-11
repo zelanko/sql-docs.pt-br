@@ -1,5 +1,5 @@
 ---
-title: Guia características (Visualizador do modelo de mineração) do atributo | Microsoft Docs
+title: Guia características do atributo (Visualizador do modelo de mineração) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,19 +13,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e35cf7db00effb5ce700a1ac883877f67650d3cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66063045"
 ---
 # <a name="attribute-characteristics-tab-mining-model-viewer"></a>Guia Características de Atributo (Visualizador do Modelo de Mineração)
   Use o painel **Características do Atributo** para explorar as relações entre resultados e atributos de entrada em um modelo de Naïve Bayes. Você pode escolher o valor do atributo de destino e, em seguida, ver uma lista de atributos de entrada que tiverem o efeito mais forte nos resultados.  
   
- **Para obter mais informações:** [Algoritmo Microsoft Naive Bayes](data-mining/microsoft-naive-bayes-algorithm.md), [procurar um modelo usando o visualizador Microsoft Naive Bayes](data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
+ **Para obter mais informações:** [Microsoft Naive Bayes Algorithm](data-mining/microsoft-naive-bayes-algorithm.md), [procurar um modelo usando o Microsoft Naive Bayes Viewer](data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
   
 ## <a name="options"></a>Opções  
- **Atualizar conteúdo do Visualizador**  
+ **Atualizar conteúdo do visualizador**  
  Recarregue o modelo de mineração no visualizador.  
   
  **Modelo de mineração**  
@@ -34,24 +34,24 @@ ms.locfileid: "66063045"
  **Visualizador**  
  Escolha um visualizador a ser utilizado para explorar o modelo de mineração selecionado. Para cada modelo, você tem a escolha de um visualizador personalizado ou o Visualizador de Conteúdo de Mineração da [!INCLUDE[msCoName](../includes/msconame-md.md)] . Os visualizadores de plug-in também serão exibidos, se houver.  
   
- **Atributo**  
+ **Attribute**  
  Escolha o atributo previsível que você deseja analisar.  
   
- **Value**  
+ **Valor**  
  Escolha um estado para os atributos previsíveis definidos em **Atributo**. Como os modelos de Naïve Bayes não dão suporte a variáveis contínuas, todos os atributos de destino têm resultados discretos ou diferenciados. O atributo Ausente sempre é adicionado automaticamente à lista.  
   
- **Características para \<estado previsível >**  
+ **Características do \<estado previsível>**  
  O gráfico contém as seguintes colunas, que descrevem como os estados dos atributos de entrada estão relacionados ao estado do atributo previsível.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |**Variável**|Lista os atributos de entrada no modelo de mineração.|  
 |**Valores**|Lista cada estado do atributo de entrada em **Variáveis**.|  
 |**Probabilidade**|A barra representa a probabilidade de que o atributo e o valor na linha estejam associados ao estado selecionado a partir do atributo previsível. Passe o mouse sobre a barra para exibir a probabilidade como um percentual.|  
   
-## <a name="see-also"></a>Consulte também  
- [Algoritmos de mineração de dados &#40;Analysis Services – Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Visualizadores do modelo de mineração &#40; Designer do modelo de mineração de dados &#41;](mining-model-viewers-data-mining-model-designer.md)   
- [Visualizadores do modelo de Mineração de dados](data-mining/data-mining-model-viewers.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Algoritmos de mineração de dados &#40;mineração de dados Analysis Services&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Visualizadores de modelo de mineração &#40;designer de modelo de mineração de dados&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Visualizadores do Modelo de Mineração de Dados](data-mining/data-mining-model-viewers.md)  
   
   

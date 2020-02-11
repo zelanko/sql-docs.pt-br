@@ -1,5 +1,5 @@
 ---
-title: Obter um Cursor FAST_FORWARD | Microsoft Docs
+title: Obter um cursor de FAST_FORWARD | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -13,21 +13,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f966d8aa907c6a92f4ac964fd7d937dab94afa95
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63225550"
 ---
-# <a name="obtain-a-fastforward-cursor"></a>Obter um cursor FAST_FORWARD
+# <a name="obtain-a-fast_forward-cursor"></a>Obter um cursor FAST_FORWARD
   Para obter um cursor somente encaminhamento, somente leitura, defina as propriedades do conjunto de linhas DBPROP_SERVERCURSOR, DBPROP_OTHERINSERT, DBPROP_OTHERUPDATEDELETE, DBPROP_OWNINSERT e DBPROP_OWNUPDATEDELETE como VARIANT_TRUE.  
   
- Um exemplo completo mostra como definir as propriedades de conjunto de linhas para obter um cursor FAST_FORWARD. Após configurar as propriedades, uma instrução SELECT é executada para recuperar e exibir a coluna **Name** da tabela **Purchasing.Vendor** no banco de dados **AdventureWorks** .  
+ Um exemplo completo mostra como definir as propriedades de conjunto de linhas para obter um cursor FAST_FORWARD. Depois que as propriedades são definidas, uma instrução SELECT é executada para recuperar e exibir a coluna **Name** da tabela **comprando. Vendor** no banco de dados **AdventureWorks** .  
   
 > [!IMPORTANT]  
->  Quando possível, use a Autenticação do Windows. Se a Autenticação do Windows não estiver disponível, solicite aos usuários que digitem suas credenciais em tempo de execução. Evite armazenar as credenciais em um arquivo. Se for necessário manter as credenciais, criptografe-as com a [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)(em inglês).  
+>  Quando possível, use a Autenticação do Windows. Se a Autenticação do Windows não estiver disponível, solicite aos usuários que digitem suas credenciais em tempo de execução. Evite armazenar as credenciais em um arquivo. Se você precisar manter as credenciais, deverá criptografá-las com a [API de criptografia do Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
-### <a name="to-obtain-fastforward-cursor"></a>Para obter o cursor FAST_FORWARD  
+### <a name="to-obtain-fast_forward-cursor"></a>Para obter o cursor FAST_FORWARD  
   
 1.  Estabeleça uma conexão com a fonte de dados.  
   

@@ -1,5 +1,5 @@
 ---
-title: Criar um cubo usando o Assistente de cubo | Microsoft Docs
+title: Criar um cubo usando o assistente para cubos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7ffd5880120184249d89c4d702b30c8d6e01e1f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076499"
 ---
 # <a name="create-a-cube-using-the-cube-wizard"></a>Criar um cubo usando o Assistente para Cubos
@@ -37,7 +37,7 @@ ms.locfileid: "66076499"
   
     2.  Na lista **Tabelas de grupos de medidas** , selecione as tabelas que serão usadas para criar grupos de medidas.  
   
-    3.  Clique em **Avançar**.  
+    3.  Clique em **Próximo**.  
   
 4.  Na página **Selecionar Medidas** , selecione as medidas que você quer incluir no cubo e clique em **Avançar**.  
   

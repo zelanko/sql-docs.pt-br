@@ -1,5 +1,5 @@
 ---
-title: Analisar no Excel (guia navegador, Designer de cubo) (Analysis Services - dados multidimensionais) | Microsoft Docs
+title: Analisar no Excel (guia navegador, designer de cubo) (Analysis Services-dados multidimensionais) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b2833fb2ecbbac269442ce149cd5673abedcf83c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062373"
 ---
 # <a name="analyze-in-excel-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>Analisar no Excel (guia Navegador, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
-  **Analisar no Excel** oferece ao desenvolvedor de cubo uma forma rápida de examinar a aparência de um projeto para o usuário final. O recurso **Analisar no Excel** abre o Microsoft Excel, cria uma conexão da fonte de dados para o banco de dados de workspace e adiciona automaticamente uma Tabela Dinâmica à planilha. Esse recurso substitui o Office Web Control que forneceu um Tabela Dinâmica inserida na guia Navegador nas versões anteriores.  
+  **Analisar no Excel** fornece ao desenvolvedor do cubo uma maneira de examinar rapidamente como um projeto seria exibido para o usuário final. O recurso **Analisar no Excel** abre o Microsoft Excel, cria uma conexão da fonte de dados para o banco de dados de workspace e adiciona automaticamente uma Tabela Dinâmica à planilha. Esse recurso substitui o Office Web Control que forneceu um Tabela Dinâmica inserida na guia Navegador nas versões anteriores.  
   
  **Para exibir dados de cubo:**  
   
@@ -44,16 +44,16 @@ ms.locfileid: "66062373"
   
  Para obter mais informações sobre o recurso **Analisar no Excel** , consulte estes recursos:  
   
- [Analisar no Excel &#40;SSAS de Tabela&#41;](tabular-models/analyze-in-excel-ssas-tabular.md)  
+ [Analisar no Excel &#40;SSAS de tabela&#41;](tabular-models/analyze-in-excel-ssas-tabular.md)  
   
- [Analisar um modelo de tabela no Excel &#40;SSAS de Tabela&#41;](tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md)  
+ [Analisar um modelo de tabela no Excel &#40;SSAS de tabela&#41;](tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md)  
   
  [Procurar dados e metadados no Cubo](multidimensional-models/browse-data-and-metadata-in-cube.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Navegador &#40;Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)   
- [Barra de ferramentas &#40;guia do navegador, Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [Metadados &#40;guia do navegador, Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](metadata-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [Consulta e filtro &#40;guia do navegador, Designer de cubo&#41; &#40;Analysis Services - dados multidimensionais&#41;](query-filter-browser-cube-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Navegador &#40;designer de cubo&#41; &#40;Analysis Services de dados multidimensionais&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)   
+ [Barra de ferramentas &#40;guia navegador, designer de cubo&#41; &#40;Analysis Services de dados multidimensionais&#41;](toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [Guia do navegador de metadados &#40;, designer de cubo&#41; &#40;Analysis Services de dados multidimensionais&#41;](metadata-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [Consulta e filtro &#40;guia navegador, designer de cubo&#41; &#40;Analysis Services de dados multidimensionais&#41;](query-filter-browser-cube-designer-analysis-services-multidimensional-data.md)  
   
   

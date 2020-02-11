@@ -1,5 +1,5 @@
 ---
-title: Criando no escopo da consulta calculado membros (MDX) | Microsoft Docs
+title: Criando membros calculados no escopo da consulta (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e6153b78b0dda1a72e2f7dfd790fa8bcecd0bb37
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074524"
 ---
 # <a name="creating-query-scoped-calculated-members-mdx"></a>Criando membros calculados no escopo da consulta (MDX)
@@ -90,8 +90,8 @@ WHERE [Product].[Category].[Bikes]
   
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Referência da Função MDX &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)   
+## <a name="see-also"></a>Consulte Também  
+ [Referência de função MDX &#40;&#41;MDX](/sql/mdx/mdx-function-reference-mdx)   
  [Instrução SELECT &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)   
  [Criando membros calculados no escopo da sessão &#40;MDX&#41;](mdx-calculated-members-session-scoped-calculated-members.md)  
   

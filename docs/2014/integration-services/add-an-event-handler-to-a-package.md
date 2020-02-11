@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 589d90b52647241b22929473efc9c6e54eb3b75f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062025"
 ---
 # <a name="add-an-event-handler-to-a-package"></a>Adicionar um manipulador de eventos a um pacote
@@ -38,7 +38,7 @@ ms.locfileid: "66062025"
   
 3.  Clique na guia **Manipuladores de Eventos** .  
   
-     ![Captura de tela da área de design com o manipulador de eventos](media/eventhandlers.gif "Captura de tela da área de design com o manipulador de eventos")  
+     ![Captura de tela da superfície de design com manipulador de Eventos](media/eventhandlers.gif "Captura de tela da superfície de design com manipulador de Eventos")  
   
      Criar o fluxo de controle e os fluxos de dados em um manipulador de eventos é semelhante a criar o fluxo de controle e os fluxos de dados em um pacote. Para obter mais informações, consulte [Fluxo de Controle](control-flow/control-flow.md) e [Fluxo de Dados](data-flow/data-flow.md).  
   
@@ -54,7 +54,7 @@ ms.locfileid: "66062025"
   
 9. No menu **Arquivo** , clique em **Salvar Itens Selecionados** para salvar o pacote.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [SQL Server Integration Services](../../2014/integration-services/sql-server-integration-services.md)   
  [Registro em Log do SSIS &#40;Integration Services&#41;](performance/integration-services-ssis-logging.md)  
   

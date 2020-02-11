@@ -1,5 +1,5 @@
 ---
-title: Copiar em massa um conjunto de resultados de SELECT (ODBC) | Microsoft Docs
+title: Cópia em massa de um conjunto de resultados SELECT (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,17 +15,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a90937eafc531612968ac4248b329ba7a0a47d83
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63225524"
 ---
 # <a name="bulk-copy-a-select-result-set-odbc"></a>Copiar em massa um conjunto de resultados de SELECT (ODBC)
   Este exemplo mostra como usar funções de cópia em massa para copiar em massa o conjunto de resultados de uma instrução SELECT. Esse exemplo foi desenvolvido para o ODBC versão 3.0 ou posterior.  
   
 > [!IMPORTANT]  
->  Quando possível, use a Autenticação do Windows. Se a Autenticação do Windows não estiver disponível, solicite aos usuários que digitem suas credenciais em tempo de execução. Evite armazenar as credenciais em um arquivo. Se for necessário manter as credenciais, criptografe-as com a [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)(em inglês).  
+>  Quando possível, use a Autenticação do Windows. Se a Autenticação do Windows não estiver disponível, solicite aos usuários que digitem suas credenciais em tempo de execução. Evite armazenar as credenciais em um arquivo. Se você precisar manter as credenciais, deverá criptografá-las com a [API de criptografia do Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-bulk-copy-out-the-result-set-of-a-select-statement"></a>Para copiar em massa o conjunto de resultados de uma instrução SELECT  
   
@@ -37,7 +37,7 @@ ms.locfileid: "63225524"
   
 4.  Chame [bcp_init](../../native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) para definir as seguintes informações:  
   
-    -   Especifique NULL para o *szTable* parâmetro.  
+    -   Especifique NULL para o parâmetro *szTable* .  
   
     -   O nome do arquivo de dados que recebe dados de conjunto de resultados.  
   
@@ -45,14 +45,14 @@ ms.locfileid: "63225524"
   
     -   A direção da cópia: DB_OUT.  
   
-5.  Chame [bcp_control](../../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md), defina eOption como BCPHINTS e coloque em iValue um ponteiro para uma matriz SQLTCHAR contendo a instrução SELECT.  
+5.  Chame [bcp_control](../../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md), defina EOPTION como BCPHINTS e coloque em iValue um ponteiro para uma matriz SQLTCHAR que contenha a instrução SELECT.  
   
 6.  Chame [bcp_exec](../../native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) para executar a operação de cópia em massa.  
   
- Ao usar essas etapas, o arquivo será criado no formato nativo. Você pode converter os valores de dados para outros tipos de dados usando [bcp_colfmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md). Para obter mais informações, consulte [criar um arquivo de formato de cópia em massa &#40;ODBC&#41;](create-a-bulk-copy-format-file-odbc.md).  
+ Ao usar essas etapas, o arquivo será criado no formato nativo. Você pode converter os valores de dados em outros tipos de dados usando [bcp_colfmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md). Para obter mais informações, consulte [criar um arquivo de formato de cópia em massa &#40;&#41;ODBC ](create-a-bulk-copy-format-file-odbc.md).  
   
 ## <a name="example"></a>Exemplo  
- Será necessária uma fonte de dados ODBC chamada AdventureWorks, cujo banco de dados padrão é o banco de dados de exemplo AdventureWorks. (Você pode baixar o banco de dados de exemplo AdventureWorks na página inicial de [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) (em inglês)). Essa fonte de dados deve ser baseada no driver ODBC que é fornecido pelo sistema operacional (o nome do driver é "SQL Server"). Se você compilar e executar esse exemplo como um aplicativo de 32 bits em um sistema operacional de 64 bits, deverá criar a fonte de dados ODBC com o Administrador ODBC em %windir%\SysWOW64\odbcad32.exe.  
+ Será necessária uma fonte de dados ODBC chamada AdventureWorks, cujo banco de dados padrão é o banco de dados de exemplo AdventureWorks. (Você pode baixar o banco de dados de exemplo AdventureWorks do [Microsoft SQL Server exemplos e projetos da comunidade](https://go.microsoft.com/fwlink/?LinkID=85384) Home Page.) Essa fonte de dados deve ser baseada no driver ODBC fornecido pelo sistema operacional (o nome do driver é "SQL Server"). Se você compilar e executar esse exemplo como um aplicativo de 32 bits em um sistema operacional de 64 bits, deverá criar a fonte de dados ODBC com o Administrador ODBC em %windir%\SysWOW64\odbcad32.exe.  
   
  Esse aplicativo se conecta à instância padrão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] do computador. Para conectar-se a uma instância nomeada, altere a definição da fonte de dados ODBC para especificar a instância usando o seguinte formato: servidor\instância_nomeada. Por padrão, o [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] é instalado em uma instância nomeada.  
   
@@ -162,7 +162,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Cópia em massa com os SQL Server ODBC Driver tópicos de instruções &#40;ODBC&#41;](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Tópicos de instruções sobre cópia em massa com o SQL Server ODBC Driver &#40;ODBC&#41;](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)  
   
   

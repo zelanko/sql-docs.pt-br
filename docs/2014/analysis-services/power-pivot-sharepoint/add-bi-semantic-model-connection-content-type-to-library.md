@@ -1,5 +1,5 @@
 ---
-title: Adicionar um tipo de conteúdo de Conexão de modelo semântico BI a uma biblioteca (PowerPivot para SharePoint) | Microsoft Docs
+title: Adicionar um tipo de conteúdo de conexão de modelo semântico de BI a uma biblioteca (PowerPivot para SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4712aba656fa111400e41566964cbd9719f778db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66071965"
 ---
 # <a name="add-a-bi-semantic-model-connection-content-type-to-a-library-powerpivot-for-sharepoint"></a>Adicionar um tipo de conteúdo de conexão de modelo semântico de BI a uma biblioteca (PowerPivot para SharePoint)
@@ -23,10 +23,10 @@ ms.locfileid: "66071965"
 > [!NOTE]  
 >  Se você já usa Bibliotecas de Conexão de Dados SharePoint, o tipo de conteúdo da Conexão de Modelo Semântico de BI é acrescentado automaticamente a esse modelo de biblioteca. Você poderá ignorar as etapas desta seção se usar uma biblioteca de conexão de dados que já o permite criar novos documentos de conexão de modelo semântico de BI.  
   
-##  <a name="bkmk_addtype"></a> Adicionar o tipo de conteúdo a uma biblioteca de documentos  
+##  <a name="bkmk_addtype"></a>Adicionar o tipo de conteúdo a uma biblioteca de documentos  
  Você deve ter pelo menos a permissão Gerenciar Listas para adicionar e configurar um tipo de conteúdo. Esta permissão é compilada no nível de permissão Design e superior.  
   
- O site que contém a biblioteca de documentos deve ter ativação de recurso para PowerPivot para SharePoint. Para obter mais informações, consulte [ativar a integração do recurso do PowerPivot para coleções de sites na Administração Central](activate-power-pivot-integration-for-site-collections-in-ca.md).  
+ O site que contém a biblioteca de documentos deve ter ativação de recurso para PowerPivot para SharePoint. Para obter mais informações, consulte [ativar a integração de recursos do PowerPivot para coleções de sites na administração central](activate-power-pivot-integration-for-site-collections-in-ca.md).  
   
 1.  Abra a biblioteca de documentos para a qual você deseja habilitar o tipo de conteúdo da Conexão de Modelo Semântico de BI.  
   
@@ -52,16 +52,16 @@ ms.locfileid: "66071965"
   
 12. Para verificar se você adicionou o tipo de conteúdo, volte para a biblioteca e clique em **Novo Documento** na área de Documentos da faixa de opções de biblioteca. Você deverá ver o **Arquivo de Conexão do Modelo Semântico de BI** na lista Novos Documentos.  
   
-     ![Submenu novo documento em uma biblioteca do SharePoint](../media/ssas-bismconnection-new.gif "submenu novo documento na biblioteca do SharePoint")  
+     ![Submenu Novo Documento em uma biblioteca do SharePoint](../media/ssas-bismconnection-new.gif "Submenu Novo Documento em uma biblioteca do SharePoint")  
   
  Depois de habilitar o tipo de conteúdo de conexão de modelo semântico de BI para uma biblioteca, você poderá criar uma conexão que fornece redirecionamento para dados de modelo semântico comerciais que podem ser usados pelo Excel ou relatórios do [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] . Escolha os links a seguir para saber mais sobre esta próxima etapa:  
   
  [Criar uma conexão de modelo semântico de BI para uma pastas de trabalho PowerPivot](create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)  
   
- [Criar uma conexão de modelo semântico de BI com um banco de dados de modelo de tabela](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
+ [Create a BI Semantic Model Connection to a Tabular Model Database](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Conexão de modelo semântico de BI do PowerPivot &#40;. bism&#41;](power-pivot-bi-semantic-model-connection-bism.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Conexão de modelo semântico de BI do PowerPivot &#40;. BISM&#41;](power-pivot-bi-semantic-model-connection-bism.md)   
  [Usar uma conexão de modelo semântico de BI no Excel ou Reporting Services](use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)  
   
   

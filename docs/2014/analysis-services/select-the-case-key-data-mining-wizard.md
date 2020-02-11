@@ -1,5 +1,5 @@
 ---
-title: Selecione a chave do caso (Assistente de mineração de dados) | Microsoft Docs
+title: Selecionar a chave do caso (Assistente de mineração de dados) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9d005ef9666d9bac5355b7419cf2a9cbb9040e6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069259"
 ---
 # <a name="select-the-case-key-data-mining-wizard"></a>Selecionar a chave do caso (Assistente de Mineração de Dados)
@@ -25,15 +25,15 @@ ms.locfileid: "66069259"
 > [!NOTE]  
 >  Essa página será exibida apenas se você tiver selecionado **De cubo existente** na página **Selecionar o Método de Definição** do assistente.  
   
- **Para obter mais informações:** [Assistente de mineração de dados &#40;Analysis Services - mineração de dados&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [criar uma estrutura de mineração relacional](data-mining/create-a-relational-mining-structure.md)  
+ **Para obter mais informações:** [Assistente de mineração de dados &#40;Analysis Services&#41;de mineração de dados ](data-mining/data-mining-wizard-analysis-services-data-mining.md), [criar uma estrutura de mineração relacional](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Opções  
  **Atributos**  
  Clique no atributo que será a chave da estrutura de mineração.  
   
-## <a name="see-also"></a>Consulte também  
- [Ajuda F1 do Assistente de mineração de dados &#40;Analysis Services - mineração de dados&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
- [Selecionar a dimensão do cubo de origem &#40;Assistente de mineração de dados&#41;](select-the-source-cube-dimension-data-mining-wizard.md)   
- [Selecione colunas de nível de caso &#40;Assistente de mineração de dados&#41;](select-case-level-columns-data-mining-wizard.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Ajuda F1 do assistente de mineração de dados &#40;Analysis Services Data Mining&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [Selecione a dimensão do cubo de origem &#40;assistente de mineração de dados&#41;](select-the-source-cube-dimension-data-mining-wizard.md)   
+ [Selecione colunas de nível de caso &#40;assistente de mineração de dados&#41;](select-case-level-columns-data-mining-wizard.md)  
   
   

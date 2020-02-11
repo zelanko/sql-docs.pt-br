@@ -1,5 +1,5 @@
 ---
-title: Editor de transformação mapas de caracteres | Microsoft Docs
+title: Editor de transformação mapa de caracteres | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 76f2c5e517ca81ae667df3efa6ccd2f49384f090
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060979"
 ---
 # <a name="character-map-transformation-editor"></a>Editor de Transformação Mapas de Caracteres
@@ -36,7 +36,7 @@ ms.locfileid: "66060979"
  **Destino**  
  Especifique entre salvar os resultados das operações de cadeia de caracteres no local, usando a coluna existente, ou salvar os dados modificados como uma nova coluna.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |Nova coluna|Salve os dados em uma nova coluna. Atribua o nome de coluna em **Alias de Saída**.|  
 |Alteração no local|Salve os dados modificados na coluna existente.|  
@@ -44,9 +44,9 @@ ms.locfileid: "66060979"
  **Operação**  
  Selecione na lista as funções de cadeia de caracteres a aplicar aos dados da coluna.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
-|Minúscula|Converter para letras minúsculas.|  
+|Letras minúsculas|Converter para letras minúsculas.|  
 |Letras Maiúsculas|Converter para letras maiúsculas.|  
 |Inversão de bytes|Converter invertendo a ordem de bytes.|  
 |Hiragana|Converter caracteres japoneses de katakana em hiragana.|  
@@ -63,7 +63,7 @@ ms.locfileid: "66060979"
  **Configurar Saída de Erro**  
  Use a caixa de diálogo [Configurar Saída de Erro](../../2014/integration-services/configure-error-output.md) para especificar opções de tratamento de erro para esta transformação.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

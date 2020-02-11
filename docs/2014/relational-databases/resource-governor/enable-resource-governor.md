@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5ef8d77de1df31387d33e6577fe84bd5ef9fa680
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63216021"
 ---
 # <a name="enable-resource-governor"></a>Habilitar Administrador de Recursos
@@ -70,7 +70,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Administrador de Recursos](resource-governor.md)   
  [Desabilitar Administrador de Recursos](disable-resource-governor.md)   
  [Pool de recursos do Administrador de Recursos](resource-governor-resource-pool.md)   

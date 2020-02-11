@@ -1,5 +1,5 @@
 ---
-title: Tamanho do conjunto de linhas de cursor | Microsoft Docs
+title: Tamanho do conjunto de linhas do cursor | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bff145e7e3c6e429ca0877c81c5188b02e428809
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63207170"
 ---
 # <a name="cursor-rowset-size"></a>Tamanho do conjunto de linhas de cursor
-  Os cursores ODBC não se limitam a buscar uma linha de cada vez. Eles podem recuperar várias linhas em cada chamada para **SQLFetch** ou [SQLFetchScroll](../../native-client-odbc-api/sqlfetchscroll.md). Quando você está trabalhando com um banco de dados cliente/servidor, como o Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], é mais eficaz buscar várias linhas de uma vez. O número de linhas retornadas em uma busca é chamado o tamanho do conjunto de linhas e é especificado com SQL_ATTR_ROW_ARRAY_SIZE de [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md).  
+  Os cursores ODBC não se limitam a buscar uma linha de cada vez. Eles podem recuperar várias linhas em cada chamada para **SQLFetch** ou [SQLFetchScroll](../../native-client-odbc-api/sqlfetchscroll.md). Quando você está trabalhando com um banco de dados cliente/servidor, como o Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], é mais eficaz buscar várias linhas de uma vez. O número de linhas retornadas em uma busca é chamado de tamanho do conjunto de linhas e é especificado usando o SQL_ATTR_ROW_ARRAY_SIZE de [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md).  
   
 ```  
 SQLUINTEGER uwRowsize;  
@@ -33,21 +33,21 @@ SQLSetStmtAttr(m_hstmt, SQL_ATTR_ROW_ARRAY_SIZE, (SQLPOINTER)uwRowsetSize, SQL_I
   
  Há duas opções para associar colunas do conjunto de resultados para cursores em bloco:  
   
--   A associação por coluna  
+-   Associação de coluna  
   
      Cada coluna é associada a uma matriz de variáveis. Cada matriz possui o mesmo número de elementos que o tamanho do conjunto de linhas.  
   
--   Associação por linha  
+-   Associação de linha  
   
      Uma matriz baseada em estruturas que armazenam os dados e indicadores de todas as colunas em uma linha. A matriz tem o mesmo número de estruturas que o tamanho do conjunto de linhas.  
   
- Quando a ligação com reconhecimento de coluna ou linha é usada, cada chamada para **SQLFetch** ou **SQLFetchScroll** preenche as matrizes associadas com os dados do conjunto de linhas recuperado.  
+ Quando uma associação de coluna ou de linha é usada, cada chamada para **SQLFetch** ou **SQLFetchScroll** preenche as matrizes associadas com os dados do conjunto de linhas recuperado.  
   
- [SQLGetData](../../native-client-odbc-api/sqlgetdata.md) também pode ser usado para recuperar dados da coluna de um cursor em bloco. Porque **SQLGetData** funciona ao mesmo tempo, uma linha **SQLSetPos** deve ser chamado para definir uma linha específica no conjunto de linhas como a linha atual antes de chamar **SQLGetData**.  
+ [SQLGetData](../../native-client-odbc-api/sqlgetdata.md) também pode ser usado para recuperar dados de coluna de um cursor de bloco. Como **SQLGetData** trabalha uma linha de cada vez, **SQLSetPos** deve ser chamado para definir uma linha específica no conjunto de linhas como a linha atual antes de chamar **SQLGetData**.  
   
- O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC Native Client oferece uma otimização usando conjuntos de linhas para recuperar um conjunto rapidamente de resultados inteiro. Para usar essa otimização, defina os atributos de cursor com seus padrões (tamanho do conjunto de linhas de somente avanço, somente leitura, = 1) no momento **SQLExecDirect** ou **SQLExecute** é chamado. O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC Native Client configura um conjunto de resultados padrão. Esse procedimento é mais eficaz do que o uso de cursores de servidor ao transferir resultados para o cliente sem fazer rolagem. Depois que a instrução tiver sido executada, aumente o tamanho do conjunto de linhas e use a associação de coluna ou de linha. Isso permite [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] use um resultado padrão definido para enviar linhas de resultados ao cliente, enquanto o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC Native Client continua a receber linhas dos buffers de rede no cliente.  
+ O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC do Native Client oferece uma otimização usando conjuntos de linhas para recuperar um conjunto de resultados inteiro rapidamente. Para usar essa otimização, defina os atributos de cursor para seus padrões (somente encaminhamento, somente leitura, tamanho do conjunto de linhas = 1) no momento em que **SQLExecDirect** ou **SQLExecute** é chamado. O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC do Native Client configura um conjunto de resultados padrão. Esse procedimento é mais eficaz do que o uso de cursores de servidor ao transferir resultados para o cliente sem fazer rolagem. Depois que a instrução tiver sido executada, aumente o tamanho do conjunto de linhas e use a associação de coluna ou de linha. Isso permite [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usar um conjunto de resultados padrão para enviar linhas de resultado com eficiência para o cliente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , enquanto o driver ODBC do Native Client efetua pull continuamente de linhas dos buffers de rede no cliente.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Propriedades do cursor](cursor-properties.md)  
   
   

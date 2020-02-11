@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3835f83efff9e720f7f8631d527b9547e3b4239a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63245606"
 ---
 # <a name="view-sql-server-agent-error-log-sql-server-management-studio"></a>View SQL Server Agent Error Log (SQL Server Management Studio)
@@ -36,7 +36,7 @@ ms.locfileid: "63245606"
   
      [Segurança](#Security)  
   
--   [Para exibir o log de erros do SQL Server Agent usando o SQL Server Management Studio](#SSMSProcedure)  
+-   [Para exibir o log de erros do SQL Server Agent, usando SQL Server Management Studio](#SSMSProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
@@ -56,7 +56,7 @@ ms.locfileid: "63245606"
   
 -   Ajustar cotas de memória para um processo (SeIncreaseQuotaPrivilege)  
   
- Para obter mais informações sobre as permissões do Windows necessárias para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conta de serviço do Agent, consulte [selecionar uma conta para o serviço do SQL Server Agent](select-an-account-for-the-sql-server-agent-service.md) e [configurar contas de serviço do Windows e Permissões](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+ Para obter mais informações sobre as permissões do Windows necessárias [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para a conta de serviço do Agent, consulte [selecionar uma conta para o serviço de SQL Server Agent](select-an-account-for-the-sql-server-agent-service.md) e [Configurar contas de serviço e permissões do Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
 ##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
@@ -70,34 +70,34 @@ ms.locfileid: "63245606"
   
 4.  Clique com o botão direito do mouse no log de erros que você deseja exibir e selecione **Exibir Log do Agente**.  
   
-     As opções a seguir estão disponíveis na caixa de diálogo **Visualizador do Arquivo de Log -** _nome_do_servidor_:  
+     As opções a seguir estão disponíveis na caixa de diálogo **Visualizador do Arquivo de Log -**_nome_do_servidor_:  
   
-     **Carregar Log**  
+     **Carregar log**  
      Abra uma caixa de diálogo onde seja possível especificar um arquivo de log a ser carregado.  
   
-     **Exportar**  
+     **Exportação**  
      Abra uma caixa de diálogo que permita exportar as informações mostradas na grade **Resumo do arquivo de log** para um arquivo de texto.  
   
      **Atualizar**  
      Atualize a exibição dos logs selecionados. O botão **Atualizar** relê os logs selecionados do servidor de destino ao aplicar qualquer configuração de filtro.  
   
-     **Filtro**  
+     **Filter**  
      Abra uma caixa de diálogo que permita especificar configurações usadas para filtrar o arquivo de log, como **Conexão**, **Data**ou outros critérios de filtragem **Gerais** .  
   
-     **Pesquisa**  
+     **Pesquisar**  
      Pesquise o texto específico no arquivo de log. Não há suporte à pesquisa com caracteres curinga.  
   
      **Parar**  
      Interrompe o carregamento das entradas do arquivo de log. Por exemplo, você poderá usar essa opção se um arquivo de log remoto ou offline demorar muito tempo para ser carregado e você desejar exibir apenas as entradas mais recentes.  
   
      **Resumo do arquivo de log**  
-     Esse painel de informações exibe um resumo da filtragem do arquivo de log. Se o arquivo não for filtrado, você verá o seguinte texto, **Nenhum filtro aplicado**. Se um filtro for aplicado ao log, você verá o seguinte texto **Filtrar entradas do log, em que:**  \<filter criteria>.  
+     Esse painel de informações exibe um resumo da filtragem do arquivo de log. Se o arquivo não for filtrado, você verá o seguinte texto, **Nenhum filtro aplicado**. Se um filtro for aplicado ao log, você verá o seguinte texto **Filtrar entradas do log, em que: ** \<filter criteria>.  
   
      **Detalhes da linha selecionada**  
      Selecione uma linha para exibir detalhes adicionais sobre a linha de evento selecionada na parte inferior da página. As colunas podem ser reordenadas arrastando-as para locais novos na grade. As colunas podem ser redimensionadas arrastando para a esquerda ou direta as barras separadoras de coluna no cabeçalho de grade. Clique duas vezes nas barras separadoras de coluna no cabeçalho da grade para dimensionar automaticamente a coluna para a largura do conteúdo.  
   
      **Instância**  
-     O nome da instância do na qual ocorreu o evento. Esse nome é exibido como *nome do computador*\\*nome da instância*.  
+     O nome da instância do na qual ocorreu o evento. Isso é exibido como nome da*instância*do *nome*\\do computador.  
   
      **Data**  
      Exibe a data do evento.  
@@ -108,10 +108,10 @@ ms.locfileid: "63245606"
      **Mensagem**  
      Exibe todas as mensagens associadas ao evento.  
   
-     **Tipo de Log**  
+     **Tipo de log**  
      Exibe o tipo de log ao qual o evento pertence. Todos os logs selecionados são exibidos na janela de resumo de arquivo de log.  
   
-     **Origem do Log**  
+     **Origem do log**  
      Exibe uma descrição do log de origem no qual o evento é capturado.  
   
 5.  Quando terminar, clique em **Fechar**.  

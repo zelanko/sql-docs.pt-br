@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 520d6f11e5a472d5337a3747cc73c1d3656171c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075174"
 ---
 # <a name="dimensions-in-multidimensional-models"></a>Dimensões em modelos multidimensionais
@@ -35,7 +35,7 @@ ms.locfileid: "66075174"
  Ao criar um cubo, você também pode adicionar a ele todas as dimensões já existentes no banco de dados. Elas podem ter sido previamente definidas para outro cubo ou pelo Assistente para Dimensões. Depois que a dimensão do banco de dados estiver definida, será possível modificá-la e configurá-la no Designer de Dimensão. Até um certo limite, você também pode personalizar a dimensão do cubo no Designer de Cubo.  
   
 > [!NOTE]  
->  Também é possível projetar e configurar dimensões, atributos e hierarquias de forma programática usando o XMLA ou o Analysis Management Objects (AMO). Para obter mais informações, consulte [Analysis Services Scripting Language &#40;ASSL&#41; referência](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla) e [desenvolvendo com objetos de gerenciamento de análise &#40;AMO&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo).  
+>  Também é possível projetar e configurar dimensões, atributos e hierarquias de forma programática usando o XMLA ou o Analysis Management Objects (AMO). Para obter mais informações, consulte [Analysis Services linguagem de script &#40;ASSL&#41; referência](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla) e [desenvolvimento com Objetos de Gerenciamento de Análise &#40;amo&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo).  
   
 ## <a name="in-this-section"></a>Nesta seção  
  A tabela a seguir descreve os tópicos dessa seção.  
@@ -55,7 +55,7 @@ ms.locfileid: "66075174"
  [Usar o Assistente de Business Intelligence para aprimorar dimensões](../use-the-business-intelligence-wizard-to-enhance-dimensions.md)  
  Descreve como aprimorar a dimensão do banco de dados usando o Assistente de Business Intelligence.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Cubos em modelos multidimensionais](cubes-in-multidimensional-models.md)  
   
   

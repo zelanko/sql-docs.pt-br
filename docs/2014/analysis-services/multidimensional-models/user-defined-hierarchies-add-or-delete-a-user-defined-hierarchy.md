@@ -17,16 +17,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 14d63345020fbe76b727d9276585b17bb3406846
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072584"
 ---
 # <a name="add-or-delete-a-user-defined-hierarchy"></a>Adicionar ou excluir uma hierarquia definida pelo usuário
   Você adiciona ou remove uma hierarquia definida pelo usuário de uma dimensão na guia **Estrutura da Dimensão** no Designer de Dimensão em [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
- Quando você adicionar uma hierarquia definida pelo usuário, ela não ficará disponível aos usuários até que seja instanciada em uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e a dimensão seja processada. Para obter mais informações, consulte [bancos de dados modelo multidimensionais &#40;SSAS&#41; ](multidimensional-model-databases-ssas.md) e [processamento de objeto de modelo Multidimensional](processing-a-multidimensional-model-analysis-services.md).  
+ Quando você adicionar uma hierarquia definida pelo usuário, ela não ficará disponível aos usuários até que seja instanciada em uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e a dimensão seja processada. Para obter mais informações, consulte [bancos de dados de modelo multidimensional &#40;SSAS&#41;](multidimensional-model-databases-ssas.md) e [processamento de objeto de modelo multidimensional](processing-a-multidimensional-model-analysis-services.md).  
   
 ### <a name="to-add-a-user-defined-hierarchy-to-a-dimension"></a>Para adicionar uma hierarquia definida pelo usuário em uma dimensão  
   
@@ -44,7 +44,7 @@ ms.locfileid: "66072584"
   
 5.  Se desejar, modifique as propriedades da hierarquia definida pelo usuário ou seus níveis.  
   
-     Por exemplo, convém especificar um nome para a hierarquia definida pelo usuário, renomear um ou mais de seus níveis e definir um nome personalizado para o Todo o nível. Para obter mais informações, consulte [propriedades de hierarquia de usuário](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md), e [propriedades de nível de &#91;Paved sobre&#93;](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies-level-properties.md).  
+     Por exemplo, convém especificar um nome para a hierarquia definida pelo usuário, renomear um ou mais de seus níveis e definir um nome personalizado para o Todo o nível. Para obter mais informações, consulte [Propriedades de hierarquia de usuário](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)e propriedades de [nível &#91;paved sobre&#93;](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies-level-properties.md).  
   
     > [!NOTE]  
     >  Por padrão, uma hierarquia definida pelo usuário é somente um caminho que permite que os usuários façam busca detalhada para obter informações. Porém, se houver relações entre níveis, você pode aumentar o desempenho da consulta configurando relações de atributo entre níveis. Para obter mais informações, consulte [Relações de atributo](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md) e [Definir relações de atributo](attribute-relationships-define.md).  
@@ -61,8 +61,8 @@ ms.locfileid: "66072584"
   
 -   Arraste a hierarquia definida pelo usuário para fora da superfície de design.  
   
-## <a name="see-also"></a>Consulte também  
- [Hierarquias do usuário](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Hierarquias de usuário](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md)   
  [Criar hierarquias definidas pelo usuário](user-defined-hierarchies-create.md)  
   
   

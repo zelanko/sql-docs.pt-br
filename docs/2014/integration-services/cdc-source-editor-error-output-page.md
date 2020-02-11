@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d3bf33d52b380e1ac05864c6e7402567b42df54a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061037"
 ---
 # <a name="cdc-source-editor-error-output-page"></a>Editor de Origem CDC (página Saída de Erro)
@@ -25,7 +25,7 @@ ms.locfileid: "66061037"
  Para obter mais informações sobre a origem CDC, consulte [CDC Source](data-flow/cdc-source.md).  
   
 ## <a name="task-list"></a>Lista de Tarefas  
- **Para abrir a página Saída de Erro do Editor de Origem CDC**  
+ **Para abrir a página saída de erro do editor de origem CDC**  
   
 1.  No [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], abra o pacote [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] que tem a origem CDC.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "66061037"
  **Redirecionar fluxo**  
  O erro ou a linha de dados de truncamento é direcionada para a saída do erro da origem CDC. Neste caso, o tratamento de erro da origem CDC é usado. Para obter mais informações, consulte [CDC Source](data-flow/cdc-source.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Editor de Origem CDC &#40;Página Gerenciador de Conexões&#41;](../../2014/integration-services/cdc-source-editor-connection-manager-page.md)   
  [Editor de Origem CDC &#40;página Colunas&#41;](../../2014/integration-services/cdc-source-editor-columns-page.md)  
   

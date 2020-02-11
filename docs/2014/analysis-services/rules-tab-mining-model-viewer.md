@@ -1,5 +1,5 @@
 ---
-title: Regras de guia (Visualizador do modelo de mineração) | Microsoft Docs
+title: Guia regras (Visualizador do modelo de mineração) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fca78578046122a1598df096e45965367b7880ad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070097"
 ---
 # <a name="rules-tab-mining-model-viewer"></a>Guia Regras (Visualizador do Modelo de Mineração)
@@ -27,10 +27,10 @@ ms.locfileid: "66070097"
 > [!WARNING]  
 >  Por padrão, somente as regras que estão acima do limite de probabilidade definidas em **Probabilidade mínima** são exibidas no visualizador. Você não pode diminuir este valor usando o visualizador, porque o limite de probabilidade para saída de regra é determinado quando o modelo é criado. Para obter mais informações, consulte [Referência técnica do algoritmo de associação da Microsoft](data-mining/microsoft-association-algorithm-technical-reference.md).  
   
- **Para obter mais informações:** [Algoritmo associação da Microsoft](data-mining/microsoft-association-algorithm.md), [procurar um modelo usando o Visualizador de regras de associação da Microsoft](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
+ **Para obter mais informações:** [algoritmo de associação da Microsoft](data-mining/microsoft-association-algorithm.md), [procurar um modelo usando o Visualizador de regras de associação da Microsoft](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
   
 ## <a name="options"></a>Opções  
- **Atualizar conteúdo do Visualizador**  
+ **Atualizar conteúdo do visualizador**  
  Recarregue o modelo de mineração no visualizador.  
   
  **Modelo de mineração**  
@@ -45,7 +45,7 @@ ms.locfileid: "66070097"
  **Importância mínima**  
  Altere este valor para definir a importância mínima exigida para uma regra a ser exibida no visualizador. Aumentar o valor para a importância reduzirá o número de regras que são exibidas.  
   
- **Regra de filtro**  
+ **Regra do Filtro**  
  Digite um valor de cadeia de caracteres para filtrar o número de regras que aparecem no visualizador.  
   
  Você também pode digitar expressões regulares do .NET como critérios de filtro. Por exemplo, a expressão a seguir retorna todas as regras que contêm 'Road Bottle Cage' no lado esquerdo da regra:  
@@ -76,19 +76,19 @@ ms.locfileid: "66070097"
   
  Clique no cabeçalho da coluna para classificar por probabilidade.  
   
- **Importância**  
+ **Porta**  
  Esta coluna no gráfico exibe a importância para cada regra.  
   
  Clique no cabeçalho da coluna para classificar por importância.  
   
- **Regra**  
+ **Régua**  
  Esta coluna no gráfico exibe a descrição de texto para cada regra, de acordo com o formato especificado usando as opções **Mostrar** e **Mostrar nome longo**.  
   
  Clique no cabeçalho da coluna para classificar pelo texto da regra.  
   
-## <a name="see-also"></a>Consulte também  
- [Algoritmos de mineração de dados &#40;Analysis Services – Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Visualizadores do modelo de mineração &#40; Designer do modelo de mineração de dados &#41;](mining-model-viewers-data-mining-model-designer.md)   
- [Visualizadores do modelo de Mineração de dados](data-mining/data-mining-model-viewers.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Algoritmos de mineração de dados &#40;mineração de dados Analysis Services&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Visualizadores de modelo de mineração &#40;designer de modelo de mineração de dados&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Visualizadores do Modelo de Mineração de Dados](data-mining/data-mining-model-viewers.md)  
   
   

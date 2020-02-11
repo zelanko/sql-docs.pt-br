@@ -1,5 +1,5 @@
 ---
-title: Propriedades de memória | Microsoft Docs
+title: Propriedades da memória | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,10 +24,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a88e2c1508ec849437d90b3de7c66705299dafc1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068889"
 ---
 # <a name="memory-properties"></a>Propriedades de memória
@@ -35,7 +35,7 @@ ms.locfileid: "66068889"
   
  Os valores entre 1 e 100 representam percentuais da **Memória Física Total** ou do **Espaço de Endereço Virtual**, o que for menor. Os valores acima de 100 representam limites de memória em bytes.  
   
- **Aplica-se a:** Modo de servidor multidimensional e Tabular, a menos que indicado o contrário.  
+ **Aplica-se a:** Modo de servidor multidimensional e tabular, a menos que indicado o contrário.  
   
 ## <a name="properties"></a>Propriedades  
  `LowMemoryLimit`  
@@ -110,8 +110,8 @@ ms.locfileid: "66068889"
  `WaitCountIfHighMemory`  
  Uma propriedade avançada que não deve ser alterada, exceto sob orientação do suporte da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## <a name="see-also"></a>Consulte também  
- [Configurar propriedades de servidor no Analysis Services](server-properties-in-analysis-services.md)   
- [Determina o Modo de Servidor de uma instância do Analysis Services.](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Configurar propriedades do servidor no Analysis Services](server-properties-in-analysis-services.md)   
+ [Determinar o modo de servidor de uma instância de Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

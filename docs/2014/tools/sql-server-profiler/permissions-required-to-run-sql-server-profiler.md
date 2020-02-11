@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bed2868b74087cd0e4c119ada7e29f0c5db73ce5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63240525"
 ---
 # <a name="permissions-required-to-run-sql-server-profiler"></a>Permissões necessárias para executar o SQL Server Profiler
@@ -32,7 +32,8 @@ ms.locfileid: "63240525"
 ## <a name="permissions-used-to-replay-traces"></a>Permissões usadas para repetir rastreamentos  
  Repetir rastreamentos também requer que o usuário responsável disponha da permissão ALTER TRACE.  
   
- No entanto, durante a repetição, o [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] usará o comando EXECUTE AS se um evento Audit Login for encontrado no rastreamento que está sendo repetido. [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] usa o comando EXECUTE AS para representar o usuário associado ao evento de logon.  
+ No entanto, durante a repetição, o [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] usará o comando EXECUTE AS se um evento Audit Login for encontrado no rastreamento que está sendo repetido. 
+  [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] usa o comando EXECUTE AS para representar o usuário associado ao evento de logon.  
   
  Se o [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] encontrar um evento de logon em um rastreamento que está sendo repetido, serão realizadas as seguintes verificações de permissão:  
   
@@ -40,9 +41,11 @@ ms.locfileid: "63240525"
   
 2.  Um evento de logon para o Usuário2 é encontrado no rastreamento que está sendo repetido.  
   
-3.  [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] usa o comando EXECUTE AS para representar o User2.  
+3.  
+  [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] usa o comando EXECUTE AS para representar o User2.  
   
-4.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta autenticar User2 e, dependendo dos resultados, uma destas situações ocorrerá:  
+4.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta autenticar User2 e, dependendo dos resultados, uma destas situações ocorrerá:  
   
     1.  Se o Usuário2 não puder ser autenticado, o [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] retornará um erro e continuará repetindo o rastreamento como Usuário1.  
   
@@ -62,9 +65,9 @@ ms.locfileid: "63240525"
   
  O diagrama a seguir mostra esse processo de verificação de permissões durante a repetição de rastreamentos:  
   
- ![Permissões de rastreamento de reprodução do SQL Server Profiler](../../database-engine/media/replaytracedecisiontree.gif "permissões de rastreamento de reprodução do SQL Server Profiler")  
+ ![Permissões de rastreamento de repetição do SQL Server Profiler](../../database-engine/media/replaytracedecisiontree.gif "Permissões de rastreamento de repetição do SQL Server Profiler")  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados do SQL Server Profiler &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql)   
  [Repetir rastreamentos](replay-traces.md)   
  [Criar um rastreamento &#40;SQL Server Profiler&#41;](create-a-trace-sql-server-profiler.md)   

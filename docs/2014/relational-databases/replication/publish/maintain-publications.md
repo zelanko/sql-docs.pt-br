@@ -15,16 +15,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 848081c8a4eac92299a916618aa4cd6289183d0a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63238805"
 ---
 # <a name="maintain-publications"></a>Manter publicações
   Depois de criar uma publicação, poderá ser necessário adicionar ou descartar artigos, ou alterar as propriedades da publicação e do artigo. A maioria das alterações é permitida após a criação de uma publicação, mas em alguns casos, é necessário gerar um novo instantâneo para a publicação e/ou reinicializar as assinaturas para uma publicação. Para obter mais informações, consulte [Alterar propriedades da publicação e do artigo](change-publication-and-article-properties.md) e [Add Articles to and Drop Articles from Existing Publications](add-articles-to-and-drop-articles-from-existing-publications.md) (Adicionar e remover artigos para/de publicações existentes).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Perguntas Frequentes sobre Administração de Replicação](../administration/frequently-asked-questions-for-replication-administrators.md)   
  [Best Practices for Replication Administration](../administration/best-practices-for-replication-administration.md)   
  [Publicar dados e objetos de banco de dados](publish-data-and-database-objects.md)   

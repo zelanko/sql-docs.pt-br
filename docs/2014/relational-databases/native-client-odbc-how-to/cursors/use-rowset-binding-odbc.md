@@ -1,5 +1,5 @@
 ---
-title: Usar o conjunto de linhas de associação (ODBC) | Microsoft Docs
+title: Usar Associação de conjunto de linhas (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6b416d9f7fdd07613f684fb2b27ac058b60d5b3c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200435"
 ---
 # <a name="use-rowset-binding-odbc"></a>Usar associação de conjunto de linhas (ODBC)
@@ -29,7 +29,7 @@ ms.locfileid: "63200435"
   
     -   Outra opção é alocar uma matriz de R (ou mais) buffers de coluna para armazenar comprimentos de dados.  
   
-    -   Chame [SQLBindCol](../../native-client-odbc-api/sqlbindcol.md) para associar o valor de dados e a matrizes de comprimento de dados da coluna para a coluna do conjunto de linhas.  
+    -   Chame [SQLBindCol](../../native-client-odbc-api/sqlbindcol.md) para associar o valor de dados da coluna e as matrizes de comprimento de dados à coluna do conjunto de linhas.  
   
 2.  Chame [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md) para definir os seguintes atributos:  
   
@@ -43,7 +43,7 @@ ms.locfileid: "63200435"
   
 3.  Executar a instrução.  
   
-4.  Cada chamada para [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) ou [SQLFetchScroll](../../native-client-odbc-api/sqlfetchscroll.md) recupera linhas R e transfere os dados para as colunas associadas.  
+4.  Cada chamada para [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) ou [SQLFetchScroll](../../native-client-odbc-api/sqlfetchscroll.md) recupera R linhas e transfere os dados para as colunas associadas.  
   
 ### <a name="to-use-row-wise-binding"></a>Para usar uma associação por linha  
   
@@ -63,14 +63,14 @@ ms.locfileid: "63200435"
   
     -   Defina SQL_ATTR_PARAMS_STATUS_PTR de modo que aponte para uma matriz[R] de variáveis SQLUSSMALLINT que contém indicadores de status de linha.  
   
-3.  Para cada coluna no conjunto de resultados, chame [SQLBindCol](../../native-client-odbc-api/sqlbindcol.md) para apontar o ponteiro de comprimento de dados da coluna e valor de dados para suas variáveis no primeiro elemento da matriz de estruturas alocadas na etapa 1.  
+3.  Para cada coluna no conjunto de resultados, chame [SQLBindCol](../../native-client-odbc-api/sqlbindcol.md) para apontar o valor de dados e o ponteiro de comprimento de dados da coluna para suas variáveis no primeiro elemento da matriz de estruturas alocada na etapa 1.  
   
 4.  Executar a instrução.  
   
-5.  Cada chamada para [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) ou [SQLFetchScroll](../../native-client-odbc-api/sqlfetchscroll.md) recupera linhas R e transfere os dados para as colunas associadas.  
+5.  Cada chamada para [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) ou [SQLFetchScroll](../../native-client-odbc-api/sqlfetchscroll.md) recupera R linhas e transfere os dados para as colunas associadas.  
   
-## <a name="see-also"></a>Consulte também  
- [Usando cursores tópicos de instruções &#40;ODBC&#41;](using-cursors-how-to-topics-odbc.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Tópicos de instruções sobre o uso de cursores &#40;ODBC&#41;](using-cursors-how-to-topics-odbc.md)   
  [Como os cursores são implementados](../../native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)   
  [Usar cursores &#40;ODBC&#41;](use-cursors-odbc.md)  
   

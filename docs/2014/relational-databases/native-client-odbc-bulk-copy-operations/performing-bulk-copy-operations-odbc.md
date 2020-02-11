@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 25144e13b4e129209356d0e4e4ebe37f9a3c5d1c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200817"
 ---
 # <a name="performing-bulk-copy-operations-odbc"></a>Executando operações de cópia em massa (ODBC)
@@ -39,15 +39,15 @@ ms.locfileid: "63200817"
      Deve estar presente no tempo de execução. O sqlncli11.dll é distribuído com o driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
 > [!NOTE]  
->  O ODBC **SQLBulkOperations** função não tem relação com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] funções de cópia em massa. Os aplicativos devem usar as funções de cópia em massa específicas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para executar operações de cópia em massa.  
+>  A função ODBC **SQLBulkOperations** não tem nenhuma relação com [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as funções de cópia em massa. Os aplicativos devem usar as funções de cópia em massa específicas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para executar operações de cópia em massa.  
   
 ## <a name="minimally-logging-bulk-copies"></a>Cópias em massa com registro mínimo  
  Com o modelo de Recuperação Completa, todas as operações de inserção de linha executadas pelo carregamento em massa são totalmente registradas no log de transações. Em grandes carregamentos de dados, isso pode preencher o log de transações rapidamente. Em determinadas condições, é possível fazer um registro mínimo. O registro mínimo reduz a possibilidade de uma operação de carregamento em massa preencher o espaço do log, além de ser mais eficiente que o registro completo.  
   
- Para obter informações sobre como usar o registro em log mínimo, consulte [pré-requisitos para registro em log mínimo em importação em massa](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
+ Para obter informações sobre como usar o registro em log mínimo, consulte [pré-requisitos para log mínimo em importação em massa](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
   
 ## <a name="remarks"></a>Comentários  
- Ao usar o bcp.exe no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou posterior, você pode obter erros em situações onde não havia erros antes do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Isto se deve ao fato de, nas versões posteriores, o bcp.exe não executar mais a conversão implícita de tipo de dados. Antes do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], o bcp.exe convertia dados numéricos em um tipo de dados money, se a tabela de destino tivesse um tipo de dados money. Porém, nessa situação, o bcp.exe simplesmente truncava os campos extras. A partir do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], se os dados de tipos não correspondem entre o arquivo e a tabela de destino, bcp.exe gerará um erro se não houver nenhum dado que teria que ser truncado para se ajustar à tabela de destino. Para resolver este erro, corrija os dados para que correspondam ao tipo de dados de destino. Opcionalmente, use o bcp.exe de uma versão anterior ao [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
+ Ao usar o bcp.exe no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou posterior, você pode obter erros em situações onde não havia erros antes do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Isto se deve ao fato de, nas versões posteriores, o bcp.exe não executar mais a conversão implícita de tipo de dados. Antes do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], o bcp.exe convertia dados numéricos em um tipo de dados money, se a tabela de destino tivesse um tipo de dados money. Porém, nessa situação, o bcp.exe simplesmente truncava os campos extras. A partir [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]do, se os tipos de dados não corresponderem entre o arquivo e a tabela de destino, o bcp. exe gerará um erro se houver dados que precisem ser truncados para se ajustarem à tabela de destino. Para resolver este erro, corrija os dados para que correspondam ao tipo de dados de destino. Opcionalmente, use o bcp.exe de uma versão anterior ao [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
@@ -61,7 +61,7 @@ ms.locfileid: "63200817"
   
 -   [Convertendo de cópia em massa DB-Library em ODBC](converting-from-db-library-to-odbc-bulk-copy.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [SQL Server Native Client &#40;ODBC&#41;](../native-client/odbc/sql-server-native-client-odbc.md)   
  [Importação e exportação em massa de dados &#40;SQL Server&#41;](../import-export/bulk-import-and-export-of-data-sql-server.md)  
   

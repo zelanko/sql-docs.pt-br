@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8116f8a80a1fd614974d79516be2d4cd33eb660a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63204980"
 ---
 # <a name="display-query-and-view-designer-panes-visual-database-tools"></a>Exibir painéis do Designer de Consulta e Exibição (Visual Database Tools)
@@ -33,8 +33,8 @@ ms.locfileid: "63204980"
   
 2.  No menu **Designer de Consultas** , aponte para **Painel** e clique no nome do painel que você deseja abrir.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar consultas &#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [Abrir o Designer de Consulta e Exibição &#40;Visual Database Tools&#41;](open-the-query-and-view-designer-visual-database-tools.md)  
+ [Abra o designer de consulta e exibição &#40;Visual Database Tools&#41;](open-the-query-and-view-designer-visual-database-tools.md)  
   
   

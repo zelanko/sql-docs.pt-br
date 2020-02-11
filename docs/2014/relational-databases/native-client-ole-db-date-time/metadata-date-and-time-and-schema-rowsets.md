@@ -1,5 +1,5 @@
 ---
-title: Data e hora e conjuntos de linhas de esquema | Microsoft Docs
+title: Conjuntos de linhas de data e hora e esquema | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 710fbfdfd57608c24c56def1f2f9c4ec373f1957
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63238013"
 ---
-# <a name="date-and-time-and-schema-rowsets"></a>Data e hora e conjuntos de linhas de esquema
+# <a name="date-and-time-and-schema-rowsets"></a>Conjuntos de linhas de data e hora e esquema
   Este tópico fornece informações sobre os conjuntos de linhas de COLUMNS e de PROCEDURE_PARAMETERS. Essas informações referem-se aos aprimoramentos de data e hora do OLE DB introduzidos no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
 ## <a name="columns-rowset"></a>Conjunto de linhas de COLUMNS  
@@ -27,12 +27,12 @@ ms.locfileid: "63238013"
   
 |Tipo de coluna|DATA_TYPE|COLUMN_FLAGS, DBCOLUMFLAGS_SS_ISVARIABLESCALE|DATETIME_PRECISION|  
 |-----------------|----------------|------------------------------------------------------|-------------------------|  
-|date|DBTYPE_DBDATE|Liberada|0|  
-|time|DBTYPE_DBTIME2|Defina|0..7|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|Liberada|0|  
-|datetime|DBTYPE_DBTIMESTAMP|Liberada|3|  
-|datetime2|DBTYPE_DBTIMESTAMP|Defina|0..7|  
-|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|Defina|0..7|  
+|date|DBTYPE_DBDATE|Limpar|0|  
+|time|DBTYPE_DBTIME2|Definir|0..7|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|Limpar|0|  
+|DATETIME|DBTYPE_DBTIMESTAMP|Limpar|3|  
+|datetime2|DBTYPE_DBTIMESTAMP|Definir|0..7|  
+|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|Definir|0..7|  
   
  Em COLUMN_FLAGS, DBCOLUMNFLAGS_ISFIXEDLENGTH é sempre true para tipos de data/hora e os sinalizadores seguintes sempre é false:  
   
@@ -56,41 +56,41 @@ ms.locfileid: "63238013"
   
  DBCOLUMNFLAGS_SS_ISVARIABLESCALE só é válido quando conectado a um servidor [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou posterior. DBCOLUMNFLAGS_SS_ISFIXEDSCALE é indefinido quando conectado a servidores de nível inferior.  
   
-## <a name="procedureparameters-rowset"></a>Conjunto de linhas de PROCEDURE_PARAMETERS  
+## <a name="procedure_parameters-rowset"></a>Conjunto de linhas de PROCEDURE_PARAMETERS  
  DATA_TYPE contém os mesmos valores que o conjunto de linhas de esquema de COLUMNS e TYPE_NAME contém o tipo de servidor.  
   
  Uma nova coluna, SS_DATETIME_PRECISION, foi adicionada para retornar a precisão do tipo como na coluna DATETIME_PRECISION, semelhante ao conjunto de linhas de COLUMNS.  
   
-## <a name="providertypes-rowset"></a>Conjunto de linhas de PROVIDER_TYPES  
+## <a name="provider_types-rowset"></a>Conjunto de linhas de PROVIDER_TYPES  
  As linhas a seguir são retornadas para tipos de data/hora:  
   
-|Tipo -><br /><br /> coluna|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
+|Tipo -><br /><br /> Coluna|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |--------------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
-|TYPE_NAME|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
+|TYPE_NAME|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |DATA_TYPE|DBTYPE_DBDATE|DBTYPE_DBTIME2|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMPOFFSET|  
 |COLUMN_SIZE|10|16|16|23|27|34|  
 |LITERAL_PREFIX|'|'|'|'|'|'|  
 |LITERAL_SUFFIX|'|'|'|'|'|'|  
-|CREATE_PARAMS|NULL|scale|NULL|NULL|scale|scale|  
+|CREATE_PARAMS|NULO|scale|NULO|NULO|scale|scale|  
 |IS_NULLABLE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|  
 |CASE_SENSITIVE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
 |SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|  
-|UNSIGNED_ATTRIBUTE|NULL|NULL|NULL|NULL|NULL|NULL|  
+|UNSIGNED_ATTRIBUTE|NULO|NULO|NULO|NULO|NULO|NULO|  
 |FIXED_PREC_SCALE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
 |AUTO_UNIQUE_VALUE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
-|LOCAL_TYPE_NAME|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
-|MINIMUM_SCALE|NULL|0|NULL|NULL|0|0|  
-|MAXIMUM_SCALE|NULL|7|NULL|NULL|7|7|  
-|GUID|NULL|NULL|NULL|NULL|NULL|NULL|  
-|TYPELIB|NULL|NULL|NULL|NULL|NULL|NULL|  
-|VERSION|NULL|NULL|NULL|NULL|NULL|NULL|  
+|LOCAL_TYPE_NAME|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|MINIMUM_SCALE|NULO|0|NULO|NULO|0|0|  
+|MAXIMUM_SCALE|NULO|7|NULO|NULO|7|7|  
+|GUID|NULO|NULO|NULO|NULO|NULO|NULO|  
+|TYPELIB|NULO|NULO|NULO|NULO|NULO|NULO|  
+|VERSION|NULO|NULO|NULO|NULO|NULO|NULO|  
 |IS_LONG|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
-|BEST_MATCH|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE a menos que uma das condições a seguir seja verdadeira:<br /><br /> -É cliente conectado a um servidor de nível inferior.<br />-A propriedade de conexão de compatibilidade de tipo de dados especifica um nível de compatibilidade igual a 80.|VARIANT_TRUE a menos que uma das condições a seguir seja verdadeira:<br /><br /> -É cliente conectado a um servidor de nível inferior.<br />-A propriedade de conexão de compatibilidade de tipo de dados especifica um nível de compatibilidade igual a 80.|VARIANT_TRUE|  
+|BEST_MATCH|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE a menos que uma das condições a seguir seja verdadeira:<br /><br /> -O cliente está conectado a um servidor de nível inferior.<br />-A propriedade de conexão de compatibilidade de tipo de dados especifica um nível de compatibilidade igual a 80.|VARIANT_TRUE a menos que uma das condições a seguir seja verdadeira:<br /><br /> -O cliente está conectado a um servidor de nível inferior.<br />-A propriedade de conexão de compatibilidade de tipo de dados especifica um nível de compatibilidade igual a 80.|VARIANT_TRUE|  
 |IS_FIXEDLENGTH|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|  
   
  O OLE DB apenas define MINIMUM_SCALE e MAXIMUM_SCALE para tipos decimais e numéricos, portanto, o uso do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client destas colunas para time, datetime2 e datetimeoffset é não padrão.  
   
-## <a name="see-also"></a>Consulte também  
- [Metadados &#40;OLE DB&#41;](../../database-engine/dev-guide/metadata-ole-db.md)  
+## <a name="see-also"></a>Consulte Também  
+ [&#41;de metadados &#40;OLE DB](../../database-engine/dev-guide/metadata-ole-db.md)  
   
   

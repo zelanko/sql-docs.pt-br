@@ -1,5 +1,5 @@
 ---
-title: No escopo da sessão de criação de membros (MDX) calculados | Microsoft Docs
+title: Criando membros calculados no escopo da sessão (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 701d7a49f7ddda60983a03723506442eac17866b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074546"
 ---
 # <a name="creating-session-scoped-calculated-members-mdx"></a>Criando membros calculados no escopo da sessão (MDX)
-  Para criar um membro calculado disponível por meio de uma sessão de expressões MDX, use a instrução [CREATE MEMBER](/sql/mdx/mdx-data-definition-create-member). Um membro calculado criado com a instrução CREATE MEMBER não será removido até que a sessão MDX seja encerrada.  
+  Para criar um membro calculado disponível por meio de uma sessão de expressões MDX, use a instrução [CREATE MEMBER](/sql/mdx/mdx-data-definition-create-member) . Um membro calculado criado com a instrução CREATE MEMBER não será removido até que a sessão MDX seja encerrada.  
   
  Como discutido neste tópico, a sintaxe da instrução CREATE MEMBER é direta e fácil usar.  
   
@@ -51,7 +51,7 @@ sum(([Stores].[ByLocation].Lag(3) :
 [Stores].[ByLocation].NextMember), [Measures].[Units Sold])  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criando membros calculados no escopo da consulta &#40;MDX&#41;](mdx-calculated-members-query-scoped-calculated-members.md)  
   
   

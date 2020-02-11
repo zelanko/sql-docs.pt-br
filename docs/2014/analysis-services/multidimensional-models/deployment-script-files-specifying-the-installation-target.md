@@ -18,14 +18,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f5a46dc4c6130bb49d973ffc0025388c563c080f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075217"
 ---
 # <a name="specifying-the-installation-target"></a>Especificando o destino de instalação
-  O [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Assistente de implantação do lê as informações de destino da instalação dos \< *nome do projeto*>. deploymenttargets arquivo. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] cria esse arquivo quando você cria o projeto [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] usa o banco de dados e servidor especificados na **implantação** página do  *\<nome do projeto >* **páginas de propriedades** caixa de diálogo para criar o \< *nome do projeto*> arquivo. targets.  
+  O [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] assistente de implantação lê as informações de destino de \<instalação do *nome do projeto*> arquivo. deploymenttargets. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]cria esse arquivo quando você compila o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] projeto. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]usa o banco de dados e o servidor especificados na página **implantação** do * \<nome do projeto>* caixa de diálogo **páginas de propriedades** para criar o nome do \< *projeto*> arquivo. targets.  
   
 ## <a name="modifying-the-installation-target-for-deployment"></a>Modificando o destino de instalação para a implantação  
  Em alguns casos, talvez seja necessário implantar um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] em um banco de dados ou instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] diferente do especificado na página **Implantação** . Por exemplo, você talvez queira implantar o projeto em um servidor para teste antes da implantação e, em seguida, implantá-lo em um servidor de produção após a conclusão do teste. Também é possível implantar um projeto concluído e testado em vários servidores de produção em um cluster de Balanceamento de Carga de Rede ou em um servidor de preparação e em um de produção.  
@@ -38,14 +38,14 @@ ms.locfileid: "66075217"
   
      -ou-  
   
--   Execute o Assistente para Implantação do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no prompt de comando e defina o assistente para executar em modo de arquivo de resposta. Para obter mais informações sobre o modo de arquivo de resposta, consulte [Running the Analysis Services Deployment Wizard](running-the-analysis-services-deployment-wizard.md).  
+-   Execute o Assistente para Implantação do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no prompt de comando e defina o assistente para executar em modo de arquivo de resposta. Para obter mais informações sobre o modo de arquivo de resposta, consulte [executando o assistente de implantação de Analysis Services](running-the-analysis-services-deployment-wizard.md).  
   
      -ou-  
   
--   Modificar a \< *nome do projeto*> arquivo. deploymenttargets usando qualquer editor de texto.  
+-   Modifique o \< *nome do projeto*> arquivo. deploymenttargets usando qualquer editor de texto.  
   
-## <a name="see-also"></a>Consulte também  
- [Especificando opções de implantação de função e de partição](deployment-script-files-partition-and-role-deployment-options.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Especificando opções de implantação de partição e função](deployment-script-files-partition-and-role-deployment-options.md)   
  [Especificando definições de configuração para implantação de solução](deployment-script-files-solution-deployment-config-settings.md)   
  [Especificando opções de processamento](deployment-script-files-specifying-processing-options.md)  
   

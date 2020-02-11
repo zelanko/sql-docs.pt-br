@@ -16,16 +16,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 32962186ac6fdf7b0cc18801d635e9b5ef9f5d22
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63209732"
 ---
 # <a name="resource-governor-classifier-function"></a>Função de classificação do Administrador de Recursos
   O processo de classificação do administrador de recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] atribui sessões de entrada a um grupo de cargas de trabalho baseado nas características da sessão. Você pode personalizar a lógica de classificação gravando uma função definida pelo usuário, chamado de função de classificador.  
   
-## <a name="classification"></a>Classificação  
+## <a name="classification"></a>classificação  
  O Administrador de Recursos oferece suporte à classificação de sessões de entrada. A classificação baseia-se em um conjunto de critérios gravados pelo usuário contido em uma função. Os resultados da lógica de função permitem que o Administrador de Recursos classifique as sessões em grupos de carga de trabalho existentes.  
   
 > [!NOTE]  
@@ -72,7 +72,7 @@ ms.locfileid: "63209732"
   
 2.  Execução de gatilhos LOGON  
   
-3.  Classificação  
+3.  classificação  
   
  Quando a classificação é iniciada, o Administrador de Recursos executa a função de classificação e usa o valor retornado pela função para enviar solicitações ao grupo de cargas de trabalho apropriado.  
   
@@ -83,9 +83,9 @@ ms.locfileid: "63209732"
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  
-|Descreve como criar e testar uma função de classificação definida pelo usuário.|[Criar e testar uma função de classificação definida pelo usuário](create-and-test-a-classifier-user-defined-function.md)|  
+|Descreve como criar e testar uma função de classificação definida pelo usuário.|[Criar e testar uma função de classificador definida pelo usuário](create-and-test-a-classifier-user-defined-function.md)|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Administrador de Recursos](resource-governor.md)   
  [Habilitar Administrador de Recursos](enable-resource-governor.md)   
  [Pool de recursos do Administrador de Recursos](resource-governor-resource-pool.md)   

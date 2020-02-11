@@ -11,14 +11,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 755685601bb97f7e0b8980024df07e27967f3cd3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63193066"
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>Tipos e colunas de dados XML (SQL Server)
-  Este tópico discute as vantagens e as limitações do `xml` tipo de dados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e ajuda você a escolher como armazenar dados XML.  
+  Este tópico discute as vantagens e as limitações do tipo de `xml` dados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e ajuda a escolher como armazenar dados XML.  
   
 ## <a name="relational-or-xml-data-model"></a>Modelo de dados relacional ou XML  
  Se os dados estiverem altamente estruturados com esquema conhecido, o modelo relacional provavelmente funcionará melhor para armazenamento de dados. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece a funcionalidade exigida e ferramentas que podem ser necessárias. Por outro lado, se a estrutura estiver semiestruturada, desestruturada ou desconhecida, será necessário considerar a modelagem desses dados.  
@@ -61,7 +61,7 @@ ms.locfileid: "63193066"
   
      Os dados são armazenados em uma representação interna que preserva o conteúdo XML dos dados. Essa representação interna inclui informações sobre a hierarquia de confinamento, a ordem dos documentos e os valores do elemento e do atributo. Especificamente, o conteúdo de InfoSet dos dados XML é preservado. Para obter mais informações sobre InfoSet, visite [http://www.w3.org/TR/xml-infoset](https://go.microsoft.com/fwlink/?LinkId=48843). O conteúdo de InfoSet não pode ser uma cópia idêntica do XML de texto porque as seguintes informações não são mantidas: espaços em branco insuficientes, ordem dos atributos, prefixos de namespace e declaração XML.  
   
-     Para tipo `xml` tipo de dados, um `xml` tipo de dados associado a esquemas XML, a-schema validation InfoSet (PSVI) adiciona informações de tipo ao InfoSet e é codificado na representação interna. Isto melhora a velocidade da análise significativamente. Para obter mais informações, consulte as especificações de Esquema XML do W3C em [http://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?LinkId=48881) e [http://www.w3.org/TR/xmlschema-2](https://go.microsoft.com/fwlink/?LinkId=4871).  
+     Para tipo `xml` de dados tipado `xml` , um tipo de dados vinculado a esquemas XML, o PSVI (Post-Schema Validation infoset) adiciona informações de tipo ao infoset e é codificado na representação interna. Isto melhora a velocidade da análise significativamente. Para obter mais informações, consulte as especificações de Esquema XML do W3C em [http://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?LinkId=48881) e [http://www.w3.org/TR/xmlschema-2](https://go.microsoft.com/fwlink/?LinkId=4871).  
   
 -   Mapeando entre XML e armazenamento relacional  
   
@@ -71,7 +71,7 @@ ms.locfileid: "63193066"
   
      Uma cópia idêntica dos dados é armazenada. Isso é útil para aplicativos com finalidades especiais, como documentos legais. A maioria dos aplicativos não exige uma cópia exata e ficam satisfeitos com o conteúdo XML (fidelidade de InfoSet).  
   
- Geralmente, você pode precisar usar uma combinação dessas abordagens. Por exemplo, você pode desejar armazenar dados XML em uma coluna de tipo de dados `xml` e promover propriedades dela em colunas relacionais. Ou, você talvez queira usar tecnologia de mapeamento para armazenar partes não recursivas em colunas não XML e apenas as partes recursivas em `xml` colunas de tipo de dados.  
+ Geralmente, você pode precisar usar uma combinação dessas abordagens. Por exemplo, você pode desejar armazenar dados XML em uma coluna de tipo de dados `xml` e promover propriedades dela em colunas relacionais. Ou, talvez você queira usar a tecnologia de mapeamento para armazenar partes nonrecursive em colunas não XML e apenas as partes recursivas `xml` em colunas de tipo de dados.  
   
 ### <a name="choice-of-xml-technology"></a>Opção de tecnologia XML  
  A opção de tecnologia XML, XML nativo versus exibição de XML, geralmente depende dos seguintes fatores:  
@@ -123,7 +123,7 @@ ms.locfileid: "63193066"
   
  Para consultar, converta os dados em tipo de dados `xml` em tempo de execução e execute Xquery sobre eles. A conversão em tempo de execução pode ser dispendiosa, principalmente quando o documento é grande. Se a consulta for feita com frequência, você poderá armazenar os documentos de maneira redundante em uma coluna de tipo de dados `xml` e indexá-los enquanto retorna cópias exatas dos documentos da coluna `[n]varchar(max)`.  
   
- A coluna XML pode ser uma coluna computada, baseada na coluna `[n]varchar(max)`. No entanto, você não pode criar um índice XML em uma coluna XML computada nem um índice XML pode ser criado no `[n]varchar(max)` ou `varbinary(max)` colunas.  
+ A coluna XML pode ser uma coluna computada, baseada na coluna `[n]varchar(max)`. No entanto, você não pode criar um índice XML em uma coluna XML computada, nem um índice XML pode `[n]varchar(max)` ser `varbinary(max)` criado em colunas ou.  
   
 ### <a name="xml-view-technology"></a>Tecnologia de exibição XML  
  Ao definir um mapeamento entre seus esquemas XML e as tabelas em um banco de dados, você cria uma "exibição XML" dos dados persistentes. O carregamento de XML em massa pode ser usado para popular as tabelas subjacentes usando a exibição XML. É possível consultar a exibição XML usando XPath versão 1.0. A consulta é convertida em consultas SQL nas tabelas. De maneira semelhante, as atualizações também são propagadas para essas tabelas.  
@@ -142,11 +142,11 @@ ms.locfileid: "63193066"
   
  Os exemplos incluem dados relacionais expostos como XML para troca de dados e serviços da Web e dados XML com esquema fixo. Para obter mais informações, consulte [MSDN Online Library](https://go.microsoft.com/fwlink/?linkid=31174).  
   
-#### <a name="example-modeling-data-using-an-annotated-xml-schema-axsd"></a>Exemplo: Modelando dados usando um AXSD (Esquema XML Anotado)  
+#### <a name="example-modeling-data-using-an-annotated-xml-schema-axsd"></a>Exemplo: Modelando dados usando um AXSD (Annotated XML Schema)  
  Para ilustrar, assuma que você tem dados relacionais existentes, como clientes, pedidos e itens de linha que deseja tratar como XML. Defina uma exibição XML usando AXSD sobre dados relacionais. A exibição XML permite carregar dados XML em massa em suas tabelas e consultar e atualizar os dados relacionais usando a exibição XML. Esse modelo é útil se você precisar trocar dados que contêm marcação XML com outros aplicativos enquanto seus aplicativos SQL funcionam sem interrupção.  
   
 ### <a name="hybrid-model"></a>Modelo híbrido  
- Frequentemente, uma combinação de relacional e `xml` colunas de tipo de dados é apropriada para modelagem de dados. Alguns dos valores de seus dados XML podem ser armazenados em colunas relacionais e o restante, ou todo o valor XML, armazenado em uma coluna XML. Isso pode resultar em um melhor desempenho no qual você terá mais controle sobre os índices criados nas colunas relacionais e características de bloqueio.  
+ Frequentemente, uma combinação de colunas de tipo `xml` relacional e de dados é apropriada para a modelagem de dados. Alguns dos valores de seus dados XML podem ser armazenados em colunas relacionais e o restante, ou todo o valor XML, armazenado em uma coluna XML. Isso pode resultar em um melhor desempenho no qual você terá mais controle sobre os índices criados nas colunas relacionais e características de bloqueio.  
   
  Os valores a serem armazenados em colunas relacionais dependem de sua carga de trabalho. Por exemplo, você pode conseguir um desempenho mais rápido da consulta se recuperar todos os valores XML com base na expressão de caminho, /Customer/@CustId, promovendo o valor do atributo **CustId** em uma coluna relacional e indexando-o. Por outro lado, se os dados XML forem decompostos de maneira extensiva e não redundante em colunas relacionais, o custo de remontagem poderá ser significativo.  
   
@@ -174,7 +174,7 @@ ms.locfileid: "63193066"
   
 -   Ele não pode ser usado como uma coluna de chaves em um índice. No entanto ele pode ser incluído como dados em um índice clusterizado ou adicionado explicitamente em um índice não clusterizado usando a palavra-chave INCLUDE quando o índice não clusterizado é criado.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exemplos de importação e exportação em massa de documentos XML &#40;SQL Server&#41;](../import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  
   
   

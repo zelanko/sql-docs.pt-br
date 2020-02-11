@@ -1,5 +1,5 @@
 ---
-title: Adicionar caixa de diálogo de dimensão de cubo (Analysis Services - dados multidimensionais) | Microsoft Docs
+title: Caixa de diálogo Adicionar dimensão do cubo (Analysis Services-dados multidimensionais) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f147c438e16c00e0e1b979f2d3e2fe6e16cf7428
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062951"
 ---
 # <a name="add-cube-dimension-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Adicionar Dimensão do Cubo (Analysis Services - Dados Multidimensionais)
@@ -34,13 +34,13 @@ ms.locfileid: "66062951"
 >  Cada dimensão de cubo pode ter apenas uma relação com um grupo de medidas. No entanto é possível criar mais de uma dimensão de cubo e adicioná-la ao cubo, se a dimensão do banco de dados no qual a dimensão do cubo é baseada estiver relacionada a grupos de medidas através de mais de uma relação na exibição da fonte de dados. Essas dimensões são referenciadas como dimensões com função múltipla e normalmente ocorrem com dimensões de tempo.  
   
 ## <a name="options"></a>Opções  
- **Selecionar Dimensão**  
+ **Selecionar dimensão**  
  Selecione uma dimensão de banco de dados existente para adicionar uma dimensão de cubo baseada nessa dimensão ao cubo selecionado. Várias dimensões de cubo podem ser definidas a partir da mesma dimensão de banco de dados.  
   
 > [!NOTE]  
 >  Se mais de uma dimensão de cubo baseadas na mesma dimensão de banco de dados forem adicionadas a um cubo, as dimensões de cubo adicionais serão chamadas de dimensões com função múltipla.  
   
-## <a name="see-also"></a>Consulte também  
- [Designers e caixas de diálogo do Analysis Services &#40;dados multidimensionais&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Analysis Services designers e caixas de diálogo &#40;dados multidimensionais&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

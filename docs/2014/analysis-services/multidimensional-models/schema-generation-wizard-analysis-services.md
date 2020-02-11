@@ -13,13 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2f8757044ba15f7b8c2567dd88e1ef3637d2e3f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073069"
 ---
 # <a name="schema-generation-wizard-analysis-services"></a>Assistente de Geração de Esquema (Analysis Services)
+  
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] oferece suporte a dois métodos de trabalho com esquemas relacionais ao definir objetos OLAP em um projeto ou banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Geralmente, você define objetos OLAP com base em um modelo de dados lógico construído em uma exibição da fonte de dados de um projeto ou banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Essa exibição da fonte de dados é definida com base nos elementos do esquema de uma ou mais fontes de dados relacionais, conforme personalizado na exibição da fonte de dados.  
   
  Como alternativa, você pode definir objetos OLAP primeiro e, em seguida, gerar uma exibição da fonte de dados, uma fonte de dados e o esquema de banco de dados relacional subjacente que dá suporte a estes objetos OLAP. Esse banco de dados relacional é chamado banco de dados da área de assunto.  
@@ -37,15 +38,15 @@ ms.locfileid: "66073069"
 ## <a name="in-this-section"></a>Nesta seção  
  A tabela a seguir lista os tópicos adicionais que explicam como trabalhar com o Assistente de Geração de Esquema.  
   
-|Tópico|Descrição|  
+|Tópico|DESCRIÇÃO|  
 |-----------|-----------------|  
 |[Use o assistente de geração de esquema &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)|Descreve como gerar o esquema para a área de assunto e os bancos de dados da área de preparação.|  
 |[Entendendo os esquemas de banco de dados](understanding-the-database-schemas.md)|Descreve o esquema gerado para a área de assunto e os bancos de dados da área de preparação.|  
 |[Entendendo a geração com incremento](understanding-incremental-generation.md)|Descreve os recursos de geração incremental do Assistente de Geração de Esquema.|  
   
-## <a name="see-also"></a>Consulte também  
- [Exibições de fontes de dados em modelos multidimensionais](data-source-views-in-multidimensional-models.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Exibições da fonte de dados em modelos multidimensionais](data-source-views-in-multidimensional-models.md)   
  [Fontes de dados em modelos multidimensionais](data-sources-in-multidimensional-models.md)   
- [Fontes de dados com suporte no &#40;Multidimensional do SSAS&#41;](supported-data-sources-ssas-multidimensional.md)  
+ [Fontes de dados com suporte &#40;SSAS multidimensional&#41;](supported-data-sources-ssas-multidimensional.md)  
   
   

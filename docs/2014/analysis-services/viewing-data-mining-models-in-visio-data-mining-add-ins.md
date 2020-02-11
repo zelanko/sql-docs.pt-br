@@ -16,17 +16,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c287e840c07d11a527e980f9f07fb39fb3852739
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065515"
 ---
 # <a name="viewing-data-mining-models-in-visio-data-mining-add-ins"></a>Exibindo modelos de mineração de dados no Visio (suplementos de mineração de dados)
   As formas do Visio para mineração de dados permitem que você se conecte a um servidor e crie um diagrama representando um modelo de mineração de dados existente. Os diagramas podem ser então personalizados usando controles do Visio, mas você também pode detalhar os dados, expor algumas das estatísticas subjacentes e trabalhar com o modelo subjacente.  
   
 ## <a name="building-a-model-diagram"></a>Criando um diagrama modelo  
- Quando você abre o arquivo que contém as formas do Visio para mineração de dados, o **formas** painel mostra as formas a seguir.  
+ Quando você abre o arquivo que contém as formas do Visio para Data Mining, o painel **formas** mostra as formas a seguir.  
   
  Se você não visualizar as formas de mineração de dados quando abrir o Visio, abra o arquivo de modelo da pasta de instalação.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "66065515"
 |Formas do Visio|Modelos com suporte|  
 |-----------------|----------------------|  
 |Árvore de Decisão|Use essa forma para modelos baseados na árvore de decisão ou em algoritmos de regressão linear.|  
-|Rede de Dependências|Use essa forma para modelos com base em qualquer um dos seguintes algoritmos: Naive Bayes, árvores de decisão ou regras de associação.|  
+|Rede de Dependências|Use essa forma para modelos baseados em qualquer um destes algoritmos: Naive Bayes, Árvores de Decisão ou Regras de Associação.|  
 |Cluster|Use essa forma para modelos baseados em algoritmos de clustering.|  
   
  Dependendo do tipo de dados no modelo de mineração, o assistente poderá oferecer opções diferentes. Por exemplo, colunas que contêm números contínuos são visualizadas de maneira diferente que variáveis categóricas.  
@@ -67,16 +67,16 @@ ms.locfileid: "66065515"
   
      Amplie o zoom em seções específicas, pesquise os nós que contenham um determinado atributo, ou filtre um grafo de dependência por suas extremidades (probabilidade).  
   
-## <a name="walkthroughs"></a>Passo a passo  
+## <a name="walkthroughs"></a>Instruções passo a passo  
  Por obter exemplos de como trabalhar com um diagrama preenchido e interpretá-lo, consulte estes tópicos:  
   
  [Passo a passo do diagrama de cluster](cluster-diagram-walkthrough-data-mining-add-ins.md)  
   
- [Passo a passo de diagrama de rede de dependências](dependency-network-diagram-walkthrough-data-mining-add-ins.md)  
+ [Passo a passo do diagrama de rede de dependências](dependency-network-diagram-walkthrough-data-mining-add-ins.md)  
   
  [Passo a passo do diagrama de árvore de decisão](decision-tree-diagram-walkthrough-data-mining-add-ins.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Procurando modelos no Excel &#40;suplementos de mineração de dados do SQL Server&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Pesquisando modelos no Excel &#40;SQL Server suplementos de mineração de dados&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
   
   

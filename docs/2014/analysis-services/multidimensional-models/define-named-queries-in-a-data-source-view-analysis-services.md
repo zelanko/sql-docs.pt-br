@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bbb792ac4e86ae563f80f35f04854f16501b34a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075558"
 ---
 # <a name="define-named-queries-in-a-data-source-view-analysis-services"></a>Definir consultas nomeadas em uma exibição da fonte de dados (Analysis Services)
@@ -35,7 +35,7 @@ ms.locfileid: "66075558"
   
  Tabelas e colunas às quais a consulta SQL faz referência não devem ser qualificadas ou devem ser qualificadas somente pelo nome da tabela. Por exemplo, para fazer referência à coluna SaleAmount em uma tabela, o valor `SaleAmount` ou `Sales.SaleAmount` é válido, mas `dbo.Sales.SaleAmount` produzirá um erro.  
   
- **Observação** Ao definir uma consulta nomeada que consulta uma fonte de dados do [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] ou do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0, a consulta nomeada que contiver uma subconsulta correlacionada e uma cláusula GROUP BY falhará. Para obter mais informações, consulte [Erro interno com a instrução SELECT contendo a subconsulta correlacionada e GROUP BY](https://support.microsoft.com/kb/274729) na Base de Dados de Conhecimento [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
+ **Observação** Ao definir uma consulta nomeada que consulta uma [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] fonte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de dados ou 7,0, uma consulta nomeada que contém uma subconsulta correlacionada e uma cláusula Group by falhará. Para obter mais informações, consulte [Erro interno com a instrução SELECT contendo a subconsulta correlacionada e GROUP BY](https://support.microsoft.com/kb/274729) na Base de Dados de Conhecimento [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
 ## <a name="add-or-edit-a-named-query"></a>Adicionar ou editar uma consulta nomeada  
   
@@ -60,8 +60,8 @@ ms.locfileid: "66075558"
   
 5.  Clique em **OK**. Um ícone mostrando duas tabelas sobrepostas aparece no título da tabela para indicar que a tabela foi substituída por uma consulta nomeada.  
   
-## <a name="see-also"></a>Consulte também  
- [Exibições de fontes de dados em modelos multidimensionais](data-source-views-in-multidimensional-models.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Exibições da fonte de dados em modelos multidimensionais](data-source-views-in-multidimensional-models.md)   
  [Definir cálculos nomeados em uma exibição da fonte de dados &#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
   

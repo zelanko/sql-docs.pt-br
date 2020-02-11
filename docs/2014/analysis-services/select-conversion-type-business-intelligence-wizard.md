@@ -1,5 +1,5 @@
 ---
-title: Selecione o tipo de conversão (Assistente de Business Intelligence) | Microsoft Docs
+title: Selecionar tipo de conversão (Assistente de Business Intelligence) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ab618eaa2d8d54b08e3d01fa238d19451084eff8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069615"
 ---
 # <a name="select-conversion-type-business-intelligence-wizard"></a>Selecionar Tipo de Conversão (Assistente de Business Intelligence)
@@ -39,7 +39,7 @@ ms.locfileid: "66069615"
   
  Por exemplo, a moeda corrente pode estar definida como USD (dólares dos EUA) e a tabela de fatos armazenar transações em EUR (euros), AUD (dólares australianos) e MXN (pesos mexicanos). A seleção dessa opção converte as transações das moedas locais especificadas na moeda corrente. O resultado é que as transações podem ser armazenadas nas moedas locais especificadas e exibidas na moeda corrente especificada.  
   
- **Um para muitos**  
+ **Um-para-muitos**  
  Armazene transações usando a moeda corrente especificada na página **Definir Opções de Conversão de Moeda** e, em seguida, converta-a em uma ou mais moedas de relatório.  
   
 > [!NOTE]  
@@ -47,9 +47,9 @@ ms.locfileid: "66069615"
   
  Por exemplo, a moeda corrente pode estar definida como USD (dólares dos EUA) e a tabela de fatos armazenar transações em USD. A seleção dessa opção converte essas transações da moeda corrente nas moedas de relatório especificadas. O resultado é que essas transações podem ser armazenadas na moeda corrente especificada e exibidas na moeda corrente especificada ou em qualquer uma das moedas de relatório especificadas na página **Especificar Moedas de Relatório** .  
   
-## <a name="see-also"></a>Consulte também  
- [Ajuda F1 do Assistente de Business Intelligence](business-intelligence-wizard-f1-help.md)   
- [Designer de cubo &#40;Analysis Services - dados multidimensionais&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [Designer de dimensão &#40;Analysis Services - dados multidimensionais&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Ajuda F1 do assistente de Business Intelligence](business-intelligence-wizard-f1-help.md)   
+ [O designer de cubo &#40;Analysis Services-dados multidimensionais&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [O designer de dimensão &#40;Analysis Services de dados multidimensionais&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   
   

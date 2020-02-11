@@ -17,14 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f07d9b2f613ca1face8be3bb23bac78202da6655
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63192132"
 ---
 # <a name="setting-properties"></a>Definindo propriedades
-  Propriedades são valores que armazenam informações descritivas sobre o objeto. Por exemplo, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] opções de configuração são representadas pelo <xref:Microsoft.SqlServer.Management.Smo.Server.Configuration%2A> propriedades do objeto. As propriedades podem ser acessadas direta ou indiretamente por meio da coleção de propriedades. O acesso direto às propriedades usa a seguinte sintaxe:  
+  Propriedades são valores que armazenam informações descritivas sobre o objeto. Por exemplo, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] as opções de configuração são representadas pelas propriedades do <xref:Microsoft.SqlServer.Management.Smo.Server.Configuration%2A> objeto. As propriedades podem ser acessadas direta ou indiretamente por meio da coleção de propriedades. O acesso direto às propriedades usa a seguinte sintaxe:  
   
  `objInstance.PropertyName`  
   

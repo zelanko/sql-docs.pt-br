@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 24d05ef704e37af9d0d8c1e2a9e9eefe0b20f1d8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63218659"
 ---
 # <a name="set-large-data-ole-db"></a>Definir dados grandes (OLE DB)
@@ -27,17 +27,17 @@ ms.locfileid: "63218659"
  Este exemplo exige o banco de dados de exemplo AdventureWorks, que pode ser baixado na home page de [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) (em inglês).  
   
 > [!IMPORTANT]  
->  Quando possível, use a Autenticação do Windows. Se a Autenticação do Windows não estiver disponível, solicite aos usuários que digitem suas credenciais em tempo de execução. Evite armazenar as credenciais em um arquivo. Se for necessário manter as credenciais, criptografe-as com a [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)(em inglês).  
+>  Quando possível, use a Autenticação do Windows. Se a Autenticação do Windows não estiver disponível, solicite aos usuários que digitem suas credenciais em tempo de execução. Evite armazenar as credenciais em um arquivo. Se você precisar manter as credenciais, deverá criptografá-las com a [API de criptografia do Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ## <a name="procedures"></a>Procedimentos  
   
 #### <a name="to-set-blob-data"></a>Para definir dados de BLOB  
   
-1.  Crie uma estrutura DBOBJECT que descreva como a coluna BLOB deve ser acessada. Defina as **dwFlag** elemento de DBOBJECT estruturar como STGM_READ e defina o elemento iid como `IID_ISequentialStream` (a interface a ser exposta).  
+1.  Crie uma estrutura DBOBJECT que descreva como a coluna BLOB deve ser acessada. Defina o elemento **dwFlag** da estrutura DBOBJECT como STGM_READ e defina o elemento IID como `IID_ISequentialStream` (a interface a ser exposta).  
   
 2.  Defina as propriedades no grupo de propriedades DBPROPSET_ROWSET para que o conjunto de linhas seja atualizável.  
   
-3.  Crie um conjunto de associações (uma de cada coluna) usando uma matriz de estruturas DBBINDING. Defina o elemento **wType** na estrutura DBBINDING como DBTYPE_IUNKNOWN e o elemento **pObject** para apontar para a estrutura DBOBJECT que você criou.  
+3.  Crie um conjunto de associações (uma de cada coluna) usando uma matriz de estruturas DBBINDING. Defina o elemento **wType** na estrutura DBBINDING como DBTYPE_IUNKNOWN e o elemento **pObject** para que ele aponte para a estrutura DBOBJECT criada.  
   
 4.  Crie um acessador que usa as informações de associação na matriz de estruturas DBBINDINGS.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "63218659"
   
 ## <a name="example"></a>Exemplo  
   
-### <a name="description"></a>Descrição  
+### <a name="description"></a>DESCRIÇÃO  
  Compile com ole32.lib oleaut32.lib e execute a seguinte listagem de código C++. Esse aplicativo se conecta à instância padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do computador. Em alguns sistemas operacionais Windows, será necessário alterar (localhost) ou (local) para o nome de sua instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para se conectar a uma instância nomeada, altere a cadeia de conexão de L"(local)" para L"(local)\\\name", em que name é a instância nomeada. Por padrão, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express é instalado em uma instância nomeada. Verifique se a variável de ambiente INCLUDE inclui o diretório que contém sqlncli.h.  
   
 ### <a name="code"></a>Código  

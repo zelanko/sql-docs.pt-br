@@ -1,5 +1,5 @@
 ---
-title: Guia discriminação (Visualizador do modelo de mineração) do atributo | Microsoft Docs
+title: Guia discriminação de atributo (Visualizador do modelo de mineração) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,19 +13,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f7e8d9593cd45ec5a92ea07051fe424698d8ece6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66063128"
 ---
 # <a name="attribute-discrimination-tab-mining-model-viewer"></a>Guia Distinção de Atributo (Visualizador do Modelo de Mineração)
   Utilize a guia **Distinção de Atributo** para comparar os estados dos atributos de entrada e ver como eles estão relacionados aos atributos de saída. Os valores de atributo que compõem a maior diferença entre os dois estados de atributos previsíveis são listados em primeiro lugar.  
   
- **Para obter mais informações:** [Algoritmo Microsoft Naive Bayes](data-mining/microsoft-naive-bayes-algorithm.md), [procurar um modelo usando o visualizador Microsoft Naive Bayes](data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
+ **Para obter mais informações:** [Microsoft Naive Bayes Algorithm](data-mining/microsoft-naive-bayes-algorithm.md), [procurar um modelo usando o Microsoft Naive Bayes Viewer](data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
   
 ## <a name="options"></a>Opções  
- **Atualizar conteúdo do Visualizador**  
+ **Atualizar conteúdo do visualizador**  
  Recarregue o modelo de mineração no visualizador.  
   
  **Modelo de mineração**  
@@ -34,28 +34,28 @@ ms.locfileid: "66063128"
  **Visualizador**  
  Escolha um visualizador a ser utilizado para explorar o modelo de mineração selecionado. Para cada modelo, você pode escolher um visualizador personalizado ou o Visualizador de Conteúdo de Mineração da [!INCLUDE[msCoName](../includes/msconame-md.md)] . Você também pode usar visualizadores de plug-in se houver.  
   
- **Atributo**  
+ **Attribute**  
  Escolha um atributo previsível.  
   
  **Valor 1**  
  Escolha um estado do atributo previsível a ser comparado com a condição que está contida em **Valor 2**.  
   
  **Valor 2**  
- Selecione o estado do atributo previsível a ser comparado com o estado que está contido em **Valor 1**. Você também pode selecionar **todos os outros estados** para comparar o valor na **valor 1** com seu complemento-ou seja, todos os outros valores exceto o valor 1.  
+ Selecione o estado do atributo previsível a ser comparado com o estado que está contido em **Valor 1**. Você também pode selecionar **todos os outros Estados** para comparar o valor no **valor 1** com seu complemento – ou seja, todos os outros valores, exceto o valor 1.  
   
- **Pontuações de distinção para \<valor 1 > e \<valor 2 >**  
+ **Pontuações de \<discriminação para valor 1 \<> e valor 2>**  
  O gráfico contém as seguintes colunas, que descrevem como o atributo de destino está relacionado aos estados específicos do atributo de entrada.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |**Atributos**|Um atributo de entrada no modelo de mineração.|  
 |**Valores**|Um estado do atributo listado em **Atributos**.|  
-|**Favorece \<valor 1 >**|A barra indica se o atributo atual e valor favorecem o resultado de destino selecionado em **Valor 1**.|  
-|**Favorece \<valor 2 >**|A barra indica se o atributo atual e valor favorecem o resultado de destino selecionado em **Valor 2**.|  
+|**Favorece \<o valor 1>**|A barra indica se o atributo atual e valor favorecem o resultado de destino selecionado em **Valor 1**.|  
+|**Favorece \<o valor 2>**|A barra indica se o atributo atual e valor favorecem o resultado de destino selecionado em **Valor 2**.|  
   
-## <a name="see-also"></a>Consulte também  
- [Algoritmos de mineração de dados &#40;Analysis Services – Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Visualizadores do modelo de mineração &#40; Designer do modelo de mineração de dados &#41;](mining-model-viewers-data-mining-model-designer.md)   
- [Visualizadores do modelo de Mineração de dados](data-mining/data-mining-model-viewers.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Algoritmos de mineração de dados &#40;mineração de dados Analysis Services&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Visualizadores de modelo de mineração &#40;designer de modelo de mineração de dados&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Visualizadores do Modelo de Mineração de Dados](data-mining/data-mining-model-viewers.md)  
   
   

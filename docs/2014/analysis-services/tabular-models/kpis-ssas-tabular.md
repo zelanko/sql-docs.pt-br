@@ -1,5 +1,5 @@
 ---
-title: KPIs (SSAS Tabular) | Microsoft Docs
+title: KPIs (SSAS tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2bcb160a3468d2d135d63c5184b7e07d097d5050
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066997"
 ---
 # <a name="kpis-ssas-tabular"></a>KPIs (SSAS tabular)
-  Um *KPI* (indicador chave de desempenho), em um modelo de tabela, é usado para medir o desempenho de um valor, definido por uma medida *Base*, em relação a um valor de *Destino*, também definido por uma medida ou por um valor absoluto. Este tópico oferece aos autores de modelo de tabela uma compreensão básica de KPIs em um modelo de tabela.  
+  Um *KPI* (indicador chave de desempenho), em um modelo de tabela, é usado para medir o desempenho de um valor, definido por uma medida *Base* , em relação a um valor de *Destino* , também definido por uma medida ou por um valor absoluto. Este tópico oferece aos autores de modelo de tabela uma compreensão básica de KPIs em um modelo de tabela.  
   
  Seções neste tópico:  
   
@@ -45,9 +45,9 @@ ms.locfileid: "66066997"
  Um limite de Status é definido pelo intervalo entre um limite baixo e alto ou por um valor fixo. O limite de status é exibido com um gráfico para ajudar usuários a determinarem facilmente o status do Valor base comparado com o Valor de destino.  
   
 ##  <a name="bkmk_example"></a> Exemplo  
- A gerente de vendas da Adventure Works quer criar uma Tabela Dinâmica que possa ser usada para exibir rapidamente se os funcionários de vendas estão atingindo suas cotas de vendas para um determinado período (ano). Para cada funcionário de vendas, ela deseja da tabela dinâmica para exibir o valor de vendas real em dólares, o valor da cota de vendas em dólares e uma exibição gráfica simples mostrando o status do se é ou não cada funcionário de vendas abaixo, acima ou suas cotas de vendas. Ela deseja poder segmentar os dados por ano.  
+ A gerente de vendas da Adventure Works quer criar uma Tabela Dinâmica que possa ser usada para exibir rapidamente se os funcionários de vendas estão atingindo suas cotas de vendas para um determinado período (ano). Para cada funcionário de vendas, ela deseja que a tabela dinâmica exiba o valor de vendas real em dólares, o valor da cota de vendas em dólares e uma exibição gráfica simples mostrando o status de cada funcionário de vendas abaixo ou acima de sua cota de vendas. Ela deseja poder segmentar os dados por ano.  
   
- Para fazer isso, o gerente de vendas pede a Ajuda do desenvolvedor de soluções de BI da organização para adicionar um KPI de vendas ao modelo de tabela AdventureWorks. A gerente de vendas em seguida usará o [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] para conectar-se ao Modelo tabular do Adventure Works como uma fonte de dados e criará uma Tabela Dinâmica com os campos (medidas e KPI) e segmentações de dados para analisar se a força de vendas está atingindo as cotas.  
+ Para fazer isso, o gerente de vendas lista a ajuda do desenvolvedor de soluções de BI da sua organização a adicionar um KPI de vendas ao modelo de tabela AdventureWorks. A gerente de vendas em seguida usará o [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] para conectar-se ao Modelo tabular do Adventure Works como uma fonte de dados e criará uma Tabela Dinâmica com os campos (medidas e KPI) e segmentações de dados para analisar se a força de vendas está atingindo as cotas.  
   
  No modelo, é criada uma medida na coluna SalesAmount na tabela FactResellerSales, que dá o valor de vendas real em dólares para cada funcionário de vendas. Esta medida definirá o Valor base do KPI.  
   
@@ -70,23 +70,23 @@ Target SalesAmountQuota:=Sum(FactSalesQuota[SalesAmountQuota])
   
  Agora que as medidas foram criadas para servir como o Valor base e o Valor de destino do KPI, a medida Sales é estendida para um novo KPI de vendas. No KPI de vendas, a medida de destino SalesAmountQuota é definida como o Valor de destino. O Limite de status é definido como um intervalo por percentual, o destino do qual é 100%, que significa as vendas reais definidas pela medida Sales que atingiu a quantidade de cota definida na medida de destino SalesAmountQuota. Os percentuais Baixo e Alto são definidos na barra de status e um tipo de gráfico é selecionado.  
   
- O gerente de vendas agora pode criar uma tabela dinâmica adicionando o valor Base do KPI, valor de destino e Status ao campo valores. A coluna Employees é adicionada ao campo RowLabel e a coluna CalendarYear é adicionada como uma segmentação de dados.  
+ O gerente de vendas agora pode criar uma tabela dinâmica adicionando o valor base do KPI, o valor de destino e o status ao campo valores. A coluna Employees é adicionada ao campo RowLabel e a coluna CalendarYear é adicionada como uma segmentação de dados.  
   
  A gerente de vendas agora pode fatiar por ano o valor de vendas real, o valor da cota de vendas e o status para cada funcionário de vendas. Ela pode analisar tendências de vendas ao longo de anos para determinar se precisa ajustar a cota para um funcionário de vendas.  
   
-##  <a name="bkmk_create"></a> Criar e editar KPIs  
+##  <a name="bkmk_create"></a>Criar e editar KPIs  
  Para criar KPIs, no designer de modelo, você usará a caixa de diálogo Indicador chave de desempenho. Como KPIs devem ser associados a uma medida, você cria um KPI estendendo uma medida que é avaliada como um valor Base e, em seguida, criando uma medida que é avaliada como um valor de Destino ou inserindo um valor absoluto. Depois que a medida Base (valor) e o valor de Destino forem definidos, você pode definir os parâmetros de limite de status entre os valores Base e Destino. O status é exibido em um formato gráfico usando ícones selecionáveis, barras, gráficos ou cores. Os valores Base e de Destino, assim como o Status, podem ser adicionados a um relatório ou Tabela Dinâmica como valores que podem ser fatiados em relação a outros campos de dados.  
   
  Para exibir a caixa de diálogo Indicador chave de desempenho, na grade de medida para uma tabela, clique com o botão direito em uma medida que servirá como valor Base e clique em **Criar KPI**. Depois que uma medida foi estendida para um KPI como um valor Base, um ícone será exibido ao lado do nome da medida na grade de medida identificando a medida como associada a um KPI.  
   
 ##  <a name="bkmk_related_tasks"></a> Tarefas relacionadas  
   
-|Tópico|Descrição|  
+|Tópico|DESCRIÇÃO|  
 |-----------|-----------------|  
-|[Criar e gerenciar KPIs &#40;SSAS de Tabela&#41;](kpis-ssas-tabular.md)|Descreve como criar um KPI com uma medida Base, uma medida de Destino e limites de status.|  
+|[Criar e gerenciar KPIs &#40;SSAS de tabela&#41;](kpis-ssas-tabular.md)|Descreve como criar um KPI com uma medida Base, uma medida de Destino e limites de status.|  
   
-## <a name="see-also"></a>Consulte também  
- [Medidas &#40;SSAS de Tabela&#41;](measures-ssas-tabular.md)   
- [Perspectivas &#40;SSAS de Tabela&#41;](perspectives-ssas-tabular.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Medidas &#40;&#41;de tabela do SSAS](measures-ssas-tabular.md)   
+ [Perspectivas &#40;SSAS de tabela&#41;](perspectives-ssas-tabular.md)  
   
   

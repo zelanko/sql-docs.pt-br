@@ -11,17 +11,17 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: b3eacaba2ad0ddc2c0475d29b151d0a50be98fc0
-ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72688713"
 ---
 # <a name="circularstring"></a>CircularString
   Um `CircularString` é uma coleção de zero ou mais segmentos de arco circulares contínuos. Um segmento de arco circular é um segmento curvado definido por três pontos em um plano bidimensional; o primeiro ponto não pode ser igual ao terceiro ponto. Se todos os três pontos de um segmento de arco circular forem colineares, o segmento de arco será tratado como um segmento de linha.  
   
 > [!IMPORTANT]  
->  Para obter uma descrição detalhada e exemplos dos novos recursos espaciais introduzidos no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], incluindo o subtipo `CircularString`, baixe os white paper [novos recursos espaciais no SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407).  
+>  Para obter uma descrição detalhada e exemplos dos novos recursos espaciais introduzidos no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], `CircularString` incluindo o subtipo, baixe o White Paper, [novos recursos espaciais no SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407).  
   
 ## <a name="circularstring-instances"></a>Instâncias CircularString  
  O desenho seguinte mostra instâncias `CircularString` válidas:  
@@ -29,7 +29,7 @@ ms.locfileid: "72688713"
  ![](../../database-engine/media/5ff17e34-b578-4873-9d33-79500940d0bc.png "5ff17e34-b578-4873-9d33-79500940d0bc")  
   
 ### <a name="accepted-instances"></a>Instâncias aceitas  
- Uma instância de `CircularString` será aceita se estiver vazia ou contiver um número ímpar de pontos, n, em que n > 1. As instâncias `CircularString` a seguir são aceitas.  
+ Uma `CircularString` instância será aceita se estiver vazia ou contiver um número ímpar de pontos, n, em que n > 1. As instâncias `CircularString` a seguir são aceitas.  
   
 ```sql
 DECLARE @g1 geometry = 'CIRCULARSTRING EMPTY';  
@@ -37,7 +37,7 @@ DECLARE @g2 geometry = 'CIRCULARSTRING(1 1, 2 0, -1 1)';
 DECLARE @g3 geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 2 0, 1 1)';  
 ```  
   
- `@g3` mostra que `CircularString` instância pode ser aceita, mas não é válida. A declaração da instância CircularString a seguir não é aceita. Esta declaração lança uma `System.FormatException`.  
+ `@g3`mostra que `CircularString` a instância pode ser aceita, mas não válida. A declaração da instância CircularString a seguir não é aceita. Esta declaração lança uma `System.FormatException`.  
   
 ```sql
 DECLARE @g geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 1 1)';  
@@ -87,7 +87,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid();
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-instantiating-a-geometry-instance-with-an-empty-circularstring"></a>A. Criando uma instância de geometry com uma CircularString vazia  
+### <a name="a-instantiating-a-geometry-instance-with-an-empty-circularstring"></a>a. Criando uma instância de geometry com uma CircularString vazia  
  Esse exemplo mostra como criar uma instância `CircularString` vazia:  
   
 ```sql  
@@ -133,7 +133,7 @@ SELECT 'Perimeter = ' + CAST(@g.STLength() AS NVARCHAR(10));
 Perimeter = 5.65685  
 ```  
   
- Observe que o valor do exemplo de `CircularString` é próximo de 2&#x03c0; (2 * PI), que é a circunferência real do círculo.  
+ Observe que o valor do `CircularString` exemplo é próximo a 2&#x03c0; (2 * PI), que é a circunferência real do círculo.  
   
 ### <a name="d-declaring-and-instantiating-a-geometry-instance-with-a-circularstring-in-the-same-statement"></a>D. Declarando e criando uma instância de geometry com uma CircularString na mesma instrução  
  Este snippet mostra como declarar e criar uma instância de `geometry` com uma `CircularString` na mesma instrução:  
@@ -157,7 +157,7 @@ DECLARE @g geometry;
 SET @g = geometry::STGeomFromText('CIRCULARSTRING(0 0, 1 2, 2 4)', 0);  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Visão geral de tipos de dados espaciais](spatial-data-types-overview.md)   
  [CompoundCurve](compoundcurve.md)   
  [MakeValid &#40;tipos de dados geography&#41;](/sql/t-sql/spatial-geography/makevalid-geography-data-type)   

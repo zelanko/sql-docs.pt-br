@@ -11,18 +11,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 414d9135989c39ea183d14d2d6f5dfa6e84e6fe6
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797756"
 ---
 # <a name="specify-instances-in-the-sql-server-powershell-provider"></a>Especificar instâncias no provedor do SQL Server PowerShell
   Os caminhos especificados para o provedor do SQL Server PowerShell devem identificar a instância do [!INCLUDE[ssDE](../includes/ssde-md.md)] e o computador no qual ela está sendo executada. A sintaxe para especificar o computador e a instância deve obedecer as regras para identificadores do SQL Server e caminhos do Windows PowerShell.  
   
-1.  **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions)  
+1.  **Antes de começar:**  [limitações e restrições](#LimitationsRestrictions)  
   
-2.  **To specify an instance:**  [Examples](#Examples)  
+2.  **Para especificar uma instância:**  [exemplos](#Examples)  
   
 ## <a name="before-you-begin"></a>Antes de começar  
  O primeiro nó depois de SQLSERVER:\SQL em um caminho de provedor SQL Server é o nome do computador que está executando a instância do [!INCLUDE[ssDE](../includes/ssde-md.md)]; por exemplo:  
@@ -48,7 +48,7 @@ SQLSERVER:\SQL\MyComputer\MyInstance
   
  O provedor do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] requer que o nome da instância sempre seja especificado. Para instâncias padrão, especifique o nome da instância como DEFAULT.  
   
-##  <a name="Examples"></a> Exemplos; Computador e nomes de instância  
+##  <a name="Examples"></a>Disso Nomes de computador e instância  
  Este exemplo usa localhost e DEFAULT para especificar a instância padrão no computador local:  
   
 ```powershell
@@ -75,7 +75,7 @@ Set-Location SQLSERVER:\SQL\localhost\DEFAULT
     Set-Location SQLSERVER:\SQL\%28local%29\DEFAULT  
     ```  
   
-## <a name="see-also"></a>Consulte também  
- [Identificadores do SQL Server no PowerShell](sql-server-identifiers-in-powershell.md)   
- [Provedor do SQL Server PowerShell](sql-server-powershell-provider.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Identificadores de SQL Server no PowerShell](sql-server-identifiers-in-powershell.md)   
+ [Provedor de SQL Server PowerShell](sql-server-powershell-provider.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  

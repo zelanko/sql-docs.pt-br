@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3f110b54d1a8a057f16b5e5682adc3beb04c54f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073729"
 ---
 # <a name="visual-totals-and-non-visual-totals"></a>Totais visuais e totais não visuais
@@ -36,11 +36,11 @@ ms.locfileid: "66073729"
   
 |||||||  
 |-|-|-|-|-|-|  
-||**Todos os Produtos**|**Acessórios**|**Bikes**|**Roupas**|**Componentes**|  
-|**Todos os Revendedores**|**$80,450,596.98**|**$571,297.93**|**$66,302,381.56**|**$1,777,840.84**|**$11,799,076.66**|  
-|**Specialty Bike Shop**|**$6,756,166.18**|**$65,125.48**|**$6,080,117.73**|**$252,933.91**|**$357,989.07**|  
-|**Revendedor de Valor Agregado**|**$34,967,517.33**|**$175,002.81**|**$30,892,354.33**|**$592,385.71**|**$3,307,774.48**|  
-|**Warehouse**|**$38,726,913.48**|**$331,169.64**|**$29,329,909.50**|**$932,521.23**|**$8,133,313.11**|  
+||**Todos os produtos**|**Acessórios**|**Bicicletas**|**Vestuário**|**Componentes**|  
+|**Todos os revendedores**|**$80450596.98**|**$571297.93**|**$66302381.56**|**$1777840.84**|**$11799076.66**|  
+|**Loja de bicicletas Specialty**|**$6756166.18**|**$65125.48**|**$6080117.73**|**$252933.91**|**$357989.07**|  
+|**Revendedor de valor agregado**|**$34,967,517.33**|**$175002.81**|**$30892354.33**|**$592385.71**|**$3307774.48**|  
+|**Armazén**|**$38,726,913.48**|**$331169.64**|**$29329909.50**|**$932521.23**|**$8133313.11**|  
   
 ## <a name="non-visual-on-rows-and-columns"></a>Não visual em linhas e colunas  
  Para produzir uma tabela somente com dados dos produtos Accessories e Clothing, revendedores Value Added Reseller e Warehouse, mas mantendo os totais gerais, o seguinte poderia ser escrito usando NON VISUAL:  
@@ -61,10 +61,10 @@ ms.locfileid: "66073729"
   
 |||||  
 |-|-|-|-|  
-||**Todos os Produtos**|**Acessórios**|**Clothing**|  
-|**Todos os Revendedores**|**$80,450,596.98**|**$571,297.93**|**$1,777,840.84**|  
-|**Revendedor de Valor Agregado**|**$34,967,517.33**|**$175,002.81**|**$592,385.71**|  
-|**Warehouse**|**$38,726,913.48**|**$331,169.64**|**$932,521.23**|  
+||**Todos os produtos**|**Acessórios**|**Vestuário**|  
+|**Todos os revendedores**|**$80450596.98**|**$571297.93**|**$1777840.84**|  
+|**Revendedor de valor agregado**|**$34,967,517.33**|**$175002.81**|**$592385.71**|  
+|**Armazén**|**$38,726,913.48**|**$331169.64**|**$932521.23**|  
   
 ## <a name="non-visual-on-rows"></a>Não visual em linhas  
  Para criar uma tabela que totalize visualmente as colunas, mas nos totais de linhas exiba o total verdadeiro de todos os itens em [Category], a seguinte consulta deve ser emitida:  
@@ -96,13 +96,13 @@ ms.locfileid: "66073729"
   
  Quando comparados aos resultados anteriores, você poderá observar que a linha [Todos os Revendedores] agora soma os valores exibidos para [Revendedor de Valor Agregado] e [Warehouse], mas a coluna [Todos os Produtos] mostra o valor total para todos os produtos, inclusive aqueles não exibidos.  
   
-## <a name="see-also"></a>Consulte também  
- [Principais conceitos em MDX &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Conceitos principais em MDX &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
  [Autoexists](autoexists.md)   
- [Trabalhando com membros, tuplas e conjuntos &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)   
+ [Trabalhando com membros, tuplas e conjuntos &#40;&#41;MDX](working-with-members-tuples-and-sets-mdx.md)   
  [Conceitos básicos de consulta MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)   
- [A consulta básica de MDX &#40;MDX&#41;](mdx-query-the-basic-query.md)   
- [Restringindo a consulta com os eixos de consulta e segmentação &#40;MDX&#41;](mdx-query-and-slicer-axes-restricting-the-query.md)   
+ [A consulta MDX básica &#40;&#41;MDX](mdx-query-the-basic-query.md)   
+ [Restringindo a consulta com eixos de consulta e de segmentação &#40;MDX&#41;](mdx-query-and-slicer-axes-restricting-the-query.md)   
  [Estabelecendo o contexto de cubo em uma consulta &#40;MDX&#41;](establishing-cube-context-in-a-query-mdx.md)  
   
   
