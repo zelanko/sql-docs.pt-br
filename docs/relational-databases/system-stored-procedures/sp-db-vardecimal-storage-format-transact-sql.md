@@ -23,13 +23,13 @@ ms.assetid: 9920b2f7-b802-4003-913c-978c17ae4542
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 28628ee5dc8ff1bde7906dfea7fca60470720e11
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68108221"
 ---
-# <a name="spdbvardecimalstorageformat-transact-sql"></a>sp_db_vardecimal_storage_format (Transact-SQL)
+# <a name="sp_db_vardecimal_storage_format-transact-sql"></a>sp_db_vardecimal_storage_format (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retorna o formato de armazenamento vardecimal atual de um banco de dados ou habilita um banco de dados para formato de armazenamento vardecimal.  A partir do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], os bancos de dados de usuário ficam sempre habilitados. A habilitação de bancos de dados para o formato de armazenamento vardecimal é necessária apenas no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
@@ -47,22 +47,23 @@ sp_db_vardecimal_storage_format [ [ @dbname = ] 'database_name']
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @dbname=] '*database_name*'  
- É o nome do banco de dados para o qual o formato de armazenamento será alterado. *Database_Name* está **sysname**, sem padrão. Se o nome do banco de dados for omitido, os status do formato de armazenamento vardecimal de todos os bancos de dados na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serão retornados.  
+ [ @dbname= ] '*database_name*'  
+ É o nome do banco de dados para o qual o formato de armazenamento será alterado. *database_name* é **sysname**, sem padrão. Se o nome do banco de dados for omitido, os status do formato de armazenamento vardecimal de todos os bancos de dados na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serão retornados.  
   
- [ @vardecimal_storage_format=] {'ON' |' DESATIVAR '}  
- Especifica se o formato de armazenamento vardecimal está habilitado. @vardecimal_storage_format pode ser ON ou OFF. O parâmetro é **varchar(3)** , sem padrão. Se um nome de banco de dados for fornecido, mas o @vardecimal_storage_format for omitido, a configuração atual do banco de dados especificado será retornada. Esse argumento não tem nenhum efeito no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou em versões posteriores.  
+ [ @vardecimal_storage_format= ] {' ON ' | ' Desativado '}  
+ Especifica se o formato de armazenamento vardecimal está habilitado. 
+  @vardecimal_storage_format pode ser ON ou OFF. O parâmetro é **varchar (3)**, sem padrão. Se um nome de banco de dados for fornecido, mas o @vardecimal_storage_format for omitido, a configuração atual do banco de dados especificado será retornada. Esse argumento não tem nenhum efeito no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou em versões posteriores.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Se o formato de armazenamento do banco de dados não pode ser alterado, sp_db_vardecimal_storage_format retornará um erro. Se o banco de dados já estiver no estado especificado, o procedimento armazenado não terá nenhum efeito.  
+ Se o formato de armazenamento do banco de dados não puder ser alterado, sp_db_vardecimal_storage_format retornará um erro. Se o banco de dados já estiver no estado especificado, o procedimento armazenado não terá nenhum efeito.  
   
- Se o @vardecimal_storage_format argumento não for fornecido, retornará as colunas Nome do banco de dados e o estado de Vardecimal.  
+ Se o @vardecimal_storage_format argumento não for fornecido, retornará o nome do banco de dados de colunas e o estado vardecimal.  
   
 ## <a name="remarks"></a>Comentários  
- sp_db_vardecimal_storage_format retorna o estado de vardecimal, mas não é possível alterar o estado de vardecimal.  
+ sp_db_vardecimal_storage_format retorna o estado de vardecimal, mas não pode alterar o estado de vardecimal.  
   
  sp_db_vardecimal_storage_format falhará nas seguintes circunstâncias:  
   
@@ -108,7 +109,7 @@ EXEC sp_tableoption 'Sales.SalesOrderDetail', 'vardecimal storage format', 1 ;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Procedimentos armazenados do mecanismo de banco de dados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Mecanismo de Banco de Dados procedimentos armazenados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

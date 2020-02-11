@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: eafa0dc2be5ee9ceffd86185399168589fdd8b1f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721224"
 ---
 # <a name="filter-table-rows"></a>Filtrar Linhas da Tabela
@@ -49,7 +49,7 @@ ms.locfileid: "62721224"
  Esse painel é populado com filtros à medida que são adicionados a artigos de tabela na publicação. Tabelas com filtros de linha são mostradas como nós de alto nível no painel. Para publicações de mesclagem, tabelas para as quais a filtragem foi estendida através de um filtro de junção são mostradas como nós filhos.  
   
  **Adicionar**  
- Clique em **Adicionar** para iniciar uma caixa de diálogo que permite filtrar artigos de tabela. Clicar em **Adicionar** para um instantâneo ou uma publicação transacional inicia imediatamente uma caixa de diálogo. Clicar em **Adicionar** para uma publicação de mesclagem exibe três opções: **Adicionar Filtro**; **Adicionar junção para estender o filtro selecionado**; **Gerar filtros automaticamente**.  
+ Clique em **Adicionar** para iniciar uma caixa de diálogo que permite filtrar artigos de tabela. Clicar em **Adicionar** para um instantâneo ou uma publicação transacional inicia imediatamente uma caixa de diálogo. Clicar em **Adicionar** para uma publicação de mesclagem exibe três opções: **Adicionar Filtro**; **Adicionar Junção para Estender o Filtro Selecionado**; **Gerar Filtros Automaticamente**.  
   
 -   Selecione **Adicionar Filtro** para iniciar a caixa de diálogo **Adicionar filtro** . Essa caixa de diálogo permite aplicar filtros de linha a um artigo de tabela. Na caixa de diálogo **Adicionar Filtro** você pode, por exemplo, especificar que uma tabela com dados de cliente só contenha dados de clientes franceses quando for replicada para Assinantes.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "62721224"
  **Filter**  
  Contém a definição [!INCLUDE[tsql](../../includes/tsql-md.md)] para o filtro selecionado no painel de filtro.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Create a Publication](publish/create-a-publication.md)   
  [Exibir e modificar as propriedades da publicação](publish/view-and-modify-publication-properties.md)   
  [Filtrar os dados publicados](publish/filter-published-data.md)   

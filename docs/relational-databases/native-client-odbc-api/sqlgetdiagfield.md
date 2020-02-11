@@ -15,18 +15,18 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f2a3d8d829794692cff6ecb9879e6f62f0b0b91b
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73786476"
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  O driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client especifica os seguintes campos de diagnóstico adicionais para **SQLGetDiagField**. Esses campos suportam relatórios bem-elaborados de erros para os aplicativos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e estão disponíveis em todos os registros de diagnóstico gerados em identificadores de conexão conectados ODBC e identificadores de instrução ODBC. Os campos são definidos em sqlncli.h.  
+  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC do Native Client especifica os seguintes campos de diagnóstico adicionais para **SQLGetDiagField**. Esses campos suportam relatórios bem-elaborados de erros para os aplicativos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e estão disponíveis em todos os registros de diagnóstico gerados em identificadores de conexão conectados ODBC e identificadores de instrução ODBC. Os campos são definidos em sqlncli.h.  
   
-|Campo de registro de diagnóstico|Descrição|  
+|Campo de registro de diagnóstico|DESCRIÇÃO|  
 |------------------------------|-----------------|  
 |SQL_DIAG_SS_LINE|Informa o número da linha de um procedimento armazenado que gera um erro. O valor de SQL_DIAG_SS_LINE só será útil se SQL_DIAG_SS_PROCNAME retornar um valor. O valor é retornado como um inteiro de 16 bits sem-sinal.|  
 |SQL_DIAG_SS_MSGSTATE|O estado de uma mensagem de erro. Para obter informações sobre o estado da mensagem de erro, consulte [RAISERROR](../../t-sql/language-elements/raiserror-transact-sql.md). O valor é retornado como um inteiro de 32 bits com assinatura.|  
@@ -38,12 +38,12 @@ ms.locfileid: "73786476"
   
  O driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client informa os códigos de função dinâmicos adicionais a seguir que identificam a última instrução do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tentada. O código de função dinâmico é retornado no cabeçalho (record 0) do registro de diagnóstico definido e, portanto, está disponível em cada execução (bem-sucedida ou não).  
   
-|Código de função dinâmico|Source|  
+|Código de função dinâmico|Fonte|  
 |---------------------------|------------|  
-|SQL_DIAG_DFC_SS_ALTER_DATABASE|instrução ALTER DATABASE|  
+|SQL_DIAG_DFC_SS_ALTER_DATABASE|Instrução ALTERAR BANCO DE DADOS|  
 |SQL_DIAG_DFC_SS_CHECKPOINT|Instrução CHECKPOINT|  
 |SQL_DIAG_DFC_SS_CONDITION|O erro ocorreu nas cláusulas WHERE ou HAVING de uma instrução.|  
-|SQL_DIAG_DFC_SS_CREATE_DATABASE|Instrução CREATE DATABASE|  
+|SQL_DIAG_DFC_SS_CREATE_DATABASE|Instrução CRIAR BANCO DE DADOS|  
 |SQL_DIAG_DFC_SS_CREATE_DEFAULT|Instrução CREATE DEFAULT|  
 |SQL_DIAG_DFC_SS_CREATE_PROCEDURE|Instrução CREATE PROCEDURE|  
 |SQL_DIAG_DFC_SS_CREATE_RULE|Instrução CREATE RULE|  
@@ -75,7 +75,7 @@ ms.locfileid: "73786476"
 |SQL_DIAG_DFC_SS_READTEXT|Instrução READTEXT|  
 |SQL_DIAG_DFC_SS_RECONFIGURE|Instrução RECONFIGURE|  
 |SQL_DIAG_DFC_SS_RETURN|Instrução de controle de fluxo RETURN|  
-|SQL_DIAG_DFC_SS_SELECT_INTO|instrução SELECT INTO|  
+|SQL_DIAG_DFC_SS_SELECT_INTO|Instrução SELECT INTO|  
 |SQL_DIAG_DFC_SS_SET|Instrução SET (genérica, todas as opções)|  
 |SQL_DIAG_DFC_SS_SET_IDENTITY_INSERT|Instrução SET IDENTITY_INSERT|  
 |SQL_DIAG_DFC_SS_SET_ROW_COUNT|Instrução SET ROWCOUNT|  
@@ -99,10 +99,10 @@ ms.locfileid: "73786476"
 ## <a name="sqlgetdiagfield-and-table-valued-parameters"></a>SQLGetDiagField e parâmetros com valor de tabela  
  SQLGetDiagField pode ser usado para recuperar dois campos de diagnóstico: SQL_DIAG_SS_TABLE_COLUMN_NUMBER e SQL_DIAG_SS_TABLE_ROW_NUMBER. Esses campos ajudam a determinar qual valor gerou o erro ou a mensagem de advertência associada ao registro de diagnóstico.  
   
- Para obter mais informações sobre parâmetros com valor de tabela, consulte [parâmetros &#40;com valor&#41;de tabela ODBC](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
+ Para obter mais informações sobre parâmetros com valor de tabela, consulte [parâmetros com valor de tabela &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Função SQLGetDiagField](https://go.microsoft.com/fwlink/?LinkId=59352)   
- [Detalhes da implementação da API do ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
+ [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

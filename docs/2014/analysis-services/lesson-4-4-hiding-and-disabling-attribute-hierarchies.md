@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4381047ad4373a2a5b03dc9ba1c96274b37621f2
-ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69530851"
 ---
 # <a name="hiding-and-disabling-attribute-hierarchies"></a>Ocultando e desabilitando as hierarquias de atributo
@@ -49,25 +49,25 @@ ms.locfileid: "69530851"
   
 2.  Observe se as seguintes hierarquias de atributo aparecem na lista **Hierarquia** :  
   
-    -   **Taxa Básica**  
+    -   **Taxa base**  
   
-    -   **Birth Date**  
+    -   **Data de nascimento**  
   
-    -   **ID de Logon**  
+    -   **ID de logon**  
   
-    -   **Gerente SSN**  
+    -   **SSN do gerente**  
   
     -   **SSN**  
   
 3.  Alterne para a guia **Estrutura da Dimensão** e selecione os atributos a seguir no painel **Atributos** . Você pode selecionar várias medidas clicando em cada uma enquanto mantém pressionada a tecla CTRL.  
   
-    -   **Taxa Básica**  
+    -   **Taxa base**  
   
-    -   **Birth Date**  
+    -   **Data de nascimento**  
   
-    -   **ID de Logon**  
+    -   **ID de logon**  
   
-    -   **Gerente SSN**  
+    -   **SSN do gerente**  
   
     -   **SSN**  
   
@@ -77,7 +77,7 @@ ms.locfileid: "69530851"
   
      A imagem a seguir mostra a propriedade **AttributeHierarchyEnabled** definida como False para os atributos selecionados.  
   
-     ![Propriedade AttributeHierarchyEnabled definida como false](../../2014/tutorials/media/l4-hierarchyenabled-1.gif "Propriedade AttributeHierarchyEnabled definida como false")  
+     ![Propriedade AttributeHierarchyEnabled definida como False](../../2014/tutorials/media/l4-hierarchyenabled-1.gif "Propriedade AttributeHierarchyEnabled definida como False")  
   
 5.  No menu **Compilar** , clique em **Implantar Tutorial do Analysis Services**.  
   
@@ -91,15 +91,15 @@ ms.locfileid: "69530851"
   
 2.  Observe se as seguintes hierarquias de atributo aparecem na lista **Hierarquia** :  
   
-    -   **Nome Completo**  
+    -   **Nome completo**  
   
-    -   **Postal Code**  
+    -   **CEP**  
   
 3.  Alterne para a guia **Estrutura da Dimensão** e selecione os seguintes atributos no painel **Atributos** usando a tecla CTRL para selecionar vários atributos ao mesmo tempo:  
   
     -   **Nome completo**  
   
-    -   **Postal Code**  
+    -   **CEP**  
   
 4.  Na janela Propriedades, defina o valor da propriedade **AttributeHierarchyVisible** como **False** para os atributos selecionados.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "69530851"
   
      A imagem a seguir mostra a propriedade **AttributeHierarchyVisible** definida como False.  
   
-     ![Propriedade AttributeHierarchyVisible definida como false](../../2014/tutorials/media/l4-hierarchyvisible-1.gif "Propriedade AttributeHierarchyVisible definida como false")  
+     ![Propriedade AttributeHierarchyVisible definida como False](../../2014/tutorials/media/l4-hierarchyvisible-1.gif "Propriedade AttributeHierarchyVisible definida como False")  
   
 5.  Arraste o atributo **CEP** do painel **Atributos** para a hierarquia de usuário **Geografia do Cliente** no painel **Hierarquias e Níveis** , imediatamente abaixo do nível **Cidade** .  
   

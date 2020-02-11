@@ -17,10 +17,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 9591b483380d8bfcaea8404cccfa0279d3bcc035
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74957190"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Gerenciamento extensível de chaves usando o Azure Key Vault (SQL Server)
@@ -49,7 +49,7 @@ ms.locfileid: "74957190"
   
  A imagem a seguir resume o fluxo do processo de EKM usando o cofre da chave. Os números de etapa do processo na imagem não devem corresponder aos números de etapa de instalação que seguem a imagem.  
   
- ![EKM do SQL Server usando o Azure Key Vault](../../../database-engine/media/ekm-using-azure-key-vault.png "EKM do SQL Server usando o Azure Key Vault")  
+ ![EKM do SQL Server com o Azure Key Vault](../../../database-engine/media/ekm-using-azure-key-vault.png "EKM do SQL Server com o Azure Key Vault")  
   
 ##  <a name="Step1"></a>Etapa 1: configurar o Key Vault para uso por SQL Server  
  Use as seguintes etapas para configurar uma chave de cofre para uso com o [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] para proteção de chave de criptografia. Um cofre já pode estar em uso para a organização. Quando não houver um cofre, o Administrador do Azure de sua organização, designado para gerenciar chaves de criptografia, poderá criar um cofre, gerar uma chave assimétrica no cofre e, então, autorizar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para usar a chave. Familiarize-se com o serviço de cofre de chave consultando [Introdução ao Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521402)e a referência de [Cmdlets do PowerShell do Azure Key Vault](https://docs.microsoft.com/powershell/module/azurerm.keyvault) .  
@@ -94,7 +94,7 @@ ms.locfileid: "74957190"
   
      Links para a documentação do Azure Key Vault  
   
-    -   [O que é Azure Key Vault?](https://go.microsoft.com/fwlink/?LinkId=521401)  
+    -   [O que é o Cofre da Chave do Azure?](https://go.microsoft.com/fwlink/?LinkId=521401)  
   
     -   [Introdução ao Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521402)  
   
@@ -115,7 +115,7 @@ ms.locfileid: "74957190"
   
 ##  <a name="Step3"></a>Etapa 3: configurar SQL Server para usar um provedor EKM para o Key Vault  
   
-###  <a name="Permissions"></a>Permissões  
+###  <a name="Permissions"></a> Permissões  
  Para concluir esse processo todo é necessária a permissão CONTROL SERVER ou associação na função de servidor fixa **sysadmin** . Ações específicas requerem as seguintes permissões:  
   
 -   Para criar um provedor criptográfico, é necessária a permissão CONTROL SERVER ou associação na função de servidor fixa **sysadmin** .  
@@ -198,17 +198,17 @@ ms.locfileid: "74957190"
 > [!TIP]  
 >  Os usuários receberão o erro **Não é possível exportar a chave pública do provedor. Código de erro do provedor: 2053.** deve verificar suas permissões **get**, **list**, **wrapKey**e **unwrapKey** no cofre da chave.  
   
- Para saber mais, consulte o seguinte:   
+ Para saber mais, consulte o seguinte:  
   
--   [&#41;&#40;Transact-SQL de sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  
+-   [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  
   
--   [CRIAR provedor CRIPTOGRÁFICO &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-cryptographic-provider-transact-sql)  
+-   [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-cryptographic-provider-transact-sql)  
   
--   [CRIAR CREDENCIAl &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)  
+-   [CREATE CREDENTIAL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)  
   
--   [CRIAR chave assimétrica &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-asymmetric-key-transact-sql)  
+-   [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)  
   
--   [CRIAR logon &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-login-transact-sql)  
+-   [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql)  
   
 -   [ALTER LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-login-transact-sql)  
   
@@ -273,9 +273,9 @@ ms.locfileid: "74957190"
     GO  
     ```  
   
-     Para saber mais, consulte o seguinte:   
+     Para saber mais, consulte o seguinte:  
   
-    -   [CRIAR chave de criptografia de banco de dados &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-database-encryption-key-transact-sql)  
+    -   [CREATE DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-database-encryption-key-transact-sql)  
   
     -   [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)  
   
@@ -342,10 +342,10 @@ CLOSE SYMMETRIC KEY DATA_ENCRYPTION_KEY;
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [CRIAR provedor CRIPTOGRÁFICO &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-cryptographic-provider-transact-sql)   
- [CRIAR CREDENCIAl &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)   
- [CRIAR chave assimétrica &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-asymmetric-key-transact-sql)   
- [CRIAR chave simétrica &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-symmetric-key-transact-sql)   
+ [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-cryptographic-provider-transact-sql)   
+ [CREATE CREDENTIAL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)   
+ [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)   
+ [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-symmetric-key-transact-sql)   
  [Gerenciamento extensível de chaves &#40;EKM&#41;](extensible-key-management-ekm.md)   
  [Habilitar TDE usando EKM](enable-tde-on-sql-server-using-ekm.md)   
  [Criptografia de backup](../../backup-restore/backup-encryption.md)   

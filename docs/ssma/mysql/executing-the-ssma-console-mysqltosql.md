@@ -1,5 +1,5 @@
 ---
-title: Executar o Console do SSMA (MySQLToSQL) | Microsoft Docs
+title: Executando o console do SSMA (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,35 +17,35 @@ helpviewer_keywords:
 ms.assetid: e3e9f7e4-0619-4861-a202-3d5d39953b26
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: d309a1d0bbdf21c94458771e38aa67fd3eb3fe4d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 239ba5021363be583572d5d24887233261e359cc
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102990"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76909686"
 ---
 # <a name="executing-the-ssma-console-mysqltosql"></a>Executar o console do SSMA (MySQLToSQL)
-Microsoft fornece um conjunto robusto de script de comandos de arquivo para executar e controlar atividades do SSMA.  
+A Microsoft fornece um conjunto robusto de comandos de arquivo de script para executar e controlar atividades do SSMA.  
   
-O aplicativo de console usa determinados comandos do arquivo de script padrão como enumerado nesta seção.  
+O aplicativo de console usa determinados comandos de arquivo de script padrão, conforme enumerado nesta seção.  
   
-## <a name="project--script-file-commands"></a>Comandos de arquivo de Script do projeto  
+## <a name="project--script-file-commands"></a>Comandos de arquivo de script do projeto  
 **Comando**  
   
-Criar-novo projeto:   
-                   Cria um novo projeto SSMA.  
+criar novo projeto:   
+                   Cria um novo projeto do SSMA.  
   
-Os comandos de projeto lidar com a criação de projetos, abrir, salvar e sair de projetos.  
+Os comandos de projeto lidam com a criação de projetos, abertura, salvamento e saída de projetos.  
   
-**script**  
+**Script**  
   
-1.  `project-folder` indica a pasta do projeto sendo criado.  
+1.  `project-folder`indica a pasta do projeto que está sendo criado.  
   
-2.  `project-name` indica o nome do projeto. {string}  
+2.  `project-name`indica o nome do projeto. {string}  
   
-3.  `overwrite-if-exists`Atributo opcional indica se um projeto existente deve ser substituído. {booliano}  
+3.  `overwrite-if-exists`Atributo opcional indica se um projeto existente deve ser substituído. Boolean  
   
-4.  `project-type:`Atributo opcional. Indica o tipo de projeto ou seja, "sql-server 2005" projeto ou projeto de "sql-server-2008" ou "sql-server-2012" ou "sql-server-2014" projeto ou "sql azure". Padrão é "sql-server-2008".  
+4.  `project-type:`Atributo opcional. Indica o tipo de projeto, por exemplo, "SQL-Server-2005" Project ou "SQL-Server-2008" Project ou o projeto "SQL-Server-2012" ou "SQL-Server-2014" ou "SQL-Azure". O padrão é "SQL-Server-2008".  
   
 **Exemplo de sintaxe:**  
   
@@ -62,20 +62,20 @@ Os comandos de projeto lidar com a criação de projetos, abrir, salvar e sair d
   
 />  
 ```  
-Atributo 'Substituir-if-exists' está **falsos** por padrão.  
+O atributo ' overwrite-if-exists ' é **false** por padrão.  
   
-É o atributo 'tipo de projeto' **sql-server-2008** por padrão.  
+O atributo ' Project-Type ' é **SQL-Server-2008** por padrão.  
   
 **Comando**  
   
-Abrir projeto:   
+projeto aberto:   
                   Abre um projeto existente.  
   
-**script**  
+**Script**  
   
-1.  `project-folder` indica a pasta do projeto sendo criado. O comando falhará se a pasta especificada não existe.  {string}  
+1.  `project-folder`indica a pasta do projeto que está sendo criado. O comando falhará se a pasta especificada não existir.  {string}  
   
-2.  `project-name` indica o nome do projeto. O comando falhará se o projeto especificado não existe.  {string}  
+2.  `project-name`indica o nome do projeto. O comando falhará se o projeto especificado não existir.  {string}  
   
 **Exemplo de sintaxe:**  
   
@@ -89,13 +89,13 @@ Abrir projeto:
 />  
 ```  
 > [!IMPORTANT]  
-> Aplicativo de Console do SSMA para MySQL dá suporte a compatibilidade com versões anteriores. Você poderá abrir projetos criados por uma versão anterior do SSMA.  
+> O aplicativo do console do SSMA para MySQL dá suporte à compatibilidade com versões anteriores. Você poderá abrir projetos criados pela versão anterior do SSMA.  
   
 **Comando**  
   
-Salvar projeto: Salva o projeto de migração.  
+Save-Project: salva o projeto de migração.  
   
-**script**  
+**Script**  
   
 **Exemplo de sintaxe:**  
   
@@ -104,10 +104,10 @@ Salvar projeto: Salva o projeto de migração.
 ```  
 **Comando**  
   
-Fechar projeto  
+fechar projeto  
                   : Fecha o projeto de migração.  
   
-**script**  
+**Script**  
   
 **Exemplo de sintaxe:**  
   
@@ -116,10 +116,10 @@ Fechar projeto
 ```  
 **Comando**  
   
-Fechar projeto  
+fechar projeto  
                   : Fecha o projeto de migração.  
   
-**script**  
+**Script**  
   
 **Exemplo de sintaxe:**  
   
@@ -130,28 +130,28 @@ Fechar projeto
   
 />  
 ```  
-Atributo 'if-modificada' é opcional, **ignorar** por padrão.  
+O atributo ' If-Modified ' é opcional, **ignore** por padrão.  
   
-## <a name="database-connection-script-file-commands"></a>Comandos de arquivo de Script de Conexão de banco de dados  
-Os comandos de Conexão de banco de dados ajudam a conectar-se ao banco de dados.  
+## <a name="database-connection-script-file-commands"></a>Comandos de arquivo de script de conexão de banco de dados  
+Os comandos de conexão do banco de dados ajudam a conectar-se ao banco de dados.  
   
-1.  O **procurar** não há suporte para o recurso da interface do usuário no console.  
+1.  Não há suporte para o recurso **procurar** da interface do usuário no console do.  
   
-2.  O **autenticação do windows** e **porta** parâmetros não são aplicáveis ao se conectar ao SQL Azure.  
+2.  Os parâmetros de autenticação e **porta** do **Windows** não são aplicáveis ao se conectar a SQL Azure.  
   
-3.  Para obter mais informações sobre 'Criando arquivos de Script', consulte [criando arquivos de Script &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-script-files-mysqltosql.md).  
+3.  Para obter mais informações sobre como criar arquivos de script, consulte [criando arquivos de script &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-script-files-mysqltosql.md).  
   
 **Comando**  
   
-conectar-se-origem-banco de dados  
+Connect-Source-Database  
   
--   Executa a conexão à fonte de dados e carrega os metadados de nível alto do banco de dados de origem, mas não todos os metadados.  
+-   Executa a conexão com o banco de dados de origem e carrega metadados de alto nível do banco de dados de origem, mas não todos os metadados.  
   
--   Se a conexão à fonte não pode ser estabelecida, um erro será gerado e o aplicativo de console para ainda mais a execução  
+-   Se a conexão com a origem não puder ser estabelecida, um erro será gerado e o aplicativo de console parará outra execução  
   
-**script**  
+**Script**  
   
-Definição de servidor é recuperada do atributo nome definido para cada conexão na seção servidor de arquivo de conexão do servidor ou o arquivo de script.  
+A definição do servidor é recuperada do atributo Name definido para cada conexão na seção do servidor do arquivo de conexão do servidor ou do arquivo de script.  
   
 **Exemplo de sintaxe:**  
   
@@ -160,17 +160,17 @@ Definição de servidor é recuperada do atributo nome definido para cada conex�
 ```  
 **Comando**  
   
-Force-carga-origem/destino-banco de dados  
+Force-Load-origem/destino-banco de dados  
   
--   Carrega os metadados da fonte.  
+-   Carrega os metadados de origem.  
   
--   É útil para trabalhar no projeto de migração off-line.  
+-   Útil para trabalhar no projeto de migração offline.  
   
--   Se a conexão para o origem/destino não puder ser estabelecida, um erro será gerado e o aplicativo de console para ainda mais a execução  
+-   Se a conexão com a origem/destino não puder ser estabelecida, um erro será gerado e o aplicativo de console parará outra execução  
   
-**script**  
+**Script**  
   
-Requer um ou vários nós de metabase como parâmetro de linha de comando.  
+Requer um ou vários nós da metabase como parâmetro de linha de comando.  
   
 **Exemplo de sintaxe:**  
   
@@ -183,13 +183,13 @@ Requer um ou vários nós de metabase como parâmetro de linha de comando.
 ```  
 **Comando**  
   
-Reconecte-origem-banco de dados  
+reconectar-fonte-banco de dados  
   
-1.  Reconecta-se à fonte de dados, mas não carrega todos os metadados ao contrário do comando connect-origem-banco de dados.  
+1.  Reconecta-se ao banco de dados de origem, mas não carrega nenhum metadado diferente do comando Connect-Source-Database.  
   
-2.  Se não é possível estabelecer (conexão com a fonte de re), um erro será gerado e o aplicativo de console ainda mais para a execução.  
+2.  Se a conexão (re) com a origem não puder ser estabelecida, um erro será gerado e o aplicativo de console parará outra execução.  
   
-**script**  
+**Script**  
   
 **Exemplo de sintaxe:**  
   
@@ -198,15 +198,15 @@ Reconecte-origem-banco de dados
 ```  
 **Comando**  
   
-connect-target-database  
+Connect-Target-Database  
   
-1.  Conecta-se ao destino do SQL Server ou SQL Azure banco de dados e carrega os metadados de nível alto do banco de dados de destino, mas não os metadados inteiramente.  
+1.  Conecta-se ao SQL Server de destino ou SQL Azure banco de dados e carrega metadados de alto nível do banco de dados de destino, mas não os metadados inteiramente.  
   
-2.  Se a conexão para o destino não puder ser estabelecida, um erro será gerado e o aplicativo de console ainda mais para a execução.  
+2.  Se a conexão com o destino não puder ser estabelecida, um erro será gerado e o aplicativo de console parará outra execução.  
   
-**script**  
+**Script**  
   
-Definição de servidor é recuperada do atributo nome definido para cada conexão na seção servidor de arquivo de conexão do servidor ou o arquivo de script  
+A definição do servidor é recuperada do atributo Name definido para cada conexão na seção do servidor do arquivo de conexão do servidor ou do arquivo de script  
   
 **Exemplo de sintaxe:**  
   
@@ -215,13 +215,13 @@ Definição de servidor é recuperada do atributo nome definido para cada conex�
 ```  
 **Comando**  
   
-reconnect-target-database  
+reconectar-destino-banco de dados  
   
-1.  Reconecta-se ao banco de dados de destino, mas não carrega todos os metadados, ao contrário do comando de destino-connect-database.  
+1.  Reconecta-se ao banco de dados de destino, mas não carrega nenhum metadado, diferente do comando Connect-Target-Database.  
   
-2.  Se a (re) conexão para o destino não puder ser estabelecida, um erro será gerado e o aplicativo de console ainda mais para a execução.  
+2.  Se a conexão (re) com o destino não puder ser estabelecida, um erro será gerado e o aplicativo de console interromperá a execução.  
   
-**script**  
+**Script**  
   
 **Exemplo de sintaxe:**  
   
@@ -229,40 +229,40 @@ reconnect-target-database
 <reconnect-target-database  server="<server-unique-name>"/>  
 ```  
   
-## <a name="report-script-file-commands"></a>Comandos de arquivo de Script de relatório  
-Os comandos de relatório geram relatórios sobre o desempenho de várias atividades do Console do SSMA.  
+## <a name="report-script-file-commands"></a>Comandos de arquivo de script de relatório  
+Os comandos de relatório geram relatórios sobre o desempenho de várias atividades do console do SSMA.  
   
 **Comando**  
   
-Gerar--relatório de avaliação  
+gerar-avaliação-relatório  
   
 1.  Gera relatórios de avaliação no banco de dados de origem.  
   
-2.  Se a conexão de banco de dados de origem não é executada antes de executar esse comando, será gerado um erro e sai do aplicativo de console.  
+2.  Se a conexão do banco de dados de origem não for executada antes da execução desse comando, um erro será gerado e o aplicativo de console será encerrado.  
   
-3.  Falha ao se conectar ao servidor de banco de dados de origem durante a execução do comando, também resulta em encerrar o aplicativo de console.  
+3.  Falha ao conectar-se ao servidor de banco de dados de origem durante a execução do comando, também resulta na finalização do aplicativo de console.  
   
-**script**  
+**Script**  
   
-1.  `assessment-report-folder:` Especifica a pasta onde o relatório de avaliação pode ser armazenado. (atributo opcional)  
+1.  `assessment-report-folder:`Especifica a pasta onde o relatório de avaliação pode ser armazenado. (atributo opcional)  
   
-2.  `object-name:` Especifica os objetos considerados para a geração de relatório de avaliação (ele pode ter nomes de objetos individuais ou um nome de objeto de grupo).  
+2.  `object-name:`Especifica os objetos considerados para geração de relatórios de avaliação (ele pode ter nomes de objetos individuais ou um nome de objeto de grupo).  
   
-3.  `object-type:` Especifica o tipo do objeto especificado no atributo de nome de objeto (se a categoria de objeto for especificada, o tipo de objeto será "category").  
+3.  `object-type:`Especifica o tipo do objeto especificado no atributo Object-Name (se a categoria de objeto for especificada, o tipo de objeto será "category").  
   
-4.  `assessment-report-overwrite:` Especifica se deve substituir a pasta de relatório de avaliação se ele já existe.  
+4.  `assessment-report-overwrite:`Especifica se a pasta do relatório de avaliação deve ser substituída, caso ela já exista.  
   
     **Valor padrão:** false. (atributo opcional)  
   
-5.  `write-summary-report-to:` Especifica o caminho onde o relatório de resumo será gerado.  
+5.  `write-summary-report-to:`Especifica o caminho onde o relatório de resumo será gerado.  
   
-    Se apenas o caminho da pasta for mencionado, em seguida, de arquivos por nome **AssessmentReport&lt;n&gt;. XML** é criado. (atributo opcional)  
+    Se apenas o caminho da pasta for mencionado, clique em arquivo **por&lt;nome&gt;AssessmentReport n. XML** é criado. (atributo opcional)  
   
-    Criação de relatório tem duas subcategorias adicionais:  
+    A criação de relatório tem duas subcategorias adicionais:  
   
-    -   `report-errors` (= "true/false", com padrão como "false" (atributos opcionais))  
+    -   `report-errors`(= "true/false", com padrão como "false" (atributos opcionais))  
   
-    -   `verbose` (= "true/false", com padrão como "false" (atributos opcionais))  
+    -   `verbose`(= "true/false", com padrão como "false" (atributos opcionais))  
   
 **Exemplo de sintaxe:**  
   
@@ -303,40 +303,40 @@ ou
 </generate-assessment-report>  
 ```  
   
-## <a name="migration--script-file-commands"></a>Comandos de arquivo de Script de migração  
-Os comandos de migração converter o esquema de banco de dados de destino para o esquema de origem e migra dados para o servidor de destino.  
+## <a name="migration--script-file-commands"></a>Comandos de arquivo de script de migração  
+Os comandos de migração convertem o esquema de banco de dados de destino para o esquema de origem e migram os dados para o servidor de destino.  
   
-A saída do console padrão definindo para os comandos de migração é o relatório de saída 'Full' com nenhum relatório de erro detalhada: Resumo somente no nó de raiz da árvore de objeto de origem.  
+A configuração de saída do console padrão para os comandos de migração é ' completo ' relatório de saída sem relatórios de erros detalhados: apenas Resumo no nó raiz da árvore do objeto de origem.  
   
 **Comando**  
   
-convert-schema  
+converter esquema  
   
-1.  Executa a conversão de esquema de origem ao esquema de destino.  
+1.  Executa a conversão de esquema da origem para o esquema de destino.  
   
-2.  Se a conexão de banco de dados de origem ou de destino não é executada antes de executar esse comando ou a conexão para o servidor de banco de dados de origem ou destino falha durante a execução do comando, será gerado um erro e sai do aplicativo de console.  
+2.  Se a conexão de banco de dados de origem ou de destino não for executada antes da execução desse comando ou se a conexão com o servidor de banco de dados de origem ou destino falhar durante a execução do comando, um erro será gerado e o aplicativo de console será encerrado.  
   
-**script**  
+**Script**  
   
-1.  `conversion-report-folder:` Especifica a pasta onde o relatório de avaliação pode ser armazenado. (atributo opcional)  
+1.  `conversion-report-folder:`Especifica a pasta onde o relatório de avaliação pode ser armazenado. (atributo opcional)  
   
-2.  `object-name:` Especifica os objetos considerados para a conversão de esquema (ele pode ter nomes de objetos individuais ou um nome de objeto de grupo).  
+2.  `object-name:`Especifica os objetos considerados para converter o esquema (ele pode ter nomes de objeto individuais ou um nome de objeto de grupo).  
   
-3.  `object-type:` Especifica o tipo do objeto especificado no atributo de nome de objeto (se a categoria de objeto for especificada, o tipo de objeto será "category").  
+3.  `object-type:`Especifica o tipo do objeto especificado no atributo Object-Name (se a categoria de objeto for especificada, o tipo de objeto será "category").  
   
-4.  `conversion-report-overwrite:` Especifica se deve substituir a pasta de relatório de avaliação se ele já existe.  
+4.  `conversion-report-overwrite:`Especifica se a pasta do relatório de avaliação deve ser substituída, caso ela já exista.  
   
     **Valor padrão:** false. (atributo opcional)  
   
-5.  `write-summary-report-to:` Especifica o caminho onde o relatório de resumo será gerado.  
+5.  `write-summary-report-to:`Especifica o caminho onde o relatório de resumo será gerado.  
   
-    Se apenas o caminho da pasta for mencionado, em seguida, de arquivos por nome **SchemaConversionReport&lt;n&gt;. XML** é criado. (atributo opcional)  
+    Se apenas o caminho da pasta for mencionado, clique em arquivo **por&lt;nome&gt;SchemaConversionReport n. XML** é criado. (atributo opcional)  
   
-    Criação de relatório de resumo tem duas subcategorias adicionais:  
+    A criação do relatório de resumo tem duas subcategorias adicionais:  
   
-    -   `report-errors` (= "true/false", com padrão como "false" (atributos opcionais))  
+    -   `report-errors`(= "true/false", com padrão como "false" (atributos opcionais))  
   
-    -   `verbose` (= "true/false", com padrão como "false" (atributos opcionais))  
+    -   `verbose`(= "true/false", com padrão como "false" (atributos opcionais))  
   
 **Exemplo de sintaxe:**  
   
@@ -376,25 +376,25 @@ ou
 ```  
 **Comando**  
   
-migrar dados  
+migrar-dados  
   
 1.  Migra os dados de origem para o destino.  
   
-**script**  
+**Script**  
   
-1.  `object-name:` Especifica os objetos de origem considerados para a migração de dados (ele pode ter nomes de objetos individuais ou um nome de objeto de grupo).  
+1.  `object-name:`Especifica os objetos de origem considerados para a migração de dados (ele pode ter nomes de objeto individuais ou um nome de objeto de grupo).  
   
-2.  `object-type:` Especifica o tipo do objeto especificado no atributo de nome de objeto (se a categoria de objeto for especificada, o tipo de objeto será "category").  
+2.  `object-type:`Especifica o tipo do objeto especificado no atributo Object-Name (se a categoria de objeto for especificada, o tipo de objeto será "category").  
   
-3.  `write-summary-report-to:` Especifica o caminho onde o relatório de resumo será gerado.  
+3.  `write-summary-report-to:`Especifica o caminho onde o relatório de resumo será gerado.  
   
-    Se apenas o caminho da pasta for mencionado, em seguida, de arquivos por nome **DataMigrationReport&lt;n&gt;. XML** é criado. (atributo opcional)  
+    Se apenas o caminho da pasta for mencionado, clique em arquivo **por&lt;nome&gt;DataMigrationReport n. XML** é criado. (atributo opcional)  
   
-    Criação de relatório tem duas subcategorias adicionais:  
+    A criação de relatório tem duas subcategorias adicionais:  
   
-    -   `report-errors` (= "true/false", com padrão como "false" (atributos opcionais))  
+    -   `report-errors`(= "true/false", com padrão como "false" (atributos opcionais))  
   
-    -   `verbose` (= "true/false", com padrão como "false" (atributos opcionais))  
+    -   `verbose`(= "true/false", com padrão como "false" (atributos opcionais))  
   
 **Exemplo de sintaxe:**  
   
@@ -433,20 +433,20 @@ ou
    report-errors="true" verbose="true"/>  
 ```  
   
-## <a name="migration-preparation-script-file-command"></a>Comando de arquivo de Script de preparação de migração  
-O comando de preparação de migração inicia o mapeamento de esquema entre os bancos de dados de origem e destino.  
+## <a name="migration-preparation-script-file-command"></a>Comando de arquivo de script de preparação de migração  
+O comando de preparação de migração inicia o mapeamento de esquema entre os bancos de dados de origem e de destino.  
   
 **Comando**  
   
-map-schema  
+mapa-esquema  
   
-Mapeamento de esquema de banco de dados de origem ao esquema de destino.  
+Mapeamento de esquema do banco de dados de origem para o esquema de destino.  
   
-**script**  
+**Script**  
   
-1.  `source-schema` Especifica o esquema de origem que nossa intenção é migrar.  
+1.  `source-schema`Especifica o esquema de origem que pretendemos migrar.  
   
-2.  `sql-server-schema` Especifica o esquema de destino onde desejamos a serem migrados.  
+2.  `sql-server-schema`Especifica o esquema de destino onde queremos que ele seja migrado.  
   
 **Exemplo de sintaxe:**  
   
@@ -458,37 +458,37 @@ Mapeamento de esquema de banco de dados de origem ao esquema de destino.
    sql-server-schema="<target-schema>"/>  
 ```  
   
-## <a name="manageability-script-file-commands"></a>Comandos de arquivo de Script de capacidade de gerenciamento  
-Os comandos de capacidade de gerenciamento ajudam a sincronizar os objetos de banco de dados de destino com o banco de dados de origem.  
+## <a name="manageability-script-file-commands"></a>Comandos de arquivo de script de capacidade de gerenciamento  
+Os comandos de gerenciamento ajudam a sincronizar os objetos de banco de dados de destino com o banco de dados de origem.  
   
 > [!NOTE]  
-> A saída do console padrão definindo para os comandos de migração é o relatório de saída 'Full' com nenhum relatório de erro detalhada: Resumo somente no nó de raiz da árvore de objeto de origem.  
+> A configuração de saída do console padrão para os comandos de migração é ' completo ' relatório de saída sem relatórios de erros detalhados: apenas Resumo no nó raiz da árvore do objeto de origem.  
   
 **Comando**  
   
-Sincronizar de destino  
+sincronizar destino  
   
 1.  Sincroniza os objetos de destino com o banco de dados de destino.  
   
-2.  Se esse comando for executado no banco de dados de origem, um erro for encontrado.  
+2.  Se esse comando for executado no banco de dados de origem, um erro será encontrado.  
   
-3.  Se a conexão de banco de dados de destino não é executada antes de executar esse comando ou a conexão ao servidor de banco de dados de destino falha durante a execução do comando, será gerado um erro e o aplicativo de console é encerrado.  
+3.  Se a conexão do banco de dados de destino não for executada antes da execução desse comando ou se a conexão com o servidor de banco de dados de destino falhar durante a execução do comando, um erro será gerado e o aplicativo de console será encerrado.  
   
-**script**  
+**Script**  
   
-1.  `object-name:` Especifica os objetos considerados para sincronizar com o banco de dados de destino (ele pode ter nomes de objetos individuais ou um nome de objeto de grupo).  
+1.  `object-name:`Especifica os objetos considerados para sincronização com o banco de dados de destino (ele pode ter nomes de objeto individuais ou um nome de objeto de grupo).  
   
-2.  `object-type:` Especifica o tipo do objeto especificado no atributo de nome de objeto (se a categoria de objeto for especificada, o tipo de objeto será "category").  
+2.  `object-type:`Especifica o tipo do objeto especificado no atributo Object-Name (se a categoria de objeto for especificada, o tipo de objeto será "category").  
   
-3.  `on-error:` Especifica se deve especificar os erros de sincronização como avisos ou erros. Opções disponíveis para em caso de erro:  
+3.  `on-error:`Especifica se os erros de sincronização devem ser especificados como avisos ou erro. Opções disponíveis para o no-erro:  
   
-    -   report-total-as-warning  
+    -   relatório-total-como-aviso  
   
-    -   report-each-as-warning  
+    -   relatório-cada-como-aviso  
   
-    -   Falha-script  
+    -   script de falha  
   
-4.  `report-errors-to:` Especifica o local do relatório de erros para a operação de sincronização (atributo opcional) se apenas o caminho da pasta for dado, em seguida, de arquivos por nome **TargetSynchronizationReport.XML** é criado.  
+4.  `report-errors-to:`Especifica o local do relatório de erros para a operação de sincronização (atributo opcional) se apenas o caminho da pasta for fornecido, o arquivo por nome **TargetSynchronizationReport. xml** será criado.  
   
 **Exemplo de sintaxe:**  
   
@@ -531,29 +531,29 @@ ou
 ```  
 **Comando**  
   
-refresh-from-database  
+atualizar-do-banco de dados  
   
 1.  Atualiza os objetos de origem do banco de dados.  
   
-2.  Se esse comando é executado no banco de dados de destino, um erro será gerado.  
+2.  Se esse comando for executado no banco de dados de destino, um erro será gerado.  
   
-**script**  
+**Script**  
   
-1.  `object-name:` Especifica os objetos de origem considerados para a atualização do banco de dados de origem (ele pode ter nomes de objetos individuais ou um nome de objeto de grupo).  
+1.  `object-name:`Especifica os objetos de origem considerados para atualização do banco de dados de origem (ele pode ter nomes de objeto individuais ou um nome de objeto de grupo).  
   
-2.  `object-type:` Especifica o tipo do objeto especificado no atributo de nome de objeto (se a categoria de objeto for especificada, o tipo de objeto será "category").  
+2.  `object-type:`Especifica o tipo do objeto especificado no atributo Object-Name (se a categoria de objeto for especificada, o tipo de objeto será "category").  
   
-3.  `on-error:` Especifica se deve especificar os erros de sincronização como avisos ou erros. Opções disponíveis para em caso de erro:  
+3.  `on-error:`Especifica se os erros de sincronização devem ser especificados como avisos ou erro. Opções disponíveis para o no-erro:  
   
-    -   report-total-as-warning  
+    -   relatório-total-como-aviso  
   
-    -   report-each-as-warning  
+    -   relatório-cada-como-aviso  
   
-    -   Falha-script  
+    -   script de falha  
   
-4.  `report-errors-to:` Especifica o local do relatório de erros para a operação de sincronização (atributo opcional) se apenas o caminho da pasta for dado, em seguida, de arquivos por nome **SourceDBRefreshReport.XML** é criado.  
+4.  `report-errors-to:`Especifica o local do relatório de erros para a operação de sincronização (atributo opcional) se apenas o caminho da pasta for fornecido, o arquivo por nome **SourceDBRefreshReport. xml** será criado.  
   
-Requer um ou vários nós de metabase como parâmetro de linha de comando.  
+Requer um ou vários nós da metabase como parâmetro de linha de comando.  
   
 **Exemplo de sintaxe:**  
   
@@ -591,28 +591,28 @@ ou
 </refresh-from-database>  
 ```  
   
-## <a name="script-generation-script-file-commands"></a>Comandos de arquivo de Script de geração de script  
-Os comandos de geração de Script executam tarefas duplas: Eles ajudam a salvar o console de saída em um arquivo de script; e registrar a saída do T-SQL para o console ou um arquivo de acordo com o parâmetro que você especificar.  
+## <a name="script-generation-script-file-commands"></a>Comandos de arquivo de script de geração de script  
+Os comandos de geração de script executam tarefas duplas: elas ajudam a salvar a saída do console em um arquivo de script; e registre a saída T-SQL no console ou em um arquivo com base no parâmetro especificado.  
   
 **Comando**  
   
-Salvar como script  
+salvar como script  
   
-Usado para salvar os Scripts dos objetos em um arquivo mencionado quando metabase Target, essa é uma alternativa ao comando de sincronização, onde podemos obter os scripts e execute o mesmo banco de dados de destino.  
+Usado para salvar os scripts dos objetos em um arquivo mencionado quando metabase = Target, essa é uma alternativa ao comando de sincronização no qual obtemos os scripts e executamos o mesmo no banco de dados de destino.  
   
-**script**  
+**Script**  
   
-Requer um ou vários nós de metabase como parâmetro de linha de comando.  
+Requer um ou vários nós da metabase como parâmetro de linha de comando.  
   
-1.  `object-name:` Especifica os objetos cujos scripts serão salvos. (Ele pode ter nomes de objetos individuais ou um nome de objeto de grupo)  
+1.  `object-name:`Especifica os objetos cujos scripts devem ser salvos. (Pode ter nomes de objeto individuais ou um nome de objeto de grupo)  
   
-2.  `object-type:` Especifica o tipo do objeto especificado no atributo de nome de objeto (se a categoria de objeto for especificada, o tipo de objeto será "category").  
+2.  `object-type:`Especifica o tipo do objeto especificado no atributo Object-Name (se a categoria de objeto for especificada, o tipo de objeto será "category").  
   
-3.  `metabase:` Especifica se é a origem ou destino da metabase.  
+3.  `metabase:`Especifica se é a metabase de origem ou de destino.  
   
-4.  `destination:` Especifica o caminho ou a pasta em que o script foi salvo, se o nome do arquivo não for fornecido, em seguida, um nome de arquivo na. out formato (valor do atributo object_name)  
+4.  `destination:`Especifica o caminho ou a pasta em que o script deve ser salvo, se o nome do arquivo não for fornecido, em seguida, um nome de arquivo no formato (object_name valor do atributo). out  
   
-5.  `overwrite:` Se for true, em seguida, ele substitui se o mesmo nome de arquivo existe. Ele pode ter os valores (true/false).  
+5.  `overwrite:`Se for true, ele substituirá se o mesmo nome de arquivo existir. Ele pode ter os valores (true/false).  
   
 **Exemplo de sintaxe:**  
   
@@ -648,37 +648,37 @@ ou
 ```  
 **Comando**  
   
-convert-sql-statement  
+instrução Convert-SQL-  
   
-1.  `context` Especifica o nome do esquema.  
+1.  `context`Especifica o nome do esquema.  
   
-2.  `destination` Especifica se a saída deve ser armazenada em um arquivo.  
+2.  `destination`Especifica se a saída deve ser armazenada em um arquivo.  
   
-    Se esse atributo não for especificado, a instrução T-SQL convertida é exibida no console. (atributo opcional)  
+    Se esse atributo não for especificado, a instrução T-SQL convertida será exibida no console do. (atributo opcional)  
   
-3.  `conversion-report-folder` Especifica a pasta onde o relatório de avaliação pode ser armazenado. (atributo opcional)  
+3.  `conversion-report-folder`Especifica a pasta onde o relatório de avaliação pode ser armazenado. (atributo opcional)  
   
-4.  `conversion-report-overwrite` Especifica se deve substituir a pasta de relatório de avaliação se ele já existe.  
+4.  `conversion-report-overwrite`Especifica se a pasta do relatório de avaliação deve ser substituída, caso ela já exista.  
   
     **Valor padrão:** false. (atributo opcional)  
   
-5.  `write-converted-sql-to` Especifica o caminho da pasta onde o T-SQL convertido deve ser armazenado arquivo (ou). Quando um caminho de pasta é especificado junto com o `sql-files` atributo, cada arquivo de origem terão um criado sob a pasta especificada do arquivo de T-SQL de destino correspondente. Quando um caminho de pasta é especificado junto com o `sql` atributo, o T-SQL convertido é gravado em um arquivo chamado Result.out sob a pasta especificada.  
+5.  `write-converted-sql-to`Especifica o arquivo (ou) caminho da pasta em que o T-SQL convertido será armazenado. Quando um caminho de pasta é especificado junto com `sql-files` o atributo, cada arquivo de origem terá um arquivo T-SQL de destino correspondente criado na pasta especificada. Quando um caminho de pasta é especificado junto com `sql` o atributo, o T-SQL convertido é gravado em um arquivo chamado Result. out na pasta especificada.  
   
-6.  `sql` Especifica as instruções de sql do MySQL para ser convertido, uma ou mais instruções podem ser separados usando um ";"  
+6.  `sql`Especifica as instruções SQL do MySQL a serem convertidas, uma ou mais instruções podem ser separadas usando um ";"  
   
-7.  `sql-files` Especifica o caminho dos arquivos de sql que tem a ser convertido em código T-SQL.  
+7.  `sql-files`Especifica o caminho dos arquivos SQL que deve ser convertido em código T-SQL.  
   
-8.  `write-summary-report-to` Especifica o caminho onde o relatório de resumo será gerado. Se apenas o caminho da pasta for mencionado, em seguida, de arquivos por nome **ConvertSQLReport.XML** é criado. (atributo opcional)  
+8.  `write-summary-report-to`Especifica o caminho onde o relatório de resumo será gerado. Se apenas o caminho da pasta for mencionado, o arquivo por nome **ConvertSQLReport. xml** será criado. (atributo opcional)  
   
-    Criação tem 2 mais subcategorias, sobre visualização de relatório..,:  
+    A criação de relatório tem duas subcategorias adicionais, aula sobre visualização..,:  
   
-    -   erros de relatório (= "true/false", com padrão como "false" (atributos opcionais)).  
+    -   relatório-erros (= "true/false", com padrão como "false" (atributos opcionais)).  
   
-    -   detalhado (= "true/false", com padrão como "false" (atributos opcionais)).  
+    -   Verbose (= "true/false", com padrão como "false" (atributos opcionais)).  
   
-**script**  
+**Script**  
   
-Requer um ou vários nós de metabase como parâmetro de linha de comando.  
+Requer um ou vários nós da metabase como parâmetro de linha de comando.  
   
 **Exemplo de sintaxe:**  
   
@@ -749,15 +749,15 @@ ou
 ```  
   
 ## <a name="next-step"></a>Próxima etapa  
-Para obter informações sobre as opções de linha de comando, consulte [opções de linha de comando no Console do SSMA &#40;MySQLToSQL&#41; ](../../ssma/mysql/command-line-options-in-ssma-console-mysqltosql.md) .  
+Para obter informações sobre opções de linha de comando, consulte [Opções de linha de comando no console do SSMA &#40;MySQLToSQL&#41;](../../ssma/mysql/command-line-options-in-ssma-console-mysqltosql.md) .  
   
-Para obter mais informações sobre arquivos de script de console de exemplo, consulte [trabalhando com os arquivos de Script de Console de exemplo &#40;MySQLToSQL&#41;](../../ssma/mysql/working-with-the-sample-console-script-files-mysqltosql.md)  
+Para obter mais informações sobre arquivos de script de console de exemplo, consulte [trabalhando com os arquivos de script de console de exemplo &#40;MySQLToSQL&#41;](../../ssma/mysql/working-with-the-sample-console-script-files-mysqltosql.md)  
   
-A próxima etapa depende de seus requisitos de projeto:  
+A próxima etapa depende dos requisitos do seu projeto:  
   
-1.  Para especificar uma senha ou a exportação / importação de senhas, consulte [gerenciamento de senhas &#40;MySQLToSQL&#41;](../../ssma/mysql/managing-passwords-mysqltosql.md).  
+1.  Para especificar uma senha ou exportar/importar senhas, consulte [Gerenciando senhas &#40;MySQLToSQL&#41;](../../ssma/mysql/managing-passwords-mysqltosql.md).  
   
-2.  Para gerar relatórios, consulte [geração de relatórios &#40;MySQLToSQL&#41;](../../ssma/mysql/generating-reports-mysqltosql.md).  
+2.  Para gerar relatórios, consulte [gerando relatórios &#40;MySQLToSQL&#41;](../../ssma/mysql/generating-reports-mysqltosql.md).  
   
-3.  Para solucionar problemas no console, consulte [solução de problemas &#40;MySQLToSQL&#41;](../../ssma/mysql/troubleshooting-mysqltosql.md).  
+3.  Para solucionar problemas no console do, consulte solução de problemas [&#40;MySQLToSQL&#41;](../../ssma/mysql/troubleshooting-mysqltosql.md).  
   

@@ -1,5 +1,5 @@
 ---
-title: Especifique o conteúdo da coluna e tipo de dados (Assistente de mineração de dados) | Microsoft Docs
+title: Especificar o tipo de conteúdo e de dados da coluna (Assistente de mineração de dados) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d224a321ed78f89a798966bd28c0ff7f16d55134
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068465"
 ---
 # <a name="specify-column-content-and-data-type-data-mining-wizard"></a>Especificar tipo de conteúdo e de dados da coluna (Assistente de Mineração de Dados)
@@ -24,7 +24,7 @@ ms.locfileid: "66068465"
   
  O tipo de dados especifica detalhes adicionais sobre o tipo de dados contidos na coluna e como eles serão usados durante o treinamento. Alguns tipos de conteúdo requerem um tipo de dados específico e vice-versa. Você também pode precisar especificar um tipo de dados específico, dependendo do algoritmo usado ao criar um modelo de mineração. Para obter informações sobre tipos de conteúdo e de dados em modelos e estruturas de mineração, consulte [Tipos de conteúdo &#40;Mineração de dados&#41;](data-mining/content-types-data-mining.md).  
   
- **Para obter mais informações:** [Estruturas de mineração &#40;Analysis Services - mineração de dados&#41;](data-mining/mining-structures-analysis-services-data-mining.md), [as colunas do modelo de mineração](data-mining/mining-model-columns.md), [Assistente de mineração de dados &#40;Analysis Services - mineração de dados&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [ Criar uma estrutura de mineração relacional](data-mining/create-a-relational-mining-structure.md)  
+ **Para obter mais informações:** [estruturas de mineração &#40;&#41;de mineração de dados Analysis Services ](data-mining/mining-structures-analysis-services-data-mining.md), [colunas do modelo de mineração](data-mining/mining-model-columns.md), [Assistente de mineração de dados &#40;Analysis Services-Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [criar uma estrutura de mineração relacional](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Opções  
  **Estrutura do modelo de mineração**  
@@ -36,7 +36,7 @@ ms.locfileid: "66068465"
  **Tipo de conteúdo**  
  Especifique o tipo de conteúdo da coluna Se você especificou que a coluna é uma chave na página anterior do assistente, os seguintes valores estarão disponíveis:  
   
-|Opção|Descrição|  
+|Opção|DESCRIÇÃO|  
 |------------|-----------------|  
 |Chave|Especifique que a coluna contém um identificador exclusivo para a série de casos.|  
 |Key Sequence|Especifique que a coluna contém um identificador de sequência.|  
@@ -44,16 +44,16 @@ ms.locfileid: "66068465"
   
  Se você selecionou a coluna como uma coluna que não seja uma coluna de chave, os valores seguintes estarão disponíveis, dependendo do tipo de dados:  
   
-|Opção|Descrição|  
+|Opção|DESCRIÇÃO|  
 |------------|-----------------|  
 |Contínuo|Especifique que a coluna contém valores numéricos contínuos.|  
 |Discretizado|Especifique que a coluna contém valores numéricos que foram tornados discretos ou podem ser tratados como valores discretos.|  
 |Discreto|Especifique que a coluna contém valores de texto ou outros valores não numéricos.|  
   
- **Data type**  
+ **Tipo de dados**  
  Especifique o tipo de dados da coluna.  
   
- Os seguintes valores estão disponíveis:  
+ Os valores a seguir estão disponíveis:  
   
 -   `Boolean`  
   
@@ -68,10 +68,10 @@ ms.locfileid: "66068465"
  **Detect**  
  Analise uma amostra de dados em todas as colunas numéricas. Substitui valores de **Tipo de conteúdo** especificados por um tipo de conteúdo recomendado.  
   
-## <a name="see-also"></a>Consulte também  
- [Ajuda F1 do Assistente de mineração de dados &#40;Analysis Services - mineração de dados&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
- [Sugerir colunas relacionadas &#40;Assistente de mineração de dados&#41;](suggest-related-columns-data-mining-wizard.md)   
- [Especificar tipos de tabela &#40;Assistente de mineração de dados&#41;](specify-table-types-data-mining-wizard.md)   
- [Especificar conteúdo e o tipo de dados da coluna &#40;Assistente de mineração de dados&#41;](specify-the-column-s-content-and-data-type-data-mining-wizard.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Ajuda F1 do assistente de mineração de dados &#40;Analysis Services Data Mining&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [Sugerir colunas relacionadas &#40;assistente de mineração de dados&#41;](suggest-related-columns-data-mining-wizard.md)   
+ [Especificar tipos de tabela &#40;assistente de mineração de dados&#41;](specify-table-types-data-mining-wizard.md)   
+ [Especifique o tipo de conteúdo e de dados da coluna &#40;assistente de mineração de dados&#41;](specify-the-column-s-content-and-data-type-data-mining-wizard.md)  
   
   

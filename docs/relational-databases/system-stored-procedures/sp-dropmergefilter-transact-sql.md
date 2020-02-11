@@ -16,18 +16,18 @@ ms.assetid: 798586d7-05f3-4a5e-bea8-a34b7b52d0fd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b952fcd8145a2cf5392308b21d593e8c377761f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933964"
 ---
-# <a name="spdropmergefilter-transact-sql"></a>sp_dropmergefilter (Transact-SQL)
+# <a name="sp_dropmergefilter-transact-sql"></a>sp_dropmergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Remove um filtro de mesclagem. **sp_dropmergefilter** descarta todas as colunas de filtro de mesclagem definidas no filtro de mesclagem a ser removido. Esse procedimento armazenado é executado no Publicador, no banco de dados publicador.  
+  Remove um filtro de mesclagem. **sp_dropmergefilter** remove todas as colunas de filtro de mesclagem definidas no filtro de mesclagem que deve ser removida. Esse procedimento armazenado é executado no Publicador, no banco de dados publicador.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,38 +39,38 @@ sp_dropmergefilter [ @publication= ] 'publication', [ @article= ] 'article'     
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` É o nome da publicação. *publicação* está **sysname**, sem padrão.  
+`[ @publication = ] 'publication'`É o nome da publicação. a *publicação* é **sysname**, sem padrão.  
   
-`[ @article = ] 'article'` É o nome do artigo. *artigo* está **sysname**, sem padrão.  
+`[ @article = ] 'article'`É o nome do artigo. o *artigo* é **sysname**, sem padrão.  
   
-`[ @filtername = ] 'filtername'` É o nome do filtro a ser removido. *FilterName* está **sysname**, sem padrão.  
+`[ @filtername = ] 'filtername'`É o nome do filtro a ser removido. *FilterName* é **sysname**, sem padrão.  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Habilita ou desabilita a capacidade de invalidar um instantâneo. *force_invalidate_snapshot* é um **bit**, com um padrão **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`Habilita ou desabilita a capacidade de um instantâneo ser invalidado. *force_invalidate_snapshot* é um **bit**, com um padrão **0**.  
   
- **0** Especifica que as alterações no artigo de mesclagem fazem com que o instantâneo seja inválido.  
+ **0** especifica que as alterações no artigo de mesclagem não fazem com que o instantâneo seja inválido.  
   
- **1** significa que as alterações no artigo de mesclagem pode invalidar o instantâneo ser inválido. Se esse for o caso, um valor de **1** dá permissão para a ocorrência do novo instantâneo.  
+ **1** significa que as alterações no artigo de mesclagem podem fazer com que o instantâneo seja inválido. Se esse for o caso, um valor de **1** dará permissão para que o novo instantâneo ocorra.  
   
-`[ @force_reinit_subscription = ] force_reinit_subscription` Habilita ou desabilita a capacidade de marcar uma assinatura como não é válido. *force_reinit_subscription* é um **bit**, com um padrão **0**.  
+`[ @force_reinit_subscription = ] force_reinit_subscription`Habilita ou desabilita a capacidade de marcar uma assinatura como inválida. *force_reinit_subscription* é um **bit**, com um padrão **0**.  
   
- **0** Especifica que as alterações no filtro de artigo de mesclagem não invalidam as assinaturas sejam inválidos.  
+ **0** especifica que as alterações no filtro de artigo de mesclagem não fazem com que as assinaturas sejam inválidas.  
   
- **1** significa que as alterações para o filtro de artigo de mesclagem faz com que as assinaturas sejam inválidos.  
+ **1** significa que as alterações no filtro de artigo de mesclagem fazem com que as assinaturas sejam inválidas.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="remarks"></a>Comentários  
- **sp_dropmergefilter** é usado em replicação de mesclagem.  
+ **sp_dropmergefilter** é usado na replicação de mesclagem.  
   
 ## <a name="permissions"></a>Permissões  
- Somente os membros dos **sysadmin** função de servidor fixa ou o **db_owner** banco de dados fixa podem executar **sp_dropmergefilter**.  
+ Somente os membros da função de servidor fixa **sysadmin** ou a função de banco de dados fixa **db_owner** podem ser executados **sp_dropmergefilter**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Alterar propriedades da publicação e do artigo](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
- [sp_addmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   
- [sp_changemergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergefilter-transact-sql.md)   
- [sp_helpmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_addmergefilter](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_changemergefilter](../../relational-databases/system-stored-procedures/sp-changemergefilter-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_helpmergefilter](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

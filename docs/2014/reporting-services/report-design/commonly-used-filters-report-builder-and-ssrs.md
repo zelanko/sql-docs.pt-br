@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f807060994c2225dc1e6605344bbb3bd5d2709e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106236"
 ---
 # <a name="commonly-used-filters-report-builder-and-ssrs"></a>Filtros comumente usados (Construtor de Relatórios e SSRS)
@@ -31,7 +31,7 @@ ms.locfileid: "66106236"
 ## <a name="filter-examples"></a>Exemplos de filtro  
  A tabela a seguir mostra exemplo de equações de filtro que usam diferentes tipos de dados e operadores. O escopo da comparação é determinado pelo item de relatório para o qual é definido um filtro. Por exemplo, no caso de um filtro definido em um conjunto de dados, **TOP % 10** representa os principais 10% de valores do conjunto de dados; no caso de um filtro definido em um grupo, **TOP % 10** são os principais 10% de valores do grupo.  
   
-|Expressão simples|Tipo de Dados|Operador|Valor|Descrição|  
+|Expressão simples|Tipo de Dados|Operador|Valor|DESCRIÇÃO|  
 |-----------------------|---------------|--------------|-----------|-----------------|  
 |`[SUM(Quantity)]`|`Integer`|`>`|`7`|Inclui valores de dados maiores que 7.|  
 |`[SUM(Quantity)]`|`Integer`|`TOP N`|`10`|Inclui os 10 principais valores de dados.|  
@@ -51,7 +51,7 @@ ms.locfileid: "66106236"
 |Um único valor|`[EmployeeID]`|=|`[@EmployeeID]`|Integer|  
 |Multivalor|`[EmployeeID]`|IN|`[@EmployeeID]`|Integer|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](report-parameters-report-builder-and-report-designer.md)   
  [Adicionar filtros de conjunto de dados, de região de dados e de grupo &#40;Construtor de Relatórios e SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Usos de expressões em relatórios &#40;Construtor de Relatórios e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   

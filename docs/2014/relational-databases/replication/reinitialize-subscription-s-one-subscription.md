@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: af1548ad29203f06e6d9cc49c048f1973afa3e3b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63131460"
 ---
 # <a name="reinitialize-subscriptions---one-subscription"></a>Reiniciar Assinatura(s) - uma assinatura
@@ -41,7 +41,7 @@ ms.locfileid: "63131460"
  **Marcar para Reinicialização**  
  Clique para marcar a assinatura para reinicialização. Depois que um instantâneo válido estiver disponível, da próxima vez que o Distribution Agent ou Merge Agent forem executados para a assinatura, o instantâneo será aplicado ao Assinante.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Reinicializar as assinaturas](reinitialize-subscriptions.md)  
   
   

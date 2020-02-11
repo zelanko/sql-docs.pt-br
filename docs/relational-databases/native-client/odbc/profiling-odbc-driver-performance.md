@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c15c8920d2a0188a7dbe517149dc369dea95522e
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73760711"
 ---
 # <a name="profiling-odbc-driver-performance"></a>Criando perfil de desempenho do driver ODBC
@@ -71,20 +71,20 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 -   Rede  
   
--   time  
+-   Hora  
   
  Na tabela a seguir, as descrições dos campos na estrutura de dados SQLPERF também se aplicam às estatísticas registradas no arquivo de log de desempenho.  
   
 ### <a name="application-profile-statistics"></a>Estatísticas de perfil de aplicativo  
   
-|Campo de SQLPERF|Descrição|  
+|Campo de SQLPERF|DESCRIÇÃO|  
 |-------------------|-----------------|  
 |TimerResolution|Resolução mínima da hora de relógio do servidor em milissegundos. Isto será relatado normalmente como 0 (zero) e deverá ser considerado somente se o número relatado for maior. Se a resolução mínima do relógio do servidor for maior que o intervalo provável para algumas das estatísticas baseadas em temporizador, estas estatísticas poderão ser aumentadas.|  
 |SQLidu|Número de instruções INSERT, DELETE ou UPDATE depois de SQL_PERF_START.|  
 |SQLiduRows|Número de instruções INSERT, DELETE ou UPDATE depois de SQL_PERF_START.|  
 |SQLSelects|Número de instruções SELECT processadas depois de SQL_PERF_START.|  
 |SQLSelectRows|Número de linhas selecionadas depois de SQL_PERF_START.|  
-|Transações|Número de transações de usuário depois de SQL_PERF_START, incluindo reversões. Quando um aplicativo ODBC estiver sendo executado com SQL_AUTOCOMMIT_ON, cada comando será considerado uma transação.|  
+|Transactions|Número de transações de usuário depois de SQL_PERF_START, incluindo reversões. Quando um aplicativo ODBC estiver sendo executado com SQL_AUTOCOMMIT_ON, cada comando será considerado uma transação.|  
 |SQLPrepares|Número de chamadas de [função SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360) após SQL_PERF_START.|  
 |ExecDirects|Número de chamadas **SQLExecDirect** após SQL_PERF_START.|  
 |SQLExecutes|Número de chamadas **SQLExecute** após SQL_PERF_START.|  
@@ -100,7 +100,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |CurrentStmtCount|Número de identificadores de instrução abertos atualmente em todas as conexões abertas no driver.|  
 |MaxOpenStmt|Número máximo de identificadores de instrução abertos simultaneamente depois de SQL_PERF_START.|  
 |SumOpenStmt|Número de identificadores de instrução que foram abertos depois de SQL_PERF_START.|  
-|**Estatísticas de conexão:**||  
+|**Estatísticas de Conexão:**||  
 |CurrentConnectionCount|Número atual de identificadores de conexões ativas que o aplicativo abriu para o servidor.|  
 |MaxConnectionsOpened|Número máximo de identificadores de conexões simultâneas abertos depois de SQL_PERF_START.|  
 |SumConnectionsOpened|Soma do número de identificadores de conexões que foram abertos depois de SQL_PERF_START.|  
@@ -115,13 +115,13 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 ### <a name="time-statistics"></a>Time Statistics  
   
-|Campo SQLPERF|Descrição|  
+|Campo SQLPERF|DESCRIÇÃO|  
 |-------------------|-----------------|  
 |msExecutionTime|Quantidade cumulativa de horas que o driver gastou processando depois de SQL_PERF_START, incluindo o tempo gasto esperando respostas do servidor.|  
 |msNetworkServerTime|Quantidade cumulativa de horas que o driver gastou esperando respostas do servidor.|  
   
-## <a name="see-also"></a>Consulte também  
- [  &#40;SQL Server Native Client&#41; ODBC](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
- [Tópicos &#40;de instruções de desempenho do driver ODBC de criação de perfil ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
+## <a name="see-also"></a>Consulte Também  
+ [SQL Server Native Client &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
+ [Tópicos de instruções de desempenho do driver ODBC de criação de perfil &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
   
   

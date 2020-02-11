@@ -1,5 +1,5 @@
 ---
-title: 'Lição 1: Criar o projeto do Visual Studio de esquema RDL | Microsoft Docs'
+title: 'Lição 1: criar o projeto de esquema RDL do Visual Studio | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: c34062acefc2dfd847790a39cea35b03727f49ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62678514"
 ---
 # <a name="lesson-1-create-the-rdl-schema-visual-studio-project"></a>Lição 1: Criar o projeto do Visual Studio de esquema RDL
-  Para este tutorial, você criará um aplicativo de console simples. Este tutorial presume que você está desenvolvendo em [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)].  
+  Para este tutorial, você criará um aplicativo de console simples. Este tutorial pressupõe que você está desenvolvendo [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)]no.  
   
 > [!NOTE]  
 >  Ao acessar o serviço Web Servidor de Relatório que está em execução no [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] com Advanced Services, é preciso incluir "_SQLExpress" no caminho do "ReportServer". Por exemplo:  
@@ -27,7 +27,7 @@ ms.locfileid: "62678514"
   
 ### <a name="to-create-the-web-service-proxy"></a>Para criar o proxy do serviço Web  
   
-1.  Dos **iniciar** menu, selecione **todos os programas**, em seguida, Microsoft Visual Studio, em seguida, **ferramentas do Visual Studio**e, em seguida, **Prompt de comando do Visual Studio 2010** .  
+1.  No menu **Iniciar** , selecione **todos os programas**, Microsoft Visual Studio, em seguida, **Ferramentas do Visual Studio**e, em seguida, o Prompt de **comando do Visual Studio 2010**.  
   
 2.  Na janela do prompt de comando, execute o seguinte comando se estiver usando o C#:  
   
@@ -45,29 +45,29 @@ ms.locfileid: "62678514"
   
 ### <a name="to-create-a-console-application"></a>Para criar um aplicativo de console  
   
-1.  Sobre o **arquivo** , aponte para **New**e, em seguida, clique em **projeto** para abrir o **novo projeto** caixa de diálogo.  
+1.  No menu **arquivo** , aponte para **novo**e clique em **projeto** para abrir a caixa de diálogo **novo projeto** .  
   
-2.  No painel esquerdo, sob **modelos instalados**, clique em **Visual Basic** ou o **Visual c#** nó e selecione uma categoria de projeto de tipos na lista expandida.  
+2.  No painel esquerdo, em **modelos instalados**, clique em **Visual Basic** ou no nó **Visual C#** e selecione uma categoria de tipos de projeto na lista expandida.  
   
-3.  Escolha o **aplicativo de Console** tipo de projeto.  
+3.  Escolha o tipo de projeto de **aplicativo de console** .  
   
-4.  No **nome** , digite um nome para seu projeto. Digite o nome `SampleRDLSchema`.  
+4.  Na caixa **nome** , insira um nome para o seu projeto. Digite o nome `SampleRDLSchema`.  
   
-5.  No **local** , digite o caminho onde você deseja salvar seu projeto, ou clique em **procurar** para navegar até a pasta.  
+5.  Na caixa **local** , digite o caminho onde você deseja salvar o projeto ou clique em **procurar** para navegar até a pasta.  
   
-6.  [!INCLUDE[clickOK](../includes/clickok-md.md)] Uma exibição recolhida de seu projeto aparecerá no Gerenciador de soluções.  
+6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]Uma exibição recolhida do seu projeto é exibida no Gerenciador de Soluções.  
   
 7.  No menu **Projeto** , clique em **Adicionar Item Existente**.  
   
-8.  Navegue até o local do arquivo. cs ou. vb que você gerou, e em seguida, selecione o arquivo e, em seguida, clique em **adicionar**.  
+8.  Navegue até o local do arquivo. cs ou. vb gerado por você e, em seguida, selecione o arquivo e clique em **Adicionar**.  
   
      Você também precisará adicionar uma referência ao namespace <xref:System.Web.Services> para que a referência da Web funcione.  
   
-9. No menu projeto, clique em **adicionar referência**.  
+9. No menu Projeto, clique em **Adicionar Referência**.  
   
-     No **adicionar referência** na caixa a **.NET** guia, selecione **System**, em seguida, clique em **Okey**.  
+     Na caixa de diálogo **Adicionar referência** , na guia **.net** , selecione **System. Web. Services**e clique em **OK**.  
   
-     Para obter mais informações sobre como se conectar ao serviço Web servidor de relatório, consulte [criando aplicativos usando o serviço Web e o .NET Framework](../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md).  
+     Para obter mais informações sobre como se conectar ao serviço Web servidor de relatórios, consulte [criando aplicativos usando o serviço Web e o .NET Framework](../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md).  
   
 10. No Gerenciador de Soluções, expanda o nó do projeto. Você verá que um arquivo de código com o nome padrão de Program.cs (Module1.vb para o [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) foi adicionado ao seu projeto.  
   
@@ -197,10 +197,10 @@ ms.locfileid: "62678514"
     ```  
   
 ## <a name="next-lesson"></a>Próxima lição  
- Na próxima lição, você usará a Ferramenta de Definição de Esquema XML (Xsd.exe) para gerar classes com base no esquema RDL e incluí-las no seu projeto. Veja a [Lição 2: Gerar Classes de esquema RDL usando a ferramenta xsd](../../2014/tutorials/lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md).  
+ Na próxima lição, você usará a Ferramenta de Definição de Esquema XML (Xsd.exe) para gerar classes com base no esquema RDL e incluí-las no seu projeto. Consulte [lição 2: gerar classes a partir do esquema RDL usando a ferramenta xsd](../../2014/tutorials/lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Atualizando relatórios por meio de Classes geradas a partir do esquema RDL &#40;Tutorial do SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Atualizando relatórios usando classes geradas do esquema RDL &#40;tutorial do SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
  [Linguagem RDL &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
   
   

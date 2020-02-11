@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 96d0105faad9fb4c2c3213eaa90da464ccd90bd6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63253877"
 ---
 # <a name="configure-sql-server-agent-error-logs-general-page"></a>Configurar Logs de Erros do SQL Server Agent (página Geral)
@@ -29,10 +29,10 @@ ms.locfileid: "63253877"
  **...**  
  Navegue até o arquivo de log de erros.  
   
- **Gravar log de erros OEM**  
+ **Gravar log de erros do OEM**  
  Grava o arquivo de log de erros como um arquivo não Unicode. Isso reduz a quantidade de espaço em disco consumida pelo arquivo de log. Porém, mensagens que incluem dados Unicode podem ser mais difíceis de ler quando essa opção é habilitada.  
   
- **Erros**  
+ **Errors**  
  Só grava erros e mensagens informativas no arquivo de log.  
   
  **Warnings**  
@@ -41,7 +41,7 @@ ms.locfileid: "63253877"
  **Informações**  
  Só grava mensagens informativas no arquivo de log.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Log de erros do SQL Server Agent](sql-server-agent-error-log.md)  
   
   

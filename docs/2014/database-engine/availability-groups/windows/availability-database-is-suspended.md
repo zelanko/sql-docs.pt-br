@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 21d788db62fe39b86eb801c028450c16cf845845
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62815761"
 ---
 # <a name="availability-database-is-suspended"></a>O banco de dados de disponibilidade está suspenso
@@ -32,13 +32,13 @@ ms.locfileid: "62815761"
 |**Categoria**|**Aviso**|  
 |**Faceta**|Banco de dados de disponibilidade|  
   
-## <a name="description"></a>Descrição  
+## <a name="description"></a>DESCRIÇÃO  
  Esta política verifica o estado de movimento de dados do banco de dados secundário (também conhecido como "réplica de banco de dados secundário"). A política ficará em estado não íntegro quando a movimentação de dados for suspensa. Caso contrário, a política estará em um estado íntegro.  
   
 > [!NOTE]  
 >  Para esta versão do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], as informações sobre as possíveis causas e soluções estão localizadas em [O banco de dados de disponibilidade está suspenso](https://go.microsoft.com/fwlink/p/?LinkId=220860) no Wiki do TechNet.  
   
-## <a name="possible-causes"></a>Causas possíveis  
+## <a name="possible-causes"></a>Possíveis causas  
  A sincronização de dados nesse banco de dados de disponibilidade pode ter sido suspensa pelo seguinte:  
   
 -   Devido a um erro, o sistema pode ter suspendido a sincronização de dados.  
@@ -48,8 +48,8 @@ ms.locfileid: "62815761"
 ## <a name="possible-solution"></a>Solução possível  
  Retome a sincronização de dados. Se o problema persistir, verifique o grupo de disponibilidade no log de eventos e diagnostique por que o sistema suspendeu a movimentação de dados.  
   
-## <a name="see-also"></a>Consulte também  
- [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Usar o Painel AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Visão geral do Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Use o painel AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   

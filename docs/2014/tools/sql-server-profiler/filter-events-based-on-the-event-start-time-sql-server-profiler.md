@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0cd08ce16341022072c76fc1bf073d1a469d9273
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63192908"
 ---
 # <a name="filter-events-based-on-the-event-start-time-sql-server-profiler"></a>Filtrar eventos com base na hora de início do evento (SQL Server Profiler)
@@ -42,9 +42,9 @@ ms.locfileid: "63192908"
   
 5.  Na guia **Seleção de Eventos**, clique no título de coluna **StartTime** . Você também pode clicar com o botão direito do mouse no título de coluna e clicar em **Editar Filtro de Coluna** para iniciar a caixa de diálogo **Editar Filtro** .  
   
-6.  Expandir **maior que** ou **menor que**e, em seguida, insira um `datetime` valor no campo que aparece abaixo do operador de comparação.  
+6.  Expanda **maior que** ou **menor que**e insira um `datetime` valor no campo que aparece abaixo do operador de comparação.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [SQL Server Profiler](sql-server-profiler.md)  
   
   

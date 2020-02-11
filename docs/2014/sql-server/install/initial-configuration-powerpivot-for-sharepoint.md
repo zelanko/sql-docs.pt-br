@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: bc9b053b62a19cbe2c234f87010ae2a9652fb95c
-ms.sourcegitcommit: 381595e990f2294dbf324ef31071e2dd2318b8dd
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74200432"
 ---
 # <a name="initial-configuration-powerpivot-for-sharepoint"></a>Configuração inicial (PowerPivot para SharePoint)
@@ -24,7 +24,7 @@ ms.locfileid: "74200432"
   
  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
  O servidor do SharePoint deve ter sido instalado usando a opção de instalação Farm de Servidores na instalação do SharePoint. Um servidor do SharePoint autônomo que usa um banco de dados interno não tem suporte. Para obter mais informações, consulte [diretrizes para usar SQL Server recursos de BI em um farm do SharePoint 2010](../../../2014/sql-server/install/guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm.md).  
   
 > [!IMPORTANT]  
@@ -117,7 +117,7 @@ ms.locfileid: "74200432"
   
      Se um aplicativo de serviço PowerPivot já estiver listado no grupo de conexões padrão, não adicione um segundo aplicativo de serviço a esse grupo. A adição de dois aplicativos de serviço do mesmo tipo do grupo de conexões padrão não é uma configuração com suporte. Para obter mais informações sobre como usar aplicativos de serviço adicionais em um grupo de conexões, consulte [conectar um aplicativo de serviço PowerPivot a um aplicativo Web do SharePoint na administração central](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/connect-power-pivot-service-app-to-sharepoint-web-app-in-ca).  
   
-10. Clique em **OK** O serviço aparecerá ao lado de outros serviços gerenciados na lista de aplicativos de serviço do farm.  
+10. Clique em **OK.** O serviço aparecerá ao lado de outros serviços gerenciados na lista de aplicativos de serviço do farm.  
   
 ##  <a name="ExcelServ"></a>Etapa 4: habilitar os serviços do Excel  
  O PowerPivot para SharePoint exige os Serviços do Excel para dar suporte ao acesso a dados PowerPivot no farm. Você pode determinar se os Serviços do Excel já estão habilitados confirmando se o Aplicativo de Serviços do Excel aparece na lista de aplicativos de serviço na Administração Central. Se os Serviços do Excel não estiverem listados, siga estas etapas para habilitá-los agora.  

@@ -1,5 +1,5 @@
 ---
-title: 'Etapa 2: Adicionando e Configurando registro em log | Microsoft Docs'
+title: 'Etapa 2: adicionar e configurar o registro em log | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ef4f5d42ae3451d4199e84480a5672e437d7ca5f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62892431"
 ---
-# <a name="step-2-adding-and-configuring-logging"></a>Etapa 2: Adicionar e configurar registro em log
+# <a name="step-2-adding-and-configuring-logging"></a>Etapa 2: Adicionando e configurando registro em log
   Nesta tarefa, você habilitará o log do fluxo de dados no pacote Lesson 3.dtsx. Então, você configurará um provedor de log de arquivo de texto para armazenar os eventos PipelineExecutionPlan e PipelineExecuteTrees em log. O provedor de log de arquivos de texto cria logs que são fáceis exibir e transportar. A simplicidade destes arquivos de log faz estes arquivos especialmente úteis durante a fase de teste básico de um pacote. É possível também exibir as entradas de log na janela Eventos de Log do Designer [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
   
 ### <a name="to-add-logging-to-the-package"></a>Adicionar log ao pacote  
@@ -28,17 +28,17 @@ ms.locfileid: "62892431"
   
 3.  Na guia **Provedores e Logs** , na caixa **Tipo de provedor** , selecione **SSIS provedor de log para Arquivos de Texto**, e clique **Adicionar**.  
   
-     O Integration Services adiciona um novo provedor de log para arquivos de texto para o pacote, com o nome padrão **SSIS provedor de logo para arquivos de texto**. Agora é possível configurar o novo provedor de log.  
+     Integration Services adiciona um novo provedor de log de arquivo de texto ao pacote com o **provedor de log SSIS de nome padrão para arquivos de texto**. Agora é possível configurar o novo provedor de log.  
   
-4.  No **nome** coluna, digite `Lesson 3 Log File`.  
+4.  Na coluna **nome** , digite `Lesson 3 Log File`.  
   
 5.  Opcionalmente, modifique a **Descrição**.  
   
-6.  No **Configuration** coluna, clique em  **\<nova Conexão >** para especificar o destino no qual as informações de log são gravadas.  
+6.  Na coluna **configuração** , clique em ** \<nova conexão>** para especificar o destino no qual as informações de log são gravadas.  
   
      Na caixa de diálogo **Editor do Gerenciador de Conexões de Arquivos** , para **Tipo de uso**, selecione **Criar Arquivo**e clique em **Procurar**. Por padrão, a caixa de diálogo **Selecione Arquivo** abrirá a pasta do projeto, mas você pode salvar o log em qualquer localização.  
   
-7.  No **Selecionar arquivo** na caixa a **nome do arquivo** caixa, digite `TutorialLog.log`e clique em **abrir**.  
+7.  Na caixa de diálogo **Selecionar arquivo** , na caixa **nome do arquivo** , `TutorialLog.log`digite e clique em **abrir**.  
   
 8.  Clique em **OK** para fechar a caixa de diálogo **Editor do Gerenciador de Conexões de Arquivos** .  
   
@@ -53,11 +53,11 @@ ms.locfileid: "62892431"
   
 12. Clique em **Básico** para ocultar as categorias de informações.  
   
-13. Sobre o **provedor e Logs** guia da **nome** coluna, selecione `Lesson 3 Log File`. Assim que tiver criado um provedor de log para seu pacote, poderá, como opção, retirar a seleção para temporariamente desligar o registro em log, sem ter que excluir e recriar o provedor de log.  
+13. Na guia **provedor e logs** , na coluna **nome** , selecione `Lesson 3 Log File`. Assim que tiver criado um provedor de log para seu pacote, poderá, como opção, retirar a seleção para temporariamente desligar o registro em log, sem ter que excluir e recriar o provedor de log.  
   
 14. Clique em **OK**.  
   
 ## <a name="next-steps"></a>Próximas etapas  
- [Etapa 3: Testando o pacote de Tutorial da lição 3](../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md)  
+ [Etapa 3: Testando o pacote de tutorial da Lição 3](../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 'Como fazer: Implantar uma extensão de processamento de dados no Designer de relatórios | Microsoft Docs'
+title: Como implantar uma extensão de processamento de dados no Designer de Relatórios | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,20 +14,20 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 947ad59b8ac20862a8ef6da8ea527e2befb1be57
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63164321"
 ---
-# <a name="how-to-deploy-a-data-processing-extension-to-report-designer"></a>Como fazer: Para implantar uma extensão de processamento de dados para o Designer de Relatórios
+# <a name="how-to-deploy-a-data-processing-extension-to-report-designer"></a>Como implantar uma extensão de processamento de dados para o Designer de Relatórios
   O Designer de Relatórios usa extensões de processamento de dados para recuperar e processar dados enquanto você estiver criando relatórios. Você deve implantar o seu assembly de extensão de processamento de dados para o Designer de Relatórios como um assembly privado. Precisa também criar uma uma entrada no arquivo de configuração do Designer de Relatórios, RSReportDesigner.config.  
   
 #### <a name="to-deploy-a-data-processing-extension-assembly"></a>Para implantar um assembly de extensão de processamento de dados  
   
 1.  Copie o assembly de seu local de preparação para o diretório do Designer de Relatórios. O local padrão do diretório do Designer de Relatórios é C:\Arquivos de Programas\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies.  
   
-2.  Depois de copiar o arquivo de assembly, abra o arquivo RSReportDesigner.config. O arquivo RSReportDesigner.config também está localizado no diretório do Designer de Relatórios. Você precisa criar uma entrada no arquivo de configuração para o seu arquivo de assembly de extensão de processamento de dados. Abra o arquivo de configuração com o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ou com um editor de texto simples, como o Bloco de notas.  
+2.  Depois de copiar o arquivo de assembly, abra o arquivo RSReportDesigner.config. O arquivo RSReportDesigner.config também está localizado no diretório do Designer de Relatórios. Você precisa criar uma entrada no arquivo de configuração para o seu arquivo de assembly de extensão de processamento de dados. Você pode abrir o arquivo de configuração [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] com o ou com um editor de texto simples, como o bloco de notas.  
   
 3.  Localize o elemento **Data** no arquivo RSReportDesigner.config. Uma entrada para a extensão de processamento de dados recém-criada deve ser adicionada no seguinte local:  
   
@@ -39,13 +39,13 @@ ms.locfileid: "63164321"
     </Extensions>  
     ```  
   
-4.  Adicionar uma entrada para a sua extensão de processamento de dados que inclui um **extensão** elemento com valores para o `Name`, `Type`, e `Visible` atributos. A sua entrada poderia ser assim:  
+4.  Adicione uma entrada para sua extensão de processamento de dados, **** que inclui um elemento de extensão `Name`com `Type`valores para `Visible` os atributos, e. A sua entrada poderia ser assim:  
   
     ```  
     <Extension Name="ExtensionName" Type="CompanyName.ExtensionName.MyConnectionClass, AssemblyName" />  
     ```  
   
-     O valor de `Name` é o nome exclusivo da extensão de processamento de dados. O valor de `Type` é uma lista separada por vírgulas que inclui uma entrada para o namespace totalmente qualificado da sua classe que implementa as interfaces <xref:Microsoft.ReportingServices.Interfaces.IExtension> e <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection>, seguida do nome do seu assembly (sem incluir a extensão de arquivo .dll). Por padrão, as extensões de processamento de dados estão visíveis. Para ocultar uma extensão de interfaces do usuário, como o Designer de relatórios, adicione uma `Visible` de atributo para o **extensão** elemento e defina-o como `false`.  
+     O valor de `Name` é o nome exclusivo da extensão de processamento de dados. O valor de `Type` é uma lista separada por vírgulas que inclui uma entrada para o namespace totalmente qualificado da sua classe que implementa as interfaces <xref:Microsoft.ReportingServices.Interfaces.IExtension> e <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection>, seguida do nome do seu assembly (sem incluir a extensão de arquivo .dll). Por padrão, as extensões de processamento de dados estão visíveis. Para ocultar uma extensão das interfaces do usuário, como Report Designer, adicione um `Visible` atributo ao elemento de **extensão** e defina-o como `false`.  
   
 5.  Por fim, adicione um grupo de códigos ao assembly personalizado que concede a permissão **FullTrust** para a extensão. Faça isso adicionando o grupo de códigos ao arquivo rspreviewpolicy.config localizado por padrão em C:\Arquivos de Programas\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies. O grupo de códigos pode ter esta aparência:  
   
@@ -69,16 +69,16 @@ ms.locfileid: "63164321"
   
 #### <a name="to-enable-the-generic-query-designer-for-a-custom-extension"></a>Para habilitar o designer de consulta genérico para uma extensão personalizada.  
   
--   Adicione a seguinte entrada ao arquivo RSReportDesigner config sob o **Designer** elemento, substituindo o `Name` atributo com o nome que você forneceu nas entradas anteriores.  
+-   Adicione a seguinte entrada ao arquivo RSReportDesigner. config sob o elemento **Designer** , substituindo o `Name` atributo pelo nome que você forneceu nas entradas anteriores.  
   
     ```  
     <Extension Name="ExtensionName" Type="Microsoft.ReportingServices.QueryDesigners.GenericQueryDesigner,Microsoft.ReportingServices.QueryDesigners"/>  
     ```  
   
-## <a name="verifying-the-deployment"></a>Verificando a implantação  
+## <a name="verifying-the-deployment"></a>Verificar a implantação  
  Antes de verificar a implantação, é preciso fechar todas as instâncias do [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] no computador local. Depois de encerrar todas as sessões atuais, você poderá verificar se a extensão de processamento de dados foi implantada com êxito para o Designer de Relatórios criando um novo projeto de relatório no [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]. A sua extensão deve ser incluída na lista de tipos de fontes de dados disponíveis quando você criar um novo conjunto de dados para o relatório.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Implantando uma extensão de processamento de dados](deploying-a-data-processing-extension.md)   
  [Extensões do Reporting Services](../reporting-services-extensions.md)   
  [Implementando uma extensão de processamento de dados](implementing-a-data-processing-extension.md)   

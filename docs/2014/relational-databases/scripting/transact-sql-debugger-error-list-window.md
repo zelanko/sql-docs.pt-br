@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d1eb74eca33bc92152ea08fad2303b9a8b4ba48e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243086"
 ---
 # <a name="error-list-window-management-studio"></a>Janela Lista de Erros (Management Studio)
@@ -77,14 +77,14 @@ ms.locfileid: "75243086"
  **Descrição**  
  Exibe o texto da entrada de erro. As descrições longas se acomodam em linhas adicionais.  
   
- **Grupo**  
+ **Arquivo**  
  Exibe o nome do arquivo de script que gerou o erro.  
   
  **Linha**  
  Exibe um inteiro que indica qual linha do código inclui o erro.  
   
- **Pilha**  
+ **Coluna**  
  Exibe um inteiro que indica a posição do erro linha na linha do código.  
   
- **Projeto**  
+ **Project**  
  Exibe o nome do projeto que inclui o arquivo de script.  

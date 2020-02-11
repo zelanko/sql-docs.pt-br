@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_index_physical_stats (Transact-SQL) | Microsoft Docs
+title: sys. dm_db_index_physical_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d7fe788192aac7f7bd3e4723b615391c5d8c6e86
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68811520"
 ---
 # <a name="sysdm_db_index_physical_stats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
@@ -34,12 +34,12 @@ ms.locfileid: "68811520"
   Retorna informações de tamanho e fragmentação dos dados e índices da tabela ou exibição especificada no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para um índice, uma linha é retornada para cada nível da árvore B em cada partição. Para um heap, uma linha é retornada para a unidade de alocação de IN_ROW_DATA de cada partição. Para dados LOB (objeto grande), uma linha é retornada para a unidade de alocação de LOB_DATA de cada partição. Se houver dados de estouro de linha na tabela, uma linha será retornada para a unidade de alocação de ROW_OVERFLOW_DATA em cada partição. Retorna informações sobre índices de columnstore otimizado de memória xVelocity.  
   
 > [!IMPORTANT]
-> Se você consultar **Sys. dm _db_index_physical_stats** em uma instância de servidor que está hospedando uma always on [réplica secundária legível](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md), poderá encontrar um problema de bloqueio de restauração. Isso ocorre porque essa exibição de gerenciamento dinâmico adquire um bloqueio IS na exibição ou tabela de usuário especificada, que pode bloquear solicitações por um thread REDO para um bloqueio X na exibição ou tabela de usuário.  
+> Se você consultar **Sys. dm_db_index_physical_stats** em uma instância de servidor que está hospedando uma always on [réplica secundária legível](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md), poderá encontrar um problema de bloqueio de restauração. Isso ocorre porque essa exibição de gerenciamento dinâmico adquire um bloqueio IS na exibição ou tabela de usuário especificada, que pode bloquear solicitações por um thread REDO para um bloqueio X na exibição ou tabela de usuário.  
   
- **Sys. dm _db_index_physical_stats** não retorna informações sobre índices com otimização de memória. Para obter informações sobre o uso de índice com otimização de memória, consulte [Sys. &#40;DM&#41;_db_xtp_index_stats Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md).  
+ **Sys. dm_db_index_physical_stats** não retorna informações sobre índices com otimização de memória. Para obter informações sobre o uso de índice com otimização de memória, consulte [Sys. dm_db_xtp_index_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md).  
   
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -55,10 +55,10 @@ sys.dm_db_index_physical_stats (
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *database_id* | NULL | 0 | DEFAULT  
+ *database_id* | NULL | 0 | OS  
  É a ID do banco de dados. *database_id* é **smallint**. As entradas válidas são o número da ID de um banco de dados, NULL, 0 ou DEFAULT. O padrão é 0. NULL, 0 e DEFAULT são valores equivalentes neste contexto.  
   
- Especifique NULL para retornar informações de todos os bancos de dados na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se você especificar NULL para *database_id*, também deverá especificar NULL para *object_id*, *index_id*e *partition_number*.  
+ Especifique NULL para retornar informações de todos os bancos de dados na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se você especificar NULL para *database_id*, também deverá especificar null para *object_id*, *index_id*e *partition_number*.  
   
  A função interna [DB_ID](../../t-sql/functions/db-id-transact-sql.md) pode ser especificada. Quando você usar DB_ID sem especificar um nome de banco de dados, o nível de compatibilidade do banco de dados atual deverá ser 90 ou mais.  
   
@@ -67,34 +67,34 @@ sys.dm_db_index_physical_stats (
   
  As entradas válidas são o número da ID de uma tabela e de uma exibição, NULL, 0 ou DEFAULT. O padrão é 0. NULL, 0 e DEFAULT são valores equivalentes neste contexto. Desde o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], as entradas válidas também incluem o nome da fila do Service Broker ou o nome da tabela interna da fila. Quando os parâmetros padrão são aplicados (ou seja, todos os objetos, todos os índices, etc.), as informações de fragmentação de todas as filas são incluídas no conjunto de resultados.  
   
- Especifique NULL para retornar informações de todas as tabelas e exibições no banco de dados especificado. Se você especificar NULL para *object_id*, também deverá especificar NULL para *index_id* e *partition_number*.  
+ Especifique NULL para retornar informações de todas as tabelas e exibições no banco de dados especificado. Se você especificar NULL para *object_id*, também deverá especificar null para *index_id* e *partition_number*.  
   
- *index_id* | 0 | NULL | -1 | DEFAULT  
- É a ID do índice. *index_id* é **int**. As entradas válidas são o número de ID de um índice, 0 se *object_id* for um heap, NULL,-1 ou padrão. O padrão é-1. NULL,-1 e DEFAULT são valores equivalentes neste contexto.  
+ *index_id* | 0 | NULL | -1 | OS  
+ É a ID do índice. *index_id* é **int**. As entradas válidas são o número de identificação de um índice, 0 se *object_id* for um heap, nulo,-1 ou padrão. O padrão é-1. NULL,-1 e DEFAULT são valores equivalentes neste contexto.  
   
- Especifique NULL para retornar informações de todos os índices de uma tabela base ou exibição. Se você especificar NULL para *index_id*, também deverá especificar NULL para *partition_number*.  
+ Especifique NULL para retornar informações de todos os índices de uma tabela base ou exibição. Se você especificar NULL para *index_id*, também deverá especificar null para *partition_number*.  
   
  *partition_number* | NULL | 0 | OS  
- É o número da partição no objeto. *partition_number* é **int**. As entradas válidas são o *partion_number* de um índice ou heap, NULL, 0 ou default. O padrão é 0. NULL, 0 e DEFAULT são valores equivalentes neste contexto.  
+ É o número da partição no objeto. *partition_number* é **int**. As entradas válidas são a *partion_number* de um índice ou heap, NULL, 0 ou default. O padrão é 0. NULL, 0 e DEFAULT são valores equivalentes neste contexto.  
   
  Especifique NULL para retornar informações de todas as partições do objeto proprietário.  
   
- *partition_number* é baseado em 1. Um índice não particionado ou heap tem *partition_number* definido como 1.  
+ o *partition_number* é baseado em 1. Um índice ou heap não particionado tem *partition_number* definido como 1.  
   
  *modo* | NULL | OS  
  É o nome do modo. o *modo* especifica o nível de verificação que é usado para obter estatísticas. o *modo* é **sysname**. Entradas válidas são DEFAULT, NULL, LIMITED, SAMPLED ou DETAILED. O padrão (NULL) é LIMITED.  
   
 ## <a name="table-returned"></a>Tabela retornada  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |database_id|**smallint**|Identificação do banco de dados da tabela ou exibição.|  
 |object_id|**int**|Identificação de objeto da tabela ou exibição na qual o índice se encontra.|  
 |index_id|**int**|Identificação de um índice.<br /><br /> 0 = Heap.|  
 |partition_number|**int**|Número de partição de base 1 no objeto proprietário; uma tabela, exibição ou índice.<br /><br /> 1 = Índice ou heap não particionado.|  
-|index_type_desc|**nvarchar(60)**|Descrição do tipo de índice:<br /><br /> HEAP<br /><br /> CLUSTERED INDEX<br /><br /> NONCLUSTERED INDEX<br /><br /> PRIMARY XML INDEX<br /><br /> EXTENDED INDEX<br /><br /> XML INDEX<br /><br /> ÍNDICE de mapeamento COLUMNSTORE (interno)<br /><br /> ÍNDICE DELETEBUFFER COLUMNSTORE (interno)<br /><br /> ÍNDICE DELETEBITMAP COLUMNSTORE (interno)|  
-|hobt_id|**bigint**|ID de heap ou árvore B do índice ou da partição.<br /><br /> Além de retornar o hobt_id de índices definidos pelo usuário, isso também retorna o hobt_id dos índices columnstore internos.|  
-|alloc_unit_type_desc|**nvarchar(60)**|Descrição do tipo de unidade de alocação:<br /><br /> IN_ROW_DATA<br /><br /> LOB_DATA<br /><br /> ROW_OVERFLOW_DATA<br /><br /> A unidade de alocação LOB_DATA contém os dados que são armazenados em colunas do tipo **Text**, **ntext**, **Image**, **varchar (max)** , **nvarchar (max)** , **varbinary (max)** e **XML**. Para obter mais informações, veja [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).<br /><br /> A unidade de alocação ROW_OVERFLOW_DATA contém os dados que são armazenados em colunas do tipo **varchar (n)** , **nvarchar (n)** , **varbinary (n)** e **sql_variant** que foram empurrados para fora da linha.|  
+|index_type_desc|**nvarchar (60)**|Descrição do tipo de índice:<br /><br /> HEAP<br /><br /> CLUSTERED INDEX<br /><br /> NONCLUSTERED INDEX<br /><br /> PRIMARY XML INDEX<br /><br /> EXTENDED INDEX<br /><br /> XML INDEX<br /><br /> ÍNDICE de mapeamento COLUMNSTORE (interno)<br /><br /> ÍNDICE DELETEBUFFER COLUMNSTORE (interno)<br /><br /> ÍNDICE DELETEBITMAP COLUMNSTORE (interno)|  
+|hobt_id|**bigint**|ID de heap ou árvore B do índice ou da partição.<br /><br /> Além de retornar o hobt_id de índices definidos pelo usuário, isso também retorna a hobt_id dos índices columnstore internos.|  
+|alloc_unit_type_desc|**nvarchar (60)**|Descrição do tipo de unidade de alocação:<br /><br /> IN_ROW_DATA<br /><br /> LOB_DATA<br /><br /> ROW_OVERFLOW_DATA<br /><br /> A unidade de alocação de LOB_DATA contém os dados que são armazenados em colunas do tipo **Text**, **ntext**, **Image**, **varchar (max)**, **nvarchar (max)**, **varbinary (max)** e **XML**. Para obter mais informações, veja [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).<br /><br /> A unidade de alocação de ROW_OVERFLOW_DATA contém os dados que são armazenados em colunas do tipo **varchar (n)**, **nvarchar (n)**, **varbinary (n)** e **sql_variant** que foram empurrados para fora da linha.|  
 |index_depth|**tinyint**|Número de níveis de índice.<br /><br /> 1 = Heap ou unidade de alocação LOB_DATA ou ROW_OVERFLOW_DATA.|  
 |index_level|**tinyint**|Nível atual do índice.<br /><br /> 0 para níveis folha de índice, heaps e unidades de alocação LOB_DATA ou ROW_OVERFLOW_DATA.<br /><br /> Maior que 0 para níveis de índice nonleaf. *index_level* será o mais alto no nível raiz de um índice.<br /><br /> Os níveis não folha de índices são processados somente quando *Mode* = detailed.|  
 |avg_fragmentation_in_percent|**float**|Fragmentação lógica para índices ou fragmentação de extensão para heaps na unidade de alocação IN_ROW_DATA.<br /><br /> O valor é medido como uma porcentagem e leva em consideração vários arquivos. Para definições de fragmentação lógica e de extensão, consulte Comentários.<br /><br /> 0 para unidades de alocação LOB_DATA e ROW_OVERFLOW_DATA.<br /><br /> NULL para heaps quando *Mode* = sampleed.|  
@@ -102,7 +102,7 @@ sys.dm_db_index_physical_stats (
 |avg_fragment_size_in_pages|**float**|Número médio de páginas em um fragmento no nível folha de uma unidade de alocação IN_ROW_DATA.<br /><br /> NULL para níveis não folha de um índice e unidades de alocação LOB_DATA ou ROW_OVERFLOW_DATA.<br /><br /> NULL para heaps quando *Mode* = sampleed.|  
 |page_count|**bigint**|Número total de páginas de índice ou dados.<br /><br /> Para um índice, o número total de páginas de índice no nível atual da árvore b na unidade de alocação IN_ROW_DATA.<br /><br /> Para um heap, o número total de páginas de dados na unidade de alocação IN_ROW_DATA.<br /><br /> Para as unidades de alocação LOB_DATA ou ROW_OVERFLOW_DATA, o número total de páginas na unidade de alocação.|  
 |avg_page_space_used_in_percent|**float**|Porcentagem média de espaço de armazenamento de dados disponível usada em todas as páginas.<br /><br /> Para um índice, a média se aplica ao nível atual da árvore b na unidade de alocação IN_ROW_DATA.<br /><br /> Para um heap, a média de todas as páginas de dados na unidade de alocação IN_ROW_DATA.<br /><br /> Para as unidades de alocação LOB_DATA ou ROW_OVERFLOW DATA, a média de todas as páginas na unidade de alocação.<br /><br /> NULL quando *Mode* = Limited.|  
-|record_count|**bigint**|Número total de registros.<br /><br /> Para um índice, o número total de registros se aplica ao nível atual da árvore b na unidade de alocação IN_ROW_DATA.<br /><br /> Para um heap, o número total de registros na unidade de alocação IN_ROW_DATA.<br /><br /> **Observação:** Para um heap, o número de registros retornados dessa função pode não corresponder ao número de linhas retornadas pela execução de uma contagem select (\*) em relação ao heap. Isso porque uma linha pode conter vários registros. Por exemplo, em algumas situações de atualização, uma única linha de heap pode ter um registro de encaminhamento e um registro encaminhado como resultado de uma operação de atualização. Da mesma forma, a maior parte das linhas de LOB grandes é dividida em vários registros no armazenamento LOB_DATA.<br /><br /> Para as unidades de alocação LOB_DATA ou ROW_OVERFLOW_DATA, o número total de registros na unidade de alocação completa.<br /><br /> NULL quando *Mode* = Limited.|  
+|record_count|**bigint**|Número total de registros.<br /><br /> Para um índice, o número total de registros se aplica ao nível atual da árvore b na unidade de alocação IN_ROW_DATA.<br /><br /> Para um heap, o número total de registros na unidade de alocação IN_ROW_DATA.<br /><br /> **Observação:** Para um heap, o número de registros retornados dessa função pode não corresponder ao número de linhas retornadas pela execução de uma contagem SELECT (\*) em relação ao heap. Isso porque uma linha pode conter vários registros. Por exemplo, em algumas situações de atualização, uma única linha de heap pode ter um registro de encaminhamento e um registro encaminhado como resultado de uma operação de atualização. Da mesma forma, a maior parte das linhas de LOB grandes é dividida em vários registros no armazenamento LOB_DATA.<br /><br /> Para as unidades de alocação LOB_DATA ou ROW_OVERFLOW_DATA, o número total de registros na unidade de alocação completa.<br /><br /> NULL quando *Mode* = Limited.|  
 |ghost_record_count|**bigint**|Número de registros fantasmas prontos para remoção pela tarefa de limpeza fantasma na unidade de alocação.<br /><br /> 0 para níveis não folha de um índice na unidade de alocação de IN_ROW_DATA.<br /><br /> NULL quando *Mode* = Limited.|  
 |version_ghost_record_count|**bigint**|Número de registros fantasmas retidos por uma transação de isolamento de instantâneo pendente em uma unidade de alocação.<br /><br /> 0 para níveis não folha de um índice na unidade de alocação de IN_ROW_DATA.<br /><br /> NULL quando *Mode* = Limited.|  
 |min_record_size_in_bytes|**int**|Tamanho de registro mínimo em bytes.<br /><br /> Para um índice, o tamanho de registro mínimo aplica-se ao nível atual da árvore b na unidade de alocação IN_ROW_DATA.<br /><br /> Para um heap, o tamanho de registro mínimo na unidade de alocação IN_ROW_DATA.<br /><br /> Para as unidades de alocação LOB_DATA ou ROW_OVERFLOW_DATA, o tamanho de registro mínimo na unidade de alocação completa.<br /><br /> NULL quando *Mode* = Limited.|  
@@ -110,15 +110,15 @@ sys.dm_db_index_physical_stats (
 |avg_record_size_in_bytes|**float**|Tamanho de registro médio em bytes.<br /><br /> Para um índice, o tamanho de registro médio aplica-se ao nível atual da árvore b na unidade de alocação IN_ROW_DATA.<br /><br /> Para um heap, o tamanho de registro médio na unidade de alocação IN_ROW_DATA.<br /><br /> Para as unidades de alocação LOB_DATA ou ROW_OVERFLOW_DATA, o tamanho de registro médio na unidade de alocação completa.<br /><br /> NULL quando *Mode* = Limited.|  
 |forwarded_record_count|**bigint**|Número de registros em um heap com ponteiros encaminhados a outro local de dados. (Esse estado ocorre durante uma atualização, quando não há espaço suficiente para armazenar a nova linha no local original.)<br /><br /> NULL para qualquer unidade de alocação diferente das unidades de alocação IN_ROW_DATA de um heap.<br /><br /> NULL para heaps quando *Mode* = Limited.|  
 |compressed_page_count|**bigint**|O número total de páginas compactadas.<br /><br /> Para heaps, as páginas alocadas recentemente não são compactadas com PAGE. Um heap é compactado com PAGE em duas condições especiais: quando os dados são importados em massa ou quando um heap é reconstruído. Operações DML típicas que causam alocações de página não terão compactação PAGE. Reconstrua um heap quando o valor compressed_page_count aumentar ultrapassando o limite desejado.<br /><br /> Para tabelas que têm um índice clusterizado, o valor compressed_page_count indica a eficiência da compactação PAGE.|  
-|hobt_id|BIGINT|**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Somente para índices columnstore, essa é a ID de um conjunto de linhas que controla dados columnstore internos para uma partição. Os conjuntos de linhas são armazenados como heaps de dados ou árvores binárias. Eles têm a mesma ID de índice que o índice columnstore pai. Para obter mais informações, consulte [Sys. &#40;INTERNAL_PARTITIONS Transact-&#41;SQL](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md).<br /><br /> NULL se|  
-|column_store_delete_buffer_state|TINYINT|**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN<br /><br /> 2 = DRENAGEM<br /><br /> 3 = LIBERAÇÃO<br /><br /> 4 = DESATIVANDO<br /><br /> 5 = PRONTO|  
+|hobt_id|BIGINT|**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Somente para índices columnstore, essa é a ID de um conjunto de linhas que controla dados columnstore internos para uma partição. Os conjuntos de linhas são armazenados como heaps de dados ou árvores binárias. Eles têm a mesma ID de índice que o índice columnstore pai. Para obter mais informações, consulte [Sys. internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md).<br /><br /> NULL se|  
+|column_store_delete_buffer_state|tinyint|**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN<br /><br /> 2 = DRENAGEM<br /><br /> 3 = LIBERAÇÃO<br /><br /> 4 = DESATIVANDO<br /><br /> 5 = PRONTO|  
 |column_store_delete_buff_state_desc||**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Não é válido-o índice pai não é um índice columnstore.<br /><br /> Os scanners abertos e os verificadores usam isso.<br /><br /> DRENAgem-os Excluidores estão esgotando, mas os scanners ainda o utilizam.<br /><br /> A liberação de buffer é fechada e as linhas no buffer estão sendo gravadas no bitmap de exclusão.<br /><br /> A desativação de linhas no buffer de exclusão fechado foi gravada no bitmap de exclusão, mas o buffer não foi truncado porque os scanners ainda o estão usando. Novos scanners não precisam usar o buffer de desativação porque o buffer aberto é suficiente.<br /><br /> Pronto-este buffer de exclusão está pronto para uso.|  
   
 ## <a name="remarks"></a>Comentários  
  A função de gerenciamento dinâmico sys.dm_db_index_physical_stats substitui a instrução DBCC SHOWCONTIG.  
   
 ## <a name="scanning-modes"></a>Modos de exame  
- O modo em que a função é executada determina o nível do exame executado para obter os dados estatísticos usados pela função. o *modo* é especificado como limitado, amostrado ou detalhado. A função atravessa as cadeias de páginas para as unidades de alocação que compõem as partições especificadas da tabela ou índice. sys. dm _db_index_physical_stats requer apenas um bloqueio de tabela (IS) de intenção compartilhado, independentemente do modo em que é executado.  
+ O modo em que a função é executada determina o nível do exame executado para obter os dados estatísticos usados pela função. o *modo* é especificado como limitado, amostrado ou detalhado. A função atravessa as cadeias de páginas para as unidades de alocação que compõem as partições especificadas da tabela ou índice. sys. dm_db_index_physical_stats requer apenas um bloqueio de tabela de tentativa-compartilhada (IS), independentemente do modo em que é executado.  
   
  O modo LIMITED é o mais rápido e examina o menor número de páginas. Para um índice, apenas as páginas de nível pai da árvore b (ou seja, aquelas acima do nível folha) são examinadas. Para um heap, as páginas PFS e IAM associadas são examinadas, e as páginas de dados de um heap são examinadas no modo LIMITED.  
   
@@ -131,7 +131,7 @@ sys.dm_db_index_physical_stats (
 ## <a name="using-system-functions-to-specify-parameter-values"></a>Usando funções de sistema para especificar valores de parâmetro  
  Você pode usar as [!INCLUDE[tsql](../../includes/tsql-md.md)] funções [DB_ID](../../t-sql/functions/db-id-transact-sql.md) e [object_id](../../t-sql/functions/object-id-transact-sql.md) para especificar um valor para os parâmetros *database_id* e *object_id* . No entanto, passar valores que não sejam válidos a essas funções pode causar resultados não intencionais. Por exemplo, se o banco de dados ou nome de objeto não puder ser encontrado por não existir ou por estar escrito incorretamente, ambas as funções retornarão NULL. A função sys.dm_db_index_physical_stats interpreta o NULL como um valor curinga que especifica todos os bancos de dados ou todos os objetos.  
   
- Além disso, a função OBJECT_ID é processada antes de a função sys. dm _db_index_physical_stats ser chamada e, portanto, é avaliada no contexto do banco de dados atual, não no banco de dados especificado em *database_id*. Esse comportamento pode fazer com que a função OBJECT_ID retorne um valor NULL; ou, se o nome do objeto existir no contexto do banco de dados atual e no banco de dados especificado, uma mensagem de erro poderá ser exibida. Os exemplos seguintes demonstram esses resultados não intencionais.  
+ Além disso, a função OBJECT_ID é processada antes que a função sys. dm_db_index_physical_stats seja chamada e, portanto, é avaliada no contexto do banco de dados atual, não no banco de dados especificado em *database_id*. Esse comportamento pode fazer com que a função OBJECT_ID retorne um valor NULL; ou, se o nome do objeto existir no contexto do banco de dados atual e no banco de dados especificado, uma mensagem de erro poderá ser exibida. Os exemplos seguintes demonstram esses resultados não intencionais.  
   
 ```  
 USE master;  
@@ -167,8 +167,8 @@ DROP DATABASE Test;
 GO  
 ```  
   
-### <a name="best-practice"></a>Prática recomendada  
- Sempre verifique se uma ID válida é retornada ao usar DB_ID ou OBJECT_ID. Por exemplo, quando você usa object_id, especifique um nome de três partes, como `OBJECT_ID(N'AdventureWorks2012.Person.Address')`, ou teste o valor retornado pelas funções antes de usá-las na função sys. dm _db_index_physical_stats. Os exemplos A e B a seguir demonstram um modo seguro de especificar identificações de banco de dados e objeto.  
+### <a name="best-practice"></a>Melhor prática  
+ Sempre verifique se uma ID válida é retornada ao usar DB_ID ou OBJECT_ID. Por exemplo, quando você usa OBJECT_ID, especifique um nome de três partes, como `OBJECT_ID(N'AdventureWorks2012.Person.Address')`, ou teste o valor retornado pelas funções antes de usá-las na função sys. dm_db_index_physical_stats. Os exemplos A e B a seguir demonstram um modo seguro de especificar identificações de banco de dados e objeto.  
   
 ## <a name="detecting-fragmentation"></a>Detectando a fragmentação  
  A fragmentação ocorre por meio dos processos de modificações de dados (instruções INSERT, UPDATE e DELETE) feitas na tabela e, portanto, nos índices definidos na tabela. Como essas modificações não são distribuídas uniformemente entre as linhas da tabela e os índices, o preenchimento de cada página pode variar com o tempo. Para consultas que examinam parte dos índices de uma tabela ou todos eles, esse tipo de fragmentação pode causar leituras de página adicionais. Isso impede o exame paralelo de dados.  
@@ -177,9 +177,9 @@ GO
   
  **Fragmentação lógica**  
   
- É a porcentagem de páginas com problema nas páginas de folha de um índice. Uma página fora de ordem é aquela cuja próxima página física alocada ao índice não é a página apontada pelo ponteiro de próxima págin*a* na página de folha atual.  
+ É a porcentagem de páginas com problema nas páginas de folha de um índice. Uma página com problema é aquela para a qual a próxima página física alocada ao índice não é a página apontada pelo ponteiro da próxima págin*a* na página de folha atual.  
   
- **Fragmentação de extensão**  
+ **Fragmentação da extensão**  
   
  É a porcentagem de extensões com problema nas páginas de folha de um heap. Uma extensão com problema é aquela para a qual a extensão que contém a página atual de um heap não é fisicamente a próxima extensão depois da extensão que contém a página anterior.  
   
@@ -199,10 +199,10 @@ GO
  A fragmentação sozinha não é uma razão suficiente para reorganizar ou reconstruir um índice. O efeito principal da fragmentação é que ela reduz a velocidade da taxa de transferência read-ahead da página durante os exames de índice. O resultado é tempos de resposta mais lentos. Se a carga de trabalho da consulta em uma tabela ou índice fragmentado não envolver exames porque a carga de trabalho é composta por pesquisas singleton, a remoção da fragmentação poderá não ter efeito algum.
   
 > [!NOTE]  
->  Executar DBCC SHRINKFILE ou DBCC SHRINKDATABASE poderá introduzir a fragmentação se um índice for parcialmente ou completamente movido durante a operação de redução. Assim, se for necessário executar uma operação de redução, você deverá fazer isso antes da remoção da fragmentação.  
+>  A execução de DBCC SHRINKFILE ou DBCC SHRINKDATABASE poderá apresentar fragmentação se um índice for movido parcial ou completamente durante a operação de redução. Assim, se for necessário executar uma operação de redução, você deverá fazer isso antes da remoção da fragmentação.  
   
 ## <a name="reducing-fragmentation-in-a-heap"></a>Reduzindo fragmentação em um heap  
- Para reduzir a extensão da fragmentação de um heap, crie um índice clusterizado na tabela e descarte o índice. Isso redistribui os dados enquanto o índice clusterizado é criado. E também otimiza o máximo possível esse processo, enquanto considera a distribuição de espaço livre disponível no banco de dados. Quando o índice clusterizado é descartado para a recriação de um heap, os dados não são movidos e permanecem no mesmo lugar. Para obter informações sobre como executar essas operações, consulte [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md) and [drop index](../../t-sql/statements/drop-index-transact-sql.md).  
+ Para reduzir a extensão da fragmentação de um heap, crie um índice clusterizado na tabela e descarte o índice. Isso redistribui os dados enquanto o índice clusterizado é criado. E também otimiza o máximo possível esse processo, enquanto considera a distribuição de espaço livre disponível no banco de dados. Quando o índice clusterizado é descartado para a recriação de um heap, os dados não são movidos e permanecem no mesmo lugar. Para obter informações sobre como executar essas operações, consulte [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md) e [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md).  
   
 > [!CAUTION]  
 >  Criar e descartar um índice clusterizado em uma tabela recria todos os índices não clusterizados nessa tabela duas vezes.  
@@ -234,11 +234,11 @@ GO
   
  Negar VIEW DATABASE STATE impede que todos os objetos do banco de dados sejam retornados, independentemente de qualquer permissão CONTROL concedida a objetos específicos. Além disso, quando o curinga do banco de dados @*database_id*= NULL é especificado, o banco de dados é omitido.  
   
- Para obter mais informações, consulte [exibições de gerenciamento &#40;dinâmico e funções&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
+ Para obter mais informações, consulte [funções e exibições de gerenciamento dinâmico &#40;&#41;Transact-SQL ](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-returning-information-about-a-specified-table"></a>A. Retornando informações sobre uma tabela especificada  
+### <a name="a-returning-information-about-a-specified-table"></a>a. Retornando informações sobre uma tabela especificada  
  O exemplo a seguir retorna as estatísticas de tamanho e fragmentação de todos os índices e partições da tabela `Person.Address`. O modo de exame é definido como `'LIMITED'` para oferecer melhor desempenho e limitar as estatísticas retornadas. A execução dessa consulta requer, no mínimo, a permissão CONTROL na tabela `Person.Address`.  
   
 ```  
@@ -294,7 +294,7 @@ GO
 ```  
   
 ### <a name="d-using-sysdm_db_index_physical_stats-in-a-script-to-rebuild-or-reorganize-indexes"></a>D. Usando sys.dm_db_index_physical_stats em um script para reconstruir ou reorganizar índices  
- O exemplo a seguir reorganiza ou reconstrói automaticamente em um banco de dados todas as partições que têm uma fragmentação média de 10%. A execução desta consulta requer a permissão VIEW DATABASE STATE. Este exemplo especifica `DB_ID` como o primeiro parâmetro sem especificar um nome de banco de dados. Um erro será gerado se o banco de dados atual tiver um nível de compatibilidade de 80 ou menos. Para resolver o erro, substitua `DB_ID()` por um nome de banco de dados válido. Para obter mais informações sobre os níveis de compatibilidade de banco de dados, consulte o [ &#40;nível de compatibilidade de ALTER DATABASE Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
+ O exemplo a seguir reorganiza ou reconstrói automaticamente em um banco de dados todas as partições que têm uma fragmentação média de 10%. A execução desta consulta requer a permissão VIEW DATABASE STATE. Este exemplo especifica `DB_ID` como o primeiro parâmetro sem especificar um nome de banco de dados. Um erro será gerado se o banco de dados atual tiver um nível de compatibilidade de 80 ou menos. Para resolver o erro, substitua `DB_ID()` por um nome de banco de dados válido. Para obter mais informações sobre níveis de compatibilidade de banco de dados, consulte [nível de compatibilidade de alter database &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
 ```  
 -- Ensure a USE <databasename> statement has been executed first.  
@@ -423,14 +423,14 @@ select * from sys.dm_db_index_physical_stats (db_id(), object_id ('ExpenseQueue'
   
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Exibições e funções de gerenciamento dinâmico relacionadas ao índice &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
- [sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
- [sys.dm_db_index_usage_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
- [sys.dm_db_partition_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
+ [sys. dm_db_index_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
+ [sys. dm_db_index_usage_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
+ [sys. dm_db_partition_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
  [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
- [Exibições &#40;do sistema TRANSACT-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+ [Exibições do sistema &#40;&#41;Transact-SQL](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   
 

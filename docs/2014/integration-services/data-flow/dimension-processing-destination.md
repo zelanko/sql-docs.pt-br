@@ -18,14 +18,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3f4aaaef619e0f8ae5810e70e9a6707c6213268d
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68890566"
 ---
 # <a name="dimension-processing-destination"></a>Destino de processamento de dimensões
-  O Destino de Processamento de Dimensões carrega e processa uma dimensão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Para obter mais informações sobre dimensões, consulte [Dimensões &#40;Analysis Services – Dados Multidimensionais&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data).  
+  O destino de processamento de dimensões carrega e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] processa uma dimensão. Para obter mais informações sobre dimensões, consulte [Dimensões &#40;Analysis Services – Dados Multidimensionais&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data).  
   
  O Destino de Processamento de Dimensões inclui os seguintes recursos:  
   
@@ -46,11 +46,11 @@ ms.locfileid: "68890566"
   
  Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor de Destino de Processamento de Dimensões** , clique em um dos seguintes tópicos:  
   
--   [Editor de Destino de Processamento de Dimensões &#40;Página Gerenciador de Conexões&#41;](../dimension-processing-destination-editor-connection-manager-page.md)  
+-   [Editor de destino de processamento de dimensões &#40;página Gerenciador de conexões&#41;](../dimension-processing-destination-editor-connection-manager-page.md)  
   
--   [Editor de Destino de Processamento de Dimensões &#40;página Mapeamentos&#41;](../dimension-processing-destination-editor-mappings-page.md)  
+-   [Editor de destino de processamento de dimensões &#40;página Mapeamentos&#41;](../dimension-processing-destination-editor-mappings-page.md)  
   
--   [Editor de Destino de Processamento de Dimensões &#40;Página Avançado&#41;](../dimension-processing-destination-editor-advanced-page.md)  
+-   [Editor de destino de processamento de dimensões &#40;página avançado&#41;](../dimension-processing-destination-editor-advanced-page.md)  
   
  A caixa de diálogo **Editor Avançado** reflete as propriedades que podem ser definidas programaticamente. Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   
@@ -58,7 +58,7 @@ ms.locfileid: "68890566"
   
  Para obter mais informações sobre como definir as propriedades, consulte [Definir as propriedades de um componente de fluxo de dados](set-the-properties-of-a-data-flow-component.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Fluxo de Dados](data-flow.md)   
  [Transformações do Integration Services](transformations/integration-services-transformations.md)  
   

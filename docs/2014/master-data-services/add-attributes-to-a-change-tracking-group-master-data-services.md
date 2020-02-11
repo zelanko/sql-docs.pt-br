@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8e700942f9cebc08241cf4e159dceedc7d515a94
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480121"
 ---
 # <a name="add-attributes-to-a-change-tracking-group-master-data-services"></a>Adicionar atributos a um grupo de controle de alterações (Master Data Services)
@@ -30,17 +30,17 @@ ms.locfileid: "65480121"
 ## <a name="prerequisites"></a>Prerequisites  
  Para executar esse procedimento:  
   
--   Você deve ter permissão para acessar a área funcional **Administração do Sistema** .  
+-   Você deve ter permissão para acessar a área funcional **Administração do sistema** .  
   
 -   Você deve ser um administrador de modelo. Para obter mais informações, veja [Administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
--   Os atributos devem existir para que possam ser adicionados ao grupo de controle de alterações. Para obter mais informações, veja [Create a Text Attribute &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-text-attribute-master-data-services.md).  
+-   Os atributos devem existir para que possam ser adicionados ao grupo de controle de alterações. Para obter mais informações, veja [Criar um atributo de texto &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-text-attribute-master-data-services.md).  
   
 ### <a name="to-add-attributes-to-a-change-tracking-group"></a>Para adicionar atributos a um grupo de controle de alterações  
   
 1.  No [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], clique em **Administração do Sistema**.  
   
-2.  Sobre o **Gerenciador de modelos** página, na barra de menus, aponte para **gerenciar** e clique em **entidades**.  
+2.  Na página **Gerenciador de modelos** , na barra de menus, aponte para **gerenciar** e clique em **entidades**.  
   
 3.  Na página **Manutenção da Entidade** , na lista **Modelo** , selecione um modelo.  
   
@@ -50,11 +50,11 @@ ms.locfileid: "65480121"
   
 6.  Na página **Editar Entidade** :  
   
-    -   Se o atributo for para membros folha, nos **atributos de folha** painel, selecione o atributo e clique em **Editar atributo de folha**.  
+    -   Se o atributo for para membros folha, no painel **atributos de folha** , selecione o atributo e clique em **Editar atributo folha**.  
   
-    -   Se o atributo for para membros consolidados, nos **consolidado de atributos** painel, selecione o atributo e clique em **Editar atributo consolidado**.  
+    -   Se o atributo for para membros consolidados, no painel **atributos consolidados** , selecione o atributo e clique em **Editar atributo consolidado**.  
   
-    -   Se o atributo for para coleções, nos **atributos de coleção** painel, selecione o atributo e clique em **Editar atributo de coleção**.  
+    -   Se o atributo for para coleções, no painel **atributos da coleção** , selecione o atributo e clique em **Editar atributo de coleção**.  
   
 7.  Marque a caixa de seleção **Habilitar controle de alterações** .  
   
@@ -68,9 +68,9 @@ ms.locfileid: "65480121"
   
 ## <a name="next-steps"></a>Próximas etapas  
   
--   [Iniciar ações com base em alterações no valor do atributo &#40;Master Data Services&#41;](../../2014/master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)  
+-   [Iniciar ações com base nas alterações de valor de atributo &#40;Master Data Services&#41;](../../2014/master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar um atributo de texto &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)   
  [Criar um atributo baseado em domínio &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)  
   
