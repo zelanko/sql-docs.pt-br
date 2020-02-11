@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 2f355842999b505a97c3387ab9e51d3b651c3b7c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68138278"
 ---
 # <a name="mdx-scripting---scope"></a>Script MDX – SCOPE
@@ -78,12 +78,12 @@ Limited_Set ::=
 > [!NOTE]  
 >  Membros escondidos estão expostos em instruções SCOPE.  
   
- Instruções SCOPE criarão subcubos que expõem "buracos" independentemente do **MDX Compatibility** configuração. Por exemplo, a instrução `Scope( Customer.State.members )` pode incluir os estados nos países ou regiões que não contêm os estados, mas para os quais os membros de placeholder invisíveis foram inseridos.  
+ Instruções de escopo criarão subcubos que expõem "buracos", independentemente da configuração de **compatibilidade MDX** . Por exemplo, a instrução `Scope( Customer.State.members )` pode incluir os estados nos países ou regiões que não contêm os estados, mas para os quais os membros de placeholder invisíveis foram inseridos.  
   
  Os membros calculados e os conjuntos nomeados criados em uma instrução SCOPE não são afetados por essa instrução.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir, de script de cálculo MDX Adventure Works, solução de exemplo define o escopo atual como o trimestre fiscal no ano fiscal de 2005 e a medida cota de vendas e, em seguida, atribui um valor para as células no escopo atual, usando o  **ParallelPeriod** função. O exemplo modifica o escopo usando outra instrução SCOPE e, em seguida, executa outra atribuição usando o [This (MDX)](../mdx/this-mdx.md) função.  
+ O exemplo a seguir, do script de cálculo MDX na solução de exemplo Adventure Works, define o escopo atual como trimestre fiscal no ano fiscal 2005 e a medida cota de valor de vendas e atribui um valor às células no escopo atual usando a função **ParallelPeriod** . Em seguida, o exemplo modifica o escopo usando outra instrução SCOPE e, em seguida, executa outra atribuição usando a função [this (MDX)](../mdx/this-mdx.md) .  
   
 ```  
 Scope   
@@ -113,7 +113,7 @@ Scope
 End Scope ;     
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Instruções de script MDX &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Instruções de script MDX &#40;&#41;MDX](../mdx/mdx-scripting-statements-mdx.md)  
   
   

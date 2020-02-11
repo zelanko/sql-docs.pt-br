@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e9371f053f95754cdcb7107559f9e0bc3eca2e9a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63062134"
 ---
 # <a name="data-types-ole-db"></a>Tipos de dados (OLE DB)
-  Para executar [!INCLUDE[tsql](../../includes/tsql-md.md)] instruções e processar os resultados usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB do Native Client, você deve saber como o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mapas de provedor do OLE DB do Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para tipos de dados OLE DB ao associar os tipos de dados parâmetros ou colunas em um conjunto de linhas, e quando ele usa o **ITableDefinition** interface para criar uma tabela no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Para [!INCLUDE[tsql](../../includes/tsql-md.md)] executar instruções e processar os resultados usando o provedor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB de cliente nativo, você deve saber como o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nativo mapeia tipos de dados para OLE DB tipos de dados ao associar parâmetros ou colunas em um conjunto de linhas e quando ele usa a interface **ITableDefinition** para criar uma tabela no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
@@ -33,7 +33,7 @@ ms.locfileid: "63062134"
   
 -   [Estrutura SSVARIANT](ssvariant-structure.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [SQL Server Native Client &#40;OLE DB&#41;](../native-client/ole-db/sql-server-native-client-ole-db.md)  
   
   

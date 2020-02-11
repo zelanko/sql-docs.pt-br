@@ -1,5 +1,5 @@
 ---
-title: (Página geral) de Editor do Gerenciador de Conexão de arquivo simples | Microsoft Docs
+title: Editor do Gerenciador de conexões de arquivos simples (página Geral) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b378d7257ddd57e97407d82feb817aa70965f598
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058749"
 ---
 # <a name="flat-file-connection-manager-editor-general-page"></a>Editor do Gerenciador de Conexões de Arquivos Simples (página Geral)
@@ -48,10 +48,10 @@ ms.locfileid: "66058749"
  **Página de código**  
  Especifique a página de código do texto não Unicode.  
   
- **Formato**  
+ **Ao**  
  Indique se o arquivo usa formatação delimitada, de largura fixa ou irregular à direita.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |Delimitado|As colunas são separadas por delimitadores, especificados na página **Colunas** .|  
 |Largura fixa|As colunas têm uma largura fixa.|  
@@ -66,15 +66,15 @@ ms.locfileid: "66058749"
  **Delimitador de linha de cabeçalho**  
  Selecione na lista de delimitadores de linhas de cabeçalho ou digite o texto do delimitador.  
   
-|Valor|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
-|**{CR}{LF}**|A linha do cabeçalho é delimitada por uma combinação de retorno de carro e avanço de linha.|  
-|**{CR}**|A linha do cabeçalho é delimitada por um retorno de carro.|  
-|**{LF}**|A linha do cabeçalho é delimitada por um avanço de linha.|  
-|**Ponto-e-vírgula {;}**|A linha do cabeçalho é delimitada por um ponto-e-vírgula.|  
+|**CD ALIMENTAÇÃO**|A linha do cabeçalho é delimitada por uma combinação de retorno de carro e avanço de linha.|  
+|**CD**|A linha do cabeçalho é delimitada por um retorno de carro.|  
+|**ALIMENTAÇÃO**|A linha do cabeçalho é delimitada por um avanço de linha.|  
+|**Ponto e vírgula {;}**|A linha do cabeçalho é delimitada por um ponto-e-vírgula.|  
 |**Dois-pontos {:}**|A linha do cabeçalho é delimitada por dois-pontos.|  
-|**Vírgula {,}**|A linha do cabeçalho é delimitada por uma vírgula.|  
-|**Tabulação {t}**|A linha do cabeçalho é delimitada por uma tabulação.|  
+|**Pontos{,}**|A linha do cabeçalho é delimitada por uma vírgula.|  
+|**Guia {t}**|A linha do cabeçalho é delimitada por uma tabulação.|  
 |**Barra vertical {&#124;}**|A linha do cabeçalho é delimitada por uma barra vertical.|  
   
  **Linhas de cabeçalho a ignorar**  
@@ -83,10 +83,10 @@ ms.locfileid: "66058749"
  **Nomes de coluna na primeira linha de dados**  
  Indique se deseja esperar ou fornecer nomes de coluna na primeira linha de dados.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor do Gerenciador de Conexões de Arquivos Simples &#40;Página Colunas&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)   
- [Editor do Gerenciador de Conexões de Arquivos Simples &#40;Página Avançado&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)   
- [Editor do Gerenciador de Conexões de Arquivos Simples &#40;Página Visualização&#41;](../../2014/integration-services/flat-file-connection-manager-editor-preview-page.md)  
+ [Editor do Gerenciador de conexões de arquivos simples &#40;página colunas&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)   
+ [Editor do Gerenciador de conexões de arquivos simples &#40;página avançado&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)   
+ [Editor do Gerenciador de conexões de arquivos simples &#40;página Visualização&#41;](../../2014/integration-services/flat-file-connection-manager-editor-preview-page.md)  
   
   

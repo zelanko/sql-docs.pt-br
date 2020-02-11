@@ -1,5 +1,5 @@
 ---
-title: Aviso legal (SSMA para Access) | Microsoft Docs
+title: Aviso legal (SSMA para acesso) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,18 +14,18 @@ ms.assetid: d614b508-48ad-459e-ae86-79ee9d027a73
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: d22a41b67d4b33d573a1c3ecc5f2235560cceea3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67947511"
 ---
-# <a name="legal-notice-ssma-for-access"></a>Aviso legal (SSMA para Access)
+# <a name="legal-notice-ssma-for-access"></a>Aviso legal (SSMA para acesso)
 Esta documentação, incluindo os aplicativos de exemplo nela mencionados, é fornecida apenas em caráter informativo e não estipula garantias expressas ou tácitas. As informações contidas nesta documentação, incluindo URLs e outras referências a sites da Internet, estão sujeitas a alterações sem aviso prévio. Todo o risco associado ao uso ou aos resultados do uso desta documentação é de responsabilidade do usuário.  
   
 A principal finalidade de um exemplo contido nesta documentação é ilustrar um conceito ou uso razoável de uma determinada instrução ou cláusula. A maioria dos exemplos não inclui todo o código geralmente encontrado em um sistema de produção completo, pois algumas das funções comuns de validação de dados e tratamento de erros foram removidas para focalizar o exemplo em um determinado conceito ou instrução. Não há suporte técnico para esses exemplos nem para quaisquer códigos-fonte incluídos.  
   
-A menos que indicado o contrário, os exemplos de empresas, organizações, produtos, nomes de domínio, endereços de email, pessoas, lugares e eventos aqui descritos são fictícios, e nenhuma associação com empresas, organizações, produtos, nomes de domínio, endereços de email, pessoas, lugares ou eventos reais é intencional ou deve ser inferida. Estar em conformidade com todas as leis de direitos autorais aplicáveis é responsabilidade do usuário. Sem limitar os direitos autorais, nenhuma parte desta documentação pode ser reproduzida, armazenada ou introduzida em um sistema de recuperação, ou transmitida de qualquer forma ou por qualquer meio (seja eletrônico, mecânico, fotocópia, gravação ou outro), ou para qualquer finalidade, sem a permissão expressa e por escrito da Microsoft Corporation.  
+A menos que indicado o contrário, os exemplos de empresas, organizações, produtos, nomes de domínio, endereços de email, pessoas, lugares e eventos aqui descritos são fictícios, e nenhuma associação com empresas, organizações, produtos, nomes de domínio, endereços de email, pessoas, lugares ou eventos reais é intencional ou deve ser inferida. Obedecer a todas as leis de direitos autorais aplicáveis é responsabilidade do usuário. Sem limitar os direitos autorais, nenhuma parte desta documentação pode ser reproduzida, armazenada ou introduzida em um sistema de recuperação, ou transmitida de qualquer forma ou por qualquer meio (seja eletrônico, mecânico, fotocópia, gravação ou outro), ou para qualquer finalidade, sem a permissão expressa e por escrito da Microsoft Corporation.  
   
 A Microsoft pode ter patentes ou requisições para obtenção de patente, marcas comerciais, direitos autorais ou outros direitos de propriedade intelectual que abrangem o conteúdo desta documentação. A posse desta documentação não lhe confere nenhum direito sobre as citadas patentes, marcas comerciais, direitos autorais ou outros direitos de propriedade intelectual, salvo aqueles expressamente mencionados em um contrato de licença, por escrito, da Microsoft.  
   
@@ -38,7 +38,7 @@ SAP NetWeaver é marca registrada da SAP AG na Alemanha e em vários outros paí
 Todas as outras marcas comerciais pertencem a seus respectivos proprietários.  
   
 ## <a name="documentation-policy-for-sql-server-support-and-upgrade"></a>Política de documentação para suporte e atualização do SQL Server  
-O conteúdo que aparece na documentação do SQL Server somente é publicado depois de ser testado o suficiente. Documentação do produto - Manuais Online do SQL Server, arquivos Leiame, documentos de problemas conhecidos e artigos da Base de dados de Conhecimento - tem conteúdo sobre recursos do SQL Server e funcionalidade que é robusta o suficiente para ser usado por todos os clientes com segurança. Essa política se aplica a toda a documentação do SQL Server, incluindo arquivos Leiame de versões e service packs; um arquivo Leiame é considerado extensão dos Manuais Online.  
+O conteúdo que aparece na documentação do SQL Server somente é publicado depois de ser testado o suficiente. Documentação do produto-Manuais Online do SQL Server, arquivos leiame, documentos de problemas conhecidos e artigos da base de dados de conhecimento-contém conteúdo sobre SQL Server recursos e funcionalidades que são robustos o suficiente para serem seguros para uso geral por todos os clientes. Essa política se aplica a toda a documentação do SQL Server, incluindo arquivos Leiame de versões e service packs; um arquivo Leiame é considerado extensão dos Manuais Online.  
   
 Em alguns casos, determinado recurso pode não ser algo que os clientes devam usar diretamente; nesse caso, ele não está documentado. A menos que um recurso também seja abordado na documentação do SQL Server publicada pela Microsoft, o conteúdo de manuais ou sites de terceiros não tem suporte do atendimento ao cliente da Microsoft e não deve ser usado em aplicativos ou bancos de dados de produção.  
   

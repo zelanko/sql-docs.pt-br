@@ -10,10 +10,10 @@ author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 6a4b56a31ede0d8e011c1a2244f5d014e185e7e5
-ms.sourcegitcommit: 9e026cfd9f2300f106af929d88a9b43301f5edc2
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74318991"
 ---
 # <a name="adventureworks-installation-and-configuration"></a>Instalação e configuração do AdventureWorks
@@ -21,7 +21,7 @@ ms.locfileid: "74318991"
 
 Links de download do AdventureWorks e instruções de instalação. 
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 - [SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) ou [banco de dados SQL do Azure](https://azure.microsoft.com/services/sql-database/). Para obter a versão completa do exemplo, use Avaliação do SQL Server/Developer/Enterprise Edition.
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). Para obter os melhores resultados, use a versão de junho de 2016 ou posterior.
@@ -100,6 +100,6 @@ Se você ainda não tiver uma SQL Server no Azure, navegue até a [portal do Azu
 1. Selecione **criar** para criar seu novo banco de dados SQL, que é a cópia restaurada do banco de dados AdventureWorksLT. 
 
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 [Tutoriais para SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)   
 [Tutoriais para o mecanismo de banco de dados SQL Server](../relational-databases/database-engine-tutorials.md)

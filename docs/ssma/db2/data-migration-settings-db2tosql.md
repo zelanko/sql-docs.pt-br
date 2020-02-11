@@ -10,47 +10,47 @@ ms.assetid: 573e673e-a194-4cb2-9aba-aaac6e1a225c
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 4efd9989e0893d8941f3f6fcb9496f5f4744b0e6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67989745"
 ---
 # <a name="data-migration-settings-db2tosql"></a>Configurações de migração de dados (DB2ToSQL)
   
 ## <a name="data-migration-settings"></a>Configurações de migração de dados  
-**Configurações de migração de dados** permite que o usuário escreva consultas personalizadas para a migração de dados.  
+**As configurações de migração de dados** permitem que o usuário grave consultas personalizadas para migração de dados.  
   
--   Essa guia está disponível quando **estendido opções de migração de dados** é definido como **mostram** e ficará oculto quando a configuração é definida como **ocultar** nas configurações do projeto. Para obter mais informações sobre as configurações do projeto de migração, consulte [configurações do projeto (migração)](https://msdn.microsoft.com/48aaa8e6-a9cb-487d-9ba5-fc3f1c4786ae) .  
+-   Essa guia está disponível quando **as opções de migração de dados estendidas** estão definidas para **Mostrar** e ficam ocultas quando a configuração é definida como **ocultar** nas configurações do projeto. Para obter mais informações sobre as configurações de migração do projeto, consulte [configurações do projeto (migração)](https://msdn.microsoft.com/48aaa8e6-a9cb-487d-9ba5-fc3f1c4786ae) .  
   
--   Análise de instruções SQL personalizadas será implementado no **configurações de migração de dados** guia da tabela de nó.  
+-   A análise de instruções SQL personalizadas será implementada na guia **configurações de migração de dados** do nó da tabela.  
   
--   A seguir está as duas caixas de seleção disponíveis na **configurações de migração de dados** sobre visualização.:  
+-   A seguir estão as duas caixas de seleção disponíveis nas **configurações de migração de dados** aula sobre visualização.:  
   
-    1.  Truncar a tabela do SQL Server  
+    1.  Truncar SQL Server tabela  
   
-    2.  Selecione uso personalizado  
+    2.  Usar seleção personalizada  
   
-1.  **Trunca a tabela do SQL Server:**  
-     Essa opção permite que o usuário tenha uma visão clara dos dados migrados no banco de dados de destino.  
+1.  **Truncar SQL Server tabela:**  
+     Essa opção permite que o usuário tenha uma exibição clara dos dados migrados no banco de dado de destino.  
   
-    -   Por padrão, essa caixa de texto é verificada.  
+    -   Por padrão, essa caixa de texto é marcada.  
   
-    -   Se essa caixa de texto é desmarcada, em seguida, os dados que são migrados serão adicionados para os dados existentes no banco de dados de destino.  
+    -   Se essa caixa de texto estiver desmarcada, os dados que são migrados serão adicionados aos dados existentes no banco de dado de destino.  
   
-2.  **Selecione uso personalizado:**  
-     Essa opção permite que o usuário modifique os **selecionar** instrução presente (**selecione** instrução permite que os usuários selecionar os dados a ser exibido no banco de dados de destino).  
+2.  **Usar seleção personalizada:**  
+     Essa opção permite que o usuário modifique a instrução **Select** presente (a instrução**Select** permite que os usuários selecionem os dados a serem exibidos no banco de dado de destino).  
   
     1.  Por padrão, essa caixa de texto está desmarcada.  
   
-    2.  Se essa caixa de texto é verificada, ele permite que os usuários modifiquem o **selecionar** instrução presente.  
+    2.  Se essa caixa de texto estiver marcada, ela permitirá que os usuários modifiquem a instrução **Select** presente.  
   
-Há dois botões presentes sobre visualização.:  
+Há dois botões presentes aula sobre visualização.:  
   
--   **Se aplicam:** Clique em **aplicar** para aplicar as configurações que foram alteradas.  
+-   **Aplicar:** Clique em **aplicar** para aplicar as configurações que foram alteradas.  
   
--   **Cancelar:** Clique em **Cancelar** para restaurar as configurações presentes antes que as alterações estavam sendo feitas.  
+-   **Cancelar:** Clique em **Cancelar** para restaurar as configurações presentes antes que as alterações tenham sido feitas.  
   
-## <a name="see-also"></a>Consulte também  
-[Migrar dados do DB2 para o SQL Server](https://msdn.microsoft.com/86cbd39f-6dac-409a-9ce1-7dd54403f84b)  
+## <a name="see-also"></a>Consulte Também  
+[Migrando dados do DB2 para o SQL Server](https://msdn.microsoft.com/86cbd39f-6dac-409a-9ce1-7dd54403f84b)  
   

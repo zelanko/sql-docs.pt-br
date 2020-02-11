@@ -1,5 +1,5 @@
 ---
-title: Catálogo de exemplo da propriedade ActiveConnection (VB) | Microsoft Docs
+title: Exemplo da propriedade ActiveConnection do catálogo (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: bb3274b1-764d-43a7-a49f-ef55680ecd26
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4c6d30aeeb650525873669ccd175155c7e69cd0b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67967111"
 ---
 # <a name="catalog-activeconnection-property-example-vb"></a>Exemplo da propriedade ActiveConnection de catálogo (VB)
-Definindo o [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) o catálogo de propriedade para uma conexão válida, abra "abre". De um catálogo aberto, você pode acessar os objetos de esquema contidos no catálogo.  
+Definir a propriedade [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) como uma conexão "abrir" válida abre "o catálogo. Em um catálogo aberto, você pode acessar os objetos de esquema contidos nesse catálogo.  
   
 ```  
 ' BeginOpenConnectionVB  
@@ -59,15 +59,15 @@ End Sub
 ' EndOpenConnectionVB  
 ```  
   
- Definindo o **ActiveConnection** propriedade como uma cadeia de caracteres de conexão válida também "abre" o catálogo.  
+ Definir a propriedade **ActiveConnection** como uma cadeia de conexão válida também "abre" o catálogo.  
   
 ```  
 Attribute VB_Name = "Catalog"  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Propriedade ActiveConnection (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [Objeto Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [Objeto de catálogo (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Objeto Table (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)   
  [Coleção Tables (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)   
  [Propriedade Type (Table) (ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md)

@@ -1,5 +1,5 @@
 ---
-title: Visão geral do Supervisor de atualização | Microsoft Docs
+title: Visão geral do supervisor de atualização | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 95d1ca08bcc92a8eeeebfcfbd1f8646cf5add4c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66093537"
 ---
 # <a name="overview-of-upgrade-advisor"></a>Visão geral do Assistente de Atualização
@@ -25,16 +25,16 @@ ms.locfileid: "66093537"
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|Descrição|  
+|Tópico|DESCRIÇÃO|  
 |-----------|-----------------|  
 |[Visão geral do processo de atualização](../../../2014/sql-server/install/upgrade-process-overview.md)|Descreve o processo recomendado para a atualização para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
 |[Visão geral do Supervisor de Atualização](../../../2014/sql-server/install/upgrade-advisor-overview.md)|Fornece uma visão geral da nova ferramenta Supervisor de Atualização do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
-|[Executando o Supervisor de atualização &#40;Interface do usuário&#41;](../../../2014/sql-server/install/running-upgrade-advisor-user-interface.md)|Descreve como iniciar e executar o Assistente para Análise do Supervisor de Atualização e o Visualizador de Relatórios do Supervisor de Atualização.|  
+|[Executando o supervisor de atualização &#40;a interface do usuário&#41;](../../../2014/sql-server/install/running-upgrade-advisor-user-interface.md)|Descreve como iniciar e executar o Assistente para Análise do Supervisor de Atualização e o Visualizador de Relatórios do Supervisor de Atualização.|  
 |[Usando relatórios](../../../2014/sql-server/install/using-reports.md)|Descreve como exibir e analisar os relatórios gerados pelo Visualizador de Relatórios do Supervisor de Atualização.|  
   
-## <a name="see-also"></a>Consulte também  
- [Tópicos de instruções sobre o Supervisor de atualização](../../../2014/sql-server/install/upgrade-advisor-how-to-topics.md)   
- [Referência de Interface de usuário do Supervisor de atualização](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)   
- [Executando o Supervisor de atualização &#40;Prompt de comando&#41;](../../../2014/sql-server/install/running-upgrade-advisor-command-prompt.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Tópicos de instruções do supervisor de atualização](../../../2014/sql-server/install/upgrade-advisor-how-to-topics.md)   
+ [Referência da interface do usuário do supervisor de atualização](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)   
+ [Executando o supervisor de atualização &#40;prompt de comando&#41;](../../../2014/sql-server/install/running-upgrade-advisor-command-prompt.md)  
   
   

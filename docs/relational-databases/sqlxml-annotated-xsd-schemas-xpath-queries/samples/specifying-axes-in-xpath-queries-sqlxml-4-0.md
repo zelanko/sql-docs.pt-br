@@ -20,10 +20,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8b582b9f31245c13ec2c20e91736f794f19efd53
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75252596"
 ---
 # <a name="specifying-axes-in-xpath-queries-sqlxml-40"></a>Especificando eixos em consultas XPath (SQLXML 4.0)
@@ -34,7 +34,7 @@ ms.locfileid: "75252596"
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-retrieve-child-elements-of-the-context-node"></a>R. Recuperar elementos filho do nó de contexto  
+### <a name="a-retrieve-child-elements-of-the-context-node"></a>a. Recuperar elementos filho do nó de contexto  
  A consulta XPath a seguir seleciona todos ** \<** os elementos filho de contato>do nó de contexto:  
   
 ```  

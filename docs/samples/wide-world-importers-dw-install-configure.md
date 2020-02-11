@@ -11,10 +11,10 @@ ms.author: mathoma
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: d8768fec2f96c725a9ba4bbf91996e95de4c800a
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056298"
 ---
 # <a name="wideworldimportersdw-installation-and-configuration"></a>Instalação e configuração do WideWorldImportersDW
@@ -24,17 +24,17 @@ Instruções de instalação e configuração para o banco de dados WideWorldImp
 - [SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) (ou superior) ou [banco de dados SQL do Azure](https://azure.microsoft.com/services/sql-database/). Para usar a versão completa do exemplo, use Avaliação do SQL Server/Developer/Enterprise Edition.
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). Para obter os melhores resultados, use a versão de junho de 2016 ou posterior.
 
-## <a name="download"></a>Download
+## <a name="download"></a>Baixar
 
 A versão mais recente do exemplo:
 
-[wide-world-importers-release](https://go.microsoft.com/fwlink/?LinkID=800630)
+[Wide-World-outporters-versão](https://go.microsoft.com/fwlink/?LinkID=800630)
 
 Baixe o exemplo de backup/bacpac do banco de dados WideWorldImportersDW que corresponde à sua edição do SQL Server ou banco de dados SQL do Azure.
 
 O código-fonte para recriar o banco de dados de exemplo está disponível no seguinte local. Observe que a população de dados se baseia no ETL do banco de dados OLTP (WideWorldImporters):
 
-[wide-world-importers-source](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-dw-database-scripts)
+[Wide-World-outporters-fonte](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-dw-database-scripts)
 
 ## <a name="install"></a>Instalar
 
@@ -50,7 +50,7 @@ Para restaurar um backup em uma instância do SQL Server, você pode usar Manage
 5. Se necessário, altere o local de destino dos arquivos de dados e de log no painel **arquivos** . Observe que é uma prática recomendada posicionar arquivos de dados e de log em unidades diferentes.
 6. Clique em **OK**. Isso iniciará a restauração do banco de dados. Após a conclusão, você terá o banco de dados WideWorldImporters instalado em sua instância de SQL Server.
 
-### <a name="azure-sql-database"></a>Azure SQL Database
+### <a name="azure-sql-database"></a>Banco de Dados SQL do Azure
 
 Para importar um bacpac para um novo banco de dados SQL, você pode usar Management Studio.
 
@@ -60,7 +60,7 @@ Para importar um bacpac para um novo banco de dados SQL, você pode usar Managem
 3. Clique com o botão direito do mouse no nó **bancos** de dados e selecione **importar aplicativo da camada de dados**.
 4. Em **configurações de importação** , selecione **Importar do disco local** e selecione o bacpac do banco de dados de exemplo do sistema de arquivos.
 5. Em **configurações do banco de dados** , altere o nome do banco de dados para *WideWorldImportersDW* e selecione a edição de destino e o objetivo de serviço a serem usados.
-6. Clique em **Avançar** e em **concluir** para iniciar a implantação. Levará alguns minutos para ser concluído. Ao especificar um objetivo de serviço inferior a S2, pode levar mais tempo.
+6. Clique em **Avançar** e em **concluir** para iniciar a implantação. Isso levará alguns minutos para ser concluído. Ao especificar um objetivo de serviço inferior a S2, pode levar mais tempo.
 
 ## <a name="configuration"></a>Configuração
 

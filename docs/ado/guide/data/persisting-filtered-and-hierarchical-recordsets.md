@@ -1,5 +1,5 @@
 ---
-title: Manter conjuntos de registros filtrados e hierárquicos | Microsoft Docs
+title: Persistência de conjuntos de registros filtrados e hierárquicos | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: d01aeb4d-4e43-450b-b3f2-0c27eaaf9f86
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 11ab68775e19ec1d3ce3c888917588f41ad65287
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924634"
 ---
 # <a name="persisting-filtered-and-hierarchical-recordsets"></a>Persistência de conjunto de registros filtrados e hierárquicos
-Se o [filtro](../../../ado/reference/ado-api/filter-property.md) propriedade está em vigor para o **conjunto de registros**, somente as linhas acessíveis sob o filtro são salvos. Se o **conjunto de registros** é hierárquico, o filho atual **conjunto de registros** e seus filhos são salvas, incluindo o pai **conjunto de registros**. Se o **salve** método de um filho **Recordset** é chamado, o filho e todos os seus filhos são salvas, mas o pai não é. Para obter mais informações sobre hierárquica **conjuntos de registros**, consulte [Data Shaping](../../../ado/guide/data/data-shaping.md).  
+Se a propriedade de [filtro](../../../ado/reference/ado-api/filter-property.md) estiver em vigor para o **conjunto de registros**, somente as linhas acessíveis no filtro serão salvas. Se o **conjunto de registros** for hierárquico, o **conjunto de registros** filho atual e seus filhos serão salvos, incluindo o **conjunto de registros**pai. Se o método **Save** de um **conjunto de registros** filho for chamado, o filho e todos os seus filhos serão salvos, mas o pai não será. Para obter mais informações sobre **conjuntos de registros**hierárquicos, consulte [Data Shaping](../../../ado/guide/data/data-shaping.md).  
   
 > [!NOTE]
->  Algumas limitações se aplicam ao salvar hierárquica **conjuntos de registros** (formas de dados) em formato XML. Para obter mais informações, consulte [manter registros em formato XML](../../../ado/guide/data/persisting-records-in-xml-format.md).
+>  Algumas limitações se aplicam ao salvar **conjuntos de registros** hierárquicos (formas de dados) em formato XML. Para obter mais informações, consulte [persistência de registros em formato XML](../../../ado/guide/data/persisting-records-in-xml-format.md).

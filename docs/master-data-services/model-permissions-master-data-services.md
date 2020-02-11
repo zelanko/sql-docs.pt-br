@@ -14,10 +14,10 @@ ms.assetid: 210f440b-2cc1-4c49-94b1-3a97e2af7bc3
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 5e42e54689b5b6a576a24fe57f2f9f4dcaccd1b8
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728970"
 ---
 # <a name="model-permissions-master-data-services"></a>Permissões de modelo (Master Data Services)
@@ -29,18 +29,18 @@ ms.locfileid: "73728970"
 > [!NOTE]  
 >  Se um usuário for administrador de modelo, o modelo será exibido em todas as áreas funcionais da interface do usuário. Caso contrário, o modelo será exibido apenas na área funcional **Gerenciador** . Para obter mais informações, veja [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
-|Permissão|Descrição|  
+|Permissão|DESCRIÇÃO|  
 |----------------|-----------------|  
-|**leitura**|O usuário pode ler membros, atributos, associações de hierarquia ou hierarquias de coleção.|  
-|**Criar**|O usuário pode criar membros e atribuir valores de atributo durante a criação.|  
-|**Atualizar**|O usuário pode atualizar membros, atributos, associações de hierarquia ou hierarquias de coleção.|  
+|**Ler**|O usuário pode ler membros, atributos, associações de hierarquia ou hierarquias de coleção.|  
+|**Criada**|O usuário pode criar membros e atribuir valores de atributo durante a criação.|  
+|**Cumulativo**|O usuário pode atualizar membros, atributos, associações de hierarquia ou hierarquias de coleção.|  
 |**Delete (excluir)**|O usuário pode excluir membros.|  
 |**Deny**|Nega todo o acesso ao modelo|  
 |**Admin**|Permissão de administrador no modelo. A permissão de administrador está disponível somente no nível do modelo.|  
   
  As permissões Ler, Criar, Atualizar e Excluir podem ser combinadas entre si. Ao atribuir permissões Criar, Atualizar e Excluir, a permissão Ler será atribuída automaticamente.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Atribuir permissões de objeto de modelo &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
  [Permissões de objeto de modelo &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
  [Permissões de entidade &#40;Master Data Services&#41;](../master-data-services/entity-permissions-master-data-services.md)   

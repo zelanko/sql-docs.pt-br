@@ -1,5 +1,5 @@
 ---
-title: 'Excluindo elementos de esquema do documento XML resultante usando sql: mapped (SQLXML 4.0) | Microsoft Docs'
+title: 'Excluindo elementos de esquema do documento XML resultante usando SQL: mapeado (SQLXML 4,0) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -23,10 +23,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 865a9af892f948e77aa593d3713766e7860349b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013859"
 ---
 # <a name="excluding-schema-elements-from-the-resulting-xml-document-using-sqlmapped-sqlxml-40"></a>Excluindo elementos de esquema do documento XML resultante usando sql:mapped (SQLXML 4.0)
@@ -37,14 +37,14 @@ ms.locfileid: "66013859"
  A anotação `sql:mapped` usa um valor Booliano (0 = false, 1 = true). Os valores aceitáveis são 0, 1, true e false.  
   
 ## <a name="examples"></a>Exemplos  
- Para criar exemplos de funcionamento usando os exemplos a seguir, é necessário atender a determinados requisitos. Para obter mais informações, consulte [requisitos para executar exemplos do SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
+ Para criar exemplos de funcionamento usando os exemplos a seguir, é necessário atender a determinados requisitos. Para obter mais informações, consulte [Requirements for running SQLXML examples](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-the-sqlmapped-annotation"></a>A. Especificando a anotação sql:mapped  
- Suponha que você tenha um esquema XSD de alguma outra origem. Esse esquema XSD consiste em uma  **\<Person. Contact >** elemento com **ContactID**, **FirstName**, **LastName**, e **HomeAddress** atributos.  
+### <a name="a-specifying-the-sqlmapped-annotation"></a>a. Especificando a anotação sql:mapped  
+ Suponha que você tenha um esquema XSD de alguma outra origem. Este esquema XSD consiste em uma ** \<pessoa. contate>** elemento com os atributos **ContactID**, **FirstName**, **LastName**e **HomeAddress** .  
   
- Mapear esse esquema XSD para a tabela Person. Contact no banco de dados AdventureWorks `sql:mapped` for especificado em de **HomeAddress** atributo porque a tabela Employees não armazena os endereços residenciais dos funcionários. Como resultado, este atributo não é mapeado para o banco de dados e não é retornado no documento XML resultante quando uma consulta XPath é especificada com relação ao esquema de mapeamento.  
+ No mapeamento deste esquema XSD para a tabela Person. Contact no banco de dados AdventureWorks `sql:mapped` , é especificado no atributo **HomeAddress** porque a tabela Employees não armazena os endereços residenciais dos funcionários. Como resultado, este atributo não é mapeado para o banco de dados e não é retornado no documento XML resultante quando uma consulta XPath é especificada com relação ao esquema de mapeamento.  
   
- O mapeamento padrão é executado para o restante do esquema. O  **\<Person. Contact >** elemento é mapeado para a tabela Person. Contact e todos os atributos são mapeados para as colunas com o mesmo nome na tabela Person. Contact.  
+ O mapeamento padrão é executado para o restante do esquema. O ** \<elemento Person. Contact>** mapeia para a tabela Person. Contact e todos os atributos são mapeados para as colunas com o mesmo nome na tabela Person. Contact.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -83,7 +83,7 @@ ms.locfileid: "66013859"
   
 3.  Crie e use o script de teste SQLXML 4.0 (Sqlxml4test.vbs) para executar o modelo.  
   
-     Para obter mais informações, consulte [usando o ADO para executar consultas SQLXML](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Para obter mais informações, consulte [usando o ADO para executar consultas do SQLXML](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Este é o conjunto de resultados:  
   
@@ -103,7 +103,7 @@ ms.locfileid: "66013859"
   
  Observe que ContactID, FirstName e LastName estão presentes, mas HomeAddress não está, pois o esquema de mapeamento especificou 0 para o atributo `sql:mapped`.  
   
-## <a name="see-also"></a>Consulte também  
- [Mapeamento padrão dos atributos e elementos XSD para tabelas e colunas &#40;SQLXML 4.0&#41;](default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Mapeamento padrão de elementos e atributos XSD para tabelas e colunas &#40;SQLXML 4,0&#41;](default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)  
   
   

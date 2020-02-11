@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 838185def1d562f51d810cebdf79684f341a5903
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69493855"
 ---
 # <a name="specifying-attribute-relationships-between-attributes-in-a-user-defined-hierarchy"></a>Especificando relações de atributo entre atributos em uma hierarquia definida pelo usuário
@@ -22,7 +22,7 @@ ms.locfileid: "69493855"
   
  Em uma hierarquia natural, ao definir relações de atributo entre os atributos que criam os níveis, o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] pode usar a agregação de um atributo para obter resultados a partir de um atributo relacionado. Se não houver nenhuma relação definida entre atributos, o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] agregará todos os atributos que não forem atributos de chave do atributo de chave. Portanto, se os dados subjacentes permitirem, você também poderá definir relações de atributo entre atributos. Definir as relações de atributo melhora a dimensão, a partição e o desempenho do processamento de consulta. Para obter mais informações, consulte [Definir relações de atributo](multidimensional-models/attribute-relationships-define.md) e [Relações de atributo](multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md).  
   
- Quando você definir relações de atributo, poderá especificar se a relação é flexível ou rígida. Se defini-la como rígida, o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] reterá as agregações quando a dimensão for atualizada. Se uma relação definida como rígida for realmente alterada, o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] irá gerar um erro durante o processamento, a menos que a dimensão esteja totalmente processada. Ao especificar as relações apropriadas e as propriedades da relação, são produzidos aumento de consulta e desempenho de processamento. Para obter mais informações, consulte [Definir relações de atributo](multidimensional-models/attribute-relationships-define.md) e [Propriedades da hierarquia de usuário](multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md).  
+ Quando você definir relações de atributo, poderá especificar se a relação é flexível ou rígida. Se defini-la como rígida, o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] reterá as agregações quando a dimensão for atualizada. Se uma relação definida como rígida for realmente alterada, o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] irá gerar um erro durante o processamento, a menos que a dimensão esteja totalmente processada. Ao especificar as relações apropriadas e as propriedades da relação, são produzidos aumento de consulta e desempenho de processamento. Para obter mais informações, consulte [definir relações de atributo](multidimensional-models/attribute-relationships-define.md)e [Propriedades de hierarquia de usuário](multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md).  
   
  Nas tarefas deste tópico, você definirá relações de atributo para os atributos nas hierarquias de usuários naturais no projeto Tutorial do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Isso inclui a hierarquia **Geografia do Cliente** na dimensão **Cliente**, a hierarquia **Região de Vendas** na dimensão **Região de Vendas** , a hierarquia **Linhas de Modelo do Produto** na dimensão **Produto** e as hierarquias **Data Fiscal** e **Data do Calendário** na dimensão **Data** . Todas essas hierarquias de usuário são hierarquias naturais.  
   
@@ -38,11 +38,11 @@ ms.locfileid: "69493855"
   
 3.  No diagrama, clique com o botão direito do mouse no atributo **Full Name** e selecione **Nova Relação de Atributo**.  
   
-4.  Na caixa de diálogo **Criar Relação de Atributo** , o **Atributo de Origem** é **Full Name**. Defina o **Atributo Relacionado** como **CEP**. Na lista **Tipo de relação**, deixe o tipo de relação definido como **Flexível** porque as relações entre os membros podem mudar com o passar do tempo.  
+4.  Na caixa de diálogo **Criar Relação de Atributo** , o **Atributo de Origem** é **Full Name**. Defina o **Atributo Relacionado** como **CEP**. Na lista **Tipo de relação** , deixe o tipo de relação definido como **Flexível** porque as relações entre os membros podem mudar com o passar do tempo.  
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     Um ícone de advertência aparece no diagrama porque a relação é redundante. A relação **Nome Completo** -> **Geografia**-> **CEP** já existia, e você acabou de criar a relação **Nome Completo** -> **CEP**. A relação **Geografia**-> **CEP** agora é redundante e, portanto, vamos removê-la.  
+     Um ícone de advertência aparece no diagrama porque a relação é redundante. A relação **nome** -> **completo geografia**-> **código postal** já existia e você acabou de criar o **nome** -> completo da relação**CEP.** O**código postal** de **geografia**-> de relação agora é redundante, portanto, vamos removê-lo.  
   
 6.  No painel **Relações de Atributo** , clique com o botão direito do mouse em **Geografia**-> **CEP** e clique em **Excluir**.  
   
@@ -54,9 +54,9 @@ ms.locfileid: "69493855"
   
 10. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     Agora, a relação **Geografia**-> **Cidade** é redundante e, portanto, vamos excluí-la.  
+     A**cidade** de **geografia**-> da relação agora é redundante, portanto, vamos excluí-la.  
   
-11. No painel Relações de Atributo, clique com o botão direito do mouse em **Geografia**-> **Cidade** e clique em **Excluir**.  
+11. No painel relações de atributo, clique com o botão direito do mouse em**cidade** de **geografia**-> e clique em **excluir**.  
   
 12. Quando a caixa de diálogo **Excluir Objetos** for exibida, clique em **OK**.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "69493855"
   
 20. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-21. No painel Relações de Atributo, clique com o botão direito do mouse em **Geografia**-> **País/Região** e clique em **Excluir**.  
+21. No painel relações de atributo, clique com o botão direito do mouse em **geografia**-> **país-região** e clique em **excluir**.  
   
 22. Quando a caixa de diálogo **Excluir Objetos** for exibida, clique em **OK**.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "69493855"
   
      Observe que, quando a última relação de atributo entre **Geography** e outros atributos é excluída, a própria **Geography** é excluída. Isso ocorre porque o atributo não é mais usado.  
   
-24. No menu Arquivo, clique em **Salvar Tudo**.  
+24. No menu Arquivo , clique em **Salvar Tudo**.  
   
 ## <a name="defining-attribute-relationships-for-attributes-in-the-sales-territory-hierarchy"></a>Definindo relações de atributo para atributos na hierarquia Região de Vendas  
   
@@ -96,7 +96,7 @@ ms.locfileid: "69493855"
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     **Grupo de Região de Vendas** agora está vinculado a **País da Região de Vendas**e **País da Região de Vendas** agora está vinculado a **Região de Vendas**. A propriedade **RelationshipType** de cada uma dessas relações é definida como **Flexível** , pois, com o passar do tempo, tanto os agrupamentos de regiões dentro de um país quanto os agrupamentos de países dentro dos grupos podem mudar.  
+     O **grupo de regiões de vendas** agora está vinculado ao país da região de **vendas**e o país da **região de vendas** agora está vinculado à região da região de **vendas**. A propriedade **RelationshipType** de cada uma dessas relações é definida como **Flexível** , pois, com o passar do tempo, tanto os agrupamentos de regiões dentro de um país quanto os agrupamentos de países dentro dos grupos podem mudar.  
   
 ## <a name="defining-attribute-relationships-for-attributes-in-the-product-model-lines-hierarchy"></a>Definindo relações de atributo para atributos na hierarquia Linhas de Modelo do Produto  
   
@@ -104,7 +104,7 @@ ms.locfileid: "69493855"
   
 2.  No diagrama, clique com o botão direito do mouse no atributo **Model Name** e selecione **Nova Relação de Atributo**.  
   
-3.  Na caixa de diálogo **Criar Relação de Atributo** , o **Atributo de Origem** é **Model Name**. Defina o **Atributo Relacionado** como **Linha de Produto**. Na lista **Tipo de relação**, deixe o tipo de relação definido como **Flexível**.  
+3.  Na caixa de diálogo **Criar Relação de Atributo** , o **Atributo de Origem** é **Model Name**. Defina o **Atributo Relacionado** como **Linha de Produto**. Na lista **Tipo de relação** , deixe o tipo de relação definido como **Flexível**.  
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -134,19 +134,19 @@ ms.locfileid: "69493855"
   
 1.  No diagrama, clique com o botão direito do mouse no atributo **Nome do Mês** e selecione **Nova Relação de Atributo**.  
   
-2.  Na caixa de diálogo **Criar Relação de Atributo**, o **Atributo de Origem** é **Nome do Mês**. Defina o **Atributo Relacionado** como **Trimestre do Calendário**. Na lista **Tipo de relação** , defina o tipo de relação como **Rígida**.  
+2.  Na caixa de diálogo **Criar Relação de Atributo** , o **Atributo de Origem** é **Nome do Mês**. Defina o **Atributo Relacionado** como **Trimestre do Calendário**. Na lista **Tipo de relação** , defina o tipo de relação como **Rígida**.  
   
 3.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 4.  No diagrama, clique com o botão direito do mouse no atributo **Trimestre Calendário** e selecione **Nova Relação de Atributo**.  
   
-5.  Na caixa de diálogo **Criar Relação de Atributo**, o **Atributo de Origem** é **Trimestre Calendário**. Defina o **Atributo Relacionado** como **Semestre do Calendário**. Na lista **Tipo de relação** , defina o tipo de relação como **Rígida**.  
+5.  Na caixa de diálogo **Criar Relação de Atributo** , o **Atributo de Origem** é **Trimestre Calendário**. Defina o **Atributo Relacionado** como **Semestre do Calendário**. Na lista **Tipo de relação** , defina o tipo de relação como **Rígida**.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 7.  No diagrama, clique com o botão direito do mouse no atributo **Calendar Semester** e selecione **Nova Relação de Atributo**.  
   
-8.  Na caixa de diálogo **Criar Relação de Atributo**, o **Atributo de Origem** é **Semestre do Calendário**. Defina o **Atributo Relacionado** como **Ano Civil**. Na lista **Tipo de relação** , defina o tipo de relação como **Rígida**.  
+8.  Na caixa de diálogo **Criar Relação de Atributo** , o **Atributo de Origem** é **Semestre do Calendário**. Defina o **Atributo Relacionado** como **Ano Civil**. Na lista **Tipo de relação** , defina o tipo de relação como **Rígida**.  
   
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -176,14 +176,14 @@ ms.locfileid: "69493855"
   
 12. Defina a propriedade **AttributeHierarchyOptimizedState** como **NotOptimized**, a propriedade **AttributeHierarchyOrdered** como **False**e a propriedade **AttributeHierarchyVisible** como **False**.  
   
-13. No menu **Arquivo**, clique em **Salvar tudo**.  
+13. No menu **Arquivo** , clique em **Salvar Tudo**.  
   
 14. No menu **Compilar** do [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], clique em **Implantar Tutorial do Analysis Services**.  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
  [Definindo o membro desconhecido e as propriedades de processamento nulo](lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Definir relações de atributo](multidimensional-models/attribute-relationships-define.md)   
  [Propriedades de hierarquia do usuário](multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)  
   

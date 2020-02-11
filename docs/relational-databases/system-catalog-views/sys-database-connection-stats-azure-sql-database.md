@@ -21,22 +21,22 @@ ms.author: sstein
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 7eb05640fbc702d5c9b01081d462e2c9f0204457
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73844465"
 ---
 # <a name="sysdatabase_connection_stats-azure-sql-database"></a>sys.database_connection_stats (Banco de Dados SQL do Azure)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Contém estatísticas para eventos de **conectividade** de banco de dados [!INCLUDE[ssSDS](../../includes/sssds-md.md)], fornecendo uma visão geral dos sucessos e falhas de conexão de banco de dados. Para obter mais informações sobre eventos de conectividade, consulte tipos de evento em [Sys. &#40;Event_log&#41;banco de dados SQL do Azure](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
+  Contém estatísticas para [!INCLUDE[ssSDS](../../includes/sssds-md.md)] eventos de **conectividade** de banco de dados, fornecendo uma visão geral dos sucessos e falhas de conexão de banco de dados. Para obter mais informações sobre eventos de conectividade, consulte tipos de evento em [Sys. event_log &#40;banco de dados SQL do Azure&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
   
-|Estatística|Tipo|Descrição|  
+|Estatística|Type|DESCRIÇÃO|  
 |---------------|----------|-----------------|  
 |**database_name**|**sysname**|Nome do banco de dados.|  
-|**start_time**|**datetime2**|Data e hora UTC do início do intervalo de agregação. A hora é sempre um múltiplo de 5 minutos. Por exemplo:<br /><br /> '2011-09-28 16:00:00'<br />' 2011-09-28 16:05:00 '<br />' 2011-09-28 16:10:00 '|  
+|**start_time**|**datetime2**|Data e hora UTC do início do intervalo de agregação. A hora é sempre um múltiplo de 5 minutos. Por exemplo:<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
 |**end_time**|**datetime2**|Data e hora UTC do término do intervalo de agregação. **End_time** sempre é exatamente 5 minutos depois do **start_time** correspondente na mesma linha.|  
 |**success_count**|**int**|Número de conexões bem-sucedidas.|  
 |**total_failure_count**|**int**|Número total de conexões com falha. Esta é a soma de **connection_failure_count**, **terminated_connection_count**e **throttled_connection_count**e não inclui eventos de deadlock.|  
@@ -71,7 +71,7 @@ start_time                    end_time
 
  Os dados nessa exibição são acumulados com o passar do tempo. Normalmente, os dados são acumulados em uma hora de início do intervalo de agregação, mas pode levar até um máximo de 24 horas para que todos os dados apareçam na exibição. Durante esse período, as informações em uma única linha podem ser atualizadas periodicamente.  
   
-### <a name="data-retention"></a>Retenção de Dados
+### <a name="data-retention"></a>Retenção de dados
 
  Os dados nessa exibição são retidos por um máximo de 30 dias ou, possivelmente, menos dependendo do número de bancos de dados e do número de eventos exclusivos que cada um gera. Para reter essas informações por um período mais longo, copie os dados em um banco de dados separado. Depois que você faz uma cópia inicial da exibição, as linhas na exibição podem ser atualizadas à medida que os dados são acumulados. Para manter sua cópia de dados atualizada, periodicamente faça uma verificação da tabela das linhas para procurar um aumento na contagem de eventos de linhas existentes e identificar novas linhas (você pode identificar linhas exclusivas usando a hora de início e de término) e, em seguida, atualize sua cópia dos dados com essas alterações.  
   
@@ -79,7 +79,7 @@ start_time                    end_time
 
  Essa exibição não pode incluir todas as informações de conexão e erro:  
   
-- Essa exibição não inclui todos os [!INCLUDE[ssSDS](../../includes/sssds-md.md)] erros de banco de dados que podem ocorrer, somente aqueles especificados em tipos de evento em [Sys &#40;.&#41;event_log banco de dados SQL do Azure](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
+- Essa exibição não inclui todos os [!INCLUDE[ssSDS](../../includes/sssds-md.md)] erros de banco de dados que podem ocorrer, somente aqueles especificados em tipos de evento em [sys. event_log &#40;banco de dados SQL do Azure&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
   
 - Se houver uma falha de máquina dentro do [!INCLUDE[ssSDS](../../includes/sssds-md.md)] datacenter, uma pequena quantidade de dados poderá estar faltando na tabela de eventos.  
   
@@ -99,8 +99,8 @@ FROM sys.database_connection_stats
 WHERE start_time>='2011-09-25:12:00:00' and end_time<='2011-09-28 12:00:00';  
 ```  
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 
- [Solucionar problemas de conexão com o banco de dados SQL do Azure](/azure/sql-database/sql-database-troubleshoot-common-connection-issues)  
+ [Solucionar problemas de conexão no Banco de Dados SQL do Azure](/azure/sql-database/sql-database-troubleshoot-common-connection-issues)  
   
   

@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0f6e938e3212e519ab51be1faf3f18e28957ef3e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62782274"
 ---
 # <a name="enable-the-lock-pages-in-memory-option-windows"></a>Habilitar a opção Bloquear Páginas na Memória (Windows)
@@ -29,7 +29,7 @@ ms.locfileid: "62782274"
   
 ### <a name="to-enable-the-lock-pages-in-memory-option"></a>Para habilitar a opção de bloqueio de páginas na memória  
   
-1.  No menu **Iniciar** , clique em **Executar**. No **aberto** , digite `gpedit.msc`.  
+1.  No menu **Iniciar** , clique em **Executar**. Na caixa **abrir** , digite `gpedit.msc`.  
   
 2.  No console **Editor de Política de Grupo Local** , expanda **Configuração do Computador**e depois expanda **Configurações do Windows**.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "62782274"
   
 8.  Faça logoff e depois faça logon para que essas alterações entrem em vigor.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Opções Server Memory de configuração do servidor](server-memory-server-configuration-options.md)  
   
   

@@ -1,6 +1,6 @@
 ---
-title: Utilitário sqlps | Microsoft Docs
-ms.custom: ''
+title: Utilitário sqlps
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,12 +14,12 @@ ms.assetid: 4b2515a6-12c3-44fb-b263-1c567681cd2b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: cbc4492aa3c52e08eb6cbce71012da9f91f371aa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 6d76286b8632797ab871693a26ff6e19523cc256
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68223744"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75304819"
 ---
 # <a name="sqlps-utility"></a>Utilitário sqlps
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -76,7 +76,7 @@ sqlps
  [ **-?** |  **-Help** ]  
  Mostra o resumo da sintaxe de opções do utilitário **sqlps** .  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O utilitário **sqlps** inicia o ambiente do PowerShell (PowerShell.exe) e carrega o módulo do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell. O módulo, também chamado **sqlps**, carrega e registra esses snap-ins do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell:  
   
 -   Microsoft.SqlServer.Management.PSProvider.dll  

@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 86f74710e99079d0acd28db09bcf1e4ba7c57865
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74957240"
 ---
 # <a name="create-a-database-master-key"></a>Criar uma chave mestra de banco de dados
@@ -31,22 +31,22 @@ Este tópico descreve como criar uma chave mestra de banco de dados `master` no 
 
 - [Para criar uma chave mestra de banco de dados usando Transact-SQL](#TsqlProcedure)
 
-## <a name="BeforeYouBegin"></a>Antes de começar
+## <a name="BeforeYouBegin"></a> Antes de começar
 
-### <a name="Security"></a>Segurança
+### <a name="Security"></a> Segurança
 
-#### <a name="Permissions"></a>Permissões
+#### <a name="Permissions"></a> Permissões
 
 Exige a permissão CONTROL no banco de dados.
 
-## <a name="TsqlProcedure"></a>Usando o Transact-SQL
+## <a name="TsqlProcedure"></a> Usando o Transact-SQL
 
 ### <a name="to-create-a-database-master-key"></a>Criar uma chave mestra de banco de dados
 
 1. Escolha uma senha por criptografar a cópia da chave mestra que será armazenada no banco de dados.
 2. No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../../includes/ssde-md.md)].
 3. Expanda **Bancos de Dados do Sistema**, clique com o botão direito do mouse `master` e clique em **Nova Consulta**.
-4. Copie e cole o exemplo a seguir na janela de consulta e clique em **executar**.
+4. Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**.
 
   ```sql
   -- Creates the master key.

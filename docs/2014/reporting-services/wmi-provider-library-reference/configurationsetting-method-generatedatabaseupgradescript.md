@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a095b63f8c42709700f6f338edc409f801f8be3c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098457"
 ---
-# <a name="generatedatabaseupgradescript-method-wmi-msreportserverconfigurationsetting"></a>Método GenerateDatabaseUpgradeScript (WMI MSReportServer_ConfigurationSetting)
+# <a name="generatedatabaseupgradescript-method-wmi-msreportserver_configurationsetting"></a>Método GenerateDatabaseUpgradeScript (WMI MSReportServer_ConfigurationSetting)
   Gera um script que pode ser usado para atualizar o banco de dados do servidor de relatório para o esquema do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] .  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -42,8 +42,8 @@ public void GenerateDatabaseUpgradeScript (string DatabaseName,
     out Int32 HRESULT);  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
- *Databasename*  
+## <a name="parameters"></a>parâmetros  
+ *NomeDoBancoDeDados*  
  Uma cadeia de caracteres que contém o nome do banco de dados do servidor de relatório a ser atualizado.  
   
  *ServerVersion*  
@@ -52,7 +52,7 @@ public void GenerateDatabaseUpgradeScript (string DatabaseName,
  *Script*  
  [fora] Uma cadeia de caracteres que contém o script SQL gerado.  
   
- *HRESULT*  
+ *RESULTADO*  
  [out] Valor que indica se a chamada obteve êxito ou falhou.  
   
 ## <a name="return-value"></a>Valor retornado  
@@ -62,9 +62,9 @@ public void GenerateDatabaseUpgradeScript (string DatabaseName,
  O script gerado dá suporte ao [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]e ao [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
 ## <a name="requirements"></a>Requisitos  
- **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Membros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

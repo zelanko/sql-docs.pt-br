@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 7d18661fadb12167fd0a443758cced1188401750
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727338"
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>Configuração do SQL Server para uso com R
@@ -86,7 +86,7 @@ O desempenho de E/S geralmente pode ser melhorado usando compactação ou um arm
 
 Se houver muitas inserções na tabela, um columnstore poderá não ser tão eficiente; no entanto, ele será uma boa escolha se os dados forem estáticos ou alterados com pouca frequência. Se um repositório em colunas não for apropriado, a habilitação da compactação em uma tabela principal de linha poderá ser usada para melhorar a E/S.
 
-Para obter mais informações, consulte os seguintes documentos:
+Para obter mais informações, consulte um dos seguintes documentos:
 
 + [Compactação de dados](../../relational-databases/data-compression/data-compression.md)
 

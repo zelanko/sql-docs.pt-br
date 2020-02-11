@@ -14,10 +14,10 @@ ms.assetid: a9f9e41a-2461-4845-b947-58b3a205543f
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 1c66914b4b661ea3485ae0354c267e7682f5a6a2
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728694"
 ---
 # <a name="business-rules-master-data-services"></a>Regras de negócio (Master Data Services)
@@ -52,7 +52,7 @@ ms.locfileid: "73728694"
   
 4.  **Ação externa**  
   
-5.  **Ação de Script Definido pelo Usuário**  
+5.  **Script de ação definido pelo usuário**  
   
  Nesses grupos, as ações são aplicadas na ordem de prioridade, da mais baixa para a mais alta. Assim, por exemplo, quatro regras separadas podem ter ações de **Valor Padrão** . A ação de **Valor Padrão** que ocorre primeiro depende da ordem de prioridade especificada na interface de usuário da Web.  
   
@@ -71,21 +71,21 @@ ms.locfileid: "73728694"
 ## <a name="system-settings"></a>Configurações do sistema  
  Há duas configurações no [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] que afetam as regras de negócio. Você pode ajustar essas configurações no [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] ou diretamente na tabela Configurações do Sistema. Para obter mais informações, veja [Configurações do sistema &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  
 |Criar e publicar uma nova regra de negócio.|[Criar e publicar uma regra de negócio &#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)|  
-|Adicionar várias condições a uma regra de negócio.|[Adicionar várias condições a uma regra de negócios &#40;Master Data Services&#41;](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)|  
-|Criar uma regra de negócio para exigir que os atributos tenham valores.|[Exigir valores de atributos &#40;Master Data Services&#41;](../master-data-services/require-attribute-values-master-data-services.md)|  
-|Criar uma regra de negócio para tomar uma ação com base nas alterações para atribuir valores.|[Iniciar ações com base em alterações no valor do atributo &#40;Master Data Services&#41;](../master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)|  
-|Criar uma regra de negócio para tirar o script definido pelo usuário como uma condição|[Extensão das Regras de Negócio &#40;Master Data Services&#41;](../master-data-services/business-rules-extension-master-data-services.md)|  
-|Criar uma regra de negócio para tirar o script definido pelo usuário como uma ação|[Extensão das Regras de Negócio &#40;Master Data Services&#41;](../master-data-services/business-rules-extension-master-data-services.md)|  
-|Alterar o nome de uma regra de negócio existente.|[Alterar o nome de uma regra de negócios &#40;Master Data Services&#41;](../master-data-services/change-a-business-rule-name-master-data-services.md)|  
+|Adicionar várias condições a uma regra de negócio.|[Adicionar várias condições a uma regra de negócio &#40;Master Data Services&#41;](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)|  
+|Criar uma regra de negócio para exigir que os atributos tenham valores.|[Exigir valores de atributo &#40;Master Data Services&#41;](../master-data-services/require-attribute-values-master-data-services.md)|  
+|Criar uma regra de negócio para tomar uma ação com base nas alterações para atribuir valores.|[Iniciar ações com base nas alterações de valor de atributo &#40;Master Data Services&#41;](../master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)|  
+|Criar uma regra de negócio para tirar o script definido pelo usuário como uma condição|[Master Data Services de extensão de regras de negócio &#40;&#41;](../master-data-services/business-rules-extension-master-data-services.md)|  
+|Criar uma regra de negócio para tirar o script definido pelo usuário como uma ação|[Master Data Services de extensão de regras de negócio &#40;&#41;](../master-data-services/business-rules-extension-master-data-services.md)|  
+|Alterar o nome de uma regra de negócio existente.|[Alterar o nome de uma regra de negócio &#40;Master Data Services&#41;](../master-data-services/change-a-business-rule-name-master-data-services.md)|  
 |Configure o [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] para enviar notificações quando as regras de negócio forem aplicadas.|[Configurar regras de negócio para enviar notificações &#40;Master Data Services&#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)|  
-|Aplicar regras de negócio a membros específicos.|[Validar membros específicos em relação a regras de negócio &#40;Master Data Services&#41;](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)|  
-|Excluir uma regra de negócio para que ela não seja usada.|[Excluir uma regra de negócios &#40;Master Data Services&#41;](../master-data-services/exclude-a-business-rule-master-data-services.md)|  
-|Excluir uma regra de negócio existente.|[Excluir uma regra de negócios &#40;Master Data Services&#41;](../master-data-services/delete-a-business-rule-master-data-services.md)|  
+|Aplicar regras de negócio a membros específicos.|[Validar membros específicos em relação às regras de negócio &#40;Master Data Services&#41;](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)|  
+|Excluir uma regra de negócio para que ela não seja usada.|[Excluir uma regra de negócio &#40;Master Data Services&#41;](../master-data-services/exclude-a-business-rule-master-data-services.md)|  
+|Excluir uma regra de negócio existente.|[Excluir uma regra de negócio &#40;Master Data Services&#41;](../master-data-services/delete-a-business-rule-master-data-services.md)|  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
   
@@ -93,8 +93,8 @@ ms.locfileid: "73728694"
   
 -   [Versões &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)  
   
--   [Validação &#40;Master Data Services&#41;](../master-data-services/validation-master-data-services.md)  
+-   [Master Data Services de &#40;de validação&#41;](../master-data-services/validation-master-data-services.md)  
   
--   [Controle de alterações &#40;Master Data Services&#41;](../master-data-services/change-tracking-master-data-services.md)  
+-   [Controle de Alterações &#40;Master Data Services&#41;](../master-data-services/change-tracking-master-data-services.md)  
   
   

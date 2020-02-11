@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2b81fb13b8b8635bd5e5cecde801b4123fc74c99
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63253533"
 ---
 # <a name="create-a-policy-based-management-policy"></a>Criar uma política do Gerenciamento Baseado em Políticas
@@ -55,7 +55,7 @@ ms.locfileid: "63253533"
   
 6.  Se você quiser habilitar a política assim que seja criado, marque a caixa de seleção **Habilitado** . Se o modo de avaliação for **Sob Demanda**, a caixa de seleção **Habilitado** não estará disponível.  
   
-7.  Na lista **Verificar condição** , selecione um das condições existentes ou selecione **Nova Condição**. Para editar uma condição, selecione a condição e clique nas reticências (**...**). Para obter mais informações, veja [Criar uma nova condição de Gerenciamento Baseado em Políticas](create-a-new-policy-based-management-condition.md) ou [Exibir ou modificar as propriedades de uma condição de Gerenciamento Baseado em Políticas](view-or-modify-the-properties-of-a-policy-based-management-condition.md).  
+7.  Na lista **Verificar condição** , selecione um das condições existentes ou selecione **Nova Condição**. Para editar uma condição, selecione a condição e clique nas reticências ( **...** ). Para obter mais informações, veja [Criar uma nova condição de Gerenciamento Baseado em Políticas](create-a-new-policy-based-management-condition.md) ou [Exibir ou modificar as propriedades de uma condição de Gerenciamento Baseado em Políticas](view-or-modify-the-properties-of-a-policy-based-management-condition.md).  
   
 8.  Na caixa **Em relação aos destinos** , selecione um ou mais tipos de destino para essa política. Só podem ser se aplicadas algumas condições e facetas a certos tipos de destinos. Os conjuntos de destino disponíveis aparecem na caixa associada. Expanda **Todo** para selecionar uma condição de filtragem para alguns tipos de destinos. Se nenhum destino for exibido nesta caixa, o escopo da condição de verificação será no nível de servidor.  
   

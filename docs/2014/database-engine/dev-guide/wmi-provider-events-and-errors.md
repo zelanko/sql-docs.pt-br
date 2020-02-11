@@ -1,5 +1,5 @@
 ---
-title: Erros e eventos do provedor WMI | Microsoft Docs
+title: Eventos e erros do provedor WMI | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b5a6c9c1b30adee7b42f9424d648d33dacc52e0c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62780262"
 ---
 # <a name="wmi-provider-events-and-errors"></a>Eventos e erros do Provedor WMI
@@ -28,7 +28,7 @@ ms.locfileid: "62780262"
  0x8007052f  
  Falha de logon: restrição na conta do usuário. As possíveis razões para isso são senhas em branco não permitidas, restrições de horário de logon ou uma restrição de política que foi aplicada.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Eventos e erros do Mecanismo de Banco de Dados](../../relational-databases/native-client-ole-db-errors/errors.md)  
   
   

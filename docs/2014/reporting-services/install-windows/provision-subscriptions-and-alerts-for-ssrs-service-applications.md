@@ -17,27 +17,28 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 69724baa3790f2b7475369c8f947a4201bcd57f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108717"
 ---
 # <a name="provision-subscriptions-and-alerts-for-ssrs-service-applications"></a>Provisionar Assinaturas e Alertas para aplicativos de serviço SSRS
+  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] as assinaturas e os alertas de dados exigem o SQL Server Agent e a configuração de permissões para o SQL Server Agent. Se você visualizar mensagens de erro que indicam que um SQL Server Agent é necessário e tiver verificado que o SQL Server Agent está em execução; em seguida, atualize ou verifique as permissões. O escopo deste tópico é [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no modo do SharePoint e o tópico descreve três maneiras de atualizar as permissões do SQL Server Agent com assinaturas do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . As credenciais que você usa para as etapas neste tópico precisam ter permissões suficientes para conceder permissões execute a RSExecRole para objetos nos bancos de dados de aplicativos de serviço, msdb e mestre.  
   
 ||  
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2013 &#124; SharePoint 2010|  
   
- ![Permissões do SQL Agent para BDs do Aplicativo de Serviço](../../../2014/sql-server/install/media/rs-provisionsqlagent.gif "Permissões do SQL Agent para BDs do Aplicativo de Serviço")  
+ ![Permissões do SQL Server Agent para bancos de dados de aplicativo de serviço](../../../2014/sql-server/install/media/rs-provisionsqlagent.gif "Permissões do SQL Server Agent para bancos de dados de aplicativo de serviço")  
   
-||Descrição|  
+||DESCRIÇÃO|  
 |------|-----------------|  
 |**1**|A instância do mecanismo de banco de dados do SQL Server que está hospedando os bancos de dados do aplicativo do serviço Reporting Services.|  
 |**2**|A instância do SQL Server Agent para a instância do mecanismo de banco de dados SQL.|  
-|**3**|Os bancos de dados do aplicativo do serviço Reporting Services. Os nomes são baseados nas informações usadas para criar o aplicativo de serviço. Veja a seguir nomes de bancos de dados de exemplo:<br /><br /> ReportingService_2fbae157295d49df86d0b85760c704b0<br /><br /> ReportingService_2fbae157295d49df86d0b85760c704b0_Alerting<br /><br /> ReportingService_2fbae157295d49df86d0b85760c704b0TempDB|  
-|**4**|O banco de dados mestre e MSDB da instância do mecanismo de Banco de Dados do SQL Server.|  
+|**Beta**|Os bancos de dados do aplicativo do serviço Reporting Services. Os nomes são baseados nas informações usadas para criar o aplicativo de serviço. Veja a seguir nomes de bancos de dados de exemplo:<br /><br /> ReportingService_2fbae157295d49df86d0b85760c704b0<br /><br /> ReportingService_2fbae157295d49df86d0b85760c704b0_Alerting<br /><br /> ReportingService_2fbae157295d49df86d0b85760c704b0TempDB|  
+|**quatro**|O banco de dados mestre e MSDB da instância do mecanismo de Banco de Dados do SQL Server.|  
   
  Use um dos três métodos a seguir para atualizar as permissões:  
   
@@ -57,9 +58,9 @@ ms.locfileid: "66108717"
   
 4.  Se o administrador do SharePoint tiver privilégios suficientes ao banco de dados Mestre e aos bancos de dados de aplicativo de serviço, digite as credenciais.  
   
-5.  Clique no botão **OK** .  
+5.  Clique no botão **OK**.  
   
-##  <a name="bkmk_download"></a> Para baixar o script Transact-SQL  
+##  <a name="bkmk_download"></a>Para baixar o script Transact-SQL  
   
 1.  Na Administração Central do SharePoint, no grupo **Gerenciamento de Aplicativo** , clique em **Gerenciar Aplicativos de Serviço**  
   
@@ -77,22 +78,22 @@ ms.locfileid: "66108717"
   
 2.  No menu **Iniciar** , clique em **Todos os Programas**.  
   
-3.  Expandir **produtos do Microsoft SharePoint 2010** e clique em **SharePoint 2010 Management Shell**.  
+3.  Expanda **produtos do Microsoft SharePoint 2010** e clique em **Shell de gerenciamento do SharePoint 2010**.  
   
 4.  Atualize o seguinte cmdlet do PowerShell substituindo o nome do banco de dados do servidor de relatório, a conta do pool de aplicativos e o caminho da instrução.  
   
-     **Sintaxe do cmdlet:** `Get-SPRSDatabaseRightsScript -DatabaseName <ReportingServices database name> -UserName <app pool account> -IsWindowsUser | Out-File <path of statement>`  
+     **Sintaxe do cmdlet:**`Get-SPRSDatabaseRightsScript -DatabaseName <ReportingServices database name> -UserName <app pool account> -IsWindowsUser | Out-File <path of statement>`  
   
-     **Cmdlet de exemplo:** `Get-SPRSDatabaseRightsScript -DatabaseName ReportingService_46fd00359f894b828907b254e3f6257c -UserName "NT AUTHORITY\NETWORK SERVICE" -IsWindowsUser | Out-File c:\SQLServerAgentrights.sql`  
+     **Cmdlet de exemplo:**`Get-SPRSDatabaseRightsScript -DatabaseName ReportingService_46fd00359f894b828907b254e3f6257c -UserName "NT AUTHORITY\NETWORK SERVICE" -IsWindowsUser | Out-File c:\SQLServerAgentrights.sql`  
   
 ## <a name="using-the-transact-sql-script"></a>Usando o script Transact-SQL  
  Os seguintes procedimentos podem ser usados com o download de scripts da página de provisões ou scripts criados usando o PowerShell.  
   
 #### <a name="to-load-the-transact-sql-script-in-sql-server-management-studio"></a>Para carregar o script Transact-SQL no SQL Server Management Studio  
   
-1.  Para abrir o SQL Server Management Studio, o **iniciar** menu, clique em **Microsoft SQL Server 2012** e clique em **SQL Server Management Studio**.  
+1.  Para abrir SQL Server Management Studio, no menu **Iniciar** , clique em **Microsoft SQL Server 2012** e clique em **SQL Server Management Studio**.  
   
-2.  Na caixa de diálogo **Conectar ao Servidor** , defina as seguintes opções:  
+2.  Na caixa de diálogo **conectar ao servidor** , defina as seguintes opções:  
   
     -   Na lista **Tipo de servidor** , selecione **Mecanismo de Banco de Dados**  
   

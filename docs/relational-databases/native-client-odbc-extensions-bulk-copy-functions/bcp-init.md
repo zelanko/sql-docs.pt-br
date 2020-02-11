@@ -20,10 +20,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9b8e40091f88c4e9fc739f125a2e44715e62c9ee
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73782692"
 ---
 # <a name="bcp_init"></a>bcp_init
@@ -66,11 +66,11 @@ Nomes Unicode e ANSI:
  *eDirection*  
  É a direção da cópia, DB_IN ou DB_OUT. DB_IN indica uma cópia de variáveis do programa ou de um arquivo de usuário para uma tabela. DB_OUT indica uma cópia de uma tabela do banco de dados para um arquivo de usuário. Especifique um nome de arquivo de usuário com DB_OUT.  
   
-## <a name="returns"></a>Retorna  
+## <a name="returns"></a>Retornos  
  SUCCEED ou FAIL.  
   
 ## <a name="remarks"></a>Comentários  
- Chame **bcp_init** antes de chamar qualquer outra função de cópia em massa. **bcp_init** executa as inicializações necessárias para uma cópia em massa de dados entre a estação de trabalho e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Chame **bcp_init** antes de chamar qualquer outra função de cópia em massa. **bcp_init** executa as inicializações necessárias para uma cópia em massa de dados entre a estação [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de trabalho e o.  
   
  A função **bcp_init** deve ser fornecida com um identificador de conexão ODBC habilitado para uso com funções de cópia em massa. Para habilitar o identificador, use [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) com SQL_COPT_SS_BCP definido como SQL_BCP_ON em um identificador de conexão alocado, mas não conectado. A tentativa de atribuir o atributo em um identificador conectado resulta em erro.  
   
@@ -86,13 +86,13 @@ Nomes Unicode e ANSI:
   
 -   Ao copiar para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a posição ordinal de uma coluna no arquivo de dados deve ser idêntica à posição ordinal da coluna na tabela do banco de dados. Ao copiar de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **bcp_exec** coloca os dados com base na posição ordinal da coluna na tabela do banco de dados.  
   
--   Se um tipo de dado de banco de dados for variável em comprimento (por exemplo, **varbinary (22)** ) ou se uma coluna Database puder conter valores nulos, os dados no arquivo de dados serão prefixados por um indicador de comprimento/nulo. A largura do indicador varia dependendo do tipo de dados e da versão da cópia em massa.  
+-   Se um tipo de dado de banco de dados for variável em comprimento (por exemplo, **varbinary (22)**) ou se uma coluna Database puder conter valores nulos, os dados no arquivo de dados serão prefixados por um indicador de comprimento/nulo. A largura do indicador varia dependendo do tipo de dados e da versão da cópia em massa.  
   
  Para alterar os valores de formato de dados especificados para um arquivo de dados, chame [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) e [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md).  
   
  As cópias em massa para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem ser otimizadas para tabelas que não contêm índices, definindo o modelo de recuperação de banco de dados como SIMPLE ou BULK_LOGGED. Para obter mais informações, consulte [pré-requisitos para log mínimo em importação em massa](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md) e [alterar banco de dados](../../t-sql/statements/alter-database-transact-sql.md).  
   
- Se nenhum arquivo de dados for usado, você deverá chamar [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) para especificar o formato e o local na memória dos dados para cada coluna e, em seguida, copiar as linhas de dados para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md).  
+ Se nenhum arquivo de dados for usado, você deverá chamar [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) para especificar o formato e o local na memória dos dados para cada coluna e, em seguida, copiar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as linhas de dados para o [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)usando.  
   
 ## <a name="example"></a>Exemplo  
  Este exemplo mostra como usar a função ODBC bcp_init com um arquivo de formato.  
@@ -223,7 +223,7 @@ int main() {
   
 ```  
 
-## <a name="see-also"></a>Consulte também  
- [Funções de cópia em massa](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Bulk Copy Functions](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

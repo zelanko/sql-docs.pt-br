@@ -1,5 +1,5 @@
 ---
-title: Introdução ao Data Mining (Data Mining Add-ins para Excel) | Microsoft Docs
+title: Introdução com mineração de dados (suplementos de mineração de dados para Excel) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3e5a24a158681c3f596355b1b9abca6ada990531
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080943"
 ---
 # <a name="getting-started-with-data-mining-data-mining-add-ins-for-excel"></a>Introdução à mineração de dados (Suplementos de Mineração de Dados para Excel)
   A mineração de dados é o processo de descoberta de padrões significativos nos dados. A mineração de dados é um complemento natural ao processo de explorar e entender seus dados por meio de BI tradicional. Os algoritmos da máquina podem processar grandes quantidades de dados e descobrir padrões e tendências que, de outra forma, ficariam ocultos.  
   
- Para fazer mineração de dados, você coleta dados que são relevantes para uma pergunta específica, como "quem são meus clientes?" ou "quais produtos foram comprados?" e, em seguida, aplica um algoritmo para localizar correlações estatísticas nos dados. As tendências e os padrões encontrados por meio de análise são armazenados como um modelo de mineração. Em seguida, é possível aplicar o modelo de mineração aos novos dados, em cenários comerciais como estes:  
+ Para fazer Data Mining, você coleta dados que são relevantes para uma pergunta específica, como "quem são meus clientes?" ou "quais produtos foram adquiridos?" em seguida, aplique um algoritmo para localizar correlações estatísticas nos dados. As tendências e os padrões encontrados por meio de análise são armazenados como um modelo de mineração. Em seguida, é possível aplicar o modelo de mineração aos novos dados, em cenários comerciais como estes:  
   
 -   Usar as tendências passadas para prever as vendas para o próximo trimestre, os requisitos de inventário ou a satisfação do cliente.  
   
@@ -51,19 +51,19 @@ ms.locfileid: "66080943"
 ## <a name="define-your-goal"></a>Defina sua meta  
  Antes de começar, considere a pergunta que você realmente quer responder. A exploração é esclarecedora por si só, mas se você quiser aplicar suas descobertas a novos dados, deverá mencionar claramente o que espera que o modelo produza e como medirá se o modelo realiza essas metas.  
   
- Por exemplo, em vez de uma meta de "localizar novos clientes", esclareça seu objetivo como algo mais concreto, como "identificar os dados demográficos dos clientes que provavelmente comprarão nosso produto, com uma probabilidade de pelo menos 65%".  
+ Por exemplo, em vez de uma meta de "encontrar novos clientes", esclareça seu objetivo para algo mais concreto, como "identificar os dados demográficos de clientes que provavelmente comprarão nosso produto, com uma probabilidade de pelo menos 65%".  
   
--   O conjunto de dados deve conter pelo menos um atributo de "resultado" que você pode usar para treinamento e previsão. Se não houver tal atributo, é possível rotular manualmente alguns dados de treinamento ou usar outras colunas para criar um proxy para o resultado.  
+-   O conjunto de seus conjuntos de seus deve conter pelo menos um atributo "resultado" que você pode usar para treinamento e previsão. Se não houver tal atributo, é possível rotular manualmente alguns dados de treinamento ou usar outras colunas para criar um proxy para o resultado.  
   
-     Por exemplo, se você quiser prever "os melhores clientes potenciais", você deve aplicar algumas regras de negócio antes de rotular clientes existentes, para que a mineração de dados possa aprender com os exemplos que você fornece.  
+     Por exemplo, se você quiser prever "os melhores clientes potenciais", aplique algumas regras de negócio antecipadamente para rotular clientes existentes, para que Data Mining possa aprender com os exemplos fornecidos.  
   
 -   Se você estiver trabalhando com um valor que é alterado com o passar do tempo e quiser prever tendências do futuro, pense sobre a granularidade dos resultados necessários. Você deseja previsões para um mês, um dia ou anualmente? Os dados precisam ser analisados usando as mesmas unidades que você deseja prever.  
   
-     Com padrões cíclicos, se você não tiver bons resultados com dados diários, tente frações de tempo diferente ou tente usar dias da semana, meses ou mesmo feriados.  
+     Com padrões cíclicos, se você não obtiver bons resultados com dados diários, experimente diferentes frações de tempo ou tente usar dias da semana, meses ou até mesmo feriados.  
   
 -   Antes de iniciar um assistente para localizar novas correlações em seus dados, dê mais uma olhada em seus dados e considere o que tipo de relações existentes que podem estar presentes no conjunto de dados. Há variáveis de confusão? Há duplicatas ou proxies?  
   
--   Quais são as métricas pelas quais o sucesso do modelo será avaliado? Como você saberá que o modelo é "bom o bastante"?  
+-   Quais são as métricas pelas quais o sucesso do modelo será avaliado? Como você saberá que o modelo é "bom o suficiente"?  
   
 -   Deseja fazer previsões com base no modelo de mineração de dados ou apenas procurar padrões e associações interessantes?  
   
@@ -72,7 +72,7 @@ ms.locfileid: "66080943"
   
  Dedique um tempo à exibição da distribuição de valores e identifique possíveis problemas, como valores ausentes ou espaços reservados.  
   
- Se você estiver planejando executar a mineração de dados em um conjunto de dados que era tão grande ou complexo que não foi possível analisá-lo com outros métodos, considere a amostragem ou redução de dados.  
+ Se você estiver planejando executar Data Mining em um conjunto de dados tão grande ou complexo que não pudesse analisá-lo com outros métodos, considere a possibilidade de amostragem ou redução de dados.  
   
 -   Como os dados são distribuídos?  
   
@@ -86,12 +86,12 @@ ms.locfileid: "66080943"
   
  Depois que seu modelo estiver completo, examine os resultados e identifique maneiras de corrigir os dados ou obter resultados melhores. É excessivamente raro que seu primeiro modelo forneça todas as respostas. Em geral, a mineração de dados é um processo iterativo.  
   
- Conforme você tenta compartimentalizar seus dados de maneiras diferentes, ou adicionar novas colunas, lembre-se de usar o **modelo de documento** Assistente para capturar um instantâneo dos metadados e os resultados de cada modelo. Ter um registro facilitará rastrear o progresso em sua exploração.  
+ Ao tentar compartimentalização os dados de diferentes maneiras ou adicionar novas colunas, lembre-se de usar o assistente de **modelo de documento** para capturar um instantâneo dos metadados e dos resultados de cada modelo. Ter um registro facilitará rastrear o progresso em sua exploração.  
   
  [Explorando e limpando dados](exploring-and-cleaning-data.md)  
   
 ## <a name="validate-your-model"></a>Validar o modelo  
- Ao executar cada assistente ou ferramenta, o algoritmo analisa o conteúdo dos dados e determina se um padrão estatisticamente válido existe. Se o algoritmo não é possível localizar padrão válidos, você obterá uma mensagem de erro. No entanto, mesmo se um modelo foi criado com êxito, você desejará testar o modelo para ver se ele valida suas suposições. Você pode usar ferramentas como o [gráfico de precisão &#40;SQL Server Data Mining Add-ins&#41; ](accuracy-chart-sql-server-data-mining-add-ins.md) ou [validação cruzada &#40;SQL Server Data Mining Add-ins&#41; ](cross-validation-sql-server-data-mining-add-ins.md) para gerar estatísticas medidas de qualidade do modelo.  
+ Ao executar cada assistente ou ferramenta, o algoritmo analisa o conteúdo dos dados e determina se um padrão estatisticamente válido existe. Se o algoritmo não puder encontrar padrões válidos, você receberá uma mensagem de erro. No entanto, mesmo que um modelo tenha sido criado com êxito, você desejará testar o modelo para ver se ele valida suas suposições. Você pode usar ferramentas como o [gráfico de precisão &#40;SQL Server suplementos de mineração de dados&#41;](accuracy-chart-sql-server-data-mining-add-ins.md) ou [validação cruzada &#40;SQL Server suplementos de mineração de dados&#41;](cross-validation-sql-server-data-mining-add-ins.md) para produzir medidas estatísticas de qualidade do modelo.  
   
  Ao avaliar os resultados do seu primeiro modelo, faça perguntas como estas:  
   
@@ -105,7 +105,7 @@ ms.locfileid: "66080943"
   
  [Ferramentas de Análise de Tabela para Excel](table-analysis-tools-for-excel.md)  
   
- [Cliente de mineração de dados para Excel &#40;suplementos de mineração de dados do SQL Server&#41;](data-mining-client-for-excel-sql-server-data-mining-add-ins.md)  
+ [O cliente de mineração de dados para Excel &#40;SQL Server suplementos de mineração de dados&#41;](data-mining-client-for-excel-sql-server-data-mining-add-ins.md)  
   
  [Escolhendo um modelo](choosing-a-model.md)  
   
@@ -122,12 +122,12 @@ ms.locfileid: "66080943"
   
  Um importante uso dos modelos de mineração de dados é criar previsões e recomendações. Os suplementos de mineração de dados para Excel incluem as ferramentas que facilitam a geração até mesmo de consultas de previsão complexas, para converter ideias em resultados acionáveis. Todas essas ferramentas são totalmente integradas aos Excel.  
   
- [Exibindo modelos de &#40;Data Mining Add-ins para o Office&#41;](viewing-models-data-mining-add-ins-for-office.md)  
+ [Exibindo modelos &#40;suplementos de mineração de dados para Office&#41;](viewing-models-data-mining-add-ins-for-office.md)  
   
- [Validando modelos e usando modelos para previsão &#40;Data Mining Add-ins para Excel&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)  
+ [Validando modelos e usando modelos para previsão &#40;suplementos de mineração de dados para Excel&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)  
   
-## <a name="see-also"></a>Consulte também  
- [O que está incluído nos dados de suplementos de mineração para o Office](what-s-included-in-the-data-mining-add-ins-for-office.md)   
- [Referência técnica do &#40;Data Mining Add-ins para Excel&#41;](technical-reference-data-mining-add-ins-for-excel.md)  
+## <a name="see-also"></a>Consulte Também  
+ [O que está incluído nos suplementos de mineração de dados para Office](what-s-included-in-the-data-mining-add-ins-for-office.md)   
+ [Referência técnica &#40;suplementos de mineração de dados para Excel&#41;](technical-reference-data-mining-add-ins-for-excel.md)  
   
   

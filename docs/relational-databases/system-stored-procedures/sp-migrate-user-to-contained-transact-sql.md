@@ -18,19 +18,19 @@ ms.assetid: b3a49ff6-46ad-4ee7-b6fe-7e54213dc33e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d5bcafb24313851f58fd18fc19ebabd0ee98f6dd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68022327"
 ---
-# <a name="spmigrateusertocontained-transact-sql"></a>sp_migrate_user_to_contained (Transact-SQL)
+# <a name="sp_migrate_user_to_contained-transact-sql"></a>sp_migrate_user_to_contained (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Converte um usuário do banco de dados que foi mapeado para um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um usuário do banco de dados independente com senha. Em um banco de dados independente, use este procedimento para remover dependências na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] onde o banco de dados está instalado. **sp_migrate_user_to_contained** separa o usuário do original [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon, para que as configurações como senha e idioma padrão podem ser administradas separadamente para o banco de dados independente. **sp_migrate_user_to_contained** pode ser usado antes de mover o banco de dados independente para uma instância diferente de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] para eliminar dependências atual [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logons da instância.  
+  Converte um usuário do banco de dados que foi mapeado para um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um usuário do banco de dados independente com senha. Em um banco de dados independente, use este procedimento para remover dependências na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] onde o banco de dados está instalado. **sp_migrate_user_to_contained** separa o usuário do logon original [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , para que as configurações como senha e idioma padrão possam ser administradas separadamente para o banco de dados independente. **sp_migrate_user_to_contained** pode ser usado antes de mover o banco de dados independente para uma instância [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] diferente do para eliminar dependências [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nos logons da instância atual.  
   
 > [!NOTE]
-> Tenha cuidado ao usar **sp_migrate_user_to_contained**, pois você não poderá reverter o efeito. Este procedimento é usado somente em um banco de dados independente. Para obter mais informações, veja [Bancos de dados independentes](../../relational-databases/databases/contained-databases.md).  
+> Tenha cuidado ao usar o **sp_migrate_user_to_contained**, pois você não poderá reverter o efeito. Esse procedimento só é usado em um banco de dados independente. Para obter mais informações, veja [Bancos de dados independentes](../../relational-databases/databases/contained-databases.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,20 +42,20 @@ sp_migrate_user_to_contained [ @username = ] N'user' ,
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@username =** ] **N'***user***'**  
- Nome de um usuário do banco de dados independente atual que é mapeado para um logon autenticado do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O valor será **sysname**, com um padrão de **nulo**.  
+ [**@username =** ] **N '***usuário***'**  
+ Nome de um usuário do banco de dados independente atual que é mapeado para um logon autenticado do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O valor é **sysname**, com um padrão de **NULL**.  
   
- [ **@rename =** ] **N'***copy_login_name***'**  | **N'***keep_name***'**  
- Quando um usuário de banco de dados com base em um logon tem um nome de usuário diferente do nome de logon, use *keep_name* para manter o nome de usuário de banco de dados durante a migração. Use *copy_login_name* para criar o novo usuário de banco de dados independente com o nome de logon, em vez do usuário. Quando um usuário de banco de dados baseado em um logon tem o mesmo nome de usuário do nome de logon, as duas opções criam o usuário do banco de dados independente, sem alterar o nome.  
+ [**@rename =** ] **N '***copy_login_name***'** | **n'***keep_name***'**  
+ Quando um usuário de banco de dados baseado em um logon tiver um nome de usuário diferente do nome de logon, use *keep_name* para manter o nome de usuário do banco de dados durante a migração. Use *copy_login_name* para criar o novo usuário de banco de dados independente com o nome do logon, em vez do usuário. Quando um usuário de banco de dados baseado em um logon tem o mesmo nome de usuário do nome de logon, as duas opções criam o usuário do banco de dados independente, sem alterar o nome.  
   
- [ **@disablelogin =** ] **N'***disable_login***'**  | **N'***do_not_disable_login***'**  
- *disable_login* desabilita o logon no banco de dados mestre. Para se conectar quando o logon está desabilitado, a conexão deve fornecer o nome de banco de dados independente como o **catálogo inicial** como parte da cadeia de conexão.  
+ [**@disablelogin =** ] **N '***disable_login***'** | **n'***do_not_disable_login***'**  
+ *disable_login* desabilita o logon no banco de dados mestre. Para se conectar quando o logon é desabilitado, a conexão deve fornecer o nome de banco de dados independente como o **catálogo inicial** como parte da cadeia de conexão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
 ## <a name="remarks"></a>Comentários  
- **sp_migrate_user_to_contained** cria o usuário de banco de dados independente com senha, independentemente das propriedades ou permissões de logon. Por exemplo, o procedimento possa ser bem-sucedida se o logon está desabilitado ou se o usuário é negado a **CONNECT** permissão para o banco de dados.  
+ **sp_migrate_user_to_contained** cria o usuário de banco de dados independente com senha, independentemente das propriedades ou permissões do logon. Por exemplo, o procedimento pode ter sucesso se o logon estiver desabilitado ou se o usuário tiver negado a permissão **Connect** para o banco de dados.  
   
  **sp_migrate_user_to_contained** tem as seguintes restrições.  
   
@@ -63,24 +63,24 @@ sp_migrate_user_to_contained [ @username = ] N'user' ,
   
 -   Usuários internos, como dbo e guest, não podem ser convertidos.  
   
--   O usuário não pode ser especificado a **EXECUTE AS** cláusula de um procedimento armazenado assinado.  
+-   O usuário não pode ser especificado na cláusula **Execute as** de um procedimento armazenado assinado.  
   
--   O usuário não pode possuir um procedimento armazenado que inclui o **EXECUTE AS OWNER** cláusula.  
+-   O usuário não pode possuir um procedimento armazenado que inclua a cláusula **Execute as Owner** .  
   
 -   **sp_migrate_user_to_contained** não pode ser usado em um banco de dados do sistema.  
   
 ## <a name="security"></a>Segurança  
- Ao migrar usuários, tenha cuidado para não desabilitar ou excluir todos os logons de administrador da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se todos os logons forem excluídos, consulte [conectar-se ao SQL Server ao sistema os administradores são bloqueados](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md).  
+ Ao migrar usuários, tenha cuidado para não desabilitar ou excluir todos os logons de administrador da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se todos os logons forem excluídos, consulte [conectar-se a SQL Server quando os administradores do sistema estiverem bloqueados](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md).  
   
- Se o **BUILTIN\Administradores** logon estiver presente, os administradores podem se conectar iniciando a seu aplicativo usando o **executar como administrador** opção.  
+ Se o logon **BUILTIN\Administradores** estiver presente, os administradores poderão se conectar iniciando o aplicativo usando a opção **Executar como administrador** .  
   
 ### <a name="permissions"></a>Permissões  
  Requer a permissão **CONTROL SERVER** .  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-migrating-a-single-user"></a>A. Migrando um único usuário  
- O exemplo a seguir migra um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] denominado `Barry` para um usuário de banco de dados independente com senha. O exemplo não altera o nome de usuário e mantém o logon como habilitado.  
+### <a name="a-migrating-a-single-user"></a>a. Migrando um único usuário  
+ O exemplo a seguir migra um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] denominado `Barry` para um usuário de banco de dados independente com senha. O exemplo não altera o nome de usuário e retém o logon como habilitado.  
   
 ```sql  
 sp_migrate_user_to_contained   
@@ -116,7 +116,7 @@ CLOSE user_cursor ;
 DEALLOCATE user_cursor ;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Migrate to a Partially Contained Database](../../relational-databases/databases/migrate-to-a-partially-contained-database.md)   
  [Bancos de dados independentes](../../relational-databases/databases/contained-databases.md)  
   

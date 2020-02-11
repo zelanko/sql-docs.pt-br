@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cfcfde7491252568ac8dc89b9ceb1da64c6497dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097890"
 ---
-# <a name="databaselogonaccount-property-wmi-msreportserverconfigurationsetting"></a>Propriedade DatabaseLogonAccount (WMI MSReportServer_ConfigurationSetting)
+# <a name="databaselogonaccount-property-wmi-msreportserver_configurationsetting"></a>Propriedade DatabaseLogonAccount (WMI MSReportServer_ConfigurationSetting)
   Especifica a conta de logon que o servidor de relatório usa para se conectar ao banco de dados do servidor de relatório. Somente leitura.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -47,12 +47,12 @@ public string DatabaseLogonAccount;
 ## <a name="remarks"></a>Comentários  
  Valores válidos para esta propriedade variarão dependendo do valor da propriedade [DatabaseLogonType](configurationsetting-property-databaselogontype.md) .  
   
- Essa propriedade será ignorada se a [DatabaseLogonType](configurationsetting-property-databaselogontype.md) estiver definida como `2 (Service)`.  
+ Essa propriedade será ignorada se a propriedade [DatabaseLogonType](configurationsetting-property-databaselogontype.md) for definida `2 (Service)`como.  
   
 ## <a name="requirements"></a>Requisitos  
- **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Membros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

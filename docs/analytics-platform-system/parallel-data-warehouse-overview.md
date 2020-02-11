@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 5e609585e464cb52b996f45c7d8c57aaffcd79fe
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400928"
 ---
 # <a name="parallel-data-warehouse-components---analytics-platform-system"></a>Componentes data warehouse paralelos – Analytics Platform System
@@ -66,7 +66,7 @@ O serviço de movimentação de dados (DMS) faz parte do "segredo ingrediente" d
 ### <a name="admin-console"></a>Console de administração  
 O console de administração é um aplicativo Web que apresenta as informações de estado, integridade e desempenho do dispositivo.  
   
-### <a name="configuration-manager"></a>Gerenciador de Configurações  
+### <a name="configuration-manager"></a>Configuration Manager  
 O Configuration Manager (dwconfig. exe), é a ferramenta que os administradores de dispositivo usam para configurar o sistema de plataforma de análise.  
   
 ### <a name="control-node-databases"></a>Bancos de dados do nó de controle  
@@ -140,7 +140,7 @@ A tecnologia polybase integra dados de SQL Server PDW com dados do Hadoop extern
   
 As consultas são gravadas\-com o Transact SQL modificado para se ajustar à natureza do MPP das consultas. Todas as consultas são enviadas para o nó de controle, que gera um plano de consulta paralelo para executar a consulta nos nós de computação.  
   
-### <a name="sql-server-data-tools-ssdt"></a>SSDT (Ferramentas de Dados do SQL Server)  
+### <a name="sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT)  
 O SQL Server Data Tools é executado dentro do Visual Studio e é nossa ferramenta de GUI recomendada para enviar consultas para SQL Server PDW. É semelhante a SQL Server Management Studio, permitindo que você navegue por um pesquisador de objetos.  
   
 Se você ainda não tiver o Visual Studio, poderá baixar as ferramentas de que precisa gratuitamente. 
@@ -156,7 +156,7 @@ o sqlcmd é a ferramenta de linha de comando SQL Server para\-executar instruç�
 If you don't have SQL Server, you can download this as a standalone package. For more information, see [Install sqlcmd Command-Line Client &#40;SQL Server PDW&#41;](../sqlpdw/install-sqlcmd-command-line-client-sql-server-pdw.md) 
 --> 
   
-### <a name="integration-services"></a>Serviços de integração  
+### <a name="integration-services"></a>Integration Services  
 Você pode usar Integration Services para consultar SQL Server PDW. 
 
 <!-- MISSING LINKS
@@ -172,7 +172,7 @@ For more information, see [Connect With SQL Server Linked Server &#40;SQL Server
   
 ## <a name="business-intelligence-tools"></a>Ferramentas de Business Intelligence
   
-### <a name="analysis-services"></a>Analysis Services  
+### <a name="analysis-services"></a>Serviços de análise  
 O SQL Server PDW é uma fonte de dados válida para os modelos de Analysis Services de bancos de dados e PowerPivot do Excel. Usando o provedor de OLE DB, você pode configurar um cubo de Analysis Services para usar o processamento analítico online multidimensional (MOLAP) ou o armazenamento de ROLAP (processamento analítico online) relacional.  
   
 <!-- MISSING LINKS
@@ -200,7 +200,7 @@ For more information, see [Connect With PowerPivot for Excel &#40;SQL Server PDW
   
 ## <a name="loading-tools"></a>Carregando ferramentas 
   
-### <a name="integration-services"></a>Serviços de integração  
+### <a name="integration-services"></a>Integration Services  
 Instale os adaptadores de destino específicos do PDW que permitem usar os serviços ServerIntegrations do SQL para carregar dados no SQL Server PDW.  
 
 <!-- MISSING LINKS

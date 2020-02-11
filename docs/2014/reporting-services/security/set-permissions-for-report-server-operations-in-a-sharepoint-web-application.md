@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cb19f95d2dc5de8f461285d84776b80e3f9fb778
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101547"
 ---
 # <a name="set-permissions-for-report-server-operations-in-a-sharepoint-web-application"></a>Definir permissões para operações do servidor de relatório em um aplicativo Web do SharePoint
@@ -45,13 +45,13 @@ ms.locfileid: "66101547"
   
 -   Usar Interfaces Remotas  
   
--   Abrir  
+-   Aberto  
   
 -   Exibir Páginas de Aplicativo  
   
  Se você estiver usando níveis de permissão predefinidos, nenhuma ação será necessária porque as permissões anteriores já estarão incluídas em Controle Total, Criação, Colaboração, Leitura e Acesso Limitado. No entanto, se você estiver usando níveis de permissão personalizados ou se estiver editando as permissões atribuídas a um usuário ou grupo específico, adicione a permissão manualmente.  
   
- A permissão "Procurar Informações sobre o Usuário" permite que o servidor de relatório retorne informações sobre o criador do item e o último usuário que o modificou. Sem essa permissão, o servidor de relatório retornará os erros a seguir. Para operações de procura, o erro é: "O servidor de relatório encontrou um erro de SharePoint. ---> System.UnauthorizedAccessException: Acesso negado." Para operações de publicação, o erro é: "As permissões concedidas ao usuário '\<domínio >\\< usuário\>' são insuficientes para realizar esta operação."  
+ A permissão "Procurar Informações sobre o Usuário" permite que o servidor de relatório retorne informações sobre o criador do item e o último usuário que o modificou. Sem essa permissão, o servidor de relatório retornará os erros a seguir. Para operações de procura, o erro é: "O Report Server encontrou um erro de SharePoint. ---> System.UnauthorizedAccessException: acesso negado." Para operações de publicação, o erro é: "As permissões concedidas ao usuário '\<domínio>\\<usuário\>' não são suficientes para realizar esta operação".  
   
 ##  <a name="permissionReports"></a> Permissões para exibir e gerenciar relatórios  
  As permissões de definição são estabelecidas através de permissões de Lista na biblioteca que contém o relatório, mas é possível definir permissões em relatórios individuais, se você desejar restringir o acesso. A tabela a seguir fornece uma lista de tarefas e as permissões que oferecem suporte a cada uma.  
@@ -81,7 +81,7 @@ ms.locfileid: "66101547"
   
 |Tarefa|Permissão|  
 |----------|----------------|  
-|Iniciar o Construtor de Relatórios.|Não há permissões explicitamente usadas para controlar o acesso ao uso do Construtor de Relatórios. O Construtor de Relatórios estará disponível se a integração com o servidor de relatórios estiver configurada e se você tiver permissão para adicionar itens a uma biblioteca. Para iniciar o Construtor de Relatórios no menu **Novo** da biblioteca, você deverá registrar o tipo de conteúdo do Construtor de Relatórios. Para obter mais informações, consulte [Adicionar servidor de tipos de conteúdo relatório em uma biblioteca do &#40;Reporting Services no modo integrado do SharePoint&#41;](../add-reporting-services-content-types-to-a-sharepoint-library.md).|  
+|Iniciar o Construtor de Relatórios.|Não há permissões explicitamente usadas para controlar o acesso ao uso do Construtor de Relatórios. O Construtor de Relatórios estará disponível se a integração com o servidor de relatórios estiver configurada e se você tiver permissão para adicionar itens a uma biblioteca. Para iniciar o Construtor de Relatórios no menu **Novo** da biblioteca, você deverá registrar o tipo de conteúdo do Construtor de Relatórios. Para obter mais informações, consulte [adicionar tipos de conteúdo do servidor de relatório a uma biblioteca &#40;Reporting Services no modo integrado do SharePoint&#41;](../add-reporting-services-content-types-to-a-sharepoint-library.md).|  
 |Carregar um modelo ou uma fonte de dados compartilhados.|**Adicionar Itens** na biblioteca que conterá os arquivos.|  
 |Exibir um modelo ou uma fonte de dados compartilhados dependente.|**Exibir Itens** para a biblioteca que contém os arquivos.<br /><br /> Se o modelo contiver configurações de segurança de item de modelo, o usuário também deverá ter a permissão **Enumerar Permissões** para o modelo.|  
 |Gerar um modelo com base em uma fonte de dados compartilhados.|**Adicionar Itens** na biblioteca que contém o arquivo de fonte de dados compartilhada (.rsds) usado para a criação do modelo.|  
@@ -120,7 +120,7 @@ ms.locfileid: "66101547"
   
 |Tarefas|Permissão|  
 |-----------|----------------|  
-|Criar uma fonte de dados compartilhados.|**Adicionar Itens** na biblioteca que contém a fonte de dados compartilhada. Você pode criar novas fontes de dados compartilhadas no menu Novo em uma biblioteca. Para isso, você deverá registrar o tipo de conteúdo da Fonte de Dados de Relatório na biblioteca. Para obter mais informações, consulte [Adicionar servidor de tipos de conteúdo relatório em uma biblioteca do &#40;Reporting Services no modo integrado do SharePoint&#41;](../add-reporting-services-content-types-to-a-sharepoint-library.md).|  
+|Criar uma fonte de dados compartilhados.|**Adicionar Itens** na biblioteca que contém a fonte de dados compartilhada. Você pode criar novas fontes de dados compartilhadas no menu Novo em uma biblioteca. Para isso, você deverá registrar o tipo de conteúdo da Fonte de Dados de Relatório na biblioteca. Para obter mais informações, consulte [adicionar tipos de conteúdo do servidor de relatório a uma biblioteca &#40;Reporting Services no modo integrado do SharePoint&#41;](../add-reporting-services-content-types-to-a-sharepoint-library.md).|  
 |Editar uma fonte de dados compartilhados.|**Editar Itens** na biblioteca que contém a fonte de dados compartilhada ou na própria fonte de dados compartilhada.|  
 |Excluir uma fonte de dados compartilhados.|**Excluir Itens** na biblioteca que contém a fonte de dados compartilhada ou na própria fonte de dados compartilhada.|  
 |Usar uma fonte de dados compartilhados (.rsds) com um relatório.|**Editar Itens** no relatório ou na biblioteca que contém o relatório. A seleção de uma fonte de dados compartilhados é parte da definição de propriedades de fonte de dados de um relatório.|  
@@ -131,7 +131,7 @@ ms.locfileid: "66101547"
 > [!NOTE]  
 >  Não há permissões para editar modelos de relatório. Embora seja possível gerar ou excluir modelos de relatórios, não é possível editá-los em um site do SharePoint. A edição de modelos de relatório requer o Designer de Modelos, uma ferramenta de criação de clientes que não é afetada por permissões definidas no SharePoint.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Concedendo permissões para itens do servidor de relatório em um site do SharePoint](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [Comparar funções e tarefas no Reporting Services com grupos e permissões do SharePoint](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
  [Concedendo permissões para itens do servidor de relatório em um site do SharePoint](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   

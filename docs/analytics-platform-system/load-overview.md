@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: fd161820fd53d45642848697bce9589a98dec4ca
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401046"
 ---
 # <a name="loading-data-into-parallel-data-warehouse"></a>Carregando dados em data warehouse paralelos
@@ -43,11 +43,11 @@ For more information, see [Prepared statements](prepared-statements.md).
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-|Tarefa|Descrição|  
+|Tarefa|DESCRIÇÃO|  
 |--------|---------------|  
 |Crie o banco de dados de preparo.|[Criar o banco de dados de preparo](staging-database.md)|  
-|Carregar com Integration Services.|[Carregar com Integration Services](load-with-ssis.md)|  
-|Entenda as conversões de tipo para dwloader.|[Regras de conversão de tipo de dados para dwloader](dwloader-data-type-conversion-rules.md)|  
+|Carregar com Integration Services.|[Carregar com o Integration Services](load-with-ssis.md)|  
+|Entenda as conversões de tipo para dwloader.|[Regras de conversão de tipo de dados do dwloader](dwloader-data-type-conversion-rules.md)|  
 |Carregar dados com dwloader.|[Carregador de linha de comando dwloader](dwloader.md)|  
 |Compreenda as conversões de tipo para inserção.|[Carregar dados com INSERT](load-with-insert.md)|  
  

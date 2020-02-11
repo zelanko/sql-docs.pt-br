@@ -1,5 +1,5 @@
 ---
-title: Drivers de banco de dados da área de trabalho do Microsoft ODBC | Microsoft Docs
+title: Drivers de banco de dados do Microsoft ODBC Desktop | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,16 +18,16 @@ ms.assetid: 4e505c65-a8dd-4283-ae28-313d8a3aa046
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8ee91a2e544babdd02a22bcbe426a7fb0d770f66
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68109679"
 ---
 # <a name="microsoft-odbc-desktop-database-drivers"></a>Drivers de banco de dados de área de trabalho do Microsoft ODBC
-O ODBC é uma API que usa SQL Structured Query Language () como a linguagem de acesso do banco de dados. Você pode acessar uma grande variedade de sistemas de gerenciamento de banco de dados (DBMSs) com o mesmo código de origem ODBC que é incorporado diretamente no código-fonte do aplicativo. Com os Drivers de banco de dados de área de trabalho do Microsoft ODBC, um usuário de um aplicativo habilitado para ODBC pode abrir, consulta e atualizar um banco de dados da área de trabalho por meio da interface do ODBC.  
+O ODBC é uma API que usa o linguagem SQL (SQL) como linguagem de acesso ao banco de dados. Você pode acessar uma ampla variedade de DBMS (sistemas de gerenciamento de banco de dados) com o mesmo código-fonte ODBC que é diretamente incorporado ao código-fonte de um aplicativo. Com os drivers de banco de dados do Microsoft ODBC Desktop, um usuário de um aplicativo habilitado para ODBC pode abrir, consultar e atualizar um banco de dados de desktop por meio da interface ODBC.  
   
- Os Drivers de banco de dados de área de trabalho do Microsoft ODBC são um conjunto de drivers ODBC baseado em Jet do Microsoft. Enquanto o banco de dados do Microsoft ODBC Desktop Drivers 2.0 incluir drivers de 16 bits e 32 bits, versões 3.0 e posteriores incluem apenas drivers de 32 bits que funcionam no Windows 95 ou posterior, estação de trabalho do Windows NT ou versão 4.0, Windows 2000 Professional ou Windows 2000 Server Servidor. Esses drivers fornecem acesso aos seguintes tipos de fontes de dados:  
+ Os drivers de banco de dados do Microsoft ODBC Desktop são um conjunto de drivers ODBC baseados no Microsoft Jet. Enquanto os drivers de banco de dados do Microsoft ODBC Desktop 2,0 incluem drivers de 16 bits e de 32 bits, as versões 3,0 e posteriores incluem apenas drivers de 32 bits que funcionam no Windows 95 ou posterior, Windows NT Workstation ou Server versão 4,0, Windows 2000 Professional ou Windows 2000 Servidor. Esses drivers fornecem acesso aos seguintes tipos de fontes de dados:  
   
 -   Microsoft Access  
   
@@ -37,14 +37,14 @@ O ODBC é uma API que usa SQL Structured Query Language () como a linguagem de a
   
 -   dBASE  
   
--   Text  
+-   Texto  
   
- Ver [Driver ODBC do Visual FoxPro](../../odbc/microsoft/visual-foxpro-odbc-driver.md) para obter documentação detalhada sobre o Driver de ODBC do Microsoft Visual FoxPro®.  
+ Consulte [driver ODBC do Visual FoxPro](../../odbc/microsoft/visual-foxpro-odbc-driver.md) para obter uma documentação detalhada sobre o driver ODBC do Microsoft Visual FoxPro®.  
   
 > [!NOTE]  
->  Acesso a outras fontes de dados, como Lotus 1-2-3, Microsoft Exchange e HTML, é habilitado por drivers instaláveis do ISAM (IISAM). Para obter mais informações sobre esses drivers, consulte "Acessando dados externos" no *referência do programador do Microsoft Jet banco de dados Engine*. Banco de dados de área de trabalho de ODBC Drivers 4.0 não dão suporte a formatos de dados Btrieve e EMS.  
+>  O acesso a outras fontes de dados, como o Lotus 1-2-3, o Microsoft Exchange e o HTML, é habilitado por drivers instaláveis do ISAM (IISAM). Para obter mais informações sobre esses drivers, consulte "Acessando dados externos" na *referência do programador de mecanismo de banco de dados do Microsoft Jet*. Os drivers de banco de dados ODBC da área de trabalho 4,0 não dão suporte aos formatos de dado Btrieve e EMS.  
   
- Esta seção contém os tópicos a seguir.  
+ Esta seção contém os seguintes tópicos:  
   
 -   [Arquitetura de drivers de banco de dados de área de trabalho](../../odbc/microsoft/desktop-database-drivers-architecture.md)  
   
@@ -52,7 +52,7 @@ O ODBC é uma API que usa SQL Structured Query Language () como a linguagem de a
   
 -   [Suporte ao produto](../../odbc/microsoft/product-support.md)  
   
--   [Implementando os drivers de banco de dados de área de trabalho](../../odbc/microsoft/implementing-desktop-database-drivers.md)  
+-   [Implementar os drivers de banco de dados de área de trabalho](../../odbc/microsoft/implementing-desktop-database-drivers.md)  
   
 -   [Considerações sobre programação de drivers do Microsoft Access](../../odbc/microsoft/microsoft-access-driver-programming-considerations.md)  
   

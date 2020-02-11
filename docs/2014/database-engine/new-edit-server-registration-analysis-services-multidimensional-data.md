@@ -1,5 +1,5 @@
 ---
-title: Novo ou editar registro de servidor (guia Geral) (Analysis Services - dados multidimensionais) | Microsoft Docs
+title: Novo ou editar registro de servidor (guia geral) (Analysis Services-dados multidimensionais) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9d3d13ac64edbdbec4f131a09949e5724ab2932b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774910"
 ---
 # <a name="new-or-edit-server-registration-general-tab-analysis-services---multidimensional-data"></a>Novo registro ou editar registro de servidor (guia Geral) (Analysis Services - Dados multidimensionais)
@@ -34,7 +34,7 @@ ms.locfileid: "62774910"
  **Autenticação**  
  A Autenticação do Windows permite que um usuário se conecte usando as credenciais do [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows, como um usuário do Windows ou como um membro de um grupo do Windows.  
   
- **User name**  
+ **Nome de usuário**  
  Essa opção não está disponível nesta versão.  
   
  **Senha**  
@@ -49,7 +49,7 @@ ms.locfileid: "62774910"
  **Descrição do servidor registrado**  
  Digite uma descrição opcional do servidor.  
   
- **Teste**  
+ **Testar**  
  Clique para testar a conexão com o servidor selecionado em **Nome do servidor**.  
   
  **Salvar**  

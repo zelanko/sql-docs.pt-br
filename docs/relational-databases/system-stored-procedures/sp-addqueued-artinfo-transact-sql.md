@@ -16,10 +16,10 @@ ms.assetid: decdb6eb-3dcd-4053-a21d-fd367c3fbafb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 25f91084afe2c2bdfc27bc0b2ad874bd87447b67
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68769014"
 ---
 # <a name="sp_addqueued_artinfo-transact-sql"></a>sp_addqueued_artinfo (Transact-SQL)
@@ -28,11 +28,11 @@ ms.locfileid: "68769014"
   
   
 > [!IMPORTANT]  
->  O procedimento [sp_script_synctran_commands](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md) deve ser usado em vez de **sp_addqueued_artinfo**. [sp_script_synctran_commands](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md) gera um script que contém as chamadas **sp_addqueued_artinfo** e **sp_addsynctrigger** .  
+>  O procedimento de [sp_script_synctran_commands](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md) deve ser usado em vez de **sp_addqueued_artinfo**. [sp_script_synctran_commands](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md) gera um script que contém as chamadas **sp_addqueued_artinfo** e **sp_addsynctrigger** .  
   
- Cria a tabela [MSsubscription_articles](../../relational-databases/system-tables/mssubscription-articles-transact-sql.md) no Assinante que é usada para rastrear informações de assinatura do artigo (atualização em fila e atualização imediata com atualização em fila como failover). Esse procedimento armazenado é executado no Assinante no banco de dados de assinatura.  
+ Cria a tabela de [MSsubscription_articles](../../relational-databases/system-tables/mssubscription-articles-transact-sql.md) no Assinante que é usada para rastrear informações de assinatura do artigo (atualização em fila e atualização imediata com atualização em fila como failover). Esse procedimento armazenado é executado no Assinante no banco de dados de assinatura.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -53,7 +53,7 @@ sp_addqueued_artinfo [ @artid= ] 'artid'
   
 `[ @article = ] 'article'`É o nome do artigo a ser inserido no script. o *artigo* é **sysname**, sem padrão  
   
-`[ @publisher = ] 'publisher'`É o nome do servidor do Publicador. o Publicador é **sysname**, sem padrão.  
+`[ @publisher = ] 'publisher'`É o nome do servidor do Publicador. o *Publicador* é **sysname**, sem padrão.  
   
 `[ @publisher_db = ] 'publisher_db'`É o nome do banco de dados do Publicador. *publisher_db* é **sysname**, sem padrão.  
   
@@ -61,7 +61,7 @@ sp_addqueued_artinfo [ @artid= ] 'artid'
   
 `[ @dest_table = ] _'dest_table'`É o nome da tabela de destino. *dest_table* é **sysname**, sem padrão.  
   
- [ **@owner =** ] **'** _owner_ **'**  
+ [**@owner =** ] **'**_proprietário_**'**  
  É o proprietário da assinatura. *Owner* é **sysname**, sem padrão.  
   
 `[ @cft_table = ] 'cft_table'`Nome da tabela de conflitos de atualização enfileirada deste artigo. *cft_table*é **sysname**, sem padrão.  
@@ -75,12 +75,12 @@ sp_addqueued_artinfo [ @artid= ] 'artid'
  [sp_script_synctran_commands](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md) em vez de **sp_addqueued_artinfo**.  
   
 ## <a name="permissions"></a>Permissões  
- Somente os membros da função de servidor fixa **sysadmin** ou da função de banco de dados fixa **db_owner** podem executar **sp_addqueued_artinfo**.  
+ Somente os membros da função de servidor fixa **sysadmin** ou **db_owner** função de banco de dados fixa podem ser executados **sp_addqueued_artinfo**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
- [sp_script_synctran_commands &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md)   
- [MSsubscription_articles &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mssubscription-articles-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_script_synctran_commands](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de MSsubscription_articles](../../relational-databases/system-tables/mssubscription-articles-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

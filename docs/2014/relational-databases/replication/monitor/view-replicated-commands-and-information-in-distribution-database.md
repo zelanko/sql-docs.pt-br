@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 86ced6fd281da2e47ddaa31cab7fa977767b98d6
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74164957"
 ---
 # <a name="view-replicated-commands-and-other-information-in-the-distribution-database-replication-transact-sql-programming"></a>Exibir comandos replicados e outras informações no banco de dados de distribuição (Programação Transact-SQL de replicação)
@@ -33,11 +33,11 @@ ms.locfileid: "74164957"
   
 ### <a name="to-view-replicated-commands-in-the-distribution-database-from-a-specific-article-or-from-a-specific-database-published-using-transactional-replication"></a>Para exibir comandos replicados no banco de dados de distribuição de um artigo específico ou de um banco de dados publicado específico por meio de replicação transacional  
   
-1.  (Opcional) No Publicador, no banco de dados de publicação, execute [sp_helparticle](/sql/relational-databases/system-stored-procedures/sp-helparticle-transact-sql). Especifique **\@publicação** e **\@artigo**. Observe o valor de **id de artigo** no conjunto de resultados.  
+1.  (Opcional) No Publicador, no banco de dados de publicação, execute [sp_helparticle](/sql/relational-databases/system-stored-procedures/sp-helparticle-transact-sql). Especifique ** \@a publicação** e ** \@o artigo**. Observe o valor de **id de artigo** no conjunto de resultados.  
   
-2.  No Distribuidor, no banco de dados de distribuição, execute [sp_browsereplcmds](/sql/relational-databases/system-stored-procedures/sp-browsemergesnapshotfolder-transact-sql). Adicional Especifique a ID do artigo da etapa 2 para **\@article_id**. Adicional Especifique a ID do banco de dados de publicação para **\@publisher_database_id**, que pode ser obtido da coluna **database_id** na exibição do catálogo [Sys. databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) .  
+2.  No Distribuidor, no banco de dados de distribuição, execute [sp_browsereplcmds](/sql/relational-databases/system-stored-procedures/sp-browsemergesnapshotfolder-transact-sql). Adicional Especifique a ID do artigo da etapa 2 para ** \@article_id**. Adicional Especifique a ID do banco de dados de publicação para ** \@publisher_database_id**, que pode ser obtida na coluna **database_id** na exibição do catálogo [Sys. databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) .  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Monitorar programaticamente a replicação](../monitoring-replication.md)  
   
   

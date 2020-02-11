@@ -1,5 +1,5 @@
 ---
-title: sys. dm_db_objects_impacted_on_version_change
+title: DM db_objects_impacted_on_version_change
 titleSuffix: Azure SQL Database
 ms.date: 03/03/2017
 ms.service: sql-database
@@ -21,10 +21,10 @@ ms.author: sstein
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 0255f7260044ee5c09d020f3ba6310d24bc8cb74
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73843858"
 ---
 # <a name="sysdm_db_objects_impacted_on_version_change-azure-sql-database"></a>sys.dm_db_objects_impacted_on_version_change (Banco de Dados SQL do Azure)
@@ -32,7 +32,7 @@ ms.locfileid: "73843858"
 
   Esta exibição do sistema com escopo no banco de dados é criada para fornecer um sistema de alerta rápido para determinar os objetos que serão afetados por uma atualização de versão principal no [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Você pode usar a exibição antes ou depois da atualização para obter uma descrição completa dos objetos afetados. Você precisará consultar essa exibição em cada banco de dados para obter uma contabilidade completa no servidor inteiro.  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de Dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |class|**int** NÃO NULO|A classe do objeto que será afetado:<br /><br /> **1** = restrição<br /><br /> **7** = índices e heaps|  
 |class_desc|**nvarchar (60)** NÃO NULO|Descrição da classe:<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **INDEX**|  
@@ -44,7 +44,7 @@ ms.locfileid: "73843858"
  Exige a permissão VIEW DATABASE STATE.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra uma consulta em **Sys. dm_db_objects_impacted_on_version_change** para localizar os objetos afetados por uma atualização para a próxima versão principal do servidor  
+ Os exemplos a seguir mostram uma consulta sobre **sys.dm_db_objects_impacted_on_version_change** para localizar objetos afetados por uma atualização na próxima versão do servidor principal  
   
 ```  
 SELECT * FROM sys.dm_db_objects_disabled_on_version_change;  
@@ -67,7 +67,7 @@ class  class_desc        major_id    minor_id    dependency
   
 |Order|Objeto afetado|Ação corretiva|  
 |-----------|---------------------|-----------------------|  
-|1|**Índices**|Reconstrua qualquer índice identificado por **Sys. dm_db_objects_impacted_on_version_change** por exemplo: `ALTER INDEX ALL ON <table> REBUILD`<br />ou<br />`ALTER TABLE <table> REBUILD`|  
-|2|**Objeto**|Todas as restrições identificadas por **Sys. dm_db_objects_impacted_on_version_change** devem ser revalidadas depois que os dados geometry e geography na tabela subjacente são recomputados. Para restrições, revalide usando ALTER TABLE. <br />Por exemplo: <br />`ALTER TABLE <tab> WITH CHECK CHECK CONSTRAINT <constraint name>`<br />ou<br />`ALTER TABLE <tab> WITH CHECK CONSTRAINT ALL`|  
+|1|**Índices**|Reconstrua qualquer índice identificado por **Sys. dm_db_objects_impacted_on_version_change** por exemplo:`ALTER INDEX ALL ON <table> REBUILD`<br />ou<br />`ALTER TABLE <table> REBUILD`|  
+|2|**Objeto**|Todas as restrições definidas por **sys.dm_db_objects_impacted_on_version_change** devem ser revalidadas depois que os dados Geometry e Geography forem recomputados na tabela subjacente. Para restrições, revalide usando ALTER TABLE. <br />Por exemplo: <br />`ALTER TABLE <tab> WITH CHECK CHECK CONSTRAINT <constraint name>`<br />ou<br />`ALTER TABLE <tab> WITH CHECK CONSTRAINT ALL`|  
   
   

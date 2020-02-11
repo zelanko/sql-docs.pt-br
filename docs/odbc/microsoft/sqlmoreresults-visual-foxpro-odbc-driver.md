@@ -1,5 +1,5 @@
 ---
-title: SQLMoreResults (Driver ODBC do Visual FoxPro) | Microsoft Docs
+title: SQLMoreResults (driver ODBC do Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,20 +13,20 @@ ms.assetid: dc59b1dd-c158-4b45-ab46-638be1fa49b8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a21e2145e10c5ed9364a392f6cb888b676ec18e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68002255"
 ---
 # <a name="sqlmoreresults-visual-foxpro-odbc-driver"></a>SQLMoreResults (Driver ODBC do Visual FoxPro)
 > [!NOTE]  
->  Este tópico contém informações específicas de Driver ODBC do Visual FoxPro. Para obter informações gerais sobre essa função, consulte o tópico apropriado sob [referência da API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Este tópico contém informações específicas do driver ODBC do Visual FoxPro. Para obter informações gerais sobre essa função, consulte o tópico apropriado em [referência da API do ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Suporte a: Completo  
+ Suporte: completo  
   
- Conformidade com a API ODBC: Nível 2  
+ Conformidade da API ODBC: nível 2  
   
- Determina se houver mais resultados pendentes em um identificador de instrução *hstmt*, que contém instruções SELECT, UPDATE, INSERT ou DELETE e nesse caso, inicializa o processamento para esses resultados.  
+ Determina se mais resultados estão pendentes em um identificador de instrução, *HSTMT*, contendo instruções SELECT, Update, INSERT ou DELETE e, nesse caso, inicializa o processamento para esses resultados.  
   
  Para obter mais informações, consulte [SQLMoreResults](../../odbc/reference/syntax/sqlmoreresults-function.md) na *referência do programador de ODBC*.

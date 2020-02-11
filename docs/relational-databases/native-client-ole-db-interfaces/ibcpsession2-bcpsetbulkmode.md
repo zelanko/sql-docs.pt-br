@@ -14,16 +14,16 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 932bb271d7d38a1dfec411dca4ed5b1696ab924f
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73763201"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  IBCPSession2:: BCPSetBulkMode fornece uma alternativa para [IBCPSession:: BCPColFmt &#40;OLE DB&#41; ](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) para especificar o formato de coluna. Ao contrário de IBCPSession:: BCPColFmt, que define atributos de formato de coluna individuais, IBCPSession2:: BCPSetBulkMode define todos os atributos.  
+  IBCPSession2:: BCPSetBulkMode fornece uma alternativa para [IBCPSession:: BCPColFmt &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) para especificar o formato de coluna. Ao contrário de IBCPSession:: BCPColFmt, que define atributos de formato de coluna individuais, IBCPSession2:: BCPSetBulkMode define todos os atributos.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -54,7 +54,7 @@ HRESULT BCPSetBulkMode (
  cbRow  
  O comprimento (em bytes) do valor de terminador de linha.  
   
-## <a name="returns"></a>Retorna  
+## <a name="returns"></a>Retornos  
  IBCPSession2:: BCPSetBulkMode pode retornar um dos seguintes:  
   
 |||  
@@ -72,7 +72,7 @@ HRESULT BCPSetBulkMode (
   
  A tabela a seguir lista as constantes do parâmetro *property* .  
   
-|Propriedade|Descrição|  
+|Propriedade|DESCRIÇÃO|  
 |--------------|-----------------|  
 |BCP_OUT_CHARACTER_MODE|Especifica o modo de saída de caractere.<br /><br /> Corresponde à opção-c no BCP. EXE e para IBCPSession:: BCPColFmt com a propriedade *eUserDataType* definida como **BCP_TYPE_SQLCHARACTER**.|  
 |BCP_OUT_WIDE_CHARACTER_MODE|Especifica o modo de saída de Unicode.<br /><br /> Corresponde à opção-w no BCP. EXE e IBCPSession:: BCPColFmt com a propriedade *eUserDataType* definida como **BCP_TYPE_SQLNCHAR**.|  
@@ -361,7 +361,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [OLE DB &#40;IBCPSession2&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession2-ole-db.md)  
+## <a name="see-also"></a>Consulte Também  
+ [IBCPSession2 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession2-ole-db.md)  
   
   

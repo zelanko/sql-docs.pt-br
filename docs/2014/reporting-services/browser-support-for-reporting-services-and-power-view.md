@@ -9,12 +9,12 @@ ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.custom: ''
 ms.date: 06/13/2017
-ms.openlocfilehash: cd3a3e268e09e882b4e38eee6a620843fcc21a23
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: f82cf64ef78280b3c9562ae28afc71d06a03b1da
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75241198"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76925781"
 ---
 # <a name="planning-for-reporting-services-and-power-view-browser-support-reporting-services-2014"></a>Planejando o suporte ao navegador do Reporting Services e do Power View (Reporting Services 2014)
   No [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], você usa um navegador da Web para exibir relatórios e executar o Gerenciador de Relatórios. Nem todos os navegadores dão suporte à funcionalidade de relatório. Este tópico descreve o suporte e os requisitos para os recursos de gerenciamento do Gerenciador de Relatórios, exibir relatórios, os controles do Visualizador de Relatórios no Visual Studio. O tópico também resume a disponibilidade de recursos para os navegadores com suporte, os requisitos de autenticação e os requisitos de script.  
@@ -51,7 +51,7 @@ ms.locfileid: "75241198"
   
 - Para obter mais informações sobre o suporte ao navegador do SharePoint 2010, consulte [planejar o suporte do navegador (SharePoint Server 2010)](https://technet.microsoft.com/library/cc263526\(office.14\).aspx) (https://technet.microsoft.com/library/cc263526(office.14).aspx).  
   
-|**Navegador**|**Windows 8 e 8,1**|**Windows 7**|**Windows Server 2012 e 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10,6-10,9**|  
+|**Navegador**|**Windows 8 e 8.1**|**Windows 7**|**Windows Server 2012 e 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10,6-10,9**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|  
 |**Internet Explorer 11 (para a área de trabalho)**|32 bits, 64 bits|32 bits, 64 bits|32 bits, 64 bits|32 bits, 64 bits|Sem suporte|Sem suporte|  
 |**Internet Explorer 10 (para a área de trabalho)**|32 bits, 64 bits|32 bits, 64 bits|32 bits, 64 bits|32 bits, 64 bits|Sem suporte|Sem suporte|  
@@ -73,7 +73,7 @@ ms.locfileid: "75241198"
   
 -   Para obter mais informações sobre o suporte ao navegador do SharePoint 2013, consulte [planejar o suporte do navegador no SharePoint 2013](https://technet.microsoft.com/library/cc263526\(office.15\).aspx) (https://technet.microsoft.com/library/cc263526(office.15).aspx).  
   
-|**Navegador**|**Windows 8 e 8,1**|**Windows 7**|**Windows Server 2012 e 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10,6-10,9**|  
+|**Navegador**|**Windows 8 e 8.1**|**Windows 7**|**Windows Server 2012 e 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10,6-10,9**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|  
 |**Internet Explorer 11 (para a área de trabalho)**|32 bits, 64 bits|32 bits, 64 bits|32 bits, 64 bits|32 bits, 64 bits|Sem suporte|Sem suporte|  
 |**Internet Explorer 10 (para a área de trabalho)**|32 bits, 64 bits|32 bits, 64 bits|32 bits, 64 bits|32 bits, 64 bits|Sem suporte|Sem suporte|  
@@ -100,7 +100,7 @@ ms.locfileid: "75241198"
 
  Veja a seguir uma lista atual de navegadores e recursos com suporte com o visualizador de relatório. O visualizador de relatórios oferece suporte à visualização de relatórios do gerenciador de relatórios do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] e de bibliotecas do SharePoint.  
   
-|**Navegador**|**Windows 8 e 8,1**|**Windows 7**|**Windows Server 2012 e 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10,6-10,9**|**iOS 6 -7 para iPad**|  
+|**Navegador**|**Windows 8 e 8.1**|**Windows 7**|**Windows Server 2012 e 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10,6-10,9**|**iOS 6 -7 para iPad**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|----------------------------|  
 |**Internet Explorer 11 (para a área de trabalho)**|32 bits, 64 bits|32 bits, 64 bits|32 bits, 64 bits|Sem suporte|Sem suporte|Sem suporte|Sem suporte|  
 |**Internet Explorer 10 (para a área de trabalho)**|32 bits, 64 bits|32 bits, 64 bits|32 bits, 64 bits|Sem suporte|Sem suporte|Sem suporte|Sem suporte|  
@@ -127,7 +127,7 @@ ms.locfileid: "75241198"
   
  Para obter mais informações sobre acesso URL, consulte o seguinte tópico:  
   
-- [Referência de parâmetro de acesso à URL](url-access-parameter-reference.md)  
+- [Referência de parâmetro de acesso de URL](url-access-parameter-reference.md)  
   
 ###  <a name="bkmk_authentication"></a>Requisitos de autenticação
 
@@ -137,7 +137,7 @@ ms.locfileid: "75241198"
 |----------------------|------------------|-------------------------|------------------------|  
 |**Internet Explorer**|Negotiated, Kerberos, NTLM, Basic|Negociar|Sim. As configurações de autenticação padrão funcionam com o Internet Explorer.|  
 |**Janelas**|NTLM, Basic|NTLM|Sim. As configurações de autenticação padrão funcionam com o Firefox.|  
-|**Safari**|Básico|Básico|Sim. As configurações de autenticação padrão funcionam com o Safari.|  
+|**Safari**|Basic|Basic|Sim. As configurações de autenticação padrão funcionam com o Safari.|  
 |**Monocromático**|Negotiated, NTLM, Basic|Negociado|Sim. As configurações de autenticação padrão funcionam com o Chrome.|  
   
 ### <a name="script-requirements"></a>Requisitos de script
@@ -157,7 +157,7 @@ ms.locfileid: "75241198"
 
  O controle ReportViewer de servidor Web é usado para inserir a funcionalidade de relatório em um aplicativo Web ASP.NET. Os controles estão incluídos no Visual Studio e dão suporte a navegadores e versões de navegador diferentes dos outros componentes descritos neste tópico. O tipo de navegador usado para exibir o aplicativo determina o tipo de funcionalidade de ReportViewer que você pode fornecer em seu aplicativo. Use a tabela fornecida neste tópico para determinar qual dos navegadores com suporte está sujeito a restrições de funcionalidade de relatório e as plataformas com suporte.  
   
- Devido a diferenças nos mecanismos de renderização dos navegadores com suporte, alguns recursos de relatório podem ser exibidos diferentemente em diferentes navegadores.  Por exemplo, rotação do texto.  
+ Devido a diferenças nos mecanismos de renderização dos navegadores com suporte, alguns recursos avançados de relatório podem ser exibidos de forma diferente em navegadores diferentes.  Por exemplo, rotação do texto.  
   
 ### <a name="scripting-requirements"></a>Requisitos de script
 
@@ -169,12 +169,12 @@ ms.locfileid: "75241198"
   
 |||||||||  
 |-|-|-|-|-|-|-|-|  
-|**Navegador**|**Windows 8** e **Windows 8.1**|**Windows 7**|**Windows Server 2012** e **2012 R2**|**Windows Server 2008** e **2008 R2**|**Windows Server 2003**|**Mac OS X 10,6-10,9**|**Registra**|  
+|**Navegador**|**Windows 8** e **Windows 8.1**|**Windows 7**|**Windows Server 2012** e **2012 R2**|**Windows Server 2008** e **2008 R2**|**Windows Server 2003**|**Mac OS X 10,6-10,9**|**Observações**|  
 |**Internet Explorer 11 (para desktops**|Sim|Sim|Sim|Sem suporte|Sem suporte|Sem suporte|O Internet Explorer dá suporte a um conjunto completo de recursos do ReportViewer.|  
 |**Internet Explorer 10 (para a área de trabalho)**|Sim|Sim|Sim|Sem suporte|Sem suporte|Sem suporte|O Internet Explorer dá suporte a um conjunto completo de recursos do ReportViewer.|  
 |**Internet Explorer 9**|Sem suporte|Sim|Sem suporte|Sim|Sim|Sim|O Internet Explorer dá suporte a um conjunto completo de recursos do ReportViewer.|  
-|**Internet Explorer 8.0**|Sem suporte|Sim|Sem suporte|Sim|Sim<sup>1</sup>|Sem suporte|O Internet Explorer dá suporte a um conjunto completo de recursos do ReportViewer. <sup>uma</sup>|  
-|**Internet Explorer 7.0**|Sem suporte|Sim|Sem suporte|Sim|Sim<sup>1</sup>|Sem suporte|O Internet Explorer dá suporte a um conjunto completo de recursos do ReportViewer. <sup>uma</sup>|  
+|**Internet Explorer 8.0**|Sem suporte|Sim|Sem suporte|Sim|Sim<sup>1</sup>|Sem suporte|O Internet Explorer dá suporte a um conjunto completo de recursos do ReportViewer. <sup>1</sup>|  
+|**Internet Explorer 7.0**|Sem suporte|Sim|Sem suporte|Sim|Sim<sup>1</sup>|Sem suporte|O Internet Explorer dá suporte a um conjunto completo de recursos do ReportViewer. <sup>1</sup>|  
 |**Firefox (última versão lançada publicamente)**|Sim|Sim|Sim|Sim|Sim|Sem suporte|Não há suporte para imprimir ou ampliar.|  
 |**Safari (última versão lançada publicamente)**|Sem suporte|Sem suporte|Sem suporte|Sem suporte|Sem suporte|Sim|Não há suporte para imprimir ou ampliar.<br /><br /> O controle Calendário que é usado para selecionar datas em um relatório com parâmetros é desabilitado neste navegador. Os usuários devem digitar manualmente as datas que querem usar na área de prompt de parâmetro.|  
 |**Chrome (última versão lançada publicamente)**|Sim|Sim|Sim|Sim|Sim|Sem suporte|Não há suporte para imprimir ou ampliar.|  

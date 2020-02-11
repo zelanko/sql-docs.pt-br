@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 114460af84d4e820ccd263fc4bf5188b65775c85
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62902180"
 ---
 # <a name="load-data-by-using-the-ole-db-destination"></a>Carregar dados por meio do destino OLE DB
@@ -42,7 +42,7 @@ ms.locfileid: "62902180"
   
     -   **Tabela ou exibição** Selecione uma tabela ou exibição no banco de dados que contém os dados.  
   
-    -   **Tabela ou exibição – carregamento rápido** Selecione uma tabela ou exibição no banco de dados que contém os dados, depois defina as opções de carregamento rápido: **Manter identidade**, **Manter nulos**, **Bloqueio de tabela**, **Restrição de verificação**, **Linhas por lote** ou **Tamanho máximo de confirmação de inserção**.  
+    -   **Tabela ou exibição – carregamento rápido** Selecione uma tabela ou exibição no banco de dados que contém os dados, e defina as opções de carregamento rápido: **Manter identidade**, **Manter nulos**, **Bloqueio da tabela**, **Restrição de Verificação**, **Linhas por lote**ou **Tamanho máximo de confirmação de inserção**.  
   
     -   **Variável de nome da tabela ou exibição** Selecione a variável definida pelo usuário que contém o nome da tabela ou da exibição no banco de dados.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "62902180"
   
 11. Para salvar o pacote atualizado, clique em **Salvar Itens Selecionados** no menu **Arquivo** .  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Destino OLE DB](ole-db-destination.md)   
  [Transformações do Integration Services](transformations/integration-services-transformations.md)   
  [Caminhos do Integration Services](integration-services-paths.md)   

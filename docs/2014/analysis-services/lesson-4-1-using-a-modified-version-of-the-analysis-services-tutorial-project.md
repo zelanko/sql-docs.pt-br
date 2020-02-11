@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3f8a31fd2e6659f4d971ebb30bad7b2876dafa6f
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69493939"
 ---
 # <a name="using-a-modified-version-of-the-analysis-services-tutorial-project"></a>Usando uma versão modificada do projeto do Tutorial do Analysis Services
@@ -24,7 +24,7 @@ ms.locfileid: "69493939"
   
 ## <a name="downloading-and-extracting-the-project-file"></a>Baixando e extraindo o Arquivo do Projeto  
   
-1.  [Clique aqui](https://go.microsoft.com/fwlink/?LinkID=221866) para ir para a página de download que fornece os projetos de exemplo fornecidos neste tutorial. Os projetos do tutorial estão incluídos no download do **Tutorial do Analysis Services do SQL Server 2012** .  
+1.  [Clique aqui](https://go.microsoft.com/fwlink/?LinkID=221866) para ir para a página de download que fornece os projetos de exemplo que acompanham este tutorial. Os projetos do tutorial estão incluídos no download do **Tutorial do Analysis Services do SQL Server 2012** .  
   
 2.  Clique em **Tutorial do Analysis Services do SQL Server 2012** para baixar o pacote que contém os projetos para este tutorial.  
   
@@ -56,37 +56,37 @@ ms.locfileid: "69493939"
 ### <a name="data-source-view"></a>Exibição da Fonte de Dados  
  A exibição da fonte de dados no projeto aprimorado contém uma tabela de fatos adicional e quatro tabelas de dimensão adicionais do banco de dados [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] .  
   
- Observe que, com dez tabelas na exibição da fonte de dados \<, todas as tabelas > diagrama estão ficando lotados. Isso dificulta a compreensão das relações entre as tabelas e a localização de tabelas específicas. Para solucionar esse problema, as tabelas são organizadas em dois diagramas lógicos: **Vendas pela Internet** e **Vendas do Revendedor** . Esses diagramas são organizados com base em uma única tabela de fato. Criar diagramas lógicos permite que você exiba e trabalhe com um subconjunto específico de tabelas em uma exibição de fonte de dado em vez de ter que exibir sempre todas as tabelas e suas relações em um único diagrama.  
+ Observe que, com dez tabelas na exibição da fonte de dados \<, todas as tabelas> diagrama estão ficando lotados. Isso dificulta a compreensão das relações entre as tabelas e a localização de tabelas específicas. Para solucionar esse problema, as tabelas são organizadas em dois diagramas lógicos: **Vendas pela Internet** e **Vendas do Revendedor** . Esses diagramas são organizados com base em uma única tabela de fato. Criar diagramas lógicos permite que você exiba e trabalhe com um subconjunto específico de tabelas em uma exibição de fonte de dado em vez de ter que exibir sempre todas as tabelas e suas relações em um único diagrama.  
   
 #### <a name="internet-sales-diagram"></a>Diagrama Vendas pela Internet  
  O diagrama **Vendas pela Internet** contém as tabelas relacionadas à venda de produtos do [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] diretamente aos clientes pela Internet. As tabelas do diagrama são as quatro tabelas de dimensão e a tabela de fatos que você adicionou à exibição da fonte de dados **Adventure Works DW 2012** na Lição 1. Essas tabelas são as seguintes:  
   
--   **Geography**  
+-   **Gráfico**  
   
 -   **Cliente**  
   
 -   **Data**  
   
--   **Product**  
+-   **Produto**  
   
 -   **InternetSales**  
   
 #### <a name="reseller-sales-diagram"></a>Reseller Sales Diagram  
  O diagrama **Vendas do Revendedor** contém as tabelas relacionadas à venda de produtos do [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] por revendedores. Esse diagrama contém as sete tabelas de dimensão e uma tabela de fatos do banco de dados [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] :  
   
--   **Reseller**  
+-   **Revendedor**  
   
--   **Promoção**  
+-   **Promocionais**  
   
 -   **SalesTerritory**  
   
--   **Geografia**  
+-   **Gráfico**  
   
 -   **Data**  
   
--   **Product**  
+-   **Produto**  
   
--   **Employee**  
+-   **Funcionário**  
   
 -   **ResellerSales**  
   
@@ -116,7 +116,7 @@ ms.locfileid: "69493939"
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
  [Definindo propriedades de atributo pai em uma hierarquia pai-filho](lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md) 
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Implantando um projeto do Analysis Services](lesson-2-5-deploying-an-analysis-services-project.md)  
   
   

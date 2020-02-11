@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 639eb4e9e5c531e154b9eb7f91165af365bc519f
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400358"
 ---
 # <a name="send-telemetry-feedback-to-microsoft-for-analytics-platform-system"></a>Enviar comentários de telemetria para a Microsoft para o Analytics Platform System
@@ -42,7 +42,7 @@ Para fornecer a proteção máxima de privacidade, o APS é fornecido sem habili
     > [!NOTE]  
     > Para importar, você deve usar dois pontos no comando.  
   
-    **Exemplo**  
+    **Exemplo:**  
   
     ```  
     PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> . .\Configure-RemoteMonitoring.ps1  
@@ -92,7 +92,7 @@ Desabilitar a telemetria interromperá todas as operações que comunicam inform
     > [!NOTE]  
     > Para importar, você deve usar dois pontos no comando.  
   
-    **Exemplo**  
+    **Exemplo:**  
   
     ```  
     PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> . .\Configure-RemoteMonitoring.ps1  
@@ -100,7 +100,7 @@ Desabilitar a telemetria interromperá todas as operações que comunicam inform
   
 4.  Invoque o `Disable-RemoteMonitoring` comando sem parâmetros. Este comando deixará de enviar comentários. (Isso não afetará o monitoramento local.) No entanto, o comando não desabilitará o encaminhador de DNS e/ou desabilitará qualquer conectividade com a Internet. Isso deve ser feito manualmente após a desabilitação bem-sucedida dos comentários.  
   
-    **Exemplo**  
+    **Exemplo:**  
   
     ```  
     PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> Disable-RemoteMonitoring  

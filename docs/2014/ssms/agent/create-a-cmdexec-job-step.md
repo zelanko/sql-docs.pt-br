@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7ba283ef2ff426521c881f733bc29465eebc0c76
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798162"
 ---
 # <a name="create-a-cmdexec-job-step"></a>Create a CmdExec Job Step
-  Este tópico descreve como criar e definir uma etapa de trabalho do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] que usa um programa executável ou comando do sistema operacional usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] ou SQL Server Management Objects.  
+  Este tópico descreve como criar e [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definir uma etapa de trabalho do Agent [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] no que usa um programa executável ou um comando do sistema [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]operacional [!INCLUDE[tsql](../../includes/tsql-md.md)] usando o, ou SQL Server Management Objects.  
   
  **Neste tópico**  
   
@@ -56,7 +56,7 @@ ms.locfileid: "72798162"
   
 4.  Na caixa de diálogo **Nova Etapa de Trabalho** , digite o **Nome da etapa**de trabalho.  
   
-5.  Na lista **Tipo** , escolha **Sistema operacional (CmdExec)** .  
+5.  Na lista **Tipo** , escolha **Sistema operacional (CmdExec)**.  
   
 6.  Na lista **Executar como** , selecione a conta proxy com as credenciais que o trabalho usará. Por padrão, etapas de trabalho CmdExec são executadas no contexto da conta do serviço do SQL Server Agent .  
   
@@ -66,7 +66,7 @@ ms.locfileid: "72798162"
   
 9. Clique na página **Avançado** para definir opções para a etapa de trabalho, como a ação a tomar em caso de êxito ou falha da etapa, quantas vezes o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent deve tentar executar a etapa e o arquivo onde o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent pode gravar a saída da etapa. Só membros da função de servidor fixa **sysadmin** podem gravar a saída de etapas de trabalho em um arquivo do sistema operacional.  
   
-##  <a name="TSQL"></a> Usando Transact-SQL  
+##  <a name="TSQL"></a> Usando o Transact-SQL  
   
 ### <a name="to-create-a-cmdexec-job-step"></a>Para criar uma etapa de trabalho CmdExec  
   
@@ -90,7 +90,7 @@ ms.locfileid: "72798162"
     GO  
     ```  
   
- Para obter mais informações, [consulte &#40;Transact-SQL&#41; sp_add_jobstep](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)  
+ Para obter mais informações, consulte [sp_add_jobstep &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)  
   
 ##  <a name="SMO"></a>Usando SQL Server Management Objects  
 

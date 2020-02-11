@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ab94977bcd3bf5a9b0b26ac7be76cb67d58e0755
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62913982"
 ---
-# <a name="mssqlserver41333"></a>MSSQLSERVER_41333
+# <a name="mssqlserver_41333"></a>MSSQLSERVER_41333
     
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|Nome do Produto|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |ID do evento|41333|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|CROSS_CONTAINER_ISOLATION_FAILURE|  
-|Texto da mensagem|As transações a seguir devem acessar tabelas com otimização de memória e procedimentos armazenados em compilados nativamente em isolamento de instantâneo: Transações RepeatableRead, transações Serializable e transações que acessam tabelas não otimizadas para memória em isolamento RepeatableRead ou Serializable.|  
+|Texto da mensagem|As transações a seguir devem acessar tabelas com otimização de memória e procedimentos armazenados compilados nativamente no isolamento de instantâneo: as transações RepeatableRead, as transações Serializable e as transações que acessam tabelas que não têm otimização de memória no isolamento RepeatableRead ou Serializable.|  
   
 ## <a name="explanation"></a>Explicação  
  Há restrições relacionadas ao usuário dos níveis de isolamento mais altos entre transações baseadas em disco e transações XTP.  
@@ -40,7 +40,7 @@ ms.locfileid: "62913982"
   
  Para obter mais informações, veja [OLTP in-memory &#40;Otimização na memória&#41;](../in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [OLTP in-memory &#40;Otimização na memória&#41;](../in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

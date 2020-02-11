@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 60c0d0b594c8526d5106dd554652dce45f945585
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73759725"
 ---
 # <a name="sql-server-native-client-error-mssqlserver_50000"></a>Erro do SQL Server Native Client MSSQLSERVER_50000
@@ -27,10 +27,10 @@ ms.locfileid: "73759725"
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
-|Versão do Produto|11.0|  
+|Nome do Produto|SQL Server|  
+|Versão do produto|11.0|  
 |ID do evento|50000|  
-|Origem do evento|SETUP|  
+|Origem do Evento|SETUP|  
 |Componente|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client|  
 |Nome simbólico||  
 |Texto da mensagem|Ocorreu um erro de rede ao tentar ler a partir do arquivo '%. * ls'.|  

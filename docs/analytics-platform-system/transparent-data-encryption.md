@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: e75230ed175c6fbf1b0a2492265bbe12067060ca
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74399929"
 ---
-# <a name="transparent-data-encryption"></a>Transparent Data Encryption
-Você pode adotar várias precauções para ajudar a proteger o banco de dados, como a criação de um sistema seguro, a criptografia de ativos confidenciais e a criação de um firewall em torno de servidores de bancos de dados. No entanto, para um cenário no qual a mídia física (como unidades ou fitas de backup) seja roubada, uma parte mal-intencionada pode apenas restaurar ou anexar o banco de dados e procurar os mesmos. Uma solução é criptografar os dados confidenciais no banco de dados e proteger as chaves usadas para criptografar os dados com um certificado. Isso impede que alguém sem as chaves use os dados, mas esse tipo de proteção deve ser planejado antecipadamente.  
+# <a name="transparent-data-encryption"></a>Criptografia de Dados Transparente
+Você pode adotar várias precauções para ajudar a proteger o banco de dados, como a criação de um sistema seguro, a criptografia de ativos confidenciais e a criação de um firewall em torno de servidores de bancos de dados. No entanto, para um cenário no qual a mídia física (como unidades ou fitas de backup) seja roubada, uma parte mal-intencionada pode apenas restaurar ou anexar o banco de dados e procurar os mesmos. Uma solução é criptografar dados confidenciais no banco de dados e proteger as chaves usadas para criptografar os dados com um certificado. Isso impede que alguém sem as chaves use os dados, mas esse tipo de proteção deve ser planejado antecipadamente.  
   
-A TDE ( *Transparent Data Encryption* ) executa a criptografia e a descriptografia de e/s em tempo real dos arquivos de log de transações e de dados e dos arquivos de log do PDW especiais. A criptografia usa uma chave de criptografia de banco de dados (DEK), que é armazenada no registro de inicialização do banco de dados para disponibilidade durante a recuperação. O DEK é uma chave simétrica protegida usando um certificado armazenado no banco de dados mestre do SQL Server PDW. A TDE protege os dados “em repouso”, como os arquivos de log e de dados. Ele fornece a capacidade de cumprir muitas leis, regulamentações e diretrizes estabelecidas em vários setores. Esse recurso permite que os desenvolvedores de software criptografem dados usando algoritmos de criptografia AES e 3DES sem alterar os aplicativos existentes.  
+A TDE ( *Transparent Data Encryption* ) executa a criptografia e a descriptografia de e/s em tempo real dos arquivos de log de transações e de dados e dos arquivos de log do PDW especiais. A criptografia usa uma chave de criptografia de banco de dados (DEK), que é armazenada no registro de inicialização do banco de dados para disponibilidade durante a recuperação. O DEK é uma chave simétrica protegida usando um certificado armazenado no banco de dados mestre do SQL Server PDW. A TDE protege os dados “em repouso”, ou seja, os dados e arquivos de log. Fornece a capacidade de se adequar a muitas leis, regulamentos e diretrizes estabelecidos em vários setores. Esse recurso permite que os desenvolvedores de software criptografem dados usando algoritmos de criptografia AES e 3DES sem alterar os aplicativos existentes.  
   
 > [!IMPORTANT]  
 > O TDE não fornece criptografia para dados que trafegam entre o cliente e o PDW. Para obter mais informações sobre como criptografar dados entre o cliente e o SQL Server PDW, consulte [provisionar um certificado](provision-certificate.md).  
@@ -120,19 +120,19 @@ A tabela a seguir fornece links e explicações de comandos e funções da TDE.
   
 |Comando ou função|Finalidade|  
 |-----------------------|-----------|  
-|[CRIAR CHAVE DE CRIPTOGRAFIA DE BANCO DE DADOS](../t-sql/statements/create-database-encryption-key-transact-sql.md)|Cria uma chave usada para criptografar um banco de dados.|  
+|[CREATE DATABASE ENCRYPTION KEY](../t-sql/statements/create-database-encryption-key-transact-sql.md)|Cria uma chave usada para criptografar um banco de dados.|  
 |[ALTERAR CHAVE DE CRIPTOGRAFIA DO BANCO DE DADOS](../t-sql/statements/alter-database-encryption-key-transact-sql.md)|Altera a chave usada para criptografar um banco de dados.|  
 |[REMOVER CHAVE DE CRIPTOGRAFIA DO BANCO DE DADOS](../t-sql/statements/drop-database-encryption-key-transact-sql.md)|Remove a chave usada para criptografar um banco de dados.|  
-|[ALTERAR BANCO DE DADOS](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)|Explica a opção **ALTER DATABASE** usada para habilitar a TDE.|  
+|[ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)|Explica a opção **ALTER DATABASE** usada para habilitar a TDE.|  
   
 ## <a name="catalog-views-and-dynamic-management-views"></a>Exibições do catálogo e exibições de gerenciamento dinâmico  
 A tabela a seguir mostra exibições do catálogo de TDE e exibições de gerenciamento dinâmico.  
   
 |Exibição do catálogo ou exibição de gerenciamento dinâmico|Finalidade|  
 |-------------------------------------------|-----------|  
-|[sys. databases](../relational-databases/system-catalog-views/sys-databases-transact-sql.md)|Exibição do catálogo que exibe informações do banco de dados.|  
-|[sys. Certificates](../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)|Exibição do catálogo que mostra os certificados em um banco de dados.|  
-|[sys. dm_pdw_nodes_database_encryption_keys](../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-database-encryption-keys-transact-sql.md)|Exibição de gerenciamento dinâmico que fornece informações para cada nó, sobre as chaves de criptografia usadas em um banco de dados e o estado de criptografia de um banco de dados.|  
+|[sys.databases](../relational-databases/system-catalog-views/sys-databases-transact-sql.md)|Exibição do catálogo que exibe informações do banco de dados.|  
+|[sys.certificates](../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)|Exibição do catálogo que mostra os certificados em um banco de dados.|  
+|[sys.dm_pdw_nodes_database_encryption_keys](../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-database-encryption-keys-transact-sql.md)|Exibição de gerenciamento dinâmico que fornece informações para cada nó, sobre as chaves de criptografia usadas em um banco de dados e o estado de criptografia de um banco de dados.|  
   
 ## <a name="permissions"></a>Permissões  
 Cada recurso e comando da TDE têm requisitos individuais de permissões, descritos nas tabelas anteriores.  
@@ -270,7 +270,7 @@ O impacto no desempenho do TDE varia de acordo com o tipo de dados que você tem
 ## <a name="related-content"></a>Conteúdo relacionado  
 Os links a seguir contêm informações gerais sobre como SQL Server gerencia a criptografia. Esses artigos podem ajudá-lo a entender SQL Server criptografia, mas esses artigos não têm informações específicas para SQL Server PDW e discutem recursos que não estão presentes no SQL Server PDW.  
   
--   [SQL Server criptografia](../relational-databases/security/encryption/sql-server-encryption.md)  
+-   [Criptografia do SQL Server](../relational-databases/security/encryption/sql-server-encryption.md)  
   
 -   [Hierarquia de criptografia](../relational-databases/security/encryption/encryption-hierarchy.md)  
   
@@ -278,13 +278,13 @@ Os links a seguir contêm informações gerais sobre como SQL Server gerencia a 
 
   
 ## <a name="see-also"></a>Consulte Também  
-[ALTERAR BANCO DE DADOS](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)  
-[CRIAR CHAVE MESTRA](../t-sql/statements/create-master-key-transact-sql.md)  
-[CRIAR CHAVE DE CRIPTOGRAFIA DE BANCO DE DADOS](../t-sql/statements/create-database-encryption-key-transact-sql.md)  
-[CERTIFICADO DE BACKUP](../t-sql/statements/backup-certificate-transact-sql.md)  
+[ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)  
+[CREATE MASTER KEY](../t-sql/statements/create-master-key-transact-sql.md)  
+[CREATE DATABASE ENCRYPTION KEY](../t-sql/statements/create-database-encryption-key-transact-sql.md)  
+[BACKUP CERTIFICATE](../t-sql/statements/backup-certificate-transact-sql.md)  
 [sp_pdw_database_encryption](../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)  
 [sp_pdw_database_encryption_regenerate_system_keys](../relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse.md)  
 [sp_pdw_log_user_data_masking](../relational-databases/system-stored-procedures/sp-pdw-log-user-data-masking-sql-data-warehouse.md)  
-[sys. Certificates](../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)  
-[sys. dm_pdw_nodes_database_encryption_keys](../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-database-encryption-keys-transact-sql.md)  
+[sys.certificates](../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)  
+[sys.dm_pdw_nodes_database_encryption_keys](../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-database-encryption-keys-transact-sql.md)  
   

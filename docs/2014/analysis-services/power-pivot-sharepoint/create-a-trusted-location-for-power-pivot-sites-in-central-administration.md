@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6c5dd66b72ff280431d29ae292af8fa1402095dc
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74684089"
 ---
 # <a name="create-a-trusted-location-for-powerpivot-sites-in-central-administration"></a>Create a trusted location for PowerPivot sites in Central Administration
@@ -22,7 +22,7 @@ ms.locfileid: "74684089"
   
   
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
  Você deve ser um farm ou administrador de serviço para designar uma URL como um local confiável.  
   
  Você deve saber o endereço da URL do site do SharePoint que possui a Galeria de Relatórios PowerPivot ou outra biblioteca que armazenar suas pastas de trabalho. Para obter o endereço, abra o site que contém a biblioteca, clique com o botão direito do mouse em **Galeria PowerPivot**, selecione **Propriedades**e, em seguida, copie a primeira parte do endereço (URL) que contém o nome do servidor e o caminho do site.  
@@ -64,6 +64,6 @@ ms.locfileid: "74684089"
 ## <a name="see-also"></a>Consulte Também  
  [Galeria PowerPivot](../../2014-toc/index.yml)  
  [Criar e personalizar a galeria do PowerPivot](create-and-customize-power-pivot-gallery.md)   
- [Usar a galeria do PowerPivot](use-power-pivot-gallery.md)  
+ [Usar a Galeria PowerPivot](use-power-pivot-gallery.md)  
   
   

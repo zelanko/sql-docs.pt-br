@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: ddaca1490782c8fd3a88b941fbabe6af48531726
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727758"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>Monitorar os Serviços de Machine Learning do SQL Server usando DMVs (exibições de gerenciamento dinâmico)
@@ -41,7 +41,7 @@ Para obter mais informações gerais sobre DMVs, confira [Exibições de gerenci
 
 As exibições de gerenciamento dinâmico a seguir podem ser usadas ao monitorar cargas de trabalho de aprendizado de máquina no SQL Server. Para consultar as DMVs, você precisará de permissão de `VIEW SERVER STATE` na instância.
 
-| Exibição de gerenciamento dinâmico | Tipo | Descrição |
+| Exibição de gerenciamento dinâmico | Type | Descrição |
 |-------------------------|------|-------------|
 | [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) | Execução | Retorna uma linha para cada conta de trabalho ativa que executa um script externo. |
 | [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md) | Execução | Retorna uma linha para cada tipo de solicitação de script externo. |
@@ -79,7 +79,7 @@ WHERE name = 'external scripts enabled';
 
 A consulta retorna as seguintes colunas:
 
-| coluna | Descrição |
+| Coluna | Descrição |
 |--------|-------------|
 | IsMLServicesInstalled | Retornará 1 se os Serviços de Machine Learning do SQL Server estiverem instalados na instância. Caso contrário, retornará 0. |
 | ExternalScriptsEnabled | Retornará 1 se os scripts externos estiverem habilitados para a instância. Caso contrário, retornará 0. |
@@ -107,7 +107,7 @@ ON s.session_id = r.session_id;
 
 A consulta retorna as seguintes colunas:
 
-| coluna | Descrição |
+| Coluna | Descrição |
 |--------|-------------|
 | session_id | Identifica a sessão associada a cada conexão primária ativa. |
 | blocking_session_id | ID da sessão que está bloqueando a solicitação. Se esta coluna for NULL, a solicitação não estará bloqueada ou as informações da sessão de bloqueio não estarão disponíveis (ou não podem ser identificadas). |
@@ -122,7 +122,7 @@ A consulta retorna as seguintes colunas:
 | reads | Número de leituras executadas por esta solicitação. |
 | logical_reads | Número de leituras lógicas executadas pela solicitação. |
 | writes | Número de gravações executadas por esta solicitação. |
-| language | Palavra-chave que representa uma linguagem de script com suporte. |
+| Linguagem | Palavra-chave que representa uma linguagem de script com suporte. |
 | degree_of_parallelism | Número que indica o número de processos paralelos que foram criados. Esse valor pode ser diferente do número de processos paralelos solicitados. |
 | external_user_name | A conta de trabalho do Windows na qual o script foi executado. |
 
@@ -143,9 +143,9 @@ ORDER BY language, counter_name;
 
 A consulta retorna as seguintes colunas:
 
-| coluna | Descrição |
+| Coluna | Descrição |
 |--------|-------------|
-| language | Nome da linguagem de script externo registrada. |
+| Linguagem | Nome da linguagem de script externo registrada. |
 | counter_name | Nome de uma função de script externo registrada. |
 | counter_value | Número total de instâncias nas quais a função de script externo registrada foi chamada no servidor. Esse valor é cumulativo, começando com a hora em que o recurso foi instalado na instância, e não pode ser redefinido. |
 
@@ -193,7 +193,7 @@ FROM sys.dm_os_sys_info;
 
 A consulta retorna as seguintes colunas:
 
-| coluna | Descrição |
+| Coluna | Descrição |
 |--------|-------------|
 | physical_memory_kb | A quantidade total de memória física no computador. |
 | committed_kb | A memória comprometida, em KB (quilobytes), no gerenciador de memória. Não inclui a memória reservada no gerenciador de memória. |
@@ -222,9 +222,9 @@ FROM sys.dm_resource_governor_external_resource_pools AS ep;
 
 A consulta retorna as seguintes colunas:
 
-| coluna | Descrição |
+| Coluna | Descrição |
 |--------|-------------|
-| NAME | Nome do pool de recursos externos ou do SQL Server. |
+| name | Nome do pool de recursos externos ou do SQL Server. |
 | max_memory_percent | A memória máxima que SQL Server ou o pool de recursos externos pode usar. |
 
 ## <a name="resource-pools"></a>Pools de recursos
@@ -247,7 +247,7 @@ FROM sys.dm_resource_governor_external_resource_pools AS ep;
 
 A consulta retorna as seguintes colunas:
 
-| coluna | Descrição |
+| Coluna | Descrição |
 |--------|-------------|
 | pool_name | Nome do pool de recursos. Os pools de recursos do SQL Server são prefixados com `SQL Server` e os pools de recursos externos são prefixados com `External Pool`.
 | total_cpu_usage_hours | O uso cumulativo de CPU em milissegundos desde que as estatísticas do Resource Governor foram redefinidas. |
@@ -276,7 +276,7 @@ WITH result sets((Package NVARCHAR(255), Version NVARCHAR(100), Depends NVARCHAR
 
 As colunas retornadas são:
 
-| coluna | Descrição |
+| Coluna | Descrição |
 |--------|-------------|
 | Pacote | Nome do pacote instalado. |
 | Versão | Versão do pacote. |
@@ -302,11 +302,11 @@ WITH result sets((Package NVARCHAR(128), Version NVARCHAR(128), Location NVARCHA
 
 As colunas retornadas são:
 
-| coluna | Descrição |
+| Coluna | Descrição |
 |--------|-------------|
 | Pacote | Nome do pacote instalado. |
 | Versão | Versão do pacote. |
-| Local | Diretório em que você encontra o pacote. |
+| Location | Diretório em que você encontra o pacote. |
 
 ## <a name="next-steps"></a>Próximas etapas
 

@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 74554e305dbbeb736eba3d8379c7f6569e56d333
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70154508"
 ---
 # <a name="attach-a-domain-or-composite-domain-to-reference-data"></a>Anexar domínio ou domínio de composição a dados de referência
@@ -40,9 +40,9 @@ ms.locfileid: "70154508"
 #### <a name="permissions"></a>Permissões  
  Você deve ter a função dqs_kb_editor no banco de dados DQS_MAIN para mapear domínios para os dados de referência.  
   
-##  <a name="Map"></a> Mapear domínios para os dados de referência de Melissa Data  
+##  <a name="Map"></a>Mapear domínios para dados de referência de Melissa data  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Executar o aplicativo Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Execute o aplicativo Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  Na tela inicial do [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , em **Gerenciamento da Base de Dados de Conhecimento**, clique em **Nova base de dados de conhecimento**.  
   
@@ -71,21 +71,21 @@ ms.locfileid: "70154508"
   
 9. Você retornará à guia **dados de referência** . Na área **configurações do provedor** , altere os valores nas seguintes caixas, se necessário:  
   
-    -   **Limite de Correção Automática**: as correções do serviço de dados de referência com nível de confiança acima desses valores de limite serão feitas automaticamente. Insira um valor na notação decimal do valor percentual correspondente. Por exemplo, insira 0,9 para 90%.  
+    -   **Limite de correção automática**: as correções do serviço de dados de referência com o nível de confiança acima desses valores de limite serão feitas automaticamente. Insira um valor na notação decimal do valor percentual correspondente. Por exemplo, insira 0,9 para 90%.  
   
-    -   **Candidatos Sugeridos**: número de candidatos sugeridos a serem exibidos pelo serviço de dados de referência.  
+    -   **Candidatos sugeridos**: número de candidatos sugeridos para exibição do serviço de dados de referência.  
   
-    -   **Confiança Mínima**: as sugestões do serviço de dados de referência com nível de confiança inferior a esse valor serão ignoradas. Insira um valor na notação decimal do valor percentual correspondente. Por exemplo, insira 0,6 para 60%.  
+    -   **Confiança mínima**: as sugestões do serviço de dados de referência com nível de confiança inferior a esse valor serão ignoradas. Insira um valor na notação decimal do valor percentual correspondente. Por exemplo, insira 0,6 para 60%.  
   
 10. Clique em **Concluir** para publicar a base de dados de conhecimento. Uma mensagem de confirmação aparece depois que a base de dados de conhecimento é publicada com êxito.  
   
  Agora você pode usar essa base de dados de conhecimento para a atividade de limpeza em um projeto de qualidade de dados para padronizar e limpar os endereços dos EUA em seus dados de origem com base no conhecimento fornecido por Melissa data por meio do Azure Marketplace.  
   
-##  <a name="FollowUp"></a> Acompanhamento: Após mapear um domínio para os dados de referência  
+##  <a name="FollowUp"></a>Acompanhamento: depois de mapear um domínio para dados de referência  
  Crie um projeto de qualidade de dados e execute a atividade de limpeza na fonte de dados que contém endereços americanos, comparando-a com a base de dados de conhecimento criada neste tópico. Consulte [Limpar dados usando o conhecimento &#40;externo&#41; dos dados de referência](../../2014/data-quality-services/cleanse-data-using-reference-data-external-knowledge.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Serviços de Dados de Referência no DQS](../../2014/data-quality-services/reference-data-services-in-dqs.md)   
- [Limpeza de dados](../../2014/data-quality-services/data-cleansing.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Serviços de dados de referência no DQS](../../2014/data-quality-services/reference-data-services-in-dqs.md)   
+ [Data Cleansing](../../2014/data-quality-services/data-cleansing.md)  
   
   

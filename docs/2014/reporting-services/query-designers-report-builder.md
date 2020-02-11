@@ -1,5 +1,5 @@
 ---
-title: Consultar Designers (construtor de relatórios) | Microsoft Docs
+title: Designers de consulta (Construtor de Relatórios) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 58a7e1a9d5ae71d659cfd214b46f3a004ea71101
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108005"
 ---
 # <a name="query-designers-report-builder"></a>Designers de Consulta (Construtor de Relatórios)
@@ -26,17 +26,17 @@ ms.locfileid: "66108005"
   
 ## <a name="in-this-section"></a>Nesta seção  
   
--   [Interface de usuário do Designer de consulta MDX do Analysis Services &#40;construtor de relatórios&#41;](../../2014/reporting-services/analysis-services-mdx-query-designer-user-interface-report-builder.md)  
+-   [Analysis Services a interface do usuário do designer de consulta MDX &#40;Construtor de Relatórios&#41;](../../2014/reporting-services/analysis-services-mdx-query-designer-user-interface-report-builder.md)  
   
--   [Interface de usuário do Designer de consulta baseado em texto &#40;construtor de relatórios&#41;](report-data/text-based-query-designer-user-interface-report-builder.md)  
+-   [&#40;Construtor de Relatórios da interface do usuário do designer de consulta baseada em texto&#41;](report-data/text-based-query-designer-user-interface-report-builder.md)  
   
--   [Interface de usuário do Designer de consulta relacional &#40;construtor de relatórios&#41;](report-data/relational-query-designer-user-interface-report-builder.md)  
+-   [&#40;Construtor de Relatórios de interface do usuário do designer de consulta relacional&#41;](report-data/relational-query-designer-user-interface-report-builder.md)  
   
--   [Interface de usuário do Designer de consulta BI SAP NetWeaver &#40;construtor de relatórios&#41;](../../2014/reporting-services/sap-netweaver-bi-query-designer-user-interface-report-builder.md)  
+-   [Interface do usuário do designer de consulta do SAP NetWeaver BI &#40;Construtor de Relatórios&#41;](../../2014/reporting-services/sap-netweaver-bi-query-designer-user-interface-report-builder.md)  
   
--   [Interface do usuário do Designer do Hyperion Essbase consulta &#40;construtor de relatórios&#41;](../../2014/reporting-services/hyperion-essbase-query-designer-user-interface-report-builder.md)  
+-   [Interface do usuário do designer de consultas do Hyperion Essbase &#40;Construtor de Relatórios&#41;](../../2014/reporting-services/hyperion-essbase-query-designer-user-interface-report-builder.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Adicionar dados a um relatório &#40;relatórios e SSRS&#41;](report-data/report-datasets-ssrs.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Adicionar dados a um relatório &#40;Construtor de Relatórios e SSRS&#41;](report-data/report-datasets-ssrs.md)  
   
   

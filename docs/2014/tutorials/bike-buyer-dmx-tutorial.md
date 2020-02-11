@@ -1,5 +1,5 @@
 ---
-title: Tutorial DMX comprador de bicicleta | Microsoft Docs
+title: Tutorial DMX do comprador de bicicletas | Microsoft Docs
 ms.custom: ''
 ms.date: 10/19/2018
 ms.prod: sql-server-2014
@@ -17,16 +17,17 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 3cf9a0c9e6059330c0b8edbd8228f617ba093564
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63140537"
 ---
 # <a name="bike-buyer-dmx-tutorial"></a>Tutorial DMX Comprador de bicicleta
   Nesse tutorial, você aprenderá a criar, treinar e explorar modelos de mineração de dados com o uso da linguagem de consulta DMX (Extensões de Mineração de Dados). Você então utilizará esses modelos de mineração de dados para criar previsões que determinem se um cliente comprará uma bicicleta.  
   
- Os modelos de mineração serão criados a partir dos dados contidos no banco de dados de exemplo [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] , que armazena dados para a empresa fictícia [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] é uma grande empresa industrial e multinacional. A empresa fabrica e vende bicicletas de metal e compostas para os mercados norte-americano, europeu e asiático. A central de operações está situada em Bothell, Washington, com 290 funcionários, e possui várias equipes regionais de vendas distribuídas por toda a sua base de mercado internacional.  
+ Os modelos de mineração serão criados a partir dos dados contidos no banco de dados de exemplo [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] , que armazena dados para a empresa fictícia [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]. 
+  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] é uma grande empresa industrial e multinacional. A empresa fabrica e vende bicicletas de metal e compostas para os mercados norte-americano, europeu e asiático. A central de operações está situada em Bothell, Washington, com 290 funcionários, e possui várias equipes regionais de vendas distribuídas por toda a sua base de mercado internacional.  
   
 ## <a name="tutorial-scenario"></a>Cenário do tutorial  
  A [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] decidiu estender a análise de dados, criando um aplicativo personalizado que usa a funcionalidade de data mining. Sua meta para o aplicativo personalizado é ser capaz de:  
@@ -39,7 +40,7 @@ ms.locfileid: "63140537"
   
  Além disso, o departamento de marketing solicitou a capacidade de agrupar clientes existentes em categorias com base em características como onde eles vivem, o número de filhos que possuem e a distância do trabalho. Eles querem consultar se esses agrupamentos podem ser usados para ajudar a estabelecer como meta tipos específicos de clientes. Isso irá requerer um modelo de mineração adicional.  
   
- [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fornece várias ferramentas que podem ser usadas para realizar essas tarefas:  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fornece várias ferramentas que podem ser usadas para realizar essas [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] tarefas:  
   
 -   A linguagem de consulta DMX  
   
@@ -49,7 +50,7 @@ ms.locfileid: "63140537"
   
  DMX (Extensões de Mineração de Dados) é uma linguagem de consulta fornecida por [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que pode ser usada para criar e trabalhar com modelos de mineração. O algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../includes/msconame-md.md)] cria modelos que podem ser usados para prever se alguém comprará uma bicicleta. O modelo resultante pode usar cliente individual ou uma tabela de clientes como uma entrada. O algoritmo [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering pode criar agrupamentos de clientes com base em características compartilhadas. O objetivo deste tutorial é fornecer os scripts DMX que serão usados no aplicativo personalizado.  
   
- **Para obter mais informações, consulte:** [Soluções de mineração de dados](../../2014/analysis-services/data-mining/data-mining-solutions.md)  
+ **Para obter mais informações: soluções de mineração de** [dados](../../2014/analysis-services/data-mining/data-mining-solutions.md)  
   
 ## <a name="mining-structure-and-mining-models"></a>Estrutura de mineração e modelos de mineração  
  Antes de começar a criar instruções DMX, é importante compreender os objetos principais que o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] usa para criar modelos de mineração. A estrutura de mineração é uma estrutura de dados que define o domínio de dados do qual modelos de mineração são criados. Uma única estrutura de mineração pode conter vários modelos de mineração que compartilham o mesmo domínio. Um modelo de mineração aplica um algoritmo de modelo de mineração aos dados que são representados por uma estrutura de mineração.  
@@ -74,24 +75,24 @@ ms.locfileid: "63140537"
   
  **Para obter mais informações**  
   
- [Extensões de mineração de dados &#40;DMX&#41; referência](/sql/dmx/data-mining-extensions-dmx-reference), [Noções básicas sobre o DMX instrução Select](/sql/dmx/understanding-the-dmx-select-statement), [estrutura e uso de consultas de previsão DMX](/sql/dmx/structure-and-usage-of-dmx-prediction-queries)  
+ [As extensões de mineração de dados &#40;referência&#41; DMX](/sql/dmx/data-mining-extensions-dmx-reference), [compreendendo a instrução DMX SELECT](/sql/dmx/understanding-the-dmx-select-statement), a [estrutura e o uso de consultas de previsão DMX](/sql/dmx/structure-and-usage-of-dmx-prediction-queries)  
   
 ## <a name="what-you-will-learn"></a>O que você aprenderá  
  Ele se divide nas lições a seguir:  
   
- [Lição 1: Criando a estrutura de mineração de comprador de bicicleta](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md)  
+ [Lição 1: Criando a estrutura de mineração de Comprador de Bicicleta](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md)  
  Nesta lição, você aprenderá a usar a instrução `CREATE` para criar estruturas de mineração.  
   
- [Lição 2: Adicionando modelos de mineração à estrutura de mineração de comprador de bicicleta](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)  
+ [Lição 2: Adicionando modelos de mineração à estrutura de mineração de Comprador de Bicicleta](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)  
  Nesta lição, você aprenderá a usar a instrução `ALTER` para adicionar modelos de mineração a uma estrutura de mineração.  
   
- [Lição 3: Processando a estrutura de mineração de comprador de bicicleta](../../2014/tutorials/lesson-3-processing-the-bike-buyer-mining-structure.md)  
+ [Lição 3: Processando a estrutura de mineração Comprador de Bicicleta](../../2014/tutorials/lesson-3-processing-the-bike-buyer-mining-structure.md)  
  Nesta lição, você aprenderá a usar a instrução `INSERT INTO` para processar estruturas de mineração e seus modelos de mineração associados.  
   
- [Lição 4: Procurar os modelos de mineração de comprador de bicicleta](../../2014/tutorials/lesson-4-browsing-the-bike-buyer-mining-models.md)  
+ [Lição 4: Explorando modelos de mineração Comprador de Bicicleta](../../2014/tutorials/lesson-4-browsing-the-bike-buyer-mining-models.md)  
  Nesta lição, você aprenderá a usar a instrução `SELECT` para explorar o conteúdo dos modelos de mineração.  
   
- [Lição 5: Executar consultas de previsão](../../2014/tutorials/lesson-5-executing-prediction-queries.md)  
+ [Lição 5: Executando previsão de consultas](../../2014/tutorials/lesson-5-executing-prediction-queries.md)  
  Nesta lição, você aprenderá a usar a instrução `PREDICTION JOIN` para criar previsões em relação aos modelos de mineração.  
   
 ## <a name="requirements"></a>Requisitos  
@@ -99,15 +100,15 @@ ms.locfileid: "63140537"
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASversion2005](../includes/ssasversion2005-md.md)], [!INCLUDE[ssASversion10](../includes/ssasversion10-md.md)], [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)], ou [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASversion2005](../includes/ssasversion2005-md.md)], [!INCLUDE[ssASversion10](../includes/ssasversion10-md.md)], [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)]ou [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  
   
 -   O banco de dados [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] . Por padrão, e para reforçar a segurança, os bancos de dados de exemplo não são instalados. Para instalar um banco de dados de exemplo no [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], visite a página [Banco de dados de exemplo Microsoft SQL](https://go.microsoft.com/fwlink/?LinkId=88417) e selecione os bancos de dados que deseja instalar.  
   
 > [!NOTE]  
 >  Ao examinar os tutoriais, recomendamos que você adicione os botões **Próximo Tópico** e **Tópico Anterior** à barra de ferramentas do visualizador de documentos.  
   
-## <a name="see-also"></a>Consulte também  
- [Tutorial DMX do Market Basket](../../2014/tutorials/market-basket-dmx-tutorial.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Tutorial de carrinho do mercado DMX](../../2014/tutorials/market-basket-dmx-tutorial.md)   
  [Tutorial de mineração de dados básico](../../2014/tutorials/basic-data-mining-tutorial.md)  
   
   

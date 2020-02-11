@@ -1,5 +1,5 @@
 ---
-title: Serviços de qualidade de dados
+title: Data Quality Services
 ms.date: 10/12/2013
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -10,13 +10,13 @@ ms.assetid: 9c6b996c-e768-4bf5-837f-5436ed9cea1d
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: ba4c9b9693fa595f9b5f01f81689a3577f7d9fb7
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251684"
 ---
-# <a name="data-quality-services"></a>Serviços de qualidade de dados
+# <a name="data-quality-services"></a>Data Quality Services
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 

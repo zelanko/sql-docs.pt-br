@@ -1,5 +1,5 @@
 ---
-title: 'TM: Promote Tran concluída a classe de evento | Microsoft Docs'
+title: 'Classe de evento TM: Promote Tran Completed | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,18 +15,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 029b077b034d7b022ea1e27832624df86decb547
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63061290"
 ---
-# <a name="tm-promote-tran-completed-event-class"></a>TM: Classe de evento Promote Tran Completed
-  TM: Promote Tran Completed a classe de evento indica que uma solicitação PROMOTE TRANSACTION foi concluída. A solicitação é enviada do cliente pela interface de gerenciamento de transações.  
+# <a name="tm-promote-tran-completed-event-class"></a>classe de evento TM: Promote Tran Completed
+  A classe de evento TM: Promote Tran Completed indica que foi concluída uma solicitação PROMOTE TRANSACTION. A solicitação é enviada do cliente pela interface de gerenciamento de transações.  
   
-## <a name="tm-promote-tran-completed-event-class-data-columns"></a>TM: Promote Tran colunas de dados de classe de evento de conclusão  
+## <a name="tm-promote-tran-completed-event-class-data-columns"></a>Colunas de dados da classe de evento TM: Promote Tran Completed  
   
-|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|DESCRIÇÃO|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|`nvarchar`|Nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |BinaryData|`image`|Token de DTC Xact.|2|Sim|  
@@ -48,11 +48,11 @@ ms.locfileid: "63061290"
 |SessionLoginName|`nvarchar`|Nome de logon do usuário que originou a sessão. Por exemplo, ao se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o Logon1 e executar uma instrução como Logon2, SessionLoginName mostrará o Logon1 e LoginName mostrará o Logon2. Essa coluna exibe logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do Windows.|64|Sim|  
 |SPID|`int`|Identificação da sessão em que ocorreu o evento.|12|Sim|  
 |StartTime|`datetime`|Hora de início do evento, se disponível.|14|Sim|  
-|Êxito|`int`|1 = êxito. 0 = falha (por exemplo, 1 significa êxito de uma verificação de permissões e 0 significa uma falha dessa verificação).|23|Sim|  
+|Sucesso|`int`|1 = êxito. 0 = falha (por exemplo, 1 significa êxito de uma verificação de permissões e 0 significa uma falha dessa verificação).|23|Sim|  
 |TransactionID|`bigint`|ID da transação atribuída pelo sistema.|4|Sim|  
 |XactSequence|`bigint`|Token que descreve a transação atual.|50|Sim|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Eventos estendidos](../extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   

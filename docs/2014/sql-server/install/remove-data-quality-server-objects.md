@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f273823825cf94da6269a58389f04207ad1c2707
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68190664"
 ---
 # <a name="remove-data-quality-server-objects"></a>Remover objetos do Data Quality Server
@@ -42,7 +42,7 @@ ms.locfileid: "68190664"
 ## <a name="uninstall-sql-server-instance-containing-data-quality-server"></a>Desinstalar a instância do SQL Server que contém o Data Quality Server  
  Se você for desinstalar completamente a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que tem o [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)], exclua manualmente os bancos de dados DQS_MAIN, DQS_PROJECTS e DQS_STAGING_DATA do seu computador depois que o processo de desinstalação for concluído. Para uma instalação padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], os arquivos dos bancos de dados DQS_MAIN, DQS_PROJECTS e DQS_STAGING_DATA estão disponíveis em C:\Arquivos de Programas\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Desinstalar uma instância existente do SQL Server &#40;instalação&#41;](../../../2014/sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)   
  [Desinstalar o SQL Server 2014](uninstall-sql-server.md)  
   

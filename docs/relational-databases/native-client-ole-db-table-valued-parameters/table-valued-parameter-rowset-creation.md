@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 11acec127d354688aa81e8e50006c0b80c14347d
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73761653"
 ---
 # <a name="table-valued-parameter-rowset-creation"></a>Criação do conjunto de linhas do parâmetro com valor de tabela
@@ -42,16 +42,16 @@ ms.locfileid: "73761653"
   
  Para recuperar informações sobre o status nulo, exclusivo, computado e de atualização de cada coluna, o consumidor usa IColumnsRowset:: GetColumnsRowset ou IColumnsInfo:: GetColumnInfo. Esses métodos fornecem informações detalhadas sobre cada coluna do conjunto de linhas do parâmetro com valor de tabela.  
   
- O consumidor especifica o tipo de cada coluna do parâmetro com valor de tabela. Esse procedimento é semelhante à forma de especificação de colunas quando uma tabela é criada no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O consumidor obtém um objeto de conjunto de linhas de parâmetro com valor de tabela do provedor de OLE DB do cliente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nativo por meio do parâmetro de saída *ppRowset* .  
+ O consumidor especifica o tipo de cada coluna do parâmetro com valor de tabela. Esse procedimento é semelhante à forma de especificação de colunas quando uma tabela é criada no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O consumidor obtém um objeto de conjunto de linhas de parâmetro com valor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de tabela do provedor de OLE DB de cliente nativo por meio do parâmetro de saída *ppRowset* .  
   
 ## <a name="dynamic-scenario"></a>Cenário dinâmico  
  Quando o consumidor não tem informações de tipo, ele deve usar IOpenRowset:: OpenRowset para instanciar objetos de conjunto de linhas de parâmetro com valor de tabela. O consumidor deve fornecer ao provedor somente o nome do tipo.  
   
  Nesse cenário, o provedor obtém as informações de tipo sobre um objeto do conjunto de linhas do parâmetro com valor de tabela do servidor em nome do consumidor.  
   
- Os parâmetros *pTableID* e *pUnkOuter* devem ser definidos como no cenário estático. O provedor de OLE DB de cliente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nativo obtém as informações de tipo (restrições e informações de coluna) do servidor e retorna um objeto de conjunto de linhas de parâmetro com valor de tabela por meio do parâmetro *ppRowset* . Essa operação requer comunicação com o servidor e, portanto, não executa, bem como o cenário estático. O cenário dinâmico só funciona com chamadas de procedimento com parâmetros.  
+ Os parâmetros *pTableID* e *pUnkOuter* devem ser definidos como no cenário estático. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo obtém as informações de tipo (restrições e informações de coluna) do servidor e retorna um objeto de conjunto de linhas de parâmetro com valor de tabela por meio do parâmetro *ppRowset* . Essa operação requer comunicação com o servidor e, portanto, não tem desempenho tão bom quanto no cenário estático. O cenário dinâmico só funciona com chamadas de procedimento com parâmetros.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Parâmetros com valor de tabela &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   
  [Usar parâmetros com valor de tabela &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   

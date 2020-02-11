@@ -1,5 +1,5 @@
 ---
-title: Criar objeto RDSServer.DataFactory usando CreateObject (VBScript) | Microsoft Docs
+title: Criar objeto RDSServer. datafactory usando CreateObject (VBScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,17 +17,17 @@ ms.assetid: b4e2844a-120a-4513-860b-f1b6e4b5dda4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 909406b39a8acdd5e598b56b300124abf7bb1170
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964353"
 ---
 # <a name="datafactory-object-query-method-and-createobject-method-example-vbscript"></a>Exemplo do método CreateObject, do método Query e objeto DataFactory (VBScript)
 > [!IMPORTANT]
->  Começando com o Windows 8 e Windows Server 2012, os componentes de servidor RDS não estão mais incluídos no sistema operacional Windows (consulte o Windows 8 e [manual de compatibilidade do Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Componentes de cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Devem ser migrados para aplicativos que usam o RDS [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir do Windows 8 e do Windows Server 2012, os componentes do servidor RDS não são mais incluídos no sistema operacional Windows (consulte Windows 8 e [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Os componentes do cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Os aplicativos que usam o RDS devem migrar para o [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Este exemplo cria um [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) do objeto usando o [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) método da [RDS. DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) objeto. Para testar este exemplo, recorte e cole este código entre o \<Body > e \</Body > marcas em uma HTML normal de documento e nomeie-o **DataFactoryVBS.asp**. Script ASP identificará o seu servidor.  
+ Este exemplo cria um objeto [RDSServer. datafactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) usando o método [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) do [RDS. Objeto DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) . Para testar este exemplo, recorte e cole esse código entre \<o corpo> \<e/Body> marcas em um documento HTML normal e nomeie-o **DataFactoryVBS. asp**. O script ASP identificará seu servidor.  
   
 ```  
 <!-- BeginDataFactoryVBS -->  
@@ -136,9 +136,9 @@ to bring back a Recordset. </H4>
 <!-- EndDataFactoryVBS -->  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Método CreateObject (RDS)](../../../ado/reference/rds-api/createobject-method-rds.md)   
- [Objeto DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)   
+ [Objeto datafactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)   
  [Objeto DataSpace (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)   
  [Método Query (RDS)](../../../ado/reference/rds-api/query-method-rds.md)
 

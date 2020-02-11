@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: b0bcb5cfe1ec4111aaea7153f35bca084df62b76
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401010"
 ---
 # <a name="load-data-with-integration-services-to-parallel-data-warehouse"></a>Carregar dados com Integration Services em paralelo data warehouse
@@ -84,7 +84,7 @@ Em seguida, os dados são mapeados de Integration Services para SQL Server PDW t
 |NCHAR|DT_WSTR|  
 |NUMERIC|DT_DECIMAL, DT_I1, DT_I2, DT_I4, DT_I8, DT_NUMERIC, DT_UI1, DT_UI2, DT_UI4, DT_UI8|  
 |NVARCHAR|DT_WSTR, DT_STR|  
-|REAL|DT_R4|  
+|real|DT_R4|  
 |SMALLDATETIME|DT_DBTIMESTAMP2|  
 |SMALLINT|DT_I1, DT_I2, DT_UI1|  
 |SMALLMONEY|DT_R4|  
@@ -149,9 +149,9 @@ Se o número de cargas na fila de carga exceder o número máximo de cargas em f
 ## <a name="Locks"></a>Comportamento de bloqueio  
 Ao carregar dados com Integration Services, o SQL ServerPDW usa bloqueios em nível de linha para atualizar dados na tabela de destino. Isso significa que cada linha é bloqueada para leitura e gravação enquanto está sendo atualizada. As linhas da tabela de destino não são bloqueadas enquanto os dados são carregados na tabela de preparo.  
   
-## <a name="Examples"></a>Disso  
+## <a name="Examples"></a>Exemplos  
   
-### <a name="Walkthrough"></a>Um. Carga simples de arquivo simples  
+### <a name="Walkthrough"></a>a. Carga simples de arquivo simples  
 A instrução a seguir demonstra uma simples carga de dados usando Integration Services para carregar dados de arquivo simples para um dispositivo SQL Server PDW.  Este exemplo supõe que o Integration Services já foi instalado no computador cliente e o destino SQL Server PDW foi instalado, conforme descrito acima.  
   
 Neste exemplo, vamos carregar na `Orders` tabela, que tem a seguinte DDL. A `Orders` tabela faz parte do `LoadExampleDB` banco de dados.  
@@ -256,7 +256,7 @@ Execute o pacote no seu computador Integration Services.
 [Projetando seus pacotes SSIS para o paralelismo (vídeo do SQL Server)](https://msdn.microsoft.com/library/dd795221.aspx)  
 [Exemplos da comunidade Microsoft SQL Server: Integration Services](https://go.microsoft.com/fwlink/?LinkId=202415)  
 [Melhorando cargas incrementais com o Change Data Capture](../integration-services/change-data-capture/change-data-capture-ssis.md)  
-[Transformação Dimensão de alteração lenta](../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  
+[transformação Dimensão de Alteração Lenta](../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  
 [Tarefa Inserção em Massa](../integration-services/control-flow/bulk-insert-task.md)  
   
 <!-- MISSING LINKS

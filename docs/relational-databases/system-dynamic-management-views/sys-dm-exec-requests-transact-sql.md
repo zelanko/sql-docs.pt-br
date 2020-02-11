@@ -21,10 +21,10 @@ author: pmasl
 ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 20257eb1a91b35dd45e1b4fc79f84533c64b2561
-ms.sourcegitcommit: aaa42f26c68abc2de10eb58444fe6b490c174eab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74307991"
 ---
 # <a name="sysdm_exec_requests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
@@ -33,68 +33,68 @@ ms.locfileid: "74307991"
 
 Retorna informações sobre cada solicitação que está sendo executada [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]no. Para obter mais informações sobre solicitações, consulte o [Guia de arquitetura de threads e tarefas](../../relational-databases/thread-and-task-architecture-guide.md).
    
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|ID da sessão a que esta solicitação está relacionada. Não permite valor nulo.|  
-|request_id|**inteiro**|ID da solicitação. Exclusiva no contexto da sessão. Não permite valor nulo.|  
-|start_time|**horário**|Carimbo de data e hora em que a solicitação chegou. Não permite valor nulo.|  
-|status|**nvarchar (30)**|Status da solicitação. Isso pode ser um dos seguintes:<br /><br /> Segundo plano<br />Em execução<br />Executável<br />Hibernando<br />Suspenso<br /><br /> Não permite valor nulo.|  
-|command|**nvarchar (32)**|Identifica o tipo atual de comando que está sendo processado. Os tipos de comando comuns incluem:<br /><br /> SELECIONAR<br />INSERT<br />UPDATE<br />EXCLUIR<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> O texto da solicitação pode ser recuperado usando sys.dm_exec_sql_text com o sql_handle correspondente para a solicitação. Os processos de sistema internos definem o comando com base no tipo de tarefa que eles executam. As tarefas podem incluir o seguinte:<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> Não permite valor nulo.|  
+|request_id|**int**|ID da solicitação. Exclusiva no contexto da sessão. Não permite valor nulo.|  
+|start_time|**datetime**|Carimbo de data e hora em que a solicitação chegou. Não permite valor nulo.|  
+|status|**nvarchar (30)**|Status da solicitação. Isso pode ser um dos seguintes:<br /><br /> Segundo plano<br />Executando<br />Executável<br />Hibernando<br />Suspenso<br /><br /> Não permite valor nulo.|  
+|command|**nvarchar (32)**|Identifica o tipo atual de comando que está sendo processado. Os tipos de comando comuns incluem:<br /><br /> SELECT<br />INSERT<br />UPDATE<br />Delete (excluir)<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> O texto da solicitação pode ser recuperado usando sys.dm_exec_sql_text com o sql_handle correspondente para a solicitação. Os processos de sistema internos definem o comando com base no tipo de tarefa que eles executam. As tarefas podem incluir o seguinte:<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> Não permite valor nulo.|  
 |sql_handle|**varbinary (64)**|É um token que identifica exclusivamente o lote ou o procedimento armazenado do qual a consulta faz parte. Permite valor nulo.|  
-|statement_start_offset|**inteiro**|Número de caracteres no procedimento em lote ou armazenado atualmente em execução no qual a instrução atualmente em execução se inicia. Pode ser usado junto com a função de gerenciamento dinâmico sql_handle, statement_end_offset e sys.dm_exec_sql_text para recuperar a instrução atualmente em execução da solicitação. Permite valor nulo.|  
-|statement_end_offset|**inteiro**|Número de caracteres no procedimento em lote ou armazenado atualmente em execução no qual a instrução atualmente em execução termina. Pode ser usado junto com a função de gerenciamento dinâmico sql_handle, statement_end_offset e sys.dm_exec_sql_text para recuperar a instrução atualmente em execução da solicitação. Permite valor nulo.|  
+|statement_start_offset|**int**|Número de caracteres no procedimento em lote ou armazenado atualmente em execução no qual a instrução atualmente em execução se inicia. Pode ser usado junto com a função de gerenciamento dinâmico sql_handle, statement_end_offset e sys.dm_exec_sql_text para recuperar a instrução atualmente em execução da solicitação. Permite valor nulo.|  
+|statement_end_offset|**int**|Número de caracteres no procedimento em lote ou armazenado atualmente em execução no qual a instrução atualmente em execução termina. Pode ser usado junto com a função de gerenciamento dinâmico sql_handle, statement_end_offset e sys.dm_exec_sql_text para recuperar a instrução atualmente em execução da solicitação. Permite valor nulo.|  
 |plan_handle|**varbinary (64)**|É um token que identifica exclusivamente um plano de execução de consulta para um lote em execução no momento. Permite valor nulo.|  
 |database_id|**smallint**|ID do banco de dados no qual a solicitação está em execução. Não permite valor nulo.|  
-|user_id|**inteiro**|ID do usuário que enviou a solicitação. Não permite valor nulo.|  
+|user_id|**int**|ID do usuário que enviou a solicitação. Não permite valor nulo.|  
 |connection_id|**uniqueidentifier**|ID da conexão em que a solicitação chegou. Permite valor nulo.|  
 |blocking_session_id|**smallint**|ID da sessão que está bloqueando a solicitação. Se esta coluna for nula ou igual a 0, a solicitação não será bloqueada ou as informações da sessão da sessão de bloqueio não estarão disponíveis (ou não poderão ser identificadas).<br /><br /> -2 = O recurso de bloqueio pertence a uma transação distribuída órfã.<br /><br /> -3 = O recurso de bloqueio pertence a uma transação de recuperação adiada.<br /><br /> -4 = A ID da sessão do proprietário da trava de bloqueio não pôde ser determinada neste momento devido a transições internas de estado da trava.|  
 |wait_type|**nvarchar (60)**|Se a solicitação estiver bloqueada, esta coluna retornará o tipo de espera. Permite valor nulo.<br /><br /> Para obter informações sobre os tipos de esperas, consulte [Sys. dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).|  
-|wait_time|**inteiro**|Se a solicitação estiver bloqueada, esta coluna retornará a duração, em milissegundos, da espera atual. Não permite valor nulo.|  
+|wait_time|**int**|Se a solicitação estiver bloqueada, esta coluna retornará a duração, em milissegundos, da espera atual. Não permite valor nulo.|  
 |last_wait_type|**nvarchar (60)**|Se esta solicitação tiver sido previamente bloqueada, esta coluna retornará o tipo da última espera. Não permite valor nulo.|  
 |wait_resource|**nvarchar(256)**|Se a solicitação estiver bloqueada, esta coluna retornará o recurso pelo qual a solicitação está esperando atualmente. Não permite valor nulo.|  
-|open_transaction_count|**inteiro**|Número de transações abertas para esta solicitação. Não permite valor nulo.|  
-|open_resultset_count|**inteiro**|Número de conjuntos de resultados abertos para esta solicitação. Não permite valor nulo.|  
+|open_transaction_count|**int**|Número de transações abertas para esta solicitação. Não permite valor nulo.|  
+|open_resultset_count|**int**|Número de conjuntos de resultados abertos para esta solicitação. Não permite valor nulo.|  
 |transaction_id|**bigint**|ID da transação na qual esta solicitação é executada. Não permite valor nulo.|  
-|context_info|**varbinary (128)**|CONTEXT_INFO valor da sessão. Permite valor nulo.|  
-|percent_complete|**foto**|Porcentagem de trabalho concluída para os comandos a seguir:<br /><br /> ALTER INDEX REORGANIZE<br />Opção AUTO_SHRINK com ALTER DATABASE<br />BACKUP DATABASE<br />DBCC CHECKDB<br />DBCC CHECKFILEGROUP<br />DBCC CHECKTABLE<br />DBCC INDEXDEFRAG<br />DBCC SHRINKDATABASE<br />DBCC SHRINKFILE<br />RECOVERY<br />RESTORE DATABASE<br />ROLLBACK<br />TDE ENCRYPTION<br /><br /> Não permite valor nulo.|  
+|context_info|**varbinary(128)**|CONTEXT_INFO valor da sessão. Permite valor nulo.|  
+|percent_complete|**real**|Porcentagem de trabalho concluída para os comandos a seguir:<br /><br /> ALTER INDEX REORGANIZE<br />Opção AUTO_SHRINK com ALTER DATABASE<br />BACKUP DATABASE<br />DBCC CHECKDB<br />DBCC CHECKFILEGROUP<br />DBCC CHECKTABLE<br />DBCC INDEXDEFRAG<br />DBCC SHRINKDATABASE<br />DBCC SHRINKFILE<br />RECOVERY<br />RESTORE DATABASE<br />ROLLBACK<br />TDE ENCRYPTION<br /><br /> Não permite valor nulo.|  
 |estimated_completion_time|**bigint**|Somente interno. Não permite valor nulo.|  
-|cpu_time|**inteiro**|Tempo da CPU, em milissegundos, usado pela solicitação. Não permite valor nulo.|  
-|total_elapsed_time|**inteiro**|Tempo total decorrido em milissegundos desde que a solicitação chegou. Não permite valor nulo.|  
-|scheduler_id|**inteiro**|ID do agendador que está programando esta solicitação. Não permite valor nulo.|  
+|cpu_time|**int**|Tempo da CPU, em milissegundos, usado pela solicitação. Não permite valor nulo.|  
+|total_elapsed_time|**int**|Tempo total decorrido em milissegundos desde que a solicitação chegou. Não permite valor nulo.|  
+|scheduler_id|**int**|ID do agendador que está programando esta solicitação. Não permite valor nulo.|  
 |task_address|**varbinary (8)**|Endereço de memória alocado à tarefa associada a esta solicitação. Permite valor nulo.|  
 |reads|**bigint**|Número de leituras executadas por esta solicitação. Não permite valor nulo.|  
 |writes|**bigint**|Número de gravações executadas por esta solicitação. Não permite valor nulo.|  
 |logical_reads|**bigint**|Número de leituras lógicas executadas pela solicitação. Não permite valor nulo.|  
-|text_size|**inteiro**|Configuração TEXTSIZE para esta solicitação. Não permite valor nulo.|  
-|Linguagem|**nvarchar(128**|Configuração de idioma para a solicitação. Permite valor nulo.|  
+|text_size|**int**|Configuração TEXTSIZE para esta solicitação. Não permite valor nulo.|  
+|Linguagem|**nvarchar(128)**|Configuração de idioma para a solicitação. Permite valor nulo.|  
 |date_format|**nvarchar (3)**|Configuração DATEFORMAT para a solicitação. Permite valor nulo.|  
 |date_first|**smallint**|Configuração DATEFIRST para a solicitação. Não permite valor nulo.|  
-|quoted_identifier|**parte**|1 = QUOTED_IDENTIFIER é ON para a solicitação. Caso contrário, é 0.<br /><br /> Não permite valor nulo.|  
-|arithabort|**parte**|1 = configuração ARITHABORT é ON para a solicitação. Caso contrário, é 0.<br /><br /> Não permite valor nulo.|  
-|ansi_null_dflt_on|**parte**|1 = configuração ANSI_NULL_DFLT_ON é ON para a solicitação. Caso contrário, é 0.<br /><br /> Não permite valor nulo.|  
-|ansi_defaults|**parte**|1 = configuração ANSI_DEFAULTS é ON para a solicitação. Caso contrário, é 0.<br /><br /> Não permite valor nulo.|  
-|ansi_warnings|**parte**|1 = configuração ANSI_WARNINGS é ON para a solicitação. Caso contrário, é 0.<br /><br /> Não permite valor nulo.|  
-|ansi_padding|**parte**|1 = configuração ANSI_PADDING é ON para a solicitação.<br /><br /> Caso contrário, é 0.<br /><br /> Não permite valor nulo.|  
-|ansi_nulls|**parte**|1 = configuração ANSI_NULLS é ON para a solicitação. Caso contrário, é 0.<br /><br /> Não permite valor nulo.|  
-|concat_null_yields_null|**parte**|1 = configuração CONCAT_NULL_YIELDS_NULL é ON para a solicitação. Caso contrário, é 0.<br /><br /> Não permite valor nulo.|  
+|quoted_identifier|**bit**|1 = QUOTED_IDENTIFIER é ON para a solicitação. Caso contrário, é 0.<br /><br /> Não permite valor nulo.|  
+|arithabort|**bit**|1 = configuração ARITHABORT é ON para a solicitação. Caso contrário, é 0.<br /><br /> Não permite valor nulo.|  
+|ansi_null_dflt_on|**bit**|1 = configuração ANSI_NULL_DFLT_ON é ON para a solicitação. Caso contrário, é 0.<br /><br /> Não permite valor nulo.|  
+|ansi_defaults|**bit**|1 = configuração ANSI_DEFAULTS é ON para a solicitação. Caso contrário, é 0.<br /><br /> Não permite valor nulo.|  
+|ansi_warnings|**bit**|1 = configuração ANSI_WARNINGS é ON para a solicitação. Caso contrário, é 0.<br /><br /> Não permite valor nulo.|  
+|ansi_padding|**bit**|1 = configuração ANSI_PADDING é ON para a solicitação.<br /><br /> Caso contrário, é 0.<br /><br /> Não permite valor nulo.|  
+|ansi_nulls|**bit**|1 = configuração ANSI_NULLS é ON para a solicitação. Caso contrário, é 0.<br /><br /> Não permite valor nulo.|  
+|concat_null_yields_null|**bit**|1 = configuração CONCAT_NULL_YIELDS_NULL é ON para a solicitação. Caso contrário, é 0.<br /><br /> Não permite valor nulo.|  
 |transaction_isolation_level|**smallint**|Nível de isolamento com que a transação desta solicitação é criada. Não permite valor nulo.<br /> 0 = Não Especificado<br /> 1 = Leitura Não Confirmada<br /> 2 = Leitura Confirmada<br /> 3 = Repetível<br /> 4 = Serializável<br /> 5 = Instantâneo|  
-|lock_timeout|**inteiro**|Tempo limite de bloqueio em milissegundos desta solicitação. Não permite valor nulo.|  
-|deadlock_priority|**inteiro**|Configuração DEADLOCK_PRIORITY da solicitação. Não permite valor nulo.|  
+|lock_timeout|**int**|Tempo limite de bloqueio em milissegundos desta solicitação. Não permite valor nulo.|  
+|deadlock_priority|**int**|Configuração DEADLOCK_PRIORITY da solicitação. Não permite valor nulo.|  
 |row_count|**bigint**|Número de linhas que foram retornadas ao cliente por esta solicitação. Não permite valor nulo.|  
-|prev_error|**inteiro**|Último erro ocorrido durante a execução da solicitação. Não permite valor nulo.|  
-|nest_level|**inteiro**|Nível de aninhamento atual do código sendo executado na solicitação. Não permite valor nulo.|  
-|granted_query_memory|**inteiro**|Número de páginas alocadas à execução de uma consulta na solicitação. Não permite valor nulo.|  
-|executing_managed_code|**parte**|Indica se uma solicitação específica está atualmente executando objetos de Common Language runtime, como rotinas, tipos e gatilhos. É definida para todo o tempo em que um objeto de Common Language runtime estiver na pilha, mesmo durante a execução de [!INCLUDE[tsql](../../includes/tsql-md.md)] no Common Language runtime. Não permite valor nulo.|  
-|group_id|**inteiro**|ID do grupo de carga de trabalho a que pertence esta consulta. Não permite valor nulo.|  
+|prev_error|**int**|Último erro ocorrido durante a execução da solicitação. Não permite valor nulo.|  
+|nest_level|**int**|Nível de aninhamento atual do código sendo executado na solicitação. Não permite valor nulo.|  
+|granted_query_memory|**int**|Número de páginas alocadas à execução de uma consulta na solicitação. Não permite valor nulo.|  
+|executing_managed_code|**bit**|Indica se uma solicitação específica está atualmente executando objetos de Common Language runtime, como rotinas, tipos e gatilhos. É definida para todo o tempo em que um objeto de Common Language runtime estiver na pilha, mesmo durante a execução de [!INCLUDE[tsql](../../includes/tsql-md.md)] no Common Language runtime. Não permite valor nulo.|  
+|group_id|**int**|ID do grupo de carga de trabalho a que pertence esta consulta. Não permite valor nulo.|  
 |query_hash|**binário (8)**|Valor de hash binário calculado na consulta e usado para identificar consultas com lógica semelhante. Você pode usar o hash de consulta para determinar o recurso de agregação usado para consultas que são diferentes apenas nos valores literais.|  
 |query_plan_hash|**binário (8)**|Valor de hash binário calculado no plano de execução de consulta e usado para identificar planos de execução de consulta semelhantes. Você pode usar o hash de plano de consulta para localizar o custo cumulativo de consultas com planos de execução semelhantes.|  
 |statement_sql_handle|**varbinary (64)**|**Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior.<br /><br /> Identificador SQL da consulta individual.<br /><br />Esta coluna será nula se Repositório de Consultas não estiver habilitada para o banco de dados. |  
 |statement_context_id|**bigint**|**Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior.<br /><br /> A chave estrangeira opcional para sys. query_context_settings.<br /><br />Esta coluna será nula se Repositório de Consultas não estiver habilitada para o banco de dados. |  
-|dop |**inteiro** |**Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior.<br /><br /> O grau de paralelismo da consulta. |  
-|parallel_worker_count |**inteiro** |**Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior.<br /><br /> O número de operadores paralelos reservados se esta for uma consulta paralela.  |  
+|dop |**int** |**Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior.<br /><br /> O grau de paralelismo da consulta. |  
+|parallel_worker_count |**int** |**Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior.<br /><br /> O número de operadores paralelos reservados se esta for uma consulta paralela.  |  
 |external_script_request_id |**uniqueidentifier** |**Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior.<br /><br /> A ID de solicitação de script externo associada à solicitação atual. |  
-|is_resumable |**parte** |**Aplica-se a**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] e posterior.<br /><br /> Indica se a solicitação é uma operação de índice retomável. |  
-|page_resource |**binário (8)** |**Aplica-se a**:[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> Uma representação hexadecimal de 8 bytes do recurso de página se a `wait_resource` coluna contiver uma página. Para obter mais informações, consulte [Sys. fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md). |  
+|is_resumable |**bit** |**Aplica-se a**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] e posterior.<br /><br /> Indica se a solicitação é uma operação de índice retomável. |  
+|page_resource |**binário (8)** |**Aplica-se ao**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> Uma representação hexadecimal de 8 bytes do recurso de página se a `wait_resource` coluna contiver uma página. Para obter mais informações, consulte [Sys. fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md). |  
 |page_server_reads|**bigint**|**Aplica-se a**: hiperescala do banco de dados SQL do Azure<br /><br /> Número de leituras de servidor de página executadas por essa solicitação. Não permite valor nulo.|  
 | &nbsp; | &nbsp; | &nbsp; |
 
@@ -108,7 +108,7 @@ Se o usuário tiver `VIEW SERVER STATE` permissão no servidor, o usuário verá
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-finding-the-query-text-for-a-running-batch"></a>R. Localizando o texto da consulta para um lote em execução
+### <a name="a-finding-the-query-text-for-a-running-batch"></a>a. Localizando o texto da consulta para um lote em execução
 
  O exemplo a seguir consulta `sys.dm_exec_requests` para localizar a consulta interessante e copiar o `sql_handle` da saída.  
 
@@ -193,4 +193,4 @@ GO
 [sys. dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)      
 [SQL Server, objeto SQL Statistics](../../relational-databases/performance-monitor/sql-server-sql-statistics-object.md)     
 [Guia de arquitetura de processamento de consultas](../../relational-databases/query-processing-architecture-guide.md#DOP)       
-[Guia de arquitetura de threads e tarefas](../../relational-databases/thread-and-task-architecture-guide.md)    
+[Guia de arquitetura de thread e tarefa](../../relational-databases/thread-and-task-architecture-guide.md)    

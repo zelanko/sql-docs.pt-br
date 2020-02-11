@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 201580b71086dfe39e669966070dae2dca72e3eb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68105298"
 ---
 # <a name="instr-mdx"></a>Instr (MDX)
@@ -27,7 +27,7 @@ InStr([start, ]searched_string, search_string[, compare])
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *Início*  
+ *Comece*  
  (Opcional) Uma expressão numérica que define a posição inicial de cada pesquisa. Se esse valor for omitido, a pesquisa começará na primeira posição de caractere. Se o início for nulo, o valor de retorno da função será indefinido.  
   
  *searched_string*  
@@ -36,19 +36,19 @@ InStr([start, ]searched_string, search_string[, compare])
  *search_string*  
  A expressão da cadeia de caracteres na qual pesquisar.  
   
- *Compare*  
- (opcional) Um valor inteiro. Esse argumento é sempre ignorado. Ele é definido para compatibilidade com outras **Instr** funções em outros idiomas.  
+ *Comparar*  
+ (opcional) Um valor inteiro. Esse argumento é sempre ignorado. Ele é definido para compatibilidade com outras funções **InStr** em outras linguagens.  
   
 ## <a name="return-value"></a>Valor retornado  
- Um valor inteiro com a posição inicial da *String2* na *String1*.  
+ Um valor inteiro com a posição inicial de *seqüência2* em *seqüência1*.  
   
- Além disso, **InStr** função retorna os valores listados na tabela a seguir, dependendo da condição:  
+ Além disso, a função **InStr** retorna os valores listados na tabela a seguir, dependendo da condição:  
   
 |Condição|Valor retornado|  
 |---------------|------------------|  
 |String1 tem comprimento zero|zero (0)|  
 |String1 é nula|não definido|  
-|String2 tem comprimento zero|start|  
+|String2 tem comprimento zero|iniciar|  
 |String2 é nula|não definido|  
 |String2 não foi localizada|zero (0)|  
 |start é maior que Len (String2)|zero (0)|  
@@ -56,10 +56,10 @@ InStr([start, ]searched_string, search_string[, compare])
 ## <a name="remarks"></a>Comentários  
   
 > [!WARNING]  
->  **InStr** sempre executa uma comparação que diferencia maiusculas de minúsculas.  
+>  **InStr** sempre executa uma comparação que não diferencia maiúsculas de minúsculas.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra o uso do **Instr** função e mostra diferentes cenários de resultados.  
+ O exemplo a seguir mostra o uso da função **InStr** e mostra diferentes cenários de resultado.  
   
 ```  
 with   

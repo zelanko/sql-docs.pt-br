@@ -15,10 +15,10 @@ ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 056975a05f697851d1fc0eac773c917c1f22b738
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729797"
 ---
 # <a name="administrators-master-data-services"></a>Administradores (Master Data Services)
@@ -36,7 +36,7 @@ ms.locfileid: "73729797"
   
  Cada modelo pode ter vários administradores. Cada usuário pode ser um administrador de modelo para um, vários ou todos os modelos na implantação do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
- Um usuário ou pode ser configurado como um administrador de modelo no [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] ou programaticamente. Para obter mais informações, consulte [Create a Model Administrator &#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md).  
+ Um usuário ou pode ser configurado como um administrador de modelo no [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] ou programaticamente. Para obter mais informações, consulte [Criar um administrador de modelo &#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md).  
   
 ## <a name="entity-administrators"></a>Administradores de entidade  
  No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], um administrador de entidade é um usuário que tem permissões de administrador atribuídas ao objeto de entidade na guia objetos de modelo. Quando um usuário tem permissões de administrador para uma entidade, todas as outras permissões nos objetos filho da entidade (permissões de objeto de modelo e de membro) são substituídas pelas permissões de administrador e são ignoradas.  
@@ -64,18 +64,18 @@ ms.locfileid: "73729797"
   
 ## <a name="comparing-administrator-types"></a>Comparando tipos de administrador  
   
-|Tipo de administrador|Descrição|  
+|Tipo de administrador|DESCRIÇÃO|  
 |------------------------|-----------------|  
-|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Superusuário|As permissões atribuídas no [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] não têm nenhum efeito sobre o acesso do administrador.<br /><br /> Pode ser um superusuário com base em permissões de área funcional atribuídas explicitamente ou em permissões herdadas de um grupo.<br /><br /> Tem, automaticamente, todas as permissões para todos os modelos.<br /><br /> Tem acesso automaticamente a todas as áreas funcionais.|  
+|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]Superusuário|As permissões atribuídas no [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] não têm nenhum efeito sobre o acesso do administrador.<br /><br /> Pode ser um superusuário com base em permissões de área funcional atribuídas explicitamente ou em permissões herdadas de um grupo.<br /><br /> Tem, automaticamente, todas as permissões para todos os modelos.<br /><br /> Tem acesso automaticamente a todas as áreas funcionais.|  
 |Administrador de modelo|Pode ser um administrador de modelo com base nas permissões de administrador atribuídas explicitamente ou nas permissões herdadas de um grupo.<br /><br /> Tem acesso somente a áreas funcionais às quais esse acesso é concedido.<br /><br /> Tem automaticamente todas as permissões para todos os objetos e membros no modelo específico.|  
 |Administrador de entidade|Pode ser um administrador de entidade com base nas permissões de administrador atribuídas explicitamente ou nas permissões herdadas de um grupo.<br /><br /> Tem acesso somente a áreas funcionais às quais esse acesso é concedido.<br /><br /> Tem automaticamente todas as permissões para todos os objetos e membros na entidade específica.<br /><br /> Poderá aprovar os conjuntos de alterações pendentes se as alterações de entidade exigirem aprovação.|  
   
 ## <a name="external-resources"></a>Recursos externos  
  Postagem do blog, [Aprimoramentos de Segurança](https://go.microsoft.com/fwlink/p/?LinkId=615376), em msdn.com.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar um administrador de modelo &#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md)   
- [Criar um banco de dados do Master Data Services](../master-data-services/install-windows/create-a-master-data-services-database.md)   
- [Notificações &#40;Master Data Services&#41;](../master-data-services/notifications-master-data-services.md)  
+ [Criar um banco de dados Master Data Services](../master-data-services/install-windows/create-a-master-data-services-database.md)   
+ [Master Data Services de notificações &#40;&#41;](../master-data-services/notifications-master-data-services.md)  
   
   

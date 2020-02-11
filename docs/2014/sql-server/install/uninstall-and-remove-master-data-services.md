@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e9bac4dba698af6e7f3dc57904da66a7fb15a08b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62989045"
 ---
 # <a name="uninstall-and-remove-master-data-services"></a>Desinstalar e remover o Master Data Services
@@ -22,17 +22,17 @@ ms.locfileid: "62989045"
   
  Para impedir a perda de dados e evitar que outros computadores no sistema sejam afetados, alguns itens não são removidos nem alterados pelo processo de desinstalação. Revise a tabela a seguir para determinar se os itens deverão permanecer ou ser removidos.  
   
-|Item|Descrição|  
+|Item|DESCRIÇÃO|  
 |----------|-----------------|  
 |Pastas e arquivos|O processo de desinstalação remove a maioria das pastas e arquivos do caminho de instalação.<br /><br /> O processo de desinstalação não remove as pastas Master Data Services e MDSTempDir do local de instalação. Depois que o processo de desinstalação estiver concluído, você poderá excluir essas pastas manualmente do sistema de arquivos. Para obter mais informações, veja [Permissões de pasta e arquivo &#40;Master Data Services&#41;](../../master-data-services/folder-and-file-permissions-master-data-services.md).|  
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] assemblies|O processo de desinstalação remove os assemblies do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] do GAC (Cache Global de Assemblies).|  
-|banco de dados|O processo de desinstalação não afeta o banco de dados do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] . O banco de dados permanece intacto na instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] para que nenhum dado seja perdido, inclusive dados mestres, objetos modelo, permissões de usuário e grupo, regras de negócio, e assim por diante.<br /><br /> Se você não precisa do banco de dados e não pretende conectá-lo futuramente a outro site ou aplicativo do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] , talvez queira excluir o banco de dados da instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] que o hospeda. Para obter mais informações, veja [Excluir um banco de dados](../../relational-databases/databases/delete-a-database.md).|  
+|Banco de dados|O processo de desinstalação não afeta o banco de dados do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] . O banco de dados permanece intacto na instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] para que nenhum dado seja perdido, inclusive dados mestres, objetos modelo, permissões de usuário e grupo, regras de negócio, e assim por diante.<br /><br /> Se você não precisa do banco de dados e não pretende conectá-lo futuramente a outro site ou aplicativo do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] , talvez queira excluir o banco de dados da instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] que o hospeda. Para obter mais informações, veja [Excluir um banco de dados](../../relational-databases/databases/delete-a-database.md).|  
 |[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] e Web.config|O processo de desinstalação remove a pasta WebApplication do sistema de arquivos. A pasta WebApplication contém os arquivos do aplicativo Web e o arquivo Web.config do [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)].<br /><br /> **\*\* Importante \*\*** Antes de desinstalar, talvez você queira copiar o arquivo Web.config para outro local para preservar quaisquer configurações personalizadas ou outras informações existentes no arquivo. Depois que o processo de desinstalação for concluído, o arquivo Web.config não será recuperável.|  
-|Itens do IIS (Serviços de Informações da Internet)|O processo de desinstalação não afeta os pools de aplicativos, sites ou aplicativos Web existentes no IIS no computador local. Como o processo de desinstalação remove a pasta WebApplication e o arquivo Web.config do [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)], qualquer aplicativo Web do [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] que exija esses arquivos deixará de fornecer conteúdo. Se os usuários tentarem acessar o aplicativo web, ele receberá o erro HTTP 500.19 erro interno do servidor: "A página solicitada não pode ser acessada porque os dados de configuração relacionados para a página são inválidos."<br /><br /> Se você não precisar mais do site ou aplicativo e do pool de aplicativos que atende seu site ou aplicativo, poderá usar uma ferramenta do IIS para excluí-los. Para obter mais informações, veja o [IIS 7 Operations Guide](https://go.microsoft.com/fwlink/?LinkId=184885) (Guia de Operações do IIS 7) no [!INCLUDE[msCoName](../../includes/msconame-md.md)] TechNet.|  
+|Itens do IIS (Serviços de Informações da Internet)|O processo de desinstalação não afeta os pools de aplicativos, sites ou aplicativos Web existentes no IIS no computador local. Como o processo de desinstalação remove a pasta WebApplication e o arquivo Web.config do [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)], qualquer aplicativo Web do [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] que exija esses arquivos deixará de fornecer conteúdo. Se os usuários tentarem acessar o aplicativo Web, receberão o erro HTTP 500.19 – Erro interno do servidor: “A página solicitada não pode ser acessada porque os dados de configuração relacionados à página são inválidos.”<br /><br /> Se você não precisar mais do site ou aplicativo e do pool de aplicativos que atende seu site ou aplicativo, poderá usar uma ferramenta do IIS para excluí-los. Para obter mais informações, veja o [IIS 7 Operations Guide](https://go.microsoft.com/fwlink/?LinkId=184885) (Guia de Operações do IIS 7) no [!INCLUDE[msCoName](../../includes/msconame-md.md)] TechNet.|  
 |Grupo**MDS_ServiceAccounts**|Após a conclusão do processo de desinstalação, o grupo do Windows **MDS_ServiceAccounts** e qualquer conta de serviço adicionada ao grupo permanecerão. Se você não precisar mais do grupo e das contas, poderá removê-los.|  
 |Registro|O processo de desinstalação remove todas as chave relativas ao [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] do Registro do Windows.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Instalar o Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)  
   
   

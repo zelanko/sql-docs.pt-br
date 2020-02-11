@@ -17,16 +17,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 92aa65bd2d3aad71f2467efaa7a09f75f20d8f63
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63032250"
 ---
 # <a name="localdbgetinstances-function"></a>Função LocalDBGetInstances
   Retorna todas as instâncias de LocalDB do SQL Server Express com a versão especificada.  
   
- **Arquivo de cabeçalho:** sqlncli.h  
+ **Arquivo de cabeçalho:** sqlncli. h  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,14 +38,14 @@ HRESULT LocalDBGetInstances(
 );  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  *pInstanceNames*  
- [Saída] Quando essa função retornar, contém os nomes dos nomeadas e instâncias de LocalDB na estação de trabalho do usuário padrão.  
+ Der Quando essa função retorna, contém os nomes das instâncias de LocalDB nomeadas e padrão na estação de trabalho do usuário.  
   
  *lpdwNumberOfInstances*  
- [Entrada/Saída] Na entrada, contém o número de slots dos nomes de instância no buffer *pInstanceNames* . Na saída, contém o número de instâncias de LocalDB encontrada na estação de trabalho do usuário.  
+ [Entrada/Saída] Na entrada, contém o número de slots dos nomes de instância no buffer *pInstanceNames* . Na saída, contém o número de instâncias LocalDB encontradas na estação de trabalho do usuário.  
   
-## <a name="returns"></a>Retorna  
+## <a name="returns"></a>Retornos  
  S_OK  
  A função foi bem-sucedida.  
   
@@ -73,7 +73,7 @@ HRESULT LocalDBGetInstances(
 ## <a name="remarks"></a>Comentários  
  Para obter uma amostra do código que usa a API LocalDB, consulte [SQL Server Express LocalDB Reference](../sql-server-express-localdb-reference.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Cabeçalho e informações de versão de LocalDB do SQL Server Express](sql-server-express-localdb-header-and-version-information.md)  
   
   

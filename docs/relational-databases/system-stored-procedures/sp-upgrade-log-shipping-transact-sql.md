@@ -18,18 +18,18 @@ ms.assetid: ee01092f-9caf-4e88-888b-ec7b84223705
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 493fcac9f5de8ee85a2e3c014763045c697bbe0e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68119440"
 ---
-# <a name="spupgradelogshipping-transact-sql"></a>sp_upgrade_log_shipping (Transact-SQL)
+# <a name="sp_upgrade_log_shipping-transact-sql"></a>sp_upgrade_log_shipping (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  O procedimento armazenado sp_upgrade_log_shipping é invocado automaticamente para atualizar metadados específicos do envio de logs.  
+  O procedimento armazenado sp_upgrade_log_shipping é invocado automaticamente para atualizar os metadados que são específicos para o envio de logs.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,13 +39,13 @@ sp_upgrade_log_shipping
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- nenhuma.  
+ Nenhum.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (outra coisa)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- nenhuma.  
+ Nenhum.  
   
 ## <a name="remarks"></a>Comentários  
  Este procedimento armazenado é chamado automaticamente durante a atualização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a fim de atualizar metadados para o envio de logs. Você não precisa executar este procedimento explicitamente, a menos que aconteça um problema com os metadados durante a atualização.  
@@ -55,7 +55,7 @@ sp_upgrade_log_shipping
 ## <a name="permissions"></a>Permissões  
  Exige associação à função de servidor fixa **sysadmin** .  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Sobre o envio de logs &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

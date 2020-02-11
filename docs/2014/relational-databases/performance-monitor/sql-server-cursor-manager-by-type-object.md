@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 35fa15dc6651d8bfd9b6d32cafd00cd47698560b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206974"
 ---
 # <a name="sql-server-cursor-manager-by-type-object"></a>SQL Server, objeto Cursor Manager by Type
@@ -25,7 +25,7 @@ ms.locfileid: "68206974"
   
  Esta tabela descreve os contadores do **Gerenciador de Cursor por Tipo** do SQL Server.  
   
-|Contadores do Gerenciador de Cursor por Tipo|Descrição|  
+|Contadores do Gerenciador de Cursor por Tipo|DESCRIÇÃO|  
 |-------------------------------------|-----------------|  
 |**Cursores ativos**|Número de cursores ativos.|  
 |**Taxa de Acertos do Cache**|Taxa entre acertos e pesquisas do cache.|  
@@ -38,14 +38,14 @@ ms.locfileid: "68206974"
   
  Cada contador no objeto contém as seguintes instâncias:  
   
-|Instância do Gerenciador de Cursor|Descrição|  
+|Instância do Gerenciador de Cursor|DESCRIÇÃO|  
 |-----------------------------|-----------------|  
 |**_Total**|Informações de todos os cursores.|  
 |**Cursor API**|Apenas informações de cursor de API.|  
 |**Cursor Global de TSQL**|Apenas informações de cursor global de [!INCLUDE[tsql](../../includes/tsql-md.md)] .|  
 |**Cursor Local de TSQL**|Apenas informações do cursor local de [!INCLUDE[tsql](../../includes/tsql-md.md)] .|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Monitorar o uso de recursos &#40;Monitor do Sistema&#41;](monitor-resource-usage-system-monitor.md)  
   
   

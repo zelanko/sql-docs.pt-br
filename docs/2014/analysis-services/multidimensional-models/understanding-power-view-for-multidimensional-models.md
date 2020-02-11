@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 94c38e6823f0cd52e44da7782bccada780265978
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75229398"
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>Noções básicas sobre o Power View para modelos multidimensionais
@@ -28,7 +28,7 @@ ms.locfileid: "75229398"
   
  ![Power View para arquitetura de modelos multidimensionais](../media/daxmd-architecture.gif "Power View para arquitetura de modelos multidimensionais")  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
  **Requisitos do servidor**  
   
 -   Edição do SQL Server 2014 Enterprise ou Business Intelligence com o Analysis Services em execução no modo Multidimensional.  
@@ -217,7 +217,7 @@ ms.locfileid: "75229398"
   
  A solicitação DISCOVER_CSDL_METADATA tem as seguintes restrições:  
   
-|Nome|Obrigatório|Descrição|  
+|Nome|Obrigatório|DESCRIÇÃO|  
 |----------|--------------|-----------------|  
 |CATALOG_NAME|Sim|O nome do catálogo/banco de dados.|  
 |PERSPECTIVE_NAME|Sim, se o cubo contiver mais de uma perspectiva. Opcional se houver somente um cubo ou se houver uma perspectiva padrão.|O nome do cubo ou o nome da perspectiva no banco de dados multidimensional.|  

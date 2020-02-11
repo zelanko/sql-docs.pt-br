@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 48f2a2d485f99b91b0f30a6a707a900ccbbeea96
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74399914"
 ---
 # <a name="syspdw_nodes_pdw_physical_databases-transact-sql"></a>sys. pdw_nodes_pdw_physical_databases (Transact-SQL)
@@ -24,15 +24,15 @@ ms.locfileid: "74399914"
 
   Contém uma linha para cada banco de dados físico em um nó de computação. Agregue informações do banco de dados físico para obter informações detalhadas sobre bancos de dados. Para combinar informações, ingresse nas `sys.pdw_nodes_pdw_physical_databases` tabelas `sys.pdw_database_mappings` e `sys.databases` .  
   
-|Nome da coluna|Tipo de Dados|Descrição|  
+|Nome da coluna|Tipo de Dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
-|database_id|**inteiro**|A ID de objeto do banco de dados. Observe que esse valor não é o mesmo que um database_id na exibição de [&#41;sys. databases &#40;Transact-SQL](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) .|  
+|database_id|**int**|A ID de objeto do banco de dados. Observe que esse valor não é o mesmo que um database_id na exibição de [&#41;sys. databases &#40;Transact-SQL](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) .|  
 |physical_name|**sysname**|O nome físico do banco de dados nos nós de shell/computação. Esse valor é o mesmo que um valor na coluna physical_name no modo de exibição [pdw_database_mappings &#40;do Transact-&#41;SQL](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md) .|  
-|pdw_node_id|**inteiro**|ID numérica exclusiva associada ao nó.|  
+|pdw_node_id|**int**|ID numérica exclusiva associada ao nó.|  
   
 ## <a name="examples-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="a-returning"></a>R. VOLUÇÃO  
+### <a name="a-returning"></a>a. VOLUÇÃO  
  A consulta a seguir retorna o nome e a ID de cada banco de dados no mestre e o nome do banco de dados correspondente em cada nó de computação.  
   
 ```  
@@ -86,8 +86,8 @@ SELECT TOP 1 encryption_state
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exibições do catálogo de data warehouse SQL Data Warehouse e paralelas](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
- [&#41;sys. databases &#40;Transact-SQL](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
+ [Exibições de Catálogo do SQL Data Warehouse e Parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
+ [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys. pdw_database_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md)  
   
   

@@ -18,15 +18,15 @@ ms.assetid: d772da67-e04e-4499-9f80-7a5e94829b5c
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: cc6bad2dc55c611d45b728de4a23cf60c4b151cc
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73660454"
 ---
 # <a name="securitycertificate-class"></a>Classe SecurityCertificate
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  A [classe SecurityCertificate](../../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md) representa um certificado de segurança. Um certificado é uma instrução assinada digitalmente que associa o valor de uma chave pública à instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], que detém a chave privada correspondente. O certificado é emitido de uma autoridade de certificação.  
+  A [classe SecurityCertificate](../../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md) representa um certificado de segurança. Um certificado é uma instrução assinada digitalmente que associa o valor de uma chave pública à instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], que contém a chave privada correspondente. O certificado é emitido de uma autoridade de certificação.  
   
  Com a [classe SecurityCertificate](../../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md), você pode executar estas tarefas:  
   
@@ -36,7 +36,7 @@ ms.locfileid: "73660454"
   
 -   Verificar a impressão digital de SHA para a instância especificada do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Hierarquia de criptografia](../../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

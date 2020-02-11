@@ -18,18 +18,18 @@ ms.assetid: 17287a15-cdde-43d1-bb18-9f920bc15db8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a8e6a8187936e7a2f824315123937cf9c7eca9c5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933863"
 ---
-# <a name="spdropmessage-transact-sql"></a>sp_dropmessage (Transact-SQL)
+# <a name="sp_dropmessage-transact-sql"></a>sp_dropmessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Descarta uma mensagem de erro definida pelo usuário especificada de uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Mensagens definidas pelo usuário podem ser exibidas usando o **sys. messages** exibição do catálogo.  
+  Descarta uma mensagem de erro definida pelo usuário especificada de uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. As mensagens definidas pelo usuário podem ser exibidas usando a exibição do catálogo **Sys. messages** .  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,26 +40,26 @@ sp_dropmessage [ @msgnum = ] message_number
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @msgnum = ] message_number` É o número de mensagem para descartar. *message_number* deve ser uma mensagem definida pelo usuário que tem um número maior que 50000. *message_number* está **int**, com um padrão NULL.  
+`[ @msgnum = ] message_number`É o número da mensagem a ser descartada. *message_number* deve ser uma mensagem definida pelo usuário que tenha um número de mensagem maior que 50000. *message_number* é **int**, com um padrão de NULL.  
   
-`[ @lang = ] 'language'` É o idioma da mensagem a ser descartada. Se **todos os** for especificado, todas as versões de idioma do *message_number* são descartados. *linguagem* está **sysname**, com um padrão NULL.  
+`[ @lang = ] 'language'`É o idioma da mensagem a ser descartada. Se **All** for especificado, todas as versões de idioma do *message_number* serão descartadas. o *idioma* é **sysname**, com um padrão de NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- nenhuma.  
+ Nenhum.  
   
 ## <a name="permissions"></a>Permissões  
- Requer associação na **sysadmin** e **serveradmin** funções de servidor fixas.  
+ Requer associação nas funções de servidor fixas **sysadmin** e **ServerAdmin** .  
   
 ## <a name="remarks"></a>Comentários  
- A menos que **todos os** é especificado para *idioma*localizado todas as versões de uma mensagem devem ser descartadas antes de A versão em inglês da mensagem pode ser descartado.  
+ A menos que **todos** estejam especificados para o *idioma*, todas as versões localizadas de uma mensagem devem ser descartadas antes que a versão em inglês dos EUA da mensagem possa ser descartada.  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-dropping-a-user-defined-message"></a>A. Descartando uma mensagem definida pelo usuário  
- O exemplo a seguir descarta uma mensagem definida pelo usuário, o número `50001`, da **sys. messages**.  
+### <a name="a-dropping-a-user-defined-message"></a>a. Descartando uma mensagem definida pelo usuário  
+ O exemplo a seguir remove uma mensagem definida pelo usuário, `50001`um número, de **Sys. messages**.  
   
 ```  
 USE master;  
@@ -130,10 +130,10 @@ EXEC sp_dropmessage
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
- [sp_addmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
- [sp_altermessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_addmessage](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_altermessage](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   
  [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)   
  [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

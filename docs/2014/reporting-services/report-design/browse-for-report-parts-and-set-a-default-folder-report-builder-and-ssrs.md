@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2dd881c13b2398f3a1783f53190097653d04d78a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106456"
 ---
 # <a name="browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs"></a>Procurar partes de relatório e definir uma pasta padrão (Construtor de Relatórios e SSRS)
@@ -45,7 +45,7 @@ ms.locfileid: "66106456"
   
     -   Pasta do servidor  
   
-    -   Tipo  
+    -   Type  
   
      Por exemplo, para localizar uma imagem, clique em **Adicionar Critérios**e em **Tipo**. Na caixa suspensa, marque a caixa de seleção **Imagem** , pressione ENTER e clique na lupa Pesquisar.  
   
@@ -62,11 +62,11 @@ ms.locfileid: "66106456"
   
  Você não precisa reiniciar o Construtor de Relatórios para que essa configuração tenha efeito.  
   
-## <a name="see-also"></a>Consulte também  
- [Verificar ou desativar atualizações &#40;relatórios e SSRS&#41;](../check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Verificar se há atualizações ou desativar as atualizações &#40;Construtor de Relatórios e SSRS&#41;](../check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)   
  [Partes de relatório &#40;Construtor de Relatórios e SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
  [Partes de relatório e conjuntos de dados no Construtor de Relatórios](../report-data/report-parts-and-datasets-in-report-builder.md)   
- [Solucionar problemas de partes de relatório &#40;relatórios e SSRS&#41;](../troubleshoot-report-parts-report-builder-and-ssrs.md)   
+ [Solucionar problemas de partes de relatório &#40;Construtor de Relatórios e SSRS&#41;](../troubleshoot-report-parts-report-builder-and-ssrs.md)   
  [Publicar e republicar partes de relatório &#40;Construtor de Relatórios e SSRS&#41;](publish-and-republish-report-parts-report-builder-and-ssrs.md)  
   
   

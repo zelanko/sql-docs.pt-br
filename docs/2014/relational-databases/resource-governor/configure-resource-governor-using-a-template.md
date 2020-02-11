@@ -13,16 +13,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3da27154a824433d214dc495bf7f236ff104274f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68198931"
 ---
 # <a name="configure-resource-governor-using-a-template"></a>Configurar o administrador de recursos usando um modelo
   Você pode configurar o Administrador de recursos usando um modelo que é fornecido em [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
--   **Antes de começar:**  [Permissões](#Permissions)  
+-   **Antes de começar:**  [permissões](#Permissions)  
   
 -   **Para criar um grupo de carga de trabalho usando:**  [um modelo](#ConfRGTemplate)  
   
@@ -32,8 +32,8 @@ ms.locfileid: "68198931"
 ###  <a name="Permissions"></a> Permissões  
  As instruções do [!INCLUDE[tsql](../../includes/tsql-md.md)] do administrador de recursos no modelo exigem a permissão CONTROL SERVER.  
   
-##  <a name="ConfRGTemplate"></a> Configurar o administrador de recursos usando um modelo  
- **Para configurar o Administrador de Recursos usando um modelo no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
+##  <a name="ConfRGTemplate"></a>Configurar Resource Governor usando um modelo  
+ **Para configurar o administrador de recursos usando um modelo no[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
 1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], no menu **Exibir** , clique em **Gerenciador de Modelos**.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "68198931"
   
 6.  Para executar a consulta, clique em **Executar**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Administrador de Recursos](resource-governor.md)   
  [Habilitar Administrador de Recursos](enable-resource-governor.md)   
  [Pool de recursos do Administrador de Recursos](resource-governor-resource-pool.md)   

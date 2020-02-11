@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 669983c17792d555a1310e2248c4fb98cee16f9b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100337"
 ---
 # <a name="dock-the-report-data-pane-in-report-designer-ssrs"></a>Encaixar o painel de dados do relatório no Designer de Relatórios (SSRS)
@@ -24,7 +24,7 @@ ms.locfileid: "66100337"
   
 ### <a name="to-display-the-report-data-pane"></a>Para exibir o painel de dados do relatório  
   
--   No modo Design, sobre o **exibição** menu, selecione **dados de relatório**.  
+-   No modo de exibição de Design, no menu **Exibir** , selecione **dados do relatório**.  
   
 ### <a name="to-dock-the-report-data-pane"></a>Para encaixar o painel de dados do relatório  
   
@@ -34,16 +34,16 @@ ms.locfileid: "66100337"
   
 ### <a name="to-change-the-report-data-pane-from-a-docked-window-to-a-tabbed-window"></a>Para alterar o painel de dados do relatório de uma janela encaixada para uma janela com guias  
   
--   Barra de título do painel dados do relatório com o botão direito e, em seguida, clique em **documento com guias**.  
+-   Clique com o botão direito do mouse na barra de título do painel dados do relatório e clique em **documento com guias**.  
   
 ### <a name="to-change-the-report-data-pane-from-a-tabbed-window-to-a-docked-window"></a>Para alterar o painel de dados do relatório de uma janela com guias para uma janela encaixada  
   
--   Clique com botão direito na guia dados do relatório e, em seguida, clique em **Encaixável**.  
+-   Clique com o botão direito do mouse na guia dados do relatório e clique em **encaixáveis**.  
   
      Para alternar entre os dois últimos estados de exibição, clique duas vezes na barra de título do painel de dados do relatório.  
   
-## <a name="see-also"></a>Consulte também  
- [Painel de Dados do Relatório](../report-data/report-data-pane.md)   
- [Conexões de dados, fontes de dados e cadeias de conexão no Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Painel de dados do relatório](../report-data/report-data-pane.md)   
+ [Data Connections, Data Sources, and Connection Strings in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)  
   
   

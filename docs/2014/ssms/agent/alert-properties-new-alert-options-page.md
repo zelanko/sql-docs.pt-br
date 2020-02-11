@@ -1,5 +1,5 @@
 ---
-title: 'Propriedades do Alerta: Novo alerta (página Opções) | Microsoft Docs'
+title: 'Propriedades do alerta: novo alerta (página Opções) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,17 +13,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 69f467af1c797b9bf1cfa55c7def8456ad4a32bd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63061255"
 ---
-# <a name="alert-properties-new-alert-options-page"></a>Propriedades do Alerta: Novo Alerta (página Opções)
-  Use essa página para exibir e modificar opções para os alertas do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
+# <a name="alert-properties-new-alert-options-page"></a>Propriedades do alerta: novo alerta (página Opções)
+  Use esta página para exibir e modificar opções de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alertas de agente.  
   
 ## <a name="options"></a>Opções  
- **Email**  
+ **Mensagens**  
  Inclua texto de erro do evento, se houver, em notificações de email.  
   
  **Pager**  
@@ -36,15 +36,15 @@ ms.locfileid: "63061255"
  Digite qualquer texto adicional para incluir em mensagens de notificação.  
   
  **Atraso entre as respostas**  
- Especifique um intervalo para ocorrências repetidas do evento. Alguns eventos podem acontecer com frequência durante um curto intervalo de tempo. Nesse caso, você pode desejar saber que o evento ocorreu, mas talvez não queira uma resposta para cada evento. Use essa opção para especificar um tempo-limite. Com o intervalo, depois que o alerta responde a um evento, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent espera pelo intervalo especificado antes de responder novamente, mesmo se o evento ocorrer durante o intervalo.  
+ Especifique um intervalo para ocorrências repetidas do evento. Alguns eventos podem acontecer com frequência durante um curto intervalo de tempo. Nesse caso, você pode desejar saber que o evento ocorreu, mas talvez não queira uma resposta para cada evento. Use esta opção para especificar um tempo limite. Com um atraso, depois que o alerta responde a um evento [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o Agent aguarda o atraso especificado antes de responder novamente, independentemente de o evento ocorrer durante o atraso.  
   
- **Minutes (minutos) (minutos)**  
+ **minutos**  
  Especifique um intervalo em minutos. Para responder todas as vezes que o evento ocorrer, especifique 0 minuto e 0 segundo.  
   
- **Seconds (segundos) (segundos)**  
+ **Seg**  
  Especifique um intervalo em segundos. Para responder todas as vezes que o evento ocorrer, especifique 0 minuto e 0 segundo.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Alertas](alerts.md)  
   
   

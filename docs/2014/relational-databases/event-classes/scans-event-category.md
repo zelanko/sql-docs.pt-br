@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 676e0deaea8fa740a9b9fb007a6217b91f1e3863
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63044084"
 ---
 # <a name="scans-event-category"></a>categoria de evento Scans
@@ -28,7 +28,7 @@ ms.locfileid: "63044084"
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|Descrição|  
+|Tópico|DESCRIÇÃO|  
 |-----------|-----------------|  
 |[Classe de evento Scan:Started](scan-started-event-class.md)|Indica que foi iniciada uma verificação de tabela ou índice.|  
 |[Classe de evento Scan:Stopped](scan-stopped-event-class.md)|Indica que foi interrompida uma verificação de tabela ou índice.|  

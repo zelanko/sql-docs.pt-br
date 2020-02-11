@@ -16,10 +16,10 @@ ms.author: genemi
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a1d02ef5827ff9d121c19dd055f97feea5184758
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74095353"
 ---
 # <a name="conversions-ole-db"></a>Conversões (OLE DB)
@@ -31,15 +31,15 @@ ms.locfileid: "74095353"
   
 -   O formato das cadeias de caracteres **DateTime** e **DateTimeOffset** é:  
   
-     *yyyy*-*mm*-*dd*[ *hh*:*mm*:*ss*[.*9999999*][ ± *hh*:*mm*]]  
+     *aaaa*-** mm-*DD*[ *hh*:*mm*:*SS*[.* 9999999*] [± *hh*:*mm*]]  
   
 -   O formato de cadeias de caracteres **time** é:  
   
-     *hh*:*mm*:*ss*[.*9999999*]  
+     *hh*:*mm*:*SS*[.* 9999999*]  
   
 -   O formato das cadeias de caracteres de **Data** é:  
   
-     *yyyy*-*mm*-*dd*  
+     *aaaa*-** mm-*DD*  
   
 > [!NOTE]  
 >  As versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client e SQLOLEDB implementavam conversões OLE, caso em que conversões padrão falhavam. Consequentemente, algumas conversões executadas pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 10.0 e versões posteriores diferem da especificação OLE DB.  
@@ -71,7 +71,7 @@ ms.locfileid: "74095353"
  [Conversões executadas do servidor para o cliente](../../relational-databases/native-client-ole-db-date-time/conversions-performed-from-server-to-client.md)  
  Descreve conversões de data/hora executadas entre o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (ou posterior) e um aplicativo cliente escrito com o DB OLE do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Melhorias de data e hora &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

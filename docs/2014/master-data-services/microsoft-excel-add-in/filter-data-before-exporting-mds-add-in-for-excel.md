@@ -1,5 +1,5 @@
 ---
-title: Filtrar dados antes de carregar (suplemento MDS para Excel) | Microsoft Docs
+title: Filtrar dados antes do carregamento (Suplemento MDS para Excel) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 277b5ff1e575f223b78f958e26801e7b209d05d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65478914"
 ---
 # <a name="filter-data-before-loading-mds-add-in-for-excel"></a>Filtrar dados antes de carregar (suplemento MDS para Excel)
-  Na [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], filtre os dados quando você deseja limitar o tamanho ou o escopo dos dados que você está carregando no Excel.  
+  No [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], filtre os dados quando desejar limitar o tamanho ou o escopo dos dados que você está carregando no Excel.  
   
 ## <a name="prerequisites"></a>Prerequisites  
  Para executar esse procedimento:  
@@ -45,14 +45,14 @@ ms.locfileid: "65478914"
   
     > [!NOTE]  
     >  -   Somente os primeiros um milhão de membros serão carregados no Excel.  
-    > -   Nas colunas que são listas restritas (atributos baseados em domínio), somente os primeiros 1000 valores são carregados.  
+    > -   Em colunas que são listas restritas (atributos baseados em domínio), somente os primeiros 1000 valores são carregados.  
   
 ## <a name="next-steps"></a>Próximas etapas  
- [Publicar dados do Excel no MDS &#40;suplemento do MDS para Excel&#41;](import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)  
+ [Publicar dados do Excel para o MDS &#40;Suplemento MDS para Excel&#41;](import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Carregamento de dados &#40;suplemento do MDS para Excel&#41;](overview-exporting-data-to-excel-mds-add-in-for-excel.md)   
- [Caixa de diálogo Filtrar &#40;Suplemento MDS para Excel&#41;](filter-dialog-box-mds-add-in-for-excel.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Carregando dados &#40;Suplemento MDS para Excel&#41;](overview-exporting-data-to-excel-mds-add-in-for-excel.md)   
+ [Caixa de diálogo de filtro &#40;Suplemento MDS para Excel&#41;](filter-dialog-box-mds-add-in-for-excel.md)   
  [Reordenar colunas &#40;Suplemento MDS para Excel&#41;](reorder-columns-mds-add-in-for-excel.md)  
   
   

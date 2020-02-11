@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d213738b7ea2bbe846bad98620d3b4d5577133a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62913211"
 ---
-# <a name="mssqlserver8994"></a>MSSQLSERVER_8994
+# <a name="mssqlserver_8994"></a>MSSQLSERVER_8994
     
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|8994|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|DBCC3_MISSING_FORWARDING_ROW|  
 |Texto da mensagem|ID de objeto O_ID, página de linha encaminhada P_ID1, slot S_ID1 deveria ser apontada pela página de linha de encaminhamento P_ID2, slot S_ID2. Linha encaminhada não encontrada. Possível erro de alocação.|  

@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 911d0a740a20f74edf9e32d4a6ff69a8d6040f24
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022488"
 ---
 # <a name="backup-and-restore-for-oracle-publishers"></a>Backup e restauração para Publicadores Oracle
@@ -45,7 +45,7 @@ ms.locfileid: "63022488"
   
      Se houver necessidade de descartar e reconfigurar o Publicador, descarte o sinônimo público **MSSQLSERVERDISTRIBUTOR** e configure o usuário de replicação Oracle com a opção **CASCADE** para remover todos os objetos de replicação do Oracle Publisher.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Fazer backup e restaurar bancos de dados replicados](../administration/back-up-and-restore-replicated-databases.md)   
  [Configurar um Publicador Oracle](configure-an-oracle-publisher.md)   
  [Visão geral da publicação do Oracle](oracle-publishing-overview.md)  

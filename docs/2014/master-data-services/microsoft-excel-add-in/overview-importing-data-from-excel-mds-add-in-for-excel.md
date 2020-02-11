@@ -1,5 +1,5 @@
 ---
-title: Publicando dados (suplemento MDS para Excel) | Microsoft Docs
+title: Publicando dados (Suplemento MDS para Excel) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: dd5046c9a307f498ffb585c99cba8044c7b18b3f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479028"
 ---
 # <a name="publishing-data-mds-add-in-for-excel"></a>Publicando dados (suplemento MDS para Excel)
@@ -35,7 +35,7 @@ ms.locfileid: "65479028"
   
 -   Você não pode anotar exclusões, embora as exclusões sejam salvas como transações que podem ser revertidas por um administrador.  
   
--   Se você alterar o **código** valor para um membro, ele não será registrado como uma transação e todas as transações anteriores para o membro não estão disponíveis.  
+-   Se você alterar o valor de **código** de um membro, ele não será registrado como uma transação e todas as transações anteriores para o membro não estarão disponíveis.  
   
 -   Você pode ver as transações feitas em um membro por outros usuários. Também será possível exibir todas as transações que você fez em um membro, mesmo se não tiver mais permissão para atributos específicos.  
   
@@ -51,12 +51,12 @@ ms.locfileid: "65479028"
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  
-|Publique dados da planilha ativa novamente no repositório do MDS.|[Publicar dados do Excel no MDS &#40;suplemento do MDS para Excel&#41;](import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)|  
+|Publique dados da planilha ativa novamente no repositório do MDS.|[Publicar dados do Excel para o MDS &#40;Suplemento MDS para Excel&#41;](import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)|  
 |Exclua uma linha do repositório do MDS e da planilha ao mesmo tempo.|[Excluir uma linha &#40;Suplemento MDS para Excel&#41;](delete-a-row-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
   
--   [Atualizando dados &#40;Suplemento MDS para Excel&#41;](refreshing-data-mds-add-in-for-excel.md)  
+-   [Atualizando &#40;de dados Suplemento MDS para Excel&#41;](refreshing-data-mds-add-in-for-excel.md)  
   
 -   [Suplemento do Master Data Services para Microsoft Excel](master-data-services-add-in-for-microsoft-excel.md)  
   

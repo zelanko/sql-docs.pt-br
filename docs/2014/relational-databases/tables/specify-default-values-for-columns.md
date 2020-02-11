@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8a02385a6cd12b85be1661c738488c000f810510
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196720"
 ---
 # <a name="specify-default-values-for-columns"></a>Especificar valores padrão para colunas
@@ -35,7 +35,7 @@ ms.locfileid: "68196720"
   
      [Segurança](#Security)  
   
--   **Para especificar um valor padrão usando:**  
+-   **Para especificar um valor padrão, usando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -71,7 +71,7 @@ ms.locfileid: "68196720"
     > [!NOTE]  
     >  Para inserir um valor numérico padrão, insira o número. Para um objeto ou função insira seu nome. Para um padrão alfanumérico insira o valor entre aspas simples.  
   
-4.  No menu **Arquivo** , clique em **Salvar**_table name_.  
+4.  No menu **Arquivo**, clique em **Salvar**_nome da tabela_.  
   
 ##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   

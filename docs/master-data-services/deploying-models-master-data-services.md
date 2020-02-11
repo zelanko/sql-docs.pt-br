@@ -14,10 +14,10 @@ ms.assetid: 30085c08-034f-4efe-80fe-408f9091ff5c
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 1fa740ec21867c07b2e39b9743234dd3c8121551
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728283"
 ---
 # <a name="deploying-models-master-data-services"></a>Implantando modelos (Master Data Services)
@@ -27,16 +27,16 @@ ms.locfileid: "73728283"
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], um pacote é um arquivo XML que contém uma estrutura de modelo implantável, e opcionalmente, dados do modelo. Use pacotes modelo para mover cópias de modelos de um ambiente MDS para outro, ou crie novos modelos em seu ambiente MDS existente.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] **Ferramenta MDSModelDeploy** é compatível com versões anteriores com os pacotes criados no [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] ou superior.  
+>  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]A **ferramenta MDSModelDeploy** é compatível com versões anteriores com os [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] pacotes criados no ou superior.  
   
 ## <a name="tools-for-deploying-models"></a>Ferramentas para implantar modelos  
  Para trabalhar com pacotes de modelo, você pode usar uma das três ferramentas, dependendo de suas necessidades.  
   
--   **Ferramenta MDSModelDeploy**: para criar e implantar objetos de modelo e dados, use a ferramenta MDSModelDeploy.exe. Se você tiver selecionado o caminho padrão ao instalar o MDS, essa ferramenta estará localizada em *drive*:\Program Files\Microsoft SQL Server\130\Master Data Services\Configuration.  
+-   **Ferramenta MDSModelDeploy**: para criar e implantar objetos de modelo e dados, use a ferramenta MDSModelDeploy. exe. Se você tiver selecionado o caminho padrão ao instalar o MDS, essa ferramenta estará localizada em *drive*:\Program Files\Microsoft SQL Server\130\Master Data Services\Configuration.  
   
--   **Assistente para Implantação de Modelo**: para criar e implantar pacotes somente da estrutura de modelo, use o assistente no aplicativo Web do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . Você não pode usar esse assistente para implantar dados.  
+-   **Assistente de implantação de modelo**: para criar e implantar pacotes somente da estrutura do modelo, use o assistente [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] no aplicativo Web. Você não pode usar esse assistente para implantar dados.  
   
--   **Editor de Pacote de Modelo**: para editar um pacote de modelo, use o ModelPackageEditor.exe, que inicia o assistente do Editor de Pacote de Modelo. Use esse assistente para editar um pacote criado pela ferramenta MDSModelDeploy ou pelo assistente de Implantação de Modelo. Se você tiver selecionado o caminho padrão ao instalar o MDS, essa ferramenta estará localizada em *drive*:\Program Files\Microsoft SQL Server\130\Master Data Services\Configuration.  
+-   **Editor de pacote de modelo**: para editar um pacote de modelo, use o ModelPackageEditor. exe que inicia o assistente de editor de pacote de modelo. Use esse assistente para editar um pacote criado pela ferramenta MDSModelDeploy ou pelo assistente de Implantação de Modelo. Se você tiver selecionado o caminho padrão ao instalar o MDS, essa ferramenta estará localizada em *drive*:\Program Files\Microsoft SQL Server\130\Master Data Services\Configuration.  
   
 > [!IMPORTANT]  
 >  Você pode usar a ferramenta MDSModelDeploy para criar um novo modelo, criar um clone de um modelo ou atualizar um modelo existente e seus dados. Se você usar a ferramenta MDSModelDeploy para atualizar um modelo existente e seus dados, e o pacote não contiver uma entidade, um atributo ou um membro que exista no modelo de destino, MDSModelDeploy não excluirá a entidade, o atributo ou o membro do modelo.  
@@ -67,7 +67,7 @@ ms.locfileid: "73728283"
 ## <a name="sample-packages"></a>Pacotes de exemplo  
  Arquivos de pacotes de exemplo são incluídos quando você instala o [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Estes arquivos de pacotes estão no diretório Master Data Services\Samples\Packages onde o [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]foi instalado. Quando você implanta esses pacotes de exemplo usando a ferramenta MDSModelDeploy, modelos de exemplo são criados e populados com dados.  
   
-## <a name="related-tasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  

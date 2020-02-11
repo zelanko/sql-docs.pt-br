@@ -1,5 +1,5 @@
 ---
-title: Fazer Check-In de arquivos | Microsoft Docs
+title: Fazer check-in de arquivos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5debb7c80e7365e67d8661709b09b16f5d25b7b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62812541"
 ---
 # <a name="check-in-files"></a>Fazer check-in de arquivos
@@ -32,7 +32,7 @@ ms.locfileid: "62812541"
   
 2.  Se a caixa de diálogo **Check-in** for exibida, selecione as opções apropriadas e clique em **OK**.  
   
-     **Fazer Check-in**  
+     **Check-in**  
      Efetua check-in de todos os itens selecionados.  
   
      **Colunas**  
@@ -41,10 +41,10 @@ ms.locfileid: "62812541"
      **Comentários**  
      Adiciona um comentário a associar com a operação de check-in.  
   
-     **Não mostrar a seleção na caixa de diálogo ao fazer check-in de itens**  
+     **Não mostrar caixa de diálogo Fazer Check-in ao fazer check-in dos itens**  
      Suprime a caixa de diálogo durante operações de check-in.  
   
-     **Modo de exibição simples**  
+     **Exibição Simples**  
      Exibe os arquivos dos quais está fazendo check-in como listas simples na conexão de controle do código fonte.  
   
      **Nome**  
@@ -53,7 +53,7 @@ ms.locfileid: "62812541"
      **Opções**  
      Exibe opções de check-in específico de plug-ins de controle do código fonte quando se clica na seta à direita do botão.  
   
-     **Sort**  
+     **Classificar**  
      Classifica a ordem das colunas exibidas.  
   
      **Exibição de árvore**  
@@ -61,7 +61,7 @@ ms.locfileid: "62812541"
   
  Se o arquivo com check-in não fizer parte de uma saída compartilhada, o ambiente do [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] fará imediatamente o check-in do arquivo. Caso contrário, você pode ser solicitado a mesclar sua versão com versões criadas por outros usuários.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Exibir uma lista de arquivos modificados](../../2014/database-engine/view-a-list-of-modified-files.md)   
  [Gerenciar check-ins](../../2014/database-engine/manage-checkins.md)  
   

@@ -13,26 +13,26 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 475acd590d8bbdf43acb1f1a99781b82b475f0aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62714554"
 ---
 # <a name="proxy-account-properties-references-tab"></a>Propriedades da Conta Proxy (guia Referências)
-  Essa página somente leitura lista as etapas de trabalho que se referem a uma conta proxy do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
+  Esta página somente leitura lista as etapas de trabalho que fazem referência [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a uma conta proxy do Agent.  
   
 ## <a name="options"></a>Opções  
  **Nome do trabalho**  
  Nomes de trabalhos que usam essa conta proxy.  
   
- **Etapa do trabalho**  
+ **Etapa de trabalho**  
  Nomes de etapas de trabalho no trabalho que usa essa conta proxy  
   
  **Subsistema**  
  Subsistema que essa conta proxy usa.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar um proxy do SQL Server Agent](create-a-sql-server-agent-proxy.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Projetar a tabela (Assistente de relatórios) | Microsoft Docs
+title: Criar a tabela (Assistente de relatório) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 056e96963c9e8f6450861fb6a54e496b406d0daa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109278"
 ---
 # <a name="design-the-table-report-wizard"></a>Projetar a tabela (Assistente de Relatório)
@@ -38,7 +38,7 @@ ms.locfileid: "66109278"
  **Detalhes**  
  Exiba a lista de campos que aparecem na seção de detalhes da tabela. Para alterar a ordem dos campos, selecione um campo e clique no botão para cima ou no botão para baixo.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tabelas &#40;Construtor de Relatórios e SSRS&#41;](report-design/tables-report-builder-and-ssrs.md)   
  [Ajuda do Assistente de Relatório](../../2014/reporting-services/report-wizard-help.md)  
   

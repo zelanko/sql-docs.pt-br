@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 583d7617c0620d5d1ec24d60fbf10435a547616d
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401289"
 ---
 # <a name="configure-infiniband-network-adapters-for-analytics-platform-system"></a>Configurar adaptadores de rede InfiniBand para o sistema de plataforma de análise
 Descreve como configurar os adaptadores de rede InfiniBand em um servidor cliente que não seja de dispositivo para se conectar ao nó de controle em Parallel data warehouse (PDW). Use estas instruções para conectividade básica e alta disponibilidade, para que o carregamento, o backup e outros processos se conectem automaticamente à rede InfiniBand ativa.  
   
-## <a name="Basics"></a>Descrição  
+## <a name="Basics"></a>DESCRIÇÃO  
 Estas instruções mostram como localizar e definir os endereços IP e as máscaras de sub-rede corretos do InfiniBand em seu servidor conectado a InfiniBand. Eles também explicam como definir seu servidor para usar o DNS do dispositivo APS para que sua conexão seja resolvida para a rede InfiniBand ativa.  
   
 Para alta disponibilidade, o APS tem duas redes InfiniBand, uma ativa e uma passiva. Cada rede InfiniBand tem um endereço IP diferente para o nó de controle. Se a rede InfiniBand ativa falhar, a rede InfiniBand passiva se tornará a rede ativa. Quando isso acontece, um script ou um processo se conecta automaticamente à rede InfiniBand ativa sem alterar os parâmetros do script.  
@@ -53,7 +53,7 @@ Você precisa de uma conta de domínio do dispositivo APS para fazer logon no n�
   
 Você precisa de uma conta do Windows no servidor cliente que tenha permissão para configurar os adaptadores de rede.  
   
-### <a name="prerequisites"></a>Pré-requisitos  
+### <a name="prerequisites"></a>Prerequisites  
 Essas instruções pressupõem que o servidor cliente já está em rack e cabeado à rede InfiniBand do dispositivo. Para obter instruções de conexão e cabeamento, consulte [adquirir e configurar um servidor de carregamento](acquire-and-configure-loading-server.md).  
   
 ### <a name="general-remarks"></a>Comentários gerais  

@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 287dc09bf6f534036938fc31b0a959726b56d9ef
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244904"
 ---
 # <a name="drag-and-drop-text"></a>Arrastar e soltar texto
@@ -44,6 +44,6 @@ ms.locfileid: "75244904"
  Arrastar texto significa movê-lo, isto é, o texto é apagado do local anterior e movido para o novo local. Pressionar a tecla CTRL enquanto você arrasta o texto, significa copiá-lo no local novo. Arrastar um objeto do Pesquisador de Objetos é uma exceção e não exclui o nome do objeto do explorador.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Código e texto de navegação](navigate-code-and-text.md)  
+ [Navegar no código e no texto](navigate-code-and-text.md)  
   
   

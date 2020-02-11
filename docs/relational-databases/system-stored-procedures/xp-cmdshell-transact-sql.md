@@ -18,10 +18,10 @@ ms.assetid: 18935cf4-b320-4954-b6c1-e007fcefe358
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: be1b7bc97a46282e0adae2fb5679cfff0cd11dd1
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74687318"
 ---
 # <a name="xp_cmdshell-transact-sql"></a>xp_cmdshell (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "74687318"
 
   Gera um shell de comando do Windows e passa em uma cadeia de caracteres para execução. Qualquer saída é retornada como linhas de texto.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -120,7 +120,7 @@ REVERT ;
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-returning-a-list-of-executable-files"></a>R. Retornando uma lista de arquivos executáveis  
+### <a name="a-returning-a-list-of-executable-files"></a>a. Retornando uma lista de arquivos executáveis  
  O exemplo a seguir mostra o procedimento armazenado estendido `xp_cmdshell` executando um comando de diretório.  
   
 ```  
@@ -173,7 +173,7 @@ EXEC master..xp_cmdshell @cmd;
 ## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados estendidos gerais &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
  [Opção de configuração de servidor xp_cmdshell](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)   
- [Configuração da área de superfície](../../relational-databases/security/surface-area-configuration.md)   
+ [Configuração da Área de Superfície](../../relational-databases/security/surface-area-configuration.md)   
  [&#41;&#40;Transact-SQL de sp_xp_cmdshell_proxy_account](../../relational-databases/system-stored-procedures/sp-xp-cmdshell-proxy-account-transact-sql.md)  
   
   

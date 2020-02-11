@@ -1,5 +1,5 @@
 ---
-title: Fonte de dados de caixa de diálogo de propriedades geral (construtor de relatórios) | Microsoft Docs
+title: Caixa de diálogo Propriedades da fonte de dados, geral (Construtor de Relatórios) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7bedf016dce02928bbd47dbfce60943ec667a824
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109468"
 ---
 # <a name="data-source-properties-dialog-box-general-report-builder"></a>Caixa de diálogo Propriedades da Fonte de Dados, Geral (Construtor de Relatórios)
@@ -63,11 +63,11 @@ ms.locfileid: "66109468"
  **Testar Conexão**  
  Clique para verificar se a conexão da fonte de dados funciona usando as credenciais especificadas. Se não for possível estabelecer a conexão, será necessário verificar suas credenciais e a disponibilidade do servidor. Você pode testar as conexões de fonte de dados para fontes de dados inseridas e compartilhadas.  
   
-## <a name="see-also"></a>Consulte também  
- [Adicionar dados a um relatório &#40;relatórios e SSRS&#41;](report-data/report-datasets-ssrs.md)   
- [Adicionar e verificar uma Conexão de dados ou uma fonte de dados &#40;relatórios e SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Adicionar dados a um relatório &#40;Construtor de Relatórios e SSRS&#41;](report-data/report-datasets-ssrs.md)   
+ [Adicionar e verificar uma conexão de dados ou uma fonte de dados &#40;Construtor de Relatórios e SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)   
  [Conexões de dados, fontes de dados e cadeias de conexão no Construtor de Relatórios](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)   
- [Caixa de diálogo de propriedades, as credenciais da fonte de dados &#40;construtor de relatórios&#41;](../../2014/reporting-services/data-source-properties-dialog-box-credentials-report-builder.md)   
- [Ajuda do Construtor de Relatórios para caixas de diálogo, painéis e assistentes](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [Caixa de diálogo Propriedades da fonte de dados, credenciais &#40;Construtor de Relatórios&#41;](../../2014/reporting-services/data-source-properties-dialog-box-credentials-report-builder.md)   
+ [Construtor de Relatórios ajuda para caixas de diálogo, painéis e assistentes](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

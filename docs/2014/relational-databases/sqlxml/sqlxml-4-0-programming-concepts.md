@@ -1,5 +1,5 @@
 ---
-title: O SQLXML 4.0 conceitos de programação | Microsoft Docs
+title: Conceitos de programação do SQLXML 4,0 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 03d6069358c1591233aa892a723b7367a21be569
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012231"
 ---
 # <a name="sqlxml-40-programming-concepts"></a>Conceitos de programação do SQLXML 4.0
@@ -42,7 +42,7 @@ ms.locfileid: "66012231"
  [Requisitos para executar exemplos do SQLXML](requirements-for-running-sqlxml-examples.md)  
  Descreve os requisitos para a criação de exemplos de funcionamento dos exemplos de SQLXML fornecidos.  
   
- [Formatação do lado do cliente e servidor &#40;SQLXML 4.0&#41;](formatting/client-side-and-server-side-formatting-sqlxml-4-0.md)  
+ [Formatação do lado do cliente e do lado do servidor &#40;SQLXML 4,0&#41;](formatting/client-side-and-server-side-formatting-sqlxml-4-0.md)  
  Fornece informações e comparações da formatação do cliente e do servidor, incluindo o comando XML FOR para a criação de documentos XML.  
   
  [Esquemas XSD anotados em SQLXML 4.0](annotated-xsd-schemas/annotated-xsd-schemas-in-sqlxml-4-0.md)  
@@ -54,7 +54,7 @@ ms.locfileid: "66012231"
  [Usando diagramas de atualização para modificar dados no SQLXML 4.0](../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/using-updategrams-to-modify-data-in-sqlxml-4-0.md)  
  Fornece informações sobre diagramas de atualização, que modificam os dados em um banco de dados trabalhando nas exibições XML fornecidas pelos esquemas XSD (ou XDR) anotados.  
   
- [Executar o carregamento em massa de dados XML &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
+ [Executando o carregamento em massa de dados XML &#40;SQLXML 4,0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
  Descreve como fazer carregamento em massa XML no SQLXML 4.0.  
   
  [Data Access Components do SQLXML 4.0](../sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/sqlxml-4-0-data-access-components-sqlxmloledb-provider.md)  
@@ -63,7 +63,7 @@ ms.locfileid: "66012231"
  [Suporte ao .NET Framework do SQLXML 4.0](../../database-engine/dev-guide/sqlxml-4-0-net-framework-support.md)  
  Descreve o suporte do SQLXML 4.0 para .NET Framework.  
   
- [Cache de modelos, XSL e esquemas &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/caching-templates-xsl-and-schemas-sqlxml-4-0.md)  
+ [Caching de modelos, XSL e esquemas &#40;SQLXML 4,0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/caching-templates-xsl-and-schemas-sqlxml-4-0.md)  
  Descreve a funcionalidade de cache fornecida no SQLXML para aprimorar o desempenho.  
   
  [Considerações de segurança do SQLXML 4.0](../sqlxml-annotated-xsd-schemas-xpath-queries/security/sqlxml-4-0-security-considerations.md)  
@@ -72,7 +72,7 @@ ms.locfileid: "66012231"
  [Diretrizes e limitações do SQLXML 4.0](../sqlxml-annotated-xsd-schemas-xpath-queries/guidelines-and-limitations-of-sqlxml-4-0.md)  
  Lista as questões a serem lembradas ao trabalhar com o SQLXML 4.0.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Dados XML &#40;SQL Server&#41;](../xml/xml-data-sql-server.md)  
   
   

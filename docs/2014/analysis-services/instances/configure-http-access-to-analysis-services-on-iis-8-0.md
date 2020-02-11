@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f4f911ebf60852fd4ab11c5813fc567deb2d0c87
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75225397"
 ---
 # <a name="configure-http-access-to-analysis-services-on-internet-information-services-iis-80"></a>Configurar o acesso HTTP ao Analysis Services no IIS (Serviços de Informações da Internet) 8.0
@@ -38,7 +38,7 @@ ms.locfileid: "75225397"
   
  Este tópico inclui as seções a seguir:  
   
--   [Sobre](#bkmk_overview)  
+-   [Visão geral](#bkmk_overview)  
   
 -   [Pré-requisitos](#bkmk_prereq)  
   
@@ -71,7 +71,7 @@ ms.locfileid: "75225397"
 |O IIS e o Analysis Services em computadores diferentes|Para esta topologia, instale o provedor OLE DB do Analysis Services no servidor Web. Você também precisa editar o arquivo msmdpump.ini para especificar o local da instância do Analysis Services no computador remoto.<br /><br /> Esta topologia adiciona uma etapa de autenticação de salto duplo, em que credenciais devem fluir do cliente para o servidor Web, e para o servidor back-end do Analysis Services. Se você estiver usando credenciais do Windows e o NTLM, obterá um erro porque o NTLM não permite a delegação de credenciais de cliente a um segundo servidor. A solução mais comum é usar a autenticação Básica com o protocolo SSL, mas isso exige que usuários forneçam um nome de usuário e uma senha quando acessam o diretório virtual de MSMDPUMP. Uma abordagem mais simples poderia ser a habilitação do Kerberos e a configuração da delegação restrita do Analysis Services para permitir que usuários acessem o Analysis Services de forma transparente. Para obter detalhes, consulte [Configure Analysis Services for Kerberos constrained delegation](configure-analysis-services-for-kerberos-constrained-delegation.md) .<br /><br /> Avalie quais portas devem ser desbloqueadas no Firewall do Windows. Você precisará desbloquear portas em ambos os servidores para permitir o acesso ao aplicativo Web no IIS, e ao Analysis Services em um servidor remoto.|  
 |Conexões de cliente são de um domínio não confiável ou de uma conexão de extranet|Conexões de cliente de um domínio não confiável apresentam restrições adicionais na autenticação. Por padrão, o Analysis Services utiliza a autenticação integrada do Windows; ela exige que os usuários estejam no mesmo domínio que o servidor. Se você tiver usuários de Extranet que se conectam ao IIS de fora do domínio, esses usuários obterão um erro de conexão se o servidor for configurado para usar as configurações padrão.<br /><br /> Soluções alternativas incluem a conexão de usuários Extranet através de um VPN usando credenciais de domínio. Porém, talvez melhor opção seja habilitar a autenticação Básica e o SSL em seu site do IIS.|  
   
-##  <a name="bkmk_prereq"></a>Pré-requisitos  
+##  <a name="bkmk_prereq"></a> Pré-requisitos  
  As instruções neste artigo presumem que o IIS já está configurado e que o Analysis Services já está instalado. O Windows Server 2012 é fornecido com o IIS 8.x como uma função de servidor que pode ser habilitada no sistema.  
   
  **Configuração extra no IIS 8,0**  

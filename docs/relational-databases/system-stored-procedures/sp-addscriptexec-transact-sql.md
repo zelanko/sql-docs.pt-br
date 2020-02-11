@@ -16,18 +16,18 @@ ms.assetid: 1627db41-6a80-45b6-b0b9-c0b7f9a1c886
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e8ae792ba7f8422e841abbbe2f80b096497df993
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68022453"
 ---
-# <a name="spaddscriptexec-transact-sql"></a>sp_addscriptexec (Transact-SQL)
+# <a name="sp_addscriptexec-transact-sql"></a>sp_addscriptexec (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Posta um script SQL (arquivo .sql ) em todos os Assinantes de uma publicação. Esse procedimento armazenado é executado no Publicador, no banco de dados publicador.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,45 +40,45 @@ sp_addscriptexec [ @publication = ] publication
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` É o nome da publicação. *publicação* está **sysname**, sem padrão.  
+`[ @publication = ] 'publication'`É o nome da publicação. a *publicação* é **sysname**, sem padrão.  
   
-`[ @scriptfile = ] 'scriptfile'` É o caminho completo para o arquivo de script SQL. *ScriptFile* está **nvarchar (4000)** , sem padrão.  
+`[ @scriptfile = ] 'scriptfile'`É o caminho completo para o arquivo de script SQL. *scriptfile* é **nvarchar (4000)**, sem padrão.  
   
-`[ @skiperror = ] 'skiperror'` Indica se o Distribution Agent ou Merge Agent deve parar quando um erro é encontrado durante o processamento de script. *SkipError* está **bit**, com um padrão de 0.  
+`[ @skiperror = ] 'skiperror'`Indica se o Agente de Distribuição ou Agente de Mesclagem deve parar quando um erro é encontrado durante o processamento do script. *Skiperror* é **bit**, com um padrão de 0.  
   
- **0** = o agente irá parar.  
+ **0** = o agente será interrompido.  
   
  **1** = o agente continua o script e ignora o erro.  
   
-`[ @publisher = ] 'publisher'` Especifica um não [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *Publisher* está **sysname**, com um padrão NULL.  
+`[ @publisher = ] 'publisher'`Especifica um não [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicador. o *Publicador* é **sysname**, com um padrão de NULL.  
   
 > [!NOTE]  
->  *Publisher* não deve ser usado durante a publicação de um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  
+>  o *Publicador* não deve ser usado ao publicar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a partir de um Publicador.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
 ## <a name="remarks"></a>Comentários  
- **sp_addscriptexec** é usado em replicação de mesclagem e de replicação transacional.  
+ **sp_addscriptexec** é usado na replicação transacional e na replicação de mesclagem.  
   
  **sp_addscriptexec** não é usado para replicação de instantâneo.  
   
- Para usar **sp_addscriptexec**, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conta de serviço deve ter de leitura e permissões de gravação em que o instantâneo local e permissão de leitura no local onde os scripts são armazenadas.  
+ Para usar **sp_addscriptexec**, a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conta de serviço deve ter permissões de leitura e gravação no local do instantâneo e permissões de leitura no local onde os scripts são armazenados.  
   
- O [utilitário sqlcmd](../../tools/sqlcmd-utility.md) é usado para executar o script no assinante, e o script é executado no contexto de segurança usado pelo Distribution Agent ou Merge Agent ao conectar-se ao banco de dados de assinatura. Quando o agente é executado em uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o [utilitário osql](../../tools/osql-utility.md) é usado em vez de [sqlcmd](../../tools/sqlcmd-utility.md).  
+ O [utilitário sqlcmd](../../tools/sqlcmd-utility.md) é usado para executar o script no Assinante, e o script é executado no contexto de segurança usado pelo Agente de Distribuição ou agente de mesclagem ao se conectar ao banco de dados de assinatura. Quando o agente é executado em uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o [utilitário osql](../../tools/osql-utility.md) é usado em vez de [sqlcmd](../../tools/sqlcmd-utility.md).  
   
- **sp_addscriptexec** é útil para aplicar scripts nos assinantes e usa [sqlcmd](../../tools/sqlcmd-utility.md) para aplicar o conteúdo do script no assinante. Porém, como as configurações de Assinante podem variar, scripts testados antes da postagem no Publicador ainda podem provocar erros em um Assinante. *skiperror* fornece a capacidade de ter o Distribution Agent ou Merge Agent ignore erros e continuar se houver. Use [sqlcmd](../../tools/sqlcmd-utility.md) para testar scripts antes de executar **sp_addscriptexec**.  
+ **sp_addscriptexec** é útil na aplicação de scripts aos assinantes e usa o [sqlcmd](../../tools/sqlcmd-utility.md) para aplicar o conteúdo do script ao Assinante. Porém, como as configurações de Assinante podem variar, scripts testados antes da postagem no Publicador ainda podem provocar erros em um Assinante. o *skiperror* fornece a capacidade de ter o Agente de Distribuição ou agente de mesclagem ignorar erros e continuar. Use o [sqlcmd](../../tools/sqlcmd-utility.md) para testar scripts antes de executar o **sp_addscriptexec**.  
   
 > [!NOTE]  
 >  Erros ignorados continuarão sendo registrados no histórico do Agente para referência.  
   
- Usando o **sp_addscriptexec** para lançar um arquivo de script para publicações usando FTP para entrega de instantâneo só tem suporte para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinantes.  
+ O uso de **sp_addscriptexec** para postar um arquivo de script para publicações usando o FTP para entrega de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instantâneo só tem suporte para assinantes.  
   
 ## <a name="permissions"></a>Permissões  
- Somente os membros dos **sysadmin** função de servidor fixa ou **db_owner** banco de dados fixa podem executar **sp_addscriptexec**.  
+ Somente os membros da função de servidor fixa **sysadmin** ou **db_owner** função de banco de dados fixa podem ser executados **sp_addscriptexec**.  
   
-## <a name="see-also"></a>Consulte também  
- [Executar Scripts durante a sincronização &#40;programação de Transact-SQL de replicação&#41;](../../relational-databases/replication/execute-scripts-during-synchronization-replication-transact-sql-programming.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Executar scripts durante a sincronização &#40;Programação Transact-SQL de replicação&#41;](../../relational-databases/replication/execute-scripts-during-synchronization-replication-transact-sql-programming.md)   
  [Sincronizar dados](../../relational-databases/replication/synchronize-data.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

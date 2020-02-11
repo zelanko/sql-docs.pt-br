@@ -1,5 +1,5 @@
 ---
-title: Conectar-se ao banco de dados do DB2 (DB2ToSQL) | Microsoft Docs
+title: Conectando-se ao banco de dados DB2 (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,104 +10,104 @@ ms.assetid: 5eb5801d-f0c3-4127-97c0-0b1ef49f4844
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: b49e5f53e1efbff6febe37a6f3d02fbb3e9cfc05
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68141065"
 ---
-# <a name="connecting-to-db2-database-db2tosql"></a>Conectar-se ao banco de dados do DB2 (DB2ToSQL)
-Migrar bancos de dados do DB2 para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], você deve se conectar ao banco de dados DB2 que você deseja migrar. Quando você se conectar, o SSMA obtém metadados sobre todos os esquemas do DB2 e depois o exibe no painel Gerenciador de metadados do DB2. O SSMA armazena informações sobre o servidor de banco de dados, mas não armazena as senhas.  
+# <a name="connecting-to-db2-database-db2tosql"></a>Conectando-se ao banco de dados DB2 (DB2ToSQL)
+Para migrar bancos de dados DB2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]para o, você deve se conectar ao banco de dados DB2 que deseja migrar. Quando você se conecta, o SSMA obtém metadados sobre todos os esquemas do DB2 e, em seguida, exibe-os no painel do Gerenciador de metadados do DB2. O SSMA armazena informações sobre o servidor de banco de dados, mas não armazena senhas.  
   
-Sua conexão ao banco de dados permanece ativa até você fechar o projeto. Quando você reabrir o projeto, você deve se reconectar se você quiser que uma conexão ativa para o banco de dados.  
+A conexão com o banco de dados permanece ativa até que você feche o projeto. Quando você reabrir o projeto, deverá se reconectar se quiser uma conexão ativa com o banco de dados.  
   
-Metadados sobre o banco de dados do DB2 não é atualizado automaticamente. Em vez disso, se você quiser atualizar os metadados no Gerenciador de metadados do DB2, você deve atualizá-lo manualmente. Para obter mais informações, consulte a seção "Atualizando metadados do DB2" mais adiante neste tópico.  
+Os metadados sobre o banco de dados DB2 não são atualizados automaticamente. Em vez disso, se você quiser atualizar os metadados no Gerenciador de metadados do DB2, será necessário atualizá-lo manualmente. Para obter mais informações, consulte a seção "Atualizando metadados do DB2" mais adiante neste tópico.  
   
-## <a name="required-db2-permissions"></a>Permissões necessárias do DB2  
-Autorização de usuário define a lista dos comandos e objetos que estão disponíveis para um usuário. Essa lista, assim, controla as ações do usuário. No DB2, há grupos predeterminados de privilégios para autorização, no nível de instância e no nível de um banco de dados do DB2. Isso permite que o SSMA obter metadados de esquemas de propriedade do usuário está se conectando. Para obter metadados para objetos em outros esquemas e, em seguida, converter objetos nesses esquemas, a conta deve ter as seguintes permissões:  
+## <a name="required-db2-permissions"></a>Permissões do DB2 necessárias  
+A autorização do usuário define a lista de comandos e objetos que estão disponíveis para um usuário. Assim, essa lista controla as ações do usuário. No DB2, há grupos de privilégios predeterminados para autorização, tanto no nível da instância quanto no nível de um banco de dados DB2. Isso permite que o SSMA obtenha metadados de esquemas de Propriedade do usuário que está se conectando. Para obter metadados de objetos em outros esquemas e, em seguida, converter objetos nesses esquemas, a conta deve ter as seguintes permissões:  
   
--   Acesso de esquema para a migração de esquema normalmente é concedido a público, a menos que a palavra-chave RESTRICT foi usada na criação  
+-   O acesso ao esquema para migração de esquema normalmente é concedido a público, a menos que a palavra-chave restrict tenha sido usada na criação  
   
--   Acesso a dados para migração de dados requer DATAACCESS  
+-   O acesso a dados para migração de dados requer o acesso ao DataAccess  
   
-## <a name="establishing-a-connection-to-db2"></a>Estabelecer uma Conexão para o DB2  
-Quando você se conectar a um banco de dados, o SSMA lê os metadados do banco de dados e, em seguida, adiciona esses metadados ao arquivo de projeto. Esses metadados são usados pelo SSMA quando ele converte objetos a serem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sintaxe, e quando ele migra dados para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Você pode procurar esses metadados no painel Gerenciador de metadados do DB2 e examine as propriedades dos objetos de banco de dados individuais.  
+## <a name="establishing-a-connection-to-db2"></a>Estabelecendo uma conexão com o DB2  
+Quando você se conecta a um banco de dados, o SSMA lê os metadados do banco de dados e, em seguida, adiciona esses metadados ao arquivo de projeto. Esses metadados são usados pelo SSMA quando convertem objetos em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sintaxe e quando migra dados para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o. Você pode procurar esses metadados no painel do Gerenciador de metadados do DB2 e examinar as propriedades de objetos de banco de dados individuais.  
   
 > [!IMPORTANT]  
-> Antes de tentar se conectar, certifique-se de que o servidor de banco de dados está em execução e pode aceitar conexões.  
+> Antes de tentar se conectar, verifique se o servidor de banco de dados está em execução e pode aceitar conexões.  
   
 **Para se conectar ao DB2**  
   
-1.  Sobre o **arquivo** menu, selecione **conectar ao DB2**.  
+1.  No menu **arquivo** , selecione **conectar-se ao DB2**.  
   
-    Se você se conectado anteriormente ao DB2, o nome do comando será **reconectar-se ao DB2**.  
+    Se você se conectou anteriormente ao DB2, o nome do comando será **reconectado ao DB2**.  
   
-2.  No **provedor** caixa, você verá o **OLE DB Provider** que atualmente é o único provedor de acesso de cliente do DB2.  
+2.  Na caixa **provedor** , você verá o **provedor de OLE DB** que atualmente é o único provedor de acesso para cliente DB2.  
   
-3.  No **Manager** caixa, você pode selecionar um **Db2 para zOs**, ou **DB2 para LUW**  
+3.  Na caixa **Gerenciador** , você pode selecionar **DB2 para zOs**ou **DB2 para LUW**  
   
-4.  No **modo** , selecione qualquer uma **modo padrão**, ou **modo de cadeia de caracteres de Conexão**.  
+4.  Na caixa **modo** , selecione o modo **padrão**ou o **modo de cadeia de conexão**.  
   
-    Use o modo padrão para especificar o nome do servidor e a porta. Use o modo de nome de serviço para especificar o nome do serviço DB2 manualmente. Use o modo de cadeia de caracteres de conexão para fornecer uma cadeia de conexão completa.  
+    Use o modo padrão para especificar o nome do servidor e a porta. Use o modo de nome de serviço para especificar manualmente o nome do serviço DB2. Use o modo de cadeia de conexão para fornecer uma cadeia de conexão completa.  
   
-5.  Se você selecionar **o modo padrão**, forneça os seguintes valores:  
+5.  Se você selecionar **modo padrão**, forneça os seguintes valores:  
   
-    -   No **nome do servidor** caixa, digite ou selecione o nome ou endereço IP do servidor de banco de dados.  
+    -   Na caixa **nome do servidor** , digite ou selecione o nome ou endereço IP do servidor de banco de dados.  
   
-    -   Se o servidor de banco de dados não estiver configurado para aceitar conexões no padrão da porta (1521), insira o número da porta que é usado para conexões do DB2 na **porta do servidor** caixa.  
+    -   Se o servidor de banco de dados não estiver configurado para aceitar conexões na porta padrão (1521), insira o número da porta que é usado para conexões DB2 na caixa **porta do servidor** .  
   
-    -   No **porta do servidor** , digite o número da porta TCP/IP.  
+    -   Na caixa **porta do servidor** , digite o número da porta TCP/IP.  
   
-    -   No **Initial Catalog** , digite o nome do banco de dados  
+    -   Na caixa **catálogo inicial** , insira o nome do banco de dados  
   
-    -   No **nome de usuário** , digite uma conta do DB2 que tem as permissões necessárias.  
+    -   Na caixa **nome de usuário** , insira uma conta do DB2 que tenha as permissões necessárias.  
   
-    -   No **senha** , digite a senha para o nome de usuário especificado.  
+    -   Na caixa **senha** , digite a senha para o nome de usuário especificado.  
   
-6.  Se você selecionar **modo de cadeia de caracteres de Conexão**, forneça uma cadeia de conexão na **cadeia de caracteres de Conexão** caixa.  
+6.  Se você selecionar **modo de cadeia de conexão**, forneça uma cadeia de conexão na caixa **cadeia de conexão** .  
   
-    O exemplo a seguir mostra uma cadeia de caracteres de conexão do OLE DB:  
+    O exemplo a seguir mostra uma cadeia de conexão OLE DB:  
   
     `Provider=OraOLEDB.DB2;Data Source=MyDB2DB;User Id=myUsername;Password=myPassword;`  
   
-    O exemplo a seguir mostra uma cadeia de caracteres de conexão de cliente DB2 que usa segurança integrada:  
+    O exemplo a seguir mostra uma cadeia de conexão do cliente DB2 que usa segurança integrada:  
   
     `Data Source=MyDB2DB;Integrated Security=yes;`  
   
     Para obter mais informações, consulte [conectar-se ao Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md).  
   
-## <a name="reconnecting-to-db2"></a>Reconectar-se ao DB2  
-Sua conexão com o servidor de banco de dados permanece ativa até você fechar o projeto. Quando você reabrir o projeto, você deve se reconectar se você quiser que uma conexão ativa para o banco de dados. Você pode trabalhar offline até que você deseja atualizar os metadados, carregar objetos de banco de dados em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], e migrar dados.  
+## <a name="reconnecting-to-db2"></a>Reconectando ao DB2  
+A conexão com o servidor de banco de dados permanece ativa até que você feche o projeto. Quando você reabrir o projeto, deverá se reconectar se quiser uma conexão ativa com o banco de dados. Você pode trabalhar offline até que queira atualizar os metadados, carregar objetos de banco [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de dados no e migrar os mesmos.  
   
-## <a name="refreshing-db2-metadata"></a>Atualizar metadados do DB2  
-Metadados sobre o banco de dados do DB2 não é atualizado automaticamente. Os metadados no Gerenciador de metadados do DB2 são um instantâneo dos metadados quando conectado pela primeira vez ou a última vez que você atualizou metadados manualmente. Você pode atualizar manualmente os metadados para todos os esquemas, um único esquema ou objetos de banco de dados individuais.  
+## <a name="refreshing-db2-metadata"></a>Atualizando metadados do DB2  
+Os metadados sobre o banco de dados DB2 não são atualizados automaticamente. Os metadados no Gerenciador de metadados do DB2 são um instantâneo dos metadados quando você se conecta pela primeira vez ou a última atualização dos metadados. Você pode atualizar os metadados manualmente para todos os esquemas, um único esquema ou objetos de banco de dados individuais.  
   
-**Para atualizar os metadados**  
+**Para atualizar metadados**  
   
 1.  Certifique-se de que você está conectado ao banco de dados.  
   
-2.  No Gerenciador de metadados do DB2, selecione a caixa de seleção ao lado de cada objeto de esquema ou banco de dados que você deseja atualizar.  
+2.  No Gerenciador de metadados do DB2, marque a caixa de seleção ao lado de cada esquema ou objeto de banco de dados que você deseja atualizar.  
   
-3.  Clique com botão direito **esquemas**, ou o esquema individual ou o banco de dados de objeto e, em seguida, selecione **atualização do banco de dados**.  
+3.  Clique com o botão direito do mouse em **esquemas**ou o esquema individual ou objeto de banco de dados e selecione **Atualizar do banco de dados**.  
   
-    Se você não tiver uma conexão ativa, o SSMA exibirá os **conectar-se ao DB2** caixa de diálogo para que você pode se conectar.  
+    Se você não tiver uma conexão ativa, o SSMA exibirá a caixa de diálogo **conectar ao DB2** para que você possa se conectar.  
   
-4.  Na atualização da caixa de diálogo banco de dados, especifica quais objetos a ser atualizada.  
+4.  Na caixa de diálogo atualizar do banco de dados, especifique quais objetos atualizar.  
   
-    -   Para atualizar um objeto, clique o **Active** campo adjacente ao objeto até que uma seta é exibida.  
+    -   Para atualizar um objeto, clique no campo **ativo** adjacente ao objeto até que uma seta seja exibida.  
   
-    -   Para impedir que um objeto que está sendo atualizado, clique no **Active** campo adjacente ao objeto até um **X** é exibida.  
+    -   Para impedir que um objeto seja atualizado, clique no campo **ativo** adjacente ao objeto até que um **X** seja exibido.  
   
-    -   Para atualizar ou recusar uma categoria de objetos, clique no **Active** campo adjacente para a pasta de categoria.  
+    -   Para atualizar ou recusar uma categoria de objetos, clique no campo **ativo** adjacente à pasta Category.  
   
-    Para exibir as definições de codificação de cores, clique o **legenda** botão.  
+    Para exibir as definições da codificação de cores, clique no botão **legenda** .  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="next-step"></a>Próxima etapa  
   
--   É a próxima etapa no processo de migração [conectando ao SQL Server](https://msdn.microsoft.com/b59803cb-3cc6-41cc-8553-faf90851410e).  
+-   A próxima etapa do processo de migração é [conectar-se a SQL Server](https://msdn.microsoft.com/b59803cb-3cc6-41cc-8553-faf90851410e).  
   
-## <a name="see-also"></a>Consulte também  
-[Bancos de dados do DB2 migrando para o SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
+## <a name="see-also"></a>Consulte Também  
+[Migrar bancos de dados DB2 para SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   

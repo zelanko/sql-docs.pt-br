@@ -1,5 +1,5 @@
 ---
-title: Opções (página Gerenciador de scripts de objeto do SQL Server) | Microsoft Docs
+title: Opções (página de Pesquisador de Objetos do SQL Server de scripts) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -14,38 +14,38 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 81e4bafbd596894a8cecbeb707a5d8be698c1f3b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63031930"
 ---
-# <a name="options-sql-server-object-explorer-scripting-page"></a>Opções (página Gerenciador de scripts de objeto do SQL Server)
+# <a name="options-sql-server-object-explorer-scripting-page"></a>Opções (página de Pesquisador de Objetos do SQL Server de scripts)
   Use esta página para definir opções de script que se aplicam aos seguintes comandos nos menus de contexto de objeto no **Pesquisador de Objetos**:  
   
 -   Comandos **Editar** para tabelas de usuário e exibições.  
   
--   **Script \<objeto > como** comandos para objetos criados pelo usuário.  
+-   **Script \<de objeto> como** comandos para objetos criados pelo usuário.  
   
 -   Comando **Modificar** para objetos criados pelo usuário.  
   
 -   Esta página também define os padrões da opção de script para o **Assistente para Gerar Scripts do SQL Server**.  
   
 ## <a name="remarks"></a>Comentários  
- O **edite** e **modificar** comandos podem produzir resultados diferentes da **Script \<objeto > como** comando para a mesma configuração de opção. Os comandos **Editar** e **Modificar** destinam-se a modificar objetos no banco de dados atual durante uma sessão do Editor de Consultas. O **Script \<objeto > como** comando é projetado para gerar um script para que possa ser usado posteriormente para criar objetos.  
+ Os comandos **Editar** e **Modificar** podem produzir resultados diferentes do **objeto \<script> como** comando para a mesma configuração de opção. Os comandos **Editar** e **Modificar** destinam-se a modificar objetos no banco de dados atual durante uma sessão do Editor de Consultas. O **objeto \<script> como** Command foi projetado para gerar um script para que ele possa ser usado posteriormente para criar objetos.  
   
 ## <a name="options"></a>Opções  
  Especifique opções de script selecionando as configurações disponíveis na lista à direita de cada opção.  
   
-### <a name="general-scripting-options"></a>Opções gerais de script  
+### <a name="general-scripting-options"></a>Opções de Script Gerais  
  **Delimitar instruções individuais**  
  Separa instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] individuais usando um separador de lote. Para alterar o separador de lote padrão para o **Editor de Consultas**, selecione **Ferramentas**/**Opções**/**Execução de Consulta**/**SQL Server**/**Geral**/**Separador de lote**. O padrão é Falso. Para obter mais informações, consulte [GO &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/sql-server-utilities-statements-go).  
   
  **Incluir cabeçalhos descritivos**  
- Adiciona comentários descritivos ao script separando o script em seções para cada objeto. O padrão é True. Para obter mais informações, consulte [comentário &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/comment-transact-sql).  
+ Adiciona comentários descritivos ao script separando o script em seções para cada objeto. O padrão é True. Para obter mais informações, consulte [comentário &#40;&#41;Transact-SQL ](/sql/t-sql/language-elements/comment-transact-sql).  
   
  **Incluir opções vardecimal**  
- Inclui as opções de armazenamento vardecimal. O padrão é Falso. Para obter mais informações, consulte e [sp_db_vardecimal_storage_format &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql).  
+ Inclui as opções de armazenamento vardecimal. O padrão é Falso. Para obter mais informações, consulte e [sp_db_vardecimal_storage_format &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql).  
   
  **Controle de alteração de script**  
  Inclui informações de controle de alteração no script.  
@@ -54,17 +54,17 @@ ms.locfileid: "63031930"
  Cria um script que pode ser executado na versão selecionada do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Recursos que são novos no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] não podem ter seu script executado em versões anteriores. Alguns scripts criados para o [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] não podem ser executados em servidores que estão executando uma versão anterior do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ou em um banco de dados que tem uma [configuração de nível de compatibilidade do banco de dados](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)anterior.  
   
  **Catálogos de texto completo de script**  
- Inclui um script para catálogos de texto completo. O padrão é Falso. Para obter mais informações, consulte [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql).  
+ Inclui um script para catálogos de texto completo. O padrão é Falso. Para obter mais informações, consulte [criar catálogo de texto completo &#40;&#41;Transact-SQL ](/sql/t-sql/statements/create-fulltext-catalog-transact-sql).  
   
- **USO de script \<banco de dados >**  
+ **>de \<banco de dados de uso de script**  
  Adiciona a instrução USE DATABASE ao script para criar objetos do banco de dados no contexto do banco de dados do **Pesquisador de Objetos** atual. Quando se espera que o script seja usado em um banco de dados diferente, selecione Falso para omitir. O padrão é True. Para obter mais informações, veja [USE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/use-transact-sql).  
   
 ### <a name="object-scripting-options"></a>Opções de script de objeto  
  **Gerar script para objetos dependentes**  
  Gera um script para objetos adicionais que são necessários quando o script para o objeto selecionado é executado. O padrão é Falso.  
   
- **Incluir cláusula If NOT EXISTS**  
- Inclui uma instrução para verificar se cada objeto não existe no banco de dados antes de tentar criar o objeto. O padrão é Falso. Para obter mais informações, consulte [IF... OUTRA &#40;Transact-SQL&#41; ](/sql/t-sql/language-elements/if-else-transact-sql) e [EXISTS &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/exists-transact-sql).  
+ **Incluir cláusula IF NOT EXISTs**  
+ Inclui uma instrução para verificar se cada objeto não existe no banco de dados antes de tentar criar o objeto. O padrão é Falso. Para obter mais informações, consulte [If... Caso contrário &#40;&#41;Transact-SQL](/sql/t-sql/language-elements/if-else-transact-sql) e [exista &#40;&#41;do TRANSACT-SQL ](/sql/t-sql/language-elements/exists-transact-sql).  
   
  **Qualificar nomes de objetos do esquema**  
  Qualifica nomes de objeto com o esquema de objeto. O padrão é Falso. Para obter mais informações, consulte [Criar um esquema de banco de dados](../../relational-databases/security/authentication-access/create-a-database-schema.md).  
@@ -76,13 +76,13 @@ ms.locfileid: "63031930"
  Inclui o proprietário no script gerado. O padrão é Falso.  
   
  **Permissões de script**  
- Inclui permissões em objetos de banco de dados do script. O padrão é True. Para obter mais informações, consulte [permissões &#40;mecanismo de banco de dados&#41;](../../relational-databases/security/permissions-database-engine.md).  
+ Inclui permissões em objetos de banco de dados do script. O padrão é True. Para obter mais informações, consulte [permissões &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/permissions-database-engine.md).  
   
 ### <a name="tableview-options"></a>Opções de tabela/exibição  
  As opções a seguir são válidas somente para scripts de tabelas ou exibições.  
   
  **Converter tipos de dados definidos pelo usuário em tipos de base**  
- Converte tipos de dados definidos pelo usuário em tipos de base a partir dos quais foram criados. Use Verdadeiro quando os tipos de dados definidos pelo usuário no banco de dados de origem não existirem no banco de dados em que o script será executado. Use Falso para manter os tipos de dados definidos pelo usuário. O padrão é Falso. Para obter mais informações, consulte [CREATE TYPE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-type-transact-sql).  
+ Converte tipos de dados definidos pelo usuário em tipos de base a partir dos quais foram criados. Use Verdadeiro quando os tipos de dados definidos pelo usuário no banco de dados de origem não existirem no banco de dados em que o script será executado. Use Falso para manter os tipos de dados definidos pelo usuário. O padrão é Falso. Para obter mais informações, consulte [criar tipo &#40;&#41;Transact-SQL ](/sql/t-sql/statements/create-type-transact-sql).  
   
  **Gerar comandos SET ANSI PADDING**  
  Adiciona a instrução SET ANSI_PADDING antes e depois de cada instrução CREATE TABLE. O padrão é True. Para obter mais informações, veja [SET ANSI_PADDING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-padding-transact-sql).  
@@ -97,7 +97,7 @@ ms.locfileid: "63031930"
  Adiciona o nome de esquema a referências de tabela para restrições FOREIGN KEY. O padrão é True.  
   
  **Padrões e regras associados por script**  
- Inclui as chamadas dos procedimentos armazenados associados **sp_bindefault** e **sp_bindrule** . O padrão é True. Para obter mais informações, consulte [sp_bindefault &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-bindefault-transact-sql) e [sp_bindrule &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-bindrule-transact-sql).  
+ Inclui as chamadas dos procedimentos armazenados associados **sp_bindefault** e **sp_bindrule** . O padrão é True. Para obter mais informações, consulte [sp_bindefault &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-bindefault-transact-sql) e [sp_bindrule &#40;transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-bindrule-transact-sql).  
   
  **Restrições de script CHECK**  
  Adiciona [Restrições CHECK](../../relational-databases/tables/unique-constraints-and-check-constraints.md) ao script. O padrão é True.  
@@ -112,13 +112,13 @@ ms.locfileid: "63031930"
  Inclui [Restrições FOREIGN KEY](../../relational-databases/tables/primary-and-foreign-key-constraints.md) no script. O padrão é Falso.  
   
  **Índices de texto completo do script**  
- Inclui índices de texto completo no script. O padrão é Falso. Para obter mais informações, consulte [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql).  
+ Inclui índices de texto completo no script. O padrão é Falso. Para obter mais informações, consulte [criar índice de texto completo &#40;&#41;Transact-SQL ](/sql/t-sql/statements/create-fulltext-index-transact-sql).  
   
  **Índices de script**  
  Inclui índices clusterizados, não clusterizados e XML no script. O padrão é True. Para obter mais informações, consulte [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql).  
   
  **Esquemas de partição de script**  
- Inclui esquemas de partição de tabela no script. O padrão é Falso. Para obter mais informações, consulte [CREATE PARTITION SCHEME &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-partition-scheme-transact-sql).  
+ Inclui esquemas de partição de tabela no script. O padrão é Falso. Para obter mais informações, consulte [criar esquema de partição &#40;&#41;Transact-SQL ](/sql/t-sql/statements/create-partition-scheme-transact-sql).  
   
  **Chaves primárias de script**  
  Inclui [Restrições de chave primária e estrangeira](../../relational-databases/tables/primary-and-foreign-key-constraints.md) no script. O padrão é True.  
@@ -136,9 +136,9 @@ ms.locfileid: "63031930"
  Declara colunas de exibição em cabeçalhos de exibição. O padrão é Falso. Para obter mais informações, veja [CREATE VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-view-transact-sql).  
   
  **ScriptDriIncludeSystemNames**  
- Inclui nomes de restrições geradas pelo sistema para forçar a integridade referencial declarativa. O padrão é Falso. Para obter mais informações, consulte [REFERENTIAL_CONSTRAINTS &#40;Transact-SQL&#41;](/sql/relational-databases/system-information-schema-views/referential-constraints-transact-sql).  
+ Inclui nomes de restrições geradas pelo sistema para forçar a integridade referencial declarativa. O padrão é Falso. Para obter mais informações, consulte [REFERENTIAL_CONSTRAINTS &#40;&#41;Transact-SQL ](/sql/relational-databases/system-information-schema-views/referential-constraints-transact-sql).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Gerar scripts &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/generate-scripts-sql-server-management-studio.md)  
   
   

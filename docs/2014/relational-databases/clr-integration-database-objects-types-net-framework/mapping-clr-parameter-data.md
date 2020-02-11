@@ -27,10 +27,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 17eeefbe125722c666f9f56394028da8c66a66b3
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75232276"
 ---
 # <a name="mapping-clr-parameter-data"></a>Mapeando dados de parâmetro CLR
@@ -38,47 +38,47 @@ ms.locfileid: "75232276"
   
 ||||  
 |-|-|-|  
-|**Tipo de dados do SQL Server**|Tipo (em System.Data.SqlTypes ou Microsoft.SqlServer.Types)|**Tipo de dados CLR (.NET Framework)**|  
+|**Tipo de dados SQL Server**|Tipo (em System.Data.SqlTypes ou Microsoft.SqlServer.Types)|**Tipo de dados CLR (.NET Framework)**|  
 |`bigint`|`SqlInt64`|**Int64,>\<Int64 anulável**|  
 |`binary`|`SqlBytes, SqlBinary`|`Byte[]`|  
 |`bit`|`SqlBoolean`|**Booliano,\<booleano anulável>**|  
-|`char`|Não|Não|  
-|`cursor`|Não|Não|  
+|`char`|Nenhum|Nenhum|  
+|`cursor`|Nenhum|Nenhum|  
 |`date`|`SqlDateTime`|**DateTime, data\<e hora anuláveis>**|  
 |`datetime`|`SqlDateTime`|**DateTime, data\<e hora anuláveis>**|  
-|`datetime2`|Não|**DateTime, data\<e hora anuláveis>**|  
+|`datetime2`|Nenhum|**DateTime, data\<e hora anuláveis>**|  
 |`DATETIMEOFFSET`|`None`|**DateTimeOffset, DateTimeOffset\<anulável>**|  
 |`decimal`|`SqlDecimal`|**Decimal, decimal\<anulável>**|  
 |`float`|`SqlDouble`|**Duplo,>\<duplo anulável**|  
-|`geography`|`SqlGeography`<br /><br /> `SqlGeography`é definido em Microsoft. SqlServer. Types. dll, que é instalado com o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]SQL Server e pode ser baixado do [Feature Pack](https://www.microsoft.com/download/details.aspx?id=53164).|Não|  
-|`geometry`|`SqlGeometry`<br /><br /> `SqlGeometry`é definido em Microsoft. SqlServer. Types. dll, que é instalado com o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]SQL Server e pode ser baixado do [Feature Pack](https://www.microsoft.com/download/details.aspx?id=53164).|Não|  
-|`hierarchyid`|`SqlHierarchyId`<br /><br /> `SqlHierarchyId`é definido em Microsoft. SqlServer. Types. dll, que é instalado com o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]SQL Server e pode ser baixado do [Feature Pack](https://www.microsoft.com/download/details.aspx?id=53164).|Não|  
-|`image`|Não|Não|  
+|`geography`|`SqlGeography`<br /><br /> `SqlGeography`é definido em Microsoft. SqlServer. Types. dll, que é instalado com o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]SQL Server e pode ser baixado do [Feature Pack](https://www.microsoft.com/download/details.aspx?id=53164).|Nenhum|  
+|`geometry`|`SqlGeometry`<br /><br /> `SqlGeometry`é definido em Microsoft. SqlServer. Types. dll, que é instalado com o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]SQL Server e pode ser baixado do [Feature Pack](https://www.microsoft.com/download/details.aspx?id=53164).|Nenhum|  
+|`hierarchyid`|`SqlHierarchyId`<br /><br /> `SqlHierarchyId`é definido em Microsoft. SqlServer. Types. dll, que é instalado com o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]SQL Server e pode ser baixado do [Feature Pack](https://www.microsoft.com/download/details.aspx?id=53164).|Nenhum|  
+|`image`|Nenhum|Nenhum|  
 |`int`|`SqlInt32`|**Int32,>\<Int32 anulável**|  
 |`money`|`SqlMoney`|**Decimal, decimal\<anulável>**|  
 |`nchar`|`SqlChars, SqlString`|`String, Char[]`|  
-|`ntext`|Não|Não|  
+|`ntext`|Nenhum|Nenhum|  
 |`numeric`|`SqlDecimal`|**Decimal, decimal\<anulável>**|  
 |`nvarchar`|`SqlChars, SqlString`<br /><br /> 
   `SQLChars` é uma melhor correspondência para transferência e acesso a dados, e `SQLString` é uma melhor correspondência para executar operações de cadeia de caracteres.|`String, Char[]`|  
 |`nvarchar(1), nchar(1)`|`SqlChars, SqlString`|**Char, String, Char [], Char\<anulável>**|  
 |`real`|
   `SqlSingle` (o intervalo de `SqlSingle`, no entanto, é maior que `real`)|**Único>Anulável\<**|  
-|`rowversion`|Não|`Byte[]`|  
+|`rowversion`|Nenhum|`Byte[]`|  
 |`smallint`|`SqlInt16`|**Int16, Int16\<anulável>**|  
 |`smallmoney`|`SqlMoney`|**Decimal, decimal\<anulável>**|  
-|`sql_variant`|Não|`Object`|  
-|`table`|Não|Não|  
-|`text`|Não|Não|  
-|`time`|Não|**TimeSpan, TimeSpan\<anulável>**|  
-|`timestamp`|Não|Não|  
+|`sql_variant`|Nenhum|`Object`|  
+|`table`|Nenhum|Nenhum|  
+|`text`|Nenhum|Nenhum|  
+|`time`|Nenhum|**TimeSpan, TimeSpan\<anulável>**|  
+|`timestamp`|Nenhum|Nenhum|  
 |`tinyint`|`SqlByte`|**Byte,>\<de bytes anuláveis**|  
 |`uniqueidentifier`|`SqlGuid`|**GUID, GUID\<anulável>**|  
-|`User-defined type(UDT)`|Não|A mesma classe que é associada ao tipo definido pelo usuário no mesmo assembly ou em um assembly dependente.|  
+|`User-defined type(UDT)`|Nenhum|A mesma classe que é associada ao tipo definido pelo usuário no mesmo assembly ou em um assembly dependente.|  
 |**varbinary**|`SqlBytes, SqlBinary`|`Byte[]`|  
 |`varbinary(1), binary(1)`|`SqlBytes, SqlBinary`|**byte, Byte [],>\<de bytes anuláveis**|  
-|`varchar`|Não|Não|  
-|`xml`|`SqlXml`|Não|  
+|`varchar`|Nenhum|Nenhum|  
+|`xml`|`SqlXml`|Nenhum|  
   
 ## <a name="automatic-data-type-conversion-with-out-parameters"></a>Conversão automática de tipo de dados com parâmetros out  
  Um método CLR pode retornar informações para o código de chamada ou programa marcando um parâmetro input com o modificador `out` (Microsoft Visual C#) ou `<Out()> ByRef` (Microsoft Visual Basic). Se o parâmetro input for um tipo de dados CLR no namespace `System.Data.SqlTypes`, e o programa de chamada especificar seu tipo de dados equivalente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como o parâmetro input, uma conversão de tipo ocorrerá automaticamente quando o método CLR retorna o tipo de dados.  
@@ -111,9 +111,9 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
   
 |||  
 |-|-|  
-|**Tipo de dados CLR (SQL Server)**|**Tipo de dados do SQL Server**|  
-|`Decimal`|smallmoney|  
-|`SqlMoney`|smallmoney|  
+|**Tipo de dados CLR (SQL Server)**|**Tipo de dados SQL Server**|  
+|`Decimal`|SMALLMONEY|  
+|`SqlMoney`|SMALLMONEY|  
 |`Decimal`|money|  
 |`DateTime`|smalldatetime|  
 |`SQLDateTime`|smalldatetime|  

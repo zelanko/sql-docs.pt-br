@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 1588d955e728830da4417160591a5c2b6c231473
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68893501"
 ---
 # <a name="using-set-expressions"></a>Usando expressões de conjunto
@@ -22,7 +22,7 @@ ms.locfileid: "68893501"
   
  A expressão completa de um conjunto consiste em nenhuma ou algumas tuplas especificadas explicitamente, entre chaves:  
   
- {[{ *Tuple_expression* | *Member_Expression* } [, { *Tuple_expression* | *Member_expression* }]...]}  
+ {[{ *Tuple_expression* | *Member_expression* } [, { *Tuple_expression* | *Member_expression* }]...]}  
   
  As expressões de membro especificadas em uma expressão de conjunto são convertidas em expressões de tupla de um membro.  
   
@@ -57,9 +57,9 @@ ms.locfileid: "68893501"
   
  consiste em três tuplas, cada uma contendo duas referências explícitas aos membros da hierarquia Categorias de Produto da dimensão Produto e da hierarquia Calendário da dimensão Data.  
   
- Para obter exemplos de funções que retornam conjuntos, consulte [trabalhando com membros, tuplas e &#40;conjuntos&#41;MDX](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx).  
+ Para obter exemplos de funções que retornam conjuntos, consulte [trabalhando com membros, tuplas e conjuntos &#40;&#41;MDX ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx).  
   
-## <a name="see-also"></a>Consulte também  
- [MDX &#40;de expressões&#41;](../mdx/expressions-mdx.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Expressões &#40;MDX&#41;](../mdx/expressions-mdx.md)  
   
   

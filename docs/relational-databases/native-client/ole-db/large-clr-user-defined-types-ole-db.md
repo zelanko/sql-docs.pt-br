@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: da389befc45fec755e65426850a7f98fd66d119e
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73760043"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>Tipos definidos pelo usuário CLR grandes (OLE DB)
@@ -25,14 +25,14 @@ ms.locfileid: "73760043"
 
   Este tópico aborda as alterações feitas ao OLE DB no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client para dar suporte aos UDTs (tipos definidos pelo usuário) CLR (Common Language Runtime) grandes.  
   
- Para obter mais informações sobre o suporte a UDTs CLR grandes no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, consulte [grandes tipos CLR definidos pelo usuário](../../../relational-databases/native-client/features/large-clr-user-defined-types.md). Para obter um exemplo, consulte [usar UDTS &#40;CLR grandes&#41;OLE DB](../../../relational-databases/native-client-ole-db-how-to/use-large-clr-udts-ole-db.md).  
+ Para obter mais informações sobre o suporte a UDTs CLR [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] grandes no Native Client, consulte [grandes tipos CLR definidos pelo usuário](../../../relational-databases/native-client/features/large-clr-user-defined-types.md). Para obter um exemplo, consulte [usar UDTS CLR grandes &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/use-large-clr-udts-ole-db.md).  
   
 ## <a name="data-format"></a>Formato de Dados  
  O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client usa ~ 0 para representar o comprimento de valores de tamanho ilimitado para tipos de objeto grandes (LOB). ~ 0 também representa o tamanho de UDTs CLR maiores que 8.000 bytes.  
   
  A seguinte tabela mostra o mapeamento de tipo de dados em parâmetros e conjuntos de linhas:  
   
-|Tipo de dados do SQL Server|Tipo de dados OLE DB|Layout de memória|Value|  
+|Tipo de dados do SQL Server|Tipo de dados OLE DB|Layout de memória|Valor|  
 |--------------------------|----------------------|-------------------|-----------|  
 |CLR UDT|DBTYPE_UDT|BYTE[](matriz de bytes\)|132 (oledb.h)|  
   
@@ -75,12 +75,12 @@ ms.locfileid: "73760043"
   
 |Tipo de coluna|DBCOLUMN_TYPE|DBCOLUMN_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE|DBCOLUMN_FLAGS_ISLONG|DBCOLUMNS_ISSEARCHABLE|DBCOLUMN_OCTETLENGTH|  
 |-----------------|--------------------|--------------------------|-------------------------|---------------------|-----------------------------|-----------------------------|---------------------------|  
-|DBTYPE_UDT<br /><br /> (comprimento inferior ou igual a 8.000 bytes)|DBTYPE_UDT|*n*|NULL|NULL|Liberada|DB_ALL_EXCEPT_LIKE|n|  
-|DBTYPE_UDT<br /><br /> (comprimento maior que 8.000 bytes)|DBTYPE_UDT|~0|NULL|NULL|Defina|DB_ALL_EXCEPT_LIKE|0|  
+|DBTYPE_UDT<br /><br /> (comprimento inferior ou igual a 8.000 bytes)|DBTYPE_UDT|*n*|NULO|NULO|Limpar|DB_ALL_EXCEPT_LIKE|n|  
+|DBTYPE_UDT<br /><br /> (comprimento maior que 8.000 bytes)|DBTYPE_UDT|~0|NULO|NULO|Definir|DB_ALL_EXCEPT_LIKE|0|  
   
  As seguintes colunas também são definidas para UDTs:  
   
-|Identificador de coluna|Tipo|Descrição|  
+|Identificador de coluna|Type|DESCRIÇÃO|  
 |-----------------------|----------|-----------------|  
 |DBCOLUMN_UDT_CATALOGNAME|DBTYPE_WSTR|Para colunas de UDT, o nome do catálogo onde o UDT foi definido.|  
 |DBCOLUMN_UDT_SCHEMANAME|DBTYPE_WSTR|Para colunas de UDT, o nome do esquema onde o UDT foi definido.|  
@@ -92,20 +92,20 @@ ms.locfileid: "73760043"
   
 |Tipo de parâmetro|*wType*|*ulColumnSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBCOLUMNFLAGS_ISLONG|  
 |--------------------|-------------|--------------------|------------------|--------------|-----------------------------------------|  
-|DBTYPE_UDT<br /><br /> (comprimento inferior ou igual a 8.000 bytes)|DBTYPE_UDT|*n*|~0|~0|Liberada|  
-|DBTYPE_UDT<br /><br /> (comprimento maior que 8.000 bytes)|DBTYPE_UDT|~0|~0|~0|Defina|  
+|DBTYPE_UDT<br /><br /> (comprimento inferior ou igual a 8.000 bytes)|DBTYPE_UDT|*n*|~0|~0|Limpar|  
+|DBTYPE_UDT<br /><br /> (comprimento maior que 8.000 bytes)|DBTYPE_UDT|~0|~0|~0|Definir|  
   
 ## <a name="columns-rowset-schema-rowsets"></a>Conjunto de linhas COLUMNS (conjuntos de linhas de esquema)  
  Os seguintes valores de coluna são retornados para tipos UDT:  
   
 |Tipo de coluna|DATA_TYPE|COLUMN_FLAGS, DBCOLUMFLAGS_ISLONG|CHARACTER_OCTET_LENGTH|  
 |-----------------|----------------|-----------------------------------------|------------------------------|  
-|DBTYPE_UDT<br /><br /> (comprimento inferior ou igual a 8.000 bytes)|DBTYPE_UDT|Liberada|*n*|  
-|DBTYPE_UDT<br /><br /> (comprimento maior que 8.000 bytes)|DBTYPE_UDT|Defina|0|  
+|DBTYPE_UDT<br /><br /> (comprimento inferior ou igual a 8.000 bytes)|DBTYPE_UDT|Limpar|*n*|  
+|DBTYPE_UDT<br /><br /> (comprimento maior que 8.000 bytes)|DBTYPE_UDT|Definir|0|  
   
  As seguintes colunas adicionais são definidas para UDTs:  
   
-|Identificador de coluna|Tipo|Descrição|  
+|Identificador de coluna|Type|DESCRIÇÃO|  
 |-----------------------|----------|-----------------|  
 |SS_UDT_CATALOGNAME|DBTYPE_WSTR|Para colunas de UDT, o nome do catálogo onde o UDT foi definido.|  
 |SS_UDT_SCHEMANAME|DBTYPE_WSTR|Para colunas de UDT, o nome do esquema onde o UDT foi definido.|  
@@ -121,13 +121,13 @@ ms.locfileid: "73760043"
 |Tipo de dados de associação|UDT para servidor|Não UDT para servidor|UDT de servidor|Não UDT de servidor|  
 |----------------------|-------------------|------------------------|---------------------|--------------------------|  
 |DBTYPE_UDT|Compatível (5)|Erro (1)|Compatível (5)|Erro (4)|  
-|DBTYPE_BYTES|Compatível (5)|N/A|Compatível (5)|N/A|  
-|DBTYPE_WSTR|Com suporte (2), (5)|N/A|Com suporte (3), (5), (6)|N/A|  
-|DBTYPE_BSTR|Com suporte (2), (5)|N/A|Compatível (3), (5)|N/A|  
-|DBTYPE_STR|Com suporte (2), (5)|N/A|Compatível (3), (5)|N/A|  
-|DBTYPE_IUNKNOWN|Compatível (6)|N/A|Compatível (6)|N/A|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Com suporte (5)|N/A|Compatível (3), (5)|N/A|  
-|DBTYPE_VARIANT (VT_BSTR)|Com suporte (2), (5)|N/A|N/A|N/A|  
+|DBTYPE_BYTES|Compatível (5)|N/D|Compatível (5)|N/D|  
+|DBTYPE_WSTR|Com suporte (2), (5)|N/D|Com suporte (3), (5), (6)|N/D|  
+|DBTYPE_BSTR|Com suporte (2), (5)|N/D|Compatível (3), (5)|N/D|  
+|DBTYPE_STR|Com suporte (2), (5)|N/D|Compatível (3), (5)|N/D|  
+|DBTYPE_IUNKNOWN|Compatível (6)|N/D|Compatível (6)|N/D|  
+|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Com suporte (5)|N/D|Compatível (3), (5)|N/D|  
+|DBTYPE_VARIANT (VT_BSTR)|Com suporte (2), (5)|N/D|N/D|N/D|  
   
 ### <a name="key-to-symbols"></a>Legenda dos símbolos  
   
@@ -172,7 +172,7 @@ ms.locfileid: "73760043"
   
  Quando **DataTypeCompatibility** (SSPROP_INIT_DATATYPECOMPATIBILITY) é definido como "80", os tipos UDT grandes são exibidos para os clientes da mesma forma que para clientes de nível inferior.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tipos de dados CLR grandes definidos pelo usuário](~/relational-databases/native-client/features/large-clr-user-defined-types.md)  
   
   

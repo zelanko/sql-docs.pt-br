@@ -1,5 +1,5 @@
 ---
-title: Script de uma sessão de eventos estendidos | Microsoft Docs
+title: Gerar script de uma sessão de evento estendido | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,22 +11,22 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 072a3220ba5c6997c463031733bbbe0ce2587fe1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088911"
 ---
 # <a name="script-an-extended-event-session"></a>Criar script de uma sessão de evento estendido
   Este tópico descreve como criar o script de uma sessão de evento. Você pode exportar, alterar ou remover a sessão de evento, ou remover e criar a sessão de evento para o seguinte:  
   
--   **Nova janela do Editor de consultas**  
+-   **Janela do Editor de Nova Consulta**  
   
--   **File**  
+-   **Arquivo**  
   
--   **Área de transferência**  
+-   **La**  
   
--   **Trabalho do agente**  
+-   **Trabalho do Agente**  
   
 ### <a name="to-script-an-existing-event-session"></a>Para criar o script de uma sessão de evento existente  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66088911"
   
 3.  Na interface do usuário **Propriedades da Sessão** , modifique a sessão de evento e selecione o local onde deseja criar o script da sessão de modificada na lista suspensa **Script** .  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Eventos estendidos](../relational-databases/extended-events/extended-events.md)  
   
   

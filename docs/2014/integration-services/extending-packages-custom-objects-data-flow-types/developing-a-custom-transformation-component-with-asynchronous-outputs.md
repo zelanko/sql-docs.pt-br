@@ -24,10 +24,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5bb52fc5c8a3789cc945a2ea850d0849335917e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62896627"
 ---
 # <a name="developing-a-custom-transformation-component-with-asynchronous-outputs"></a>Desenvolvendo um componente de transformação personalizado com saídas assíncronas
@@ -37,7 +37,7 @@ ms.locfileid: "62896627"
   
  As colunas de componentes upstream que estão disponíveis para um componente com saídas síncronas estão automaticamente disponíveis para componentes downstream. Portanto, um componente com saídas síncronas não precisa definir colunas de saída para fornecer colunas e linhas ao próximo componente. Por outro lado, componentes com saídas assíncronas precisam definir colunas de saída e fornecer linhas a componentes downstream. Portanto, um componente com saídas assíncronas precisa executar mais tarefas durante o tempo de design e execução, e o desenvolvedor de componentes precisa implementar mais códigos.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] contém várias transformações com saídas assíncronas. Por exemplo, a transformação Classificação precisa de todas as linhas para poder classificá-las, e consegue isso através de saídas assíncronas. Depois de receber todas as linhas, ela as classifica e as adiciona à sua saída.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] contém várias transformações com saídas assíncronas. Por exemplo, a transformação Classificação precisa de todas as linhas para poder classificá-las, e consegue isso através de saídas assíncronas. Depois de receber todas as linhas, ela as classifica e as adiciona à sua saída.  
   
  Essa seção explica detalhadamente como desenvolver transformações com saídas assíncronas. Para obter mais informações sobre o desenvolvimento de componentes de origem, consulte [Desenvolver um componente de origem personalizado](../extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md).  
   
@@ -318,9 +318,9 @@ Namespace Microsoft.Samples.SqlServer.Dts
 End Namespace  
 ```  
   
-![Ícone do Integration Services (pequeno)](../media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
+![Ícone de Integration Services (pequeno)](../media/dts-16.gif "Ícone do Integration Services (pequeno)")  **Mantenha-se atualizado com Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Desenvolver um componente de transformação personalizado com saídas síncronas](../extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md)   
  [Compreender as transformações síncronas e assíncronas](../understanding-synchronous-and-asynchronous-transformations.md)   
  [Criar uma transformação assíncrona com o componente de Script](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)  

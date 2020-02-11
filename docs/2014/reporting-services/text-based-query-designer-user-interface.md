@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ceec7e4a58b98763f7a3215d29087eb948ec0b41
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68891326"
 ---
 # <a name="text-based-query-designer-user-interface"></a>Interface de usuário do Designer de Consulta baseado em texto
@@ -35,27 +35,27 @@ ms.locfileid: "68891326"
 ## <a name="text-based-query-designer-toolbar"></a>Barra de ferramentas do Designer de Consulta baseado em texto  
  O designer de consulta baseado em texto fornece uma única barra de ferramentas para todos os tipos de comando. A tabela a seguir lista cada botão da barra de ferramentas e suas respectivas funções.  
   
-|Botão|Descrição|  
+|Botão|DESCRIÇÃO|  
 |------------|-----------------|  
-|**Editar como Texto**|Alterna entre o designer de consulta baseado em texto e o designer de consultas gráficas. Nem todos os tipos de fonte de dados dão suporte aos designers de consultas gráficas.|  
+|**Editar como texto**|Alterna entre o designer de consulta baseado em texto e o designer de consultas gráficas. Nem todos os tipos de fonte de dados dão suporte aos designers de consultas gráficas.|  
 |**Importar**|Importa uma consulta existente de um arquivo ou relatório. Apenas os tipos de arquivo .sql e .rdl têm suporte. Para obter mais informações, consulte [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
 |![Executar a consulta](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "Executar a consulta")|Executa a consulta e exibe o conjunto de resultados no painel Resultado.|  
-|**Tipo de Comando**|Selecione **Text**, **StoredProcedure**ou **TableDirect**. Se um procedimento armazenado tiver parâmetros, a caixa de diálogo **Definir Parâmetros de Consulta** será aberta quando você clicar em **Executar** na barra de ferramentas e os valores poderão ser preenchidos conforme necessário. Observe que, se um procedimento armazenado retornar mais de um conjunto de resultados, somente o primeiro conjunto de resultados será usado para popular o conjunto de informações.<br /><br /> O suporte para o tipo de comando varia de acordo com o tipo da fonte de dados. Por exemplo, somente OLE DB e ODBC dão suporte a **TableDirect**.|  
+|**Tipo de comando**|Selecione **Text**, **StoredProcedure**ou **TableDirect**. Se um procedimento armazenado tiver parâmetros, a caixa de diálogo **Definir Parâmetros de Consulta** será aberta quando você clicar em **Executar** na barra de ferramentas e os valores poderão ser preenchidos conforme necessário. Observe que, se um procedimento armazenado retornar mais de um conjunto de resultados, somente o primeiro conjunto de resultados será usado para popular o conjunto de informações.<br /><br /> O suporte para o tipo de comando varia de acordo com o tipo da fonte de dados. Por exemplo, somente OLE DB e ODBC dão suporte a **TableDirect**.|  
   
 ### <a name="command-type-text"></a>Tipo de comando Text  
  Ao criar uma consulta do conjunto de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], por padrão, o Designer de Relatórios exibirá o designer de consultas gráficas. Para mudar para o designer de consulta baseado em texto, clique no botão de alternância **Editar como Texto** na barra de ferramentas. O designer de consulta baseado em texto apresenta dois painéis: Consulta e Resultado. A imagem a seguir define cada painel.  
   
- ![Designer de consultas genérico para consulta de dados relacionais](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqd-dsaw-sql-generic.gif "Designer de consultas genérico para consulta de dados relacionais")  
+ ![Designer de consulta genérico, para consulta de dados relacional](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqd-dsaw-sql-generic.gif "Designer de consulta genérico, para consulta de dados relacional")  
   
  A tabela a seguir descreve a função de cada painel.  
   
 |Painel|Função|  
 |----------|--------------|  
 |Consulta|Exibe o texto da consulta do [!INCLUDE[tsql](../includes/tsql-md.md)] . Use esse painel para gravar ou editar uma consulta do [!INCLUDE[tsql](../includes/tsql-md.md)] .|  
-|Resultado|Exibe os resultados da consulta. Para executar a consulta, clique com o botão direito do mouse em qualquer painel e clique em **Executar**ou clique no botão **Executar** na barra de ferramentas.|  
+|Result|Exibe os resultados da consulta. Para executar a consulta, clique com o botão direito do mouse em qualquer painel e clique em **Executar**ou clique no botão **Executar** na barra de ferramentas.|  
   
 #### <a name="example"></a>Exemplo  
- A consulta a seguir retorna a lista de sobrenomes da tabela `Contact` do banco de dados [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)].  
+ A consulta a seguir retorna a lista de sobrenomes da tabela [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] do banco de dados `Contact`.  
   
 ```  
 SELECT LastName FROM Person.Person;  
@@ -73,7 +73,7 @@ EXEC uspGetEmployeeManagers 1;
  Quando você seleciona o **Comando typeStoredProcedure**, o designer de consulta baseado em texto apresenta dois painéis: Consulta e Resultado. Insira o nome do procedimento armazenado no painel Consulta e clique em **Executar** na barra de ferramentas. A caixa de diálogo Definir Parâmetros de Consulta é exibida. Insira os valores dos parâmetros do procedimento armazenado. Um parâmetro de relatório é criado para cada parâmetro de procedimento armazenado.  
   
 #### <a name="example"></a>Exemplo  
- A consulta a seguir chama o procedimento armazenado `uspGetEmployeeManagers` do [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]. Você deve inserir um valor para o parâmetro do número de identificação do funcionário quando executar a consulta.  
+ A consulta a seguir chama o procedimento armazenado [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] do `uspGetEmployeeManagers`. Você deve inserir um valor para o parâmetro do número de identificação do funcionário quando executar a consulta.  
   
 ```  
 uspGetEmployeeManagers;  
@@ -89,13 +89,13 @@ uspGetEmployeeManagers;
   
  Quando você insere o nome da tabela Sales. Customer, é o equivalente de criar [!INCLUDE[tsql](../includes/tsql-md.md)] a `SELECT * FROM Sales.Customer;`instrução.  
   
-## <a name="see-also"></a>Consulte também  
- [Ferramentas de design de consulta no &#40;Report Designer SQL Server Data Tools SSRS&#41;](report-data/query-design-tools-ssrs.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Ferramentas de design de consulta no Report Designer SQL Server Data Tools &#40;SSRS&#41;](report-data/query-design-tools-ssrs.md)   
  [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [O tipo de conexão do SQL Server &#40;SSRS&#41;](report-data/sql-server-connection-type-ssrs.md)   
- [Tipo de conexão OLE DB &#40;SSRS&#41;](report-data/ole-db-connection-type-ssrs.md)   
- [Tipo &#40;de conexão ODBC SSRS&#41;](report-data/odbc-connection-type-ssrs.md)   
+ [SQL Server tipo de conexão &#40;SSRS&#41;](report-data/sql-server-connection-type-ssrs.md)   
+ [OLE DB tipo de conexão &#40;SSRS&#41;](report-data/ole-db-connection-type-ssrs.md)   
+ [Tipo de conexão ODBC &#40;SSRS&#41;](report-data/odbc-connection-type-ssrs.md)   
  [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [Arquivo de configuração RSReportDesigner](report-server/rsreportdesigner-configuration-file.md)  
+ [arquivo de configuração RSReportDesigner](report-server/rsreportdesigner-configuration-file.md)  
   
   

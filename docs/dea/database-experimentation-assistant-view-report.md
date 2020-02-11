@@ -2,7 +2,7 @@
 title: Exibir relatórios de análise para atualizações SQL Server
 description: Exibir relatórios de análise no Assistente para Experimentos de Banco de Dados
 ms.custom: seo-lt-2019
-ms.date: 11/22/2019
+ms.date: 02/04/2020
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -12,79 +12,77 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
-ms.openlocfilehash: b72d49e691311104481637ff49d6c1e09ae0c230
-ms.sourcegitcommit: 9e026cfd9f2300f106af929d88a9b43301f5edc2
+ms.openlocfilehash: 2a6d027c1fb1834e4033a11a498bfc8cdad4561f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74317741"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76977555"
 ---
 # <a name="view-analysis-reports-in-database-experimentation-assistant"></a>Exibir relatórios de análise no Assistente para Experimentos de Banco de Dados
 
-Depois de usar Assistente para Experimentos de Banco de Dados (DEA) para [criar um relatório de análise](database-experimentation-assistant-create-report.md), use as etapas abaixo para examinar o relatório para obter informações de desempenho com base no teste a/B.
+Depois de usar Assistente para Experimentos de Banco de Dados (DEA) para [criar um relatório de análise](database-experimentation-assistant-create-report.md), você pode examinar o relatório para obter informações de desempenho com base no teste a/B que você realizou.
 
-## <a name="select-a-server"></a>Selecione um servidor
+## <a name="open-an-existing-analysis-report"></a>Abrir um relatório de análise existente
 
-Em DEA, selecione o ícone de menu. No menu expandido, selecione **relatórios de análise** ao lado do ícone lista de verificação para abrir a janela relatórios de análise.
+1. Em DEA, selecione o ícone de lista, especifique o nome do servidor e o tipo de autenticação, marque ou desmarque as caixas de seleção **criptografar conexão** e **certificado do servidor confiável** , conforme apropriado para seu cenário e, em seguida, selecione **conectar**.
 
-Em **relatórios de análise**, insira o nome de um computador executando SQL Server que tenha um banco de dados de análise e, em seguida, selecione **conectar**.
+   ![Conectar-se ao servidor com o relatório](./media/database-experimentation-assistant-view-report/dea-connect-to-server-with-report-files.png)
 
-![Conectar a um relatório existente](./media/database-experimentation-assistant-view-report/dea-view-report-connect.png)
+2. Na tela **relatórios de análise** , no lado esquerdo, selecione a entrada do relatório que você deseja exibir.
 
-Se você não tiver nenhuma dependência, a página **pré-requisitos** solicitará os links para instalá-las. Se necessário, instale os pré-requisitos e, em seguida, selecione **tentar novamente**.
-
-![Página pré-requisitos](./media/database-experimentation-assistant-view-report/dea-view-report-prereq.png)
-
-## <a name="select-an-analysis-report-to-view"></a>Selecione um relatório de análise para exibir
-
-Na lista de relatórios de análise, clique duas vezes em um relatório para abri-lo.
-
-![Exibir relatório existente](./media/database-experimentation-assistant-view-report/dea-view-report-view-existing.png)
-
-Você pode obter informações sobre o quão bem sua carga de trabalho é representada, conforme mostrado neste gráfico de exemplo:
-
-![Gráficos do representante de carga de trabalho](./media/database-experimentation-assistant-view-report/dea-view-report-workload-compare.png)
+   ![Abrir um arquivo de relatório existente](./media/database-experimentation-assistant-view-report/dea-select-report-to-view.png)
 
 ## <a name="view-and-understand-the-analysis-report"></a>Exibir e entender o relatório de análise
 
 Esta seção orienta você pelo relatório de análise.
 
-### <a name="query-categories"></a>Categorias de consulta
+Na primeira página do relatório, são exibidas informações sobre a versão e as informações de compilação dos servidores de destino nos quais o experimento foi executado. Limite permite que você ajuste a sensibilidade ou a tolerância da sua análise de teste A/B. Por padrão, o limite é definido em 5%; qualquer melhoria no desempenho >= 5% é categorizada como ' aprimorado '.  A lista suspensa permite avaliar o relatório com limites de desempenho diferentes.
 
-Selecione fatias diferentes do gráfico de pizza à esquerda para mostrar apenas as consultas que se enquadram nessa categoria.
+Você pode exportar os dados no relatório para um arquivo CSV, selecionando o botão **Exportar** .  Em qualquer página do relatório de análise, você pode selecionar **Imprimir** para imprimir o que está visível na tela naquele momento.
 
-![Fatias de pizza de relatório](./media/database-experimentation-assistant-view-report/dea-view-report-pie-slices.png)
+### <a name="query-distribution"></a>Distribuição de consultas
 
-- **Consultas degradadas**: consultas que foram executadas melhor em um do que em B.  
-- **Erros**: consultas que mostram erros na instância B, mas não na instância A.  
-- **Consultas aprimoradas**: consultas que foram executadas melhor na instância B do que na instância A.  
-- **Consultas indeterminadas**: consultas que tiveram uma alteração de desempenho indeterminada.  
-- **Mesmo**: consultas em que o desempenho permanece o mesmo nas instâncias a e B.
+- Selecione fatias diferentes dos gráficos de pizza para mostrar apenas as consultas que pertencem a essa categoria.
+
+   ![Categorias de relatório como fatias de pizza](./media/database-experimentation-assistant-view-report/dea-view-report-pie-slices.png)
+
+  - **Degradado**: consultas que executaram pior no destino 2 do que no destino 1.
+  - **Erros**: consultas que mostraram erros pelo menos uma vez em pelo menos um dos destinos.
+  - **Aprimorado**: consultas que executaram melhor no destino 2 do que no destino 1.
+  - **Não é possível avaliar**: consultas que tinham um tamanho de amostra muito pequeno para análise estatística. Para análise de teste A/B, o DEA exige que as mesmas consultas tenham pelo menos 15 execuções em cada destino.
+  - **Mesmo**: consultas que não têm nenhuma diferença estatística entre o destino 1 e o destino 2.
+
+  Consultas de erro, se houver, são mostradas em gráficos separados; um gráfico de barras que classifica erros por tipo e um gráfico de pizza classificando erros por ID de erro.
+
+   ![Gráficos de consulta de erro](./media/database-experimentation-assistant-view-report/dea-error-query-charts.png)
+
+  Há quatro tipos de erros possíveis:
+
+  - **Erros existentes**: erros que existem no destino 1 e no destino 2.
+  - **Novos erros**: erros que são novos no destino 2.
+  - **Erros resolvidos**: erros que existem no destino 1, mas são resolvidos no destino 2.
+  - **Bloqueios de atualização**: erros que bloqueiam a atualização para o servidor de destino.
+
+  Clicar em qualquer seção de barra ou pizza nos gráficos faz uma busca detalhada na categoria e mostra as métricas de desempenho, mesmo para a categoria **não pode avaliar** .
+
+  Além disso, o painel mostra as cinco principais consultas aprimoradas e degradadas para fornecer uma visão geral rápida do desempenho.
 
 ### <a name="individual-query-drill-down"></a>Busca detalhada de consulta individual
 
-Você pode selecionar os links de modelo de consulta para ver informações mais detalhadas sobre consultas específicas.
+Você pode selecionar links de modelo de consulta para obter informações mais detalhadas sobre consultas específicas.
 
-![Busca detalhada de consulta](./media/database-experimentation-assistant-view-report/dea-view-report-drilldown.png)
+![Fazer uma busca detalhada em uma consulta específica](./media/database-experimentation-assistant-view-report/dea-query-drill-down-report.png)
 
-Selecione uma consulta específica para abrir um resumo de comparação para a consulta.
+- Selecione uma consulta específica para abrir o resumo de comparação relacionado.
 
-![Resumo de comparação](./media/database-experimentation-assistant-view-report/dea-view-report-comparison-summary.png)
+   ![Resumo de comparação](./media/database-experimentation-assistant-view-report/dea-view-report-comparison-summary.png)
 
-Você pode ver as instâncias a e B nas quais a consulta foi executada. Você também pode ver um modelo de como a consulta pode ser. Uma tabela exibe informações de consulta específicas para as instâncias A e B.
+   Você pode encontrar estatísticas de resumo para essa consulta, como o número de execuções, duração média, média de CPU, leituras médias/gravações e contagem de erros.  Se a consulta for uma consulta de erro, a guia **informações de erro** mostrará mais detalhes sobre o erro.  Na guia **informações do plano de consulta** , você pode encontrar informações sobre os planos de consulta usados para a consulta nos destinos 1 e 2.
 
-### <a name="error-queries"></a>Consultas de erro
+   > [!NOTE]
+   > Se você estiver analisando o evento estendido (. XEL) os arquivos, as informações do plano de consulta não são coletadas para limitar a pressão de memória no computador do usuário.
 
-O relatório de Resumo de comparação tem **informações de erro** expansíveis e seções de **informações do plano de consulta** . As seções mostram os erros e as informações do plano para ambas as instâncias.
-
-Selecione o erro (vermelho) pizza para mostrar estes tipos de erros:
-
-- **Erros existentes**: erros que estavam em um.
-- **Novos erros**: erros que estavam em B.
-- **Erros resolvidos**: erros que estavam em um, mas não em B.
-
-![Gráficos de erros](./media/database-experimentation-assistant-view-report/dea-view-report-error-charts.png)
-
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - Para saber como gerar um relatório de análise em um prompt de comando, consulte [executar no prompt de comando](database-experimentation-assistant-run-command-prompt.md).

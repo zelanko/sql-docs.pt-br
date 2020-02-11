@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 41a37655-84cd-423f-9daa-e0b47b88dc54
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c1c89ff79ee0fcac37f7b6e231e957e051c9db2e
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.openlocfilehash: de3cbb6582ae4fad74bb2440791e51203140796b
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72289289"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "75656593"
 ---
 # <a name="sqlbindcol-function"></a>Função SQLBindCol
 **Conformidade**  
@@ -55,7 +55,7 @@ SQLRETURN SQLBindCol(
  Entrada Número da coluna do conjunto de resultados a ser associada. As colunas são numeradas no aumento da ordem das colunas, começando em 0, em que a coluna 0 é a coluna de indicadores. Se os indicadores não forem usados, ou seja, o atributo SQL_ATTR_USE_BOOKMARKS instrução será definido como SQL_UB_OFF-e os números de coluna começarão em 1.  
   
  *TargetType*  
- Entrada O identificador do tipo de dados C do buffer de \**TargetValuePtr* . Ao recuperar dados da fonte de dados com **SQLFetch**, **SQLFetchScroll**, **SQLBulkOperations**ou **SQLSetPos**, o driver converte os dados para esse tipo; Quando ele envia dados para a fonte de dados com **SQLBulkOperations** ou **SQLSetPos**, o driver converte os dados desse tipo. Para obter uma lista de tipos de dados C válidos e identificadores de tipo, consulte a seção [tipos de dados c](../../../odbc/reference/appendixes/c-data-types.md) no Apêndice D: tipos de dados.  
+ Entrada O identificador do tipo de dados C do \*buffer *TargetValuePtr* . Ao recuperar dados da fonte de dados com **SQLFetch**, **SQLFetchScroll**, **SQLBulkOperations**ou **SQLSetPos**, o driver converte os dados para esse tipo; Quando ele envia dados para a fonte de dados com **SQLBulkOperations** ou **SQLSetPos**, o driver converte os dados desse tipo. Para obter uma lista de tipos de dados C válidos e identificadores de tipo, consulte a seção [tipos de dados c](../../../odbc/reference/appendixes/c-data-types.md) no Apêndice D: tipos de dados.  
   
  Se o argumento *TargetType* for um tipo de dados de intervalo, a precisão inicial do intervalo padrão (2) e a precisão do intervalo padrão de segundos (6), conforme definido nos campos SQL_DESC_DATETIME_INTERVAL_PRECISION e SQL_DESC_PRECISION de ARD, respectivamente, serão usados para os dados. Se o argumento *TargetType* for SQL_C_NUMERIC, a precisão padrão (definida pelo driver) e a escala padrão (0), conforme definido nos campos SQL_DESC_PRECISION e SQL_DESC_SCALE do ARD, serão usados para os dados. Se qualquer precisão ou escala padrão não for apropriada, o aplicativo deverá definir explicitamente o campo de descritor apropriado por uma chamada para **SQLSetDescField** ou **SQLSetDescRec**.  
   
@@ -67,9 +67,9 @@ SQLRETURN SQLBindCol(
  Se *TargetValuePtr* for um ponteiro nulo, o driver desassociará o buffer de dados para a coluna. Um aplicativo pode desassociar todas as colunas chamando **SQLFreeStmt** com a opção SQL_UNBIND. Um aplicativo pode desassociar o buffer de dados para uma coluna, mas ainda ter um buffer de comprimento/indicador associado para a coluna, se o argumento *TargetValuePtr* na chamada para **SQLBindCol** for um ponteiro nulo, mas o argumento *StrLen_or_IndPtr* for um valor válido.  
   
  *BufferLength*  
- Entrada Comprimento do buffer de *TargetValuePtr* de \*em bytes.  
+ Entrada Comprimento do \*buffer *TargetValuePtr* em bytes.  
   
- O driver usa *BufferLength* para evitar a gravação após o final do buffer de \**TargetValuePtr* quando ele retorna dados de comprimento variável, como caracteres ou dados binários. Observe que o driver conta o caractere de terminação nula quando retorna dados de caractere para \**TargetValuePtr*. \**TargetValuePtr* deve, portanto, conter espaço para o caractere de terminação nula ou o driver truncará os dados.  
+ O driver usa *BufferLength* para evitar a gravação após o final do \*buffer *TargetValuePtr* quando ele retorna dados de comprimento variável, como caracteres ou dados binários. Observe que o driver conta o caractere de terminação nula quando retorna dados de caractere \*para *TargetValuePtr*. \*O *TargetValuePtr* deve, portanto, conter espaço para o caractere de terminação nula ou o driver truncará os dados.  
   
  Quando o driver retorna dados de comprimento fixo, como um inteiro ou uma estrutura de data, o driver ignora *BufferLength* e assume que o buffer é grande o suficiente para manter os dados. Portanto, é importante para o aplicativo alocar um buffer suficientemente grande para dados de comprimento fixo ou o driver será gravado após o final do buffer.  
   
@@ -108,18 +108,18 @@ SQLRETURN SQLBindCol(
   
  Consulte [informações de ODBC 64-bit](../../../odbc/reference/odbc-64-bit-information.md), se seu aplicativo for executado em um sistema operacional de 64 bits.  
   
-## <a name="returns"></a>Retorna  
+## <a name="returns"></a>Retornos  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR ou SQL_INVALID_HANDLE.  
   
-## <a name="diagnostics"></a>Diagnóstico  
+## <a name="diagnostics"></a>Diagnósticos  
  Quando **SQLBindCol** retorna SQL_ERROR ou SQL_SUCCESS_WITH_INFO, um valor SQLSTATE associado pode ser obtido chamando **SQLGetDiagRec** com um *HandleType* de SQL_HANDLE_STMT e um *identificador* de *StatementHandle*. A tabela a seguir lista os valores SQLSTATE normalmente retornados por **SQLBindCol** e explica cada um no contexto dessa função; a notação "(DM)" precede as descrições de sqlstates retornadas pelo Gerenciador de driver. O código de retorno associado a cada valor SQLSTATE é SQL_ERROR, a menos que indicado o contrário.  
   
-|SQLSTATE|Error|Descrição|  
+|SQLSTATE|Erro|DESCRIÇÃO|  
 |--------------|-----------|-----------------|  
 |01000|Aviso geral|Mensagem informativa específica do driver. (A função retorna SQL_SUCCESS_WITH_INFO.)|  
 |07006|Violação de atributo de tipo de dados restrito|(DM) o argumento *ColumnNumber* era 0 e o argumento *TargetType* não foi SQL_C_BOOKMARK ou SQL_C_VARBOOKMARK.|  
 |07009|Índice de descritor inválido|O valor especificado para o argumento *ColumnNumber* excedeu o número máximo de colunas no conjunto de resultados.|  
-|HY000|Erro geral|Ocorreu um erro para o qual não havia um SQLSTATE específico e para o qual nenhum SQLSTATE específico de implementação foi definido. A mensagem de erro retornada por **SQLGetDiagRec** na *\*buffer MessageText* descreve o erro e sua causa.|  
+|HY000|Erro geral|Ocorreu um erro para o qual não havia um SQLSTATE específico e para o qual nenhum SQLSTATE específico de implementação foi definido. A mensagem de erro retornada por **SQLGetDiagRec** no buffer * \*MessageText* descreve o erro e sua causa.|  
 |HY001|Erro de alocação de memória|O driver não pôde alocar memória necessária para dar suporte à execução ou à conclusão da função.|  
 |HY003|Tipo de buffer de aplicativo inválido|O argumento *TargetType* não era um tipo de dados válido nem SQL_C_DEFAULT.|  
 |HY010|Erro de sequência de função|(DM) uma função de execução assíncrona foi chamada para o identificador de conexão que está associado ao *StatementHandle*. Esta função assíncrona ainda estava em execução quando **SQLBindCol** foi chamado.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**ou **SQLMoreResults** foi chamado para *StatementHandle* e retornou SQL_PARAM_DATA_AVAILABLE. Esta função foi chamada antes de os dados serem recuperados para todos os parâmetros transmitidos.<br /><br /> (DM) uma função de execução assíncrona foi chamada para o *StatementHandle* e ainda estava em execução quando essa função foi chamada.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**ou **SQLSetPos** foi chamado para o *StatementHandle* e retornou SQL_NEED_DATA. Esta função foi chamada antes de os dados serem enviados para todos os parâmetros de dados em execução ou colunas.|  
@@ -232,15 +232,15 @@ SQLRETURN SQLBindCol(
 ## <a name="buffer-addresses"></a>Endereços de buffer  
  O *endereço de buffer* é o endereço real do buffer de dados ou de comprimento/indicador. O driver calcula o endereço de buffer logo antes de gravar nos buffers (como durante o tempo de busca). Ele é calculado a partir da fórmula a seguir, que usa os endereços especificados nos argumentos *TargetValuePtr* e *StrLen_or_IndPtr* , o deslocamento de associação e o número da linha:  
   
- *Endereço associado* + *deslocamento de associação* + ((*número da linha* -1) x tamanho do *elemento*)  
+ *Limite* + de*Associação* de endereço associado + ((*número da linha* -1) x tamanho do *elemento*)  
   
  onde as variáveis da fórmula são definidas conforme descrito na tabela a seguir.  
   
-|Variável|Descrição|  
+|Variável|DESCRIÇÃO|  
 |--------------|-----------------|  
 |*Endereço associado*|Para buffers de dados, o endereço especificado com o argumento *TargetValuePtr* em **SQLBindCol**.<br /><br /> Para buffers de comprimento/indicador, o endereço especificado com o argumento *StrLen_or_IndPtr* em **SQLBindCol**. Para obter mais informações, consulte "Comentários adicionais" na seção "descritores e SQLBindCol".<br /><br /> Se o endereço associado for 0, nenhum valor de dados será retornado, mesmo que o endereço conforme calculado pela fórmula anterior seja diferente de zero.|  
 |*Deslocamento de associação*|Se a associação de linha for usada, o valor armazenado no endereço especificado com o atributo instrução SQL_ATTR_ROW_BIND_OFFSET_PTR.<br /><br /> Se a associação por coluna for usada ou se o valor do atributo de instrução de SQL_ATTR_ROW_BIND_OFFSET_PTR for um ponteiro nulo, o *deslocamento de associação* será 0.|  
-|*Número da linha*|O número de base 1 da linha no conjunto de linhas. Para buscas de linha única, que são o padrão, isso é 1.|  
+|*Row Number*|O número de base 1 da linha no conjunto de linhas. Para buscas de linha única, que são o padrão, isso é 1.|  
 |*Tamanho do elemento*|O tamanho de um elemento na matriz associada.<br /><br /> Se a associação por coluna for usada, isso será **sizeof (SQLINTEGER)** para buffers de comprimento/indicador. Para buffers de dados, é o valor do argumento *BufferLength* em **SQLBindCol** se o tipo de dados for de comprimento variável e o tamanho do tipo de dados se o tipo de dados for de comprimento fixo.<br /><br /> Se a associação de linha for usada, esse é o valor do atributo de instrução SQL_ATTR_ROW_BIND_TYPE para os buffers de dados e de comprimento/indicador.|  
   
 ## <a name="descriptors-and-sqlbindcol"></a>Descritores e SQLBindCol  
@@ -295,7 +295,7 @@ SQLRETURN SQLBindCol(
 #include <sqlext.h>  
   
 #define NAME_LEN 50  
-#define PHONE_LEN 20  
+#define PHONE_LEN 60
   
 void show_error() {  
    printf("error\n");  
@@ -335,17 +335,24 @@ int main() {
                if (retcode == SQL_SUCCESS || retcode == SQL_SUCCESS_WITH_INFO) {  
   
                   // Bind columns 1, 2, and 3  
-                  retcode = SQLBindCol(hstmt, 1, SQL_C_CHAR, &sCustID, 100, &cbCustID);  
-                  retcode = SQLBindCol(hstmt, 2, SQL_C_CHAR, szName, NAME_LEN, &cbName);  
-                  retcode = SQLBindCol(hstmt, 3, SQL_C_CHAR, szPhone, PHONE_LEN, &cbPhone);   
+                  retcode = SQLBindCol(hstmt, 1, SQL_C_WCHAR, &sCustID, 100, &cbCustID);  
+                  retcode = SQLBindCol(hstmt, 2, SQL_C_WCHAR, szName, NAME_LEN, &cbName);  
+                  retcode = SQLBindCol(hstmt, 3, SQL_C_WCHAR, szPhone, PHONE_LEN, &cbPhone);   
   
                   // Fetch and print each row of data. On an error, display a message and exit.  
-                  for (i ; ; i++) {  
+                  for (int i=0 ; ; i++) {  
                      retcode = SQLFetch(hstmt);  
                      if (retcode == SQL_ERROR || retcode == SQL_SUCCESS_WITH_INFO)  
                         show_error();  
                      if (retcode == SQL_SUCCESS || retcode == SQL_SUCCESS_WITH_INFO)  
-                        wprintf(L"%d: %S %S %S\n", i + 1, sCustID, szName, szPhone);  
+                     {
+                        //replace wprintf with printf
+                        //%S with %ls
+                        //warning C4477: 'wprintf' : format string '%S' requires an argument of type 'char *'
+                        //but variadic argument 2 has type 'SQLWCHAR *'
+                        //wprintf(L"%d: %S %S %S\n", i + 1, sCustID, szName, szPhone);  
+                        printf("%d: %ls %ls %ls\n", i + 1, sCustID, szName, szPhone);  
+                    }    
                      else  
                         break;  
                   }  
@@ -381,6 +388,6 @@ int main() {
 |Buscando parte ou toda uma coluna de dados|[Função SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md)|  
 |Retornando o número de colunas do conjunto de resultados|[Função SQLNumResultCols](../../../odbc/reference/syntax/sqlnumresultcols-function.md)|  
   
-## <a name="see-also"></a>Consulte também  
-   de [referência da API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Referência da API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Arquivos de cabeçalho ODBC](../../../odbc/reference/install/odbc-header-files.md)

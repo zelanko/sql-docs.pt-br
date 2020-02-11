@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f8f6b7efd8d97f63e93061cbef1a54e1df3146d2
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243794"
 ---
 # <a name="updating-an-application-to-sql-server-native-client-from-mdac"></a>Atualizando um aplicativo do MDAC para o SQL Server Native Client
@@ -96,11 +96,11 @@ ms.locfileid: "75243794"
   
     |Tipo SQL Server 2005|Tipo do SQL Server 2000|  
     |--------------------------|--------------------------|  
-    |**varchar (max)**|**texto**|  
+    |**varchar(max)**|**text**|  
     |**nvarchar(max)**|**ntext**|  
-    |**varbinary (max)**|**imagem**|  
+    |**varbinary(max)**|**imagem**|  
     |**UDT**|**varbinary**|  
-    |**Xml**|**ntext**|  
+    |**XML**|**ntext**|  
   
      Esse mapeamento de tipo afeta os valores retornados para metadados da coluna. Por exemplo, uma coluna de **texto** tem um tamanho máximo de 2.147.483.647, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mas o ODBC de cliente nativo relata o tamanho máximo de colunas **varchar (max)** como [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SQL_SS_LENGTH_UNLIMITED e o cliente nativo OLE DB relata o tamanho máximo de colunas **varchar (max)** como 2.147.483.647 ou-1, dependendo da plataforma.  
   
@@ -115,6 +115,6 @@ ms.locfileid: "75243794"
  Tanto o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client quanto o MDAC oferecem suporte ao isolamento de transação de leitura confirmada usando controle de versão de linha, mas apenas o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client oferece suporte ao isolamento da transação de instantâneo. (Em termos de programação, o isolamento de transação de leitura confirmada por meio do controle de versão de linha é igual à transação de leitura confirmada.)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Criando aplicativos com SQL Server Native Client](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
+ [Criando aplicativos com o SQL Server Native Client](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
   
   

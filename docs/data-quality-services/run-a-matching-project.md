@@ -14,10 +14,10 @@ ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 473b30d2dcc4809feece4e6a1cc59e38bb82ac2e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244117"
 ---
 # <a name="run-a-matching-project"></a>Executar um projeto de correspondência
@@ -30,17 +30,17 @@ ms.locfileid: "75244117"
   
  Você deve se preparar para a correspondência, criando uma política de correspondência com uma ou mais regras de correspondência e executando a política em dados de exemplo. O processo de projeto de correspondência está separado do processo de política de correspondência, e uma base de dados de conhecimento não é populada com o conhecimento de correspondência obtido do projeto de correspondência. Para obter mais informações sobre como criar uma política de correspondência, consulte [Create a Matching Policy](../data-quality-services/create-a-matching-policy.md).  
   
-##  <a name="BeforeYouBegin"></a>Antes de começar  
+##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Prerequisites"></a>Pré-requisitos  
+###  <a name="Prerequisites"></a> Pré-requisitos  
   
 -   Você deve ter criado uma base de dados de conhecimento com uma política de correspondência que consiste em uma ou mais regras de correspondência.  
   
 -   O Microsoft Excel deverá ser instalado no computador [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] se os dados de origem a serem correspondidos estiverem em um arquivo do Excel. Caso contrário, você não poderá selecionar o arquivo do Excel no estágio de mapeamento. Os arquivos criados pelo Microsoft Excel podem ter a extensão .xlsx, .xls ou .csv. Se a versão de 64 bits do Excel for usada, somente arquivos do Excel 2003 (.xls) terão suporte; não haverá suporte para os arquivos do Excel 2007 ou 2010 (.xlsx). Se você estiver usando a versão de 64 bits do Excel 2007 ou 2010, salve o arquivo como .xls ou .csv ou instale uma versão de 32 bits do Excel.  
   
-###  <a name="Security"></a>Segurança  
+###  <a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a>Permissões  
+####  <a name="Permissions"></a> Permissões  
  Você deve ter a função dqs_kb_editor ou dqs_administrator no banco de dados DQS_MAIN para executar um projeto de correspondência.  
   
 ##  <a name="StartingaMatchingProject"></a>Primeira etapa: iniciar um projeto de correspondência  

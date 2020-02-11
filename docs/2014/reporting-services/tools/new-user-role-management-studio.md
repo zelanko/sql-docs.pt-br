@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4b40fa294cb682746fe1b69a5fb03bf841d8e334
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100128"
 ---
 # <a name="new-user-role-management-studio"></a>Nova função do usuário (Management Studio)
@@ -31,7 +31,7 @@ ms.locfileid: "66100128"
  **Nome**  
  Digite o nome da definição da função. O nome de definição de função deve ser exclusivo no namespace do servidor de relatório. Um nome deve conter pelo menos um caractere alfanumérico. Também pode conter espaços e alguns símbolos. Não use os seguintes caracteres ao especificar um nome:  
   
- ; ? : \@ & = + , $ / * \< >  
+ ; ? : \@ & = +, $/*\< >  
   
  " /  
   
@@ -44,7 +44,7 @@ ms.locfileid: "66100128"
  **Descrição da tarefa**  
  Exibe uma descrição de tarefa que enumera as operações ou permissões às quais a tarefa dá suporte.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Servidor de Relatório na ajuda F1 do Management Studio](report-server-in-management-studio-f1-help.md)   
  [Definições de função](../security/role-definitions.md)  
   

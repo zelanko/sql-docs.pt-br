@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 4ea61ea7e6983f9601783957eee6776f36eccfb4
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400721"
 ---
 # <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>Configurar o polybase para acessar dados externos no armazenamento de BLOBs do Azure
@@ -23,7 +23,7 @@ O artigo explica como usar o polybase em uma instância de SQL Server para consu
 > [!NOTE]
 > Atualmente, os APS dão suporte apenas ao armazenamento de BLOBs do Azure com redundância local (LRS) padrão de uso geral v1.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
  - Armazenamento de BLOBs do Azure em sua assinatura.
  - Um contêiner criado no armazenamento de BLOBs do Azure.
@@ -66,7 +66,7 @@ Para consultar os dados em seu armazenamento de BLOBs do Azure, você deve defin
    WITH IDENTITY = 'user', Secret = '<azure_storage_account_key>';
    ```
 
-1. Crie uma fonte de dados externa com [criar fonte de dados externa](../t-sql/statements/create-external-data-source-transact-sql.md)..
+1. Crie uma fonte de dados externa, usando [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md).
 
    ```sql
    -- LOCATION:  Azure account storage account name and blob container name.  
@@ -134,7 +134,7 @@ WHERE Insured_Customers.CustomerKey = CarSensor_Data.CustomerKey and CarSensor_D
 ORDER BY CarSensor_Data.Speed DESC  
 ```  
 
-### <a name="importing-data"></a>Importação de dados  
+### <a name="importing-data"></a>Importando dados  
 
 A consulta a seguir importa dados externos para o APS. Este exemplo importa dados para drivers rápidos em APS para fazer uma análise mais detalhada. Para melhorar o desempenho, ele aproveita a tecnologia Columnstore no APS.  
 

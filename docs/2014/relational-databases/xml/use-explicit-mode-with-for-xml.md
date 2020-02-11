@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8976b77bf0823c9735e6e6e67fc3159bcb54ecdf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63231288"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>Usar o modo EXPLICIT com FOR XML
-  Conforme descrito no tópico [Construindo XML usando FOR XML](../xml/for-xml-sql-server.md), os modos RAW e AUTO não fornecem muito controle sobre a forma do XML gerado de um resultado da consulta. No entanto o modo EXPLICIT fornece máxima flexibilidade para gerar o XML desejado de um resultado de consulta.  
+  Conforme descrito no tópico [criando XML usando for XML](../xml/for-xml-sql-server.md), o modo RAW e auto não fornecem muito controle sobre a forma do XML gerado a partir de um resultado de consulta. No entanto o modo EXPLICIT fornece máxima flexibilidade para gerar o XML desejado de um resultado de consulta.  
   
  A consulta em modo EXPLICIT deve ser escrita de uma maneira específica para que as informações adicionais sobre o XML necessário, como aninhamento esperado no XML, sejam especificadas explicitamente como parte da consulta. Dependendo do XML solicitado, pode ser trabalhoso escrever consultas em modo EXPLICIT. Você pode descobrir que [Usando o modo PATH](../xml/use-path-mode-with-for-xml.md) com aninhamento é uma alternativa mais simples para escrever consultas em modo EXPLICIT.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "63231288"
   
  Para entender como a tabela universal gerada por uma consulta é processada na geração do resultado XML, assuma que você escreveu uma consulta que produz essa tabela universal:  
   
- ![Tabela universal de amostra](../../database-engine/media/xmlutable.gif "tabela universal de amostra")  
+ ![Tabela universal de exemplo](../../database-engine/media/xmlutable.gif "Tabela universal de exemplo")  
   
  Observe o seguinte sobre essa tabela universal:  
   
@@ -51,7 +51,7 @@ ms.locfileid: "63231288"
   
 -   Para gerar o XML dessa tabela universal, os dados nessa tabela são particionados verticalmente em grupos de colunas. O agrupamento é determinado com base no valor da **Tag** e nos nomes de coluna. Para construir XML, a lógica de processamento seleciona um grupo de colunas para cada linha e constrói um elemento. O seguinte se aplica neste exemplo:  
   
-    -   Para o valor 1 da coluna **Tag** na primeira linha, as colunas cujos nomes incluem o mesmo número de marca, **Customer!1!cid** e **Customer!1!name** formam um grupo. Essas colunas são usadas para processar a linha e você pode ter observado que a forma do elemento gerado é <`Customer id=... name=...`>. O formato do nome da coluna é descrito neste tópico.  
+    -   Para o valor 1 da coluna **Tag** na primeira linha, as colunas cujos nomes incluem o mesmo número de marca, **Customer!1!cid** e **Customer!1!name**formam um grupo. Essas colunas são usadas para processar a linha e você pode ter observado que a forma do elemento gerado é <`Customer id=... name=...`>. O formato do nome da coluna é descrito neste tópico.  
   
     -   Para o valor 2 da coluna **Tag**, as colunas **Order!2!id** e **Order!2!date** formam um grupo que é usado para construir elementos, <`Order id=... date=... /`>.  
   
@@ -59,20 +59,20 @@ ms.locfileid: "63231288"
   
 -   Observe que para gerar a hierarquia de XML, as linhas são processadas em ordem. A hierarquia de XML é determinada conforme mostrado a seguir:  
   
-    -   A primeira linha especifica valor 1 de **Tag** e valor NULL de **Parent**. Portanto, o elemento <`Customer`> correspondente é adicionado como um elemento de nível superior no XML.  
+    -   A primeira linha especifica valor 1 de **Tag** e valor NULL de **Parent** . Portanto, o elemento <`Customer`> correspondente é adicionado como um elemento de nível superior no XML.  
   
         ```  
         <Customer cid="C1" name="Janine">  
         ```  
   
-    -   A segunda linha identifica valor 2 de **Tag** valor 1 de **Parent**. Portanto o elemento <`Order`> é adicionado como um filho do elemento <`Customer`>.  
+    -   A segunda linha identifica valor 2 de **Tag** valor 1 de **Parent** . Portanto o elemento <`Order`> é adicionado como um filho do elemento <`Customer`>.  
   
         ```  
         <Customer cid="C1" name="Janine">  
            <Order id="O1" date="1/20/1996">  
         ```  
   
-    -   As próximas duas linhas identificam o valor 3 de **Tag** e o valor 2 de **Parent**. Portanto os dois elementos <`OrderDetail`> são adicionados como filhos do elemento <`Order`>.  
+    -   As próximas duas linhas identificam o valor 3 de **Tag** e o valor 2 de **Parent** . Portanto os dois elementos <`OrderDetail`> são adicionados como filhos do elemento <`Order`>.  
   
         ```  
         <Customer cid="C1" name="Janine">  
@@ -81,7 +81,7 @@ ms.locfileid: "63231288"
               <OrderDetail id="OD2" pid="P2"/>  
         ```  
   
-    -   A última linha identifica 2 como o número da **Tag** e 1 como o número da marca **Parent**. Portanto outro filho do elemento <`Order`> é adicionado ao elemento pai <`Customer`>.  
+    -   A última linha identifica 2 como o número da **Tag** e 1 como o número da marca **Parent** . Portanto outro filho do elemento <`Order`> é adicionado ao elemento pai <`Customer`>.  
   
         ```  
         <Customer cid="C1" name="Janine">  
@@ -93,7 +93,7 @@ ms.locfileid: "63231288"
         </Customer>  
         ```  
   
- Para resumir, os valores nas colunas de meta **Tag** e **Parent**, as informações fornecidas na coluna names e a ordenação correta das linhas produzem o XML desejado quando o modo EXPLICIT é usado.  
+ Para resumir, os valores nas colunas de meta **Tag** e **Parent** , as informações fornecidas na coluna names e a ordenação correta das linhas produzem o XML desejado quando o modo EXPLICIT é usado.  
   
 ### <a name="universal-table-row-ordering"></a>Ordenação de linhas da tabela universal  
  Para construir o XML, as linhas na tabela universal são processadas na ordem. Portanto para recuperar as instâncias filho corretas associadas ao pai, as linhas no conjunto de linhas devem ser ordenadas de forma que cada nó pai seja imediatamente seguido por seus filhos.  
@@ -123,14 +123,14 @@ ElementName!TagNumber!AttributeName!Directive
   
  Se você especificar a *Directive*, o *AttributeName* poderá estar vazio. Por exemplo, ElementName!TagNumber!!Directive. Nesse caso, o valor da coluna será contido diretamente pelo *ElementName*.  
   
- *Directive*  
- *Directive* é opcional e você pode usá-la para fornecer informações adicionais para construção do XML. *Directive* tem dois propósitos.  
+ *Diretiva*  
+ A *diretiva* é opcional e você pode usá-la para fornecer informações adicionais para a construção do XML. A *diretiva* tem duas finalidades.  
   
  Um dos propósitos é codificar valores como ID, IDREF e IDREFS. É possível especificar as palavras-chave **ID**, **IDREF**e **IDREFS** como *Directives*. Essas diretivas substituem os tipos de atributo. Isso permite criar vínculos intradocumento.  
   
  Também é possível usar *Directive* para indicar como mapear os dados de cadeia de caracteres para XML. É possível usar as palavras-chave **hide**, **element, elementxsinil**, **xml**, **xmltext**e **cdata** como a *Directive*. A diretiva **hide** oculta o nó. Isso é útil para recuperar valores apenas para fins de classificação, mas não para tê-los no XML resultante.  
   
- A diretiva **element** gera um elemento contido em vez de um atributo. Os dados contidos são codificados como uma entidade. Por exemplo, o caractere **<** se torna &lt;. Nenhum elemento é gerado para valores NULL da coluna. Se você quiser um elemento gerado para obter valores de coluna nulos, poderá especificar a diretiva **elementxsinil** . Isso gerará um elemento que tem o atributo xsi:nil=TRUE.  
+ A diretiva **element** gera um elemento contido em vez de um atributo. Os dados contidos são codificados como uma entidade. Por exemplo, o **<** caractere se &lt;torna. Nenhum elemento é gerado para valores NULL da coluna. Se você quiser um elemento gerado para obter valores de coluna nulos, poderá especificar a diretiva **elementxsinil** . Isso gerará um elemento que tem o atributo xsi:nil=TRUE.  
   
  A diretiva **xml** é igual a uma diretiva **element** , exceto que não ocorre nenhuma codificação de entidade. Observe que a diretiva **element** pode ser combinada com **ID**, **IDREF**ou **IDREFS**, enquanto que a diretiva **xml** não é permitida com nenhuma outra diretiva, exceto **hide**.  
   
@@ -161,13 +161,13 @@ ElementName!TagNumber!AttributeName!Directive
   
 -   [Exemplo: Especificando a diretiva HIDE](../xml/example-specifying-the-hide-directive.md)  
   
--   [Exemplo: Especificando a diretiva ELEMENT e a codificação de entidade](../xml/example-specifying-the-element-directive-and-entity-encoding.md)  
+-   [Exemplo: Especificando a diretiva ELEMENT e codificação de entidade](../xml/example-specifying-the-element-directive-and-entity-encoding.md)  
   
 -   [Exemplo: Especificando a diretiva CDATA](../xml/example-specifying-the-cdata-directive.md)  
   
 -   [Exemplo: Especificando a diretiva XMLTEXT](../xml/example-specifying-the-xmltext-directive.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Usar modo RAW com FOR XML](../xml/use-raw-mode-with-for-xml.md)   
  [Usar o modo AUTO com FOR XML](../xml/use-auto-mode-with-for-xml.md)   
  [Usar o modo PATH com FOR XML](../xml/use-path-mode-with-for-xml.md)   

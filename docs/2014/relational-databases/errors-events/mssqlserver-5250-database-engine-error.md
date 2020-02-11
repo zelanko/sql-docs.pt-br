@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 542a873b98c6fc6fde48b34d7ff44061dad5d45b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62867930"
 ---
-# <a name="mssqlserver5250"></a>MSSQLSERVER_5250
+# <a name="mssqlserver_5250"></a>MSSQLSERVER_5250
     
 ## <a name="details"></a>Detalhes  
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|5250|  
-|Origem do evento|MSSQLSERVER|  
+|Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|DBCC4_CRITICAL_DATABASE_PAGE_CORRUPT|  
-|Texto da mensagem|Erro de banco de dados: Página PAGE_TYPE P_ID do banco de dados 'NAME' (banco de dados ID DB_ID) é inválida. Esse erro não pode ser reparado. É preciso restaurar a partir do backup.|  
+|Texto da mensagem|Erro de banco de dados: a página PAGE_TYPE P_ID do banco de dados 'NAME' (ID de banco de dados DB_ID) é inválida. Esse erro não pode ser reparado. É preciso restaurar a partir do backup.|  
   
 ## <a name="explanation"></a>Explicação  
  Uma página de cabeçalho de arquivo ou uma página de inicialização no banco de dados especificado está corrompida.  

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b7f387145077e5a562279b6c72bc0f7eefadde36
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63023303"
 ---
 # <a name="performance-event-category"></a>Categoria de evento de desempenho
@@ -28,7 +28,7 @@ ms.locfileid: "63023303"
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|Descrição|  
+|Tópico|DESCRIÇÃO|  
 |-----------|-----------------|  
 |[Classe de evento Auto Stats](auto-stats-event-class.md)|Indica que houve uma atualização automática de índice e estatísticas de coluna.|  
 |[Classe de evento Grau de Paralelismo &#40;7.0 Insert&#41;](degree-of-parallelism-7-0-insert-event-class.md)|Indica que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executou uma instrução  SELECT, INSERT, UPDATE ou DELETE usando um plano consecutivo ou paralelo. O número de CPUs usado para executar a operação também é informado.|  
@@ -43,7 +43,7 @@ ms.locfileid: "63023303"
 |[Classe de evento Plan Guide Successful](plan-guide-successful-event-class.md)|Indica que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] produziu com sucesso um plano de execução para uma consulta ou lote, que continha uma guia de plano.|  
 |[Classe de evento Plan Guide Unsuccessful](plan-guide-unsuccessful-event-class.md)|Indica que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não pôde produzir um plano de execução, para uma consulta ou lote, que continha uma guia de plano.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Eventos estendidos](../extended-events/extended-events.md)  
   
   

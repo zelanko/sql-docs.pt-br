@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3dd87c1e2bd08ce5bb1d05e9d51d92e3f62bcc7a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66110192"
 ---
 # <a name="tuning-a-workload"></a>Ajustando uma carga de trabalho
@@ -34,13 +34,13 @@ ms.locfileid: "66110192"
   
 4.  Selecione **Arquivo** para a **Carga de trabalho**e clique no botão **Procurar um arquivo de carga de trabalho** para localizar o arquivo **MyScript.sql** salvo na Etapa 1.  
   
-5.  Selecione [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] na lista **Banco de dados para análise de carga de trabalho** , selecione [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] na grade **Selecione bancos de dados e tabelas para ajuste** e deixe a opção **Salvar log de ajuste** selecionado. **Banco de dados para análise de carga de trabalho** especifica o primeiro banco de dados ao qual o Orientador de Otimização do Mecanismo de Banco de Dados se conecta ao ajustar uma carga de trabalho. Depois que a otimização começa, o Orientador de Otimização do Mecanismo de Banco de Dados se conecta aos bancos de dados especificados pelas instruções `USE DATABASE` contidas na carga de trabalho.  
+5.  Selecione [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] na lista **Banco de dados para análise de carga de trabalho** , selecione [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] na grade **Selecione bancos de dados e tabelas para ajuste** e deixe a opção **Salvar log de ajuste** selecionado. **Banco de dados para análise de carga de trabalho** especifica o primeiro banco de dados ao qual Orientador de otimização do mecanismo de banco de dados se conecta ao ajustar uma carga de trabalho. Depois que a otimização começa, o Orientador de Otimização do Mecanismo de Banco de Dados se conecta aos bancos de dados especificados pelas instruções `USE DATABASE` contidas na carga de trabalho.  
   
-6.  Clique na guia **Opções de Ajuste** . Você não definirá nenhuma opção de ajuste para esta prática, mas fará a revisão as opções de ajuste padrão. Pressione F1 para exibir a Ajuda da página de guias. Clique em **Opções Avançadas** para exibir outras opções de ajuste. Clique em **Ajuda** na caixa de diálogo **Opções de Ajuste Avançadas** para obter informações sobre as opções de ajuste que são exibidas nessa caixa. Clique em **Cancelar** para fechar a caixa de diálogo **Opções de Ajuste Avançadas** , deixando as opções padrão selecionadas.  
+6.  Clique na guia **Opções de ajuste** . Você não definirá nenhuma opção de ajuste para esta prática, mas Reserve um tempo para examinar as opções de ajuste padrão. Pressione F1 para exibir a Ajuda da página de guias. Clique em **Opções Avançadas** para exibir outras opções de ajuste. Clique em **Ajuda** na caixa de diálogo **Opções de Ajuste Avançadas** para obter informações sobre as opções de ajuste que são exibidas nessa caixa. Clique em **Cancelar** para fechar a caixa de diálogo **Opções de Ajuste Avançadas** , deixando as opções padrão selecionadas.  
   
-7.  Clique no botão **Iniciar Análise** na barra de ferramentas. Enquanto o Orientador de Otimização do Mecanismo de Banco de Dados estiver analisando a carga de trabalho, você poderá monitorar o status na guia **Progresso** . Quando o ajuste foi concluído, a guia **Recomendações** será exibida.  
+7.  Clique no botão **Iniciar Análise** na barra de ferramentas. Embora Orientador de Otimização do Mecanismo de Banco de Dados esteja analisando a carga de trabalho, você pode monitorar o status na guia **progresso** . Quando o ajuste for concluído, a guia **recomendações** será exibida.  
   
-     Se você receber um erro sobre a data e hora de interrupção do ajuste, verifique a hora em **Parar em** na guia principal de **Opções de Ajuste** . Garanta que a data e a hora em **Parar em** são posteriores à data e à hora atuais e, se necessário, altere-as.  
+     Se você receber um erro sobre a data e hora de interrupção do ajuste, verifique a hora de **parar** no horário da guia principais **Opções de ajuste** . Verifique se a data e a hora da **parada** são posteriores à data e hora atuais e, se necessário, altere-as.  
   
 8.  Depois que a análise for concluída, salve sua recomendação como um script [!INCLUDE[tsql](../../includes/tsql-md.md)] clicando em **Salvar Recomendações** no menu **Ações** . Na caixa de diálogo **Salvar Como** , navegue até o diretório em que você quer salvar o script de recomendações e digite o nome de arquivo **MyRecommendations**.  
   

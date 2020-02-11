@@ -1,5 +1,5 @@
 ---
-title: Implementar uma transformação pesquisa em modo Cache cheio usando o Gerenciador de Conexão do OLE DB | Microsoft Docs
+title: Implementar uma transformação pesquisa em modo de cache cheio usando o Gerenciador de conexões OLE DB | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a11eb545aa4d9beefc0852bb68ed18a84ffe3256
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833670"
 ---
 # <a name="implement-a-lookup-transformation-in-full-cache-mode-using-the-ole-db-connection-manager"></a>Implementar uma transformação Pesquisa em modo de cache cheio por meio da transformação Gerenciador de Conexões OLE DB
@@ -81,9 +81,9 @@ ms.locfileid: "62833670"
   
 13. Clique em **OK** para salvar suas alterações na transformação Pesquisa e, então, execute o pacote.  
   
-## <a name="see-also"></a>Consulte também  
- [Implementar uma Transformação Pesquisa em modo cache cheio usando o Gerenciador de Conexões do Cache](lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
- [Implementar uma pesquisa no modo Sem Cache ou Cache Parcial](../data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Implementar uma Transformação Pesquisa em modo de Cache cheio usando o Gerenciador de Conexões do Cache](lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
+ [Implementar uma pesquisa no modo Sem cache ou Cache parcial](../data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [Transformações do Integration Services](../data-flow/transformations/integration-services-transformations.md)  
   
   

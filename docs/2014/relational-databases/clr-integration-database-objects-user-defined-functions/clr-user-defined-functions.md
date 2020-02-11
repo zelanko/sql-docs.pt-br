@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f48a62e1dff2fbc1d226077c2271e8a8a71efb2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62874488"
 ---
 # <a name="clr-user-defined-functions"></a>Funções CLR definidas pelo usuário
@@ -30,16 +30,16 @@ ms.locfileid: "62874488"
   
  A tabela a seguir lista os tópicos desta seção.  
   
- [Funções de valor escalar do CLR](clr-scalar-valued-functions.md)  
+ [Funções de valor escalar CLR](clr-scalar-valued-functions.md)  
  Abrange requisitos de implementação e exemplos de funções com valor escalar.  
   
- [Funções com valor de tabela do CLR](clr-table-valued-functions.md)  
+ [Funções com valor de tabela CLR](clr-table-valued-functions.md)  
  Aborda como implementar e usar funções com valor de tabela (TVFs), além das diferenças entre TVFs CLR e [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
- [Agregações do CLR definidas pelo usuário](clr-user-defined-aggregates.md)  
+ [Agregações CLR definidas pelo usuário](clr-user-defined-aggregates.md)  
  Descreve como implementar e usar agregações definidas pelo usuário.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Funções definidas pelo usuário](../user-defined-functions/user-defined-functions.md)  
   
   

@@ -1,6 +1,6 @@
 ---
 title: Configurar valores de limite para limpeza e correspondência
-description: Saiba como configurar valores de limite que serão usados durante a limpeza auxiliada por computador e atividades correspondentes no SQL Server Data Quality Services (DQS).
+description: Saiba como configurar valores de limite que serão usados durante a limpeza auxiliada por computador e as atividades correspondentes no SQL Server Data Quality Services (DQS).
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d2305409-7115-45a4-8f60-1213c0a47368
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 4fcbc8e4e6d6a9c1df07d8e1b1aa68c08c162817
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.openlocfilehash: a0bcf7bc1cdf28aae4fc281f14f8edeec9f6c47d
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75557887"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76916304"
 ---
 # <a name="configure-threshold-values-for-cleansing-and-matching---data-quality-services-dqs"></a>Configurar valores de limite para limpeza e correspondência de serviços de qualidade de dados (DQS)
 
@@ -30,11 +30,11 @@ ms.locfileid: "75557887"
 
   Este tópico descreve como configurar valores de limite que serão usados durante a limpeza auxiliada por computador e as atividades correspondentes no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS).  
   
-##  <a name="BeforeYouBegin"></a>Antes de começar  
+##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Security"></a>Segurança  
+###  <a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a>Permissões  
+####  <a name="Permissions"></a> Permissões  
  É necessário ter a função dqs_administrator no banco de dados DQS_MAIN para configurar esses valores de limite.  
   
 ##  <a name="Configure"></a>Configurando os valores de limite  
@@ -53,6 +53,6 @@ ms.locfileid: "75557887"
   
 5.  Para especificar um valor de limite para a atividade de correspondência, especifique um valor na caixa **Pontuação mínima de registro** na área **Correspondência** . Esse valor significa a pontuação mínima para um registro a ser considerado como uma correspondência para outro registro. O valor padrão é 80%.  
   
-6.  Clique em **Fechar**.  
+6.  Clique em **fechar**  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Parâmetros de procedimento | Microsoft Docs
+title: Parâmetros do procedimento | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,43 +13,43 @@ ms.assetid: 54fd857e-d2cb-467d-bb72-121e67a8e88d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f85512a1686df26cad739dc906e49cc5499f62e7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67912299"
 ---
 # <a name="procedure-parameters"></a>Parâmetros de procedimento
-Parâmetros em chamadas de procedimento podem ser de entrada, entradam/saídam ou parâmetros de saída. Isso é diferente de parâmetros em todas as outras instruções de SQL, que sempre são parâmetros de entrada.  
+Parâmetros em chamadas de procedimento podem ser parâmetros de entrada, entrada/saída ou saída. Isso é diferente dos parâmetros em todas as outras instruções SQL, que são sempre parâmetros de entrada.  
   
- Parâmetros de entrada são usados para enviar valores para o procedimento. Por exemplo, suponha que a tabela de peças possui colunas PartID, descrição e preço. O procedimento InsertPart pode ter um parâmetro de entrada para cada coluna na tabela. Por exemplo:  
+ Os parâmetros de entrada são usados para enviar valores para o procedimento. Por exemplo, suponha que a tabela de partes tenha as colunas partid, descrição e preço. O procedimento InsertPart pode ter um parâmetro de entrada para cada coluna na tabela. Por exemplo:  
   
 ```  
 {call InsertPart(?, ?, ?)}  
 ```  
   
- Um driver não deve modificar o conteúdo de um buffer de entrada até que **SQLExecDirect** ou **SQLExecute** retorna SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, SQL_INVALID_HANDLE ou SQL_NO_DATA. O conteúdo do buffer de entrada não deve ser modificado enquanto **SQLExecDirect** ou **SQLExecute** retorna SQL_NEED_DATA ou SQL_STILL_EXECUTING.  
+ Um driver não deve modificar o conteúdo de um buffer de entrada até **SQLExecDirect** ou **SQLExecute** retornar SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, SQL_INVALID_HANDLE ou SQL_NO_DATA. O conteúdo do buffer de entrada não deve ser modificado enquanto **SQLExecDirect** ou **SQLExecute** retorna SQL_NEED_DATA ou SQL_STILL_EXECUTING.  
   
- Parâmetros de entrada/saída são usados para enviar valores para os procedimentos e recuperar valores de procedimentos. Usando o mesmo parâmetro como uma entrada e um parâmetro de saída tende a ser confuso e deve ser evitado. Por exemplo, suponha que um procedimento aceita uma ID de pedido e retorna a ID do cliente. Isso pode ser definido com um único parâmetro de entrada/saída:  
+ Os parâmetros de entrada/saída são usados para enviar valores para procedimentos e recuperar valores de procedimentos. Usar o mesmo parâmetro como uma entrada e um parâmetro de saída tende a ser confuso e deve ser evitado. Por exemplo, suponha que um procedimento aceite uma ID de pedido e retorne a ID do cliente. Isso pode ser definido com um único parâmetro de entrada/saída:  
   
 ```  
 {call GetCustID(?)}  
 ```  
   
- Talvez seja melhor usar dois parâmetros: um parâmetro de entrada para a ID do pedido e uma saída ou parâmetro de entrada/saída para a ID do cliente:  
+ Pode ser melhor usar dois parâmetros: um parâmetro de entrada para a ID do pedido e um parâmetro de saída ou entrada/saída para a ID do cliente:  
   
 ```  
 {call GetCustID(?, ?)}  
 ```  
   
- Parâmetros de saída são usados para recuperar o valor de retorno do procedimento e para recuperar valores de argumentos de procedimento; os procedimentos que retornam valores são às vezes conhecidos como *funções*. Por exemplo, suponha que o **GetCustID** procedimento que acabei de mencionar retorna um valor que indica se ele foi capaz de localizar o pedido. Na chamada a seguir, o primeiro parâmetro é um parâmetro de saída usado para recuperar o valor de retorno do procedimento, o segundo parâmetro é um parâmetro de entrada usado para especificar a ID do pedido e o terceiro parâmetro é um parâmetro de saída usado para recuperar a ID do cliente:  
+ Os parâmetros de saída são usados para recuperar o valor de retorno do procedimento e para recuperar valores de argumentos de procedimento; os procedimentos que retornam valores às vezes são conhecidos como *funções*. Por exemplo, suponha que o procedimento **Getcustid** que acabamos de mencionar retorna um valor que indica se foi capaz de encontrar o pedido. Na chamada a seguir, o primeiro parâmetro é um parâmetro de saída usado para recuperar o valor de retorno do procedimento, o segundo parâmetro é um parâmetro de entrada usado para especificar a ID do pedido, e o terceiro parâmetro é um parâmetro de saída usado para recuperar a ID do cliente:  
   
 ```  
 {? = call GetCustID(?, ?)}  
 ```  
   
- Drivers de lidar com valores de entrada e entradam/saídam parâmetros em procedimentos não diferente dos parâmetros de entrada em outras instruções SQL. Quando a instrução é executada, eles recuperarem os valores das variáveis associadas a esses parâmetros e enviá-los à fonte de dados.  
+ Os drivers manipulam valores de entrada e parâmetros de entrada/saída em procedimentos diferentes dos parâmetros de entrada em outras instruções SQL. Quando a instrução é executada, elas recuperam os valores das variáveis associadas a esses parâmetros e as enviam para a fonte de dados.  
   
- Depois que a instrução foi executada, drivers de armazenam os valores retornados de entrada/saída e parâmetros de saída nas variáveis associadas a esses parâmetros. Esses retornados valores não são garantidos para ser definida até depois que todos os resultados retornados pelo procedimento foram buscados e **SQLMoreResults** tem retornar SQL_NO_DATA. Se a execução da instrução resulta em um erro, o conteúdo do buffer de parâmetro de entrada/saída ou buffers de parâmetro de saída é indefinido.  
+ Após a execução da instrução, os drivers armazenam os valores retornados dos parâmetros de entrada/saída e saída nas variáveis associadas a esses parâmetros. Esses valores retornados não têm garantia de serem definidos até que todos os resultados retornados pelo procedimento tenham sido buscados e **SQLMoreResults** tenha retornado SQL_NO_DATA. Se a execução da instrução resultar em um erro, o conteúdo do buffer do parâmetro de entrada/saída ou do buffer de parâmetros de saída será indefinido.  
   
- Um aplicativo chama **SQLProcedure** para determinar se um procedimento tem um valor de retorno. Ele chama **SQLProcedureColumns** para determinar o tipo (valor de retorno, entrado, entrada/saída ou saído) de cada parâmetro de procedimento.
+ Um aplicativo chama **SqlProcedure** para determinar se um procedimento tem um valor de retorno. Ele chama **SQLProcedureColumns** para determinar o tipo (valor de retorno, entrada, entrada/saída ou saída) de cada parâmetro de procedimento.

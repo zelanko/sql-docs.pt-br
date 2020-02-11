@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 60e27e2251cd2f613ca00266d76d4aaaf3b5c442
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401121"
 ---
 # <a name="hardware-installation-for-analytics-platform-system-aps-appliance"></a>Instalação de hardware para o dispositivo do Analytics Platform System (APS)
@@ -22,7 +22,7 @@ Este artigo descreve como mover, desempacotar e instalar o hardware para seu dis
 ## <a name="BeforeMoving"></a>Antes de mover qualquer componente do encaixe de carregamento  
 Execute as seguintes tarefas antes de mover, descompactar ou colocar em rack qualquer um dos componentes do dispositivo.  
   
-|Tarefa|Descrição|  
+|Tarefa|DESCRIÇÃO|  
 |--------|---------------|  
 |Verificar se todos os componentes chegaram|Use a BOM (lista de materiais) para verificar se todos os componentes chegaram e estão em seus paletes no encaixe de recebimento para seu data center.|  
 |Verifique se o data center atende a todos os requisitos do dispositivo|Inicie essa tarefa examinando as especificações de hardware e os diagramas de cabeamento fornecidos por seu IHV. As próximas etapas fornecem informações específicas sobre os requisitos de conectividade e espaço do rack.|  
@@ -42,7 +42,7 @@ Use a lista de verificação a seguir para mover cada rack de dispositivo do pal
 >   
 > Nunca tente levantar ou mover um nó de dispositivo ou outro componente pesado sem assistência ou equipamento adequado. Entre em contato com seu IHV para obter informações sobre o peso de cada componente para que você possa determinar com antecedência qual assistência, equipamento e ferramentas será necessário para lidar com cada componente com segurança e sem causar danos.  
   
-|Tarefa|Descrição|  
+|Tarefa|DESCRIÇÃO|  
 |--------|---------------|  
 |Verifique se o palete é nível|Antes de começar a mover ou descompactar o palete, verifique se ele está no nível de base.|  
 |Desparafuso de um nó do palete|Começando na parte superior do palete, deslado o nó superior do palete.|  
@@ -54,7 +54,7 @@ Use a lista de verificação a seguir para mover cada rack de dispositivo do pal
 ## <a name="AfterMoving"></a>Instalar componentes adicionais  
 Use a lista de verificação a seguir para instalar os componentes adicionais.  
   
-|Tarefa|Descrição||  
+|Tarefa|DESCRIÇÃO||  
 |--------|---------------|-|  
 |Opções e PDUs de rede de rack e desempacotamento|Use os diagramas de rack para colocar os comutadores de rede e a PDUs no local correto do rack.||  
 |Conecte os cabos InfiniBand e Ethernet de acordo com os rótulos de cabo|Consulte o diagrama de cabeamento. Cada cabo tem um rótulo em cada extremidade que especifica onde ele precisa ser conectado.||  

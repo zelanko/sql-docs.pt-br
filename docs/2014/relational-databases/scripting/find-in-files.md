@@ -13,14 +13,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b3b3ccbab2d77f92fe9d28ae616939b8fa02ea4c
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245174"
 ---
 # <a name="find-in-files"></a>Localizar em Arquivos
-  A guia **localizar nos arquivos** da janela Localizar e substituir permite que você pesquise o código de um conjunto especificado de arquivos para uma cadeia de caracteres ou expressão. As correspondências encontradas e as ações tomadas são listadas na janela Localizar Resultados selecionada nas **Opções de Resultados**.  
+  A guia **Localizar nos Arquivos** da janela Localizar e Substituir permite pesquisar uma cadeia de caracteres ou expressão no código de um conjunto de arquivos específico. As correspondências encontradas e as ações tomadas são listadas na janela Localizar Resultados selecionada nas **Opções de Resultados**.  
   
  Também há botões da barra de ferramentas e teclas de atalho disponíveis para abrir a caixa de diálogo **Localizar e Substituir** .  
   
@@ -38,7 +38,7 @@ ms.locfileid: "75245174"
  **[expressão regular]**  
  Para fazer com que o mecanismo de pesquisa interprete a sua cadeia de caracteres de pesquisa como uma expressão regular, marque a caixa de seleção **Usar** em **Opções de Busca** e clique em **Expressões regulares**.  
   
- **Construtor de expressões**  
+ **Construtor de Expressões**  
  Esse botão triangular ao lado da caixa **Localizar** torna-se disponível quando a caixa de seleção **Usar** é selecionada nas **Opções de Busca**. Clique nesse botão para exibir uma lista de curingas ou expressões regulares, dependendo da opção **Usar** selecionada. A escolha de qualquer item nessa lista o adiciona à cadeia de caracteres em **Localizar** .  
   
 ## <a name="look-in"></a>Examinar  
@@ -47,19 +47,19 @@ ms.locfileid: "75245174"
 > [!NOTE]  
 >  Se a opção **Examinar** selecionada fizer você pesquisar um arquivo do qual foi efetuado check-out do controle do código-fonte, será pesquisada apenas a versão desse arquivo que foi baixada em seu computador local.  
   
- **Examinar**  
+ **Look in**  
  Selecione um escopo da pesquisa predefinido nessa lista ou use a caixa de diálogo **Personalizar Conjunto de Diretórios** para inserir seu próprio conjunto de diretórios.  
   
- **Documento atual**  
+ **Documento Atual**  
  Essa opção fica disponível quando um documento está aberto em um editor. Ela pesquisa apenas o documento ativo para a cadeia de caracteres em **Localizar**.  
   
- **Todos os documentos abertos**  
+ **Todos os Documentos Abertos**  
  Pesquisa todos os arquivos abertos para edição atualmente.  
   
- **Projeto atual**  
+ **Projeto Atual**  
  Pesquisa todos os arquivos no projeto ativo.  
   
- **Solução inteira**  
+ **Solução Completa**  
  Pesquisa todos os arquivos na solução ativa.  
   
  **Incluir subpastas**  
@@ -71,22 +71,22 @@ ms.locfileid: "75245174"
 ## <a name="find-options"></a>Opções de Busca  
  Você pode expandir ou recolher a seção **Opções de Busca** . As opções seguintes podem ser marcadas ou desmarcadas.  
   
- **Diferenciar caso**  
+ **Diferenciar maiúsculas de minúsculas**  
  Quando essa caixa é selecionada, as janelas Localizar Resultados só exibem instâncias da cadeia de caracteres especificada em **Localizar** que correspondam tanto no conteúdo como nas letras maiúsculas e minúsculas. Por exemplo, uma pesquisa por **MyObject** com a caixa de seleção **Diferenciar maiúsculas de minúsculas** retornará “MyObject”, mas não “myobject” nem “MYOBJECT”.  
   
  **Coincidir palavra inteira**  
  Quando essa caixa é selecionada, as janelas Localizar Resultados só exibem instâncias da cadeia de caracteres especificada em **Localizar** que correspondam a palavras completas. Por exemplo, uma pesquisa por **MyObject** retornará "MyObject" mas não "CMyObject" nem "MyObjectC".  
   
- **Utilizá**  
+ **Uso**  
  Indica como interpretar caracteres especiais digitados nas caixas de texto **Localizar** ou **Substituir por** . As opções incluem **Curingas** e **Expressões Regulares**.  
   
- **Expressões regulares**  
+ **Regular Expressions**  
  Notações especiais definem padrões de texto para correspondência. Para obter uma lista, veja [Pesquisar texto com expressões regulares](search-text-with-regular-expressions.md).  
   
- **Caracteres curinga**  
+ **Curingas**  
  Caracteres especiais, como asteriscos (`*`) e pontos de interrogação (`?`) representam um ou mais caracteres. Para obter uma lista, veja [Pesquisar texto com curingas](search-text-with-wildcards.md).  
   
- **Examinar esses tipos de arquivo**  
+ **Pesquisar nestes tipos de arquivo**  
  Essa lista indica os tipos de arquivos a serem pesquisados nos diretórios especificados em **Examinar**. Se esse campo ficar em branco, serão pesquisados todos os arquivos nos diretórios especificados em **Examinar** .  
   
 ```  
@@ -104,16 +104,16 @@ ms.locfileid: "75245174"
 ## <a name="result-options"></a>Opções de Resultados  
  Determina o local dos resultados quando você clica em **Localizar Tudo**. Você pode expandir ou recolher a seção **Opções de Resultados** . As opções seguintes podem ser marcadas ou desmarcadas.  
   
- **Janela Localizar resultados 1**  
+ **Janela Localizar Resultados 1**  
  Quando essa caixa de seleção estiver marcada, os resultados da pesquisa atual serão anexados ao conteúdo da janela Localizar Resultados 1. Essa janela será aberta automaticamente para exibir seus resultados de pesquisa. Para abrir essa janela manualmente, clique em **Outras Janelas** no menu **Exibir** e clique em **Localizar Resultados 1**.  
   
- **Janela Localizar resultados 2**  
+ **Janela Localizar Resultados 2**  
  Quando essa caixa for selecionada, os resultados da pesquisa atual serão anexados ao conteúdo da janela Localizar Resultados 2. Essa janela será aberta automaticamente para exibir seus resultados de pesquisa. Para abrir essa janela manualmente, clique em **Outras Janelas** no menu **Exibir** e clique em **Localizar Resultados 2**.  
   
- **Exibir somente nomes de arquivos**  
+ **Exibir somente nomes de arquivo**  
  Exibe uma entrada por arquivo contendo uma correspondência de pesquisa em vez de uma entrada por correspondência de pesquisa na janela Localizar Resultados 1 ou Localizar Resultados 2. Essa opção não está disponível no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
- **Manter arquivos modificados abertos depois de substituir tudo**  
+ **Manter arquivos modificados abertos após Substituir Tudo**  
  Quando selecionada, essa opção deixa abertos todos os arquivos em que foram feitas substituições, para você poder desfazer ou salvar as alterações. Restrições de memória podem limitar o número de arquivos que podem permanecer abertos após uma operação de substituição.  
   
 > [!CAUTION]  
@@ -122,14 +122,14 @@ ms.locfileid: "75245174"
 ## <a name="find-and-replace-views"></a>Localizar e substituir exibições  
  As guias no topo da janela Localizar e Substituir incluem menus **Exibir** . Esses menus permitem escolher um conjunto de campos para serem exibidos no painel ativo. Você pode deixar a janela Localizar e Substituir encaixada em um local conveniente e depois mudar de guia para guia e de exibição para exibição a fim de fazer qualquer tipo de operação de localizar e substituir.  
   
- **Alternar para localização rápida**  
+ **Alternar para Localização Rápida**  
  Essa barra de ferramentas altera a caixa de diálogo para uma caixa de diálogo **Localização Rápida** .  
   
- **Alternar para localizar nos arquivos**  
+ **Alternar para Localizar em Arquivos**  
  Essa barra de ferramentas altera a caixa de diálogo para uma caixa de diálogo **Localizar nos Arquivos** .  
   
- **Alternar para localizar símbolos**  
+ **Alternar para Localizar Símbolos**  
  Essa barra de ferramentas altera a caixa de diálogo para uma caixa de diálogo **Localizar Símbolos** .  
   
 ## <a name="see-also"></a>Consulte Também  
- [SQL Server Management Studio atalhos de teclado](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
+ [Atalhos de teclado do SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  

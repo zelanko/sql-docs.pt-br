@@ -1,5 +1,5 @@
 ---
-title: Alterando um Assembly | Microsoft Docs
+title: Alterando um assembly | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,10 +15,10 @@ ms.assetid: 9e765fbd-f339-473c-8537-22f478e79696
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 80ef9d283f90c50406477a7a651fb418694ae445
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68027953"
 ---
 # <a name="altering-an-assembly"></a>Alterando um assembly
@@ -40,7 +40,7 @@ ALTER ASSEMBLY SQLCLRTest
 WITH PERMISSION_SET = EXTERNAL_ACCESS   
 ```  
   
- Se o conjunto de permissões de um assembly é alterado de **seguro** à **EXTERNAL_ACCESS** ou **UNSAFE**, uma chave assimétrica e um logon correspondente com  **EXTERNAL ACCESS ASSEMBLY** permissão ou **UNSAFE ASSEMBLY** permissão para o assembly deve primeiramente ser criada. Para obter mais informações, consulte [Criando um assembly](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md).  
+ Se o conjunto de permissões de um assembly estiver sendo alterado de **seguro** para **EXTERNAL_ACCESS** ou **não seguro**, uma chave assimétrica e o logon correspondente com permissão de **ASSEMBLY de acesso externo** ou permissão de **assembly insegura** para o assembly devem ser criados primeiro. Para obter mais informações, consulte [Criando um assembly](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md).  
   
 ## <a name="adding-the-source-code-of-an-assembly"></a>Adicionando o código-fonte de um assembly  
  A cláusula ADD FILE na sintaxe ALTER ASSEMBLY não está presente em CREATE ASSEMBLY. Você pode usá-la para adicionar código-fonte ou outros arquivos associados a um assembly. Os arquivos serão copiados dos seus locais originais e armazenados em tabelas do sistema do banco de dados. Isso garante que você sempre tenha código-fonte ou outros arquivos à mão, se precisar recriar ou documentar a versão atual do UDT.  
@@ -51,10 +51,10 @@ WITH PERMISSION_SET = EXTERNAL_ACCESS
   
  `ADD FILE FROM 'C:\Projects\Point\Point.cs' AS PointSource`  
   
-## <a name="see-also"></a>Consulte também  
- [Gerenciando Assemblies de integração CLR](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)   
- [Criando um Assembly](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)   
- [Descarte de um Assembly](../../../relational-databases/clr-integration/assemblies/dropping-an-assembly.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Gerenciando assemblies de integração CLR](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)   
+ [Criando um assembly](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)   
+ [Descartando um assembly](../../../relational-databases/clr-integration/assemblies/dropping-an-assembly.md)   
  [ALTER ASSEMBLY &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-assembly-transact-sql.md)  
   
   

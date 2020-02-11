@@ -13,10 +13,10 @@ ms.assetid: c5a6c797-4ac9-4ab0-89c0-25ded2e3db4a
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 187c3ee9c649388b784b2a8c5c83b20af9ba3ce1
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73727898"
 ---
 # <a name="server-configuration-mds-configuration-manager"></a>Configuração do servidor (Gerenciador de Configuração do MDS)
@@ -27,9 +27,9 @@ ms.locfileid: "73727898"
   
 ## <a name="server-configuration"></a>Configuração do Servidor  
   
-|Nome do controle|Descrição|  
+|Nome do controle|DESCRIÇÃO|  
 |------------------|-----------------|  
-|**Serviços de Informações da Internet**|Exibe a versão do IIS (Serviços de Informações da Internet) que está instalada no computador local. O IIS versão 7.0 ou posterior é necessário para uso do Gerenciador de Configuração do Master Data Services.|  
-|**Versão do produto do MDS**|Exibe a versão do produto do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].|  
+|**Serviços de Informação da Internet**|Exibe a versão do IIS (Serviços de Informações da Internet) que está instalada no computador local. O IIS versão 7.0 ou posterior é necessário para uso do Gerenciador de Configuração do Master Data Services.|  
+|**Versão do produto MDS**|Exibe a versão do produto do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].|  
   
   

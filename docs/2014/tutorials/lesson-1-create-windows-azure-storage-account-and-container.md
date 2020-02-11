@@ -11,13 +11,13 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: fbe773b8b8115cafc20bb60e962bfb42c9821636
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75253497"
 ---
-# <a name="lesson-1-create-azure-storage-account-and-container"></a>Lição 1: criar uma conta de armazenamento do Azure e um contêiner
+# <a name="lesson-1-create-azure-storage-account-and-container"></a>Lição 1: Criar uma conta e um contêiner do Armazenamento do Azure
   Antes de poder começar a armazenar SQL Server arquivos de dados no armazenamento do Azure, você deve primeiro criar uma conta de armazenamento do Azure e um contêiner de BLOB e uma assinatura de acesso compartilhado. A lição 1 orienta você pelas etapas de fazer logon na Portal de Gerenciamento do Azure, criar uma conta de armazenamento, um contêiner de BLOB e uma assinatura de acesso compartilhado.  
   
  Por padrão, somente o proprietário da conta de armazenamento pode acessar blobs, tabelas e filas nessa conta. Para acessar esses recursos usando esse novo aprimoramento do SQL Server sem compartilhar a chave de acesso da conta de armazenamento, será necessário fazer o seguinte:  
@@ -28,7 +28,7 @@ ms.locfileid: "75253497"
   
 -   Use uma política de acesso armazenado para gerenciar assinaturas de acesso compartilhado para um contêiner ou seus blobs. A política de acesso armazenado oferece a você uma medida adicional de controle sobre suas assinaturas de acesso compartilhado, além de fornecer um meio simples de revogá-los.  
   
- Para saber mais, confira [Gerenciar o acesso aos recursos de Armazenamento do Azure](https://msdn.microsoft.com/library/windowsazure/ee393343.aspx).  
+ Para obter mais informações, consulte [gerenciar o acesso aos recursos de armazenamento do Azure](https://msdn.microsoft.com/library/windowsazure/ee393343.aspx).  
   
 ## <a name="create-storage-account"></a>Criar conta de armazenamento  
  Para criar uma conta de armazenamento no Portal de Gerenciamento do Azure, siga estas etapas:  
@@ -42,7 +42,7 @@ ms.locfileid: "75253497"
      ![SQL 14 CTP2](../../2014/tutorials/media/ss-was-tutlesson-1-2.gif "SQL 14 CTP2")  
   
 ## <a name="create-a-blob-container"></a>Criar um contêiner de Blob  
- No Azure, um contêiner fornece um agrupamento de um conjunto de BLOBs. Todos os blobs devem ter um contêiner. Uma conta de armazenamento pode conter um número ilimitado de contêineres, mas deve ter pelo menos um contêiner. Um contêiner pode armazenar um número ilimitado de blobs. Para obter informações mais atualizadas sobre os limites de tamanho de armazenamento, consulte [como usar o serviço de armazenamento de BLOBs do Azure no .net](https://www.windowsazure.com/develop/net/how-to-guides/blob-storage/).  
+ No Azure, um contêiner fornece um agrupamento de um conjunto de BLOBs. Todos os blobs devem estar em um contêiner. Uma conta de armazenamento pode conter um número ilimitado de contêineres, mas deve ter pelo menos um contêiner. Um contêiner pode armazenar um número ilimitado de blobs. Para obter informações mais atualizadas sobre os limites de tamanho de armazenamento, consulte [como usar o serviço de armazenamento de BLOBs do Azure no .net](https://www.windowsazure.com/develop/net/how-to-guides/blob-storage/).  
   
  Para criar um contêiner no Azure, siga estas etapas:  
   

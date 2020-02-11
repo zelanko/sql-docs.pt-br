@@ -11,14 +11,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8c554959fedba58f743f1dd37d3c97554d0f00d3
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243249"
 ---
 # <a name="spatial-results-window"></a>Janela Resultados Espaciais
-  A janela **resultados espaciais** fornece ferramentas de mapeamento Visual para exibir dados espaciais. Para exibir resultados espaciais, os resultados da consulta devem incluir uma coluna espacial com dados de geometria ou de geografia.  
+  A janela **Resultados espaciais** fornece ferramentas de mapeamento visuais para exibição de dados espaciais. Para exibir resultados espaciais, os resultados da consulta devem incluir uma coluna espacial com dados de geometria ou de geografia.  
   
 > [!NOTE]  
 >  A janela **Resultados espaciais** estará disponível apenas se os resultados forem retornados para uma grade na janela **Resultados** . Se você especificar que os resultados são retornados como texto, essa janela não estará disponível.  
@@ -37,7 +37,7 @@ ms.locfileid: "75243249"
   
  Essa opção não está disponível para dados de geometria.  
   
- **Aplicar**  
+ **Zoom**  
  Ajuste a exibição do mapa em uma escala exponencial.  
   
  **Mostrar linhas de grade**  
@@ -49,9 +49,9 @@ ms.locfileid: "75243249"
 >  Instâncias de ponto não podem ser rotuladas.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exibir dados espaciais no Pesquisador de objetos](view-spatial-data-in-object-explorer.md)   
- [&#40;de dados espaciais SQL Server&#41;](../spatial/spatial-data-sql-server.md)   
- [&#40;SQL Server Management Studio do editor de consultas do Mecanismo de Banco de Dados&#41;](database-engine-query-editor-sql-server-management-studio.md)   
- [Editores de consulta e de texto &#40;SQL Server Management Studio&#41;](query-and-text-editors-sql-server-management-studio.md)  
+ [Exibir dados espaciais no Pesquisador de Objetos](view-spatial-data-in-object-explorer.md)   
+ [Dados espaciais &#40;SQL Server&#41;](../spatial/spatial-data-sql-server.md)   
+ [Editor de Consultas do Mecanismo de Banco de Dados &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)   
+ [Editores de consultas e de texto &#40;SQL Server Management Studio&#41;](query-and-text-editors-sql-server-management-studio.md)  
   
   

@@ -19,14 +19,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ee7ba55e48f4704c912e92a4d8352e7c891c06b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62989682"
 ---
 # <a name="using-reporting-services-security-policy-files"></a>Usando arquivos de política de segurança do Reporting Services
-  O [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] armazena informações de política de segurança de componentes em três arquivos de configuração que são copiados no sistema de arquivos durante a instalação. Estes arquivos de configuração podem conter uma combinação de políticas de segurança de uso interno e definidas pelo usuário assemblies de código no [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Três arquivos de configuração correspondem aos três componentes de segurança do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]: O servidor de relatório e o serviço Windows, o aplicativo Web do Gerenciador de relatórios e o Designer de relatórios a janela de visualização.  
+  O [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] armazena informações de política de segurança de componentes em três arquivos de configuração que são copiados no sistema de arquivos durante a instalação. Estes arquivos de configuração podem conter uma combinação de políticas de segurança de uso interno e definidas pelo usuário assemblies de código no [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Os três arquivos de configuração correspondem a três componentes de segurança do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]: o servidor de relatório e o serviço do Windows, o aplicativo Web do Gerenciador de Relatórios e a janela de exibição do Designer de Relatórios.  
   
 > [!NOTE]  
 >  Há dois modos de visualização do Designer de Relatórios: a guia Visualizar e a janela pop-up Visualizar, que é iniciada quando o Projeto de Relatório é inicializado no modo **DebugLocal**. A guia **Visualizar** não é um componente protegível e não aplica as configurações de política de segurança. A janela de exibição foi desenvolvida para simular a funcionalidade do servidor de relatório e, portanto, tem um arquivo de configuração de política que você ou um administrador devem modificar para usar assemblies e extensões personalizadas no Designer de Relatórios.  
@@ -36,7 +36,7 @@ ms.locfileid: "62989682"
 ## <a name="policy-files-in-reporting-services"></a>Arquivos de política do Reporting Services  
  A tabela a seguir lista os arquivos de configuração de política do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], sua localização (supondo uma instalação padrão) e suas respectivas funções.  
   
-|Nome do arquivo|Local (instalação padrão)|Descrição|  
+|Nome do arquivo|Local (instalação padrão)|DESCRIÇÃO|  
 |---------------|---------------------------------------|-----------------|  
 |rssrvpolicy.config|C:\Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportServer|O arquivo de configuração de política de servidor de relatório. Estas políticas de segurança afetam principalmente expressões de relatório e assemblies personalizados após um relatório ser implantado em um servidor de relatório. Este arquivo de política também afeta dados personalizados, extensões de entrega, renderização e segurança implantados no servidor de relatório.|  
 |rsmgrpolicy.config|C:\Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportManager|Arquivo de configuração de política do Gerenciador de Relatórios. Estas políticas de segurança afetam todos os assemblies que estendem o Gerenciador de Relatórios; por exemplo, extensões de interface de usuário de assinatura para entrega personalizada.|  
@@ -81,7 +81,7 @@ ms.locfileid: "62989682"
   
  Grupos de código adicionais podem ser adicionados um depois do outro.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Compreender as políticas de segurança](understanding-security-policies.md)  
   
   

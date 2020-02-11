@@ -1,5 +1,5 @@
 ---
-title: Propriedades do grupo de disponibilidade e novo grupo de disponibilidade (página geral) | Microsoft Docs
+title: Propriedades do grupo de disponibilidade e novo grupo de disponibilidade (página Geral) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 248ffe57906052c0d7dafcd187bb1b2b34cd6e64
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62815649"
 ---
 # <a name="availability-group-properties-and-new-availability-group-general-page"></a>Propriedades do Grupo de Disponibilidade e Novo Grupo de Disponibilidade (página geral)
@@ -26,7 +26,7 @@ ms.locfileid: "62815649"
   
 -   [Exibir as propriedades do grupo de disponibilidade &#40;SQL Server&#41;](view-availability-group-properties-sql-server.md)  
   
--   [Usar o Painel AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+-   [Use o painel AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
 ## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
  **Nome do grupo de disponibilidade**  
@@ -47,7 +47,7 @@ ms.locfileid: "62815649"
  O nome de servidor da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospeda essa réplica e, para uma instância não padrão, seu nome de instância.  
   
  **Função**  
- **Primária**  
+ **Primário**  
  Atualmente a réplica primária.  
   
  **Secundário**  
@@ -109,7 +109,7 @@ ms.locfileid: "62815649"
  **Remover**  
  Clique para remover uma réplica secundária especificada do grupo de disponibilidade.  
   
-## <a name="see-also"></a>Consulte também  
- [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Visão geral do Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
   
   

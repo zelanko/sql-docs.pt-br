@@ -13,10 +13,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: c1668c2b4c96f23283f0eca87fdbac591f52b75f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211601"
 ---
 # <a name="wmi-error-0x8007052f"></a>Erro de WMI 0x8007052f
@@ -25,9 +25,9 @@ ms.locfileid: "68211601"
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|0x8007052f|  
-|Origem do evento|Erro do Provedor WMI|  
+|Origem do Evento|Erro do Provedor WMI|  
 |Componente|SQL Server Configuration Manager|  
 |Nome simbólico|NA|  
 |Texto da mensagem|Falha de logon: restrição na conta do usuário. As possíveis razões para isso são senhas em branco não permitidas, restrições de horário de logon ou uma restrição de política que foi aplicada.|  

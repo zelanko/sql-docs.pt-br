@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: bbcf1a8bd16d7446841bb6d7dd86bd1ad350280d
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401026"
 ---
 # <a name="load-data-with-insert-into-parallel-data-warehouse"></a>Carregar dados com inserção em data warehouse paralelo
@@ -124,8 +124,8 @@ A tabela a seguir define os formatos e as regras aceitas para inserir valores li
   
 |Tipo de literal|Formatar|Regras de conversão|  
 |------------|------|----------------|
-|Literal de cadeia de caracteres no formato **inteiro**|'nnnnnnnnnnnnnn'<br /><br />Exemplo: ' 321312313123 '| Não |  
-|Literal inteiro|nnnnnnnnnnnnnn<br /><br />Exemplo: 321312313123| Não|  
+|Literal de cadeia de caracteres no formato **inteiro**|'nnnnnnnnnnnnnn'<br /><br />Exemplo: ' 321312313123 '| Nenhum |  
+|Literal inteiro|nnnnnnnnnnnnnn<br /><br />Exemplo: 321312313123| Nenhum|  
 |Literal decimal|nnnnnn. NNNNN<br /><br />Exemplo: 123344,34455|Os valores à direita do ponto decimal são truncados.|  
   
 ### <a name="money-and-smallmoney-data-types"></a>tipos de dados Money e smallmoney  
@@ -148,17 +148,17 @@ A tabela a seguir define os formatos e as regras aceitas para inserir valores li
   
 |Tipo de literal|Formatar|Regras de conversão|  
 |----------------|----------|--------------------|  
-|Literal de cadeia de caracteres|Formato: ' cadeia de caracteres '<br /><br />Exemplo: ' abc '| Não|  
-|Literal de cadeia de caracteres Unicode|Formato: cadeia de caracteres N'character '<br /><br />Exemplo: N'abc '|  Não |  
-|Literal inteiro|Formato: nnnnnnnnnnn<br /><br />Exemplo: 321312313123| Não |  
-|Literal decimal|Formato: nnnnnn. nnnnnnn<br /><br />Exemplo: 12344,34455| Não |  
+|Literal de cadeia de caracteres|Formato: ' cadeia de caracteres '<br /><br />Exemplo: ' abc '| Nenhum|  
+|Literal de cadeia de caracteres Unicode|Formato: cadeia de caracteres N'character '<br /><br />Exemplo: N'abc '|  Nenhum |  
+|Literal inteiro|Formato: nnnnnnnnnnn<br /><br />Exemplo: 321312313123| Nenhum |  
+|Literal decimal|Formato: nnnnnn. nnnnnnn<br /><br />Exemplo: 12344,34455| Nenhum |  
 |Literal de dinheiro|Formato: $nnnnnn. NNNNN<br /><br />Exemplo: $123456.99|O símbolo de moeda não é inserido com o valor. Para inserir o símbolo de moeda, insira o valor como um literal de cadeia de caracteres. Isso corresponderá ao formato da ferramenta **dwloader** , que trata cada literal como um literal de cadeia de caracteres.<br /><br />Não são permitidas vírgulas.<br /><br />Se o número de dígitos após o ponto decimal exceder 2, o valor será arredondado para o valor mais próximo. Por exemplo, o valor 123,946789 é inserido como 123,95.<br /><br />Somente o estilo padrão 0 (sem vírgulas e 2 dígitos após o ponto decimal) é permitido ao usar a função CONVERT para inserir literais monetários.|  
 
   
 ## <a name="see-also"></a>Consulte Também  
  
 [Dados distribuídos](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-distributed-data/)  
-[INSERIDO](../t-sql/statements/insert-transact-sql.md)  
+[INSERT](../t-sql/statements/insert-transact-sql.md)  
   
 <!-- MISSING LINKS
 [Grant permissions to load data](grant-permissions-to-load-data.md)  

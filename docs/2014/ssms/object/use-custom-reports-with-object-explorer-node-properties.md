@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5941b15c0aea7319d132e05b902133d3d8b986fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62823693"
 ---
 # <a name="use-custom-reports-with-object-explorer-node-properties"></a>Usar relatórios personalizados com propriedades de nó do Pesquisador de Objetos
@@ -37,7 +37,7 @@ ms.locfileid: "62823693"
 ## <a name="object-explorer-node-report-parameters-example"></a>Exemplo de parâmetros de relatório do nó do Pesquisador de Objetos  
  Para executar o exemplo, use o procedimento a seguir.  
   
- **Para exibir os valores de parâmetros do relatório de um nó no Pesquisador de Objetos**  
+ **Para exibir os valores de parâmetro do relatório para um nó no Pesquisador de objetos**  
   
 1.  Copie o código de exemplo a seguir em um novo arquivo de texto e nomeie o arquivo usando uma extensão .rdl.  
   
@@ -998,9 +998,9 @@ ms.locfileid: "62823693"
   
  `</Report>`  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Relatórios personalizados no Management Studio](custom-reports-in-management-studio.md)   
- [Adicionar um relatório personalizado ao Management Studio](add-a-custom-report-to-management-studio.md)   
+ [Adicionar um relatório personalizado a Management Studio](add-a-custom-report-to-management-studio.md)   
  [Cancelar supressão da execução de avisos de relatório personalizado](unsuppress-run-custom-report-warnings.md)  
   
   
