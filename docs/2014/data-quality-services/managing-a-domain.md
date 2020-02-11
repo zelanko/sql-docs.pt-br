@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 93b5666bd2d57fb0a8ffae435818a02ba152217c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65484123"
 ---
 # <a name="managing-a-domain"></a>Gerenciando um domínio
@@ -50,14 +50,14 @@ ms.locfileid: "65484123"
 |Alterar ou aumentar os valores em uma base de dados de conhecimento|[Alterar valores de domínio](../../2014/data-quality-services/change-domain-values.md)|  
 |Usar regras de validação e padronização|[Criar uma regra de domínio](../../2014/data-quality-services/create-a-domain-rule.md)|  
 |Usar relações para corrigir um termo que faz parte de um valor em um domínio|[Criar relações baseadas em termos](../../2014/data-quality-services/create-term-based-relations.md)|  
-|Concluir, fechar ou cancelar a atividade de gerenciamento de domínio|[Encerrar a atividade Gerenciamento de Domínio](../../2014/data-quality-services/end-the-domain-management-activity.md)|  
+|Concluir, fechar ou cancelar a atividade de gerenciamento de domínio|[Terminar a atividade Gerenciamento de Domínio](../../2014/data-quality-services/end-the-domain-management-activity.md)|  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  
-|Criar uma base de dados de conhecimento executando a descoberta da base de dados de conhecimento e gerenciando o conhecimento de modo interativo|[Criar uma base de dados de conhecimento](../../2014/data-quality-services/building-a-knowledge-base.md)|  
-|Importar ou exportar conhecimento para/de uma base de dados de conhecimento.|[Importar e exportar conhecimento](../../2014/data-quality-services/importing-and-exporting-knowledge.md)|  
-|Criar um domínio composto e adicionar conhecimento ao domínio.|[Gerenciar um domínio de composição](../../2014/data-quality-services/managing-a-composite-domain.md)|  
+|Criar uma base de dados de conhecimento executando a descoberta da base de dados de conhecimento e gerenciando o conhecimento de modo interativo|[Criando uma base de dados de conhecimento](../../2014/data-quality-services/building-a-knowledge-base.md)|  
+|Importar ou exportar conhecimento para/de uma base de dados de conhecimento.|[Importando e exportando conhecimento](../../2014/data-quality-services/importing-and-exporting-knowledge.md)|  
+|Criar um domínio composto e adicionar conhecimento ao domínio.|[Gerenciando um domínio composto](../../2014/data-quality-services/managing-a-composite-domain.md)|  
   
   

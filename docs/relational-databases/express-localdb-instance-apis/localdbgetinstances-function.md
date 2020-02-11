@@ -16,17 +16,17 @@ ms.assetid: f95a9980-8bc0-426c-8aa1-e2660b6784cf
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 04554c7aa9f891aab414ae5ae77f3c92bb86ac4b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68036054"
 ---
 # <a name="localdbgetinstances-function"></a>Função LocalDBGetInstances
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Retorna todas as instâncias de LocalDB do SQL Server Express com a versão especificada.  
   
- **Arquivo de cabeçalho:** sqlncli.h  
+ **Arquivo de cabeçalho:** sqlncli. h  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,14 +38,14 @@ HRESULT LocalDBGetInstances(
 );  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  *pInstanceNames*  
- [Saída] Quando essa função retornar, contém os nomes dos nomeadas e instâncias de LocalDB na estação de trabalho do usuário padrão.  
+ Der Quando essa função retorna, contém os nomes das instâncias de LocalDB nomeadas e padrão na estação de trabalho do usuário.  
   
  *lpdwNumberOfInstances*  
- [Entrada/Saída] Na entrada, contém o número de slots dos nomes de instância no buffer *pInstanceNames* . Na saída, contém o número de instâncias de LocalDB encontrada na estação de trabalho do usuário.  
+ [Entrada/Saída] Na entrada, contém o número de slots dos nomes de instância no buffer *pInstanceNames* . Na saída, contém o número de instâncias LocalDB encontradas na estação de trabalho do usuário.  
   
-## <a name="returns"></a>Retorna  
+## <a name="returns"></a>Retornos  
  S_OK  
  A função foi bem-sucedida.  
   
@@ -73,7 +73,7 @@ HRESULT LocalDBGetInstances(
 ## <a name="remarks"></a>Comentários  
  Para obter uma amostra do código que usa a API LocalDB, consulte [SQL Server Express LocalDB Reference](../../relational-databases/sql-server-express-localdb-reference.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Cabeçalho e informações de versão de LocalDB do SQL Server Express](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  
   
   

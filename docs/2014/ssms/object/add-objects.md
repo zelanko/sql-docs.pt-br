@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 15011717f0f2d5ece6666c30aef72eade0faabb3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63276955"
 ---
 # <a name="add-objects"></a>Adicionar Objetos
@@ -29,7 +29,7 @@ ms.locfileid: "63276955"
  **Todos os objetos dos tipos**  
  Abra a caixa de diálogo **Selecionar Tipos de Objetos** para especificar os tipos de objetos que devem ser incluídos na lista subjacente.  
   
- **O servidor** _\<servername >_  
+ **O servidor**  _\<ServerName>_  
  Adicione todos os objetos adequados no servidor especificado. Aparece apenas quando aberto de caixas de diálogo no escopo do servidor, como a caixa de diálogo **Logon – Novo** .  
   
  **Todos os objetos pertencentes ao esquema**  

@@ -19,23 +19,23 @@ ms.assetid: db0def92-f25b-45da-9709-eab972b33800
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a001a6a2da2532ac6d0e2a00079c8bd7c7036b66
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68060380"
 ---
-# <a name="syscollectorcollectionsets-transact-sql"></a>syscollector_collection_sets (Transact-SQL)
+# <a name="syscollector_collection_sets-transact-sql"></a>syscollector_collection_sets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Fornece informações sobre um conjunto de coleta, inclusive agendamento, modo de coleta e seu estado.  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |collection_set_id|**int**|É o identificador local do conjunto de coleções. Não permite valor nulo.|  
 |collection_set_uid|**uniqueidentifier**|O identificador global exclusivo do conjunto de coleta. Não permite valor nulo.|  
 |name|**nvarchar(4000)**|Nome do conjunto de coleta. Permite valor nulo.|  
-|target|**nvarchar(max)**|Identifica o destino do conjunto de coleta. Permite valor nulo.|  
+|destino|**nvarchar(max)**|Identifica o destino do conjunto de coleta. Permite valor nulo.|  
 |is_system|**bit**|Ativado (1) ou desativado (0) para indicar se o conjunto de coleta foi incluído no coletor de dados ou se foi adicionado depois pelo dc_admin. Pode ser um conjunto de coleta personalizado desenvolvido internamente ou por um terceiro. Não permite valor nulo.|  
 |is_running|**bit**|Indica se o conjunto de coleta está sendo executado ou não. Não permite valor nulo.|  
 |collection_mode|**smallint**|Especifica o modo de coleta do conjunto de coleta. Não permite valor nulo.<br /><br /> O modo de coleta pode ser um dos itens a seguir:<br /><br /> 0 - Modo de cache. A coleta e o carregamento de dados estão em agendas separadas.<br /><br /> 1 - Modo não armazenado em cache. A coleta e o carregamento dos dados estão na mesma agenda.|  
@@ -45,9 +45,9 @@ ms.locfileid: "68060380"
 |upload_job_id|**uniqueidentifier**|Identifica o trabalho de carregamento de coleta. Permite valor nulo.|  
 |logging_level|**smallint**|Especifica o nível de log (0, 1 ou 2). Não permite valor nulo.|  
 |days_until_expiration|**smallint**|O número de dias durante os quais os dados coletados são salvos no data warehouse de gerenciamento. Não permite valor nulo.|  
-|description|**nvarchar(4000)**|Descreve o conjunto de coleta. Permite valor nulo.|  
-|dump_on_any_error|**bit**|Ativado (1) ou desativado (0) para indicar se deseja criar um [!INCLUDE[ssIS](../../includes/ssis-md.md)] arquivo de despejo de qualquer erro. Não permite valor nulo.|  
-|dump_on_codes|**nvarchar(max)**|Contém a lista de [!INCLUDE[ssIS](../../includes/ssis-md.md)] códigos de erro que são usados para disparar o arquivo de despejo. Permite valor nulo.|  
+|descrição|**nvarchar(4000)**|Descreve o conjunto de coleta. Permite valor nulo.|  
+|dump_on_any_error|**bit**|Ativado (1) ou desativado (0) para indicar se um [!INCLUDE[ssIS](../../includes/ssis-md.md)] arquivo de despejo deve ser criado em qualquer erro. Não permite valor nulo.|  
+|dump_on_codes|**nvarchar(max)**|Contém a lista de [!INCLUDE[ssIS](../../includes/ssis-md.md)] códigos de erro usados para disparar o arquivo de despejo. Permite valor nulo.|  
   
 ## <a name="permissions"></a>Permissões  
  Requer SELECT para dc_operator, dc_proxy.  
@@ -55,9 +55,9 @@ ms.locfileid: "68060380"
 ## <a name="remarks"></a>Comentários  
  A API do coletor de dados só permite que você altere ou exclua os conjuntos de coleta que você criar. Os conjuntos de coleta fornecidos com o sistema não podem ser modificados ou excluídos. Porém, você pode habilitar ou desabilitar um conjunto de coleta do sistema e alterar a sua configuração.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados de coletor de dados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
- [Exibições do Coletor de Dados &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
- [Coleta de Dados](../../relational-databases/data-collection/data-collection.md)  
+ [Exibições do coletor de dados &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
+ [Coleta de dados](../../relational-databases/data-collection/data-collection.md)  
   
   
