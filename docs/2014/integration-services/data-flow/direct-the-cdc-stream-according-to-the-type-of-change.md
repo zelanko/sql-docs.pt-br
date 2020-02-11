@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2ee2b3238a66000546619815a886fc6017c51fe6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62827393"
 ---
 # <a name="direct-the-cdc-stream-according-to-the-type-of-change"></a>Direcionar o fluxo de CDC de acordo com o tipo de alteração
@@ -40,7 +40,7 @@ ms.locfileid: "62827393"
   
     -   Inserir saída: a saída para onde as linhas de alteração INSERT são direcionadas.  
   
-    -   Atualizar saída: a saída para onde as linhas de alteração UPDATE antes/depois e as linhas de alteração Mesclar são direcionadas.  
+    -   Saída de atualização: a saída para onde as linhas de alteração UPDATE antes/depois e as linhas de alteração Mesclar são direcionadas.  
   
 7.  Opcionalmente, você pode configurar as propriedades avançadas usando a caixa de diálogo **Editor Avançado** .  
   
@@ -52,7 +52,7 @@ ms.locfileid: "62827393"
   
      Para obter mais informações sobre como usar o separador de CDC, consulte Componentes de CDC para Microsoft SQL Server Integration Services.  
   
-## <a name="see-also"></a>Consulte também  
- [Separador de CDC](cdc-splitter.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Divisor de CDC](cdc-splitter.md)  
   
   
