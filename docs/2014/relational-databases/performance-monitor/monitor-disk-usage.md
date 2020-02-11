@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 81f0169f8235d94ef2d12753c3164462fcbad44c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63032264"
 ---
 # <a name="monitor-disk-usage"></a>Monitorar o uso do disco
@@ -39,6 +39,6 @@ ms.locfileid: "63032264"
   
 -   Isolar a atividade de disco criada pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
- Para obter mais informações, consulte [Monitorando o uso do disco](https://social.technet.microsoft.com/wiki/contents/articles/monitoring-disk-usage.aspx)  
+ Para obter mais informações, consulte [monitorando o uso do disco](https://social.technet.microsoft.com/wiki/contents/articles/monitoring-disk-usage.aspx)  
   
   

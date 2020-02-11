@@ -1,5 +1,5 @@
 ---
-title: 'Lição 5: Criação de rede Neural e modelos de regressão logística (Tutorial de mineração de dados intermediário) | Microsoft Docs'
+title: 'Lição 5: criando modelos de rede neural e de regressão logística (tutorial de mineração de dados intermediário) | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -17,13 +17,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: daf554338a50a81f46d86a77bf04e770fcc2512e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63137455"
 ---
-# <a name="lesson-5-building-neural-network-and-logistic-regression-models-intermediate-data-mining-tutorial"></a>Lição 5: Criação de rede Neural e modelos de regressão logística (Tutorial de mineração de dados intermediário)
+# <a name="lesson-5-building-neural-network-and-logistic-regression-models-intermediate-data-mining-tutorial"></a>Lição 5: Criando modelos de rede neural e de regressão logística (Tutorial de mineração de dados intermediário)
   
   
  O departamento de Operações da [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] está envolvido em um projeto para melhorar satisfação do cliente com seu call center. Eles contrataram um fornecedor para gerenciar o call center e relatar a métrica da efetividade do call center e pediram a você para analisar alguns dados preliminares apresentados pelo fornecedor. Eles querem saber se é há alguma descoberta interessante. Em particular, eles gostariam de saber se os dados sugerem algum problema com a equipe ou maneiras de melhorar a satisfação do cliente.  
@@ -43,32 +43,32 @@ ms.locfileid: "63137455"
   
  Eis os tópicos desta lição:  
   
--   [Adicionando dados de um exibição da fonte de dados de Call Center &#40;Tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/add-data-source-view-call-center-data-intermediate-data-mining.md)  
+-   [Adicionando uma exibição da fonte de dados para dados do Call Center &#40;tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/add-data-source-view-call-center-data-intermediate-data-mining.md)  
   
--   [Criando uma estrutura de rede Neural e o modelo &#40;Tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial.md)  
+-   [Criando uma estrutura de rede neural e um modelo &#40;tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial.md)  
   
--   [Explorando o modelo de Call Center &#40;Tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/exploring-the-call-center-model-intermediate-data-mining-tutorial.md)  
+-   [Explorando o modelo do Call Center &#40;tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/exploring-the-call-center-model-intermediate-data-mining-tutorial.md)  
   
--   [Adicionando um modelo de regressão logística à estrutura do Call Center &#40;Tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/add-logistic-regression-model-to-call-center-intermediate-data-mining.md)  
+-   [Adicionando um modelo de regressão logística à estrutura do Call Center &#40;tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/add-logistic-regression-model-to-call-center-intermediate-data-mining.md)  
   
--   [Criando previsões para modelos de Call Center &#40;Tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/create-predictions-call-center-models-intermediate-data-mining-tutorial.md)  
+-   [Criando previsões para os modelos do Call Center &#40;tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/create-predictions-call-center-models-intermediate-data-mining-tutorial.md)  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
- [Adicionando dados de um exibição da fonte de dados de Call Center &#40;Tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/add-data-source-view-call-center-data-intermediate-data-mining.md)  
+ [Adicionando uma exibição da fonte de dados para dados do Call Center &#40;tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/add-data-source-view-call-center-data-intermediate-data-mining.md)  
   
 ## <a name="all-lessons"></a>Todas as lições  
- [Lição 1: Criando a solução de mineração de dados intermediário &#40;Tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/lesson-1-create-solution-intermediate-data-mining-tutorial.md)  
+ [Lição 1: criando a solução intermediária de mineração de dados &#40;tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/lesson-1-create-solution-intermediate-data-mining-tutorial.md)  
   
- [Lição 2: Criando um cenário de previsão &#40;Tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
+ [Lição 2: Criando um cenário de previsão &#40;tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
   
- [Lição 3: Criando um cenário de cesta de compras &#40;Tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
+ [Lição 3: Criando um cenário de cesta de mercado &#40;tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
   
- [Lição 4: Criando um cenário de Clustering de sequências &#40;Tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)  
+ [Lição 4: Criando um cenário de clustering de sequência &#40;tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)  
   
- Lição 5: Rede neural e cenário de regressão logística (Tutorial de mineração de dados intermediário)  
+ Lição 5: Cenário de rede neural e de regressão logística (tutorial de mineração de dados intermediário)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tutorial de mineração de dados básico](../../2014/tutorials/basic-data-mining-tutorial.md)   
- [Tutorial de mineração de dados intermediário &#40;Analysis Services - mineração de dados&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)  
+ [Tutorial de mineração de dados intermediário &#40;Analysis Services de mineração de dados&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)  
   
   

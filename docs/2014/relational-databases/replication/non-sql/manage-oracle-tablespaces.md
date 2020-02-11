@@ -14,35 +14,35 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9a6bf22c7649646506b65628f556b52fead23375
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022294"
 ---
 # <a name="manage-oracle-tablespaces"></a>Gerenciar espaços de tabela Oracle
-  Um espaço para tabela é uma unidade de armazenamento de banco de dados que é aproximadamente equivalente a um grupo de arquivo no [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Os espaços de tabela permitem armazenamento e gerenciamento de objetos de banco de dados dentro de grupos individuais. Para obter mais informações, consulte a documentação Oracle.  
+  Um espaço de tabela é uma unidade de armazenamento de banco de dados que é aproximadamente equivalente [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]a um grupo de arquivos no. Os espaços de tabela permitem armazenamento e gerenciamento de objetos de banco de dados dentro de grupos individuais. Para obter mais informações, consulte a documentação Oracle.  
   
  Ao configurar uma tabela como parte de uma publicação Oracle, você pode especificar opcionalmente um espaço de tabela do Oracle existente para ser usado ao armazenar informações de log de replicação. Se não especificado, o espaço de tabela para os objetos de replicação é o espaço de tabela padrão associado com o esquema de usuário administrativo de replicação que foi configurado ao se configurar o Publicador.  
   
- **Para especificar um espaço de tabela para uma tabela de log de artigo**:  
+ **Para especificar um tablespace para uma tabela de log de artigo**:  
   
 -   Especifique um espaço de tabela na caixa de diálogo **Propriedades de Artigo** . Para obter mais informações sobre como acessar essa caixa de diálogo, consulte [View and Modify Publication Properties](../publish/view-and-modify-publication-properties.md).  
   
 -   Use [sp_changearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql). Para usar **sp_changearticle**, especifique o seguinte:  
   
-    -   O nome do Editor Oracle para o parâmetro **@publisher** .  
+    -   O nome do Publicador Oracle para o parâmetro **@publisher**.  
   
-    -   O nome da publicação Oracle para o parâmetro **@publication** .  
+    -   O nome da publicação Oracle para o parâmetro **@publication**.  
   
-    -   O nome do artigo para o parâmetro **@article** .  
+    -   O nome do artigo para o parâmetro **@article**.  
   
-    -   Um valor de 'espaço de tabela' para o parâmetro **@property** .  
+    -   Um valor de ' tablespace ' para o parâmetro **@property**.  
   
-    -   O nome do espaço de tabela para o parâmetro **@value** .  
+    -   O nome do espaço de tabela para o **@value**parâmetro.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Configurar um Publicador Oracle](configure-an-oracle-publisher.md)   
- [Objects Created on the Oracle Publisher](objects-created-on-the-oracle-publisher.md)  
+ [Objetos criados no Editor Oracle](objects-created-on-the-oracle-publisher.md)  
   
   

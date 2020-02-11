@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 637d06160afba1fc1f93bea0da3aae0a09f954ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63050932"
 ---
 # <a name="sort-warnings-event-class"></a>classe de evento Sort Warnings
@@ -28,13 +28,13 @@ ms.locfileid: "63050932"
   
 ## <a name="sort-warnings-event-class-data-columns"></a>Coluna de dados da classe de evento Sort Warnings  
   
-|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|DESCRIÇÃO|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|`nvarchar`|Nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |ClientProcessID|`int`|ID atribuída pelo computador host ao processo em que o aplicativo cliente está sendo executado. Essa coluna de dados será populada se o cliente fornecer a ID de processo do cliente.|9|Sim|  
 |DatabaseID|`int`|ID do banco de dados especificado pela instrução USE de *database* ou o banco de dados padrão se nenhuma instrução USE de *database* tiver sido emitida para uma determinada instância. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibirá o nome do banco de dados se a coluna de dados ServerName for capturada no rastreamento e o servidor estiver disponível. Determine o valor para um banco de dados usando a função DB_ID.|3|Sim|  
 |DatabaseName|`nvarchar`|Nome do banco de dados no qual a instrução do usuário está sendo executada.|35|Sim|  
-|EventClass|`int`|Tipo de evento = 69.|27|Não |  
+|EventClass|`int`|Tipo de evento = 69.|27|Não|  
 |EventSequence|`int`|A sequência de determinado evento dentro da solicitação.|51|Não|  
 |EventSubClass|`int`|Tipo de subclasse de evento.<br /><br /> 1 = Passagem única. Quando a tabela de classificação for gravada no disco, somente uma única passagem adicional sobre os dados será exigida para obter a saída classificada.<br /><br /> 2 = Várias passagens. Quando a tabela de classificação for gravada no disco, várias passagens sobre os dados serão exigidas para obter a saída classificada.|21|Sim|  
 |GroupID|`int`|ID do grupo de carga de trabalho no qual o evento de Rastreamento do SQL dispara.|66|Sim|  
@@ -52,7 +52,7 @@ ms.locfileid: "63050932"
 |TransactionID|`bigint`|ID da transação atribuída pelo sistema.|4|Sim|  
 |XactSequence|`bigint`|Token que descreve a transação atual.|50|Sim|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   
   

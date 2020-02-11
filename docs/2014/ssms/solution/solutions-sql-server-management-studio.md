@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1ef3c378b963168e3c4724033e390803812c5a27
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63064882"
 ---
 # <a name="solutions-sql-server-management-studio"></a>Soluções (SQL Server Management Studio)
@@ -52,8 +52,8 @@ ms.locfileid: "63064882"
 |Descreve como mover itens entre projetos em uma solução.|[Mover itens em uma solução](move-items-in-a-solution.md)|  
 |Descreve como renomear uma solução ou os itens na solução.|[Renomear soluções e itens de projeto](rename-solutions-and-project-items.md)|  
   
-## <a name="see-also"></a>Consulte também  
- [Gerenciador de soluções](solution-explorer.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Gerenciador de Soluções](solution-explorer.md)   
  [Projetos &#40;SQL Server Management Studio&#41;](projects-sql-server-management-studio.md)   
  [Controle do código-fonte do Gerenciador de Soluções](../../database-engine/solution-explorer-source-control.md)  
   

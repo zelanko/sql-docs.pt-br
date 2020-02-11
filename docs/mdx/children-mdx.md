@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 0af4d7b97777002dc5683c075f82531ccc8df86e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68016803"
 ---
 # <a name="children-mdx"></a>Children (MDX)
@@ -32,7 +32,7 @@ Member_Expression.Children
  Uma linguagem MDX válida que retorna um membro.  
   
 ## <a name="remarks"></a>Comentários  
- O **filhos** função retorna um conjunto naturalmente ordenado que contém os filhos de um membro especificado. Se o membro especificado não tiver nenhum filho, essa função retornará um conjunto vazio.  
+ A função **Children** retorna um conjunto ordenado naturalmente que contém os filhos de um membro especificado. Se o membro especificado não tiver nenhum filho, essa função retornará um conjunto vazio.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir retorna os filhos do membro Estados Unidos da hierarquia Geografia na dimensão Geografia.  
@@ -42,7 +42,7 @@ SELECT [Geography].[Geography].[Country].&[United States].Children ON 0
 FROM [Adventure Works]  
 ```  
   
- O exemplo a seguir retorna todos os membros a **medidas** dimensão no eixo da coluna, isso inclui todos os membros calculados e o conjunto de todos os filhos do `[Product].[Model Name]` hierarquia no eixo de linhas de atributos da **Adventure Works** cubo.  
+ O exemplo a seguir retorna todos os membros da dimensão **medidas** no eixo de coluna, incluindo todos os membros calculados e o conjunto de todos os filhos `[Product].[Model Name]` da hierarquia de atributo no eixo de linha do cubo **Adventure Works** .  
   
 ```  
 SELECT  
@@ -55,9 +55,9 @@ FROM
   
 |Versão|Histórico|  
 |-------------|-------------|  
-|[!INCLUDE[ssBOL2005_R03](../includes/ssbol2005-r03-md.md)]|**Conteúdo alterado:**<br /> -Atualizada a sintaxe e os argumentos para melhorar a clareza.<br /><br /> -Exemplos atualizados somados.|  
+|[!INCLUDE[ssBOL2005_R03](../includes/ssbol2005-r03-md.md)]|**Conteúdo alterado:**<br /> -Sintaxe e argumentos atualizados para melhorar a clareza.<br /><br /> -Foram adicionados exemplos atualizados.|  
   
-## <a name="see-also"></a>Consulte também  
- [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Referência de função MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -10,10 +10,10 @@ ms.assetid: e7912885-1c14-409b-9022-83ad4c36f3bd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9abf6ef954a493d4386d46b9d113348a9cb91e1a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68011129"
 ---
 # <a name="localdb_error_not_installed"></a>LOCALDB_ERROR_NOT_INSTALLED
@@ -23,16 +23,16 @@ ms.locfileid: "68011129"
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|278|  
-|Origem do evento|Tempo de execução de banco de dados local do SQL Server 12.0|  
-|Componente|API do tempo de execução de banco de dados local|  
-|Texto da mensagem|Observação: O texto da mensagem está vazio, pois essa mensagem significa que toda a API LocalDB (incluindo a função FormatMessage que mapeia HRESULTS para o texto da mensagem) não está disponível.|  
+|Origem do Evento|Runtime de banco de dados local do SQL Server 12.0|  
+|Componente|API do runtime de banco de dados local|  
+|Texto da mensagem|Observação: o texto da mensagem está vazio, pois essa mensagem significa que toda a API LocalDB (incluindo a função FormatMessage que mapeia HRESULTs no texto da mensagem) não está disponível.|  
   
 ## <a name="explanation"></a>Explicação  
  O Local Database Runtime não está instalado no computador.  
   
 ## <a name="user-action"></a>Ação do usuário  
- Instale o Tempo de Execução do Banco de Dados Local e repita a operação.  
+ Instale o Runtime do Banco de Dados Local e repita a operação.  
   
   

@@ -16,16 +16,16 @@ ms.assetid: b8377042-95cc-467b-9ada-fe43cebf4bc3
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7c50409ea35809c52de718a8281bf76f75a5a0e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68004588"
 ---
 # <a name="functions-related-to-qnames---expanded-qname"></a>Funções Relacionadas a QNames – expanded-QName
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Retorna um valor do tipo xs: QName com o namespace URI especificado na *$paramURI* e o nome local especificado na *$paramLocal*. Se *$paramURI* é a cadeia de caracteres vazia ou a sequência vazia, ele não representará um namespace.  
+  Retorna um valor do tipo xs: QName com o URI do namespace especificado no *$paramURI* e o nome local especificado na *$paramLocal*. Se *$paramURI* for a cadeia de caracteres vazia ou a sequência vazia, ela não representará nenhum namespace.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,27 +41,27 @@ fn:expanded-QName($paramURI as xs:string?, $paramLocal as xs:string?) as xs:QNam
  É a parte do nome local do QName.  
   
 ## <a name="remarks"></a>Comentários  
- O seguinte se aplica para o **expanded-QName()** função:  
+ O seguinte se aplica à função **expanded-QName ()** :  
   
--   Se o *$paramLocal* valor especificado não estiver na forma léxica correta do tipo xs: NCName, a sequência vazia será retornada e representa um erro dinâmico.  
+-   Se o valor de *$paramLocal* especificado não estiver no formato léxico correto para o tipo xs: NCName, a sequência vazia será retornada e representará um erro dinâmico.  
   
--   Não é oferecido suporte à conversão do tipo xs:QName em qualquer outro tipo no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Por isso, o **expanded-QName()** função não pode ser usada na construção XML. Por exemplo, quando você estiver construindo um nó, como `<e> expanded-QName(...) </e>`, o valor precisa ser não digitado. Isso exigiria que você convertesse o valor de tipo xs:QName retornado por `expanded-QName()` para xdt:untypedAtomic. Porém, não é oferecido suporte para isso. Em um exemplo posterior neste tópico é oferecida uma solução.  
+-   Não é oferecido suporte à conversão do tipo xs:QName em qualquer outro tipo no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Por isso, a função **expanded-QName ()** não pode ser usada na construção XML. Por exemplo, quando você estiver construindo um nó, como `<e> expanded-QName(...) </e>`, o valor precisa ser não digitado. Isso exigiria que você convertesse o valor de tipo xs:QName retornado por `expanded-QName()` para xdt:untypedAtomic. Porém, não é oferecido suporte para isso. Em um exemplo posterior neste tópico é oferecida uma solução.  
   
--   Você pode modificar ou comparar os valores de tipo QName existentes. Por exemplo, `/root[1]/e[1] eq expanded-QName("http://nsURI" "myNS")` compara o valor do elemento <`e`>, com o QName retornado pela **expanded-QName()** função.  
+-   Você pode modificar ou comparar os valores de tipo QName existentes. Por exemplo, `/root[1]/e[1] eq expanded-QName("http://nsURI" "myNS")` compara o valor do elemento, <`e`>, com QName retornado pela função **expanded-QName ()** .  
   
 ## <a name="examples"></a>Exemplos  
- Este tópico fornece exemplos de XQuery contra instâncias XML armazenadas em várias **xml** colunas de tipo a [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] banco de dados.  
+ Este tópico fornece exemplos de XQuery em relação a instâncias XML que são **** armazenadas em várias colunas de [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] tipo XML no banco de dados.  
   
-### <a name="a-replacing-a-qname-type-node-value"></a>A. Substituindo um valor de nó do tipo QName  
+### <a name="a-replacing-a-qname-type-node-value"></a>a. Substituindo um valor de nó do tipo QName  
  Este exemplo ilustra como você pode modificar o valor de um nó de elemento do tipo QName. O exemplo executa o seguinte:  
   
 -   Cria uma coleção de esquemas XML que define um elemento do tipo QName.  
   
--   Cria uma tabela com uma **xml** coluna de tipo usando a coleção de esquemas XML.  
+-   Cria uma tabela com uma coluna de tipo **XML** usando a coleção de esquema XML.  
   
 -   Salva uma instância XML na tabela.  
   
--   Usa o **Modify ()** método do tipo de dados xml para modificar o valor do elemento de tipo QName na instância. O **expanded-QName()** função é usada para gerar o novo valor de tipo QName.  
+-   Usa o método **Modify ()** do tipo de dados XML para modificar o valor do elemento tipo QName na instância. A função **expanded-QName ()** é usada para gerar o novo valor de tipo QName.  
   
 ```  
 -- If XML schema collection (if exists)  
@@ -98,7 +98,7 @@ go
 </Root>   
 ```  
   
- Na consulta a seguir, o <`ElemQN`> valor do elemento é substituído usando o **Modify ()** método de tipo de dados xml e substitua o valor de XML DML, conforme mostrado.  
+ Na consulta a seguir, o valor `ElemQN` do elemento <> é substituído usando o método **Modify ()** do tipo de dados XML e o valor de Replace de XML DML, conforme mostrado.  
   
 ```  
 -- the value.  
@@ -113,7 +113,7 @@ SELECT * from T
 go  
 ```  
   
- Este é o resultado. Observe que o elemento <`ElemQN`> de QName tipo agora tem um novo valor:  
+ Este é o resultado. Observe que o elemento <`ElemQN`> do tipo QName agora tem um novo valor:  
   
 ```  
 <Root xmlns="QNameXSD" xmlns:ns="urn">  
@@ -132,7 +132,7 @@ go
 ```  
   
 ### <a name="b-dealing-with-the-limitations-when-using-the-expanded-qname-function"></a>B. Tratando as limitações ao usar a função expanded-QName()  
- O **expanded-QName** função não pode ser usada na construção XML. O exemplo a seguir ilustra essa situação. Para solucionar essa limitação, o exemplo primeiro insere um nó e, em seguida, modifica o nó.  
+ A função **expanded-QName** não pode ser usada na construção XML. O exemplo a seguir mostra isso. Para solucionar essa limitação, o exemplo primeiro insere um nó e, em seguida, modifica o nó.  
   
 ```  
 -- if exists drop the table T  
@@ -157,7 +157,7 @@ SELECT *
 FROM T  
 ```  
   
- A tentativa a seguir adiciona outro <`root`> elemento, mas falha, porque não há suporte para a função expanded-QName() na construção XML.  
+ A tentativa a seguir adiciona outro `root` <elemento>, mas falha, porque a função expanded-QName () não tem suporte na construção XML.  
   
 ```  
 update T SET xmlCol.modify('  
@@ -165,7 +165,7 @@ insert <root>{expanded-QName("http://ns","someLocalName")}</root> as last into /
 go  
 ```  
   
- Uma solução para isso é primeiro inserir uma instância com um valor para o <`root`> elemento e, em seguida, modificá-lo. Neste exemplo, um valor inicial nulo é usado quando o <`root`> elemento é inserido. A coleção de esquemas XML neste exemplo permite um valor nulo para o <`root`> elemento.  
+ Uma solução para isso é primeiro inserir uma instância com um valor para o elemento <`root`> e, em seguida, modificá-la. Neste exemplo, um valor inicial nil é usado quando o elemento <`root`> é inserido. A coleção de esquema XML neste exemplo permite um valor nil para o elemento `root` <>.  
   
 ```  
 update T SET xmlCol.modify('  
@@ -186,7 +186,7 @@ go
   
  `<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p1="http://ns">p1:someLocalName</root>`  
   
- Você pode comparar o valor QName, como mostrado na consulta a seguir. A consulta retorna apenas o <`root`> elementos cujos valores correspondem ao QName de tipo de valor retornado pela **expanded-QName()** função.  
+ Você pode comparar o valor QName, como mostrado na consulta a seguir. A consulta retorna apenas os elementos `root` <> cujos valores correspondem ao valor do tipo QName retornado pela função **expanded-QName ()** .  
   
 ```  
 SELECT xmlCol.query('  
@@ -200,9 +200,9 @@ FROM T
 ```  
   
 ### <a name="implementation-limitations"></a>Limitações de implementação  
- Há uma limitação: O **expanded-QName()** função aceita a sequência vazia como o segundo argumento e retorna vazia em vez de gerar um erro de tempo de execução quando o segundo argumento estiver incorreto.  
+ Há uma limitação: a função **expanded-QName ()** aceita a sequência vazia como o segundo argumento e retornará vazio em vez de gerar um erro em tempo de execução quando o segundo argumento estiver incorreto.  
   
-## <a name="see-also"></a>Consulte também  
- [Funções relacionadas a QNames &#40;XQuery&#41;](https://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  
+## <a name="see-also"></a>Consulte Também  
+ [Funções relacionadas a QNames &#40;&#41;XQuery](https://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  
   
   

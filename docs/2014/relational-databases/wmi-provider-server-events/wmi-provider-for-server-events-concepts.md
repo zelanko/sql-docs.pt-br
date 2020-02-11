@@ -17,17 +17,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 3a0ef44b57e092c13b4046b250c99fca5eaea101
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211579"
 ---
 # <a name="wmi-provider-for-server-events-concepts"></a>Provedor WMI para conceitos de eventos de servidor
   O Provedor WMI para eventos de servidor permite usar o Windows Management Instrumentation (WMI) para monitorar eventos em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Compreender o Provedor WMI para eventos do servidor](understanding-the-wmi-provider-for-server-events.md)  
+ [Compreendendo o Provedor WMI para eventos do servidor](understanding-the-wmi-provider-for-server-events.md)  
  Fornece uma visão geral da arquitetura do provedor e como o SQL Server Agent pode ser programado para trabalhar com ela.  
   
  [Trabalhando com o Provedor WMI para Eventos de Servidor](working-with-the-wmi-provider-for-server-events.md)  
@@ -36,7 +36,7 @@ ms.locfileid: "68211579"
  [Usando o WQL com o Provedor WMI para eventos de servidor](using-wql-with-the-wmi-provider-for-server-events.md)  
  Explica a sintaxe da linguagem WQL (WMI Query Language) e como usá-la ao programar no provedor.  
   
- [Exemplo: Criar um alerta do SQL Server Agent usando o provedor WMI para eventos de servidor](sample-creating-a-sql-server-agent-alert-with-the-wmi-provider.md)  
+ [Exemplo: Criação de um alerta do SQL Server Agent usando o provedor WMI para eventos do servidor](sample-creating-a-sql-server-agent-alert-with-the-wmi-provider.md)  
  Fornece um exemplo de como usar o Provedor WMI para retornar informações de eventos de rastreamento com os quais deve ser criado um alerta do SQL Server Agent.  
   
  [Exemplo: Usar o provedor de eventos WMI com o .NET Framework](sample-using-the-wmi-event-provider-with-the-net-framework.md)  

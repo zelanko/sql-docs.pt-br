@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f10ba1f9ff6837d1ca308872ef166e04c417981c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63067503"
 ---
 # <a name="save-selected-tables-on-a-diagram-visual-database-tools"></a>Salvar tabelas selecionadas em um diagrama (Visual Database Tools)
@@ -37,7 +37,7 @@ ms.locfileid: "63067503"
     > [!NOTE]  
     >  A lista de tabelas pode conter tabelas além das selecionadas. Por exemplo, se você alterar o tipo de dados de uma coluna que participa de uma relação com outra tabela, ambas as tabelas serão incluídas nessa lista.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Trabalhar com diagramas de banco de dados &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

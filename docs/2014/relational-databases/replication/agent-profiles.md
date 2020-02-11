@@ -15,14 +15,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ce4dff443e52ef214e7c43f5df7eb50140937c1e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63140459"
 ---
 # <a name="agent-profiles"></a>Perfis de Agente
-  Use a caixa de diálogo **Perfis de Agente** para gerenciar perfis de agente. Perfis de agente fornecem um modo conveniente para gerenciar parâmetros em tempo de execução para cada agente. Cada agente tem um perfil padrão e alguns agentes têm perfis adicionais predefinidos. Por exemplo, o Merge Agent tem um perfil de "vínculo lento" projetado para baixas conexões de largura de banda. Perfis predefinidos são suficientes para a maioria dos aplicativos, mas você também pode criar perfis definidos pelo usuário, que permite personalizar o comportamento do agente.  
+  Use a caixa de diálogo **Perfis de Agente** para gerenciar perfis de agente. Perfis de agente fornecem um modo conveniente para gerenciar parâmetros em runtime para cada agente. Cada agente tem um perfil padrão e alguns agentes têm perfis adicionais predefinidos. Por exemplo, o Merge Agent tem um perfil de "vínculo lento" projetado para baixas conexões de largura de banda. Perfis predefinidos são suficientes para a maioria dos aplicativos, mas você também pode criar perfis definidos pelo usuário, que permite personalizar o comportamento do agente.  
   
 ## <a name="options"></a>Opções  
  **Selecionar uma página**  
@@ -35,12 +35,12 @@ ms.locfileid: "63140459"
  O nome do perfil.  
   
  **Tipo**  
- O tipo de perfil: **Usuário** (definida pelo usuário) ou **sistema** (predefinido).  
+ O tipo de perfil: **Usuário** (definido pelo usuário) ou **Sistema** (predefinido).  
   
  **Propriedades (...)**  
  Clique para exibir os valores usados para cada parâmetro no perfil do agente.  
   
- **Nova**  
+ **Novo**  
  Clique para criar um novo perfil.  
   
  **Delete (excluir)**  
@@ -49,7 +49,7 @@ ms.locfileid: "63140459"
  **Alterar Agentes Existentes**  
  Selecione um perfil e clique em **Alterar Agentes Existentes** para especificar que todos os trabalhos existentes, para um agente de um tipo específico, devem usar o perfil selecionado. Por exemplo, se você criou um número de assinaturas para uma publicação de mesclagem e quer alterar o perfil para especificar que um trabalho do Merge Agent para cada uma dessas assinaturas deve usar **Perfil do agente de vínculo lento**, selecione o perfil e clique em **Alterar Agentes Existentes**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Trabalhar com perfis do Agente de Replicação](agents/work-with-replication-agent-profiles.md)   
  [Visão geral dos agentes de replicação](agents/replication-agents-overview.md)   
  [Perfis do agente de replicação](agents/replication-agent-profiles.md)  

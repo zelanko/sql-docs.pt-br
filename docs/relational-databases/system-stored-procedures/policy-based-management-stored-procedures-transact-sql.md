@@ -1,5 +1,5 @@
 ---
-title: Gerenciamento baseado em políticas armazenadas Procedures (Transact-SQL) | Microsoft Docs
+title: Procedimentos armazenados do gerenciamento baseado em políticas (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: df64ab19-4e66-4702-96bd-32ad587d00f0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a4304bfb3048c8e72a98e4eb24c51b4c7f19d5cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67941943"
 ---
 # <a name="policy-based-management-stored-procedures-transact-sql"></a>Procedimentos armazenados de Gerenciamento Baseado em Políticas (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte ao sistema a seguir procedimentos armazenados que são usados para o gerenciamento baseado em políticas.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o oferece suporte aos seguintes procedimentos armazenados do sistema que são usados para o gerenciamento baseado em políticas.  
   
 > [!IMPORTANT]  
 >  Há suporte apenas aos procedimentos armazenados de Gerenciamento Baseado em Políticas documentados nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Procedimentos armazenados não documentados são usados por componentes do Gerenciamento Baseado em Políticas e não devem ser usados para administrar o Gerenciamento Baseado em Políticas.  
@@ -43,7 +43,7 @@ ms.locfileid: "67941943"
 |[sp_syspolicy_rename_condition](../../relational-databases/system-stored-procedures/sp-syspolicy-rename-condition-transact-sql.md)|[sp_syspolicy_update_policy_category_subscription](../../relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-subscription-transact-sql.md)|  
 |[sp_syspolicy_rename_policy](../../relational-databases/system-stored-procedures/sp-syspolicy-rename-policy-transact-sql.md)||  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Administrar servidores com Gerenciamento Baseado em Políticas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0986e654430a47cc494bf1646c222b4888fc105b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63033508"
 ---
 # <a name="preconnectstarting-event-class"></a>Classe de evento PreConnect:Starting
@@ -26,7 +26,7 @@ ms.locfileid: "63033508"
   
 ## <a name="preconnectstarting-event-class-data-columns"></a>Colunas de dados da classe de evento PreConnect:Starting  
   
-|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|DESCRIÇÃO|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |EventClass|`int`|215|27|Não|  
 |SPID|`int`|O ID de processo de servidor que dispara este evento.|12|Sim|  
@@ -35,7 +35,7 @@ ms.locfileid: "63033508"
 |ObjectID|`int`|A ID do objeto do classificador definido pelo usuário.|22|Sim|  
 |ObjectName|`nvarchar(256)`|O nome de duas partes da função de classificador definida pelo usuário. Por exemplo, dbo.classifier.|34|Sim|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Eventos estendidos](../extended-events/extended-events.md)   
  [Classe de evento PreConnect:Completed](preconnect-completed-event-class.md)   
  [Resource Governor](../resource-governor/resource-governor.md)  
