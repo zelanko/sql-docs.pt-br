@@ -18,18 +18,18 @@ ms.assetid: 4a13b804-45f2-4f82-987f-42d9a57dd6db
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c65498b25bfbe0a5eee38a43ea212e29edc26295
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68090048"
 ---
-# <a name="sphelpjobstep-transact-sql"></a>sp_help_jobstep (Transact-SQL)
+# <a name="sp_help_jobstep-transact-sql"></a>sp_help_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retorna informações das etapas em um trabalho usado pelo serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para executar atividades automatizadas.  
   
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,44 +42,44 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_id = ] 'job_id'` O número de identificação do trabalho para o qual retornar informações de trabalho. *job_id* está **uniqueidentifier**, com um padrão NULL.  
+`[ @job_id = ] 'job_id'`O número de identificação do trabalho para o qual retornar informações do trabalho. *job_id* é **uniqueidentifier**, com um padrão de NULL.  
   
-`[ @job_name = ] 'job_name'` O nome do trabalho. *job_name* está **sysname**, com um padrão NULL.  
+`[ @job_name = ] 'job_name'`O nome do trabalho. *job_name* é **sysname**, com um NULL padrão.  
   
 > [!NOTE]  
->  Qualquer um dos *job_id* ou *job_name* deve ser especificado, mas não podem ser especificados.  
+>  *Job_id* ou *job_name* deve ser especificado, mas ambos não podem ser especificados.  
   
-`[ @step_id = ] step_id` O número de identificação da etapa no trabalho. Se não for incluído, todas as etapas do trabalho serão incluídas. *step_id* está **int**, com um padrão NULL.  
+`[ @step_id = ] step_id`O número de identificação da etapa no trabalho. Se não for incluído, todas as etapas do trabalho serão incluídas. *step_id* é **int**, com um padrão de NULL.  
   
-`[ @step_name = ] 'step_name'` O nome da etapa no trabalho. *step_name* está **sysname**, com um padrão NULL.  
+`[ @step_name = ] 'step_name'`O nome da etapa no trabalho. *step_name* é **sysname**, com um padrão de NULL.  
   
-`[ @suffix = ] suffix` Um sinalizador que indica se uma descrição de texto será anexada à **sinalizadores** coluna na saída. *sufixo*está **bit**, com o padrão de **0**. Se *sufixo* é **1**, uma descrição será anexada.  
+`[ @suffix = ] suffix`Um sinalizador que indica se uma descrição de texto é anexada à coluna **flags** na saída. o *sufixo*é **bit**, com o padrão **0**. Se o *sufixo* for **1**, uma descrição será anexada.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |**step_id**|**int**|Identificador exclusivo da etapa.|  
 |**step_name**|**sysname**|Nome da etapa no trabalho.|  
-|**subsystem**|**nvarchar(40)**|Subsistema no qual o comando de etapa será executado.|  
-|**command**|**nvarchar(max)**|Comando executado na etapa.|  
+|**subsistema**|**nvarchar(40)**|Subsistema no qual o comando de etapa será executado.|  
+|**linha**|**nvarchar(max)**|Comando executado na etapa.|  
 |**flags**|**int**|Um bitmask de valores que controlam o comportamento da etapa.|  
-|**cmdexec_success_code**|**int**|Para um **CmdExec** etapa, isso é o código de saída do processo de um comando bem sucedido.|  
-|**on_success_action**|**tinyint**|Ação a ser efetuada se a etapa tiver êxito:<br /><br /> **1** = sair do trabalho relatando êxito.<br /><br /> **2** = sair do trabalho relatando falha.<br /><br /> **3** = ir para a próxima etapa.<br /><br /> **4** = ir para a etapa.|  
-|**on_success_step_id**|**int**|Se **on_success_action** for 4, isto indicará a próxima etapa a ser executada.|  
-|**on_fail_action**|**tinyint**|O que fazer se a etapa falhar. Valores são os mesmos **on_success_action**.|  
-|**on_fail_step_id**|**int**|Se **on_fail_action** for 4, isto indicará a próxima etapa a ser executada.|  
-|**server**|**sysname**|Reservado.|  
+|**cmdexec_success_code**|**int**|Para uma etapa de **CmdExec** , esse é o código de saída do processo de um comando bem-sucedido.|  
+|**on_success_action**|**tinyint**|Ação a ser efetuada se a etapa tiver êxito:<br /><br /> **1** = sair do trabalho relatando êxito.<br /><br /> **2** = sair do trabalho relatando falha.<br /><br /> **3** = vá para a próxima etapa.<br /><br /> **4** = ir para a etapa.|  
+|**on_success_step_id**|**int**|Se **on_success_action** for 4, isso indicará a próxima etapa a ser executada.|  
+|**on_fail_action**|**tinyint**|O que fazer se a etapa falhar. Os valores são os mesmos que **on_success_action**.|  
+|**on_fail_step_id**|**int**|Se **on_fail_action** for 4, isso indicará a próxima etapa a ser executada.|  
+|**servidor**|**sysname**|Reservado.|  
 |**database_name**|**sysname**|Para uma etapa [!INCLUDE[tsql](../../includes/tsql-md.md)], este é o banco de dados no qual o comando é executado.|  
 |**database_user_name**|**sysname**|Para uma etapa [!INCLUDE[tsql](../../includes/tsql-md.md)], este é o contexto de usuário do banco de dados no qual o comando é executado.|  
 |**retry_attempts**|**int**|Número máximo de vezes que o comando deve ser repetido (se for malsucedido).|  
 |**retry_interval**|**int**|Intervalo (em minutos) para quaisquer tentativas de repetição.|  
 |**os_run_priority**|**int**|Reservado.|  
-|**output_file_name**|**nvarchar(200)**|Arquivo de saída para o qual comando deve ser gravada ([!INCLUDE[tsql](../../includes/tsql-md.md)], **CmdExec**, e **PowerShell** somente etapas).|  
-|**last_run_outcome**|**int**|Resultado da etapa na última vez em que foi executada:<br /><br /> **0** = falha<br /><br /> **1** = foi bem-sucedida<br /><br /> **2** = repetir<br /><br /> **3** = cancelada<br /><br /> **5** = desconhecido|  
+|**output_file_name**|**nvarchar(200)**|Arquivo no qual a saída de comando deve ser[!INCLUDE[tsql](../../includes/tsql-md.md)]gravada (, **CmdExec**e etapas do **PowerShell** somente).|  
+|**last_run_outcome**|**int**|Resultado da etapa na última vez em que foi executada:<br /><br /> **0** = falha<br /><br /> **1** = com êxito<br /><br /> **2** = repetir<br /><br /> **3** = cancelado<br /><br /> **5** = desconhecido|  
 |**last_run_duration**|**int**|Duração (hhmmss) da etapa na última vez que foi executada.|  
 |**last_run_retries**|**int**|Número de vezes que o comando foi repetido da última vez em que a etapa foi executada.|  
 |**last_run_date**|**int**|Data em que a execução da etapa foi iniciada pela última vez.|  
@@ -87,10 +87,10 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**proxy_id**|**int**|Proxy da etapa do trabalho.|  
   
 ## <a name="remarks"></a>Comentários  
- **sp_help_jobstep** está no **msdb** banco de dados.  
+ **sp_help_jobstep** está no banco de dados **msdb** .  
   
 ## <a name="permissions"></a>Permissões  
- Por padrão, os membros da função de servidor fixa **sysadmin** podem executar este procedimento armazenado. Deve ser concedida a outros usuários uma das seguintes funções de banco de dados fixas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no banco de dados **msdb** :  
+ Por padrão, os membros da função de servidor fixa **sysadmin** podem executar esse procedimento armazenado. Deve ser concedida a outros usuários uma das seguintes funções de banco de dados fixas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no banco de dados **msdb** :  
   
 -   **SQLAgentUserRole**  
   
@@ -100,11 +100,11 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
  Para obter detalhes sobre as permissões dessas funções, consulte [Funções de banco de dados fixas do SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Os membros **SQLAgentUserRole** só podem exibir as etapas de trabalho para trabalhos que possuem.  
+ Os membros de **SQLAgentUserRole** só podem exibir etapas de trabalho para os trabalhos que eles possuem.  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-return-information-for-all-steps-in-a-specific-job"></a>A. Retornar informações de todas as etapas em um trabalho específico  
+### <a name="a-return-information-for-all-steps-in-a-specific-job"></a>a. Retornar informações de todas as etapas em um trabalho específico  
  O exemplo a seguir retorna todas as etapas do trabalho nomeado `Weekly Sales Data Backup`.  
   
 ```  
@@ -129,11 +129,11 @@ EXEC dbo.sp_help_jobstep
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [sp_add_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
- [sp_delete_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
- [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
- [sp_update_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql.md)   
+## <a name="see-also"></a>Consulte Também  
+ [&#41;&#40;Transact-SQL de sp_add_jobstep](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_delete_jobstep](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_help_job](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_update_jobstep](../../relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2565eb2be68c1e964b82d46d9aa8fc9f39a01f70
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74165018"
 ---
 # <a name="execute-scripts-during-synchronization-replication-transact-sql-programming"></a>Executar scripts durante a sincronização (Programação Transact-SQL de replicação)
@@ -32,7 +32,7 @@ ms.locfileid: "74165018"
   
 2.  Salve o arquivo de script em um local em que possa ser acessado pelo Snapshot Agent para a publicação.  
   
-3.  No Publicador no banco de dados de publicação, execute [sp_addscriptexec &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql). Especifique **\@publicação**, o nome do arquivo de script com caminho UNC completo criado na etapa 2 para **\@scriptfile**e um dos seguintes valores para **\@skiperror**:  
+3.  No Publicador no banco de dados de publicação, execute [sp_addscriptexec &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql). Especifique ** \@a publicação**, o nome do arquivo de script com o caminho UNC completo criado na etapa 2 para ** \@scriptfile**e um dos valores a seguir para ** \@skiperror**:  
   
     -   **0** - o agente deixará de executar o script se um erro for encontrado.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "74165018"
   
 4.  O script especificado será executado para cada Assinante na próxima vez que o agente for executado para sincronizar a assinatura.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Sincronizar dados](synchronize-data.md)  
   
   

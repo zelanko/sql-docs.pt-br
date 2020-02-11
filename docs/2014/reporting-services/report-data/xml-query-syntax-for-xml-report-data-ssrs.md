@@ -16,14 +16,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 017292aa073c0b5745f313b61592a5c57199567c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106945"
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>Sintaxe de consulta XML para dados de relatório XML (SSRS)
-  No [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], é possível criar conjuntos de dados para fontes de dados XML. Após definir uma fonte de dados, crie uma consulta para o conjunto de dados. Dependendo do tipo de dados XML apontado pela fonte de dados, a consulta do conjunto de dados é criada incluindo uma `Query` XML ou um caminho de elemento. Um XML `Query` começa com um  **\<consulta >** de marca e inclui namespaces e elementos XML que variam de acordo com a fonte de dados. Um caminho de elemento não depende do namespace e especifica quais nós e atributos de nós devem ser usados nos dados XML subjacentes com uma sintaxe do tipo XPath. Para obter mais informações sobre os caminhos de elemento, consulte [Sintaxe do caminho de elemento para dados de relatório XML &#40;SSRS&#41;](report-data-ssrs.md).  
+  No [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], é possível criar conjuntos de dados para fontes de dados XML. Após definir uma fonte de dados, crie uma consulta para o conjunto de dados. Dependendo do tipo de dados XML apontado pela fonte de dados, a consulta do conjunto de dados é criada incluindo uma `Query` XML ou um caminho de elemento. Um XML `Query` começa com uma ** \<consulta>** marca e inclui namespaces e elementos XML que variam de acordo com a fonte de dados. Um caminho de elemento não depende do namespace e especifica quais nós e atributos de nós devem ser usados nos dados XML subjacentes com uma sintaxe do tipo XPath. Para obter mais informações sobre os caminhos de elemento, consulte [Sintaxe do caminho de elemento para dados de relatório XML &#40;SSRS&#41;](report-data-ssrs.md).  
   
  É possível criar uma fonte de dados XML para os seguintes tipos de dados XML:  
   
@@ -56,7 +56,7 @@ ms.locfileid: "66106945"
   
 |Fonte de dados XML|Exemplo de consulta|  
 |---------------------|-------------------|  
-|Dados XML do serviço Web do método de ListChildren.|`<Query>`<br /><br /> `<Method Name="ListChildren" Namespace="https://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices" />`<br /><br /> `</Query>`|  
+|Dados XML de serviço Web do método ListChildren .|`<Query>`<br /><br /> `<Method Name="ListChildren" Namespace="https://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices" />`<br /><br /> `</Query>`|  
 |Dados XML de serviço Web do SoapAction.|`<Query xmlns=namespace>`<br /><br /> `<SoapAction>http://schemas/microsoft.com/sqlserver/2005/03/23/reporting/reportingservices/ListChildren</SoapAction>`<br /><br /> `</Query>`|  
 |Documento XML ou dados XML inseridos que usam namespaces.<br /><br /> Elemento de consulta que especifica namespaces para um caminho de elemento.|`<Query xmlns:es="https://schemas.microsoft.com/StandardSchemas/ExtendedSales">`<br /><br /> `<ElementPath>/Customers/Customer/Orders/Order/es:LineItems/es:LineItem</ElementPath>`<br /><br /> `</Query>`|  
 |Documento XML inserido.|`<Query>`<br /><br /> `<XmlData>`<br /><br /> `<Customers>`<br /><br /> `<Customer ID="1">Bobby</Customer>`<br /><br /> `</Customers>`<br /><br /> `</XmlData>`<br /><br /> `<ElementPath>Customer {@}</ElementPath>`<br /><br /> `</Query>`|  
@@ -87,8 +87,8 @@ ms.locfileid: "66106945"
   
 |Elemento de consulta XML|Campos resultantes no conjunto de dados|  
 |-----------------------|-------------------------------------|  
-|\<Query/>|Valor a: https://schemas.microsoft.com/...<br /><br /> Valor b: https://schemas.microsoft.com/...<br /><br /> Valor c: https://schemas.microsoft.com/...|  
-|\<xmldp:Query xmlns:xmldp="https://schemas.microsoft.com/sqlserver/2005/02/reporting/XmlDPQuery" xmlns:ns="https://schemas.microsoft.com/..."><br /><br /> \<xmldp:ElementPath>Root {}/ns:Element2/Node\</xmldp:ElementPath><br /><br /> \</xmldp:Query>|Valor D<br /><br /> Valor E<br /><br /> Valor F|  
+|\<Query/>|Valor A: https://schemas.microsoft.com/...<br /><br /> Valor B: https://schemas.microsoft.com/...<br /><br /> Valor C: https://schemas.microsoft.com/...|  
+|\<xmldp: Query xmlns: xmldp = "https://schemas.microsoft.com/sqlserver/2005/02/reporting/XmlDPQuery" xmlns: NS = "https://schemas.microsoft.com/..." ><br /><br /> \<xmldp: ElementPath>raiz {}/NS: Element2/Node\</xmldp: ElementPath><br /><br /> \</xmldp:> de consulta|Valor D<br /><br /> Valor E<br /><br /> Valor F|  
   
 #### <a name="xml-document-dpnamespacexml"></a>Documento XML: DPNamespace.xml  
  É possível copiar esse XML e salvá-lo em uma URL disponível do Designer de Relatórios a ser usado como uma fonte de dados XML: por exemplo, http://localhost/DPNamespace.xml.  
@@ -108,7 +108,7 @@ ms.locfileid: "66106945"
 </Root>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tipo de conexão XML &#40;SSRS&#41;](xml-connection-type-ssrs.md)   
  [Tutoriais do Reporting Services &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)  
   
