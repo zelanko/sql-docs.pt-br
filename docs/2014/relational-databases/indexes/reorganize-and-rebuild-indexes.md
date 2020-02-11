@@ -31,10 +31,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8c1c78e1d126420b17a1b8de0499c432059b25ce
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68811033"
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>Reorganizar e recriar índices
@@ -52,13 +52,13 @@ ms.locfileid: "68811033"
   
      [Segurança](#Security)  
   
--   **Para verificar a fragmentação de um índice usando:**  
+-   **Para verificar a fragmentação de um índice, usando:**  
   
      [SQL Server Management Studio](#SSMSProcedureFrag)  
   
      [Transact-SQL](#TsqlProcedureFrag)  
   
--   **Para reorganizar ou recompilar um índice usando:**  
+-   **Para reorganizar ou recriar um índice usando:**  
   
      [SQL Server Management Studio](#SSMSProcedureReorg)  
   
@@ -66,12 +66,12 @@ ms.locfileid: "68811033"
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Fragmentation"></a> Detectando a fragmentação  
+###  <a name="Fragmentation"></a>Detectando a fragmentação  
  A primeira etapa para optar pelo método de fragmentação a ser usado é analisar o índice para determinar o grau de fragmentação. Usando a função de sistema [sys.dm_db_index_physical_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql), você pode detectar a fragmentação em um índice específico, em todos os índices de uma tabela ou exibição indexada, em todos os índices de um banco de dados ou em todos os índices de todos os bancos de dados. Para índices particionados, **sys.dm_db_index_physical_stats** também fornece informações de fragmentação por partição.  
   
- O conjunto de resultados retornado pela função **sys.dm_db_index_physical_stats** inclui as colunas a seguir.  
+ O conjunto de resultados retornado pela função **Sys. dm_db_index_physical_stats** inclui as colunas a seguir.  
   
-|coluna|Descrição|  
+|Coluna|DESCRIÇÃO|  
 |------------|-----------------|  
 |**avg_fragmentation_in_percent**|Porcentagem de fragmentação lógica (páginas fora de ordem no índice).|  
 |**fragment_count**|Número de fragmentos (páginas folha fisicamente consecutivas) do índice.|  
@@ -87,27 +87,27 @@ ms.locfileid: "68811033"
 <sup>1</sup> A recompilação de um índice pode ser executada online ou offline. A reorganização de um índice sempre é executada online. Para atingir disponibilidade semelhante à opção de reorganização, recrie índices online.  
   
 > [!TIP]
-> Esses valores fornecem uma orientação aproximada para determinar o ponto em que você deve mudar entre `ALTER INDEX REORGANIZE` e `ALTER INDEX REBUILD`. Contudo, os valores reais podem variar de acordo com o caso. É importante que você experimente para poder determinar o melhor limite para um ambiente. Por exemplo, se um determinado índice for usado principalmente para operações de verificação, a remoção da fragmentação poderá melhorar o desempenho dessas operações. O benefício de desempenho é menos perceptível para índices que são usados principalmente para operações de busca. Da mesma forma, remover a fragmentação em um heap (uma tabela sem índice clusterizado) é especialmente útil para operações de verificação de índice não clusterizado, mas tem pouco efeito em operações de pesquisa.
+> Esses valores fornecem uma orientação aproximada para determinar o ponto em que você deve mudar entre `ALTER INDEX REORGANIZE` e `ALTER INDEX REBUILD`. Contudo, os valores reais podem variar de acordo com o caso. É importante que você experimente para poder determinar o melhor limite para um ambiente. Por exemplo, se um determinado índice for usado principalmente para operações de verificação, o desempenho delas poderá ser aprimorado pela remoção da fragmentação. O benefício de desempenho é menos perceptível para índices que são usados principalmente para operações de busca. Da mesma forma, remover a fragmentação em um heap (uma tabela sem índice clusterizado) é especialmente útil para operações de verificação de índice não clusterizado, mas tem pouco efeito em operações de pesquisa.
 
 Em geral, níveis muito baixos de fragmentação (menos de 5 por cento) não devem ser resolvidos por nenhum desses comandos, pois o benefício da remoção de uma pequena quantidade de fragmentação é quase sempre amplamente excedido pelo custo da reorganização ou da recriação do índice. 
 
 > [!NOTE]
 > A recriação ou reorganização de índices pequenos geralmente não reduz a fragmentação. As páginas de índices pequenos às vezes são armazenadas em extensões mistas. Extensões mistas são compartilhadas por até oito objetos, portanto, a fragmentação em um índice pequeno pode não ser reduzida após a reorganização ou recriação.
 
-### <a name="index-defragmentation-considerations"></a>Considerações sobre a desfragmentação de índice
-Em determinadas condições, a recriação de um índice clusterizado reconstruirá automaticamente qualquer índice não clusterizado que faça referência à chave de clustering, se os identificadores físicos ou lógicos contidos nos registros de índice não clusterizados precisarem ser alterados.
+### <a name="index-defragmentation-considerations"></a>Considerações sobre fragmentação de índice
+Em determinadas condições, recompilar um índice clusterizado recompilará automaticamente todo índice não clusterizado que faça referência à chave de clustering, se os identificadores físicos ou lógicos contidos nos registros de índice não clusterizados precisarem ser alterados.
 
-Cenários que forçam a recriação automática de todos os índices não clusterizados em uma tabela:
+Cenários que requerem que todos os índices não clusterizados sejam automaticamente recompilados em uma tabela:
 
--  Criando um índice clusterizado em uma tabela
--  Removendo um índice clusterizado, fazendo com que a tabela seja armazenada como um heap
--  Alterando a chave de clustering para incluir ou excluir colunas
+-  Criar um índice clusterizado em uma tabela
+-  Remover um índice clusterizado, fazendo com que a tabela seja armazenada como um heap
+-  Alterar a chave de clustering para incluir ou excluir colunas
 
-Cenários que não exigem que todos os índices não clusterizados sejam automaticamente recriados em uma tabela:
+Cenários que não requerem que todos os índices não clusterizados sejam automaticamente recompilados em uma tabela:
 
--  Recompilando um índice clusterizado exclusivo
--  Recompilando um índice clusterizado não exclusivo
--  Alterar o esquema de índice, como aplicar um esquema de particionamento a um índice clusterizado ou mover o índice clusterizado para um grupo de arquivos diferente
+-  Recompilar um índice clusterizado exclusivo
+-  Recompilar um índice clusterizado não exclusivo
+-  Alterar o esquema de índice (assim como ao aplicar um esquema de particionamento a um índice clusterizado) ou mover o índice clusterizado para um grupo de arquivos diferente
   
 ###  <a name="Restrictions"></a> Limitações e restrições  
   
@@ -175,13 +175,13 @@ Um índice não poderá ser reorganizado ou recriado se o grupo de arquivos no q
      **Páginas**  
      O número total de páginas de dados.  
   
-     **Partition ID**  
+     **Identificação da Partição**  
      A ID da partição da árvore b que contém o índice.  
   
      **Linhas fantasmas de versão**  
      O número de registros fantasmas que estão sendo retidos devido a uma transação de isolamento de instantâneo pendente.  
   
-##  <a name="TsqlProcedureFrag"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedureFrag"></a> Usando o Transact-SQL  
   
 #### <a name="to-check-the-fragmentation-of-an-index"></a>Para verificar a fragmentação de um índice  
   
@@ -217,7 +217,7 @@ Um índice não poderá ser reorganizado ou recriado se o grupo de arquivos no q
     (6 row(s) affected)  
     ```  
   
- Para obter mais informações, veja [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql).  
+ Para obter mais informações, consulte [Sys. dm_db_index_physical_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql).  
   
 ##  <a name="SSMSProcedureReorg"></a> Usando o SQL Server Management Studio  
   
@@ -253,7 +253,7 @@ Um índice não poderá ser reorganizado ou recriado se o grupo de arquivos no q
   
 6.  Marque a caixa de seleção **Compactar dados de coluna de objeto grande** para especificar que todas as páginas que contêm dados de objeto grande (LOB) também sejam compactadas.  
   
-7.  Clique em **OK**  
+7.  Clique em **OK.**  
   
 #### <a name="to-rebuild-an-index"></a>Para recriar um índice  
   
@@ -273,7 +273,7 @@ Um índice não poderá ser reorganizado ou recriado se o grupo de arquivos no q
   
 8.  Clique em **OK.**  
   
-##  <a name="TsqlProcedureReorg"></a> Usando Transact-SQL  
+##  <a name="TsqlProcedureReorg"></a> Usando o Transact-SQL  
   
 #### <a name="to-reorganize-a-defragmented-index"></a>Para reorganizar um índice desfragmentado  
   
@@ -332,7 +332,7 @@ Um índice não poderá ser reorganizado ou recriado se o grupo de arquivos no q
   
  Para obter mais informações, consulte [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql).  
   
-## <a name="see-also"></a>Consulte também  
- [Práticas recomendadas de desfragmentação de índice do Microsoft SQL Server 2000](https://technet.microsoft.com/library/cc966523.aspx)  
+## <a name="see-also"></a>Consulte Também  
+ [Práticas recomendadas de desfragmentação de índice Microsoft SQL Server 2000](https://technet.microsoft.com/library/cc966523.aspx)  
   
   

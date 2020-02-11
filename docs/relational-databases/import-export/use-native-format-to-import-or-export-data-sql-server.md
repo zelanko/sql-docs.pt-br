@@ -15,10 +15,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: f6e1eaa9670a5cea38bbf617675d42737b13f796
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74055913"
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>Usar um formato nativo para importar ou exportar dados (SQL Server)
@@ -90,7 +90,7 @@ O formato nativo tem suporte nas seguintes opções de comando:
 |-------------|------------|-----------------|  
 |bcp|**-n**|Faz com que o utilitário bcp use os tipos de dados nativos dos dados.*|  
 |BULK INSERT|DATAFILETYPE **='native'**|Usa o tipo de dados nativo ou nativo largo. Observe que DATAFILETYPE não será necessário se um arquivo de formato especificar os tipos de dados.|  
-|OPENROWSET|N/A|Deve usar um arquivo de formato|
+|OPENROWSET|N/D|Deve usar um arquivo de formato|
 
   
  \*Para carregar dados nativos ( **-n**) em um formato compatível com versões anteriores de clientes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , use a opção **-V** . Para obter mais informações, consulte [Importar dados de formato de caractere e nativo de versões anteriores do SQL Server](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md).  
@@ -244,7 +244,7 @@ Para usar formatos de dados para importação ou exportação em massa
 -   [Usar o formato nativo Unicode para importar ou exportar dados &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [bcp Utility](../../tools/bcp-utility.md)   
+ [Utilitário bcp](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [sql_variant &#40;Transact-SQL&#41;](../../t-sql/data-types/sql-variant-transact-sql.md)   

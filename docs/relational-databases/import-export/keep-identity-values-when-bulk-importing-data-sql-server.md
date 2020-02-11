@@ -16,10 +16,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: a5993a5ba452e3d46709462e75a316dba02f7540
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74055966"
 ---
 # <a name="keep-identity-values-when-bulk-importing-data-sql-server"></a>Manter valores de identidade ao importar dados em massa (SQL Server)
@@ -64,7 +64,7 @@ CREATE TABLE dbo.myIdentity (
    );
 ```
  
-### **Arquivo de Dados de Exemplo**<a name="sample_data_file"></a>
+### **Arquivo de dados de exemplo**<a name="sample_data_file"></a>
 Usando o Bloco de Notas, crie um arquivo vazio `D:\BCP\myIdentity.bcp` e insira os dados abaixo.  
 ```
 3,Anthony,Grosse,1980-02-23

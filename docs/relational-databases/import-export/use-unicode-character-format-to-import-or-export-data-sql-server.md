@@ -15,10 +15,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: d016e4f45a91a61c5918a4bfdfb9dd1073521c02
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056307"
 ---
 # <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>Usar o formato de caractere Unicode para importar ou exportar dados (SQL Server)
@@ -43,7 +43,7 @@ Ao usar formato de caractere Unicode, considere o seguinte:
 
 * Por padrão, o [utilitário bcp](../../tools/bcp-utility.md) separa os campos dos dados de caractere com o caractere de guia e termina os registros com o caractere de nova linha.  Para obter informações sobre como especificar terminadores alternativos, consulte [Especificar terminadores de campo e linha &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).
 
-* Os dados de [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) que são armazenados em um arquivo de dados no formato de caractere Unicode operam da mesma maneira que operam em um arquivo de dados no formato de caractere, com a exceção de que os dados são armazenados como [nchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) em vez de dados [char](../../t-sql/data-types/char-and-varchar-transact-sql.md). Para obter mais informações sobre formato de caractere, consulte [Suporte a ordenação e Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
+* Os dados de [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) que são armazenados em um arquivo de dados no formato de caractere Unicode operam da mesma maneira que operam em um arquivo de dados no formato de caractere, com a exceção de que os dados são armazenados como [nchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) em vez de dados [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) . Para obter mais informações sobre formato de caractere, consulte [Suporte a ordenação e Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
 
 ## Considerações especiais para o formato de caractere Unicode, bcp e um arquivo de formato<a name="special_considerations"></a>
 Os arquivos de dados em formato de caractere Unicode seguem as convenções para arquivos Unicode.  Os primeiros dois bytes do arquivo são números hexadecimais, 0xFFFE.  Esses bytes servem como marcas de ordem do byte (BOM), especificando se o byte de ordem alta é armazenado em primeiro ou por último no arquivo.  O [utilitário bcp](../../tools/bcp-utility.md) pode interpretar incorretamente o BOM e fazer com que parte de seu processo de importação falhe; você pode receber uma mensagem de erro semelhante da seguinte maneira:
@@ -86,7 +86,7 @@ Formato de caractere Unicode tem suporte nas seguintes opções da linha de coma
 |-------------|------------|-----------------|  
 |bcp|**-w**|Usa o formato de caractere Unicode.|  
 |BULK INSERT|DATAFILETYPE **='widechar'**|Usa o formato de caractere Unicode na importação em massa de dados.|  
-|OPENROWSET|N/A|Deve usar um arquivo de formato|
+|OPENROWSET|N/D|Deve usar um arquivo de formato|
   
 > [!NOTE]
 >  Como alternativa, você pode especificar a formatação por campo, em um arquivo de formato. Para obter mais informações, consulte [Arquivos de formato para importação ou exportação de dados &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md).
@@ -238,7 +238,7 @@ Para usar formatos de dados para importação ou exportação em massa
 -   [Usar o formato nativo Unicode para importar ou exportar dados &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [bcp Utility](../../tools/bcp-utility.md)   
+ [Utilitário bcp](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   

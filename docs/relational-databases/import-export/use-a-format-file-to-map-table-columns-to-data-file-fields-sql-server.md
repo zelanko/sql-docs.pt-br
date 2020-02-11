@@ -15,10 +15,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: a3c8b1fbe01bf97eeba11d57ae2d7ee9095c3964
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056340"
 ---
 # <a name="use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server"></a>Usar um arquivo de formato para mapear colunas de tabela para campos de arquivo de dados (SQL Server)
@@ -80,7 +80,7 @@ Consulte [Estrutura de arquivos de formato não XML](../../relational-databases/
 3.  Verifique se há um retorno de carro após a última linha do arquivo de formato.
 
 Compare as alterações:     
-**Antes de**
+**Antes**
 ```
 13.0
 4
@@ -90,7 +90,7 @@ Compare as alterações:
 4       SQLCHAR 0       1       "\r\n"   4     Gender                 SQL_Latin1_General_CP1_CI_AS
 
 ```
-**After (após)**
+**Depois**
 ```
 13.0
 4
@@ -118,7 +118,7 @@ Consulte [Sintaxe de esquema para arquivos de formato XML](../../relational-data
 3. A ordem dos elementos <COLUMN\< no elemento <ROW\< define a ordem em que eles são retornados pela operação em massa.  O arquivo de formato XML atribui a cada elemento \<COLUMN> um nome local que não tem nenhuma relação com a coluna da tabela de destino de uma operação de importação em massa.  A ordem dos elementos \<COLUMN> não depende da ordem dos elementos \<FIELD> em uma definição de \<RECORD>.  Cada elemento \<COLUMN> corresponde a um elemento \<FIELD> (cuja ID é especificada no atributo SOURCE do elemento \<COLUMN>).  Portanto, os valores de \<COLUMN> SOURCE são os únicos atributos que exigem revisão.  Inverta a ordem dos atributos 2 e 3 de \<COLUMN> SOURCE.
 
 Comparar as alterações  
-**Antes de**
+**Antes**
 ```
 \<?xml version="1.0"?>
 \<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -136,7 +136,7 @@ Comparar as alterações
  </ROW>
 </BCPFORMAT>
 ```
-**After (após)**
+**Depois**
 ```
 \<?xml version="1.0"?>
 \<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -249,7 +249,7 @@ SELECT * FROM TestDatabase.dbo.myRemap;
 
   
 ## <a name="see-also"></a>Consulte Também  
-[bcp Utility](../../tools/bcp-utility.md)   
+[Utilitário bcp](../../tools/bcp-utility.md)   
  [Usar um arquivo de formato para ignorar uma coluna de tabela &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)   
  [Usar um arquivo de formato para ignorar um campo de dados &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)  
   

@@ -18,19 +18,19 @@ ms.assetid: 3ac091ea-c9a8-4c05-a0b6-1ccf4e001339
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: b1acf456bda88eeee0493d3f9d7ccc063a5bda50
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68001010"
 ---
-# <a name="sphelplogshippingmonitorsecondary-transact-sql"></a>sp_help_log_shipping_monitor_secondary (Transact-SQL)
+# <a name="sp_help_log_shipping_monitor_secondary-transact-sql"></a>sp_help_log_shipping_monitor_secondary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retorna informações relativas a um banco de dados secundário das tabelas de monitor.  
   
  
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,16 +42,16 @@ sp_help_log_shipping_monitor_secondary
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @secondary_server = ] 'secondary_server'` É o nome do servidor secundário. *secondary_server* está **sysname**, sem padrão.  
+`[ @secondary_server = ] 'secondary_server'`É o nome do servidor secundário. *secondary_server* é **sysname**, sem padrão.  
   
-`[ @secondary_database = ] 'secondary_database'` É o nome do banco de dados secundário. *secondary_database* está **sysname**, sem padrão.  
+`[ @secondary_database = ] 'secondary_database'`É o nome do banco de dados secundário. *secondary_database* é **sysname**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|coluna|Descrição|  
+|Coluna|DESCRIÇÃO|  
 |------------|-----------------|  
 |**secondary_server**|O nome da instância secundária do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] na configuração de envio de logs.|  
 |**secondary_database**|Nome do banco de dados secundário na configuração de envio de logs.|  
@@ -70,10 +70,10 @@ sp_help_log_shipping_monitor_secondary
 |**history_retention_period**|O período em minutos em que os registros de histórico de envio de logs são retidos em um determinado banco de dados secundário antes de serem excluídos.|  
   
 ## <a name="remarks"></a>Comentários  
- **sp_help_log_shipping_monitor_secondary** deve ser executado a partir de **mestre** banco de dados no servidor monitor.  
+ **sp_help_log_shipping_monitor_secondary** deve ser executado do banco de dados **mestre** no servidor monitor.  
   
 ## <a name="permissions"></a>Permissões  
- Somente os membros dos **sysadmin** função de servidor fixa pode executar esse procedimento.  
+ Somente os membros da função de servidor fixa **sysadmin** podem executar esse procedimento.  
   
 ## <a name="see-also"></a>Confira também  
  [Sobre o envio de logs &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
