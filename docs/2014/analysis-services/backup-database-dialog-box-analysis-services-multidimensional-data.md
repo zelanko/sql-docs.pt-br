@@ -1,5 +1,5 @@
 ---
-title: Caixa de diálogo banco de dados (Analysis Services - dados multidimensionais) backup | Microsoft Docs
+title: Caixa de diálogo backup Database (Analysis Services-dados multidimensionais) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,19 +13,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a99ce67c4b42cc1def10127c8b1862a859d20723
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66064376"
 ---
 # <a name="backup-database-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Banco de Dados de Backup (Analysis Services - Dados multidimensionais)
-  Use a caixa de diálogo **Banco de Dados de Backup** no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para fazer backup de um banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] em um arquivo de backup usando o formato Analysis Services Backup File (.abf) do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
+  Use a caixa de diálogo **Banco de Dados de Backup** no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para fazer backup de um banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] em um arquivo de backup usando o formato Analysis Services Backup File (.abf) do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
 > [!IMPORTANT]  
 >  Para cada arquivo de backup, o usuário que executar o comando de backup deve ter permissão para gravar no local de backup especificado de cada arquivo. Além disso, o usuário deve ter uma das seguintes funções: membro de uma função de servidor para a instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ou membro de uma função de banco de dados com permissões de Controle total (Administrador) no banco de dados cujo backup será feito.  
   
- **Para exibir a caixa de diálogo banco de dados de Backup**  
+ **Para exibir a caixa de diálogo Banco de Dados de Backup**  
   
 -   No [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], clique com o botão direito do mouse na pasta **Bancos de Dados** de uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ou em um banco de dados no **Pesquisador de Objetos**e então clique em **Backup**.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "66064376"
 > [!NOTE]  
 >  Esta opção só será habilitada se **Criptografar arquivo de backup** for selecionado.  
   
- **Partições remotas de backup**  
+ **Fazer backup de partição(ões) remota(s)**  
  Selecione para incluir informações de local e dados para partições remotas no arquivo de backup.  
   
 > [!NOTE]  
@@ -87,15 +87,15 @@ ms.locfileid: "66064376"
  **Local de backup da partição remota**  
  Exibe o local das partições remotas associadas com o banco de dados selecionado, como também o arquivo de backup remoto usado para fazer backup de dados e metadados para as partições remotas. As seguintes colunas estão disponíveis:  
   
-|coluna|Descrição|  
+|Coluna|DESCRIÇÃO|  
 |------------|-----------------|  
 |**Servidor**|Exibe a instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que administra as partições remotas.|  
 |**Backup de banco de dados**|Exibe o banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que contém as partições remotas.|  
-|**Lista de partição**|Exibe a lista de partições remotas contidas no banco de dados exibido em **Banco de Dados**.|  
-|**Arquivo de backup remoto**|Digite o caminho completo e o nome de arquivo do arquivo de backup remoto a ser usado, ou clique no botão de reticências ( **...** ) para exibir a caixa de diálogo **Salvar Arquivo Como** e selecionar o caminho e o nome de arquivo do arquivo de backup remoto a ser usado. Para obter mais informações sobre a caixa de diálogo **Salvar Arquivo Como**, consulte [Caixa de diálogo Salvar Arquivo Como &#40;Analysis Services – Dados Multidimensionais&#41;](save-file-as-dialog-box-analysis-services-multidimensional-data.md).|  
+|**Lista de partições**|Exibe a lista de partições remotas contidas no banco de dados exibido em **Banco de Dados**.|  
+|**Arquivo de backup remoto**|Digite o caminho completo e o nome de arquivo do arquivo de backup remoto a ser usado, ou clique no botão de reticências (**...**) para exibir a caixa de diálogo **Salvar Arquivo Como** e selecionar o caminho e o nome de arquivo do arquivo de backup remoto a ser usado. Para obter mais informações sobre a caixa de diálogo **Salvar Arquivo Como**, consulte [Caixa de diálogo Salvar Arquivo Como &#40;Analysis Services – Dados Multidimensionais&#41;](save-file-as-dialog-box-analysis-services-multidimensional-data.md).|  
   
-## <a name="see-also"></a>Consulte também  
- [Designers e caixas de diálogo do Analysis Services &#40;dados multidimensionais&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Analysis Services designers e caixas de diálogo &#40;dados multidimensionais&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [Backup e restauração de bancos de dados do Analysis Services](multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   
   

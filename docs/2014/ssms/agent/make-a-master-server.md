@@ -22,13 +22,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ca0e79c617db6cc2906ac9225efd92e156699951
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68189135"
 ---
-# <a name="make-a-master-server"></a>Criar um servidor mestre
+# <a name="make-a-master-server"></a>Make a Master Server
   Este tópico descreve como criar um servidor mestre do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Neste tópico**  
@@ -37,7 +37,7 @@ ms.locfileid: "68189135"
   
      [Segurança](#Security)  
   
--   **Para criar um servidor mestre, usando:**  
+-   **Para criar um servidor mestre usando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -48,7 +48,7 @@ ms.locfileid: "68189135"
 ###  <a name="Security"></a> Segurança  
  Trabalhos distribuídos que possuem etapas associadas a um proxy são executados no contexto da conta proxy no servidor de destino. Certifique-se de que as seguintes condições sejam atendidas, ou as etapas de trabalho associadas a um proxy não serão baixadas do servidor mestre para o destino:  
   
--   A subchave de registro do servidor mestre **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<*instance_name*> \SQL Server Agent\AllowDownloadedJobsToMatchProxyName**  (REG_DWORD) é definida como 1 (verdadeiro). Por padrão, essa subchave encontra-se definida como 0 (falso).  
+-   A subchave do registro do servidor mestre **\\\<HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server*instance_name*> \SQL Server Agent\AllowDownloadedJobsToMatchProxyName** (REG_DWORD) é definida como 1 (true). Por padrão, essa subchave encontra-se definida como 0 (falso).  
   
 -   Existe uma conta proxy no servidor de destino com o mesmo nome da conta proxy do servidor mestre sob a qual a etapa de trabalho é executada.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "68189135"
   
 #### <a name="to-make-a-master-server"></a>Para criar um servidor mestre  
   
-1.  No **Pesquisador de Objetos** , conecte-se a uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]e expanda essa instância.  
+1.  No **Pesquisador de Objetos** , conecte-se a uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]e a expanda.  
   
 2.  Clique com o botão direito do mouse em **SQL Server Agent**, aponte para **Administração Multisservidor**e clique em **Tornar este um mestre**. O **Assistente de Servidor Mestre** o guiará no processo de criação de um servidor mestre e de adição de servidores de destino.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "68189135"
      **Endereço de email**  
      Define o endereço de email para o operador.  
   
-     **Endereço de pager**  
+     **Endereço do pager**  
      Define o endereço de email de pager para o operador.  
   
      **Endereço de net send**  
@@ -89,7 +89,7 @@ ms.locfileid: "68189135"
      **Servidores Registrados**  
      Lista os servidores registrados no Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] que já não são servidores de destino.  
   
-     **Servidores de Destino**  
+     **Servidores de destino**  
      Lista os servidores que são servidores de destino.  
   
      **>**  
@@ -104,7 +104,7 @@ ms.locfileid: "68189135"
      **<<**  
      Remova todos os servidores da lista de servidor de destino.  
   
-     **Adicionar Conexão**  
+     **Adicionar conexão**  
      Adicione um servidor à lista de servidor de destino sem registrar o servidor.  
   
      **Conexão**  
@@ -112,7 +112,7 @@ ms.locfileid: "68189135"
   
 5.  Na página **Credenciais de logon de servidor mestre** , para especificar se você deseja criar um novo logon para o servidor de destino e atribuir-lhe direitos ao servidor mestre.  
   
-     **Criar um novo logon, se necessário, e atribuir-lhe direitos ao MSX**  
+     **Criar um novo logon, se necessário, e atribuir direitos de ti ao MSX**  
      Cria um novo logon no servidor de destino se o logon especificado ainda não existir.  
   
 ##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
@@ -134,9 +134,9 @@ EXEC dbo.sp_msx_enlist N'AdventureWorks1',
 GO;  
 ```  
   
- Para obter mais informações, consulte [sp_msx_enlist &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql).  
+ Para obter mais informações, consulte [sp_msx_enlist &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Criar um ambiente multisservidor](create-a-multiserver-environment.md)   
  [Administração automatizada em toda a empresa](automated-administration-across-an-enterprise.md)  
   

@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5c0c6449082f1c5ca016cfdb0a0f18430cf74731
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63156817"
 ---
 # <a name="create-indexes-with-included-columns"></a>Criar índices com colunas incluídas
@@ -102,13 +102,13 @@ ms.locfileid: "63156817"
   
 6.  Na guia **Colunas de chave de índice**, clique em **Adicionar...** .  
   
-7.  Na caixa de diálogo **Selecionar Colunas de**_table_name_ , marque as caixas de seleção das colunas da tabela a serem adicionadas ao índice.  
+7.  Na caixa de diálogo **selecionar colunas de**_table_name_ , marque a caixa de seleção ou caixas de seleção da coluna ou das colunas da tabela a serem adicionadas ao índice.  
   
 8.  Clique em **OK**.  
   
 9. Na guia **Colunas incluídas**, clique em **Adicionar...** .  
   
-10. Na caixa de diálogo **Selecionar Colunas de**_table_name_ , marque as caixas de seleção das colunas da tabela ou a serem adicionadas ao índice como colunas não chave.  
+10. Na caixa de diálogo **selecionar colunas de**_table_name_ , marque as caixas de seleção da coluna de tabela ou das colunas a serem adicionadas ao índice como colunas não chave.  
   
 11. Clique em **OK**.  
   
