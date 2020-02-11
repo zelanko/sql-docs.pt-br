@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_log_info (Transact-SQL) | Microsoft Docs
+title: sys. dm_db_log_info (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/24/2018
 ms.prod: sql
@@ -21,16 +21,16 @@ ms.author: pariks
 manager: ajayj
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7cb87d2d5677085edc8e6bd998f20c3c45013823
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68262076"
 ---
-# <a name="sysdmdbloginfo-transact-sql"></a>sys.dm_db_log_info (Transact-SQL)
+# <a name="sysdm_db_log_info-transact-sql"></a>sys. dm_db_log_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
 
-Retorna [(VLF) do arquivo de log virtual](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) informações do log de transações. Observe que todos os arquivos de log de transações são combinados na saída de tabela. Cada linha na saída representa um VLF no log de transações e fornece informações relevantes para esse VLF no log.
+Retorna informações de [VLF (arquivo de log virtual)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) do log de transações. Observe que todos os arquivos de log de transações são combinados na saída da tabela. Cada linha na saída representa um VLF no log de transações e fornece informações relevantes para esse VLF no log.
 
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,39 +39,39 @@ sys.dm_db_log_info ( database_id )
 ``` 
 
 ## <a name="arguments"></a>Argumentos  
- *database_id* | NULL | DEFAULT  
- É a ID do banco de dados. *database_id* é **int**. As entradas válidas são o número de identificação de um banco de dados, NULL ou padrão. O padrão é NULO. NULO e DEFAULT são valores equivalentes no contexto do banco de dados atual.
+ *database_id* | NULL | OS  
+ É a ID do banco de dados. *database_id* é **int**. As entradas válidas são o número de identificação de um banco de dados, nulo ou padrão. O padrão é NULO. NULL e DEFAULT são valores equivalentes no contexto do banco de dados atual.
  
  Especifique NULL para retornar informações de VLF do banco de dados atual.
 
- A função interna [DB_ID](../../t-sql/functions/db-id-transact-sql.md) pode ser especificado. Ao usar `DB_ID` sem especificar um nome de banco de dados, o nível de compatibilidade do banco de dados atual deve ser 90 ou superior.  
+ A função interna [DB_ID](../../t-sql/functions/db-id-transact-sql.md) pode ser especificada. Ao usar `DB_ID` sem especificar um nome de banco de dados, o nível de compatibilidade do banco de dados atual deve ser 90 ou superior.  
 
 ## <a name="table-returned"></a>Tabela retornada  
 
-|Nome da coluna|Tipo de dados|Descrição|  
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|ID do banco de dados.|
-|file_id|**smallint**|Id do arquivo de log de transações.|  
-|vlf_begin_offset|**bigint** |Deslocar o local do [(VLF) do arquivo de log virtual](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) desde o início do arquivo de log de transação.|
-|vlf_size_mb |**float** |[arquivo de log virtual (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) tamanho em MB, arredondado para 2 casas decimais.|     
-|vlf_sequence_number|**bigint** |[arquivo de log virtual (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) número na ordem de criação de sequência. Usado para identificar exclusivamente VLFs no arquivo de log.|
-|vlf_active|**bit** |Indica se [(VLF) do arquivo de log virtual](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) está em uso ou não. <br />0 - VLF não está em uso.<br />1 - VLF está ativo.|
-|vlf_status|**int** |Status do [(VLF) do arquivo de log virtual](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch). Os valores possíveis incluem <br />0 - VLF está inativo <br />1 - VLF é inicializado, mas não utilizado <br /> 2 - VLF está ativo.|
-|vlf_parity|**tinyint** |Paridade [(VLF) do arquivo de log virtual](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch). Usada internamente para determinar o final do log em um VLF.|
-|vlf_first_lsn|**nvarchar(48)** |[Log (LSN) do número de sequência](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) do primeiro registro de log em de [(VLF) do arquivo de log virtual](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch).|
-|vlf_create_lsn|**nvarchar(48)** |[Log (LSN) do número de sequência](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) do log de registro que criou o [(VLF) do arquivo de log virtual](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch).|
-|vlf_encryptor_thumbprint|**varbinary(20)**| **Aplica-se a:** [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br><br> Mostra a impressão digital do Criptografador do VLF se o VLF é criptografado usando [Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption.md), caso contrário, nulo. |
+|file_id|**smallint**|ID de arquivo do log de transações.|  
+|vlf_begin_offset|**bigint** |O local de deslocamento do [arquivo de log virtual (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) do início do arquivo de log de transações.|
+|vlf_size_mb |**float** |tamanho do [arquivo de log virtual (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) em MB, arredondado para 2 casas decimais.|     
+|vlf_sequence_number|**bigint** |número de sequência do [arquivo de log virtual (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) na ordem criada. Usado para identificar exclusivamente VLFs no arquivo de log.|
+|vlf_active|**bit** |Indica se o [arquivo de log virtual (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) está em uso ou não. <br />0-VLF não está em uso.<br />1-VLF está ativo.|
+|vlf_status|**int** |Status do [arquivo de log virtual (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch). Os valores possíveis incluem <br />0-VLF está inativo <br />1-VLF é inicializado, mas não usado <br /> 2-VLF está ativo.|
+|vlf_parity|**tinyint** |Paridade do [arquivo de log virtual (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch). Usado internamente para determinar o final do log em um VLF.|
+|vlf_first_lsn|**nvarchar (48)** |O [LSN (número de sequência de log)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) do primeiro registro de log no [arquivo de log virtual (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch).|
+|vlf_create_lsn|**nvarchar (48)** |[LSN (número de sequência de log)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) do registro de log que criou o [arquivo de log virtual (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch).|
+|vlf_encryptor_thumbprint|**varbinary (20)**| **Aplica-se a:** [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br><br> Mostra a impressão digital do criptografador do VLF se o VLF for criptografado usando [Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption.md), caso contrário, NULL. |
 
 ## <a name="remarks"></a>Comentários
-O `sys.dm_db_log_info` função de gerenciamento dinâmico substitui o `DBCC LOGINFO` instrução.    
+A `sys.dm_db_log_info` função de gerenciamento dinâmico substitui `DBCC LOGINFO` a instrução.    
  
 ## <a name="permissions"></a>Permissões  
 Requer a `VIEW DATABASE STATE` permissão no banco de dados.  
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="a-determing-databases-in-a-sql-server-instance-with-high-number-of-vlfs"></a>A. Determinando os bancos de dados em uma instância do SQL Server com grande número de VLFs
-A consulta a seguir determina os bancos de dados com mais de 100 VLFs nos arquivos de log, que podem afetar o tempo de inicialização, restauração e recuperação de banco de dados.
+### <a name="a-determing-databases-in-a-sql-server-instance-with-high-number-of-vlfs"></a>a. Determo bancos de dados em uma instância SQL Server com um número alto de VLFs
+A consulta a seguir determina os bancos de dados com mais de 100 VLFs nos arquivos de log, o que pode afetar a inicialização, a restauração e o tempo de recuperação do banco de dados.
 
 ```sql
 SELECT [name], COUNT(l.database_id) AS 'vlf_count' 
@@ -81,9 +81,9 @@ GROUP BY [name]
 HAVING COUNT(l.database_id) > 100
 ```
 
-### <a name="b-determing-the-position-of-the-last-vlf-in-transaction-log-before-shrinking-the-log-file"></a>B. Determinando a posição do último `VLF` no log de transações antes de reduzir o arquivo de log
+### <a name="b-determing-the-position-of-the-last-vlf-in-transaction-log-before-shrinking-the-log-file"></a>B. Determo a posição do último `VLF` no log de transações antes de reduzir o arquivo de log
 
-A consulta a seguir pode ser usada para determinar a posição do último VLF Active Directory antes de executar shrinkfile no log de transações para determinar se o log de transações pode ser reduzido.
+A consulta a seguir pode ser usada para determinar a posição do último VLF ativo antes de executar o SHRINKFILE no log de transações para determinar se o log de transações pode ser reduzido.
 
 ```sql
 USE AdventureWorks2016
@@ -109,9 +109,9 @@ FROM cte_vlf_cnt
 GO
 ```
 
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
-[Banco de dados relacionados a exibições de gerenciamento dinâmico &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
-[sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)   
-[sys.dm_db_log_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md)
+[Exibições de gerenciamento dinâmico relacionadas ao banco de dados &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
+[sys. dm_db_log_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)   
+[sys. dm_db_log_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md)
 

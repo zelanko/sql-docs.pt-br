@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e4e23849b50e8cfa0a0e8d3ef6def4fbd159381c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770842"
 ---
 # <a name="sap-bw-destination-editor-connection-manager-page"></a>Editor de Destino SAP BW (página Gerenciador de Conexões)
@@ -41,7 +41,7 @@ ms.locfileid: "62770842"
  **Gerenciador de conexões SAP BW**  
  Selecione um gerenciador de conexões existente na lista ou crie uma nova conexão clicando em **Nova**.  
   
- **Nova**  
+ **Novo**  
  Crie um novo gerenciador de conexões, usando a caixa de diálogo **Gerenciador de Conexões SAP BW** .  
   
  **Testar carga**  
@@ -59,7 +59,7 @@ ms.locfileid: "62770842"
  **Tipo**  
  Digite o caractere único que identifica o tipo do InfoSource. A tabela a seguir lista os valores aceitáveis de caractere único.  
   
-|Value|Descrição|  
+|Valor|DESCRIÇÃO|  
 |-----------|-----------------|  
 |**D**|Dados da transação|  
 |**M**|Dados mestres|  
@@ -102,17 +102,17 @@ ms.locfileid: "62770842"
  **Criar**  
  Crie o tipo selecionado de objeto do SAP Netweaver BW.  
   
-|Tipo de objeto|Resultado|  
+|Tipo de objeto|Result|  
 |-----------------|------------|  
 |**InfoObject**|Crie um novo InfoObject usando a caixa de diálogo **Criar Novo InfoObject** . Para obter mais informações sobre essa caixa de diálogo, consulte [Create New InfoObject](create-new-infoobject.md).|  
 |**InfoCube**|Crie um novo InfoCube usando a caixa de diálogo **Criar InfoCube para os Dados da Transação** . Para obter mais informações sobre essa caixa de diálogo, consulte [Create InfoCube for Transaction Data](create-infocube-for-transaction-data.md).|  
 |**InfoSource**|Crie um novo InfoSource usando a caixa de diálogo **Criar InfoSource** e, em seguida, **Criar InfoSource para os Dados da Transação** ou **Criar InfoSource para Dados Mestres** . Para obter mais informações sobre essas caixas de diálogo, consulte [Create InfoSource](create-infosource.md), [Create InfoSource for Transaction Data](create-infosource-for-transaction-data.md) e [Create InfoSource for Master Data](create-infosource-for-master-data.md).|  
 |**InfoPackage**|Crie um novo InfoPackage usando a caixa de diálogo **Criar InfoPackage** . Para obter mais informações sobre essa caixa de diálogo, consulte [Create InfoPackage](create-infopackage.md).|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Editor de Destino SAP BW &#40;Página Mapeamentos&#41;](sap-bw-destination-editor-mappings-page.md)   
  [Editor de Destino SAP BW &#40;Página Saída de Erro&#41;](sap-bw-destination-editor-error-output-page.md)   
  [Editor de Destino SAP BW &#40;Página Avançado&#41;](sap-bw-destination-editor-advanced-page.md)   
- [Ajuda F1 do Microsoft Connector 1.1 para SAP BW](../microsoft-connector-for-sap-bw-f1-help.md)  
+ [Ajuda F1 do Microsoft Connector 1.1 for SAP BW](../microsoft-connector-for-sap-bw-f1-help.md)  
   
   

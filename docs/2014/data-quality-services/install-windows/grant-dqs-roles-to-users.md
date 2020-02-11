@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6c5c6cf2953de3b23e55cf75b0287750a4abbb86
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480564"
 ---
 # <a name="grant-dqs-roles-to-users"></a>Conceder funções DQS a usuários
@@ -38,7 +38,7 @@ ms.locfileid: "65480564"
   
 5.  Depois que o usuário for validado, clique na página **Mapeamento de Usuário** no painel esquerdo.  
   
-6.  No painel direito, marque a caixa de seleção na coluna **Mapa** do banco de dados **DQS_MAIN** e, depois, marque a caixa de seleção **dqs_administrator**, **dqs_kb_editor** ou **dqs_kb_operator** no painel **Associação à função de banco de dados para: DQS_MAIN**, dependendo do nível de acesso necessário para o usuário. Para obter mais informações sobre as três funções DQS, consulte [Segurança DQS](../dqs-security.md).  
+6.  No painel direito, marque a caixa de seleção sob a coluna **Mapa** do banco de dados **DQS_MAIN** e marque a caixa de seleção **dqs_administrator**, **dqs_kb_editor**ou **dqs_kb_operator** no painel **Associação à função de banco de dados para: DQS_MAIN** , dependendo do nível de acesso necessário ao usuário. Para obter mais informações sobre as três funções DQS, consulte [Segurança DQS](../dqs-security.md).  
   
 7.  Na caixa de diálogo **Logon – Novo**, clique em **OK** para aplicar as alterações.  
   
@@ -48,8 +48,8 @@ ms.locfileid: "65480564"
 ## <a name="next-steps"></a>Próximas etapas  
  Tente fazer logon no [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] usando a conta de usuário do Windows para a qual você acabou de criar o logon SQL e à qual concedeu uma função DQS.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Instalar o Data Quality Services](install-data-quality-services.md)   
- [Crie um logon](../../relational-databases/security/authentication-access/create-a-login.md)  
+ [Criar um logon](../../relational-databases/security/authentication-access/create-a-login.md)  
   
   

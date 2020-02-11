@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 37a68a1dbc3a35ba4e72b173b1785efd1108241b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63143418"
 ---
 # <a name="setdisable-method-servernetworkprotocol-class"></a>Método SetDisable (classe ServerNetworkProtocol)
@@ -38,15 +38,15 @@ object
 ```  
   
 ## <a name="parts"></a>Partes  
- *object*  
- Um [ServerNetworkProtocol classe] servernetworkprotocol-class.md) que representa o protocolo de rede usado pela instância do objeto [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ *objeto*  
+ Um objeto [ServerNetworkProtocol Class] ServerNetworkProtocol-class.md) que representa o protocolo de rede usado pela instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  
  Um valor uint32, que é 0 se o serviço tiver sido modificado com êxito, 1 se a solicitação não tiver suporte e qualquer outro número para indicar um erro.  
   
 ## <a name="remarks"></a>Comentários  
   
-## <a name="see-also"></a>Consulte também  
- [Configurando protocolos de rede do servidor e bibliotecas de rede](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+## <a name="see-also"></a>Consulte Também  
+ [Configurando protocolos de rede de servidor e Net-Libraries](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

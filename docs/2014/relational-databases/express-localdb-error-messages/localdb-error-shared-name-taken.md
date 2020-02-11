@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a39c95d20d670a2408e440e6ff7775d46c7affd7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63066444"
 ---
 # <a name="localdb_error_shared_name_taken"></a>LOCALDB_ERROR_SHARED_NAME_TAKEN
@@ -23,16 +23,16 @@ ms.locfileid: "63066444"
   
 |||  
 |-|-|  
-|Nome do produto|SQL Server|  
+|Nome do Produto|SQL Server|  
 |ID do evento|281|  
-|Origem do evento|Tempo de execução de banco de dados local do SQL Server 12.0|  
-|Componente|API do tempo de execução de banco de dados local|  
+|Origem do Evento|Runtime de banco de dados local do SQL Server 12.0|  
+|Componente|API do runtime de banco de dados local|  
 |Texto da mensagem|O nome compartilhado especificado da Instância do Banco de Dados Local já foi usado.|  
   
 ## <a name="explanation"></a>Explicação  
  O nome compartilhado especificado da Instância do Banco de Dados Local já foi usado.  
   
 ## <a name="user-action"></a>Ação do usuário  
- Tente outro nome para a instância de Tempo de execução de Banco de dados Local ou exclua a instância existente.  
+ Tente outro nome para a instância de Runtime de Banco de dados Local ou exclua a instância existente.  
   
   

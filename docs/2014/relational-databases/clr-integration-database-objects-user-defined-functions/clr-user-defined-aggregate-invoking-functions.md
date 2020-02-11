@@ -1,5 +1,5 @@
 ---
-title: Invocando funções de agregação definida pelo usuário CLR | Microsoft Docs
+title: Invocando funções de agregação definidas pelo usuário CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 8f70a2df2fd824d8a0021a0985d6f75e79efce48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62919600"
 ---
 # <a name="invoking-clr-user-defined-aggregate-functions"></a>Invocando funções de agregação CLR definidas pelo usuário
@@ -32,11 +32,11 @@ ms.locfileid: "62919600"
   
 -   O usuário atual deve ter a permissão `EXECUTE` para a agregação definida pelo usuário.  
   
--   Agregações definidas pelo usuário devem ser invocadas usando um nome de duas partes na forma de *udagg_name*.  
+-   As agregações definidas pelo usuário devem ser chamadas usando um nome de duas partes na forma de *schema_name. udagg_name*.  
   
--   O tipo de argumento da agregação definida pelo usuário deve corresponder ou ser implicitamente conversível para o *input_type* de agregação, conforme definido no `CREATE AGGREGATE` instrução.  
+-   O tipo de argumento da agregação definida pelo usuário deve corresponder ou ser implicitamente conversível para o *input_type* da agregação, conforme definido `CREATE AGGREGATE` na instrução.  
   
--   O tipo de retorno da agregação definida pelo usuário deve corresponder a *return_type* no `CREATE AGGREGATE` instrução.  
+-   O tipo de retorno da agregação definida pelo usuário deve corresponder ao *return_type* na `CREATE AGGREGATE` instrução.  
   
 ## <a name="example-1"></a>Exemplo 1  
  O seguinte exemplo é uma função de agregação definida pelo usuário que concatena um conjunto de valores de cadeia de caracteres obtidos de uma coluna em uma tabela:  
@@ -196,7 +196,7 @@ Public Class Concatenate
 End Class  
 ```  
   
- Depois de compilar o código em **myagg. dll**, você pode registrar a agregação no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da seguinte maneira:  
+ Depois de compilar o código em **MyAgg. dll**, você pode registrar a agregação [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no da seguinte maneira:  
   
 ```  
 CREATE ASSEMBLY MyAgg FROM 'C:\MyAgg.dll';  
@@ -441,7 +441,7 @@ SELECT dbo.WeightedAvg(ItemValue, ItemWeight) FROM @myTable;
 go  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Agregações do CLR definidas pelo usuário](clr-user-defined-aggregates.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Agregações CLR definidas pelo usuário](clr-user-defined-aggregates.md)  
   
   
